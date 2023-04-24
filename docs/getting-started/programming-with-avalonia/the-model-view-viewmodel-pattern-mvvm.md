@@ -1,4 +1,4 @@
-# The Model-View-ViewModel Pattern \(MVVM\)
+# The Model-View-ViewModel Pattern MVVM
 
 As well as writing code in code-behind, Avalonia supports using the [Model-View-ViewModel](https://docs.avaloniaui.net/guides/basics/mvvm) pattern \(or MVVM\). MVVM is a common way to structure UI applications that separates view logic from application logic in a way that allows your applications to become unit-testable.
 
@@ -6,8 +6,19 @@ MVVM relies upon Avalonia's [binding](https://docs.avaloniaui.net/docs/data-bind
 
 The following example shows the code from the previous example implemented using the MVVM pattern:
 
-{% tabs %}
-{% tab title="XAML" %}
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  groupId="lang"
+  defaultValue="xaml"
+  values={[
+      { label: 'XAML', value: 'xaml', },
+      { label: 'C#', value: 'csharp', },
+  ]}
+>
+<TabItem value="xaml">
+
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -20,10 +31,11 @@ The following example shows the code from the previous example implemented using
 
 </Window>
 ```
-{% endtab %}
 
-{% tab title="C\#" %}
-```csharp
+</TabItem>
+<TabItem value="csharp">
+
+```cs
 using System.ComponentModel;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
@@ -59,8 +71,12 @@ namespace AvaloniaApplication1
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+</TabItem>
+</Tabs>
+
+
+
 
 In this example, the code-behind assigns the `Window`'s [`DataContext`](https://docs.avaloniaui.net/docs/data-binding/the-datacontext) property to an instance of `MainWindowViewModel`. The XAML then uses an Avalonia [`{Binding}`](https://docs.avaloniaui.net/docs/data-binding/bindings) to bind the `Button`'s `Content` property to the `ButtonText` property on the `MainWindowViewModel`. It also binds the `Button`'s [`Command`](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) property to the `ButtonClicked` method on the `MainWindowViewModel`.
 
