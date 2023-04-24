@@ -1,0 +1,53 @@
+{
+  "documentationSidebar": [
+    {
+      "type": "category",
+      "label": "Get Started",     
+      "items": [       
+        "get-started/introduction",
+        "get-started/install-the-avalonia-extension",
+        "get-started/choose-a-solution-template",
+        "get-started/the-main-window",
+        "get-started/add-a-control",
+        "get-started/add-some-layout",
+        "get-started/input-controls",
+        "get-started/the-design-preview",
+        "get-started/respond-to-an-event",
+        "get-started/code-with-controls",
+        "get-started/getting-started",
+        "get-started/conclusion"
+      ]
+    }    
+  ],
+  "apiSidebar": [
+    {
+      "type": "category",
+      "label": "Avalonia.Animations",
+      "link": {
+        "type": "doc",
+        "id": "api/Avalonia-Animation/Animators"
+      },
+      "items": []
+    }
+  ],
+  "guideSidebar": [
+    {
+      "type": "category",
+      "label": "Basics",
+      "items": [
+        "guides/basics/introduction-to-xaml",
+        "guides/basics/code-behind",
+        "guides/basics/mvvm",
+        "guides/basics/accessing-the-ui-thread"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Deep Dives",
+      "items": [
+        "guides/deep-dives/running-on-raspbian-lite-via-drm",
+        "guides/deep-dives/running-your-app-on-a-raspberry-pi"
+      ]
+    }
+  ]
+}
