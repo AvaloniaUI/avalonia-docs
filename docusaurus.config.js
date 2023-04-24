@@ -67,7 +67,8 @@ const config = {
         title: 'Avalonia UI',
         logo: {
           alt: 'Avalonia UI Logo',
-          src: 'img/white-border-gradient-icon.png',
+          src: 'img/purple-border-gradient-icon.png',
+          srcDark: "img/white-border-gradient-icon.png"
         },
         items: [
           {
