@@ -18,7 +18,7 @@ const sidebars = {
 
   // But you can create a sidebar manually
   
-  tutorialSidebar: [
+  documentationSidebar: [
     'intro',
     {
       type: 'category',
@@ -44,6 +44,32 @@ const sidebars = {
               ],
     },
   ],
+  apiSidebar: [
+    {
+      type: 'category',
+      label: 'Avalonia.Animations',
+      link: {type: 'doc', id: 'api/Avalonia-Animation/Animators'},
+      items: [
+              ],
+    },
+  ],
+  guideSidebar: [
+    {
+      type: 'category',
+      label: 'Basics',
+      items: ['guides/basics/introduction-to-xaml',
+              'guides/basics/code-behind',
+              'guides/basics/mvvm',
+              'guides/basics/accessing-the-ui-thread',
+              ],
+    },
+    {
+      type: 'category',
+      label: 'Deep Dives',
+      items: ['guides/deep-dives/running-on-raspbian-lite-via-drm',           
+              ],
+    },    
+  ],  
    
 };
 

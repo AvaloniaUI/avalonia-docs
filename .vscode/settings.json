@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/f706b20f-09d0-4fef-a2fc-629fa3973d06/resourceGroups/TestDocs/providers/Microsoft.Web/sites/avaloniauitestdocs",
+    "appService.deploySubpath": "."
+}
