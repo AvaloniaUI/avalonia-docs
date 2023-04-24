@@ -4,8 +4,13 @@
  * work well for content-centric websites.
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: 'Nunito', sans-serif;
+  --ifm-font-size-base: 1.1rem;
   --ifm-color-primary: #8b44ac;
   --ifm-color-primary-dark: #9757b4;
   --ifm-color-primary-darker: #a269bd;
@@ -19,7 +24,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #b98fcd;
+  --ifm-color-primary: #D271FF;
   --ifm-color-primary-dark: #c5a2d6;
   --ifm-color-primary-darker: #d1b4de;
   --ifm-color-primary-darkest: #dcc7e6;
@@ -28,4 +33,32 @@
   --ifm-color-primary-lightest: #ffffff;
   --ifm-background-color: #161c2d;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+h1 { 
+  font-weight: 600!important; 
+  font-size: 3rem;
+}
+
+h2 { 
+  font-weight: 500!important; 
+  font-size: 1.8rem;
+}
+
+.navbar__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-right: 1rem;
+  margin-left: 0.4rem;
+  padding-bottom: 0.15rem;
+  padding-top: 0.15rem;
+  white-space: nowrap;
+}
+
+.navbar__item {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 27.2px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

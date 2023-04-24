@@ -27,6 +27,15 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Data Binding',
+      link: {type: 'doc', id: 'data-binding/index'},
+      items: ['data-binding/the-datacontext',
+              'data-binding/change-notifications',
+              'data-binding/bindings',
+              'data-binding/binding-classes'],
+    },
+    {
+      type: 'category',
       label: 'Animations',
       link: {type: 'doc', id: 'animations/index'},
       items: ['animations/keyframe-animations',

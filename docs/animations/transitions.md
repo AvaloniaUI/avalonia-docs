@@ -88,8 +88,19 @@ The following transition types are available. The correct type must be used depe
 
 Render transforms applied to controls using CSS-like syntax can be transitioned. The following example shows a Border which rotates 45 degrees when the pointer is hovered over it:
 
-{% tabs %}
-{% tab title="XAML" %}
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  groupId="lang"
+  defaultValue="xaml"
+  values={[
+      { label: 'XAML', value: 'xaml', },
+      { label: 'C#', value: 'csharp', },
+  ]}
+>
+<TabItem value="xaml">
+
 ```markup
 <Border Width="100" Height="100" Background="Red">
     <Border.Styles>
@@ -107,10 +118,11 @@ Render transforms applied to controls using CSS-like syntax can be transitioned.
     </Border.Transitions>
 </Border>
 ```
-{% endtab %}
 
-{% tab title="C\#" %}
-```csharp
+</TabItem>
+<TabItem value="csharp">
+
+```cs
 new Border
 {
     Width = 100,
@@ -147,8 +159,11 @@ new Border
     }
 };
 ```
-{% endtab %}
-{% endtabs %}
+
+</TabItem>
+</Tabs>
+
+
 
 The available transitions are:
 
