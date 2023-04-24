@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Avalonia UI',
+  tagline: 'Developer Documentation Portal',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -88,7 +88,12 @@ const config = {
             sidebarId: 'apiSidebar',
             position: 'left',
             label: 'API Reference',
-          },         
+          },   
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
+          },      
         ],
       },
       footer: {
