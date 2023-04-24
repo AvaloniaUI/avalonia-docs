@@ -25,6 +25,34 @@ const sidebars = {
       label: 'Tutorial',
       items: ['tutorial-basics/create-a-document'],
     },
+
+    {
+      type: 'category',
+      label: 'Getting Started',
+      link: {type: 'doc', id: 'getting-started/index'},
+      items: [ {
+                  type: 'category',
+                  label: 'IDE Support',
+                  link: {type: 'doc', id: 'getting-started/ide-support/index'},
+                  items: ['getting-started/ide-support/jetbrains-rider-setup'],
+                },
+                {
+                  type: 'category',
+                  label: 'Programming with Avalonia',
+                  link: {type: 'doc', id: 'getting-started/programming-with-avalonia/index'},
+                  items: ['getting-started/programming-with-avalonia/the-model-view-viewmodel-pattern-mvvm', 
+                          'getting-started/programming-with-avalonia/controls-and-layouts',
+                          'getting-started/programming-with-avalonia/data-binding',
+                          'getting-started/programming-with-avalonia/graphics-and-animations'],
+                },              
+              'getting-started/windows',
+              'getting-started/usercontrols',
+              'getting-started/assets',
+              'getting-started/developer-tools',
+              'getting-started/logging-errors-and-warnings',
+              'getting-started/UnhandledExceptions',
+              'getting-started/application-lifetimes'],
+    },
     {
       type: 'category',
       label: 'Data Binding',
@@ -66,7 +94,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Deep Dives',
-      items: ['guides/deep-dives/running-on-raspbian-lite-via-drm',           
+      items: ['guides/deep-dives/running-on-raspbian-lite-via-drm',
+              'guides/deep-dives/running-your-app-on-a-raspberry-pi'           
               ],
     },    
   ],  
