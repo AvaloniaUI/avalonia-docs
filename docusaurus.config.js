@@ -88,13 +88,7 @@ const config = {
             sidebarId: 'apiSidebar',
             position: 'left',
             label: 'API Reference',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          },         
         ],
       },
       footer: {
@@ -114,15 +108,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/avaloniaui',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Telegram',
+                href: 'https://t.me/Avalonia',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/avaloniaui',
               },
             ],
           },
@@ -131,16 +125,16 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                href: 'https://avaloniaui.net/Blog',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/avaloniaui/avalonia',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} AvaloniaUI OÜ (14839404)`,
       },
       prism: {
         theme: lightCodeTheme,
