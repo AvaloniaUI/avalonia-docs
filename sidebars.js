@@ -48,6 +48,29 @@ const sidebars = {
         'getting-started/application-lifetimes'
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Data Binding',
+      'link': {
+        'type': 'doc',
+        'id': 'data-binding/index',
+      },
+      'items': [
+        'data-binding/the-datacontext',
+        'data-binding/change-notifications',
+        'data-binding/bindings',
+        'data-binding/compiled-bindings',
+        'data-binding/binding-to-controls',
+        'data-binding/converting-binding-values',
+        'data-binding/binding-to-commands',
+        'data-binding/binding-to-tasks-and-observables',
+        'data-binding/binding-from-code',
+        'data-binding/binding-in-a-control-template',
+        'data-binding/binding-classes',
+        'data-binding/creating-and-binding-attached-properties',
+        'data-binding/data-validation'
+      ],
+    },
   ],
   
 };
