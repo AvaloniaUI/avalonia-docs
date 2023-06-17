@@ -208,6 +208,20 @@ const sidebars = {
         'authoring-controls/defining-properties',
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Input',
+      'link': {
+        'type': 'doc',
+        'id': 'input/index',
+      },
+      'items': [
+        'input/routed-events',
+        'input/clipboard',
+        'input/pointer',
+        'input/hotkeys',
+      ],
+    },
   ],
   
 };
