@@ -1,41 +1,72 @@
-# Website
+<p align="center">
+  <img alt="Avalonia UI logo" src="static/img/purple-border-gradient-icon.png" width="75px" />
+  <h1 align="center">Avalonia UI Documentation</h1>
+</p>
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+The repository holds the code and markdown source files for the Avalonia UI documentation website, which is accessible at [docs.avaloniaui.net](docs.avaloniaui.net)
 
-### Installation
+## Index
+- [Index](#index)
+- [Feedback](#feedback)
+- [Documentation Issues](#documentation-issues)
+- [Contributing](#contributing)
+  - [Workflow](#workflow)
+  - [Conventions](#conventions)
+- [Local setup](#local-setup)
+  - [Requirements](#requirements)
+- [Thanks 💜](#thanks-)
 
-```
-$ yarn
-```
+## Feedback
+We welcome your valuable feedback on the documentation! Please feel free to join our [Community on Telegram](https://t.me/Avalonia) and send us a message. We would be delighted to hear from you and assist you with any queries or concerns you may have. 
 
-### Local Development
+## Documentation Issues
+If you come across any issues with the documentation or have a feature request related explicitly to it, we encourage you to create a new [GitHub issue](https://github.com/AvaloniaUI/DocumentationV2/issues/new). Before creating a new issue, we kindly request that you check for existing issues to avoid duplication. 
 
-```
-$ yarn start
-```
+## Contributing
+To contribute to Avalonia UI documentation, you need to fork this repository and submit a pull request for the Markdown and/or image changes that you're proposing.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Workflow
+The two suggested workflows are:
 
-### Build
+- For small changes, use the "Edit this page" button on each page to edit the Markdown file directly on GitHub.
+- If you plan to make significant changes or preview the changes locally, clone the repo to your system to and follow the installation and local development steps in [Local setup](#local-setup).
 
-```
-$ yarn build
-```
+### Conventions
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+- The front matter for every markdown file should include the `id` and a `title`. `id` will be used to reference the file in `sidebar.js` or `version-x.x.x-sidebars.json` for a specific version.
+  ```yaml
+  ---
+  id: platform-support
+  title: Supported Platforms
+  ---
+  ```
 
-### Deployment
+- Use lowercase for file and folder names and dashes `-` as separators.
+  For example:
+  - `/docs/getting-started/ide-extensions.md`
+  - `/docs/how-to/use-google-fonts.md`
 
-Using SSH:
+- Images are important to bring the product to life and clarify the written content. For images you're adding to the repo, store them in the `img` subfolder inside `static` folder. For every topic there needs to be a folder inside `\static\img\` section, for example: `static\img\how-to\use-google-fonts\download-font.png`.
+  When you link to an image, the path and filename are case-sensitive. The convention is for image filenames to be all lowercase and use dashes `-` for separators.
 
-```
-$ USE_SSH=true yarn deploy
-```
+  > Example code for adding an image in markdown file:
+  ```
+  <div style={{textAlign: 'center'}}>
 
-Not using SSH:
+  <img className="screenshot-full" src="/img/button-group.png" alt="Button group" />
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+  </div>
+  ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+  ## Local setup
+
+### Requirements
+
+- **Node version 16.14**
+
+  TODO - Finish this section 
+
+
+## Thanks 💜
+
+Thanks for all your contributions and efforts towards improving the Avalonia UI documentation. We thank you being part of our ✨ community ✨!
