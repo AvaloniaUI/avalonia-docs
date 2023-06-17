@@ -14,6 +14,7 @@ The repository holds the code and markdown source files for the Avalonia UI docu
   - [Conventions](#conventions)
 - [Local setup](#local-setup)
   - [Requirements](#requirements)
+  - [Starting](#starting)
 - [Thanks 💜](#thanks-)
 
 ## Feedback
@@ -64,7 +65,11 @@ The two suggested workflows are:
 
 - **Node version 16.14**
 
-  TODO - Finish this section 
+### Starting 
+
+```
+npm run start
+```
 
 
 ## Thanks 💜

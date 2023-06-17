@@ -9,29 +9,16 @@ const config = {
   title: 'Avalonia UI',
   tagline: 'Developer Documentation Portal',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://docs.avaloniaui.net',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'avaloniaui', // Usually your GitHub org/user name.
   projectName: 'avalonia', // Usually your repo name.
-
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       'classic',
@@ -41,8 +28,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/AvaloniaUI/Docs',
+          editUrl: 'https://github.com/AvaloniaUI/Docs',
+         // includeCurrentVersion: false,
+         // lastVersion: '0.10.x',
         },
         
         theme: {
@@ -51,12 +39,25 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '⭐️ If you like Avalonia UI, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/avaloniaui/avalonia">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/AvaloniaUI">Twitter</a>',
+        backgroundColor: '#4D72DA',
+        textColor: '#ffffff',
+        isCloseable: true,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true
+        }
+      },
       navbar: {
         title: 'Avalonia UI',
         logo: {
@@ -66,28 +67,25 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'documentationSidebar',
-            position: 'left',
-            label: 'Documentation',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'guideSidebar',
-            position: 'left',
-            label: 'Guides',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiSidebar',
-            position: 'left',
-            label: 'API Reference',
-          },   
-          {
             type: 'docsVersionDropdown',
             position: 'right',
-            dropdownActiveClassDisabled: true,
-          },      
+          },
+          {
+            type: 'search',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/avaloniaui/avalonia',
+            position: 'right',
+            className: 'navbar-social-link navbar-github-logo',
+            'aria-label': 'GitHub repository',
+          },
+          {
+            href: 'https://twitter.com/AvaloniaUI',
+            position: 'right',
+            className: 'navbar-social-link navbar-twitter-logo',
+            'aria-label': 'Twitter account',
+          },
         ],
       },
       footer: {
