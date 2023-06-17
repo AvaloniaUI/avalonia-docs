@@ -222,6 +222,19 @@ const sidebars = {
         'input/hotkeys',
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Animations',
+      'link': {
+        'type': 'doc',
+        'id': 'animations/index',
+      },
+      'items': [
+        'animations/keyframe-animations',
+        'animations/transitions',
+        'animations/page-transitions',
+      ],
+    },
   ],
   
 };
