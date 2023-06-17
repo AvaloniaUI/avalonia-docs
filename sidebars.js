@@ -196,6 +196,18 @@ const sidebars = {
         'templates/implement-idatatemplates',
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Authoring Controls',
+      'link': {
+        'type': 'doc',
+        'id': 'authoring-controls/index',
+      },
+      'items': [
+        'authoring-controls/types-of-control',
+        'authoring-controls/defining-properties',
+      ],
+    },
   ],
   
 };
