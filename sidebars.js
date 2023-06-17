@@ -71,6 +71,20 @@ const sidebars = {
         'data-binding/data-validation'
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Styling',
+      'link': {
+        'type': 'doc',
+        'id': 'styling/index',
+      },
+      'items': [
+        'styling/styles',
+        'styling/selectors',
+        'styling/resources',
+        'styling/troubleshooting',
+      ],
+    },
   ],
   
 };
