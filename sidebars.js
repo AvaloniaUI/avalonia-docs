@@ -248,6 +248,17 @@ const sidebars = {
         'layout/create-a-custom-panel',
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Distribution & Publishing',
+      'link': {
+        'type': 'doc',
+        'id': 'distribution-publishing/index',
+      },
+      'items': [
+        'distribution-publishing/macos',
+      ],
+    },
   ],
   
 };
