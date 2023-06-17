@@ -183,6 +183,19 @@ const sidebars = {
         'controls/wrappanel',
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Templates',
+      'link': {
+        'type': 'doc',
+        'id': 'templates/index',
+      },
+      'items': [
+        'templates/data-templates',
+        'templates/creating-data-templates-in-code',
+        'templates/implement-idatatemplates',
+      ],
+    },
   ],
   
 };
