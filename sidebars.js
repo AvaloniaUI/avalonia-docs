@@ -85,6 +85,35 @@ const sidebars = {
         'styling/troubleshooting',
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Controls',
+      'link': {
+        'type': 'doc',
+        'id': 'controls/index',
+      },
+      'items': [
+        'controls/autocompletebox',
+        'controls/border',
+        {
+          'type': 'category',
+          'label': 'Buttons',
+          'link': {
+            'type': 'doc',
+            'id': 'controls/buttons/index',
+          },
+          'items': [
+            'controls/buttons/button',
+            'controls/buttons/radiobutton',
+            'controls/buttons/togglebutton',
+            'controls/buttons/buttonspinner',
+            'controls/buttons/splitbutton',
+            'controls/buttons/togglesplitbutton',
+
+          ],
+        },
+      ],
+    },
   ],
   
 };
