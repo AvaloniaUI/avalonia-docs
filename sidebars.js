@@ -235,6 +235,19 @@ const sidebars = {
         'animations/page-transitions',
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Layout',
+      'link': {
+        'type': 'doc',
+        'id': 'layout/index',
+      },
+      'items': [
+        'layout/panels-overview',
+        'layout/alignment-margins-and-padding',
+        'layout/create-a-custom-panel',
+      ],
+    },
   ],
   
 };

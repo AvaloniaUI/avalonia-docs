@@ -1,4 +1,4 @@
-# Animations
+# Animations
 
 There are two types of animations in Avalonia:
 
@@ -7,5 +7,5 @@ There are two types of animations in Avalonia:
 
 ## In This Section <a href="#in-this-section" id="in-this-section"></a>
 
-* [Keyframe Animations](keyframe-animations.md)
-* [Transitions](transitions.md)
+* [Keyframe Animations](keyframe-animations)
+* [Transitions](transitions)
