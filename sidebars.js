@@ -259,6 +259,56 @@ const sidebars = {
         'distribution-publishing/macos',
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Guides',
+      'link': {
+        'type': 'doc',
+        'id': 'guides/index',
+      },
+      'items': [
+        {
+          'type': 'category',
+          'label': 'Basics',
+          'link': {
+            'type': 'doc',
+            'id': 'guides/basics/index',
+          },
+          'items': [
+            'guides/basics/introduction-to-xaml',
+            'guides/basics/code-behind',
+            'guides/basics/mvvm',
+            'guides/basics/accessing-the-ui-thread'
+          ],
+        },
+        {
+          'type': 'category',
+          'label': 'Deep Dives',
+          'link': {
+            'type': 'doc',
+            'id': 'guides/deep-dives/index',
+          },
+          'items': [
+            'guides/deep-dives/running-your-app-on-a-raspberry-pi',
+            'guides/deep-dives/running-on-raspbian-lite-via-drm',
+            {
+              'type': 'category',
+              'label': 'ReactiveUI',
+              'link': {
+                'type': 'doc',
+                'id': 'guides/deep-dives/reactiveui/index',
+              },
+              'items': [
+                'guides/deep-dives/reactiveui/view-activation',
+                'guides/deep-dives/reactiveui/routing',
+                'guides/deep-dives/reactiveui/data-persistence',
+                'guides/deep-dives/reactiveui/binding-to-sorted-filtered-list',
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
   
 };

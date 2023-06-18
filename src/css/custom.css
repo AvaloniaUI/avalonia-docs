@@ -112,3 +112,7 @@ h2 {
 .screenshot-full {
   border: 1px solid #dadde1;
 }
+
+img.rounded-corners {
+  border-radius: 50px;
+}
