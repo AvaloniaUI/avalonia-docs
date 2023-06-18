@@ -374,6 +374,45 @@ const sidebars = {
             'tutorials/music-store-app/summary',
           ],
         },
+        'tutorials/running-in-the-browser',
+        {
+          'type': 'category',
+          'label': 'Developing for Mobile',
+          'link': {
+            'type': 'doc',
+            'id': 'tutorials/developing-for-mobile/index',
+          },
+          'items': [
+            'tutorials/developing-for-mobile/create-a-cross-platform-solution',
+            {
+              'type': 'category',
+              'label': 'Android',
+              'link': {
+                'type': 'doc',
+                'id': 'tutorials/developing-for-mobile/android/index',
+              },
+              'items': [
+                'tutorials/developing-for-mobile/android/setting-up-your-developer-environment-for-android',
+                'tutorials/developing-for-mobile/android/build-and-run-your-application-on-a-simulator',
+                'tutorials/developing-for-mobile/android/build-and-run-your-application-on-a-device',
+                'tutorials/developing-for-mobile/android/configure-vscode-debug-linux',
+              ],
+            },
+            {
+              'type': 'category',
+              'label': 'iOS',
+              'link': {
+                'type': 'doc',
+                'id': 'tutorials/developing-for-mobile/ios/index',
+              },
+              'items': [
+                'tutorials/developing-for-mobile/ios/setting-up-your-developer-environment-for-ios',
+                'tutorials/developing-for-mobile/ios/build-and-run-your-application-on-a-simulator',
+                'tutorials/developing-for-mobile/ios/build-and-run-your-application-on-your-iphone-or-ipad',
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
