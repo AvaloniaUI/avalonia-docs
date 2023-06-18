@@ -29,8 +29,8 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/AvaloniaUI/Docs',
-          includeCurrentVersion: false,
-          lastVersion: '0.10.x',
+          //includeCurrentVersion: false,
+          //lastVersion: '0.10.x',
         },
         
         theme: {

@@ -7,6 +7,29 @@ const sidebars = {
     'welcome',
     {
       'type': 'category',
+      'label': 'Get Started',
+      'link': {
+        'type': 'doc',
+        'id': 'get-started/index',
+      },
+      'items': [
+        'get-started/introduction',
+        'get-started/install-the-avalonia-extension',
+        'get-started/choose-a-solution-template',
+        'get-started/the-main-window',
+        'get-started/add-a-control',
+        'get-started/add-some-layout',
+        'get-started/input-controls',
+        'get-started/the-design-preview',
+        'get-started/respond-to-an-event',
+        'get-started/code-with-controls',
+        'get-started/getting-started',
+        'get-started/conclusion',
+      ],
+    },
+
+    {
+      'type': 'category',
       'label': 'Getting Started',
       'link': {
         'type': 'doc',
