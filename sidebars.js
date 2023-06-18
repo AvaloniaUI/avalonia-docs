@@ -415,6 +415,28 @@ const sidebars = {
         },
       ],
     },
+    {
+      'type': 'category',
+      'label': 'WPF Developer Tips',
+      'link': {
+        'type': 'doc',
+        'id': 'wpf-developer-tips/index',
+      },
+      'items': [
+        'wpf-developer-tips/styling',
+        'wpf-developer-tips/datatemplates',
+        'wpf-developer-tips/hierachicaldatatemplate',
+        'wpf-developer-tips/uielement-frameworkelement-and-control',
+        'wpf-developer-tips/dependencyproperty',
+        'wpf-developer-tips/grid',
+        'wpf-developer-tips/itemscontrol',
+        'wpf-developer-tips/tunnelling-events',
+        'wpf-developer-tips/class-handlers',
+        'wpf-developer-tips/propertychangedcallback',
+        'wpf-developer-tips/rendertransforms-and-rendertransformorigin',
+      ],
+    },
+    'faq',
   ],
   
 };
