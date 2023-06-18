@@ -327,6 +327,32 @@ const sidebars = {
         },
       ],
     },
+    {
+      'type': 'category',
+      'label': 'Tutorials',
+      'link': {
+        'type': 'doc',
+        'id': 'tutorials/index',
+      },
+      'items': [
+        {
+          'type': 'category',
+          'label': 'ToDo List App',
+          'link': {
+            'type': 'doc',
+            'id': 'tutorials/todo-list-app/index',
+          },
+          'items': [
+            'tutorials/todo-list-app/creating-a-new-project',
+            'tutorials/todo-list-app/creating-a-view',
+            'tutorials/todo-list-app/creating-a-model-and-viewmodel',
+            'tutorials/todo-list-app/wiring-up-the-views',
+            'tutorials/todo-list-app/locating-views',
+            'tutorials/todo-list-app/adding-new-items',
+          ],
+        },
+      ],
+    },
   ],
   
 };
