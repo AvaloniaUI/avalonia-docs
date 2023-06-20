@@ -35,6 +35,20 @@ const sidebars = {
     },
     {
       'type': 'category',
+      'label': 'Stay Up-To-Date',
+      'link': {
+        'type': 'doc',
+        'id': 'stay-up-to-date/index',
+      },
+      'items': [
+        'stay-up-to-date/upgrade-from-0.10',
+        'stay-up-to-date/whats-new',
+        'stay-up-to-date/release-notes',
+        'stay-up-to-date/breaking-changes',
+      ],
+    },
+    {
+      'type': 'category',
       'label': 'Tutorials',
       'link': {
         'type': 'doc',
@@ -56,7 +70,6 @@ const sidebars = {
       ],
     },
   ],
-  
 };
 
 module.exports = sidebars;
