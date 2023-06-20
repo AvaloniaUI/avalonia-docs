@@ -3,36 +3,62 @@ id: welcome
 title: Welcome
 ---
 
-Welcome to the documentation for Avalonia, a cross-platform .NET framework for building beautiful, modern graphical user interfaces (GUIs). With Avalonia, you can create native applications for Windows, macOS, Linux, iOS, Android, and WebAssembly, all from a single codebase.
+Welcome to the documentation for _Avalonia UI_.
 
-## Supported .NET Versions
+You can decide how you want to use the information here. We have sections to suit your level of experience with Avalonia UI.
 
-Avalonia is compatible with all platforms that support .NET Standard 2.0. You can find more information on .NET Standard versions [here](https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0#select-net-standard-version).
+## Get Started
 
-## Supported Platforms
+Get started right away even if you are completely new to Avalonia UI using a simple step-by-step tutorial, with introductions to the basic concepts behind the framework.
 
-Avalonia has official support for the following platforms:
+:::info
+Get started [here](broken-reference).
+:::
 
-- Windows 8 and higher (although it does work on Windows 7 as well)
-- macOS High Sierra 10.13 and higher
+## Continue Your Learning
 
-On Linux, Avalonia is supported on the following distributions:
+We have concepts and guides sections to help you continue your learning.
 
-- Debian 9 (Stretch) and higher
-- Ubuntu 16.04 and higher
-- Fedora 30 and higher
+### Concepts
 
-## Supported Development Environments
+Read this section to expand your knowledge of the concepts used by _Avalonia UI_. This section is organised by subject.
 
-Avalonia has excellent support for XAML development with IntelliSense in the following environments:
+:::info
+Explore the Avalonia UI concepts [here](broken-reference).
+:::
 
-- Visual Studio 2017 and higher, including the Avalonia Visual Designer
-- JetBrains Rider 2020.3 and higher
+### Guides
 
-You can find instructions on how to install the Avalonia extension for Visual Studio [here](docs/getting-started/ide-support/). For JetBrains Rider setup, see [these instructions](docs/getting-started/ide-support/jetbrains-rider-setup.md).
+Our guides offer practical implementation advice, often as step-by-step procedures. This section is organised by task.
+
+:::info
+Get the guides for practical advice [here](broken-reference).
+:::
+
+## Convert from WPF;
+
+We have specific guidance and some detailed reference material for developers who are converting applications from WPF (Windows Presentation Foundation).
+
+## Consult Our Reference
+
+See the reference section for
 
 ## Getting Help
 
-If you encounter any issues or bugs with Avalonia, please open a new issue on [GitHub](https://github.com/AvaloniaUI/Avalonia). Our active developer community on [Telegram](https://t.me/Avalonia) is also a great resource for help with your projects.
+If you encounter any issues or bugs with _Avalonia UI_, please open a new issue on _GitHub_.
 
-In addition to community support, we offer a range of commercial support plans that provide priority assistance from the core contributors. You can learn more about these plans on [our website](https://avaloniaui.net/Support).
+:::info
+Access the _Avalonia UI_ _GitHub_ [here](https://github.com/AvaloniaUI/Avalonia).
+:::
+
+We have an active developer community on _Gitter_ and _Telegram_ that can often help.
+
+:::info
+Connect to community support using the details [here](communications/community.md).
+:::
+
+In addition to community support, we offer a range of commercial support plans that provide priority assistance from the core contributors.
+
+:::info
+To learn more about commercial support, see our website page [here](https://avaloniaui.net/Support).
+:::

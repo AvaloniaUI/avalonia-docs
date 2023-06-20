@@ -74,9 +74,8 @@ npm install
 ### Starting 
 
 ```
-npm run start
+npx docusaurus start
 ```
-
 
 ## Thanks 💜
 
