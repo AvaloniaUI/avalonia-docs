@@ -59,11 +59,17 @@ The two suggested workflows are:
   </div>
   ```
 
-  ## Local setup
+## Local setup
 
 ### Requirements
 
 - **Node version 16.14**
+
+### Setup
+
+```
+npm install
+```
 
 ### Starting 
 
