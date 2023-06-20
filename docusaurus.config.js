@@ -31,6 +31,15 @@ const config = {
           editUrl: 'https://github.com/AvaloniaUI/Docs',
           //includeCurrentVersion: false,
           //lastVersion: '0.10.x',
+          versions: {
+            current: {
+              label: "11.0 RC",
+              banner: "none"
+            },
+            "0.10.x": {
+              banner: "none"
+            }
+          }
         },
         
         theme: {
