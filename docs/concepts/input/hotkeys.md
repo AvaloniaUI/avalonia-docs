@@ -1,0 +1,43 @@
+---
+description: CONCEPTS - Input
+---
+
+# Keyboard and Hotkeys
+
+Various Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. Pressing the hotkey will execute the command [bound](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) to the Control.
+
+```markup
+<Menu>
+    <MenuItem Header="_File">
+        <MenuItem x:Name="SaveMenuItem" Header="_Save" Command="{Binding SaveCommand}" HotKey="Ctrl+S"/>
+    </MenuItem>
+</Menu>
+```
+
+You can also use the static methods of the `HotKeyManager` class to set and get hotkeys from code:
+
+```csharp
+InitializeComponent();
+
+var saveMenuItem = this.FindControl<Avalonia.Controls.MenuItem>("SaveMenuItem");
+
+HotKeyManager.SetHotKey(saveMenuItem, new KeyGesture(Key.S, KeyModifiers.Control));
+```
+
+> See the [Locating Controls](https://docs.avaloniaui.net/guides/basics/code-behind#locating-controls) section for more information on finding named Controls with the FindControl method.
+
+## Keys and Modifiers
+
+A Hotkey must have one [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/) and zero or more [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/). When setting a Hotkey in XAML using the `HotKey` property, the string will be parsed as a [KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/). [Enum.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.enum.parse) is used to parse the key and modifiers but synonyms like `Ctrl` instead of `Control` or `Win` instead of `Meta` can be used.
+
+### Reference <a href="#reference" id="reference"></a>
+
+* [HotKeyManager](http://reference.avaloniaui.net/api/Avalonia.Controls/HotKeyManager/)
+* [KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/)
+* [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/)
+* [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/)
+
+### Source code <a href="#source-code" id="source-code"></a>
+
+* [HotkeyManager.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/HotkeyManager.cs)
+* [KeyGesture.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Input/KeyGesture.cs)

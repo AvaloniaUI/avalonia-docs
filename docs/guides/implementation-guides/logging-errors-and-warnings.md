@@ -39,7 +39,7 @@ For the full API documentation on the `LogEventLevel` enum, see [here](https://r
 
 Log messages are then shown in the **Debug** view of the **Output** window of your IDE. For example, with verbose logging enabled:
 
-<!--<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>-->
+<!--<!--<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>-->-->
 
 If you want to re-route these messages to different location, you can use the methods on the `System.Diagnostics.Trace` component.
 
