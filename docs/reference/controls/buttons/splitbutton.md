@@ -54,11 +54,11 @@ The user-selection action should be invoked immediately when pressing either the
 </SplitButton>
 ```
 
-![](../../../.gitbook/assets/SplitButtonClosed.png)
+<!--![](../../../.gitbook/assets/SplitButtonClosed.png)-->
 
 _SplitButton (Flyout closed)_
 
-![](../../../.gitbook/assets/SplitButtonOpened.png)
+<!--![](../../../.gitbook/assets/SplitButtonOpened.png)-->
 
 _SplitButton (Flyout opened)_
 
@@ -97,7 +97,7 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 </SplitButton>
 ```
 
-![](../../../.gitbook/assets/SplitButton\_ColorPickerSample.png)
+<!--![](../../../.gitbook/assets/SplitButton\_ColorPickerSample.png)-->
 
 _Sample of SplitButton for color selection_
 
@@ -122,6 +122,6 @@ Another common example of the `SplitButton` could be an export button. When the 
 </SplitButton>
 ```
 
-![](../../../.gitbook/assets/SplitButton\_ExportButtonSample.png)
+<!--![](../../../.gitbook/assets/SplitButton\_ExportButtonSample.png)-->
 
 _Sample of a SplitButton with different export options_

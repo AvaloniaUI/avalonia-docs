@@ -20,7 +20,7 @@ new TextColumn<ItemClass, string>("Column Header", x => x.Property)
 
 The first generic parameter here is the class of the items that make up the grid rows. The second generic parameter here is the type of the property.&#x20;
 
-![](https://user-images.githubusercontent.com/53405089/157456551-dd394781-903a-4c7b-8874-e631e21534a1.png)
+<!--![](https://user-images.githubusercontent.com/53405089/157456551-dd394781-903a-4c7b-8874-e631e21534a1.png)-->
 
 The above is the signature of the `TextColumn` constructor. The first two parameters are required: the first is the column header, and the second is an expression to get the value of the property.&#x20;
 
@@ -40,7 +40,7 @@ new HierarchicalExpanderColumn<ItemClass>(
 
 The generic parameter is the class of the items that make up the grid rows. This is the same as the item class for the inner column.&#x20;
 
-![](https://user-images.githubusercontent.com/53405089/157536079-fd14f1ed-0a7d-438a-abba-fd56766709a9.png)
+<!--![](https://user-images.githubusercontent.com/53405089/157536079-fd14f1ed-0a7d-438a-abba-fd56766709a9.png)-->
 
 The above is the signature of the `HierarchicalExpanderColumn` constructor. The first parameter in the constructor is the inner column, and the second parameter is a (nullable) selector for any child elements.
 
@@ -55,7 +55,7 @@ new TemplateColumn<ItemClass>("Column Header",
        new FuncDataTemplate<T>((a,e) => new SomeControl()))
 ```
 
-![](https://user-images.githubusercontent.com/53405089/157664231-8653bce9-f8d6-4fbc-8e78-e3ff93f1ace2.png)
+<!--![](https://user-images.githubusercontent.com/53405089/157664231-8653bce9-f8d6-4fbc-8e78-e3ff93f1ace2.png)-->
 
 The above is the signature of the `TemplateColumn`constructor.  It has two required parameters: the first is the column header, and the second is a function that returns `IDataTemplate`.
 

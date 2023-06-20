@@ -63,15 +63,15 @@ Pressing a configuration in the `Flyout` should either (1) turn on the feature w
 </ToggleSplitButton>
 ```
 
-![](../../../.gitbook/assets/ToggleSplitButton\_closed\_unchecked.png)
+<!--![](../../../.gitbook/assets/ToggleSplitButton\_closed\_unchecked.png)-->
 
 _SplitButton (Flyout closed, unchecked)_
 
-![](../../../.gitbook/assets/ToggleSplitButton\_closed\_checked.png)
+<!--![](../../../.gitbook/assets/ToggleSplitButton\_closed\_checked.png)-->
 
 _SplitButton (Flyout closed, checked)_
 
-![](../../../.gitbook/assets/ToggleSplitButton\_opened\_checked.png)
+<!--![](../../../.gitbook/assets/ToggleSplitButton\_opened\_checked.png)-->
 
 _SplitButton (Flyout opened, checked)_
 
@@ -113,6 +113,6 @@ Continuing the text editor example from `SplitButton`, a common use case of the 
 </ToggleSplitButton>
 ```
 
-![](../../../.gitbook/assets/ToggleSplitButton\_TextListExample.png)
+<!--![](../../../.gitbook/assets/ToggleSplitButton\_TextListExample.png)-->
 
 _Sample of ToggleSplitButton for toggle text lists on and off and selecting the list format_

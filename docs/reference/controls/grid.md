@@ -147,7 +147,7 @@ Here, after the absolute width 100 has been subtracted (for column 0), column 1 
 
 The button is drawn to fill the span from the cell (column 1, row 1) plus one column (to the right) and one row down. The result looks like this:
 
-![](../../.gitbook/assets/grid\_example.png)
+<!--![](../../.gitbook/assets/grid\_example.png)-->
 
 ## More Information
 
