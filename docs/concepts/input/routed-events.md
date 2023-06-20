@@ -221,7 +221,7 @@ Avalonia input events that come in pairs are implemented so that a single user a
 
 As an illustration of how input event processing works, consider the following input event example. In the following tree illustration, `leaf element #2` is the source of a `PointerPressed` event:
 
-![Event routing diagram](../../.gitbook/assets/input-event-routing.png)
+<!-- ![Event routing diagram](../../.gitbook/assets/input-event-routing.png) -->
 
 The order of event processing is as follows:
 
