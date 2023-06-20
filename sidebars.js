@@ -28,9 +28,9 @@ const sidebars = {
             'get-started/test-drive/the-design-preview',
             'get-started/test-drive/respond-to-an-event',
             'get-started/test-drive/code-with-controls',
-            'get-started/test-drive/conclusion',
           ],
         },
+        'get-started/learn-more',
       ],
     },
     {
