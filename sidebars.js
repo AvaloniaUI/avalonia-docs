@@ -103,7 +103,8 @@ const sidebars = {
             'id': 'user-interface/building-layouts/index',
           },
           'items': [
-            'user-interface/building-layouts/tutorial',
+            'user-interface/building-layouts/alignment-margins-and-padding',
+            'user-interface/building-layouts/panels-overview',
           ],
         },
         'user-interface/adding-interactivity',
