@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Compiled Bindings
+# Compiled Bindings
 
 Bindings defined in the XAML are using reflection in order to find and access the requested property in your `ViewModel`. In Avalonia you can also use compiled bindings, which has some benefits:
 

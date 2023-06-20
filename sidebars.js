@@ -115,6 +115,24 @@ const sidebars = {
     },
     {
       'type': 'category',
+      'label': 'Data',
+      'items': [
+        {
+          'type': 'category',
+          'label': 'Data Binding',
+          'link': {
+            'type': 'doc',
+            'id': 'data/data-binding/index',
+          },
+          'items': [
+            'data/data-binding/data-context',
+            'data/data-binding/data-binding-syntax',
+            'data/data-binding/compiled-bindings',
+          ],
+        },
+      ],
+    },    {
+      'type': 'category',
       'label': 'Guides',
       'link': {
         'type': 'doc',

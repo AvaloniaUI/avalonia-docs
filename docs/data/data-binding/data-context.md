@@ -2,22 +2,22 @@
 description: CONCEPTS
 ---
 
-# 💡 Data Context
+# Data Context
 
-When _Avalonia UI_ performs data binding, it has to locate an application object to bind to. This location is represented by a **Data Context**.
+When Avalonia performs data binding, it has to locate an application object to bind to. This location is represented by a **Data Context**.
 
 <!--<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>-->
 
-Every control in _Avalonia UI_ has a property called `DataContext`, and this includes built-in controls, user controls and windows.&#x20;
+Every control in Avalonia has a property called `DataContext`, and this includes built-in controls, user controls and windows.&#x20;
 
-When binding, _Avalonia UI_ performs a hierarchical search of the logical control tree, starting with the control where the binding is defined, until it finds a data context to use.&#x20;
+When binding, Avalonia performs a hierarchical search of the logical control tree, starting with the control where the binding is defined, until it finds a data context to use.&#x20;
 
 <!--<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>-->
 
 This means that a control defined in a window can use the data context of the window; or (as above) a control in a control in a window can use the window's data context.
 
 {% hint style="info" %}
-For information about the control trees in _Avalonia UI_, and how to see them at run-time, see [here](../control-trees.md).
+For information about the control trees in Avalonia, and how to see them at run-time, see [here](../control-trees.md).
 {% endhint %}
 
 ## Example
@@ -80,7 +80,7 @@ You may have noticed, after you first compiled this project, that the preview pa
 
 <!--<figure><img src="../../.gitbook/assets/image (40) (1).png" alt=""><figcaption></figcaption></figure>-->
 
-This is because _Avalonia UI_ can also set a data context for a control for use at design-time. You will find this useful because it means that the preview pane can show some realistic data while you adjust layout and styles.
+This is because Avalonia can also set a data context for a control for use at design-time. You will find this useful because it means that the preview pane can show some realistic data while you adjust layout and styles.
 
 You can see the design-time data context being set in the XAML:
 
@@ -90,13 +90,13 @@ You can see the design-time data context being set in the XAML:
 </Design.DataContext>
 ```
 
-{% hint style="info" %}
+:::tip
 For a more detailed guide about using the design-time data context, see [here](../../guides/implementation-guides/how-to-use-design-time-data.md).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 Further discussion of data binding requires you to have a background in the MVVM pattern of programming. For an introduction to the concepts of the MVVM pattern, see [here](../the-mvvm-pattern/). &#x20;
-{% endhint %}
+:::
 
 Further Information
 
