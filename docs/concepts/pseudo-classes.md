@@ -1,0 +1,6 @@
+---
+description: CONCEPTS
+---
+
+# 💡 Pseudo Classes
+
