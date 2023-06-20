@@ -62,9 +62,9 @@ If successful you may return to your IDE of choice and open the `info.plist` fil
 
 Change the `RuntimeIdentifier` from `iossimulator-x64` to `ios-arm64`
 
-{% hint style="info" %}
+:::info
 `You will need to reverse this step if you wish to run in the simulator in future.`
-{% endhint %}
+:::
 
 Add a `<CodesignKey>` tag.
 

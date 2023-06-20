@@ -52,9 +52,9 @@ In this example you can see that local value (defined directly on the control) h
 
 You can see the full list of value priorities in the [BindingPriority](http://reference.avaloniaui.net/api/Avalonia.Data/BindingPriority/) enum, where lower enum values have higher priority. For example `Animation` values have the highest priority and even override local values.
 
-{% hint style="info" %}
+:::info
 Some default Avalonia styles use local values in their templates instead of template bindings or styles-setters, which makes it impossible to update template property without replacing whole template.
-{% endhint %}
+:::
 
 ### Missing style pseudoclass (trigger) selector
 

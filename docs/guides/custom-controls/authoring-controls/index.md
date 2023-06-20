@@ -24,8 +24,8 @@ A templated custom control creates a 'look-less' control that can be styled by t
 
 The majority of the _Avalonia UI_ built-in controls are templated.
 
-{% hint style="info" %}
+:::info
 For guidance on how to create templated controls, see [here](../how-to-create-templated-controls.md).
-{% endhint %}
+:::
 
 The following pages show you how to create a simple custom control (inherited from `Control`).

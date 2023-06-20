@@ -71,9 +71,9 @@ namespace CCLibrary
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
+:::info
 Notice that the namespace reference for the control library includes the name of the assembly.
-{% endhint %}
+:::
 
 ## XML Namespace Definitions
 
@@ -89,9 +89,9 @@ This is possible because of the presence of XML namespace definitions in a contr
 [assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
 ```
 
-{% hint style="info" %}
+:::info
 You can see this in the _Avalonia UI_ built-in controls source code [here](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs).&#x20;
-{% endhint %}
+:::
 
 ### Common Namespace Definitions&#x20;
 

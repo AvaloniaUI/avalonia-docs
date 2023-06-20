@@ -8,13 +8,13 @@ title: How to Create a Custom Data Binding Converter
 
 When one of the built-in data binding converters does not meet your conversion requirements, you can write a custom converter based on the `IValueConverter` interface. This guide will show you how.&#x20;
 
-{% hint style="info" %}
+:::info
 To review the _Microsoft_ documentation for the `IValueConverter` interface, see [here](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 As the `IValueConverter` interface was not available in .NET standard 2.0, Avalonia UI  contains a copy in the `Avalonia.Data.Converters` namespace. You can see the API documentation about this interface, [here](https://reference.avaloniaui.net/api/Avalonia.Data.Converters/IValueConverter/).
-{% endhint %}
+:::
 
 You must reference a custom converter in some resources before it can be used. This can be at any level in your application. In this example, the custom converter `myConverter` is referenced in the window resources:
 
@@ -152,6 +152,6 @@ public class AnimalConverter : IValueConverter
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For further guidance about how to bind images, see [here](how-to-bind-image-files.md).
-{% endhint %}
+:::

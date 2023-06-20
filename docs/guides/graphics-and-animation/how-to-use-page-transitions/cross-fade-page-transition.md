@@ -23,10 +23,10 @@ var transition = new CrossFade(TimeSpan.FromMilliseconds(500));
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this transition, see [here](http://reference.avaloniaui.net/api/Avalonia.Animation/PageSlide/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`CrossFade.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Animation/CrossFade.cs)
-{% endhint %}
+:::

@@ -47,10 +47,10 @@ This will create a project with the following structure:
 
 <!--<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>-->
 
-{% hint style="info" %}
+:::info
 To see how to set up the your development environment for iOS, see [here](ios/setting-up-your-developer-environment-for-ios.md).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 To see how to set up the your development environment for Android, see here.
-{% endhint %}
+:::

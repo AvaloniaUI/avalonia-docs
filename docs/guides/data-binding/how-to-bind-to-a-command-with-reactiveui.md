@@ -18,9 +18,9 @@ This guide shows you how to bind a view model method (that performs an action) t
 
 This guide assumes that you are using the MVVM implementation pattern, and you have based your view model on the _ReactiveUI_ framework.
 
-{% hint style="info" %}
+:::info
 To review the concept behind the MVVM implementation pattern, see [here](../../concepts/the-mvvm-pattern/).&#x20;
-{% endhint %}
+:::
 
 If you created your application using the <mark style="color:green;">**Avalonia MVVM Application**</mark> solution template then your solution will already contain the _ReactiveUI_ framework package, and you can reference it like this:
 
@@ -30,9 +30,9 @@ using ReactiveUI;
 
 A view model that can perform actions implements them through the `ICommand` interface. The _ReactiveUI_ framework provides the `ReactiveCommand` class that implements `ICommand`.
 
-{% hint style="info" %}
+:::info
 For details of the definition of the `ICommand` interface, see [here](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.input.icommand?view=netstandard-2.0).
-{% endhint %}
+:::
 
 The `Command` attribute data binding will call the bound view model method through its `ICommand.Execute` interface, when the bound control is activated. In this example: when the button is clicked.
 
@@ -128,8 +128,8 @@ For example to pass an integer parameter:
 
 {% hint style="danger" %}
 You will get an error if your parameter definitions are missing or not the correct type.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 Like any other property, the command parameter can be bound.
-{% endhint %}
+:::

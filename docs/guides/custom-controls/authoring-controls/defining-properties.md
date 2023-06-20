@@ -7,9 +7,9 @@ title: Defining Properties
 
 If you are creating a custom control, you will usually want it to have properties that can be set by the _Avalonia UI_ styling system.
 
-{% hint style="info" %}
+:::info
 For more information about how to use styles in _Avalonia UI_, see the guide [here](../../styles-and-resources/styling/)_._
-{% endhint %}
+:::
 
 On this page, you will see how to implement a property so that it can be changed by the _Avalonia UI_ styling system. This is a two step process:
 
@@ -92,14 +92,14 @@ namespace AvaloniaCCExample.CustomControls
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
+:::info
 Note that the getter/setter of the property uses the special Avalonia UI `GetValue` and `SetValue` methods.
-{% endhint %}
+:::
 
 The styled property will work both at run-time and in the preview panel.
 
 <!--<figure><img src="../../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>-->
 
-{% hint style="info" %}
+:::info
 For more advanced information about how to create a custom control, see [here](../how-to-create-advanced-custom-controls.md).
-{% endhint %}
+:::

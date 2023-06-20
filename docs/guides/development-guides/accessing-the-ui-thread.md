@@ -26,9 +26,9 @@ Use `InvokeAsync` when you need to wait for the result, and potentially want to 
 
 Both of the above methods have a dispatcher priority parameter. You can use this with the   `DispatcherPriority` enumeration to specify the queue priority that the given job should be given.&#x20;
 
-{% hint style="info" %}
+:::info
 For the possible values of the `DispatcherPriority` enumeration, see [here](http://reference.avaloniaui.net/api/Avalonia.Threading/DispatcherPriority/).
-{% endhint %}
+:::
 
 ## Example
 
@@ -122,10 +122,10 @@ private async void ButtonClickHandler(object sender, RoutedEventArgs e)
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about the dispatcher, see [here](http://reference.avaloniaui.net/api/Avalonia.Threading/Dispatcher/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`Dispatcher.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Threading/Dispatcher.cs)
-{% endhint %}
+:::

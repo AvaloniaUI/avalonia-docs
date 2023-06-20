@@ -8,9 +8,9 @@ title: How to Bind to a Command without ReactiveUI
 
 Sometimes you just want to call a method when a button is clicked without the full ceremony of creating a reactive command, using the _ReactiveUI_ framework.&#x20;
 
-{% hint style="info" %}
+:::info
 To see how to how to bind to a command **with** _ReactiveUI_, see [here](how-to-bind-to-a-command-with-reactiveui.md).
-{% endhint %}
+:::
 
 _Avalonia UI_ data binding allows you to implement directly both a view model method that performs an action, and a property that can control whether the method can execute.&#x20;
 
@@ -86,9 +86,9 @@ So, extending the example XAML to supply the parameter (string) from a text box:
 </StackPanel>
 ```
 
-{% hint style="info" %}
+:::info
 This example uses the technique of binding directly to another control. You can see how to do this, [here](binding-to-controls.md).
-{% endhint %}
+:::
 
 You will see that the button becomes enables only when the text box contains a string. &#x20;
 
@@ -98,6 +98,6 @@ You will see that the button becomes enables only when the text box contains a s
 
 If you want to trigger the 'can execute?' method from another property in your view model, then you will have to decorate the property with one or more `DependsOn` attributes, and write the code to invoke property changed events yourself.&#x20;
 
-{% hint style="info" %}
+:::info
 This technique applies to a view model that is not using the _ReactiveUI_ framework.
-{% endhint %}
+:::

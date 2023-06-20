@@ -28,9 +28,9 @@ You use a style selector to define what controls the style can act upon. The sel
 
 You must place a collection of setter elements inside the style element; and these define what is to be changed on any controls that match the selector.  &#x20;
 
-{% hint style="info" %}
+:::info
 You can read a full list of the selector formats [here](selectors.md).&#x20;
-{% endhint %}
+:::
 
 For example, the following style element is located inside a window, and it is targeting the `TextBlock` control class and the style class name `h1`.&#x20;
 
@@ -52,6 +52,6 @@ For example, the following style element is located inside a window, and it is t
 
 The style will therefore select any text block control in the window where the `h1` style class has been set. In this example, the first text block is selected, and the font size is changed to 24 point and font weight is changed to bold. The second text block will not be altered by the style.
 
-{% hint style="info" %}
+:::info
 You may be helpful to think of the _Avalonia UI_ styling system of as a mixture of CSS styling and WPF/UWP styling, if you are familiar with those technologies.
-{% endhint %}
+:::

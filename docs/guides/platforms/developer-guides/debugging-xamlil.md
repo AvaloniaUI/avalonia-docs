@@ -27,4 +27,4 @@ In other IDEs, a message will appear in the build output window indicating the P
 
 {% hint style="danger" %}
 If you do not attach a debugger within one minute of starting the build, then a timeout message will be reported and the build will continue without the debug.
-{% endhint %}
+:::

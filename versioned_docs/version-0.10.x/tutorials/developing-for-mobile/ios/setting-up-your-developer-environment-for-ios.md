@@ -17,10 +17,10 @@ First it is very important to install the correct [dotnet SDK](https://dotnet.mi
 dotnet workload install ios
 ```
 
-{% hint style="info" %}
+:::info
 You may need to run the command with `sudo`\
 \
 You may also need to uninstall old versions. `dotnet workload remove ios`
-{% endhint %}
+:::
 
 This will allow you to build applications for iOS on any platform. However you will only be able to test and run them if you have access to actual macOS hardware with Xcode installed.

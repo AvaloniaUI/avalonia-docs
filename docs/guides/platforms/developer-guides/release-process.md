@@ -22,7 +22,7 @@ For an example`release/0.10.2` the git tree will now look like this:
 
 {% hint style="danger" %}
 Do not assume the _NuGet_ packages will work just because master was working. In the past some technical changes, for example 'strong naming' have broken a NuGet package.
-{% endhint %}
+:::
 
 * [ ] Now click <mark style="color:green;">**Releases**</mark> and then the <mark style="color:green;">**Avalonia (master / release)**</mark> pipeline as shown below:
 
@@ -38,14 +38,14 @@ Do not assume the _NuGet_ packages will work just because master was working. In
 
 <!-- ![](<../../../.gitbook/assets/image (16) (1).png>) -->
 
-{% hint style="info" %}
+:::info
 At this point the packages will deploy to NuGet, it can take between 10 and 20 minutes for them to be indexed and publicly available. Once deployed the package will be at  [https://www.nuget.org/packages/Avalonia/](https://www.nuget.org/packages/Avalonia/)
-{% endhint %}
+:::
 
 * [ ] Make a release on GitHub releases, this will set a tag named for your release version. In this example: `0.10.2` You should add release notes here.
 * [ ] Update the .NET templates and Visual Studio plugin templates if necessary.
 * [ ] Announce the release.
 
-{% hint style="info" %}
+:::info
 Now that the release is done, it is important to understand the process for maintaining the stable branch. This is the subject of the next page.
-{% endhint %}
+:::

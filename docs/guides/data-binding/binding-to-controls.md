@@ -8,9 +8,9 @@ title: How To Bind to a Control Directly
 
 With _Avalonia UI_, as well as binding to a data context you can also bind one control directly to another.
 
-{% hint style="info" %}
+:::info
 Note that this technique does not use a data context at all. When you do this, you are binding directly to another control itself.&#x20;
-{% endhint %}
+:::
 
 ## Binding to a Named Control
 
@@ -88,4 +88,4 @@ If you need to include a XAML namespace in the ancestor type, you separate the n
 
 {% hint style="warning" %}
 _Avalonia UI_ also supports WPF/UWP's `RelativeSource` syntax which does something similar, but is _not_ the same. `RelativeSource` works on the _visual_ tree whereas the syntax given here works on the _logical_ tree.
-{% endhint %}
+:::

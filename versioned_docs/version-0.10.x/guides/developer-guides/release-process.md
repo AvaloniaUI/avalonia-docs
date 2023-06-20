@@ -21,7 +21,7 @@ The git tree should now look like this:
 
 {% hint style="danger" %}
 Don't assume the Nuget packages will work just because master was working. In the past some technical changes i.e. Strong Naming broke nuget packages.
-{% endhint %}
+:::
 
 * Now click on "Releases" and select "Avalonia (master / release)" pipeline as shown below.
 

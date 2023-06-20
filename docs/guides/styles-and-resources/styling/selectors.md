@@ -7,9 +7,9 @@ title: Style Selectors
 
 _Avalonia UI_ uses style selectors to match controls using a custom XAML syntax.
 
-{% hint style="info" %}
+:::info
 If you are familiar with the CSS (Cascading Style Sheets) technology, then you will recognise this syntax as being very similar.
-{% endhint %}
+:::
 
 &#x20;Here is a list of some example style selectors:
 

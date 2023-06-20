@@ -14,17 +14,17 @@ The property values between keyframes are set following the profile of an **easi
 
 The animation is triggered to start, and then can run any number of times, in either direction. There are also options to delay the start of the animation, and to repeat it.
 
-{% hint style="info" %}
+:::info
 If you are familiar with keyframe animations keyframe work in CSS, you will recognise the similarity with how they are done in in _Avalonia UI_.&#x20;
-{% endhint %}
+:::
 
 ## Example <a href="#defining-a-keyframe-animation" id="defining-a-keyframe-animation"></a>
 
 You define a keyframe animation using styles.&#x20;
 
-{% hint style="info" %}
+:::info
 To revise how _Avalonia UI_ uses styles, see the concept [here](../../concepts/styling.md).
-{% endhint %}
+:::
 
 Follow this procedure to define a simple color fade animation using XAML:
 
@@ -175,9 +175,9 @@ The default easing function is linear (above left), but you use another pattern 
 </Animation>
 ```
 
-{% hint style="info" %}
+:::info
 For a full list of the _Avalonia UI_ easing functions, see the reference [here](../../reference/animation-settings.md).
-{% endhint %}
+:::
 
 You can also add your own custom easing function class like this:
 

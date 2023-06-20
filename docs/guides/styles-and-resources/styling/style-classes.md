@@ -29,7 +29,7 @@ If you were comparing style classes to CSS you must note that: **unlike CSS**, t
 <Button Classes="h1 blue"/>
 <Button Classes="blue h1"/>
 ```
-{% endhint %}
+:::
 
 ## Pseudo Classes
 
@@ -67,9 +67,9 @@ In this example, the pseudo class selector changes properties inside a control t
 
 Other pseudo classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
 
-{% hint style="info" %}
+:::info
 For more detail about pseudo classes, see the reference [here](../../../reference/styles/pseudo-classes.md).
-{% endhint %}
+:::
 
 ## Conditional Classes
 

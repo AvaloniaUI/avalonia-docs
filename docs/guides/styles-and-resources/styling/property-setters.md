@@ -44,9 +44,9 @@ However, be alert to the (somewhat rare) scenario where application of the sette
 
 If the setter causes a match to become invalid, then that match is eliminated from the process, and selection is repeated. This means that the next match (based on **style priority**) will be used, and properties set accordingly.
 
-{% hint style="info" %}
+:::info
 You can review the rules governing **style priority** on the previous page, [here](style-classes.md#style-priority).
-{% endhint %}
+:::
 
 ## Mutable Values
 
@@ -72,9 +72,9 @@ Note: if you are using compiled bindings, you need to explicitly set the data ty
 </Style>
 ```
 
-{% hint style="info" %}
+:::info
 For more information about compiled bindings, see here. --> TO DO
-{% endhint %}
+:::
 
 ## Setter Data Templates <a href="#templates-in-setters" id="templates-in-setters"></a>
 
@@ -90,6 +90,6 @@ As previously described here, when you use a setter without a **data template**,
 </Style>
 ```
 
-{% hint style="info" %}
+:::info
 For information about the concepts behind a **data template**, see [here](../../../concepts/templates/).
-{% endhint %}
+:::

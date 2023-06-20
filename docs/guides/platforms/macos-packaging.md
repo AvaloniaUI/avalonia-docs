@@ -8,9 +8,9 @@ title: macOS Packaging
 
 macOS applications are typically distributed in a `.app` application bundle. To make .NET Core and Avalonia projects work in a `.app` bundle, some extra legwork has to be done after your application has gone through the publishing process.
 
-{% hint style="info" %}
+:::info
 For background information about macOS application bundles, see the Wikipedia article [here](https://en.wikipedia.org/wiki/Bundle\_\(macOS\)#macOS\_application\_bundles).
-{% endhint %}
+:::
 
 With _Avalonia UI_, you'll have a `.app` folder structure that looks like this:
 
@@ -318,9 +318,9 @@ The following steps were modified from [this StackOverflow post](https://stackov
 
 Once notarization is complete, you should be able to distribute your application!
 
-{% hint style="info" %}
+:::info
 If you distribute your app in a `.dmg`, you will want to modify the steps slightly:
-{% endhint %}
+:::
 
 1. Notarize your `.app` as normal (in a `.zip` file)
 2. Add your notarized and stapled (`xcrun stapler`) app into the DMG (the DMG now has the notarized/stapled `.app` file inside of it).

@@ -9,7 +9,7 @@ This guide describes how to deal with merging pull requests while maintaining a 
 
 {% hint style="warning" %}
 This process **must** be followed during any period that the master branch is allowing breaking changes.
-{% endhint %}
+:::
 
 In order to maintain a stable branch, you are required to follow this process on **every** pull request that is merged, to ensure they can be backported correctly.
 
@@ -18,7 +18,7 @@ For a pull request to be backported it **must** meet the following criteria:
 
 * Contain no API changes that will break compatibility (i.e. changing signatures, removing a method, etc.). Additional overloads, methods, classes and extension methods are allowable.
 * Be suitable for the stable release, by default most changes and features will be considered.
-{% endhint %}
+:::
 
 Provided the above criteria are met, follow this procedure: merge the pull request to the master branch - generating a merge commit. For example:
 
@@ -34,7 +34,7 @@ Now we need to get the new pull request merged into the stable branch.
 
 {% hint style="warning" %}
 Pay careful attention here, we do not simply merge into the stable branch!
-{% endhint %}
+:::
 
 * Checkout the stable branch (example: `stable/0.10.x`).
 * Cherry-pick the merge commit from the master branch.
@@ -47,5 +47,5 @@ The git tree should look like this now.
 Please also always add the labels `backport-candidate` and `backported [version]` to the pull requests themselves.&#x20;
 
 Where `[version]` is `0.10.x` for example.
-{% endhint %}
+:::
 

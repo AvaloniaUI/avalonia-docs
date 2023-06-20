@@ -172,9 +172,9 @@ In the above example, the resources file `AppResources.axaml` is located in the 
 
 Where the resource `InfoColor` is defined as a `SolidColorBrush` in the imported file.
 
-{% hint style="info" %}
+:::info
 Note that the resource has been referenced using `StaticResource` because it must not change - the requirement here is to keep the styling consistent.&#x20;
-{% endhint %}
+:::
 
 ## Merged Resources Priority  <a href="#resource-resolution" id="resource-resolution"></a>
 

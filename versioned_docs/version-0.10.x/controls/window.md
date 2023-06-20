@@ -40,10 +40,10 @@ public override void OnFrameworkInitializationCompleted()
 
 It can be retrieved at any time by casting `Application.ApplicationLifetime` IClassicDesktopStyleApplicationLifetime.
 
-{% hint style="info" %}
+:::info
 Mobile and browser platforms don't have a concept of Window in Avalonia.
 Instead you need to set MainView control in Application.ApplicationLifetime when it implements ISingleViewApplicationLifetime interface.
-{% endhint %}
+:::
 
 ### Show, hide and close a window <a id="show-hide-and-close-a-window"></a>
 

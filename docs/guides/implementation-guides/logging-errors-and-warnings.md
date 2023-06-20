@@ -33,9 +33,9 @@ public static AppBuilder BuildAvaloniaApp()
         .LogToTrace(LogEventLevel.Verbose)
 ```
 
-{% hint style="info" %}
+:::info
 For the full API documentation on the `LogEventLevel` enum, see [here](https://reference.avaloniaui.net/api/Avalonia.Logging/LogEventLevel/).
-{% endhint %}
+:::
 
 Log messages are then shown in the <mark style="color:green;">**Debug**</mark> view of the <mark style="color:green;">**Output**</mark> window of your IDE. For example, with verbose logging enabled:
 

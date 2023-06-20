@@ -11,9 +11,9 @@ Follow these steps to install the tools you will need, using the CLI:
 
 * [ ] Check that you have installed a compatible version of the .NET SDK. The lowest version that works with _Avalonia UI_ is 6.0.2.00.
 
-{% hint style="info" %}
+:::info
 You can see the versions of the .NET SDK [here](https://dotnet.microsoft.com/en-us/download/dotnet).
-{% endhint %}
+:::
 
 * [ ] You may need to uninstall an old version of the _Android Workload._ To do this, type the following command:
 
@@ -27,9 +27,9 @@ dotnet workload remove android
 dotnet workload install android
 ```
 
-{% hint style="info" %}
+:::info
 You may need to run the above commands with _sudo._
-{% endhint %}
+:::
 
 ## Install the Android SDK
 

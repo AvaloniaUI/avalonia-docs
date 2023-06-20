@@ -164,10 +164,10 @@ public class CustomTransition : IPageTransition
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this interface see [here](http://reference.avaloniaui.net/api/Avalonia.Animation/IPageTransition/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`IPageTransition.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Animation/IPageTransition.cs)
-{% endhint %}
+:::

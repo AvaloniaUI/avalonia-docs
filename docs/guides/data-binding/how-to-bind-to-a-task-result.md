@@ -30,6 +30,6 @@ You can bind to the result in the following way:
 <TextBlock Text="{Binding MyAsyncText^, FallbackValue='Wait a second'}" />
 ```
 
-{% hint style="info" %}
+:::info
 Note: You can use `FallbackValue` to display some loading indicator.
-{% endhint %}
+:::

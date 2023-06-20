@@ -12,13 +12,13 @@ Much of the _Avalonia UI_ styling system corresponds to CSS styling approaches. 
 
 An _Avalonia UI_ selector, like a CSS selector, does not raise an error or warning when there are no controls which can be matched. The style will silently fail to show.
 
-{% hint style="info" %}
+:::info
 Check whether you have used a name or class that does not exist.&#x20;
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 Check whether you have used a child selector where there are no children to match.
-{% endhint %}
+:::
 
 ## Include File Sequence
 
@@ -68,11 +68,11 @@ You can see the full list of value priorities in the `BindingPriority` enum, whe
 
 {% hint style="warning" %}
 The exception is that `Animation` values have the highest priority and can even override local values.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 Some default _Avalonia UI_ styles use local values in their templates instead of template bindings or style setters. This makes it impossible to update the template property without replacing the whole template.
-{% endhint %}
+:::
 
 ### Missing style pseudo class (trigger) selector
 
@@ -91,9 +91,9 @@ Let's imagine a situation in which you might expect a second style to override p
 
 With this code example the `Border` has a Red background normally and Blue when the pointer is over it. This is because as with CSS more specific selectors have precedence. It is an issue, when you want to override default styles of any state (pointerover, pressed or others) with a single style. To achieve it you will need to have new styles for these states as well.
 
-{% hint style="info" %}
+:::info
 Visit the Avalonia source code to find the [original templates](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls) when this happens and copy and paste the styles with pseudoclasses into your code.
-{% endhint %}
+:::
 
 ### Selector with a pseudoclass doesn't override the default
 
@@ -137,15 +137,15 @@ The actual background is rendered by a `ContentPresenter`, which in the default 
 </Style>
 ```
 
-{% hint style="info" %}
+:::info
 You can see this behavior for all controls in the default themes (both old Default and the new Fluent), not just Button. And not just for Background, but also other state-dependent properties.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 Why default styles change the ContentPresenter `Background` property directly instead of changing the `Button.Background` property?
 
 This is because if the user were to set a local value on the button, it would override all styles, and make button always the same color. For more details see this [reverted PR](https://github.com/AvaloniaUI/Avalonia/pull/2662#issuecomment-515764732).
-{% endhint %}
+:::
 
 ### Previous value of specific properties is not restored when style is not applied anymore
 
