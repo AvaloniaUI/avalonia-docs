@@ -71,6 +71,33 @@ const sidebars = {
     },
     {
       'type': 'category',
+      'label': 'User Interface',
+      'items': [
+        {
+          'type': 'category',
+          'label': 'Controls',
+          'link': {
+            'type': 'doc',
+            'id': 'user-interface/controls/index',
+          },
+          'items': [
+            'user-interface/controls/builtin-controls',
+            {
+              'type': 'category',
+              'label': 'Creating Controls',
+              'items': [
+                'user-interface/controls/creating-controls/choosing-a-custom-contro-type',
+                'user-interface/controls/creating-controls/defining-properties',
+                'user-interface/controls/creating-controls/defining-events',
+                'user-interface/controls/creating-controls/control-themes',
+              ],
+            },
+              ],
+        },
+      ],
+    },
+    {
+      'type': 'category',
       'label': 'Guides',
       'link': {
         'type': 'doc',
