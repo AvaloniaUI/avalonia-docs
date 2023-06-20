@@ -8,21 +8,21 @@ This page lists the XAML syntax for style selectors with the C# code methods tha
 
 ## By Control Class <a href="#oftype" id="oftype"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="Button">
 <Style Selector="local|Button">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<Button>());
 new Style(x => x.OfType(typeof(Button)));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 Selects a control by its class name.&#x20;
 
@@ -40,61 +40,61 @@ Note the type of an object is actually determined by looking at its `IStyleable.
 
 ## By Name <a href="#name" id="name"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="#myButton">
 <Style Selector="Button#myButton">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.Name("myButton"));
 new Style(x => x.OfType<Button>().Name("myButton"));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 Selects a control by its `Name` attribute, with an added `#` (hash) character prefix.
 
 ## By Style Class <a href="#class" id="class"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="Button.large">
 <Style Selector="Button.large.red">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<Button>().Class("large"));
 new Style(x => x.OfType<Button>().Class("large").Class("red"));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 Selects a control with the specified style class or classes. Multiple classes are separated with a full stop. If multiple classes are specified in the selector, then the control must have all of the requested classes defined for a match.
 
 ## By Pseudo Class <a href="#is" id="is"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <Style Selector="Button:focus">
 <Style Selector="Button.large:focus">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<Button>().Class(":focus"));
 new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. There can only be one pseudo class in the selector. When used in combination with other classes, the pseudo class must be the last in the list. &#x20;
 
@@ -104,21 +104,21 @@ For more detail about pseudo classes, see the reference [here](pseudo-classes.md
 
 ## Include Derived Classes <a href="#is" id="is"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector=":is(Button)">
 <Style Selector=":is(local|Button)">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.Is<Button>());
 new Style(x => x.Is(typeof(Button)));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 This is very similar to the style class selector except it also matches derived types.
 
@@ -128,37 +128,37 @@ Technical detail: during the matching process, _Avalonia UI_ determines the type
 
 INterestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector=":is(Control).margin2">
 <Style Selector=":is(local|Control.margin2)">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.Is<Control>().Class("margin2"));
 new Style(x => x.Is(typeof(Control)).Class("margin2"));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 ## Child Operator <a href="#child" id="child"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="StackPanel > Button">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 A child selector is defined by separating two selectors with a `>` character. This selector matches only direct children in the **logical controls tree**.
 
@@ -182,19 +182,19 @@ The selector will match the first button, but not the second. This is because th
 
 ## Any Descendant Operator <a href="#descendant" id="descendant"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="StackPanel Button">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<StackPanel>().Descendant().OfType<Button>());
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 When two selectors are separated by a space, then the selector will match any descendants in the logical tree. The parent is on the left, and the descendant is on the right.
 
@@ -202,19 +202,19 @@ Therefore applying the above selector to the previous XAML sample, both buttons 
 
 ## By Property Match <a href="#propertyequals" id="propertyequals"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="Button[IsDefault=true]">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 You can refine a selector so that it includes the value of a property. The property=value pair is defined inside square brackets. This matches any control that has the specified property set to the specified value.&#x20;
 
@@ -241,19 +241,19 @@ Further note: when you use a property match, the property type must support the 
 
 ## By Template <a href="#template" id="template"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="Button /template/ ContentPresenter">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<Button>().Template().OfType<ContentPresenter>());
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 You can match a control in a control template using the above syntax. All the other selectors listed here work on the logical tree, but this selector can step into a template.
 
@@ -261,55 +261,55 @@ In the example above, if a button has a template, then the selector matches sele
 
 ## Not Function <a href="#not" id="not"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="TextBlock:not(.h1)">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 This function negates the selection in the brackets. In the example above all the text block controls that **do not** have the `h1` class will be matched.
 
 ## By List <a href="#or" id="or"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="TextBlock, Button">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 You can select any element that matches a comma-separated list of selectors. Any setters in the style must change properties that are common to all the items. &#x20;
 
 ## By Child Position Formula <a href="#nth-child" id="nth-child"></a>
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="TextBlock:nth-child(2n+3)">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<TextBlock>().NthChild(2, 3));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 You can match elements based on their position within a group of siblings.  This is regardless of the class of the parent (container) control.&#x20;
 
@@ -323,37 +323,37 @@ If the formula evaluates to less than 1 then it is ignored - there are never any
 
 There is a corresponding selector with a formula that counts from the end of the group:
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="TextBlock:nth-last-child(2n+3)">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<TextBlock>().NthLastChild(2, 3));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 ### Single child position
 
 You can omit the **A** and **n** from the formula in XAML to specify a single position only. For example, this selects only child number 3:
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```markup
 <Style Selector="TextBlock:nth-child(3)">
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
 new Style(x => x.OfType<TextBlock>().NthChild(0, 3));
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 ### Keyword notation
 

@@ -26,15 +26,15 @@ In an **ordinal** string comparison, each character is compared using its simple
 
 This example has a fixed items source (array) that is set in the C# code-behind.
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">Choose an animal:</TextBlock>
   <AutoCompleteBox x:Name="animals" FilterMode="StartsWith" />
 </StackPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -55,8 +55,8 @@ namespace AvaloniaControls.Views
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../.gitbook/assets/autocomplete.gif" alt=""><figcaption></figcaption></figure-->
 

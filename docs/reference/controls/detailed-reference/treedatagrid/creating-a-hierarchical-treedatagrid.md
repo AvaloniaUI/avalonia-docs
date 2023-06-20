@@ -8,12 +8,12 @@ description: REFERENCE - Built-in Controls
 
 In this example the view model contains an observable collection that is filled with data and then used to create a `HierarchicalTreeDataGridSource` property to bind on to the source of the tree data grid. The items of the grid are class `Person`.&#x20;
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```
 <TreeDataGrid Source="{Binding PersonSource}"/>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -99,7 +99,7 @@ namespace AvaloniaControls.ViewModels
 }
 
 ```
-{% endtab %}
+
 
 {% tab title="C# Item Class" %}
 ```csharp
@@ -111,8 +111,8 @@ public class Person
     public ObservableCollection<Person> Children { get; } = new();
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 The data source also defines how to map the data model to rows and columns in the tree data grid. Because this example displays hierarchical data, the data source is using a `HierarchicalTreeDataGridSource<Person>` property on the view model.&#x20;
 

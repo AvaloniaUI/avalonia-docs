@@ -19,8 +19,8 @@ You will probably use these properties most often:
 
 This example shows a repeat button generating click events with the default interval and delay.
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```
 <Grid Margin="20" RowDefinitions="50,*">
   <RepeatButton Grid.Row="0" Click="ClickHandler">Press and hold down</RepeatButton>
@@ -29,7 +29,7 @@ This example shows a repeat button generating click events with the default inte
   </ScrollViewer>
 </Grid>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -46,8 +46,8 @@ public partial class MainWindow : Window
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../../.gitbook/assets/repeatbutton.gif" alt=""><figcaption></figcaption></figure-->
 

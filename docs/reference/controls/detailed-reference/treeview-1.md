@@ -12,8 +12,8 @@ There are two data sources: the main items source for the control, this gives th
 
 This example uses a MVVM pattern view model to hold some hierarchical data based on a C# node class. In this example, there is a single root node in the `Nodes` collection of the view model:&#x20;
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <TreeView Items="{Binding Nodes}">
   <TreeView.ItemTemplate>
@@ -23,7 +23,7 @@ This example uses a MVVM pattern view model to hold some hierarchical data based
   </TreeView.ItemTemplate>
 </TreeView>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -52,7 +52,7 @@ namespace AvaloniaControls.ViewModels
     }
 }
 ```
-{% endtab %}
+
 
 {% tab title="C# Node Class" %}
 ```csharp
@@ -78,8 +78,8 @@ namespace AvaloniaControls.Models
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 By default the root node (or nodes) is shown. The user can expand or contract each node by clicking on the adjacent arrow. Clicking on the node title selects the item.
 
@@ -87,8 +87,8 @@ By default the root node (or nodes) is shown. The user can expand or contract ea
 
 This is a development of the previous example with multiple root nodes, a revised item template, and an initial selection made in the view model code:
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <TreeView Margin="10"
           Items="{Binding Nodes}" 
@@ -105,7 +105,7 @@ This is a development of the previous example with multiple root nodes, a revise
   </TreeView.ItemTemplate>
 </TreeView>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -150,7 +150,7 @@ namespace AvaloniaControls.ViewModels
     }
 }
 ```
-{% endtab %}
+
 
 {% tab title="C# Node Class" %}
 ```csharp
@@ -176,8 +176,8 @@ namespace AvaloniaControls.Models
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 The tree view adds a scroll bar when it is needed. The selection can be extended by holding down the Ctrl key.&#x20;
 

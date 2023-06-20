@@ -18,8 +18,8 @@ If you do not set a editing template, the column will stay read-only.
 
 This example adds a numeric up-down control when the age property for a person is being edited:&#x20;
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <Window ...
   xmlns:model="using:AvaloniaControls.Models" >
@@ -53,7 +53,7 @@ This example adds a numeric up-down control when the age property for a person i
   </DataGrid>
 </Window>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -80,7 +80,7 @@ namespace AvaloniaControls.ViewModels
     }
 }
 ```
-{% endtab %}
+
 
 {% tab title="C# Item Class" %}
 ```csharp
@@ -99,8 +99,8 @@ public class Person
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../../../.gitbook/assets/grid4.gif" alt=""><figcaption></figcaption></figure-->
 

@@ -12,8 +12,8 @@ You can use the carousel control to create a slide show.
 
 This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.&#x20;
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <Panel>
     <Carousel Name="slides" >
@@ -35,7 +35,7 @@ This example has three images in the items collection, with buttons to move the 
     </Panel>
   </Panel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -63,8 +63,8 @@ namespace AvaloniaControls.Views
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../.gitbook/assets/carousel.gif" alt=""><figcaption></figcaption></figure-->
 

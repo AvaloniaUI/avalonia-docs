@@ -31,15 +31,15 @@ You will probably use these properties most often:
 
 This example shows a simple button and a C# code-behind click event handler.
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <StackPanel Margin="20">
   <Button Click="ClickHandler">Press Me!</Button>
   <TextBlock Margin="0 10" x:Name="message">Ready...</TextBlock>
 </StackPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -56,8 +56,8 @@ public partial class MainWindow : Window
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../../.gitbook/assets/button.gif" alt=""><figcaption></figcaption></figure-->
 

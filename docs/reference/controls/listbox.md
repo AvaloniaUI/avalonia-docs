@@ -44,15 +44,15 @@ These values can be combined, for example:
 
 This simple example has the `Items` property set to an array in the C# code-behind.
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">Choose an animal:</TextBlock>
   <ListBox x:Name="animals"/>
 </StackPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -73,8 +73,8 @@ namespace AvaloniaControls.Views
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../.gitbook/assets/listbox1.gif" alt=""><figcaption></figcaption></figure-->
 
@@ -88,8 +88,8 @@ To review the concepts behind **data template**, see [here](../../concepts/templ
 
 This example displays each item inside a blue border with rounded corners. The C# code-behind is the same as before:
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <DockPanel Margin="20">
   <TextBlock Margin="0 5" DockPanel.Dock="Top">Choose an animal:</TextBlock>
@@ -105,7 +105,7 @@ This example displays each item inside a blue border with rounded corners. The C
   </ListBox>
 </DockPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -126,8 +126,8 @@ namespace AvaloniaControls.Views
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 The list is the fill area of the dock panel here, so its height is set to the remaining. This shows the scrollbar in the list box.&#x20;
 
@@ -143,8 +143,8 @@ The `ListBoxItem` element acts as a container for the content specified in a `Li
 
 This means you can target a style to customize the `ListBoxItem` elements in a list box. For example, to give the list items a fixed width of 200 and then right-align them:
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <DockPanel Margin="20">
   <TextBlock Margin="0 5" DockPanel.Dock="Top">Choose an animal:</TextBlock>
@@ -158,7 +158,7 @@ This means you can target a style to customize the `ListBoxItem` elements in a l
   </ListBox>
 </DockPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -179,8 +179,8 @@ namespace AvaloniaControls.Views
     }
 }code
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../.gitbook/assets/listbox3.gif" alt=""><figcaption></figcaption></figure-->
 

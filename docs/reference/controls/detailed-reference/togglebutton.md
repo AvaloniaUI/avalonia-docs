@@ -16,8 +16,8 @@ This allows a wide range of possible graphical presentations for the control in 
 
 This example shows a toggle button containing a speaker icon, or a muted speaker icon, depending on whether the button has the checked pseudo class or not.
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
   <TextBlock Margin="0 5">Audio</TextBlock>
@@ -31,7 +31,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
   </ToggleButton>
 </StackPanel>
 ```
-{% endtab %}
+
 
 {% tab title="Styles" %}
 ```xml
@@ -50,7 +50,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
   </Style>
 </Window.Styles>
 ```
-{% endtab %}
+
 
 {% tab title="Icons" %}
 ```xml
@@ -64,7 +64,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
   </Style>
 </Styles>
 ```
-{% endtab %}
+
 
 {% tab title="App" %}
 ```xml
@@ -78,8 +78,8 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
     </Application.Styles>
 </Application>
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 The content zone of the toggle button contains two path icon elements, only one of which is visible at a time. The path icons get their graphics from an assets file which is referenced as an included style set in the `App.xaml` file. The icon geometries are from the _Avalonia UI_ Fluent icons resource.
 

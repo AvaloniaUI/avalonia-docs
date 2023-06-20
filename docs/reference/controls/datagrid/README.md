@@ -68,8 +68,8 @@ You will probably use these properties most often:
 
 This example will generate a basic data grid, with column header names auto-generated from the item class. The items data source is bound to the main window view model.&#x20;
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <DataGrid Margin="20" Items="{Binding People}" 
           AutoGenerateColumns="True" IsReadOnly="True" 
@@ -77,7 +77,7 @@ This example will generate a basic data grid, with column header names auto-gene
           BorderThickness="1" BorderBrush="Gray">
 </DataGrid>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -104,7 +104,7 @@ namespace AvaloniaControls.ViewModels
     }
 }
 ```
-{% endtab %}
+
 
 {% tab title="C# Item Class" %}
 ```csharp
@@ -120,8 +120,8 @@ public class Person
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../../.gitbook/assets/grid1.gif" alt=""><figcaption></figcaption></figure-->
 
@@ -150,8 +150,8 @@ Property names from the item class will generally not make good column names. Th
 
 This example shows how the data grid can accept changes and update the underlying collection, and use different column types to edit the data:
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <DataGrid Margin="20" Items="{Binding People}"        
           GridLinesVisibility="All"
@@ -163,7 +163,7 @@ This example shows how the data grid can accept changes and update the underlyin
   </DataGrid.Columns>
 </DataGrid>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -190,7 +190,7 @@ namespace AvaloniaControls.ViewModels
     }
 }
 ```
-{% endtab %}
+
 
 {% tab title="C# Item Class" %}
 ```csharp
@@ -208,8 +208,8 @@ public class Person
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../../.gitbook/assets/grid3.gif" alt=""><figcaption></figcaption></figure-->
 

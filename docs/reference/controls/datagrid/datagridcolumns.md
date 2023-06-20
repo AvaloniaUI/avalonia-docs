@@ -50,8 +50,8 @@ Example
 
 This example improves a data grid by expanding two columns equally across the width:
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <Window ... >
    <Design.DataContext>
@@ -70,7 +70,7 @@ This example improves a data grid by expanding two columns equally across the wi
   </DataGrid>
 </Window>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -97,7 +97,7 @@ namespace AvaloniaControls.ViewModels
     }
 }
 ```
-{% endtab %}
+
 
 {% tab title="C# Item Class" %}
 ```csharp
@@ -113,8 +113,8 @@ public class Person
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 It works in the preview pane because the `<Design.DataContext>` element creates a view model to bind to:
 

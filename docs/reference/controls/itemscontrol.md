@@ -20,8 +20,8 @@ You will probably use these properties most often:
 
 This example binds an observable collection of crockery items to an items control, where some custom layout and formatting is provided by a data template:&#x20;
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">List of crockery:</TextBlock>
@@ -43,7 +43,7 @@ This example binds an observable collection of crockery items to an items contro
     </ItemsControl>
 </StackPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -73,7 +73,7 @@ namespace AvaloniaControls.ViewModels
     }
 }
 ```
-{% endtab %}
+
 
 {% tab title="C# Item Class" %}
 ```csharp
@@ -89,8 +89,8 @@ public class Crockery
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike the list box).
 

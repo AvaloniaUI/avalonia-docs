@@ -16,8 +16,8 @@ The default layout template is a vertical stack layout, so that items appear in 
 
 This example binds an observable collection of crockery items to an items repeater control, where some custom layout and formatting for each item is provided by the data template:&#x20;
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">List of crockery:</TextBlock>
@@ -39,7 +39,7 @@ This example binds an observable collection of crockery items to an items repeat
     </ItemsRepeater>
 </StackPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C# View Model" %}
 ```csharp
@@ -69,7 +69,7 @@ namespace AvaloniaControls.ViewModels
     }
 }
 ```
-{% endtab %}
+
 
 {% tab title="C# Item Class" %}
 ```csharp
@@ -85,8 +85,8 @@ public class Crockery
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure-->
 

@@ -82,8 +82,8 @@ This example uses a composed view for each item:
 
 This example binds the items in a combo box using a data template. The C# code-behind loads the installed font family names and binds them to the items property.
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <StackPanel Margin="20">
   <ComboBox x:Name="fontComboBox" SelectedIndex="0"
@@ -96,7 +96,7 @@ This example binds the items in a combo box using a data template. The C# code-b
   </ComboBox>
 </StackPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -120,8 +120,8 @@ namespace AvaloniaControls.Views
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../.gitbook/assets/combobox3.gif" alt=""><figcaption></figcaption></figure-->
 

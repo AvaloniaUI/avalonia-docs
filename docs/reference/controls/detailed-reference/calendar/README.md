@@ -42,14 +42,14 @@ After clicking a start date you can extend a single range by holding the shift k
 
 This example has custom start and end dates, and some dates unavailable. This uses C# code behind the window.
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <StackPanel Margin="20">
   <Calendar x:Name="calendar" SelectionMode="SingleDate"/>
 </StackPanel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -66,8 +66,8 @@ public partial class MainWindow : Window
     } 
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 <!--figure><img src="../../../../.gitbook/assets/calendar4.gif" alt=""><figcaption></figcaption></figure-->
 

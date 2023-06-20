@@ -20,8 +20,8 @@ To create a meaningful layout, you will need to use corresponding orientation an
 
 ## Example
 
-{% tabs %}
-{% tab title="XAML" %}
+
+
 ```xml
 <Panel>
   <Border Background="AliceBlue">
@@ -32,7 +32,7 @@ To create a meaningful layout, you will need to use corresponding orientation an
   <TextBlock Name="valueText" Margin="60">0</TextBlock>
 </Panel>
 ```
-{% endtab %}
+
 
 {% tab title="C#" %}
 ```csharp
@@ -55,8 +55,8 @@ namespace AvaloniaControls.Views
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 With the example code-behind, the text block displays the value of the scrollbar.&#x20;
 
