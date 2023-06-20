@@ -68,9 +68,8 @@ The two suggested workflows are:
 ### Starting 
 
 ```
-npm run start
+npx docusaurus start
 ```
-
 
 ## Thanks 💜
 
