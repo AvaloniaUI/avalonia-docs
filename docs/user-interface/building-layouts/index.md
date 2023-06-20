@@ -2,9 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Layout
-
-Add introduction here
+# Layout
 
 ## Panels <a href="#panels" id="panels"></a>
 

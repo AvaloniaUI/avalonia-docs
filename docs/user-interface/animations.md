@@ -3,7 +3,7 @@ id: animations
 title: Animations
 ---
 
-# 💡 Animations
+# Animations
 
 There are two types of animations in _Avalonia UI_:
 
