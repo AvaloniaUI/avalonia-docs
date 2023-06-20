@@ -12,7 +12,7 @@ The logical control tree represents the application controls (including the main
 
 <!--<figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>-->
 
-While your application is running, you can show the _Avalonia Dev Tools_ window (hit F12). This displays the logical tree on its <mark style="color:green;">**Logical Tree**</mark> tab.
+While your application is running, you can show the _Avalonia Dev Tools_ window (hit F12). This displays the logical tree on its **Logical Tree** tab.
 
 ## Visual Tree&#x20;
 
@@ -20,10 +20,10 @@ The visual control tree contains everything that is actually being run by _Avalo
 
 <!--<figure><img src="../.gitbook/assets/image (15) (2).png" alt=""><figcaption></figcaption></figure>-->
 
-You can see the visual control tree on the <mark style="color:green;">**Visual Tree**</mark> tab of the _Avalonia Dev Tools_ window.
+You can see the visual control tree on the **Visual Tree** tab of the _Avalonia Dev Tools_ window.
 
 ## Events&#x20;
 
-An essential part of application functionality management performed by _Avalonia UI_, is the generation and propagation of events. The <mark style="color:green;">**Events**</mark> tab logs the source and propagation of events as you move around, and otherwise interact with the running application.
+An essential part of application functionality management performed by _Avalonia UI_, is the generation and propagation of events. The **Events** tab logs the source and propagation of events as you move around, and otherwise interact with the running application.
 
 <!--<figure><img src="../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>-->

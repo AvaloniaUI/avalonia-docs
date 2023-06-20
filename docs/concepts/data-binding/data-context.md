@@ -22,7 +22,7 @@ For information about the control trees in _Avalonia UI_, and how to see them at
 
 ## Example
 
-You can see the window's data context being set if you create a new project using the _Avalonia MVVM Application_ template. Locate and open the <mark style="color:green;">**App.axaml.cs**</mark> file to see the code:
+You can see the window's data context being set if you create a new project using the _Avalonia MVVM Application_ template. Locate and open the **App.axaml.cs** file to see the code:
 
 ```csharp
 public override void OnFrameworkInitializationCompleted()
@@ -39,7 +39,7 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-You can trace the object being set to the window's data context in the file <mark style="color:green;">**MainWindowViewModel.cs**</mark>. The code looks like this:
+You can trace the object being set to the window's data context in the file **MainWindowViewModel.cs**. The code looks like this:
 
 ```csharp
 public class MainWindowViewModel : ViewModelBase
@@ -48,7 +48,7 @@ public class MainWindowViewModel : ViewModelBase
 }
 ```
 
-In the main window file <mark style="color:green;">**MainWindow.axaml**</mark> you can see that the window content zone is comprised a text block that has its text property bound to the `Greeting` property.
+In the main window file **MainWindow.axaml** you can see that the window content zone is comprised a text block that has its text property bound to the `Greeting` property.
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
