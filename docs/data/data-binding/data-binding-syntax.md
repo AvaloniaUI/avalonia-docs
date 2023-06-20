@@ -2,9 +2,9 @@
 description: CONCEPTS
 ---
 
-# 💡 Data Binding Syntax
+# Data Binding Syntax
 
-In Avalonia UI, you can define data binding in XAML or code. To define data binding in XAML, you use the data binding mark-up extension, and this has its own syntax which is described here.
+In Avalonia, you can define data binding in XAML or code. To define data binding in XAML, you use the data binding mark-up extension, and this has its own syntax which is described here.
 
 ## Data Binding Mark-up Extension
 
@@ -20,7 +20,7 @@ When there is more than one option parameter, the list is comma-separated.&#x20;
 
 ## Data Binding Path <a href="#binding-path" id="binding-path"></a>
 
-The first parameter is usually the path to the data source. This is an object in a data context that _Avalonia UI_ locates when it performs data binding.&#x20;
+The first parameter is usually the path to the data source. This is an object in a data context that _Avalonia_ locates when it performs data binding.&#x20;
 
 There is no need to use the parameter name `Path`here. So these bindings are equivalent:
 
@@ -113,14 +113,14 @@ Whenever a `StringFormat` parameter is present, the value of the binding will ac
 
 ### Built-in Conversions
 
-_Avalonia UI_ has a range of built-in data binding converters. These include:
+_Avalonia_ has a range of built-in data binding converters. These include:
 
 * a string formatting converter&#x20;
 * null testing converters
 * Boolean operation converters
 
 {% hint style="info" %}
-For full information on Avalonia UI built-in data binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).&#x20;
+For full information on Avalonia built-in data binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).&#x20;
 {% endhint %}
 
 ### Custom Conversions
