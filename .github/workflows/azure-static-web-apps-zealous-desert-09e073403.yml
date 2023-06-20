@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [16.14]
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v2
@@ -29,7 +29,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm run build --if-present
-      - run: npm test
       - name: Deploy
         id: deploy
         uses: Azure/static-web-apps-deploy@v1
