@@ -83,4 +83,4 @@ The data source also defines how to map the data model to rows and columns in th
 
 There are three columns defined with the `TextColumn` class. Each takes a lambda to return the column value.
 
-<figure><img src="../../../../.gitbook/assets/treedatagrid2.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../../.gitbook/assets/treedatagrid2.gif" alt=""><figcaption></figcaption></figure-->

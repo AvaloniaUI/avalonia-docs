@@ -49,7 +49,7 @@ public partial class MainWindow : Window
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../../.gitbook/assets/repeatbutton.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/repeatbutton.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

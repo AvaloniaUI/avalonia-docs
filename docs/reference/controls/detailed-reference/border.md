@@ -55,7 +55,7 @@ This example adds some border controls to create a 'pod' look in the layout:&#x2
 </StackPanel>
 ```
 
-<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure-->
 
 ## Box Shadows
 
@@ -96,7 +96,7 @@ This is an example of a drop-shadow:
 </StackPanel>
 ```
 
-<figure><img src="../../../.gitbook/assets/image (24) (2).png" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/image (24) (2).png" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

@@ -6,7 +6,7 @@ description: REFERENCE - Built-in Controls
 
 The tab control allows you to sub-divide a view into tab items.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure-->
 
 Each tab item has a header and a content zone. The headers are presented in a strip, in the sequence they occur in the XAML. When the user clicks on a tab header, its content becomes visible, and is placed below the tab strip in the content zone of the tab control.
 
@@ -36,7 +36,7 @@ This is simple tab example. The tab content is just some text: &#x20;
 
 The tab control even works in the preview pane!
 
-<figure><img src="../../../.gitbook/assets/tabcontrol1.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/tabcontrol1.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

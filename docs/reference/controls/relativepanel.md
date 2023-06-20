@@ -67,7 +67,7 @@ This XAML shows how to arrange some child controls in different ways:
 
 The result looks like this:
 
-<figure><img src="../../.gitbook/assets/image (19) (2).png" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/image (19) (2).png" alt=""><figcaption></figcaption></figure-->
 
 Here are some notes about the above example:
 

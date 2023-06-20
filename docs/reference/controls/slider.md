@@ -34,7 +34,7 @@ Here the maximum and minimum values are default (0 and 100 respectively).
 
 The slider looks like this on Windows:
 
-<figure><img src="../../.gitbook/assets/slider.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/slider.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

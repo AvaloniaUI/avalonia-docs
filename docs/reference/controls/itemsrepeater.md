@@ -88,7 +88,7 @@ public class Crockery
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure-->
 
 By default an items repeater will render the items in a vertical stack layout. You can display the items horizontally by overriding this using a `<ItemsRepeater.Layout>` element, which must contain a stack layout. For example:
 
@@ -122,7 +122,7 @@ By default an items repeater will render the items in a vertical stack layout. Y
 
 The items display horizontally, and those too far to the right would be hidden if it were not for the scroll viewer element added around the items repeater.   &#x20;
 
-<figure><img src="../../.gitbook/assets/repeater.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/repeater.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

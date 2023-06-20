@@ -94,7 +94,7 @@ public class Crockery
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike the list box).
 
-<figure><img src="../../.gitbook/assets/items.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/items.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

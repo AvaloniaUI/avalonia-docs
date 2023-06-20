@@ -58,7 +58,7 @@ namespace AvaloniaControls.Views
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../.gitbook/assets/autocomplete.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/autocomplete.gif" alt=""><figcaption></figcaption></figure-->
 
 
 

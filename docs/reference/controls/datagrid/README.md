@@ -20,7 +20,7 @@ The data grid is in an additional _Avalonia UI_ package. To use the data grid in
 
 You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use <mark style="color:green;">**Manage NuGet Packages**</mark> from the project menu of your IDE:
 
-<figure><img src="../../../.gitbook/assets/image (8) (4).png" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/image (8) (4).png" alt=""><figcaption></figcaption></figure-->
 
 Alternatively,  you can run this instruction from the command line:
 
@@ -123,7 +123,7 @@ public class Person
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../../.gitbook/assets/grid1.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/grid1.gif" alt=""><figcaption></figcaption></figure-->
 
 {% hint style="info" %}
 These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](../../../concepts/data-binding/).
@@ -146,7 +146,7 @@ Property names from the item class will generally not make good column names. Th
 </DataGrid>
 ```
 
-<figure><img src="../../../.gitbook/assets/grid2.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/grid2.gif" alt=""><figcaption></figcaption></figure-->
 
 This example shows how the data grid can accept changes and update the underlying collection, and use different column types to edit the data:
 
@@ -211,7 +211,7 @@ public class Person
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../../.gitbook/assets/grid3.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/grid3.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information <a href="#common-properties" id="common-properties"></a>
 

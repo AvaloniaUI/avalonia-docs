@@ -22,7 +22,7 @@ This example shows a basic single date selection calendar when the button is cli
 </StackPanel>
 ```
 
-<figure><img src="../../../../.gitbook/assets/calendardatepicker.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../../.gitbook/assets/calendardatepicker.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

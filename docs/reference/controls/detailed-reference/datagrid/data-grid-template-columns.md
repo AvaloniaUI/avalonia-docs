@@ -102,7 +102,7 @@ public class Person
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../../../.gitbook/assets/grid4.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../../.gitbook/assets/grid4.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

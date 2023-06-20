@@ -39,7 +39,7 @@ You will probably use these properties most often:
 
 It works in the preview pane as well:
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

@@ -37,7 +37,7 @@ This is a basic example:
 </StackPanel>
 ```
 
-<figure><img src="../../.gitbook/assets/masked.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/masked.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

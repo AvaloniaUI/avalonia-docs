@@ -25,7 +25,7 @@ This example, a context menu is attached to a multi-line text box:
 </TextBox>
 ```
 
-<figure><img src="../../.gitbook/assets/contextmenu.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/contextmenu.gif" alt=""><figcaption></figcaption></figure-->
 
 ## Context Flyout
 

@@ -48,7 +48,7 @@ This example creates a stack panel that is bigger than the border it is inside. 
 </Border>
 ```
 
-<figure><img src="../../.gitbook/assets/scrollview.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/scrollview.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information <a href="#reference" id="reference"></a>
 

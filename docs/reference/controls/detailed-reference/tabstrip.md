@@ -26,7 +26,7 @@ You will probably use this property most often:
 
 It looks like this running on Windows:
 
-<figure><img src="../../../.gitbook/assets/tabstrip.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../../.gitbook/assets/tabstrip.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

@@ -30,7 +30,7 @@ The progress caption always shows the value with a percentage sign. This is only
 </StackPanel>
 ```
 
-<figure><img src="../../.gitbook/assets/progressbar.PNG" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/progressbar.PNG" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

@@ -22,7 +22,7 @@ This example uses the date format attribute to display the name of the day as we
 </StackPanel>
 ```
 
-<figure><img src="../../.gitbook/assets/datepicker.gif" alt=""><figcaption></figcaption></figure>
+<!--figure><img src="../../.gitbook/assets/datepicker.gif" alt=""><figcaption></figcaption></figure-->
 
 ## **Initializing the Date**&#x20;
 
