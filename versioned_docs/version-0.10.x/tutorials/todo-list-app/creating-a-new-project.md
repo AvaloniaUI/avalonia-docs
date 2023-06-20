@@ -11,12 +11,12 @@ The easiest way to get started with Avalonia from Visual Studio is to [install t
     <img src="/img/tutorials/todo-list-app/creating-a-new-project/image%20%285%29.png" alt="Decription" />
   </div>
 
-* [ ] Start Visual Studio
-* [ ] Select "Create a new project" from the start window or `File -> New -> Project` from the main menu
-* [ ] Search for "Avalonia" and select "Avalonia MVVM Application"
-* [ ] Click "Next"
-* [ ] Enter "Todo" as the Project name
-* [ ] Click "Create"
+-  Start Visual Studio
+-  Select "Create a new project" from the start window or `File -> New -> Project` from the main menu
+-  Search for "Avalonia" and select "Avalonia MVVM Application"
+-  Click "Next"
+-  Enter "Todo" as the Project name
+-  Click "Create"
 
 ## .NET Core CLI <a id="net-core-cli"></a>
 
