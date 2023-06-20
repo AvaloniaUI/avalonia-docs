@@ -90,10 +90,26 @@ const sidebars = {
                 'user-interface/controls/creating-controls/defining-properties',
                 'user-interface/controls/creating-controls/defining-events',
                 'user-interface/controls/creating-controls/control-themes',
+                'user-interface/controls/creating-controls/tutorial',
               ],
             },
-              ],
+          ],
         },
+        {
+          'type': 'category',
+          'label': 'Building Layouts',
+          'link': {
+            'type': 'doc',
+            'id': 'user-interface/building-layouts/index',
+          },
+          'items': [
+            'user-interface/building-layouts/tutorial',
+          ],
+        },
+        'user-interface/adding-interactivity',
+        'user-interface/assets',
+        'user-interface/animations',
+        'user-interface/file-dialogs',
       ],
     },
     {
