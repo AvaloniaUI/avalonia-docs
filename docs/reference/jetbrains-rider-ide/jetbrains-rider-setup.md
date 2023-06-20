@@ -46,26 +46,26 @@ Rider will give you the very best development experience available for _Avalonia
 
 ## Install the Avalonia Plugin
 
-Once Rider loads you will see the <mark style="color:green;">**Welcome to JetBrains Rider**</mark> screen.&#x20;
+Once Rider loads you will see the **Welcome to JetBrains Rider** screen.&#x20;
 
-* [ ] Click <mark style="color:green;">**Configure**</mark>, and then click <mark style="color:green;">**Plugins**</mark> on the dropdown menu.
+* [ ] Click **Configure**, and then click **Plugins** on the dropdown menu.
 
 ![](../../.gitbook/assets/jetbrains-rider-setup-1-rider-welcome.png)
 
-The <mark style="color:green;">**Preferences**</mark> screen will open.&#x20;
+The **Preferences** screen will open.&#x20;
 
-* [ ] Click the settings (gear wheel) icon and then click <mark style="color:green;">**Manage Plugin Repositories...**</mark> on the popup menu.
+* [ ] Click the settings (gear wheel) icon and then click **Manage Plugin Repositories...** on the popup menu.
 
 ![](../../.gitbook/assets/jetbrains-rider-setup-2-configure-plugin-repos.png)
 
-* [ ] In the <mark style="color:green;">**Custom Plugin Repositories**</mark> dialog, click the plus (+) icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`, and then click <mark style="color:green;">**OK**</mark>.
+* [ ] In the **Custom Plugin Repositories** dialog, click the plus (+) icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`, and then click **OK**.
 
 ![](../../.gitbook/assets/jetbrains-rider-setup-3-enter-plugin-repo.png)
 
-* [ ] Back at the Preferences window, click <mark style="color:green;">**Marketplace**</mark> enter 'Avalonia' in the search. Click <mark style="color:green;">**AvaloniaRider**</mark> when it appears in the search results pane, then click <mark style="color:green;">**Install**</mark>.&#x20;
+* [ ] Back at the Preferences window, click **Marketplace** enter 'Avalonia' in the search. Click **AvaloniaRider** when it appears in the search results pane, then click **Install**.&#x20;
 
 ![](../../.gitbook/assets/jetbrains-rider-setup-4-plugin-install.png)
 
-* [ ] After the installation has completed, click <mark style="color:green;">**Restart IDE**</mark> (button appears).
+* [ ] After the installation has completed, click **Restart IDE** (button appears).
 
 &#x20;Now _JetBrains Rider_ is ready to develop _Avalonia UI_ applications.

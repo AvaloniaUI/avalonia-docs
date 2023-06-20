@@ -33,7 +33,7 @@ This is an illustration An example of  a tree data grid displaying flat data:
 
 ## NuGet Package Reference
 
-You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use <mark style="color:green;">**Manage NuGet Packages**</mark> from the project menu of your IDE:
+You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use **Manage NuGet Packages** from the project menu of your IDE:
 
 ![](<../../../../.gitbook/assets/image (4).png>)
 

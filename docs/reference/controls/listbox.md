@@ -135,7 +135,7 @@ The list is the fill area of the dock panel here, so its height is set to the re
 
 ## Item Styling <a href="#containers" id="containers"></a>
 
-Each item displayed in a list box is drawn inside a `ListBoxItem` element. You can see this using the _Avalonia UI Dev Tools_ (F12), using the <mark style="color:green;">**Visual Tools**</mark> tab. For example:
+Each item displayed in a list box is drawn inside a `ListBoxItem` element. You can see this using the _Avalonia UI Dev Tools_ (F12), using the **Visual Tools** tab. For example:
 
 <!--figure><img src="../../.gitbook/assets/image (6) (1) (4).png" alt=""><figcaption></figcaption></figure-->
 

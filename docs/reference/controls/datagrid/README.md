@@ -13,12 +13,12 @@ To review the concept behind the **data context**, see [here](../../../concepts/
 {% endhint %}
 
 {% hint style="info" %}
-The data grid is in an additional _Avalonia UI_ package. To use the data grid in your project, you must reference the <mark style="color:green;">**Avalonia.Controls.DataGrid**</mark> _NuGet_ package, and reference the styles that it uses, see below.&#x20;
+The data grid is in an additional _Avalonia UI_ package. To use the data grid in your project, you must reference the **Avalonia.Controls.DataGrid** _NuGet_ package, and reference the styles that it uses, see below.&#x20;
 {% endhint %}
 
 ## NuGet Package Reference
 
-You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use <mark style="color:green;">**Manage NuGet Packages**</mark> from the project menu of your IDE:
+You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use **Manage NuGet Packages** from the project menu of your IDE:
 
 <!--figure><img src="../../../.gitbook/assets/image (8) (4).png" alt=""><figcaption></figcaption></figure-->
 
