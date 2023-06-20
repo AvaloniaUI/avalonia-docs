@@ -14,7 +14,7 @@ Assets are included in an application when it is built in a number of ways:
 
 ## Included Assets
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<!--<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>-->
 
 You include assets in an application by using the `<AvaloniaResource>` element in your project file.&#x20;
 
@@ -56,7 +56,7 @@ As an alternative, you can use the rooted path:
 
 ## Embedded Assets
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<!--<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>-->
 
 Assets can also be included in .NET applications by using the `<EmbeddedResource>` element in the project file. This causes the file to be included in the assembly as a manifest resource.
 
@@ -76,7 +76,7 @@ The name of an asset is automatically generated during the build from the assemb
 
 ## Library Assets
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<!--<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>-->
 
 Assets in a library have been either included or embedded during the library build.&#x20;
 

@@ -79,7 +79,7 @@ Use a local definition of a teacher in the window content zone:
 
 Although there is no data template for a teacher in the window; Avalonia UI will find the template you defined in the application, and the display works as planned:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<!--<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>-->
 
 {% hint style="warning" %}
 Remember to specify a `DataType` in every data template, wherever it is defined, because if _Avalonia UI_ fails to find a data template match for your data; then nothing will be displayed!

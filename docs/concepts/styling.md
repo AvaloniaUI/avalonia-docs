@@ -62,7 +62,7 @@ This is an example of how a style is written and applied to a control element, w
 
 In this example, the `h1` style class applies only to `<TextBlock>`elements, and the text block control will display with the font size and weight set by the style. This works in the preview pane:
 
-<figure><img src="../.gitbook/assets/image (5) (5).png" alt=""><figcaption></figcaption></figure>
+<!--<figure><img src="../.gitbook/assets/image (5) (5).png" alt=""><figcaption></figcaption></figure>-->
 
 ## Styles and Resources
 

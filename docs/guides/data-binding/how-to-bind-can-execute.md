@@ -94,4 +94,4 @@ Here the `WhenAnyValue` method takes two arguments, the first collects a value f
 The `WhenAnyValue` method actually has overloads that can take up to 10 different value getters (for the validation function parameters), plus the validation function itself. &#x20;
 :::
 
-<!--<figure><img src="../../.gitbook/assets/command4.gif" alt=""><figcaption></figcaption></figure>-->
+<!--<!--<figure><img src="../../.gitbook/assets/command4.gif" alt=""><figcaption></figcaption></figure>-->-->
