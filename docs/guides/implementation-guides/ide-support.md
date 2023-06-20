@@ -96,14 +96,14 @@ Alternatively you can use `Design.DataContext` attached property. As well as `De
 
 If you're having problems, try enabling verbose logging. To do this in Visual Studio, follow this procedure:
 
-* [ ] Click <mark style="color:green;">**Options...**</mark> on the <mark style="color:green;">**Tools**</mark> menu
-* [ ] Click <mark style="color:green;">**Avalonia XAML Editor**</mark> in the list
-* [ ] Click <mark style="color:green;">**Verbose**</mark> in the <mark style="color:green;">**Minimum Log Verbosity**</mark> drop-down.
+-  Click **Options...** on the **Tools** menu
+-  Click **Avalonia XAML Editor** in the list
+-  Click **Verbose** in the **Minimum Log Verbosity** drop-down.
 
 <!--<figure><img src="../../.gitbook/assets/image (7) (4).png" alt=""><figcaption></figcaption></figure>-->
 
-Logs will now be displayed in the Visual Studio <mark style="color:green;">**Output**</mark> window.&#x20;
+Logs will now be displayed in the Visual Studio **Output** window.&#x20;
 
-Select <mark style="color:green;">**Avalonia Diagnostics**</mark> from the drop-down at the top of this window.
+Select **Avalonia Diagnostics** from the drop-down at the top of this window.
 
 <!--<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>-->

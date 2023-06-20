@@ -14,7 +14,7 @@ The level of a resource dictionary defines the scope of the resources in it: res
 
 ## Declaring Resources <a href="#declaring-resources" id="declaring-resources"></a>
 
-For example, you may want brush colors to be standardized across the whole application. In this case you can declare a resource dictionary in the application XAML <mark style="color:green;">**App.axaml**</mark> file, like this
+For example, you may want brush colors to be standardized across the whole application. In this case you can declare a resource dictionary in the application XAML **App.axaml** file, like this
 
 ```markup
 <Application xmlns="https://github.com/avaloniaui"
@@ -71,15 +71,15 @@ Resources located in a resource dictionary file are accessible to the entire app
 
 To add a resource dictionary file, follow this procedure:
 
-* [ ] Right-click your project at the location where you want the new file created.
-* [ ] Click <mark style="color:green;">**Add**</mark>, then <mark style="color:green;">**New Item**</mark>.
-* [ ] Click <mark style="color:green;">**Avalonia**</mark> in the list on the left:
+-  Right-click your project at the location where you want the new file created.
+-  Click **Add**, then **New Item**.
+-  Click **Avalonia** in the list on the left:
 
 <!--<figure><img src="../../.gitbook/assets/image (8) (1) (2).png" alt=""><figcaption></figcaption></figure>-->
 
-* [ ] Click <mark style="color:green;">**Resource Dictionary (Avalonia)**</mark>.
-* [ ] Type the file name you want to use.
-* [ ] Click <mark style="color:green;">**Add**</mark>.
+-  Click **Resource Dictionary (Avalonia)**.
+-  Type the file name you want to use.
+-  Click **Add**.
 
 You can now add the resources you want to define in the position indicated. It looks like this:
 

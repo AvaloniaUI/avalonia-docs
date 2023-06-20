@@ -9,19 +9,19 @@ This guide shows you how to set up your development environment for work on a mo
 
 Follow these steps to install the tools you will need, using the CLI:
 
-* [ ] Check that you have installed a compatible version of the .NET SDK. The lowest version that works with _Avalonia UI_ is 6.0.2.00.
+-  Check that you have installed a compatible version of the .NET SDK. The lowest version that works with _Avalonia UI_ is 6.0.2.00.
 
 :::info
 You can see the versions of the .NET SDK [here](https://dotnet.microsoft.com/en-us/download/dotnet).
 :::
 
-* [ ] You may need to uninstall an old version of the _Android Workload._ To do this, type the following command:
+-  You may need to uninstall an old version of the _Android Workload._ To do this, type the following command:
 
 ```bash
 dotnet workload remove android
 ```
 
-* [ ] Install the _Android Workload._ To do this, type the following command:
+-  Install the _Android Workload._ To do this, type the following command:
 
 ```bash
 dotnet workload install android

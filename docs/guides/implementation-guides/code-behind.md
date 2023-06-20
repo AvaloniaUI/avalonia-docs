@@ -54,7 +54,7 @@ Notice that this class name is the same as name of the XAML file, and is also re
 </Window>
 ```
 
-:::hint
+:::tip
 If you make any changes to the class name in code, or its namespace, ensure that the  `x:Class` attribute always matches, or you will get an error.
 :::
 

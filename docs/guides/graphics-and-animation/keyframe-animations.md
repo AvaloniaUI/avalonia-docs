@@ -28,13 +28,13 @@ To revise how _Avalonia UI_ uses styles, see the concept [here](../../concepts/s
 
 Follow this procedure to define a simple color fade animation using XAML:
 
-* [ ] Create a styles collection at your chosen level.
-* [ ] Add a style to the collection with a selector that can target the control you want to animate.
-* [ ] Add a `Setter` element to define the property that you wan the animation to change. In this example `<Setter Property="Fill" Value="Red"/>`
-* [ ] Add a `Style.Animations` element to contain your animation.
-* [ ] Add an `Animation` element and set its `Duration` attribute. This is in the format `"Hours:Minutes:Seconds"`.
-* [ ] Now define the keyframes for the animation. This example uses cues at 0% and 100%.
-* [ ] Add `Setter` elements to each keyframe for value of the fill opacity. This example animates between opacity values of 0.0 and 1.0.
+-  Create a styles collection at your chosen level.
+-  Add a style to the collection with a selector that can target the control you want to animate.
+-  Add a `Setter` element to define the property that you wan the animation to change. In this example `<Setter Property="Fill" Value="Red"/>`
+-  Add a `Style.Animations` element to contain your animation.
+-  Add an `Animation` element and set its `Duration` attribute. This is in the format `"Hours:Minutes:Seconds"`.
+-  Now define the keyframes for the animation. This example uses cues at 0% and 100%.
+-  Add `Setter` elements to each keyframe for value of the fill opacity. This example animates between opacity values of 0.0 and 1.0.
 
 The finished code will look like this: &#x20;
 

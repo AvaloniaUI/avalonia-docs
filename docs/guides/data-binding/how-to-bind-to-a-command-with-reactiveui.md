@@ -22,7 +22,7 @@ This guide assumes that you are using the MVVM implementation pattern, and you h
 To review the concept behind the MVVM implementation pattern, see [here](../../concepts/the-mvvm-pattern/).&#x20;
 :::
 
-If you created your application using the <mark style="color:green;">**Avalonia MVVM Application**</mark> solution template then your solution will already contain the _ReactiveUI_ framework package, and you can reference it like this:
+If you created your application using the **Avalonia MVVM Application** solution template then your solution will already contain the _ReactiveUI_ framework package, and you can reference it like this:
 
 ```csharp
 using ReactiveUI;
@@ -38,14 +38,14 @@ The `Command` attribute data binding will call the bound view model method throu
 
 To create a view model with a `ReactiveCommand`, follow this example:
 
-* [ ] In your view model, declare a command, like this:
+-  In your view model, declare a command, like this:
 
 ```csharp
 public ReactiveCommand<Unit, Unit> ExampleCommand { get; } 
 ```
 
-* [ ] Create a private method in the view model to perform the action.
-* [ ] Initialize the reactive command, passing the name of the method that performs the action.
+-  Create a private method in the view model to perform the action.
+-  Initialize the reactive command, passing the name of the method that performs the action.
 
 Your view model code will now look like this:
 
@@ -68,7 +68,7 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-* [ ] Run the app and monitor the debug output.
+-  Run the app and monitor the debug output.
 
 When the control bound to the reactive command is activated (in this example: when the button is clicked); then the private method to perform the action is called through the reactive command.&#x20;
 

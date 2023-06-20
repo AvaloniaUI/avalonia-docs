@@ -12,8 +12,8 @@ The code to achieve logging is added to your project by the _Avalonia UI_ soluti
 
 To enable, or to check that logging is enabled, follow this procedure:
 
-* [ ] Locate the <mark style="color:green;">**Program.cs**</mark> file for your application.
-* [ ] Check that the `BuildAvaloniaApp` method calls `LogToTrace`, for example:
+-  Locate the **Program.cs** file for your application.
+-  Check that the `BuildAvaloniaApp` method calls `LogToTrace`, for example:
 
 ```csharp
 public static AppBuilder BuildAvaloniaApp()
@@ -37,7 +37,7 @@ public static AppBuilder BuildAvaloniaApp()
 For the full API documentation on the `LogEventLevel` enum, see [here](https://reference.avaloniaui.net/api/Avalonia.Logging/LogEventLevel/).
 :::
 
-Log messages are then shown in the <mark style="color:green;">**Debug**</mark> view of the <mark style="color:green;">**Output**</mark> window of your IDE. For example, with verbose logging enabled:
+Log messages are then shown in the **Debug** view of the **Output** window of your IDE. For example, with verbose logging enabled:
 
 <!--<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>-->
 

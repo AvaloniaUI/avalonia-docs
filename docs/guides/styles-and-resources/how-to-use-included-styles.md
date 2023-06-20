@@ -22,10 +22,10 @@ To do this, you define styles in a new XAML file. Here, the root element must th
 
 The _Avalonia U_I solution templates provide a quick way of adding a styles file to your project. Follow this procedure:
 
-* [ ] In the <mark style="color:green;">**Solution Explorer**</mark>, right-click your project.
-* [ ] Click <mark style="color:green;">**Add**</mark> and <mark style="color:green;">**New Item**</mark>
-* [ ] From the Avalonia Items, click <mark style="color:green;">**Styles(Avalonia)**</mark>
-* [ ] Type a name for your styles file
+-  In the **Solution Explorer**, right-click your project.
+-  Click **Add** and **New Item**
+-  From the Avalonia Items, click **Styles(Avalonia)**
+-  Type a name for your styles file
 
 <!--<figure><img src="../../.gitbook/assets/image (1) (4) (2).png" alt=""><figcaption></figcaption></figure>-->
 

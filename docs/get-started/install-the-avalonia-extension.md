@@ -15,9 +15,9 @@ The extension includes a designer with an XAML pane linked to a UI preview that 
 
 Follow this procedure to install the _Avalonia for Visual Studio_ extension:
 
-* [ ] In Visual Studio click <Highlight color="#25c2a0">**Manage Extensions**</Highlight> on the <Highlight color="#25c2a0">**Extensions**</Highlight> top menu.
-* [ ] In the <Highlight color="#25c2a0">**Search**</Highlight> box, type 'Avalonia'.&
-* [ ] Click <Highlight color="#25c2a0">**Download**</Highlight> and follow the instructions (you will need to close Visual Studio while the VSIX installation runs).
+-  In Visual Studio click <Highlight color="#25c2a0">**Manage Extensions**</Highlight> on the <Highlight color="#25c2a0">**Extensions**</Highlight> top menu.
+-  In the <Highlight color="#25c2a0">**Search**</Highlight> box, type 'Avalonia'.&
+-  Click <Highlight color="#25c2a0">**Download**</Highlight> and follow the instructions (you will need to close Visual Studio while the VSIX installation runs).
 
   <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/install-the-avalonia-extension/image (3) (1) (1) (1).png" />
