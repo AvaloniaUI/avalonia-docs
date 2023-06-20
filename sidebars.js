@@ -15,18 +15,16 @@ const sidebars = {
       'items': [
         'get-started/install',
         'get-started/set-up-an-editor',
-        'get-started/introduction',
-        'get-started/install-the-avalonia-extension',
-        'get-started/choose-a-solution-template',
-        'get-started/the-main-window',
-        'get-started/add-a-control',
-        'get-started/add-some-layout',
-        'get-started/input-controls',
-        'get-started/the-design-preview',
-        'get-started/respond-to-an-event',
-        'get-started/code-with-controls',
-        'get-started/getting-started',
-        'get-started/conclusion',
+        {
+          type: 'category',
+          label: 'Test Drive',
+          items: [
+            'get-started/test-drive/introduction',
+            'get-started/test-drive/create-a-project',
+            'get-started/test-drive/main-window',
+            'get-started/test-drive/add-a-control',
+          ],
+        },
       ],
     },
     {
