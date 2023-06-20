@@ -13,6 +13,8 @@ const sidebars = {
         'id': 'get-started/index',
       },
       'items': [
+        'get-started/install',
+        'get-started/set-up-an-editor',
         'get-started/introduction',
         'get-started/install-the-avalonia-extension',
         'get-started/choose-a-solution-template',
