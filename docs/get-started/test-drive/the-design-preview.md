@@ -17,14 +17,14 @@ Examine the XAML for the `<Window>` tag. It will look like this:
         Title="GetStartedApp">
 ```
 
-The window tag starts by defining some of the XML namespaces that _Avalonia UI_ uses. The aliases 'x', 'd' and 'mc' are used.
+The window tag starts by defining some of the XML namespaces that Avalonia uses. The aliases 'x', 'd' and 'mc' are used.
 
 The design namespace 'd' allows the design-time attributes `d:DesignWidth` and `d:DesignHeight`to be set. In the above code sample, these have been set to make the preview look more like a mobile (portrait orientation) display. 
 
 With these attributes set, the preview of the window now looks like this:
 
 <div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/the-design-preview/image (64).png" alt="" />
+    <img src="/img/get-started/test-drive/design-preview.png" alt="The design preview" width='460'/>
 </div>
 
 On the next page, you will see how to add some action to the app by responding to the button click event. 

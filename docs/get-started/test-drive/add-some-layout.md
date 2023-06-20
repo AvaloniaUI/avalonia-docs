@@ -3,11 +3,11 @@ id: add-some-layout
 title: Add Some Layout
 ---
 
-_Avalonia UI_ provides a range of built-in controls to help you layout the visual elements of an application. On this page you will see how to use some of these layout controls.
+Avalonia provides a range of built-in controls to help you layout the visual elements of an application. On this page you will see how to use some of these layout controls.
 
 At this stage, your application has a single button located in the content zone of the main window.
 
-In fact an _Avalonia UI_ window allows only a single other control in its content zone. So to add the multiple visual elements required for most applications, you will need to use one of the built-in layout controls that allows multiple other controls inside its content zone.
+In fact an Avalonia window allows only a single other control in its content zone. So to add the multiple visual elements required for most applications, you will need to use one of the built-in layout controls that allows multiple other controls inside its content zone.
 
 ## Stack Panel
 
@@ -54,7 +54,7 @@ To take the example forwards, add a stack panel as follows (you can include the 
 </div>
 
 :::info
-You can explore the other layout controls in _Avalonia UI_ from the reference [here](../reference/controls/layout-controls.md).
+You can explore the other layout controls in Avalonia from the reference [here](../reference/controls/layout-controls.md).
 :::
 
 On the next page, you will add some inputs to the middle of the window.

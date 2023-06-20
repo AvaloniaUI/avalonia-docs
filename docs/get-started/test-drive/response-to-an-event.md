@@ -3,15 +3,13 @@ id: respond-to-an-event
 title: Respond to an Event
 ---
 
-import Highlight from '@site/src/components/Highlight';
-
-There are a number of ways you can implement actions in an _Avalonia UI_ application. On this page, you will see how to use one of the simplest: how to write event handling code for a button click.
+There are a number of ways you can implement actions in an Avalonia application. On this page, you will see how to use one of the simplest: how to write event handling code for a button click.
 
 To start, you will write a button click event handler that does not interact with any of the other controls.
 
 ## Code-behind
 
-The XAML file for the main window has a C# code-behind file associated with it. You can find this file in the <Highlight color="#25c2a0">**Solution Explorer**</Highlight> - it is a sub-item of the AXAML file.
+The XAML file for the main window has a C# code-behind file associated with it. If you're using an IDE, you can find this file in the **Solution Explorer** - it is a sub-item of the `.axaml` file.
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/respond-to-an-event/image (59).png" alt="" />
@@ -19,7 +17,7 @@ The XAML file for the main window has a C# code-behind file associated with it. 
 
 To change the code-behind for the main window:
 
-* [ ] Double-click the <Highlight color="#25c2a0">**MainWindow.axaml.cs**</Highlight> file in the <Highlight color="#25c2a0">**Solution Explorer**</Highlight>
+- Open the `MainWindow.axaml.cs` file
 
 You will see some C# code like this:
 
@@ -50,8 +48,8 @@ The partial class `MainWindow` corresponds to the window object that is created 
 
 To add an event handler for the button, follow this procedure:
 
-* [ ] Locate the  `MainWindow` constructor in the code-behind file for the main window (see above instructions).
-* [ ] After the constructor add the following code:
+- Locate the  `MainWindow` constructor in the code-behind file for the main window (see above instructions).
+- After the constructor add the following code:
 
 ```csharp
 public void ButtonClicked(object source, RoutedEventArgs args)
@@ -67,8 +65,8 @@ using Avalonia.Interactivity;
 using System.Diagnostics;
 ```
 
-* [ ] Switch to the XAML file and locate the &#60;Button&#62; tag.
-* [ ] Enter the click attribute at the end of the tag, as follows:
+- Switch to the XAML file and locate the `<Button>` tag.
+- Enter the click attribute at the end of the tag, as follows:
 
 ```xml
 <Button
@@ -77,13 +75,15 @@ using System.Diagnostics;
 </Button>
 ```
 
-You will see the Avalonia UI Intellisense as you type.
+:::tip
+If you're using an IDE you will see the Avalonia UI Intellisense as you type.
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/respond-to-an-event/image (25) (2).png" alt="" />
 </div>
+:::
 
-* [ ] Run the app and click the button.
+- Run the app and click the button.
 
 You should see the result on the Output window for Debug, like this:
 
