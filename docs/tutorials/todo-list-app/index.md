@@ -1,19 +1,32 @@
-# ToDo List App
+---
+id: index
+title: To Do List App
+---
 
-In this tutorial we're going to be creating a simple TODO application in Avalonia using the Model-View-ViewModel \(MVVM\) pattern.
+In this tutorial you will create a simple to do list application using _Avalonia UI_ and the Model View View-Model (MVVM) pattern with binding to the to do list (collection) data.
+
+
+  <div style={{textAlign: 'center'}}>
+    <img src="/img/tutorials/todo-list-app/image (14).png" alt="The finished application" />
+  </div>
+
 
 :::info
 You can find the code for the completed application [here](https://github.com/grokys/todo-tutorial).
 :::
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/image%20%2814%29.png" alt="Decription" />
-  </div>
+## MVVM Pattern <a href="#model-view-viewmodel-mvvm" id="model-view-viewmodel-mvvm"></a>
 
-## Model-View-ViewModel \(MVVM\) <a id="model-view-viewmodel-mvvm"></a>
+In this tutorial you will learn more about using the Model-View-ViewModel (MVVM) pattern. It is common to use the MVVM pattern when writing GUI applications, and MVVM is recommended in most scenarios for _Avalonia UI_ applications.
 
-We're going to be using the [Model-View-ViewModel pattern \(MVVM\)](https://docs.avaloniaui.net/guides/basics/mvvm) for this tutorial. MVVM is a common pattern used for writing GUI applications, and is the recommended pattern to use when writing Avalonia applications. We'll be assuming a [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) application here, but most of these concepts can be applied to all types of applications.
+:::info
+To revise some of the background concepts behind using the MVVM pattern with _Avalonia UI_, and when its use is appropriate, see [here](../../concepts/the-mvvm-pattern/).
+:::
 
-:::warning
-For this guide we're going to be using [ReactiveUI](https://reactiveui.net/) which is a MVVM framework based on [.NET Reactive Extensions](https://reactivex.io/). This guide will explain how to use MVVM and ReactiveUI with Avalonia but you can also see the [ReactiveUI documentation](https://reactiveui.net/docs/) for more detailed information.
+## Development Methods
+
+This tutorial contains instructions for you to use whether you program with _Microsoft Visual Studio_ on Windows, or the .NET Core Command Line Interface (.NET Core CLI) and a different editor. The screenshots shown are all from _Microsoft Visual Studio_ and running on Windows. 
+
+:::info
+To read about other tutorials in this documentation, see [here](../introduction.md).
 :::
