@@ -42,10 +42,10 @@ You will probably use these properties most often:
 
 ### More Information <a href="#reference" id="reference"></a>
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/WrapPanel/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`WrapPanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/WrapPanel.cs)
-{% endhint %}
+:::

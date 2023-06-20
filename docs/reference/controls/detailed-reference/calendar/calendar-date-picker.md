@@ -8,9 +8,9 @@ This is an extension of the calendar control that includes a text box and button
 
 The user can also enter a date by typing in the text box. The date picker is able to process multiple date formats into the format that is displayed as a watermark when there is no selected date.
 
-{% hint style="info" %}
+:::info
 For details on the calendar part of this control, see the previous reference [here](./).
-{% endhint %}
+:::
 
 ## Example
 
@@ -26,11 +26,11 @@ This example shows a basic single date selection calendar when the button is cli
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/CalendarDatePicker/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`CalendarDatePicker.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CalendarDatePicker/CalendarDatePicker.cs)
-{% endhint %}
+:::
 

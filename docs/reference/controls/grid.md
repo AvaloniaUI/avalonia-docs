@@ -12,7 +12,7 @@ If you position more than one child control in a cell, they will be drawn in tha
 
 {% hint style="warning" %}
 If you omit column and row coordinates for the child controls of a grid, they will all be drawn in the top left corner (column=0, row=0).
-{% endhint %}
+:::
 
 It is also possible to make a child control span more than one cell in either rows or columns, or both.
 
@@ -88,7 +88,7 @@ Using full expanded XAML, this is the same as:
 
 {% hint style="warning" %}
 If a child control has its own dimensions these will be obeyed when it is drawn. This means that if it is larger than its grid cell, it will overlap adjacent cells.
-{% endhint %}
+:::
 
 #### Mixing Size Definitions
 
@@ -114,9 +114,9 @@ When calculating sizes, any proportional columns are made to fit in the space le
 
 The calculation for automatic sizing is made using the outside of the margin layout zone of a child control.
 
-{% hint style="info" %}
+:::info
 To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones.md). &#x20;
-{% endhint %}
+:::
 
 Child controls are drawn in their assigned grid cells in the sequence they appear in the XAML. This rule governs both what happens when two child controls are assigned the same cell, and how child controls overlap when they are larger than their allotted cell.&#x20;
 
@@ -151,10 +151,10 @@ The button is drawn to fill the span from the cell (column 1, row 1) plus one co
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Grid/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`Grid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
-{% endhint %}
+:::

@@ -65,16 +65,16 @@ You can use the MVVM pattern with the split view control and one of the compact 
 
 <!--figure><img src="../../.gitbook/assets/splitview2.gif" alt=""><figcaption></figcaption></figure-->
 
-{% hint style="info" %}
+:::info
 To learn how to use the split view control in this way, see the guide [here](../../guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm.md).
-{% endhint %}
+:::
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/SplitView/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`SplitView.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitView/SplitView.cs)
-{% endhint %}
+:::

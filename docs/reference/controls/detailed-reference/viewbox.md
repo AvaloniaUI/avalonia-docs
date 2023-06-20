@@ -54,10 +54,10 @@ This set of demonstrations shows the effect of the stretch direction property:
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Viewbox/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`Viewbox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Viewbox.cs)
-{% endhint %}
+:::

@@ -6,9 +6,9 @@ The `SplitButton` functions as a [`Button`](https://docs.avaloniaui.net/docs/con
 
 A `SplitButton` should only be composed of similar actions. Fundamentally, this control is used to group common actions together where one has clear priority over the others. The most common action should be the default and what is shown in the primary part of the SplitButton. Less-common actions should be added to the flyout which is shown when the secondary (drop down) part is pressed.
 
-{% hint style="info" %}
+:::info
 The user-selection action should be invoked immediately when pressing either the primary part or a secondary action in the flyout. All pressed actions, whether primary or secondary, are immediate.
-{% endhint %}
+:::
 
 ## Common Properties
 

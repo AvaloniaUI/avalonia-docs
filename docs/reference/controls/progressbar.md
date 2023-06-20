@@ -14,7 +14,7 @@ You will probably use these properties most often:
 
 {% hint style="warning" %}
 The progress caption always shows the value with a percentage sign. This is only correct when the maximum to minimum range is 0 to 100.
-{% endhint %}
+:::
 
 ## Example
 
@@ -34,10 +34,10 @@ The progress caption always shows the value with a percentage sign. This is only
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ProgressBar/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`ProgressBar.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ProgressBar.cs)
-{% endhint %}
+:::

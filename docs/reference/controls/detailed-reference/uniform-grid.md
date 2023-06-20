@@ -28,13 +28,13 @@ You will probably use these properties most often:
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/UniformGrid/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`UniformGrid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/UniformGrid.cs)
-{% endhint %}
+:::
 
 
 

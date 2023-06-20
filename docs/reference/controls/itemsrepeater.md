@@ -6,9 +6,9 @@ description: REFERENCE - Built-in Controls
 
 The items repeater can display repeating data from a bound data source. It has both a layout template and a data template.&#x20;
 
-{% hint style="info" %}
+:::info
 The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [here](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater). The only difference is that the data source in the _Avalonia UI_ control is called `Items` (not `ItemsSource`).&#x20;
-{% endhint %}
+:::
 
 The default layout template is a vertical stack layout, so that items appear in a vertical list.
 
@@ -126,10 +126,10 @@ The items display horizontally, and those too far to the right would be hidden i
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsRepeater/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`ItemsRepeater.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)
-{% endhint %}
+:::

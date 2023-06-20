@@ -6,13 +6,13 @@ description: REFERENCE - Built-in Controls
 
 The tree data grid displays hierarchical and tabular data together in a single view. It is a combination of a tree view and data grid.
 
-{% hint style="info" %}
+:::info
 For full information on the tree view control, see the reference [here](../treeview-1.md).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 For full information on the data grid control, see the reference [here](../../datagrid/).
-{% endhint %}
+:::
 
 The control has two modes of operation:
 
@@ -51,7 +51,7 @@ Or add package reference directly to the project (`.csproj`) file:
 
 {% hint style="warning" %}
 Note you must always install the data grid version that matches the _Avalonia UI_ version you are using.
-{% endhint %}
+:::
 
 ## Include Data Grid Styles&#x20;
 
@@ -87,12 +87,12 @@ You will use the `Source` property to bind to a view model that is defined in co
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see here.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on GitHub [TreeDataGrid.cs](https://github.com/AvaloniaUI/Avalonia.Controls.TreeDataGrid)
-{% endhint %}
+:::
 
 The next page shows an example of creating a hierarchical tree data grid with columns.

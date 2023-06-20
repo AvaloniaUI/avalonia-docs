@@ -122,18 +122,18 @@ It works in the preview pane because the `<Design.DataContext>` element creates 
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about the data grid text column, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTextColumn/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about data grid check box column, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridCheckBoxColumn/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`DataGridTextColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridTextColumn.cs)
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`DataGridCheckBoxColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridCheckBoxColumn.cs)
-{% endhint %}
+:::

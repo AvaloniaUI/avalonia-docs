@@ -9,13 +9,13 @@ To set up _JetBrains Rider_ for developing with _Avalonia UI,_ follow this proce
 * [ ] Download and install the .NET SDK of your choice from _Microsoft_. This contains the runtime, development kit (compiler, etc) that is used to build _Avalonia UI_ applications.
 * [ ] Install the _Avalonia UI_ templates by running the command `dotnet new install Avalonia.Templates` from the command prompt on your machine.&#x20;
 
-{% hint style="info" %}
+:::info
 For the latest .NET SDK downloads, see [here](https://dotnet.microsoft.com/download).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 For SDK versions before .NET 7, you will need to run the command `dotnet new -i Avalonia.Templates`&#x20;
-{% endhint %}
+:::
 
 The output will look similar to this.
 
@@ -38,9 +38,9 @@ Examples:
 $
 ```
 
-{% hint style="info" %}
+:::info
 To download _JetBrains Rider,_ see [here](https://www.jetbrains.com/rider/).&#x20;
-{% endhint %}
+:::
 
 Rider will give you the very best development experience available for _Avalonia UI_. It is available for Windows, Linux, and macOS. Rider supports XAML out of the box. However, if you want to use the XAML previewer, you will need the Avalonia plugin.
 

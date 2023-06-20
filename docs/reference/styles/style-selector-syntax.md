@@ -30,13 +30,13 @@ The first example above selects the `Avalonia.Controls.Button` class. To include
 
 {% hint style="warning" %}
 This selector does not match derived types. For that, use the `:is` selector, see below.
-{% endhint %}
+:::
 
 
 
-{% hint style="info" %}
+:::info
 Note the type of an object is actually determined by looking at its `IStyleable.StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can implement the `IStyleable.StyleKey` property on your class to return `typeof(Button)`.
-{% endhint %}
+:::
 
 ## By Name <a href="#name" id="name"></a>
 
@@ -98,9 +98,9 @@ new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 
 Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. There can only be one pseudo class in the selector. When used in combination with other classes, the pseudo class must be the last in the list. &#x20;
 
-{% hint style="info" %}
+:::info
 For more detail about pseudo classes, see the reference [here](pseudo-classes.md).
-{% endhint %}
+:::
 
 ## Include Derived Classes <a href="#is" id="is"></a>
 
@@ -122,9 +122,9 @@ new Style(x => x.Is(typeof(Button)));
 
 This is very similar to the style class selector except it also matches derived types.
 
-{% hint style="info" %}
+:::info
 Technical detail: during the matching process, _Avalonia UI_ determines the type of a control by examining its `IStyleable.StyleKey` property.
-{% endhint %}
+:::
 
 INterestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
 
@@ -162,9 +162,9 @@ new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 
 A child selector is defined by separating two selectors with a `>` character. This selector matches only direct children in the **logical controls tree**.
 
-{% hint style="info" %}
+:::info
 For the concept behind the logical controls tree, see [here](../../concepts/control-trees.md).
-{% endhint %}
+:::
 
 For example, applying the above selector to this XAML:
 
@@ -227,17 +227,17 @@ You can refine a selector so that it includes the value of a property. The prope
 
 For example, in the XAML above, the first button will be selected, but not the second button.
 
-{% hint style="info" %}
+:::info
 Note: when you use an attached property as a property match, the property name must be wrapped in parentheses. Fro example:
 
 ```markup
 <Style Selector="TextBlock[(Grid.Row)=0]">
 ```
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 Further note: when you use a property match, the property type must support the component model type converter, `TypeConverter` class. For more information see the _Microsoft_ documentation [here](https://learn.microsoft.com/dotnet/api/system.componentmodel.typeconverter).
-{% endhint %}
+:::
 
 ## By Template <a href="#template" id="template"></a>
 
@@ -388,7 +388,7 @@ This table lists some examples of selection by child position:&#x20;
 
 Although this is a CSS site, it will work for _Avalonia UI_ child position selectors because the rules are the same.
 
-{% hint style="info" %}
+:::info
 You can use this site to test your child position selector: \
 [https://css-tricks.com/examples/nth-child-tester/](https://css-tricks.com/examples/nth-child-tester/)
-{% endhint %}
+:::

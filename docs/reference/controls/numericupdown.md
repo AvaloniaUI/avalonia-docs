@@ -36,9 +36,9 @@ This is a basic example of a numeric up-down control. There are no limits to the
 
 The value and other properties are doubles; so you can create a custom decimal increment/decrement and range if you need to.&#x20;
 
-{% hint style="info" %}
+:::info
 Remember to specify a `FormatString` property when you create a custom decimal increment and range.
-{% endhint %}
+:::
 
 For example:&#x20;
 
@@ -55,10 +55,10 @@ For example:&#x20;
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/NumericUpDown/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`NumericUpDown.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NumericUpDown/NumericUpDown.cs)
-{% endhint %}
+:::

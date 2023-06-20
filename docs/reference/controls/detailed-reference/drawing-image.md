@@ -10,13 +10,13 @@ You will probably use these properties most often:
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see here.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`DrawingImage.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Media/DrawingImage.cs)
-{% endhint %}
+:::
 
 
 

@@ -6,9 +6,9 @@ description: REFERENCE - Built-in Controls
 
 The relative panel control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
 
-{% hint style="info" %}
+:::info
 To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones.md).
-{% endhint %}
+:::
 
 The default position for a child control, is the upper left corner of the panel.
 
@@ -20,13 +20,13 @@ Where `PositionProperty` property is one of the relative position properties (se
 
 {% hint style="danger" %}
 It is an error to give the value of a relative position property as the name of the child control itself. That would be a circular reference!&#x20;
-{% endhint %}
+:::
 
 You can specify up to four relative position properties per child control - for how the top, bottom, left and right edges are to be calculated.&#x20;
 
 {% hint style="danger" %}
 It is an error to define the same relative position property twice for the same child control.
-{% endhint %}
+:::
 
 It is not an error to specify different, but potentially conflicting relative position properties, although you may find the result difficult to understand.
 
@@ -34,7 +34,7 @@ If more than one child control ends up in the same calculated position, then the
 
 {% hint style="warning" %}
 This means you must give child controls a name, and use the correct name in any relative position property values. If you get this wrong, the control will adopt the default (top-left) position, and may overlap or obscure another.&#x20;
-{% endhint %}
+:::
 
 ## Useful Properties&#x20;
 
@@ -78,10 +78,10 @@ Here are some notes about the above example:
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/RelativePanel/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`RelativePanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RelativePanel.cs)
-{% endhint %}
+:::

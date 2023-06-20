@@ -12,9 +12,9 @@ Each tab item has a header and a content zone. The headers are presented in a st
 
 You can compose the UI in both the header and content zones to suit the UI requirements of your _Avalonia UI_ app.&#x20;
 
-{% hint style="info" %}
+:::info
 If you only need the function of the tab headers part of this control, consider using the tab strip instead. See [here](tabstrip.md).
-{% endhint %}
+:::
 
 ## Examples
 
@@ -40,10 +40,10 @@ The tab control even works in the preview pane!
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TabControl/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`TabControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TabControl.cs)
-{% endhint %}
+:::

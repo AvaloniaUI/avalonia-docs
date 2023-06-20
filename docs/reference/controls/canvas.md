@@ -10,9 +10,9 @@ The position of each child control is defined as two distances between edge the 
 
 <!--figure><img src="../../.gitbook/assets/image (16) (2).png" alt=""><figcaption></figcaption></figure-->
 
-{% hint style="info" %}
+:::info
 To review the concept of layout zones, see [here](../../concepts/layout/layout-zones.md).
-{% endhint %}
+:::
 
 ## Useful Properties&#x20;
 
@@ -24,7 +24,7 @@ Child controls in a canvas are drawn in the sequence that the are defined. This 
 
 {% hint style="warning" %}
 The canvas does not size any of its child controls. You must set width and height properties on a child control, or it will not appear!&#x20;
-{% endhint %}
+:::
 
 ## Z-index
 
@@ -52,16 +52,16 @@ The result looks like this:
 
 <!--figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure-->
 
-{% hint style="info" %}
+:::info
 Use the canvas panel with discretion. While it may be convenient to position child controls like this, your UI will no longer be adaptive to changes in the app window size.
-{% endhint %}
+:::
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Canvas/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`Canvas.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)
-{% endhint %}
+:::

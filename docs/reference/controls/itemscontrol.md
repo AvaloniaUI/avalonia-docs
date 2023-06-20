@@ -6,9 +6,9 @@ description: REFERENCE - Built-in Control
 
 The items control is the basis for controls that display repeating data (like the list box for example). It has no built-in formatting or interactions; but you can use it with data binding, styling and data templates to create a completely custom repeating data control.
 
-{% hint style="info" %}
+:::info
 To see the full list of _Avalonia UI_ built-in repeating data controls, see [here](repeating-data-controls.md).&#x20;
-{% endhint %}
+:::
 
 ## Useful Properties
 
@@ -98,13 +98,13 @@ The view resizes horizontally, but content is hidden when it is too high. This c
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`ItemsControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)
-{% endhint %}
+:::
 
 
 

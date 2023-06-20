@@ -10,9 +10,9 @@ The items in the list can be composed, bound and templated.
 
 The list height expands to fit all the items unless set specifically (using the height attribute), or set by a containing control, such as the dock panel.
 
-{% hint style="info" %}
+:::info
 To learn more about the dock panel, see the reference page [here](dockpanel.md).
-{% endhint %}
+:::
 
 When the height is constrained, and the total item height is larger, then the built-in scroll viewer in the list box will display a vertical scrollbar.
 
@@ -24,9 +24,9 @@ You will probably use these properties most often:
 
 <table><thead><tr><th width="289">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Items</code></td><td></td></tr><tr><td><code>SelectedIndex</code></td><td>The (zero-based) index of the selected item, or in the case of multiple selection the first selected item.</td></tr><tr><td><code>SelectedItem</code></td><td>The selected item (object) from the items collection, or in the case of multiple selection the first selected item.</td></tr><tr><td><code>SelectedItems</code></td><td>The selected items in a list.</td></tr><tr><td><code>Selection</code></td><td>An <code>ISelectionModel</code> object with various methods to track multiple selected items. This is is optimized for a large items collection.</td></tr><tr><td><code>SelectionMode</code></td><td>The mode of selection, see table below.</td></tr><tr><td><p><code>ScrollViewer.Horizontal</code></p><p><code>ScrollBarVisibility</code></p></td><td>The horizontal scrollbar visibility for the built-in scroll viewer. Options are 'Disabled' (default), 'Auto', 'Hidden' and 'Visible'. When disabled, overflow is hidden. </td></tr><tr><td><p><code>ScrollViewer.Vertical</code></p><p><code>ScrollBarVisibility</code></p></td><td>The vertical scrollbar visibility for the built-in scroll viewer. Options are 'Disabled', 'Auto' (default), 'Hidden' and 'Visible'. When disabled, overflow is hidden. </td></tr></tbody></table>
 
-{% hint style="info" %}
+:::info
 To optimize performance when the items collection is large, use of the `ISelectionModel` is recommended.&#x20;
-{% endhint %}
+:::
 
 ## Selection Mode <a href="#selectionmode" id="selectionmode"></a>
 
@@ -82,9 +82,9 @@ namespace AvaloniaControls.Views
 
 You can customize how an item is displayed by using an **data template** inside the list box `ItemTemplate` element.&#x20;
 
-{% hint style="info" %}
+:::info
 To review the concepts behind **data template**, see [here](../../concepts/templates/).
-{% endhint %}
+:::
 
 This example displays each item inside a blue border with rounded corners. The C# code-behind is the same as before:
 
@@ -186,10 +186,10 @@ namespace AvaloniaControls.Views
 
 ### More Information <a href="#selecteditems" id="selecteditems"></a>
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/ListBox/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`ListBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ListBox.cs)
-{% endhint %}
+:::

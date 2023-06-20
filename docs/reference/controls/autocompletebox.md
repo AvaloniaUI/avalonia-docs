@@ -18,9 +18,9 @@ These are the options for the filter mode property:
 
 <table><thead><tr><th width="350">Filter Mode</th><th>Description</th></tr></thead><tbody><tr><td><code>StartsWith</code></td><td>A culture-sensitive, case-insensitive filter where the returned items start with the specified text.</td></tr><tr><td><code>StartsWithCaseSensitive</code></td><td>A culture-sensitive, case-sensitive filter where the returned items start with the specified text.</td></tr><tr><td><code>StartsWithOrdinal</code></td><td>An ordinal, case-insensitive filter where the returned items start with the specified text.</td></tr><tr><td><code>StartsWithOrdinalCaseSensitive</code></td><td>An ordinal, case-sensitive filter where the returned items start with the specified text.</td></tr><tr><td><code>Contains</code></td><td>A culture-sensitive, case-insensitive filter where the returned items contain the specified text.</td></tr><tr><td><code>ContainsCaseSensitive</code></td><td>A culture-sensitive, case-sensitive filter where the returned items contain the specified text.</td></tr><tr><td><code>ContainsOrdinal</code></td><td>An ordinal, case-insensitive filter where the returned items contain the specified text.</td></tr><tr><td><code>ContainsOrdinalCaseSensitive</code></td><td>An ordinal, case-sensitive filter where the returned items contain the specified text.</td></tr><tr><td><code>Equals</code></td><td>A culture-sensitive, case-insensitive filter where the returned items equal the specified text.</td></tr><tr><td><code>EqualsCaseSensitive</code></td><td>A culture-sensitive, case-sensitive filter where the returned items equal the specified text.</td></tr><tr><td><code>EqualsOrdinal</code></td><td>An ordinal, case-insensitive filter where the returned items equal the specified text.</td></tr><tr><td><code>EqualsOrdinalCaseSensitive</code></td><td>An ordinal, case-sensitive filter where the returned items equal the specified text.</td></tr></tbody></table>
 
-{% hint style="info" %}
+:::info
 In an **ordinal** string comparison, each character is compared using its simple byte value (independent of language).
-{% endhint %}
+:::
 
 ## Examples
 
@@ -64,10 +64,10 @@ namespace AvaloniaControls.Views
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/AutoCompleteBox/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`AutoCompleteBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/AutoCompleteBox/AutoCompleteBox.cs)
-{% endhint %}
+:::

@@ -8,9 +8,9 @@ The combo box presents a selected item and a drop-down button that displays a li
 
 The items in the list can be composed, bound and templated.
 
-{% hint style="info" %}
+:::info
 To review the concept behind **data templates**, see [here](../../concepts/templates/).
-{% endhint %}
+:::
 
 ## Useful Properties
 
@@ -127,10 +127,10 @@ namespace AvaloniaControls.Views
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ComboBox/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`ComboBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ComboBox.cs)
-{% endhint %}
+:::

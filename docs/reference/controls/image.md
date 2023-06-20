@@ -14,9 +14,9 @@ Images can be used to compose the content of another control. For example, you c
 
 The image displayed can be resized and scaled.  The default settings for scaling (uniform stretch in both directions) will result in the image being fitted to the size (width and/or height) given.&#x20;
 
-{% hint style="info" %}
+:::info
 The scaling settings for an image are the same as for the view box, see the reference [here](detailed-reference/viewbox.md).
-{% endhint %}
+:::
 
 ## Example
 
@@ -47,10 +47,10 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Image/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`Image.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Image.cs)
-{% endhint %}
+:::

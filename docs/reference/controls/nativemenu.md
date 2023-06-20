@@ -8,7 +8,7 @@ The native menu can display a menu on _macOS_ and some Linux distributions.&#x20
 
 {% hint style="warning" %}
 This control can only be used attached to a tray icon. For full details about the tray icon, see the reference [here](detailed-reference/tray-icon.md).
-{% endhint %}
+:::
 
 You can create sub-menus by nesting `<MenyItem>` elements.
 
@@ -43,10 +43,10 @@ This example defines a native menu that can be attached to a tray icon:
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/NativeMenu/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on GitHub [NativeMenu.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NativeMenu.cs)
-{% endhint %}
+:::

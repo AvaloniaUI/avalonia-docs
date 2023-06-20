@@ -16,7 +16,7 @@ You will probably use these properties most often:
 
 {% hint style="warning" %}
 To create a meaningful layout, you will need to use corresponding orientation and alignment properties. For example, a vertical orientation matches a horizontal alignment.&#x20;
-{% endhint %}
+:::
 
 ## Example
 
@@ -64,10 +64,10 @@ With the example code-behind, the text block displays the value of the scrollbar
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/ScrollBar/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`ScrollBar.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ScrollBar.cs)
-{% endhint %}
+:::

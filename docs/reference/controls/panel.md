@@ -6,9 +6,9 @@ description: REFERENCE - Built-in Controls
 
 The panel is the most basic control that can contain multiple child controls. Child controls are drawn according to their horizontal and vertical alignment properties, and in the sequence that they appear in the XAML. Child controls will overlap if they occupy the same space.&#x20;
 
-{% hint style="info" %}
+:::info
 For a discussion about using other panels, see [here](../../concepts/layout/panels-overview.md).
-{% endhint %}
+:::
 
 ## Example
 
@@ -36,16 +36,16 @@ There are other more useful panels, that offer better control over the positioni
 
 If you have specific requirements for positioning the child controls in a panel, you can create your own custom control based on the panel.
 
-{% hint style="info" %}
+:::info
 For instructions about how to create a custom panel control, see [here](../../guides/custom-controls/create-a-custom-panel.md).
-{% endhint %}
+:::
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Panel/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on GitHub [`Panel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Panel.cs)
-{% endhint %}
+:::

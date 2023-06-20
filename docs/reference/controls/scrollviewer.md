@@ -52,11 +52,11 @@ This example creates a stack panel that is bigger than the border it is inside. 
 
 ## More Information <a href="#reference" id="reference"></a>
 
-{% hint style="info" %}
+:::info
 For the complete API documentation, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ScrollViewer/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`ScrollViewer.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ScrollViewer.cs)
-{% endhint %}
+:::
 

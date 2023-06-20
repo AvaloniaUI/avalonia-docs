@@ -10,9 +10,9 @@ There are two data templates which you define as attached properties:
 
 <table><thead><tr><th width="269">Data Template</th><th>Description</th></tr></thead><tbody><tr><td><code>CellTemplate</code> </td><td>The display (not being edited) presentation of the column value. </td></tr><tr><td><code>CellEditingTemplate</code> </td><td>The editing template for the column value.</td></tr></tbody></table>
 
-{% hint style="info" %}
+:::info
 If you do not set a editing template, the column will stay read-only.
-{% endhint %}
+:::
 
 ## Example
 
@@ -106,10 +106,10 @@ public class Person
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTemplateColumn/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`DataGridTemplateColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridTemplateColumn.cs)
-{% endhint %}
+:::

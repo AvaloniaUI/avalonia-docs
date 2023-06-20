@@ -6,9 +6,9 @@ description: REFERENCE - Built-in Controls
 
 The path icon control can draw an icon graphic from a stream geometry. For example, you can use the icon geometries from the _Avalonia UI_ Fluent icons resource.
 
-{% hint style="info" %}
+:::info
 To see the full list of Fluent icons available with _Avalonia UI_, see [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
-{% endhint %}
+:::
 
 This control is most often used as part of a composition inside another control. For example, to create an icon in a menu or a button.
 

@@ -6,9 +6,9 @@ description: REFERENCE - Built-in Controls
 
 The menu control can add menu structure to an application. You will usually place a menu at the top edge of a dock panel control, so that it is drawn at the top of a window.
 
-{% hint style="info" %}
+:::info
 For reference information about the dock panel, see [here](dockpanel.md).
-{% endhint %}
+:::
 
 ## Menu Items
 
@@ -81,9 +81,9 @@ To initiate an action, the command property of a menu item can be bound to an `I
 </Menu>
 ```
 
-{% hint style="info" %}
+:::info
 For guidance on how to bind to commands, see [here](broken-reference).
-{% endhint %}
+:::
 
 ## Menu Icons <a href="#menu-icons" id="menu-icons"></a>
 
@@ -105,16 +105,16 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 
 <!--figure><img src="../../.gitbook/assets/menu2.gif" alt=""><figcaption></figcaption></figure-->
 
-{% hint style="info" %}
+:::info
 For more detailed guidance on how to add icons to your menus, see [here](../../guides/graphics-and-animation/how-to-add-menu-icons.md).
-{% endhint %}
+:::
 
 ## More Information <a href="#dynamically-creating-menus" id="dynamically-creating-menus"></a>
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Menu/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`Menu.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)
-{% endhint %}
+:::

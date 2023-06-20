@@ -8,13 +8,13 @@ The data grid displays repeating data in a customizable grid. The control can be
 
 The data grid needs to be bound to an observable collection in a view model that can be found in a related **data context**.&#x20;
 
-{% hint style="info" %}
+:::info
 To review the concept behind the **data context**, see [here](../../../concepts/data-binding/data-context.md).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 The data grid is in an additional _Avalonia UI_ package. To use the data grid in your project, you must reference the **Avalonia.Controls.DataGrid** _NuGet_ package, and reference the styles that it uses, see below.&#x20;
-{% endhint %}
+:::
 
 ## NuGet Package Reference
 
@@ -36,7 +36,7 @@ Or add package reference directly to the project (`.csproj`) file:
 
 {% hint style="warning" %}
 Note you must always install the data grid version that matches the _Avalonia UI_ version you are using.
-{% endhint %}
+:::
 
 ## Include Data Grid Styles&#x20;
 
@@ -125,9 +125,9 @@ public class Person
 
 <!--figure><img src="../../../.gitbook/assets/grid1.gif" alt=""><figcaption></figcaption></figure-->
 
-{% hint style="info" %}
+:::info
 These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](../../../concepts/data-binding/).
-{% endhint %}
+:::
 
 Property names from the item class will generally not make good column names. This example adds custom header names to the grid. It also allows column reordering and resizing and disallows the default column sorting option:
 
@@ -215,14 +215,14 @@ public class Person
 
 ## More Information <a href="#common-properties" id="common-properties"></a>
 
-{% hint style="info" %}
+:::info
 For more information about the different kinds of data grid column, see the [next page](datagridcolumns.md).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGrid/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`DataGrid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGrid.cs)
-{% endhint %}
+:::

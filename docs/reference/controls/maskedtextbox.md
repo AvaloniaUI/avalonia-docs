@@ -41,10 +41,10 @@ This is a basic example:
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see here.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`MaskedTextBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/MaskedTextBox.cs)
-{% endhint %}
+:::

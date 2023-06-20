@@ -6,9 +6,9 @@ description: REFERENCE
 
 These _Avalonia UI_ controls allow you to images to your app.
 
-{% hint style="info" %}
+:::info
 If you plan to bind an image source, you will need to use an image converter. To learn how to do this, see here.
-{% endhint %}
+:::
 
 |                                                      |                                                  |   |
 | ---------------------------------------------------- | ------------------------------------------------ | - |

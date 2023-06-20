@@ -30,7 +30,7 @@ When all four values are in the list, _Avalonia UI_ will interpret them using th
 
 {% hint style="warning" %}
 If you use the four value pattern; you must provide all four values, even if one of them is zero. Three values are not permitted in the list.&#x20;
-{% endhint %}
+:::
 
 ### Example
 
@@ -67,17 +67,17 @@ You can define a shadow to a border by setting its box shadow property. You spec
 
 If only two length values are given,  will interpret them as the `offset-x` and `offset-y`. If a third value is given, it is interpreted as a `blur-radius`, and if a fourth value is given, it is interpreted as a `spread-radius`.
 
-{% hint style="info" %}
+:::info
 You can specify multiple shadows by providing a comma-separated list of shadow definitions.
-{% endhint %}
+:::
 
 This table describes the box shadow values, in the order in which they appear:
 
 <table><thead><tr><th width="203">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>inset</code></td><td>If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the content). The presence of the inset keyword changes the shadow to inside the frame (as if the content was depressed inside the box). Inset shadows are drawn inside the border (even transparent ones), and above the background but below any content</td></tr><tr><td><code>offset-x</code> </td><td>Specifies the horizontal distance. Negative values place the shadow to the left of the element.</td></tr><tr><td><code>offset-y</code></td><td>Specifies the vertical distance. Negative values place the shadow above the element.</td></tr><tr><td><code>blur-radius</code></td><td>The larger this value, the bigger the blur effect, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, the default (zero) is used and the shadow edge is sharp.</td></tr><tr><td><code>spread-radius</code></td><td>Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink. If not specified, it will be 0 (the shadow will be the same size as the element).</td></tr><tr><td><code>color</code></td><td>The color of the shadow using a color name (such as red), or a # prefix and a hexadecimal color value. For example: #dadada</td></tr></tbody></table>
 
-{% hint style="info" %}
+:::info
 If both offset values are set to zero, the shadow is placed behind the element, and will only generate a blur effect if `blur-radius` and/or `spread-radius` are set.
-{% endhint %}
+:::
 
 ### Example
 
@@ -100,10 +100,10 @@ This is an example of a drop-shadow:
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Border/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`Border.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Border.cs)
-{% endhint %}
+:::

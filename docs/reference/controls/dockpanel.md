@@ -12,7 +12,7 @@ For example, if the docking edge on a child control is defined as 'top' and it h
 
 {% hint style="warning" %}
 You must define the child control dimension perpendicular to the docking edge, or it will not show.
-{% endhint %}
+:::
 
 You can optionally define the dimension that is parallel to the docking edge. In this case, the child will be drawn according to the alignment setting in the same direction. For example, a child with a defined width, docked to the top edge, will obey its horizontal alignment property (default center).
 
@@ -22,7 +22,7 @@ The last child control defined will fill any remaining space.&#x20;
 
 {% hint style="warning" %}
 You must always define a last child control (with no dock property), or the docking calculation will not perform correctly. This means that a dock panel requires a minimum of two child controls.
-{% endhint %}
+:::
 
 ## Useful Properties&#x20;
 
@@ -48,10 +48,10 @@ Setting the opacity of the orange rectangle to 0.5 demonstrates that there are n
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DockPanel/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`DockPanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DockPanel.cs)
-{% endhint %}
+:::

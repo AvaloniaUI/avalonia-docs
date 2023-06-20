@@ -14,7 +14,7 @@ You will probably use these properties most often:
 
 {% hint style="warning" %}
 To provide any meaningful movement, the direction of travel of the splitter must be the same as its position definition. That is: for a column splitter specify `ResizeDirection="Columns"` and for a row splitter specify `ResizeDirection="Rows"`.
-{% endhint %}
+:::
 
 ## Examples
 
@@ -42,10 +42,10 @@ This is a row splitter:
 
 <!--![](../../.gitbook/assets/gridsplitter-in-action-rows.gif)-->
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/GridSplitter/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`GridSplitter.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GridSplitter.cs)
-{% endhint %}
+:::

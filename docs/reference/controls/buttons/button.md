@@ -8,15 +8,15 @@ The button is a control that reacts to pointer actions (and has some keyboard eq
 
 A pointer-down to pointer release sequence is interpreted as a click; and this behaviour is configurable.&#x20;
 
-{% hint style="info" %}
+:::info
 Click is one of many button events, for a full list see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events).
-{% endhint %}
+:::
 
 A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.&#x20;
 
-{% hint style="info" %}
+:::info
 For guidance on how to bind to a command, see [here](broken-reference).
-{% endhint %}
+:::
 
 ## Useful Properties
 
@@ -63,10 +63,10 @@ public partial class MainWindow : Window
 
 ## More Information
 
-{% hint style="info" %}
+:::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 View the source code on _GitHub_ [`Button.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Button.cs)
-{% endhint %}
+:::

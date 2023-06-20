@@ -6,13 +6,13 @@ description: REFERENCE - Built-in Controls
 
 A menu flyout allows you to host a simple menu as the flyout for a control. You might use this as an alternative to the context menu.
 
-{% hint style="info" %}
+:::info
 For details of the context menu, see the reference [here](../contextmenu.md).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 The properties of a menu flyout are the same as for a flyout. See [here](../flyouts.md).
-{% endhint %}
+:::
 
 ## Example
 
@@ -31,9 +31,9 @@ This is a simple example of the menu flyout:
 </Button>
 ```
 
-{% hint style="info" %}
+:::info
 Note the `<Separator/>` element will not work in a menu flyout. To make a separator line, use a `<MenuItem>` element with the header set to '-' as shown above. &#x20;
-{% endhint %}
+:::
 
 The resulting menu flyout looks like this:
 
