@@ -120,7 +120,7 @@ To display the validation messages, Avalonia has a control called [`DataValidati
 </Style>
 ```
 
-![custom validation style](broken-reference)
+<!-- ![custom validation style](broken-reference) -->
 
 **Custom validation style**
 
@@ -146,8 +146,5 @@ public override void OnFrameworkInitializationCompleted()
     }
 
     base.OnFrameworkInitializationCompleted();
-```
-
-```cs
 }
 ```

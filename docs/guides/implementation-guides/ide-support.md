@@ -12,7 +12,7 @@ The _Avalonia for Visual Studio_ extension includes a XAML designer which can be
 
 For Visual Studio and ReSharper users, [ReSharper 2020.3 introduces](https://www.jetbrains.com/resharper/whatsnew/2020-3/#version-2020-3-avalonia-support) built-in code analysis, code completion, navigation, and find usages.
 
-![](../../.gitbook/assets/vs-designer.png)
+<!-- ![](../../.gitbook/assets/vs-designer.png) -->
 
 {% hint style="info" %}
 If your XAML is in a library, _Avalonia UI_ needs an executable application in order to be able to preview it. Select an executable project from the dropdown on the top right of the designer. Once your project is built, editing the XAML in the editor will cause the preview to update automatically.

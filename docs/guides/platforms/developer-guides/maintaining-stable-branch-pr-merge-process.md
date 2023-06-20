@@ -28,7 +28,7 @@ merge pull request #5797 from feature/my-new-feature
 
 Now the git tree should look something like this:
 
-![](<../../../.gitbook/assets/image (6) (1) (1) (1).png>)
+<!-- ![](<../../../.gitbook/assets/image (6) (1) (1) (1).png>) -->
 
 Now we need to get the new pull request merged into the stable branch.
 
@@ -41,7 +41,7 @@ Pay careful attention here, we do not simply merge into the stable branch!
 
 The git tree should look like this now.
 
-![](<../../../.gitbook/assets/image (13) (1).png>)
+<!-- ![](<../../../.gitbook/assets/image (13) (1).png>) -->
 
 {% hint style="warning" %}
 Please also always add the labels `backport-candidate` and `backported [version]` to the pull requests themselves.&#x20;

@@ -21,6 +21,6 @@ To run the project in a simulator, run the following command.
 dotnet run
 ```
 
-![Application running on iPad simulator](<../../../.gitbook/assets/image (34).png>)
+<!-- ![Application running on iPad simulator](<../../../.gitbook/assets/image (34).png>) -->
 
 If you use `JetBrains Rider` or `Visual Studio for Mac` you can open the solution and run, build and debug your program inside the simulator.

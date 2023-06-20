@@ -38,8 +38,9 @@ Follow this procedure to define a simple color fade animation using XAML:
 
 The finished code will look like this: &#x20;
 
-<pre class="language-markup"><code class="lang-markup"><strong><Window xmlns="https://github.com/avaloniaui">
-</strong>    <Window.Styles>
+```
+<Window xmlns="https://github.com/avaloniaui">
+    <Window.Styles>
         <Style Selector="Rectangle.red">
             <Setter Property="Fill" Value="Red"/>
             <Style.Animations>
@@ -57,7 +58,7 @@ The finished code will look like this: &#x20;
 
     <Rectangle Classes="red" Width="100" Height="100"/>
 </Window>
-</code></pre>
+```
 
 The resulting animation looks like this:
 

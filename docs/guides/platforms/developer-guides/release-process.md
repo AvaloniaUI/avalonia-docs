@@ -15,7 +15,7 @@ If this is the first release of a major version change (zero minor version numbe
 
 For an example`release/0.10.2` the git tree will now look like this:
 
-![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)
+<!-- ![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>) -->
 
 * [ ] Now login at [http://dev.azure.com](http://dev.azure.com) to access the _Avalonia UI_ Azure DevOps. Wait for build to finish on the new release.
 * [ ] The package your new release will now be on the `avalonia-all` _NuGet_ feed. You should run a due diligence test on this build to ensure you are happy with the release and the packages work.
@@ -26,17 +26,17 @@ Do not assume the _NuGet_ packages will work just because master was working. In
 
 * [ ] Now click <mark style="color:green;">**Releases**</mark> and then the <mark style="color:green;">**Avalonia (master / release)**</mark> pipeline as shown below:
 
-![](<../../../.gitbook/assets/image (1) (1) (1).png>)
+<!-- ![](<../../../.gitbook/assets/image (1) (1) (1).png>) -->
 
 * [ ] Locate your release branch (for example `release/0.10.2` in the illustration below) and click  the badge <mark style="color:green;">**Nuget Release**</mark>
 
-![](<../../../.gitbook/assets/image (11) (1).png>)
+<!-- ![](<../../../.gitbook/assets/image (11) (1).png>) -->
 
-![](<../../../.gitbook/assets/image (17) (1) (1) (1).png>)
+<!-- ![](<../../../.gitbook/assets/image (17) (1) (1) (1).png>) -->
 
 * [ ] Now click <mark style="color:green;">**Deploy**</mark>.
 
-![](<../../../.gitbook/assets/image (16) (1).png>)
+<!-- ![](<../../../.gitbook/assets/image (16) (1).png>) -->
 
 {% hint style="info" %}
 At this point the packages will deploy to NuGet, it can take between 10 and 20 minutes for them to be indexed and publicly available. Once deployed the package will be at  [https://www.nuget.org/packages/Avalonia/](https://www.nuget.org/packages/Avalonia/)

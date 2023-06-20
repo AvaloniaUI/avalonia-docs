@@ -21,7 +21,7 @@ You can debug the _Avalonia UI_ XAML compiler by adding the `AvaloniaXamlIlDebug
 
 If you now build and run the project in Visual Studio you will see a window like this:
 
-![](https://user-images.githubusercontent.com/53405089/132686320-958f30a6-49f8-498f-853c-b9dd17262b54.png)
+<!-- ![](https://user-images.githubusercontent.com/53405089/132686320-958f30a6-49f8-498f-853c-b9dd17262b54.png) -->
 
 In other IDEs, a message will appear in the build output window indicating the Process Identification (PID) of the process to attach a debugger to (and the elapsed time).&#x20;
 

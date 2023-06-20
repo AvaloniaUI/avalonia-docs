@@ -123,7 +123,7 @@ To display the validation messages, Avalonia has a control called [`DataValidati
 </Style>
 ```
 
-![custom validation style](../../../docs/data-binding/assets/CustomValidationTooltip.png)
+<!-- ![custom validation style](../../../docs/data-binding/assets/CustomValidationTooltip.png) -->
 
 **Custom validation style**
 

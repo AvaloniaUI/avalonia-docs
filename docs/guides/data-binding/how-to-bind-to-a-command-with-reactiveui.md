@@ -40,8 +40,9 @@ To create a view model with a `ReactiveCommand`, follow this example:
 
 * [ ] In your view model, declare a command, like this:
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>public ReactiveCommand<Unit, Unit> ExampleCommand { get; } 
-</strong></code></pre>
+```csharp
+public ReactiveCommand<Unit, Unit> ExampleCommand { get; } 
+```
 
 * [ ] Create a private method in the view model to perform the action.
 * [ ] Initialize the reactive command, passing the name of the method that performs the action.

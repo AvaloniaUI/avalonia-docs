@@ -28,8 +28,9 @@ There is a convention for the name of a property. It must follow the pattern:
 
 This means that _Avalonia UI_ will look for an attribute in the XAML, like this:
 
-<pre class="language-xml"><code class="lang-xml"><strong><MyCustomControl AttributeName="value" ... >
-</strong></code></pre>
+```
+<MyCustomControl AttributeName="value" ... >
+```
 
 For example, with a styled property in place, you can control the background color of the custom control from the window styles collection:
 
