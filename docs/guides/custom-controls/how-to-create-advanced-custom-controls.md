@@ -1,5 +1,5 @@
 ---
-id: create-a-custom-panel
+id: how-to-create-advanced-custom-controls
 title: How To Create Advanced Custom Controls
 ---
 

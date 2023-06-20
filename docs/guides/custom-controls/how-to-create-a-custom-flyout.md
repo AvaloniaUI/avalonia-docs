@@ -1,5 +1,5 @@
 ---
-id: create-a-custom-panel
+id: how-to-create-a-custom-flyout
 title: How To Create a Custom Panel
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: types-of-controls
+id: types-of-control
 title: Types of Controls
 ---
 
