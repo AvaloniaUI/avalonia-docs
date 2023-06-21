@@ -40,7 +40,7 @@ const sidebars = {
           'items': [
             'get-started/wpf/styling',
             'get-started/wpf/datatemplates',
-            'get-started/wpf/hierachicaldatatemplate',
+            'get-started/wpf/hierarchicaldatatemplate',
             'get-started/wpf/uielement-frameworkelement-and-control',
             'get-started/wpf/dependencyproperty',
             'get-started/wpf/grid',
