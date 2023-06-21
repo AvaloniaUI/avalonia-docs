@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Styling
+# Styling
 
 The _Avalonia UI_ styling system is a mechanism that can share property settings between controls. It has many practical uses for your application developments, for example:
 

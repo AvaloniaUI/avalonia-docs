@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Avalonia XAML
+# Avalonia XAML
 
 _Avalonia UI_ uses XAML to define a user interface. XAML is an XML-based mark-up language that is used by many UI frameworks.
 

@@ -140,6 +140,7 @@ const sidebars = {
           'type': 'category',
           'label': 'User Interface',
           'items': [
+            'basics/user-interface/introduction-to-xaml',
             {
               'type': 'category',
               'label': 'Controls',
@@ -174,6 +175,7 @@ const sidebars = {
                 'basics/user-interface/building-layouts/panels-overview',
               ],
             },
+            'basics/user-interface/styling',
             'basics/user-interface/adding-interactivity',
             'basics/user-interface/assets',
             'basics/user-interface/animations',
