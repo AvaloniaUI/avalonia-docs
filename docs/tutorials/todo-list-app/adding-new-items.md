@@ -1,0 +1,78 @@
+---
+description: TUTORIALS - To Do List App
+---
+
+# Add New Items
+
+When you created the `ToDoListView` user control earlier in this tutorial, you added a button so that the user can add a new item. On this page you will add an action to the button.&#x20;
+
+When the user clicks the button, you want the application to show a new view that will allow the user to enter the description of a new item.
+
+## Create a New View <a href="#create-the-view" id="create-the-view"></a>
+
+To create the new view, follow this procedure if you are using Visual Studio:
+
+* [ ] In the <mark style="color:green;">**Solution Explorer**</mark> locate and right-click the <mark style="color:green;">**Views**</mark> folder.&#x20;
+* [ ] Click <mark style="color:green;">**Add**</mark>
+* [ ] Click <mark style="color:green;">**Avalonia**</mark> under <mark style="color:green;">**C# Items**</mark> and then click <mark style="color:green;">**User Control (Avalonia)**</mark>
+* [ ] In <mark style="color:green;">**Name**</mark> enter 'AddItemView'&#x20;
+* [ ] Click <mark style="color:green;">**Add**</mark>&#x20;
+* [ ] Alter the XAML to match the following:
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
+             x:Class="ToDoList.Views.AddItemView">
+  <DockPanel>
+    <Button DockPanel.Dock="Bottom" 
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Center">Cancel</Button>
+    <Button DockPanel.Dock="Bottom" 
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Center">OK</Button>
+    <TextBox AcceptsReturn="True"
+             Text="{Binding Description}"
+             Watermark="Enter your to do item"/>
+  </DockPanel>
+</UserControl>
+```
+
+This gives you a view which looks like this:
+
+<div style={{textAlign: 'center'}}>
+  <img src="../../.gitbook/assets/image (44).png" alt=""/>
+</div>
+
+The new view has a text box control which has three properties for you to review:
+
+* `AcceptsReturn` creates a multi-line text box.
+* `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you have not created yet).
+* `Watermark` causes a placeholder to be displayed when the text box is empty.
+
+## Create the View Model <a href="#create-the-view-model" id="create-the-view-model"></a>
+
+So far, you have only bound a description property. So the corresponding view model can be simple to start with.
+
+To create a view model for the new view, follow this procedure:
+
+* [ ] In the <mark style="color:green;">**Solution Explorer**</mark> locate and right-click the <mark style="color:green;">**ViewModels**</mark> folder.&#x20;
+* [ ] Click <mark style="color:green;">**Add**</mark>, then <mark style="color:green;">**Class**</mark>.&#x20;
+* [ ] Name the class 'AddItemViewModel'. Click <mark style="color:green;">**Add**</mark>.
+* [ ] Add the description property as shown:
+
+```csharp
+using System;
+
+namespace ToDoList.ViewModels
+{
+    public class AddItemViewModel : ViewModelBase
+    {
+        public string Description { get; set; } = String.Empty;
+    }
+}
+```
+
+On the next page you will learn how to change the view in the main window to display the new item view in place of the to do list view.

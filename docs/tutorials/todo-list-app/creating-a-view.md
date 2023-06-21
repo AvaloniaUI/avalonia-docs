@@ -1,0 +1,108 @@
+---
+description: TUTORIALS - To Do List App
+---
+
+# Create a New View
+
+On this page, you will add a view to display the list of to do items, with a button to add a new item.
+
+To get the tutorial started, you will use hard-coded data for the list items. Later you will connect the view to some data in the view model.
+
+In _Avalonia UI_, the UI element corresponding to a MVVM view can be either a window or a user control. This new view will be user control, and later you will use the main window to display it.
+
+### Visual Studio <a href="#visual-studio" id="visual-studio"></a>
+
+Follow these instructions to add a new user control:
+
+* [ ] In the <mark style="color:green;">**Solution Explorer**</mark> locate and right-click the <mark style="color:green;">**Views**</mark> folder.&#x20;
+* [ ] Click <mark style="color:green;">**Add**</mark> and then <mark style="color:green;">**New Item**</mark>
+* [ ] Click <mark style="color:green;">**Avalonia**</mark> under <mark style="color:green;">**C# Items**</mark> and then click <mark style="color:green;">**User Control (Avalonia)**</mark>
+* [ ] In <mark style="color:green;">**Name**</mark> enter 'ToDoListView'&#x20;
+* [ ] Click <mark style="color:green;">**Add**</mark>
+
+### .NET Core CLI
+
+Run the following command from the root folder of your project, that is the folder that contains the `Program.cs` file and the `/Views` folder:
+
+```
+dotnet new avalonia.usercontrol -o Views -n ToDoListView  --namespace ToDoList.Views
+```
+
+### The User Control <a href="#the-usercontrol" id="the-usercontrol"></a>
+
+You will see the new AXAML file created in the `/Views` folder
+
+```markup
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ToDoList.Views.ToDoListView">
+  Welcome to Avalonia!
+</UserControl>
+```
+
+You will also find a `ToDoListView.axaml.cs` file containing the code-behind for the view (in Visual Studio this is nested under the AXAML file. The code-behind looks like this:
+
+```csharp
+using Avalonia.Controls;
+
+namespace ToDoList.Views
+{
+    public partial class ToDoListView : UserControl
+    {
+        public ToDoListView()
+        {
+            InitializeComponent();
+        }
+    }
+}
+```
+
+You are not going to change the code-behind file in this tutorial, but notice that the user control class is called `ToDoListView` and it is located in the `ToDoList.Views` namespace.
+
+### Resize the Preview Pane <a href="#edit-the-usercontrol" id="edit-the-usercontrol"></a>
+
+To make the design-time preview look more like a mobile phone in portrait orientation, locate the design-time width and height properties for the user control and set them as shown:
+
+<pre class="language-markup"><code class="lang-markup"><strong>&#x3C;UserControl 
+</strong><strong>...
+</strong><strong>d:DesignWidth="250" d:DesignHeight="450" 
+</strong><strong>... >
+</strong><strong>
+</strong></code></pre>
+
+Repeat the process with the main window.&#x20;
+
+### Edit the User Control <a href="#edit-the-usercontrol" id="edit-the-usercontrol"></a>
+
+Edit the contents of `Views/TodoListView.axaml` to contain the following:
+
+```markup
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
+             x:Class="Todo.Views.TodoListView">
+  <DockPanel>
+    <Button DockPanel.Dock="Bottom"
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Center">
+        Add Item
+    </Button>
+    <StackPanel>
+      <CheckBox Margin="4">Walk the dog</CheckBox>
+      <CheckBox Margin="4">Buy some milk</CheckBox>
+    </StackPanel>
+  </DockPanel>
+</UserControl>
+```
+
+If you are using the Visual Studio extension you should see the contents of the control displayed in the previewer after completing a build:
+
+<div style={{textAlign: 'center'}}>
+  <img src="../../.gitbook/assets/image (1) (1).png" alt=""/>
+</div>
+
