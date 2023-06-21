@@ -2,8 +2,8 @@
 
 The most obvious difference from other XAML frameworks is in its styling system. There are two ways of styling controls in Avalonia:
 
-- A `Style` is a [CSS-like style](https://docs.avaloniaui.net/docs/styling/styles). Styles aren't stored in a `Resources` collection as in WPF, they are stored in a separate `Styles` collection:
-- A `ControlTheme` is similar to a WPF `Style` and is usually used to create themes for lookless controls
+- A [`Style`](../../concepts/styling) is a CSS-like style. Styles aren't stored in a `Resources` collection as in WPF, they are stored in a separate `Styles` collection.
+- A [`ControlTheme`](../../concepts/controlthemes) is similar to a WPF `Style` and is usually used to create themes for lookless controls
 
 ## Example
 
