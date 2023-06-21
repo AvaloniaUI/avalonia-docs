@@ -12,36 +12,45 @@ You can decide how you want to use the information here. We have sections to sui
 Get started right away even if you are completely new to Avalonia UI using a simple step-by-step tutorial, with introductions to the basic concepts behind the framework.
 
 :::info
-Get started [here](broken-reference).
+Get started [here](get-started).
 :::
 
 ## Continue Your Learning
 
-We have concepts and guides sections to help you continue your learning.
-
-### Concepts
-
-Read this section to expand your knowledge of the concepts used by _Avalonia UI_. This section is organised by subject.
+Learn the basic concepts of Avalonia.
 
 :::info
-Explore the Avalonia UI concepts [here](broken-reference).
+Get started [here](basics).
 :::
 
-### Guides
+### How-To Guides
 
 Our guides offer practical implementation advice, often as step-by-step procedures. This section is organised by task.
 
 :::info
-Get the guides for practical advice [here](broken-reference).
+Get the guides for practical advice [here](guides).
+:::
+### Advanced Concepts
+
+Read this section to expand your knowledge of the concepts used by _Avalonia UI_. This section is organised by subject.
+
+:::info
+Explore the advanced Avalonia UI concepts [here](concepts).
 :::
 
-## Convert from WPF;
+## Coming from WPF?
 
 We have specific guidance and some detailed reference material for developers who are converting applications from WPF (Windows Presentation Foundation).
 
+:::info
+See our WPF migration guide [here](get-started/wpf).
+:::
+
 ## Consult Our Reference
 
-See the reference section for
+:::info
+See our reference section [here](reference).
+:::
 
 ## Getting Help
 

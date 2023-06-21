@@ -1,11 +1,11 @@
 ---
 id: index
-title: How-To Guides
+title: Basics
 ---
 
-# How-To Guides
+# Basics
 
-This section has practical guidance to help you implement specific tasks using Avalonia UI. Many are at the level of "how do I do that?". This section is arranged by subject area.
+This section will introduce you to the basic concepts required to build an application with Avalonia.
 
 ```mdx-code-block
 import {DocsCardList} from '../../src/components/DocsCard';

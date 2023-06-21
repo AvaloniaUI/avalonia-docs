@@ -85,76 +85,87 @@ const sidebars = {
             'id': 'tutorials/todo-list-app/index',
           },
           'items': [
-            
+
           ],
         },
       ],
     },
     {
       'type': 'category',
-      'label': 'User Interface',
+      'label': 'Basics',
+      'link': {
+        'type': 'doc',
+        'id': 'basics/index',
+      },
       'items': [
         {
           'type': 'category',
-          'label': 'Controls',
-          'link': {
-            'type': 'doc',
-            'id': 'user-interface/controls/index',
-          },
+          'label': 'User Interface',
           'items': [
-            'user-interface/controls/builtin-controls',
             {
               'type': 'category',
-              'label': 'Creating Controls',
+              'label': 'Controls',
+              'link': {
+                'type': 'doc',
+                'id': 'basics/user-interface/controls/index',
+              },
               'items': [
-                'user-interface/controls/creating-controls/choosing-a-custom-contro-type',
-                'user-interface/controls/creating-controls/defining-properties',
-                'user-interface/controls/creating-controls/defining-events',
-                'user-interface/controls/creating-controls/control-themes',
-                'user-interface/controls/creating-controls/tutorial',
+                'basics/user-interface/controls/builtin-controls',
+                {
+                  'type': 'category',
+                  'label': 'Creating Controls',
+                  'items': [
+                    'basics/user-interface/controls/creating-controls/choosing-a-custom-contro-type',
+                    'basics/user-interface/controls/creating-controls/defining-properties',
+                    'basics/user-interface/controls/creating-controls/defining-events',
+                    'basics/user-interface/controls/creating-controls/control-themes',
+                    'basics/user-interface/controls/creating-controls/tutorial',
+                  ],
+                },
+              ],
+            },
+            {
+              'type': 'category',
+              'label': 'Building Layouts',
+              'link': {
+                'type': 'doc',
+                'id': 'basics/user-interface/building-layouts/index',
+              },
+              'items': [
+                'basics/user-interface/building-layouts/alignment-margins-and-padding',
+                'basics/user-interface/building-layouts/panels-overview',
+              ],
+            },
+            'basics/user-interface/adding-interactivity',
+            'basics/user-interface/assets',
+            'basics/user-interface/animations',
+            'basics/user-interface/file-dialogs',
+          ],
+        },
+        {
+          'type': 'category',
+          'label': 'Data',
+          'items': [
+            {
+              'type': 'category',
+              'label': 'Data Binding',
+              'link': {
+                'type': 'doc',
+                'id': 'basics/data/data-binding/index',
+              },
+              'items': [
+                'basics/data/data-binding/data-context',
+                'basics/data/data-binding/data-binding-syntax',
+                'basics/data/data-binding/compiled-bindings',
               ],
             },
           ],
         },
-        {
-          'type': 'category',
-          'label': 'Building Layouts',
-          'link': {
-            'type': 'doc',
-            'id': 'user-interface/building-layouts/index',
-          },
-          'items': [
-            'user-interface/building-layouts/alignment-margins-and-padding',
-            'user-interface/building-layouts/panels-overview',
-          ],
-        },
-        'user-interface/adding-interactivity',
-        'user-interface/assets',
-        'user-interface/animations',
-        'user-interface/file-dialogs',
       ],
     },
     {
       'type': 'category',
-      'label': 'Data',
-      'items': [
-        {
-          'type': 'category',
-          'label': 'Data Binding',
-          'link': {
-            'type': 'doc',
-            'id': 'data/data-binding/index',
-          },
-          'items': [
-            'data/data-binding/data-context',
-            'data/data-binding/data-binding-syntax',
-            'data/data-binding/compiled-bindings',
-          ],
-        },
-      ],
-    },    {
-      'type': 'category',
-      'label': 'Guides',
+      'label': 'How-To Guides',
       'link': {
         'type': 'doc',
         'id': 'guides/index',
@@ -171,7 +182,7 @@ const sidebars = {
             'guides/implementation-guides/ide-support',
             'guides/implementation-guides/how-to-use-design-time-data',
           ],
-        },      
+        },
         {
           'type': 'category',
           'label': 'Data Binding',
@@ -189,7 +200,7 @@ const sidebars = {
             'guides/data-binding/how-to-bind-to-a-task-result',
             'guides/data-binding/how-to-bind-to-an-observable',
           ],
-        },      
+        },
         {
           'type': 'category',
           'label': 'Styles and Resources',
@@ -215,7 +226,7 @@ const sidebars = {
             'guides/graphics-and-animation/keyframe-animations',
             'guides/graphics-and-animation/transitions',
           ],
-        },      
+        },
         {
           'type': 'category',
           'label': 'Custom Controls',
@@ -231,7 +242,7 @@ const sidebars = {
             'guides/custom-controls/index',
             'guides/custom-controls/types-of-control',
           ],
-        },      
+        },
         {
           'type': 'category',
           'label': 'Development Guides',
@@ -242,7 +253,7 @@ const sidebars = {
             'guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm',
             'guides/development-guides/index',
           ],
-        },      
+        },
         {
           'type': 'category',
           'label': 'Platforms',
@@ -256,7 +267,7 @@ const sidebars = {
                 'guides/platforms/android/configure-vscode-debug-linux',
                 'guides/platforms/android/setting-up-your-developer-environment-for-android',
               ],
-            },      
+            },
             {
               'type': 'category',
               'label': 'iOS',
@@ -266,7 +277,7 @@ const sidebars = {
                 'guides/platforms/ios/build-and-run-your-application-on-your-iphone-or-ipad',
                 'guides/platforms/ios/build-and-run-your-application-on-a-simulator',
               ],
-            },      
+            },
             {
               'type': 'category',
               'label': 'Raspberry PI',
@@ -280,19 +291,19 @@ const sidebars = {
             'guides/platforms/macos-development',
             'guides/platforms/macos-packaging',
           ],
-        },      
+        },
       ],
     },
     {
       'type': 'category',
-      'label': 'Concepts',
+      'label': 'Advanced Concepts',
       'items': [
         {
           'type': 'autogenerated',
           dirName: 'concepts'
         },
       ],
-    },   
+    },
     {
       'type': 'category',
       'label': 'Reference',
@@ -302,8 +313,8 @@ const sidebars = {
           dirName: 'reference'
         },
       ],
-    },   
-],
+    },
+  ],
 };
 
 module.exports = sidebars;

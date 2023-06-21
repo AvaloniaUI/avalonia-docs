@@ -10,5 +10,5 @@ You do not need any prior knowledge of Avalonia or other XAML-based frameworks t
 Click the Next button to get started.
 
 :::info
-If you are a more experienced user, you may want to extend your knowledge of Avalonia instead, by using our concepts section [here](broken-reference) or one of the guides [here](broken-reference).
+If you are a more experienced user, you may want to extend your knowledge of Avalonia instead, by using our Basics section [here](../../basics) or one of the How-To Guides [here](../../guides).
 :::
