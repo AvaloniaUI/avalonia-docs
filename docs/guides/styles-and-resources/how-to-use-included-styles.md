@@ -27,7 +27,7 @@ The _Avalonia U_I solution templates provide a quick way of adding a styles file
 -  From the Avalonia Items, click **Styles(Avalonia)**
 -  Type a name for your styles file
 
-<!--<!--<figure><img src="/img/gitbook-import/assets/image (1) (4) (2).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<img src="/img/gitbook-import/assets/image (1) (4) (2).png" alt=""/>-->
 
 To use the styles defined in a separate file, you must reference it using a `StyleInclude` element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.&#x20;
 

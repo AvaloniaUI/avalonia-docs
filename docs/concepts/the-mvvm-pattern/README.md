@@ -4,7 +4,7 @@ description: CONCEPTS
 
 # 💡 The MVVM Pattern
 
-<!--<figure><img src="/img/gitbook-import/assets/image (60).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (60).png" alt=""/>
 
 The Model-View-View Model (MVVM) pattern is a common way of structuring a UI application. It uses a data binding system that helps move data between its view and view model parts. This means it achieves separation of application logic (view model) from the display of the UI (view).&#x20;
 

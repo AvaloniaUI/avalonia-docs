@@ -6,13 +6,13 @@ description: CONCEPTS
 
 When Avalonia performs data binding, it has to locate an application object to bind to. This location is represented by a **Data Context**.
 
-<!--<figure><img src="/img/gitbook-import/assets/image (56).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (56).png" alt=""/>
 
 Every control in Avalonia has a property called `DataContext`, and this includes built-in controls, user controls and windows.&#x20;
 
 When binding, Avalonia performs a hierarchical search of the logical control tree, starting with the control where the binding is defined, until it finds a data context to use.&#x20;
 
-<!--<figure><img src="/img/gitbook-import/assets/image (62).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (62).png" alt=""/>
 
 This means that a control defined in a window can use the data context of the window; or (as above) a control in a control in a window can use the window's data context.
 
@@ -72,13 +72,13 @@ In the main window file **MainWindow.axaml** you can see that the window content
 
 When the project runs, the data binder searches up the logical control tree from the text block and finds a data context set at the main window level. So the bound text appears as:
 
-<!--<figure><img src="/img/gitbook-import/assets/image (20) (2).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (20) (2).png" alt=""/>
 
 ## Design Data Context
 
 You may have noticed, after you first compiled this project, that the preview pane also shows the greeting.
 
-<!--<figure><img src="/img/gitbook-import/assets/image (40) (1).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (40) (1).png" alt=""/>
 
 This is because Avalonia can also set a data context for a control for use at design-time. You will find this useful because it means that the preview pane can show some realistic data while you adjust layout and styles.
 

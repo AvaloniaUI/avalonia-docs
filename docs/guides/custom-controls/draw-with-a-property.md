@@ -54,7 +54,7 @@ This example defines a simple brush property on the custom control for the backg
 
 The drawing code uses the _Avalonia UI_ graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
 
-<!--<!--<figure><img src="../../../.gitbook/assets/image (1) (2) (2).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<img src="../../../.gitbook/assets/image (1) (2) (2).png" alt=""/>-->
 
 Notice how the control now shows both at runtime (above) and in the preview pane.
 

@@ -14,7 +14,7 @@ For a full technical background on functional reactive programming, see the Wiki
 
 &#x20;_Avalonia UI_ ships with its own fork of _ReactiveUI_ in the `Avalonia.ReactiveUI` _NuGet_ package.
 
-<!--<figure><img src="/img/gitbook-import/assets/image (44) (1).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (44) (1).png" alt=""/>
 
 To use _ReactiveUI_ and the MVVM pattern in your _Avalonia UI_ application, add the package to your project using the _NuGet_ package manager (as above), or execute the following CLI command:
 

@@ -45,7 +45,7 @@ This will create a project with the following structure:
 * Directory.Build.props (sets the _Avalonia UI_ version your application will target).
 * AvaloniaCrossPlatform.sln (the solution file if you used an IDE - see illustration below).
 
-<!--<!--<figure><img src="/img/gitbook-import/assets/image (7).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<img src="/img/gitbook-import/assets/image (7).png" alt=""/>-->
 
 :::info
 To see how to set up the your development environment for iOS, see [here](ios/setting-up-your-developer-environment-for-ios.md).
