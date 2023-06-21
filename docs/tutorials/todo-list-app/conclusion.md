@@ -11,7 +11,7 @@ On this page you will learn why the app was implemented in the way that it has b
 This tutorial has used an application solution architecture that uses the MVVM pattern, and swaps the content of the main window to navigate between pages; while keeping the 'top level' view model in memory to provide application state. The pages (views) are composed in _Avalonia UI_ user controls.&#x20;
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (2) (3).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (2) (3).png" alt=""/>
 </div>
 
 This tutorial application is targeted at the _Windows_ platform where the main window exists - so it may appear to be an over complex approach.&#x20;

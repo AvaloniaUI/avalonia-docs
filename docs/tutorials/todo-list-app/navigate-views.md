@@ -7,7 +7,7 @@ description: TUTORIALS - To Do List App
 On this page you will learn how to change the view in the content zone of the main window to display the new item view, when the user clicks **Add Item**.
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (40).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (40).png" alt=""/>
 </div>
 
 Up to this point, you have used the MVVM pattern for this tutorial app. This means that the application logic is controlled from the view models, and the view model in charge of what appears in the main window is the main window view model.
@@ -80,7 +80,7 @@ Follow this procedure:
 ```
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (38) (2).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (38) (2).png" alt=""/>
 </div>
 
 ## Button Command
@@ -123,11 +123,11 @@ Now If you run the application and click **Add Item**, you will see the new view
 <div>
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (43) (1).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (43) (1).png" alt=""/>
 </div>
 
  <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (21) (1).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (21) (1).png" alt=""/>
 </div>
 
 </div>

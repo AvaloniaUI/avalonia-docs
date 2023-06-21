@@ -72,7 +72,7 @@ For more information about the concepts behind data templates, see [here](../../
 As no other data templates match, the search will eventually reach the `ViewLocator` in the application data templates element. This will run its checks and if they pass, return an instance of the corresponding view. It your app this will be the to do list view.&#x20;
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (45).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (45).png" alt=""/>
 </div>
 
 

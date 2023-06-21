@@ -8,7 +8,7 @@ The canvas control displays its child controls at specified positions (given as 
 
 The position of each child control is defined as two distances between edge the canvas content zone, and the outer edge of the child margin zone. For example, this might be the top-left corner of the child to the top-left of canvas, as shown here:&#x20;
 
-<!--figure><img src="../../.gitbook/assets/image (16) (2).png" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/image (16) (2).png" alt=""><figcaption></figcaption></figure-->
 
 :::info
 To review the concept of layout zones, see [here](../../concepts/layout/layout-zones.md).
@@ -50,7 +50,7 @@ However you define the drawing sequence, the opacity of child controls is respec
 
 The result looks like this:
 
-<!--figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure-->
 
 :::info
 Use the canvas panel with discretion. While it may be convenient to position child controls like this, your UI will no longer be adaptive to changes in the app window size.

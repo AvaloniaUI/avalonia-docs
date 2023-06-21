@@ -59,7 +59,7 @@ You should see all these changes reflected in the preview pane as you add them.&
 Have a look back at the image of the finished app [here](./). &#x20;
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (13) (2).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (13) (2).png" alt=""/>
 </div>
 
 You will see that the button shows an icon, and not text (as it currently does). This is actually the Microsoft Store icon from the Fluent Icons collection, and _Avalonia UI_ has definitions for all these for you to use.

@@ -30,7 +30,7 @@ This example shows a bitmap asset loaded into an image control where the height 
 </Panel>
 ```
 
-<!--figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure-->
 
 In this next example, introducing the stretch setting `UniformToFill` fits in all the height of the image, but crops the width because it would otherwise be wider than specified.  The image is not distorted by this treatment.&#x20;
 
@@ -43,7 +43,7 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 </Panel>
 ```
 
-<!--figure><img src="../../.gitbook/assets/image (4) (1) (2).png" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/image (4) (1) (2).png" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

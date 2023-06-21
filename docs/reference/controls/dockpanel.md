@@ -8,7 +8,7 @@ The dock panel control arranges its child controls along specified 'docking edge
 
 For example, if the docking edge on a child control is defined as 'top' and it has a height defined, but no width, it will draw like this:&#x20;
 
-<!--figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/image (23).png" alt=""><figcaption></figcaption></figure-->
 
 :::warning
 You must define the child control dimension perpendicular to the docking edge, or it will not show.
@@ -44,7 +44,7 @@ Setting the opacity of the orange rectangle to 0.5 demonstrates that there are n
 </DockPanel>
 ```
 
-<!--figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

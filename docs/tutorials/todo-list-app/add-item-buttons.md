@@ -133,12 +133,12 @@ To do this, follow this procedure:
 Run the application and click **Add Item**. You should now see that the OK button is only enabled when there is some text in the description input.
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (21) (2).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (21) (2).png" alt=""/>
 </div>
 
  
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (41).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (41).png" alt=""/>
 </div>
 
 On the next page you will learn how to process the new to do item, so that it appears on the list, if the user clicks OK.&#x20;

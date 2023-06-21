@@ -6,7 +6,7 @@ description: CONCEPTS
 
 Avalonia uses data binding to move data from application objects into UI controls, change the data in application objects in response to user input, and initiate actions on the application objects in response to commands from the user. &#x20;
 
-<!--<figure><img src="../../.gitbook/assets/image (31) (1).png" alt=""><figcaption></figcaption></figure>-->
+<!--<figure><img src="/img/gitbook-import/assets/image (31) (1).png" alt=""><figcaption></figcaption></figure>-->
 
 In this arrangement, the control is the **binding target**, and the object is the **data source**.&#x20;
 

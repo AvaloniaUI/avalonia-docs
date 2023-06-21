@@ -16,4 +16,4 @@ This technique uses a complex **binding path** to locate the parent view model f
 
 TO DO
 
-<!--<!--<figure><img src="../../.gitbook/assets/splitview2.gif" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/splitview2.gif" alt=""><figcaption></figcaption></figure>-->-->

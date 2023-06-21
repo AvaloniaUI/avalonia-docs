@@ -67,7 +67,7 @@ dotnet run
 &#x20; You will see the main window, with its new title and user control:
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (4) (1) (1).png" alt=""/>
 </div>
 
 That is just the view - nothing really does anything yet! On the next pages, you will learn how to create the working parts of the app: the model and the view model.

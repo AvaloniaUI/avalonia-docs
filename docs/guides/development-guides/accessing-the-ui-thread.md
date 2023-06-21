@@ -74,7 +74,7 @@ private void ButtonClickHandler(object sender, RoutedEventArgs e)
 
 
 
-<!--<!--<figure><img src="../../.gitbook/assets/long1.gif" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/long1.gif" alt=""><figcaption></figcaption></figure>-->-->
 
 Notice that because the long running task is executed on its own thread, the UI does not lose responsiveness.
 
@@ -118,7 +118,7 @@ private async void ButtonClickHandler(object sender, RoutedEventArgs e)
 {% endtab %}
 {% endtabs %}
 
-<!--<!--<figure><img src="../../.gitbook/assets/long2.gif" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/long2.gif" alt=""><figcaption></figcaption></figure>-->-->
 
 ## More Information
 

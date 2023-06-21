@@ -46,7 +46,7 @@ This is basic example with text items has a limit set on the drop-down list heig
 </StackPanel>
 ```
 
-<!--figure><img src="../../.gitbook/assets/combobox1.gif" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/combobox1.gif" alt=""><figcaption></figcaption></figure-->
 
 This example uses a composed view for each item:
 
@@ -78,7 +78,7 @@ This example uses a composed view for each item:
 </StackPanel>
 ```
 
-<!--figure><img src="../../.gitbook/assets/combobox2.gif" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/combobox2.gif" alt=""><figcaption></figcaption></figure-->
 
 This example binds the items in a combo box using a data template. The C# code-behind loads the installed font family names and binds them to the items property.
 
@@ -123,7 +123,7 @@ namespace AvaloniaControls.Views
 
 
 
-<!--figure><img src="../../.gitbook/assets/combobox3.gif" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/combobox3.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

@@ -72,7 +72,7 @@ namespace AvaloniaGuides.ViewModels
 
 When the control bound to the reactive command is activated (in this example: when the button is clicked); then the private method to perform the action is called through the reactive command.&#x20;
 
-<!--<!--<figure><img src="../../.gitbook/assets/command.gif" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/command.gif" alt=""><figcaption></figcaption></figure>-->-->
 
 ## Command Parameter <a href="#commandparameter" id="commandparameter"></a>
 

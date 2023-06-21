@@ -7,11 +7,11 @@ title: How To Create a Custom Controls Library
 
 This guide shows you how to create a custom controls library and reference it for use in an _Avalonia UI_ app.
 
-<!--<!--<figure><img src="../../.gitbook/assets/image (22) (3).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/image (22) (3).png" alt=""><figcaption></figcaption></figure>-->-->
 
 In this example, a custom control file is added to a .NET class library. The library has the _Avalonia UI_ _NuGet_ package installed:
 
-<!--<!--<figure><img src="../../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>-->-->
 
 {% tabs %}
 {% tab title="XAML" %}

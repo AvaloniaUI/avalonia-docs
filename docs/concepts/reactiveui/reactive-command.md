@@ -24,7 +24,7 @@ As a starting point, you can create a simple view like this:
 </StackPanel>
 ```
 
-<!--<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>-->
+<!--<figure><img src="/img/gitbook-import/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>-->
 
 You can add a corresponding view model like this:
 
@@ -53,7 +53,7 @@ public class MainWindowViewModel : ViewModelBase
 
 This view model does not yet perform revealed functionality. The `SubmitCommand` is declared with no parameter, and no result (void). The synchronous action parameter of the `Create` method is where you implement what happens when the command is run (when the user clicks the button). The example above just reports the action in the debug window.
 
-<!--<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>-->
+<!--<figure><img src="/img/gitbook-import/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>-->
 
 ## Can Execute?
 
@@ -81,7 +81,7 @@ SubmitCommand = ReactiveCommand.Create(() =>
 
 Now you will see that the button only becomes enabled once you have entered 8 characters.
 
-<!--<figure><img src="../../.gitbook/assets/image (6) (1) (2).png" alt=""><figcaption></figcaption></figure>-->
+<!--<figure><img src="/img/gitbook-import/assets/image (6) (1) (2).png" alt=""><figcaption></figcaption></figure>-->
 
 &#x20;  &#x20;
 

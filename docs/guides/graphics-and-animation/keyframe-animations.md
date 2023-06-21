@@ -8,7 +8,7 @@ title: How To Use Keyframe Animations
 
 You can use a keyframe animation to change one or more control properties following a timeline. The keyframes are defined in _Avalonia UI_ styles with **cue** points along the **duration** of the animation, and set the intermediate values of the properties at a point in time.
 
-<!--<!--<figure><img src="../../.gitbook/assets/image (2) (1) (4).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/image (2) (1) (4).png" alt=""><figcaption></figcaption></figure>-->-->
 
 The property values between keyframes are set following the profile of an **easing function**. The default easing function is a straight-line interpolation.&#x20;
 
@@ -62,7 +62,7 @@ The finished code will look like this: &#x20;
 
 The resulting animation looks like this:
 
-<!--<!--<figure><img src="../../.gitbook/assets/anim1 (1).gif" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/anim1 (1).gif" alt=""><figcaption></figcaption></figure>-->-->
 
 The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!&#x20;
 
@@ -92,7 +92,7 @@ This example shows you how to animate two properties on the same timeline.&#x20;
 
 The red rectangle is faded-in and rotated at the same time.
 
-<!--<!--<figure><img src="../../.gitbook/assets/anim2.gif" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/anim2.gif" alt=""><figcaption></figcaption></figure>-->-->
 
 ## Delay <a href="#delay" id="delay"></a>
 
@@ -157,11 +157,11 @@ An easing function defines how a property is varied over time during an animatio
 
 <div>
 
-<!--<!--<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/image (72).png" alt=""><figcaption></figcaption></figure>-->-->
 
  
 
-<!--<!--<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<!--<figure><img src="/img/gitbook-import/assets/image (76).png" alt=""><figcaption></figcaption></figure>-->-->
 
 </div>
 
