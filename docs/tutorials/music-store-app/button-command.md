@@ -41,9 +41,9 @@ namespace AvaloniaApplication11.ViewModels
 
 To complete the link from the view to your new `BuyMusicCommand` view model property, you will add a data binding to the button.
 
-{% hint style="info" %}
+:::info
 For more information about the concept of data binding, see [here](../../concepts/data-binding/).&#x20;
-{% endhint %}
+:::
 
 To add the button data binding, follow this procedure:
 

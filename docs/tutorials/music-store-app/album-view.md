@@ -77,9 +77,9 @@ In this step you will be using the view locator class (**ViewLocator.cs** file) 
 
 The view locator can therefore always be found by _Avalonia UI,_ when it searches for a data template.
 
-{% hint style="info" %}
+:::info
 For more details about the **data template** concept, see [here](../../concepts/templates/).&#x20;
-{% endhint %}
+:::
 
 The view locator acts as a data template for a view model (in this case the album view model) under the conditions that:
 

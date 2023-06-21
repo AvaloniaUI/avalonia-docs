@@ -26,9 +26,9 @@ namespace Avalonia.MusicStore.ViewModels
 
 This adds the important extension method `RaiseAndSetIfChanged` to your view model, and will allow you to give the properties there the ability to notify changes to the view.  &#x20;
 
-{% hint style="info" %}
+:::info
 To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).&#x20;
-{% endhint %}
+:::
 
 At this stage, you will create two properties for the search application logic:
 

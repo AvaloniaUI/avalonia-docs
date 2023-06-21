@@ -14,13 +14,13 @@ Application state is kept in the 'top level' view model, and can be persisted to
 
 This tutorial application targets a windowing platform such as _Apple iOS_ or _Windows_.&#x20;
 
-{% hint style="info" %}
+:::info
 To learn more about targeting applications for iOS (Apple) platforms, see [here](../../guides/platforms/ios/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 To learn more about targeting applications for Android mobile devices, see [here](../../guides/platforms/android/).
-{% endhint %}
+:::
 
 ## Further Reading
 

@@ -36,9 +36,9 @@ public async Task<Stream> LoadCoverBitmapAsync()
 
 This method returns a stream that can be used to load a bitmap from, either from a cache file or from the API.&#x20;
 
-{% hint style="info" %}
+:::info
 Note that the cache is not active at this time, you will implement it later in the tutorial.&#x20;
-{% endhint %}
+:::
 
 - So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:&#x20;
 
@@ -50,9 +50,9 @@ return File.OpenRead(CachePath + ".bmp");
 
 In this step , you will add a property to the album view model to store the cover art as a bitmap.
 
-{% hint style="warning" %}
+:::warning
 Note: You must reference `Avalonia.Media.Imaging` in the album view model because you must use the _Avalonia UI_ bitmap here, and **not** the .NET `System.Bitmap`.&#x20;
-{% endhint %}
+:::
 
 Follow this procedure to update the album view model:
 
@@ -118,9 +118,9 @@ private async void LoadCovers(CancellationToken cancellationToken)
 }
 ```
 
-{% hint style="warning" %}
+:::warning
 Important note: this method iterates through a **copy** of the search results collection  (created by the `ToList` method). This is because it runs asynchronously on its own thread, and the original  results collection could get changed at any time by another thread.
-{% endhint %}
+:::
 
 The cancellation token argument will allow you to stop the method loading album covers whenever needed.
 
@@ -204,9 +204,9 @@ IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
 
 A converter is an extension of a data binding expression that can convert the binding value before it is passed to the bound control. The `IsNull` converter returns a Boolean that is true when the value object is null.
 
-{% hint style="info" %}
+:::info
 For more information about the _Avalonia UI_ built-in binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).&#x20;
-{% endhint %}
+:::
 
 - Click **Debug** to compile and run the project.
 - Click the icon button.

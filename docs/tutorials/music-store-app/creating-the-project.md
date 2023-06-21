@@ -10,9 +10,9 @@ On this page you will lean how to create a new project for the app.
 
 Before you start, check you have installed the _Avalonia UI_ solution templates for _JetBrains Rider_.
 
-{% hint style="info" %}
+:::info
 For full instructions on preparing _JetBrains Rider_ for developing with _Avalonia UI_, see [here](../../reference/jetbrains-rider-ide/jetbrains-rider-setup.md).
-{% endhint %}
+:::
 
 With the solution templates installed, begin this tutorial by following these instructions:
 
@@ -38,9 +38,9 @@ Take some time to review the files and folders that the solution template create
 
 
 
-{% hint style="info" %}
+:::info
 To explore the concepts behind the MVVM pattern, and when is appropriate to use it, see [here](../../concepts/the-mvvm-pattern/).
-{% endhint %}
+:::
 
 The solution template has created enough files for the application to run. You will meet all of these during the rest of this tutorial.   &#x20;
 

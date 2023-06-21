@@ -68,9 +68,9 @@ Follow this procedure to style the background of the main window with an acrylic
 
 Notice that, as expected, the acrylic window effect covers the content zone of the main window. However the effect does not yet extend to the title bar.
 
-{% hint style="warning" %}
+:::warning
 Note that _Linux_ users can not yet take advantage of the following code due to limitations of the X11 version. The tutorial code will run and the window will still work on _Linux_, but the full effect will not be realised.
-{% endhint %}
+:::
 
 Follow this procedure to extend the acrylic blur effect onto the title bar:
 

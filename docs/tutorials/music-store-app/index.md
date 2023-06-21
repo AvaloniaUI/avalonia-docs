@@ -10,16 +10,16 @@ In this tutorial you will create a desktop app based on the idea of a music stor
 
 In this tutorial you will use the MVVM pattern with the _ReactiveUI_ framework to manage multiple application windows. Also you will use advanced asynchronous techniques to implement the album search and other features, so that application responsiveness is maintained. &#x20;
 
-{% hint style="warning" %}
+:::warning
 This is a more advanced tutorial. The 'To Do List App' is a recommended prerequisite if you have limited experience with the MVVM pattern. Read about the 'To Do List App' tutorial [here](../todo-list-app/).&#x20;
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 For information and background on the concept of the MVVM pattern, see [here](../../concepts/the-mvvm-pattern/).&#x20;
-{% endhint %}
+:::
 
 This tutorial contains instructions for using the _Rider_ IDE on macOS; however the steps will be similar on other operating systems, and using other IDEs such as Visual Studio on _Microsoft Windows_.
 
-{% hint style="info" %}
+:::info
 You can find the code for the completed application here. TODO
-{% endhint %}
+:::

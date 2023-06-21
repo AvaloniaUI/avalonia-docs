@@ -12,15 +12,15 @@ To arrange the dialog controls, you will use the dock panel layout control, that
   <img src="../../.gitbook/assets/image (9) (3).png" alt=""/>
 </div>
 
-{% hint style="info" %}
+:::info
 For full information on the dock panel control, see the reference [here](../../reference/controls/dockpanel.md).
-{% endhint %}
+:::
 
 The dock panel itself will be located on an _Avalonia UI_ user control. This is so the code that shows the dialog can be separated from the code that operates the controls within the dialog.
 
-{% hint style="info" %}
+:::info
 This is a common pattern of UI Composition, to read about this concept, see [here](../../concepts/ui-composition.md).
-{% endhint %}
+:::
 
 Follow this procedure to add the user control and constituent controls for the dialog:
 

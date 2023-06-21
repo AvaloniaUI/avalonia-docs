@@ -161,9 +161,9 @@ The `WhenAnyValue` method is provided by the _ReactiveUI_ framework as part of t
 
 It will be good design to wait until the user has stopped typing before attempting to run the search. The `Throttle` method prevents the events being processed until the time span (400 milliseconds) is up. This means processing will not start until the user has stopped typing for 400 milliseconds or longer.
 
-{% hint style="info" %}
+:::info
 The `ObserveOn` method is required to ensure that the subscribed method is always called on the UI thread. In _Avalonia UI_ applications, you must always update the UI on the UI thread.&#x20;
-{% endhint %}
+:::
 
 Lastly, the `Subscribe` method calls the `DoSearch` method for each observed event. The `DoSearch` method  runs asynchronously, and has no return value.&#x20;
 
