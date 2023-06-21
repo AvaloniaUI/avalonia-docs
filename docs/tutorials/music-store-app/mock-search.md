@@ -133,13 +133,14 @@ Follow this procedure:
 * [ ] Locate and open the **MusicStoreViewModel.cs** file again.
 * [ ] Add a constructor to the class, as shown:
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>public MusicStoreViewModel()
-</strong>{
+```csharp
+public MusicStoreViewModel()
+{
     SearchResults.Add(new AlbumViewModel());
     SearchResults.Add(new AlbumViewModel());
     SearchResults.Add(new AlbumViewModel());
 }
-</code></pre>
+```
 
 * [ ] Click **Debug** to compile and run the project.
 

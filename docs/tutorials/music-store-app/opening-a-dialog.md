@@ -193,7 +193,7 @@ Follow this procedure:
 
 * [ ] Stop the app if it is still running.
 * [ ] Locate and open the **MainWindow.axaml** file.
-* [ ] Add an attribute to the \<Window> element to set the start-up position:
+* [ ] Add an attribute to the `<Window>` element to set the start-up position:
 
 ```xml
 <Window ...
