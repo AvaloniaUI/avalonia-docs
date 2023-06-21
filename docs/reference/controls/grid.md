@@ -10,7 +10,7 @@ Each child control in the grid can be positioned in a cell of the grid, using co
 
 If you position more than one child control in a cell, they will be drawn in that cell in the sequence they appear in the XAML.
 
-{% hint style="warning" %}
+:::warning
 If you omit column and row coordinates for the child controls of a grid, they will all be drawn in the top left corner (column=0, row=0).
 :::
 
@@ -86,7 +86,7 @@ Using full expanded XAML, this is the same as:
 </Grid>
 ```
 
-{% hint style="warning" %}
+:::warning
 If a child control has its own dimensions these will be obeyed when it is drawn. This means that if it is larger than its grid cell, it will overlap adjacent cells.
 :::
 

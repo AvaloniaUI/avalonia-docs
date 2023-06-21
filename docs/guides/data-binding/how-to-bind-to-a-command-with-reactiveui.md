@@ -126,7 +126,7 @@ For example to pass an integer parameter:
 </Window>
 ```
 
-{% hint style="danger" %}
+:::danger
 You will get an error if your parameter definitions are missing or not the correct type.
 :::
 

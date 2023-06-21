@@ -28,7 +28,7 @@ Selects a control by its class name.&#x20;
 
 The first example above selects the `Avalonia.Controls.Button` class. To include a XAML namespace in the type separate the namespace and the type with a `|` character.
 
-{% hint style="warning" %}
+:::warning
 This selector does not match derived types. For that, use the `:is` selector, see below.
 :::
 

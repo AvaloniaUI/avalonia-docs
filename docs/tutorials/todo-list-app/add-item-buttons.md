@@ -52,9 +52,9 @@ Earlier in this tutorial, you bound the add item button directly to the main win
 
 Therefore this view model code declares a reactive command for the OK button, with its second type parameter `ToDoItem` (from the data model).
 
-{% hint style="info" %}
+:::info
 The reactive command is part of _ReactiveUI_. For an introduction to this concept, see [here](../../concepts/reactiveui/reactive-command.md).
-{% endhint %}
+:::
 
 Although there is nothing special about the cancel button, a reactive command is declared for that as well. You will see later how this will allow the output from both commands to be handled in the same place. &#x20;
 

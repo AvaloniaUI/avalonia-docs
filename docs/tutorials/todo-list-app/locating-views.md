@@ -65,9 +65,9 @@ An instance of `ViewLocator` is present in the <mark style="color:green;">**App.
 
 In your to do list app, the main window has had its content set to an object that is not a built-in control, user control or custom control. So _Avalonia UI_ searches up the tree of controls for a **data template** that matches the class of the content data.
 
-{% hint style="info" %}
+:::info
 For more information about the concepts behind data templates, see [here](../../concepts/templates/).
-{% endhint %}
+:::
 
 As no other data templates match, the search will eventually reach the `ViewLocator` in the application data templates element. This will run its checks and if they pass, return an instance of the corresponding view. It your app this will be the to do list view.&#x20;
 

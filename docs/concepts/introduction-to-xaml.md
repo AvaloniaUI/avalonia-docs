@@ -6,20 +6,20 @@ description: CONCEPTS
 
 _Avalonia UI_ uses XAML to define a user interface. XAML is an XML-based mark-up language that is used by many UI frameworks.
 
-{% hint style="info" %}
+:::info
 These pages will introduce you to how XAML is used specifically in _Avalonia UI_. For background information about how XAML is used elsewhere in Microsoft technologies, you can use these references:
 
 * Microsoft XAML documentation for WPF, see [here](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf). &#x20;
 * Microsoft XAML documentation for UWP, see [here](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview).
-{% endhint %}
+:::
 
 ## AXAML File Extension <a href="#xaml-or-axaml-file" id="xaml-or-axaml-file"></a>
 
 The file extension for XAML files used elsewhere is `.xaml` but due to technical issues integrating with Visual Studio, _Avalonia UI_ uses its own `.axaml` extension - 'Avalonia XAML'.&#x20;
 
-{% hint style="info" %}
+:::info
 From _Avalonia UI_ version 0.9.11 all XAML files created in Visual Studio have the `.axaml` extension; and from version 0.10 all _Avalonia UI_ templates create files using the `.axaml` extension.
-{% endhint %}
+:::
 
 ## File Format <a href="#format-of-an-avalonia-xaml-file" id="format-of-an-avalonia-xaml-file"></a>
 
@@ -40,17 +40,17 @@ The sample above uses three interesting attributes:
 * `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` - this is the declaration for the XAML language namespace.&#x20;
 * `x:Class="AvaloniaApplication1.MainWindow"` - this is an extension of the above declaration (for 'x') that tells the XAML compiler where to find the associated class for this file. The class is defined in a code-behind file, usually written in C#.
 
-{% hint style="info" %}
+:::info
 For information about the code-behind concept, see [here](broken-reference). For guidance on how to code using the code-behind pattern, see [here](../guides/implementation-guides/code-behind.md).
-{% endhint %}
+:::
 
 ## XML Namespaces
 
 In common with any XML format, in Avalonia XAML files you can declare namespaces. This allows the XML processor to find the definitions of the elements in the file.&#x20;
 
-{% hint style="info" %}
+:::info
 For background information, see the Microsoft XML namespaces documentation [here](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).&#x20;
-{% endhint %}
+:::
 
 You can add a namespace using the `xmlns` attribute. The format of a namespace declaration is as follows:
 
@@ -64,9 +64,9 @@ Only one namespace in a file can be defined without using the alias part of the 
 
 The definition part of the namespace declaration can be either a URL or a code definition. Both of these are used to locate the definition of the elements in the file.
 
-{% hint style="info" %}
+:::info
 For detailed guidance on how namespace declarations work, see [here](../guides/custom-controls/how-to-create-a-custom-controls-library.md).
-{% endhint %}
+:::
 
 ## Code Definition Syntax
 
@@ -104,9 +104,9 @@ xmlns:myAlias3="using:MyNamespace.AppNameSpace.UI"
 
 You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.&#x20;
 
-{% hint style="info" %}
+:::info
 A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](ui-composition.md).
-{% endhint %}
+:::
 
 For example, this XAML adds a button to the content of a window:
 
@@ -117,9 +117,9 @@ For example, this XAML adds a button to the content of a window:
 </Window>
 ```
 
-{% hint style="info" %}
+:::info
 For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](../reference/controls/).&#x20;
-{% endhint %}
+:::
 
 ## Control Attributes <a href="#setting-properties" id="setting-properties"></a>
 
@@ -158,14 +158,14 @@ You will often use the _Avalonia UI_ binding system to link a control property t
 </Window>
 ```
 
-{% hint style="info" %}
+:::info
 For further information about the concept behind data binding, see [here](data-binding/).
-{% endhint %}
+:::
 
 ## Code-behind Files <a href="#code-behind" id="code-behind"></a>
 
 Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.&#x20;
 
-{% hint style="info" %}
+:::info
 For guidance about programming using code-behind files, see [here](../guides/implementation-guides/code-behind.md).
-{% endhint %}
+:::

@@ -31,7 +31,7 @@ This example, a context menu is attached to a multi-line text box:
 
 You can use a context flyout as an alternative to a context menu. A context flyout can provide a sharable and richer UI experience than a simple context menu.&#x20;
 
-{% hint style="warning" %}
+:::warning
 A control cannot have a context flyout and a context menu attached at the same time.
 :::
 

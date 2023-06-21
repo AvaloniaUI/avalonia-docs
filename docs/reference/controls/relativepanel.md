@@ -18,13 +18,13 @@ You use attached relative position properties to specify the layout of child con
 
 Where `PositionProperty` property is one of the relative position properties (see table below), and `NameOfSibling` is the name property of one of the other child controls.
 
-{% hint style="danger" %}
+:::danger
 It is an error to give the value of a relative position property as the name of the child control itself. That would be a circular reference!&#x20;
 :::
 
 You can specify up to four relative position properties per child control - for how the top, bottom, left and right edges are to be calculated.&#x20;
 
-{% hint style="danger" %}
+:::danger
 It is an error to define the same relative position property twice for the same child control.
 :::
 
@@ -32,7 +32,7 @@ It is not an error to specify different, but potentially conflicting relative po
 
 If more than one child control ends up in the same calculated position, then they are drawn in the sequence that they appear in the XAML, and may overlap or obscure another child control.
 
-{% hint style="warning" %}
+:::warning
 This means you must give child controls a name, and use the correct name in any relative position property values. If you get this wrong, the control will adopt the default (top-left) position, and may overlap or obscure another.&#x20;
 :::
 

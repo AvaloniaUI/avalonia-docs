@@ -45,9 +45,9 @@ The items control `<ItemsControl>` repeats its display for each item in a collec
 
 How each item is in a displayed inside the items control is controlled by the item template <`ItemTemplate>`. This can be any combination of controls, but in this example it is a **data template** is being used.
 
-{% hint style="info" %}
+:::info
 You can review the data template concept [here](../../concepts/templates/).
-{% endhint %}
+:::
 
 The built-in controls inside the data template will expect to find the properties `IsChecked` and `Description`. These will come from the items in the `ListItems` property of a suitable data context that the user control manages to find.
 

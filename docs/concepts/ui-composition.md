@@ -31,9 +31,9 @@ When you first meet _Avalonia UI_, you might place a single built-in control in 
 
 A slightly more complex app may require one of the built-in layout controls to arrange more than one other built-in control in the content zone of a window (above, right).
 
-{% hint style="info" %}
+:::info
 To see the full range of Avalonia UI built-in controls, see the reference section [here](../reference/controls/).
-{% endhint %}
+:::
 
 ## Logical and Visual Trees
 
@@ -43,9 +43,9 @@ Whatever arrangement of controls you use, _Avalonia UI_ represents their relatio
 
 This is the **logical control tree**, and it represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. There are many systems in _Avalonia UI_ that process the logical control tree and its companion the **visual control tree**.&#x20;
 
-{% hint style="info" %}
+:::info
 For more information on the concept of control trees, see [here](control-trees.md).
-{% endhint %}
+:::
 
 ## User Controls
 
@@ -55,17 +55,17 @@ User controls are the mainstay of UI composition in _Avalonia UI_.
 
 You can add a user control to the content zone of a main window, to represent a 'page view' (above, left).  This allows you to implement a more complex app with multiple pages; where the layout and function of each page is in its own user control (XAML and code) files.   &#x20;
 
-{% hint style="info" %}
+:::info
 For more information about how to implement a multi-page app using views, see the guide [here](../guides/development-guides/how-to-implement-multi-page-apps.md).
-{% endhint %}
+:::
 
 Another use for a user control is as a component control (above, right). You might initially do this to reduce the complexity of a window or page view; but then you might also (perhaps later) reuse the resulting component on another page as well.&#x20;
 
 ## Tutorial
 
-{% hint style="info" %}
+:::info
 In the 'To Do List App' tutorial you will learn about how to add user controls as page views; and how to use a repeating layout control to present a collection of items with data templates. Try the tutorial [here](../tutorials/todo-list-app/).  &#x20;
-{% endhint %}
+:::
 
 ## Collection Controls
 
@@ -75,24 +75,24 @@ Another variation of UI composition is where you need to present a collection of
 
 This scenario will use one of the built-in repeating controls, bound to a collection; together with a data template to represent the items in the collection.
 
-{% hint style="info" %}
+:::info
 For information about how to  TO DO
-{% endhint %}
+:::
 
 ## Custom Controls
 
 In the unlikely scenario that you cannot find an _Avalonia UI_ built-in control to cover your app's UI requirements, then you can 'roll-your-own' custom control from scratch. This allows you to define your own custom properties, events and methods; but it will require you to implement the drawing of the control presentation from scratch as well.
 
-{% hint style="info" %}
+:::info
 To learn how to implement a custom control, see the guide [here](../guides/custom-controls/authoring-controls/).
-{% endhint %}
+:::
 
 ## Templated Controls
 
 A templated control uses the _Avalonia UI_ **styling** system to substitute a tag in the UI layout with a&#x20;
 
-{% hint style="info" %}
+:::info
 For more information about the concepts behind the _Avalonia UI_ **styling** system,
 
 &#x20;see [here](styling.md).
-{% endhint %}
+:::

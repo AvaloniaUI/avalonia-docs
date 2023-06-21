@@ -64,9 +64,9 @@ var point = args.GetCurrentPoint(this);
 
 Controls also have special gesture events, these are: `Tapped` and `DoubleTapped`. The tapped event is raised after the pointer is pressed on the control and then released. Double tapped is raised after pointer is pressed twice in the same place.&#x20;
 
-{% hint style="info" %}
+:::info
 Note that the maximum distance between a first and second tap, and the time delay between them, will depend on the target platform and usually is bigger for touch devices.
-{% endhint %}
+:::
 
 ## More Information
 

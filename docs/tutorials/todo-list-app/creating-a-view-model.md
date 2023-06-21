@@ -6,9 +6,9 @@ description: TUTORIALS - To Do List App
 
 On this page, you will learn how to create a view model to provide the application logic for your app. This is the final part of the MVVM pattern, and it will make use of the _ReactiveUI_ framework.
 
-{% hint style="info" %}
+:::info
 To review the concepts behind MVVM pattern programming using ReactiveUI, see [here](../../concepts/reactiveui/).
-{% endhint %}
+:::
 
 The purpose of the view model is organise data and actions for the application in a way that suits the views. For reasons that will become clear in a future step of this tutorial, you will adopt the convention of naming a view model after the view that it supports in this way.
 
@@ -55,9 +55,9 @@ The stated purpose of the pattern is to separate the view and view model so that
 
 In a real application, you would aim to ensure separation between the view model and the model, for similar reasons. However this is beyond the scope of this tutorial, so here you will make the view model dependent on the model.&#x20;
 
-{% hint style="info" %}
+:::info
 Separation of the view model and the model in the MVVM pattern can be achieved by Dependency Injection (DI). For guidance on how to use DI with MVVM and _Avalonia UI_, see [here](../../guides/implementation-guides/how-to-implement-dependency-injection.md).
-{% endhint %}
+:::
 
 ## View Model to Model Dependency
 

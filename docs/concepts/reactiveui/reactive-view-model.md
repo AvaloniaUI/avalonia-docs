@@ -8,9 +8,9 @@ This page describes how you can use the _ReactiveUI_ `ReactiveObject` as the bas
 
 _ReactiveUI_ provides the `ReactiveObject` as a base class for view models. It implements a notification of property changes and observables to monitor object changes.
 
-{% hint style="info" %}
+:::info
 For the detailed _ReactiveUI_ documentation for `ReactiveObject`, see [here](https://www.reactiveui.net/api/reactiveui/reactiveobject/).
-{% endhint %}
+:::
 
 &#x20;Once you have installed and configured _ReactiveUI_, you can base your view models on the class:
 
@@ -22,9 +22,9 @@ public class ViewModelBase : ReactiveObject
 
 <!--<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>-->
 
-{% hint style="info" %}
+:::info
 If you have used the Avalonia MVVM Application solution template, then you will find this base class already added to the project /ViewModels folder.
-{% endhint %}
+:::
 
 For example, you can implement a simple view model like this:
 

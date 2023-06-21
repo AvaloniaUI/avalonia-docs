@@ -28,7 +28,7 @@ When all four values are in the list, _Avalonia UI_ will interpret them using th
 
 `CornerRadius="TopLeft TopRight BottomRight BottomLeft"`
 
-{% hint style="warning" %}
+:::warning
 If you use the four value pattern; you must provide all four values, even if one of them is zero. Three values are not permitted in the list.&#x20;
 :::
 

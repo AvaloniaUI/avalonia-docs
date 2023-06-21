@@ -17,9 +17,9 @@ MVVM might be overkill for a simple application; but as applications grow over t
 
 MVVM solves this by abstracting the application logic into code-only classes that do not depend on the target UI platform, and can therefore be unit tested independently.
 
-{% hint style="info" %}
+:::info
 To discover more about the background to the MVVM pattern, see the _Microsoft Patterns and Practices_ article [here](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/hh848246\(v=pandp.10\)).
-{% endhint %}
+:::
 
 ## When to use MVVM? <a href="#when-to-use-mvvm" id="when-to-use-mvvm"></a>
 
@@ -27,9 +27,9 @@ MVVM is a more complex pattern of programming compared to the event-driven code-
 
 In fact, the code-behind pattern may well be easier for you to understand and maintain for a small simple application.
 
-{% hint style="info" %}
+:::info
 For details of how to program _Avalonia UI_ with the code-behind pattern, see [here](../../guides/implementation-guides/code-behind.md).&#x20;
-{% endhint %}
+:::
 
 The advantages of using the MVVM pattern may only become apparent when an application grows and becomes more complex. You therefore have two development strategies to consider:
 

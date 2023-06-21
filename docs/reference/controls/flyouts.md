@@ -22,7 +22,7 @@ A flyout is attached to a host control using the host's `Flyout` property. For e
 </Button>
 ```
 
-{% hint style="warning" %}
+:::warning
 Only the button and split button controls support the `Flyout` property. You can attach a flyout to other _Avalonia UI_ built-in controls using the `AttachedFlyout` property instead.&#x20;
 :::
 

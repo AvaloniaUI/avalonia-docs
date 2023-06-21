@@ -10,7 +10,7 @@ For example, if the docking edge on a child control is defined as 'top' and it h
 
 <!--figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure-->
 
-{% hint style="warning" %}
+:::warning
 You must define the child control dimension perpendicular to the docking edge, or it will not show.
 :::
 
@@ -20,7 +20,7 @@ Child controls are docked in the sequence that they are defined in the XAML. Whe
 
 The last child control defined will fill any remaining space.&#x20;
 
-{% hint style="warning" %}
+:::warning
 You must always define a last child control (with no dock property), or the docking calculation will not perform correctly. This means that a dock panel requires a minimum of two child controls.
 :::
 

@@ -42,9 +42,9 @@ public override void OnFrameworkInitializationCompleted()
 
 This method is called when the framework has initilized and the `ApplicationLifetime` property contains the chosen lifetime if any.&#x20;
 
-{% hint style="info" %}
+:::info
 If you run the application in design mode (this uses the IDE previewer process), then `ApplicationLifetime` is null.
-{% endhint %}
+:::
 
 ## Lifetime Interfaces
 
@@ -82,9 +82,9 @@ Provided by:
 
 Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.&#x20;
 
-{% hint style="info" %}
+:::info
 To implement the navigation stack on platforms like this (with a a main view), you will need to use the _ReactiveUI_ framework.
-{% endhint %}
+:::
 
 ## Manual Lifetime Management
 

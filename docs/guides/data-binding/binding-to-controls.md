@@ -86,6 +86,6 @@ If you need to include a XAML namespace in the ancestor type, you separate the n
 </local:MyControl>
 ```
 
-{% hint style="warning" %}
+:::warning
 _Avalonia UI_ also supports WPF/UWP's `RelativeSource` syntax which does something similar, but is _not_ the same. `RelativeSource` works on the _visual_ tree whereas the syntax given here works on the _logical_ tree.
 :::

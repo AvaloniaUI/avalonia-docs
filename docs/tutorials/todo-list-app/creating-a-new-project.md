@@ -10,9 +10,9 @@ On this page you will learn how to create a new project for the to do list app.&
 
 Before you start, check you have installed the _Avalonia UI_ extension for Visual Studio.
 
-{% hint style="info" %}
+:::info
 For full instructions about the extension, see [here](../../get-started/install-the-avalonia-extension.md).&#x20;
-{% endhint %}
+:::
 
 <div style={{textAlign: 'center'}}>
   <img src="../../.gitbook/assets/image (43).png" alt=""/>
@@ -39,9 +39,9 @@ The newly created solution will look like this:&#x20;
 
 Before you start, check you have installed the _Avalonia UI_ templates for .NET Core.
 
-{% hint style="info" %}
+:::info
 For full instructions about the starting with the CLI, see [here](../../get-started/getting-started.md).&#x20;
-{% endhint %}
+:::
 
 With the templates installed, you can create the application from the template:
 
@@ -88,6 +88,6 @@ You can see there are folders for each of the concepts in the MVVM pattern (mode
 
 _Avalonia UI_ uses the file extension `.axaml` for its XAML files, and this includes those created by the Visual Studio solution template, and more recent versions of the .NET Core CLI templates. If you previously used older .NET Core CLI templates, then the extension may be `.xaml`.&#x20;
 
-{% hint style="info" %}
+:::info
 For more background on Avalonia UI XAML see [here](../../concepts/introduction-to-xaml.md).&#x20;
-{% endhint %}
+:::

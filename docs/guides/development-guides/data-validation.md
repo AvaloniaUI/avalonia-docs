@@ -67,7 +67,7 @@ public string? EMail
 }
 ```
 
-{% hint style="danger" %}
+:::danger
 Exceptions inside the getter of your property are not allowed and will result in a crash of your application.
 :::
 

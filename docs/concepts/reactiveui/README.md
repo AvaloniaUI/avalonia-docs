@@ -8,9 +8,9 @@ These pages explain how _Avalonia UI_ uses a version of the open-source _Reactiv
 
 _ReactiveUI_ is an advanced, composable, functional reactive model-view-viewmodel (MVVM) framework for all .NET platforms. It was inspired by the functional reactive programming paradigm.
 
-{% hint style="info" %}
+:::info
 For a full technical background on functional reactive programming, see the Wikipedia article [here](https://en.wikipedia.org/wiki/Functional\_reactive\_programming).
-{% endhint %}
+:::
 
 &#x20;_Avalonia UI_ ships with its own fork of _ReactiveUI_ in the `Avalonia.ReactiveUI` _NuGet_ package.
 
@@ -22,19 +22,19 @@ To use _ReactiveUI_ and the MVVM pattern in your _Avalonia UI_ application, add 
 dotnet add package Avalonia.ReactiveUI
 ```
 
-{% hint style="info" %}
+:::info
 For detailed information about _ReactiveUI_ itself, see the website [https://reactiveui.net/](https://reactiveui.net/)
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 For more background about the MVVM pattern, see the _Microsoft_ article [here](https://msdn.microsoft.com/en-us/library/hh848246.aspx).&#x20;
-{% endhint %}
+:::
 
 The package includes helpers specifically for _Avalonia U_I to handle the _ReactiveUI_ tasks of view model-based routing, view activation and scheduling. (see the above reference for full details of these tasks).
 
-{% hint style="info" %}
+:::info
 If you start your application from the Avalonia MVVM Application solution template; then you will already have the _ReactiveUI_ package installed and configured.
-{% endhint %}
+:::
 
 ## Configure to Use ReactiveUI&#x20;
 

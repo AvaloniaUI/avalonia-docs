@@ -8,9 +8,9 @@ These pages describe the important concept of a **data template** in _Avalonia U
 
 A data template allows an _Avalonia UI_ control to display an object in its content zone which is not itself a control. This concept is explained using a practical code example.
 
-{% hint style="info" %}
+:::info
 For some information about the concept of control layout zones in _Avalonia UI_, see [here](../layout/layout-zones.md).&#x20;
-{% endhint %}
+:::
 
 ## Example Code
 

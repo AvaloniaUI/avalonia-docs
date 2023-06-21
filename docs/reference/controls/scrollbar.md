@@ -14,7 +14,7 @@ You will probably use these properties most often:
 
 <table><thead><tr><th width="241">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Orientation</code></td><td>The orientation of the scroll bar.</td></tr><tr><td><code>VerticalAlignment</code></td><td>The vertical alignment of the scroll bar in its container. Choose from top, bottom, center and stretch.</td></tr><tr><td><code>HorizontalAlignment</code></td><td>The horizontal alignment of the scroll bar in its container. Choose from left, right, center and stretch.</td></tr></tbody></table>
 
-{% hint style="warning" %}
+:::warning
 To create a meaningful layout, you will need to use corresponding orientation and alignment properties. For example, a vertical orientation matches a horizontal alignment.&#x20;
 :::
 

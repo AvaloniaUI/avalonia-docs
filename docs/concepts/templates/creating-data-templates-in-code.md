@@ -26,6 +26,6 @@ Which is equivalent to the XAML:
 
 ## More Examples
 
-{% hint style="info" %}
+:::info
 Have a look at some more advanced uses of the `FuncDataTemplate<T>`class in the _Avalonia UI_ sample project [here](https://github.com/AvaloniaUI/Avalonia.Samples/blob/main/src/Avalonia.Samples/DataTemplates/FuncDataTemplateSample).
-{% endhint %}
+:::

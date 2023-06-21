@@ -46,9 +46,9 @@ This XAML is similar in may ways to the user control XAML you had a lookup on th
 
 This maps the code namespace `ToDoList.Views` to the XML namespace alias `views`.&#x20;
 
-{% hint style="warning" %}
+:::warning
 Any user control that you create will need this kind of mapping, or the Avalonia UI XAML engine will be unable to find it, and you will get an error.
-{% endhint %}
+:::
 
 The last step sets the content zone of the window to display your new user control view:
 

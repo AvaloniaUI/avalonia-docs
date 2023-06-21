@@ -22,8 +22,8 @@ Attached layout properties are used in scenarios where the container control has
 
 <!--<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>-->
 
-{% hint style="info" %}
+:::info
 For a full list of the _Avalonia UI_ built-in controls, see the reference [here](../reference/controls/).
-{% endhint %}
+:::
 
 &#x20;&#x20;

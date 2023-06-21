@@ -22,7 +22,7 @@ You will probably use these properties most often:
 
 Child controls in a canvas are drawn in the sequence that the are defined. This can cause them to overlap.&#x20;
 
-{% hint style="warning" %}
+:::warning
 The canvas does not size any of its child controls. You must set width and height properties on a child control, or it will not appear!&#x20;
 :::
 

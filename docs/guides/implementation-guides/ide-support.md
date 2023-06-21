@@ -18,7 +18,7 @@ For Visual Studio and ReSharper users, [ReSharper 2020.3 introduces](https://www
 If your XAML is in a library, _Avalonia UI_ needs an executable application in order to be able to preview it. Select an executable project from the dropdown on the top right of the designer. Once your project is built, editing the XAML in the editor will cause the preview to update automatically.
 :::
 
-{% hint style="warning" %}
+:::warning
 In some cases, due to bugs/limitations in Visual Studio, the Avalonia XAML designer is not shown and instead the WPF designer gets shown. If your XAML file is showing a lot of errors, try right-clicking the file then selecting "Open With..." → "Avalonia XAML Editor".
 :::
 

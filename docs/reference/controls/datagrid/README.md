@@ -34,7 +34,7 @@ Or add package reference directly to the project (`.csproj`) file:
 <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.18" />
 ```
 
-{% hint style="warning" %}
+:::warning
 Note you must always install the data grid version that matches the _Avalonia UI_ version you are using.
 :::
 

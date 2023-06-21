@@ -14,6 +14,6 @@ If you want to provide a `Style` for your `TemplatedControl` in a separate file,
 
 
 
-{% hint style="info" %}
+:::info
 
-{% endhint %}
+:::

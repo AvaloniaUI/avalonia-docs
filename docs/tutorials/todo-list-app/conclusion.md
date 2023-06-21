@@ -18,13 +18,13 @@ This tutorial application is targeted at the _Windows_ platform where the main w
 
 However on other target platforms, there is no main window. An application has to be arranged as a series of views.
 
-{% hint style="info" %}
+:::info
 To learn more about targeting applications for iOS (Apple) platforms, see [here](../../guides/platforms/ios/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 To learn more about targeting applications for Android mobile devices, see [here](../../guides/platforms/android/).
-{% endhint %}
+:::
 
 ## Further Reading
 

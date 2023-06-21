@@ -26,15 +26,15 @@ The root element in the XAML file starts `<UserControl` and this is followed by 
 
 This declares that the XAML in the file contains _Avalonia UI_ XAML.
 
-{% hint style="warning" %}
+:::warning
 Without this entry nothing will work in your _Avalonia UI_ project!
-{% endhint %}
+:::
 
 The next namespace is `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` and this is used to import Microsoft XAML language features that are used by _Avalonia UI_.&#x20;
 
-{% hint style="info" %}
+:::info
 For more information see the Microsoft documentation [here](https://learn.microsoft.com/en-us/dotnet/desktop/xaml-services/namespace-language-features).
-{% endhint %}
+:::
 
 The remaining two namespaces are used to communicate information to the _Avalonia UI_ designer (code and preview panes).
 
@@ -67,15 +67,15 @@ The content zone of the user control is occupied by a dock panel:
 <DockPanel>
 ```
 
-{% hint style="info" %}
+:::info
 To review the concept of layout zones, see [here](../../concepts/layout/layout-zones.md).
-{% endhint %}
+:::
 
 A user control can only contain a single child control in its content zone; so you will often need to start a layout with one of the _Avalonia UI_ panel controls, as these allow you to contain multiple child controls in the space instead.&#x20;
 
-{% hint style="info" %}
+:::info
 You can browse the full range of _Avalonia UI_ panel controls in the reference section  [here](../../reference/controls/panel.md).
-{% endhint %}
+:::
 
 In this example, you are using the dock panel `<DockPanel>` control. This is a type of panel which lays out its child controls along the edges of its content zone. Each child control can specify which edge: top, bottom, left or right. This is done using the `DockPanel.Dock` attribute. For example, this XAML aligns a button at the bottom of the view; and it is stretched to fit the width, with its text centered.
 
@@ -93,9 +93,9 @@ In a dock panel there must be a single control filling the remaining space in it
 
 The stack panel lays out its child controls in a stack, which is vertical by default. (You can make the stack horizontal by setting the `Orientation` attribute.) You will often use the stack panel in your _Avalonia UI_ layouts.&#x20;
 
-{% hint style="info" %}
+:::info
 To more detail about the stack panel, see the reference [here](../../reference/controls/stackpanel.md).
-{% endhint %}
+:::
 
 The remaining XAML adds the hard-coded to do list items as check boxes:
 
@@ -106,8 +106,8 @@ The remaining XAML adds the hard-coded to do list items as check boxes:
 
 Notice that these controls have the margin attribute set. This will separate them a little visually.
 
-{% hint style="info" %}
+:::info
 The margin is one of the _Avalonia UI_ control layout zones. To review the concept of layout zones, see [here](../../concepts/layout/layout-zones.md).
-{% endhint %}
+:::
 
 On the next page, you will learn how to display the view created here in the main window of the app.

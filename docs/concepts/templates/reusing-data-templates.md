@@ -8,9 +8,9 @@ If you define a data template in the `Window.DataTemplates`collection (as on the
 
 This works because _Avalonia UI_ performs a hierarchical search of its logical tree to choose a data template. At its most extensive, the search starts in a control, extends to any parent controls (recursively), then looks in the window (as on the previous page), and finally looks at the application itself for a data templates collection.&#x20;
 
-{% hint style="info" %}
+:::info
 From more information on the logical tree concept in _Avalonia UI_ , see [here](../ui-composition.md).
-{% endhint %}
+:::
 
 Therefore if you want to reuse a template in any window of your application: define templates in the `Application.DataTemplates` collection, located in the app.axaml file.
 
@@ -81,8 +81,8 @@ Although there is no data template for a teacher in the window; Avalonia UI will
 
 <!--<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>-->
 
-{% hint style="warning" %}
+:::warning
 Remember to specify a `DataType` in every data template, wherever it is defined, because if _Avalonia UI_ fails to find a data template match for your data; then nothing will be displayed!
-{% endhint %}
+:::
 
 >

@@ -66,7 +66,7 @@ You can see the full list of value priorities in the `BindingPriority` enum, whe
 
 <table><thead><tr><th width="218">BindingPriority </th><th width="147.33333333333331">Value</th><th>Comment</th></tr></thead><tbody><tr><td><code>Animation</code></td><td>-1</td><td>The highest priority - even overrides a local value</td></tr><tr><td><code>LocalValue</code></td><td>0</td><td>A local value is set on the property of the control.</td></tr><tr><td><code>StyleTrigger</code></td><td>1</td><td>This is triggered when a pseudo class becomes active.</td></tr><tr><td><code>TemplatedParent</code></td><td>2</td><td></td></tr><tr><td><code>Style</code></td><td>3</td><td></td></tr><tr><td><code>Unset</code></td><td>2147483647</td><td></td></tr></tbody></table>
 
-{% hint style="warning" %}
+:::warning
 The exception is that `Animation` values have the highest priority and can even override local values.
 :::
 

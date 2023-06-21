@@ -46,6 +46,6 @@ xmlns:dataTemplates="using:MyApp.DataTemplates" -->
 
 ## More Examples
 
-{% hint style="info" %}
+:::info
 Have a look at some more advanced implementations of the `IDataTemplate` interface in the _Avalonia UI_ sample project [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/IDataTemplateSample).
-{% endhint %}
+:::
