@@ -1,3 +1,7 @@
+---
+id: index
+title: Advanced Concepts
+---
 
 # Advanced Concepts
 
