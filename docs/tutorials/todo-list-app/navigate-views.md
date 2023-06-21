@@ -4,7 +4,7 @@ description: TUTORIALS - To Do List App
 
 # Navigate Views
 
-On this page you will learn how to change the view in the content zone of the main window to display the new item view, when the user clicks <mark style="color:green;">**Add Item**</mark>.
+On this page you will learn how to change the view in the content zone of the main window to display the new item view, when the user clicks **Add Item**.
 
 <div style={{textAlign: 'center'}}>
   <img src="../../.gitbook/assets/image (40).png" alt=""/>
@@ -15,7 +15,7 @@ Up to this point, you have used the MVVM pattern for this tutorial app. This mea
 Therefore to start with, follow this procedure to add a method to the main window view model that will change what is loaded in the main window content zone:
 
 * [ ] Stop the app if it is running.
-* [ ] Locate the <mark style="color:green;">**MainWindowViewModel.cs**</mark> file in the <mark style="color:green;">**/ViewModels**</mark> folder.
+* [ ] Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
 * [ ] Edit the code as shown.&#x20;
 
 ```csharp
@@ -62,7 +62,7 @@ Now that you have passed control of what is shown in the main window over to the
 
 Follow this procedure:
 
-* [ ] Locate the <mark style="color:green;">**MainWindow.axaml**</mark> file in the <mark style="color:green;">**/Views**</mark> folder.
+* [ ] Locate the **MainWindow.axaml** file in the **/Views** folder.
 * [ ] Edit the XAML as shown.&#x20;
 
 ```markup
@@ -87,7 +87,7 @@ Follow this procedure:
 
 Lastly, to make the add item button call the `AddItem()` method, follow this procedure: &#x20;
 
-* Locate the <mark style="color:green;">**ToDoListView.axaml**</mark> file in the <mark style="color:green;">**/Views**</mark> folder.
+* Locate the **ToDoListView.axaml** file in the **/Views** folder.
 * Edit the XAML for the button as shown:&#x20;
 
 ```markup
@@ -118,7 +118,7 @@ For information about the concept of binding source expressions, see [here](../.
 
 ## Run the Application <a href="#run-the-application" id="run-the-application"></a>
 
-Now If you run the application and click <mark style="color:green;">**Add Item**</mark>, you will see the new view appear.
+Now If you run the application and click **Add Item**, you will see the new view appear.
 
 <div>
 

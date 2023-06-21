@@ -11,7 +11,7 @@ Also the OK button action needs to pass the description text back to the main wi
 To alter the add item view model, follow this procedure:
 
 * [ ] Stop the app if it is running.
-* [ ] Locate the <mark style="color:green;">**AddItemViewModel.cs**</mark> file in the <mark style="color:green;">**/ViewModels**</mark> folder.
+* [ ] Locate the **AddItemViewModel.cs** file in the **/ViewModels** folder.
 * [ ] Edit the code as shown.&#x20;
 
 ```csharp
@@ -104,7 +104,7 @@ Your next step is to create binding for the OK and cancel buttons in the view.&#
 
 To do this, follow this procedure:
 
-* [ ] Locate the <mark style="color:green;">**AddItemView.axaml**</mark> file in the <mark style="color:green;">**/Views**</mark> folder.
+* [ ] Locate the **AddItemView.axaml** file in the **/Views** folder.
 * [ ] Edit the XAML as shown.&#x20;
 
 ```markup
@@ -130,7 +130,7 @@ To do this, follow this procedure:
 </UserControl>
 ```
 
-Run the application and click <mark style="color:green;">**Add Item**</mark>. You should now see that the OK button is only enabled when there is some text in the description input.
+Run the application and click **Add Item**. You should now see that the OK button is only enabled when there is some text in the description input.
 
 <div style={{textAlign: 'center'}}>
   <img src="../../.gitbook/assets/image (21) (2).png" alt=""/>

@@ -19,7 +19,7 @@ The data model contains data entities (as they would appear if stored in a datab
 In this tutorial, you will create a single entity for the data model.  Follow this procedure to create the data model:
 
 * [ ] Stop the app if it is still running.
-* [ ] Locate the <mark style="color:green;">**Models**</mark> folder in the project, and rename it as 'DataModel'.
+* [ ] Locate the **Models** folder in the project, and rename it as 'DataModel'.
 * [ ] Add a new class to the folder. Name the class 'ToDoItem'.
 * [ ] Change the code in the class as shown:
 

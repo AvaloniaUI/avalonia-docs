@@ -14,7 +14,7 @@ The purpose of the view model is organise data and actions for the application i
 
 &#x20;Follow this procedure to add the to do list view model to your app:
 
-* [ ] Locate the <mark style="color:green;">**ViewModels**</mark> folder and add a new class.
+* [ ] Locate the **ViewModels** folder and add a new class.
 * [ ] Name the new class 'ToDoListViewModel'.
 * [ ] Add the following code:
 
@@ -63,7 +63,7 @@ Separation of the view model and the model in the MVVM pattern can be achieved b
 
 Follow this procedure to make the main window view model depend on the model, that is dependent on the to do list data service:
 
-* [ ] Locate the <mark style="color:green;">**MainWindowViewModel**</mark> class file, in the <mark style="color:green;">**ViewModels**</mark> folder.&#x20;
+* [ ] Locate the **MainWindowViewModel** class file, in the **ViewModels** folder.&#x20;
 * [ ] Alter the code as follows:
 
 ```csharp

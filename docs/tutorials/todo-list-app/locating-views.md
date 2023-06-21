@@ -46,7 +46,7 @@ The view locator class defines a data template in code which takes a view model 
 * `Match(object data)` looks at the data and checks that it inherits from the  `ViewModelBase` class - as both your view models do! If this check passes, then the `Build` method is called:&#x20;
 * `Build(object data)` takes the fully qualified name of the view model type and replaces the string `"ViewModel"` with the string `"View"`. It then tries to create the view type, and if that is successful returns it.
 
-An instance of `ViewLocator` is present in the <mark style="color:green;">**App.axaml**</mark> file in the app project (it was added by the solution template). It should look like this:&#x20;
+An instance of `ViewLocator` is present in the **App.axaml** file in the app project (it was added by the solution template). It should look like this:&#x20;
 
 ```markup
 <Application xmlns="https://github.com/avaloniaui"
@@ -82,6 +82,6 @@ In this way the content of the main window is set to the correct view, based on 
 
 Note that the view locator class is included in the project source rather than being part of the _Avalonia UI_ framework itself. This is because using an implementation of the 'convention over configuration' paradigm is an architectural choice for the application developer.
 
-If you do not want to use the view locator (in a diffent app); then remove it from the project and the <mark style="color:green;">**App.axaml**</mark> file.
+If you do not want to use the view locator (in a diffent app); then remove it from the project and the **App.axaml** file.
 
-On the next page you will learn how to add revealed functionality and actions to the <mark style="color:green;">**OK**</mark> and <mark style="color:green;">**Cancel**</mark> buttons.
+On the next page you will learn how to add revealed functionality and actions to the **OK** and **Cancel** buttons.

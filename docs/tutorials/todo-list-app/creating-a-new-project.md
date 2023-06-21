@@ -23,11 +23,11 @@ For full instructions about the extension, see [here](../../get-started/install-
 With the extension installed, start this tutorial by following these instructions:&#x20;
 
 * [ ] Start _Microsoft Visual Studio_
-* [ ] Click <mark style="color:green;">**Create a new project**</mark>
-* [ ] In <mark style="color:green;">**Search for Templates**</mark>, enter 'Avalonia'
-* [ ] Click  <mark style="color:green;">**Avalonia MVVM Application**</mark>
-* [ ] Click <mark style="color:green;">**Next**</mark>
-* [ ] In <mark style="color:green;">**Project name**</mark>, enter 'ToDoList', and click <mark style="color:green;">**Create**</mark>
+* [ ] Click **Create a new project**
+* [ ] In **Search for Templates**, enter 'Avalonia'
+* [ ] Click  **Avalonia MVVM Application**
+* [ ] Click **Next**
+* [ ] In **Project name**, enter 'ToDoList', and click **Create**
 
 The newly created solution will look like this:&#x20;
 

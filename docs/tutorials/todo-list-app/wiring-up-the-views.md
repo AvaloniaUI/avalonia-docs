@@ -10,7 +10,7 @@ This step uses _Avalonia UI_ concepts of data templates and data binding. Here a
 
 Follow this procedure to adapt your user control to use the items control:
 
-* [ ] Locate and open the <mark style="color:green;">**ToDoListView.axaml**</mark> file.
+* [ ] Locate and open the **ToDoListView.axaml** file.
 * [ ] Replace the `<StackPanel>` element, so that the code looks like this:
 
 ```xml
@@ -57,7 +57,7 @@ So the arrangement of views and view models so far looks like this:
   <img src="../../.gitbook/assets/image (7) (3).png" alt=""/>
 </div>
 
-This will work if any parent of the items control has a data context object having  a`ListItems` property. The _Avalonia UI_ binding will search upwards in the control tree to locate a suitable data context. But although the main window data context has been set (during the app initialization - see the file <mark style="color:green;">**App.axaml.cs**</mark>), at this point there is still no data context with a `ListItems` property.&#x20;
+This will work if any parent of the items control has a data context object having  a`ListItems` property. The _Avalonia UI_ binding will search upwards in the control tree to locate a suitable data context. But although the main window data context has been set (during the app initialization - see the file **App.axaml.cs**), at this point there is still no data context with a `ListItems` property.&#x20;
 
 So if you run your app, the list is still blank!
 

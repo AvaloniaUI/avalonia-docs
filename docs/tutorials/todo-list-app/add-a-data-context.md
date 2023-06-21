@@ -8,7 +8,7 @@ On this page, you will set the data context of the to do list view to be the `To
 
 To set the data context, follow this procedure:
 
-* [ ] Locate the <mark style="color:green;">**MainWindowView.axaml**</mark> file in the <mark style="color:green;">**Views**</mark> folder.
+* [ ] Locate the **MainWindowView.axaml** file in the **Views** folder.
 * [ ] Remove the namespace declaration for `xmlns:vm`&#x20;
 * [ ] Remove the `<Design.DataContext>` tag completely.
 * [ ] Edit the title attribute to change the window caption to 'Avalonia To Do List'.
