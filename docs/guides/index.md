@@ -1,6 +1,6 @@
 ---
 id: index
-title: Gudes
+title: How-To Guides
 ---
 
 # Gudes

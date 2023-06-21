@@ -154,7 +154,7 @@ const sidebars = {
       ],
     },    {
       'type': 'category',
-      'label': 'Guides',
+      'label': 'How-To Guides',
       'link': {
         'type': 'doc',
         'id': 'guides/index',
