@@ -26,7 +26,7 @@ Follow this procedure to add the required _NuGet_ package:&#x20;
 In this tutorial the application is simple, and you can implement the business services required for the 'Model' part of the MVVM pattern, in one class. This class will contain both the data model for an album, and the method needed for the search.
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (2) (1) (3).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (2) (1) (3).png" alt=""/>
 </div>
 
 Follow this procedure to add the album business logic:
@@ -81,7 +81,7 @@ Your album view model is currently empty. It will need to be able to store the a
 In this step you will use a common pattern for the dependent relationship between a view model and a (business logic) model. This is where the view model contains an instance of the data model, and then exposes certain of its properties, as required for display.&#x20;
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (25) (4).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (25) (4).png" alt=""/>
 </div>
 
 Follow this procedure to prepare the album view model:

@@ -38,5 +38,5 @@ So you can modify the previous sample to use the `DataTemplates` collection, as 
 
 This results in exactly the same display as on the previous page:
 
-<!--<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (57).png" alt=""/>
 

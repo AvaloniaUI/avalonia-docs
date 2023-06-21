@@ -59,7 +59,7 @@ The album view model will eventually contain data for the name of an album, the 
 As you saw on the last page, at this point the album list currently just shows the (fully qualified) name of the album view model class.
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (6) (1) (3) (1).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (6) (1) (3) (1).png" alt=""/>
 </div>
 
 In this step you will be using the view locator class (**ViewLocator.cs** file) that was added to the project by the solution template. This class was registered (by the solution template) as a data template at the highest level in the app in the **App.axaml** file. The data template registration looks like this:

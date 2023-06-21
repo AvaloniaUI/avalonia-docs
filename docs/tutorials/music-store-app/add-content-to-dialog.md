@@ -9,7 +9,7 @@ On the this page you will learn how to add some content to the dialog window. Th
 To arrange the dialog controls, you will use the dock panel layout control, that is part of the _Avalonia UI_ built-in controls. This will keep the search controls at the top of the dialog, and the button at the bottom, whatever the height. The list will be the 'fill' area of the dock panel, so it will always take up all the remaining content zone.&#x20;
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (9) (3).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (9) (3).png" alt=""/>
 </div>
 
 :::info

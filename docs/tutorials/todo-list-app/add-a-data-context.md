@@ -34,13 +34,13 @@ The arrangement of views and view models now has an additional data context; def
 So here is the arrangement after the data context binding has been resolved:
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (20) (3).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (20) (3).png" alt=""/>
 </div>
 
 
 Now if you run the app, the _Avalonia UI_ binder has a suitable data context for the items control binding; and the items show up in the view:
 
 <div style={{textAlign: 'center'}}>
-    <img src="../../.gitbook/assets/image (5) (1) (2).png" alt=""/>
+    <img src="/img/gitbook-import/assets/image (5) (1) (2).png" alt=""/>
 </div>
 

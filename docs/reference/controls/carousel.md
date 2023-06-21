@@ -66,7 +66,7 @@ namespace AvaloniaControls.Views
 
 
 
-<!--figure><img src="../../.gitbook/assets/carousel.gif" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/carousel.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

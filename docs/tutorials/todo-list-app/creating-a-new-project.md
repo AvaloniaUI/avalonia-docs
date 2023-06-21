@@ -15,7 +15,7 @@ For full instructions about the extension, see [here](../../get-started/install-
 :::
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (43).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (43).png" alt=""/>
 </div>
 
 <figure><figcaption></figcaption></figure>
@@ -32,7 +32,7 @@ With the extension installed, start this tutorial by following these instruction
 The newly created solution will look like this:&#x20;
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (3) (1) (1).png" alt=""/>
 </div>
 
 ## .NET Core CLI <a href="#net-core-cli" id="net-core-cli"></a>

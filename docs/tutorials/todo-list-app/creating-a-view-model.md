@@ -48,7 +48,7 @@ You have seen that the to do list view model has a constructor that requires a c
 Before you start to populate the view model with data, have another look at the MVVM pattern:
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (3) (1) (2).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (3) (1) (2).png" alt=""/>
 </div>
 
 The stated purpose of the pattern is to separate the view and view model so that, for example, the view model may be independently tested. This removes the dependency between the view and view model.

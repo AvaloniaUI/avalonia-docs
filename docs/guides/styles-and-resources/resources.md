@@ -75,7 +75,7 @@ To add a resource dictionary file, follow this procedure:
 -  Click **Add**, then **New Item**.
 -  Click **Avalonia** in the list on the left:
 
-<!--<!--<figure><img src="../../.gitbook/assets/image (8) (1) (2).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<img src="/img/gitbook-import/assets/image (8) (1) (2).png" alt=""/>-->
 
 -  Click **Resource Dictionary (Avalonia)**.
 -  Type the file name you want to use.
@@ -146,7 +146,7 @@ Here the border control is using the resource with the key 'Warning'. This is de
 
 Resources can be included from a resource dictionary file, and merged with the resources defined in another file (even if there are not any).&#x20;
 
-<!--<!--<figure><img src="../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<img src="/img/gitbook-import/assets/image (1) (3).png" alt=""/>-->
 
 This means that you can implement styles in one file, and use resources defined in another. This keeps your styling consistent, and your application solution well organised and easy to maintain.&#x20;
 

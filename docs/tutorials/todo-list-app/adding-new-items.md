@@ -43,7 +43,7 @@ To create the new view, follow this procedure if you are using Visual Studio:
 This gives you a view which looks like this:
 
 <div style={{textAlign: 'center'}}>
-  <img src="../../.gitbook/assets/image (44).png" alt=""/>
+  <img src="/img/gitbook-import/assets/image (44).png" alt=""/>
 </div>
 
 The new view has a text box control which has three properties for you to review:

@@ -50,7 +50,7 @@ private void PointerPressedHandler (object sender,
 {% endtab %}
 {% endtabs %}
 
-<!--<figure><img src="../../.gitbook/assets/pressed.gif" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/pressed.gif" alt=""/>
 
 ## Pointer Position
 

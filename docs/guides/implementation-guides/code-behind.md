@@ -78,7 +78,7 @@ In this example, the button in the XAML has the name attribute defined:&#x20;
 
 So now you can see that button appears by name in the Intellisense when you type in the code-behind file. It looks like this:
 
-<!--<img src="../../.gitbook/assets/image (7) (1) (2).png" alt="">-->
+<!--<img src="/img/gitbook-import/assets/image (7) (1) (2).png" alt="">-->
 
 ## Set Properties
 

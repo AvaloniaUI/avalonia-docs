@@ -20,7 +20,7 @@ public class ViewModelBase : ReactiveObject
 }
 ```
 
-<!--<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (4) (2).png" alt=""/>
 
 :::info
 If you have used the Avalonia MVVM Application solution template, then you will find this base class already added to the project /ViewModels folder.

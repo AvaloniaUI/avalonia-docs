@@ -23,7 +23,7 @@ This example uses some 50% opacities to demonstrate that child controls overlap.
 </Panel>
 ```
 
-<!--figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure-->
 
 ## Other Panel Controls
 

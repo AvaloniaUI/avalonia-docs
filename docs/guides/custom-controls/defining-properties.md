@@ -98,7 +98,7 @@ Note that the getter/setter of the property uses the special Avalonia UI `GetVal
 
 The styled property will work both at run-time and in the preview panel.
 
-<!--<!--<figure><img src="../../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<img src="../../../.gitbook/assets/image (4) (3).png" alt=""/>-->
 
 :::info
 For more advanced information about how to create a custom control, see [here](../how-to-create-advanced-custom-controls.md).

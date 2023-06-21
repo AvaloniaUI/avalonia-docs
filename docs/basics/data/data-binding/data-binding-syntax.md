@@ -56,7 +56,7 @@ You can change how data is moved in a data binding by specifying the data bindin
 
 &#x20;
 
-<!--<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>-->
+<img src="/img/gitbook-import/assets/image (2).png" alt=""/>
 
 For example:
 

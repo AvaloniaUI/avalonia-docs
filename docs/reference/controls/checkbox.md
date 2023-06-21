@@ -38,7 +38,7 @@ This is an example of two-state check boxes:
 
 Looks like this when running on Windows:
 
-<!--figure><img src="../../.gitbook/assets/checkbox1.gif" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/checkbox1.gif" alt=""><figcaption></figcaption></figure-->
 
 This is an example of a three-state checkbox:
 
@@ -60,7 +60,7 @@ This is an example of a three-state checkbox:
 
 Looks like this when running on Windows:
 
-<!--figure><img src="../../.gitbook/assets/checkbox2.gif" alt=""><figcaption></figcaption></figure-->
+<!--figure><img src="/img/gitbook-import/assets/checkbox2.gif" alt=""><figcaption></figcaption></figure-->
 
 ## More Information
 

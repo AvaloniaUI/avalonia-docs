@@ -10,5 +10,5 @@ Content in preparation.
 
 This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. &#x20;
 
-<!--<!--<figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>-->-->
+<!--<img src="/img/gitbook-import/assets/image (3) (1) (2).png" alt=""/>-->
 
