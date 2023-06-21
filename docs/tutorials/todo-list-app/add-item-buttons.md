@@ -10,9 +10,9 @@ Also the OK button action needs to pass the description text back to the main wi
 
 To alter the add item view model, follow this procedure:
 
-* [ ] Stop the app if it is running.
-* [ ] Locate the **AddItemViewModel.cs** file in the **/ViewModels** folder.
-* [ ] Edit the code as shown.&#x20;
+- Stop the app if it is running.
+- Locate the **AddItemViewModel.cs** file in the **/ViewModels** folder.
+- Edit the code as shown.&#x20;
 
 ```csharp
 using ReactiveUI;
@@ -104,8 +104,8 @@ Your next step is to create binding for the OK and cancel buttons in the view.&#
 
 To do this, follow this procedure:
 
-* [ ] Locate the **AddItemView.axaml** file in the **/Views** folder.
-* [ ] Edit the XAML as shown.&#x20;
+- Locate the **AddItemView.axaml** file in the **/Views** folder.
+- Edit the XAML as shown.&#x20;
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"

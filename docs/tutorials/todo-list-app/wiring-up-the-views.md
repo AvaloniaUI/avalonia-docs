@@ -10,8 +10,8 @@ This step uses _Avalonia UI_ concepts of data templates and data binding. Here a
 
 Follow this procedure to adapt your user control to use the items control:
 
-* [ ] Locate and open the **ToDoListView.axaml** file.
-* [ ] Replace the `<StackPanel>` element, so that the code looks like this:
+- Locate and open the **ToDoListView.axaml** file.
+- Replace the `<StackPanel>` element, so that the code looks like this:
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"

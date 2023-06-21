@@ -18,10 +18,10 @@ The data model contains data entities (as they would appear if stored in a datab
 
 In this tutorial, you will create a single entity for the data model.  Follow this procedure to create the data model:
 
-* [ ] Stop the app if it is still running.
-* [ ] Locate the **Models** folder in the project, and rename it as 'DataModel'.
-* [ ] Add a new class to the folder. Name the class 'ToDoItem'.
-* [ ] Change the code in the class as shown:
+- Stop the app if it is still running.
+- Locate the **Models** folder in the project, and rename it as 'DataModel'.
+- Add a new class to the folder. Name the class 'ToDoItem'.
+- Change the code in the class as shown:
 
 ```csharp
 namespace ToDoList.DataModel
@@ -40,9 +40,9 @@ In a real application, you might use a SQL database and write services based on 
 
 Follow this procedure to create the fake database service:
 
-* [ ] Create a new project folder and name it 'Services'.
-* [ ] Add a new class to the folder, name it 'ToDoListService'.
-* [ ] Add the code shown to the new class:
+- Create a new project folder and name it 'Services'.
+- Add a new class to the folder, name it 'ToDoListService'.
+- Add the code shown to the new class:
 
 ```csharp
 using System.Collections.Generic;

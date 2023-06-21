@@ -12,12 +12,12 @@ When the user clicks the button, you want the application to show a new view tha
 
 To create the new view, follow this procedure if you are using Visual Studio:
 
-* [ ] In the **Solution Explorer** locate and right-click the **Views** folder.&#x20;
-* [ ] Click **Add**
-* [ ] Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
-* [ ] In **Name** enter 'AddItemView'&#x20;
-* [ ] Click **Add**&#x20;
-* [ ] Alter the XAML to match the following:
+- In the **Solution Explorer** locate and right-click the **Views** folder.&#x20;
+- Click **Add**
+- Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
+- In **Name** enter 'AddItemView'&#x20;
+- Click **Add**&#x20;
+- Alter the XAML to match the following:
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -58,10 +58,10 @@ So far, you have only bound a description property. So the corresponding view mo
 
 To create a view model for the new view, follow this procedure:
 
-* [ ] In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
-* [ ] Click **Add**, then **Class**.&#x20;
-* [ ] Name the class 'AddItemViewModel'. Click **Add**.
-* [ ] Add the description property as shown:
+- In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
+- Click **Add**, then **Class**.&#x20;
+- Name the class 'AddItemViewModel'. Click **Add**.
+- Add the description property as shown:
 
 ```csharp
 using System;

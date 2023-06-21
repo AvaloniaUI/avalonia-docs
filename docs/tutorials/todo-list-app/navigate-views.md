@@ -14,9 +14,9 @@ Up to this point, you have used the MVVM pattern for this tutorial app. This mea
 
 Therefore to start with, follow this procedure to add a method to the main window view model that will change what is loaded in the main window content zone:
 
-* [ ] Stop the app if it is running.
-* [ ] Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-* [ ] Edit the code as shown.&#x20;
+- Stop the app if it is running.
+- Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
+- Edit the code as shown.&#x20;
 
 ```csharp
 using ReactiveUI;
@@ -62,8 +62,8 @@ Now that you have passed control of what is shown in the main window over to the
 
 Follow this procedure:
 
-* [ ] Locate the **MainWindow.axaml** file in the **/Views** folder.
-* [ ] Edit the XAML as shown.&#x20;
+- Locate the **MainWindow.axaml** file in the **/Views** folder.
+- Edit the XAML as shown.&#x20;
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"

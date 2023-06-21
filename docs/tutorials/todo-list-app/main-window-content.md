@@ -8,10 +8,10 @@ At this point your main window still displays the greeting text created by the s
 
 Follow this procedure to change the main window content:
 
-* [ ] Locate and open the main window XAML file:`Views/MainWindow.axaml`
-* [ ] Add the namespace declaration `xmlns:views="clr-namespace:ToDoList.Views"`
-* [ ] Retitle the app by changing the title attribute to `Title="Avalonia To Do List"`
-* [ ] Replace the `<TextBlock>` element with `<views:ToDoListView/>`
+- Locate and open the main window XAML file:`Views/MainWindow.axaml`
+- Add the namespace declaration `xmlns:views="clr-namespace:ToDoList.Views"`
+- Retitle the app by changing the title attribute to `Title="Avalonia To Do List"`
+- Replace the `<TextBlock>` element with `<views:ToDoListView/>`
 
 The main window XAML should now look like this:
 

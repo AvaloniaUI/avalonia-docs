@@ -14,11 +14,11 @@ In _Avalonia UI_, the UI element corresponding to a MVVM view can be either a wi
 
 Follow these instructions to add a new user control:
 
-* [ ] In the **Solution Explorer** locate and right-click the **Views** folder.&#x20;
-* [ ] Click **Add** and then **New Item**
-* [ ] Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
-* [ ] In **Name** enter 'ToDoListView'&#x20;
-* [ ] Click **Add**
+- In the **Solution Explorer** locate and right-click the **Views** folder.&#x20;
+- Click **Add** and then **New Item**
+- Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
+- In **Name** enter 'ToDoListView'&#x20;
+- Click **Add**
 
 ### .NET Core CLI
 

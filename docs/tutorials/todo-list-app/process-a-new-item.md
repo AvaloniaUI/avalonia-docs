@@ -8,9 +8,9 @@ On this page you will learn how to process the output from the OK and cancel but
 
 To alter the add item view model, follow this procedure:
 
-* [ ] Stop the app if it is running.
-* [ ] Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-* [ ] Edit the code as shown.&#x20;
+- Stop the app if it is running.
+- Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
+- Edit the code as shown.&#x20;
 
 ```csharp
 using ReactiveUI;
