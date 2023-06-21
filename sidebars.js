@@ -48,6 +48,7 @@ const sidebars = {
             'get-started/wpf/class-handlers',
             'get-started/wpf/propertychangedcallback',
             'get-started/wpf/rendertransforms-and-rendertransformorigin',
+            'get-started/wpf/comparison-of-avalonia-with-wpf-and-uwp',
           ],
         },
         'get-started/learn-more',
