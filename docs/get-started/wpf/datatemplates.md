@@ -31,7 +31,3 @@ Data templates in Avalonia can also target interfaces and derived classes (which
 ## Data Template Selector
 
 In WPF you can create a `DataTemplateSelector` to select or create a `DataTemplate` based on the provided data. In Avalonia you cannot do this; but you can implement `IDataTemplate` which can be seen as a good replacement for the `DataTemplateSelector`. Please find a sample [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/IDataTemplateSample).
-
-## Hierarchical Data Templates
-
-The WPF class `HierarchicalDataTemplate` is called `TreeDataTemplate` in _Avalonia UI_ - as the former is difficult to type! These are almost entirely equivalent; except that the WPF proerty `ItemTemplate` is not present in the _Avalonia UI_ class.
