@@ -12,9 +12,9 @@ As a welcome side-effect, this will also activate the album cover cache - so tha
 
 Follow this procedure to add persistence services (save and load) to the album model:
 
-* [ ] Stop the app if it is running.
-* [ ] Locate and open the **Album.cs** file in the **/Models** folder.
-* [ ] Add the code to implement save to disk, as shown:
+- Stop the app if it is running.
+- Locate and open the **Album.cs** file in the **/Models** folder.
+- Add the code to implement save to disk, as shown:
 
 ```csharp
 public async Task SaveAsync()
@@ -41,7 +41,7 @@ private static async Task SaveToStreamAsync(Album data, Stream stream)
 }
 ```
 
-* [ ] Add the code to implement load from disk, as shown:
+- Add the code to implement load from disk, as shown:
 
 ```csharp
 public static async Task<Album> LoadFromStream(Stream stream)
@@ -80,8 +80,8 @@ Your next step is to add a method to the album view model that it can call the b
 
 To alter the album view model , follow this procedure:
 
-* [ ] Locate and open the **AlbumViewModel.cs** file.
-* [ ] Add the method as shown:
+- Locate and open the **AlbumViewModel.cs** file.
+- Add the method as shown:
 
 ```csharp
 public async Task SaveToDiskAsync()
@@ -111,8 +111,8 @@ Lastly, you will call the new album view model persistence method `SaveToDiskAsy
 
 To alter the main window view model, follow this procedure:
 
-* [ ] Locate and open the **MainWindowViewModel.cs** file.
-* [ ] Add the code `await result.SaveToDiskAsync();` as shown below.
+- Locate and open the **MainWindowViewModel.cs** file.
+- Add the code `await result.SaveToDiskAsync();` as shown below.
 
 Your code to initialize the reactive command will now look like this:
 
@@ -131,12 +131,12 @@ BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 });
 ```
 
-* [ ] Click **Debug** to compile and run the project.
-* [ ] Click the icon button.
-* [ ] Type some search text.
-* [ ] Click an album to select it.
-* [ ] Click **Buy Album**.
-* [ ] Repeat another time for a different album.
+- Click **Debug** to compile and run the project.
+- Click the icon button.
+- Type some search text.
+- Click an album to select it.
+- Click **Buy Album**.
+- Repeat another time for a different album.
 
 You will not see any difference in the app yet. But you can check to see that the persistence files are being written. To do this open the project location and browse to the **/bin/Debug** folder. Open the folder for your .NET version, and you will find the **/Cache** folder there. You will see two cache files for each of the albums that you just selected.
 
@@ -146,9 +146,9 @@ Notice that because the `SaveToDiskAsync` method writes both the JSON data and t
 
 To show that the bitmap loading cache is now in operation, follow this procedure:
 
-* [ ] Stop the app if it is running.
-* [ ] Locate and open the **Album.cs** file in the **/Models** folder.&#x20;
-* [ ] Check to see that there is still a debug breakpoint in the `LoadCoverBitmapAsync` method at this line:
+- Stop the app if it is running.
+- Locate and open the **Album.cs** file in the **/Models** folder.&#x20;
+- Check to see that there is still a debug breakpoint in the `LoadCoverBitmapAsync` method at this line:
 
 ```csharp
 return File.OpenRead(CachePath + ".bmp");

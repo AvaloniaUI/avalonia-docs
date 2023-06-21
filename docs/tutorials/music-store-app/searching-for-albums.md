@@ -12,14 +12,14 @@ To implement a real album search in the app, you will use a _NuGet_ package that
 
 Follow this procedure to add the required _NuGet_ package:&#x20;
 
-* [ ] Stop the app if it is still running.
-* [ ] Right-click the project.
-* [ ] Click **Manage NuGet Packages**.
+- Stop the app if it is still running.
+- Right-click the project.
+- Click **Manage NuGet Packages**.
 
 ![](images/image-20210310013703557.png)
 
-* [ ] Type 'itunes' in the search box (top-left).
-* [ ] Click **iTunesSearch**, then click **Install**.&#x20;
+- Type 'itunes' in the search box (top-left).
+- Click **iTunesSearch**, then click **Install**.&#x20;
 
 ## MVVM Model
 
@@ -31,10 +31,10 @@ In this tutorial the application is simple, and you can implement the business s
 
 Follow this procedure to add the album business logic:
 
-* [ ] In the solution explorer, right-click the **/Models** folder and then click **Add**. &#x20;
-* [ ] Click **Class**.
-* [ ] When prompted for the name, type 'Album'.
-* [ ] Add the following code:
+- In the solution explorer, right-click the **/Models** folder and then click **Add**. &#x20;
+- Click **Class**.
+- When prompted for the name, type 'Album'.
+- Add the following code:
 
 ```csharp
 using iTunesSearch.Library;
@@ -86,8 +86,8 @@ In this step you will use a common pattern for the dependent relationship betwee
 
 Follow this procedure to prepare the album view model:
 
-* [ ] Locate and open the **AlbumViewModel.cs** file.&#x20;
-* [ ] Add the code as shown:
+- Locate and open the **AlbumViewModel.cs** file.&#x20;
+- Add the code as shown:
 
 ```csharp
 private readonly Album _album;
@@ -110,8 +110,8 @@ In this step, you will add some code to the music store view model so that whene
 
 Follow this procedure to start the search whenever the search text changes:
 
-* [ ] Locate and open the **MusicStoreViewModel.cs** file.&#x20;
-* [ ] Replace the constructor code, and add the extra code as shown:
+- Locate and open the **MusicStoreViewModel.cs** file.&#x20;
+- Replace the constructor code, and add the extra code as shown:
 
 ```csharp
 using Avalonia.MusicStore.Models;
@@ -173,8 +173,8 @@ Your work on the previous page to format the album 'tile' view did not add any w
 
 Follow this procedure to add the album name and artist name to the tile:
 
-* [ ] Locate and open the **AlbumView.asaml** file.&#x20;
-* [ ] Add the two text block controls with their data bindings, as shown:
+- Locate and open the **AlbumView.asaml** file.&#x20;
+- Add the two text block controls with their data bindings, as shown:
 
 ```xml
 <UserControl ...
@@ -193,9 +193,9 @@ Follow this procedure to add the album name and artist name to the tile:
 </UserControl>
 ```
 
-* [ ] Click **Debug** to compile and run the project.
-* [ ] Click the icon button.
-* [ ] Type some search text.
+- Click **Debug** to compile and run the project.
+- Click the icon button.
+- Type some search text.
 
 ![](images/image-20210310110401944.png)
 

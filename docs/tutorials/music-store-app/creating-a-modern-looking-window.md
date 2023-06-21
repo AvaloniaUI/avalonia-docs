@@ -10,19 +10,19 @@ On this page, you will make the main window look modern by applying a dark theme
 
 Follow this procedure to style the main window in 'dark' mode:
 
-* [ ] Stop the app if it is still running.
-* [ ] Locate and open the file **App.axaml**.
-* [ ] In the XAML, change the `Mode` attribute in the element`<FluentTheme>` from light to dark&#x20;
+- Stop the app if it is still running.
+- Locate and open the file **App.axaml**.
+- In the XAML, change the `Mode` attribute in the element`<FluentTheme>` from light to dark&#x20;
 
 ```markup
 <FluentTheme Mode="Dark"/>
 ```
 
-* [ ] Now locate and open the **MainWindow.axaml** file in the **/Views** folder.
+- Now locate and open the **MainWindow.axaml** file in the **/Views** folder.
 
 Notice that the preview pane is still showing the window in 'light' mode. The application will require a rebuild for the new mode to show in the preview pane.
 
-* [ ] Click **Build Startup Project** on the **Build** menu.
+- Click **Build Startup Project** on the **Build** menu.
 
 The preview pane now changes to the dark mode.
 
@@ -32,9 +32,9 @@ The preview pane now changes to the dark mode.
 
 Follow this procedure to style the background of the main window with an acrylic blur:
 
-* [ ] Locate and open the **MainWindow.axaml** file in the **/Views** folder.
-* [ ] Find the end of the opening tag of the `<Window>` element.&#x20;
-* [ ] After the `Title="Avalonia.MusicStore"` attribute, add two new attributes as follows:
+- Locate and open the **MainWindow.axaml** file in the **/Views** folder.
+- Find the end of the opening tag of the `<Window>` element.&#x20;
+- After the `Title="Avalonia.MusicStore"` attribute, add two new attributes as follows:
 
 ```markup
 <Window ...
@@ -44,7 +44,7 @@ Follow this procedure to style the background of the main window with an acrylic
         Background="Transparent">
 ```
 
-* [ ] To apply the acrylic effect to the whole window, replace the `<TextBlock>` element in the content zone of the main window with the following XAML for a panel:
+- To apply the acrylic effect to the whole window, replace the `<TextBlock>` element in the content zone of the main window with the following XAML for a panel:
 
 ```markup
 <Window ... >
@@ -62,7 +62,7 @@ Follow this procedure to style the background of the main window with an acrylic
    </Window>
 ```
 
-* [ ] Click **Debug** (top right of the IDE) to compile and run the project.
+- Click **Debug** (top right of the IDE) to compile and run the project.
 
 ![](images/acrylic-material.png)
 
@@ -74,9 +74,9 @@ Note that _Linux_ users can not yet take advantage of the following code due to 
 
 Follow this procedure to extend the acrylic blur effect onto the title bar:
 
-* [ ] Stop the app if is still running.
-* [ ] Find the end of the opening tag of the `<Window>` element again.&#x20;
-* [ ] Add the `ExtendClientAreaToDecorationsHint` attribute as shown:
+- Stop the app if is still running.
+- Find the end of the opening tag of the `<Window>` element again.&#x20;
+- Add the `ExtendClientAreaToDecorationsHint` attribute as shown:
 
 ```markup
    <Window ...
@@ -86,7 +86,7 @@ Follow this procedure to extend the acrylic blur effect onto the title bar:
            ExtendClientAreaToDecorationsHint="True">
 ```
 
-* [ ] Click **Debug** to compile and run the project.
+- Click **Debug** to compile and run the project.
 
 ![](images/full-acrylic-window.png)
 

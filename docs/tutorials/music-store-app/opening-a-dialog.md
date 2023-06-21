@@ -12,11 +12,11 @@ There is nothing special about a window view file that makes it into a dialog; t
 
 To create a new window, follow this procedure:
 
-* [ ] Stop the app if it is still running.
-* [ ] In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
-* [ ] Click **Avalonia Window**.
-* [ ] When prompted for the name, type 'MusicStoreWindow'
-* [ ] Press enter.
+- Stop the app if it is still running.
+- In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
+- Click **Avalonia Window**.
+- When prompted for the name, type 'MusicStoreWindow'
+- Press enter.
 
 ![](images/add-window.png)
 
@@ -24,8 +24,8 @@ To create a new window, follow this procedure:
 
 To style the new dialog window so that it matches the main window, follow this procedure:
 
-* [ ] Locate and open the **MusicStoreWindow.axaml** file.
-* [ ] Change this code as follows to add the acrylic blur background, extended into the title bar (as before) as shown:
+- Locate and open the **MusicStoreWindow.axaml** file.
+- Change this code as follows to add the acrylic blur background, extended into the title bar (as before) as shown:
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -63,12 +63,12 @@ Similarly, the result of the users interaction with the dialog will eventually h
 
 At this stage you will create two empty view model classes to act as placeholders for the dialog view model, and the dialog return (selected album) object. To create these view models, follow this procedure:
 
-* [ ] In the solution explorer, right-click the **/ViewModels** folder and then click **Add**. &#x20;
-* [ ] Click **Class**.
-* [ ] Name the class 'MusicStoreViewModel' and click **Add**.
-* [ ] Right-click again the **/ViewModels** folder and then click **Add** a second time. &#x20;
-* [ ] Click **Class**.
-* [ ] Name the class 'AlbumViewModel' and click **Add**.
+- In the solution explorer, right-click the **/ViewModels** folder and then click **Add**. &#x20;
+- Click **Class**.
+- Name the class 'MusicStoreViewModel' and click **Add**.
+- Right-click again the **/ViewModels** folder and then click **Add** a second time. &#x20;
+- Click **Class**.
+- Name the class 'AlbumViewModel' and click **Add**.
 
 ## Show Dialog
 
@@ -79,14 +79,14 @@ Now you have a new window for the dialog, and some view model classes for its in
 
 Firstly, to alter the main window view model code so it starts the interaction to show the dialog, follow this procedure:
 
-* [ ] Locate and open the **MainWindowViewModel.cs** file.
-* [ ] Add a declaration for the interaction with the new dialog window, as shown:
+- Locate and open the **MainWindowViewModel.cs** file.
+- Add a declaration for the interaction with the new dialog window, as shown:
 
 ```csharp
 public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
 ```
 
-* [ ] Alter the constructor code to create the reactive command from a asynchronous task, as shown:
+- Alter the constructor code to create the reactive command from a asynchronous task, as shown:
 
 ```csharp
 using System;
@@ -123,9 +123,9 @@ At this point, the code for the interaction is still incomplete. If you attempt 
 
 Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view, and uses some features of the the _ReactiveUI_ framework.  Follow this procedure:
 
-* [ ] Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
-* [ ] Alter the class wo that it inherits from `ReactiveWindow<MainWindowViewModel>`.
-* [ ] Add the `DoShowDialogAsync` method as follows:
+- Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
+- Alter the class wo that it inherits from `ReactiveWindow<MainWindowViewModel>`.
+- Add the `DoShowDialogAsync` method as follows:
 
 ```csharp
 private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel,
@@ -139,7 +139,7 @@ private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel,
 }
 ```
 
-* [ ] Add the following code to the end of the constructor:
+- Add the following code to the end of the constructor:
 
 ```csharp
 this.WhenActivated(action => 
@@ -180,8 +180,8 @@ namespace AvaloniaApplication11.Views
 }
 ```
 
-* [ ] Click **Debug** to compile and run the project.
-* [ ] Click the icon button.
+- Click **Debug** to compile and run the project.
+- Click the icon button.
 
 It all works - but the dialog window opens at the same size as the main window, and offset from it.
 
@@ -191,18 +191,18 @@ In the last step here, you will make the dialog smaller that the main window, an
 
 Follow this procedure:
 
-* [ ] Stop the app if it is still running.
-* [ ] Locate and open the **MainWindow.axaml** file.
-* [ ] Add an attribute to the `<Window>` element to set the start-up position:
+- Stop the app if it is still running.
+- Locate and open the **MainWindow.axaml** file.
+- Add an attribute to the `<Window>` element to set the start-up position:
 
 ```xml
 <Window ...
     WindowStartupLocation="CenterScreen">
 ```
 
-* [ ] Locate and open the **MusicStoreWindow.axaml** file.
-* [ ] Add attributes for the width and height of the dialog, set at 1000 and 550 respectively.
-* [ ] Add the start-up position attribute set to `CenterOwner`, as shown:&#x20;
+- Locate and open the **MusicStoreWindow.axaml** file.
+- Add attributes for the width and height of the dialog, set at 1000 and 550 respectively.
+- Add the start-up position attribute set to `CenterOwner`, as shown:&#x20;
 
 ```
 <Window ...
@@ -210,8 +210,8 @@ Follow this procedure:
     WindowStartupLocation="CenterOwner">
 ```
 
-* [ ] Click **Debug** to compile and run the project.
-* [ ] Click the icon button.
+- Click **Debug** to compile and run the project.
+- Click the icon button.
 
 ![](images/dialog-opened.png)
 

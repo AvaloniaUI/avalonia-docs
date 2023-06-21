@@ -16,11 +16,11 @@ For full instructions on preparing _JetBrains Rider_ for developing with _Avalon
 
 With the solution templates installed, begin this tutorial by following these instructions:
 
-* [ ] On the **Welcome to JetBrains Rider** screen, click **New Solution**.
-* [ ] From the project types list on the left, locate and click **Avalonia .NET Core MVVM App**. It will be under the section **Other**.
-* [ ] Leave the **MVVM Toolkit** option as (the default) _ReactiveUI_ framework.
-* [ ] Enter the **Solution name** as 'Avalonia.MusicStore'.
-* [ ] Click **Create**.
+- On the **Welcome to JetBrains Rider** screen, click **New Solution**.
+- From the project types list on the left, locate and click **Avalonia .NET Core MVVM App**. It will be under the section **Other**.
+- Leave the **MVVM Toolkit** option as (the default) _ReactiveUI_ framework.
+- Enter the **Solution name** as 'Avalonia.MusicStore'.
+- Click **Create**.
 
 <div style={{textAlign: 'center'}}>
   <img src="images/CreateSolution.png" alt=""/>

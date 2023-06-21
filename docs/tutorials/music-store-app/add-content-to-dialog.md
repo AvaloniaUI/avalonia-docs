@@ -24,12 +24,12 @@ This is a common pattern of UI Composition, to read about this concept, see [her
 
 Follow this procedure to add the user control and constituent controls for the dialog:
 
-* [ ] Stop the app if it is still running.
-* [ ] In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
-* [ ] Click **Avalonia User Control**.
-* [ ] When prompted for the name, type 'MusicStoreView'.
-* [ ] Press enter.
-* [ ] Alter the XAML for the user control's content zone as follows:
+- Stop the app if it is still running.
+- In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
+- Click **Avalonia User Control**.
+- When prompted for the name, type 'MusicStoreView'.
+- Press enter.
+- Alter the XAML for the user control's content zone as follows:
 
 ```xml
 <UserControl ... >
@@ -54,15 +54,15 @@ Now the next step is for you to add the new user control to the content zone of 
 
 To add the user control, follow this procedure:
 
-* [ ] Locate and open the **MusicStoreWindow.axaml** file. &#x20;
-* [ ] Add the namespace for the views to the `<Window>` element:
+- Locate and open the **MusicStoreWindow.axaml** file. &#x20;
+- Add the namespace for the views to the `<Window>` element:
 
 ```xml
 <Window ...
     xmlns:views="using:Avalonia.MusicStore.Views" >    
 ```
 
-* [ ] Inside the panel element, add an element for new user control:
+- Inside the panel element, add an element for new user control:
 
 ```xml
 <Panel Margin="40">

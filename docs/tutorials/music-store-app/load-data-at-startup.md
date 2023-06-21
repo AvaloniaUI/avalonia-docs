@@ -10,9 +10,9 @@ You have already added code to the business service that can load both the files
 
 Follow this procedure to add a method to load the user's album collection from disk:
 
-* [ ] Stop the app if it is running
-* [ ] Locate and open the **MainWindowViewModel.cs** file.
-* [ ] Add the code as shown:
+- Stop the app if it is running
+- Locate and open the **MainWindowViewModel.cs** file.
+- Add the code as shown:
 
 ```csharp
 private async void LoadAlbums()
@@ -39,14 +39,14 @@ You next step is to schedule the `LoadAlbum` method to run when the app starts.&
 
 To schedule the method on the main thread, follow this procedure:&#x20;
 
-* [ ] Keep the **MainWindowViewModel.cs** file open.
-* [ ] Add a reference to `using System.Reactive.Concurrency;`
-* [ ] Add this code to the class constructor:
+- Keep the **MainWindowViewModel.cs** file open.
+- Add a reference to `using System.Reactive.Concurrency;`
+- Add this code to the class constructor:
 
 ```csharp
 RxApp.MainThreadScheduler.Schedule(LoadAlbums);
 ```
 
-* [ ] Click **Debug** to compile and run the project.
+- Click **Debug** to compile and run the project.
 
 ![](images/image-20210310184202271.png)

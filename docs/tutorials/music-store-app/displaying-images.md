@@ -12,9 +12,9 @@ Your first step is to modify the business service to retrieve the album cover ar
 
 Follow this procedure to get the album cover art from the Web API:
 
-* [ ] Stop the app if it is still running.
-* [ ] Locate and open the **Album.cs** file in the **/Models** folder.
-* [ ] Add the code as shown:
+- Stop the app if it is still running.
+- Locate and open the **Album.cs** file in the **/Models** folder.
+- Add the code as shown:
 
 ```csharp
 private static HttpClient s_httpClient = new();
@@ -40,7 +40,7 @@ This method returns a stream that can be used to load a bitmap from, either from
 Note that the cache is not active at this time, you will implement it later in the tutorial.&#x20;
 {% endhint %}
 
-* [ ] So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:&#x20;
+- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:&#x20;
 
 ```csharp
 return File.OpenRead(CachePath + ".bmp");
@@ -56,9 +56,9 @@ Note: You must reference `Avalonia.Media.Imaging` in the album view model becaus
 
 Follow this procedure to update the album view model:
 
-* [ ] Locate and open the **AlbumViewModel.cs** file.
-* [ ] Add the `using Avalonia.Media.Imaging;` reference.
-* [ ] Add the extra code for the album cover, as shown:
+- Locate and open the **AlbumViewModel.cs** file.
+- Add the `using Avalonia.Media.Imaging;` reference.
+- Add the extra code for the album cover, as shown:
 
 ```csharp
 using Avalonia.Media.Imaging;
@@ -100,8 +100,8 @@ Firstly, you will need to add a method that can start loading the album covers w
 
 To add the method to load album cover art, follow this procedure:
 
-* [ ] Locate and open the **MusicStoreViewModel.cs** file.
-* [ ] Add the code as shown:
+- Locate and open the **MusicStoreViewModel.cs** file.
+- Add the code as shown:
 
 ```csharp
 private async void LoadCovers(CancellationToken cancellationToken)
@@ -130,13 +130,13 @@ In this step you will call the `LoadCovers` method in the `DoSearch` method (in 
 
 Follow this procedure:
 
-* [ ] Add this field to the **MusicStoreViewModel.cs** file.
+- Add this field to the **MusicStoreViewModel.cs** file.
 
 ```csharp
 private CancellationTokenSource? _cancellationTokenSource;
 ```
 
-* [ ] Modify the code at the beginning of the `DoSearch` method to set up the cancellation token:
+- Modify the code at the beginning of the `DoSearch` method to set up the cancellation token:
 
 ```csharp
 _cancellationTokenSource?.Cancel();
@@ -146,7 +146,7 @@ var cancellationToken = _cancellationTokenSource.Token;
 
 So if there is an existing request still loading album art, this will cancel it. Again, because `_cancellationTokenSource` might be replaced asynchronously by anther thread, you have to work with a copy stored as a local variable.
 
-* [ ] Add the following code to the end of `DoSearch` method:&#x20;
+- Add the following code to the end of `DoSearch` method:&#x20;
 
 ```csharp
 if (!cancellationToken.IsCancellationRequested)
@@ -194,9 +194,9 @@ In the last step here, you will alter the data bindings in the album view so tha
 
 Follow this procedure:
 
-* [ ] Locate and open the **AlbumView.axaml** file.
-* [ ] Add the data binding `Source="{Binding Cover}"` to the `<Image>` element:
-* [ ] Add this data binding and converter to the panel element below:
+- Locate and open the **AlbumView.axaml** file.
+- Add the data binding `Source="{Binding Cover}"` to the `<Image>` element:
+- Add this data binding and converter to the panel element below:
 
 ```
 IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
@@ -208,9 +208,9 @@ A converter is an extension of a data binding expression that can convert the bi
 For more information about the _Avalonia UI_ built-in binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).&#x20;
 {% endhint %}
 
-* [ ] Click **Debug** to compile and run the project.
-* [ ] Click the icon button.
-* [ ] Type some search text.
+- Click **Debug** to compile and run the project.
+- Click the icon button.
+- Type some search text.
 
 ![](images/image-20210310173858088.png)
 

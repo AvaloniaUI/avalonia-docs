@@ -12,15 +12,15 @@ The first step here is for you to add a reactive command to the music store view
 
 Follow this procedure to add the reactive command:
 
-* [ ] Stop the app if it is running.
-* [ ] Locate and open the **MusicStoreViewModel.cs** file.
-* [ ] Add the reactive command declaration, as shown:
+- Stop the app if it is running.
+- Locate and open the **MusicStoreViewModel.cs** file.
+- Add the reactive command declaration, as shown:
 
 ```csharp
 public ReactiveCommand<Unit, AlbumViewModel?> BuyMusicCommand { get; }
 ```
 
-* [ ] Add code to the constructor to initialize the reactive command, as shown:
+- Add code to the constructor to initialize the reactive command, as shown:
 
 ```csharp
 public MusicStoreViewModel()
@@ -40,8 +40,8 @@ Notice you are using `ReactiveCommand` here. This is provided by the _ReactiveUI
 
 Your next step is bind the **Buy Album** button to the reactive command in the music store view model, follow this procedure:
 
-* [ ] Locate and open the **MusicStoreView .cs** file. &#x20;
-* [ ] Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
+- Locate and open the **MusicStoreView .cs** file. &#x20;
+- Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
 
 ## Close the Dialog
 
@@ -51,10 +51,10 @@ As you saw during coding for the dialog open, you implement window management in
 
 To add code to close the dialog, follow this procedure:
 
-* [ ] Locate and open the **MusicStoreWindow.axaml.cs** file.&#x20;
-* [ ] Add a reference to the system `using System;`&#x20;
-* [ ] Change the base class so the view inherits from `ReactiveWindow<MusicStoreViewModel>`.
-* [ ] Then add the following line to the end of the constructor:
+- Locate and open the **MusicStoreWindow.axaml.cs** file.&#x20;
+- Add a reference to the system `using System;`&#x20;
+- Change the base class so the view inherits from `ReactiveWindow<MusicStoreViewModel>`.
+- Then add the following line to the end of the constructor:
 
 ```csharp
 this.WhenActivated(action => action(ViewModel!.BuyMusicCommand.Subscribe(Close)));
@@ -83,10 +83,10 @@ namespace Avalonia.MusicStore.Views
 }
 ```
 
-* [ ] Click **Debug** to compile and run the project.
-* [ ] Click the icon button.
-* [ ] Type some search text.
-* [ ] Click an album to select it.
-* [ ] Click **Buy Album**.
+- Click **Debug** to compile and run the project.
+- Click the icon button.
+- Type some search text.
+- Click an album to select it.
+- Click **Buy Album**.
 
 You will see the dialog close, but nothing happens in the main window! On the next page you will learn how to add the selected album to a collection in the main window.&#x20;

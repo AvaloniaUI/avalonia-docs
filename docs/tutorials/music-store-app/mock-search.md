@@ -12,8 +12,8 @@ The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data bind
 
 Follow this procedure to derive from the `ReactiveObject` class:
 
-* [ ] Locate and open the **MusicStoreViewModel.cs** file.
-* [ ] Add the code to derive the class from `ViewModelBase`.
+- Locate and open the **MusicStoreViewModel.cs** file.
+- Add the code to derive the class from `ViewModelBase`.
 
 ```csharp
 namespace Avalonia.MusicStore.ViewModels
@@ -37,7 +37,7 @@ At this stage, you will create two properties for the search application logic:
 
 <!---->
 
-* [ ] Add the following code to implement the above properties:
+- Add the following code to implement the above properties:
 
 ```csharp
 using ReactiveUI;
@@ -73,8 +73,8 @@ Next you will add a data binding to link the view to the view model. The text bo
 
 Follow this procedure to add data binding to the view:
 
-* [ ] Locate and open the **MusicStoreView.axaml** file.
-* [ ] Add the binding expressions shown:
+- Locate and open the **MusicStoreView.axaml** file.
+- Add the binding expressions shown:
 
 ```markup
 <DockPanel>
@@ -100,8 +100,8 @@ Here you will use the `ObservableCollection` - this is a collection is capable o
 
 Follow this procedure to add the above properties:
 
-* [ ] Locate and open the **MusicStoreViewModel.cs** file.
-* [ ] Add the following code to the class:
+- Locate and open the **MusicStoreViewModel.cs** file.
+- Add the following code to the class:
 
 ```csharp
 private AlbumViewModel? _selectedAlbum;
@@ -117,8 +117,8 @@ public AlbumViewModel? SelectedAlbum
 
 Next to bind these properties to the list box in the view, follow this procedure:
 
-* [ ] Locate and open the **MusicStoreView.axaml** file.
-* [ ] Add the binding expressions shown to the `<ListBox>` element:
+- Locate and open the **MusicStoreView.axaml** file.
+- Add the binding expressions shown to the `<ListBox>` element:
 
 ```
 <ListBox Items="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
@@ -130,8 +130,8 @@ Now, to test the app at this stage, you will add some mock data directly to the 
 
 Follow this procedure:
 
-* [ ] Locate and open the **MusicStoreViewModel.cs** file again.
-* [ ] Add a constructor to the class, as shown:
+- Locate and open the **MusicStoreViewModel.cs** file again.
+- Add a constructor to the class, as shown:
 
 ```csharp
 public MusicStoreViewModel()
@@ -142,7 +142,7 @@ public MusicStoreViewModel()
 }
 ```
 
-* [ ] Click **Debug** to compile and run the project.
+- Click **Debug** to compile and run the project.
 
 ![](images/text-list.png)
 

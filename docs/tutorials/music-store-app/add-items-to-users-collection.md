@@ -12,9 +12,9 @@ Your first step here is to add an observable collection to the main window view 
 
 Follow this procedure:
 
-* [ ] Stop the app if it is running.
-* [ ] Locate and open the **MainWindowViewModel.cs** file.
-* [ ] Add an observable collection, as shown:
+- Stop the app if it is running.
+- Locate and open the **MainWindowViewModel.cs** file.
+- Add an observable collection, as shown:
 
 ```csharp
 public ObservableCollection<AlbumViewModel> Albums { get; } = new();
@@ -24,7 +24,7 @@ public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 
 Your next step is to alter the buy music reactive command so that it adds the dialog return object (an `AlbumViewModel`) to the observable collection. Follow this procedure:
 
-* [ ] Alter the code that initializes the reactive command, as shown:
+- Alter the code that initializes the reactive command, as shown:
 
 ```csharp
 BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
@@ -44,14 +44,14 @@ Next you will add XAML to the main window view to display the items in the obser
 
 To add the items control and its data template, follow this procedure:
 
-* [ ] Locate and open the **MainWindow.axaml** file.
-* [ ] Add the following namespace declaraton to the `<Window>` element:
+- Locate and open the **MainWindow.axaml** file.
+- Add the following namespace declaraton to the `<Window>` element:
 
 ```
 xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 ```
 
-* [ ] Under the button element, add the XAML as shown:
+- Under the button element, add the XAML as shown:
 
 ```xml
 <ItemsControl Margin="0 40 0 0" Items="{Binding Albums}">
@@ -71,12 +71,12 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 
 
 
-* [ ] Click **Debug** to compile and run the project.
-* [ ] Click the icon button.
-* [ ] Type some search text.
-* [ ] Click an album to select it.
-* [ ] Click **Buy Album**.
-* [ ] Repeat another time.
+- Click **Debug** to compile and run the project.
+- Click the icon button.
+- Type some search text.
+- Click an album to select it.
+- Click **Buy Album**.
+- Repeat another time.
 
 ![](images/image-20210310175949319.png)
 

@@ -12,9 +12,9 @@ When you are develop with _Avalonia UI_ and the MVVM pattern, the solution templ
 
 The first step in linking the view and view model is to make the view model able to accept a command. You will achieve this by adding the .NET `ICommand` interface to the main window, and then implementing it with a _ReactiveUI_ `ReactiveCommand`. Follow this procedure:
 
-* [ ] Stop the app if it is still running.
-* [ ] Locate and open the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-* [ ] Delete the existing content of the class, and add the code shown:
+- Stop the app if it is still running.
+- Locate and open the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
+- Delete the existing content of the class, and add the code shown:
 
 ```csharp
 using ReactiveUI;
@@ -37,7 +37,7 @@ namespace AvaloniaApplication11.ViewModels
 }
 ```
 
-* [ ] Place a debug breakpoint at the open (curly) bracket just above the comment line.&#x20;
+- Place a debug breakpoint at the open (curly) bracket just above the comment line.&#x20;
 
 To complete the link from the view to your new `BuyMusicCommand` view model property, you will add a data binding to the button.
 
@@ -47,8 +47,8 @@ For more information about the concept of data binding, see [here](../../concept
 
 To add the button data binding, follow this procedure:
 
-* [ ] Locate and open the **MainWindow.axaml** file.
-* [ ] Find the XAML for the button and add the command attribute and binding, as shown:&#x20;
+- Locate and open the **MainWindow.axaml** file.
+- Find the XAML for the button and add the command attribute and binding, as shown:&#x20;
 
 ```
 <Button HorizontalAlignment="Right" VerticalAlignment="Top"
@@ -59,8 +59,8 @@ To add the button data binding, follow this procedure:
 
 The Command attribute of an _Avalonia UI_ button determines what happens when the button is clicked. In this case the data binding expression links to the `BuyMusicCommand` property of an underlying view model. To confirm that this is what happens:
 
-* [ ] Click **Debug** to compile and run the project.
-* [ ] Click the icon button.
+- Click **Debug** to compile and run the project.
+- Click the icon button.
 
 You will see the app stop executing at the breakpoint you previously set in the view model.
 
