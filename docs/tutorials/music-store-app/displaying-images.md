@@ -13,7 +13,7 @@ Your first step is to modify the business service to retrieve the album cover ar
 Follow this procedure to get the album cover art from the Web API:
 
 * [ ] Stop the app if it is still running.
-* [ ] Locate and open the **Album.cs**</mark> file in the <mark style="color:green;">**/Models** folder.
+* [ ] Locate and open the **Album.cs** file in the **/Models** folder.
 * [ ] Add the code as shown:
 
 ```csharp

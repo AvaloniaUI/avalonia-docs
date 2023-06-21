@@ -13,7 +13,7 @@ There is nothing special about a window view file that makes it into a dialog; t
 To create a new window, follow this procedure:
 
 * [ ] Stop the app if it is still running.
-* [ ] In the solution explorer, right-click the **/Views**</mark> folder and then click <mark style="color:green;">**Add**. &#x20;
+* [ ] In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
 * [ ] Click **Avalonia Window**.
 * [ ] When prompted for the name, type 'MusicStoreWindow'
 * [ ] Press enter.
@@ -63,10 +63,10 @@ Similarly, the result of the users interaction with the dialog will eventually h
 
 At this stage you will create two empty view model classes to act as placeholders for the dialog view model, and the dialog return (selected album) object. To create these view models, follow this procedure:
 
-* [ ] In the solution explorer, right-click the **/ViewModels**</mark> folder and then click <mark style="color:green;">**Add**. &#x20;
+* [ ] In the solution explorer, right-click the **/ViewModels** folder and then click **Add**. &#x20;
 * [ ] Click **Class**.
 * [ ] Name the class 'MusicStoreViewModel' and click **Add**.
-* [ ] Right-click again the **/ViewModels**</mark> folder and then click <mark style="color:green;">**Add** a second time. &#x20;
+* [ ] Right-click again the **/ViewModels** folder and then click **Add** a second time. &#x20;
 * [ ] Click **Class**.
 * [ ] Name the class 'AlbumViewModel' and click **Add**.
 
@@ -123,7 +123,7 @@ At this point, the code for the interaction is still incomplete. If you attempt 
 
 Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view, and uses some features of the the _ReactiveUI_ framework.  Follow this procedure:
 
-* [ ] Locate and open the code-behind **MainWindow.axaml.cs**</mark> file. (You may need to expand the <mark style="color:green;">**MainWindow.axaml** file to find it.)
+* [ ] Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
 * [ ] Alter the class wo that it inherits from `ReactiveWindow<MainWindowViewModel>`.
 * [ ] Add the `DoShowDialogAsync` method as follows:
 

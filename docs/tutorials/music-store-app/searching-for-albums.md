@@ -19,7 +19,7 @@ Follow this procedure to add the required _NuGet_ package:&#x20;
 ![](images/image-20210310013703557.png)
 
 * [ ] Type 'itunes' in the search box (top-left).
-* [ ] Click **iTunesSearch**</mark>, then click <mark style="color:green;">**Install**.&#x20;
+* [ ] Click **iTunesSearch**, then click **Install**.&#x20;
 
 ## MVVM Model
 
@@ -31,7 +31,7 @@ In this tutorial the application is simple, and you can implement the business s
 
 Follow this procedure to add the album business logic:
 
-* [ ] In the solution explorer, right-click the **/Models**</mark> folder and then click <mark style="color:green;">**Add**. &#x20;
+* [ ] In the solution explorer, right-click the **/Models** folder and then click **Add**. &#x20;
 * [ ] Click **Class**.
 * [ ] When prompted for the name, type 'Album'.
 * [ ] Add the following code:

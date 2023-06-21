@@ -30,7 +30,7 @@ The next step is to create a graphical 'tile' view for an album. You will then c
 
 To create the graphical 'tile' view, follow this procedure:
 
-* [ ] In the solution explorer, right-click the **/Views**</mark> folder and then click <mark style="color:green;">**Add**. &#x20;
+* [ ] In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
 * [ ] Click **Avalonia User Control**.
 * [ ] When prompted for the name, type 'AlbumView'.
 * [ ] Press enter.
@@ -62,7 +62,7 @@ As you saw on the last page, at this point the album list currently just shows t
   <img src="../../.gitbook/assets/image (6) (1) (3) (1).png" alt=""/>
 </div>
 
-In this step you will be using the view locator class (**ViewLocator.cs**</mark> file) that was added to the project by the solution template. This class was registered (by the solution template) as a data template at the highest level in the app in the <mark style="color:green;">**App.axaml** file. The data template registration looks like this:
+In this step you will be using the view locator class (**ViewLocator.cs** file) that was added to the project by the solution template. This class was registered (by the solution template) as a data template at the highest level in the app in the **App.axaml** file. The data template registration looks like this:
 
 ```
 <Application ...

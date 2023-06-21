@@ -13,7 +13,7 @@ When you are develop with _Avalonia UI_ and the MVVM pattern, the solution templ
 The first step in linking the view and view model is to make the view model able to accept a command. You will achieve this by adding the .NET `ICommand` interface to the main window, and then implementing it with a _ReactiveUI_ `ReactiveCommand`. Follow this procedure:
 
 * [ ] Stop the app if it is still running.
-* [ ] Locate and open the **MainWindowViewModel.cs**</mark> file in the <mark style="color:green;">**/ViewModels** folder.
+* [ ] Locate and open the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
 * [ ] Delete the existing content of the class, and add the code shown:
 
 ```csharp

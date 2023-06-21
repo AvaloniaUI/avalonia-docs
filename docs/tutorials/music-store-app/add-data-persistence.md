@@ -13,7 +13,7 @@ As a welcome side-effect, this will also activate the album cover cache - so tha
 Follow this procedure to add persistence services (save and load) to the album model:
 
 * [ ] Stop the app if it is running.
-* [ ] Locate and open the **Album.cs**</mark> file in the <mark style="color:green;">**/Models** folder.
+* [ ] Locate and open the **Album.cs** file in the **/Models** folder.
 * [ ] Add the code to implement save to disk, as shown:
 
 ```csharp
@@ -138,7 +138,7 @@ BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 * [ ] Click **Buy Album**.
 * [ ] Repeat another time for a different album.
 
-You will not see any difference in the app yet. But you can check to see that the persistence files are being written. To do this open the project location and browse to the **/bin/Debug**</mark> folder. Open the folder for your .NET version, and you will find the <mark style="color:green;">**/Cache** folder there. You will see two cache files for each of the albums that you just selected.
+You will not see any difference in the app yet. But you can check to see that the persistence files are being written. To do this open the project location and browse to the **/bin/Debug** folder. Open the folder for your .NET version, and you will find the **/Cache** folder there. You will see two cache files for each of the albums that you just selected.
 
 ## Bitmap Cache Activated
 
@@ -147,7 +147,7 @@ Notice that because the `SaveToDiskAsync` method writes both the JSON data and t
 To show that the bitmap loading cache is now in operation, follow this procedure:
 
 * [ ] Stop the app if it is running.
-* [ ] Locate and open the **Album.cs**</mark> file in the <mark style="color:green;">**/Models** folder.&#x20;
+* [ ] Locate and open the **Album.cs** file in the **/Models** folder.&#x20;
 * [ ] Check to see that there is still a debug breakpoint in the `LoadCoverBitmapAsync` method at this line:
 
 ```csharp

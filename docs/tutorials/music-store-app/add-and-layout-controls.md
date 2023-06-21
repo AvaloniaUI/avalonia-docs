@@ -13,7 +13,7 @@ On this page you will learn how to layout the main window so that the button app
 To display a button in the content zone of the main window, follow this procedure:
 
 * [ ] Stop the app if it is still running.
-* [ ] Locate and open the <mark style="color:green;">**MainWindow.axaml**</mark> file.
+* [ ] Locate and open the **MainWindow.axaml** file.
 * [ ] Inside the panel element, add the following XAML for a button. The panel XAML should look like this:&#x20;
 
 ```markup
@@ -32,7 +32,7 @@ To display a button in the content zone of the main window, follow this procedur
 </Panel>
 ```
 
-* [ ] Click <mark style="color:green;">**Debug**</mark> to compile and run the project.
+* [ ] Click **Debug** to compile and run the project.
 
 ![](images/buy-button.png)
 
@@ -75,12 +75,12 @@ To use the Microsoft Store icon, follow this procedure:&#x20;
 
 * [ ] Copy all of the code for the icon.
 * [ ] In the _Rider s_olution explorer, right-click the project.
-* [ ] Click <mark style="color:green;">**Add**</mark>, then click  <mark style="color:green;">**Avalonia Styles**</mark>
+* [ ] Click **Add**, then click  **Avalonia Styles**
 
 ![](images/add-styles.png)
 
-* [ ] Enter the <mark style="color:green;">**Name**</mark> 'Icons', press enter.
-* [ ] Locate and open the new <mark style="color:green;">**Icons.axaml**</mark> file that is created. The XAML will look like this:
+* [ ] Enter the **Name** 'Icons', press enter.
+* [ ] Locate and open the new **Icons.axaml** file that is created. The XAML will look like this:
 
 ```markup
 <Styles xmlns="https://github.com/avaloniaui"
@@ -123,7 +123,7 @@ With a new icons file prepared, you must now include it in your app.
 
 Follow this procedure to include the icons file:
 
-* [ ] Locate and open the <mark style="color:green;">**App.axaml**</mark> file.
+* [ ] Locate and open the **App.axaml** file.
 * [ ] Add a `<StyleInclude>` element as shown:
 
 ```markup
@@ -137,7 +137,7 @@ You need to build the application so that the icons become available to the prev
 
 To change the button from text to icon content, follow this procedure:
 
-* [ ] Locate and open the <mark style="color:green;">**MainWindow.axaml**</mark> file.
+* [ ] Locate and open the **MainWindow.axaml** file.
 * [ ] Alter the XAML for the button, as shown:
 
 ```markup
@@ -146,7 +146,7 @@ To change the button from text to icon content, follow this procedure:
 </Button>
 ```
 
-* [ ] Click <mark style="color:green;">**Debug**</mark> to compile and run the project.
+* [ ] Click **Debug** to compile and run the project.
 
 ![](images/pretty-button.png)
 

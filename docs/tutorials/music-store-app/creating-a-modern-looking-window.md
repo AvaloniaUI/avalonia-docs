@@ -18,11 +18,11 @@ Follow this procedure to style the main window in 'dark' mode:
 <FluentTheme Mode="Dark"/>
 ```
 
-* [ ] Now locate and open the **MainWindow.axaml**</mark> file in the <mark style="color:green;">**/Views** folder.
+* [ ] Now locate and open the **MainWindow.axaml** file in the **/Views** folder.
 
 Notice that the preview pane is still showing the window in 'light' mode. The application will require a rebuild for the new mode to show in the preview pane.
 
-* [ ] Click **Build Startup Project**</mark> on the <mark style="color:green;">**Build** menu.
+* [ ] Click **Build Startup Project** on the **Build** menu.
 
 The preview pane now changes to the dark mode.
 
@@ -32,7 +32,7 @@ The preview pane now changes to the dark mode.
 
 Follow this procedure to style the background of the main window with an acrylic blur:
 
-* [ ] Locate and open the **MainWindow.axaml**</mark> file in the <mark style="color:green;">**/Views** folder.
+* [ ] Locate and open the **MainWindow.axaml** file in the **/Views** folder.
 * [ ] Find the end of the opening tag of the `<Window>` element.&#x20;
 * [ ] After the `Title="Avalonia.MusicStore"` attribute, add two new attributes as follows:
 

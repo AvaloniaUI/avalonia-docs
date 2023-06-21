@@ -25,7 +25,7 @@ This is a common pattern of UI Composition, to read about this concept, see [her
 Follow this procedure to add the user control and constituent controls for the dialog:
 
 * [ ] Stop the app if it is still running.
-* [ ] In the solution explorer, right-click the **/Views**</mark> folder and then click <mark style="color:green;">**Add**. &#x20;
+* [ ] In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
 * [ ] Click **Avalonia User Control**.
 * [ ] When prompted for the name, type 'MusicStoreView'.
 * [ ] Press enter.
