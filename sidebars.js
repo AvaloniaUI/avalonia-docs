@@ -93,6 +93,10 @@ const sidebars = {
     {
       'type': 'category',
       'label': 'Basics',
+      'link': {
+        'type': 'doc',
+        'id': 'basics/index',
+      },
       'items': [
         {
           'type': 'category',
