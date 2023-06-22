@@ -12,5 +12,5 @@ You do not need any prior knowledge of _Avalonia UI_ or other XAML-based framewo
 Click <Highlight color="#25c2a0">**Next**</Highlight> (right-arrow) to get started.
 
 :::info
-If you are a more experienced user, you may want to extend your knowledge of _Avalonia UI_ instead, by using our Basics section [here](../basics) or one of the How-To Guides [here](../howtos).
+If you are a more experienced user, you may want to extend your knowledge of _Avalonia UI_ instead, by using our Basics section [here](../basics) or one of the How-To Guides [here](../guides).
 :::

@@ -63,7 +63,7 @@ Access the _Avalonia UI_ _GitHub_ [here](https://github.com/AvaloniaUI/Avalonia)
 We have an active developer community on _Gitter_ and _Telegram_ that can often help.
 
 :::info
-Connect to community support using the details [here](communications/community.md).
+Connect to community support using the details [here](community.md).
 :::
 
 In addition to community support, we offer a range of commercial support plans that provide priority assistance from the core contributors.

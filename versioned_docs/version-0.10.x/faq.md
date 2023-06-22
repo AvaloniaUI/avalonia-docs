@@ -33,7 +33,7 @@ Its early days and not ready for production , but yes you can. Avalonia now supp
 
 ### How can I get involved?
 
-Check out the [community guide](community.md) to see how you can get involved with the project.
+Check out the [community guide](community) to see how you can get involved with the project.
 
 ### What Linux Distros are supported?
 
