@@ -15,7 +15,7 @@ Click is one of many button events, for a full list see [here](http://reference.
 A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.&#x20;
 
 :::info
-For guidance on how to bind to a command, see [here](broken-reference).
+For guidance on how to bind to a command, see [here](../../../basics/user-interface/adding-interactivity).
 :::
 
 ## Useful Properties

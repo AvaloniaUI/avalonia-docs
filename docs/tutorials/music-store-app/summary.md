@@ -24,4 +24,4 @@ To learn more about targeting applications for Android mobile devices, see [here
 
 ## Further Reading
 
-For a full list of the _Avalonia UI_ tutorials, see [here](broken-reference).
+For a full list of the _Avalonia UI_ tutorials, see [here](..).

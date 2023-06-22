@@ -147,7 +147,7 @@ Pros:
 * No additional object is allocated per-instance for the property
 * Property getter is a standard C# property getter
 * Property setter is a standard C# property setter that raises an event.
-* You can add [data validation](broken-reference) support
+* You can add [data validation](../../guides/development-guides/data-validation.md) support
 
 Cons:
 

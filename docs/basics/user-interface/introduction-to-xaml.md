@@ -118,7 +118,7 @@ For example, this XAML adds a button to the content of a window:
 ```
 
 :::info
-For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](../reference/controls/).&#x20;
+For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](/reference/controls/).&#x20;
 :::
 
 ## Control Attributes <a href="#setting-properties" id="setting-properties"></a>
@@ -167,5 +167,5 @@ For further information about the concept behind data binding, see [here](data-b
 Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.&#x20;
 
 :::info
-For guidance about programming using code-behind files, see [here](../guides/implementation-guides/code-behind.md).
+For guidance about programming using code-behind files, see [here](code-behind.md).
 :::

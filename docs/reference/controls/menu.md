@@ -82,7 +82,7 @@ To initiate an action, the command property of a menu item can be bound to an `I
 ```
 
 :::info
-For guidance on how to bind to commands, see [here](broken-reference).
+For guidance on how to bind to commands, see [here](../../basics/user-interface/adding-interactivity.md).
 :::
 
 ## Menu Icons <a href="#menu-icons" id="menu-icons"></a>
