@@ -204,6 +204,10 @@ const sidebars = {
         {
           'type': 'category',
           'label': 'Services',
+          'link': {
+            'type': 'doc',
+            'id': 'basics/services/index',
+          },
           'items': [
             'basics/services/storage-provider',
             'basics/services/clipboard',

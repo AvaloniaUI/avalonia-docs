@@ -3,8 +3,6 @@ id: index
 title: Services
 ---
 
-# Services
-
 This section will introduce you to the services inlcuded in an application.
 
 ```mdx-code-block
