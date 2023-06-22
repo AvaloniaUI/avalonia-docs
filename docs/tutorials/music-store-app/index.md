@@ -2,7 +2,7 @@
 description: TUTORIALS
 ---
 
-# 🧑🎓 Music Store App
+# Music Store App
 
 In this tutorial you will create a desktop app based on the idea of a music store.  The app is highly graphical - it presents images of album covers, and uses semi-transparent 'acrylic' blurred window backgrounds to give a very up-to-date look. By the end of the tutorial, you will be able search the iTunes online list of albums, and select albums for your own list.
 
