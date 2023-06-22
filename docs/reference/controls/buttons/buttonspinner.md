@@ -20,7 +20,7 @@ You will probably use these properties most often:
 </ButtonSpinner>
 ```
 
-<!--![](<../../../.gitbook/assets/image (3) (3).png>)-->
+![](<../../../.gitbook/assets/image (3) (3).png>)
 
 ## More Information
 

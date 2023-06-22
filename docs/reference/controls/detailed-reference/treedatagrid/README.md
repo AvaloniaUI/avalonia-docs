@@ -23,19 +23,19 @@ The control has two modes of operation:
 
 This is an illustration of a tree data grid displaying hierarchical data:
 
-<!--![](../../../../.gitbook/assets/files.png)-->
+![](../../../../.gitbook/assets/files.png)
 
 ## Flat Data
 
 This is an illustration An example of  a tree data grid displaying flat data:
 
-<!--![](../../../../.gitbook/assets/countries.png)-->
+![](../../../../.gitbook/assets/countries.png)
 
 ## NuGet Package Reference
 
 You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use **Manage NuGet Packages** from the project menu of your IDE:
 
-<!--![](<../../../../.gitbook/assets/image (4).png>)-->
+![](<../../../../.gitbook/assets/image (4).png>)
 
 Alternatively,  you can run this instruction from the command line:
 
