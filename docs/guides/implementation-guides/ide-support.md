@@ -22,7 +22,7 @@ If your XAML is in a library, _Avalonia UI_ needs an executable application in o
 In some cases, due to bugs/limitations in Visual Studio, the Avalonia XAML designer is not shown and instead the WPF designer gets shown. If your XAML file is showing a lot of errors, try right-clicking the file then selecting "Open With..." → "Avalonia XAML Editor".
 :::
 
-## Design-Time Properties <a href="#design-time-properties" id="design-time-properties"></a>
+## Design-Time Properties
 
 There are a number of properties that can be applied to your controls which will take effect only at design-time. To use these you must add a namespace to your XAML file:
 
@@ -32,7 +32,7 @@ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 
 With the namespace added, the following design-time properties become available:
 
-### d:DesignWidth and d:DesignHeight <a href="#ddesignwidth-and-ddesignheight" id="ddesignwidth-and-ddesignheight"></a>
+### d:DesignWidth and d:DesignHeight
 
 The `d:DesignWidth` and `d:DesignHeight` properties apply a width and height to the control being previewed.
 
@@ -46,7 +46,7 @@ The `d:DesignWidth` and `d:DesignHeight` properties apply a width and height to 
 </Window>
 ```
 
-### d:DataContext <a href="#ddatacontext" id="ddatacontext"></a>
+### d:DataContext
 
 The `d:DataContext` property applies a `DataContext` only at design-time. It is recommended that you use this property in conjunction with the `{x:Static}` directive to reference a static property in one of your assemblies:
 
@@ -74,7 +74,7 @@ namespace My.Namespace
 }
 ```
 
-### Design.DataContext <a href="#design.datacontext" id="design.datacontext"></a>
+### Design.DataContext
 
 Alternatively you can use `Design.DataContext` attached property. As well as `Design.Width` and `Design.Height`.
 
@@ -92,7 +92,7 @@ Alternatively you can use `Design.DataContext` attached property. As well as `De
 </Window>
 ```
 
-## Diagnosing Errors <a href="#diagnosing-errors" id="diagnosing-errors"></a>
+## Diagnosing Errors
 
 If you're having problems, try enabling verbose logging. To do this in Visual Studio, follow this procedure:
 

@@ -6,7 +6,7 @@ description: TUTORIALS - Music Store App
 
 On this page, you will learn how to retrieve the cover art bitmap for each album in the search results. You will then be able to display the image on each album tile view instead of the placeholder note icon.&#x20;
 
-## Album Service <a href="#displaying-album-cover-images" id="displaying-album-cover-images"></a>
+## Album Service
 
 Your first step is to modify the business service to retrieve the album cover art from the _Apple iTunes_ Web API.
 

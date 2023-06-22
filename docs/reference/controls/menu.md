@@ -69,7 +69,7 @@ You will see that accelerator keys, where defined, are underlined on the menu as
 
 Once keyboard interaction has been initiated with the Alt key, the user can also navigate the menus using the keyboard arrow keys. Menu items may be selected using the Enter key on the keyboard.
 
-## Menu Commands <a href="#menu-commands" id="menu-commands"></a>
+## Menu Commands
 
 To initiate an action, the command property of a menu item can be bound to an `ICommand` object. The command will be executed when the menu item is clicked or selected with the keyboard. For example:
 
@@ -85,7 +85,7 @@ To initiate an action, the command property of a menu item can be bound to an `I
 For guidance on how to bind to commands, see [here](../../basics/user-interface/adding-interactivity.md).
 :::
 
-## Menu Icons <a href="#menu-icons" id="menu-icons"></a>
+## Menu Icons
 
 A menu icon can be displayed by placing an image or a path icon in the `<MenuItem.Icon>` attached property. For example:
 
@@ -109,7 +109,7 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 For more detailed guidance on how to add icons to your menus, see [here](../../guides/graphics-and-animation/how-to-add-menu-icons.md).
 :::
 
-## More Information <a href="#dynamically-creating-menus" id="dynamically-creating-menus"></a>
+## More Information
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Menu/).

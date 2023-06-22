@@ -108,7 +108,7 @@ Using full expanded XAML, this is the same as:
 </Grid>
 ```
 
-## Drawing Rules <a href="#examples" id="examples"></a>
+## Drawing Rules
 
 When calculating sizes, any proportional columns are made to fit in the space left after the absolute and automatic values have been calculated.&#x20;
 
@@ -122,7 +122,7 @@ Child controls are drawn in their assigned grid cells in the sequence they appea
 
 When a child control has its own dimensions , and is smaller than its assigned cell, it will be drawn aligned in the cell according to its horizontal and vertical alignment properties (both are centered by default).&#x20;
 
-## Example <a href="#examples" id="examples"></a>
+## Example
 
 This example shows:
 

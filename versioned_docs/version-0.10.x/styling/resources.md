@@ -5,7 +5,7 @@ title: Resources
 
 Often, styles and controls will need to share resources such as \(but not limited to\) brushes and colors. You can put such resources in the `Resources` dictionary which is available on every style and control and then refer to these resources elsewhere.
 
-## Declaring resources <a id="declaring-resources"></a>
+## Declaring resources
 
 If a resource is to be available to your entire application, you can define it in `App.xaml`/`App.axaml`:
 
@@ -55,7 +55,7 @@ You can also declare resources on styles:
 </Style>
 ```
 
-## Referencing resources <a id="referencing-resources"></a>
+## Referencing resources
 
 You can references resources from controls using the `{DynamicResource}` markup extensions, e.g.:
 
@@ -72,7 +72,7 @@ Alternatively there is the `StaticResource` markup extension which has a few lim
 
 In return, `StaticResource` doesn't need to add an event handler to listen for changes in resources which means it uses slightly less memory.
 
-## Overriding resources <a id="overriding-resources"></a>
+## Overriding resources
 
 Resources are resolved by walking up the logical tree from the point of the `DynamicResource` or `StaticResource` until a resource with the requested key is found. This means that resources can be "overridden" in sub-trees of the application, for example:
 
@@ -98,7 +98,7 @@ Resources are resolved by walking up the logical tree from the point of the `Dyn
 
 Here's the `Border`'s background will be `Orange` because its parent `StackPanel` has "overridden" the `Warning` resource from the `Yellow` declared on the `UserControl`.
 
-## Merged resource dictionaries <a id="merged-resource-dictionaries"></a>
+## Merged resource dictionaries
 
 The `Resources` property on each control and style is of type `ResourceDictionary`. Resource dictionaries can also include other resource dictionaries by making use of the `MergedDictionaries` property. To include a resource dictionary in another you can use the `ResourceInclude` class, e.g.:
 
@@ -115,7 +115,7 @@ The `Resources` property on each control and style is of type `ResourceDictionar
 
 Where `AnotherResourceDictionary` is a XAML file with a root of `ResourceDictionary` and is included as an [asset](../getting-started/assets.md) in the application.
 
-## Resource resolution <a id="resource-resolution"></a>
+## Resource resolution
 
 As mentioned above, resources are resolved by walking up the logical tree from the point of the `DynamicResource` or `StaticResource` until a resource with the requested key is found. However the presence of styles and merged dictionaries complicates this somewhat. The precedence is as follows:
 
@@ -153,6 +153,6 @@ Window
      |- Border
 ```
 
-## Theme resources <a id="theme-resources"></a>
+## Theme resources
 
 Themes will usually define brushes, colors and other settings as resources. By changing these resources one can e.g. switch from a dark to a light theme. The resources defined will usually be specific to the theme in use but you can see the resources defined by the default theme [here](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Default/Accents/BaseLight.xaml).

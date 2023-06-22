@@ -68,7 +68,7 @@ For example:
 </Application>
 ```
 
-## Useful Properties <a href="#common-properties" id="common-properties"></a>
+## Useful Properties
 
 You will probably use these properties most often:
 

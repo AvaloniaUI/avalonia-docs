@@ -6,7 +6,7 @@ description: TUTORIALS - To Do List App
 
 On this page you will learn how to create a new project for the to do list app.
 
-## Visual Studio <a href="#visual-studio" id="visual-studio"></a>
+## Visual Studio
 
 Before you start, check you have installed the _Avalonia UI_ extension for Visual Studio.
 
@@ -35,7 +35,7 @@ The newly created solution will look like this:
   <img src="/img/gitbook-import/assets/image (3) (1) (1).png" alt=""/>
 </div>
 
-## .NET Core CLI <a href="#net-core-cli" id="net-core-cli"></a>
+## .NET Core CLI
 
 Before you start, check you have installed the _Avalonia UI_ templates for .NET Core.
 

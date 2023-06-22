@@ -2,7 +2,7 @@
 
 For better UX, your app should be capable of saving state to the disk when the app is suspending and of restoring state when the app is resuming. [ReactiveUI](https://reactiveui.net/) provides facilities allowing you to persist application state by serializing the view model tree when the app is shutting down or suspending. In this tutorial we are going to look through the capabilities of ReactiveUI that help us manage the state which outlives the process.
 
-### Annotating The ViewModel <a id="annotating-the-viewmodel"></a>
+### Annotating The ViewModel
 
 View model serialization is a tricky business. We have to decide, which properties of the view model to save on application shutdown and which ones to recreate. Taking our typical search screen view model, we definitely want to save and restore the search query, so we annotate the public property with the `[DataMember]` attribute. We don't want to save the state of the commands to the disk, so we mark the command with the `[IgnoreDataMember]` attribute. These attributes are available in the standard library, but one can easily use other annotations, for example, `[JsonProperty]` or `[JsonIgnore]`.
 
@@ -37,7 +37,7 @@ public class MainViewModel : ReactiveObject
 
 There is no need to save the state of a [reactive command](https://reactiveui.net/docs/handbook/commands/) which implements the `ICommand` interface. `ReactiveCommand<TIn, TOut>` class is typically initialized in the constructor, its `CanExecute` indicator usually fully depends on view model properties and gets recalculated each time any of those properties change.
 
-### Creating The View <a id="creating-the-view"></a>
+### Creating The View
 
 Next, we modify the `MainWindow` class to follow the standard ReactiveUI pattern.
 
@@ -65,7 +65,7 @@ The XAML of our `ReactiveWindow` will look like as follows:
 </Window>
 ```
 
-### Creating The Suspension Driver <a id="creating-the-suspension-driver"></a>
+### Creating The Suspension Driver
 
 Here we provide the implementation that uses `Newtonsoft.Json` and saves the application state to a plain text file.
 
@@ -103,7 +103,7 @@ public class NewtonsoftJsonSuspensionDriver : ISuspensionDriver
 }
 ```
 
-### Wiring The Things Together <a id="wiring-the-things-together"></a>
+### Wiring The Things Together
 
 On the final step, we initialize the `AutoSuspendHelper`, following the [new Avalonia lifetimes pattern](https://github.com/AvaloniaUI/Avalonia/wiki/Application-lifetimes). In the `App.xaml.cs` file we create an override for the `OnFrameworkInitializationCompleted` method and initialize the variables required for the suspension feature to work fine.
 

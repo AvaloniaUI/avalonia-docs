@@ -33,7 +33,7 @@ DatePicker birthDatePicker = new DatePicker();
 
 </Tabs>
 
-## Remarks <a id="remarks"></a>
+## Remarks
 
 Use a `DatePicker` to let a user enter a date value. The user picks the date using [ComboBox](combobox.md) selection for month, day, and year values. You can customize the `DatePicker` in various ways to suit your app.
 
@@ -41,13 +41,13 @@ Use a `DatePicker` to let a user enter a date value. The user picks the date usi
     <img src="/img/controls/datepicker/selected-date.png" alt="A date picker with a date selected." />
   </div>
 
-### Formatting the date picker <a id="formatting-the-date-picker"></a>
+### Formatting the date picker
 
 By default, the date picker shows the day, month, and year. If your scenario for the date picker doesn't require all the fields, you can hide the ones you don't need. To hide a field, set its corresponding \_field\_Visible property to `false`. For more info, see the `DayVisible`, `MonthVisible`, and `YearVisible` properties.
 
 The string content of each `ComboBox` in the `DatePicker` is created by a `DateTimeFormatter`. You can use a string that is either a _format template_ or a _format pattern_ to specify the format. For more info, see the `DayFormat`, `MonthFormat`, and `YearFormat` properties.
 
-### Date values <a id="date-values"></a>
+### Date values
 
 The date picker control has both `Date` / `DateChanged` and `SelectedDate` / `SelectedDateChanged` APIs. The difference between these is that `Date` is not nullable, while `SelectedDate` is nullable.
 
@@ -73,10 +73,10 @@ This example demonstrates setting the
 myDatePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
 ```
 
-## Reference <a id="reference"></a>
+## Reference
 
 [DatePicker](http://reference.avaloniaui.net/api/Avalonia.Controls/DatePicker/)
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [DatePicker.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)

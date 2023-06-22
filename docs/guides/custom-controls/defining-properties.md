@@ -16,7 +16,7 @@ On this page, you will see how to implement a property so that it can be changed
 * Register a styled property.
 * Provide the getter/setter for the property.
 
-### Register a Styled Property <a href="#registering-styled-properties" id="registering-styled-properties"></a>
+### Register a Styled Property
 
 You register a styled property by defining a static read-only field and using the `AvaloniaProperty.Register` method.
 

@@ -8,7 +8,7 @@ title: How To Bind from Code
 
 Binding from code in Avalonia works somewhat differently to WPF/UWP. At the low level, Avalonia's binding system is based on Reactive Extensions' `IObservable` which is then built upon by XAML bindings (which can also be instantiated in code).
 
-## Subscribing to Changes to a Property <a href="#subscribing-to-changes-to-a-property" id="subscribing-to-changes-to-a-property"></a>
+## Subscribing to Changes to a Property
 
 You can subscribe to changes on a property by calling the `GetObservable` method. This returns an `IObservable<T>` which can be used to listen for changes to the property:
 
@@ -33,7 +33,7 @@ When the returned observable is subscribed, it will return the current value of 
 var text = textBlock.GetObservable(TextBlock.TextProperty).Skip(1);
 ```
 
-## Binding to an observable <a href="#binding-to-an-observable" id="binding-to-an-observable"></a>
+## Binding to an observable
 
 You can bind a property to an observable using the `AvaloniaObject.Bind` method:
 
@@ -56,7 +56,7 @@ subscription.Dispose();
 
 Notice that the `Bind` method returns an `IDisposable` which can be used to terminate the binding. If you never call this, then then binding will automatically terminate when the observable finishes via `OnCompleted` or `OnError`.
 
-## Setting a binding in an object initializer <a href="#setting-a-binding-in-an-object-initializer" id="setting-a-binding-in-an-object-initializer"></a>
+## Setting a binding in an object initializer
 
 It is often useful to set up bindings in object initializers. You can do this using the indexer:
 
@@ -90,7 +90,7 @@ textBlock2[!TextBlock.TextProperty] = textBlock1[!TextBlock.TextProperty];
 
 The only downside of this syntax is that no `IDisposable` is returned. If you need to manually terminate the binding then you should use the `Bind` method.
 
-## Transforming binding values <a href="#transforming-binding-values" id="transforming-binding-values"></a>
+## Transforming binding values
 
 Because we're working with observables, we can easily transform the values we're binding!
 
@@ -104,7 +104,7 @@ var textBlock = new TextBlock
 };
 ```
 
-## Using XAML bindings from code <a href="#using-xaml-bindings-from-code" id="using-xaml-bindings-from-code"></a>
+## Using XAML bindings from code
 
 Sometimes when you want the additional features that XAML bindings provide, it's easier to use XAML bindings from code. For example, using only observables you could bind to a property on `DataContext` like this:
 
@@ -134,7 +134,7 @@ var subscription = textBlock.Bind(TextBlock.TextProperty, new Binding("Name"));
 subscription.Dispose();
 ```
 
-## Subscribing to a Property on Any Object <a href="#subscribing-to-a-property-on-any-object" id="subscribing-to-a-property-on-any-object"></a>
+## Subscribing to a Property on Any Object
 
 The `GetObservable` method returns an observable that tracks changes to a property on a single instance. However, if you're writing a control you may want to implement an `OnPropertyChanged` method which isn't tied to an instance of an object.
 

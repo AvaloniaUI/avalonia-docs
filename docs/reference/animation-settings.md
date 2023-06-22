@@ -15,7 +15,7 @@ This section contains full lists of the _Avalonia UI_ animation settings:
 
 <table><thead><tr><th width="216">Profile</th><th>Setting</th></tr></thead><tbody><tr><td><img src='/img/gitbook-import/assets/image (67).png' alt=''/></td><td><code>SineEaseOut</code></td></tr></tbody></table>
 
-## Fill Modes <a href="#playback-direction" id="playback-direction"></a>
+## Fill Modes
 
 The fill mode attribute of an animation defines how the set property persists after running an animation, and on delays in between runs.
 
@@ -36,7 +36,7 @@ Playback direction defines how the animation will be played, including any repea
 
 <table><thead><tr><th width="229">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>Normal</code></td><td>The animation is played normally.</td></tr><tr><td><code>Reverse</code></td><td>The animation is played in reverse direction.</td></tr><tr><td><code>Alternate</code></td><td>The animation is played forwards first, then backwards.</td></tr><tr><td><code>AlternateReverse</code></td><td>The animation is played backwards first, then forwards.</td></tr></tbody></table>
 
-## Repeat <a href="#value-fill-modes" id="value-fill-modes"></a>
+## Repeat
 
 The repeat attribute on an animation element sets how many times it is to be replayed. There are two formats for this setting:
 

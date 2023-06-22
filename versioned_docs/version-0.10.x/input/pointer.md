@@ -38,7 +38,7 @@ Each control also has special gesture events: Tapped and DoubleTapped.
 Tapped is raised, when pointer was pressed on the control and then released. 
 While DoubleTapped is raised after pointer was pressed twice on the same place. Allowed size (distance between first and second "tap") and time (delay between them) depend on the platform and usually is bigger for the touch devices. 
 
-### Reference <a id="reference"></a>
+### Reference
 
 [Control](http://reference.avaloniaui.net/api/Avalonia.Controls/Control/)
 [PointerEventArgs](http://reference.avaloniaui.net/api/Avalonia.Input/PointerEventArgs/)

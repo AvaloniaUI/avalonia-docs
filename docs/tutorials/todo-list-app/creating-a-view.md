@@ -10,7 +10,7 @@ To get the tutorial started, you will use hard-coded data for the list items. La
 
 In _Avalonia UI_, the UI element corresponding to a MVVM view can be either a window or a user control. This new view will be user control, and later you will use the main window to display it.
 
-### Visual Studio <a href="#visual-studio" id="visual-studio"></a>
+### Visual Studio
 
 Follow these instructions to add a new user control:
 
@@ -28,7 +28,7 @@ Run the following command from the root folder of your project, that is the fold
 dotnet new avalonia.usercontrol -o Views -n ToDoListView  --namespace ToDoList.Views
 ```
 
-### The User Control <a href="#the-usercontrol" id="the-usercontrol"></a>
+### The User Control
 
 You will see the new AXAML file created in the `/Views` folder
 
@@ -62,7 +62,7 @@ namespace ToDoList.Views
 
 You are not going to change the code-behind file in this tutorial, but notice that the user control class is called `ToDoListView` and it is located in the `ToDoList.Views` namespace.
 
-### Resize the Preview Pane <a href="#edit-the-usercontrol" id="edit-the-usercontrol"></a>
+### Resize the Preview Pane
 
 To make the design-time preview look more like a mobile phone in portrait orientation, locate the design-time width and height properties for the user control and set them as shown:
 
@@ -75,7 +75,7 @@ To make the design-time preview look more like a mobile phone in portrait orient
 
 Repeat the process with the main window.&#x20;
 
-### Edit the User Control <a href="#edit-the-usercontrol" id="edit-the-usercontrol"></a>
+### Edit the User Control
 
 Edit the contents of `Views/TodoListView.axaml` to contain the following:
 

@@ -51,7 +51,7 @@ For example:
 </Application.Styles>
 ```
 
-## Useful Properties <a href="#common-properties" id="common-properties"></a>
+## Useful Properties
 
 You will probably use these properties most often:
 
@@ -64,7 +64,7 @@ You will probably use these properties most often:
 | `CanUserResizeColumns`  | Indicates whether the user can adjust column widths using the pointer. (Default is false.)                                      |
 | `CanUserSortColumns`    | Indicates whether the user can sort columns by clicking the column header. (Default is true.)                                   |
 
-## Examples <a href="#examples" id="examples"></a>
+## Examples
 
 This example will generate a basic data grid, with column header names auto-generated from the item class. The items data source is bound to the main window view model.&#x20;
 
@@ -209,7 +209,7 @@ public class Person
 
 <img src='/img/gitbook-import/assets/grid3.gif' alt=''/>
 
-## More Information <a href="#common-properties" id="common-properties"></a>
+## More Information
 
 :::info
 For more information about the different kinds of data grid column, see the [next page](datagridcolumns.md).

@@ -13,7 +13,7 @@ These pages will introduce you to how XAML is used specifically in _Avalonia UI_
 * Microsoft XAML documentation for UWP, see [here](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview).
 :::
 
-## AXAML File Extension <a href="#xaml-or-axaml-file" id="xaml-or-axaml-file"></a>
+## AXAML File Extension
 
 The file extension for XAML files used elsewhere is `.xaml` but due to technical issues integrating with Visual Studio, _Avalonia UI_ uses its own `.axaml` extension - 'Avalonia XAML'.&#x20;
 
@@ -21,7 +21,7 @@ The file extension for XAML files used elsewhere is `.xaml` but due to technical
 From _Avalonia UI_ version 0.9.11 all XAML files created in Visual Studio have the `.axaml` extension; and from version 0.10 all _Avalonia UI_ templates create files using the `.axaml` extension.
 :::
 
-## File Format <a href="#format-of-an-avalonia-xaml-file" id="format-of-an-avalonia-xaml-file"></a>
+## File Format
 
 A typical Avalonia XAML file looks like this:
 
@@ -100,7 +100,7 @@ There is an alternative prefix `using:` that you can use to reference code in th
 xmlns:myAlias3="using:MyNamespace.AppNameSpace.UI"
 ```
 
-## Control Elements <a href="#declaring-controls" id="declaring-controls"></a>
+## Control Elements
 
 You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.&#x20;
 
@@ -121,7 +121,7 @@ For example, this XAML adds a button to the content of a window:
 For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](../../reference/controls).&#x20;
 :::
 
-## Control Attributes <a href="#setting-properties" id="setting-properties"></a>
+## Control Attributes
 
 The XML elements that represent controls have attributes corresponding to control properties that can be set. You can set a control property by adding an attribute to an element.&#x20;
 
@@ -134,7 +134,7 @@ For example, to specify a blue background for a button control, you add the `Bac
 </Window>
 ```
 
-## Control Content <a href="#content-properties" id="content-properties"></a>
+## Control Content
 
 You might have noticed that the button in the above sample has its content (the 'Hello World' string) placed between its opening and closing tags. As an alternative, you can set the content attribute, as follows:
 
@@ -147,7 +147,7 @@ You might have noticed that the button in the above sample has its content (the 
 
 This behaviour is specific to the content of an _Avalonia UI_ control.
 
-## Data Binding <a href="#binding" id="binding"></a>
+## Data Binding
 
 You will often use the _Avalonia UI_ binding system to link a control property to an underlying object. The link is declared using the `{Binding}` mark-up extension. For example:
 
@@ -162,7 +162,7 @@ You will often use the _Avalonia UI_ binding system to link a control property t
 For further information about the concept behind data binding, see [here](../data/data-binding).
 :::
 
-## Code-behind Files <a href="#code-behind" id="code-behind"></a>
+## Code-behind Files
 
 Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.&#x20;
 

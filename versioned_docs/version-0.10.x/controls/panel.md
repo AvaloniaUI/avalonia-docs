@@ -30,11 +30,11 @@ There are other more useful panels that derive from `Panel`, these include:
 
 [WrapPanel](./wrappanel)
 
-### Reference <a id="reference"></a>
+### Reference
 
 [Panel](http://reference.avaloniaui.net/api/Avalonia.Controls/Panel/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [Panel.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Panel.cs)
 

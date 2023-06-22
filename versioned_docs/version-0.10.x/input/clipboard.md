@@ -28,11 +28,11 @@ var storedPerson = (Person) await clipboard.GetDataAsync("my-app-person");
 
 Objects are stored and retrieved with a format string that should be unique to your Application and object type.
 
-### Reference <a id="reference"></a>
+### Reference
 
 [IClipboard](http://reference.avaloniaui.net/api/Avalonia.Input.Platform/IClipboard/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 - [IClipboard.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Input/Platform/IClipboard.cs)
 - [Avalonia.Win32/ClipboardImpl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Windows/Avalonia.Win32/ClipboardImpl.cs)

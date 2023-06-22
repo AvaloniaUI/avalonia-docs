@@ -12,7 +12,7 @@ The items repeater is a port of the UWP `ItemsRepeater` control. For further inf
 
 The default layout template is a vertical stack layout, so that items appear in a vertical list.
 
-## Example <a href="#examples" id="examples"></a>
+## Example
 
 This example binds an observable collection of crockery items to an items repeater control, where some custom layout and formatting for each item is provided by the data template:&#x20;
 

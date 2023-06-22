@@ -31,7 +31,7 @@ You must reference a custom converter in some resources before it can be used. T
 </Window>
 ```
 
-## Example <a href="#built-in-converters" id="built-in-converters"></a>
+## Example
 
 This example data binding converter can convert text to specific case from a parameter:
 

@@ -11,7 +11,7 @@ The items to display in the `ListBox` are specified using the `Items` property. 
 <ListBox Items="{Binding MyItems}"/>
 ```
 
-## Customizing the item display <a id="customizing-the-item-display"></a>
+## Customizing the item display
 
 You can customize how an item is displayed by specifying an `ItemTemplate`. For example to display each item inside a red border with rounded corners:
 
@@ -27,7 +27,7 @@ You can customize how an item is displayed by specifying an `ItemTemplate`. For 
 </ListBox>
 ```
 
-## Containers <a id="containers"></a>
+## Containers
 
 Each item displayed in a `ListBox` will be wrapped in a `ListBoxItem` - this is called the _container_. The container hosts the content specified in the `ItemTemplate` but it is not part of the `ItemTemplate` itself. It is the container that contains the logic for displaying selected items.
 
@@ -47,13 +47,13 @@ Sometimes you will want to customize the container itself. You can do this by in
 
 In WPF and UWP this is done via the `ItemContainerStyle` - this property does not exist in Avalonia; you should use the method outlined above.
 
-## Selection <a id="selection"></a>
+## Selection
 
 There are several properties related to selection on `ListBox`:
 
 It is recommended that you only bind one of the `SelectedIndex`, `SelectedItem`, `SelectedItems` or `Selection` properties.
 
-### SelectionMode <a id="selectionmode"></a>
+### SelectionMode
 
 Controls the type of selection that can be made on the `ListBox`:
 
@@ -70,7 +70,7 @@ These values can be combined, e.g.:
 <ListBox SelectionMode="Multiple,Toggle"/>
 ```
 
-### SelectedIndex <a id="selectedindex"></a>
+### SelectedIndex
 
 Exposes the index of the selected item, or in the case of multiple selection the first selected item. You will often want to bind this to a view model if your list `SelectionMode` is set to `Single`.
 
@@ -93,7 +93,7 @@ public MyViewModel : ReactiveObject
 
 By default bindings to this property are two-way.
 
-### SelectedItem <a id="selecteditem"></a>
+### SelectedItem
 
 Exposes the selected item in the `Items` collection, or in the case of multiple selection the first selected item. You will often want to bind this to a view model if your list `SelectionMode` is set to `Single`.
 
@@ -118,7 +118,7 @@ By default bindings to this property are two-way.
 
 Do not bind to this property if your `Items` collection contains duplicates as it is impossible to distinguish between duplicate values.
 
-### Selection <a id="selection-1"></a>
+### Selection
 
 The `Selection` property exposes an `ISelectionModel` object with various methods to track multiple selected items. You can create a `SelectionModel` object in your view model and bind it to this property and subsequently control the selection from your view model.
 
@@ -166,7 +166,7 @@ public class MyViewModel
 
 By default bindings to this property are one-way.
 
-### SelectedItems <a id="selecteditems"></a>
+### SelectedItems
 
 This property holds the selected items in an `IList`. It can be bound to any list that implements `IList` but it will usually be bound to a collection which also implements `INotifyCollectionChanged` such as `ObservableCollection<>`.
 
@@ -183,7 +183,7 @@ public MyViewModel : ReactiveObject
 }
 ```
 
-## Preventing Horizontal Scrolling <a id="preventing-horizontal-scrolling"></a>
+## Preventing Horizontal Scrolling
 
 By default if an item is too wide to display in the `ListBox`, a horizontal scrollbar will be displayed. If instead you want items to be constrained to the width of the `ListBox` \(for example if you want wrapping text in the items\) you can disable the horizontal scrollbar by setting `ScrollViewer.HorizontalScrollBarVisibility="Disabled"`.
 
@@ -199,6 +199,6 @@ By default if an item is too wide to display in the `ListBox`, a horizontal scro
 </ListBox>
 ```
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [ListBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ListBox.cs)

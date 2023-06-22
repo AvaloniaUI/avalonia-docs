@@ -3,7 +3,7 @@ info: creating-a-modern-looking-window
 title: Creating a Modern looking Window
 ---
 
-## Use Dark Mode and Add a little Acrylic <a id="use-dark-mode-and-add-a-little-acrylic"></a>
+## Use Dark Mode and Add a little Acrylic
 
 Let's try and make this look a little more modern by applying `Dark` mode and some `Acrylic` styling to the Window.
 

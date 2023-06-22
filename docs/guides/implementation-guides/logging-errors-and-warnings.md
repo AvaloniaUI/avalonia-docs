@@ -43,7 +43,7 @@ Log messages are then shown in the **Debug** view of the **Output** window of yo
 
 If you want to re-route these messages to different location, you can use the methods on the `System.Diagnostics.Trace` component.
 
-## Log Area <a href="#areas" id="areas"></a>
+## Log Area
 
 Each message from _Avalonia UI_ is assigned an area that can be used to filter the log. These are described by the members of `Avalonia.Logging.LogArea` static class:
 

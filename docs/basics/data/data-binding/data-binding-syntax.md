@@ -18,7 +18,7 @@ When there is more than one option parameter, the list is comma-separated.&#x20;
 
 <table><thead><tr><th width="222">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>Path</code></td><td>The data binding path.</td></tr><tr><td><code>Mode</code></td><td>One of the binding modes, see below.</td></tr><tr><td><code>StringFormat</code></td><td>A pattern showing how the value is to be formatted.</td></tr><tr><td><code>ElementName</code></td><td>Can be shortened by using # in the path.</td></tr><tr><td><code>Converter</code></td><td>A function that converts the value.</td></tr><tr><td><code>RelativeSource</code></td><td>Works on the visual tree instead of the logical tree.</td></tr></tbody></table>
 
-## Data Binding Path <a href="#binding-path" id="binding-path"></a>
+## Data Binding Path
 
 The first parameter is usually the path to the data source. This is an object in a data context that _Avalonia_ locates when it performs data binding.&#x20;
 
@@ -50,7 +50,7 @@ You can specify data binding without a path. This binds to the data context of t
 <TextBlock Text="{Binding .}"/>
 ```
 
-## Data Binding Mode <a href="#binding-modes" id="binding-modes"></a>
+## Data Binding Mode
 
 You can change how data is moved in a data binding by specifying the data binding mode.
 

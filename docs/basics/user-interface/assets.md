@@ -39,7 +39,7 @@ For guidance on how to use XAML resources in you application, see [here](../../g
 For more detail about .NET resources, see the _Microsoft_ documentation [here](https://docs.microsoft.com/en-us/visualstudio/ide/managing-application-resources-dotnet).
 :::
 
-### Referencing Included Assets <a href="#referencing-assets" id="referencing-assets"></a>
+### Referencing Included Assets
 
 Once asset files are included, they can be referenced as needed in the XAML that defines your UI. For example, these assets are referenced by specifying their relative path:
 
@@ -65,7 +65,7 @@ Assets can also be included in .NET applications by using the `<EmbeddedResource
 For more detail about manifest resources, see the _Microsoft_ documentation [here](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.assembly.getmanifestresourcenames).
 :::
 
-### Referencing Embedded Assets <a href="#referencing-assets" id="referencing-assets"></a>
+### Referencing Embedded Assets
 
 You reference manifest resources using the `resm:` URL scheme and a fully qualified path. For example:
 
@@ -104,7 +104,7 @@ Avalonia UI has built-in converters which can load assets for bitmaps, icons and
 * Window Icon - `WindowIcon` type
 * Font - `FontFamily` type
 
-### Loading Assets in Code <a href="#loading-assets-from-code" id="loading-assets-from-code"></a>
+### Loading Assets in Code
 
 You can write code to load assets using the `IAssetLoader` interface. For example:
 

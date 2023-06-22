@@ -54,7 +54,7 @@ Usage is identical to other XAML frameworks:
 </Window>
 ```
 
-### Built-in Converters <a href="built-in-converters" id="built-in-converters"></a>
+### Built-in Converters
 
 Avalonia supplies a number of built-in value converters for common scenarios:
 

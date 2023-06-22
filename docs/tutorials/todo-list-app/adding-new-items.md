@@ -8,7 +8,7 @@ When you created the `ToDoListView` user control earlier in this tutorial, you a
 
 When the user clicks the button, you want the application to show a new view that will allow the user to enter the description of a new item.
 
-## Create a New View <a href="#create-the-view" id="create-the-view"></a>
+## Create a New View
 
 To create the new view, follow this procedure if you are using Visual Studio:
 
@@ -52,7 +52,7 @@ The new view has a text box control which has three properties for you to review
 * `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you have not created yet).
 * `Watermark` causes a placeholder to be displayed when the text box is empty.
 
-## Create the View Model <a href="#create-the-view-model" id="create-the-view-model"></a>
+## Create the View Model
 
 So far, you have only bound a description property. So the corresponding view model can be simple to start with.
 

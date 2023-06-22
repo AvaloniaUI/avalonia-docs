@@ -21,7 +21,7 @@ MVVM solves this by abstracting the application logic into code-only classes tha
 To discover more about the background to the MVVM pattern, see the _Microsoft Patterns and Practices_ article [here](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/hh848246\(v=pandp.10\)).
 :::
 
-## When to use MVVM? <a href="#when-to-use-mvvm" id="when-to-use-mvvm"></a>
+## When to use MVVM?
 
 MVVM is a more complex pattern of programming compared to the event-driven code-behind pattern. You have an additional learning overhead to master the techniques of the _ReactiveUI_ framework which you will use to implement MVVM with _Avalonia UI_. &#x20;
 

@@ -6,7 +6,7 @@ description: CONCEPTS - The MVVM Pattern
 
 On this page you will lean how the MVVM pattern is realised when you use it with _Avalonia UI_.
 
-## Views and View Models <a href="#views-and-viewmodels" id="views-and-viewmodels"></a>
+## Views and View Models
 
 When you use the MVVM pattern with _Avalonia UI_, you implement a view with an AXAML file that has a code-behind file attached, and a view model with a plain-old code class file. &#x20;
 
@@ -44,7 +44,7 @@ The model is the other part of the MVVM pattern. Models are much less precisely 
 
 The important principle for you to maintain is separation. You should implement the relationship between view model and model using some form of the Dependency Injection (DI) pattern.
 
-## ReactiveUI <a href="#frameworks" id="frameworks"></a>
+## ReactiveUI
 
 There are a number of frameworks designed to help write applications using the MVVM pattern.
 

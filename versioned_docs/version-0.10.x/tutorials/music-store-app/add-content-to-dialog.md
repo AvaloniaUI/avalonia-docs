@@ -3,7 +3,7 @@ id: add-content-to-dialog
 title: Add Content to Dialog 
 ---
 
-## Adding Content to the Dialog <a id="adding-content-to-the-dialog"></a>
+## Adding Content to the Dialog
 
 Inside the dialog we would like the user to search for albums, and then select an album to buy.
 

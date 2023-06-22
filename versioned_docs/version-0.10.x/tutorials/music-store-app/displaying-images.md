@@ -3,7 +3,7 @@ info: displaying-images
 title: Displaying Images
 ---
 
-## Displaying Album Cover Images <a id="displaying-album-cover-images"></a>
+## Displaying Album Cover Images
 
 So we have the Albums showing with the Artist name and Title, however, if we can download the Album art and display it, this will really bring the app alive.
 

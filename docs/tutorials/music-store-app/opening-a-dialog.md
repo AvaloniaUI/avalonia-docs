@@ -6,7 +6,7 @@ description: TUTORIALS - Music Store App
 
 On this page you will learn how to use _ReactiveUI_ to manage another window in your app. The new window will eventually contain a search facility, and a button to add one of the album covers found to a list in the main window.  This new window will be opened as a dialog - that is it will prevent activity in the main window while it is showing.&#x20;
 
-## Add a New Dialog Window <a href="#opening-a-dialog" id="opening-a-dialog"></a>
+## Add a New Dialog Window
 
 There is nothing special about a window view file that makes it into a dialog; that is up to the way in which the window is controlled by the app; and you will use _ReactiveUI_ to manage this. So the first step is to create a new window for the app.
 

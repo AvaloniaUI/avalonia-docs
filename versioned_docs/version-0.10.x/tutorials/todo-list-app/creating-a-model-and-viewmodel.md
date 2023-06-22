@@ -13,7 +13,7 @@ These considerations may not seem important for a small application, but as your
 
 There is a better way! We mentioned the MVVM pattern at the beginning of this tutorial and it's that pattern that we're going to use now.
 
-### Create the Model <a id="create-the-model"></a>
+### Create the Model
 
 The first thing to do is to create the model which will represent our data as it would be stored in a database. Our model is going to be pretty simple: each TODO item will consist of a textual description and a boolean value representing whether the item is checked.
 
@@ -32,7 +32,7 @@ namespace Todo.Models
 }
 ```
 
-### Create a \(fake\) database <a id="create-a-fake-database"></a>
+### Create a \(fake\) database
 
 We could use something like [Entity Framework](https://docs.microsoft.com/en-us/ef/core/get-started/netcore/new-db-sqlite) to read this data from an SQLite database but because this is a tutorial on Avalonia not Entity Framework, we're not actually going to be using a database. Instead we'll just populate our models from an array.
 
@@ -58,7 +58,7 @@ namespace Todo.Services
 }
 ```
 
-### Create a View Model <a id="create-a-view-model"></a>
+### Create a View Model
 
 Now we're going to need a view model which represents the list. This is the class that will provide the data for our view.
 
@@ -89,7 +89,7 @@ Again, our view model is very simple at this stage. It simply takes a collection
 
 One thing to notice is the use of the `ViewModelBase` class. The importance of this will become clear shortly.
 
-### Create an instance of TodoListViewModel <a id="create-an-instance-of-todolistviewmodel"></a>
+### Create an instance of TodoListViewModel
 
 We've seen that our `TodoListViewModel` requires a collection of `TodoItem` models to be passed to its constructor, but where do these items come from? Where is `TodoListViewModel` created?
 

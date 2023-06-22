@@ -21,7 +21,7 @@ Controls most often detect and respond to user input. The Avalonia [input system
 
 Applications often have complex input requirements. Avalonia provides a [command system](../../data-binding/binding-to-commands.md) that separates user-input actions from the code that responds to those actions.
 
-### Layout <a id="layout"></a>
+### Layout
 
 When you create a user interface, you arrange your controls by location and size to form a layout. A key requirement of any layout is to adapt to changes in window size and display settings. Rather than forcing you to write the code to adapt a layout in these circumstances, Avalonia provides a first-class, extensible layout system for you.
 

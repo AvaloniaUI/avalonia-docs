@@ -41,7 +41,7 @@ If you assign a control to a `ContentControl` then it will display the control, 
 </ContentControl>
 ```
 
-### Display content with templates <a href="#display-content-with-templates" id="display-content-with-templates"></a>
+### Display content with templates
 
 So far so uninteresting. Where `ContentControl` becomes useful is in tandem with [data binding](https://docs.avaloniaui.net/docs/data-binding) and [data templates](https://docs.avaloniaui.net/docs/templates/data-templates). By setting the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/) property one can specify how the data in the `Content` property is displayed. For example given the following view models:
 

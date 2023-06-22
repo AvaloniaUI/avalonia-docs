@@ -3,7 +3,7 @@ info: searching-for-albums
 title: Searching for Albums
 ---
 
-## Searching For Albums <a id="searching-for-albums"></a>
+## Searching For Albums
 
 In order for our application to work we are going to need some business logic. This code is not relevant to the tutorial, except for the fact that it will provide the following services:
 

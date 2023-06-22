@@ -1,6 +1,6 @@
 # Layout
 
-## Panels <a id="panels"></a>
+## Panels
 
 Avalonia includes a group of elements that derive from `Panel`. These `Panel` elements enable many complex layouts. For example, stacking elements can easily be achieved by using the `StackPanel` element, while more complex and free flowing layouts are possible by using a `Canvas`.
 
@@ -18,11 +18,11 @@ The following table summarizes the available `Panel` controls:
 
 In WPF, `Panel` is an abstract class and laying out multiple controls to fill the available space is usually done with a `Grid` with no rows/columns. In Avalonia `Panel` is a usable control that has the same layout behavior as a `Grid` with no rows/columns, but with a lighter runtime footprint.
 
-## Element Bounding Boxes <a id="element-bounding-boxes"></a>
+## Element Bounding Boxes
 
 When thinking about layout in Avalonia, it is important to understand the bounding box that surrounds all elements. Each `Control` consumed by the layout system can be thought of as a rectangle that is slotted into the layout. The `Bounds` property returns the boundaries of an element's layout allocation. The size of the rectangle is determined by calculating the available screen space, the size of any constraints, layout-specific properties \(such as margin and padding\), and the individual behavior of the parent `Panel` element. Processing this data, the layout system is able to calculate the position of all the children of a particular `Panel`. It is important to remember that sizing characteristics defined on the parent element, such as a `Border`, affect its children.
 
-## The Layout System <a id="the-layout-system"></a>
+## The Layout System
 
 At its simplest, layout is a recursive system that leads to an element being sized, positioned, and drawn. More specifically, layout describes the process of measuring and arranging the members of a `Panel` element's `Children` collection. Layout is an intensive process. The larger the `Children` collection, the greater the number of calculations that must be made. Complexity can also be introduced based on the layout behavior defined by the `Panel` element that owns the collection. A relatively simple `Panel`, such as `Canvas`, can have significantly better performance than a more complex `Panel`, such as `Grid`.
 
@@ -37,7 +37,7 @@ Each time that a child control changes its position, it has the potential to tri
 
 This process and how it is invoked are defined in more detail in the following sections.
 
-## Measuring and Arranging Children <a id="measuring-and-arranging-children"></a>
+## Measuring and Arranging Children
 
 The layout system completes two passes for each member of the `Children` collection, a measure pass and an arrange pass. Each child `Panel` provides its own `MeasureOverride` and `ArrangeOverride` methods to achieve its own specific layout behavior.
 
@@ -55,7 +55,7 @@ The arrange pass begins with a call to the `Arrange` method. During the arrange 
 
 The `ArrangeCore` method evaluates the `DesiredSize` of the child and evaluates any additional margins that may affect the rendered size of the element. `ArrangeCore` generates an arrange size, which is passed to the `ArrangeOverride` method of the `Panel` as a parameter. `ArrangeOverride` generates the finalSize of the child. Finally, the `ArrangeCore` method does a final evaluation of offset properties, such as margin and alignment, and puts the child within its layout slot. The child does not have to \(and frequently does not\) fill the entire allocated space. Control is then returned to the parent `Panel` and the layout process is complete.
 
-## In This Section <a id="in-this-section"></a>
+## In This Section
 
 * [Panels Overview](panels-overview)
 * [Alignment, Margins and Padding](alignment-margins-and-padding)

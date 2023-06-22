@@ -56,7 +56,7 @@ In addition, the class contains two more things of interest:
 * It enables [DevTools](https://docs.avaloniaui.net/docs/getting-started/developer-tools) in debug mode
 * It defines an `InitializeComponent` method which is used to load the XAML at runtime
 
-### Locating Controls <a id="locating-controls"></a>
+### Locating Controls
 
 One of the main uses of the code-behind file is to manipulate controls using C\# code. To do this you'll usually first want to get a reference to a named control. This can be done using the `FindControl<T>` method:
 
@@ -150,7 +150,7 @@ Never keep a method named `InitializeComponent` in your code-behind view class i
 
 For the rest of the documentation, we'll assume you're either using Avalonia templates or added the Avalonia.NameGenerator package to your project manually.
 
-### Handling Events <a id="handling-events"></a>
+### Handling Events
 
 Another common use for the code-behind file is to define _event handlers_. Event handlers are defined as methods in the code-behind and referenced from XAML. For example to add a handler for a button click:
 

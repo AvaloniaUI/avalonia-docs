@@ -31,7 +31,7 @@ This means that when the `MainWindow` is created, a new instance of `MainWindowV
 
 Will bind the `Button`'s `Content` to `Window.DataContext.ButtonCaption`.
 
-## Binding DataContext <a id="binding-datacontext"></a>
+## Binding DataContext
 
 :::info
 **Info:** In the samples below we consider that we have a `ViewModel` that has a property named `Content`. `Content` itself is a class that has a property called `Header`. 

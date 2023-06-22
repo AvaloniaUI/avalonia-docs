@@ -11,7 +11,7 @@ For more information and examples, see the [`Window`](../controls/window.md) con
 
 The default application templates create a single `Window` called `MainWindow`. You can create additional windows from templates too:
 
-### Visual Studio <a id="visual-studio"></a>
+### Visual Studio
 
 1. Right click the folder in Solution Explorer that you'd like to add the window to
 2. Select the `Add -> New Item` menu item
@@ -20,7 +20,7 @@ The default application templates create a single `Window` called `MainWindow`. 
 5. Enter your window name under "Name"
 6. Click the "Add" button
 
-### .NET Core CLI <a id="net-core-cli"></a>
+### .NET Core CLI
 
 Run this command replacing `[namespace]` with the namespace you'd like to create the window in and `[name]` with the name of the window.
 

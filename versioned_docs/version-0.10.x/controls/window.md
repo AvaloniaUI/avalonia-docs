@@ -7,7 +7,7 @@ title: Window
 
 You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application. For information on how to create new window classes from templates see the [quickstart](https://docs.avaloniaui.net/docs/getting-started/windows).
 
-### Common Properties <a id="common-properties"></a>
+### Common Properties
 
 | Property | Description |
 | :--- | :--- |
@@ -16,15 +16,15 @@ You will not usually create instances of the `Window` class directly; instead th
 | `SizeToContent` | Describes the window's auto-sizing behavior |
 | `WindowState` | The minimized/maximized state of the window |
 
-### Reference <a id="reference"></a>
+### Reference
 
 [Window](http://reference.avaloniaui.net/api/Avalonia.Controls/Window/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [Window.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
 
-### The main window <a id="the-main-window"></a>
+### The main window
 
 The main window is the window passed to `ApplicationLifetime.MainWindow` in the `OnFrameworkInitializationCompleted` method of your your `App.axaml.cs` file:
 
@@ -45,7 +45,7 @@ Mobile and browser platforms don't have a concept of Window in Avalonia.
 Instead you need to set MainView control in Application.ApplicationLifetime when it implements ISingleViewApplicationLifetime interface.
 :::
 
-### Show, hide and close a window <a id="show-hide-and-close-a-window"></a>
+### Show, hide and close a window
 
 You can show a window using the `Show` method:
 
@@ -74,7 +74,7 @@ window.Show();
 
 See also [Prevent a window from closing](https://docs.avaloniaui.net/docs/controls/window#prevent-a-window-from-closing)
 
-### Show a window as a dialog <a id="show-a-window-as-a-dialog"></a>
+### Show a window as a dialog
 
 You can show a window as a modal dialog by calling the `ShowDialog` method. `ShowDialog` requires an owner window to be passed:
 
@@ -117,7 +117,7 @@ var dialog = new MyDialog();
 var result = await dialog.ShowDialog<string>(ownerWindow);
 ```
 
-### Prevent a window from closing <a id="prevent-a-window-from-closing"></a>
+### Prevent a window from closing
 
 A window can be prevented from closing by handling the `Closing` event and setting `e.Cancel = true`:
 

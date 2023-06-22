@@ -3,7 +3,7 @@ id: creating-the-project
 title: Create the Project
 ---
 
-### Creating a New Project <a id="creating-a-new-project"></a>
+### Creating a New Project
 
 From the Rider Welcome Screen, click on `New Solution`. This will open a dialog with Project Types on the left and some input fields on the right.
 
@@ -41,7 +41,7 @@ Some of the important files are:
 | Program.cs | `Main` method where the program starts and `Avalonia` is configured and started. |
 | ViewLocator.cs | `ViewLocator` is a special `DataTemplate`. When some `Data` appears in the UI, it quickly looks to see if a `View` exists for it. This is done by naming convention. If the datas `Type` is `MyDataViewModel` then the `ViewLocator` will use the `View` named `MyDataView` \(if it exists\) in that part of the UI. This is very powerful for list based controls \(`ItemsControl`, `ListBox`, etc\) and `ContentControl`. |
 
-### Compiling and Running the Project <a id="compiling-and-running-the-project"></a>
+### Compiling and Running the Project
 
 Press the debug button top right of the IDE to compile and run the project.
 

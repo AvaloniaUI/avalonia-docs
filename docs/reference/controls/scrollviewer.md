@@ -50,7 +50,7 @@ This example creates a stack panel that is bigger than the border it is inside. 
 
 <img src="/img/gitbook-import/assets/scrollview.gif" alt=""/>
 
-## More Information <a href="#reference" id="reference"></a>
+## More Information
 
 :::info
 For the complete API documentation, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ScrollViewer/).

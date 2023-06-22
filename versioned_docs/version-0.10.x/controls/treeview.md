@@ -78,10 +78,10 @@ public class Node
 The example project source can be found at [avalonia-treeview-test](https://github.com/hootyjeremy/avalonia-treeview-test)
 
 
-### Reference <a id="reference"></a>
+### Reference
 
 [TreeView](http://reference.avaloniaui.net/api/Avalonia.Controls/TreeView/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [TreeView.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TreeView.cs)

@@ -3,7 +3,7 @@ id: opening-a-dialog
 title: Opening a Dialog
 ---
 
-## Opening a Dialog <a id="opening-a-dialog"></a>
+## Opening a Dialog
 
 Opening a dialog is an advanced topic, if you are very new to Avalonia, try not to get too stuck on this section, you may want to just copy in the code and move on. Then come back once you have a better understanding of some of the basics.
 

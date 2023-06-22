@@ -28,7 +28,7 @@ Some common pseudo classes:
 
 <table><thead><tr><th width="187">Pseudo Class</th><th>Description</th></tr></thead><tbody><tr><td><code>:pointerover</code></td><td>The pointer input is currently over (inside the bounds of) a control</td></tr><tr><td><code>:focus</code></td><td>A control has the input focus.</td></tr><tr><td><code>:disabled</code></td><td>A control is unable to respond to user interaction.</td></tr><tr><td><code>:pressed</code></td><td>A button control is in the down position.</td></tr><tr><td><code>:checked</code></td><td>A checkbox control is selected (check mark is showing).</td></tr></tbody></table>
 
-### Custom Pseudo Classes <a href="#custom-pseudoclasses" id="custom-pseudoclasses"></a>
+### Custom Pseudo Classes
 
 You can create your own pseudo classes for custom controls based on `CustomControl` or `TemplatedControl`. The function below adds or remove a pseudo class depending on a Boolean value on a `StyledElement`.
 

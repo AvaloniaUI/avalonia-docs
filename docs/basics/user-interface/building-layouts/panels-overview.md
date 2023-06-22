@@ -2,13 +2,13 @@
 
 `Panel` elements are components that control the rendering of elements - their size and dimensions, their position, and the arrangement of their child content. _Avalonia UI_ provides a number of predefined `Panel` elements as well as the ability to construct custom `Panel` elements.
 
-## The Panel Class <a href="#the-panel-class" id="the-panel-class"></a>
+## The Panel Class
 
 `Panel` is the base class for all elements that provide layout support in Avalonia. Derived `Panel` elements are used to position and arrange elements in XAML and code.
 
 Avalonia includes a comprehensive suite of derived panel implementations that enable many complex layouts. These derived classes expose properties and methods that enable most standard UI scenarios. Developers who are unable to find a child arrangement behavior that meets their needs can create new layouts by overriding the `ArrangeOverride` and `MeasureOverride` methods. For more information on custom layout behaviors, see [Create a Custom Panel](../../../guides/custom-controls/create-a-custom-panel.md).
 
-### Panel Common Members <a href="#panel-common-members" id="panel-common-members"></a>
+### Panel Common Members
 
 All `Panel` elements support the base sizing and positioning properties defined by `Control`, including `Height`, `Width`, `HorizontalAlignment`, `VerticalAlignment` and `Margin`. For additional information on positioning properties defined by `Control`, see [Alignment, Margins, and Padding Overview](alignment-margins-and-padding.md).
 
@@ -20,7 +20,7 @@ Derived panel elements make extensive use of attached properties. An attached pr
 
 One purpose of an attached property is to allow child elements to store unique values of a property that is actually defined by a parent element. An application of this functionality is having child elements inform the parent how they wish to be presented in the UI, which is extremely useful for application layout.
 
-### User Interface Panels <a href="#user-interface-panels" id="user-interface-panels"></a>
+### User Interface Panels
 
 There are several panel classes available in Avalonia that are optimized to support UI scenarios: `Panel`, `Canvas`, `DockPanel`, `Grid`, `StackPanel`, `WrapPanel` and `RelativePanel`. These panel elements are easy to use, versatile, and extensible enough for most applications.
 
@@ -386,7 +386,7 @@ XAML
 </Border>
 ```
 
-### Nested Panel Elements <a href="#nested-panel-elements" id="nested-panel-elements"></a>
+### Nested Panel Elements
 
 `Panel` elements can be nested within each other in order to produce complex layouts. This can prove very useful in situations where one `Panel` is ideal for a portion of a UI, but may not meet the needs of a different portion of the UI.
 

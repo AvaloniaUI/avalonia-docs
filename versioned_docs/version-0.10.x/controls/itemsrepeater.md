@@ -11,7 +11,7 @@ A data-driven collection control that incorporates a flexible layout system, cus
 
 The only difference between the two controls is that in Avalonia the `ItemsSource` is called `Items`.
 
-### Examples <a id="examples"></a>
+### Examples
 Imagine that you want to Show a list of Players shaped like so
 
 ```csharp
@@ -82,10 +82,10 @@ In the `Layout` property you can also specify `Spacing` between the items, but y
 
 
 
-## Reference <a id="reference"></a>
+## Reference
 
 [ItemsRepeater](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsRepeater/)
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [ItemsRepeater.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Repeater/ItemsRepeater.cs)

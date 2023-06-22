@@ -21,7 +21,7 @@ You will probably use these properties most often:
 | `AllowSpin`             | Determines if incrementing and decrementing using the spinner buttons, keyboard and mouse wheel is active. Default is true. |
 | `ShowButtonSpinner`     | Determines whether the spinner buttons are shown. Default is true.                                                          |
 
-## Examples <a href="#examples" id="examples"></a>
+## Examples
 
 This is a basic example of a numeric up-down control. There are no limits to the value here:
 

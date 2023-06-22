@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 # Selectors
 
-## OfType <a id="oftype"></a>
+## OfType
 
 <Tabs
   defaultValue="xaml"
@@ -44,7 +44,7 @@ This selector does not match derived types. For that, use the [`Is`](selectors.m
 Note the type of an object is actually determined by looking at its `StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can override the `StyleKeyOverride` property on your class to return `typeof(Button)`.
 :::
 
-## Name <a id="name"></a>
+## Name
 
 <Tabs
   defaultValue="xaml"
@@ -74,7 +74,7 @@ new Style(x => x.OfType<Button>().Name("myButton"));
 
 Selects a control by its [`Name`](http://reference.avaloniaui.net/api/Avalonia/StyledElement/2362746E) property with a `#` character.
 
-## Class <a id="class"></a>
+## Class
 
 <Tabs
   defaultValue="xaml"
@@ -104,7 +104,7 @@ new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 
 Selects a control with the specified style classes. Multiple classes should be separated with a `.` character, or a `:` character in the case of pseudoclasses. If multiple classes are specified then the control must have all of the requested classes present in order to match.
 
-## Is <a id="is"></a>
+## Is
 
 
 <Tabs
@@ -139,7 +139,7 @@ This is very similar to the [`OfType`](selectors.md#ofType) selector except it a
 Again, the type of an object is actually determined by looking at its `IStyleable.StyleKey` property.
 :::
 
-## Child <a id="child"></a>
+## Child
 
 
 <Tabs
@@ -168,7 +168,7 @@ new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 
 A child selector is defined by separating two selectors with a `>` character. This selector matches _direct children in the logical tree_, so in the example above the selector will match any `Button` that is a direct logical child of a `StackPanel`.
 
-## Descendant <a id="descendant"></a>
+## Descendant
 
 <Tabs
   defaultValue="xaml"
@@ -196,7 +196,7 @@ new Style(x => x.OfType<StackPanel>().Descendant().OfType<Button>());
 
 When two selectors are separated by a space, then the selector will match descendants in the logical tree, so in this case the selector will match any `Button` that is a logical descendant of a `StackPanel`.
 
-## PropertyEquals <a id="propertyequals"></a>
+## PropertyEquals
 
 <Tabs
   defaultValue="xaml"
@@ -236,7 +236,7 @@ Matches any control which has the specified property set to the specified value.
 **Note:** When using in selectors in XAML, properties must support [`TypeConverter`](https://learn.microsoft.com/dotnet/api/system.componentmodel.typeconverter)
 :::
 
-## Template <a id="template"></a>
+## Template
 
 <Tabs
   defaultValue="xaml"
@@ -264,7 +264,7 @@ new Style(x => x.OfType<Button>().Template().OfType<ContentPresenter>());
 
 Matches a control in a control template. All other selectors listed here work on the logical tree. If you wish to select a control in a control template then you must use this selector. The example selects `ContentPresenter` controls in the templates of `Button`s.
 
-## Not <a id="not"></a>
+## Not
 
 <Tabs
   defaultValue="xaml"
@@ -292,7 +292,7 @@ new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 
 Negates an inner selector.
 
-## Or <a id="or"></a>
+## Or
 
 <Tabs
   defaultValue="xaml"
@@ -320,7 +320,7 @@ new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 
 Finds the elements that match any of these selectors. Each selector is separated by ",".
 
-## Nth Child <a id="nth-child"></a>
+## Nth Child
 
 <Tabs
   defaultValue="xaml"
@@ -348,7 +348,7 @@ new Style(x => x.OfType<TextBlock>().NthChild(2, 3));
 
 Matches elements based on their position in a group of siblings.
 
-## Nth Last Child <a id="nth-last-child"></a>
+## Nth Last Child
 
 <Tabs
   defaultValue="xaml"
@@ -409,7 +409,7 @@ It can be understood as _every `A`th element starting from `B`th_
 |`:nth-child(3n+4)`|Every 3rd element start from 4th: **4**_(3×0+4)_, **7**_(3×1+4)_, **10**_(3×2+4)_, **13**_(3×3+4)_, etc|
 |`:nth-child(-n+3)`|First 3 elements: **3**_(-1×0+3)_, **2**_(-1×1+3)_, **1**_(-1×2+3)_. All subsequent indices are less than 1 so they are not matching any elements.  |
 
-### Online nth-child & nth-last-child Tester <a id="nth-last Online Tester"></a>
+### Online nth-child & nth-last-child Tester
 
 Using the link below, both `nth-child` and `nth-last-child` can be easily evaluated:
 [nth-child-tester](https://css-tricks.com/examples/nth-child-tester/)

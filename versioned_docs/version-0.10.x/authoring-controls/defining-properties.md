@@ -5,7 +5,7 @@ title: Defining Properties
 
 If you are creating a control, you will want to define properties on your control. You do this by defining `AvaloniaProperty`s for your control. Avalonia properties consist of two parts: the property definition and the CLR getter/setter for the property.
 
-### Registering Styled Properties <a id="registering-styled-properties"></a>
+### Registering Styled Properties
 
 Unless you have a good reason not to, you should define properties on your control as _styled properties_. Styled properties ensure that your property will work correctly with Avalonia's [styling system](https://docs.avaloniaui.net/docs/styling).
 
@@ -36,7 +36,7 @@ The `AvaloniaProperty.Register` method also accepts a number of other parameters
 > The naming convention of the property and its backing AvaloniaProperty field is important. The name of the field is always the name of the property, with the suffix Property appended.
 
 
-### Using a `StyledProperty` on Another Class <a id="using-a-styledproperty-on-another-class"></a>
+### Using a `StyledProperty` on Another Class
 
 Sometimes the property you want to add to your control already exists on another control, `Background` being a good example. To register a property defined on another control, you call `StyledProperty.AddOwner`:
 
@@ -53,7 +53,7 @@ public Brush Background
 
 > Note: Unlike WPF/UWP, a property must be registered on a class otherwise it cannot be set on an object of that class. This may change in future, however.
 
-### Readonly Properties <a id="readonly-properties"></a>
+### Readonly Properties
 
 To create a readonly property you use the `AvaloniaProperty.RegisterDirect` method. Here is how `Visual` registers the readonly `Bounds` property:
 
@@ -74,7 +74,7 @@ public Rect Bounds
 
 As can be seen, readonly properties are stored as a field on the object. When registering the property, a getter is passed which is used to access the property value through `GetValue` and then `SetAndRaise` is used to notify listeners to changes to the property.
 
-### Attached Properties <a id="attached-properties"></a>
+### Attached Properties
 
 [Attached properties](https://docs.avaloniaui.net/docs/data-binding/creating-and-binding-attached-properties) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
 
@@ -95,7 +95,7 @@ public static void SetColumn(Control element, int value)
 }
 ```
 
-### Direct AvaloniaProperties <a id="direct-avaloniaproperties"></a>
+### Direct AvaloniaProperties
 
 As its name suggests, `RegisterDirect` isn't just used for registering readonly properties. You can also pass a _setter_ to `RegisterDirect` to expose a standard C\# property as a Avalonia property.
 
@@ -135,7 +135,7 @@ They don't support the following:
 * Overriding default values.
 * Inherited values
 
-### Using a DirectProperty on Another Class <a id="using-a-directproperty-on-another-class"></a>
+### Using a DirectProperty on Another Class
 
 In the same way that you can call `AddOwner` on a styled property, you can also add an owner to a direct property. Because direct properties reference fields on the control, you must also add a field for the property:
 
@@ -154,7 +154,7 @@ public IEnumerable Items
 }
 ```
 
-### When to use a Direct vs a Styled Property <a id="when-to-use-a-direct-vs-a-styled-property"></a>
+### When to use a Direct vs a Styled Property
 
 In general you should declare your properties as styled properties. However, direct properties have advantages and disadvantages:
 
