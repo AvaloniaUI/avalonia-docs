@@ -1,5 +1,5 @@
 ---
-id: storage-provider
+id: index
 title: StorageProvider
 ---
 
