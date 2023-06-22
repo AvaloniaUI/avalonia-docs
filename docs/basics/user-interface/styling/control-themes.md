@@ -178,3 +178,10 @@ We can apply our new control theme to all of the buttons in the application by s
   </Application.Resources>
 </Application>
 ```
+
+## Additional Resources
+
+- The [ButtonCustomize](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ButtonCustomize) sample has an `WinClassicButtonTheme`
+- You can see the control themes for the inbuilt Avalonia controls here:
+  - [Simple Theme](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Simple/Controls)
+  - [Fluent Theme](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls)
