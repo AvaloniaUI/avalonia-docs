@@ -30,4 +30,4 @@ By exploring these resources, you'll gain a solid foundation in using controls w
 
 ## Creating Controls
 
-In Avalonia, you have the flexibility to create custom controls tailored to your application's specific requirements. See the [Creating Controls](creating-controls/index) section for more information
+In Avalonia, you have the flexibility to create custom controls tailored to your application's specific requirements. See the [Creating Controls](creating-controls) section for more information

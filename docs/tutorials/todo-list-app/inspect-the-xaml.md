@@ -68,7 +68,7 @@ The content zone of the user control is occupied by a dock panel:
 ```
 
 :::info
-To review the concept of layout zones, see [here](../../concepts/layout/layout-zones.md).
+To review the concept of layout zones, see [here](../../concepts/layout/layout-zones).
 :::
 
 A user control can only contain a single child control in its content zone; so you will often need to start a layout with one of the _Avalonia UI_ panel controls, as these allow you to contain multiple child controls in the space instead.&#x20;
@@ -107,7 +107,7 @@ The remaining XAML adds the hard-coded to do list items as check boxes:
 Notice that these controls have the margin attribute set. This will separate them a little visually.
 
 :::info
-The margin is one of the _Avalonia UI_ control layout zones. To review the concept of layout zones, see [here](../../concepts/layout/layout-zones.md).
+The margin is one of the _Avalonia UI_ control layout zones. To review the concept of layout zones, see [here](../../concepts/layout/layout-zones).
 :::
 
 On the next page, you will learn how to display the view created here in the main window of the app.

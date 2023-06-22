@@ -18,7 +18,7 @@ Every [.](./ "mention") can hold multiple `DataGridColumns`. Avalonia has severa
 | Property       | Description                                                                                                                                        |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Header         | Gets or sets the header content of the column                                                                                                      |
-| HeaderTemplate | Gets or sets a data template for the column (see: [datatemplates.md](../../../misc/wpf/datatemplates.md "mention"))                                |
+| HeaderTemplate | Gets or sets a data template for the column (see: [datatemplates.md](../../templates/datatemplates))                                |
 | IsReadOnly     | Gets or sets if the column is read-only. If the owning grid is read-only, then the column is also read-only, even if this property is set to true. |
 
 ## DataGridTextColumn

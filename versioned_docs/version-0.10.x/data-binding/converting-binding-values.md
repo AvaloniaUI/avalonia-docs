@@ -3,7 +3,7 @@ id: converting-binding-values
 title: Converting Binding Values
 ---
 
-### Negating Values <a href="negating-values" id="negating-values"></a>
+### Negating Values
 
 Often you will need to negate a value that you're binding to. A frequent use for this is to show/hide a control or to enable/disable it. You can negate a binding value by prepending a "bang" operator: `!`.
 
@@ -33,7 +33,7 @@ A "double-bang" can be used to convert a non-boolean value to a boolean value. F
 </Panel>
 ```
 
-### Binding Converters <a href="binding-converters" id="binding-converters"></a>
+### Binding Converters
 
 For more advanced conversions, Avalonia supports [`IValueConverter`](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1) the same as other XAML frameworks.
 

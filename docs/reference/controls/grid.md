@@ -115,7 +115,7 @@ When calculating sizes, any proportional columns are made to fit in the space le
 The calculation for automatic sizing is made using the outside of the margin layout zone of a child control.
 
 :::info
-To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones.md). &#x20;
+To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones). &#x20;
 :::
 
 Child controls are drawn in their assigned grid cells in the sequence they appear in the XAML. This rule governs both what happens when two child controls are assigned the same cell, and how child controls overlap when they are larger than their allotted cell.&#x20;
