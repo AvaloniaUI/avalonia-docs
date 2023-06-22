@@ -57,7 +57,7 @@ namespace AvaloniaControls.Views
 
 
 
-<!--figure><img src="/img/gitbook-import/assets/autocomplete.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/autocomplete.gif" alt=""/>
 
 
 

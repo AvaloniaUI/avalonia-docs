@@ -37,7 +37,7 @@ Note the `<Separator/>` element will not work in a menu flyout. To make a separa
 
 The resulting menu flyout looks like this:
 
-<!--figure><img src="../../../.gitbook/assets/menuflyout.gif" alt=""><figcaption></figcaption></figure-->
+<img src="../../../.gitbook/assets/menuflyout.gif" alt=""/>
 
 ## More Information
 

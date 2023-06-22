@@ -26,7 +26,7 @@ You will probably use these properties most often:
 </WrapPanel>
 ```
 
-<!--figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure-->
+<img src="../../../.gitbook/assets/image (5) (1).png" alt=""/>
 
 ```xml
 <WrapPanel Orientation="Vertical">
@@ -38,7 +38,7 @@ You will probably use these properties most often:
 </WrapPanel>
 ```
 
-<!--figure><img src="../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure-->
+<img src="../../../.gitbook/assets/image (15) (1).png" alt=""/>
 
 ### More Information <a href="#reference" id="reference"></a>
 

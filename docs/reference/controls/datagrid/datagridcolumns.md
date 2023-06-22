@@ -116,7 +116,7 @@ public class Person
 
 It works in the preview pane because the `<Design.DataContext>` element creates a view model to bind to:
 
-<!--figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure-->
+<img src="../../../.gitbook/assets/image (4) (1).png" alt=""/>
 
 ## More Information
 

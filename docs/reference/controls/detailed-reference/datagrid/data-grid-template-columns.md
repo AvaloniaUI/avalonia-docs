@@ -100,7 +100,7 @@ public class Person
 
 
 
-<!--figure><img src="../../../../.gitbook/assets/grid4.gif" alt=""><figcaption></figcaption></figure-->
+<img src="../../../../.gitbook/assets/grid4.gif" alt=""/>
 
 ## More Information
 

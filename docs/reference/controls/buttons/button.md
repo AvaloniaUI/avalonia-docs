@@ -58,7 +58,7 @@ public partial class MainWindow : Window
 
 
 
-<!--figure><img src="../../../.gitbook/assets/button.gif" alt=""><figcaption></figcaption></figure-->
+<img src="../../../.gitbook/assets/button.gif" alt=""/>
 
 ## More Information
 

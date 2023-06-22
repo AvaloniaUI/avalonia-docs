@@ -118,4 +118,4 @@ There are three columns defined:
 
 The first column is defined with a `HierarchicalExpanderColumn` surrounding. This element contains a `TextColumn` that takes a lambda to return the column value, and another that returns the children for the row. The column will display with a  chevron button that expands or contracts the child rows (if any). The remaining columns are defined with `TextColumn` alone.
 
-<!--figure><img src="../../../../.gitbook/assets/treedatagrid1.gif" alt=""><figcaption></figcaption></figure-->
+<img src="../../../../.gitbook/assets/treedatagrid1.gif" alt=""/>

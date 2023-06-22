@@ -59,7 +59,7 @@ namespace AvaloniaControls.Views
 
 With the example code-behind, the text block displays the value of the scrollbar.&#x20;
 
-<!--figure><img src="/img/gitbook-import/assets/scrollbar (1).gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/scrollbar (1).gif" alt=""/>
 
 ## More Information
 
