@@ -2,7 +2,7 @@
 description: REFERENCE
 ---
 
-# 📘 Animation Settings
+# Animation Settings
 
 This section contains full lists of the _Avalonia UI_ animation settings:
 

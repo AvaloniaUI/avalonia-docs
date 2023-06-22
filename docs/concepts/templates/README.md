@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Data Templates
+# Data Templates
 
 These pages describe the important concept of a **data template** in _Avalonia UI._&#x20;
 

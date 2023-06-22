@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Application Lifetimes
+# Application Lifetimes
 
 Not all platforms are created equal! For example, the lifetime management that you may be used to developing with in Windows Forms or WPF can operate only on desktop-style platforms. _Avalonia UI_ is a cross-platform framework; so to make your application portable, it provides several different lifetime models for your application, and also allows you to control everything manually if the target platform permits.
 

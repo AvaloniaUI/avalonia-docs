@@ -2,7 +2,7 @@
 description: REFERENCE
 ---
 
-# 📘 JetBrains Rider IDE
+# JetBrains Rider IDE
 
 The _JetBrains Rider_ IDE has built-in support for _Avalonia UI_ XAML starting in 2020.3 including first-class support for Avalonia-specific XAML features and custom code inspections.
 
