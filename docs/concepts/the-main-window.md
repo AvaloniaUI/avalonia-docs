@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 The Main Window
+# The Main Window
 
 The main window is the window passed to `ApplicationLifetime.MainWindow` in the `OnFrameworkInitializationCompleted` method of your your `App.axaml.cs` file:
 

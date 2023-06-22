@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Themes
+# Themes
 
 Content in preparation.
 

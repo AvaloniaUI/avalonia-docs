@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Input
+# Input
 
 Avalonia operates on the abstraction called pointer devices.
 

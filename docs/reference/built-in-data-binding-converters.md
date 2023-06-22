@@ -2,7 +2,7 @@
 description: REFERENCE
 ---
 
-# 📘 Built-in Data Binding Converters
+# Built-in Data Binding Converters
 
 _Avalonia UI_ includes a number of built-in data binding converters for common scenarios:
 

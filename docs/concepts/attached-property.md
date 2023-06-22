@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Attached Properties
+# Attached Properties
 
 _Avalonia UI_ controls support the **attached property** concept. This is a property applied to a child control that references its container control.&#x20;
 

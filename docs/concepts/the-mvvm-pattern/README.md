@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 The MVVM Pattern
+# The MVVM Pattern
 
 <img src="/img/gitbook-import/assets/image (60).png" alt=""/>
 

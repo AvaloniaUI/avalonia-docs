@@ -2,6 +2,6 @@
 description: CONCEPTS
 ---
 
-# 💡 The View Locator
+# The View Locator
 
 Content in preparation.

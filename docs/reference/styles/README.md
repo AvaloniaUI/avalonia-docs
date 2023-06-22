@@ -2,7 +2,7 @@
 description: REFERENCE
 ---
 
-# 📘 Styles
+# Styles
 
 Welcome to the _Avalonia UI_ styles reference section. This contains information about:
 

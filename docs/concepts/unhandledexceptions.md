@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Unhandled Exceptions
+# Unhandled Exceptions
 
 _Avalonia UI_ does not offer any mechanism to handle exceptions globally and mark this as handled. The reason is, that one cannot know if the exception has been handled correctly and therefore the application may be in an invalid state. Instead it's highly recommend to handle exceptions locally if these can be handled by your application. That said it is still a good idea to log any unhandled exception for further support and debugging.
 

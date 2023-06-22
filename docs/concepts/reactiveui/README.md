@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 ReactiveUI
+# ReactiveUI
 
 These pages explain how _Avalonia UI_ uses a version of the open-source _ReactiveUI_ framework to make it easier to implement the MVVM pattern in your application.&#x20;
 
