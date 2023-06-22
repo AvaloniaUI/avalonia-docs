@@ -6,7 +6,7 @@ description: REFERENCE - Built-in Controls
 
 The calendar is a control for users to select dates or date ranges.
 
-<img src="../../../../.gitbook/assets/calendar3.gif" alt=""/>
+<img src='/img/gitbook-import/assets/calendar3.gif' alt=''/>
 
 ## Useful Properties
 
@@ -26,7 +26,7 @@ This is a basic calendar allowing a single date selection. The calendar's select
 </StackPanel>
 ```
 
-<img src="../../../../.gitbook/assets/calendar.gif" alt=""/>
+<img src='/img/gitbook-import/assets/calendar.gif' alt=''/>
 
 This example allows multiple range selections:
 
@@ -38,7 +38,7 @@ This example allows multiple range selections:
 
 After clicking a start date you can extend a single range by holding the shift key and clicking on the end date. You can add extra dates and ranges by holding the control key and clicking on other dates.&#x20;
 
-<img src="../../../../.gitbook/assets/calendar2.gif" alt=""/>
+<img src='/img/gitbook-import/assets/calendar2.gif' alt=''/>
 
 This example has custom start and end dates, and some dates unavailable. This uses C# code behind the window.
 
@@ -68,7 +68,7 @@ public partial class MainWindow : Window
 
 
 
-<img src="../../../../.gitbook/assets/calendar4.gif" alt=""/>
+<img src='/img/gitbook-import/assets/calendar4.gif' alt=''/>
 
 ## More Information
 

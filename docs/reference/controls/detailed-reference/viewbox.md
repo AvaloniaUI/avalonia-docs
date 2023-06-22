@@ -48,7 +48,7 @@ The following demonstrations show the different combinations of stretch and stre
 
 This set of demonstrations shows the effect of the stretch direction property:
 
-<table><thead><tr><th width="276">Stretch Direction</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Both</code></td><td><img src="../../../.gitbook/assets/scale-uniform-both.gif" alt=""/></td></tr><tr><td><code>UpOnly</code></td><td><img src="../../../.gitbook/assets/scale-uniform-uponly.gif" alt="" data-size="original"/></td></tr><tr><td><code>DownOnly</code></td><td><img src="../../../.gitbook/assets/scale-uniform-downonly.gif" alt=""/></td></tr></tbody></table>
+<table><thead><tr><th width="276">Stretch Direction</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Both</code></td><td><img src='/img/gitbook-import/assets/scale-uniform-downonly.gif' alt=''/></td></tr></tbody></table>
 
 
 

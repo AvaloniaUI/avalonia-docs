@@ -100,7 +100,7 @@ public class Person
 
 
 
-<img src="../../../../.gitbook/assets/grid4.gif" alt=""/>
+<img src='/img/gitbook-import/assets/grid4.gif' alt=''/>
 
 ## More Information
 

@@ -27,7 +27,7 @@ This example has a basic one line text box, a password box, and a text-wrapping 
 </StackPanel>
 ```
 
-<img src="../../../.gitbook/assets/textbox.gif" alt=""/>
+<img src='/img/gitbook-import/assets/textbox.gif' alt=''/>
 
 ## More Information
 

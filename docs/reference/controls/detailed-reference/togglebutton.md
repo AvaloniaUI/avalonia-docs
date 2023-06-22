@@ -86,7 +86,7 @@ To see the full list of Fluent icons available with _Avalonia UI_, see [https://
 
 The visibility of the path icons is set by the window styles, and these use the `:checked` pseudo class to determine when the toggle button is in its checked state. So, when the toggle button is checked, then the `audio-on` path icon is visible, and the `audio-mute` path icon is hidden. And conversely, when the toggle button is not checked, then the `audio-mute` path icon is visible, and the `audio-on` path icon is hidden.
 
-<img src="../../../.gitbook/assets/toggle.gif" alt=""/>
+<img src='/img/gitbook-import/assets/toggle.gif' alt=''/>
 
 ## More Information
 

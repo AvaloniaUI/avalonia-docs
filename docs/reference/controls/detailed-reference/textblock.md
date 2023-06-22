@@ -29,7 +29,7 @@ as set out in XAML.</TextBlock>
 
 The styling works in the preview pane:
 
-<img src="../../../.gitbook/assets/image (2) (5).png" alt=""/>
+<img src='/img/gitbook-import/assets/image (2) (5).png' alt=''/>
 
 ## More Information
 

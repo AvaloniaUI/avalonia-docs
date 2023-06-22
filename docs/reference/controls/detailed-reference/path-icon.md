@@ -38,7 +38,7 @@ You will probably use these properties most often:
 
 It works in the preview pane as well:
 
-<img src="../../../.gitbook/assets/image (18).png" alt=""/>
+<img src='/img/gitbook-import/assets/image (18).png' alt=''/>
 
 ## More Information
 

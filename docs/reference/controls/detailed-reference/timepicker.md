@@ -24,7 +24,7 @@ This example shows how to create a time picker for the 24 hour clock, with 20 mi
 </StackPanel>
 ```
 
-<img src="../../../.gitbook/assets/timepicker.gif" alt=""/>
+<img src='/img/gitbook-import/assets/timepicker.gif' alt=''/>
 
 ## **Initializing the Time**
 

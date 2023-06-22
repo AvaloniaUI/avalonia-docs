@@ -24,7 +24,7 @@ You will probably use these properties most often:
 </UniformGrid>
 ```
 
-<img src="../../../.gitbook/assets/image (1) (2).png" alt=""/>
+<img src='/img/gitbook-import/assets/image (1) (2).png' alt=''/>
 
 ## More Information
 

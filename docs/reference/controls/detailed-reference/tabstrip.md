@@ -26,7 +26,7 @@ You will probably use this property most often:
 
 It looks like this running on Windows:
 
-<img src="../../../.gitbook/assets/tabstrip.gif" alt=""/>
+<img src='/img/gitbook-import/assets/tabstrip.gif' alt=''/>
 
 ## More Information
 

@@ -81,7 +81,7 @@ namespace AvaloniaControls.Models
 
 By default the root node (or nodes) is shown. The user can expand or contract each node by clicking on the adjacent arrow. Clicking on the node title selects the item.
 
-<img src="../../../.gitbook/assets/tree1.gif" alt=""/>
+<img src='/img/gitbook-import/assets/tree1.gif' alt=''/>
 
 This is a development of the previous example with multiple root nodes, a revised item template, and an initial selection made in the view model code:
 
@@ -177,7 +177,7 @@ namespace AvaloniaControls.Models
 
 The tree view adds a scroll bar when it is needed. The selection can be extended by holding down the Ctrl key.&#x20;
 
-<img src="../../../.gitbook/assets/tree2.gif" alt=""/>
+<img src='/img/gitbook-import/assets/tree2.gif' alt=''/>
 
 ## More Information
 

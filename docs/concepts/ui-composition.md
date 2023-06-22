@@ -25,7 +25,7 @@ A window in _Avalonia UI_ is a basic unit of layout (for a windowing platform).&
 
 _Avalonia UI_ contains a large number of built-in controls that will cover most of your UI requirements.   &#x20;
 
-<img src="../.gitbook/assets/image (10) (2).png" alt=""/>
+<img src='/img/gitbook-import/assets/image (10) (2).png' alt=''/>
 
 When you first meet _Avalonia UI_, you might place a single built-in control in the content zone of a window (above, left). This is the simplest form of UI composition: the window has the title of the app and usually some window state controls (depending on the target platform). The built-in control allows your app to receive some user input, or to present some output with layout and styling.
 
@@ -39,7 +39,7 @@ To see the full range of Avalonia UI built-in controls, see the reference sectio
 
 Whatever arrangement of controls you use, _Avalonia UI_ represents their relationships as a a tree structure, with the 'outermost' control as the root. So for example, the previous UI composition can be represented as the tree shown here:
 
-<img src="../.gitbook/assets/image (3) (1).png" alt=""/>
+<img src='/img/gitbook-import/assets/image (3) (1).png' alt=''/>
 
 This is the **logical control tree**, and it represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. There are many systems in _Avalonia UI_ that process the logical control tree and its companion the **visual control tree**.&#x20;
 
@@ -51,7 +51,7 @@ For more information on the concept of control trees, see [here](control-trees.m
 
 User controls are the mainstay of UI composition in _Avalonia UI_.
 
-<img src="../.gitbook/assets/image (8) (2).png" alt=""/>
+<img src='/img/gitbook-import/assets/image (8) (2).png' alt=''/>
 
 You can add a user control to the content zone of a main window, to represent a 'page view' (above, left).  This allows you to implement a more complex app with multiple pages; where the layout and function of each page is in its own user control (XAML and code) files.   &#x20;
 
@@ -71,7 +71,7 @@ In the 'To Do List App' tutorial you will learn about how to add user controls a
 
 Another variation of UI composition is where you need to present a collection of items.&#x20;
 
-<img src="../.gitbook/assets/image (8) (3).png" alt=""/>
+<img src='/img/gitbook-import/assets/image (8) (3).png' alt=''/>
 
 This scenario will use one of the built-in repeating controls, bound to a collection; together with a data template to represent the items in the collection.
 
