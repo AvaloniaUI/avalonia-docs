@@ -33,7 +33,7 @@ You can include whatever files you want by adding additional `<AvaloniaResource>
 The element name `AvaloniaResource` here only indicates that the assets will be internally stored as .NET resources by the build. However, in _Avalonia UI_ terms, these files are called 'Assets' to distinguish them from 'XAML resources'.
 :::
 
-For guidance on how to use XAML resources in you application, see [here](../guides/styles-and-resources/resources.md).
+For guidance on how to use XAML resources in you application, see [here](../../guides/styles-and-resources/resources.md).
 
 :::info
 For more detail about .NET resources, see the _Microsoft_ documentation [here](https://docs.microsoft.com/en-us/visualstudio/ide/managing-application-resources-dotnet).

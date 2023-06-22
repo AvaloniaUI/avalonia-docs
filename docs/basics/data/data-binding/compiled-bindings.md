@@ -67,7 +67,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
 
 ## ReflectionBinding-Markup
 
-If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use compiled binding at a certain position or you hit one of the [known limitations](compiledbindings.md#known-limitations), you can use the `ReflectionBinding`-markup.
+If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use compiled binding at a certain position or you hit one of the [known limitations](#known-limitations), you can use the `ReflectionBinding`-markup.
 
 ```markup
 <!-- Set DataType -->
