@@ -50,22 +50,18 @@ Once Rider loads you will see the **Welcome to JetBrains Rider** screen.&#x20;
 
 - Click **Configure**, and then click **Plugins** on the dropdown menu.
 
-<!--![](../../.gitbook/assets/jetbrains-rider-setup-1-rider-welcome.png)-->
-
+<img src='/img/gitbook-import/assets/jetbrains-rider-setup-1-rider-welcome.png' alt=''/>
 The **Preferences** screen will open.&#x20;
 
 - Click the settings (gear wheel) icon and then click **Manage Plugin Repositories...** on the popup menu.
 
-<!--![](../../.gitbook/assets/jetbrains-rider-setup-2-configure-plugin-repos.png)-->
-
+<img src='/img/gitbook-import/assets/jetbrains-rider-setup-2-configure-plugin-repos.png' alt=''/>
 - In the **Custom Plugin Repositories** dialog, click the plus (+) icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`, and then click **OK**.
 
-<!--![](../../.gitbook/assets/jetbrains-rider-setup-3-enter-plugin-repo.png)-->
-
+<img src='/img/gitbook-import/assets/jetbrains-rider-setup-3-enter-plugin-repo.png' alt=''/>
 - Back at the Preferences window, click **Marketplace** enter 'Avalonia' in the search. Click **AvaloniaRider** when it appears in the search results pane, then click **Install**.&#x20;
 
-<!--![](../../.gitbook/assets/jetbrains-rider-setup-4-plugin-install.png)-->
-
+<img src='/img/gitbook-import/assets/jetbrains-rider-setup-4-plugin-install.png' alt=''/>
 - After the installation has completed, click **Restart IDE** (button appears).
 
 &#x20;Now _JetBrains Rider_ is ready to develop _Avalonia UI_ applications.

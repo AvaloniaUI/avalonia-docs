@@ -20,7 +20,7 @@ The data grid is in an additional _Avalonia UI_ package. To use the data grid in
 
 You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use **Manage NuGet Packages** from the project menu of your IDE:
 
-<!--figure><img src="../../../.gitbook/assets/image (8) (4).png" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/image (8) (4).png' alt=''/>
 
 Alternatively,  you can run this instruction from the command line:
 
@@ -79,8 +79,7 @@ This example will generate a basic data grid, with column header names auto-gene
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -106,8 +105,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='C# Item Class'
 public class Person
 {
     public string FirstName { get; set; }
@@ -123,7 +121,7 @@ public class Person
 
 
 
-<!--figure><img src="../../../.gitbook/assets/grid1.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/grid1.gif' alt=''/>
 
 :::info
 These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](../../../concepts/data-binding/).
@@ -146,7 +144,7 @@ Property names from the item class will generally not make good column names. Th
 </DataGrid>
 ```
 
-<!--figure><img src="../../../.gitbook/assets/grid2.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/grid2.gif' alt=''/>
 
 This example shows how the data grid can accept changes and update the underlying collection, and use different column types to edit the data:
 
@@ -165,8 +163,7 @@ This example shows how the data grid can accept changes and update the underlyin
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -192,8 +189,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='C# Item Class'
 public class Person
 {
     public string FirstName { get; set; }
@@ -211,7 +207,7 @@ public class Person
 
 
 
-<!--figure><img src="../../../.gitbook/assets/grid3.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/grid3.gif' alt=''/>
 
 ## More Information <a href="#common-properties" id="common-properties"></a>
 

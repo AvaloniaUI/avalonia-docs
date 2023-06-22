@@ -15,15 +15,15 @@ This has to be done by creating an Xcode app project that has the same `bundle i
 
 1. Open Xcode
 
-<!-- ![](<../../../.gitbook/assets/Screenshot 2022-03-17 at 12.09.54.png>) -->
+<img src='/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.09.54.png>' alt=''/>
 
 2\. Select Create a new Xcode project
 
-<!-- ![](<../../../.gitbook/assets/image (36).png>) -->
+<img src='/img/gitbook-import/assets/image (36).png>' alt=''/>
 
 3\. Select iOS and App and click Next.
 
-<!-- ![](<../../../.gitbook/assets/image (30).png>) -->
+<img src='/img/gitbook-import/assets/image (30).png>' alt=''/>
 
 4\. Type in a name for your project and Organisation. Keep all the rest of the information the same.
 
@@ -31,19 +31,19 @@ This has to be done by creating an Xcode app project that has the same `bundle i
 
 6\. In the status bar at the top click on the "Any device (arm64)"
 
-<!-- ![](<../../../.gitbook/assets/image (35).png>) -->
+<img src='/img/gitbook-import/assets/image (35).png>' alt=''/>
 
 7\. At the bottom of the list click "Add Additional Simulators..."
 
-<!-- ![](<../../../.gitbook/assets/image (32).png>) -->
+<img src='/img/gitbook-import/assets/image (32).png>' alt=''/>
 
 8\. Click on devices and connect your iPhone or iPad with the USB cable. Xcode will start to provision your phone for development.
 
-<!-- ![](<../../../.gitbook/assets/Screenshot 2022-03-17 at 12.19.06.png>) -->
+<img src='/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.19.06.png>' alt=''/>
 
 9\. Select you iPhone or iPad from the device list.
 
-<!-- ![](<../../../.gitbook/assets/image (24) (1).png>) -->
+<img src='/img/gitbook-import/assets/image (24) (1).png>' alt=''/>
 
 10\. Click the play button and the app will be installed and run on your phone.
 
@@ -51,7 +51,7 @@ If successful you may return to your IDE of choice and open the `info.plist` fil
 
 11\. Change the bundle identifier to the same as the one you choose in Xcode in step 3.
 
-<!-- ![](<../../../.gitbook/assets/image (18) (2).png>) -->
+<img src='/img/gitbook-import/assets/image (18) (2).png>' alt=''/>
 
 12\. Now edit the `.iOS.csproj` file.
 
@@ -70,7 +70,7 @@ Add a `<CodesignKey>` tag.
 
 To find the value for this open the application `KeyChain Access`. In the search box search for development.
 
-<!-- ![](<../../../.gitbook/assets/image (33).png>) -->
+<img src='/img/gitbook-import/assets/image (33).png>' alt=''/>
 
 Set the value exactly as the bold text at the top of the window on your selected development certificate.
 

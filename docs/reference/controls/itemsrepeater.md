@@ -41,8 +41,7 @@ This example binds an observable collection of crockery items to an items repeat
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -71,8 +70,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='C# Item Class'
 public class Crockery
 {
     public string Title { get; set; }
@@ -88,7 +86,7 @@ public class Crockery
 
 
 
-<!--figure><img src="/img/gitbook-import/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/image (2) (6).png" alt=""/>
 
 By default an items repeater will render the items in a vertical stack layout. You can display the items horizontally by overriding this using a `<ItemsRepeater.Layout>` element, which must contain a stack layout. For example:
 
@@ -122,7 +120,7 @@ By default an items repeater will render the items in a vertical stack layout. Y
 
 The items display horizontally, and those too far to the right would be hidden if it were not for the scroll viewer element added around the items repeater.   &#x20;
 
-<!--figure><img src="/img/gitbook-import/assets/repeater.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/repeater.gif" alt=""/>
 
 ## More Information
 

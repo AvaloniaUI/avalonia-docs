@@ -72,8 +72,7 @@ This example improves a data grid by expanding two columns equally across the wi
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -99,8 +98,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='C# Item Class'
 public class Person
 {
     public string FirstName { get; set; }
@@ -118,7 +116,7 @@ public class Person
 
 It works in the preview pane because the `<Design.DataContext>` element creates a view model to bind to:
 
-<!--figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/image (4) (1).png' alt=''/>
 
 ## More Information
 

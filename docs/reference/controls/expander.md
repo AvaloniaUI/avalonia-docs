@@ -31,9 +31,9 @@ You will probably use these properties most often:
 </Expander>
 ```
 
-<!--figure><img src="/img/gitbook-import/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/image (2) (1) (1).png" alt=""/>
 
-<!--figure><img src="/img/gitbook-import/assets/image (12) (2).png" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/image (12) (2).png" alt=""/>
 
 ## More Information
 

@@ -20,9 +20,7 @@ You can then conditionally apply the classes to a control using special classes 
 
 In this example, two styles with class selectors have been defined. These give a text block either a red or a green background. The style class binding assigns `class1` when the `IsClass1` property of an item is true. Using the negation operator, `class2` is assigned when the `IsClass1` property is false.
 
-{% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='XAML'
 <StackPanel Margin="20">
   <ListBox Items="{Binding ItemList}">
     <ListBox.Styles>
@@ -46,10 +44,8 @@ In this example, two styles with class selectors have been defined. These give a
   </ListBox>
 </StackPanel>
 ```
-{% endtab %}
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C#'
 public class MainWindowViewModel : ViewModelBase
 {
     public ObservableCollection<ItemClass> ItemList { get; set; }
@@ -67,10 +63,8 @@ public class MainWindowViewModel : ViewModelBase
     }
 }
 ```
-{% endtab %}
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='ItemClass.cs'
 public class ItemClass
 {
     public string Title { get; set; }
@@ -83,7 +77,5 @@ public class ItemClass
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
-<!--<img src="/img/gitbook-import/assets/image (5).png" alt=""/>-->
+<img src="/img/gitbook-import/assets/image (5).png" alt=""/>

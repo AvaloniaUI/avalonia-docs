@@ -53,7 +53,7 @@ Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, 
 </Canvas>
 ```
 
-<!-- ![](../../.gitbook/assets/shapes.png) -->
+<img src='/img/gitbook-import/assets/shapes.png' alt=''/>
 
 ## Add Animations
 

@@ -13,9 +13,7 @@ For more information on creating a custom control library, see [here](../how-to-
 
 Wherever you choose to place your custom control class, you must be able to reference it in the XAML. For example, this code shows the custom control `MyControl` class placed in the main window; and the custom control class defines in the `/CustomControls` namespace and project folder:
 
-{% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='XAML'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -28,10 +26,8 @@ Wherever you choose to place your custom control class, you must be able to refe
 </Window>
 
 ```
-{% endtab %}
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 
 namespace AvaloniaCCExample.CustomControls
@@ -41,8 +37,6 @@ namespace AvaloniaCCExample.CustomControls
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 Notice that you can already add properties for height and width of the custom control. These are from the base class: `Control`.&#x20;
 

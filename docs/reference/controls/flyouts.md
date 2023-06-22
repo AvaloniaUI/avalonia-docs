@@ -51,7 +51,7 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 }
 ```
 
-<!--figure><img src="/img/gitbook-import/assets/flyout2.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/flyout2.gif" alt=""/>
 
 ## Useful Properties&#x20;
 

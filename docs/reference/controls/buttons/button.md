@@ -41,8 +41,7 @@ This example shows a simple button and a C# code-behind click event handler.
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 public partial class MainWindow : Window
 {
     public MainWindow()
@@ -59,7 +58,7 @@ public partial class MainWindow : Window
 
 
 
-<!--figure><img src="../../../.gitbook/assets/button.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/button.gif' alt=''/>
 
 ## More Information
 

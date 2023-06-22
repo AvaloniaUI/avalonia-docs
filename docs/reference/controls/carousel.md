@@ -37,8 +37,7 @@ This example has three images in the items collection, with buttons to move the 
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -66,7 +65,7 @@ namespace AvaloniaControls.Views
 
 
 
-<!--figure><img src="/img/gitbook-import/assets/carousel.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/carousel.gif" alt=""/>
 
 ## More Information
 

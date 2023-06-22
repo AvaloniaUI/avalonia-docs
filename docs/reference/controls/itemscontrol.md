@@ -45,8 +45,7 @@ This example binds an observable collection of crockery items to an items contro
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -75,8 +74,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='C# Item Class'
 public class Crockery
 {
     public string Title { get; set; }
@@ -94,7 +92,7 @@ public class Crockery
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike the list box).
 
-<!--figure><img src="/img/gitbook-import/assets/items.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/items.gif" alt=""/>
 
 ## More Information
 

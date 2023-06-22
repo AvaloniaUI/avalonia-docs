@@ -36,8 +36,7 @@ This example has a fixed items source (array) that is set in the C# code-behind.
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 using System.Linq;
 
@@ -58,7 +57,7 @@ namespace AvaloniaControls.Views
 
 
 
-<!--figure><img src="/img/gitbook-import/assets/autocomplete.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/autocomplete.gif" alt=""/>
 
 
 

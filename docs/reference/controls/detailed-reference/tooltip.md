@@ -21,7 +21,7 @@ This is a simple text-based tooltip, using default values for the placement and 
             ToolTip.Tip="This is a rectangle" />
 ```
 
-<!--figure><img src="../../../.gitbook/assets/tooltip.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/tooltip.gif' alt=''/>
 
 To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. For example:
 
@@ -37,7 +37,7 @@ To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. F
 </Rectangle>
 ```
 
-<!--figure><img src="../../../.gitbook/assets/tooltip2.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/tooltip2.gif' alt=''/>
 
 ## More Information
 

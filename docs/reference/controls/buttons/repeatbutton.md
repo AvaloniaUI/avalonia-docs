@@ -31,8 +31,7 @@ This example shows a repeat button generating click events with the default inte
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 public partial class MainWindow : Window
 {
     public MainWindow()
@@ -49,7 +48,7 @@ public partial class MainWindow : Window
 
 
 
-<!--figure><img src="../../../.gitbook/assets/repeatbutton.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/repeatbutton.gif' alt=''/>
 
 ## More Information
 

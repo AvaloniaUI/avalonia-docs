@@ -32,7 +32,7 @@ This is a basic example of a numeric up-down control. There are no limits to the
 </StackPanel>
 ```
 
-<!--figure><img src="/img/gitbook-import/assets/updown.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/updown.gif" alt=""/>
 
 The value and other properties are doubles; so you can create a custom decimal increment/decrement and range if you need to.&#x20;
 
@@ -51,7 +51,7 @@ For example:&#x20;
 </StackPanel>
 ```
 
-<!--figure><img src="/img/gitbook-import/assets/updown2.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/updown2.gif" alt=""/>
 
 ## More Information
 
