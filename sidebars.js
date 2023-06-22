@@ -249,6 +249,7 @@ const sidebars = {
             'guides/implementation-guides/logging-errors-and-warnings',
             'guides/implementation-guides/ide-support',
             'guides/implementation-guides/how-to-use-design-time-data',
+            'guides/implementation-guides/localizing',
           ],
         },
         {
