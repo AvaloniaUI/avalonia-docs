@@ -2,5 +2,5 @@
 description: CONCEPTS
 ---
 
-# 💡 Pseudo Classes
+# Pseudo Classes
 

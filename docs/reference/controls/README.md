@@ -2,7 +2,7 @@
 description: REFERENCE
 ---
 
-# 📘 Built-in Controls
+# Built-in Controls
 
 _Avalonia UI_ provides following groups of built-in controls:
 

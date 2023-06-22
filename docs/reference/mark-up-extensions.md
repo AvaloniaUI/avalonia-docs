@@ -2,7 +2,7 @@
 description: REFERENCE
 ---
 
-# 📘 Mark-up Extensions
+# Mark-up Extensions
 
 This reference lists some of the XAML mark-up extensions used by _Avalonia UI_. A mark-up extension is formatted in this pattern:
 

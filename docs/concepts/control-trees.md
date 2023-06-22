@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-# 💡 Control Trees
+# Control Trees
 
 _Avalonia UI_ creates control trees from the XAML files in an application so that it can render the UI presentation and manage the application functionality.  &#x20;
 
