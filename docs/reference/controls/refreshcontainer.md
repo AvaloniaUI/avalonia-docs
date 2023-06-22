@@ -37,15 +37,19 @@ A refresh can be initiated by pulling in the direction specified by the `PullDir
 
 * #### Idle
 This is the default state of the visualizer. The user is not interacting with the container, and no refresh is in progress. The visualizer is hidden.
+
 * #### Interacting
 The user is pulling in the direction specified in the `PullDirection` property, but has not reached the pull threshold. The visualizer gradually becomes visible until the pull threshold is reached.
 If the pull is releaseed before reaching the pull threshold, the `Visualizer` returns to the `Idle` state, and no refresh is initiated. 
 If the pull threshold is reached, the `Visualizer` enters the `Pending` state.
+
 * #### Pending
 The user has pulled past the pull threshold. In this state, the visualizer is fully visible. If the user moves the contact back to before the pull threshold, the visualizer returns to the `Interacting` state. If the user releases contact while in the `Pending` state, the visualizer enters the `Refreshing` state.
+
 * #### Refreshing
 The user has released the touch contact while the visualizer is in the `Pending` state. The `RefreshRequested` event is raised. The event args contains a `Deferral` object. This object is used to notify the Refresh Container that the refresh action has completed, and should be used in long refreshes without blocking the UI thread. If not retrieved, the `Refreshing` state ends when the `RefreshRequested` invocation is complete.
 In this state, the visualizer is fully visible, and the refresh animation begins.
+
 * #### Peeking
 This occurs when the user starts a pull gesture while the content is in a position where refresh is not allowed. This typical happens when the child ScrollViewer isn't at Offset 0, with respect to the pull direction and scroll direction, when the pull is started. The visualizer is hidden and the visualizer's state can only progress to `Idle` when the pull is released.
 
