@@ -120,7 +120,7 @@ _Avalonia_ has a range of built-in data binding converters. These include:
 * Boolean operation converters
 
 :::info
-For full information on Avalonia built-in data binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).&#x20;
+For full information on Avalonia built-in data binding converters, see the reference [here](../../../reference/built-in-data-binding-converters.md).&#x20;
 :::
 
 ### Custom Conversions
@@ -128,7 +128,7 @@ For full information on Avalonia built-in data binding converters, see the refer
 If none of the built-in converters are meet your requirements, then you can implement a custom converter.&#x20;
 
 :::info
-An example of a custom converter can bind an image file. For guidance on how to create a custom converter for an image, see [here](../../guides/data-binding/how-to-bind-image-files.md).&#x20;
+An example of a custom converter can bind an image file. For guidance on how to create a custom converter for an image, see [here](../../../guides/data-binding/how-to-bind-image-files.md).&#x20;
 :::
 
 &#x20;

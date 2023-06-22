@@ -92,7 +92,5 @@ To learn how to implement a custom control, see the guide [here](../guides/custo
 A templated control uses the _Avalonia UI_ **styling** system to substitute a tag in the UI layout with a&#x20;
 
 :::info
-For more information about the concepts behind the _Avalonia UI_ **styling** system,
-
-&#x20;see [here](styling.md).
+For more information about the concepts behind the _Avalonia UI_ **styling** system, see [here](../basics/user-interface/styling).
 :::

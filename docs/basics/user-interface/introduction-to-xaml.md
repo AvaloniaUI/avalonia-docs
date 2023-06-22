@@ -41,7 +41,7 @@ The sample above uses three interesting attributes:
 * `x:Class="AvaloniaApplication1.MainWindow"` - this is an extension of the above declaration (for 'x') that tells the XAML compiler where to find the associated class for this file. The class is defined in a code-behind file, usually written in C#.
 
 :::info
-For information about the code-behind concept, see [here](broken-reference). For guidance on how to code using the code-behind pattern, see [here](../guides/implementation-guides/code-behind.md).
+For information about the code-behind concept, see [here](code-behind).
 :::
 
 ## XML Namespaces

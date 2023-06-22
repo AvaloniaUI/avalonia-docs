@@ -23,7 +23,7 @@ If you are familiar with keyframe animations keyframe work in CSS, you will reco
 You define a keyframe animation using styles.&#x20;
 
 :::info
-To revise how _Avalonia UI_ uses styles, see the concept [here](../../concepts/styling.md).
+To revise how _Avalonia UI_ uses styles, see the concept [here](../../basics/user-interface/styling).
 :::
 
 Follow this procedure to define a simple color fade animation using XAML:
