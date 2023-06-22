@@ -4,7 +4,7 @@ title: How To Use Transitions
 ---
 
 
-# 👉 How To Use Transitions
+# How To Use Transitions
 
 Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via `Transitions` property:
 

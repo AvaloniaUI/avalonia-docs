@@ -124,6 +124,12 @@ The file that is actually executed by macOS when starting your `.app` bundle wil
 
 ### dotnet-bundle
 
+:::warning
+[dotnet-bundle is unmaintained](https://github.com/egramtel/dotnet-bundle/issues/16#issuecomment-1365767804) but should still work. 
+
+It is recommended that you target `net6-macos`, which will handle package generation.
+:::
+
 [dotnet-bundle](https://github.com/egramtel/dotnet-bundle) is a [NuGet package](https://www.nuget.org/packages/Dotnet.Bundle/) that publishes your project and then creates the `.app` file for you.
 
 You'll first have to add the project as a `PackageReference` in your project. Add it to your project via NuGet package manager or by adding the following line to your `.csproj` file:

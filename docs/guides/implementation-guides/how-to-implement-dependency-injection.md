@@ -4,7 +4,7 @@ title: How To Implement Dependency Injection
 ---
 
 
-# 👉 How To Implement Dependency Injection
+# How To Implement Dependency Injection
 
 Content in preparation.
 

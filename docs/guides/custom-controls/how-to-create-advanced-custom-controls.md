@@ -3,7 +3,7 @@ id: how-to-create-advanced-custom-controls
 title: How To Create Advanced Custom Controls
 ---
 
-# 👉 How To Create Advanced Custom Controls
+# How To Create Advanced Custom Controls
 
 Stuff clipped from the custom control guide.
 

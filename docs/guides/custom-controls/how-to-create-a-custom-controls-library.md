@@ -3,7 +3,7 @@ id: how-to-create-a-custom-controls-library
 title: How To Create a Custom Controls Library
 ---
 
-# 👉 How To Create a Custom Controls Library
+# How To Create a Custom Controls Library
 
 This guide shows you how to create a custom controls library and reference it for use in an _Avalonia UI_ app.
 

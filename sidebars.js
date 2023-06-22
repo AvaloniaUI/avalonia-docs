@@ -228,6 +228,20 @@ const sidebars = {
       'items': [
         {
           'type': 'category',
+          'label': 'Building Cross Platform Applications',
+          'link': {
+            'type': 'doc',
+            'id': 'guides/building-cross-platform-applications/index',
+          },
+          'items': [
+            'guides/building-cross-platform-applications/architecture',
+            'guides/building-cross-platform-applications/solution-setup',
+            'guides/building-cross-platform-applications/dealing-with-platforms',
+
+          ],
+        },
+        {
+          'type': 'category',
           'label': 'Implementation Guides',
           'items': [
             'guides/implementation-guides/how-to-use-the-mvvm-pattern',
@@ -235,6 +249,7 @@ const sidebars = {
             'guides/implementation-guides/logging-errors-and-warnings',
             'guides/implementation-guides/ide-support',
             'guides/implementation-guides/how-to-use-design-time-data',
+            'guides/implementation-guides/localizing',
           ],
         },
         {
@@ -264,6 +279,7 @@ const sidebars = {
             'guides/styles-and-resources/how-to-use-included-styles',
             'guides/styles-and-resources/how-to-use-themes',
             'guides/styles-and-resources/resources',
+            'guides/styles-and-resources/how-to-use-fonts',
             'guides/styles-and-resources/troubleshooting',
           ],
         },
@@ -342,10 +358,8 @@ const sidebars = {
                 'guides/platforms/rpi/running-on-raspbian-lite-via-drm',
               ],
             },
-            'guides/platforms/create-a-cross-platform-solution',
             'guides/platforms/how-to-use-web-assembly',
             'guides/platforms/macos-development',
-            'guides/platforms/macos-packaging',
           ],
         },
       ],
@@ -467,6 +481,7 @@ const sidebars = {
         },
       ],
     },
+    'faq',
     'community'
   ],
 };

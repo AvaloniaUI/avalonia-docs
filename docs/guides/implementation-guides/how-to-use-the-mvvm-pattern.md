@@ -4,7 +4,7 @@ title: How To Use the MVVM Pattern
 ---
 
 
-# 👉 How To Use the MVVM Pattern
+# How To Use the MVVM Pattern
 
 Content in preparation.
 

@@ -4,7 +4,7 @@ title: How To Implement Multi-page Apps
 ---
 
 
-# 👉 How To Implement Multi-page Apps
+# How To Implement Multi-page Apps
 
 Content in preparation.
 

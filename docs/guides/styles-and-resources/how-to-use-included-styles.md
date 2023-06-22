@@ -4,7 +4,7 @@ title: How to Use Included Styles
 ---
 
 
-# 👉 How to Use Included Styles
+# How to Use Included Styles
 
 This guide shows you how to share styles from a separate styles file (that is included in your application). This approach allows you to share styles across multiple applications.
 

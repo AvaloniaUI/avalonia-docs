@@ -4,7 +4,7 @@ title: How To Create Attached Properties
 ---
 
 
-# 👉 How To Create Attached Properties
+# How To Create Attached Properties
 
 When you need more or let's say foreign properties on avalonia elements, then attached properties are the right thing to use. They can also be used to create so called behaviors to generally modify the hosted gui components. This can be utilized to bind a command to an event for instance.
 

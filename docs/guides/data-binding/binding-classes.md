@@ -4,7 +4,7 @@ title: How To Bind Style Classes
 ---
 
 
-# 👉 How To Bind Style Classes
+# How To Bind Style Classes
 
 This guide will show you how to apply style classes to a control depending on the Boolean value of a data binding.&#x20;
 

@@ -4,7 +4,7 @@ title: How to Create a Custom Data Binding Converter
 ---
 
 
-# 👉 How to Create a Custom Data Binding Converter
+# How to Create a Custom Data Binding Converter
 
 When one of the built-in data binding converters does not meet your conversion requirements, you can write a custom converter based on the `IValueConverter` interface. This guide will show you how.&#x20;
 

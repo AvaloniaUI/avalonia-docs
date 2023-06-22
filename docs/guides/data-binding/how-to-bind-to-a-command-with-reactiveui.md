@@ -4,7 +4,7 @@ title: How to Bind to a Command with ReactiveUI
 ---
 
 
-# 👉 How to Bind to a Command with ReactiveUI
+# How to Bind to a Command with ReactiveUI
 
 This guide shows you how to bind a view model method (that performs an action) to a control that can initiate an action in response to user interaction (for example, a button). This binding is defined in XAML using the `Command` attribute, for example:
 

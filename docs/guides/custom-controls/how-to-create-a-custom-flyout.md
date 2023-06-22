@@ -3,7 +3,7 @@ id: how-to-create-a-custom-flyout
 title: How To Create a Custom Panel
 ---
 
-# 👉 How To Create a Custom Flyout
+# How To Create a Custom Flyout
 
 ## Creating Custom Flyouts
 

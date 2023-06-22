@@ -4,7 +4,7 @@ title: How To Create Templated Controls
 ---
 
 
-# 👉 How To Create Templated Controls
+# How To Create Templated Controls
 
 ## Data Binding
 
