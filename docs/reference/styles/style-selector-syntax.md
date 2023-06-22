@@ -35,7 +35,7 @@ This selector does not match derived types. For that, use the `:is` selector, se
 
 
 :::info
-Note the type of an object is actually determined by looking at its `IStyleable.StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can implement the `IStyleable.StyleKey` property on your class to return `typeof(Button)`.
+Note the type of an object is actually determined by looking at its `StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can override the `StyleKeyOverride` property on your class to return `typeof(Button)`.
 :::
 
 ## By Name <a href="#name" id="name"></a>
@@ -123,7 +123,7 @@ new Style(x => x.Is(typeof(Button)));
 This is very similar to the style class selector except it also matches derived types.
 
 :::info
-Technical detail: during the matching process, _Avalonia UI_ determines the type of a control by examining its `IStyleable.StyleKey` property.
+Technical detail: during the matching process, _Avalonia UI_ determines the type of a control by examining its `StyleKey` property.
 :::
 
 INterestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:

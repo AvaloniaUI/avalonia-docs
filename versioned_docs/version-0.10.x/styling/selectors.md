@@ -41,7 +41,7 @@ Selects a control by type. The first example above selects the `Avalonia.Control
 This selector does not match derived types. For that, use the [`Is`](selectors.md#is) selector.
 
 :::info
-Note the type of an object is actually determined by looking at its `IStyleable.StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can implement the `IStyleable.StyleKey` property on your class to return `typeof(Button)`.
+Note the type of an object is actually determined by looking at its `StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can override the `StyleKeyOverride` property on your class to return `typeof(Button)`.
 :::
 
 ## Name <a id="name"></a>

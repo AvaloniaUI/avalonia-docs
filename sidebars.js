@@ -175,7 +175,20 @@ const sidebars = {
                 'basics/user-interface/building-layouts/panels-overview',
               ],
             },
-            'basics/user-interface/styling',
+            {
+              'type': 'category',
+              'label': 'Styling',
+              'link': {
+                'type': 'doc',
+                'id': 'basics/user-interface/styling/index',
+              },
+              'items': [
+                'basics/user-interface/styling/styles',
+                'basics/user-interface/styling/style-classes',
+                'basics/user-interface/styling/control-themes',
+                'basics/user-interface/styling/troubleshooting',
+              ],
+            },
             'basics/user-interface/adding-interactivity',
             'basics/user-interface/assets',
             'basics/user-interface/animations',
@@ -246,7 +259,6 @@ const sidebars = {
           'label': 'Styles and Resources',
           'items': [
             'guides/styles-and-resources/index',
-            'guides/styles-and-resources/style-classes',
             'guides/styles-and-resources/selectors',
             'guides/styles-and-resources/property-setters',
             'guides/styles-and-resources/how-to-use-included-styles',
