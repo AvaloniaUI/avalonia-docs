@@ -4,7 +4,7 @@ title: How To Log Errors and Warnings
 ---
 
 
-# 👉 How To Log Errors and Warnings
+# How To Log Errors and Warnings
 
 This guide shows you how to can log warnings and errors in _Avalonia UI_ using the standard _(Microsoft)_`System.Diagnostics.Trace` component. &#x20;
 

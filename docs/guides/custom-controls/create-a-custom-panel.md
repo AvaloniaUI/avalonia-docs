@@ -3,7 +3,7 @@ id: create-a-custom-panel
 title: How To Create a Custom Panel
 ---
 
-# 👉 How To Create a Custom Panel
+# How To Create a Custom Panel
 
 This example shows how to override the default layout behavior of the `Panel` element and create custom layout elements that are derived from `Panel`.
 

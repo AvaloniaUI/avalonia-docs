@@ -4,7 +4,7 @@ title: How To Bind Image Files
 ---
 
 
-# 👉 How To Bind Image Files
+# How To Bind Image Files
 
 Content in preparation.
 

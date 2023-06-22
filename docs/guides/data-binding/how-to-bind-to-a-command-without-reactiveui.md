@@ -4,7 +4,7 @@ title: How to Bind to a Command without ReactiveUI
 ---
 
 
-# 👉 How to Bind to a Command without ReactiveUI
+# How to Bind to a Command without ReactiveUI
 
 Sometimes you just want to call a method when a button is clicked without the full ceremony of creating a reactive command, using the _ReactiveUI_ framework.&#x20;
 

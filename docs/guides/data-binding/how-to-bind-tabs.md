@@ -4,7 +4,7 @@ title: How To Bind Tabs
 ---
 
 
-# 👉 How To Bind Tabs
+# How To Bind Tabs
 
 Content in preparation.
 

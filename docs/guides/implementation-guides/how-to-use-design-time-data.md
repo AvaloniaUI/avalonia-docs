@@ -4,7 +4,7 @@ title: How To Use Design-time Data
 ---
 
 
-# 👉 How To Use Design-time Data
+# How To Use Design-time Data
 
 Design-time data can help you style and position your UI layer without having to build the rest of the application. This is especially useful when you are trying to achieve a pixel-perfect presentation.&#x20;
 

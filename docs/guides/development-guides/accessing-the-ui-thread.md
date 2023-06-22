@@ -4,7 +4,7 @@ title: How To Access the UI Thread
 ---
 
 
-# 👉 How To Access the UI Thread
+# How To Access the UI Thread
 
 This guide will show you how to access the UI thread in your _Avalonia UI_ application.&#x20;
 

@@ -4,7 +4,7 @@ title: How to Bind to a Task Result
 ---
 
 
-# 👉 How to Bind to a Task Result
+# How to Bind to a Task Result
 
 Content in preparation.
 

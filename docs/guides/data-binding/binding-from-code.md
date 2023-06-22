@@ -4,7 +4,7 @@ title: How To Bind from Code
 ---
 
 
-# 👉 How To Bind from Code
+# How To Bind from Code
 
 Binding from code in Avalonia works somewhat differently to WPF/UWP. At the low level, Avalonia's binding system is based on Reactive Extensions' `IObservable` which is then built upon by XAML bindings (which can also be instantiated in code).
 

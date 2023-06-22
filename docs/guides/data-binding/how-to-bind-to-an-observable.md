@@ -4,7 +4,7 @@ title: How To Bind to an Observable
 ---
 
 
-# 👉 How To Bind to an Observable
+# How To Bind to an Observable
 
 Content in preparation.
 
