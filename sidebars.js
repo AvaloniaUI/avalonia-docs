@@ -258,7 +258,6 @@ const sidebars = {
           'type': 'category',
           'label': 'Styles and Resources',
           'items': [
-            'guides/styles-and-resources/index',
             'guides/styles-and-resources/selectors',
             'guides/styles-and-resources/property-setters',
             'guides/styles-and-resources/how-to-use-included-styles',
