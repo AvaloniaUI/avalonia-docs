@@ -36,7 +36,7 @@ Get started [here](basics).
 Our guides offer practical implementation advice, often as step-by-step procedures. This section is organised by task.
 
 :::info
-Get the guides for practical advice [here](guides).
+Get the guides for practical advice [here](guidess).
 :::
 ### Advanced Concepts
 
