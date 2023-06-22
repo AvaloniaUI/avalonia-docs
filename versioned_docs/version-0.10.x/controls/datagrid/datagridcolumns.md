@@ -18,7 +18,7 @@ Every [.](./ "mention") can hold multiple `DataGridColumns`. Avalonia has severa
 | Property       | Description                                                                                                                                        |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Header         | Gets or sets the header content of the column                                                                                                      |
-| HeaderTemplate | Gets or sets a data template for the column (see: [datatemplates.md](../../templates/datatemplates))                                |
+| HeaderTemplate | Gets or sets a data template for the column (see: [datatemplates.md](../../templates/data-templates))                                |
 | IsReadOnly     | Gets or sets if the column is read-only. If the owning grid is read-only, then the column is also read-only, even if this property is set to true. |
 
 ## DataGridTextColumn
@@ -69,7 +69,7 @@ This column is used to represent a `bool` value. The  value is represented by a 
 
 ## DataGridTemplateColumn
 
-This column is used to display any content you like. There  are two [datatemplates.md](../../../misc/wpf/datatemplates.md "mention") which you can define, the `CellTemplate` for the normal state and the `CellEditingTemplate` for the editing state of the current `DataGridCell`.&#x20;
+This column is used to display any content you like. There  are two [datatemplates.md](../../templates/data-templates) which you can define, the `CellTemplate` for the normal state and the `CellEditingTemplate` for the editing state of the current `DataGridCell`.&#x20;
 
 :::info
 The DataGridTemplateColumn is editable from Avalonia version 0.10.12 onward. If you do not set a `CellEditingTemplate`, the column will stay read-only.

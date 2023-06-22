@@ -19,7 +19,7 @@ Our livestream assumes some knowledge of [XAML](../../guides/basics/introduction
 
 ## A little background to Avalonia
 
-Avalonia is a "[Template](../../docs/templates/)" based UI framework. This means that controls have `Templates` that describe how they look on the screen.
+Avalonia is a "[Template](../../templates/)" based UI framework. This means that controls have `Templates` that describe how they look on the screen.
 
 This is a different approach to other UI frameworks where native controls are used, for example a `Button` will take on the standard look of a button on its respective operating system.
 

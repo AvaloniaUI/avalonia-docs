@@ -45,7 +45,7 @@ this.Dispatcher.InvokeAsync(handler, DispatcherPriority.Background);
 Dispatcher.UIThread.InvokeAsync(handler, DispatcherPriority.Background);
 ```
 
-In more details, it's explained in the [Accessing the UI thread](../../guides/basics/accessing-the-ui-thread.md) article.
+In more details, it's explained in the [Accessing the UI thread](../guides/basics/accessing-the-ui-thread.md) article.
 
 # Visibility of elements
 

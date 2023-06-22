@@ -114,7 +114,7 @@ These controls helps display data, either in tabular or list form.
 
 Displays data in a customizable grid.
 
-### [ItemsControl](itemscontrols)
+### [ItemsControl](itemscontrol)
 
 Displays a collection of items.
 

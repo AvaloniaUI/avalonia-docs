@@ -5,7 +5,7 @@ title: Windows
 
 `Window` is the top-level control in Avalonia.
 
-A window consists of two parts: a [XAML file](../../guides/basics/introduction-to-xaml.md) \(e.g. `MainWindow.axaml`\) and a [code-behind](../../guides/basics/code-behind.md) file \(e.g. `MainWindow.axaml.cs`\). The code-behind defines a .NET class which represents the window.
+A window consists of two parts: a [XAML file](../guides/basics/introduction-to-xaml.md) \(e.g. `MainWindow.axaml`\) and a [code-behind](../guides/basics/code-behind.md) file \(e.g. `MainWindow.axaml.cs`\). The code-behind defines a .NET class which represents the window.
 
 For more information and examples, see the [`Window`](../controls/window.md) control.
 
