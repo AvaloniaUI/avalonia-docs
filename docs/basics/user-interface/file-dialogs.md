@@ -3,7 +3,7 @@ id: file-dialogs
 title: File Dialogs
 ---
 
-The file dialog functionality is accessed through the [`StorageProvider`](../services/storage-provider) API, which is available from the `MainWindow`. The following are two methods that demonstrate how to utilize this API for file operations.
+The file dialog functionality is accessed through the [`StorageProvider`](../../concepts/services/storage-provider) API, which is available from the `MainWindow`. The following are two methods that demonstrate how to utilize this API for file operations.
 
 :::info
 For a complete, runnable example of these concepts in action, check out [the sample application.](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/FileOps) 
@@ -60,7 +60,7 @@ private async Task<IStorageFile?> DoSaveFilePickerAsync()
 This method is used to open a save file dialog with the title "Save Text File". The selected file location is returned, or null if no location is selected.
 
 :::note
-The provided examples directly access the [`StorageProvider`](../services/storage-provider) API inside the ViewModel for learning purposes. In a real-world application, it's recommended to adhere to MVVM principles by creating service classes and locating them with Dependency Injection / Inversion of Control (DI/IoC). Please refer to the [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) and DepInject projects for samples of how to achieve this.
+The provided examples directly access the [`StorageProvider`](../../concepts/services/storage-provider) API inside the ViewModel for learning purposes. In a real-world application, it's recommended to adhere to MVVM principles by creating service classes and locating them with Dependency Injection / Inversion of Control (DI/IoC). Please refer to the [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) and DepInject projects for samples of how to achieve this.
 :::
 
 
