@@ -184,6 +184,7 @@ const sidebars = {
               },
               'items': [
                 'basics/user-interface/styling/styles',
+                'basics/user-interface/styling/style-classes',
                 'basics/user-interface/styling/control-themes',
                 'basics/user-interface/styling/troubleshooting',
               ],
@@ -258,7 +259,6 @@ const sidebars = {
           'label': 'Styles and Resources',
           'items': [
             'guides/styles-and-resources/index',
-            'guides/styles-and-resources/style-classes',
             'guides/styles-and-resources/selectors',
             'guides/styles-and-resources/property-setters',
             'guides/styles-and-resources/how-to-use-included-styles',

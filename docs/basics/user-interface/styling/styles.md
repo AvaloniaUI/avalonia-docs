@@ -44,7 +44,7 @@ The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (ca
 
 ## Example
 
-This is an example of how a style is written and applied to a control element, with a style class to help selection:
+This is an example of how a style is written and applied to a control element, with a [style class](style-classes) to help selection:
 
 ```xml
 <Window ... >
@@ -107,6 +107,24 @@ When this happens, the selector from the parent style will automatically apply t
 
 :::info
 The nesting selector must be present and must appear at the start of the child selector.
+:::
+
+## Style Priority
+
+There are two rules that govern which property setter has precedence when a selector matches multiple styles:
+
+* Position of the enclosing styles collection in the application - 'closest' has priority.
+* Position of the style in the located styles collection - 'latest' has priority.
+
+For example, firstly this means that styles defined at window level will override those defined at application level. Secondly, this means that where the selected style collections are at the same level, then the later definition (as written in the file) has priority.
+
+:::warning
+If you were comparing style classes to CSS you must note that: **unlike CSS**, the list sequence of class names in the `Classes` attribute has no effect on setter priority in _Avalonia UI_. That is, if both these style classes set the colour, then either way of listing the classes has the same result:
+
+```
+<Button Classes="h1 blue"/>
+<Button Classes="blue h1"/>
+```
 :::
 
 ## Styles and Resources

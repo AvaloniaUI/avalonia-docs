@@ -13,24 +13,6 @@ For example, this button has both the `h1` and `blue` style classes applied:
 <Button Classes="h1 blue"/>
 ```
 
-## Style Priority
-
-There are two rules that govern which property setter has precedence when a selector matches multiple styles:
-
-* Position of the enclosing styles collection in the application - 'closest' has priority.
-* Position of the style in the located styles collection - 'latest' has priority.
-
-For example, firstly this means that styles defined at window level will override those defined at application level. Secondly, this means that where the selected style collections are at the same level, then the later definition (as written in the file) has priority.
-
-:::warning
-If you were comparing style classes to CSS you must note that: **unlike CSS**, the list sequence of class names in the `Classes` attribute has no effect on setter priority in _Avalonia UI_. That is, if both these style classes set the colour, then either way of listing the classes has the same result:
-
-```
-<Button Classes="h1 blue"/>
-<Button Classes="blue h1"/>
-```
-:::
-
 ## Pseudo Classes
 
 Like in CSS, controls can have pseudo classes; these are classes that are defined in the control itself rather than by the user. The names of pseudo classes in a selector always start with a colon.
