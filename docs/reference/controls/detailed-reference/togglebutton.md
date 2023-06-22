@@ -33,8 +33,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 ```
 
 
-{% tab title="Styles" %}
-```xml
+```xml title='Styles'
 <Window.Styles>
   <Style Selector="ToggleButton PathIcon.audio-on">
     <Setter Property="IsVisible" Value="False"/>
@@ -52,8 +51,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 ```
 
 
-{% tab title="Icons" %}
-```xml
+```xml title='Icons'
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Style>
@@ -66,8 +64,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 ```
 
 
-{% tab title="App" %}
-```xml
+```xml title='App'
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:AvaloniaControls"

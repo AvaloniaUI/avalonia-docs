@@ -25,8 +25,7 @@ This example uses a MVVM pattern view model to hold some hierarchical data based
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using AvaloniaControls.Models;
 using System.Collections.ObjectModel;
 
@@ -54,8 +53,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Node Class" %}
-```csharp
+```csharp title='C# Node Class'
 using System.Collections.ObjectModel;
 
 namespace AvaloniaControls.Models
@@ -107,8 +105,7 @@ This is a development of the previous example with multiple root nodes, a revise
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using AvaloniaControls.Models;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -152,8 +149,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Node Class" %}
-```csharp
+```csharp title='C# Node Class'
 using System.Collections.ObjectModel;
 
 namespace AvaloniaControls.Models

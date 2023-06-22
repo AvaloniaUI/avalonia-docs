@@ -98,8 +98,7 @@ This example binds the items in a combo box using a data template. The C# code-b
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 using Avalonia.Media;
 using System.Linq;

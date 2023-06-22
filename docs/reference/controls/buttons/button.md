@@ -41,8 +41,7 @@ This example shows a simple button and a C# code-behind click event handler.
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 public partial class MainWindow : Window
 {
     public MainWindow()

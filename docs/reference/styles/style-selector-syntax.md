@@ -16,8 +16,7 @@ This page lists the XAML syntax for style selectors with the C# code methods tha
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<Button>());
 new Style(x => x.OfType(typeof(Button)));
 ```
@@ -48,8 +47,7 @@ Note the type of an object is actually determined by looking at its `StyleKey` p
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.Name("myButton"));
 new Style(x => x.OfType<Button>().Name("myButton"));
 ```
@@ -68,8 +66,7 @@ Selects a control by its `Name` attribute, with an added `#` (hash) character pr
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<Button>().Class("large"));
 new Style(x => x.OfType<Button>().Class("large").Class("red"));
 ```
@@ -88,8 +85,7 @@ Selects a control with the specified style class or classes. Multiple classes ar
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<Button>().Class(":focus"));
 new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 ```
@@ -112,8 +108,7 @@ For more detail about pseudo classes, see the reference [here](pseudo-classes.md
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.Is<Button>());
 new Style(x => x.Is(typeof(Button)));
 ```
@@ -136,8 +131,7 @@ INterestingly, this allows you to write very general class-based selectors. As c
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.Is<Control>().Class("margin2"));
 new Style(x => x.Is(typeof(Control)).Class("margin2"));
 ```
@@ -153,8 +147,7 @@ new Style(x => x.Is(typeof(Control)).Class("margin2"));
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 ```
 
@@ -189,8 +182,7 @@ The selector will match the first button, but not the second. This is because th
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<StackPanel>().Descendant().OfType<Button>());
 ```
 
@@ -209,8 +201,7 @@ Therefore applying the above selector to the previous XAML sample, both buttons 
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true));
 ```
 
@@ -248,8 +239,7 @@ Further note: when you use a property match, the property type must support the 
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<Button>().Template().OfType<ContentPresenter>());
 ```
 
@@ -268,8 +258,7 @@ In the example above, if a button has a template, then the selector matches sele
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 ```
 
@@ -286,8 +275,7 @@ This function negates the selection in the brackets. In the example above all th
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 ```
 
@@ -304,8 +292,7 @@ You can select any element that matches a comma-separated list of selectors. Any
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<TextBlock>().NthChild(2, 3));
 ```
 
@@ -330,8 +317,7 @@ There is a corresponding selector with a formula that counts from the end of the
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<TextBlock>().NthLastChild(2, 3));
 ```
 
@@ -348,8 +334,7 @@ You can omit the **A** and **n** from the formula in XAML to specify a single po
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Style(x => x.OfType<TextBlock>().NthChild(0, 3));
 ```
 

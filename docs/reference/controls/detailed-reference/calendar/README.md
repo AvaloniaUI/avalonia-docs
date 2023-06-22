@@ -51,8 +51,7 @@ This example has custom start and end dates, and some dates unavailable. This us
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 public partial class MainWindow : Window
 {
     public MainWindow()

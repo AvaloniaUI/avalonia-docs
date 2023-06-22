@@ -34,8 +34,7 @@ To create a meaningful layout, you will need to use corresponding orientation an
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 

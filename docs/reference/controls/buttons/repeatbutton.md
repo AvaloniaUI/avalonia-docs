@@ -31,8 +31,7 @@ This example shows a repeat button generating click events with the default inte
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 public partial class MainWindow : Window
 {
     public MainWindow()

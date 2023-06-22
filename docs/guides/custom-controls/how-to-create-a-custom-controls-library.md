@@ -14,8 +14,7 @@ In this example, a custom control file is added to a .NET class library. The lib
 <!--<img src="/img/gitbook-import/assets/image (11) (2).png" alt=""/>-->
 
 {% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='XAML'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:cc="clr-namespace:CCLibrary;assembly=CCLibrary"
@@ -36,8 +35,7 @@ In this example, a custom control file is added to a .NET class library. The lib
 ```
 {% endtab %}
 
-{% tab title="C#" %}
-```
+``` title='C#'
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;

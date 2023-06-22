@@ -15,8 +15,7 @@ In this example the view model contains an observable collection that is filled 
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using Avalonia.Controls.Models.TreeDataGrid;
 using Avalonia.Controls;
 using AvaloniaControls.Models;
@@ -101,8 +100,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='C# Item Class'
 public class Person
 {
     public string? FirstName { get; set; }

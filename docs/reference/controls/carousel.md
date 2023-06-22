@@ -37,8 +37,7 @@ This example has three images in the items collection, with buttons to move the 
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 

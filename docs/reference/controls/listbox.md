@@ -54,8 +54,7 @@ This simple example has the `Items` property set to an array in the C# code-behi
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 using System.Linq;
 
@@ -107,8 +106,7 @@ This example displays each item inside a blue border with rounded corners. The C
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 using System.Linq;
 
@@ -160,8 +158,7 @@ This means you can target a style to customize the `ListBoxItem` elements in a l
 ```
 
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 using Avalonia.Controls;
 using System.Linq;
 
