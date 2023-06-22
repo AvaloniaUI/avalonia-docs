@@ -28,8 +28,7 @@ In this example, the view model contains a collection of different images to sho
 </TransitioningContentControl>
 ```
 
-![](../../../.gitbook/assets/TransitioningContentControl\_01.webp)
-
+<img src='/img/gitbook-import/assets/TransitioningContentControl\_01.webp' alt=''/>
 In this example, a different page transition has been specified to slide the images horizontally:
 
 ```markup
@@ -45,8 +44,7 @@ In this example, a different page transition has been specified to slide the ima
 </TransitioningContentControl>
 ```
 
-![](../../../.gitbook/assets/TransitioningContentControl\_02.webp)
-
+<img src='/img/gitbook-import/assets/TransitioningContentControl\_02.webp' alt=''/>
 ## More Information
 
 :::info

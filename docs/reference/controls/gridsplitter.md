@@ -28,8 +28,7 @@ This is a column splitter:
 </Grid>
 ```
 
-![](../../.gitbook/assets/gridsplitter-in-action-columns.gif)
-
+<img src='/img/gitbook-import/assets/gridsplitter-in-action-columns.gif' alt=''/>
 This is a row splitter:
 
 ```markup
@@ -40,8 +39,7 @@ This is a row splitter:
 </Grid>
 ```
 
-![](../../.gitbook/assets/gridsplitter-in-action-rows.gif)
-
+<img src='/img/gitbook-import/assets/gridsplitter-in-action-rows.gif' alt=''/>
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/GridSplitter/).
 :::
