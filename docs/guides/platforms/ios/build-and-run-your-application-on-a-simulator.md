@@ -5,7 +5,7 @@ title: How To Build and Run on the iOS Simulator
 
 # How To Build and Run on the iOS Simulator
 
-Please ensure you have followed the guide [create-a-cross-platform-solution.md](../create-a-cross-platform-solution.md "mention").
+Please ensure you have followed the guide [Building Cross-Platform Applications](../../building-cross-platform-applications).
 
 Assuming you have created a project called `HelloWord`. Enter the directory `HelloWorld.iOS` from the command line.
 

@@ -16,4 +16,4 @@ We hope this might change in the future, if you do not have access to a Mac, a w
 You should always test on a real device before releasing.
 :::
 
-Before getting started ensure you have followed the guide [create-a-cross-platform-solution.md](../create-a-cross-platform-solution.md "mention").
+Before getting started ensure you have followed the guide [Building Cross Platform Applications](../../building-cross-platform-applications).
