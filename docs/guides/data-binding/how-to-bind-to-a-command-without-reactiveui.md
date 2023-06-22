@@ -44,7 +44,7 @@ namespace AvaloniaGuides.ViewModels
 
 <img src="/img/gitbook-import/assets/command2.gif" alt=""/>
 
-## Can Execute? <a href="#icommandcanexecute" id="icommandcanexecute"></a>
+## Can Execute?
 
 _Avalonia UI_ data binding provides a simple way of implementing a 'can execute?' feature using a naming convention.
 

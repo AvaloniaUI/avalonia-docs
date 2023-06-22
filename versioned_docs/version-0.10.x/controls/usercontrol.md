@@ -7,16 +7,16 @@ title: UserControl
 
 `UserControl` actually provides very little functionality on top of `ContentControl`. The difference is that you will not usually create instances of the `UserControl` class directly; instead a new subclass of the `UserControl` class is usually created for each "view" to be shown by an application. For information on how to create new `UserControl` classes from templates see the [quickstart](https://docs.avaloniaui.net/docs/getting-started/usercontrols).
 
-### Common Properties <a id="common-properties"></a>
+### Common Properties
 
 | Property | Description |
 | :--- | :--- |
 | `Content` | The content to display in the control |
 
-### Reference <a id="reference"></a>
+### Reference
 
 [UserControl](http://reference.avaloniaui.net/api/Avalonia.Controls/UserControl/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [UserControl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/UserControl.cs)

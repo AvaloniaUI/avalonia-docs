@@ -5,13 +5,13 @@ title: Image
 
 The `Image` control is a control for displaying raster images.
 
-### Binding <a id="binding"></a>
+### Binding
 
 Binding onto an `Image` control's `Source` property with a `string` must be done using a [binding converter](https://docs.avaloniaui.net/docs/data-binding/converting-binding-values) that will convert the `string` to an `IBitmap`.
 
-### Examples <a id="examples"></a>
+### Examples
 
-#### Swappable Image Button <a id="swappable-image-button"></a>
+#### Swappable Image Button
 
 An image button that changes images based on state is an example where binding to the `Image` control's `Source` property might seem necessary.
 
@@ -93,10 +93,10 @@ View the ["Play Button" example](https://docs.avaloniaui.net/docs/controls/butto
 
 View the ["Speaker Mute Button" example](https://docs.avaloniaui.net/docs/controls/togglebutton#speaker-mute-button) in the ToggleButton documentation.
 
-### Reference <a id="reference"></a>
+### Reference
 
 [Image](http://reference.avaloniaui.net/api/Avalonia.Controls/Image/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [Image.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Image.cs)

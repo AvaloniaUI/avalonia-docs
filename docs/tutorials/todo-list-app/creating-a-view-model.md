@@ -41,7 +41,7 @@ Your view model is very simple at this stage. Its constructor takes a collection
 
 The view model derives from the base class  `ViewModelBase` that was created by the solution template. More about this later in the tutorial.&#x20;
 
-## Separation in MVVM <a href="#create-an-instance-of-todolistviewmodel" id="create-an-instance-of-todolistviewmodel"></a>
+## Separation in MVVM
 
 You have seen that the to do list view model has a constructor that requires a collection of to do item data models to be provided as the parameter.  In turn this collection will be retrieved from the fake data service (model) at some point.&#x20;
 

@@ -5,13 +5,13 @@ title: ToggleButton
 
 The `ToggleButton` control is a subclass of the `Button` control that has a built-in `checked` state. This means the button can be checked or unchecked on click by a user. You may change the styling of controls based on whether `ToggleButton` is checked or not by using the `:checked` [pseudoclass.](https://docs.avaloniaui.net/docs/styling/styles#pseudoclasses)
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [ToggleButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)
 
-## Examples <a id="examples"></a>
+## Examples
 
-### Speaker Mute Button <a id="speaker-mute-button"></a>
+### Speaker Mute Button
 
 This button will show a muted speaker icon or an un-muted speaker icon based on whether the button is checked or unchecked, which the `ToggleButton` control toggles between when users click on the button.
 

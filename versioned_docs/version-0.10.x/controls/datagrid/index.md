@@ -2,11 +2,11 @@
 
 The `DataGrid` control is a control that displays data in a customizable grid.
 
-## Reference <a id="reference"></a>
+## Reference
 
 [DataGrid](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGrid/)
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [DataGrid.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGrid.cs)
 
@@ -45,7 +45,7 @@ Or if you are using new Fluent theme, you will need to include styles created sp
 </Application.Styles>
 ```
 
-## Examples <a id="examples"></a>
+## Examples
 
 ### Basic DataGrid
 
@@ -97,7 +97,7 @@ The DataGrid uses the same class Person as before, but now with custom column he
 </Window>
 ```
 
-### Common Properties <a id="common-properties"></a>
+### Common Properties
 
 | Property | Description |
 | :--- | :--- |

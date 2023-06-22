@@ -12,7 +12,7 @@ Resources are always defined inside a resource dictionary. This means that each 
 
 The level of a resource dictionary defines the scope of the resources in it: resources are available in the file where they are defined, and below. So you can tailor the scope of resources by choosing where to locate a resource dictionary.&#x20;
 
-## Declaring Resources <a href="#declaring-resources" id="declaring-resources"></a>
+## Declaring Resources
 
 For example, you may want brush colors to be standardized across the whole application. In this case you can declare a resource dictionary in the application XAML **App.axaml** file, like this
 
@@ -90,7 +90,7 @@ You can now add the resources you want to define in the position indicated. It l
 </ResourceDictionary>
 ```
 
-## Using Resources <a href="#referencing-resources" id="referencing-resources"></a>
+## Using Resources
 
 You can use a resource from a resources dictionary that is in scope using the    `{DynamicResource}` mark-up extension.&#x20;
 
@@ -116,7 +116,7 @@ A static resource is different in that it will not respond to changes in the res
 
 The benefit of using a static resource is that it has less work to do so it will be slightly faster to load, and it uses slightly less memory.
 
-## Resource Priority <a href="#overriding-resources" id="overriding-resources"></a>
+## Resource Priority
 
 _Avalonia UI_ resolves what resource to use by searching upwards in the **logical control tree** from the level of a `DynamicResource` or `StaticResource` mark-up, looking for the resource key.
 
@@ -142,7 +142,7 @@ This means that resources with the same key have priority based on their proximi
 
 Here the border control is using the resource with the key 'Warning'. This is defined twice - once at the level of the enclosing stack panel, and again at user control level. _Avalonia UI_ will determine that the border background should be be orange because its parent stack panel is first in a search upwards in the logical control tree from the border itself.
 
-## Include and Merge Resources <a href="#merged-resource-dictionaries" id="merged-resource-dictionaries"></a>
+## Include and Merge Resources
 
 Resources can be included from a resource dictionary file, and merged with the resources defined in another file (even if there are not any).&#x20;
 
@@ -176,7 +176,7 @@ Where the resource `InfoColor` is defined as a `SolidColorBrush` in the imported
 Note that the resource has been referenced using `StaticResource` because it must not change - the requirement here is to keep the styling consistent.&#x20;
 :::
 
-## Merged Resources Priority  <a href="#resource-resolution" id="resource-resolution"></a>
+## Merged Resources Priority 
 
 As you saw previously, resources are resolved by searching up the logical control tree from the point of mark-up until a resource with the requested key is found.&#x20;
 

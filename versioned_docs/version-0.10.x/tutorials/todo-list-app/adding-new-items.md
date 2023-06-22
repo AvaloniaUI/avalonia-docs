@@ -5,7 +5,7 @@ title: Adding new Items
 
 When we originally created the `TodoListView` we added an "Add an item" button. It's time now to make that button do something. When the button is clicked we want to replace the list of items with a new view which will allow the user to enter the description of a new item.
 
-### Create the view <a id="create-the-view"></a>
+### Create the view
 
 We start by creating the view \(see [here](https://docs.avaloniaui.net/tutorials/todo-list-app/creating-a-view#create-the-usercontrol) for a refresher on how to create a `UserControl` using a template\):
 
@@ -40,7 +40,7 @@ The only new thing here is the `<TextBox>` control which is a control that allow
 * `Text` binds the text that is displayed in the `TextBox` to the `Description` property on the view model
 * `Watermark` causes a placeholder to be displayed when the `TextBox` is empty
 
-### Create the view model <a id="create-the-view-model"></a>
+### Create the view model
 
 Our view model is going to start out _extremely_ simple. We're just going to provide the `Description` property that the `TextBox` is bound to for starters. We'll add to this as we go along.
 
@@ -56,7 +56,7 @@ namespace Todo.ViewModels
 }
 ```
 
-### Swap out the list view model <a id="swap-out-the-list-view-model"></a>
+### Swap out the list view model
 
 When we click the "Add an item" button, we want to stop showing the `TodoListView` in the window and show the `AddItemView`. We can alter the `MainWindowViewModel` to let us do this:
 
@@ -160,7 +160,7 @@ This will cause the `MainWindowViewModel.AddItem()` method to be invoked when th
 
 If you're familiar with WPF or UWP you may think it strange that we're binding `Button.Command` to a method. This is a convenience feature of Avalonia which means that you don't have to create an `ICommand` for simple commands that are always enabled.
 
-### Run the application <a id="run-the-application"></a>
+### Run the application
 
 If you now run the application and click the "Add an item" button you should see the new view appear.
 
@@ -170,7 +170,7 @@ If you now run the application and click the "Add an item" button you should see
 
 Now we have the "Add new item" view appearing we need to make it work. In particular we need to enable/disable the OK button depending on whether the user has typed anything in the `Description`.
 
-### Implement the OK and Cancel commands <a id="implement-the-ok-and-cancel-commands"></a>
+### Implement the OK and Cancel commands
 
 In the last section we bound a `Button.Command` to a method on the view model, but if we want to be able to control the enabled state of the button we need to bind to an [`ICommand`](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands). Again we're going to take advantage of ReactiveUI and use [`ReactiveCommand`](https://reactiveui.net/docs/handbook/commands/).
 
@@ -248,7 +248,7 @@ Cancel = ReactiveCommand.Create(() => { });
 
 The cancel command is always enabled so we don't pass an observable to control its state, we just pass an "execute" lambda which in this case does nothing.
 
-### Bind the OK and Cancel buttons <a id="bind-the-ok-and-cancel-buttons"></a>
+### Bind the OK and Cancel buttons
 
 We can now bind the OK and Cancel buttons in the view to the `Ok` and `Cancel` commands we just created on the view model:
 
@@ -274,7 +274,7 @@ Views/AddItemView.axaml
 
 If you run the application and go to the "Add Item" view you should now see that the OK button is only enabled when text has been entered in the description `TextBox`.
 
-### Handle the OK and Cancel button <a id="handle-the-ok-and-cancel-button"></a>
+### Handle the OK and Cancel button
 
 We now need to react to the OK or Cancel buttons being pressed and re-show the list. If OK was pressed we also need to add the new item to the list. We'll implement this functionality in `MainWindowViewModel`:
 
@@ -367,7 +367,7 @@ We're only interested in the first click of either the OK or Cancel button; once
 
 Finally we subscribe to the result of the observable sequence. If the command resulted in a `model` being produced \(i.e. OK was clicked\) then add this model to the list. We then set `Content` back to `List` in order to display the list in the window and hide the "AddItemView".
 
-### Run the application <a id="run-the-application"></a>
+### Run the application
 
 
   <div style={{textAlign: 'center'}}>

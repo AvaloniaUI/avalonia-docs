@@ -13,8 +13,8 @@ const config = {
   baseUrl: '/',
   organizationName: 'avaloniaui', // Usually your GitHub org/user name.
   projectName: 'avalonia', // Usually your repo name.
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -124,7 +124,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/next/get-started/test-drive/introduction',
               },
             ],
           },

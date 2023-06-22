@@ -29,7 +29,7 @@ This is the equivalent to the long-form binding that will be familiar to WPF and
 
 Avalonia supports both syntaxes but the short-form `#` syntax is less verbose.
 
-## Binding to an Ancestor <a id="binding-to-an-ancestor"></a>
+## Binding to an Ancestor
 
 You can bind to the logical parent of the target using the `$parent` symbol:
 

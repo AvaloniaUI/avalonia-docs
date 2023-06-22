@@ -4,14 +4,14 @@ description: TUTORIALS - To Do List App
 
 # Create a New Project
 
-On this page you will learn how to create a new project for the to do list app.&#x20;
+On this page you will learn how to create a new project for the to do list app.
 
-## Visual Studio <a href="#visual-studio" id="visual-studio"></a>
+## Visual Studio
 
 Before you start, check you have installed the _Avalonia UI_ extension for Visual Studio.
 
 :::info
-For full instructions about the extension, see [here](../../get-started/install-the-avalonia-extension.md).&#x20;
+For full instructions about the extension, see [here](../../get-started/install-the-avalonia-extension.md).
 :::
 
 <div style={{textAlign: 'center'}}>
@@ -20,7 +20,7 @@ For full instructions about the extension, see [here](../../get-started/install-
 
 <figure><figcaption></figcaption></figure>
 
-With the extension installed, start this tutorial by following these instructions:&#x20;
+With the extension installed, start this tutorial by following these instructions:
 
 - Start _Microsoft Visual Studio_
 - Click **Create a new project**
@@ -29,18 +29,18 @@ With the extension installed, start this tutorial by following these instruction
 - Click **Next**
 - In **Project name**, enter 'ToDoList', and click **Create**
 
-The newly created solution will look like this:&#x20;
+The newly created solution will look like this:
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (3) (1) (1).png" alt=""/>
 </div>
 
-## .NET Core CLI <a href="#net-core-cli" id="net-core-cli"></a>
+## .NET Core CLI
 
 Before you start, check you have installed the _Avalonia UI_ templates for .NET Core.
 
 :::info
-For full instructions about the starting with the CLI, see [here](../../get-started/getting-started.md).&#x20;
+For full instructions about the starting with the CLI, see [here](../../get-started/getting-started.md).
 :::
 
 With the templates installed, you can create the application from the template:
@@ -72,9 +72,9 @@ ToDoList
 
 ## MVVM Project Structure
 
-This section applies to both Visual Studio and CLI.&#x20;
+This section applies to both Visual Studio and CLI.
 
-You can see there are folders for each of the concepts in the MVVM pattern (models, views and view models) as well as some other files and folders.&#x20;
+You can see there are folders for each of the concepts in the MVVM pattern (models, views and view models) as well as some other files and folders.
 
 * The `/Assets` folder contains binary assets for your application such as icons and bitmaps. Files placed here will automatically be included as resources in the application.
 * The `/Models` folder is currently empty, you will add a file here later in this tutorial.
@@ -86,8 +86,8 @@ You can see there are folders for each of the concepts in the MVVM pattern (mode
 
 ## AXAML Files
 
-_Avalonia UI_ uses the file extension `.axaml` for its XAML files, and this includes those created by the Visual Studio solution template, and more recent versions of the .NET Core CLI templates. If you previously used older .NET Core CLI templates, then the extension may be `.xaml`.&#x20;
+_Avalonia UI_ uses the file extension `.axaml` for its XAML files, and this includes those created by the Visual Studio solution template, and more recent versions of the .NET Core CLI templates. If you previously used older .NET Core CLI templates, then the extension may be `.xaml`.
 
 :::info
-For more background on Avalonia UI XAML see [here](../../concepts/introduction-to-xaml.md).&#x20;
+For more background on Avalonia UI XAML see [here](../../basics/user-interface/introduction-to-xaml.md).
 :::

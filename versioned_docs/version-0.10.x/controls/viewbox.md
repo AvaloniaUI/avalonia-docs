@@ -161,14 +161,14 @@ new Viewbox
   </tbody>
 </table>
 
-### Pseudoclasses <a id="pseudoclasses"></a>
+### Pseudoclasses
 
 None
 
-### Reference <a id="reference"></a>
+### Reference
 
 [Viewbox](http://reference.avaloniaui.net/api/Avalonia.Controls/Viewbox/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [Viewbox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Viewbox.cs)

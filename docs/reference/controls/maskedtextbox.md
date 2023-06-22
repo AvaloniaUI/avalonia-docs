@@ -24,7 +24,7 @@ The escape character (backslash) can be used to include a special character as a
 
 `Mask="\$999,000.00"`
 
-## Example <a href="#source-code" id="source-code"></a>
+## Example
 
 This is a basic example:
 

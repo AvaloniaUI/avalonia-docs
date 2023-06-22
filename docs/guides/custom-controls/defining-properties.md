@@ -8,7 +8,7 @@ title: Defining Properties
 If you are creating a custom control, you will usually want it to have properties that can be set by the _Avalonia UI_ styling system.
 
 :::info
-For more information about how to use styles in _Avalonia UI_, see the guide [here](../../styles-and-resources/styling/)_._
+For more information about how to use styles in _Avalonia UI_, see the guide [here](../../basics/user-interface/styling).
 :::
 
 On this page, you will see how to implement a property so that it can be changed by the _Avalonia UI_ styling system. This is a two step process:
@@ -16,7 +16,7 @@ On this page, you will see how to implement a property so that it can be changed
 * Register a styled property.
 * Provide the getter/setter for the property.
 
-### Register a Styled Property <a href="#registering-styled-properties" id="registering-styled-properties"></a>
+### Register a Styled Property
 
 You register a styled property by defining a static read-only field and using the `AvaloniaProperty.Register` method.
 
@@ -95,5 +95,5 @@ The styled property will work both at run-time and in the preview panel.
 <img src='/img/gitbook-import/assets/image (4) (3).png' alt=''/>
 
 :::info
-For more advanced information about how to create a custom control, see [here](../how-to-create-advanced-custom-controls.md).
+For more advanced information about how to create a custom control, see [here](../custom-controls/how-to-create-advanced-custom-controls.md).
 :::

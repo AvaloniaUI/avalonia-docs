@@ -5,11 +5,11 @@ title: MaskedTextBox
 
 The `MaskedTextBox` control is an editable text field where a user can input text.
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [MaskedTextBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/MaskedTextBox.cs)
 
-### Basic example line TextBox <a id="basic-example"></a>
+### Basic example line TextBox
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"

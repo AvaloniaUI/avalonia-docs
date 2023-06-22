@@ -26,7 +26,7 @@ You will probably use these properties most often:
 | `IsDropDownOpen`           | Indicates whether the dropdown is currently open.                                                                        |
 | `MaxDropDownHeight`        | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show. |
 
-## Examples <a href="#examples" id="examples"></a>
+## Examples
 
 This is basic example with text items has a limit set on the drop-down list height.
 

@@ -142,10 +142,10 @@ Finally create a `TabControl` and bind its Items property to the DataContext.
   </TabControl>
 ```
 
-### Reference <a id="reference"></a>
+### Reference
 
 [TabControl](http://reference.avaloniaui.net/api/Avalonia.Controls/TabControl/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [TabControl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TabControl.cs)

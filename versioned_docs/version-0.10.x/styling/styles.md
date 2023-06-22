@@ -60,7 +60,7 @@ CustomStyles.xaml
 
 Note that unlike WPF/UWP, styles will have no effect if they're added to a control or application `ResourceDictionary`. This is because the order that styles are defined in Avalonia is important and `ResourceDictionary` is an unsorted dictionary.
 
-### Style Classes <a id="style-classes"></a>
+### Style Classes
 
 As in CSS, controls can be given _style classes_ which can be used in selectors. Style classes can be assigned in XAML by setting the `Classes` property to a space-separated list of strings. The following example applies the `h1` and `blue` style classes to a `Button`:
 
@@ -80,7 +80,7 @@ control.Classes.Add("blue");
 control.Classes.Remove("red");
 ```
 
-### Pseudoclasses <a id="pseudoclasses"></a>
+### Pseudoclasses
 
 Also as in CSS, controls can have pseudoclasses; these are classes that are defined by the control itself rather than by the user. Pseudoclasses start with a `:` character.
 
@@ -116,7 +116,7 @@ Another example that involves changing properties inside of control [template](s
 
 Other pseudoclasses include `:focus`, `:disabled`, `:pressed` for buttons, `:checked` for checkboxes etc.
 
-### Custom PseudoClasses  <a id="custom-pseudoclasses"></a>
+### Custom PseudoClasses 
 
 You can create own pseudoclasses for your `CustomControl` or `TemplatedControl`.
 The function below adds or remove a pseudoclass depending on a boolean value on a `StyledElement`.
@@ -125,7 +125,7 @@ PseudoClasses.Set(":className", bool);
 ```
 ***Remember:** PseudoClasses always starts with a `:`!*
 
-### Selectors <a id="selectors"></a>
+### Selectors
 
 _Selectors_ select a control using a custom selector syntax which is very similar to the syntax used for CSS selectors. An example of some selectors:
 
@@ -143,7 +143,7 @@ _Selectors_ select a control using a custom selector syntax which is very simila
 
 For more information see the [selectors documentation](selectors.md).
 
-### Setters <a id="setters"></a>
+### Setters
 
 A style's setters describe what will happen when the selector matches a control. They are simple property/value pairs written in the format:
 
@@ -188,7 +188,7 @@ Note: at present, if you are using compiled bindings, you need to explicitly set
 </Style>
 ```
 
-### Templates in Setters <a id="templates-in-setters"></a>
+### Templates in Setters
 
 As mentioned above, usually a single instance of a setter's `Value` is created and shared across all matching controls. Due to this, to use a control as a setter value, the control must be wrapped in a `<Template>`:
 
@@ -202,7 +202,7 @@ As mentioned above, usually a single instance of a setter's `Value` is created a
 </Style>
 ```
 
-### Style Precedence <a id="style-precedence"></a>
+### Style Precedence
 
 If multiple styles match a control, and they both attempt to set the same property then the style _closest to the control_ will win. Consider the following example:
 

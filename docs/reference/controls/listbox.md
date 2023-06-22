@@ -28,7 +28,7 @@ You will probably use these properties most often:
 To optimize performance when the items collection is large, use of the `ISelectionModel` is recommended.&#x20;
 :::
 
-## Selection Mode <a href="#selectionmode" id="selectionmode"></a>
+## Selection Mode
 
 The following selection modes are available for the list box:
 
@@ -77,7 +77,7 @@ namespace AvaloniaControls.Views
 
 <img src="/img/gitbook-import/assets/listbox1.gif" alt=""/>
 
-## Item Template <a href="#customizing-the-item-display" id="customizing-the-item-display"></a>
+## Item Template
 
 You can customize how an item is displayed by using an **data template** inside the list box `ItemTemplate` element.&#x20;
 
@@ -131,7 +131,7 @@ The list is the fill area of the dock panel here, so its height is set to the re
 
 <img src="/img/gitbook-import/assets/listbox2.gif" alt=""/>
 
-## Item Styling <a href="#containers" id="containers"></a>
+## Item Styling
 
 Each item displayed in a list box is drawn inside a `ListBoxItem` element. You can see this using the _Avalonia UI Dev Tools_ (F12), using the **Visual Tools** tab. For example:
 
@@ -181,7 +181,7 @@ namespace AvaloniaControls.Views
 
 <img src="/img/gitbook-import/assets/listbox3.gif" alt=""/>
 
-### More Information <a href="#selecteditems" id="selecteditems"></a>
+### More Information
 
 :::info
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/ListBox/).

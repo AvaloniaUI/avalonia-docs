@@ -29,10 +29,10 @@ The `GridSplitter` control is a control that allows a user to resize the space b
     <img src="/img/controls/gridsplitter/gridsplitter-in-action-rows.gif" alt="GridSplitter in Action for Rows" />
   </div>
 
-### Reference <a id="reference"></a>
+### Reference
 
 [GridSplitter](http://reference.avaloniaui.net/api/Avalonia.Controls/GridSplitter/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [GridSplitter.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GridSplitter.cs)

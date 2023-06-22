@@ -6,7 +6,7 @@ description: REFERENCE - Styles
 
 This page lists the XAML syntax for style selectors with the C# code methods that perform the same selection.&#x20;
 
-## By Control Class <a href="#oftype" id="oftype"></a>
+## By Control Class
 
 
 
@@ -37,7 +37,7 @@ This selector does not match derived types. For that, use the `:is` selector, se
 Note the type of an object is actually determined by looking at its `StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can override the `StyleKeyOverride` property on your class to return `typeof(Button)`.
 :::
 
-## By Name <a href="#name" id="name"></a>
+## By Name
 
 
 
@@ -56,7 +56,7 @@ new Style(x => x.OfType<Button>().Name("myButton"));
 
 Selects a control by its `Name` attribute, with an added `#` (hash) character prefix.
 
-## By Style Class <a href="#class" id="class"></a>
+## By Style Class
 
 
 
@@ -75,7 +75,7 @@ new Style(x => x.OfType<Button>().Class("large").Class("red"));
 
 Selects a control with the specified style class or classes. Multiple classes are separated with a full stop. If multiple classes are specified in the selector, then the control must have all of the requested classes defined for a match.
 
-## By Pseudo Class <a href="#is" id="is"></a>
+## By Pseudo Class
 
 
 
@@ -98,7 +98,7 @@ Selects a control using its current pseudo class. The colon character defines th
 For more detail about pseudo classes, see the reference [here](pseudo-classes.md).
 :::
 
-## Include Derived Classes <a href="#is" id="is"></a>
+## Include Derived Classes
 
 
 
@@ -138,7 +138,7 @@ new Style(x => x.Is(typeof(Control)).Class("margin2"));
 
 
 
-## Child Operator <a href="#child" id="child"></a>
+## Child Operator
 
 
 
@@ -173,7 +173,7 @@ For example, applying the above selector to this XAML:
 
 The selector will match the first button, but not the second. This is because the second button is not a direct child of the stack panel (it is inside the dock panel as well).
 
-## Any Descendant Operator <a href="#descendant" id="descendant"></a>
+## Any Descendant Operator
 
 
 
@@ -192,7 +192,7 @@ When two selectors are separated by a space, then the selector will match any de
 
 Therefore applying the above selector to the previous XAML sample, both buttons will be selected.
 
-## By Property Match <a href="#propertyequals" id="propertyequals"></a>
+## By Property Match
 
 
 
@@ -230,7 +230,7 @@ Note: when you use an attached property as a property match, the property name m
 Further note: when you use a property match, the property type must support the component model type converter, `TypeConverter` class. For more information see the _Microsoft_ documentation [here](https://learn.microsoft.com/dotnet/api/system.componentmodel.typeconverter).
 :::
 
-## By Template <a href="#template" id="template"></a>
+## By Template
 
 
 
@@ -249,7 +249,7 @@ You can match a control in a control template using the above syntax. All the ot
 
 In the example above, if a button has a template, then the selector matches selects content presenter controls (class `ContentPresenter`) inside the template.
 
-## Not Function <a href="#not" id="not"></a>
+## Not Function
 
 
 
@@ -266,7 +266,7 @@ new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 
 This function negates the selection in the brackets. In the example above all the text block controls that **do not** have the `h1` class will be matched.
 
-## By List <a href="#or" id="or"></a>
+## By List
 
 
 
@@ -283,7 +283,7 @@ new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 
 You can select any element that matches a comma-separated list of selectors. Any setters in the style must change properties that are common to all the items. &#x20;
 
-## By Child Position Formula <a href="#nth-child" id="nth-child"></a>
+## By Child Position Formula
 
 
 
@@ -369,7 +369,7 @@ This table lists some examples of selection by child position:&#x20;
 | `:nth-child(3n+4)` | Every 3rd element start from 4th: **4**_(3×0+4)_, **7**_(3×1+4)_, **10**_(3×2+4)_, **13**_(3×3+4)_, etc                                                                                                         |
 | `:nth-child(-n+3)` | First 3 elements: **3**_(-1×0+3)_, **2**_(-1×1+3)_, **1**_(-1×2+3)_. All subsequent indices are less than 1 so they are not matching any elements.                                                              |
 
-## Online Child Position Tester <a href="#nth-last-online-tester" id="nth-last-online-tester"></a>
+## Online Child Position Tester
 
 Although this is a CSS site, it will work for _Avalonia UI_ child position selectors because the rules are the same.
 

@@ -15,13 +15,13 @@ Application state is kept in the 'top level' view model, and can be persisted to
 This tutorial application targets a windowing platform such as _Apple iOS_ or _Windows_.&#x20;
 
 :::info
-To learn more about targeting applications for iOS (Apple) platforms, see [here](../../guides/platforms/ios/).
+To learn more about targeting applications for iOS (Apple) platforms, see [here](../../guides/platforms/ios).
 :::
 
 :::info
-To learn more about targeting applications for Android mobile devices, see [here](../../guides/platforms/android/).
+To learn more about targeting applications for Android mobile devices, see [here](../../guides/platforms/android).
 :::
 
 ## Further Reading
 
-For a full list of the _Avalonia UI_ tutorials, see [here](broken-reference).
+For a full list of the _Avalonia UI_ tutorials, see [here](..).

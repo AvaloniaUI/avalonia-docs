@@ -26,10 +26,10 @@ By default this text shows the percentage completion, according to the [`Value`]
 |----|----|------|---------------------------------|-----------------------------|
 |0   |20  |17    |`{0}/{3} Tasks Complete ({1:0}%)`|`17/20 Tasks Complete (85%)` |
 
-### Reference <a id="reference"></a>
+### Reference
 
 [ProgressBar](http://reference.avaloniaui.net/api/Avalonia.Controls/ProgressBar/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [ProgressBar.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ProgressBar.cs)

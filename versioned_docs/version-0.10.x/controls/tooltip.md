@@ -5,7 +5,7 @@ title: ToolTip
 
 The `ToolTip` is a control that pops up with hint text when hovered over the appropriate control.
 
-## Common Properties <a id="common-properties"></a>
+## Common Properties
 
 | Property | Description |
 | :--- | :--- |
@@ -16,17 +16,17 @@ The `ToolTip` is a control that pops up with hint text when hovered over the app
 | `ShowDelay` | Gets or sets the delay for the tooltip to appear. Default value is 400. |
 | `IsOpen` | Gets or sets a value indicating whether the tooltip is currently showing. |
 
-### Reference <a id="reference"></a>
+### Reference
 
 [ToolTip](http://reference.avaloniaui.net/api/Avalonia.Controls/ToolTip/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [ToolTip.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ToolTip.cs)
 
-## Examples <a id="examples"></a>
+## Examples
 
-### Text ToolTip <a id="text-tooltip"></a>
+### Text ToolTip
 
 ```markup
 <Border Margin="5"
@@ -37,7 +37,7 @@ The `ToolTip` is a control that pops up with hint text when hovered over the app
 </Border>
 ```
 
-### Rich Tooltip <a id="rich-tooltip"></a>
+### Rich Tooltip
 
 ```markup
 <Border Margin="5"

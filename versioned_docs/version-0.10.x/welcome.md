@@ -29,7 +29,7 @@ Avalonia has excellent support for XAML development with IntelliSense in the fol
 - Visual Studio 2017 and higher, including the Avalonia Visual Designer
 - JetBrains Rider 2020.3 and higher
 
-You can find instructions on how to install the Avalonia extension for Visual Studio [here](docs/getting-started/ide-support/). For JetBrains Rider setup, see [these instructions](docs/getting-started/ide-support/jetbrains-rider-setup.md).
+You can find instructions on how to install the Avalonia extension for Visual Studio [here](getting-started/ide-support/). For JetBrains Rider setup, see [these instructions](getting-started/jetbrains-rider-setup.md).
 
 ## Getting Help
 

@@ -3,7 +3,7 @@ info: load-data-at-startup
 title: Load data at Startup
 ---
 
-## Loading Albums on Startup <a id="loading-albums-on-startup"></a>
+## Loading Albums on Startup
 
 Our backend code provides a nice way to load the users collection from disk.
 

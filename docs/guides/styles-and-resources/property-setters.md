@@ -82,7 +82,7 @@ Note: if you are using compiled bindings, you need to explicitly set the data ty
 For more information about compiled bindings, see here. --> TO DO
 :::
 
-## Setter Data Templates <a href="#templates-in-setters" id="templates-in-setters"></a>
+## Setter Data Templates
 
 As previously described here, when you use a setter without a **data template**, a single instance of the setter value is created and shared across all matching controls. To change the value depending on a data template, you place the target control inside a template element, like this:
 
@@ -97,5 +97,5 @@ As previously described here, when you use a setter without a **data template**,
 ```
 
 :::info
-For information about the concepts behind a **data template**, see [here](../../../concepts/templates/).
+For information about the concepts behind a **data template**, see [here](../../concepts/templates).
 :::

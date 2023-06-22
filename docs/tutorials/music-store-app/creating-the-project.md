@@ -6,7 +6,7 @@ description: TUTORIALS - Music Store App
 
 On this page you will lean how to create a new project for the app.
 
-### JetBrains Rider <a href="#creating-a-new-project" id="creating-a-new-project"></a>
+### JetBrains Rider
 
 Before you start, check you have installed the _Avalonia UI_ solution templates for _JetBrains Rider_.
 
@@ -44,7 +44,7 @@ To explore the concepts behind the MVVM pattern, and when is appropriate to use 
 
 The solution template has created enough files for the application to run. You will meet all of these during the rest of this tutorial.   &#x20;
 
-## Run the Project <a href="#compiling-and-running-the-project" id="compiling-and-running-the-project"></a>
+## Run the Project
 
 Press the debug button top-right of the IDE to compile and run the project.
 

@@ -74,7 +74,7 @@ When the control bound to the reactive command is activated (in this example: wh
 
 <img src="/img/gitbook-import/assets/command.gif" alt=""/>
 
-## Command Parameter <a href="#commandparameter" id="commandparameter"></a>
+## Command Parameter
 
 You will often need to pass an argument to the reactive command that is bound to a control. You can achieve this using the `CommandParameter` attribute in the XAML. For example:
 

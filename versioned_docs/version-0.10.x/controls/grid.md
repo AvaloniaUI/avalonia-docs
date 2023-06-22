@@ -5,17 +5,17 @@ title: Grid
 
 The `Grid` control is a `Panel` control useful for organizing other controls in columns and rows. `ColumnDefinition` and `RowDefinition` properties are used to define absolute, relative, or proportional row and column geometries for the grid. Each control in the grid will be placed using the `Grid.Column` and `Grid.Row` additional properties. It is also possible to have controls that span multiple rows and/or columns by using the `ColumnSpan` and `RowSpan` properties.
 
-## Reference <a id="reference"></a>
+## Reference
 
 [Grid](http://reference.avaloniaui.net/api/Avalonia.Controls/Grid/)
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [Grid.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
 
-## Examples <a id="examples"></a>
+## Examples
 
-### Grid Using Properties and Spanning Columns <a id="grid-using-properties-and-spanning-columns"></a>
+### Grid Using Properties and Spanning Columns
 
 Below is an example that shows:
 
@@ -124,7 +124,7 @@ This new View code look's like this:
     </Grid>
 ```
 
-### Using Verbose Row/Column Definitions <a id="using-verbose-rowcolumn-definitions"></a>
+### Using Verbose Row/Column Definitions
 
 For more complex row and column definitions it's possible to explicitly use `Grid.ColumnDefinitions` and `Grid.RowDefinitions` XAML fields to provide access to these additional settings. The below code produces is exactly the same except for the fact we set the minimum width on the second column to be 300.
 
@@ -152,7 +152,7 @@ For more complex row and column definitions it's possible to explicitly use `Gri
     <img src="/img/controls/grid/grid_example_verbose.png" alt="Using Verbose Row/Column Definitions" />
   </div>
 
-### Common Properties <a id="common-properties"></a>
+### Common Properties
 
 | Property | Description |
 | :--- | :--- |

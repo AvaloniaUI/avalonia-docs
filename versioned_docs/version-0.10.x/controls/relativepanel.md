@@ -52,10 +52,10 @@ Here are a few things to note about the sizing of the rectangles:
 * The green rectangle is given an explicit height of 44. Its left side is aligned with the red rectangle, and its right side is aligned with the blue rectangle, which determines its width.
 * The orange rectangle isn't given an explicit size. Its left side is aligned with the blue rectangle. Its right and bottom edges are aligned with the edge of the panel. Its size is determined by these alignments and it will resize as the panel resizes.
 
-### Reference <a id="reference"></a>
+### Reference
 
 [RelativePanel](http://reference.avaloniaui.net/api/Avalonia.Controls/StackPanel/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [RelativePanel.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RelativePanel.cs)

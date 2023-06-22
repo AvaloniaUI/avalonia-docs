@@ -7,7 +7,7 @@ description: CONCEPTS - Data Templates
 You have probably seen what happens if you put a button control into the content zone of an _Avalonia UI_ window. &#x20;
 
 :::info
-The concept of the zones of an _Avalonia UI_ control is discussed [here](../layout/layout-zones.md).
+The concept of the zones of an _Avalonia UI_ control is discussed [here](../layout/layout-zones).
 :::
 
 For example:

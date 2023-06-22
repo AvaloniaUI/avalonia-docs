@@ -40,7 +40,7 @@ You will probably use these properties most often:
 
 <img src='/img/gitbook-import/assets/image (15) (1).png' alt=''/>
 
-### More Information <a href="#reference" id="reference"></a>
+### More Information
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/WrapPanel/).

@@ -15,10 +15,10 @@ This property is available from these Controls:
 - [TextBox](./textbox)
 - [TreeView](./treeview)
 
-## Reference <a id="reference"></a>
+## Reference
 
 [ScrollViewer](http://reference.avaloniaui.net/api/Avalonia.Controls/ScrollViewer/)
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [ScrollViewer.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ScrollViewer.cs)

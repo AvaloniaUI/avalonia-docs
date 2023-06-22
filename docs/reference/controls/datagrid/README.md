@@ -9,7 +9,7 @@ The data grid displays repeating data in a customizable grid. The control can be
 The data grid needs to be bound to an observable collection in a view model that can be found in a related **data context**.&#x20;
 
 :::info
-To review the concept behind the **data context**, see [here](../../../concepts/data-binding/data-context.md).
+To review the concept behind the **data context**, see [here](../../../basics/data/data-binding/data-context).
 :::
 
 :::info
@@ -51,7 +51,7 @@ For example:
 </Application.Styles>
 ```
 
-## Useful Properties <a href="#common-properties" id="common-properties"></a>
+## Useful Properties
 
 You will probably use these properties most often:
 
@@ -64,7 +64,7 @@ You will probably use these properties most often:
 | `CanUserResizeColumns`  | Indicates whether the user can adjust column widths using the pointer. (Default is false.)                                      |
 | `CanUserSortColumns`    | Indicates whether the user can sort columns by clicking the column header. (Default is true.)                                   |
 
-## Examples <a href="#examples" id="examples"></a>
+## Examples
 
 This example will generate a basic data grid, with column header names auto-generated from the item class. The items data source is bound to the main window view model.&#x20;
 
@@ -124,7 +124,7 @@ public class Person
 <img src='/img/gitbook-import/assets/grid1.gif' alt=''/>
 
 :::info
-These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](../../../concepts/data-binding/).
+These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](../../../basics/data/data-binding).
 :::
 
 Property names from the item class will generally not make good column names. This example adds custom header names to the grid. It also allows column reordering and resizing and disallows the default column sorting option:
@@ -209,7 +209,7 @@ public class Person
 
 <img src='/img/gitbook-import/assets/grid3.gif' alt=''/>
 
-## More Information <a href="#common-properties" id="common-properties"></a>
+## More Information
 
 :::info
 For more information about the different kinds of data grid column, see the [next page](datagridcolumns.md).

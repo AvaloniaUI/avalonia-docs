@@ -10,7 +10,7 @@ There are two types of animations in _Avalonia UI_:
 * Keyframe Animation -  can change one or more property values using a timeline. Keyframes are defined along the timeline at cue points. The properties being changed are adjusted between keyframes using an easing function (which is a straight-line interpolation by default). Keyframe animations are a very versatile type of animation.
 * Transitions - can change a single property.
 
-## Keyframe Animation <a href="#in-this-section" id="in-this-section"></a>
+## Keyframe Animation
 
 The simplest keyframe animation will change one property value over a a specified duration by defining two keyframes with cue points at the start (0% of the duration) and the end (100% of the duration).&#x20;
 
@@ -22,7 +22,7 @@ The property value is then changed over time between the keyframes using the pro
 You can see the full range of easing functions in the reference, [here](../../reference/animation-settings.md).
 :::
 
-## Triggering Animations <a href="#triggering-animations" id="triggering-animations"></a>
+## Triggering Animations
 
 _Avalonia UI_ animations defined in XAML rely on selectors for their triggering behavior. Selectors can always apply to a control, or they can conditionally apply (for example if the control has a style class applied).
 

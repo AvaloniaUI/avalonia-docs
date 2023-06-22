@@ -12,7 +12,7 @@ In a real MVVM application, the model handles everything that is not in the appl
 
 In this tutorial example, you will create a mock database and a service to access it. These will take the place of the model part of the application.
 
-### Data Model <a href="#create-the-model" id="create-the-model"></a>
+### Data Model
 
 The data model contains data entities (as they would appear if stored in a database for example).
 
@@ -34,7 +34,7 @@ namespace ToDoList.DataModel
 }
 ```
 
-### Create a Fake Data Service <a href="#create-a-fake-database" id="create-a-fake-database"></a>
+### Create a Fake Data Service
 
 In a real application, you might use a SQL database and write services based on the _Microsoft Entity Framework_ to read and write data.  However, this is well beyond the scope of this tutorial! So to test the app, you will create a fake data service that acts as if it has a database, but really just uses an array in memory.
 

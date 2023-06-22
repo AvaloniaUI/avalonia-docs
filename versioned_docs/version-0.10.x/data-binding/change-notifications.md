@@ -3,7 +3,7 @@ id: change-notifications
 title: Change Notifications
 ---
 
-### Property Changes <a id="property-changes"></a>
+### Property Changes
 
 In order for Avalonia to know when a property on a view model has changed, the view model must implement change notifications. The easiest way to do this is to use `ReactiveUI` and make your view model class inherit from `ReactiveObject`.
 
@@ -28,7 +28,7 @@ For more information see the [ReactiveUI documentation](https://reactiveui.net/d
 
 If you don't want a dependency on ReactiveUI, you can implement [`INotifyPropertyChanged` manually](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged).
 
-### Collection Changes <a id="collection-changes"></a>
+### Collection Changes
 
 Collections also need to implement change notifications. There are a number of collections which do this for you out of the box:
 

@@ -32,7 +32,7 @@ This is the equivalent to the long-form binding that will be familiar to WPF and
 
 _Avalonia UI_ supports both syntaxes.
 
-## Binding to an Ancestor <a href="#binding-to-an-ancestor" id="binding-to-an-ancestor"></a>
+## Binding to an Ancestor
 
 You can bind to the (logical control tree) parent of the target using the `$parent` syntax:
 

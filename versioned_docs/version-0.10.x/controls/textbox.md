@@ -5,17 +5,17 @@ title: TextBox
 
 The `TextBox` control is an editable text field where a user can input text.
 
-## Reference <a id="reference"></a>
+## Reference
 
 [TextBox](http://reference.avaloniaui.net/api/Avalonia.Controls/TextBox/)
 
-## Source code <a id="source-code"></a>
+## Source code
 
 [TextBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBox.cs)
 
-## Examples <a id="examples"></a>
+## Examples
 
-### Basic one line TextBox <a id="basic-one-line-textbox"></a>
+### Basic one line TextBox
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -38,7 +38,7 @@ produces the following output in **Windows 10**
   </div>
 
 
-### Password input TextBox <a id="password-input-textbox"></a>
+### Password input TextBox
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -61,7 +61,7 @@ produces the following output in **Windows 10** when text is input
   </div>
 
 
-### TextBox with watermark <a id="textbox-with-watermark"></a>
+### TextBox with watermark
 
 Avalonia can show a "watermark" in a `TextBox`, which is a piece of text that is displayed when the `TextBox` is empty \(in HTML5 this is called a _placeholder_\)
 
@@ -86,7 +86,7 @@ produces the following output in **Windows 10**
   </div>
 
 
-### Multiline TextBox <a id="multiline-textbox"></a>
+### Multiline TextBox
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -108,7 +108,7 @@ produces the following output in **Windows 10** when text is input
     <img src="/img/controls/textbox/textbox_multiline.png"  />
   </div>
 
-### TextInput Event Handling <a id="textinput-event-handling"></a>
+### TextInput Event Handling
 
 By default the [TextInput](http://reference.avaloniaui.net/api/Avalonia.Input/InputElement/37F81F6F) event does nothing if you assign directly to it. This is due to the TextBox itself handling the event from the underlying InputElement.
 

@@ -30,14 +30,14 @@ HotKeyManager.SetHotKey(saveMenuItem, new KeyGesture(Key.S, KeyModifiers.Control
 
 A Hotkey must have one [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/) and zero or more [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/). When setting a Hotkey in XAML using the `HotKey` property, the string will be parsed as a [KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/). [Enum.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.enum.parse) is used to parse the key and modifiers but synonyms like `Ctrl` instead of `Control` or `Win` instead of `Meta` can be used.
 
-### Reference <a href="#reference" id="reference"></a>
+### Reference
 
 * [HotKeyManager](http://reference.avaloniaui.net/api/Avalonia.Controls/HotKeyManager/)
 * [KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/)
 * [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/)
 * [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/)
 
-### Source code <a href="#source-code" id="source-code"></a>
+### Source code
 
 * [HotkeyManager.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/HotkeyManager.cs)
 * [KeyGesture.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Input/KeyGesture.cs)

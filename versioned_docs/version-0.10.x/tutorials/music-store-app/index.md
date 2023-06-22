@@ -17,9 +17,9 @@ Our livestream assumes some knowledge of [XAML](../../guides/basics/introduction
   </div>
 
 
-## A little background to Avalonia <a id="a-little-background-to-avalonia"></a>
+## A little background to Avalonia
 
-Avalonia is a "[Template](../../docs/templates/)" based UI framework. This means that controls have `Templates` that describe how they look on the screen.
+Avalonia is a "[Template](../../templates/)" based UI framework. This means that controls have `Templates` that describe how they look on the screen.
 
 This is a different approach to other UI frameworks where native controls are used, for example a `Button` will take on the standard look of a button on its respective operating system.
 
@@ -97,7 +97,7 @@ A View provides the look, layout and content of the UI.
 
 Lets get started building something!
 
-## In This Section <a id="in-this-section"></a>
+## In This Section
 
 ```mdx-code-block
 import {DocsCardList} from '../../../../src/components/DocsCard';

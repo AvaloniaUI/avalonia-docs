@@ -98,7 +98,7 @@ CancelCommand = ReactiveCommand.Create(() => { });
 
 The cancel command has no execution, so its first and only parameter does nothing. The cancel button is always enabled, so it does not have a 'can execute' parameter.&#x20;
 
-## Bind the OK and Cancel Buttons <a href="#bind-the-ok-and-cancel-buttons" id="bind-the-ok-and-cancel-buttons"></a>
+## Bind the OK and Cancel Buttons
 
 Your next step is to create binding for the OK and cancel buttons in the view.&#x20;
 

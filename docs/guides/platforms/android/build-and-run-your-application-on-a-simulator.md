@@ -5,7 +5,7 @@ title: Build and run your Application on a Simulator
 
 # Build and run your Application on a Simulator
 
-Please ensure you have followed the guide [create-a-cross-platform-solution.md](../create-a-cross-platform-solution.md "mention").
+Please ensure you have followed the guide [Building Cross-Platform Applications](../../building-cross-platform-applications).
 
 Assuming you have created a project called `HelloWord`. Enter the directory `HelloWorld.Android` from the command line.
 

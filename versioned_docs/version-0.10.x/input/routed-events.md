@@ -5,11 +5,11 @@ title: Routed Events
 
 Most events in Avalonia are implemented as Routed Events. Routed events are events that are raised on the whole tree rather than just the control that raised the event.
 
-## What Is a Routed Event <a id="what-is-a-routed-event"></a>
+## What Is a Routed Event
 
 A typical Avalonia application contains many elements. Whether created in code or declared in XAML, these elements exist in an element tree relationship to each other. The event route can travel in one of two directions depending on the event definition, but generally the route travels from the source element and then "bubbles" upward through the element tree until it reaches the element tree root \(typically a page or a window\). This bubbling concept might be familiar to you if you have worked with the HTML DOM previously.
 
-### Top-level Scenarios for Routed Events <a id="top-level-scenarios-for-routed-events"></a>
+### Top-level Scenarios for Routed Events
 
 The following is a brief summary of the scenarios that motivated the routed event concept, and why a typical CLR event was not adequate for these scenarios:
 
@@ -41,7 +41,7 @@ private void CommonClickHandler(object sender, RoutedEventArgs e)
 
 **Referencing an event without reflection:** Certain code and markup techniques require a way to identify a specific event. A routed event creates a `RoutedEvent` field as an identifier, which provides a robust event identification technique that does not require static or run-time reflection.
 
-### How Routed Events Are Implemented <a id="how-routed-events-are-implemented"></a>
+### How Routed Events Are Implemented
 
 A routed event is a CLR event that is backed by an instance of the `RoutedEvent` class and registered with the Avalonia event system. `RoutedEvent` instance obtained from registration is typically retained as a `public` `static` `readonly` field member of the class that registers and thus "owns" the routed event. The connection to the identically named CLR event \(which is sometimes termed the "wrapper" event\) is accomplished by overriding the `add` and `remove` implementations for the CLR event. Ordinarily, the `add` and `remove` are left as an implicit default that uses the appropriate language-specific event syntax for adding and removing handlers of that event. The routed event backing and connection mechanism is conceptually similar to how an avalonia property is a CLR property that is backed by the `AvaloniaProperty` class and registered with the Avalonia property system.
 
@@ -62,7 +62,7 @@ public class SampleControl: Control
 }
 ```
 
-### Routed Event Handlers and XAML <a id="routed-event-handlers-and-xaml"></a>
+### Routed Event Handlers and XAML
 
 To add a handler for an event using XAML, you declare the event name as an attribute on the element that is an event listener. The value of the attribute is the name of your implemented handler method, which must exist in the class of the code-behind file.
 
@@ -74,7 +74,7 @@ The XAML syntax for adding standard CLR event handlers is the same for adding ro
 
 As of Avalonia 0.9.x the Avalonia designer requires event handlers to be declared as `public` methods. We hope to remove this restriction in future.
 
-## Routing Strategies <a id="routing-strategies"></a>
+## Routing Strategies
 
 Routed events use one of three routing strategies:
 
@@ -82,7 +82,7 @@ Routed events use one of three routing strategies:
 * **Direct:** Only the source element itself is given the opportunity to invoke handlers in response. This is analogous to the "routing" that Windows Forms uses for events. However, unlike a standard CLR event, direct routed events support class handling \(class handling is explained in an upcoming section\).
 * **Tunneling:** Initially, event handlers at the element tree root are invoked. The routed event then travels a route through successive child elements along the route, towards the node element that is the routed event source \(the element that raised the routed event\). Tunneling routed events are often used or handled as part of the compositing for a control, such that events from composite parts can be deliberately suppressed or replaced by events that are specific to the complete control. Input events provided in Avalonia often raise both tunneling and bubbling events.
 
-## Why Use Routed Events? <a id="why-use-routed-events"></a>
+## Why Use Routed Events?
 
 As an application developer, you do not always need to know or care that the event you are handling is implemented as a routed event. Routed events have special behavior, but that behavior is largely invisible if you are handling an event on the element where it is raised.
 
@@ -99,7 +99,7 @@ Other than the routing aspect, there are two other reasons that any given Avalon
 
 Each of the above considerations is discussed in a separate section of this topic.
 
-## Adding and Implementing an Event Handler for a Routed Event <a id="adding-and-implementing-an-event-handler-for-a-routed-event"></a>
+## Adding and Implementing an Event Handler for a Routed Event
 
 To add an event handler in XAML, you simply add the event name to an element as an attribute and set the attribute value as the name of the event handler that implements an appropriate delegate, as in the following example.
 
@@ -170,7 +170,7 @@ This conceptual design is reinforced by the routing behavior mentioned earlier: 
 
 In applications, it is quite common to just handle a bubbling routed event on the object that raised it, and not be concerned with the event's routing characteristics at all. However, it is still a good practice to mark the routed event as handled in the event data, to prevent unanticipated side effects just in case an element that is further up the element tree also has a handler attached for that same routed event.
 
-## Class Handlers <a id="class-handlers"></a>
+## Class Handlers
 
 If you are defining a class that derives in some way from `AvaloniaObject`, you can also define and attach a class handler for a routed event that is a declared or inherited event member of your class. Class handlers are invoked before any instance listener handlers that are attached to an instance of that class, whenever a routed event reaches an element instance in its route.
 
@@ -190,13 +190,13 @@ protected virtual void OnMyEvent(MyEventArgs e)
 }
 ```
 
-## Attached Events in Avalonia <a id="attached-events-in-avalonia"></a>
+## Attached Events in Avalonia
 
 The XAML language also defines a special type of event called an _attached event_. An attached event enables you to add a handler for a particular event to an arbitrary element. The element handling the event need not define or inherit the attached event, and neither the object potentially raising the event nor the destination handling instance must define or otherwise "own" that event as a class member.
 
 The Avalonia input system uses attached events extensively. However, nearly all of these attached events are forwarded through base elements. The input events then appear as equivalent non-attached routed events that are members of the base element class. For instance, the underlying attached event `Gestures.Tapped` can more easily be handled on any given `Control` by using `Tapped` on that control rather than dealing with attached event syntax either in XAML or code.
 
-## Qualified Event Names in XAML <a id="qualified-event-names-in-xaml"></a>
+## Qualified Event Names in XAML
 
 Another syntax usage that resembles _typename_._eventname_ attached event syntax but is not strictly speaking an attached event usage is when you attach handlers for routed events that are raised by child elements. You attach the handlers to a common parent, to take advantage of event routing, even though the common parent might not have the relevant routed event as a member. Consider this example again:
 
@@ -212,7 +212,7 @@ Another syntax usage that resembles _typename_._eventname_ attached event syntax
 
 Here, the parent element listener where the handler is added is a `StackPanel`. However, it is adding a handler for a routed event that was declared and will be raised by the `Button` class. `Button` "owns" the event, but the routed event system permits handlers for any routed event to be attached to any control instance listener that could otherwise attach listeners for a common language runtime \(CLR\) event. The default xmlns namespace for these qualified event attribute names is typically the default Avalonia xmlns namespace, but you can also specify prefixed namespaces for custom routed events.
 
-## Input Events <a id="input-events"></a>
+## Input Events
 
 One frequent application of routed events within the Avalonia platform is for input events. Input events often come in pairs, with one being the bubbling event and the other being the tunneling event. Occasionally, input events only have a bubbling version, or perhaps only a direct routed version.
 

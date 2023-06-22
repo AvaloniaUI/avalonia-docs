@@ -54,7 +54,7 @@ To take the example forwards, add a stack panel as follows (you can include the 
 </div>
 
 :::info
-You can explore the other layout controls in Avalonia from the reference [here](../reference/controls/layout-controls.md).
+You can explore the other layout controls in Avalonia from the reference [here](../../reference/controls/layout-controls.md).
 :::
 
 On the next page, you will add some inputs to the middle of the window.

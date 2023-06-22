@@ -5,7 +5,7 @@ title: Wiring up the Views
 
 Now that we've got the view models set up, we need to make our views use these view models. We do this by making use of Avalonia's [data binding](https://docs.avaloniaui.net/docs/getting-started/programming-with-avalonia/data-binding) feature.
 
-## Update MainWindow <a id="update-mainwindow"></a>
+## Update MainWindow
 
 We're exposing the list in `MainWindowViewModel.List` so let's use that property to display the list in `MainWindow.axaml`.
 
@@ -42,7 +42,7 @@ Is _exactly_ the same as writing:
 <Window xmlns="https://github.com/avaloniaui" Content="Hello World!"/>
 ```
 
-## Update TodoListView <a id="update-todolistview"></a>
+## Update TodoListView
 
 Now we need to make `TodoListView` get the list of TODO items from the view model:
 
@@ -93,7 +93,7 @@ How each item is displayed is controlled by the `ItemTemplate`. The `ItemTemplat
 </ItemsControl.ItemTemplate>
 ```
 
-## Run the application <a id="run-the-application"></a>
+## Run the application
 
 If you now run the application you will see the items in the \(fake\) database displayed.
 

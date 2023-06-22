@@ -23,9 +23,9 @@ title: ComboBox
 
 [ComboBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ComboBox.cs)
 
-## Examples <a id="examples"></a>
+## Examples
 
-### Basic ComboBox <a id="basic-combobox"></a>
+### Basic ComboBox
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -46,7 +46,7 @@ title: ComboBox
 </Window>
 ```
 
-### ComboBox with custom item templates <a id="combobox-with-custom-item-templates"></a>
+### ComboBox with custom item templates
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -75,7 +75,7 @@ title: ComboBox
 </Window>
 ```
 
-### ComboBox with binding <a id="combobox-with-binding"></a>
+### ComboBox with binding
 
 This example binds the fonts installed to a ComboBox
 

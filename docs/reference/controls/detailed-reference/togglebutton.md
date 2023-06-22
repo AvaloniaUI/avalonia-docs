@@ -12,7 +12,7 @@ To review the concepts behind a pseudo class, see [here](../../../concepts/pseud
 
 This allows a wide range of possible graphical presentations for the control in each of the pseudo class states.&#x20;
 
-## Example <a href="#examples" id="examples"></a>
+## Example
 
 This example shows a toggle button containing a speaker icon, or a muted speaker icon, depending on whether the button has the checked pseudo class or not.
 

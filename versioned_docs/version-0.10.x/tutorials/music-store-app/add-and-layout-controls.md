@@ -3,7 +3,7 @@ id: add-and-layout-controls
 title: Add and Layout Controls
 ---
 
-## Add and Layout some Controls <a id="add-and-layout-some-controls"></a>
+## Add and Layout some Controls
 
 Let's start by adding a `Button` to the `MainWindow`. The button will allow the `user` to purchase music in order to add to their collection.
 

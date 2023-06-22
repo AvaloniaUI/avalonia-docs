@@ -329,6 +329,10 @@ const sidebars = {
             {
               'type': 'category',
               'label': 'Android',
+              'link': {
+                'type': 'doc',
+                'id': 'guides/platforms/android/index',
+              },
               'items': [
                 'guides/platforms/android/build-and-run-your-application-on-a-device',
                 'guides/platforms/android/build-and-run-your-application-on-a-simulator',
@@ -478,6 +482,7 @@ const sidebars = {
       ],
     },
     'faq',
+    'community'
   ],
 };
 

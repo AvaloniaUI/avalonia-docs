@@ -15,7 +15,7 @@ In this tutorial you will create a simple to do list application using _Avalonia
 You can find the code for the completed application [here](https://github.com/grokys/todo-tutorial).
 :::
 
-## MVVM Pattern <a href="#model-view-viewmodel-mvvm" id="model-view-viewmodel-mvvm"></a>
+## MVVM Pattern
 
 In this tutorial you will learn more about using the Model-View-ViewModel (MVVM) pattern. It is common to use the MVVM pattern when writing GUI applications, and MVVM is recommended in most scenarios for _Avalonia UI_ applications.
 

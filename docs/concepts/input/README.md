@@ -12,6 +12,6 @@ Various Controls that implement `ICommandSource` have a `HotKey` property
 
 
 
-Controls most often detect and respond to user input. The Avalonia [input system](broken-reference) uses both [direct and routed events](broken-reference) to support text input, focus management, and mouse positioning.
+Controls most often detect and respond to user input. The Avalonia [input system](../input) uses both [direct and routed events](../input/routed-events) to support text input, focus management, and mouse positioning.
 
-Applications often have complex input requirements. Avalonia provides a [command system](broken-reference) that separates user-input actions from the code that responds to those actions.
+Applications often have complex input requirements. Avalonia provides a [command system](../../basics/user-interface/adding-interactivity) that separates user-input actions from the code that responds to those actions.

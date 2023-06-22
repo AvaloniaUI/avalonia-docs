@@ -42,10 +42,10 @@ StackPanel has a `Spacing` property to allow an even spacing between items.
   </div>
 
 
-### Reference <a id="reference"></a>
+### Reference
 
 [StackPanel](http://reference.avaloniaui.net/api/Avalonia.Controls/StackPanel/)
 
-### Source code <a id="source-code"></a>
+### Source code
 
 [StackPanel.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/StackPanel.cs)

@@ -3,7 +3,7 @@ id: add-items-to-users-collection
 title: Add Items to User Collection
 ---
 
-## Adding Albums to the Users Collection <a id="adding-albums-to-the-users-collection"></a>
+## Adding Albums to the Users Collection
 
 Ok so now the user can find albums to purchase, it would be nice if the user could see which albums are in their collection. To do this we can add a similar UI to the MainWindow.
 

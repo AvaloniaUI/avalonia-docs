@@ -3,7 +3,7 @@ id: creating-a-new-project
 title: Creating a new project
 ---
 
-## Visual Studio <a id="visual-studio"></a>
+## Visual Studio
 
 The easiest way to get started with Avalonia from Visual Studio is to [install the extension](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio) from the Visual Studio Marketplace. Once that is installed, you can create an Avalonia MVVM application:
 
@@ -18,7 +18,7 @@ The easiest way to get started with Avalonia from Visual Studio is to [install t
 -  Enter "Todo" as the Project name
 -  Click "Create"
 
-## .NET Core CLI <a id="net-core-cli"></a>
+## .NET Core CLI
 
 First install the Avalonia templates for .NET Core by following the instructions [here](https://github.com/AvaloniaUI/avalonia-dotnet-templates).
 
@@ -28,7 +28,7 @@ Now you can create the application from the template:
 dotnet new avalonia.mvvm -o Todo -n Todo
 ```
 
-## Project structure <a id="project-structure"></a>
+## Project structure
 
 The newly created project will be pre-filled with a number of files and directories:
 

@@ -113,10 +113,10 @@ The **binding source expression** redirects the source of the binding. The _Aval
 In this case the expression is looking for any parent of the control with the type `Window`. It will then use that control's data context to call the `AddItem` method.&#x20;
 
 :::info
-For information about the concept of binding source expressions, see [here](../../concepts/data-binding/data-binding-syntax.md).
+For information about the concept of binding source expressions, see [here](../../basics/data/data-binding/data-binding-syntax).
 :::
 
-## Run the Application <a href="#run-the-application" id="run-the-application"></a>
+## Run the Application
 
 Now If you run the application and click **Add Item**, you will see the new view appear.
 

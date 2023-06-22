@@ -56,7 +56,7 @@ The last step sets the content zone of the window to display your new user contr
 <views:ToDoListView/>
 ```
 
-## Run the Application <a href="#run-the-application" id="run-the-application"></a>
+## Run the Application
 
 Now run the application you have built so far.  If you are using Visual Studio, press the function key F5. If you are using .NET Core CLI, execute the command:
 
