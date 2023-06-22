@@ -213,6 +213,7 @@ const sidebars = {
                 'basics/data/data-binding/compiled-bindings',
               ],
             },
+            'basics/data/data-templates',
           ],
         },
       ],
