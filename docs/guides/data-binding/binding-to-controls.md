@@ -4,7 +4,7 @@ title: How To Bind to a Control
 ---
 
 
-# 👉 How To Bind to a Control
+# How To Bind to a Control
 
 With _Avalonia UI_, as well as binding to a data context you can also bind one control directly to another.
 

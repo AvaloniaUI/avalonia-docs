@@ -3,7 +3,7 @@ id: index
 title: How To Create a Custom Control
 ---
 
-# 👉 How To Create a Custom Control
+# How To Create a Custom Control
 
 This guide will show you how to create a simple custom control with _Avalonia UI_.&#x20;
 

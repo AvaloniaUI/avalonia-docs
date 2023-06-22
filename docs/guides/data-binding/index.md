@@ -4,7 +4,7 @@ title: Data Binding
 ---
 
 
-# 👉 Data Binding
+# Data Binding
 
 These guides show you how to use various aspects of **data binding**.
 

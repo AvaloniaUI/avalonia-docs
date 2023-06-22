@@ -4,7 +4,7 @@ title: How To Draw Graphics
 ---
 
 
-# 👉 How To Draw Graphics
+# How To Draw Graphics
 
 Content in preparation.
 

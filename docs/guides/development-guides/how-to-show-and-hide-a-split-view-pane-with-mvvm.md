@@ -4,7 +4,7 @@ title: How To Show and Hide a Split View Pane with MVVM
 ---
 
 
-# 👉 How To Show and Hide a Split View Pane with MVVM
+# How To Show and Hide a Split View Pane with MVVM
 
 Content in preparation.
 

@@ -4,7 +4,7 @@ title: How To Create a Custom Page Transition
 ---
 
 
-# 👉 How To Create a Custom Page Transition
+# How To Create a Custom Page Transition
 
 This guide will show you how to create your own custom page transition by implementing the `IPageTransition` interface.
 

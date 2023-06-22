@@ -4,7 +4,7 @@ title: How To Use Live Preview
 ---
 
 
-# 👉 How To Use Live Preview
+# How To Use Live Preview
 
 This guide will show you how to use the live preview feature of the _Avalonia UI_ extensions for Visual Studio and _ReSharper_.
 

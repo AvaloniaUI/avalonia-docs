@@ -4,7 +4,7 @@ title: How To Use Page Transitions
 ---
 
 
-# 👉 How To Use Page Transitions
+# How To Use Page Transitions
 
 This guide will show you how to use page transitions in your app.
 
