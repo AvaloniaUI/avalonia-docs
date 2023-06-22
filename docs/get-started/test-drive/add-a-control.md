@@ -49,7 +49,7 @@ If you're using an IDE, notice how the Avalonia Intellisense guides you as you a
 The button should now move to the center of the window content zone (both horizontally and vertically).
 
 :::info
-For full information about the complete range of Avalonia UI built-in controls, and their attributes, see the reference section [here](../reference/controls/).
+For full information about the complete range of Avalonia UI built-in controls, and their attributes, see the reference section [here](../../reference/controls).
 :::
 
 On the next page, you will learn how to create a more complex layout.

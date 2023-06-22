@@ -149,6 +149,6 @@ This is because if the user were to set a local value on the button, it would ov
 
 ### Previous value of specific properties is not restored when style is not applied anymore
 
-In Avalonia we have multiple types of properties, and one of them, Direct Property, doesn't support styling at all. These properties work in simplified way to achieve lower overhead and higher performance, and do not store multiple values depending on priority. Instead only latest value is saved and cannot be restored. You can find more details about properties [here](../custom-controls/authoring-controls/defining-properties.md#direct-avaloniaproperties).
+In Avalonia we have multiple types of properties, and one of them, Direct Property, doesn't support styling at all. These properties work in simplified way to achieve lower overhead and higher performance, and do not store multiple values depending on priority. Instead only latest value is saved and cannot be restored. You can find more details about properties [here](../custom-controls/defining-properties).
 
 Typical example is [CommandProperty](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/B9689B29). It is defined as a DirectProperty, and it will never work properly. In the future attempt to style direct property will be resulted in compile time error, see [#6837](https://github.com/AvaloniaUI/Avalonia/issues/6837).

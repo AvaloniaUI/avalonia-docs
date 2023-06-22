@@ -64,7 +64,7 @@ Finally, you can tidy up the alignment of the controls in the grid using their m
 
 
 :::info
-For full information about the complete range of Avalonia built-in controls, and their attributes, see the reference section [here](../reference/controls/).
+For full information about the complete range of Avalonia built-in controls, and their attributes, see the reference section [here](../../reference/controls/).
 :::
 
 On the next page, you will see how to improve your design-time experience by adjusting the size window when it is shown in the preview pane.

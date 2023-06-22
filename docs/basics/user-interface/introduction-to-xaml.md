@@ -65,7 +65,7 @@ Only one namespace in a file can be defined without using the alias part of the 
 The definition part of the namespace declaration can be either a URL or a code definition. Both of these are used to locate the definition of the elements in the file.
 
 :::info
-For detailed guidance on how namespace declarations work, see [here](../guides/custom-controls/how-to-create-a-custom-controls-library.md).
+For detailed guidance on how namespace declarations work, see [here](../../guides/custom-controls/how-to-create-a-custom-controls-library.md).
 :::
 
 ## Code Definition Syntax
@@ -105,7 +105,7 @@ xmlns:myAlias3="using:MyNamespace.AppNameSpace.UI"
 You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.&#x20;
 
 :::info
-A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](ui-composition.md).
+A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](../../concepts/ui-composition.md).
 :::
 
 For example, this XAML adds a button to the content of a window:
@@ -118,7 +118,7 @@ For example, this XAML adds a button to the content of a window:
 ```
 
 :::info
-For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](/reference/controls/).&#x20;
+For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](../../reference/controls).&#x20;
 :::
 
 ## Control Attributes <a href="#setting-properties" id="setting-properties"></a>
@@ -159,7 +159,7 @@ You will often use the _Avalonia UI_ binding system to link a control property t
 ```
 
 :::info
-For further information about the concept behind data binding, see [here](data-binding/).
+For further information about the concept behind data binding, see [here](../data/data-binding).
 :::
 
 ## Code-behind Files <a href="#code-behind" id="code-behind"></a>
@@ -167,5 +167,5 @@ For further information about the concept behind data binding, see [here](data-b
 Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.&#x20;
 
 :::info
-For guidance about programming using code-behind files, see [here](code-behind.md).
+For guidance about programming using code-behind files, see [here](code-behind).
 :::

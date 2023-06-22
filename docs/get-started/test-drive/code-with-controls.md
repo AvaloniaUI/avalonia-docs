@@ -91,5 +91,5 @@ You can check your work using the following conversion table:
 - Calculate the conversion as the user types into the Celsius input (moderate).
 
 :::info
-For full information about the complete range of Avalonia built-in controls, events and attributes, see the controls reference section [here](../reference/controls/).
+For full information about the complete range of Avalonia built-in controls, events and attributes, see the controls reference section [here](../../reference/controls/).
 :::

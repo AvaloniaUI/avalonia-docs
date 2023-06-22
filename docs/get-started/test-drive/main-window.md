@@ -26,7 +26,7 @@ In your current application, the content zone of the window has only a simple st
 At this stage, you do not have a margin, border or any padding defined, so the message appears right up against the top left corner of the window. 
 
 :::info
-For more information about the concept of control layout zones, see [here](../concepts/layout/layout-zones.md).
+For more information about the concept of control layout zones, see [here](../../concepts/layout/layout-zones.md).
 :::
 
 ## The Visual Studio Designer

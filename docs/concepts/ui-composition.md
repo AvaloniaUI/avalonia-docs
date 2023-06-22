@@ -84,7 +84,7 @@ For information about how to  TO DO
 In the unlikely scenario that you cannot find an _Avalonia UI_ built-in control to cover your app's UI requirements, then you can 'roll-your-own' custom control from scratch. This allows you to define your own custom properties, events and methods; but it will require you to implement the drawing of the control presentation from scratch as well.
 
 :::info
-To learn how to implement a custom control, see the guide [here](../guides/custom-controls/authoring-controls/).
+To learn how to implement a custom control, see the guide [here](../basics/user-interface/controls/creating-controls).
 :::
 
 ## Templated Controls
