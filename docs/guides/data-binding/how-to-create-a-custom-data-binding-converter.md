@@ -89,18 +89,14 @@ You may want to write a a custom converter that can switch the output type depen
 
 In this example, the `animalConverter` can find an image, or a text name for a bound `Animal` class object:  &#x20;
 
-{% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='XAML'
 <Image Width="42" 
        Source="{Binding Animal, Converter={StaticResource animalConverter}}"/>
 <TextBlock 
        Text="{Binding Animal, Converter={StaticResource animalConverter}}" />
 ```
-{% endtab %}
 
-{% tab title="C# Converter" %}
-```csharp
+```csharp title='AnimalConverter.cs'
 public class AnimalConverter : IValueConverter
 {
     public static readonly AnimalConverter Instance = new();
@@ -147,8 +143,6 @@ public class AnimalConverter : IValueConverter
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ## More Information
 

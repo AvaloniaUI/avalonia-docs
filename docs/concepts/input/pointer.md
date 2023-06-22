@@ -17,11 +17,8 @@ In _Avalonia UI_ you implement the interaction of pointing devices with your app
 
 For example, you can subscribe to the event for one of the pointer buttons being pressed on a control, like this:
 
-{% tabs %}
-{% tab title="C#" %}
-```csharp
-private void PointerPressedHandler (object sender,
-                                 PointerPressedEventArgs args)
+```csharp title='C#'
+private void PointerPressedHandler (object sender, PointerPressedEventArgs args)
 {
     var point = args.GetCurrentPoint(sender as Control);
     var x = point.Position.X;
@@ -38,17 +35,13 @@ private void PointerPressedHandler (object sender,
     results.Text = msg ;
 }
 ```
-{% endtab %}
 
-{% tab title="XAML" %}
-```xml
+```xml title='XAML'
 <StackPanel Margin="20" Background="AliceBlue" 
                 PointerPressed="PointerPressedHandler" >
   <TextBlock x:Name="results" Margin="5">Ready...</TextBlock>
 </StackPanel>
 ```
-{% endtab %}
-{% endtabs %}
 
 <img src="/img/gitbook-import/assets/pressed.gif" alt=""/>
 

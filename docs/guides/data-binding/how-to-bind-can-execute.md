@@ -12,9 +12,7 @@ This example assumes that you are using the MVVM implementation pattern with the
 
 In this example, the button can only be clicked when the message is not empty. As soon as the output is shown; the message is reset to the empty string - which in turn will disable the button again.
 
-{% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='XAML'
 <StackPanel Margin="20">
   <TextBox Margin="0 5" Text="{Binding Message}"
            Watermark="Add a message to enable the button"/>
@@ -24,10 +22,8 @@ In this example, the button can only be clicked when the message is not empty. A
   <TextBlock Margin="0 5" Text="{Binding Output}" />
 </StackPanel>
 ```
-{% endtab %}
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='MainWindowViewModel.cs'
 namespace AvaloniaGuides.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
@@ -66,10 +62,8 @@ namespace AvaloniaGuides.ViewModels
     }
 }
 ```
-{% endtab %}
 
-{% tab title="C# View Model Base" %}
-```csharp
+```csharp title='ViewModelBase.cs'
 using ReactiveUI;
 
 namespace AvaloniaGuides.ViewModels
@@ -79,8 +73,6 @@ namespace AvaloniaGuides.ViewModels
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 In the constructor of the view model, the reactive command is created with two parameters. The first is the private method that performs the action. The second is an observable which is created by the `WhenAnyValue` method of the `ReactiveObject` that underlies the view model (from the `ViewModelBase` class).&#x20;
 
@@ -94,4 +86,4 @@ Here the `WhenAnyValue` method takes two arguments, the first collects a value f
 The `WhenAnyValue` method actually has overloads that can take up to 10 different value getters (for the validation function parameters), plus the validation function itself. &#x20;
 :::
 
-<!--<img src="/img/gitbook-import/assets/command4.gif" alt=""/>-->
+<img src="/img/gitbook-import/assets/command4.gif" alt=""/>

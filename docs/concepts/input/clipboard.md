@@ -13,9 +13,7 @@ var text = await Application.Current.Clipboard.GetTextAsync();
 
 You can store objects on the clipboard on some platforms. (This is not supported on Android or iOS). For example, on a Windows app:
 
-{% tabs %}
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 private async Task DoClipboard()
 { 
     var person = new Person("Peter Griffin", 58);
@@ -34,10 +32,8 @@ private async Task DoClipboard()
     }
 }
 ```
-{% endtab %}
 
-{% tab title="Person Class C#" %}
-```csharp
+```csharp title='Person.cs'
 internal class Person
 {
     public string Name { get; set; } = String.Empty;   
@@ -50,8 +46,6 @@ internal class Person
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 Objects are stored and retrieved using a key (string) that must be unique to your application and object type.
 

@@ -39,7 +39,7 @@ This example shows two groups of radio buttons working independently:
 </StackPanel>
 ```
 
-<!--figure><img src="../../../.gitbook/assets/radio.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/radio.gif' alt=''/>
 
 ## More Information
 

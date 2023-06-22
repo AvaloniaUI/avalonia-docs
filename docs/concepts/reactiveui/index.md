@@ -4,6 +4,10 @@ description: CONCEPTS
 
 # ReactiveUI
 
+:::tip
+ReactiveUI is used in our examples, but it's not required. Avalonia supports any MVVM framework or your own custom solutions.
+:::
+
 These pages explain how _Avalonia UI_ uses a version of the open-source _ReactiveUI_ framework to make it easier to implement the MVVM pattern in your application.&#x20;
 
 _ReactiveUI_ is an advanced, composable, functional reactive model-view-viewmodel (MVVM) framework for all .NET platforms. It was inspired by the functional reactive programming paradigm.

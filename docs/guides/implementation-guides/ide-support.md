@@ -12,7 +12,7 @@ The _Avalonia for Visual Studio_ extension includes a XAML designer which can be
 
 For Visual Studio and ReSharper users, [ReSharper 2020.3 introduces](https://www.jetbrains.com/resharper/whatsnew/2020-3/#version-2020-3-avalonia-support) built-in code analysis, code completion, navigation, and find usages.
 
-<!-- ![](../../.gitbook/assets/vs-designer.png) -->
+<img src='/img/gitbook-import/assets/vs-designer.png' alt=''/>
 
 :::info
 If your XAML is in a library, _Avalonia UI_ needs an executable application in order to be able to preview it. Select an executable project from the dropdown on the top right of the designer. Once your project is built, editing the XAML in the editor will cause the preview to update automatically.
@@ -100,10 +100,10 @@ If you're having problems, try enabling verbose logging. To do this in Visual St
 -  Click **Avalonia XAML Editor** in the list
 -  Click **Verbose** in the **Minimum Log Verbosity** drop-down.
 
-<!--<img src="/img/gitbook-import/assets/image (7) (4).png" alt=""/>-->
+<img src="/img/gitbook-import/assets/image (7) (4).png" alt=""/>
 
 Logs will now be displayed in the Visual Studio **Output** window.&#x20;
 
 Select **Avalonia Diagnostics** from the drop-down at the top of this window.
 
-<!--<img src="/img/gitbook-import/assets/image (1) (4).png" alt=""/>-->
+<img src="/img/gitbook-import/assets/image (1) (4).png" alt=""/>

@@ -20,8 +20,7 @@ You will probably use these properties most often:
 </ButtonSpinner>
 ```
 
-<!--![](<../../../.gitbook/assets/image (3) (3).png>)-->
-
+<img src='/img/gitbook-import/assets/image (3) (3).png>' alt=''/>
 ## More Information
 
 :::info

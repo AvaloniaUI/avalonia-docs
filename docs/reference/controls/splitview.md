@@ -57,13 +57,13 @@ The display mode property controls how the pane is drawn in its open and closed 
 
 The control looks like this, running on Windows:
 
-<!--figure><img src="/img/gitbook-import/assets/image (5) (5) (1).png" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/image (5) (5) (1).png" alt=""/>
 
 ## Compact Display Mode
 
 You can use the MVVM pattern with the split view control and one of the compact display mode settings to implement a 'tool pane' style UI. There is enough room on the pane when it is closed to display an icon button that opens the pane.
 
-<!--figure><img src="/img/gitbook-import/assets/splitview2.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/splitview2.gif" alt=""/>
 
 :::info
 To learn how to use the split view control in this way, see the guide [here](../../guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm.md).

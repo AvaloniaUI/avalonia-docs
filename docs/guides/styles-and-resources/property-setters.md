@@ -32,21 +32,27 @@ A style can also set properties using bindings. After the usual selection proces
 <Setter Property="FontSize" Value="{Binding SelectedFontSize}"/>
 ```
 
+## Style Priority
+
+There are two rules that govern which property setter has precedence when a selector matches multiple styles:
+
+* Position of the enclosing styles collection in the application - 'closest' has priority.
+* Position of the style in the located styles collection - 'latest' has priority.
+
+For example, firstly this means that styles defined at window level will override those defined at application level. Secondly, this means that where the selected style collections are at the same level, then the later definition (as written in the file) has priority.
+
+:::warning
+If you were comparing style classes to CSS you must note that: **unlike CSS**, the list sequence of class names in the `Classes` attribute has no effect on setter priority in _Avalonia UI_. That is, if both these style classes set the colour, then either way of listing the classes has the same result:
+
+```
+<Button Classes="h1 blue"/>
+<Button Classes="blue h1"/>
+```
+:::
+
 ## Value Reversion
 
-Whenever a style is matched with a control, all of the setters will be applied to the control.&#x20;
-
-However, be alert to the (somewhat rare) scenario where application of the setter would cause the match to no longer be valid. For example, this scenario can occur where the selector relies on the value of a property, and the new value is in a binding.
-
-```
-<Style Selector="local|MyControl">
-```
-
-If the setter causes a match to become invalid, then that match is eliminated from the process, and selection is repeated. This means that the next match (based on **style priority**) will be used, and properties set accordingly.
-
-:::info
-You can review the rules governing **style priority** on the previous page, [here](style-classes.md#style-priority).
-:::
+Whenever a style is matched with a control, all of the setters will be applied to the control. If a style selector causes the style to no longer match a control, the property value will revert to the its next highest priority value.
 
 ## Mutable Values
 

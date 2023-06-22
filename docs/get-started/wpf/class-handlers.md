@@ -3,8 +3,7 @@
 In WPF, class handlers for events can be added by calling [EventManager.RegisterClassHandler](https://msdn.microsoft.com/en-us/library/ms597875.aspx). An example of registering a class handler in WPF might be:
 
 
-{% tab title="WPF" %}
-```csharp
+```csharp title='WPF'
 static MyControl()
 {
     EventManager.RegisterClassHandler(typeof(MyControl), MyEvent, HandleMyEvent));
@@ -16,8 +15,7 @@ private static void HandleMyEvent(object sender, RoutedEventArgs e)
 ```
 
 
-{% tab title="Avalonia" %}
-```csharp
+```csharp title='Avalonia'
 static MyControl()
 {
     MyEvent.AddClassHandler<MyControl>((x, e) => x.HandleMyEvent(e));

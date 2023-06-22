@@ -42,7 +42,7 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-<!--<img src="/img/gitbook-import/assets/command2.gif" alt=""/>-->
+<img src="/img/gitbook-import/assets/command2.gif" alt=""/>
 
 ## Can Execute? <a href="#icommandcanexecute" id="icommandcanexecute"></a>
 
@@ -92,7 +92,7 @@ This example uses the technique of binding directly to another control. You can 
 
 You will see that the button becomes enables only when the text box contains a string. &#x20;
 
-<!--<img src="/img/gitbook-import/assets/command3.gif" alt=""/>-->
+<img src="/img/gitbook-import/assets/command3.gif" alt=""/>
 
 ## **Trigger Can Execute**
 

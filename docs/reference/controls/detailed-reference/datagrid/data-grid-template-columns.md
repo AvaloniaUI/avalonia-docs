@@ -55,8 +55,7 @@ This example adds a numeric up-down control when the age property for a person i
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -82,8 +81,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='C# Item Class'
 public class Person
 {
     public string FirstName { get; set; }
@@ -102,7 +100,7 @@ public class Person
 
 
 
-<!--figure><img src="../../../../.gitbook/assets/grid4.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/grid4.gif' alt=''/>
 
 ## More Information
 

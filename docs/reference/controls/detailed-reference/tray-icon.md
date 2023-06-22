@@ -46,7 +46,7 @@ This example defines a simple tray icon menu in the `App.xaml` file :
 </TrayIcon.Icons>
 ```
 
-<!--figure><img src="../../../.gitbook/assets/tray.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/tray.gif' alt=''/>
 
 ## More Information
 

@@ -160,7 +160,7 @@ public class CustomTransition : IPageTransition
 }
 ```
 
-<!-- ![](../../.gitbook/assets/TransitioningContentControl\_03.webp) -->
+<img src='/img/gitbook-import/assets/TransitioningContentControl\_03.webp' alt=''/>
 
 ## More Information
 

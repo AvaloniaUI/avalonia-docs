@@ -51,7 +51,7 @@ This example creates a menu docked at the top edge of a window.&#x20;
 </Window>
 ```
 
-<!--figure><img src="/img/gitbook-import/assets/menu.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/menu.gif" alt=""/>
 
 ## Accelerator Keys
 
@@ -103,7 +103,7 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 </MenuItem>
 ```
 
-<!--figure><img src="/img/gitbook-import/assets/menu2.gif" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/menu2.gif" alt=""/>
 
 :::info
 For more detailed guidance on how to add icons to your menus, see [here](../../guides/graphics-and-animation/how-to-add-menu-icons.md).

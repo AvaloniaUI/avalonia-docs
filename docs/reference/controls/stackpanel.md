@@ -34,7 +34,7 @@ The following XAML shows how to create a vertical stack panel.
 
 The result shows the child controls stretched to fit the width, and the overall height of the stack panel equal to the sum of the child control heights.
 
-<!--figure><img src="/img/gitbook-import/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure-->
+<img src="/img/gitbook-import/assets/image (14) (2).png" alt=""/>
 
 ## More Information
 

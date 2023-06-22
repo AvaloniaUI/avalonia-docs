@@ -7,9 +7,7 @@ title: Draw with a Property
 
 On this page you will see how to draw a custom control, using the value for a simple property that defines the background color. The code now looks like this:
 
-{% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='MainWindow.xaml'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -22,10 +20,8 @@ On this page you will see how to draw a custom control, using the value for a si
 </Window>
 
 ```
-{% endtab %}
 
-{% tab title="C#" %}
-```csharp
+```csharp title='MyCustomControl.cs'
 using Avalonia.Controls;
 
 namespace AvaloniaCCExample.CustomControls
@@ -47,14 +43,12 @@ namespace AvaloniaCCExample.CustomControls
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 This example defines a simple brush property on the custom control for the background color. It then overrides the `Render` method to draw the control.&#x20;
 
 The drawing code uses the _Avalonia UI_ graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
 
-<!--<img src="../../../.gitbook/assets/image (1) (2) (2).png" alt=""/>-->
+<img src="/img/gitbook-import/assets/image (1) (2) (2).png" alt=""/>
 
 Notice how the control now shows both at runtime (above) and in the preview pane.
 

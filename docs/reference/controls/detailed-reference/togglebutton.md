@@ -33,8 +33,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 ```
 
 
-{% tab title="Styles" %}
-```xml
+```xml title='Styles'
 <Window.Styles>
   <Style Selector="ToggleButton PathIcon.audio-on">
     <Setter Property="IsVisible" Value="False"/>
@@ -52,8 +51,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 ```
 
 
-{% tab title="Icons" %}
-```xml
+```xml title='Icons'
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Style>
@@ -66,8 +64,7 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 ```
 
 
-{% tab title="App" %}
-```xml
+```xml title='App'
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:AvaloniaControls"
@@ -89,7 +86,7 @@ To see the full list of Fluent icons available with _Avalonia UI_, see [https://
 
 The visibility of the path icons is set by the window styles, and these use the `:checked` pseudo class to determine when the toggle button is in its checked state. So, when the toggle button is checked, then the `audio-on` path icon is visible, and the `audio-mute` path icon is hidden. And conversely, when the toggle button is not checked, then the `audio-mute` path icon is visible, and the `audio-on` path icon is hidden.
 
-<!--figure><img src="../../../.gitbook/assets/toggle.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/toggle.gif' alt=''/>
 
 ## More Information
 

@@ -1,9 +1,9 @@
 ---
 id: index
-title: Advanced Concepts
+title: Deep Dives
 ---
 
-# Advanced Concepts
+# Deep Dives
 
 This section contains pages that will help you understand some of the concepts used by _Avalonia UI._ This is background and theory information, often supported by code samples you can work through. This section is arranged alphabetically by title.&#x20;
 
@@ -12,5 +12,5 @@ If you are new to _Avalonia UI_, we recommend that you complete the ['Get Starte
 :::
 
 :::tip
-If you are looking for practical advice on how to achieve any of the above, learn the [basics](../basics/).
+If you are looking for practical advice on how to achieve any of the above, learn the [Basics](../basics/).
 :::

@@ -245,5 +245,5 @@ Now, you can run the app and see routing in action!
 dotnet run --framework netcoreapp2.1
 ```
 
-<!-- ![](../../../.gitbook/assets/routing.gif) -->
+<img src='/img/gitbook-import/assets/routing.gif' alt=''/>
 

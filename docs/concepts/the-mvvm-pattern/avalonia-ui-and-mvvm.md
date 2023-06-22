@@ -28,7 +28,7 @@ To learn how to design and implement your own controls, see [here](../../guides/
 
 Data binding is the key technology that allows an _Avalonia UI_ MVVM application to separate views from view models. You can visualise the view to view model relationship as two layers connected by the data bindings:
 
-<!-- ![](<../../.gitbook/assets/mvvm (1) (1) (2) (2) (2) (2) (2) (1) (1) (1) (1).png>) -->
+<img src='/img/gitbook-import/assets/mvvm.png' alt=''/>
 
 Notice how some of the data bindings are represented by a two way arrow, and others by a single-headed arrow. For example, the name and address inputs are two ways - you want both changes in the view model to be notified to the view, and for inputs to the view to be updated on the view model.
 

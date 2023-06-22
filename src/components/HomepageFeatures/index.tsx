@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Easy to Learn',
+    Svg: require('@site/static/img/playground.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Explore the power of Avalonia with our WASM-powered <a href='https://play.avaloniaui.net/'>XAML playground!</a> It's never been easier to start learning.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Explore our Samples',
+    Svg: require('@site/static/img/test-tube.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        We have a range of samples to suit all levels of experience. Make sure to <a href='https://github.com/AvaloniaUI/Avalonia.Samples'>clone the repo</a> and try our <a href='https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides'>quick guides.</a>
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Join the Chat',
+    Svg: require('@site/static/img/telegram.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Join our growing community on <a href='https://t.me/Avalonia'>Telegram</a> to get help quickly! 
       </>
     ),
   },

@@ -15,8 +15,7 @@ In this example the view model contains an observable collection that is filled 
 ```
 
 
-{% tab title="C# View Model" %}
-```csharp
+```csharp title='C# View Model'
 using Avalonia.Controls.Models.TreeDataGrid;
 using Avalonia.Controls;
 using AvaloniaControls.Models;
@@ -60,8 +59,7 @@ namespace AvaloniaControls.ViewModels
 ```
 
 
-{% tab title="C# Item Class" %}
-```csharp
+```csharp title='C# Item Class'
 public class Person
 {
     public string FirstName { get; set; }
@@ -83,4 +81,4 @@ The data source also defines how to map the data model to rows and columns in th
 
 There are three columns defined with the `TextColumn` class. Each takes a lambda to return the column value.
 
-<!--figure><img src="../../../../.gitbook/assets/treedatagrid2.gif" alt=""><figcaption></figcaption></figure-->
+<img src='/img/gitbook-import/assets/treedatagrid2.gif' alt=''/>
