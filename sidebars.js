@@ -278,6 +278,7 @@ const sidebars = {
             'guides/styles-and-resources/how-to-use-included-styles',
             'guides/styles-and-resources/how-to-use-themes',
             'guides/styles-and-resources/resources',
+            'guides/styles-and-resources/how-to-use-fonts',
             'guides/styles-and-resources/troubleshooting',
           ],
         },
