@@ -6,6 +6,10 @@ Avalonia provides various approaches for creating custom controls to meet your a
 
 A `UserControl` is a high-level approach for creating custom controls in Avalonia. It allows you to compose a control by combining existing controls and defining the layout using XAML. A `UserControl` acts as a container that encapsulates multiple controls and provides a cohesive user interface.
 
+:::info 
+For a complete, runnable example of these concepts in action, check out [the sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl).
+:::
+
 Creating a `UserControl` involves the following steps:
 
 1. **Define the XAML**: Create a new `UserControl` XAML file that defines the layout and appearance of the control by placing controls, setting properties, and applying styles.
@@ -13,6 +17,7 @@ Creating a `UserControl` involves the following steps:
 2. **Code-behind**: Optionally, you can define additional code-behind logic to handle events, modify the behavior, or provide additional functionality to the `UserControl`.
 
 3. **Reuse and Customization**: `UserControl`s can be easily reused and customized within an application. They are especially useful when you want to encapsulate a specific set of controls and behaviors into a reusable component or "view".
+
 
 ## Templated (Lookless) Controls
 
