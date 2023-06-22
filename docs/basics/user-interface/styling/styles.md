@@ -19,13 +19,9 @@ In essence, the styling mechanism has two steps: selection and substitution. The
 The _Avalonia UI_ styling system's use of 'class' labels on control elements is analogous to how CSS (cascading style sheets) work with HTML elements.&#x20;
 :::
 
-The styling system implements cascading styles by searching the **logical control tree** upwards from a control, during the selection step. This means styles defined at the highest level of the application (in the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
+The styling system implements cascading styles by searching the [logical tree](../../../concepts/control-trees.md) upwards from a control, during the selection step. This means styles defined at the highest level of the application (the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
 
-:::info
-To review the concept of the _Avalonia UI_ **logical control tree**, see [here](../../../concepts/control-trees.md).&#x20;
-:::
-
-When a match is located by the selection step, then the matched control's properties are altered following the (setter) instructions in the style. To complete the cascading style, a matched style on a control is also applied to any inner controls.&#x20;
+When a match is located by the selection step, then the matched control's properties are altered according to the setters in the style.
 
 ## How it is Written
 
@@ -60,33 +56,52 @@ This is an example of how a style is written and applied to a control element, w
 </Window>
 ```
 
-In this example, the `h1` style class applies only to `<TextBlock>`elements, and the text block control will display with the font size and weight set by the style. This works in the preview pane:
+In this example, all `TextBlock` elements with the `h1` style class will be displayed with the font size and weight set by the style. This works in the preview pane:
 
 <img src="/img/gitbook-import/assets/image (5) (5).png" alt=""/>
 
-## Style Key
+## Where to put Styles 
 
-The type of an object matched by a style selector is not determined by the concrete type of the control, but rather by examining its `StyleKey` property.
+Styles are placed inside a `Styles` collection element on a `Control` or on the `Application`. For example, a window styles collection looks like this:
 
-By default, the `StyleKey `property returns the type of the current instance. However, if you want your control, which inherits from Button, to be styled as a Button, you can override the `StyleKeyOverride` property in your class and have it return `typeof(Button)`.
-
-```csharp
-public class MyButton : Button
-{
-    // `MyButton` will be styled as a standard `Button` control.
-    protected override Type StyleKeyOverride => typeof(Button);
-}
+```xml
+<Window.Styles>
+   <Style> ...  </Style>
+</Window.Styles>
 ```
 
-:::info
-Note this this logic is inverted as compared with WPF/UWP: in those frameworks, when you derive a new control it will be styled as its base control unless you override the `DefaultStyleKey` property. In Avalonia the control will be styled using its concrete type unless a different style key is provided.
-:::
+The location of a styles collection defines the scope of the styles it contains. In the above example, the styles will apply to the window and all of its contents. If a style is added to the `Application` then it will apply globally.
+
+## The Selector
+
+The style selector defines what controls the style will act upon. The selector uses a variety of formats, one of the simplest is this:
+
+```xml
+<Style Selector="TargetControlClass.styleClassName">
+```
+
+This selector will match all controls with a style key of `TargetControlClass`, having a style class of `styleClassName`.
 
 :::info
-Before Avalonia 11, the style key was overridden by implementing `IStyleable` and providing a new implementation of the `IStyleable.StyleKey` property. This mechanism is still supported in Avalonia 11 for compatibility, but may be removed in a future version.
+A full list of selectors can be found [here](../../../reference/styles/style-selector-syntax.md).
 :::
 
-## Nesting Styles
+## Setters
+
+Setters describe what will happen when the selector matches a control. They are simple property/value pairs written in the format:
+
+```xml
+<Setter Property="FontSize" Value="24"/>
+<Setter Property="Padding" Value="4 2 0 4"/>
+```
+
+Whenever a style is matched with a control, all of the setters within the style will be applied to the control.
+
+:::info
+For more information on setters see [here](../../../guides/styles-and-resources/property-setters.md).
+:::
+
+## Nested Styles
 
 Styles can be nested in other styles. To nest a style, simply include the child style as a child of the parent `<Style>` element, and start the selector with the [`Nesting Selector (^)`](../../../reference/styles/style-selector-syntax.md#nesting):
 
@@ -109,22 +124,26 @@ When this happens, the selector from the parent style will automatically apply t
 The nesting selector must be present and must appear at the start of the child selector.
 :::
 
-## Style Priority
+## Style Key
 
-There are two rules that govern which property setter has precedence when a selector matches multiple styles:
+The type of an object matched by a style selector is not determined by the concrete type of the control, but rather by examining its `StyleKey` property.
 
-* Position of the enclosing styles collection in the application - 'closest' has priority.
-* Position of the style in the located styles collection - 'latest' has priority.
+By default, the `StyleKey `property returns the type of the current instance. However, if you want your control, which inherits from Button, to be styled as a Button, you can override the `StyleKeyOverride` property in your class and have it return `typeof(Button)`.
 
-For example, firstly this means that styles defined at window level will override those defined at application level. Secondly, this means that where the selected style collections are at the same level, then the later definition (as written in the file) has priority.
-
-:::warning
-If you were comparing style classes to CSS you must note that: **unlike CSS**, the list sequence of class names in the `Classes` attribute has no effect on setter priority in _Avalonia UI_. That is, if both these style classes set the colour, then either way of listing the classes has the same result:
-
+```csharp
+public class MyButton : Button
+{
+    // `MyButton` will be styled as a standard `Button` control.
+    protected override Type StyleKeyOverride => typeof(Button);
+}
 ```
-<Button Classes="h1 blue"/>
-<Button Classes="blue h1"/>
-```
+
+:::info
+Note this this logic is inverted as compared with WPF/UWP: in those frameworks, when you derive a new control it will be styled as its base control unless you override the `DefaultStyleKey` property. In Avalonia the control will be styled using its concrete type unless a different style key is provided.
+:::
+
+:::info
+Before Avalonia 11, the style key was overridden by implementing `IStyleable` and providing a new implementation of the `IStyleable.StyleKey` property. This mechanism is still supported in Avalonia 11 for compatibility, but may be removed in a future version.
 :::
 
 ## Styles and Resources
