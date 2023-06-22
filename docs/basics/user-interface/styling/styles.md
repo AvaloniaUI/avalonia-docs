@@ -64,6 +64,28 @@ In this example, the `h1` style class applies only to `<TextBlock>`elements, and
 
 <img src="/img/gitbook-import/assets/image (5) (5).png" alt=""/>
 
+## Style Key
+
+The type of an object matched by a style selector is not determined by the concrete type of the control, but rather by examining its `StyleKey` property.
+
+By default, the `StyleKey `property returns the type of the current instance. However, if you want your control, which inherits from Button, to be styled as a Button, you can override the `StyleKeyOverride` property in your class and have it return `typeof(Button)`.
+
+```csharp
+public class MyButton : Button
+{
+    // `MyButton` will be styled as a standard `Button` control.
+    protected override Type StyleKeyOverride => typeof(Button);
+}
+```
+
+:::info
+Note this this logic is inverted as compared with WPF/UWP: in those frameworks, when you derive a new control it will be styled as its base control unless you override the `DefaultStyleKey` property. In Avalonia the control will be styled using its concrete type unless a different style key is provided.
+:::
+
+:::info
+Before Avalonia 11, the style key was overridden by implementing `IStyleable` and providing a new implementation of the `IStyleable.StyleKey` property. This mechanism is still supported in Avalonia 11 for compatibility, but may be removed in a future version.
+:::
+
 ## Nesting Styles
 
 Styles can be nested in other styles. To nest a style, simply include the child style as a child of the parent `<Style>` element, and start the selector with the [`Nesting Selector (^)`](../../../reference/styles/style-selector-syntax.md#nesting):

@@ -127,10 +127,10 @@ Using nested styles we can make our button change color when the pointer is hove
 There a two ways in which a control theme can be found:
 
 - If the control's `Theme` property is set, then that control theme will be used; otherwise
-- Avalonia will search the upwards through the logical tree for a `ControlTheme` resource with an `x:Key` which matches the control's style key
+- Avalonia will search the upwards through the logical tree for a `ControlTheme` resource with an `x:Key` which matches the control's [style key](styles#style-key)
 
-:::info
-Notice that this means that only a single control theme can be applied to a control at any one time.
+:::tip
+If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](styles#style-key) which matches the `x:Key` and `TargetType` of your control theme
 :::
 
 In effect this means that you have two choices for how to define your control theme:
@@ -138,6 +138,10 @@ In effect this means that you have two choices for how to define your control th
 - **If you want the control theme to apply to all instances of the control** then use an `{x:Type}` as the resource key. For example
   `<ControlTheme x:Key="{x:Type Button}" TargetType="Button">`
 - **If you want the control theme to be applied to selected instances of the control** then use anything else as the resource key and look up this resource using `{StaticResource}`. Commonly this key will be a `string`
+
+:::info
+Notice that this means that only a single control theme can be applied to a control at any one time.
+:::
 
 ## Example: Make all the Buttons Round
 
