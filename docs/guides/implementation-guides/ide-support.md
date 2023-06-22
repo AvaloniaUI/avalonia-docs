@@ -100,10 +100,10 @@ If you're having problems, try enabling verbose logging. To do this in Visual St
 -  Click **Avalonia XAML Editor** in the list
 -  Click **Verbose** in the **Minimum Log Verbosity** drop-down.
 
-<!--<img src="/img/gitbook-import/assets/image (7) (4).png" alt=""/>-->
+<img src="/img/gitbook-import/assets/image (7) (4).png" alt=""/>
 
 Logs will now be displayed in the Visual Studio **Output** window.&#x20;
 
 Select **Avalonia Diagnostics** from the drop-down at the top of this window.
 
-<!--<img src="/img/gitbook-import/assets/image (1) (4).png" alt=""/>-->
+<img src="/img/gitbook-import/assets/image (1) (4).png" alt=""/>
