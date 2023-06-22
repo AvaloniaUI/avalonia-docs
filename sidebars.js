@@ -185,6 +185,7 @@ const sidebars = {
               'items': [
                 'basics/user-interface/styling/styles',
                 'basics/user-interface/styling/control-themes',
+                'basics/user-interface/styling/troubleshooting',
               ],
             },
             'basics/user-interface/adding-interactivity',
