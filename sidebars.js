@@ -477,7 +477,7 @@ const sidebars = {
         },
       ],
     },
-   
+    'faq',
   ],
 };
 
