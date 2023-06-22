@@ -44,7 +44,7 @@ This simple example shows a view box scaling up a circle uniformly (both stretch
 
 The following demonstrations show the different combinations of stretch and stretch direction property settings. This first set shows the effect of the stretch property:
 
-<table><thead><tr><th width="275">Stretch Value</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Uniform</code></td><td><img src="../../../.gitbook/assets/scale-uniform-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>UniformToFill</code></td><td><img src="../../../.gitbook/assets/scale-uniformtofill-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>Fill</code></td><td><img src="../../../.gitbook/assets/scale-fill-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>None</code></td><td><img src="../../../.gitbook/assets/scale-none-both.gif" alt="" data-size="original"/></td></tr></tbody></table>
+<table><thead><tr><th width="275">Stretch Value</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Uniform</code></td><td><img src="/img/gitbook-import/assets/scale-uniform-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>UniformToFill</code></td><td><img src="/img/gitbook-import/assets/scale-uniformtofill-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>Fill</code></td><td><img src="/img/gitbook-import/assets/scale-fill-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>None</code></td><td><img src="/img/gitbook-import/assets/scale-none-both.gif" alt="" data-size="original"/></td></tr></tbody></table>
 
 This set of demonstrations shows the effect of the stretch direction property:
 
