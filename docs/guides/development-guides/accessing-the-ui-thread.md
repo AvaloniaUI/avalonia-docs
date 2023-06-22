@@ -34,19 +34,15 @@ For the possible values of the `DispatcherPriority` enumeration, see [here](http
 
 In this example a text block is used to show the result of a long running task, and a button is used to start the work. In this version, the fire-and-forget `Post` method is used:
 
-{% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='XAML'
 <StackPanel Margin="20">    
   <Button x:Name="RunButton" Content="Run long running process" 
           Click="ButtonClickHandler" />
   <TextBlock x:Name="ResultText" Margin="10"/>
 </StackPanel>
 ```
-{% endtab %}
 
-{% tab title="Task C#" %}
-```csharp
+```csharp title='Task C#'
 using System.Threading.Tasks;
 ...
 private async Task LongRunningTask()
@@ -58,10 +54,8 @@ private async Task LongRunningTask()
     this.FindControl<Button>("RunButton").IsEnabled = true;
 }
 ```
-{% endtab %}
 
-{% tab title="Post C#" %}
-```csharp
+```csharp title='Post C#'
 private void ButtonClickHandler(object sender, RoutedEventArgs e)
 {
     // Start the job and return immediately
@@ -69,29 +63,21 @@ private void ButtonClickHandler(object sender, RoutedEventArgs e)
                                             DispatcherPriority.Background);
 }
 ```
-{% endtab %}
-{% endtabs %}
 
-
-
-<!--<img src="/img/gitbook-import/assets/long1.gif" alt=""/>-->
+<img src="/img/gitbook-import/assets/long1.gif" alt=""/>
 
 Notice that because the long running task is executed on its own thread, the UI does not lose responsiveness.
 
 To get a result from the long running task, the XAML is the same, but this version uses the `InvokeAsync`method:
 
-{% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='XAML'
 <StackPanel Margin="20">    
   <Button x:Name="RunButton" Content="Run long running process" 
           Click="ButtonClickHandler" />
   <TextBlock x:Name="ResultText" Margin="10"/>
 ```
-{% endtab %}
 
-{% tab title="Task C#" %}
-```csharp
+```csharp title='Task C#'
 using System.Threading.Tasks;
 ...
 private async Task<string> LongRunningTask()
@@ -102,10 +88,8 @@ private async Task<string> LongRunningTask()
     return "Success";
 }
 ```
-{% endtab %}
 
-{% tab title="InvokeAsync C#" %}
-```csharp
+```csharp title='InvokeAsync C#'
 private async void ButtonClickHandler(object sender, RoutedEventArgs e)
 {
     var result = await Dispatcher.UIThread.InvokeAsync(LongRunningTask, 
@@ -115,10 +99,8 @@ private async void ButtonClickHandler(object sender, RoutedEventArgs e)
     this.FindControl<Button>("RunButton").IsEnabled = true;
 }
 ```
-{% endtab %}
-{% endtabs %}
 
-<!--<img src="/img/gitbook-import/assets/long2.gif" alt=""/>-->
+<img src="/img/gitbook-import/assets/long2.gif" alt=""/>
 
 ## More Information
 

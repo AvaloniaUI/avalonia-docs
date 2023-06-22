@@ -90,9 +90,7 @@ The following transition types are available. The correct type must be used depe
 
 Render transforms applied to controls using CSS-like syntax can be transitioned. The following example shows a Border which rotates 45 degrees when the pointer is hovered over it:
 
-{% tabs %}
-{% tab title="XAML" %}
-```markup
+```markup title='XAML'
 <Border Width="100" Height="100" Background="Red">
     <Border.Styles>
         <Style Selector="Border">
@@ -109,10 +107,8 @@ Render transforms applied to controls using CSS-like syntax can be transitioned.
     </Border.Transitions>
 </Border>
 ```
-{% endtab %}
 
-{% tab title="C#" %}
-```csharp
+```csharp title='C#'
 new Border
 {
     Width = 100,
@@ -149,8 +145,6 @@ new Border
     }
 };
 ```
-{% endtab %}
-{% endtabs %}
 
 The available transitions are:
 

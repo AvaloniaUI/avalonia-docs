@@ -34,9 +34,7 @@ This means that _Avalonia UI_ will look for an attribute in the XAML, like this:
 
 For example, with a styled property in place, you can control the background color of the custom control from the window styles collection:
 
-{% tabs %}
-{% tab title="XAML" %}
-```xml
+```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -56,10 +54,8 @@ For example, with a styled property in place, you can control the background col
 
 </Window>
 ```
-{% endtab %}
 
-{% tab title="C#" %}
-```csharp
+```csharp title='MainWindow.axaml.cs'
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
@@ -89,8 +85,6 @@ namespace AvaloniaCCExample.CustomControls
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 :::info
 Note that the getter/setter of the property uses the special Avalonia UI `GetValue` and `SetValue` methods.
