@@ -1,15 +1,15 @@
 ---
-description: CONCEPTS
+id: styles
+title: Styles
 ---
 
-# Styling
+# Styles
 
-The _Avalonia UI_ styling system is a mechanism that can share property settings between controls. It has many practical uses for your application developments, for example:
+The _Avalonia UI_ style system is a mechanism that can share property settings between controls. 
 
-* Ensure consistent styling within an application
-* Ensure consistent styling across a suite of applications
-* Creating themes
-* Templated control development
+:::tip
+A `Style` in Avalonia is more similar to a CSS style than a WPF/UWP style. The equivalent of a WPF/UWP Style in Avalonia is a [`ControlTheme`](control-themes).
+:::
 
 ## How It Works
 
@@ -22,7 +22,7 @@ The _Avalonia UI_ styling system's use of 'class' labels on control elements is 
 The styling system implements cascading styles by searching the **logical control tree** upwards from a control, during the selection step. This means styles defined at the highest level of the application (in the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
 
 :::info
-To review the concept of the _Avalonia UI_ **logical control tree**, see [here](control-trees.md).&#x20;
+To review the concept of the _Avalonia UI_ **logical control tree**, see [here](../../../concepts/control-trees.md).&#x20;
 :::
 
 When a match is located by the selection step, then the matched control's properties are altered following the (setter) instructions in the style. To complete the cascading style, a matched style on a control is also applied to any inner controls.&#x20;
@@ -39,7 +39,7 @@ The XAML for a style has two parts: a selector attribute, and one or more setter
 ```
 
 :::info
-The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (cascading style sheets). For detailed reference information, see [here](../reference/styles/style-selector-syntax.md). &#x20;
+The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (cascading style sheets). For detailed reference information, see [here](../../../reference/styles/style-selector-syntax.md). &#x20;
 :::
 
 ## Example
@@ -62,18 +62,41 @@ This is an example of how a style is written and applied to a control element, w
 
 In this example, the `h1` style class applies only to `<TextBlock>`elements, and the text block control will display with the font size and weight set by the style. This works in the preview pane:
 
-<img src="../.gitbook/assets/image (5) (5).png" alt=""/>
+<img src="/img/gitbook-import/assets/image (5) (5).png" alt=""/>
+
+## Nesting Styles
+
+Styles can be nested in other styles. To nest a style, simply include the child style as a child of the parent `<Style>` element, and start the selector with the [`Nesting Selector (^)`](../../../reference/styles/style-selector-syntax.md#nesting):
+
+```xml
+<Style Selector="TextBlock.h1">
+    <Setter Property="FontSize" Value="24"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    
+    // highlight-start
+    <Style Selector="^:pointerover">
+        <Setter Property="Foreground" Value="Red"/>
+    </Style>
+    // highlight-end
+</Style>
+```
+
+When this happens, the selector from the parent style will automatically apply to the child style. In the above example the nested style will effectively have a selector of `TextBlock.h1:pointerover`, meaning that it will display with a red foreground when the pointer is over the control.
+
+:::info
+The nesting selector must be present and must appear at the start of the child selector.
+:::
 
 ## Styles and Resources
 
 Resources are often used with styles to help maintain consistent presentation. Resources can help define standard colors and icons in an application; or across multiple applications when included from separate files.
 
 :::info
-For guidance on how to use resources in you application, see [here](../guides/styles-and-resources/resources.md).
+For guidance on how to use resources in you application, see [here](../../../guides/styles-and-resources/resources.md).
 :::
 
 ## Further Information
 
 :::info
-For guidance on how to share styles by including a styles file, see [here](../guides/styles-and-resources/how-to-use-included-styles.md).
+For guidance on how to share styles by including a styles file, see [here](../../../guides/styles-and-resources/how-to-use-included-styles.md).
 :::

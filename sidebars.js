@@ -175,7 +175,18 @@ const sidebars = {
                 'basics/user-interface/building-layouts/panels-overview',
               ],
             },
-            'basics/user-interface/styling',
+            {
+              'type': 'category',
+              'label': 'Styling',
+              'link': {
+                'type': 'doc',
+                'id': 'basics/user-interface/styling/index',
+              },
+              'items': [
+                'basics/user-interface/styling/styles',
+                'basics/user-interface/styling/control-themes',
+              ],
+            },
             'basics/user-interface/adding-interactivity',
             'basics/user-interface/assets',
             'basics/user-interface/animations',
