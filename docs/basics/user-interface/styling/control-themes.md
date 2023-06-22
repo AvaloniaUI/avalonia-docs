@@ -17,7 +17,7 @@ The solution for this was introduced in Avalonia 11 in the form of _Control Them
 
 Control themes are themselves styles, but with some important differences:
 
-- Control themes don't have a selector: instead they have a "target type" which is simply the style key of the control that they will apply to
+- Control themes don't have a selector: instead they have a `TargetType` property which describes the control that they target
 - Control themes are stored in a `ResourceDictionary` instead of a `Styles` collection
 - Control themes are assigned to a control by setting the `Theme` property, usually using the `{StaticResource}` markup extension
 
@@ -129,7 +129,15 @@ There a two ways in which a control theme can be found:
 - If the control's `Theme` property is set, then that control theme will be used; otherwise
 - Avalonia will search the upwards through the logical tree for a `ControlTheme` resource with an `x:Key` which matches the control's style key
 
+:::info
 Notice that this means that only a single control theme can be applied to a control at any one time.
+:::
+
+In effect this means that you have two choices for how to define your control theme:
+
+- **If you want the control theme to apply to all instances of the control** then use an `{x:Type}` as the resource key. For example
+  `<ControlTheme x:Key="{x:Type Button}" TargetType="Button">`
+- **If you want the control theme to be applied to selected instances of the control** then use anything else as the resource key and look up this resource using `{StaticResource}`. Commonly this key will be a `string`
 
 ## Example: Make all the Buttons Round
 
