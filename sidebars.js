@@ -141,6 +141,7 @@ const sidebars = {
           'label': 'User Interface',
           'items': [
             'basics/user-interface/introduction-to-xaml',
+            'basics/user-interface/code-behind',
             {
               'type': 'category',
               'label': 'Controls',
@@ -228,7 +229,6 @@ const sidebars = {
           'type': 'category',
           'label': 'Implementation Guides',
           'items': [
-            'guides/implementation-guides/code-behind',
             'guides/implementation-guides/how-to-use-the-mvvm-pattern',
             'guides/implementation-guides/how-to-implement-dependency-injection',
             'guides/implementation-guides/logging-errors-and-warnings',
