@@ -228,6 +228,17 @@ const sidebars = {
       'items': [
         {
           'type': 'category',
+          'label': 'Building Cross Platform Applications',
+          'link': {
+            'type': 'doc',
+            'id': 'guides/building-cross-platform-applications/index',
+          },
+          'items': [
+            'guides/building-cross-platform-applications/architecture',
+          ],
+        },
+        {
+          'type': 'category',
           'label': 'Implementation Guides',
           'items': [
             'guides/implementation-guides/how-to-use-the-mvvm-pattern',
