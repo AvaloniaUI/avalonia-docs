@@ -3,13 +3,21 @@ id: welcome
 title: Welcome
 ---
 
-Welcome to the documentation for _Avalonia UI_.
+Welcome to the documentation for Avalonia.
 
-You can decide how you want to use the information here. We have sections to suit your level of experience with Avalonia UI.
+## Overview 
+Avalonia is a powerful framework that enables developers to create cross-platform application using .NET. It uses its own rendering engine to draw UI controls, ensuring consistent appearance and behavior across various platforms, including Windows, macOS, Linux, Android, iOS and WebAssembly. This means that developers can share their UI code and maintain a uniform look and feel regardless of the target platform.
+
+Applications built with Avalonia are written in C# or F#, which makes it easy to rapidly prototype applications that can develop over time into complex systems. Unlike other toolkits that might be restricted by limited APIs, or poor performance, Avalonia applications have the advantage of full access to the platform's capabilities and deliver incredible performance, thanks to the compositional renderer. 
+
+
+As Avalonia applications are cross-platform applications, they are architected similarly to other traditional cross-platform applications. The most common approach is to create a core project that houses the shared code, and then develop platform-specific projects that will consume this shared code.
+
+Avalonia offers two techniques to create user interfaces. The first one is to use code to build UI views leveraging the extensive API provided by Avalonia. Alternatively, developers can utilize the Extensible Application Markup Language (XAML), a declarative markup language that allows developers to define user interfaces. In this approach, the user interface structure is described in a XAML file, while the runtime behavior is defined in a separate code-behind file. To learn more about XAML, refer to [Avalonia XAML](basics/user-interface/introduction-to-xaml).
 
 ## Get Started
 
-Get started right away even if you are completely new to Avalonia UI using a simple step-by-step tutorial, with introductions to the basic concepts behind the framework.
+Get started right away even if you are completely new to Avalonia using a simple step-by-step tutorial, with introductions to the basic concepts behind the framework.
 
 :::info
 Get started [here](get-started).
@@ -32,10 +40,10 @@ Get the guides for practical advice [here](guides).
 :::
 ### Advanced Concepts
 
-Read this section to expand your knowledge of the concepts used by _Avalonia UI_. This section is organised by subject.
+Read this section to expand your knowledge of the concepts used by Avalonia. This section is organised by subject.
 
 :::info
-Explore the advanced Avalonia UI concepts [here](concepts).
+Explore the advanced Avalonia concepts [here](concepts).
 :::
 
 ## Coming from WPF?
@@ -54,10 +62,10 @@ See our reference section [here](reference).
 
 ## Getting Help
 
-If you encounter any issues or bugs with _Avalonia UI_, please open a new issue on _GitHub_.
+If you encounter any issues or bugs with _Avalonia_, please open a new issue on _GitHub_.
 
 :::info
-Access the _Avalonia UI_ _GitHub_ [here](https://github.com/AvaloniaUI/Avalonia).
+Access the _Avalonia_ _GitHub_ [here](https://github.com/AvaloniaUI/Avalonia).
 :::
 
 We have an active developer community on _Gitter_ and _Telegram_ that can often help.
