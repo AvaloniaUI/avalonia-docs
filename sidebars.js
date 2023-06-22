@@ -201,6 +201,16 @@ const sidebars = {
             },
           ],
         },
+        {
+          'type': 'category',
+          'label': 'Services',
+          'items': [
+            'basics/services/storage-provider',
+            'basics/services/clipboard',
+            'basics/services/insets-manager',
+            'basics/services/feedback',
+          ],
+        },
       ],
     },
     {
