@@ -59,7 +59,7 @@ const config = {
           '⭐️ If you like Avalonia, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/avaloniaui/avalonia">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/AvaloniaUI">Twitter</a>',
         backgroundColor: '#335EEA',
         textColor: '#ffffff',
-        isCloseable: true,
+        isCloseable: false,
       },
       colorMode: {
         defaultMode: 'light',
