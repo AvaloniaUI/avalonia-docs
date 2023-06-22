@@ -358,6 +358,17 @@ const sidebars = {
     },
     {
       'type': 'category',
+      'label': 'Deployment',
+      'link': {
+        'type': 'doc',
+        'id': 'deployment/index',
+      },
+      'items': [
+        'deployment/macOS',
+      ],
+    },
+    {
+      'type': 'category',
       'label': 'Reference',
       'items': [
         {
@@ -366,6 +377,7 @@ const sidebars = {
         },
       ],
     },
+   
   ],
 };
 
