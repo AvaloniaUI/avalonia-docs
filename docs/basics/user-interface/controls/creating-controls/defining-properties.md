@@ -51,3 +51,7 @@ public class MyCustomButton : Button
 ```
 
 In this example, a custom property called `RepeatCount` is defined as an integer property for the `MyCustomButton` control. The property is registered using the `AvaloniaProperty` system, allowing it to be accessed, modified, styled, and data-bound by users of the control.
+
+## Further Reading
+
+For more information see the [Defining Properties How-To](../../../../guides/custom-controls/defining-properties.md)
