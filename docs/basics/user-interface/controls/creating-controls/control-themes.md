@@ -63,3 +63,7 @@ In this example, a control theme is defined for the `MyCustomButton` control. It
 ```
 
 The control theme will now be applied automatically to all instances of `MyCustomButton` in the application.
+
+## Further Reading
+
+For more information see the introduction to [control themes](../../styling/control-themes)
