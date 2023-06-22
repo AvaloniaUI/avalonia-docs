@@ -235,6 +235,9 @@ const sidebars = {
           },
           'items': [
             'guides/building-cross-platform-applications/architecture',
+            'guides/building-cross-platform-applications/solution-setup',
+            'guides/building-cross-platform-applications/dealing-with-platforms',
+
           ],
         },
         {
