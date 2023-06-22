@@ -57,7 +57,7 @@ const config = {
         id: 'support_us',
         content:
           '⭐️ If you like Avalonia UI, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/avaloniaui/avalonia">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/AvaloniaUI">Twitter</a>',
-        backgroundColor: '#4D72DA',
+        backgroundColor: '#335EEA',
         textColor: '#ffffff',
         isCloseable: true,
       },
