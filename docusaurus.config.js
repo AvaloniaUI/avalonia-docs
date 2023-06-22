@@ -56,10 +56,15 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          '⭐️ If you like Avalonia UI, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/avaloniaui/avalonia">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/AvaloniaUI">Twitter</a>',
+          '⭐️ If you like Avalonia, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/avaloniaui/avalonia">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/AvaloniaUI">Twitter</a>',
         backgroundColor: '#335EEA',
         textColor: '#ffffff',
         isCloseable: true,
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
       },
       docs: {
         sidebar: {
@@ -68,9 +73,9 @@ const config = {
         }
       },
       navbar: {
-        title: 'Avalonia UI',
+        title: 'Avalonia',
         logo: {
-          alt: 'Avalonia UI Logo',
+          alt: 'Avalonia Logo',
           src: 'img/purple-border-gradient-icon.png',
           srcDark: "img/white-border-gradient-icon.png"
         },
