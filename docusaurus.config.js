@@ -78,11 +78,12 @@ const config = {
       zoom: {
         selector: '.markdown :not(em) > img',
         background: {
-          light: 'rgb(255, 255, 255)',
-          dark: 'rgb(50, 50, 50)'
+          light: 'rgb(196, 196, 196)',
+          dark: 'rgb(22, 28, 45)'
         },
         config: {
           // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+          margin: 50,
         }
       },
       navbar: {
