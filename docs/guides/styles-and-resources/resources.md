@@ -63,7 +63,7 @@ You can also declare resources to be specific to a style.
 </Style>
 ```
 
-It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read [Theme Variants](../../basics/user-interface/styling/theme-variants) page.
+It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read [Theme Variants](how-to-use-theme-variants) page.
 
 ```markup
 <ResourceDictionary>
