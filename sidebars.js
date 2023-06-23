@@ -159,7 +159,6 @@ const sidebars = {
                     'basics/user-interface/controls/creating-controls/defining-properties',
                     'basics/user-interface/controls/creating-controls/defining-events',
                     'basics/user-interface/controls/creating-controls/control-themes',
-                    'basics/user-interface/controls/creating-controls/tutorial'
                   ],
                 },
               ],
