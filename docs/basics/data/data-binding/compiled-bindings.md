@@ -11,6 +11,8 @@ Bindings defined in the XAML are using reflection in order to find and access th
 
 ## Enable and disable compiled bindings
 
+### Enable and disable per UserControl or Window
+
 Compiled bindings are not enabled by default. To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](https://docs.avaloniaui.net/misc/wpf/datatemplates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. You can also specify the `DataType` in the `Binding` directly.
 
 You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
@@ -36,6 +38,16 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
     </StackPanel>
 </UserControl>
 ```
+
+### Enable and disable globally
+
+If you want your application to use compiled bindings globally by default, you can add
+
+```markup
+<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+```
+
+to your project file. You will still need to provide `x:DataType` for the objects you want to bind but you don't need to to set `x:CompileBindings="[True|False]"` for each `UserControl` or `Window`.
 
 ## CompiledBinding-Markup
 
@@ -88,3 +100,25 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
     </StackPanel>
 </UserControl>
 ```
+
+## Type casting
+
+In some cases the target type of the binding expression cannot be automatically evaluated. In such cases you muss provide an explicite type cast in the binding expression.
+
+```markup
+<ItemsRepeater Items="{Binding MyItems}">
+<ItemsRepeater.ItemTemplate>
+    <DataTemplate>
+    <StackPanel Orientation="Horizontal">
+        <TextBlock Text="{Binding DisplayName}"/>
+        <Grid>
+        <Button Command="{Binding $parent[ItemsRepeater].((vm:MyUserControlViewModel)DataContext).DoItCommand}"
+                CommandParameter="{Binding ItemId}"/>
+        </Grid>
+    </StackPanel>
+    </DataTemplate>
+</ItemsRepeater.ItemTemplate>
+</ItemsRepeater>
+```
+
+In this case, the button command shall not be bound to the item's `DataContext` but to a command that is defined in the `DataContext`of the `ItemsRepeater`. The single item will be identified using a `CommandParameter` bound to the item's `DataContext`. Therefore, you must specify the type of the "parent" `DataContext` via cast expression `((vm:MyUserControlViewModel)DataContext)`.
