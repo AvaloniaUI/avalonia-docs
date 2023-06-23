@@ -11,7 +11,7 @@ Bindings defined in the XAML are using reflection in order to find and access th
 
 ## Enable and disable compiled bindings
 
-Compiled bindings are not enabled by default. To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](https://docs.avaloniaui.net/misc/wpf/datatemplates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. From Avalonia version `0.10.12` onward you can also specify the `DataType` in the `Binding` directly.
+Compiled bindings are not enabled by default. To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](https://docs.avaloniaui.net/misc/wpf/datatemplates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. You can also specify the `DataType` in the `Binding` directly.
 
 You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
 
@@ -31,9 +31,7 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
         <!-- Set DataType inside the Binding-markup -->
         <TextBox Text="{Binding MailAddress, DataType={x:Type vm:MyViewModel}}" />
 
-        <!-- We cannot use compiled bindings to bind to methods, so we opt them out for the button -->
-        <Button x:CompileBindings="False"
-                Content="Send an E-Mail"
+        <Button Content="Send an E-Mail"
                 Command="{Binding SendEmailCommand}" />
     </StackPanel>
 </UserControl>
@@ -58,7 +56,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
         <TextBlock Text="E-Mail:" />
         <TextBox Text="{CompiledBinding MailAddress}" />
 
-        <!-- We cannot use compiled bindings to bind to methods, so we use the normal Binding -->
+        <!-- This command will use ReflectionBinding, as it's default -->
         <Button Content="Send an E-Mail"
                 Command="{Binding SendEmailCommand}" />
     </StackPanel>
@@ -84,18 +82,9 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
         <TextBlock Text="E-Mail:" />
         <TextBox Text="{Binding MailAddress}" />
 
-        <!-- We cannot use compiled bindings to bind to methods, so we use ReflectionBinding instead -->
+        <!-- We use ReflectionBinding instead -->
         <Button Content="Send an E-Mail"
                 Command="{ReflectionBinding SendEmailCommand}" />
     </StackPanel>
 </UserControl>
 ```
-
-## Known Limitations
-
-Compiled bindings have some known limitations:
-
-* Compiled bindings cannot be used to bind to named elements
-* Compiled bindings cannot be used in Styles with RelativeSource set to TemplatedParent (e.g.: `{Binding Width, RelativeSource={RelativeSource TemplatedParent}}`)
-
-If you hit one of those limitations you should disable compiled bindings for the failing XAML-node or use `ReflectionBinding` instead.
