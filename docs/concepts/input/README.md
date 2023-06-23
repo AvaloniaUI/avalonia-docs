@@ -6,8 +6,6 @@ description: CONCEPTS
 
 Avalonia operates on the abstraction called pointer devices.
 
-Avalonia provides access to the Clipboard via the `IClipboard` interface.&#x20;
-
 Various Controls that implement `ICommandSource` have a `HotKey` property
 
 

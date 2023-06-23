@@ -392,7 +392,6 @@ const sidebars = {
           'label': 'Input',
           'items': [
             'concepts/input/routed-events',
-            'concepts/input/clipboard',
             'concepts/input/pointer',
             'concepts/input/hotkeys',
           ],
