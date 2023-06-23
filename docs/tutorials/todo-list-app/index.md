@@ -28,5 +28,5 @@ To revise some of the background concepts behind using the MVVM pattern with _Av
 This tutorial contains instructions for you to use whether you program with _Microsoft Visual Studio_ on Windows, or the .NET Core Command Line Interface (.NET Core CLI) and a different editor. The screenshots shown are all from _Microsoft Visual Studio_ and running on Windows. 
 
 :::info
-To read about other tutorials in this documentation, see [here](../introduction.md).
+To read about other tutorials in this documentation, see [here](../index.md).
 :::

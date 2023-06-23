@@ -70,13 +70,13 @@ const sidebars = {
     },
     {
       'type': 'category',
-      'label': 'Tutorials',
+      'label': 'Samples & Tutorials',
       'link': {
         'type': 'doc',
         'id': 'tutorials/index',
       },
       'items': [
-        'tutorials/introduction',
+        'tutorials/samples',
         {
           'type': 'category',
           'label': 'ToDo List App',
