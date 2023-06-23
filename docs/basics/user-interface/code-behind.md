@@ -53,7 +53,7 @@ To do this, you first need to obtain a reference to the desired control. Give th
 
 Here's an example of a XAML file with a named button:
 
-```markup
+```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication5.MainWindow">
