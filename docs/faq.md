@@ -117,6 +117,10 @@ Skia is built against glibc. If your distro uses something else instead, you nee
 
 * macOS High Sierra 10.13+
 
+## What versions of Android are supported?
+
+* Android 5.0+ (API 21)
+
 :::note
 **Credits** - Portions of this documentation were adapted from [Dotnet docs](https://github.com/dotnet/docs/) licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 :::
