@@ -7,7 +7,7 @@ When we originally created the `TodoListView` we added an "Add an item" button. 
 
 ### Create the view
 
-We start by creating the view \(see [here](https://docs.avaloniaui.net/tutorials/todo-list-app/creating-a-view#create-the-usercontrol) for a refresher on how to create a `UserControl` using a template\):
+We start by creating the view \(see [here](../todo-list-app/creating-a-view#create-the-usercontrol) for a refresher on how to create a `UserControl` using a template\):
 
 Views/AddItemView.axaml
 
@@ -96,7 +96,7 @@ namespace Todo.ViewModels
 
 Here we add a `Content` property which is initially set to our list view model. When the `AddItem()` method is called, we assign an `AddItemViewModel` to the `Content` property.
 
-The `Content` property setter calls `RaiseAndSetIfChanged` which will cause [a change notification](https://docs.avaloniaui.net/docs/data-binding/change-notifications) to be fired each time the property changes value. Avalonia's binding system needs change notifications in order to know when to update the user-interface in response to a property change.
+The `Content` property setter calls `RaiseAndSetIfChanged` which will cause [a change notification](../../data-binding/change-notifications) to be fired each time the property changes value. Avalonia's binding system needs change notifications in order to know when to update the user-interface in response to a property change.
 
 We now want to bind our `Window.Content` property to this new `Content` property instead of the `List` property that it is currently bound to:
 
@@ -172,7 +172,7 @@ Now we have the "Add new item" view appearing we need to make it work. In partic
 
 ### Implement the OK and Cancel commands
 
-In the last section we bound a `Button.Command` to a method on the view model, but if we want to be able to control the enabled state of the button we need to bind to an [`ICommand`](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands). Again we're going to take advantage of ReactiveUI and use [`ReactiveCommand`](https://reactiveui.net/docs/handbook/commands/).
+In the last section we bound a `Button.Command` to a method on the view model, but if we want to be able to control the enabled state of the button we need to bind to an [`ICommand`](../../data-binding/binding-to-commands). Again we're going to take advantage of ReactiveUI and use [`ReactiveCommand`](https://reactiveui.net/docs/handbook/commands/).
 
 ViewModels\AddItemViewModel.cs
 
@@ -211,7 +211,7 @@ namespace Todo.ViewModels
 }
 ```
 
-First we modify the `Description` property to raise [change notifications](https://docs.avaloniaui.net/docs/data-binding/change-notifications). We [saw this pattern before](https://docs.avaloniaui.net/tutorials/todo-list-app/adding-new-items#swap-out-the-list-view-model) in the main window view model. In this case though, we're implementing change notifications for `ReactiveUI` rather than for Avalonia specifically:
+First we modify the `Description` property to raise [change notifications](../../data-binding/change-notifications). We [saw this pattern before](adding-new-items#swap-out-the-list-view-model) in the main window view model. In this case though, we're implementing change notifications for `ReactiveUI` rather than for Avalonia specifically:
 
 ```csharp
 var okEnabled = this.WhenAnyValue(

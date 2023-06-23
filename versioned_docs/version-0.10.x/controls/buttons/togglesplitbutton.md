@@ -3,7 +3,7 @@ id: togglesplitbutton
 title: ToggleSplitButton
 ---
 
-The `ToggleSplitButton` functions as a [`ToggleButton`](https://docs.avaloniaui.net/docs/controls/togglebutton) with primary and secondary parts that can each be pressed separately. The primary part behaves like a normal `ToggleButton` and the secondary part opens a [`Flyout`](https://docs.avaloniaui.net/docs/controls/flyouts) with additional actions.
+The `ToggleSplitButton` functions as a [`ToggleButton`](togglebutton) with primary and secondary parts that can each be pressed separately. The primary part behaves like a normal `ToggleButton` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 
 :::info
 The `ToggleSplitButton` has only two states: checked and unchecked. Indeterminate is not supported like it is with a standard `ToggleButton`. This was done intentionally to match WinUI and restricts the control’s usage. The `ToggleSplitButton` should only be used to turn features on/off. Anything other than that is currently considered poor practice from a usability standpoint.
@@ -13,7 +13,7 @@ The `ToggleSplitButton` has only two states: checked and unchecked. Indeterminat
 
 A `ToggleSplitButton` is a fairly specialized control and its usage should be restricted to where it makes clear sense from a user-standpoint. It is intended to turn a feature on/off while allowing some additional configurations to be specified rather than the default.
 
-Like a [`SplitButton`](https://docs.avaloniaui.net/docs/controls/splitbutton), the most common action should be the default and what is shown in the primary part. However, unlike the `SplitButton`, pressing the primary part will turn this feature on or off instead of simply invoking an action. Additional configurations for the feature should be added to the `Flyout` which is shown when the secondary (drop down) part is pressed. 
+Like a [`SplitButton`](splitbutton), the most common action should be the default and what is shown in the primary part. However, unlike the `SplitButton`, pressing the primary part will turn this feature on or off instead of simply invoking an action. Additional configurations for the feature should be added to the `Flyout` which is shown when the secondary (drop down) part is pressed. 
 
 :::info
 Pressing a configuration in the `Flyout` should either (1) turn on the feature with the selected configuration, or (2) change the feature to the selected configuration. Pressing a configuration in the `Flyout` should never turn off the feature – that can only be done by toggling the primary part.

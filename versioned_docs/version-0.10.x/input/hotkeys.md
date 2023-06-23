@@ -3,7 +3,7 @@ id: hotkeys
 title: Hotkeys
 ---
 
-Various Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. Pressing the hotkey will execute the command [bound](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) to the Control.
+Various Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. Pressing the hotkey will execute the command [bound](../data-binding/binding-to-commands) to the Control.
 
 ```markup
 <Menu>
@@ -23,7 +23,7 @@ var saveMenuItem = this.FindControl<Avalonia.Controls.MenuItem>("SaveMenuItem");
 HotKeyManager.SetHotKey(saveMenuItem, new KeyGesture(Key.S, KeyModifiers.Control));
 ```
 
-> See the [Locating Controls](https://docs.avaloniaui.net/guides/basics/code-behind#locating-controls) section for more information on finding named Controls with the FindControl method.
+> See the [Locating Controls](../guides/basics/code-behind#locating-controls) section for more information on finding named Controls with the FindControl method.
 
 ## Keys and Modifiers
 

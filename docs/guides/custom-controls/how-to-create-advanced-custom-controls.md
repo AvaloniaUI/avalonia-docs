@@ -60,7 +60,7 @@ As can be seen, readonly properties are stored as a field on the object. When re
 
 ### Attached Properties
 
-[Attached properties](https://docs.avaloniaui.net/docs/data-binding/creating-and-binding-attached-properties) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
+[Attached properties](../../concepts/attached-property) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
 
 Here's how `Grid` defines its `Grid.Column` attached property:
 

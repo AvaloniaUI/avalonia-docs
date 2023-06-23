@@ -9,7 +9,7 @@ Bindings defined in the XAML are using reflection in order to find and access th
 
 ## Enable and disable compiled bindings
 
-Compiled bindings are not enabled by default. To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](https://docs.avaloniaui.net/misc/wpf/datatemplates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. From Avalonia version `0.10.12` onward you can also specify the `DataType` in the `Binding` directly.
+Compiled bindings are not enabled by default. To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](../templates/data-templates.md) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. From Avalonia version `0.10.12` onward you can also specify the `DataType` in the `Binding` directly.
 
 You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
 

@@ -68,9 +68,6 @@ And this example will hide the content control if the bound object is null or em
 
 ## More Information
 
-:::info
-For the complete API documentation about converters, see [here](https://docs.avaloniaui.net/api/untitled/avalonia-ui-framework-23/avalonia-ui-framework-24#classtypes).
-:::
 
 :::info
 You can follow the Avalonia UI value converter sample, [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/ValueConversionSample).

@@ -6,7 +6,7 @@ title: Page Transitions
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-`PageTransitions` are used to render a transition between two views, for example in a [Carousel](https://docs.avaloniaui.net/docs/controls/carousel) or [TransitioningContentControl](https://docs.avaloniaui.net/docs/controls/TransitioningContentControl)
+`PageTransitions` are used to render a transition between two views, for example in a [Carousel](../controls/carousel) or [TransitioningContentControl](../controls/TransitioningContentControl)
 
 :::warning
 The duration must be set before the transition is used and must be greater than 0. If not, you will get an error. 

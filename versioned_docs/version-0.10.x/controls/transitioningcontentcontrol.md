@@ -8,8 +8,8 @@ title: TransitioningContentControl
 | Property          | Description                                                                                                                                 |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Content`         | Gets or sets the content to display in the control                                                                                          |
-| `ContentTemplate` | Gets or sets the [DataTemplate](https://docs.avaloniaui.net/docs/templates/data-templates) used to display the content                      |
-| `PageTransition`  | Gets or sets the [PageTransition](https://docs.avaloniaui.net/docs/animations/PageTransitions) which will be shown when the content changes |
+| `ContentTemplate` | Gets or sets the [DataTemplate](../templates/data-templates) used to display the content                      |
+| `PageTransition`  | Gets or sets the [PageTransition](../animations/page-transitions) which will be shown when the content changes |
 
 ## Reference
 
@@ -40,9 +40,9 @@ Let's assume we have a collection of different images and we want to show them i
 
 ## Changing the PageTransition
 
-If you don't like the `PageTransition` which is provided by the applied theme, you can also provide your own [PageTransition](https://docs.avaloniaui.net/docs/animations/PageTransitions). This can be done in XAML, provided via `Binding` or via `DynamicResource`.
+If you don't like the `PageTransition` which is provided by the applied theme, you can also provide your own [PageTransition](../animations/page-transitions). This can be done in XAML, provided via `Binding` or via `DynamicResource`.
 
-In the sample below we will change the [PageTransition](https://docs.avaloniaui.net/docs/animations/PageTransitions) to slide the images horizontally.
+In the sample below we will change the [PageTransition](../animations/page-transitions.md) to slide the images horizontally.
 
 ```markup
 <TransitioningContentControl Content="{Binding SelectedImage}" >

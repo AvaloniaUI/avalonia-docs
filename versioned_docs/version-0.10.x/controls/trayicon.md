@@ -17,7 +17,7 @@ The `TrayIcon` control allows an Avalonia application to display an icon and a n
 
 ## Menu
 
-The `TrayIcon` is used with a [`NativeMenu`](https://docs.avaloniaui.net/docs/controls/nativemenu). It has the same capabilities and can be used with commands, according to the MVVM design pattern.
+The `TrayIcon` is used with a [`NativeMenu`](../controls/nativemenu). It has the same capabilities and can be used with commands, according to the MVVM design pattern.
 
 ## Example usage
 
