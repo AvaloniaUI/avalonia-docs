@@ -8,7 +8,7 @@ description: CONCEPTS
 
 
 
-If you want to provide a `Style` for your `TemplatedControl` in a separate file, remember to include this file in your Application via [`StyleInclude`](https://docs.avaloniaui.net/docs/styling/styles).
+If you want to provide a `Style` for your `TemplatedControl` in a separate file, remember to include this file in your Application via [`StyleInclude`](../basics/user-interface/styling/styles).
 
 
 
