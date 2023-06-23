@@ -13,7 +13,7 @@ For instance, in the Visual Studio solution explorer, you can see a `MainWindow.
 
 The code-behind file contains a class that shares the same name as the XAML file. For example:
 
-```csharp title='MainWindow.xaml.cs'
+```csharp title='MainWindow.axaml.cs'
 using Avalonia.Controls;
 
 namespace AvaloniaApplication1.Views
@@ -30,7 +30,7 @@ namespace AvaloniaApplication1.Views
 
 Notice that the class name matches the name of the XAML file, and is also referenced in the `x:Class` attribute of the window element.
 
-```xml title='MainWindow.xaml'
+```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         // highlight-next-line
@@ -64,7 +64,7 @@ Here's an example of a XAML file with a named button:
 
 You can now access the button via an auto-generated `greetingButton` field from the code-behind:
 
-```csharp title='MainWindow.xaml.cs'
+```csharp title='MainWindow.axaml.cs'
 using Avalonia.Controls;
 
 namespace AvaloniaApplication1.Views
