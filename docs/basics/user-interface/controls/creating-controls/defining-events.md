@@ -2,15 +2,18 @@
 
 Events in Avalonia allow your custom controls to communicate and notify users of specific actions or occurrences. By defining events, you provide a way for users of your controls to respond and react to these events within their applications. This document will guide you through the process of defining events for your custom controls.
 
-## Why Define Control Events?
+## Routed Event
 
-Defining events for your custom controls offers several benefits:
+Routed events in Avalonia offer a mechanism for handling events that can travel (or "route") through the control tree, allowing multiple controls to respond to the same event. Routed events provide the following key features:
 
-- **Interactivity**: Events enable users of your controls to respond to user interactions or specific occurrences within the control, such as button clicks, value changes, or state transitions.
+- **Event Routing**: Routed events can propagate up the tree (bubbling) or down the tree (tunneling), enabling controls at different levels to handle the same event. This allows for more flexible and centralized event handling.
 
-- **Extensibility**: By defining events, you provide extension points for developers to customize the behavior of your controls or integrate them with other components or systems.
+- **Event Handlers**: Routed events use event handlers to respond to events. Event handlers are associated with specific controls or can be attached at higher levels in the visual tree to handle events from multiple controls.
 
-- **Decoupling**: Events facilitate loose coupling between your control and the consuming application, allowing developers to handle events independently and separate concerns effectively.
+- **Handled State**: Routed events have a `Handled` property that can be used to mark an event as handled, preventing further propagation. This allows fine-grained control over event handling.
+
+- **Event Routing Strategies**: Avalonia supports different routing strategies for routed events, such as bubbling, tunneling, and direct routing. These strategies determine the order in which controls receive and handle events.
+Avalonia routed events are particularly useful when you need to handle events that may occur within nested controls or when you want to centralize event handling logic higher up in the visual tree.
 
 ## Example
 
@@ -20,7 +23,7 @@ Here's an example of how to define a routed event for a hypothetical custom slid
 public class MyCustomSlider : Control
 {
     public static readonly RoutedEvent<RoutedEventArgs> ValueChangedEvent =
-        RoutedEvent.Register<MyCustomSlider, RoutedEventArgs>(nameof(ValueChanged), RoutingStrategies.Bubble);
+        RoutedEvent.Register<MyCustomSlider, RoutedEventArgs>(nameof(ValueChanged));
 
     public event EventHandler<RoutedEventArgs> ValueChanged
     {
@@ -30,54 +33,10 @@ public class MyCustomSlider : Control
 
     protected virtual void OnValueChanged()
     {
-        RoutedEventArgs args = new RoutedEventArgs(ValueChangedEvent, this);
+        RoutedEventArgs args = new RoutedEventArgs(ValueChangedEvent);
         RaiseEvent(args);
     }
 }
 ```
 
-## Routed Events vs. CLR Events
-
-There are two types of events commonly used in Avalonia: routed events and CLR (Common Language Runtime) events. Understanding the differences between these event systems is essential for effectively handling and raising events in your applications.
-
-### Routed Events
-
-Routed events are a powerful event system in Avalonia that allow events to travel or "route" through the visual tree. Routed events provide a convenient way to handle events at various levels of the visual tree hierarchy, from individual controls to their parent containers or even higher-level elements.
-
-Key characteristics of routed events include:
-
-- **Routing Strategies**: Routed events support three routing strategies: Bubble, Tunnel, and Direct. The routing strategy determines the direction in which the event travels through the visual tree, allowing parent or child elements to handle the event.
-
-- **Event Routing**: Routed events are not limited to the control that raises them. They can be handled by any element along the route, including ancestor or descendant controls. This enables event handling at various levels of the visual tree.
-
-- **Handled State**: Routed events have a "handled" state, which allows an event handler to mark an event as handled, preventing further routing of the event. This can be useful to control event handling and avoid redundant processing.
-
-Routed events are well-suited for scenarios where you need to handle events at multiple levels of the visual tree or when you want to provide extensibility points for event handling in your controls.
-
-### CLR Events
-
-CLR events, also known as traditional events, are the standard event system provided by the .NET Framework. CLR events follow a simple event publishing and subscription model, where an object defines events and event handlers subscribe to and handle those events.
-
-Key characteristics of CLR events include:
-
-- **Direct Event Handling**: CLR events are directly handled by the object that raises the event. Event handlers are registered and invoked explicitly by the object raising the event.
-
-- **Local Event Scope**: CLR events are limited to the control or object that defines them. Event handlers subscribed to a CLR event will only be invoked when the event is raised by that specific control.
-
-- **Delegate-Based Event Model**: CLR events are based on delegates, with event handlers subscribing to events by providing a method with the same signature as the event delegate.
-
-CLR events are straightforward to use and are typically used when you only need to handle events within a single control or object.
-
-## Choosing Between Routed and CLR Events
-
-When deciding whether to use routed events or CLR events in your Avalonia application, consider the following factors:
-
-- **Event Scope**: If you need to handle events at multiple levels of the visual tree or provide extensibility points for event handling, routed events are a suitable choice.
-
-- **Control-Specific Events**: For events that are specific to a particular control and are not expected to be handled by other elements in the visual tree, CLR events offer a simpler and more direct approach.
-
-In some cases, a combination of both routed events and CLR events may be appropriate, depending on the requirements of your application and the desired event handling behavior.
-
-## Conclusion
-
-Understanding the differences between routed events and CLR events in Avalonia is crucial for designing effective event systems in your applications. Routed events offer flexibility and extensibility, allowing events to propagate through the visual tree, while CLR events provide a simpler model for handling events within a
+In this example, a custom routed event called `ValueChangedEvent` is defined for the `MyCustomSlider` control. The event is registered using the `RoutedEvent` system, allowing it to be subscribed by users of the control. A CLR event is also defined for concenience, allowing the event to be consumed in manner consistent with standard .NET APIs.
