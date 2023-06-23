@@ -44,62 +44,6 @@ The sample above uses three interesting attributes:
 For information about the code-behind concept, see [here](code-behind).
 :::
 
-## XML Namespaces
-
-In common with any XML format, in Avalonia XAML files you can declare namespaces. This allows the XML processor to find the definitions of the elements in the file.&#x20;
-
-:::info
-For background information, see the Microsoft XML namespaces documentation [here](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).&#x20;
-:::
-
-You can add a namespace using the `xmlns` attribute. The format of a namespace declaration is as follows:
-
-```xml
-xmlns:alias="definition"
-```
-
-It is standard practice to define all the namespaces you are going to use in the root element.&#x20;
-
-Only one namespace in a file can be defined without using the alias part of the attribute name. The alias must always be unique with in a file.
-
-The definition part of the namespace declaration can be either a URL or a code definition. Both of these are used to locate the definition of the elements in the file.
-
-:::info
-For detailed guidance on how namespace declarations work, see [here](../../guides/custom-controls/how-to-create-a-custom-controls-library.md).
-:::
-
-## Code Definition Syntax
-
-There are two valid syntax options for the definition part of a XAML namespace attribute that references code:
-
-### **CLR Namespace Prefix**
-
-There is a prefix `clr-namespace:` you can use to reference both code in the current assembly and code in a referenced assembly.&#x20;
-
-For example, when the code is present in the same assembly as the XAML, you can use this syntax:
-
-```xml
-<Window ...
-    xmlns:myAlias1="clr-namespace:MyNamespace.AppNameSpace.UI" 
-... >
-```
-
-And if the code is in another referenced assembly (for example in a library), you must extend the description to include the name of the referenced assembly:
-
-```xml
-<Window ...
-    xmlns:myAlias2="clr-namespace:MyNameSpace.OtherAssembly;assembly=OtherAssembly"
- ... >
-```
-
-### **Using Prefix**
-
-There is an alternative prefix `using:` that you can use to reference code in the current assembly. For example:
-
-```xml
-xmlns:myAlias3="using:MyNamespace.AppNameSpace.UI"
-```
-
 ## Control Elements
 
 You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.&#x20;
@@ -169,3 +113,57 @@ Many XAML files also have an associated code-behind file that is usually written
 :::info
 For guidance about programming using code-behind files, see [here](code-behind).
 :::
+
+## XML Namespaces
+
+In common with any XML format, in Avalonia XAML files you can declare namespaces. This allows the XML processor to find the definitions of the elements in the file.&#x20;
+
+:::info
+For background information, see the Microsoft XML namespaces documentation [here](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).&#x20;
+:::
+
+You can add a namespace using the `xmlns` attribute. The format of a namespace declaration is as follows:
+
+```xml
+xmlns:alias="definition"
+```
+
+It is standard practice to define all the namespaces you are going to use in the root element.&#x20;
+
+Only one namespace in a file can be defined without using the alias part of the attribute name. The alias must always be unique with in a file.
+
+The definition part of the namespace declaration can be either a URL or a code definition. Both of these are used to locate the definition of the elements in the file.
+
+:::info
+For detailed guidance on how namespace declarations work, see [here](../../guides/custom-controls/how-to-create-a-custom-controls-library.md).
+:::
+
+There are two valid syntax options for the definition part of a XAML namespace attribute that references code:
+
+### **CLR Namespace Prefix**
+
+There is a prefix `clr-namespace:` you can use to reference both code in the current assembly and code in a referenced assembly.&#x20;
+
+For example, when the code is present in the same assembly as the XAML, you can use this syntax:
+
+```xml
+<Window ...
+    xmlns:myAlias1="clr-namespace:MyNamespace.AppNameSpace.UI" 
+... >
+```
+
+And if the code is in another referenced assembly (for example in a library), you must extend the description to include the name of the referenced assembly:
+
+```xml
+<Window ...
+    xmlns:myAlias2="clr-namespace:MyNameSpace.OtherAssembly;assembly=OtherAssembly"
+ ... >
+```
+
+### **Using Prefix**
+
+There is an alternative prefix `using:` that you can use to reference code in the current assembly. For example:
+
+```xml
+xmlns:myAlias3="using:MyNamespace.AppNameSpace.UI"
+```
