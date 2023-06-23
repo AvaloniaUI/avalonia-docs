@@ -40,3 +40,7 @@ public class MyCustomSlider : Control
 ```
 
 In this example, a custom routed event called `ValueChangedEvent` is defined for the `MyCustomSlider` control. The event is registered using the `RoutedEvent` system, allowing it to be subscribed by users of the control. A CLR event is also defined for concenience, allowing the event to be consumed in manner consistent with standard .NET APIs.
+
+## Further Reading
+
+For more information see the [Routed Events Deep Dive](../../../../concepts/input/routed-events.md)
