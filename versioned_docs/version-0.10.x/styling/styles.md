@@ -225,11 +225,11 @@ If multiple styles match a control, and they both attempt to set the same proper
         </StackPanel.Styles>
 
         <TextBlock Classes="h1">
-            <StackPanel.Styles>
+            <TextBlock.Styles>
                 <Style Selector="TextBlock.h1">
                     <Setter Property="Foreground" Value="Blue"/>
                 </Style>
-            </StackPanel.Styles>
+            </TextBlock.Styles>
 
             I'm a Heading!
         </TextBlock>
