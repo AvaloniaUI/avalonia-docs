@@ -52,7 +52,7 @@ In fact you can define resources at control level if required:
 </Window>
 ```
 
-You can also declare resources to be specific to a style:
+You can also declare resources to be specific to a style. 
 
 ```markup
 <Style Selector="TextBlock.warning">
@@ -61,6 +61,23 @@ You can also declare resources to be specific to a style:
   </Style.Resources>
   <Setter ... />
 </Style>
+```
+
+It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read [Theme Variants](../../basics/user-interface/styling/theme-variants) page.
+
+```markup
+<ResourceDictionary>
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key='Light'>
+            <SolidColorBrush x:Key='BackgroundBrush'>White</SolidColorBrush>
+            <SolidColorBrush x:Key='ForegroundBrush'>Black</SolidColorBrush>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key='Dark'>
+            <SolidColorBrush x:Key='BackgroundBrush'>Black</SolidColorBrush>
+            <SolidColorBrush x:Key='ForegroundBrush'>White</SolidColorBrush>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>
 ```
 
 ## Resource Dictionary Files
@@ -92,7 +109,7 @@ You can now add the resources you want to define in the position indicated. It l
 
 ## Using Resources
 
-You can use a resource from a resources dictionary that is in scope using the    `{DynamicResource}` mark-up extension.&#x20;
+You can use a resource from a resources dictionary that is in scope using the `{DynamicResource}` mark-up extension.&#x20;
 
 For example, to use a resource directly on the background attribute of a border element, use the following XAML :
 
@@ -104,7 +121,7 @@ For example, to use a resource directly on the background attribute of a border 
 
 ### Static Resource&#x20;
 
-Alternatively you can choose to use the `StaticResource` mark-up extension.  For example:
+Alternatively you can choose to use the `StaticResource` mark-up extension. For example:
 
 ```
 <Border Background="{StaticResource Warning}">

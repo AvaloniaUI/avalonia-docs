@@ -187,7 +187,7 @@ const sidebars = {
                 'basics/user-interface/styling/styles',
                 'basics/user-interface/styling/style-classes',
                 'basics/user-interface/styling/control-themes',
-                'basics/user-interface/styling/troubleshooting',
+                'basics/user-interface/styling/troubleshooting'
               ],
             },
             'basics/user-interface/adding-interactivity',
@@ -277,8 +277,8 @@ const sidebars = {
             'guides/styles-and-resources/selectors',
             'guides/styles-and-resources/property-setters',
             'guides/styles-and-resources/how-to-use-included-styles',
-            'guides/styles-and-resources/how-to-use-themes',
             'guides/styles-and-resources/resources',
+            'guides/styles-and-resources/how-to-use-theme-variants',
             'guides/styles-and-resources/how-to-use-fonts',
             'guides/styles-and-resources/troubleshooting',
           ],
