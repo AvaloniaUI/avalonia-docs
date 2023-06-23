@@ -7,17 +7,28 @@ title: Cross Fade Page Transition
 
 The cross fade page transition fades out the current page and fades in the new page by animating the opacity.
 
-{% tabs %}
-```markup title='XAML'
+<Tabs
+  defaultValue="xaml"
+  values={[
+      { label: 'XAML', value: 'xaml', },
+      { label: 'C#', value: 'cs', },
+  ]}
+>
+<TabItem value="xaml">
+
+```xml
 <CrossFade Duration="0:00:00.500" />
 ```
-{% endtab %}
 
-```csharp title='C#'
+</TabItem>
+<TabItem value="cs">
+
+```cs
 var transition = new CrossFade(TimeSpan.FromMilliseconds(500));
 ```
-{% endtab %}
-{% endtabs %}
+</TabItem>  
+
+</Tabs>
 
 ## More Information
 

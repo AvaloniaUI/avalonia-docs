@@ -13,8 +13,16 @@ In this example, a custom control file is added to a .NET class library. The lib
 
 <img src="/img/gitbook-import/assets/image (11) (2).png" alt=""/>
 
-{% tabs %}
-```xml title='XAML'
+<Tabs
+  defaultValue="xaml"
+  values={[
+      { label: 'XAML', value: 'xaml', },
+      { label: 'C#', value: 'cs', },
+  ]}
+>
+<TabItem value="xaml">
+
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:cc="clr-namespace:CCLibrary;assembly=CCLibrary"
@@ -33,9 +41,11 @@ In this example, a custom control file is added to a .NET class library. The lib
 
 </Window>
 ```
-{% endtab %}
 
-``` title='C#'
+</TabItem>
+<TabItem value="cs">
+
+```cs
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
@@ -66,8 +76,9 @@ namespace CCLibrary
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+</TabItem>  
+
+</Tabs>
 
 :::info
 Notice that the namespace reference for the control library includes the name of the assembly.
