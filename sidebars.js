@@ -159,7 +159,7 @@ const sidebars = {
                     'basics/user-interface/controls/creating-controls/defining-properties',
                     'basics/user-interface/controls/creating-controls/defining-events',
                     'basics/user-interface/controls/creating-controls/control-themes',
-                    'basics/user-interface/controls/creating-controls/tutorial',
+                    'basics/user-interface/controls/creating-controls/tutorial'
                   ],
                 },
               ],
@@ -187,7 +187,19 @@ const sidebars = {
                 'basics/user-interface/styling/styles',
                 'basics/user-interface/styling/style-classes',
                 'basics/user-interface/styling/control-themes',
-                'basics/user-interface/styling/troubleshooting'
+                {
+                  'type': 'category',
+                  'label': 'Themes',
+                  'link': {
+                    'type': 'doc',
+                    'id': 'basics/user-interface/styling/themes/index',
+                  },
+                  'items': [
+                    'basics/user-interface/styling/themes/fluent',
+                    'basics/user-interface/styling/themes/simple',
+                  ],
+                },
+                'basics/user-interface/styling/troubleshooting',
               ],
             },
             'basics/user-interface/adding-interactivity',

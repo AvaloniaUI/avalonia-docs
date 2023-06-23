@@ -46,7 +46,7 @@ For example:
 
 ```markup
 <Application.Styles>
-    <FluentTheme Mode="Light" />
+    <FluentTheme />
     <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
 </Application.Styles>
 ```
