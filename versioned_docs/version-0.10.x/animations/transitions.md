@@ -70,7 +70,7 @@ Every transition has a `Property`, `Delay`, `Duration` and an optional `Easing` 
 
 `Duration` refers to the amount of time that the transition plays.
 
-The easing functions are the same as those described in [Keyframe Animations](https://docs.avaloniaui.net/docs/animations/keyframe-animations#easings).
+The easing functions are the same as those described in [Keyframe Animations](../animations/keyframe-animations#easings).
 
 The following transition types are available. The correct type must be used depending on the type of the property being animated.
 

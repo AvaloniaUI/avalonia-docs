@@ -3,7 +3,7 @@ id: togglebutton
 title: ToggleButton
 ---
 
-The `ToggleButton` control is a subclass of the `Button` control that has a built-in `checked` state. This means the button can be checked or unchecked on click by a user. You may change the styling of controls based on whether `ToggleButton` is checked or not by using the `:checked` [pseudoclass.](https://docs.avaloniaui.net/docs/styling/styles#pseudoclasses)
+The `ToggleButton` control is a subclass of the `Button` control that has a built-in `checked` state. This means the button can be checked or unchecked on click by a user. You may change the styling of controls based on whether `ToggleButton` is checked or not by using the `:checked` [pseudoclass.](../../styling/styles#pseudoclasses)
 
 ## Source code
 

@@ -55,4 +55,4 @@ Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, 
 
 ## Animation
 
-Avalonia's animation support lets you make controls grow, shake, spin, and fade, to create interesting page transitions, and more. Avalonia uses a CSS-like animation system which supports [property transitions](https://docs.avaloniaui.net/docs/animations/transitions) and [keyframe animations](https://docs.avaloniaui.net/docs/animations/keyframe-animations).
+Avalonia's animation support lets you make controls grow, shake, spin, and fade, to create interesting page transitions, and more. Avalonia uses a CSS-like animation system which supports [property transitions](../../animations/transitions) and [keyframe animations](../../animations/keyframe-animations).

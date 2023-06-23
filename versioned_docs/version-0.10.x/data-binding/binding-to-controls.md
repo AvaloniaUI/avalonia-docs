@@ -3,7 +3,7 @@ id: binding-to-controls
 title: Binding to Controls
 ---
 
-As well as binding to a control's [`DataContext`](https://docs.avaloniaui.net/docs/data-binding/the-datacontext) you can also bind to other controls.
+As well as binding to a control's [`DataContext`](the-datacontext) you can also bind to other controls.
 
 :::info
 Note that when you do this, the binding source is to the _control itself_ not the control's `DataContext`. If you want to bind to the control's `DataContext` then you'll need to specify that in the binding path.

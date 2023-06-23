@@ -3,7 +3,7 @@ id: button
 title: Button
 ---
 
-The `Button` control is a [`ContentControl`](https://docs.avaloniaui.net/docs/controls/contentcontrol) which reacts to pointer presses.
+The `Button` control is a [`ContentControl`](../contentcontrol) which reacts to pointer presses.
 
 A button notifies clicks by raising the [`Click`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) event. A click is distinct from a `PointerDown` event in that it is raised by default when the button is pressed and then released (although this behavior can be changed by setting the [`ClickMode`](http://reference.avaloniaui.net/api/Avalonia.Controls/ClickMode/) property).
 

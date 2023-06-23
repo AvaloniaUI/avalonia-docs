@@ -43,7 +43,7 @@ If you assign a control to a `ContentControl` then it will display the control, 
 
 ### Display content with templates
 
-So far so uninteresting. Where `ContentControl` becomes useful is in tandem with [data binding](https://docs.avaloniaui.net/docs/data-binding) and [data templates](https://docs.avaloniaui.net/docs/templates/data-templates). By setting the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/) property one can specify how the data in the `Content` property is displayed. For example given the following view models:
+So far so uninteresting. Where `ContentControl` becomes useful is in tandem with [data binding](../data-binding) and [data templates](../templates/data-templates). By setting the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/) property one can specify how the data in the `Content` property is displayed. For example given the following view models:
 
 ```csharp
 namespace Example
@@ -73,7 +73,7 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowVieModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](https://docs.avaloniaui.net/docs/data-binding/the-datacontext) for more information.
+> Note: The following examples assume an instance of `MainWindowVieModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](docs/data-binding/the-datacontext) for more information.
 
 We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
@@ -99,4 +99,4 @@ We can display the student's first and last name in a `ContentControl` using the
   </div>
 
 
-For more information see the [data templates](https://docs.avaloniaui.net/docs/templates/data-templates) section.
+For more information see the [data templates](docs/templates/data-templates) section.

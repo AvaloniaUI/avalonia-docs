@@ -3,9 +3,9 @@ id: window
 title: Window
 ---
 
-[`Window`](http://reference.avaloniaui.net/api/Avalonia.Controls/Window/) is a top-level [`ContentControl`](https://docs.avaloniaui.net/docs/controls/contentcontrol).
+[`Window`](http://reference.avaloniaui.net/api/Avalonia.Controls/Window/) is a top-level [`ContentControl`](contentcontrol).
 
-You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application. For information on how to create new window classes from templates see the [quickstart](https://docs.avaloniaui.net/docs/getting-started/windows).
+You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application. For information on how to create new window classes from templates see the [quickstart](../getting-started/windows).
 
 ### Common Properties
 
@@ -72,7 +72,7 @@ window.Hide();
 window.Show();
 ```
 
-See also [Prevent a window from closing](https://docs.avaloniaui.net/docs/controls/window#prevent-a-window-from-closing)
+See also [Prevent a window from closing](docs/controls/window#prevent-a-window-from-closing)
 
 ### Show a window as a dialog
 

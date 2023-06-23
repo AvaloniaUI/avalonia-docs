@@ -161,7 +161,7 @@ public class AnimalConverter : IValueConverter
                       break;
                     // etc. etc.
                 }
-                // see https://docs.avaloniaui.net/docs/controls/image
+                // see https://docs.avaloniaui.net/docs/guides/data-binding/how-to-create-a-custom-data-binding-converter
                 return BitmapAssetValueConverter.Instance
                     .Convert(img, typeof(Bitmap), parameter, culture);
             }

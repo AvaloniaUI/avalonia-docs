@@ -3,9 +3,9 @@ id: bindings
 title: Bindings
 ---
 
-You bind in XAML using the `{Binding}` markup extension. By using bindings \(assuming you've implemented [change notifications](https://docs.avaloniaui.net/docs/data-binding/change-notifications)\) any changes to the data context will automatically be updated in the control.
+You bind in XAML using the `{Binding}` markup extension. By using bindings \(assuming you've implemented [change notifications](change-notifications)\) any changes to the data context will automatically be updated in the control.
 
-By default a binding binds to a property on the [`DataContext`](https://docs.avaloniaui.net/docs/data-binding/the-datacontext), e.g.:
+By default a binding binds to a property on the [`DataContext`](the-datacontext), e.g.:
 
 ```markup
 <!-- Binds to the TextBlock's DataContext.Name property -->

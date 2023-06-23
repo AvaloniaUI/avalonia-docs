@@ -38,7 +38,7 @@ If you will press Alt with the example above you will see that some letters are 
 
 ## Menu Commands
 
-Like `Button`, commands can be [bound](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) to `MenuItem`s. The command will be executed when the menu item is clicked or selected with the keyboard:
+Like `Button`, commands can be [bound](../data-binding/binding-to-commands) to `MenuItem`s. The command will be executed when the menu item is clicked or selected with the keyboard:
 
 ```markup
 <Menu>
@@ -48,7 +48,7 @@ Like `Button`, commands can be [bound](https://docs.avaloniaui.net/docs/data-bin
 </Menu>
 ```
 
-> See the [Binding to Commands](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) section for more information on binding to commands.
+> See the [Binding to Commands](../data-binding/binding-to-commands) section for more information on binding to commands.
 
 ## Menu Icons
 
@@ -80,7 +80,7 @@ Similarly, a `CheckBox` can be displayed in the `Icon` property to make the `Men
 
 ## Dynamically Creating Menus
 
-Menus can also be dynamically created using bindings and [`DataTemplate`](https://docs.avaloniaui.net/misc/wpf/datatemplates) s. To do this, you will usually create a view model to represent your `Window` with a set of commands relating to the menu commands:
+Menus can also be dynamically created using bindings and [`DataTemplate`](../wpf-developer-tips/datatemplates)s. To do this, you will usually create a view model to represent your `Window` with a set of commands relating to the menu commands:
 
 ```csharp
 public class MainWindowViewModel

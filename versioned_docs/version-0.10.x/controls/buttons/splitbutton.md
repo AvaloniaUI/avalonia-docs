@@ -3,7 +3,7 @@ id: splitbutton
 title: SplitButton
 ---
 
-The `SplitButton` functions as a [`Button`](https://docs.avaloniaui.net/docs/controls/button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](https://docs.avaloniaui.net/docs/controls/flyouts) with additional actions.
+The `SplitButton` functions as a [`Button`](button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 
 
 ## Is this the right control? 

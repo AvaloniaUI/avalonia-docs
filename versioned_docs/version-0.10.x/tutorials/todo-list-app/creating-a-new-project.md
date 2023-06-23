@@ -64,5 +64,5 @@ You can see there are directories for each of the concepts in the MVVM pattern \
 :::info
 **.xaml or .axaml?**
 
-In this tutorial we will use the `.axaml` file extension for XAML files which is what will be created by the Visual Studio extension. If you're using the .NET Core CLI, the extension will be `.xaml`. See the [Intro to XAML](https://docs.avaloniaui.net/guides/basics/introduction-to-xaml#xaml-or-axaml-file) page for information on why this happens.
+In this tutorial we will use the `.axaml` file extension for XAML files which is what will be created by the Visual Studio extension. If you're using the .NET Core CLI, the extension will be `.xaml`. See the [Intro to XAML](../../guides/basics/introduction-to-xaml#xaml-or-axaml-file) page for information on why this happens.
 :::

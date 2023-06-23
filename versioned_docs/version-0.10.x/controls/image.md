@@ -7,7 +7,7 @@ The `Image` control is a control for displaying raster images.
 
 ### Binding
 
-Binding onto an `Image` control's `Source` property with a `string` must be done using a [binding converter](https://docs.avaloniaui.net/docs/data-binding/converting-binding-values) that will convert the `string` to an `IBitmap`.
+Binding onto an `Image` control's `Source` property with a `string` must be done using a [binding converter](../data-binding/converting-binding-values) that will convert the `string` to an `IBitmap`.
 
 ### Examples
 
@@ -15,7 +15,7 @@ Binding onto an `Image` control's `Source` property with a `string` must be done
 
 An image button that changes images based on state is an example where binding to the `Image` control's `Source` property might seem necessary.
 
-To have a button that swaps the image it's showing based on its state, you could either use a [binding converter](https://docs.avaloniaui.net/docs/data-binding/converting-binding-values) that converts a `string` into a `IBitmap`, or you could use the declarative approaches below, which don't use binding.
+To have a button that swaps the image it's showing based on its state, you could either use a [binding converter](../data-binding/converting-binding-values) that converts a `string` into a `IBitmap`, or you could use the declarative approaches below, which don't use binding.
 
 The declarative approaches keep images in memory and won't have to load them in on-demand, which will net you greater performance than a binding approach. You must declare every image you will use inside your XAML with the declarative approach.
 
@@ -87,11 +87,11 @@ public class BitmapAssetValueConverter : IValueConverter
 
 **Using a Button**
 
-View the ["Play Button" example](https://docs.avaloniaui.net/docs/controls/button#play-button) in the `Button` documentation.
+View the ["Play Button" example](buttons/button#play-button) in the `Button` documentation.
 
 **Using a ToggleButton**
 
-View the ["Speaker Mute Button" example](https://docs.avaloniaui.net/docs/controls/togglebutton#speaker-mute-button) in the ToggleButton documentation.
+View the ["Speaker Mute Button" example](buttons/togglebutton#speaker-mute-button) in the ToggleButton documentation.
 
 ### Reference
 

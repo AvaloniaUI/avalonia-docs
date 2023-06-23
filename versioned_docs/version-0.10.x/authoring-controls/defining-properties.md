@@ -7,7 +7,7 @@ If you are creating a control, you will want to define properties on your contro
 
 ### Registering Styled Properties
 
-Unless you have a good reason not to, you should define properties on your control as _styled properties_. Styled properties ensure that your property will work correctly with Avalonia's [styling system](https://docs.avaloniaui.net/docs/styling).
+Unless you have a good reason not to, you should define properties on your control as _styled properties_. Styled properties ensure that your property will work correctly with Avalonia's [styling system](../styling).
 
 You register a styled property by calling `AvaloniaProperty.Register` and storing the result in a `static readonly` field. You then create a standard C\# property to access it.
 
@@ -76,7 +76,7 @@ As can be seen, readonly properties are stored as a field on the object. When re
 
 ### Attached Properties
 
-[Attached properties](https://docs.avaloniaui.net/docs/data-binding/creating-and-binding-attached-properties) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
+[Attached properties](docs/data-binding/creating-and-binding-attached-properties) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
 
 Here's how `Grid` defines its `Grid.Column` attached property:
 
