@@ -66,13 +66,16 @@ The `Default` mode is assumed if one is not specified. This mode is generally `O
 You can apply a format string to the binding to influence how the value is represented in the UI:
 
 ```markup
-<!-- Option 1: Use curly braces {} to escape string format -->
+<!-- Option 1: Use string format without curly braces -->
+<TextBlock Text="{Binding FloatValue, StringFormat=0.0}" />
+
+<!-- Option 2: Use curly braces {} to escape string format -->
 <TextBlock Text="{Binding FloatValue, StringFormat={}{0:0.0}}" />
 
-<!-- Option 2: Use backslash \{ to escape string format -->
+<!-- Option 3: Use backslash \{ to escape string format -->
 <TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}}" />
 
-<!-- Option 3: If the string format does not start with {0}, you don't need to escape the string format. -->
+<!-- Option 4: If the string format does not start with {0}, you don't need to escape the string format. -->
 <!-- Note: If you have a whitespace in your string format, surround it with single quotes '' -->
 <TextBlock Text="{Binding Animals.Count, StringFormat='I have {0} animals.'}" />
 <!-- Note: You need to escape the curly braces in case your format string starts with the value you are binding, like so: -->
@@ -81,21 +84,6 @@ You can apply a format string to the binding to influence how the value is repre
 
 When a `StringFormat` parameter is present, the value of the binding will be converted using the `StringFormatValueConverter` which will be passed the format string.
 
-Other than in WPF, you need to surround the string format with curly braces and start with 0: (`{0:TheStringFormat}`). If the curly braces are at the beginning of the format string, even if sorrounded by single quotes, you need to escape them by either adding `{}` in front of it or by using backslashes `\{ ... \}`:
-
-**WPF:**
-
-```markup
-<TextBlock Text="{Binding FloatValue, StringFormat=0.0}" />
-```
-
-**Avalonia:**
-
-```markup
-<TextBlock Text="{Binding FloatValue, StringFormat={}{0:0.0}}" />
-<TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}}" />
-<TextBlock Text="{Binding FloatValue, StringFormat='{}{0:0.0}'}" />
-```
 
 :::info
 Read more about the available string formats in the [Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.string.format)
