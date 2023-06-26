@@ -3,7 +3,6 @@ id: keyframe-animations
 title: How To Use Keyframe Animations
 ---
 
-
 # How To Use Keyframe Animations
 
 You can use a keyframe animation to change one or more control properties following a timeline. The keyframes are defined in _Avalonia UI_ styles with **cue** points along the **duration** of the animation, and set the intermediate values of the properties at a point in time.
