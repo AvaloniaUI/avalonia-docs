@@ -1,3 +1,8 @@
+---
+id: animations
+title: Animations
+---
+
 # Animations
 
 The *Avalonia UI* animation system enables the creation of visually dynamic and interactive applications. This system is built around the principle of modifying properties over time, allowing for both simple and complex state transitions.  
