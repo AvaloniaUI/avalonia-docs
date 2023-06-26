@@ -404,6 +404,7 @@ const sidebars = {
           'items': [
             'concepts/input/routed-events',
             'concepts/input/pointer',
+            'concepts/input/gestures',
             'concepts/input/hotkeys',
           ],
         },
