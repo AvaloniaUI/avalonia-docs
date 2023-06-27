@@ -220,3 +220,8 @@ Tries to get the platform handle for the TopLevel-derived control.
 ```cs
 IPlatformHandle? TryGetPlatformHandle()
 ```
+
+
+## More Information
+
+View the source code on _GitHub_ [`TopLevel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)
