@@ -469,6 +469,7 @@ const sidebars = {
         'concepts/themes',
         'concepts/ui-composition',
         'concepts/unhandledexceptions',
+        'concepts/toplevel',
         'concepts/view-locator',
       ],
     },
