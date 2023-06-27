@@ -97,11 +97,11 @@ const config = {
         items: [
           {
             type: 'docsVersionDropdown',
-            position: 'right',
+            position: 'left',
           },
           {
             type: 'search',
-            position: 'left',
+            position: 'right',
           },
           {
             href: 'https://github.com/avaloniaui/avalonia',
