@@ -33,7 +33,7 @@ const config = {
           //lastVersion: '0.10.x',
           versions: {
             current: {
-              label: "11.0.0-rc1.1",
+              label: "11.0.0",
               banner: "none"
             },
             "0.10.x": {
@@ -97,11 +97,11 @@ const config = {
         items: [
           {
             type: 'docsVersionDropdown',
-            position: 'right',
+            position: 'left',
           },
           {
             type: 'search',
-            position: 'left',
+            position: 'right',
           },
           {
             href: 'https://github.com/avaloniaui/avalonia',

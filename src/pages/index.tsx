@@ -17,9 +17,10 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/tutorials/todo-list-app/">
-            ToDo List Tutorial - 10min ⏱️
+            to="/docs/welcome">
+            Get Started! 
           </Link>
+       
         </div>
       </div>
     </header>
@@ -30,8 +31,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Welcome to ${siteConfig.title}`}
+      description="Learn to build with Avalonia">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
