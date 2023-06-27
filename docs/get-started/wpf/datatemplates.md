@@ -4,7 +4,7 @@ description: GUIDES - WPF Conversion
 
 # Data Templates
 
-In Avalonia UI, data templates are not stored in the application resources. (The same is trye of styles - see [here](styling).)
+In Avalonia UI, data templates are not stored in the application resources. (The same is true of styles - see [here](styling).)
 
 Instead, data templates are placed either inside a `DataTemplates` collection in a control, or inside the  (and on `Application`):
 
