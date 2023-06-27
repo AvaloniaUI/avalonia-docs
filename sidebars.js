@@ -205,6 +205,7 @@ const sidebars = {
             'basics/user-interface/assets',
             'basics/user-interface/animations',
             'basics/user-interface/file-dialogs',
+            'basics/user-interface/multi-touch',
           ],
         },
         {
