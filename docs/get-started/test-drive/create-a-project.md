@@ -19,7 +19,7 @@ dotnet new install Avalonia.Templates
 To get started, we're going to use the simplest Avalonia template: `Avalonia Application` (or `avalonia.app` in the CLI).
 
 <Tabs>
-  <TabItem value="cli" label="Comand Line" default>
+  <TabItem value="cli" label="Command Line" default>
 Run the command:
 
 ```bash
@@ -72,7 +72,7 @@ The template will create a new solution and project.
 We're now ready to run the project!
 
 <Tabs>
-  <TabItem value="cli" label="Comand Line" default>
+  <TabItem value="cli" label="Command Line" default>
 Go into the `GetStartedApp` directory and run:
 
 ```bash
