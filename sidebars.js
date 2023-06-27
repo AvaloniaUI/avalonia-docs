@@ -385,7 +385,7 @@ const sidebars = {
       },
       'items': [
         'concepts/application-lifetimes',
-        'concepts/attached-property',
+        'concepts/avalonia-properties',
         'concepts/control-trees',
         {
           'type': 'category',
