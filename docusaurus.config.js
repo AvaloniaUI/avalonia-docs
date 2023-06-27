@@ -49,7 +49,8 @@ const config = {
     ],
   ],
   plugins: [
-    require.resolve('docusaurus-plugin-image-zoom')
+    require.resolve('docusaurus-plugin-image-zoom'),
+    require.resolve("@cmfcmf/docusaurus-search-local")
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
