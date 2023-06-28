@@ -28,7 +28,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/AvaloniaUI/Docs',
+          editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
           //includeCurrentVersion: false,
           //lastVersion: '0.10.x',
           versions: {
