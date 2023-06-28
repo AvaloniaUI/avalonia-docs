@@ -54,7 +54,11 @@ const config = {
     [
       '@docusaurus/plugin-client-redirects',
       require("./redirects"),
-    ]
+    ],
+    [
+      "@gracefullight/docusaurus-plugin-microsoft-clarity",
+      { projectId: "hqhy3ac3l1" },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
