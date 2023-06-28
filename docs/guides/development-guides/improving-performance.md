@@ -23,14 +23,6 @@ When working with large amounts of data, enabling virtualization can improve the
 ### TreeDataGrid
 `TreeDataGrid` supports virtualization and can handle thousands of rows with complex cells effectively​​.
 
-### ItemsRepeater and ItemsControl
-
-You may consider using `ItemsRepeater` instead of `ItemsControl` for better performance, as `ItemsRepeater` supports virtualization​​. Alternatively, you can use `ListBox` to achieve virtualization while turning off selection​​.
-
-However, there are some caveats to be aware of. Both `ItemsRepeater` and `ItemsPresenter` (used inside of `ItemsControl`) support virtualization, but `ItemsPresenter` is more stable and is actively used in list controls. `ItemsRepeater` was ported from UWP and can have issues when items have non-uniform height (or width for horizontal scrolling).
-
-As always, the best practice is to try both and see which one performs better and smoother for your specific needs​.
-
 ## Prioritize StaticResources over DynamicResources
 
 In Avalonia UI, `StaticResources` and `DynamicResources` are utilized to assign values to any XAML property attribute through referencing a pre-established resource. However, these two resource types differ in their lookup behavior and performance implications. 
