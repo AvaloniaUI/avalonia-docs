@@ -332,7 +332,8 @@ const sidebars = {
             'guides/development-guides/data-validation',
             'guides/development-guides/how-to-implement-multi-page-apps',
             'guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm',
-            'guides/development-guides/index',
+            'guides/development-guides/improving-performance',
+
           ],
         },
         {
