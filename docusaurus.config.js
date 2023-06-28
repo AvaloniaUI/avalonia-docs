@@ -50,7 +50,11 @@ const config = {
   ],
   plugins: [
     require.resolve('docusaurus-plugin-image-zoom'),
-    require.resolve("@cmfcmf/docusaurus-search-local")
+    require.resolve("@cmfcmf/docusaurus-search-local"),
+    [
+      '@docusaurus/plugin-client-redirects',
+      require("./redirects"),
+    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
