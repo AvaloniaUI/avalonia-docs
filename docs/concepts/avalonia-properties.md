@@ -21,9 +21,13 @@ Here are key characteristics of styled properties:
 
 Styled properties provide a versatile and customizable way to define properties for controls, allowing for easy customization and theming.
 
+### Further Reading
+
+- How-To: [Define a styled property on a control](../guides/custom-controls/defining-properties)
+
 ## Attached Properties
 
-Attached properties in Avalonia provide a mechanism for attaching additional properties to controls without modifying their underlying class definitions. They allow you to extend the behavior and appearance of controls in a flexible and reusable manner. Attached properties are typically defined as static fields within a separate class and are backed by the Avalonia property system.
+Attached properties in Avalonia provide a mechanism for attaching additional properties to controls without modifying their underlying class definitions. They allow you to extend the behavior and appearance of controls in a flexible and reusable manner. You have probably come across attached properties in the form of the `DockPanel.Dock` or `Grid.Row` properties: these properties are defined on the `DockPanel` and `Grid` classes, but can be applied to any control.
 
 Here are key characteristics of attached properties:
 
@@ -36,6 +40,10 @@ Here are key characteristics of attached properties:
 Attached properties offer a powerful way to extend the behavior and appearance of controls in a flexible and reusable manner, enabling you to create controls with custom properties specific to your application.
 
 In addition, because attached properties are based on styled properties, attached properties inherit all of the features of styled properties.
+
+### Further Reading
+
+- How-To: [Define an attached property](../guides/custom-controls/defining-attached-properties)
 
 ## Direct Properties
 
