@@ -54,7 +54,7 @@ PlatformColorValues GetColorValues();
 ## Properties
 
 ### HoldWaitDuration
-The duration between pointer press and when an event is fired.
+The duration between pointer press and when the `Holding` event is fired.
 
 ```cs
 TimeSpan HoldWaitDuration { get; }

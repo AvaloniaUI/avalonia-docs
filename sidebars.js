@@ -205,6 +205,7 @@ const sidebars = {
             'basics/user-interface/assets',
             'basics/user-interface/animations',
             'basics/user-interface/file-dialogs',
+            'basics/user-interface/multi-touch',
           ],
         },
         {
@@ -404,6 +405,7 @@ const sidebars = {
           'items': [
             'concepts/input/routed-events',
             'concepts/input/pointer',
+            'concepts/input/gestures',
             'concepts/input/hotkeys',
           ],
         },
@@ -467,6 +469,7 @@ const sidebars = {
         'concepts/themes',
         'concepts/ui-composition',
         'concepts/unhandledexceptions',
+        'concepts/toplevel',
         'concepts/view-locator',
       ],
     },

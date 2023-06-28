@@ -6,6 +6,7 @@ type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
+  link: string;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -17,6 +18,7 @@ const FeatureList: FeatureItem[] = [
         Explore the power of Avalonia with our WASM-powered <a href='https://play.avaloniaui.net/'>XAML playground!</a> It's never been easier to start learning.
       </>
     ),
+    link: 'https://play.avaloniaui.net/'
   },
   {
     title: 'Explore our Samples',
@@ -26,6 +28,7 @@ const FeatureList: FeatureItem[] = [
         We have a range of samples to suit all levels of experience. Make sure to <a href='https://github.com/AvaloniaUI/Avalonia.Samples'>clone the repo</a> and try our <a href='https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides'>quick guides.</a>
       </>
     ),
+    link: 'https://github.com/AvaloniaUI/Avalonia.Samples'
   },
   {
     title: 'Join the Chat',
@@ -35,20 +38,25 @@ const FeatureList: FeatureItem[] = [
         Join our growing community on <a href='https://t.me/Avalonia'>Telegram</a> to get help quickly! 
       </>
     ),
+    link: 'https://t.me/Avalonia'
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, link}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+   
+      <div className={clsx('col col--4')}>
+        <a href={link}>
+          <div className="text--center">
+            <Svg className={styles.featureSvg} role="img" />
+          </div>
+        </a>
+        <div className="text--center padding-horiz--md">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
       </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
+
   );
 }
 
