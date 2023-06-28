@@ -3,7 +3,7 @@
   <h1 align="center">Avalonia UI Documentation</h1>
 </p>
 
-The repository holds the code and markdown source files for the Avalonia UI documentation website, which is accessible at [docs.avaloniaui.net](docs.avaloniaui.net)
+The repository holds the code and markdown source files for the Avalonia UI documentation website, which is accessible at [docs.avaloniaui.net](https://docs.avaloniaui.net)
 
 ## Index
 - [Index](#index)
@@ -21,7 +21,7 @@ The repository holds the code and markdown source files for the Avalonia UI docu
 We welcome your valuable feedback on the documentation! Please feel free to join our [Community on Telegram](https://t.me/Avalonia) and send us a message. We would be delighted to hear from you and assist you with any queries or concerns you may have. 
 
 ## Documentation Issues
-If you come across any issues with the documentation or have a feature request related explicitly to it, we encourage you to create a new [GitHub issue](https://github.com/AvaloniaUI/DocumentationV2/issues/new). Before creating a new issue, we kindly request that you check for existing issues to avoid duplication. 
+If you come across any issues with the documentation or have a feature request related explicitly to it, we encourage you to create a new [GitHub issue](https://github.com/AvaloniaUI/avalonia-docs/issues/new). Before creating a new issue, we kindly request that you check for existing issues to avoid duplication. 
 
 ## Contributing
 To contribute to Avalonia UI documentation, you need to fork this repository and submit a pull request for the Markdown and/or image changes that you're proposing.
