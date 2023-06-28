@@ -268,6 +268,7 @@ const sidebars = {
           'type': 'category',
           'label': 'Data Binding',
           'items': [
+            'guides/data-binding/inotifypropertychanged',
             'guides/data-binding/binding-classes',
             'guides/data-binding/binding-to-controls',
             'guides/data-binding/how-to-bind-to-a-collection',
