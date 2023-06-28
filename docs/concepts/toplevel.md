@@ -9,32 +9,6 @@ The TopLevel act as the visual root, and is the base class for all top level con
 ## Getting the TopLevel
 All controls attached to the visual tree can access their top level. The `TopLevel.GetTopLevel(Visual? visual)` static function returns the TopLevel that `visual` is attached to, or `null` if `visual` is null, or it is not currently attached to any visual tree.
 
-## Constructors
-
-### TopLevel(ITopLevelImpl)
-Initializes a new instance of the `TopLevel` class.
-#### Parameters
-`impl` 
-The platform-specific window implementation.
-```cs
-TopLevel(ITopLevelImpl impl)
-```
-
-
-### TopLevel(ITopLevelImpl, IAvaloniaDependencyResolver?)
-Initializes a new instance of the `TopLevel` class.
-#### Parameters
-`impl` 
-The platform-specific window implementation.
-
-`dependencyResolver` 
-The dependency resolver to use. If null the default dependency resolver will be used.
-
-```cs
-TopLevel(ITopLevelImpl impl, IAvaloniaDependencyResolver? dependencyResolver)
-```
-
-
 ## Properties
 
 ### ActualTransparencyLevel
@@ -79,13 +53,6 @@ Gets the platform's [InsetsManager](./services/insets-manager) implementation.
 IInsetsManager? InsetsManager { get; }
 ```
 
-### PlatformImpl
-Gets the platform-specific top level implementation.
-
-```cs
-ITopLevelImpl? InsetsManager { get; }
-```
-
 ### PlatformSettings
 Represents a contract for accessing top-level platform-specific settings.
 
@@ -97,7 +64,7 @@ IPlatformSettings? PlatformSettings { get; }
 Gets a value indicating whether the renderer should draw specific diagnostics.
 
 ```cs
-RendererDiagnostics PlatformSettings { get; }
+RendererDiagnostics RendererDiagnostics { get; }
 ```
 
 ### RenderScaling
