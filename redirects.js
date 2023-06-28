@@ -1,4 +1,5 @@
 // see https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
+// can be tested with this script https://gist.github.com/maxkatz6/760bc0615b1af2ead4bf1f0582fdcd10
 
 const config = {
     redirects: [{
