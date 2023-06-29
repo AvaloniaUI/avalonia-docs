@@ -23,12 +23,6 @@ When working with large amounts of data, enabling virtualization can improve the
 ### TreeDataGrid
 `TreeDataGrid` supports virtualization and can handle thousands of rows with complex cells effectively​​.
 
-## Prioritize StaticResources over DynamicResources
-
-In Avalonia UI, `StaticResources` and `DynamicResources` are utilized to assign values to any XAML property attribute through referencing a pre-established resource. However, these two resource types differ in their lookup behavior and performance implications. 
-
-`StaticResources` conduct a lookup equivalent to a compile-time lookup, referencing an already defined resource and thus offering a more efficient approach. On the other hand, `DynamicResources` create a temporary expression and postpone the resource lookup until the requested resource value is necessitated. This translates to a run-time lookup, which can cause performance drawbacks. 
-
 ## Optimize Your Visual Tree Structure
 
 Performance can often be hindered by a deeply nested and complicated layout. Strive to maintain your XAML markup as uncomplicated and flat as possible. Rendering UI elements onscreen triggers a "layout pass" twice for every single element (a measure pass followed by an arrange pass). 

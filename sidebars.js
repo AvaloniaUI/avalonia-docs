@@ -352,6 +352,7 @@ const sidebars = {
                 'guides/platforms/android/build-and-run-your-application-on-a-simulator',
                 'guides/platforms/android/configure-vscode-debug-linux',
                 'guides/platforms/android/setting-up-your-developer-environment-for-android',
+                'guides/platforms/android/embed-native-views',
               ],
             },
             {
