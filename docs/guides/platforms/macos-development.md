@@ -4,9 +4,9 @@ title: macOS Development
 ---
 
 
-# 👉 macOS
+# macOS Development
 
-Getting started developing for the macOS backend
+Getting started developing for the macOS
 
 ## Native code
 
