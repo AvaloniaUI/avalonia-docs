@@ -7,11 +7,9 @@ title: Configure debugging in Visual Studio Code (Linux)
 
 For debugging Avalonia-based Android projects on Linux (using Visual Studio Code), follow the steps:
 
-1. Make sure to install the "Mono Debug" extension
+1. Make sure to install the "Mono Debug" extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug).
 
-{% embed url="https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug" %}
-
-1. Configure your `launch.json` file to include the following entries (for deploy + debug, and attach respectively):
+2. Configure your `launch.json` file to include the following entries (for deploy + debug, and attach respectively):
 
 ```json
 {

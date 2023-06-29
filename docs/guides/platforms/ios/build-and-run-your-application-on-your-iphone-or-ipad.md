@@ -7,9 +7,7 @@ title: How to Build and Run on iPhone or iPad
 
 In order to allow dotnet to sideload your application to your iphone or ipad you must first use Xcode to provision your device.
 
-Before continuing follow this guide to create a free Apple developer signing certificate.
-
-{% embed url="https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/free-provisioning" %}
+Before continuing follow this [guide to create a free Apple developer signing certificate](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/free-provisioning).
 
 This has to be done by creating an Xcode app project that has the same `bundle identifier` that you will use in your application.
 

@@ -35,17 +35,11 @@ You may need to run the above commands with _sudo._
 
 There are several ways to install the Android SDK. Choose the one that matches your development environment.
 
-If you have Visual Studio or Visual Studio for Mac then follow the guide found here:
+If you have Visual Studio or Visual Studio for Mac then follow the guide found [here](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk).
 
-{% embed url="https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk" %}
+If you use _JetBrains Rider_ then follow the guide [here](https://www.jetbrains.com/help/rider/Xamarin.html).
 
-If you use _JetBrains Rider_ then follow the guide here:
-
-{% embed url="https://www.jetbrains.com/help/rider/Xamarin.html" %}
-
-Alternatively you can install the _Android_ command line tools from here:
-
-{% embed url="https://developer.android.com/studio#command-tools" %}
+Alternatively you can install the _Android_ command line tools from [here](https://developer.android.com/studio#command-tools).
 
 This toolset has a command line based SDK manager that can be used to install the SDK.
 
