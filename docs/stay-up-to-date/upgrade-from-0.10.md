@@ -15,6 +15,36 @@ Avalonia 11 introduces a number of breaking changes from 0.10. The following gui
 4. If necessary, update the `<LangVersion>` to at least 9 in order to be able to use init-only properties
 5. If you want the same fonts as in 0.10, also include `Avalonia.Fonts.Inter` package and add `.WithInterFont()` to the app builder. By default, 11.0 doesn't include any custom fonts.
 
+## Theme Handling
+In v0.10, the theme is specified directly inside the `Application.Styles` tag in the `Application.axaml` file. An example of this is shown below:
+
+```xml
+<Application.Styles>
+    <FluentTheme Mode="Light"/>
+</Application.Styles>
+```
+In this example, the `Mode` attribute of the `FluentTheme` tag is used to specify the theme mode, which can be either "Light" or "Dark".
+
+Theme management is improved by introducing a new attribute to the `Application` tag: `RequestedThemeVariant`. This new attribute is used to set the theme of your application, overriding the system's current theme if specified. If you want to follow the system's current theme, you can set it to "Default". Other available options are "Dark" and "Light".
+
+An example of how this attribute is used is shown below:
+```xml
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ILoveAvaloniaUI.App"
+             xmlns:local="using:ILoveAvaloniaUI"
+             RequestedThemeVariant="Default">
+```
+The `FluentTheme` tag no longer requires the `Mode` attribute and can be left empty.
+
+```xml
+<Application.Styles>
+    <FluentTheme />
+</Application.Styles>
+```
+
+
+
 ## System.Reactive/Observables
 
 Avalonia no longer has a dependency on `System.Reactive`. If you're using reactive features, add a package reference to `System.Reactive` to your project.
