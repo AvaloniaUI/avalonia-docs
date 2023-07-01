@@ -7,13 +7,7 @@ title: Assets and Images
 
 Many applications need to include assets such as bitmaps, styles and resource dictionaries. Resource dictionaries contain graphical fundamentals that can be declared in XAML. Styles can also be written in XAML, but bitmap assets are binary files, for example PNG and JPEG formats.
 
-Assets are included in an application when it is built in a number of ways:
-
-* _Included Assets -_ are files that are external to the executable.
-* _Embedded Assets -_ are included as part of the executable during the build.
-* _Library Assets -_ are embedded a separate assembly.
-
-## Included Assets
+## Including assets
 
 <img src='/img/gitbook-import/assets/image (8).png' alt=''/>
 
@@ -21,7 +15,7 @@ You include assets in an application by using the `<AvaloniaResource>` element i
 
 For example, the Avalonia .NET Core MVVM App solution template creates a folder called `Assets` (containing the `avalonia-logo.ico` file) and adds an element to the project file to include any files located there. As follows:
 
-```markup
+```xml
 <ItemGroup>
   <AvaloniaResource Include="Assets\**"/>
 </ItemGroup>
@@ -33,17 +27,12 @@ You can include whatever files you want by adding additional `<AvaloniaResource>
 The element name `AvaloniaResource` here only indicates that the assets will be internally stored as .NET resources by the build. However, in _Avalonia UI_ terms, these files are called 'Assets' to distinguish them from 'XAML resources'.
 :::
 
-For guidance on how to use XAML resources in you application, see [here](../../guides/styles-and-resources/resources.md).
-
-:::info
-For more detail about .NET resources, see the _Microsoft_ documentation [here](https://docs.microsoft.com/en-us/visualstudio/ide/managing-application-resources-dotnet).
-:::
 
 ### Referencing Included Assets
 
 Once asset files are included, they can be referenced as needed in the XAML that defines your UI. For example, these assets are referenced by specifying their relative path:
 
-```markup
+```xml
 <Image Source="icon.png"/>
 <Image Source="images/icon.png"/>
 <Image Source="../icon.png"/>
@@ -51,69 +40,38 @@ Once asset files are included, they can be referenced as needed in the XAML that
 
 As an alternative, you can use the rooted path:
 
-```markup
+```xml
 <Image Source="/Assets/icon.png"/>
 ```
-
-## Embedded Assets
-
-<img src='/img/gitbook-import/assets/image (1).png' alt=''/>
-
-Assets can also be included in .NET applications by using the `<EmbeddedResource>` element in the project file. This causes the file to be included in the assembly as a manifest resource.
-
-:::info
-For more detail about manifest resources, see the _Microsoft_ documentation [here](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.assembly.getmanifestresourcenames).
-:::
-
-### Referencing Embedded Assets
-
-You reference manifest resources using the `resm:` URL scheme and a fully qualified path. For example:
-
-```markup
-<Image Source="resm:MyApp.Assets.icon.png"/>
-```
-
-The name of an asset is automatically generated during the build from the assembly name, the file path, the filename and extension - all separated with periods.
 
 ## Library Assets
 
 <img src='/img/gitbook-import/assets/image.png' alt=''/>
 
-Assets in a library have been either included or embedded during the library build.
+If the asset is included in a different assembly from the XAML file, then you use the `avares:` URI scheme. For example, if the asset is contained in an assembly called `MyAssembly.dll` in a `Assets` folder, then you use:
 
-If embedded, they can be referenced using a pattern similar to any locally embedded assets, just with an additional assembly name suffix. For example:
-
-```markup
-<Image Source="resm:MyLibrary.Assets.icon2.png?assembly=MyLibrary"/>
-```
-
-If the asset is included in a different assembly from the XAML file, then you use the `avares:` URI scheme. For example, if the asset is contained in an assembly called `MyAssembly.dll`, then you use:
-
-```markup
+```xml
 <Image Source="avares://MyAssembly/Assets/icon.png"/>
 ```
-
-If Avalonia is unable to find a manifest resource, check the resource name using [`Assembly.GetManifestResourceNames`](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.assembly.getmanifestresourcenames).
 
 ### Asset Type Conversion
 
 Avalonia UI has built-in converters which can load assets for bitmaps, icons and fonts out of the box. So an assets Uri can be automatically converted to any of following:
 
-* Image - `IImage` type
-* Bitmap - `IBitmap` type
+* Image - `Image` type
+* Bitmap - `Bitmap` type
 * Window Icon - `WindowIcon` type
 * Font - `FontFamily` type
 
 ### Loading Assets in Code
 
-You can write code to load assets using the `IAssetLoader` interface. For example:
+You can write code to load assets using the `AssetLoader` static class. For example:
 
 ```csharp
-var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
-var bitmap = new Bitmap(assets.Open(new Uri(uri)));
+var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
 ```
 
-The `uri` variable in the above code can contain any valid URI, including `avares:` and `resm:` schemes (as described above).
+The `uri` variable in the above code can contain any valid URI with `avares:` scheme (as described above).
 
 _Avalonia UI_ does not provide support for `file://`, `http://`, or `https://` schemes. If you want to load files from disk or the Web, you must implement that functionality yourself or use community implementations.
 
