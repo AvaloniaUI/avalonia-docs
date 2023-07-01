@@ -16,45 +16,51 @@ The level of a resource dictionary defines the scope of the resources in it: res
 
 For example, you may want brush colors to be standardized across the whole application. In this case you can declare a resource dictionary in the application XAML **App.axaml** file, like this
 
-```markup
+```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MyApp.App">
+    // highlight-start
   <Application.Resources>
     <SolidColorBrush x:Key="Warning">Yellow</SolidColorBrush>
   </Application.Resources>
+    // highlight-end
 </Application>
 ```
 
 Alternatively, you may want a set of resources to apply only to a specific window or user control. In this case you will define a resource dictionary in the window or user control file. For example:
 
-```markup
+```xml title="MyUserControl.axaml"
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MyApp.MyUserControl">
+    // highlight-start
   <UserControl.Resources>
     <SolidColorBrush x:Key="Warning">LightYellow</SolidColorBrush>
   </UserControl.Resources>
+    // highlight-end
 </UserControl>
 ```
 
 In fact you can define resources at control level if required:
 
-```markup
+```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MyApp.MainWindow">
   <StackPanel>
+    // highlight-start
     <StackPanel.Resources>
       <SolidColorBrush x:Key="Warning">PaleGoldenRod</SolidColorBrush>
     </StackPanel.Resources>
+    // highlight-end
   </StackPanel>
 </Window>
 ```
 
 You can also declare resources to be specific to a style. 
 
-```markup
+```xml title="MyStyle.axaml"
 <Style Selector="TextBlock.warning">
   <Style.Resources>
     <SolidColorBrush x:Key="Warning">Yellow</SolidColorBrush>
@@ -63,9 +69,13 @@ You can also declare resources to be specific to a style.
 </Style>
 ```
 
+:::note
+Keep in mind, this resource is not visible outside of the this specific style block, meaning it won't make every TextBlock with a "warning" class aware of this resource outside of the Style block.
+:::
+
 It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read [Theme Variants](how-to-use-theme-variants) page.
 
-```markup
+```xml
 <ResourceDictionary>
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key='Light'>
@@ -113,7 +123,7 @@ You can use a resource from a resources dictionary that is in scope using the `{
 
 For example, to use a resource directly on the background attribute of a border element, use the following XAML :
 
-```markup
+```xml
 <Border Background="{DynamicResource Warning}">
   Look out!
 </Border>
@@ -123,7 +133,7 @@ For example, to use a resource directly on the background attribute of a border 
 
 Alternatively you can choose to use the `StaticResource` mark-up extension. For example:
 
-```
+```xml
 <Border Background="{StaticResource Warning}">
   Look out!
 </Border>
@@ -139,7 +149,7 @@ _Avalonia UI_ resolves what resource to use by searching upwards in the **logica
 
 This means that resources with the same key have priority based on their proximity to the resource mark-up being resolved. Resource definitions further up the logical control tree are therefore effectively 'overridden' by those that are closer. For example, consider this XAML:
 
-```markup
+```xml
 <UserControl ... >
   <UserControl.Resources>
     <SolidColorBrush x:Key="Warning">Yellow</SolidColorBrush>
@@ -169,7 +179,7 @@ This means that you can implement styles in one file, and use resources defined 
 
 To include the resources dictionary from a file in a styles file, add the following XAML:
 
-```
+```xml
 <Styles.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
@@ -181,7 +191,7 @@ To include the resources dictionary from a file in a styles file, add the follow
 
 In the above example, the resources file `AppResources.axaml` is located in the `/Assets` project folder. You can then define the styles using the resources, for example:
 
-```
+```xml
 <Style Selector="Button.btn-info">
     <Setter Property="Background" Value="{StaticResource InfoColor}"/>
 </Style>
