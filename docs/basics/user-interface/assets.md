@@ -99,18 +99,17 @@ If Avalonia is unable to find a manifest resource, check the resource name using
 
 Avalonia UI has built-in converters which can load assets for bitmaps, icons and fonts out of the box. So an assets Uri can be automatically converted to any of following:
 
-* Image - `IImage` type
-* Bitmap - `IBitmap` type
+* Image - `Image` type
+* Bitmap - `Bitmap` type
 * Window Icon - `WindowIcon` type
 * Font - `FontFamily` type
 
 ### Loading Assets in Code
 
-You can write code to load assets using the `IAssetLoader` interface. For example:
+You can write code to load assets using the `AssetLoader` class. For example:
 
 ```csharp
-var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
-var bitmap = new Bitmap(assets.Open(new Uri(uri)));
+var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
 ```
 
 The `uri` variable in the above code can contain any valid URI, including `avares:` and `resm:` schemes (as described above).
