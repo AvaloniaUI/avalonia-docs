@@ -3,34 +3,20 @@ id: focus-manager
 title: Focus Manager
 ---
 
-The `FocusManager` class is responsible for managing the keyboard focus for the application. It keeps track of the currently focused element and the current focus scope. This class implements the `IFocusManager` interface.
+The `FocusManager` service is responsible for managing the keyboard focus for the application. It keeps track of the currently focused element and the current focus scope. 
 
+The `FocusManager` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../../toplevel) page:
+```cs
+var focusManager = window.FocusManager;
+```
 
 ## Methods
-
-### FocusManager()
-Static constructor that sets up a global handler for pointer pressed events.
-
-```cs
-static FocusManager()
-```
 
 ### GetFocusedElement()
 Returns the currently focused element.
 
-```
-IInputElement? GetFocusedElement()
-```
-
-### Focus(IInputElement? control, NavigationMethod method = NavigationMethod.Unspecified, KeyModifiers keyModifiers = KeyModifiers.None)
-
-Tries to focus the provided control. If the control is part of a focus scope, the scope will be set to the current focus scope. If the control is null, the focus will be set to the topmost focus scope.
-
 ```cs
-bool Focus(
-    IInputElement? control, 
-    NavigationMethod method = NavigationMethod.Unspecified,
-    KeyModifiers keyModifiers = KeyModifiers.None)
+IInputElement? GetFocusedElement()
 ```
 
 ### ClearFocus()
@@ -40,58 +26,19 @@ Clears the currently focused element.
 void ClearFocus()
 ```
 
-### GetFocusedElement(IFocusScope scope)
-Returns the currently focused element in the specified focus scope.
+## Tips
 
+### Focusing a control
+
+Developers usually don't need a `FocusManager` service to focus a control. 
+It can be achieved with a method call directly on the control:
 ```cs
-IInputElement? GetFocusedElement(IFocusScope scope)
+var hasFocused = button.Focus();
 ```
 
-### SetFocusedElement(IFocusScope scope, IInputElement? element, NavigationMethod method = NavigationMethod.Unspecified, KeyModifiers keyModifiers = KeyModifiers.None)
-Sets the currently focused element in the specified focus scope. If the specified scope is the current scope then the keyboard focus will change.
+`Focus` method might return `false` is control is not visible and has `Focusable` property set to false.
 
-```cs
-bool SetFocusedElement(
-    IFocusScope scope,
-    IInputElement? element,
-    NavigationMethod method = NavigationMethod.Unspecified,
-    KeyModifiers keyModifiers = KeyModifiers.None)
-```
+### Listening for global focus changes
 
-### SetFocusScope(IFocusScope scope)
-Notifies the focus manager of a change in focus scope.
-
-```cs
-void SetFocusScope(IFocusScope scope)
-``
-
-### RemoveFocusScope(IFocusScope scope)
-Removes the specified focus scope from the manager.
-
-```cs
-void RemoveFocusScope(IFocusScope scope)
-```
-
-### GetIsFocusScope(IInputElement e)
-Determines whether the specified element is a focus scope.
-
-```cs
-bool GetIsFocusScope(IInputElement e)
-```
-
-### GetFocusManager(IInputElement? element)
-Gets the focus manager associated with the specified element.
-
-```cs
-FocusManager? GetFocusManager(IInputElement? element)
-```
-
-## Properties
-
-### Scope
-The current focus scope.
-
-```cs 
-IFocusScope? Scope { get; private set; }
-```
-
+While `FocusManager.GetFocusedElement` method allows to get currently focused control, it's not suitable as an event.
+Instead, please use `InputElement.GotFocusEvent.Raised.Subscribe(handler)` method. Note, it listens events globally across all top levels.

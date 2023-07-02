@@ -3,25 +3,16 @@ id: insets-manager
 title: Insets Manager
 ---
 
-The `InsetsManager` allows you to interact with the platform's system bars and handle changes to the safe area of the window. It can be accessed via an instance of `TopLevel` or directly from the `Window` class. Here are two ways to access the `InsetsManager`.
+The `InsetsManager` allows you to interact with the platform's system bars and handle changes to the safe area of the mobile window. 
 
-## Using TopLevel.GetTopLevel
-The `GetTopLevel` method of the `TopLevel` class retrieves the top-level control that contains the current control. From the obtained `TopLevel` instance, you can then access the `InsetsManager`:
-
+The `InsetsManager` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../../toplevel) page:
 ```cs
-var topLevel = TopLevel.GetTopLevel(control);
-var insetsManager = topLevel.InsetsManager;
+var insetsManager = TopLevel.GetTopLevel(control).InsetsManager;
 ```
 
-This method is handy when you are operating within a user control or a lower-level component and need access to the `InsetsManager`.
-
-## Using the Window Class
-As the `Window` class inherits from `TopLevel`, you can directly access the `InsetsManager` from an instance of `Window`:
-
-```cs
-var insetsManager = window.InsetsManager;
-```
-This method is commonly used when you're already working within the context of a window, such as in a ViewModel or an event handler within the `Window` class.
+:::note
+As for now, this service has implementation only on mobile and browser backends. If you need to adjust desktop window decorations, please use `Window.ExtendClientAreaToDecorationsHint`, `Window.ExtendClientAreaChromeHints`, `Window.ExtendClientAreaTitleBarHeightHint` properties.
+:::
 
 ## Properties 
 

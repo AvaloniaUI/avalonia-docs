@@ -7,9 +7,34 @@ description: CONCEPTS
 The TopLevel act as the visual root, and is the base class for all top level controls, eg. `Window`. It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the TopLevel.
 
 ## Getting the TopLevel
-All controls attached to the visual tree can access their top level. The `TopLevel.GetTopLevel(Visual? visual)` static function returns the TopLevel that `visual` is attached to, or `null` if `visual` is null, or it is not currently attached to any visual tree.
 
-## Properties
+Here are two common ways to access TopLevel instance.
+
+### Using TopLevel.GetTopLevel
+You can use the static `GetTopLevel` method of the TopLevel class to get the top-level control that contains the current control.
+
+```cs
+var topLevel = TopLevel.GetTopLevel(control);
+// Here you can reference various services like Clipboard or StorageProvider from topLevel instance.
+```
+This method can be helpful if you're working within a user control or a lower-level component and need access to the TopLevel services.
+
+:::note
+If `TopLevel.GetTopLevel` returns null, likely control is not yet attached to the root. To ensure control is attached, you should handle `Control.Loaded` and `Control.Unloaded` events and keep track of current top level from these events.
+:::
+
+### Using the Window Class
+
+Since the`Window` class inherits from `TopLevel`, you can directly access services from an instance of `Window`:
+
+```cs
+var topLevel = window;
+```
+
+This method is typically used when you're already working within the context of a window, such as in a ViewModel or an event handler within the `Window` class.
+
+
+## Common Properties
 
 ### ActualTransparencyLevel
 Gets the achieved `WindowTransparencyLevel` that the platform was able to provide.
@@ -40,7 +65,7 @@ IFocusManager? FocusManager { get; }
 ```
 
 ### FrameSize
-Gets the total size of the top level.
+Gets the total size of the top level including system frame if presented.
 
 ```cs
 Size? FrameSize { get; }
@@ -54,7 +79,7 @@ IInsetsManager? InsetsManager { get; }
 ```
 
 ### PlatformSettings
-Represents a contract for accessing top-level platform-specific settings.
+Represents a contract for accessing top-level [platform-specific settings](./services/platform-settings).
 
 ```cs
 IPlatformSettings? PlatformSettings { get; }
@@ -102,7 +127,7 @@ Gets or sets the `WindowTransparencyLevel` that the TopLevel should use when pos
 IReadOnlyList<WindowTransparencyLevel> TransparencyLevelHint { get; set; }
 ```
 
-## Events
+## Common Events
 
 ### BackRequested
 Occurs when physical Back Button is pressed or a back navigation has been requested.
@@ -132,17 +157,7 @@ Occurs when the TopLevel's scaling changes.
 event EventHandler ScalingChanged;
 ```
 
-## Methods
-
-### GetSystemBarColor
-Helper for getting the color of the platform's system bars.
-#### Parameters
-`control` 
-The main view attached to the toplevel, or the toplevel.
-
-```cs
-static SolidColorBrush? GetSystemBarColor(Control control)
-```
+## Common Methods
 
 ### GetTopLevel
 Gets the `TopLevel` for which the given `Visual` is hosted in.
@@ -166,19 +181,6 @@ Requests a `PlatformInhibitionType` to be inhibited. The behavior remains inhibi
 
 ```cs
 async Task<IDisposable> RequestPlatformInhibition(PlatformInhibitionType type, string reason)
-```
-
-### SetSystemBarColor
-Helper for setting the color of the platform's system bars.
-#### Parameters
-`control` 
-The main view attached to the toplevel, or the toplevel.
-
-`color` 
-The color to set.
-
-```cs
-static void SetSystemBarColor(Control control, SolidColorBrush? color)
 ```
 
 ### TryGetPlatformHandle

@@ -3,23 +3,12 @@ id: platform-settings
 title: Platform Settings
 ---
 
-The `PlatformSettings` class represents a contract for accessing platform-specific settings and information. Some of these settings might be changed by the user globally in the OS in runtime. `PlatformSettings` can be accessed via an instance of `TopLevel` or directly from the `Window` class. Here are two ways to access the `PlatformSettings`.
+The `PlatformSettings` class represents a contract for accessing platform-specific settings and information. Some of these settings might be changed by the user globally in the OS in runtime. 
 
-## Using TopLevel.GetTopLevel
-The `GetTopLevel` method of the `TopLevel` class retrieves the top-level control that contains the current control. From the obtained `TopLevel` instance, you can then access the `PlatformSettings`:
-
-var topLevel = TopLevel.GetTopLevel(control);
-var platformSettings = topLevel.PlatformSettings;
-
-This method is handy when you are operating within a user control or a lower-level component and need access to the `PlatformSettings`.
-
-## Using the Window Class
-As the `Window` class inherits from `TopLevel`, you can directly access the `PlatformSettings` from an instance of `Window`:
-
+The `PlatformSettings` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../../toplevel) page:
+```cs
 var platformSettings = window.PlatformSettings;
-
-This method is commonly used when you're already working within the context of a window, such as in a ViewModel or an event handler within the `Window` class.
-
+```
 
 ## Methods
 
@@ -40,7 +29,7 @@ Size GetDoubleTapSize(PointerType type);
 ### GetDoubleTapTime(PointerType type)
 Returns the maximum time that may occur between the first and second click of a double-tap gesture.
 
-```
+```cs
 TimeSpan GetDoubleTapTime(PointerType type);
 ```
 
@@ -50,6 +39,10 @@ Returns the current system color values, including dark mode and accent colors.
 ```cs
 PlatformColorValues GetColorValues();
 ```
+
+:::tip
+While build-in FluentTheme supports automatic switching between accent colors, this method is useful to apply custom logic with OS color settings.
+:::
 
 ## Properties
 
@@ -66,6 +59,22 @@ The configuration for platform-specific hotkeys in an Avalonia application.
 ```cs
 PlatformHotkeyConfiguration HotkeyConfiguration { get; }
 ```
+
+:::tip
+HotkeyConfiguration is especially useful when application needs to handle well known gestures like Copy, Paste or Cut.
+:::
+
+```cs
+protected override void OnKeyDown(KeyEventArgs e)
+{
+    var hotkeys = TopLevel.GetTopLevel(this).PlatformSettings.HotkeyConfiguration;
+    if (hotkeys.Copy.Any(g => g.Matches(e)))
+    {
+        // Handle Copy hotkey.
+    }
+}
+```
+
 
 ## Events
 
