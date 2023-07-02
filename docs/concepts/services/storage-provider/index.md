@@ -7,54 +7,29 @@ title: StorageProvider
 
 The `StorageProvider` is central to file and folder management. It provides methods for file and folder selection, checking platform capabilities, and interacting with stored bookmarks.
 
-The `StorageProvider` can be access through an instance of `TopLevel` or directly from the `Window` class, as it inherits from `TopLevel`. Here are two common ways to access to the `StorageProvider`. 
-
-### Using TopLevel.GetTopLevel
-You can use the static `GetTopLevel` method of the TopLevel class to get the top-level control that contains the current control. After obtaining the `TopLevel` instance, you can then access the `StorageProvider`:
-
+The `StorageProvider` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../../toplevel) page:
 ```cs
-var topLevel = TopLevel.GetTopLevel(control);
-var result = topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
-{
-    Title = "Open Text File",
-    AllowMultiple = false
-});
+var storage = window.StorageProvider;
 ```
-This method can be helpful if you're working within a user control or a lower-level component and need access to the `StorageProvider`.
-
-### Using the Window Class
-
-Since the`Window` class inherits from `TopLevel`, you can directly access the `StorageProvider` from an instance of `Window`:
-
-```cs
-var result = window.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
-{
-    Title = "Open Text File",
-    AllowMultiple = false
-});
-```
-
-This method is typically used when you're already working within the context of a window, such as in a ViewModel or an event handler within the `Window` class.
-
 
 ## Properties 
 
 ### CanOpen
-Indicates whether it's possible to open a file picker on the current platform.
+Indicates whether it's possible to open a `open file picker` on the current platform.
 
 ```cs
 bool CanOpen { get; }
 ```
 
 ### CanSave
-Indicates whether it's possible to open a save file picker on the current platform.
+Indicates whether it's possible to open a `save file picker` on the current platform.
 
 ```cs
 bool CanSave { get; }
 ```
 
 ### CanPickFolder
-Indicates whether it's possible to open a folder picker on the current platform.
+Indicates whether it's possible to open a `folder picker` on the current platform.
 
 ```cs
 bool CanPickFolder { get; }
@@ -125,3 +100,23 @@ Attempts to read a folder from the file system by its well-known folder identifi
 Task<IStorageFolder?> TryGetWellKnownFolderAsync(WellKnownFolder wellKnownFolder);
 ```
 The method returns a folder or null if it doesn't exist.
+
+
+## Platform compatibility:
+
+| Feature        | Managed |  Windows | macOS | Linux | Browser | Android |  iOS |
+|---------------|-------|-------|-------|-------|-------|-------|-------|
+| `OpenFileBookmarkAsync` | ✔* | ✔* | ✔* | ✔* | ✔ | ✔ | ✔ |
+| `OpenFolderBookmarkAsync` | ✔* | ✔* | ✔* | ✔* | ✔ | ✔ | ✔ |
+| `OpenFilePickerAsync` | ✔** | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| `SaveFilePickerAsync` | ✔** | ✔ | ✔ | ✔ | ✔ | ✔*** | ✖ |
+| `OpenFolderPickerAsync` | ✔** | ✔ | ✔ | ✔ | ✔ | ✔*** | ✔ |
+| `TryGetFileFromPathAsync` | ✔ | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ |
+| `TryGetFolderFromPathAsync` | ✔ | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ |
+| `TryGetWellKnownFolderAsync` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
+\* Bookmarks are not properly supported on desktop platforms and instead return file path instead. MacOS support is planned in order to get it work with Sandboxed Apple Store apps.
+
+** Managed file picker works only on desktop platforms where it's possible to open a custom window.
+
+*** Only Chromium based browsers have a proper support for file pickers. 

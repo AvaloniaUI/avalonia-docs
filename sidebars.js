@@ -463,7 +463,9 @@ const sidebars = {
                 'id': 'concepts/services/storage-provider/index',
               },
               'items': [
+                'concepts/services/storage-provider/storage-item',
                 'concepts/services/storage-provider/bookmarks',
+                'concepts/services/storage-provider/file-picker-options',
               ],
             },
               ],
