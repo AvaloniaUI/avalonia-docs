@@ -51,14 +51,17 @@ An instance of `ViewLocator` is present in the **App.axaml** file in the app pro
 ```markup
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ToDoList.App"
              xmlns:local="using:ToDoList"
-             x:Class="ToDoList.App">
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>
-
+  
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme />
     </Application.Styles>
 </Application>
 ```
