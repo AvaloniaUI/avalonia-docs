@@ -26,7 +26,7 @@ Follow this procedure to adapt your user control to use the items control:
             HorizontalContentAlignment="Center">
       Add Item
     </Button>
-    <ItemsControl Items="{Binding ListItems}">
+    <ItemsControl ItemsSource="{Binding ListItems}">
       <ItemsControl.ItemTemplate>
         <DataTemplate>
           <CheckBox Margin="4"
@@ -41,7 +41,7 @@ Follow this procedure to adapt your user control to use the items control:
 
 Take some time here to examine the code that you just added: &#x20;
 
-The items control `<ItemsControl>` repeats its display for each item in a collection source that is defined by the `Items` attribute. Here the data binding expression `{Binding ListItems}` means we are looking for a data context with this property name.&#x20;
+The items control `<ItemsControl>` repeats its display for each item in a collection source that is defined by the `ItemsSource` attribute. Here the data binding expression `{Binding ListItems}` means we are looking for a data context with this property name.&#x20;
 
 How each item is in a displayed inside the items control is controlled by the item template <`ItemTemplate>`. This can be any combination of controls, but in this example it is a **data template** is being used.
 

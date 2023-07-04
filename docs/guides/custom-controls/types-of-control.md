@@ -1,43 +1,26 @@
 ---
 id: types-of-control
-title: Types of Controls
+title: Types of Control
 ---
 
-# Add a Custom Control Class
+If you want to create your own controls, there are three main categories of control in Avalonia. The first thing to do is choose the category of control that best suits your use-case.
 
-You create a custom control using a class that inherits from the _Avalonia UI_ `Control` class. You can place your custom control classes anywhere in you app project, or include them in another control library project.
+User Controls
+UserControls are the simplest way to author controls. This type of control is best for "views" or "pages" that are specific to an application. UserControls are authored in the same way as you would author a Window: by creating a new UserControl from a template and adding controls to it.
+
+Templated Controls
+TemplatedControls are best used for generic controls that can be shared among various applications. They are lookless controls, meaning that they can be restyled for different themes and applications. The majority of standard controls defined by Avalonia fit into this category.
 
 :::info
-For more information on creating a custom control library, see [here](how-to-create-a-custom-controls-library).
+In WPF/UWP you would inherit from the Control class to create a new templated control, but in Avalonia you should inherit from TemplatedControl. 
 :::
 
-Wherever you choose to place your custom control class, you must be able to reference it in the XAML. For example, this code shows the custom control `MyControl` class placed in the main window; and the custom control class defines in the `/CustomControls` namespace and project folder:
+:::info
+If you want to provide a Style for your TemplatedControl in a separate file, remember to include this file in your Application via StyleInclude. :::
 
-```xml title='XAML'
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:cc="using:AvaloniaCCExample.CustomControls"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaCCExample.MainWindow"
-        Title="Avalonia Custom Control">
-  <cc:MyCustomControl Height="200" Width="300"/>
-</Window>
+Basic Control
+Basic Controls are the foundation of user interfaces - they draw themselves using geometry by overriding the Visual.Render method. Controls such as TextBlock and Image fall into this category.
 
-```
-
-```csharp title='C#'
-using Avalonia.Controls;
-
-namespace AvaloniaCCExample.CustomControls
-{
-    public class MyCustomControl : Control
-    {
-    }
-}
-```
-
-Notice that you can already add properties for height and width of the custom control. These are from the base class: `Control`.&#x20;
-
-However at present, nothing shows. On the next page you will see how to define a property and teach the custom control how to draw using it.
+:::info
+In WPF/UWP you would inherit from the FrameworkElement class to create a new basic control, but in Avalonia you should inherit from Control. 
+:::

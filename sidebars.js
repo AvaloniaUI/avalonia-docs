@@ -312,6 +312,7 @@ const sidebars = {
           'type': 'category',
           'label': 'Custom Controls',
           'items': [
+            'guides/custom-controls/types-of-control',
             'guides/custom-controls/create-a-custom-panel',
             'guides/custom-controls/defining-properties',
             'guides/custom-controls/draw-with-a-property',
@@ -321,7 +322,7 @@ const sidebars = {
             'guides/custom-controls/how-to-create-attached-properties',
             'guides/custom-controls/how-to-create-templated-controls',
             'guides/custom-controls/index',
-            'guides/custom-controls/types-of-control',
+            'guides/custom-controls/add-custom-control-class',
           ],
         },
         {

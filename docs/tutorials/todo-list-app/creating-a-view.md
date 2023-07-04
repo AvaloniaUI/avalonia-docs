@@ -85,7 +85,7 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
-             x:Class="Todo.Views.TodoListView">
+             x:Class="ToDoList.Views.TodoListView">
   <DockPanel>
     <Button DockPanel.Dock="Bottom"
             HorizontalAlignment="Stretch"
