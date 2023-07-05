@@ -5,12 +5,6 @@ title: Welcome
 
 Welcome to the documentation for Avalonia.
 
-```info
-Avalonia v11 is a release candidate. 
-
-We expect to go GA in early July 2023.
-```
-
 ## Overview 
 Avalonia is a powerful framework that enables developers to create cross-platform application using .NET. It uses its own rendering engine to draw UI controls, ensuring consistent appearance and behavior across various platforms, including Windows, macOS, Linux, Android, iOS and WebAssembly. This means that developers can share their UI code and maintain a uniform look and feel regardless of the target platform.
 
