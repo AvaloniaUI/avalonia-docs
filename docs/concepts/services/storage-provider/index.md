@@ -101,6 +101,27 @@ Task<IStorageFolder?> TryGetWellKnownFolderAsync(WellKnownFolder wellKnownFolder
 ```
 The method returns a folder or null if it doesn't exist.
 
+## Extension methods
+
+### TryGetFileFromPathAsync
+Attempts to read a file from the file system by its path.
+
+```cs
+Task<IStorageFile?> TryGetFileFromPathAsync(this IStorageProvider provider, string filePath);
+```
+The method returns a file or null if it doesn't exist.
+This method accepts local file path string as a parameter without any scheme.
+Only supported on the OS, with physical file paths, primarily only desktop.
+
+### TryGetFolderFromPathAsync
+Attempts to read a folder from the file system by its path.
+
+```cs
+Task<IStorageFolder?> TryGetFolderFromPathAsync(this IStorageProvider provider, string folderPath);
+```
+The method returns a folder or null if it doesn't exist. 
+This method accepts local folder path string as a parameter without any scheme.
+Only supported on the OS, with physical file paths, primarily only desktop.
 
 ## Platform compatibility:
 

@@ -83,3 +83,14 @@ Creates a file with specified name as a child of the current storage folder
 ### CreateFolderAsync
 
 Creates a folder with specified name as a child of the current storage folder
+
+## Extension methods
+
+### TryGetLocalPath
+
+Gets the local file system path of the item as a string.
+Android platform usually uses "content:" virtual file paths and Browser platform has isolated access without full paths, so on these platforms this method will return null.
+
+:::note
+If you want to save file path to reuse it later (in combination with TryGetFileFromPathAsync), please consider using [Bookmarks](./bookmarks) instead as they are designed to work in sandboxed environment, where user app might not have direct access to the physical file system.
+:::
