@@ -57,7 +57,7 @@ public class MyView : UserControl
         var topLevel = TopLevel.GetTopLevel(this);
 
         // Start async operation to open the dialog.
-        var file = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerSaveOptions
+        var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
             Title = "Save Text File"
         });
