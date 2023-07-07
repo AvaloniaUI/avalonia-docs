@@ -1,0 +1,114 @@
+{
+  "version.label": {
+    "message": "0.10.x",
+    "description": "The label for version 0.10.x"
+  },
+  "sidebar.documentationSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category Getting Started in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.IDE Support": {
+    "message": "IDE Support",
+    "description": "The label for category IDE Support in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Programming with Avalonia UI": {
+    "message": "Programming with Avalonia UI",
+    "description": "The label for category Programming with Avalonia UI in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Data Binding": {
+    "message": "Data Binding",
+    "description": "The label for category Data Binding in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Styling": {
+    "message": "Styling",
+    "description": "The label for category Styling in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Controls": {
+    "message": "Controls",
+    "description": "The label for category Controls in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Buttons": {
+    "message": "Buttons",
+    "description": "The label for category Buttons in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.DataGrid": {
+    "message": "DataGrid",
+    "description": "The label for category DataGrid in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.TreeDataGrid": {
+    "message": "TreeDataGrid",
+    "description": "The label for category TreeDataGrid in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Templates": {
+    "message": "Templates",
+    "description": "The label for category Templates in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Authoring Controls": {
+    "message": "Authoring Controls",
+    "description": "The label for category Authoring Controls in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Input": {
+    "message": "Input",
+    "description": "The label for category Input in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Animations": {
+    "message": "Animations",
+    "description": "The label for category Animations in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Layout": {
+    "message": "Layout",
+    "description": "The label for category Layout in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Distribution & Publishing": {
+    "message": "Distribution & Publishing",
+    "description": "The label for category Distribution & Publishing in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category Guides in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Basics": {
+    "message": "Basics",
+    "description": "The label for category Basics in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Deep Dives": {
+    "message": "Deep Dives",
+    "description": "The label for category Deep Dives in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.ReactiveUI": {
+    "message": "ReactiveUI",
+    "description": "The label for category ReactiveUI in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Developer Guides": {
+    "message": "Developer Guides",
+    "description": "The label for category Developer Guides in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Tutorials": {
+    "message": "Tutorials",
+    "description": "The label for category Tutorials in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.ToDo List App": {
+    "message": "ToDo List App",
+    "description": "The label for category ToDo List App in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Music Store App": {
+    "message": "Music Store App",
+    "description": "The label for category Music Store App in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Developing for Mobile": {
+    "message": "Developing for Mobile",
+    "description": "The label for category Developing for Mobile in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Android": {
+    "message": "Android",
+    "description": "The label for category Android in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.iOS": {
+    "message": "iOS",
+    "description": "The label for category iOS in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.WPF Developer Tips": {
+    "message": "WPF Developer Tips",
+    "description": "The label for category WPF Developer Tips in sidebar documentationSidebar"
+  }
+}
