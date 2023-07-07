@@ -5,7 +5,7 @@ title: Platform Settings
 
 The `PlatformSettings` class represents a contract for accessing platform-specific settings and information. Some of these settings might be changed by the user globally in the OS in runtime. 
 
-The `PlatformSettings` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../../toplevel) page:
+The `PlatformSettings` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../toplevel) page:
 ```cs
 var platformSettings = window.PlatformSettings;
 ```
