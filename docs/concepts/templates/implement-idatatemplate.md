@@ -9,7 +9,7 @@ If you need take more control over a data template in code, you can write a clas
 To use the `IDataTemplate`interface you must implement the following two members in your data template class:
 
 * `public bool Match(object data) { ... }` - implement this member to check whether the provided bound data matches your `IDataTemplate` or not. Return true if the bound data type matches, otherwise false.
-* `public IControl Build(object param) { ... }` - implement this member to build and return the control that will present your data.
+* `public Control Build(object param) { ... }` - implement this member to build and return the control that will present your data.
 
 ## Example
 
@@ -20,7 +20,7 @@ using Avalonia.Controls.Templates;
 ...
 public class MyDataTemplate : IDataTemplate
 {
-    public IControl Build(object param)
+    public Control Build(object param)
     {
         return new TextBlock() { Text = (string)param };
     }

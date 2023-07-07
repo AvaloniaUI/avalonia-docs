@@ -17,7 +17,7 @@ that is added by the Avalonia MVVM solution template.&#x20;
 ```csharp
 public class ViewLocator : IDataTemplate
 {
-    public IControl? Build(object? data)
+    public Control? Build(object? data)
     {
         if (data==null) return null;
         var name = data.GetType().FullName!.Replace("ViewModel", "View");
