@@ -1,57 +1,57 @@
 ---
 id: main-window
-title: The Main Window
+title: 主窗口
 ---
 
-You can now start your tour of an Avalonia project. We'll start with the main application window. Open the **MainWindow.axaml** file.
+您现在可以开始浏览 Avalonia 项目。我们将从主应用程序窗口开始。打开 **MainWindow.axaml** 文件。
 
 :::info
-Notice that in Avalonia, XAML files have the extension **.axaml** (and not .xaml). This represents 'Avalonia XAML' and the file extension was introduced for technical reasons.
+请注意，在 Avalonia 中，XAML 文件的扩展名为 **.axaml**（而不是 .xaml）。这代表着 'Avalonia XAML'，文件扩展名是出于技术原因引入的。
 :::
 
-## What is Happening?
+## 发生了什么？
 
-In the **MainWindow.axaml** XAML file, the `<Window>...</Window>` XAML tag represents an Avalonia window. Like other Avalonia controls; the window will be drawn on the target platform with 4 **layout zones**: margin, border, padding and content.
+在 **MainWindow.axaml** XAML 文件中，`<Window>...</Window>` XAML 标记表示 Avalonia 窗口。与其他 Avalonia 控件一样，窗口将在目标平台上绘制，具有 4 个**布局区域**：边距、边框、内边距和内容。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/the-main-window/image (25) (2) (1).png" alt="" />
 </div>
 
-In your current application, the content zone of the window has only a simple string comprising your latest message; so that is what is displayed.
+在当前应用程序中，窗口的内容区域只包含一个简单的字符串，即您最新的消息；因此显示的就是这个消息。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/the-main-window/image (15) (1) (1).png" alt="" />
 </div>
 
-At this stage, you do not have a margin, border or any padding defined, so the message appears right up against the top left corner of the window. 
+在这个阶段，您没有定义边距、边框或任何内边距，所以消息显示在窗口的左上角。
 
 :::info
-For more information about the concept of control layout zones, see [here](../../concepts/layout/layout-zones).
+有关控件布局区域概念的更多信息，请参阅[这里](../../concepts/layout/layout-zones)。
 :::
 
-## The Visual Studio Designer
+## Visual Studio 设计器
 
-If you're using Visual Studio you should see the XAML code and preview pane.
+如果您使用的是 Visual Studio，则应该看到 XAML 代码和预览窗格。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/the-main-window/image (22) (1).png" alt="" />
 </div>
 
 :::info
-Notice the red exclamation icon (top left) and the message **The designer is loading...**. This indicates that the project must be built before the preview pane will respond.
+请注意红色感叹号图标（左上角）和消息 **正在加载设计器...**。这表示必须在预览窗格响应之前构建项目。
 :::
 
-- Build the project.
-- Scroll the preview pane to the left to view the preview outline and the text displayed in the top left corner.
+- 构建项目。
+- 滚动预览窗格到左侧，查看预览轮廓和显示在左上角的文本。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/the-main-window/image (6) (2).png" alt="" />
 </div>
 
-- Locate the `Welcome to Avalonia!`message text in the XAML pane, and make a change.
+- 在 XAML 窗格中找到 `Welcome to Avalonia!` 消息文本，并进行更改。
 
-You will see the new text in the preview pane change as you type. This is an example of the Avalonia **design-time preview behaviour** that will help you develop user interface presentation accurately and quickly.
+您会看到在输入时预览窗格中的新文本也会更改。这是 Avalonia 的**设计时预览行为**的一个示例，它将帮助您准确快速地开发用户界面呈现。
 
-- Run the project to see your new text also appear at runtime.
+- 运行项目，查看您的新文本也在运行时显示。
 
-On the next page you will see how to add a simple button to the window.
+在下一页中，您将看到如何向窗口添加一个简单的按钮。

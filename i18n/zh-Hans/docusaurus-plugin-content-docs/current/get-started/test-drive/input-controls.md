@@ -1,23 +1,23 @@
 ---
 id: input-controls
-title: Input Controls
+title: 输入控件
 ---
 
-On this page, you will learn how to add some of the Avalonia input controls in a neat layout. The aim is to add a numerical inputs with their associated labels in horizontal rows; with an output control in the row below. 
+在这个页面上，您将学习如何在一个整洁的布局中添加一些Avalonia输入控件。目标是在水平行中添加带有其关联标签的数字输入；在下面的行中添加一个输出控件。
 
-To achieve this layout, you will use the built-in grid control, and locate label and input controls in its cells.
+为了实现这个布局，您将使用内置的网格控件，并将标签和输入控件放置在其单元格中。
 
-This picture shows the resulting layout (running) with the gridlines showing. The gridlines are showing for the purpose of visualizing the layout - you would not usually do this on a production UI. 
+这张图片展示了结果布局（运行中）并显示了网格线。网格线是为了可视化布局而显示的 - 在生产界面上通常不会这样做。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/test-drive/input-controls.png" alt="Window showing input controls" width="400" />
 </div>
 
-To create a layout using the grid control, follow this procedure:
+要使用网格控件创建布局，请按照以下步骤进行操作：
 
-- Stop the app if it is running.
-- Locate the middle stack panel in the XAML, and delete the tag.
-- Insert a `<Grid>` tag as shown:
+- 如果应用正在运行，请停止应用。
+- 找到XAML中的中间堆栈面板，并删除该标签。
+- 插入一个`<Grid>`标签，如下所示：
 
 ```xml
 <Grid ShowGridLines="True" Margin="5"
@@ -26,11 +26,11 @@ To create a layout using the grid control, follow this procedure:
 </Grid>
 ```
 
-This sets out the column and row sizes for the grid (and makes the gridlines visible - although it will show as just a straight line now, as the grid is still empty).
+这将为网格设置列和行的大小（并使网格线可见 - 尽管现在它只会显示为一条直线，因为网格仍然是空的）。
 
-Now add label and input controls to the cells of the grid:
+现在在网格的单元格中添加标签和输入控件：
 
-- Add `<Label>` and `<TextBox>` (text input) controls as shown:
+- 添加`<Label>`和`<TextBox>`（文本输入）控件，如下所示：
 
 ```xml
 <Grid ShowGridLines="True" Margin="5"
@@ -43,9 +43,9 @@ Now add label and input controls to the cells of the grid:
 </Grid>
 ```
 
-Finally, you can tidy up the alignment of the controls in the grid using their margin property. Also move the button into the grid, as follows:
+最后，您可以使用它们的margin属性来整理网格中控件的对齐方式。还可以将按钮移动到网格中，如下所示：
 
-- Modify the XAML as shown:
+- 修改XAML如下所示：
 
 ```xml
 <Grid ShowGridLines="True"  Margin="5" 
@@ -59,12 +59,12 @@ Finally, you can tidy up the alignment of the controls in the grid using their m
 </Grid>
 ```
 
-- Run the app to see the result
+- 运行应用以查看结果
 
 
 
 :::info
-For full information about the complete range of Avalonia built-in controls, and their attributes, see the reference section [here](../../reference/controls/).
+有关Avalonia内置控件的完整信息以及它们的属性，请参阅参考部分[这里](../../reference/controls/)。
 :::
 
-On the next page, you will see how to improve your design-time experience by adjusting the size window when it is shown in the preview pane.
+在下一页中，您将了解如何通过调整预览窗口中显示的大小来改善设计时体验。

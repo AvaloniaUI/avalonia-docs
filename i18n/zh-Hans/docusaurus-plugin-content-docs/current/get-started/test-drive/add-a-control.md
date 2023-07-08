@@ -1,19 +1,19 @@
 ---
 id: add-a-control
-title: Add a Control 
+title: 添加控件
 ---
 
 import Highlight from '@site/src/components/Highlight';
 
-So far the main window of your application displays only a text string. On this page, you will learn how to add some of the built-in controls that are part of Avalonia.
+到目前为止，您的应用程序的主窗口只显示一个文本字符串。在本页中，您将学习如何添加一些Avalonia的内置控件。
 
 ## Button
 
-Avalonia contains a built-in control that creates a button. Follow this procedure to replace the text string you currently have in the content zone of the window, with a button control.
+Avalonia包含一个内置控件，用于创建按钮。按照以下步骤，将当前在窗口的内容区域中的文本字符串替换为按钮控件。
 
-- Stop the app if it is running.
-- Locate the `Welcome to Avalonia!` message in the XAML pane, and delete the text.
-- Insert a `Button` tag as shown:
+- 如果应用程序正在运行，请停止它。
+- 在XAML窗格中找到“Welcome to Avalonia!”消息，并删除该文本。
+- 插入一个`Button`标签，如下所示：
 
 ```xml
 <Window .... >
@@ -22,34 +22,34 @@ Avalonia contains a built-in control that creates a button. Follow this procedur
 ```
 
 :::tip
-If you're using a previewer, you will see the button appear in the preview pane as soon as the XAML is valid. You can also try out a mouse move-over and click on the button to see the different colors it displays in different states.
+如果您正在使用预览器，只要XAML有效，您将在预览窗格中看到按钮出现。您还可以尝试在按钮上移动鼠标并单击，以查看它在不同状态下显示的不同颜色。
 :::
 
-- Run the app to confirm that the presentation and behaviour of the button is the same at runtime.
+- 运行应用程序以确认按钮在运行时的呈现和行为是否相同。
 
-## Control Attributes
+## 控件属性
 
-The XAML code for Avalonia controls uses attributes to specify presentation and behaviour. The attributes can set properties, call methods and event handlers in the controls created by the XAML.
+Avalonia控件的XAML代码使用属性来指定呈现和行为。这些属性可以设置XAML创建的控件中的属性、调用方法和事件处理程序。
 
-For example, you  will notice that the button you just implemented is rendered hard against the left edge of the window. This is a result of the default value of its horizontal alignment property (which is left). Follow this procedure to set the horizontal alignment to centered instead.
+例如，您会注意到刚刚实现的按钮紧贴窗口的左边缘。这是其水平对齐属性的默认值（左对齐）的结果。按照以下步骤，将水平对齐设置为居中。
 
-- Add a new attribute to the Button tag as follows:
+- 在Button标签中添加一个新属性，如下所示：
 
 ```xml
 <Button HorizontalAlignment="Center">Calculate</Button>
 ```
 
 :::tip
-If you're using an IDE, notice how the Avalonia Intellisense guides you as you add attributes to the XAML.
+如果您正在使用IDE，注意当您向XAML添加属性时，Avalonia智能感知会指导您。
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/add-a-control/image (1) (2) (1).png" alt="" />
 </div>
 :::
 
-The button should now move to the center of the window content zone (both horizontally and vertically).
+按钮现在应该移动到窗口内容区域的中心（水平和垂直方向）。
 
 :::info
-For full information about the complete range of Avalonia UI built-in controls, and their attributes, see the reference section [here](../../reference/controls).
+有关Avalonia UI内置控件及其属性的完整信息，请参阅参考部分[此处](../../reference/controls)。
 :::
 
-On the next page, you will learn how to create a more complex layout.
+在下一页中，您将学习如何创建更复杂的布局。

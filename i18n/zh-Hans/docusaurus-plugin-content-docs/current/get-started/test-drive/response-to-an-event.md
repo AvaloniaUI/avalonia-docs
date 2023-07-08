@@ -1,25 +1,25 @@
 ---
 id: respond-to-an-event
-title: Respond to an Event
+title: 响应事件
 ---
 
-There are a number of ways you can implement actions in an Avalonia application. On this page, you will see how to use one of the simplest: how to write event handling code for a button click.
+在Avalonia应用程序中，您可以使用多种方式实现操作。在本页面中，您将了解如何使用最简单的方法之一：如何编写按钮点击的事件处理代码。
 
-To start, you will write a button click event handler that does not interact with any of the other controls.
+首先，您将编写一个按钮点击事件处理程序，该处理程序不与任何其他控件交互。
 
 ## Code-behind
 
-The XAML file for the main window has a C# code-behind file associated with it. If you're using an IDE, you can find this file in the **Solution Explorer** - it is a sub-item of the `.axaml` file.
+主窗口的XAML文件与一个关联的C#代码后台文件。如果您使用的是一个IDE，您可以在**解决方案资源管理器**中找到这个文件 - 它是`.axaml`文件的子项。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/respond-to-an-event/image (59).png" alt="" />
 </div>
 
-To change the code-behind for the main window:
+要更改主窗口的代码后台：
 
-- Open the `MainWindow.axaml.cs` file
+- 打开`MainWindow.axaml.cs`文件
 
-You will see some C# code like this:
+您将看到一些类似于以下代码的C#代码：
 
 ```csharp
 using Avalonia.Controls;
@@ -36,8 +36,7 @@ namespace GetStartedApp
 }
 ```
 
-
-The partial class `MainWindow` corresponds to the window object that is created by Avalonia UI as a result of the XAML you already have. You can find this class name in the XAML window tag:
+部分类`MainWindow`对应于由Avalonia UI根据您已有的XAML创建的窗口对象。您可以在XAML窗口标记中找到此类名称：
 
 ```xml
 <Window 
@@ -46,10 +45,10 @@ The partial class `MainWindow` corresponds to the window object that is created 
 </Window>
 ```
 
-To add an event handler for the button, follow this procedure:
+要为按钮添加事件处理程序，请按照以下步骤进行操作：
 
-- Locate the  `MainWindow` constructor in the code-behind file for the main window (see above instructions).
-- After the constructor add the following code:
+- 在代码后台文件中找到主窗口的`MainWindow`构造函数（参见上述说明）。
+- 在构造函数之后添加以下代码：
 
 ```csharp
 public void ButtonClicked(object source, RoutedEventArgs args)
@@ -58,15 +57,15 @@ public void ButtonClicked(object source, RoutedEventArgs args)
 }
 ```
 
-This will require some additional using statements:
+这将需要一些额外的using语句：
 
 ```cs
 using Avalonia.Interactivity;
 using System.Diagnostics;
 ```
 
-- Switch to the XAML file and locate the `<Button>` tag.
-- Enter the click attribute at the end of the tag, as follows:
+- 切换到XAML文件，找到`<Button>`标记。
+- 在标记的末尾输入click属性，如下所示：
 
 ```xml
 <Button
@@ -76,19 +75,19 @@ using System.Diagnostics;
 ```
 
 :::tip
-If you're using an IDE you will see the Avalonia UI Intellisense as you type.
+如果您使用的是一个IDE，您将在输入时看到Avalonia UI的智能感知。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/respond-to-an-event/image (25) (2).png" alt="" />
 </div>
 :::
 
-- Run the app and click the button.
+- 运行应用程序并点击按钮。
 
-You should see the result on the Output window for Debug, like this:
+您应该在Debug的输出窗口中看到结果，如下所示：
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/respond-to-an-event/image (54).png" alt="" />
 </div>
 
-On the next page, you will see how to use code-behind to read and change the properties of Avalonia UI controls at runtime.
+在下一页中，您将了解如何使用代码后台在运行时读取和更改Avalonia UI控件的属性。

@@ -1,44 +1,44 @@
 ---
 id: set-up-an-editor
-title: Set Up an Editor
+title: 设置编辑器
 ---
 
-# Set Up an Editor
+# 设置编辑器
 
-You can create an Avalonia application using any code editor, but using an IDE will give you support for authoring Avalonia XAML files with a previewer and code completion.
+您可以使用任何代码编辑器创建Avalonia应用程序，但是使用IDE将为您提供使用预览器和代码完成来编写Avalonia XAML文件的支持。
 
 ## JetBrains Rider
 
-The [JetBrains Rider](https://www.jetbrains.com/rider/) IDE has built-in support for Avalonia XAML [starting in 2020.3](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support) including first-class support for Avalonia-specific XAML features and custom code inspections.
+[JetBrains Rider](https://www.jetbrains.com/rider/) IDE在2020.3版本中开始内置支持Avalonia XAML，包括对Avalonia特定XAML功能和自定义代码检查的一流支持。
 
-See the [JetBrains Rider 2020.3 release announcement](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support) for more information.
+有关更多信息，请参阅[JetBrains Rider 2020.3版本发布公告](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support)。
 
-Rider does not yet provide a visual designer, but this is in development. See [the GitHub project](https://github.com/ForNeVeR/AvaloniaRider) for more information and instructions on how to install.
+Rider目前还没有提供可视化设计工具，但正在开发中。请参阅[GitHub项目](https://github.com/ForNeVeR/AvaloniaRider)获取更多信息和安装说明。
 
 ## Visual Studio
 
-If you're developing Avalonia with Visual Studio you should install the [Avalonia for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS) extension.
+如果您正在使用Visual Studio开发Avalonia，您应该安装[Avalonia for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS)扩展。
 
   <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/install-the-avalonia-extension/image (17) (2).png" />
   </div>
 
-The extension provides intellisense support for Avalonia XAML together with a previewer.
+该扩展提供了Avalonia XAML的智能感知支持以及预览功能。
 
-To install the Avalonia for Visual Studio extension:
+安装Avalonia for Visual Studio扩展的步骤如下：
 
-- In Visual Studio click **Manage Extensions** on the **Extensions** menu
-- In the **Search** box, type "Avalonia"
-- Click **Download** and follow the instructions (you will need to close Visual Studio to complete the installation)
+- 在Visual Studio中，点击**扩展**菜单上的**管理扩展**
+- 在**搜索**框中，输入"Avalonia"
+- 点击**下载**并按照说明进行操作（您需要关闭Visual Studio以完成安装）
 
   <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/install-the-avalonia-extension/image (3) (1) (1) (1).png" />
   </div>
 
 :::info
-Alternatively you can download the extension [here](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS).
+您也可以在此处下载扩展[here](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS)。
 :::
 
 :::info
-If you are using VS2019 or VS2017 you will need to download the extension for older versions [here](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio).
+如果您使用的是VS2019或VS2017，您需要在此处下载适用于旧版本的扩展[here](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio)。
 :::

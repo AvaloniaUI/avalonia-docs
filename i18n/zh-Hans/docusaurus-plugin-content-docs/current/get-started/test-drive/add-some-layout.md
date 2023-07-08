@@ -1,17 +1,17 @@
 ---
 id: add-some-layout
-title: Add Some Layout
+title: 添加一些布局
 ---
 
-Avalonia provides a range of built-in controls to help you layout the visual elements of an application. On this page you will see how to use some of these layout controls.
+Avalonia提供了一系列内置的控件来帮助您布局应用程序的可视元素。在本页面上，您将看到如何使用其中一些布局控件。
 
-At this stage, your application has a single button located in the content zone of the main window.
+目前，您的应用程序在主窗口的内容区域中只有一个按钮。
 
-In fact an Avalonia window allows only a single other control in its content zone. So to add the multiple visual elements required for most applications, you will need to use one of the built-in layout controls that allows multiple other controls inside its content zone.
+实际上，Avalonia窗口只允许在其内容区域中放置一个其他控件。因此，为了添加大多数应用程序所需的多个可视元素，您需要使用内置的布局控件之一，它允许在其内容区域中放置多个其他控件。
 
 ## Stack Panel
 
-The stack panel control allows multiple controls in its content zone, and arranges them in a vertical stack in the sequence they are defined in the XAML.
+stack panel控件允许在其内容区域中放置多个控件，并按照在XAML中定义的顺序以垂直堆栈的方式排列它们。
 
 
 
@@ -28,9 +28,9 @@ The stack panel control allows multiple controls in its content zone, and arrang
 
 ## Text Block
 
-The text block control gives you full control over the styling of the text it contains.
+text block控件使您可以完全控制其包含的文本的样式。
 
-To take the example forwards, add a stack panel as follows (you can include the existing the button XAML).
+为了继续示例，添加一个stack panel如下（您可以包含现有的按钮XAML）。
 
 ```xml
 <StackPanel>
@@ -40,12 +40,12 @@ To take the example forwards, add a stack panel as follows (you can include the 
       <TextBlock Margin="5"
          FontSize="24" 
          HorizontalAlignment="Center"
-         Text="Temperature Converter">
+         Text="温度转换器">
       </TextBlock>
     </Border>
     <StackPanel>
     </StackPanel>    
-    <Button HorizontalAlignment="Center">Calculate</Button>
+    <Button HorizontalAlignment="Center">计算</Button>
   </StackPanel>
 ```
 
@@ -54,7 +54,7 @@ To take the example forwards, add a stack panel as follows (you can include the 
 </div>
 
 :::info
-You can explore the other layout controls in Avalonia from the reference [here](../../reference/controls/layout-controls.md).
+您可以从参考文档[这里](../../reference/controls/layout-controls.md)了解Avalonia中的其他布局控件。
 :::
 
-On the next page, you will add some inputs to the middle of the window.
+在下一页中，您将在窗口的中间添加一些输入内容。

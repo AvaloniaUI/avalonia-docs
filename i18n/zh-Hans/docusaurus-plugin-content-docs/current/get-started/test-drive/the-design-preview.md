@@ -1,11 +1,11 @@
 ---
 id: the-design-preview
-title: The Design Preview
+title: 设计预览
 ---
 
-On this page, you will explore the attributes of the window; and then use some of them to adjust the size of the window when it is shown in the preview pane.
+在这个页面上，您将探索窗口的属性；然后使用其中一些属性来调整窗口在预览窗格中显示时的大小。
 
-Examine the XAML for the `<Window>` tag. It will look like this:
+检查`<Window>`标签的XAML。它看起来像这样：
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -17,14 +17,14 @@ Examine the XAML for the `<Window>` tag. It will look like this:
         Title="GetStartedApp">
 ```
 
-The window tag starts by defining some of the XML namespaces that Avalonia uses. The aliases 'x', 'd' and 'mc' are used.
+窗口标签首先定义了Avalonia使用的一些XML命名空间。使用了别名'x'、'd'和'mc'。
 
-The design namespace 'd' allows the design-time attributes `d:DesignWidth` and `d:DesignHeight`to be set. In the above code sample, these have been set to make the preview look more like a mobile (portrait orientation) display. 
+设计命名空间'd'允许设置设计时属性`d:DesignWidth`和`d:DesignHeight`。在上面的代码示例中，这些属性已经被设置为使预览看起来更像是移动设备（纵向方向）的显示。
 
-With these attributes set, the preview of the window now looks like this:
+设置了这些属性后，窗口的预览现在看起来像这样：
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/test-drive/design-preview.png" alt="The design preview" width='460'/>
 </div>
 
-On the next page, you will see how to add some action to the app by responding to the button click event. 
+在下一页中，您将看到如何通过响应按钮点击事件为应用程序添加一些动作。

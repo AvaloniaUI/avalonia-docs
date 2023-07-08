@@ -1,29 +1,29 @@
 ---
 id: install
-title: Install
+title: 安装
 ---
 
-## Install Avalonia UI Templates
+## 安装 Avalonia UI 模板
 
-The best place to get started with Avalonia is by creating an application using a template.
+开始使用 Avalonia 的最佳方式是使用模板创建一个应用程序。
 
-To install the Avalonia templates, run the following command:
+要安装 Avalonia 模板，请运行以下命令：
 
 ```bash
 dotnet new install Avalonia.Templates
 ```
 
 :::note
-For .NET 6.0 and earlier, replace `install` with `--install`
+对于 .NET 6.0 及更早版本，请将 `install` 替换为 `--install`
 :::
 
-To list the installed templates run
+要列出已安装的模板，请运行以下命令：
 
 ```bash
  dotnet new list
 ```
 
-You should see the installed Avalonia templates:
+您应该看到已安装的 Avalonia 模板：
 
 ```
 Template Name                                 Short Name                  Language    Tags

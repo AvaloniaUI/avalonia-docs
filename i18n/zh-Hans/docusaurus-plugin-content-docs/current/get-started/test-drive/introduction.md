@@ -1,14 +1,14 @@
 ---
 id: introduction
-title: Introduction
+title: 介绍
 ---
 
-You can use this section to get started right away with Avalonia. This will take you through a simple tutorial example step-by-step; and introduce you to some of the Avalonia concepts and techniques.
+您可以使用此部分立即开始使用Avalonia。这将逐步为您介绍一个简单的教程示例，并向您介绍一些Avalonia的概念和技术。
 
-You do not need any prior knowledge of Avalonia or other XAML-based frameworks to learn from this section.
+您不需要任何关于Avalonia或其他基于XAML的框架的先前知识来学习本节内容。
 
-Click the Next button to get started.
+点击“下一步”按钮开始。
 
 :::info
-If you are a more experienced user, you may want to extend your knowledge of Avalonia instead, by using our Basics section [here](../../basics) or one of the How-To Guides [here](../../guides).
+如果您是一位更有经验的用户，您可能希望通过使用我们的基础知识部分[此处](../../basics)或其中一个操作指南[此处](../../guides)来扩展您对Avalonia的了解。
 :::
