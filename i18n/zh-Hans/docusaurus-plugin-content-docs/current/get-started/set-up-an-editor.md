@@ -5,7 +5,7 @@ title: 设置编辑器
 
 # 设置编辑器
 
-您可以使用任何代码编辑器创建Avalonia应用程序，但是使用IDE将为您提供使用预览器和代码完成来编写Avalonia XAML文件的支持。
+您可以使用任何代码编辑器创建Avalonia应用程序，但是使用IDE将为您提供Avalonia XAML预览器和代码补全的支持。
 
 ## JetBrains Rider
 
@@ -36,9 +36,9 @@ Rider目前还没有提供可视化设计工具，但正在开发中。请参阅
   </div>
 
 :::info
-您也可以在此处下载扩展[here](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS)。
+您也可以在[此处](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS)下载扩展。
 :::
 
 :::info
-如果您使用的是VS2019或VS2017，您需要在此处下载适用于旧版本的扩展[here](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio)。
+如果您使用的是VS2019或VS2017，您需要在[此处](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio)下载适用于旧版本的扩展。
 :::

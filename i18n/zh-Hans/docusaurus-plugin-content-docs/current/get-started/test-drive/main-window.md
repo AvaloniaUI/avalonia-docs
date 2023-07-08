@@ -3,10 +3,10 @@ id: main-window
 title: 主窗口
 ---
 
-您现在可以开始浏览 Avalonia 项目。我们将从主应用程序窗口开始。打开 **MainWindow.axaml** 文件。
+您现在可以开始 Avalonia 项目之旅了。我们将从主应用程序窗口开始。打开 **MainWindow.axaml** 文件。
 
 :::info
-请注意，在 Avalonia 中，XAML 文件的扩展名为 **.axaml**（而不是 .xaml）。这代表着 'Avalonia XAML'，文件扩展名是出于技术原因引入的。
+请注意，在 Avalonia 中，XAML 文件的扩展名为 **.axaml**（而不是 .xaml）。它表示 'Avalonia XAML'，文件扩展名是出于技术原因引入的。
 :::
 
 ## 发生了什么？
@@ -38,7 +38,7 @@ title: 主窗口
 </div>
 
 :::info
-请注意红色感叹号图标（左上角）和消息 **正在加载设计器...**。这表示必须在预览窗格响应之前构建项目。
+请注意红色感叹号图标（左上角）和消息 **The designer is loading...**。这表示必须将项目构建一次预览窗格才能开始响应。
 :::
 
 - 构建项目。
@@ -48,10 +48,10 @@ title: 主窗口
     <img src="/img/get-started/the-main-window/image (6) (2).png" alt="" />
 </div>
 
-- 在 XAML 窗格中找到 `Welcome to Avalonia!` 消息文本，并进行更改。
+- 在 XAML 代码窗格中找到 `Welcome to Avalonia!` 消息文本，并进行更改。
 
 您会看到在输入时预览窗格中的新文本也会更改。这是 Avalonia 的**设计时预览行为**的一个示例，它将帮助您准确快速地开发用户界面呈现。
 
-- 运行项目，查看您的新文本也在运行时显示。
+- 运行项目，可以看到您的新文本也在运行中显示了。
 
 在下一页中，您将看到如何向窗口添加一个简单的按钮。

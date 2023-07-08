@@ -1,6 +1,6 @@
 ---
 id: create-a-project
-title: 创建并运行一个项目
+title: 创建并运行项目
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ dotnet new install Avalonia.Templates
 
 ## 创建项目
 
-为了开始，我们将使用最简单的Avalonia模板：`Avalonia Application`（或者在CLI中为`avalonia.app`）。
+首先，我们将使用最简单的Avalonia模板：`Avalonia Application`（或是CLI中的`avalonia.app`）。
 
 <Tabs>
   <TabItem value="cli" label="命令行" default>
@@ -73,6 +73,8 @@ dotnet new avalonia.app -o GetStartedApp
 
 <Tabs>
   <TabItem value="cli" label="命令行" default>
+
+
 进入`GetStartedApp`目录并运行：
 
 ```bash
@@ -90,7 +92,7 @@ dotnet run
   <TabItem value="vs" label="Visual Studio">
 
 - 在**Visual Studio**中，点击**Create a new project**。
-- 在搜索框中输入`Avalonia`。
+- 在搜索框中输入 `Avalonia`。
 - 点击**Avalonia Application**，然后点击**Next**。
 
 <div style={{textAlign: 'center'}}>
@@ -107,7 +109,7 @@ dotnet run
   </TabItem>
 </Tabs>
 
-现在您应该正在运行您的第一个Avalonia应用程序！
+现在您应该正在运行您的第一个Avalonia应用程序了！
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/test-drive/initial-window.png" />

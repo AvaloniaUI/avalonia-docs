@@ -8,11 +8,11 @@
     "description": "The label for category Get Started in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Test Drive": {
-    "message": "Test Drive",
+    "message": "小试牛刀",
     "description": "The label for category Test Drive in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Coming from WPF?": {
-    "message": "Coming from WPF?",
+    "message": "有过WPF经验?",
     "description": "The label for category Coming from WPF? in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Stay Up-To-Date": {
