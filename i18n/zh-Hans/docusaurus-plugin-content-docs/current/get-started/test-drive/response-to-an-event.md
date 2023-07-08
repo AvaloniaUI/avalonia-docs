@@ -9,7 +9,7 @@ title: 响应事件
 
 ## Code-behind
 
-主窗口的XAML文件与一个关联的C#代码后台文件。如果您使用的是一个IDE，您可以在**解决方案资源管理器**中找到这个文件 - 它是`.axaml`文件的子项。
+主窗口的XAML文件与一个关联的C#代码后台文件。如果您使用的是一个IDE，您可以在**Solution Explorer**中找到这个文件 - 它是`.axaml`文件的子项。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/respond-to-an-event/image (59).png" alt="" />

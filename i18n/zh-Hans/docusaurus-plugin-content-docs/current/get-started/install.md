@@ -23,7 +23,7 @@ dotnet new install Avalonia.Templates
  dotnet new list
 ```
 
-您应该看到已安装的 Avalonia 模板：
+您应该可以看到已安装的 Avalonia 模板：
 
 ```
 Template Name                                 Short Name                  Language    Tags
