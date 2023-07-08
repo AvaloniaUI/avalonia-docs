@@ -1,11 +1,11 @@
 ---
 id: draw-with-a-property
-title: Draw with a Property
+title: 使用属性绘制
 ---
 
-# Draw with a Property
+# 使用属性进行绘制
 
-On this page you will see how to draw a custom control, using the value for a simple property that defines the background color. The code now looks like this:
+在这个页面上，您将看到如何使用一个简单属性的值来绘制自定义控件，该属性定义了背景颜色。代码现在如下所示：
 
 ```xml title='MainWindow.xaml'
 <Window xmlns="https://github.com/avaloniaui"
@@ -44,12 +44,12 @@ namespace AvaloniaCCExample.CustomControls
 }
 ```
 
-This example defines a simple brush property on the custom control for the background color. It then overrides the `Render` method to draw the control.&#x20;
+这个示例在自定义控件上定义了一个简单的画刷属性，用于背景颜色。然后，它重写了`Render`方法来绘制控件。
 
-The drawing code uses the _Avalonia UI_ graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
+绘制代码使用_Avalonia UI_图形上下文（传递给渲染方法），绘制一个填充有背景颜色的矩形，大小与控件相同（由`Bounds.Size`对象提供）。
 
 <img src="/img/gitbook-import/assets/image (1) (2) (2).png" alt=""/>
 
-Notice how the control now shows both at runtime (above) and in the preview pane.
+请注意，控件现在在运行时（上方）和预览窗格中都显示出来。
 
-On the next page, you will see how to implement the background property so that it can be changed by the _Avalonia UI_ styling system. &#x20;
+在下一页中，您将看到如何实现背景属性，以便可以通过_Avalonia UI_样式系统进行更改。

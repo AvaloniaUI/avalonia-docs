@@ -3,13 +3,13 @@ id: how-to-create-a-custom-controls-library
 title: How To Create a Custom Controls Library
 ---
 
-# How To Create a Custom Controls Library
+# 如何创建自定义控件库
 
-This guide shows you how to create a custom controls library and reference it for use in an _Avalonia UI_ app.
+本指南将向您展示如何创建自定义控件库并在_Avalonia UI_应用程序中引用它。
 
 <img src="/img/gitbook-import/assets/image (22) (3).png" alt=""/>
 
-In this example, a custom control file is added to a .NET class library. The library has the _Avalonia UI_ _NuGet_ package installed:
+在此示例中，将一个自定义控件文件添加到一个.NET类库中。该库已安装了_Avalonia UI_ _NuGet_包：
 
 <img src="/img/gitbook-import/assets/image (11) (2).png" alt=""/>
 
@@ -81,30 +81,30 @@ namespace CCLibrary
 </Tabs>
 
 :::info
-Notice that the namespace reference for the control library includes the name of the assembly.
+请注意，控件库的命名空间引用中包含了程序集的名称。
 :::
 
-## XML Namespace Definitions
+## XML命名空间定义
 
-When you add a reference to a controls library in an _Avalonia UI_ XAML file, you may want to use the URL identification format. For example:&#x20;
+当您在_Avalonia UI_的XAML文件中添加对控件库的引用时，您可能希望使用URL标识格式。例如：&#x20;
 
 ```xml
 xmlns:cc="https://my.controls.url"
 ```
 
-This is possible because of the presence of XML namespace definitions in a controls library. These map URLs to the code namespaces, and are in the project `Properties/AssemblyInfo.cs` file. For example:&#x20;
+这是因为控件库中存在XML命名空间定义。这些定义将URL映射到代码命名空间，并位于项目的`Properties/AssemblyInfo.cs`文件中。例如：&#x20;
 
 ```csharp
-[assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
+[assembly: XmlnsDefinition("https://github.com/avaloniaui," "Avalonia")]
 ```
 
 :::info
-You can see this in the _Avalonia UI_ built-in controls source code [here](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs).&#x20;
+您可以在_Avalonia UI_内置控件的源代码中查看此内容[此处](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs)。&#x20;
 :::
 
-### Common Namespace Definitions&#x20;
+### 常见的命名空间定义&#x20;
 
-You can also make one URL map several namespaces in your controls library. To do this simply add multiple XML namespace definitions that use the same URL, but map to different code namespaces, like this:&#x20;
+您还可以使一个URL映射到控件库中的多个命名空间。只需添加多个使用相同URL的XML命名空间定义，但映射到不同的代码命名空间，如下所示：&#x20;
 
 ```cs
 using Avalonia.Metadata;

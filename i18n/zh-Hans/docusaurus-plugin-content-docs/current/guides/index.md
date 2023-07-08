@@ -1,11 +1,11 @@
 ---
 id: index
-title: How-To Guides
+title: 操作指南
 ---
 
-# How-To Guides
+# 操作指南
 
-This section has practical guidance to help you implement specific tasks using Avalonia UI. Many are at the level of "how do I do that?". This section is arranged by subject area.
+本节提供实用的指导，帮助您使用Avalonia UI实现特定的任务。很多人都处在“我该怎么做?”的水平。本节按学科领域排列。
 
 ```mdx-code-block
 import {DocsCardList} from '../../../../../src/components/DocsCard';

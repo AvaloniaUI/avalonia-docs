@@ -1,28 +1,28 @@
 ---
 id: how-to-create-advanced-custom-controls
-title: How To Create Advanced Custom Controls
+title: 如何创建高级自定义控件
 ---
 
-# How To Create Advanced Custom Controls
+# 如何创建高级自定义控件
 
-Stuff clipped from the custom control guide.
+从自定义控件指南中摘录的内容。
 
-Here's how the `Border` control defines its `Background` property:
+这是`Border`控件如何定义其`Background`属性的方式：
 
-The `AvaloniaProperty.Register` method also accepts a number of other parameters:
+`AvaloniaProperty.Register`方法还接受其他一些参数：
 
-* `defaultValue`: This gives the property a default value. Be sure to only pass value types and immutable types here as passing a reference type will cause the same object to be used on all instances on which the property is registered.
-* `inherits`: Specified that the property's default value should come from the parent control.
-* `defaultBindingMode`: The default binding mode for the property. Can be set to `OneWay`, `TwoWay`, `OneTime` or `OneWayToSource`.
-* `validate`: A validation/coercion function of type `Func<TOwner, TValue, TValue>`. The function accepts the instance of the class on which the property is being set and the value and returns the coerced value or throws an exception for an invalid value.
+* `defaultValue`：为属性设置默认值。请确保只传递值类型和不可变类型，因为传递引用类型将导致所有注册了该属性的实例使用同一个对象。
+* `inherits`：指定属性的默认值应来自父控件。
+* `defaultBindingMode`：属性的默认绑定模式。可以设置为`OneWay`、`TwoWay`、`OneTime`或`OneWayToSource`。
+* `validate`：一个类型为`Func<TOwner, TValue, TValue>`的验证/强制函数。该函数接受正在设置属性的类的实例和值，并返回强制后的值，或者对于无效值抛出异常。
 
-> A styled property is analogous to a `DependencyProperty` in other XAML frameworks.
+> 一个样式化属性类似于其他XAML框架中的`DependencyProperty`。
 
-> The naming convention of the property and its backing AvaloniaProperty field is important. The name of the field is always the name of the property, with the suffix Property appended.
+> 属性的命名约定及其对应的AvaloniaProperty字段的命名是重要的。字段的名称始终是属性的名称，后面附加了"Property"后缀。
 
-### Using a `StyledProperty` on Another Class
+### 在另一个类上使用`StyledProperty`
 
-Sometimes the property you want to add to your control already exists on another control, `Background` being a good example. To register a property defined on another control, you call `StyledProperty.AddOwner`:
+有时，您想要添加到自定义控件的属性已经存在于另一个控件上，`Background`就是一个很好的例子。要注册在另一个控件上定义的属性，您需要调用`StyledProperty.AddOwner`：
 
 ```csharp
 public static readonly StyledProperty<IBrush> BackgroundProperty =
@@ -35,11 +35,11 @@ public Brush Background
 }
 ```
 
-> Note: Unlike WPF/UWP, a property must be registered on a class otherwise it cannot be set on an object of that class. This may change in future, however.
+> 注意：与WPF/UWP不同，属性必须在类上注册，否则无法在该类的对象上设置属性。但这可能会在将来发生改变。
 
-### Readonly Properties
+### 只读属性
 
-To create a readonly property you use the `AvaloniaProperty.RegisterDirect` method. Here is how `Visual` registers the readonly `Bounds` property:
+要创建一个只读属性，您可以使用`AvaloniaProperty.RegisterDirect`方法。以下是`Visual`如何注册只读的`Bounds`属性：
 
 ```csharp
 public static readonly DirectProperty<Visual, Rect> BoundsProperty =
@@ -56,13 +56,13 @@ public Rect Bounds
 }
 ```
 
-As can be seen, readonly properties are stored as a field on the object. When registering the property, a getter is passed which is used to access the property value through `GetValue` and then `SetAndRaise` is used to notify listeners to changes to the property.
+可以看到，只读属性被存储为对象的字段。在注册属性时，传递了一个getter，用于通过`GetValue`访问属性值，然后使用`SetAndRaise`通知属性更改的监听器。
 
-### Attached Properties
+### 附加属性
 
-[Attached properties](../../concepts/attached-property) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
+[附加属性](../../concepts/attached-property)的定义与样式化属性几乎相同，只是它们使用`RegisterAttached`方法进行注册，并且它们的访问器被定义为静态方法。
 
-Here's how `Grid` defines its `Grid.Column` attached property:
+以下是`Grid`如何定义其`Grid.Column`附加属性：
 
 ```csharp
 public static readonly AttachedProperty<int> ColumnProperty =
@@ -79,13 +79,13 @@ public static void SetColumn(Control element, int value)
 }
 ```
 
-### Direct AvaloniaProperties
+### 直接的Avalonia属性
 
-As its name suggests, `RegisterDirect` isn't just used for registering readonly properties. You can also pass a _setter_ to `RegisterDirect` to expose a standard C# property as a Avalonia property.
+顾名思义，`RegisterDirect`不仅用于注册只读属性。您还可以将一个_setter_传递给`RegisterDirect`，将标准的C#属性公开为Avalonia属性。
 
-A `StyledProperty` which is registered using `AvaloniaProperty.Register` maintains a prioritized list of values and bindings that allow styles to work. However, this is overkill for many properties, such as `ItemsControl.Items` - this will never be styled and the overhead involved with styled properties is unnecessary.
+使用`AvaloniaProperty.Register`注册的`StyledProperty`维护了一个优先级列表，其中包含允许样式工作的值和绑定。然而，对于许多属性来说，这是不必要的，比如`ItemsControl.Items` - 它永远不会被样式化，使用样式化属性的开销是不必要的。
 
-Here is how `ItemsControl.Items` is registered:
+以下是`ItemsControl.Items`的注册方式：
 
 ```csharp
 public static readonly DirectProperty<ItemsControl, IEnumerable> ItemsProperty =
@@ -103,25 +103,25 @@ public IEnumerable Items
 }
 ```
 
-Direct properties are a lightweight version of styled properties that support the following:
+直接属性是样式化属性的轻量级版本，支持以下功能：
 
 * AvaloniaObject.GetValue
-* AvaloniaObject.SetValue for non-readonly properties
+* AvaloniaObject.SetValue（非只读属性）
 * PropertyChanged
-* Binding (only with LocalValue priority)
+* Binding（仅具有LocalValue优先级）
 * GetObservable
 * AddOwner
 * Metadata
 
-They don't support the following:
+它们不支持以下功能：
 
-* Validation/Coercion (although this could be done in the property setter)
-* Overriding default values.
-* Inherited values
+* 验证/强制（尽管可以在属性setter中完成）
+* 覆盖默认值。
+* 继承的值
 
-### Using a DirectProperty on Another Class
+### 在另一个类上使用DirectProperty
 
-In the same way that you can call `AddOwner` on a styled property, you can also add an owner to a direct property. Because direct properties reference fields on the control, you must also add a field for the property:
+与样式化属性一样，您可以在直接属性上调用`AddOwner`来添加一个所有者。由于直接属性引用控件上的字段，因此您还必须为该属性添加一个字段：
 
 ```csharp
 public static readonly DirectProperty<MyControl, IEnumerable> ItemsProperty =
@@ -138,33 +138,33 @@ public IEnumerable Items
 }
 ```
 
-### When to use a Direct vs a Styled Property
+### 何时使用Direct属性和Styled属性
 
-In general you should declare your properties as styled properties. However, direct properties have advantages and disadvantages:
+通常情况下，应将属性声明为样式化属性。但是，直接属性具有优点和缺点：
 
-Pros:
+优点：
 
-* No additional object is allocated per-instance for the property
-* Property getter is a standard C# property getter
-* Property setter is a standard C# property setter that raises an event.
-* You can add [data validation](../../guides/development-guides/data-validation.md) support
+* 每个实例不需要额外的对象来存储属性
+* 属性getter是标准的C#属性getter
+* 属性setter是引发事件的标准C#属性setter
+* 您可以添加[数据验证](../../guides/development-guides/data-validation.md)支持
 
-Cons:
+缺点：
 
-* Cannot inherit value from parent control
-* Cannot take advantage of Avalonia's styling system
-* Property value is a field and as such is allocated whether the property is set on the object or not
+* 无法从父控件继承值
+* 无法利用Avalonia的样式系统
+* 属性值是一个字段，因此无论属性是否在对象上设置，都会被分配内存
 
-So use direct properties when you have the following requirements:
+因此，当满足以下要求时，请使用直接属性：
 
-* Property will not need to be styled
-* Property will usually or always have a value
+* 属性不需要样式化
+* 属性通常或总是具有值
 
-### DataValidation support
+### 数据验证支持
 
-If you want to allow a property to validate the data and show validation error messages, the property must be implemented as a `DirectProperty` and validation support must be enabled (`enableDataValidation: true`).
+如果要允许属性验证数据并显示验证错误消息，则该属性必须实现为`DirectProperty`，并且必须启用验证支持（`enableDataValidation: true`）。
 
-**Example of a property with DataValidation enabled**
+**启用数据验证的属性示例**
 
 ```cs
 public static readonly DirectProperty<MyControl, int> ValueProperty =
@@ -175,9 +175,9 @@ public static readonly DirectProperty<MyControl, int> ValueProperty =
         enableDataValidation: true);
 ```
 
-If you want to [re-use a direct property of another class](how-to-create-advanced-custom-controls.md#using-a-directproperty-on-another-class) you can also enable data validation. In this case use `AddOwnerWithDataValidation`.
+如果要[重用另一个类的直接属性](how-to-create-advanced-custom-controls.md#using-a-directproperty-on-another-class)，也可以启用数据验证。在这种情况下，请使用`AddOwnerWithDataValidation`。
 
-**Example: TextBox.TextProperty property re-uses TextBlock.TextProperty but adds validation support**
+**示例：TextBox.TextProperty属性重用TextBlock.TextProperty，但添加了验证支持**
 
 ```cs
 public static readonly DirectProperty<TextBox, string?> TextProperty =

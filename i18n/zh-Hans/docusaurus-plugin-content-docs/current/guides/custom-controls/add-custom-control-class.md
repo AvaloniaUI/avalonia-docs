@@ -1,17 +1,17 @@
 ---
 id: add-custom-control-class
-title: Add a Custom Control Class
+title: 添加自定义控件类
 ---
 
-# Add a Custom Control Class
+# 添加自定义控件类
 
-You create a custom control using a class that inherits from the _Avalonia UI_ `Control` class. You can place your custom control classes anywhere in you app project, or include them in another control library project.
+您可以使用继承自_Avalonia UI_ `Control` 类的类来创建自定义控件。您可以将自定义控件类放置在应用程序项目的任何位置，或者将其包含在另一个控件库项目中。
 
 :::info
-For more information on creating a custom control library, see [here](how-to-create-a-custom-controls-library).
+有关创建自定义控件库的更多信息，请参阅[此处](how-to-create-a-custom-controls-library)。
 :::
 
-Wherever you choose to place your custom control class, you must be able to reference it in the XAML. For example, this code shows the custom control `MyControl` class placed in the main window; and the custom control class defines in the `/CustomControls` namespace and project folder:
+无论您选择将自定义控件类放置在何处，您都必须能够在XAML中引用它。例如，以下代码显示了将自定义控件`MyControl`类放置在主窗口中的示例；自定义控件类定义在`/CustomControls`命名空间和项目文件夹中：
 
 ```xml title='XAML'
 <Window xmlns="https://github.com/avaloniaui"
@@ -38,6 +38,6 @@ namespace AvaloniaCCExample.CustomControls
 }
 ```
 
-Notice that you can already add properties for height and width of the custom control. These are from the base class: `Control`.&#x20;
+请注意，您已经可以为自定义控件添加高度和宽度属性。这些属性来自基类：`Control`。
 
-However at present, nothing shows. On the next page you will see how to define a property and teach the custom control how to draw using it.
+然而，目前什么都没有显示。在下一页中，您将看到如何定义属性并教会自定义控件如何使用它进行绘制。

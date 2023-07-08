@@ -1,31 +1,31 @@
 ---
 id: index
-title: How To Create a Custom Control
+title: 如何创建自定义控件
 ---
 
-# How To Create a Custom Control
+# 如何创建自定义控件
 
-This guide will show you how to create a simple custom control with _Avalonia UI_.&#x20;
+本指南将向您展示如何使用_Avalonia UI_创建一个简单的自定义控件。
 
-Before you start to create your own control, you must decide which type of custom control you want to implement, the choices are:
+在开始创建自己的控件之前，您必须决定要实现哪种类型的自定义控件，选择如下：
 
-* Custom Control
-* Templated Custom Control
+* 自定义控件
+* 模板化自定义控件
 
-### Custom Control
+### 自定义控件
 
-A custom control draws itself using the _Avalonia UI_ graphics system, using basic methods for shapes, lines, fills, text, and many others. You can define your own properties, events and pseudo classes.
+自定义控件使用_Avalonia UI_图形系统绘制自身，使用基本的形状、线条、填充、文本等方法。您可以定义自己的属性、事件和伪类。
 
-Some of the _Avalonia UI_ built-in controls are like this. For example, the text block control (`TextBlock` class) and the image control (`Image` class).
+_Avalonia UI_的一些内置控件就是这样的。例如，文本块控件（`TextBlock`类）和图像控件（`Image`类）。
 
-### Templated Custom Controls
+### 模板化自定义控件
 
-A templated custom control creates a 'look-less' control that can be styled by themes or style dictionaries included in your project. The control has code for properties and events, and processing, but no properties or instructions about how to draw. A templated control defers to a theme or styles to select properties like brush colors, line thickness, corner radius etc. The drawing instructions are in the theme. &#x20;
+模板化自定义控件创建了一个“无外观”的控件，可以通过项目中包含的主题或样式字典进行样式化。该控件具有属性和事件的代码和处理，但没有关于如何绘制的属性或指令。模板化控件会根据主题或样式选择属性，如画笔颜色、线条粗细、圆角等。绘制指令在主题中。
 
-The majority of the _Avalonia UI_ built-in controls are templated.
+大多数_Avalonia UI_的内置控件都是模板化的。
 
 :::info
-For guidance on how to create templated controls, see [here](../../basics/user-interface/controls/creating-controls).
+有关如何创建模板化控件的指导，请参见[此处](../../basics/user-interface/controls/creating-controls)。
 :::
 
-The following pages show you how to create a simple custom control (inherited from `Control`).
+以下页面将向您展示如何创建一个简单的自定义控件（继承自`Control`）。

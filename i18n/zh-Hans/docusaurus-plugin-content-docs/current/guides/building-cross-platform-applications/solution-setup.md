@@ -1,49 +1,48 @@
 ---
 id: solution-setup
-title: Setting Up A Cross Platform Solution
+title: 建立跨平台解决方案
 ---
 
-Despite the platform diversity, Avalonia projects all leverage the same solution file format (the Visual Studio ".SLN” file format). Solutions can be shared across development environments, providing a unified approach to multi-platform app development.
+尽管平台多样化，Avalonia项目都使用相同的解决方案文件格式（Visual Studio的“.SLN”文件格式）。解决方案可以在开发环境之间共享，为多平台应用程序开发提供统一的方法。
 
-The first step to creating a new cross platform application is to create a solution. This section will elaborate on what happens next: the process of setting up the projects for building cross-platform applications with Avalonia.
+创建新的跨平台应用程序的第一步是创建一个解决方案。本节将详细介绍接下来的步骤：使用Avalonia构建跨平台应用程序的项目设置过程。
 
-## Populating the Solution
+## 填充解决方案
 
-The `Avalonia Cross Platform Application` template creates a solution structure that includes the following projects to allow seamless sharing and reusability of code across multiple platforms:
+`Avalonia跨平台应用程序`模板创建了一个解决方案结构，其中包括以下项目，以实现在多个平台上共享和重用代码的无缝性：
 
 :::info
-[Ensure you've installed the Avalonia Templates.](../../get-started/install#install-avalonia-ui-templates)
+[确保已安装Avalonia模板。](../../get-started/install#install-avalonia-ui-templates)
 :::
 
-### Core Project
-This forms the heart of your application and is designed to be platform-agnostic. It contains all the reusable components of your application, including business logic, view models, and views. All other projects reference this core project. The majority of your development efforts should reside here.
+### 核心项目
+这是应用程序的核心，旨在与平台无关。它包含应用程序的所有可重用组件，包括业务逻辑、视图模型和视图。所有其他项目都引用此核心项目。大部分开发工作应该在这里进行。
 
-### Desktop Project
-This project enables running the app to run on Windows, macOS, and Linux platforms, with an output type of 'WinExe'.
+### 桌面项目
+该项目使应用程序能够在Windows、macOS和Linux平台上运行，输出类型为“WinExe”。
 
-### Android Project 
-This is a `NET-Android` based project that references the Core Project. It features a MainActivity that inherits from `AvaloniaMainActivity`, acting as the entry point for the Android application.
+### Android项目
+这是一个基于`.NET-Android`的项目，引用了核心项目。它包含一个从`AvaloniaMainActivity`继承的MainActivity，作为Android应用程序的入口点。
 
-### iOS Project 
-This is a `NET-iOS` project tailored for iOS and iPadOS platforms. The entry point for this project is the `AppDelegate`, which inherits from `AvaloniaAppDelegate`. 
+### iOS项目
+这是一个专为iOS和iPadOS平台定制的`.NET-iOS`项目。该项目的入口点是继承自`AvaloniaAppDelegate`的`AppDelegate`。
 
-### Browser Project
-This WebAssembly (WASM) project allows your Avalonia application to run in a web browser. Its RuntimeIdentifier is `'browser-wasm'`.
+### 浏览器项目
+这个WebAssembly（WASM）项目允许您的Avalonia应用程序在Web浏览器中运行。它的RuntimeIdentifier是“browser-wasm”。
 
-## Core Project
+## 核心项目
 
-Shared code projects should only reference assemblies that are universally available across all platforms. This generally includes common framework namespaces like `System`, `System.Core`, and `System.Xml`.
+共享代码项目只应引用在所有平台上普遍可用的程序集。通常包括常见的框架命名空间，如`System`、`System.Core`和`System.Xml`。
 
-These shared projects aim to implement as much application functionality as possible, including UI components, thereby maximizing the reusability of code. 
+这些共享项目旨在尽可能实现应用程序的大部分功能，包括UI组件，从而最大限度地提高代码的可重用性。
 
-By separating functionalities into distinct layers, code becomes easier to manage, test, and reuse across multiple platforms. This layered architecture approach in Avalonia UI projects promotes efficiency and scalability in application development.
+通过将功能分离到不同的层中，代码变得更容易管理、测试和在多个平台上重用。Avalonia UI项目中的这种分层架构方法促进了应用程序开发的效率和可扩展性。
 
-## Platform-Specific Application Projects
+## 特定平台的应用程序项目
 
-Platform-Specific projects must reference the Core Project. The Platform Specific projects exist to enable the application to run on unique platforms including iOS, Android and WASM. 
+特定平台的项目必须引用核心项目。特定平台的项目存在的目的是使应用程序能够在包括iOS、Android和WASM在内的独特平台上运行。
 
-While desktop platforms can be all share a single project, it may be benefitual to create a seperate project for macOS using the [Xamarin.Mac Target Framework](https://learn.microsoft.com/en-us/xamarin/mac/platform/target-framework). This will enable easier distribution and packaging of your application.   
-
+虽然桌面平台可以共享一个项目，但为macOS创建一个单独的项目可能更有益，使用[Xamarin.Mac目标框架](https://learn.microsoft.com/en-us/xamarin/mac/platform/target-framework)。这将使您的应用程序更容易分发和打包。
 
 
 
