@@ -1,46 +1,46 @@
 ---
 id: create-a-project
-title: Create and Run a Project
+title: 创建并运行一个项目
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Install Templates
+## 安装模板
 
-Before starting, ensure that you have [installed the Avalonia templates](../install.md):
+在开始之前，请确保您已经[安装了Avalonia模板](../install.md)：
 
 ```bash
 dotnet new install Avalonia.Templates
 ```
 
-## Create the Project
+## 创建项目
 
-To get started, we're going to use the simplest Avalonia template: `Avalonia Application` (or `avalonia.app` in the CLI).
+为了开始，我们将使用最简单的Avalonia模板：`Avalonia Application`（或者在CLI中为`avalonia.app`）。
 
 <Tabs>
-  <TabItem value="cli" label="Command Line" default>
-Run the command:
+  <TabItem value="cli" label="命令行" default>
+运行以下命令：
 
 ```bash
 dotnet new avalonia.app -o GetStartedApp
 ```
 
-This will create a new folder called `GetStartedApp` containing the new project.
+这将创建一个名为`GetStartedApp`的新文件夹，其中包含新的项目。
   </TabItem>
   <TabItem value="rider" label="Rider">
 
-- On the Rider startup screen, select **New Solution**
+- 在Rider启动界面上，选择**New Solution**
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/test-drive/rider-splashscreen.png" width="600"/>
 </div>
 
-- In the sidebar, scroll down and select **Avalonia App**
-- Type `GetStartedApp` in the **Solution Name** field
-- Click **Create**
+- 在侧边栏中向下滚动并选择**Avalonia App**
+- 在**Solution Name**字段中输入`GetStartedApp`
+- 点击**Create**
 
-The template will create a new solution and project.
+该模板将创建一个新的解决方案和项目。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/test-drive/rider-solution.png"/>
@@ -49,17 +49,17 @@ The template will create a new solution and project.
   </TabItem>
   <TabItem value="vs" label="Visual Studio">
 
-- In **Visual Studio**, click **Create a new project**.
-- Type `Avalonia` in the search box.
-- Click **Avalonia Application** then click **Next**.
+- 在**Visual Studio**中，点击**Create a new project**。
+- 在搜索框中输入`Avalonia`。
+- 点击**Avalonia Application**，然后点击**Next**。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/choose-a-solution-template/image (31) (1) (1).png" />
 </div>
 
-- Name the project `GetStartedApp`, and click **Create**.
+- 将项目命名为`GetStartedApp`，然后点击**Create**。
 
-The template will create a new solution and project.
+该模板将创建一个新的解决方案和项目。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/choose-a-solution-template/image (27) (1).png" />
@@ -67,13 +67,13 @@ The template will create a new solution and project.
   </TabItem>
 </Tabs>
 
-## Run the Project
+## 运行项目
 
-We're now ready to run the project!
+现在我们准备好运行项目了！
 
 <Tabs>
-  <TabItem value="cli" label="Command Line" default>
-Go into the `GetStartedApp` directory and run:
+  <TabItem value="cli" label="命令行" default>
+进入`GetStartedApp`目录并运行：
 
 ```bash
 dotnet run
@@ -81,7 +81,7 @@ dotnet run
   </TabItem>
   <TabItem value="rider" label="Rider">
 
-Press the **Run** button in the Rider toolbar:
+在Rider工具栏中点击**Run**按钮：
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/test-drive/rider-run.png"/>
@@ -89,17 +89,17 @@ Press the **Run** button in the Rider toolbar:
   </TabItem>
   <TabItem value="vs" label="Visual Studio">
 
-- In **Visual Studio**, click **Create a new project**.
-- Type `Avalonia` in the search box.
-- Click **Avalonia Application** then click **Next**.
+- 在**Visual Studio**中，点击**Create a new project**。
+- 在搜索框中输入`Avalonia`。
+- 点击**Avalonia Application**，然后点击**Next**。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/choose-a-solution-template/image (31) (1) (1).png" />
 </div>
 
-- Name the project `GetStartedApp`, and click **Create**.
+- 将项目命名为`GetStartedApp`，然后点击**Create**。
 
-The template will create a new solution and project.
+该模板将创建一个新的解决方案和项目。
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/choose-a-solution-template/image (27) (1).png" />
@@ -107,7 +107,7 @@ The template will create a new solution and project.
   </TabItem>
 </Tabs>
 
-You should now be running your first Avalonia application!
+现在您应该正在运行您的第一个Avalonia应用程序！
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/test-drive/initial-window.png" />
