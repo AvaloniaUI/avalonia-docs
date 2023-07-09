@@ -61,14 +61,14 @@ namespace MySample
 }
 ```
 
-And the XML namespace `local` defined as the `Example` namespace (from above), you can define a student object in the content zone of the window; as follows:
+And the XML namespace `local` defined as the `MySample` namespace (from above), you can define a student object in the content zone of the window; as follows:
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="using:MySample"
         x:Class="MySample.Views.MainWindow">
-  <vm:Student FirstName="Jane" LastName="Deer"/>
+  <local:Student FirstName="Jane" LastName="Deer"/>
 </Window>
 ```
 
