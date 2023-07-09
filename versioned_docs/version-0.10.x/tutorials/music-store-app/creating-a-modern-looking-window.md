@@ -9,10 +9,15 @@ Let's try and make this look a little more modern by applying `Dark` mode and so
 
 1. Open App.axaml
 
-   Change the FluentTheme Mode from Light to Dark.
+   Change the FluentTheme Mode from Default to Dark.
 
 ```markup
-<FluentTheme Mode="Dark"/>
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Avolonia.MusicStore.App"
+             xmlns:local="using:Avolonia.MusicStore"
+             RequestedThemeVariant="Dark">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 ```
 
 1. Open `MainWindow.axaml` notice that it's still showing the Light mode version in the previewer.
