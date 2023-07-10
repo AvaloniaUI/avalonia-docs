@@ -15,7 +15,7 @@ This example uses a MVVM pattern view model to hold some hierarchical data based
 
 
 ```xml
-<TreeView Items="{Binding Nodes}">
+<TreeView ItemsSource="{Binding Nodes}">
   <TreeView.ItemTemplate>
     <TreeDataTemplate ItemsSource="{Binding SubNodes}">
       <TextBlock Text="{Binding Title}"/>
