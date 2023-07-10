@@ -22,7 +22,7 @@ In this example, two styles with class selectors have been defined. These give a
 
 ```xml title='XAML'
 <StackPanel Margin="20">
-  <ListBox Items="{Binding ItemList}">
+  <ListBox ItemsSource="{Binding ItemList}">
     <ListBox.Styles>
       <Style Selector="TextBlock.class1">
         <Setter Property="Background" Value="OrangeRed" />

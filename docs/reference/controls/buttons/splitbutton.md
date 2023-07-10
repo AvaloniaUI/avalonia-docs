@@ -81,7 +81,7 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
              Command="{Binding ChangeColorCommand}">
   <SplitButton.Flyout>
     <Flyout Placement="Bottom">
-      <ListBox Items="{Binding AvailableColors}" 
+      <ListBox ItemsSource="{Binding AvailableColors}" 
                SelectedItem="{Binding SelectedColor}" 
                Height="200" Width="200" >
         <ListBox.ItemsPanel>

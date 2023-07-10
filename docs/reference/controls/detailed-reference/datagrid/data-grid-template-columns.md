@@ -24,7 +24,7 @@ This example adds a numeric up-down control when the age property for a person i
 <Window ...
   xmlns:model="using:AvaloniaControls.Models" >
   
-  <DataGrid Margin="20" Items="{Binding People}"
+  <DataGrid Margin="20" ItemsSource="{Binding People}"
           GridLinesVisibility="All"
           BorderThickness="1" BorderBrush="Gray">
     <DataGrid.Columns>

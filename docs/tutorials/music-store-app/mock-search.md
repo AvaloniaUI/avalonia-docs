@@ -121,7 +121,7 @@ Next to bind these properties to the list box in the view, follow this procedure
 - Add the binding expressions shown to the `<ListBox>` element:
 
 ```
-<ListBox Items="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
+<ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
 ```
 
 ## Mock Data

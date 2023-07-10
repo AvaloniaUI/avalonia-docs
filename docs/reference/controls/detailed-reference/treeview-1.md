@@ -15,7 +15,7 @@ This example uses a MVVM pattern view model to hold some hierarchical data based
 
 
 ```xml
-<TreeView Items="{Binding Nodes}">
+<TreeView ItemsSource="{Binding Nodes}">
   <TreeView.ItemTemplate>
     <TreeDataTemplate ItemsSource="{Binding SubNodes}">
       <TextBlock Text="{Binding Title}"/>
@@ -89,7 +89,7 @@ This is a development of the previous example with multiple root nodes, a revise
 
 ```xml
 <TreeView Margin="10"
-          Items="{Binding Nodes}" 
+          ItemsSource="{Binding Nodes}" 
           SelectedItems="{Binding SelectedNodes}"
           SelectionMode="Multiple">
   <TreeView.ItemTemplate>
