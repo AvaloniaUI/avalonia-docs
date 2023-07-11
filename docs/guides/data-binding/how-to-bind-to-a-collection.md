@@ -35,7 +35,7 @@ public class ViewModel : ObservableObject
 In your view, you can bind this `ObservableCollection` to a `ListBox` like so:
 
 ```xml
-<ListBox Items="{Binding Items}"/>
+<ListBox ItemsSource="{Binding Items}"/>
 ```
 
 ## Binding to an ObservableCollection of Complex Objects
@@ -91,7 +91,7 @@ public class ViewModel : ObservableObject
 You can bind this `ObservableCollection` to a `ListBox` in your view, and use a `DataTemplate` to specify how each `Person` should be presented:
 
 ```xml
-<ListBox Items="{Binding People}">
+<ListBox ItemsSource="{Binding People}">
     <ListBox.ItemTemplate>
         <DataTemplate>
             <StackPanel Orientation="Horizontal">

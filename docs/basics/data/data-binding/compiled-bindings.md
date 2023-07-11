@@ -106,7 +106,7 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
 In some cases the target type of the binding expression cannot be automatically evaluated. In such cases you muss provide an explicite type cast in the binding expression.
 
 ```markup
-<ItemsRepeater Items="{Binding MyItems}">
+<ItemsRepeater ItemsSource="{Binding MyItems}">
 <ItemsRepeater.ItemTemplate>
     <DataTemplate>
     <StackPanel Orientation="Horizontal">

@@ -48,7 +48,7 @@ Now that the `_sourceCache` is created and populated and the `ReadOnlyObservable
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TreeView Items="{Binding TestViewModels}">
+    <TreeView ItemsSource="{Binding TestViewModels}">
         <TreeView.DataTemplates>
             !-- DataTemplate Definitions -->
         </TreeView.DataTemplates> 

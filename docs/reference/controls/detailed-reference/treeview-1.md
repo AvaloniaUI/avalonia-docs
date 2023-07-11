@@ -89,7 +89,7 @@ This is a development of the previous example with multiple root nodes, a revise
 
 ```xml
 <TreeView Margin="10"
-          Items="{Binding Nodes}" 
+          ItemsSource="{Binding Nodes}" 
           SelectedItems="{Binding SelectedNodes}"
           SelectionMode="Multiple">
   <TreeView.ItemTemplate>

@@ -33,7 +33,7 @@ For example, as the integer zero is converted to false (by the the function `Con
 
 ```markup
 <Panel>
-  <ListBox Items="{Binding Items}"/>
+  <ListBox ItemsSource="{Binding Items}"/>
   <TextBlock IsVisible="{Binding !Items.Count}">No results found</TextBlock>
 </Panel>
 ```
@@ -44,7 +44,7 @@ You can use this to hide a control when a collection is empty (count is zero), l
 
 ```markup
 <Panel>
-  <ListBox Items="{Binding Items}" IsVisible="{Binding !!Items.Count}"/>
+  <ListBox ItemsSource="{Binding Items}" IsVisible="{Binding !!Items.Count}"/>
 </Panel>
 ```
 

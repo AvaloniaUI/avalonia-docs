@@ -14,7 +14,7 @@ To see the full list of _Avalonia UI_ built-in repeating data controls, see [her
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="316">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Items</code></td><td>The bound collection that is used as the data source for the control.</td></tr><tr><td><code>ItemsControl.ItemTemplate</code></td><td>Attached property element to contain the data template for an individual item. </td></tr></tbody></table>
+<table><thead><tr><th width="316">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ItemsSource</code></td><td>The bound collection that is used as the data source for the control.</td></tr><tr><td><code>ItemsControl.ItemTemplate</code></td><td>Attached property element to contain the data template for an individual item. </td></tr></tbody></table>
 
 ## Example
 
@@ -25,7 +25,7 @@ This example binds an observable collection of crockery items to an items contro
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">List of crockery:</TextBlock>
-  <ItemsControl Items="{Binding CrockeryList}" >
+  <ItemsControl ItemsSource="{Binding CrockeryList}" >
     <ItemsControl.ItemTemplate>
     <DataTemplate>
       <Border Margin="0,10,0,0"
