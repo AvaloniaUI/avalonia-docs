@@ -60,6 +60,11 @@ produces the following output in **Windows 10** when text is input
     <img src="/img/controls/textbox/textbox_password.png"  />
   </div>
 
+When applying the style class, `revealPasswordButton`, the TextBox will provide an eye 👁 glyph for the user to temporally show the plane text.
+
+```markup
+<TextBox Classes="revealPasswordButton" PasswordChar="•" />
+```
 
 ### TextBox with watermark
 
