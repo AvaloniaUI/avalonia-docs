@@ -154,6 +154,10 @@ const sidebars = {
                 {
                   'type': 'category',
                   'label': 'Creating Controls',
+                  'link': {
+                    'type': 'doc',
+                    'id': 'basics/user-interface/controls/creating-controls/index'
+                  },
                   'items': [
                     'basics/user-interface/controls/creating-controls/choosing-a-custom-contro-type',
                     'basics/user-interface/controls/creating-controls/defining-properties',
