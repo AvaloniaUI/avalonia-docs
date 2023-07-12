@@ -50,7 +50,7 @@ MVVM是一种常用且经常被误解的模式，主要用于构建用户界面�
 不要将异步模式与`Async`关键字混淆，异步模式用于在不阻塞UI或当前处理的情况下执行长时间运行的任务。在其最简单的形式中，异步模式描述了长时间运行的任务应在另一个线程（或类似的线程抽象，如任务）中启动，而当前线程继续处理并等待来自后台进程的响应，在返回数据和/或状态时更新UI。这对于在Avalonia应用程序中保持响应式UI至关重要。
 
 ---
-上述每种模式都将在我们的案例研究中进行深入探讨，以展示它们的实际应用。为了更全面地了解[外观模式](https://en.wikipedia.org/wiki/Facade_pattern)、[单例模式](https://en.wikipedia.org/wiki/Singleton_pattern)、[提供者模式](https://en.wikipedia.org/wiki/Provider_model)以及[设计模式](https://en.wikipedia.org/wiki/Design_Patterns)的一般情况，您可能希望深入研究维基百科等平台上提供的资源。
+上述每种模式都将在我们的案例研究中进行深入探讨，以展示它们的实际应用。为了更全面地了解[外观模式](https://en.wikipedia.org/wiki/Facade_pattern)、[单例模式](https://en.wikipedia.org/wiki/Singleton_pattern)、[提供程序](https://en.wikipedia.org/wiki/Provider_model)以及[设计模式](https://en.wikipedia.org/wiki/Design_Patterns)的一般情况，您可能希望深入研究维基百科等平台上提供的资源。
 
 
 
