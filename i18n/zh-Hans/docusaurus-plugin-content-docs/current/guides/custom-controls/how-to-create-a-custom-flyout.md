@@ -1,15 +1,15 @@
 ---
 id: how-to-create-a-custom-flyout
-title: How To Create a Custom Panel
+title: 如何创建自定义面板
 ---
 
-# How To Create a Custom Flyout
+# 如何创建自定义弹出窗口
 
-## Creating Custom Flyouts
+## 创建自定义弹出窗口
 
-To create a custom flyout type, derive from FlyoutBase. You'll have to override the abstract method `CreatePresenter()` to specify the presenter the `Flyout` should use to display its content. This can be any type of control, but note that this is the root content for the inner popup and should be styled with background, border, corner radius, etc. to match other popups. You can still use a normal `FlyoutPresenter` if you wish
+要创建自定义的弹出窗口类型，需要从FlyoutBase派生。您需要重写抽象方法`CreatePresenter()`来指定`Flyout`应该使用哪个Presenter来显示其内容。这可以是任何类型的控件，但请注意，这是内部弹出窗口的根内容，应该使用背景、边框、圆角等样式来匹配其他弹出窗口。如果希望，仍然可以使用普通的`FlyoutPresenter`。
 
-The following example creates a simple `Flyout` that hosts an image
+以下示例创建了一个简单的`Flyout`，其中包含一个图像。
 
 ```csharp
 public class MyImageFlyout : FlyoutBase
@@ -21,12 +21,12 @@ public class MyImageFlyout : FlyoutBase
 
     protected override Control CreatePresenter()
     {
-        // In this example, we'll use the default FlyoutPresenter as the root content, and add an Image control to show our content
+        // 在这个示例中，我们将使用默认的FlyoutPresenter作为根内容，并添加一个图像控件来显示我们的内容
         return new FlyoutPresenter
         {
             Content = new Image
             {
-                // Use binding here so the image automatically updates when the property updates
+                // 在这里使用绑定，这样当属性更新时，图像会自动更新
                 [!Image.SourceProperty] = this[!ImageProperty]
             }
         };

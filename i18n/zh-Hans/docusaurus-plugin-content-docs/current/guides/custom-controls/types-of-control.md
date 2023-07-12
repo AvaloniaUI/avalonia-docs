@@ -1,26 +1,27 @@
 ---
 id: types-of-control
-title: Types of Control
+title: 控制类型
 ---
 
-If you want to create your own controls, there are three main categories of control in Avalonia. The first thing to do is choose the category of control that best suits your use-case.
+如果您想创建自己的控件，Avalonia中有三个主要的控件类别。首先要做的是选择最适合您用例的控件类别。
 
-User Controls
-UserControls are the simplest way to author controls. This type of control is best for "views" or "pages" that are specific to an application. UserControls are authored in the same way as you would author a Window: by creating a new UserControl from a template and adding controls to it.
+用户控件
+用户控件是创建控件的最简单方法。这种类型的控件最适合特定于应用程序的“视图”或“页面”。用户控件的创建方式与创建窗口的方式相同：通过从模板创建一个新的用户控件，并向其添加控件。
 
-Templated Controls
-TemplatedControls are best used for generic controls that can be shared among various applications. They are lookless controls, meaning that they can be restyled for different themes and applications. The majority of standard controls defined by Avalonia fit into this category.
+模板控件
+模板控件最适用于可以在各种应用程序之间共享的通用控件。它们是无外观的控件，意味着可以为不同的主题和应用程序重新定义样式。Avalonia定义的大多数标准控件属于此类别。
 
 :::info
-In WPF/UWP you would inherit from the Control class to create a new templated control, but in Avalonia you should inherit from TemplatedControl. 
+在WPF/UWP中，您将从Control类继承以创建新的模板控件，但在Avalonia中，您应该从TemplatedControl继承。
 :::
 
 :::info
-If you want to provide a Style for your TemplatedControl in a separate file, remember to include this file in your Application via StyleInclude. :::
+如果您想为模板控件提供单独的样式文件，请记得通过StyleInclude将此文件包含在您的应用程序中。
+:::
 
-Basic Control
-Basic Controls are the foundation of user interfaces - they draw themselves using geometry by overriding the Visual.Render method. Controls such as TextBlock and Image fall into this category.
+基本控件
+基本控件是用户界面的基础-它们通过重写Visual.Render方法使用几何图形进行绘制。TextBlock和Image等控件属于此类别。
 
 :::info
-In WPF/UWP you would inherit from the FrameworkElement class to create a new basic control, but in Avalonia you should inherit from Control. 
+在WPF/UWP中，您将从FrameworkElement类继承以创建新的基本控件，但在Avalonia中，您应该从Control继承。
 :::

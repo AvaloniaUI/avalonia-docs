@@ -3,54 +3,54 @@ id: architecture
 title: Architecture
 ---
 
-A crucial aspect of building cross-platform applications with Avalonia is creating an architecture that enables maximum code sharing across different platforms. By adhering to the fundamental principles of Object-Oriented Programming, you can establish a well-structured application:
+使用Avalonia构建跨平台应用程序的一个关键方面是创建一种架构，可以在不同平台之间实现最大程度的代码共享。通过遵循面向对象编程的基本原则，您可以建立一个结构良好的应用程序：
 
-1. **Encapsulation** – This involves ensuring that classes and architectural layers only expose a minimal API that performs their necessary functions while concealing the internal implementation details. In practical terms, this means that objects operate as 'black boxes', and the code utilizing them doesn't need to comprehend their internal workings. Architecturally, it implies implementing patterns like the Façade that promote a simplified API orchestrating more complex interactions on behalf of the code in higher abstract layers. Hence, the UI code should focus solely on displaying screens and accepting user input, never directly interacting with databases or other lower-level operations.
-2. **Separation of Responsibilities** – Every component, whether at the architectural or class level, should have a clear and defined purpose. Each component should perform its specified tasks and expose that functionality via an API accessible to other classes needing to use it.
-3. **Polymorphism** – Programming to an interface (or an abstract class) supporting multiple implementations allows core code to be written and shared across platforms while still interacting with platform-specific features offered by Avalonia.
+1. **封装** - 这涉及确保类和架构层只公开执行其必要功能的最小API，同时隐藏内部实现细节。在实际应用中，这意味着对象作为“黑盒”运行，使用它们的代码不需要理解其内部工作原理。在架构上，这意味着实现促进简化API的模式，如外观模式，代表更高抽象层中的代码进行更复杂的交互。因此，UI代码应仅关注显示屏幕和接受用户输入，而不直接与数据库或其他低级操作进行交互。
+2. **责任分离** - 每个组件，无论是在架构层还是类级别，都应具有明确和定义的目的。每个组件应执行其指定的任务，并通过API将该功能暴露给其他需要使用它的类。
+3. **多态性** - 编程到支持多个实现的接口（或抽象类）允许核心代码在不同平台之间编写和共享，同时与Avalonia提供的特定于平台的功能进行交互。
 
-The result of these principles is an application modelled after real-world or abstract entities with distinct logical layers. 
+这些原则的结果是一个模拟现实世界或抽象实体的应用程序，具有明确的逻辑层次结构。
 
-Separating code into layers makes the application easier to understand, test, and maintain. It's advisable to keep the code in each layer physically separate (either in different directories or even separate projects for larger applications) as well as logically separate (using namespaces). With Avalonia, you can share not just the business logic, but the UI code too across platforms, reducing the need for multiple UI projects and further enhancing code reuse.
+将代码分离为层使应用程序更易于理解、测试和维护。建议将每个层中的代码物理上分开（可以在不同的目录中或者对于较大的应用程序甚至是不同的项目中）以及逻辑上分开（使用命名空间）。使用Avalonia，您不仅可以共享业务逻辑，还可以跨平台共享UI代码，从而减少了对多个UI项目的需求，并进一步增强了代码重用。
 
-## Typical Application Layers
+## 典型的应用程序层次结构
 
-In this document and the relevant case studies, we reference the following five application layers:
+在本文档和相关案例研究中，我们引用以下五个应用程序层：
 
-1. **Data Layer** – This is where non-volatile data persistence occurs, likely through a database like SQLite or LiteDB, but could be implemented with XML files or other suitable mechanisms.
-2. **Data Access Layer** – This layer is a wrapper around the Data Layer providing Create, Read, Update, Delete (CRUD) operations on the data without revealing implementation details to the caller. For instance, the DAL might contain SQL queries to interact with the data, but the code referencing it doesn't need to be aware of this.
-3. **Business Layer** – Sometimes referred to as the Business Logic Layer or BLL, this layer houses business entity definitions (the Model) and business logic. It is a prime candidate for the Business Facade pattern.
-4. **Service Access Layer** – This layer is used to access services in the cloud, ranging from complex web services (REST, JSON) to simple retrieval of data and images from remote servers. It encapsulates networking behaviour and provides a streamlined API for consumption by the Application and UI layers.
-5. **Application Layer** – This layer contains code that is generally platform-specific or code that is specific to the application (not typically reusable). In the Avalonia framework, this layer is where you decide which platform-specific features to leverage if any. The distinction between this layer and the UI layer becomes clearer with Avalonia since the UI code can be shared across platforms.
-6. **User Interface (UI) Layer** – This user-facing layer contains views and the view-models that manage them. Avalonia makes it possible for this layer shared across every supported platform, unlike traditional architectures where the UI layer would be platform-specific.
+1. **数据层** - 这是非易失性数据持久化发生的地方，通常通过像SQLite或LiteDB这样的数据库，但也可以使用XML文件或其他适当的机制来实现。
+2. **数据访问层** - 这一层是围绕数据层的包装器，提供对数据的创建、读取、更新、删除（CRUD）操作，而不向调用者透露实现细节。例如，数据访问层可能包含与数据交互的SQL查询，但引用它的代码不需要知道这一点。
+3. **业务层** - 有时也称为业务逻辑层或BLL，该层包含业务实体定义（模型）和业务逻辑。它是业务外观模式的一个主要候选者。
+4. **服务访问层** - 这一层用于访问云中的服务，从复杂的Web服务（REST，JSON）到从远程服务器检索数据和图像的简单操作。它封装了网络行为，并提供了一个简化的API，供应用程序和UI层使用。
+5. **应用程序层** - 这一层包含通常是特定于平台的代码或特定于应用程序的代码（通常不可重用）。在Avalonia框架中，这一层决定了是否利用特定于平台的功能。在Avalonia中，由于UI代码可以在各个平台之间共享，因此这一层与UI层之间的区别变得更加清晰。
+6. **用户界面（UI）层** - 这个面向用户的层包含视图和管理它们的视图模型。与传统架构不同，Avalonia使得这一层可以在每个支持的平台上共享，而不是特定于平台。
 
-An application might not contain all layers – for instance, the Service Access Layer would not be present in an application that doesn't access network resources. A simpler application might merge the Data Layer and Data Access Layer because the operations are extremely basic. With Avalonia, you have the flexibility to shape your application architecture to suit your specific needs, enjoying a high degree of code reusability across platforms.
+一个应用程序可能不包含所有的层 - 例如，如果一个应用程序不访问网络资源，那么服务访问层就不会存在。一个更简单的应用程序可能会合并数据层和数据访问层，因为操作非常基本。使用Avalonia，您可以根据自己的特定需求灵活地塑造应用程序架构，享受在不同平台上高度可重用的代码。
 
-## Common Architectual Patterns
+## 常见的架构模式
 
-Patterns are a well-established approach to capture recurring solutions to common problems. There are several key patterns that are valuable to comprehend when building maintainable and understandable applications with Avalonia.
+模式是一种既定的方法，用于解决重复出现的常见问题。在使用Avalonia构建可维护和可理解的应用程序时，理解以下几个关键模式非常有价值。
 
-### Model, View, ViewModel (MVVM) 
-A popular and often misunderstood pattern, MVVM is primarily employed when constructing User Interfaces and promotes a separation between the actual definition of a UI Screen (View), the logic behind it (ViewModel), and the data that populates it (Model). The ViewModel acts as an intermediary between the View and the Model. The Model, although crucial, is a distinct and optional piece, and thus, the essence of understanding this pattern resides in the relationship between the View and ViewModel.
+### Model-View-ViewModel（MVVM）
+MVVM是一种常用且经常被误解的模式，主要用于构建用户界面，促进了UI屏幕的实际定义（视图）、背后的逻辑（视图模型）以及填充它的数据（模型）之间的分离。视图模型充当视图和模型之间的中介。模型虽然很重要，但它是一个独立且可选的部分，因此理解这种模式的本质在于理解视图和视图模型之间的关系。
 
 :::info
-[Learn more about MVVM](../../concepts/the-mvvm-pattern/).
+[了解更多关于MVVM的信息](../../concepts/the-mvvm-pattern/)。
 :::
 
-### Business Façade
-Also known as the Manager Pattern, this provides a simplified point of entry for intricate operations. For instance, in a Task Tracking application, you might have a TaskManager class with methods such as GetAllTasks(), GetTask(taskID), SaveTask (task), etc. The TaskManager class provides a Façade to the inner mechanisms of saving/retrieving tasks objects.
+### 业务外观
+也称为管理器模式，它为复杂操作提供了一个简化的入口点。例如，在任务跟踪应用程序中，您可能会有一个TaskManager类，其中包含诸如GetAllTasks()、GetTask(taskID)、SaveTask(task)等方法。TaskManager类为保存/检索任务对象的内部机制提供了一个外观。
 
-### Singleton 
-The Singleton pattern ensures that only a single instance of a particular object can ever exist. For example, when using SQLite in applications, you typically want only one instance of the database. The Singleton pattern is an efficient method to enforce this.
+### 单例
+单例模式确保只能存在一个特定对象的实例。例如，在应用程序中使用SQLite时，通常只希望有一个数据库实例。单例模式是强制执行这一点的有效方法。
 
-### Provider
-A pattern originally coined by Microsoft to promote code re-use across Silverlight, WPF and WinForms applications. Shared code can be written against an interface or abstract class, and platform-specific concrete implementations are written and passed in when the code is utilised. In Avalonia, since we can share both UI and application logic, this pattern can help handle platform-specific exceptions or leverage platform-specific features.
+### 提供程序
+这是微软最初为促进在Silverlight、WPF和WinForms应用程序之间重用代码而创造的一种模式。可以针对接口或抽象类编写共享代码，并在使用代码时编写和传递特定于平台的具体实现。在Avalonia中，由于我们可以共享UI和应用程序逻辑，这种模式可以帮助处理特定于平台的异常或利用特定于平台的功能。
 
-### Async
-Not to be confused with the `Async` keyword, the Async pattern is used when long-running tasks need to be executed without holding up the UI or current processing. In its simplest form, the Async pattern describes that long-running tasks should be kicked off in another thread (or a similar thread abstraction such as a Task) while the current thread continues to process and listens for a response from the background process, updating the UI when data and/or state is returned. This is essential in maintaining a responsive UI in Avalonia applications.
+### 异步
+不要将异步模式与`Async`关键字混淆，异步模式用于在不阻塞UI或当前处理的情况下执行长时间运行的任务。在其最简单的形式中，异步模式描述了长时间运行的任务应在另一个线程（或类似的线程抽象，如任务）中启动，而当前线程继续处理并等待来自后台进程的响应，在返回数据和/或状态时更新UI。这对于在Avalonia应用程序中保持响应式UI至关重要。
 
 ---
-Each of the aforementioned patterns will be explored in-depth as their practical application is demonstrated in our case studies. For a more comprehensive understanding of the [Facade](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), and [Provider](https://en.wikipedia.org/wiki/Provider_model) patterns, as well as [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) in general, you may want to delve into resources available on platforms like Wikipedia.
+上述每种模式都将在我们的案例研究中进行深入探讨，以展示它们的实际应用。为了更全面地了解[外观模式](https://en.wikipedia.org/wiki/Facade_pattern)、[单例模式](https://en.wikipedia.org/wiki/Singleton_pattern)、[提供程序](https://en.wikipedia.org/wiki/Provider_model)以及[设计模式](https://en.wikipedia.org/wiki/Design_Patterns)的一般情况，您可能希望深入研究维基百科等平台上提供的资源。
 
 
 

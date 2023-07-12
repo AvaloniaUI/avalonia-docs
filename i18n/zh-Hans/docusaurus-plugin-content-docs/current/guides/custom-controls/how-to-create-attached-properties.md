@@ -1,31 +1,31 @@
 ---
 id: how-to-create-attached-properties
-title: How To Create Attached Properties
+title: 如何创建附加属性
 ---
 
 
-# How To Create Attached Properties
+# 如何创建附加属性
 
-When you need more or let's say foreign properties on avalonia elements, then attached properties are the right thing to use. They can also be used to create so called behaviors to generally modify the hosted gui components. This can be utilized to bind a command to an event for instance.
+当您需要在Avalonia元素上添加更多或者说外部属性时，附加属性是正确的选择。它们还可以用于创建所谓的行为，以通常修改托管的GUI组件。这可以用于将命令绑定到事件上。
 
-Here we present an example of how to use a command in an MVVM compatible way and bind it to an event.
+下面是一个示例，展示了如何以符合MVVM的方式使用命令，并将其绑定到事件上。
 
-It may not be the ideal solution as there are projects such as [Avalonia Behaviors](https://github.com/wieslawsoltes/AvaloniaBehaviors) where this is properly done. But it illustrates the following two learnings:
+这可能不是最理想的解决方案，因为有一些项目（如[Avalonia Behaviors](https://github.com/wieslawsoltes/AvaloniaBehaviors)）可以正确地完成这个任务。但它说明了以下两个要点：
 
-* How to create attached properties in _Avalonia UI_
-* How to use them in a MVVM way.
+* 如何在_Avalonia UI_中创建附加属性
+* 如何以MVVM的方式使用它们
 
-First we have to create our attached property. The method `AvaloniaProperty.RegisterAttached` is used for that purpose. Note that by convention the **public static** CLR-property for the attached property is named _XxxxProperty_. Also note that by convention the name (the parameter) of the attaced property is _Xxxx_ without the _Property_. And finally note that by convention one must provide two **public static** methods called _SetXxxx(element,value)_ and _GetXxxx(element)_.
+首先，我们需要创建我们的附加属性。使用`AvaloniaProperty.RegisterAttached`方法来实现。请注意，按照约定，附加属性的**public static** CLR属性的名称应为_XxxxProperty_。还请注意，按照约定，附加属性的名称（参数）应为_Xxxx_，不包括_Property_。最后，请注意，按照约定，必须提供两个名为_SetXxxx(element,value)_和_GetXxxx(element)_的**public static**方法。
 
-This call ensures that the property has a type, an owner type and one where it may be used.
+这个调用确保属性具有类型、所有者类型和可以使用的类型。
 
-The verify method can be used to clean up a value that is being set. Either by returning the corrected value or discard the process by returning `AvaloniaProperty.UnsetValue`. Or one can perform special tasks with the element that the property is hosted by. The getter and setter methods should always just set the value and never do anything beyond. In fact they will usually never be called as the Binding system will recognize the convention and set the properties directly where they are stored.
+验证方法可以用来清理正在设置的值。可以通过返回更正后的值或返回`AvaloniaProperty.UnsetValue`来丢弃该过程。或者可以执行与托管属性的元素相关的特殊任务。获取器和设置器方法应该只设置值，不要做其他任何操作。实际上，它们通常不会被调用，因为绑定系统会识别约定并直接在存储属性的位置设置属性。
 
-In this example file we create two attached properties that interact with each other: A _Command_ property and a _CommandParameter_ that is used by when invoking the command.
+在这个示例文件中，我们创建了两个相互交互的附加属性：一个_Command_属性和一个_CommandParameter_属性，用于在调用命令时使用。
 
 ```csharp
 /// <summary>
-/// Container class for attached properties. Must inherit from <see cref="AvaloniaObject"/>.
+/// 附加属性的容器类。必须继承自<see cref="AvaloniaObject"/>。
 /// </summary>
 public class DoubleTappedBehav : AvaloniaObject
 {
@@ -35,23 +35,23 @@ public class DoubleTappedBehav : AvaloniaObject
     }
 
     /// <summary>
-    /// Identifies the <seealso cref="CommandProperty"/> avalonia attached property.
+    /// 标识<seealso cref="CommandProperty"/> avalonia附加属性。
     /// </summary>
-    /// <value>Provide an <see cref="ICommand"/> derived object or binding.</value>
+    /// <value>提供一个派生自<see cref="ICommand"/>的对象或绑定。</value>
     public static readonly AttachedProperty<ICommand> CommandProperty = AvaloniaProperty.RegisterAttached<DoubleTappedBehav, Interactive, ICommand>(
         "Command", default(ICommand), false, BindingMode.OneTime);
 
     /// <summary>
-    /// Identifies the <seealso cref="CommandParameterProperty"/> avalonia attached property.
-    /// Use this as the parameter for the <see cref="CommandProperty"/>.
+    /// 标识<seealso cref="CommandParameterProperty"/> avalonia附加属性。
+    /// 用作<see cref="CommandProperty"/>的参数。
     /// </summary>
-    /// <value>Any value of type <see cref="object"/>.</value>
+    /// <value>任何类型为<see cref="object"/>的值。</value>
     public static readonly AttachedProperty<object> CommandParameterProperty = AvaloniaProperty.RegisterAttached<DoubleTappedBehav, Interactive, object>(
-        "CommandParameter", default(object), false, BindingMode.OneWay, null);
+        "CommandParameter," default(object), false, BindingMode.OneWay, null);
 
 
     /// <summary>
-    /// <see cref="CommandProperty"/> changed event handler.
+    /// <see cref="CommandProperty"/>的变化事件处理程序。
     /// </summary>
     private static void HandleCommandChanged(IAvaloniaObject element, ICommand commandValue)
     {
@@ -59,22 +59,22 @@ public class DoubleTappedBehav : AvaloniaObject
         {
             if (commandValue != null)
             {
-                // Add non-null value
+                // 添加非空值
                 interactElem.AddHandler(InputElement.DoubleTappedEvent, Handler);
             }
             else
             {
-                // remove prev value
+                // 删除先前的值
                 interactElem.RemoveHandler(InputElement.DoubleTappedEvent, Handler);
             }
         }
 
-        // local handler fcn
+        // 本地处理函数
         static void Handler(object s, RoutedEventArgs e)
         {
             if (s is Interactive interactElem)
             {
-                // This is how we get the parameter off of the gui element.
+                // 这是如何从GUI元素中获取参数的方法。
                 object commandParameter = interactElem.GetValue(CommandParameterProperty);
                 ICommand commandValue = interactElem.GetValue(CommandProperty);
                 if (commandValue?.CanExecute(commandParameter) == true)
@@ -87,7 +87,7 @@ public class DoubleTappedBehav : AvaloniaObject
 
 
     /// <summary>
-    /// Accessor for Attached property <see cref="CommandProperty"/>.
+    /// 附加属性<see cref="CommandProperty"/>的访问器。
     /// </summary>
     public static void SetCommand(AvaloniaObject element, ICommand commandValue)
     {
@@ -95,7 +95,7 @@ public class DoubleTappedBehav : AvaloniaObject
     }
 
     /// <summary>
-    /// Accessor for Attached property <see cref="CommandProperty"/>.
+    /// 附加属性<see cref="CommandProperty"/>的访问器。
     /// </summary>
     public static ICommand GetCommand(AvaloniaObject element)
     {
@@ -103,7 +103,7 @@ public class DoubleTappedBehav : AvaloniaObject
     }
 
     /// <summary>
-    /// Accessor for Attached property <see cref="CommandParameterProperty"/>.
+    /// 附加属性<see cref="CommandParameterProperty"/>的访问器。
     /// </summary>
     public static void SetCommandParameter(AvaloniaObject element, object parameter)
     {
@@ -111,7 +111,7 @@ public class DoubleTappedBehav : AvaloniaObject
     }
 
     /// <summary>
-    /// Accessor for Attached property <see cref="CommandParameterProperty"/>.
+    /// 附加属性<see cref="CommandParameterProperty"/>的访问器。
     /// </summary>
     public static object GetCommandParameter(AvaloniaObject element)
     {
@@ -121,9 +121,9 @@ public class DoubleTappedBehav : AvaloniaObject
 
 ```
 
-In the verify method we utilize the routed event system to attach a new handler. Note that the handler should be detached, again. The value of the property is requested by the normal program mechanisms using `GetValue()` method.
+在验证方法中，我们利用路由事件系统来附加一个新的处理程序。请注意，处理程序应该被再次分离。属性的值是通过正常的程序机制使用`GetValue()`方法来请求的。
 
-This example UI shows how to use the attached property. After making the namespace known to the XAML compiler it can be used by qualifying it with a dot. Then bindings can be used.
+这个示例UI展示了如何使用附加属性。在将命名空间告知XAML编译器后，可以通过在前面加上一个点来使用它。然后可以使用绑定。
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -144,7 +144,7 @@ This example UI shows how to use the attached property. After making the namespa
 </UserControl>
 ```
 
-Although the `CommandParameter` only uses a static value, it can be used with binding, too. When used with this view model, the `EditCommandExecuted` will run once a double click happens.
+虽然`CommandParameter`只使用了一个静态值，但它也可以与绑定一起使用。当与这个视图模型一起使用时，一旦发生双击，`EditCommandExecuted`就会运行。
 
 ```csharp
 public class TestViewModel : ReactiveObject
@@ -160,7 +160,7 @@ public class TestViewModel : ReactiveObject
 
     private async Task<Unit> EditCommandExecuted(object p)
     {
-        // p contains "test77"
+        // p包含"test77"
 
         return Unit.Default;
     }

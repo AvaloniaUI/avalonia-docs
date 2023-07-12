@@ -3,79 +3,78 @@ id: dealing-with-platforms
 title: Dealing with Multiple Platforms
 ---
 
-## Managing Platform Differences & Capabilities
+## 管理平台差异和功能
 
-Platform differences aren't just an issue in cross-platform development; even devices within the same platform can possess diverse capabilities.
+平台差异不仅存在于跨平台开发中，即使在同一平台的设备中也可能具有不同的功能。
 
-Most notably, this includes differences in screen size, but numerous other device characteristics may also vary, requiring the application to verify certain capabilities and adapt its behavior based on their presence (or absence). This is espically important when designing for cross paradigm situations, with desktop and mobile operating systems providing very different interaction models.  
+最明显的是屏幕尺寸的差异，但还有许多其他设备特性可能会有所不同，需要应用程序验证某些功能并根据其存在（或不存在）来调整其行为。这在设计跨范式情况下尤为重要，桌面和移动操作系统提供非常不同的交互模型。
 
-Therefore, all applications must be equipped to handle a graceful scaling back of functionality, or risk presenting a minimal feature set that does not leverage the full potential of the underlying platform. 
+因此，所有应用程序必须能够优雅地降低功能，否则可能会呈现出仅具有最小功能集的情况，无法充分利用底层平台的全部潜力。
 
-### Examples of Platform Divergence
+### 平台差异的示例
 
-There are certain fundamental characteristics inherent to applications that are universally applicable. These are high-level concepts that hold true across all devices and platforms and can thus form the core of your application's design:
+有一些应用程序固有的基本特征是普遍适用的。这些是高级概念，在所有设备和平台上都适用，因此可以构成应用程序设计的核心：
 
-* A screen, which can display your application UI.
-* Some form of input devices, typically touch for mobile and mouse and keyboard for desktop. 
-* Display views of data.
-* Editing data.
-* Navigation capabilities. 
+* 屏幕，可以显示应用程序的用户界面。
+* 某种形式的输入设备，通常是移动设备的触摸和桌面的鼠标和键盘。
+* 显示数据的视图。
+* 编辑数据。
+* 导航功能。
 
-### Platform-specific features
+### 平台特定功能
 
-Beyond the universal application characteristics, you will also have to address key platform differences in your design. You may need to consider, and possibly write or tweak code specifically to handle, these differences:
+除了通用应用程序特征之外，您还需要在设计中解决关键的平台差异。您可能需要考虑并可能需要编写或调整代码来处理这些差异：
 
-* **Screen Sizes**: While some platforms (like iOS) have standardized screen sizes that are relatively easy to target, others, like Desktop and WebAssembly, enable an unlimited variety of screen dimensions which would require more effort to support in your application.
+* **屏幕尺寸**：某些平台（如iOS）具有标准化的屏幕尺寸，相对容易定位，而其他平台（如桌面和WebAssembly）则可以支持各种屏幕尺寸，这需要更多的工作来支持您的应用程序。
 
-* **Navigation Metaphors**: These can vary across platforms (e.g., hardware 'back' button) and even within platforms (e.g., differences between Android 2 and 4, iPhone vs iPad).
+* **导航隐喻**：这些在平台之间可能会有所不同（例如，硬件的“返回”按钮），甚至在平台内部也可能有所不同（例如，Android 2和4之间的差异，iPhone与iPad之间的差异）。
 
-* **Keyboards**: Some devices may come with physical keyboards, while others only feature a software keyboard. Code that detects when a soft-keyboard is obscuring part of the screen needs to be sensitive to these differences.
+* **键盘**：某些设备可能配备物理键盘，而其他设备只有软键盘。检测软键盘遮挡屏幕部分时的代码需要对这些差异进行敏感处理。
 
-These platform-specific differences should be carefully considered when designing your Avalonia application to ensure a seamless user experience across all platforms. While you should strive to maximise your code reuse, you should also avoid attempting to reuse 100% of your code across all supported platforms. Instead, talyor each platform UIs to the feel at home on the device. 
+在设计Avalonia应用程序时，应仔细考虑这些平台特定差异，以确保在所有平台上实现无缝的用户体验。虽然您应该努力最大程度地重用代码，但也应避免尝试在所有支持的平台上100％重用代码。相反，为每个平台的用户界面定制以适应设备的感觉。
 
-### Dealing with Platform Divergence
+### 处理平台差异
 
-Supporting multiple platforms from the same code-base can be achieved through abstracting platform features. 
+通过抽象平台功能，可以从相同的代码库支持多个平台。
 
-* **Platform Abstraction**: This approach leverages the Business Façade pattern to provide uniform access across platforms. It abstracts the unique platform implementations into a single, cohesive API. The primary advantage is the ability to write platform-agnostic code, enhancing code reusability and maintainability. However, this approach may not fully exploit the unique features and capabilities of each platform.
+* **平台抽象**：此方法利用业务外观模式，在各个平台上提供统一的访问。它将独特的平台实现抽象为一个单一的、连贯的API。其主要优点是能够编写与平台无关的代码，增强了代码的可重用性和可维护性。然而，这种方法可能无法充分利用每个平台的独特功能和能力。
 
 :::tip
-[Avalonia.Essentials](https://github.com/AvaloniaUI/Avalonia.Essentials) provides pre-built abstractions for common mobile features. Including: 
+[Avalonia.Essentials](https://github.com/AvaloniaUI/Avalonia.Essentials)提供了常见移动功能的预构建抽象。包括：
 
-* Accelerometer
-* Barometer
-* Battery
-* Camera
-* Connectivity
-* Flashlight
-* Geolocation
-* Gyroscope
-* Orientation
+* 加速度计
+* 气压计
+* 电池
+* 相机
+* 连接性
+* 手电筒
+* 地理位置
+* 陀螺仪
+* 方向
 :::
 
-## Platform Abstraction
+## 平台抽象
 
-In Avalonia, you can employ class abstractions to streamline your development process across different platforms. This can be achieved using interfaces or base classes defined in the shared code, then implemented or extended in platform-specific projects.
+在Avalonia中，您可以使用类抽象来简化在不同平台上的开发过程。这可以通过在共享代码中定义接口或基类，然后在特定平台的项目中实现或扩展来实现。
 
-### Interfaces
+### 接口
 
-The utilization of interfaces empowers you to create platform-specific classes that can be incorporated into your shared libraries for code reuse.
+使用接口可以创建特定于平台的类，这些类可以并入共享库以实现代码重用。
 
-#### How it works
-The interface is defined within the shared code and passed into the shared library as a parameter or property. The platform-specific applications can then implement the interface, allowing shared code to process it effectively.
+#### 工作原理
+接口在共享代码中定义，并作为参数或属性传递到共享库中。然后，特定于平台的应用程序可以实现接口，使共享代码能够有效处理它。
 
-#### Advantages
-The main advantage of this approach is that the implementation can contain platform-specific code and even reference platform-specific external libraries, offering high flexibility.
+#### 优点
+这种方法的主要优点是实现可以包含特定于平台的代码，甚至可以引用特定于平台的外部库，提供了很高的灵活性。
 
-####  Disadvantages
-A potential disadvantage is the need to create and pass implementations into the shared code. If the interface is employed deep within the shared code, it may have to be passed through multiple method parameters, which might lead to a more complex call chain. If the shared code uses numerous different interfaces, they all must be created and set within the shared code.
+#### 缺点
+潜在的缺点是需要创建和传递实现到共享代码中。如果接口在共享代码中被深度使用，可能需要通过多个方法参数传递，这可能导致更复杂的调用链。如果共享代码使用了多个不同的接口，所有这些接口都必须在共享代码中创建和设置。
 
-### Inheritance
-Your shared code can implement abstract or virtual classes that could be extended in one or more platform-specific projects. This technique resembles the use of interfaces but provides some already implemented behaviors.
+### 继承
+您的共享代码可以实现抽象或虚拟类，这些类可以在一个或多个特定平台的项目中进行扩展。这种技术类似于使用接口，但提供了一些已经实现的行为。
 
-#### How it works
-By using inheritance, you can create base classes in your shared code that can be optionally extended in your platform-specific projects. However, as C# allows only single inheritance, this approach may influence your future API design. Hence, use inheritance with caution.
+#### 工作原理
+通过使用继承，您可以在共享代码中创建基类，可以选择在特定平台的项目中进行扩展。然而，由于C#只允许单继承，这种方法可能会影响您未来的API设计。因此，要谨慎使用继承。
 
-#### Advantages and Disadvantages
-The advantages and disadvantages of using interfaces apply equally to inheritance. However, an additional advantage of inheritance is that the base class can contain some implementation code. This potentially could provide an entire platform-agnostic implementation that can be optionally extended as needed.
-
+#### 优点和缺点
+使用接口的优点和缺点同样适用于继承。然而，继承的一个额外优点是基类可以包含一些实现代码。这可能提供一个完整的平台无关实现，可以根据需要进行扩展。

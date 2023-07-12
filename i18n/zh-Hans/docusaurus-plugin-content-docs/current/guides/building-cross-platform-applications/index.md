@@ -1,20 +1,18 @@
 ---
 id: index
-title: Building Cross-Platform Applications
+title: 构建跨平台应用程序
 ---
 
-This guide introduces Avalonia and outlines how to architect a cross-platform application to maximize code re-use and deliver a high-quality UI experience across all major platforms: Windows, Linux, macOS, iOS, Android and WebAssembly.
+本指南介绍了Avalonia，并概述了如何构建跨平台应用程序，以最大程度地重用代码，并在所有主要平台（Windows、Linux、macOS、iOS、Android和WebAssembly）上提供高质量的用户界面体验。
 
-Unlike the Xamarin.Forms and MAUI approach, which tends to yield applications with a lowest-common-denominator feature-set and a generic-looking user interface, Avalonia UI encourages leveraging its drawn UI capabilities. It allows developers to write their data storage and business logic code once, while offering a responsive and high-performing UI across all platforms. This document discusses a general architectural approach to achieve this goal.
+与Xamarin.Forms和MAUI方法不同，这些方法往往会产生具有最低公共特性集和通用外观的应用程序界面，Avalonia UI鼓励利用其绘制UI的能力。它允许开发人员只编写一次数据存储和业务逻辑代码，同时在所有平台上提供响应式和高性能的用户界面。本文讨论了实现这一目标的一般架构方法。
 
+以下是创建Avalonia跨平台应用程序的关键要点摘要：
 
-Here is a summary of the key points for creating Avalonia cross-platform apps:
-
-1. **Use .NET** - Develop your apps in C#, F# or VB.NET. Existing code written with .NET can be seamlessly ported to Windows, Linux, macOS, iOS, Android and WebAssembly using Avalonia.
-2. **Utilize the MVVM design pattern** - Develop your application’s User Interface using the `Model/View/ViewModel` pattern. This approach promotes a clear separation between the "Model” and the "View", with the "ViewModel" acting as an intermediary. This ensures that your UI logic remains agnostic of the underlying platform, thereby promoting code reuse and maintainability.
-3. **Leverage Avalonia's drawing capabilities** - Avalonia doesn't rely on native UI controls, instead, it operates similarly to Flutter, drawing the entire UI. This not only ensures a consistent look and feel across all platforms but also offers an unparalleled level of customization, allowing you to tailor the UI to your exact needs.
-4. **Balance between core and platform-specific code** - The key to achieving high code reuse is striking the right balance between platform-agnostic core code and platform-specific code. The core code comprises everything that does not interact directly with the underlying operating system.
-
+1. **使用.NET** - 使用C＃、F＃或VB.NET开发应用程序。使用Avalonia可以无缝地将现有的.NET代码移植到Windows、Linux、macOS、iOS、Android和WebAssembly。
+2. **利用MVVM设计模式** - 使用“模型/视图/视图模型”模式开发应用程序的用户界面。这种方法促进了“模型”和“视图”之间的明确分离，而“视图模型”充当中间人。这确保了您的UI逻辑与底层平台无关，从而促进了代码重用和可维护性。
+3. **利用Avalonia的绘图能力** - Avalonia不依赖于本地UI控件，而是类似于Flutter，绘制整个UI。这不仅确保了在所有平台上的一致外观和体验，还提供了无与伦比的自定义水平，使您能够根据实际需求定制UI。
+4. **平衡核心代码和特定平台代码** - 实现高代码重用的关键是在平台无关的核心代码和特定平台代码之间取得适当的平衡。核心代码包括与底层操作系统没有直接交互的所有内容。
 
 
 

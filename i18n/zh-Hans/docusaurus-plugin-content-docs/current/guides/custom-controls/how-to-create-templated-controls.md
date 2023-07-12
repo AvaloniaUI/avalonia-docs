@@ -1,45 +1,45 @@
 ---
 id: how-to-create-templated-controls
-title: How To Create Templated Controls
+title: 如何创建模板化控件
 ---
 
 
-# How To Create Templated Controls
+# 如何创建模板化控件
 
-## Data Binding
+## 数据绑定
 
-When you're creating a control template and you want to bind to the templated parent you can use:
+当你创建一个控件模板并且想要绑定到模板化的父级时，你可以使用以下方式：
 
 ```markup
 <TextBlock Name="tb" Text="{TemplateBinding Caption}"/>
 
-<!-- Which is the same as -->
+<!-- 这与以下方式相同 -->
 <TextBlock Name="tb" Text="{Binding Caption, RelativeSource={RelativeSource TemplatedParent}}"/>
 ```
 
-Although the two syntaxes shown here are equivalent in most cases, there are some differences:
+虽然这里展示的两种语法在大多数情况下是等效的，但是有一些区别：
 
-1.  `TemplateBinding` accepts only a single property rather than a property path, so if you want to bind using a property path you must use the second syntax:
+1. `TemplateBinding` 只接受单个属性而不是属性路径，所以如果你想要使用属性路径进行绑定，你必须使用第二种语法：
 
     ```markup
-    <!-- This WON'T work as TemplateBinding only accepts single properties -->
+    <!-- 这样是行不通的，因为 TemplateBinding 只接受单个属性 -->
     <TextBlock Name="tb" Text="{TemplateBinding Caption.Length}"/>
 
-    <!-- Instead this syntax must be used in this case -->
+    <!-- 在这种情况下必须使用以下语法 -->
     <TextBlock Name="tb" Text="{Binding Caption.Length, RelativeSource={RelativeSource TemplatedParent}}"/>
     ```
-2.  A `TemplateBinding` only supports `OneWay` mode for performance reasons (this is the [same as WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks)). This means a `TemplateBinding` is actually equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. If `TwoWay` binding is required in a control template, the full syntax is needed as shown below. Note that `Binding` will also use the default binding mode unlike `TemplateBinding`.
+2. 由于性能原因，`TemplateBinding` 只支持 `OneWay` 模式（这与 [WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks) 相同）。这意味着 `TemplateBinding` 实际上等同于 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`。如果在控件模板中需要 `TwoWay` 绑定，则需要使用完整的语法，如下所示。请注意，`Binding` 也将使用默认的绑定模式，不同于 `TemplateBinding`。
 
     ```markup
     {Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}
     ```
-3. `TemplateBinding` can only be used on `IStyledElement`.
+3. `TemplateBinding` 只能在 `IStyledElement` 上使用。
 
 ```markup
-<!-- This WON'T work as GeometryDrawing is not a IStyledElement. -->
+<!-- 这样是行不通的，因为 GeometryDrawing 不是 IStyledElement。 -->
 <GeometryDrawing Brush="{TemplateBinding Foreground}"/>
 
-<!-- Instead this syntax must be used in this case. -->
+<!-- 在这种情况下必须使用以下语法。 -->
 <GeometryDrawing Brush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
 ```
 

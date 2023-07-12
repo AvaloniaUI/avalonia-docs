@@ -1,38 +1,38 @@
 ---
 id: defining-properties
-title: Defining Properties
+title: 定义属性
 ---
 
-# Styled Property
+# 样式化属性
 
-If you are creating a custom control, you will usually want it to have properties that can be set by the _Avalonia UI_ styling system.
+如果您正在创建自定义控件，通常希望它具有可以由_Avalonia UI_样式系统设置的属性。
 
 :::info
-For more information about how to use styles in _Avalonia UI_, see the guide [here](../../basics/user-interface/styling).
+有关如何在_Avalonia UI_中使用样式的更多信息，请参阅[此处](../../basics/user-interface/styling)的指南。
 :::
 
-On this page, you will see how to implement a property so that it can be changed by the _Avalonia UI_ styling system. This is a two step process:
+在本页面中，您将了解如何实现属性，以便可以通过_Avalonia UI_样式系统进行更改。这是一个两步过程：
 
-* Register a styled property.
-* Provide the getter/setter for the property.
+* 注册样式化属性。
+* 为属性提供getter/setter。
 
-### Register a Styled Property
+### 注册样式化属性
 
-You register a styled property by defining a static read-only field and using the `AvaloniaProperty.Register` method.
+通过定义一个静态只读字段并使用`AvaloniaProperty.Register`方法来注册样式化属性。
 
-There is a convention for the name of a property. It must follow the pattern:
+属性的命名有一个约定。它必须遵循以下模式：
 
 ```
 [AttributeName]Property
 ```
 
-This means that _Avalonia UI_ will look for an attribute in the XAML, like this:
+这意味着_Avalonia UI_将在XAML中查找一个属性，如下所示：
 
 ```
 <MyCustomControl AttributeName="value" ... >
 ```
 
-For example, with a styled property in place, you can control the background color of the custom control from the window styles collection:
+例如，通过使用样式化属性，您可以从窗口样式集合中控制自定义控件的背景颜色：
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
@@ -87,13 +87,13 @@ namespace AvaloniaCCExample.CustomControls
 ```
 
 :::info
-Note that the getter/setter of the property uses the special Avalonia UI `GetValue` and `SetValue` methods.
+请注意，属性的getter/setter使用了特殊的Avalonia UI `GetValue`和`SetValue`方法。
 :::
 
-The styled property will work both at run-time and in the preview panel.
+样式化属性将在运行时和预览面板中均起作用。
 
 <img src='/img/gitbook-import/assets/image (4) (3).png' alt=''/>
 
 :::info
-For more advanced information about how to create a custom control, see [here](../custom-controls/how-to-create-advanced-custom-controls.md).
+有关如何创建高级自定义控件的更高级信息，请参阅[此处](../custom-controls/how-to-create-advanced-custom-controls.md)。
 :::
