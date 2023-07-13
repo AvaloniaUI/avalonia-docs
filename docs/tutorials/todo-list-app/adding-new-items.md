@@ -40,6 +40,15 @@ To create the new view, follow this procedure if you are using Visual Studio:
 </UserControl>
 ```
 
+### .NET Core CLI
+
+Run the following command to create the new view, follow this procedure if you are using .Net Core CLI:
+
+```
+dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Views
+```
+
+
 This gives you a view which looks like this:
 
 <div style={{textAlign: 'center'}}>
