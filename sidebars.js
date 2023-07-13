@@ -409,6 +409,19 @@ const sidebars = {
         },
         {
           'type': 'category',
+          'label': 'Headless Platform',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/headless/index',
+          },
+          'items': [
+            'concepts/headless/headless-xunit',
+            'concepts/headless/headless-nunit',
+            'concepts/headless/headless-custom',
+          ],
+        },
+        {
+          'type': 'category',
           'label': 'Input',
           'items': [
             'concepts/input/routed-events',
@@ -480,7 +493,7 @@ const sidebars = {
         'concepts/ui-composition',
         'concepts/unhandledexceptions',
         'concepts/toplevel',
-        'concepts/view-locator',
+        'concepts/view-locator'
       ],
     },
     {
