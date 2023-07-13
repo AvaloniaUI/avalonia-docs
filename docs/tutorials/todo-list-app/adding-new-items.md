@@ -8,6 +8,27 @@ When you created the `ToDoListView` user control earlier in this tutorial, you a
 
 When the user clicks the button, you want the application to show a new view that will allow the user to enter the description of a new item.
 
+## Create the View Model
+
+To create a view model for the new view, follow this procedure:
+
+- In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
+- Click **Add**, then **Class**.&#x20;
+- Name the class 'AddItemViewModel'. Click **Add**.
+- Add the description property as shown:
+
+```csharp
+using System;
+
+namespace ToDoList.ViewModels
+{
+    public class AddItemViewModel : ViewModelBase
+    {
+        public string Description { get; set; } = String.Empty;
+    }
+}
+```
+
 ## Create a New View
 
 To create the new view, follow this procedure if you are using Visual Studio:
@@ -25,8 +46,6 @@ Run the following command to create the new view, follow this procedure if you a
 ```
 dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Views
 ```
-
-
 
 Alter the XAML to match the following:
 
@@ -63,28 +82,5 @@ The new view has a text box control which has three properties for you to review
 * `AcceptsReturn` creates a multi-line text box.
 * `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you have not created yet).
 * `Watermark` causes a placeholder to be displayed when the text box is empty.
-
-## Create the View Model
-
-So far, you have only bound a description property. So the corresponding view model can be simple to start with.
-
-To create a view model for the new view, follow this procedure:
-
-- In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
-- Click **Add**, then **Class**.&#x20;
-- Name the class 'AddItemViewModel'. Click **Add**.
-- Add the description property as shown:
-
-```csharp
-using System;
-
-namespace ToDoList.ViewModels
-{
-    public class AddItemViewModel : ViewModelBase
-    {
-        public string Description { get; set; } = String.Empty;
-    }
-}
-```
 
 On the next page you will learn how to change the view in the main window to display the new item view in place of the to do list view.
