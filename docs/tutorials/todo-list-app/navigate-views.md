@@ -33,8 +33,11 @@ namespace ToDoList.ViewModels
         public MainWindowViewModel()
         {
             var service = new ToDoListService();
-            _contentViewModel= new ToDoListViewModel(service.GetItems());
+            ToDoList = new ToDoListViewModel(service.GetItems());
+            _contentViewModel = ToDoList;
         }
+
+        public ToDoListViewModel ToDoList { get; }
         
         public ViewModelBase ContentViewModel
         {
