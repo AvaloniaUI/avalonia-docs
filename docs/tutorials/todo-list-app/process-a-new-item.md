@@ -24,15 +24,14 @@ namespace ToDoList.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         private ViewModelBase _contentViewModel;
-        public ToDoListViewModel ToDoListViewModel { get; }
 
         //this has a dependency on the ToDoListService
 
         public MainWindowViewModel()
         {
             var service = new ToDoListService();
-            ToDoListViewModel = new ToDoListViewModel(service.GetItems());
-            _contentViewModel = ToDoListViewModel;
+            ToDoList = new ToDoListViewModel(service.GetItems());
+            _contentViewModel = ToDoList;
         }
 
         public ViewModelBase ContentViewModel
@@ -40,6 +39,8 @@ namespace ToDoList.ViewModels
             get => _contentViewModel;
             private set => this.RaiseAndSetIfChanged(ref _contentViewModel, value);
         }
+
+        public ToDoListViewModel ToDoList { get; }
 
         public void AddItem()
         {
@@ -53,9 +54,9 @@ namespace ToDoList.ViewModels
                 {
                     if (newItem != null)
                     {
-                        ToDoListViewModel.ListItems.Add(newItem );
+                        ToDoList.ListItems.Add(newItem );
                     }
-                    ContentViewModel = ToDoListViewModel;
+                    ContentViewModel = ToDoList;
                 });
 
             ContentViewModel = addItemViewModel;
