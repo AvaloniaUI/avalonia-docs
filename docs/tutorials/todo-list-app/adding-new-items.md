@@ -17,7 +17,15 @@ To create the new view, follow this procedure if you are using Visual Studio:
 - Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
 - In **Name** enter 'AddItemView'&#x20;
 - Click **Add**&#x20;
-- Alter the XAML to match the following:
+
+### .NET Core CLI
+
+Run the following command to create the new view, follow this procedure if you are using .Net Core CLI:
+
+```
+dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Views
+```
+Alter the XAML to match the following:
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -38,14 +46,6 @@ To create the new view, follow this procedure if you are using Visual Studio:
              Watermark="Enter your to do item"/>
   </DockPanel>
 </UserControl>
-```
-
-### .NET Core CLI
-
-Run the following command to create the new view, follow this procedure if you are using .Net Core CLI:
-
-```
-dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Views
 ```
 
 
