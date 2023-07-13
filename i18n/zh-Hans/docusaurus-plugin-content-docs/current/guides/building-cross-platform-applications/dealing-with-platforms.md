@@ -1,6 +1,6 @@
 ---
 id: dealing-with-platforms
-title: Dealing with Multiple Platforms
+title: 处理多个平台
 ---
 
 ## 管理平台差异和功能

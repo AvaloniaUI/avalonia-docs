@@ -68,11 +68,11 @@
     "description": "The label for category Data Binding in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.How-To Guides": {
-    "message": "How-To Guides",
+    "message": "操作指南",
     "description": "The label for category How-To Guides in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Building Cross Platform Applications": {
-    "message": "Building Cross Platform Applications",
+    "message": "构建跨平台应用程序",
     "description": "The label for category Building Cross Platform Applications in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Implementation Guides": {
@@ -88,7 +88,7 @@
     "description": "The label for category Graphics and Animation in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Custom Controls": {
-    "message": "Custom Controls",
+    "message": "自定义控件",
     "description": "The label for category Custom Controls in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Development Guides": {

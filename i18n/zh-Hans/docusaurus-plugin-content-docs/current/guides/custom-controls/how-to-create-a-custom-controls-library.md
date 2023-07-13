@@ -1,6 +1,6 @@
 ---
 id: how-to-create-a-custom-controls-library
-title: How To Create a Custom Controls Library
+title: 如何创建自定义控件库
 ---
 
 # 如何创建自定义控件库
