@@ -43,9 +43,6 @@ public class App : Application
     {
         AvaloniaXamlLoader.Load(this);
     }
-
-    public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<TestApplication>()
-        .UseHeadless(new AvaloniaHeadlessPlatformOptions());
 }
 ```
 
@@ -57,13 +54,15 @@ Usually, the `BuildAvaloniaApp` method is defined in the Program.cs file, but NU
 
 The `[AvaloniaTestApplication]` attribute wires the tests in the current project with the specific application. It needs to be defined once per project in any file.
 
-```csharp title=AssemblyInfo.cs
-[assembly: AvaloniaTestApplication(typeof(App))]
-```
+```csharp
+[assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]
 
-:::tip
-It is possible to move the `Application` to a shared project while keeping the `[AvaloniaTestApplication]` attribute near the tests.
-:::
+public class TestAppBuilder
+{
+    public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<App>()
+        .UseHeadless(new AvaloniaHeadlessPlatformOptions());
+}
+```
 
 ## Test Example
 

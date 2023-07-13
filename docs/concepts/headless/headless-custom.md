@@ -44,9 +44,6 @@ public class App : Application
     {
         AvaloniaXamlLoader.Load(this);
     }
-
-    public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<App>()
-        .UseHeadless(new AvaloniaHeadlessPlatformOptions());
 }
 ```
 
