@@ -11,7 +11,6 @@ To set the data context, follow this procedure:
 - Locate the **MainWindowView.axaml** file in the **Views** folder.
 - Remove the `<Design.DataContext>` tag completely.
 - Add the `x:DataType="vm:MainWindowViewModel"` attribute to `<Window>` element.
-- Edit the title attribute to change the window caption to 'Avalonia To Do List'.
 - Locate the content `<views:ToDoListView/>`&#x20;
 - Add the attribute `DataContext="{Binding ToDoList}"` as follows:
 
