@@ -60,7 +60,7 @@ produces the following output in **Windows 10** when text is input
     <img src="/img/controls/textbox/textbox_password.png"  />
   </div>
 
-When applying the style class, `revealPasswordButton`, the TextBox will provide an eye 👁 glyph for the user to temporally show the plane text.
+When using the Fluent theme, you can apply the style class, `revealPasswordButton`, and the TextBox will provide an eye 👁 glyph for the user to show the plane text temporally. Please note, the `TextBox` may be written to but not copied from.
 
 ```markup
 <TextBox Classes="revealPasswordButton" PasswordChar="•" />
