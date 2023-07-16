@@ -2,15 +2,15 @@
 description: CONCEPTS - ReactiveUI
 ---
 
-# View Activation
+# 查看激活
 
-For the [WhenActivated](https://reactiveui.net/docs/handbook/when-activated/) ReactiveUI feature to work, you need to use custom base classes from the `Avalonia.ReactiveUI` package, such as `ReactiveWindow<TViewModel>` or `ReactiveUserControl<TViewModel>`. Of course, you can also implement the `IViewFor<TViewModel>` interface by hand in your class, but make sure you store the `ViewModel` in an `AvaloniaProperty`.
+为了使[WhenActivated](https://reactiveui.net/docs/handbook/when-activated/) ReactiveUI功能正常工作，您需要使用`Avalonia.ReactiveUI`包中的自定义基类，例如`ReactiveWindow<TViewModel>`或`ReactiveUserControl<TViewModel>`。当然，您也可以手动在类中实现`IViewFor<TViewModel>`接口，但请确保将`ViewModel`存储在`AvaloniaProperty`中。
 
-### Activation Example
+### 激活示例
 
 **ViewModel.cs**
 
-This view model implements the `IActivatableViewModel` interface. When the corresponding view gets attached to the visual tree, the code inside the WhenActivated block will get called. When the corresponding view gets detached from the visual tree, the composite disposable will be disposed. `ReactiveObject` is the base class for [view model classes](https://reactiveui.net/docs/handbook/view-models/), and it implements `INotifyPropertyChanged`.
+此视图模型实现了`IActivatableViewModel`接口。当相应的视图附加到可视树时，WhenActivated块内的代码将被调用。当相应的视图从可视树中分离时，复合可处置对象将被处置。`ReactiveObject`是[视图模型类](https://reactiveui.net/docs/handbook/view-models/)的基类，并实现了`INotifyPropertyChanged`。
 
 ```csharp
 public class ViewModel : ReactiveObject, IActivatableViewModel
@@ -22,9 +22,9 @@ public class ViewModel : ReactiveObject, IActivatableViewModel
         Activator = new ViewModelActivator();
         this.WhenActivated((CompositeDisposable disposables) =>
         {
-            /* handle activation */
+            /* 处理激活 */
             Disposable
-                .Create(() => { /* handle deactivation */ })
+                .Create(() => { /* 处理停用 */ })
                 .DisposeWith(disposables);
         });
     }
@@ -33,7 +33,7 @@ public class ViewModel : ReactiveObject, IActivatableViewModel
 
 **View.xaml**
 
-This is the UI for the view model you see above.
+这是上面所示视图模型的用户界面。
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -46,37 +46,37 @@ This is the UI for the view model you see above.
 
 **View.xaml.cs**
 
-This is the code-behind for the `View.xaml` file you see above. Remember to always put a call to `WhenActivated` into your View constructor, otherwise ReactiveUI won't be able to determine when the view model gets activated.
+这是上面你看到的`View.xaml`文件的代码后台。请记住，始终在View构造函数中调用`WhenActivated`，否则ReactiveUI将无法确定何时激活视图模型。
 
 ```csharp
 public class View : ReactiveWindow<ViewModel>
 {
     public View()
     {
-        // ViewModel's WhenActivated block will also get called.
-        this.WhenActivated(disposables => { /* Handle view activation etc. */ });
+        // ViewModel的WhenActivated块也将被调用。
+        this.WhenActivated(disposables => { /* 处理视图激活等 */ });
         AvaloniaXamlLoader.Load(this);
     }
 }
 ```
 
-### Code-Behind ReactiveUI Bindings
+### Code-Behind ReactiveUI绑定
 
-The Avalonia XAML engine doesn't generate strongly typed `x:Name` references to controls. The only way to use [code-behind ReactiveUI bindings](https://reactiveui.net/docs/handbook/data-binding/) for now is to use the `FindControl` method that will find a control by the name specified in XAML, or to use `{Binding Path}` syntax.
+Avalonia XAML引擎不会生成强类型的`x:Name`引用来引用控件。目前，使用[代码后台的ReactiveUI绑定](https://reactiveui.net/docs/handbook/data-binding/)的唯一方法是使用`FindControl`方法，该方法将根据XAML中指定的名称查找控件，或者使用`{Binding Path}`语法。
 
-The `FindControl` method shouldn't be used inside an expression. Instead, create a custom property which calls the `FindControl` method, or store the control in a variable. See the example below illustrating how to use ReactiveUI code-behind bindings with Avalonia.
+不应在表达式中使用`FindControl`方法。相反，可以创建一个调用`FindControl`方法的自定义属性，或者将控件存储在变量中。下面的示例演示了如何在Avalonia中使用ReactiveUI代码后台绑定。
 
 ```csharp
 public class View : ReactiveWindow<ViewModel>
 {
-    // Assume the Button control has the Name="ExampleButton" attribute defined in XAML.
+    // 假设Button控件在XAML中定义了Name="ExampleButton"属性。
     public Button ExampleButton => this.FindControl<Button>("ExampleButton");
 
     public View()
     {
         this.WhenActivated(disposables => 
         {
-            // Bind the 'ExampleCommand' to 'ExampleButton' defined above.
+            // 将'ExampleCommand'绑定到上面定义的'ExampleButton'。
             this.BindCommand(ViewModel, x => x.ExampleCommand, x => x.ExampleButton)
                 .DisposeWith(disposables);
         });

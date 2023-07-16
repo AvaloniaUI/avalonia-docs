@@ -2,14 +2,12 @@
 description: CONCEPTS
 ---
 
-# Input
+# 输入
 
-Avalonia operates on the abstraction called pointer devices.
+Avalonia在抽象层面上操作指针设备。
 
-Various Controls that implement `ICommandSource` have a `HotKey` property
+实现`ICommandSource`的各种控件都有一个`HotKey`属性。
 
+控件通常检测和响应用户输入。Avalonia的[输入系统](../input)使用直接事件和路由事件来支持文本输入、焦点管理和鼠标定位。
 
-
-Controls most often detect and respond to user input. The Avalonia [input system](../input) uses both [direct and routed events](../input/routed-events) to support text input, focus management, and mouse positioning.
-
-Applications often have complex input requirements. Avalonia provides a [command system](../../basics/user-interface/adding-interactivity) that separates user-input actions from the code that responds to those actions.
+应用程序通常具有复杂的输入要求。Avalonia提供了一个[命令系统](../../basics/user-interface/adding-interactivity)，将用户输入操作与响应这些操作的代码分离开来。

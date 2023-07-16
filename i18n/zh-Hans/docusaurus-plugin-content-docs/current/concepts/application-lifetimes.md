@@ -2,30 +2,30 @@
 description: CONCEPTS
 ---
 
-# Application Lifetimes
+# 应用程序生命周期
 
-Not all platforms are created equal! For example, the lifetime management that you may be used to developing with in Windows Forms or WPF can operate only on desktop-style platforms. _Avalonia UI_ is a cross-platform framework; so to make your application portable, it provides several different lifetime models for your application, and also allows you to control everything manually if the target platform permits.
+并非所有平台都是相同的！例如，您可能习惯于在Windows Forms或WPF中开发的生命周期管理仅适用于桌面平台。_Avalonia UI_是一个跨平台框架；因此，为了使您的应用程序可移植，它提供了几种不同的应用程序生命周期模型，并且还允许您在目标平台允许的情况下手动控制一切。
 
-## How do lifetimes work?
+## 生命周期如何工作？
 
-For a desktop application, you initialise like this:
+对于桌面应用程序，您可以这样初始化：
 
 ```csharp
 class Program
 {
-  // This method is needed for IDE previewer infrastructure
+  // 这个方法是为了IDE预览器基础设施而需要的
   public static AppBuilder BuildAvaloniaApp() 
     => AppBuilder.Configure<App>().UsePlatformDetect();
 
-  // The entry point. Things aren't ready yet, so at this point
-  // you shouldn't use any Avalonia types or anything that expects
-  // a SynchronizationContext to be ready
+  // 入口点。此时还没有准备好，所以在这个点上
+  // 您不应该使用任何Avalonia类型或任何期望
+  // 准备好SynchronizationContext的东西
   public static int Main(string[] args) 
     => BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
 }
 ```
 
-Then the main window is created in the `Application` class:
+然后在`Application`类中创建主窗口：
 
 ```csharp
 public override void OnFrameworkInitializationCompleted()
@@ -40,80 +40,80 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-This method is called when the framework has initilized and the `ApplicationLifetime` property contains the chosen lifetime if any.&#x20;
+当框架初始化完成时，将调用此方法，`ApplicationLifetime`属性包含所选择的生命周期（如果有）。
 
 :::info
-If you run the application in design mode (this uses the IDE previewer process), then `ApplicationLifetime` is null.
+如果在设计模式下运行应用程序（这使用IDE预览器进程），则`ApplicationLifetime`为null。
 :::
 
-## Lifetime Interfaces
+## 生命周期接口
 
-_Avalonia UI_ provides a range of interfaces to allow you to choose a level of control that is suitable for your application. These are provided by the `BuildAvaloniaApp().Start[Something]` family of methods.
+_Avalonia UI_提供了一系列接口，允许您选择适合您的应用程序的控制级别。这些接口由`BuildAvaloniaApp().Start[Something]`系列方法提供。
 
 ### IControlledApplicationLifetime
 
-Provided by:
+由以下方法提供：
 
 * `StartWithClassicDesktopLifetime`
 * `StartLinuxFramebuffer`
 
-Allows you to subscribe to `Startup` and `Exit` events and permits explicitly shutting down of the application by calling the `Shutdown` method. This interface gives you control of the application's exit procedures.
+允许您订阅`Startup`和`Exit`事件，并通过调用`Shutdown`方法显式关闭应用程序。此接口使您可以控制应用程序的退出过程。
 
 ### IClassicDesktopStyleApplicationLifetime
 
-Inherits: `IControlledApplicationLifetime`
+继承自：`IControlledApplicationLifetime`
 
-Provided by:
+由以下方法提供：
 
 * `StartWithClassicDesktopLifetime`
 
-Allows you to control your application lifetime in the manner of a Windows Forms or WPF application. This interface provides a way to access the list of the currently opened windows, to set a main window, and has three shutdown modes:
+允许您以Windows Forms或WPF应用程序的方式控制应用程序的生命周期。此接口提供了一种访问当前打开窗口列表的方法，设置主窗口的方法，并具有三种关闭模式：
 
-* `OnLastWindowClose` - shuts down the application when the last window is closed
-* `OnMainWindowClose` - shuts down the application when the main window is closed (if it has been set).
-* `OnExplicitShutdown` - disables automatic shutdown of the application, you need to call the `Shutdown` method in your code.
+* `OnLastWindowClose` - 当最后一个窗口关闭时关闭应用程序
+* `OnMainWindowClose` - 当主窗口关闭时关闭应用程序（如果已设置）。
+* `OnExplicitShutdown` - 禁用应用程序的自动关闭，您需要在代码中调用`Shutdown`方法。
 
 ### ISingleViewApplicationLifetime
 
-Provided by:
+由以下方法提供：
 
 * `StartLinuxFramebuffer`
-* mobile platforms&#x20;
+* 移动平台
 
-Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.&#x20;
+某些平台没有桌面主窗口的概念，只允许在设备屏幕上同时显示一个视图。对于这些平台，生命周期允许您设置和更改主视图类（`MainView`）。
 
 :::info
-To implement the navigation stack on platforms like this (with a single main view), you can use [_ReactiveUI_ routing](https://www.reactiveui.net/docs/handbook/routing/) or another routing control.
+要在这样的平台上实现导航堆栈（具有单个主视图），您可以使用[_ReactiveUI_路由](https://www.reactiveui.net/docs/handbook/routing/)或其他路由控件。
 :::
 
-## Manual Lifetime Management
+## 手动管理生命周期
 
-If you need to, you can take full control of your application's lifetime management. For example on a desktop platform you can pass a delegate to `AppMain` to the `BuildAvaloniaApp.Start` method, and then manage things manually from there:
+如果需要，您可以完全控制应用程序的生命周期管理。例如，在桌面平台上，您可以将委托传递给`BuildAvaloniaApp.Start`方法的`AppMain`，然后从那里手动管理事
 
 ```csharp
 class Program
 {
-  // This method is needed for IDE previewer infrastructure
+  // 这种方法是IDE预览器基础设施所必需的
   public static AppBuilder BuildAvaloniaApp() 
     => AppBuilder.Configure<App>().UsePlatformDetect();
 
-  // The entry point. Things aren't ready yet, so at this point
-  // you shouldn't use any Avalonia types or anything that expects
-  // a SynchronizationContext to be ready
+  // 入口点。事情还没准备好，所以现在
+  // 你不应该使用任何Avalonia类型或任何期望
+  // 准备一个SynchronizationContext
   public static int Main(string[] args) 
     => BuildAvaloniaApp().Start(AppMain, args);
 
-  // Application entry point. Avalonia is completely initialized.
+  // 应用程序入口点。Avalonia已完全初始化。
   static void AppMain(Application app, string[] args)
   {
-     // A cancellation token source that will be 
-     // used to stop the main loop
+     // 一个取消令牌源，它将
+     // 用于停止主循环
      var cts = new CancellationTokenSource();
      
-     // Do you startup code here
+     // 你在这里启动代码
      new Window().Show();
 
-     // Start the main loop
+     // 启动主循环
      app.Run(cts.Token);
   }
 }

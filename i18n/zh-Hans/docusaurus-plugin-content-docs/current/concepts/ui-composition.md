@@ -1,96 +1,89 @@
 ---
 description: CONCEPTS
 ---
+# UI组合
 
-# UI Composition
+UI组合是创建应用程序所需布局的过程。它允许您从组件的排列中构建复杂的视图。其优点包括：
 
-UI composition is the process you use to create the layouts that your apps require. It allows you to build a complex view from an arrangement of components. The advantages are:
+* _封装_ - 通过将XAML和代码限制在组件所需的范围内，减少每个组件的复杂性，使您的代码更易于理解和维护。
+* _重用_ - 维护应用程序中重复部分的一致性呈现和行为。
 
-* _Encapsulation_ - reduce the complexity of each component by restricting its XAML and code to only what it needs, making your code more understandable and maintainable.&#x20;
-* _Reuse_ - maintain consistent presentation and behaviour of repeated parts of your app.&#x20;
+_Avalonia UI_使您能够轻松使用UI组合来创建应用程序所需的布局和功能。
 
-_Avalonia UI_ makes it easy for you to use UI composition to create the layouts and functions that your apps require.&#x20;
+在使用_Avalonia UI_构建应用程序时，有几种不同类型的组件可供选择：
 
-When you build an app using _Avalonia UI_, there are several different types of component to choose from:
+* 窗口
+* 内置控件
+* 用户控件
+* 自定义控件
+* 模板控件
 
-* Windows
-* Built-in Controls
-* User Controls
-* Custom Controls
-* Template Controls
+## 窗口和内置控件
 
-## Windows and Built-in Controls
+在_Avalonia UI_中，窗口是布局的基本单位（用于窗口平台）。
 
-A window in _Avalonia UI_ is a basic unit of layout (for a windowing platform).&#x20;
+_Avalonia UI_包含大量内置控件，可以满足大多数UI需求。
 
-_Avalonia UI_ contains a large number of built-in controls that will cover most of your UI requirements.   &#x20;
+当您第一次接触_Avalonia UI_时，您可能会将一个内置控件放置在窗口的内容区域中（上图左侧）。这是最简单的UI组合形式：窗口具有应用程序的标题，通常还有一些窗口状态控件（取决于目标平台）。内置控件允许您的应用程序接收一些用户输入，或者以布局和样式呈现一些输出。
 
-<img src='/img/gitbook-import/assets/image (10) (2).png' alt=''/>
-
-When you first meet _Avalonia UI_, you might place a single built-in control in the content zone of a window (above, left). This is the simplest form of UI composition: the window has the title of the app and usually some window state controls (depending on the target platform). The built-in control allows your app to receive some user input, or to present some output with layout and styling.
-
-A slightly more complex app may require one of the built-in layout controls to arrange more than one other built-in control in the content zone of a window (above, right).
+稍微复杂一些的应用程序可能需要使用内置布局控件在窗口的内容区域中排列多个其他内置控件（上图右侧）。
 
 :::info
-To see the full range of Avalonia UI built-in controls, see the reference section [here](../reference/controls/).
+要查看Avalonia UI内置控件的完整范围，请参阅此处的参考部分[here](../reference/controls/)。
 :::
 
-## Logical and Visual Trees
+## 逻辑树和视觉树
 
-Whatever arrangement of controls you use, _Avalonia UI_ represents their relationships as a a tree structure, with the 'outermost' control as the root. So for example, the previous UI composition can be represented as the tree shown here:
+无论您使用的是哪种控件排列方式，_Avalonia UI_都将它们的关系表示为树结构，以“最外层”控件作为根。因此，例如，前面的UI组合可以表示为此处显示的树：
 
-<img src='/img/gitbook-import/assets/image (3) (1).png' alt=''/>
-
-This is the **logical control tree**, and it represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. There are many systems in _Avalonia UI_ that process the logical control tree and its companion the **visual control tree**.&#x20;
+这是**逻辑控件树**，它表示应用程序控件（包括主窗口）在XAML中定义的层次结构。_Avalonia UI_中有许多处理逻辑控件树及其伴生的**视觉控件树**的系统。
 
 :::info
-For more information on the concept of control trees, see [here](control-trees.md).
+有关控件树概念的更多信息，请参阅[here](control-trees.md)。
 :::
 
-## User Controls
+## 用户控件
 
-User controls are the mainstay of UI composition in _Avalonia UI_.
+用户控件是_Avalonia UI_中UI组合的主要组成部分。
 
-<img src='/img/gitbook-import/assets/image (8) (2).png' alt=''/>
-
-You can add a user control to the content zone of a main window, to represent a 'page view' (above, left).  This allows you to implement a more complex app with multiple pages; where the layout and function of each page is in its own user control (XAML and code) files.   &#x20;
+您可以将用户控件添加到主窗口的内容区域中，以表示“页面视图”（上图左侧）。这允许您使用自己的用户控件（XAML和代码文件）为每个页面实现布局和功能，从而创建一个更复杂的应用程序。
 
 :::info
-For more information about how to implement a multi-page app using views, see the guide [here](../guides/development-guides/how-to-implement-multi-page-apps.md).
+有关如何使用视图实现多页面应用程序的更多信息，请参阅此处的指南[here](../guides/development-guides/how-to-implement-multi-page-apps.md)。
 :::
 
-Another use for a user control is as a component control (above, right). You might initially do this to reduce the complexity of a window or page view; but then you might also (perhaps later) reuse the resulting component on another page as well.&#x20;
+用户控件的另一个用途是作为组件控件（上图右侧）。您可能最初这样做是为了减少窗口或页面视图的复杂性，但随后您可能还会（也许稍后）在另一个页面上重用生成的组件。
 
-## Tutorial
+## 教程
 
 :::info
-In the 'To Do List App' tutorial you will learn about how to add user controls as page views; and how to use a repeating layout control to present a collection of items with data templates. Try the tutorial [here](../tutorials/todo-list-app/).  &#x20;
+在“待办事项列表应用程序”教程中，您将学习如何将用户控件添加为页面视图；以及如何使用重复布局控件来呈现带有数据模板的项目集合。请在[这里](../tutorials/todo-list-app/)尝试教程。  &#x20;
 :::
 
-## Collection Controls
+## 集合控件
 
-Another variation of UI composition is where you need to present a collection of items.&#x20;
+另一种UI组合的变体是需要呈现一组项目的情况。&#x20;
 
 <img src='/img/gitbook-import/assets/image (8) (3).png' alt=''/>
 
-This scenario will use one of the built-in repeating controls, bound to a collection; together with a data template to represent the items in the collection.
+这种情况将使用内置的重复控件之一，绑定到一个集合；以及使用数据模板来表示集合中的项目。
 
 :::info
-For information about how to  TO DO
+有关如何 TO DO 的信息
 :::
 
-## Custom Controls
+## 自定义控件
 
-In the unlikely scenario that you cannot find an _Avalonia UI_ built-in control to cover your app's UI requirements, then you can 'roll-your-own' custom control from scratch. This allows you to define your own custom properties, events and methods; but it will require you to implement the drawing of the control presentation from scratch as well.
+在不太可能找到一个适用于您的应用程序UI需求的_Avalonia UI_内置控件的情况下，您可以从头开始创建自定义控件。这允许您定义自己的自定义属性、事件和方法；但它还需要您从头开始实现控件呈现的绘制。
 
 :::info
-To learn how to implement a custom control, see the guide [here](../basics/user-interface/controls/creating-controls).
+要了解如何实现自定义控件，请参阅[这里](../basics/user-interface/controls/creating-controls)的指南。
 :::
 
-## Templated Controls
+## 模板化控件
 
-A templated control uses the _Avalonia UI_ **styling** system to substitute a tag in the UI layout with a&#x20;
+模板化控件使用_Avalonia UI_的**样式**系统，将UI布局中的一个标签替换为一个&#x20;
 
 :::info
-For more information about the concepts behind the _Avalonia UI_ **styling** system, see [here](../basics/user-interface/styling).
+有关_Avalonia UI_ **样式**系统背后的概念的更多信息，请参阅[这里](../basics/user-interface/styling)。
 :::

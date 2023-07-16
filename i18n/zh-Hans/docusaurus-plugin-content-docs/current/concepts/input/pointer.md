@@ -1,10 +1,9 @@
 ---
 description: CONCEPTS - Input
 ---
+# 鼠标和指针设备
 
-# Mouse and Pointer Devices
-
-In _Avalonia UI_ you implement the interaction of pointing devices with your application using a 'pointer' abstraction. This can represent devices including, but not limited to a mouse, touchpad, and pen. _Avalonia UI_ controls have events that allow you to subscribe to pointer movements, clicks and wheel movements. These are as follows:
+在_Avalonia UI_中，您可以使用'pointer'抽象来实现指针设备与应用程序的交互。这可以表示包括但不限于鼠标、触摸板和笔在内的设备。_Avalonia UI_控件具有允许您订阅指针移动、点击和滚轮移动的事件。它们如下所示：
 
 * PointerEnter
 * PointerLeave
@@ -16,7 +15,7 @@ In _Avalonia UI_ you implement the interaction of pointing devices with your app
 * DoubleTapped
 * Holding
 
-For example, you can subscribe to the event for one of the pointer buttons being pressed on a control, like this:
+例如，您可以订阅控件上一个指针按钮被按下的事件，如下所示：
 
 ```csharp title='C#'
 private void PointerPressedHandler (object sender, PointerPressedEventArgs args)
@@ -46,25 +45,24 @@ private void PointerPressedHandler (object sender, PointerPressedEventArgs args)
 
 <img src="/img/gitbook-import/assets/pressed.gif" alt=""/>
 
-## Pointer Position
+## 指针位置
 
-In the example above, the pointer coordinates (`x` and `y`) have been calculated relative to the sender control origin (top, left), in this case the stack panel. If you want the coordinates relative to the containing window, then you can use the `GetCurrentPoint` method as follows:
+在上面的示例中，指针坐标（`x`和`y`）是相对于发送者控件原点（顶部，左侧）计算的，此处为堆栈面板。如果您想要相对于包含窗口的坐标，那么可以使用以下方式的`GetCurrentPoint`方法：
 
 ```csharp
 var point = args.GetCurrentPoint(this);
 ```
 
-## Tap Events
+## 点击事件
 
-Controls also have special gesture events, these are: `Tapped`, `DoubleTapped` and `Holding`. The tapped event is raised after the pointer is pressed on the control and then released. Double tapped is raised after pointer is pressed twice in the same place. 
+控件还具有特殊的手势事件，它们是：`Tapped`、`DoubleTapped`和`Holding`。在指针在控件上按下然后释放后，将引发点击事件。双击事件在指针在同一位置按下两次后引发。
 
-Holding is raised after the pointer is pressed for a set duration. The duration to hold for is defined in the `HoldWaitDuration` property in `TopLevel` PlatformSettings. Holding can be enabled on a control by setting the `Gestures.IsHoldingEnabled` attached property. When the hold duration has elapsed, the control's `HoldingEvent` is raised with the args' `HoldingState` set to `HoldingState.Started`. On pointer release, the event is raised again with `HoldingState.Completed` state. If a new gesture is initiated or a second pointer is pressed while `Holding` has started, the `Holding` gesture is cancelled and a `HoldingEvent` is raised with the `HoldingState.Cancelled` state. Holding can also be initiated using the mouse pointer, by setting the `Gestures.IsHoldWithMouseEnabled` attached property on the control.
+按住事件在指针按下一段时间后引发。按住的持续时间在`TopLevel` PlatformSettings的`HoldWaitDuration`属性中定义。可以通过设置`Gestures.IsHoldingEnabled`附加属性来在控件上启用按住。当按住的持续时间过去时，控件的`HoldingEvent`将被引发，参数的`HoldingState`设置为`HoldingState.Started`。在释放指针时，事件将再次引发，状态为`HoldingState.Completed`。如果在`Holding`开始时启动新的手势或按下第二个指针，将取消`Holding`手势并引发`HoldingEvent`，状态为`HoldingState.Cancelled`。还可以使用鼠标指针来启动按住，方法是在控件上设置`Gestures.IsHoldWithMouseEnabled`附加属性。
 
 :::info
-Note that the maximum distance between a first and second tap, and the time delay between them, will depend on the target platform and usually is bigger for touch devices.
+请注意，第一次和第二次点击之间的最大距离以及它们之间的时间延迟将取决于目标平台，并且通常对于触摸设备而言更大。
 :::
 
+## 更多信息
 
-## More Information
-
-For the complete API documentation about pointer and tap events, see [here](http://reference.avaloniaui.net/api/Avalonia.Input/PointerEventArgs/).
+有关指针和点击事件的完整API文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Input/PointerEventArgs/)。

@@ -2,9 +2,9 @@
 description: CONCEPTS
 ---
 
-# The Main Window
+# 主窗口
 
-The main window is the window passed to `ApplicationLifetime.MainWindow` in the `OnFrameworkInitializationCompleted` method of your your `App.axaml.cs` file:
+主窗口是在`App.axaml.cs`文件的`OnFrameworkInitializationCompleted`方法中传递给`ApplicationLifetime.MainWindow`的窗口：
 
 ```csharp
 public override void OnFrameworkInitializationCompleted()
@@ -16,10 +16,10 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-It can be retrieved at any time by casting `Application.ApplicationLifetime` `IClassicDesktopStyleApplicationLifetime`.
+可以通过将`Application.ApplicationLifetime`强制转换为`IClassicDesktopStyleApplicationLifetime`来随时检索它。
 
 :::warning
-Mobile and browser platforms don't have a concept of Window in Avalonia. Instead you need to set MainView control in Application.ApplicationLifetime when it implements ISingleViewApplicationLifetime interface.
+Avalonia中的移动和浏览器平台没有窗口的概念。相反，当实现`ISingleViewApplicationLifetime`接口时，需要在`Application.ApplicationLifetime`中设置`MainView`控件。
 :::
 
 ### &#x20;<a href="#show-hide-and-close-a-window" id="show-hide-and-close-a-window"></a>

@@ -2,17 +2,17 @@
 description: CONCEPTS - ReactiveUI
 ---
 
-# Reactive View Model
+# 响应式视图模型
 
-This page describes how you can use the _ReactiveUI_ `ReactiveObject` as the basis of your view model to implement MVVM binding with _Avalonia UI_.&#x20;
+本页面介绍了如何使用_ReactiveUI_的`ReactiveObject`作为视图模型的基础，以实现与_Avalonia UI_的MVVM绑定。
 
-_ReactiveUI_ provides the `ReactiveObject` as a base class for view models. It implements a notification of property changes and observables to monitor object changes.
+_ReactiveUI_提供了`ReactiveObject`作为视图模型的基类。它实现了属性更改的通知和可观察对象以监视对象的更改。
 
 :::info
-For the detailed _ReactiveUI_ documentation for `ReactiveObject`, see [here](https://www.reactiveui.net/api/reactiveui/reactiveobject/).
+有关`ReactiveObject`的详细_ReactiveUI_文档，请参见[此处](https://www.reactiveui.net/api/reactiveui/reactiveobject/)。
 :::
 
-&#x20;Once you have installed and configured _ReactiveUI_, you can base your view models on the class:
+一旦您安装并配置了_ReactiveUI_，您可以将您的视图模型基于这个类：
 
 ```csharp
 public class ViewModelBase : ReactiveObject
@@ -23,10 +23,10 @@ public class ViewModelBase : ReactiveObject
 <img src="/img/gitbook-import/assets/image (4) (2).png" alt=""/>
 
 :::info
-If you have used the Avalonia MVVM Application solution template, then you will find this base class already added to the project /ViewModels folder.
+如果您使用了Avalonia MVVM应用程序解决方案模板，那么您会发现这个基类已经添加到项目的/ViewModels文件夹中。
 :::
 
-For example, you can implement a simple view model like this:
+例如，您可以像这样实现一个简单的视图模型：
 
 ```csharp
 public class MyViewModel : ViewModelBase
@@ -40,9 +40,9 @@ public class MyViewModel : ViewModelBase
 }
 ```
 
-## Notify the View of Changes
+## 通知视图的更改
 
-_Avalonia UI_ uses the underlying `ReactiveObject` to **Notify** changes in the view model back to the view using any bindings defined in the XAML. For example, if you are binding the _Avalonia UI_ text input control like this:
+_Avalonia UI_使用底层的`ReactiveObject`来**通知**视图模型中的更改，通过在XAML中定义的任何绑定将更改传递回视图。例如，如果您将_Avalonia UI_文本输入控件绑定如下：
 
 ```xml
 <TextBox AcceptsReturn="True"
@@ -50,10 +50,10 @@ _Avalonia UI_ uses the underlying `ReactiveObject` to **Notify** changes in the 
          Watermark="Enter a description"/>
 ```
 
-Any change to the view model description property is achieved using the the `set` accessor and a change is raised causing _Avalonia UI_ to display the new value on the UI.
+通过使用`set`访问器对视图模型的描述属性进行更改，会引发更改并导致_Avalonia UI_在UI上显示新值。
 
-## Update the View Model from Input
+## 从输入更新视图模型
 
-When _Avalonia UI_ uses the binding to **Update** the view model, the `set` accessor ensures that any parts of the view model that depend on the description property can also react to the change if necessary.
+当_Avalonia UI_使用绑定来**更新**视图模型时，`set`访问器确保任何依赖于描述属性的视图模型的其他部分也可以根据需要对更改做出反应。
 
-On the next page, you will learn how a reactive command acts as a special case of the view model update.
+在下一页中，您将了解到响应式命令作为视图模型更新的特殊情况。

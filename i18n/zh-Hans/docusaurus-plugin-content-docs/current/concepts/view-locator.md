@@ -2,22 +2,21 @@
 description: CONCEPTS
 ---
 
-# The View Locator
+# 视图定位器
 
+虽然视图定位器的使用是默认模板的一部分，但需要注意它并不是强制要求的。它是一个可选工具，旨在帮助您使用模型-视图-视图模型（MVVM）设计模式来构建Avalonia应用程序。
 
-While the use of the View Locator comes as part of the default templates, it's important to note that it's not a mandatory requirement. It's an optional tool provided to help you structure your Avalonia application using the Model-View-ViewModel (MVVM) design pattern.
+视图定位器是Avalonia中用于解析与特定视图模型对应的视图（用户界面）的机制。这是MVVM（模型-视图-视图模型）模式的核心部分，该模式将图形用户界面的开发与业务逻辑或后端逻辑的开发分离。
 
-The View Locator is a mechanism in Avalonia that is used to resolve the view (user interface) that corresponds to a specific ViewModel. This is a core part of the MVVM (Model-View-ViewModel) pattern, which is a design pattern that separates the development of the graphical user interface from the development of the business logic or back-end logic.
+## 工作原理
 
-## How it works
+视图定位器使用命名约定将视图模型类型映射到视图类型。默认情况下，它会从视图模型类型名称的末尾删除“ViewModel”，然后在相同的命名空间中查找具有相同名称的类型，但在相应的“Views”命名空间中。
 
-The View Locator uses naming conventions to map ViewModel types to view types. By default, it strips "ViewModel" from the end of the ViewModel type name, and looks for a type with the same name in the same namespace, but in the corresponding "Views" namespace.
+例如，给定一个名为`MyApplication.ViewModels.ExampleViewModel`的视图模型，视图定位器将查找一个名为`MyApplication.Views.Example`的视图。
 
-For example, given a ViewModel named `MyApplication.ViewModels.ExampleViewModel`, the View Locator will look for a View named `MyApplication.Views.Example`.
+视图定位器通常与`DataContext`属性一起使用，该属性用于将视图与其视图模型关联起来。
 
-The View Locator is typically used in conjunction with the `DataContext` property, which is used to link a view to its ViewModel.
-
-Here's a simple usage example:
+以下是一个简单的用法示例：
 
 ```cs
 public class ViewLocator : IDataTemplate
@@ -46,13 +45,11 @@ public class ViewLocator : IDataTemplate
 }
 ```
 
-In this example, the View Locator is implemented as an `IDataTemplate`. The `Build` method creates the view for the ViewModel, and the `Match` method checks if the data object is a ViewModel that this locator knows how to handle.
+在此示例中，视图定位器被实现为`IDataTemplate`。`Build`方法创建视图的视图模型，`Match`方法检查数据对象是否是此定位器知道如何处理的视图模型。
 
-## Customizing the View Locator
+## 自定义视图定位器
 
-You can customize the View Locator to use different conventions. For example, you might want to look for views in a different assembly, or use a different naming convention. To do this, you can implement your own View Locator by creating a class that implements the `IDataTemplate` interface, and replace the default View Locator with your own.
-
-
+您可以自定义视图定位器以使用不同的约定。例如，您可能希望在不同的程序集中查找视图，或使用不同的命名约定。为此，您可以创建一个实现`IDataTemplate`接口的类来实现自己的视图定位器，并用自己的视图定位器替换默认的视图定位器。
 
 
 

@@ -1,22 +1,21 @@
 ---
 description: CONCEPTS - Input
 ---
+# 路由事件
 
-# Routed Events
+Avalonia中的大多数事件都是作为路由事件实现的。路由事件是在整个树上引发的事件，而不仅仅是引发事件的控件。
 
-Most events in Avalonia are implemented as Routed Events. Routed events are events that are raised on the whole tree rather than just the control that raised the event.
+## 什么是路由事件
 
-## What Is a Routed Event
+一个典型的Avalonia应用程序包含许多元素。无论是在代码中创建还是在XAML中声明，这些元素都存在于彼此之间的元素树关系中。事件路由可以根据事件定义的不同方向进行传播，但通常路由从源元素开始，然后通过元素树向上"冒泡"，直到达到元素树的根（通常是页面或窗口）。如果您之前使用过HTML DOM，这个冒泡概念可能会很熟悉。
 
-A typical Avalonia application contains many elements. Whether created in code or declared in XAML, these elements exist in an element tree relationship to each other. The event route can travel in one of two directions depending on the event definition, but generally the route travels from the source element and then "bubbles" upward through the element tree until it reaches the element tree root (typically a page or a window). This bubbling concept might be familiar to you if you have worked with the HTML DOM previously.
+### 路由事件的顶级场景
 
-### Top-level Scenarios for Routed Events
+以下是激发路由事件概念的场景的简要总结，以及为什么典型的CLR事件对于这些场景来说是不够的：
 
-The following is a brief summary of the scenarios that motivated the routed event concept, and why a typical CLR event was not adequate for these scenarios:
+**控件组合和封装：** Avalonia中的各种控件具有丰富的内容模型。例如，您可以将图像放在`Button`中，这实际上扩展了按钮的可视树。但是，即使用户点击的像素实际上是图像的一部分，添加的图像也不能破坏导致按钮对其内容的`Click`做出响应的命中测试行为。
 
-**Control composition and encapsulation:** Various controls in Avalonia have a rich content model. For example, you can place an image inside of a `Button`, which effectively extends the visual tree of the button. However, the added image must not break the hit-testing behavior that causes a button to respond to a `Click` of its content, even if the user clicks on pixels that are technically part of the image.
-
-**Singular handler attachment points:** In Windows Forms, you would have to attach the same handler multiple times to process events that could be raised from multiple elements. Routed events enable you to attach that handler only once, as was shown in the previous example, and use handler logic to determine where the event came from if necessary. For instance, this might be the handler for the previously shown XAML:
+**单一处理程序附加点：** 在Windows Forms中，您必须多次附加相同的处理程序来处理可能从多个元素引发的事件。路由事件使您只需附加一次处理程序，就像前面的示例中所示，并使用处理程序逻辑来确定事件的来源（如果需要）。例如，这可能是先前显示的XAML的处理程序：
 
 ```csharp
 private void CommonClickHandler(object sender, RoutedEventArgs e)
@@ -25,28 +24,27 @@ private void CommonClickHandler(object sender, RoutedEventArgs e)
   switch (source.Name)
   {
     case "YesButton":
-      // do something here ...
+      // 在这里执行某些操作...
       break;
     case "NoButton":
-      // do something ...
+      // 执行某些操作...
       break;
     case "CancelButton":
-      // do something ...
+      // 执行某些操作...
       break;
   }
   e.Handled=true;
 }
 ```
+**类处理：** 路由事件允许由类定义的静态处理程序。这个类处理程序有机会在任何附加的实例处理程序之前处理事件。
 
-**Class handling:** Routed events permit a static handler that is defined by the class. This class handler has the opportunity to handle an event before any attached instance handlers can.
+**无需反射引用事件：** 某些代码和标记技术需要一种方法来标识特定的事件。路由事件创建一个`RoutedEvent`字段作为标识符，提供了一种强大的事件标识技术，不需要静态或运行时反射。
 
-**Referencing an event without reflection:** Certain code and markup techniques require a way to identify a specific event. A routed event creates a `RoutedEvent` field as an identifier, which provides a robust event identification technique that does not require static or run-time reflection.
+### 路由事件的实现方式
 
-### How Routed Events Are Implemented
+路由事件是由`RoutedEvent`类的实例支持并在Avalonia事件系统中注册的CLR事件。通常，从注册中获取的`RoutedEvent`实例被保留为注册并因此“拥有”路由事件的类的`public` `static` `readonly`字段成员。与同名的CLR事件（有时称为“包装器”事件）的连接是通过覆盖CLR事件的`add`和`remove`实现来完成的。通常，`add`和`remove`被留作隐式默认值，使用适当的语言特定事件语法来添加和移除该事件的处理程序。路由事件的支持和连接机制在概念上类似于Avalonia属性是由`AvaloniaProperty`类支持并在Avalonia属性系统中注册的CLR属性。
 
-A routed event is a CLR event that is backed by an instance of the `RoutedEvent` class and registered with the Avalonia event system. `RoutedEvent` instance obtained from registration is typically retained as a `public` `static` `readonly` field member of the class that registers and thus "owns" the routed event. The connection to the identically named CLR event (which is sometimes termed the "wrapper" event) is accomplished by overriding the `add` and `remove` implementations for the CLR event. Ordinarily, the `add` and `remove` are left as an implicit default that uses the appropriate language-specific event syntax for adding and removing handlers of that event. The routed event backing and connection mechanism is conceptually similar to how an avalonia property is a CLR property that is backed by the `AvaloniaProperty` class and registered with the Avalonia property system.
-
-The following example shows the declaration for a custom `Tap` routed event, including the registration and exposure of the `RoutedEvent` identifier field and the `add` and `remove` implementations for the `Tap` CLR event.
+以下示例显示了自定义`Tap`路由事件的声明，包括`RoutedEvent`标识符字段的注册和公开以及`Tap`CLR事件的`add`和`remove`实现。
 
 ```csharp
 public class SampleControl: Control
@@ -63,63 +61,62 @@ public class SampleControl: Control
 }
 ```
 
-### Routed Event Handlers and XAML
+### 路由事件处理程序和XAML
 
-To add a handler for an event using XAML, you declare the event name as an attribute on the element that is an event listener. The value of the attribute is the name of your implemented handler method, which must exist in the class of the code-behind file.
-
-```markup
-<Button Click="b1SetColor">button</Button>
-```
-
-The XAML syntax for adding standard CLR event handlers is the same for adding routed event handlers, because you are really adding handlers to the CLR event wrapper, which has a routed event implementation underneath.
-
-As of Avalonia 0.9.x the Avalonia designer requires event handlers to be declared as `public` methods. We hope to remove this restriction in future.
-
-## Routing Strategies
-
-Routed events use one of three routing strategies:
-
-* **Bubbling:** Event handlers on the event source are invoked. The routed event then routes to successive parent elements until reaching the element tree root. Most routed events use the bubbling routing strategy. Bubbling routed events are generally used to report input or state changes from distinct controls or other UI elements.
-* **Direct:** Only the source element itself is given the opportunity to invoke handlers in response. This is analogous to the "routing" that Windows Forms uses for events. However, unlike a standard CLR event, direct routed events support class handling (class handling is explained in an upcoming section).
-* **Tunneling:** Initially, event handlers at the element tree root are invoked. The routed event then travels a route through successive child elements along the route, towards the node element that is the routed event source (the element that raised the routed event). Tunneling routed events are often used or handled as part of the compositing for a control, such that events from composite parts can be deliberately suppressed or replaced by events that are specific to the complete control. Input events provided in Avalonia often raise both tunneling and bubbling events.
-
-## Why Use Routed Events?
-
-As an application developer, you do not always need to know or care that the event you are handling is implemented as a routed event. Routed events have special behavior, but that behavior is largely invisible if you are handling an event on the element where it is raised.
-
-Where routed events become powerful is if you use any of the suggested scenarios: defining common handlers at a common root, compositing your own control, or defining your own custom control class.
-
-Routed event listeners and routed event sources do not need to share a common event in their hierarchy. Any control can be an event listener for any routed event. Therefore, you can use the full set of routed events available throughout the working API set as a conceptual "interface" whereby disparate elements in the application can exchange event information. This "interface" concept for routed events is particularly applicable for input events.
-
-Routed events can also be used to communicate through the element tree, because the event data for the event is perpetuated to each element in the route. One element could change something in the event data, and that change would be available to the next element in the route.
-
-Other than the routing aspect, there are two other reasons that any given Avalonia event might be implemented as a routed event instead of a standard CLR event. If you are implementing your own events, you might also consider these principles:
-
-* Certain styling and templating features require the referenced event to be a routed event. This is the event identifier scenario mentioned earlier.
-* Routed events support a class handling mechanism whereby the class can specify static methods that have the opportunity to handle routed events before any registered instance handlers can access them. This is very useful in control design, because your class can enforce event-driven class behaviors that cannot be accidentally suppressed by handling an event on an instance.
-
-Each of the above considerations is discussed in a separate section of this topic.
-
-## Adding and Implementing an Event Handler for a Routed Event
-
-To add an event handler in XAML, you simply add the event name to an element as an attribute and set the attribute value as the name of the event handler that implements an appropriate delegate, as in the following example.
+要使用XAML添加事件处理程序，您需要将事件名称声明为元素的属性，该元素是事件的监听器。属性的值是您实现的处理程序方法的名称，该方法必须存在于代码后台文件的类中。
 
 ```markup
 <Button Click="b1SetColor">button</Button>
 ```
 
-`b1SetColor` is the name of the implemented handler that contains the code that handles the `Click` event. `b1SetColor` must have the same signature as the `RoutedEventHandler<RoutedEventArgs>` delegate, which is the event handler delegate for the `Click` event. The first parameter of all routed event handler delegates specifies the element to which the event handler is added, and the second parameter specifies the data for the event.
+添加标准CLR事件处理程序的XAML语法与添加路由事件处理程序的语法相同，因为您实际上是将处理程序添加到具有路由事件实现的CLR事件包装器上。
+
+从Avalonia 0.9.x开始，Avalonia设计器要求事件处理程序被声明为`public`方法。我们希望在将来能够取消这个限制。
+## 路由策略
+
+路由事件使用以下三种路由策略：
+
+* **冒泡：**事件源上的事件处理程序被调用。然后，路由事件会传递到父元素，直到达到元素树的根。大多数路由事件使用冒泡路由策略。冒泡路由事件通常用于报告来自不同控件或其他UI元素的输入或状态变化。
+* **直接：**只有源元素本身有机会响应并调用处理程序。这类似于Windows Forms用于事件的“路由”。然而，与标准CLR事件不同，直接路由事件支持类处理（类处理将在后面的部分中解释）。
+* **隧道：**首先，会调用元素树根上的事件处理程序。然后，路由事件会沿着路径通过连续的子元素向源元素（引发路由事件的元素）传递。隧道路由事件通常用于控件的合成的一部分，以便可以有意地抑制或替换来自组合部分的事件，而使用与整个控件特定的事件。在Avalonia中提供的输入事件通常会引发隧道和冒泡事件。
+
+## 为什么使用路由事件？
+
+作为应用程序开发人员，您并不总是需要知道或关心您正在处理的事件是如何实现为路由事件的。路由事件具有特殊的行为，但如果您在引发事件的元素上处理事件，这种行为在很大程度上是不可见的。
+
+路由事件的强大之处在于，如果您使用以下任何建议的场景：在共同的根上定义共同的处理程序，合成自己的控件，或定义自己的自定义控件类。
+
+路由事件侦听器和路由事件源不需要在它们的层次结构中共享一个公共事件。任何控件都可以是任何路由事件的事件侦听器。因此，您可以将整个工作API集中可用的路由事件集合视为概念上的“接口”，通过该接口，应用程序中的不同元素可以交换事件信息。对于输入事件，这种路由事件的“接口”概念特别适用。
+
+路由事件还可以用于通过元素树进行通信，因为事件的事件数据会传递到路由中的每个元素。一个元素可以更改事件数据中的某些内容，并且该更改将对路由中的下一个元素可用。
+
+除了路由方面之外，Avalonia事件可能以路由事件而不是标准CLR事件实现的另外两个原因。如果您正在实现自己的事件，您可能还应考虑以下原则：
+
+* 某些样式和模板功能要求引用的事件是路由事件。这是前面提到的事件标识符方案。
+* 路由事件支持类处理机制，其中类可以指定在任何注册的实例处理程序可以访问它们之前有机会处理路由事件的静态方法。这在控件设计中非常有用，因为您的类可以强制执行基于事件的类行为，这些行为不能通过在实例上处理事件而意外地被抑制。
+
+上述每个考虑因素在本主题的单独部分中进行了讨论。
+
+## 添加和实现路由事件的事件处理程序
+
+要在XAML中添加事件处理程序，只需将事件名称作为属性添加到元素中，并将属性值设置为实现适当委托的事件处理程序的名称，如下例所示。
+
+```markup
+<Button Click="b1SetColor">button</Button>
+```
+
+`b1SetColor`是实现的处理程序的名称，其中包含处理`Click`事件的代码。`b1SetColor`必须具有与`RoutedEventHandler<RoutedEventArgs>`委托相同的签名，该委托是`Click`事件的事件处理程序委托。所有路由事件处理程序委托的第一个参数指定添加事件处理程序的元素，第二个参数指定事件的数据。
 
 ```csharp
 void b1SetColor(object sender, RoutedEventArgs args)
 {
-  //logic to handle the Click event
+  //处理Click事件的逻辑
 }
 ```
 
-`RoutedEventHandler<RoutedEventArgs>` is the basic routed event handler delegate. For routed events that are specialized for certain controls or scenarios, the delegates to use for the routed event handlers also might become more specialized, so that they can transmit specialized event data. For instance, in a common input scenario, you might handle a `PointerPressed` routed event. Your handler should implement the `RoutedEventHandler<PointerPressedEventArgs>` delegate. By using the most specific delegate, you can process the `PointerPressedEventArgs` in the handler and read the `PointerEventArgs.Pointer` property, which contains information about the pointer that caused the press.
+`RoutedEventHandler<RoutedEventArgs>`是基本的路由事件处理程序委托。对于专门针对某些控件或场景的路由事件，用于路由事件处理程序的委托也可能变得更加专门化，以便传输专门化的事件数据。例如，在常见的输入场景中，您可能会处理`PointerPressed`路由事件。您的处理程序应该实现`RoutedEventHandler<PointerPressedEventArgs>`委托。通过使用最具体的委托，您可以在处理程序中处理`PointerPressedEventArgs`并读取`PointerEventArgs.Pointer`属性，该属性包含有关引发按下的指针的信息。
 
-Adding a handler for a routed event in an application that is created in code is straightforward. Routed event handlers can always be added through a helper method `AddHandler` (which is the same method that the existing backing calls for `add`.) However, existing Avalonia routed events generally have backing implementations of `add` and `remove` logic that allow the handlers for routed events to be added by a language-specific event syntax, which is more intuitive syntax than the helper method. The following is an example usage of the helper method:
+在以代码方式创建的应用程序中添加路由事件处理程序很简单。可以始终通过助手方法`AddHandler`（与现有的`add`调用相同的方法）添加路由事件处理程序。然而，现有的Avalonia路由事件通常具有`add`和`remove`逻辑的后备实现，允许通过特定于语言的事件语法添加路由事件的处理程序，这种语法比助手方法更直观。以下是助手方法的示例用法：
 
 ```csharp
 void MakeButton()
@@ -130,11 +127,11 @@ void MakeButton()
 
 void Onb2Click(object sender, RoutedEventArgs e)
 {
-    //logic to handle the Click event     
+    //处理点击事件的逻辑
 }
 ```
 
-The next example shows the C# operator syntax:
+下一个示例展示了C#操作符语法：
 
 ```csharp
 void MakeButton2()
@@ -145,39 +142,39 @@ void MakeButton2()
 
 void Onb2Click2(object sender, RoutedEventArgs e)
 {
-  //logic to handle the Click event     
+  //处理点击事件的逻辑
 }
 ```
 
-**The Concept of Handled**
+**Handled的概念**
 
-All routed events share a common event data base class, `RoutedEventArgs`. `RoutedEventArgs` defines the `Handled` property, which takes a Boolean value. The purpose of the `Handled` property is to enable any event handler along the route to mark the routed event as _handled_, by setting the value of `Handled` to `true`. After being processed by the handler at one element along the route, the shared event data is again reported to each listener along the route.
+所有路由事件共享一个公共的事件数据基类`RoutedEventArgs`。`RoutedEventArgs`定义了`Handled`属性，该属性接受一个布尔值。`Handled`属性的目的是允许沿着路由的任何事件处理程序将路由事件标记为已处理，通过将`Handled`的值设置为`true`。在被处理的事件数据被路由上的一个元素的处理程序处理后，共享的事件数据再次报告给路由上的每个监听器。
 
-The value of `Handled` affects how a routed event is reported or processed as it travels further along the route. If `Handled` is `true` in the event data for a routed event, then handlers that listen for that routed event on other elements are generally no longer invoked for that particular event instance. This is true both for handlers attached in XAML and for handlers added by language-specific event handler attachment syntaxes such as `+=`. For most common handler scenarios, marking an event as handled by setting `Handled` to `true` will "stop" routing for either a tunneling route or a bubbling route, and also for any event that is handled at a point in the route by a class handler.
+`Handled`的值会影响路由事件在继续沿着路由时如何报告或处理。如果路由事件的事件数据中的`Handled`为`true`，那么在其他元素上监听该路由事件的处理程序通常不再为该特定事件实例调用。这对于在XAML中附加的处理程序和通过语言特定的事件处理程序附加语法（如`+=`）添加的处理程序都是适用的。对于大多数常见的处理程序场景，通过将`Handled`设置为`true`来标记事件为已处理将会“停止”隧道路由或冒泡路由，以及在路由的某个点由类处理程序处理的任何事件。
 
-However, there is a "handledEventsToo" mechanism whereby listeners can still run handlers in response to routed events where `Handled` is `true` in the event data. In other words, the event route is not truly stopped by marking the event data as handled. You can only use the handledEventsToo mechanism in code:
+然而，还有一种“handledEventsToo”机制，监听器可以在事件数据中的`Handled`为`true`时仍然运行处理程序以响应路由事件。换句话说，通过将事件数据标记为已处理，事件路由并没有真正停止。你只能在代码中使用handledEventsToo机制：
 
-* In code, instead of using a language-specific event syntax that works for general CLR events, call the Avalonia method `AddHandler<TEventArgs>(RoutedEvent<TEventArgs>, EventHandler<TEventArgs> handler, RoutingStrategies, bool)` to add your handler. Specify the value of `handledEventsToo` as `true`.
+* 在代码中，而不是使用适用于一般CLR事件的语言特定的事件语法，调用Avalonia的`AddHandler<TEventArgs>(RoutedEvent<TEventArgs>, EventHandler<TEventArgs> handler, RoutingStrategies, bool)`方法来添加处理程序。将`handledEventsToo`的值设置为`true`。
 
-In addition to the behavior that `Handled` state produces in routed events, the concept of `Handled` has implications for how you should design your application and write the event handler code. You can conceptualize `Handled` as being a simple protocol that is exposed by routed events. Exactly how you use this protocol is up to you, but the conceptual design for how the value of `Handled` is intended to be used is as follows:
+除了`Handled`状态在路由事件中产生的行为之外，`Handled`的概念对于如何设计应用程序和编写事件处理程序代码也有影响。你可以将`Handled`视为路由事件公开的一个简单协议。如何使用这个协议完全取决于你，但是`Handled`的值的使用方式的概念设计如下：
 
-* If a routed event is marked as handled, then it does not need to be handled again by other elements along that route.
-* If a routed event is not marked as handled, then other listeners that were earlier along the route have chosen either not to register a handler, or the handlers that were registered chose not to manipulate the event data and set `Handled` to `true`. (Or, it is of course possible that the current listener is the first point in the route.) Handlers on the current listener now have three possible courses of action:
-  * Take no action at all; the event remains unhandled, and the event routes to the next listener.
-  * Execute code in response to the event, but make the determination that the action taken was not substantial enough to warrant marking the event as handled. The event routes to the next listener.
-  * Execute code in response to the event. Mark the event as handled in the event data passed to the handler, because the action taken was deemed substantial enough to warrant marking as handled. The event still routes to the next listener, but with `Handled=true` in its event data, so only `handledEventsToo` listeners have the opportunity to invoke further handlers.
+* 如果一个路由事件被标记为已处理，那么其他沿着该路由的元素就不需要再处理它了。
+* 如果一个路由事件没有被标记为已处理，那么之前沿着路由的其他监听器要么选择不注册处理程序，要么注册的处理程序选择不操作事件数据并将`Handled`设置为`true`。（当然，当前监听器可能是路由中的第一个点。）当前监听器上的处理程序现在有三种可能的行动方式：
+  * 不采取任何行动；事件仍然未处理，并且事件路由到下一个监听器。
+  * 执行响应事件的代码，但确定所采取的行动不足以标记事件为已处理。事件路由到下一个监听器。
+  * 执行响应事件的代码。在传递给处理程序的事件数据中将事件标记为已处理，因为所采取的行动被认为足够重要以标记为已处理。事件仍然路由到下一个监听器，但在其事件数据中具有`Handled=true`，因此只有`handledEventsToo`监听器有机会调用其他处理程序。
 
-This conceptual design is reinforced by the routing behavior mentioned earlier: it is more difficult (although still possible in code or styles) to attach handlers for routed events that are invoked even if a previous handler along the route has already set `Handled` to `true`.
+这个概念设计通过之前提到的路由行为得到了加强：如果之前沿着路由的处理程序已经将`Handled`设置为`true`，那么更难（虽然在代码或样式中仍然可能）为路由事件附加处理程序。
 
-In applications, it is quite common to just handle a bubbling routed event on the object that raised it, and not be concerned with the event's routing characteristics at all. However, it is still a good practice to mark the routed event as handled in the event data, to prevent unanticipated side effects just in case an element that is further up the element tree also has a handler attached for that same routed event.
+在应用程序中，通常只需在引发事件的对象上处理冒泡路由事件，而不必关心事件的路由特性。然而，将路由事件标记为已处理仍然是一个好的做法，以防止出现意外的副作用，以防万一元素树中更高层次的元素也附加了相同的路由事件处理程序。
 
-## Class Handlers
+## 类处理程序
 
-If you are defining a class that derives in some way from `AvaloniaObject`, you can also define and attach a class handler for a routed event that is a declared or inherited event member of your class. Class handlers are invoked before any instance listener handlers that are attached to an instance of that class, whenever a routed event reaches an element instance in its route.
+如果您正在定义一个从`AvaloniaObject`派生的类，您还可以为该类的一个已声明或继承的事件成员定义和附加一个类处理程序。当路由事件到达元素实例时，类处理程序会在附加到该类的实例监听器处理程序之前被调用。
 
-Some Avalonia controls have inherent class handling for certain routed events. This might give the outward appearance that the routed event is not ever raised, but in reality it is being class handled, and the routed event can potentially still be handled by your instance handlers if you use certain techniques. Also, many base classes and controls expose virtual methods that can be used to override class handling behavior.
+一些Avalonia控件对某些路由事件具有固有的类处理。这可能会给人一种外观上的感觉，即路由事件从未被引发，但实际上它正在被类处理，并且如果使用某些技术，路由事件仍然可以由您的实例处理程序处理。此外，许多基类和控件公开了可以用于覆盖类处理行为的虚拟方法。
 
-To attach a class handler in one of your own controls, use the `AddClassHandler` method from a static constructor:
+要在自己的控件中附加类处理程序，请使用静态构造函数中的`AddClassHandler`方法：
 
 ```csharp
 static MyControl()
@@ -191,15 +188,15 @@ protected virtual void OnMyEvent(MyEventArgs e)
 }
 ```
 
-## Attached Events in Avalonia
+## Avalonia中的附加事件
 
-The XAML language also defines a special type of event called an _attached event_. An attached event enables you to add a handler for a particular event to an arbitrary element. The element handling the event need not define or inherit the attached event, and neither the object potentially raising the event nor the destination handling instance must define or otherwise "own" that event as a class member.
+XAML语言还定义了一种特殊类型的事件，称为“附加事件”。附加事件使您能够将特定事件的处理程序添加到任意元素上。处理事件的元素不需要定义或继承附加事件，而且可能引发事件的对象和处理事件的目标实例都不必定义或以其他方式“拥有”该事件作为类成员。
 
-The Avalonia input system uses attached events extensively. However, nearly all of these attached events are forwarded through base elements. The input events then appear as equivalent non-attached routed events that are members of the base element class. For instance, the underlying attached event `Gestures.Tapped` can more easily be handled on any given `Control` by using `Tapped` on that control rather than dealing with attached event syntax either in XAML or code.
+Avalonia输入系统广泛使用附加事件。然而，几乎所有这些附加事件都通过基本元素进行转发。然后，输入事件会出现为等效的非附加路由事件，这些事件是基本元素类的成员。例如，底层的附加事件`Gestures.Tapped`可以更容易地在任何给定的`Control`上处理，只需在该控件上使用`Tapped`，而不必处理XAML或代码中的附加事件语法。
 
-## Qualified Event Names in XAML
+## XAML中的限定事件名称
 
-Another syntax usage that resembles _typename_._eventname_ attached event syntax but is not strictly speaking an attached event usage is when you attach handlers for routed events that are raised by child elements. You attach the handlers to a common parent, to take advantage of event routing, even though the common parent might not have the relevant routed event as a member. Consider this example again:
+另一种类似于_typename_._eventname_附加事件语法的语法用法，严格来说不是附加事件用法，是当您为由子元素引发的路由事件附加处理程序时使用的。您将处理程序附加到一个共同的父元素上，以利用事件路由，即使该共同的父元素可能没有相关的路由事件作为成员。再次考虑以下示例：
 
 ```markup
 <Border Height="50" Width="300">
@@ -211,33 +208,33 @@ Another syntax usage that resembles _typename_._eventname_ attached event syntax
 </Border>
 ```
 
-Here, the parent element listener where the handler is added is a `StackPanel`. However, it is adding a handler for a routed event that was declared and will be raised by the `Button` class. `Button` "owns" the event, but the routed event system permits handlers for any routed event to be attached to any control instance listener that could otherwise attach listeners for a common language runtime (CLR) event. The default xmlns namespace for these qualified event attribute names is typically the default Avalonia xmlns namespace, but you can also specify prefixed namespaces for custom routed events.
+在这里，处理程序添加的父元素监听器是一个`StackPanel`。然而，它正在为一个由`Button`类声明并引发的路由事件添加处理程序。`Button`“拥有”该事件，但路由事件系统允许将任何路由事件的处理程序附加到任何控件实例监听器上，该控件实例监听器本来可以附加监听器以处理公共语言运行时（CLR）事件。这些限定事件属性名称的默认xmlns命名空间通常是默认的Avalonia xmlns命名空间，但您也可以为自定义路由事件指定带前缀的命名空间。
 
-## Input Events
+## 输入事件
 
-One frequent application of routed events within the Avalonia platform is for input events. Input events often come in pairs, with one being the bubbling event and the other being the tunneling event. Occasionally, input events only have a bubbling version, or perhaps only a direct routed version.
+在Avalonia平台中，路由事件的一个常见应用是用于输入事件。输入事件通常成对出现，一个是冒泡事件，另一个是隧道事件。偶尔，输入事件只有冒泡版本，或者只有直接路由版本。
 
-Avalonia input events that come in pairs are implemented so that a single user action from input, such as a mouse button press, will raise both routed events of the pair in sequence. First, the tunneling event is raised and travels its route. Then the bubbling event is raised and travels its route. The two events literally share the same event data instance, because the `RaiseEvent` method call in the implementing class that raises the bubbling event listens for the event data from the tunneling event and reuses it in the new raised event. Listeners with handlers for the tunneling event have the first opportunity to mark the routed event handled (class handlers first, then instance handlers). If an element along the tunneling route marked the routed event as handled, the already-handled event data is sent on for the bubbling event, and typical handlers attached for the equivalent bubbling input events will not be invoked. To outward appearances it will be as if the handled bubbling event has not even been raised. This handling behavior is useful for control compositing, where you might want all hit-test based input events or focus-based input events to be reported by your final control, rather than its composite parts. The final control element is closer to the root in the compositing, and therefore has the opportunity to class handle the tunneling event first and perhaps to "replace" that routed event with a more control-specific event, as part of the code that backs the control class.
+Avalonia的输入事件成对出现，这样一来，用户的一个输入操作（例如鼠标按下）将按顺序触发这对路由事件。首先，触发隧道事件并沿着其路由传播。然后触发冒泡事件并沿着其路由传播。这两个事件实际上共享同一个事件数据实例，因为在触发冒泡事件的实现类中的`RaiseEvent`方法调用中，会监听来自隧道事件的事件数据，并在新触发的事件中重用它。具有对隧道事件处理程序的侦听器首先有机会标记路由事件为已处理（首先是类处理程序，然后是实例处理程序）。如果沿着隧道路由的元素将路由事件标记为已处理，则已处理的事件数据将传递给冒泡事件，并且不会调用为等效冒泡输入事件附加的典型处理程序。从外观上看，似乎连已处理的冒泡事件都没有被触发。这种处理行为对于控件组合很有用，您可能希望所有基于命中测试的输入事件或基于焦点的输入事件由最终控件报告，而不是由其组合部分报告。最终控件元素在组合中更接近根部，因此有机会首先类处理隧道事件，并且可能在支持控件类的代码的一部分中将该路由事件“替换”为更具控件特定的事件。
 
-As an illustration of how input event processing works, consider the following input event example. In the following tree illustration, `leaf element #2` is the source of a `PointerPressed` event:
+作为输入事件处理工作原理的示例，考虑以下输入事件示例。在下面的树形图示例中，`叶子元素＃2`是`PointerPressed`事件的源：
 
-<img src='/img/gitbook-import/assets/input-event-routing.png' alt='Event routing diagram'/>
+<img src='/img/gitbook-import/assets/input-event-routing.png' alt='事件路由图'/>
 
-The order of event processing is as follows:
+事件处理的顺序如下：
 
-1. `PointerPressed` (tunnel) on root element.
-2. `PointerPressed` (tunnel) on intermediate element #1.
-3. `PointerPressed` (tunnel) on source element #2.
-4. `PointerPressed` (bubble) on source element #2.
-5. `PointerPressed` (bubble) on intermediate element #1.
-6. `PointerPressed` (bubble) on root element.
+1. 在根元素上进行`tunnel`的`PointerPressed`。
+2. 在中间元素＃1上进行`tunnel`的`PointerPressed`。
+3. 在源元素＃2上进行`tunnel`的`PointerPressed`。
+4. 在源元素＃2上进行`bubble`的`PointerPressed`。
+5. 在中间元素＃1上进行`bubble`的`PointerPressed`。
+6. 在根元素上进行`bubble`的`PointerPressed`。
 
-A routed event handler delegate provides references to two objects: the object that raised the event and the object where the handler was invoked. The object where the handler was invoked is the object reported by the `sender` parameter. The object where the event was first raised is reported by the `Source` property in the event data. A routed event can still be raised and handled by the same object, in which case `sender` and `Source` are identical (this is the case with Steps 3 and 4 in the event processing example list).
+路由事件处理程序委托提供了两个对象的引用：引发事件的对象和调用处理程序的对象。调用处理程序的对象是由`sender`参数报告的对象。事件首次引发的对象由事件数据中的`Source`属性报告。路由事件仍然可以由同一对象引发和处理，此时`sender`和`Source`是相同的（这是事件处理示例列表中步骤3和4的情况）。
 
-Because of tunneling and bubbling, parent elements receive input events where the `Source` is one of their child elements. When it is important to know what the source element is, you can identify the source element by accessing the `Source` property.
+由于隧道和冒泡，父元素接收到源元素是其子元素之一的输入事件。当重要的是要知道源元素是什么时，可以通过访问`Source`属性来确定源元素。
 
-Usually, once the input event is marked `Handled`, further handlers are not invoked. Typically, you should mark input events as handled as soon as a handler is invoked that addresses your application-specific logical handling of the meaning of the input event.
+通常，一旦将输入事件标记为`Handled`，就不会调用其他处理程序。通常，应该在调用处理程序时将输入事件标记为已处理，以处理输入事件的含义的应用程序特定逻辑处理。
 
-The exception to this general statement about `Handled` state is that input event handlers that are registered to deliberately ignore `Handled` state of the event data would still be invoked along either route.
+关于`Handled`状态的这个一般性陈述的例外是，注册为有意忽略事件数据的`Handled`状态的输入事件处理程序仍将沿任一路线被调用。
 
-Certain classes choose to class-handle certain input events, usually with the intent of redefining what a particular user-driven input event means within that control and raising a new event.
+某些类选择对某些输入事件进行类处理，通常是为了重新定义该控件内特定用户驱动的输入事件的含义，并引发新事件。

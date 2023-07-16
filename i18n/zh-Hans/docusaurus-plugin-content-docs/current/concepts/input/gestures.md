@@ -2,11 +2,11 @@
 description: CONCEPTS - Input
 ---
 
-# Gestures
+# 手势
 
-Controls can detect gestures using Gesture Recognizers. These recognizers are hosted in controls, and listen for and track pointer events that the control receives, sending gesture events when they have detected a gesture has started.
+控件可以使用手势识别器来检测手势。这些识别器托管在控件中，监听控件接收到的指针事件，并在检测到手势开始时发送手势事件。
 
-All gesture recognizers derive from the base class `GestureRecognizer`, and can be attached to a control using the control's `GestureRecognizers` property. The following shows an Image hosting a `ScrollGestureRecognizer`;
+所有手势识别器都派生自基类`GestureRecognizer`，可以使用控件的`GestureRecognizers`属性将其附加到控件上。以下示例显示了一个托管了`ScrollGestureRecognizer`的图像：
 
 ```xml
 <Image Stretch="UniformToFill"
@@ -20,7 +20,6 @@ All gesture recognizers derive from the base class `GestureRecognizer`, and can 
 </Image>
 ```
 
-
 ```csharp title='C#'
 image.GestureRecognizers.Add(new ScrollGestureRecognizer()
             {
@@ -29,12 +28,12 @@ image.GestureRecognizers.Add(new ScrollGestureRecognizer()
             });
 ```
 
-## More Information
+## 更多信息
 
 :::info
-You can view more information on the available gesture recognizers [here](../../reference/gestures)
+您可以在[这里](../../reference/gestures)查看更多关于可用手势识别器的信息。
 
-You can view the source for related classes
+您可以查看相关类的源代码：
 
 [GestureRecognizer](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/GestureRecognizers/GestureRecognizer.cs)
 
