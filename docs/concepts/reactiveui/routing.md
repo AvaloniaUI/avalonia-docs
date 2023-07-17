@@ -85,7 +85,7 @@ namespace RoutingExample
         public ReactiveCommand<Unit, IRoutableViewModel> GoNext { get; }
 
         // The command that navigates a user back.
-        public ReactiveCommand<Unit, Unit> GoBack => Router.NavigateBack;
+        public ReactiveCommand<Unit, IRoutableViewModel> GoBack => Router.NavigateBack;
 
         public MainWindowViewModel()
         {
