@@ -11,6 +11,7 @@ This step uses _Avalonia UI_ concepts of data templates and data binding. Here a
 Follow this procedure to adapt your user control to use the items control:
 
 - Locate and open the **ToDoListView.axaml** file.
+- Add `xmlns:vm="using:ToDoList.ViewModels"` and `x:DataType="vm:ToDoListViewModel"` attributes to `<UserControl>` element. 
 - Replace the `<StackPanel>` element, so that the code looks like this:
 
 ```xml
@@ -18,8 +19,10 @@ Follow this procedure to adapt your user control to use the items control:
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:ToDoList.ViewModels"
              mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
-             x:Class="ToDoList.Views.ToDoListView">
+             x:Class="ToDoList.Views.ToDoListView"
+             x:DataType="vm:ToDoListViewModel">
   <DockPanel>
     <Button DockPanel.Dock="Bottom"
             HorizontalAlignment="Stretch"

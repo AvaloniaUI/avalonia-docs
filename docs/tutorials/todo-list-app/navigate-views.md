@@ -33,8 +33,11 @@ namespace ToDoList.ViewModels
         public MainWindowViewModel()
         {
             var service = new ToDoListService();
-            _contentViewModel= new ToDoListViewModel(service.GetItems());
+            ToDoList = new ToDoListViewModel(service.GetItems());
+            _contentViewModel = ToDoList;
         }
+
+        public ToDoListViewModel ToDoList { get; }
         
         public ViewModelBase ContentViewModel
         {
@@ -68,11 +71,12 @@ Follow this procedure:
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ToDoList.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
-        xmlns:view="using:ToDoList.Views"
         x:Class="ToDoList.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Avalonia To Do List"
         Content="{Binding ContentViewModel}">
@@ -94,6 +98,7 @@ Lastly, to make the add item button call the `AddItem()` method, follow this pro
 <Button DockPanel.Dock="Bottom"
         HorizontalAlignment="Stretch"
         HorizontalContentAlignment="Center"
+        x:CompileBindings="False"
         Command="{Binding $parent[Window].DataContext.AddItem}">Add Item
 </Button>
 ```
