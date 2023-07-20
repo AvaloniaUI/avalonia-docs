@@ -10,6 +10,10 @@ The items repeater can display repeating data from a bound data source. It has b
 The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [here](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater).&#x20;
 :::
 
+:::info
+The items repeater was moved [here](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater)
+:::
+
 The default layout template is a vertical stack layout, so that items appear in a vertical list.
 
 ## Example
