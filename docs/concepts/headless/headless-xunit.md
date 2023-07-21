@@ -1,6 +1,6 @@
 ---
 id: headless-xunit
-title: Headless testing with XUnit
+title: Headless Testing with XUnit
 ---
 
 ## Preparation 

@@ -12,8 +12,8 @@ By utilizing the headless platform, you can perform UI testing, execute applicat
 
 While the Headless platform can be initialized without any dependencies, for convenience, we have created integration packages for common unit testing platforms:
 
-- [Headless testing with XUnit](./headless-xunit)
-- [Headless testing with NUnit](./headless-nunit)
+- [Headless Testing with XUnit](./headless-xunit)
+- [Headless Testing with NUnit](./headless-nunit)
 - If you are using another platform or need more control: [Manual setup of the Headless platform](./headless-custom)
 
 ## Simulating User Input

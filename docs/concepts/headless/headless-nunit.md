@@ -6,7 +6,7 @@ title: Headless Testing with NUnit
 ## Preparation 
 
 This page assumes that NUnit project was already created.
-If not, please follow NUnit "Getting Started" and "Installation" here https://docs.nunit.org/2.2/getStarted.html.
+If not, please follow NUnit "Getting Started" and "Installation" here https://docs.nunit.org/articles/nunit/getting-started/installation.html.
 
 ## Install packages
 
