@@ -43,7 +43,21 @@ The `FluentTheme` tag no longer requires the `Mode` attribute and can be left em
 </Application.Styles>
 ```
 
+### Theme Dictionary and Theme Variant
 
+The method, `Styles.TryGetResource` method now requires a nullable `ThemeVariant` parameter as per PR #8166. This allows users to specify `Light`, `Dark`, and `Default`
+
+Using `ThemeVariant.Default` as the key marks a specific theme dictionary as a fallback in case the theme variant or resource key is not found in other theme dictionaries.
+
+In addition to the built-in values of `Light`, `Dark`, and `Default`, any object value can be used as a key (_since it's wrapped in the `ThemeVariant(object key)` structure_). `{x:Static}` markup extension can also be used here if a developer wants to define multiple custom themes as static properties and reference them from the XAML code.
+
+```cs
+// Before
+bool TryGetResource(object key, out object? value)
+
+// Avalonia v11
+bool TryGetResource(object key, ThemeVariant? theme, out object? value)
+```
 
 ## System.Reactive/Observables
 
