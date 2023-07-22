@@ -5,7 +5,20 @@ title: Debugging Previewer
 
 By default, even if you would put a breakpoint in Avalonia main repo directly it would not be hit when Previewer executes this code. This is because Previewer is a completely different process usually run by IDE.
 
-**But how do we debug it then?**
+**Debugging with JetBrains Rider**
+
+First of all to debug previewer process you will need to attach debugger to the process. To do that you may use Ctrl+Alt+P shortcut or click "..." button and then click "Attach to the Process".
+
+![image](https://github.com/AvaloniaUI/avalonia-docs/assets/53405089/767a290d-905a-483d-bfa4-e8ee918c6bca)
+
+Then in the search field you will need to type Avalonia and find this process,you may identify it by the Avalonia.Designer.HostApp.dll in the name.
+
+![image](https://github.com/AvaloniaUI/avalonia-docs/assets/53405089/bf29bb6a-76a3-4290-944c-be06e2cb0eb4)
+
+Then you click "Attach with .NET Core Debugger" and after that by using "Search everywhere" Rider feature you may place breakpoints in the previewer code and debug it.
+
+
+**Debugging with Visual Studio**
 
 You may try to attach the debugger manually. For doing that you will need to find a previewer process. You may use e.g "Process Hacker". Here you will see all processes in the system. Everything you will need to do is to type Avalonia in the search field.
 
