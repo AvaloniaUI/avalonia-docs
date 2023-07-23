@@ -3,19 +3,20 @@ id: upgrade-from-0.10
 title: Upgrading from 0.10
 ---
 
-Avalonia 11 introduces a number of breaking changes from 0.10. The following guide convers the most commonly-encountered changes and gives solutions for them.
+Avalonia 11 introduces a number of breaking changes from 0.10. The following guide converse the most commonly-encountered changes and gives solutions for them.
 
-## Updating the project.
+## Updating the project
 
 1. Update the Avalonia packages to 11.x
 2. Themes are no longer included in the Avalonia.Desktop package, so you will need to add a package reference to either
-  - `Avalonia.Themes.Fluent`
-  - `Avalonia.Themes.Simple`
+    - `Avalonia.Themes.Fluent`
+    - `Avalonia.Themes.Simple`
 3. Remove the package reference to `XamlNameReferenceGenerator` - Avalonia now includes an inbuilt generator by default
 4. If necessary, update the `<LangVersion>` to at least 9 in order to be able to use init-only properties
 5. If you want the same fonts as in 0.10, also include `Avalonia.Fonts.Inter` package and add `.WithInterFont()` to the app builder. By default, 11.0 doesn't include any custom fonts.
 
 ## Theme Handling
+
 In v0.10, the theme is specified directly inside the `Application.Styles` tag in the `Application.axaml` file. An example of this is shown below:
 
 ```xml
@@ -23,11 +24,13 @@ In v0.10, the theme is specified directly inside the `Application.Styles` tag in
     <FluentTheme Mode="Light"/>
 </Application.Styles>
 ```
+
 In this example, the `Mode` attribute of the `FluentTheme` tag is used to specify the theme mode, which can be either "Light" or "Dark".
 
 Theme management is improved by introducing a new attribute to the `Application` tag: `RequestedThemeVariant`. This new attribute is used to set the theme of your application, overriding the system's current theme if specified. If you want to follow the system's current theme, you can set it to "Default". Other available options are "Dark" and "Light".
 
 An example of how this attribute is used is shown below:
+
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -35,6 +38,7 @@ An example of how this attribute is used is shown below:
              xmlns:local="using:ILoveAvaloniaUI"
              RequestedThemeVariant="Default">
 ```
+
 The `FluentTheme` tag no longer requires the `Mode` attribute and can be left empty.
 
 ```xml
@@ -119,14 +123,14 @@ Views that are in the form of a `.axaml`/`.axaml.cs` (or `.xaml`/`.xaml.cs`) pai
 
 - Make the class in the .cs file `partial`
 - Remove the `private void InitializeComponent()` method
-- Do *NOT* remove the call to `InitializeComponent()` in the constructor: this method is now a generated method and still needs to be called
+- Do **NOT** remove the call to `InitializeComponent()` in the constructor: this method is now a generated method and still needs to be called
 - Remove the `this.AttachDevTools()` call from the constructor - `InitializeComponent` now has a parameter which controls whether DevTools is attached in debug mode whose default is `true`
 
 Previously, to find a named control declared in the XAML file, a call to `this.FindControl<T>(string name)` or `this.GetControl<T>(string name)` was needed. This is now unnecessary - controls in the XAML file with a `Name` or `x:Name` attribute will automatically cause a field to be generated in the class to access the named control (as in WPF/UWP etc).
 
 Note, this source generator is available for C# only. For F# nothing was changed.
 
-# ItemsControl
+## ItemsControl
 
 `ItemsControl` and derived classes such as `ListBox` and `ComboBox` now have both an `Items` property and an `ItemsSource` as in WPF/UWP.
 
@@ -134,13 +138,13 @@ Note, this source generator is available for C# only. For F# nothing was changed
 
 Replace any bindings to `Items` with a binding to `ItemsSource`:
 
-```
+```xml
 <ListBox Items="{Binding Items}">
 ```
 
-Becomes 
+Becomes
 
-```
+```xml
 <ListBox ItemsSource="{Binding Items}">
 ```
 
@@ -206,13 +210,13 @@ var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
 
 ## OnPropertyChanged
 
-The virtual `AvaloniaObject.OnPropertyChanged` method is now non-generic. Replace 
+The virtual `AvaloniaObject.OnPropertyChanged` method is now non-generic. Replace
 
 ```csharp
 protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
 ```
 
-with 
+with
 
 ```csharp
 protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
@@ -233,11 +237,11 @@ The following events have been renamed:
 - `PointerEnter` -> `PointerEntered`
 - `PointerLeave` -> `PointerExited`
 - `ContextMenu`
-    - `ContextMenuClosing` -> `Closing`
-    - `ContextMenuOpening` -> `Opening`
+  - `ContextMenuClosing` -> `Closing`
+  - `ContextMenuOpening` -> `Opening`
 - `MenuBase`
-    - `MenuClosed` -> `Closed`
-    - `MenuOpened` -> `Opened`
+  - `MenuClosed` -> `Closed`
+  - `MenuOpened` -> `Opened`
 
 `RoutedEventArgs.Source` has changed from type `IInteractive` to type `object`: cast to a concrete type such as `Control` to use it.
 
@@ -293,7 +297,7 @@ See [#11407](https://github.com/AvaloniaUI/Avalonia/pull/11407) for more informa
 
 `IVisual` was used in 0.10.x to expose the visual parent and visual children of a control. Because `IVisual` is no longer available, these are now exposed as extension methods in the `Avalonia.VisualTree` namespace:
 
-```
+```csharp
 using Avalonia.VisualTree;
 
 var visualParent = control.GetVisualParent();
@@ -311,6 +315,7 @@ See [#10299](https://github.com/AvaloniaUI/Avalonia/pull/10299) for more informa
 ## Locator
 
 The `AvaloniaLocator` is no longer available. Most services that were available via the locator now have alternative methods of access:
+
 1. `AssetLoader` is a static class now with all of the old methods.
 2. `IPlatformSettings` was moved to `TopLevel.PlatformSettings` and `Application.PlatformSettings`. Note, it's always preferred to use settings of the specific top level (window) rather than global ones.
 3. `IClipboard` was moved to the `TopLevel.Clipboard`. Note, that `Application.Clipboard` was removed as well.
@@ -327,3 +332,4 @@ Some applications were using the `AvaloniaLocator` as a general-purpose service 
 - `IRenderRoot.RenderScaling` has been moved to `TopLevel.RenderScaling`
 - `LightweightObservableBase` and `SingleSubscriberObservableBase` have been made internal. These were utility classes designed for a specific purpose in Avalonia and were not intended to be used by clients as they do not handle certain edge cases. Use the mechanisms provided by `System.Reactive` to create observables, such as `Observable.Create`
 - When binding to methods, the method must either have no parameters or a single object parameter.
+- `OpenFileDialog` and `SaveFileDialog` have been removed. For file system storage service use `IStorageProvider` on the Top Level.

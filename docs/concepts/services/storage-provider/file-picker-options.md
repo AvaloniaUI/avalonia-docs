@@ -19,6 +19,9 @@ Can be obtained from previously picked folder or using `StorageProvider.TryGetFo
 :::note
 This is a suggestion for the system, that can ignore this parameter, if application doesn't have access to the folder or it doesn't exist.
 :::
+:::note
+On Linux some DBus file picker don't support start location. For using GTK Free Desktop disable `UseDBusFilePicker` in `X11PlatformOptions`
+:::
 
 ## FilePickerOpenOptions
 
@@ -70,6 +73,7 @@ Gets or sets an option indicating whether open picker allows users to select mul
 # Defining custom file types
 
 Avalonia has set of build in file types:
+
 - FilePickerFileTypes.All - all files
 - FilePickerFileTypes.TextPlain - txt files
 - FilePickerFileTypes.ImageAll - all images
@@ -80,6 +84,7 @@ Avalonia has set of build in file types:
 However it is possible to define custom file types that can be used by the picker:
 
 For instance, build-in ImageAll type is defined as
+
 ```cs
 public static FilePickerFileType ImageAll { get; } = new("All Images")
 {
@@ -90,6 +95,7 @@ public static FilePickerFileType ImageAll { get; } = new("All Images")
 ```
 
 Where each file type has following hints that are used by the different platforms:
+
 - `Patterns` are used by most Windows, Linux and Browser platforms, and is a basic GLOB patten that can be matched on types.
 - `AppleUniformTypeIdentifiers` is a standard identifier defined by Apple and is used on macOS and iOS platforms.
 - And `MimeTypes` is a web identfier for the files used on most of platforms, but Windows and iOS.

@@ -11,7 +11,7 @@ Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, which is 
 
 ## How to use
 
-As a first step, [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/) nuget package needs to be installed. 
+As a first step, [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/) nuget package needs to be installed.
 
 :::info
 On how to add a nuget package, you can follow steps from the Nuget page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
@@ -68,9 +68,9 @@ To do so, you need to define
     // highlight-start
       <FluentTheme.Palettes>
         <!-- Palette for Light theme variant -->
-        <ColorPaletteResources x:Key="Light" AccentColor="Green" RegionColor="White" ErrorText="Red" />
+        <ColorPaletteResources x:Key="Light" Accent="Green" RegionColor="White" ErrorText="Red" />
         <!-- Palette for Dark theme variant -->
-        <ColorPaletteResources x:Key="Dark" AccentColor="DarkGreen" RegionColor="Black" ErrorText="Yellow" />
+        <ColorPaletteResources x:Key="Dark" Accent="DarkGreen" RegionColor="Black" ErrorText="Yellow" />
       </FluentTheme.Palettes>
     // highlight-end
     </FluentTheme>
@@ -78,12 +78,12 @@ To do so, you need to define
 </Application>
 ```
 
-While `ColorPaletteResources` has many color properties that can be overriden independently for each variant, it is possible to redefine only minimal set of what's needed, and keep everything else as per defaults. As in examples above, only a couple of colors are overriden.
+While `ColorPaletteResources` has many color properties that can be overridden independently for each variant, it is possible to redefine only minimal set of what's needed, and keep everything else as per defaults. As in examples above, only a couple of colors are overridden.
 
-If AccentColor is not overriden, Avalonia uses platform OS accent color if available.
-Also, AccentColor supports bindings and can be changed in runtime. But not other properties, as they are read once after app started and are statically used for performance reasons.
+If Accent is not overridden, Avalonia uses platform OS accent color if available.
+Also, Accent supports bindings and can be changed in runtime. But not other properties, as they are read once after app started and are statically used for performance reasons.
 
-It is possible to build palettes from the code behind, but same rules apply - only AccentColor can be updated dynamically, and palettes should be 
+It is possible to build palettes from the code behind, but same rules apply - only Accent can be updated dynamically, and palettes should be
 
 :::note
 FluentTheme supports only Dark and Light theme variants, and it's not possible to define palettes for custom variants.
@@ -92,7 +92,8 @@ FluentTheme supports only Dark and Light theme variants, and it's not possible t
 ## Creating custom color palettes with online editor
 
 Microsoft Fluent Theme Editor was ported to Avalonia and now available to be used with our FluentTheme as well.
-It is available on https://theme.xaml.live/ page and supports following features:
+It is available on <https://theme.xaml.live/> page and supports following features:
+
 1. Editing palette colors for both Light and Dark variants.
 2. Previewing of the current palette.
 3. Exporting current palettes as XAML code that can be copy pasted into `App.axaml` file.
