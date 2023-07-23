@@ -107,13 +107,14 @@ const config = {
         },
         
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
   ],
   plugins: [
     require.resolve('docusaurus-plugin-image-zoom'),
+    require.resolve('docusaurus-plugin-sass'),
     require.resolve("@cmfcmf/docusaurus-search-local"),
     [
       '@docusaurus/plugin-client-redirects',

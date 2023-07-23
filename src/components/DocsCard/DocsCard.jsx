@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import styles from './DocsCard.css'
 
 export const DocsCard = ({ label, link, height = 40, width = 40, title }) => {
     console.log(title);

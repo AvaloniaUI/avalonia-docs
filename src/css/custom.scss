@@ -4,45 +4,46 @@
  * work well for content-centric websites.
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
 /* You can override the default Infima variables here. */
+
 :root {
-  --ifm-font-family-base: 'Nunito', sans-serif;
-  --ifm-font-size-base: 1.1rem;
-  --ifm-color-primary: #8b44ac;
-  --ifm-color-primary-dark: #9757b4;
-  --ifm-color-primary-darker: #a269bd;
-  --ifm-color-primary-darkest: #ae7cc5;
-  --ifm-color-primary-light: #b98fcd;
-  --ifm-color-primary-lighter: #c5a2d6;
-  --ifm-color-primary-lightest: #dcc7e6;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base:'Nunito', sans-serif;
+  --ifm-font-size-base:1.1rem;
+  --ifm-color-primary:#8b44ac;
+  --ifm-color-primary-dark:#9757b4;
+  --ifm-color-primary-darker:#a269bd;
+  --ifm-color-primary-darkest:#ae7cc5;
+  --ifm-color-primary-light:#b98fcd;
+  --ifm-color-primary-lighter:#c5a2d6;
+  --ifm-color-primary-lightest:#dcc7e6;
+  --ifm-code-font-size:95%;
+  --docusaurus-highlighted-code-line-bg:rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
+
 [data-theme='dark'] {
-  --ifm-color-primary: #D271FF;
-  --ifm-color-primary-dark: #c5a2d6;
-  --ifm-color-primary-darker: #d1b4de;
-  --ifm-color-primary-darkest: #dcc7e6;
-  --ifm-color-primary-light: #e8daee;
-  --ifm-color-primary-lighter: #f3ecf7;
-  --ifm-color-primary-lightest: #ffffff;
-  --ifm-background-color: #161b2d!important;
-  --ifm-navbar-background-color: #161b2d;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary:#D271FF;
+  --ifm-color-primary-dark:#c5a2d6;
+  --ifm-color-primary-darker:#d1b4de;
+  --ifm-color-primary-darkest:#dcc7e6;
+  --ifm-color-primary-light:#e8daee;
+  --ifm-color-primary-lighter:#f3ecf7;
+  --ifm-color-primary-lightest:#ffffff;
+  --ifm-background-color:#161b2d !important;
+  --ifm-navbar-background-color:#161b2d;
+  --docusaurus-highlighted-code-line-bg:rgba(0, 0, 0, 0.3);
 }
 
-h1 { 
-  font-weight: 600!important; 
+h1 {
+  font-weight: 600 !important;
   font-size: 3rem;
 }
 
-h2 { 
-  font-weight: 500!important; 
+h2 {
+  font-weight: 500 !important;
   font-size: 1.8rem;
 }
 
@@ -67,12 +68,12 @@ h2 {
 }
 
 .footer--dark {
-  background-color: #1b2a4e!important;
+  background-color: #1b2a4e !important;
 }
 
 .footer__copyright {
   padding-top: 25px;
-  color: #506690!important;
+  color: #506690 !important;
 }
 
 .theme-doc-version-badge {
@@ -87,23 +88,21 @@ h2 {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' aria-hidden='true' viewBox='0 -2 28 28' version='1.1' data-view-component='true' %3E%3Cpath fill-rule='evenodd' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12' %3E%3C/path%3E%3C/svg%3E");
 }
 
-.navbar-social-link:hover {
-  opacity: 0.6;
+.navbar-social-link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: flex;
+    background-repeat: no-repeat;
+  }
 }
 
-.navbar-social-link::before {
-  content: '';
-  width: 24px;
-  height: 24px;
-  display: flex;
-  background-repeat: no-repeat;
-}
-
-.navbar-twitter-logo::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231DA1F2' viewBox='0 -3 28 28' aria-hidden='true'%3E%3Cpath d='M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z' %3E%3C/path%3E%3C/svg%3E");
-}
-
-[data-theme='dark'] .navbar-twitter-logo::before {
+.navbar-twitter-logo::before, [data-theme='dark'] .navbar-twitter-logo::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231DA1F2' viewBox='0 -3 28 28' aria-hidden='true'%3E%3Cpath d='M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z' %3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -121,4 +120,3 @@ img.rounded-corners {
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
-

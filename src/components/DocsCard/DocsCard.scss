@@ -6,16 +6,14 @@
     position: relative;
     word-wrap: break-word;
     margin-top: 0.5rem;
-    border: 3px solid rgba(105,119,165, 0.2);
+    border: 3px solid rgba(105, 119, 165, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 1px;
 
-}
-
-
-.card:hover {
-    transition-delay: 2s;
-    border: 3px solid #8b44ac;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    &:hover {
+        transition-delay: 2s;
+        border: 3px solid #8b44ac;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    }
 }
 
 .card-body {
@@ -32,6 +30,7 @@
 
 .card-icon {
     width: 20%;
+
     /* align-self: baseline; */
 }
 
@@ -56,10 +55,10 @@
         padding: 0.25rem 0;
         width: 100%;
         margin: 0 auto;
-    }
 
-    .card-info h3 {
-        text-align: center;
+        h3 {
+            text-align: center;
+        }
     }
 }
 
@@ -73,10 +72,9 @@
         padding: 0.25rem 0;
         width: 100%;
         margin: 0 auto;
-    }
 
-    .card-info h3 {
-        text-align: center;
+        h3 {
+            text-align: center;
+        }
     }
-
 }
