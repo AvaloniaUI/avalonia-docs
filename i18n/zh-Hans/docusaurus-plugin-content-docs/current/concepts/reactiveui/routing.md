@@ -1,10 +1,10 @@
-# Routing
+# 路由
 
-[ReactiveUI routing](https://reactiveui.net/docs/handbook/routing/) consists of an [IScreen](https://reactiveui.net/api/reactiveui/iscreen/) that contains current [RoutingState](https://reactiveui.net/api/reactiveui/routingstate/), several [IRoutableViewModel](https://reactiveui.net/api/reactiveui/iroutableviewmodel/)s, and a platform-specific XAML control called [RoutedViewHost](https://github.com/AvaloniaUI/Avalonia/blob/55458cf7af24d6c987268ab5ff8a1ead1173310b/src/Avalonia.ReactiveUI/RoutedViewHost.cs). `RoutingState` manages the view model navigation stack and allows view models to navigate to other view models. `IScreen` is the root of a navigation stack; despite the name, its views don't have to occupy the whole screen. `RoutedViewHost` monitors an instance of `RoutingState`, responding to any changes in the navigation stack by creating and embedding the appropriate view.
+[ReactiveUI 路由](https://reactiveui.net/docs/handbook/routing/)由包含当前 [RoutingState](https://reactiveui.net/api/reactiveui/routingstate/) 的 [IScreen](https://reactiveui.net/api/reactiveui/iscreen/)、多个 [IRoutableViewModel](https://reactiveui.net/api/reactiveui/iroutableviewmodel/) 和一个特定于平台的 XAML 控件 [RoutedViewHost](https://github.com/AvaloniaUI/Avalonia/blob/55458cf7af24d6c987268ab5ff8a1ead1173310b/src/Avalonia.ReactiveUI/RoutedViewHost.cs) 组成。`RoutingState` 管理视图模型导航堆栈，并允许视图模型导航到其他视图模型。`IScreen` 是导航堆栈的根；尽管名称如此，但它的视图不必占据整个屏幕。`RoutedViewHost` 监视 `RoutingState` 的实例，通过创建和嵌入适当的视图来响应导航堆栈中的任何更改。
 
-## Routing Example
+## 路由示例
 
-Create a new empty project from Avalonia templates. To use those, clone the [avalonia-dotnet-templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates) repository, install the templates and create a new project named `RoutingExample` based on `avalonia.app` template. Install `Avalonia.ReactiveUI` package into the project.
+从 Avalonia 模板创建一个新的空项目。要使用这些模板，请克隆 [avalonia-dotnet-templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates) 存储库，安装模板，并基于 `avalonia.app` 模板创建一个名为 `RoutingExample` 的新项目。将 `Avalonia.ReactiveUI` 包安装到项目中。
 
 ```bash
 git clone https://github.com/AvaloniaUI/avalonia-dotnet-templates
@@ -16,17 +16,17 @@ dotnet add package Avalonia.ReactiveUI
 
 **FirstViewModel.cs**
 
-First, create routable view models and corresponding views. We derive routable view models from the `IRoutableViewModel` interface from `ReactiveUI` namespace, and from `ReactiveObject` as well. `ReactiveObject` is the base class for [view model classes](https://reactiveui.net/docs/handbook/view-models/), and it implements `INotifyPropertyChanged`.
+首先，创建可路由的视图模型和相应的视图。我们从 `ReactiveUI` 命名空间中的 `IRoutableViewModel` 接口派生可路由的视图模型，并且也从 `ReactiveObject` 派生。`ReactiveObject` 是[视图模型类](https://reactiveui.net/docs/handbook/view-models/)的基类，并实现了 `INotifyPropertyChanged`。
 
 ```csharp
 namespace RoutingExample
 {
     public class FirstViewModel : ReactiveObject, IRoutableViewModel
     {
-        // Reference to IScreen that owns the routable view model.
+        // 拥有可路由视图模型的 IScreen 引用。
         public IScreen HostScreen { get; }
 
-        // Unique identifier for the routable view model.
+        // 可路由视图模型的唯一标识符。
         public string UrlPathSegment { get; } = Guid.NewGuid().ToString().Substring(0, 5);
 
         public FirstViewModel(IScreen screen) => HostScreen = screen;
@@ -46,11 +46,11 @@ namespace RoutingExample
         <TextBlock Text="{Binding UrlPathSegment}" />
     </StackPanel>
 </UserControl>
-```
+```"
 
 **FirstView.xaml.cs**
 
-If we need to handle view model activation and deactivation, then we add a call to WhenActivated to the view. Generally, a rule of thumb is to always add WhenActivated to your views, see [Activation](../../concepts/reactiveui/view-activation) docs for more info.
+如果我们需要处理视图模型的激活和停用，那么我们在视图中添加一个调用WhenActivated的方法。一般来说，一个经验法则是始终在视图中添加WhenActivated，详见[Activation](../../concepts/reactiveui/view-activation)文档了解更多信息。
 
 ```csharp
 namespace RoutingExample
@@ -68,33 +68,30 @@ namespace RoutingExample
 
 **MainWindowViewModel.cs**
 
-Then, create a view model implementing the `IScreen` interface. It contains current `RoutingState` that manages the navigation stack. `RoutingState` also contains helper commands allowing you to navigate back and forward.
+然后，创建一个实现`IScreen`接口的视图模型。它包含管理导航堆栈的当前`RoutingState`。`RoutingState`还包含一些辅助命令，允许您向后和向前导航。
 
-Actually, you can use as many `IScreen`s as you need in your application. Despite the name, it doesn't have to occupy the whole screen. You can use nested routing, place `IScreen`s side-by-side, etc.
+实际上，您可以在应用程序中使用任意数量的`IScreen`。尽管名称如此，它不必占据整个屏幕。您可以使用嵌套路由，在一侧放置`IScreen`等。
 
 ```csharp
 namespace RoutingExample
 {
     public class MainWindowViewModel : ReactiveObject, IScreen
     {
-        // The Router associated with this Screen.
-        // Required by the IScreen interface.
+        // 与此Screen关联的Router。
+        // IScreen接口所需。
         public RoutingState Router { get; } = new RoutingState();
 
-        // The command that navigates a user to first view model.
+        // 导航用户到第一个视图模型的命令。
         public ReactiveCommand<Unit, IRoutableViewModel> GoNext { get; }
 
-        // The command that navigates a user back.
+        // 导航用户返回的命令。
         public ReactiveCommand<Unit, Unit> GoBack => Router.NavigateBack;
 
         public MainWindowViewModel()
         {
-            // Manage the routing state. Use the Router.Navigate.Execute
-            // command to navigate to different view models. 
+            // 管理路由状态。使用Router.Navigate.Execute命令导航到不同的视图模型。
             //
-            // Note, that the Navigate.Execute method accepts an instance 
-            // of a view model, this allows you to pass parameters to 
-            // your view models, or to reuse existing view models.
+            // 注意，Navigate.Execute方法接受一个视图模型的实例，这允许您向视图模型传递参数，或者重用现有的视图模型。
             //
             GoNext = ReactiveCommand.CreateFromObservable(
                 () => Router.Navigate.Execute(new FirstViewModel(this))
@@ -106,7 +103,7 @@ namespace RoutingExample
 
 **MainWindow.xaml**
 
-Now we need to place the `RoutedViewHost` XAML control to our main view. It will resolve and embed appropriate views for the view models based on the supplied `IViewLocator` implementation and the passed `Router` instance of type `RoutingState`. Note, that you need to import `rxui` namespace for `RoutedViewHost` to work. Additionally, you can override animations that are played when `RoutedViewHost` changes a view — simply override `RoutedViewHost.PageTransition` property in XAML. For latest builds from MyGet use `xmlns:rxui="https://reactiveui.net"`, for 0.8.0 release on NuGet use `xmlns:rxui="clr-namespace:Avalonia;assembly=Avalonia.ReactiveUI"` as in the example below.
+现在我们需要将`RoutedViewHost` XAML控件放置在我们的主视图中。它将根据提供的`IViewLocator`实现和传递的`Router`实例（类型为`RoutingState`）解析和嵌入适当的视图模型。请注意，您需要导入`rxui`命名空间以使`RoutedViewHost`正常工作。此外，您可以在XAML中重写`RoutedViewHost.PageTransition`属性，以覆盖`RoutedViewHost`更改视图时播放的动画。对于来自MyGet的最新构建，请使用`xmlns:rxui="https://reactiveui.net"`，对于NuGet上的0.8.0版本，请使用`xmlns:rxui="clr-namespace:Avalonia;assembly=Avalonia.ReactiveUI"`，如下面的示例所示。
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -151,7 +148,7 @@ Now we need to place the `RoutedViewHost` XAML control to our main view. It will
 </Window>
 ```
 
-To disable the animations, simply set the `RoutedViewHost.PageTransition` property to `{x:Null}`, like so:
+要禁用动画，只需将`RoutedViewHost.PageTransition`属性设置为`{x:Null}`，如下所示：
 
 ```markup
 <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}" PageTransition="{x:Null}">
@@ -165,7 +162,7 @@ To disable the animations, simply set the `RoutedViewHost.PageTransition` proper
 
 **AppViewLocator.cs**
 
-The `AppViewLocator` that we are passing to the `RoutedViewHost` control declared in the `MainWindow.xaml` markup shown above is responsible for resolving a View based on the type of the ViewModel. The `IScreen.Router` instance of type `RoutingState` determines which ViewModel should be currently shown. See [View Location](https://reactiveui.net/docs/handbook/view-location/) for details. The simplest possible `IViewLocator` implementation based on pattern matching might look like this:
+我们在上面显示的`MainWindow.xaml`标记中传递给`RoutedViewHost`控件的`AppViewLocator`负责根据ViewModel的类型解析View。类型为`RoutingState`的`IScreen.Router`实例确定当前应显示哪个ViewModel。有关详细信息，请参阅[View Location](https://reactiveui.net/docs/handbook/view-location/)。基于模式匹配的最简单的`IViewLocator`实现可能如下所示：
 
 ```csharp
 namespace RoutingExample
@@ -183,7 +180,7 @@ namespace RoutingExample
 
 **MainWindow.xaml.cs**
 
-Here is the code-behind for `MainWindow.xaml` declared above.
+这是上面声明的`MainWindow.xaml`的代码后台。
 
 ```csharp
 namespace RoutingExample
@@ -201,7 +198,7 @@ namespace RoutingExample
 
 **App.axaml.cs**
 
-Make sure you initialize the `DataContext` of your root view in `App.axaml.cs`
+请确保在 `App.axaml.cs` 中初始化根视图的 `DataContext`。
 
 ```csharp
 public override void OnFrameworkInitializationCompleted()
@@ -218,7 +215,7 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-Finally, add `.UseReactiveUI()` to your `AppBuilder`:
+最后，在你的 `AppBuilder` 中添加 `.UseReactiveUI()` ：
 
 ```csharp
 namespace RoutingExample
@@ -239,7 +236,7 @@ namespace RoutingExample
 }
 ```
 
-Now, you can run the app and see routing in action!
+现在，您可以运行该应用程序并查看路由的效果！
 
 ```bash
 dotnet run --framework netcoreapp2.1

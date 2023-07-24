@@ -5,12 +5,12 @@ title: Deep Dives
 
 # Deep Dives
 
-This section contains pages that will help you understand some of the concepts used by _Avalonia UI._ This is background and theory information, often supported by code samples you can work through. This section is arranged alphabetically by title.&#x20;
+本节包含的页面将帮助您理解_Avalonia UI使用的一些概念。_这是背景和理论信息，通常由您可以完成的代码示例支持。本节按标题的字母顺序排列#x20;
 
 :::tip
-If you are new to _Avalonia UI_, we recommend that you complete the ['Get Started'](../get-started) before you read these pages.
+如果您是新的_Avalonia UI_，我们建议您在阅读这些页面之前完成['开始'](../get-started)。
 :::
 
 :::tip
-If you are looking for practical advice on how to achieve any of the above, learn the [Basics](../basics/).
+如果你正在寻找关于如何实现上述任何一个的实用建议，请学习[基础知识](../basics/).
 :::

@@ -2,14 +2,11 @@
 description: CONCEPTS
 ---
 
-# Templated Controls
+# 模板化控件
 
-`TemplatedControl`s are best used for generic controls that can be shared among various applications. They are _lookless_ controls, meaning that they can be restyled for different themes and applications. The majority of standard controls defined by Avalonia fit into this category.
+`TemplatedControl`最适合用于可以在各种应用程序之间共享的通用控件。它们是无样式的控件，意味着可以为不同的主题和应用程序重新定义样式。Avalonia定义的大多数标准控件都属于这个类别。
 
-
-
-If you want to provide a `Style` for your `TemplatedControl` in a separate file, remember to include this file in your Application via [`StyleInclude`](../basics/user-interface/styling/styles).
-
+如果您想为`TemplatedControl`提供一个单独的文件中的`Style`，请记得通过[`StyleInclude`](../basics/user-interface/styling/styles)将此文件包含在您的应用程序中。
 
 
 

@@ -1,196 +1,193 @@
 ---
 description: CONCEPTS
 ---
+# 顶级控件
 
-# The TopLevel
+顶级控件充当视觉根，并且是所有顶级控件（例如`Window`）的基类。它处理布局、样式和渲染的调度，以及跟踪客户端大小。大多数服务都通过顶级控件访问。
 
-The TopLevel act as the visual root, and is the base class for all top level controls, eg. `Window`. It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the TopLevel.
+## 获取顶级控件
 
-## Getting the TopLevel
+以下是两种常见的访问顶级控件实例的方法。
 
-Here are two common ways to access TopLevel instance.
-
-### Using TopLevel.GetTopLevel
-You can use the static `GetTopLevel` method of the TopLevel class to get the top-level control that contains the current control.
+### 使用TopLevel.GetTopLevel
+您可以使用TopLevel类的静态`GetTopLevel`方法获取包含当前控件的顶级控件。
 
 ```cs
 var topLevel = TopLevel.GetTopLevel(control);
-// Here you can reference various services like Clipboard or StorageProvider from topLevel instance.
+// 在此处，您可以从topLevel实例引用各种服务，如Clipboard或StorageProvider。
 ```
-This method can be helpful if you're working within a user control or a lower-level component and need access to the TopLevel services.
+如果您在用户控件或较低级别的组件中工作并且需要访问顶级控件的服务，此方法可能会有所帮助。
 
 :::note
-If `TopLevel.GetTopLevel` returns null, likely control is not yet attached to the root. To ensure control is attached, you should handle `Control.Loaded` and `Control.Unloaded` events and keep track of current top level from these events.
+如果`TopLevel.GetTopLevel`返回null，则可能控件尚未附加到根。为确保控件已附加，您应该处理`Control.Loaded`和`Control.Unloaded`事件，并从这些事件中跟踪当前顶级控件。
 :::
 
-### Using the Window Class
+### 使用Window类
 
-Since the`Window` class inherits from `TopLevel`, you can directly access services from an instance of `Window`:
+由于`Window`类继承自`TopLevel`，因此您可以直接从`Window`实例访问服务：
 
 ```cs
 var topLevel = window;
 ```
 
-This method is typically used when you're already working within the context of a window, such as in a ViewModel or an event handler within the `Window` class.
+当您已经在窗口的上下文中工作时，例如在ViewModel或`Window`类中的事件处理程序中，通常会使用此方法。
 
-
-## Common Properties
+## 常见属性
 
 ### ActualTransparencyLevel
-Gets the achieved `WindowTransparencyLevel` that the platform was able to provide.
+获取平台能够提供的实际`WindowTransparencyLevel`。
 
 ```cs
 WindowTransparencyLevel ActualTransparencyLevel { get; }
 ```
 
 ### ClientSize
-Gets the client size of the window.
+获取窗口的客户端大小。
 
 ```cs
 Size ClientSize { get; }
 ```
 
 ### Clipboard
-Gets the platform's [Clipboard](./services/clipboard) implementation.
+获取平台的[Clipboard](./services/clipboard)实现。
 
 ```cs
 IClipboard? Clipboard { get; }
 ```
 
 ### FocusManager
-Gets [focus manager](./services/focus-manager) of the root.
+获取根的[焦点管理器](./services/focus-manager)。
 
 ```cs
 IFocusManager? FocusManager { get; }
 ```
 
 ### FrameSize
-Gets the total size of the top level including system frame if presented.
+获取顶级控件的总大小，包括系统框架（如果有）。
 
 ```cs
 Size? FrameSize { get; }
 ```
-
 ### InsetsManager
-Gets the platform's [InsetsManager](./services/insets-manager) implementation.
+获取平台的[InsetsManager](./services/insets-manager)实现。
 
 ```cs
 IInsetsManager? InsetsManager { get; }
 ```
 
 ### PlatformSettings
-Represents a contract for accessing top-level [platform-specific settings](./services/platform-settings).
+表示访问顶级[平台特定设置](./services/platform-settings)的契约。
 
 ```cs
 IPlatformSettings? PlatformSettings { get; }
 ```
 
 ### RendererDiagnostics
-Gets a value indicating whether the renderer should draw specific diagnostics.
+获取一个值，指示渲染器是否应绘制特定的诊断信息。
 
 ```cs
 RendererDiagnostics RendererDiagnostics { get; }
 ```
 
 ### RenderScaling
-Gets the scaling factor to use in rendering.
+获取用于渲染的缩放因子。
 
 ```cs
 double RenderScaling { get; }
 ```
 
 ### RequestedThemeVariant
-Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with ThemeVariant can override the app-level ThemeVariant.
+获取或设置控件（及其子元素）用于资源确定的UI主题变体。您使用ThemeVariant指定的UI主题可以覆盖应用程序级别的ThemeVariant。
 
 ```cs
 ThemeVariant? RequestedThemeVariant { get; set; }
 ```
 
 ### StorageProvider
-[File System storage](./services/storage-provider/) service used for file pickers and bookmarks.
+用于文件选择器和书签的[文件系统存储](./services/storage-provider/)服务。
 
 ```cs
 IStorageProvider StorageProvider { get; }
 ```
 
 ### TransparencyBackgroundFallback
-Gets or sets the `IBrush` that transparency will blend with when transparency is not supported. By default this is a solid white brush.
+获取或设置当不支持透明度时，透明度将与之混合的`IBrush`。默认情况下，这是一个纯白色的画刷。
 
 ```cs
 IBrush TransparencyBackgroundFallback { get; set; }
 ```
 
 ### TransparencyLevelHint
-Gets or sets the `WindowTransparencyLevel` that the TopLevel should use when possible. Accepts multiple values which are applied in a fallback order. For instance, with "Mica, Blur" Mica will be applied only on platforms where it is possible, and Blur will be used on the rest of them. Default value is an empty array or "None".   
+获取或设置TopLevel在可能的情况下应使用的`WindowTransparencyLevel`。接受多个值，按照回退顺序应用。例如，使用"Mica，Blur"，Mica仅在支持它的平台上应用，其余平台上使用Blur。默认值是一个空数组或"None"。
 
 ```cs
 IReadOnlyList<WindowTransparencyLevel> TransparencyLevelHint { get; set; }
 ```
 
-## Common Events
+## 常见事件
 
 ### BackRequested
-Occurs when physical Back Button is pressed or a back navigation has been requested.
+在按下物理返回按钮或请求后退导航时发生。
 
 ```cs
 event EventHandler<RoutedEventArgs> BackRequested { add; remove; }
 ```
 
 ### Closed
-Fired when the window is closed.
+窗口关闭时触发。
 
 ```cs
 event EventHandler Closed;
 ```
 
 ### Opened
-Fired when the window is opened.
+窗口打开时触发。
 
 ```cs
 event EventHandler Opened;
 ```
 
 ### ScalingChanged
-Occurs when the TopLevel's scaling changes.
+当TopLevel的缩放发生变化时发生。
 
 ```cs
 event EventHandler ScalingChanged;
 ```
 
-## Common Methods
+## 常见方法
 
 ### GetTopLevel
-Gets the `TopLevel` for which the given `Visual` is hosted in.
-#### Parameters
+获取给定`Visual`所托管的`TopLevel`。
+#### 参数
 `control` 
-The visual to query its TopLevel
+要查询其TopLevel的可视对象
 
 ```cs
 static TopLevel? GetTopLevel(Visual? visual)
 ```
 
 ### RequestAnimationFrame
-Enqueues a callback to be called on the next animation tick
+将回调排队，以在下一个动画刻度上调用
 
 ```cs
 void RequestAnimationFrame(Action<TimeSpan> action)
 ```
 
 ### RequestPlatformInhibition
-Requests a `PlatformInhibitionType` to be inhibited. The behavior remains inhibited until the return value is disposed. The available set of `PlatformInhibitionType`s depends on the platform. If a behavior is inhibited on a platform where this type is not supported the request will have no effect.
+请求抑制`PlatformInhibitionType`。行为将保持抑制，直到返回值被释放。可用的`PlatformInhibitionType`集取决于平台。如果在不支持此类型的平台上抑制行为，则请求将不起作用。
 
 ```cs
 async Task<IDisposable> RequestPlatformInhibition(PlatformInhibitionType type, string reason)
 ```
 
 ### TryGetPlatformHandle
-Tries to get the platform handle for the TopLevel-derived control.
+尝试获取派生自TopLevel的控件的平台句柄。
 
 ```cs
 IPlatformHandle? TryGetPlatformHandle()
 ```
 
 
-## More Information
+## 更多信息
 
-View the source code on _GitHub_ [`TopLevel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)
+在_GitHub_上查看源代码 [`TopLevel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)"

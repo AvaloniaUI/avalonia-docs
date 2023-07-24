@@ -1,18 +1,17 @@
 ---
 description: CONCEPTS
 ---
+# 伪类
 
-# Pseudo Classes
+Avalonia中的伪类与CSS中的伪类类似，它们是添加到选择器中的关键字，用于指定所选元素的特殊状态。它们可以根据特定条件对控件进行不同的样式设置。例如，当按钮被按下时，可以为其设置不同的样式，或者当TextBox被禁用时可以设置不同的样式。
 
-Pseudo classes in Avalonia, similar to those in CSS, are keywords added to a selector that specify a special state of the selected element(s). They can be used to style controls differently based on certain conditions. For example, a button could be styled differently when it's being pressed, or a TextBox can have a different style when it is disabled.
+Avalonia支持许多内置的伪类，并且控件可以定义自己的伪类。
 
-Avalonia supports a number of built-in pseudo classes, and controls can define their own.
-
-## Usage
-To use pseudo classes, you append a colon (:) and the pseudo class to the selector. Here's an example:
+## 使用方法
+要使用伪类，您需要在选择器后面添加冒号（:）和伪类。以下是一个示例：
 
 ```xml
-<Button Content="Click Me!">
+<Button Content="点击我！">
   <Button.Styles>
     // highlight-start
     <Style Selector="Button:pointerover">
@@ -23,41 +22,40 @@ To use pseudo classes, you append a colon (:) and the pseudo class to the select
 </Button>
 ```
 
-In this example, the button's background will change to red when the pointer is over it, thanks to the `pointerover` pseudo class.
+在这个示例中，当鼠标指针悬停在按钮上时，按钮的背景颜色将变为红色，这得益于`pointerover`伪类。
 
-## Built-in Pseudo Classes
-Some of the built-in pseudo classes include:
+## 内置伪类
+一些内置的伪类包括：
 
-* `:pointerover`: The mouse pointer is over the control.
-* `:pressed`: The control is being pressed.
-* `:disabled`: The control is disabled.
-* `:focus`: The control has input focus.
-* `:watermark`: For TextBox control, when it's displaying a watermark.
-* `:checked`: For checkable controls, like CheckBox or MenuItem, when it's checked.
-* `:indeterminate`: For controls like CheckBox, when it's in the indeterminate state.
-* `:valid`: For input controls, when the input is valid.
-* `:invalid`: For input controls, when the input is invalid.
+* `:pointerover`：鼠标指针悬停在控件上。
+* `:pressed`：控件正在被按下。
+* `:disabled`：控件被禁用。
+* `:focus`：控件具有输入焦点。
+* `:watermark`：对于TextBox控件，当显示水印时。
+* `:checked`：对于可选控件，如CheckBox或MenuItem，当被选中时。
+* `:indeterminate`：对于像CheckBox这样的控件，当处于不确定状态时。
+* `:valid`：对于输入控件，当输入有效时。
+* `:invalid`：对于输入控件，当输入无效时。
 
-You can combine pseudo classes with type selectors and class selectors to create a wide range of effects.
+您可以将伪类与类型选择器和类选择器结合使用，创建各种效果。
 
-## Custom Pseudo Classes
+## 自定义伪类
 
-Controls can define their own pseudo classes for specific behaviors. To define a pseudo class, a control typically creates a static readonly field of type `PseudoClass` and calls `PseudoClasses.Set()` to enable the pseudo class and `PseudoClasses.Remove()` to disable it.
+控件可以为特定行为定义自己的伪类。要定义伪类，控件通常会创建一个静态只读字段，类型为`PseudoClass`，并调用`PseudoClasses.Set()`来启用伪类，调用`PseudoClasses.Remove()`来禁用伪类。
 
-For example, a custom `:custom` pseudo class might be defined as follows:
+例如，可以如下定义一个自定义的`:custom`伪类：
 
 ```cs
 public static readonly PseudoClass CustomPseudoClass = PseudoClass.Parse(":custom");
 
-// to enable
+// 启用
 PseudoClasses.Set(CustomPseudoClass);
 
-// to disable
+// 禁用
 PseudoClasses.Remove(CustomPseudoClass);
 ```
 
-This allows developers to add more expressiveness and control to their styles, tailoring styles to very specific control states.
-
+这样可以使开发人员在样式中添加更多的表现力和控制性，将样式针对非常特定的控件状态进行定制。
 
 
 

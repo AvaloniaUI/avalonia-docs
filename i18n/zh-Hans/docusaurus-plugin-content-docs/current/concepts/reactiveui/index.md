@@ -5,58 +5,57 @@ description: CONCEPTS
 # ReactiveUI
 
 :::tip
-ReactiveUI is used in our examples, but it's not required. Avalonia supports any MVVM framework or your own custom solutions.
+ReactiveUI在我们的示例中使用，但不是必需的。Avalonia支持任何MVVM框架或您自己的自定义解决方案。
 :::
 
-These pages explain how _Avalonia UI_ uses a version of the open-source _ReactiveUI_ framework to make it easier to implement the MVVM pattern in your application.&#x20;
+这些页面解释了_Avalonia UI_如何使用开源的_ReactiveUI_框架的版本，以便更容易地在应用程序中实现MVVM模式。&#x20;
 
-_ReactiveUI_ is an advanced, composable, functional reactive model-view-viewmodel (MVVM) framework for all .NET platforms. It was inspired by the functional reactive programming paradigm.
+_ReactiveUI_是一个高级的、可组合的、功能反应式的模型-视图-视图模型（MVVM）框架，适用于所有.NET平台。它受到了函数式反应式编程范式的启发。
 
 :::info
-For a full technical background on functional reactive programming, see the Wikipedia article [here](https://en.wikipedia.org/wiki/Functional\_reactive\_programming).
+有关函数式反应式编程的完整技术背景，请参阅维基百科文章[这里](https://en.wikipedia.org/wiki/Functional\\_reactive\\_programming)。
 :::
 
-&#x20;_Avalonia UI_ ships with its own fork of _ReactiveUI_ in the `Avalonia.ReactiveUI` _NuGet_ package.
+_Avalonia UI_附带了自己的_ReactiveUI_分支，位于`Avalonia.ReactiveUI` _NuGet_包中。
 
 <img src="/img/gitbook-import/assets/image (44) (1).png" alt=""/>
 
-To use _ReactiveUI_ and the MVVM pattern in your _Avalonia UI_ application, add the package to your project using the _NuGet_ package manager (as above), or execute the following CLI command:
+要在您的_Avalonia UI_应用程序中使用_ReactiveUI_和MVVM模式，请使用_NuGet_包管理器（如上所示）将包添加到您的项目中，或执行以下CLI命令：
 
 ```bash
 dotnet add package Avalonia.ReactiveUI
 ```
 
 :::info
-For detailed information about _ReactiveUI_ itself, see the website [https://reactiveui.net/](https://reactiveui.net/)
+有关_ReactiveUI_本身的详细信息，请参阅网站[https://reactiveui.net/](https://reactiveui.net/)
 :::
 
 :::info
-For more background about the MVVM pattern, see the _Microsoft_ article [here](https://msdn.microsoft.com/en-us/library/hh848246.aspx).&#x20;
+有关MVVM模式的更多背景信息，请参阅_Microsoft_文章[这里](https://msdn.microsoft.com/en-us/library/hh848246.aspx)。&#x20;
 :::
 
-The package includes helpers specifically for _Avalonia U_I to handle the _ReactiveUI_ tasks of view model-based routing, view activation and scheduling. (see the above reference for full details of these tasks).
+该包包含了专门为_Avalonia UI_设计的帮助程序，用于处理_ReactiveUI_的视图模型导航、视图激活和调度任务（有关这些任务的完整详细信息，请参阅上述参考）。
 
 :::info
-If you start your application from the Avalonia MVVM Application solution template; then you will already have the _ReactiveUI_ package installed and configured.
+如果您从Avalonia MVVM应用程序解决方案模板启动应用程序，则已经安装并配置了_ReactiveUI_包。
 :::
 
-## Configure to Use ReactiveUI&#x20;
+## 配置使用ReactiveUI&#x20;
 
-Having installed the _NuGet_ package, you must configure the application `Program` class to use it.  Check that you call the `UseReactiveUI()`method  in the `AppBuilder` code.&#x20;
+安装了_NuGet_包后，您必须配置应用程序的`Program`类来使用它。请确保在`AppBuilder`代码中调用`UseReactiveUI()`方法。&#x20;
 
-For example, if you use the Avalonia MVVM Application solution template, it will automatically add the _NuGet_ package, and then add the code:
+例如，如果您使用Avalonia MVVM应用程序解决方案模板，它将自动添加_NuGet_包，然后添加以下代码：
 
 ```csharp
 internal class Program
 {
-    // Initialization code. Don't use any Avalonia, third-party APIs or any
-    // SynchronizationContext-reliant code before AppMain is called: things aren't initialized
-    // yet and stuff might break.
+    // 初始化代码。在调用AppMain之前，不要使用任何Avalonia、第三方API或任何
+    // 依赖于SynchronizationContext的代码：因为还没有初始化，可能会出现问题。
     [STAThread]
     public static void Main(string[] args) => BuildAvaloniaApp()
         .StartWithClassicDesktopLifetime(args);
 
-    // Avalonia configuration, don't remove; also used by visual designer.
+    // Avalonia配置，请勿删除；也被可视化设计器使用。
     public static AppBuilder BuildAvaloniaApp()
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
@@ -65,10 +64,10 @@ internal class Program
 }
 ```
 
-In the following pages, you will learn how _ReactiveUI_ works with _Avalonia UI_ to allow you to implement the following application scenarios:
+在接下来的页面中，您将了解_ReactiveUI_如何与_Avalonia UI_配合工作，以实现以下应用程序场景：
 
-* Data Binding a Reactive View Model
-* View Activation
-* Routing
-* Data Persistence
-* Binding to Sorted/Filtered Data
+* 数据绑定反应式视图模型
+* 视图激活
+* 路由
+* 数据持久化
+* 绑定到排序/过滤数据

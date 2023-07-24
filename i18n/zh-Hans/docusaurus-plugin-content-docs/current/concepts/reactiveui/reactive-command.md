@@ -1,20 +1,19 @@
 ---
 description: CONCEPTS - ReactiveUI
 ---
+# 响应式命令
 
-# Reactive Command
+在本页面中，您将学习如何使用_ReactiveUI_的`ReactiveCommand`和在代码中创建的`ObservableObject`来实现UI的功能逐步展示原则。
 
-On this page you will learn how to use the _ReactiveUI_ `ReactiveCommand` and an `ObservableObject` created in code, to implement the UI principle of revealed functionality.&#x20;
+## 功能逐步展示原则
 
-## Revealed Functionality
+这是一个非常重要的原则，它确保用户能够正确地通过您的UI进行操作，因为只有在它们有效时，功能和功能才会变得可用（甚至可见）。
 
-This is a very important principle that ensures that a user is properly guided through your UI because features and functions only become available (or even visible) once they are valid. &#x20;
+举个简单的例子：在点击按钮之前，输入框需要至少8个字符，因此在有效输入之前，将按钮保持禁用是正确的UI做法。
 
-As a simple example: an input requires at least 8 characters before a button can be clicked, so it is proper UI practice to keep the button disabled until valid input has been made.
+## 响应式命令
 
-## Reactive Command&#x20;
-
-As a starting point, you can create a simple view like this:
+首先，您可以创建一个简单的视图，如下所示：
 
 ```xml
 <StackPanel Margin="20">
@@ -24,9 +23,9 @@ As a starting point, you can create a simple view like this:
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/image (2) (1) (1) (1).png" alt=""/>
+![图片](/img/gitbook-import/assets/image (2) (1) (1) (1).png)
 
-You can add a corresponding view model like this:
+您可以添加一个相应的视图模型，如下所示：
 
 ```csharp
 public class MainWindowViewModel : ViewModelBase
@@ -51,15 +50,15 @@ public class MainWindowViewModel : ViewModelBase
 }
 ```
 
-This view model does not yet perform revealed functionality. The `SubmitCommand` is declared with no parameter, and no result (void). The synchronous action parameter of the `Create` method is where you implement what happens when the command is run (when the user clicks the button). The example above just reports the action in the debug window.
+这个视图模型还没有执行功能逐步展示。`SubmitCommand`被声明为没有参数和结果（void）。`Create`方法的同步操作参数是您在命令运行时（用户点击按钮时）执行的操作。上面的示例只是在调试窗口中报告该操作。
 
-<img src="/img/gitbook-import/assets/image (6) (1) (1).png" alt=""/>
+![图片](/img/gitbook-import/assets/image (6) (1) (1).png)
 
-## Can Execute?
+## 可执行吗？
 
-When you use _ReactiveUI_ to implement revealed functionality, you create an observable object that indicates whether your command can execute or not.&#x20;
+当您使用_ReactiveUI_来实现功能逐步展示时，您需要创建一个可观察对象来指示您的命令是否可以执行。
 
-For example, you can add this code to the above view model to create an observable object to validate the view model:
+例如，您可以将以下代码添加到上述视图模型中，以创建一个可观察对象来验证视图模型：
 
 ```
 IObservable<bool> isInputValid = this.WhenAnyValue(
@@ -68,9 +67,9 @@ IObservable<bool> isInputValid = this.WhenAnyValue(
                 );
 ```
 
-The observable object monitors the value of the `UserName` property and runs the validation function whenever it changes. The observable objectis created by the `WhenAnyValue` function of the `ReactiveObject` that underlies the view model (see the previous page [here](reactive-view-model.md)).
+可观察对象监视`UserName`属性的值，并在其更改时运行验证函数。可观察对象是由底层视图模型（请参阅上一页[这里](reactive-view-model.md)）的`ReactiveObject`的`WhenAnyValue`函数创建的。
 
-Next add the observable object to the `Create` method. This second parameter is the `canExecute` argument for the method.
+接下来，将可观察对象添加到`Create`方法中。这个第二个参数是该方法的`canExecute`参数。
 
 ```csharp
 SubmitCommand = ReactiveCommand.Create(() => 
@@ -79,10 +78,4 @@ SubmitCommand = ReactiveCommand.Create(() =>
 }, isInputValid); 
 ```
 
-Now you will see that the button only becomes enabled once you have entered 8 characters.
-
-<img src="/img/gitbook-import/assets/image (6) (1) (2).png" alt=""/>
-
-&#x20;  &#x20;
-
-&#x20;&#x20;
+现在你会看到，只有在输入了8个字符后，按钮才会变为可用状态。

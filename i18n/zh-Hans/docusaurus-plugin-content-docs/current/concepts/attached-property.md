@@ -2,28 +2,28 @@
 description: CONCEPTS
 ---
 
-# Attached Properties
+# 附加属性
 
-_Avalonia UI_ controls support the **attached property** concept. This is a property applied to a child control that references its container control.&#x20;
+_Avalonia UI_ 控件支持**附加属性**的概念。这是应用于子控件的属性，它引用其容器控件。
 
-In XMAL attached properties are defined as attributes of the child control element, using the format: `ContainerClassName.AttachedPropertyName="value"`
+在 XMAL 中，附加属性被定义为子控件元素的属性，使用以下格式：`ContainerClassName.AttachedPropertyName="value"`
 
-Here are some scenarios where an attached property is used:
+以下是一些使用附加属性的场景：
 
-## Attached Control
+## 附加控件
 
-An additional control is attached to a 'host control' for some purpose. This can be used where the control usually only allows a single child in its content zone. In this scenario the attached control is not counted as part of the content, but it will be used in some other way by the container. Examples include: context menus, tool tips and flyouts. &#x20;
+附加控件是附加到“主控件”上的额外控件，用于某些目的。这可以在控件通常只允许一个子控件在其内容区域时使用。在这种情况下，附加控件不被视为内容的一部分，但容器会以其他方式使用它。示例包括：上下文菜单、工具提示和弹出窗口。
 
-<img src='/img/gitbook-import/assets/image (9).png' alt=''/>
+<img src='/img/gitbook-import/assets/image (9).png' alt='' />
 
-## Layout Control
+## 布局控件
 
-Attached layout properties are used in scenarios where the container control has to know something about the child controls it is going to arrange. Examples include: grids, dock panels and relative panels.
+附加布局属性用于容器控件需要了解将要排列的子控件的情况的场景。示例包括：网格、停靠面板和相对面板。
 
-<img src='/img/gitbook-import/assets/image (17).png' alt=''/>
+<img src='/img/gitbook-import/assets/image (17).png' alt='' />
 
 :::info
-For a full list of the _Avalonia UI_ built-in controls, see the reference [here](../reference/controls/).
+有关 _Avalonia UI_ 内置控件的完整列表，请参阅[此处](../reference/controls/)的参考。
 :::
 
 &#x20;&#x20;

@@ -2,12 +2,12 @@
 description: CONCEPTS
 ---
 
-# Themes
+# 主题
 
-Content in preparation.
+内容正在准备中。
 
-Themes
+主题
 
-Theme Variants
+主题变体
 
-TODO: do we need this page, when we have pages for themes, control themes and theme variants independently?
+待办事项：当我们已经有主题、控制主题和主题变体的页面时，我们是否需要这个页面？
