@@ -3,13 +3,13 @@ id: solution-setup
 title: 建立跨平台解决方案
 ---
 
-尽管平台多样化，Avalonia项目都使用相同的解决方案文件格式（Visual Studio的“.SLN”文件格式）。解决方案可以在开发环境之间共享，为多平台应用程序开发提供统一的方法。
+尽管平台多样化，Avalonia项目都使用相同的解决方案文件格式（Visual Studio的`.SLN`文件格式）。解决方案可以在开发环境之间共享，为多平台应用程序开发提供统一的方法。
 
 创建新的跨平台应用程序的第一步是创建一个解决方案。本节将详细介绍接下来的步骤：使用Avalonia构建跨平台应用程序的项目设置过程。
 
 ## 填充解决方案
 
-`Avalonia跨平台应用程序`模板创建了一个解决方案结构，其中包括以下项目，以实现在多个平台上共享和重用代码的无缝性：
+`Avalonia Cross Platform Application`模板创建了一个解决方案结构，其中包括以下项目，以无缝地实现在多个平台上共享和重用代码：
 
 :::info
 [确保已安装Avalonia模板。](../../get-started/install#install-avalonia-ui-templates)
@@ -19,16 +19,16 @@ title: 建立跨平台解决方案
 这是应用程序的核心，旨在与平台无关。它包含应用程序的所有可重用组件，包括业务逻辑、视图模型和视图。所有其他项目都引用此核心项目。大部分开发工作应该在这里进行。
 
 ### 桌面项目
-该项目使应用程序能够在Windows、macOS和Linux平台上运行，输出类型为“WinExe”。
+该项目使应用程序能够在Windows、macOS和Linux平台上运行，输出类型为`WinExe`。
 
 ### Android项目
-这是一个基于`.NET-Android`的项目，引用了核心项目。它包含一个从`AvaloniaMainActivity`继承的MainActivity，作为Android应用程序的入口点。
+这是一个基于`.NET-Android`的项目，它引用了核心项目。它包含一个从`AvaloniaMainActivity`继承的`MainActivity`，作为Android应用程序的入口点。
 
 ### iOS项目
 这是一个专为iOS和iPadOS平台定制的`.NET-iOS`项目。该项目的入口点是继承自`AvaloniaAppDelegate`的`AppDelegate`。
 
 ### 浏览器项目
-这个WebAssembly（WASM）项目允许您的Avalonia应用程序在Web浏览器中运行。它的RuntimeIdentifier是“browser-wasm”。
+这个WebAssembly（WASM）项目允许您的Avalonia应用程序在Web浏览器中运行。它的`RuntimeIdentifier`是`browser-wasm`。
 
 ## 核心项目
 

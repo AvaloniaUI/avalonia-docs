@@ -19,7 +19,7 @@ public class PlotPanel : Panel
     {
         var panelDesiredSize = new Size();
 
-        // 在我们的例子中，我们只有一个子元素。
+        // 在我们的例子中，这里只有一个子元素。
         // 声明我们的面板只需要其唯一子元素的大小。
         foreach (var child in Children)
         {
