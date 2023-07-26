@@ -84,7 +84,7 @@ public void Should_Type_Text_Into_TextBox()
     window.KeyTextInput("Hello World");
 
     // Assert:
-    Assert.AreEqual("Hello World", textBox.Text);
+    Assert.Equal("Hello World", textBox.Text);
 }
 ```
 
