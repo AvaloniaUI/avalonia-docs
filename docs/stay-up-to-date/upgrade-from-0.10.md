@@ -49,7 +49,7 @@ The `FluentTheme` tag no longer requires the `Mode` attribute and can be left em
 
 ### Theme Dictionary and Theme Variant
 
-The method, `Styles.TryGetResource` method now requires a nullable `ThemeVariant` parameter as per PR #8166. This allows users to specify `Light`, `Dark`, and `Default`
+The method, `Styles.TryGetResource` method now requires a nullable `ThemeVariant` parameter as per PR [#8166](https://github.com/AvaloniaUI/Avalonia/pull/8166). This allows users to specify `Light`, `Dark`, and `Default`
 
 Using `ThemeVariant.Default` as the key marks a specific theme dictionary as a fallback in case the theme variant or resource key is not found in other theme dictionaries.
 
