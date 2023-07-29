@@ -155,7 +155,7 @@ public class TestViewModel : ReactiveObject
 
     public TestViewModel()
     {
-        EditCommand = ReactiveCommand.CreateFromTask<object, Unit>(EditProfileExecuted);
+        EditCommand = ReactiveCommand.CreateFromTask<object, Unit>(EditCommandExecuted);
     }
 
     private async Task<Unit> EditCommandExecuted(object p)
