@@ -453,7 +453,6 @@ const sidebars = {
             'concepts/reactiveui/reactive-view-model',
             'concepts/reactiveui/command-update',
             'concepts/reactiveui/reactive-command',
-            'concepts/reactiveui/observable-collections',
             'concepts/reactiveui/view-activation',
             'concepts/reactiveui/routing',
             'concepts/reactiveui/data-persistence',
