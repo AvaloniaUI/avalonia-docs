@@ -1,25 +1,25 @@
 ---
 id: style-classes
-title: Style Classes
+title: 样式类
 ---
 
-# Style Classes
+# 样式类（Style Classes）
 
-You can assign an _Avalonia UI_ control one or more style classes, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, then use a space-separated list.&#x20;
+你可以为 _Avalonia UI_ 控件分配一个或多个样式类，并使用它们来指导样式选择。样式类通过在控件元素中使用 `Classes` 属性进行分配。如果你想分配多个类，则使用空格分隔它们。
 
-For example, this button has both the `h1` and `blue` style classes applied:
+例如，这个按钮同时应用了 `h1` 和 `blue` 样式类：
 
 ```markup
 <Button Classes="h1 blue"/>
 ```
 
-## Pseudo Classes
+## 伪类（Pseudo Classes）
 
-Like in CSS, controls can have pseudo classes; these are classes that are defined in the control itself rather than by the user. The names of pseudo classes in a selector always start with a colon.
+与 CSS 类似，控件可以拥有伪类，这些类是在控件本身而不是用户定义的。伪类在选择器中的名称始终以冒号开头。
 
-For example `:pointerover` pseudo class indicates that the pointer input is currently over (inside the bounds of) a control. (This is pseudo class is the similar to `:hover` in CSS.)
+例如，`:pointerover` 伪类表示指针输入当前悬停在控件上（在控件的边界内）。（这个伪类类似于 CSS 中的 `:hover`。）
 
-This is an example of  a `:pointerover` pseudo class selector:&#x20;
+这是一个使用 `:pointerover` 伪类选择器的示例：
 
 ```markup
 <StackPanel>
@@ -34,7 +34,7 @@ This is an example of  a `:pointerover` pseudo class selector:&#x20;
 </StackPanel>
 ```
 
-In this example, the pseudo class selector changes properties inside a control template:
+在此示例中，伪类选择器更改了控件模板内的属性：
 
 ```markup
 <StackPanel>
@@ -47,23 +47,23 @@ In this example, the pseudo class selector changes properties inside a control t
 </StackPanel>
 ```
 
-Other pseudo classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
+其他伪类包括 `:focus`、`:disabled`、`:pressed`（用于按钮）和 `:checked`（用于复选框）。
 
 :::info
-For more detail about pseudo classes, see the reference [here](../../../reference/styles/pseudo-classes.md).
+有关伪类的更多详细信息，请参阅参考 [此处](../../../reference/styles/pseudo-classes.md).
 :::
 
-## Conditional Classes
+## 条件类（Conditional Classes）
 
-If you need to add or remove a class using a bound condition, then you can use following special syntax:
+如果你需要使用绑定条件添加或删除类，则可以使用以下特殊语法：
 
 ```markup
 <Button Classes.accent="{Binding IsSpecial}" />
 ```
 
-## Classes in Code
+## 代码中的类（Classes in Code）
 
-You can manipulate style classes in code using the `Classes` collection:
+你可以使用 `Classes` 集合在代码中操作样式类：
 
 ```csharp
 control.Classes.Add("blue");

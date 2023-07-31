@@ -1,59 +1,59 @@
-# Choosing A Custom Control Type
+# 选择自定义控件类型
 
-Avalonia provides various approaches for creating custom controls to meet your application's specific needs. Understanding the different types of custom controls will help you choose the most appropriate approach for your requirements. In Avalonia, the three common types of custom controls are  UserControls`, lookless controls, and custom-drawn controls.
+Avalonia提供了多种方法来创建自定义控件以满足应用程序的特定需求。了解不同类型的自定义控件将帮助您选择最合适的方法来满足您的需求。在Avalonia中，常见的自定义控件类型有用户控件（`UserControl`）、模板控件（`TemplatedControl`）和自绘控件。
 
-## UserControl
+## 用户控件（UserControl）
 
-A `UserControl` is a high-level approach for creating custom controls in Avalonia. It allows you to compose a control by combining existing controls and defining the layout using XAML. A `UserControl` acts as a container that encapsulates multiple controls and provides a cohesive user interface.
-
-:::info
-Typically, `UserControls` are used to represent specialized views within an application, such as a "User Details View," rather than serving as general-purpose user interface elements.
-:::
-
-Creating a `UserControl` involves the following steps:
-
-1. **Define the XAML**: Create a new `UserControl` XAML file that defines the layout and appearance of the control by placing controls, setting properties, and applying styles.
-
-2. **Code-behind**: Optionally, you can define additional code-behind logic to handle events, modify the behavior, or provide additional functionality to the `UserControl`.
-
-3. **Reuse and Customization**: `UserControl`s can be easily reused and customized within an application. They are especially useful when you want to encapsulate a specific set of controls and behaviors into a reusable component or "view".
-
-:::info 
-For a complete, runnable example of these concepts in action, check out [the sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl).
-:::
-
-## Templated (Lookless) Controls
-
-Templated controls (also known as "Lookless controls") provide a more advanced and customizable approach for creating custom controls in Avalonia. A templated control separates the control's behavior and logic from its visual appearance, allowing the control to be styled and templated by the application developer.
-
-With templated controls, you define the control's behavior and properties in a code-behind class, while the visual representation is specified through control templates defined in XAML. This separation allows the application developer to customize the look and feel of the control without modifying its underlying behavior.
+用户控件是在Avalonia中创建自定义控件的一种高级方法。它允许您通过组合现有控件并使用XAML定义布局来构建一个控件。用户控件充当一个容器，封装了多个控件，并提供了一个连贯的用户界面。
 
 :::info
-Templated controls are typically used for general-purpose user-interface elements that are not specific to business logic and may require different themes or visual styles. Most of the [built-in controls](../builtin-controls.md) supplied by Avalonia are templated controls.
+通常，用户控件用于表示应用程序中的专用视图，比如“用户详细信息视图”，而不是用作通用的用户界面元素。
 :::
 
-Creating a templated control involves the following steps:
+创建用户控件需要以下步骤：
 
-1. **Define the Control Class**: Create a new class that derives from `TemplatedControl`. This class defines the behavior, properties, and events of the control.
+1. **定义XAML**：创建一个新的`UserControl` XAML文件，通过放置控件、设置属性和应用样式来定义控件的布局和外观。
 
-2. **Control Template**: Create a [`ControlTheme`](control-themes) in XAML that specifies the visual appearance and structure of the control. The control template defines the parts of the control and how they should be styled.
+2. **Code-behind**：可选项，您可以定义额外的代码后台逻辑来处理事件、修改行为或为用户控件提供额外的功能。
 
-3. **Styling and Templating**: The application developer can customize the look of the control by modifying its control template or applying styles. This allows for a consistent and unified visual design across the application.
-
-Templated controls provide greater flexibility and reusability, making them ideal for scenarios where you want to provide a control that can be styled to match different visual themes or adapt to various user preferences.
-
-## Custom-drawn Controls
-
-Custom-drawn controls offer the highest level of customization in Avalonia. With custom-drawn controls, you have complete control over the rendering of the control's visual elements, allowing you to create unique and complex visual representations.
+3. **重用和定制**: 用户控件可以在应用程序中轻松重用和定制。当您希望封装一组特定的控件和行为为可重用的组件或"视图"时，它们特别有用。
 
 :::info
-Custom-drawn controls are typically used where the control represents a mostly non-interactive graphical element that will not need to be themed.
+要了解这些概念的完整、可运行的示例，请查看[示例应用程序](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl).
 :::
 
-To create a custom-drawn control, you override the control's `OnRender` method and use low-level drawing APIs, such as `DrawingContext`, to define the control's appearance. This approach provides fine-grained control over every pixel of the control's visual representation.
+## 模板控件（Templated/Lookless Controls）
 
-Creating a custom-drawn control involves the following steps:
+模板控件（也称为“Lookless控件”）为在Avalonia中创建自定义控件提供了更高级和可自定义的方法。模板控件将控件的行为和逻辑与其可视外观分离，允许应用程序开发人员通过控件模板进行样式化和模板化。
 
-1. **Define the Control Class**: Create a new class that derives from `Control`. This class will define the behavior and rendering logic of the control.
+对于模板控件，您在code-behind类中定义控件的行为和属性，而视觉外观则通过在XAML中定义控件模板来指定。这种分离允许应用程序开发人员自定义控件的外观和给人的感觉，而不会修改其底层行为。
 
-2. **Override the OnRender Method**: Override the `OnRender` method in the control class and use the `DrawingContext` to draw the control's content.
+:::info
+模板控件通常用于通用的用户界面元素，不特定于业务逻辑，可能需要不同的主题或视觉样式。Avalonia提供的大多数[内置控件](../builtin-controls.md)都是模板控件。
+:::
+
+创建模板控件需要以下步骤：
+
+1. **定义控件类**：创建一个新的类，该类派生自`TemplatedControl`。这个类定义了控件的行为、属性和事件。
+
+2. **控件模板**：在XAML中创建一个[`ControlTheme`](control-themes)，指定控件的视觉外观和结构。控件模板定义了控件的部分以及它们应该如何被样式化。
+
+3. **样式和模板化**：应用程序开发人员可以通过修改控件模板或应用样式来自定义控件的外观。这样可以实现应用程序中统一和统一的视觉设计。
+
+模板控件提供了更大的灵活性和可重用性，使它们非常适合您希望提供一个可以根据不同视觉主题进行样式化或适应各种用户偏好的控件的场景。
+
+## 自绘控件
+
+自绘控件在Avalonia中提供了最高级别的定制。使用自绘控件，您可以完全控制控件的视觉元素的渲染，从而创建独特而复杂的视觉外观。
+
+:::info
+自绘控件通常用于表示大部分非交互式的图形元素，不需要进行主题化。
+:::
+
+要创建自绘控件，您需要重写控件的`OnRender`方法，并使用低级别的绘制API（例如`DrawingContext`）来定义控件的外观。这种方法可以对控件的每个像素进行精细控制，实现高度个性化的可视化。
+
+创建自绘控件的步骤如下：
+
+1. **定义控件类**：创建一个新的类，该类派生自`Control`。这个类将定义控件的行为和渲染逻辑。
+
+2. **重写OnRender方法**：在控件类中重写`OnRender`方法，并使用`DrawingContext`来绘制控件的内容。

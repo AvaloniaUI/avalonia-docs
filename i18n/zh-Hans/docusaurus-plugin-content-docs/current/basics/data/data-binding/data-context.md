@@ -2,27 +2,27 @@
 description: CONCEPTS
 ---
 
-# Data Context
+# 数据上下文
 
-When Avalonia performs data binding, it has to locate an application object to bind to. This location is represented by a **Data Context**.
+当Avalonia执行数据绑定时，它必须定位要绑定的应用程序对象。这个位置由**数据上下文**表示。
 
 <img src="/img/gitbook-import/assets/image (56).png" alt=""/>
 
-Every control in Avalonia has a property called `DataContext`, and this includes built-in controls, user controls and windows.&#x20;
+Avalonia中的每个控件都有一个名为`DataContext`的属性，包括内置控件、用户控件和窗口。
 
-When binding, Avalonia performs a hierarchical search of the logical control tree, starting with the control where the binding is defined, until it finds a data context to use.&#x20;
+在绑定时，Avalonia会从逻辑控件树中进行分层搜索，从定义绑定的控件开始，直到找到要使用的数据上下文。
 
 <img src="/img/gitbook-import/assets/image (62).png" alt=""/>
 
-This means that a control defined in a window can use the data context of the window; or (as above) a control in a control in a window can use the window's data context.
+这意味着在窗口中定义的控件可以使用窗口的数据上下文；或者（如上所示），在窗口中的控件中定义的控件可以使用窗口的数据上下文。
 
 :::info
-For information about the control trees in Avalonia, and how to see them at run-time, see [here](../../../concepts/control-trees).
+有关Avalonia中的控件树以及如何在运行时查看它们的信息，请参阅[这里](../../../concepts/control-trees).
 :::
 
-## Example
+## 示例
 
-You can see the window's data context being set if you create a new project using the _Avalonia MVVM Application_ template. Locate and open the **App.axaml.cs** file to see the code:
+如果您使用 _Avalonia MVVM Application_ 模板创建一个新项目，您可以看到窗口的数据上下文是如何设置的。找到并打开**App.axaml.cs**文件查看代码：
 
 ```csharp
 public override void OnFrameworkInitializationCompleted()
@@ -39,7 +39,7 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-You can trace the object being set to the window's data context in the file **MainWindowViewModel.cs**. The code looks like this:
+您可以在**MainWindowViewModel.cs**文件中追踪设置到窗口数据上下文的对象。代码如下：
 
 ```csharp
 public class MainWindowViewModel : ViewModelBase
@@ -48,7 +48,7 @@ public class MainWindowViewModel : ViewModelBase
 }
 ```
 
-In the main window file **MainWindow.axaml** you can see that the window content zone is comprised a text block that has its text property bound to the `Greeting` property.
+在主窗口文件**MainWindow.axaml**中，您可以看到窗口内容区由一个文本块组成，该文本块的文本属性被绑定到`Greeting`属性。
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -70,19 +70,19 @@ In the main window file **MainWindow.axaml** you can see that the window content
 </Window>
 ```
 
-When the project runs, the data binder searches up the logical control tree from the text block and finds a data context set at the main window level. So the bound text appears as:
+项目运行时，数据绑定器从文本块开始向上搜索逻辑控件树，找到在主窗口级别设置的数据上下文。因此，绑定的文本显示为：
 
 <img src="/img/gitbook-import/assets/image (20) (2).png" alt=""/>
 
-## Design Data Context
+## 设计时数据上下文
 
-You may have noticed, after you first compiled this project, that the preview pane also shows the greeting.
+您可能已经注意到，在首次编译此项目后，预览窗格也显示了问候语。
 
 <img src="/img/gitbook-import/assets/image (40) (1).png" alt=""/>
 
-This is because Avalonia can also set a data context for a control for use at design-time. You will find this useful because it means that the preview pane can show some realistic data while you adjust layout and styles.
+这是因为Avalonia还可以为控件设置设计时数据上下文。这对您非常有用，因为这意味着预览窗格在您调整布局和样式时可以显示一些真实的数据。
 
-You can see the design-time data context being set in the XAML:
+您可以在XAML中看到设计时数据上下文的设置：
 
 ```xml
 <Design.DataContext>
@@ -91,13 +91,13 @@ You can see the design-time data context being set in the XAML:
 ```
 
 :::tip
-For a more detailed guide about using the design-time data context, see [here](../../../guides/implementation-guides/how-to-use-design-time-data.md).
+有关如何使用设计时数据上下文的更详细指南，请参阅[这里](../../../guides/implementation-guides/how-to-use-design-time-data.md).
 :::
 
 :::info
-Further discussion of data binding requires you to have a background in the MVVM pattern of programming. For an introduction to the concepts of the MVVM pattern, see [here](../../../concepts/the-mvvm-pattern).
+进一步讨论数据绑定需要您对MVVM（Model-View-ViewModel）编程模式有所了解。如果您想了解MVVM模式的基本概念，请参阅[这里](../../../concepts/the-mvvm-pattern).
 :::
 
-Further Information
+更多信息
 
-Bind to Commands
+绑定到命令

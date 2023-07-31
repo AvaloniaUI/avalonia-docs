@@ -4,26 +4,26 @@ description: CONCEPTS
 
 # Avalonia XAML
 
-_Avalonia UI_ uses XAML to define a user interface. XAML is an XML-based mark-up language that is used by many UI frameworks.
+_Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记语言，被许多用户界面框架使用。
 
 :::info
-These pages will introduce you to how XAML is used specifically in _Avalonia UI_. For background information about how XAML is used elsewhere in Microsoft technologies, you can use these references:
+这些页面将为您介绍XAML在 _Avalonia UI_ 中的具体用法。关于XAML在Microsoft技术中的其他用法的背景信息，您可以参考以下资料：
 
-* Microsoft XAML documentation for WPF, see [here](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf). &#x20;
-* Microsoft XAML documentation for UWP, see [here](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview).
+* WPF的Microsoft XAML文档，请参阅[这里](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf)；
+* UWP的Microsoft XAML文档，请参阅[这里](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview)。
 :::
 
-## AXAML File Extension
+## AXAML文件扩展名
 
-The file extension for XAML files used elsewhere is `.xaml` but due to technical issues integrating with Visual Studio, _Avalonia UI_ uses its own `.axaml` extension - 'Avalonia XAML'.&#x20;
+其他地方使用XAML文件的扩展名是`.xaml`，但由于与Visual Studio的技术问题整合，_Avalonia UI_ 使用了自己的`.axaml`扩展名——'Avalonia XAML'。
 
 :::info
-From _Avalonia UI_ version 0.9.11 all XAML files created in Visual Studio have the `.axaml` extension; and from version 0.10 all _Avalonia UI_ templates create files using the `.axaml` extension.
+从 _Avalonia UI_ 版本0.9.11开始，所有在Visual Studio中创建的XAML文件都具有`.axaml`扩展名；从版本0.10开始，所有 _Avalonia UI_ 模板都使用`.axaml`扩展名创建文件。
 :::
 
-## File Format
+## 文件格式
 
-A typical Avalonia XAML file looks like this:
+一个典型的Avalonia XAML文件如下所示：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -32,27 +32,27 @@ A typical Avalonia XAML file looks like this:
 </Window>
 ```
 
-In common with all XML files, there is a root element. The root element tag `<Window></Window>` defines the type of the root. This will correspond to a type of Avalonia UI control, in the above example a window.
+与所有XML文件一样，有一个根元素。根元素标签`<Window></Window>`定义了根的类型。这将对应于Avalonia UI控件的一种类型，在上面的例子中是一个窗口。
 
-The sample above uses three interesting attributes:
+上面的示例使用了三个有趣的属性：
 
-* `xmlns="https://github.com/avaloniaui"` - this is the XAML namespace declaration for _Avalonia UI_ itself. This is required, without it the file will not be recognised as an Avalonia XAML document.
-* `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` - this is the declaration for the XAML language namespace.&#x20;
-* `x:Class="AvaloniaApplication1.MainWindow"` - this is an extension of the above declaration (for 'x') that tells the XAML compiler where to find the associated class for this file. The class is defined in a code-behind file, usually written in C#.
-
-:::info
-For information about the code-behind concept, see [here](code-behind).
-:::
-
-## Control Elements
-
-You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.&#x20;
+* `xmlns="https://github.com/avaloniaui"` ——这是 _Avalonia UI_ 本身的XAML命名空间声明。这是必需的，否则文件将无法被识别为Avalonia XAML文档；
+* `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ——这是XAML语言命名空间的声明；
+* `x:Class="AvaloniaApplication1.MainWindow"` ——这是上面声明的扩展（用于'x'）告诉XAML编译器在文件中找到相关联的类的位置。这个类在代码后台文件中定义，通常用C#编写。
 
 :::info
-A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](../../concepts/ui-composition.md).
+有关`code-behind`概念的信息，请参阅[这里](code-behind).
 :::
 
-For example, this XAML adds a button to the content of a window:
+## 控件元素
+
+您可以通过添加表示 _Avalonia UI_ 控件之一的XML元素来构建应用程序的用户界面。元素标签使用与控件类名相同的名称。
+
+:::info
+一个UI可以由多种不同类型的控件组成。要了解有关UI组合概念的更多信息，请参阅[这里](../../concepts/ui-composition.md)。
+:::
+
+例如，下面的XAML将按钮添加到窗口的内容中：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -62,14 +62,14 @@ For example, this XAML adds a button to the content of a window:
 ```
 
 :::info
-For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](../../reference/controls).&#x20;
+要获取 _Avalonia UI_ 内置控件的完整列表，请参阅[此处](../../reference/controls)的参考资料。
 :::
 
-## Control Attributes
+## 控件属性
 
-The XML elements that represent controls have attributes corresponding to control properties that can be set. You can set a control property by adding an attribute to an element.&#x20;
+表示控件的XML元素具有与可设置的控件属性对应的属性。您可以通过向元素添加属性来设置控件属性。
 
-For example, to specify a blue background for a button control, you add the `Background` attribute set the value to `"Blue"`. Like this:
+例如，要为按钮控件指定蓝色背景，您可以添加`Background`属性并将值设置为`"Blue"`。如下所示：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -78,9 +78,9 @@ For example, to specify a blue background for a button control, you add the `Bac
 </Window>
 ```
 
-## Control Content
+## 控件内容
 
-You might have noticed that the button in the above sample has its content (the 'Hello World' string) placed between its opening and closing tags. As an alternative, you can set the content attribute, as follows:
+您可能已经注意到上面示例中的按钮的内容（"Hello World"字符串）放置在其打开和关闭标签之间。或者，您可以使用Content属性来设置内容。
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -89,11 +89,11 @@ You might have noticed that the button in the above sample has its content (the 
 </Window>
 ```
 
-This behaviour is specific to the content of an _Avalonia UI_ control.
+这种行为是 _Avalonia UI_ 控件内容特有的。
 
-## Data Binding
+## 数据绑定
 
-You will often use the _Avalonia UI_ binding system to link a control property to an underlying object. The link is declared using the `{Binding}` mark-up extension. For example:
+您经常会使用 _Avalonia UI_ 绑定系统将控件属性链接到底层对象。链接是通过`{Binding}`标记扩展来声明的。例如：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -103,48 +103,48 @@ You will often use the _Avalonia UI_ binding system to link a control property t
 ```
 
 :::info
-For further information about the concept behind data binding, see [here](../data/data-binding).
+有关数据绑定背后的概念的更多信息，请参阅[这里](../data/data-binding)。
 :::
 
-## Code-behind Files
+## Code-behind文件
 
-Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.&#x20;
+许多XAML文件还有一个关联的code-behind文件，通常用C#编写，并具有`.xaml.cs`文件扩展名来处理事件和其他逻辑。
 
 :::info
-For guidance about programming using code-behind files, see [here](code-behind).
+有关使用code-behind文件进行编程的指南，请参阅[这里](code-behind).
 :::
 
-## XML Namespaces
+## XML命名空间
 
-In common with any XML format, in Avalonia XAML files you can declare namespaces. This allows the XML processor to find the definitions of the elements in the file.&#x20;
+与任何XML格式一样，在Avalonia XAML文件中，您可以声明命名空间。这允许XML处理器找到文件中使用的元素的定义。
 
 :::info
-For background information, see the Microsoft XML namespaces documentation [here](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).&#x20;
+有关背景信息，请参阅Microsoft的[XML命名空间文档](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document)。
 :::
 
-You can add a namespace using the `xmlns` attribute. The format of a namespace declaration is as follows:
+您可以使用`xmlns`属性添加命名空间。命名空间声明的格式如下：
 
 ```xml
 xmlns:alias="definition"
 ```
 
-It is standard practice to define all the namespaces you are going to use in the root element.&#x20;
+通常在根元素中定义您要使用的所有命名空间是标准做法。
 
-Only one namespace in a file can be defined without using the alias part of the attribute name. The alias must always be unique with in a file.
+只能在文件中定义一个命名空间而不使用别名部分的属性名。别名必须在文件内始终保持唯一。
 
-The definition part of the namespace declaration can be either a URL or a code definition. Both of these are used to locate the definition of the elements in the file.
+命名空间声明的定义部分可以是URL或代码定义。这两者都用于定位文件中元素的定义。
 
 :::info
-For detailed guidance on how namespace declarations work, see [here](../../guides/custom-controls/how-to-create-a-custom-controls-library.md).
+有关命名空间声明的详细指导，请参阅[这里](../../guides/custom-controls/how-to-create-a-custom-controls-library.md).
 :::
 
-There are two valid syntax options for the definition part of a XAML namespace attribute that references code:
+命名空间属性的定义部分有两种有效的语法选项，可以引用代码：
 
-### **CLR Namespace Prefix**
+### **CLR命名空间前缀**
 
-There is a prefix `clr-namespace:` you can use to reference both code in the current assembly and code in a referenced assembly.&#x20;
+有一个`clr-namespace:`前缀，您可以用于引用当前程序集中的代码和引用程序集中的代码。
 
-For example, when the code is present in the same assembly as the XAML, you can use this syntax:
+例如，当代码存在于与XAML相同的程序集中时，您可以使用此语法：
 
 ```xml
 <Window ...
@@ -152,7 +152,7 @@ For example, when the code is present in the same assembly as the XAML, you can 
 ... >
 ```
 
-And if the code is in another referenced assembly (for example in a library), you must extend the description to include the name of the referenced assembly:
+如果代码在另一个被引用的程序集中（例如一个库中），您必须扩展说明以包含被引用程序集的名称：
 
 ```xml
 <Window ...
@@ -160,9 +160,9 @@ And if the code is in another referenced assembly (for example in a library), yo
  ... >
 ```
 
-### **Using Prefix**
+### **Using前缀**
 
-There is an alternative prefix `using:` that you can use to reference code in the current assembly. For example:
+有一个替代前缀`using:`，您可以用来引用当前程序集中的代码。例如：
 
 ```xml
 xmlns:myAlias3="using:MyNamespace.AppNameSpace.UI"

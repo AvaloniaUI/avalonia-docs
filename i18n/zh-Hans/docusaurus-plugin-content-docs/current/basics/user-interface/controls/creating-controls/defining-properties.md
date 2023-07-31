@@ -1,26 +1,28 @@
-# Defining Properties
+# 定义属性
 
-Control properties in Avalonia UI allow you to expose configurable aspects of your custom controls, enabling users of your controls to customize their behavior and appearance. This document will introduce the process of defining properties for your custom controls.
+在Avalonia UI中，控件属性允许您公开自定义控件的可配置方面，使您的控件的用户能够定制其行为和外观。本文档将介绍如何为自定义控件定义属性。
 
-## Styled Properties
+## 样式化属性
 
-Styled properties in Avalonia offer a powerful and flexible way to define properties for controls. These properties are specifically designed to support the Avalonia styling system and data binding. Styled properties in Avalonia are registered using the `AvaloniaProperty` class.
+Avalonia中的样式化属性为控件提供了一种强大而灵活的定义属性的方式。这些属性专门设计用于支持Avalonia的样式化系统和数据绑定。在Avalonia中，样式化属性通过使用`AvaloniaProperty`类进行注册。
 
-Styled Avalonia properties have the following key characteristics:
+Avalonia的样式化属性具有以下主要特点：
 
-- **Styling Support**: They can be easily targeted and modified using styles, and setters defined in XAML or programmatically.
-Inheritance: They support inheritance, meaning that a property value defined on a parent control can be automatically inherited by its child controls unless explicitly overridden.
+- **样式支持**：可以通过样式和在XAML或编程中定义的setter轻松地进行定位和修改。
 
-- **Default Values**: They can have default values specified at the control level or within control templates, ensuring consistent behavior across multiple instances of the control.
+- **继承**：支持继承，这意味着在父控件上定义的属性值可以自动继承到其子控件上，除非明确覆盖。
 
-- **Property Value Precedence**: They follow a well-defined precedence order, allowing values to be resolved based on factors such as local values, style setters, triggers, and default values.
-Styled Avalonia properties are commonly used for control properties that are intended to be easily customizable through styling, allowing for dynamic changes in appearance and behavior based on various conditions.
+- **默认值**：可以在控件级别或控件模板中指定默认值，确保在多个控件实例中保持一致的行为。
 
-- **Validation and Coercion**: Styled properties allow a control to validate and coerce the values passed to it, ensuring that the control is never in an invalid state.
+- **属性值优先级**：它们遵循明确定义的优先级顺序，允许根据本地值、样式setter、触发器和默认值等因素解析值。
 
-## Example
+- **验证和强制转换**：样式化属性允许控件验证和强制转换传递给它的值，确保控件永远不会处于无效状态。
 
-Here's an example of how to define a custom styled property for a hypothetical custom button control:
+在Avalonia中，样式化属性通常用于控件的属性，这些属性旨在通过样式轻松定制，从而实现基于各种条件的外观和行为的动态变化。
+
+## 示例
+
+以下是如何为假设的自定义按钮控件定义自定义样式化属性的示例：
 
 ```csharp
 public class MyCustomButton : Button
@@ -36,8 +38,8 @@ public class MyCustomButton : Button
 }
 ```
 
-In this example, a custom property called `RepeatCount` is defined as an integer property for the `MyCustomButton` control. The property is registered using the `AvaloniaProperty` system, allowing it to be accessed, modified, styled, and data-bound by users of the control. A CLR property is also defined for convenience, allowing the property to be consumed in manner consistent with standard .NET APIs.
+在此示例中，为`MyCustomButton`控件定义了一个名为`RepeatCount`的自定义整数属性。该属性通过`AvaloniaProperty`系统进行注册，使得用户可以访问、修改、应用样式和进行数据绑定。还定义了CLR属性，以方便使用该属性，使其在使用上与标准.NET API一致。
 
-## Further Reading
+## 进一步阅读
 
-For more information see the [Defining Properties How-To](../../../../guides/custom-controls/defining-properties.md)
+如需更多信息，请参阅[定义属性指南](../../../../guides/custom-controls/defining-properties.md)

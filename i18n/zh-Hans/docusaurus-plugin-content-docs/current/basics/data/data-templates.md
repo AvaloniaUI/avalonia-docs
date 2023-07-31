@@ -1,19 +1,19 @@
 ---
 id: data-templates
-title: Data Templates
+title: 数据模板
 ---
 
-Data Templates in Avalonia provide a powerful way to define the visual representation of your data. They allow you to specify how your data should be presented and formatted, enabling you to create dynamic and customizable user interfaces. This document will introduce you to the concept of Data Templates in Avalonia and demonstrate how to use them effectively in your applications.
+数据模板（Data Templates）在Avalonia中为您提供了定义数据的可视化表示的强大方法。它们允许您指定数据的展示方式和格式，从而创建动态和可定制的用户界面。本文档将介绍Avalonia中的数据模板概念，并演示如何在应用程序中有效使用它们。
 
-## What is a Data Template?
+## 什么是数据模板？
 
-At its core, a Data Template is a reusable definition that specifies how to present data of a particular type. It defines the visual structure and appearance of the data when displayed in the user interface. In Avalonia, a Data Template is often associated with a list control, such as a `ListBox` or `ItemsControl`, and is responsible for rendering individual items of data within that control.
+数据模板本质上是一种可重用的定义，用于指定如何展示特定类型的数据。它定义了数据在用户界面中显示时的可视化结构和外观。在Avalonia中，数据模板通常与列表控件（如`ListBox`或`ItemsControl`）相关联，负责渲染该控件中的各个数据项。
 
-## Applying a Data Template to a ListBox
+## 将数据模板应用于ListBox
 
-To apply a Data Template to a `ListBox`, you typically use the `ItemTemplate` property of the control. 
+要将数据模板应用于`ListBox`，通常使用控件的`ItemTemplate`属性。
 
-For instance, if you have a `ListBox` that should display a collection of `Item` objects using the defined Data Template, you can set the `ItemTemplate` property like this:
+例如，如果您有一个`ListBox`，应使用定义的数据模板来显示`Item`对象的集合，可以像这样设置`ItemTemplate`属性：
 
 ```xml
 <ListBox ItemsSource="{Binding Items}">
@@ -28,12 +28,12 @@ For instance, if you have a `ListBox` that should display a collection of `Item`
 <ListBox/>
 ```
 
-In this example, the Data Template defines a visual layout using a `StackPanel` container. Within the `StackPanel`, we have a `TextBlock` bound to the `Name` property of the item and an `Image` control bound to the `ImageSource` property.
+在这个例子中，数据模板定义了一个使用`StackPanel`容器的可视化布局。在`StackPanel`中，我们有一个绑定到项的`Name`属性的`TextBlock`，以及一个绑定到`ImageSource`属性的`Image`控件。
 
-## Customizing Data Templates
+## 自定义数据模板
 
-Data Templates can be customized and tailored to specific scenarios. You can include additional visual elements, apply styling, and even define nested templates within a Data Template. By leveraging data binding expressions and converters, you can dynamically populate and format the visual elements based on the data properties.
+数据模板可以根据特定情况进行自定义和调整。您可以包含额外的可视化元素，应用样式，甚至在数据模板中定义嵌套模板。通过利用数据绑定表达式和转换器，您可以根据数据属性动态填充和格式化可视化元素。
 
-## Further Reading
+## 更多阅读
 
-For more information see the Deep Dive into to [data templates](../../concepts/templates).
+有关更多信息，请参阅深入了解[数据模板](../../concepts/templates)。

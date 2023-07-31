@@ -2,23 +2,23 @@
 description: CONCEPTS
 ---
 
-# Compiled Bindings
+# 编译绑定
 
-Bindings defined in the XAML are using reflection in order to find and access the requested property in your `ViewModel`. In Avalonia you can also use compiled bindings, which has some benefits:
+在XAML中定义的绑定使用反射来查找和访问您的`ViewModel`中请求的属性。在Avalonia中，您还可以使用编译绑定，它有一些好处：
 
-* If you use compiled bindings and the property you bind to is not found, you will get a compile-time error. Hence you get a much better debugging experience.
-* Reflection is known to be slow ([see this article on codeproject.com](https://www.codeproject.com/Articles/1161127/Why-is-reflection-slow)). Using compiled bindings can therefore improve the performance of your application.
+* 如果您使用编译绑定，并且找不到要绑定的属性，您将获得一个编译时错误。因此，您将获得更好的调试体验。
+* 已知反射较慢（[请参阅此文章](https://www.codeproject.com/Articles/1161127/Why-is-reflection-slow))。因此，使用编译绑定可以提高应用程序的性能。
 
-## Enable and disable compiled bindings
+## 启用和禁用编译绑定
 
-### Enable and disable per UserControl or Window
+### 在每个UserControl或Window中启用和禁用
 
-Compiled bindings are not enabled by default. To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](../data-templates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. You can also specify the `DataType` in the `Binding` directly.
+编译绑定默认未启用。要启用编译绑定，您需要首先定义要绑定的对象的`DataType`。在[`DataTemplates`](../data-templates)中，有一个`DataType`属性，对于所有其他元素，您可以通过`x:DataType`来设置它。最可能在根节点中设置`x:DataType`，例如在`Window`或`UserControl`中。您还可以直接在`Binding`中指定`DataType`。
 
-You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
+现在，您可以通过设置`x:CompileBindings="[True|False]"`来启用或禁用编译绑定。所有子节点都将继承此属性，因此您可以在根节点中启用它，并在需要时禁用特定子节点。
 
 ```markup
-<!-- Set DataType and enable compiled bindings -->
+<!-- 设置DataType并启用编译绑定 -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MyApp.ViewModels"
@@ -30,7 +30,7 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
         <TextBlock Text="Given name:" />
         <TextBox Text="{Binding GivenName}" />
         <TextBlock Text="E-Mail:" />
-        <!-- Set DataType inside the Binding-markup -->
+        <!-- 在Binding标记中设置DataType -->
         <TextBox Text="{Binding MailAddress, DataType={x:Type vm:MyViewModel}}" />
 
         <Button Content="Send an E-Mail"
@@ -39,48 +39,48 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
 </UserControl>
 ```
 
-### Enable and disable globally
+### 全局启用和禁用
 
-If you want your application to use compiled bindings globally by default, you can add
+如果您希望应用程序默认情况下全局使用编译绑定，可以将以下内容添加到您的项目文件中：
 
 ```markup
 <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 ```
 
-to your project file. You will still need to provide `x:DataType` for the objects you want to bind but you don't need to to set `x:CompileBindings="[True|False]"` for each `UserControl` or `Window`.
+您仍然需要为您想要绑定的对象提供`x:DataType`，但是您不需要为每个`UserControl`或`Window`设置`x:CompileBindings="[True|False]"`。
 
-## CompiledBinding-Markup
+## CompiledBinding标记
 
-If you don't want to enable compiled bindings for all child nodes, you can also use the `CompiledBinding`-markup. You still need to define the `DataType`, but you can omit `x:CompileBindings="True"`.
+如果您不希望为所有子节点启用编译绑定，还可以使用`CompiledBinding`标记。您仍然需要定义`DataType`，但可以省略`x:CompileBindings="True"`。
 
 ```markup
-<!-- Set DataType -->
+<!-- 设置DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MyApp.ViewModels"
              x:DataType="vm:MyViewModel">
     <StackPanel>
         <TextBlock Text="Last name:" />
-        <!-- use CompiledBinding markup for your binding -->
+        <!-- 使用CompiledBinding标记进行绑定 -->
         <TextBox Text="{CompiledBinding LastName}" />
         <TextBlock Text="Given name:" />
         <TextBox Text="{CompiledBinding GivenName}" />
         <TextBlock Text="E-Mail:" />
         <TextBox Text="{CompiledBinding MailAddress}" />
 
-        <!-- This command will use ReflectionBinding, as it's default -->
+        <!-- 这个命令将使用ReflectionBinding，因为它是默认值 -->
         <Button Content="Send an E-Mail"
                 Command="{Binding SendEmailCommand}" />
     </StackPanel>
 </UserControl>
 ```
 
-## ReflectionBinding-Markup
+## ReflectionBinding标记
 
-If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use compiled binding at a certain position or you hit one of the [known limitations](#known-limitations), you can use the `ReflectionBinding`-markup.
+如果您已在根节点启用了编译绑定（通过`x:CompileBindings="True"`），并且您要么不想在某个位置使用编译绑定，要么遇到了[已知的限制](#known-limitations)，则可以使用`ReflectionBinding`标记。
 
 ```markup
-<!-- Set DataType -->
+<!-- 设置DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MyApp.ViewModels"
@@ -94,16 +94,16 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
         <TextBlock Text="E-Mail:" />
         <TextBox Text="{Binding MailAddress}" />
 
-        <!-- We use ReflectionBinding instead -->
+        <!-- 我们使用ReflectionBinding -->
         <Button Content="Send an E-Mail"
                 Command="{ReflectionBinding SendEmailCommand}" />
     </StackPanel>
 </UserControl>
 ```
 
-## Type casting
+## 类型转换
 
-In some cases the target type of the binding expression cannot be automatically evaluated. In such cases you muss provide an explicite type cast in the binding expression.
+在某些情况下，绑定表达式的目标类型无法自动计算。在这种情况下，您必须在绑定表达式中提供一个明确的类型转换。
 
 ```markup
 <ItemsRepeater Items="{Binding MyItems}">
@@ -121,4 +121,4 @@ In some cases the target type of the binding expression cannot be automatically 
 </ItemsRepeater>
 ```
 
-In this case, the button command shall not be bound to the item's `DataContext` but to a command that is defined in the `DataContext`of the `ItemsRepeater`. The single item will be identified using a `CommandParameter` bound to the item's `DataContext`. Therefore, you must specify the type of the "parent" `DataContext` via cast expression `((vm:MyUserControlViewModel)DataContext)`.
+在这种情况下，按钮命令将绑定到“父级”`DataContext`，而不是绑定到项目的`DataContext`。单个项目将使用绑定到项目的`DataContext`的`CommandParameter`进行标识。因此，您必须通过强制转换表达式`((vm:MyUserControlViewModel)DataContext)`来指定“父级”`DataContext`的类型。
