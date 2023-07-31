@@ -2,13 +2,13 @@
 description: GUIDES - WPF Conversion
 ---
 
-# Data Templates
+# 数据模板（Data Templates）
 
-In Avalonia UI, data templates are not stored in the application resources. (The same is true of styles - see [here](styling).)
+在Avalonia UI中，数据模板不会存储在应用程序资源中。（样式也是如此，请参见[这里](styling)。）
 
-Instead, data templates are placed either inside a `DataTemplates` collection in a control, or inside the  (and on `Application`):
+相反，数据模板要么放置在控件的`DataTemplates`集合内，要么放置在`Application`上：
 
-For example, this code adds a data template to display the view model class `MyViewModel`:
+例如，以下代码添加了一个数据模板来显示视图模型类`MyViewModel`：
 
 ```markup
 <UserControl xmlns:viewmodels="clr-namespace:MyApp.ViewModels;assembly=MyApp">
@@ -19,15 +19,14 @@ For example, this code adds a data template to display the view model class `MyV
             </Border>
         </DataTemplate>
     </UserControl.DataTemplates>
-    <!-- Assuming that DataContext.Foo is an object of type
-         MyApp.ViewModels.FooViewModel then a red border with a corner
-         radius of 8 containing a TextBox will be displayed here -->
+    <!-- 假设DataContext.Foo是MyApp.ViewModels.FooViewModel类型的对象，
+        则此处将显示一个具有圆角半径为8的红色边框和包含一个文本框的内容 -->
     <ContentControl Content="{Binding Foo}"/>
 <UserControl>
 ```
 
-Data templates in Avalonia can also target interfaces and derived classes (which cannot be done in WPF) and so the order of `DataTemplate`s can be important: `DataTemplate`s within the same collection are evaluated in declaration order so you need to place them from most-specific to least-specific as you would in code.
+Avalonia中的数据模板也可以针对接口和派生类（这在WPF中是不可能的），因此`DataTemplate`的顺序可能很重要：同一集合内的`DataTemplate`按照声明的顺序进行评估，因此您需要按照代码中的顺序将它们从最具体到最不具体的位置放置。
 
-## Data Template Selector
+## 数据模板选择器（Data Template Selector）
 
-In WPF you can create a `DataTemplateSelector` to select or create a `DataTemplate` based on the provided data. In Avalonia you cannot do this; but you can implement `IDataTemplate` which can be seen as a good replacement for the `DataTemplateSelector`. Please find a sample [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/IDataTemplateSample).
+在WPF中，您可以创建`DataTemplateSelector`来根据提供的数据选择或创建`DataTemplate`。在Avalonia中，您不能这样做，但是您可以实现`IDataTemplate`，它可以被看作是`DataTemplateSelector`的良好替代品。[这里](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/IDataTemplateSample)有一个示例。

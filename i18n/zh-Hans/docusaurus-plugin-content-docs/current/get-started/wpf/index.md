@@ -2,14 +2,14 @@
 description: REFERENCE
 ---
 
-# Migrating from WPF
+# 从WPF迁移
 
-This reference will help you leverage your existing knowledge of Windows Presentation Foundation (WPF) to learn _Avalonia UI_ quickly.
+本参考文档将帮助您利用您已有的Windows Presentation Foundation（WPF）知识，快速了解_Avalonia UI_。
 
-You will see how although _Avalonia UI_ is often very similar to WPF; there are some differences. In particular, in the way in which the following work:
+您将会看到，虽然 Avalonia UI 在许多情况下与 WPF 非常相似，但也存在一些差异。特别是以下方面的工作方式：
 
-* Styling
-* Data Templates
+* 样式（Styling）
+* 数据模板（Data Templates）
 
 ```mdx-code-block
 import {DocsCardList} from '../../../../../../src/components/DocsCard';

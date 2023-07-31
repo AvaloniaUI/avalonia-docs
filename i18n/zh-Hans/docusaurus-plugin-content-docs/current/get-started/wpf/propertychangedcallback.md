@@ -1,6 +1,6 @@
 # PropertyChangedCallback
 
-Listening to changes on DependencyProperties in WPF can be complex. When you register a `DependencyProperty` you can supply a static `PropertyChangedCallback` but if you want to listen to changes from elsewhere [things can get complicated and error-prone](https://stackoverflow.com/questions/23682232).
+在WPF中，监听DependencyProperties的变化可能会变得复杂。当您注册一个`DependencyProperty`时，可以提供一个静态的`PropertyChangedCallback`，但如果您想从其他地方监听属性变化，[事情可能会变得复杂和容易出错](https://stackoverflow.com/questions/23682232)。
 
-In Avalonia, there is no `PropertyChangedCallback` at the time of registration, instead a class listener is [added to the control's static constructor in much the same way that event class listeners are added](../../guides/data-binding/binding-from-code#subscribing-to-a-property-on-any-object).
+在Avalonia中，注册时没有`PropertyChangedCallback`，而是在控件的静态构造函数中添加了一个类监听器，方式与[添加事件类监听器的方式非常相似](../../guides/data-binding/binding-from-code#subscribing-to-a-property-on-any-object)。
 

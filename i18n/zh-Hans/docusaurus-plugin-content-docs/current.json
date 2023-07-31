@@ -16,7 +16,7 @@
     "description": "The label for category Coming from WPF? in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Stay Up-To-Date": {
-    "message": "Stay Up-To-Date",
+    "message": "保持最新",
     "description": "The label for category Stay Up-To-Date in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Samples & Tutorials": {
@@ -32,27 +32,27 @@
     "description": "The label for category Music Store App in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Basics": {
-    "message": "Basics",
+    "message": "基础知识",
     "description": "The label for category Basics in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.User Interface": {
-    "message": "User Interface",
+    "message": "用户界面",
     "description": "The label for category User Interface in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Controls": {
-    "message": "Controls",
+    "message": "控件",
     "description": "The label for category Controls in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Creating Controls": {
-    "message": "Creating Controls",
+    "message": "创建控件",
     "description": "The label for category Creating Controls in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Building Layouts": {
-    "message": "Building Layouts",
+    "message": "创建布局",
     "description": "The label for category Building Layouts in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Styling": {
-    "message": "Styling",
+    "message": "样式",
     "description": "The label for category Styling in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Themes": {
@@ -60,11 +60,11 @@
     "description": "The label for category Themes in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Data": {
-    "message": "Data",
+    "message": "数据",
     "description": "The label for category Data in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Data Binding": {
-    "message": "Data Binding",
+    "message": "数据绑定",
     "description": "The label for category Data Binding in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.How-To Guides": {

@@ -1,23 +1,23 @@
 ---
 id: fluent
-title: Fluent Theme
+title: Fluent 主题
 ---
 
 ## Introduction
 
-Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, which is a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with our styling system.
+Avalonia Fluent 主题受到微软的 Fluent Design System 的启发，该系统是一组用于创建视觉吸引力和交互式用户界面的设计指南和组件。Fluent Design System 强调现代、清晰的美学，平滑的动画和直观的交互。它在不同平台上提供了一致而精致的外观和感觉，同时为开发人员提供了我们的样式系统的灵活性。
 
-![Fluent Theme](/img/basics/user-interface/styling/fluent-theme-normal.png)
+![Fluent 主题](/img/basics/user-interface/styling/fluent-theme-normal.png)
 
-## How to use
+## 如何使用
 
-As a first step, [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/) nuget package needs to be installed. 
+首先，需要安装 [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/) NuGet 包。
 
 :::info
-On how to add a nuget package, you can follow steps from the Nuget page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
+关于如何添加 NuGet 包，您可以参考 NuGet 页面或 [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio)、[Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) 文档中的步骤。
 :::
 
-After that theme needs to be included in the Application class:
+然后，将主题包含在 Application 类中：
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -32,13 +32,13 @@ After that theme needs to be included in the Application class:
 ```
 
 :::note
-If you need to specify theme dark or light variant, please follow [Theme Variants](../../../../guides/styles-and-resources/how-to-use-theme-variants.md) documentation.
+如果需要指定主题为暗色或浅色变体，请参阅[主题变体](../../../../guides/styles-and-resources/how-to-use-theme-variants.md)文档。
 :::
 
-## Changing theme density
+## 更改主题密度
 
-Fluent theme has two sets of predefined density variants.
-To switch to more compact look, you can set it with DensityStyle property:
+Fluent 主题有两套预定义的密度变体。
+要切换到更紧凑的外观，可以通过 `DensityStyle` 属性设置：
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -52,12 +52,12 @@ To switch to more compact look, you can set it with DensityStyle property:
 </Application>
 ```
 
-## Creating custom color palettes
+## 创建自定义颜色调色板
 
-While FluentTheme has build-in resources for dark and light variants, it's still possible to override base palette for these variants.
-It is useful, when developers want to use the same base theme, but with different colors.
+虽然 FluentTheme 有内置的暗色和浅色变体资源，但仍然可以重写这些变体的基础调色板。
+这在开发人员想要使用相同的基本主题但具有不同颜色时非常有用。
 
-To do so, you need to define
+要实现这一点，需要定义：
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -67,9 +67,9 @@ To do so, you need to define
     <FluentTheme>
     // highlight-start
       <FluentTheme.Palettes>
-        <!-- Palette for Light theme variant -->
+        <!-- 适用于浅色主题变体的调色板 -->
         <ColorPaletteResources x:Key="Light" AccentColor="Green" RegionColor="White" ErrorText="Red" />
-        <!-- Palette for Dark theme variant -->
+        <!-- 适用于暗色主题变体的调色板 -->
         <ColorPaletteResources x:Key="Dark" AccentColor="DarkGreen" RegionColor="Black" ErrorText="Yellow" />
       </FluentTheme.Palettes>
     // highlight-end
@@ -78,27 +78,27 @@ To do so, you need to define
 </Application>
 ```
 
-While `ColorPaletteResources` has many color properties that can be overriden independently for each variant, it is possible to redefine only minimal set of what's needed, and keep everything else as per defaults. As in examples above, only a couple of colors are overriden.
+虽然 `ColorPaletteResources` 具有许多可以单独为每个变体重写的颜色属性，但是只能重新定义所需的最小集合，其他所有内容保持默认值。如上面的示例中，仅覆盖了几种颜色。
 
-If AccentColor is not overriden, Avalonia uses platform OS accent color if available.
-Also, AccentColor supports bindings and can be changed in runtime. But not other properties, as they are read once after app started and are statically used for performance reasons.
+如果未重写 AccentColor，Avalonia 将使用平台 OS 的强调颜色（如果可用）。
+另外，AccentColor 支持绑定，并且可以在运行时更改，但其他属性不支持，因为它们在应用程序启动后被读取一次，并且为了性能原因而静态使用。
 
-It is possible to build palettes from the code behind, but same rules apply - only AccentColor can be updated dynamically, and palettes should be 
+可以在代码中构建调色板，但是同样的规则适用——只有 AccentColor 可以在运行时更新，并且调色板应该在样式或主题加载后设置为不可变。
 
 :::note
-FluentTheme supports only Dark and Light theme variants, and it's not possible to define palettes for custom variants.
+FluentTheme 仅支持暗色和浅色主题变体，不支持为自定义变体定义调色板。
 :::
 
-## Creating custom color palettes with online editor
+## 使用在线编辑器创建自定义颜色调色板
 
-Microsoft Fluent Theme Editor was ported to Avalonia and now available to be used with our FluentTheme as well.
-It is available on https://theme.xaml.live/ page and supports following features:
-1. Editing palette colors for both Light and Dark variants.
-2. Previewing of the current palette.
-3. Exporting current palettes as XAML code that can be copy pasted into `App.axaml` file.
-4. Saving current colors in a json file and loading it from the file system.
-5. Automatic hints, when palette has a low contrast between colors.
-6. Couple of quick start presets.
+Microsoft Fluent Theme Editor 已移植到 Avalonia，现在也可以与我们的 FluentTheme 一起使用。
+它可在 https://theme.xaml.live/ 页面上使用，并支持以下功能：
+1. 编辑浅色和暗色变体的调色板颜色。
+2. 预览当前调色板。
+3. 将当前调色板导出为可以复制粘贴到 `App.axaml` 文件中的 XAML 代码。
+4. 将当前颜色保存在 JSON 文件中，并从文件系统加载它。
+5. 在调色板的颜色之间有低对比度时，自动提示。
+6. 提供几个快速启动预设。
 
-Example of FluentTheme with a Forest palette preset available on the web app:
-![Fluent Theme Forest Palette](/img/basics/user-interface/styling/fluent-theme-forest.png)
+以下是使用 Forest 调色板预设的 FluentTheme 示例：
+![Fluent 主题 Forest 调色板](/img/basics/user-interface/styling/fluent-theme-forest.png)

@@ -1,31 +1,31 @@
 ---
 id: styles
-title: Styles
+title: 样式
 ---
 
-# Styles
+# 样式
 
-The _Avalonia UI_ style system is a mechanism that can share property settings between controls. 
+_Avalonia UI_ 的样式系统是一种可以在控件之间共享属性设置的机制。
 
 :::tip
-A `Style` in Avalonia is more similar to a CSS style than a WPF/UWP style. The equivalent of a WPF/UWP Style in Avalonia is a [`ControlTheme`](control-themes).
+在 Avalonia 中，`Style` 更类似于 CSS 样式，而不是 WPF/UWP 样式。在 Avalonia 中，与 WPF/UWP 中的样式相当的是[`ControlTheme`](control-themes)。
 :::
 
-## How It Works
+## 工作原理
 
-In essence, the styling mechanism has two steps: selection and substitution. The XAML for the style can define how both of these steps are to be done, but often you will help the selection step by defining 'class' labels on control elements.
+实质上，样式机制有两个步骤：选择和替换。样式的 XAML 可以定义如何进行这两个步骤，但通常你会在控件元素上定义 'class' 标签来帮助选择步骤。
 
 :::info
-The _Avalonia UI_ styling system's use of 'class' labels on control elements is analogous to how CSS (cascading style sheets) work with HTML elements.&#x20;
+_Avalonia UI_ 样式系统使用在控件元素上的 'class' 标签与 CSS（层叠样式表）在 HTML 元素上的工作方式类似。
 :::
 
-The styling system implements cascading styles by searching the [logical tree](../../../concepts/control-trees.md) upwards from a control, during the selection step. This means styles defined at the highest level of the application (the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
+在选择步骤中，样式系统从控件开始沿着[逻辑树](../../../concepts/control-trees.md)向上搜索。这意味着在应用程序的最高级别（例如 `App.axaml` 文件）定义的样式可以在应用程序的任何地方使用，但仍然可以在控件更近的地方（例如在窗口或用户控件中）进行覆盖。
 
-When a match is located by the selection step, then the matched control's properties are altered according to the setters in the style.
+当选择步骤找到匹配项时，匹配的控件的属性将根据样式中的设置器进行更改。
 
-## How it is Written
+## 如何编写
 
-The XAML for a style has two parts: a selector attribute, and one or more setter elements. The selector value contains a string that uses the _Avalonia UI_ **style selector syntax**. Each setter element identifies the property that will be changed by name, and the new value that will be substituted. The pattern is like this:
+样式的 XAML 有两个部分：选择器属性和一个或多个设置器元素。选择器的值包含使用 _Avalonia UI_ **样式选择器语法** 的字符串。每个设置器元素通过名称标识将被更改的属性和将被替换的新值。模式如下：
 
 ```
 <Style Selector="selector syntax">
@@ -35,12 +35,12 @@ The XAML for a style has two parts: a selector attribute, and one or more setter
 ```
 
 :::info
-The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (cascading style sheets). For detailed reference information, see [here](../../../reference/styles/style-selector-syntax.md). &#x20;
+_Avalonia UI_ **样式选择器语法** 类似于 CSS（层叠样式表）中使用的语法。有关详细的参考信息，请参阅 [此处](../../../reference/styles/style-selector-syntax.md)。
 :::
 
-## Example
+## 示例
 
-This is an example of how a style is written and applied to a control element, with a [style class](style-classes) to help selection:
+以下是样式如何编写并应用于控件元素的示例，使用[样式类](style-classes)来辅助选择：
 
 ```xml
 <Window ... >
@@ -56,13 +56,13 @@ This is an example of how a style is written and applied to a control element, w
 </Window>
 ```
 
-In this example, all `TextBlock` elements with the `h1` style class will be displayed with the font size and weight set by the style. This works in the preview pane:
+在此示例中，所有带有 `h1` 样式类的 `TextBlock` 元素将显示为样式设置的字体大小和字重。这在预览面板中工作：
 
 <img src="/img/gitbook-import/assets/image (5) (5).png" alt=""/>
 
-## Where to put Styles 
+## 放置样式的位置
 
-Styles are placed inside a `Styles` collection element on a `Control` or on the `Application`. For example, a window styles collection looks like this:
+样式放置在 `Control` 或 `Application` 上的 `Styles` 集合元素中。例如，窗口的样式集合如下：
 
 ```xml
 <Window.Styles>
@@ -70,40 +70,40 @@ Styles are placed inside a `Styles` collection element on a `Control` or on the 
 </Window.Styles>
 ```
 
-The location of a styles collection defines the scope of the styles it contains. In the above example, the styles will apply to the window and all of its contents. If a style is added to the `Application` then it will apply globally.
+样式集合的位置定义了其中包含的样式的范围。在上面的示例中，样式将应用于窗口及其所有内容。如果样式添加到 `Application`，则将全局应用。
 
-## The Selector
+## 选择器
 
-The style selector defines what controls the style will act upon. The selector uses a variety of formats, one of the simplest is this:
+样式选择器定义样式将作用于哪些控件。选择器使用多种格式，其中最简单的一个如下：
 
 ```xml
 <Style Selector="TargetControlClass.styleClassName">
 ```
 
-This selector will match all controls with a style key of `TargetControlClass`, having a style class of `styleClassName`.
+这个选择器将匹配具有样式键`TargetControlClass`且带有样式类`styleClassName`的所有控件。
 
 :::info
-A full list of selectors can be found [here](../../../reference/styles/style-selector-syntax.md).
+完整的选择器列表可在[此处](../../../reference/styles/style-selector-syntax.md)找到。
 :::
 
-## Setters
+## 设置器
 
-Setters describe what will happen when the selector matches a control. They are simple property/value pairs written in the format:
+设置器描述了当选择器与控件匹配时会发生什么。它们是以以下格式编写的简单的属性/值对：
 
 ```xml
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Padding" Value="4 2 0 4"/>
 ```
 
-Whenever a style is matched with a control, all of the setters within the style will be applied to the control.
+当样式与控件匹配时，样式中的所有设置器都将应用于控件。
 
 :::info
-For more information on setters see [here](../../../guides/styles-and-resources/property-setters.md).
+有关设置器的更多信息，请参阅[此处](../../../guides/styles-and-resources/property-setters.md).
 :::
 
-## Nested Styles
+## 嵌套样式
 
-Styles can be nested in other styles. To nest a style, simply include the child style as a child of the parent `<Style>` element, and start the selector with the [`Nesting Selector (^)`](../../../reference/styles/style-selector-syntax.md#nesting):
+样式可以嵌套在其他样式中。要嵌套样式，只需将子样式作为父 `<Style>` 元素的子元素包含，并在子选择器的开头加上 [嵌套选择器 `^`](../../../reference/styles/style-selector-syntax.md#nesting):
 
 ```xml
 <Style Selector="TextBlock.h1">
@@ -118,44 +118,44 @@ Styles can be nested in other styles. To nest a style, simply include the child 
 </Style>
 ```
 
-When this happens, the selector from the parent style will automatically apply to the child style. In the above example the nested style will effectively have a selector of `TextBlock.h1:pointerover`, meaning that it will display with a red foreground when the pointer is over the control.
+当发生这种情况时，父样式的选择器将自动应用于子样式。在上面的示例中，嵌套样式的选择器将是 `TextBlock.h1:pointerover`，这意味着当指针悬停在控件上时，它将显示为红色前景色。
 
 :::info
-The nesting selector must be present and must appear at the start of the child selector.
+嵌套选择器必须存在，并且必须出现在子选择器的开头。
 :::
 
-## Style Key
+## 样式键
 
-The type of an object matched by a style selector is not determined by the concrete type of the control, but rather by examining its `StyleKey` property.
+样式选择器匹配的对象的类型不是由控件的具体类型决定的，而是通过检查其 `StyleKey` 属性来确定的。
 
-By default, the `StyleKey `property returns the type of the current instance. However, if you want your control, which inherits from Button, to be styled as a Button, you can override the `StyleKeyOverride` property in your class and have it return `typeof(Button)`.
+默认情况下，`StyleKey` 属性返回当前实例的类型。然而，如果你希望你的控件（继承自 Button）被样式化为一个按钮，你可以在你的类中重写 `StyleKeyOverride` 属性，并让它返回 `typeof(Button)`。
 
 ```csharp
 public class MyButton : Button
 {
-    // `MyButton` will be styled as a standard `Button` control.
+    // MyButton 将会被作为标准的 Button 控件样式化。
     protected override Type StyleKeyOverride => typeof(Button);
 }
 ```
 
 :::info
-Note this this logic is inverted as compared with WPF/UWP: in those frameworks, when you derive a new control it will be styled as its base control unless you override the `DefaultStyleKey` property. In Avalonia the control will be styled using its concrete type unless a different style key is provided.
+请注意，这与 WPF/UWP 相比逻辑是相反的：在这些框架中，当你派生一个新的控件时，它将被样式化为其基础控件，除非你覆盖 `DefaultStyleKey` 属性。在 Avalonia 中，控件将使用其具体类型进行样式化，除非提供了不同的样式键。
 :::
 
 :::info
-Before Avalonia 11, the style key was overridden by implementing `IStyleable` and providing a new implementation of the `IStyleable.StyleKey` property. This mechanism is still supported in Avalonia 11 for compatibility, but may be removed in a future version.
+在 Avalonia 11 之前，样式键是通过实现 `IStyleable` 并提供新的 `IStyleable.StyleKey` 属性实现的。Avalonia 11 仍然支持这种机制以保持兼容性，但在未来的版本中可能会删除。
 :::
 
-## Styles and Resources
+## 样式和资源
 
-Resources are often used with styles to help maintain consistent presentation. Resources can help define standard colors and icons in an application; or across multiple applications when included from separate files.
+样式通常与资源一起使用以帮助维护一致的表现。资源可以帮助定义应用程序中的标准颜色和图标，或者在从单独文件中包含时可以跨多个应用程序中使用。
 
 :::info
-For guidance on how to use resources in you application, see [here](../../../guides/styles-and-resources/resources.md).
+有关如何在应用程序中使用资源的指导，请参阅[此处](../../../guides/styles-and-resources/resources.md).
 :::
 
-## Further Information
+## 更多信息
 
 :::info
-For guidance on how to share styles by including a styles file, see [here](../../../guides/styles-and-resources/how-to-use-included-styles.md).
+有关如何通过包含样式文件来共享样式的指导，请参阅[此处](../../../guides/styles-and-resources/how-to-use-included-styles.md).
 :::

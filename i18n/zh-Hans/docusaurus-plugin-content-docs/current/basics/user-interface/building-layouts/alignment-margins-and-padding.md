@@ -1,18 +1,18 @@
-# Alignment, Margins and Padding
+# Alignment、Margin 和 Padding
 
-An Avalonia control exposes several properties that are used to precisely position child elements. This topic discusses four of the most important properties: `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment`. The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in Avalonia applications.
+Avalonia 控件暴露了用于精确定位子元素的几个属性。本章节讨论了四个最重要的属性：`HorizontalAlignment`、`Margin`、`Padding`和`VerticalAlignment`。理解这些属性的效果很重要，因为它们是控制元素在Avalonia应用程序中的位置的基础。
 
-### Introduction to Element Positioning
+### 元素定位
 
-There are numerous ways to position elements using Avalonia. However, achieving ideal layout goes beyond simply choosing the right `Panel` element. Fine control of positioning requires an understanding of the `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment` properties.
+Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅仅是选择正确的`Panel`元素，精确控制定位还需要理解`HorizontalAlignment`、`Margin`、`Padding`和`VerticalAlignment`属性。
 
-The following illustration shows a layout scenario that utilizes several positioning properties.
+下图展示了一个使用了多个定位属性的布局方案。
 
 <img src='/img/gitbook-import/assets/layout-margins-padding-alignment-graphic1.png' alt='Positioning Example'/>
 
-At first glance, the `Button` elements in this illustration may appear to be placed randomly. However, their positions are actually precisely controlled by using a combination of margins, alignments, and padding.
+乍一看，本图中的`Button`元素可能是随机放置的。然而，它们的位置实际上是通过组合使用边距(margin)、对齐(alignment)和填充(padding)来精确控制的。
 
-The following example describes how to create the layout in the preceding illustration. A `Border` element encapsulates a parent `StackPanel`, with a `Padding` value of 15 device independent pixels. This accounts for the narrow `LightBlue` band that surrounds the child `StackPanel`. Child elements of the `StackPanel` are used to illustrate each of the various positioning properties that are detailed in this topic. Three `Button` elements are used to demonstrate both the `Margin` and `HorizontalAlignment` properties.
+以下示例描述了如何创建上图中的布局。一个`Border`元素封装了一个父元素`StackPanel`，`Padding`值为15个设备独立像素。这就说明了围绕子`StackPanel`的狭窄的`LightBlue`部分。`StackPanel`的子元素用于说明本章节中详细介绍的每个不同的定位属性。三个`Button`元素用于演示`Margin`和`HorizontalAlignment`属性。
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -40,28 +40,28 @@ The following example describes how to create the layout in the preceding illust
 
 ```
 
-The following diagram provides a close-up view of the various positioning properties that are used in the preceding sample. Subsequent sections in this topic describe in greater detail how to use each positioning property.
+下图提供了上述示例中使用的各种定位属性的全貌图。本章节的后续部分会更详细地描述如何使用每个定位属性。
 
 <img src='/img/gitbook-import/assets/layout-margins-padding-alignment-graphic2.png' alt='Positioning Properties'/>
 
-### Understanding Alignment Properties
+### 理解Alignment属性
 
-The `HorizontalAlignment` and `VerticalAlignment` properties describe how a child element should be positioned within a parent element's allocated layout space. By using these properties together, you can position child elements precisely. For example, child elements of a `DockPanel` can specify four different horizontal alignments: `Left`, `Right`, `Center`, or to `Stretch` to fill available space. Similar values are available for vertical positioning.
+`HorizontalAlignment`和`VerticalAlignment`属性描述了一个子元素应该如何在父元素分配的布局空间内定位。通过一起使用这些属性，你可以精确地定位子元素。例如，`DockPanel`的子元素可以指定四种不同的水平对齐方式。`Left`、`Right`、`Center`或者`Stretch`（拉伸）以填补可用空间。类似的值也可用于垂直定位。
 
-Explicitly set `Height` and `Width` properties on an element take precedence over the `Stretch` property value. Attempting to set `Height`, `Width`, and a `HorizontalAlignment` value of `Stretch` results in the `Stretch` request being ignored.
+元素上明确设置的`Height`和`Width`属性的优先级高于`Stretch`属性。如果明确设置了`Height`和`Width`，再将`HorizontalAlignment`设置为`Stretch`，这样会忽略`Stretch`属性。
 
-#### HorizontalAlignment Property
+#### HorizontalAlignment属性
 
-The `HorizontalAlignment` property declares the horizontal alignment characteristics to apply to child elements. The following table shows each of the possible values of the `HorizontalAlignment` property.
+`HorizontalAlignment`属性声明了要应用于子元素的水平对齐特性。下表列出了`HorizontalAlignment`属性的可选值。
 
-| Member | Description |
-| :--- | :--- |
-| `Left` | Child elements are aligned to the left of the parent element's allocated layout space. |
-| `Center` | Child elements are aligned to the center of the parent element's allocated layout space. |
-| `Right` | Child elements are aligned to the right of the parent element's allocated layout space. |
-| `Stretch` \(Default\) | Child elements are stretched to fill the parent element's allocated layout space. Explicit `Width` and `Height` values take precedence. |
+| 成员             | 描述                                             |
+|:---------------|:-----------------------------------------------|
+| `Left`         | 子元素与父元素分配的布局空间的左侧对齐。                           |
+| `Center`       | 子元素与父元素分配的布局空间的中心对齐。                           |
+| `Right`        | 子元素与父元素分配的布局空间的右侧对齐。                           |
+| `Stretch` （默认） | 子元素被拉伸以填充父元素分配的布局空间。明确的`Width`和`Height`值优先级更高。 |
 
-The following example shows how to apply the `HorizontalAlignment` property to `Button` elements. Each attribute value is shown, to better illustrate the various rendering behaviors.
+下面的示例展示了如何将`HorizontalAlignment`属性应用于`Button`元素。为了更好地说明各种渲染行为，每种特性值的效果都被展示了出来。
 
 ```markup
 <Button HorizontalAlignment="Left">Button 1 (Left)</Button>
@@ -70,22 +70,22 @@ The following example shows how to apply the `HorizontalAlignment` property to `
 <Button HorizontalAlignment="Stretch">Button 4 (Stretch)</Button>
 ```
 
-The preceding code yields a layout similar to the following image. The positioning effects of each `HorizontalAlignment` value are visible in the illustration.
+前面的代码生成了与下图类似的布局。每种`HorizontalAlignment`值的定位效果在图中可见。
 
 <img src='/img/gitbook-import/assets/layout-horizontal-alignment-graphic.png' alt='HorizontalAlignment Sample'/>
 
-#### VerticalAlignment Property
+#### VerticalAlignment属性
 
-The `VerticalAlignment` property describes the vertical alignment characteristics to apply to child elements. The following table shows each of the possible values for the `VerticalAlignment` property.
+`VerticalAlignment`属性声明了要应用于子元素的垂直对齐特性。下表列出了`VerticalAlignment`属性的可选值。
 
-| Member | Description |
-| :--- | :--- |
-| `Top` | Child elements are aligned to the top of the parent element's allocated layout space. |
-| `Center` | Child elements are aligned to the center of the parent element's allocated layout space. |
-| `Bottom` | Child elements are aligned to the bottom of the parent element's allocated layout space. |
-| `Stretch` \(Default\) | Child elements are stretched to fill the parent element's allocated layout space. Explicit `Width` and `Height` values take precedence. |
+| 成员            | 描述                                             |
+|:--------------|:-----------------------------------------------|
+| `Top`         | 子元素与父元素分配的布局空间的顶部对齐。                           |
+| `Center`      | 子元素与父元素分配的布局空间的中心对齐。                           |
+| `Bottom`      | 子元素与父元素分配的布局空间的底部对齐。                           |
+| `Stretch`（默认） | 子元素被拉伸以填充父元素分配的布局空间。明确的`Width`和`Height`值优先级更高。 |
 
-The following example shows how to apply the `VerticalAlignment` property to `Button` elements. Each attribute value is shown, to better illustrate the various rendering behaviors. For purposes of this sample, a `Grid` element with visible gridlines is used as the parent, to better illustrate the layout behavior of each property value.
+下面的示例展示了如何将`VerticalAlignment`属性应用于`Button`元素。为了更好地说明各种渲染行为，每种特性值的效果都被展示了出来。在本示例中，使用具有可见网格线的`Grid`元素作为父元素，以更好地说明每种属性值的布局行为。
 
 ```markup
 <Border Background="LightBlue" BorderBrush="Black" BorderThickness="2" Padding="15">
@@ -110,17 +110,17 @@ The following example shows how to apply the `VerticalAlignment` property to `Bu
 </Border>
 ```
 
-The preceding code yields a layout similar to the following image. The positioning effects of each `VerticalAlignment` value are visible in the illustration.
+前面的代码生成了与下图类似的布局。每种`VerticalAlignment`值的定位效果在图中可见。
 
 <img src='/img/gitbook-import/assets/layout-vertical-alignment-graphic.png' alt='VerticalAlignment property sample'/>
 
-### Understanding Margin Properties
+### 理解Margin属性
 
-The `Margin` property describes the distance between an element and its child or peers. `Margin` values can be uniform, by using syntax like `Margin="20"`. With this syntax, a uniform `Margin` of 20 device independent pixels would be applied to the element. `Margin` values can also take the form of four distinct values, each value describing a distinct margin to apply to the left, top, right, and bottom \(in that order\), like `Margin="0,10,5,25"`. Proper use of the `Margin` property enables very fine control of an element's rendering position and the rendering position of its neighbor elements and children.
+`Margin`属性描述了元素与其子元素或同级元素之间的距离。`Margin`值可以是相同的，通过使用像`Margin="20"`的语法，元素将使用相同的20个设备独立像素的`Margin`。`Margin`值也可以是四个不同的值，每个值描述了应用于左、上、右和下的不同边距（按顺序），如`Margin="0,10,5,25"`。正确使用`Margin`属性可以非常精确地控制元素的渲染位置及其相邻元素和子元素的渲染位置。
 
-A non-zero margin applies space outside the element's `Bounds`.
+非零的边距应用在元素的`Bounds`之外的空间。
 
-The following example shows how to apply uniform margins around a group of `Button` elements. The `Button` elements are spaced evenly with a ten-pixel margin buffer in each direction.
+下面的示例展示了如何在一组`Button`元素周围应用相同的边距。这些`Button`元素的间距是均匀的，每个方向都有10像素的边距缓冲。
 
 ```markup
 <Button Margin="10">Button 7</Button>
@@ -128,7 +128,7 @@ The following example shows how to apply uniform margins around a group of `Butt
 <Button Margin="10">Button 9</Button>
 ```
 
-In many instances, a uniform margin is not appropriate. In these cases, non-uniform spacing can be applied. The following example shows how to apply non-uniform margin spacing to child elements. Margins are described in this order: left, top, right, bottom.
+在许多情况下，统一的边距是不合适的。在这些情况下，可以应用非统一间距。以下示例展示了如何将非统一边距应用于子元素。边距按该顺序描述：左、上、右、下。
 
 ```markup
 <Button Margin="0,10,0,10">Button 1</Button>
@@ -136,11 +136,11 @@ In many instances, a uniform margin is not appropriate. In these cases, non-unif
 <Button Margin="0,10,0,10">Button 3</Button>
 ```
 
-#### Understanding the Padding Property
+#### 理解Padding属性
 
-Padding is similar to `Margin` in most respects. The Padding property is exposed on only on a few classes, primarily as a convenience: `Border`, `TemplatedControl`, and `TextBlock` are samples of classes that expose a Padding property. The `Padding` property enlarges the effective size of a child element by the specified `Thickness` value.
+`Padding`在大多数方面与`Margin`相似。`Padding`属性仅暴露在少数类上，主要是为了方便。`Border`、`TemplatedControl`、和`TextBlock`是暴露了`Padding`属性的类的范例。`Padding`属性通过指定的`Thickness`值扩大了子元素的有效尺寸。
 
-The following example shows how to apply `Padding` to a parent `Border` element.
+以下示例展示了如何将`Padding`应用于父`Border`元素。
 
 ```markup
 <Border Background="LightBlue"
@@ -150,11 +150,11 @@ The following example shows how to apply `Padding` to a parent `Border` element.
         Padding="25">
 ```
 
-#### Using Alignment, Margins, and Padding in an Application
+#### 在应用程序中使用Alignment、Margin和Padding
 
-`HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment` provide the positioning control necessary to create a complex UI. You can use the effects of each property to change child-element positioning, enabling flexibility in creating dynamic applications and user experiences.
+`HorizontalAlignment`、`Margin`、`Padding`和`VerticalAlignment`提供创建复杂UI所需的定位控制。您可以使用每个属性的效果来改变子元素的位置，从而实现灵活地创建动态应用程序和提升用户体验。
 
-The following example demonstrates each of the concepts that are detailed in this topic. Building on the infrastructure found in the first sample in this topic, this example adds a`Grid` element as a child of the `Border` in the first sample. `Padding` is applied to the parent `Border` element. The`Grid` is used to partition space between three child `StackPanel` elements. `Button` elements are again used to show the various effects of `Margin` and `HorizontalAlignment`. `TextBlock` elements are added to each `ColumnDefinition` to better define the various properties applied to the `Button` elements in each column.
+下面的示例演示了本章节中详细介绍的每个概念。在本章节第一个示例的基础上，这个示例添加了一个`Grid`元素作为第一个示例中`Border`的子元素。`Padding`应用于父`Border`元素。`Grid`用于三个子`StackPanel`元素之间划分空间。`Button`元素再次被用来展示`Margin`和`HorizontalAlignment`的各种效果。`TextBlock`元素被添加到每个`ColumnDefinition`中，以更好地定义应用于每一列中`Button`元素的各种属性。
 
 ```markup
 <Border Background="LightBlue"
@@ -218,7 +218,7 @@ The following example demonstrates each of the concepts that are detailed in thi
 </Border>
 ```
 
-When compiled, the preceding application yields a UI that looks like the following illustration. The effects of the various property values are evident in the spacing between elements, and significant property values for elements in each column are shown within `TextBlock` elements.
+编译时，前面的应用程序生成的UI与下图类似。各种属性值的影响在元素之间的间距中很明显，每列元素的重要属性值展示在`TextBlock`元素中。
 
 <img src='/img/gitbook-import/assets/layout-margins-padding-aligment-graphic3.png' alt='Several positioning properties in one application'/>
 

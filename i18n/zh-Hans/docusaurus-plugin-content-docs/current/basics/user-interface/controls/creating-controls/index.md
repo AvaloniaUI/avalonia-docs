@@ -1,4 +1,4 @@
 ---
 id: index
-title: Creating Controls
+title: 创建控件
 ---

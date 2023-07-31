@@ -1,33 +1,33 @@
-# Controls
+# 控件
 
-Controls in Avalonia UI are fundamental building blocks used to create user interfaces. They represent various interactive elements such as buttons, text boxes, sliders, and more. Understanding controls is essential for developing applications using Avalonia UI.
+在 Avalonia UI 中，控件是创建用户界面的基本构建块。它们代表各种交互元素，如按钮、文本框、滑块等。了解控件对于使用 Avalonia UI 开发应用程序至关重要。
 
-## What are Controls?
+## 什么是控件？
 
-Controls are UI elements that allow users to interact with an application. They provide functionality for input, display, and manipulation of data. Controls can be categorized into several types based on their purpose and behavior.
+控件是用户界面元素，允许用户与应用程序交互。它们提供输入、显示和操作数据的功能。根据其目的和行为，控件可以分为多种类型。
 
-- **Buttons**: Buttons are commonly used for triggering actions when clicked or tapped. They can have text, icons, or both, and are often used for tasks like submitting forms, opening dialogs, or executing commands.
-- **Text Boxes**: Text boxes allow users to enter and edit text. They are used for capturing user input, such as usernames, passwords, or any form of textual information. Text boxes can also be customized for specific input patterns and validation.
-- **Labels**: Labels are used to display static text or captions for other controls. They provide additional information or context to the user and are generally non-interactive.
-- **Checkboxes and Radio Buttons**: Checkboxes and radio buttons are used for selection and multiple-choice options. Checkboxes allow users to select one or more options, while radio buttons enable users to choose a single option from a group.
-- **Sliders**: Sliders are used to select a value from a range. They provide a visual representation of a value that can be adjusted by dragging a handle along a track. Sliders are commonly used for settings such as volume controls or image adjustments.
-- **List Boxes and Combo Boxes**: List boxes and combo boxes allow users to select an item from a list or a dropdown menu. List boxes display multiple items at once, while combo boxes show a single item initially and expand to display a list when clicked.
+- **按钮（Button）**：按钮常用于在单击或触摸时触发操作。它们可以包含文本、图标或两者，并经常用于提交表单、打开对话框或执行命令等任务。
+- **文本框（TextBox）**：文本框允许用户输入和编辑文本。它们用于捕获用户输入，例如用户名、密码或任何形式的文本信息。文本框还可以根据特定输入模式和验证进行自定义。
+- **标签（Label）**：标签用于显示静态文本或其他控件的标题。它们为用户提供额外的信息或上下文，通常是不可交互的。
+- **复选框（CheckBox）和单选按钮（RadioButton）**：复选框和单选按钮用于选择和多选项。复选框允许用户选择一个或多个选项，而单选按钮允许用户从一组选项中选择一个。
+- **滑动条（Slider）**：滑动条用于从范围中选择一个值。它们提供了一个可视化表示值的方式，可以通过拖动滑块的手柄来调整值。滑块通常用于设置诸如音量控制或图像调整等设置。
+- **列表框（ListBox）和下拉列表框（ComboBox）**：列表框和下拉列表框允许用户从列表或下拉菜单中选择项目。列表框同时显示多个项目，而下拉列表框在初始状态下显示一个项目，并在点击时展开显示列表。
 
-These are just a few examples of the many controls available in Avalonia UI. Each control has its own set of properties, methods, and events, allowing developers to customize their appearance and behavior to suit their application's needs.
+这些只是 Avalonia UI 中众多可用控件的一些例子。每个控件都有自己的一组属性、方法和事件，允许开发人员根据应用程序的需求自定义其外观和行为。
 
-## Getting Started with Builtin Controls
+## 开始使用内置控件
 
-To get started with using controls in Avalonia UI, you can refer to the documentation for each control type. The documentation provides detailed explanations, examples, and code snippets to help you understand and utilize the controls effectively.
+要开始使用 Avalonia UI 中的控件，您可以参考每种控件类型的文档。文档提供了详细的解释、示例和代码片段，帮助您有效地理解和利用这些控件。
 
-- [Button Control Documentation](../../../reference/controls/buttons/button)
-- [Text Box Control Documentation](../../../reference/controls/detailed-reference/textbox)
-- [Label Control Documentation](../../../reference/controls/detailed-reference/label)
-- [Checkbox Control Documentation](../../../reference/controls/checkbox)
-- [Slider Control Documentation](../../../reference/controls/slider)
-- [List Box Control Documentation](../../../reference/controls/listbox)
+- [按钮控件文档](../../../reference/controls/buttons/button)
+- [文本框控件文档](../../../reference/controls/detailed-reference/textbox)
+- [标签控件文档](../../../reference/controls/detailed-reference/label)
+- [复选框控件文档](../../../reference/controls/checkbox)
+- [滑动条控件文档](../../../reference/controls/slider)
+- [列表框控件文档](../../../reference/controls/listbox)
 
-By exploring these resources, you'll gain a solid foundation in using controls within Avalonia UI and be able to create rich and interactive user interfaces for your applications.
+通过探索这些资源，您将对 Avalonia UI 中的控件使用建立坚实的基础，并能够为应用程序创建丰富且交互性强的用户界面。
 
-## Creating Controls
+## 创建自定义控件
 
-In Avalonia, you have the flexibility to create custom controls tailored to your application's specific requirements. See the [Creating Controls](creating-controls) section for more information
+在 Avalonia 中，您有灵活性来创建符合您的应用程序特定要求的自定义控件。请参阅 [创建控件](creating-controls) 部分，了解更多信息。
