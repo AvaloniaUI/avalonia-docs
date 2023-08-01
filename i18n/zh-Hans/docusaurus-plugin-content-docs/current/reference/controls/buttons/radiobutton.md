@@ -2,25 +2,29 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Radio Button
+# 单选按钮
 
-The radio button control presents a group of options from which only one may be selected at a time. A selected option is drawn as a filled circle, and an unselected option as an empty circle.
+单选按钮控件展示了一组选项，用户一次只能选择其中一个。选中的选项以实心圆圈表示，未选中的选项以空心圆圈表示。
 
-The content of the radio button control is presented as a label next to the circle.
+单选按钮控件的内容以标签形式呈现在圆圈旁边。
 
-It is possible for no options in a group to be selected, however as soon as one is selected, the radio button interaction cannot be stopped by the user.
+虽然可能没有选中任何组中的选项，但一旦选中一个选项，用户就无法停止单选按钮的交互。
 
-## Useful Properties
+## 有用的属性
 
-You will probably use these properties most often:
+您可能经常使用以下属性：
 
-<table><thead><tr><th width="194">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>GroupName</code></td><td>Defines the name common to a group of options that will interact as radio buttons. </td></tr><tr><td><code>IsChecked</code></td><td>Whether a radio button option is selected (true) or unselected (false). </td></tr><tr><td><code>IsEnabled</code></td><td>Whether a radio button option is enabled. Disabled options are presented faded.</td></tr></tbody></table>
+| 属性 | 描述 |
+| ---- | ---- |
+| `GroupName` | 定义一组选项的共同名称，这些选项将作为单选按钮进行交互。 |
+| `IsChecked` | 单选按钮选项是否被选中（true）或未选中（false）。 |
+| `IsEnabled` | 单选按钮选项是否启用。禁用的选项呈现为透明。 |
 
-## Example
+## 示例
 
-This example shows two groups of radio buttons working independently:
+以下示例展示了两组独立工作的单选按钮：
 
-```
+```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 10 0 5">First Group</TextBlock>
     <RadioButton GroupName="First Group"
@@ -39,14 +43,14 @@ This example shows two groups of radio buttons working independently:
 </StackPanel>
 ```
 
-<img src='/img/gitbook-import/assets/radio.gif' alt=''/>
+![示例图片](/img/gitbook-import/assets/radio.gif)
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/RadioButton/).
+有关此控件的完整API文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/RadioButton/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`RadioButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RadioButton.cs)
+在_GitHub_上查看源代码 [`RadioButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RadioButton.cs)
 :::

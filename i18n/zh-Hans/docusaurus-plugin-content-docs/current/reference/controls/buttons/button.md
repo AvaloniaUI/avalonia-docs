@@ -2,36 +2,34 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Button
+# 按钮
 
-The button is a control that reacts to pointer actions (and has some keyboard equivalents). It presents visual feedback in the form of a depressed state when the pointer is down.
+按钮是一种对指针动作做出反应的控件（也有一些键盘等效操作）。当指针按下时，它会呈现出被按下的状态。
 
-A pointer-down to pointer release sequence is interpreted as a click; and this behaviour is configurable.&#x20;
-
-:::info
-Click is one of many button events, for a full list see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events).
-:::
-
-A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.&#x20;
+将指针按下到释放的序列解释为点击；此行为是可配置的。
 
 :::info
-For guidance on how to bind to a command, see [here](../../../basics/user-interface/adding-interactivity).
+点击是众多按钮事件之一，完整列表请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events)。
 :::
 
-## Useful Properties
+按钮可以在代码后台引发点击事件。或者，您可以将`ICommand`的实例绑定到`Command`属性。绑定的命令将在每次按钮被点击时执行。
 
-You will probably use these properties most often:
+:::info
+有关如何绑定到命令的指南，请参阅[这里](../../../basics/user-interface/adding-interactivity)。
+:::
 
-| Property    | Description                                                         |
-| ----------- | ------------------------------------------------------------------- |
-| `ClickMode` | Describes how the button should react to clicks.                    |
-| `Command`   | An instance of `ICommand` to be invoked when the button is clicked. |
+## 有用的属性
 
-## Example
+您可能最常用到以下属性：
 
-This example shows a simple button and a C# code-behind click event handler.
+| 属性         | 描述                                                   |
+| ------------ | ------------------------------------------------------ |
+| `ClickMode`  | 描述按钮如何对点击做出反应。                          |
+| `Command`    | 点击按钮时要调用的`ICommand`实例。                     |
 
+## 示例
 
+以下示例展示了一个简单的按钮和一个C#代码后台的点击事件处理程序。
 
 ```xml
 <StackPanel Margin="20">
@@ -39,7 +37,6 @@ This example shows a simple button and a C# code-behind click event handler.
   <TextBlock Margin="0 10" x:Name="message">Ready...</TextBlock>
 </StackPanel>
 ```
-
 
 ```csharp title='C#'
 public partial class MainWindow : Window
@@ -56,16 +53,14 @@ public partial class MainWindow : Window
 }
 ```
 
+<img src='/img/gitbook-import/assets/button.gif' alt='' />
 
-
-<img src='/img/gitbook-import/assets/button.gif' alt=''/>
-
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/).
+有关该控件的完整API文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`Button.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Button.cs)
+在 _GitHub_ 上查看源代码 [`Button.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Button.cs)。
 :::

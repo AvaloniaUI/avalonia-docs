@@ -1,71 +1,71 @@
-# Split Button
+# 分隔按钮
 
-The `SplitButton` functions as a [`Button`](./button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](docs/controls/flyouts) with additional actions.
+`SplitButton` 作为 [`Button`](./button) 的扩展，具有可以单独按下的主要和次要部分。主要部分的行为与普通的 `Button` 相同，而次要部分会打开一个 [`Flyout`](docs/controls/flyouts)，其中包含额外的操作。
 
-## Is this the right control?
+## 这是否是正确的控件？
 
-A `SplitButton` should only be composed of similar actions. Fundamentally, this control is used to group common actions together where one has clear priority over the others. The most common action should be the default and what is shown in the primary part of the SplitButton. Less-common actions should be added to the flyout which is shown when the secondary (drop down) part is pressed.
+`SplitButton` 应该只由类似的操作组成。从根本上讲，此控件用于将常用操作分组，其中一个操作明显优先于其他操作。最常见的操作应该作为默认操作显示在 `SplitButton` 的主要部分中。较不常见的操作应添加到 `Flyout` 中，在按下次要（下拉）部分时显示。
 
 :::info
-The user-selection action should be invoked immediately when pressing either the primary part or a secondary action in the flyout. All pressed actions, whether primary or secondary, are immediate.
+用户选择的操作应在按下主要部分或 `Flyout` 中的次要操作时立即调用。所有按下的操作，无论是主要还是次要的，都是立即生效的。
 :::
 
-## Common Properties
+## 常见属性
 
-| Property  | Description                                                    |
-| --------- | -------------------------------------------------------------- |
-| `Content` | The content to display in the primary part                     |
-| `Flyout`  | The `Flyout` which shows up when the secondary part is clicked |
-| `Command` | A command to be invoked when the primary button is clicked     |
+| 属性       | 描述                                                     |
+| ---------- | -------------------------------------------------------- |
+| `Content`  | 在主要部分显示的内容                                     |
+| `Flyout`   | 次要部分被点击时显示的 `Flyout`                         |
+| `Command`  | 主按钮点击时要调用的命令                                 |
 
-## Pseudoclasses
+## 伪类
 
-| Pseudoclass    | Description                                                                                                                                                         |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `:pressed`     | Set when the entire `SplitButton` is pressed using a keyboard input such as Space or Enter. In this state no distinction is made between primary or secondary parts |
-| `:flyout-open` | Set when the `Flyout` is open                                                                                                                                       |
+| 伪类         | 描述                                                                                                                                                                     |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `:pressed`   | 当通过键盘输入（例如空格或回车）按下整个 `SplitButton` 时设置。在这种状态下，不区分主要部分还是次要部分。                                                                  |
+| `:flyout-open` | 当 `Flyout` 打开时设置。                                                                                                                                                 |
 
-## API Reference
+## API 参考
 
 [SplitButton](http://reference.avaloniaui.net/api/Avalonia.Controls/SplitButton/)
 
-## Source code
+## 源代码
 
 [SplitButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/SplitButton.cs)
 
-## Examples
+## 示例
 
-### Basic example
+### 基本示例
 
 ```xml
-<SplitButton Content="Content" >
+<SplitButton Content="内容" >
     <SplitButton.Flyout>
         <MenuFlyout Placement="Bottom">
-            <MenuItem Header="Item 1">
-                <MenuItem Header="Subitem 1" />
-                <MenuItem Header="Subitem 2" />
-                <MenuItem Header="Subitem 3" />
+            <MenuItem Header="项目1">
+                <MenuItem Header="子项1" />
+                <MenuItem Header="子项2" />
+                <MenuItem Header="子项3" />
             </MenuItem>
-            <MenuItem Header="Item 2"
+            <MenuItem Header="项目2"
                       InputGesture="Ctrl+A" />
-            <MenuItem Header="Item 3" />
+            <MenuItem Header="项目3" />
         </MenuFlyout>
     </SplitButton.Flyout>
 </SplitButton>
 ```
 
 <img src='/img/gitbook-import/assets/SplitButtonClosed.png' alt=''/>
-_SplitButton (Flyout closed)_
+_SplitButton（Flyout已关闭）_
 
 <img src='/img/gitbook-import/assets/SplitButtonOpened.png' alt=''/>
-_SplitButton (Flyout opened)_
+_SplitButton（Flyout已打开）_
 
-### Color-Selection example
+### 颜色选择示例
 
-A common use case of a `SplitButton` is for coloring text within an editor. Pressing the primary part of the `SplitButton` will apply the current color to the selected text. Pressing the secondary part will open a `Flyout` and allow another color to be specified and applied. Again note that when another color is specified in the `Flyout`, the selected text color will immediately change and the current color will be updated as well.
+`SplitButton` 的一个常见用例是在编辑器中为文本着色。按下 `SplitButton` 的主要部分将将当前颜色应用于所选文本。按下次要部分将打开 `Flyout`，允许指定并应用另一种颜色。再次注意，当在 `Flyout` 中指定另一种颜色时，所选文本的颜色将立即更改，并且当前颜色也将更新。
 
 ```xml
-<!-- We have the following DataTemplate defined -->
+<!-- 我们已定义以下 DataTemplate -->
 <DataTemplate DataType="Color">
   <Border CornerRadius="4" Width="20" Height="20" BorderBrush="Gray" BorderThickness="1" >
     <Border.Background>
@@ -76,7 +76,7 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 ```
 
 ```xml
-<!-- SelectedColor, ChangeColorCommand and AvailableColors are properties of our ViewModel -->
+<!-- SelectedColor、ChangeColorCommand 和 AvailableColors 是我们 ViewModel 的属性 -->
 <SplitButton Content="{Binding SelectedColor}" 
              Command="{Binding ChangeColorCommand}">
   <SplitButton.Flyout>
@@ -96,22 +96,22 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 ```
 
 <img src='/img/gitbook-import/assets/SplitButton\_ColorPickerSample.png' alt=''/>
-_Sample of SplitButton for color selection_
+_用于颜色选择的 SplitButton 示例_
 
-### Export Button Sample
+### 导出按钮示例
 
-Another common example of the `SplitButton` could be an export button. When the primary part is pressed, data will be exported using default settings. However, if the secondary part is pressed, additional export options could be specified like ‘Export to PNG’, ‘Export to JPG’, etc.
+`SplitButton` 的另一个常见用例可能是导出按钮。按下主要部分时，将使用默认设置导出数据。但是，如果按下次要部分，可以指定其他导出选项，例如‘导出为 PNG’、‘导出为 JPG’等。
 
 ```xml
-<SplitButton Content="Export to PDF"
+<SplitButton Content="导出为PDF"
              Command="{Binding ExportCommand}"
              CommandParameter=".pdf">
     <SplitButton.Flyout>
         <MenuFlyout Placement="RightEdgeAlignedTop">
-            <MenuItem Header="Export to PNG"
+            <MenuItem Header="导出为PNG"
                       Command="{Binding ExportCommand}"
                       CommandParameter=".png" />
-            <MenuItem Header="Export to JPG"
+            <MenuItem Header="导出为JPG"
                       Command="{Binding ExportCommand}"
                       CommandParameter=".jpg" />
         </MenuFlyout>
@@ -120,4 +120,4 @@ Another common example of the `SplitButton` could be an export button. When the 
 ```
 
 <img src='/img/gitbook-import/assets/SplitButton\_ExportButtonSample.png' alt=''/>
-_Sample of a SplitButton with different export options_
+_带有不同导出选项的 SplitButton 示例_

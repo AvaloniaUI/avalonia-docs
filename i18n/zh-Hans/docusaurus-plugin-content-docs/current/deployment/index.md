@@ -1,6 +1,6 @@
 ---
 id: index
-title: Deployment
+title: 部署
 ---
 
 ```mdx-code-block

@@ -2,26 +2,24 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Repeat Button
+# 重复按钮
 
-The repeat button is a control that has the added feature of regularly generating click events while the button is being pressed down.
+重复按钮是一种控件，其特点是在按住按钮时定期生成点击事件。
 
-## Useful Properties
+## 有用的属性
 
-You will probably use these properties most often:
+您可能经常使用以下属性：
 
-| Property | Description                                                                              |
-| -------- | ---------------------------------------------------------------------------------------- |
-| Delay    | The time (milliseconds) to wait before repeated click generation begins. Default is 300. |
-| Interval | The time (milliseconds) between clicks being generated. Default is 100.                  |
+| 属性      | 描述                                                                              |
+| -------- | --------------------------------------------------------------------------------- |
+| `Delay`   | 在开始生成重复点击之前等待的时间（毫秒）。默认为300毫秒。                          |
+| `Interval`| 生成点击事件之间的时间间隔（毫秒）。默认为100毫秒。                               |
 
-## Example
+## 示例
 
-This example shows a repeat button generating click events with the default interval and delay.
+下面的示例演示了一个重复按钮，使用默认的间隔和延迟来生成点击事件。
 
-
-
-```
+```xml
 <Grid Margin="20" RowDefinitions="50,*">
   <RepeatButton Grid.Row="0" Click="ClickHandler">Press and hold down</RepeatButton>
   <ScrollViewer Grid.Row="1">
@@ -29,7 +27,6 @@ This example shows a repeat button generating click events with the default inte
   </ScrollViewer>
 </Grid>
 ```
-
 
 ```csharp title='C#'
 public partial class MainWindow : Window
@@ -46,16 +43,14 @@ public partial class MainWindow : Window
 }
 ```
 
+![示例图片](/img/gitbook-import/assets/repeatbutton.gif)
 
-
-<img src='/img/gitbook-import/assets/repeatbutton.gif' alt=''/>
-
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/RepeatButton/).
+有关此控件的完整API文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/RepeatButton/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`RepeatButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RepeatButton.cs)
+在_GitHub_上查看源代码 [`RepeatButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RepeatButton.cs)
 :::

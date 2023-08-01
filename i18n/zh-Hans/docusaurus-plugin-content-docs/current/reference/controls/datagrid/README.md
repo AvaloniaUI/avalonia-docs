@@ -2,47 +2,47 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Data Grid
+# 数据网格
 
-The data grid displays repeating data in a customizable grid. The control can be styled, templated and bound.&#x20;
+数据网格以自定义的网格形式展示重复的数据。该控件可以进行样式定制、模板化和绑定。
 
-The data grid needs to be bound to an observable collection in a view model that can be found in a related **data context**.&#x20;
+数据网格需要绑定到一个可观察的集合（Observable Collection），该集合可以在相关的**数据上下文**中找到。
 
 :::info
-To review the concept behind the **data context**, see [here](../../../basics/data/data-binding/data-context).
+要了解**数据上下文**背后的概念，请查看[这里](../../../basics/data/data-binding/data-context)。
 :::
 
 :::info
-The data grid is in an additional _Avalonia UI_ package. To use the data grid in your project, you must reference the **Avalonia.Controls.DataGrid** _NuGet_ package, and reference the styles that it uses, see below.&#x20;
+数据网格位于附加的_Avalonia UI_包中。要在您的项目中使用数据网格，您必须引用**Avalonia.Controls.DataGrid** _NuGet_包，并引用其使用的样式，参见下面。
 :::
 
-## NuGet Package Reference
+## NuGet包引用
 
-You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use **Manage NuGet Packages** from the project menu of your IDE:
+您必须安装数据网格的_NuGet_包，有几种方法可以做到这一点。您可以使用您的IDE的项目菜单中的**管理NuGet包**：
 
-<img src='/img/gitbook-import/assets/image (8) (4).png' alt=''/>
+<img src='/img/gitbook-import/assets/image (8) (4).png' alt='' />
 
-Alternatively,  you can run this instruction from the command line:
+或者，您可以在命令行中运行以下指令：
 
 ```bash
 dotnet add package Avalonia.Controls.DataGrid
 ```
 
-Or add package reference directly to the project (`.csproj`) file:
+或直接在项目（`.csproj`）文件中添加包引用：
 
 ```xml
 <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.18" />
 ```
 
 :::warning
-Note you must always install the data grid version that matches the _Avalonia UI_ version you are using.
+请注意，您必须始终安装与您正在使用的_Avalonia UI_版本匹配的数据网格版本。
 :::
 
-## Include Data Grid Styles&#x20;
+## 包含数据网格样式
 
-You must reference the data grid themes to include the additional styles that the data grid uses. You can do this by adding a `<StyleInclude>` element to the application (`App.axaml` file).
+您必须引用数据网格的主题，以包含数据网格使用的附加样式。您可以通过向应用程序（`App.axaml`文件）添加`<StyleInclude>`元素来实现这一点。
 
-For example:
+例如：
 
 ```markup
 <Application.Styles>
@@ -51,24 +51,22 @@ For example:
 </Application.Styles>
 ```
 
-## Useful Properties
+## 有用的属性
 
-You will probably use these properties most often:
+您可能经常使用以下属性：
 
-| Property                | Description                                                                                                                     |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `AutoGenerateColumns`   | Whether the columns will automatically generate from the bound items data source property names. (Default is false.)            |
-| `Items`                 | The bound collection that is used as the data source for the control.                                                           |
-| `IsReadOnly`            | Sets the binding direction to one-way when true. The default is false - the grid will accept changes to the bound data.         |
-| `CanUserReorderColumns` | Indicates whether the user can change the column display order by dragging column headers with the pointer. (Default is false.) |
-| `CanUserResizeColumns`  | Indicates whether the user can adjust column widths using the pointer. (Default is false.)                                      |
-| `CanUserSortColumns`    | Indicates whether the user can sort columns by clicking the column header. (Default is true.)                                   |
+| 属性                     | 描述                                                                                                                         |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `AutoGenerateColumns`    | 是否根据绑定项数据源属性名称自动生成列头。 (默认为false)                                                                   |
+| `Items`                  | 作为控件数据源的绑定集合。                                                                                                  |
+| `IsReadOnly`             | 当为true时，将绑定方向设置为单向。默认值为false，网格将接受对绑定数据的更改。                                              |
+| `CanUserReorderColumns`  | 指示用户是否可以通过拖动列头更改列的显示顺序。 (默认为false)                                                               |
+| `CanUserResizeColumns`   | 指示用户是否可以使用指针调整列宽度。 (默认为false)                                                                         |
+| `CanUserSortColumns`     | 指示用户是否可以通过单击列头对列进行排序。 (默认为true)                                                                    |
 
-## Examples
+## 示例
 
-This example will generate a basic data grid, with column header names auto-generated from the item class. The items data source is bound to the main window view model.&#x20;
-
-
+这个示例将生成一个基本的数据网格，列头名称将根据项类自动生成。项目数据源绑定到主窗口的视图模型。
 
 ```xml
 <DataGrid Margin="20" Items="{Binding People}" 
@@ -78,8 +76,7 @@ This example will generate a basic data grid, with column header names auto-gene
 </DataGrid>
 ```
 
-
-```csharp title='C# View Model'
+```csharp title='C#视图模型'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -104,8 +101,7 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
-```csharp title='C# Item Class'
+```csharp title='C#项类'
 public class Person
 {
     public string FirstName { get; set; }
@@ -119,15 +115,13 @@ public class Person
 }
 ```
 
-
-
-<img src='/img/gitbook-import/assets/grid1.gif' alt=''/>
+<img src='/img/gitbook-import/assets/grid1.gif' alt='' />
 
 :::info
-These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](../../../basics/data/data-binding).
+这些示例使用了MVVM模式和数据绑定到一个`ObservableCollection`。要了解更多有关数据绑定背后的概念，请参阅[这里](../../../basics/data/data-binding)。
 :::
 
-Property names from the item class will generally not make good column names. This example adds custom header names to the grid. It also allows column reordering and resizing and disallows the default column sorting option:
+通常来说，从项类中获取的属性名称通常不会成为好的列名。下面这个示例为网格添加了自定义的列头名称。它还允许列重新排序和调整大小，并禁用了默认的列排序选项：
 
 ```markup
 <DataGrid Margin="20" Items="{Binding People}"
@@ -144,11 +138,9 @@ Property names from the item class will generally not make good column names. Th
 </DataGrid>
 ```
 
-<img src='/img/gitbook-import/assets/grid2.gif' alt=''/>
+<img src='/img/gitbook-import/assets/grid2.gif' alt='' />
 
-This example shows how the data grid can accept changes and update the underlying collection, and use different column types to edit the data:
-
-
+这个示例展示了数据网格如何接受更改并更新底层集合，并使用不同的列类型来编辑数据：
 
 ```xml
 <DataGrid Margin="20" Items="{Binding People}"        
@@ -162,8 +154,7 @@ This example shows how the data grid can accept changes and update the underlyin
 </DataGrid>
 ```
 
-
-```csharp title='C# View Model'
+```csharp title='C#视图模型'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -188,8 +179,7 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
-```csharp title='C# Item Class'
+```csharp title='C#项类'
 public class Person
 {
     public string FirstName { get; set; }
@@ -205,20 +195,18 @@ public class Person
 }
 ```
 
+<img src='/img/gitbook-import/assets/grid3.gif' alt='' />
 
-
-<img src='/img/gitbook-import/assets/grid3.gif' alt=''/>
-
-## More Information
+## 更多信息
 
 :::info
-For more information about the different kinds of data grid column, see the [next page](datagridcolumns.md).
+有关不同类型的数据网格列的更多信息，请参阅[下一页](datagridcolumns.md)。
 :::
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGrid/).
+有关此控件的完整API文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGrid/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`DataGrid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGrid.cs)
+在_GitHub_上查看源代码 [`DataGrid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGrid.cs)
 :::
