@@ -2,50 +2,50 @@
 description: CONCEPTS - The MVVM Pattern
 ---
 
-# Avalonia UI and MVVM
+# Avalonia UI和MVVM
 
-On this page you will lean how the MVVM pattern is realised when you use it with _Avalonia UI_.
+在本页面中，您将了解如何在使用_Avalonia UI_时实现MVVM模式。
 
-## Views and View Models
+## 视图和视图模型
 
-When you use the MVVM pattern with _Avalonia UI_, you implement a view with an AXAML file that has a code-behind file attached, and a view model with a plain-old code class file. &#x20;
+当您在_Avalonia UI_中使用MVVM模式时，您需要实现一个视图，它由一个带有代码后台文件的AXAML文件和一个普通的代码类文件组成，以及一个视图模型。
 
-In _Avalonia UI_, a view is implemented as a composition of UI elements in a window or a user control (both AXAML files with code-behind). The UI elements in a composition can be a mixture of _Avalonia UI_ built-in controls, user controls and (more advanced) controls of your own design and implementation.&#x20;
+在_Avalonia UI_中，视图是由窗口或用户控件（都是带有代码后台的AXAML文件）中的UI元素组成的组合。组合中的UI元素可以是_Avalonia UI_内置控件、用户控件以及您自己设计和实现的（更高级的）控件的混合。
 
 :::info
-For a full list of the _Avalonia UI_ built-in controls, see the reference section [here](../../reference/controls/).
+要查看_Avalonia UI_内置控件的完整列表，请参阅参考部分[此处](../../reference/controls/)。
 :::
 
 :::info
-To learn more about the concept of UI composition, see [here](../ui-composition.md).
+要了解有关UI组合的概念的更多信息，请参阅[此处](../ui-composition.md)。
 :::
 
 :::info
-To learn how to design and implement your own controls, see [here](../../guides/custom-controls/how-to-create-a-custom-controls-library.md).
+要了解如何设计和实现自己的控件，请参阅[此处](../../guides/custom-controls/how-to-create-a-custom-controls-library.md)。
 :::
 
-## Data Binding
+## 数据绑定
 
-Data binding is the key technology that allows an _Avalonia UI_ MVVM application to separate views from view models. You can visualise the view to view model relationship as two layers connected by the data bindings:
+数据绑定是允许_Avalonia UI_ MVVM应用程序将视图与视图模型分离的关键技术。您可以将视图与视图模型之间的关系可视化为通过数据绑定连接的两个层：
 
 <img src='/img/gitbook-import/assets/mvvm.png' alt=''/>
 
-Notice how some of the data bindings are represented by a two way arrow, and others by a single-headed arrow. For example, the name and address inputs are two ways - you want both changes in the view model to be notified to the view, and for inputs to the view to be updated on the view model.
+请注意，其中一些数据绑定由双向箭头表示，而其他数据绑定则由单向箭头表示。例如，名称和地址输入是双向的 - 您希望将视图模型中的任何更改通知视图，并且将视图中的输入更新到视图模型。
 
-The buttons however have one-direction commands, issued by the view and acted out by the view model. &#x20;
+但是，按钮具有单向命令，由视图发出并由视图模型执行。
 
-Notice how the view model class is not dependent on the view layer, or how it will be rendered on the target platform by _Avalonia UI_. Because the view model class is independent, it can be unit tested like any other code.
+请注意，视图模型类不依赖于视图层，也不依赖于_Avalonia UI_将如何在目标平台上渲染。因为视图模型类是独立的，所以它可以像任何其他代码一样进行单元测试。
 
-When you use the MVVM pattern in practice, you will use a corresponding view model for each view, and the view model class contains all the application logic for the view.&#x20;
+当您在实践中使用MVVM模式时，您将为每个视图使用一个相应的视图模型，视图模型类包含了视图的所有应用程序逻辑。
 
-## The MVVM Model
+## MVVM模型
 
-The model is the other part of the MVVM pattern. Models are much less precisely defined in the pattern as they represent 'the rest of the architecture'. This is often data storage, or other services.&#x20;
+模型是MVVM模式的另一部分。模型在模式中没有被严格定义，因为它们代表着“架构的其余部分”。这通常是数据存储或其他服务。
 
-The important principle for you to maintain is separation. You should implement the relationship between view model and model using some form of the Dependency Injection (DI) pattern.
+对您来说，重要的原则是分离。您应该使用某种形式的依赖注入（DI）模式来实现视图模型和模型之间的关系。
 
 ## ReactiveUI
 
-There are a number of frameworks designed to help write applications using the MVVM pattern.
+有许多框架旨在帮助使用MVVM模式编写应用程序。
 
-In the pages following, you will lean about the _ReactiveUI_ framework which is one of the most popular and is supported by one of the _Avalonia UI_ packages.
+在接下来的页面中，您将了解到_ReactiveUI_框架，这是最受欢迎的框架之一，并且由一个_Avalonia UI_包支持。

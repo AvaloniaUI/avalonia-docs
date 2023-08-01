@@ -2,15 +2,15 @@
 description: CONCEPTS - Data Templates
 ---
 
-# Control Content
+# 控制内容
 
-You have probably seen what happens if you put a button control into the content zone of an _Avalonia UI_ window. &#x20;
+您可能已经看到了在将按钮控件放入_Avalonia UI_窗口的内容区域时会发生什么。
 
 :::info
-The concept of the zones of an _Avalonia UI_ control is discussed [here](../layout/layout-zones).
+关于_Avalonia UI_控件区域的概念，可以在[此处](../layout/layout-zones)找到讨论。
 :::
 
-For example:
+例如：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -24,11 +24,11 @@ For example:
 </Window>
 ```
 
-The window displays the button - in this case centred both horizontally (specified) and vertically (by default). It looks like this:
+窗口会显示一个按钮 - 在此例中水平居中（指定）和垂直居中（默认情况下）。效果如下图所示：
 
 <img src="/img/gitbook-import/assets/image (42) (1).png" alt=""/>
 
-And if you put a string into the window content zone, for example:
+如果您将一个字符串放入窗口的内容区域，例如：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -42,13 +42,13 @@ And if you put a string into the window content zone, for example:
 </Window>
 ```
 
-The window will display the string:
+窗口将显示该字符串：
 
 <img src="/img/gitbook-import/assets/image (51).png" alt=""/>
 
-But what happens if you try to display an object from a class that you have defined in the window?
+但是如果您尝试显示在窗口中定义的类的对象会发生什么呢？
 
-For example, using the class definition `Student`&#x20;
+例如，使用上面的`Student`类定义：
 
 ```csharp
 namespace MySample
@@ -61,7 +61,7 @@ namespace MySample
 }
 ```
 
-And the XML namespace `local` defined as the `Example` namespace (from above), you can define a student object in the content zone of the window; as follows:
+并且将XML命名空间`local`定义为`Example`命名空间（来自上面的代码），您可以在窗口的内容区域中定义一个学生对象，如下所示：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -72,12 +72,10 @@ And the XML namespace `local` defined as the `Example` namespace (from above), y
 </Window>
 ```
 
-But you will see only the fully-qualified class name for the student object:
+但是，您将只会看到学生对象的完全限定类名：
 
 <img src="/img/gitbook-import/assets/image (52).png" alt=""/>
 
-This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name. &#x20;
+这并不是很有帮助！这是因为_Avalonia UI_没有定义如何显示`Student`类的对象 - 它不是一个控件 - 因此它会退回到`.ToString()`方法，您所看到的只是完全限定的类名。
 
-On the next page you will see one of the ways you can specify how to display an object created from a class that you have defined (not a control or a simple string).&#x20;
-
-##
+在接下来的页面上，您将看到一种指定如何显示您定义的类的对象（不是控件或简单字符串）的方法。

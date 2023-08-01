@@ -3,60 +3,60 @@ id: file-picker-options
 title: File Picker Options
 ---
 
-# File Picker Options
+# 文件选择器选项
 
-## Common PickerOptions
+## 常见 PickerOptions
 
 ### Title
 
-Gets or sets the text that appears in the title bar of a picker.
+获取或设置出现在选择器标题栏中的文本。
 
 ### SuggestedStartLocation
 
-Gets or sets the initial location where the file open picker looks for files to present to the user.
-Can be obtained from previously picked folder or using `StorageProvider.TryGetFolderFromPathAsync` or `StorageProvider.TryGetWellKnownFolderAsync`.
+获取或设置文件打开选择器寻找文件以展示给用户的初始位置。
+可以从之前选择的文件夹中获取，或者使用 `StorageProvider.TryGetFolderFromPathAsync` 或 `StorageProvider.TryGetWellKnownFolderAsync`。
 
 :::note
-This is a suggestion for the system, that can ignore this parameter, if application doesn't have access to the folder or it doesn't exist.
+这是对系统的建议，如果应用程序无法访问文件夹或文件夹不存在，可以忽略此参数。
 :::
 
 ## FilePickerOpenOptions
 
 ### AllowMultiple
 
-Gets or sets an option indicating whether open picker allows users to select multiple files.
+获取或设置一个选项，指示打开选择器是否允许用户选择多个文件。
 
 ### FileTypeFilter
 
-Gets or sets the collection of file types that the file open picker displays.
+获取或设置文件打开选择器显示的文件类型集合。
 
 ## FilePickerSaveOptions
 
 ### SuggestedFileName
 
-Gets or sets the file name that the file save picker suggests to the user.
+获取或设置文件保存选择器建议给用户的文件名。
 
 ### DefaultExtension
 
-Gets or sets the default extension to be used to save the file.
+获取或设置用于保存文件的默认扩展名。
 
 ### FileTypeChoices
 
-Gets or sets the collection of valid file types that the user can choose to assign to a file.
+获取或设置用户可以选择为文件分配的有效文件类型集合。
 
 ### ShowOverwritePrompt
 
-Gets or sets a value indicating whether file open picker displays a warning if the user specifies the name of a file that already exists.
+获取或设置一个值，指示文件打开选择器是否在用户指定一个已经存在的文件名时显示警告。
 
 ## FolderPickerOpenOptions
 
 ### AllowMultiple
 
-Gets or sets an option indicating whether open picker allows users to select multiple folders.
+获取或设置一个选项，指示打开选择器是否允许用户选择多个文件夹。
 
-## Platform compatibility:
+## 平台兼容性：
 
-| Feature        | Managed |  Windows | macOS | Linux | Browser | Android |  iOS |
+| 功能        | 托管 |  Windows | macOS | Linux | 浏览器 | 安卓 |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
 | `Title` | ✔ | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ |
 | `SuggestedStartLocation` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
@@ -67,19 +67,19 @@ Gets or sets an option indicating whether open picker allows users to select mul
 | `FileTypeChoices` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✖ |
 | `ShowOverwritePrompt` | ✔ | ✔ | ✖ | ✔ | ✖ | ✖ | ✖ |
 
-# Defining custom file types
+# 定义自定义文件类型
 
-Avalonia has set of build in file types:
-- FilePickerFileTypes.All - all files
-- FilePickerFileTypes.TextPlain - txt files
-- FilePickerFileTypes.ImageAll - all images
-- FilePickerFileTypes.ImageJpg - jpg images
-- FilePickerFileTypes.ImagePng - png images
-- FilePickerFileTypes.Pdf - pdf images
+Avalonia 有一组内置的文件类型：
+- FilePickerFileTypes.All - 所有文件
+- FilePickerFileTypes.TextPlain - 文本文件 (txt)
+- FilePickerFileTypes.ImageAll - 所有图片
+- FilePickerFileTypes.ImageJpg - jpg 图片
+- FilePickerFileTypes.ImagePng - png 图片
+- FilePickerFileTypes.Pdf - pdf 文件
 
-However it is possible to define custom file types that can be used by the picker:
+然而，您可以定义自定义文件类型，供选择器使用：
 
-For instance, build-in ImageAll type is defined as
+例如，内置的 ImageAll 类型定义如下
 ```cs
 public static FilePickerFileType ImageAll { get; } = new("All Images")
 {
@@ -89,13 +89,13 @@ public static FilePickerFileType ImageAll { get; } = new("All Images")
 };
 ```
 
-Where each file type has following hints that are used by the different platforms:
-- `Patterns` are used by most Windows, Linux and Browser platforms, and is a basic GLOB patten that can be matched on types.
-- `AppleUniformTypeIdentifiers` is a standard identifier defined by Apple and is used on macOS and iOS platforms.
-- And `MimeTypes` is a web identfier for the files used on most of platforms, but Windows and iOS.
+每个文件类型都有以下用于不同平台的提示信息：
+- `Patterns` 用于大多数 Windows、Linux 和浏览器平台，是一个基本的 GLOB 模式，可以匹配类型。
+- `AppleUniformTypeIdentifiers` 是 Apple 定义的标准标识符，用于 macOS 和 iOS 平台。
+- `MimeTypes` 是大多数平台上用于文件的 Web 标识符，但不包括 Windows 和 iOS。
 
-In general, it is recommended to define as much as possible information in each file type. But at least `Patterns` and `MimeTypes` have to defined.
+通常，建议在每个文件类型中定义尽可能多的信息。但至少需要定义 `Patterns` 和 `MimeTypes`。
 
 :::note
-If specific hint is not known, don't set random values or "*.*" wildcard, instead keep this collection null. It will tell the platform to ignore this collection and instead try to use another one.
+如果不知道特定的提示信息，请不要设置随机值或 "*.*" 通配符，而是将该集合保持为 null。这将告诉平台忽略此集合，而是尝试使用其他集合。
 :::

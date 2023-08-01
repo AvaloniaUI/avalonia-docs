@@ -2,17 +2,16 @@
 description: CONCEPTS
 ---
 
-# Data Templates
+# 数据模板
 
-These pages describe the important concept of a **data template** in _Avalonia UI._&#x20;
+这些页面描述了 _Avalonia UI_ 中一个重要的概念——**数据模板**。
 
-A data template allows an _Avalonia UI_ control to display an object in its content zone which is not itself a control. This concept is explained using a practical code example.
+数据模板允许 _Avalonia UI_ 控件在其内容区域显示一个非控件对象。这个概念将通过一个实际的代码示例来解释。
 
 :::info
-For some information about the concept of control layout zones in _Avalonia UI_, see [here](../layout/layout-zones).&#x20;
+有关 _Avalonia UI_ 中控件布局区域概念的一些信息，请参见[这里](../layout/layout-zones)。&#x20;
 :::
 
-## Example Code
+## 示例代码
 
-To follow the example code that follows, create a new _Avalonia UI project_ using the 'Avalonia Application' template in C#.
-
+要按照以下示例代码进行操作，请使用 C# 中的 'Avalonia Application' 模板创建一个新的 **Avalonia UI 项目**。

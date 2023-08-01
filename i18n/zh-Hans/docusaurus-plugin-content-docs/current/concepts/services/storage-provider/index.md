@@ -5,106 +5,106 @@ title: StorageProvider
 
 # StorageProvider
 
-The `StorageProvider` is central to file and folder management. It provides methods for file and folder selection, checking platform capabilities, and interacting with stored bookmarks.
+`StorageProvider` 是文件和文件夹管理的核心。它提供了用于选择文件和文件夹、检查平台功能以及与存储书签交互的方法。
 
-The `StorageProvider` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../../toplevel) page:
+`StorageProvider` 可以通过 `TopLevel` 或 `Window` 的实例访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](../../toplevel) 页面：
 ```cs
 var storage = window.StorageProvider;
 ```
 
-## Properties 
+## 属性 
 
 ### CanOpen
-Indicates whether it's possible to open a `open file picker` on the current platform.
+指示当前平台是否可以打开“打开文件选择器”。
 
 ```cs
 bool CanOpen { get; }
 ```
 
 ### CanSave
-Indicates whether it's possible to open a `save file picker` on the current platform.
+指示当前平台是否可以打开“保存文件选择器”。
 
 ```cs
 bool CanSave { get; }
 ```
 
 ### CanPickFolder
-Indicates whether it's possible to open a `folder picker` on the current platform.
+指示当前平台是否可以打开“文件夹选择器”。
 
 ```cs
 bool CanPickFolder { get; }
 ```
 
-## Methods
+## 方法
 
 ### OpenFilePickerAsync
-Opens a file picker dialog.
+打开文件选择对话框。
 
 ```cs
 Task<IReadOnlyList<IStorageFile>> OpenFilePickerAsync(FilePickerOpenOptions options);
 ```
-The method returns an array of selected `IStorageFile` instances or an empty collection if the user cancels the dialog.
+该方法返回选择的 `IStorageFile` 实例数组，如果用户取消对话框，则返回空集合。
 
 ### SaveFilePickerAsync
-Opens a save file picker dialog.
+打开保存文件选择对话框。
 
 ```cs
 Task<IStorageFile?> SaveFilePickerAsync(FilePickerSaveOptions options);
 ```
-The method returns a saved `IStorageFile` instance or null if the user cancels the dialog.
+该方法返回保存的 `IStorageFile` 实例，如果用户取消对话框，则返回 null。
 
 ### OpenFolderPickerAsync
-Opens a folder picker dialog.
+打开文件夹选择对话框。
 
 ```cs
 Task<IReadOnlyList<IStorageFolder>> OpenFolderPickerAsync(FolderPickerOpenOptions options);
 ```
-The method returns an array of selected `IStorageFolder` instances or an empty collection if the user cancels the dialog.
+该方法返回选择的 `IStorageFolder` 实例数组，如果用户取消对话框，则返回空集合。
 
 ### OpenFileBookmarkAsync
-Opens a `IStorageBookmarkFile` from the bookmark ID.
+通过书签 ID 打开 `IStorageBookmarkFile`。
 
 ```cs
 Task<IStorageBookmarkFile?> OpenFileBookmarkAsync(string bookmark);
 ```
-The method returns a bookmarked file or null if the operating system denied the request.
+该方法返回书签文件，如果操作系统拒绝请求，则返回 null。
 
 ### OpenFolderBookmarkAsync
-Opens a `IStorageBookmarkFolder` from the bookmark ID.
+通过书签 ID 打开 `IStorageBookmarkFolder`。
 
 ```cs
 Task<IStorageBookmarkFolder?> OpenFolderBookmarkAsync(string bookmark);
 ```
-The method returns a bookmarked folder or null if the operating system denied the request.
+该方法返回书签文件夹，如果操作系统拒绝请求，则返回 null。
 
 ### TryGetFileFromPathAsync
-Attempts to read a file from the file system by its path.
+尝试根据文件路径从文件系统中读取文件。
 
 ```cs
 Task<IStorageFile?> TryGetFileFromPathAsync(Uri filePath);
 ```
-The method returns a file or null if it doesn't exist. The filePath parameter is expected to be an absolute path with a "file" scheme, but can be a URI with a "content" scheme on Android.
+该方法返回文件，如果文件不存在，则返回 null。filePath 参数预期是带有 "file" scheme 的绝对路径，但在 Android 上可以是带有 "content" scheme 的 URI。
 
 ### TryGetFolderFromPathAsync
-Attempts to read a folder from the file system by its path.
+尝试根据文件夹路径从文件系统中读取文件夹。
 
 ```cs
 Task<IStorageFolder?> TryGetFolderFromPathAsync(Uri folderPath);
 ```
-The method returns a folder or null if it doesn't exist. The folderPath parameter is expected to be an absolute path with a "file" scheme, but can be a URI with a "content" scheme on Android.
+该方法返回文件夹，如果文件夹不存在，则返回 null。folderPath 参数预期是带有 "file" scheme 的绝对路径，但在 Android 上可以是带有 "content" scheme 的 URI。
 
 ### TryGetWellKnownFolderAsync
-Attempts to read a folder from the file system by its well-known folder identifier.
+尝试根据知名文件夹标识符从文件系统中读取文件夹。
 
 ```cs
 Task<IStorageFolder?> TryGetWellKnownFolderAsync(WellKnownFolder wellKnownFolder);
 ```
-The method returns a folder or null if it doesn't exist.
+该方法返回文件夹，如果文件夹不存在，则返回 null。
 
 
-## Platform compatibility:
+## 平台兼容性：
 
-| Feature        | Managed |  Windows | macOS | Linux | Browser | Android |  iOS |
+| 功能        | 托管代码 |  Windows | macOS | Linux | 浏览器 | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
 | `OpenFileBookmarkAsync` | ✔* | ✔* | ✔* | ✔* | ✔ | ✔ | ✔ |
 | `OpenFolderBookmarkAsync` | ✔* | ✔* | ✔* | ✔* | ✔ | ✔ | ✔ |
@@ -115,8 +115,8 @@ The method returns a folder or null if it doesn't exist.
 | `TryGetFolderFromPathAsync` | ✔ | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ |
 | `TryGetWellKnownFolderAsync` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
-\* Bookmarks are not properly supported on desktop platforms and instead return file path instead. MacOS support is planned in order to get it work with Sandboxed Apple Store apps.
+\* 书签在桌面平台上不受支持，而是返回文件路径。计划支持 macOS，以便使其与受沙盒限制的 Apple Store 应用程序配合使用。
 
-** Managed file picker works only on desktop platforms where it's possible to open a custom window.
+** 托管文件选择器仅在可以打开自定义窗口的桌面平台上工作。
 
-*** Only Chromium based browsers have a proper support for file pickers. 
+*** 只有基于 Chromium 的浏览器对文件选择器有良好的支持。

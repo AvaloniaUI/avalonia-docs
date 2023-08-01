@@ -3,77 +3,83 @@ id: clipboard
 title: Clipboard
 ---
 
-The `Clipboard` class enables interacting with the system clipboard, providing functionality for setting and retrieving text, clearing the clipboard, handling data objects and working with different data formats. 
+`Clipboard` 类允许与系统剪贴板交互，提供设置和获取文本、清空剪贴板、处理数据对象以及使用不同数据格式的功能。
 
 :::info
-For a complete, runnable example of these concepts in action, check out [the sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ClipboardOps).
+有关这些概念实际运用的完整可运行示例，请查看[示例应用](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ClipboardOps)。
 :::
 
-The `Clipboard` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../toplevel) page:
+可以通过 `TopLevel` 或 `Window` 实例来访问 `Clipboard`。有关访问 `TopLevel` 的更多详细信息，请访问[TopLevel](../toplevel)页面：
+
 ```cs
 var clipboard = window.Clipboard;
 ```
 
-## Methods 
+## 方法
 
 ### GetTextAsync()
 
-Retrieves text from the clipboard asynchronously. The resulting value of the task is the text from the clipboard. If the clipboard doesn't contain text or is empty, the method returns `null`.
+异步从剪贴板检索文本。任务的结果值是剪贴板中的文本。如果剪贴板不包含文本或为空，则该方法返回 `null`。
 
 ```cs
 Task<string?> GetTextAsync()
 ```
 
 :::note
-Avalonia clipboard always operates with Unicode text.
+Avalonia 剪贴板始终处理 Unicode 文本。
 :::
 
 ### SetTextAsync(string? text)
-Sets the clipboard text asynchronously and flushes it immediately. This method accepts a `string?` parameter for a text that needs to be copied. If the provided text is `null`, the clipboard will be cleared.
+
+异步设置剪贴板文本，并立即清除剪贴板。该方法接受 `string?` 参数，用于复制需要的文本。如果提供的文本为 `null`，则剪贴板将被清除。
 
 ```cs
 Task SetTextAsync(string? text)
 ```
 
 :::note
-Unlikely different Win32 clipboard APIs, Avalonia clipboard always flushes data and is never delayed.
+与不同的 Win32 剪贴板 API 不同，Avalonia 剪贴板始终刷新数据，永远不会延迟。
 :::
 
 ### ClearAsync()
-Clears the clipboard asynchronously flushes it immediately.
+
+异步清除剪贴板并立即刷新。
 
 ```cs
 Task ClearAsync()
 ```
 
 ### SetDataObjectAsync(IDataObject data)
-Sets the clipboard content to the specified data object asynchronously. This method accepts an `IDataObject` parameter. The data object can contain multiple data formats.
+
+异步将剪贴板内容设置为指定的数据对象。该方法接受 `IDataObject` 参数。数据对象可以包含多种数据格式。
 
 ```cs
 Task SetDataObjectAsync(IDataObject data)
 ```
 
 :::note
-Unlikely different Win32 clipboard APIs, Avalonia clipboard always flushes data and is never delayed.
+与不同的 Win32 剪贴板 API 不同，Avalonia 剪贴板始终刷新数据，永远不会延迟。
 :::
 
 ### GetFormatsAsync()
-Retrieves the list of formats currently stored in the clipboard asynchronously. The resulting value of the task is an array of string format names.
+
+异步检索当前存储在剪贴板中的格式列表。任务的结果值是一个字符串格式名称的数组。
 
 ```cs
 Task<string[]> GetFormatsAsync()
 ```
 
 ### GetDataAsync(string format)
-Retrieves data in the specified format from the clipboard asynchronously. This method returns a `Task<object?>` that represents the operation. The resulting value of the task is the clipboard data in the specified format. If there's no data in the clipboard in the specified format, the method returns `null`.
+
+异步从剪贴板中检索指定格式的数据。该方法返回一个 `Task<object?>`，代表该操作。任务的结果值是指定格式的剪贴板数据。如果剪贴板中没有指定格式的数据，则该方法返回 `null`。
 
 ```cs
 Task<object?> GetDataAsync(string format)
 ```
 
-## Creating a DataObject to be sent to the clipboard
+## 创建要发送到剪贴板的 DataObject
 
-You can store objects on the clipboard on some platforms with different formats.
+您可以将对象存储在剪贴板上，并使用不同的格式在某些平台上进行存储。
 
 ```csharp title='C#'
 private async void CopyButton_OnClick(object? sender, RoutedEventArgs args)
@@ -85,9 +91,9 @@ private async void CopyButton_OnClick(object? sender, RoutedEventArgs args)
 }
 ```
 
-## Platform compatibility:
+## 平台兼容性：
 
-| Feature        |  Windows | macOS | Linux x11 | Browser | Android |  iOS |
+| 功能        |  Windows | macOS | Linux x11 | 浏览器 | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|
 | `GetTextAsync` | ✔ | ✔ | ✔ | ✔** | ✔ | ✔ |
 | `SetTextAsync` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
@@ -96,6 +102,6 @@ private async void CopyButton_OnClick(object? sender, RoutedEventArgs args)
 | `SetDataObjectAsync` | ✔ | ✔ | ✔ | ✖* | ✖* | ✖* |
 | `GetDataAsync` | ✔ | ✔ | ✔ | ✖* | ✖* | ✖* |
 
-\* Technically possible, but wasn't implemented yet. Contributions are welcome!
+\* 在技术上可能可行，但尚未实现。欢迎贡献！
 
-** In the Mozilla browser, the GetTextAsync method only functions after the "Paste" gesture has been triggered, typically by using Ctrl+V.
+** 在 Mozilla 浏览器中，GetTextAsync 方法仅在触发“粘贴”手势后才起作用，通常是通过使用 Ctrl+V。

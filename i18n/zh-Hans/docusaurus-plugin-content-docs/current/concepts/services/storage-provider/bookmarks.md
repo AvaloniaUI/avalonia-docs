@@ -3,20 +3,20 @@ id: bookmarks
 title: Bookmarks
 ---
 
-# Bookmarks
+# 书签
 
-Bookmarks are particularly important for maintaining access to files and folders in modern operating systems that have strict security and privacy controls. For instance, on platforms like iOS and newer versions of macOS, direct file system access is heavily restricted. Instead, applications request the user to select a file or folder through a system-provided file picker, and the operating system then gives the application a security-scoped bookmark that it can use to access that file or folder in the future.
+在现代操作系统中，书签对于保持对文件和文件夹的访问尤其重要，这些操作系统拥有严格的安全和隐私控制。例如，在iOS和较新版本的macOS这样的平台上，对直接文件系统的访问严重受限。相反，应用程序会请求用户通过系统提供的文件选择器选择一个文件或文件夹，然后操作系统会给应用程序一个安全范围内的书签，它可以用来在未来访问该文件或文件夹。
 
-In Avalonia's `StorageProvider`, these bookmarks are represented as `IStorageBookmarkFile` and `IStorageBookmarkFolder` interfaces.
+在Avalonia的`StorageProvider`中，这些书签被表示为`IStorageBookmarkFile`和`IStorageBookmarkFolder`接口。
 
-To get bookmark ID from the specific folder or file, please use `SaveBookmarkAsync` async method on storage item.
-After retriving bookmark ID, it can be saved in a local database for the futher use instead of asking user to pick a folder each time.
-You can use the `OpenFileBookmarkAsync` and `OpenFolderBookmarkAsync` methods to open a bookmarked file or folder using its bookmark ID. This will return the bookmarked file or folder, or null if the operating system denies the request.
+要从特定的文件夹或文件中获取书签ID，请使用存储项上的`SaveBookmarkAsync`异步方法。
+在检索到书签ID后，它可以被保存在本地数据库中以供进一步使用，而不是每次都要求用户选择文件夹。
+你可以使用`OpenFileBookmarkAsync`和`OpenFolderBookmarkAsync`方法通过其书签ID打开一个已标记的文件或文件夹。这将返回标记的文件或文件夹，如果操作系统拒绝请求，将返回null。
 
 :::note
-The exact behavior and capabilities can depend on the specific operating system and its security policies. For instance, on some platforms, a bookmark might become invalid if the user moves or renames the file or folder that it points to.
+确切的行为和能力可能取决于特定操作系统及其安全策略。例如，在某些平台上，如果用户移动或重命名书签指向的文件或文件夹，那么书签可能会失效。
 :::
 
 :::note
-It's not recommended to store bookmark IDs on a remote data bases, as bookmark might not be persistent and might contain sensitive file path information.
+不建议在远程数据库中存储书签ID，因为书签可能不是持久的，并且可能包含敏感的文件路径信息。
 :::
