@@ -95,5 +95,5 @@ namespace AvaloniaCCExample.CustomControls
 <img src='/img/gitbook-import/assets/image (4) (3).png' alt=''/>
 
 :::info
-有关如何创建高级自定义控件的更高级信息，请参阅[此处](../custom-controls/how-to-create-advanced-custom-controls.md)。
+有关如何创建自定义控件的更高级信息，请参阅[此处](../custom-controls/how-to-create-advanced-custom-controls.md)。
 :::

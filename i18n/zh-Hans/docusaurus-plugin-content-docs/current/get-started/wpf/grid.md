@@ -1,10 +1,10 @@
 # Grid
 
-Column and row definitions can be specified in Avalonia using strings, avoiding the clunky syntax in WPF:
+在Avalonia中，可以使用字符串来指定列和行定义，避免了WPF中笨重的语法：
 
 ```markup
 <Grid ColumnDefinitions="Auto,*,32" RowDefinitions="*,Auto">
 ```
 
-A common use of `Grid` in WPF is to stack two controls on top of each other. For this purpose in Avalonia you can just use a `Panel` which is more lightweight than `Grid`.
+在WPF中，`Grid`的一个常见用法是将两个控件堆叠在一起。在Avalonia中，为此，您可以直接使用`Panel`，它比`Grid`更轻量级。
 

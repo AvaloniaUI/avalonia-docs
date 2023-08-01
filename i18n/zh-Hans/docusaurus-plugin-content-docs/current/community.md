@@ -1,23 +1,23 @@
-# Community Support
+# 社区支持
 
 ## Telegram
 
-You can also access the Avalonia chat using the _Telegram_ app (recommended for the best experience).
+您也可以使用 Telegram 应用程序访问 Avalonia 聊天室（推荐使用以获得最佳体验）。
 
 :::info
-You can access the _Telegram_ chat [here](https://t.me/Avalonia).
+您可以在[这里](https://t.me/Avalonia)访问 Telegram 聊天室。
 :::
 
 ## Gitter
 
 <img src="/img/gitbook-import/assets/image (38) (1) (1).png" alt="" data-size="original"/>
 
-We run a chat in English on the Gitter platform.
+我们在 Gitter 平台上运营一个英语聊天室。
 
 <img src="/img/gitbook-import/assets/image (37) (1) (1).png" alt=""/>
 
 :::info
-Access the chat in your browser using Gitter [here](https://gitter.im/AvaloniaUI/Avalonia).
+您可以在[这里](https://gitter.im/AvaloniaUI/Avalonia)使用 Gitter 在浏览器中访问聊天室。
 :::
 
 <img src="/img/gitbook-import/assets/image (7) (1) (1).png" alt=""/>

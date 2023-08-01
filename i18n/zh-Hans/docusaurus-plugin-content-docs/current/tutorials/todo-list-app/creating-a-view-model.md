@@ -2,21 +2,21 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Create a View Model
+# 创建视图模型
 
-On this page, you will learn how to create a view model to provide the application logic for your app. This is the final part of the MVVM pattern, and it will make use of the _ReactiveUI_ framework.
+在本页中，您将学习如何创建一个视图模型，为应用程序提供应用程序逻辑。这是 MVVM 模式的最后一部分，并且它将使用 _ReactiveUI_ 框架。
 
 :::info
-To review the concepts behind MVVM pattern programming using ReactiveUI, see [here](../../concepts/reactiveui/).
+要查看使用 ReactiveUI 进行 MVVM 模式编程的背后概念，请参阅[这里](../../concepts/reactiveui/)。
 :::
 
-The purpose of the view model is organise data and actions for the application in a way that suits the views. For reasons that will become clear in a future step of this tutorial, you will adopt the convention of naming a view model after the view that it supports in this way.
+视图模型的目的是以适合视图的方式组织数据和操作应用程序。由于在本教程的后续步骤中将变得清楚的原因，您将采用按照此方式支持视图的视图模型的命名约定。
 
-&#x20;Follow this procedure to add the to do list view model to your app:
+按照以下步骤将待办事项列表视图模型添加到应用程序中：
 
-- Locate the **ViewModels** folder and add a new class.
-- Name the new class 'ToDoListViewModel'.
-- Add the following code:
+- 定位 **ViewModels** 文件夹，并添加一个新的类。
+- 将新类命名为“ToDoListViewModel”。
+- 添加以下代码：
 
 ```csharp
 using System.Collections.Generic;
@@ -37,34 +37,34 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Your view model is very simple at this stage. Its constructor takes a collection of to do item data models and keeps them in an observable collection . This is publicly available through the `ListItems` property here on the view model.
+在目前阶段，您的视图模型非常简单。其构造函数接收一个待办事项数据模型的集合，并将其保存在可观察的集合中。通过视图模型上的 `ListItems` 属性，该集合对外可用。
 
-The view model derives from the base class  `ViewModelBase` that was created by the solution template. More about this later in the tutorial.&#x20;
+视图模型从由解决方案模板创建的基类 `ViewModelBase` 派生。在教程的后面部分会详细介绍它。
 
-## Separation in MVVM
+## MVVM 中的分离
 
-You have seen that the to do list view model has a constructor that requires a collection of to do item data models to be provided as the parameter.  In turn this collection will be retrieved from the fake data service (model) at some point.&#x20;
+您已经看到待办事项列表视图模型具有一个需要提供待办事项数据模型集合的构造函数参数。反过来，此集合将在某个时候从虚拟数据服务（模型）中检索。
 
-Before you start to populate the view model with data, have another look at the MVVM pattern:
+在开始填充视图模型数据之前，再次查看 MVVM 模式：
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (3) (1) (2).png" alt=""/>
 </div>
 
-The stated purpose of the pattern is to separate the view and view model so that, for example, the view model may be independently tested. This removes the dependency between the view and view model.
+该模式的声明目的是将视图和视图模型分开，以便例如可以独立测试视图模型。这消除了视图和视图模型之间的依赖关系。
 
-In a real application, you would aim to ensure separation between the view model and the model, for similar reasons. However this is beyond the scope of this tutorial, so here you will make the view model dependent on the model.&#x20;
+在真实的应用程序中，您会努力确保视图模型和模型之间的分离，原因类似。但是，这超出了本教程的范围，因此在这里，您将使视图模型依赖于模型。
 
 :::info
-Separation of the view model and the model in the MVVM pattern can be achieved by Dependency Injection (DI). For guidance on how to use DI with MVVM and _Avalonia UI_, see [here](../../guides/implementation-guides/how-to-implement-dependency-injection.md).
+可以通过依赖注入（DI）实现 MVVM 模式中视图模型和模型的分离。有关如何在 MVVM 和 Avalonia UI 中使用 DI 的指导，请参阅[这里](../../guides/implementation-guides/how-to-implement-dependency-injection.md).
 :::
 
-## View Model to Model Dependency
+## 视图模型对模型的依赖
 
-Follow this procedure to make the main window view model depend on the model, that is dependent on the to do list data service:
+按照以下步骤，使主窗口视图模型依赖于模型，即依赖于待办事项列表数据服务：
 
-- Locate the **MainWindowViewModel** class file, in the **ViewModels** folder.&#x20;
-- Alter the code as follows:
+- 找到 **ViewModels** 文件夹中的 **MainWindowViewModel** 类文件。
+- 将代码更改如下：
 
 ```csharp
 using ToDoList.Services;
@@ -73,7 +73,7 @@ namespace ToDoList.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        //this has a dependency on the ToDoListService
+        // 这个视图模型依赖于 ToDoListService
 
         public MainWindowViewModel()
         {
@@ -86,4 +86,4 @@ namespace ToDoList.ViewModels
 }
 ```
 
-On the next page you will learn how to connect the views to the view models using data binding.
+在下一页中，您将学习如何使用数据绑定将视图连接到视图模型。

@@ -5,13 +5,13 @@ title: Code-behind
 
 # Code-behind
 
-In addition to a XAML file, most Avalonia controls also have a _code-behind_ file that is commonly written in C#. The code-behind file by convention has the file extension `.axaml.cs` and is often displayed nested below the XAML file in your IDE.
+除了XAML文件外，大多数Avalonia控件还具有常常用C#编写的 _code-behind_ 文件。代码后台文件通常具有`.axaml.cs`文件扩展名，并且通常在IDE中显示在XAML文件的下一级。
 
-For instance, in the Visual Studio solution explorer, you can see a `MainWindow.axaml` file along with its code-behind file `MainWindow.axaml.cs`:
+例如，在Visual Studio的解决方案资源管理器中，您可以看到一个`MainWindow.axaml`文件以及它的code-behind文件`MainWindow.axaml.cs`：
 
 ![](/img/basics/user-interface/code-behind/vs-solution-explorer.png)
 
-The code-behind file contains a class that shares the same name as the XAML file. For example:
+code-behind文件包含一个与XAML文件同名的类。例如：
 
 ```csharp title='MainWindow.axaml.cs'
 using Avalonia.Controls;
@@ -28,7 +28,7 @@ namespace AvaloniaApplication1.Views
 }
 ```
 
-Notice that the class name matches the name of the XAML file, and is also referenced in the `x:Class` attribute of the window element.
+请注意，类名与XAML文件的名称匹配，并且在`Window`元素的`x:Class`属性中也有引用。
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
@@ -40,18 +40,18 @@ Notice that the class name matches the name of the XAML file, and is also refere
 ```
 
 :::tip
-If you make any changes to the class name in code, or its namespace, ensure that the  `x:Class` attribute always matches, or you will get an error.
+如果在代码中对类名或其命名空间进行了任何更改，请确保`x:Class`属性始终匹配，否则会出现错误。
 :::
 
-When the code-behind file is first added, it has only a constructor, which calls the  `InitializeComponent()` method. This method call is required to load the XAML at runtime.
+当首次添加code-behind文件时，它只有一个构造函数，该构造函数调用`InitializeComponent()`方法。调用此方法在运行时加载XAML是必需的。
 
-## Locating Controls
+## 定位控件
 
-When working with code-behind, you often need to access the controls defined in XAML.
+在使用code-behind时，您通常需要访问在XAML中定义的控件。
 
-To do this, you first need to obtain a reference to the desired control. Give the control a name using the `Name` (or `x:Name`) attribute in XAML.
+为此，您需要通过在XAML中使用`Name`（或`x:Name`）属性为所需的控件指定名称。
 
-Here's an example of a XAML file with a named button:
+下面是一个具有命名按钮的XAML文件示例：
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
@@ -62,7 +62,7 @@ Here's an example of a XAML file with a named button:
 </Window>
 ```
 
-You can now access the button via an auto-generated `greetingButton` field from the code-behind:
+现在，您可以通过code-behind中自动生成的`greetingButton`字段访问该按钮：
 
 ```csharp title='MainWindow.axaml.cs'
 using Avalonia.Controls;
@@ -81,19 +81,19 @@ namespace AvaloniaApplication1.Views
 }
 ```
 
-## Set Properties
+## 设置属性
 
-With the control reference available in the code-behind, you can set properties. For example, you can change the background property like this:
+通过在code-behind中提供控件引用，您可以设置属性。例如，您可以像这样更改背景属性：
 
 ```csharp
 greetingButton.Background = Brushes.Blue;
 ```
 
-## Handling Events
+## 处理事件
 
-Any useful application will require you to implement some action! When using the code-behind pattern, you write event handlers in the code-behind file.
+任何有用的应用程序都需要您执行一些操作！当使用代码后台模式时，您需要在code-behind文件中编写事件处理程序。
 
-Event handlers are written as methods in the code-behind file, and then referenced in the XAML using an event attribute. For example, to add a handler for a button click event:
+事件处理程序编写为code-behind文件中的方法，然后使用事件属性在XAML中引用它们。例如，要为按钮点击事件添加处理程序：
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
@@ -118,8 +118,8 @@ public partial class MainWindow : Window
 }
 ```
 
-Note that many Avalonia event handlers pass a special argument of class `RoutedEventArgs`. This includes information about how the event has been generated and propagated.
+请注意，许多Avalonia事件处理程序传递了一个名为`RoutedEventArgs`的特殊参数。它包含有关事件的生成和传播方式的信息。
 
 :::info
-For more information on the concepts of event routing, see [here](../../concepts/input/routed-events.md).
+有关事件路由概念的更多信息，请参见[这里](../../concepts/input/routed-events.md).
 :::

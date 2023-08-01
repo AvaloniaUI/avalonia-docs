@@ -2,65 +2,65 @@
 description: CONCEPTS
 ---
 
-# Layout
+# 布局
 
-## Panels
+## 面板（Panel）
 
-Avalonia includes a group of elements that derive from `Panel`. These `Panel` elements enable many complex layouts. For example, stacking elements can easily be achieved by using the `StackPanel` element, while more complex and free flowing layouts are possible by using a `Canvas`.
+Avalonia 包含一组派生自 `Panel` 的元素。这些 `Panel` 元素可实现许多复杂的布局。例如，可以使用 `StackPanel` 元素轻松地堆叠元素，而使用 `Canvas` 则可以实现更复杂和自由流动的布局。
 
-The following table summarizes the available `Panel` controls:
+以下表格总结了可用的 `Panel` 控件：
 
-| Name            | Description                                                                                                                                                                                                                                                               |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Panel`         | Lays out all children to fill the bounds of the `Panel`                                                                                                                                                                                                                   |
-| `Canvas`        | Defines an area within which you can explicitly position child elements by coordinates relative to the Canvas area.                                                                                                                                                       |
-| `DockPanel`     | Defines an area within which you can arrange child elements either horizontally or vertically, relative to each other.                                                                                                                                                    |
-| `Grid`          | Defines a flexible grid area that consists of columns and rows.                                                                                                                                                                                                           |
-| `RelativePanel` | Arranges child elements relative to other elements or the panel itself.                                                                                                                                                                                                   |
-| `StackPanel`    | Arranges child elements into a single line that can be oriented horizontally or vertically.                                                                                                                                                                               |
-| `WrapPanel`     | Positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. Subsequent ordering occurs sequentially from top to bottom or right to left, depending on the value of the Orientation property. |
+| 名称              | 描述                                                                              |
+|-----------------|---------------------------------------------------------------------------------|
+| `Panel`         | 将所有子元素布局以填充 `Panel` 的边界                                                         |
+| `Canvas`        | 定义一个区域，您可以在其中使用相对于 `Canvas` 区域的坐标明确定位子元素                                        |
+| `DockPanel`     | 定义一个区域，其中您可以相对于彼此将子元素水平或垂直地排列                                                   |
+| `Grid`          | 定义由列和行组成的灵活网格区域                                                                 |
+| `RelativePanel` | 将子元素相对于其他元素或面板本身排列                                                              |
+| `StackPanel`    | 将子元素排列成一行，可以是水平或垂直方向                                                            |
+| `WrapPanel`     | 将子元素按从左到右的顺序放置，当内容到达容器框的边缘时，将在下一行中断。后续排序顺序是顺序从上到下或从右到左，这取决于 `Orientation` 属性的值。 |
 
-In WPF, `Panel` is an abstract class and laying out multiple controls to fill the available space is usually done with a `Grid` with no rows/columns. In Avalonia `Panel` is a usable control that has the same layout behavior as a `Grid` with no rows/columns, but with a lighter runtime footprint.
+在 WPF 中，`Panel` 是一个抽象类，通常使用没有行/列的 `Grid` 来布局多个控件以填充可用空间。在 Avalonia 中，`Panel` 是一个可用的控件，其布局行为与没有行/列的 `Grid` 相同，但运行时占用更少的资源。
 
-## Element Bounding Boxes
+## 元素边界框
 
-When thinking about layout in Avalonia, it is important to understand the bounding box that surrounds all elements. Each `Control` consumed by the layout system can be thought of as a rectangle that is slotted into the layout. The `Bounds` property returns the boundaries of an element's layout allocation. The size of the rectangle is determined by calculating the available screen space, the size of any constraints, layout-specific properties (such as margin and padding), and the individual behavior of the parent `Panel` element. Processing this data, the layout system is able to calculate the position of all the children of a particular `Panel`. It is important to remember that sizing characteristics defined on the parent element, such as a `Border`, affect its children.
+在考虑 Avalonia 中的布局时，了解包围所有元素的边界框很重要。布局系统处理的每个 `Control` 可以看作是一个矩形，该矩形被插入布局。`Bounds` 属性返回元素布局分配的边界。矩形的大小通过计算可用的屏幕空间、任何约束的大小、布局特定属性（如 margin 和 padding）以及父 `Panel` 元素的个体行为来确定。处理这些数据，布局系统能够计算特定 `Panel` 的所有子元素的位置。重要的是要记住，定义在父元素上的大小特性，例如 `Border` 上的特性，会影响其子元素。
 
-## The Layout System
+## 布局系统
 
-At its simplest, layout is a recursive system that leads to an element being sized, positioned, and drawn. More specifically, layout describes the process of measuring and arranging the members of a `Panel` element's `Children` collection. Layout is an intensive process. The larger the `Children` collection, the greater the number of calculations that must be made. Complexity can also be introduced based on the layout behavior defined by the `Panel` element that owns the collection. A relatively simple `Panel`, such as `Canvas`, can have significantly better performance than a more complex `Panel`, such as `Grid`.
+简单来说，布局是一种递归系统，导致元素被大小化、定位和绘制。更具体地说，布局描述了对 `Panel` 元素的 `Children` 集合的成员进行测量和排列的过程。布局是一个密集的过程。`Children` 集合越大，必须进行的计算越多。还可以根据拥有集合的 `Panel` 元素定义的布局行为引入复杂性。一个相对简单的 `Panel`，例如 `Canvas`，可以比一个更复杂的 `Panel`，例如 `Grid`，具有更好的性能。
 
-Each time that a child control changes its position, it has the potential to trigger a new pass by the layout system. Therefore, it is important to understand the events that can invoke the layout system, as unnecessary invocation can lead to poor application performance. The following describes the process that occurs when the layout system is invoked.
+每次子控件更改其位置时，它都有可能触发布局系统的新传递。因此，了解可以调用布局系统的事件很重要，因为不必要的调用可能会导致应用程序性能下降。下面描述了在调用布局系统时发生的过程。
 
-1. A child UIElement begins the layout process by first having its core properties measured.
-2. Sizing properties defined on `Control` are evaluated, such as `Width`, `Height`, and `Margin`.
-3. `Panel`-specific logic is applied, such as `Dock` direction or stacking `Orientation`.
-4. Content is arranged after all children have been measured.
-5. The `Children` collection is drawn on the screen.
-6. The process is invoked again if additional `Children` are added to the collection
+1. 子 UIElement 通过首先测量其核心属性来开始布局过程。
+2. 评估在 `Control` 上定义的大小属性，例如 `Width`、`Height` 和 `Margin`。
+3. 应用 `Panel` 特定的逻辑，例如 `Dock` 方向或堆叠的 `Orientation`。
+4. 在所有子元素进行测量后，进行内容的排列。
+5. 在屏幕上绘制 `Children` 集合。
+6. 如果向集合中添加了其他 `Children`，则再次调用此过程。
 
-This process and how it is invoked are defined in more detail in the following sections.
+此过程及其调用方式在以下部分中有更详细的定义。
 
-## Measuring and Arranging Children
+## 测量和排列子元素
 
-The layout system completes two passes for each member of the `Children` collection, a measure pass and an arrange pass. Each child `Panel` provides its own `MeasureOverride` and `ArrangeOverride` methods to achieve its own specific layout behavior.
+布局系统对 `Children` 集合的每个成员完成两个传递：测量传递和排列传递。每个子 `Panel` 提供其自己的 `MeasureOverride` 和 `ArrangeOverride` 方法，以实现其自己的特定布局行为。
 
-During the measure pass, each member of the `Children` collection is evaluated. The process begins with a call to the `Measure` method. This method is called within the implementation of the parent `Panel` element, and does not have to be called explicitly for layout to occur.
+在测量传递期间，对 `Children` 集合的每个成员进行评估。该过程从调用 `Measure` 方法开始。此方法在父 `Panel` 元素的实现中调用，不必显式调用以进行布局。
 
-First, native size properties of the `Visual` such as `Clip` and `IsVisible` are evaluated. This generates a constraint that is passed to `MeasureCore`.
+首先，评估 `Visual` 的本机大小属性，例如 `Clip` 和 `IsVisible`。这将生成传递给 `MeasureCore` 的约束。
 
-First, framework properties which affects the value of the constraint are processed. These properties generally describe the sizing characteristics of the underlying `Control`, such as its `Height`, `Width` and `Margin`. Each of these properties can change the space that is necessary to display the element. `MeasureOverride` is then called with the constraint as a parameter.
+然后，处理影响约束值的框架属性。这些属性通常描述底层 `Control` 的大小特性，例如其 `Height`、`Width` 和 `Margin`。每个这些属性都可以改变显示元素所需的空间。然后，使用约束调用 `MeasureOverride`。
 
-Because `Bounds` is a calculated value, you should be aware that there could be multiple or incremental reported changes to it as a result of various operations by the layout system. The layout system may be calculating required measure space for child elements, constraints by the parent element, and so on.
+由于 `Bounds` 是计算值，因此您应该注意，由于布局系统的各种操作，它可能会发生多次或增量的报告更改。布局系统可能正在为子元素计算所需的测量空间、父元素的约束等。
 
-The ultimate goal of the measure pass is for the child to determine its `DesiredSize`, which occurs during the `MeasureCore` call. The `DesiredSize` value is stored by `Measure` for use during the content arrange pass.
+测量传递的最终目标是让子元素确定其 `DesiredSize`，这在 `MeasureCore` 调用期间发生。`Measure` 将 `DesiredSize` 值存储以在内容排列传递中使用。
 
-The arrange pass begins with a call to the `Arrange` method. During the arrange pass, the parent `Panel` element generates a rectangle that represents the bounds of the child. This value is passed to the `ArrangeCore` method for processing.
+排列传递从调用 `Arrange` 方法开始。在排列传递期间，父 `Panel` 元素生成表示子元素边界的矩形。该值传递给 `ArrangeCore` 方法进行处理。
 
-The `ArrangeCore` method evaluates the `DesiredSize` of the child and evaluates any additional margins that may affect the rendered size of the element. `ArrangeCore` generates an arrange size, which is passed to the `ArrangeOverride` method of the `Panel` as a parameter. `ArrangeOverride` generates the finalSize of the child. Finally, the `ArrangeCore` method does a final evaluation of offset properties, such as margin and alignment, and puts the child within its layout slot. The child does not have to (and frequently does not) fill the entire allocated space. Control is then returned to the parent `Panel` and the layout process is complete.
+`ArrangeCore` 方法评估子元素的 `DesiredSize`，并评估任何可能影响元素渲染大小的附加 `margin`。`ArrangeCore` 生成一个排列大小，将其作为参数传递给 `Panel` 的 `ArrangeOverride` 方法。`ArrangeOverride` 生成子元素的 `finalSize`。最后，`ArrangeCore` 方法对边距和对齐等偏移属性进行最后评估，并将子元素放置在其布局插槽中。子元素不必（也经常不会）填充整个分配的空间。然后，将控件返回给父 `Panel`，布局过程完成。
 
-## In This Section
+## 本节内容
 
-* [Panels Overview](panels-overview.md)
-* [Alignment, Margins and Padding](alignment-margins-and-padding.md)
-* [Create a Custom Panel](../../../guides/custom-controls/create-a-custom-panel.md)
+* [面板概述](panels-overview.md)
+* [Alignment、Margin 和 Padding](alignment-margins-and-padding.md)
+* [创建自定义面板](../../../guides/custom-controls/create-a-custom-panel.md)

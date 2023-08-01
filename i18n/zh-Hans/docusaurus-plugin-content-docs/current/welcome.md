@@ -6,82 +6,82 @@ title: 欢迎
 欢迎阅读 Avalonia 文档
 
 ```info
-Avalonia v11 is a release candidate. 
+Avalonia v11 是一个发布候选版本。
 
-We expect to go GA in early July 2023.
+我们预计在2023年7月初正式发布GA版本。
 ```
 
-## Overview 
-Avalonia is a powerful framework that enables developers to create cross-platform application using .NET. It uses its own rendering engine to draw UI controls, ensuring consistent appearance and behavior across various platforms, including Windows, macOS, Linux, Android, iOS and WebAssembly. This means that developers can share their UI code and maintain a uniform look and feel regardless of the target platform.
+## 概述 
+Avalonia是一个强大的框架，使开发人员能够使用.NET创建跨平台应用程序。它使用自己的渲染引擎绘制UI控件，确保在Windows、macOS、Linux、Android、iOS和WebAssembly等不同平台上具有一致的外观和行为。这意味着开发人员可以共享他们的UI代码，并在不同的目标平台上保持统一的外观和感觉。
 
-Applications built with Avalonia are written in C# or F#, which makes it easy to rapidly prototype applications that can develop over time into complex systems. Unlike other toolkits that might be restricted by limited APIs, or poor performance, Avalonia applications have the advantage of full access to the platform's capabilities and deliver incredible performance, thanks to the compositional renderer. 
+使用Avalonia构建的应用程序使用C#或F#编写，这使得快速原型设计应用程序并随着时间的推移发展成复杂系统变得容易。与其他可能受限于有限API或性能较差的工具包不同，Avalonia应用程序拥有访问平台能力的优势，并且由于组合式渲染器的存在，具备出色的性能。
 
 
-As Avalonia applications are cross-platform applications, they are architected similarly to other traditional cross-platform applications. The most common approach is to create a core project that houses the shared code, and then develop platform-specific projects that will consume this shared code.
+由于Avalonia应用程序是跨平台的应用程序，因此其架构类似于其他传统的跨平台应用程序。最常见的方法是创建一个核心项目，其中包含共享代码，然后开发特定于平台的项目来使用这些共享代码。
 
-Avalonia offers two techniques to create user interfaces. The first one is to use code to build UI views leveraging the extensive API provided by Avalonia. Alternatively, developers can utilize the Extensible Application Markup Language (XAML), a declarative markup language that allows developers to define user interfaces. In this approach, the user interface structure is described in a XAML file, while the runtime behavior is defined in a separate code-behind file. To learn more about XAML, refer to [Avalonia XAML](basics/user-interface/introduction-to-xaml).
+Avalonia提供了两种技术来创建用户界面。第一种方法是使用代码构建UI视图，利用Avalonia提供的广泛API。或者，开发人员可以利用扩展性应用程序标记语言（XAML），这是一种声明性标记语言，允许开发人员定义用户界面。在这种方法中，用户界面结构描述在XAML文件中，而运行时行为则在单独的代码后端文件中定义。有关XAML的更多信息，请参阅 [Avalonia XAML](basics/user-interface/introduction-to-xaml).
 
-## Get Started
+## 开始使用
 
-Get started right away even if you are completely new to Avalonia using a simple step-by-step tutorial, with introductions to the basic concepts behind the framework.
+即使您对Avalonia完全不熟悉，也可以立即开始使用简单的逐步教程，它会介绍框架背后的基本概念。
 
 :::info
-Get started [here](get-started).
+从 [这里](get-started) 开始。
 :::
 
-## Continue Your Learning
+## 继续学习
 
-Learn the basic concepts of Avalonia.
+了解Avalonia的基本概念。
 
 :::info
-Get started [here](basics).
+从 [这里](basics) 开始。
 :::
 
-### How-To Guides
+### 操作指南
 
-Our guides offer practical implementation advice, often as step-by-step procedures. This section is organised by task.
+指南提供实用的实现建议，通常以逐步过程展示。本节按任务编排。
 
 :::info
-Get the guides for practical advice [here](guides).
+从 [这里](guides) 获取实用建议的指南。
 :::
-### Advanced Concepts
+### 高级概念
 
-Read this section to expand your knowledge of the concepts used by Avalonia. This section is organised by subject.
-
-:::info
-Explore the advanced Avalonia concepts [here](concepts).
-:::
-
-## Coming from WPF?
-
-We have specific guidance and some detailed reference material for developers who are converting applications from WPF (Windows Presentation Foundation).
+阅读本节以扩展对Avalonia使用的概念的了解。本节按主题编排。
 
 :::info
-See our WPF migration guide [here](get-started/wpf).
+从 [这里](concepts) 探索高级Avalonia概念。
 :::
 
-## Consult Our Reference
+## 从WPF迁移？
+
+我们为从WPF（Windows Presentation Foundation）转换应用程序的开发人员提供了特定的指导和一些详细的参考资料。
 
 :::info
-See our reference section [here](reference).
+从 [这里](get-started/wpf) 查看WPF迁移指南。
 :::
 
-## Getting Help
-
-If you encounter any issues or bugs with _Avalonia_, please open a new issue on _GitHub_.
+## 查阅参考资料
 
 :::info
-Access the _Avalonia_ _GitHub_ [here](https://github.com/AvaloniaUI/Avalonia).
+从 [这里](reference) 查看我们的参考文档部分。
 :::
 
-We have an active developer community on _Gitter_ and _Telegram_ that can often help.
+## 获取帮助
+
+如果您在使用 _Avalonia_ 时遇到任何问题或错误，请在 _GitHub_ 上打开新的议题。
 
 :::info
-Connect to community support using the details [here](community.md).
+从 [这里](https://github.com/AvaloniaUI/Avalonia) 访问 _Avalonia_ _GitHub_。
 :::
 
-In addition to community support, we offer a range of commercial support plans that provide priority assistance from the core contributors.
+我们在 _Gitter_ 和 _Telegram_ 上有一个活跃的开发者社区，通常可以提供帮助。
 
 :::info
-To learn more about commercial support, see our website page [here](https://avaloniaui.net/Support).
+从 [这里](community.md) 连接到社区支持。
+:::
+
+除了社区支持，我们还提供一系列商业支持计划，为核心贡献者提供优先帮助。
+
+:::info
+要了解更多关于商业支持的信息，请从 [这里](https://avaloniaui.net/Support) 参阅我们网站上的页面。
 :::

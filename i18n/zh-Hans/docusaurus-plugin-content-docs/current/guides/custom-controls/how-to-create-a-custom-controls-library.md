@@ -86,7 +86,7 @@ namespace CCLibrary
 
 ## XML命名空间定义
 
-当您在_Avalonia UI_的XAML文件中添加对控件库的引用时，您可能希望使用URL标识格式。例如：&#x20;
+当您在_Avalonia UI_的XAML文件中添加对控件库的引用时，您可能希望使用URL标识格式。例如：
 
 ```xml
 xmlns:cc="https://my.controls.url"
@@ -95,14 +95,14 @@ xmlns:cc="https://my.controls.url"
 这是因为控件库中存在XML命名空间定义。这些定义将URL映射到代码命名空间，并位于项目的`Properties/AssemblyInfo.cs`文件中。例如：&#x20;
 
 ```csharp
-[assembly: XmlnsDefinition("https://github.com/avaloniaui," "Avalonia")]
+[assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
 ```
 
 :::info
-您可以在_Avalonia UI_内置控件的源代码中查看此内容[此处](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs)。&#x20;
+您可以在_Avalonia UI_内置控件的源代码中查看此内容[此处](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs)。
 :::
 
-### 常见的命名空间定义&#x20;
+### 常见的命名空间定义
 
 您还可以使一个URL映射到控件库中的多个命名空间。只需添加多个使用相同URL的XML命名空间定义，但映射到不同的代码命名空间，如下所示：&#x20;
 

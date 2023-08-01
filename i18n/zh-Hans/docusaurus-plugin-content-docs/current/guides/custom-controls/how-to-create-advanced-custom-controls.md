@@ -18,7 +18,7 @@ title: 如何创建高级自定义控件
 
 > 一个样式化属性类似于其他XAML框架中的`DependencyProperty`。
 
-> 属性的命名约定及其对应的AvaloniaProperty字段的命名是重要的。字段的名称始终是属性的名称，后面附加了"Property"后缀。
+> 属性的命名约定及其对应的`AvaloniaProperty`字段的命名是重要的。字段的名称始终是属性的名称，后面附加了`Property`后缀。
 
 ### 在另一个类上使用`StyledProperty`
 
@@ -83,7 +83,7 @@ public static void SetColumn(Control element, int value)
 
 顾名思义，`RegisterDirect`不仅用于注册只读属性。您还可以将一个_setter_传递给`RegisterDirect`，将标准的C#属性公开为Avalonia属性。
 
-使用`AvaloniaProperty.Register`注册的`StyledProperty`维护了一个优先级列表，其中包含允许样式工作的值和绑定。然而，对于许多属性来说，这是不必要的，比如`ItemsControl.Items` - 它永远不会被样式化，使用样式化属性的开销是不必要的。
+使用`AvaloniaProperty.Register`注册的`StyledProperty`维护了一个优先级列表，其中包含允许样式工作的值和绑定。然而，对于许多属性来说，这是不必要的，比如`ItemsControl.Items`——它永远不会被样式化，使用样式化属性的开销是不必要的。
 
 以下是`ItemsControl.Items`的注册方式：
 

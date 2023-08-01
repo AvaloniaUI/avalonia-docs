@@ -2,19 +2,19 @@
 description: REFERENCE - WPF Conversion
 ---
 
-# WPF and UWP Comparison
+# WPF与UWP对比
 
-Originally based on [UWPvsWPF.md](https://github.com/robloo/PublicDocs/blob/master/UWPvsWPF.md) with Avalonia-specific changes.
+本文档最初基于[UWPvsWPF.md](https://github.com/robloo/PublicDocs/blob/master/UWPvsWPF.md)进行了Avalonia特定的修改。
 
-This document is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). For the full text of this license see: [https://creativecommons.org/licenses/by-sa/4.0/legalcode](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+该文档采用[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)许可进行授权。有关该许可的完整文本，请参阅：https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
-This section lists the main differences (primarily from a XAML viewpoint) between Avalonia, UWP and WPF.
+本节列出了Avalonia、UWP和WPF之间的主要差异（主要从XAML视角来看）。
 
-Legend:
+图例：
 
-* ✔ Indicates the platform (defined by the Avalonia, WPF or UWP column) has the feature
-* ✖ Indicates the feature is generally missing in the platform
-* ⚡ Indicates the feature is only partially implemented compared to other platforms
+* ✔ 表示该特性在该平台（由Avalonia、WPF或UWP列）上可用
+* ✖ 表示该特性在该平台上通常缺失
+* ⚡ 表示与其他平台相比，该特性只部分实现了
 
 ## Markup Extensions
 

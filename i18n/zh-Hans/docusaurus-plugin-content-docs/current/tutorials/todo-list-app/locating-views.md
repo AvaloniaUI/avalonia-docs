@@ -2,11 +2,11 @@
 description: TUTORIALS - To Do List App
 ---
 
-# The View Locator
+# 视图定位器
 
-On this page you will learn how the view locator class that the solution template added to your project is being used. You will see how this implements a 'convention over configuration' paradigm inside the content zone of your main window.
+在本页面中，您将学习到解决方案模板向您的项目添加的视图定位器类是如何使用的。您将看到这如何在主窗口的内容区域内实现“约定优于配置”的范例。
 
-To help learn how it works, take some time to examine the view locator class:&#x20;
+为了帮助您了解其工作原理，请花些时间查看视图定位器类：
 
 ```csharp
 using Avalonia.Controls;
@@ -41,12 +41,12 @@ namespace ToDoList
 }
 ```
 
-The view locator class defines a data template in code which takes a view model and can return a corresponding view. It works by defining two methods:
+视图定位器类在代码中定义了一个数据模板，该模板接受一个视图模型并返回对应的视图。它通过定义两个方法来实现：
 
-* `Match(object data)` looks at the data and checks that it inherits from the  `ViewModelBase` class - as both your view models do! If this check passes, then the `Build` method is called:&#x20;
-* `Build(object data)` takes the fully qualified name of the view model type and replaces the string `"ViewModel"` with the string `"View"`. It then tries to create the view type, and if that is successful returns it.
+* `Match(object data)` 查看数据并检查它是否继承自 `ViewModelBase` 类 - 正如您的视图模型所做的！如果此检查通过，则调用 `Build` 方法：
+* `Build(object data)` 接受视图模型类型的完全限定名称，并将字符串 `"ViewModel"` 替换为字符串 `"View"`。然后，它尝试创建视图类型，如果成功，返回该视图。
 
-An instance of `ViewLocator` is present in the **App.axaml** file in the app project (it was added by the solution template). It should look like this:&#x20;
+视图定位器的一个实例存在于应用程序项目的 **App.axaml** 文件中（它由解决方案模板添加）。它应该如下所示：
 
 ```markup
 <Application xmlns="https://github.com/avaloniaui"
@@ -66,25 +66,25 @@ An instance of `ViewLocator` is present in the **App.axaml** file in the app pro
 </Application>
 ```
 
-In your to do list app, the main window has had its content set to an object that is not a built-in control, user control or custom control. So _Avalonia UI_ searches up the tree of controls for a **data template** that matches the class of the content data.
+在您的待办事项列表应用程序中，主窗口的内容已设置为一个不是内置控件、用户控件或自定义控件的对象。因此，_Avalonia UI_ 在控件树中向上搜索以找到与内容数据类匹配的**数据模板**。
 
 :::info
-For more information about the concepts behind data templates, see [here](../../concepts/templates/).
+有关数据模板背后的概念信息，请参阅[这里](../../concepts/templates/)。
 :::
 
-As no other data templates match, the search will eventually reach the `ViewLocator` in the application data templates element. This will run its checks and if they pass, return an instance of the corresponding view. It your app this will be the to do list view.&#x20;
+由于没有其他数据模板匹配，搜索最终会到达应用程序数据模板元素中的 `ViewLocator`。这将运行其检查，如果检查通过，则返回对应视图的实例。在您的应用程序中，这将是待办事项列表视图。
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (45).png" alt=""/>
 </div>
 
 
-In this way the content of the main window is set to the correct view, based on the type of the view model and the naming convention.&#x20;
+通过这种方式，主窗口的内容根据视图模型的类型和命名约定设置为正确的视图。
 
-## Source not Framework
+## 源码而非框架
 
-Note that the view locator class is included in the project source rather than being part of the _Avalonia UI_ framework itself. This is because using an implementation of the 'convention over configuration' paradigm is an architectural choice for the application developer.
+请注意，视图定位器类包含在项目源代码中，而不是 _Avalonia UI_ 框架本身的一部分。这是因为使用“约定优于配置”范例的实现是应用程序开发人员的架构选择。
 
-If you do not want to use the view locator (in a diffent app); then remove it from the project and the **App.axaml** file.
+如果您不想使用视图定位器（在不同的应用程序中）；那么请从项目和 **App.axaml** 文件中删除它。
 
-On the next page you will learn how to add revealed functionality and actions to the **OK** and **Cancel** buttons.
+在下一页中，您将学习如何向 **OK** 和 **Cancel** 按钮添加额外的功能和操作。

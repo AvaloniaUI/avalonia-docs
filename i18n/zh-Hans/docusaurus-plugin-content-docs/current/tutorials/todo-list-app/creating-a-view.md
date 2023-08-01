@@ -2,35 +2,35 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Create a New View
+# 创建新视图
 
-On this page, you will add a view to display the list of to do items, with a button to add a new item.
+在本页中，您将添加一个视图来显示待办事项列表，其中包含一个添加新项目的按钮。
 
-To get the tutorial started, you will use hard-coded data for the list items. Later you will connect the view to some data in the view model.
+为了开始教程，您将使用硬编码的数据作为列表项。稍后，您将把视图连接到视图模型中的一些数据。
 
-In _Avalonia UI_, the UI element corresponding to a MVVM view can be either a window or a user control. This new view will be user control, and later you will use the main window to display it.
+在 _Avalonia UI_ 中，对应于 MVVM 视图的 UI 元素可以是窗口或用户控件。这个新视图将是一个用户控件，稍后您将使用主窗口来显示它。
 
 ### Visual Studio
 
-Follow these instructions to add a new user control:
+按照以下说明添加一个新的用户控件：
 
-- In the **Solution Explorer** locate and right-click the **Views** folder.&#x20;
-- Click **Add** and then **New Item**
-- Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
-- In **Name** enter 'ToDoListView'&#x20;
-- Click **Add**
+- 在 **解决方案资源管理器** 中找到并右键单击 **Views** 文件夹。
+- 点击 **添加**，然后点击 **新建项**
+- 在 **C# 项** 下点击 **Avalonia** ，然后点击 **UserControl (Avalonia)**
+- 在 **名称** 中输入 `ToDoListView`
+- 点击 **添加**
 
 ### .NET Core CLI
 
-Run the following command from the root folder of your project, that is the folder that contains the `Program.cs` file and the `/Views` folder:
+从您的项目根文件夹（包含 `Program.cs` 文件和 `/Views` 文件夹的文件夹）运行以下命令：
 
 ```
 dotnet new avalonia.usercontrol -o Views -n ToDoListView  --namespace ToDoList.Views
 ```
 
-### The User Control
+### 用户控件
 
-You will see the new AXAML file created in the `/Views` folder
+您会看到在 `/Views` 文件夹中创建了新的 AXAML 文件
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -43,7 +43,7 @@ You will see the new AXAML file created in the `/Views` folder
 </UserControl>
 ```
 
-You will also find a `ToDoListView.axaml.cs` file containing the code-behind for the view (in Visual Studio this is nested under the AXAML file. The code-behind looks like this:
+您还会找到一个包含视图code-behind的 `ToDoListView.axaml.cs` 文件（在 Visual Studio 中，它嵌套在 AXAML 文件下面）。code-behind如下所示：
 
 ```csharp
 using Avalonia.Controls;
@@ -60,11 +60,11 @@ namespace ToDoList.Views
 }
 ```
 
-You are not going to change the code-behind file in this tutorial, but notice that the user control class is called `ToDoListView` and it is located in the `ToDoList.Views` namespace.
+在本教程中，您不会更改code-behind文件，但请注意，用户控件类名为 `ToDoListView`，位于 `ToDoList.Views` 命名空间中。
 
-### Resize the Preview Pane
+### 调整预览窗格大小
 
-To make the design-time preview look more like a mobile phone in portrait orientation, locate the design-time width and height properties for the user control and set them as shown:
+为了使设计时预览更像是纵向定向的手机，找到用户控件的设计时宽度和高度属性，并设置如下：
 
 <pre class="language-markup"><code class="lang-markup"><strong>&#x3C;UserControl 
 </strong><strong>...
@@ -73,11 +73,11 @@ To make the design-time preview look more like a mobile phone in portrait orient
 </strong><strong>
 </strong></code></pre>
 
-Repeat the process with the main window.&#x20;
+然后对主窗口进行同样的操作。
 
-### Edit the User Control
+### 编辑用户控件
 
-Edit the contents of `Views/TodoListView.axaml` to contain the following:
+编辑 `Views/TodoListView.axaml` 的内容如下：
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -100,7 +100,7 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
 </UserControl>
 ```
 
-If you are using the Visual Studio extension you should see the contents of the control displayed in the previewer after completing a build:
+如果您使用 Visual Studio 扩展，完成构建后应该可以在预览器中看到控件内容的显示：
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (1) (1).png" alt=""/>

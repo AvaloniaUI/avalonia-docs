@@ -1,11 +1,11 @@
 ---
 id: index
-title: Basics
+title: 基础知识
 ---
 
-# Basics
+# 基础知识
 
-This section will introduce you to the basic concepts required to build an application with Avalonia.
+本节将介绍构建使用Avalonia应用程序所需的基本概念。
 
 ```mdx-code-block
 import {DocsCardList} from '../../../../../src/components/DocsCard';

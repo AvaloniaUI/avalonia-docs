@@ -1,18 +1,18 @@
-# Styling
+# 样式（Styling）
 
-The most obvious difference from other XAML frameworks is in its styling system. There are two ways of styling controls in Avalonia:
+Avalonia与其他XAML框架最明显的不同之一在于其样式系统。在Avalonia中，有两种方法可以为控件设置样式：
 
-- A [`Style`](../../basics/user-interface/styling) is a CSS-like style. Styles aren't stored in a `Resources` collection as in WPF, they are stored in a separate `Styles` collection.
-- A [`ControlTheme`](../../basics/user-interface/styling/control-themes) is similar to a WPF `Style` and is usually used to create themes for lookless controls
+- [`Style`](../../basics/user-interface/styling) 是一种类似CSS的样式。样式不像在WPF中存储在`Resources`集合中，而是存储在一个独立的`Styles`集合中。
+- [`ControlTheme`](../../basics/user-interface/styling/control-themes) 类似于WPF的`Style`，通常用于为无外观的控件创建主题。
 
-## Example
+## 示例
 
-The following code shows a `UserControl` which defines its own CSS-like style.
+以下代码显示了一个`UserControl`，其中定义了自己的CSS样式。
 
 ```markup
 <UserControl>
     <UserControl.Styles>
-        <!-- Make TextBlocks with the h1 style class have a font size of 24 points -->
+        <!-- 让带有 h1 样式类的 TextBlock 具有 24 点的字体大小 -->
         <Style Selector="TextBlock.h1">
             <Setter Property="FontSize" Value="24"/>
         </Style>

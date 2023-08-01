@@ -1,4 +1,4 @@
-# Stay Up-To-Date
+# 保持最新
 
 <!--```mdx-code-block
 import {DocsCardList} from '../../src/components/DocsCard';

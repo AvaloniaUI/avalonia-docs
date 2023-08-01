@@ -1,9 +1,9 @@
 ---
 id: index
-title: To Do List App
+title: 待办事项列表应用
 ---
 
-In this tutorial you will create a simple to do list application using _Avalonia UI_ and the Model View View-Model (MVVM) pattern with binding to the to do list (collection) data.
+在本教程中，您将使用 Avalonia UI 和 Model View View-Model (MVVM) 模式来创建一个简单的待办事项列表应用，该应用与待办事项列表（集合数据）进行绑定。
 
 
   <div style={{textAlign: 'center'}}>
@@ -12,21 +12,21 @@ In this tutorial you will create a simple to do list application using _Avalonia
 
 
 :::info
-You can find the code for the completed application [here](https://github.com/grokys/todo-tutorial).
+您可以在此找到已完成应用程序的代码：[这里](https://github.com/grokys/todo-tutorial).
 :::
 
-## MVVM Pattern
+## MVVM 模式
 
-In this tutorial you will learn more about using the Model-View-ViewModel (MVVM) pattern. It is common to use the MVVM pattern when writing GUI applications, and MVVM is recommended in most scenarios for _Avalonia UI_ applications.
+在本教程中，您将学习更多关于使用 Model-View-ViewModel (MVVM) 模式的知识。在编写图形用户界面应用程序时，通常会使用 MVVM 模式，并且在大多数情况下，Avalonia UI 应用程序都推荐使用 MVVM。
 
 :::info
-To revise some of the background concepts behind using the MVVM pattern with _Avalonia UI_, and when its use is appropriate, see [here](../../concepts/the-mvvm-pattern/).
+要了解有关在 Avalonia UI 中使用 MVVM 模式以及何时适用该模式的一些背景概念，请参阅：[这里](../../concepts/the-mvvm-pattern/).
 :::
 
-## Development Methods
+## 开发方法
 
-This tutorial contains instructions for you to use whether you program with _Microsoft Visual Studio_ on Windows, or the .NET Core Command Line Interface (.NET Core CLI) and a different editor. The screenshots shown are all from _Microsoft Visual Studio_ and running on Windows. 
+本教程包含供您使用的说明，无论您是在 Windows 上使用 _Microsoft Visual Studio_，还是在 .NET Core 命令行界面 (.NET Core CLI) 和其他编辑器进行编程。所展示的屏幕截图均来自 _Microsoft Visual Studio_，并在 Windows 上运行。
 
 :::info
-To read about other tutorials in this documentation, see [here](../index.md).
+要了解本文档中的其他教程，请参阅：[这里](../index.md).
 :::

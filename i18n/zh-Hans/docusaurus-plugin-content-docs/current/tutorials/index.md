@@ -1,31 +1,31 @@
 ---
 id: index
-title: Samples & Tutorials
+title: 示例和教程
 ---
 
-This section has practical tutorials that are designed to help you learn _Avalonia UI_ and build your confidence. Here is a brief guide to what you can expect from each of the tutorials:
+本节包含一些实用教程，旨在帮助您学习 _Avalonia UI_ 并增强您的信心。以下是每个教程的简要介绍：
 
-## To Do List App
+## 待办事项列表应用
 
-A simple to do list application using the Model View View-Model (MVVM) pattern, with binding to a collection and _Reactive UI_ programming, from which you will meet:
+这是一个简单的待办事项列表应用，使用了 Model-View-ViewModel (MVVM) 模式，并绑定到一个集合和 _Reactive UI_ 编程。您将会了解以下内容：
 
 * `RaiseAndSetIfChanged`
 * `ReactiveCommand`
 * `IObservable<>`
-* `Observable.Merge()` with `Select()`, `Take()`, and `Subscribe()` methods.
+* `Observable.Merge()` 与 `Select()`、`Take()` 和 `Subscribe()` 方法的使用。
 
-This is a very good introduction to the MVVM and _ReactiveUI_ techniques recommended for _Avalonia UI_ programming. Follow the tutorial [here](todo-list-app/).
+这是一个非常好的 MVVM 和 _ReactiveUI_ 技术入门教程，特别适合用于 _Avalonia UI_ 编程。您可以在 [这里](todo-list-app/) 找到教程。
 
-## Music Store App
+## 音乐商店应用
 
-This app was made for a demonstration on a webinar hosted by _JetBrains_, and co-hosted by Dan Walmsley, one of the creators of _Avalonia UI_.
+这个应用是为 _JetBrains_ 主办的网络研讨会而制作的演示，由 _Avalonia UI_ 的其中一位创作者 Dan Walmsley 共同主持。
 
 :::info
-To view the JetBrains and Avalonia UI webinar on YouTube, see [here](https://www.youtube.com/watch?v=kZCIporjJ70).
+您可以在 YouTube 上观看 _JetBrains_ 和 _Avalonia UI_ 的网络研讨会，链接在[这里](https://www.youtube.com/watch?v=kZCIporjJ70).
 :::
 
-It uses the _JetBrains Rider_ IDE running on macOS, but the steps will be equivalent on other platforms; and the developer experience will also be similar on other IDEs such as Visual Studio.
+它使用 _JetBrains Rider_ IDE 运行在 macOS 上，但在其他平台上的步骤也是相同的；在其他 IDE（如 Visual Studio）上的开发体验也会类似。
 
-The app features a highly graphical application using the MVVM pattern, and including how to display a dialog, present images and collections of data, and implement data persistence.
+该应用以 MVVM 模式呈现高度图形化的界面，并演示了如何显示对话框、展示图像和数据集合，并实现数据持久化。
 
-Follow this demonstration [here](music-store-app/).
+您可以在 [这里](music-store-app/) 查看这个演示。

@@ -1,6 +1,6 @@
-# Defining a ControlTheme
+# 定义控件主题（ControlTheme）
 
-Avalonia allows you to define custom control themes to customize the appearance and style of your controls. In particular, a lookless control will have no visual representation without a control theme; however you can define control themes for all types of control.
+Avalonia允许您定义自定义控件主题，以定制控件的外观和样式。特别地，无外观的控件（lookless control）在没有控件主题的情况下将没有任何视觉外观；但是您可以为所有类型的控件定义控件主题。
 
 
-See the introduction to [control themes](../../styling/control-themes) for more information.
+有关更多信息，请参阅[控件主题](../../styling/control-themes)的介绍。
