@@ -12,7 +12,8 @@ var focusManager = window.FocusManager;
 
 ## 方法
 
-### GetFocusedElement()
+### GetFocusedElement()
+
 返回当前聚焦的元素。
 
 ```cs
@@ -20,6 +21,7 @@ IInputElement? GetFocusedElement()
 ```
 
 ### ClearFocus()
+
 清除当前聚焦的元素。
 
 ```cs
