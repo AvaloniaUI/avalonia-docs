@@ -54,7 +54,7 @@ PlatformColorValues GetColorValues();
 TimeSpan HoldWaitDuration { get; }
 ```
 
-### HotkeyConfiguration
+### HotkeyConfiguration
 Avalonia 应用程序中特定于平台的热键配置。
 
 ```cs

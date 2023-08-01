@@ -44,7 +44,7 @@ Thickness SafeAreaPadding { get; }
 Color? SystemBarColor { get; set; }
 ```
 
-## 事件
+## 事件
 
 ### SafeAreaChanged
 当前窗口的安全区域发生变化时触发此事件。这可能发生在系统栏显示或隐藏时，或者窗口的大小或方向发生变化时。
@@ -55,7 +55,7 @@ event EventHandler<SafeAreaChangedArgs>? SafeAreaChanged;
 
 ---
 
-# SafeAreaChangedArgs
+# SafeAreaChangedArgs
 SafeAreaChangedArgs 是一个类，提供 SafeAreaChanged 事件的数据。
 
 ## 属性
