@@ -20,11 +20,11 @@
     "description": "The label for category Stay Up-To-Date in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Samples & Tutorials": {
-    "message": "Samples & Tutorials",
+    "message": "示例和教程",
     "description": "The label for category Samples & Tutorials in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.ToDo List App": {
-    "message": "ToDo List App",
+    "message": "待办事项列表应用",
     "description": "The label for category ToDo List App in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Music Store App": {

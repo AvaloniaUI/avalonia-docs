@@ -2,30 +2,30 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Conclusion
+# 结论
 
-On this page you will learn why the app was implemented in the way that it has been, and recommended some further reading.&#x20;
+在本页面中，您将了解为什么以这种方式实现应用程序，并推荐一些进一步阅读。
 
-## Application Solution Architecture
+## 应用程序解决方案架构
 
-This tutorial has used an application solution architecture that uses the MVVM pattern, and swaps the content of the main window to navigate between pages; while keeping the 'top level' view model in memory to provide application state. The pages (views) are composed in _Avalonia UI_ user controls.&#x20;
+本教程使用了一个应用程序解决方案架构，该架构采用MVVM模式，并在主窗口的内容之间进行交换以在页面之间导航，同时保留“顶层”视图模型以提供应用程序状态。页面（视图）由 _Avalonia UI_ 用户控件组成。
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (2) (3).png" alt=""/>
 </div>
 
-This tutorial application is targeted at the _Windows_ platform where the main window exists - so it may appear to be an over complex approach.&#x20;
+这个教程应用程序针对的是 `Windows` 平台，其中存在主窗口，因此可能看起来是一种过于复杂的方法。
 
-However on other target platforms, there is no main window. An application has to be arranged as a series of views.
+然而，在其他目标平台上，没有主窗口。一个应用程序必须被安排为一系列视图。
 
 :::info
-To learn more about targeting applications for iOS (Apple) platforms, see [here](../../guides/platforms/ios/).
+要了解有关面向 iOS(Apple)平台的应用程序的更多信息，请参阅[这里](../../guides/platforms/ios/).
 :::
 
 :::info
-To learn more about targeting applications for Android mobile devices, see [here](../../guides/platforms/android/).
+要了解有关面向 Android 移动设备的应用程序的更多信息，请参阅[这里](../../guides/platforms/android/).
 :::
 
-## Further Reading
+## 进一步阅读
 
-For a full list of the _Avalonia UI_ tutorials, see [here](..).
+有关 _Avalonia UI_ 教程的完整列表，请参阅[这里](..).

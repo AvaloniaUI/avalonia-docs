@@ -2,17 +2,17 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Add Item Buttons
+# 添加项目按钮
 
-On this page, you will learn how to complete the to do list app by adding actions for the buttons in the add item view. You will include some revealed functionality that disables the OK button until the user enters text in the input.&#x20;
+在本页面中，您将学习如何通过为添加事项视图中的按钮添加操作来完成待办事项列表应用程序。您将包括一些显示功能，该功能在用户输入后禁用 OK 按钮。
 
-Also the OK button action needs to pass the description text back to the main window view model, so it can be added to the items collection.  You will do this by passing an argument to the command.
+此外，OK 按钮操作需要将描述文本传递回主窗口视图模型，以便将其添加到项目集合中。您将通过向命令传递参数来实现这一点。
 
-To alter the add item view model, follow this procedure:
+要更改添加事项视图模型，请按照以下步骤操作：
 
-- Stop the app if it is running.
-- Locate the **AddItemViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.&#x20;
+- 如果应用程序正在运行，请停止它。
+- 在 **/ViewModels** 文件夹中找到 **AddItemViewModel.cs** 文件。
+- 编辑代码如下。
 
 ```csharp
 using ReactiveUI;
@@ -48,17 +48,17 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Earlier in this tutorial, you bound the add item button directly to the main window view model `AddItem` method. In contrast, the OK button here requires some revealed functionality, and an argument.
+在本教程的早些时候，您直接将添加事项按钮绑定到主窗口视图模型的 `AddItem` 方法。相比之下，此处的 OK 按钮需要一些显示功能和参数。
 
-Therefore this view model code declares a reactive command for the OK button, with its second type parameter `ToDoItem` (from the data model).
+因此，此视图模型代码为 OK 按钮声明了一个反应式命令，并使用其第二个类型参数 `ToDoItem`（来自数据模型）。
 
 :::info
-The reactive command is part of _ReactiveUI_. For an introduction to this concept, see [here](../../concepts/reactiveui/reactive-command.md).
+反应式命令是 _ReactiveUI_ 的一部分。要了解此概念，请参阅[这里](../../concepts/reactiveui/reactive-command.md)。
 :::
 
-Although there is nothing special about the cancel button, a reactive command is declared for that as well. You will see later how this will allow the output from both commands to be handled in the same place. &#x20;
+虽然取消按钮没有任何特殊之处，但它也为该按钮声明了一个反应式命令。稍后您将看到，这将允许在相同位置处理两个命令的输出。
 
-Both reactive command objects are then created in the constructor. The OK command defines a function that passes a to do item parameter. The cancel command has an empty object parameter.&#x20;
+然后在构造函数中创建了两个反应式命令对象。OK 命令定义了一个函数，该函数传递了一个待办事项参数。取消命令有一个空对象参数。
 
 ```csharp
 var isValidObservable = this.WhenAnyValue(
@@ -66,7 +66,7 @@ var isValidObservable = this.WhenAnyValue(
     x => !string.IsNullOrWhiteSpace(x));
 ```
 
-To implement the revealed functionality, the code creates an observable based on the description property. The `WhenAnyValue` method returns the result of the second lambda function (second parameter) every time the value of the description property changes.
+为了实现显示功能，代码基于描述属性创建了一个可观察对象。`WhenAnyValue` 方法在描述属性的值更改时返回第二个 lambda 函数（第二个参数）的结果。
 
 ```csharp
 private string _description = string.Empty;
@@ -77,35 +77,35 @@ public string Description
 }
 ```
 
-To ensure that the observable operates correctly, the code also adds the `RaiseAndSetIfChanged` pattern to the description property.
+为了确保可观察对象正常运行，代码还将 `RaiseAndSetIfChanged` 模式添加到了描述属性。
 
-Examine how the OK reactive command is created:
+查看如何创建 OK 反应式命令：
 
 ```csharp
 OkCommand = ReactiveCommand.Create(
    () => new ToDoItem { Description = Description }, isValidObservable);
 ```
 
-The first parameter is a lambda function that is run whenever the command is executed. The function here creates an instance of the data model `TodoItem` including the current value of the description.
+第一个参数是在每次执行命令时运行的 lambda 函数。此处的函数创建了数据模型 `ToDoItem` 的一个实例，包括当前的描述值。
 
-The second lambda function ('can execute' parameter) determines the enabled state of the reactive command. So this is passed the observable created just before.
+第二个 lambda 函数（“可执行”参数）确定了反应式命令的启用状态。因此，这里传递了刚刚创建的可观察对象。
 
-The code also creates a reactive command for the cancel button:
+代码还为取消按钮创建了一个反应式命令：
 
 ```csharp
 CancelCommand = ReactiveCommand.Create(() => { });
 ```
 
-The cancel command has no execution, so its first and only parameter does nothing. The cancel button is always enabled, so it does not have a 'can execute' parameter.&#x20;
+取消命令没有执行内容，因此它的第一个参数为空。取消按钮始终是启用的，因此它没有“可执行”参数。
 
-## Bind the OK and Cancel Buttons
+## 绑定 OK 和 Cancel 按钮
 
-Your next step is to create binding for the OK and cancel buttons in the view.&#x20;
+接下来的步骤是在视图中为 OK 和 Cancel 按钮创建绑定。
 
-To do this, follow this procedure:
+要做到这一点，请按照以下步骤操作：
 
-- Locate the **AddItemView.axaml** file in the **/Views** folder.
-- Edit the XAML as shown.&#x20;
+- 在 **/Views** 文件夹中找到 **AddItemView.axaml** 文件。
+- 编辑 XAML 如下。
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -130,7 +130,7 @@ To do this, follow this procedure:
 </UserControl>
 ```
 
-Run the application and click **Add Item**. You should now see that the OK button is only enabled when there is some text in the description input.
+运行应用程序并点击 **Add Item**。现在您应该会看到，只有在描述输入框中输入一些文本时，OK 按钮才会启用。
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (21) (2).png" alt=""/>
@@ -141,4 +141,4 @@ Run the application and click **Add Item**. You should now see that the OK butto
   <img src="/img/gitbook-import/assets/image (41).png" alt=""/>
 </div>
 
-On the next page you will learn how to process the new to do item, so that it appears on the list, if the user clicks OK.&#x20;
+在下一页中，您将学习如何处理新的待办事项，以便在用户点击 OK 后出现在列表中。

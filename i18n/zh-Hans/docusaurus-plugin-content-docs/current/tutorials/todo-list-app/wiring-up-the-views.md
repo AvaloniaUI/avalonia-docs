@@ -2,16 +2,16 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Data Binding
+# 数据绑定
 
-Now that you have the view model and model (data service) connected, the next step is to link the views and view models, so the list of items can be displayed.
+现在您已经连接了视图模型和模型（数据服务），下一步是将视图和视图模型关联起来，以便显示项目列表。
 
-This step uses _Avalonia UI_ concepts of data templates and data binding. Here a data template inside an items control defines how to display the to do list; and data bindings define how to get the list, and how to get the name and check status for each item.&#x20;
+此步骤使用了 _Avalonia UI_ 中的数据模板和数据绑定概念。在此，项控件中的数据模板定义了如何显示待办事项列表；而数据绑定定义了如何获取列表，以及如何获取每个项目的名称和勾选状态。
 
-Follow this procedure to adapt your user control to use the items control:
+按照以下步骤调整您的用户控件以使用项控件：
 
-- Locate and open the **ToDoListView.axaml** file.
-- Replace the `<StackPanel>` element, so that the code looks like this:
+- 找到并打开 **ToDoListView.axaml** 文件。
+- 替换  `<StackPanel>` 元素，使代码如下所示：
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -39,27 +39,27 @@ Follow this procedure to adapt your user control to use the items control:
 </UserControl>
 ```
 
-Take some time here to examine the code that you just added: &#x20;
+在此，您刚刚添加的代码要好好研究一下：
 
-The items control `<ItemsControl>` repeats its display for each item in a collection source that is defined by the `ItemsSource` attribute. Here the data binding expression `{Binding ListItems}` means we are looking for a data context with this property name.&#x20;
+项控件 `<ItemsControl>` 会针对集合源中的每个项目重复其显示，该集合源由 `ItemsSource` 属性定义。在这里，数据绑定表达式 `{Binding ListItems}` 表示我们正在寻找一个具有此属性名称的数据上下文。
 
-How each item is in a displayed inside the items control is controlled by the item template <`ItemTemplate>`. This can be any combination of controls, but in this example it is a **data template** is being used.
+在项控件内的每个项目如何显示由项目模板 `<ItemTemplate>` 控制。这可以是任何组合的控件，但在此示例中使用了**数据模板**。
 
 :::info
-You can review the data template concept [here](../../concepts/templates/).
+您可以查阅 [数据模板](../../concepts/templates/) 概念.
 :::
 
-The built-in controls inside the data template will expect to find the properties `IsChecked` and `Description`. These will come from the items in the `ListItems` property of a suitable data context that the user control manages to find.
+数据模板内置控件期望找到 `IsChecked` 和 `Description` 属性。这些属性将来自用户控件能够找到的合适数据上下文中的 `ListItems` 属性。
 
-So the arrangement of views and view models so far looks like this:
+因此，到目前为止，视图和视图模型的排列情况如下所示：
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (7) (3).png" alt=""/>
 </div>
 
-This will work if any parent of the items control has a data context object having  a`ListItems` property. The _Avalonia UI_ binding will search upwards in the control tree to locate a suitable data context. But although the main window data context has been set (during the app initialization - see the file **App.axaml.cs**), at this point there is still no data context with a `ListItems` property.&#x20;
+这将在任何父级项目中有效，只要该项目具有一个具有 `ListItems` 属性的数据上下文。_Avalonia UI_ 绑定将向上搜索控件树，以定位合适的数据上下文。但是虽然主窗口的数据上下文已经设置好了（在应用程序初始化时 - 参见文件 **App.axaml.cs**），但在此时还没有一个具有 `ListItems` 属性的数据上下文。
 
-So if you run your app, the list is still blank!
+因此，如果运行您的应用程序，列表仍然为空！
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (42) (2).png" alt=""/>

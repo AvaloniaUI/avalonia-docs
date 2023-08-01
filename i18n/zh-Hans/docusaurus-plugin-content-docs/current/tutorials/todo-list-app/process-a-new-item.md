@@ -2,15 +2,15 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Process a New Item
+# 处理新事项
 
-On this page you will learn how to process the output from the OK and cancel buttons being pressed and re-show the list. If OK was pressed we also need to add the new item to the list. We'll implement this functionality in `MainWindowViewModel`:
+在本页面中，您将学习如何处理按下 OK 和 Cancel 按钮后的输出，并重新显示列表。如果按下 OK，我们还需要将新项目添加到列表中。我们将在 `MainWindowViewModel` 中实现此功能：
 
-To alter the add item view model, follow this procedure:
+要更改主窗口视图模型，请按照以下步骤操作：
 
-- Stop the app if it is running.
-- Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.&#x20;
+- 如果应用程序正在运行，请停止它。
+- 在 **/ViewModels** 文件夹中找到 **MainWindowViewModel.cs** 文件。
+- 编辑代码如下。
 
 ```csharp
 using ReactiveUI;
@@ -26,7 +26,7 @@ namespace ToDoList.ViewModels
         private ViewModelBase _contentViewModel;
         public ToDoListViewModel ToDoListViewModel { get; }
 
-        //this has a dependency on the ToDoListService
+        // 这个视图模型依赖于 ToDoListService
 
         public MainWindowViewModel()
         {
@@ -64,7 +64,7 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Take some time to examine the code that you just added. The main change is to the `AddItem` method. This now sets up an observable that subscribes to the merged output of the two reactive commands (defined on the last page - in the add item view model). &#x20;
+仔细查看刚刚添加的代码。主要更改是 `AddItem` 方法。现在它设置了一个可观察对象，该对象订阅了两个反应式命令（上一页中定义的）的合并输出。
 
 ```csharp
 Observable.Merge(
@@ -72,26 +72,26 @@ Observable.Merge(
                 addItemViewModel.CancelCommand.Select(_ => (ToDoItem?)null))
 ```
 
-This code takes advantage of the fact that a reactive command is itself an observable that has a value generated every time it is executed.&#x20;
+这段代码利用了反应式命令本身就是可观察对象的事实，它在每次执行时生成一个值。
 
-The merge method combines the output from any number of observable streams, but they must have the same value type.
+合并方法将来自任意数量的可观察流的输出合并在一起，但它们必须具有相同的值类型。
 
-You will remember that the two reactive command declarations were different. They were:
+您会记得两个反应式命令的声明是不同的。它们是：
 
 ```csharp
 public ReactiveCommand<Unit, TodoItem> Ok { get; }
 public ReactiveCommand<Unit, Unit> Cancel { get; }
 ```
 
-The OK command generates an object of class `ToDoItem` whenever it executes, and the cancel command generates only a `Unit`. The `Unit` is the reactive version of `void` - it means the command generates no value, but still notifies that it has happened!&#x20;
+OK 命令在执行时生成一个 `ToDoItem` 类型的对象，而取消命令只生成一个 `Unit` 类型的对象。`Unit` 是 `void` 的反应式版本 - 它表示命令生成的值为空，但仍然通知命令已执行！
 
-So to combine the output from the different reactive command observable streams, the code converts the cancel command output into a stream of null `ToDoItem` objects.&#x20;
+因此，为了将来自不同反应式命令的输出合并起来，代码将取消命令的输出转换为一个空的 `ToDoItem` 对象流。
 
 ```csharp
 .Take(1)
 ```
 
-You are only interested in the first click of either the OK or cancel buttons; once one of these buttons has been clicked other clicks can be ignored. So the [`Take(1)`](https://reactivex.io/documentation/operators/take.html) method means that only the first item in the observable sequence will be processed.
+您只对 OK 或 Cancel 按钮的第一次点击感兴趣；一旦点击了这些按钮，其他点击将被忽略。因此，[`Take(1)`](https://reactivex.io/documentation/operators/take.html) 方法表示只处理可观察序列中的第一个项。
 
 ```csharp
 .Subscribe(newItem =>
@@ -104,18 +104,18 @@ You are only interested in the first click of either the OK or cancel buttons; o
 });
 ```
 
-Lastly the code subscribes to the first item the merged observable sequence. The subscribe pulls out the new to do item object, and examines it to see it it is null.
+最后，代码订阅了合并后可观察序列的第一个项。订阅从中提取出新的待办事项对象，并检查它是否为空。
 
-A null value means that the cancel button was clicked - and no further action is required; except to restore the main window content to show the (unchanged) to do list.
+如果值为空，则表示点击了取消按钮 - 此时无需进一步操作；只需恢复主窗口内容以显示（未更改的）待办事项列表。
 
 ```csharp
 ContentViewModel = ToDoListViewModel;
 ```
 
-If the value is not null, then it is because the OK button was clicked; and in this case the value should be a `ToDoItem` containing the description that the user typed.  SO this can be added to the list.
+如果值不为空，则表示点击了 OK 按钮；在这种情况下，值应该是包含用户输入的描述的 `ToDoItem` 对象。因此，可以将其添加到列表中。
 
-You may notice one other important addition to the code here: The to do list view model has been declared as a public member of the main window view model. This will ensure the list is preserved during view changes; it acts as the application state for your app. &#x20;
+您可能还注意到这里的另一个重要改动：待办事项列表视图模型被声明为主窗口视图模型的公共成员。这将确保列表在视图更改期间保留，它充当了应用程序的状态。
 
-Run the app to check it works as described!
+运行应用程序以检查它是否按预期工作！
 
-On the next page you will learn why the app was implemented in the way that it has been, and recommended some further reading.&#x20;
+在下一页中，您将了解为什么以这种方式实现应用程序，并推荐一些进一步阅读。

@@ -2,21 +2,21 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Navigate Views
+# 导航视图
 
-On this page you will learn how to change the view in the content zone of the main window to display the new item view, when the user clicks **Add Item**.
+在本页面中，您将学习如何在单击**Add Item**按钮时更改主窗口内容区域中的视图，以显示新项目视图。
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (40).png" alt=""/>
 </div>
 
-Up to this point, you have used the MVVM pattern for this tutorial app. This means that the application logic is controlled from the view models, and the view model in charge of what appears in the main window is the main window view model.
+到目前为止，在本教程中，您已经使用了 MVVM 模式。这意味着应用程序逻辑受到视图模型的控制，而负责在主窗口中显示的视图模型是主窗口视图模型。
 
-Therefore to start with, follow this procedure to add a method to the main window view model that will change what is loaded in the main window content zone:
+因此，首先按照以下步骤向主窗口视图模型添加一个方法，该方法将更改加载在主窗口内容区域中的内容：
 
-- Stop the app if it is running.
-- Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.&#x20;
+- 如果应用程序正在运行，请停止它。
+- 在 **/ViewModels** 文件夹中找到 **MainWindowViewModel.cs** 文件。
+- 编辑代码如下：
 
 ```csharp
 using ReactiveUI;
@@ -28,7 +28,7 @@ namespace ToDoList.ViewModels
     {
         private ViewModelBase _contentViewModel;
 
-        //this has a dependency on the ToDoListService
+        // 这个视图模型依赖于 ToDoListService
 
         public MainWindowViewModel()
         {
@@ -50,20 +50,20 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Take some time to examine the code you just added. There is a new `ContentViewModel` property that can get and set the view model in the main window content zone. This is initially set in the constructor to be the to do list view model, with to do list data provided from the service.&#x20;
+请花一些时间查看您刚刚添加的代码。有一个新的 `ContentViewModel` 属性，它可以获取和设置主窗口内容区域中的视图模型。这在构造函数中最初设置为待办事项列表视图模型，其中待办事项列表数据来自服务。
 
-There is also now a new `AddItem()` method that can reassign the content to be the add item view model.
+现在有了一个新的 `AddItem()` 方法，可以重新分配内容以使用添加项目视图模型。
 
-Notice that the `ContentViewModel` property set calls `RaiseAndSetIfChanged` which will cause a notification to be generated every time the property changes value. The _Avalonia UI_ binding system requires change notifications like this so it knows when to update the user interface.
+请注意，`ContentViewModel` 属性设置调用了 `RaiseAndSetIfChanged`，这会在属性更改值时生成通知。 _Avalonia UI_ 绑定系统需要这样的更改通知，以便知道何时更新用户界面。
 
-## Main Window Content Binding
+## 主窗口内容绑定
 
-Now that you have passed control of what is shown in the main window over to the main window view model (in accordance with the MVVM pattern), you need to complete the link by changing the main window content to use a binding.&#x20;
+既然您已经按照 MVVM 模式将主窗口中显示的控制权交给了主窗口视图模型，您需要通过更改主窗口内容来完成链接。
 
-Follow this procedure:
+按照以下步骤操作：
 
-- Locate the **MainWindow.axaml** file in the **/Views** folder.
-- Edit the XAML as shown.&#x20;
+- 在 **/Views** 文件夹中找到 **MainWindow.axaml** 文件。
+- 编辑 XAML 如下：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -83,12 +83,12 @@ Follow this procedure:
   <img src="/img/gitbook-import/assets/image (38) (2).png" alt=""/>
 </div>
 
-## Button Command
+## 按钮命令
 
-Lastly, to make the add item button call the `AddItem()` method, follow this procedure: &#x20;
+最后，要使 Add Item 按钮调用 `AddItem()` 方法，请按照以下步骤操作：
 
-* Locate the **ToDoListView.axaml** file in the **/Views** folder.
-* Edit the XAML for the button as shown:&#x20;
+* 在 **/Views** 文件夹中找到 **ToDoListView.axaml** 文件。
+* 编辑按钮的 XAML 如下：
 
 ```markup
 <Button DockPanel.Dock="Bottom"
@@ -98,27 +98,27 @@ Lastly, to make the add item button call the `AddItem()` method, follow this pro
 </Button>
 ```
 
-Take some time to examine the binding that you added to the button.&#x20;
+请花一些时间查看您添加到按钮的绑定。
 
-Firstly, the `Command` property defines a method to be called whenever the button is clicked.&#x20;
+首先，`Command` 属性定义了每次单击按钮时要调用的方法。
 
-Then the binding gives the exact **binding path** to the method using a binding source expression:
+然后，绑定使用绑定源表达式给出方法的确切 **绑定路径**：
 
 ```
 $parent[Window].DataContext.AddItem
 ```
 
-The **binding source expression** redirects the source of the binding. The _Avalonia UI_ binding system will use the source in the expression, instead of the control's data context.&#x20;
+**绑定源表达式** 重新定向绑定的源。_Avalonia UI_ 绑定系统将使用表达式中的源，而不是控件的数据上下文。
 
-In this case the expression is looking for any parent of the control with the type `Window`. It will then use that control's data context to call the `AddItem` method.&#x20;
+在这种情况下，表达式正在查找控件的任何父级，其类型为 `Window`。然后，它将使用该控件的数据上下文来调用 `AddItem` 方法。
 
 :::info
 For information about the concept of binding source expressions, see [here](../../basics/data/data-binding/data-binding-syntax).
 :::
 
-## Run the Application
+## 运行应用程序
 
-Now If you run the application and click **Add Item**, you will see the new view appear.
+现在，如果运行应用程序并单击 **Add Item**，您将看到新视图出现。
 
 <div>
 
@@ -132,10 +132,10 @@ Now If you run the application and click **Add Item**, you will see the new view
 
 </div>
 
-Have noticed something about this behaviour? The main window swaps the view model bound to  its content zone, and the display correctly loads the add item view!&#x20;
+您有没有注意到这种行为？主窗口交换了其内容区域绑定的视图模型，显示正确加载了添加项目视图！
 
 :::info
-In _Avalonia UI_ you can call a simple method on the view model directly like this. You will see later in this tutorial a scenario where you must use a different implementation. &#x20;
+在 _Avalonia UI_ 中，您可以直接调用视图模型上的简单方法。在本教程的后续部分中，您将看到一种必须使用不同实现的场景。
 :::
 
-On the next page you will learn how this is happening due to the presence of the view locator.&#x20;
+在下一页中，您将学习由于视图定位器的存在，此功能是如何实现的。

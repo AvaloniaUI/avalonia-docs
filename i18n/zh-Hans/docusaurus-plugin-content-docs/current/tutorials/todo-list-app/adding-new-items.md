@@ -2,22 +2,22 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Add New Items
+# 添加新项目
 
-When you created the `ToDoListView` user control earlier in this tutorial, you added a button so that the user can add a new item. On this page you will add an action to the button.&#x20;
+在本教程的早期阶段，当您创建 `ToDoListView` 用户控件时，您添加了一个按钮，以便用户可以添加新项目。在本页面中，您将为按钮添加一个动作。
 
-When the user clicks the button, you want the application to show a new view that will allow the user to enter the description of a new item.
+当用户单击按钮时，您希望应用程序显示一个新视图，允许用户输入新项目的描述。
 
-## Create a New View
+## 创建一个新视图
 
-To create the new view, follow this procedure if you are using Visual Studio:
+如果您正在使用 Visual Studio，请按照以下步骤创建新视图：
 
-- In the **Solution Explorer** locate and right-click the **Views** folder.&#x20;
-- Click **Add**
-- Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
-- In **Name** enter 'AddItemView'&#x20;
-- Click **Add**&#x20;
-- Alter the XAML to match the following:
+- 在 **解决方案资源管理器** 中找到并右键单击 **Views** 文件夹。
+- 点击 **添加**
+- 点击 **Avalonia**，然后点击 **UserControl (Avalonia)**
+- 在 **名称** 中输入 `AddItemView`
+- 点击 **添加**
+- 将 XAML 修改为如下内容：
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -40,28 +40,32 @@ To create the new view, follow this procedure if you are using Visual Studio:
 </UserControl>
 ```
 
-This gives you a view which looks like this:
+这样，您就得到了一个如下图所示的视图：
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (44).png" alt=""/>
 </div>
 
-The new view has a text box control which has three properties for you to review:
+新视图有一个文本框控件，其中有三个属性供您查看：
 
-* `AcceptsReturn` creates a multi-line text box.
-* `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you have not created yet).
-* `Watermark` causes a placeholder to be displayed when the text box is empty.
+* `AcceptsReturn` 创建一个多行文本框。
+* `Text` 将文本框中显示的文本绑定到视图模型上的 `Description` 属性（您还没有创建视图模型）。
+* `Watermark` 当文本框为空时显示一个占位符。
 
-## Create the View Model
+## 创建视图模型
 
-So far, you have only bound a description property. So the corresponding view model can be simple to start with.
+目前为止，您只绑定了一个描述属性。因此，相应的视图模型可以从简开始。
 
-To create a view model for the new view, follow this procedure:
+按照以下步骤为新视图创建视图模型：
 
 - In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
 - Click **Add**, then **Class**.&#x20;
 - Name the class 'AddItemViewModel'. Click **Add**.
 - Add the description property as shown:
+- 在 **解决方案资源管理器** 中找到并右键单击 **ViewModels** 文件夹。
+- 点击 **添加**，然后点击 **类**。
+- 将类命名为 `AddItemViewModel`，然后点击 **添加**。
+- 添加如下所示的描述属性：
 
 ```csharp
 using System;
@@ -75,4 +79,4 @@ namespace ToDoList.ViewModels
 }
 ```
 
-On the next page you will learn how to change the view in the main window to display the new item view in place of the to do list view.
+在下一页中，您将学习如何更改主窗口中的视图，以在待办事项列表视图的位置显示新项目视图。

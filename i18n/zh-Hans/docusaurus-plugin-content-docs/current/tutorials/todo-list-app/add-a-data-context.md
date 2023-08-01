@@ -2,18 +2,18 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Add a Data Context
+# 添加数据上下文
 
-On this page, you will set the data context of the to do list view to be the `ToDoList` property.
+在本页面中，您将把待办事项列表视图的数据上下文设置为 `ToDoList` 属性。
 
-To set the data context, follow this procedure:
+要设置数据上下文，请按照以下步骤进行：
 
-- Locate the **MainWindowView.axaml** file in the **Views** folder.
-- Remove the namespace declaration for `xmlns:vm`&#x20;
-- Remove the `<Design.DataContext>` tag completely.
-- Edit the title attribute to change the window caption to 'Avalonia To Do List'.
-- Locate the content `<views:ToDoListView/>`&#x20;
-- Add the attribute `DataContext="{Binding ToDoList}"` as follows:
+- 在 **Views** 文件夹中找到 **MainWindowView.axaml** 文件。
+- 删除 `xmlns:vm` 的命名空间声明。
+- 完全删除 `<Design.DataContext>` 标签。
+- 编辑 title 属性，将窗口标题更改为 'Avalonia To Do List'。
+- 定位到内容 `<views:ToDoListView/>`。
+- 添加属性 `DataContext="{Binding ToDoList}"`，如下所示：
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -29,16 +29,16 @@ To set the data context, follow this procedure:
 </Window
 ```
 
-The arrangement of views and view models now has an additional data context; defined as a binding, that will allow the _Avalonia UI_ binder to locate the `ToDoList` property on the `ToDoListViewModel` object. This object has already been instantiated in code during app initialization.&#x20;
+视图和视图模型的排列现在有了一个额外的数据上下文；这个数据上下文被定义为一个绑定，它将允许 _Avalonia UI_ 绑定器定位 `ToDoListViewModel` 对象上的 `ToDoList` 属性。此对象在应用程序初始化时已经被实例化。
 
-So here is the arrangement after the data context binding has been resolved:
+因此，当数据上下文绑定解析后，排列如下所示：
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (20) (3).png" alt=""/>
 </div>
 
 
-Now if you run the app, the _Avalonia UI_ binder has a suitable data context for the items control binding; and the items show up in the view:
+现在，如果运行应用程序，_Avalonia UI_ 绑定器将拥有一个适合的数据上下文来进行项控件绑定，并且项目将显示在视图中：
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/gitbook-import/assets/image (5) (1) (2).png" alt=""/>

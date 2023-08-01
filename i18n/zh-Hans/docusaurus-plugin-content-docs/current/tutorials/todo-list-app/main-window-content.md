@@ -2,18 +2,18 @@
 description: TUTORIALS - To Do List
 ---
 
-# Main Window Content
+# 主窗口内容
 
-At this point your main window still displays the greeting text created by the solution template. On this page you will change the main window content zone, so it displays your new user control instead.&#x20;
+此时，您的主窗口仍然显示解决方案模板创建的问候文本。在本页中，您将更改主窗口的内容区域，使其显示您的新用户控件。
 
-Follow this procedure to change the main window content:
+按照以下步骤更改主窗口内容：
 
-- Locate and open the main window XAML file:`Views/MainWindow.axaml`
-- Add the namespace declaration `xmlns:views="clr-namespace:ToDoList.Views"`
-- Retitle the app by changing the title attribute to `Title="Avalonia To Do List"`
-- Replace the `<TextBlock>` element with `<views:ToDoListView/>`
+- 定位并打开主窗口的 XAML 文件：`Views/MainWindow.axaml`
+- 添加命名空间声明 `xmlns:views="clr-namespace:ToDoList.Views"`
+- 通过将 `Title` 属性更改为 `Title="Avalonia To Do List"` 来更改应用程序的标题
+- 将 `<TextBlock>` 元素替换为 `<views:ToDoListView/>`
 
-The main window XAML should now look like this:
+现在，主窗口的 XAML 应如下所示：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -36,38 +36,38 @@ The main window XAML should now look like this:
 </Window>
 ```
 
-## Examine the XAML
+## 检查 XAML
 
-This XAML is similar in may ways to the user control XAML you had a lookup on the previous page. Specifically, here you added:
+这个 XAML 在很多方面与您在前一页上查看的用户控件 XAML 相似。具体来说，您添加了：
 
 <pre class="language-markup"><code class="lang-markup"><strong>&#x3C;Window ... 
 </strong><strong>        xmlns:views="clr-namespace:ToDoList.Views" ..>
 </strong></code></pre>
 
-This maps the code namespace `ToDoList.Views` to the XML namespace alias `views`.&#x20;
+这将代码命名空间 `ToDoList.Views` 映射到 XML 命名空间别名 `views`。
 
 :::warning
-Any user control that you create will need this kind of mapping, or the Avalonia UI XAML engine will be unable to find it, and you will get an error.
+您创建的任何用户控件都需要这种类型的映射，否则 Avalonia UI XAML 引擎将无法找到它，您将收到错误信息。
 :::
 
-The last step sets the content zone of the window to display your new user control view:
+最后一步将窗口的内容区域设置为显示您的新用户控件视图：
 
 ```markup
 <views:ToDoListView/>
 ```
 
-## Run the Application
+## 运行应用程序
 
-Now run the application you have built so far.  If you are using Visual Studio, press the function key F5. If you are using .NET Core CLI, execute the command:
+现在运行您已经构建的应用程序。如果您使用的是 Visual Studio，请按功能键 F5。如果您使用的是 .NET Core CLI，请执行以下命令：
 
 ```
 dotnet run
 ```
 
-&#x20; You will see the main window, with its new title and user control:
+您将看到主窗口，带有新的标题和用户控件：
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (4) (1) (1).png" alt=""/>
 </div>
 
-That is just the view - nothing really does anything yet! On the next pages, you will learn how to create the working parts of the app: the model and the view model.
+这只是视图 - 目前还没有任何实际功能！在接下来的页面上，您将学习如何创建应用程序的工作部分：模型和视图模型。

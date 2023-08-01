@@ -1,12 +1,12 @@
 ---
 id: samples
-title: Samples
+title: 示例
 ---
 
 ## Avalonia.Samples
 
-[`Avalonia.Samples`](https://github.com/AvaloniaUI/Avalonia.Samples) is a collection of minimal samples, which should make it easy for everyone to get started with Avalonia. Each sample focuses on a single aspect of Avalonia.
+[`Avalonia.Samples`](https://github.com/AvaloniaUI/Avalonia.Samples) 是一组最小化的示例，旨在让每个人都能轻松入门 Avalonia。每个示例都专注于 Avalonia 的一个单独方面。
 
 ## AvaloniaUI.QuickGuides
 
-[`AvaloniaUI.QuickGuides`](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides) are bitesized demos convering same of the more advanced aspects of Avalonia.
+[`AvaloniaUI.QuickGuides`](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides) 是一系列简短的演示，涵盖 Avalonia 的一些更高级的方面。
