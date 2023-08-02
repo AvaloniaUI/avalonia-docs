@@ -1,25 +1,25 @@
 ---
 id: graphics-and-animations
-title: How To Draw Graphics
+title: 如何绘制图形
 ---
 
 
-# How To Draw Graphics
+# 如何绘制图形
 
-Content in preparation.
+内容正在准备中。
 
-## Graphics
+## 图形
 
-Avalonia introduces an extensive, scalable, and flexible set of graphics features that have the following benefits:
+Avalonia引入了一个广泛、可伸缩、灵活的图形功能集，具有以下优势：
 
-* Resolution-independent and device-independent graphics. The basic unit of measurement in the Avalonia graphics system is the device-independent pixel, which is 1/96th of an inch, regardless of actual screen resolution, and provides the foundation for resolution-independent and device-independent rendering. Each device-independent pixel automatically scales to match the dots-per-inch (dpi) setting of the system it renders on.
-* Improved precision. The Avalonia coordinate system is measured with double-precision floating-point numbers rather than single-precision. Transformations and opacity values are also expressed as double-precision.
-* Advanced graphics and animation support. Avalonia simplifies graphics programming by managing animation scenes for you; there is no need to worry about scene processing, rendering loops, and bilinear interpolation. Additionally, Avalonia provides hit-testing support and full alpha-compositing support.
-* Skia. By default Avalonia uses the [Skia rendering engine](https://skia.org/), the same rendering engine that powers Google Chrome and Chrome OS, Android, Mozilla Firefox and Firefox OS, and many other products.
+* 分辨率无关和设备无关的图形。Avalonia图形系统的基本测量单位是设备无关像素，即1/96英寸，与实际屏幕分辨率无关，并为分辨率无关和设备无关的渲染提供基础。每个设备无关像素会自动缩放以匹配所渲染系统的每英寸点数（dpi）设置。
+* 改进的精度。Avalonia坐标系统使用双精度浮点数进行测量，而不是单精度浮点数。变换和不透明度值也用双精度表示。
+* 高级图形和动画支持。Avalonia通过为您管理动画场景来简化图形编程；无需担心场景处理、渲染循环和双线性插值。此外，Avalonia提供了命中测试支持和完整的alpha合成支持。
+* Skia。Avalonia默认使用[Skia渲染引擎](https://skia.org/)，这是Google Chrome和Chrome OS、Android、Mozilla Firefox和Firefox OS以及许多其他产品所使用的相同渲染引擎。
 
-## 2D Shapes and Geometries
+## 2D形状和几何图形
 
-Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, `Line`, `Path`, `Polygon` and `Rectangle`.
+Avalonia提供了一组常见的矢量绘制2D形状，如`Ellipse`（椭圆）、`Line`（线）、`Path`（路径）、`Polygon`（多边形）和`Rectangle`（矩形）。
 
 ```markup
 <Canvas Background="Yellow" Width="300" Height="400">
@@ -55,6 +55,6 @@ Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, 
 
 <img src='/img/gitbook-import/assets/shapes.png' alt=''/>
 
-## Add Animations
+## 添加动画
 
-Avalonia UI has animation support lets you make controls grow, shake, spin, and fade, to create interesting page transitions, and more. Avalonia uses a CSS-like animation system which supports [property transitions](transitions.md) and [keyframe animations](keyframe-animations.md).
+Avalonia UI具有动画支持，可以让您的控件实现增长、抖动、旋转和淡出效果，从而创建有趣的页面过渡效果等。Avalonia使用类似CSS的动画系统，支持[属性过渡](transitions.md)和[关键帧动画](keyframe-animations.md)。

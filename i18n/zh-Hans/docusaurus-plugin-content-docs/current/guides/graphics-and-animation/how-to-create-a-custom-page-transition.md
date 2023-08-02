@@ -1,39 +1,39 @@
 ---
 id: how-to-create-a-custom-page-transition
-title: How To Create a Custom Page Transition
+title: 如何创建自定义页面过渡效果
 ---
 
 
-# How To Create a Custom Page Transition
+# 如何创建自定义页面过渡效果
 
-This guide will show you how to create your own custom page transition by implementing the `IPageTransition` interface.
+本指南将向您展示如何通过实现 `IPageTransition` 接口来创建自己的自定义页面过渡效果。
 
-The interface has a single method that you need to implement:
+该接口有一个需要实现的方法：
 
 ```csharp
 public Task Start(Visual? from, Visual? to, bool forward, 
                                 CancellationToken cancellationToken)
 {
-    // Setup the transition here.
+    // 在这里设置过渡效果。
 }
 ```
 
-## Example
+## 示例
 
-This example will shrink the old view and then open up the new view vertically.
+此示例将缩小旧视图，然后垂直打开新视图。
 
 ```csharp
 public class CustomTransition : IPageTransition
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="CustomTransition"/> class.
+    /// 初始化 <see cref="CustomTransition"/> 类的新实例。
     /// </summary>
     public CustomTransition()
     {
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CustomTransition"/> class.
+    /// 初始化 <see cref="CustomTransition"/> 类的新实例。
     /// </summary>
     /// <param name="duration">The duration of the animation.</param>
     public CustomTransition(TimeSpan duration)
@@ -42,7 +42,7 @@ public class CustomTransition : IPageTransition
     }
 
     /// <summary>
-    /// Gets the duration of the animation.
+    /// 获取或设置动画的持续时间。
     /// </summary>
     public TimeSpan Duration { get; set; }
 
@@ -132,16 +132,16 @@ public class CustomTransition : IPageTransition
     }
 
     /// <summary>
-    /// Gets the common visual parent of the two control.
+    /// 获取两个控件的共同视觉父级。
     /// </summary>
-    /// <param name="from">The from control.</param>
-    /// <param name="to">The to control.</param>
-    /// <returns>The common parent.</returns>
+    /// <param name="from">源控件。</param>
+    /// <param name="to">目标控件。</param>
+    /// <returns>共同的父级。</returns>
     /// <exception cref="ArgumentException">
-    /// The two controls do not share a common parent.
+    /// 两个控件没有共同的父级。
     /// </exception>
     /// <remarks>
-    /// Any one of the parameters may be null, but not both.
+    /// 任何一个参数可能为null，但不能都为null。
     /// </remarks>
     private static IVisual GetVisualParent(IVisual? from, IVisual? to)
     {
@@ -162,12 +162,12 @@ public class CustomTransition : IPageTransition
 
 <img src='/img/gitbook-import/assets/TransitioningContentControl\_03.webp' alt=''/>
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this interface see [here](http://reference.avaloniaui.net/api/Avalonia.Animation/IPageTransition/).
+有关此接口的完整 API 文档，请参阅 [此处](http://reference.avaloniaui.net/api/Avalonia.Animation/IPageTransition/).
 :::
 
 :::info
-View the source code on _GitHub_ [`IPageTransition.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Animation/IPageTransition.cs)
+在 _GitHub_ 上查看源代码 [`IPageTransition.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Animation/IPageTransition.cs)
 :::

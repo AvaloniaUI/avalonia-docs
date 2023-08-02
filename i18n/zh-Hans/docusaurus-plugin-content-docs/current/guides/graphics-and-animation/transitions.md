@@ -1,12 +1,12 @@
 ---
 id: transitions
-title: How To Use Transitions
+title: 如何使用过渡效果
 ---
 
 
-# How To Use Transitions
+# 如何使用过渡效果
 
-Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via `Transitions` property:
+Avalonia中的过渡效果也受到CSS动画的很大启发。它们监听目标属性的值的任何变化，并根据其参数对变化进行动画处理。可以通过`Transitions`属性在任何`Control`上定义过渡效果：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui">
@@ -33,9 +33,9 @@ Transitions in Avalonia are also heavily inspired by CSS Animations. They listen
 </Window>
 ```
 
-The above example will listen to changes in the `Rectangle`'s `Opacity` property, and when the value changes, apply a smooth transition from the old value to the new value over 2 seconds.
+上述示例将监听`Rectangle`的`Opacity`属性的变化，并在值变化时，在2秒内将其平滑地过渡从旧值到新值。
 
-Transitions can also be defined in any style by using a `Setter` with `Transitions` as the target property and encapsulating them in a `Transitions` object, like so:
+过渡效果也可以在任何样式中使用`Setter`来定义，目标属性设为`Transitions`，并将它们封装在`Transitions`对象中，如下所示：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui">
@@ -61,34 +61,34 @@ Transitions can also be defined in any style by using a `Setter` with `Transitio
 </Window>
 ```
 
-Every transition has a `Property`, `Delay`, `Duration` and an optional `Easing` property.
+每个过渡效果都有`Property`、`Delay`、`Duration`和可选的`Easing`属性。
 
-`Property` refers to a transition's target for listening and animating values upon.
+`Property`表示过渡效果的目标属性，用于监听和动画处理值。
 
-`Delay` refers to the amount of time before the transition is applied to the target.
+`Delay`表示过渡效果应用于目标之前的等待时间。
 
-`Duration` refers to the amount of time that the transition plays.
+`Duration`表示过渡效果播放的时间长度。
 
-The easing functions are the same as those described in [Keyframe Animations](./keyframe-animations#easings).
+缓动函数与 [关键帧动画](./keyframe-animations#easings) 中描述的相同。
 
-The following transition types are available. The correct type must be used depending on the type of the property being animated.
+以下是可用的过渡效果类型。必须根据要动画处理的属性类型选择正确的类型。
 
-* `BoxShadowsTransition`: For `BoxShadows` target properties
-* `BrushTransition`: For `IBrush` target properties
-* `ColorTransition`: For `Color` target properties
-* `CornerRadiusTransition`: For `CornerRadius` target properties
-* `DoubleTransitions`: For `double` target properties
-* `FloatTransitions`: For `float` target properties
-* `IntegerTransitions`: For `int` target properties
-* `PointTransition`: For `Point` target properties
-* `SizeTransition`: For `Size` target properties
-* `ThicknessTransition`: For `Thickness` target properties
-* `TransformOperationsTransition`: For `ITransform` target properties
-* `VectorTransition`: For `Vector` target properties
+* `BoxShadowsTransition`：用于 `BoxShadows` 目标属性
+* `BrushTransition`：用于 `IBrush` 目标属性
+* `ColorTransition`：用于 `Color` 目标属性
+* `CornerRadiusTransition`：用于 `CornerRadius` 目标属性
+* `DoubleTransitions`：用于 `double` 目标属性
+* `FloatTransitions`：用于 `float` 目标属性
+* `IntegerTransitions`：用于 `int` 目标属性
+* `PointTransition`：用于 `Point` 目标属性
+* `SizeTransition`：用于 `Size` 目标属性
+* `ThicknessTransition`：用于 `Thickness` 目标属性
+* `TransformOperationsTransition`：用于 `ITransform` 目标属性
+* `VectorTransition`：用于 `Vector` 目标属性
 
-## Transitioning Render Transforms
+## 过渡渲染变换
 
-Render transforms applied to controls using CSS-like syntax can be transitioned. The following example shows a Border which rotates 45 degrees when the pointer is hovered over it:
+可以过渡应用于使用类似CSS语法的控件的渲染变换。以下示例显示了一个边框，在指针悬停在其上方时旋转45度：
 
 ```markup title='XAML'
 <Border Width="100" Height="100" Background="Red">
@@ -146,10 +146,10 @@ new Border
 };
 ```
 
-The available transitions are:
+可用的过渡效果如下：
 
-| Transition   | Sample                                    | Acceptable units             |
-| ------------ | ----------------------------------------- | ---------------------------- |
+| 过渡效果         | 示例                                        | 可接受的单位                       |
+|--------------|-------------------------------------------|------------------------------|
 | `translate`  | `translate(10px)`, `translate(0px, 10px)` | `px`                         |
 | `translateX` | `translateX(10px)`                        | `px`                         |
 | `translateY` | `translateY(10px)`                        | `px`                         |
@@ -163,5 +163,5 @@ The available transitions are:
 | `matrix`     | `matrix(1,2,3,4,5,6)`                     |                              |
 
 :::info
-Avalonia also supports WPF-style render transforms such as`RotateTransform` ,`ScaleTransform` etc. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
+Avalonia还支持类似WPF的渲染变换，如`RotateTransform`，`ScaleTransform`等。这些变换不能进行过渡：如果要对渲染变换应用过渡效果，请始终使用类似CSS的格式。
 :::

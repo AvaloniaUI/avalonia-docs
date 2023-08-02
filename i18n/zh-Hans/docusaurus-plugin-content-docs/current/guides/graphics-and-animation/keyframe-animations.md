@@ -1,42 +1,42 @@
 ---
 id: keyframe-animations
-title: How To Use Keyframe Animations
+title: 如何使用关键帧动画
 ---
 
 
-# How To Use Keyframe Animations
+# 如何使用关键帧动画
 
-You can use a keyframe animation to change one or more control properties following a timeline. The keyframes are defined in _Avalonia UI_ styles with **cue** points along the **duration** of the animation, and set the intermediate values of the properties at a point in time.
+您可以使用关键帧动画来在时间轴上更改一个或多个控件属性。关键帧在动画的 **持续时间** 内由 _Avalonia UI_ 样式中的 **提示** 点定义，并在某个时间点上设置属性的中间值。
 
 <img src="/img/gitbook-import/assets/image (2) (1) (4).png" alt=""/>
 
-The property values between keyframes are set following the profile of an **easing function**. The default easing function is a straight-line interpolation.&#x20;
+关键帧之间的属性值根据 **缓动函数** 的曲线设置。默认的缓动函数是直线插值。
 
-The animation is triggered to start, and then can run any number of times, in either direction. There are also options to delay the start of the animation, and to repeat it.
-
-:::info
-If you are familiar with keyframe animations keyframe work in CSS, you will recognise the similarity with how they are done in in _Avalonia UI_.&#x20;
-:::
-
-## Example
-
-You define a keyframe animation using styles.&#x20;
+动画可以在启动后运行任意次数，也可以在正向或反向运行。还有选项可以延迟动画的启动，并进行重复。
 
 :::info
-To revise how _Avalonia UI_ uses styles, see the concept [here](../../basics/user-interface/styling).
+如果您熟悉 CSS 中的关键帧动画，您会注意到它在 _Avalonia UI_ 中是如何实现的。
 :::
 
-Follow this procedure to define a simple color fade animation using XAML:
+## 示例
 
--  Create a styles collection at your chosen level.
--  Add a style to the collection with a selector that can target the control you want to animate.
--  Add a `Setter` element to define the property that you wan the animation to change. In this example `<Setter Property="Fill" Value="Red"/>`
--  Add a `Style.Animations` element to contain your animation.
--  Add an `Animation` element and set its `Duration` attribute. This is in the format `"Hours:Minutes:Seconds"`.
--  Now define the keyframes for the animation. This example uses cues at 0% and 100%.
--  Add `Setter` elements to each keyframe for value of the fill opacity. This example animates between opacity values of 0.0 and 1.0.
+您可以使用样式定义关键帧动画。
 
-The finished code will look like this: &#x20;
+:::info
+若要了解 _Avalonia UI_ 如何使用样式，请查看 [这里的概念](../../basics/user-interface/styling)。
+:::
+
+按照以下步骤使用 XAML 定义一个简单的颜色渐变动画：
+
+-  在您选择的层级中创建一个样式集合。
+-  向集合中添加一个带有选择器的样式，以定位要进行动画的控件。
+-  添加一个 `Setter` 元素来定义您希望动画更改的属性。例如 `<Setter Property="Fill" Value="Red"/>`。
+-  添加一个 `Style.Animations` 元素来包含您的动画。
+-  添加一个 `Animation` 元素，并设置其 `Duration` 属性。格式为 `时:分:秒`。
+-  现在定义动画的关键帧。这个示例在 0% 和 100% 处设置了提示点。
+-  在每个关键帧上添加 `Setter` 元素来设置填充不透明度的值。这个示例在 0.0 和 1.0 之间进行动画。
+
+完成后的代码如下所示：
 
 ```
 <Window xmlns="https://github.com/avaloniaui">
@@ -60,15 +60,15 @@ The finished code will look like this: &#x20;
 </Window>
 ```
 
-The resulting animation looks like this:
+动画效果如下：
 
 <img src="/img/gitbook-import/assets/anim1 (1).gif" alt=""/>
 
-The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!&#x20;
+该动画在矩形控件加载并被样式选择时就会运行。事实上，它在预览窗格中也能运行！
 
-## Animate Two Properties
+## 同时动画两个属性
 
-This example shows you how to animate two properties on the same timeline.&#x20;
+此示例展示了如何在同一时间轴上同时动画两个属性。
 
 ```markup
 <Window.Styles>
@@ -90,13 +90,13 @@ This example shows you how to animate two properties on the same timeline.&#x20;
   </Window.Styles>
 ```
 
-The red rectangle is faded-in and rotated at the same time.
+红色矩形同时进行淡入和旋转。
 
 <img src="/img/gitbook-import/assets/anim2.gif" alt=""/>
 
-## Delay
+## 延迟
 
-You can add a delay to the start of an animation by setting the delay attribute of the animation element. For example:
+您可以通过设置动画元素的延迟属性来延迟动画的启动。例如：
 
 ```markup
 <Animation Duration="0:0:1"
@@ -105,9 +105,9 @@ You can add a delay to the start of an animation by setting the delay attribute 
 </Animation>
 ```
 
-## Repeat
+## 重复
 
-You can make an animation repeat for a set number of times, or indefinitely. To repeat for a finite number of iterations set the `RepeatCount` attribute on the animation element like this:
+您可以使动画重复一定次数，或无限次数。要重复有限次数的动画，请在动画元素上设置 `RepeatCount` 属性，例如：
 
 ```xml
 <Animation RepeatCount="5">
@@ -115,7 +115,7 @@ You can make an animation repeat for a set number of times, or indefinitely. To 
 </Animation>
 ```
 
-To repeat an animation indefinitely, use the special  `"INFINITE"` value. For example:
+要无限次地重复动画，请使用特殊值 `INFINITE`。例如：
 
 ```xml
 <Animation RepeatCount="INFINITE">
@@ -123,9 +123,9 @@ To repeat an animation indefinitely, use the special  `"INFINITE"` value. For ex
 </Animation>
 ```
 
-## Playback Direction
+## 播放方向
 
-By default an animation plays forward. That is it follows the profile of the easing function from left to right. You can alter this behavior by setting the `PlaybackDirection` attribute on the animation element. For example:
+默认情况下，动画正向播放，即它按照缓动函数的曲线从左向右进行。您可以通过设置动画元素的 `PlaybackDirection` 属性来改变这种行为。例如：
 
 ```xml
 <Animation RepeatCount="9" PlaybackDirection="AlternateReverse">
@@ -133,13 +133,13 @@ By default an animation plays forward. That is it follows the profile of the eas
 </Animation>
 ```
 
-The following table describes the options:
+以下表格描述了各个选项：
 
-<table><thead><tr><th width="245">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>Normal</code></td><td>(Default) The animation is played forwards.</td></tr><tr><td><code>Reverse</code></td><td>The animation is played in reverse direction.</td></tr><tr><td><code>Alternate</code></td><td>The animation is played forwards first, then backwards.</td></tr><tr><td><code>AlternateReverse</code></td><td>The animation is played backwards first, then forwards.</td></tr></tbody></table>
+<table><thead><tr><th width="245">值</th><th>描述</th></tr></thead><tbody><tr><td><code>Normal</code></td><td>（默认）正向播放动画。</td></tr><tr><td><code>Reverse</code></td><td>反向播放动画。</td></tr><tr><td><code>Alternate</code></td><td>先正向播放动画，然后反向播放。</td></tr><tr><td><code>AlternateReverse</code></td><td>先反向播放动画，然后正向播放。</td></tr></tbody></table>
 
-## Fill Mode
+## 填充模式
 
-The fill mode attribute of an animation defines how the properties being set will persist after it runs, or during any gaps between runs. For example:
+动画的填充模式属性定义了动画运行后，属性如何持续保留或在运行之间的任何间隙中显示。例如：
 
 ```xml
 <Animation RepeatCount="9" FillMode="Backward">
@@ -147,13 +147,13 @@ The fill mode attribute of an animation defines how the properties being set wil
 </Animation>
 ```
 
-The following table describes the options:
+以下表格描述了各个选项：
 
-<table><thead><tr><th width="240">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>None</code></td><td>Value will not persist after animation nor the first value will be applied when the animation is delayed.</td></tr><tr><td><code>Forward</code></td><td>The last interpolated value will be persisted to the target property.</td></tr><tr><td><code>Backward</code></td><td>The first interpolated value will be displayed on animation delay.</td></tr><tr><td><code>Both</code></td><td>Both <code>Forward</code> and <code>Backward</code> behaviors will be applied.</td></tr></tbody></table>
+<table><thead><tr><th width="240">值</th><th>描述</th></tr></thead><tbody><tr><td><code>None</code></td><td>动画运行后，值不会保留，也不会在动画延迟时应用第一个值。</td></tr><tr><td><code>Forward</code></td><td>最后的插值值将持续保留到目标属性。</td></tr><tr><td><code>Backward</code></td><td>在动画延迟时，第一个插值值将显示。</td></tr><tr><td><code>Both</code></td><td>将同时应用 <code>Forward</code> 和 <code>Backward</code> 行为。</td></tr></tbody></table>
 
-## Easing Function
+## 缓动函数
 
-An easing function defines how a property is varied over time during an animation.
+缓动函数定义了动画期间属性如何随时间变化。
 
 <div>
 
@@ -165,7 +165,7 @@ An easing function defines how a property is varied over time during an animatio
 
 </div>
 
-The default easing function is linear (above left), but you use another pattern by setting the name of the desired function in the easing attribute. For example to use the 'bounce ease in' function (above right):&#x20;
+默认的缓动函数是线性的（上图左），但您可以通过在缓动属性中设置所需函数的名称来使用其他模式。例如，要使用“弹跳淡入”函数（上图右）：
 
 ```markup
 <Animation Duration="0:0:1"
@@ -176,10 +176,10 @@ The default easing function is linear (above left), but you use another pattern 
 ```
 
 :::info
-For a full list of the _Avalonia UI_ easing functions, see the reference [here](../../reference/animation-settings.md).
+要获取 _Avalonia UI_ 缓动函数的完整列表，请参阅 [此处的参考](../../reference/animation-settings.md)。
 :::
 
-You can also add your own custom easing function class like this:
+您还可以添加自定义的缓动函数类，如下所示：
 
 ```markup
 <Animation Duration="0:0:1"

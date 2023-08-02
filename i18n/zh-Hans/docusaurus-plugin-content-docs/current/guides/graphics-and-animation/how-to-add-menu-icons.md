@@ -1,16 +1,16 @@
 ---
 id: how-to-add-menu-icons
-title: How To Add Menu Icons
+title: 如何添加菜单图标
 ---
 
 
-# How To Add Menu Icons
+# 如何添加菜单图标
 
-In Avalonia, you can enhance the appearance and user experience of your application by adding icons to menu items. Icons can provide a visual clue for the action performed by the menu item, making it easier for users to navigate through your application. This guide will walk you through how to add icons to menu items in Avalonia.
+在 Avalonia 中，通过为菜单项添加图标，您可以增强应用程序的外观和用户体验。图标可以为菜单项的操作提供视觉提示，使用户更容易浏览您的应用程序。本指南将指导您如何在 Avalonia 中为菜单项添加图标。
 
-## Adding Icons to Menu Items
+## 添加菜单项图标
 
-The `MenuItem.Icon` property is used to set an icon for a menu item. You can use various kinds of image sources for the icon, including resource URIs, file paths, or web URLs. Here's an example of how to add an icon to a menu item:
+使用 `MenuItem.Icon` 属性可以为菜单项设置图标。您可以使用各种类型的图像源作为图标，包括资源 URI、文件路径或 web URL。以下是一个将图标添加到菜单项的示例：
 
 ```xml
 <Menu>
@@ -24,5 +24,5 @@ The `MenuItem.Icon` property is used to set an icon for a menu item. You can use
 </Menu>
 ```
 
-In this example, the `MenuItem.Icon` property is set to an `Image` control that displays an image from the application resources. The `Source` property of the `Image` control is set to a resource URI that represents the image source. The `Width` and `Height` properties are set to control the size of the image.
+在此示例中，`MenuItem.Icon` 属性被设置为一个 `Image` 控件，用于显示来自应用程序资源的图像。`Image` 控件的 `Source` 属性被设置为表示图像源的资源 URI。`Width` 和 `Height` 属性用于控制图像的大小。
 

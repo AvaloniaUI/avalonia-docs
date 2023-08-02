@@ -84,7 +84,7 @@
     "description": "The label for category Styles and Resources in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Graphics and Animation": {
-    "message": "Graphics and Animation",
+    "message": "图形和动画",
     "description": "The label for category Graphics and Animation in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Custom Controls": {
