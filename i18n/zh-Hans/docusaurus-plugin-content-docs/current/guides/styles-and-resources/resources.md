@@ -1,20 +1,20 @@
 ---
 id: resources
-title: How To Use Resources
+title: 如何使用资源
 ---
 
 
-# 👉 How To Use Resources
+# 👉 如何使用资源
 
-You will often need to standardise graphical fundamentals such as (but not limited to) brushes and colors in your applications. You can define these as resources at various levels in your _Avalonia UI_ application, as well as in files that can be included as required.&#x20;
+您经常需要在应用程序中标准化图形基础元素，比如（但不限于）笔刷和颜色。您可以将这些定义为资源，放在 _Avalonia UI_ 应用程序的不同层级中，也可以将它们放在需要的文件中引用。
 
-Resources are always defined inside a resource dictionary. This means that each resource has a key attribute.
+资源总是定义在资源字典内。这意味着每个资源都有一个关键属性。
 
-The level of a resource dictionary defines the scope of the resources in it: resources are available in the file where they are defined, and below. So you can tailor the scope of resources by choosing where to locate a resource dictionary.&#x20;
+资源字典的级别定义了其中资源的范围：资源在定义它们的文件及其子级中都可用。因此，您可以通过选择资源字典的位置来定制资源的范围。
 
-## Declaring Resources
+## 声明资源
 
-For example, you may want brush colors to be standardized across the whole application. In this case you can declare a resource dictionary in the application XAML **App.axaml** file, like this
+例如，您可能希望在整个应用程序中标准化笔刷颜色。在这种情况下，您可以在应用程序的 XAML 文件**App.axaml**中声明一个资源字典，如下所示：
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -28,7 +28,7 @@ For example, you may want brush colors to be standardized across the whole appli
 </Application>
 ```
 
-Alternatively, you may want a set of resources to apply only to a specific window or user control. In this case you will define a resource dictionary in the window or user control file. For example:
+或者，您可能希望一组资源仅适用于特定的窗口或用户控件。在这种情况下，您将在窗口或用户控件文件中定义一个资源字典。例如：
 
 ```xml title="MyUserControl.axaml"
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -42,7 +42,7 @@ Alternatively, you may want a set of resources to apply only to a specific windo
 </UserControl>
 ```
 
-In fact you can define resources at control level if required:
+实际上，您可以在控件级别定义资源，如果需要：
 
 ```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
@@ -58,7 +58,7 @@ In fact you can define resources at control level if required:
 </Window>
 ```
 
-You can also declare resources to be specific to a style. 
+您还可以声明特定于样式的资源。
 
 ```xml title="MyStyle.axaml"
 <Style Selector="TextBlock.warning">
@@ -70,10 +70,10 @@ You can also declare resources to be specific to a style.
 ```
 
 :::note
-Keep in mind, this resource is not visible outside of the this specific style block, meaning it won't make every TextBlock with a "warning" class aware of this resource outside of the Style block.
+请注意，此资源在特定样式块之外是不可见的，这意味着它不会让所有具有“warning”类的TextBlock意识到样式块之外的资源。
 :::
 
-It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read [Theme Variants](how-to-use-theme-variants) page.
+还可以为特定主题变体定义资源：Dark、Light 或自定义主题。从下面的示例中，`BackgroundBrush` 和 `ForegroundBrush` 将根据系统或应用程序设置的当前主题变体具有不同的值。有关主题变体的更多信息，请阅读 [主题变体](how-to-use-theme-variants) 页面。
 
 ```xml
 <ResourceDictionary>
@@ -90,38 +90,38 @@ It is also possible to define resources for specific theme variants: Dark, Light
 </ResourceDictionary>
 ```
 
-## Resource Dictionary Files
+## 资源字典文件
 
-You can improve the organisation of your _Avalonia UI_ application project by defining resource dictionaries in their own files. This makes resource definitions easy to locate and maintain.
+通过在单独的文件中定义资源字典，您可以提高 _Avalonia UI_ 应用程序项目的组织性，使资源定义易于查找和维护。
 
-Resources located in a resource dictionary file are accessible to the entire application.
+位于资源字典文件中的资源可在整个应用程序中访问。
 
-To add a resource dictionary file, follow this procedure:
+要添加资源字典文件，请按照以下步骤操作：
 
--  Right-click your project at the location where you want the new file created.
--  Click **Add**, then **New Item**.
--  Click **Avalonia** in the list on the left:
+-  在您要创建新文件的位置，右键单击项目。
+-  单击 **添加**，然后选择 **新建项**。
+-  在左侧的列表中单击 **Avalonia**：
 
 <img src="/img/gitbook-import/assets/image (8) (1) (2).png" alt=""/>
 
--  Click **Resource Dictionary (Avalonia)**.
--  Type the file name you want to use.
--  Click **Add**.
+-  选择 **Resource Dictionary (Avalonia)**。
+-  输入要使用的文件名。
+-  单击 **添加**。
 
-You can now add the resources you want to define in the position indicated. It looks like this:
+现在，您可以在指定的位置添加要定义的资源。如下所示：
 
 ```xml
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Add Resources Here -->
+    <!-- 在此添加资源 -->
 </ResourceDictionary>
 ```
 
-## Using Resources
+## 使用资源
 
-You can use a resource from a resources dictionary that is in scope using the `{DynamicResource}` mark-up extension.&#x20;
+您可以使用 `{DynamicResource}` 标记扩展从处于范围内的资源字典中使用资源。
 
-For example, to use a resource directly on the background attribute of a border element, use the following XAML :
+例如，要直接在边框元素的背景属性上使用资源，可以使用以下 XAML：
 
 ```xml
 <Border Background="{DynamicResource Warning}">
@@ -129,9 +129,9 @@ For example, to use a resource directly on the background attribute of a border 
 </Border>
 ```
 
-### Static Resource&#x20;
+### 静态资源
 
-Alternatively you can choose to use the `StaticResource` mark-up extension. For example:
+或者，您可以选择使用 `StaticResource` 标记扩展。例如：
 
 ```xml
 <Border Background="{StaticResource Warning}">
@@ -139,15 +139,15 @@ Alternatively you can choose to use the `StaticResource` mark-up extension. For 
 </Border>
 ```
 
-A static resource is different in that it will not respond to changes in the resource made in code (at runtime). Once loaded a static cannot be altered.&#x20;
+静态资源不同之处在于它不会响应代码中（运行时）对资源的更改。一旦加载，静态资源将不可更改。
 
-The benefit of using a static resource is that it has less work to do so it will be slightly faster to load, and it uses slightly less memory.
+使用静态资源的好处是它的工作量较小，因此加载速度稍快，并且使用的内存稍少。
 
-## Resource Priority
+## 资源优先级
 
-_Avalonia UI_ resolves what resource to use by searching upwards in the **logical control tree** from the level of a `DynamicResource` or `StaticResource` mark-up, looking for the resource key.
+_Avalonia UI_ 通过从 `DynamicResource` 或 `StaticResource` 标记扩展所在的逻辑控件树级别向上搜索来解析要使用的资源，直到找到具有所请求的关键字的资源。
 
-This means that resources with the same key have priority based on their proximity to the resource mark-up being resolved. Resource definitions further up the logical control tree are therefore effectively 'overridden' by those that are closer. For example, consider this XAML:
+这意味着具有相同关键字的资源的优先级是基于它们与正在解析的资源标记扩展之间的距离来确定的。因此，逻辑控件树中较高级别的资源定义实际上会被处于较低级别的资源定义“覆盖”。例如，请考虑以下 XAML：
 
 ```xml
 <UserControl ... >
@@ -167,17 +167,17 @@ This means that resources with the same key have priority based on their proximi
 </UserControl>
 ```
 
-Here the border control is using the resource with the key 'Warning'. This is defined twice - once at the level of the enclosing stack panel, and again at user control level. _Avalonia UI_ will determine that the border background should be be orange because its parent stack panel is first in a search upwards in the logical control tree from the border itself.
+在这里，边框控件使用了关键字为`Warning`的资源。这个资源在父控件（堆栈面板）级别上定义了两次，并且在用户控件级别上也定义了一次。_Avalonia UI_ 将确定边框的背景应该是橙色，因为它的父堆栈面板是在从边框本身开始沿着逻辑控件树向上搜索的第一个拥有此关键字资源的控件。
 
-## Include and Merge Resources
+## 包含和合并资源
 
-Resources can be included from a resource dictionary file, and merged with the resources defined in another file (even if there are not any).&#x20;
+可以从资源字典文件中包含资源，并将其与另一个文件中定义的资源合并（即使没有任何资源）。
 
 <img src="/img/gitbook-import/assets/image (1) (3).png" alt=""/>
 
-This means that you can implement styles in one file, and use resources defined in another. This keeps your styling consistent, and your application solution well organised and easy to maintain.&#x20;
+这意味着您可以在一个文件中实现样式，并在另一个文件中使用定义的资源。这样可以使您的样式一致，使应用程序解决方案组织良好，易于维护。
 
-To include the resources dictionary from a file in a styles file, add the following XAML:
+要在样式文件中包含来自文件的资源字典，请添加以下 XAML：
 
 ```xml
 <Styles.Resources>
@@ -189,7 +189,7 @@ To include the resources dictionary from a file in a styles file, add the follow
   </Styles.Resources>
 ```
 
-In the above example, the resources file `AppResources.axaml` is located in the `/Assets` project folder. You can then define the styles using the resources, for example:
+在上面的示例中，资源文件 `AppResources.axaml` 位于 `/Assets` 项目文件夹中。然后，您可以使用这些资源定义样式，例如：
 
 ```xml
 <Style Selector="Button.btn-info">
@@ -197,23 +197,23 @@ In the above example, the resources file `AppResources.axaml` is located in the 
 </Style>
 ```
 
-Where the resource `InfoColor` is defined as a `SolidColorBrush` in the imported file.
+其中，资源 `InfoColor` 在导入的文件中被定义为 `SolidColorBrush`。
 
 :::info
-Note that the resource has been referenced using `StaticResource` because it must not change - the requirement here is to keep the styling consistent.&#x20;
+请注意，资源已使用 `StaticResource` 引用，因为它不能更改——这里的要求是保持样式一致。
 :::
 
-## Merged Resources Priority 
+## 合并的资源优先级
 
-As you saw previously, resources are resolved by searching up the logical control tree from the point of mark-up until a resource with the requested key is found.&#x20;
+如前所述，资源通过从标记扩展所在的点开始向上搜索逻辑控件树来解析。
 
-However the presence of styles and merged dictionaries defined at the various levels of an application, introduces extra priority rules as follows:
+然而，各个级别的应用程序中定义的样式和合并的字典的存在，引入了额外的优先级规则，如下所示：
 
 * Control resources -> Merged dictionaries
 * Style resources -> Merged dictionaries
 * App resources -> Merged dictionaries
 
-For example, in the theoretical application below, the search for a resource used on the border control (at the bottom) will follow the order indicated in square `[]` brackets:
+例如，在下面的理论应用程序中，搜索用于底部边框控件上使用的资源将遵循`[]`中指示的顺序：
 
 ```
 Application
@@ -242,8 +242,8 @@ Window
      |- Border
 ```
 
-Starting at the border, the first resources searched are any defined in the parent (stack panel) control. After that any merged dictionaries at the same level are considered - in the sequence that they appear in the XAML.
+从边框控件开始，首先搜索父级（StackPanel）控件中定义的任何资源。然后再考虑同一级别的任何合并的字典 - 按照 XAML 中它们出现的顺序。
 
-The search then moves on to search any styles defined in the parent (stack panel) control, followed by any merged dictionaries at that level.
+然后，搜索父级（StackPanel）控件中定义的任何样式，接着再搜索同一级别的任何合并的字典。
 
-The search moves upwards in the logical control tree, behaving at each level in a similar manner. It finally reaches application-level resources and styles.&#x20;
+在逻辑控件树中向上搜索，每个级别都以类似的方式行为。最后到达应用程序级别的资源和样式。

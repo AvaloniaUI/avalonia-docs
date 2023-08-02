@@ -1,18 +1,18 @@
 ---
 id: selectors
-title: Style Selectors
+title: 样式选择器
 ---
 
-# Style Selectors
+# 样式选择器
 
-_Avalonia UI_ uses style selectors to match controls using a custom XAML syntax.
+_Avalonia UI_ 使用自定义的 XAML 语法来匹配控件，采用样式选择器。
 
 :::info
-If you are familiar with the CSS (Cascading Style Sheets) technology, then you will recognise this syntax as being very similar.
+如果您熟悉 CSS（层叠样式表）技术，您会发现这个语法非常相似。
 :::
 
-&#x20;Here is a list of some example style selectors:
+以下是一些样式选择器的示例列表：
 
-<table><thead><tr><th width="310">Style Selector</th><th>Description</th></tr></thead><tbody><tr><td><code>Button</code></td><td>Selects all <code>Button</code> (class) controls.</td></tr><tr><td><code>Button.red</code></td><td>Selects all <code>Button</code> controls with the <code>red</code> style class defined.</td></tr><tr><td><code>Button.red.large</code></td><td>Selects all <code>Button</code> controls with the <code>red</code> and <code>large</code> style classes defined.</td></tr><tr><td><code>Button:focus</code></td><td>Selects all <code>Button</code> controls with the <code>:focus</code> pseudo class active.</td></tr><tr><td><code>Button.red:focus</code></td><td>Selects all <code>Button</code> controls with the <code>red</code> style class and the <code>:focus</code> pseudo class active.</td></tr><tr><td><code>Button#myButton</code></td><td>Selects a <code>Button</code> control with the <code>Name</code> (attribute) defined as <code>"myButton"</code>.</td></tr><tr><td><code>StackPanel Button.xl</code></td><td>Selects all  <code>Button</code> (class) controls with the <code>xl</code>class defined; that are also descendants at any level of a <code>StackPanel</code> (class) control.</td></tr><tr><td><code>StackPanel > Button.xl</code></td><td>Selects all  <code>Button</code> (class) controls with the <code>xl</code>class defined; that are also a direct descendant of a <code>StackPanel</code> (class) control.</td></tr><tr><td><code>Button /template/ ContentPresenter</code></td><td>Selects all <code>ContentPresenter</code> (class) controls inside a template of a <code>Button</code> (class) control.</td></tr></tbody></table>
+<table><thead><tr><th width="310">样式选择器</th><th>描述</th></tr></thead><tbody><tr><td><code>Button</code></td><td>选择所有 <code>Button</code>（类）控件。</td></tr><tr><td><code>Button.red</code></td><td>选择所有带有 <code>red</code> 样式类的 <code>Button</code> 控件。</td></tr><tr><td><code>Button.red.large</code></td><td>选择所有同时带有 <code>red</code> 和 <code>large</code> 样式类的 <code>Button</code> 控件。</td></tr><tr><td><code>Button:focus</code></td><td>选择所有带有 <code>:focus</code> 伪类激活的 <code>Button</code> 控件。</td></tr><tr><td><code>Button.red:focus</code></td><td>选择所有同时带有 <code>red</code> 样式类和 <code>:focus</code> 伪类激活的 <code>Button</code> 控件。</td></tr><tr><td><code>Button#myButton</code></td><td>选择 <code>Name</code>（属性）为 <code>"myButton"</code> 的 <code>Button</code> 控件。</td></tr><tr><td><code>StackPanel Button.xl</code></td><td>选择所有带有 <code>xl</code> 样式类的 <code>Button</code>（类）控件，同时它们是 <code>StackPanel</code>（类）控件的后代，可以位于任何级别。</td></tr><tr><td><code>StackPanel > Button.xl</code></td><td>选择所有带有 <code>xl</code> 样式类的 <code>Button</code>（类）控件，同时它们是 <code>StackPanel</code>（类）控件的直接后代。</td></tr><tr><td><code>Button /template/ ContentPresenter</code></td><td>选择所有在 <code>Button</code>（类）控件的模板内的 <code>ContentPresenter</code>（类）控件。</td></tr></tbody></table>
 
-For a full description of these style selector formats, and more, see the reference [here](../../reference/styles/style-selector-syntax).
+有关这些样式选择器格式的完整描述以及更多信息，请参阅[此处的参考文档](../../reference/styles/style-selector-syntax)。

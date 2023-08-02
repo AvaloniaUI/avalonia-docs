@@ -1,35 +1,35 @@
 ---
 id: how-to-use-theme-variants
-title: How To Use Theme Variants
+title: 如何使用主题变体
 ---
 
 :::tip
-Because theme variants are deeply integrated into resources system, it is important to understand the Avalonia [resources](resources) first.
+由于主题变体与资源系统深度集成，了解 Avalonia 的 [resources](resources) 首先是很重要的。
 :::
 
-## Introduction
+## 介绍
 
-In Avalonia, a `theme variant` refers to a specific visual appearance of control based on a chosen theme. 
+在 Avalonia 中，主题变体（theme variant）指的是基于选择的主题而具有的特定视觉外观的控件。
 
-By using theme variants, developers can create visually appealing and consistent user interfaces that adapt to different user preferences or system settings. For example, an application may provide a light theme variant with a white background and black text, as well as a dark theme variant with a black background and white text. The user can choose their preferred theme, and the application will adjust its appearance accordingly.
+通过使用主题变体，开发人员可以创建视觉吸引力强、一致性的用户界面，以适应不同的用户偏好或系统设置。例如，一个应用程序可以提供一个带有白色背景和黑色文本的浅色主题变体，以及一个带有黑色背景和白色文本的深色主题变体。用户可以选择他们喜欢的主题，应用程序将相应地调整其外观。
 
-Avalonia's built-in themes, `SimpleTheme` and `FluentTheme`, seamlessly support `Dark` and `Light` variants without extra code. This allows applications to adapt dynamically based on system preferences while using build-in controls. For advanced customization, this documentation explains defining custom variant-dependent resources and their referencing.
+Avalonia 内置的主题 `SimpleTheme` 和 `FluentTheme` 无需额外代码即可无缝支持 `Dark` 和 `Light` 变体。这使得应用程序可以根据系统偏好动态适应，并使用内置控件。对于高级定制，本文档解释了如何定义与变体相关的自定义资源及其引用方式。
 
-## Switching current theme variant
+## 切换当前主题变体
 
-By default, Avalonia inherits theme variant set by user preferences system-wide.
-Application has control over theme variants through two important properties: [ActualThemeVariant](#actualthemevariant-property) and [RequestedThemeVariant](#requestedthemevariant-property). These properties allow to manage and switch theme variants at different levels within your application.
+默认情况下，Avalonia 继承用户在全系统范围内设置的主题变体。
+应用程序通过两个重要的属性来控制主题变体：[ActualThemeVariant](#actualthemevariant-property) 和 [RequestedThemeVariant](#requestedthemevariant-property)。这些属性允许您在应用程序的不同层级中管理和切换主题变体。
 
-### `ActualThemeVariant` Property 
+### `ActualThemeVariant` 属性
 
-The ActualThemeVariant read-only property is used to retrieve the UI theme currently in use by a control, window, or application. It represents the theme variant that is actively applied to the element.
-This property is available on each control and is inherited down the tree. Its value also used by the styling system while accessing `theme dictionaries`.
+ActualThemeVariant 只读属性用于检索控件、窗口或应用程序当前使用的 UI 主题。它表示元素上实际应用的主题变体。
+该属性在每个控件上都可用，并在树中向下继承。在访问 主题字典（theme dictionaries） 时，其值也被样式系统使用。
 
-### `RequestedThemeVariant` Property 
+### `RequestedThemeVariant` 属性
 
-The RequestedThemeVariant property allows to override theme variant and specify a desired variant for a `Application`, `Window` (`TopLevel`) or `ThemeVariantScope`.
+RequestedThemeVariant 属性允许覆盖主题变体并为 `Application`、`Window`(`TopLevel`) 或 `ThemeVariantScope` 指定所需的变体。
 
-To override global application variant instead of using system default:
+要覆盖全局应用程序变体，而不使用系统默认值：
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -43,7 +43,7 @@ To override global application variant instead of using system default:
 </Application>
 ```
 
-Or it is possible to redefine theme variant per specific subtree using `ThemeVariantScope` control. In the example below Window uses Dark variant, while ThemeVariantScope inside redefines it with Light variant:
+或者可以在特定子树中重新定义主题变体，使用 ThemeVariantScope 控件。在下面的示例中，Window 使用 Dark 变体，而 `ThemeVariantScope` 内部将其重新定义为 Light 变体：
 ```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'
@@ -63,21 +63,21 @@ Or it is possible to redefine theme variant per specific subtree using `ThemeVar
 </Window>
 ```
 
-![Overriden Theme Variant](/img/basics/user-interface/styling/overriden-theme-variant.png)
+![重写主题变体](/img/basics/user-interface/styling/overriden-theme-variant.png)
 
-If it's required to use reset RequestedThemeVariant value, `RequestedThemeVariant="Default"` value can be set on it.
+如果需要使用重置 RequestedThemeVariant 的值，可以将 `RequestedThemeVariant="Default"` 设置在其中。
 
 :::tip
-Changing Window RequestedThemeVariant also affects window decorations variant on platform where it is supported.
+更改 Window 的 RequestedThemeVariant 也会影响支持该功能的平台上的窗口装饰变体。
 :::
 
-## Defining and referencing custom variant specific resources
+## 定义和引用自定义的变体特定资源
 
-In Avalonia, theme variant specific resources can be defined in the `ResourceDictionary` using the `ThemeDictionaries` property. 
+在 Avalonia 中，主题变体特定的资源可以在 `ResourceDictionary` 中使用 `ThemeDictionaries` 属性进行定义。
 
-Typically, developers use `Light` or `Dark` as the key for the theme variants. Using `Default` as the key marks this specific theme dictionary as a fallback in case the theme variant or resource key is not found in other theme dictionaries.
+通常，开发人员使用 `Light` 或 `Dark` 作为主题变体的键。使用 `Default` 作为键标记这个特定的主题字典作为后备，以防在其他主题字典中找不到主题变体或资源键。
 
-Continuing previous example, let's add `BackgroundBrush` and `ForegroundBrush` with different values per theme variant:
+继续上面的例子，让我们为每个主题变体添加 `BackgroundBrush` 和 `ForegroundBrush` 并赋予不同的值：
 ```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'
@@ -124,6 +124,6 @@ Continuing previous example, let's add `BackgroundBrush` and `ForegroundBrush` w
 
 ```
 
-![Custom Theme Dictionaries](/img/basics/user-interface/styling/custom-theme-dictionaries.png)
+![自定义主题字典](/img/basics/user-interface/styling/custom-theme-dictionaries.png)
 
-For more details about using resources please follow [How To Use Resources](resources) page.
+有关使用资源的更多详细信息，请参阅 [如何使用资源](resources) 页面。

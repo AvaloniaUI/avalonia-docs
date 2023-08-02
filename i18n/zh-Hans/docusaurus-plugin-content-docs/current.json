@@ -76,11 +76,11 @@
     "description": "The label for category Building Cross Platform Applications in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Implementation Guides": {
-    "message": "Implementation Guides",
+    "message": "实现指南",
     "description": "The label for category Implementation Guides in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Styles and Resources": {
-    "message": "Styles and Resources",
+    "message": "样式和资源",
     "description": "The label for category Styles and Resources in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Graphics and Animation": {

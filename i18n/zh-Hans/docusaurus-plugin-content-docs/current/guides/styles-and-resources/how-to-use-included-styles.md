@@ -1,14 +1,14 @@
 ---
 id: how-to-use-included-styles
-title: How to Use Included Styles
+title: 如何使用包含的样式
 ---
 
 
-# How to Use Included Styles
+# 如何使用包含的样式
 
-This guide shows you how to share styles from a separate styles file (that is included in your application). This approach allows you to share styles across multiple applications.
+本指南向您展示了如何从一个单独的样式文件中共享样式（该文件已包含在您的应用程序中）。这种方法允许您在多个应用程序之间共享样式。
 
-To do this, you define styles in a new XAML file. Here, the root element must then be either a `Style` or `Styles` element. For example:
+要实现这一点，您需要在一个新的XAML文件中定义样式。在这里，根元素必须是`Style`或`Styles`元素之一。例如：
 
 ```markup
 <Styles xmlns="https://github.com/avaloniaui"
@@ -20,18 +20,18 @@ To do this, you define styles in a new XAML file. Here, the root element must th
 </Styles>
 ```
 
-The _Avalonia U_I solution templates provide a quick way of adding a styles file to your project. Follow this procedure:
+_Avalonia UI_ 解决方案模板提供了一种快速添加样式文件到您的项目的方法。按照以下步骤进行操作：
 
--  In the **Solution Explorer**, right-click your project.
--  Click **Add** and **New Item**
--  From the Avalonia Items, click **Styles(Avalonia)**
--  Type a name for your styles file
+-  在**解决方案资源管理器**中，右键单击您的项目。
+-  点击**添加**和**新建项**
+-  在Avalonia项目中，点击 **Styles(Avalonia)**
+-  为您的样式文件输入一个名称
 
 <img src="/img/gitbook-import/assets/image (1) (4) (2).png" alt=""/>
 
-To use the styles defined in a separate file, you must reference it using a `StyleInclude` element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.&#x20;
+要使用在一个单独文件中定义的样式，您需要通过`StyleInclude`元素来引用它。`source`属性定义了样式文件的位置。您可以选择在哪个级别添加这个元素。
 
-For example, to use styles defined in a file `AppStyles.axaml` (saved in the folder `/Styles`), you could write a a `StyleInclude` element in the window like this:
+例如，要使用在名为`AppStyles.axaml`的文件中定义的样式（保存在`/Styles`文件夹中），您可以在窗口中添加如下的`StyleInclude`元素：
 
 ```markup
 <Window ... >
@@ -46,7 +46,7 @@ For example, to use styles defined in a file `AppStyles.axaml` (saved in the fol
 </Window>
 ```
 
-However, it is more common to reference a styles file in the `App.axaml` file like this:
+然而，更常见的是在`App.axaml`文件中引用样式文件，如下所示：
 
 ```xml
 <Application... > 
@@ -57,4 +57,4 @@ However, it is more common to reference a styles file in the `App.axaml` file li
 </Application>
 ```
 
-This will allow you to use the styles from the separate file throughout your application.
+这样将允许您在整个应用程序中使用来自单独文件的样式。

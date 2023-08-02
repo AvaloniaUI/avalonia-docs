@@ -1,25 +1,25 @@
 ---
 id: how-to-use-fonts
-title: How To Use Custom Fonts
+title: 如何使用自定义字体
 ---
 
-Customizing your Avalonia application with unique fonts can add a distinctive look and feel. This guide will walk you through the process of integrating custom fonts into your Avalonia application.
+使用独特的字体来定制您的 Avalonia 应用程序，可以增加独特的外观和感觉。本指南将引导您了解如何将自定义字体集成到您的 Avalonia 应用程序中。
 
 :::info
-For a complete, runnable example of these concepts in action, check out the [sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/GoogleFonts).
+如果您想查看这些概念在实际中的完整运行示例，请查看 [示例应用程序](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/GoogleFonts)。
 :::
 
-## Add Your Custom Font to the Project
+## 将自定义字体添加到项目中
 
-Before you can use a custom font, you need to include it in your project.
+在使用自定义字体之前，您需要将其包含在项目中。
 
-In this guide, we will be using a font called [Nunito](https://fonts.google.com/specimen/Nunito) which is already stored in our application resources under `avares://GoogleFonts/Assets/Fonts`.
+在本指南中，我们将使用一个名为 [Nunito](https://fonts.google.com/specimen/Nunito) 的字体，该字体已经存储在我们的应用程序资源中，路径为 `avares://GoogleFonts/Assets/Fonts`。
 
-Ensure that the fonts have the build property set to `AvaloniaResource`.
+确保字体的构建属性设置为 `AvaloniaResource`。
 
-## Declare Your Font in Application Resources
+## 在应用程序资源中声明您的字体
 
-In your Avalonia application, open your `App.xaml` file and include your custom font inside `<Application.Resources>`. Assign it a key, which you will use to reference it in your application. In this case, we have assigned the key `NunitoFont`.
+在您的Avalonia应用程序中，打开`App.xaml`文件，并在`<Application.Resources>`标签内包含您的自定义字体。为它指定一个键，您将使用该键在应用程序中引用它。在本例中，我们使用了键`NunitoFont`。
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -37,12 +37,12 @@ In your Avalonia application, open your `App.xaml` file and include your custom 
 </Application>
 ```
 
-## Use Your Custom Font
-Once your font is declared in your application resources, you can use it in your application.
+## 使用您的自定义字体
+一旦您的字体在应用程序资源中声明，您可以在应用程序中使用它。
 
-To reference your custom font, use the `FontFamily` attribute with the `StaticResource` markup extension. You need to pass the key of the declared font as the parameter. In this case, `NunitoFont` is the key for our custom font.
+要引用您的自定义字体，请使用`FontFamily`属性与`StaticResource`标记扩展。您需要将已声明字体的键作为参数传递。在本例中，`NunitoFont`是我们自定义字体的键。
 
-Here's an example of how to apply our custom `Nunito` font to a `TextBlock`:
+以下是如何将我们的自定义`Nunito`字体应用于`TextBlock`的示例：
 
 ```xml
 <TextBlock Text="{Binding Greeting}" 
@@ -51,12 +51,11 @@ Here's an example of how to apply our custom `Nunito` font to a `TextBlock`:
            HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
 
-In the above example, the `TextBlock` control will use the `Nunito` font that we declared in our application resources. The text bound to the `TextBlock` will now appear in the `Nunito` font at the specified font size of 70.
+在上面的示例中，`TextBlock`控件将使用我们在应用程序资源中声明的`Nunito`字体。绑定到`TextBlock`的文本现在将以指定的字体大小70呈现为`Nunito`字体。
 
-Remember that the `FontFamily` attribute can be applied to any control that has the `FontFamily` property, meaning you can use your custom font throughout your application.
+请记住，`FontFamily`属性可以应用于任何具有`FontFamily`属性的控件，这意味着您可以在整个应用程序中使用您的自定义字体。
 
-And that's it! You've successfully integrated a custom font into your Avalonia application. Now you can add a unique touch to your application's UI with the fonts of your choice.
-
+就是这样！您已成功将自定义字体集成到您的Avalonia应用程序中。现在，您可以通过选择适合您的字体为应用程序的用户界面增加独特的风格。
 
 
 
