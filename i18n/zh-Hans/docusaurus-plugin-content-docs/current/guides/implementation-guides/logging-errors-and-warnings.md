@@ -1,19 +1,19 @@
 ---
 id: logging-errors-and-warnings
-title: How To Log Errors and Warnings
+title: 如何记录错误和警告
 ---
 
 
-# How To Log Errors and Warnings
+# 如何记录错误和警告
 
-This guide shows you how to can log warnings and errors in _Avalonia UI_ using the standard _(Microsoft)_`System.Diagnostics.Trace` component. &#x20;
+本指南向你展示如何在 _Avalonia UI_ 中使用标准 _(Microsoft)_ `System.Diagnostics.Trace`组件记录警告和错误。
 
-The code to achieve logging is added to your project by the _Avalonia UI_ solution templates if you use them.
+如果你使用的是 _Avalonia UI_ 的解决方案模板，那么记录的代码将会被添加到你的项目中。
 
-To enable, or to check that logging is enabled, follow this procedure:
+要启用或检查是否已启用日志记录，请按照以下步骤操作：
 
--  Locate the **Program.cs** file for your application.
--  Check that the `BuildAvaloniaApp` method calls `LogToTrace`, for example:
+-  找到你应用程序的 **Program.cs** 文件。
+-  检查 `BuildAvaloniaApp` 方法是否调用了 `LogToTrace`，例如：
 
 ```csharp
 public static AppBuilder BuildAvaloniaApp()
@@ -22,7 +22,7 @@ public static AppBuilder BuildAvaloniaApp()
         .LogToTrace();
 ```
 
-Without parameters, `LogToTrace` will log messages with a severity of `Warning` or higher. You can change this to another level by passing a `LogLevel` parameter to the `LogToTrace` call. For example:
+如果没有参数，`LogToTrace` 将记录严重性为 `Warning` 或更高级别的消息。你可以通过向 `LogLevel` 调用传递一个 `LogToTrace` 参数来改变这个级别。例如：
 
 ```csharp
 using Avalonia.Logging;
@@ -34,18 +34,18 @@ public static AppBuilder BuildAvaloniaApp()
 ```
 
 :::info
-For the full API documentation on the `LogEventLevel` enum, see [here](https://reference.avaloniaui.net/api/Avalonia.Logging/LogEventLevel/).
+有关 `LogEventLevel` 枚举的完整API文档，请参阅 [这里](https://reference.avaloniaui.net/api/Avalonia.Logging/LogEventLevel/).
 :::
 
-Log messages are then shown in the **Debug** view of the **Output** window of your IDE. For example, with verbose logging enabled:
+然后，日志消息会在你的IDE的 **Debug** 窗口的 **Output** 视图中显示。例如，启用详细日志记录时：
 
 <img src="/img/gitbook-import/assets/image (3).png" alt=""/>
 
-If you want to re-route these messages to different location, you can use the methods on the `System.Diagnostics.Trace` component.
+如果你想将这些消息重新路由到不同的位置，你可以使用 `System.Diagnostics.Trace` 组件上的方法。
 
-## Log Area
+## 日志区域
 
-Each message from _Avalonia UI_ is assigned an area that can be used to filter the log. These are described by the members of `Avalonia.Logging.LogArea` static class:
+_Avalonia UI_ 中的每一条消息都会被分配一个可以用于过滤日志的区域。这些由 `Avalonia.Logging.LogArea` 静态类的成员描述：
 
 * `Property`
 * `Binding`
@@ -54,7 +54,7 @@ Each message from _Avalonia UI_ is assigned an area that can be used to filter t
 * `Layout`
 * `Control`
 
-You can restrict the log to a specific area, or areas by adding arguments of type `Avalonia.Logging.LogArea` after the `LogEventLevel` argument in the `LogToTrace` call. For example, this will log only property and layout messages:
+你可以通过在 `LogToTrace` 调用中在 `LogEventLevel` 参数后添加类型为 `Avalonia.Logging.LogArea` 的参数来将日志限制在特定区域或区域。例如，以下代码将仅记录 property 和 layout 消息：
 
 ```csharp
 public static AppBuilder BuildAvaloniaApp()

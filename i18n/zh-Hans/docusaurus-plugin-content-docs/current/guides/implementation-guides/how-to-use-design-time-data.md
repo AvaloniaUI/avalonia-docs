@@ -1,22 +1,22 @@
 ---
 id: how-to-use-design-time-data
-title: How To Use Design-time Data
+title: 如何使用设计时数据
 ---
 
 
-# How To Use Design-time Data
+# 如何使用设计时数据
 
-Design-time data can help you style and position your UI layer without having to build the rest of the application. This is especially useful when you are trying to achieve a pixel-perfect presentation.&#x20;
+设计时数据可以帮助您在不必构建整个应用程序的情况下为UI层添加样式和定位。当您试图实现完美的像素级展示时，这尤其有用。
 
-The _Avalonia UI_ solution templates all add design-time code to the main window for you to copy.
+_Avalonia UI_ 解决方案模板会为您的主窗口添加设计时代码供您复制。
 
-This guide shows you how to use design-time data with the MVVM pattern to create a realistic UI with only mock data (that is without a data service layer). &#x20;
+本指南将向您展示如何使用MVVM模式和设计时数据创建一个真实的UI，仅使用模拟数据（即没有数据服务层）。
 
 <img src="/img/gitbook-import/assets/image (6).png" alt=""/>
 
-This implementation pattern is based on the concept of deriving a design version of any view model that you create, and adding mock data to its constructor. Your XAML files can then declare a design data context, and reference the design version of the view model to display mock data in the preview pane for you.
+这个实现模式基于以下概念：您可以从您创建的任何视图模型派生出一个设计版本，并将模拟数据添加到它的构造函数中。然后，您的XAML文件可以声明一个设计数据上下文，并引用该视图模型的设计版本，以在预览窗格中显示模拟数据。
 
-In this example you are working on the UI for an appointment card to display an appointment view model, like this:
+这个示例是关于为约会卡片的UI工作，以展示约会视图模型，如下所示：
 
 ```csharp
 public class AppointmentViewModel: ViewModelBase
@@ -29,7 +29,7 @@ public class AppointmentViewModel: ViewModelBase
 }
 ```
 
-This code creates the design version of this view model:
+下面的代码创建了该视图模型的设计版本：
 
 ```csharp
 public class DesignAppointmentViewModel: AppointmentViewModel
@@ -45,7 +45,7 @@ public class DesignAppointmentViewModel: AppointmentViewModel
 }
 ```
 
-To continue with this example: you are next working on a user control to present the appointment card. Firstly, you must first add a reference to the view models. Next check that you have set a suitable design width and/or height. Then you can add some XAML for the design data context, as shown:
+接下来，您将在一个用户控件中展示约会卡片。首先，您必须添加对视图模型的引用。然后，检查是否已设置适当的设计宽度和/或高度。然后，您可以添加一些XAML代码用于设计数据上下文，如下所示：
 
 ```
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -63,7 +63,7 @@ To continue with this example: you are next working on a user control to present
 </UserControl>
 ```
 
-This means that when you start to write the XAML for the UI, you can see your progress in the preview pane. When completed, this example has XAML like this:
+这意味着当您开始编写UI的XAML代码时，您可以在预览窗格中看到进展。完成后，这个示例的XAML如下所示：
 
 ```xml
 <Border CornerRadius="10" Background="LightBlue"  Width="350" Margin="20">
@@ -105,8 +105,6 @@ This means that when you start to write the XAML for the UI, you can see your pr
 </Border>
 ```
 
-&#x20;The preview pane shows the completed UI design with the mock data:
+预览窗格显示了使用模拟数据完成的UI设计：
 
 <img src="/img/gitbook-import/assets/image (10).png" alt=""/>
-
-&#x20;&#x20;

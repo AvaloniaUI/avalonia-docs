@@ -1,27 +1,27 @@
 ---
 id: localizing
-title: Localizing using ResX
+title: 使用 ResX 进行本地化
 ---
 
-Localization is a crucial step in delivering a great user experience for a global audience. In .NET, the `ResXResourceReader` and `ResXResourceWriter` classes are used to read and write resources in an XML-based format (.resx). This guide will walk you through the process of localizing an Avalonia application using ResX files.
+本地化是为全球用户提供出色用户体验的关键步骤。在 .NET 中，可以使用 `ResXResourceReader` 和 `ResXResourceWriter` 类来读取和写入基于 XML 的资源文件（.resx）。本指南将引导您通过使用 ResX 文件来本地化 Avalonia 应用程序。
 
 :::info
-For a complete, runnable example of these concepts in action, check out the [sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/Localization/).
+要了解这些概念在实际操作中的完整示例，请查看 [示例应用程序](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/Localization/).
 :::
 
-## Add ResX Files to the Project
+## 添加 ResX 文件到项目
 
-Before localizing, you need to include ResX files for each language you want to support. For this guide, we'll consider three ResX files, one for each of the following cultures:
+在进行本地化之前，您需要为每种语言添加相应的 ResX 文件。对于本指南，我们将考虑三个 ResX 文件，分别对应以下语言：
 
-* `Resources.fil-PH.resx` (Filipino)
-* `Resources.ja-JP.resx` (Japanese)
-* `Resources.resx` (Default language, usually English)
+* `Resources.fil-PH.resx`（菲律宾语）
+* `Resources.ja-JP.resx`（日语）
+* `Resources.resx`（默认语言，通常为英语）
 
-Each ResX file will contain translated text that corresponds to the keys used in the application.
+每个 ResX 文件将包含与应用程序中使用的键相对应的翻译文本。
 
-## Set the Culture
+## 设置文化（Culture）
 
-To use a specific language in the application, you need to set the current culture. This can be done in the `App.axaml.cs` file. The following example sets the culture to Filipino (`fil-PH`):
+为了在应用程序中使用特定的语言，您需要设置当前的文化（Culture）。这可以在 `App.axaml.cs` 文件中完成。下面的示例将文化（Culture）设置为菲律宾语（`fil-PH`）：
 
 ```cs title="App.xaml.cs"
 public partial class App : Application
@@ -48,16 +48,16 @@ public partial class App : Application
     }
 }
 ```
-Replace "fil-PH" with the appropriate culture code as required.
+根据需要，将 `fil-PH` 替换为适当的文化代码。
 
-## Use Localized Text in the View
+## 在视图中使用本地化文本
 
-To use the localized text in a view, you can refer to the resources statically in XAML:
+要在视图中使用本地化文本，您可以在 XAML 中静态地引用资源：
 
 ```xml
 <TextBlock Text="{x:Static assets:Resources.GreetingText}"/>
 ```
 
-In the above example, `GreetingText` is the key that corresponds to a string in the ResX file. The `{x:Static}` markup extension is used to reference a static property that's been defined in a .NET class, which, in this case, is the resources file (`assets:Resources.GreetingText`).
+在上面的示例中，`GreetingText` 是与 ResX 文件中的字符串对应的键。`{x:Static}` 标记扩展用于引用在 .NET 类中定义的静态属性，而在这种情况下，即资源文件（`assets:Resources.GreetingText`）。
 
-That's it! You've now successfully localized your Avalonia application using ResX. By setting the culture to a different locale, you can display the user interface in the selected language, thereby creating an application that supports multiple languages and caters to a global audience.
+就是这样！现在您已成功使用 ResX 进行了 Avalonia 应用程序的本地化。通过设置文化为不同的区域设置，您可以以所选语言显示用户界面，从而创建支持多种语言并面向全球用户的应用程序。
