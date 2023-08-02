@@ -2,30 +2,30 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Open a Dialog
+# 打开对话框
 
-On this page you will learn how to use _ReactiveUI_ to manage another window in your app. The new window will eventually contain a search facility, and a button to add one of the album covers found to a list in the main window.  This new window will be opened as a dialog - that is it will prevent activity in the main window while it is showing.&#x20;
+在本页面中，您将学习如何使用 _ReactiveUI_ 在应用程序中管理另一个窗口。新窗口最终将包含一个搜索功能，并且有一个按钮可以将找到的专辑封面之一添加到主窗口的列表中。这个新窗口将作为对话框打开，也就是说，在它显示的时候会阻止主窗口的活动。
 
-## Add a New Dialog Window
+## 添加一个新的对话框窗口
 
-There is nothing special about a window view file that makes it into a dialog; that is up to the way in which the window is controlled by the app; and you will use _ReactiveUI_ to manage this. So the first step is to create a new window for the app.
+将窗口视图文件可以置入对话框内也并没有什么特别的地方，这完全取决于应用程序控制窗口的方式，而这是使用 _ReactiveUI_ 来管理的。所以，第一步是为应用程序创建一个新窗口。
 
-To create a new window, follow this procedure:
+要创建一个新窗口，请按照以下步骤进行操作：
 
-- Stop the app if it is still running.
-- In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
-- Click **Avalonia Window**.
-- When prompted for the name, type 'MusicStoreWindow'
-- Press enter.
+- 如果应用程序仍在运行，请停止它。
+- 在解决方案资源管理器中，右键单击 **/Views** 文件夹，然后点击 **添加**。
+- 点击 **Avalonia Window**。
+- 在提示输入名称时，输入 'MusicStoreWindow'。
+- 按下回车键。
 
 ![](images/add-window.png)
 
-## Dialog Window Styling
+## 对话框窗口样式
 
-To style the new dialog window so that it matches the main window, follow this procedure:
+要将新的对话框窗口样式与主窗口相匹配，请按照以下步骤进行操作：
 
-- Locate and open the **MusicStoreWindow.axaml** file.
-- Change this code as follows to add the acrylic blur background, extended into the title bar (as before) as shown:
+- 找到并打开 **MusicStoreWindow.axaml** 文件。
+- 如下更改代码，以添加亚克力模糊背景，并将其延伸到标题栏中（与之前相同）：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -55,32 +55,32 @@ To style the new dialog window so that it matches the main window, follow this p
 </Window>
 ```
 
-## Dialog Input and Output
+## 对话框的输入与输出
 
-The application logic for the dialog will be controlled by its own view model. This will be created and linked to the dialog window view whenever the dialog is to be shown.&#x20;
+对话框的应用程序逻辑将由其自己的视图模型控制。每当对话框显示时，都将创建视图模型并链接到对话框窗口视图上。
 
-Similarly, the result of the users interaction with the dialog will eventually have to be passed back to the application logic for the main window for processing.
+类似地，用户与对话框的交互结果最终必须传递回主窗口的应用程序逻辑进行处理。
 
-At this stage you will create two empty view model classes to act as placeholders for the dialog view model, and the dialog return (selected album) object. To create these view models, follow this procedure:
+在这个阶段，您将创建两个空的视图模型类，作为对话框视图模型和对话框返回（选择的专辑）对象的占位符。按照以下步骤创建这些视图模型：
 
-- In the solution explorer, right-click the **/ViewModels** folder and then click **Add**. &#x20;
-- Click **Class**.
-- Name the class 'MusicStoreViewModel' and click **Add**.
-- Right-click again the **/ViewModels** folder and then click **Add** a second time. &#x20;
-- Click **Class**.
-- Name the class 'AlbumViewModel' and click **Add**.
+- 在解决方案资源管理器中，右键单击 **/ViewModels** 文件夹，然后点击 **添加**。
+- 点击 **类**。
+- 将类命名为 'MusicStoreViewModel'，然后点击 **添加**。
+- 再次右键单击 **/ViewModels** 文件夹，然后点击 **添加**。
+- 点击 **类**。
+- 将类命名为 'AlbumViewModel'，然后点击 **添加**。
 
-## Show Dialog
+## 显示对话框
 
-Now you have a new window for the dialog, and some view model classes for its interaction; there are two steps to create the dialog interaction:
+现在您有了一个新的对话框窗口，以及用于交互的一些视图模型类。创建对话框的交互有两个步骤：
 
-* The main window view model starts the interaction.
-* The main window view knows how to start the interaction.
+* 主窗口视图模型开始交互。
+* 主窗口视图知道如何开始交互。
 
-Firstly, to alter the main window view model code so it starts the interaction to show the dialog, follow this procedure:
+首先，要修改主窗口视图模型代码，以便它开始交互以显示对话框，请按照以下步骤进行操作：
 
-- Locate and open the **MainWindowViewModel.cs** file.
-- Add a declaration for the interaction with the new dialog window, as shown:
+- 找到并打开 **MainWindowViewModel.cs** 文件。
+- 添加一个与新对话框窗口交互的声明，如下所示：
 
 ```csharp
 public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
@@ -119,13 +119,13 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-At this point, the code for the interaction is still incomplete. If you attempt to run the app now and click the icon button, you will get an exception of class `ReactiveUI.UnhandledInteractionException`.
+目前，交互的代码仍然不完整。如果您现在尝试运行应用程序并点击图标按钮，您将会得到一个 `ReactiveUI.UnhandledInteractionException` 类的异常。
 
-Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view, and uses some features of the the _ReactiveUI_ framework.  Follow this procedure:
+下一步是确保主窗口视图知道如何开始交互。这是在主窗口视图的代码后台文件中实现的，并使用了 _ReactiveUI_ 框架的一些特性。按照以下步骤进行操作：
 
-- Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
-- Alter the class wo that it inherits from `ReactiveWindow<MainWindowViewModel>`.
-- Add the `DoShowDialogAsync` method as follows:
+- 找到并打开代码后台文件 **MainWindow.axaml.cs**。（您可能需要展开 **MainWindow.axaml** 文件才能找到它。）
+- 修改类，使其继承自 `ReactiveWindow<MainWindowViewModel>`。
+- 添加以下 `DoShowDialogAsync` 方法：
 
 ```csharp
 private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel,
@@ -139,16 +139,16 @@ private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel,
 }
 ```
 
-- Add the following code to the end of the constructor:
+- 将以下代码添加到构造函数的末尾：
 
 ```csharp
 this.WhenActivated(action => 
          action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
 ```
 
-This means that whenever the main window view is activated, the `DoShowDialogAsync` handler is registered. The action is disposable, so that _ReactiveUI_ can clean up the registration when  the main window view is not on the screen.
+这意味着每当主窗口视图被激活时，都会注册 `DoShowDialogAsync` 处理程序。该操作是可释放的，这样 _ReactiveUI_ 在主窗口视图不在屏幕上时可以清理注册。
 
-Your whole file should now look like this:
+您的整个文件现在应该如下所示：
 
 ```csharp
 using Avalonia.ReactiveUI;
@@ -180,29 +180,29 @@ namespace AvaloniaApplication11.Views
 }
 ```
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
+- 点击 **调试** 以编译和运行项目。
+- 点击图标按钮。
 
-It all works - but the dialog window opens at the same size as the main window, and offset from it.
+一切都正常，但是对话框窗口的大小与主窗口相同，并且与主窗口有一定的偏移。
 
-## Dialog Position and Size
+## 对话框位置和大小
 
-In the last step here, you will make the dialog smaller that the main window, and open centered on it. You will also make the main window open in the center of the user's screen.   &#x20;
+在这最后一步中，您将缩小对话框使对话框比主窗口更小一些，并居中打开。您还将使主窗口在用户屏幕居中打开。
 
-Follow this procedure:
+按照以下步骤进行操作：
 
-- Stop the app if it is still running.
-- Locate and open the **MainWindow.axaml** file.
-- Add an attribute to the `<Window>` element to set the start-up position:
+- 如果应用程序仍在运行，请停止它。
+- 找到并打开 **MainWindow.axaml** 文件。
+- 在 `<Window>` 元素中添加一个属性来设置启动位置：
 
 ```xml
 <Window ...
     WindowStartupLocation="CenterScreen">
 ```
 
-- Locate and open the **MusicStoreWindow.axaml** file.
-- Add attributes for the width and height of the dialog, set at 1000 and 550 respectively.
-- Add the start-up position attribute set to `CenterOwner`, as shown:&#x20;
+- 找到并打开 **MusicStoreWindow.axaml** 文件。
+- 添加对话框的宽度和高度属性，分别设置为 1000 和 550。
+- 添加启动位置属性，设置为 `CenterOwner`，如下所示：
 
 ```
 <Window ...
@@ -210,11 +210,11 @@ Follow this procedure:
     WindowStartupLocation="CenterOwner">
 ```
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
+- 点击 **调试** 以编译和运行项目。
+- 点击图标按钮。
 
 ![](images/dialog-opened.png)
 
-The dialog window is now opened centered inside the main window.
+现在对话框窗口在主窗口内居中打开。
 
-On the next page, you will learn how to add some content to the dialog window to represent a search for albums, and present the results. &#x20;
+在下一页中，您将学习如何向对话框窗口添加一些内容，以表示对专辑的搜索，并呈现结果。

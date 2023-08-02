@@ -2,39 +2,39 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Window Styling
+# 窗口样式
 
-On this page, you will make the main window look modern by applying a dark theme, and an acrylic blur to the window background.
+在本页中，您将通过对窗口背景应用暗色主题和亚克力模糊效果，来使主窗口看起来现代化。
 
-## Dark Mode
+## 暗色模式
 
-Follow this procedure to style the main window in 'dark' mode:
+按照以下步骤将主窗口样式设置为“暗色”模式：
 
-- Stop the app if it is still running.
-- Locate and open the file **App.axaml**.
-- In the XAML, change the `Mode` attribute in the element`<FluentTheme>` from light to dark&#x20;
+- 如果应用程序仍在运行，请停止它。
+- 找到并打开文件 **App.axaml**。
+- 在 XAML 中，将 `<FluentTheme>` 元素中的 `Mode` 属性从 `Light` 更改为 `Dark`：
 
 ```markup
 <FluentTheme Mode="Dark"/>
 ```
 
-- Now locate and open the **MainWindow.axaml** file in the **/Views** folder.
+- 现在，在 **/Views** 文件夹中找到并打开 **MainWindow.axaml** 文件。
 
-Notice that the preview pane is still showing the window in 'light' mode. The application will require a rebuild for the new mode to show in the preview pane.
+需要注意的是，预览窗格仍然显示窗口处于“亮色”模式。应用程序需要重新构建才能在预览窗格中显示新模式。
 
-- Click **Build Startup Project** on the **Build** menu.
+- 单击 **构建** 菜单上的 **构建启动项目**。
 
-The preview pane now changes to the dark mode.
+预览窗格现在会切换到暗色模式。
 
 ![](images/dark-mode-preview.png)
 
-## Acrylic Blur
+## 亚克力模糊效果
 
-Follow this procedure to style the background of the main window with an acrylic blur:
+按照以下步骤为主窗口的背景应用亚克力模糊效果样式：
 
-- Locate and open the **MainWindow.axaml** file in the **/Views** folder.
-- Find the end of the opening tag of the `<Window>` element.&#x20;
-- After the `Title="Avalonia.MusicStore"` attribute, add two new attributes as follows:
+- 在 **/Views** 文件夹中找到并打开 **MainWindow.axaml** 文件。
+- 找到 `<Window>` 元素的结束标签。
+- 在 `Title="Avalonia.MusicStore"` 属性后添加两个新属性，如下所示：
 
 ```markup
 <Window ...
@@ -44,7 +44,7 @@ Follow this procedure to style the background of the main window with an acrylic
         Background="Transparent">
 ```
 
-- To apply the acrylic effect to the whole window, replace the `<TextBlock>` element in the content zone of the main window with the following XAML for a panel:
+- 为了将亚克力效果应用到整个窗口，将主窗口的内容区域中的 `<TextBlock>` 元素替换为以下用于 Panel 的 XAML 代码：
 
 ```markup
 <Window ... >
@@ -62,21 +62,21 @@ Follow this procedure to style the background of the main window with an acrylic
    </Window>
 ```
 
-- Click **Debug** (top right of the IDE) to compile and run the project.
+- 单击 **调试**（IDE 右上角）以编译并运行项目。
 
 ![](images/acrylic-material.png)
 
-Notice that, as expected, the acrylic window effect covers the content zone of the main window. However the effect does not yet extend to the title bar.
+注意，正如预期的那样，亚克力窗口效果覆盖了主窗口的内容区域，但该效果还尚未延伸到标题栏。
 
 :::warning
-Note that _Linux_ users can not yet take advantage of the following code due to limitations of the X11 version. The tutorial code will run and the window will still work on _Linux_, but the full effect will not be realised.
+请注意，由于 X11 版本的限制，_Linux_ 用户目前无法使用以下代码。教程代码虽然可以在 _Linux_ 上运行，且窗口仍然可以工作，但无法实现完整效果。
 :::
 
-Follow this procedure to extend the acrylic blur effect onto the title bar:
+按照以下步骤将亚克力模糊效果延伸到标题栏：
 
-- Stop the app if is still running.
-- Find the end of the opening tag of the `<Window>` element again.&#x20;
-- Add the `ExtendClientAreaToDecorationsHint` attribute as shown:
+- 如果应用程序仍在运行，请停止它。
+- 再次找到 `<Window>` 元素的结束标签。
+- 添加 `ExtendClientAreaToDecorationsHint` 属性，如下所示：
 
 ```markup
    <Window ...
@@ -86,8 +86,8 @@ Follow this procedure to extend the acrylic blur effect onto the title bar:
            ExtendClientAreaToDecorationsHint="True">
 ```
 
-- Click **Debug** to compile and run the project.
+- 单击 **调试** 以编译并运行项目。
 
 ![](images/full-acrylic-window.png)
 
-Now you have the acrylic blur effect extending into the title bar. On the next page you will learn how to add and layout a control in the window. &#x20;
+现在，您已经将亚克力模糊效果延伸到标题栏中。在下一页中，您将学习如何在窗口中添加并排版控件。

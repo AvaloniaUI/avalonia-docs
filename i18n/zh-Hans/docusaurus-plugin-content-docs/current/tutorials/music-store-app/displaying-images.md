@@ -2,19 +2,19 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Displaying Images
+# 展示图象
 
-On this page, you will learn how to retrieve the cover art bitmap for each album in the search results. You will then be able to display the image on each album tile view instead of the placeholder note icon.&#x20;
+在本页中，您将学习如何从搜索结果中获取每个专辑的封面图像，在每个专辑磁贴视图上显示图像，而不是占位符音符图标。
 
-## Album Service
+## 专辑服务
 
-Your first step is to modify the business service to retrieve the album cover art from the _Apple iTunes_ Web API.
+您的第一步是修改业务服务，从 _Apple iTunes_ Web API 中获取专辑封面图像。
 
-Follow this procedure to get the album cover art from the Web API:
+按照以下步骤从 Web API 获取专辑封面图像：
 
-- Stop the app if it is still running.
-- Locate and open the **Album.cs** file in the **/Models** folder.
-- Add the code as shown:
+- 如果应用程序仍在运行，请停止应用程序。
+- 在 **/Models** 文件夹中找到并打开 **Album.cs** 文件。
+- 添加如下代码：
 
 ```csharp
 private static HttpClient s_httpClient = new();
@@ -34,31 +34,31 @@ public async Task<Stream> LoadCoverBitmapAsync()
 }
 ```
 
-This method returns a stream that can be used to load a bitmap from, either from a cache file or from the API.&#x20;
+该方法返回一个流，可以用来加载位图，可以从缓存文件或 API 中加载。
 
 :::info
-Note that the cache is not active at this time, you will implement it later in the tutorial.&#x20;
+请注意，此时缓存尚未启用，您将在本教程的后面部分实现它。
 :::
 
-- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:&#x20;
+- 为了在缓存启用时立即看到效果，请在以下代码行上设置一个调试断点：
 
 ```csharp
 return File.OpenRead(CachePath + ".bmp");
 ```
 
-## Album View Model
+## 专辑视图模型
 
-In this step , you will add a property to the album view model to store the cover art as a bitmap.
+在这一步中，您将向专辑视图模型添加一个属性，用于将封面艺术存储为位图。
 
 :::warning
-Note: You must reference `Avalonia.Media.Imaging` in the album view model because you must use the _Avalonia UI_ bitmap here, and **not** the .NET `System.Bitmap`.&#x20;
+注意：您必须在专辑视图模型中引用 `Avalonia.Media.Imaging`，因为您必须在这里使用 _Avalonia UI_ 位图，而不是 .NET 的 `System.Bitmap`。
 :::
 
-Follow this procedure to update the album view model:
+按照以下步骤更新专辑视图模型：
 
-- Locate and open the **AlbumViewModel.cs** file.
-- Add the `using Avalonia.Media.Imaging;` reference.
-- Add the extra code for the album cover, as shown:
+- 找到并打开 **AlbumViewModel.cs** 文件。
+- 添加 `using Avalonia.Media.Imaging;` 引用。
+- 添加专辑封面的额外代码，如下所示：
 
 ```csharp
 using Avalonia.Media.Imaging;
@@ -86,22 +86,22 @@ public class AlbumViewModel : ViewModelBase
 }   
 ```
 
-Take some time to examine this code because it gives an insight into manipulating images with _Avalonia UI._ For example, the above uses the `DecodeToWidth` method to convert the image stream for display in _Avalonia UI_. This method can convert a stream for a large high resolution image into a smaller bitmap, at a specified width and while maintaining the aspect ratio.
+请花些时间仔细阅读此代码，因为它可以让您了解如何使用 _Avalonia UI_ 操作图像。例如，上面的代码使用 `DecodeToWidth` 方法将图像流转换为 _Avalonia UI_ 中的显示格式。该方法可以将大分辨率图像的流转换为较小的位图，指定宽度并保持纵横比。
 
-This means that you will not waste large amounts of memory to display the album cover art, even though the Web API returns quite large files.&#x20;
+这意味着即使 Web API 返回相当大的文件，您也不会浪费大量内存来显示专辑封面图像。
 
-Also notice how the `LoadCover` method is coded to run asynchronously, and on a background thread. This is so that the UI thread does not get blocked and make the UI unresponsive.&#x20;
+还请注意 `LoadCover` 方法如何编码为异步运行，并在后台线程上运行。这样可以避免阻塞 UI 线程，使 UI 变得无响应。
 
-## Load Cover Art
+## 加载封面图像
 
-In this step you will alter the album search (in the music store view model) so that the cover art is loaded for each album that is found. To maintain the responsiveness of the app, you will make this process both asynchronous and cancellable.  &#x20;
+在这一步中，您将修改音乐商店视图模型中的专辑搜索，以便为找到的每个专辑加载封面图像。为了保持应用程序的响应性，您将使此过程既异步又可取消。
 
-Firstly, you will need to add a method that can start loading the album covers whenever search results are returned. You will make this method asynchronous and cancellable.&#x20;
+首先，您需要添加一个方法，可以在返回搜索结果时开始加载专辑封面。您将使此方法异步和可取消。
 
-To add the method to load album cover art, follow this procedure:
+按照以下步骤添加加载专辑封面艺术的方法：
 
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Add the code as shown:
+- 找到并打开 **MusicStoreViewModel.cs** 文件。
+- 添加如下代码：
 
 ```csharp
 private async void LoadCovers(CancellationToken cancellationToken)
@@ -119,24 +119,24 @@ private async void LoadCovers(CancellationToken cancellationToken)
 ```
 
 :::warning
-Important note: this method iterates through a **copy** of the search results collection  (created by the `ToList` method). This is because it runs asynchronously on its own thread, and the original  results collection could get changed at any time by another thread.
+重要提示：此方法通过搜索结果集合的**副本**进行迭代（由 `ToList` 方法创建）。这是因为它在自己的线程上异步运行，原始结果集合可能随时被另一个线程更改。
 :::
 
-The cancellation token argument will allow you to stop the method loading album covers whenever needed.
+取消令牌参数将允许您在需要时停止加载专辑封面的方法。
 
-## Cancellable Image Load
+## 可取消的图像加载
 
-In this step you will call the `LoadCovers` method in the `DoSearch` method (in the music store view model) but with full cancellation management. &#x20;
+在这一步中，您将在音乐商店视图模型的 `DoSearch` 方法中调用 `LoadCovers` 方法，但要进行完整的取消管理。
 
-Follow this procedure:
+按照以下步骤进行操作：
 
-- Add this field to the **MusicStoreViewModel.cs** file.
+- 在 **MusicStoreViewModel.cs** 文件中添加此字段。
 
 ```csharp
 private CancellationTokenSource? _cancellationTokenSource;
 ```
 
-- Modify the code at the beginning of the `DoSearch` method to set up the cancellation token:
+- 修改 `DoSearch` 方法开头的代码，设置取消令牌：
 
 ```csharp
 _cancellationTokenSource?.Cancel();
@@ -144,9 +144,9 @@ _cancellationTokenSource = new CancellationTokenSource();
 var cancellationToken = _cancellationTokenSource.Token;
 ```
 
-So if there is an existing request still loading album art, this will cancel it. Again, because `_cancellationTokenSource` might be replaced asynchronously by anther thread, you have to work with a copy stored as a local variable.
+因此，如果仍有正在加载专辑封面的现有请求，它将被取消。同样，由于 `_cancellationTokenSource` 可能会被另一个线程异步替换，因此您必须使用存储为局部变量的副本进行操作。
 
-- Add the following code to the end of `DoSearch` method:&#x20;
+- 将以下代码添加到 `DoSearch` 方法的末尾：
 
 ```csharp
 if (!cancellationToken.IsCancellationRequested)
@@ -155,7 +155,7 @@ if (!cancellationToken.IsCancellationRequested)
 }
 ```
 
-At this stage, your `DoSearch` method should look like this:
+目前，您的 `DoSearch` 方法应该如下所示：
 
 ```csharp
 private async void DoSearch(string s)
@@ -188,32 +188,32 @@ private async void DoSearch(string s)
 }
 ```
 
-## Album View
+## 专辑视图
 
-In the last step here, you will alter the data bindings in the album view so that the tile can display the album cover image. You will also add a test so that the placeholder panel is visible only when the album cover image is not available (is null).
+在这一步中，您将更改专辑视图中的数据绑定，以便磁贴可以显示专辑封面图像。您还将添加一个测试，以便仅在专辑封面图像不可用（为 null）时显示占位符面板。
 
-Follow this procedure:
+按照以下步骤进行操作：
 
-- Locate and open the **AlbumView.axaml** file.
-- Add the data binding `Source="{Binding Cover}"` to the `<Image>` element:
-- Add this data binding and converter to the panel element below:
+- 找到并打开 **AlbumView.axaml** 文件。
+- 将数据绑定 `Source="{Binding Cover}"` 添加到 `<Image>` 元素中：
+- 将此数据绑定和转换器添加到下面的面板元素中：
 
 ```
 IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
 ```
 
-A converter is an extension of a data binding expression that can convert the binding value before it is passed to the bound control. The `IsNull` converter returns a Boolean that is true when the value object is null.
+转换器是数据绑定表达式的扩展，可以在传递给绑定控件之前转换绑定值。`IsNull` 转换器返回一个布尔值，当值对象为 null 时为 true。
 
 :::info
-For more information about the _Avalonia UI_ built-in binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).&#x20;
+有关 _Avalonia UI_ 内置绑定转换器的更多信息，请参阅[此处](../../reference/built-in-data-binding-converters.md)的参考文档。
 :::
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
-- Type some search text.
+- 单击 **调试** 编译并运行项目。
+- 单击图标按钮。
+- 输入一些搜索文本。
 
 ![](images/image-20210310173858088.png)
 
-Notice how the album covers load one by one, and the UI remains responsive.
+注意专辑封面逐个加载，并且界面保持响应。
 
-On the next page, you will learn how to return the selected album from dialog, when the user clicks  **Buy Album**.&#x20;
+在下一页中，您将学习如何在用户单击 **购买专辑** 时从对话框返回所选专辑。

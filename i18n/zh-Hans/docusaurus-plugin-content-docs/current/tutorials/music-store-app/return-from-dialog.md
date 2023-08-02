@@ -2,25 +2,25 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Dialog Return
+# 对话框返回
 
-On the this page you add code to return a selected album from the search dialog to the main window.&#x20;
+在这一页中，您将添加代码，从搜索对话框返回选定的专辑传递给主窗口。
 
-## Buy Album Command
+## 购买专辑命令
 
-The first step here is for you to add a reactive command to the music store view model. You will bind this to the **Buy Album** button on the music store view.  &#x20;
+首先，您需要在音乐商店视图模型中添加一个响应式命令。您将把它绑定到音乐商店视图上的 **购买专辑** 按钮。
 
-Follow this procedure to add the reactive command:
+按照以下步骤添加响应式命令：
 
-- Stop the app if it is running.
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Add the reactive command declaration, as shown:
+- 如果应用程序正在运行，请停止它。
+- 找到并打开 **MusicStoreViewModel.cs** 文件。
+- 添加响应式命令声明，如下所示：
 
 ```csharp
 public ReactiveCommand<Unit, AlbumViewModel?> BuyMusicCommand { get; }
 ```
 
-- Add code to the constructor to initialize the reactive command, as shown:
+- 在构造函数中添加代码以初始化响应式命令，如下所示：
 
 ```csharp
 public MusicStoreViewModel()
@@ -34,35 +34,35 @@ public MusicStoreViewModel()
 }
 ```
 
-Notice you are using `ReactiveCommand` here. This is provided by the _ReactiveUI_ framework to implement some of the MVVM interactions. Specifically, it will allow us to pass an argument of class `AlbumViewModel` back to the main window view model, when the button is clicked.
+注意这里使用了 `ReactiveCommand`。这是由 _ReactiveUI_ 框架提供的，用于实现一些 MVVM 交互。具体来说，它将允许我们在按钮被点击时将一个 `AlbumViewModel` 类的参数传递回主窗口视图模型。
 
-## Button Data Binding
+## 按钮数据绑定
 
-Your next step is bind the **Buy Album** button to the reactive command in the music store view model, follow this procedure:
+您的下一步是将 **购买专辑** 按钮绑定到音乐商店视图模型中的响应式命令，按照以下步骤操作：
 
-- Locate and open the **MusicStoreView .cs** file. &#x20;
-- Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
+- 找到并打开 **MusicStoreView.cs** 文件。
+- 将数据绑定 `Command="{Binding BuyMusicCommand}"` 添加到按钮元素中。
 
-## Close the Dialog
+## 关闭对话框
 
-In this step, you will add some window management so that the dialog closes when the user clicks the **Buy Album** button. This is needed in addition to the data binding you just added.
+在这一步中，您将添加一些窗口管理代码，以便在用户单击 **购买专辑** 按钮时关闭对话框。这是除了您刚刚添加的数据绑定之外所需的。
 
-As you saw during coding for the dialog open, you implement window management in the code-behind for a window, and use features of the `ReactiveWindow` from the _ReactiveUI_ framework.
+正如您在打开对话框的代码中所看到的，您可以在窗口的代码后台实现窗口管理，并使用 _ReactiveUI_ 框架的 `ReactiveWindow` 功能。
 
-To add code to close the dialog, follow this procedure:
+按照以下步骤添加关闭对话框的代码：
 
-- Locate and open the **MusicStoreWindow.axaml.cs** file.&#x20;
-- Add a reference to the system `using System;`&#x20;
-- Change the base class so the view inherits from `ReactiveWindow<MusicStoreViewModel>`.
-- Then add the following line to the end of the constructor:
+- 找到并打开 **MusicStoreWindow.axaml.cs** 文件。
+- 添加对 `using System;` 的引用。
+- 更改基类，使视图继承自 `ReactiveWindow<MusicStoreViewModel>`。
+- 在构造函数的末尾添加以下行：
 
 ```csharp
 this.WhenActivated(action => action(ViewModel!.BuyMusicCommand.Subscribe(Close)));
 ```
 
-The _ReactiveUI_ `WhenActivated` method defines what happens when the window is activated (becomes visible on the screen). The lambda expression will be called, and it is passed an action that is disposable, so that it can be unsubscribed when the window is no longer active.
+_ReactiveUI_ 的 `WhenActivated` 方法定义了窗口激活时（在屏幕上可见）发生的操作。Lambda 表达式将被调用，并传递一个可释放的操作，以便在窗口不再处于活动状态时取消订阅。
 
-Your music store window code-behind should now look like this.
+您的音乐商店窗口代码后台现在应该如下所示：
 
 ```csharp
 using Avalonia.ReactiveUI;
@@ -83,10 +83,10 @@ namespace Avalonia.MusicStore.Views
 }
 ```
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
-- Type some search text.
-- Click an album to select it.
-- Click **Buy Album**.
+- 点击 **调试** 编译并运行项目。
+- 点击图标按钮。
+- 输入一些搜索文本。
+- 点击一个专辑进行选择。
+- 点击 **购买专辑**。
 
-You will see the dialog close, but nothing happens in the main window! On the next page you will learn how to add the selected album to a collection in the main window.&#x20;
+您将看到对话框关闭，但主窗口中没有任何变化！在下一页中，您将学习如何将所选专辑添加到主窗口的集合中。

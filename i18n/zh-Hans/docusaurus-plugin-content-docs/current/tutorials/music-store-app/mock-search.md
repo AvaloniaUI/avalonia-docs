@@ -2,18 +2,18 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Mock Search
+# 模拟搜索
 
-On this page you will create the view model for the album search feature, and then bind it to the controls on the new user control. At this stage you will use a mock of the search itself, so that you can concentrate on the view model.
+在本页面上，您将为专辑搜索功能创建视图模型，然后将其绑定到新用户控件上的控件上。现在，您将使用模拟的搜索，以便专注于视图模型。
 
-## Reactive View Model  &#x20;
+## 响应式视图模型
 
-The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data binding system. You add this support by deriving your view model from the `ReactiveObject` class, via the `ViewModelBase` class that was added to your project at the start, by the solution template.&#x20;
+_ReactiveUI_ 框架为 _Avalonia UI_ 提供了对其数据绑定系统的支持。您可以通过从 `ReactiveObject` 类派生您的视图模型来添加此支持，这是通过在项目开始时由解决方案模板添加到您的项目中的 `ViewModelBase` 类实现的。
 
-Follow this procedure to derive from the `ReactiveObject` class:
+按照以下步骤从 `ReactiveObject` 类派生类：
 
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Add the code to derive the class from `ViewModelBase`.
+- 找到并打开 **MusicStoreViewModel.cs** 文件。
+- 添加代码以从 `ViewModelBase` 派生类。
 
 ```csharp
 namespace Avalonia.MusicStore.ViewModels
@@ -24,20 +24,18 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-This adds the important extension method `RaiseAndSetIfChanged` to your view model, and will allow you to give the properties there the ability to notify changes to the view.  &#x20;
+这将为您的视图模型添加重要的扩展方法 `RaiseAndSetIfChanged`，并允许您为其中的属性提供通知更改的能力。
 
 :::info
-To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).&#x20;
+要了解 MVVM 模式和通知背后的概念，请参阅[此处](../../concepts/the-mvvm-pattern/)。
 :::
 
-At this stage, you will create two properties for the search application logic:
+在这个阶段，您将为搜索应用程序逻辑创建两个属性：
 
-* A text string that is the search criteria,&#x20;
-* A Boolean that indicates whether the search is busy.&#x20;
+* 一个文本字符串，作为搜索条件，
+* 一个布尔值，指示搜索是否繁忙。
 
-<!---->
-
-- Add the following code to implement the above properties:
+添加以下代码来实现上述属性：
 
 ```csharp
 using ReactiveUI;
@@ -65,16 +63,16 @@ namespace AvaloniaApplication11.ViewModels
 }
 ```
 
-You can see that the properties have a normal public getter which returns the private value field; but the setter calls the `RaiseAndSetIfChanged` method - in order to implement the notification.
+您可以看到，这些属性具有正常的公共 getter，它返回私有值字段；但是 setter 调用了 `RaiseAndSetIfChanged` 方法，以实现通知。
 
-## Data Binding
+## 数据绑定
 
-Next you will add a data binding to link the view to the view model. The text box will be bound to the search text, and whether the progress bar is visible to the user will  be bound to the Boolean.&#x20;
+接下来，您将添加数据绑定以将视图与视图模型关联起来。文本框将绑定到搜索文本，进度条是否对用户可见将绑定到布尔值。
 
-Follow this procedure to add data binding to the view:
+按照以下步骤将数据绑定添加到视图中：
 
-- Locate and open the **MusicStoreView.axaml** file.
-- Add the binding expressions shown:
+- 找到并打开 **MusicStoreView.axaml** 文件。
+- 添加所示的绑定表达式：
 
 ```markup
 <DockPanel>
@@ -89,19 +87,19 @@ Follow this procedure to add data binding to the view:
 </DockPanel>
 ```
 
-## Album Search and Selection
+## 专辑搜索与选择
 
-Your next step is to create the music store view model properties needed to process albums. These are:
+下一步是创建音乐商店视图模型属性，以处理专辑。这些属性包括：
 
-* a collection of album view models to represent the albums that the search might find,&#x20;
-* and a property to hold an album if the user selects one.&#x20;
+* 一个专辑视图模型的集合，用于表示搜索可能找到的专辑，
+* 一个属性，用于保存用户选择的专辑。
 
-Here you will use the `ObservableCollection` - this is a collection is capable of notification, and it is provided by the .NET framework.
+在这里，您将使用 `ObservableCollection`，这是一个由 .NET 框架提供的能够进行通知的集合。
 
-Follow this procedure to add the above properties:
+按照以下步骤添加上述属性：
 
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Add the following code to the class:
+- 找到并打开 **MusicStoreViewModel.cs** 文件。
+- 将以下代码添加到类中：
 
 ```csharp
 private AlbumViewModel? _selectedAlbum;
@@ -114,24 +112,23 @@ public AlbumViewModel? SelectedAlbum
     set => this.RaiseAndSetIfChanged(ref _selectedAlbum, value);
 }
 ```
+接下来，将这些属性绑定到视图中的列表框，按照以下步骤进行操作：
 
-Next to bind these properties to the list box in the view, follow this procedure:
-
-- Locate and open the **MusicStoreView.axaml** file.
-- Add the binding expressions shown to the `<ListBox>` element:
+- 定位并打开 **MusicStoreView.axaml** 文件。
+- 将所示的绑定表达式添加到 `<ListBox>` 元素中：
 
 ```
 <ListBox Items="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
 ```
 
-## Mock Data
+## 模拟数据
 
-Now, to test the app at this stage, you will add some mock data directly to the view model.&#x20;
+现在，为了在这个阶段测试应用程序，您将直接向视图模型添加一些模拟数据。
 
-Follow this procedure:
+按照以下步骤进行操作：
 
-- Locate and open the **MusicStoreViewModel.cs** file again.
-- Add a constructor to the class, as shown:
+- 定位并再次打开 **MusicStoreViewModel.cs** 文件。
+- 向类添加一个构造函数，如下所示：
 
 ```csharp
 public MusicStoreViewModel()
@@ -142,8 +139,8 @@ public MusicStoreViewModel()
 }
 ```
 
-- Click **Debug** to compile and run the project.
+- 点击 **调试** 编译并运行项目。
 
 ![](images/text-list.png)
 
-This shows that the data binding from the list to the album collection in the view model is working, but the view is not graphical yet. On the next page you will develop the app further by replacing the text with graphical album tiles. &#x20;
+这表明从视图模型中的专辑集合到视图中的列表的数据绑定正在工作，但是视图还没有图形化。在下一页中，您将通过用图形化的专辑磁贴替换文本来进一步开发应用程序。

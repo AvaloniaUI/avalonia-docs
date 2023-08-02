@@ -2,29 +2,29 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Add Items to the User's Collection
+# 将项目添加到用户的集合中
 
-On this page you will implement a collection of albums that the user has selected using the search dialog and the **Buy Album** button, and display them in the main window.
+在本页中，您将实现一个包含用户使用搜索对话框和 **购买专辑** 按钮选择的专辑的集合，并在主窗口中显示它们。
 
-## Observable Collection
+## 可观察集合
 
-Your first step here is to add an observable collection to the main window view model. This will hold the albums that the user has selected using the search dialog.
+您的第一步是在主窗口视图模型中添加一个可观察集合。这将保存用户使用搜索对话框选择的专辑。
 
-Follow this procedure:
+按照以下步骤操作：
 
-- Stop the app if it is running.
-- Locate and open the **MainWindowViewModel.cs** file.
-- Add an observable collection, as shown:
+- 如果应用程序正在运行，请停止它。
+- 找到并打开 **MainWindowViewModel.cs** 文件。
+- 添加一个可观察集合，如下所示：
 
 ```csharp
 public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 ```
 
-## Process the Dialog Result
+## 处理对话框结果
 
-Your next step is to alter the buy music reactive command so that it adds the dialog return object (an `AlbumViewModel`) to the observable collection. Follow this procedure:
+下一步是修改购买音乐的响应式命令，以便将对话框返回的对象（一个 `AlbumViewModel`）添加到可观察集合中。按照以下步骤操作：
 
-- Alter the code that initializes the reactive command, as shown:
+- 修改初始化响应式命令的代码，如下所示：
 
 ```csharp
 BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
@@ -38,20 +38,20 @@ BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 });
 ```
 
-## Main Window View
+## 主窗口视图
 
-Next you will add XAML to the main window view to display the items in the observable collection. Again you will use a **data template**, this time inside an `ItemsControl`. The items control is actually  the base class for controls that display multiple items (like the list box), so some of this will already be familiar.&#x20;
+接下来，您将在主窗口视图中添加 XAML 以显示可观察集合中的项目。同样，使用一个 **数据模板**，这次是在 `ItemsControl` 内部。`ItemsControl` 实际上是显示多个项目的控件的基类（如列表框），因此其中的一些内容可能已经很熟悉了。
 
-To add the items control and its data template, follow this procedure:
+要添加 `ItemsControl` 及其数据模板，请按照以下步骤操作：
 
-- Locate and open the **MainWindow.axaml** file.
-- Add the following namespace declaraton to the `<Window>` element:
+- 找到并打开 **MainWindow.axaml** 文件。
+- 将以下命名空间声明添加到 `<Window>` 元素中：
 
 ```
 xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 ```
 
-- Under the button element, add the XAML as shown:
+- 在按钮元素下方，添加如下所示的 XAML：
 
 ```xml
 <ItemsControl Margin="0 40 0 0" Items="{Binding Albums}">
@@ -71,15 +71,15 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 
 
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
-- Type some search text.
-- Click an album to select it.
-- Click **Buy Album**.
-- Repeat another time.
+- 点击 **调试** 编译并运行项目。
+- 点击图标按钮。
+- 输入一些搜索文本。
+- 点击一个专辑进行选择。
+- 点击 **购买专辑**。
+- 再次重复。
 
 ![](images/image-20210310175949319.png)
 
-You will see the user's album collection building as you search and select. However, if you stop the app running and then start it again, the collection reverts to empty.&#x20;
+您将看到在搜索和选择时用户的专辑集合正在构建。但是，如果停止运行应用程序，然后再次启动它，集合将恢复为空。
 
-For the finishing touch, on the next page you will learn how to add some data persistence to the app.
+在下一页中，您将学习如何为应用程序实现数据持久化。
