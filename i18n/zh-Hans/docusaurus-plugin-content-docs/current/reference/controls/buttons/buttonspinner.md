@@ -2,17 +2,17 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Button Spinner
+# 按钮旋转器
 
-The button spinner presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
+按钮旋转器是一个包含向上和向下旋转按钮的控件。该按钮的内容是灵活的，但您需要编写相当多的行为代码。
 
-## Useful Properties
+## 有用的属性
 
-You will probably use these properties most often:
+您可能经常使用以下属性：
 
-<table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ButtonSpinnerLocation</code></td><td>Location of the spinner buttons: left or right.</td></tr><tr><td><code>ValidSpinDirection</code></td><td>Used to limit spin direction: increase, decrease or none. </td></tr></tbody></table>
+<table><thead><tr><th width="261">属性</th><th>描述</th></tr></thead><tbody><tr><td><code>ButtonSpinnerLocation</code></td><td>旋转按钮的位置：左侧或右侧。</td></tr><tr><td><code>ValidSpinDirection</code></td><td>用于限制旋转方向：增加、减少或无。</td></tr></tbody></table>
 
-## Example
+## 示例
 
 ```xml
 <ButtonSpinner Height="20" Width="130" ButtonSpinnerLocation="Left">
@@ -21,12 +21,12 @@ You will probably use these properties most often:
 ```
 
 <img src='/img/gitbook-import/assets/image (3) (3).png>' alt=''/>
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ButtonSpinner/).
+有关此控件的完整API文档，请参阅 [这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ButtonSpinner/).
 :::
 
 :::info
-View the source code on _GitHub_ [`ButtonSpinner.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ButtonSpinner.cs)
+在 _GitHub_ 上查看源代码 [`ButtonSpinner.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ButtonSpinner.cs)
 :::

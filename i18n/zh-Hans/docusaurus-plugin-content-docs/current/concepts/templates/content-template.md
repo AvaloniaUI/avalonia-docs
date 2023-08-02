@@ -2,18 +2,18 @@
 description: CONCEPTS - Data Templates
 ---
 
-# Content Template
+# 内容模板
 
-The purpose of a data template is that it defines how _Avalonia UI_ should display an object created from a class that you have defined, and that is not a control, or a simple string.&#x20;
+数据模板的目的是定义 _Avalonia UI_ 如何显示您所定义的类创建的对象，该对象不是控件或简单的字符串。
 
-Using a data template is a two-stage process:
+使用数据模板是一个两步的过程：
 
-1. Define the data template
-2. Choose the data template for the content&#x20;
+1. 定义数据模板
+2. 为内容选择数据模板
 
-One way to use a data template is to set the `ContentTemplate` property of a control directly. This works on a window (because like any control it inherits from `ContentControl`).&#x20;
+使用数据模板的一种方式是直接设置控件的 `ContentTemplate` 属性。这适用于窗口（因为窗口像任何控件一样继承自 `ContentControl`）。
 
-You can define a data template (for no particular class) using the `DataTemplate` tag, a composition of built-in controls, and some bindings. For example:
+您可以使用 `DataTemplate` 标签定义数据模板（针对任何特定的类），它是内置控件和一些绑定的组合。例如：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -41,13 +41,13 @@ You can define a data template (for no particular class) using the `DataTemplate
 </Window>
 ```
 
-In the above, the bindings refer to the properties of any class present in the content zone of the window. Here the window content is the same student object as you used before; but when you run this code, _Avalonia UI_ now displays:&#x20;
+在上面的示例中，绑定引用了窗口内容区域中的任何类的属性。这里窗口的内容是与之前相同的学生对象，但是当您运行这段代码时，_Avalonia UI_ 现在会显示如下内容：
 
-<img src="/img/gitbook-import/assets/image (47).png" alt=""/>
+![图片](/img/gitbook-import/assets/image (47).png)
 
-Using a data template in this way, you have both defined and chosen the data template for the content in the same place - by setting the `ContentTemplate` property of the window directly.
+以这种方式使用数据模板，您在同一个地方定义并选择了内容的数据模板 - 通过直接设置窗口的 `ContentTemplate` 属性。
 
-The code works correctly because the object in the window's content zone happens to have the properties specified in the bindings. As an exercise: introduce a binding for a property that does not exist on the student class. (Your app will still work, but it ignores the property it cannot find.)
+代码能够正常工作是因为窗口内容区域的对象恰好具有绑定中指定的属性。作为练习：尝试对学生类中不存在的属性进行绑定（您的应用程序仍然可以正常工作，但会忽略找不到的属性）。
 
-On the next page, you will see how to define multiple data templates, and choose the correct template from the class of the object in the window's content zone.
+在下一页中，您将了解如何定义多个数据模板，并根据窗口内容区域对象的类选择正确的模板。
 

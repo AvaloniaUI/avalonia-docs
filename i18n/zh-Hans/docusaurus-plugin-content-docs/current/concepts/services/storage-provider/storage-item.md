@@ -3,83 +3,83 @@ id: storage-item
 title: Storage Items
 ---
 
-# Storage Items
+# 存储项
 
-## Common members for StorageFile and StorageFolder
+## StorageFile 和 StorageFolder 的共同成员
 
 ### Name
 
-Gets a short name of the item including the file name extension if there is one.
+获取项的短名称，如果有的话，包括文件扩展名。
 
 ### Path
 
-Gets the file-system path of the item.
+获取项的文件系统路径。
 
 :::note
-Android backend might return file path with "content:" scheme.
-Browser and iOS backends might return relative uris.
+Android 后端可能返回带有 "content:" 方案的文件路径。
+浏览器和 iOS 后端可能返回相对 URI。
 :::
 
 :::warning
-DO NOT use Path property to preserve access to the file or folder. Instead see [Bookmarks](./bookmarks) page on how to keep access to the storage items.
+请勿使用 Path 属性来保留对文件或文件夹的访问。而是请参阅 [Bookmarks](./bookmarks) 页面，了解如何保持对存储项的访问。
 
-DO NOT use Path property to directly read file by its path, as it won't work on most of mobile and browser platforms. Instead use [OpenReadAsync](#openreadasync) and [OpenWriteAsync](#openwriteasync).
+请勿直接使用 Path 属性按路径直接读取文件，因为在大多数移动和浏览器平台上不起作用。请改用 [OpenReadAsync](#openreadasync) 和 [OpenWriteAsync](#openwriteasync)。
 :::
 
 ### CanBookmark
 
-Returns true is item can be bookmarked and reused later.
+返回项是否可以被加入书签并在以后重用。
 
 ### SaveBookmarkAsync
 
-Saves items to a bookmark.
-Returns identifier of a bookmark. Can be null if OS denied request.
+将项保存为书签。
+返回书签的标识符。如果操作系统拒绝请求，则可能为空。
 
 ### GetBasicPropertiesAsync
 
-Gets the basic properties of the current item.
-Currently available properties:
-- Size
-- DateCreated
-- DateModified
+获取当前项的基本属性。
+当前可用的属性有：
+- 大小
+- 创建日期
+- 修改日期
 
 ### GetParentAsync
 
-Gets the parent folder of the current storage item.
+获取当前存储项的父文件夹。
 
 ### DeleteAsync
 
-Deletes the current storage item and it's contents
+删除当前存储项及其内容。
 
 ### MoveAsync
 
-Moves the current storage item and it's contents to a IStorageFolder
+将当前存储项及其内容移动到 IStorageFolder。
 
-## StorageFile members
+## StorageFile 成员
 
 ### OpenReadAsync
 
-Opens a stream for read access.
+打开一个用于读取访问的流。
 
 ### OpenWriteAsync
 
-Opens stream for writing to the file.
+打开一个用于写入文件的流。
 
-## StorageFolder members
+## StorageFolder 成员
 
 ### GetItemsAsync
 
-Gets the files and subfolders in the current folder.
-When this method completes successfully, it returns a list of the files and folders in the current folder. Each item in the list is represented by an IStorageItem implementation object.
+获取当前文件夹中的文件和子文件夹。
+当此方法成功完成时，它返回当前文件夹中文件和文件夹的列表。列表中的每个项都由 IStorageItem 实现对象表示。
 
 :::note
-This method is lazily evaluate and is async.
+该方法是惰性求值的，并且是异步的。
 :::
 
 ### CreateFileAsync
 
-Creates a file with specified name as a child of the current storage folder
+在当前存储文件夹的子级中创建一个具有指定名称的文件。
 
 ### CreateFolderAsync
 
-Creates a folder with specified name as a child of the current storage folder
+在当前存储文件夹的子级中创建一个具有指定名称的文件夹。

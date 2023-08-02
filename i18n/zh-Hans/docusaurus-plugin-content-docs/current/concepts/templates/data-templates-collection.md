@@ -2,15 +2,15 @@
 description: CONCEPTS - Data Templates
 ---
 
-# Data Templates Collection
+# 数据模板集合
 
-Every control in _Avalonia UI_ has a `DataTemplates` collection where you can place any number of data template definitions. You can then choose the template to use for display by class type. &#x20;
+_Avalonia UI_中的每个控件都有一个`DataTemplates`（数据模板）集合，您可以在其中放置任意数量的数据模板定义。然后，您可以根据类类型选择要用于显示的模板。 
 
-When a control does not have a data template set directly in its `ContentTemplate` property (as on the previous page); then it will choose a template from in its `DataTemplates` collection that matches the class of the object being displayed.  This applies to a window.
+当一个控件在其`ContentTemplate`属性中没有直接设置数据模板（如上一页所示）时，它将从其`DataTemplates`集合中选择一个与正在显示的对象的类匹配的模板。这适用于窗口。
 
-Data templates are matched by type: a match occurs when the class of the object being displayed is the same as the fully-qualified class name specified in the `DataType` property of a template.
+数据模板是根据类型匹配的：当显示的对象的类与模板的`DataType`（数据类型）属性中指定的完全限定类名相同时，就会进行匹配。
 
-So you can modify the previous sample to use the `DataTemplates` collection, as follows:
+因此，您可以修改前面的示例以使用`DataTemplates`集合，如下所示：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -24,9 +24,9 @@ So you can modify the previous sample to use the `DataTemplates` collection, as 
   <Window.DataTemplates>
     <DataTemplate DataType="{x:Type local:Student}">
       <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
-        <TextBlock Grid.Row="0" Grid.Column="0">First Name:</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="0">姓:</TextBlock>
         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding FirstName}"/>
-        <TextBlock Grid.Row="1" Grid.Column="0">Last Name:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0">名:</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding LastName}"/>
       </Grid>
     </DataTemplate>
@@ -36,7 +36,7 @@ So you can modify the previous sample to use the `DataTemplates` collection, as 
 </Window>
 ```
 
-This results in exactly the same display as on the previous page:
+这将得到与上一页完全相同的显示效果：
 
 <img src="/img/gitbook-import/assets/image (57).png" alt=""/>
 

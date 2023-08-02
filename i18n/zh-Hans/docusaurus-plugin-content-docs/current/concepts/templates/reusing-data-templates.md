@@ -2,32 +2,32 @@
 description: CONCEPTS - Data Templates
 ---
 
-# Reusing Data Templates
+# 重复使用数据模板
 
-If you define a data template in the `Window.DataTemplates`collection (as on the previous page), you can reuse it anywhere in the window. However, you can also extend the reuse of a data template to any window in your application.&#x20;
+如果您在`Window.DataTemplates`集合中定义了数据模板（如前一页所示），则可以在窗口中的任何位置重用它。然而，您还可以扩展数据模板的重用范围，让其在应用程序的任何窗口中都可用。
 
-This works because _Avalonia UI_ performs a hierarchical search of its logical tree to choose a data template. At its most extensive, the search starts in a control, extends to any parent controls (recursively), then looks in the window (as on the previous page), and finally looks at the application itself for a data templates collection.&#x20;
+这是因为_Avalonia UI_会在逻辑树中执行层次搜索来选择数据模板。最广泛的搜索从一个控件开始，然后扩展到任何父控件（递归），然后查找窗口（如前一页所示），最后查找应用程序本身的数据模板集合。
 
 :::info
-From more information on the logical tree concept in _Avalonia UI_ , see [here](../ui-composition.md).
+有关_Avalonia UI_中逻辑树概念的更多信息，请参阅[这里](../ui-composition.md)。
 :::
 
-Therefore if you want to reuse a template in any window of your application: define templates in the `Application.DataTemplates` collection, located in the app.axaml file.
+因此，如果您想要在应用程序的任何窗口中重用模板：请在`app.axaml`文件中定义模板并放入`Application.DataTemplates`集合中。
 
-To see how this works, first add another view model as follows:
+为了演示这一点，首先添加另一个视图模型，如下所示：
 
 ```csharp
 namespace MySample
 {
     public class Teacher
     {
-        public string Name { get; set } = String.Empty;
+        public string Name { get; set; } = String.Empty;
         public string Subject { get; set; } = String.Empty;
     }
 }
 ```
 
-And in the app.axaml file, add a data template for the type `Teacher`:
+然后在`app.axaml`文件中添加一个`Teacher`类型的数据模板：
 
 ```markup
 <Application xmlns="https://github.com/avaloniaui"
@@ -51,7 +51,7 @@ And in the app.axaml file, add a data template for the type `Teacher`:
 </Application>
 ```
 
-Use a local definition of a teacher in the window content zone:
+然后在窗口的内容区域使用一个`Teacher`的本地定义：
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -77,12 +77,12 @@ Use a local definition of a teacher in the window content zone:
 </Window>
 ```
 
-Although there is no data template for a teacher in the window; Avalonia UI will find the template you defined in the application, and the display works as planned:&#x20;
+尽管窗口中没有`Teacher`的数据模板，Avalonia UI 会找到您在应用程序中定义的模板，并且显示效果如预期：
 
-<img src="/img/gitbook-import/assets/image (50).png" alt=""/>
+![Teacher Display](/img/gitbook-import/assets/image (50).png)
 
 :::warning
-Remember to specify a `DataType` in every data template, wherever it is defined, because if _Avalonia UI_ fails to find a data template match for your data; then nothing will be displayed!
+请确保在每个数据模板中指定`DataType`，无论它在哪里定义，因为如果_Avalonia UI_无法找到匹配您数据的数据模板，则什么都不会显示！
 :::
 
 >

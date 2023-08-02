@@ -3,7 +3,7 @@ id: index
 title: Services
 ---
 
-This section will introduce you to the services inlcuded in an application.
+这部分将向您介绍应用程序中包含的服务。
 
 ```mdx-code-block
 import {DocsCardList} from '../../../../../../src/components/DocsCard';

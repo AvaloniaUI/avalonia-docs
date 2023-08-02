@@ -3,42 +3,44 @@ id: focus-manager
 title: Focus Manager
 ---
 
-The `FocusManager` service is responsible for managing the keyboard focus for the application. It keeps track of the currently focused element and the current focus scope. 
+`FocusManager`服务负责管理应用程序的键盘焦点。它会跟踪当前聚焦的元素和当前焦点范围。
 
-The `FocusManager` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../toplevel) page:
+通过`TopLevel`或`Window`的实例可以访问`FocusManager`，有关访问`TopLevel`的更多细节，请访问[TopLevel](../toplevel)页面：
 ```cs
 var focusManager = window.FocusManager;
 ```
 
-## Methods
+## 方法
 
-### GetFocusedElement()
-Returns the currently focused element.
+### GetFocusedElement()
+
+返回当前聚焦的元素。
 
 ```cs
 IInputElement? GetFocusedElement()
 ```
 
 ### ClearFocus()
-Clears the currently focused element.
+
+清除当前聚焦的元素。
 
 ```cs
 void ClearFocus()
 ```
 
-## Tips
+## 提示
 
-### Focusing a control
+### 聚焦控件
 
-Developers usually don't need a `FocusManager` service to focus a control. 
-It can be achieved with a method call directly on the control:
+通常开发人员不需要使用`FocusManager`服务来聚焦控件。
+可以直接通过调用控件的方法实现：
 ```cs
 var hasFocused = button.Focus();
 ```
 
-`Focus` method might return `false` is control is not visible and has `Focusable` property set to false.
+如果控件不可见并且`Focusable`属性设置为false，`Focus`方法可能返回`false`。
 
-### Listening for global focus changes
+### 监听全局焦点变化
 
-While `FocusManager.GetFocusedElement` method allows to get currently focused control, it's not suitable as an event.
-Instead, please use `InputElement.GotFocusEvent.Raised.Subscribe(handler)` method. Note, it listens events globally across all top levels.
+虽然`FocusManager.GetFocusedElement`方法允许获取当前聚焦的控件，但它不适合作为事件使用。
+相反，请使用`InputElement.GotFocusEvent.Raised.Subscribe(handler)`方法。注意，它会在所有顶级窗口中全局监听事件。

@@ -2,43 +2,43 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Data Grid Columns
+# 数据表格列
 
-A data grid can contain multiple data grid columns and _Avalonia UI_ has two built-in column types which can be used to display a different data types, and a template type that can customise the column appearance.&#x20;
+数据表格可以包含多个数据表格列，_Avalonia UI_ 提供了两种内置列类型，用于显示不同的数据类型，还有一个可以自定义列外观的模板类型。
 
-| Column Type              | Description                                                                                                                                                               |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `DataGridTextColumn`     | Presents a text box for display and editing of the column data. You can control font properties like family and size in this column type.                                 |
-| `DataGridCheckBoxColumn` | Presents a check box for display and editing of the column data, when it is Boolean. This column type also supports the three-state check box when the value is nullable. |
-| `DataGridTemplateColumn` | Can be used to customise the presentation of column data, for both display and editing.                                                                                   |
+| 列类型                  | 描述                                                                                                     |
+| ------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `DataGridTextColumn`     | 用于显示和编辑列数据的文本框。您可以在此列类型中控制字体属性，比如字体家族和大小。                                 |
+| `DataGridCheckBoxColumn` | 用于显示和编辑列数据的复选框，当数据类型为布尔值时。此列类型还支持当值为可空时的三态复选框。                             |
+| `DataGridTemplateColumn` | 可用于自定义列数据的展示和编辑。                                                                             |
 
-## Useful Properties
+## 有用的属性
 
-Most of these properties are common to all three column types:
+大部分属性在这三种列类型中都是通用的：
 
-| Property         | Description                                                                                                                                     |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Header`         | The header content of the column.                                                                                                               |
-| `HeaderTemplate` | Uses a data template for the column.                                                                                                            |
-| `IsReadOnly`     | Whether the column is read-only. If the data grid itself is read-only, then the column is also read-only, whatever the value of this  property. |
-| `IsThreeState`   | Check box column only. Enables the third (filled) state when a nullable Boolean value is null.                                                  |
-| `Width`          | The column width can be given in absolute or relative size (see below).                                                                         |
+| 属性              | 描述                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------- |
+| `Header`          | 列的标题内容。                                                                           |
+| `HeaderTemplate`  | 使用数据模板作为列的标题。                                                               |
+| `IsReadOnly`      | 列是否为只读。如果数据表格本身是只读的，那么无论此属性的值如何，列都是只读的。                  |
+| `IsThreeState`    | 仅适用于复选框列。当可空布尔值为null时，启用第三个（填充）状态。                              |
+| `Width`           | 列宽度可以是绝对大小或相对大小（见下文）。                                                   |
 
-## Column Width
+## 列宽度
 
-If you do not set the width for a column, it will be resized to fit the contents, and a horizontal scrollbar will be added to the grid if necessary.&#x20;
+如果您没有为列设置宽度，它将被调整以适应内容，并在必要时为网格添加水平滚动条。
 
-You can set the width of a column absolutely, for example:
+您可以绝对设置列的宽度，例如：
 
 ```xml
 <DataGridTextColumn Width="200" />
 ```
 
-This will cause the column content that does not fit to be hidden.
+这将导致不适合的列内容被隐藏。
 
-Alternatively, you can specify relative automatic sizes. This uses \* to represent an equal division of the available width, and then multiples like 2\*.  Any columns without a width specified are sized to their content.
+或者，您可以指定相对自动大小。这使用 * 表示可用宽度的等分，然后使用类似 2* 的倍数。未指定宽度的列将根据其内容调整大小。
 
-For example to divide a data grid into 3 equal columns:
+例如，要将数据表格划分为3个等宽的列：
 
 ```xml
 <DataGridTextColumn Width="*" />
@@ -46,11 +46,9 @@ For example to divide a data grid into 3 equal columns:
 <DataGridTextColumn Width="*" />
 ```
 
-Example
+示例
 
-This example improves a data grid by expanding two columns equally across the width:
-
-
+下面的示例通过将两列等宽展开来改进数据表格的外观：
 
 ```xml
 <Window ... >
@@ -62,17 +60,16 @@ This example improves a data grid by expanding two columns equally across the wi
           GridLinesVisibility="All"
           BorderThickness="1" BorderBrush="Gray">
     <DataGrid.Columns>
-      <DataGridTextColumn Header="First Name" Width="*" 
+      <DataGridTextColumn Header="名字" Width="*" 
               Binding="{Binding FirstName}"/>
-      <DataGridTextColumn Header="Last Name" Width="*" 
+      <DataGridTextColumn Header="姓氏" Width="*" 
               Binding="{Binding LastName}" />
     </DataGrid.Columns>
   </DataGrid>
 </Window>
 ```
 
-
-```csharp title='C# View Model'
+```csharp title='C# 视图模型'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -97,8 +94,7 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
-```csharp title='C# Item Class'
+```csharp title='C# 项类'
 public class Person
 {
     public string FirstName { get; set; }
@@ -112,26 +108,24 @@ public class Person
 }
 ```
 
+在预览窗格中可以看到效果，因为 `<Design.DataContext>` 元素创建了绑定的视图模型：
 
+<img src='/img/gitbook-import/assets/image (4) (1).png' alt='' />
 
-It works in the preview pane because the `<Design.DataContext>` element creates a view model to bind to:
-
-<img src='/img/gitbook-import/assets/image (4) (1).png' alt=''/>
-
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about the data grid text column, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTextColumn/).
+有关数据表格文本列的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTextColumn/)。
 :::
 
 :::info
-For the complete API documentation about data grid check box column, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridCheckBoxColumn/).
+有关数据表格复选框列的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridCheckBoxColumn/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`DataGridTextColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridTextColumn.cs)
+查看 _GitHub_ 上的源代码[`DataGridTextColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridTextColumn.cs)。
 :::
 
 :::info
-View the source code on _GitHub_ [`DataGridCheckBoxColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridCheckBoxColumn.cs)
+查看 _GitHub_ 上的源代码[`DataGridCheckBoxColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridCheckBoxColumn.cs)。
 :::
