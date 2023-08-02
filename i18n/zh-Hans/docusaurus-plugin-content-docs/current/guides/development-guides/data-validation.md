@@ -1,15 +1,15 @@
 ---
 id: data-validation
-title: Data Validation
+title: 数据验证
 ---
 
-# Data Validation
+# 数据验证
 
-Avalonia offers different data validation options. In this section we will show you how you can validate the `Properties` of your `ViewModel` and how you can style the displayed error message.
+Avalonia 提供了不同的数据验证选项。在本节中，我们将向您展示如何验证您的 `ViewModel` 的**属性**，以及如何样式化显示的错误消息。
 
-## Validating a property
+## 验证属性
 
-Avalonia uses [`DataValidationPlugins`](http://reference.avaloniaui.net/api/Avalonia.Data.Core.Plugins/IDataValidationPlugin/) to validate the `Properties` you bound to. Out of the box Avalonia provide these three validation plugins:
+Avalonia 使用 [`DataValidationPlugins`](http://reference.avaloniaui.net/api/Avalonia.Data.Core.Plugins/IDataValidationPlugin/) 来验证您绑定的**属性**。Avalonia 提供了以下三个内置的验证插件：
 
 * [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin)
 * [INotifyDataErrorInfo - ValidationPlugin](data-validation.md#inotifydataerrorinfo---validationplugin)
@@ -17,9 +17,9 @@ Avalonia uses [`DataValidationPlugins`](http://reference.avaloniaui.net/api/Aval
 
 ### DataAnnotations - ValidationPlugin
 
-You can decorate the `Properties` of your `ViewModel` with different [`Validation-Attributes`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute). You can use the build-in ones, use the [`CustomValidationAttribute`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.customvalidationattribute) or create your own by derive from `ValidationAttribute`.
+您可以使用不同的 [`Validation-Attributes`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute) 来装饰您的 `ViewModel` 的**属性**。您可以使用内置的验证属性，使用 [`CustomValidationAttribute`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.customvalidationattribute) 或者通过派生自 `ValidationAttribute` 来创建自己的验证属性。
 
-**Sample: The property EMail is required and must be a valid e-mail-address**
+**示例：属性 EMail 是必需的，并且必须是有效的电子邮件地址**
 
 ```cs
 [Required]
@@ -33,17 +33,17 @@ public string? EMail
 
 ### INotifyDataErrorInfo - ValidationPlugin
 
-Avalonia also supports validation of classes that implement [`INotifyDataErrorInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo). Several `MVVM`-libraries are using this interface for their data validation, for example the [Microsoft.Toolkit.Mvvm](https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/observablevalidator)-package and the [`ReactiveUI.Validation`](https://github.com/reactiveui/ReactiveUI.Validation#inotifydataerrorinfo-support)-package. For usage instructions please visit the documentation of the `MVVM`-package of your choice.
+Avalonia 还支持实现 [`INotifyDataErrorInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo) 接口的类的验证。一些 `MVVM`-库使用此接口进行数据验证，例如 [Microsoft.Toolkit.Mvvm](https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/observablevalidator) 库和 [`ReactiveUI.Validation`](https://github.com/reactiveui/ReactiveUI.Validation#inotifydataerrorinfo-support) 库。有关使用说明，请参阅您选择的 `MVVM`-库的文档。
 
 :::info
-Some libraries like the `Microsoft.Toolkit.Mvvm` use `DataAnnotiations` for their validation. This may result in conflicts with the [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin). Please see [Manage ValidationPlugins](data-validation.md#manage-validationplugins) how to solve this issue.
+像 `Microsoft.Toolkit.Mvvm` 这样的库使用 `DataAnnotiations` 进行验证。这可能会与 [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin) 冲突。请参阅 [管理 ValidationPlugins](data-validation.md#manage-validationplugins) 来解决此问题。
 :::
 
 ### Exception - ValidationPlugin
 
-One more option to validate a property is to raise an [`Exception`](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/creating-and-throwing-exceptions) inside the setter of your property.
+验证属性的另一种选项是在属性的 setter 中引发 [`Exception`](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/creating-and-throwing-exceptions)。
 
-**Sample: Validate the property EMail using `Exceptions`**
+**示例：使用 `Exceptions` 验证属性 EMail**
 
 ```cs
 public string? EMail
@@ -68,14 +68,14 @@ public string? EMail
 ```
 
 :::danger
-Exceptions inside the getter of your property are not allowed and will result in a crash of your application.
+不允许在属性的 getter 中使用异常，否则将导致应用程序崩溃。
 :::
 
-## Customize the appearance of the validation message
+## 自定义验证消息的外观
 
-To display the validation messages, Avalonia has a control called [`DataValidationErrors`](http://reference.avaloniaui.net/api/Avalonia.Controls/DataValidationErrors/). This control is typically placed inside the `ControlTemplate` of all `Controls` that supports data validation, like `TextBox`, `Slider` and other. You can create your own `Style` of the `DataValidationErrors`-control in order to customize the representation of the error messages.
+为了显示验证消息，Avalonia 提供了一个名为 [`DataValidationErrors`](http://reference.avaloniaui.net/api/Avalonia.Controls/DataValidationErrors/) 的控件。这个控件通常放置在所有支持数据验证的 `Controls` 的 `ControlTemplate` 中，比如 `TextBox`、`Slider` 和其他控件。您可以创建自己的 `DataValidationErrors` 控件的样式来自定义错误消息的显示方式。
 
-**Example Style for DataValidationErrors**
+**DataValidationErrors 的示例样式**
 
 ```xml
 <Style Selector="DataValidationErrors">
@@ -122,13 +122,13 @@ To display the validation messages, Avalonia has a control called [`DataValidati
 
 <!-- ![custom validation style](broken-reference) -->
 
-**Custom validation style**
+**自定义验证样式**
 
-## Manage ValidationPlugins
+## 管理 ValidationPlugins
 
-if needed to, you can enable or disable a specific [`ValidationPlugin`](http://reference.avaloniaui.net/api/Avalonia.Data.Core.Plugins/IDataValidationPlugin/) in your App. This can be useful if for example your MVVM-framework uses `DataAnnotations` to validate the property via `INotifyDataErrorInfo`. In that case you would see the message twice. Use the [`ExpressionObserver.DataValidators`](http://reference.avaloniaui.net/api/Avalonia.Data.Core/ExpressionObserver/)-collection to add or remove a specific `ValidationPlugin`.
+如果需要，您可以在您的应用程序中启用或禁用特定的 [`ValidationPlugin`](http://reference.avaloniaui.net/api/Avalonia.Data.Core.Plugins/IDataValidationPlugin/)。如果您的 MVVM 框架使用 `DataAnnotations` 来通过 `INotifyDataErrorInfo` 验证属性，那么您可能会看到两次验证消息。使用 [`ExpressionObserver.DataValidators`](http://reference.avaloniaui.net/api/Avalonia.Data.Core/ExpressionObserver/) 集合来添加或移除特定的 `ValidationPlugin`。
 
-**Example: Remove the DataAnnotations validator**
+**示例：移除 DataAnnotations 验证器**
 
 ```cs
 public override void OnFrameworkInitializationCompleted()

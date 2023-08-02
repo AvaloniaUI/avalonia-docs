@@ -92,7 +92,7 @@
     "description": "The label for category Custom Controls in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Development Guides": {
-    "message": "Development Guides",
+    "message": "开发指南",
     "description": "The label for category Development Guides in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Platforms": {

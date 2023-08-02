@@ -1,38 +1,38 @@
 ---
 id: accessing-the-ui-thread
-title: How To Access the UI Thread
+title: 如何访问UI线程
 ---
 
 
-# How To Access the UI Thread
+# 如何访问UI线程
 
-This guide will show you how to access the UI thread in your _Avalonia UI_ application.&#x20;
+本指南将向您展示如何在您的 _Avalonia UI_ 应用程序中访问UI线程。
 
-_Avalonia UI_ applications have one main thread, and this handles the UI. When you have a process that is intensive, or long running, then you will usually opt to run it on a different thread. Then you may have scenarios where you want to update them main UI thread (for example with progress updates). &#x20;
+_Avalonia UI_ 应用程序有一个主线程，该线程处理UI。当您有一个密集或长时间运行的进程时，通常会选择在不同的线程上运行它。然后，您可能会遇到一些情况，希望在主UI线程中进行更新（例如，进度更新）。
 
-A dispatcher provides services for managing work items on any specific thread. In _Avalonia UI_ you will already have the dispatcher that handles the UI thread. When you need to update the UI from a different thread, you access it through this dispatcher, as follows:
+调度程序提供了在任何特定线程上管理工作项的服务。在 _Avalonia UI_ 中，您已经有了处理UI线程的调度程序。当您需要从不同的线程更新UI时，可以通过此调度程序访问它，如下所示：
 
 ```csharp
 Dispatcher.UIThread
 ```
 
-You can use either the `Post` method or the `InvokeAsync` method to run a process on the UI thread.&#x20;
+您可以使用`Post`方法或`InvokeAsync`方法在UI线程上运行进程。
 
-Use `Post` when you just want to start a job, but you do not need to wait for the job to be finished, and you do not need the result: this is the 'fire-and-forget' dispatcher method.&#x20;
+使用`Post`方法当您只想启动一个作业，但不需要等待作业完成，也不需要结果：这是`fire-and-forget`调度程序方法。
 
-Use `InvokeAsync` when you need to wait for the result, and potentially want to receive the result.&#x20;
+使用`InvokeAsync`方法当您需要等待结果，并可能想要接收结果。
 
-## Dispatcher Priority
+## 调度程序优先级
 
-Both of the above methods have a dispatcher priority parameter. You can use this with the   `DispatcherPriority` enumeration to specify the queue priority that the given job should be given.&#x20;
+上述两种方法都有一个调度程序优先级参数。您可以使用`DispatcherPriority`枚举与此参数配合使用，以指定给定作业应该具有的队列优先级。
 
 :::info
-For the possible values of the `DispatcherPriority` enumeration, see [here](http://reference.avaloniaui.net/api/Avalonia.Threading/DispatcherPriority/).
+有关`DispatcherPriority`枚举的可能值，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Threading/DispatcherPriority/)。
 :::
 
-## Example
+## 示例
 
-In this example a text block is used to show the result of a long running task, and a button is used to start the work. In this version, the fire-and-forget `Post` method is used:
+在此示例中，使用文本块来显示长时间运行任务的结果，并使用按钮来启动该任务。在此版本中，使用了 `fire-and-forget` `Post`方法：
 
 ```xml title='XAML'
 <StackPanel Margin="20">    
@@ -58,7 +58,7 @@ private async Task LongRunningTask()
 ```csharp title='Post C#'
 private void ButtonClickHandler(object sender, RoutedEventArgs e)
 {
-    // Start the job and return immediately
+    // 启动作业并立即返回
     Dispatcher.UIThread.Post(() => LongRunningTask(), 
                                             DispatcherPriority.Background);
 }
@@ -66,9 +66,9 @@ private void ButtonClickHandler(object sender, RoutedEventArgs e)
 
 <img src="/img/gitbook-import/assets/long1.gif" alt=""/>
 
-Notice that because the long running task is executed on its own thread, the UI does not lose responsiveness.
+请注意，由于长时间运行的任务在其自己的线程上执行，UI不会失去响应。
 
-To get a result from the long running task, the XAML is the same, but this version uses the `InvokeAsync`method:
+要从长时间运行的任务获取结果，XAML代码保持不变，但此版本使用`InvokeAsync`方法：
 
 ```xml title='XAML'
 <StackPanel Margin="20">    
@@ -94,7 +94,7 @@ private async void ButtonClickHandler(object sender, RoutedEventArgs e)
 {
     var result = await Dispatcher.UIThread.InvokeAsync(LongRunningTask, 
                                     DispatcherPriority.Background);
-    //result returns here
+    //结果将在这里返回
     this.FindControl<TextBlock>("ResultText").Text = result;
     this.FindControl<Button>("RunButton").IsEnabled = true;
 }
@@ -102,12 +102,12 @@ private async void ButtonClickHandler(object sender, RoutedEventArgs e)
 
 <img src="/img/gitbook-import/assets/long2.gif" alt=""/>
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about the dispatcher, see [here](http://reference.avaloniaui.net/api/Avalonia.Threading/Dispatcher/).
+有关调度程序的完整API文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Threading/Dispatcher/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`Dispatcher.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Threading/Dispatcher.cs)
+在 _GitHub_ 上查看源代码 [`Dispatcher.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Threading/Dispatcher.cs)
 :::
