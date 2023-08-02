@@ -2,34 +2,34 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Add Dialog Content
+# 添加对话框内容
 
-On the this page you will learn how to add some content to the dialog window. This will be some controls for the search and a dialog close button; together with a list of placeholders for the album covers - these will eventually be loaded as the results of the search.
+在这个页面上，您将学习如何向对话框窗口添加一些内容。这些内容将包括搜索控件和对话框关闭按钮，以及一个用于显示专辑封面的占位符列表。这些封面将作为搜索结果加载。
 
-To arrange the dialog controls, you will use the dock panel layout control, that is part of the _Avalonia UI_ built-in controls. This will keep the search controls at the top of the dialog, and the button at the bottom, whatever the height. The list will be the 'fill' area of the dock panel, so it will always take up all the remaining content zone.&#x20;
+为了布局对话框控件，您将使用 _Avalonia UI_ 内置控件中的停靠面板布局控件。这将使搜索控件无论高度如何，都始终位于对话框的顶部，按钮位于底部。列表将会是停靠面板的“填充”区域，因此它将始终占据所有剩余的内容区域。
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (9) (3).png" alt=""/>
 </div>
 
 :::info
-For full information on the dock panel control, see the reference [here](../../reference/controls/dockpanel.md).
+有关停靠面板控件的完整信息，请参阅[此处](../../reference/controls/dockpanel.md)的参考文档。
 :::
 
-The dock panel itself will be located on an _Avalonia UI_ user control. This is so the code that shows the dialog can be separated from the code that operates the controls within the dialog.
+停靠面板本身将位于一个 _Avalonia UI_ 用户控件上。这样，显示对话框的代码可以与对话框内部控件的操作代码分离。
 
 :::info
-This is a common pattern of UI Composition, to read about this concept, see [here](../../concepts/ui-composition.md).
+这是 UI 组合的常见模式，要了解这个概念，请参阅[此处](../../concepts/ui-composition.md)。
 :::
 
-Follow this procedure to add the user control and constituent controls for the dialog:
+按照以下步骤添加用户控件和对话框的组成控件：
 
-- Stop the app if it is still running.
-- In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
-- Click **Avalonia User Control**.
-- When prompted for the name, type 'MusicStoreView'.
-- Press enter.
-- Alter the XAML for the user control's content zone as follows:
+- 如果应用程序仍在运行，请停止应用程序。
+- 在解决方案资源管理器中，右键单击 **/Views** 文件夹，然后单击**添加**。
+- 单击 **Avalonia User Control**。
+- 在提示输入名称时，键入 “MusicStoreView”。
+- 按回车键。
+- 修改用户控件的内容区域的 XAML 如下所示：
 
 ```xml
 <UserControl ... >
@@ -46,23 +46,23 @@ Follow this procedure to add the user control and constituent controls for the d
 </UserControl>
 ```
 
-Inside the dialog the user will be able to search for albums, but this will use a Web API, and may take some time to return. It is for this reason that you have added a progress bar. The progress bar will be active during the search - to provide visual feedback to the user.
+在对话框中，用户将能够搜索专辑，但这将使用 Web API，并可能需要一些时间才能返回结果。因此，您添加了一个进度条。进度条将在搜索过程中处于活动状态，以向用户提供视觉反馈。
 
-Also, to ensure that the app remains responsive during the search, you will implement the operation itself as both asynchronous and cancellable.  You will add this functionality later in the tutorial.
+此外，为了确保应用程序在搜索过程中保持响应，您将操作本身实现为异步和可取消的，在本教程的后面会添加此功能。
 
-Now the next step is for you to add the new user control to the content zone of the dialog window.&#x20;
+现在，下一步是将新的用户控件添加到对话框窗口的内容区域中。
 
-To add the user control, follow this procedure:
+要添加用户控件，请按照以下步骤进行操作：
 
-- Locate and open the **MusicStoreWindow.axaml** file. &#x20;
-- Add the namespace for the views to the `<Window>` element:
+- 找到并打开 **MusicStoreWindow.axaml** 文件。
+- 在 `<Window>` 元素中添加视图的命名空间：
 
 ```xml
 <Window ...
     xmlns:views="using:Avalonia.MusicStore.Views" >    
 ```
 
-- Inside the panel element, add an element for new user control:
+- 在面板元素内部，添加一个新的用户控件元素：
 
 ```xml
 <Panel Margin="40">
@@ -70,6 +70,6 @@ To add the user control, follow this procedure:
 </Panel>
 ```
 
-You will see the controls appear in the preview pane.
+您将在预览窗格中看到这些控件。
 
-On the next page, you will learn how to use a mock for the album search feature - this is so that you can create the view and view model for the results, and leave the implementation of the real search until later.&#x20;
+在下一页中，您将学习如何使用模拟的专辑搜索功能，这样您就可以创建结果的视图和视图模型，留到以后来实现真正的搜索。
