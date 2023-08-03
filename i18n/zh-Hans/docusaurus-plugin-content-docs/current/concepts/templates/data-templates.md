@@ -2,7 +2,7 @@
 description: CONCEPTS - Data Templates
 ---
 
-# 控制内容
+# 控件内容
 
 您可能已经看到了在将按钮控件放入_Avalonia UI_窗口的内容区域时会发生什么。
 

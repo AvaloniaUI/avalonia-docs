@@ -1,6 +1,6 @@
 ---
 id: bookmarks
-title: Bookmarks
+title: 书签 Bookmarks
 ---
 
 # 书签

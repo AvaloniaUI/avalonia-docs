@@ -1,6 +1,6 @@
 ---
 id: storage-item
-title: Storage Items
+title: 存储项 Storage Items
 ---
 
 # 存储项

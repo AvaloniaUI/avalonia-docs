@@ -1,6 +1,6 @@
 ---
 id: file-picker-options
-title: File Picker Options
+title: 文件选择器选项 File Picker Options
 ---
 
 # 文件选择器选项

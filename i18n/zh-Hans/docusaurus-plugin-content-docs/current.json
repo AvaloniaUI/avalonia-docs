@@ -112,19 +112,19 @@
     "description": "The label for category Raspberry PI in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Deep Dives": {
-    "message": "Deep Dives",
+    "message": "深潜",
     "description": "The label for category Deep Dives in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Data Templates": {
-    "message": "Data Templates",
+    "message": "数据模板",
     "description": "The label for category Data Templates in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Input": {
-    "message": "Input",
+    "message": "输入",
     "description": "The label for category Input in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.The MVVM Pattern": {
-    "message": "The MVVM Pattern",
+    "message": "MVVM 模式",
     "description": "The label for category The MVVM Pattern in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.ReactiveUI": {
@@ -132,7 +132,7 @@
     "description": "The label for category ReactiveUI in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Services": {
-    "message": "Services",
+    "message": "服务",
     "description": "The label for category Services in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Storage Provider": {
@@ -140,7 +140,7 @@
     "description": "The label for category Storage Provider in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Deployment": {
-    "message": "Deployment",
+    "message": "部署",
     "description": "The label for category Deployment in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Reference": {
