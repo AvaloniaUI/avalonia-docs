@@ -1,18 +1,18 @@
 ---
 id: build-and-run-your-application-on-a-device
-title: Build and run your Application on a physical device
+title: 在物理设备上构建和运行您的应用程序
 ---
 
-# Build and run your Application on a physical device
+# 在物理设备上构建和运行您的应用程序
 
-To deploy and run the Application on a real Android device, make sure of the following:
+要在真实的Android设备上部署和运行应用程序，请确保完成以下步骤：
 
-1. Have the Android version on the device match the supported or target versions in AndroidManifest.xml (if no versions are specified, assume that target version is latest, supported by Xamarin/MAUI),
-2. Connect the device to development machine and enable USB Debugging in developer settings,
-3. If default connection mode is "battery charging only", switch to MTP or another mode (otherwise ADB won't connect to the device),
-4. Have matching Android SDK installed to the target SDK version in AndroidManifest.xml,
+1. 确保设备上的Android版本与AndroidManifest.xml中支持的或目标版本相匹配（如果未指定版本，则假定目标版本为最新版本，支持Xamarin/MAUI）。
+2. 将设备连接到开发计算机，并在开发者设置中启用USB调试。
+3. 如果默认连接模式为“仅充电”，请切换到MTP或其他模式（否则ADB将无法连接到设备）。
+4. 在AndroidManifest.xml中，安装与目标SDK版本相匹配的Android SDK。
 
-Deployment is done via running the `dotnet run` command (if using console), or via the following setup (if using Visual Studio Code):
+通过运行`dotnet run`命令（如果使用控制台），或者通过以下设置（如果使用Visual Studio Code），来完成部署：
 
 tasks.json:
 
@@ -37,4 +37,4 @@ tasks.json:
 }
 ```
 
-where `<ProjectName>` is your Android-specific Avalonia project name.
+其中`<ProjectName>`是您的Android特定的Avalonia项目名称。

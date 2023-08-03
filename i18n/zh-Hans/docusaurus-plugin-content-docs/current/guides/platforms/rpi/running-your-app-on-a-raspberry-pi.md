@@ -1,45 +1,45 @@
 ---
 id: running-your-app-on-a-raspberry-pi
-title: Running on Raspberry Pi
+title: 在树莓派上运行
 ---
 
-# Running on Raspberry Pi
+# 在树莓派上运行
 
-### Step 1
+### 步骤 1
 
-Flash 8GB SD Card with Raspbian Stretch (2018-11-13). `BelenaEtcher` is a nice tool for that.
+使用 Raspbian Stretch (2018-11-13) 刷入 8GB SD 卡。`BelenaEtcher` 是一个不错的工具。
 
-Plug in the card and start the `Raspberry Pi`.
+插入 SD 卡并启动树莓派。
 
-You can follow [this guide](https://blogs.msdn.microsoft.com/david/2017/07/20/setting\_up\_raspian\_and\_dotnet\_core\_2\_0\_on\_a\_raspberry\_pi/), next steps are summarized below.
+您可以按照[此指南](https://blogs.msdn.microsoft.com/david/2017/07/20/setting_up_raspian_and_dotnet_core_2_0_on_a_raspberry_pi/)进行操作，下面是摘要：
 
-### Step 2
+### 步骤 2
 
-* Install `curl`, `libunwind8`, `gettext` and `apt-transport-https`. The `curl` and `apt-transport-https` often are up-to-date.
+* 安装 `curl`、`libunwind8`、`gettext` 和 `apt-transport-https`。通常 `curl` 和 `apt-transport-https` 已经是最新的版本。
 
 ```bash
 sudo apt-get install curl libunwind8 gettext apt-transport-https
 ```
 
-* Download tar-ball.
+* 下载 tar 包。
 
 ```bash
 curl -sSL -o dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Runtime/release/2.0.0/dotnet-runtime-latest-linux-arm.tar.gz
 ```
 
-* Unpack tarball to `/opt/dotnet`.
+* 解压缩 tar 包到 `/opt/dotnet`。
 
 ```bash
 sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
 ```
 
-* Link `dotnet` binary.
+* 创建 `dotnet` 二进制文件的链接。
 
 ```bash
 sudo ln -s /opt/dotnet/dotnet /usr/local/bin
 ```
 
-Alternative: You can login as superuser (run "sudo su")
+或者使用替代方法：您可以登录为超级用户（运行 "sudo su"）。
 
 ```bash
 apt-get -y install curl libunwind8 gettext apt-transport-https
@@ -48,22 +48,22 @@ mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
 ln -s /opt/dotnet/dotnet /usr/local/bin
 ```
 
-> Note: Take care of line endings of the script. It should use `LF` instead of `CR LF`. Save the script as `.sh` file and run it on the `Raspberry Pi` with bash `filename.sh`.
+> 注意：请注意脚本的行尾符号，它应该使用 `LF` 而不是 `CR LF`。将脚本保存为 `.sh` 文件，并在树莓派上使用 bash `filename.sh` 命令运行它。
 
-### Step 3
+### 步骤 3
 
-* To run an `Avalonia` application on `Raspberry Pi` you need to use this nuGet package:
+* 要在树莓派上运行 `Avalonia` 应用程序，您需要使用此 NuGet 包：
 
 ```
 https://www.nuget.org/packages/Avalonia.Skia.Linux.Natives/1.68.0.2
 ```
 
-It includes the `libSkiaSharp.so`.
+其中包含 `libSkiaSharp.so`。
 
-* Now publish the app with the following command:
+* 现在，使用以下命令发布应用程序：
 
 ```bash
 dotnet publish -r linux-arm -f netcoreapp2.0
 ```
 
-* Copy publish directory to the `Raspberry Pi` and run it with `dotnet publish/ApplicationName.dll`
+* 将发布目录复制到树莓派，并使用 `dotnet publish/ApplicationName.dll` 命令运行它。

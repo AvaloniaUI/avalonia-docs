@@ -96,7 +96,7 @@
     "description": "The label for category Development Guides in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Platforms": {
-    "message": "Platforms",
+    "message": "平台",
     "description": "The label for category Platforms in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Android": {
@@ -108,7 +108,7 @@
     "description": "The label for category iOS in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Raspberry PI": {
-    "message": "Raspberry PI",
+    "message": "树莓派",
     "description": "The label for category Raspberry PI in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Deep Dives": {

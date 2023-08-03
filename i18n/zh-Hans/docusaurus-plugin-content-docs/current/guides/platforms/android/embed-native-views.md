@@ -1,21 +1,21 @@
 ---
 id: embed-native-views
-title: Embed Native Views
+title: 嵌入原生视图
 ---
 
-In Avalonia UI, you can use the native control host feature on Android by creating an instance of `AndroidViewControlHandle` from an Android view. 
+在 Avalonia UI 中，您可以通过从 Android 视图创建 `AndroidViewControlHandle` 的实例来在 Android 上使用原生控制主机功能。
 
 :::tip
-This documentation is based on the [following example](https://github.com/AvaloniaUI/Avalonia/blob/master/samples/ControlCatalog.Android/EmbedSample.Android.cs).
+此文档基于[以下示例](https://github.com/AvaloniaUI/Avalonia/blob/master/samples/ControlCatalog.Android/EmbedSample.Android.cs)。
 :::
 
 
-We have a class named `EmbedSampleAndroid` implementing the `INativeDemoControl` interface. This class contains a method `CreateControl` which demonstrates how to use native control host.
+我们有一个名为 `EmbedSampleAndroid` 的类，实现了 `INativeDemoControl` 接口。该类包含一个名为 `CreateControl` 的方法，演示了如何使用原生控制主机。
 
 ```csharp
  public interface INativeDemoControl
     {
-        /// <param name="isSecond">Used to specify which control should be displayed as a demo</param>
+        /// <param name="isSecond">用于指定显示哪个控件作为演示</param>
         /// <param name="parent"></param>
         /// <param name="createDefault"></param>
         IPlatformHandle CreateControl(bool isSecond, IPlatformHandle parent, Func<IPlatformHandle> createDefault);
@@ -51,9 +51,8 @@ public class EmbedSampleAndroid : INativeDemoControl
 }
 ```
 
-In this method, `CreateControl`, the `parent` object is cast to `AndroidViewControlHandle` to get the `View`'s Context. If this fails, the global application context is used.
+在这个 `CreateControl` 方法中，将 `parent` 对象强制转换为 `AndroidViewControlHandle`，以获取 `View` 的 Context。如果转换失败，则使用全局应用程序上下文。
 
-The `isSecond` parameter is used to decide which control to create. If it's `true`, a `WebView` is created, navigates to "https://www.android.com/", and its instance is wrapped in an `AndroidViewControlHandle` which is then returned.
+`isSecond` 参数用于决定要创建哪个控件。如果为 `true`，将创建一个 `WebView`，并导航到”https://www.android.com/ “，然后将其实例包装在 `AndroidViewControlHandle` 中并返回。
 
-If `isSecond` is `false`, a Button is created with the text "Hello world". The button's `Click` event is wired up to an event handler that increases the `clickCount` and updates the button's text to display the number of clicks. The `Button` instance is also wrapped in an `AndroidViewControlHandle` and returned.
-
+如果 `isSecond` 为 `false`，则创建一个带有文本 ”Hello world“ 的按钮。按钮的 `Click` 事件与一个事件处理程序关联，该处理程序增加 `clickCount` 并更新按钮的文本以显示点击次数。按钮的实例也被包装在 `AndroidViewControlHandle` 中并返回。

@@ -1,28 +1,28 @@
 ---
 id: setting-up-your-developer-environment-for-ios
-title: How To Set Up Your Developer Environment for iOS
+title: 如何为iOS设置开发环境
 ---
 
-# How To Set Up Your Developer Environment for iOS
+# 如何为iOS设置开发环境
 
-### Prerequisites
+### 先决条件
 
-On a Mac you will need to have the latest version of macOS and Xcode installed.
+在Mac上，您需要安装最新版本的macOS和Xcode。
 
-### Install the SDK
+### 安装SDK
 
-First it is very important to install the correct [dotnet SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0). At the time of writing, the lowest sdk version that works is 6.0.200.
+首先，非常重要的是安装正确的[dotnet SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)。截至撰写本文时，最低支持的SDK版本是6.0.200。
 
-### Install the Workload
+### 安装Workload
 
 ```bash
 dotnet workload install ios
 ```
 
 :::info
-You may need to run the command with `sudo`\
-\
-You may also need to uninstall old versions. `dotnet workload remove ios`
+您可能需要使用`sudo`运行命令
+
+您可能还需要卸载旧版本。`dotnet workload remove ios`
 :::
 
-This will allow you to build applications for iOS on any platform. However you will only be able to test and run them if you have access to actual macOS hardware with Xcode installed.
+这将允许您在任何平台上构建iOS应用程序。但是，如果您没有访问安装有Xcode的实际macOS硬件，您只能测试和运行这些应用程序。

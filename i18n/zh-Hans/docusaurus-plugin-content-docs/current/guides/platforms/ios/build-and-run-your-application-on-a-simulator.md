@@ -1,21 +1,21 @@
 ---
 id: build-and-run-your-application-on-a-simulator
-title: How To Build and Run on the iOS Simulator
+title: 如何在iOS模拟器上构建和运行
 ---
 
-# How To Build and Run on the iOS Simulator
+# 如何在iOS模拟器上构建和运行
 
-Please ensure you have followed the guide [Building Cross-Platform Applications](../../building-cross-platform-applications).
+请确保您已经按照[构建跨平台应用程序](../../building-cross-platform-applications)指南的步骤进行操作。
 
-Assuming you have created a project called `HelloWord`. Enter the directory `HelloWorld.iOS` from the command line.
+假设您已经创建了一个名为`HelloWord`的项目。请在命令行中进入`HelloWorld.iOS`目录。
 
-To build the project for iOS run the following command.
+要为iOS构建该项目，请运行以下命令。
 
 ```bash
 dotnet build
 ```
 
-To run the project in a simulator, run the following command.
+要在模拟器中运行该项目，请运行以下命令。
 
 ```bash
 dotnet run
@@ -23,4 +23,4 @@ dotnet run
 
 <img src='/img/gitbook-import/assets/image (34).png>' alt='Application running on iPad simulator'/>
 
-If you use `JetBrains Rider` or `Visual Studio for Mac` you can open the solution and run, build and debug your program inside the simulator.
+如果您使用的是`JetBrains Rider`或`Visual Studio for Mac`，您可以打开解决方案并在模拟器中运行、构建和调试您的程序。

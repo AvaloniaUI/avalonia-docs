@@ -1,20 +1,20 @@
 ---
 id: macos-development
-title: macOS Development
+title: macOS 开发
 ---
 
 
-# macOS Development
+# macOS 开发
 
-Getting started developing for the macOS
+开始进行macOS开发
 
-## Native code
+## 本地代码
 
-The native macOS code is located at `native/Avalonia.Native/src/OSX`. Open the `Avalonia.Native.OSX.xcodeproj` project in Xcode.
+本地macOS代码位于`native/Avalonia.Native/src/OSX`。在Xcode中打开`Avalonia.Native.OSX.xcodeproj`项目。
 
-You can make changes in Xcode and compile using Cmd+B. You will then need to point your Avalonia application to the modified dynlib. The path can be found by clicking on the dylib in Xcode’s project navigator under Products.
+您可以在Xcode中进行更改，并使用Cmd+B进行编译。然后，您需要将Avalonia应用程序指向修改后的dynlib。路径可以通过在Xcode的项目导航器中单击dylib并选择“产品”找到。
 
-You then specify this path in your AppBuilder using:
+然后，在您的AppBuilder中指定此路径：
 
 ```csharp
 .With(new AvaloniaNativePlatformOptions
@@ -23,13 +23,13 @@ You then specify this path in your AppBuilder using:
 })
 ```
 
-If you're running on an Apple Silicon Mac and targeting .NET 5 and lower then you'll need to switch to rosetta by selecting "My Mac (Rosetta)" in the toolbar.
+如果您在Apple Silicon Mac上运行并且目标是.NET 5及更低版本，则需要在工具栏中选择“我的Mac（Rosetta）”切换到Rosetta。
 
-### Bundling Dev Code
+### 打包开发代码
 
-In certain situations you need to run an Avalonia sample application as an app bundle. One of these situations is testing macOS Accessibility - Xcode's Accessibility Inspector fails to recognise the application otherwise.
+在某些情况下，您需要将Avalonia示例应用程序打包成应用程序包。其中一种情况是测试macOS辅助功能——否则，Xcode的辅助功能检查器无法识别该应用程序。
 
-A solution to this is to change the sample's output path to [resemble an app bundle](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html). You can do this by modifying the output path in the csproj, e.g.:
+解决方法是将示例输出路径更改为[类似应用程序包](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html)的路径。您可以通过修改csproj中的输出路径来实现，例如：
 
 ```xml
 <OutputPath>bin\$(Configuration)\$(Platform)\ControlCatalog.NetCore.app/Contents/MacOS</OutputPath>
@@ -37,7 +37,7 @@ A solution to this is to change the sample's output path to [resemble an app bun
 <UseAppHost>true</UseAppHost>
 ```
 
-And in the `Contents` output directory place a valid `Info.plist` file. An example for ControlCatalog.NetCore is:
+并在`Contents`输出目录中放置有效的`Info.plist`文件。ControlCatalog.NetCore的示例如下：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -70,4 +70,4 @@ And in the `Contents` output directory place a valid `Info.plist` file. An examp
 </plist>
 ```
 
-If you're using Rider < 2021.1 then you'll need to run the application from the command line, not the IDE (see [https://youtrack.jetbrains.com/issue/RIDER-53892](https://youtrack.jetbrains.com/issue/RIDER-53892)).
+如果您使用的是Rider < 2021.1，则需要从命令行而不是IDE运行应用程序（请参阅 https://youtrack.jetbrains.com/issue/RIDER-53892 ）。
