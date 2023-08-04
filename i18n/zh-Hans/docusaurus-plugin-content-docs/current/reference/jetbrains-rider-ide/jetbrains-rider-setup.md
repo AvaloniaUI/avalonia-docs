@@ -2,22 +2,22 @@
 description: REFERENCE
 ---
 
-# JetBrains Rider Setup
+# JetBrains Rider 设置
 
-To set up _JetBrains Rider_ for developing with _Avalonia UI,_ follow this procedure:&#x20;
+要设置 _JetBrains Rider_ 以用于开发 _Avalonia UI_，请按照以下步骤进行：
 
-- Download and install the .NET SDK of your choice from _Microsoft_. This contains the runtime, development kit (compiler, etc) that is used to build _Avalonia UI_ applications.
-- Install the _Avalonia UI_ templates by running the command `dotnet new install Avalonia.Templates` from the command prompt on your machine.&#x20;
+- 从 _Microsoft_ 下载并安装您选择的.NET SDK。其中包含用于构建 _Avalonia UI_ 应用程序的运行时和开发工具包（编译器等）。
+- 通过在计算机的命令提示符上运行命令 `dotnet new install Avalonia.Templates` 来安装 _Avalonia UI_ 模板。
 
 :::info
-For the latest .NET SDK downloads, see [here](https://dotnet.microsoft.com/download).
+有关最新的.NET SDK下载，请参阅[这里](https://dotnet.microsoft.com/download).
 :::
 
 :::info
-For SDK versions before .NET 7, you will need to run the command `dotnet new -i Avalonia.Templates`&#x20;
+对于.NET 7之前的SDK版本，您需要运行命令 `dotnet new -i Avalonia.Templates`
 :::
 
-The output will look similar to this.
+输出结果将类似于以下内容。
 
 ```bash
 $ dotnet new install Avalonia.Templates
@@ -39,29 +39,33 @@ $
 ```
 
 :::info
-To download _JetBrains Rider,_ see [here](https://www.jetbrains.com/rider/).&#x20;
+要下载 _JetBrains Rider_，请参阅[这里](https://www.jetbrains.com/rider/)。
 :::
 
-Rider will give you the very best development experience available for _Avalonia UI_. It is available for Windows, Linux, and macOS. Rider supports XAML out of the box. However, if you want to use the XAML previewer, you will need the Avalonia plugin.
+Rider将为您提供 _Avalonia UI_ 最佳的开发体验。它适用于Windows、Linux和macOS。Rider默认支持XAML。但是，如果您想使用XAML预览器，则需要安装Avalonia插件。
 
-## Install the Avalonia Plugin
+## 安装Avalonia插件
 
-Once Rider loads you will see the **Welcome to JetBrains Rider** screen.&#x20;
+一旦Rider加载完成，您将看到**Welcome to JetBrains Rider**屏幕。
 
-- Click **Configure**, and then click **Plugins** on the dropdown menu.
+- 点击**Configure**，然后在下拉菜单中点击**Plugins**。
 
 <img src='/img/gitbook-import/assets/jetbrains-rider-setup-1-rider-welcome.png' alt=''/>
-The **Preferences** screen will open.&#x20;
 
-- Click the settings (gear wheel) icon and then click **Manage Plugin Repositories...** on the popup menu.
+**Preferences** 窗口将打开。
+
+- 点击设置（齿轮图标），然后在弹出菜单中点击**Manage Plugin Repositories...**。
 
 <img src='/img/gitbook-import/assets/jetbrains-rider-setup-2-configure-plugin-repos.png' alt=''/>
-- In the **Custom Plugin Repositories** dialog, click the plus (+) icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`, and then click **OK**.
+
+- 在**Custom Plugin Repositories**对话框中，点击加号（`+`）图标，输入URL `https://plugins.jetbrains.com/plugins/dev/14839` ，然后点击**OK**。
 
 <img src='/img/gitbook-import/assets/jetbrains-rider-setup-3-enter-plugin-repo.png' alt=''/>
-- Back at the Preferences window, click **Marketplace** enter 'Avalonia' in the search. Click **AvaloniaRider** when it appears in the search results pane, then click **Install**.&#x20;
+
+- 回到 Preferences 窗口，点击**Marketplace**并在搜索框中输入 `Avalonia`。在搜索结果窗格中看到**AvaloniaRider**时，点击**Install**。
 
 <img src='/img/gitbook-import/assets/jetbrains-rider-setup-4-plugin-install.png' alt=''/>
-- After the installation has completed, click **Restart IDE** (button appears).
 
-&#x20;Now _JetBrains Rider_ is ready to develop _Avalonia UI_ applications.
+- 安装完成后，点击**Restart IDE**（按钮出现）。
+
+现在，_JetBrains Rider_ 已准备好开发 _Avalonia UI_ 应用程序。

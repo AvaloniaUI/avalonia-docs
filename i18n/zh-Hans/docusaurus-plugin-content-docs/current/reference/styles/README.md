@@ -2,13 +2,13 @@
 description: REFERENCE
 ---
 
-# Styles
+# 样式
 
-Welcome to the _Avalonia UI_ styles reference section. This contains information about:
+欢迎来到 _Avalonia UI_ 样式参考资料。这包含有关以下内容的信息：
 
-* Style selector formats&#x20;
-* Pseudo classes
+* 样式选择器格式
+* 伪类
 
 :::info
-To review the concepts behind the Avalonia UI **styling system**, see [here](../../basics/user-interface/styling).
+要查阅 Avalonia UI **样式系统**背后的概念，请参阅[这里](../../basics/user-interface/styling)。
 :::

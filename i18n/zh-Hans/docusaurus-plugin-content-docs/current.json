@@ -28,7 +28,7 @@
     "description": "The label for category ToDo List App in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Music Store App": {
-    "message": "Music Store App",
+    "message": "音乐商店应用",
     "description": "The label for category Music Store App in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Basics": {
@@ -144,7 +144,7 @@
     "description": "The label for category Deployment in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Reference": {
-    "message": "Reference",
+    "message": "参考资料",
     "description": "The label for category Reference in sidebar documentationSidebar"
   },
   "sidebar.documentationSidebar.category.Built-in Controls": {

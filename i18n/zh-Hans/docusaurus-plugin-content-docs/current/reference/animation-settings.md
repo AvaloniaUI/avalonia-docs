@@ -2,45 +2,46 @@
 description: REFERENCE
 ---
 
-# Animation Settings
+# 动画设置
 
 This section contains full lists of the _Avalonia UI_ animation settings:
+本节包含 _Avalonia UI_ 动画设置的完整列表：
 
-* Easing Functions
-* Fill Modes
-* Playback Direction
-* Repeat
+* 缓动函数（Easing Functions）
+* 填充模式（Fill Modes）
+* 播放方向（Playback Direction）
+* 重复（Repeat）
 
-## Easing Functions
+## 缓动函数（Easing Functions）
 
-<table><thead><tr><th width="216">Profile</th><th>Setting</th></tr></thead><tbody><tr><td><img src='/img/gitbook-import/assets/image (67).png' alt=''/></td><td><code>SineEaseOut</code></td></tr></tbody></table>
+<table><thead><tr><th width="216">配置</th><th>设置</th></tr></thead><tbody><tr><td><img src='/img/gitbook-import/assets/image (67).png' alt=''/></td><td><code>SineEaseOut</code></td></tr></tbody></table>
 
-## Fill Modes
+## 填充模式（Fill Modes）
 
-The fill mode attribute of an animation defines how the set property persists after running an animation, and on delays in between runs.
+动画的填充模式属性定义了动画运行后设置属性在延迟运行之间的持续方式。
 
-The following table describes the possible behaviors:
+以下表格描述了可能的行为：
 
-| Value      | Description                                                                                               |
-| ---------- | --------------------------------------------------------------------------------------------------------- |
-| `None`     | Value will not persist after animation nor the first value will be applied when the animation is delayed. |
-| `Forward`  | The last interpolated value will be persisted to the target property.                                     |
-| `Backward` | The first interpolated value will be displayed on animation delay.                                        |
-| `Both`     | Both `Forward` and `Backward` behaviors will be applied.                                                  |
+| 值          | 描述                              |
+|------------|---------------------------------|
+| `None`     | 在动画后值不会持续，也不会在延迟时应用第一个值。        |
+| `Forward`  | 最后一个插值值将持续到目标属性。                |
+| `Backward` | 第一个插值值将在动画延迟时显示。                |
+| `Both`     | 同时应用 `Forward` 和 `Backward` 行为。 |
 
 
 
-## Playback Direction
+## 播放方向（Playback Direction）
 
-Playback direction defines how the animation will be played, including any repeats. The following table describes the possible settings:
+播放方向定义了动画的播放方式，包括任何重复。以下表格描述了可能的设置：
 
-<table><thead><tr><th width="229">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>Normal</code></td><td>The animation is played normally.</td></tr><tr><td><code>Reverse</code></td><td>The animation is played in reverse direction.</td></tr><tr><td><code>Alternate</code></td><td>The animation is played forwards first, then backwards.</td></tr><tr><td><code>AlternateReverse</code></td><td>The animation is played backwards first, then forwards.</td></tr></tbody></table>
+<table><thead><tr><th width="229">值</th><th>描述</th></tr></thead><tbody><tr><td><code>Normal</code></td><td>动画以正常方式播放。</td></tr><tr><td><code>Reverse</code></td><td>动画以反向方向播放。</td></tr><tr><td><code>Alternate</code></td><td>动画先正向播放，然后反向播放。</td></tr><tr><td><code>AlternateReverse</code></td><td>动画先反向播放，然后正向播放。</td></tr></tbody></table>
 
-## Repeat
+## 重复（Repeat）
 
-The repeat attribute on an animation element sets how many times it is to be replayed. There are two formats for this setting:
+动画元素上的重复属性设置了动画的重复次数。有两种格式的设置方式：
 
-| Value      | Description                                      |
-| ---------- | ------------------------------------------------ |
-| `N`        | (N is an integer) - play N times. N can be zero. |
-| `INFINITE` | Repeat Indefinitely                              |
+| 值          | 描述                    |
+|------------|-----------------------|
+| `N`        | N 是整数——重复 N 次。N 可以是零。 |
+| `INFINITE` | 无限重复。                 |

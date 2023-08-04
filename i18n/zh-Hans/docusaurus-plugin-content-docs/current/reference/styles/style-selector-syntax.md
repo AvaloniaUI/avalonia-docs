@@ -2,11 +2,11 @@
 description: REFERENCE - Styles
 ---
 
-# Style Selector Syntax
+# 样式选择器语法
 
-This page lists the XAML syntax for style selectors with the C# code methods that perform the same selection.&#x20;
+本页面列出了XAML样式选择器的语法，以及执行相同选择的C#代码方法。
 
-## By Control Class
+## 按控件类选择
 
 
 
@@ -23,21 +23,21 @@ new Style(x => x.OfType(typeof(Button)));
 
 
 
-Selects a control by its class name.&#x20;
+按控件类选择。
 
-The first example above selects the `Avalonia.Controls.Button` class. To include a XAML namespace in the type separate the namespace and the type with a `|` character.
+以上第一个示例选择`Avalonia.Controls.Button`类。要在类型中包含XAML命名空间，请使用`|`字符将命名空间和类型分隔。
 
 :::warning
-This selector does not match derived types. For that, use the `:is` selector, see below.
+此选择器不匹配派生类型。若要匹配派生类型，请使用`:is`选择器，参见下文。
 :::
 
 
 
 :::info
-Note the type of an object is actually determined by looking at its `StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can override the `StyleKeyOverride` property on your class to return `typeof(Button)`.
+请注意，对象的类型实际上是通过查看其`StyleKey`属性来确定的。默认情况下，它只返回当前实例的类型，但是，如果您希望从`Button`继承的控件被视为`Button`样式，则可以在您的类上重写`StyleKeyOverride`属性以返回`typeof(Button)`。
 :::
 
-## By Name
+## 按名称选择
 
 
 
@@ -54,9 +54,9 @@ new Style(x => x.OfType<Button>().Name("myButton"));
 
 
 
-Selects a control by its `Name` attribute, with an added `#` (hash) character prefix.
+按`Name`属性选择控件，前面加上`#`（井号）字符作为前缀。
 
-## By Style Class
+## 按样式类选择
 
 
 
@@ -73,9 +73,9 @@ new Style(x => x.OfType<Button>().Class("large").Class("red"));
 
 
 
-Selects a control with the specified style class or classes. Multiple classes are separated with a full stop. If multiple classes are specified in the selector, then the control must have all of the requested classes defined for a match.
+选择具有指定样式类或多个样式类的控件。多个类用点号分隔。如果选择器中指定了多个类，则控件必须同时拥有所有请求的类定义才能匹配。
 
-## By Pseudo Class
+## 按伪类选择
 
 
 
@@ -92,13 +92,13 @@ new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 
 
 
-Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. There can only be one pseudo class in the selector. When used in combination with other classes, the pseudo class must be the last in the list. &#x20;
+使用当前伪类选择控件。冒号字符在选择器中定义伪类名称。选择器中只能有一个伪类。与其他类一起使用时，伪类必须是列表中的最后一个。
 
 :::info
-For more detail about pseudo classes, see the reference [here](pseudo-classes.md).
+有关伪类的更多详细信息，请参见[此处](pseudo-classes.md)的参考。
 :::
 
-## Include Derived Classes
+## 包括派生类
 
 
 
@@ -115,13 +115,13 @@ new Style(x => x.Is(typeof(Button)));
 
 
 
-This is very similar to the style class selector except it also matches derived types.
+这与样式类选择器非常相似，但它还匹配派生类型。
 
 :::info
-Technical detail: during the matching process, _Avalonia UI_ determines the type of a control by examining its `StyleKey` property.
+技术细节：在匹配过程中，_Avalonia UI_ 通过检查控件的`StyleKey`属性来确定其类型。
 :::
 
-INterestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
+有趣的是，这允许您编写非常通用的基于类别的选择器。由于所有控件都派生自类`Control`，因此只选择样式类`margin2`的选择器可以编写如下：
 
 
 
@@ -138,7 +138,7 @@ new Style(x => x.Is(typeof(Control)).Class("margin2"));
 
 
 
-## Child Operator
+## 子操作符
 
 
 
@@ -153,13 +153,13 @@ new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 
 
 
-A child selector is defined by separating two selectors with a `>` character. This selector matches only direct children in the **logical controls tree**.
+通过使用`>`字符分隔两个选择器来定义子选择器。此选择器仅匹配**逻辑控件树**中的直接子项。
 
 :::info
-For the concept behind the logical controls tree, see [here](../../concepts/control-trees.md).
+有关逻辑控件树背后的概念，请参见[这里](../../concepts/control-trees.md)。
 :::
 
-For example, applying the above selector to this XAML:
+例如，将上述选择器应用于以下XAML：
 
 ```
 <StackPanel>
@@ -171,9 +171,9 @@ For example, applying the above selector to this XAML:
 </StackPanel>
 ```
 
-The selector will match the first button, but not the second. This is because the second button is not a direct child of the stack panel (it is inside the dock panel as well).
+该选择器将匹配第一个按钮，但不会匹配第二个按钮。这是因为第二个按钮不是堆栈面板的直接子项（它也在停靠面板中）。
 
-## Any Descendant Operator
+## 任意后代操作符
 
 
 
@@ -188,11 +188,11 @@ new Style(x => x.OfType<StackPanel>().Descendant().OfType<Button>());
 
 
 
-When two selectors are separated by a space, then the selector will match any descendants in the logical tree. The parent is on the left, and the descendant is on the right.
+当两个选择器由空格分隔时，选择器将匹配逻辑树中的任意后代。父级在左边，后代在右边。
 
-Therefore applying the above selector to the previous XAML sample, both buttons will be selected.
+因此，将上述选择器应用于之前的XAML示例，两个按钮都将被选择。
 
-## By Property Match
+## 按属性匹配
 
 
 
@@ -207,7 +207,7 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 
 
 
-You can refine a selector so that it includes the value of a property. The property=value pair is defined inside square brackets. This matches any control that has the specified property set to the specified value.&#x20;
+您可以细化选择器，以包含属性的值。属性=值对在方括号内定义。这将匹配具有指定属性设置为指定值的任何控件。
 
 ```
 <StackPanel Orientation="Horizontal">
@@ -216,10 +216,10 @@ You can refine a selector so that it includes the value of a property. The prope
 </StackPanel>
 ```
 
-For example, in the XAML above, the first button will be selected, but not the second button.
+例如，在上面的XAML中，第一个按钮将被选择，但第二个按钮不会被选择。
 
 :::info
-Note: when you use an attached property as a property match, the property name must be wrapped in parentheses. Fro example:
+注意：当您将附加属性用作属性匹配时，属性名必须用括号括起来。例如：
 
 ```markup
 <Style Selector="TextBlock[(Grid.Row)=0]">
@@ -227,10 +227,10 @@ Note: when you use an attached property as a property match, the property name m
 :::
 
 :::info
-Further note: when you use a property match, the property type must support the component model type converter, `TypeConverter` class. For more information see the _Microsoft_ documentation [here](https://learn.microsoft.com/dotnet/api/system.componentmodel.typeconverter).
+进一步注意：当您使用属性匹配时，属性类型必须支持组件模型类型转换器`TypeConverter`类。有关更多信息，请参阅[_Microsoft_文档](https://learn.microsoft.com/dotnet/api/system.componentmodel.typeconverter)。
 :::
 
-## By Template
+## 按模板选择
 
 
 
@@ -245,11 +245,11 @@ new Style(x => x.OfType<Button>().Template().OfType<ContentPresenter>());
 
 
 
-You can match a control in a control template using the above syntax. All the other selectors listed here work on the logical tree, but this selector can step into a template.
+您可以使用上述语法在控件模板中匹配控件。此处列出的所有其他选择器都适用于逻辑树，但此选择器可以进入模板。
 
-In the example above, if a button has a template, then the selector matches selects content presenter controls (class `ContentPresenter`) inside the template.
+在上面的示例中，如果按钮具有模板，则该选择器将选择模板中的内容呈现控件（类`ContentPresenter`）。
 
-## Not Function
+## Not 函数
 
 
 
@@ -264,9 +264,9 @@ new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 
 
 
-This function negates the selection in the brackets. In the example above all the text block controls that **do not** have the `h1` class will be matched.
+该函数否定括号中的选择。在上面的示例中，将匹配所有**没有**`h1`类的文本块控件。
 
-## By List
+## 按列表选择
 
 
 
@@ -281,9 +281,9 @@ new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 
 
 
-You can select any element that matches a comma-separated list of selectors. Any setters in the style must change properties that are common to all the items. &#x20;
+您可以选择与逗号分隔的选择器列表匹配的任何元素。样式中的任何setter必须更改对所有项目都通用的属性。
 
-## By Child Position Formula
+## 按子元素位置公式选择
 
 
 
@@ -298,17 +298,17 @@ new Style(x => x.OfType<TextBlock>().NthChild(2, 3));
 
 
 
-You can match elements based on their position within a group of siblings.  This is regardless of the class of the parent (container) control.&#x20;
+您可以根据元素在相邻组内的位置进行匹配。这与父（容器）控件的类别无关。
 
-Selection is based on a simple formula in the style `An + B` so that **`A`** controls the step size and **`B`** the offset from the start. In the nth-child formula (above), **`n`** is supplied to the formula as zero and all positive integers starting at zero, and the match is made against the results of the formula compared with a one-based position of the child element.&#x20;
+选择是基于样式中的简单公式`An + B`，以便 **`A`** 控制步长，**`B`** 控制从开始位置的偏移。在nth-child公式（上面）中，将 **`n`** 作为零提供给公式，以及从零开始的所有正整数，并且与子元素的基于一的位置的结果进行比较。
 
-So, for the above selector:
+因此，对于上面的选择器：
 
-<table><thead><tr><th width="175">Child = 1</th><th width="184">Child = 2</th><th width="201">Child = 3</th><th>Child = 4</th></tr></thead><tbody><tr><td>n=0, n=1</td><td>n=0, n=1</td><td>n=0, n=1</td><td>n=0, n=1</td></tr><tr><td>3, 5</td><td>3, 5</td><td><strong>3</strong>, 5</td><td>3, 5</td></tr><tr><td>No Match</td><td>No Match</td><td>Match</td><td>No Match</td></tr></tbody></table>
+<table><thead><tr><th width="175">Child = 1</th><th width="184">Child = 2</th><th width="201">Child = 3</th><th>Child = 4</th></tr></thead><tbody><tr><td>n=0, n=1</td><td>n=0, n=1</td><td>n=0, n=1</td><td>n=0, n=1</td></tr><tr><td>3, 5</td><td>3, 5</td><td><strong>3</strong>, 5</td><td>3, 5</td></tr><tr><td>不匹配</td><td>不匹配</td><td>匹配</td><td>不匹配</td></tr></tbody></table>
 
-If the formula evaluates to less than 1 then it is ignored - there are never any child element with that index.
+如果公式计算结果小于1，则忽略它——从不会有任何具有该索引的子元素。
 
-There is a corresponding selector with a formula that counts from the end of the group:
+有一个与从组的末尾计数的公式相对应的选择器：
 
 
 
@@ -323,9 +323,9 @@ new Style(x => x.OfType<TextBlock>().NthLastChild(2, 3));
 
 
 
-### Single child position
+### 单个子元素位置
 
-You can omit the **A** and **n** from the formula in XAML to specify a single position only. For example, this selects only child number 3:
+您可以在XAML中省略公式中的**A**和**n**，仅指定一个位置。例如，这将仅选择第3个子元素：
 
 
 
@@ -340,9 +340,9 @@ new Style(x => x.OfType<TextBlock>().NthChild(0, 3));
 
 
 
-### Keyword notation
+### 关键字符号
 
-You can also use a keyword notation in place of the formula: `odd` or `even`. So these are selectors are equivalent:
+您还可以在公式中使用关键字符号：`odd`或`even`。因此，以下选择器是等效的：
 
 ```
 <Style Selector="TextBlock:nth-child(2n)">
@@ -354,26 +354,26 @@ You can also use a keyword notation in place of the formula: `odd` or `even`. So
 <Style Selector="TextBlock:nth-child(odd)">
 ```
 
-### Other Formula Examples
+### 其他公式示例
 
-This table lists some examples of selection by child position:&#x20;
+此表列出了一些按子元素位置选择的示例：
 
-| Formula Example    | Representation                                                                                                                                                                                                  |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `:nth-child(odd)`  | The odd elements: **1**, **3**, **5**, etc.                                                                                                                                                                     |
-| `:nth-child(even)` | The even elements: **2**, **4**, **6**, etc.                                                                                                                                                                    |
-| `:nth-child(2n+1)` | The odd elements: **1**_(2×0+1)_, **3**_(2×1+1)_, **5**_(2×2+1)_, etc. equivalent to `:nth-child(odd)`                                                                                                          |
-| `:nth-child(2n)`   | The even elements: **2**_(2×1)_, **4**_(2×2)_, **6**_(2×3)_, etc. equivalent to `:nth-child(even)`. Notice that **0**_(2×0)_ a valid notation, however it's not matching any element since index starts from 1. |
-| `:nth-child(7)`    | The 7th element                                                                                                                                                                                                 |
-| `:nth-child(n+7)`  | Every element start from 7th: **7**_(0+7)_, **8**_(1+7)_, **9**_(2+7)_, etc                                                                                                                                     |
-| `:nth-child(3n+4)` | Every 3rd element start from 4th: **4**_(3×0+4)_, **7**_(3×1+4)_, **10**_(3×2+4)_, **13**_(3×3+4)_, etc                                                                                                         |
-| `:nth-child(-n+3)` | First 3 elements: **3**_(-1×0+3)_, **2**_(-1×1+3)_, **1**_(-1×2+3)_. All subsequent indices are less than 1 so they are not matching any elements.                                                              |
+| 公式示例               | 表示                                                                                                             |
+|--------------------|----------------------------------------------------------------------------------------------------------------|
+| `:nth-child(odd)`  | 奇数元素：**1**，**3**，**5**...                                                                                      |
+| `:nth-child(even)` | 偶数元素：**2**，**4**，**6**...                                                                                      |
+| `:nth-child(2n+1)` | 奇数元素：**1**_(2×0+1)_，**3**_(2×1+1)_，**5**_(2×2+1)_...，等同于 `:nth-child(odd)`                                     |
+| `:nth-child(2n)`   | 偶数元素：**2**_(2×1)_，**4**_(2×2)_，**6**_(2×3)_...，等同于 `:nth-child(even)`。请注意，**0**_(2×0)_是有效表示，但不匹配任何元素，因为索引从1开始。 |
+| `:nth-child(7)`    | 第7个元素                                                                                                          |
+| `:nth-child(n+7)`  | 从第7个元素开始的每个元素：**7**_(0+7)_，**8**_(1+7)_，**9**_(2+7)_...                                                        |
+| `:nth-child(3n+4)` | 从第4个开始的每3个元素：**4**_(3×0+4)_，**7**_(3×1+4)_，**10**_(3×2+4)_，**13**_(3×3+4)_...                                  |
+| `:nth-child(-n+3)` | 前3个元素：**3**_(-1×0+3)_，**2**_(-1×1+3)_，**1**_(-1×2+3)_。所有后续索引都小于1，因此它们不匹配任何元素。                                  |
 
-## Online Child Position Tester
+## 在线子元素位置测试
 
-Although this is a CSS site, it will work for _Avalonia UI_ child position selectors because the rules are the same.
+尽管这是一个CSS网站，但它也适用于 _Avalonia UI_ 子元素位置选择器，因为规则是相同的。
 
 :::info
-You can use this site to test your child position selector: \
+您可以使用此站点测试您的子元素位置选择器：
 [https://css-tricks.com/examples/nth-child-tester/](https://css-tricks.com/examples/nth-child-tester/)
 :::

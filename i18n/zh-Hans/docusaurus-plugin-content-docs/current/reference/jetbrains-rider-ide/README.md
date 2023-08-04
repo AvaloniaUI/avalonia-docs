@@ -4,10 +4,10 @@ description: REFERENCE
 
 # JetBrains Rider IDE
 
-The _JetBrains Rider_ IDE has built-in support for _Avalonia UI_ XAML starting in 2020.3 including first-class support for Avalonia-specific XAML features and custom code inspections.
+_JetBrains Rider_ IDE 自 2020.3 版本开始内置了对 _Avalonia UI_ XAML 的支持，包括对 Avalonia 特定 XAML 特性和自定义代码检查的全面支持。
 
-For more information about the _JetBrains Rider_ IDE, see the website [https://www.jetbrains.com/rider](https://www.jetbrains.com/rider/).
+有关 _JetBrains Rider_ IDE 的更多信息，请访问网站 [https://www.jetbrains.com/rider](https://www.jetbrains.com/rider/)。
 
-For the _JetBrains Rider_ 2020.3 release announcement, see [here](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support).
+有关 _JetBrains Rider_ 2020.3 版本发布公告，请查看[此处](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support)。
 
-_JetBrains Rider_ does not yet provide a visual designer, but this is in development. For more information and instructions on how to install the visual designer, see the _GitHub_ project [here](https://github.com/ForNeVeR/AvaloniaRider).
+_JetBrains Rider_ 目前还没有提供可视化设计器，但正在开发中。有关更多信息以及如何安装可视化设计器的说明，请查看 [_GitHub_ 项目](https://github.com/ForNeVeR/AvaloniaRider)。
