@@ -23,15 +23,15 @@
 
 ## 按钮
 
-| 控件                                                                                         | 描述                                                                                                                                                                                                           |
-|:-------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Button](../../../reference/controls/buttons/button.md)                                    | 基本按钮控件 - 可以显示文本、图标或两者。具有标准的“点击”行为。                                                                                                                 |
-| [Repeat Button](../../../reference/controls/buttons/repeatbutton.md)                       | 按钮在按下并保持按住时重复引发其点击事件。                                                                                                                                 |
-| [Radio Button](../../../reference/controls/buttons/radiobutton.md)                         | 按钮具有选中状态。它可以放置在一组中，以使一个按钮的选择取消所有其他按钮的选择。                                                                       |
-| [Toggle Button](../../../reference/controls/detailed-reference/togglesplitbutton.md)       | 按钮具有选中状态和未选中状态。后续点击“切换”此状态。通过“checked”伪类可以为选中状态和未选中状态分配不同的样式。   |
-| [Button Spinner](../../../reference/controls/buttons/buttonspinner.md)                     | 一个带有两个旋转按钮和内容区域的控件。                                                                                                                                                          |
-| [Split Button](../../../reference/controls/buttons/splitbutton.md)                         | 此按钮具有主要和次要部分，可以独立按下。主要部分的行为类似于标准按钮，而次要部分则打开一个带有附加操作的弹出菜单。 |
-| [Toggle Split Button](../../../reference/controls/detailed-reference/togglesplitbutton.md) | 此按钮具有主要和次要部分，可以独立按下。主要部分的行为类似于切换按钮，而次要部分打开一个带有附加操作的弹出菜单。   |
+| 控件                                                                              | 描述                                                            |
+|:--------------------------------------------------------------------------------|:--------------------------------------------------------------|
+| [Button](../../../reference/controls/buttons/button.md)                         | 基本按钮控件 - 可以显示文本、图标或两者。具有标准的“点击”行为。                            |
+| [Repeat Button](../../../reference/controls/buttons/repeatbutton.md)            | 按钮在按下并保持按住时重复引发其点击事件。                                         |
+| [Radio Button](../../../reference/controls/buttons/radiobutton.md)              | 按钮具有选中状态。它可以放置在一组中，以使一个按钮的选择取消所有其他按钮的选择。                      |
+| [Toggle Button](../../../reference/controls/buttons/togglebutton.md)            | 按钮具有选中状态和未选中状态。后续点击“切换”此状态。通过“checked”伪类可以为选中状态和未选中状态分配不同的样式。 |
+| [Button Spinner](../../../reference/controls/buttons/buttonspinner.md)          | 一个带有两个旋转按钮和内容区域的控件。                                           |
+| [Split Button](../../../reference/controls/buttons/splitbutton.md)              | 此按钮具有主要和次要部分，可以独立按下。主要部分的行为类似于标准按钮，而次要部分则打开一个带有附加操作的弹出菜单。     |
+| [Toggle Split Button](../../../reference/controls/buttons/togglesplitbutton.md) | 此按钮具有主要和次要部分，可以独立按下。主要部分的行为类似于切换按钮，而次要部分打开一个带有附加操作的弹出菜单。      |
 
 ## 重复数据控件
 
