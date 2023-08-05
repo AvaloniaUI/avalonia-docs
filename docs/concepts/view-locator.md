@@ -24,7 +24,7 @@ public class ViewLocator : IDataTemplate
 {
     public bool SupportsRecycling => false;
 
-    public IControl Build(object data)
+    public Control Build(object data)
     {
         var name = data.GetType().FullName.Replace("ViewModel", "View");
         var type = Type.GetType(name);
@@ -51,16 +51,3 @@ In this example, the View Locator is implemented as an `IDataTemplate`. The `Bui
 ## Customizing the View Locator
 
 You can customize the View Locator to use different conventions. For example, you might want to look for views in a different assembly, or use a different naming convention. To do this, you can implement your own View Locator by creating a class that implements the `IDataTemplate` interface, and replace the default View Locator with your own.
-
-
-
-
-
-
-
-
-
-
-
-
-

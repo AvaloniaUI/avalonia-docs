@@ -1,6 +1,6 @@
 ---
 id: how-to-create-a-custom-flyout
-title: How To Create a Custom Panel
+title: How To Create a Custom Flyout
 ---
 
 # How To Create a Custom Flyout

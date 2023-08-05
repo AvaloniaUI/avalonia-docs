@@ -154,6 +154,10 @@ const sidebars = {
                 {
                   'type': 'category',
                   'label': 'Creating Controls',
+                  'link': {
+                    'type': 'doc',
+                    'id': 'basics/user-interface/controls/creating-controls/index'
+                  },
                   'items': [
                     'basics/user-interface/controls/creating-controls/choosing-a-custom-contro-type',
                     'basics/user-interface/controls/creating-controls/defining-properties',
@@ -405,6 +409,19 @@ const sidebars = {
         },
         {
           'type': 'category',
+          'label': 'Headless Platform',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/headless/index',
+          },
+          'items': [
+            'concepts/headless/headless-xunit',
+            'concepts/headless/headless-nunit',
+            'concepts/headless/headless-custom',
+          ],
+        },
+        {
+          'type': 'category',
           'label': 'Input',
           'items': [
             'concepts/input/routed-events',
@@ -436,7 +453,6 @@ const sidebars = {
             'concepts/reactiveui/reactive-view-model',
             'concepts/reactiveui/command-update',
             'concepts/reactiveui/reactive-command',
-            'concepts/reactiveui/observable-collections',
             'concepts/reactiveui/view-activation',
             'concepts/reactiveui/routing',
             'concepts/reactiveui/data-persistence',
@@ -476,7 +492,7 @@ const sidebars = {
         'concepts/ui-composition',
         'concepts/unhandledexceptions',
         'concepts/toplevel',
-        'concepts/view-locator',
+        'concepts/view-locator'
       ],
     },
     {

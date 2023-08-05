@@ -122,7 +122,7 @@ To tidy up the list, follow this procedure:
 - Add the `<ListBox.ItemsPanel>` XAML shown:&#x20;
 
 ```markup
-<ListBox Items="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}"
+<ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}"
     Background="Transparent" Margin="0 20">
     <ListBox.ItemsPanel>
         <ItemsPanelTemplate>

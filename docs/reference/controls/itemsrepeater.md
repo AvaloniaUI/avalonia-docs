@@ -7,7 +7,11 @@ description: REFERENCE - Built-in Controls
 The items repeater can display repeating data from a bound data source. It has both a layout template and a data template.&#x20;
 
 :::info
-The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [here](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater). The only difference is that the data source in the _Avalonia UI_ control is called `Items` (not `ItemsSource`).&#x20;
+The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [here](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater).&#x20;
+:::
+
+:::info
+The items repeater was moved [here](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater)
 :::
 
 The default layout template is a vertical stack layout, so that items appear in a vertical list.
@@ -21,7 +25,7 @@ This example binds an observable collection of crockery items to an items repeat
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">List of crockery:</TextBlock>
-  <ItemsRepeater  Items="{Binding CrockeryList}" >
+  <ItemsRepeater  ItemsSource="{Binding CrockeryList}" >
     <ItemsRepeater.ItemTemplate>
     <DataTemplate>
       <Border Margin="0,10,0,0"
@@ -94,7 +98,7 @@ By default an items repeater will render the items in a vertical stack layout. Y
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">List of crockery:</TextBlock>
   <ScrollViewer HorizontalScrollBarVisibility="Auto">
-    <ItemsRepeater Items="{Binding CrockeryList}" Margin="0 20">
+    <ItemsRepeater ItemsSource="{Binding CrockeryList}" Margin="0 20">
       <ItemsRepeater.Layout>
         <StackLayout Spacing="40"
             Orientation="Horizontal" />

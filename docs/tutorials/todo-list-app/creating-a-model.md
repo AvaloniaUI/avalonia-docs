@@ -24,6 +24,8 @@ In this tutorial, you will create a single entity for the data model.  Follow th
 - Change the code in the class as shown:
 
 ```csharp
+using System;
+
 namespace ToDoList.DataModel
 {
     public class ToDoItem

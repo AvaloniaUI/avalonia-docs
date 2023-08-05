@@ -55,10 +55,10 @@ The newly created project will be look like this:
 ToDoList
  |- App.axaml
  |- App.axaml.cs
+ |- app.manifest
  |- Assets
  |   |- avalonia-logo.ico
  |- Models 
- |- nuget.config 
  |- Program.cs
  |- ToDoList.csproj
  |- ViewLocator.cs

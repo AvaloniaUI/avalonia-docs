@@ -50,10 +50,10 @@ Custom-drawn controls offer the highest level of customization in Avalonia. With
 Custom-drawn controls are typically used where the control represents a mostly non-interactive graphical element that will not need to be themed.
 :::
 
-To create a custom-drawn control, you override the control's `OnRender` method and use low-level drawing APIs, such as `DrawingContext`, to define the control's appearance. This approach provides fine-grained control over every pixel of the control's visual representation.
+To create a custom-drawn control, you override the control's `Render` method and use low-level drawing APIs, such as `DrawingContext`, to define the control's appearance. This approach provides fine-grained control over every pixel of the control's visual representation.
 
 Creating a custom-drawn control involves the following steps:
 
 1. **Define the Control Class**: Create a new class that derives from `Control`. This class will define the behavior and rendering logic of the control.
 
-2. **Override the OnRender Method**: Override the `OnRender` method in the control class and use the `DrawingContext` to draw the control's content.
+2. **Override the Render Method**: Override the `Render` method in the control class and use the `DrawingContext` to draw the control's content.

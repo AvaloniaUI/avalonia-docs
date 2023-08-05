@@ -54,7 +54,7 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 - Under the button element, add the XAML as shown:
 
 ```xml
-<ItemsControl Margin="0 40 0 0" Items="{Binding Albums}">
+<ItemsControl Margin="0 40 0 0" ItemsSource="{Binding Albums}">
   <ItemsControl.ItemsPanel>
     <ItemsPanelTemplate>
       <WrapPanel />

@@ -109,7 +109,7 @@ To display the validation messages, Avalonia has a control called [`DataValidati
           </Style>
         </Canvas.Styles>
         <ToolTip.Tip>
-          <ItemsControl Items="{Binding}"/>
+          <ItemsControl ItemsSource="{Binding}"/>
         </ToolTip.Tip>
         <Path Data="M14,7 A7,7 0 0,0 0,7 M0,7 A7,7 0 1,0 14,7 M7,3l0,5 M7,9l0,2" 
               Stroke="Red" 
@@ -126,16 +126,23 @@ To display the validation messages, Avalonia has a control called [`DataValidati
 
 ## Manage ValidationPlugins
 
-if needed to, you can enable or disable a specific [`ValidationPlugin`](http://reference.avaloniaui.net/api/Avalonia.Data.Core.Plugins/IDataValidationPlugin/) in your App. This can be useful if for example your MVVM-framework uses `DataAnnotations` to validate the property via `INotifyDataErrorInfo`. In that case you would see the message twice. Use the [`ExpressionObserver.DataValidators`](http://reference.avaloniaui.net/api/Avalonia.Data.Core/ExpressionObserver/)-collection to add or remove a specific `ValidationPlugin`.
+if needed to, you can enable or disable a specific `ValidationPlugin` in your App. This can be useful if for example your MVVM-framework uses `DataAnnotations` to validate the property via `INotifyDataErrorInfo`. In that case you would see the message twice. Use the `BindingPlugins.DataValidators`-collection to add or remove a specific `ValidationPlugin`.
 
 **Example: Remove the DataAnnotations validator**
 
 ```cs
 public override void OnFrameworkInitializationCompleted()
 {
-    // Remove the DataAnnotations validator
-    ExpressionObserver.DataValidators.RemoveAll(x => x is DataAnnotationsValidationPlugin);
-    
+    // Get an array of plugins to remove
+    var dataValidationPluginsToRemove =
+        BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
+
+    // remove each entry found
+    foreach (var plugin in dataValidationPluginsToRemove)
+    {
+        BindingPlugins.DataValidators.Remove(plugin);
+    }
+
     // Continue with normal startup
     if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
     {

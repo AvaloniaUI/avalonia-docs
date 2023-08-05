@@ -13,7 +13,7 @@ To do this, you will need some classes defined in a `<Styles>` collection that t
 You can then conditionally apply the classes to a control using special classes syntax and a data binding. The syntax is like this:
 
 ```
-<SomeControl Classes.class1="Binding IsClass1Active}">
+<SomeControl Classes.class1="{Binding IsClass1Active}">
 ```
 
 ## Example
@@ -22,7 +22,7 @@ In this example, two styles with class selectors have been defined. These give a
 
 ```xml title='XAML'
 <StackPanel Margin="20">
-  <ListBox Items="{Binding ItemList}">
+  <ListBox ItemsSource="{Binding ItemList}">
     <ListBox.Styles>
       <Style Selector="TextBlock.class1">
         <Setter Property="Background" Value="OrangeRed" />

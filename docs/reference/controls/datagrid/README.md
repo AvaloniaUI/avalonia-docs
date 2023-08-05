@@ -58,7 +58,7 @@ You will probably use these properties most often:
 | Property                | Description                                                                                                                     |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `AutoGenerateColumns`   | Whether the columns will automatically generate from the bound items data source property names. (Default is false.)            |
-| `Items`                 | The bound collection that is used as the data source for the control.                                                           |
+| `ItemsSource`           | The bound collection that is used as the data source for the control.                                                           |
 | `IsReadOnly`            | Sets the binding direction to one-way when true. The default is false - the grid will accept changes to the bound data.         |
 | `CanUserReorderColumns` | Indicates whether the user can change the column display order by dragging column headers with the pointer. (Default is false.) |
 | `CanUserResizeColumns`  | Indicates whether the user can adjust column widths using the pointer. (Default is false.)                                      |
@@ -71,7 +71,7 @@ This example will generate a basic data grid, with column header names auto-gene
 
 
 ```xml
-<DataGrid Margin="20" Items="{Binding People}" 
+<DataGrid Margin="20" ItemsSource="{Binding People}" 
           AutoGenerateColumns="True" IsReadOnly="True" 
           GridLinesVisibility="All"
           BorderThickness="1" BorderBrush="Gray">
@@ -130,7 +130,7 @@ These examples use the MVVM pattern with data binding to an `ObservableCollectio
 Property names from the item class will generally not make good column names. This example adds custom header names to the grid. It also allows column reordering and resizing and disallows the default column sorting option:
 
 ```markup
-<DataGrid Margin="20" Items="{Binding People}"
+<DataGrid Margin="20" ItemsSource="{Binding People}"
           IsReadOnly="True"
           CanUserReorderColumns="True"
           CanUserResizeColumns="True"
@@ -151,7 +151,7 @@ This example shows how the data grid can accept changes and update the underlyin
 
 
 ```xml
-<DataGrid Margin="20" Items="{Binding People}"        
+<DataGrid Margin="20" ItemsSource="{Binding People}"        
           GridLinesVisibility="All"
           BorderThickness="1" BorderBrush="Gray">
   <DataGrid.Columns>

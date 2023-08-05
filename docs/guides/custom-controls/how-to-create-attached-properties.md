@@ -130,7 +130,7 @@ This example UI shows how to use the attached property. After making the namespa
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:loc="clr-namespace:MyApp.Behaviors"
              x:Class="MyApp.Views.TestView">
-    <ListBox Items="{Binding Accounts}"
+    <ListBox ItemsSource="{Binding Accounts}"
              SelectedIndex="{Binding SelectedAccountIdx, Mode=TwoWay}"
              loc:DoubleTappedBehav.Command="{Binding EditCommand}"
              loc:DoubleTappedBehav.CommandParameter="test77"
@@ -155,7 +155,7 @@ public class TestViewModel : ReactiveObject
 
     public TestViewModel()
     {
-        EditCommand = ReactiveCommand.CreateFromTask<object, Unit>(EditProfileExecuted);
+        EditCommand = ReactiveCommand.CreateFromTask<object, Unit>(EditCommandExecuted);
     }
 
     private async Task<Unit> EditCommandExecuted(object p)

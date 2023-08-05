@@ -6,7 +6,7 @@ title: How To Bind Tabs
 
 ## Binding Support Example
 
-You can dynamically create tab items with **data binding**. To do this, bind the `Items` property of a tab control to an array of objects representing the tab header and content.&#x20;
+You can dynamically create tab items with **data binding**. To do this, bind the `ItemsSource` property of a tab control to an array of objects representing the tab header and content.&#x20;
 
 You can then use a **data template** to display the objects.
 
@@ -36,10 +36,10 @@ DataContext = new TabItemModel[] {
 
 The `TabStrip` header content is defined by ItemTemplate property, while `TabItem`'s content is defined by ContentTemplate property.
 
-Finally create a `TabControl` and bind its Items property to the DataContext.
+Finally create a `TabControl` and bind its `ItemsSource` property to the DataContext.
 
 ```markup
-<TabControl Items="{Binding}">
+<TabControl ItemsSource="{Binding}">
     <TabControl.ItemTemplate>
       <DataTemplate>
         <TextBlock Text="{Binding Header}" />
