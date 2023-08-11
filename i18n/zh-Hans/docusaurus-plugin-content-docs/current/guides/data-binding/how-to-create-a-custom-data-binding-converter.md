@@ -1,22 +1,22 @@
 ---
 id: how-to-create-a-custom-data-binding-converter
-title: How to Create a Custom Data Binding Converter
+title: 如何创建自定义数据绑定转换器
 ---
 
 
-# How to Create a Custom Data Binding Converter
+# 如何创建自定义数据绑定转换器
 
-When one of the built-in data binding converters does not meet your conversion requirements, you can write a custom converter based on the `IValueConverter` interface. This guide will show you how.&#x20;
+当内置的数据绑定转换器不满足您的转换需求时，您可以根据 `IValueConverter` 接口编写自定义转换器。本指南将向您展示如何进行操作。
 
 :::info
-To review the _Microsoft_ documentation for the `IValueConverter` interface, see [here](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1).
+若要查看 `IValueConverter` 接口的 _Microsoft_ 文档，请点击[此处](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1)。
 :::
 
 :::info
-As the `IValueConverter` interface was not available in .NET standard 2.0, Avalonia UI  contains a copy in the `Avalonia.Data.Converters` namespace. You can see the API documentation about this interface, [here](https://reference.avaloniaui.net/api/Avalonia.Data.Converters/IValueConverter/).
+由于在 .NET标准2.0 中无法使用 `IValueConverter` 接口，Avalonia UI 在 `Avalonia.Data.Converters`命名空间中提供了该接口的副本。您可以在这里查看有关此接口的API文档：[这里](https://reference.avaloniaui.net/api/Avalonia.Data.Converters/IValueConverter/)。
 :::
 
-You must reference a custom converter in some resources before it can be used. This can be at any level in your application. In this example, the custom converter `myConverter` is referenced in the window resources:
+在使用自定义转换器之前，您必须在某些资源中引用它。这可以在应用程序的任何级别进行。在此示例中，自定义转换器 `myConverter` 被引用在 Window 资源中：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -31,9 +31,9 @@ You must reference a custom converter in some resources before it can be used. T
 </Window>
 ```
 
-## Example
+## 示例
 
-This example data binding converter can convert text to specific case from a parameter:
+此示例数据绑定转换器可以将文本转换为特定的大小写形式，使用参数进行控制：
 
 ```markup
 <TextBlock Text="{Binding TheContent, 
@@ -41,7 +41,7 @@ This example data binding converter can convert text to specific case from a par
     ConverterParameter=lower}" />
 ```
 
-The above XAML assumes that the `textCaseConverter` has been referenced in a resource.
+上述XAML假设已在资源中引用了 `textCaseConverter`。
 
 ```csharp
 public class TextCaseConverter : IValueConverter
@@ -83,11 +83,11 @@ public class TextCaseConverter : IValueConverter
 }
 ```
 
-## Target Property Type
+## 目标属性类型
 
-You may want to write a a custom converter that can switch the output type depending on what the target property requires. You can achieve this becuase the `Convert` method receives a `targetType` argument that you can test with the `IsAssignableTo` function.
+您可能希望编写一个自定义转换器，根据目标属性的要求切换输出类型。您可以通过 `Convert` 方法接收的 `targetType` 参数进行测试，使用 `IsAssignableTo` 函数来实现这一点。
 
-In this example, the `animalConverter` can find an image, or a text name for a bound `Animal` class object:  &#x20;
+在这个示例中，`animalConverter` 可以为绑定的 `Animal` 类对象查找图像或文本名称：
 
 ```xml title='XAML'
 <Image Width="42" 
@@ -144,8 +144,8 @@ public class AnimalConverter : IValueConverter
 }
 ```
 
-## More Information
+## 更多信息
 
 :::info
-For further guidance about how to bind images, see [here](how-to-bind-image-files.md).
+关于如何绑定图像的进一步指导，请参阅[这里](how-to-bind-image-files.md)。
 :::

@@ -1,18 +1,18 @@
 ---
 id: how-to-bind-to-an-observable
-title: How To Bind to an Observable
+title: 如何绑定到可观察对象
 ---
 
 
-# How To Bind to an Observable
+# 如何绑定到可观察对象
 
-Content in preparation.
+内容正在准备中。
 
-You can subscribe to the result of a task or an observable by using the `^` stream binding operator.
+您可以使用 `^` 流绑定操作符订阅任务或可观察对象的结果。
 
-## Example 1: Binding to an observable
+## 示例1：绑定到可观察对象
 
-For example if `DataContext.Name` is an `IObservable<string>` then the following example will bind to the length of each string produced by the observable as each value is produced
+例如，如果 `DataContext.Name` 是一个 `IObservable<string>`，那么以下示例将绑定到可观察对象产生的每个字符串的长度，随着每个值的产生而变化：
 
 ```markup
 <TextBlock Text="{Binding Name^.Length}"/>

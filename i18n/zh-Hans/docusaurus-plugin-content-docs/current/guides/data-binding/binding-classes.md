@@ -1,24 +1,24 @@
 ---
 id: binding-classes
-title: How To Bind Style Classes
+title: 如何绑定样式类
 ---
 
 
-# How To Bind Style Classes
+# 如何绑定样式类
 
-This guide will show you how to apply style classes to a control depending on the Boolean value of a data binding.&#x20;
+本指南将向您展示如何根据数据绑定的布尔值为控件应用样式类。
 
-To do this, you will need some classes defined in a `<Styles>` collection that target the control class you are using.
+要做到这一点，您需要在一个 `<Styles>` 集合中定义一些针对您正在使用的控件类的类。
 
-You can then conditionally apply the classes to a control using special classes syntax and a data binding. The syntax is like this:
+然后，您可以使用特殊的类语法和数据绑定有条件地将类应用于控件。语法如下：
 
 ```
 <SomeControl Classes.class1="Binding IsClass1Active}">
 ```
 
-## Example
+## 示例
 
-In this example, two styles with class selectors have been defined. These give a text block either a red or a green background. The style class binding assigns `class1` when the `IsClass1` property of an item is true. Using the negation operator, `class2` is assigned when the `IsClass1` property is false.
+在这个示例中，已经定义了两个带有类选择器的样式。这些样式为文本块提供了红色或绿色的背景。当项目的 `IsClass1` 属性为真时，样式类绑定将分配 `class1`。使用否定运算符，当 `IsClass1` 属性为假时，将分配 `class2`。
 
 ```xml title='XAML'
 <StackPanel Margin="20">

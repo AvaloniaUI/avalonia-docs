@@ -1,18 +1,18 @@
 ---
 id: how-to-bind-to-a-collection
-title: How to Bind to a Collection
+title: 如何绑定到集合
 ---
 
 
-# How to Bind to a Collection
+# 如何绑定到集合
 
-Binding to a collection in Avalonia UI is an effective way to display dynamic data. This guide will demonstrate how to bind an `ObservableCollection` to a control, like a `ListBox` or `ItemsControl`, to show a list of items.
+在 Avalonia UI 中绑定到集合是一种有效的显示动态数据的方法。本指南将演示如何将 `ObservableCollection` 绑定到控件，比如 `ListBox` 或 `ItemsControl`，以显示一系列项目。
 
-## Binding to a Simple ObservableCollection
+## 绑定到简单的 ObservableCollection
 
-For a start, consider you have an `ObservableCollection<string>` and you want to bind it to a `ListBox` to display a list of string items.
+首先，假设您有一个 `ObservableCollection<string>`，您希望将其绑定到一个 `ListBox` 以显示字符串项目的列表。
 
-Here's an example `ViewModel` with an `ObservableCollection<string>`:
+以下是一个带有 `ObservableCollection<string>` 的示例 `ViewModel`：
 
 ```csharp 
 public class ViewModel : ObservableObject
@@ -32,17 +32,17 @@ public class ViewModel : ObservableObject
 }
 ```
 
-In your view, you can bind this `ObservableCollection` to a `ListBox` like so:
+在您的视图中，您可以这样将这个 `ObservableCollection` 绑定到 `ListBox`：
 
 ```xml
 <ListBox Items="{Binding Items}"/>
 ```
 
-## Binding to an ObservableCollection of Complex Objects
+## 绑定到一个包含复杂对象的 ObservableCollection
 
-But what if your `ObservableCollection` contains complex objects that themselves need to propagate changes? Let's modify our `ViewModel` to accommodate this scenario.
+但如果您的 `ObservableCollection` 包含复杂对象，这些对象本身也需要传播更改怎么办？让我们修改我们的 `ViewModel` 来适应这种情况。
 
-Consider a `Person` class:
+考虑一个 `Person` 类：
 
 ```csharp
 public class Person : ObservableObject
@@ -64,7 +64,7 @@ public class Person : ObservableObject
 }
 ```
 
-And an `ObservableCollection<Person>` in our ViewModel:
+以及在我们的 `ViewModel` 中的一个 `ObservableCollection<Person>`：
 
 ```csharp
 public class ViewModel : ObservableObject
@@ -88,7 +88,7 @@ public class ViewModel : ObservableObject
 }
 ```
 
-You can bind this `ObservableCollection` to a `ListBox` in your view, and use a `DataTemplate` to specify how each `Person` should be presented:
+您可以在视图中将这个 `ObservableCollection` 绑定到 `ListBox`，并使用 `DataTemplate` 来指定每个 `Person` 应该如何呈现：
 
 ```xml
 <ListBox Items="{Binding People}">
@@ -103,21 +103,4 @@ You can bind this `ObservableCollection` to a `ListBox` in your view, and use a 
 </ListBox>
 ```
 
-In this scenario, each `Person` in the list will be displayed with their `Name` and `Age` separated by a small margin. If any of items properties change, the `ListBox` item will automatically update. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+在这种情况下，列表中的每个 `Person` 将以其 `Name` 和 `Age` 分开的方式显示，并带有一个小间距。如果任何项目的属性发生更改，`ListBox` 项目将自动更新。

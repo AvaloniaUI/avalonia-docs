@@ -1,16 +1,16 @@
 ---
 id: how-to-bind-can-execute
-title: How to Bind Can Execute
+title: 如何绑定 Can Execute
 ---
 
 
-# How to Bind Can Execute
+# 如何绑定 Can Execute
 
-Whether a control, that can initiate an action in response to user interaction, is in its enabled state, is an important principle of the 'revealed functionality' part of user experience design (UX). User confidence is reinforced by disabling commands that cannot run. For example where a button or menu item cannot run due to the current state of an application, they should be presented as inactive.
+控件是否处于启用状态，可以响应用户交互并触发操作，是用户体验设计（UX）中“功能可见性”部分的重要原则。通过禁用无法运行的命令，可以增强用户的信心。例如，如果按钮或菜单项由于应用程序的当前状态而无法运行，则应呈现为不活动状态。
 
-This example assumes that you are using the MVVM implementation pattern with the _ReactiveUI_ framework. This (recommended) approach gives a very clear separation between the view and the view model.
+本示例假设您正在使用带有 _ReactiveUI_ 框架的 MVVM 实现模式。这种（推荐的）方法在视图和视图模型之间提供了非常清晰的分离。
 
-In this example, the button can only be clicked when the message is not empty. As soon as the output is shown; the message is reset to the empty string - which in turn will disable the button again.
+在此示例中，只有在消息不为空时，才能单击按钮。一旦输出显示出来，消息就会重置为空字符串，从而再次禁用按钮。
 
 ```xml title='XAML'
 <StackPanel Margin="20">
@@ -74,16 +74,16 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-In the constructor of the view model, the reactive command is created with two parameters. The first is the private method that performs the action. The second is an observable which is created by the `WhenAnyValue` method of the `ReactiveObject` that underlies the view model (from the `ViewModelBase` class).&#x20;
+在视图模型的构造函数中，使用两个参数创建了响应式命令。第一个参数是执行操作的私有方法。第二个参数是由视图模型（来自 `ViewModelBase` 类）的 `ReactiveObject` 的 `WhenAnyValue` 方法创建的可观察对象。
 
 :::info
-The `ViewModelBase` class is added to your project when you use the 'Avalonia MVVM Application' solution template.
+在使用 "Avalonia MVVM Application" 解决方案模板时，将会向您的项目中添加 `ViewModelBase` 类。
 :::
 
-Here the `WhenAnyValue` method takes two arguments, the first collects a value for the parameter of the validation function, and the second is the validation function that returns a Boolean result.&#x20;
+在这里，`WhenAnyValue` 方法接受两个参数，第一个参数收集验证函数参数的值，第二个参数是返回布尔结果的验证函数。
 
 :::info
-The `WhenAnyValue` method actually has overloads that can take up to 10 different value getters (for the validation function parameters), plus the validation function itself. &#x20;
+实际上，`WhenAnyValue` 方法有多个重载，最多可以接受 10 个不同的值获取器（用于验证函数参数），以及验证函数本身。
 :::
 
 <img src="/img/gitbook-import/assets/command4.gif" alt=""/>

@@ -1,35 +1,35 @@
 ---
 id: how-to-bind-to-a-task-result
-title: How to Bind to a Task Result
+title: 如何绑定任务结果
 ---
 
 
-# How to Bind to a Task Result
+# 如何绑定任务结果
 
-Content in preparation.
+内容正在准备中。
 
-## Example 2: Binding to a task
+## 示例2：绑定到任务
 
-If you need to do some heavy work to load the content of a property you can bind to the result of an `async Task<TResult>`
+如果您需要进行一些繁重的工作来加载属性的内容，您可以绑定到 `async Task<TResult>` 的结果。
 
-Consider you have the following view model which generates some text in a long running process:
+假设您有以下的视图模型，它在一个长时间运行的过程中生成一些文本：
 
 ```csharp
 public Task<string> MyAsyncText => GetTextAsync();
 
 private async Task<string> GetTextAsync()
 {
-  await Task.Delay(1000); // The delay is just for demonstration purpose
+  await Task.Delay(1000); // 仅为演示目的而进行延迟
   return "Hello from async operation";
 }
 ```
 
-You can bind to the result in the following way:
+您可以按照以下方式绑定到结果：
 
 ```markup
 <TextBlock Text="{Binding MyAsyncText^, FallbackValue='Wait a second'}" />
 ```
 
 :::info
-Note: You can use `FallbackValue` to display some loading indicator.
+注意：您可以使用 `FallbackValue` 来显示一些加载指示器。
 :::

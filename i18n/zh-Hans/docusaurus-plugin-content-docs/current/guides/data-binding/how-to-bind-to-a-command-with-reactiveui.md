@@ -1,12 +1,12 @@
 ---
 id: how-to-bind-to-a-command-with-reactiveui
-title: How to Bind to a Command with ReactiveUI
+title: 如何使用ReactiveUI绑定命令
 ---
 
 
-# How to Bind to a Command with ReactiveUI
+# 如何使用ReactiveUI绑定命令
 
-This guide shows you how to bind a view model method (that performs an action) to a control that can initiate an action in response to user interaction (for example, a button). This binding is defined in XAML using the `Command` attribute, for example:
+本指南将向您展示如何将视图模型方法（执行操作）绑定到可以响应用户交互而启动操作的控件（例如按钮）。此绑定在XAML中使用`Command`属性进行定义，例如：
 
 ```csharp
 <Window xmlns="https://github.com/avaloniaui">
@@ -16,38 +16,38 @@ This guide shows you how to bind a view model method (that performs an action) t
   </StackPanel>
 ```
 
-This guide assumes that you are using the MVVM implementation pattern, and you have based your view model on the _ReactiveUI_ framework.
+本指南假设您正在使用MVVM实现模式，并且您的视图模型基于 _ReactiveUI_ 框架。
 
 :::info
-To review the concept behind the MVVM implementation pattern, see [here](../../concepts/the-mvvm-pattern/).&#x20;
+要了解MVVM实现模式背后的概念，请参阅[此处](../../concepts/the-mvvm-pattern/)。
 :::
 
-If you created your application using the **Avalonia MVVM Application** solution template then your solution will already contain the _ReactiveUI_ framework package, and you can reference it like this:
+如果您使用**Avalonia MVVM Application**解决方案模板创建了应用程序，那么您的解决方案已经包含 _ReactiveUI_ 框架包，您可以像这样引用它：
 
 ```csharp
 using ReactiveUI;
 ```
 
-A view model that can perform actions implements them through the `ICommand` interface. The _ReactiveUI_ framework provides the `ReactiveCommand` class that implements `ICommand`.
+可以通过实现 `ICommand` 接口来执行操作的视图模型通过该接口来实现。_ReactiveUI_ 框架提供了实现 `ICommand` 的 `ReactiveCommand` 类。
 
 :::info
-For details of the definition of the `ICommand` interface, see [here](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.input.icommand?view=netstandard-2.0).
+有关 `ICommand` 接口定义的详细信息，请参阅[此处](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.input.icommand?view=netstandard-2.0)。
 :::
 
-The `Command` attribute data binding will call the bound view model method through its `ICommand.Execute` interface, when the bound control is activated. In this example: when the button is clicked.
+`Command` 属性数据绑定将通过其 `ICommand.Execute` 接口调用绑定的视图模型方法，在绑定的控件被激活时。在这个例子中：当按钮被点击时。
 
-To create a view model with a `ReactiveCommand`, follow this example:
+要创建带有 `ReactiveCommand` 的视图模型，请按照以下示例：
 
--  In your view model, declare a command, like this:
+- 在您的视图模型中，声明一个命令，例如：
 
 ```csharp
 public ReactiveCommand<Unit, Unit> ExampleCommand { get; } 
 ```
 
--  Create a private method in the view model to perform the action.
--  Initialize the reactive command, passing the name of the method that performs the action.
+- 在视图模型中创建一个私有方法来执行操作。
+- 初始化Reactive命令，传递执行操作的方法的名称。
 
-Your view model code will now look like this:
+您的视图模型代码现在将如下所示：
 
 ```csharp
 namespace AvaloniaGuides.ViewModels
@@ -68,15 +68,15 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
--  Run the app and monitor the debug output.
+- 运行应用程序并监视调试输出。
 
-When the control bound to the reactive command is activated (in this example: when the button is clicked); then the private method to perform the action is called through the reactive command.&#x20;
+当与Reactive命令绑定的控件被激活时（在本例中：当按钮被点击时），将通过Reactive命令调用执行操作的私有方法。
 
 <img src="/img/gitbook-import/assets/command.gif" alt=""/>
 
-## Command Parameter
+## 命令参数
 
-You will often need to pass an argument to the reactive command that is bound to a control. You can achieve this using the `CommandParameter` attribute in the XAML. For example:
+通常需要向绑定到控件的Reactive命令传递参数。您可以在XAML中使用 `CommandParameter` 属性来实现这一点。例如：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui">
@@ -88,7 +88,7 @@ You will often need to pass an argument to the reactive command that is bound to
 </Window>
 ```
 
-You must now modify the view model so that the reactive commend expects a string parameter, the initialisation expects a string parameter, and the private method to perform the action expects a string parameter. As follows:
+现在，您必须修改视图模型，以便Reactive命令期望一个字符串参数，初始化期望一个字符串参数，执行操作的私有方法期望一个字符串参数。如下所示：
 
 ```csharp
 namespace AvaloniaGuides.ViewModels
@@ -109,9 +109,9 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-Note that no type conversion is carried out on the `CommandParameter` attribute, so if you need to use a type parameter that is not a string, then you must define the type in the XAML. You will also need to use the expanded XAML syntax for the parameter.&#x20;
+请注意，`CommandParameter` 属性上不会执行任何类型转换，因此，如果您需要使用不是字符串的类型参数，则必须在XAML中定义该类型。您还需要使用扩展的XAML语法来定义参数。
 
-For example to pass an integer parameter:
+例如，要传递整数参数：
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -127,9 +127,9 @@ For example to pass an integer parameter:
 ```
 
 :::danger
-You will get an error if your parameter definitions are missing or not the correct type.
+如果参数定义缺失或类型不正确，将会出现错误。
 :::
 
 :::info
-Like any other property, the command parameter can be bound.
+与任何其他属性一样，命令参数也可以绑定。
 :::
