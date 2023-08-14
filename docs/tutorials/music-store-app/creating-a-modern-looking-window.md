@@ -12,10 +12,11 @@ Follow this procedure to style the main window in 'dark' mode:
 
 - Stop the app if it is still running.
 - Locate and open the file **App.axaml**.
-- In the XAML, change the `Mode` attribute in the element`<FluentTheme>` from light to dark&#x20;
+- In the XAML, change the `RequestedThemeVariant` attribute in the `<Application>` element from "Default" to "Dark"&#x20;
 
 ```markup
-<FluentTheme Mode="Dark"/>
+<Application ...
+    RequestedThemeVariant="Dark">
 ```
 
 - Now locate and open the **MainWindow.axaml** file in the **/Views** folder.
