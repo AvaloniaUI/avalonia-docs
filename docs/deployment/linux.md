@@ -134,5 +134,7 @@ both desktop applications and server software.
 Ubuntu),
 and is the default choice for Ubuntu and Ubuntu flavors to provide graphical software to users.
 
+### Packaging and Deploying to Snapcraft
+
 > For building the Snap package and distributing via Snapcraft,
 > see [Snapcraft - Packaging for .NET Apps](https://snapcraft.io/docs/dotnet-apps)
