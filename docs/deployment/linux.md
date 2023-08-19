@@ -62,7 +62,7 @@ is the default choice for most major Linux distributions to provide graphical so
       env:
         PKG_CONFIG_PATH: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet7/lib/pkgconfig"
     
-    command: [[your-project-name]]
+    command: [[project-name]]
     
     finish-args:  
       - --device=dri
@@ -82,7 +82,7 @@ is the default choice for most major Linux distributions to provide graphical so
         buildsystem: simple
         sources:
           - type: git
-            url: https://github.com/[[username]]/[[your-project-name]].git
+            url: https://github.com/[[username]]/[[project-name]].git
           - ./nuget-sources.json
         build-commands:
           - dotnet publish [[project-name]]/[[project-name]].csproj -c Release --no-self-contained --source ./nuget-sources
