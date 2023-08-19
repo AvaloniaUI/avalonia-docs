@@ -504,6 +504,7 @@ const sidebars = {
       },
       'items': [
         'deployment/macOS',
+        'deployment/linux',
       ],
     },
     {
