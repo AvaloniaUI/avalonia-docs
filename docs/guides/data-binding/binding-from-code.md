@@ -149,10 +149,10 @@ For example if you want to listen to changes to your control's `Foo` property yo
 ```csharp
 static MyControl()
 {
-    FooProperty.Changed.AddClassHandler<MyControl>(x => x.FooChanged);
+    FooProperty.Changed.AddClassHandler<MyControl>(FooChanged);
 }
 
-private void FooChanged(AvaloniaPropertyChangedEventArgs e)
+private static void FooChanged(MyControl sender, AvaloniaPropertyChangedEventArgs e)
 {
     // The 'e' parameter describes what's changed.
 }
