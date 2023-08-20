@@ -19,8 +19,8 @@ As a starting point, you can create a simple view like this:
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5" >User Name</TextBlock>
-  <TextBox Text="Binding UserName"/>
-  <Button Margin="0 20" Command="Binding SubmitCommand">Submit</Button>
+  <TextBox Text="{Binding UserName}"/>
+  <Button Margin="0 20" Command="{Binding SubmitCommand}">Submit</Button>
 </StackPanel>
 ```
 
