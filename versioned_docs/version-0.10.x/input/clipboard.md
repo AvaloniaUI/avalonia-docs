@@ -34,7 +34,7 @@ Objects are stored and retrieved with a format string that should be unique to y
 
 ### Source code
 
-- [IClipboard.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Input/Platform/IClipboard.cs)
+- [IClipboard.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/Platform/IClipboard.cs)
 - [Avalonia.Win32/ClipboardImpl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Windows/Avalonia.Win32/ClipboardImpl.cs)
 - [Avalonia.X11/X11Clipboard.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.X11/X11Clipboard.cs)
 - [Avalonia.Native/ClipboardImpl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Native/ClipboardImpl.cs)
