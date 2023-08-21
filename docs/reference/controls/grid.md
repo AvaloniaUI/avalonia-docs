@@ -94,7 +94,7 @@ If a child control has its own dimensions these will be obeyed when it is drawn.
 
 You can mix any of the above in the same size definition sequence. For example:
 
-`ColumnDefinitions="300, *, 2*"`
+`ColumnDefinitions="200, *, 2*"`
 
 Using full expanded XAML, this is the same as:
 
