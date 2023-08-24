@@ -16,7 +16,7 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-Hans'],
   },
   headTags: [
     {
@@ -169,6 +169,10 @@ const config = {
         items: [
           {
             type: 'docsVersionDropdown',
+            position: 'left',
+          },
+          {
+            type: 'localeDropdown',
             position: 'left',
           },
           {
