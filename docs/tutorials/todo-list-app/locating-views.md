@@ -72,7 +72,7 @@ In your to do list app, the main window has had its content set to an object tha
 For more information about the concepts behind data templates, see [here](../../concepts/templates/).
 :::
 
-As no other data templates match, the search will eventually reach the `ViewLocator` in the application data templates element. This will run its checks and if they pass, return an instance of the corresponding view. It your app this will be the to do list view.&#x20;
+As no other data templates match, the search will eventually reach the `ViewLocator` in the application data templates element. This will run its checks and if they pass, return an instance of the corresponding view. In your app this will be the to do list view.&#x20;
 
 <div style={{textAlign: 'center'}}>
   <img src="/img/gitbook-import/assets/image (45).png" alt=""/>
@@ -85,6 +85,6 @@ In this way the content of the main window is set to the correct view, based on 
 
 Note that the view locator class is included in the project source rather than being part of the _Avalonia UI_ framework itself. This is because using an implementation of the 'convention over configuration' paradigm is an architectural choice for the application developer.
 
-If you do not want to use the view locator (in a diffent app); then remove it from the project and the **App.axaml** file.
+If you do not want to use the view locator (in a different app); then remove it from the project and the **App.axaml** file.
 
 On the next page you will learn how to add revealed functionality and actions to the **OK** and **Cancel** buttons.
