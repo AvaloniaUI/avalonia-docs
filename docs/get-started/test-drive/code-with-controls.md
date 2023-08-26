@@ -87,7 +87,7 @@ You can check your work using the following conversion table:
 
 - You have now used an event handler to get and set control properties at runtime. You could now try some of these exercises:
 - Stop showing the gridlines (easy).
-- Stop the user changing the text in the Fahrenheit input by setting the `ReadOnly` attribute (easy).
+- Stop the user changing the text in the Fahrenheit input by setting the `IsReadOnly` attribute (easy).
 - Calculate the conversion as the user types into the Celsius input (moderate).
 
 :::info
