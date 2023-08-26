@@ -22,7 +22,7 @@ For example, this code adds a data template to display the view model class `MyV
     <!-- Assuming that DataContext.Foo is an object of type
          MyApp.ViewModels.FooViewModel then a red border with a corner
          radius of 8 containing a TextBox will be displayed here -->
-    <ContentControl Content="{Binding Foo}"/>
+    <ContentControl DataType="viewmodels:UserControl1ViewModel" Content="{Binding Foo}"/>
 <UserControl>
 ```
 
