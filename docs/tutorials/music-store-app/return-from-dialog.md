@@ -40,7 +40,7 @@ Notice you are using `ReactiveCommand` here. This is provided by the _ReactiveUI
 
 Your next step is bind the **Buy Album** button to the reactive command in the music store view model, follow this procedure:
 
-- Locate and open the **MusicStoreView .cs** file. &#x20;
+- Locate and open the **MusicStoreView .axaml** file. &#x20;
 - Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
 
 ## Close the Dialog
