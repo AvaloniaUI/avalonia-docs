@@ -175,9 +175,13 @@ Follow this procedure to add the album name and artist name to the tile:
 
 - Locate and open the **AlbumView.asaml** file.&#x20;
 - Add the two text block controls with their data bindings, as shown:
+- To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
 
 ```xml
 <UserControl ...
+  xmlns:vm="using:Avalonia.MusicStore.ViewModels"
+  x:DataType="vm:AlbumViewModel" >
+
   <StackPanel Spacing="5" Width="200">
     <Border CornerRadius="10" ClipToBounds="True">
       <Panel Background="#7FFF22DD">
