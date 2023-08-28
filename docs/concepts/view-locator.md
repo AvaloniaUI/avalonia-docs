@@ -11,9 +11,9 @@ The View Locator is a mechanism in Avalonia that is used to resolve the view (us
 
 ## How it works
 
-The View Locator uses naming conventions to map ViewModel types to view types. By default, it strips "ViewModel" from the end of the ViewModel type name, and looks for a type with the same name in the same namespace, but in the corresponding "Views" namespace.
+The View Locator uses naming conventions to map ViewModel types to view types. By default, it replaces every occurrence of the string "ViewModel" within the fully-qualified ViewModel type name with "View".
 
-For example, given a ViewModel named `MyApplication.ViewModels.ExampleViewModel`, the View Locator will look for a View named `MyApplication.Views.Example`.
+For example, given a ViewModel named `MyApplication.ViewModels.ExampleViewModel`, the View Locator will look for a View named `MyApplication.Views.ExampleView`.
 
 The View Locator is typically used in conjunction with the `DataContext` property, which is used to link a view to its ViewModel.
 
