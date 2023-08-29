@@ -128,7 +128,7 @@ description: TUTORIALS - Music Store App
 
 ```markup
 <Application.Styles>
-    <FluentTheme Mode="Dark"/>
+    <FluentTheme />
     <StyleInclude Source="avares://Avalonia.MusicStore/Icons.axaml" />
 </Application.Styles>
 ```

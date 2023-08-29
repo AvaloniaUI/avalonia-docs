@@ -149,10 +149,10 @@ subscription.Dispose();
 ```csharp
 static MyControl()
 {
-    FooProperty.Changed.AddClassHandler<MyControl>(x => x.FooChanged);
+    FooProperty.Changed.AddClassHandler<MyControl>(FooChanged);
 }
 
-private void FooChanged(AvaloniaPropertyChangedEventArgs e)
+private static void FooChanged(MyControl sender, AvaloniaPropertyChangedEventArgs e)
 {
     // 'e' 参数描述了发生的更改。
 }

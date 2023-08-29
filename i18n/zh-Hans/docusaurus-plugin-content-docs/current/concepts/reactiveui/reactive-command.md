@@ -1,6 +1,7 @@
 ---
 description: CONCEPTS - ReactiveUI
 ---
+
 # 响应式命令
 
 在本页面中，您将学习如何使用_ReactiveUI_的`ReactiveCommand`和在代码中创建的`ObservableObject`来实现UI的功能逐步展示原则。
@@ -17,9 +18,9 @@ description: CONCEPTS - ReactiveUI
 
 ```xml
 <StackPanel Margin="20">
-  <TextBlock Margin="0 5" >User Name</TextBlock>
-  <TextBox Text="Binding UserName"/>
-  <Button Margin="0 20" Command="Binding SubmitCommand">Submit</Button>
+    <TextBlock Margin="0 5" >User Name</TextBlock>
+    <TextBox Text="{Binding UserName}"/>
+    <Button Margin="0 20" Command="{Binding SubmitCommand}">Submit</Button>
 </StackPanel>
 ```
 
