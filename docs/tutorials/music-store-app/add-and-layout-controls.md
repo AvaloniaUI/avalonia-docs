@@ -128,7 +128,7 @@ Follow this procedure to include the icons file:
 
 ```markup
 <Application.Styles>
-    <FluentTheme Mode="Dark"/>
+    <FluentTheme />
     <StyleInclude Source="avares://Avalonia.MusicStore/Icons.axaml" />
 </Application.Styles>
 ```

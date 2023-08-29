@@ -90,7 +90,7 @@ For guidance on how to bind to commands, see [here](../../basics/user-interface/
 A menu icon can be displayed by placing an image or a path icon in the `<MenuItem.Icon>` attached property. For example:
 
 ```markup
-<<MenuItem Header="_Edit">
+<MenuItem Header="_Edit">
   <MenuItem Header="Copy">
      <MenuItem.Icon>
         <PathIcon Data="{StaticResource copy_regular}"/>

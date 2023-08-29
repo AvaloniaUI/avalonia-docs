@@ -25,6 +25,8 @@ Legend:
 | x:Array                |     ✖    |  ✔  |  ✖  | x:Array isn't supported in UWP.                                                                                                                                                                                                                     |
 | x:Static               |     ✔    |  ✔  |  ⚡  | x:Static could be replaced with x:Bind                                                                                                                                                                                                              |
 | x:Type                 |     ✔    |  ✔  |  ✖  |                                                                                                                                                                                                                                                     |
+| x:True                 |     ✔    |  ✖  |  ✖  |                                               |
+| x:False                |     ✔    |  ✖  |  ✖  |                                               |
 | Full Markup Extension  |     ✔    |  ✔  |  ✖  | UWP only implements a subset of the full markup extension support in WPF. This area needs to be expanded upon in the future.                                                                                                                        |
 | Compiled Bindings      |     ✔    |  ✖  |  ✖  |                                                                                                                                                                                                                                                     |
 
