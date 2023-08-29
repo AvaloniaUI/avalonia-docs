@@ -52,7 +52,7 @@ Avalonia UI 提供了各种类型的按钮控件：
         </tr>
         <tr>
             <td>
-                <a href="togglesplitbutton">分裂切换按钮（Toggle Split Button）</a>
+                <a href="togglesplitbutton">切换分裂按钮（Toggle Split Button）</a>
             </td>
             <td>此按钮具有主要部分和次要部分，可以分别进行独立的点击。主要部分的行为类似于切换按钮，而次要部分会打开一个包含附加操作的弹出菜单。</td>
         </tr>

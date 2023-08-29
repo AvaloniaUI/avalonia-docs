@@ -2,19 +2,19 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Toggle Button
+# 切换按钮
 
-The toggle button can present a Boolean value by using styles and a pseudo class that is either present (true) or absent (false).
+切换按钮可以通过使用样式和伪类来呈现布尔值，这些样式和伪类可以存在（true）或不存在（false）。
 
 :::info
-To review the concepts behind a pseudo class, see [here](../../../concepts/pseudo-classes.md).
+要查看伪类背后的概念，请参阅[这里](../../../concepts/pseudo-classes.md)。
 :::
 
-This allows a wide range of possible graphical presentations for the control in each of the pseudo class states.&#x20;
+这允许在每个伪类状态中对控件进行广泛的可能的图形呈现。
 
-## Example
+## 示例
 
-This example shows a toggle button containing a speaker icon, or a muted speaker icon, depending on whether the button has the checked pseudo class or not.
+此示例显示了一个切换按钮，其中包含一个扬声器图标或静音扬声器图标，具体取决于按钮是否具有已检查的伪类。
 
 
 
@@ -77,25 +77,24 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 ```
 
 
-
-The content zone of the toggle button contains two path icon elements, only one of which is visible at a time. The path icons get their graphics from an assets file which is referenced as an included style set in the `App.xaml` file. The icon geometries are from the _Avalonia UI_ Fluent icons resource.
+切换按钮的内容区域包含两个路径图标元素，每次只有一个图标可见。路径图标从一个资产文件中获取其图形，该文件被引用为`App.xaml`文件中包含的样式集。图标几何图形来自_Avalonia UI_的Fluent图标资源。
 
 :::info
-To see the full list of Fluent icons available with _Avalonia UI_, see [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
+要查看_Avalonia UI_中提供的完整Fluent图标列表，请访问 [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
 :::
 
-The visibility of the path icons is set by the window styles, and these use the `:checked` pseudo class to determine when the toggle button is in its checked state. So, when the toggle button is checked, then the `audio-on` path icon is visible, and the `audio-mute` path icon is hidden. And conversely, when the toggle button is not checked, then the `audio-mute` path icon is visible, and the `audio-on` path icon is hidden.
+路径图标的可见性由窗口样式设置，这些样式使用`:checked`伪类来确定切换按钮何时处于已选中状态。因此，当切换按钮被选中时，`audio-on`路径图标可见，而`audio-mute`路径图标隐藏。反之，当切换按钮未选中时，`audio-mute`路径图标可见，而`audio-on`路径图标隐藏。
 
 <img src='/img/gitbook-import/assets/toggle.gif' alt=''/>
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/ToggleButton/).
+有关此控件的完整API文档，请参阅[这里](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/ToggleButton/).
 :::
 
 :::info
-View the source code on _GitHub_ [`ToggleButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)
+在_GitHub_上查看源代码[`ToggleButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)
 :::
 
 
