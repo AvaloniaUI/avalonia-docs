@@ -68,9 +68,9 @@ Fluent 主题有两套预定义的密度变体。
     // highlight-start
       <FluentTheme.Palettes>
         <!-- 适用于浅色主题变体的调色板 -->
-        <ColorPaletteResources x:Key="Light" AccentColor="Green" RegionColor="White" ErrorText="Red" />
+        <ColorPaletteResources x:Key="Light" Accent="Green" RegionColor="White" ErrorText="Red" />
         <!-- 适用于暗色主题变体的调色板 -->
-        <ColorPaletteResources x:Key="Dark" AccentColor="DarkGreen" RegionColor="Black" ErrorText="Yellow" />
+        <ColorPaletteResources x:Key="Dark" Accent="DarkGreen" RegionColor="Black" ErrorText="Yellow" />
       </FluentTheme.Palettes>
     // highlight-end
     </FluentTheme>
@@ -80,10 +80,10 @@ Fluent 主题有两套预定义的密度变体。
 
 虽然 `ColorPaletteResources` 具有许多可以单独为每个变体重写的颜色属性，但是只能重新定义所需的最小集合，其他所有内容保持默认值。如上面的示例中，仅覆盖了几种颜色。
 
-如果未重写 AccentColor，Avalonia 将使用平台 OS 的强调颜色（如果可用）。
-另外，AccentColor 支持绑定，并且可以在运行时更改，但其他属性不支持，因为它们在应用程序启动后被读取一次，并且为了性能原因而静态使用。
+如果未重写 Accent，Avalonia 将使用平台 OS 的强调颜色（如果可用）。
+另外，Accent 支持绑定，并且可以在运行时更改，但其他属性不支持，因为它们在应用程序启动后被读取一次，并且为了性能原因而静态使用。
 
-可以在代码中构建调色板，但是同样的规则适用——只有 AccentColor 可以在运行时更新，并且调色板应该在样式或主题加载后设置为不可变。
+可以在代码中构建调色板，但是同样的规则适用——只有 Accent 可以在运行时更新，并且调色板应该在样式或主题加载后设置为不可变。
 
 :::note
 FluentTheme 仅支持暗色和浅色主题变体，不支持为自定义变体定义调色板。
@@ -92,7 +92,8 @@ FluentTheme 仅支持暗色和浅色主题变体，不支持为自定义变体�
 ## 使用在线编辑器创建自定义颜色调色板
 
 Microsoft Fluent Theme Editor 已移植到 Avalonia，现在也可以与我们的 FluentTheme 一起使用。
-它可在 https://theme.xaml.live/ 页面上使用，并支持以下功能：
+它可在 <https://theme.xaml.live/> 页面上使用，并支持以下功能：
+
 1. 编辑浅色和暗色变体的调色板颜色。
 2. 预览当前调色板。
 3. 将当前调色板导出为可以复制粘贴到 `App.axaml` 文件中的 XAML 代码。

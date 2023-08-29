@@ -118,7 +118,7 @@ public AlbumViewModel? SelectedAlbum
 - 将所示的绑定表达式添加到 `<ListBox>` 元素中：
 
 ```
-<ListBox Items="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
+<ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
 ```
 
 ## 模拟数据

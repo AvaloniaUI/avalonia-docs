@@ -109,7 +109,7 @@ public string? EMail
           </Style>
         </Canvas.Styles>
         <ToolTip.Tip>
-          <ItemsControl Items="{Binding}"/>
+          <ItemsControl ItemsSource="{Binding}"/>
         </ToolTip.Tip>
         <Path Data="M14,7 A7,7 0 0,0 0,7 M0,7 A7,7 0 1,0 14,7 M7,3l0,5 M7,9l0,2" 
               Stroke="Red" 
@@ -126,16 +126,23 @@ public string? EMail
 
 ## 管理 ValidationPlugins
 
-如果需要，您可以在您的应用程序中启用或禁用特定的 [`ValidationPlugin`](http://reference.avaloniaui.net/api/Avalonia.Data.Core.Plugins/IDataValidationPlugin/)。如果您的 MVVM 框架使用 `DataAnnotations` 来通过 `INotifyDataErrorInfo` 验证属性，那么您可能会看到两次验证消息。使用 [`ExpressionObserver.DataValidators`](http://reference.avaloniaui.net/api/Avalonia.Data.Core/ExpressionObserver/) 集合来添加或移除特定的 `ValidationPlugin`。
+如果需要，您可以在您的应用程序中启用或禁用特定的 `ValidationPlugin`。如果您的 MVVM 框架使用 `DataAnnotations` 来通过 `INotifyDataErrorInfo` 验证属性，那么您可能会看到两次验证消息。使用 `BindingPlugins.DataValidators` 集合来添加或移除特定的 `ValidationPlugin`。
 
 **示例：移除 DataAnnotations 验证器**
 
 ```cs
 public override void OnFrameworkInitializationCompleted()
 {
-    // Remove the DataAnnotations validator
-    ExpressionObserver.DataValidators.RemoveAll(x => x is DataAnnotationsValidationPlugin);
-    
+    // Get an array of plugins to remove
+    var dataValidationPluginsToRemove =
+        BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
+
+    // remove each entry found
+    foreach (var plugin in dataValidationPluginsToRemove)
+    {
+        BindingPlugins.DataValidators.Remove(plugin);
+    }
+
     // Continue with normal startup
     if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
     {

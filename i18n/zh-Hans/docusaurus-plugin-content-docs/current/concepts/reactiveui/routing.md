@@ -85,7 +85,7 @@ namespace RoutingExample
         public ReactiveCommand<Unit, IRoutableViewModel> GoNext { get; }
 
         // 导航用户返回的命令。
-        public ReactiveCommand<Unit, Unit> GoBack => Router.NavigateBack;
+        public ReactiveCommand<Unit, IRoutableViewModel> GoBack => Router.NavigateBack;
 
         public MainWindowViewModel()
         {

@@ -81,7 +81,7 @@ _SplitButton（Flyout已打开）_
              Command="{Binding ChangeColorCommand}">
   <SplitButton.Flyout>
     <Flyout Placement="Bottom">
-      <ListBox Items="{Binding AvailableColors}" 
+      <ListBox ItemsSource="{Binding AvailableColors}" 
                SelectedItem="{Binding SelectedColor}" 
                Height="200" Width="200" >
         <ListBox.ItemsPanel>

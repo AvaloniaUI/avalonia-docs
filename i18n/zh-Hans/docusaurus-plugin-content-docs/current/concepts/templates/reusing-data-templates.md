@@ -33,9 +33,10 @@ namespace MySample
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MySample"
-             x:Class="MySample.App">
+             x:Class="MySample.App"
+             RequestedThemeVariant="Light">
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme />
     </Application.Styles>
 
   <Application.DataTemplates>

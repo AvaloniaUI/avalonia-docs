@@ -23,7 +23,7 @@ public class ViewLocator : IDataTemplate
 {
     public bool SupportsRecycling => false;
 
-    public IControl Build(object data)
+    public Control Build(object data)
     {
         var name = data.GetType().FullName.Replace("ViewModel", "View");
         var type = Type.GetType(name);
@@ -50,14 +50,3 @@ public class ViewLocator : IDataTemplate
 ## 自定义视图定位器
 
 您可以自定义视图定位器以使用不同的约定。例如，您可能希望在不同的程序集中查找视图，或使用不同的命名约定。为此，您可以创建一个实现`IDataTemplate`接口的类来实现自己的视图定位器，并用自己的视图定位器替换默认的视图定位器。
-
-
-
-
-
-
-
-
-
-
-

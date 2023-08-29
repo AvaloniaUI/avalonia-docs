@@ -55,21 +55,21 @@ dotnet add package Avalonia.Controls.DataGrid
 
 您可能经常使用以下属性：
 
-| 属性                     | 描述                                                                                                                         |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| `AutoGenerateColumns`    | 是否根据绑定项数据源属性名称自动生成列头。 (默认为false)                                                                   |
-| `Items`                  | 作为控件数据源的绑定集合。                                                                                                  |
-| `IsReadOnly`             | 当为true时，将绑定方向设置为单向。默认值为false，网格将接受对绑定数据的更改。                                              |
-| `CanUserReorderColumns`  | 指示用户是否可以通过拖动列头更改列的显示顺序。 (默认为false)                                                               |
-| `CanUserResizeColumns`   | 指示用户是否可以使用指针调整列宽度。 (默认为false)                                                                         |
-| `CanUserSortColumns`     | 指示用户是否可以通过单击列头对列进行排序。 (默认为true)                                                                    |
+| 属性                      | 描述                                                                                                                         |
+|-------------------------| ---------------------------------------------------------------------------------------------------------------------------- |
+| `AutoGenerateColumns`   | 是否根据绑定项数据源属性名称自动生成列头。 (默认为false)                                                                   |
+| `ItemsSource`           | 作为控件数据源的绑定集合。                                                                                                  |
+| `IsReadOnly`            | 当为true时，将绑定方向设置为单向。默认值为false，网格将接受对绑定数据的更改。                                              |
+| `CanUserReorderColumns` | 指示用户是否可以通过拖动列头更改列的显示顺序。 (默认为false)                                                               |
+| `CanUserResizeColumns`  | 指示用户是否可以使用指针调整列宽度。 (默认为false)                                                                         |
+| `CanUserSortColumns`    | 指示用户是否可以通过单击列头对列进行排序。 (默认为true)                                                                    |
 
 ## 示例
 
 这个示例将生成一个基本的数据网格，列头名称将根据项类自动生成。项目数据源绑定到主窗口的视图模型。
 
 ```xml
-<DataGrid Margin="20" Items="{Binding People}" 
+<DataGrid Margin="20" ItemsSource="{Binding People}" 
           AutoGenerateColumns="True" IsReadOnly="True" 
           GridLinesVisibility="All"
           BorderThickness="1" BorderBrush="Gray">
@@ -124,7 +124,7 @@ public class Person
 通常来说，从项类中获取的属性名称通常不会成为好的列名。下面这个示例为网格添加了自定义的列头名称。它还允许列重新排序和调整大小，并禁用了默认的列排序选项：
 
 ```markup
-<DataGrid Margin="20" Items="{Binding People}"
+<DataGrid Margin="20" ItemsSource="{Binding People}"
           IsReadOnly="True"
           CanUserReorderColumns="True"
           CanUserResizeColumns="True"
@@ -143,7 +143,7 @@ public class Person
 这个示例展示了数据网格如何接受更改并更新底层集合，并使用不同的列类型来编辑数据：
 
 ```xml
-<DataGrid Margin="20" Items="{Binding People}"        
+<DataGrid Margin="20" ItemsSource="{Binding People}"        
           GridLinesVisibility="All"
           BorderThickness="1" BorderBrush="Gray">
   <DataGrid.Columns>

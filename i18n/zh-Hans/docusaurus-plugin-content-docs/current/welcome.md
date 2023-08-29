@@ -5,12 +5,6 @@ title: 欢迎
 
 欢迎阅读 Avalonia 文档
 
-```info
-Avalonia v11 是一个发布候选版本。
-
-我们预计在2023年7月初正式发布GA版本。
-```
-
 ## 概述 
 Avalonia是一个强大的框架，使开发人员能够使用.NET创建跨平台应用程序。它使用自己的渲染引擎绘制UI控件，确保在Windows、macOS、Linux、Android、iOS和WebAssembly等不同平台上具有一致的外观和行为。这意味着开发人员可以共享他们的UI代码，并在不同的目标平台上保持统一的外观和感觉。
 

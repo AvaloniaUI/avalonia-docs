@@ -1,6 +1,6 @@
 ---
 id: how-to-create-a-custom-flyout
-title: 如何创建自定义面板
+title: 如何创建自定义弹出窗口
 ---
 
 # 如何创建自定义弹出窗口

@@ -1,4 +1,4 @@
-# Get Started
+# 开始使用
 
 ```mdx-code-block
 import {DocsCardList} from '../../../../../src/components/DocsCard';

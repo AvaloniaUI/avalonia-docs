@@ -35,7 +35,7 @@ public class ViewModel : ObservableObject
 在您的视图中，您可以这样将这个 `ObservableCollection` 绑定到 `ListBox`：
 
 ```xml
-<ListBox Items="{Binding Items}"/>
+<ListBox ItemsSource="{Binding Items}"/>
 ```
 
 ## 绑定到一个包含复杂对象的 ObservableCollection
@@ -91,7 +91,7 @@ public class ViewModel : ObservableObject
 您可以在视图中将这个 `ObservableCollection` 绑定到 `ListBox`，并使用 `DataTemplate` 来指定每个 `Person` 应该如何呈现：
 
 ```xml
-<ListBox Items="{Binding People}">
+<ListBox ItemsSource="{Binding People}">
     <ListBox.ItemTemplate>
         <DataTemplate>
             <StackPanel Orientation="Horizontal">

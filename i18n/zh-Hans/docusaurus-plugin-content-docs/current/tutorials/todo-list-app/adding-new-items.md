@@ -8,6 +8,27 @@ description: TUTORIALS - To Do List App
 
 当用户单击按钮时，您希望应用程序显示一个新视图，允许用户输入新项目的描述。
 
+## 创建视图模型
+
+To create a view model for the new view, follow this procedure:
+
+- In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
+- Click **Add**, then **Class**.&#x20;
+- Name the class 'AddItemViewModel'. Click **Add**.
+- Add the description property as shown:
+
+```csharp
+using System;
+
+namespace ToDoList.ViewModels
+{
+    public class AddItemViewModel : ViewModelBase
+    {
+        public string Description { get; set; } = String.Empty;
+    }
+}
+```
+
 ## 创建一个新视图
 
 如果您正在使用 Visual Studio，请按照以下步骤创建新视图：
@@ -17,26 +38,37 @@ description: TUTORIALS - To Do List App
 - 点击 **Avalonia**，然后点击 **UserControl (Avalonia)**
 - 在 **名称** 中输入 `AddItemView`
 - 点击 **添加**
-- 将 XAML 修改为如下内容：
+
+### .NET Core CLI
+
+Run the following command to create the new view, follow this procedure if you are using .Net Core CLI:
+
+```
+dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Views
+```
+
+Alter the XAML to match the following:
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:ToDoList.ViewModels"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
-             x:Class="ToDoList.Views.AddItemView">
-  <DockPanel>
-    <Button DockPanel.Dock="Bottom" 
-            HorizontalAlignment="Stretch"
-            HorizontalContentAlignment="Center">Cancel</Button>
-    <Button DockPanel.Dock="Bottom" 
-            HorizontalAlignment="Stretch"
-            HorizontalContentAlignment="Center">OK</Button>
-    <TextBox AcceptsReturn="True"
-             Text="{Binding Description}"
-             Watermark="Enter your to do item"/>
-  </DockPanel>
+             x:Class="ToDoList.Views.AddItemView"
+             x:DataType="vm:AddItemViewModel">
+    <DockPanel>
+        <Button DockPanel.Dock="Bottom"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center">Cancel</Button>
+        <Button DockPanel.Dock="Bottom"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center">OK</Button>
+        <TextBox AcceptsReturn="True"
+                 Text="{Binding Description}"
+                 Watermark="Enter your to do item"/>
+    </DockPanel>
 </UserControl>
 ```
 
@@ -51,32 +83,5 @@ description: TUTORIALS - To Do List App
 * `AcceptsReturn` 创建一个多行文本框。
 * `Text` 将文本框中显示的文本绑定到视图模型上的 `Description` 属性（您还没有创建视图模型）。
 * `Watermark` 当文本框为空时显示一个占位符。
-
-## 创建视图模型
-
-目前为止，您只绑定了一个描述属性。因此，相应的视图模型可以从简开始。
-
-按照以下步骤为新视图创建视图模型：
-
-- In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
-- Click **Add**, then **Class**.&#x20;
-- Name the class 'AddItemViewModel'. Click **Add**.
-- Add the description property as shown:
-- 在 **解决方案资源管理器** 中找到并右键单击 **ViewModels** 文件夹。
-- 点击 **添加**，然后点击 **类**。
-- 将类命名为 `AddItemViewModel`，然后点击 **添加**。
-- 添加如下所示的描述属性：
-
-```csharp
-using System;
-
-namespace ToDoList.ViewModels
-{
-    public class AddItemViewModel : ViewModelBase
-    {
-        public string Description { get; set; } = String.Empty;
-    }
-}
-```
 
 在下一页中，您将学习如何更改主窗口中的视图，以在待办事项列表视图的位置显示新项目视图。

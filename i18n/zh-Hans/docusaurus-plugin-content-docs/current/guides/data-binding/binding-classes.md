@@ -13,7 +13,7 @@ title: 如何绑定样式类
 然后，您可以使用特殊的类语法和数据绑定有条件地将类应用于控件。语法如下：
 
 ```
-<SomeControl Classes.class1="Binding IsClass1Active}">
+<SomeControl Classes.class1="{Binding IsClass1Active}">
 ```
 
 ## 示例
@@ -22,7 +22,7 @@ title: 如何绑定样式类
 
 ```xml title='XAML'
 <StackPanel Margin="20">
-  <ListBox Items="{Binding ItemList}">
+  <ListBox ItemsSource="{Binding ItemList}">
     <ListBox.Styles>
       <Style Selector="TextBlock.class1">
         <Setter Property="Background" Value="OrangeRed" />

@@ -57,7 +57,7 @@ public class MyView : UserControl
         var topLevel = TopLevel.GetTopLevel(this);
 
         // 启动异步操作以打开对话框。
-        var file = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerSaveOptions
+        var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
             Title = "Save Text File"
         });
