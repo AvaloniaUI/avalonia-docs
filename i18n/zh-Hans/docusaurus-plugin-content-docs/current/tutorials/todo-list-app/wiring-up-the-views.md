@@ -11,7 +11,7 @@ description: TUTORIALS - To Do List App
 按照以下步骤调整您的用户控件以使用项控件：
 
 - 找到并打开 **ToDoListView.axaml** 文件。
-- Add `xmlns:vm="using:ToDoList.ViewModels"` and `x:DataType="vm:ToDoListViewModel"` attributes to `<UserControl>` element.
+- 将 `xmlns:vm="using:ToDoList.ViewModels"` 和 `x:DataType="vm:ToDoListViewModel"` 属性添加到 `<UserControl>` 元素。
 - 替换  `<StackPanel>` 元素，使代码如下所示：
 
 ```xml

@@ -20,7 +20,7 @@ title: 文件选择器选项 File Picker Options
 这是对系统的建议，如果应用程序无法访问文件夹或文件夹不存在，可以忽略此参数。
 :::
 :::note
-On Linux some DBus file picker don't support start location. For using GTK Free Desktop disable `UseDBusFilePicker` in `X11PlatformOptions`
+在 Linux 上，一些 DBus 文件选择器不支持启动位置。对于使用 GTK Free Desktop，请在 `X11PlatformOptions` 中禁用 `UseDBusFilePicker`。
 :::
 
 ## FilePickerOpenOptions

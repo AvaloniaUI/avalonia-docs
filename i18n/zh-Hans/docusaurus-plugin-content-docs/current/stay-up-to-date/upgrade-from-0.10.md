@@ -47,16 +47,16 @@ Avalonia 11 版本引入了许多与 0.10 版本不兼容的变化。以下指�
 </Application.Styles>
 ```
 
-### Theme Dictionary and Theme Variant
+### 主题字典和主题变体
 
-The method, `Styles.TryGetResource` method now requires a nullable `ThemeVariant` parameter as per PR [#8166](https://github.com/AvaloniaUI/Avalonia/pull/8166). This allows users to specify `Light`, `Dark`, and `Default`
+根据 PR [#8166](https://github.com/AvaloniaUI/Avalonia/pull/8166)，现在方法 `Styles.TryGetResource` 需要一个可为空的 `ThemeVariant` 参数。这允许用户指定 `Light`、`Dark` 和 `Default`。
 
-Using `ThemeVariant.Default` as the key marks a specific theme dictionary as a fallback in case the theme variant or resource key is not found in other theme dictionaries.
+使用 `ThemeVariant.Default` 作为键将特定的主题字典标记为一种回退（fallback），以防在其他主题字典中找不到主题变体或资源键。
 
-In addition to the built-in values of `Light`, `Dark`, and `Default`, any object value can be used as a key (_since it's wrapped in the `ThemeVariant(object key)` structure_). `{x:Static}` markup extension can also be used here if a developer wants to define multiple custom themes as static properties and reference them from the XAML code.
+除了内置的 `Light`、`Dark` 和 `Default` 值外，任何对象值都可以用作键（_因为它包装在 `ThemeVariant(object key)` 结构中_）。如果开发人员希想要在 XAML 代码中定义多个自定义主题作为静态属性并从中引用它们，则可以在此处使用 `{x:Static}` 标记扩展。
 
 ```cs
-// Before
+// 以前
 bool TryGetResource(object key, out object? value)
 
 // Avalonia v11
@@ -332,4 +332,4 @@ var visualChildren = control.GetVisualChildren();
 - `IRenderRoot.RenderScaling`  已移至 `TopLevel.RenderScaling`
 - `LightweightObservableBase` 和 `SingleSubscriberObservableBase` 现在已变为内部类。这些实用程序类设计用于 Avalonia 中的特定目的，并不打算由客户端使用，因为它们不能处理某些边缘情况。使用 `System.Reactive`  提供的机制来创建可观察对象，例如 `Observable.Create`
 - 在绑定到方法时，方法必须没有参数或仅有一个对象参数。
-- `OpenFileDialog` and `SaveFileDialog` have been removed. For file system storage service use `IStorageProvider` on the Top Level.
+- `OpenFileDialog` 和 `SaveFileDialog` 现在已移除。对于文件系统存储服务，请在 `TopLevel` 使用 `IStorageProvider`。

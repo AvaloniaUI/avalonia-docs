@@ -1,4 +1,4 @@
-# 分隔按钮
+# 分裂按钮
 
 `SplitButton` 作为 [`Button`](./button) 的扩展，具有可以单独按下的主要和次要部分。主要部分的行为与普通的 `Button` 相同，而次要部分会打开一个 [`Flyout`](docs/controls/flyouts)，其中包含额外的操作。
 

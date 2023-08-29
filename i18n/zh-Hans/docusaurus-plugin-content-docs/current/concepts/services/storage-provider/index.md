@@ -85,7 +85,7 @@ Task<IStorageFile?> TryGetFileFromPathAsync(Uri filePath);
 ```
 该方法返回文件，如果文件不存在，则返回 null。filePath 参数预期是带有 "file" scheme 的绝对路径，但在 Android 上可以是带有 "content" scheme 的 URI。
 
-###TryGetFolderFromPathAsync
+### TryGetFolderFromPathAsync
 尝试根据文件夹路径从文件系统中读取文件夹。
 
 ```cs
@@ -101,27 +101,27 @@ Task<IStorageFolder?> TryGetWellKnownFolderAsync(WellKnownFolder wellKnownFolder
 ```
 该方法返回文件夹，如果文件夹不存在，则返回 null。
 
-## Extension methods
+## 扩展方法
 
 ### TryGetFileFromPathAsync
-Attempts to read a file from the file system by its path.
+尝试根据文件路径从文件系统中读取文件。
 
 ```cs
 Task<IStorageFile?> TryGetFileFromPathAsync(this IStorageProvider provider, string filePath);
 ```
-The method returns a file or null if it doesn't exist.
-This method accepts local file path string as a parameter without any scheme.
-Only supported on the OS, with physical file paths, primarily only desktop.
+该方法将返回一个文件，如果文件不存在，则返回null。
+此方法接受本地文件路径字符串作为参数，不带任何scheme。
+仅在操作系统上受支持，使用物理文件路径，主要仅适用于桌面。
 
-### TryGetFolderFromPathAsync
-Attempts to read a folder from the file system by its path.
+### TryGetFolderFromPathAsync
+尝试根据文件夹路径从文件系统中读取文件夹。
 
 ```cs
 Task<IStorageFolder?> TryGetFolderFromPathAsync(this IStorageProvider provider, string folderPath);
 ```
-The method returns a folder or null if it doesn't exist.
-This method accepts local folder path string as a parameter without any scheme.
-Only supported on the OS, with physical file paths, primarily only desktop.
+该方法将返回一个文件夹，如果文件夹不存在，则返回null。
+此方法接受本地文件夹路径字符串作为参数，不带任何scheme。
+仅在操作系统上受支持，使用物理文件路径，主要仅适用于桌面。
 
 ## 平台兼容性：
 

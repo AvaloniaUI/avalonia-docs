@@ -10,7 +10,7 @@ description: TUTORIALS - To Do List App
 
 - 在 **Views** 文件夹中找到 **MainWindowView.axaml** 文件。
 - 完全删除 `<Design.DataContext>` 标签。
-- Add the `x:DataType="vm:MainWindowViewModel"` attribute to `<Window>` element
+- 将 `x:DataType="vm:MainWindowViewModel"` 属性添加到 `<Window>` 元素。
 - 定位到内容 `<views:ToDoListView/>`。
 - 添加属性 `DataContext="{Binding ToDoList}"`，如下所示：
 

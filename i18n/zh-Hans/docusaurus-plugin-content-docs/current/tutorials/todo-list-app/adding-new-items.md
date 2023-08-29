@@ -10,12 +10,12 @@ description: TUTORIALS - To Do List App
 
 ## 创建视图模型
 
-To create a view model for the new view, follow this procedure:
+创建新视图的视图模型，请按照以下步骤进行：
 
-- In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
-- Click **Add**, then **Class**.&#x20;
-- Name the class 'AddItemViewModel'. Click **Add**.
-- Add the description property as shown:
+- 在**解决方案资源管理器**中找到并右键单击**ViewModels**文件夹。
+- 单击**添加**，然后选择**类**。
+- 将类命名为 `AddItemViewModel`。单击**添加**。
+- 添加 `Description` 属性，如下所示：
 
 ```csharp
 using System;
@@ -41,13 +41,13 @@ namespace ToDoList.ViewModels
 
 ### .NET Core CLI
 
-Run the following command to create the new view, follow this procedure if you are using .Net Core CLI:
+运行以下命令以创建新视图，如果使用的是.Net Core CLI，请遵循以下过程：
 
 ```
 dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Views
 ```
 
-Alter the XAML to match the following:
+更改 XAML 以匹配以下内容：
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"

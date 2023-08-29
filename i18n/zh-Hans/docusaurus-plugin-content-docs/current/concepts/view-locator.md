@@ -11,7 +11,7 @@ description: CONCEPTS
 
 ## 工作原理
 
-视图定位器使用命名约定将视图模型类型映射到视图类型。默认情况下，它会从视图模型类型名称的末尾删除“ViewModel”，然后在相同的命名空间中查找具有相同名称的类型，但在相应的“Views”命名空间中。
+视图定位器使用命名约定将视图模型类型映射到视图类型。默认情况下，它会将完全限定的视图模型类型名称中每次出现的字符串“ViewModel”替换为“View”。
 
 例如，给定一个名为`MyApplication.ViewModels.ExampleViewModel`的视图模型，视图定位器将查找一个名为`MyApplication.Views.ExampleView`的视图。
 
