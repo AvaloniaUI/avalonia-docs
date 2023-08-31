@@ -2,9 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# View Box
+# Viewbox
 
-The view box is a container control which can scale its contents. The way in which the contents are stretched can be defined, as well as when the stretch will occur (stretch direction).&#x20;
+The viewbox is a container control which can scale its contents. The way in which the contents are stretched can be defined, as well as when the stretch will occur (stretch direction).&#x20;
 
 ## Useful Properties
 
@@ -29,7 +29,7 @@ The values for the `StretchDirecton` property are as follows:
 
 ### Example
 
-This simple example shows a view box scaling up a circle uniformly (both stretch and direction are default).&#x20;
+This simple example shows a viewbox scaling up a circle uniformly (both stretch and direction are default).&#x20;
 
 
 
