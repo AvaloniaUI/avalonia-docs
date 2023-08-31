@@ -1,6 +1,6 @@
 ---
 id: viewbox
-title: ViewBox
+title: Viewbox
 ---
 
 import Tabs from '@theme/Tabs';
