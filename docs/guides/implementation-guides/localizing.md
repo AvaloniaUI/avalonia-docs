@@ -19,6 +19,8 @@ Before localizing, you need to include ResX files for each language you want to 
 
 Each ResX file will contain translated text that corresponds to the keys used in the application.
 
+In this example, we added new files to the `Assets` folder. Since .NET generator creates namespaces depending on folder structure, it might be different for you.  
+
 ## Set the Culture
 
 To use a specific language in the application, you need to set the current culture. This can be done in the `App.axaml.cs` file. The following example sets the culture to Filipino (`fil-PH`):
