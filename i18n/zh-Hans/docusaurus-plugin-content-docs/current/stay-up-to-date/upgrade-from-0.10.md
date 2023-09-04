@@ -262,7 +262,7 @@ var focusManager = TopLevel.GetTopLevel(control).FocusManager;
 
 此外，`IFocusManager` API 已更改。
 
-- 要获取当前聚焦的元素，请使用 `IFocusManager.GetFocusedEleemnt()`
+- 要获取当前聚焦的元素，请使用 `IFocusManager.GetFocusedElement()`
 - 要聚焦一个控件，请使用 `control.Focus()`
 
 目前没有监听 `IFocusManager` 的焦点更改的事件。要监听焦点更改，请添加一个监听器到 `InputElement.GotFocusEvent`：
