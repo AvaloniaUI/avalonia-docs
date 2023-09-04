@@ -280,7 +280,7 @@ var focusManager = TopLevel.GetTopLevel(control).FocusManager;
 
 In addition, the `IFocusManager` API has been changed.
 
-- To get the currently focused element, use `IFocusManager.GetFocusedEleemnt()`
+- To get the currently focused element, use `IFocusManager.GetFocusedElement()`
 - To focus a control use `control.Focus()`
 
 There is currently no event for listening to focus changes on `IFocusManager`. To listen for focus changes, add a listener to the `InputElement.GotFocusEvent`:
