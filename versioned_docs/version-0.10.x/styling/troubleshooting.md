@@ -85,7 +85,7 @@ The following code example of styles that can be expected to work on top of defa
 <Style Selector="Button">
     <Setter Property="Background" Value="Red" />
 </Style>
-<Style Selector="Button:poinverover">
+<Style Selector="Button:pointerover">
     <Setter Property="Background" Value="Blue" />
 </Style>
 ```

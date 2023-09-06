@@ -103,7 +103,7 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 <Style Selector="Button">
     <Setter Property="Background" Value="Red" />
 </Style>
-<Style Selector="Button:poinverover">
+<Style Selector="Button:pointerover">
     <Setter Property="Background" Value="Blue" />
 </Style>
 ```
