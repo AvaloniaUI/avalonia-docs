@@ -106,7 +106,7 @@ description: CONCEPTS
 在某些情况下，绑定表达式的目标类型无法自动计算。在这种情况下，您必须在绑定表达式中提供一个明确的类型转换。
 
 ```markup
-<ItemsRepeater Items="{Binding MyItems}">
+<ItemsRepeater ItemsSource="{Binding MyItems}">
 <ItemsRepeater.ItemTemplate>
     <DataTemplate>
     <StackPanel Orientation="Horizontal">

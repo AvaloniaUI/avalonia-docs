@@ -85,7 +85,7 @@ namespace ToDoList.Views
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
-             x:Class="ToDoList.Views.TodoListView">
+             x:Class="ToDoList.Views.ToDoListView">
   <DockPanel>
     <Button DockPanel.Dock="Bottom"
             HorizontalAlignment="Stretch"

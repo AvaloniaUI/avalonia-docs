@@ -55,7 +55,7 @@ description: REFERENCE - Built-in Controls
    <Design.DataContext>
        <vm:MainWindowViewModel/>
   </Design.DataContext>
-  <DataGrid Margin="20" Items="{Binding People}"
+  <DataGrid Margin="20" ItemsSource="{Binding People}"
           IsReadOnly="True"
           GridLinesVisibility="All"
           BorderThickness="1" BorderBrush="Gray">

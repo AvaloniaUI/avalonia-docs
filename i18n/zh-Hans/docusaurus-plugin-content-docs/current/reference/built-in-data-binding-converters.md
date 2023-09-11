@@ -33,7 +33,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 ```markup
 <Panel>
-  <ListBox Items="{Binding Items}"/>
+  <ListBox ItemsSource="{Binding Items}"/>
   <TextBlock IsVisible="{Binding !Items.Count}">No results found</TextBlock>
 </Panel>
 ```
@@ -44,7 +44,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 ```markup
 <Panel>
-  <ListBox Items="{Binding Items}" IsVisible="{Binding !!Items.Count}"/>
+  <ListBox ItemsSource="{Binding Items}" IsVisible="{Binding !!Items.Count}"/>
 </Panel>
 ```
 

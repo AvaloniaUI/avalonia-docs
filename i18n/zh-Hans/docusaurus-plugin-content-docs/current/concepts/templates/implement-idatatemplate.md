@@ -9,7 +9,7 @@ description: CONCEPTS - Data Templates
 要使用`IDataTemplate`接口，您必须在数据模板类中实现以下两个成员：
 
 * `public bool Match(object data) { ... }` - 实现此成员以检查提供的绑定数据是否与您的`IDataTemplate`匹配。如果绑定的数据类型匹配，则返回true，否则返回false。
-* `public IControl Build(object param) { ... }` - 实现此成员以构建并返回用于呈现数据的控件。
+* `public Control Build(object param) { ... }` - 实现此成员以构建并返回用于呈现数据的控件。
 
 ## 示例
 
@@ -20,7 +20,7 @@ using Avalonia.Controls.Templates;
 ...
 public class MyDataTemplate : IDataTemplate
 {
-    public IControl Build(object param)
+    public Control Build(object param)
     {
         return new TextBlock() { Text = (string)param };
     }

@@ -23,6 +23,8 @@ public Task Start(Visual? from, Visual? to, bool forward,
 此示例将缩小旧视图，然后垂直打开新视图。
 
 ```csharp
+using Avalonia.VisualTree;
+
 public class CustomTransition : IPageTransition
 {
     /// <summary>
@@ -86,7 +88,7 @@ public class CustomTransition : IPageTransition
                 },
                 Duration = Duration
             };
-            tasks.Add(animation.RunAsync(from, null, cancellationToken));
+            tasks.Add(animation.RunAsync(from, cancellationToken));
         }
 
         if (to != null)
@@ -120,7 +122,7 @@ public class CustomTransition : IPageTransition
                 },
                 Duration = Duration
             };
-            tasks.Add(animation.RunAsync(to, null, cancellationToken));
+            tasks.Add(animation.RunAsync(to, cancellationToken));
         }
 
         await Task.WhenAll(tasks);
@@ -143,10 +145,10 @@ public class CustomTransition : IPageTransition
     /// <remarks>
     /// 任何一个参数可能为null，但不能都为null。
     /// </remarks>
-    private static IVisual GetVisualParent(IVisual? from, IVisual? to)
+    private static Visual GetVisualParent(Visual? from, Visual? to)
     {
-        var p1 = (from ?? to)!.VisualParent;
-        var p2 = (to ?? from)!.VisualParent;
+        var p1 = (from ?? to)!.GetVisualParent();
+        var p2 = (to ?? from)!.GetVisualParent();
 
         if (p1 != null && p2 != null && p1 != p2)
         {

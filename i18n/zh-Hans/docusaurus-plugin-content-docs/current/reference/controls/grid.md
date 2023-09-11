@@ -94,7 +94,7 @@ If a child control has its own dimensions these will be obeyed when it is drawn.
 
 You can mix any of the above in the same size definition sequence. For example:
 
-`ColumnDefinitions="300, *, 2*"`
+`ColumnDefinitions="200, *, 2*"`
 
 Using full expanded XAML, this is the same as:
 
@@ -148,6 +148,7 @@ Here, after the absolute width 100 has been subtracted (for column 0), column 1 
 The button is drawn to fill the span from the cell (column 1, row 1) plus one column (to the right) and one row down. The result looks like this:
 
 <img src='/img/gitbook-import/assets/grid/_example.png' alt=''/>
+
 ## More Information
 
 :::info

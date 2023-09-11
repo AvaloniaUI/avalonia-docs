@@ -1,4 +1,4 @@
-# 分隔按钮
+# 分裂按钮
 
 `SplitButton` 作为 [`Button`](./button) 的扩展，具有可以单独按下的主要和次要部分。主要部分的行为与普通的 `Button` 相同，而次要部分会打开一个 [`Flyout`](docs/controls/flyouts)，其中包含额外的操作。
 
@@ -81,7 +81,7 @@ _SplitButton（Flyout已打开）_
              Command="{Binding ChangeColorCommand}">
   <SplitButton.Flyout>
     <Flyout Placement="Bottom">
-      <ListBox Items="{Binding AvailableColors}" 
+      <ListBox ItemsSource="{Binding AvailableColors}" 
                SelectedItem="{Binding SelectedColor}" 
                Height="200" Width="200" >
         <ListBox.ItemsPanel>

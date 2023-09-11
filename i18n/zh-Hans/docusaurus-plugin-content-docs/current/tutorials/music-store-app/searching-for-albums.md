@@ -175,9 +175,13 @@ namespace Avalonia.MusicStore.ViewModels
 
 - 定位并打开 **AlbumView.asaml** 文件。
 - 添加两个文本块控件及其数据绑定，如下所示：
+- To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
 
 ```xml
 <UserControl ...
+  xmlns:vm="using:Avalonia.MusicStore.ViewModels"
+  x:DataType="vm:AlbumViewModel" >
+
   <StackPanel Spacing="5" Width="200">
     <Border CornerRadius="10" ClipToBounds="True">
       <Panel Background="#7FFF22DD">

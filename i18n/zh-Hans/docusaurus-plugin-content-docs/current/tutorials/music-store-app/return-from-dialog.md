@@ -40,7 +40,7 @@ public MusicStoreViewModel()
 
 您的下一步是将 **购买专辑** 按钮绑定到音乐商店视图模型中的响应式命令，按照以下步骤操作：
 
-- 找到并打开 **MusicStoreView.cs** 文件。
+- 找到并打开 **MusicStoreView.axaml** 文件。
 - 将数据绑定 `Command="{Binding BuyMusicCommand}"` 添加到按钮元素中。
 
 ## 关闭对话框

@@ -55,10 +55,10 @@ dotnet new avalonia.mvvm -o ToDoList -n ToDoList
 ToDoList
  |- App.axaml
  |- App.axaml.cs
+ |- app.manifest
  |- Assets
  |   |- avalonia-logo.ico
  |- Models 
- |- nuget.config 
  |- Program.cs
  |- ToDoList.csproj
  |- ViewLocator.cs

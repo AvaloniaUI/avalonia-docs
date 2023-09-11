@@ -12,10 +12,11 @@ description: TUTORIALS - Music Store App
 
 - 如果应用程序仍在运行，请停止它。
 - 找到并打开文件 **App.axaml**。
-- 在 XAML 中，将 `<FluentTheme>` 元素中的 `Mode` 属性从 `Light` 更改为 `Dark`：
+- 在 XAML 中，将 `<Application>` 元素中的 `RequestedThemeVariant` 属性从 `Default` 更改为 `Dark`：
 
 ```markup
-<FluentTheme Mode="Dark"/>
+<Application ...
+    RequestedThemeVariant="Dark">
 ```
 
 - 现在，在 **/Views** 文件夹中找到并打开 **MainWindow.axaml** 文件。

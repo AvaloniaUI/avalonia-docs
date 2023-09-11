@@ -3,7 +3,7 @@ id: welcome
 title: Welcome
 ---
 
-欢迎阅读 Avalonia 文档 Welcome to the documentation for Avalonia, a cross-platform .NET framework for building beautiful, modern graphical user interfaces (GUIs). With Avalonia, you can create native applications for Windows, macOS, Linux, iOS, Android, and WebAssembly, all from a single codebase.
+Welcome to the documentation for Avalonia, a cross-platform .NET framework for building beautiful, modern graphical user interfaces (GUIs). With Avalonia, you can create native applications for Windows, macOS, Linux, iOS, Android, and WebAssembly, all from a single codebase.
 
 ## Supported .NET Versions
 

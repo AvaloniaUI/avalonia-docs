@@ -11,6 +11,7 @@ description: TUTORIALS - To Do List App
 按照以下步骤调整您的用户控件以使用项控件：
 
 - 找到并打开 **ToDoListView.axaml** 文件。
+- 将 `xmlns:vm="using:ToDoList.ViewModels"` 和 `x:DataType="vm:ToDoListViewModel"` 属性添加到 `<UserControl>` 元素。
 - 替换  `<StackPanel>` 元素，使代码如下所示：
 
 ```xml
@@ -20,22 +21,22 @@ description: TUTORIALS - To Do List App
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
              x:Class="ToDoList.Views.ToDoListView">
-  <DockPanel>
-    <Button DockPanel.Dock="Bottom"
-            HorizontalAlignment="Stretch"
-            HorizontalContentAlignment="Center">
-      Add Item
-    </Button>
-    <ItemsControl ItemsSource="{Binding ListItems}">
-      <ItemsControl.ItemTemplate>
-        <DataTemplate>
-          <CheckBox Margin="4"
-                    IsChecked="{Binding IsChecked}"
-                    Content="{Binding Description}"/>
-        </DataTemplate>
-      </ItemsControl.ItemTemplate>
-    </ItemsControl>
-  </DockPanel>
+    <DockPanel>
+        <Button DockPanel.Dock="Bottom"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center">
+            Add Item
+        </Button>
+        <ItemsControl ItemsSource="{Binding ListItems}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Margin="4"
+                              IsChecked="{Binding IsChecked}"
+                              Content="{Binding Description}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DockPanel>
 </UserControl>
 ```
 

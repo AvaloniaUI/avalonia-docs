@@ -19,6 +19,9 @@ title: 文件选择器选项 File Picker Options
 :::note
 这是对系统的建议，如果应用程序无法访问文件夹或文件夹不存在，可以忽略此参数。
 :::
+:::note
+在 Linux 上，一些 DBus 文件选择器不支持启动位置。对于使用 GTK Free Desktop，请在 `X11PlatformOptions` 中禁用 `UseDBusFilePicker`。
+:::
 
 ## FilePickerOpenOptions
 
@@ -70,6 +73,7 @@ title: 文件选择器选项 File Picker Options
 # 定义自定义文件类型
 
 Avalonia 有一组内置的文件类型：
+
 - FilePickerFileTypes.All - 所有文件
 - FilePickerFileTypes.TextPlain - 文本文件 (txt)
 - FilePickerFileTypes.ImageAll - 所有图片
@@ -81,6 +85,7 @@ Avalonia 有一组内置的文件类型：
 
 例如，内置的 ImageAll 类型定义如下
 ```cs
+
 public static FilePickerFileType ImageAll { get; } = new("All Images")
 {
     Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.bmp" },

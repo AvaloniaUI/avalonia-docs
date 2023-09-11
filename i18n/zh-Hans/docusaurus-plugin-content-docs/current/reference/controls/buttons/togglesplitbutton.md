@@ -1,49 +1,49 @@
-# Toggle Split Button
+# 切换分裂按钮
 
-The `ToggleSplitButton` functions as a [`ToggleButton`](togglebutton) with primary and secondary parts that can each be pressed separately. The primary part behaves like a normal `ToggleButton` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
-
-:::info
-The `ToggleSplitButton` has only two states: checked and unchecked. Indeterminate is not supported like it is with a standard `ToggleButton`. This was done intentionally to match WinUI and restricts the control’s usage. The `ToggleSplitButton` should only be used to turn features on/off. Anything other than that is currently considered poor practice from a usability standpoint.
-:::
-
-## Is this the right control?
-
-A `ToggleSplitButton` is a fairly specialized control and its usage should be restricted to where it makes clear sense from a user-standpoint. It is intended to turn a feature on/off while allowing some additional configurations to be specified rather than the default.
-
-Like a [`SplitButton`](../buttons/splitbutton), the most common action should be the default and what is shown in the primary part. However, unlike the `SplitButton`, pressing the primary part will turn this feature on or off instead of simply invoking an action. Additional configurations for the feature should be added to the `Flyout` which is shown when the secondary (drop down) part is pressed.
+`ToggleSplitButton` 作为一个带有主要和次要部分的 [`ToggleButton`](togglebutton)，每个部分都可以单独按下。主要部分的行为类似于普通的 `ToggleButton`，而次要部分会打开一个带有附加操作的 [`Flyout`](../flyouts)。
 
 :::info
-Pressing a configuration in the `Flyout` should either (1) turn on the feature with the selected configuration, or (2) change the feature to the selected configuration. Pressing a configuration in the `Flyout` should never turn off the feature – that can only be done by toggling the primary part.
+`ToggleSplitButton` 仅有两个状态：选中和未选中。与标准的 `ToggleButton` 一样，不支持不确定状态。这是有意为之，这是为了匹配 WinUI 并限制控件的使用。`ToggleSplitButton` 应仅用于打开/关闭功能。除此之外的任何用法目前都被认为是不良实践。
 :::
 
-## Common Properties
+## 这是正确的控件吗？
 
-| Property    | Description                                                    |
-| ----------- | -------------------------------------------------------------- |
-| `Content`   | The content to display in the primary part                     |
-| `Flyout`    | The `Flyout` which shows up when the secondary part is clicked |
-| `Command`   | A command to be invoked when the primary button is clicked     |
-| `IsChecked` | Gets or sets if the `ToggleSplitButton` is checked             |
+`ToggleSplitButton` 是一个相当专门化的控件，其使用应该限制在从用户角度清晰合理的地方。它的用途是在打开/关闭功能的同时允许指定一些附加配置，而不是使用默认配置。
 
-## Pseudoclasses
+与 [`SplitButton`](../buttons/splitbutton) 一样，最常见的操作应该是默认操作，显示在主要部分中。然而，与 `SplitButton` 不同，按下主要部分会打开或关闭该功能，而不仅仅是调用一个操作。为功能添加附加配置应该在按下次要（下拉）部分时显示的 `Flyout` 中进行。
 
-| Pseudoclass    | Description                                                                                                                                                               |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `:pressed`     | Set when the entire `ToggleSplitButton` is pressed using a keyboard input such as Space or Enter. In this state no distinction is made between primary or secondary parts |
-| `:flyout-open` | Set when the `Flyout` is open                                                                                                                                             |
-| `:checked`     | Set when the `ToggleSplitButton` is checked. (`IsChecked="true"`)                                                                                                         |
+:::info
+在 `Flyout` 中按下配置应该是要么（1）使用所选配置打开功能，要么（2）将功能更改为所选配置。在 `Flyout` 中按下配置不能关闭该功能，只能通过切换主要部分来关闭功能。
+:::
 
-## API Reference
+## 常见属性
+
+| 属性          | 描述                              |
+|-------------|---------------------------------|
+| `Content`   | 要显示在主要部分的内容                     |
+| `Flyout`    | 当点击次要部分时显示的 `Flyout`            |
+| `Command`   | 主按钮点击时要调用的命令                    |
+| `IsChecked` | 获取或设置 `ToggleSplitButton` 是否被选中 |
+
+## 伪类
+
+| 伪类             | 描述                                                            |
+|----------------|---------------------------------------------------------------|
+| `:pressed`     | 当使用键盘输入（如空格或回车）按下整个 `ToggleSplitButton` 时设置。在此状态下，主要或次要部分没有区别 |
+| `:flyout-open` | 当 `Flyout` 打开时设置                                              |
+| `:checked`     | 当 `ToggleSplitButton` 被选中时设置。（`IsChecked="true"`）             |
+
+## API 参考
 
 [ToggleSplitButton](http://reference.avaloniaui.net/api/Avalonia.Controls/ToggleSplitButton/)
 
-## Source code
+## 源代码
 
 [ToggleSplitButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/ToggleSplitButton.cs)
 
-## Examples
+## 示例
 
-### Basic example
+### 基本示例
 
 ```xml
 <ToggleSplitButton Content="Content"
@@ -72,9 +72,9 @@ _SplitButton (Flyout closed, checked)_
 <img src='/img/gitbook-import/assets/ToggleSplitButton\_opened\_checked.png' alt=''/>
 _SplitButton (Flyout opened, checked)_
 
-### Text editor with numbered or bulleted list example
+### 带编号或项目符号列表的文本编辑器示例
 
-Continuing the text editor example from `SplitButton`, a common use case of the `ToggleSplitButton` is to add bulleted/numbered lists to text. In this example the primary part will toggle the list on/off while the secondary part will open a `Flyout` and allow selecting the bullet or number style.
+延续 `SplitButton` 的文本编辑器示例，`ToggleSplitButton` 的常见用例是向文本添加项目符号/编号列表。在此示例中，主要部分将切换列表的打开/关闭状态，而次要部分将打开一个 `Flyout`，允许选择项目符号或编号样式。
 
 ```xml
 <!-- We have the following Icons defined in our Resources -->

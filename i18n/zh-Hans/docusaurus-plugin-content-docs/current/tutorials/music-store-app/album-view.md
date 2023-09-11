@@ -121,7 +121,7 @@ public class AlbumViewModel : ViewModelBase
 - 添加所示的 `<ListBox.ItemsPanel>` XAML：
 
 ```markup
-<ListBox Items="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}"
+<ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}"
     Background="Transparent" Margin="0 20">
     <ListBox.ItemsPanel>
         <ItemsPanelTemplate>

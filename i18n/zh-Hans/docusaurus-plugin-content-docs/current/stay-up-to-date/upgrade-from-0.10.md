@@ -9,13 +9,14 @@ Avalonia 11 版本引入了许多与 0.10 版本不兼容的变化。以下指�
 
 1. 将 Avalonia 包更新为 11.x 版本。
 2. Avalonia.Desktop 包不再包含主题，因此您需要添加以下任一包引用：
-  - `Avalonia.Themes.Fluent`
-  - `Avalonia.Themes.Simple`
+    - `Avalonia.Themes.Fluent`
+    - `Avalonia.Themes.Simple`
 3. 移除对`XamlNameReferenceGenerator`包的引用，Avalonia 现在默认包含内置的生成器。
 4. 如有需要，将`<LangVersion>`更新至至少 9，以便使用仅限初始化属性 (init-only properties)。
 5. 如果需要与 0.10 版本相同的字体，还需包括`Avalonia.Fonts.Inter`包，并在应用程序构建器中添加`.WithInterFont()`。在 11.0 版本中，默认情况下不包含任何自定义字体。
 
 ## 主题处理
+
 在 0.10 版本中，主题直接在`Application.axaml`文件的`Application.Styles`标签内指定。以下是示例：
 
 ```xml
@@ -23,11 +24,13 @@ Avalonia 11 版本引入了许多与 0.10 版本不兼容的变化。以下指�
     <FluentTheme Mode="Light"/>
 </Application.Styles>
 ```
+
 在这个示例中，`FluentTheme`标签的`Mode`属性用于指定主题模式，可以是 "Light" 或 "Dark"。
 
 引入了一个新属性`RequestedThemeVariant`，用于`Application`标签，该属性用于设置应用程序的主题，如果指定了，则会覆盖系统当前的主题。如果要遵循系统当前的主题，可以将其设置为 "Default"。其他可用选项为 "Dark" 和 "Light"。
 
 以下示例展示了如何使用该属性：
+
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -35,6 +38,7 @@ Avalonia 11 版本引入了许多与 0.10 版本不兼容的变化。以下指�
              xmlns:local="using:ILoveAvaloniaUI"
              RequestedThemeVariant="Default">
 ```
+
 `FluentTheme`标签不再需要`Mode`属性，可以将其留空：
 
 ```xml
@@ -43,7 +47,21 @@ Avalonia 11 版本引入了许多与 0.10 版本不兼容的变化。以下指�
 </Application.Styles>
 ```
 
+### 主题字典和主题变体
 
+根据 PR [#8166](https://github.com/AvaloniaUI/Avalonia/pull/8166)，现在方法 `Styles.TryGetResource` 需要一个可为空的 `ThemeVariant` 参数。这允许用户指定 `Light`、`Dark` 和 `Default`。
+
+使用 `ThemeVariant.Default` 作为键将特定的主题字典标记为一种回退（fallback），以防在其他主题字典中找不到主题变体或资源键。
+
+除了内置的 `Light`、`Dark` 和 `Default` 值外，任何对象值都可以用作键（_因为它包装在 `ThemeVariant(object key)` 结构中_）。如果开发人员希想要在 XAML 代码中定义多个自定义主题作为静态属性并从中引用它们，则可以在此处使用 `{x:Static}` 标记扩展。
+
+```cs
+// 以前
+bool TryGetResource(object key, out object? value)
+
+// Avalonia v11
+bool TryGetResource(object key, ThemeVariant? theme, out object? value)
+```
 
 ## System.Reactive/Observables
 
@@ -112,7 +130,7 @@ class MyButton : Button
 
 请注意，此源生成器仅适用于 C#。对于 F#，没有进行任何更改。
 
-# ItemsControl
+## ItemsControl
 
 `ItemsControl` 和派生类（例如 `ListBox` 和 `ComboBox`）现在都有 `Items` 属性和 `ItemsSource` 属性，与 WPF/UWP 类似。
 
@@ -120,13 +138,13 @@ class MyButton : Button
 
 将所有绑定到 `Items` 的绑定更改为绑定到 `ItemsSource`：
 
-```
+```xml
 <ListBox Items="{Binding Items}">
 ```
 
-替换为： 
+替换为：
 
-```
+```xml
 <ListBox ItemsSource="{Binding Items}">
 ```
 
@@ -198,7 +216,7 @@ var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
 protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
 ```
 
-替换为： 
+替换为：
 
 ```csharp
 protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
@@ -219,11 +237,11 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
 - `PointerEnter` -> `PointerEntered`
 - `PointerLeave` -> `PointerExited`
 - `ContextMenu`
-    - `ContextMenuClosing` -> `Closing`
-    - `ContextMenuOpening` -> `Opening`
+  - `ContextMenuClosing` -> `Closing`
+  - `ContextMenuOpening` -> `Opening`
 - `MenuBase`
-    - `MenuClosed` -> `Closed`
-    - `MenuOpened` -> `Opened`
+  - `MenuClosed` -> `Closed`
+  - `MenuOpened` -> `Opened`
 
 `RoutedEventArgs.Source` 的类型从 `IInteractive` 更改为 `object`: ：需要将其转换为具体类型（如 `Control`）才能使用它。
 
@@ -279,7 +297,7 @@ InputElement.GotFocusEvent.Raised.Subscribe(new AnonymousObserver<(object, Route
 
 在 0.10.x 版本中，使用 `IVisual` 暴露控件的视觉父级和视觉子级。由于 `IVisual` 不再可用，现在将其作为扩展方法暴露在 `Avalonia.VisualTree` 命名空间中：
 
-```
+```csharp
 using Avalonia.VisualTree;
 
 var visualParent = control.GetVisualParent();
@@ -297,6 +315,7 @@ var visualChildren = control.GetVisualChildren();
 ## 定位器
 
 `AvaloniaLocator` 不再可用。现在大多数通过定位器可用的服务都有替代方法：
+
 1. `AssetLoader` 现在是一个静态类，具有所有旧方法。
 2. `IPlatformSettings` 已移到 `TopLevel.PlatformSettings` 和 `Application.PlatformSettings`。请注意，始终应优先使用特定顶级（窗口）的设置，而不是全局设置。
 3. `IClipboard` 已移到 `TopLevel.Clipboard`。请注意，`Application.Clipboard` 也已被移除。
@@ -313,3 +332,4 @@ var visualChildren = control.GetVisualChildren();
 - `IRenderRoot.RenderScaling`  已移至 `TopLevel.RenderScaling`
 - `LightweightObservableBase` 和 `SingleSubscriberObservableBase` 现在已变为内部类。这些实用程序类设计用于 Avalonia 中的特定目的，并不打算由客户端使用，因为它们不能处理某些边缘情况。使用 `System.Reactive`  提供的机制来创建可观察对象，例如 `Observable.Create`
 - 在绑定到方法时，方法必须没有参数或仅有一个对象参数。
+- `OpenFileDialog` 和 `SaveFileDialog` 现在已移除。对于文件系统存储服务，请在 `TopLevel` 使用 `IStorageProvider`。
