@@ -8,7 +8,7 @@ On this page, you will set the data context of the to do list view to be the `To
 
 To set the data context, follow this procedure:
 
-- Locate the **MainWindowView.axaml** file in the **Views** folder.
+- Locate the **MainWindow.axaml** file in the **Views** folder.
 - Remove the `<Design.DataContext>` tag completely.
 - Add the `x:DataType="vm:MainWindowViewModel"` attribute to `<Window>` element.
 - Locate the content `<views:ToDoListView/>`&#x20;
