@@ -6,7 +6,7 @@ description: TUTORIALS - To Do List App
 
 On this page you will learn how to process the output from the OK and cancel buttons being pressed and re-show the list. If OK was pressed we also need to add the new item to the list. We'll implement this functionality in `MainWindowViewModel`:
 
-To alter the add item view model, follow this procedure:
+To alter the main window view model, follow this procedure:
 
 - Stop the app if it is running.
 - Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
@@ -80,7 +80,7 @@ The merge method combines the output from any number of observable streams, but 
 You will remember that the two reactive command declarations were different. They were:
 
 ```csharp
-public ReactiveCommand<Unit, TodoItem> Ok { get; }
+public ReactiveCommand<Unit, ToDoItem> Ok { get; }
 public ReactiveCommand<Unit, Unit> Cancel { get; }
 ```
 
