@@ -46,7 +46,7 @@ Take some time here to examine the code that you just added: &#x20;
 
 The items control `<ItemsControl>` repeats its display for each item in a collection source that is defined by the `ItemsSource` attribute. Here the data binding expression `{Binding ListItems}` means we are looking for a data context with this property name.&#x20;
 
-How each item is in a displayed inside the items control is controlled by the item template <`ItemTemplate>`. This can be any combination of controls, but in this example it is a **data template** is being used.
+How each item is displayed inside the items control is controlled by the item template <`ItemTemplate>`. This can be any combination of controls, but in this example a **data template** is being used.
 
 :::info
 You can review the data template concept [here](../../concepts/templates/).
