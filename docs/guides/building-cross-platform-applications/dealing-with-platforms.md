@@ -39,6 +39,7 @@ Supporting multiple platforms from the same code-base can be achieved through ab
 
 * **Platform Abstraction**: This approach leverages the Business Façade pattern to provide uniform access across platforms. It abstracts the unique platform implementations into a single, cohesive API. The primary advantage is the ability to write platform-agnostic code, enhancing code reusability and maintainability. However, this approach may not fully exploit the unique features and capabilities of each platform.
 
+<!--
 :::tip
 [Avalonia.Essentials](https://github.com/AvaloniaUI/Avalonia.Essentials) provides pre-built abstractions for common mobile features. Including: 
 
@@ -52,6 +53,7 @@ Supporting multiple platforms from the same code-base can be achieved through ab
 * Gyroscope
 * Orientation
 :::
+-->
 
 ## Platform Abstraction
 
