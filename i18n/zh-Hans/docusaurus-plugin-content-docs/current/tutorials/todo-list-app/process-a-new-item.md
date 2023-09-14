@@ -80,7 +80,7 @@ Observable.Merge(
 您会记得两个反应式命令的声明是不同的。它们是：
 
 ```csharp
-public ReactiveCommand<Unit, TodoItem> Ok { get; }
+public ReactiveCommand<Unit, ToDoItem> Ok { get; }
 public ReactiveCommand<Unit, Unit> Cancel { get; }
 ```
 
