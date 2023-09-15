@@ -115,6 +115,13 @@ img.rounded-corners {
   border-radius: 50px;
 }
 
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;

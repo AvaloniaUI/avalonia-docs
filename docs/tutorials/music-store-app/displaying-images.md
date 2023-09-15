@@ -2,9 +2,11 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreDisplayingImagesScreenshot from './images/image-20210310173858088.png';
+
 # Displaying Images
 
-On this page, you will learn how to retrieve the cover art bitmap for each album in the search results. You will then be able to display the image on each album tile view instead of the placeholder note icon.&#x20;
+On this page, you will learn how to retrieve the cover art bitmap for each album in the search results. You will then be able to display the image on each album tile view instead of the placeholder note icon.
 
 ## Album Service
 
@@ -34,13 +36,13 @@ public async Task<Stream> LoadCoverBitmapAsync()
 }
 ```
 
-This method returns a stream that can be used to load a bitmap from, either from a cache file or from the API.&#x20;
+This method returns a stream that can be used to load a bitmap from, either from a cache file or from the API.
 
 :::info
-Note that the cache is not active at this time, you will implement it later in the tutorial.&#x20;
+Note that the cache is not active at this time, you will implement it later in the tutorial.
 :::
 
-- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:&#x20;
+- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:;
 
 ```csharp
 return File.OpenRead(CachePath + ".bmp");
@@ -51,7 +53,7 @@ return File.OpenRead(CachePath + ".bmp");
 In this step , you will add a property to the album view model to store the cover art as a bitmap.
 
 :::warning
-Note: You must reference `Avalonia.Media.Imaging` in the album view model because you must use the _Avalonia UI_ bitmap here, and **not** the .NET `System.Bitmap`.&#x20;
+Note: You must reference `Avalonia.Media.Imaging` in the album view model because you must use the _Avalonia UI_ bitmap here, and **not** the .NET `System.Bitmap`.
 :::
 
 Follow this procedure to update the album view model:
@@ -90,13 +92,13 @@ Take some time to examine this code because it gives an insight into manipulatin
 
 This means that you will not waste large amounts of memory to display the album cover art, even though the Web API returns quite large files.&#x20;
 
-Also notice how the `LoadCover` method is coded to run asynchronously, and on a background thread. This is so that the UI thread does not get blocked and make the UI unresponsive.&#x20;
+Also notice how the `LoadCover` method is coded to run asynchronously, and on a background thread. This is so that the UI thread does not get blocked and make the UI unresponsive.
 
 ## Load Cover Art
 
-In this step you will alter the album search (in the music store view model) so that the cover art is loaded for each album that is found. To maintain the responsiveness of the app, you will make this process both asynchronous and cancellable.  &#x20;
+In this step you will alter the album search (in the music store view model) so that the cover art is loaded for each album that is found. To maintain the responsiveness of the app, you will make this process both asynchronous and cancellable.
 
-Firstly, you will need to add a method that can start loading the album covers whenever search results are returned. You will make this method asynchronous and cancellable.&#x20;
+Firstly, you will need to add a method that can start loading the album covers whenever search results are returned. You will make this method asynchronous and cancellable.
 
 To add the method to load album cover art, follow this procedure:
 
@@ -126,7 +128,7 @@ The cancellation token argument will allow you to stop the method loading album 
 
 ## Cancellable Image Load
 
-In this step you will call the `LoadCovers` method in the `DoSearch` method (in the music store view model) but with full cancellation management. &#x20;
+In this step you will call the `LoadCovers` method in the `DoSearch` method (in the music store view model) but with full cancellation management.
 
 Follow this procedure:
 
@@ -146,7 +148,7 @@ var cancellationToken = _cancellationTokenSource.Token;
 
 So if there is an existing request still loading album art, this will cancel it. Again, because `_cancellationTokenSource` might be replaced asynchronously by anther thread, you have to work with a copy stored as a local variable.
 
-- Add the following code to the end of `DoSearch` method:&#x20;
+- Add the following code to the end of `DoSearch` method:
 
 ```csharp
 if (!cancellationToken.IsCancellationRequested)
@@ -205,15 +207,15 @@ IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
 A converter is an extension of a data binding expression that can convert the binding value before it is passed to the bound control. The `IsNull` converter returns a Boolean that is true when the value object is null.
 
 :::info
-For more information about the _Avalonia UI_ built-in binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).&#x20;
+For more information about the _Avalonia UI_ built-in binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).
 :::
 
 - Click **Debug** to compile and run the project.
 - Click the icon button.
 - Type some search text.
 
-![](images/image-20210310173858088.png)
+<p><img className="image-medium-zoom" src={MusicStoreDisplayingImagesScreenshot} alt="" /></p>
 
 Notice how the album covers load one by one, and the UI remains responsive.
 
-On the next page, you will learn how to return the selected album from dialog, when the user clicks  **Buy Album**.&#x20;
+On the next page, you will learn how to return the selected album from dialog, when the user clicks  **Buy Album**.

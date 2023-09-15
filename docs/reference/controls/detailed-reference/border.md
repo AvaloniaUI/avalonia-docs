@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import BorderPodLookScreenshot from '/img/gitbook-import/assets/image (8) (1).png';
+import BorderDropShadowScreenshot from '/img/gitbook-import/assets/image (24) (2).png'; 
+
 # Border
 
 The border control decorates a (single) child with a border and background. It can also be used to display rounded corners.
@@ -29,7 +32,7 @@ When all four values are in the list, _Avalonia UI_ will interpret them using th
 `CornerRadius="TopLeft TopRight BottomRight BottomLeft"`
 
 :::warning
-If you use the four value pattern; you must provide all four values, even if one of them is zero. Three values are not permitted in the list.&#x20;
+If you use the four value pattern; you must provide all four values, even if one of them is zero. Three values are not permitted in the list.
 :::
 
 ### Example
@@ -55,7 +58,7 @@ This example adds some border controls to create a 'pod' look in the layout:&#x2
 </StackPanel>
 ```
 
-<img src='/img/gitbook-import/assets/image (8) (1).png' alt=''/>
+<img src={BorderPodLookScreenshot} alt=""/>
 
 ## Box Shadows
 
@@ -96,7 +99,7 @@ This is an example of a drop-shadow:
 </StackPanel>
 ```
 
-<img src='/img/gitbook-import/assets/image (24) (2).png' alt=''/>
+<img src={BorderDropShadowScreenshot} alt=""/>
 
 ## More Information
 

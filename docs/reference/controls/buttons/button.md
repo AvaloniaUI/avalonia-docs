@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ButtonClickHandlerScreenshot from '/img/gitbook-import/assets/button.gif';
+
 # Button
 
 The button is a control that reacts to pointer actions (and has some keyboard equivalents). It presents visual feedback in the form of a depressed state when the pointer is down.
@@ -56,9 +58,7 @@ public partial class MainWindow : Window
 }
 ```
 
-
-
-<img src='/img/gitbook-import/assets/button.gif' alt=''/>
+<img src={ButtonClickHandlerScreenshot} alt=""/>
 
 ## More Information
 

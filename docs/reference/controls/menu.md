@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import MenuTopDockScreenshot from '/img/gitbook-import/assets/menu.gif';
+import MenuWithIconScreenshot from '/img/gitbook-import/assets/menu2.gif';
+
 # Menu
 
 The menu control can add menu structure to an application. You will usually place a menu at the top edge of a dock panel control, so that it is drawn at the top of a window.
@@ -51,7 +54,7 @@ This example creates a menu docked at the top edge of a window.&#x20;
 </Window>
 ```
 
-<img src="/img/gitbook-import/assets/menu.gif" alt=""/>
+<img src={MenuTopDockScreenshot} alt="" />
 
 ## Accelerator Keys
 
@@ -65,7 +68,7 @@ It allows the user to access a menu item quickly. It is also sometimes called a 
 
 The user can access this feature by first pressing the Alt key, and then the accelerator key (or they can be pressed together). This is demonstrated in the second of the menu sequences in the example above.
 
-You will see that accelerator keys, where defined, are underlined on the menu as soon as the Alt key is pressed. Then any sub-menus are dropped down as soon as the accelerator key above is pressed.&#x20;
+You will see that accelerator keys, where defined, are underlined on the menu as soon as the Alt key is pressed. Then any sub-menus are dropped down as soon as the accelerator key above is pressed.
 
 Once keyboard interaction has been initiated with the Alt key, the user can also navigate the menus using the keyboard arrow keys. Menu items may be selected using the Enter key on the keyboard.
 
@@ -103,7 +106,7 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 </MenuItem>
 ```
 
-<img src="/img/gitbook-import/assets/menu2.gif" alt=""/>
+<img src={MenuWithIconScreenshot} alt="" />
 
 :::info
 For more detailed guidance on how to add icons to your menus, see [here](../../guides/graphics-and-animation/how-to-add-menu-icons.md).

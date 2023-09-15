@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Control
 ---
 
+import ItemsControlScreenshot from '/img/gitbook-import/assets/items.gif';
+
 # Items Control
 
 The items control is the basis for controls that display repeating data (like the list box for example). It has no built-in formatting or interactions; but you can use it with data binding, styling and data templates to create a completely custom repeating data control.
@@ -19,8 +21,6 @@ You will probably use these properties most often:
 ## Example
 
 This example binds an observable collection of crockery items to an items control, where some custom layout and formatting is provided by a data template:&#x20;
-
-
 
 ```xml
 <StackPanel Margin="20">
@@ -43,7 +43,6 @@ This example binds an observable collection of crockery items to an items contro
     </ItemsControl>
 </StackPanel>
 ```
-
 
 ```csharp title='C# View Model'
 using AvaloniaControls.Models;
@@ -73,7 +72,6 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
 ```csharp title='C# Item Class'
 public class Crockery
 {
@@ -88,11 +86,9 @@ public class Crockery
 }
 ```
 
+The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
 
-
-The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike the list box).
-
-<img src="/img/gitbook-import/assets/items.gif" alt=""/>
+<img src={ItemsControlScreenshot} alt="" />
 
 ## More Information
 

@@ -2,11 +2,14 @@
 description: CONCEPTS
 ---
 
+import AttachedControlDiagram from '/img/gitbook-import/assets/image (9).png';
+import AttachedLayoutPropertyDiagram from '/img/gitbook-import/assets/image (17).png';
+
 # Attached Properties
 
-_Avalonia UI_ controls support the **attached property** concept. This is a property applied to a child control that references its container control.&#x20;
+_Avalonia UI_ controls support the **attached property** concept. This is a property applied to a child control that references its container control.
 
-In XMAL attached properties are defined as attributes of the child control element, using the format: `ContainerClassName.AttachedPropertyName="value"`
+In XAML, attached properties are defined as attributes of the child control element using the format: `ContainerClassName.AttachedPropertyName="value"`
 
 Here are some scenarios where an attached property is used:
 
@@ -14,13 +17,13 @@ Here are some scenarios where an attached property is used:
 
 An additional control is attached to a 'host control' for some purpose. This can be used where the control usually only allows a single child in its content zone. In this scenario the attached control is not counted as part of the content, but it will be used in some other way by the container. Examples include: context menus, tool tips and flyouts. &#x20;
 
-<img src='/img/gitbook-import/assets/image (9).png' alt=''/>
+<img src={AttachedControlDiagram} alt=""/>
 
 ## Layout Control
 
 Attached layout properties are used in scenarios where the container control has to know something about the child controls it is going to arrange. Examples include: grids, dock panels and relative panels.
 
-<img src='/img/gitbook-import/assets/image (17).png' alt=''/>
+<img src={AttachedLayoutPropertyDiagram} alt=""/>
 
 :::info
 For a full list of the _Avalonia UI_ built-in controls, see the reference [here](../reference/controls/).

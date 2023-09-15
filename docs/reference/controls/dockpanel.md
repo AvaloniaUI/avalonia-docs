@@ -2,11 +2,14 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import DockPanelTopScreenshot from '/img/gitbook-import/assets/image (23).png';
+import DockPanelFillNoOverlapScreenshot from '/img/gitbook-import/assets/image (3) (2).png'; 
+
 # Dock Panel
 
-The dock panel control arranges its child controls along specified 'docking edges' (top, bottom, left, and right) with the last child filling any remaining space. The dock panel can maintain the child control's dimension that is parallel to the docking edge, so that the child fills all the available space along the docking edge.&#x20;
+The dock panel control arranges its child controls along specified 'docking edges' (top, bottom, left, and right) with the last child filling any remaining space. The dock panel can maintain the child control's dimension that is parallel to the docking edge, so that the child fills all the available space along the docking edge.
 
-For example, if the docking edge on a child control is defined as 'top' and it has a height defined, but no width, it will draw like this:&#x20;
+For example, if the docking edge on a child control is defined as 'top' and it has a height defined, but no width, it will draw like this:
 
 <img src="/img/gitbook-import/assets/image (23).png" alt=""/>
 
@@ -16,15 +19,15 @@ You must define the child control dimension perpendicular to the docking edge, o
 
 You can optionally define the dimension that is parallel to the docking edge. In this case, the child will be drawn according to the alignment setting in the same direction. For example, a child with a defined width, docked to the top edge, will obey its horizontal alignment property (default center).
 
-Child controls are docked in the sequence that they are defined in the XAML. When _Avalonia UI_ is sizing a child control, the presence of any previously drawn controls is taken into account. That means there is never any overlap. &#x20;
+Child controls are docked in the sequence that they are defined in the XAML. When _Avalonia UI_ is sizing a child control, the presence of any previously drawn controls is taken into account. That means there is never any overlap.
 
-The last child control defined will fill any remaining space.&#x20;
+The last child control defined will fill any remaining space.
 
 :::warning
 You must always define a last child control (with no dock property), or the docking calculation will not perform correctly. This means that a dock panel requires a minimum of two child controls.
 :::
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 
@@ -44,7 +47,7 @@ Setting the opacity of the orange rectangle to 0.5 demonstrates that there are n
 </DockPanel>
 ```
 
-<img src="/img/gitbook-import/assets/image (3) (2).png" alt=""/>
+<img src={DockPanelFillNoOverlapScreenshot} alt="" />
 
 ## More Information
 

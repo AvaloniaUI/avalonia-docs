@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import RadioButtonScreenshot from '/img/gitbook-import/assets/radio.gif';
+
 # Radio Button
 
 The radio button control presents a group of options from which only one may be selected at a time. A selected option is drawn as a filled circle, and an unselected option as an empty circle.
@@ -39,7 +41,7 @@ This example shows two groups of radio buttons working independently:
 </StackPanel>
 ```
 
-<img src='/img/gitbook-import/assets/radio.gif' alt=''/>
+<img src={RadioButtonScreenshot} alt="" />
 
 ## More Information
 

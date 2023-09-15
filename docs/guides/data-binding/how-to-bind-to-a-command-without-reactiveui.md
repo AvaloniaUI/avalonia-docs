@@ -3,6 +3,8 @@ id: how-to-bind-to-a-command-without-reactiveui
 title: How to Bind to a Command without ReactiveUI
 ---
 
+import BindCommandMethodScreenshot from '/img/gitbook-import/assets/command2.gif';
+import BindCanExecuteMethodScreenshot from '/img/gitbook-import/assets/command3.gif';
 
 # How to Bind to a Command without ReactiveUI
 
@@ -42,7 +44,7 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-<img src="/img/gitbook-import/assets/command2.gif" alt=""/>
+<img src={BindCommandMethodScreenshot} alt=""/>
 
 ## Can Execute?
 
@@ -92,7 +94,7 @@ This example uses the technique of binding directly to another control. You can 
 
 You will see that the button becomes enables only when the text box contains a string. &#x20;
 
-<img src="/img/gitbook-import/assets/command3.gif" alt=""/>
+<img src={BindCanExecuteMethodScreenshot} alt=""/>
 
 ## **Trigger Can Execute**
 

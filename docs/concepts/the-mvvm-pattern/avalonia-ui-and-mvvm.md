@@ -2,6 +2,8 @@
 description: CONCEPTS - The MVVM Pattern
 ---
 
+import MvvmDataBindingDiagram from '/img/gitbook-import/assets/mvvm.png';
+
 # Avalonia UI and MVVM
 
 On this page you will lean how the MVVM pattern is realised when you use it with _Avalonia UI_.
@@ -28,7 +30,7 @@ To learn how to design and implement your own controls, see [here](../../guides/
 
 Data binding is the key technology that allows an _Avalonia UI_ MVVM application to separate views from view models. You can visualise the view to view model relationship as two layers connected by the data bindings:
 
-<img src='/img/gitbook-import/assets/mvvm.png' alt=''/>
+<img src={MvvmDataBindingDiagram} alt=""/>
 
 Notice how some of the data bindings are represented by a two way arrow, and others by a single-headed arrow. For example, the name and address inputs are two ways - you want both changes in the view model to be notified to the view, and for inputs to the view to be updated on the view model.
 

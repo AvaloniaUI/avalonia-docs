@@ -3,12 +3,17 @@ id: keyframe-animations
 title: How To Use Keyframe Animations
 ---
 
+import AnimationKeyframeDiagram from '/img/gitbook-import/assets/image (2) (1) (4).png';
+import KeyframeFadeScreenshot from '/img/gitbook-import/assets/anim1 (1).gif';
+import KeyframeCompositeAnimationScreenshot from '/img/gitbook-import/assets/anim2.gif';
+import LinearEasingScreenshot from '/img/gitbook-import/assets/image (72).png';
+import BounceEaseInScreenshot from '/img/gitbook-import/assets/image (76).png';
 
 # How To Use Keyframe Animations
 
 You can use a keyframe animation to change one or more control properties following a timeline. The keyframes are defined in _Avalonia UI_ styles with **cue** points along the **duration** of the animation, and set the intermediate values of the properties at a point in time.
 
-<img src="/img/gitbook-import/assets/image (2) (1) (4).png" alt=""/>
+<img src={AnimationKeyframeDiagram} alt=""/>
 
 The property values between keyframes are set following the profile of an **easing function**. The default easing function is a straight-line interpolation.&#x20;
 
@@ -62,7 +67,7 @@ The finished code will look like this: &#x20;
 
 The resulting animation looks like this:
 
-<img src="/img/gitbook-import/assets/anim1 (1).gif" alt=""/>
+<img src={KeyframeFadeScreenshot} alt=""/>
 
 The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!&#x20;
 
@@ -92,7 +97,7 @@ This example shows you how to animate two properties on the same timeline.&#x20;
 
 The red rectangle is faded-in and rotated at the same time.
 
-<img src="/img/gitbook-import/assets/anim2.gif" alt=""/>
+<img src={KeyframeCompositeAnimationScreenshot} alt=""/>
 
 ## Delay
 
@@ -157,11 +162,9 @@ An easing function defines how a property is varied over time during an animatio
 
 <div>
 
-<img src="/img/gitbook-import/assets/image (72).png" alt=""/>
+<img src={LinearEasingScreenshot} alt=""/>
 
- 
-
-<img src="/img/gitbook-import/assets/image (76).png" alt=""/>
+<img src={BounceEaseInScreenshot} alt=""/>
 
 </div>
 

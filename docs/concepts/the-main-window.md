@@ -16,10 +16,10 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-It can be retrieved at any time by casting `Application.ApplicationLifetime` `IClassicDesktopStyleApplicationLifetime`.
+It can be retrieved at any time by casting `Application.ApplicationLifetime` to `IClassicDesktopStyleApplicationLifetime`.
 
 :::warning
-Mobile and browser platforms don't have a concept of Window in Avalonia. Instead you need to set MainView control in Application.ApplicationLifetime when it implements ISingleViewApplicationLifetime interface.
+Mobile and browser platforms don't have a concept of Window in Avalonia. Instead you need to set the MainView control in Application.ApplicationLifetime when it implements ISingleViewApplicationLifetime interface.
 :::
 
-### &#x20;<a href="#show-hide-and-close-a-window" id="show-hide-and-close-a-window"></a>
+### <a href="#show-hide-and-close-a-window" id="show-hide-and-close-a-window"></a>

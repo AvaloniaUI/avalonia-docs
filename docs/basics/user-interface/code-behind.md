@@ -3,13 +3,16 @@ id: code-behind
 title: Code-behind
 ---
 
+import VsSolutionExplorerScreenshot from '/img/basics/user-interface/code-behind/vs-solution-explorer.png';
+let loc = '/img/basics/user-interface/code-behind/vs-solution-explorer.png';
+
 # Code-behind
 
 In addition to a XAML file, most Avalonia controls also have a _code-behind_ file that is commonly written in C#. The code-behind file by convention has the file extension `.axaml.cs` and is often displayed nested below the XAML file in your IDE.
 
 For instance, in the Visual Studio solution explorer, you can see a `MainWindow.axaml` file along with its code-behind file `MainWindow.axaml.cs`:
 
-![](/img/basics/user-interface/code-behind/vs-solution-explorer.png)
+<p><img src={VsSolutionExplorerScreenshot} className="medium-zoom-image" /></p>
 
 The code-behind file contains a class that shares the same name as the XAML file. For example:
 

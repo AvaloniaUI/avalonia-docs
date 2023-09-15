@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ButtonSpinnerScreenshot from '/img/gitbook-import/assets/image (3) (3).png';
+
 # Button Spinner
 
 The button spinner presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
@@ -20,7 +22,8 @@ You will probably use these properties most often:
 </ButtonSpinner>
 ```
 
-<img src='/img/gitbook-import/assets/image (3) (3).png>' alt=''/>
+<img src={ButtonSpinnerScreenshot} alt=''/>
+
 ## More Information
 
 :::info

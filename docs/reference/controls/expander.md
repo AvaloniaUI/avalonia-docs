@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ExpanderClosedScreenshot from '/img/gitbook-import/assets/image (2) (1) (1).png';
+import ExpanderOpenedScreenshot from '/img/gitbook-import/assets/image (12) (2).png';
+
 # Expander
 
 The expander control has a header area (always visible) and a collapsible content section that can contain a single child control.
@@ -31,9 +34,9 @@ You will probably use these properties most often:
 </Expander>
 ```
 
-<img src="/img/gitbook-import/assets/image (2) (1) (1).png" alt=""/>
+<img src={ExpanderClosedScreenshot} alt="" />
 
-<img src="/img/gitbook-import/assets/image (12) (2).png" alt=""/>
+<img src={ExpanderOpenedScreenshot} alt="" />
 
 ## More Information
 

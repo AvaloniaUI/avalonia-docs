@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoCreateANewViewScreenshot from '/img/gitbook-import/assets/image (1) (1).png';
+
 # Create a New View
 
 On this page, you will add a view to display the list of to do items, with a button to add a new item.
@@ -102,7 +104,4 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
 
 If you are using the Visual Studio extension you should see the contents of the control displayed in the previewer after completing a build:
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (1) (1).png" alt=""/>
-</div>
-
+<img className="center" src={ToDoCreateANewViewScreenshot} alt="" />

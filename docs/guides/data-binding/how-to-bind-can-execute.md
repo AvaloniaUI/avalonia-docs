@@ -3,6 +3,7 @@ id: how-to-bind-can-execute
 title: How to Bind Can Execute
 ---
 
+import BindCanExecuteScreenshot from '/img/gitbook-import/assets/command4.gif';
 
 # How to Bind Can Execute
 
@@ -86,4 +87,4 @@ Here the `WhenAnyValue` method takes two arguments, the first collects a value f
 The `WhenAnyValue` method actually has overloads that can take up to 10 different value getters (for the validation function parameters), plus the validation function itself. &#x20;
 :::
 
-<img src="/img/gitbook-import/assets/command4.gif" alt=""/>
+<img src="{BindCanExecuteScreenshot}" alt=""/>

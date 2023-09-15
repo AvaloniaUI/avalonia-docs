@@ -3,6 +3,8 @@ id: accessing-the-ui-thread
 title: How To Access the UI Thread
 ---
 
+import DispatchPostLongRunningScreenshot from '/img/gitbook-import/assets/long1.gif';
+import DispatchInvokeAsyncLongRunningScreenshot from '/img/gitbook-import/assets/long2.gif';
 
 # How To Access the UI Thread
 
@@ -24,7 +26,7 @@ Use `InvokeAsync` when you need to wait for the result, and potentially want to 
 
 ## Dispatcher Priority
 
-Both of the above methods have a dispatcher priority parameter. You can use this with the   `DispatcherPriority` enumeration to specify the queue priority that the given job should be given.&#x20;
+Both of the above methods have a dispatcher priority parameter. You can use this with the `DispatcherPriority` enumeration to specify the queue priority that the given job should be given.&#x20;
 
 :::info
 For the possible values of the `DispatcherPriority` enumeration, see [here](http://reference.avaloniaui.net/api/Avalonia.Threading/DispatcherPriority/).
@@ -64,7 +66,7 @@ private void ButtonClickHandler(object sender, RoutedEventArgs e)
 }
 ```
 
-<img src="/img/gitbook-import/assets/long1.gif" alt=""/>
+<img src={DispatchPostLongRunningScreenshot} alt=""/>
 
 Notice that because the long running task is executed on its own thread, the UI does not lose responsiveness.
 
@@ -74,7 +76,7 @@ To get a result from the long running task, the XAML is the same, but this versi
 <StackPanel Margin="20">    
   <Button x:Name="RunButton" Content="Run long running process" 
           Click="ButtonClickHandler" />
-  <TextBlock x:Name="ResultText" Margin="10"/>
+  <TextBlock x:Name="ResultText" Margin="10" />
 ```
 
 ```csharp title='Task C#'
@@ -100,7 +102,7 @@ private async void ButtonClickHandler(object sender, RoutedEventArgs e)
 }
 ```
 
-<img src="/img/gitbook-import/assets/long2.gif" alt=""/>
+<img src={DispatchInvokeAsyncLongRunningScreenshot} alt=""/>
 
 ## More Information
 

@@ -2,9 +2,12 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoOkDisabledScreenshot from '/img/gitbook-import/assets/image (21) (2).png';
+import ToDoOkEnabledScreenshot from '/img/gitbook-import/assets/image (41).png';
+
 # Add Item Buttons
 
-On this page, you will learn how to complete the to do list app by adding actions for the buttons in the add item view. You will include some revealed functionality that disables the OK button until the user enters text in the input.&#x20;
+On this page, you will learn how to complete the to do list app by adding actions for the buttons in the add item view. You will include some revealed functionality that disables the OK button until the user enters text in the input.
 
 Also the OK button action needs to pass the description text back to the main window view model, so it can be added to the items collection.  You will do this by passing an argument to the command.
 
@@ -12,7 +15,7 @@ To alter the add item view model, follow this procedure:
 
 - Stop the app if it is running.
 - Locate the **AddItemViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.&#x20;
+- Edit the code as shown.
 
 ```csharp
 using ReactiveUI;
@@ -56,9 +59,9 @@ Therefore this view model code declares a reactive command for the OK button, wi
 The reactive command is part of _ReactiveUI_. For an introduction to this concept, see [here](../../concepts/reactiveui/reactive-command.md).
 :::
 
-Although there is nothing special about the cancel button, a reactive command is declared for that as well. You will see later how this will allow the output from both commands to be handled in the same place. &#x20;
+Although there is nothing special about the cancel button, a reactive command is declared for that as well. You will see later how this will allow the output from both commands to be handled in the same place.
 
-Both reactive command objects are then created in the constructor. The OK command defines a function that passes a to do item parameter. The cancel command has an empty object parameter.&#x20;
+Both reactive command objects are then created in the constructor. The OK command defines a function that passes a to do item parameter. The cancel command has an empty object parameter.
 
 ```csharp
 var isValidObservable = this.WhenAnyValue(
@@ -96,16 +99,16 @@ The code also creates a reactive command for the cancel button:
 CancelCommand = ReactiveCommand.Create(() => { });
 ```
 
-The cancel command has no execution, so its first and only parameter does nothing. The cancel button is always enabled, so it does not have a 'can execute' parameter.&#x20;
+The cancel command has no execution, so its first and only parameter does nothing. The cancel button is always enabled, so it does not have a 'can execute' parameter.
 
 ## Bind the OK and Cancel Buttons
 
-Your next step is to create binding for the OK and cancel buttons in the view.&#x20;
+Your next step is to create binding for the OK and cancel buttons in the view.
 
 To do this, follow this procedure:
 
 - Locate the **AddItemView.axaml** file in the **/Views** folder.
-- Edit the XAML as shown.&#x20;
+- Edit the XAML as shown.
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -134,13 +137,8 @@ To do this, follow this procedure:
 
 Run the application and click **Add Item**. You should now see that the OK button is only enabled when there is some text in the description input.
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (21) (2).png" alt=""/>
-</div>
+<img className="center" src={ToDoOkDisabledScreenshot} alt="" />
 
- 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (41).png" alt=""/>
-</div>
+<img className="center" src={ToDoOkEnabledScreenshot} alt="" />
 
-On the next page you will learn how to process the new to do item, so that it appears on the list, if the user clicks OK.&#x20;
+On the next page you will learn how to process the new to do item, so that it appears on the list, if the user clicks OK.

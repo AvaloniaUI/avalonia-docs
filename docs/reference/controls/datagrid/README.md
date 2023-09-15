@@ -2,6 +2,11 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import DataGridNuGetScreenshot from '/img/gitbook-import/assets/image (8) (4).png';
+import DataGridSortColumnScreenshot from '/img/gitbook-import/assets/grid1.gif';
+import DataGridReorderColumnScreenshot from '/img/gitbook-import/assets/grid2.gif';
+import DataGridColumnTypesScreenshot from '/img/gitbook-import/assets/grid3.gif';
+
 # Data Grid
 
 The data grid displays repeating data in a customizable grid. The control can be styled, templated and bound.&#x20;
@@ -20,9 +25,9 @@ The data grid is in an additional _Avalonia UI_ package. To use the data grid in
 
 You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use **Manage NuGet Packages** from the project menu of your IDE:
 
-<img src='/img/gitbook-import/assets/image (8) (4).png' alt=''/>
+<img src={DataGridNuGetScreenshot} alt="" />
 
-Alternatively,  you can run this instruction from the command line:
+Alternatively, you can run this instruction from the command line:
 
 ```bash
 dotnet add package Avalonia.Controls.DataGrid
@@ -68,8 +73,6 @@ You will probably use these properties most often:
 
 This example will generate a basic data grid, with column header names auto-generated from the item class. The items data source is bound to the main window view model.&#x20;
 
-
-
 ```xml
 <DataGrid Margin="20" ItemsSource="{Binding People}" 
           AutoGenerateColumns="True" IsReadOnly="True" 
@@ -77,7 +80,6 @@ This example will generate a basic data grid, with column header names auto-gene
           BorderThickness="1" BorderBrush="Gray">
 </DataGrid>
 ```
-
 
 ```csharp title='C# View Model'
 using AvaloniaControls.Models;
@@ -104,7 +106,6 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
 ```csharp title='C# Item Class'
 public class Person
 {
@@ -119,9 +120,7 @@ public class Person
 }
 ```
 
-
-
-<img src='/img/gitbook-import/assets/grid1.gif' alt=''/>
+<img src={DataGridSortColumnScreenshot} alt="" />
 
 :::info
 These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](../../../basics/data/data-binding).
@@ -144,11 +143,9 @@ Property names from the item class will generally not make good column names. Th
 </DataGrid>
 ```
 
-<img src='/img/gitbook-import/assets/grid2.gif' alt=''/>
+<img src={DataGridReorderColumnScreenshot} alt="" />
 
 This example shows how the data grid can accept changes and update the underlying collection, and use different column types to edit the data:
-
-
 
 ```xml
 <DataGrid Margin="20" ItemsSource="{Binding People}"        
@@ -161,7 +158,6 @@ This example shows how the data grid can accept changes and update the underlyin
   </DataGrid.Columns>
 </DataGrid>
 ```
-
 
 ```csharp title='C# View Model'
 using AvaloniaControls.Models;
@@ -188,7 +184,6 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
 ```csharp title='C# Item Class'
 public class Person
 {
@@ -205,9 +200,7 @@ public class Person
 }
 ```
 
-
-
-<img src='/img/gitbook-import/assets/grid3.gif' alt=''/>
+<img src={DataGridColumnTypesScreenshot} alt="" />
 
 ## More Information
 

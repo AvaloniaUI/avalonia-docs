@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ImageUnscaledScreenshot from '/img/gitbook-import/assets/image (6) (1).png';
+import ImageUniformToFillScreenshot from '/img/gitbook-import/assets/image (4) (1) (2).png';
+
 # Image
 
 The image can display raster images from a specified image source. The source can be:
@@ -30,7 +33,7 @@ This example shows a bitmap asset loaded into an image control where the height 
 </Panel>
 ```
 
-<img src="/img/gitbook-import/assets/image (6) (1).png" alt=""/>
+<img src={ImageUnscaledScreenshot} alt="" />
 
 In this next example, introducing the stretch setting `UniformToFill` fits in all the height of the image, but crops the width because it would otherwise be wider than specified.  The image is not distorted by this treatment.&#x20;
 
@@ -43,7 +46,7 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 </Panel>
 ```
 
-<img src="/img/gitbook-import/assets/image (4) (1) (2).png" alt=""/>
+<img src={ImageUniformToFillScreenshot} alt="" />
 
 ## More Information
 

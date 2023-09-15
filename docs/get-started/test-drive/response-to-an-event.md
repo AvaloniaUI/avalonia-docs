@@ -3,6 +3,10 @@ id: respond-to-an-event
 title: Respond to an Event
 ---
 
+import SolutionCodeBehindScreenshot from '/img/get-started/respond-to-an-event/image (59).png';
+import AvaloniaEventIntellisenseScreenshot from '/img/get-started/respond-to-an-event/image (25) (2).png';
+import EventDebugOutputScreenshot from '/img/get-started/respond-to-an-event/image (54).png';
+
 There are a number of ways you can implement actions in an Avalonia application. On this page, you will see how to use one of the simplest: how to write event handling code for a button click.
 
 To start, you will write a button click event handler that does not interact with any of the other controls.
@@ -11,9 +15,7 @@ To start, you will write a button click event handler that does not interact wit
 
 The XAML file for the main window has a C# code-behind file associated with it. If you're using an IDE, you can find this file in the **Solution Explorer** - it is a sub-item of the `.axaml` file.
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/respond-to-an-event/image (59).png" alt="" />
-</div>
+<img className="center" src={SolutionCodeBehindScreenshot} alt="" />
 
 To change the code-behind for the main window:
 
@@ -78,17 +80,13 @@ using System.Diagnostics;
 :::tip
 If you're using an IDE you will see the Avalonia UI Intellisense as you type.
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/respond-to-an-event/image (25) (2).png" alt="" />
-</div>
+<img className="center" src={AvaloniaEventIntellisenseScreenshot} alt="" />
 :::
 
 - Run the app and click the button.
 
 You should see the result on the Output window for Debug, like this:
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/respond-to-an-event/image (54).png" alt="" />
-</div>
+<img className="center" src={EventDebugOutputScreenshot} alt="" />
 
 On the next page, you will see how to use code-behind to read and change the properties of Avalonia UI controls at runtime.

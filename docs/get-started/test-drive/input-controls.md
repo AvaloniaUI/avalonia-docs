@@ -3,15 +3,15 @@ id: input-controls
 title: Input Controls
 ---
 
+import InputControlsScreenshot from '/img/get-started/test-drive/input-controls.png';
+
 On this page, you will learn how to add some of the Avalonia input controls in a neat layout. The aim is to add a numerical inputs with their associated labels in horizontal rows; with an output control in the row below. 
 
 To achieve this layout, you will use the built-in grid control, and locate label and input controls in its cells.
 
-This picture shows the resulting layout (running) with the gridlines showing. The gridlines are showing for the purpose of visualizing the layout - you would not usually do this on a production UI. 
+This picture shows the resulting layout (running) with the gridlines showing. The gridlines are showing for the purpose of visualizing the layout - you would not usually do this on a production UI.
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/test-drive/input-controls.png" alt="Window showing input controls" width="400" />
-</div>
+<img className="center" src={InputControlsScreenshot} alt="" />
 
 To create a layout using the grid control, follow this procedure:
 

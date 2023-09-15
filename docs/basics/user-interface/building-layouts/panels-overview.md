@@ -1,6 +1,13 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import CanvasOverlapScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/CanvasExample.png';
+import DockPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/DockPanelExample.png';
+import GridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/GridExample.png';
+import StackPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/StackPanelExample.png';
+import WrapPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/WrapPanelExample.png';
+import UniformGridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/UniformGridExample.png';
+
 # Panels Overview
 
 `Panel` elements are components that control the rendering of elements - their size and dimensions, their position, and the arrangement of their child content. _Avalonia UI_ provides a number of predefined `Panel` elements as well as the ability to construct custom `Panel` elements.
@@ -41,9 +48,7 @@ The `Canvas` element enables positioning of content according to absolute _x-_ a
 
 A `Canvas` can be instantiated simply by using XAML or code. The following example demonstrates how to use `Canvas` to absolutely position content. This code produces three 100-pixel squares. The first square is red, and its top-left (_x, y_) position is specified as (0, 0). The second square is green, and its top-left position is (100, 100), just below and to the right of the first square. The third square is blue, and its top-left position is (50, 50), thus encompassing the lower-right quadrant of the first square and the upper-left quadrant of the second. Because the third square is laid out last, it appears to be on top of the other two squares—that is, the overlapping portions assume the color of the third box.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/CanvasExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={CanvasOverlapScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"
@@ -121,9 +126,7 @@ By default, the last child of a `DockPanel` element will "fill" the remaining, u
 
 The following example demonstrates how to partition space using a `DockPanel`. Five `Border` elements are added as children of a parent `DockPanel`. Each uses a different positioning property of a `DockPanel` to partition space. The final element "fills" the remaining, unallocated space.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/DockPanelExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={DockPanelSampleScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"
@@ -239,9 +242,7 @@ Columns and rows defined within a `Grid` can take advantage of `Star` sizing in 
 
 The following example demonstrates how to build a UI similar to that found on the Run dialog available on the Windows Start menu.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/GridExample.png" alt="Grid Example App" />
-  </div>
+<img className="center" src={GridSampleScreenshot} alt="Grid Example App" />
 
 <Tabs
   defaultValue="xaml"
@@ -392,9 +393,7 @@ Although `DockPanel` can also "stack" child elements, `DockPanel` and `StackPane
 
 The following example demonstrates how to use a `StackPanel` to create a set of vertically-positioned buttons. For horizontal positioning, set the `Orientation` property to `Horizontal`.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/StackPanelExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={StackPanelSampleScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"
@@ -449,9 +448,7 @@ myStackPanel.Children.Add(myButton3);
 
 The following example demonstrates how to create a `WrapPanel` to display `Button` controls that wrap when they reach the edge of their container.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/WrapPanelExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={WrapPanelSampleScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"
@@ -536,9 +533,7 @@ For example, if you have 12 items and set `Rows` to 3, the `UniformGrid` will au
 
 The following example demonstrates how to define and use a `UniformGrid`. The example creates a `UniformGrid` with 3 rows and 4 columns and adds 12 rectangles as child elements.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/UniformGridExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={UniformGridSampleScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"

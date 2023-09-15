@@ -2,18 +2,26 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ViewboxScaleUniformBothScreenshot from '/img/gitbook-import/assets/scale-uniform-both.gif';
+import ViewboxScaleUniformFillBothScreenshot from '/img/gitbook-import/assets/scale-uniformtofill-both.gif';
+import ViewboxScaleFillBothScreenshot from '/img/gitbook-import/assets/scale-fill-both.gif';
+import ViewboxScaleNoneBothScreenshot from '/img/gitbook-import/assets/scale-none-both.gif';
+
+import ViewboxScaleUniformDownOnlyScreenshot from '/img/gitbook-import/assets/scale-uniform-downonly.gif';
+import ViewboxScaleUniformUpOnlyScreenshot from '/img/gitbook-import/assets/scale-uniform-uponly.gif';
+
 # Viewbox
 
-The viewbox is a container control which can scale its contents. The way in which the contents are stretched can be defined, as well as when the stretch will occur (stretch direction).&#x20;
+The `Viewbox` is a container control which can scale its contents. The way in which the contents are stretched can be defined, as well as when the stretch will occur (stretch direction).
 
 ## Useful Properties
 
 You will probably use these properties most often:
 
 | Property           | Default | Description                                                  |
-| ------------------ | ------- | ------------------------------------------------------------ |
+| ------------------ | ------- |--------------------------------------------------------------|
 | `Stretch`          | Uniform | Determines how contents are fitted into the available space. |
-| `StretchDirection` | Both    | Determines when the  scaling occurs.                         |
+| `StretchDirection` | Both    | Determines when the scaling occurs.                          |
 
 The values for the `Stretch` property are as follows:
 
@@ -29,9 +37,7 @@ The values for the `StretchDirecton` property are as follows:
 
 ### Example
 
-This simple example shows a viewbox scaling up a circle uniformly (both stretch and direction are default).&#x20;
-
-
+This simple example shows a `Viewbox` scaling up a circle uniformly (both stretch and direction are default).&#x20;
 
 ```markup
 <Viewbox Stretch="Uniform" Width="300" Height="300">
@@ -39,18 +45,15 @@ This simple example shows a viewbox scaling up a circle uniformly (both stretch 
 </Viewbox>
 ```
 
-
 ### Demonstrations
 
 The following demonstrations show the different combinations of stretch and stretch direction property settings. This first set shows the effect of the stretch property:
 
-<table><thead><tr><th width="275">Stretch Value</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Uniform</code></td><td><img src="/img/gitbook-import/assets/scale-uniform-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>UniformToFill</code></td><td><img src="/img/gitbook-import/assets/scale-uniformtofill-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>Fill</code></td><td><img src="/img/gitbook-import/assets/scale-fill-both.gif" alt="" data-size="original"/></td></tr><tr><td><code>None</code></td><td><img src="/img/gitbook-import/assets/scale-none-both.gif" alt="" data-size="original"/></td></tr></tbody></table>
+<table><thead><tr><th width="275">Stretch Value</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Uniform</code></td><td><img src={ViewboxScaleUniformBothScreenshot} alt="" data-size="original"/></td></tr><tr><td><code>UniformToFill</code></td><td><img src={ViewboxScaleUniformFillBothScreenshot} alt="" data-size="original"/></td></tr><tr><td><code>Fill</code></td><td><img src={ViewboxScaleFillBothScreenshot} alt="" data-size="original"/></td></tr><tr><td><code>None</code></td><td><img src={ViewboxScaleNoneBothScreenshot} alt="" data-size="original"/></td></tr></tbody></table>
 
 This set of demonstrations shows the effect of the stretch direction property:
 
-<table><thead><tr><th width="276">Stretch Direction</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Both</code></td><td><img src='/img/gitbook-import/assets/scale-uniform-downonly.gif' alt=''/></td></tr></tbody></table>
-
-
+<table><thead><tr><th width="276">Stretch Direction</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>UpOnly</code></td><td><img src={ViewboxScaleUniformUpOnlyScreenshot} alt="" /></td></tr><tr><td><code>DownOnly</code></td><td><img src={ViewboxScaleUniformDownOnlyScreenshot} alt="" /></td></tr></tbody></table>
 
 ## More Information
 

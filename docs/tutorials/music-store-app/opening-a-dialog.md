@@ -2,9 +2,12 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreAddWindowScreenshot from './images/add-window.png';
+import MusicStoreDialogOpenedScreenshot from './images/dialog-opened.png';
+
 # Open a Dialog
 
-On this page you will learn how to use _ReactiveUI_ to manage another window in your app. The new window will eventually contain a search facility, and a button to add one of the album covers found to a list in the main window.  This new window will be opened as a dialog - that is it will prevent activity in the main window while it is showing.&#x20;
+On this page you will learn how to use _ReactiveUI_ to manage another window in your app. The new window will eventually contain a search facility, and a button to add one of the album covers found to a list in the main window.  This new window will be opened as a dialog - that is it will prevent activity in the main window while it is showing.
 
 ## Add a New Dialog Window
 
@@ -13,12 +16,12 @@ There is nothing special about a window view file that makes it into a dialog; t
 To create a new window, follow this procedure:
 
 - Stop the app if it is still running.
-- In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
+- In the solution explorer, right-click the **/Views** folder and then click **Add**.
 - Click **Avalonia Window**.
 - When prompted for the name, type 'MusicStoreWindow'
 - Press enter.
 
-![](images/add-window.png)
+<p><img className="image-medium-zoom" src={MusicStoreAddWindowScreenshot} alt="" /></p>
 
 ## Dialog Window Styling
 
@@ -57,16 +60,16 @@ To style the new dialog window so that it matches the main window, follow this p
 
 ## Dialog Input and Output
 
-The application logic for the dialog will be controlled by its own view model. This will be created and linked to the dialog window view whenever the dialog is to be shown.&#x20;
+The application logic for the dialog will be controlled by its own view model. This will be created and linked to the dialog window view whenever the dialog is to be shown.
 
 Similarly, the result of the users interaction with the dialog will eventually have to be passed back to the application logic for the main window for processing.
 
 At this stage you will create two empty view model classes to act as placeholders for the dialog view model, and the dialog return (selected album) object. To create these view models, follow this procedure:
 
-- In the solution explorer, right-click the **/ViewModels** folder and then click **Add**. &#x20;
+- In the solution explorer, right-click the **/ViewModels** folder and then click **Add**.
 - Click **Class**.
 - Name the class 'MusicStoreViewModel' and click **Add**.
-- Right-click again the **/ViewModels** folder and then click **Add** a second time. &#x20;
+- Right-click again the **/ViewModels** folder and then click **Add** a second time.
 - Click **Class**.
 - Name the class 'AlbumViewModel' and click **Add**.
 
@@ -187,7 +190,7 @@ It all works - but the dialog window opens at the same size as the main window, 
 
 ## Dialog Position and Size
 
-In the last step here, you will make the dialog smaller that the main window, and open centered on it. You will also make the main window open in the center of the user's screen.   &#x20;
+In the last step here, you will make the dialog smaller that the main window, and open centered on it. You will also make the main window open in the center of the user's screen.
 
 Follow this procedure:
 
@@ -202,7 +205,7 @@ Follow this procedure:
 
 - Locate and open the **MusicStoreWindow.axaml** file.
 - Add attributes for the width and height of the dialog, set at 1000 and 550 respectively.
-- Add the start-up position attribute set to `CenterOwner`, as shown:&#x20;
+- Add the start-up position attribute set to `CenterOwner`, as shown:
 
 ```
 <Window ...
@@ -213,8 +216,8 @@ Follow this procedure:
 - Click **Debug** to compile and run the project.
 - Click the icon button.
 
-![](images/dialog-opened.png)
+<p><img className="image-medium-zoom" src={MusicStoreDialogOpenedScreenshot} alt="" /></p>
 
 The dialog window is now opened centered inside the main window.
 
-On the next page, you will learn how to add some content to the dialog window to represent a search for albums, and present the results. &#x20;
+On the next page, you will learn how to add some content to the dialog window to represent a search for albums, and present the results.
