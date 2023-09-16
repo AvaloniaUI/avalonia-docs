@@ -3,6 +3,8 @@ id: splitview
 title: SplitView
 ---
 
+import SplitViewScreenshot from '/img/controls/splitview/image (9).png';
+
 Represents a container with two views; one view for the main content and another view that is typically used for navigation commands.
 
 ```markup
@@ -25,9 +27,7 @@ Represents a container with two views; one view for the main content and another
 </SplitView>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/splitview/image (9).png" />
-  </div>
+<img className="center" src={SplitViewScreenshot} alt="" />
 
 A split view's content area is always visible. The pane can expand and collapse or remain in an open state, and can present itself from either the left side or right side of an app window. The pane has four modes:
 

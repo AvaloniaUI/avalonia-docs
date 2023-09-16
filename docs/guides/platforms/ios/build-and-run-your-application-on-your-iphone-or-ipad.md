@@ -7,7 +7,7 @@ import BuildiOSOpenXcodeScreenshot from '/img/gitbook-import/assets/Screenshot 2
 import BuildiOSCreateXcodeProjectScreenshot from '/img/gitbook-import/assets/image (36).png';
 import BuildiOSSelectProjectOptionsScreenshot from '/img/gitbook-import/assets/image (30).png';
 import BuildiOSSelectAnyDeviceScreenshot from '/img/gitbook-import/assets/image (35).png';
-import BuildiOSAddAdditionalSimulatorsScreenshot from '/img/gitbook-import/assets/image (35).png';
+import BuildiOSAddAdditionalSimulatorsScreenshot from '/img/gitbook-import/assets/image (32).png';
 import BuildiOSProvisionPhoneScreenshot from '/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.19.06.png';
 import BuildiOSSelectDeviceScreenshot from '/img/gitbook-import/assets/image (24) (1).png';
 import BuildiOSChangeBundleIdentifierScreenshot from '/img/gitbook-import/assets/image (18) (2).png';
@@ -39,15 +39,15 @@ This has to be done by creating an Xcode app project that has the same `bundle i
 
 6. In the status bar at the top click on the "Any device (arm64)"
 
-<img src='{BuildiOSSelectAnyDeviceScreenshot}' alt=''/>
+<img src={BuildiOSSelectAnyDeviceScreenshot} alt=''/>
 
 7. At the bottom of the list click "Add Additional Simulators..."
 
-<img src='{BuildiOSAddAdditionalSimulatorsScreenshot}' alt=''/>
+<img src={BuildiOSAddAdditionalSimulatorsScreenshot} alt=''/>
 
 8. Click on devices and connect your iPhone or iPad with the USB cable. Xcode will start to provision your phone for development.
 
-<img src='{BuildiOSProvisionPhoneScreenshot}' alt=''/>
+<img src={BuildiOSProvisionPhoneScreenshot} alt=''/>
 
 9. Select you iPhone or iPad from the device list.
 

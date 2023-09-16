@@ -3,7 +3,9 @@ id: running-on-raspbian-lite-via-drm
 title: 在树莓派上通过 Raspbian Lite 运行
 ---
 
-import RaspbianLiteDrmKmsCube from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-kmscube.gif';
+import RaspbianLiteDrmKmsCubeScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-kmscube.gif';
+import RaspbianLiteDrmDesktopScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-desktop.jpg';
+import RaspianLiteRaspberryScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-run-on-raspberry.jpg';
 
 # 在树莓派上通过 Raspbian Lite 运行
 
@@ -69,7 +71,7 @@ sudo kmscube
 ```
 
 现在您应该在树莓派屏幕上看到旋转的立方体：
-<img src='/img/gitbook-import/assets/avalonia-raspbian-lite-drm-kmscube.gif' alt=''/>
+<img src={RaspbianLiteDrmKmsCubeScreenshot} alt=''/>
 
 ### 步骤 2 - 准备 Avalonia 应用
 
@@ -194,7 +196,7 @@ public override void OnFrameworkInitializationCompleted()
 **2.6 在桌面上运行和测试**
 现在，您可以像往常一样在桌面上运行/调试应用程序。
 启动您的应用程序时，您应该会看到这样的界面：
-<img src='/img/gitbook-import/assets/avalonia-raspbian-lite-drm-desktop.jpg' alt=''/>
+<img src={RaspbianLiteDrmDesktopScreenshot} alt=''/>
 
 ### 步骤3 - 部署并在树莓派上运行
 
@@ -223,6 +225,6 @@ sudo ./path/to/app/AvaloniaRaspbianLiteDrm --drm
 
 您应该在树莓派上看到应用程序正在运行：
 
-<img src={RaspbianLiteDrmKmsCube} alt=''/>
+<img src={RaspianLiteRaspberryScreenshot} alt=''/>
 
 如果您安装了触摸显示器，请尝试滑动滑动条控件 :)

@@ -3,7 +3,7 @@ id: debugging-xamlil
 title: Debugging the XAML compiler
 ---
 
-You can debug the XAML compiler adding at your's csproj AvaloniaXamlIlDebuggerLaunch property like this:
+You can debug the XAML compiler by adding the `AvaloniaXamlIlDebuggerLaunch` property to your .csproj like this:
 
 ```xml
   <PropertyGroup>

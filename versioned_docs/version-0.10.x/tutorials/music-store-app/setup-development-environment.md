@@ -3,6 +3,11 @@ id: setup-development-environment
 title: Setup Development Environment
 ---
 
+import MusicStoreRiderWelcomeScreenshot from '/img/tutorials/music-store-app/setup-development-environment/rider-welcome.png';
+import MusicStoreConfigurePluginReposScreenshot from '/img/tutorials/music-store-app/setup-development-environment/configure-plugin-repos.png';
+import MusicStoreEnterPluginRepoScreenshot from '/img/tutorials/music-store-app/setup-development-environment/enter-plugin-repo.png';
+import MusicStorePluginInstallScreenshot from '/img/tutorials/music-store-app/setup-development-environment/plugin-install.png';
+
 ### Setting up your development environment
 
 1. Download and install .NET 5 SDK [Download .NET \(Linux, macOS, and Windows\) \(microsoft.com\)](https://dotnet.microsoft.com/download)
@@ -41,27 +46,18 @@ Examples:
 
    Once Rider loads you will see the Welcome Screen. Click the `Configure` dropdown and select `Plugins`.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/setup-development-environment/rider-welcome.png" alt="rider welcome" />
-  </div>
+<img className="center" src={MusicStoreRiderWelcomeScreenshot} alt="Rider welcome" />
 
 A new Preferences Screen will open up. Click the `Settings` icon as shown and select `Manage Plugin Repositories...`
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/setup-development-environment/configure-plugin-repos.png" alt="configure-plugin-repos" />
-  </div>
+<img className="center" src={MusicStoreConfigurePluginReposScreenshot} alt="Configure plugin repos" />
 
 Click the `+` icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`then click `OK`
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/setup-development-environment/enter-plugin-repo.png" alt="enter-plugin-repo" />
-  </div>
+<img className="center" src={MusicStoreEnterPluginRepoScreenshot} alt="Enter plugin repo" />
 
 Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install` then once that's done, click the `Restart IDE` button that will appear.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/setup-development-environment/plugin-install.png" alt="plugin-install" />
-  </div>
-
+<img className="center" src={MusicStorePluginInstallScreenshot} alt="Plugin install" />
 
 Now Rider should be ready to develop Avalonia applications.

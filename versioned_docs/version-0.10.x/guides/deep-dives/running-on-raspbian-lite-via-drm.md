@@ -3,6 +3,10 @@ id: running-on-raspbian-lite-via-drm
 title: Running your Avalonia app on a Raspberry Pi with Raspbian Lite
 ---
 
+import RaspbianLiteDrmKmsCubeScreenshot from '/img/guides/deep-dives/running-on-raspbian-lite-via-drm/avalonia-raspbian-lite-drm-kmscube.gif';
+import RaspbianLiteDrmDesktopScreenshot from '/img/guides/deep-dives/running-on-raspbian-lite-via-drm/avalonia-raspbian-lite-drm-desktop.jpg';
+import RaspianLiteRaspberryScreenshot from '/img/guides/deep-dives/running-on-raspbian-lite-via-drm/avalonia-raspbian-lite-drm-run-on-raspberry.jpg';
+
 # Running your Avalonia app on a Raspberry Pi with Raspbian Lite
 
 This tutorial shows you how to run your Avalonia app on a Raspberry Pi with Raspbian Lite

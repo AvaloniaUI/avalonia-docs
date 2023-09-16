@@ -6,6 +6,11 @@ title: TimePicker
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import TimePickerSingleValueScreenshot from '/img/controls/timepicker/image (22) (1).png';
+import TimePickerClockIdentifierScreenshot from '/img/controls/timepicker/image (19).png';
+import TimePickerMinuteIncrementScreenshot from '/img/controls/timepicker/image (10).png';
+import TimePickerUnsetScreenshot from '/img/controls/timepicker/image (20).png';
+
 The `TimePicker` control allows the user to pick a time value.
 
 ## Examples
@@ -39,9 +44,7 @@ TimePicker arrivalTimePicker = new TimePicker();
 
 Use a `TimePicker` to let a user enter a single time value. You can customize the `DatePicker` to use a 12-hour or 24-hour clock.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/timepicker/image (22) (1).png"  />
-  </div>
+<img className="center" src={TimePickerSingleValueScreenshot} alt="" />
 
 ## 12-hour and 24-hour clocks
 
@@ -52,10 +55,7 @@ By default, the time picker shows a 12-hour clock with an AM/PM selector. You ca
 <TimePicker Header="24HourClock" SelectedTime="14:30" ClockIdentifier="24HourClock"/>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/timepicker/image (19).png" />
-  </div>
-
+<img className="center" src={TimePickerClockIdentifierScreenshot} alt="" />
 
 ### Minute increment
 
@@ -65,9 +65,7 @@ You can set the [MinuteIncrement](https://docs.microsoft.com/en-us/uwp/api/windo
 <TimePicker MinuteIncrement="15"/>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/timepicker/image (10).png" />
-  </div>
+<img className="center" src={TimePickerMinuteIncrementScreenshot} alt="" />
 
 ### Time values
 
@@ -75,9 +73,7 @@ The time picker control has both Time / TimeChanged and SelectedTime / SelectedT
 
 The value of `SelectedTime` is used to populate the time picker and is `null` by default. If `SelectedTime` is `null`, the `Time` property is set to a [TimeSpan](https://docs.microsoft.com/en-us/dotnet/api/system.timespan?view=dotnet-uwp-10.0\&preserve-view=true) of 0; otherwise, the `Time` value is synchronized with the `SelectedTime` value. When `SelectedTime` is `null`, the picker is 'unset' and shows the field names instead of a time.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/timepicker/image (20).png" />
-  </div>
+<img className="center" src={TimePickerUnsetScreenshot} alt="" />
 
 **Initializing a time value**
 

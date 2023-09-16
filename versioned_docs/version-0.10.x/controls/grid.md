@@ -3,6 +3,12 @@ id: grid
 title: Grid
 ---
 
+import GridSampleScreenshot from '/img/controls/grid/grid_example.png';
+import GridAsteriskScreenshot from '/img/controls/grid/grid_asterisk_example.png';
+import GridAsteriskButtonsScreenshot from '/img/controls/grid/grid_asterisk_example_buttons.png';
+import GridAutoButtonsScreenshot from '/img/controls/grid/grid_auto_example_buttons.png';
+import GridVerboseSampleScreenshot from '/img/controls/grid/grid_example_verbose.png';
+
 The `Grid` control is a `Panel` control useful for organizing other controls in columns and rows. `ColumnDefinition` and `RowDefinition` properties are used to define absolute, relative, or proportional row and column geometries for the grid. Each control in the grid will be placed using the `Grid.Column` and `Grid.Row` additional properties. It is also possible to have controls that span multiple rows and/or columns by using the `ColumnSpan` and `RowSpan` properties.
 
 ## Reference
@@ -42,9 +48,7 @@ In the above example we have two keywords: __*__ and **Auto**. Here is explanati
 
 The multiplier used in front of the proportional spacing value is used to figure out the relative size for the proportional columns. All proportional columns fit in the space left behind after all explicit values and "Auto" values are calculated. So for the above example the Column 1 will get 1.5 parts plus Column 2 will get 4 parts of the remainder of the space that Column 0 left. Lastly, the Button itself will fill in from the initial Cell 1,1 over one column and down one row because `Grid.RowSpan` and `Grid.ColumnSpan` are set to occupy two units instead of one.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/grid/grid_example.png" alt="Grid Using Properties and Spanning Columns" />
-  </div>
+<img className="center" src={GridSampleScreenshot} alt="Grid Using Properties and Spanning Columns" />
 
 Here is another example showing the difference between those two.
 
@@ -65,16 +69,11 @@ First let's create sample 2x2 grid in our View, we can achieve this simply by wr
 
 As you can see we created equal grid, I left `ShowGridLines` parameter set to `True` for better visibility.
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/grid/grid_asterisk_example.png" alt="Grid Using Asterisk Symbols" />
-  </div>
+<img className="center" src={GridAsteriskScreenshot} alt="Grid Using Asterisk Symbols" />
 
 Now let's fill our grid with some elements, I will fill every field with button, you can use anything you want.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/grid/grid_asterisk_example_buttons.png" alt="Grid Using Asterisk Symbols Filled With Buttons" />
-  </div>
+<img className="center" src={GridAsteriskButtonsScreenshot} alt="Grid Using Asterisk Symbols Filled With Buttons" />
 
 Now our View code look's like this:
 
@@ -98,13 +97,11 @@ Now our View code look's like this:
 
 In this moment our **asterisk** symbols are forcing our grid to become equal, now let's see what will happen when we replace **asterisk** with the **Auto** keyword
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/grid/grid_auto_example_buttons.png" alt="Grid Using Auto Keyword" />
-  </div>
+<img className="center" src={GridAutoButtonsScreenshot} alt="Grid Using Auto Keyword" />
 
 As you can see our grid become sticky to its content, it is very useful when we have components with variable `Height` property.
 
-This new View code look's like this:
+This new View code looks like this:
 
 ```markup
     <Grid ShowGridLines="True">
@@ -148,9 +145,7 @@ For more complex row and column definitions it's possible to explicitly use `Gri
 </Grid>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/grid/grid_example_verbose.png" alt="Using Verbose Row/Column Definitions" />
-  </div>
+<img className="center" src={GridVerboseSampleScreenshot} alt="sing Verbose Row/Column Definitions" />
 
 ### Common Properties
 

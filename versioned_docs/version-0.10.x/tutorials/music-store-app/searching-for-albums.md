@@ -3,6 +3,9 @@ info: searching-for-albums
 title: Searching for Albums
 ---
 
+import MusicStoreiTunesSearchNugetScreenshot from '/img/tutorials/music-store-app/searching-for-albums/image-20210310013703557.png';
+import MusicStoreAlbumViewScreenshot from '/img/tutorials/music-store-app/searching-for-albums/image-20210310110401944.png';
+
 ## Searching For Albums
 
 In order for our application to work we are going to need some business logic. This code is not relevant to the tutorial, except for the fact that it will provide the following services:
@@ -19,9 +22,7 @@ This will open the `Packages` tool at the bottom of the IDE, like so.
 
 Search for `ItunesSearch` and press the green `+` button on the right hand side to install it.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/searching-for-albums/image-20210310013703557.png" />
-  </div>
+<img className="center" src={MusicStoreiTunesSearchNugetScreenshot} alt="" />
 
 1. In the `Models` folder add a new class called `Album` and paste in the following code.
 
@@ -211,6 +212,4 @@ SearchResults.Add(new AlbumViewModel());
 
 Now run the application and click the store button, then search for an artist or album name. If all has gone to plan you should see the progressbar animating whilst the server is busy processing the request and then you should see some results appear in the list.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/searching-for-albums/image-20210310110401944.png" />
-  </div>
+<img className="center" src={MusicStoreAlbumViewScreenshot} alt="" />

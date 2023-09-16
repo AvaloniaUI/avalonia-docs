@@ -3,6 +3,9 @@ id: border
 title: Border
 ---
 
+import BorderSampleScreenshot from '/img/controls/border/image (2).png';
+import BorderBoxShadowScreenshot from '/img/controls/border/image (8).png';
+
 The `Border` control decorates a child with a border and background. It can also be used to display rounded corners by setting the [`CornerRadius`](http://reference.avaloniaui.net/api/Avalonia/CornerRadius/) property.
 
 An example of a border with a red background, 2 pixel black border, 3 pixel corner radius and a 4 pixel padding around its content:
@@ -20,9 +23,7 @@ An example of a border with a red background, 2 pixel black border, 3 pixel corn
 </Border>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/border/image (2).png" />
-  </div>
+<img className="center" src={BorderSampleScreenshot} alt="" />
 
 ## Box Shadows
 
@@ -61,9 +62,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 </Border>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/border/image (8).png" />
-  </div>
+<img className="center" src={BorderBoxShadowScreenshot} alt="" />
 
 ## Common Properties
 

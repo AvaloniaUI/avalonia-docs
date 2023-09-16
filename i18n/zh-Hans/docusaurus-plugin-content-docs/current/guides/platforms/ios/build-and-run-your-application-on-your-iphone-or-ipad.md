@@ -7,7 +7,7 @@ import BuildiOSOpenXcodeScreenshot from '/img/gitbook-import/assets/Screenshot 2
 import BuildiOSCreateXcodeProjectScreenshot from '/img/gitbook-import/assets/image (36).png';
 import BuildiOSSelectProjectOptionsScreenshot from '/img/gitbook-import/assets/image (30).png';
 import BuildiOSSelectAnyDeviceScreenshot from '/img/gitbook-import/assets/image (35).png';
-import BuildiOSAddAdditionalSimulatorsScreenshot from '/img/gitbook-import/assets/image (35).png';
+import BuildiOSAddAdditionalSimulatorsScreenshot from '/img/gitbook-import/assets/image (32).png';
 import BuildiOSProvisionPhoneScreenshot from '/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.19.06.png';
 import BuildiOSSelectDeviceScreenshot from '/img/gitbook-import/assets/image (24) (1).png';
 import BuildiOSChangeBundleIdentifierScreenshot from '/img/gitbook-import/assets/image (18) (2).png';
@@ -39,15 +39,15 @@ import BuildiOSCertScreenshot from '/img/gitbook-import/assets/image (33).png';
 
 6\. 在顶部的状态栏中点击"Any device (arm64)"。
 
-<img src='{BuildiOSSelectAnyDeviceScreenshot}' alt=''/>
+<img src={BuildiOSSelectAnyDeviceScreenshot} alt=''/>
 
 7\. 在列表底部点击"Add Additional Simulators..."
 
-<img src='{BuildiOSAddAdditionalSimulatorsScreenshot}' alt=''/>
+<img src={BuildiOSAddAdditionalSimulatorsScreenshot} alt=''/>
 
 8\. 点击设备，然后用USB电缆连接您的iPhone或iPad。Xcode将开始为您的手机进行开发配置。
 
-<img src='{BuildiOSProvisionPhoneScreenshot}' alt=''/>
+<img src={BuildiOSProvisionPhoneScreenshot} alt=''/>
 
 9\. 从设备列表中选择您的iPhone或iPad。
 

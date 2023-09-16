@@ -1,5 +1,7 @@
 # 路由
 
+import ReactiveUIRoutingScreenshot from '/img/gitbook-import/assets/routing.gif';
+
 [ReactiveUI 路由](https://reactiveui.net/docs/handbook/routing/)由包含当前 [RoutingState](https://reactiveui.net/api/reactiveui/routingstate/) 的 [IScreen](https://reactiveui.net/api/reactiveui/iscreen/)、多个 [IRoutableViewModel](https://reactiveui.net/api/reactiveui/iroutableviewmodel/) 和一个特定于平台的 XAML 控件 [RoutedViewHost](https://github.com/AvaloniaUI/Avalonia/blob/55458cf7af24d6c987268ab5ff8a1ead1173310b/src/Avalonia.ReactiveUI/RoutedViewHost.cs) 组成。`RoutingState` 管理视图模型导航堆栈，并允许视图模型导航到其他视图模型。`IScreen` 是导航堆栈的根；尽管名称如此，但它的视图不必占据整个屏幕。`RoutedViewHost` 监视 `RoutingState` 的实例，通过创建和嵌入适当的视图来响应导航堆栈中的任何更改。
 
 ## 路由示例
@@ -242,5 +244,5 @@ namespace RoutingExample
 dotnet run --framework netcoreapp2.1
 ```
 
-<img src='/img/gitbook-import/assets/routing.gif' alt=''/>
+<img src={ReactiveUIRoutingScreenshot} alt="" />
 

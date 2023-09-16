@@ -3,6 +3,8 @@ id: relativepanel
 title: RelativePanel
 ---
 
+import RelativePanelScreenshot from '/img/controls/relativepanel/layout-panel-relative-panel.png';
+
 The `RelativePanel` control is a `Panel` which lets you layout elements by specifying where they go in relation to other elements and in relation to the panel.
 
 By default, an element is positioned in the upper left corner of the panel.
@@ -42,9 +44,7 @@ This XAML shows how to arrange elements in a RelativePanel.
 
 The result looks like this.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/relativepanel/layout-panel-relative-panel.png" alt="Relative panel" />
-  </div>
+<img className="center" src={RelativePanelScreenshot} alt="Relative panel" />
 
 Here are a few things to note about the sizing of the rectangles:
 

@@ -3,6 +3,9 @@ id: itemsrepeater
 title: ItemsRepeater
 ---
 
+import ItemsRepeaterVerticalScreenshot from '/img/controls/itemsrepeater/itemsrepeatervertical.png';
+import ItemsRepeaterHorizontalScreenshot from '/img/controls/itemsrepeater/itemsrepeaterhorizontal.png';
+
 A data-driven collection control that incorporates a flexible layout system, custom views, and virtualization.
 
 `ItemsRepeater` is a port of the UWP `ItemsRepeater` control. More documentation can be found at:
@@ -50,11 +53,10 @@ By default an `ItemsRepeater`, without defining a `Layout` will render them Stac
 ```
 And they will look like so
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/itemsrepeater/itemsrepeatervertical.png" alt="Decription" />
-  </div>
+<img className="center" src={ItemsRepeaterVerticalScreenshot} alt="" />
 
 If you want them to be rendered Horizontally, you need to specify a `Layout` property and the xaml should look a bit like so:
+
 ```xml
 <ItemsRepeater Items="{Binding Players}">
     <ItemsRepeater.Layout>
@@ -73,14 +75,12 @@ If you want them to be rendered Horizontally, you need to specify a `Layout` pro
     </ItemsRepeater.ItemTemplate>
 </ItemsRepeater>
 ```
+
 this will look like this:
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/itemsrepeater/itemsrepeaterhorizontal.png" alt="Decription" />
-  </div>
+
+<img className="center" src={ItemsRepeaterHorizontalScreenshot} alt="" />
 
 In the `Layout` property you can also specify `Spacing` between the items, but you cannot define `Classes` nor other complex styles, those needs to be defined on the `ItemsRepeater` if needed.
-
-
 
 ## Reference
 
