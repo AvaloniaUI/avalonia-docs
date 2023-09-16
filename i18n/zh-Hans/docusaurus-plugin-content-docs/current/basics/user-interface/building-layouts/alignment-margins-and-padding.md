@@ -1,3 +1,9 @@
+import LayoutMarginsPaddingAlignmentBasicScreenshot from '/img/gitbook-import/assets/layout-margins-padding-alignment-graphic1.png';
+import LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot from '/img/gitbook-import/assets/layout-margins-padding-alignment-graphic2.png';
+import LayoutHorizontalAlignmentScreenshot from '/img/gitbook-import/assets/layout-horizontal-alignment-graphic.png';
+import LayoutVerticalAlignmentScreenshot from '/img/gitbook-import/assets/layout-vertical-alignment-graphic.png';
+import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/gitbook-import/assets/layout-margins-padding-aligment-graphic3.png';
+
 # Alignment、Margin 和 Padding
 
 Avalonia 控件暴露了用于精确定位子元素的几个属性。本章节讨论了四个最重要的属性：`HorizontalAlignment`、`Margin`、`Padding`和`VerticalAlignment`。理解这些属性的效果很重要，因为它们是控制元素在Avalonia应用程序中的位置的基础。
@@ -8,7 +14,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 下图展示了一个使用了多个定位属性的布局方案。
 
-<img src='/img/gitbook-import/assets/layout-margins-padding-alignment-graphic1.png' alt='Positioning Example'/>
+<img src={LayoutMarginsPaddingAlignmentBasicScreenshot} alt="Positioning Example"/>
 
 乍一看，本图中的`Button`元素可能是随机放置的。然而，它们的位置实际上是通过组合使用边距(margin)、对齐(alignment)和填充(padding)来精确控制的。
 
@@ -42,7 +48,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 下图提供了上述示例中使用的各种定位属性的全貌图。本章节的后续部分会更详细地描述如何使用每个定位属性。
 
-<img src='/img/gitbook-import/assets/layout-margins-padding-alignment-graphic2.png' alt='Positioning Properties'/>
+<img src={LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot} alt="Positioning Properties"/>
 
 ### 理解Alignment属性
 
@@ -72,7 +78,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 前面的代码生成了与下图类似的布局。每种`HorizontalAlignment`值的定位效果在图中可见。
 
-<img src='/img/gitbook-import/assets/layout-horizontal-alignment-graphic.png' alt='HorizontalAlignment Sample'/>
+<img src={LayoutHorizontalAlignmentScreenshot} alt='HorizontalAlignment Sample'/>
 
 #### VerticalAlignment属性
 
@@ -112,7 +118,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 前面的代码生成了与下图类似的布局。每种`VerticalAlignment`值的定位效果在图中可见。
 
-<img src='/img/gitbook-import/assets/layout-vertical-alignment-graphic.png' alt='VerticalAlignment property sample'/>
+<img src={LayoutVerticalAlignmentScreenshot} alt='VerticalAlignment property sample'/>
 
 ### 理解Margin属性
 

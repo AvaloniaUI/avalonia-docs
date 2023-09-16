@@ -2,13 +2,16 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoNavigationConceptDiagram from '/img/gitbook-import/assets/image (40).png';
+import ToDoNavigationArchitectureDiagram from '/img/gitbook-import/assets/image (38) (2).png';
+import ToDoBeforeNavigationScreenshot from '/img/gitbook-import/assets/image (43) (1).png';
+import ToDoAfterNavigationScreenshot from '/img/gitbook-import/assets/image (21) (1).png';
+
 # 导航视图
 
 在本页面中，您将学习如何在单击**Add Item**按钮时更改主窗口内容区域中的视图，以显示新项目视图。
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (40).png" alt=""/>
-</div>
+<img className="center" src={ToDoNavigationConceptDiagram} alt="" />
 
 到目前为止，在本教程中，您已经使用了 MVVM 模式。这意味着应用程序逻辑受到视图模型的控制，而负责在主窗口中显示的视图模型是主窗口视图模型。
 
@@ -83,9 +86,7 @@ namespace ToDoList.ViewModels
 </Window>
 ```
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (38) (2).png" alt=""/>
-</div>
+<img className="center" src={ToDoNavigationArchitectureDiagram} alt="" />
 
 ## 按钮命令
 
@@ -125,17 +126,9 @@ For information about the concept of binding source expressions, see [here](../.
 
 现在，如果运行应用程序并单击 **Add Item**，您将看到新视图出现。
 
-<div>
+<img className="center" src={ToDoBeforeNavigationScreenshot} alt="" />
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (43) (1).png" alt=""/>
-</div>
-
- <div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (21) (1).png" alt=""/>
-</div>
-
-</div>
+<img className="center" src={ToDoAfterNavigationScreenshot} alt="" />
 
 您有没有注意到这种行为？主窗口交换了其内容区域绑定的视图模型，显示正确加载了添加项目视图！
 

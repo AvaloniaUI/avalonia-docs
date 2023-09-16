@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import WrapPanelHorizontalScreenshot from '/img/gitbook-import/assets/image (5) (1).png';
+import WrapPanelVerticalScreenshot from '/img/gitbook-import/assets/image (15) (1).png';
+
 # Wrap Panel
 
 The wrap panel uses a default arrangement of (multiple) child elements is in sequence from left to right, while they fit in the width. It starts a new line when there is no space left (including any margins and borders). &#x20;
@@ -26,7 +29,7 @@ You will probably use these properties most often:
 </WrapPanel>
 ```
 
-<img src='/img/gitbook-import/assets/image (5) (1).png' alt=''/>
+<img src={WrapPanelHorizontalScreenshot} alt="" />
 
 ```xml
 <WrapPanel Orientation="Vertical">
@@ -38,7 +41,7 @@ You will probably use these properties most often:
 </WrapPanel>
 ```
 
-<img src='/img/gitbook-import/assets/image (15) (1).png' alt=''/>
+<img src={WrapPanelVerticalScreenshot} alt="" />
 
 ### More Information
 

@@ -2,9 +2,12 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ItemsRepeaterVerticalScreenshot from '/img/gitbook-import/assets/image (2) (6).png';
+import ItemsRepeaterHorizontalScreenshot from '/img/gitbook-import/assets/repeater.gif';
+
 # Items Repeater
 
-The items repeater can display repeating data from a bound data source. It has both a layout template and a data template.&#x20;
+The items repeater can display repeating data from a bound data source. It has both a layout template and a data template.
 
 :::info
 The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [here](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater).
@@ -18,9 +21,7 @@ The default layout template is a vertical stack layout, so that items appear in 
 
 ## Example
 
-This example binds an observable collection of crockery items to an items repeater control, where some custom layout and formatting for each item is provided by the data template:&#x20;
-
-
+This example binds an observable collection of crockery items to an items repeater control, where some custom layout and formatting for each item is provided by the data template:
 
 ```xml
 <StackPanel Margin="20">
@@ -43,7 +44,6 @@ This example binds an observable collection of crockery items to an items repeat
     </ItemsRepeater>
 </StackPanel>
 ```
-
 
 ```csharp title='C# View Model'
 using AvaloniaControls.Models;
@@ -73,7 +73,6 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
 ```csharp title='C# Item Class'
 public class Crockery
 {
@@ -88,11 +87,9 @@ public class Crockery
 }
 ```
 
+<img src={ItemsRepeaterVerticalScreenshot} alt="" />
 
-
-<img src="/img/gitbook-import/assets/image (2) (6).png" alt=""/>
-
-By default an items repeater will render the items in a vertical stack layout. You can display the items horizontally by overriding this using a `<ItemsRepeater.Layout>` element, which must contain a stack layout. For example:
+By default, an items repeater will render the items in a vertical stack layout. You can display the items horizontally by overriding this using a `<ItemsRepeater.Layout>` element, which must contain a stack layout. For example:
 
 ```xml
 <StackPanel Margin="20">
@@ -124,7 +121,7 @@ By default an items repeater will render the items in a vertical stack layout. Y
 
 The items display horizontally, and those too far to the right would be hidden if it were not for the scroll viewer element added around the items repeater.   &#x20;
 
-<img src="/img/gitbook-import/assets/repeater.gif" alt=""/>
+<img src={ItemsRepeaterHorizontalScreenshot} alt="" />
 
 ## More Information
 

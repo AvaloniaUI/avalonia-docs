@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoAddNewItemsScreenshot from '/img/gitbook-import/assets/image (44).png';
+
 # 添加新项目
 
 在本教程的早期阶段，当您创建 `ToDoListView` 用户控件时，您添加了一个按钮，以便用户可以添加新项目。在本页面中，您将为按钮添加一个动作。
@@ -74,9 +76,7 @@ dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Vi
 
 这样，您就得到了一个如下图所示的视图：
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (44).png" alt=""/>
-</div>
+<img className="center" src={ToDoAddNewItemsScreenshot} alt="" />
 
 新视图有一个文本框控件，其中有三个属性供您查看：
 

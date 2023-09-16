@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ImageUnscaledScreenshot from '/img/gitbook-import/assets/image (6) (1).png';
+import ImageUniformToFillScreenshot from '/img/gitbook-import/assets/image (4) (1) (2).png';
+
 # Image
 
 The image can display raster images from a specified image source. The source can be:
@@ -43,7 +46,7 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 </Panel>
 ```
 
-<img src="/img/gitbook-import/assets/image (4) (1) (2).png" alt=""/>
+<img src={ImageUniformToFillScreenshot} alt="" />
 
 ## More Information
 

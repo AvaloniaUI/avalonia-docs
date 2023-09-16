@@ -2,6 +2,11 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreCreateSolutionScreenshot from './images/CreateSolution.png';
+import MusicStoreProjectStructureScreenshot from './images/project-structure.png';
+import MusicStoreRiderDebugButtonScreenshot from './images/debug-button.png'
+import MusicStoreNewAppScreenshot from './images/image-20210310192926578.png'
+
 # 创建一个新项目
 
 在本页面上，您将学习如何为应用程序创建一个新项目。
@@ -22,15 +27,11 @@ description: TUTORIALS - Music Store App
 - 向**解决方案名称**输入 “Avalonia.MusicStore”。
 - 点击**创建**。
 
-<div style={{textAlign: 'center'}}>
-  <img src="images/CreateSolution.png" alt=""/>
-</div>
+<p><img className="image-medium-zoom" src={MusicStoreCreateSolutionScreenshot} alt="" /></p>
 
 这将创建一个新项目，其中包含以下解决方案文件夹和文件：
 
-<div style={{textAlign: 'center'}}>
-  <img src="images/project-structure.png" alt=""/>
-</div>
+<p><img className="image-medium-zoom" src={MusicStoreProjectStructureScreenshot} alt="" /></p>
 
 花一些时间来查看解决方案模板创建的文件和文件夹。您将看到根据 MVVM 模式，创建了以下文件夹：
 
@@ -47,10 +48,10 @@ description: TUTORIALS - Music Store App
 
 按下 IDE 右上角的调试按钮以编译和运行项目。
 
-![](images/debug-button.png)
+<p><img className="image-medium-zoom" src={MusicStoreRiderDebugButtonScreenshot} alt="" /></p>
 
 这将显示一个窗口，看起来像这样：
 
-![](images/image-20210310192926578.png)
+<p><img className="image-medium-zoom" src={MusicStoreNewAppScreenshot} alt="" /></p>
 
 它虽然有点简单，但是现在您已经有了一个运行中的应用程序，并且有一个空白的画布可以开始开发。在下一页中，您将学习如何添加一个现代化的亚克力模糊深色背景。

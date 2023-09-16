@@ -3,6 +3,10 @@ id: respond-to-an-event
 title: 响应事件
 ---
 
+import SolutionCodeBehindScreenshot from '/img/get-started/respond-to-an-event/image (59).png';
+import AvaloniaEventIntellisenseScreenshot from '/img/get-started/respond-to-an-event/image (25) (2).png';
+import EventDebugOutputScreenshot from '/img/get-started/respond-to-an-event/image (54).png';
+
 在Avalonia应用程序中，您可以使用多种方式实现操作。在本页面中，您将了解如何使用最简单的方法之一：如何编写按钮点击的事件处理代码。
 
 首先，您将编写一个按钮点击事件处理程序，该处理程序不与任何其他控件交互。
@@ -11,9 +15,7 @@ title: 响应事件
 
 主窗口的XAML文件与一个关联的C#代码后台文件。如果您使用的是一个IDE，您可以在**Solution Explorer**中找到这个文件 - 它是`.axaml`文件的子项。
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/respond-to-an-event/image (59).png" alt="" />
-</div>
+<img className="center" src={SolutionCodeBehindScreenshot} alt="" />
 
 要更改主窗口的代码后台：
 
@@ -77,17 +79,13 @@ using System.Diagnostics;
 :::tip
 如果您使用的是一个IDE，您将在输入时看到Avalonia UI的智能感知。
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/respond-to-an-event/image (25) (2).png" alt="" />
-</div>
+<img className="center" src={AvaloniaEventIntellisenseScreenshot} alt="" />
 :::
 
 - 运行应用程序并点击按钮。
 
 您应该在Debug的输出窗口中看到结果，如下所示：
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/respond-to-an-event/image (54).png" alt="" />
-</div>
+<img className="center" src={EventDebugOutputScreenshot} alt="" />
 
 在下一页中，您将了解如何使用代码后台在运行时读取和更改Avalonia UI控件的属性。

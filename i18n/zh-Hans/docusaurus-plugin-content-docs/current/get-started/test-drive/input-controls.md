@@ -3,15 +3,15 @@ id: input-controls
 title: 输入控件
 ---
 
+import InputControlsScreenshot from '/img/get-started/test-drive/input-controls.png';
+
 在这个页面上，您将学习如何在一个整洁的布局中添加一些Avalonia输入控件。目标是在水平行中添加带有其关联标签的数字输入；在下面的行中添加一个输出控件。
 
 为了实现这个布局，您将使用内置的网格控件，并将标签和输入控件放置在其单元格中。
 
 这张图片展示了结果布局（运行中）并显示了网格线。网格线是为了可视化布局而显示的 - 在生产界面上通常不会这样做。
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/test-drive/input-controls.png" alt="Window showing input controls" width="400" />
-</div>
+<img className="center" src={InputControlsScreenshot} alt="Window showing input controls" />
 
 要使用网格控件创建布局，请按照以下步骤进行操作：
 

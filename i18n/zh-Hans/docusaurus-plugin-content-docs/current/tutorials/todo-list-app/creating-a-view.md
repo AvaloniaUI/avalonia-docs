@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoCreateANewViewScreenshot from '/img/gitbook-import/assets/image (1) (1).png';
+
 # 创建新视图
 
 在本页中，您将添加一个视图来显示待办事项列表，其中包含一个添加新项目的按钮。
@@ -102,7 +104,4 @@ namespace ToDoList.Views
 
 如果您使用 Visual Studio 扩展，完成构建后应该可以在预览器中看到控件内容的显示：
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (1) (1).png" alt=""/>
-</div>
-
+<img className="center" src={ToDoCreateANewViewScreenshot} alt="" />

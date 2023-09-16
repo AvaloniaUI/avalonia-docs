@@ -4,6 +4,7 @@ title: 添加控件
 ---
 
 import Highlight from '@site/src/components/Highlight';
+import AvaloniaPropertyIntellisenseScreenshot from '/img/get-started/add-a-control/image (1) (2) (1).png';
 
 到目前为止，您的应用程序的主窗口只显示一个文本字符串。在本页中，您将学习如何添加一些Avalonia的内置控件。
 
@@ -41,9 +42,8 @@ Avalonia控件的XAML代码使用属性来指定呈现和行为。这些属性�
 
 :::tip
 如果您正在使用IDE，您可以注意到当您向XAML添加属性时，Avalonia的智能感知会做出引导。
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/add-a-control/image (1) (2) (1).png" alt="" />
-</div>
+
+<img className="center" src={AvaloniaPropertyIntellisenseScreenshot} alt="" />
 :::
 
 按钮现在已经移动到窗口内容区域的中心（水平和垂直方向）。

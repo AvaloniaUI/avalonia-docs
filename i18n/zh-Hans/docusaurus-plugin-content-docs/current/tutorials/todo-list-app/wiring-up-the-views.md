@@ -2,6 +2,9 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoDataContextWiringDiagram from '/img/gitbook-import/assets/image (7) (3).png';
+import ToDoBlankAfterWiringScreenshot from '/img/gitbook-import/assets/image (42) (2).png';
+
 # 数据绑定
 
 现在您已经连接了视图模型和模型（数据服务），下一步是将视图和视图模型关联起来，以便显示项目列表。
@@ -54,14 +57,10 @@ description: TUTORIALS - To Do List App
 
 因此，到目前为止，视图和视图模型的排列情况如下所示：
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (7) (3).png" alt=""/>
-</div>
+<img className="center" src={ToDoDataContextWiringDiagram} alt="" />
 
 这将在任何父级项目中有效，只要该项目具有一个具有 `ListItems` 属性的数据上下文。_Avalonia UI_ 绑定将向上搜索控件树，以定位合适的数据上下文。但是虽然主窗口的数据上下文已经设置好了（在应用程序初始化时 - 参见文件 **App.axaml.cs**），但在此时还没有一个具有 `ListItems` 属性的数据上下文。
 
 因此，如果运行您的应用程序，列表仍然为空！
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (42) (2).png" alt=""/>
-</div>
+<img className="center" src={ToDoBlankAfterWiringScreenshot} alt="" />

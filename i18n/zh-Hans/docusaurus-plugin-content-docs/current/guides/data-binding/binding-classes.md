@@ -3,6 +3,7 @@ id: binding-classes
 title: 如何绑定样式类
 ---
 
+import BindStyleClassSampleScreenshot from '/img/gitbook-import/assets/image (5).png';
 
 # 如何绑定样式类
 
@@ -78,4 +79,4 @@ public class ItemClass
 }
 ```
 
-<img src="/img/gitbook-import/assets/image (5).png" alt=""/>
+<img src={BindStyleClassSampleScreenshot} alt=""/>

@@ -86,7 +86,3 @@ SubmitCommand = ReactiveCommand.Create(() =>
 Now you will see that the button only becomes enabled once you have entered 8 characters.
 
 <img src={ReactiveCommandCanExecuteScreenshot} alt=""/>
-
-&#x20;  &#x20;
-
-&#x20;&#x20;

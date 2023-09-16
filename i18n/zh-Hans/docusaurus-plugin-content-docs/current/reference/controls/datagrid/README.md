@@ -2,6 +2,11 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import DataGridNuGetScreenshot from '/img/gitbook-import/assets/image (8) (4).png';
+import DataGridSortColumnScreenshot from '/img/gitbook-import/assets/grid1.gif';
+import DataGridReorderColumnScreenshot from '/img/gitbook-import/assets/grid2.gif';
+import DataGridColumnTypesScreenshot from '/img/gitbook-import/assets/grid3.gif';
+
 # 数据网格
 
 数据网格以自定义的网格形式展示重复的数据。该控件可以进行样式定制、模板化和绑定。
@@ -20,7 +25,7 @@ description: REFERENCE - Built-in Controls
 
 您必须安装数据网格的_NuGet_包，有几种方法可以做到这一点。您可以使用您的IDE的项目菜单中的**管理NuGet包**：
 
-<img src='/img/gitbook-import/assets/image (8) (4).png' alt='' />
+<img src={DataGridNuGetScreenshot} alt="" />
 
 或者，您可以在命令行中运行以下指令：
 
@@ -115,7 +120,7 @@ public class Person
 }
 ```
 
-<img src='/img/gitbook-import/assets/grid1.gif' alt='' />
+<img src={DataGridSortColumnScreenshot} alt="" />
 
 :::info
 这些示例使用了MVVM模式和数据绑定到一个`ObservableCollection`。要了解更多有关数据绑定背后的概念，请参阅[这里](../../../basics/data/data-binding)。
@@ -138,7 +143,7 @@ public class Person
 </DataGrid>
 ```
 
-<img src='/img/gitbook-import/assets/grid2.gif' alt='' />
+<img src={DataGridReorderColumnScreenshot} alt="" />
 
 这个示例展示了数据网格如何接受更改并更新底层集合，并使用不同的列类型来编辑数据：
 
@@ -195,7 +200,7 @@ public class Person
 }
 ```
 
-<img src='/img/gitbook-import/assets/grid3.gif' alt='' />
+<img src={DataGridColumnTypesScreenshot} alt="" />
 
 ## 更多信息
 

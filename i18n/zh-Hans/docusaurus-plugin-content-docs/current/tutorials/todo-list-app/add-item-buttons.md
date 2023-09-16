@@ -2,6 +2,9 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoOkDisabledScreenshot from '/img/gitbook-import/assets/image (21) (2).png';
+import ToDoOkEnabledScreenshot from '/img/gitbook-import/assets/image (41).png';
+
 # 添加项目按钮
 
 在本页面中，您将学习如何通过为添加事项视图中的按钮添加操作来完成待办事项列表应用程序。您将包括一些显示功能，该功能在用户输入后禁用 OK 按钮。
@@ -134,13 +137,8 @@ CancelCommand = ReactiveCommand.Create(() => { });
 
 运行应用程序并点击 **Add Item**。现在您应该会看到，只有在描述输入框中输入一些文本时，OK 按钮才会启用。
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (21) (2).png" alt=""/>
-</div>
+<img className="center" src={ToDoOkDisabledScreenshot} alt="" />
 
- 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (41).png" alt=""/>
-</div>
+<img className="center" src={ToDoOkEnabledScreenshot} alt="" />
 
 在下一页中，您将学习如何处理新的待办事项，以便在用户点击 OK 后出现在列表中。

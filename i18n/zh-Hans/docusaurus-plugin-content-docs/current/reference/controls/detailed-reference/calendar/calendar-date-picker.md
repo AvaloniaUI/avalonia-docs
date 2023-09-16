@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import CalendarDatePickerScreenshot from '/img/gitbook-import/assets/calendardatepicker.gif';
+
 # Calendar Date Picker
 
 This is an extension of the calendar control that includes a text box and button. The calendar shows when the user clicks the button (and hides on a subsequent click). The selected date shows in the text box when a date on the calendar is clicked.&#x20;
@@ -22,7 +24,7 @@ This example shows a basic single date selection calendar when the button is cli
 </StackPanel>
 ```
 
-<img src='/img/gitbook-import/assets/calendardatepicker.gif' alt=''/>
+<img src={CalendarDatePickerScreenshot} alt=""/>
 
 ## More Information
 

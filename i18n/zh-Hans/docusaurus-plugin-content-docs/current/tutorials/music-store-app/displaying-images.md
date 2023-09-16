@@ -2,6 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreDisplayingImagesScreenshot from './images/image-20210310173858088.png';
+
 # 展示图象
 
 在本页中，您将学习如何从搜索结果中获取每个专辑的封面图像，在每个专辑磁贴视图上显示图像，而不是占位符音符图标。
@@ -212,7 +214,7 @@ IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
 - 单击图标按钮。
 - 输入一些搜索文本。
 
-![](images/image-20210310173858088.png)
+<p><img className="image-medium-zoom" src={MusicStoreDisplayingImagesScreenshot} alt="" /></p>
 
 注意专辑封面逐个加载，并且界面保持响应。
 

@@ -2,6 +2,8 @@
 description: CONCEPTS - Data Templates
 ---
 
+import ReuseTeacherDataTemplateScreenshot from '/img/gitbook-import/assets/image (50).png';
+
 # 重复使用数据模板
 
 如果您在`Window.DataTemplates`集合中定义了数据模板（如前一页所示），则可以在窗口中的任何位置重用它。然而，您还可以扩展数据模板的重用范围，让其在应用程序的任何窗口中都可用。
@@ -80,7 +82,7 @@ namespace MySample
 
 尽管窗口中没有`Teacher`的数据模板，Avalonia UI 会找到您在应用程序中定义的模板，并且显示效果如预期：
 
-![Teacher Display](/img/gitbook-import/assets/image (50).png)
+<img src={ReuseTeacherDataTemplateScreenshot} alt="Teacher Display"/>
 
 :::warning
 请确保在每个数据模板中指定`DataType`，无论它在哪里定义，因为如果_Avalonia UI_无法找到匹配您数据的数据模板，则什么都不会显示！

@@ -2,6 +2,8 @@
 description: REFERENCE
 ---
 
+import SineEaseOutScreenshot from '/img/gitbook-import/assets/image (67).png';
+
 # 动画设置
 
 This section contains full lists of the _Avalonia UI_ animation settings:
@@ -14,7 +16,7 @@ This section contains full lists of the _Avalonia UI_ animation settings:
 
 ## 缓动函数（Easing Functions）
 
-<table><thead><tr><th width="216">配置</th><th>设置</th></tr></thead><tbody><tr><td><img src='/img/gitbook-import/assets/image (67).png' alt=''/></td><td><code>SineEaseOut</code></td></tr></tbody></table>
+<table><thead><tr><th width="216">配置</th><th>设置</th></tr></thead><tbody><tr><td><img src={SineEaseOutScreenshot} alt="" /></td><td><code>SineEaseOut</code></td></tr></tbody></table>
 
 ## 填充模式（Fill Modes）
 

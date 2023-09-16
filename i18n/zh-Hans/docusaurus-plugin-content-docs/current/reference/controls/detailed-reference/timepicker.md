@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TimePickerScreenshot from '/img/gitbook-import/assets/timepicker.gif';
+
 # Time Picker
 
 The time picker has two or three 'spinner' controls to allow the user to pick a time value. The time picker can work in 24 or 12 hour formats. The picker controls display when the control is clicked.
@@ -24,7 +26,7 @@ This example shows how to create a time picker for the 24 hour clock, with 20 mi
 </StackPanel>
 ```
 
-<img src='/img/gitbook-import/assets/timepicker.gif' alt=''/>
+<img src={TimePickerScreenshot} alt="" />
 
 ## **Initializing the Time**
 
@@ -43,7 +45,7 @@ TimePicker timePicker = new TimePicker
 };
 ```
 
-You can clear the display by resetting the selected time to null.&#x20;
+You can clear the display by resetting the selected time to null.
 
 ## More Information
 

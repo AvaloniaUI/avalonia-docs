@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import PathIconHouseScreenshot from '/img/gitbook-import/assets/image (18).png';
+
 # Path Icon
 
 The path icon control can draw an icon graphic from a stream geometry. For example, you can use the icon geometries from the _Avalonia UI_ Fluent icons resource.
@@ -20,13 +22,10 @@ You will probably use these properties most often:
 
 ## Example
 
-
-
 ```xml
 <PathIcon Height="200" Width="200" Foreground="Blue"             
             Data="{StaticResource building_shop_regular}"/>
 ```
-
 
 ```xml title='Resources'
 <Window.Resources>
@@ -34,11 +33,9 @@ You will probably use these properties most often:
 </Window.Resources>
 ```
 
-
-
 It works in the preview pane as well:
 
-<img src='/img/gitbook-import/assets/image (18).png' alt=''/>
+<img src={PathIconHouseScreenshot} alt="" />
 
 ## More Information
 

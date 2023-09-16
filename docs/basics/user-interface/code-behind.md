@@ -4,7 +4,6 @@ title: Code-behind
 ---
 
 import VsSolutionExplorerScreenshot from '/img/basics/user-interface/code-behind/vs-solution-explorer.png';
-let loc = '/img/basics/user-interface/code-behind/vs-solution-explorer.png';
 
 # Code-behind
 

@@ -221,7 +221,8 @@ Now you can run the app with the following:
 sudo ./path/to/app/AvaloniaRaspbianLiteDrm --drm
 ```
 
-You should see the app running on your Raspberry Pi now:\
-<img src='/img/gitbook-import/assets/avalonia-raspbian-lite-drm-run-on-raspberry.jpg' alt=''/>
+You should see the app running on your Raspberry Pi now:
+
+<img src={RaspbianLiteDrmKmsCube} alt=''/>
 
 If you have a touch display installed, try to slide the slider control :)

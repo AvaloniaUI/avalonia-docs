@@ -11,6 +11,7 @@ import BuildiOSAddAdditionalSimulatorsScreenshot from '/img/gitbook-import/asset
 import BuildiOSProvisionPhoneScreenshot from '/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.19.06.png';
 import BuildiOSSelectDeviceScreenshot from '/img/gitbook-import/assets/image (24) (1).png';
 import BuildiOSChangeBundleIdentifierScreenshot from '/img/gitbook-import/assets/image (18) (2).png';
+import BuildiOSCertScreenshot from '/img/gitbook-import/assets/image (33).png';
 
 # How to Build and Run on iPhone or iPad
 
@@ -77,7 +78,7 @@ Add a `<CodesignKey>` tag.
 
 To find the value for this open the application `KeyChain Access`. In the search box search for development.
 
-<img src='/img/gitbook-import/assets/image (33).png>' alt=''/>
+<img src={BuildiOSCertScreenshot} alt=''/>
 
 Set the value exactly as the bold text at the top of the window on your selected development certificate.
 

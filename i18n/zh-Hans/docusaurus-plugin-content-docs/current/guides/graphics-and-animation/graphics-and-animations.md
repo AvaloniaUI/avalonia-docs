@@ -3,6 +3,7 @@ id: graphics-and-animations
 title: 如何绘制图形
 ---
 
+import ShapeAndGeometrySampleScreenshot from '/img/gitbook-import/assets/shapes.png';
 
 # 如何绘制图形
 
@@ -53,7 +54,7 @@ Avalonia提供了一组常见的矢量绘制2D形状，如`Ellipse`（椭圆）�
 </Canvas>
 ```
 
-<img src='/img/gitbook-import/assets/shapes.png' alt=''/>
+<img src={ShapeAndGeometrySampleScreenshot} alt=''/>
 
 ## 添加动画
 

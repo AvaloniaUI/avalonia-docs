@@ -3,13 +3,16 @@ id: assets
 title: 资产和图像
 ---
 
+import AssetIncludeFileAssetDiagram from '/img/gitbook-import/assets/image (8).png';
+import AssetIncludeLibraryAssetDiagram from '/img/gitbook-import/assets/image.png';
+
 # 资产(Assets)
 
 许多应用程序需要包含位图、样式和资源字典等资产。资源字典包含可以在XAML中声明的图形基础元素。样式也可以用XAML编写，但位图资产是二进制文件，例如PNG和JPEG格式的图像。
 
 ## 包含资产
 
-<img src='/img/gitbook-import/assets/image (8).png' alt=''/>
+<img src={AssetIncludeFileAssetDiagram} alt=''/>
 
 您可以通过在项目文件中使用`<AvaloniaResource>`元素来将资产包含在应用程序中。
 
@@ -46,7 +49,7 @@ title: 资产和图像
 
 ## 库资产
 
-<img src='/img/gitbook-import/assets/image.png' alt=''/>
+<img src={AssetIncludeLibraryAssetDiagram} alt=''/>
 
 如果资产包含在与XAML文件不同的程序集中，则可以使用 `avares:` URI方案。例如，如果资产包含在名为`MyAssembly.dll`的程序集中的`Assets`文件夹中，则可以使用：
 

@@ -2,11 +2,16 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import CalendarBasicUsageScreenshot from '/img/gitbook-import/assets/calendar3.gif';
+import CalendarSingleSelectionScreenshot from '/img/gitbook-import/assets/calendar.gif';
+import CalendarMultipleSelectionScreenshot from '/img/gitbook-import/assets/calendar2.gif';
+import CalendarCustomRangeScreenshot from '/img/gitbook-import/assets/calendar4.gif';
+
 # Calendar
 
 The calendar is a control for users to select dates or date ranges.
 
-<img src='/img/gitbook-import/assets/calendar3.gif' alt=''/>
+<img src={CalendarBasicUsageScreenshot} alt=""/>
 
 ## Useful Properties
 
@@ -26,7 +31,7 @@ This is a basic calendar allowing a single date selection. The calendar's select
 </StackPanel>
 ```
 
-<img src='/img/gitbook-import/assets/calendar.gif' alt=''/>
+<img src={CalendarSingleSelectionScreenshot} alt=""/>
 
 This example allows multiple range selections:
 
@@ -38,7 +43,7 @@ This example allows multiple range selections:
 
 After clicking a start date you can extend a single range by holding the shift key and clicking on the end date. You can add extra dates and ranges by holding the control key and clicking on other dates.&#x20;
 
-<img src='/img/gitbook-import/assets/calendar2.gif' alt=''/>
+<img src={CalendarMultipleSelectionScreenshot} alt=""/>
 
 This example has custom start and end dates, and some dates unavailable. This uses C# code behind the window.
 
@@ -68,7 +73,7 @@ public partial class MainWindow : Window
 
 
 
-<img src='/img/gitbook-import/assets/calendar4.gif' alt=''/>
+<img src={CalendarCustomRangeScreenshot} alt=""/>
 
 ## More Information
 

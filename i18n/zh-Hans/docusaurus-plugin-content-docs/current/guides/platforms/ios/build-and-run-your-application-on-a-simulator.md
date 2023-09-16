@@ -3,6 +3,8 @@ id: build-and-run-your-application-on-a-simulator
 title: 如何在iOS模拟器上构建和运行
 ---
 
+import RuniOSSimulatorScreenshot from '/img/gitbook-import/assets/image (34).png';
+
 # 如何在iOS模拟器上构建和运行
 
 请确保您已经按照[构建跨平台应用程序](../../building-cross-platform-applications)指南的步骤进行操作。
@@ -21,6 +23,6 @@ dotnet build
 dotnet run
 ```
 
-<img src='/img/gitbook-import/assets/image (34).png>' alt='Application running on iPad simulator'/>
+<img src={RuniOSSimulatorScreenshot} alt='Application running on iPad simulator'/>
 
 如果您使用的是`JetBrains Rider`或`Visual Studio for Mac`，您可以打开解决方案并在模拟器中运行、构建和调试您的程序。

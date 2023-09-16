@@ -2,6 +2,11 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreiTunesSearchNugetScreenshot from './images/image-20210310013703557.png';
+import MusicStoreAlbumModelDiagram from '/img/gitbook-import/assets/image (2) (1) (3).png';
+import MusicStoreAlbumMvvmDiagram from '/img/gitbook-import/assets/image (25) (4).png';
+import MusicStoreAlbumViewScreenshot from './images/image-20210310110401944.png';
+
 # 专辑服务
 
 在这一页中，您将为应用程序添加一些业务逻辑。这将允许您替换模拟数据，并从搜索中获取一些真实的专辑数据。这个业务逻辑代码形成了 MVVM 模式中的“模型”部分。
@@ -16,7 +21,7 @@ description: TUTORIALS - Music Store App
 - 右键单击项目。
 - 单击 **管理 NuGet 软件包**。
 
-![](images/image-20210310013703557.png)
+<p><img className="image-medium-zoom" src={MusicStoreiTunesSearchNugetScreenshot} alt="" /></p>
 
 - 在左上角的搜索框中键入 “itunes”。
 - 单击 **iTunesSearch**，然后单击 **安装**。
@@ -25,9 +30,7 @@ description: TUTORIALS - Music Store App
 
 在本教程中，应用程序很简单，您可以在同一个类中实现 MVVM 模式的“模型”部分所需的业务服务。这个类将包含专辑的数据模型和搜索所需的方法。
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (2) (1) (3).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreAlbumModelDiagram} alt="" />
 
 按照以下步骤添加专辑业务逻辑：
 
@@ -80,9 +83,7 @@ namespace Avalonia.MusicStore.Models
 
 在这一步中，您将使用视图模型和（业务逻辑）模型之间的依赖关系的常见模式。这是指视图模型包含数据模型的一个实例，然后根据需要公开其某些属性以进行显示。
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (25) (4).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreAlbumMvvmDiagram} alt="" />
 
 按照以下步骤准备专辑视图模型：
 
@@ -201,6 +202,6 @@ namespace Avalonia.MusicStore.ViewModels
 - 点击图标按钮。
 - 输入一些搜索文本。
 
-![](images/image-20210310110401944.png)
+<p><img className="image-medium-zoom" src={MusicStoreAlbumViewScreenshot} alt="" /></p>
 
 在下一页中，您将学习如何通过获取每个专辑的封面艺术来改善应用程序的外观。磁铁将会显示封面图像，而非音符图标。

@@ -1,9 +1,12 @@
 ---
 description: CONCEPTS
 ---
+
+import MvvmPatternDiagram from '/img/gitbook-import/assets/image (60).png';
+
 # MVVM模式
 
-<img src="/img/gitbook-import/assets/image (60).png" alt=""/>
+<img src={MvvmPatternDiagram} alt=""/>
 
 Model-View-View Model（MVVM）模式是一种常见的UI应用程序结构方式。它使用数据绑定系统来帮助在视图和视图模型之间传递数据。这意味着它实现了应用程序逻辑（视图模型）与UI显示（视图）的分离。
 

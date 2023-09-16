@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ButtonClickHandlerScreenshot from '/img/gitbook-import/assets/button.gif';
+
 # 按钮
 
 按钮是一种对指针动作做出反应的控件（也有一些键盘等效操作）。当指针按下时，它会呈现出被按下的状态。
@@ -53,7 +55,7 @@ public partial class MainWindow : Window
 }
 ```
 
-<img src='/img/gitbook-import/assets/button.gif' alt='' />
+<img src={ButtonClickHandlerScreenshot} alt=""/>
 
 ## 更多信息
 

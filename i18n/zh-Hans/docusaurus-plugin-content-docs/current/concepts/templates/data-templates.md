@@ -2,6 +2,10 @@
 description: CONCEPTS - Data Templates
 ---
 
+import ControlContentButtonScreenshot from '/img/gitbook-import/assets/image (42) (1).png';
+import ControlContentStringScreenshot from '/img/gitbook-import/assets/image (51).png';
+import ControlContentTypeScreenshot from '/img/gitbook-import/assets/image (52).png';
+
 # 控件内容
 
 您可能已经看到了在将按钮控件放入_Avalonia UI_窗口的内容区域时会发生什么。
@@ -26,7 +30,7 @@ description: CONCEPTS - Data Templates
 
 窗口会显示一个按钮 - 在此例中水平居中（指定）和垂直居中（默认情况下）。效果如下图所示：
 
-<img src="/img/gitbook-import/assets/image (42) (1).png" alt=""/>
+<img src={ControlContentButtonScreenshot} alt=""/>
 
 如果您将一个字符串放入窗口的内容区域，例如：
 
@@ -44,7 +48,7 @@ description: CONCEPTS - Data Templates
 
 窗口将显示该字符串：
 
-<img src="/img/gitbook-import/assets/image (51).png" alt=""/>
+<img src={ControlContentStringScreenshot} alt=""/>
 
 但是如果您尝试显示在窗口中定义的类的对象会发生什么呢？
 
@@ -74,7 +78,7 @@ namespace MySample
 
 但是，您将只会看到学生对象的完全限定类名：
 
-<img src="/img/gitbook-import/assets/image (52).png" alt=""/>
+<img src={ControlContentTypeScreenshot} alt=""/>
 
 这并不是很有帮助！这是因为_Avalonia UI_没有定义如何显示`Student`类的对象 - 它不是一个控件 - 因此它会退回到`.ToString()`方法，您所看到的只是完全限定的类名。
 

@@ -2,6 +2,9 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoDataContextResolvedArchitectureDiagram from '/img/gitbook-import/assets/image (20) (3).png';
+import ToDoDataContextResolvedScreenshot from '/img/gitbook-import/assets/image (5) (1) (2).png';
+
 # 添加数据上下文
 
 在本页面中，您将把待办事项列表视图的数据上下文设置为 `ToDoList` 属性。
@@ -34,14 +37,8 @@ description: TUTORIALS - To Do List App
 
 因此，当数据上下文绑定解析后，排列如下所示：
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (20) (3).png" alt=""/>
-</div>
-
+<img className="center" src={ToDoDataContextResolvedArchitectureDiagram} alt="" />
 
 现在，如果运行应用程序，_Avalonia UI_ 绑定器将拥有一个适合的数据上下文来进行项控件绑定，并且项目将显示在视图中：
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/gitbook-import/assets/image (5) (1) (2).png" alt=""/>
-</div>
-
+<img className="center" src={ToDoDataContextResolvedScreenshot} alt="" />

@@ -19,18 +19,18 @@ You will probably use these properties most often:
 
 ```xml
 <Expander VerticalAlignment="Top">
-  <Expander.Header>
-    Hidden Search
-  </Expander.Header>
-  <Grid RowDefinitions="*,*" ColumnDefinitions="150,*">
-      <TextBlock Grid.Row="0" Grid.Column="0" 
-                  VerticalAlignment="Center">Search</TextBlock>
-      <TextBox Grid.Row="0" Grid.Column="1" 
-                Watermark="Search text" Width="200" />
-      <TextBlock Grid.Row="1" Grid.Column="0"
-                  VerticalAlignment="Center">Case sensitive?</TextBlock>
-      <CheckBox Grid.Row="1" Grid.Column="1" />
-  </Grid>
+    <Expander.Header>
+        Hidden Search
+    </Expander.Header>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="150,*">
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   VerticalAlignment="Center">Search</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Watermark="Search text" Width="200" />
+        <TextBlock Grid.Row="1" Grid.Column="0"
+                   VerticalAlignment="Center">Case sensitive?</TextBlock>
+        <CheckBox Grid.Row="1" Grid.Column="1" />
+    </Grid>
 </Expander>
 ```
 

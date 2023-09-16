@@ -3,6 +3,7 @@ id: how-to-create-a-custom-page-transition
 title: 如何创建自定义页面过渡效果
 ---
 
+import CustomPageTransitionScreenshot from '/img/animations/page-transitions/TransitioningContentControl_03.webp';
 
 # 如何创建自定义页面过渡效果
 
@@ -162,7 +163,7 @@ public class CustomTransition : IPageTransition
 }
 ```
 
-<img src='/img/gitbook-import/assets/TransitioningContentControl\_03.webp' alt=''/>
+<img src={CustomPageTransitionScreenshot} alt=''/>
 
 ## 更多信息
 

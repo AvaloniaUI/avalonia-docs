@@ -3,6 +3,7 @@ id: logging-errors-and-warnings
 title: 如何记录错误和警告
 ---
 
+import LogToTraceOutputScreenshot from '/img/gitbook-import/assets/image (3).png';
 
 # 如何记录错误和警告
 
@@ -39,7 +40,7 @@ public static AppBuilder BuildAvaloniaApp()
 
 然后，日志消息会在你的IDE的 **Debug** 窗口的 **Output** 视图中显示。例如，启用详细日志记录时：
 
-<img src="/img/gitbook-import/assets/image (3).png" alt=""/>
+<img src={LogToTraceOutputScreenshot} alt=""/>
 
 如果你想将这些消息重新路由到不同的位置，你可以使用 `System.Diagnostics.Trace` 组件上的方法。
 
