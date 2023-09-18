@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import MaskedTextBoxScreenshot from '/img/gitbook-import/assets/masked.gif';
+
 # Masked Text Box
 
 The masked text box presents an area for typed (keyboard) input, but where the format and characters permitted can be constrained by a mask pattern formed from special characters.
@@ -37,7 +39,7 @@ This is a basic example:
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/masked.gif" alt=""/>
+<img src={MaskedTextBoxScreenshot} alt=""/>
 
 ## More Information
 

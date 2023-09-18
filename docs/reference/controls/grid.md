@@ -2,6 +2,8 @@
 description: REFERENCE - Controls
 ---
 
+import GridSpanningColumnsScreenshot from '/img/gitbook-import/assets/grid_example.png';
+
 # Grid
 
 The grid control is useful for arranging child controls in columns and rows. You can define absolute, relative, or proportional row and column geometries for the grid.&#x20;
@@ -147,7 +149,7 @@ Here, after the absolute width 100 has been subtracted (for column 0), column 1 
 
 The button is drawn to fill the span from the cell (column 1, row 1) plus one column (to the right) and one row down. The result looks like this:
 
-<img src='/img/gitbook-import/assets/grid/_example.png' alt=''/>
+<img src={GridSpanningColumnsScreenshot} alt="" />
 
 ## More Information
 

@@ -2,6 +2,10 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreBeforeTemplateScreenshot from '/img/gitbook-import/assets/image (6) (1) (3) (1).png';
+import MusicStoreBeforeWrapPanelScreenshot from './images/image-20210310010932979.png';
+import MusicStoreWrapPanelScreenshot from './images/image-20210310011526700.png';
+
 # 专辑视图
 
 在这个页面上，您将通过用图形化的专辑磁贴替换当前显示的文本，继续开发应用程序的搜索结果列表。
@@ -58,9 +62,7 @@ description: TUTORIALS - Music Store App
 
 正如您在上一页中看到的，此时专辑列表只显示了专辑视图模型类的（完全限定的）名称。
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (6) (1) (3) (1).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreBeforeTemplateScreenshot} alt="" />
 
 在这一步中，您将使用项目中由解决方案模板添加的视图定位器类（**ViewLocator.cs** 文件）。该类已经在 **App.axaml** 文件中以数据模板的形式被注册到应用程序的最高级别。数据模板的注册如下所示：
 
@@ -101,7 +103,7 @@ public class AlbumViewModel : ViewModelBase
 - 单击 **调试** 以编译并运行项目。
 - 单击图标按钮。
 
-![](images/image-20210310010932979.png)
+<p><img className="image-medium-zoom" src={MusicStoreBeforeWrapPanelScreenshot} alt="" /></p>
 
 视图定位器找到了视图 `AlbumView`，并将其用作列表项的数据模板。
 
@@ -134,6 +136,6 @@ public class AlbumViewModel : ViewModelBase
 - 单击 **调试** 以编译并运行项目。
 - 单击图标按钮。
 
-![](images/image-20210310011526700.png)
+<p><img className="image-medium-zoom" src={MusicStoreWrapPanelScreenshot} alt="" /></p>
 
 在下一页中，您将以数据服务的形式添加一些业务逻辑，以便您可以从搜索中获取真实的专辑数据。

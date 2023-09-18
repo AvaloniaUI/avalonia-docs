@@ -3,6 +3,7 @@ id: binding-classes
 title: How To Bind Style Classes
 ---
 
+import BindStyleClassSampleScreenshot from '/img/gitbook-import/assets/image (5).png';
 
 # How To Bind Style Classes
 
@@ -78,4 +79,4 @@ public class ItemClass
 }
 ```
 
-<img src="/img/gitbook-import/assets/image (5).png" alt=""/>
+<img src={BindStyleClassSampleScreenshot} alt=""/>

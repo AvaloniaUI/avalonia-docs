@@ -2,11 +2,14 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TabControlZonesScreenshot from '/img/gitbook-import/assets/image (2) (4).png';
+import TabControlNavigationScreenshot from '/img/gitbook-import/assets/tabcontrol1.gif';
+
 # Tab Control
 
 The tab control allows you to sub-divide a view into tab items.&#x20;
 
-<img src='/img/gitbook-import/assets/image (2) (4).png' alt=''/>
+<img src={TabControlZonesScreenshot} alt="" />
 
 Each tab item has a header and a content zone. The headers are presented in a strip, in the sequence they occur in the XAML. When the user clicks on a tab header, its content becomes visible, and is placed below the tab strip in the content zone of the tab control.
 
@@ -36,7 +39,7 @@ This is simple tab example. The tab content is just some text: &#x20;
 
 The tab control even works in the preview pane!
 
-<img src='/img/gitbook-import/assets/tabcontrol1.gif' alt=''/>
+<img src={TabControlNavigationScreenshot} alt="" />
 
 ## More Information
 

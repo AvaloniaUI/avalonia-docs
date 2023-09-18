@@ -2,6 +2,9 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreAddWindowScreenshot from './images/add-window.png';
+import MusicStoreDialogOpenedScreenshot from './images/dialog-opened.png';
+
 # 打开对话框
 
 在本页面中，您将学习如何使用 _ReactiveUI_ 在应用程序中管理另一个窗口。新窗口最终将包含一个搜索功能，并且有一个按钮可以将找到的专辑封面之一添加到主窗口的列表中。这个新窗口将作为对话框打开，也就是说，在它显示的时候会阻止主窗口的活动。
@@ -18,7 +21,7 @@ description: TUTORIALS - Music Store App
 - 在提示输入名称时，输入 'MusicStoreWindow'。
 - 按下回车键。
 
-![](images/add-window.png)
+<p><img className="image-medium-zoom" src={MusicStoreAddWindowScreenshot} alt="" /></p>
 
 ## 对话框窗口样式
 
@@ -213,7 +216,7 @@ namespace AvaloniaApplication11.Views
 - 点击 **调试** 以编译和运行项目。
 - 点击图标按钮。
 
-![](images/dialog-opened.png)
+<p><img className="image-medium-zoom" src={MusicStoreDialogOpenedScreenshot} alt="" /></p>
 
 现在对话框窗口在主窗口内居中打开。
 

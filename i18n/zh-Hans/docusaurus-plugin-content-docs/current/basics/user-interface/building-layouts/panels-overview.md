@@ -1,6 +1,13 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import CanvasOverlapScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/CanvasExample.png';
+import DockPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/DockPanelExample.png';
+import GridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/GridExample.png';
+import StackPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/StackPanelExample.png';
+import WrapPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/WrapPanelExample.png';
+import UniformGridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/UniformGridExample.png';
+
 # Panels Overview
 
 `Panel` 元素是控制元素的呈现方式的组件，包括元素的大小和尺寸、位置以及子内容的排列。_Avalonia UI_ 提供了许多预定义的 `Panel` 元素，同时也支持构建自定义的 `Panel` 元素。
@@ -41,9 +48,7 @@ Avalonia 中有几个优化支持 UI 场景的面板类：`Panel`、`Canvas`、`
 
 使用 XAML 或代码可以简单地实例化一个 `Canvas`。下面的示例演示了如何使用 `Canvas` 来绝对定位内容。该代码生成了三个大小为 100 像素的正方形。第一个正方形为红色，其左上角的 (x, y) 位置被指定为 (0, 0)。第二个正方形为绿色，其左上角位置为 (100, 100)，刚好在第一个正方形的右下方。第三个正方形为蓝色，其左上角位置为 (50, 50)，因此覆盖了第一个正方形的右下象限和第二个正方形的左上象限。由于第三个正方形是最后布局的，它出现在其他两个正方形的上方，即重叠部分采用第三个正方形的颜色。
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/CanvasExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={CanvasOverlapScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"
@@ -121,9 +126,7 @@ myParentCanvas.Children.Add(myCanvas3);
 
 下面的示例演示了如何使用 `DockPanel` 来划分空间。五个 `Border` 元素被添加为 `DockPanel` 的子元素。每个元素使用 `DockPanel` 的不同定位属性来划分空间。最后一个元素将“填充”剩余的未分配空间。
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/DockPanelExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={DockPanelSampleScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"
@@ -239,9 +242,7 @@ myDockPanel.Children.Add(myBorder5);
 
 下面的示例演示了如何构建一个类似于 Windows 开始菜单中的“运行”对话框的用户界面。
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/GridExample.png" alt="Grid Example App" />
-  </div>
+<img className="center" src={GridSampleScreenshot} alt="Grid Example App" />
 
 <Tabs
   defaultValue="xaml"
@@ -392,9 +393,7 @@ grid1.Children.Add(button3);
 
 下面的示例演示了如何使用 `StackPanel` 创建一组垂直定位的按钮。如果要进行水平定位，请将 `Orientation` 属性设置为 `Horizontal`。
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/StackPanelExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={StackPanelSampleScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"
@@ -536,9 +535,7 @@ myWrapPanel.Children.Add(btn4);
 
 下面的示例演示了如何定义和使用 `UniformGrid`。该示例创建了一个 3 行 4 列的 `UniformGrid`，并将 12 个矩形作为子元素添加进去。
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/basics/user-interface/building-layouts/panels-overview/UniformGridExample.png" alt="StackPanel Example" />
-  </div>
+<img className="center" src={UniformGridSampleScreenshot} alt="StackPanel Example" />
 
 <Tabs
   defaultValue="xaml"

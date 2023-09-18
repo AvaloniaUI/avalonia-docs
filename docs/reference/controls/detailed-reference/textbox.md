@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TextBoxSampleScreenshot from '/img/gitbook-import/assets/textbox.gif';
+
 # Text Box
 
 The text box presents an area for typed (keyboard) input. It can be for a single or multiple lines of input.&#x20;
@@ -27,7 +29,7 @@ This example has a basic one line text box, a password box, and a text-wrapping 
 </StackPanel>
 ```
 
-<img src='/img/gitbook-import/assets/textbox.gif' alt=''/>
+<img src={TextBoxSampleScreenshot} alt="" />
 
 ## More Information
 

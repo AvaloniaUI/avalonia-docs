@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TabStripNavigation from '/img/gitbook-import/assets/tabstrip.gif';
+
 # Tab Strip
 
 Displays a strip of tab headers. You can use this control as a horizontal menu.&#x20;
@@ -26,7 +28,7 @@ You will probably use this property most often:
 
 It looks like this running on Windows:
 
-<img src='/img/gitbook-import/assets/tabstrip.gif' alt=''/>
+<img src={TabStripNavigation} alt="" />
 
 ## More Information
 

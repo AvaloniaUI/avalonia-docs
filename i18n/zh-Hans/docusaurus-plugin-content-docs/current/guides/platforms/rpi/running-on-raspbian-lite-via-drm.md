@@ -3,6 +3,8 @@ id: running-on-raspbian-lite-via-drm
 title: 在树莓派上通过 Raspbian Lite 运行
 ---
 
+import RaspbianLiteDrmKmsCube from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-kmscube.gif';
+
 # 在树莓派上通过 Raspbian Lite 运行
 
 本教程将向您展示如何在树莓派上通过 Raspbian Lite 和 [DRM](https://en.wikipedia.org/wiki/Direct\_Rendering\_Manager) 运行 Avalonia 应用。
@@ -220,6 +222,7 @@ sudo ./path/to/app/AvaloniaRaspbianLiteDrm --drm
 ```
 
 您应该在树莓派上看到应用程序正在运行：
-<img src='/img/gitbook-import/assets/avalonia-raspbian-lite-drm-run-on-raspberry.jpg' alt=''/>
+
+<img src={RaspbianLiteDrmKmsCube} alt=''/>
 
 如果您安装了触摸显示器，请尝试滑动滑动条控件 :)

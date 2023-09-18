@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import UniformGridFrenchFlagScreenshot from '/img/gitbook-import/assets/image (1) (2).png';
+
 # Uniform Grid
 
 The uniform grid divides the available space evenly in both directions, into cells. You can specify how many divisions to use, and these can be different in either direction.
@@ -24,7 +26,7 @@ You will probably use these properties most often:
 </UniformGrid>
 ```
 
-<img src='/img/gitbook-import/assets/image (1) (2).png' alt=''/>
+<img src={UniformGridFrenchFlagScreenshot} alt="" />
 
 ## More Information
 

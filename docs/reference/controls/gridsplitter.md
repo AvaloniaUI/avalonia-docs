@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import GridSplitterColumnsScreenshot from '/img/gitbook-import/assets/gridsplitter-in-action-columns.gif';
+import GridSplitterRowsScreenshot from '/img/gitbook-import/assets/gridsplitter-in-action-rows.gif';
+
 # Grid Splitter
 
 The grid splitter control allows a user to resize the columns or rows in a grid at runtime. The splitter is drawn as a column or row (size can be specified), and has a grip that the user can manipulate at runtime.
@@ -28,7 +31,8 @@ This is a column splitter:
 </Grid>
 ```
 
-<img src='/img/gitbook-import/assets/gridsplitter-in-action-columns.gif' alt=''/>
+<img src={GridSplitterColumnsScreenshot} alt=""/>
+
 This is a row splitter:
 
 ```markup
@@ -39,7 +43,7 @@ This is a row splitter:
 </Grid>
 ```
 
-<img src='/img/gitbook-import/assets/gridsplitter-in-action-rows.gif' alt=''/>
+<img src={GridSplitterRowsScreenshot} alt=""/>
 
 ## More Information
 

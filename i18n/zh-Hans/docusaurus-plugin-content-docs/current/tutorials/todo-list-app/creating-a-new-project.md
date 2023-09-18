@@ -2,6 +2,9 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoCreateNewProjectScreenshot from '/img/gitbook-import/assets/image (43).png';
+import ToDoNewSolutionScreenshot from '/img/gitbook-import/assets/image (3) (1) (1).png';
+
 # 创建新项目
 
 在本页中，您将学习如何为待办事项列表应用创建一个新项目。
@@ -14,9 +17,7 @@ description: TUTORIALS - To Do List App
 有关扩展的完整说明，请参阅：[这里](../../get-started/install-the-avalonia-extension.md).
 :::
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (43).png" alt=""/>
-</div>
+<p><img className="center" src={ToDoCreateNewProjectScreenshot} alt="" /></p>
 
 <figure><figcaption></figcaption></figure>
 
@@ -31,9 +32,7 @@ description: TUTORIALS - To Do List App
 
 新创建的解决方案将如下所示：
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (3) (1) (1).png" alt=""/>
-</div>
+<img className="center" src={ToDoNewSolutionScreenshot} alt="" />
 
 ## .NET Core CLI
 

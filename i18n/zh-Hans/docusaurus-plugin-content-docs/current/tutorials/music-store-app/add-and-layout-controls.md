@@ -2,6 +2,11 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreBuyButtonScreenshot from './images/buy-button.png';
+import MusicStoreFinishedAddButtonScreenshot from '/img/gitbook-import/assets/image (13) (2).png';
+import MusicStoreAddStylesScreenshot from './images/add-styles.png';
+import MusicStorePrettyButtonScreenshot from './images/pretty-button.png';
+
 # 添加并排版控件
 
 应用程序的主窗口最终将显示用户收藏的专辑封面列表，右上角会有一个按钮，允许用户添加新的专辑，该按钮将打开一个搜索对话框，用于查找要添加的新专辑。
@@ -34,7 +39,7 @@ description: TUTORIALS - Music Store App
 
 - Click **Debug** to compile and run the project.
 
-![](images/buy-button.png)
+<p><img className="image-medium-zoom" src={MusicStoreBuyButtonScreenshot} alt="" /></p>
 
 您将看到按钮已经出现，但它处于默认位置，而非按照需求所属位于窗口的右上角。
 
@@ -58,9 +63,7 @@ description: TUTORIALS - Music Store App
 
 点击[这里](./)，回顾一下完整的应用程序的外观。
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (13) (2).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreFinishedAddButtonScreenshot} alt="" />
 
 您将看到按钮显示一个图标，而不是文本（目前的情况）。这实际上是来自 Fluent Icons 集合的 Microsoft Store 图标，而 Avalonia UI 为您提供了所有这些图标的定义供您使用。
 
@@ -77,7 +80,7 @@ description: TUTORIALS - Music Store App
 - 在 _Rider_ 解决方案资源管理器中，右键单击项目。
 - 点击 **添加**，然后点击 **Avalonia Styles**。
 
-![](images/add-styles.png)
+<p><img className="image-medium-zoom" src={MusicStoreAddStylesScreenshot} alt="" /></p>
 
 - 输入 **名称** 'Icons'，然后按回车键。
 - 找到并打开新创建的 **Icons.axaml** 文件。XAML 代码将如下所示：
@@ -148,6 +151,6 @@ description: TUTORIALS - Music Store App
 
 - 点击 **调试** 以编译和运行项目。
 
-![](images/pretty-button.png)
+<p><img className="image-medium-zoom" src={MusicStorePrettyButtonScreenshot} alt="" /></p>
 
 在下一页中，您将学习如何将视图中的按钮（MVVM 模式中的视图）链接到视图模型中的命令，以便它可以在那里执行应用程序逻辑。

@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TextBlockStylePreviewScreenshot from '/img/gitbook-import/assets/image (2) (5).png';
+
 # Text Block
 
 The text block is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.&#x20;
@@ -29,7 +31,7 @@ as set out in XAML.</TextBlock>
 
 The styling works in the preview pane:
 
-<img src='/img/gitbook-import/assets/image (2) (5).png' alt=''/>
+<img src={TextBlockStylePreviewScreenshot} alt="" />
 
 ## More Information
 

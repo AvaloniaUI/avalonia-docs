@@ -2,6 +2,10 @@
 description: REFERENCE - Built-in Control
 ---
 
+import ComboBoxMaxDropDownHeightScreenshot from '/img/gitbook-import/assets/combobox1.gif';
+import ComboBoxComplexContentScreenshot from '/img/gitbook-import/assets/combobox2.gif';
+import ComboBoxDataTemplateScreenshot from '/img/gitbook-import/assets/combobox3.gif';
+
 # Combo Box
 
 The combo box presents a selected item and a drop-down button that displays a list of options. The length and height of the combo box are determined by the selected item, unless otherwise defined.
@@ -46,7 +50,7 @@ This is basic example with text items has a limit set on the drop-down list heig
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/combobox1.gif" alt=""/>
+<img src={ComboBoxMaxDropDownHeightScreenshot} alt="" />
 
 This example uses a composed view for each item:
 
@@ -78,11 +82,9 @@ This example uses a composed view for each item:
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/combobox2.gif" alt=""/>
+<img src={ComboBoxComplexContentScreenshot} alt="" />
 
 This example binds the items in a combo box using a data template. The C# code-behind loads the installed font family names and binds them to the items property.
-
-
 
 ```xml
 <StackPanel Margin="20">
@@ -96,7 +98,6 @@ This example binds the items in a combo box using a data template. The C# code-b
   </ComboBox>
 </StackPanel>
 ```
-
 
 ```csharp title='C#'
 using Avalonia.Controls;
@@ -120,9 +121,7 @@ namespace AvaloniaControls.Views
 }
 ```
 
-
-
-<img src="/img/gitbook-import/assets/combobox3.gif" alt=""/>
+<img src={ComboBoxDataTemplateScreenshot} alt="" />
 
 ## More Information
 

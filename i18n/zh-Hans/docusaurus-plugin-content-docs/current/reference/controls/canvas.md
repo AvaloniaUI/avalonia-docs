@@ -2,13 +2,16 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import CanvasContentZoneScreenshot from '/img/gitbook-import/assets/image (16) (2).png';
+import CanvasChildOverlapScreenshot from '/img/gitbook-import/assets/image (9) (2).png';
+
 # Canvas
 
 The canvas control displays its child controls at specified positions (given as coordinates).
 
 The position of each child control is defined as two distances between edge the canvas content zone, and the outer edge of the child margin zone. For example, this might be the top-left corner of the child to the top-left of canvas, as shown here:&#x20;
 
-<img src="/img/gitbook-import/assets/image (16) (2).png" alt=""/>
+<img src={CanvasContentZoneScreenshot} alt="" />
 
 :::info
 To review the concept of layout zones, see [here](../../concepts/layout/layout-zones).
@@ -50,7 +53,7 @@ However you define the drawing sequence, the opacity of child controls is respec
 
 The result looks like this:
 
-<img src="/img/gitbook-import/assets/image (9) (2).png" alt=""/>
+<img src={CanvasChildOverlapScreenshot} alt="" />
 
 :::info
 Use the canvas panel with discretion. While it may be convenient to position child controls like this, your UI will no longer be adaptive to changes in the app window size.

@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import RadioButtonScreenshot from '/img/gitbook-import/assets/radio.gif';
+
 # 单选按钮
 
 单选按钮控件展示了一组选项，用户一次只能选择其中一个。选中的选项以实心圆圈表示，未选中的选项以空心圆圈表示。
@@ -43,7 +45,7 @@ description: REFERENCE - Built-in Controls
 </StackPanel>
 ```
 
-![示例图片](/img/gitbook-import/assets/radio.gif)
+<img src={RadioButtonScreenshot} alt="示例图片" />
 
 ## 更多信息
 

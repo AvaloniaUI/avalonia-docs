@@ -2,9 +2,12 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TransitioningContentControlFadeScreenshot from '/img/controls/transitioningcontentcontrol/TransitioningContentControl_01.webp';
+import TransitioningContentControlSlideScreenshot from '/img/controls/transitioningcontentcontrol/TransitioningContentControl_02.webp';
+
 # Transitioning Content Control
 
-The transitioning content control can use a page transition to animate a content change on an inner control.&#x20;
+The transitioning content control can use a page transition to animate a content change on an inner control.
 
 You can use this control to display a collection of different images in a slideshow.
 
@@ -28,7 +31,8 @@ In this example, the view model contains a collection of different images to sho
 </TransitioningContentControl>
 ```
 
-<img src='/img/gitbook-import/assets/TransitioningContentControl\_01.webp' alt=''/>
+<img src={TransitioningContentControlFadeScreenshot} alt="" />
+
 In this example, a different page transition has been specified to slide the images horizontally:
 
 ```markup
@@ -44,7 +48,8 @@ In this example, a different page transition has been specified to slide the ima
 </TransitioningContentControl>
 ```
 
-<img src='/img/gitbook-import/assets/TransitioningContentControl\_02.webp' alt=''/>
+<img src={TransitioningContentControlSlideScreenshot} alt="" />
+
 ## More Information
 
 :::info

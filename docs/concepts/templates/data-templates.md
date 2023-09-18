@@ -2,9 +2,13 @@
 description: CONCEPTS - Data Templates
 ---
 
+import ControlContentButtonScreenshot from '/img/gitbook-import/assets/image (42) (1).png';
+import ControlContentStringScreenshot from '/img/gitbook-import/assets/image (51).png';
+import ControlContentTypeScreenshot from '/img/gitbook-import/assets/image (52).png';
+
 # Control Content
 
-You have probably seen what happens if you put a button control into the content zone of an _Avalonia UI_ window. &#x20;
+You have probably seen what happens if you put a button control into the content zone of an _Avalonia UI_ window.
 
 :::info
 The concept of the zones of an _Avalonia UI_ control is discussed [here](../layout/layout-zones).
@@ -26,7 +30,7 @@ For example:
 
 The window displays the button - in this case centred both horizontally (specified) and vertically (by default). It looks like this:
 
-<img src="/img/gitbook-import/assets/image (42) (1).png" alt=""/>
+<img src={ControlContentButtonScreenshot} alt=""/>
 
 And if you put a string into the window content zone, for example:
 
@@ -44,7 +48,7 @@ And if you put a string into the window content zone, for example:
 
 The window will display the string:
 
-<img src="/img/gitbook-import/assets/image (51).png" alt=""/>
+<img src={ControlContentStringScreenshot} alt=""/>
 
 But what happens if you try to display an object from a class that you have defined in the window?
 
@@ -74,7 +78,7 @@ And the XML namespace `local` defined as the `MySample` namespace (from above), 
 
 But you will see only the fully-qualified class name for the student object:
 
-<img src="/img/gitbook-import/assets/image (52).png" alt=""/>
+<img src={ControlContentTypeScreenshot} alt=""/>
 
 This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name. &#x20;
 

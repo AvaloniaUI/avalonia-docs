@@ -2,9 +2,11 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import PanelOverlapBlendScreenshot from '/img/gitbook-import/assets/image (7) (1).png';
+
 # Panel
 
-The panel is the most basic control that can contain multiple child controls. Child controls are drawn according to their horizontal and vertical alignment properties, and in the sequence that they appear in the XAML. Child controls will overlap if they occupy the same space.&#x20;
+The panel is the most basic control that can contain multiple child controls. Child controls are drawn according to their horizontal and vertical alignment properties, and in the sequence that they appear in the XAML. Child controls will overlap if they occupy the same space.
 
 :::info
 For a discussion about using other panels, see [here](../../basics/user-interface/building-layouts/panels-overview.md).
@@ -23,7 +25,7 @@ This example uses some 50% opacities to demonstrate that child controls overlap.
 </Panel>
 ```
 
-<img src="/img/gitbook-import/assets/image (7) (1).png" alt=""/>
+<img src={PanelOverlapBlendScreenshot} alt="" />
 
 ## Other Panel Controls
 

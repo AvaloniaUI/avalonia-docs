@@ -3,8 +3,7 @@ id: how-to-show-and-hide-a-split-view-pane-with-mvvm
 title: How To Show and Hide a Split View Pane with MVVM
 ---
 
-
-# How To Show and Hide a Split View Pane with MVVM
+import SplitViewExpanderScreenshot from '/img/gitbook-import/assets/splitview2.gif';
 
 Content in preparation.
 
@@ -16,4 +15,5 @@ This technique uses a complex **binding path** to locate the parent view model f
 
 TO DO
 
-<img src="/img/gitbook-import/assets/splitview2.gif" alt=""/>
+<img src={SplitViewExpanderScreenshot} alt=""/>
+

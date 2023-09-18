@@ -2,17 +2,18 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TreeViewAnimalHierarchyScreenshot from '/img/gitbook-import/assets/tree1.gif';
+import TreeViewEnhancedAnimalHierarchyScreenshot from '/img/gitbook-import/assets/tree2.gif';
+
 # Tree View
 
-The tree view control can present hierarchical data and allows item selection. The items are templated so you can customise how they are displayed.&#x20;
+The tree view control can present hierarchical data and allows item selection. The items are templated so you can customise how they are displayed.
 
-There are two data sources: the main items source for the control, this gives the root of the hierarchical data. Then then there is the items source in the item template which allows the control to list the next level in the hierarchical data.
+There are two data sources: the main items source for the control, this gives the root of the hierarchical data. Then there is the items source in the item template which allows the control to list the next level in the hierarchical data.
 
 ## Example
 
-This example uses a MVVM pattern view model to hold some hierarchical data based on a C# node class. In this example, there is a single root node in the `Nodes` collection of the view model:&#x20;
-
-
+This example uses a MVVM pattern view model to hold some hierarchical data based on a C# node class. In this example, there is a single root node in the `Nodes` collection of the view model:
 
 ```xml
 <TreeView ItemsSource="{Binding Nodes}">
@@ -23,7 +24,6 @@ This example uses a MVVM pattern view model to hold some hierarchical data based
   </TreeView.ItemTemplate>
 </TreeView>
 ```
-
 
 ```csharp title='C# View Model'
 using AvaloniaControls.Models;
@@ -52,7 +52,6 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
 ```csharp title='C# Node Class'
 using System.Collections.ObjectModel;
 
@@ -77,15 +76,11 @@ namespace AvaloniaControls.Models
 }
 ```
 
-
-
 By default the root node (or nodes) is shown. The user can expand or contract each node by clicking on the adjacent arrow. Clicking on the node title selects the item.
 
-<img src='/img/gitbook-import/assets/tree1.gif' alt=''/>
+<img src={TreeViewAnimalHierarchyScreenshot} alt="" />
 
 This is a development of the previous example with multiple root nodes, a revised item template, and an initial selection made in the view model code:
-
-
 
 ```xml
 <TreeView Margin="10"
@@ -103,7 +98,6 @@ This is a development of the previous example with multiple root nodes, a revise
   </TreeView.ItemTemplate>
 </TreeView>
 ```
-
 
 ```csharp title='C# View Model'
 using AvaloniaControls.Models;
@@ -148,7 +142,6 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
 ```csharp title='C# Node Class'
 using System.Collections.ObjectModel;
 
@@ -173,11 +166,9 @@ namespace AvaloniaControls.Models
 }
 ```
 
+The tree view adds a scroll bar when it is needed. The selection can be extended by holding down the Ctrl key.
 
-
-The tree view adds a scroll bar when it is needed. The selection can be extended by holding down the Ctrl key.&#x20;
-
-<img src='/img/gitbook-import/assets/tree2.gif' alt=''/>
+<img src={TreeViewEnhancedAnimalHierarchyScreenshot} alt="" />
 
 ## More Information
 

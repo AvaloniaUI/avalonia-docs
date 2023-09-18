@@ -10,7 +10,7 @@ The native menu can display a menu on _macOS_ and some Linux distributions.&#x20
 This control can only be used attached to a tray icon. For full details about the tray icon, see the reference [here](detailed-reference/tray-icon.md).
 :::
 
-You can create sub-menus by nesting `<MenyItem>` elements.
+You can create sub-menus by nesting `<MenuItem>` elements.
 
 You can add menu separator lines by including a `<NativeMenuItemSeparator>` element or by adding a menu item with its header set to the minus sign, like this:
 

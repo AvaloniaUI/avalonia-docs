@@ -3,6 +3,16 @@ id: build-and-run-your-application-on-your-iphone-or-ipad
 title: 如何在iPhone或iPad上构建和运行应用程序
 ---
 
+import BuildiOSOpenXcodeScreenshot from '/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.09.54.png';
+import BuildiOSCreateXcodeProjectScreenshot from '/img/gitbook-import/assets/image (36).png';
+import BuildiOSSelectProjectOptionsScreenshot from '/img/gitbook-import/assets/image (30).png';
+import BuildiOSSelectAnyDeviceScreenshot from '/img/gitbook-import/assets/image (35).png';
+import BuildiOSAddAdditionalSimulatorsScreenshot from '/img/gitbook-import/assets/image (35).png';
+import BuildiOSProvisionPhoneScreenshot from '/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.19.06.png';
+import BuildiOSSelectDeviceScreenshot from '/img/gitbook-import/assets/image (24) (1).png';
+import BuildiOSChangeBundleIdentifierScreenshot from '/img/gitbook-import/assets/image (18) (2).png';
+import BuildiOSCertScreenshot from '/img/gitbook-import/assets/image (33).png';
+
 # 如何在iPhone或iPad上构建和运行应用程序
 
 为了允许dotnet将您的应用程序侧加载到您的iPhone或iPad上，您首先必须使用Xcode为您的设备配置权限。
@@ -13,15 +23,15 @@ title: 如何在iPhone或iPad上构建和运行应用程序
 
 1. 打开 Xcode
 
-<img src='/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.09.54.png>' alt=''/>
+<img src={BuildiOSOpenXcodeScreenshot} alt=''/>
 
 2\. 选择创建一个新的Xcode项目
 
-<img src='/img/gitbook-import/assets/image (36).png>' alt=''/>
+<img src={BuildiOSCreateXcodeProjectScreenshot} alt=''/>
 
 3\. 选择iOS和应用程序，然后点击下一步。
 
-<img src='/img/gitbook-import/assets/image (30).png>' alt=''/>
+<img src={BuildiOSSelectProjectOptionsScreenshot} alt=''/>
 
 4\. 为您的项目和组织输入名称。其余信息保持不变。
 
@@ -29,19 +39,19 @@ title: 如何在iPhone或iPad上构建和运行应用程序
 
 6\. 在顶部的状态栏中点击"Any device (arm64)"。
 
-<img src='/img/gitbook-import/assets/image (35).png>' alt=''/>
+<img src='{BuildiOSSelectAnyDeviceScreenshot}' alt=''/>
 
 7\. 在列表底部点击"Add Additional Simulators..."
 
-<img src='/img/gitbook-import/assets/image (32).png>' alt=''/>
+<img src='{BuildiOSAddAdditionalSimulatorsScreenshot}' alt=''/>
 
 8\. 点击设备，然后用USB电缆连接您的iPhone或iPad。Xcode将开始为您的手机进行开发配置。
 
-<img src='/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.19.06.png>' alt=''/>
+<img src='{BuildiOSProvisionPhoneScreenshot}' alt=''/>
 
 9\. 从设备列表中选择您的iPhone或iPad。
 
-<img src='/img/gitbook-import/assets/image (24) (1).png>' alt=''/>
+<img src={BuildiOSSelectDeviceScreenshot} alt=''/>
 
 10\. 点击播放按钮，应用程序将被安装并运行在您的手机上。
 
@@ -49,7 +59,7 @@ title: 如何在iPhone或iPad上构建和运行应用程序
 
 11\. 将bundle identifier更改为您在步骤3中在Xcode中选择的标识符相同。
 
-<img src='/img/gitbook-import/assets/image (18) (2).png>' alt=''/>
+<img src={BuildiOSChangeBundleIdentifierScreenshot} alt=''/>
 
 12\. 现在编辑`.iOS.csproj`文件。
 
@@ -68,7 +78,7 @@ title: 如何在iPhone或iPad上构建和运行应用程序
 
 要找到此值，请打开`KeyChain Access`应用程序。在搜索框中搜索development。
 
-<img src='/img/gitbook-import/assets/image (33).png>' alt=''/>
+<img src={BuildiOSCertScreenshot} alt=''/>
 
 将该值设置为窗口顶部粗体文本中所示的选定开发证书。
 

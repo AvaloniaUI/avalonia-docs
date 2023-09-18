@@ -3,6 +3,9 @@ id: set-up-an-editor
 title: 设置编辑器
 ---
 
+import AvaloniaVsExtensionMarketplaceScreenshot from '/img/get-started/install-the-avalonia-extension/image (17) (2).png';
+import AvaloniaVsExtensionNuGetScreenshot from '/img/get-started/install-the-avalonia-extension/image (3) (1) (1) (1).png';
+
 # 设置编辑器
 
 您可以使用任何代码编辑器创建Avalonia应用程序，但是使用IDE将为您提供Avalonia XAML预览器和代码补全的支持。
@@ -19,9 +22,7 @@ Rider目前还没有提供可视化设计工具，但正在开发中。请参阅
 
 如果您正在使用Visual Studio开发Avalonia，您应该安装[Avalonia for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS)扩展。
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/install-the-avalonia-extension/image (17) (2).png" />
-  </div>
+<img className="center" src={AvaloniaVsExtensionMarketplaceScreenshot} alt="" />
 
 该扩展提供了Avalonia XAML的智能感知支持以及预览功能。
 
@@ -31,9 +32,7 @@ Rider目前还没有提供可视化设计工具，但正在开发中。请参阅
 - 在**搜索**框中，输入"Avalonia"
 - 点击**下载**并按照说明进行操作（您需要关闭Visual Studio以完成安装）
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/install-the-avalonia-extension/image (3) (1) (1) (1).png" />
-  </div>
+<img className="center" src={AvaloniaVsExtensionNuGetScreenshot} alt="" />
 
 :::info
 您也可以在[此处](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS)下载扩展。

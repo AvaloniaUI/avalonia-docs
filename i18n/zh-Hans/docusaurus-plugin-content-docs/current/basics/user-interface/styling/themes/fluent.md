@@ -3,11 +3,14 @@ id: fluent
 title: Fluent 主题
 ---
 
+import FluentThemeNormalScreenshot from '/img/basics/user-interface/styling/fluent-theme-normal.png';
+import FluentThemeForestScreenshot from '/img/basics/user-interface/styling/fluent-theme-forest.png';
+
 ## Introduction
 
 Avalonia Fluent 主题受到微软的 Fluent Design System 的启发，该系统是一组用于创建视觉吸引力和交互式用户界面的设计指南和组件。Fluent Design System 强调现代、清晰的美学，平滑的动画和直观的交互。它在不同平台上提供了一致而精致的外观和感觉，同时为开发人员提供了我们的样式系统的灵活性。
 
-![Fluent 主题](/img/basics/user-interface/styling/fluent-theme-normal.png)
+<p><img className="medium-image-zoom" src={FluentThemeNormalScreenshot} alt="Fluent 主题" /></p>
 
 ## 如何使用
 
@@ -102,4 +105,4 @@ Microsoft Fluent Theme Editor 已移植到 Avalonia，现在也可以与我们�
 6. 提供几个快速启动预设。
 
 以下是使用 Forest 调色板预设的 FluentTheme 示例：
-![Fluent 主题 Forest 调色板](/img/basics/user-interface/styling/fluent-theme-forest.png)
+<p><img className="medium-image-zoom" src={FluentThemeForestScreenshot} alt="Fluent 主题 Forest 调色板" /></p>

@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ContextMenuScreenshot from '/img/gitbook-import/assets/contextmenu.gif';
+
 # Context Menu
 
 The context menu can be applied to any host control to implement a right-click 'context sensitive' menu. This uses an **attached property** of the host control.
@@ -25,7 +27,7 @@ This example, a context menu is attached to a multi-line text box:
 </TextBox>
 ```
 
-<img src="/img/gitbook-import/assets/contextmenu.gif" alt=""/>
+<img src={ContextMenuScreenshot} alt="" />
 
 ## Context Flyout
 

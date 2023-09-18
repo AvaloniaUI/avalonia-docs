@@ -2,6 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreMockSearchScreenshot from './images/text-list.png';
+
 # 模拟搜索
 
 在本页面上，您将为专辑搜索功能创建视图模型，然后将其绑定到新用户控件上的控件上。现在，您将使用模拟的搜索，以便专注于视图模型。
@@ -141,6 +143,6 @@ public MusicStoreViewModel()
 
 - 点击 **调试** 编译并运行项目。
 
-![](images/text-list.png)
+<p><img className="image-medium-zoom" src={MusicStoreMockSearchScreenshot} alt="" /></p>
 
 这表明从视图模型中的专辑集合到视图中的列表的数据绑定正在工作，但是视图还没有图形化。在下一页中，您将通过用图形化的专辑磁贴替换文本来进一步开发应用程序。

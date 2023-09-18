@@ -3,6 +3,8 @@ id: styles
 title: Styles
 ---
 
+import StyleH1SampleScreenshot from '/img/gitbook-import/assets/image (5) (5).png';
+
 # Styles
 
 The _Avalonia UI_ style system is a mechanism that can share property settings between controls. 
@@ -58,7 +60,7 @@ This is an example of how a style is written and applied to a control element, w
 
 In this example, all `TextBlock` elements with the `h1` style class will be displayed with the font size and weight set by the style. This works in the preview pane:
 
-<img src="/img/gitbook-import/assets/image (5) (5).png" alt=""/>
+<img src={StyleH1SampleScreenshot} alt=""/>
 
 ## Where to put Styles 
 

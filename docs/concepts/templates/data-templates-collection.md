@@ -2,6 +2,8 @@
 description: CONCEPTS - Data Templates
 ---
 
+import DataTemplatesCollectionStudentScreenshot from '/img/gitbook-import/assets/image (57).png';
+
 # Data Templates Collection
 
 Every control in _Avalonia UI_ has a `DataTemplates` collection where you can place any number of data template definitions. You can then choose the template to use for display by class type. &#x20;
@@ -38,5 +40,5 @@ So you can modify the previous sample to use the `DataTemplates` collection, as 
 
 This results in exactly the same display as on the previous page:
 
-<img src="/img/gitbook-import/assets/image (57).png" alt=""/>
+<img src={DataTemplatesCollectionStudentScreenshot} alt=""/>
 

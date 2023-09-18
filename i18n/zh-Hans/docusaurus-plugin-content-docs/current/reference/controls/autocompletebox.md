@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import AutoCompleteBoxScreenshot from '/img/gitbook-import/assets/autocomplete.gif';
+
 # Auto-complete Box
 
 The auto-complete box presents a text box for user input and a drop-down that contains possible matches from an items source collection, for the text typed in. The drop-down shows when the user starts to type, and the match is updated for each character typed. The user can select from the drop-down.
@@ -55,11 +57,7 @@ namespace AvaloniaControls.Views
 }
 ```
 
-
-
-<img src="/img/gitbook-import/assets/autocomplete.gif" alt=""/>
-
-
+<img src={AutoCompleteBoxScreenshot} alt="" />
 
 ## More Information
 

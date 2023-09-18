@@ -2,6 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreLoadedDataStartScreenshot from './images/image-20210310184202271.png';
+
 # Load Data at Start-up
 
 On this page you will add code to load the user's album collection from disk when the app starts.
@@ -33,11 +35,11 @@ private async void LoadAlbums()
 
 As you can see this method uses the business service to load the list of albums from the disk cache. It then transforms each data model (`Album` class) into a view model (`AlbumViewModel` class). After this all the album view models are added to the observable collection - this will instantly update the UI with the text data for the albums.
 
-You will notice that after the JSON album files are loaded, the second loop loads the cover art image files. This provides your user with visual feedback as quickly as possible (in the form of album tiles with text and the placeholder music note icon) about what albums are in the collection. The cover art is then loaded asynchronously. This ensures that the app remains responsive during the image loading process. &#x20;
+You will notice that after the JSON album files are loaded, the second loop loads the cover art image files. This provides your user with visual feedback as quickly as possible (in the form of album tiles with text and the placeholder music note icon) about what albums are in the collection. The cover art is then loaded asynchronously. This ensures that the app remains responsive during the image loading process.
 
-You next step is to schedule the `LoadAlbum` method to run when the app starts.&#x20;
+You next step is to schedule the `LoadAlbum` method to run when the app starts.
 
-To schedule the method on the main thread, follow this procedure:&#x20;
+To schedule the method on the main thread, follow this procedure:
 
 - Keep the **MainWindowViewModel.cs** file open.
 - Add a reference to `using System.Reactive.Concurrency;`
@@ -49,4 +51,4 @@ RxApp.MainThreadScheduler.Schedule(LoadAlbums);
 
 - Click **Debug** to compile and run the project.
 
-![](images/image-20210310184202271.png)
+<p><img className="image-medium-zoom" src={MusicStoreLoadedDataStartScreenshot} alt="" /></p>

@@ -2,6 +2,11 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreBuyButtonScreenshot from './images/buy-button.png';
+import MusicStoreFinishedAddButtonScreenshot from '/img/gitbook-import/assets/image (13) (2).png';
+import MusicStoreAddStylesScreenshot from './images/add-styles.png';
+import MusicStorePrettyButtonScreenshot from './images/pretty-button.png';
+
 # Add and Layout Controls
 
 The main window of the app will eventually show a list of album covers in the user's collection, with a button at its top-right corner to allow the user to add a new album. The button will open a search dialog window to find new albums to add.&#x20;
@@ -34,7 +39,7 @@ To display a button in the content zone of the main window, follow this procedur
 
 - Click **Debug** to compile and run the project.
 
-![](images/buy-button.png)
+<p><img className="image-medium-zoom" src={MusicStoreBuyButtonScreenshot} alt="" /></p>
 
 You will see the button, but it is in the default position and not at the top-right of the window as required.
 
@@ -58,9 +63,7 @@ You should see all these changes reflected in the preview pane as you add them.&
 
 Have a look back at the image of the finished app [here](./). &#x20;
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (13) (2).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreFinishedAddButtonScreenshot} alt="" />
 
 You will see that the button shows an icon, and not text (as it currently does). This is actually the Microsoft Store icon from the Fluent Icons collection, and _Avalonia UI_ has definitions for all these for you to use.
 
@@ -77,7 +80,7 @@ To use the Microsoft Store icon, follow this procedure:&#x20;
 - In the _Rider s_olution explorer, right-click the project.
 - Click **Add**, then click  **Avalonia Styles**
 
-![](images/add-styles.png)
+<p><img className="image-medium-zoom" src={MusicStoreAddStylesScreenshot} alt="" /></p>
 
 - Enter the **Name** 'Icons', press enter.
 - Locate and open the new **Icons.axaml** file that is created. The XAML will look like this:
@@ -148,6 +151,6 @@ To change the button from text to icon content, follow this procedure:
 
 - Click **Debug** to compile and run the project.
 
-![](images/pretty-button.png)
+<p><img className="image-medium-zoom" src={MusicStorePrettyButtonScreenshot} alt="" /></p>
 
 On the next page, you will learn how to link the button in the view (of the MVVM pattern) to a command in the view model, so it can act on the application logic there.

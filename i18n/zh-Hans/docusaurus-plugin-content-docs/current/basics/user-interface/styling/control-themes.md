@@ -3,6 +3,8 @@ id: control-themes
 title: 控件主题（Control Themes）
 ---
 
+import StylingEllipseButtonScreenshot from '/img/basics/user-interface/styling/ellipse-button.png';
+
 控件主题是在[样式](Styles)的基础上构建的，用于为控件创建可切换的主题。尽管控件主题与 WPF/UWP 中的样式类似，但它们的机制略有不同。
 
 :::tip
@@ -75,7 +77,7 @@ title: 控件主题（Control Themes）
 </Window>
 ```
 
-![椭圆形按钮](/img/basics/user-interface/styling/ellipse-button.png)
+<p><img className="medium-image-zoom" src={StylingEllipseButtonScreenshot} alt="椭圆形按钮" /></p>
 
 ## 控件主题中的交互
 

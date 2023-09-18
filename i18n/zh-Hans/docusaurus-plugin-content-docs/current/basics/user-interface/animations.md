@@ -3,6 +3,8 @@ id: animations
 title: 动画
 ---
 
+import AnimationKeyframeDiagram from '/img/gitbook-import/assets/image (2) (1) (4).png';
+
 # 动画
 
 _Avalonia UI_ 中有两种类型的动画：
@@ -14,7 +16,7 @@ _Avalonia UI_ 中有两种类型的动画：
 
 最简单的关键帧动画将在指定的持续时间内通过在开始时（持续时间的0%）和结束时（持续时间的100%）定义两个关键帧来更改一个属性的值。
 
-<img src="/img/gitbook-import/assets/image (2) (1) (4).png" alt=""/>
+<img src={AnimationKeyframeDiagram} alt=''/>
 
 然后，属性值在关键帧之间随时间改变，使用由缓动函数定义的配置文件。默认的缓动函数也是最简单的 - 在两个关键帧之间进行直线插值。
 

@@ -2,6 +2,9 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoCreateNewProjectScreenshot from '/img/gitbook-import/assets/image (43).png';
+import ToDoNewSolutionScreenshot from '/img/gitbook-import/assets/image (3) (1) (1).png';
+
 # Create a New Project
 
 On this page you will learn how to create a new project for the to do list app.
@@ -14,11 +17,7 @@ Before you start, check you have installed the _Avalonia UI_ extension for Visua
 For full instructions about the extension, see [here](../../get-started/install-the-avalonia-extension.md).
 :::
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (43).png" alt=""/>
-</div>
-
-<figure><figcaption></figcaption></figure>
+<p><img className="center" src={ToDoCreateNewProjectScreenshot} alt="" /></p>
 
 With the extension installed, start this tutorial by following these instructions:
 
@@ -31,9 +30,7 @@ With the extension installed, start this tutorial by following these instruction
 
 The newly created solution will look like this:
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (3) (1) (1).png" alt=""/>
-</div>
+<img className="center" src={ToDoNewSolutionScreenshot} alt="" />
 
 ## .NET Core CLI
 

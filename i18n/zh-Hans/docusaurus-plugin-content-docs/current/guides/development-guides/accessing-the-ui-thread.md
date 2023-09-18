@@ -3,6 +3,8 @@ id: accessing-the-ui-thread
 title: 如何访问UI线程
 ---
 
+import DispatchPostLongRunningScreenshot from '/img/gitbook-import/assets/long1.gif';
+import DispatchInvokeAsyncLongRunningScreenshot from '/img/gitbook-import/assets/long2.gif';
 
 # 如何访问UI线程
 
@@ -64,7 +66,7 @@ private void ButtonClickHandler(object sender, RoutedEventArgs e)
 }
 ```
 
-<img src="/img/gitbook-import/assets/long1.gif" alt=""/>
+<img src={DispatchPostLongRunningScreenshot} alt=""/>
 
 请注意，由于长时间运行的任务在其自己的线程上执行，UI不会失去响应。
 
@@ -100,7 +102,7 @@ private async void ButtonClickHandler(object sender, RoutedEventArgs e)
 }
 ```
 
-<img src="/img/gitbook-import/assets/long2.gif" alt=""/>
+<img src={DispatchInvokeAsyncLongRunningScreenshot} alt=""/>
 
 ## 更多信息
 

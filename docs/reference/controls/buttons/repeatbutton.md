@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import RepeatButtonScreenshot from '/img/gitbook-import/assets/repeatbutton.gif';
+
 # Repeat Button
 
 The repeat button is a control that has the added feature of regularly generating click events while the button is being pressed down.
@@ -19,8 +21,6 @@ You will probably use these properties most often:
 
 This example shows a repeat button generating click events with the default interval and delay.
 
-
-
 ```
 <Grid Margin="20" RowDefinitions="50,*">
   <RepeatButton Grid.Row="0" Click="ClickHandler">Press and hold down</RepeatButton>
@@ -29,7 +29,6 @@ This example shows a repeat button generating click events with the default inte
   </ScrollViewer>
 </Grid>
 ```
-
 
 ```csharp title='C#'
 public partial class MainWindow : Window
@@ -46,9 +45,7 @@ public partial class MainWindow : Window
 }
 ```
 
-
-
-<img src='/img/gitbook-import/assets/repeatbutton.gif' alt=''/>
+<img src={RepeatButtonScreenshot} alt=""/>
 
 ## More Information
 

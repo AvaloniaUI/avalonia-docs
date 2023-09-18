@@ -1,6 +1,9 @@
 ---
 description: CONCEPTS - Input
 ---
+
+import InputEventRoutingDiagram from '/img/gitbook-import/assets/input-event-routing.png';
+
 # 路由事件
 
 Avalonia中的大多数事件都是作为路由事件实现的。路由事件是在整个树上引发的事件，而不仅仅是引发事件的控件。
@@ -218,7 +221,7 @@ Avalonia的输入事件成对出现，这样一来，用户的一个输入操作
 
 作为输入事件处理工作原理的示例，考虑以下输入事件示例。在下面的树形图示例中，`叶子元素＃2`是`PointerPressed`事件的源：
 
-<img src='/img/gitbook-import/assets/input-event-routing.png' alt='事件路由图'/>
+<img src={InputEventRoutingDiagram} alt="事件路由图"/>
 
 事件处理的顺序如下：
 

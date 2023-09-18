@@ -4,11 +4,11 @@ description: TUTORIALS - To Do List App
 
 # Create a Model
 
-So far the in this tutorial, you have created a basic view where none of the controls do anything yet; and linking it all together using the MVVM pattern is still a couple of steps away.&#x20;
+So far the in this tutorial, you have created a basic view where none of the controls do anything yet; and linking it all together using the MVVM pattern is still a couple of steps away.
 
-On this page you will create the model part of the MVVM pattern for app.  &#x20;
+On this page you will create the model part of the MVVM pattern for app.
 
-In a real MVVM application, the model handles everything that is not in the application-specific logic of the view model, or the view itself. This may include data storage and any services needed to supply storage, and maybe other external services that the app needs (email for example).&#x20;
+In a real MVVM application, the model handles everything that is not in the application-specific logic of the view model, or the view itself. This may include data storage and any services needed to supply storage, and maybe other external services that the app needs (email for example).
 
 In this tutorial example, you will create a mock database and a service to access it. These will take the place of the model part of the application.
 
@@ -64,6 +64,4 @@ namespace ToDoList.Services
 }
 ```
 
-That is the model done for now. On the next page, you will learn how to add a view model to the app to complete the MVVM pattern.&#x20;
-
-### &#x20;<a href="#create-a-view-model" id="create-a-view-model"></a>
+That is the model done for now. On the next page, you will learn how to add a view model to the app to complete the MVVM pattern.

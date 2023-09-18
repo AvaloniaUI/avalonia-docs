@@ -2,6 +2,8 @@
 description: REFERENCE
 ---
 
+import SineEaseOutScreenshot from '/img/gitbook-import/assets/image (67).png';
+
 # Animation Settings
 
 This section contains full lists of the _Avalonia UI_ animation settings:
@@ -13,7 +15,7 @@ This section contains full lists of the _Avalonia UI_ animation settings:
 
 ## Easing Functions
 
-<table><thead><tr><th width="216">Profile</th><th>Setting</th></tr></thead><tbody><tr><td><img src='/img/gitbook-import/assets/image (67).png' alt=''/></td><td><code>SineEaseOut</code></td></tr></tbody></table>
+<table><thead><tr><th width="216">Profile</th><th>Setting</th></tr></thead><tbody><tr><td><img src={SineEaseOutScreenshot} alt=""/></td><td><code>SineEaseOut</code></td></tr></tbody></table>
 
 ## Fill Modes
 

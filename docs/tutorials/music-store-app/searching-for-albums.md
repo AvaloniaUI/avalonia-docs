@@ -2,13 +2,18 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreiTunesSearchNugetScreenshot from './images/image-20210310013703557.png';
+import MusicStoreAlbumModelDiagram from '/img/gitbook-import/assets/image (2) (1) (3).png';
+import MusicStoreAlbumMvvmDiagram from '/img/gitbook-import/assets/image (25) (4).png';
+import MusicStoreAlbumViewScreenshot from './images/image-20210310110401944.png';
+
 # Album Service
 
 On this page, you will add some business logic to the app This will allow you to replace the mock data and get some real album data from the search. This business logic code forms the 'Model' part of the MVVM pattern.
 
 To implement a real album search in the app, you will use a _NuGet_ package that can call the _Apple iTunes_ Web API album search.
 
-## Apple Web API Package&#x20;
+## Apple Web API Package
 
 Follow this procedure to add the required _NuGet_ package:&#x20;
 
@@ -16,18 +21,16 @@ Follow this procedure to add the required _NuGet_ package:&#x20;
 - Right-click the project.
 - Click **Manage NuGet Packages**.
 
-![](images/image-20210310013703557.png)
+<p><img className="image-medium-zoom" src={MusicStoreiTunesSearchNugetScreenshot} alt="" /></p>
 
 - Type 'itunes' in the search box (top-left).
-- Click **iTunesSearch**, then click **Install**.&#x20;
+- Click **iTunesSearch**, then click **Install**.
 
 ## MVVM Model
 
 In this tutorial the application is simple, and you can implement the business services required for the 'Model' part of the MVVM pattern, in one class. This class will contain both the data model for an album, and the method needed for the search.
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (2) (1) (3).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreAlbumModelDiagram} alt="" />
 
 Follow this procedure to add the album business logic:
 
@@ -80,9 +83,7 @@ Your album view model is currently empty. It will need to be able to store the a
 
 In this step you will use a common pattern for the dependent relationship between a view model and a (business logic) model. This is where the view model contains an instance of the data model, and then exposes certain of its properties, as required for display.&#x20;
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (25) (4).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreAlbumMvvmDiagram} alt="" />
 
 Follow this procedure to prepare the album view model:
 
@@ -201,6 +202,6 @@ Follow this procedure to add the album name and artist name to the tile:
 - Click the icon button.
 - Type some search text.
 
-![](images/image-20210310110401944.png)
+<p><img className="image-medium-zoom" src={MusicStoreAlbumViewScreenshot} alt="" /></p>
 
 On the next page, you will learn how to improve the look of the app by retrieving the cover art for each album. This will be displayed on the tile instead of the note icon.&#x20;

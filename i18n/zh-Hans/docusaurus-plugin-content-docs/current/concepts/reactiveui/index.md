@@ -2,6 +2,8 @@
 description: CONCEPTS
 ---
 
+import ReactiveUINuGetScreenshot from '/img/gitbook-import/assets/image (44) (1).png';
+
 # ReactiveUI
 
 :::tip
@@ -18,7 +20,7 @@ _ReactiveUI_是一个高级的、可组合的、功能反应式的模型-视图-
 
 _Avalonia UI_附带了自己的_ReactiveUI_分支，位于`Avalonia.ReactiveUI` _NuGet_包中。
 
-<img src="/img/gitbook-import/assets/image (44) (1).png" alt=""/>
+<img src={ReactiveUINuGetScreenshot} alt=""/>
 
 要在您的_Avalonia UI_应用程序中使用_ReactiveUI_和MVVM模式，请使用_NuGet_包管理器（如上所示）将包添加到您的项目中，或执行以下CLI命令：
 

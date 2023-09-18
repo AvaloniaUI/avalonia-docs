@@ -3,13 +3,11 @@ id: index
 title: To Do List App
 ---
 
+import ToDoFinishedApplicationScreenshot from '/img/tutorials/todo-list-app/image (14).png';
+
 In this tutorial you will create a simple to do list application using _Avalonia UI_ and the Model View View-Model (MVVM) pattern with binding to the to do list (collection) data.
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/image (14).png" alt="The finished application" />
-  </div>
-
+<img className="center" src={ToDoFinishedApplicationScreenshot} alt="The finished application" />
 
 :::info
 You can find the code for the completed application [here](https://github.com/grokys/todo-tutorial).

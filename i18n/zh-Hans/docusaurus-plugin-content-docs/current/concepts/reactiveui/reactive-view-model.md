@@ -2,6 +2,8 @@
 description: CONCEPTS - ReactiveUI
 ---
 
+import ReactiveObjectDiagram from '/img/gitbook-import/assets/image (4) (2).png';
+
 # 响应式视图模型
 
 本页面介绍了如何使用_ReactiveUI_的`ReactiveObject`作为视图模型的基础，以实现与_Avalonia UI_的MVVM绑定。
@@ -20,7 +22,7 @@ public class ViewModelBase : ReactiveObject
 }
 ```
 
-<img src="/img/gitbook-import/assets/image (4) (2).png" alt=""/>
+<img src={ReactiveObjectDiagram} alt=""/>
 
 :::info
 如果您使用了Avalonia MVVM应用程序解决方案模板，那么您会发现这个基类已经添加到项目的/ViewModels文件夹中。

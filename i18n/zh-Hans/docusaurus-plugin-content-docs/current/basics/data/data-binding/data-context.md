@@ -2,17 +2,22 @@
 description: CONCEPTS
 ---
 
+import DataContextBindingOverviewDiagram from '/img/gitbook-import/assets/image (56).png';
+import DataContextTreeSearchDiagram from '/img/gitbook-import/assets/image (62).png';
+import DataContextContentBindingScreenshot from '/img/gitbook-import/assets/image (20) (2).png';
+import DataContextPreviewerScreenshot from '/img/gitbook-import/assets/image (40) (1).png'
+
 # 数据上下文
 
 当Avalonia执行数据绑定时，它必须定位要绑定的应用程序对象。这个位置由**数据上下文**表示。
 
-<img src="/img/gitbook-import/assets/image (56).png" alt=""/>
+<img src={DataContextBindingOverviewDiagram} alt=''/>
 
 Avalonia中的每个控件都有一个名为`DataContext`的属性，包括内置控件、用户控件和窗口。
 
 在绑定时，Avalonia会从逻辑控件树中进行分层搜索，从定义绑定的控件开始，直到找到要使用的数据上下文。
 
-<img src="/img/gitbook-import/assets/image (62).png" alt=""/>
+<img src={DataContextTreeSearchDiagram} alt=''/>
 
 这意味着在窗口中定义的控件可以使用窗口的数据上下文；或者（如上所示），在窗口中的控件中定义的控件可以使用窗口的数据上下文。
 
@@ -72,13 +77,13 @@ public class MainWindowViewModel : ViewModelBase
 
 项目运行时，数据绑定器从文本块开始向上搜索逻辑控件树，找到在主窗口级别设置的数据上下文。因此，绑定的文本显示为：
 
-<img src="/img/gitbook-import/assets/image (20) (2).png" alt=""/>
+<img src={DataContextContentBindingScreenshot} alt=""/>
 
 ## 设计时数据上下文
 
 您可能已经注意到，在首次编译此项目后，预览窗格也显示了问候语。
 
-<img src="/img/gitbook-import/assets/image (40) (1).png" alt=""/>
+<img src={DataContextPreviewerScreenshot} alt=""/>
 
 这是因为Avalonia还可以为控件设置设计时数据上下文。这对您非常有用，因为这意味着预览窗格在您调整布局和样式时可以显示一些真实的数据。
 

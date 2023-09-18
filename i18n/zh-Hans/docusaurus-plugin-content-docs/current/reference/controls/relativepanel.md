@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import RelativePanelScreenshot from '/img/gitbook-import/assets/image (19) (2).png';
+
 # Relative Panel
 
 The relative panel control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
@@ -19,10 +21,10 @@ You use attached relative position properties to specify the layout of child con
 Where `PositionProperty` property is one of the relative position properties (see table below), and `NameOfSibling` is the name property of one of the other child controls.
 
 :::danger
-It is an error to give the value of a relative position property as the name of the child control itself. That would be a circular reference!&#x20;
+It is an error to give the value of a relative position property as the name of the child control itself. That would be a circular reference!
 :::
 
-You can specify up to four relative position properties per child control - for how the top, bottom, left and right edges are to be calculated.&#x20;
+You can specify up to four relative position properties per child control - for how the top, bottom, left and right edges are to be calculated.
 
 :::danger
 It is an error to define the same relative position property twice for the same child control.
@@ -67,7 +69,7 @@ This XAML shows how to arrange some child controls in different ways:
 
 The result looks like this:
 
-<img src="/img/gitbook-import/assets/image (19) (2).png" alt=""/>
+<img src={RelativePanelScreenshot} alt="" />
 
 Here are some notes about the above example:
 

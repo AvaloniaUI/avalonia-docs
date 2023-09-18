@@ -2,6 +2,9 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoDataContextWiringDiagram from '/img/gitbook-import/assets/image (7) (3).png';
+import ToDoBlankAfterWiringScreenshot from '/img/gitbook-import/assets/image (42) (2).png';
+
 # Data Binding
 
 Now that you have the view model and model (data service) connected, the next step is to link the views and view models, so the list of items can be displayed.
@@ -56,14 +59,10 @@ The built-in controls inside the data template will expect to find the propertie
 
 So the arrangement of views and view models so far looks like this:
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (7) (3).png" alt=""/>
-</div>
+<img className="center" src={ToDoDataContextWiringDiagram} alt="" />
 
 This will work if any parent of the items control has a data context object having  a`ListItems` property. The _Avalonia UI_ binding will search upwards in the control tree to locate a suitable data context. But although the main window data context has been set (during the app initialization - see the file **App.axaml.cs**), at this point there is still no data context with a `ListItems` property.&#x20;
 
 So if you run your app, the list is still blank!
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (42) (2).png" alt=""/>
-</div>
+<img className="center" src={ToDoBlankAfterWiringScreenshot} alt="" />

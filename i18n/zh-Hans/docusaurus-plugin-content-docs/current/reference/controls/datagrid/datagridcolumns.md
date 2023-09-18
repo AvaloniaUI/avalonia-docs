@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import DataGridColumnPreviewScreenshot from '/img/gitbook-import/assets/image (4) (1).png';
+
 # 数据表格列
 
 数据表格可以包含多个数据表格列，_Avalonia UI_ 提供了两种内置列类型，用于显示不同的数据类型，还有一个可以自定义列外观的模板类型。
@@ -110,7 +112,7 @@ public class Person
 
 在预览窗格中可以看到效果，因为 `<Design.DataContext>` 元素创建了绑定的视图模型：
 
-<img src='/img/gitbook-import/assets/image (4) (1).png' alt='' />
+<img src={DataGridColumnPreviewScreenshot} alt="" />
 
 ## 更多信息
 

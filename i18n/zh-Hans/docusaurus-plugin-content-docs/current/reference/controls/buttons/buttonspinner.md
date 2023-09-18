@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ButtonSpinnerScreenshot from '/img/gitbook-import/assets/image (3) (3).png';
+
 # 按钮微调器
 
 按钮微调器是一个包含向上和向下微调按钮的控件。该按钮的内容是灵活的，但您需要编写相当多的行为代码。
@@ -20,8 +22,9 @@ description: REFERENCE - Built-in Controls
 </ButtonSpinner>
 ```
 
-<img src='/img/gitbook-import/assets/image (3) (3).png>' alt=''/>
-## 更多信息
+<img src={ButtonSpinnerScreenshot} alt=''/>
+
+## More Information
 
 :::info
 有关此控件的完整API文档，请参阅 [这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ButtonSpinner/).

@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import CarouselScreenshot from '/img/gitbook-import/assets/carousel.gif';
+
 # Carousel
 
 The carousel has an items collection, and displays each item as a page, in sequence, so that it fills the control.
@@ -63,9 +65,7 @@ namespace AvaloniaControls.Views
 }
 ```
 
-
-
-<img src="/img/gitbook-import/assets/carousel.gif" alt=""/>
+<img src={CarouselScreenshot} alt="" />
 
 ## More Information
 

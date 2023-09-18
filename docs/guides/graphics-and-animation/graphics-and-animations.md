@@ -3,6 +3,7 @@ id: graphics-and-animations
 title: How To Draw Graphics
 ---
 
+import ShapeAndGeometrySampleScreenshot from '/img/gitbook-import/assets/shapes.png';
 
 # How To Draw Graphics
 
@@ -53,7 +54,7 @@ Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, 
 </Canvas>
 ```
 
-<img src='/img/gitbook-import/assets/shapes.png' alt=''/>
+<img src={ShapeAndGeometrySampleScreenshot} alt=''/>
 
 ## Add Animations
 

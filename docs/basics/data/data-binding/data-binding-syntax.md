@@ -2,6 +2,8 @@
 description: CONCEPTS
 ---
 
+import DataBindingModeDiagram from '/img/gitbook-import/assets/image (2).png';
+
 # Data Binding Syntax
 
 In Avalonia, you can define data binding in XAML or code. To define data binding in XAML, you use the data binding mark-up extension, and this has its own syntax which is described here.
@@ -56,7 +58,7 @@ You can change how data is moved in a data binding by specifying the data bindin
 
 &#x20;
 
-<img src="/img/gitbook-import/assets/image (2).png" alt=""/>
+<img src={DataBindingModeDiagram} alt=''/>
 
 For example:
 

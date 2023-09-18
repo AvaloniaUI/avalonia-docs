@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import DataGridColumnPreviewScreenshot from '/img/gitbook-import/assets/image (4) (1).png';
+
 # Data Grid Columns
 
 A data grid can contain multiple data grid columns and _Avalonia UI_ has two built-in column types which can be used to display a different data types, and a template type that can customise the column appearance.&#x20;
@@ -50,8 +52,6 @@ Example
 
 This example improves a data grid by expanding two columns equally across the width:
 
-
-
 ```xml
 <Window ... >
    <Design.DataContext>
@@ -70,7 +70,6 @@ This example improves a data grid by expanding two columns equally across the wi
   </DataGrid>
 </Window>
 ```
-
 
 ```csharp title='C# View Model'
 using AvaloniaControls.Models;
@@ -97,7 +96,6 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-
 ```csharp title='C# Item Class'
 public class Person
 {
@@ -112,11 +110,9 @@ public class Person
 }
 ```
 
-
-
 It works in the preview pane because the `<Design.DataContext>` element creates a view model to bind to:
 
-<img src='/img/gitbook-import/assets/image (4) (1).png' alt=''/>
+<img src={DataGridColumnPreviewScreenshot} alt="" />
 
 ## More Information
 

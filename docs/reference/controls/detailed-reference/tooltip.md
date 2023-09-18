@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ToolTipTextScreenshot from '/img/gitbook-import/assets/tooltip.gif';
+import ToolTipContentScreenshot from '/img/gitbook-import/assets/tooltip2.gif';
+
 # Tool Tip
 
 The tool tip is a popup that shows its content when the user hovers over the 'host' control to which it is attached.
@@ -21,15 +24,15 @@ This is a simple text-based tooltip, using default values for the placement and 
             ToolTip.Tip="This is a rectangle" />
 ```
 
-<img src='/img/gitbook-import/assets/tooltip.gif' alt=''/>
+<img src={ToolTipTextScreenshot} alt="" />
 
 To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. For example:
 
 ```markup
 <Rectangle Fill="Aqua" Height="200" Width="400"
     ToolTip.Placement="Bottom">
-    <ToolTip.Tip >
-      <StackPanel >
+    <ToolTip.Tip>
+      <StackPanel>
         <TextBlock FontSize="16">Rectangle</TextBlock>
         <TextBlock>Some explanation here.</TextBlock>
       </StackPanel>
@@ -37,7 +40,7 @@ To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. F
 </Rectangle>
 ```
 
-<img src='/img/gitbook-import/assets/tooltip2.gif' alt=''/>
+<img src={ToolTipContentScreenshot} alt="" />
 
 ## More Information
 

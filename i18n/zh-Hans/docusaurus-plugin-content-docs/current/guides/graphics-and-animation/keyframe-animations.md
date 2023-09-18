@@ -3,12 +3,17 @@ id: keyframe-animations
 title: 如何使用关键帧动画
 ---
 
+import AnimationKeyframeDiagram from '/img/gitbook-import/assets/image (2) (1) (4).png';
+import KeyframeFadeScreenshot from '/img/gitbook-import/assets/anim1 (1).gif';
+import KeyframeCompositeAnimationScreenshot from '/img/gitbook-import/assets/anim2.gif';
+import LinearEasingScreenshot from '/img/gitbook-import/assets/image (72).png';
+import BounceEaseInScreenshot from '/img/gitbook-import/assets/image (76).png';
 
 # 如何使用关键帧动画
 
 您可以使用关键帧动画来在时间轴上更改一个或多个控件属性。关键帧在动画的 **持续时间** 内由 _Avalonia UI_ 样式中的 **提示** 点定义，并在某个时间点上设置属性的中间值。
 
-<img src="/img/gitbook-import/assets/image (2) (1) (4).png" alt=""/>
+<img src={AnimationKeyframeDiagram} alt=""/>
 
 关键帧之间的属性值根据 **缓动函数** 的曲线设置。默认的缓动函数是直线插值。
 
@@ -62,7 +67,7 @@ title: 如何使用关键帧动画
 
 动画效果如下：
 
-<img src="/img/gitbook-import/assets/anim1 (1).gif" alt=""/>
+<img src={KeyframeFadeScreenshot} alt=""/>
 
 该动画在矩形控件加载并被样式选择时就会运行。事实上，它在预览窗格中也能运行！
 
@@ -92,7 +97,7 @@ title: 如何使用关键帧动画
 
 红色矩形同时进行淡入和旋转。
 
-<img src="/img/gitbook-import/assets/anim2.gif" alt=""/>
+<img src={KeyframeCompositeAnimationScreenshot} alt=""/>
 
 ## 延迟
 
@@ -157,11 +162,9 @@ title: 如何使用关键帧动画
 
 <div>
 
-<img src="/img/gitbook-import/assets/image (72).png" alt=""/>
+<img src={LinearEasingScreenshot} alt=""/>
 
- 
-
-<img src="/img/gitbook-import/assets/image (76).png" alt=""/>
+<img src={BounceEaseInScreenshot} alt=""/>
 
 </div>
 

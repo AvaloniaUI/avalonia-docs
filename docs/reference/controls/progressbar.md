@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ProgressBarScreenshot from '/img/gitbook-import/assets/progressbar.png';
+
 # Progress Bar
 
 The progress bar presents a value as a proportionately filled bar, with the option to show a caption.
@@ -30,7 +32,7 @@ The progress caption always shows the value with a percentage sign. This is only
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/progressbar.PNG" alt=""/>
+<img src={ProgressBarScreenshot} alt="" />
 
 ## More Information
 

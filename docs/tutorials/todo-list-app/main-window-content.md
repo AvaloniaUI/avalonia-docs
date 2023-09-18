@@ -2,9 +2,11 @@
 description: TUTORIALS - To Do List
 ---
 
+import ToDoMainWindowContentScreenshot from '/img/gitbook-import/assets/image (4) (1) (1).png';
+
 # Main Window Content
 
-At this point your main window still displays the greeting text created by the solution template. On this page you will change the main window content zone, so it displays your new user control instead.&#x20;
+At this point your main window still displays the greeting text created by the solution template. On this page you will change the main window content zone, so it displays your new user control instead.
 
 Follow this procedure to change the main window content:
 
@@ -40,11 +42,11 @@ The main window XAML should now look like this:
 
 This XAML is similar in may ways to the user control XAML you had a lookup on the previous page. Specifically, here you added:
 
-<pre class="language-markup"><code class="lang-markup"><strong>&#x3C;Window ... 
-</strong><strong>        xmlns:views="clr-namespace:ToDoList.Views" ..>
-</strong></code></pre>
+```markup
+<Window ... xmlns:views="clr-namespace:ToDoList.Views" ...>
+```
 
-This maps the code namespace `ToDoList.Views` to the XML namespace alias `views`.&#x20;
+This maps the code namespace `ToDoList.Views` to the XML namespace alias `views`.
 
 :::warning
 Any user control that you create will need this kind of mapping, or the Avalonia UI XAML engine will be unable to find it, and you will get an error.
@@ -64,10 +66,8 @@ Now run the application you have built so far.  If you are using Visual Studio, 
 dotnet run
 ```
 
-&#x20; You will see the main window, with its new title and user control:
+You will see the main window, with its new title and user control:
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (4) (1) (1).png" alt=""/>
-</div>
+<img className="center" src={ToDoMainWindowContentScreenshot} alt="" />
 
 That is just the view - nothing really does anything yet! On the next pages, you will learn how to create the working parts of the app: the model and the view model.

@@ -2,6 +2,10 @@
 description: CONCEPTS - ReactiveUI
 ---
 
+import ReactiveCommandViewScreenshot from '/img/gitbook-import/assets/image (2) (1) (1) (1).png';
+import ReactiveCommandRunOutputScreenshot from '/img/gitbook-import/assets/image (6) (1) (1).png';
+import ReactiveCommandCanExecuteScreenshot from '/img/gitbook-import/assets/image (6) (1) (2).png';
+
 # 响应式命令
 
 在本页面中，您将学习如何使用_ReactiveUI_的`ReactiveCommand`和在代码中创建的`ObservableObject`来实现UI的功能逐步展示原则。
@@ -24,7 +28,7 @@ description: CONCEPTS - ReactiveUI
 </StackPanel>
 ```
 
-![图片](/img/gitbook-import/assets/image (2) (1) (1) (1).png)
+<img src={ReactiveCommandViewScreenshot} alt="图片"/>
 
 您可以添加一个相应的视图模型，如下所示：
 
@@ -53,7 +57,7 @@ public class MainWindowViewModel : ViewModelBase
 
 这个视图模型还没有执行功能逐步展示。`SubmitCommand`被声明为没有参数和结果（void）。`Create`方法的同步操作参数是您在命令运行时（用户点击按钮时）执行的操作。上面的示例只是在调试窗口中报告该操作。
 
-![图片](/img/gitbook-import/assets/image (6) (1) (1).png)
+<img src={ReactiveCommandRunOutputScreenshot} alt="图片"/>
 
 ## 可执行吗？
 
@@ -80,3 +84,5 @@ SubmitCommand = ReactiveCommand.Create(() =>
 ```
 
 现在你会看到，只有在输入了8个字符后，按钮才会变为可用状态。
+
+<img src={ReactiveCommandCanExecuteScreenshot} alt=""/>

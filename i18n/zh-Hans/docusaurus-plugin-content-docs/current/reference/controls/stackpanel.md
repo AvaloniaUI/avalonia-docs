@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import StackPanelVerticalRectanglesScreenshot from '/img/gitbook-import/assets/image (14) (2).png';
+
 # Stack Panel
 
 The stack panel arranges its child controls by stacking them horizontally or vertically. The stack panel is often used to arrange a small subsection of the UI on a page.
@@ -34,7 +36,7 @@ The following XAML shows how to create a vertical stack panel.
 
 The result shows the child controls stretched to fit the width, and the overall height of the stack panel equal to the sum of the child control heights.
 
-<img src="/img/gitbook-import/assets/image (14) (2).png" alt=""/>
+<img src={StackPanelVerticalRectanglesScreenshot} alt="" />
 
 ## More Information
 

@@ -2,6 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreAddedAlbumsScreenshot from './images/image-20210310175949319.png';
+
 # 将项目添加到用户的集合中
 
 在本页中，您将实现一个包含用户使用搜索对话框和 **购买专辑** 按钮选择的专辑的集合，并在主窗口中显示它们。
@@ -78,7 +80,7 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 - 点击 **购买专辑**。
 - 再次重复。
 
-![](images/image-20210310175949319.png)
+<p><img className="image-medium-zoom" src={MusicStoreAddedAlbumsScreenshot} alt="" /></p>
 
 您将看到在搜索和选择时用户的专辑集合正在构建。但是，如果停止运行应用程序，然后再次启动它，集合将恢复为空。
 

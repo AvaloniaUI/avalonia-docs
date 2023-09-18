@@ -3,6 +3,9 @@ id: add-some-layout
 title: 添加一些布局
 ---
 
+import StackPanelDiagram from '/img/get-started/add-some-layout/image (40) (1) (1).png';
+import StackPanelSampleScreenshot from '/img/get-started/add-some-layout/image (41) (1).png';
+
 Avalonia提供了一系列内置的控件来帮助您布局应用程序的可视元素。在本页，您将看到如何使用其中一些布局控件。
 
 目前，您的应用程序在主窗口的内容区域中只有一个按钮。
@@ -13,11 +16,7 @@ Avalonia提供了一系列内置的控件来帮助您布局应用程序的可视
 
 stack panel控件允许在其内容区域中放置多个控件，并按照在XAML中定义的顺序以垂直堆栈的方式排列它们。
 
-
-
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/add-some-layout/image (40) (1) (1).png" alt="" />
-</div>
+<img className="center" src={StackPanelDiagram} alt="" />
 
 ```xml
 <StackPanel>
@@ -49,9 +48,7 @@ text block控件使您可以完全控制其包含的文本的样式。
   </StackPanel>
 ```
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/add-some-layout/image (41) (1).png" alt="" />
-</div>
+<img className="center" src={StackPanelSampleScreenshot} alt="" />
 
 :::info
 您可以从参考文档[这里](../../reference/controls/layout-controls.md)了解Avalonia中的其他布局控件。

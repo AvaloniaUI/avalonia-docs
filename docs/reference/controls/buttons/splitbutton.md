@@ -1,5 +1,10 @@
 # Split Button
 
+import SplitButtonClosedScreenshot from '/img/gitbook-import/assets/SplitButtonClosed.png';
+import SplitButtonOpenedScreenshot from '/img/gitbook-import/assets/SplitButtonOpened.png';
+import SplitButtonColorPickerScreenshot from '/img/controls/buttons/splitbutton/SplitButton_ColorPickerSample.png';
+import SplitButtonExportButtonScreenshot from '/img/controls/buttons/splitbutton/SplitButton_ExportButtonSample.png';
+
 The `SplitButton` functions as a [`Button`](./button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](docs/controls/flyouts) with additional actions.
 
 ## Is this the right control?
@@ -54,10 +59,12 @@ The user-selection action should be invoked immediately when pressing either the
 </SplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/SplitButtonClosed.png' alt=''/>
+<img src={SplitButtonClosedScreenshot} alt="" />
+
 _SplitButton (Flyout closed)_
 
-<img src='/img/gitbook-import/assets/SplitButtonOpened.png' alt=''/>
+<img src={SplitButtonOpenedScreenshot} alt="" />
+
 _SplitButton (Flyout opened)_
 
 ### Color-Selection example
@@ -67,7 +74,7 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 ```xml
 <!-- We have the following DataTemplate defined -->
 <DataTemplate DataType="Color">
-  <Border CornerRadius="4" Width="20" Height="20" BorderBrush="Gray" BorderThickness="1" >
+  <Border CornerRadius="4" Width="20" Height="20" BorderBrush="Gray" BorderThickness="1">
     <Border.Background>
       <SolidColorBrush Color="{Binding}" />
     </Border.Background>
@@ -83,7 +90,7 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
     <Flyout Placement="Bottom">
       <ListBox ItemsSource="{Binding AvailableColors}" 
                SelectedItem="{Binding SelectedColor}" 
-               Height="200" Width="200" >
+               Height="200" Width="200">
         <ListBox.ItemsPanel>
           <ItemsPanelTemplate>
             <WrapPanel />
@@ -95,7 +102,8 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 </SplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/SplitButton\_ColorPickerSample.png' alt=''/>
+<img src={SplitButtonColorPickerScreenshot} alt=""/>
+
 _Sample of SplitButton for color selection_
 
 ### Export Button Sample
@@ -119,5 +127,6 @@ Another common example of the `SplitButton` could be an export button. When the 
 </SplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/SplitButton\_ExportButtonSample.png' alt=''/>
+<img src={SplitButtonExportButtonScreenshot} alt="" />
+
 _Sample of a SplitButton with different export options_
