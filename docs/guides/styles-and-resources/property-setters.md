@@ -5,7 +5,7 @@ title: Property Setters
 
 # Property Setters
 
-The setters in a style define what properties will be changed after _Avalonia UI_ has matched the control in the logical control tree using the the selector, and determined which style is to be used. Setters are simple property and value attribute pairs in the XAML, written in the format:
+The setters in a style define what properties will be changed after _Avalonia UI_ has matched the control in the logical control tree using the selector, and determined which style is to be used. Setters are simple property and value attribute pairs in the XAML, written in the format:
 
 ```xml
 <Setter Property="propertyName" Value="newValueString"/>

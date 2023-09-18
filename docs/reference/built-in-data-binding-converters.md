@@ -29,7 +29,7 @@ This example shows the text block when the bound value is false:
 
 Negation also works when you bind to a non-Boolean value. This works because the bound value is first converted to a Boolean (using the function `Convert.ToBoolean` ) and then the result is negated.&#x20;
 
-For example, as the integer zero is converted to false (by the the function `Convert.ToBoolean`) and all other integer values are converted to true, you can use the negation operator to show a message when a collection is empty, like this:
+For example, as the integer zero is converted to false (by the function `Convert.ToBoolean`) and all other integer values are converted to true, you can use the negation operator to show a message when a collection is empty, like this:
 
 ```markup
 <Panel>

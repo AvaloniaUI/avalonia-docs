@@ -124,7 +124,7 @@ namespace Avalonia.MusicStore.ViewModels
 
 At this point, the code for the interaction is still incomplete. If you attempt to run the app now and click the icon button, you will get an exception of class `ReactiveUI.UnhandledInteractionException`.
 
-Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view, and uses some features of the the _ReactiveUI_ framework.  Follow this procedure:
+Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view, and uses some features of the _ReactiveUI_ framework.  Follow this procedure:
 
 - Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
 - Alter the class wo that it inherits from `ReactiveWindow<MainWindowViewModel>`.
