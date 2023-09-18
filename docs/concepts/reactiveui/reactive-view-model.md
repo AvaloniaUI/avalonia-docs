@@ -50,7 +50,7 @@ _Avalonia UI_ uses the underlying `ReactiveObject` to **Notify** changes in the 
          Watermark="Enter a description"/>
 ```
 
-Any change to the view model description property is achieved using the the `set` accessor and a change is raised causing _Avalonia UI_ to display the new value on the UI.
+Any change to the view model description property is achieved using the `set` accessor and a change is raised causing _Avalonia UI_ to display the new value on the UI.
 
 ## Update the View Model from Input
 
