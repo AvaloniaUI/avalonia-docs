@@ -7,7 +7,7 @@ import NumericUpDownFormatStringScreenshot from '/img/gitbook-import/assets/updo
 
 # Numeric Up-Down
 
-The numeric up-down is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The the mouse wheel (if present) will also change the value.
+The numeric up-down is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The mouse wheel (if present) will also change the value.
 
 ## Useful Properties
 
