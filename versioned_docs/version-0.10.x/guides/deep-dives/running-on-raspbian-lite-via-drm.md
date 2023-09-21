@@ -73,9 +73,7 @@ sudo kmscube
 ````
 You should see the spinning cube on your Raspberry pi screen now:  
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/deep-dives/running-on-raspbian-lite-via-drm/avalonia-raspbian-lite-drm-kmscube.gif"  />
-  </div>
+<img className="center" src={RaspbianLiteDrmKmsCubeScreenshot} alt="" />
 
 ### Step 2 - Prepare Avalonia App
 
@@ -197,9 +195,7 @@ public override void OnFrameworkInitializationCompleted()
 Now you can run/debug your app on desktop as usual.  
 When you start your app you should see this:  
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/deep-dives/running-on-raspbian-lite-via-drm/avalonia-raspbian-lite-drm-desktop.jpg"  />
-  </div>
+<img className="center" src={RaspbianLiteDrmDesktopScreenshot} alt="" />
 
 ### Step 3 - Deploy and run on Raspberry
 
@@ -225,8 +221,6 @@ sudo ./path/to/app/AvaloniaRaspbianLiteDrm --drm
 
 You should see the app running on your Raspberry Pi now:  
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/deep-dives/running-on-raspbian-lite-via-drm/avalonia-raspbian-lite-drm-run-on-raspberry.jpg"  />
-  </div>
+<img className="center" src={RaspianLiteRaspberryScreenshot} alt="" />
 
 If you have a touch display installed, try to slide the slider control :)

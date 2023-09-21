@@ -145,7 +145,7 @@ For more complex row and column definitions it's possible to explicitly use `Gri
 </Grid>
 ```
 
-<img className="center" src={GridVerboseSampleScreenshot} alt="sing Verbose Row/Column Definitions" />
+<img className="center" src={GridVerboseSampleScreenshot} alt="Using Verbose Row/Column Definitions" />
 
 ### Common Properties
 

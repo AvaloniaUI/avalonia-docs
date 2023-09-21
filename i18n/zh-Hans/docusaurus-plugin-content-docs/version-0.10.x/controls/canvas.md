@@ -3,6 +3,8 @@ id: canvas
 title: Canvas
 ---
 
+import CanvasChildOverlapScreenshot from '/img/controls/canvas/layout-panel-canvas.png';
+
 The `Canvas` control is a `Panel` which lays out its children by explicit coordinates.
 
 You specify the positions of individual child elements by setting the `Canvas.Left` and `Canvas.Top` attached properties on each element.
@@ -24,11 +26,7 @@ Here's an example of a Canvas in XAML.
 
 The result looks like this.
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/canvas/layout-panel-canvas.png" />
-  </div>
-
+<img className="center" src={CanvasChildOverlapScreenshot} alt="" />
 
 Use the Canvas panel with discretion. While it's convenient to be able to precisely control positions of elements in UI for some scenarios, a fixed positioned layout panel causes that area of your UI to be less adaptive to overall app window size changes.
 

@@ -3,6 +3,16 @@ id: developer-tools
 title: Developer Tools
 ---
 
+import DevToolsOverviewScreenshot from '/img/getting-started/developer-tools/image (23).png';
+import DevToolsPropertiesScreenshot from '/img/getting-started/developer-tools/image (26).png';
+import DevToolsLayoutScreenshot from '/img/getting-started/developer-tools/image (24) (1) (1).png';
+import DevToolsStylesScreenshot from '/img/getting-started/developer-tools/image (27).png';
+import DevToolsOverriddenStylesScreenshot from '/img/getting-started/developer-tools/image (28).png';
+import DevToolsSetterContextMenuScreenshot from '/img/getting-started/developer-tools/image (25).png';
+import DevToolsEventsScreenshot from '/img/getting-started/developer-tools/image (29).png';
+import DevToolsChangePropertyScreenshot from '/img/getting-started/developer-tools/devtools-change-property.gif';
+import DevToolsChangeLayoutScreenshot from '/img/getting-started/developer-tools/devtools-change-layout.gif';
+
 # Developer Tools
 
 Avalonia has an inbuilt DevTools window which is enabled by calling the attached `AttachDevTools()` method in a `Window` constructor. The default templates have this enabled when the program is compiled in `DEBUG` mode:
@@ -45,9 +55,7 @@ dotnet add package Avalonia.Diagnostics --version 0.10.0
 
 :::
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/image (23).png" />
-  </div>
+<img className="center" src={DevToolsOverviewScreenshot} alt="" />
 
 There is a known issue when running under .NET core 2.1 that pressing F12 will cause the program to quit. In this case, either switch to .NET core 2.0 or 3.0+ or change the open gesture to something different, such as `Ctrl+F12`.
 
@@ -66,9 +74,7 @@ Allows for quickly checking and editing properties of the control. One can also 
 | Type     | Type of the current value     |
 | Priority | Priority of the value         |
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/image (26).png" />
-  </div>
+<img className="center" src={DevToolsPropertiesScreenshot} alt="" />
 
 ### Layout
 
@@ -79,9 +85,7 @@ Control size and size constraints are also shown.
 If `Width` or `Height` are underlined that means there is an active constraint. Hover over the value to see a tooltip containing relevant information.
 :::
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/image (24) (1) (1).png" />
-  </div>
+<img className="center" src={DevToolsLayoutScreenshot} alt="" />
 
 ### Styles
 
@@ -96,24 +100,18 @@ If setter value is bound to a resource it will be indicated by a circle followed
 :::
 
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/image (27).png" />
-  </div>
+<img className="center" src={DevToolsStylesScreenshot} alt="" />
 
 :::info
 If given value has a strikethrough it means that it is being overridden by a value in style with higher priority.
 :::
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/image (28).png" />
-  </div>
+<img className="center" src={DevToolsOverriddenStylesScreenshot} alt="" />
 
 Setters have a context menu that allows for quickly copying names and values to the clipboard.
 
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/image (25).png" />
-  </div>
+<img className="center" src={DevToolsSetterContextMenuScreenshot} alt="" />
 
 ## Events
 
@@ -126,9 +124,7 @@ Dotted underline under event name or control type indicates that quick navigatio
 * Double clicking a control type (and/or name) will navigate to the visual tree tab and select said control.
 :::
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/image (29).png" />
-  </div>
+<img className="center" src={DevToolsEventsScreenshot} alt="" />
 
 ## Console
 
@@ -151,12 +147,8 @@ The console can be shown using the "View" → "Console" menu. The console implem
 
 ### Changing a property value
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/devtools-change-property.gif" />
-  </div>
+<img className="center" src={DevToolsChangePropertyScreenshot} alt="" />
 
 ### Changing layout properties
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/developer-tools/devtools-change-layout.gif" />
-  </div>
+<img className="center" src={DevToolsChangeLayoutScreenshot} alt="" />

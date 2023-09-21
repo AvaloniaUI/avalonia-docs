@@ -6,6 +6,9 @@ title: DatePicker
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import DatePickerSelectedDateScreenshot from '/img/controls/datepicker/selected-date.png';
+import DatePickerUnsetScreenshot from '/img/controls/datepicker/no-date.png';
+
 The `DatePicker` control allows the user to pick a date value.
 
 ## Examples
@@ -37,9 +40,7 @@ DatePicker birthDatePicker = new DatePicker();
 
 Use a `DatePicker` to let a user enter a date value. The user picks the date using [ComboBox](combobox.md) selection for month, day, and year values. You can customize the `DatePicker` in various ways to suit your app.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/datepicker/selected-date.png" alt="A date picker with a date selected." />
-  </div>
+<img className="center" src={DatePickerSelectedDateScreenshot} alt="A date picker with a date selected." />
 
 ### Formatting the date picker
 
@@ -53,9 +54,7 @@ The date picker control has both `Date` / `DateChanged` and `SelectedDate` / `Se
 
 The value of `SelectedDate` is used to populate the date picker and is `null` by default. If `SelectedDate` is `null`, the `Date` property is set to 12/31/1600; otherwise, the `Date` value is synchronized with the `SelectedDate` value. When `SelectedDate` is `null`, the picker is 'unset' and shows the field names instead of a date.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/datepicker/no-date.png" alt="A date picker with no date selected." />
-  </div>
+<img className="center" src={DatePickerUnsetScreenshot} alt="A date picker with no date selected." />
 
 To use the date value in your app, you typically use a data binding to the `SelectedDate` property, or handle the `SelectedDateChanged` event.
 

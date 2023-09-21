@@ -6,6 +6,8 @@ title: Page Transitions
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import CustomPageTransitionScreenshot from '/img/animations/page-transitions/TransitioningContentControl_03.webp';
+
 `PageTransitions` are used to render a transition between two views, for example in a [Carousel](../controls/carousel) or [TransitioningContentControl](../controls/TransitioningContentControl)
 
 :::warning
@@ -270,9 +272,7 @@ public class CustomTransition : IPageTransition
 }
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/animations/page-transitions/TransitioningContentControl_03.webp" alt="Custom Transition Example" />
-  </div>
+<img className="center" src={CustomPageTransitionScreenshot} alt=''/>
 
 #### Source code
 [IPageTransition.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/IPageTransition.cs)

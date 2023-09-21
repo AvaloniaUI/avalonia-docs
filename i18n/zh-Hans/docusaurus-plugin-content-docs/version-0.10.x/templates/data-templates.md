@@ -3,6 +3,11 @@ id: data-templates
 title: Data Templates
 ---
 
+import ControlContentButtonScreenshot from '/img/templates/data-templates/hello-world-button.png';
+import ControlContentStringScreenshot from '/img/templates/data-templates/hello-world-string.png';
+import ControlContentStudentNoTemplateScreenshot from '/img/templates/data-templates/student-no-datatemplate.png';
+import ControlContentStudentScreenshot from '/img/templates/data-templates/student-first-last-name (1) (1) (1) (1) (1).png';
+
 Many controls have a `Content` property, such as [`ContentControl.Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756). `Window` inherits from [`ContentControl`](../controls/contentcontrol), so lets use that as an example. You're probably familiar with what happens when you put a control in the `Window.Content` property - the window displays the control:
 
 ```markup
@@ -15,10 +20,7 @@ Many controls have a `Content` property, such as [`ContentControl.Content`](http
 </Window>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/templates/data-templates/hello-world-button.png" alt="Hello World button" />
-  </div>
-
+<img className="center" src={ControlContentButtonScreenshot} alt="Hello World button" />
 
 Similarly if you put a string as the window content, the window will display the string:
 
@@ -29,9 +31,7 @@ Similarly if you put a string as the window content, the window will display the
 </Window>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/templates/data-templates/hello-world-string.png" alt="Hello World string" />
-  </div>
+<img className="center" src={ControlContentStringScreenshot} alt="Hello World string" />
 
 But what happens if you try to display an object as the window content?
 
@@ -60,9 +60,7 @@ namespace Example
 </Window>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/templates/data-templates/student-no-datatemplate.png" alt="Student without DataTemplate" />
-  </div>
+<img className="center" src={ControlContentStudentNoTemplateScreenshot} alt="Student without DataTemplate" />
 
 Not very helpful. That's because Avalonia doesn't know _how_ to display an object of type `Student` - because it's not a control it falls back to just calling `.ToString()` on the object. We can tell Avalonia how to display non-control objects by defining a data template.
 
@@ -89,10 +87,7 @@ The easiest way to do this on `Window` (and any control that inherits from `Cont
 </Window>
 ```
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/templates/data-templates/student-first-last-name (1) (1) (1) (1) (1).png.png" alt="Student first and last name" />
-  </div>
+<img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
 
 The data template for the window content doesn't only come from the `ContentTemplate` property. Every control also has a `DataTemplates` collection into which any number of data templates can be placed. If a control doesn't have a template set locally (e.g. in `ContentTemplate`) then it will look in its `DataTemplates` collection for a matching template. If a match isn't found there it will then go on to search its parent's `DataTemplates`, then its grandparent's, and so on until it reaches the `Window`. If it _still_ hasn't found a match it will then look in `App.xaml`/`App.axaml` for a matching `DataTemplate` and finally when all those options have been exhausted it will simply call `.ToString()` on the object.
 

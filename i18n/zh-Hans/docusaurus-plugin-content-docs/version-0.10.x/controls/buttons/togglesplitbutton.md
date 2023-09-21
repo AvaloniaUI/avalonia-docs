@@ -3,6 +3,11 @@ id: togglesplitbutton
 title: ToggleSplitButton
 ---
 
+import ToggleSplitButtonClosedUncheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_unchecked.png';
+import ToggleSplitButtonClosedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_checked.png';
+import ToggleSplitButtonOpenedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_opened_checked.png';
+import ToggleSplitButtonTextListScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_TextListExample.png';
+
 The `ToggleSplitButton` functions as a [`ToggleButton`](togglebutton) with primary and secondary parts that can each be pressed separately. The primary part behaves like a normal `ToggleButton` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 
 :::info
@@ -66,21 +71,15 @@ Pressing a configuration in the `Flyout` should either (1) turn on the feature w
 </ToggleSplitButton>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_unchecked.png" alt="Decription" />
-  </div>
+<img className="center" src={ToggleSplitButtonClosedUncheckedScreenshot} alt="" />
 
 *SplitButton (Flyout closed, unchecked)*
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_checked.png" alt="Decription" />
-  </div>
+<img className="center" src={ToggleSplitButtonClosedCheckedScreenshot} alt="" />
 
 *SplitButton (Flyout closed, checked)*
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/togglesplitbutton/ToggleSplitButton_opened_checked.png" alt="Decription" />
-  </div>
+<img className="center" src={ToggleSplitButtonOpenedCheckedScreenshot} alt="" />
 
 *SplitButton (Flyout opened, checked)*
 
@@ -122,10 +121,6 @@ Continuing the text editor example from `SplitButton`, a common use case of the 
 </ToggleSplitButton>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/togglesplitbutton/ToggleSplitButton_TextListExample.png" alt="Decription" />
-  </div>
-
+<img className="center" src={ToggleSplitButtonTextListScreenshot} alt="" />
 
 *Sample of ToggleSplitButton for toggle text lists on and off and selecting the list format*
-
