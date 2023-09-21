@@ -3,6 +3,11 @@ id: textbox
 title: TextBox
 ---
 
+import TextBoxSingleLineScreenshot from '/img/controls/textbox/textbox_basic.png';
+import TextBoxPasswordScreenshot from '/img/controls/textbox/textbox_password.png';
+import TextBoxWatermarkScreenshot from '/img/controls/textbox/textbox_watermark.png';
+import TextBoxMultilineScreenshot from '/img/controls/textbox/textbox_multiline.png';
+
 The `TextBox` control is an editable text field where a user can input text.
 
 ## Reference
@@ -33,10 +38,7 @@ The `TextBox` control is an editable text field where a user can input text.
 
 produces the following output in **Windows 10**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/textbox/textbox_basic.png"  />
-  </div>
-
+<img className="center" src={TextBoxSingleLineScreenshot} alt="" />
 
 ### Password input TextBox
 
@@ -56,9 +58,7 @@ produces the following output in **Windows 10**
 
 produces the following output in **Windows 10** when text is input
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/textbox/textbox_password.png"  />
-  </div>
+<img className="center" src={TextBoxPasswordScreenshot} alt="" />
 
 When using the Fluent theme, you can apply the style class, `revealPasswordButton`, and the TextBox will provide an eye 👁 glyph for the user to show the plane text temporally. Please note, the `TextBox` may be written to but not copied from.
 
@@ -86,10 +86,7 @@ Avalonia can show a "watermark" in a `TextBox`, which is a piece of text that is
 
 produces the following output in **Windows 10**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/textbox/textbox_watermark.png"  />
-  </div>
-
+<img className="center" src={TextBoxWatermarkScreenshot} alt="" />
 
 ### Multiline TextBox
 
@@ -109,9 +106,7 @@ produces the following output in **Windows 10**
 
 produces the following output in **Windows 10** when text is input
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/textbox/textbox_multiline.png"  />
-  </div>
+<img className="center" src={TextBoxMultilineScreenshot} alt="" />
 
 ### TextInput Event Handling
 

@@ -3,6 +3,10 @@ id: add-content-to-dialog
 title: Add Content to Dialog 
 ---
 
+import MusicStoreMockSearchScreenshot from '/img/tutorials/music-store-app/add-content-to-dialog/text-list.png';
+import MusicStoreBeforeWrapPanelScreenshot from '/img/tutorials/music-store-app/add-content-to-dialog/image-20210310010932979.png';
+import MusicStoreWrapPanelScreenshot from '/img/tutorials/music-store-app/add-content-to-dialog/image-20210310011526700.png';
+
 ## Adding Content to the Dialog
 
 Inside the dialog we would like the user to search for albums, and then select an album to buy.
@@ -275,10 +279,7 @@ Your `MusicStoreWindow.axaml` should look like this.
 
 Run the application:
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/add-content-to-dialog/text-list.png" />
-  </div>
+<img className="center" src={MusicStoreMockSearchScreenshot} alt="" />
 
 Our items are showing in the List... but not very visual.
 
@@ -333,9 +334,7 @@ We shall come back to the `Bindings` in a moment, for now lets run the applicati
 
 As can be seen the albums are displayed vertically. However it would be nice to have them horizontally and wrap around.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/add-content-to-dialog/image-20210310010932979.png" />
-  </div>
+<img className="center" src={MusicStoreBeforeWrapPanelScreenshot} alt="" />
 
 Luckily `ListBox` provides a solution to this with something called `ItemsPanelTemplate`. By default the `ListBox` has its `ItemPanel` property set to an `ItemsPanelTemplate` which contains a `StackPanel`, we can change this to a `WrapPanel` like so.
 
@@ -351,9 +350,7 @@ Luckily `ListBox` provides a solution to this with something called `ItemsPanelT
 
 Now when we run the application we get:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/add-content-to-dialog/image-20210310011526700.png" />
-  </div>
+<img className="center" src={MusicStoreWrapPanelScreenshot} alt="" />
 
 As our list gets more items, that will wrap around onto the next line, and the user will be able to scroll.
 

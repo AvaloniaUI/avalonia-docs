@@ -1,5 +1,8 @@
 # Music Store App
 
+import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/image-20210310184538120.png';
+import MusicStoreMvvmDiagram from '/img/tutorials/music-store-app/mvvm.png';
+
 :::info
 The completed project can be found at [https://github.com/AvaloniaUI/Avalonia.MusicStore](https://github.com/AvaloniaUI/Avalonia.MusicStore).
 
@@ -12,10 +15,7 @@ This guide has instructions for Rider on macOS, however the steps will be almost
 
 Our livestream assumes some knowledge of [XAML](../../guides/basics/introduction-to-xaml.md), [MVVM ](../../guides/basics/mvvm.md)development, however this guide should fill in the gaps for beginners.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/image-20210310184538120.png" />
-  </div>
-
+<img className="center" src={MusicStoreFinishedAppScreenshot} alt="" />
 
 ## A little background to Avalonia
 
@@ -39,9 +39,7 @@ MVVM is simply a way to enforce [Separation of concerns](https://en.wikipedia.or
 
 Following the MVVM approach will alleviate these difficulties and help keep your UI code scalable.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/mvvm.png" />
-  </div>
+<img className="center" src={MusicStoreMvvmDiagram} alt="" />
 
 **How does MVVM work?**
 

@@ -3,6 +3,10 @@ id: add-and-layout-controls
 title: Add and Layout Controls
 ---
 
+import MusicStoreBuyButtonScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/buy-button.png';
+import MusicStoreAddStylesScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/add-styles.png';
+import MusicStorePrettyButtonScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/pretty-button.png';
+
 ## Add and Layout some Controls
 
 Let's start by adding a `Button` to the `MainWindow`. The button will allow the `user` to purchase music in order to add to their collection.
@@ -60,9 +64,7 @@ public class MainWindowViewModel : ViewModelBase
 
 Pressing the `Debug Button` again to run the program we can see we have a button and when clicked setting a breakpoint inside the `BuyMusicCommand` code we can see that the code is executed when it's hit.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/add-and-layout-controls/buy-button.png" alt="Buy Button" />
-  </div>
+<img className="center" src={MusicStoreBuyButtonScreenshot} alt="Buy Button" />
 
 Let's position the button to the top right of the screen and make it look a bit nicer.
 
@@ -94,9 +96,7 @@ Let's create a file just for Icons.
 
 In Rider right click on the project and select `Add` → `Avalonia Styles`
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/add-and-layout-controls/add-styles.png" alt="Add Styles" />
-  </div>
+<img className="center" src={MusicStoreAddStylesScreenshot} alt="Add Styles" />
 
 Enter the name `Icons` when prompted and press `Enter`.
 
@@ -156,6 +156,4 @@ Return to `MainWindow.axaml`, we can add the Icon to the Button like so...
 
 Running the application we now have a nice button.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/add-and-layout-controls/pretty-button.png" alt="Pretty Button" />
-  </div>
+<img className="center" src={MusicStorePrettyButtonScreenshot} alt="Pretty Button" />

@@ -3,6 +3,12 @@ id: release-process
 title: Release Process
 ---
 
+import ReleaseGitTreeScreenshot from '/img/guides/developer-guides/release-process/image (4).png';
+import ReleasePipelineScreenshot from '/img/guides/developer-guides/release-process/image (1).png';
+import ReleaseBranchScreenshot from '/img/guides/developer-guides/release-process/image (11).png';
+import ReleaseNugetBadgeScreenshot from '/img/guides/developer-guides/release-process/image (17) (1) (1) (1).png';
+import ReleaseDeployScreenshot from '/img/guides/developer-guides/release-process/image (16).png';
+
 * Create a branch named `release/0.10.2` for example. This branch should be level with the `master` commit that the release will be based on.
 * Update the version number in the file `SharedVersion.props` i.e. `<Version>0.10.2</Version>`.
 * Push the release branch.
@@ -11,10 +17,7 @@ If this is the first release of a major version change, i.e. `0.9.0` or `0.10.0`
 
 The git tree should now look like this:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/developer-guides/release-process/image (4).png"/>
-  </div>
-
+<img className="center" src={ReleaseGitTreeScreenshot} alt="" />
 
 * Now login at `dev.azure.com` to access the azure pipelines. Wait for the CI to finish the build.
 * The package for `0.10.2` should now be on the `avalonia-all` nuget feed. You should run a due diligence test on this build to ensure you are happy with the release and the packages work.&#x20;
@@ -25,25 +28,17 @@ Don't assume the Nuget packages will work just because master was working. In th
 
 * Now click on "Releases" and select "Avalonia (master / release)" pipeline as shown below.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/developer-guides/release-process/image (1).png"/>
-  </div>
+<img className="center" src={ReleasePipelineScreenshot} alt="" />
 
 * On the release for your release branch `release/0.10.2` click on the badge for "Nuget Release"
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/developer-guides/release-process/image (11).png"/>
-  </div>
+<img className="center" src={ReleaseBranchScreenshot} alt="" />
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/developer-guides/release-process/image (17) (1) (1) (1).png"/>
-  </div>
+<img className="center" src={ReleaseNugetBadgeScreenshot} alt="" />
 
 * Then click on `Deploy`.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/developer-guides/release-process/image (16).png"/>
-  </div>
+<img className="center" src={ReleaseDeployScreenshot} alt="" />
 
 :::info
 At this point the packages will deploy to Nuget, it can take between 10 and 20 minutes for them to be indexed and publicly available. [https://www.nuget.org/packages/Avalonia/](https://www.nuget.org/packages/Avalonia/)

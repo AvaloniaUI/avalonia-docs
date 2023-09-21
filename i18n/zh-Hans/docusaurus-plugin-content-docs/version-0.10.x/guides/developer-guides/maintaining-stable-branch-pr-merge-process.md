@@ -3,6 +3,9 @@ id: maintaining-stable-branch-pr-merge-process
 title: Maintaining Stable Branch
 ---
 
+import NewFeatureMasterMergeScreenshot from '/img/guides/developer-guides/maintaining-stable-branch-pr-merge-process/image (6).png';
+import NewFeatureBackportScreenshot from '/img/guides/developer-guides/maintaining-stable-branch-pr-merge-process/image (13).png';
+
 :::warning
 This Process MUST be followed during any period that `master` branch is allowing breaking changes.
 :::
@@ -24,9 +27,7 @@ Provided the criteria are met:
 
 At this point the git tree should look similar to this.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/developer-guides/maintaining-stable-branch-pr-merge-process/image (6).png" />
-  </div>
+<img className="center" src={NewFeatureMasterMergeScreenshot} alt="" />
 
 Now we need to get the new PR merged into the stable branch.
 
@@ -39,8 +40,6 @@ Pay careful attention here, we don't just merge into the stable branch!
 
 The git tree should look like this now.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/developer-guides/maintaining-stable-branch-pr-merge-process/image (13).png" />
-  </div>
+<img className="center" src={NewFeatureBackportScreenshot} alt="" />
 
 Please also use the `backport-candidate` and `backported 0.10.x` labels on the PRs themselves.

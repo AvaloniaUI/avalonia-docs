@@ -3,6 +3,8 @@ id: mvvm
 title: MVVM Architecture
 ---
 
+import MvvmArchitectureDiagram from '/img/guides/basics/mvvm/mvvm.png';
+
 The Model-View-ViewModel pattern (MVVM) is a common way of structuring a UI application. It takes advantage of Avalonia's [binding](../../data-binding) system to separate the logic of the application from the display of the application.
 
 MVVM might be overkill for a simple application, but as applications grow over time, they usually reach a point where tracking logic in [code-behind](code-behind) becomes problematic for two main reasons:
@@ -28,9 +30,7 @@ When we talk about the MVVM pattern, the most important parts are the **View** l
 
 One way to imagine an MVVM application is to imagine these two layers as hovering over one another, connected by bindings:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/basics/mvvm/mvvm.png" alt="Diagram of MVVM" />
-  </div>
+<img className="center" src={MvvmArchitectureDiagram} alt="" />
 
 The above example has, at the View layer:
 

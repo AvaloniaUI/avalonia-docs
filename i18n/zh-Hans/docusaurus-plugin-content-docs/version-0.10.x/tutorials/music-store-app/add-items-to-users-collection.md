@@ -3,6 +3,8 @@ id: add-items-to-users-collection
 title: Add Items to User Collection
 ---
 
+import MusicStoreAddedAlbumsScreenshot from '/img/tutorials/music-store-app/add-items-to-users-collection/image-20210310175949319.png';
+
 ## Adding Albums to the Users Collection
 
 Ok so now the user can find albums to purchase, it would be nice if the user could see which albums are in their collection. To do this we can add a similar UI to the MainWindow.
@@ -112,8 +114,6 @@ Notice we check the result for `null`, this is because the `user` may have cance
 
 Lets run the program and see if it works.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/add-items-to-users-collection/image-20210310175949319.png" />
-  </div>
+<img className="center" src={MusicStoreAddedAlbumsScreenshot} alt="" />
 
 For the finishing touch we simply need to add persistence to the application.

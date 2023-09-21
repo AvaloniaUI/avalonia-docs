@@ -3,6 +3,9 @@ id: opening-a-dialog
 title: Opening a Dialog
 ---
 
+import MusicStoreAddWindowScreenshot from '/img/tutorials/music-store-app/opening-a-dialog/add-window.png';
+import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/opening-a-dialog/dialog-opened.png';
+
 ## Opening a Dialog
 
 Opening a dialog is an advanced topic, if you are very new to Avalonia, try not to get too stuck on this section, you may want to just copy in the code and move on. Then come back once you have a better understanding of some of the basics.
@@ -13,9 +16,7 @@ First we need to add a Window to the project, right click on the `Views` folder 
 
 When prompted name this MusicStoreWindow and press the `Enter` key.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/opening-a-dialog/add-window.png" alt="Add Window" />
-  </div>
+<img className="center" src={MusicStoreAddWindowScreenshot} alt="Add Window" />
 
 This will add the following code:
 
@@ -196,8 +197,6 @@ Also set `Width` and `Height` properties of the `MusicStoreWindows` `<Window>` e
 
 Now run the application and click the Store button.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/opening-a-dialog/dialog-opened.png" alt="Dialog opened" />
-  </div>
+<img className="center" src={MusicStoreDialogOpenedScreenshot} alt="Dialog opened" />
 
 As you can see the dialog window is opened perfectly centered inside the MainWindow.

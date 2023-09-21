@@ -3,6 +3,9 @@ id: transitioningcontentcontrol
 title: TransitioningContentControl
 ---
 
+import TransitioningContentControlFadeScreenshot from '/img/controls/transitioningcontentcontrol/TransitioningContentControl_01.webp';
+import TransitioningContentControlSlideScreenshot from '/img/controls/transitioningcontentcontrol/TransitioningContentControl_02.webp';
+
 ## Common Properties
 
 | Property          | Description                                                                                                                                 |
@@ -33,10 +36,7 @@ Let's assume we have a collection of different images and we want to show them i
 </TransitioningContentControl>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/transitioningcontentcontrol/TransitioningContentControl_01.webp" />
-  </div>
-
+<img className="center" src={TransitioningContentControlFadeScreenshot} alt="" />
 
 ## Changing the PageTransition
 
@@ -57,9 +57,7 @@ In the sample below we will change the [PageTransition](../animations/page-trans
 </TransitioningContentControl>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/transitioningcontentcontrol/TransitioningContentControl_02.webp" />
-  </div>
+<img className="center" src={TransitioningContentControlSlideScreenshot} alt="" />
 
 ## Disable the PageTransition
 

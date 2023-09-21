@@ -1,14 +1,14 @@
 # ToDo List App
 
+import ToDoFinishedAppScreenshot from '/img/tutorials/todo-list-app/image (14).png';
+
 In this tutorial we're going to be creating a simple TODO application in Avalonia using the Model-View-ViewModel \(MVVM\) pattern.
 
 :::info
 You can find the code for the completed application [here](https://github.com/grokys/todo-tutorial).
 :::
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/image%20%2814%29.png" alt="Decription" />
-  </div>
+<img className="center" src={ToDoFinishedAppScreenshot} alt="" />
 
 ## Model-View-ViewModel \(MVVM\)
 

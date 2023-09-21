@@ -2,13 +2,13 @@
 description: TUTORIALS
 ---
 
-import MusicStoreFinishedApplicationScreenshot from './images/image-20210310184538120.png'
+import MusicStoreFinishedAppScreenshot from './images/image-20210310184538120.png';
 
 # Music Store App
 
 In this tutorial you will create a desktop app based on the idea of a music store.  The app is highly graphical - it presents images of album covers, and uses semi-transparent 'acrylic' blurred window backgrounds to give a very up-to-date look. By the end of the tutorial, you will be able search the iTunes online list of albums, and select albums for your own list.
 
-<p><img className="image-zoom-medium" src={MusicStoreFinishedApplicationScreenshot} alt="" /></p>
+<p><img className="image-zoom-medium" src={MusicStoreFinishedAppScreenshot} alt="" /></p>
 
 In this tutorial you will use the MVVM pattern with the _ReactiveUI_ framework to manage multiple application windows. Also you will use advanced asynchronous techniques to implement the album search and other features, so that application responsiveness is maintained.
 

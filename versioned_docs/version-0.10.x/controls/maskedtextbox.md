@@ -3,6 +3,9 @@ id: maskedtextbox
 title: MaskedTextBox
 ---
 
+import MaskedTextBoxEmptyScreenshot from '/img/controls/maskedtextbox/maskedtextboxexample1.png';
+import MaskedTextBoxTextEntryScreenshot from '/img/controls/maskedtextbox/maskedtextexample.gif';
+
 The `MaskedTextBox` control is an editable text field where a user can input text.
 
 ## Source code
@@ -27,15 +30,11 @@ The `MaskedTextBox` control is an editable text field where a user can input tex
 
 produces the following output in **Ubuntu**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/maskedtextbox/maskedtextboxexample1.png" />
-  </div>
+<img className="center" src={MaskedTextBoxEmptyScreenshot} alt="" />
 
 and it behaves like so when filled in by user input
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/maskedtextbox/maskedtextexample.gif" />
-  </div>
+<img className="center" src={MaskedTextBoxTextEntryScreenshot} alt="" />
 
 ### Supported Masks
 

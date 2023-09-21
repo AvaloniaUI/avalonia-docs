@@ -3,6 +3,9 @@ id: checkbox
 title: CheckBox
 ---
 
+import CheckBoxTwoStateScreenshot from '/img/controls/checkbox/checkbox_basic.png';
+import CheckBoxThreeStateScreenshot from '/img/controls/checkbox/checkbox_threestate.png';
+
 The `CheckBox` control is a [`ContentControl`](../controls/contentcontrol) which allows user to check an option. It is usually used to display a boolean option where selection is either _checked_ or _unchecked_. But it also supports three state mode where selection is either _checked_, _indeterminate_ or _unchecked_.
 
 ## Common Properties
@@ -39,12 +42,9 @@ The `CheckBox` control is a [`ContentControl`](../controls/contentcontrol) which
 </Window>
 ```
 
-produces following output with **Windows 10**\
+produces following output with **Windows 10**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/checkbox/checkbox_basic.png" alt="Basic checkbox" />
-  </div>
-
+<img className="center" src={CheckBoxTwoStateScreenshot} alt="Basic checkbox" />
 
 ### Three state checkbox
 
@@ -64,8 +64,6 @@ produces following output with **Windows 10**\
 </Window>
 ```
 
-produces following output with **Windows 10**\
+produces following output with **Windows 10**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/checkbox/checkbox_threestate.png" alt="Three state checkbox" />
-  </div>
+<img className="center" src={CheckBoxThreeStateScreenshot} alt="Basic checkbox" />

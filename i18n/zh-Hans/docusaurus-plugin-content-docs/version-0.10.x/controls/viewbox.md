@@ -6,6 +6,14 @@ title: Viewbox
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import ViewboxScaleUniformBothScreenshot from '/img/controls/viewbox/scale-uniform-both.gif';
+import ViewboxScaleUniformFillBothScreenshot from '/img/controls/viewbox/scale-uniformtofill-both.gif';
+import ViewboxScaleFillBothScreenshot from '/img/controls/viewbox/scale-fill-both.gif';
+import ViewboxScaleNoneBothScreenshot from '/img/controls/viewbox/scale-none-both.gif';
+
+import ViewboxScaleUniformUpOnlyScreenshot from '/img/controls/viewbox/scale-uniform-uponly.gif';
+import ViewboxScaleUniformDownOnlyScreenshot from '/img/controls/viewbox/scale-uniform-downonly.gif';
+
 The `Viewbox` is a decorator control which scales its child. It can be used to scale its child to fit the available space.
 
 The `Viewbox` gives its child infinite space in the measure phase. It will constrain either or both sides when arranging it. This depends on the value of the `Stretch`.
@@ -85,7 +93,7 @@ new Viewbox
       <td>
         <p></p>
         <p>
-          <img src="/img/controls/viewbox/scale-uniform-both.gif" alt/>
+          <img src={ViewboxScaleUniformBothScreenshot} alt="" />
         </p>
       </td>
     </tr>
@@ -95,7 +103,7 @@ new Viewbox
       <td>
         <p></p>
         <p>
-          <img src="/img/controls/viewbox/scale-uniformtofill-both.gif" alt/>
+          <img src={ViewboxScaleUniformFillBothScreenshot} alt="" />
         </p>
       </td>
     </tr>
@@ -105,7 +113,7 @@ new Viewbox
       <td>
         <p></p>
         <p>
-          <img src="/img/controls/viewbox/scale-fill-both.gif" alt/>
+          <img src={ViewboxScaleFillBothScreenshot} alt="" />
         </p>
       </td>
     </tr>
@@ -115,7 +123,7 @@ new Viewbox
       <td>
         <p></p>
         <p>
-          <img src="/img/controls/viewbox/scale-none-both.gif" alt/>
+          <img src={ViewboxScaleNoneBothScreenshot} alt="" />
         </p>
       </td>
     </tr>
@@ -135,7 +143,7 @@ new Viewbox
       <td><code>Both</code>
       </td>
       <td>
-        <img src="/img/controls/viewbox/scale-uniform-both.gif" alt/>
+        <img src={ViewboxScaleUniformBothScreenshot} alt="" />
       </td>
     </tr>
     <tr>
@@ -144,7 +152,7 @@ new Viewbox
       <td >
         <p></p>
         <p>
-          <img src="/img/controls/viewbox/scale-uniform-uponly.gif" alt/>
+          <img src={ViewboxScaleUniformUpOnlyScreenshot} alt="" />
         </p>
       </td>
     </tr>
@@ -154,7 +162,7 @@ new Viewbox
       <td>
         <p></p>
         <p>
-          <img src="/img/controls/viewbox/scale-uniform-downonly.gif" alt/>
+          <img src={ViewboxScaleUniformDownOnlyScreenshot} alt="" />
         </p>
       </td>
     </tr>

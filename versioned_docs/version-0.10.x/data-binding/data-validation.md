@@ -3,6 +3,8 @@ id: data-validation
 title: Data Validation
 ---
 
+import CustomValidationTooltipScreenshot from '/img/data-binding/data-validation/CustomValidationTooltip.png';
+
 Avalonia offers different data validation options. In this section we will show you how you can validate the `Properties` of your `ViewModel` and how you can style the displayed error message. 
 
 ## Validating a property
@@ -122,10 +124,7 @@ To display the validation messages, Avalonia has a control called [`DataValidati
 </Style>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/data-binding/data-validation/CustomValidationTooltip.png" alt="custom validation style" />
-  </div>
-
+<img className="center" src={CustomValidationTooltipScreenshot} alt="custom validation style" />
 
 **Custom validation style**
 

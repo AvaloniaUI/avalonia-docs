@@ -3,11 +3,11 @@ id: code-behind
 title: Code Behind
 ---
 
+import VsCodeBehindScreenshot from '/img/guides/basics/code-behind/codebehind-vs.png';
+
 [Window](../../controls/window) and [UserControl](../../controls/usercontrol) files also have an associated _code-behind_ file which usually has the extension `.xaml.cs` or `.axaml.cs` and may be displayed collapsed under the XAML file in your editor. Below you can see a `MainWindow.xaml` file along with its markdown file `MainWindow.xaml.cs` in Visual Studio:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/basics/code-behind/codebehind-vs.png" alt="Code-behind in Visual Studio" />
-  </div>
+<img className="center" src={VsCodeBehindScreenshot} alt="Code-behind in Visual Studio" />
 
 The code-behind file by default defines a .NET class with the same name as your XAML file, e.g.
 

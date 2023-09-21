@@ -3,6 +3,9 @@ id: button
 title: Button
 ---
 
+import ButtonBasicScreenshot from '/img/controls/buttons/button/button_basic.png';
+import ButtonColoredScreenshot from '/img/controls/buttons/button/image.png';
+
 The `Button` control is a [`ContentControl`](../contentcontrol) which reacts to pointer presses.
 
 A button notifies clicks by raising the [`Click`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) event. A click is distinct from a `PointerDown` event in that it is raised by default when the button is pressed and then released (although this behavior can be changed by setting the [`ClickMode`](http://reference.avaloniaui.net/api/Avalonia.Controls/ClickMode/) property).
@@ -55,17 +58,14 @@ The Button control's full documentation can be found [here](http://reference.ava
         x:Class="AvaloniaAppTemplate.MainWindow"
         Title="AvaloniaAppTemplate">
 	<StackPanel>
-		<Button Width="160" >My Button</Button>
+		<Button Width="160">My Button</Button>
 	</StackPanel>
 </Window>
 ```
 
-produces following output with **Windows 10**\
+produces following output with **Windows 10**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/button/_basic (1).png" alt="Basic button" />
-  </div>
-
+<img className="center" src={ButtonBasicScreenshot} alt="Basic button" />
 
 ### Colored button
 
@@ -83,11 +83,9 @@ produces following output with **Windows 10**\
 </Window>
 ```
 
-produces following output with **Windows 10**\
+produces following output with **Windows 10**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/button/image (18) (1).png" alt="Colored button" />
-  </div>
+<img className="center" src={ButtonColoredScreenshot} alt="Colored button" />
 
 ### Play button
 

@@ -3,6 +3,8 @@ info: load-data-at-startup
 title: Load data at Startup
 ---
 
+import MusicStoreLoadedDataStartScreenshot from '/img/tutorials/music-store-app/load-data-at-startup/image-20210310184202271.png';
+
 ## Loading Albums on Startup
 
 Our backend code provides a nice way to load the users collection from disk.
@@ -38,6 +40,4 @@ As you can see it firstly uses the business logic apis to load the list of `Albu
 
 Note we then re-iterate over the `Albums` and asynchronously load each cover. Note that we do this after adding all the albums to the list, as its more important to quickly show the user all the albums available and then load the images.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/load-data-at-startup/image-20210310184202271.png" />
-  </div>
+<img className="center" src={MusicStoreLoadedDataStartScreenshot} alt="" />

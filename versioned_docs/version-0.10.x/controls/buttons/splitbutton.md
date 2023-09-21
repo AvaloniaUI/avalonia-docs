@@ -3,6 +3,11 @@ id: splitbutton
 title: SplitButton
 ---
 
+import SplitButtonClosedScreenshot from '/img/controls/buttons/splitbutton/SplitButtonClosed.png';
+import SplitButtonOpenedScreenshot from '/img/controls/buttons/splitbutton/SplitButtonOpened.png';
+import SplitButtonColorPickerScreenshot from '/img/controls/buttons/splitbutton/SplitButton_ColorPickerSample.png';
+import SplitButtonExportButtonScreenshot from '/img/controls/buttons/splitbutton/SplitButton_ExportButtonSample.png';
+
 The `SplitButton` functions as a [`Button`](button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 
 
@@ -58,16 +63,11 @@ The user-selection action should be invoked immediately when pressing either the
 </SplitButton>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/splitbutton/SplitButtonClosed.png" />
-  </div>
-
+<img className="center" src={SplitButtonClosedScreenshot} alt="" />
 
 *SplitButton (Flyout closed)*
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/splitbutton/SplitButtonOpened.png" />
-  </div>
+<img className="center" src={SplitButtonOpenedScreenshot} alt="" />
 
 *SplitButton (Flyout opened)*
 
@@ -106,9 +106,7 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 </SplitButton>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/splitbutton/SplitButton_ColorPickerSample.png" />
-  </div>
+<img className="center" src={SplitButtonColorPickerScreenshot} alt="" />
   
 *Sample of SplitButton for color selection*
 
@@ -133,8 +131,6 @@ Another common example of the `SplitButton` could be an export button. When the 
 </SplitButton>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/buttons/splitbutton/SplitButton_ExportButtonSample.png" />
-  </div>
+<img className="center" src={SplitButtonExportButtonScreenshot} alt="" />
 
 *Sample of a SplitButton with different export options*

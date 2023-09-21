@@ -3,6 +3,8 @@ id: numericupdown
 title: NumericUpDown
 ---
 
+import NumericUpDownBasicScreenshot from '/img/controls/numericupdown/numericupdown_basic.png';
+
 The `NumericUpDown` is an editable numeric input field.
 
 The control has a up and down button spinner attached, used to increment and decrement the value in the input field. The value can also be incremented or decremented using the arrow keys or the mouse wheel when the control is selected.
@@ -25,11 +27,9 @@ The value stored in the `NumericUpDown` is a double.
 <NumericUpDown Value="10" Width="100"/>
 ```
 
-produces the following output on **Linux**\
+produces the following output on **Linux**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/numericupdown/numericupdown_basic.png" alt="Basic NumericUpDown" />
-  </div>
+<img className="center" src={NumericUpDownBasicScreenshot} alt="Basic NumericUpDown" />
 
 ### NumericUpDown with a changed increment and bounds
 

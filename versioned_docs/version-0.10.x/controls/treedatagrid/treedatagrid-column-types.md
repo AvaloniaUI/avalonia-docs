@@ -19,14 +19,11 @@ new TextColumn<Person, string>("First Name", x => x.FirstName)
 
 The first generic parameter here is your model type basically, the place where you want to grab data from. Person in this case. The second generic parameter here is the type of the property where you want to grab data from. In this case, it is a string, it will be used to know exactly which type your property has.
 
-
- <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/treedatagrid/53405089/157456551-dd394781-903a-4c7b-8874-e631e21534a1.png" />
-  </div>
+![](https://user-images.githubusercontent.com/53405089/157456551-dd394781-903a-4c7b-8874-e631e21534a1.png)
 
 This is the signature of the `TextColumn` constructor. There are two most important parameters. The first one will be used to define the column header, usually, it would be a string. In the sample above it is _"First Name"_. The second parameter is an expression to get the value of the property. In the sample above it is _x => x.FirstName_.
 
-**Note**:\
+**Note**:
 The sample above is taken from [this article](https://github.com/AvaloniaUI/Avalonia.Controls.TreeDataGrid/blob/master/docs/get-started-flat.md). If you feel like you need more examples feel free to check it, there is a sample that shows how to use TextColumns and how to run a whole `TreeDataGrid` using them.
 
 ### HierarchicalExpanderColumn
@@ -41,15 +38,13 @@ new HierarchicalExpanderColumn<Person>(new TextColumn<Person, string>("First Nam
 
 `HierarchicalExpanderColumn` has only one generic parameter, it is your model type, same as in `TextColumn`, Person in this case.
 
-Let's take a look at the `HierarchicalExpanderColumn` constructor.&#x20;
+Let's take a look at the `HierarchicalExpanderColumn` constructor.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/treedatagrid/53405089/157536079-fd14f1ed-0a7d-438a-abba-fd56766709a9.png" />
-  </div>
+![](https://user-images.githubusercontent.com/53405089/157536079-fd14f1ed-0a7d-438a-abba-fd56766709a9.png)
 
 The first parameter in the constructor is a nested column, you would usually want to display something besides the expander and that's why you need this parameter. In the sample above, we want to display text and we use `TextColumn` for that. The second parameter is a selector of the child elements, stuff that will be displayed when `Expander` is in the expanded state below the parent element.
 
-**Note**:\
+**Note**:
 The sample above is taken from [this article](https://github.com/AvaloniaUI/Avalonia.Controls.TreeDataGrid/blob/master/docs/get-started-hierarchical.md). If you feel like you need more examples feel free to check it, there is a sample that shows how to use `HierarchicalExpanderColumn` and how to run a whole `TreeDataGrid` using it.
 
 ### TemplateColumn
@@ -66,8 +61,6 @@ new TemplateColumn<Person>(
 
 `TemplateColumn` has only one generic parameter, it is your model type, same as in `TextColumn`, Person in this case. Code above will create a column with header _"Selected"_ and `CheckBox` in each cell.
 
- <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/treedatagrid/53405089/53405089/157664231-8653bce9-f8d6-4fbc-8e78-e3ff93f1ace2.png" />
-  </div>
+![](https://user-images.githubusercontent.com/53405089/157664231-8653bce9-f8d6-4fbc-8e78-e3ff93f1ace2.png)
 
 `TemplateColumn` has only two required parameters. The first one is the column header as everywhere. The second is `IDataTemplate` basically, a template that contains stuff that you want to be displayed in the cells of this column.

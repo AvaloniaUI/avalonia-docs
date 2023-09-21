@@ -3,6 +3,9 @@ id: creating-a-view
 title: Creating a View
 ---
 
+import ToDoViewPreviewerScreenshot from '/img/tutorials/todo-list-app/creating-a-view/creating-a-view-todolistview.png';
+import ToDoViewScreenshot from '/img/tutorials/todo-list-app/creating-a-view/creating-a-view-run.png';
+
 Let's first create a view to display a list of TODO items together with a button to add a new item.
 
 Because this is a first tutorial, we're going to first just populate the view with some hard-coded data. In later steps we'll use the MVVM pattern to populate this view.
@@ -93,9 +96,7 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
 
 If you're using the Visual Studio extension you should see the contents of the control displayed in the previewer after completing a build:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/creating-a-view/creating-a-view-todolistview.png" alt="Designer view" />
-  </div>
+<img className="center" src={ToDoViewPreviewerScreenshot} alt="Designer view" />
 
 ### What does it all mean?
 
@@ -195,8 +196,5 @@ Using the XML namespace we've just declared we now place the `TodoListView` cont
 
 If you now run the application (by pressing `F5` in Visual Studio or executing `dotnet run` in .NET Core) you should see the application running in all its glory:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/creating-a-view/creating-a-view-run.png" alt="The running application" />
-  </div>
-
+<img className="center" src={ToDoViewScreenshot} alt="The running application" />
   
