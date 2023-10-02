@@ -80,7 +80,7 @@ This example shows you how to animate two properties on the same timeline.&#x20;
     <Style Selector="Rectangle.red">
       <Setter Property="Fill" Value="Red"/>
       <Style.Animations>
-        <Animation Duration="0:0:3" RepeatCount="4">
+        <Animation Duration="0:0:3" IterationCount="4">
           <KeyFrame Cue="0%">
             <Setter Property="Opacity" Value="0.0"/>
             <Setter Property="RotateTransform.Angle" Value="0.0"/>
@@ -112,10 +112,10 @@ You can add a delay to the start of an animation by setting the delay attribute 
 
 ## Repeat
 
-You can make an animation repeat for a set number of times, or indefinitely. To repeat for a finite number of iterations set the `RepeatCount` attribute on the animation element like this:
+You can make an animation repeat for a set number of times, or indefinitely. To repeat for a finite number of iterations set the `IterationCount` attribute on the animation element like this:
 
 ```xml
-<Animation RepeatCount="5">
+<Animation IterationCount="5">
     ...
 </Animation>
 ```
@@ -123,7 +123,7 @@ You can make an animation repeat for a set number of times, or indefinitely. To 
 To repeat an animation indefinitely, use the special  `"INFINITE"` value. For example:
 
 ```xml
-<Animation RepeatCount="INFINITE">
+<Animation IterationCount="INFINITE">
     ...
 </Animation>
 ```
@@ -133,7 +133,7 @@ To repeat an animation indefinitely, use the special  `"INFINITE"` value. For ex
 By default an animation plays forward. That is it follows the profile of the easing function from left to right. You can alter this behavior by setting the `PlaybackDirection` attribute on the animation element. For example:
 
 ```xml
-<Animation RepeatCount="9" PlaybackDirection="AlternateReverse">
+<Animation IterationCount="9" PlaybackDirection="AlternateReverse">
     ...
 </Animation>
 ```
@@ -147,7 +147,7 @@ The following table describes the options:
 The fill mode attribute of an animation defines how the properties being set will persist after it runs, or during any gaps between runs. For example:
 
 ```xml
-<Animation RepeatCount="9" FillMode="Backward">
+<Animation IterationCount="9" FillMode="Backward">
     ...
 </Animation>
 ```
