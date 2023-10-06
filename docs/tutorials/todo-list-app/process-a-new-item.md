@@ -50,14 +50,15 @@ namespace ToDoList.ViewModels
                 addItemViewModel.OkCommand,
                 addItemViewModel.CancelCommand.Select(_ => (ToDoItem?)null))
                 .Take(1)
-                .Subscribe(newItem =>
+                .Subscribe(Observer.Create<ToDoItem?>(newItem =>
                 {
                     if (newItem != null)
                     {
-                        ToDoList.ListItems.Add(newItem );
+                        ToDoList.ListItems.Add(newItem);
                     }
+
                     ContentViewModel = ToDoList;
-                });
+                }));
 
             ContentViewModel = addItemViewModel;
         }
@@ -95,14 +96,15 @@ So to combine the output from the different reactive command observable streams,
 You are only interested in the first click of either the OK or cancel buttons; once one of these buttons has been clicked other clicks can be ignored. So the [`Take(1)`](https://reactivex.io/documentation/operators/take.html) method means that only the first item in the observable sequence will be processed.
 
 ```csharp
-.Subscribe(newItem =>
+.Subscribe(Observer.Create<ToDoItem?>(newItem =>
 {
-   if (newItem != null)
-   {
-      ToDoListViewModel.ListItems.Add(newItem);
-   }
-   ContentViewModel = ToDoListViewModel;
-});
+    if (newItem != null)
+    {
+        ToDoList.ListItems.Add(newItem);
+    }
+
+    ContentViewModel = ToDoList;
+}));
 ```
 
 Lastly the code subscribes to the first item the merged observable sequence. The subscribe pulls out the new to do item object, and examines it to see it it is null.
