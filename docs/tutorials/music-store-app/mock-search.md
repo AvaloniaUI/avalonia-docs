@@ -79,6 +79,9 @@ Follow this procedure to add data binding to the view:
 - Add the binding expressions shown:
 
 ```markup
+<UserControl ...
+             xmlns:vm="using:Avalonia.MusicStore.ViewModels"
+             x:DataType="vm:MusicStoreViewModel">
 <DockPanel>
   <StackPanel DockPanel.Dock="Top">
     <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
