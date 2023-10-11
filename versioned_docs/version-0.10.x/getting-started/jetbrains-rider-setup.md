@@ -55,6 +55,8 @@ A new Preferences Screen will open up. Click the `Settings` icon as shown and se
 
 <img className="center" src={RiderConfigurePluginsScreenshot} alt="Button group" />
 
+Click the `+` icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`then click `OK`.
+
 Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install`; accept the warning about Third-Party Plugins; once that's done, click the `Restart IDE` button that appears.
 
 <img className="center" src={RiderPluginInstallScreenshot} alt="Button group" />
