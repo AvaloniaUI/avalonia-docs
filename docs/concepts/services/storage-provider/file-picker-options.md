@@ -33,6 +33,18 @@ Gets or sets an option indicating whether open picker allows users to select mul
 
 Gets or sets the collection of file types that the file open picker displays.
 
+To create a list of file types for the file picker:
+
+```cs
+//This can also be applied for SaveFilePicker.
+var files = await _target.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
+{
+ Title = title,
+//You can add either custom or from the built-in file types. See "Defining custom file types" on how to create a custom one.
+ FileTypeFilter = new[] { ImageAll, FilePickerFileTypes.TextPlain }
+});
+```
+
 ## FilePickerSaveOptions
 
 ### SuggestedFileName
@@ -105,14 +117,3 @@ In general, it is recommended to define as much as possible information in each 
 :::note
 If specific hint is not known, don't set random values or "*.*" wildcard, instead keep this collection null. It will tell the platform to ignore this collection and instead try to use another one.
 :::
-
-To create a list of file types for the file picker:
-
-```cs
-//This can also be applied for SaveFilePicker.
-var files = await _target.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
-{
- Title = title,
- FileTypeFilter = new[] { ImageAll, FilePickerFileTypes.TextPlain }
-});
-```
