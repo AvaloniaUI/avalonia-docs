@@ -106,7 +106,7 @@ In general, it is recommended to define as much as possible information in each 
 If specific hint is not known, don't set random values or "*.*" wildcard, instead keep this collection null. It will tell the platform to ignore this collection and instead try to use another one.
 :::
 
-The custom and the built-in file types are added like this:
+To create a list of file types for the file picker:
 
 ```cs
 //This can also be applied for SaveFilePicker.
