@@ -15,7 +15,7 @@ You will probably use these properties most often:
 
 | Property                | Description                                                                                                                 |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `Value`                 | The value (double).                                                                                                         |
+| `Value`                 | The value (decimal?).                                                                                                         |
 | `Increment`             | The increment used by the button spinner, keyboard and mouse wheel. Default increment is 1.                                 |
 | `Minimum`               | The minimum value allowed.                                                                                                  |
 | `Maximum`               | The maximum value allowed.                                                                                                  |
@@ -37,7 +37,7 @@ This is a basic example of a numeric up-down control. There are no limits to the
 
 <img src={NumericUpDownBasicScreenshot} alt="" />
 
-The value and other properties are doubles; so you can create a custom decimal increment/decrement and range if you need to.
+The value and other properties are nullable decimals; so you can create a custom decimal increment/decrement and range if you need to.
 
 :::info
 Remember to specify a `FormatString` property when you create a custom decimal increment and range.
