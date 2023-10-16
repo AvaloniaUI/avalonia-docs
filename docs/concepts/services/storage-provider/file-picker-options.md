@@ -105,3 +105,14 @@ In general, it is recommended to define as much as possible information in each 
 :::note
 If specific hint is not known, don't set random values or "*.*" wildcard, instead keep this collection null. It will tell the platform to ignore this collection and instead try to use another one.
 :::
+
+The custom and the built-in file types are added like this:
+
+```cs
+//This can also be applied for SaveFilePicker.
+var files = await _target.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
+{
+ Title = title,
+ FileTypeFilter = new[] { ImageAll, FilePickerFileTypes.TextPlain }
+});
+```
