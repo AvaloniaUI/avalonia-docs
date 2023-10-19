@@ -14,7 +14,7 @@ A simple to do list application using the Model View View-Model (MVVM) pattern, 
 * `IObservable<>`
 * `Observable.Merge()` with `Select()`, `Take()`, and `Subscribe()` methods.
 
-This is a very good introduction to the MVVM and _ReactiveUI_ techniques recommended for _Avalonia UI_ programming. Follow the tutorial [here](tutorials/todo-list-app/).
+This is a very good introduction to the MVVM and _ReactiveUI_ techniques recommended for _Avalonia UI_ programming. Follow the tutorial [here](./todo-list-app/).
 
 ## Music Store App
 
@@ -28,4 +28,4 @@ It uses the _JetBrains Rider_ IDE running on macOS, but the steps will be equiva
 
 The app features a highly graphical application using the MVVM pattern, and including how to display a dialog, present images and collections of data, and implement data persistence.
 
-Follow this demonstration [here](tutorials/music-store-app/).
+Follow this demonstration [here](./music-store-app/).
