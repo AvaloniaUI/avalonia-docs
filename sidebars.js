@@ -16,9 +16,13 @@ const sidebars = {
         'get-started/install',
         'get-started/set-up-an-editor',
         {
-          type: 'category',
-          label: 'Test Drive',
-          items: [
+          'type': 'category',
+          'label': 'Test Drive',
+          'link' : {
+            'type' : 'doc',
+            'id': 'get-started/test-drive/index'
+          },
+          'items': [
             'get-started/test-drive/introduction',
             'get-started/test-drive/create-a-project',
             'get-started/test-drive/main-window',
