@@ -82,7 +82,7 @@ This gives you a view which looks like this:
 The new view has a text box control which has three properties for you to review:
 
 * `AcceptsReturn` creates a multi-line text box.
-* `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you have not created yet).
+* `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you created above).
 * `Watermark` causes a placeholder to be displayed when the text box is empty.
 
 On the next page you will learn how to change the view in the main window to display the new item view in place of the to do list view.
