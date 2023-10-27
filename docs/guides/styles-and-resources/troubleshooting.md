@@ -34,7 +34,7 @@ Styles are applied in order of declaration. If there are multiple style files in
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Blue" />
     <Style Property="FontSize" Value="16" />
-</Style>c
+</Style>
 ```
 
 ```markup
