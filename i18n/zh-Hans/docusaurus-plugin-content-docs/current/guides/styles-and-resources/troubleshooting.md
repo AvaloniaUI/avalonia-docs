@@ -34,7 +34,7 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Blue" />
     <Style Property="FontSize" Value="16" />
-</Style>c
+</Style>
 ```
 
 ```markup
