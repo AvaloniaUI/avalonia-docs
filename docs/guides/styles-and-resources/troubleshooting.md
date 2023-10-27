@@ -24,29 +24,23 @@ Check whether you have used a child selector where there are no children to matc
 
 Styles are applied in order of declaration. If there are multiple style files included that target the same control property, the last style included will override the previous ones. For example:
 
-{% code title="Styles2.axaml" %}
 ```markup
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Green" />
 </Style>
 ```
-{% endcode %}
 
-{% code title="Styles1.axaml" %}
 ```markup
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Blue" />
     <Style Property="FontSize" Value="16" />
 </Style>c
 ```
-{% endcode %}
 
-{% code title="App.axaml" %}
 ```markup
 <StyleInclude Source="Style1.axaml" />
 <StyleInclude Source="Style2.axaml" />
 ```
-{% endcode %}
 
 Here styles from file **Styles1.axaml** were applied first, so setters in styles of file **Styles2.axaml** take priority. The resulting TextBlock will have FontSize="16" and Foreground="Green". The same order prioritization happens within style files also.
 
