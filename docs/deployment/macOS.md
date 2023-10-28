@@ -323,9 +323,9 @@ The following steps were modified from [this StackOverflow post](https://stackov
 
 Once notarization is complete, you should be able to distribute your application!
 
-{% hint style="info" %}
+:::info
 If you distribute your app in a `.dmg`, you will want to modify the steps slightly:
-{% endhint %}
+:::
 
 1. Notarize your `.app` as normal \(in a `.zip` file\)
 2. Add your notarized and stapled \(`xcrun stapler`\) app into the DMG \(the DMG now has the notarized/stapled `.app` file inside of it\).
