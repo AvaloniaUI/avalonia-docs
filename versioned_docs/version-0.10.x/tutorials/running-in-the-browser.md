@@ -32,7 +32,7 @@ dotnet new avalonia.xplat
 5. In order to run simply do:
 
 ```bash
-cd WebTest.Web
+cd WebTest.Browser
 dotnet run
 ```
 
