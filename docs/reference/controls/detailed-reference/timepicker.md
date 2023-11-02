@@ -12,7 +12,7 @@ The time picker has two or three 'spinner' controls to allow the user to pick a 
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="231">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Header</code></td><td>Displays a title above the date picker.</td></tr><tr><td><code>ClockIdentifier</code></td><td>Choose between 12 and 24 hour formats. The 12 hour format shows a third spinner for AM/PM.</td></tr><tr><td><code>MinuteIncrement</code></td><td>Defines selectable increments for the minutes. The default is 1 (all minutes can be selected).</td></tr><tr><td><code>SelectedTime</code></td><td>(Nullable TimeSpan) the selected time.</td></tr></tbody></table>
+<table><thead><tr><th width="231">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ClockIdentifier</code></td><td>Choose between 12 and 24 hour formats. The 12 hour format shows a third spinner for AM/PM.</td></tr><tr><td><code>MinuteIncrement</code></td><td>Defines selectable increments for the minutes. The default is 1 (all minutes can be selected).</td></tr><tr><td><code>SelectedTime</code></td><td>(Nullable TimeSpan) the selected time.</td></tr></tbody></table>
 
 ## Example
 
@@ -20,6 +20,7 @@ This example shows how to create a time picker for the 24 hour clock, with 20 mi
 
 ```xml
 <StackPanel Margin="20">
+  <Label Content="Please choose your time:"/>
   <TimePicker Header="Please choose your time:" 
               ClockIdentifier="24HourClock"              
               MinuteIncrement="20"/>
