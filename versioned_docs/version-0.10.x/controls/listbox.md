@@ -8,7 +8,7 @@ The `ListBox` is an `ItemsControl` which displays items in a multi-line list box
 The items to display in the `ListBox` are specified using the `Items` property. This property will often be bound to a collection on the control's `DataContext`:
 
 ```markup
-<ListBox Items="{Binding MyItems}"/>
+<ListBox ItemsSource="{Binding MyItems}"/>
 ```
 
 ## Customizing the item display
@@ -16,7 +16,7 @@ The items to display in the `ListBox` are specified using the `Items` property. 
 You can customize how an item is displayed by specifying an `ItemTemplate`. For example to display each item inside a red border with rounded corners:
 
 ```markup
-<ListBox Items="{Binding MyItems}">
+<ListBox ItemsSource="{Binding MyItems}">
     <ListBox.ItemTemplate>
         <DataTemplate>
             <Border Background="Red" CornerRadius="4" Padding="4">
@@ -34,7 +34,7 @@ Each item displayed in a `ListBox` will be wrapped in a `ListBoxItem` - this is 
 Sometimes you will want to customize the container itself. You can do this by including a style targeting `ListBoxItem` in the `ListBox`:
 
 ```markup
-<ListBox Items="{Binding Items}">
+<ListBox ItemsSource="{Binding Items}">
     <ListBox.Styles>
         <!-- Give the ListBoxItems a fixed with of 100 and right-align them -->
         <Style Selector="ListBoxItem">
@@ -129,7 +129,7 @@ Once `Selection` is bound to a `SelectionModel`, `SelectedItems` will no longer 
 `SelectionModel` also exposes batching functionality through its `Update()` method and a `SelectionChanged` event which details exactly which items have been selected and deselected.
 
 ```markup
-<ListBox Items="{Binding Items}" Selection="{Binding Selection}"/>
+<ListBox ItemsSource="{Binding Items}" Selection="{Binding Selection}"/>
 ```
 
 ```csharp
@@ -188,7 +188,7 @@ public MyViewModel : ReactiveObject
 By default if an item is too wide to display in the `ListBox`, a horizontal scrollbar will be displayed. If instead you want items to be constrained to the width of the `ListBox` \(for example if you want wrapping text in the items\) you can disable the horizontal scrollbar by setting `ScrollViewer.HorizontalScrollBarVisibility="Disabled"`.
 
 ```markup
-<ListBox Items="{Binding MyItems}" Width="250" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+<ListBox ItemsSource="{Binding MyItems}" Width="250" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
     <ListBox.ItemTemplate>
         <DataTemplate>
             <Border Background="Red" CornerRadius="4" Padding="4">
