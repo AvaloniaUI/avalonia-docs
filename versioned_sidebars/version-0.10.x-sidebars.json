@@ -101,9 +101,7 @@
             "controls/buttons/button",
             "controls/buttons/radiobutton",
             "controls/buttons/togglebutton",
-            "controls/buttons/buttonspinner",
-            "controls/buttons/splitbutton",
-            "controls/buttons/togglesplitbutton"
+            "controls/buttons/buttonspinner"
           ]
         },
         "controls/calendar",
