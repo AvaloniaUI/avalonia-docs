@@ -11,9 +11,25 @@ Bindings defined in the XAML are using reflection in order to find and access th
 
 ## Enable and disable compiled bindings
 
+:::info
+
+Depending on the template that was used to create the Avalonia project, compiled bindings may or may not be enabled by default. You can check this in the project file.
+
+::: 
+
+### Enable and disable globally
+
+If you want your application to use compiled bindings globally by default, you can add
+
+```markup
+<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+```
+
+to your project file. You will still need to provide `x:DataType` for the objects you want to bind but you don't need to to set `x:CompileBindings="[True|False]"` for each `UserControl` or `Window`.
+
 ### Enable and disable per UserControl or Window
 
-Compiled bindings are not enabled by default. To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](../data-templates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. You can also specify the `DataType` in the `Binding` directly.
+To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](../data-templates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. You can also specify the `DataType` in the `Binding` directly.
 
 You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
 
@@ -38,16 +54,6 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
     </StackPanel>
 </UserControl>
 ```
-
-### Enable and disable globally
-
-If you want your application to use compiled bindings globally by default, you can add
-
-```markup
-<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-```
-
-to your project file. You will still need to provide `x:DataType` for the objects you want to bind but you don't need to to set `x:CompileBindings="[True|False]"` for each `UserControl` or `Window`.
 
 ## CompiledBinding-Markup
 
