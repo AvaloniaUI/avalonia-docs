@@ -68,13 +68,13 @@ Main improvements learning from WinUI were:
 
 ## Controls & Primitives
 
-| Control          | Link                                           |
-|------------------|------------------------------------------------|
-| `ColorPicker`    |        |
-| `ColorView`      | See the dedicated [`ColorView`](colorview.md) page. |
-| `ColorSpectrum`  |        |
-| `ColorSlider`    |        |
-| `ColorPreviewer` |        |
+| Control | Link |
+|---------|------|
+| `ColorPicker` | |
+| `ColorView` | See the dedicated [`ColorView`](colorview.md) page. |
+| `ColorSpectrum` | |
+| `ColorSlider` | |
+| `ColorPreviewer` | |
 
 ## Color Palettes
 
