@@ -1,6 +1,6 @@
 # Built-in Controls
 
-Here are some of the more commonly-used Avalonia controls, organised by catagory:
+Here are some of the more commonly-used Avalonia controls, organised by category:
 
 ## Layout controls
 
