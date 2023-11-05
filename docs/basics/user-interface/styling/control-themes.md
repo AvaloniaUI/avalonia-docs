@@ -24,7 +24,7 @@ Control themes are themselves styles, but with some important differences:
 - Control themes are assigned to a control by setting the `Theme` property, usually using the `{StaticResource}` markup extension
 
 :::info
-Control themes are typically applied to [templated (lookless)](../controls/creating-controls/choosing-a-custom-contro-type.md) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
+Control themes are typically applied to [templated (lookless)](../controls/creating-controls/choosing-a-custom-control-type.md) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
 :::
 
 ## Example: Round Button
