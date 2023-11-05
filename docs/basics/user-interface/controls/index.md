@@ -28,6 +28,48 @@ To get started with using controls in Avalonia UI, you can refer to the document
 
 By exploring these resources, you'll gain a solid foundation in using controls within Avalonia UI and be able to create rich and interactive user interfaces for your applications.
 
+## Types of Builtin Controls
+
+Avalonia UI's builtin controls can be loosely classified into the below types:
+
+* Drawn Controls
+* Layout Controls
+* Templated Controls
+    * Fully Customizable
+    * Partially Customizable
+
+Note that these classifications are somewhat related to the discussion in the [Choosing A Custom Control Type](choosing-a-custom-control-type) section. However, Avalonia UI never provides `UserControl`s as these are not considered general-purpose.
+
+### Drawn Controls
+
+Drawn controls are those that are responsible for generating their own geometry or bitmaps and rendering themselves. Examples of these controls include `Border`, `TextBlock` and `Image`. Drawn controls are the foundational controls used to construct everything else.
+
+Most drawn controls have standard properties that can be used to adjust their appearance and size but they do not allow re-templating. This means as an app developer you can’t change the functionality or style of these controls without dropping into C#, deriving a new version of the control and intercepting the rendering methods.
+
+### Layout Controls
+
+Layout controls are special in that they have no appearance by themselves. Layout controls like `Grid`, `StackPanel` and others are responsible for defining the layout of their children and behave as a parent container. The child controls are responsible for rendering the UI while the layout parent control simply sets size and position (which have no appearance by themselves).
+
+Note that some layout controls like `Grid` have properties like `Background` to simplify common use cases. Using these properties does give some appearance to these controls.
+
+### Templated Controls
+
+Most standard controls in Avalonia UI are templated controls which means their visual appearance is defined in a XAML control template separated from functionality. It is the foundation for the concept of lookless controls that originated in WPF.
+
+Application developers can change the XAML template of a templated control and make it appear completely differently. This functionality is not available in all UI frameworks and is one of the most powerful features of XAML-based UI frameworks.
+
+#### Fully Customizable
+
+The majority of templated controls in Avalonia UI are fully customizable. This means it is possible to completely replace the control’s template and change its appearance. The `Button` control is a good example but all templated controls in Avalonia UI try to be fully customizable by default. With a fully customizable templated control the application has near total ability to style or change everything you see drawn in the UI.
+
+#### Partially Customizable
+
+In practice, having fully replaceable control templates is not always possible. There is a spectrum in control design between supporting common use-cases easily and making the control fully re-templatable. For high-complexity controls like the `DataGrid` the spectrum shifts towards supporting the intended use cases and the control cannot, and should not, be fully re-templated. These controls also usually have a very high number of template parts (required control elements that are used directly by the C# implementation of the control).
+
+In the case of a `DataGrid` it is still possible to re-template individual components or parts of the control. It is just extremely difficult to completely change how it looks and functions.
+
+Partially customizable templated controls on the order of `DataGrid` are rare as first-party controls provided by the framework itself.
+
 ## Creating Controls
 
 In Avalonia, you have the flexibility to create custom controls tailored to your application's specific requirements. See the [Creating Controls](creating-controls) section for more information
