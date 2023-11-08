@@ -23,5 +23,5 @@ For information and background on the concept of the MVVM pattern, see [here](..
 This tutorial contains instructions for using the _Rider_ IDE on macOS; however the steps will be similar on other operating systems, and using other IDEs such as Visual Studio on _Microsoft Windows_.
 
 :::info
-You can find the code for the completed application here. TODO
+You can find the code for the completed application [here](https://github.com/AvaloniaUI/MusicStoreTutorial/). 
 :::
