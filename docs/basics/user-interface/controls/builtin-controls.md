@@ -62,7 +62,7 @@ These controls display repeating data, in either a tabular or list format:
 |[Slider](../../../reference/controls/slider.md)|Double|Relative value compared to a maximum and minimum value presented as the position along the length of the slider track of the slider button. Drag interaction on the slider button can alter the value between the maximum and minimum values. Keyboard and click interactions can also nudge the value.|
 |[Calendar](../../../reference/controls/detailed-reference/calendar)|DateTime|The calendar is a control for users to select dates or date ranges.|
 |[Calendar Date Picker](../../../reference/controls/detailed-reference/calendar/calendar-date-picker.md)|DateTime|An extension of the calendar control that includes a text box and button.|
-|[Color Picker](../../../reference/controls/colorpicker)|Color / HsvColor|The color picker supports user-selection and editing of colors using a spectrum, palette and component sliders. It also supports an optional alpha component, RGB or HSV color models and hexadecimal color values.
+|[Color Picker](../../../reference/controls/colorpicker)|Color / HsvColor|The color picker supports user-selection and editing of colors using a spectrum, palette and component sliders. It also supports an optional alpha component, RGB or HSV color models and hexadecimal color values.|
 |[Date Picker](../../../reference/controls/datepicker.md)|DateTime|The date picker has three 'spinner' controls to allow the user to pick a date value.|
 |[Time Picker](../../../reference/controls/detailed-reference/timepicker.md)|TimeSpan|The time picker has three 'spinner' controls to allow the user to pick a time from hours, minutes and seconds.|
 

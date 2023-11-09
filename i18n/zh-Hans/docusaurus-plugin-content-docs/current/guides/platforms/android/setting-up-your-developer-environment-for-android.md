@@ -18,7 +18,7 @@ title: 如何搭建Android开发环境
 - 您可能需要卸载旧版本的 _Android Workload_。要执行此操作，请键入以下命令：
 
 ```bash
-dotnet workload remove android
+dotnet workload uninstall android
 ```
 
 - 安装 _Android Workload_。要执行此操作，请键入以下命令：
