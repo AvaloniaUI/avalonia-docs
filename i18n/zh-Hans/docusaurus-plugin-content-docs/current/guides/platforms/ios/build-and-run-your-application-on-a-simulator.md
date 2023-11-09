@@ -9,7 +9,7 @@ import RuniOSSimulatorScreenshot from '/img/gitbook-import/assets/image (34).png
 
 请确保您已经按照[构建跨平台应用程序](../../building-cross-platform-applications)指南的步骤进行操作。
 
-假设您已经创建了一个名为`HelloWord`的项目。请在命令行中进入`HelloWorld.iOS`目录。
+假设您已经创建了一个名为`HelloWorld`的项目。请在命令行中进入`HelloWorld.iOS`目录。
 
 要为iOS构建该项目，请运行以下命令。
 

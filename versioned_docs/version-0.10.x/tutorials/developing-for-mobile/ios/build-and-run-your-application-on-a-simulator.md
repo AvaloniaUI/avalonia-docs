@@ -7,7 +7,7 @@ import SimulatoriPadScreenshot from '/img/tutorials/developing-for-mobile/ios/bu
 
 Please ensure you have followed the guide [create-a-cross-platform-solution.md](../create-a-cross-platform-solution.md "mention").
 
-Assuming you have created a project called `HelloWord`. Enter the directory `HelloWorld.iOS` from the command line.
+Assuming you have created a project called `HelloWorld`. Enter the directory `HelloWorld.iOS` from the command line.
 
 To build the project for iOS run the following command.
 
