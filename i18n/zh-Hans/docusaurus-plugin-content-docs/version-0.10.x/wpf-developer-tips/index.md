@@ -86,7 +86,7 @@ private void OnControl_Unloaded(object sender, RoutedEventArgs e)
 **Avalonia**
 ```
 TemplateApplied += OnControl_Loaded;
-private void BuildControl_Loaded(object sender, RoutedEventArgs e)
+private void OnControl_Loaded(object sender, RoutedEventArgs e)
 {
 
 }

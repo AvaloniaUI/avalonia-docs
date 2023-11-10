@@ -11,7 +11,7 @@ import ToDoDataContextResolvedScreenshot from '/img/gitbook-import/assets/image 
 
 要设置数据上下文，请按照以下步骤进行：
 
-- 在 **Views** 文件夹中找到 **MainWindowView.axaml** 文件。
+- 在 **Views** 文件夹中找到 **MainWindow.axaml** 文件。
 - 完全删除 `<Design.DataContext>` 标签。
 - 将 `x:DataType="vm:MainWindowViewModel"` 属性添加到 `<Window>` 元素。
 - 定位到内容 `<views:ToDoListView/>`。

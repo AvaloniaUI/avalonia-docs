@@ -9,7 +9,7 @@ import RuniOSSimulatorScreenshot from '/img/gitbook-import/assets/image (34).png
 
 Please ensure you have followed the guide [Building Cross-Platform Applications](../../building-cross-platform-applications).
 
-Assuming you have created a project called `HelloWord`. Enter the directory `HelloWorld.iOS` from the command line.
+Assuming you have created a project called `HelloWorld`. Enter the directory `HelloWorld.iOS` from the command line.
 
 To build the project for iOS run the following command.
 
