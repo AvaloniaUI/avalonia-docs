@@ -30,15 +30,20 @@ By exploring these resources, you'll gain a solid foundation in using controls w
 
 ## Types of Builtin Controls
 
-Avalonia UI's builtin controls can be loosely classified into the below types:
+_Avalonia UI_'s builtin controls can be loosely classified into the below types:
 
 * Drawn Controls
 * Layout Controls
+* User Controls*
 * Templated Controls
     * Fully Customizable
     * Partially Customizable
 
-Note that these classifications are somewhat related to the discussion in the [Choosing A Custom Control Type](choosing-a-custom-control-type) section. However, Avalonia UI never provides `UserControl`s as these are not considered general-purpose.
+*User controls are only available for apps.
+
+:::note
+These classifications are somewhat related to the discussion in [Choosing A Custom Control Type](choosing-a-custom-control-type).
+:::
 
 ### Drawn Controls
 
@@ -50,17 +55,33 @@ Most drawn controls have standard properties that can be used to adjust their ap
 
 Layout controls are special in that they have no appearance by themselves. Layout controls like `Grid`, `StackPanel` and others are responsible for defining the layout of their children and behave as a parent container. The child controls are responsible for rendering the UI while the layout parent control simply sets size and position (which have no appearance by themselves).
 
-Note that some layout controls like `Grid` have properties like `Background` to simplify common use cases. Using these properties does give some appearance to these controls.
+It is not very common for app developers to modify framework provided layout controls.
+
+:::note
+Some layout controls like `Grid` have properties such as `Background` to simplify common use cases. Using these properties does give some appearance to these controls.
+:::
+
+## User Controls
+
+_Avalonia UI_ never provides `UserControl`s by itself as these are not considered general-purpose. For more information on creating and using `UserControl`s in your app see [Choosing A Custom Control Type](choosing-a-custom-control-type).
 
 ### Templated Controls
 
-Most standard controls in Avalonia UI are templated controls which means their visual appearance is defined in a XAML control template separated from functionality. It is the foundation for the concept of lookless controls that originated in WPF.
+Most standard controls in _Avalonia UI_ are templated controls which means their visual appearance is defined in a XAML control template separated from functionality. It is the foundation for the concept of lookless controls that originated in WPF.
 
 Application developers can change the XAML template of a templated control and make it appear completely differently. This functionality is not available in all UI frameworks and is one of the most powerful features of XAML-based UI frameworks.
 
+:::note
+Re-templating controls is a last-resort for app developers. It also means you will be responsible for keeping the template updated with any changes upstream. Instead, it is better to:
+
+ 1. Attempt to use existing properties to customize the control
+ 2. Create a new style with _Avalonia UI_'s extremely powerful style selectors to modify what you need in the existing template
+ 3. As a last resort, re-template
+:::
+
 #### Fully Customizable
 
-The majority of templated controls in Avalonia UI are fully customizable. This means it is possible to completely replace the control’s template and change its appearance. The `Button` control is a good example but all templated controls in Avalonia UI try to be fully customizable by default. With a fully customizable templated control the application has near total ability to style or change everything you see drawn in the UI.
+The majority of templated controls in _Avalonia UI_ are fully customizable. This means it is possible to completely replace the control’s template and change its appearance. The `Button` control is a good example but all templated controls in _Avalonia UI_ try to be fully customizable by default. With a fully customizable templated control the app has near total ability to style or change everything you see drawn in the UI.
 
 #### Partially Customizable
 
@@ -72,4 +93,4 @@ Partially customizable templated controls on the order of `DataGrid` are rare as
 
 ## Creating Controls
 
-In Avalonia, you have the flexibility to create custom controls tailored to your application's specific requirements. See the [Creating Controls](creating-controls) section for more information
+In Avalonia, you have the flexibility to create custom controls of all types tailored to your application's specific requirements. See the [Creating Controls](creating-controls) section for more information
