@@ -119,6 +119,10 @@
     "message": "数据模板",
     "description": "The label for category Data Templates in sidebar documentationSidebar"
   },
+  "sidebar.documentationSidebar.category.Headless": {
+    "message": "Headless",
+    "description": "The label for category Headless Custom in sidebar documentationSidebar"
+  },
   "sidebar.documentationSidebar.category.Input": {
     "message": "输入",
     "description": "The label for category Input in sidebar documentationSidebar"

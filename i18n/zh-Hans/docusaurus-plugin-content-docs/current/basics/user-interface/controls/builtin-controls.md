@@ -56,14 +56,15 @@
 
 ## 值选择
 
-| 控件                                                                                                      | 类型       | 描述                                                                      |
-|:--------------------------------------------------------------------------------------------------------|:---------|:------------------------------------------------------------------------|
-| [Check Box](../../../reference/controls/checkbox.md)                                                    | Boolean  | 以勾选标记形式表示的 True 值。点击交互切换值。具有显示“未知”值的选项。                                 |
-| [Slider](../../../reference/controls/slider.md)                                                         | Double   | 相对于最大值和最小值的相对值，以滑动条按钮在滑动条轨道上的位置表示。拖动滑动条按钮可以在最大值和最小值之间更改值。键盘和点击交互也可以微调值。 |
-| [Calendar](../../../reference/controls/detailed-reference/calendar)                                     | DateTime | 日历是用户选择日期或日期范围的控件。                                                      |
-| [Calendar Date Picker](../../../reference/controls/detailed-reference/calendar/calendar-date-picker.md) | DateTime | 日期选择器的扩展，包括文本框和按钮。                                                      |
-| [Date Picker](../../../reference/controls/datepicker.md)                                                | DateTime | 日期选择器有三个“微调”控件，允许用户选择日期值。                                               |
-| [Time Picker](../../../reference/controls/detailed-reference/timepicker.md)                             | TimeSpan | 时间选择器有三个“微调”控件，允许用户选择小时、分钟和秒钟。                                          |
+| 控件                                                                                                      | 类型               | 描述                                                                      |
+|:--------------------------------------------------------------------------------------------------------|:-----------------|:------------------------------------------------------------------------|
+| [Check Box](../../../reference/controls/checkbox.md)                                                    | Boolean          | 以勾选标记形式表示的 True 值。点击交互切换值。具有显示“未知”值的选项。                                 |
+| [Slider](../../../reference/controls/slider.md)                                                         | Double           | 相对于最大值和最小值的相对值，以滑动条按钮在滑动条轨道上的位置表示。拖动滑动条按钮可以在最大值和最小值之间更改值。键盘和点击交互也可以微调值。 |
+| [Calendar](../../../reference/controls/detailed-reference/calendar)                                     | DateTime         | 日历是用户选择日期或日期范围的控件。                                                      |
+| [Calendar Date Picker](../../../reference/controls/detailed-reference/calendar/calendar-date-picker.md) | DateTime         | 日期选择器的扩展，包括文本框和按钮。                                                      |
+| [Color Picker](../../../reference/controls/colorpicker)                                                 | Color / HsvColor | 颜色选择器支持用户使用光谱、调色板和组件滑块选择和编辑颜色。它还支持可选的 alpha 分量、RGB 或 HSV 颜色模型和十六进制颜色值。  |
+| [Date Picker](../../../reference/controls/datepicker.md)                                                | DateTime         | 日期选择器有三个“微调”控件，允许用户选择日期值。                                               |
+| [Time Picker](../../../reference/controls/detailed-reference/timepicker.md)                             | TimeSpan         | 时间选择器有三个“微调”控件，允许用户选择小时、分钟和秒钟。                                          |
 
 ## 显示图像
 

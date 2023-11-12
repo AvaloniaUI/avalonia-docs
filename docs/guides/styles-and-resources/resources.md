@@ -247,3 +247,47 @@ Starting at the border, the first resources searched are any defined in the pare
 The search then moves on to search any styles defined in the parent (stack panel) control, followed by any merged dictionaries at that level.
 
 The search moves upwards in the logical control tree, behaving at each level in a similar manner. It finally reaches application-level resources and styles.&#x20;
+
+## Consuming Resources from code
+
+Avalonia provides different options to access Resources from code. 
+
+:::NOTE
+
+`ResourceNode` in the below samples can be any node that supports `Resource`, like `Appliction.Current`, `Window`, `UserControl`, ... 
+
+:::
+
+- **ResourceNode.Resources["TheKey"]**: <br/>
+  This will directly access the underlaying `Dictionary`. Be aware: Merged Dictionaries and parents will not be scanned. 
+- **ResourceNode.TryGetResource**: <br/>
+  This function will try to get a specific resource and return `true` if successful, otherwise `false`. Merged dictionaries will be scanned, but it will not follow the logical tree. 
+- **ResourceNode.TryFindResource**:  <br/>
+  This extension method will try to get a specific resource and return `true` if successful, otherwise `false`. Merged dictionaries and the logical tree will be scanned as well.
+- **ResourceNode.GetResourceObservable**: <br/>
+  This will return an [`IObservable`](https://learn.microsoft.com/en-us/dotnet/api/System.IObservable-1) which can be used to observe changes on the resource. For example you could bind to it.
+
+```cs
+// In this sample we have defined the resource in App.axaml and we want to look up the value in the MainWindow constructor.
+//
+//    </Application.Resources>
+//         <x:String x:Key="TheKey">HelloWorld</x:String>
+//    </Application.Resources>
+
+public MainWindow()
+{
+    InitializeComponent();
+
+    // found1 = false | result1 = null
+    var found1 = this.TryGetResource("TheKey", this.ActualThemeVariant, out var result1);
+
+    // found2 = true | result2 = "Hello World" 
+    var found2 = this.TryFindResource("TheKey", this.ActualThemeVariant, out var result2);
+
+    // Dound the resource to a TextBlock from code behind
+    myTextBlock.Bind(TextBlock.TextProperty, Resources.GetResourceObservable("TheKey"));
+
+    // this will update myTextBlock.Text via the bound observable
+    this.Resources["TheKey"] = "Hello from code behind"; 
+}
+```

@@ -25,7 +25,7 @@ title: 数据模板
         </StackPanel>
     </DataTemplate>
   </ListBox.ItemTemplate>
-<ListBox/>
+</ListBox>
 ```
 
 在这个例子中，数据模板定义了一个使用`StackPanel`容器的可视化布局。在`StackPanel`中，我们有一个绑定到项的`Name`属性的`TextBlock`，以及一个绑定到`ImageSource`属性的`Image`控件。
