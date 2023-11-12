@@ -250,7 +250,7 @@ The search moves upwards in the logical control tree, behaving at each level in 
 
 ## Consuming Resources from code
 
-Avalonia provides different options to access Resources from code. 
+_Avalonia UI_ provides different options to access Resources from code. 
 
 :::NOTE
 
@@ -284,10 +284,54 @@ public MainWindow()
     // found2 = true | result2 = "Hello World" 
     var found2 = this.TryFindResource("TheKey", this.ActualThemeVariant, out var result2);
 
-    // Dound the resource to a TextBlock from code behind
+    // bind the resource to a TextBlock from code behind
     myTextBlock.Bind(TextBlock.TextProperty, Resources.GetResourceObservable("TheKey"));
 
     // this will update myTextBlock.Text via the bound observable
     this.Resources["TheKey"] = "Hello from code behind"; 
 }
 ```
+
+### Global Resource Lookup
+
+In other XAML UI frameworks such as WPF and WinUI, resource lookup could also be done using an indexer and code such as `Application.Current.Resources["TheKey"]` (in addition to `FindResource()` or `TryFindResource()`). Resource lookup using the indexer at the application scope would search globally and recursively in all resource dictionaries. You could almost always find a resource using the indexer. _Avalonia UI_ does not support this and will only search the current resource dictionary when using an indexer. Additionally, _Avalonia UI_ may store resources in both resource dictionaries or style resource dictionaries so it's common to be required to search both. For global, recursive resource lookup at the application scope similar to other XAML UI frameworks code such as below may be used.
+
+```cs
+/// <summary>
+/// Gets the first resource matching the given key within the application resources dictionary.
+/// </summary>
+/// <typeparam name="T">The type of resource to return.</typeparam>
+/// <param name="app">The application instance.</param>
+/// <param name="key">The resource key.</param>
+/// <param name="themeVariant">The theme variant used to select theme dictionary.</param>
+/// <returns>The located resource or default(T).</returns>
+public static T FindResource<T>(
+    this Application app,
+    object key,
+    ThemeVariant? themeVariant)
+{
+    if (app.Resources.TryGetResource(key, themeVariant, out object resource))
+    {
+        if (resource is T)
+        {
+            return (T)resource;
+        }
+    }
+
+    // Style Resources are separate and also need to be searched
+    foreach (var styles in app.Styles)
+    {
+        if (styles.TryGetResource(key, themeVariant, out resource))
+        {
+            if (resource is T)
+            {
+                return (T)resource;
+            }
+        }
+    }
+
+    return default(T);
+}
+```
+
+
