@@ -31,7 +31,7 @@ public class DoubleTappedBehav : AvaloniaObject
 {
     static DoubleTappedBehav()
     {
-        CommandProperty.Changed.Subscribe(x => HandleCommandChanged(x.Sender, x.NewValue.GetValueOrDefault<ICommand>()));
+        CommandProperty.Changed.Subscribe(new Avalonia.Reactive.AnonymousObserver<AvaloniaPropertyChangedEventArgs>(x => HandleCommandChanged(x.Sender, x.NewValue.GetValueOrDefault<ICommand>()));
     }
 
     /// <summary>
@@ -53,7 +53,7 @@ public class DoubleTappedBehav : AvaloniaObject
     /// <summary>
     /// <see cref="CommandProperty"/> changed event handler.
     /// </summary>
-    private static void HandleCommandChanged(IAvaloniaObject element, ICommand commandValue)
+    private static void HandleCommandChanged(AvaloniaObject element, ICommand commandValue)
     {
         if (element is Interactive interactElem)
         {
