@@ -31,7 +31,7 @@ public class DoubleTappedBehav : AvaloniaObject
 {
     static DoubleTappedBehav()
     {
-        CommandProperty.Changed.AddClassHandler<AvaloniaObject>(HandleCommandChanged);
+        CommandProperty.Changed.AddClassHandler<Interactive>(HandleCommandChanged);
     }
 
     /// <summary>
@@ -53,22 +53,18 @@ public class DoubleTappedBehav : AvaloniaObject
     /// <summary>
     /// <see cref="CommandProperty"/> changed event handler.
     /// </summary>
-    private static void HandleCommandChanged(AvaloniaObject element, AvaloniaPropertyChangedEventArgs args)
+    private static void HandleCommandChanged(Interactive interactElem, AvaloniaPropertyChangedEventArgs args)
     {
-        if (element is Interactive interactElem)
+        if (args.NewValue is ICommand commandValue)
         {
-            if (args.NewValue is ICommand commandValue)
-            {
-                // Add non-null value
-                interactElem.AddHandler(InputElement.DoubleTappedEvent, Handler);
-            }
-            else
-            {
-                // remove prev value
-                interactElem.RemoveHandler(InputElement.DoubleTappedEvent, Handler);
-            }
+             // Add non-null value
+             interactElem.AddHandler(InputElement.DoubleTappedEvent, Handler);
         }
-
+        else
+        {
+             // remove prev value
+             interactElem.RemoveHandler(InputElement.DoubleTappedEvent, Handler);
+        }
         // local handler fcn
         static void Handler(object s, RoutedEventArgs e)
         {
