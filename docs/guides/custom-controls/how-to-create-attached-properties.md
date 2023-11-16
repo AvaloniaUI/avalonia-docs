@@ -31,7 +31,7 @@ public class DoubleTappedBehav : AvaloniaObject
 {
     static DoubleTappedBehav()
     {
-         CommandProperty.Changed.AddClassHandler<AvaloniaObject>(HandleCommandChanged);
+        CommandProperty.Changed.AddClassHandler<AvaloniaObject>(HandleCommandChanged);
     }
 
     /// <summary>
