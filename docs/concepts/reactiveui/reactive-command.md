@@ -72,7 +72,7 @@ IObservable<bool> isInputValid = this.WhenAnyValue(
                 );
 ```
 
-The observable object monitors the value of the `UserName` property and runs the validation function whenever it changes. The observable objectis created by the `WhenAnyValue` function of the `ReactiveObject` that underlies the view model (see the previous page [here](reactive-view-model.md)).
+The observable object monitors the value of the `UserName` property and runs the validation function whenever it changes. The observable object is created by the `WhenAnyValue` function of the `ReactiveObject` that underlies the view model (see the previous page [here](reactive-view-model.md)).
 
 Next add the observable object to the `Create` method. This second parameter is the `canExecute` argument for the method.
 
