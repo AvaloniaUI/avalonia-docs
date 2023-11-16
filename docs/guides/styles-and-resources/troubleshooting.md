@@ -24,20 +24,20 @@ Check whether you have used a child selector where there are no children to matc
 
 Styles are applied in order of declaration. If there are multiple style files included that target the same control property, the last style included will override the previous ones. For example:
 
-```markup
+```markup title="Styles2.axaml"
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Green" />
 </Style>
 ```
 
-```markup
+```markup title="Styles1.axaml"
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Blue" />
     <Style Property="FontSize" Value="16" />
 </Style>
 ```
 
-```markup
+```markup title="App.axaml"
 <StyleInclude Source="Style1.axaml" />
 <StyleInclude Source="Style2.axaml" />
 ```

@@ -78,96 +78,20 @@ new Viewbox
 
 ### Examples
 
-<table>
-  <thead>
-    <tr>
-      <th><code>Stretch</code>
-      </th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Uniform</code>
-      </td>
-      <td>
-        <p></p>
-        <p>
-          <img src={ViewboxScaleUniformBothScreenshot} alt="" />
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>UniformToFill</code>
-      </td>
-      <td>
-        <p></p>
-        <p>
-          <img src={ViewboxScaleUniformFillBothScreenshot} alt="" />
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>Fill</code>
-      </td>
-      <td>
-        <p></p>
-        <p>
-          <img src={ViewboxScaleFillBothScreenshot} alt="" />
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>None</code>
-      </td>
-      <td>
-        <p></p>
-        <p>
-          <img src={ViewboxScaleNoneBothScreenshot} alt="" />
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| `Stretch` |         |
+|-----------|---------|
+| `Uniform` | <img src={ViewboxScaleUniformBothScreenshot} alt="" /> |
+| `UniformToFill` | <img src={ViewboxScaleUniformFillBothScreenshot} alt="" /> |
+| `Fill`    | <img src={ViewboxScaleFillBothScreenshot} alt="" /> |
+| `None`    | <img src={ViewboxScaleNoneBothScreenshot} alt="" /> |
 
-<table>
-  <thead>
-    <tr>
-      <th><code>StretchDirection</code>
-      </th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Both</code>
-      </td>
-      <td>
-        <img src={ViewboxScaleUniformBothScreenshot} alt="" />
-      </td>
-    </tr>
-    <tr>
-      <td><code>UpOnly</code>
-      </td>
-      <td >
-        <p></p>
-        <p>
-          <img src={ViewboxScaleUniformUpOnlyScreenshot} alt="" />
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>DownOnly</code>
-      </td>
-      <td>
-        <p></p>
-        <p>
-          <img src={ViewboxScaleUniformDownOnlyScreenshot} alt="" />
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+| `StretchDirection` |             |
+|--------------------|-------------|
+| `Both`             | <img src={ViewboxScaleUniformBothScreenshot} alt="" /> |
+| `UpOnly`           | <img src={ViewboxScaleUniformUpOnlyScreenshot} alt="" /> |
+| `DownOnly`         | <img src={ViewboxScaleUniformDownOnlyScreenshot} alt="" /> |
+
 
 ### Pseudoclasses
 

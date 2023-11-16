@@ -37,9 +37,7 @@ At this stage, you will create two properties for the search application logic:
 * A text string that is the search criteria,&#x20;
 * A Boolean that indicates whether the search is busy.&#x20;
 
-<!---->
-
-- Add the following code to implement the above properties:
+Add the following code to implement the above properties:
 
 ```csharp
 using ReactiveUI;

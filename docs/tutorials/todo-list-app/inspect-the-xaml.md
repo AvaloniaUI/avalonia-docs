@@ -46,9 +46,9 @@ The remaining two namespaces are used to communicate information to the _Avaloni
 
 For example, as you have already done, you can specify the width and height of the control as it is displayed in the designer preview pane:
 
-<pre class="language-xml"><code class="lang-xml">&#x3C;UserControl ...
-<strong>mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450" ... >
-</strong></code></pre>
+```markup
+<UserControl ...mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450" ... >
+```
 
 The entry `mc:Ignorable="d"` tells the _Avalonia UI_ XAML engine that entries beginning with `d:` can be ignored at runtime.
 

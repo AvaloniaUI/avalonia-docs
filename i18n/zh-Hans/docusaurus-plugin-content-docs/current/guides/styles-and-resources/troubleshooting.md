@@ -24,20 +24,20 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 
 样式按照声明的顺序应用。如果有多个包含了针对相同控件属性的样式文件，则最后一个包含的样式将覆盖之前的样式。例如：
 
-```markup
+```markup title="Styles2.axaml"
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Green" />
 </Style>
 ```
 
-```markup
+```markup title="Styles1.axaml"
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Blue" />
     <Style Property="FontSize" Value="16" />
 </Style>
 ```
 
-```markup
+```markup title="App.axaml"
 <StyleInclude Source="Style1.axaml" />
 <StyleInclude Source="Style2.axaml" />
 ```
