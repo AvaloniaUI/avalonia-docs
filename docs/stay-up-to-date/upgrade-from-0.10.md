@@ -73,6 +73,8 @@ If you don't need the whole of `System.Reactive` but just want to make a simple 
 observable.Subscribe(new AnonymousObserver<string>(() => { /* Code to execute when the observable changes. */ }));
 ```
 
+If you need to subscribe on property or event changes, you can `AddClassHandler` instead of observables.
+
 See [#9749](https://github.com/AvaloniaUI/Avalonia/pull/9749), [#10105](https://github.com/AvaloniaUI/Avalonia/pull/10105) for more information.
 
 ## Updating Interfaces
@@ -286,7 +288,7 @@ In addition, the `IFocusManager` API has been changed.
 There is currently no event for listening to focus changes on `IFocusManager`. To listen for focus changes, add a listener to the `InputElement.GotFocusEvent`:
 
 ```csharp
-InputElement.GotFocusEvent.Raised.Subscribe(new AnonymousObserver<(object, RoutedEventArgs)>(x => { }));
+InputElement.GotFocusEvent.AddClassHandler<InputElement>((element, args) => { });
 ```
 
 The same applied to KeyboardDevice, which isn't accessible anymore. Use the same focus related APIs as a replacement.
