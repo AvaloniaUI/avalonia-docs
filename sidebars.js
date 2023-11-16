@@ -308,6 +308,19 @@ const sidebars = {
           'type': 'category',
           'label': 'Graphics and Animation',
           'items': [
+          {
+            'type': 'category',
+            'label': 'How to use Page Transitions',
+            'link': {
+              'type': 'doc',
+              'id': 'guides/graphics-and-animation/how-to-use-page-transitions/index',
+            },
+            'items': [
+              'guides/graphics-and-animation/how-to-use-page-transitions/cross-fade-page-transition',
+              'guides/graphics-and-animation/how-to-use-page-transitions/page-slide-transition',
+              'guides/graphics-and-animation/how-to-use-page-transitions/page-transition-combinations'
+            ],
+          },
             'guides/graphics-and-animation/graphics-and-animations',
             'guides/graphics-and-animation/how-to-add-menu-icons',
             'guides/graphics-and-animation/how-to-create-a-custom-page-transition',
