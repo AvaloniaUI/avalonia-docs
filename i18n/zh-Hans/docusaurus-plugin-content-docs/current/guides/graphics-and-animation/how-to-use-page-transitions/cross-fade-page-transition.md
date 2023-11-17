@@ -3,6 +3,9 @@ id: cross-fade-page-transition
 title: Cross Fade Page Transition
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Cross Fade Page Transition
 
 The cross fade page transition fades out the current page and fades in the new page by animating the opacity.

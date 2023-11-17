@@ -56,7 +56,7 @@ a | Alphanumeric, optional. If the AsciiOnly property is set to true, the only c
 : | Time separator. The actual display character used will be the time symbol appropriate to the format provider, as determined by the control's FormatProvider property.
 / | Date separator. The actual display character used will be the date symbol appropriate to the format provider, as determined by the control's FormatProvider property.
 $ | Currency symbol. The actual character displayed will be the currency symbol appropriate to the format provider, as determined by the control's FormatProvider property.
-< | Shift down. Converts all characters that follow to lowercase.
+\< | Shift down. Converts all characters that follow to lowercase.
 \> | Shift up. Converts all characters that follow to uppercase.
 \| | Disable a previous shift up or shift down.
 \\ | Escape. Escapes a mask character, turning it into a literal. "\\" | is the escape sequence for a backslash.

@@ -95,7 +95,7 @@ FluentTheme 仅支持暗色和浅色主题变体，不支持为自定义变体�
 ## 使用在线编辑器创建自定义颜色调色板
 
 Microsoft Fluent Theme Editor 已移植到 Avalonia，现在也可以与我们的 FluentTheme 一起使用。
-它可在 <https://theme.xaml.live/> 页面上使用，并支持以下功能：
+它可在 https://theme.xaml.live/ 页面上使用，并支持以下功能：
 
 1. 编辑浅色和暗色变体的调色板颜色。
 2. 预览当前调色板。
