@@ -21,7 +21,8 @@ In WPF/UWP you would inherit from the Control class to create a new templated co
 If you want to provide a Style for your TemplatedControl in a separate file, remember to include this file in your Application via StyleInclude. 
 :::
 
-Basic Control
+### Basic Controls
+
 Basic Controls are the foundation of user interfaces - they draw themselves using geometry by overriding the Visual.Render method. Controls such as TextBlock and Image fall into this category.
 
 :::info
