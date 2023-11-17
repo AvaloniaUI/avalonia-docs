@@ -68,12 +68,12 @@ namespace ToDoList.Views
 
 为了使设计时预览更像是纵向定向的手机，找到用户控件的设计时宽度和高度属性，并设置如下：
 
-<pre class="language-markup"><code class="lang-markup"><strong>&#x3C;UserControl 
-</strong><strong>...
-</strong><strong>d:DesignWidth="250" d:DesignHeight="450" 
-</strong><strong>... >
-</strong><strong>
-</strong></code></pre>
+<pre class="language-markup"><code class="lang-markup">
+<strong>&#x3C;UserControl</strong>
+<strong>...</strong>
+<strong>d:DesignWidth="250" d:DesignHeight="450"</strong>
+<strong>... ></strong>
+</code></pre>
 
 然后对主窗口进行同样的操作。
 

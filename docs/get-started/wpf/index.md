@@ -11,9 +11,7 @@ You will see how although _Avalonia UI_ is often very similar to WPF; there are 
 * Styling
 * Data Templates
 
-```mdx-code-block
 import {DocsCardList} from '../../../src/components/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocsCardList list={useCurrentSidebarCategory().items} />
-```
