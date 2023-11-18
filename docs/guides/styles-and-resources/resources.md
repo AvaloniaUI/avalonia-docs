@@ -252,7 +252,7 @@ The search moves upwards in the logical control tree, behaving at each level in 
 
 Avalonia provides different options to access Resources from code. 
 
-:::NOTE
+:::note
 
 `ResourceNode` in the below samples can be any node that supports `Resource`, like `Appliction.Current`, `Window`, `UserControl`, ... 
 
