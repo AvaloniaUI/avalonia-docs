@@ -16,7 +16,7 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-Hans'],
+    locales: ['en', 'ru', 'zh-Hans'],
   },
   headTags: [
     {
