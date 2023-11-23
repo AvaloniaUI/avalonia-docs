@@ -1,0 +1,194 @@
+{
+  "version.label": {
+    "message": "11.0.0",
+    "description": "The label for version current"
+  },
+  "sidebar.documentationSidebar.category.Get Started": {
+    "message": "Начало Работы",
+    "description": "The label for category Get Started in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Test Drive": {
+    "message": "Test Drive",
+    "description": "The label for category Test Drive in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Coming from WPF?": {
+    "message": "Перешли с WPF?",
+    "description": "The label for category Coming from WPF? in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Stay Up-To-Date": {
+    "message": "Последние события",
+    "description": "The label for category Stay Up-To-Date in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Samples & Tutorials": {
+    "message": "Примеры и Руководства",
+    "description": "The label for category Samples & Tutorials in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.ToDo List App": {
+    "message": "ToDo List App",
+    "description": "The label for category ToDo List App in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Music Store App": {
+    "message": "Music Store App",
+    "description": "The label for category Music Store App in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Basics": {
+    "message": "Основы",
+    "description": "The label for category Basics in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.User Interface": {
+    "message": "Пользовательский интерфейс",
+    "description": "The label for category User Interface in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Controls": {
+    "message": "Элементы управления",
+    "description": "The label for category Controls in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Creating Controls": {
+    "message": "Создание Элементов управления",
+    "description": "The label for category Creating Controls in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Building Layouts": {
+    "message": "Компоновка",
+    "description": "The label for category Building Layouts in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Styling": {
+    "message": "Стили",
+    "description": "The label for category Styling in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Themes": {
+    "message": "Темы",
+    "description": "The label for category Themes in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Data": {
+    "message": "Данные",
+    "description": "The label for category Data in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Data Binding": {
+    "message": "Привязка Данных",
+    "description": "The label for category Data Binding in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.How-To Guides": {
+    "message": "Практические руководства",
+    "description": "The label for category How-To Guides in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Building Cross Platform Applications": {
+    "message": "Создание Кроссплатформенных приложений",
+    "description": "The label for category Building Cross Platform Applications in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Implementation Guides": {
+    "message": "Implementation Guides",
+    "description": "The label for category Implementation Guides in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Styles and Resources": {
+    "message": "Стили и Ресурсы",
+    "description": "The label for category Styles and Resources in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Graphics and Animation": {
+    "message": "Графика и Анимация",
+    "description": "The label for category Graphics and Animation in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Custom Controls": {
+    "message": "Пользовательские элементы",
+    "description": "The label for category Custom Controls in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Development Guides": {
+    "message": "Руководства по разработке",
+    "description": "The label for category Development Guides in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Platforms": {
+    "message": "Платформы",
+    "description": "The label for category Platforms in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Android": {
+    "message": "Android",
+    "description": "The label for category Android in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.iOS": {
+    "message": "iOS",
+    "description": "The label for category iOS in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Raspberry PI": {
+    "message": "Raspberry PI",
+    "description": "The label for category Raspberry PI in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Deep Dives": {
+    "message": "Дополнительно",
+    "description": "The label for category Deep Dives in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Data Templates": {
+    "message": "Шаблоны Данных",
+    "description": "The label for category Data Templates in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Headless Platform": {
+    "message": "Headless Platform",
+    "description": "The label for category Headless Platform in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Input": {
+    "message": "Input",
+    "description": "The label for category Input in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.The MVVM Pattern": {
+    "message": "Паттерн MVVM",
+    "description": "The label for category The MVVM Pattern in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.ReactiveUI": {
+    "message": "ReactiveUI",
+    "description": "The label for category ReactiveUI in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Services": {
+    "message": "Сервисы",
+    "description": "The label for category Services in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Storage Provider": {
+    "message": "Storage Provider",
+    "description": "The label for category Storage Provider in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Deployment": {
+    "message": "Развертывание",
+    "description": "The label for category Deployment in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Reference": {
+    "message": "Reference",
+    "description": "The label for category Reference in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Built-in Controls": {
+    "message": "Встроенные элементы",
+    "description": "The label for category Built-in Controls in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Button Controls": {
+    "message": "Кнопки",
+    "description": "The label for category Button Controls in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Data Grid": {
+    "message": "Data Grid",
+    "description": "The label for category Data Grid in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Detailed Reference": {
+    "message": "Detailed Reference",
+    "description": "The label for category Detailed Reference in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Calendar": {
+    "message": "Календарь",
+    "description": "The label for category Calendar in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.datagrid": {
+    "message": "datagrid",
+    "description": "The label for category datagrid in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Tree Data Grid": {
+    "message": "Tree Data Grid",
+    "description": "The label for category Tree Data Grid in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Gestures": {
+    "message": "Жесты",
+    "description": "The label for category Gestures in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.JetBrains Rider IDE": {
+    "message": "JetBrains Rider IDE",
+    "description": "The label for category JetBrains Rider IDE in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Styles": {
+    "message": "Стили",
+    "description": "The label for category Styles in sidebar documentationSidebar"
+  }
+}
