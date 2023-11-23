@@ -74,19 +74,30 @@ Next you will add a data binding to link the view to the view model. The text bo
 Follow this procedure to add data binding to the view:
 
 - Locate and open the **MusicStoreView.axaml** file.
+- Add the following line in the UserControl element: **x:DataType="viewModels:MusicStoreViewModel"**
 - Add the binding expressions shown:
 
 ```markup
-<DockPanel>
-  <StackPanel DockPanel.Dock="Top">
-    <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
-    <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
-  </StackPanel>
-  <Button Content="Buy Album"
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:Avalonia.MusicStore.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:MusicStoreViewModel"
+             x:Class="Avalonia.MusicStore.Views.MusicStoreView">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
+            <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
+        </StackPanel>
+        <Button Content="Buy Album"
           DockPanel.Dock="Bottom"
           HorizontalAlignment="Center" />
-  <ListBox/>
-</DockPanel>
+        <ListBox/>
+    </DockPanel>
+</UserControl>
 ```
 
 ## Album Search and Selection
