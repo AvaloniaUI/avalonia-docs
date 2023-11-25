@@ -43,8 +43,7 @@ import ToDoMainWindowContentScreenshot from '/img/gitbook-import/assets/image (4
 这个 XAML 在很多方面与您在前一页上查看的用户控件 XAML 相似。具体来说，您添加了：
 
 <pre class="language-markup"><code class="lang-markup"><strong>&#x3C;Window ... 
-</strong><strong>        xmlns:views="clr-namespace:ToDoList.Views" ..>
-</strong></code></pre>
+</strong><strong>xmlns:views="clr-namespace:ToDoList.Views" ..></strong></code></pre>
 
 这将代码命名空间 `ToDoList.Views` 映射到 XML 命名空间别名 `views`。
 

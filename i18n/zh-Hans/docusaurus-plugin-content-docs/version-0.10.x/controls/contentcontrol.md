@@ -75,7 +75,7 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowVieModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](docs/data-binding/the-datacontext) for more information.
+> Note: The following examples assume an instance of `MainWindowVieWModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](docs/data-binding/the-datacontext) for more information.
 
 We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 

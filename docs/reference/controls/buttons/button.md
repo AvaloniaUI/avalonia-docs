@@ -10,6 +10,12 @@ The button is a control that reacts to pointer actions (and has some keyboard eq
 
 A pointer-down to pointer release sequence is interpreted as a click; and this behaviour is configurable.&#x20;
 
+:::warning
+When determining if a button is pressed by the user, always use the `Click` event instead of `PointerPressed`. `Click` is the high-level event specific to a `Button` that indicates it has been pressed.
+
+`PointerPressed` is more a low-level input event: one that the `Button` needs to handle internally to raise the `Click` event. Since `Button` handles `PointerPressed` (sets `IsHandled` to true), applications will never receive this event as in some other controls.
+:::
+
 :::info
 Click is one of many button events, for a full list see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events).
 :::

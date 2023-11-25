@@ -3,6 +3,8 @@ id: how-to-create-a-custom-controls-library
 title: How To Create a Custom Controls Library
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import CustomControlsSolutionScreenshot from '/img/gitbook-import/assets/image (22) (3).png';
 import CustomControlNuGetScreenshot from '/img/gitbook-import/assets/image (11) (2).png';
 

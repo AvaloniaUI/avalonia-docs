@@ -201,7 +201,7 @@ private async void DoSearch(string s)
 - 将此数据绑定和转换器添加到下面的面板元素中：
 
 ```
-IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
+IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNotNull}}"
 ```
 
 转换器是数据绑定表达式的扩展，可以在传递给绑定控件之前转换绑定值。`IsNull` 转换器返回一个布尔值，当值对象为 null 时为 true。

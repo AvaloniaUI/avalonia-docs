@@ -11,9 +11,25 @@ description: CONCEPTS
 
 ## 启用和禁用编译绑定
 
+:::info
+
+根据创建 Avalonia 项目时使用的模板，默认情况下可能启用也可能不启用编译绑定。您可以在项目文件中查看。
+
+:::
+
+### 全局启用和禁用
+
+如果您希望应用程序默认情况下全局使用编译绑定，可以将以下内容添加到您的项目文件中：
+
+```markup
+<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+```
+
+您仍然需要为您想要绑定的对象提供`x:DataType`，但是您不需要为每个`UserControl`或`Window`设置`x:CompileBindings="[True|False]"`。
+
 ### 在每个UserControl或Window中启用和禁用
 
-编译绑定默认未启用。要启用编译绑定，您需要首先定义要绑定的对象的`DataType`。在[`DataTemplates`](../data-templates)中，有一个`DataType`属性，对于所有其他元素，您可以通过`x:DataType`来设置它。最可能在根节点中设置`x:DataType`，例如在`Window`或`UserControl`中。您还可以直接在`Binding`中指定`DataType`。
+要启用编译绑定，您需要首先定义要绑定的对象的`DataType`。在[`DataTemplates`](../data-templates)中，有一个`DataType`属性，对于所有其他元素，您可以通过`x:DataType`来设置它。最可能在根节点中设置`x:DataType`，例如在`Window`或`UserControl`中。您还可以直接在`Binding`中指定`DataType`。
 
 现在，您可以通过设置`x:CompileBindings="[True|False]"`来启用或禁用编译绑定。所有子节点都将继承此属性，因此您可以在根节点中启用它，并在需要时禁用特定子节点。
 
@@ -38,16 +54,6 @@ description: CONCEPTS
     </StackPanel>
 </UserControl>
 ```
-
-### 全局启用和禁用
-
-如果您希望应用程序默认情况下全局使用编译绑定，可以将以下内容添加到您的项目文件中：
-
-```markup
-<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-```
-
-您仍然需要为您想要绑定的对象提供`x:DataType`，但是您不需要为每个`UserControl`或`Window`设置`x:CompileBindings="[True|False]"`。
 
 ## CompiledBinding标记
 

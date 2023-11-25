@@ -58,3 +58,16 @@ However, it is more common to reference a styles file in the `App.axaml` file li
 ```
 
 This will allow you to use the styles from the separate file throughout your application.
+
+You can also include styles from a another assembly by using the `avares://` prefix:
+
+```xml
+<Application... > 
+    <Application.Styles>
+        <FluentTheme Mode="Light"/>
+        <StyleInclude Source="avares://MyApp.Shared/Styles/CommonAppStyles.axaml"/>
+    </Application.Styles>
+</Application>
+```
+
+will reference the `/Styles/CommonAppStyles.axaml` file from the `MyApp.Shared` project.

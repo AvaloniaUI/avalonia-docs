@@ -95,7 +95,7 @@ FluentTheme supports only Dark and Light theme variants, and it's not possible t
 ## Creating custom color palettes with online editor
 
 Microsoft Fluent Theme Editor was ported to Avalonia and now available to be used with our FluentTheme as well.
-It is available on <https://theme.xaml.live/> page and supports following features:
+It is available on https://theme.xaml.live/ page and supports following features:
 
 1. Editing palette colors for both Light and Dark variants.
 2. Previewing of the current palette.

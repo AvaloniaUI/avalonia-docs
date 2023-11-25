@@ -5,6 +5,7 @@ title: Add a Control
 
 import Highlight from '@site/src/components/Highlight';
 import AvaloniaPropertyIntellisenseScreenshot from '/img/get-started/add-a-control/image (1) (2) (1).png';
+import CalculateButton from '/img/get-started/add-a-control/calculate-button.png';
 
 So far the main window of your application displays only a text string. On this page, you will learn how to add some of the built-in controls that are part of Avalonia.
 
@@ -13,14 +14,15 @@ So far the main window of your application displays only a text string. On this 
 Avalonia contains a built-in control that creates a button. Follow this procedure to replace the text string you currently have in the content zone of the window, with a button control.
 
 - Stop the app if it is running.
-- Locate the `Welcome to Avalonia!` message in the XAML pane, and delete the text.
-- Insert a `Button` tag as shown:
-
+- Locate the 
+`<TextBlock Text="text" HorizontalAlignment="Center" VerticalAlignment="Center"/>`	
+in the `MainView.axaml` file.. 
+- Delete the entire line.
+- Insert a 'Button' tag as shown:
 ```xml
-<Window .... >
   <Button>Calculate</Button>
-</Window>
 ```
+<img className="center" src={CalculateButton} alt="" />
 
 :::tip
 If you're using a previewer, you will see the button appear in the preview pane as soon as the XAML is valid. You can also try out a mouse move-over and click on the button to see the different colors it displays in different states.

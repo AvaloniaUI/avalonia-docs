@@ -11,7 +11,7 @@ Flash 8GB SD Card with Raspbian Stretch (2018-11-13). `BelenaEtcher` is a nice t
 
 Plug in the card and start the `Raspberry Pi`.
 
-You can follow [this guide](https://blogs.msdn.microsoft.com/david/2017/07/20/setting\_up\_raspian\_and\_dotnet\_core\_2\_0\_on\_a\_raspberry\_pi/), next steps are summarized below.
+You can follow [this guide](https://blogs.msdn.microsoft.com/david/2017/07/20/setting_up_raspian_and_dotnet_core_2_0_on_a_raspberry_pi/), next steps are summarized below.
 
 ### Step 2
 
