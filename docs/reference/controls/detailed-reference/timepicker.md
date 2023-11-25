@@ -19,10 +19,9 @@ You will probably use these properties most often:
 This example shows how to create a time picker for the 24 hour clock, with 20 minute time slots:
 
 ```xml
-<StackPanel Margin="20">
+<StackPanel Margin="20" Spacing="4">
   <Label Content="Please choose your time:"/>
-  <TimePicker Header="Please choose your time:" 
-              ClockIdentifier="24HourClock"              
+  <TimePicker ClockIdentifier="24HourClock"              
               MinuteIncrement="20"/>
 </StackPanel>
 ```
