@@ -3,8 +3,6 @@ description: REFERENCE
 ---
 
 import RiderWelcomeScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-1-rider-welcome.png';
-import RiderConfigurePluginReposScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-2-configure-plugin-repos.png'
-import RiderEnterPluginRepoScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-3-enter-plugin-repo.png';
 import RiderInstallAvaloniaPluginScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-4-plugin-install.png';
 
 # JetBrains Rider 设置
@@ -59,15 +57,7 @@ Rider将为您提供 _Avalonia UI_ 最佳的开发体验。它适用于Windows�
 
 **Preferences** 窗口将打开。
 
-- 点击设置（齿轮图标），然后在弹出菜单中点击**Manage Plugin Repositories...**。
-
-<img src={RiderConfigurePluginReposScreenshot} alt="" />
-
-- 在**Custom Plugin Repositories**对话框中，点击加号（`+`）图标，输入URL `https://plugins.jetbrains.com/plugins/dev/14839` ，然后点击**OK**。
-
-<img src={RiderEnterPluginRepoScreenshot} alt="" />
-
-- 回到 Preferences 窗口，点击**Marketplace**并在搜索框中输入 `Avalonia`。在搜索结果窗格中看到**AvaloniaRider**时，点击**Install**。
+- 点击**Marketplace**并在搜索框中输入 `Avalonia`。在搜索结果窗格中看到**AvaloniaRider**时，点击**Install**。
 
 <img src={RiderInstallAvaloniaPluginScreenshot} alt="" />
 
