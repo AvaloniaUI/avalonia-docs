@@ -21,8 +21,9 @@ For example, this code adds a data template to display the view model class `MyV
     </UserControl.DataTemplates>
     <!-- Assuming that DataContext.Foo is an object of type
          MyApp.ViewModels.FooViewModel then a red border with a corner
-         radius of 8 containing a TextBox will be displayed here -->
-    <ContentControl DataType="viewmodels:UserControl1ViewModel" Content="{Binding Foo}"/>
+         radius of 8 containing a TextBox will be displayed here.
+         DataType is required only if you use Compiled Bindings, so it can be type-checked.  -->
+    <ContentControl x:DataType="viewmodels:FooViewModel" Content="{Binding Foo}"/>
 <UserControl>
 ```
 
