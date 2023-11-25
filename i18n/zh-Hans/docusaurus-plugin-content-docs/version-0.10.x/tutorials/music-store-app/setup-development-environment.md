@@ -4,8 +4,6 @@ title: Setup Development Environment
 ---
 
 import MusicStoreRiderWelcomeScreenshot from '/img/tutorials/music-store-app/setup-development-environment/rider-welcome.png';
-import MusicStoreConfigurePluginReposScreenshot from '/img/tutorials/music-store-app/setup-development-environment/configure-plugin-repos.png';
-import MusicStoreEnterPluginRepoScreenshot from '/img/tutorials/music-store-app/setup-development-environment/enter-plugin-repo.png';
 import MusicStorePluginInstallScreenshot from '/img/tutorials/music-store-app/setup-development-environment/plugin-install.png';
 
 ### Setting up your development environment
@@ -48,15 +46,7 @@ Examples:
 
 <img className="center" src={MusicStoreRiderWelcomeScreenshot} alt="Rider welcome" />
 
-A new Preferences Screen will open up. Click the `Settings` icon as shown and select `Manage Plugin Repositories...`
-
-<img className="center" src={MusicStoreConfigurePluginReposScreenshot} alt="Configure plugin repos" />
-
-Click the `+` icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`then click `OK`
-
-<img className="center" src={MusicStoreEnterPluginRepoScreenshot} alt="Enter plugin repo" />
-
-Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install` then once that's done, click the `Restart IDE` button that will appear.
+A new Preferences Screen will open up. Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install` then once that's done, click the `Restart IDE` button that will appear.
 
 <img className="center" src={MusicStorePluginInstallScreenshot} alt="Plugin install" />
 
