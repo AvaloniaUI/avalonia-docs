@@ -24,7 +24,7 @@ import StylingEllipseButtonScreenshot from '/img/basics/user-interface/styling/e
 - 控件主题通过设置 `Theme` 属性来分配给控件，通常使用 `{StaticResource}` 标记扩展。
 
 :::info
-控件主题通常应用于[模板化（无外观）](../controls/creating-controls/choosing-a-custom-contro-type.md)的控件，但实际上它们可以应用于任何控件。然而，对于非模板化的控件，通常更方便使用标准样式。
+控件主题通常应用于[模板化（无外观）](../controls/creating-controls/choosing-a-custom-control-type.md)的控件，但实际上它们可以应用于任何控件。然而，对于非模板化的控件，通常更方便使用标准样式。
 :::
 
 ## 示例：圆形按钮

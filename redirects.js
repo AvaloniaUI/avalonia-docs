@@ -15,6 +15,10 @@ const config = {
             to: '/docs/data-binding/compiled-bindings',
         },
         {
+            from: '/docs/next/basics/user-interface/controls/creating-controls/choosing-a-custom-contro-type',
+            to: '/docs/next/basics/user-interface/controls/creating-controls/choosing-a-custom-control-type',
+        },
+        {
             from: '/docs/controls/button',
             to: '/docs/controls/buttons/button',
         },
