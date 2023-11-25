@@ -46,8 +46,7 @@ XAML 文件中的根元素以 `<UserControl` 开始，后面跟着一些 _Avalon
 例如，就像您已经做过的那样，您可以在设计时预览窗格中指定控件的宽度和高度：
 
 <pre class="language-xml"><code class="lang-xml">&#x3C;UserControl ...
-<strong>mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450" ... >
-</strong></code></pre>
+<strong>mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450" ... ></strong></code></pre>
 
 `mc:Ignorable="d"` 条目告诉 _Avalonia UI_ XAML 引擎在运行时可以忽略以 `d:` 开头的条目。
 

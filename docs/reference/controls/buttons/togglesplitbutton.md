@@ -1,5 +1,10 @@
 # Toggle Split Button
 
+import ToggleSplitButtonClosedUncheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_unchecked.png';
+import ToggleSplitButtonClosedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_checked.png';
+import ToggleSplitButtonOpenedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_opened_checked.png';
+import ToggleSplitButtonTextListScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_TextListExample.png';
+
 The `ToggleSplitButton` functions as a [`ToggleButton`](togglebutton) with primary and secondary parts that can each be pressed separately. The primary part behaves like a normal `ToggleButton` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 
 :::info
@@ -63,13 +68,16 @@ Pressing a configuration in the `Flyout` should either (1) turn on the feature w
 </ToggleSplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/ToggleSplitButton\_closed\_unchecked.png' alt=''/>
+<img src={ToggleSplitButtonClosedUncheckedScreenshot} alt=""/>
+
 _SplitButton (Flyout closed, unchecked)_
 
-<img src='/img/gitbook-import/assets/ToggleSplitButton\_closed\_checked.png' alt=''/>
+<img src={ToggleSplitButtonClosedCheckedScreenshot} alt=""/>
+
 _SplitButton (Flyout closed, checked)_
 
-<img src='/img/gitbook-import/assets/ToggleSplitButton\_opened\_checked.png' alt=''/>
+<img src={ToggleSplitButtonOpenedCheckedScreenshot} alt=""/>
+
 _SplitButton (Flyout opened, checked)_
 
 ### Text editor with numbered or bulleted list example
@@ -110,5 +118,6 @@ Continuing the text editor example from `SplitButton`, a common use case of the 
 </ToggleSplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/ToggleSplitButton\_TextListExample.png' alt=''/>
+<img src={ToggleSplitButtonTextListScreenshot} alt=""/>
+
 _Sample of ToggleSplitButton for toggle text lists on and off and selecting the list format_

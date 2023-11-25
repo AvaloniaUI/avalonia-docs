@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import RepeatButtonScreenshot from '/img/gitbook-import/assets/repeatbutton.gif';
+
 # 重复按钮
 
 重复按钮是一种控件，其特点是在按住按钮时定期生成点击事件。
@@ -43,7 +45,7 @@ public partial class MainWindow : Window
 }
 ```
 
-![示例图片](/img/gitbook-import/assets/repeatbutton.gif)
+<img src={RepeatButtonScreenshot} alt="示例图片"/>
 
 ## 更多信息
 

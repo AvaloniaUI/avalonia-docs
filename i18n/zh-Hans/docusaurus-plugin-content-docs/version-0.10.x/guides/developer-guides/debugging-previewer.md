@@ -3,6 +3,8 @@ id: debugging-previewer
 title: Debugging Previewer
 ---
 
+import VsAttachDebuggerScreenshot from '/img/guides/developer-guides/debugging-previewer/132686320-958f30a6-49f8-498f-853c-b9dd17262b54.png';
+
 By default, even if you would put a breakpoint in Avalonia main repo directly it would not be hit when Previewer executes this code. This is because Previewer is a completely different process usually run by IDE.
 
 **Debugging with JetBrains Rider**
@@ -45,6 +47,4 @@ But if you need to place breakpoints in the previewer code you may need to use [
 
 You should see a window like this.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/guides/developer-guides/debugging-previewer/132686320-958f30a6-49f8-498f-853c-b9dd17262b54.png" />
-  </div>
+<img className="center" src={VsAttachDebuggerScreenshot} alt="" />

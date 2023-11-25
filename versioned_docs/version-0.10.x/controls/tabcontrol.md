@@ -3,13 +3,14 @@ id: tabcontrol
 title: TabControl
 ---
 
+import TabControlRibbonScreenshot from '/img/controls/tabcontrol/tabcontrol.gif';
+import TabControlStyledRibbonScreenshot from '/img/controls/tabcontrol/customizedtabcontrol.gif';
+
 The `TabControl` allows us to switch between different pages by means of tabs like the tabs in web navigators or the ribbon menu \(which uses tabs\) in Word Office for instance.
 
 Here is an animation of what you can achieve :
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/tabcontrol/tabcontrol.gif" alt="Decription" />
-  </div>
+<img className="center" src={TabControlRibbonScreenshot} alt="" />
 
 To create this, we'll describe the entire control \(TabControl\) and each individual tab+page \(TabItem\). Here is an example :
 
@@ -43,9 +44,7 @@ To create this, we'll describe the entire control \(TabControl\) and each indivi
 
 Let's have a look at a customized `TabControl` :
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/tabcontrol/customizedtabcontrol.gif" alt="Decription" />
-  </div>
+<img className="center" src={TabControlStyledRibbonScreenshot} alt="" />
 
 The grey part is the `TabItem`... Yes, the `TabItem` includes the tab **AND** the page associated to the tab. The tab is called the `header`of the `TabItem`. Moreover, given the way `TabControl` has been implemented, tabs are in a `WrapPanel`. Thus, if you want to color in blue \(like this is done above\) the empty bar of the tabbed bar, you must change the background color of the `WrapPanel` of the `TabControl`. Here is the code used to obtain the result above \(_Note the workaround used to color some tabs : this is due to the way the control is implemented. It might change in the future._\)
 

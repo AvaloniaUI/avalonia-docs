@@ -2,6 +2,10 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreDarkModePreviewScreenshot from './images/dark-mode-preview.png';
+import MusicStoreAcrylicMaterialScreenshot from './images/acrylic-material.png';
+import MusicStoreFullAcrylicWindowScreenshot from './images/full-acrylic-window.png';
+
 # Window Styling
 
 On this page, you will make the main window look modern by applying a dark theme, and an acrylic blur to the window background.
@@ -12,7 +16,7 @@ Follow this procedure to style the main window in 'dark' mode:
 
 - Stop the app if it is still running.
 - Locate and open the file **App.axaml**.
-- In the XAML, change the `RequestedThemeVariant` attribute in the `<Application>` element from "Default" to "Dark"&#x20;
+- In the XAML, change the `RequestedThemeVariant` attribute in the `<Application>` element from "Default" to "Dark"
 
 ```markup
 <Application ...
@@ -27,7 +31,7 @@ Notice that the preview pane is still showing the window in 'light' mode. The ap
 
 The preview pane now changes to the dark mode.
 
-![](images/dark-mode-preview.png)
+<p><img className="image-medium-zoom" src={MusicStoreDarkModePreviewScreenshot} alt="" /></p>
 
 ## Acrylic Blur
 
@@ -65,7 +69,7 @@ Follow this procedure to style the background of the main window with an acrylic
 
 - Click **Debug** (top right of the IDE) to compile and run the project.
 
-![](images/acrylic-material.png)
+<p><img className="image-medium-zoom" src={MusicStoreAcrylicMaterialScreenshot} alt="" /></p>
 
 Notice that, as expected, the acrylic window effect covers the content zone of the main window. However the effect does not yet extend to the title bar.
 
@@ -76,7 +80,7 @@ Note that _Linux_ users can not yet take advantage of the following code due to 
 Follow this procedure to extend the acrylic blur effect onto the title bar:
 
 - Stop the app if is still running.
-- Find the end of the opening tag of the `<Window>` element again.&#x20;
+- Find the end of the opening tag of the `<Window>` element again.
 - Add the `ExtendClientAreaToDecorationsHint` attribute as shown:
 
 ```markup
@@ -89,6 +93,6 @@ Follow this procedure to extend the acrylic blur effect onto the title bar:
 
 - Click **Debug** to compile and run the project.
 
-![](images/full-acrylic-window.png)
+<p><img className="image-medium-zoom" src={MusicStoreFullAcrylicWindowScreenshot} alt="" /></p>
 
-Now you have the acrylic blur effect extending into the title bar. On the next page you will learn how to add and layout a control in the window. &#x20;
+Now you have the acrylic blur effect extending into the title bar. On the next page you will learn how to add and layout a control in the window.

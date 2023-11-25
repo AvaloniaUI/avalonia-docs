@@ -2,11 +2,19 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ButtonClickHandlerScreenshot from '/img/gitbook-import/assets/button.gif';
+
 # 按钮
 
 按钮是一种对指针动作做出反应的控件（也有一些键盘等效操作）。当指针按下时，它会呈现出被按下的状态。
 
 将指针按下到释放的序列解释为点击；此行为是可配置的。
+
+:::warning
+在确定按钮是否被用户按下时，请始终使用`Click`事件而不是`PointerPressed`。`Click`是`Button`特有的高级事件，表示按钮已被按下。
+
+而`PointerPressed`更像是一个低层次的输入事件：`Button`需要在内部处理这个事件，以引发`Click`事件。由于 `Button` 会处理 `PointerPressed`事件（将`IsHandled`设为 true），应用程序将永远不会像其他控件那样收到该事件。
+:::
 
 :::info
 点击是众多按钮事件之一，完整列表请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events)。
@@ -53,7 +61,7 @@ public partial class MainWindow : Window
 }
 ```
 
-<img src='/img/gitbook-import/assets/button.gif' alt='' />
+<img src={ButtonClickHandlerScreenshot} alt=""/>
 
 ## 更多信息
 

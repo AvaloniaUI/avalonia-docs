@@ -2,18 +2,17 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import FlatTreeDataGridSourceScreenshot from '/img/gitbook-import/assets/treedatagrid2.gif';
+
 # Flat Tree Data Grid
 
 ## Example
 
-In this example the view model contains an observable collection that is filled with data and then used to create a `FlatTreeDataGridSource` property to bind to the source of the tree data grid. The items of the grid are class `Person`.&#x20;
-
-
+In this example the view model contains an observable collection that is filled with data and then used to create a `FlatTreeDataGridSource` property to bind to the source of the tree data grid. The items of the grid are class `Person`.
 
 ```
 <TreeDataGrid Source="{Binding PersonSource}"/>
 ```
-
 
 ```csharp title='C# View Model'
 using Avalonia.Controls.Models.TreeDataGrid;
@@ -28,7 +27,7 @@ namespace AvaloniaControls.ViewModels
     {
         private ObservableCollection<Person> _people;
 
-        public HierarchicalTreeDataGridSource<Person> PersonSource { get; }
+        public FlatTreeDataGridSource<Person> PersonSource { get; }
 
         public MainWindowViewModel()
         {
@@ -40,7 +39,7 @@ namespace AvaloniaControls.ViewModels
                 new Person ( "Jazmine", "Schroeder", 52 ),
             };
                           
-            PersonSource = new HierarchicalTreeDataGridSource<Person>(_people)
+            PersonSource = new FlatTreeDataGridSource<Person>(_people)
             {
                 Columns =
                 {
@@ -58,7 +57,6 @@ namespace AvaloniaControls.ViewModels
 
 ```
 
-
 ```csharp title='C# Item Class'
 public class Person
 {
@@ -75,10 +73,8 @@ public class Person
 }
 ```
 
-
-
 The data source also defines how to map the data model to rows and columns in the tree data grid. Because this example displays flat data, the data source is using a `FlatTreeDataGridSource<Person>` property on the view model.&#x20;
 
 There are three columns defined with the `TextColumn` class. Each takes a lambda to return the column value.
 
-<img src='/img/gitbook-import/assets/treedatagrid2.gif' alt=''/>
+<img src={FlatTreeDataGridSourceScreenshot} alt=""/>

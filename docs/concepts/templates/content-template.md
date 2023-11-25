@@ -2,6 +2,8 @@
 description: CONCEPTS - Data Templates
 ---
 
+import ContentTemplateStudentScreenshot from '/img/gitbook-import/assets/image (47).png';
+
 # Content Template
 
 The purpose of a data template is that it defines how _Avalonia UI_ should display an object created from a class that you have defined, and that is not a control, or a simple string.&#x20;
@@ -43,7 +45,7 @@ You can define a data template (for no particular class) using the `DataTemplate
 
 In the above, the bindings refer to the properties of any class present in the content zone of the window. Here the window content is the same student object as you used before; but when you run this code, _Avalonia UI_ now displays:&#x20;
 
-<img src="/img/gitbook-import/assets/image (47).png" alt=""/>
+<img src={ContentTemplateStudentScreenshot} alt=""/>
 
 Using a data template in this way, you have both defined and chosen the data template for the content in the same place - by setting the `ContentTemplate` property of the window directly.
 

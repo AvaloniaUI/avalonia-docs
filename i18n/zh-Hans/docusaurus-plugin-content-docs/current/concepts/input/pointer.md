@@ -1,6 +1,9 @@
 ---
 description: CONCEPTS - Input
 ---
+
+import PointerPressedSampleScreenshot from '/img/gitbook-import/assets/pressed.gif';
+
 # 鼠标和指针设备
 
 在_Avalonia UI_中，您可以使用'pointer'抽象来实现指针设备与应用程序的交互。这可以表示包括但不限于鼠标、触摸板和笔在内的设备。_Avalonia UI_控件具有允许您订阅指针移动、点击和滚轮移动的事件。它们如下所示：
@@ -43,7 +46,7 @@ private void PointerPressedHandler (object sender, PointerPressedEventArgs args)
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/pressed.gif" alt=""/>
+<img src={PointerPressedSampleScreenshot} alt=""/>
 
 ## 指针位置
 

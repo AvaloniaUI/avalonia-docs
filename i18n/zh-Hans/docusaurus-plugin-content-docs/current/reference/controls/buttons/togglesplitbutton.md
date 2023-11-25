@@ -1,5 +1,10 @@
 # 切换分裂按钮
 
+import ToggleSplitButtonClosedUncheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_unchecked.png';
+import ToggleSplitButtonClosedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_checked.png';
+import ToggleSplitButtonOpenedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_opened_checked.png';
+import ToggleSplitButtonTextListScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_TextListExample.png';
+
 `ToggleSplitButton` 作为一个带有主要和次要部分的 [`ToggleButton`](togglebutton)，每个部分都可以单独按下。主要部分的行为类似于普通的 `ToggleButton`，而次要部分会打开一个带有附加操作的 [`Flyout`](../flyouts)。
 
 :::info
@@ -63,13 +68,16 @@
 </ToggleSplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/ToggleSplitButton\_closed\_unchecked.png' alt=''/>
+<img src={ToggleSplitButtonClosedUncheckedScreenshot} alt=""/>
+
 _SplitButton (Flyout closed, unchecked)_
 
-<img src='/img/gitbook-import/assets/ToggleSplitButton\_closed\_checked.png' alt=''/>
+<img src={ToggleSplitButtonClosedCheckedScreenshot} alt=""/>
+
 _SplitButton (Flyout closed, checked)_
 
-<img src='/img/gitbook-import/assets/ToggleSplitButton\_opened\_checked.png' alt=''/>
+<img src={ToggleSplitButtonOpenedCheckedScreenshot} alt=""/>
+
 _SplitButton (Flyout opened, checked)_
 
 ### 带编号或项目符号列表的文本编辑器示例
@@ -110,5 +118,6 @@ _SplitButton (Flyout opened, checked)_
 </ToggleSplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/ToggleSplitButton\_TextListExample.png' alt=''/>
+<img src={ToggleSplitButtonTextListScreenshot} alt=""/>
+
 _Sample of ToggleSplitButton for toggle text lists on and off and selecting the list format_

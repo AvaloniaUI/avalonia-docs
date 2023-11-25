@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ToolTipTextScreenshot from '/img/gitbook-import/assets/tooltip.gif';
+import ToolTipContentScreenshot from '/img/gitbook-import/assets/tooltip2.gif';
+
 # Tool Tip
 
 The tool tip is a popup that shows its content when the user hovers over the 'host' control to which it is attached.
@@ -10,7 +13,7 @@ The tool tip is a popup that shows its content when the user hovers over the 'ho
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="298">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ToolTip.Tip</code></td><td>Attached property for the the tooltip contents.</td></tr><tr><td><code>ToolTip.Placement</code></td><td>Defines the placement for the tooltip relative to the host or the pointer. Choose from top, bottom, left, right, anchor and gravity, pointer. The default value is pointer which places the tip content at the position where the pointer stops moving.</td></tr><tr><td><code>ToolTip.HorizontalOffset</code></td><td>The tooltip horizontal offset from the placement (default 0).</td></tr><tr><td><code>ToolTip.VerticalOffset</code></td><td>The tooltip vertical offset from the placement (default 20).</td></tr><tr><td><code>ToolTip.ShowDelay</code></td><td>The the amount of time the pointer has to be still before the the tooltip appears. In microseconds (default 400).</td></tr></tbody></table>
+<table><thead><tr><th width="298">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ToolTip.Tip</code></td><td>Attached property for the tooltip contents.</td></tr><tr><td><code>ToolTip.Placement</code></td><td>Defines the placement for the tooltip relative to the host or the pointer. Choose from top, bottom, left, right, anchor and gravity, pointer. The default value is pointer which places the tip content at the position where the pointer stops moving.</td></tr><tr><td><code>ToolTip.HorizontalOffset</code></td><td>The tooltip horizontal offset from the placement (default 0).</td></tr><tr><td><code>ToolTip.VerticalOffset</code></td><td>The tooltip vertical offset from the placement (default 20).</td></tr><tr><td><code>ToolTip.ShowDelay</code></td><td>The amount of time the pointer has to be still before the tooltip appears. In microseconds (default 400).</td></tr></tbody></table>
 
 ## Examples
 
@@ -21,15 +24,15 @@ This is a simple text-based tooltip, using default values for the placement and 
             ToolTip.Tip="This is a rectangle" />
 ```
 
-<img src='/img/gitbook-import/assets/tooltip.gif' alt=''/>
+<img src={ToolTipTextScreenshot} alt="" />
 
 To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. For example:
 
 ```markup
 <Rectangle Fill="Aqua" Height="200" Width="400"
     ToolTip.Placement="Bottom">
-    <ToolTip.Tip >
-      <StackPanel >
+    <ToolTip.Tip>
+      <StackPanel>
         <TextBlock FontSize="16">Rectangle</TextBlock>
         <TextBlock>Some explanation here.</TextBlock>
       </StackPanel>
@@ -37,7 +40,7 @@ To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. F
 </Rectangle>
 ```
 
-<img src='/img/gitbook-import/assets/tooltip2.gif' alt=''/>
+<img src={ToolTipContentScreenshot} alt="" />
 
 ## More Information
 

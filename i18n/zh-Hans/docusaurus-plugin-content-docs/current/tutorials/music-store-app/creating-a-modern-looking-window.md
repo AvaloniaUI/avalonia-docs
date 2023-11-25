@@ -2,6 +2,10 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreDarkModePreviewScreenshot from './images/dark-mode-preview.png';
+import MusicStoreAcrylicMaterialScreenshot from './images/acrylic-material.png';
+import MusicStoreFullAcrylicWindowScreenshot from './images/full-acrylic-window.png';
+
 # 窗口样式
 
 在本页中，您将通过对窗口背景应用暗色主题和亚克力模糊效果，来使主窗口看起来现代化。
@@ -27,7 +31,7 @@ description: TUTORIALS - Music Store App
 
 预览窗格现在会切换到暗色模式。
 
-![](images/dark-mode-preview.png)
+<p><img className="image-medium-zoom" src={MusicStoreDarkModePreviewScreenshot} alt="" /></p>
 
 ## 亚克力模糊效果
 
@@ -65,7 +69,7 @@ description: TUTORIALS - Music Store App
 
 - 单击 **调试**（IDE 右上角）以编译并运行项目。
 
-![](images/acrylic-material.png)
+<p><img className="image-medium-zoom" src={MusicStoreAcrylicMaterialScreenshot} alt="" /></p>
 
 注意，正如预期的那样，亚克力窗口效果覆盖了主窗口的内容区域，但该效果还尚未延伸到标题栏。
 
@@ -89,6 +93,6 @@ description: TUTORIALS - Music Store App
 
 - 单击 **调试** 以编译并运行项目。
 
-![](images/full-acrylic-window.png)
+<p><img className="image-medium-zoom" src={MusicStoreFullAcrylicWindowScreenshot} alt="" /></p>
 
 现在，您已经将亚克力模糊效果延伸到标题栏中。在下一页中，您将学习如何在窗口中添加并排版控件。

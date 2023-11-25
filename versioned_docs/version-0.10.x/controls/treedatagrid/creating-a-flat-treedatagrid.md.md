@@ -3,6 +3,8 @@ id: creating-a-flat-treedatagrid
 title: Creating a Flat TreeDataGrid
 ---
 
+import FlatTreeDataGridSourceScreenshot from '/img/controls/treedatagrid/get-started-flat-1.png';
+
 There are two parts to any `TreeDataGrid`:
 
 * The "Source" which is defined in code and describes how your data model will map to the rows and columns of the `TreeDataGrid`
@@ -98,6 +100,4 @@ It's now time to add the `TreeDataGrid` control to a window and bind it to the s
 
 Run the application and you should see the data appear:
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/controls/treedatagrid/get-started-flat-1.png" />
-</div>
+<img className="center" src={FlatTreeDataGridSourceScreenshot} alt="" />

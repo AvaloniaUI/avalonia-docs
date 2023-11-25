@@ -2,6 +2,10 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TreeDataGridFilesScreenshot from '/img/gitbook-import/assets/files.png';
+import TreeDataGridCountriesScreenshot from '/img/gitbook-import/assets/countries.png';
+import TreeDataGridNuGetScreenshot from '/img/gitbook-import/assets/image (4).png';
+
 # Tree Data Grid
 
 The tree data grid displays hierarchical and tabular data together in a single view. It is a combination of a tree view and data grid.
@@ -23,17 +27,19 @@ The control has two modes of operation:
 
 This is an illustration of a tree data grid displaying hierarchical data:
 
-<img src='/img/gitbook-import/assets/files.png' alt=''/>
+<img src={TreeDataGridFilesScreenshot} alt="" />
+
 ## Flat Data
 
 This is an illustration An example of  a tree data grid displaying flat data:
 
-<img src='/img/gitbook-import/assets/countries.png' alt=''/>
+<img src={TreeDataGridCountriesScreenshot} alt="" />
+
 ## NuGet Package Reference
 
 You must install the _NuGet_ package for the data grid, there are several ways of doing this. You can use **Manage NuGet Packages** from the project menu of your IDE:
 
-<img src='/img/gitbook-import/assets/image (4).png>' alt=''/>
+<img src={TreeDataGridNuGetScreenshot} alt=""/>
 Alternatively,  you can run this instruction from the command line:
 
 ```bash

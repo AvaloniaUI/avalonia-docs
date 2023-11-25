@@ -2,6 +2,8 @@
 description: CONCEPTS - The MVVM Pattern
 ---
 
+import MvvmDataBindingDiagram from '/img/gitbook-import/assets/mvvm.png';
+
 # Avalonia UI和MVVM
 
 在本页面中，您将了解如何在使用_Avalonia UI_时实现MVVM模式。
@@ -28,7 +30,7 @@ description: CONCEPTS - The MVVM Pattern
 
 数据绑定是允许_Avalonia UI_ MVVM应用程序将视图与视图模型分离的关键技术。您可以将视图与视图模型之间的关系可视化为通过数据绑定连接的两个层：
 
-<img src='/img/gitbook-import/assets/mvvm.png' alt=''/>
+<img src={MvvmDataBindingDiagram} alt=""/>
 
 请注意，其中一些数据绑定由双向箭头表示，而其他数据绑定则由单向箭头表示。例如，名称和地址输入是双向的 - 您希望将视图模型中的任何更改通知视图，并且将视图中的输入更新到视图模型。
 

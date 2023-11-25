@@ -2,15 +2,15 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreDialogContentDiagram from '/img/gitbook-import/assets/image (9) (3).png';
+
 # Add Dialog Content
 
 On the this page you will learn how to add some content to the dialog window. This will be some controls for the search and a dialog close button; together with a list of placeholders for the album covers - these will eventually be loaded as the results of the search.
 
-To arrange the dialog controls, you will use the dock panel layout control, that is part of the _Avalonia UI_ built-in controls. This will keep the search controls at the top of the dialog, and the button at the bottom, whatever the height. The list will be the 'fill' area of the dock panel, so it will always take up all the remaining content zone.&#x20;
+To arrange the dialog controls, you will use the dock panel layout control, that is part of the _Avalonia UI_ built-in controls. This will keep the search controls at the top of the dialog, and the button at the bottom, whatever the height. The list will be the 'fill' area of the dock panel, so it will always take up all the remaining content zone.
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (9) (3).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreDialogContentDiagram} alt="" />
 
 :::info
 For full information on the dock panel control, see the reference [here](../../reference/controls/dockpanel.md).
@@ -25,7 +25,7 @@ This is a common pattern of UI Composition, to read about this concept, see [her
 Follow this procedure to add the user control and constituent controls for the dialog:
 
 - Stop the app if it is still running.
-- In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
+- In the solution explorer, right-click the **/Views** folder and then click **Add**.
 - Click **Avalonia User Control**.
 - When prompted for the name, type 'MusicStoreView'.
 - Press enter.
@@ -54,7 +54,7 @@ Now the next step is for you to add the new user control to the content zone of 
 
 To add the user control, follow this procedure:
 
-- Locate and open the **MusicStoreWindow.axaml** file. &#x20;
+- Locate and open the **MusicStoreWindow.axaml** file.
 - Add the namespace for the views to the `<Window>` element:
 
 ```xml
@@ -72,4 +72,4 @@ To add the user control, follow this procedure:
 
 You will see the controls appear in the preview pane.
 
-On the next page, you will learn how to use a mock for the album search feature - this is so that you can create the view and view model for the results, and leave the implementation of the real search until later.&#x20;
+On the next page, you will learn how to use a mock for the album search feature - this is so that you can create the view and view model for the results, and leave the implementation of the real search until later.

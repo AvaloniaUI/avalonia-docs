@@ -80,8 +80,8 @@ Observable.Merge(
 您会记得两个反应式命令的声明是不同的。它们是：
 
 ```csharp
-public ReactiveCommand<Unit, TodoItem> Ok { get; }
-public ReactiveCommand<Unit, Unit> Cancel { get; }
+public ReactiveCommand<Unit, ToDoItem> OkCommand { get; }
+public ReactiveCommand<Unit, Unit> CancelCommand { get; }
 ```
 
 OK 命令在执行时生成一个 `ToDoItem` 类型的对象，而取消命令只生成一个 `Unit` 类型的对象。`Unit` 是 `void` 的反应式版本 - 它表示命令生成的值为空，但仍然通知命令已执行！
@@ -101,7 +101,7 @@ OK 命令在执行时生成一个 `ToDoItem` 类型的对象，而取消命令�
    {
       ToDoListViewModel.ListItems.Add(newItem);
    }
-   ContentViewModel = ToDoListViewModel;
+   ContentViewModel = ToDoList;
 });
 ```
 
@@ -110,7 +110,7 @@ OK 命令在执行时生成一个 `ToDoItem` 类型的对象，而取消命令�
 如果值为空，则表示点击了取消按钮 - 此时无需进一步操作；只需恢复主窗口内容以显示（未更改的）待办事项列表。
 
 ```csharp
-ContentViewModel = ToDoListViewModel;
+ContentViewModel = ToDoList;
 ```
 
 如果值不为空，则表示点击了 OK 按钮；在这种情况下，值应该是包含用户输入的描述的 `ToDoItem` 对象。因此，可以将其添加到列表中。

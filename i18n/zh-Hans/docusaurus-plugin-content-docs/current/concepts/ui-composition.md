@@ -1,6 +1,12 @@
 ---
 description: CONCEPTS
 ---
+
+import CompositionBasicLayoutDiagram from '/img/gitbook-import/assets/image (10) (2).png';
+import CompositionTreesDiagram from '/img/gitbook-import/assets/image (3) (1).png';
+import CompositionUserControlsDiagram from '/img/gitbook-import/assets/image (8) (2).png';
+import CompositionCollectionControlsDiagram from '/img/gitbook-import/assets/image (8) (3).png';
+
 # UI组合
 
 UI组合是创建应用程序所需布局的过程。它允许您从组件的排列中构建复杂的视图。其优点包括：
@@ -64,7 +70,7 @@ _Avalonia UI_包含大量内置控件，可以满足大多数UI需求。
 
 另一种UI组合的变体是需要呈现一组项目的情况。&#x20;
 
-<img src='/img/gitbook-import/assets/image (8) (3).png' alt=''/>
+<img src={CompositionCollectionControlsDiagram} alt=""/>
 
 这种情况将使用内置的重复控件之一，绑定到一个集合；以及使用数据模板来表示集合中的项目。
 

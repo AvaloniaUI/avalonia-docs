@@ -3,6 +3,8 @@ id: panel
 title: Panel
 ---
 
+import PanelRectangleLayoutScreenshot from '/img/controls/panel/image (7).png';
+
 The `Panel` is the base class for controls that can contain multiple children like `DockPanel` or `StackPanel`.
 
 The `Panel` class can be useful on its own for very basic layouts, or simply to allow multiple controls to be to be contained.
@@ -16,9 +18,7 @@ The `Panel` class can be useful on its own for very basic layouts, or simply to 
 </Panel>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/panel/image (7).png" alt="Decription" />
-  </div>
+<img className="center" src={PanelRectangleLayoutScreenshot} alt="" />
 
 There are other more useful panels that derive from `Panel`, these include:
 

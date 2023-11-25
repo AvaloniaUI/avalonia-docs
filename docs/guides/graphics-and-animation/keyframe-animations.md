@@ -3,12 +3,17 @@ id: keyframe-animations
 title: How To Use Keyframe Animations
 ---
 
+import AnimationKeyframeDiagram from '/img/gitbook-import/assets/image (2) (1) (4).png';
+import KeyframeFadeScreenshot from '/img/gitbook-import/assets/anim1 (1).gif';
+import KeyframeCompositeAnimationScreenshot from '/img/gitbook-import/assets/anim2.gif';
+import LinearEasingScreenshot from '/img/gitbook-import/assets/image (72).png';
+import BounceEaseInScreenshot from '/img/gitbook-import/assets/image (76).png';
 
 # How To Use Keyframe Animations
 
 You can use a keyframe animation to change one or more control properties following a timeline. The keyframes are defined in _Avalonia UI_ styles with **cue** points along the **duration** of the animation, and set the intermediate values of the properties at a point in time.
 
-<img src="/img/gitbook-import/assets/image (2) (1) (4).png" alt=""/>
+<img src={AnimationKeyframeDiagram} alt=""/>
 
 The property values between keyframes are set following the profile of an **easing function**. The default easing function is a straight-line interpolation.&#x20;
 
@@ -62,7 +67,7 @@ The finished code will look like this: &#x20;
 
 The resulting animation looks like this:
 
-<img src="/img/gitbook-import/assets/anim1 (1).gif" alt=""/>
+<img src={KeyframeFadeScreenshot} alt=""/>
 
 The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!&#x20;
 
@@ -75,7 +80,7 @@ This example shows you how to animate two properties on the same timeline.&#x20;
     <Style Selector="Rectangle.red">
       <Setter Property="Fill" Value="Red"/>
       <Style.Animations>
-        <Animation Duration="0:0:3" RepeatCount="4">
+        <Animation Duration="0:0:3" IterationCount="4">
           <KeyFrame Cue="0%">
             <Setter Property="Opacity" Value="0.0"/>
             <Setter Property="RotateTransform.Angle" Value="0.0"/>
@@ -92,7 +97,7 @@ This example shows you how to animate two properties on the same timeline.&#x20;
 
 The red rectangle is faded-in and rotated at the same time.
 
-<img src="/img/gitbook-import/assets/anim2.gif" alt=""/>
+<img src={KeyframeCompositeAnimationScreenshot} alt=""/>
 
 ## Delay
 
@@ -107,10 +112,10 @@ You can add a delay to the start of an animation by setting the delay attribute 
 
 ## Repeat
 
-You can make an animation repeat for a set number of times, or indefinitely. To repeat for a finite number of iterations set the `RepeatCount` attribute on the animation element like this:
+You can make an animation repeat for a set number of times, or indefinitely. To repeat for a finite number of iterations set the `IterationCount` attribute on the animation element like this:
 
 ```xml
-<Animation RepeatCount="5">
+<Animation IterationCount="5">
     ...
 </Animation>
 ```
@@ -118,7 +123,7 @@ You can make an animation repeat for a set number of times, or indefinitely. To 
 To repeat an animation indefinitely, use the special  `"INFINITE"` value. For example:
 
 ```xml
-<Animation RepeatCount="INFINITE">
+<Animation IterationCount="INFINITE">
     ...
 </Animation>
 ```
@@ -128,7 +133,7 @@ To repeat an animation indefinitely, use the special  `"INFINITE"` value. For ex
 By default an animation plays forward. That is it follows the profile of the easing function from left to right. You can alter this behavior by setting the `PlaybackDirection` attribute on the animation element. For example:
 
 ```xml
-<Animation RepeatCount="9" PlaybackDirection="AlternateReverse">
+<Animation IterationCount="9" PlaybackDirection="AlternateReverse">
     ...
 </Animation>
 ```
@@ -142,7 +147,7 @@ The following table describes the options:
 The fill mode attribute of an animation defines how the properties being set will persist after it runs, or during any gaps between runs. For example:
 
 ```xml
-<Animation RepeatCount="9" FillMode="Backward">
+<Animation IterationCount="9" FillMode="Backward">
     ...
 </Animation>
 ```
@@ -157,11 +162,9 @@ An easing function defines how a property is varied over time during an animatio
 
 <div>
 
-<img src="/img/gitbook-import/assets/image (72).png" alt=""/>
+<img src={LinearEasingScreenshot} alt=""/>
 
- 
-
-<img src="/img/gitbook-import/assets/image (76).png" alt=""/>
+<img src={BounceEaseInScreenshot} alt=""/>
 
 </div>
 

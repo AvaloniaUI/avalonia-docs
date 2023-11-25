@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import AutoCompleteBoxScreenshot from '/img/gitbook-import/assets/autocomplete.gif';
+
 # Auto-complete Box
 
 The auto-complete box presents a text box for user input and a drop-down that contains possible matches from an items source collection, for the text typed in. The drop-down shows when the user starts to type, and the match is updated for each character typed. The user can select from the drop-down.
@@ -26,15 +28,12 @@ In an **ordinal** string comparison, each character is compared using its simple
 
 This example has a fixed items source (array) that is set in the C# code-behind.
 
-
-
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">Choose an animal:</TextBlock>
   <AutoCompleteBox x:Name="animals" FilterMode="StartsWith" />
 </StackPanel>
 ```
-
 
 ```csharp title='C#'
 using Avalonia.Controls;
@@ -55,11 +54,7 @@ namespace AvaloniaControls.Views
 }
 ```
 
-
-
-<img src="/img/gitbook-import/assets/autocomplete.gif" alt=""/>
-
-
+<img src={AutoCompleteBoxScreenshot} alt="" />
 
 ## More Information
 

@@ -3,6 +3,9 @@ id: ide-support
 title: 如何使用实时预览
 ---
 
+import VsXamlPreviewerScreenshot from '/img/gitbook-import/assets/vs-designer.png';
+import VsLogVerbosityScreenshot from '/img/gitbook-import/assets/image (1) (4).png';
+import VsDiagnosticsOutputScreenshot from '/img/gitbook-import/assets/image (7) (4).png';
 
 # 如何使用实时预览
 
@@ -12,7 +15,7 @@ _Avalonia for Visual Studio_ 扩展包含一个 XAML 设计器，可在您编写
 
 对于 Visual Studio 和 ReSharper 用户，[ReSharper 2020.3](https://www.jetbrains.com/resharper/whatsnew/2020-3/#version-2020-3-avalonia-support) 引入了内置的代码分析、代码补全、导航和查找用法功能。
 
-<img src='/img/gitbook-import/assets/vs-designer.png' alt=''/>
+<img src={VsXamlPreviewerScreenshot} alt="Shows the XAML Previewer in Visual Studio"/>
 
 :::info
 如果您的 XAML 文件位于库中，_Avalonia UI_ 需要一个可执行的应用程序来进行预览。在设计器右上角的下拉菜单中选择一个可执行项目。一旦构建了您的项目，编辑编辑器中的 XAML 将自动更新预览。
@@ -100,10 +103,10 @@ namespace My.Namespace
 -  在列表中单击 **Avalonia XAML Editor**
 -  在 **Minimum Log Verbosity** 下拉菜单中选择 **Verbose**
 
-<img src="/img/gitbook-import/assets/image (7) (4).png" alt=""/>
+<img src={VsLogVerbosityScreenshot} alt=""/>
 
 现在日志将显示在 Visual Studio **输出**窗口中。
 
 在此窗口顶部的下拉菜单中选择 **Avalonia Diagnostics**。
 
-<img src="/img/gitbook-import/assets/image (1) (4).png" alt=""/>
+<img src={VsDiagnosticsOutputScreenshot} alt=""/>

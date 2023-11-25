@@ -2,6 +2,8 @@
 description: CONCEPTS - Data Templates
 ---
 
+import ContentTemplateStudentScreenshot from '/img/gitbook-import/assets/image (47).png';
+
 # 内容模板
 
 数据模板的目的是定义 _Avalonia UI_ 如何显示您所定义的类创建的对象，该对象不是控件或简单的字符串。
@@ -43,7 +45,7 @@ description: CONCEPTS - Data Templates
 
 在上面的示例中，绑定引用了窗口内容区域中的任何类的属性。这里窗口的内容是与之前相同的学生对象，但是当您运行这段代码时，_Avalonia UI_ 现在会显示如下内容：
 
-![图片](/img/gitbook-import/assets/image (47).png)
+<img src={ContentTemplateStudentScreenshot} alt="图片"/>
 
 以这种方式使用数据模板，您在同一个地方定义并选择了内容的数据模板 - 通过直接设置窗口的 `ContentTemplate` 属性。
 

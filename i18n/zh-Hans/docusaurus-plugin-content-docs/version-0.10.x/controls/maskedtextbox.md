@@ -3,6 +3,9 @@ id: maskedtextbox
 title: MaskedTextBox
 ---
 
+import MaskedTextBoxEmptyScreenshot from '/img/controls/maskedtextbox/maskedtextboxexample1.png';
+import MaskedTextBoxTextEntryScreenshot from '/img/controls/maskedtextbox/maskedtextexample.gif';
+
 The `MaskedTextBox` control is an editable text field where a user can input text.
 
 ## Source code
@@ -27,15 +30,11 @@ The `MaskedTextBox` control is an editable text field where a user can input tex
 
 produces the following output in **Ubuntu**
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/maskedtextbox/maskedtextboxexample1.png" />
-  </div>
+<img className="center" src={MaskedTextBoxEmptyScreenshot} alt="" />
 
 and it behaves like so when filled in by user input
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/maskedtextbox/maskedtextexample.gif" />
-  </div>
+<img className="center" src={MaskedTextBoxTextEntryScreenshot} alt="" />
 
 ### Supported Masks
 
@@ -57,7 +56,7 @@ a | Alphanumeric, optional. If the AsciiOnly property is set to true, the only c
 : | Time separator. The actual display character used will be the time symbol appropriate to the format provider, as determined by the control's FormatProvider property.
 / | Date separator. The actual display character used will be the date symbol appropriate to the format provider, as determined by the control's FormatProvider property.
 $ | Currency symbol. The actual character displayed will be the currency symbol appropriate to the format provider, as determined by the control's FormatProvider property.
-< | Shift down. Converts all characters that follow to lowercase.
+\< | Shift down. Converts all characters that follow to lowercase.
 \> | Shift up. Converts all characters that follow to uppercase.
 \| | Disable a previous shift up or shift down.
 \\ | Escape. Escapes a mask character, turning it into a literal. "\\" | is the escape sequence for a backslash.

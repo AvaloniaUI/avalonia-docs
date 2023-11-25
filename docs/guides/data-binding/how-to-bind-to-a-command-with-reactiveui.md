@@ -3,6 +3,7 @@ id: how-to-bind-to-a-command-with-reactiveui
 title: How to Bind to a Command with ReactiveUI
 ---
 
+import BindReactiveCommandScreenshot from '/img/gitbook-import/assets/command.gif';
 
 # How to Bind to a Command with ReactiveUI
 
@@ -72,7 +73,7 @@ namespace AvaloniaGuides.ViewModels
 
 When the control bound to the reactive command is activated (in this example: when the button is clicked); then the private method to perform the action is called through the reactive command.&#x20;
 
-<img src="/img/gitbook-import/assets/command.gif" alt=""/>
+<img src={BindReactiveCommandScreenshot} alt=""/>
 
 ## Command Parameter
 

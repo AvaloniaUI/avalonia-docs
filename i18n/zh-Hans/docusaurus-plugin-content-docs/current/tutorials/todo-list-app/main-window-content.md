@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List
 ---
 
+import ToDoMainWindowContentScreenshot from '/img/gitbook-import/assets/image (4) (1) (1).png';
+
 # 主窗口内容
 
 此时，您的主窗口仍然显示解决方案模板创建的问候文本。在本页中，您将更改主窗口的内容区域，使其显示您的新用户控件。
@@ -41,8 +43,7 @@ description: TUTORIALS - To Do List
 这个 XAML 在很多方面与您在前一页上查看的用户控件 XAML 相似。具体来说，您添加了：
 
 <pre class="language-markup"><code class="lang-markup"><strong>&#x3C;Window ... 
-</strong><strong>        xmlns:views="clr-namespace:ToDoList.Views" ..>
-</strong></code></pre>
+</strong><strong>xmlns:views="clr-namespace:ToDoList.Views" ..></strong></code></pre>
 
 这将代码命名空间 `ToDoList.Views` 映射到 XML 命名空间别名 `views`。
 
@@ -66,8 +67,6 @@ dotnet run
 
 您将看到主窗口，带有新的标题和用户控件：
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (4) (1) (1).png" alt=""/>
-</div>
+<img className="center" src={ToDoMainWindowContentScreenshot} alt="" />
 
 这只是视图 - 目前还没有任何实际功能！在接下来的页面上，您将学习如何创建应用程序的工作部分：模型和视图模型。

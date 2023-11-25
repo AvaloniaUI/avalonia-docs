@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoViewLocatorArchitectureDiagram from '/img/gitbook-import/assets/image (45).png';
+
 # 视图定位器
 
 在本页面中，您将学习到解决方案模板向您的项目添加的视图定位器类是如何使用的。您将看到这如何在主窗口的内容区域内实现“约定优于配置”的范例。
@@ -74,9 +76,7 @@ namespace ToDoList
 
 由于没有其他数据模板匹配，搜索最终会到达应用程序数据模板元素中的 `ViewLocator`。这将运行其检查，如果检查通过，则返回对应视图的实例。在您的应用程序中，这将是待办事项列表视图。
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (45).png" alt=""/>
-</div>
+<img className="center" src={ToDoViewLocatorArchitectureDiagram} alt="" />
 
 
 通过这种方式，主窗口的内容根据视图模型的类型和命名约定设置为正确的视图。

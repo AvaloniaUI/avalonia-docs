@@ -3,6 +3,9 @@ id: gridsplitter
 title: GridSplitter
 ---
 
+import GridSplitterColumnsScreenshot from '/img/controls/gridsplitter/gridsplitter-in-action-columns.gif';
+import GridSplitterRowsScreenshot from '/img/controls/gridsplitter/gridsplitter-in-action-rows.gif';
+
 The `GridSplitter` control is a control that allows a user to resize the space between `Grid` rows or columns.
 
 ```markup
@@ -13,9 +16,7 @@ The `GridSplitter` control is a control that allows a user to resize the space b
 </Grid>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/gridsplitter/gridsplitter-in-action-columns.gif" alt="GridSplitter in Action for Columns" />
-  </div>
+<img className="center" src={GridSplitterColumnsScreenshot} alt="GridSplitter in Action for Columns" />
 
 ```markup
 <Grid RowDefinitions="*, 4, *">
@@ -25,9 +26,7 @@ The `GridSplitter` control is a control that allows a user to resize the space b
 </Grid>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/gridsplitter/gridsplitter-in-action-rows.gif" alt="GridSplitter in Action for Rows" />
-  </div>
+<img className="center" src={GridSplitterRowsScreenshot} alt="GridSplitter in Action for Rows" />
 
 ### Reference
 

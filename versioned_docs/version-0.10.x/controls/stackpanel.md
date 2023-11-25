@@ -3,6 +3,9 @@ id: stackpanel
 title: StackPanel
 ---
 
+import StackPanelRectangleScreenshot from '/img/controls/stackpanel/layout-panel-stack-panel.png';
+import StackPanelRectangleSpacingScreenshot from '/img/controls/stackpanel/image (12).png';
+
 The `StackPanel` control is a `Panel` which lays out its children by stacking them horizontally or vertically. StackPanel is typically used to arrange a small subsection of the UI on a page.
 
 You can use the [**Orientation**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel.orientation) property to specify the direction of the child elements. The default orientation is [**Vertical**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Orientation).
@@ -20,9 +23,7 @@ The following XAML shows how to create a vertical StackPanel of items.
 
 The result looks like this.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/stackpanel/layout-panel-stack-panel.png"  />
-  </div>
+<img className="center" src={StackPanelRectangleScreenshot} alt="" />
 
 In a StackPanel, if a child element's size is not set explicitly, it stretches to fill the available width \(or height if the Orientation is **Horizontal**\). In this example, the width of the rectangles is not set. The rectangles expand to fill the entire width of the StackPanel.
 
@@ -37,10 +38,7 @@ StackPanel has a `Spacing` property to allow an even spacing between items.
 </StackPanel>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/stackpanel/image (12).png"  />
-  </div>
-
+<img className="center" src={StackPanelRectangleSpacingScreenshot} alt="" />
 
 ### Reference
 

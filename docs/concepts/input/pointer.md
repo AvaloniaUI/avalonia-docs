@@ -2,6 +2,8 @@
 description: CONCEPTS - Input
 ---
 
+import PointerPressedSampleScreenshot from '/img/gitbook-import/assets/pressed.gif';
+
 # Mouse and Pointer Devices
 
 In _Avalonia UI_ you implement the interaction of pointing devices with your application using a 'pointer' abstraction. This can represent devices including, but not limited to a mouse, touchpad, and pen. _Avalonia UI_ controls have events that allow you to subscribe to pointer movements, clicks and wheel movements. These are as follows:
@@ -44,7 +46,7 @@ private void PointerPressedHandler (object sender, PointerPressedEventArgs args)
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/pressed.gif" alt=""/>
+<img src={PointerPressedSampleScreenshot} alt=""/>
 
 ## Pointer Position
 

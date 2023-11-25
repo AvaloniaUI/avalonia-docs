@@ -9,4 +9,4 @@ title: Samples
 
 ## AvaloniaUI.QuickGuides
 
-[`AvaloniaUI.QuickGuides`](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides) are bitesized demos convering same of the more advanced aspects of Avalonia.
+[`AvaloniaUI.QuickGuides`](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides) are bitesized demos covering some of the more advanced aspects of Avalonia.

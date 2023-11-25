@@ -2,6 +2,8 @@
 description: CONCEPTS - Layout
 ---
 
+import LayoutZonesDiagram from '/img/gitbook-import/assets/image (25) (2) (1).png';
+
 # Layout Zones
 
-<img src="/img/gitbook-import/assets/image (25) (2) (1).png" alt=""/>
+<img src={LayoutZonesDiagram} alt=""/>

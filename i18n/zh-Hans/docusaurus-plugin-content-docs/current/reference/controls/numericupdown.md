@@ -2,17 +2,20 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import NumericUpDownBasicScreenshot from '/img/gitbook-import/assets/updown.gif';
+import NumericUpDownFormatStringScreenshot from '/img/gitbook-import/assets/updown2.gif';
+
 # Numeric Up-Down
 
-The numeric up-down is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The the mouse wheel (if present) will also change the value.
+The numeric up-down is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The mouse wheel (if present) will also change the value.
 
 ## Useful Properties
 
 You will probably use these properties most often:
 
 | Property                | Description                                                                                                                 |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `Value`                 | The value (double).                                                                                                         |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| `Value`                 | The value (decimal?).                                                                                                       |
 | `Increment`             | The increment used by the button spinner, keyboard and mouse wheel. Default increment is 1.                                 |
 | `Minimum`               | The minimum value allowed.                                                                                                  |
 | `Maximum`               | The maximum value allowed.                                                                                                  |
@@ -32,9 +35,9 @@ This is a basic example of a numeric up-down control. There are no limits to the
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/updown.gif" alt=""/>
+<img src={NumericUpDownBasicScreenshot} alt="" />
 
-The value and other properties are doubles; so you can create a custom decimal increment/decrement and range if you need to.&#x20;
+The value and other properties are nullable decimals; so you can create a custom decimal increment/decrement and range if you need to.&#x20;
 
 :::info
 Remember to specify a `FormatString` property when you create a custom decimal increment and range.
@@ -51,7 +54,7 @@ For example:&#x20;
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/updown2.gif" alt=""/>
+<img src={NumericUpDownFormatStringScreenshot} alt="" />
 
 ## More Information
 

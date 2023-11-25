@@ -3,13 +3,13 @@ id: creating-a-new-project
 title: Creating a new project
 ---
 
+import ToDoVsCreateNewProjectScreenshot from '/img/tutorials/todo-list-app/creating-a-new-project/image (5).png';
+
 ## Visual Studio
 
 The easiest way to get started with Avalonia from Visual Studio is to [install the extension](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio) from the Visual Studio Marketplace. Once that is installed, you can create an Avalonia MVVM application:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/creating-a-new-project/image%20%285%29.png" alt="Decription" />
-  </div>
+<img className="center" src={ToDoVsCreateNewProjectScreenshot} alt="" />
 
 -  Start Visual Studio
 -  Select "Create a new project" from the start window or `File -> New -> Project` from the main menu

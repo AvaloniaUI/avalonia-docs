@@ -63,7 +63,7 @@ The two suggested workflows are:
 
 ### Requirements
 
-- **Node version 16.14**
+- **Node version >= 18**
 
 ### Setup
 

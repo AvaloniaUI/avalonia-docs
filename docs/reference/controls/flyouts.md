@@ -2,11 +2,13 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import FlyoutAttachedScreenshot from '/img/gitbook-import/assets/flyout2.gif';
+
 # Flyout
 
-Flyouts are dismissible containers that can be attached to some classes of 'host' control; although flyouts themselves are not controls. They show when their host control receives the focus, and are hidden again in a number of different ways.&#x20;
+Flyouts are dismissible containers that can be attached to some classes of 'host' control; although flyouts themselves are not controls. They show when their host control receives the focus, and are hidden again in a number of different ways.
 
-A flyout can contain simple or richer, composed, UI content.&#x20;
+A flyout can contain simple or richer, composed, UI content.
 
 Flyouts can be declared as a resource and shared between two or more host controls in an _Avalonia UI_ app.
 
@@ -23,7 +25,7 @@ A flyout is attached to a host control using the host's `Flyout` property. For e
 ```
 
 :::warning
-Only the button and split button controls support the `Flyout` property. You can attach a flyout to other _Avalonia UI_ built-in controls using the `AttachedFlyout` property instead.&#x20;
+Only the button and split button controls support the `Flyout` property. You can attach a flyout to other _Avalonia UI_ built-in controls using the `AttachedFlyout` property instead.
 :::
 
 For controls that do not have the `Flyout` property, use the `AttachedFlyout` property like this:
@@ -51,7 +53,7 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 }
 ```
 
-<img src="/img/gitbook-import/assets/flyout2.gif" alt=""/>
+<img src={FlyoutAttachedScreenshot} alt="" />
 
 ## Useful Properties&#x20;
 

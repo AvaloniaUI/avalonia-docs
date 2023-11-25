@@ -3,6 +3,8 @@ id: draw-with-a-property
 title: Draw with a Property
 ---
 
+import DrawWithPropertyScreenshot from '/img/gitbook-import/assets/image (1) (2) (2).png';
+
 # Draw with a Property
 
 On this page you will see how to draw a custom control, using the value for a simple property that defines the background color. The code now looks like this:
@@ -48,7 +50,7 @@ This example defines a simple brush property on the custom control for the backg
 
 The drawing code uses the _Avalonia UI_ graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
 
-<img src="/img/gitbook-import/assets/image (1) (2) (2).png" alt=""/>
+<img src={DrawWithPropertyScreenshot} alt=""/>
 
 Notice how the control now shows both at runtime (above) and in the preview pane.
 

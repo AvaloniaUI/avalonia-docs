@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List App
 ---
 
+import MvvmArchitectureDiagram from '/img/gitbook-import/assets/image (3) (1) (2).png';
+
 # 创建视图模型
 
 在本页中，您将学习如何创建一个视图模型，为应用程序提供应用程序逻辑。这是 MVVM 模式的最后一部分，并且它将使用 _ReactiveUI_ 框架。
@@ -47,9 +49,7 @@ namespace ToDoList.ViewModels
 
 在开始填充视图模型数据之前，再次查看 MVVM 模式：
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (3) (1) (2).png" alt=""/>
-</div>
+<img className="center" src={MvvmArchitectureDiagram} alt="" />
 
 该模式的声明目的是将视图和视图模型分开，以便例如可以独立测试视图模型。这消除了视图和视图模型之间的依赖关系。
 

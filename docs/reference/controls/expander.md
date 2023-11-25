@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ExpanderClosedScreenshot from '/img/gitbook-import/assets/image (2) (1) (1).png';
+import ExpanderOpenedScreenshot from '/img/gitbook-import/assets/image (12) (2).png';
+
 # Expander
 
 The expander control has a header area (always visible) and a collapsible content section that can contain a single child control.
@@ -16,24 +19,24 @@ You will probably use these properties most often:
 
 ```xml
 <Expander VerticalAlignment="Top">
-  <Expander.Header>
-    Hidden Search
-  </Expander.Header>
-  <Grid RowDefinitions="*,*" ColumnDefinitions="150,*">
-      <TextBlock Grid.Row="0" Grid.Column="0" 
-                  VerticalAlignment="Center">Search</TextBlock>
-      <TextBox Grid.Row="0" Grid.Column="1" 
-                Watermark="Search text" Width="200" />
-      <TextBlock Grid.Row="1" Grid.Column="0"
-                  VerticalAlignment="Center">Case sensitive?</TextBlock>
-      <CheckBox Grid.Row="1" Grid.Column="1" />
-  </Grid>
+    <Expander.Header>
+        Hidden Search
+    </Expander.Header>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="150,*">
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   VerticalAlignment="Center">Search</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Watermark="Search text" Width="200" />
+        <TextBlock Grid.Row="1" Grid.Column="0"
+                   VerticalAlignment="Center">Case sensitive?</TextBlock>
+        <CheckBox Grid.Row="1" Grid.Column="1" />
+    </Grid>
 </Expander>
 ```
 
-<img src="/img/gitbook-import/assets/image (2) (1) (1).png" alt=""/>
+<img src={ExpanderClosedScreenshot} alt="" />
 
-<img src="/img/gitbook-import/assets/image (12) (2).png" alt=""/>
+<img src={ExpanderOpenedScreenshot} alt="" />
 
 ## More Information
 

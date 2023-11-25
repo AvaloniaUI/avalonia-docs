@@ -2,6 +2,8 @@
 description: CONCEPTS - Data Templates
 ---
 
+import ReuseTeacherDataTemplateScreenshot from '/img/gitbook-import/assets/image (50).png';
+
 # Reusing Data Templates
 
 If you define a data template in the `Window.DataTemplates`collection (as on the previous page), you can reuse it anywhere in the window. However, you can also extend the reuse of a data template to any window in your application.&#x20;
@@ -80,7 +82,7 @@ Use a local definition of a teacher in the window content zone:
 
 Although there is no data template for a teacher in the window; Avalonia UI will find the template you defined in the application, and the display works as planned:&#x20;
 
-<img src="/img/gitbook-import/assets/image (50).png" alt=""/>
+<img src={ReuseTeacherDataTemplateScreenshot} alt=""/>
 
 :::warning
 Remember to specify a `DataType` in every data template, wherever it is defined, because if _Avalonia UI_ fails to find a data template match for your data; then nothing will be displayed!

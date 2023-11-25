@@ -2,6 +2,8 @@
 description: CONCEPTS - Data Templates
 ---
 
+import DataTemplatesCollectionStudentScreenshot from '/img/gitbook-import/assets/image (57).png';
+
 # 数据模板集合
 
 _Avalonia UI_中的每个控件都有一个`DataTemplates`（数据模板）集合，您可以在其中放置任意数量的数据模板定义。然后，您可以根据类类型选择要用于显示的模板。 
@@ -38,5 +40,5 @@ _Avalonia UI_中的每个控件都有一个`DataTemplates`（数据模板）集�
 
 这将得到与上一页完全相同的显示效果：
 
-<img src="/img/gitbook-import/assets/image (57).png" alt=""/>
+<img src={DataTemplatesCollectionStudentScreenshot} alt=""/>
 

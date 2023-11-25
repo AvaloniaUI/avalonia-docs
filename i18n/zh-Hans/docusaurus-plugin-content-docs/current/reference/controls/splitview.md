@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import SplitViewScreenshot from '/img/gitbook-import/assets/image (5) (5) (1).png';
+import SplitViewCompactScreenshot from '/img/gitbook-import/assets/splitview2.gif';
+
 # Split View
 
 A split view presents a container with two parts: the main content zone and a side pane. The main content zone is always visible. The pane can be expanded and collapsed. The collapsed pane can be completely hidden, or left slightly open - with enough space to host some icon buttons for example. &#x20;
@@ -57,13 +60,13 @@ The display mode property controls how the pane is drawn in its open and closed 
 
 The control looks like this, running on Windows:
 
-<img src="/img/gitbook-import/assets/image (5) (5) (1).png" alt=""/>
+<img src={SplitViewScreenshot} alt="" />
 
 ## Compact Display Mode
 
 You can use the MVVM pattern with the split view control and one of the compact display mode settings to implement a 'tool pane' style UI. There is enough room on the pane when it is closed to display an icon button that opens the pane.
 
-<img src="/img/gitbook-import/assets/splitview2.gif" alt=""/>
+<img src={SplitViewCompactScreenshot} alt="" />
 
 :::info
 To learn how to use the split view control in this way, see the guide [here](../../guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm.md).

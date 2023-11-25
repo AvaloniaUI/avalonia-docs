@@ -14,8 +14,8 @@ dotnet workload install android
 ```
 
 :::info
-You may need to run the command with `sudo`\
-\
+You may need to run the command with `sudo`
+
 You may also need to uninstall old versions. `dotnet workload remove android`
 :::
 

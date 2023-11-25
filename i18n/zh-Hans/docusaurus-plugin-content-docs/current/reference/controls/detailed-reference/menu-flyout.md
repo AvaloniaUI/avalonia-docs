@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import MenuFlyoutScreenshot from '/img/gitbook-import/assets/menuflyout.gif';
+
 # Menu Flyout
 
 A menu flyout allows you to host a simple menu as the flyout for a control. You might use this as an alternative to the context menu.
@@ -32,12 +34,12 @@ This is a simple example of the menu flyout:
 ```
 
 :::info
-Note the `<Separator/>` element will not work in a menu flyout. To make a separator line, use a `<MenuItem>` element with the header set to '-' as shown above. &#x20;
+Note the `<Separator/>` element will not work in a menu flyout. To make a separator line, use a `<MenuItem>` element with the header set to '-' as shown above.
 :::
 
 The resulting menu flyout looks like this:
 
-<img src='/img/gitbook-import/assets/menuflyout.gif' alt=''/>
+<img src={MenuFlyoutScreenshot} alt="" />
 
 ## More Information
 

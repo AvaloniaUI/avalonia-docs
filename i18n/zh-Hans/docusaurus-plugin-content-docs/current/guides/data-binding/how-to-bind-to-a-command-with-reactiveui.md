@@ -3,6 +3,7 @@ id: how-to-bind-to-a-command-with-reactiveui
 title: 如何使用ReactiveUI绑定命令
 ---
 
+import BindReactiveCommandScreenshot from '/img/gitbook-import/assets/command.gif';
 
 # 如何使用ReactiveUI绑定命令
 
@@ -72,7 +73,7 @@ namespace AvaloniaGuides.ViewModels
 
 当与Reactive命令绑定的控件被激活时（在本例中：当按钮被点击时），将通过Reactive命令调用执行操作的私有方法。
 
-<img src="/img/gitbook-import/assets/command.gif" alt=""/>
+<img src={BindReactiveCommandScreenshot} alt=""/>
 
 ## 命令参数
 

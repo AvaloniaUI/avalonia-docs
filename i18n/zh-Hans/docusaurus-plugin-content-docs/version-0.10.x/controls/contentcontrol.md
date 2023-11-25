@@ -3,6 +3,8 @@ id: contentcontrol
 title: ContentControl
 ---
 
+import ControlContentStudentScreenshot from '/img/controls/contentcontrol/student-first-last-name (1) (1) (1) (1).png';
+
 ## Common Properties
 
 | Property  | Description                           |
@@ -73,7 +75,7 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowVieModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](docs/data-binding/the-datacontext) for more information.
+> Note: The following examples assume an instance of `MainWindowVieWModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](docs/data-binding/the-datacontext) for more information.
 
 We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
@@ -94,9 +96,6 @@ We can display the student's first and last name in a `ContentControl` using the
 </Window>
 ```
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/contentcontrol/student-first-last-name (1) (1) (1) (1).png" alt="Student first and last name" />
-  </div>
-
+<img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
 
 For more information see the [data templates](docs/templates/data-templates) section.

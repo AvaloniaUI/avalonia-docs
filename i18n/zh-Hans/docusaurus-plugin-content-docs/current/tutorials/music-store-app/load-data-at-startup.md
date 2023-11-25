@@ -2,6 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreLoadedDataStartScreenshot from './images/image-20210310184202271.png';
+
 # 在启动时加载数据
 
 在本页上，您将添加代码以在应用程序启动时从磁盘加载用户的专辑收藏。
@@ -49,4 +51,4 @@ RxApp.MainThreadScheduler.Schedule(LoadAlbums);
 
 - 点击**调试**以编译和运行项目。
 
-![](images/image-20210310184202271.png)
+<p><img className="image-medium-zoom" src={MusicStoreLoadedDataStartScreenshot} alt="" /></p>

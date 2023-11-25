@@ -2,11 +2,11 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ScrollViewerScreenshot from '/img/gitbook-import/assets/scrollview.gif';
+
 # Scroll Viewer
 
-The scroll viewer control can have content that is bigger than its content zone, and will can provide scroll bars to move hidden content into view.&#x20;
-
-
+The scroll viewer control can have content that is bigger than its content zone, and will can provide scroll bars to move hidden content into view.
 
 A `ScrollViewer` cannot be contained in a control that has infinite height or width (depending on scrolling direction) such as a `StackPanel`. To avoid it, you can either set fixed Height/Width or MaxHeight/MaxWidth or choose another container panel.
 
@@ -20,7 +20,7 @@ You will probably use these properties most often:
 
 If you have a control that can itself scroll (see list below) nested inside a scroll viewer, and the user hits a limit on the control, this property sets whether the outer scroll viewer should continue scrolling or not. You enable or disable this behaviour with an attached property on the inner control, using the format:
 
-&#x20;`ScrollViewer.IsScrollChainingEnabled=[true|false]`.&#x20;
+`ScrollViewer.IsScrollChainingEnabled=[true|false]`
 
 This attached property is available on these controls:
 
@@ -48,7 +48,7 @@ This example creates a stack panel that is bigger than the border it is inside. 
 </Border>
 ```
 
-<img src="/img/gitbook-import/assets/scrollview.gif" alt=""/>
+<img src={ScrollViewerScreenshot} alt="" />
 
 ## More Information
 

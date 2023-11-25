@@ -3,6 +3,9 @@ id: jetbrains-rider-setup
 title: JetBrains Rider Setup
 ---
 
+import RiderWelcomePluginsScreenshot from '/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-1-rider-welcome.webp';
+import RiderPluginInstallScreenshot from '/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-4-plugin-install.webp';
+
 # JetBrains Rider Setup
 
 1. Download and install the .NET SDK of your choice [Download .NET \(Linux, macOS, and Windows\) \(microsoft.com\)](https://dotnet.microsoft.com/download)
@@ -45,21 +48,10 @@ title: JetBrains Rider Setup
 
    Once Rider loads you will see the Welcome Screen. Click the `Configure` dropdown and select `Plugins`.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-1-rider-welcome.webp" alt="Button group" />
-  </div>
+<img className="center" src={RiderWelcomePluginsScreenshot} alt="Button group" />
 
-A new Preferences Screen will open up. Click the `Settings` icon as shown and select `Manage Plugin Repositories...`
+A new Preferences Screen will open up. Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install`; accept the warning about Third-Party Plugins; once that's done, click the `Restart IDE` button that appears.
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-2-configure-plugin-repos.webp" alt="Button group" />
-  </div>
-
-Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install`; accept the warning about Third-Party Plugins; once that's done, click the `Restart IDE` button that appears.
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-4-plugin-install.webp" alt="Button group" />
-  </div>
+<img className="center" src={RiderPluginInstallScreenshot} alt="Button group" />
 
 Now Rider should be ready to develop Avalonia applications.

@@ -3,6 +3,10 @@ info: creating-a-modern-looking-window
 title: Creating a Modern looking Window
 ---
 
+import MusicStoreDarkModePreviewScreenshot from '/img/tutorials/music-store-app/creating-a-modern-looking-window/dark-mode-preview.png';
+import MusicStoreAcrylicMaterialScreenshot from '/img/tutorials/music-store-app/creating-a-modern-looking-window/acrylic-material.png';
+import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-app/creating-a-modern-looking-window/full-acrylic-window.png';
+
 ## Use Dark Mode and Add a little Acrylic
 
 Let's try and make this look a little more modern by applying `Dark` mode and some `Acrylic` styling to the Window.
@@ -30,9 +34,7 @@ Let's try and make this look a little more modern by applying `Dark` mode and so
 
    The previewer knows about changes you make to the file your editing, but it doesn't know about changes in other files. This is why you need to build the project if another file was changed.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/creating-a-modern-looking-window/dark-mode-preview.png"/>
-  </div>
+<img className="center" src={MusicStoreDarkModePreviewScreenshot} alt="" />
 
 1. After where it says `Title="Avalonia.MusicStore"` add the following code:
 
@@ -90,11 +92,9 @@ Now click the `Debug` `Button` to run the application again.
 
 Notice we have a nice acrylic window effect. Shame about the titlebar, though. Let's see how we can make that blend in a bit more.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/creating-a-modern-looking-window/acrylic-material.png"/>
-  </div>
+<img className="center" src={MusicStoreAcrylicMaterialScreenshot} alt="" />
 
-\*Note, Linux users can not yet take advantage of this due to limitations of X11. The code will run and the window will still work on Linux, but the full effect will not be realised.
+*Note, Linux users can not yet take advantage of this due to limitations of X11. The code will run and the window will still work on Linux, but the full effect will not be realised.
 
 1. It is possible to have Avalonia render into the `titlebar`, allowing us to create a more blended look. Modern web browsers tend to render tabs into the titlebar with this technique.
 
@@ -120,9 +120,6 @@ Notice we have a nice acrylic window effect. Shame about the titlebar, though. L
 
 Press the `Debug` button again to run.
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/creating-a-modern-looking-window/full-acrylic-window.png" alt="Full acrlic window" />
-  </div>
+<img className="center" src={MusicStoreFullAcrylicWindowScreenshot} alt="Full acrylic window" />
 
 Perfect, a modern looking Window, Avalonia is able to render every pixel.

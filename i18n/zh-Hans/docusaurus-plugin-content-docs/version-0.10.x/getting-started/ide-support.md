@@ -2,6 +2,10 @@
 id: ide-support
 title: IDE Support
 ---
+
+import VsXamlPreviewerScreenshot from '/img/getting-started/vs-designer.png';
+import VsSelectProjectPreviewScreenshot from '/img/getting-started/VisualStudioPreviewer_SelectProjectForPreview.png';
+
 ## JetBrains Rider
 
 The [JetBrains Rider](https://www.jetbrains.com/rider/) IDE has built-in support for Avalonia XAML [starting in 2020.3](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support) including first-class support for Avalonia-specific XAML features and custom code inspections.
@@ -24,9 +28,7 @@ If you're using VS2019 or VS2017 you need to install [the extension for older ve
 
 For Visual Studio and ReSharper users, [ReSharper 2020.3 introduces](https://www.jetbrains.com/resharper/whatsnew/2020-3/#version-2020-3-avalonia-support) built-in code analysis, code completion, navigation, and find usages.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/vs-designer.png" alt="Shows the XAML Previewer in Visual Studio" />
-  </div>
+<img className="center" src={VsXamlPreviewerScreenshot} alt="Shows the XAML Previewer in Visual Studio"/>
 
 If your XAML is in a library, Avalonia needs an executable application in order to be able to preview it. Select an executable project from the dropdown on the top right of the designer. Once your project is built, editing the XAML in the editor will cause the preview to update automatically.
 
@@ -127,7 +129,4 @@ If your preview is not shown correctly try to (re-)build the project or solution
 
 Moreover if you have more than one project in your solution, you may need to select the project which should be used to render the preview. This can be done with the drop-down shown below.  
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/getting-started/VisualStudioPreviewer_SelectProjectForPreview.png" alt="Shows how to select the project used to render the preview" />
-  </div>
+<img className="center" src={VsSelectProjectPreviewScreenshot} alt="Shows how to select the project used to render the preview" />

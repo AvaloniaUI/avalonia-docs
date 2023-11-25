@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import DatePickerScreenshot from '/img/gitbook-import/assets/datepicker.gif';
+
 # Date Picker
 
 The date picker has three 'spinner' controls to allow the user to pick a date value. The spinners display when the control is clicked.
@@ -22,7 +24,7 @@ This example uses the date format attribute to display the name of the day as we
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/datepicker.gif" alt=""/>
+<img src={DatePickerScreenshot} alt="" />
 
 ## **Initializing the Date**&#x20;
 

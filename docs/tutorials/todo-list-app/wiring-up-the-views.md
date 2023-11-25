@@ -2,6 +2,9 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoDataContextWiringDiagram from '/img/gitbook-import/assets/image (7) (3).png';
+import ToDoBlankAfterWiringScreenshot from '/img/gitbook-import/assets/image (42) (2).png';
+
 # Data Binding
 
 Now that you have the view model and model (data service) connected, the next step is to link the views and view models, so the list of items can be displayed.
@@ -46,7 +49,7 @@ Take some time here to examine the code that you just added: &#x20;
 
 The items control `<ItemsControl>` repeats its display for each item in a collection source that is defined by the `ItemsSource` attribute. Here the data binding expression `{Binding ListItems}` means we are looking for a data context with this property name.&#x20;
 
-How each item is displayed inside the items control is controlled by the item template <`ItemTemplate>`. This can be any combination of controls, but in this example a **data template** is being used.
+How each item is displayed inside the items control is controlled by the item template `ItemTemplate>`. This can be any combination of controls, but in this example a **data template** is being used.
 
 :::info
 You can review the data template concept [here](../../concepts/templates/).
@@ -56,14 +59,10 @@ The built-in controls inside the data template will expect to find the propertie
 
 So the arrangement of views and view models so far looks like this:
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (7) (3).png" alt=""/>
-</div>
+<img className="center" src={ToDoDataContextWiringDiagram} alt="" />
 
 This will work if any parent of the items control has a data context object having  a`ListItems` property. The _Avalonia UI_ binding will search upwards in the control tree to locate a suitable data context. But although the main window data context has been set (during the app initialization - see the file **App.axaml.cs**), at this point there is still no data context with a `ListItems` property.&#x20;
 
 So if you run your app, the list is still blank!
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (42) (2).png" alt=""/>
-</div>
+<img className="center" src={ToDoBlankAfterWiringScreenshot} alt="" />

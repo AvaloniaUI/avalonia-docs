@@ -3,13 +3,15 @@ id: code-behind
 title: Code-behind
 ---
 
+import VsSolutionExplorerScreenshot from '/img/basics/user-interface/code-behind/vs-solution-explorer.png';
+
 # Code-behind
 
 除了XAML文件外，大多数Avalonia控件还具有常常用C#编写的 _code-behind_ 文件。代码后台文件通常具有`.axaml.cs`文件扩展名，并且通常在IDE中显示在XAML文件的下一级。
 
 例如，在Visual Studio的解决方案资源管理器中，您可以看到一个`MainWindow.axaml`文件以及它的code-behind文件`MainWindow.axaml.cs`：
 
-![](/img/basics/user-interface/code-behind/vs-solution-explorer.png)
+<p><img src={VsSolutionExplorerScreenshot} className="medium-zoom-image" /></p>
 
 code-behind文件包含一个与XAML文件同名的类。例如：
 

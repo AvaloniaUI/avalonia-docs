@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TrayIconScreenshot from '/img/gitbook-import/assets/tray.gif';
+
 # Tray Icon
 
 ## Overview
@@ -46,7 +48,7 @@ This example defines a simple tray icon menu in the `App.xaml` file :
 </TrayIcon.Icons>
 ```
 
-<img src='/img/gitbook-import/assets/tray.gif' alt=''/>
+<img src={TrayIconScreenshot} alt="" />
 
 ## More Information
 
@@ -57,6 +59,3 @@ For the complete API documentation about this control, see here.
 :::info
 View the source code on GitHub [`TrayIcon.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TrayIcon.cs)
 :::
-
-
-

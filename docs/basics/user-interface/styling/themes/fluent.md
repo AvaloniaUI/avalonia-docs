@@ -3,11 +3,14 @@ id: fluent
 title: Fluent Theme
 ---
 
+import FluentThemeNormalScreenshot from '/img/basics/user-interface/styling/fluent-theme-normal.png';
+import FluentThemeForestScreenshot from '/img/basics/user-interface/styling/fluent-theme-forest.png';
+
 ## Introduction
 
 Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, which is a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with our styling system.
 
-![Fluent Theme](/img/basics/user-interface/styling/fluent-theme-normal.png)
+<p><img className="medium-image-zoom" src={FluentThemeNormalScreenshot} alt="Fluent Theme" /></p>
 
 ## How to use
 
@@ -92,7 +95,7 @@ FluentTheme supports only Dark and Light theme variants, and it's not possible t
 ## Creating custom color palettes with online editor
 
 Microsoft Fluent Theme Editor was ported to Avalonia and now available to be used with our FluentTheme as well.
-It is available on <https://theme.xaml.live/> page and supports following features:
+It is available on https://theme.xaml.live/ page and supports following features:
 
 1. Editing palette colors for both Light and Dark variants.
 2. Previewing of the current palette.
@@ -102,4 +105,4 @@ It is available on <https://theme.xaml.live/> page and supports following featur
 6. Couple of quick start presets.
 
 Example of FluentTheme with a Forest palette preset available on the web app:
-![Fluent Theme Forest Palette](/img/basics/user-interface/styling/fluent-theme-forest.png)
+<p><img className="medium-image-zoom" src={FluentThemeForestScreenshot} alt="Fluent Theme Forest Palette" /></p>

@@ -3,6 +3,8 @@ id: wiring-up-the-views
 title: Wiring up the Views
 ---
 
+import ToDoWiredViewScreenshot from '/img/tutorials/todo-list-app/wiring-up-the-views/wiring-up-views-run.png';
+
 Now that we've got the view models set up, we need to make our views use these view models. We do this by making use of Avalonia's [data binding](../../getting-started/programming-with-avalonia/data-binding) feature.
 
 ## Update MainWindow
@@ -97,6 +99,4 @@ How each item is displayed is controlled by the `ItemTemplate`. The `ItemTemplat
 
 If you now run the application you will see the items in the \(fake\) database displayed.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/wiring-up-the-views/wiring-up-views-run.png" alt="The running application" />
-  </div>
+<img className="center" src={ToDoWiredViewScreenshot} alt="" />

@@ -3,6 +3,8 @@ info: displaying-images
 title: Displaying Images
 ---
 
+import MusicStoreDisplayingImagesScreenshot from '/img/tutorials/music-store-app/displaying-images/image-20210310173858088.png';
+
 ## Displaying Album Cover Images
 
 So we have the Albums showing with the Artist name and Title, however, if we can download the Album art and display it, this will really bring the app alive.
@@ -162,6 +164,4 @@ Now run the application and search for your favourite artist.
 
 Notice how the Albums covers load one by one, but that the UI remains responsive.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/music-store-app/displaying-images/image-20210310173858088.png" />
-  </div>
+<img className="center" src={MusicStoreDisplayingImagesScreenshot} alt="" />

@@ -3,6 +3,10 @@ id: adding-new-items
 title: Adding new Items
 ---
 
+import ToDoAddNewItemsEmptyScreenshot from '/img/tutorials/todo-list-app/adding-new-items/adding-new-items-view.png';
+import ToDoAddNewItemNavigationScreenshot from '/img/tutorials/todo-list-app/adding-new-items/adding-new-item-run.gif';
+import ToDoAddNewItemResultScreenshot from '/img/tutorials/todo-list-app/adding-new-items/adding-new-items-2-run.gif';
+
 When we originally created the `TodoListView` we added an "Add an item" button. It's time now to make that button do something. When the button is clicked we want to replace the list of items with a new view which will allow the user to enter the description of a new item.
 
 ### Create the view
@@ -30,9 +34,7 @@ Views/AddItemView.axaml
 
 This gives us a view which looks like this:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/adding-new-items/adding-new-items-view.png" alt="The view" />
-  </div>
+<img className="center" src={ToDoAddNewItemsEmptyScreenshot} alt="The view" />
 
 The only new thing here is the `<TextBox>` control which is a control that allows a user to input text. We set three properties on it:
 
@@ -164,9 +166,7 @@ If you're familiar with WPF or UWP you may think it strange that we're binding `
 
 If you now run the application and click the "Add an item" button you should see the new view appear.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/adding-new-items/adding-new-item-run.gif" alt="The running application" />
-  </div>
+<img className="center" src={ToDoAddNewItemNavigationScreenshot} alt="The running application" />
 
 Now we have the "Add new item" view appearing we need to make it work. In particular we need to enable/disable the OK button depending on whether the user has typed anything in the `Description`.
 
@@ -369,7 +369,4 @@ Finally we subscribe to the result of the observable sequence. If the command re
 
 ### Run the application
 
-
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/tutorials/todo-list-app/adding-new-items/adding-new-items-2-run.gif" alt="The running application" />
-  </div>
+<img className="center" src={ToDoAddNewItemResultScreenshot} alt="The running application" />

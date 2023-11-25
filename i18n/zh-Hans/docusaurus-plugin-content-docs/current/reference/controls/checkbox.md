@@ -2,6 +2,9 @@
 description: REFERENCE - Built-in Control
 ---
 
+import CheckBoxTwoStateScreenshot from '/img/gitbook-import/assets/checkbox1.gif';
+import CheckBoxThreeStateScreenshot from '/img/gitbook-import/assets/checkbox2.gif';
+
 # Check Box
 
 The check box control presents a Boolean value where the true value is represented using a check mark, and the false value is an empty box. The check box has an option to present a nullable Boolean, where the null value represents 'unknown' and is drawn as a shaded box.
@@ -38,7 +41,7 @@ This is an example of two-state check boxes:
 
 Looks like this when running on Windows:
 
-<img src="/img/gitbook-import/assets/checkbox1.gif" alt=""/>
+<img src={CheckBoxTwoStateScreenshot} alt="" />
 
 This is an example of a three-state checkbox:
 
@@ -60,7 +63,7 @@ This is an example of a three-state checkbox:
 
 Looks like this when running on Windows:
 
-<img src="/img/gitbook-import/assets/checkbox2.gif" alt=""/>
+<img src={CheckBoxThreeStateScreenshot} alt="" />
 
 ## More Information
 

@@ -63,7 +63,8 @@ public class MainWindow : ReactiveWindow<MainViewModel>
              Watermark="请输入搜索查询"
              Margin="20" />
 </Window>
-```"
+```
+
 ### 创建悬挂驱动程序
 
 这里我们提供了使用`Newtonsoft.Json`并将应用程序状态保存到纯文本文件的实现。

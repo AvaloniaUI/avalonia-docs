@@ -2,11 +2,13 @@
 description: TUTORIALS
 ---
 
+import MusicStoreFinishedAppScreenshot from './images/image-20210310184538120.png';
+
 # 音乐商店应用
 
 在本教程中，您将创建一个基于音乐商店概念的桌面应用程序。该应用程序具有高度图形化的界面，显示专辑封面图像，并使用半透明的“亚克力”效果模糊窗口背景，使其具有非常时尚的外观。在本教程结束时，您将能够搜索 iTunes 在线专辑列表，并选择专辑添加到您自己的列表中。
 
-![](images/image-20210310184538120.png)
+<p><img className="image-zoom-medium" src={MusicStoreFinishedAppScreenshot} alt="" /></p>
 
 在本教程中，您将使用 MVVM 模式和 _ReactiveUI_ 框架来管理多个应用程序窗口。您还将使用高级异步技术来实现专辑搜索和其他功能，以保持应用程序的响应性。
 

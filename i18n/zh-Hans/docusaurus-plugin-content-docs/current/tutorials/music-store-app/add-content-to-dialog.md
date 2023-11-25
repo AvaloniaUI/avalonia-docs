@@ -2,15 +2,15 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreDialogContentDiagram from '/img/gitbook-import/assets/image (9) (3).png';
+
 # 添加对话框内容
 
 在这个页面上，您将学习如何向对话框窗口添加一些内容。这些内容将包括搜索控件和对话框关闭按钮，以及一个用于显示专辑封面的占位符列表。这些封面将作为搜索结果加载。
 
 为了布局对话框控件，您将使用 _Avalonia UI_ 内置控件中的停靠面板布局控件。这将使搜索控件无论高度如何，都始终位于对话框的顶部，按钮位于底部。列表将会是停靠面板的“填充”区域，因此它将始终占据所有剩余的内容区域。
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (9) (3).png" alt=""/>
-</div>
+<img className="center" src={MusicStoreDialogContentDiagram} alt="" />
 
 :::info
 有关停靠面板控件的完整信息，请参阅[此处](../../reference/controls/dockpanel.md)的参考文档。

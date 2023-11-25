@@ -3,6 +3,9 @@ id: flyouts
 title: Flyouts
 ---
 
+import FlyoutContentScreenshot from '/img/controls/flyouts/flyoutpreview.png';
+import FlyoutMenuScreenshot from '/img/controls/flyouts/menuflyoutpreview.png';
+
 ## Overview
 
 Flyouts are light dismissible containers that show arbitrary UI content. Flyouts are not controls and can be declared as a resource and shared between multiple elements within your app.
@@ -44,15 +47,11 @@ Flyouts are light dismissible containers that show arbitrary UI content. Flyouts
 
 There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `Flyout` has no special logic and is just a simple container for any arbitrary UI content.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/flyouts/flyoutpreview.png" alt="Basic Flyout" />
-  </div>
+<img className="center" src={FlyoutContentScreenshot} alt="Basic Flyout" />
 
 `MenuFlyout`, as the name implies, creates a Menu.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/controls/flyouts/menuflyoutpreview.png" alt="Basic MenuFlyout" />
-  </div>
+<img className="center" src={FlyoutMenuScreenshot} alt="Basic MenuFlyout" />
 
 ## Reference
 

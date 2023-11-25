@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import TextBlockStylePreviewScreenshot from '/img/gitbook-import/assets/image (2) (5).png';
+
 # Text Block
 
 The text block is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.&#x20;
@@ -10,7 +12,13 @@ The text block is a read-only label for the display of text. It can display mult
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="254">Property</th><th>Description</th></tr></thead><tbody><tr><td>FontSize</td><td>The size of the font.  </td></tr><tr><td>FontWeight</td><td>The weight of the font. Default is normal, options include Bold'.</td></tr><tr><td>FontStyle</td><td>A style to apply to the lettering. Default is normal, options include Italic.</td></tr><tr><td>TextDecorations</td><td>A line decoration to apply to the lettering. Default is none, options include Underline, Strikethrough, Baseline and  Overline. To apply more than one at the same time, list the options with spaces between.</td></tr></tbody></table>
+| Property        | Description                                                                                                                                                                                                           |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FontSize        | The size of the font.                                                                                                                                                                                                 |
+| FontWeight      | The weight of the font. Default is normal, options include `Bold`.                                                                                                                                                    |
+| FontStyle       | A style to apply to the lettering. Default is normal, options include `Italic`.                                                                                                                                       |
+| TextDecorations | A line decoration to apply to the lettering. Default is none, options include `Underline`, `Strikethrough`, `Baseline` and `Overline`. To apply more than one at the same time, list the options with spaces between. |
+| xml:space       | TextBlock itself would respect the line breaks and whitespace of its content as set out in XAML, but it will be filtered out by the parser without `xml:space="preserve"`.                                            |
 
 ## Example
 
@@ -19,9 +27,9 @@ This example shows a text block used as a heading, single line and multi-line di
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5" FontSize="18" FontWeight="Bold">Heading</TextBlock>
-  <TextBlock Margin="0 5" FontStyle="Italic">This is  a single line.</TextBlock>
-  <TextBlock Margin="0 5">This is a multi-line display 
-that has returns in it. 
+  <TextBlock Margin="0 5" FontStyle="Italic" xml:space="preserve">This is  a single line.</TextBlock>
+  <TextBlock Margin="0 5" xml:space="preserve">This is a multi-line display
+that has returns in it.
 The text block repects the line breaks
 as set out in XAML.</TextBlock>
 </StackPanel>
@@ -29,7 +37,7 @@ as set out in XAML.</TextBlock>
 
 The styling works in the preview pane:
 
-<img src='/img/gitbook-import/assets/image (2) (5).png' alt=''/>
+<img src={TextBlockStylePreviewScreenshot} alt="" />
 
 ## More Information
 

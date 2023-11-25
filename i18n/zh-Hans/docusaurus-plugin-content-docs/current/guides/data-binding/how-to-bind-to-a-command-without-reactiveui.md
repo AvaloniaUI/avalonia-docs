@@ -3,6 +3,8 @@ id: how-to-bind-to-a-command-without-reactiveui
 title: 如何不使用ReactiveUI绑定命令
 ---
 
+import BindCommandMethodScreenshot from '/img/gitbook-import/assets/command2.gif';
+import BindCanExecuteMethodScreenshot from '/img/gitbook-import/assets/command3.gif';
 
 # 如何不使用ReactiveUI绑定命令
 
@@ -34,7 +36,7 @@ namespace AvaloniaGuides.ViewModels
 {
     public class MainWindowViewModel 
     {
-        private void PerformAction(string msg)
+        public void PerformAction(object msg)
         {
             Debug.WriteLine($"The action was called. {msg}");
         }
@@ -42,7 +44,7 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-<img src="/img/gitbook-import/assets/command2.gif" alt=""/>
+<img src={BindCommandMethodScreenshot} alt=""/>
 
 ## 能否执行？
 
@@ -59,12 +61,12 @@ namespace AvaloniaGuides.ViewModels
 {
     public class MainWindowViewModel 
     {
-        private void PerformAction(string msg)
+        public void PerformAction(object msg)
         {
             Debug.WriteLine($"The action was called. {msg}");
         }
 
-        private bool CanPerformAction(object msg)
+        public bool CanPerformAction(object msg)
         {
             if (msg!=null) return !string.IsNullOrWhiteSpace( msg.ToString() );
             return false;
@@ -92,7 +94,7 @@ namespace AvaloniaGuides.ViewModels
 
 你会发现只有当文本框包含字符串时，按钮才会变为可用状态。
 
-<img src="/img/gitbook-import/assets/command3.gif" alt=""/>
+<img src={BindCanExecuteMethodScreenshot} alt=""/>
 
 ## **触发“能否执行”**
 

@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoCreateANewViewScreenshot from '/img/gitbook-import/assets/image (1) (1).png';
+
 # Create a New View
 
 On this page, you will add a view to display the list of to do items, with a button to add a new item.
@@ -66,12 +68,12 @@ You are not going to change the code-behind file in this tutorial, but notice th
 
 To make the design-time preview look more like a mobile phone in portrait orientation, locate the design-time width and height properties for the user control and set them as shown:
 
-<pre class="language-markup"><code class="lang-markup"><strong>&#x3C;UserControl 
-</strong><strong>...
-</strong><strong>d:DesignWidth="250" d:DesignHeight="450" 
-</strong><strong>... >
-</strong><strong>
-</strong></code></pre>
+<pre class="language-markup"><code class="lang-markup">
+<strong>&#x3C;UserControl</strong>
+<strong>...</strong>
+<strong>d:DesignWidth="250" d:DesignHeight="450"</strong>
+<strong>... ></strong>
+</code></pre>
 
 Repeat the process with the main window.&#x20;
 
@@ -102,7 +104,4 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
 
 If you are using the Visual Studio extension you should see the contents of the control displayed in the previewer after completing a build:
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (1) (1).png" alt=""/>
-</div>
-
+<img className="center" src={ToDoCreateANewViewScreenshot} alt="" />

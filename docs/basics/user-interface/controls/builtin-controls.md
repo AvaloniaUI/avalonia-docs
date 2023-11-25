@@ -1,6 +1,6 @@
 # Built-in Controls
 
-Here are some of the more commonly-used Avalonia controls, organised by catagory:
+Here are some of the more commonly-used Avalonia controls, organised by category:
 
 ## Layout controls
 
@@ -28,7 +28,7 @@ Here are some of the more commonly-used Avalonia controls, organised by catagory
 |[Button](../../../reference/controls/buttons/button.md)|The basic button control - can display text, an icon or both. Has standard 'click' behavior.|
 |[Repeat Button](../../../reference/controls/buttons/repeatbutton.md)|A button that raises its click event repeatedly when it is pressed and held.|
 |[Radio Button](../../../reference/controls/buttons/radiobutton.md)|A button that has a selected state. It can be placed in a group so that selection of one button deselects all the others in the group.|
-|[Toggle Button](../../../reference/controls/buttons/togglesplitbutton.md)|A button that has a selected state and a unselected state. Subsequent clicks 'toggle' this state. A 'checked' pseudo class allows different styles to be allocated to the selected  and unselected states.|
+|[Toggle Button](../../../reference/controls/buttons/togglebutton.md)|A button that has a selected state and a unselected state. Subsequent clicks 'toggle' this state. A 'checked' pseudo class allows different styles to be allocated to the selected  and unselected states.|
 |[Button Spinner](../../../reference/controls/buttons/buttonspinner.md)|A control with two spin buttons and a content zone.|
 |[Split Button](../../../reference/controls/buttons/splitbutton.md)|This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like standard button, and the secondary part opens a flyout with additional actions.|
 |[Toggle Split Button](../../../reference/controls/buttons/togglesplitbutton.md)|This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like toggle button, and the secondary part opens a flyout with additional actions.|
@@ -62,6 +62,7 @@ These controls display repeating data, in either a tabular or list format:
 |[Slider](../../../reference/controls/slider.md)|Double|Relative value compared to a maximum and minimum value presented as the position along the length of the slider track of the slider button. Drag interaction on the slider button can alter the value between the maximum and minimum values. Keyboard and click interactions can also nudge the value.|
 |[Calendar](../../../reference/controls/detailed-reference/calendar)|DateTime|The calendar is a control for users to select dates or date ranges.|
 |[Calendar Date Picker](../../../reference/controls/detailed-reference/calendar/calendar-date-picker.md)|DateTime|An extension of the calendar control that includes a text box and button.|
+|[Color Picker](../../../reference/controls/colorpicker)|Color / HsvColor|The color picker supports user-selection and editing of colors using a spectrum, palette and component sliders. It also supports an optional alpha component, RGB or HSV color models and hexadecimal color values.|
 |[Date Picker](../../../reference/controls/datepicker.md)|DateTime|The date picker has three 'spinner' controls to allow the user to pick a date value.|
 |[Time Picker](../../../reference/controls/detailed-reference/timepicker.md)|TimeSpan|The time picker has three 'spinner' controls to allow the user to pick a time from hours, minutes and seconds.|
 

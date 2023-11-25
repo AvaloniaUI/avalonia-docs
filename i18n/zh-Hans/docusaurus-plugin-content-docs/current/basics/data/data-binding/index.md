@@ -2,11 +2,13 @@
 description: CONCEPTS
 ---
 
+import DataBindingBasicOverviewDiagram from '/img/gitbook-import/assets/image (31) (1).png';
+
 # 数据绑定
 
 Avalonia使用数据绑定将数据从应用程序对象传递到UI控件，根据用户输入更改应用程序对象中的数据，并在响应用户命令时对应用程序对象进行操作。
 
-<img src="/img/gitbook-import/assets/image (31) (1).png" alt=""/>
+<img src={DataBindingBasicOverviewDiagram} alt=''/>
 
 在这种安排中，控件是**绑定目标**，而对象是**数据源**。
 

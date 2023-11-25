@@ -2,25 +2,25 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import ScrollBarScreenshot from '/img/gitbook-import/assets/scrollbar.gif';
+
 # Scroll Bar
 
-A scroll bar control can be displayed in a horizontal or vertical orientation. The default value (double) range for the scroll bar is 0-100.&#x20;
+A scroll bar control can be displayed in a horizontal or vertical orientation. The default value (double) range for the scroll bar is 0-100.
 
-You can configure the range and how the value changes (small and large steps). Small steps can be controlled by the keyboard arrow keys, and large steps by mouse clicks in the scroll bar track, or by the page-up and page-down keys. &#x20;
+You can configure the range and how the value changes (small and large steps). Small steps can be controlled by the keyboard arrow keys, and large steps by mouse clicks in the scroll bar track, or by the page-up and page-down keys.
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 
 <table><thead><tr><th width="241">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Orientation</code></td><td>The orientation of the scroll bar.</td></tr><tr><td><code>VerticalAlignment</code></td><td>The vertical alignment of the scroll bar in its container. Choose from top, bottom, center and stretch.</td></tr><tr><td><code>HorizontalAlignment</code></td><td>The horizontal alignment of the scroll bar in its container. Choose from left, right, center and stretch.</td></tr></tbody></table>
 
 :::warning
-To create a meaningful layout, you will need to use corresponding orientation and alignment properties. For example, a vertical orientation matches a horizontal alignment.&#x20;
+To create a meaningful layout, you will need to use corresponding orientation and alignment properties. For example, a vertical orientation matches a horizontal alignment.
 :::
 
 ## Example
-
-
 
 ```xml
 <Panel>
@@ -32,7 +32,6 @@ To create a meaningful layout, you will need to use corresponding orientation an
   <TextBlock Name="valueText" Margin="60">0</TextBlock>
 </Panel>
 ```
-
 
 ```csharp title='C#'
 using Avalonia.Controls;
@@ -55,11 +54,9 @@ namespace AvaloniaControls.Views
 }
 ```
 
+With the example code-behind, the text block displays the value of the scrollbar.
 
-
-With the example code-behind, the text block displays the value of the scrollbar.&#x20;
-
-<img src="/img/gitbook-import/assets/scrollbar (1).gif" alt=""/>
+<img src={ScrollBarScreenshot} alt="" />
 
 ## More Information
 

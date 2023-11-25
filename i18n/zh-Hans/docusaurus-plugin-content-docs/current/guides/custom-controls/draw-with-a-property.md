@@ -3,6 +3,8 @@ id: draw-with-a-property
 title: 使用属性绘制
 ---
 
+import DrawWithPropertyScreenshot from '/img/gitbook-import/assets/image (1) (2) (2).png';
+
 # 使用属性进行绘制
 
 在这个页面上，您将看到如何使用一个简单属性的值来绘制自定义控件，该属性定义了背景颜色。代码现在如下所示：
@@ -48,7 +50,7 @@ namespace AvaloniaCCExample.CustomControls
 
 绘制代码使用_Avalonia UI_图形上下文（传递给渲染方法），绘制一个填充有背景颜色的矩形，大小与控件相同（由`Bounds.Size`对象提供）。
 
-<img src="/img/gitbook-import/assets/image (1) (2) (2).png" alt=""/>
+<img src={DrawWithPropertyScreenshot} alt=""/>
 
 请注意，控件现在在运行时（如上图）和预览窗格中都显示出来。
 

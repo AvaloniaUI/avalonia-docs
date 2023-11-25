@@ -1,3 +1,9 @@
+import LayoutMarginsPaddingAlignmentBasicScreenshot from '/img/gitbook-import/assets/layout-margins-padding-alignment-graphic1.png';
+import LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot from '/img/gitbook-import/assets/layout-margins-padding-alignment-graphic2.png';
+import LayoutHorizontalAlignmentScreenshot from '/img/gitbook-import/assets/layout-horizontal-alignment-graphic.png';
+import LayoutVerticalAlignmentScreenshot from '/img/gitbook-import/assets/layout-vertical-alignment-graphic.png';
+import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/gitbook-import/assets/layout-margins-padding-aligment-graphic3.png';
+
 # Alignment, Margins and Padding
 
 An Avalonia control exposes several properties that are used to precisely position child elements. This topic discusses four of the most important properties: `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment`. The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in Avalonia applications.
@@ -8,7 +14,7 @@ There are numerous ways to position elements using Avalonia. However, achieving 
 
 The following illustration shows a layout scenario that utilizes several positioning properties.
 
-<img src='/img/gitbook-import/assets/layout-margins-padding-alignment-graphic1.png' alt='Positioning Example'/>
+<img src={LayoutMarginsPaddingAlignmentBasicScreenshot} alt="Positioning Example"/>
 
 At first glance, the `Button` elements in this illustration may appear to be placed randomly. However, their positions are actually precisely controlled by using a combination of margins, alignments, and padding.
 
@@ -42,7 +48,7 @@ The following example describes how to create the layout in the preceding illust
 
 The following diagram provides a close-up view of the various positioning properties that are used in the preceding sample. Subsequent sections in this topic describe in greater detail how to use each positioning property.
 
-<img src='/img/gitbook-import/assets/layout-margins-padding-alignment-graphic2.png' alt='Positioning Properties'/>
+<img src={LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot} alt="Positioning Properties"/>
 
 ### Understanding Alignment Properties
 
@@ -72,7 +78,7 @@ The following example shows how to apply the `HorizontalAlignment` property to `
 
 The preceding code yields a layout similar to the following image. The positioning effects of each `HorizontalAlignment` value are visible in the illustration.
 
-<img src='/img/gitbook-import/assets/layout-horizontal-alignment-graphic.png' alt='HorizontalAlignment Sample'/>
+<img src={LayoutHorizontalAlignmentScreenshot} alt='HorizontalAlignment Sample'/>
 
 #### VerticalAlignment Property
 
@@ -112,7 +118,7 @@ The following example shows how to apply the `VerticalAlignment` property to `Bu
 
 The preceding code yields a layout similar to the following image. The positioning effects of each `VerticalAlignment` value are visible in the illustration.
 
-<img src='/img/gitbook-import/assets/layout-vertical-alignment-graphic.png' alt='VerticalAlignment property sample'/>
+<img src={LayoutVerticalAlignmentScreenshot} alt='VerticalAlignment property sample'/>
 
 ### Understanding Margin Properties
 
@@ -220,5 +226,5 @@ The following example demonstrates each of the concepts that are detailed in thi
 
 When compiled, the preceding application yields a UI that looks like the following illustration. The effects of the various property values are evident in the spacing between elements, and significant property values for elements in each column are shown within `TextBlock` elements.
 
-<img src='/img/gitbook-import/assets/layout-margins-padding-aligment-graphic3.png' alt='Several positioning properties in one application'/>
+<img src={LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot} alt="Several positioning properties in one application"/>
 

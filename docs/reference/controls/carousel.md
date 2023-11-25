@@ -2,6 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import CarouselScreenshot from '/img/gitbook-import/assets/carousel.gif';
+
 # Carousel
 
 The carousel has an items collection, and displays each item as a page, in sequence, so that it fills the control.
@@ -10,9 +12,7 @@ You can use the carousel control to create a slide show.
 
 ## Example
 
-This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.&#x20;
-
-
+This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.
 
 ```xml
 <Panel>
@@ -35,7 +35,6 @@ This example has three images in the items collection, with buttons to move the 
     </Panel>
   </Panel>
 ```
-
 
 ```csharp title='C#'
 using Avalonia.Controls;
@@ -63,9 +62,7 @@ namespace AvaloniaControls.Views
 }
 ```
 
-
-
-<img src="/img/gitbook-import/assets/carousel.gif" alt=""/>
+<img src={CarouselScreenshot} alt="" />
 
 ## More Information
 

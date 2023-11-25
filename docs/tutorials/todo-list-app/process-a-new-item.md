@@ -80,8 +80,8 @@ The merge method combines the output from any number of observable streams, but 
 You will remember that the two reactive command declarations were different. They were:
 
 ```csharp
-public ReactiveCommand<Unit, ToDoItem> Ok { get; }
-public ReactiveCommand<Unit, Unit> Cancel { get; }
+public ReactiveCommand<Unit, ToDoItem> OkCommand { get; }
+public ReactiveCommand<Unit, Unit> CancelCommand { get; }
 ```
 
 The OK command generates an object of class `ToDoItem` whenever it executes, and the cancel command generates only a `Unit`. The `Unit` is the reactive version of `void` - it means the command generates no value, but still notifies that it has happened!&#x20;
@@ -101,16 +101,16 @@ You are only interested in the first click of either the OK or cancel buttons; o
    {
       ToDoListViewModel.ListItems.Add(newItem);
    }
-   ContentViewModel = ToDoListViewModel;
+   ContentViewModel = ToDoList;
 });
 ```
 
-Lastly the code subscribes to the first item the merged observable sequence. The subscribe pulls out the new to do item object, and examines it to see it it is null.
+Lastly the code subscribes to the first item in the merged observable sequence. The subscribe pulls out the new to do item object, and examines it to see it it is null.
 
 A null value means that the cancel button was clicked - and no further action is required; except to restore the main window content to show the (unchanged) to do list.
 
 ```csharp
-ContentViewModel = ToDoListViewModel;
+ContentViewModel = ToDoList;
 ```
 
 If the value is not null, then it is because the OK button was clicked; and in this case the value should be a `ToDoItem` containing the description that the user typed.  SO this can be added to the list.

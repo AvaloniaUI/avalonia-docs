@@ -2,6 +2,10 @@
 description: CONCEPTS - ReactiveUI
 ---
 
+import ReactiveCommandViewScreenshot from '/img/gitbook-import/assets/image (2) (1) (1) (1).png';
+import ReactiveCommandRunOutputScreenshot from '/img/gitbook-import/assets/image (6) (1) (1).png';
+import ReactiveCommandCanExecuteScreenshot from '/img/gitbook-import/assets/image (6) (1) (2).png';
+
 # Reactive Command
 
 On this page you will learn how to use the _ReactiveUI_ `ReactiveCommand` and an `ObservableObject` created in code, to implement the UI principle of revealed functionality.&#x20;
@@ -24,7 +28,7 @@ As a starting point, you can create a simple view like this:
 </StackPanel>
 ```
 
-<img src="/img/gitbook-import/assets/image (2) (1) (1) (1).png" alt=""/>
+<img src={ReactiveCommandViewScreenshot} alt=""/>
 
 You can add a corresponding view model like this:
 
@@ -53,7 +57,7 @@ public class MainWindowViewModel : ViewModelBase
 
 This view model does not yet perform revealed functionality. The `SubmitCommand` is declared with no parameter, and no result (void). The synchronous action parameter of the `Create` method is where you implement what happens when the command is run (when the user clicks the button). The example above just reports the action in the debug window.
 
-<img src="/img/gitbook-import/assets/image (6) (1) (1).png" alt=""/>
+<img src={ReactiveCommandRunOutputScreenshot} alt=""/>
 
 ## Can Execute?
 
@@ -68,7 +72,7 @@ IObservable<bool> isInputValid = this.WhenAnyValue(
                 );
 ```
 
-The observable object monitors the value of the `UserName` property and runs the validation function whenever it changes. The observable objectis created by the `WhenAnyValue` function of the `ReactiveObject` that underlies the view model (see the previous page [here](reactive-view-model.md)).
+The observable object monitors the value of the `UserName` property and runs the validation function whenever it changes. The observable object is created by the `WhenAnyValue` function of the `ReactiveObject` that underlies the view model (see the previous page [here](reactive-view-model.md)).
 
 Next add the observable object to the `Create` method. This second parameter is the `canExecute` argument for the method.
 
@@ -81,8 +85,4 @@ SubmitCommand = ReactiveCommand.Create(() =>
 
 Now you will see that the button only becomes enabled once you have entered 8 characters.
 
-<img src="/img/gitbook-import/assets/image (6) (1) (2).png" alt=""/>
-
-&#x20;  &#x20;
-
-&#x20;&#x20;
+<img src={ReactiveCommandCanExecuteScreenshot} alt=""/>

@@ -2,6 +2,8 @@
 description: CONCEPTS - ReactiveUI
 ---
 
+import ReactiveObjectDiagram from '/img/gitbook-import/assets/image (4) (2).png';
+
 # Reactive View Model
 
 This page describes how you can use the _ReactiveUI_ `ReactiveObject` as the basis of your view model to implement MVVM binding with _Avalonia UI_.&#x20;
@@ -20,7 +22,7 @@ public class ViewModelBase : ReactiveObject
 }
 ```
 
-<img src="/img/gitbook-import/assets/image (4) (2).png" alt=""/>
+<img src={ReactiveObjectDiagram} alt=""/>
 
 :::info
 If you have used the Avalonia MVVM Application solution template, then you will find this base class already added to the project /ViewModels folder.
@@ -50,7 +52,7 @@ _Avalonia UI_ uses the underlying `ReactiveObject` to **Notify** changes in the 
          Watermark="Enter a description"/>
 ```
 
-Any change to the view model description property is achieved using the the `set` accessor and a change is raised causing _Avalonia UI_ to display the new value on the UI.
+Any change to the view model description property is achieved using the `set` accessor and a change is raised causing _Avalonia UI_ to display the new value on the UI.
 
 ## Update the View Model from Input
 

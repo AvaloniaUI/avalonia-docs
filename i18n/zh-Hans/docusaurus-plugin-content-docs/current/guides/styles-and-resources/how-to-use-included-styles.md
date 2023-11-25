@@ -58,3 +58,16 @@ _Avalonia UI_ 解决方案模板提供了一种快速添加样式文件到您的
 ```
 
 这样将允许您在整个应用程序中使用来自单独文件的样式。
+
+您还可以通过使用 `avares://` 前缀来包含另一个程序集的样式：
+
+```xml
+<Application... > 
+    <Application.Styles>
+        <FluentTheme Mode="Light"/>
+        <StyleInclude Source="avares://MyApp.Shared/Styles/CommonAppStyles.axaml"/>
+    </Application.Styles>
+</Application>
+```
+
+将引用 `MyApp.Shared` 项目中的 `/Styles/CommonAppStyles.axaml` 文件。

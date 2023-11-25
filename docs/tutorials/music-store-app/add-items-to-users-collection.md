@@ -2,6 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreAddedAlbumsScreenshot from './images/image-20210310175949319.png';
+
 # Add Items to the User's Collection
 
 On this page you will implement a collection of albums that the user has selected using the search dialog and the **Buy Album** button, and display them in the main window.
@@ -45,7 +47,7 @@ Next you will add XAML to the main window view to display the items in the obser
 To add the items control and its data template, follow this procedure:
 
 - Locate and open the **MainWindow.axaml** file.
-- Add the following namespace declaraton to the `<Window>` element:
+- Add the following namespace declaration to the `<Window>` element:
 
 ```
 xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
@@ -69,8 +71,6 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 </ItemsControl>
 ```
 
-
-
 - Click **Debug** to compile and run the project.
 - Click the icon button.
 - Type some search text.
@@ -78,7 +78,7 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 - Click **Buy Album**.
 - Repeat another time.
 
-![](images/image-20210310175949319.png)
+<p><img className="image-medium-zoom" src={MusicStoreAddedAlbumsScreenshot} alt="" /></p>
 
 You will see the user's album collection building as you search and select. However, if you stop the app running and then start it again, the collection reverts to empty.&#x20;
 

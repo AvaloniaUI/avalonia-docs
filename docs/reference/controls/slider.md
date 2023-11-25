@@ -2,9 +2,11 @@
 description: REFERENCE - Built-in Controls
 ---
 
+import SliderScreenshot from '/img/gitbook-import/assets/slider.gif';
+
 # Slider
 
-The slider control presents its numerical value as the relative position of a slider button along the length of a track. The position is relative to maximum and minimum values.&#x20;
+The slider control presents its numerical value as the relative position of a slider button along the length of a track. The position is relative to maximum and minimum values.
 
 Drag interaction on the slider button can alter the value between the maximum and minimum values. Keyboard and click interactions can also nudge the value.
 
@@ -34,7 +36,7 @@ Here the maximum and minimum values are default (0 and 100 respectively).
 
 The slider looks like this on Windows:
 
-<img src="/img/gitbook-import/assets/slider.gif" alt=""/>
+<img src={SliderScreenshot} alt="" />
 
 ## More Information
 

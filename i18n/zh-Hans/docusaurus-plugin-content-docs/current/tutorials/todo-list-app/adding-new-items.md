@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoAddNewItemsScreenshot from '/img/gitbook-import/assets/image (44).png';
+
 # 添加新项目
 
 在本教程的早期阶段，当您创建 `ToDoListView` 用户控件时，您添加了一个按钮，以便用户可以添加新项目。在本页面中，您将为按钮添加一个动作。
@@ -74,14 +76,12 @@ dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Vi
 
 这样，您就得到了一个如下图所示的视图：
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (44).png" alt=""/>
-</div>
+<img className="center" src={ToDoAddNewItemsScreenshot} alt="" />
 
 新视图有一个文本框控件，其中有三个属性供您查看：
 
 * `AcceptsReturn` 创建一个多行文本框。
-* `Text` 将文本框中显示的文本绑定到视图模型上的 `Description` 属性（您还没有创建视图模型）。
+* `Text` 将文本框中显示的文本绑定到视图模型上的（您在上面创建的） `Description` 属性。
 * `Watermark` 当文本框为空时显示一个占位符。
 
 在下一页中，您将学习如何更改主窗口中的视图，以在待办事项列表视图的位置显示新项目视图。

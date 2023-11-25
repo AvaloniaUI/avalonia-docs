@@ -3,6 +3,8 @@ id: styles
 title: 样式
 ---
 
+import StyleH1SampleScreenshot from '/img/gitbook-import/assets/image (5) (5).png';
+
 # 样式
 
 _Avalonia UI_ 的样式系统是一种可以在控件之间共享属性设置的机制。
@@ -58,7 +60,7 @@ _Avalonia UI_ **样式选择器语法** 类似于 CSS（层叠样式表）中使
 
 在此示例中，所有带有 `h1` 样式类的 `TextBlock` 元素将显示为样式设置的字体大小和字重。这在预览面板中工作：
 
-<img src="/img/gitbook-import/assets/image (5) (5).png" alt=""/>
+<img src={StyleH1SampleScreenshot} alt=""/>
 
 ## 放置样式的位置
 

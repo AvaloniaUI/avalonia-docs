@@ -2,6 +2,8 @@
 description: TUTORIALS - To Do List App
 ---
 
+import ToDoAddNewItemsScreenshot from '/img/gitbook-import/assets/image (44).png';
+
 # Add New Items
 
 When you created the `ToDoListView` user control earlier in this tutorial, you added a button so that the user can add a new item. On this page you will add an action to the button.&#x20;
@@ -75,14 +77,12 @@ Alter the XAML to match the following:
 
 This gives you a view which looks like this:
 
-<div style={{textAlign: 'center'}}>
-  <img src="/img/gitbook-import/assets/image (44).png" alt=""/>
-</div>
+<img className="center" src={ToDoAddNewItemsScreenshot} alt="" />
 
 The new view has a text box control which has three properties for you to review:
 
 * `AcceptsReturn` creates a multi-line text box.
-* `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you have not created yet).
+* `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you created above).
 * `Watermark` causes a placeholder to be displayed when the text box is empty.
 
 On the next page you will learn how to change the view in the main window to display the new item view in place of the to do list view.

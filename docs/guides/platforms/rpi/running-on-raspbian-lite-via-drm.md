@@ -3,6 +3,10 @@ id: running-on-raspbian-lite-via-drm
 title: Running on Raspberry Pi with Raspbian Lite
 ---
 
+import RaspbianLiteDrmKmsCubeScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-kmscube.gif';
+import RaspbianLiteDrmDesktopScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-desktop.jpg';
+import RaspianLiteRaspberryScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-run-on-raspberry.jpg';
+
 # Running on Raspberry Pi with Raspbian Lite
 
 This tutorial shows you how to run your Avalonia app on a Raspberry Pi with Raspbian Lite via [DRM](https://en.wikipedia.org/wiki/Direct\_Rendering\_Manager).
@@ -67,7 +71,7 @@ sudo kmscube
 ```
 
 You should see the spinning cube on your Raspberry pi screen now:\
-<img src='/img/gitbook-import/assets/avalonia-raspbian-lite-drm-kmscube.gif' alt=''/>
+<img src={RaspbianLiteDrmKmsCubeScreenshot} alt=""/>
 
 ### Step 2 - Prepare Avalonia App
 
@@ -192,7 +196,7 @@ public override void OnFrameworkInitializationCompleted()
 **2.5 Run and test on desktop**\
 Now you can run/debug your app on desktop as usual.\
 When you start your app you should see this:\
-<img src='/img/gitbook-import/assets/avalonia-raspbian-lite-drm-desktop.jpg' alt=''/>
+<img src={RaspbianLiteDrmDesktopScreenshot} alt=''/>
 
 ### Step 3 - Deploy and run on Raspberry
 
@@ -219,7 +223,8 @@ Now you can run the app with the following:
 sudo ./path/to/app/AvaloniaRaspbianLiteDrm --drm
 ```
 
-You should see the app running on your Raspberry Pi now:\
-<img src='/img/gitbook-import/assets/avalonia-raspbian-lite-drm-run-on-raspberry.jpg' alt=''/>
+You should see the app running on your Raspberry Pi now:
+
+<img src={RaspianLiteRaspberryScreenshot} alt=''/>
 
 If you have a touch display installed, try to slide the slider control :)

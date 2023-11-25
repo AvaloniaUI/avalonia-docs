@@ -2,6 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
+import MusicStoreMockSearchScreenshot from './images/text-list.png';
+
 # Mock Search
 
 On this page you will create the view model for the album search feature, and then bind it to the controls on the new user control. At this stage you will use a mock of the search itself, so that you can concentrate on the view model.
@@ -34,8 +36,6 @@ At this stage, you will create two properties for the search application logic:
 
 * A text string that is the search criteria,&#x20;
 * A Boolean that indicates whether the search is busy.&#x20;
-
-<!---->
 
 - Add the following code to implement the above properties:
 
@@ -144,6 +144,6 @@ public MusicStoreViewModel()
 
 - Click **Debug** to compile and run the project.
 
-![](images/text-list.png)
+<p><img className="image-medium-zoom" src={MusicStoreMockSearchScreenshot} alt="" /></p>
 
 This shows that the data binding from the list to the album collection in the view model is working, but the view is not graphical yet. On the next page you will develop the app further by replacing the text with graphical album tiles. &#x20;

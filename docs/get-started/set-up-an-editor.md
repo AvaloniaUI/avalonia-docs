@@ -3,6 +3,9 @@ id: set-up-an-editor
 title: Set Up an Editor
 ---
 
+import AvaloniaVsExtensionMarketplaceScreenshot from '/img/get-started/install-the-avalonia-extension/image (17) (2).png';
+import AvaloniaVsExtensionNuGetScreenshot from '/img/get-started/install-the-avalonia-extension/image (3) (1) (1) (1).png';
+
 # Set Up an Editor
 
 You can create an Avalonia application using any code editor, but using an IDE will give you support for authoring Avalonia XAML files with a previewer and code completion.
@@ -19,9 +22,7 @@ Rider does not yet provide a visual designer, but this is in development. See [t
 
 If you're developing Avalonia with Visual Studio you should install the [Avalonia for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS) extension.
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/install-the-avalonia-extension/image (17) (2).png" />
-  </div>
+<img className="center" src={AvaloniaVsExtensionMarketplaceScreenshot} alt="" />
 
 The extension provides intellisense support for Avalonia XAML together with a previewer.
 
@@ -31,9 +32,7 @@ To install the Avalonia for Visual Studio extension:
 - In the **Search** box, type "Avalonia"
 - Click **Download** and follow the instructions (you will need to close Visual Studio to complete the installation)
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/install-the-avalonia-extension/image (3) (1) (1) (1).png" />
-  </div>
+<img className="center" src={AvaloniaVsExtensionNuGetScreenshot} alt="" />
 
 :::info
 Alternatively you can download the extension [here](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS).

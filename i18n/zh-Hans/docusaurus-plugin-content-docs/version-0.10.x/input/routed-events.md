@@ -3,6 +3,8 @@ id: routed-events
 title: Routed Events
 ---
 
+import InputEventRoutingScreenshot from '/img/input/routed-events/input-event-routing.png';
+
 Most events in Avalonia are implemented as Routed Events. Routed events are events that are raised on the whole tree rather than just the control that raised the event.
 
 ## What Is a Routed Event
@@ -220,10 +222,7 @@ Avalonia input events that come in pairs are implemented so that a single user a
 
 As an illustration of how input event processing works, consider the following input event example. In the following tree illustration, `leaf element #2` is the source of a `PointerPressed` event:
 
-  <div style={{textAlign: 'center'}}>
-    <img src="/img/input/routed-events/input-event-routing.png" alt="Event routing diagram" />
-  </div>
-
+<img className="center" src={InputEventRoutingScreenshot} alt="Event routing diagram" />
 
 The order of event processing is as follows:
 

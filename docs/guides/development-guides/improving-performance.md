@@ -5,27 +5,27 @@ title: Improving Performance
 
 The performance of Avalonia applications can be significantly improved by taking into account several key considerations during the development process. This document discusses the steps you can take to optimize the performance of your Avalonia applications.
 
-
 ## Use CompiledBindings
 
 One of the most effective ways to improve performance in Avalonia is to use [`CompiledBindings`](../../basics/data/data-binding/compiled-bindings) in your application. Compiled bindings enable faster data binding by compiling the binding path at compile time, thus reducing the overhead of reflection at runtime. 
 
 ## Choose the Right Control for Data Display
 
-​​When you need to display a large amount of data in a `DataGrid` or a `TreeView` with many nodes, it is recommended to use the `TreeDataGrid` control. `TreeDataGrid` is built from scratch and provides better performance than the normal `DataGrid`. It supports virtualization and is particularly useful if you need a virtualized tree, as it has hierarchical data templates​.
+When you need to display a large amount of data in a `DataGrid` or a `TreeView` with many nodes, it is recommended to use the `TreeDataGrid` control. `TreeDataGrid` is built from scratch and provides better performance than the normal `DataGrid`. It supports virtualization and is particularly useful if you need a virtualized tree, as it has hierarchical data templates.
 
-Avoid using the `DataGrid` control if you don't need editing features. It's generally regarded as a less optimal control for performance​​.
+Avoid using the `DataGrid` control if you don't need editing features. It's generally regarded as a less optimal control for performance.
 
 ## Virtualization
 
 When working with large amounts of data, enabling virtualization can improve the performance of your Avalonia application. Virtualization means that only the visible items in the control are rendered, which significantly improves the performance when there are a large number of items to display.
 
 ### TreeDataGrid
-`TreeDataGrid` supports virtualization and can handle thousands of rows with complex cells effectively​​.
+
+`TreeDataGrid` supports virtualization and can handle thousands of rows with complex cells effectively.
 
 ## Optimize Your Visual Tree Structure
 
-Performance can often be hindered by a deeply nested and complicated layout. Strive to maintain your XAML markup as uncomplicated and flat as possible. Rendering UI elements onscreen triggers a "layout pass" twice for every single element (a measure pass followed by an arrange pass). 
+Performance can often be hindered by a deeply nested and complicated layout. Strive to maintain your XAML markup as uncomplicated and flat as possible. Rendering UI elements onscreen triggers a "layout pass" twice for every single element (a measure pass followed by an arrange pass).
 
 This layout pass process is computation-heavy—the more child elements an item has, the more calculations are needed. Therefore, minimizing the complexity of your visual tree in Avalonia UI can significantly enhance the application's performance.
 

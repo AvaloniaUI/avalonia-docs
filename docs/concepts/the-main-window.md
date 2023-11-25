@@ -24,4 +24,4 @@ Worth mentioning, developers should keep in mind, that using static globals and 
 Mobile and browser platforms don't have a concept of Window in Avalonia. Instead, you need to set MainView control in Application.ApplicationLifetime when it implements ISingleViewApplicationLifetime interface.
 :::
 
-### &#x20;<a href="#show-hide-and-close-a-window" id="show-hide-and-close-a-window"></a>
+### <a href="#show-hide-and-close-a-window" id="show-hide-and-close-a-window"></a>
