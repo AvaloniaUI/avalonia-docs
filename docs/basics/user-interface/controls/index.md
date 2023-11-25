@@ -42,7 +42,7 @@ _Avalonia UI_'s builtin controls can be loosely classified into the below types:
 *User controls are only available for apps.
 
 :::note
-These classifications are somewhat related to the discussion in [Choosing A Custom Control Type](choosing-a-custom-control-type).
+These classifications are somewhat related to the discussion in [Choosing A Custom Control Type](creating-controls/choosing-a-custom-control-type).
 :::
 
 ### Drawn Controls
@@ -63,7 +63,7 @@ Some layout controls like `Grid` have properties such as `Background` to simplif
 
 ## User Controls
 
-_Avalonia UI_ never provides `UserControl`s by itself as these are not considered general-purpose. For more information on creating and using `UserControl`s in your app see [Choosing A Custom Control Type](choosing-a-custom-control-type).
+_Avalonia UI_ never provides `UserControl`s by itself as these are not considered general-purpose. For more information on creating and using `UserControl`s in your app see [Choosing A Custom Control Type](creating-controls/choosing-a-custom-control-type).
 
 ### Templated Controls
 
