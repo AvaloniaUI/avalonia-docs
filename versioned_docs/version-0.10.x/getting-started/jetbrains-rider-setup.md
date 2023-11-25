@@ -3,9 +3,9 @@ id: jetbrains-rider-setup
 title: JetBrains Rider Setup
 ---
 
- import RiderWelcomePluginsScreenshot from '/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-1-rider-welcome.webp';
- import RiderConfigurePluginsScreenshot from '/img/getting-started/jetbrains-rider-setup/rider-setup-2-configure-plugin-repos.webp';
- import RiderPluginInstallScreenshot from '/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-4-plugin-install.webp';
+import RiderWelcomePluginsScreenshot from '/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-1-rider-welcome.webp';
+import RiderConfigurePluginsScreenshot from '/img/getting-started/jetbrains-rider-setup/rider-setup-2-configure-plugin-repos.webp';
+import RiderPluginInstallScreenshot from '/img/getting-started/jetbrains-rider-setup/jetbrains-rider-setup-4-plugin-install.webp';
 
 # JetBrains Rider Setup
 

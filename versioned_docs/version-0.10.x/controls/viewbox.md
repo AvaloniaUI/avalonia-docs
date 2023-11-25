@@ -81,15 +81,13 @@ new Viewbox
 <table>
   <thead>
     <tr>
-      <th><code>Stretch</code>
-      </th>
+      <th><code>Stretch</code></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>Uniform</code>
-      </td>
+      <td><code>Uniform</code></td>
       <td>
         <p></p>
         <p>
@@ -98,8 +96,7 @@ new Viewbox
       </td>
     </tr>
     <tr>
-      <td><code>UniformToFill</code>
-      </td>
+      <td><code>UniformToFill</code></td>
       <td>
         <p></p>
         <p>
@@ -108,8 +105,7 @@ new Viewbox
       </td>
     </tr>
     <tr>
-      <td><code>Fill</code>
-      </td>
+      <td><code>Fill</code></td>
       <td>
         <p></p>
         <p>
@@ -118,8 +114,7 @@ new Viewbox
       </td>
     </tr>
     <tr>
-      <td><code>None</code>
-      </td>
+      <td><code>None</code></td>
       <td>
         <p></p>
         <p>
@@ -133,22 +128,19 @@ new Viewbox
 <table>
   <thead>
     <tr>
-      <th><code>StretchDirection</code>
-      </th>
+      <th><code>StretchDirection</code></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>Both</code>
-      </td>
+      <td><code>Both</code></td>
       <td>
         <img src={ViewboxScaleUniformBothScreenshot} alt="" />
       </td>
     </tr>
     <tr>
-      <td><code>UpOnly</code>
-      </td>
+      <td><code>UpOnly</code></td>
       <td >
         <p></p>
         <p>
@@ -157,8 +149,7 @@ new Viewbox
       </td>
     </tr>
     <tr>
-      <td><code>DownOnly</code>
-      </td>
+      <td><code>DownOnly</code></td>
       <td>
         <p></p>
         <p>
