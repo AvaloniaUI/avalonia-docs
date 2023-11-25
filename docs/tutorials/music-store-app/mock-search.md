@@ -37,8 +37,6 @@ At this stage, you will create two properties for the search application logic:
 * A text string that is the search criteria,&#x20;
 * A Boolean that indicates whether the search is busy.&#x20;
 
-<!---->
-
 - Add the following code to implement the above properties:
 
 ```csharp
@@ -78,17 +76,21 @@ Follow this procedure to add data binding to the view:
 - Locate and open the **MusicStoreView.axaml** file.
 - Add the binding expressions shown:
 
-```markup
-<DockPanel>
-  <StackPanel DockPanel.Dock="Top">
-    <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
-    <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
-  </StackPanel>
-  <Button Content="Buy Album"
-          DockPanel.Dock="Bottom"
-          HorizontalAlignment="Center" />
-  <ListBox/>
-</DockPanel>
+```xml
+<UserControl ...>
+    <!-- ... -->
+    <DockPanel>
+      <StackPanel DockPanel.Dock="Top">
+        <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
+        <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
+      </StackPanel>
+      <Button Content="Buy Album"
+              DockPanel.Dock="Bottom"
+              HorizontalAlignment="Center" />
+      <ListBox/>
+    </DockPanel>
+    <!-- ... -->
+</UserControl>
 ```
 
 ## Album Search and Selection
@@ -122,7 +124,7 @@ Next to bind these properties to the list box in the view, follow this procedure
 - Locate and open the **MusicStoreView.axaml** file.
 - Add the binding expressions shown to the `<ListBox>` element:
 
-```
+```xml
 <ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
 ```
 

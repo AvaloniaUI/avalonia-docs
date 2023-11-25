@@ -11,17 +11,19 @@ Instead, data templates are placed either inside a `DataTemplates` collection in
 For example, this code adds a data template to display the view model class `MyViewModel`:
 
 ```markup
-<UserControl xmlns:viewmodels="clr-namespace:MyApp.ViewModels;assembly=MyApp">
+<UserControl xmlns:viewmodels="using:MyApp.ViewModels"
+             x:DataType="viewmodels:ControlViewModel">
     <UserControl.DataTemplates>
-        <DataTemplate DataType="viewmodels:MyViewModel">
+        <DataTemplate DataType="viewmodels:FooViewModel">
             <Border Background="Red" CornerRadius="8">
                 <TextBox Text="{Binding Name}"/>
             </Border>
         </DataTemplate>
     </UserControl.DataTemplates>
-    <!-- Assuming that DataContext.Foo is an object of type
+    <!-- Assuming that ControlViewModel.Foo is an object of type
          MyApp.ViewModels.FooViewModel then a red border with a corner
-         radius of 8 containing a TextBox will be displayed here -->
+         radius of 8 containing a TextBox will be displayed here.
+         DataType is required only if you use Compiled Bindings, so it can be type-checked.  -->
     <ContentControl Content="{Binding Foo}"/>
 <UserControl>
 ```

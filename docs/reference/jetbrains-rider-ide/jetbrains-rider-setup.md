@@ -3,8 +3,6 @@ description: REFERENCE
 ---
 
 import RiderWelcomeScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-1-rider-welcome.png';
-import RiderConfigurePluginReposScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-2-configure-plugin-repos.png'
-import RiderEnterPluginRepoScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-3-enter-plugin-repo.png';
 import RiderInstallAvaloniaPluginScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-4-plugin-install.png';
 
 # JetBrains Rider Setup
@@ -58,15 +56,7 @@ Once Rider loads you will see the **Welcome to JetBrains Rider** screen.
 <img src={RiderWelcomeScreenshot} alt="" />
 
 The **Preferences** screen will open.
-- Click the settings (gear wheel) icon and then click **Manage Plugin Repositories...** on the popup menu.
-
-<img src={RiderConfigurePluginReposScreenshot} alt="" />
-
-- In the **Custom Plugin Repositories** dialog, click the plus (+) icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`, and then click **OK**.
-
-<img src={RiderEnterPluginRepoScreenshot} alt="" />
-
-- Back at the Preferences window, click **Marketplace** enter 'Avalonia' in the search. Click **AvaloniaRider** when it appears in the search results pane, then click **Install**.
+- Click **Marketplace** enter 'Avalonia' in the search. Click **AvaloniaRider** when it appears in the search results pane, then click **Install**.
 
 <img src={RiderInstallAvaloniaPluginScreenshot} alt="" />
 

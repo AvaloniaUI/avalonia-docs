@@ -36,7 +36,7 @@ dotnet add package Avalonia.Controls.DataGrid
 或直接在项目（`.csproj`）文件中添加包引用：
 
 ```xml
-<PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.18" />
+<PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.0" />
 ```
 
 :::warning

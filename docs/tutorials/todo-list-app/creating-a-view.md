@@ -68,12 +68,12 @@ You are not going to change the code-behind file in this tutorial, but notice th
 
 To make the design-time preview look more like a mobile phone in portrait orientation, locate the design-time width and height properties for the user control and set them as shown:
 
-<pre class="language-markup"><code class="lang-markup"><strong>&#x3C;UserControl 
-</strong><strong>...
-</strong><strong>d:DesignWidth="250" d:DesignHeight="450" 
-</strong><strong>... >
-</strong><strong>
-</strong></code></pre>
+<pre class="language-markup"><code class="lang-markup">
+<strong>&#x3C;UserControl</strong>
+<strong>...</strong>
+<strong>d:DesignWidth="250" d:DesignHeight="450"</strong>
+<strong>... ></strong>
+</code></pre>
 
 Repeat the process with the main window.&#x20;
 

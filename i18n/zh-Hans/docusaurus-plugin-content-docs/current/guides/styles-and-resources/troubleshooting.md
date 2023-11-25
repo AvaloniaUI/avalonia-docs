@@ -122,8 +122,6 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 </Style>
 ```
 
-The actual background is rendered by a `ContentPresenter`, which in the default is bound to the Buttons `Background` property. However in the pointer-over state the selector is directly applying the background to the `ContentPresenter (Button:pointerover /template/ ContentPresenter#PART_ContentPresenter`) That's why when our setter was ignored in the previous code example. The corrected code should target content presenter directly as well:
-
 实际背景是由 `ContentPresenter` 渲染的，在默认情况下它与按钮的 `Background` 属性绑定。然而，在 pointerover 状态下，选择器直接将背景应用于 `ContentPresenter (Button:pointerover /template/ ContentPresenter#PART_ContentPresenter)`。这就是为什么在前一个代码示例中我们的 setter 被忽略的原因。修正后的代码应该直接针对 content presenter：
 
 ```markup

@@ -11,9 +11,7 @@ description: REFERENCE
 * 样式（Styling）
 * 数据模板（Data Templates）
 
-```mdx-code-block
 import {DocsCardList} from '../../../../../../src/components/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocsCardList list={useCurrentSidebarCategory().items} />
-```

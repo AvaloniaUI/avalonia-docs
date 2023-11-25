@@ -81,7 +81,7 @@ dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Vi
 新视图有一个文本框控件，其中有三个属性供您查看：
 
 * `AcceptsReturn` 创建一个多行文本框。
-* `Text` 将文本框中显示的文本绑定到视图模型上的 `Description` 属性（您还没有创建视图模型）。
+* `Text` 将文本框中显示的文本绑定到视图模型上的（您在上面创建的） `Description` 属性。
 * `Watermark` 当文本框为空时显示一个占位符。
 
 在下一页中，您将学习如何更改主窗口中的视图，以在待办事项列表视图的位置显示新项目视图。

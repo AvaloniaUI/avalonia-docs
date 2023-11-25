@@ -18,7 +18,7 @@ You can see the versions of the .NET SDK [here](https://dotnet.microsoft.com/en-
 -  You may need to uninstall an old version of the _Android Workload._ To do this, type the following command:
 
 ```bash
-dotnet workload remove android
+dotnet workload uninstall android
 ```
 
 -  Install the _Android Workload._ To do this, type the following command:

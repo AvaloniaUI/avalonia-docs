@@ -33,6 +33,18 @@ title: 文件选择器选项 File Picker Options
 
 获取或设置文件打开选择器显示的文件类型集合。
 
+为文件选择器创建文件类型列表：
+
+```cs
+//这也可以应用于SaveFilePicker。
+var files = await _target.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
+{
+ Title = title,
+//您可以添加自定义文件类型，也可以从内置文件类型添加。请参阅“定义自定义文件类型”，了解如何创建自定义文件类型。
+ FileTypeFilter = new[] { ImageAll, FilePickerFileTypes.TextPlain }
+});
+```
+
 ## FilePickerSaveOptions
 
 ### SuggestedFileName

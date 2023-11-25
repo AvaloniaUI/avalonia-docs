@@ -80,7 +80,7 @@ import BounceEaseInScreenshot from '/img/gitbook-import/assets/image (76).png';
     <Style Selector="Rectangle.red">
       <Setter Property="Fill" Value="Red"/>
       <Style.Animations>
-        <Animation Duration="0:0:3" RepeatCount="4">
+        <Animation Duration="0:0:3" IterationCount="4">
           <KeyFrame Cue="0%">
             <Setter Property="Opacity" Value="0.0"/>
             <Setter Property="RotateTransform.Angle" Value="0.0"/>

@@ -27,7 +27,7 @@ namespace AvaloniaControls.ViewModels
     {
         private ObservableCollection<Person> _people;
 
-        public HierarchicalTreeDataGridSource<Person> PersonSource { get; }
+        public FlatTreeDataGridSource<Person> PersonSource { get; }
 
         public MainWindowViewModel()
         {
@@ -39,7 +39,7 @@ namespace AvaloniaControls.ViewModels
                 new Person ( "Jazmine", "Schroeder", 52 ),
             };
                           
-            PersonSource = new HierarchicalTreeDataGridSource<Person>(_people)
+            PersonSource = new FlatTreeDataGridSource<Person>(_people)
             {
                 Columns =
                 {
