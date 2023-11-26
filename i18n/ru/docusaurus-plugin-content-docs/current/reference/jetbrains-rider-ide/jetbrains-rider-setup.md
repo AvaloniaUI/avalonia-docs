@@ -3,8 +3,6 @@
 ---
 
 import RiderWelcomeScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-1-rider-welcome.png';
-import RiderConfigurePluginReposScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-2-configure-plugin-repos.png'
-import RiderEnterPluginRepoScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-3-enter-plugin-repo.png';
 import RiderInstallAvaloniaPluginScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-4-plugin-install.png';
 
 # Настройка JetBrains Rider
@@ -64,15 +62,9 @@ Rider предоставляет наибольшее удобство при р
 Откроется окно **Preferences**.
 - Нажмите значок настроек (шестеренка) и выберете в выпадающем меню **Manage Plugin Repositories...**.
 
-<img src={RiderConfigurePluginReposScreenshot} alt="" />
-
 - В окне **Custom Plugin Repositories**, нажмите на значок (+) и введите URL-адрес `https://plugins.jetbrains.com/plugins/dev/14839`, нажмите **OK**.
 
-<img src={RiderEnterPluginRepoScreenshot} alt="" />
-
 - Вернитесь в окно **Preferences**, нажмите **Marketplace** и введите в поле поиска'Avalonia'. Найдите и выберете **AvaloniaRider**, после чего нажмите **Install**.
-
-<img src={RiderInstallAvaloniaPluginScreenshot} alt="" />
 
 - После завершения установки, нажмите **Restart IDE** (кнопка появится).
 
