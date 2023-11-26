@@ -310,10 +310,19 @@ const sidebars = {
           'items': [
             'guides/graphics-and-animation/graphics-and-animations',
             'guides/graphics-and-animation/how-to-add-menu-icons',
-            'guides/graphics-and-animation/how-to-create-a-custom-page-transition',
             'guides/graphics-and-animation/how-to-use-icons',
             'guides/graphics-and-animation/keyframe-animations',
             'guides/graphics-and-animation/transitions',
+            {
+              'type': 'category',
+              'label': 'Page Transitions',
+              'items': [
+                'guides/graphics-and-animation/page-transitions/cross-fade-page-transition',
+                'guides/graphics-and-animation/page-transitions/page-slide-transition',
+                'guides/graphics-and-animation/page-transitions/page-transition-combinations',
+                'guides/graphics-and-animation/page-transitions/how-to-create-a-custom-page-transition'
+              ],
+            },
           ],
         },
         {
