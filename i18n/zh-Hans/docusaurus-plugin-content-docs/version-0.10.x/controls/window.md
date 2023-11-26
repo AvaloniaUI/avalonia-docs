@@ -72,7 +72,7 @@ window.Hide();
 window.Show();
 ```
 
-See also [Prevent a window from closing](docs/controls/window#prevent-a-window-from-closing)
+See also [Prevent a window from closing](../controls/window#prevent-a-window-from-closing)
 
 ### Show a window as a dialog
 
