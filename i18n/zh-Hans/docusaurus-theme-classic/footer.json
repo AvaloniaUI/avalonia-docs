@@ -13,7 +13,7 @@
   },
   "link.item.label.Tutorial": {
     "message": "Tutorial",
-    "description": "The label of footer link with label=Tutorial linking to /docs/next/get-started/test-drive/introduction"
+    "description": "The label of footer link with label=Tutorial linking to /docs/get-started/test-drive/introduction"
   },
   "link.item.label.Stack Overflow": {
     "message": "Stack Overflow",
