@@ -163,7 +163,7 @@ const sidebars = {
                     'id': 'basics/user-interface/controls/creating-controls/index'
                   },
                   'items': [
-                    'basics/user-interface/controls/creating-controls/choosing-a-custom-contro-type',
+                    'basics/user-interface/controls/creating-controls/choosing-a-custom-control-type',
                     'basics/user-interface/controls/creating-controls/defining-properties',
                     'basics/user-interface/controls/creating-controls/defining-events',
                     'basics/user-interface/controls/creating-controls/control-themes',
