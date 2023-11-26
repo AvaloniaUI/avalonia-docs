@@ -412,6 +412,10 @@ const sidebars = {
         {
           'type': 'category',
           'label': 'Data Templates',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/templates/index',
+          },
           'items': [
             'concepts/templates/data-templates',
             'concepts/templates/content-template',
@@ -437,6 +441,10 @@ const sidebars = {
         {
           'type': 'category',
           'label': 'Input',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/input/index',
+          },
           'items': [
             'concepts/input/routed-events',
             'concepts/input/pointer',
