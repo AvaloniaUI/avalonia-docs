@@ -137,12 +137,13 @@ The console can be shown using the "View" → "Console" menu. The console implem
 
 ## Hotkeys
 
-| Keys Combination | Function                     |
-| ---------------- | ---------------------------- |
-| Alt+S            | Enable Snapshot Styles       |
-| Alt+D            | Disable Snapshot Styles      |
-| CTRL+Shift       | Inspect Control over Pointer |
-| CTRL+Alt+F       | Toggle Popup freeze          |
+| Keys Combination | Function                      |
+| ---------------- | ------------------------------|
+| Alt+S            | Enable Snapshot Styles        |
+| Alt+D            | Disable Snapshot Styles       |
+| CTRL+Shift       | Inspect Control over Pointer  |
+| CTRL+Alt+F       | Toggle Popup freeze           |
+| F8               | Make screenshot of selected item in Logical or Visual Tree|
 
 ## Examples
 
