@@ -1,6 +1,6 @@
 ---
 id: input-controls
-title: Input Controls
+title: Input Controls (Элементы ввода)
 ---
 
 import InputControlsScreenshot from '/img/get-started/test-drive/input-controls.png';
