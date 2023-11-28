@@ -1,6 +1,6 @@
 ---
 id: create-a-project
-title: Create and Run a Project
+title: Создание и Запуск Проекта
 ---
 
 import Tabs from '@theme/Tabs';
@@ -13,21 +13,21 @@ import VsNewAvaloniaProjectScreenshot from '/img/get-started/test-drive/vs-new-a
 import RiderRunScreenshot from '/img/get-started/test-drive/rider-run.png';
 import InitialWindowScreenshot from '/img/get-started/test-drive/initial-window.png';
 
-## Install Templates
+## Установка шаблонов
 
-Before starting, ensure that you have [installed the Avalonia templates](../install.md):
+Перед началом работы, убедитесь, что у вас [установлены шаблоны Avalonia](../install.md):
 
 ```bash
 dotnet new install Avalonia.Templates
 ```
 
-## Create the Project
+## Создание проекта
 
-To get started, we're going to use the simplest Avalonia template: `Avalonia Application` (or `avalonia.app` in the CLI).
+В начале, мы выберем самый простой шаблон Avalonia: `Avalonia Application` (или `avalonia.app` в CLI).
 
 <Tabs>
   <TabItem value="cli" label="Command Line" default>
-Run the command:
+Выполните команду:
 
 ```bash
 dotnet new avalonia.app -o GetStartedApp
@@ -71,7 +71,7 @@ The template will create a new solution and two new projects. `GetStartedApp` is
   </TabItem>
 </Tabs>
 
-## Run the Project
+## Запуск проекта
 
 We're now ready to run the project!
 
