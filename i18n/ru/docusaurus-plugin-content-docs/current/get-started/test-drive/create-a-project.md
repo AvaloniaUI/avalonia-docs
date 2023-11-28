@@ -33,38 +33,40 @@ dotnet new install Avalonia.Templates
 dotnet new avalonia.app -o GetStartedApp
 ```
 
-This will create a new folder called `GetStartedApp` containing the new project.
+Команда создаст новый проект в папке `GetStartedApp` (если папки с таким именем нет, то она будет создана).
   </TabItem>
   <TabItem value="rider" label="Rider">
 
-- On the Rider startup screen, select **New Solution**
+- В окне запуска Rider, выберите **New Solution**
 
 <img className="center" src={RiderSplashScreenshot} width="600"/>
 
-- In the sidebar, scroll down and select **Avalonia App**
-- Type `GetStartedApp` in the **Solution Name** field
-- Click **Create**
+- В боковой панели скрольте вниз и выберите **Avalonia App**
+- В поле **Solution Name**  введите `GetStartedApp`
+- Нажмите **Create**
 
-The template will create a new solution and project.
+Шаблон создаст новое решение и проект.
 
 <img className="center" src={RiderSolutionScreenshot} width="600"/>
 
   </TabItem>
   <TabItem value="vs" label="Visual Studio">
 
-- In **Visual Studio**, click **Create a new project**.
-- Type `Avalonia` in the search box.
-- Click **Avalonia Application** then click **Next**.
+- В **Visual Studio** нажмите **Create a new project**.
+- В поле поиска введите `Avalonia`.
+- Выберите **Avalonia Application** и нажмите **Next**.
 
 <img className="center" src={VsFindAvaloniaTemplateScreenshot} />
 
-- Name the project `GetStartedApp`, and click **Create**.
+- Укажите название проекта `GetStartedApp`, затем нажмите **Create**.
 
-- The next screen allows selecting the platforms you wish to target: click **Desktop** then click **Next**.
+- На следующем экране вы можете выберать целевые платформы: нажмите **Desktop**, а затем **Next**.
 
-- The next screen allows selecting a design pattern: click **ReactiveUI** then click **Create**.
+- На следубщем экране вы можете выбрать шаблон проектирования: нажмите **ReactiveUI**, а затем **Create**.
 
-The template will create a new solution and two new projects. `GetStartedApp` is the main project that is shared between each platform. `GetStartedApp.Desktop` is the platform-specific project for the desktop platform.
+Шаблон создаст решение и два новых проекта.
+`GetStartedApp` - основной проект, совместно используемый каждой платформой.
+`GetStartedApp.Desktop` - платформо-зависимый проект, в данном случае для `Desktop`
 
 <img className="center" src={VsNewAvaloniaProjectScreenshot} />
 
@@ -73,11 +75,11 @@ The template will create a new solution and two new projects. `GetStartedApp` is
 
 ## Запуск проекта
 
-We're now ready to run the project!
+Теперь вы можете запустить проект!
 
 <Tabs>
   <TabItem value="cli" label="Command Line" default>
-Go into the `GetStartedApp` directory and run:
+Выберите и запустите проект `GetStartedApp`:
 
 ```bash
 dotnet run
@@ -85,22 +87,22 @@ dotnet run
   </TabItem>
   <TabItem value="rider" label="Rider">
 
-Press the **Run** button in the Rider toolbar:
+В Rider нажмите **Run** на панели инструментов:
 
 <img className="center" src={RiderRunScreenshot} />
 
   </TabItem>
   <TabItem value="vs" label="Visual Studio">
 
-  Right-click on the `GetStartedApp.Desktop` project and select **Set as Startup Project**.
+Нажмите правой кнопкой мыши по проекту `GetStartedApp.Desktop`, выберите **Set as Startup Project**.
 
-  Hit `F5` to run the project.
+  Для запуска проекта нажмите `F5`.
 
   </TabItem>
 </Tabs>
 
-The solution will build and run.
+Решение будет собрано и запущено.
 
-You should now be running your first Avalonia application!
+Теперь вы можете запустить ваше первое приложение на Avalonia!
 
 <img className="center" src={InitialWindowScreenshot} />
