@@ -266,6 +266,7 @@ const sidebars = {
           'items': [
             'guides/implementation-guides/how-to-use-the-mvvm-pattern',
             'guides/implementation-guides/how-to-implement-dependency-injection',
+            'guides/implementation-guides/developer-tools',
             'guides/implementation-guides/logging-errors-and-warnings',
             'guides/implementation-guides/ide-support',
             'guides/implementation-guides/how-to-use-design-time-data',
@@ -310,10 +311,19 @@ const sidebars = {
           'items': [
             'guides/graphics-and-animation/graphics-and-animations',
             'guides/graphics-and-animation/how-to-add-menu-icons',
-            'guides/graphics-and-animation/how-to-create-a-custom-page-transition',
             'guides/graphics-and-animation/how-to-use-icons',
             'guides/graphics-and-animation/keyframe-animations',
             'guides/graphics-and-animation/transitions',
+            {
+              'type': 'category',
+              'label': 'Page Transitions',
+              'items': [
+                'guides/graphics-and-animation/page-transitions/cross-fade-page-transition',
+                'guides/graphics-and-animation/page-transitions/page-slide-transition',
+                'guides/graphics-and-animation/page-transitions/page-transition-combinations',
+                'guides/graphics-and-animation/page-transitions/how-to-create-a-custom-page-transition'
+              ],
+            },
           ],
         },
         {
@@ -402,6 +412,10 @@ const sidebars = {
         {
           'type': 'category',
           'label': 'Data Templates',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/templates/index',
+          },
           'items': [
             'concepts/templates/data-templates',
             'concepts/templates/content-template',
@@ -427,6 +441,10 @@ const sidebars = {
         {
           'type': 'category',
           'label': 'Input',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/input/index',
+          },
           'items': [
             'concepts/input/routed-events',
             'concepts/input/pointer',
