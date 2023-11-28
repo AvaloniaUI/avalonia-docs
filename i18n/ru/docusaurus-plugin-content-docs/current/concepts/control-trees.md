@@ -1,5 +1,5 @@
 ---
-описание: КОНЦЕПЦИИ
+description: CONCEPTS
 ---
 
 import ControlTreesLogicalScreenshot from '/img/gitbook-import/assets/image (61).png';

@@ -1,6 +1,6 @@
 ---
 id: add-a-control
-title: Добавление Элементов управления
+title: Add a Control 
 ---
 
 import Highlight from '@site/src/components/Highlight';

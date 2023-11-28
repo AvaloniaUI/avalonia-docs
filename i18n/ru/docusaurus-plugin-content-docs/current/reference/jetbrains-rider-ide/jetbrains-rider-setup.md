@@ -1,5 +1,5 @@
 ---
-описание: СПРАВКА
+description: REFERENCE
 ---
 
 import RiderWelcomeScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-1-rider-welcome.png';

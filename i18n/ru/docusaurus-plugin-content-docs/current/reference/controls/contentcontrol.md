@@ -25,19 +25,19 @@ At its simplest, a `ContentControl` displays the data assigned to its [`Content`
 
 For example:
 
-```markup
+```xml
 <ContentControl Content="Hello World!"/>
 ```
 
 Will display the string "Hello World!". The `Content` property is the control's default property and so the above example can also be written as:
 
-```markup
+```xml
 <ContentControl>Hello World!</ContentControl>
 ```
 
 If you assign a control to a `ContentControl` then it will display the control, for example:
 
-```markup
+```xml
 <ContentControl>
   <Button>Click Me!</Button>
 </ContentControl>
@@ -45,7 +45,7 @@ If you assign a control to a `ContentControl` then it will display the control, 
 
 ### Display content with templates
 
-So far so uninteresting. Where `ContentControl` becomes useful is in tandem with [data binding](../data-binding) and [data templates](../templates/data-templates). By setting the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/) property one can specify how the data in the `Content` property is displayed. For example given the following view models:
+So far so uninteresting. Where `ContentControl` becomes useful is in tandem with data binding and data templates. By setting the `ContentTemplate` property one can specify how the data in the `Content` property is displayed. For example given the following view models:
 
 ```csharp
 namespace Example
@@ -75,11 +75,11 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](../data-binding/the-datacontext) for more information.
+> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](../../basics/data/data-binding/data-context) for more information.
 
 We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
   <ContentControl Content="{Binding Content}">
     <ContentControl.ContentTemplate>
@@ -98,4 +98,4 @@ We can display the student's first and last name in a `ContentControl` using the
 
 <img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
 
-For more information see the [data templates](../templates/data-templates) section.
+For more information see the [data templates](../../basics/data/data-templates.md) section.
