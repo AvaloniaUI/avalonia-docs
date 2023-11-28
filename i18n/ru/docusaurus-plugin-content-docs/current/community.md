@@ -4,11 +4,9 @@ import TelegramLogoScreenshot from '/img/gitbook-import/assets/image (7) (1) (1)
 import GitterLogoScreenshot from '/img/gitbook-import/assets/image (38) (1) (1).png';
 import GitterChatScreenshot from '/img/gitbook-import/assets/image (37) (1) (1).png';
 
-## Telegram
+## Telegram (предпочитаемый вариант)
 
 <img src={TelegramLogoScreenshot} alt="" />
-
-Желательно использовать приложение Telegram.
 
 :::info
 * Английский чат [перейти](https://t.me/Avalonia).

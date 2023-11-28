@@ -1,13 +1,13 @@
 ---
-описание: СПРАВКА
+description: REFERENCE
 ---
 
-# Расширение разметки
+# Markup Extensions (Расширение разметки)
 
-В этом разделе представлены некоторые расширения, они форматированы по шаблоу:
+В этом разделе представлены некоторые расширения XAML разметки. Их структура определяется по шаблону:
 
 ```xml
-<Element Attribute={Extension Value}  ... >
+<Element Attribute={Extension Value, Parameter=Value}  ... >
 ```
 
 
