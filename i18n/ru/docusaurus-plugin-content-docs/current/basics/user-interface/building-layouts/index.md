@@ -6,60 +6,60 @@ description: CONCEPTS
 
 ## Panels
 
-Avalonia includes a group of elements that derive from `Panel`. These `Panel` elements enable many complex layouts. For example, stacking elements can easily be achieved by using the `StackPanel` element, while more complex and free flowing layouts are possible by using a `Canvas`.
+Avalonia включает в себя группу элементов отнаследованных от `Panel` класса. Эти `Panel` элементы позволяют создавать множество сложных компоновок. Например, укладка элементов в стопку может быть легко достигнута с помощью функции `StackPanel` в то время как более сложные и свободные компоновки возможны при использовании элемента `Canvas`.
 
-The following table summarizes the available `Panel` controls:
+В следующей таблице представлена информация о доступных `Panel`:
 
-| Name            | Description                                                                                                                                                                                                                                                               |
+| Имя            | Описание                                                                                                                                                                                                                                                               |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Panel`         | Lays out all children to fill the bounds of the `Panel`                                                                                                                                                                                                                   |
-| `Canvas`        | Defines an area within which you can explicitly position child elements by coordinates relative to the Canvas area.                                                                                                                                                       |
-| `DockPanel`     | Defines an area within which you can arrange child elements either horizontally or vertically, relative to each other.                                                                                                                                                    |
-| `Grid`          | Defines a flexible grid area that consists of columns and rows.                                                                                                                                                                                                           |
-| `RelativePanel` | Arranges child elements relative to other elements or the panel itself.                                                                                                                                                                                                   |
-| `StackPanel`    | Arranges child elements into a single line that can be oriented horizontally or vertically.                                                                                                                                                                               |
-| `WrapPanel`     | Positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. Subsequent ordering occurs sequentially from top to bottom or right to left, depending on the value of the Orientation property. |
+| `Panel`         | Выстраивает все дочерние элементы, чтобы заполнить границы `Panel`.                                                                                                                                                                                                       |
+| `Canvas`        | Определяет область, в пределах которой можно явно позиционировать дочерние элементы по координатам относительно области `Canvas`.                                                                                                                                         |
+| `DockPanel`     | Определяет область, в пределах которой можно расположить дочерние элементы по горизонтали или вертикали относительно друг друга.                                                                                                                                          |
+| `Grid`          | Определяет гибкую область сетки, состоящую из столбцов и строк.                                                                                                                                                                                                           |
+| `RelativePanel` | Упорядочивает дочерние элементы относительно других элементов или самой панели.                                                                                                                                                                                           |
+| `StackPanel`    | Упорядочивает дочерние элементы в одну линию, которая может быть ориентирована горизонтально или вертикально.                                                                                                                                                             |
+| `WrapPanel`     | Помещает дочерние элементы в последовательном порядке слева направо, разбивая содержимое на следующую строку у края содержащего поля. Последующее упорядочивание происходит последовательно сверху вниз или справа налево, в зависимости от значения свойства Orientation.|
 
-In WPF, `Panel` is an abstract class and laying out multiple controls to fill the available space is usually done with a `Grid` with no rows/columns. In Avalonia `Panel` is a usable control that has the same layout behavior as a `Grid` with no rows/columns, but with a lighter runtime footprint.
+В WPF, `Panel` является абстрактным классом, и размещение нескольких элементов управления для заполнения свободного пространства обычно выполняется с помощью `Grid` без строк/столбцов. В Авалонии `Panel` это удобный элемент управления, который имеет такое же поведение при компоновке, как и `Grid` без строк/столбцов, но с меньшим временем выполнения.
 
 ## Element Bounding Boxes
 
-When thinking about layout in Avalonia, it is important to understand the bounding box that surrounds all elements. Each `Control` consumed by the layout system can be thought of as a rectangle that is slotted into the layout. The `Bounds` property returns the boundaries of an element's layout allocation. The size of the rectangle is determined by calculating the available screen space, the size of any constraints, layout-specific properties (such as margin and padding), and the individual behavior of the parent `Panel` element. Processing this data, the layout system is able to calculate the position of all the children of a particular `Panel`. It is important to remember that sizing characteristics defined on the parent element, such as a `Border`, affect its children.
+При рассмотрении компоновки в Avalonia важно понимать, что все элементы окружает ограничивающая рамка. Каждый `Control` потребляемый системой компоновки можно представить как прямоугольник, который вставляется в компоновку. Свойство `Bounds` возвращает границы элемента и его координаты относительно родительского `Panel`. Размер прямоугольника определяется путем вычисления доступного пространства экрана, размеров любых ограничений, специфических для элемента свойств (таких как Margin и Padding), а также индивидуального поведения родительского элемента `Panel`. Обрабатывая эти данные, система компоновки способна рассчитать положение всех дочерних элементов конкретного `Panel`. Важно помнить, что размерные характеристики, заданные на родительском элементе, например, на элементе  `Border`, влияют на своих детей.
 
-## The Layout System
+## Системы Layout
 
-At its simplest, layout is a recursive system that leads to an element being sized, positioned, and drawn. More specifically, layout describes the process of measuring and arranging the members of a `Panel` element's `Children` collection. Layout is an intensive process. The larger the `Children` collection, the greater the number of calculations that must be made. Complexity can also be introduced based on the layout behavior defined by the `Panel` element that owns the collection. A relatively simple `Panel`, such as `Canvas`, can have significantly better performance than a more complex `Panel`, such as `Grid`.
+В самом простом виде компоновка представляет собой рекурсивную систему, которая приводит к изменению размеров, расположения и отрисовки элемента. Более конкретно, компоновка описывает процесс измерения и расположения элементов `Panel` элементы `Children` коллекции. Компоновка элементов (Layout Pass) - интенсивный процесс. Чем больше `Children` коллекция, тем большее количество вычислений необходимо произвести. Сложность также может быть введена на основе поведения родительской `Panel`, которому принадлежит коллекция. Относительно простой `Panel`, такие как `Canvas`, может иметь значительно более высокую производительность, чем более сложная `Panel`, такие как `Grid`.
 
-Each time that a child control changes its position, it has the potential to trigger a new pass by the layout system. Therefore, it is important to understand the events that can invoke the layout system, as unnecessary invocation can lead to poor application performance. The following describes the process that occurs when the layout system is invoked.
+Каждый раз, когда дочерний элемент управления меняет свое положение, он потенциально может вызвать новый проход системы компоновки. Поэтому важно понимать, какие события могут вызывать систему компоновки, поскольку излишние вызовы могут привести к снижению производительности приложения. Ниже описывается процесс, происходящий при вызове системы компоновки.
 
-1. A child UIElement begins the layout process by first having its core properties measured.
-2. Sizing properties defined on `Control` are evaluated, such as `Width`, `Height`, and `Margin`.
-3. `Panel`-specific logic is applied, such as `Dock` direction or stacking `Orientation`.
-4. Content is arranged after all children have been measured.
-5. The `Children` collection is drawn on the screen.
-6. The process is invoked again if additional `Children` are added to the collection
+1. Дочерний Control начинает процесс компоновки с того, что сначала измеряются его основные свойства.
+2. Свойства размеров, определяемые для `Control` оцениваются, как `Width`, `Height` и `Margin`.
+3. `Panel`-применяется специальная логика, например `Dock` направление или ориентация `Orientation`.
+4. Содержание организуется после определения всех детей.
+5. `Children` коллекция рисуется на экране.
+6. Процесс запускается снова, если появляются дополнительные `Children` добавляемые в коллекцию.
 
-This process and how it is invoked are defined in more detail in the following sections.
+Более подробно этот процесс и порядок его вызова рассматриваются в следующих разделах.
 
 ## Measuring and Arranging Children
 
-The layout system completes two passes for each member of the `Children` collection, a measure pass and an arrange pass. Each child `Panel` provides its own `MeasureOverride` and `ArrangeOverride` methods to achieve its own specific layout behavior.
+Система компоновки выполняет два прохода для каждого члена коллекции `Children`, проход на определение и проход на расположение. Каждый ребенок `Panel` предоставляет собственный `MeasureOverride` и `ArrangeOverride` методы для достижения своего специфического поведения макета.
 
-During the measure pass, each member of the `Children` collection is evaluated. The process begins with a call to the `Measure` method. This method is called within the implementation of the parent `Panel` element, and does not have to be called explicitly for layout to occur.
+Во время прохождения мер каждый член  `Children` производится оценка коллекции. Процесс начинается с вызова метода `Measure`. Этот метод вызывается в рамках реализации родительского `Panel` элемент, и его не нужно вызывать явно, чтобы произошла компоновка.
 
-First, native size properties of the `Visual` such as `Clip` and `IsVisible` are evaluated. This generates a constraint that is passed to `MeasureCore`.
+Сначала, оцениваются свойства собственных размеров `Visual` такие как `Clip` и `IsVisible`. В результате формируется ограничение, которое передается в `MeasureCore`.
 
-First, framework properties which affects the value of the constraint are processed. These properties generally describe the sizing characteristics of the underlying `Control`, such as its `Height`, `Width` and `Margin`. Each of these properties can change the space that is necessary to display the element. `MeasureOverride` is then called with the constraint as a parameter.
+Далее обрабатываются свойства каркаса, влияющие на значение ограничения. Эти свойства, как правило, описывают размерные характеристики базовой системы `Control`, например, его `Height`, `Width` и `Margin`. Каждое из этих свойств может изменить пространство, необходимое для отображения элемента. `MeasureOverride` затем вызывается с ограничением в качестве параметра.
 
-Because `Bounds` is a calculated value, you should be aware that there could be multiple or incremental reported changes to it as a result of various operations by the layout system. The layout system may be calculating required measure space for child elements, constraints by the parent element, and so on.
+Поскольку `Bounds` является вычисляемым значением, то следует иметь в виду, что в результате различных операций системы компоновки оно может изменяться многократно или инкрементально. Система компоновки может рассчитывать требуемое пространство для дочерних элементов, ограничения родительского элемента и т.д.
 
-The ultimate goal of the measure pass is for the child to determine its `DesiredSize`, which occurs during the `MeasureCore` call. The `DesiredSize` value is stored by `Measure` for use during the content arrange pass.
+Конечная цель передачи мер - определение ребенком своего `DesiredSize`, который возникает во время вызова `MeasureCore`. `DesiredSize` значение хранится по `Measure` для использования во время прохода по организации контента.
 
-The arrange pass begins with a call to the `Arrange` method. During the arrange pass, the parent `Panel` element generates a rectangle that represents the bounds of the child. This value is passed to the `ArrangeCore` method for processing.
+Передача расположения начинается с вызова функции `Arrange`. Во время передачи организации родитель `Panel` элемент генерирует прямоугольник, представляющий границы дочернего элемента. Это значение передается в функцию `ArrangeCore` для обработки.
 
-The `ArrangeCore` method evaluates the `DesiredSize` of the child and evaluates any additional margins that may affect the rendered size of the element. `ArrangeCore` generates an arrange size, which is passed to the `ArrangeOverride` method of the `Panel` as a parameter. `ArrangeOverride` generates the finalSize of the child. Finally, the `ArrangeCore` method does a final evaluation of offset properties, such as margin and alignment, and puts the child within its layout slot. The child does not have to (and frequently does not) fill the entire allocated space. Control is then returned to the parent `Panel` and the layout process is complete.
+Метод `ArrangeCore` происходит от `DesiredSize` дочернего элемента и оценивает все дополнительные поля, которые могут повлиять на размер отображаемого элемента. `ArrangeCore` формирует расположение, которое передается в метод `ArrangeOverride` из `Panel` в качестве параметра. `ArrangeOverride` формирует окончательный размер дочернего элемента. Наконец, в методе `ArrangeCore` производит окончательную оценку свойств смещения, таких как `Margin` и alignment, и помещает дочерний элемент в свой слот компоновки. При этом дочерний элемент не обязан (и часто не заполняет) все выделенное ему пространство. Затем управление возвращается родительскому элементу `Panel` and the layout process is complete.
 
-## In This Section
+## В этом разделе
 
 * [Panels Overview](panels-overview.md)
 * [Alignment, Margins and Padding](alignment-margins-and-padding.md)
