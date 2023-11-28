@@ -2,7 +2,7 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreMockSearchScreenshot from './images/text-list.png';
+import MusicStoreMockSearchScreenshot from '/img/tutorials/music-store-app/add-content-to-dialog/text-list.png';
 
 # Mock Search
 

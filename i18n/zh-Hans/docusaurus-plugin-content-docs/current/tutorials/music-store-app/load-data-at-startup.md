@@ -2,7 +2,7 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreLoadedDataStartScreenshot from './images/image-20210310184202271.png';
+import MusicStoreLoadedDataStartScreenshot from '/img/tutorials/music-store-app/load-data-at-startup/image-20210310184202271.png';
 
 # 在启动时加载数据
 

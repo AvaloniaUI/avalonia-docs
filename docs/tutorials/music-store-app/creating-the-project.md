@@ -2,10 +2,10 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreCreateSolutionScreenshot from './images/CreateSolution.png';
-import MusicStoreProjectStructureScreenshot from './images/project-structure.png';
-import MusicStoreRiderDebugButtonScreenshot from './images/debug-button.png'
-import MusicStoreNewAppScreenshot from './images/image-20210310192926578.png'
+import MusicStoreCreateSolutionScreenshot from '/img/tutorials/music-store-app/creating-the-project/CreateSolution.png';
+import MusicStoreProjectStructureScreenshot from '/img/tutorials/music-store-app/creating-the-project/project-structure.png';
+import MusicStoreRiderDebugButtonScreenshot from '/img/tutorials/music-store-app/creating-the-project/debug-button.png';
+import MusicStoreNewAppScreenshot from '/img/tutorials/music-store-app/creating-the-project/image-20210310192926578.png';
 
 # Create a New Project
 

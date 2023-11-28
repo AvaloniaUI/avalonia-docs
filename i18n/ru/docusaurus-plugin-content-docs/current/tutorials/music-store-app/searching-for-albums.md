@@ -2,10 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreiTunesSearchNugetScreenshot from './images/image-20210310013703557.png';
-import MusicStoreAlbumModelDiagram from '/img/gitbook-import/assets/image (2) (1) (3).png';
-import MusicStoreAlbumMvvmDiagram from '/img/gitbook-import/assets/image (25) (4).png';
-import MusicStoreAlbumViewScreenshot from './images/image-20210310110401944.png';
+import MusicStoreiTunesSearchNugetScreenshot from '/img/tutorials/music-store-app/searching-for-albums/image-20210310013703557.png';
+import MusicStoreAlbumViewScreenshot from '/img/tutorials/music-store-app/searching-for-albums/image-20210310110401944.png';
 
 # Album Service
 
@@ -29,8 +27,6 @@ Follow this procedure to add the required _NuGet_ package:&#x20;
 ## MVVM Model
 
 In this tutorial the application is simple, and you can implement the business services required for the 'Model' part of the MVVM pattern, in one class. This class will contain both the data model for an album, and the method needed for the search.
-
-<img className="center" src={MusicStoreAlbumModelDiagram} alt="" />
 
 Follow this procedure to add the album business logic:
 
@@ -82,8 +78,6 @@ In order to display the data from the Web API for each album (data model) in the
 Your album view model is currently empty. It will need to be able to store the album data from the search, and have some properties for the artist name and album title. These will then be bound to the view for display.&#x20;
 
 In this step you will use a common pattern for the dependent relationship between a view model and a (business logic) model. This is where the view model contains an instance of the data model, and then exposes certain of its properties, as required for display.&#x20;
-
-<img className="center" src={MusicStoreAlbumMvvmDiagram} alt="" />
 
 Follow this procedure to prepare the album view model:
 

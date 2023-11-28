@@ -2,9 +2,9 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreDarkModePreviewScreenshot from './images/dark-mode-preview.png';
-import MusicStoreAcrylicMaterialScreenshot from './images/acrylic-material.png';
-import MusicStoreFullAcrylicWindowScreenshot from './images/full-acrylic-window.png';
+import MusicStoreDarkModePreviewScreenshot from '/img/tutorials/music-store-app/creating-a-modern-looking-window/dark-mode-preview.png';
+import MusicStoreAcrylicMaterialScreenshot from '/img/tutorials/music-store-app/creating-a-modern-looking-window/acrylic-material.png';
+import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-app/creating-a-modern-looking-window/full-acrylic-window.png';
 
 # 窗口样式
 

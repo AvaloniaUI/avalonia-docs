@@ -2,10 +2,9 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreBuyButtonScreenshot from './images/buy-button.png';
-import MusicStoreFinishedAddButtonScreenshot from '/img/gitbook-import/assets/image (13) (2).png';
-import MusicStoreAddStylesScreenshot from './images/add-styles.png';
-import MusicStorePrettyButtonScreenshot from './images/pretty-button.png';
+import MusicStoreBuyButtonScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/buy-button.png';
+import MusicStoreAddStylesScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/add-styles.png';
+import MusicStorePrettyButtonScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/pretty-button.png';
 
 # Add and Layout Controls
 
@@ -62,8 +61,6 @@ You should see all these changes reflected in the preview pane as you add them.&
 ## Button Icon
 
 Have a look back at the image of the finished app [here](./). &#x20;
-
-<img className="center" src={MusicStoreFinishedAddButtonScreenshot} alt="" />
 
 You will see that the button shows an icon, and not text (as it currently does). This is actually the Microsoft Store icon from the Fluent Icons collection, and _Avalonia UI_ has definitions for all these for you to use.
 

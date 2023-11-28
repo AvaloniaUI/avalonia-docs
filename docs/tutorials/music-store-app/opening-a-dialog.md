@@ -2,8 +2,8 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreAddWindowScreenshot from './images/add-window.png';
-import MusicStoreDialogOpenedScreenshot from './images/dialog-opened.png';
+import MusicStoreAddWindowScreenshot from '/img/tutorials/music-store-app/opening-a-dialog/add-window.png';
+import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/opening-a-dialog/dialog-opened.png';
 
 # Open a Dialog
 

@@ -2,7 +2,7 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreAddedAlbumsScreenshot from './images/image-20210310175949319.png';
+import MusicStoreAddedAlbumsScreenshot from '/img/tutorials/music-store-app/add-items-to-users-collection/image-20210310175949319.png';
 
 # Add Items to the User's Collection
 

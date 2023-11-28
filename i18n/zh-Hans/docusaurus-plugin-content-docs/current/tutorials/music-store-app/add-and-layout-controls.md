@@ -2,10 +2,9 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreBuyButtonScreenshot from './images/buy-button.png';
-import MusicStoreFinishedAddButtonScreenshot from '/img/gitbook-import/assets/image (13) (2).png';
-import MusicStoreAddStylesScreenshot from './images/add-styles.png';
-import MusicStorePrettyButtonScreenshot from './images/pretty-button.png';
+import MusicStoreBuyButtonScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/buy-button.png';
+import MusicStoreAddStylesScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/add-styles.png';
+import MusicStorePrettyButtonScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/pretty-button.png';
 
 # 添加并排版控件
 
@@ -62,8 +61,6 @@ import MusicStorePrettyButtonScreenshot from './images/pretty-button.png';
 ## 按钮图标
 
 点击[这里](./)，回顾一下完整的应用程序的外观。
-
-<img className="center" src={MusicStoreFinishedAddButtonScreenshot} alt="" />
 
 您将看到按钮显示一个图标，而不是文本（目前的情况）。这实际上是来自 Fluent Icons 集合的 Microsoft Store 图标，而 Avalonia UI 为您提供了所有这些图标的定义供您使用。
 

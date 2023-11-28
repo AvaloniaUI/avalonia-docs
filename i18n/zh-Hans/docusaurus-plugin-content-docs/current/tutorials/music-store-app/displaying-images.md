@@ -2,7 +2,7 @@
 description: TUTORIALS - Music Store App
 ---
 
-import MusicStoreDisplayingImagesScreenshot from './images/image-20210310173858088.png';
+import MusicStoreDisplayingImagesScreenshot from '/img/tutorials/music-store-app/displaying-images/image-20210310173858088.png';
 
 # 展示图象
 

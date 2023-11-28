@@ -3,8 +3,8 @@ description: TUTORIALS - Music Store App
 ---
 
 import MusicStoreBeforeTemplateScreenshot from '/img/gitbook-import/assets/image (6) (1) (3) (1).png';
-import MusicStoreBeforeWrapPanelScreenshot from './images/image-20210310010932979.png';
-import MusicStoreWrapPanelScreenshot from './images/image-20210310011526700.png';
+import MusicStoreBeforeWrapPanelScreenshot from '/img/tutorials/music-store-app/add-content-to-dialog/image-20210310010932979.png';
+import MusicStoreWrapPanelScreenshot from '/img/tutorials/music-store-app/add-content-to-dialog/image-20210310011526700.png';
 
 # 专辑视图
 
