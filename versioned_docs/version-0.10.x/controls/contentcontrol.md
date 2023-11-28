@@ -75,7 +75,7 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](docs/data-binding/the-datacontext) for more information.
+> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](../data-binding/the-datacontext) for more information.
 
 We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
@@ -98,4 +98,4 @@ We can display the student's first and last name in a `ContentControl` using the
 
 <img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
 
-For more information see the [data templates](docs/templates/data-templates) section.
+For more information see the [data templates](../templates/data-templates) section.

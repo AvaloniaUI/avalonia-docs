@@ -93,8 +93,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
-          //includeCurrentVersion: false,
-          //lastVersion: '0.10.x',
+          lastVersion: 'current',
           versions: {
             current: {
               label: "11.0.0",
@@ -201,7 +200,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/next/get-started/test-drive/introduction',
+                to: '/docs/get-started/test-drive/introduction',
               },
             ],
           },

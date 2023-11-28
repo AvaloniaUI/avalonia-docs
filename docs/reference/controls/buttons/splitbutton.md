@@ -5,7 +5,7 @@ import SplitButtonOpenedScreenshot from '/img/gitbook-import/assets/SplitButtonO
 import SplitButtonColorPickerScreenshot from '/img/controls/buttons/splitbutton/SplitButton_ColorPickerSample.png';
 import SplitButtonExportButtonScreenshot from '/img/controls/buttons/splitbutton/SplitButton_ExportButtonSample.png';
 
-The `SplitButton` functions as a [`Button`](./button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](docs/controls/flyouts) with additional actions.
+The `SplitButton` functions as a [`Button`](./button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 
 ## Is this the right control?
 

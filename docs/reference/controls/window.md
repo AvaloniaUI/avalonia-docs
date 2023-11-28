@@ -3,9 +3,9 @@ id: window
 title: Window
 ---
 
-[`Window`](http://reference.avaloniaui.net/api/Avalonia.Controls/Window/) is a top-level [`ContentControl`](contentcontrol).
+`Window` is a top-level [`ContentControl`](contentcontrol).
 
-You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application. For information on how to create new window classes from templates see the [quickstart](../getting-started/windows).
+You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application. For information on how to create new window classes from templates see the [quickstart](../../get-started/getting-started).
 
 ### Common Properties
 
@@ -16,34 +16,9 @@ You will not usually create instances of the `Window` class directly; instead th
 | `SizeToContent` | Describes the window's auto-sizing behavior |
 | `WindowState` | The minimized/maximized state of the window |
 
-### Reference
-
-[Window](http://reference.avaloniaui.net/api/Avalonia.Controls/Window/)
-
 ### Source code
 
 [Window.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
-
-### The main window
-
-The main window is the window passed to `ApplicationLifetime.MainWindow` in the `OnFrameworkInitializationCompleted` method of your your `App.axaml.cs` file:
-
-```csharp
-public override void OnFrameworkInitializationCompleted()
-{
-    if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktopLifetime)
-    {
-        desktopLifetime.MainWindow = new MainWindow();
-    }
-}
-```
-
-It can be retrieved at any time by casting `Application.ApplicationLifetime` IClassicDesktopStyleApplicationLifetime.
-
-:::info
-Mobile and browser platforms don't have a concept of Window in Avalonia.
-Instead you need to set MainView control in Application.ApplicationLifetime when it implements ISingleViewApplicationLifetime interface.
-:::
 
 ### Show, hide and close a window
 
@@ -137,3 +112,7 @@ window.Closing += (s, e) =>
     e.Cancel = true;
 };
 ```
+
+## Additional Resources
+
+- The [Main Window](../../get-started/test-drive/main-window)
