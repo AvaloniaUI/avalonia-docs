@@ -60,12 +60,7 @@ Rider предоставляет наибольшее удобство при р
 <img src={RiderWelcomeScreenshot} alt="" />
 
 Откроется окно **Preferences**.
-- Нажмите значок настроек (шестеренка) и выберете в выпадающем меню **Manage Plugin Repositories...**.
-
-- В окне **Custom Plugin Repositories**, нажмите на значок (+) и введите URL-адрес `https://plugins.jetbrains.com/plugins/dev/14839`, нажмите **OK**.
-
-- Вернитесь в окно **Preferences**, нажмите **Marketplace** и введите в поле поиска'Avalonia'. Найдите и выберете **AvaloniaRider**, после чего нажмите **Install**.
-
+- Нажмите **Marketplace** и введите в поле поиска'Avalonia'. Найдите и выберете **AvaloniaRider**, после чего нажмите **Install**.
 - После завершения установки, нажмите **Restart IDE** (кнопка появится).
 
 Теперь _JetBrains Rider_ настроен для разработки приложений на _Avalonia UI_.

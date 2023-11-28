@@ -1,5 +1,5 @@
 ---
-описание: СПРАВКА - Стили
+description: REFERENCE - Styles
 ---
 
 # Псевдоклассы

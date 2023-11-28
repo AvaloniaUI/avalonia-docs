@@ -1,5 +1,5 @@
 ---
-описание: СПРАВКА
+description: REFERENCE
 ---
 
 # JetBrains Rider IDE

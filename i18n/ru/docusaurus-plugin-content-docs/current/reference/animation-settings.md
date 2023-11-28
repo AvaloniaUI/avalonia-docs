@@ -1,5 +1,5 @@
 ---
-описание: СПРАВКА
+description: REFERENCE
 ---
 
 import SineEaseOutScreenshot from '/img/gitbook-import/assets/image (67).png';
