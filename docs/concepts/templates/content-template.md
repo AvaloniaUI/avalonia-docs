@@ -6,14 +6,14 @@ import ContentTemplateStudentScreenshot from '/img/gitbook-import/assets/image (
 
 # Content Template
 
-The purpose of a data template is that it defines how _Avalonia UI_ should display an object created from a class that you have defined, and that is not a control, or a simple string.&#x20;
+The purpose of a data template is that it defines how _Avalonia UI_ should display an object created from a class that you have defined, and that is not a control, or a simple string.
 
 Using a data template is a two-stage process:
 
 1. Define the data template
-2. Choose the data template for the content&#x20;
+2. Choose the data template for the content
 
-One way to use a data template is to set the `ContentTemplate` property of a control directly. This works on a window (because like any control it inherits from `ContentControl`).&#x20;
+One way to use a data template is to set the `ContentTemplate` property of a control directly. This works on a window (because like any control it inherits from `ContentControl`).
 
 You can define a data template (for no particular class) using the `DataTemplate` tag, a composition of built-in controls, and some bindings. For example:
 
@@ -43,7 +43,7 @@ You can define a data template (for no particular class) using the `DataTemplate
 </Window>
 ```
 
-In the above, the bindings refer to the properties of any class present in the content zone of the window. Here the window content is the same student object as you used before; but when you run this code, _Avalonia UI_ now displays:&#x20;
+In the above, the bindings refer to the properties of any class present in the content zone of the window. Here the window content is the same student object as you used before; but when you run this code, _Avalonia UI_ now displays:
 
 <img src={ContentTemplateStudentScreenshot} alt=""/>
 

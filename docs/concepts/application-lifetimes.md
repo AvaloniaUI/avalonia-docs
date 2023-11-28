@@ -40,7 +40,7 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-This method is called when the framework has initilized and the `ApplicationLifetime` property contains the chosen lifetime if any.&#x20;
+This method is called when the framework has initilized and the `ApplicationLifetime` property contains the chosen lifetime if any.
 
 :::info
 If you run the application in design mode (this uses the IDE previewer process), then `ApplicationLifetime` is null.
@@ -78,9 +78,9 @@ Allows you to control your application lifetime in the manner of a Windows Forms
 Provided by:
 
 * `StartLinuxFramebuffer`
-* mobile platforms&#x20;
+* mobile platforms
 
-Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.&#x20;
+Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.
 
 :::info
 To implement the navigation stack on platforms like this (with a single main view), you can use [_ReactiveUI_ routing](https://www.reactiveui.net/docs/handbook/routing/) or another routing control.

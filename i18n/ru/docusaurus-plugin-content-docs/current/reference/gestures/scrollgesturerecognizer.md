@@ -30,7 +30,7 @@ image.GestureRecognizers.Add(new ScrollGestureRecognizer()
 
 The ScrollGestureRegonizer raises a `Gestures.ScrollGestureEvent` when it detects the start of a scroll gesture. When the scroll ends, from the pointer being released or another gesture start, it raises a `Gestures.ScrollGestureEndedEvent`.
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 

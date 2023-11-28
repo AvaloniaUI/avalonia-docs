@@ -10,7 +10,7 @@ Content in preparation.
 You can use the MVVM pattern with the split view control to implement a 'tool pane' style UI.
 
 :::info
-This technique uses a complex **binding path** to locate the parent view model for the &#x20;
+This technique uses a complex **binding path** to locate the parent view model for the 
 :::
 
 TO DO

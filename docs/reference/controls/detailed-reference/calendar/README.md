@@ -41,7 +41,7 @@ This example allows multiple range selections:
 </StackPanel>
 ```
 
-After clicking a start date you can extend a single range by holding the shift key and clicking on the end date. You can add extra dates and ranges by holding the control key and clicking on other dates.&#x20;
+After clicking a start date you can extend a single range by holding the shift key and clicking on the end date. You can add extra dates and ranges by holding the control key and clicking on other dates.
 
 <img src={CalendarMultipleSelectionScreenshot} alt=""/>
 

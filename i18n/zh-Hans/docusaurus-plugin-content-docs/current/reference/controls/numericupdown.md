@@ -37,13 +37,13 @@ This is a basic example of a numeric up-down control. There are no limits to the
 
 <img src={NumericUpDownBasicScreenshot} alt="" />
 
-The value and other properties are nullable decimals; so you can create a custom decimal increment/decrement and range if you need to.&#x20;
+The value and other properties are nullable decimals; so you can create a custom decimal increment/decrement and range if you need to.
 
 :::info
 Remember to specify a `FormatString` property when you create a custom decimal increment and range.
 :::
 
-For example:&#x20;
+For example:
 
 ```markup
 <StackPanel Margin="20">  

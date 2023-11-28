@@ -6,9 +6,9 @@ import TabStripNavigation from '/img/gitbook-import/assets/tabstrip.gif';
 
 # Tab Strip
 
-Displays a strip of tab headers. You can use this control as a horizontal menu.&#x20;
+Displays a strip of tab headers. You can use this control as a horizontal menu.
 
-The tab strip is comprised `<TabItem>` elements. These are displayed in the sequence that they appear in the XAML. &#x20;
+The tab strip is comprised `<TabItem>` elements. These are displayed in the sequence that they appear in the XAML. 
 
 ## Useful Property
 

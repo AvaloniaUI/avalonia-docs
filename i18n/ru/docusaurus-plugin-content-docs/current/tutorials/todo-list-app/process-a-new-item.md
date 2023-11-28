@@ -10,7 +10,7 @@ To alter the main window view model, follow this procedure:
 
 - Stop the app if it is running.
 - Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.&#x20;
+- Edit the code as shown.
 
 ```csharp
 using ReactiveUI;
@@ -65,7 +65,7 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Take some time to examine the code that you just added. The main change is to the `AddItem` method. This now sets up an observable that subscribes to the merged output of the two reactive commands (defined on the last page - in the add item view model). &#x20;
+Take some time to examine the code that you just added. The main change is to the `AddItem` method. This now sets up an observable that subscribes to the merged output of the two reactive commands (defined on the last page - in the add item view model). 
 
 ```csharp
 Observable.Merge(
@@ -73,7 +73,7 @@ Observable.Merge(
                 addItemViewModel.CancelCommand.Select(_ => (ToDoItem?)null))
 ```
 
-This code takes advantage of the fact that a reactive command is itself an observable that has a value generated every time it is executed.&#x20;
+This code takes advantage of the fact that a reactive command is itself an observable that has a value generated every time it is executed.
 
 The merge method combines the output from any number of observable streams, but they must have the same value type.
 
@@ -84,9 +84,9 @@ public ReactiveCommand<Unit, ToDoItem> OkCommand { get; }
 public ReactiveCommand<Unit, Unit> CancelCommand { get; }
 ```
 
-The OK command generates an object of class `ToDoItem` whenever it executes, and the cancel command generates only a `Unit`. The `Unit` is the reactive version of `void` - it means the command generates no value, but still notifies that it has happened!&#x20;
+The OK command generates an object of class `ToDoItem` whenever it executes, and the cancel command generates only a `Unit`. The `Unit` is the reactive version of `void` - it means the command generates no value, but still notifies that it has happened!
 
-So to combine the output from the different reactive command observable streams, the code converts the cancel command output into a stream of null `ToDoItem` objects.&#x20;
+So to combine the output from the different reactive command observable streams, the code converts the cancel command output into a stream of null `ToDoItem` objects.
 
 ```csharp
 .Take(1)
@@ -115,8 +115,8 @@ ContentViewModel = ToDoList;
 
 If the value is not null, then it is because the OK button was clicked; and in this case the value should be a `ToDoItem` containing the description that the user typed.  SO this can be added to the list.
 
-You may notice one other important addition to the code here: The to do list view model has been declared as a public member of the main window view model. This will ensure the list is preserved during view changes; it acts as the application state for your app. &#x20;
+You may notice one other important addition to the code here: The to do list view model has been declared as a public member of the main window view model. This will ensure the list is preserved during view changes; it acts as the application state for your app. 
 
 Run the app to check it works as described!
 
-On the next page you will learn why the app was implemented in the way that it has been, and recommended some further reading.&#x20;
+On the next page you will learn why the app was implemented in the way that it has been, and recommended some further reading.

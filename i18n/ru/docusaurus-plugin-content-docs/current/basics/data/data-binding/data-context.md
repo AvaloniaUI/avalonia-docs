@@ -13,9 +13,9 @@ When Avalonia performs data binding, it has to locate an application object to b
 
 <img src={DataContextBindingOverviewDiagram} alt=''/>
 
-Every control in Avalonia has a property called `DataContext`, and this includes built-in controls, user controls and windows.&#x20;
+Every control in Avalonia has a property called `DataContext`, and this includes built-in controls, user controls and windows.
 
-When binding, Avalonia performs a hierarchical search of the logical control tree, starting with the control where the binding is defined, until it finds a data context to use.&#x20;
+When binding, Avalonia performs a hierarchical search of the logical control tree, starting with the control where the binding is defined, until it finds a data context to use.
 
 <img src={DataContextTreeSearchDiagram} alt=''/>
 

@@ -91,25 +91,25 @@ Notice that the namespace reference for the control library includes the name of
 
 ## XML Namespace Definitions
 
-When you add a reference to a controls library in an _Avalonia UI_ XAML file, you may want to use the URL identification format. For example:&#x20;
+When you add a reference to a controls library in an _Avalonia UI_ XAML file, you may want to use the URL identification format. For example:
 
 ```xml
 xmlns:cc="https://my.controls.url"
 ```
 
-This is possible because of the presence of XML namespace definitions in a controls library. These map URLs to the code namespaces, and are in the project `Properties/AssemblyInfo.cs` file. For example:&#x20;
+This is possible because of the presence of XML namespace definitions in a controls library. These map URLs to the code namespaces, and are in the project `Properties/AssemblyInfo.cs` file. For example:
 
 ```csharp
 [assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
 ```
 
 :::info
-You can see this in the _Avalonia UI_ built-in controls source code [here](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs).&#x20;
+You can see this in the _Avalonia UI_ built-in controls source code [here](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs).
 :::
 
-### Common Namespace Definitions&#x20;
+### Common Namespace Definitions
 
-You can also make one URL map several namespaces in your controls library. To do this simply add multiple XML namespace definitions that use the same URL, but map to different code namespaces, like this:&#x20;
+You can also make one URL map several namespaces in your controls library. To do this simply add multiple XML namespace definitions that use the same URL, but map to different code namespaces, like this:
 
 ```cs
 using Avalonia.Metadata;

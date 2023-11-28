@@ -8,7 +8,7 @@ import RiderInstallAvaloniaPluginScreenshot from '/img/gitbook-import/assets/jet
 # Настройка JetBrains Rider
 
 Для добавления _Avaloni UI_ в 
-To set up _JetBrains Rider_ for developing with _Avalonia UI,_ follow this procedure:&#x20;
+To set up _JetBrains Rider_ for developing with _Avalonia UI,_ follow this procedure:
 
 - Загрузите и установите .NET SDK с сайта _Microsoft_. 
 - Он включает в себя среду выполнения, инструменты разработки (компилятор и т.д.), необходимые для создания приложений на _Avalonia UI_.

@@ -38,6 +38,6 @@ namespace AvaloniaCCExample.CustomControls
 }
 ```
 
-Notice that you can already add properties for height and width of the custom control. These are from the base class: `Control`.&#x20;
+Notice that you can already add properties for height and width of the custom control. These are from the base class: `Control`.
 
 However at present, nothing shows. On the next page you will see how to define a property and teach the custom control how to draw using it.

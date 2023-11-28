@@ -56,7 +56,7 @@ Or add package reference directly to the project (`.csproj`) file:
 Note you must always install the data grid version that matches the _Avalonia UI_ version you are using.
 :::
 
-## Include Data Grid Styles&#x20;
+## Include Data Grid Styles
 
 You must reference the data grid themes to include the additional styles that the tree data grid uses. You can do this by adding a `<StyleInclude>` element to the application (`App.axaml` file).
 
@@ -86,7 +86,7 @@ You will probably use these properties most often:
 
 ## Source
 
-You will use the `Source` property to bind to a view model that is defined in code. The view model  includes the definition of how the columns map to the properties of the class that holds the grid items.&#x20;
+You will use the `Source` property to bind to a view model that is defined in code. The view model  includes the definition of how the columns map to the properties of the class that holds the grid items.
 
 ## More Information
 

@@ -6,7 +6,7 @@ import CalendarDatePickerScreenshot from '/img/gitbook-import/assets/calendardat
 
 # Calendar Date Picker
 
-This is an extension of the calendar control that includes a text box and button. The calendar shows when the user clicks the button (and hides on a subsequent click). The selected date shows in the text box when a date on the calendar is clicked.&#x20;
+This is an extension of the calendar control that includes a text box and button. The calendar shows when the user clicks the button (and hides on a subsequent click). The selected date shows in the text box when a date on the calendar is clicked.
 
 The user can also enter a date by typing in the text box. The date picker is able to process multiple date formats into the format that is displayed as a watermark when there is no selected date.
 

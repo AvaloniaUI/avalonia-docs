@@ -7,13 +7,13 @@ import TabControlNavigationScreenshot from '/img/gitbook-import/assets/tabcontro
 
 # Tab Control
 
-The tab control allows you to sub-divide a view into tab items.&#x20;
+The tab control allows you to sub-divide a view into tab items.
 
 <img src={TabControlZonesScreenshot} alt="" />
 
 Each tab item has a header and a content zone. The headers are presented in a strip, in the sequence they occur in the XAML. When the user clicks on a tab header, its content becomes visible, and is placed below the tab strip in the content zone of the tab control.
 
-You can compose the UI in both the header and content zones to suit the UI requirements of your _Avalonia UI_ app.&#x20;
+You can compose the UI in both the header and content zones to suit the UI requirements of your _Avalonia UI_ app.
 
 :::info
 If you only need the function of the tab headers part of this control, consider using the tab strip instead. See [here](tabstrip.md).
@@ -21,7 +21,7 @@ If you only need the function of the tab headers part of this control, consider 
 
 ## Examples
 
-This is simple tab example. The tab content is just some text: &#x20;
+This is simple tab example. The tab content is just some text: 
 
 ```markup
 <TabControl Margin="5">

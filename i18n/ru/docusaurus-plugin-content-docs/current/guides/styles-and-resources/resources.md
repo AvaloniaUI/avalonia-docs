@@ -6,11 +6,11 @@ title: How To Use Resources
 
 # 👉 How To Use Resources
 
-You will often need to standardise graphical fundamentals such as (but not limited to) brushes and colors in your applications. You can define these as resources at various levels in your _Avalonia UI_ application, as well as in files that can be included as required.&#x20;
+You will often need to standardise graphical fundamentals such as (but not limited to) brushes and colors in your applications. You can define these as resources at various levels in your _Avalonia UI_ application, as well as in files that can be included as required.
 
 Resources are always defined inside a resource dictionary. This means that each resource has a key attribute.
 
-The level of a resource dictionary defines the scope of the resources in it: resources are available in the file where they are defined, and below. So you can tailor the scope of resources by choosing where to locate a resource dictionary.&#x20;
+The level of a resource dictionary defines the scope of the resources in it: resources are available in the file where they are defined, and below. So you can tailor the scope of resources by choosing where to locate a resource dictionary.
 
 ## Declaring Resources
 
@@ -119,7 +119,7 @@ You can now add the resources you want to define in the position indicated. It l
 
 ## Using Resources
 
-You can use a resource from a resources dictionary that is in scope using the `{DynamicResource}` mark-up extension.&#x20;
+You can use a resource from a resources dictionary that is in scope using the `{DynamicResource}` mark-up extension.
 
 For example, to use a resource directly on the background attribute of a border element, use the following XAML :
 
@@ -129,7 +129,7 @@ For example, to use a resource directly on the background attribute of a border 
 </Border>
 ```
 
-### Static Resource&#x20;
+### Static Resource
 
 Alternatively you can choose to use the `StaticResource` mark-up extension. For example:
 
@@ -139,7 +139,7 @@ Alternatively you can choose to use the `StaticResource` mark-up extension. For 
 </Border>
 ```
 
-A static resource is different in that it will not respond to changes in the resource made in code (at runtime). Once loaded a static cannot be altered.&#x20;
+A static resource is different in that it will not respond to changes in the resource made in code (at runtime). Once loaded a static cannot be altered.
 
 The benefit of using a static resource is that it has less work to do so it will be slightly faster to load, and it uses slightly less memory.
 
@@ -171,11 +171,11 @@ Here the border control is using the resource with the key 'Warning'. This is de
 
 ## Include and Merge Resources
 
-Resources can be included from a resource dictionary file, and merged with the resources defined in another file (even if there are not any).&#x20;
+Resources can be included from a resource dictionary file, and merged with the resources defined in another file (even if there are not any).
 
 <img src="/img/gitbook-import/assets/image (1) (3).png" alt=""/>
 
-This means that you can implement styles in one file, and use resources defined in another. This keeps your styling consistent, and your application solution well organised and easy to maintain.&#x20;
+This means that you can implement styles in one file, and use resources defined in another. This keeps your styling consistent, and your application solution well organised and easy to maintain.
 
 To include the resources dictionary from a file in a styles file, add the following XAML:
 
@@ -200,12 +200,12 @@ In the above example, the resources file `AppResources.axaml` is located in the 
 Where the resource `InfoColor` is defined as a `SolidColorBrush` in the imported file.
 
 :::info
-Note that the resource has been referenced using `StaticResource` because it must not change - the requirement here is to keep the styling consistent.&#x20;
+Note that the resource has been referenced using `StaticResource` because it must not change - the requirement here is to keep the styling consistent.
 :::
 
 ## Merged Resources Priority 
 
-As you saw previously, resources are resolved by searching up the logical control tree from the point of mark-up until a resource with the requested key is found.&#x20;
+As you saw previously, resources are resolved by searching up the logical control tree from the point of mark-up until a resource with the requested key is found.
 
 However the presence of styles and merged dictionaries defined at the various levels of an application, introduces extra priority rules as follows:
 
@@ -246,7 +246,7 @@ Starting at the border, the first resources searched are any defined in the pare
 
 The search then moves on to search any styles defined in the parent (stack panel) control, followed by any merged dictionaries at that level.
 
-The search moves upwards in the logical control tree, behaving at each level in a similar manner. It finally reaches application-level resources and styles.&#x20;
+The search moves upwards in the logical control tree, behaving at each level in a similar manner. It finally reaches application-level resources and styles.
 
 ## Consuming Resources from code
 

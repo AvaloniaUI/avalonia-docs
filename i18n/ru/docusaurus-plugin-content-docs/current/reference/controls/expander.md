@@ -9,7 +9,7 @@ import ExpanderOpenedScreenshot from '/img/gitbook-import/assets/image (12) (2).
 
 The expander control has a header area (always visible) and a collapsible content section that can contain a single child control.
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 

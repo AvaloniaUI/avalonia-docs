@@ -50,7 +50,7 @@ Inside the dialog the user will be able to search for albums, but this will use 
 
 Also, to ensure that the app remains responsive during the search, you will implement the operation itself as both asynchronous and cancellable.  You will add this functionality later in the tutorial.
 
-Now the next step is for you to add the new user control to the content zone of the dialog window.&#x20;
+Now the next step is for you to add the new user control to the content zone of the dialog window.
 
 To add the user control, follow this procedure:
 

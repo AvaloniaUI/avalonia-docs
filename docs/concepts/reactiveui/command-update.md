@@ -6,7 +6,7 @@ description: CONCEPTS - ReactiveUI
 
 This page introduces how you can use Avalonia UI binding to initiate changes on a view model from controls like buttons that have a `Command` attribute.
 
-For example, you can use this view model with an action defined in the method `ButtonAction`:&#x20;
+For example, you can use this view model with an action defined in the method `ButtonAction`:
 
 ```
 public class MainWindowViewModel : ViewModelBase
@@ -35,4 +35,4 @@ Then in the corresponding XAML define two controls:
 
 This means that when the user clicks the button, _Avalonia UI_ updates the view model by calling the `ButtonAction` method. This changes the `Greeting` property using the setter, so in turn the new greeting text is notified back to the text control on the UI.
 
-&#x20;
+

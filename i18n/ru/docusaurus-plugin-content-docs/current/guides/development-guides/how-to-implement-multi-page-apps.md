@@ -12,7 +12,7 @@ This guide will show you how to employ user controls as page views, and the view
 
 
 
-that is added by the Avalonia MVVM solution template.&#x20;
+that is added by the Avalonia MVVM solution template.
 
 ```csharp
 public class ViewLocator : IDataTemplate

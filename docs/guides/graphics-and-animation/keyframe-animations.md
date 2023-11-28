@@ -15,17 +15,17 @@ You can use a keyframe animation to change one or more control properties follow
 
 <img src={AnimationKeyframeDiagram} alt=""/>
 
-The property values between keyframes are set following the profile of an **easing function**. The default easing function is a straight-line interpolation.&#x20;
+The property values between keyframes are set following the profile of an **easing function**. The default easing function is a straight-line interpolation.
 
 The animation is triggered to start, and then can run any number of times, in either direction. There are also options to delay the start of the animation, and to repeat it.
 
 :::info
-If you are familiar with keyframe animations keyframe work in CSS, you will recognise the similarity with how they are done in in _Avalonia UI_.&#x20;
+If you are familiar with keyframe animations keyframe work in CSS, you will recognise the similarity with how they are done in in _Avalonia UI_.
 :::
 
 ## Example
 
-You define a keyframe animation using styles.&#x20;
+You define a keyframe animation using styles.
 
 :::info
 To revise how _Avalonia UI_ uses styles, see the concept [here](../../basics/user-interface/styling).
@@ -41,7 +41,7 @@ Follow this procedure to define a simple color fade animation using XAML:
 -  Now define the keyframes for the animation. This example uses cues at 0% and 100%.
 -  Add `Setter` elements to each keyframe for value of the fill opacity. This example animates between opacity values of 0.0 and 1.0.
 
-The finished code will look like this: &#x20;
+The finished code will look like this: 
 
 ```
 <Window xmlns="https://github.com/avaloniaui">
@@ -69,11 +69,11 @@ The resulting animation looks like this:
 
 <img src={KeyframeFadeScreenshot} alt=""/>
 
-The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!&#x20;
+The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!
 
 ## Animate Two Properties
 
-This example shows you how to animate two properties on the same timeline.&#x20;
+This example shows you how to animate two properties on the same timeline.
 
 ```markup
 <Window.Styles>
@@ -168,7 +168,7 @@ An easing function defines how a property is varied over time during an animatio
 
 </div>
 
-The default easing function is linear (above left), but you use another pattern by setting the name of the desired function in the easing attribute. For example to use the 'bounce ease in' function (above right):&#x20;
+The default easing function is linear (above left), but you use another pattern by setting the name of the desired function in the easing attribute. For example to use the 'bounce ease in' function (above right):
 
 ```markup
 <Animation Duration="0:0:1"

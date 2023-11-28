@@ -41,7 +41,7 @@ Take some time to review the files and folders that the solution template create
 To explore the concepts behind the MVVM pattern, and when is appropriate to use it, see [here](../../concepts/the-mvvm-pattern/).
 :::
 
-The solution template has created enough files for the application to run. You will meet all of these during the rest of this tutorial.   &#x20;
+The solution template has created enough files for the application to run. You will meet all of these during the rest of this tutorial.   
 
 ## Run the Project
 
@@ -53,4 +53,4 @@ This will show a window that looks like:
 
 <p><img className="image-medium-zoom" src={MusicStoreNewAppScreenshot} alt="" /></p>
 
-It is a little plain - but you now have a running application, and a blank canvas to start developing with. On the next page you will learn how to add a modern-looking acrylic blur dark background.&#x20;
+It is a little plain - but you now have a running application, and a blank canvas to start developing with. On the next page you will learn how to add a modern-looking acrylic blur dark background.

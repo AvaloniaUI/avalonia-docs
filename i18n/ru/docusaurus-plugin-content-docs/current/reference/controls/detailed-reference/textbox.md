@@ -6,7 +6,7 @@ import TextBoxSampleScreenshot from '/img/gitbook-import/assets/textbox.gif';
 
 # Text Box
 
-The text box presents an area for typed (keyboard) input. It can be for a single or multiple lines of input.&#x20;
+The text box presents an area for typed (keyboard) input. It can be for a single or multiple lines of input.
 
 ## Useful Properties
 

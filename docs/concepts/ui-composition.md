@@ -11,10 +11,10 @@ import CompositionCollectionControlsDiagram from '/img/gitbook-import/assets/ima
 
 UI composition is the process you use to create the layouts that your apps require. It allows you to build a complex view from an arrangement of components. The advantages are:
 
-* _Encapsulation_ - reduce the complexity of each component by restricting its XAML and code to only what it needs, making your code more understandable and maintainable.&#x20;
-* _Reuse_ - maintain consistent presentation and behaviour of repeated parts of your app.&#x20;
+* _Encapsulation_ - reduce the complexity of each component by restricting its XAML and code to only what it needs, making your code more understandable and maintainable.
+* _Reuse_ - maintain consistent presentation and behaviour of repeated parts of your app.
 
-_Avalonia UI_ makes it easy for you to use UI composition to create the layouts and functions that your apps require.&#x20;
+_Avalonia UI_ makes it easy for you to use UI composition to create the layouts and functions that your apps require.
 
 When you build an app using _Avalonia UI_, there are several different types of component to choose from:
 
@@ -26,9 +26,9 @@ When you build an app using _Avalonia UI_, there are several different types of 
 
 ## Windows and Built-in Controls
 
-A window in _Avalonia UI_ is a basic unit of layout (for a windowing platform).&#x20;
+A window in _Avalonia UI_ is a basic unit of layout (for a windowing platform).
 
-_Avalonia UI_ contains a large number of built-in controls that will cover most of your UI requirements.   &#x20;
+_Avalonia UI_ contains a large number of built-in controls that will cover most of your UI requirements.   
 
 <img src={CompositionBasicLayoutDiagram} alt=""/>
 
@@ -46,7 +46,7 @@ Whatever arrangement of controls you use, _Avalonia UI_ represents their relatio
 
 <img src={CompositionTreesDiagram} alt=""/>
 
-This is the **logical control tree**, and it represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. There are many systems in _Avalonia UI_ that process the logical control tree and its companion the **visual control tree**.&#x20;
+This is the **logical control tree**, and it represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. There are many systems in _Avalonia UI_ that process the logical control tree and its companion the **visual control tree**.
 
 :::info
 For more information on the concept of control trees, see [here](control-trees.md).
@@ -58,23 +58,23 @@ User controls are the mainstay of UI composition in _Avalonia UI_.
 
 <img src={CompositionUserControlsDiagram} alt=""/>
 
-You can add a user control to the content zone of a main window, to represent a 'page view' (above, left).  This allows you to implement a more complex app with multiple pages; where the layout and function of each page is in its own user control (XAML and code) files.   &#x20;
+You can add a user control to the content zone of a main window, to represent a 'page view' (above, left).  This allows you to implement a more complex app with multiple pages; where the layout and function of each page is in its own user control (XAML and code) files.   
 
 :::info
 For more information about how to implement a multi-page app using views, see the guide [here](../guides/development-guides/how-to-implement-multi-page-apps.md).
 :::
 
-Another use for a user control is as a component control (above, right). You might initially do this to reduce the complexity of a window or page view; but then you might also (perhaps later) reuse the resulting component on another page as well.&#x20;
+Another use for a user control is as a component control (above, right). You might initially do this to reduce the complexity of a window or page view; but then you might also (perhaps later) reuse the resulting component on another page as well.
 
 ## Tutorial
 
 :::info
-In the 'To Do List App' tutorial you will learn about how to add user controls as page views; and how to use a repeating layout control to present a collection of items with data templates. Try the tutorial [here](../tutorials/todo-list-app/).  &#x20;
+In the 'To Do List App' tutorial you will learn about how to add user controls as page views; and how to use a repeating layout control to present a collection of items with data templates. Try the tutorial [here](../tutorials/todo-list-app/).  
 :::
 
 ## Collection Controls
 
-Another variation of UI composition is where you need to present a collection of items.&#x20;
+Another variation of UI composition is where you need to present a collection of items.
 
 <img src={CompositionCollectionControlsDiagram} alt=""/>
 
@@ -94,7 +94,7 @@ To learn how to implement a custom control, see the guide [here](../basics/user-
 
 ## Templated Controls
 
-A templated control uses the _Avalonia UI_ **styling** system to substitute a tag in the UI layout with a&#x20;
+A templated control uses the _Avalonia UI_ **styling** system to substitute a tag in the UI layout with a
 
 :::info
 For more information about the concepts behind the _Avalonia UI_ **styling** system, see [here](../basics/user-interface/styling).

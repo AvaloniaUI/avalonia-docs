@@ -20,7 +20,7 @@ This guide shows you how to bind a view model method (that performs an action) t
 This guide assumes that you are using the MVVM implementation pattern, and you have based your view model on the _ReactiveUI_ framework.
 
 :::info
-To review the concept behind the MVVM implementation pattern, see [here](../../concepts/the-mvvm-pattern/).&#x20;
+To review the concept behind the MVVM implementation pattern, see [here](../../concepts/the-mvvm-pattern/).
 :::
 
 If you created your application using the **Avalonia MVVM Application** solution template then your solution will already contain the _ReactiveUI_ framework package, and you can reference it like this:
@@ -71,7 +71,7 @@ namespace AvaloniaGuides.ViewModels
 
 -  Run the app and monitor the debug output.
 
-When the control bound to the reactive command is activated (in this example: when the button is clicked); then the private method to perform the action is called through the reactive command.&#x20;
+When the control bound to the reactive command is activated (in this example: when the button is clicked); then the private method to perform the action is called through the reactive command.
 
 <img src={BindReactiveCommandScreenshot} alt=""/>
 
@@ -110,7 +110,7 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-Note that no type conversion is carried out on the `CommandParameter` attribute, so if you need to use a type parameter that is not a string, then you must define the type in the XAML. You will also need to use the expanded XAML syntax for the parameter.&#x20;
+Note that no type conversion is carried out on the `CommandParameter` attribute, so if you need to use a type parameter that is not a string, then you must define the type in the XAML. You will also need to use the expanded XAML syntax for the parameter.
 
 For example to pass an integer parameter:
 

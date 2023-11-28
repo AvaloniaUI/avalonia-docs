@@ -32,7 +32,7 @@ This attached property is available on these controls:
 
 ## Example
 
-This example creates a stack panel that is bigger than the border it is inside. The scroll viewer automatically creates a vertical scroll bar.&#x20;
+This example creates a stack panel that is bigger than the border it is inside. The scroll viewer automatically creates a vertical scroll bar.
 
 ```xml
 <Border Background="AliceBlue" Width="300" Height="300">

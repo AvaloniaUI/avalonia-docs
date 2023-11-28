@@ -8,9 +8,9 @@ import DispatchInvokeAsyncLongRunningScreenshot from '/img/gitbook-import/assets
 
 # How To Access the UI Thread
 
-This guide will show you how to access the UI thread in your _Avalonia UI_ application.&#x20;
+This guide will show you how to access the UI thread in your _Avalonia UI_ application.
 
-_Avalonia UI_ applications have one main thread, and this handles the UI. When you have a process that is intensive, or long running, then you will usually opt to run it on a different thread. Then you may have scenarios where you want to update them main UI thread (for example with progress updates). &#x20;
+_Avalonia UI_ applications have one main thread, and this handles the UI. When you have a process that is intensive, or long running, then you will usually opt to run it on a different thread. Then you may have scenarios where you want to update them main UI thread (for example with progress updates). 
 
 A dispatcher provides services for managing work items on any specific thread. In _Avalonia UI_ you will already have the dispatcher that handles the UI thread. When you need to update the UI from a different thread, you access it through this dispatcher, as follows:
 
@@ -18,15 +18,15 @@ A dispatcher provides services for managing work items on any specific thread. I
 Dispatcher.UIThread
 ```
 
-You can use either the `Post` method or the `InvokeAsync` method to run a process on the UI thread.&#x20;
+You can use either the `Post` method or the `InvokeAsync` method to run a process on the UI thread.
 
-Use `Post` when you just want to start a job, but you do not need to wait for the job to be finished, and you do not need the result: this is the 'fire-and-forget' dispatcher method.&#x20;
+Use `Post` when you just want to start a job, but you do not need to wait for the job to be finished, and you do not need the result: this is the 'fire-and-forget' dispatcher method.
 
-Use `InvokeAsync` when you need to wait for the result, and potentially want to receive the result.&#x20;
+Use `InvokeAsync` when you need to wait for the result, and potentially want to receive the result.
 
 ## Dispatcher Priority
 
-Both of the above methods have a dispatcher priority parameter. You can use this with the `DispatcherPriority` enumeration to specify the queue priority that the given job should be given.&#x20;
+Both of the above methods have a dispatcher priority parameter. You can use this with the `DispatcherPriority` enumeration to specify the queue priority that the given job should be given.
 
 :::info
 For the possible values of the `DispatcherPriority` enumeration, see [here](http://reference.avaloniaui.net/api/Avalonia.Threading/DispatcherPriority/).

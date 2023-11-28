@@ -6,7 +6,7 @@ title: How To Bind Tabs
 
 ## Binding Support Example
 
-You can dynamically create tab items with **data binding**. To do this, bind the `ItemsSource` property of a tab control to an array of objects representing the tab header and content.&#x20;
+You can dynamically create tab items with **data binding**. To do this, bind the `ItemsSource` property of a tab control to an array of objects representing the tab header and content.
 
 You can then use a **data template** to display the objects.
 

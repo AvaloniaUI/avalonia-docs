@@ -6,7 +6,7 @@ import DataGridColumnPreviewScreenshot from '/img/gitbook-import/assets/image (4
 
 # Data Grid Columns
 
-A data grid can contain multiple data grid columns and _Avalonia UI_ has two built-in column types which can be used to display a different data types, and a template type that can customise the column appearance.&#x20;
+A data grid can contain multiple data grid columns and _Avalonia UI_ has two built-in column types which can be used to display a different data types, and a template type that can customise the column appearance.
 
 | Column Type              | Description                                                                                                                                                               |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +28,7 @@ Most of these properties are common to all three column types:
 
 ## Column Width
 
-If you do not set the width for a column, it will be resized to fit the contents, and a horizontal scrollbar will be added to the grid if necessary.&#x20;
+If you do not set the width for a column, it will be resized to fit the contents, and a horizontal scrollbar will be added to the grid if necessary.
 
 You can set the width of a column absolutely, for example:
 

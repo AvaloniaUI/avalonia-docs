@@ -6,9 +6,9 @@ description: TUTORIALS - Music Store App
 
 On this page, you will add some code to the album model (business service) to save the user's album collection to disk, so that it can be recovered when the app next runs.
 
-As a welcome side-effect, this will also activate the album cover cache - so that album cover images can be retrieved from disk (if they exist), rather than from the Web API.&#x20;
+As a welcome side-effect, this will also activate the album cover cache - so that album cover images can be retrieved from disk (if they exist), rather than from the Web API.
 
-## Album Model &#x20;
+## Album Model 
 
 Follow this procedure to add persistence services (save and load) to the album model:
 
@@ -103,11 +103,11 @@ public async Task SaveToDiskAsync()
 }
 ```
 
-Once again, you will notice that the bitmap is saved from a copy in case the `Cover` property gets changed mid-operation by another thread.&#x20;
+Once again, you will notice that the bitmap is saved from a copy in case the `Cover` property gets changed mid-operation by another thread.
 
 ## Main Window View Model
 
-Lastly, you will call the new album view model persistence method `SaveToDiskAsync` whenever the dialog returns with a non-null result.&#x20;
+Lastly, you will call the new album view model persistence method `SaveToDiskAsync` whenever the dialog returns with a non-null result.
 
 To alter the main window view model, follow this procedure:
 
@@ -147,7 +147,7 @@ Notice that because the `SaveToDiskAsync` method writes both the JSON data and t
 To show that the bitmap loading cache is now in operation, follow this procedure:
 
 - Stop the app if it is running.
-- Locate and open the **Album.cs** file in the **/Models** folder.&#x20;
+- Locate and open the **Album.cs** file in the **/Models** folder.
 - Check to see that there is still a debug breakpoint in the `LoadCoverBitmapAsync` method at this line:
 
 ```csharp
@@ -160,7 +160,7 @@ return File.OpenRead(CachePath + ".bmp");
 * Select one of the _same_ albums from the previous test run.
 * Click **Buy Album**
 
-The debug breakpoint should stop the app. This demonstrates that the album art is about to be read from disk, rather than retrieved from the Web API.&#x20;
+The debug breakpoint should stop the app. This demonstrates that the album art is about to be read from disk, rather than retrieved from the Web API.
 
 On the next page, you will complete the persistence feature, and load the user's album collection from the cache when the app first starts up.
 

@@ -7,7 +7,7 @@ import BindStyleClassSampleScreenshot from '/img/gitbook-import/assets/image (5)
 
 # How To Bind Style Classes
 
-This guide will show you how to apply style classes to a control depending on the Boolean value of a data binding.&#x20;
+This guide will show you how to apply style classes to a control depending on the Boolean value of a data binding.
 
 To do this, you will need some classes defined in a `<Styles>` collection that target the control class you are using.
 

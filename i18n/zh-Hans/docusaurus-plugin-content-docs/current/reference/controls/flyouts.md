@@ -55,7 +55,7 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 
 <img src={FlyoutAttachedScreenshot} alt="" />
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 

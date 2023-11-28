@@ -24,7 +24,7 @@ This example uses the date format attribute to display the name of the day as we
 
 <img src="/img/gitbook-import/assets/datepicker.gif" alt=""/>
 
-## **Initializing the Date**&#x20;
+## **Initializing the Date**
 
 The date properties of this control cannot be set in XAML using an attribute. This is because there is no conversion available for converting strings to date objects like `DateTime` and `DateTimeOffset`.
 

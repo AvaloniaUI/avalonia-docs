@@ -37,7 +37,7 @@ If you use the four value pattern; you must provide all four values, even if one
 
 ### Example
 
-This example adds some border controls to create a 'pod' look in the layout:&#x20;
+This example adds some border controls to create a 'pod' look in the layout:
 
 ```markup
 <StackPanel>

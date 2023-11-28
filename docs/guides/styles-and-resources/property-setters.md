@@ -56,7 +56,7 @@ Whenever a style is matched with a control, all of the setters will be applied t
 
 ## Mutable Values
 
-Note that the `Setter` creates a single instance of `Value` which will be applied to all controls that the style matches: if the object is mutable then changes will be reflected on all controls.&#x20;
+Note that the `Setter` creates a single instance of `Value` which will be applied to all controls that the style matches: if the object is mutable then changes will be reflected on all controls.
 
 Also note that bindings on an object defined in a setter value will not have access to the target control's data context. This is because there may be multiple target controls. This scenario may arise with a style defined like this:
 

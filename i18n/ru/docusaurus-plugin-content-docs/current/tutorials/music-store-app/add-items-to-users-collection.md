@@ -42,7 +42,7 @@ BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 
 ## Main Window View
 
-Next you will add XAML to the main window view to display the items in the observable collection. Again you will use a **data template**, this time inside an `ItemsControl`. The items control is actually  the base class for controls that display multiple items (like the list box), so some of this will already be familiar.&#x20;
+Next you will add XAML to the main window view to display the items in the observable collection. Again you will use a **data template**, this time inside an `ItemsControl`. The items control is actually  the base class for controls that display multiple items (like the list box), so some of this will already be familiar.
 
 To add the items control and its data template, follow this procedure:
 
@@ -80,6 +80,6 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 
 <p><img className="image-medium-zoom" src={MusicStoreAddedAlbumsScreenshot} alt="" /></p>
 
-You will see the user's album collection building as you search and select. However, if you stop the app running and then start it again, the collection reverts to empty.&#x20;
+You will see the user's album collection building as you search and select. However, if you stop the app running and then start it again, the collection reverts to empty.
 
 For the finishing touch, on the next page you will learn how to add some data persistence to the app.

@@ -73,7 +73,7 @@ public class Person
 }
 ```
 
-The data source also defines how to map the data model to rows and columns in the tree data grid. Because this example displays flat data, the data source is using a `FlatTreeDataGridSource<Person>` property on the view model.&#x20;
+The data source also defines how to map the data model to rows and columns in the tree data grid. Because this example displays flat data, the data source is using a `FlatTreeDataGridSource<Person>` property on the view model.
 
 There are three columns defined with the `TextColumn` class. Each takes a lambda to return the column value.
 

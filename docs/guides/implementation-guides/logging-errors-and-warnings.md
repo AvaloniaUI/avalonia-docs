@@ -7,7 +7,7 @@ import LogToTraceOutputScreenshot from '/img/gitbook-import/assets/image (3).png
 
 # How To Log Errors and Warnings
 
-This guide shows you how to can log warnings and errors in _Avalonia UI_ using the standard _(Microsoft)_`System.Diagnostics.Trace` component. &#x20;
+This guide shows you how to can log warnings and errors in _Avalonia UI_ using the standard _(Microsoft)_`System.Diagnostics.Trace` component. 
 
 The code to achieve logging is added to your project by the _Avalonia UI_ solution templates if you use them.
 

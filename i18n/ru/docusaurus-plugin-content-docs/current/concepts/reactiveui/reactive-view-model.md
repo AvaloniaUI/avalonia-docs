@@ -6,7 +6,7 @@ import ReactiveObjectDiagram from '/img/gitbook-import/assets/image (4) (2).png'
 
 # Reactive View Model
 
-This page describes how you can use the _ReactiveUI_ `ReactiveObject` as the basis of your view model to implement MVVM binding with _Avalonia UI_.&#x20;
+This page describes how you can use the _ReactiveUI_ `ReactiveObject` as the basis of your view model to implement MVVM binding with _Avalonia UI_.
 
 _ReactiveUI_ provides the `ReactiveObject` as a base class for view models. It implements a notification of property changes and observables to monitor object changes.
 
@@ -14,7 +14,7 @@ _ReactiveUI_ provides the `ReactiveObject` as a base class for view models. It i
 For the detailed _ReactiveUI_ documentation for `ReactiveObject`, see [here](https://www.reactiveui.net/api/reactiveui/reactiveobject/).
 :::
 
-&#x20;Once you have installed and configured _ReactiveUI_, you can base your view models on the class:
+Once you have installed and configured _ReactiveUI_, you can base your view models on the class:
 
 ```csharp
 public class ViewModelBase : ReactiveObject

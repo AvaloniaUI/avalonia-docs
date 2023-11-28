@@ -46,7 +46,7 @@ namespace AvaloniaCCExample.CustomControls
 }
 ```
 
-This example defines a simple brush property on the custom control for the background color. It then overrides the `Render` method to draw the control.&#x20;
+This example defines a simple brush property on the custom control for the background color. It then overrides the `Render` method to draw the control.
 
 The drawing code uses the _Avalonia UI_ graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
 
@@ -54,4 +54,4 @@ The drawing code uses the _Avalonia UI_ graphics context (that is passed to the 
 
 Notice how the control now shows both at runtime (above) and in the preview pane.
 
-On the next page, you will see how to implement the background property so that it can be changed by the _Avalonia UI_ styling system. &#x20;
+On the next page, you will see how to implement the background property so that it can be changed by the _Avalonia UI_ styling system. 

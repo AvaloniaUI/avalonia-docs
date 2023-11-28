@@ -37,18 +37,18 @@ namespace AvaloniaApplication11.ViewModels
 }
 ```
 
-- Place a debug breakpoint at the open (curly) bracket just above the comment line.&#x20;
+- Place a debug breakpoint at the open (curly) bracket just above the comment line.
 
 To complete the link from the view to your new `BuyMusicCommand` view model property, you will add a data binding to the button.
 
 :::info
-For more information about the concept of data binding, see [here](../../basics/data/data-binding).&#x20;
+For more information about the concept of data binding, see [here](../../basics/data/data-binding).
 :::
 
 To add the button data binding, follow this procedure:
 
 - Locate and open the **MainWindow.axaml** file.
-- Find the XAML for the button and add the command attribute and binding, as shown:&#x20;
+- Find the XAML for the button and add the command attribute and binding, as shown:
 
 ```
 <Button HorizontalAlignment="Right" VerticalAlignment="Top"

@@ -4,11 +4,11 @@ description: TUTORIALS - Music Store App
 
 # Dialog Return
 
-On the this page you add code to return a selected album from the search dialog to the main window.&#x20;
+On the this page you add code to return a selected album from the search dialog to the main window.
 
 ## Buy Album Command
 
-The first step here is for you to add a reactive command to the music store view model. You will bind this to the **Buy Album** button on the music store view.  &#x20;
+The first step here is for you to add a reactive command to the music store view model. You will bind this to the **Buy Album** button on the music store view.  
 
 Follow this procedure to add the reactive command:
 
@@ -40,7 +40,7 @@ Notice you are using `ReactiveCommand` here. This is provided by the _ReactiveUI
 
 Your next step is bind the **Buy Album** button to the reactive command in the music store view model, follow this procedure:
 
-- Locate and open the **MusicStoreView .axaml** file. &#x20;
+- Locate and open the **MusicStoreView .axaml** file. 
 - Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
 
 ## Close the Dialog
@@ -51,8 +51,8 @@ As you saw during coding for the dialog open, you implement window management in
 
 To add code to close the dialog, follow this procedure:
 
-- Locate and open the **MusicStoreWindow.axaml.cs** file.&#x20;
-- Add a reference to the system `using System;`&#x20;
+- Locate and open the **MusicStoreWindow.axaml.cs** file.
+- Add a reference to the system `using System;`
 - Change the base class so the view inherits from `ReactiveWindow<MusicStoreViewModel>`.
 - Then add the following line to the end of the constructor:
 
@@ -89,4 +89,4 @@ namespace Avalonia.MusicStore.Views
 - Click an album to select it.
 - Click **Buy Album**.
 
-You will see the dialog close, but nothing happens in the main window! On the next page you will learn how to add the selected album to a collection in the main window.&#x20;
+You will see the dialog close, but nothing happens in the main window! On the next page you will learn how to add the selected album to a collection in the main window.

@@ -7,9 +7,9 @@ import SplitViewCompactScreenshot from '/img/gitbook-import/assets/splitview2.gi
 
 # Split View
 
-A split view presents a container with two parts: the main content zone and a side pane. The main content zone is always visible. The pane can be expanded and collapsed. The collapsed pane can be completely hidden, or left slightly open - with enough space to host some icon buttons for example. &#x20;
+A split view presents a container with two parts: the main content zone and a side pane. The main content zone is always visible. The pane can be expanded and collapsed. The collapsed pane can be completely hidden, or left slightly open - with enough space to host some icon buttons for example. 
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 

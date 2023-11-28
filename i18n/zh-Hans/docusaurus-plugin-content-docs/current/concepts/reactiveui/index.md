@@ -10,7 +10,7 @@ import ReactiveUINuGetScreenshot from '/img/gitbook-import/assets/image (44) (1)
 ReactiveUI在我们的示例中使用，但不是必需的。Avalonia支持任何MVVM框架或您自己的自定义解决方案。
 :::
 
-这些页面解释了_Avalonia UI_如何使用开源的_ReactiveUI_框架的版本，以便更容易地在应用程序中实现MVVM模式。&#x20;
+这些页面解释了_Avalonia UI_如何使用开源的_ReactiveUI_框架的版本，以便更容易地在应用程序中实现MVVM模式。
 
 _ReactiveUI_是一个高级的、可组合的、功能反应式的模型-视图-视图模型（MVVM）框架，适用于所有.NET平台。它受到了函数式反应式编程范式的启发。
 
@@ -33,7 +33,7 @@ dotnet add package Avalonia.ReactiveUI
 :::
 
 :::info
-有关MVVM模式的更多背景信息，请参阅_Microsoft_文章[这里](https://msdn.microsoft.com/en-us/library/hh848246.aspx)。&#x20;
+有关MVVM模式的更多背景信息，请参阅_Microsoft_文章[这里](https://msdn.microsoft.com/en-us/library/hh848246.aspx)。
 :::
 
 该包包含了专门为_Avalonia UI_设计的帮助程序，用于处理_ReactiveUI_的视图模型导航、视图激活和调度任务（有关这些任务的完整详细信息，请参阅上述参考）。
@@ -42,9 +42,9 @@ dotnet add package Avalonia.ReactiveUI
 如果您从Avalonia MVVM应用程序解决方案模板启动应用程序，则已经安装并配置了_ReactiveUI_包。
 :::
 
-## 配置使用ReactiveUI&#x20;
+## 配置使用ReactiveUI
 
-安装了_NuGet_包后，您必须配置应用程序的`Program`类来使用它。请确保在`AppBuilder`代码中调用`UseReactiveUI()`方法。&#x20;
+安装了_NuGet_包后，您必须配置应用程序的`Program`类来使用它。请确保在`AppBuilder`代码中调用`UseReactiveUI()`方法。
 
 例如，如果您使用Avalonia MVVM应用程序解决方案模板，它将自动添加_NuGet_包，然后添加以下代码：
 

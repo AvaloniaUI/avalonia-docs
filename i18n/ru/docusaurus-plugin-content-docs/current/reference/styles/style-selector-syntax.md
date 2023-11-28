@@ -22,7 +22,7 @@ new Style(x => x.OfType(typeof(Button)));
 ```
 
 
-Находит элемент управления по его имени.&#x20;
+Находит элемент управления по его имени.
 
 The first example above selects the `Avalonia.Controls.Button` class. To include a XAML namespace in the type separate the namespace and the type with a `|` character.
 
@@ -91,7 +91,7 @@ new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 
 
 
-Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. There can only be one pseudo class in the selector. When used in combination with other classes, the pseudo class must be the last in the list. &#x20;
+Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. There can only be one pseudo class in the selector. When used in combination with other classes, the pseudo class must be the last in the list. 
 
 :::info
 For more detail about pseudo classes, see the reference [here](pseudo-classes.md).
@@ -206,7 +206,7 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 
 
 
-You can refine a selector so that it includes the value of a property. The property=value pair is defined inside square brackets. This matches any control that has the specified property set to the specified value.&#x20;
+You can refine a selector so that it includes the value of a property. The property=value pair is defined inside square brackets. This matches any control that has the specified property set to the specified value.
 
 ```
 <StackPanel Orientation="Horizontal">
@@ -280,7 +280,7 @@ new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 
 
 
-You can select any element that matches a comma-separated list of selectors. Any setters in the style must change properties that are common to all the items. &#x20;
+You can select any element that matches a comma-separated list of selectors. Any setters in the style must change properties that are common to all the items. 
 
 ## By Child Position Formula
 
@@ -297,9 +297,9 @@ new Style(x => x.OfType<TextBlock>().NthChild(2, 3));
 
 
 
-You can match elements based on their position within a group of siblings.  This is regardless of the class of the parent (container) control.&#x20;
+You can match elements based on their position within a group of siblings.  This is regardless of the class of the parent (container) control.
 
-Selection is based on a simple formula in the style `An + B` so that **`A`** controls the step size and **`B`** the offset from the start. In the nth-child formula (above), **`n`** is supplied to the formula as zero and all positive integers starting at zero, and the match is made against the results of the formula compared with a one-based position of the child element.&#x20;
+Selection is based on a simple formula in the style `An + B` so that **`A`** controls the step size and **`B`** the offset from the start. In the nth-child formula (above), **`n`** is supplied to the formula as zero and all positive integers starting at zero, and the match is made against the results of the formula compared with a one-based position of the child element.
 
 So, for the above selector:
 
@@ -355,7 +355,7 @@ You can also use a keyword notation in place of the formula: `odd` or `even`. So
 
 ### Other Formula Examples
 
-This table lists some examples of selection by child position:&#x20;
+This table lists some examples of selection by child position:
 
 | Formula Example    | Representation                                                                                                                                                                                                  |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

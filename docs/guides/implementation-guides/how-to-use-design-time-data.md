@@ -6,11 +6,11 @@ title: How To Use Design-time Data
 
 # How To Use Design-time Data
 
-Design-time data can help you style and position your UI layer without having to build the rest of the application. This is especially useful when you are trying to achieve a pixel-perfect presentation.&#x20;
+Design-time data can help you style and position your UI layer without having to build the rest of the application. This is especially useful when you are trying to achieve a pixel-perfect presentation.
 
 The _Avalonia UI_ solution templates all add design-time code to the main window for you to copy.
 
-This guide shows you how to use design-time data with the MVVM pattern to create a realistic UI with only mock data (that is without a data service layer). &#x20;
+This guide shows you how to use design-time data with the MVVM pattern to create a realistic UI with only mock data (that is without a data service layer). 
 
 <img src="/img/gitbook-import/assets/image (6).png" alt=""/>
 
@@ -105,8 +105,8 @@ This means that when you start to write the XAML for the UI, you can see your pr
 </Border>
 ```
 
-&#x20;The preview pane shows the completed UI design with the mock data:
+The preview pane shows the completed UI design with the mock data:
 
 <img src="/img/gitbook-import/assets/image (10).png" alt=""/>
 
-&#x20;&#x20;
+

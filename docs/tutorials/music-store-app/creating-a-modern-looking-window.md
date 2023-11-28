@@ -38,7 +38,7 @@ The preview pane now changes to the dark mode.
 Follow this procedure to style the background of the main window with an acrylic blur:
 
 - Locate and open the **MainWindow.axaml** file in the **/Views** folder.
-- Find the end of the opening tag of the `<Window>` element.&#x20;
+- Find the end of the opening tag of the `<Window>` element.
 - After the `Title="Avalonia.MusicStore"` attribute, add two new attributes as follows:
 
 ```markup

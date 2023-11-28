@@ -14,7 +14,7 @@ There are two types of animations in _Avalonia UI_:
 
 ## Keyframe Animation
 
-The simplest keyframe animation will change one property value over a a specified duration by defining two keyframes with cue points at the start (0% of the duration) and the end (100% of the duration).&#x20;
+The simplest keyframe animation will change one property value over a a specified duration by defining two keyframes with cue points at the start (0% of the duration) and the end (100% of the duration).
 
 <img src={AnimationKeyframeDiagram} alt=''/>
 

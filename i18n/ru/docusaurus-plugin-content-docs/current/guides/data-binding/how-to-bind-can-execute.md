@@ -75,16 +75,16 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-In the constructor of the view model, the reactive command is created with two parameters. The first is the private method that performs the action. The second is an observable which is created by the `WhenAnyValue` method of the `ReactiveObject` that underlies the view model (from the `ViewModelBase` class).&#x20;
+In the constructor of the view model, the reactive command is created with two parameters. The first is the private method that performs the action. The second is an observable which is created by the `WhenAnyValue` method of the `ReactiveObject` that underlies the view model (from the `ViewModelBase` class).
 
 :::info
 The `ViewModelBase` class is added to your project when you use the 'Avalonia MVVM Application' solution template.
 :::
 
-Here the `WhenAnyValue` method takes two arguments, the first collects a value for the parameter of the validation function, and the second is the validation function that returns a Boolean result.&#x20;
+Here the `WhenAnyValue` method takes two arguments, the first collects a value for the parameter of the validation function, and the second is the validation function that returns a Boolean result.
 
 :::info
-The `WhenAnyValue` method actually has overloads that can take up to 10 different value getters (for the validation function parameters), plus the validation function itself. &#x20;
+The `WhenAnyValue` method actually has overloads that can take up to 10 different value getters (for the validation function parameters), plus the validation function itself. 
 :::
 
 <img src="{BindCanExecuteScreenshot}" alt=""/>

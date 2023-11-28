@@ -6,11 +6,11 @@ import DataBindingBasicOverviewDiagram from '/img/gitbook-import/assets/image (3
 
 # Data Binding
 
-Avalonia uses data binding to move data from application objects into UI controls, change the data in application objects in response to user input, and initiate actions on the application objects in response to commands from the user. &#x20;
+Avalonia uses data binding to move data from application objects into UI controls, change the data in application objects in response to user input, and initiate actions on the application objects in response to commands from the user. 
 
 <img src={DataBindingBasicOverviewDiagram} alt=''/>
 
-In this arrangement, the control is the **binding target**, and the object is the **data source**.&#x20;
+In this arrangement, the control is the **binding target**, and the object is the **data source**.
 
 Avalonia runs a data binding system to complete much of the above activity from simple mappings declared in the XAML; that is without requiring you to add a lot of additional coding.
 
@@ -34,10 +34,10 @@ Bindings can be unidirectional: where changes in the properties of a bound appli
 <TextBlock Text="{Binding StatusMessage}" />
 ```
 
-Binding is used with the MVVM architectural pattern, and this is one of the principle ways of programming with Avalonia UI.&#x20;
+Binding is used with the MVVM architectural pattern, and this is one of the principle ways of programming with Avalonia UI.
 
 :::info
-For more information about how to use the MVVM Pattern with Avalonia, see the concept page [here](../../../concepts/the-mvvm-pattern).&#x20;
+For more information about how to use the MVVM Pattern with Avalonia, see the concept page [here](../../../concepts/the-mvvm-pattern).
 :::
 
 :::info

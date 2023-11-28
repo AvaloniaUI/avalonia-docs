@@ -9,7 +9,7 @@ import ItemsControlScreenshot from '/img/gitbook-import/assets/items.gif';
 The items control is the basis for controls that display repeating data (like the list box for example). It has no built-in formatting or interactions; but you can use it with data binding, styling and data templates to create a completely custom repeating data control.
 
 :::info
-To see the full list of _Avalonia UI_ built-in repeating data controls, see [here](repeating-data-controls.md).&#x20;
+To see the full list of _Avalonia UI_ built-in repeating data controls, see [here](repeating-data-controls.md).
 :::
 
 ## Useful Properties
@@ -20,7 +20,7 @@ You will probably use these properties most often:
 
 ## Example
 
-This example binds an observable collection of crockery items to an items control, where some custom layout and formatting is provided by a data template:&#x20;
+This example binds an observable collection of crockery items to an items control, where some custom layout and formatting is provided by a data template:
 
 ```xml
 <StackPanel Margin="20">

@@ -13,7 +13,7 @@ description: REFERENCE - Styles
 
 К псевдоклассам относятся:
 
-&#x20;`:focus`, `:disabled`, `:pressed` для кнопок, и `:checked` для переключателя.
+`:focus`, `:disabled`, `:pressed` для кнопок, и `:checked` для переключателя.
 
 Одновременно, элемент может иметь несколько псевдоклассов.
 

@@ -10,12 +10,12 @@ import ImageUniformToFillScreenshot from '/img/gitbook-import/assets/image (4) (
 The image can display raster images from a specified image source. The source can be:
 
 * a string constant naming an application asset,
-* loaded as a bitmap from the bound name of an asset (by using a binding converter),&#x20;
-* or can be loaded directly as a bitmap from a memory stream.  &#x20;
+* loaded as a bitmap from the bound name of an asset (by using a binding converter),
+* or can be loaded directly as a bitmap from a memory stream.  
 
-Images can be used to compose the content of another control. For example, you can create a graphical button using image controls.&#x20;
+Images can be used to compose the content of another control. For example, you can create a graphical button using image controls.
 
-The image displayed can be resized and scaled.  The default settings for scaling (uniform stretch in both directions) will result in the image being fitted to the size (width and/or height) given.&#x20;
+The image displayed can be resized and scaled.  The default settings for scaling (uniform stretch in both directions) will result in the image being fitted to the size (width and/or height) given.
 
 :::info
 The scaling settings for an image are the same as for the view box, see the reference [here](detailed-reference/viewbox.md).
@@ -35,7 +35,7 @@ This example shows a bitmap asset loaded into an image control where the height 
 
 <img src={ImageUnscaledScreenshot} alt="" />
 
-In this next example, introducing the stretch setting `UniformToFill` fits in all the height of the image, but crops the width because it would otherwise be wider than specified.  The image is not distorted by this treatment.&#x20;
+In this next example, introducing the stretch setting `UniformToFill` fits in all the height of the image, but crops the width because it would otherwise be wider than specified.  The image is not distorted by this treatment.
 
 ```xml
 <Panel>

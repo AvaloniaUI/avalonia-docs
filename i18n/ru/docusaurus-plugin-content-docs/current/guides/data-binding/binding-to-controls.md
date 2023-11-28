@@ -9,7 +9,7 @@ title: How To Bind to a Control
 With _Avalonia UI_, as well as binding to a data context you can also bind one control directly to another.
 
 :::info
-Note that this technique does not use a data context at all. When you do this, you are binding directly to another control itself.&#x20;
+Note that this technique does not use a data context at all. When you do this, you are binding directly to another control itself.
 :::
 
 ## Binding to a Named Control

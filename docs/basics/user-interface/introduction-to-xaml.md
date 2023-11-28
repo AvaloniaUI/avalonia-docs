@@ -9,13 +9,13 @@ _Avalonia UI_ uses XAML to define a user interface. XAML is an XML-based mark-up
 :::info
 These pages will introduce you to how XAML is used specifically in _Avalonia UI_. For background information about how XAML is used elsewhere in Microsoft technologies, you can use these references:
 
-* Microsoft XAML documentation for WPF, see [here](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf). &#x20;
+* Microsoft XAML documentation for WPF, see [here](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf). 
 * Microsoft XAML documentation for UWP, see [here](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview).
 :::
 
 ## AXAML File Extension
 
-The file extension for XAML files used elsewhere is `.xaml` but due to technical issues integrating with Visual Studio, _Avalonia UI_ uses its own `.axaml` extension - 'Avalonia XAML'.&#x20;
+The file extension for XAML files used elsewhere is `.xaml` but due to technical issues integrating with Visual Studio, _Avalonia UI_ uses its own `.axaml` extension - 'Avalonia XAML'.
 
 :::info
 From _Avalonia UI_ version 0.9.11 all XAML files created in Visual Studio have the `.axaml` extension; and from version 0.10 all _Avalonia UI_ templates create files using the `.axaml` extension.
@@ -37,7 +37,7 @@ In common with all XML files, there is a root element. The root element tag `<Wi
 The sample above uses three interesting attributes:
 
 * `xmlns="https://github.com/avaloniaui"` - this is the XAML namespace declaration for _Avalonia UI_ itself. This is required, without it the file will not be recognised as an Avalonia XAML document.
-* `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` - this is the declaration for the XAML language namespace.&#x20;
+* `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` - this is the declaration for the XAML language namespace.
 * `x:Class="AvaloniaApplication1.MainWindow"` - this is an extension of the above declaration (for 'x') that tells the XAML compiler where to find the associated class for this file. The class is defined in a code-behind file, usually written in C#.
 
 :::info
@@ -46,7 +46,7 @@ For information about the code-behind concept, see [here](code-behind).
 
 ## Control Elements
 
-You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.&#x20;
+You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.
 
 :::info
 A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](../../concepts/ui-composition.md).
@@ -62,12 +62,12 @@ For example, this XAML adds a button to the content of a window:
 ```
 
 :::info
-For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](../../reference/controls).&#x20;
+For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](../../reference/controls).
 :::
 
 ## Control Attributes
 
-The XML elements that represent controls have attributes corresponding to control properties that can be set. You can set a control property by adding an attribute to an element.&#x20;
+The XML elements that represent controls have attributes corresponding to control properties that can be set. You can set a control property by adding an attribute to an element.
 
 For example, to specify a blue background for a button control, you add the `Background` attribute set the value to `"Blue"`. Like this:
 
@@ -108,7 +108,7 @@ For further information about the concept behind data binding, see [here](../dat
 
 ## Code-behind Files
 
-Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.&#x20;
+Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.
 
 :::info
 For guidance about programming using code-behind files, see [here](code-behind).
@@ -116,10 +116,10 @@ For guidance about programming using code-behind files, see [here](code-behind).
 
 ## XML Namespaces
 
-In common with any XML format, in Avalonia XAML files you can declare namespaces. This allows the XML processor to find the definitions of the elements in the file.&#x20;
+In common with any XML format, in Avalonia XAML files you can declare namespaces. This allows the XML processor to find the definitions of the elements in the file.
 
 :::info
-For background information, see the Microsoft XML namespaces documentation [here](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).&#x20;
+For background information, see the Microsoft XML namespaces documentation [here](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).
 :::
 
 You can add a namespace using the `xmlns` attribute. The format of a namespace declaration is as follows:
@@ -128,7 +128,7 @@ You can add a namespace using the `xmlns` attribute. The format of a namespace d
 xmlns:alias="definition"
 ```
 
-It is standard practice to define all the namespaces you are going to use in the root element.&#x20;
+It is standard practice to define all the namespaces you are going to use in the root element.
 
 Only one namespace in a file can be defined without using the alias part of the attribute name. The alias must always be unique with in a file.
 
@@ -142,7 +142,7 @@ There are two valid syntax options for the definition part of a XAML namespace a
 
 ### **CLR Namespace Prefix**
 
-There is a prefix `clr-namespace:` you can use to reference both code in the current assembly and code in a referenced assembly.&#x20;
+There is a prefix `clr-namespace:` you can use to reference both code in the current assembly and code in a referenced assembly.
 
 For example, when the code is present in the same assembly as the XAML, you can use this syntax:
 

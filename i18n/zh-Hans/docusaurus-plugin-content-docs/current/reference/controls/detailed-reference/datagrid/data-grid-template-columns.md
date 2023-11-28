@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Controls
 
 # Data Grid Template Columns
 
-You can use this column type to customise the display and editing for a data grid column.&#x20;
+You can use this column type to customise the display and editing for a data grid column.
 
 There are two data templates which you define as attached properties:
 
@@ -16,7 +16,7 @@ If you do not set a editing template, the column will stay read-only.
 
 ## Example
 
-This example adds a numeric up-down control when the age property for a person is being edited:&#x20;
+This example adds a numeric up-down control when the age property for a person is being edited:
 
 
 

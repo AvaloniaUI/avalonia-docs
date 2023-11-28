@@ -6,9 +6,9 @@ import ReuseTeacherDataTemplateScreenshot from '/img/gitbook-import/assets/image
 
 # Reusing Data Templates
 
-If you define a data template in the `Window.DataTemplates`collection (as on the previous page), you can reuse it anywhere in the window. However, you can also extend the reuse of a data template to any window in your application.&#x20;
+If you define a data template in the `Window.DataTemplates`collection (as on the previous page), you can reuse it anywhere in the window. However, you can also extend the reuse of a data template to any window in your application.
 
-This works because _Avalonia UI_ performs a hierarchical search of its logical tree to choose a data template. At its most extensive, the search starts in a control, extends to any parent controls (recursively), then looks in the window (as on the previous page), and finally looks at the application itself for a data templates collection.&#x20;
+This works because _Avalonia UI_ performs a hierarchical search of its logical tree to choose a data template. At its most extensive, the search starts in a control, extends to any parent controls (recursively), then looks in the window (as on the previous page), and finally looks at the application itself for a data templates collection.
 
 :::info
 From more information on the logical tree concept in _Avalonia UI_ , see [here](../ui-composition.md).
@@ -80,7 +80,7 @@ Use a local definition of a teacher in the window content zone:
 </Window>
 ```
 
-Although there is no data template for a teacher in the window; Avalonia UI will find the template you defined in the application, and the display works as planned:&#x20;
+Although there is no data template for a teacher in the window; Avalonia UI will find the template you defined in the application, and the display works as planned:
 
 <img src={ReuseTeacherDataTemplateScreenshot} alt=""/>
 

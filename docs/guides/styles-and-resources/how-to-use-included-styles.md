@@ -29,7 +29,7 @@ The _Avalonia U_I solution templates provide a quick way of adding a styles file
 
 <img src="/img/gitbook-import/assets/image (1) (4) (2).png" alt=""/>
 
-To use the styles defined in a separate file, you must reference it using a `StyleInclude` element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.&#x20;
+To use the styles defined in a separate file, you must reference it using a `StyleInclude` element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.
 
 For example, to use styles defined in a file `AppStyles.axaml` (saved in the folder `/Styles`), you could write a a `StyleInclude` element in the window like this:
 

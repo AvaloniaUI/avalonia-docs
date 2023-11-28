@@ -6,7 +6,7 @@ import TextBlockStylePreviewScreenshot from '/img/gitbook-import/assets/image (2
 
 # Text Block
 
-The text block is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.&#x20;
+The text block is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.
 
 ## Useful Properties
 

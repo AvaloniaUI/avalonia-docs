@@ -8,7 +8,7 @@ import ButtonClickHandlerScreenshot from '/img/gitbook-import/assets/button.gif'
 
 The button is a control that reacts to pointer actions (and has some keyboard equivalents). It presents visual feedback in the form of a depressed state when the pointer is down.
 
-A pointer-down to pointer release sequence is interpreted as a click; and this behaviour is configurable.&#x20;
+A pointer-down to pointer release sequence is interpreted as a click; and this behaviour is configurable.
 
 :::warning
 When determining if a button is pressed by the user, always use the `Click` event instead of `PointerPressed`. `Click` is the high-level event specific to a `Button` that indicates it has been pressed.
@@ -20,7 +20,7 @@ When determining if a button is pressed by the user, always use the `Click` even
 Click is one of many button events, for a full list see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events).
 :::
 
-A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.&#x20;
+A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.
 
 :::info
 For guidance on how to bind to a command, see [here](../../../basics/user-interface/adding-interactivity).

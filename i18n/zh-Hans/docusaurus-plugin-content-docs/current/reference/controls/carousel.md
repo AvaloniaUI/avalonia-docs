@@ -12,7 +12,7 @@ You can use the carousel control to create a slide show.
 
 ## Example
 
-This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.&#x20;
+This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.
 
 
 

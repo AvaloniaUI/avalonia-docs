@@ -5,7 +5,7 @@ title: How To Set Up an Android Dev Environment
 
 # How To Set Up an Android Dev Environment
 
-This guide shows you how to set up your development environment for work on a mobile Android application.&#x20;
+This guide shows you how to set up your development environment for work on a mobile Android application.
 
 Follow these steps to install the tools you will need, using the CLI:
 

@@ -17,7 +17,7 @@ The position of each child control is defined as two distances between edge the 
 To review the concept of layout zones, see [here](../../concepts/layout/layout-zones).
 :::
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 

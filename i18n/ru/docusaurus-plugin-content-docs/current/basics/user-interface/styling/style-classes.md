@@ -5,7 +5,7 @@ title: Style Classes
 
 # Style Classes
 
-You can assign an _Avalonia UI_ control one or more style classes, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, then use a space-separated list.&#x20;
+You can assign an _Avalonia UI_ control one or more style classes, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, then use a space-separated list.
 
 For example, this button has both the `h1` and `blue` style classes applied:
 
@@ -19,7 +19,7 @@ Like in CSS, controls can have pseudo classes; these are classes that are define
 
 For example `:pointerover` pseudo class indicates that the pointer input is currently over (inside the bounds of) a control. (This is pseudo class is the similar to `:hover` in CSS.)
 
-This is an example of  a `:pointerover` pseudo class selector:&#x20;
+This is an example of  a `:pointerover` pseudo class selector:
 
 ```markup
 <StackPanel>

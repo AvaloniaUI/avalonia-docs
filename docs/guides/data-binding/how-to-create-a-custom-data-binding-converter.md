@@ -6,7 +6,7 @@ title: How to Create a Custom Data Binding Converter
 
 # How to Create a Custom Data Binding Converter
 
-When one of the built-in data binding converters does not meet your conversion requirements, you can write a custom converter based on the `IValueConverter` interface. This guide will show you how.&#x20;
+When one of the built-in data binding converters does not meet your conversion requirements, you can write a custom converter based on the `IValueConverter` interface. This guide will show you how.
 
 :::info
 To review the _Microsoft_ documentation for the `IValueConverter` interface, see [here](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1).
@@ -87,7 +87,7 @@ public class TextCaseConverter : IValueConverter
 
 You may want to write a a custom converter that can switch the output type depending on what the target property requires. You can achieve this becuase the `Convert` method receives a `targetType` argument that you can test with the `IsAssignableTo` function.
 
-In this example, the `animalConverter` can find an image, or a text name for a bound `Animal` class object:  &#x20;
+In this example, the `animalConverter` can find an image, or a text name for a bound `Animal` class object:  
 
 ```xml title='XAML'
 <Image Width="42" 

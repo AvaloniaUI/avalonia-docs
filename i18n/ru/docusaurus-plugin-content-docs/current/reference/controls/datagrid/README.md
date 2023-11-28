@@ -9,16 +9,16 @@ import DataGridColumnTypesScreenshot from '/img/gitbook-import/assets/grid3.gif'
 
 # Data Grid
 
-The data grid displays repeating data in a customizable grid. The control can be styled, templated and bound.&#x20;
+The data grid displays repeating data in a customizable grid. The control can be styled, templated and bound.
 
-The data grid needs to be bound to an observable collection in a view model that can be found in a related **data context**.&#x20;
+The data grid needs to be bound to an observable collection in a view model that can be found in a related **data context**.
 
 :::info
 To review the concept behind the **data context**, see [here](../../../basics/data/data-binding/data-context).
 :::
 
 :::info
-The data grid is in an additional _Avalonia UI_ package. To use the data grid in your project, you must reference the **Avalonia.Controls.DataGrid** _NuGet_ package, and reference the styles that it uses, see below.&#x20;
+The data grid is in an additional _Avalonia UI_ package. To use the data grid in your project, you must reference the **Avalonia.Controls.DataGrid** _NuGet_ package, and reference the styles that it uses, see below.
 :::
 
 ## NuGet Package Reference
@@ -43,7 +43,7 @@ Or add package reference directly to the project (`.csproj`) file:
 Note you must always install the data grid version that matches the _Avalonia UI_ version you are using.
 :::
 
-## Include Data Grid Styles&#x20;
+## Include Data Grid Styles
 
 You must reference the data grid themes to include the additional styles that the data grid uses. You can do this by adding a `<StyleInclude>` element to the application (`App.axaml` file).
 
@@ -71,7 +71,7 @@ You will probably use these properties most often:
 
 ## Examples
 
-This example will generate a basic data grid, with column header names auto-generated from the item class. The items data source is bound to the main window view model.&#x20;
+This example will generate a basic data grid, with column header names auto-generated from the item class. The items data source is bound to the main window view model.
 
 ```xml
 <DataGrid Margin="20" ItemsSource="{Binding People}" 

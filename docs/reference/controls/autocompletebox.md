@@ -8,7 +8,7 @@ import AutoCompleteBoxScreenshot from '/img/gitbook-import/assets/autocomplete.g
 
 The auto-complete box presents a text box for user input and a drop-down that contains possible matches from an items source collection, for the text typed in. The drop-down shows when the user starts to type, and the match is updated for each character typed. The user can select from the drop-down.
 
-The way in which the text is matched to possible items in the items source is configurable.&#x20;
+The way in which the text is matched to possible items in the items source is configurable.
 
 ## Useful Properties
 

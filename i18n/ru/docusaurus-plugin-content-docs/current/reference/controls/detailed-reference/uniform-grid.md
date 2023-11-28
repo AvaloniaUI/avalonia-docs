@@ -8,7 +8,7 @@ import UniformGridFrenchFlagScreenshot from '/img/gitbook-import/assets/image (1
 
 The uniform grid divides the available space evenly in both directions, into cells. You can specify how many divisions to use, and these can be different in either direction.
 
-You can then allocate child controls to the cells created, using attached row and column index properties (zero-based).&#x20;
+You can then allocate child controls to the cells created, using attached row and column index properties (zero-based).
 
 ## Useful Properties
 

@@ -5,7 +5,7 @@ title: DataGridColumns
 
 ## Overview
 
-Every [.](./ "mention") can hold multiple `DataGridColumns`. Avalonia has several build-in `DataGridColumns`, which can be used to display a certain data type with a certain appearance.&#x20;
+Every [.](./ "mention") can hold multiple `DataGridColumns`. Avalonia has several build-in `DataGridColumns`, which can be used to display a certain data type with a certain appearance.
 
 ### Build-in DataGridColumns
 
@@ -69,7 +69,7 @@ This column is used to represent a `bool` value. The  value is represented by a 
 
 ## DataGridTemplateColumn
 
-This column is used to display any content you like. There  are two [datatemplates.md](../../templates/data-templates) which you can define, the `CellTemplate` for the normal state and the `CellEditingTemplate` for the editing state of the current `DataGridCell`.&#x20;
+This column is used to display any content you like. There  are two [datatemplates.md](../../templates/data-templates) which you can define, the `CellTemplate` for the normal state and the `CellEditingTemplate` for the editing state of the current `DataGridCell`.
 
 :::info
 The DataGridTemplateColumn is editable from Avalonia version 0.10.12 onward. If you do not set a `CellEditingTemplate`, the column will stay read-only.

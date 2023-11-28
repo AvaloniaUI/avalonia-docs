@@ -17,7 +17,7 @@ You will probably use these properties most often:
 
 ## Examples
 
-This is a simple text-based tooltip, using default values for the placement and delay properties; this rectangle is placed in a window with larger dimensions:&#x20;
+This is a simple text-based tooltip, using default values for the placement and delay properties; this rectangle is placed in a window with larger dimensions:
 
 ```markup
 <Rectangle Fill="Aqua" Height="200" Width="400"

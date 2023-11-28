@@ -31,7 +31,7 @@ If you use Rider then please follow the guide here:
 
 [Xamarin | JetBrains Rider](https://www.jetbrains.com/help/rider/Xamarin.html)
 
-Alternatively you can install the Android command line tools from here:&#x20;
+Alternatively you can install the Android command line tools from here:
 
 [Download Android Studio & SDK](https://developer.android.com/studio#command-tools)
 

@@ -6,7 +6,7 @@ description: CONCEPTS - ReactiveUI
 
 本页面介绍了如何使用Avalonia UI绑定来从具有`Command`属性的按钮等控件上启动对视图模型的更改。
 
-例如，您可以使用以下视图模型和在`ButtonAction`方法中定义的操作：&#x20;
+例如，您可以使用以下视图模型和在`ButtonAction`方法中定义的操作：
 
 ```
 public class MainWindowViewModel : ViewModelBase

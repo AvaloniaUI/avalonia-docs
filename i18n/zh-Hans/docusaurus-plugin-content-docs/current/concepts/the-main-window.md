@@ -22,4 +22,4 @@ public override void OnFrameworkInitializationCompleted()
 Avalonia中的移动和浏览器平台没有窗口的概念。相反，当实现`ISingleViewApplicationLifetime`接口时，需要在`Application.ApplicationLifetime`中设置`MainView`控件。
 :::
 
-### &#x20;<a href="#show-hide-and-close-a-window" id="show-hide-and-close-a-window"></a>
+### <a href="#show-hide-and-close-a-window" id="show-hide-and-close-a-window"></a>

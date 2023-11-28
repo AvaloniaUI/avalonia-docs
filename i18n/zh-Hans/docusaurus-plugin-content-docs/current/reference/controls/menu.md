@@ -33,7 +33,7 @@ You will probably use these properties most often:
 
 ## Example
 
-This example creates a menu docked at the top edge of a window.&#x20;
+This example creates a menu docked at the top edge of a window.
 
 ```markup
 <Window ...>

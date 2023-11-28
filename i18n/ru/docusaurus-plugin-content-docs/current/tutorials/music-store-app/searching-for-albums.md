@@ -13,7 +13,7 @@ To implement a real album search in the app, you will use a _NuGet_ package that
 
 ## Apple Web API Package
 
-Follow this procedure to add the required _NuGet_ package:&#x20;
+Follow this procedure to add the required _NuGet_ package:
 
 - Stop the app if it is still running.
 - Right-click the project.
@@ -30,7 +30,7 @@ In this tutorial the application is simple, and you can implement the business s
 
 Follow this procedure to add the album business logic:
 
-- In the solution explorer, right-click the **/Models** folder and then click **Add**. &#x20;
+- In the solution explorer, right-click the **/Models** folder and then click **Add**. 
 - Click **Class**.
 - When prompted for the name, type 'Album'.
 - Add the following code:
@@ -75,13 +75,13 @@ namespace Avalonia.MusicStore.Models
 
 In order to display the data from the Web API for each album (data model) in the search results list, you will create an album view model, and this will be bound to the album view (tile) for display.
 
-Your album view model is currently empty. It will need to be able to store the album data from the search, and have some properties for the artist name and album title. These will then be bound to the view for display.&#x20;
+Your album view model is currently empty. It will need to be able to store the album data from the search, and have some properties for the artist name and album title. These will then be bound to the view for display.
 
-In this step you will use a common pattern for the dependent relationship between a view model and a (business logic) model. This is where the view model contains an instance of the data model, and then exposes certain of its properties, as required for display.&#x20;
+In this step you will use a common pattern for the dependent relationship between a view model and a (business logic) model. This is where the view model contains an instance of the data model, and then exposes certain of its properties, as required for display.
 
 Follow this procedure to prepare the album view model:
 
-- Locate and open the **AlbumViewModel.cs** file.&#x20;
+- Locate and open the **AlbumViewModel.cs** file.
 - Add the code as shown:
 
 ```csharp
@@ -97,15 +97,15 @@ public string Artist => _album.Artist;
 public string Title => _album.Title;
 ```
 
-Note that as the view model properties will not change in the UI during runtime, they have no setter and a plain getter - there is no need to use the `RaiseAndSetIfChanged` method here.&#x20;
+Note that as the view model properties will not change in the UI during runtime, they have no setter and a plain getter - there is no need to use the `RaiseAndSetIfChanged` method here.
 
 ## Start the Search
 
-In this step, you will add some code to the music store view model so that whenever the search text changes, the `SearchAsync` method on the album model (business service) is started. When it finishes, the search places its results in the observable collection `SearchResults`. This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  &#x20;
+In this step, you will add some code to the music store view model so that whenever the search text changes, the `SearchAsync` method on the album model (business service) is started. When it finishes, the search places its results in the observable collection `SearchResults`. This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
 
 Follow this procedure to start the search whenever the search text changes:
 
-- Locate and open the **MusicStoreViewModel.cs** file.&#x20;
+- Locate and open the **MusicStoreViewModel.cs** file.
 - Replace the constructor code, and add the extra code as shown:
 
 ```csharp
@@ -152,15 +152,15 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-The `WhenAnyValue` method is provided by the _ReactiveUI_ framework as part of the `ReactiveObject`(inherited via `ViewModelBase`). The method takes a lambda expression parameter that gets the property you want to observe for changes. So in the above code, an event occurs whenever the user types to change the search text.&#x20;
+The `WhenAnyValue` method is provided by the _ReactiveUI_ framework as part of the `ReactiveObject`(inherited via `ViewModelBase`). The method takes a lambda expression parameter that gets the property you want to observe for changes. So in the above code, an event occurs whenever the user types to change the search text.
 
 It will be good design to wait until the user has stopped typing before attempting to run the search. The `Throttle` method prevents the events being processed until the time span (400 milliseconds) is up. This means processing will not start until the user has stopped typing for 400 milliseconds or longer.
 
 :::info
-The `ObserveOn` method is required to ensure that the subscribed method is always called on the UI thread. In _Avalonia UI_ applications, you must always update the UI on the UI thread.&#x20;
+The `ObserveOn` method is required to ensure that the subscribed method is always called on the UI thread. In _Avalonia UI_ applications, you must always update the UI on the UI thread.
 :::
 
-Lastly, the `Subscribe` method calls the `DoSearch` method for each observed event. The `DoSearch` method  runs asynchronously, and has no return value.&#x20;
+Lastly, the `Subscribe` method calls the `DoSearch` method for each observed event. The `DoSearch` method  runs asynchronously, and has no return value.
 
 ## Bind the Album View
 
@@ -168,7 +168,7 @@ Your work on the previous page to format the album 'tile' view did not add any w
 
 Follow this procedure to add the album name and artist name to the tile:
 
-- Locate and open the **AlbumView.asaml** file.&#x20;
+- Locate and open the **AlbumView.asaml** file.
 - Add the two text block controls with their data bindings, as shown:
 - To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
 
@@ -198,4 +198,4 @@ Follow this procedure to add the album name and artist name to the tile:
 
 <p><img className="image-medium-zoom" src={MusicStoreAlbumViewScreenshot} alt="" /></p>
 
-On the next page, you will learn how to improve the look of the app by retrieving the cover art for each album. This will be displayed on the tile instead of the note icon.&#x20;
+On the next page, you will learn how to improve the look of the app by retrieving the cover art for each album. This will be displayed on the tile instead of the note icon.

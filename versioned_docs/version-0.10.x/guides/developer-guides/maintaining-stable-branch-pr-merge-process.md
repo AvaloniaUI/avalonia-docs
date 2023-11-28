@@ -22,7 +22,7 @@ For a PR to be back ported it MUST reach the following criteria
 
 Provided the criteria are met:
 
-1. Merge the PR to master generating a merge commit.&#x20;
+1. Merge the PR to master generating a merge commit.
 2. i.e. "Merge pull request #5797 from AvaloniaUI/double-tapped-event-args"
 
 At this point the git tree should look similar to this.

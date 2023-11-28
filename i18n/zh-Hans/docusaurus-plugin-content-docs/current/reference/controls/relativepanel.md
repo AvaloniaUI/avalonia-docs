@@ -35,10 +35,10 @@ It is not an error to specify different, but potentially conflicting relative po
 If more than one child control ends up in the same calculated position, then they are drawn in the sequence that they appear in the XAML, and may overlap or obscure another child control.
 
 :::warning
-This means you must give child controls a name, and use the correct name in any relative position property values. If you get this wrong, the control will adopt the default (top-left) position, and may overlap or obscure another.&#x20;
+This means you must give child controls a name, and use the correct name in any relative position property values. If you get this wrong, the control will adopt the default (top-left) position, and may overlap or obscure another.
 :::
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 

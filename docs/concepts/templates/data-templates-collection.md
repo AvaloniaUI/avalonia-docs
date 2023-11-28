@@ -6,7 +6,7 @@ import DataTemplatesCollectionStudentScreenshot from '/img/gitbook-import/assets
 
 # Data Templates Collection
 
-Every control in _Avalonia UI_ has a `DataTemplates` collection where you can place any number of data template definitions. You can then choose the template to use for display by class type. &#x20;
+Every control in _Avalonia UI_ has a `DataTemplates` collection where you can place any number of data template definitions. You can then choose the template to use for display by class type. 
 
 When a control does not have a data template set directly in its `ContentTemplate` property (as on the previous page); then it will choose a template from in its `DataTemplates` collection that matches the class of the object being displayed.  This applies to a window.
 

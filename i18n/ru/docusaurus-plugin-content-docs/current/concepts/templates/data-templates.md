@@ -52,7 +52,7 @@ The window will display the string:
 
 But what happens if you try to display an object from a class that you have defined in the window?
 
-For example, using the class definition `Student`&#x20;
+For example, using the class definition `Student`
 
 ```csharp
 namespace MySample
@@ -80,8 +80,8 @@ But you will see only the fully-qualified class name for the student object:
 
 <img src={ControlContentTypeScreenshot} alt=""/>
 
-This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name. &#x20;
+This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name. 
 
-On the next page you will see one of the ways you can specify how to display an object created from a class that you have defined (not a control or a simple string).&#x20;
+On the next page you will see one of the ways you can specify how to display an object created from a class that you have defined (not a control or a simple string).
 
 ##

@@ -16,10 +16,10 @@ In _Avalonia UI_, the UI element corresponding to a MVVM view can be either a wi
 
 Follow these instructions to add a new user control:
 
-- In the **Solution Explorer** locate and right-click the **Views** folder.&#x20;
+- In the **Solution Explorer** locate and right-click the **Views** folder.
 - Click **Add** and then **New Item**
 - Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
-- In **Name** enter 'ToDoListView'&#x20;
+- In **Name** enter 'ToDoListView'
 - Click **Add**
 
 ### .NET Core CLI
@@ -75,7 +75,7 @@ To make the design-time preview look more like a mobile phone in portrait orient
 <strong>... ></strong>
 </code></pre>
 
-Repeat the process with the main window.&#x20;
+Repeat the process with the main window.
 
 ### Edit the User Control
 

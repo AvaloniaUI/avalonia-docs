@@ -6,7 +6,7 @@ import GridSpanningColumnsScreenshot from '/img/gitbook-import/assets/grid_examp
 
 # Grid
 
-The grid control is useful for arranging child controls in columns and rows. You can define absolute, relative, or proportional row and column geometries for the grid.&#x20;
+The grid control is useful for arranging child controls in columns and rows. You can define absolute, relative, or proportional row and column geometries for the grid.
 
 Each child control in the grid can be positioned in a cell of the grid, using column and row coordinates. These are zero-based, and both have a zero default.
 
@@ -28,9 +28,9 @@ You will probably use these properties most often:
 
 You can define the size of rows and columns as:
 
-* Absolute (integer) &#x20;
-* Relative to container&#x20;
-* Automatic - size to fit the contained child control&#x20;
+* Absolute (integer) 
+* Relative to container
+* Automatic - size to fit the contained child control
 
 The size definitions can be written either as a list of short codes, or fully expanded using XAML elements.
 
@@ -112,17 +112,17 @@ Using full expanded XAML, this is the same as:
 
 ## Drawing Rules
 
-When calculating sizes, any proportional columns are made to fit in the space left after the absolute and automatic values have been calculated.&#x20;
+When calculating sizes, any proportional columns are made to fit in the space left after the absolute and automatic values have been calculated.
 
 The calculation for automatic sizing is made using the outside of the margin layout zone of a child control.
 
 :::info
-To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones). &#x20;
+To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones). 
 :::
 
-Child controls are drawn in their assigned grid cells in the sequence they appear in the XAML. This rule governs both what happens when two child controls are assigned the same cell, and how child controls overlap when they are larger than their allotted cell.&#x20;
+Child controls are drawn in their assigned grid cells in the sequence they appear in the XAML. This rule governs both what happens when two child controls are assigned the same cell, and how child controls overlap when they are larger than their allotted cell.
 
-When a child control has its own dimensions , and is smaller than its assigned cell, it will be drawn aligned in the cell according to its horizontal and vertical alignment properties (both are centered by default).&#x20;
+When a child control has its own dimensions , and is smaller than its assigned cell, it will be drawn aligned in the cell according to its horizontal and vertical alignment properties (both are centered by default).
 
 ## Example
 
@@ -145,7 +145,7 @@ An example of a Grid with 3 equal Rows and 3 Columns with (1 fixed width), (2 gr
 </Grid>
 ```
 
-Here, after the absolute width 100 has been subtracted (for column 0), column 1 will get 1.5 parts and column 2 will get 4 parts of the remaining width.&#x20;
+Here, after the absolute width 100 has been subtracted (for column 0), column 1 will get 1.5 parts and column 2 will get 4 parts of the remaining width.
 
 The button is drawn to fill the span from the cell (column 1, row 1) plus one column (to the right) and one row down. The result looks like this:
 

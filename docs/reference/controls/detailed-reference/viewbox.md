@@ -37,7 +37,7 @@ The values for the `StretchDirecton` property are as follows:
 
 ### Example
 
-This simple example shows a `Viewbox` scaling up a circle uniformly (both stretch and direction are default).&#x20;
+This simple example shows a `Viewbox` scaling up a circle uniformly (both stretch and direction are default).
 
 ```markup
 <Viewbox Stretch="Uniform" Width="300" Height="300">

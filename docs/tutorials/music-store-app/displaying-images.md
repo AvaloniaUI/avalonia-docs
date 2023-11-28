@@ -90,7 +90,7 @@ public class AlbumViewModel : ViewModelBase
 
 Take some time to examine this code because it gives an insight into manipulating images with _Avalonia UI._ For example, the above uses the `DecodeToWidth` method to convert the image stream for display in _Avalonia UI_. This method can convert a stream for a large high resolution image into a smaller bitmap, at a specified width and while maintaining the aspect ratio.
 
-This means that you will not waste large amounts of memory to display the album cover art, even though the Web API returns quite large files.&#x20;
+This means that you will not waste large amounts of memory to display the album cover art, even though the Web API returns quite large files.
 
 Also notice how the `LoadCover` method is coded to run asynchronously, and on a background thread. This is so that the UI thread does not get blocked and make the UI unresponsive.
 

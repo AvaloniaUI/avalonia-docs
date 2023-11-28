@@ -8,9 +8,9 @@ import MusicStoreMockSearchScreenshot from '/img/tutorials/music-store-app/add-c
 
 On this page you will create the view model for the album search feature, and then bind it to the controls on the new user control. At this stage you will use a mock of the search itself, so that you can concentrate on the view model.
 
-## Reactive View Model  &#x20;
+## Reactive View Model  
 
-The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data binding system. You add this support by deriving your view model from the `ReactiveObject` class, via the `ViewModelBase` class that was added to your project at the start, by the solution template.&#x20;
+The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data binding system. You add this support by deriving your view model from the `ReactiveObject` class, via the `ViewModelBase` class that was added to your project at the start, by the solution template.
 
 Follow this procedure to derive from the `ReactiveObject` class:
 
@@ -26,16 +26,16 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-This adds the important extension method `RaiseAndSetIfChanged` to your view model, and will allow you to give the properties there the ability to notify changes to the view.  &#x20;
+This adds the important extension method `RaiseAndSetIfChanged` to your view model, and will allow you to give the properties there the ability to notify changes to the view.  
 
 :::info
-To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).&#x20;
+To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).
 :::
 
 At this stage, you will create two properties for the search application logic:
 
-* A text string that is the search criteria,&#x20;
-* A Boolean that indicates whether the search is busy.&#x20;
+* A text string that is the search criteria,
+* A Boolean that indicates whether the search is busy.
 
 - Add the following code to implement the above properties:
 
@@ -69,7 +69,7 @@ You can see that the properties have a normal public getter which returns the pr
 
 ## Data Binding
 
-Next you will add a data binding to link the view to the view model. The text box will be bound to the search text, and whether the progress bar is visible to the user will  be bound to the Boolean.&#x20;
+Next you will add a data binding to link the view to the view model. The text box will be bound to the search text, and whether the progress bar is visible to the user will  be bound to the Boolean.
 
 Follow this procedure to add data binding to the view:
 
@@ -97,8 +97,8 @@ Follow this procedure to add data binding to the view:
 
 Your next step is to create the music store view model properties needed to process albums. These are:
 
-* a collection of album view models to represent the albums that the search might find,&#x20;
-* and a property to hold an album if the user selects one.&#x20;
+* a collection of album view models to represent the albums that the search might find,
+* and a property to hold an album if the user selects one.
 
 Here you will use the `ObservableCollection` - this is a collection is capable of notification, and it is provided by the .NET framework.
 
@@ -130,7 +130,7 @@ Next to bind these properties to the list box in the view, follow this procedure
 
 ## Mock Data
 
-Now, to test the app at this stage, you will add some mock data directly to the view model.&#x20;
+Now, to test the app at this stage, you will add some mock data directly to the view model.
 
 Follow this procedure:
 
@@ -150,4 +150,4 @@ public MusicStoreViewModel()
 
 <p><img className="image-medium-zoom" src={MusicStoreMockSearchScreenshot} alt="" /></p>
 
-This shows that the data binding from the list to the album collection in the view model is working, but the view is not graphical yet. On the next page you will develop the app further by replacing the text with graphical album tiles. &#x20;
+This shows that the data binding from the list to the album collection in the view model is working, but the view is not graphical yet. On the next page you will develop the app further by replacing the text with graphical album tiles. 

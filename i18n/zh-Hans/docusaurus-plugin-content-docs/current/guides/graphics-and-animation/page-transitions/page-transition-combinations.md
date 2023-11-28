@@ -7,7 +7,7 @@ title: Page Transition Combinations
 
 You can combine two or more built-in page transitions to create a new effect.
 
-Add a `CompositePageTransition` element to combine the effects of two or more different built-in transitions.&#x20;
+Add a `CompositePageTransition` element to combine the effects of two or more different built-in transitions.
 
 For example, the code here sample creates a transition that slides the views diagonally (the result of combining a horizontal and vertical slide), and also fades the old views out and the new in.
 

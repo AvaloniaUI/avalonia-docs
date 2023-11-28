@@ -30,7 +30,7 @@ You will probably use these properties most often:
 <table><thead><tr><th width="289">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Items</code></td><td></td></tr><tr><td><code>SelectedIndex</code></td><td>The (zero-based) index of the selected item, or in the case of multiple selection the first selected item.</td></tr><tr><td><code>SelectedItem</code></td><td>The selected item (object) from the items collection, or in the case of multiple selection the first selected item.</td></tr><tr><td><code>SelectedItems</code></td><td>The selected items in a list.</td></tr><tr><td><code>Selection</code></td><td>An <code>ISelectionModel</code> object with various methods to track multiple selected items. This is is optimized for a large items collection.</td></tr><tr><td><code>SelectionMode</code></td><td>The mode of selection, see table below.</td></tr><tr><td><p><code>ScrollViewer.Horizontal</code></p><p><code>ScrollBarVisibility</code></p></td><td>The horizontal scrollbar visibility for the built-in scroll viewer. Options are 'Disabled' (default), 'Auto', 'Hidden' and 'Visible'. When disabled, overflow is hidden. </td></tr><tr><td><p><code>ScrollViewer.Vertical</code></p><p><code>ScrollBarVisibility</code></p></td><td>The vertical scrollbar visibility for the built-in scroll viewer. Options are 'Disabled', 'Auto' (default), 'Hidden' and 'Visible'. When disabled, overflow is hidden. </td></tr></tbody></table>
 
 :::info
-To optimize performance when the items collection is large, use of the `ISelectionModel` is recommended.&#x20;
+To optimize performance when the items collection is large, use of the `ISelectionModel` is recommended.
 :::
 
 ## Selection Mode

@@ -8,11 +8,11 @@ import MusicStoreWrapPanelScreenshot from '/img/tutorials/music-store-app/add-co
 
 # Album View
 
-On this page you will continue developing the search results list for the app by replacing the text currently shown with graphical album tiles.&#x20;
+On this page you will continue developing the search results list for the app by replacing the text currently shown with graphical album tiles.
 
 ## Icon Resource
 
-The first step here is to add a resource for the 'music note' icon. You will use this to act as a placeholder icon for the album covers in the app - they will eventually be replaced by the downloaded album cover artwork. &#x20;
+The first step here is to add a resource for the 'music note' icon. You will use this to act as a placeholder icon for the album covers in the app - they will eventually be replaced by the downloaded album cover artwork. 
 
 To add the music note icon resource, follow this procedure:
 
@@ -30,11 +30,11 @@ To add the music note icon resource, follow this procedure:
 
 ## Album View
 
-The next step is to create a graphical 'tile' view for an album. You will then cause this to be used instead of the text that currently shows for each album in the list.&#x20;
+The next step is to create a graphical 'tile' view for an album. You will then cause this to be used instead of the text that currently shows for each album in the list.
 
 To create the graphical 'tile' view, follow this procedure:
 
-- In the solution explorer, right-click the **/Views** folder and then click **Add**. &#x20;
+- In the solution explorer, right-click the **/Views** folder and then click **Add**. 
 - Click **Avalonia User Control**.
 - When prompted for the name, type 'AlbumView'.
 - Press enter.
@@ -54,11 +54,11 @@ To create the graphical 'tile' view, follow this procedure:
 </StackPanel>
 ```
 
-The preview pane will now show the new tile view with the music note icon placed in the center.&#x20;
+The preview pane will now show the new tile view with the music note icon placed in the center.
 
 ## View Locator
 
-The album view model will eventually contain data for the name of an album, the artist, and its downloaded cover art, but at this stage you will continue to use just the placeholder music note icon. &#x20;
+The album view model will eventually contain data for the name of an album, the artist, and its downloaded cover art, but at this stage you will continue to use just the placeholder music note icon. 
 
 As you saw on the last page, at this point the album list currently just shows the (fully qualified) name of the album view model class.
 
@@ -80,7 +80,7 @@ In this step you will be using the view locator class (**ViewLocator.cs** file) 
 The view locator can therefore always be found by _Avalonia UI,_ when it searches for a data template.
 
 :::info
-For more details about the **data template** concept, see [here](../../concepts/templates/).&#x20;
+For more details about the **data template** concept, see [here](../../concepts/templates/).
 :::
 
 The view locator acts as a data template for a view model (in this case the album view model) under the conditions that:
@@ -110,18 +110,18 @@ The view locator is finding the view `AlbumView` to use as a data template for t
 
 ## List Items Panel Template
 
-In this step you will tidy up the list display so that the album covers wrap around to fill all the space available.&#x20;
+In this step you will tidy up the list display so that the album covers wrap around to fill all the space available.
 
-A list box has a property that contains a template control for laying out the list items. By default this is a stack panel. To make the album covers wrap around to fill all the space, you can change the panel template to be a wrap panel.&#x20;
+A list box has a property that contains a template control for laying out the list items. By default this is a stack panel. To make the album covers wrap around to fill all the space, you can change the panel template to be a wrap panel.
 
-You will also add some style attributes to the list box.&#x20;
+You will also add some style attributes to the list box.
 
 To tidy up the list, follow this procedure:
 
 - Stop the app if it is still running.
 - Locate and open the **MusicStoreView.axaml** file.
 - Expand the `<ListBox>` element so that it has start and end tags.
-- Add the `<ListBox.ItemsPanel>` XAML shown:&#x20;
+- Add the `<ListBox.ItemsPanel>` XAML shown:
 
 ```markup
 <ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}"
@@ -139,4 +139,4 @@ To tidy up the list, follow this procedure:
 
 <p><img className="image-medium-zoom" src={MusicStoreWrapPanelScreenshot} alt="" /></p>
 
-On the next page, you will add some business logic in the form of a data service, so that you can get real album data from the search.&#x20;
+On the next page, you will add some business logic in the form of a data service, so that you can get real album data from the search.

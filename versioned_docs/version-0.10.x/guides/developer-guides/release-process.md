@@ -20,7 +20,7 @@ The git tree should now look like this:
 <img className="center" src={ReleaseGitTreeScreenshot} alt="" />
 
 * Now login at `dev.azure.com` to access the azure pipelines. Wait for the CI to finish the build.
-* The package for `0.10.2` should now be on the `avalonia-all` nuget feed. You should run a due diligence test on this build to ensure you are happy with the release and the packages work.&#x20;
+* The package for `0.10.2` should now be on the `avalonia-all` nuget feed. You should run a due diligence test on this build to ensure you are happy with the release and the packages work.
 
 :::danger
 Don't assume the Nuget packages will work just because master was working. In the past some technical changes i.e. Strong Naming broke nuget packages.

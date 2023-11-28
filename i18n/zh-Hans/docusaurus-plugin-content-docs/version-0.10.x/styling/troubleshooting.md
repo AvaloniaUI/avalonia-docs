@@ -38,7 +38,7 @@ Here styles from file **Styles1.axaml** were applied first, so setters in styles
 
 ### Locally set Properties override Styles
 
-Similarly, to WPF, Avalonia properties can have multiple values, often of different priorities.&#x20;
+Similarly, to WPF, Avalonia properties can have multiple values, often of different priorities.
 
 In this example you can see that local value (defined directly on the control) has higher priority than style value, so text block will have red foreground:
 
@@ -71,7 +71,7 @@ Let's imagine a situation in which you might expect a second style to override p
 <Border Width="100" Height="100" Margin="100" />
 ```
 
-With this code example the `Border` has a Red background normally and Blue when the pointer is over it. This is because as with CSS more specific selectors have precedence. It is an issue, when you want to override default styles of any state (pointerover, pressed or others) with a single style. To achieve it you will need to have new styles for these states as well.&#x20;
+With this code example the `Border` has a Red background normally and Blue when the pointer is over it. This is because as with CSS more specific selectors have precedence. It is an issue, when you want to override default styles of any state (pointerover, pressed or others) with a single style. To achieve it you will need to have new styles for these states as well.
 
 :::info
 Visit the Avalonia source code to find the [original templates](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls) when this happens and copy and paste the styles with pseudoclasses into your code.
@@ -90,7 +90,7 @@ The following code example of styles that can be expected to work on top of defa
 </Style>
 ```
 
-You might expect the `Button` to be red by default and blue when pointer is over it. In fact, only setter of first style will be applied, and second one will be ignored.&#x20;
+You might expect the `Button` to be red by default and blue when pointer is over it. In fact, only setter of first style will be applied, and second one will be ignored.
 
 The reason is hidden in the Button's template. You can find the default templates in the Avalonia source code (old [Default](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Default/Button.xaml) theme and new [Fluent](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml) theme), but for convenience here we have simplified one from the Fluent theme:
 
@@ -124,7 +124,7 @@ You can see this behavior for all controls in the default themes (both old Defau
 :::
 
 :::info
-Why default styles change the ContentPresenter `Background` property directly instead of changing the `Button.Background` property?&#x20;
+Why default styles change the ContentPresenter `Background` property directly instead of changing the `Button.Background` property?
 
 This is because if the user were to set a local value on the button, it would override all styles, and make button always the same color. For more details see this [reverted PR](https://github.com/AvaloniaUI/Avalonia/pull/2662#issuecomment-515764732).
 :::

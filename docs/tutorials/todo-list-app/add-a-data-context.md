@@ -14,7 +14,7 @@ To set the data context, follow this procedure:
 - Locate the **MainWindow.axaml** file in the **Views** folder.
 - Remove the `<Design.DataContext>` tag completely.
 - Add the `x:DataType="vm:MainWindowViewModel"` attribute to `<Window>` element.
-- Locate the content `<views:ToDoListView/>`&#x20;
+- Locate the content `<views:ToDoListView/>`
 - Add the attribute `DataContext="{Binding ToDoList}"` as follows:
 
 ```xml
@@ -33,7 +33,7 @@ To set the data context, follow this procedure:
 </Window>
 ```
 
-The arrangement of views and view models now has an additional data context; defined as a binding, that will allow the _Avalonia UI_ binder to locate the `ToDoList` property on the `ToDoListViewModel` object. This object has already been instantiated in code during app initialization.&#x20;
+The arrangement of views and view models now has an additional data context; defined as a binding, that will allow the _Avalonia UI_ binder to locate the `ToDoList` property on the `ToDoListViewModel` object. This object has already been instantiated in code during app initialization.
 
 So here is the arrangement after the data context binding has been resolved:
 

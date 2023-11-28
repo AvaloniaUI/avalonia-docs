@@ -35,7 +35,7 @@ This defines the direction of the pull. There are 4 available values;
 * `PullDirection.LeftToRight` : Pull starts from the left edge and moves towards the right
 * `PullDirection.RightToLeft` : Pull starts from the right edge and moves towards the top
 
-## Useful Properties&#x20;
+## Useful Properties
 
 You will probably use these properties most often:
 

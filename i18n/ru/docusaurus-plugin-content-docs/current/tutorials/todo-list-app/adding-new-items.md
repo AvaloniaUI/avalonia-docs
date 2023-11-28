@@ -6,7 +6,7 @@ import ToDoAddNewItemsScreenshot from '/img/gitbook-import/assets/image (44).png
 
 # Add New Items
 
-When you created the `ToDoListView` user control earlier in this tutorial, you added a button so that the user can add a new item. On this page you will add an action to the button.&#x20;
+When you created the `ToDoListView` user control earlier in this tutorial, you added a button so that the user can add a new item. On this page you will add an action to the button.
 
 When the user clicks the button, you want the application to show a new view that will allow the user to enter the description of a new item.
 
@@ -14,8 +14,8 @@ When the user clicks the button, you want the application to show a new view tha
 
 To create a view model for the new view, follow this procedure:
 
-- In the **Solution Explorer** locate and right-click the **ViewModels** folder.&#x20;
-- Click **Add**, then **Class**.&#x20;
+- In the **Solution Explorer** locate and right-click the **ViewModels** folder.
+- Click **Add**, then **Class**.
 - Name the class 'AddItemViewModel'. Click **Add**.
 - Add the description property as shown:
 
@@ -35,11 +35,11 @@ namespace ToDoList.ViewModels
 
 To create the new view, follow this procedure if you are using Visual Studio:
 
-- In the **Solution Explorer** locate and right-click the **Views** folder.&#x20;
+- In the **Solution Explorer** locate and right-click the **Views** folder.
 - Click **Add**
 - Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
-- In **Name** enter 'AddItemView'&#x20;
-- Click **Add**&#x20;
+- In **Name** enter 'AddItemView'
+- Click **Add**
 
 ### .NET Core CLI
 

@@ -43,7 +43,7 @@ The value and other properties are nullable decimals; so you can create a custom
 Remember to specify a `FormatString` property when you create a custom decimal increment and range.
 :::
 
-For example:&#x20;
+For example:
 
 ```markup
 <StackPanel Margin="20">  

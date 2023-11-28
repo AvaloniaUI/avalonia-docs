@@ -6,7 +6,7 @@ description: REFERENCE
 
 Welcome to the _Avalonia UI_ styles reference section. This contains information about:
 
-* Style selector formats&#x20;
+* Style selector formats
 * Pseudo classes
 
 :::info

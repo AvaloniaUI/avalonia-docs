@@ -8,7 +8,7 @@ import MusicStorePrettyButtonScreenshot from '/img/tutorials/music-store-app/add
 
 # Add and Layout Controls
 
-The main window of the app will eventually show a list of album covers in the user's collection, with a button at its top-right corner to allow the user to add a new album. The button will open a search dialog window to find new albums to add.&#x20;
+The main window of the app will eventually show a list of album covers in the user's collection, with a button at its top-right corner to allow the user to add a new album. The button will open a search dialog window to find new albums to add.
 
 On this page you will learn how to layout the main window so that the button appears at its top-right corner, as required.
 
@@ -18,7 +18,7 @@ To display a button in the content zone of the main window, follow this procedur
 
 - Stop the app if it is still running.
 - Locate and open the **MainWindow.axaml** file.
-- Inside the panel element, add the following XAML for a button. The panel XAML should look like this:&#x20;
+- Inside the panel element, add the following XAML for a button. The panel XAML should look like this:
 
 ```markup
 <Panel>
@@ -46,7 +46,7 @@ Follow this procedure to position the button correctly:
 
 - Stop the app if it is still running
 - Wrap the button element in a new panel element.
-- Add a margin attribute to the new panel element, with a value of 40. &#x20;
+- Add a margin attribute to the new panel element, with a value of 40. 
 - Add horizontal and vertical alignment attributes to the button element, as shown:
 
 ```markup
@@ -56,15 +56,15 @@ Follow this procedure to position the button correctly:
 </Panel>
 ```
 
-You should see all these changes reflected in the preview pane as you add them.&#x20;
+You should see all these changes reflected in the preview pane as you add them.
 
 ## Button Icon
 
-Have a look back at the image of the finished app [here](./). &#x20;
+Have a look back at the image of the finished app [here](./). 
 
 You will see that the button shows an icon, and not text (as it currently does). This is actually the Microsoft Store icon from the Fluent Icons collection, and _Avalonia UI_ has definitions for all these for you to use.
 
-To use the Microsoft Store icon, follow this procedure:&#x20;
+To use the Microsoft Store icon, follow this procedure:
 
 - Navigate to the _Avalonia UI_ _GitHub_ to find the list of Fluent Icons at [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
 - Use your browser's text search to locate the name of the icon 'store\_microsoft\_regular'. There should be some code similar to:
