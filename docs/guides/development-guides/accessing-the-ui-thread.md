@@ -34,75 +34,52 @@ For the possible values of the `DispatcherPriority` enumeration, see [here](http
 
 ## Example
 
-In this example a text block is used to show the result of a long running task, and a button is used to start the work. In this version, the fire-and-forget `Post` method is used:
-
-```xml title='XAML'
-<StackPanel Margin="20">    
-  <Button x:Name="RunButton" Content="Run long running process" 
-          Click="ButtonClickHandler" />
-  <TextBlock x:Name="ResultText" Margin="10"/>
-</StackPanel>
-```
+This example shows how to access the ui thread from a worker thread to update a viewmodel property:
 
 ```csharp title='Task C#'
+using Avalonia.Threading;
+using ReactiveUI;
 using System.Threading.Tasks;
-...
-private async Task LongRunningTask()
+
+namespace AvaloniaApplication1.ViewModels;
+
+public class MainViewModel : ViewModelBase
 {
-    this.FindControl<Button>("RunButton").IsEnabled = false;
-    this.FindControl<TextBlock>("ResultText").Text = "I'm working ...";
-    await Task.Delay(5000);
-    this.FindControl<TextBlock>("ResultText").Text = "Done";
-    this.FindControl<Button>("RunButton").IsEnabled = true;
+    private string _text = string.Empty;
+    public string Text
+    {
+        get => _text;
+        set => this.RaiseAndSetIfChanged(ref _text, value);
+    }
+
+    public MainViewModel()
+    {
+        // Execute OnTextFromAnotherThread on the thread pool
+        // to demonstrate how to access the UI thread from
+        // there.
+        Task.Run(() => OnTextFromAnotherThread("test"));
+    }
+
+    private void UpdateUiText(string text)
+    {
+        Text = text;
+    }
+
+    private string GetUiText()
+    {
+        return Text;
+    }
+
+    private async void OnTextFromAnotherThread(string text)
+    {
+        // Start the job on the ui thread and return immediately.
+        Dispatcher.UIThread.Post(() => UpdateUiText(text));
+
+        // Start the job on the ui thread and wait for the result.
+        var result = await Dispatcher.UIThread.InvokeAsync(GetUiText);
+    }
 }
 ```
-
-```csharp title='Post C#'
-private void ButtonClickHandler(object sender, RoutedEventArgs e)
-{
-    // Start the job and return immediately
-    Dispatcher.UIThread.Post(() => LongRunningTask(), 
-                                            DispatcherPriority.Background);
-}
-```
-
-<img src={DispatchPostLongRunningScreenshot} alt=""/>
-
-Notice that because the long running task is executed on its own thread, the UI does not lose responsiveness.
-
-To get a result from the long running task, the XAML is the same, but this version uses the `InvokeAsync`method:
-
-```xml title='XAML'
-<StackPanel Margin="20">    
-  <Button x:Name="RunButton" Content="Run long running process" 
-          Click="ButtonClickHandler" />
-  <TextBlock x:Name="ResultText" Margin="10" />
-```
-
-```csharp title='Task C#'
-using System.Threading.Tasks;
-...
-private async Task<string> LongRunningTask()
-{
-    this.FindControl<Button>("RunButton").IsEnabled = false;
-    this.FindControl<TextBlock>("ResultText").Text = "I'm working ...";
-    await Task.Delay(5000);    
-    return "Success";
-}
-```
-
-```csharp title='InvokeAsync C#'
-private async void ButtonClickHandler(object sender, RoutedEventArgs e)
-{
-    var result = await Dispatcher.UIThread.InvokeAsync(LongRunningTask, 
-                                    DispatcherPriority.Background);
-    //result returns here
-    this.FindControl<TextBlock>("ResultText").Text = result;
-    this.FindControl<Button>("RunButton").IsEnabled = true;
-}
-```
-
-<img src={DispatchInvokeAsyncLongRunningScreenshot} alt=""/>
 
 ## More Information
 
