@@ -2,36 +2,41 @@
 description: CONCEPTS
 ---
 
-# Compiled Bindings
+# Compiled Bindings (рус: Компилируемые привязки)
 
-Bindings defined in the XAML are using reflection in order to find and access the requested property in your `ViewModel`. In Avalonia you can also use compiled bindings, which has some benefits:
+Указанные в XAML привязки, используют рефлексию для поиск и запроса доступа ко свойству во `ViewModel`.
+Также Avalonia поддерживает компиляцию привязок, что дает ряд преимуществ:
 
-* If you use compiled bindings and the property you bind to is not found, you will get a compile-time error. Hence you get a much better debugging experience.
-* Reflection is known to be slow ([see this article on codeproject.com](https://www.codeproject.com/Articles/1161127/Why-is-reflection-slow)). Using compiled bindings can therefore improve the performance of your application.
+* Если компилируемая привязка и свойства не найдены, то вы получите ошибку на этапе компиляции проекта.
+* Повышение производительности, за счет замены рефлексии на компилируемые привязки в XAML. ([подробнее о скорости рефлексии на codeproject.com](https://www.codeproject.com/Articles/1161127/Why-is-reflection-slow)).
 
-## Enable and disable compiled bindings
+## Включение и отключение compiled bindings
 
 :::info
 
-Depending on the template that was used to create the Avalonia project, compiled bindings may or may not be enabled by default. You can check this in the project file.
+В зависимости от шаблона, использованного для создания проекта Avalonia, compiled bindings могут быть, по-умолчанию, как включены, так и отключены. 
+Вы можете проверить значение в проекте.
 
 ::: 
 
-### Enable and disable globally
+### Включение и отключение по всему проекту
 
-If you want your application to use compiled bindings globally by default, you can add
+Для включение компиляции привязок по-умолчанию, в файл проекта необходимо добавить:
 
 ```markup
 <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 ```
 
-to your project file. You will still need to provide `x:DataType` for the objects you want to bind but you don't need to to set `x:CompileBindings="[True|False]"` for each `UserControl` or `Window`.
+Конечно, вам по-прежнему необходимо указывать `x:DataType` для привязываемых объектов, однако больше не потребуется прописывать `x:CompileBindings="[True|False]"` для каждого `UserControl` или `Window`.
 
-### Enable and disable per UserControl or Window
+### Включение и отключение для каждого UserControl и Window
 
-To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](../data-templates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. You can also specify the `DataType` in the `Binding` directly.
+Для использования компилируемых привязок, вам необходимо указывать `DataType` для объекта привязки.
+В [`DataTemplates`](../data-templates) определено свойство `DataType`, для остальных элементов мы можете указать его через `x:DataType`.
+Скорее всего, вы укажете `x:DataType` в основном элементе (`Window` или `UserControl`), но еще, вы можете указать `DataType` непосрелственно в `Binding`.
 
-You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
+Для включение или отключения компиляции привязок, укажите `x:CompileBindings="[True|False]"`. 
+Все вложенные элементы унаследуют данное свойство, однако вы можете переопределить его для них:
 
 ```markup
 <!-- Set DataType and enable compiled bindings -->
@@ -55,9 +60,10 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
 </UserControl>
 ```
 
-## CompiledBinding-Markup
+## Compiled Binding-Markup (рус: Компиляция конкретных привязок в разметке)
 
-If you don't want to enable compiled bindings for all child nodes, you can also use the `CompiledBinding`-markup. You still need to define the `DataType`, but you can omit `x:CompileBindings="True"`.
+Если вы не хотите использовать компилируемые привязки для всех вложенных элементов, то можно использовать `CompiledBinding` вмест `Binding`.
+Вам необходимо указывать `DataType`, но вы можете не указывать `x:CompileBindings="True"`.
 
 ```markup
 <!-- Set DataType -->
@@ -81,9 +87,10 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
 </UserControl>
 ```
 
-## ReflectionBinding-Markup
+## Reflection Binding-Markup (рус: Рефлексия конкретных привязок в разметке)
 
-If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use compiled binding at a certain position or you hit one of the [known limitations](#known-limitations), you can use the `ReflectionBinding`-markup.
+Если в основном элементе у вас указана компиляция привязок (через `x:CompileBindings="True"`),
+а вам требуется использовать рефлексиб в силу разных причин, то замените `Binding` на `ReflectionBinding`, как в примере ниже:
 
 ```markup
 <!-- Set DataType -->
@@ -107,9 +114,9 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
 </UserControl>
 ```
 
-## Type casting
+## Type casting (рус: Приведение типов)
 
-In some cases the target type of the binding expression cannot be automatically evaluated. In such cases you must provide an explicite type cast in the binding expression.
+Иногда невозможно автоматически определить тип привязки. В этом случае, вам необходимо указать его явно:
 
 ```markup
 <ItemsRepeater ItemsSource="{Binding MyItems}">
@@ -127,4 +134,5 @@ In some cases the target type of the binding expression cannot be automatically 
 </ItemsRepeater>
 ```
 
-In this case, the button command shall not be bound to the item's `DataContext` but to a command that is defined in the `DataContext`of the `ItemsRepeater`. The single item will be identified using a `CommandParameter` bound to the item's `DataContext`. Therefore, you must specify the type of the "parent" `DataContext` via cast expression `((vm:MyUserControlViewModel)DataContext)`.
+В данном примере, команда для кнопки определена в `DataContext` у `ItemsRepeater`, а значение для `CommandParameter` из `DataContext` каждого элемента.
+Поэтому необходимо указать `DataContext` родителя через выражение `((vm:MyUserControlViewModel)DataContext)`.
