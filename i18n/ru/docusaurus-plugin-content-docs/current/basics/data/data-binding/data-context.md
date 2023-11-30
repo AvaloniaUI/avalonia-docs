@@ -7,7 +7,7 @@ import DataContextTreeSearchDiagram from '/img/gitbook-import/assets/image (62).
 import DataContextContentBindingScreenshot from '/img/gitbook-import/assets/image (20) (2).png';
 import DataContextPreviewerScreenshot from '/img/gitbook-import/assets/image (40) (1).png'
 
-# Data Context
+# Data Context (рус: Контекст Данных)
 
 When Avalonia performs data binding, it has to locate an application object to bind to. This location is represented by a **Data Context**.
 

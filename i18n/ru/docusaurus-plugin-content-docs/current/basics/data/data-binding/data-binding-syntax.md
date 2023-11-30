@@ -4,7 +4,7 @@ description: CONCEPTS
 
 import DataBindingModeDiagram from '/img/gitbook-import/assets/image (2).png';
 
-# Data Binding Syntax
+# Data Binding Syntax (рус: Синтаксис Привязки Данных)
 
 In Avalonia, you can define data binding in XAML or code. To define data binding in XAML, you use the data binding mark-up extension, and this has its own syntax which is described here.
 
