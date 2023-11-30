@@ -14,6 +14,6 @@ Many Avalonia controls consist of a combination of other Avalonia controls. If y
 ## Application Window is transparent or there is no content rendered
 
 Make sure you have installed and included Avalonia theme in your application. 
-If you use build-in [Fluent](themes/fluent.md) or [Simple](themes/simple.md) themes, please visit their corresponding pages on how to install them.
+If you use built-in [Fluent](themes/fluent.md) or [Simple](themes/simple.md) themes, please visit their corresponding pages on how to install them.
 
 If you use third party themes, please contact their maintainers.
