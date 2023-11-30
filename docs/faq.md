@@ -150,7 +150,7 @@ Avalonia also runs on macOS 10.13, but we are in the process of migrating to the
 
 :::note
 .NET 7 is required for iOS support.
-:::note
+:::
 
 ### What versions of Browser are supported?
 
