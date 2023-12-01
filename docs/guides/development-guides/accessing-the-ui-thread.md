@@ -36,7 +36,7 @@ For the possible values of the `DispatcherPriority` enumeration, see [here](http
 
 This example shows how to access the ui thread from a worker thread to update a viewmodel property:
 
-```csharp title='Task C#'
+```csharp
 using Avalonia.Threading;
 using ReactiveUI;
 using System.Threading.Tasks;
