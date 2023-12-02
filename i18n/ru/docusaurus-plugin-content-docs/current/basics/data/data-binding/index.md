@@ -6,42 +6,48 @@ import DataBindingBasicOverviewDiagram from '/img/gitbook-import/assets/image (3
 
 # Data Binding (рус: Привязка Данных)
 
-Avalonia uses data binding to move data from application objects into UI controls, change the data in application objects in response to user input, and initiate actions on the application objects in response to commands from the user. 
+Привязка данных используется отображения данных, а также для настройки взаимодействия пользователя с интерфейсом программы.
 
 <img src={DataBindingBasicOverviewDiagram} alt=''/>
 
-In this arrangement, the control is the **binding target**, and the object is the **data source**.
+В указанной схеме, `Control` - элемент к которому идет **привязка**, а `Object` - **источник данных**.
 
-Avalonia runs a data binding system to complete much of the above activity from simple mappings declared in the XAML; that is without requiring you to add a lot of additional coding.
+Avalonia использует систему привязки, для автоматического выполнения большей части вышеописанных действий,
+на основе обычных сопоставлений, указанных в XAML. Это не требует от вас написания большого количества кода.
 
-Data binding mappings are defined using XML between the attributes of an Avalonia control, and the  properties of an application object. In general terms, the syntax is like this:
+Сопоставление привязанных данных указывается в XML файлах, между аттрибутами элементов Avalonia, и свойствами 
+объектов приложения. Синтаксис выглядит примерно так:
 
 ```xml
 <SomeControl Attribute="{Binding PropertyName}" />
 ```
 
-The mappings can be bidirectional: where changes in the properties of a bound application object are reflected in the control, and changes in the control (however caused) are applied to the underlying object. An example of bidirectional binding is a text input bound to a string property of an object. The XML might look like this:
+Двунаправленные привязки: изменение свойства, вызывает изменение элемента, а изменение элемента, изменяет и свойство.
 
 ```xml
 <TextBox Text="{Binding FirstName}" />
 ```
 
-If the user edits the text in the text box, then the `FirstName` property of the underlying object is automatically updated. In the other direction, if the `FirstName` property of the underlying object changes, then the text visible in the text box is updated.
+Если пользователь изменяет текст в `TextBox`, то значение свойства `FirstName` будет также изменено автоматически.
 
-Bindings can be unidirectional: where changes in the properties of a bound application object are reflected in the control, but the user cannot change the control. An example of this would be the text block control, which is read-only.
+Однонаправленные привязки: изменение привязанного свойства, вызывает изменение в привязанном элементе,
+однако пользователь не может изменить значение в самом элементе.
+Примером такой ситуации является `TextBlock`, который доступен только для чтения:
 
 ```
 <TextBlock Text="{Binding StatusMessage}" />
 ```
 
-Binding is used with the MVVM architectural pattern, and this is one of the principle ways of programming with Avalonia UI.
+Привязка используется в коммбинации с шаблоном проектиования MVVM.
+Это один из основных способов создания приложений на Avalonia UI.
 
 :::info
-For more information about how to use the MVVM Pattern with Avalonia, see the concept page [here](../../../concepts/the-mvvm-pattern).
+Подбробную информаци по использованию шаблона MVVM в Avalonia, см. [здесь](../../../concepts/the-mvvm-pattern).
 :::
 
 :::info
-For background information on the origins and development of the MVVM pattern at _Microsoft_, see the _Microsoft Patterns and Practices_ article [here](https://msdn.microsoft.com/en-us/library/hh848246.aspx).
+Подробную информацию об истории появления и развитии шаблона MVVM, смотрите на [_Microsoft Patterns
+and Practices_](https://msdn.microsoft.com/en-us/library/hh848246.aspx).
 :::
 
-On the next page, you will learn where the data binder gets the data object from.
+На следующей странице вы узнаете, каким образом `Data Binder` получает объекты данных.
