@@ -3,7 +3,7 @@ id: the-design-preview
 title: The Design Preview
 ---
 
-On this page, you will explore the attributes of the window; and then use some of them to adjust the size of the window when it is shown in the preview pane.
+На это странице, you will explore the attributes of the window; and then use some of them to adjust the size of the window when it is shown in the preview pane.
 
 Examine the XAML for the `<Window>` tag. It will look like this:
 

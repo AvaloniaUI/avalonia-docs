@@ -1,6 +1,6 @@
 ---
 id: add-some-layout
-title: Добавление Нескольких Элементов
+title: Добавление Нескольких Control
 ---
 
 import StackPanelDiagram from '/img/get-started/add-some-layout/image (40) (1) (1).png';

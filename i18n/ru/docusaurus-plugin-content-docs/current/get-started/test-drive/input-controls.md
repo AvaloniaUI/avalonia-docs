@@ -59,7 +59,7 @@ Finally, you can tidy up the alignment of the controls in the grid using their m
 </Grid>
 ```
 
-- Run the app to see the result
+- Запустите приложение и посмотрите на результат его работы
 
 
 

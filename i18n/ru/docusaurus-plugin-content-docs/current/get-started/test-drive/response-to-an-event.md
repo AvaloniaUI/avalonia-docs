@@ -83,7 +83,7 @@ If you're using an IDE you will see the Avalonia UI Intellisense as you type.
 <img className="center" src={AvaloniaEventIntellisenseScreenshot} alt="" />
 :::
 
-- Run the app and click the button.
+- Запустите приложение и нажмите на кнопку.
 
 You should see the result on the Output window for Debug, like this:
 

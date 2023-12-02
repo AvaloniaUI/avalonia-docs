@@ -7,7 +7,7 @@ import Highlight from '@site/src/components/Highlight';
 
 The action you will implement here is to update the Fahrenheit temperature control, using the value of the `celsius` control, and a simple formula, whenever the button is clicked.
 
-## Control Names
+## Названия Control
 
 When Avalonia creates the main window at runtime, it also creates objects for each of the controls defined in the window. Your code can access the controls at runtime, but to access them, it will need some control names.
 

@@ -61,4 +61,4 @@ You will see the new text in the preview pane change as you type. This is an exa
 
 - Run the project to see your new text also appear at runtime.
 
-On the next page you will see how to add a simple button to the window.
+На следующей странице вы узнаете, как добавить обычную кнопку на экран.

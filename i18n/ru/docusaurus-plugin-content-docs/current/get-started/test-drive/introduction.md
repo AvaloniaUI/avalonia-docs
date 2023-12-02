@@ -1,6 +1,6 @@
 ---
 id: introduction
-title: Introduction
+title: Вступление
 ---
 
 You can use this section to get started right away with Avalonia. This will take you through a simple tutorial example step-by-step; and introduce you to some of the Avalonia concepts and techniques.
