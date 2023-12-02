@@ -29,12 +29,9 @@ Avalonia distinguishes itself from other UI frameworks such as WPF and Xamarin.F
 
 ## What versions of .NET can I use? 
 
-* .NET Framework 
-* .NET Core
-* .NET 5
-* .NET 6
-* .NET 7
-* .NET 8 (previews)
+* .NET Framework 4.6.2+
+* .NET Core 2.0+
+* .NET 5+ (including latest .NET 8)
 
 ---
 
@@ -103,24 +100,69 @@ Check out the [community guide](community.md) to see how you can get involved wi
 
 ---
 
-## What Linux Distros are supported?
+## What platforms are supported?
 
-* Debian 9 (Stretch)+
+:::warning
+You also must know which platforms are supported by your .NET version.
+Often .NET will drop support for older OS versions, while Avalonia still can work with them. So you might need to hold on updating the SDK.
+For example, [here is the list](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md) of supported OS versions by .NET 8.
+:::
+
+### Linux Distros
+
+* Debian 9+
 * Ubuntu 16.04+
 * Fedora 30+
 
+Other distros might also work. The main limitation is .NET SDK support and availability of X11 system.
+Alternatively, framebuffer linux backend is also supported.
+Version with Wayland support is in preview and not yet released.
+
+WSL 2 distros are supported as well, but `libice6`, `libsm6` and `libfontconfig1` dependencies must be installed individually.
+
 :::info
-Skia is built against glibc. If your distro uses something else instead, you need to build your own libSkiaSharp.so at [SkiaSharp](https://github.com/mono/SkiaSharp) . We provide a precompiled binary _only_ for Intel x86-64. ARM/ARM64 support is planned.
+Skia is built against glibc 2.17. If your distro uses something else instead, you need to build your own libSkiaSharp.so at [SkiaSharp](https://github.com/mono/SkiaSharp). You also can visit SkiaSharp home page for more information about supported versions.
 :::
 
-## What versions of macOS are supported?
+### What versions of Windows are supported?
 
-* macOS High Sierra 10.13+
+* Windows 8.1
 
-## What versions of Android are supported?
+Avalonia also runs on Windows 7, but new platforms specific features won't be available there, and we do not provide bug fixes for this version anymore. 
+
+### What versions of macOS are supported?
+
+* macOS 10.14+
+
+Avalonia also runs on macOS 10.13, but we are in the process of migrating to the Metal GPU API, which is currently disabled by default. It is planned to be enabled during one of minor updates.
+
+### What versions of Android are supported?
 
 * Android 5.0+ (API 21)
 
 :::note
-**Credits** - Portions of this documentation were adapted from [Dotnet docs](https://github.com/dotnet/docs/) licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+.NET 7 is required for Android support.
 :::
+
+### What versions of iOS are supported?
+
+* iOS 13.0+
+
+:::note
+.NET 7 is required for iOS support.
+:::
+
+### What versions of Browser are supported?
+
+Any browser with full WebAssembly support technically should work - https://caniuse.com/wasm.
+
+For the best performance and support we recommend latest Chrome or Safari versions.
+
+:::note
+.NET 7 is required for Browser support.
+Starting with 11.0.6 we recommend .NET 8.
+:::
+
+## Credits
+
+* Portions of this documentation were adapted from [Dotnet docs](https://github.com/dotnet/docs/) licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
