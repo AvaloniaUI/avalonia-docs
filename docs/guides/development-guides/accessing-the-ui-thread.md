@@ -34,51 +34,78 @@ For the possible values of the `DispatcherPriority` enumeration, see [here](http
 
 ## Example
 
-This example shows how to access the ui thread from a worker thread to update a viewmodel property:
+This example shows how to access the ui thread from a worker thread to update or get the text of a TextBlock.
+Create a new Avalonia project and replace the content of the following two files:
 
-```csharp
+MainView.axaml:
+```xml title='XAML'
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaApplication1.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApplication1.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+	<StackPanel Margin="20">
+		<TextBlock Name="TextBlock1" />
+	</StackPanel>
+</UserControl>
+```
+
+
+MainView.axaml.cs:
+```csharp title='MainView C#'
+using Avalonia.Controls;
 using Avalonia.Threading;
-using ReactiveUI;
+using System;
 using System.Threading.Tasks;
 
-namespace AvaloniaApplication1.ViewModels;
+namespace AvaloniaApplication1.Views;
 
-public class MainViewModel : ViewModelBase
+public partial class MainView : UserControl
 {
-    private string _text = string.Empty;
-    public string Text
+    public MainView()
     {
-        get => _text;
-        set => this.RaiseAndSetIfChanged(ref _text, value);
-    }
+        InitializeComponent();
 
-    public MainViewModel()
-    {
         // Execute OnTextFromAnotherThread on the thread pool
         // to demonstrate how to access the UI thread from
         // there.
-        Task.Run(() => OnTextFromAnotherThread("test"));
+        _ = Task.Run(() => OnTextFromAnotherThread("test"));
     }
 
-    private void UpdateUiText(string text)
-    {
-        Text = text;
-    }
-
-    private string GetUiText()
-    {
-        return Text;
-    }
+    private void SetText(string text) => TextBlock1.Text = text;
+    private string GetText() => TextBlock1.Text ?? "";
 
     private async void OnTextFromAnotherThread(string text)
     {
-        // Start the job on the ui thread and return immediately.
-        Dispatcher.UIThread.Post(() => UpdateUiText(text));
+        try
+        {
+            // Start the job on the ui thread and return immediately.
+            Dispatcher.UIThread.Post(() => SetText(text));
 
-        // Start the job on the ui thread and wait for the result.
-        var result = await Dispatcher.UIThread.InvokeAsync(GetUiText);
+            // Start the job on the ui thread and wait for the result.
+            var result = await Dispatcher.UIThread.InvokeAsync(GetText);
+
+            // This invocation would cause an exception because we are
+            // running on a worker thread:
+            // System.InvalidOperationException: 'Call from invalid thread'
+            //UpdateText(text);
+        }
+        catch (Exception)
+        {
+            throw; // Todo: Handle exception.
+        }
     }
 }
+
 ```
 
 ## More Information
