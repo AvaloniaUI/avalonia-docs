@@ -1,13 +1,15 @@
-# Styling
+# Styling (рус: Стилизация)
 
-The most obvious difference from other XAML frameworks is in its styling system. There are two ways of styling controls in Avalonia:
+В Avalonia существует два способа стилизации Controls:
 
-- A [`Style`](../../basics/user-interface/styling) is a CSS-like style. Styles aren't stored in a `Resources` collection as in WPF, they are stored in a separate `Styles` collection.
-- A [`ControlTheme`](../../basics/user-interface/styling/control-themes) is similar to a WPF `Style` and is usually used to create themes for lookless controls
+- [`Style (рус: Стили)`](../../basics/user-interface/styling) - это CSS-подобные стили.
+Они хранятся в коллекции `Styles`, а не `Resources`, как у WPF. 
+- [`ControlTheme`](../../basics/user-interface/styling/control-themes) подобны `Style` у WPF, 
+и обычно используются при создании тем для Lookless Controls
 
-## Example
+## Пример
 
-The following code shows a `UserControl` which defines its own CSS-like style.
+Нижеуказанный код показывает, как использовать CSS-подобный стиль в `UserControl`.
 
 ```markup
 <UserControl>
