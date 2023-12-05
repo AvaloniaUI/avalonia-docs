@@ -4,12 +4,14 @@ description: REFERENCE
 
 # Перешли с  WPF?
 
-This reference will help you leverage your existing knowledge of Windows Presentation Foundation (WPF) to learn _Avalonia UI_ quickly.
+Данный раздел поможет вам быстро изучить _Avalonia UI_, 
+используя имеющиеся знания о WPF.
 
-You will see how although _Avalonia UI_ is often very similar to WPF; there are some differences. In particular, in the way in which the following work:
+Здесь вы увидите, что хоть оба фреймфорка во многом похожи, есть существенные различия,
+В частности:
 
-* Styling
-* Data Templates
+* Styling (рус: Стилизация)
+* Data Templates (рус: Шаблоны Данных)
 
 import {DocsCardList} from '../../../../../../src/components/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
