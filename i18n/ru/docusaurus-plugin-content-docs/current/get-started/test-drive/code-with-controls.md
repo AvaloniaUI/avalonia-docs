@@ -5,45 +5,48 @@ title: Code With Controls
 
 import Highlight from '@site/src/components/Highlight';
 
-The action you will implement here is to update the Fahrenheit temperature control, using the value of the `celsius` control, and a simple formula, whenever the button is clicked.
+На этой странице вы узнаете, как обновить информацию температуры в Фаренгейтах, при изменении значения по Цельсия после каждого нажатия кнопки.
 
-## Control Names
+## Control Names (рус: Именованные Control)
 
-When Avalonia creates the main window at runtime, it also creates objects for each of the controls defined in the window. Your code can access the controls at runtime, but to access them, it will need some control names.
 
-To add some control names, follow this procedure:
+Когда Avalonia создает основное окно при выполнении программы,
+она также создает объекты для каждого Controls, определенного в окне.
+Для получения доступа к этим Controls из кода, необходимо указать их имена.
 
-- Stop the app if it is running.
-- Locate the `TextBox` for Celsius.
-- Add the name attribute like this:
+Для добавления имени, выполните следующую последовательность действий:
+
+- Завершите работу приложения, если оно запущено.
+- Найдите тег `TextBox` для Celsius.
+- Добавьте атрибут, как показано ниже:
 
 ```xml
 <TextBox ... Name="celsius"/>
 ```
 
-- Repeat the above for the Fahrenheit input:
+- Повторите действия для Fahrenheit:
 
 ```xml
 <TextBox ... Name="fahrenheit"/>
 ```
 
-## Get Control Values in Code-behind 
+## Получение значения Control в Code-Behind
 
-To demonstrate access to the text value of the `celsius` input, follow this procedure:
+Для демонстрации доступа к значению при изменении `celsius`, выполните следующие действия:
 
-- Switch to the **MainWindow.axaml.cs** code-behind file.
-- Locate the `ButtonClicked` event handler.
-- Alter the `Debug` statement to display the text property of the `celsius` input, like this:
+* Переключтесь на файл **MainWindows.axaml.cs**.
+* Найдите событие `ButtonClicked`.
+* Измените вывод `Debug.WriteLine`, чтобы увидеть изменение свойства `celsius` в консоли, например:
 
 ```csharp
 Debug.WriteLine($"Click! Celsius={celsius.Text}");
 ```
 
-- Run the app to confirm that you can see the value in the Celsius appear in the debug window.
+- Запустите приложение и убедитесь, что при изменении значения Celsius, в окне отладки выходит сообщение.
 
-## Set Control Values in Code-behind 
+## Изменение значения Control в Code-Behind
 
-To use the simple formula that converts Celsius temperature to Fahrenheit, you will first need to ensure that the Celsius input text converts to a number. The formula is then:
+Для использования формулы преобразования из температуры по Цельсия в градусы Фаренгейта, сперва необходимо преобразовать введенный текст по Цельсия в число, а затем использовать формулу:
 
 ```
 Tf = Tc * (9/5) + 32
@@ -51,13 +54,13 @@ Tf = Tc * (9/5) + 32
 
 To add the conversion formula, follow this procedure:
 
-- Locate the `ButtonClicked` event handler.
-- Alter the code in the event handler to check that the Celsius input text converts to a number.
-- Alter the code to include the conversion formula.
-- Update the text in the Fahrenheit input to the result of the conversion formula.
-- Run the app to check your work.
+- Найдите событие `ButtonClicked`.
+- Добавьте проверку вводимого текста на число. 
+- Добавьте формулу пересчета в Фаренгейты.
+- Получившееся значение укажите в Control Fahrenheit.
+- Запустите приложение и проверьте результат.
 
-One implementation of the above is as follows:
+Одна из возможных реализация:
 
 ```csharp
 if (Double.TryParse(celsius.Text, out double C))
@@ -72,24 +75,25 @@ else
 }
 ```
 
-You can check your work using the following conversion table:
+Вы можете свериться с таблицей готовых значений:
 
 | Celsius | Farenheit |
-| ---------- | --------- |
-| -10        | 14.0      |
-| 0          | 32.0      |
-| 10         | 50.0      |
-| 21         | 69.8      |
-| 25         | 77.0      |
-| 32         | 89.6      |
+|---------|-----------|
+| -10     | 14.0      |
+| 0       | 32.0      |
+| 10      | 50.0      |
+| 21      | 69.8      |
+| 25      | 77.0      |
+| 32      | 89.6      |
 
-### Exercises
+### Упражнения
 
-- You have now used an event handler to get and set control properties at runtime. You could now try some of these exercises:
-- Stop showing the gridlines (easy).
-- Stop the user changing the text in the Fahrenheit input by setting the `IsReadOnly` attribute (easy).
-- Calculate the conversion as the user types into the Celsius input (moderate).
+Теперь, когда вы умеете использовать обработку событий для получения и изменения свойств Controls во время выполнения программы, можно попробовать выболнить некоторые упражнения самостоятельно:
+
+* Отключить отображение сетки.
+* Запретите пользовательский ввод для Farenheit, установив атрибут `IsReadOnly`.
+* Добавьте пересчет поля Farenheit по мере изменения значения поля Celsius.
 
 :::info
-For full information about the complete range of Avalonia built-in controls, events and attributes, see the controls reference section [here](../../reference/controls/).
+Подробную информацию о встроенных Controls, событиях и атрибутах, см. [здесь](../../reference/controls/).
 :::
