@@ -2,13 +2,14 @@
 description: GUIDES - WPF Conversion
 ---
 
-# Data Templates
+# Data Templates (рус: Шаблоны Данных)
+ 
+В Avalonia UI, шаблоны данных не хранятся внутри ресурсов приложения.
+(Это верно и для стилей, см. [здесь](styling).)
 
-In Avalonia UI, data templates are not stored in the application resources. (The same is true of styles - see [here](styling).)
+Вместо этого, шаблоны данных помещаются в коллекцию `DataTemplates` у Control, или внутрь ... (и в `Application`):
 
-Instead, data templates are placed either inside a `DataTemplates` collection in a control, or inside the  (and on `Application`):
-
-For example, this code adds a data template to display the view model class `MyViewModel`:
+К примеру, указанный ниже код, добавит шаблон данных для отображения данных класса `MyViewModel`:
 
 ```markup
 <UserControl xmlns:viewmodels="using:MyApp.ViewModels"
@@ -28,8 +29,10 @@ For example, this code adds a data template to display the view model class `MyV
 <UserControl>
 ```
 
-Data templates in Avalonia can also target interfaces and derived classes (which cannot be done in WPF) and so the order of `DataTemplate`s can be important: `DataTemplate`s within the same collection are evaluated in declaration order so you need to place them from most-specific to least-specific as you would in code.
+В Avalonia, шаблоны данных могут привязываться к интерфейсам и производным классам, чего нельзя сделать в WPF.
+По этой причине, в `DataTemplate` важен порядок при использовании вложенных данных (также, как вы сделали бы это в коде).
 
-## Data Template Selector
+## Data Template Selector (рус: Селектор Шаблона Данных)
 
-In WPF you can create a `DataTemplateSelector` to select or create a `DataTemplate` based on the provided data. In Avalonia you cannot do this; but you can implement `IDataTemplate` which can be seen as a good replacement for the `DataTemplateSelector`. Please find a sample [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/IDataTemplateSample).
+В WPF, вы можете использовать `DataTemplateSelector` для выбора или создания `DataTemplate` на основе проброшенных данных.
+В Avalonia так сделать нельзя, но вы можете реализовать `IDataTemplate`, который можно рассматривать как хороший аналог `DataTemplateSelector`. Пример см. [здесь](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/IDataTemplateSample).
