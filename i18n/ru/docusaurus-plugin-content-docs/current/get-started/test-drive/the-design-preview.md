@@ -1,11 +1,13 @@
 ---
 id: the-design-preview
-title: The Design Preview
+title: The Design Preview (Предварительный просмотр)
 ---
 
-On this page, you will explore the attributes of the window; and then use some of them to adjust the size of the window when it is shown in the preview pane.
+На этой странице вы познакомитесь с аттрибутами окна, 
+а затем используете некоторые из них для настройки его отображения на панели предварительного просмотра.
 
-Examine the XAML for the `<Window>` tag. It will look like this:
+
+Проверьте в XAML наличие тега <Window>. Оно будет выглядеть следующим образом:
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -17,14 +19,15 @@ Examine the XAML for the `<Window>` tag. It will look like this:
         Title="GetStartedApp">
 ```
 
-The window tag starts by defining some of the XML namespaces that Avalonia uses. The aliases 'x', 'd' and 'mc' are used.
+Тег <Window> начинается с определения некоторых пространств имен XML, которые использует Avalonia.
+Также используются алиасы 'x', 'd' и 'mc'.
 
-The design namespace 'd' allows the design-time attributes `d:DesignWidth` and `d:DesignHeight`to be set. In the above code sample, these have been set to make the preview look more like a mobile (portrait orientation) display. 
+Пространство имен 'd', позволяется указывать атрибуты для предварительного просмотра, такие как `d:DesignWidth` и `d:DesignHeight`. В примере выше, они указаны так, чтобы размеры походили на экран смартфона. (книжная ориентация)
 
-With these attributes set, the preview of the window now looks like this:
+После установки новых значений, предварительный просмотр должен выглядеть так:
 
 <div style={{textAlign: 'center'}}>
     <img src="/img/get-started/test-drive/design-preview.png" alt="The design preview" width='460'/>
 </div>
 
-On the next page, you will see how to add some action to the app by responding to the button click event. 
+На следующей странице вы узнаете, как добавить обработку пользовательских событий. (нажатие, касание и т.д.)
