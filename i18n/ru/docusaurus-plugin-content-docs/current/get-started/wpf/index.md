@@ -2,7 +2,7 @@
 description: REFERENCE
 ---
 
-# Migrating from WPF
+# Перешли с  WPF?
 
 This reference will help you leverage your existing knowledge of Windows Presentation Foundation (WPF) to learn _Avalonia UI_ quickly.
 
