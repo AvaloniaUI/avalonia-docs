@@ -3,17 +3,24 @@ id: data-templates
 title: Data Templates
 ---
 
-Data Templates in Avalonia provide a powerful way to define the visual representation of your data. They allow you to specify how your data should be presented and formatted, enabling you to create dynamic and customizable user interfaces. This document will introduce you to the concept of Data Templates in Avalonia and demonstrate how to use them effectively in your applications.
+Шаблоны Данных - это мощный инструмент для отображения данных.
+Они позволяют задавать, как данные должны быть представлены и форматированы,
+что позволяет создавать динамический, гибкий пользовательский интерфейс.
+Данный раздел познакомит вас с концепцией шаблонов данных и продемонстрирует,
+как эффективно использовать их в вашем приложении.
 
-## What is a Data Template?
+## Что такое Data Template (рус: Шаблоны Данных)?
 
-At its core, a Data Template is a reusable definition that specifies how to present data of a particular type. It defines the visual structure and appearance of the data when displayed in the user interface. In Avalonia, a Data Template is often associated with a list control, such as a `ListBox` or `ItemsControl`, and is responsible for rendering individual items of data within that control.
+По сути, это переиспользуемое определение, которое описывает представление данных определенного типа в пользовательском интерфейсе.
+В Avalonia, шаблоны данных часто используют в связке с элементами управления списком, таких как `ListBox` или `ItemsControl`.
+Он отвечает за отображение отдельных элементов внутри указанного элемента управления.
 
-## Applying a Data Template to a ListBox
+## Использование Data Template в ListBox
 
-To apply a Data Template to a `ListBox`, you typically use the `ItemTemplate` property of the control. 
+Для использования шаблона данных в `ListBox`, вы должны использовать свойство `ItemTemplate`. 
 
-For instance, if you have a `ListBox` that should display a collection of `Item` objects using the defined Data Template, you can set the `ItemTemplate` property like this:
+К примеру, у вас есть `ListBox`, который должен отображать коллекцию объектов `Item`
+с использованием определенного шаблона данных. Тогда вы можете указать `ItemSource` следующим образом:
 
 ```xml
 <ListBox ItemsSource="{Binding Items}">
@@ -28,12 +35,15 @@ For instance, if you have a `ListBox` that should display a collection of `Item`
 </ListBox>
 ```
 
-In this example, the Data Template defines a visual layout using a `StackPanel` container. Within the `StackPanel`, we have a `TextBlock` bound to the `Name` property of the item and an `Image` control bound to the `ImageSource` property.
+В данном примере, шаблон данных использует контейнер `StackPanel`, в котором указаны `TextBlock` и `Image`.
+Они же имеют привязку к свойствам `Name` и `ImageSource`, соответственно.
 
-## Customizing Data Templates
+## Customizing Data Templates (рус: Пользовательские Шаблоны Данных)
 
-Data Templates can be customized and tailored to specific scenarios. You can include additional visual elements, apply styling, and even define nested templates within a Data Template. By leveraging data binding expressions and converters, you can dynamically populate and format the visual elements based on the data properties.
+Шаблоны данных можно настраивать и адаптировать к конкретным ситуациям.
+Вы можете добавить разные элементы, применять стили и даже определять вложенные шаблоны в других шаблонах.
+Используя привязку данных и различные преобразователи, вы можете динамически заполнять и форматировать элементы на основе привязанных свойств.
 
-## Further Reading
+## Дальнейшее изучение
 
-For more information see the Deep Dive into to [data templates](../../concepts/templates).
+Подробная информация в разделе Дополнительно подраздела [Data Templates (рус: Шаблоны данных)](../../concepts/templates).
