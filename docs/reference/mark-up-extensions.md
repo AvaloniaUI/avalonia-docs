@@ -1,20 +1,18 @@
 ---
-описание: СПРАВКА
+description: REFERENCE
 ---
 
-# Расширение разметки
+# Mark-up Extensions
 
-В этом разделе представлены некоторые расширения, они форматированы по шаблоу:
+This reference lists some of the XAML mark-up extensions used by _Avalonia UI_. A mark-up extension is formatted in this pattern:
 
 ```xml
 <Element Attribute={Extension Value}  ... >
 ```
 
-
-| Расширение        | Описание                                                                                            | Подробнее                                         |
-|-------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------|
-| `Binding`         | Используется для привязки данных. Avalonia UI будет искать контекст данных для разрешения привязок. | [Концепт](../basics/data/data-binding)            |
-| `DynamicResource` | Динамические ресурсы позволяют отображать изменения в коде во время выполнения приложения.          | [Гайд](../guides/styles-and-resources/resources)  |
-| `StaticResource`  | Статические ресурсы загружаются **только один раз** и не меняются во время выполенния приложения.   | [Гайд](../guides/styles-and-resources/resources)  |
-| `TemplateBinding` | Используется для создания шаблона элемента для привязки к шаблону родительского элемента.           |                                                   |
-
+| Extension       | Description                                                                                                    | See           |
+|-----------------|----------------------------------------------------------------------------------------------------------------|---------------|
+| `Binding`         | Used for data binding. Avalonia UI will look for a data context to resolve this binding.                       | [Concept](../basics/data/data-binding) |
+| `DynamicResource` | Used for resource binding. A dynamic resource binding can reflect changes made in code at run-time.            | [Concept](../basics/data/data-binding)   |
+| `StaticResource`  | Used for resource binding. A static resource is loaded and then remains the same for the application lifetime. | [Guide](../guides/styles-and-resources/resources)   |
+| `TemplateBinding` | Used when creating a control template for binding to the templated parent.                                     | [Guide](../guides/styles-and-resources/resources) |
