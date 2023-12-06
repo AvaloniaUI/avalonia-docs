@@ -1,10 +1,12 @@
 ---
 id: breaking-changes
-title: Breaking Changes
+title: Важные изменения
 ---
 
-This page will list any breaking changes in Avalonia 11. Although we endeavour not to break our API for major versions, some changes to behavior may result in your application not working.
+На это странице будут перечислены все важные изменения для Avalonia 11.
+В рамках мажорных версий, мы стараемся не вносить кардинальных изменений,
+которые могут привести к неработоспособности вашего приложения.
 
 :::info
-To see a list of breaking changes between Avalonia 0.10 and 11 see the [upgrade guide](upgrade-from-0.10).
+Полный список основных изменений между версиями Avalonia 0.10 и 11, смотрите в [гайде по миграции](upgrade-from-0.10).
 :::
