@@ -97,7 +97,7 @@ public partial class MainView : UserControl
             // This invocation would cause an exception because we are
             // running on a worker thread:
             // System.InvalidOperationException: 'Call from invalid thread'
-            //UpdateText(text);
+            //SetText(text);
         }
         catch (Exception)
         {
