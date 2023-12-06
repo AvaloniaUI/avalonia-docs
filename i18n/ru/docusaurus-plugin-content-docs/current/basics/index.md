@@ -3,9 +3,9 @@ id: index
 title: Basics
 ---
 
-# Basics
+# Основы
 
-This section will introduce you to the basic concepts required to build an application with Avalonia.
+Данный раздел познакомит вас с основными концепциями, необходимыми для создания приложения на Avalonia
 
 import {DocsCardList} from '../../../../../src/components/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';

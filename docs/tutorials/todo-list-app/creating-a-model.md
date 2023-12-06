@@ -4,7 +4,7 @@ description: TUTORIALS - To Do List App
 
 # Create a Model
 
-So far the in this tutorial, you have created a basic view where none of the controls do anything yet; and linking it all together using the MVVM pattern is still a couple of steps away.
+So far in this tutorial, you have created a basic view where none of the controls do anything yet; and linking it all together using the MVVM pattern is still a couple of steps away.
 
 On this page you will create the model part of the MVVM pattern for app.
 

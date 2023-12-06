@@ -4,105 +4,132 @@ description: CONCEPTS
 
 import DataBindingModeDiagram from '/img/gitbook-import/assets/image (2).png';
 
-# Data Binding Syntax
+# Data Binding Syntax (рус: Синтаксис Привязки Данных)
 
-In Avalonia, you can define data binding in XAML or code. To define data binding in XAML, you use the data binding mark-up extension, and this has its own syntax which is described here.
+Привязку данных можно указать как в XAML, так и в коде. Для привязки в XAML, используется 
+расширение синтаксиса разметки, описанное в данном разделе.
 
-## Data Binding Mark-up Extension
+## Data Binding Mark-up Extension (рус: Расширение разметки: Привязка Данных)
 
-The data binding mark-up extension uses the keyword `Binding` in combination with parameters that define the data source, and other options. The format of the mark-up extension is like this:
+Данное расширение добавляет ключевое слово `Binding`, которое используется с параметрами, к примеру источник данных, форматирование и т.д.
+Ниже приведен пример:
 
 ```xml
 <SomeControl SomeProperty="{Binding Path, Mode=ModeValue, StringFormat=Pattern>
 ```
 
-When there is more than one option parameter, the list is comma-separated.
+Если используется более одного параметра, то их следует разделять запятой.
 
-<table><thead><tr><th width="222">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>Path</code></td><td>The data binding path.</td></tr><tr><td><code>Mode</code></td><td>One of the binding modes, see below.</td></tr><tr><td><code>StringFormat</code></td><td>A pattern showing how the value is to be formatted.</td></tr><tr><td><code>ElementName</code></td><td>Can be shortened by using # in the path.</td></tr><tr><td><code>Converter</code></td><td>A function that converts the value.</td></tr><tr><td><code>RelativeSource</code></td><td>Works on the visual tree instead of the logical tree.</td></tr></tbody></table>
 
-## Data Binding Path
+| Параметр         | Описание                                           |
+|------------------|----------------------------------------------------|
+| `Path`           | Путь привязки данных.                              |
+| `Mode`           | Один из режимов привязки, подробнее далее.         |
+| `StringFormat`   | Шаблон форматирования значения при отображении.    |
+| `ElementName`    | Можно сократить, используя `#` в пути.             |
+| `Converter`      | Функция преобразования значения.                   |
+| `RelativeSource` | Использовать визульное дерево, вместо логического. |
+ 
+## Data Binding Path (рус: Путь Привязки Данныз)
 
-The first parameter is usually the path to the data source. This is an object in a data context that _Avalonia_ locates when it performs data binding.
+Обычно, первым параметром указывают путь до источника данных.
+Это объект из контекста данных, который Avalonia находит при выполнении привязки данных.
 
-There is no need to use the parameter name `Path`here. So these bindings are equivalent:
+Можно не указывать параметр `Path`, представленные ниже примеры эквивалентны:
 
 ```xml
 <TextBlock Text="{Binding Name}"/>
 <TextBlock Text="{Binding Path=Name}"/>
 ```
 
-The binding path can be a single property, or it can be a chain of properties. For example if the data source has a `Student` property, and the object returned by that property has a property  `Name`, you can bind to the student name using syntax like this:
+Привязка пути может происходить как напрямую к элементу, так и через цепочку свойств.
+Например, если источником данных указано свойство `Student`, 
+а объект, возвращаемый этим свойством, имеет свойство `Name`, то мы можем привязаться к нему, как указано ниже:
 
 ```markup
 <TextBlock Text="{Binding Student.Name}"/>
 ```
 
-If the data source has an array or list (with an indexer), then you can add the index to the binding path like this:
+Если источких данных представлен в виде массика или списка (с индексом), 
+то вы можете указать конкретный индекс, как показана в примере ниже:
 
 ```markup
 <TextBlock Text="{Binding Students[0].Name}"/>
 ```
 
-## Empty Binding Path
+## Empty Binding Path (рус: Пустой Путь Привязки)
 
-You can specify data binding without a path. This binds to the data context of the control itself (where the binding is defined). These two syntaxes are equivalent:
+Вы можете добавлять привязку, без указания пути. 
+В этом случае, привязка произойдет к контексту данных самого элемента управления, где определена привязкаю.
+Представленные ниже примеры эквивалентны:
 
 ```xml
 <TextBlock Text="{Binding}"/>
 <TextBlock Text="{Binding .}"/>
 ```
 
-## Data Binding Mode
+## Data Binding Mode (рус: Режим Привязки Данных)
 
-You can change how data is moved in a data binding by specifying the data binding mode.
-
-
+Вы можете выбрать, как происходит взаимодействие привязанного значение и источника данных.
 
 <img src={DataBindingModeDiagram} alt=''/>
 
-For example:
+Пример:
 
 ```markup
 <TextBlock Text="{Binding Name, Mode=OneTime}">
 ```
 
-The available binding modes are:
+Доступные режимы привязки:
 
-<table><thead><tr><th width="250">Mode</th><th>Description</th></tr></thead><tbody><tr><td><code>OneWay</code></td><td>Changes in the data source are automatically propagated to the binding target</td></tr><tr><td><code>TwoWay</code></td><td>Changes in the data source are automatically propagated to the binding target, and the other way around as well.</td></tr><tr><td><code>OneTime</code></td><td>The value from the data source is propagated at initialization to the binding target, but subsequent changes are ignored</td></tr><tr><td><code>OneWayToSource</code></td><td>Changes in the binding target are propagated to the data source, but not the other way.</td></tr><tr><td><code>Default</code></td><td>The binding mode is based on a default mode defined in the code for the property. See below.</td></tr></tbody></table>
+| Режим            | Описание                                                                                                                 |
+|------------------|--------------------------------------------------------------------------------------------------------------------------|
+| `OneWay`         | Изменение в источнике данных, меняет значение привязки.                                                                  |
+| `TwoWay`         | Изменение в источнике данных, меняет значения привязки. Изменение значения привязки, меняет значение в источнике данных. |
+| `OneTime`        | Изменение в источнике данных - игноруется. Значение привязки берется из источника данных при инициализации привязки.     |
+| `OneWayToSource` | Изменение в источнике данных - игноруется. Изменение значения привязки, меняет значение в источнике данных.              |
+| `Default`        | Используется режим привязки, указанный в коде элемента, см. ниже.                                                        |
 
-When no mode is specified, then the default is always used. For a control property that does not change value due to user interaction, the default mode is generally `OneWay`. For a control property that does change value due to user input, then the default mode is usually `TwoWay`.
+Если не указан режим, то используется значение по-умолчанию.
+Для элементов, значения которых не меняется из-за взаимодействия с пользователем - это `OneWay`.
+Для элементов, значения которых меняются из-за взаимодействия с пользователем, обычно используется `TwoWay`.
 
-For example, the default mode for a `TextBlock.Text` property is `OneWay`, and the default mode for a  `TextBox.Text` property is `TwoWay`.
+Например, режим по-умолчанию для `TextBlock.Text` - `OneWay`, а для `TextBox.Text` - `TwoWay`.
 
-## Converting Bound Values
+## Converting Bound Values (рус: Преобразование Связанных Значений)
 
-There are a number of ways to convert the value supplied by a data binding into what is actually displayed in the target control.
+Есть несколько способов форматирования привязанных данных, в отображаемом элементе.
 
-### String Formatting
+### String Formatting (рус: Форматирование Строк)
 
-You can apply a pattern to a binding to define how the value is to be displayed. There are a number of syntaxes for this
+Вы можете указать шаблон форматирования отображаемых данных, для привязанного значения.
+Для этого существует несколько синтаксисов.
 
-The pattern index is zero-based, and must always be inside curly braces. When the curly braces are at the beginning of the pattern, even when also inside single quotes, they must be escaped. This can be done either by adding an extra pair of curly braces to the front of the pattern, or by escaping the curly braces using backslashes.
+Индекс шаблона начинается с нуля, и всегда должен находиться в фигурных скобках.
+Когда фигурные скобки находятся вначале шаблона, даже если они заключены в одинарные кавычки,
+их необходимо экранировать. Это можно сделать либо добавив пару фигурных скобок вначале,
+либо экранируя фигурные скобки обратной косой чертой.
 
-This means that when your pattern starts with a zero, you can use a pair of curly braces to escape the pattern, then supply the pattern itself inside a second pair of curly braces. For example:
+Пример с фигурными скобками:
 
 ```xml
 <TextBlock Text="{Binding FloatProperty, StringFormat={}{0:0.0}}" />
 ```
 
-Alternatively, you can use backslashes to escape the curly brackets needed for the pattern. For example:
+Пример с обратной косой чертой:
 
 ```markup
 <TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}}" />
 ```
 
-However, if your pattern does not start with a zero, you do not need the escape. Also, if you have  whitespace in your pattern, you must surround it with single quotes. For example:
+Однако, если ваш шаблон начинается с нуля, то вам не требуется экранирование.
+Кроме того, если ваш шаблон надо заключать в одинарные кавычки, если он содержит пробелы.
 
 ```markup
 <TextBlock Text="{Binding Animals.Count, StringFormat='I have {0} animals.'}" />
 ```
 
-Notice that this means that if your pattern starts with the value that you are binding, then you do need the escape.  For example:
+Обратите внимание, что если ваш шаблон начинается с привязанного значения, то вы обязаны его экранировать:
 
 ```markup
 <TextBlock Text="{Binding Animals.Count, 
@@ -110,27 +137,27 @@ Notice that this means that if your pattern starts with the value that you are b
 ```
 
 :::info
-Whenever a `StringFormat` parameter is present, the value of the binding will actually be converted using the `StringFormatValueConverter` (this is one of the built-in converters - see below).
+Если указан параметр `StringFormat`, то привязанное значение преобразуется через встроенный преобразователь `StringFormatValueConverter`.
 :::
 
-### Built-in Conversions
+### Built-in Conversions (рус: Встроенные преобразователи данных)
 
-_Avalonia_ has a range of built-in data binding converters. These include:
+_Avalonia_ имеет несколько встроенных преобразователей для привязанных данных, например:
 
-* a string formatting converter
-* null testing converters
-* Boolean operation converters
+* StringFormatValueConverter (рус: Преобразователь форматирования строк)
+* Преобразователь проверки на `null`
+* Преобразователь логических операций
 
 :::info
-For full information on Avalonia built-in data binding converters, see the reference [here](../../../reference/built-in-data-binding-converters.md).
+Подробная информация в разделе Reference подраздела [Built-in Data Binding Converters (рус: Встроенные Преобразователи для привязанных данных)](../../../reference/built-in-data-binding-converters.md).
 :::
 
-### Custom Conversions
+### Custom Conversions (рус: Пользовательские Преобразователи)
 
-If none of the built-in converters are meet your requirements, then you can implement a custom converter.
+Если ни один из встроенных преобразователей вам не подходит, то вы можете создать собственный.
 
 :::info
-An example of a custom converter can bind an image file. For guidance on how to create a custom converter for an image, see [here](../../../guides/data-binding/how-to-bind-image-files.md).
+С примером создания пользовательского преобразователя для привязки картинок, вы можете ознакомиться [здесь](../../../guides/data-binding/how-to-bind-image-files.md).
 :::
 
 
