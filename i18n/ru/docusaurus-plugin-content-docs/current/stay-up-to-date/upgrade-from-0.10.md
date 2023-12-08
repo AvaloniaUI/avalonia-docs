@@ -288,7 +288,8 @@ Previously a full layout pass was achieved by getting the layout root and callin
 control.UpdateLayout();
 ```
 
-`ILayoutable` was used in 0.10.x to get the previous measure constraints and arrange bounds. Because `ILayoutable` is no longer available, these are now exposed from `LayoutInformation`:
+`ILayoutable` использовался в версии `0.10.x` для доступа к `Constraints` и `Arrange Bounds`.
+Теперь они доступны через `LayoutInformation`:
 
 - `Size? LayoutInformation.GetPreviousMeasureConstraint(Layoutable control)`
 - `Rect? LayoutInformation.GetPreviousArrangeBounds(Layoutable control)`
@@ -314,19 +315,23 @@ var focusManager = TopLevel.GetTopLevel(control).FocusManager;
 - Для получения элемента, находящегося в фокусе, используйте `IFocusManager.GetFocusedElement()`
 - Для установки фокуса на `control`, используйту `control.Focus()`
 
-There is currently no event for listening to focus changes on `IFocusManager`. To listen for focus changes, add a listener to the `InputElement.GotFocusEvent`:
+На данный момент нет события для отслеживания смены фокуса в `IFocusManager`. 
+Для отслеживания изменений, добавьте событие `InputElement.GotFocusEvent`:
 
 ```csharp
 InputElement.GotFocusEvent.AddClassHandler<InputElement>((element, args) => { });
 ```
 
-The same applied to KeyboardDevice, which isn't accessible anymore. Use the same focus related APIs as a replacement.
+Вышесказанное относится и к `KeyboardDevice`, который больше недоступен.
+The same applied to KeyboardDevice, which isn't accessible anymore. 
+В качестве замены, ипользуйте API, связанное с фокусом.
 
-See [#11407](https://github.com/AvaloniaUI/Avalonia/pull/11407) for more information.
+Подробнее в [#11407](https://github.com/AvaloniaUI/Avalonia/pull/11407).
 
 ## Visual Tree
 
-`IVisual` was used in 0.10.x to expose the visual parent and visual children of a control. Because `IVisual` is no longer available, these are now exposed as extension methods in the `Avalonia.VisualTree` namespace:
+В версии `0.10.x`, `IVisual` использовался для получения элементов Control.
+Поскольку `IVisual` больше недоступен, то теперь их можно использовать из `Avalonia.VisualTree`:
 
 ```csharp
 using Avalonia.VisualTree;
@@ -335,32 +340,36 @@ var visualParent = control.GetVisualParent();
 var visualChildren = control.GetVisualChildren();
 ```
 
-## Rendering
+## Rendering (рус: Отрисовка)
 
-The `Render` method on certain controls is now sealed. This is because it is planned to make these controls use composition primitives instead of rendering via `DrawingContext`.
+Метод `Render` теперь недоступен для некоторых `Controls`.
+Это связано с планами использовать для их отрисовки примитивы, вместо отрисовки через `DrawingContext`.
 
-If you have a control whose `Render` method was being overloaded but it's now sealed, consider using a base class, for example instead of `Border` use `Decorator`. Note that you will now be responsible for drawing the background/border.
-
-See [#10299](https://github.com/AvaloniaUI/Avalonia/pull/10299) for more information.
+Подробнее в [#10299](https://github.com/AvaloniaUI/Avalonia/pull/10299).
 
 ## Locator
 
-The `AvaloniaLocator` is no longer available. Most services that were available via the locator now have alternative methods of access:
+`AvaloniaLocator` больше недоступен.
+Большинство сервисов, использовавших его, теперь имеют альтернативные способы доступа:
 
-1. `AssetLoader` is a static class now with all of the old methods.
-2. `IPlatformSettings` was moved to `TopLevel.PlatformSettings` and `Application.PlatformSettings`. Note, it's always preferred to use settings of the specific top level (window) rather than global ones.
-3. `IClipboard` was moved to the `TopLevel.Clipboard`. Note, that `Application.Clipboard` was removed as well.
-4. `PlatformHotkeyConfiguration` was moved to the `PlatformSettings.HotkeyConfiguration`.
+1. Теперь `AssetLoader` стал статических, методы не изменились.
+2. `IPlatformSettings` был разделен между `TopLevel.PlatformSettings` и `Application.PlatformSettings`. 
+Обратите внимание, что желательно использовать настройки окна, а не глобальные.
+3. `IClipboard` перемещен в `TopLevel.Clipboard`. Обратите внимание, что `Application.Clipboard` также был удален.
+4. `PlatformHotkeyConfiguration` перемещен в `PlatformSettings.HotkeyConfiguration`.
 
-Some applications were using the `AvaloniaLocator` as a general-purpose service locator. This was never an intended usage of `AvaloniaLocator` and those application should move to a service locator or DI container designed for the purpose, e.g. [`Splat`](https://www.reactiveui.net/docs/handbook/dependency-inversion/) or `Microsoft.Extensions.DependencyInjection`.
+Вы могли использовать `AvaloniaLocator` в качестве локатора общего назначения.
+Такое использовани никогда не предполагалось, и теперь вы должны использовать `Service Locator` или DI-контейнер,
+например [`Splat`](https://www.reactiveui.net/docs/handbook/dependency-inversion/) или `Microsoft.Extensions.DependencyInjection`.
 
-## Miscellaneous/Advanced Scenarios
+## Прочие особенности
 
-- `IRenderer`/`DeferredRenderer`/`ImmediateRenderer` have now been removed. For performance reasons it is no longer possible to supply your own renderer, everything uses the new composition renderer.
-- `Renderer.Diagnostics` is now `RendererDiagnostics`
-- `ICustomDrawOperation.Render` now takes an `ImmediateDrawingContext` instead of a `DrawingContext`
-- Add `.GetTask()` to the end of calls to `Dispatcher.UIThread.InvokeAsync` if directly returning the value in a method which returns a `Task`
-- `IRenderRoot.RenderScaling` has been moved to `TopLevel.RenderScaling`
-- `LightweightObservableBase` and `SingleSubscriberObservableBase` have been made internal. These were utility classes designed for a specific purpose in Avalonia and were not intended to be used by clients as they do not handle certain edge cases. Use the mechanisms provided by `System.Reactive` to create observables, such as `Observable.Create`
-- When binding to methods, the method must either have no parameters or a single object parameter.
-- `OpenFileDialog` and `SaveFileDialog` have been removed. For file system storage service use `IStorageProvider` on the Top Level.
+- `IRenderer`/`DeferredRenderer`/`ImmediateRenderer` были удалены. По соображениям  производительности, больше нельзя использовать собственную отрисовку.
+- `Renderer.Diagnostics` стал `RendererDiagnostics`
+- `ICustomDrawOperation.Render` теперь использует `ImmediateDrawingContext` вместо `DrawingContext`
+- Если вы напрямую возвращаете значения метода с `Task`, то в конце вызова `Dispatcher.UIThread.InvokeAsync`, добавьте `.GetTask()`.
+- `IRenderRoot.RenderScaling` перемещен в `TopLevel.RenderScaling`
+- `LightweightObservableBase` и `SingleSubscriberObservableBase` стали `internal`. Это служебные классы, созданные для обработки кокнкретных ситуаций в Avalonia. 
+Они не предназначены для клиентского использования. Используйте `System.Reactive` для создания `observables`, таких как `Observable.Create`.
+- При привязке к методам, метод должен быть либо без параметров, либо только с одним параметром.
+- `OpenFileDialog` и `SaveFileDialog` были удалены. Для работы с файловой системой, используйте `IStorageProvider`.
