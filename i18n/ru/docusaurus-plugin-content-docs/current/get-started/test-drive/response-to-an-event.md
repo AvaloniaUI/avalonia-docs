@@ -1,27 +1,28 @@
 ---
 id: respond-to-an-event
-title: Respond to an Event
+title: Обработка событий
 ---
 
 import SolutionCodeBehindScreenshot from '/img/get-started/respond-to-an-event/image (59).png';
 import AvaloniaEventIntellisenseScreenshot from '/img/get-started/respond-to-an-event/image (25) (2).png';
 import EventDebugOutputScreenshot from '/img/get-started/respond-to-an-event/image (54).png';
 
-There are a number of ways you can implement actions in an Avalonia application. On this page, you will see how to use one of the simplest: how to write event handling code for a button click.
+Есть несколько способов обработки событий на Avalonia.
+На этой странице вы узнаете, как использовать один из самых распостраненных: нажатие кнопки.
 
-To start, you will write a button click event handler that does not interact with any of the other controls.
+В начале, вы напишите обработку нажатия кнопки, которое никак не взаимодействует с другими Controls.
 
 ## Code-behind
 
-The XAML file for the main window has a C# code-behind file associated with it. If you're using an IDE, you can find this file in the **Solution Explorer** - it is a sub-item of the `.axaml` file.
+XAML файл главного окна, связан с файлом C#. Если вы используете IDE, то можете найти этот файл в *Solution Explorer (рус: обозреватель решений)* - подпункт файла `.axaml`.
 
 <img className="center" src={SolutionCodeBehindScreenshot} alt="" />
 
-To change the code-behind for the main window:
+Для его изменения:
 
-- Open the `MainWindow.axaml.cs` file
+- Откройте файл `MainWindows.axaml.cs`
 
-You will see some C# code like this:
+Вы увидите код C#, похожий на нижеуказанный:
 
 ```csharp
 using Avalonia.Controls;
@@ -38,8 +39,8 @@ namespace GetStartedApp
 }
 ```
 
-
-The partial class `MainWindow` corresponds to the window object that is created by Avalonia UI as a result of the XAML you already have. You can find this class name in the XAML window tag:
+Частичный класс `MainWindow`, соотстветстует объекту `Window`, который создается Avalonia UI
+на основании существующего файла XAML. Вы можете найти его по тегу:
 
 ```xml
 <Window 
@@ -49,9 +50,8 @@ The partial class `MainWindow` corresponds to the window object that is created 
 ```
 
 To add an event handler for the button, follow this procedure:
-
-- Locate the  `MainWindow` constructor in the code-behind file for the main window (see above instructions).
-- After the constructor add the following code:
+- В файле `MainWindows.axaml.cs`, найдите конструктор `MainWindows` (инструкция была ранее)
+- Добавьте следующий код после конструктора:
 
 ```csharp
 public void ButtonClicked(object source, RoutedEventArgs args)
@@ -60,15 +60,15 @@ public void ButtonClicked(object source, RoutedEventArgs args)
 }
 ```
 
-This will require some additional using statements:
+Также необходимо подключить зависимости:
 
 ```cs
 using Avalonia.Interactivity;
 using System.Diagnostics;
 ```
 
-- Switch to the XAML file and locate the `<Button>` tag.
-- Enter the click attribute at the end of the tag, as follows:
+- Переключитесь на файл XAML и найдите тег `<Button>`
+- Добавить в него атрибут, как показано ниже:
 
 ```xml
 <Button
@@ -78,15 +78,15 @@ using System.Diagnostics;
 ```
 
 :::tip
-If you're using an IDE you will see the Avalonia UI Intellisense as you type.
+Если вы используете IDE, то при вводе должны отобразиться возможные варианты.
 
 <img className="center" src={AvaloniaEventIntellisenseScreenshot} alt="" />
 :::
 
-- Run the app and click the button.
+- Запустите приложение и нажмите кнопку.
 
-You should see the result on the Output window for Debug, like this:
+В окне отладки, вы дожны увидеть сообщения, например:
 
 <img className="center" src={EventDebugOutputScreenshot} alt="" />
 
-On the next page, you will see how to use code-behind to read and change the properties of Avalonia UI controls at runtime.
+На следующей странице вы узнаете, как использовать Code-Behind для чтение и изменения свойств Controls во время работы программы.
