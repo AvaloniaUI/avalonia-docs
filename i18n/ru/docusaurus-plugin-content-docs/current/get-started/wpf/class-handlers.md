@@ -1,6 +1,7 @@
-# Class Handlers
+# Обработчики событий класса
 
-In WPF, class handlers for events can be added by calling [EventManager.RegisterClassHandler](https://msdn.microsoft.com/en-us/library/ms597875.aspx). An example of registering a class handler in WPF might be:
+В WPF, обработчики событий можно добавить через вызов [EventManager.RegisterClassHandler](https://msdn.microsoft.com/en-us/library/ms597875.aspx). 
+Пример регистрации обработчика в WPF:
 
 
 ```csharp title='WPF'
@@ -27,6 +28,6 @@ private void HandleMyEvent(RoutedEventArgs e)
 ```
 
 
-
-Notice that in WPF you have to add the class handler as a static method, whereas in Avalonia the class handler is not static: the notification is automatically directed to the correct instance. The `sender` parameter typical of event handlers is not necessary in this case and everything remains strongly typed.
-
+Обратите внимание, что для WPF, обработчки должен быть добавлен как статический метод,
+в то время как в Avalonia, он не является статическим: событие отправляется конкретному экземпляру.
+Параметр `sender` не нужен, все является строго типизированным.

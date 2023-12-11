@@ -9,56 +9,65 @@ import RunningAppWindowScreenshot from '/img/get-started/the-main-window/running
 import VsDesignerScreenshot from '/img/get-started/the-main-window/vs-designer-screenshot.png';
 import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) (2).png';
 
-You can now start your tour of an Avalonia project. We'll start with the main application window. Open the **MainWindow.axaml** file.
+Теперь вы можете приступить к изучению проекта на Avalonia. Для начала, мы изучим основное окно приложения.
+Откройте файл **MainWindow.axaml**.
 
 :::info
-Notice that in Avalonia, XAML files have the extension **.axaml** (and not .xaml). This represents 'Avalonia XAML' and the file extension was introduced for technical reasons.
+Обратите внимание, что Avalonia использует XAML-файлы с расширением **.axaml** (а не .xaml).
+Название расшифровывается как 'Avalonia XAML', и было введено по техническим причинам.
 :::
 
-## What is Happening?
+## Что внутри?
 
-In the **MainWindow.axaml** XAML file, the `<Window>...</Window>` XAML tag represents an Avalonia window. Like other Avalonia controls; the window will be drawn on the target platform with 4 **layout zones**: margin, border, padding and content.
+В файле **MainWindow.axaml**, тег `<Window> ... </Window>` обозначает окно.
+Как и другие Controls, окно будет отрисовано на целевой платформе с **4 зонами**: Margin, Border, Padding и Content.
+
 
 <img className="center" src={LayoutZonesDiagram} alt="" />
 
-In the current application, the content zone of the window references another view: **<views:MainView />**. This is a reference to the **MainView.axaml** file, which is a user control that will be displayed in the content zone of the window.
+В текущем приложении, для зоны Content указана ссылка на другое view: **<views:MainView />**.
+Оно находится внутри файла MainView.axaml, и является User Control, который будет отображаться у окна внутри зоны **Content**.
 
 ## The MainView User Control
 
-Inside this user control, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a text block control. The `Text` property of the text block is bound to the **Greeting** property of the **MainViewModel** class. This is a property that will be set in the constructor of the view model class.
+Внутри User Control, вы можете увидеть тег `<TextBlock>...</TextBlock>`.
+Он представляет собой блок текста, а его свойство `Text`, привязано к свойству **Greeting** класса **MainViewModel**.
+Данное свойство было задано в конструкторе класса.
+
 ```
 <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
-
-You can change the text in the file **MainViewModel.cs** to see the change reflected in the user interface.
+Вы можете изменить значение **Greeting** в **MainViewModel**, 
+чтобы увидеть, как измениться отображаемый текст в интерфейсе.
 
 <img className="center" src={MainWindowScreenshot} alt="" />
 <img className="center" src={RunningAppWindowScreenshot} alt="" />
 
 :::info
-For more information about the concept of control layout zones, see [here](../../concepts/layout/layout-zones).
+Подробную информацию о зонах размемщения, см. [здесь](../../concepts/layout/layout-zones).
 :::
 
-## The Visual Studio Designer
+## Предварительный просмотр в Visual Studio
 
-If you're using Visual Studio you should see the XAML code and preview pane.
-Navigate to the **MainWindow.axaml** file and click the **Design View** button at the top of the editor window.
+Если вы используете Visual Studio, то вы можете открыть окно с кодом XAML и окно предварительного просмотра.
+Откройте файл **MainWindow.axaml** и нажмите кнопку **Design View**, она находится в верхней части редактора.
 
 <img className="center" src={VsDesignerScreenshot} alt="" />
 
 :::info
-There may be a red exclamation icon (top left) and the message **The designer is loading...**. This indicates that the project must be built before the preview pane will respond.
+Если вы видете значок красного восклицательного знака и сообщение **The designer is loading...**,
+то необходимо собрать проект, прежде чем панель предварительного просмотра сможет что-то отобразить.
 :::
 
-- Build the project.
-- Scroll the preview pane to the left to view the preview outline and the text displayed in the top left corner.
+- Соберить проект.
+- Скрольте панель предварительного просмотра, чтобы увидеть окно и отображаемы текст, в его левом верхнем углу.
 
 <img className="center" src={VsPreviewPaneScreenshot} alt="" />
 
-- Remove the binding `{Binding Greeting}` and change the text `<TextBlock Text="`my text`" ...`
+- Удалите привязку `{Binding Greeting}` и измените текст `<TextBlock Text="my text">...`
 
 You will see the new text in the preview pane change as you type. This is an example of the Avalonia **design-time preview behaviour** that will help you develop user interface presentation accurately and quickly.
 
-- Run the project to see your new text also appear at runtime.
+- Запустите проект, чтобы убедиться, что новый текст также появляется по время выполнения программы.
 
-On the next page you will see how to add a simple button to the window.
+На следующей странице вы узнаете, как добавить обычную кнопку.
