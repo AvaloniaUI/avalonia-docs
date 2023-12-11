@@ -1,14 +1,14 @@
 ---
 id: introduction
-title: Introduction
+title: Вступление
 ---
 
-You can use this section to get started right away with Avalonia. This will take you through a simple tutorial example step-by-step; and introduce you to some of the Avalonia concepts and techniques.
+Данный раздел познакомит вас с азами работы на Avalonia, и позволит, следуя пошаговым инструкциям, создать первые учебные примеры. На них вы освоите некоторые концепции и фишки Avalonia.
 
-You do not need any prior knowledge of Avalonia or other XAML-based frameworks to learn from this section.
+Для этого раздела вам не требуются какие-либо дополнительные знания об Avalonia или других фреймворков, использующих XAML.
 
-Click the Next button to get started.
+Для продолжение нажмите кнопку Следующая страница
 
 :::info
-If you are a more experienced user, you may want to extend your knowledge of Avalonia instead, by using our Basics section [here](../../basics) or one of the How-To Guides [here](../../guides).
+Если вы опытный разработчик, то можете увелчить свои знания об Avalonia, изучая разделы [Основы](../../basics) и [Практические руководства](../../guides).
 :::
