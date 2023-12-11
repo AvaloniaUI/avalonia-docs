@@ -1,12 +1,16 @@
-# UIElement, FrameworkElement and Control
+# UIElement, FrameworkElement и Control
 
-WPF's `UIElement` and `FrameworkElement` are non-templated control base classes, which roughly equate to the Avalonia `Control` class. WPF's `Control` class on the other hand is a templated control - Avalonia's equivalent of this is `TemplatedControl`.
+`UIElemnt` и `FrameworkElement` из WPF - это не шаблонные, базовые классы Control,
+которые в Avalonia соответствуют классу `Control`.
+`Control` из WPF - является шаблонным Control, которому в Avalonia соответствует `TemplatedControl`.
 
-- In WPF/UWP you would inherit from the `Control` class to create a new templated control, but in Avalonia you should inherit from `TemplatedControl.`
-- In WPF/UWP you would inherit from the `FrameworkElement` class to create a new custom-drawn control, but in Avalonia you should inherit from `Control.`
+- В WPF/UWP, для создания нового шаблонного Control, вам нужна использовать `Control`, а в Avalonia `TemplatedControl.`
+- В WPF/UWP, для создания пользовательского Control, вам нужна использовать `FrameworkElement`, а в Avalonia `Control.`
 
-So to recap:
+Подведем итоги:
 
-* `UIElement` 🠞 `Control`
-* `FrameworkElement`🠞 `Control`
-* `Control` 🠞 `TemplatedControl`
+| WPF                |    | Avalonia           |
+|--------------------|----|--------------------|
+| `UIElement`        | 🠞 |  `Control`         |
+| `FrameworkElement` | 🠞 | `Control`          |
+| `Control`          | 🠞 | `TemplatedControl` |
