@@ -147,10 +147,9 @@ class MyButton : Button
 - Удалите вызов `this.AttachDevTools()` из конструктора.
 Теперь `InitializeComponent` имеет параметр, который управляет подключением `DevTools` в режиме отладки, по-умолчанию он включен.
 
-Previously, to find a named control declared in the XAML file, a call to `this.FindControl<T>(string name)` 
-or `this.GetControl<T>(string name)` was needed. This is now unnecessary - controls in the XAML file with a 
-`Name` or `x:Name` attribute will automatically cause a field to be generated in
-the class to access the named control (as in WPF/UWP etc).
+Раньше, чтобы найти именнованый элемент объявленный в XAML файлы, нужен был вызов `this.FindControl<T>(string name)` 
+или `this.GetControl<T>(string name)`. Сейчас это не обязательно - XAML элементы с выставленными
+`Name` или `x:Name` атрибутами будут автоматически сгенерированны для доступа в C# классах (так же как это работало в WPF и UWP).
 
 Обратите внимание, что автомамтически, код генерируется только для C#. Для F# изменений не было.
 
@@ -276,13 +275,13 @@ See [#7980](https://github.com/AvaloniaUI/Avalonia/pull/7980) for more informati
 
 ## Layout
 
-Previously a full layout pass was achieved by getting the layout root and calling a method on the layout manager:
+Раньше, чтобы вызвать полный перепросчет макета элементов, нужно было вытащить корневой элемент и на нем вызвать следующий код:
 
 ```csharp
 ((ILayoutRoot)control).LayoutManager.ExecuteLayout();
 ```
 
-`LayoutManager` не доступен из `ILayoutRoot`, испоьзуйте метод `UpdateLayout` на любом control, как в WPF/UWP:
+Сейчас же `LayoutManager` больше не доступен из `ILayoutRoot`. Вместо него испоьзуйте метод `UpdateLayout` на любом Control, как в WPF/UWP:
 
 ```csharp
 control.UpdateLayout();
