@@ -90,13 +90,14 @@ In a dock panel there must be a single control filling the remaining space in it
 <StackPanel>
 ```
 
+`Stack Panel` размещает дочерние элементы друг за другом, по-умолчанию вертикально. ()
 The stack panel lays out its child controls in a stack, which is vertical by default. (You can make the stack horizontal by setting the `Orientation` attribute.) You will often use the stack panel in your _Avalonia UI_ layouts.
 
 :::info
-To more detail about the stack panel, see the reference [here](../../reference/controls/stackpanel.md).
+Подробную информацию о `Stack Panel`, см. [здесь](../../reference/controls/stackpanel.md).
 :::
 
-The remaining XAML adds the hard-coded to do list items as check boxes:
+Оставшийся XAML добавит захардкоженные элементы списка дел в виде флажков:
 
 ```markup
 <CheckBox Margin="4">Walk the dog</CheckBox>
@@ -109,4 +110,4 @@ Notice that these controls have the margin attribute set. This will separate the
 The margin is one of the _Avalonia UI_ control layout zones. To review the concept of layout zones, see [here](../../concepts/layout/layout-zones).
 :::
 
-On the next page, you will learn how to display the view created here in the main window of the app.
+На следующей страницу узнаете, как отображать созданную `view` в основном окне приложения.
