@@ -4,27 +4,29 @@ description: TUTORIALS - To Do List App
 
 import ToDoCreateANewViewScreenshot from '/img/gitbook-import/assets/image (1) (1).png';
 
-# Create a New View
+# Содание нового View
 
-On this page, you will add a view to display the list of to do items, with a button to add a new item.
+На этой страницу вы добавите `view` для отображения списка дел, а также кнопку для добавления новых.
 
-To get the tutorial started, you will use hard-coded data for the list items. Later you will connect the view to some data in the view model.
+В начале обучения, вы будете использовать захардкоженные данные списка.
+Позже, вы научитесь связывать `view` и данные из `view model`, для решения этой проблемы.
 
-In _Avalonia UI_, the UI element corresponding to a MVVM view can be either a window or a user control. This new view will be user control, and later you will use the main window to display it.
+В _Avalonia UI_, элемент UI соответствующий `view` для MVVM, является либо `window`, либо `user control`.
+В качестве нового `view`, мы создадим `user control`, а позже добавим его отображение в основном окне.
 
 ### Visual Studio
 
-Follow these instructions to add a new user control:
+Для добавление нового `user control`, выполните следующие действия:
 
-- In the **Solution Explorer** locate and right-click the **Views** folder.
-- Click **Add** and then **New Item**
-- Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
-- In **Name** enter 'ToDoListView'
-- Click **Add**
+- В **Solution Explorer** найдите и нажмите ПКМ на папке **Views** folder.
+- Нажмите **Add**, а после **New Item**
+- Нажмите **Avalonia** под **C# Items** и выберите **User Control (Avalonia)**
+- В поле **Name** укажите 'ToDoListView'
+- Нажмите **Add**
 
 ### .NET Core CLI
 
-Run the following command from the root folder of your project, that is the folder that contains the `Program.cs` file and the `/Views` folder:
+В корневой папке проекта, в ней содержатся файл `Program.cs` и папка `/Views`, выполните команду:
 
 ```
 dotnet new avalonia.usercontrol -o Views -n ToDoListView  --namespace ToDoList.Views
@@ -32,7 +34,7 @@ dotnet new avalonia.usercontrol -o Views -n ToDoListView  --namespace ToDoList.V
 
 ### The User Control
 
-You will see the new AXAML file created in the `/Views` folder
+В папке `/Views`, вы увидите новый AXAML-файл
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -45,7 +47,8 @@ You will see the new AXAML file created in the `/Views` folder
 </UserControl>
 ```
 
-You will also find a `ToDoListView.axaml.cs` file containing the code-behind for the view (in Visual Studio this is nested under the AXAML file. The code-behind looks like this:
+Также вы найдете файл `ToDoListView.axaml.cs`, содержащий код для одноименной `view` (в Visual Studio он вложен в AXAML-файл).
+Код внутри файла:
 
 ```csharp
 using Avalonia.Controls;
@@ -62,11 +65,13 @@ namespace ToDoList.Views
 }
 ```
 
-You are not going to change the code-behind file in this tutorial, but notice that the user control class is called `ToDoListView` and it is located in the `ToDoList.Views` namespace.
+В рамках руководства, мы не будем изменять этот файл, но обратите внимание,
+что класс указанного `user control` называется `ToDoListView`, и расположен в пространстве имен `ToDoList.Views`.
 
-### Resize the Preview Pane
+### Изменение размера панели предварительного просмотра
 
-To make the design-time preview look more like a mobile phone in portrait orientation, locate the design-time width and height properties for the user control and set them as shown:
+Чтобы во время разработки, зона предварительного просмотра походила на экран смартфона,
+в `user control` найдите атрибуты `DesignWidth` и `DesignHeight`, а после поменяйте их значения, как показано ниже:
 
 <pre class="language-markup"><code class="lang-markup">
 <strong>&#x3C;UserControl</strong>
@@ -75,11 +80,11 @@ To make the design-time preview look more like a mobile phone in portrait orient
 <strong>... ></strong>
 </code></pre>
 
-Repeat the process with the main window.
+Повторите процесс для основного окна.
 
-### Edit the User Control
+### Изменение User Control
 
-Edit the contents of `Views/TodoListView.axaml` to contain the following:
+Замените содержимое `Views/TodoListView.axaml` на следующее:
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -102,6 +107,7 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
 </UserControl>
 ```
 
-If you are using the Visual Studio extension you should see the contents of the control displayed in the previewer after completing a build:
+Если вы используете расширение Visual Studio, то должны увидеть изменения на панели предварительного просмотра,
+сразу же после завершения сборки.
 
 <img className="center" src={ToDoCreateANewViewScreenshot} alt="" />
