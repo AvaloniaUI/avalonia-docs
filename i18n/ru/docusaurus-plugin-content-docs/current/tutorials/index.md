@@ -1,6 +1,6 @@
 ---
 id: index
-title: Samples & Tutorials
+title: Примеры и Руководства
 ---
 
 This section has practical tutorials that are designed to help you learn _Avalonia UI_ and build your confidence. Here is a brief guide to what you can expect from each of the tutorials:
