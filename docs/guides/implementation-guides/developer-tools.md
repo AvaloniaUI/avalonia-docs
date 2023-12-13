@@ -127,14 +127,6 @@ Dotted underline under event name or control type indicates that quick navigatio
 
 <img className="center" src={DevToolsEventsScreenshot} alt="" />
 
-## Console
-
-The console can be shown using the "View" → "Console" menu. The console implements a C# REPL which can be used to run arbitrary C# code. In a console session, the following predefined variables are available:
-
-* `help`: Displays a help message
-* `e`: The control currently selected in the logical or visual tree
-* `root`: The root of the visual tree
-
 ## Hotkeys
 
 | Keys Combination | Function                      |
