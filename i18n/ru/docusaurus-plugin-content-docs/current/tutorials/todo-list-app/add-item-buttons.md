@@ -13,9 +13,9 @@ Also the OK button action needs to pass the description text back to the main wi
 
 To alter the add item view model, follow this procedure:
 
-- Stop the app if it is running.
-- Locate the **AddItemViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.
+- Остановите приложение, если оно запущено.
+- В папке **/ViewModels** найдите файл **AddItemViewModel.cs**.
+- Измените код, как показано ниже.
 
 ```csharp
 using ReactiveUI;
@@ -82,7 +82,7 @@ public string Description
 
 To ensure that the observable operates correctly, the code also adds the `RaiseAndSetIfChanged` pattern to the description property.
 
-Examine how the OK reactive command is created:
+Изучите, как создается реактивная команда `OK`:
 
 ```csharp
 OkCommand = ReactiveCommand.Create(
@@ -93,22 +93,23 @@ The first parameter is a lambda function that is run whenever the command is exe
 
 The second lambda function ('can execute' parameter) determines the enabled state of the reactive command. So this is passed the observable created just before.
 
-The code also creates a reactive command for the cancel button:
+В коде также создается реактивная команда для кнопки `Cancel`:
 
 ```csharp
 CancelCommand = ReactiveCommand.Create(() => { });
 ```
 
-The cancel command has no execution, so its first and only parameter does nothing. The cancel button is always enabled, so it does not have a 'can execute' parameter.
+Команда `Cancel` не выполняется. поэтому ее первый параметр никак не используется.
+Кнопка `Cancel` всегда доступка, поэтому у нее нет параметра `can execute`.
 
-## Bind the OK and Cancel Buttons
+## Привязка кнопок `OK` и `Cancel`
 
-Your next step is to create binding for the OK and cancel buttons in the view.
+На этом этапе требуется создать привязку для кнопок `OK` и `Cancel` во `view`.
 
-To do this, follow this procedure:
+Для этого выполните следующие действия:
 
-- Locate the **AddItemView.axaml** file in the **/Views** folder.
-- Edit the XAML as shown.
+- В папке **/Views** найдите файл **AddItemView.axaml**.
+- Измените XAML как показано ниже:
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -135,10 +136,11 @@ To do this, follow this procedure:
 </UserControl>
 ```
 
-Run the application and click **Add Item**. You should now see that the OK button is only enabled when there is some text in the description input.
+Запустите приложение и нажмите **Add Item**.
+Вы должны увидеть, что кнопка `OK` доступна только тогда, когда в поле ввода описания есть какой-либо текст
 
 <img className="center" src={ToDoOkDisabledScreenshot} alt="" />
 
 <img className="center" src={ToDoOkEnabledScreenshot} alt="" />
 
-On the next page you will learn how to process the new to do item, so that it appears on the list, if the user clicks OK.
+На следующей странице вы узнаете, как обработать новый элемент, чтобы он появился в списке, после нажатия кнопки `OK`.
