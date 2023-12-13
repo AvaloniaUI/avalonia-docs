@@ -4,21 +4,24 @@ description: TUTORIALS - To Do List App
 
 import MvvmArchitectureDiagram from '/img/gitbook-import/assets/image (3) (1) (2).png';
 
-# Create a View Model
+# Создание View Model
 
-On this page, you will learn how to create a view model to provide the application logic for your app. This is the final part of the MVVM pattern, and it will make use of the _ReactiveUI_ framework.
+На этой странице вы узнаете, как создавать `view model`, отвечающую за бизнес-логику приложения.
+Это заключительная часть паттерна MVVM, в ней будет использовать фреймворт _ReactiveUI_.
 
 :::info
-To review the concepts behind MVVM pattern programming using ReactiveUI, see [here](../../concepts/reactiveui/).
+Подробнее о концепциях, лежащих в основе паттера MVVM с использованием ReactiveUI, см. [здесь](../../concepts/reactiveui/).
 :::
 
-The purpose of the view model is organise data and actions for the application in a way that suits the views. For reasons that will become clear in a future step of this tutorial, you will adopt the convention of naming a view model after the view that it supports in this way.
+Основная цель `view model`, организовать данные и события в приложении таким образом, чтобы они соответствовали `views`.
+По причинам, которые будут указаны в следующих частях руководства,
+мы будем придерживаться соглашения об именовании `view model` согласно `view`.
 
-Follow this procedure to add the to do list view model to your app:
+Для добавления `view model` списка в ваше приложение, выполните следующие действия:
 
-- Locate the **ViewModels** folder and add a new class.
-- Name the new class 'ToDoListViewModel'.
-- Add the following code:
+- Найдите папку **ViewModels** и добавьте новый класс.
+- Назовите его 'ToDoListViewModel'.
+- Добавьте следующий код:
 
 ```csharp
 using System.Collections.Generic;
@@ -39,32 +42,43 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Your view model is very simple at this stage. Its constructor takes a collection of to do item data models and keeps them in an observable collection . This is publicly available through the `ListItems` property here on the view model.
+На данном этапе, ваша `view model` достаточна проста.
+Ее конструктор получает коллекцию списка дел и сохраняет ее в `observable` коллекцию.
+Она имеет публичный доступ через свойство `ListItems` во `view model`.
 
-The view model derives from the base class  `ViewModelBase` that was created by the solution template. More about this later in the tutorial.
+`View model` наследована от базового класса `ViewModelBase` и была создана по шаблоном решения.
+Подробнее об этом дальше в руководстве.
 
-## Separation in MVVM
+## Разделение в MVVM
 
-You have seen that the to do list view model has a constructor that requires a collection of to do item data models to be provided as the parameter.  In turn this collection will be retrieved from the fake data service (model) at some point.
+Как вы могли заметить, `vide model` списка дел имеет конструктор,
+который требует указания списка элементов в качестве параметра. 
+В свою очередь, эта коллекция будет извлечена из фейкового сервиса данных (model).
 
-Before you start to populate the view model with data, have another look at the MVVM pattern:
+До начала заполнения `view model` данными, ознакомьтесь с паттерном MVVM:
 
 <img className="center" src={MvvmArchitectureDiagram} alt="" />
 
-The stated purpose of the pattern is to separate the view and view model so that, for example, the view model may be independently tested. This removes the dependency between the view and view model.
+Целью шаблона является разделение `view` и `view model` таким образом, 
+чтобы, к примеру, можно было тестировать их независимо друг от друга.
+Также это устраняет зависимости между `view` и `view model`.
 
-In a real application, you would aim to ensure separation between the view model and the model, for similar reasons. However this is beyond the scope of this tutorial, so here you will make the view model dependent on the model.
+В реальном приложении, вы дожны стремиться к делению на `view model` и `model` по тем же причинам.
+Однако это выходит за рамки руководства, поэтому мы сделаем `view model` зависимой от `model`.
 
 :::info
-Separation of the view model and the model in the MVVM pattern can be achieved by Dependency Injection (DI). For guidance on how to use DI with MVVM and _Avalonia UI_, see [here](../../guides/implementation-guides/how-to-implement-dependency-injection.md).
+Разделения на `view model` и `model` в паттерне MVVM можно достичь через Dependency Injection (DI) (рус: Инъекцию зависимостей).
+Подробнее об использовании DI в MVVM и _Avalonia UI_, см. [здесь](../../guides/implementation-guides/how-to-implement-dependency-injection.md).
 :::
 
-## View Model to Model Dependency
+## Зависимость View Model от Model
 
-Follow this procedure to make the main window view model depend on the model, that is dependent on the to do list data service:
+Чтобы сделать `view model` основного окна зависимым от `model`,
+который в свою очередь зависит от сервиса списка дел, 
+выполните следующие действия:
 
-- Locate the **MainWindowViewModel** class file, in the **ViewModels** folder.
-- Alter the code as follows:
+- В папке **ViewModels** найдите файл класса **MainWindowViewModel**.
+- Измените код, как указано ниже:
 
 ```csharp
 using ToDoList.Services;
@@ -86,4 +100,4 @@ namespace ToDoList.ViewModels
 }
 ```
 
-On the next page you will learn how to connect the views to the view models using data binding.
+На следующей странице вы узнаете, как связать `views` и `view models`, используя `data binding (рус: привязку данных)`.
