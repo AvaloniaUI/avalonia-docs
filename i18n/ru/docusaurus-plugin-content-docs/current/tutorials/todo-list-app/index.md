@@ -1,6 +1,6 @@
 ---
 id: index
-title: Приложение *"To Do List"* (Список дел)
+title: Приложение To Do List (Список дел)
 ---
 
 import ToDoFinishedApplicationScreenshot from '/img/tutorials/todo-list-app/image (14).png';
