@@ -3,6 +3,8 @@ id: input-controls
 title: Input Controls (Controls для ввода данных)
 ---
 
+import InputControlsScreenshot from '/img/get-started/test-drive/input-controls.png';
+
 На этой странице вы узнаете, как добавить Input Controls.
 Цель: расположить по вертикали несколько сгруппированных по горизонтали Controls, таких как метка и Input Control.
 
