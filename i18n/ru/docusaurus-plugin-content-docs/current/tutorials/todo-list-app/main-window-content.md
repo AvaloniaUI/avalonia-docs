@@ -4,18 +4,19 @@ description: TUTORIALS - To Do List
 
 import ToDoMainWindowContentScreenshot from '/img/gitbook-import/assets/image (4) (1) (1).png';
 
-# Main Window Content
+# Main Window Content (рус: Содержимое основного окна)
 
-At this point your main window still displays the greeting text created by the solution template. On this page you will change the main window content zone, so it displays your new user control instead.
+Пока ваше основное окно отображает текс приветствия, созданный из шаблона.
+На данной странице вы измените содержимое основного окна на новый `user control`.
 
-Follow this procedure to change the main window content:
+Для изменения содержимого основного окна, выполните следующие действия:
 
-- Locate and open the main window XAML file:`Views/MainWindow.axaml`
-- Add the namespace declaration `xmlns:views="clr-namespace:ToDoList.Views"`
-- Retitle the app by changing the title attribute to `Title="Avalonia To Do List"`
-- Replace the `<TextBlock>` element with `<views:ToDoListView/>`
+- Найдите и откройте XAML-файл основного окна:`Views/MainWindow.axaml`
+- Добавьте описание пространства имен `xmlns:views="clr-namespace:ToDoList.Views"`
+- Измените название приложения в атрибуте `Title="Avalonia To Do List"`
+- Замените элемент `<TextBlock>` на `<views:ToDoListView/>`
 
-The main window XAML should now look like this:
+XAML основного окна должен выглядеть примерно так:
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -38,36 +39,43 @@ The main window XAML should now look like this:
 </Window>
 ```
 
-## Examine the XAML
+## Изучите XAML
 
-This XAML is similar in may ways to the user control XAML you had a lookup on the previous page. Specifically, here you added:
+Данный XAML во многом похож на XAML `user control`, с которым вы ознакомились на предыдущей страницу.
+В частности, здесь вы добавили:
 
 ```markup
 <Window ... xmlns:views="clr-namespace:ToDoList.Views" ...>
 ```
 
-This maps the code namespace `ToDoList.Views` to the XML namespace alias `views`.
+Здесь пространство имен `ToDoList.Views` присваивается к алиасу XML `views` 
 
 :::warning
-Any user control that you create will need this kind of mapping, or the Avalonia UI XAML engine will be unable to find it, and you will get an error.
+Любой `user control`, который вы создадите, нуждается в таком присвоении,
+иначе XAML-движок Avalonia UI, не сможет его найти, и вы получите сообщение об ошибке.
 :::
 
-The last step sets the content zone of the window to display your new user control view:
+Последним шагом, меняем содержимое окна для отображения вышего нового `user control`:
 
 ```markup
 <views:ToDoListView/>
 ```
 
-## Run the Application
+## Запуск приложения
 
-Now run the application you have built so far.  If you are using Visual Studio, press the function key F5. If you are using .NET Core CLI, execute the command:
+Теперь запустите созданное приложение.
+
+Если вы используете Visual Studio, нажмите кнопку **F5**.
+
+Если вы используете .NET Core CLI, выполните команду:
 
 ```
 dotnet run
 ```
 
-You will see the main window, with its new title and user control:
+Вы увидите основное окно, с новым заголовком и `user control`:
 
 <img className="center" src={ToDoMainWindowContentScreenshot} alt="" />
 
-That is just the view - nothing really does anything yet! On the next pages, you will learn how to create the working parts of the app: the model and the view model.
+Это всего-лишь `view`.. На самом деле еще ничего не сделано!
+На следующей странице вы узнаете, как создавать рабочие части приложения: `model` и `view model`.
