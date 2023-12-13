@@ -1,6 +1,6 @@
 ---
 id: release-notes
-title: Release Notes
+title: Примечания к версиям
 ---
 
-You can find release notes for all version on https://github.com/AvaloniaUI/Avalonia/releases
+Полный список для всех версий смотрите на https://github.com/AvaloniaUI/Avalonia/releases

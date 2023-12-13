@@ -1,53 +1,60 @@
 ---
 id: whats-new
-title: What's new
+title: Что нового?
 ---
 
-The Avalonia team has been working hard on this release and we're excited to share with you all the new features and improvements. Let's dive in!
+Команда Avalonia усердно работала над этим релизом,
+и мы рады сообщить о новых функциях и улучшениях.
 
-## New Features
+## Новые возможности
 
-### A11y (Accessibility)
-This version of Avalonia takes major strides in making applications more accessible. We've added support for various accessibility tools, making it easier for everyone to use Avalonia applications.
+### A11y (Специальные возможности)
+Мы добавили поддержку различных специальных возможностей таких как экранный диктор и инструменты автоматического тестирования, для упрощения взаимодействия с приложениями на Avalonia.
 
-### IME (Input Method Editor) Support
-We have introduced support for Input Method Editor (IME), facilitating users to input characters and symbols not found on their input devices.
+### Поддержка IME (рус: Редактор Метода Ввода)
+Мы добавили поддержку Input Method Editor (IME), что облегчает пользователям ввод символов, отсутствующих на устройсте ввода.
 
 ### Composition Renderer
-The new composition renderer enhances the graphical rendering capabilities, providing a more robust, efficient, and flexible rendering pipeline.
+Новый композитный рендерер расширяет возможности графического ядра, обеспечивая более надежный, эффективный и гибкий конвейер рендеринга.
 
-### WebAssembly (WASM) Support
-WASM support allows Avalonia applications to run directly in the browser, broadening our platform support and giving developers more freedom and flexibility.
+### Поддержка WebAssembly (WASM)
+Поддержка WASM, позволяет запускать приложения Avalonia прямо в браузере, что дает больше возможностей.
 
-### iOS and Android Support
-We've added support for both iOS and Android platforms. Developers can now build and run Avalonia applications on two of the most popular mobile platforms.
+### Поддержка iOS и Android
+Мы добавили поддержку платформ iOS и Android.
+Теперь разработчики на Avalonia, могут собирать и запускать приложения на двух самых популярных мобильных платформах.
 
-### Text Inlines
-With the Text Inlines feature, you can easily construct complex formatted text blocks. It enables you to add annotations, hyperlinks, and other inline elements in your text.
+### Text Inlines (рус: Встроенный Текст)
+Функция встроенного текста, позволяет лекго создавать комплексные блоки текста. (аннотации, гиперссыли и другие элементы прямо в текст)
 
-### Smooth Virtualization (Reworked ItemsControl)
-We've completely reworked the ItemsControl to provide smooth virtualization. This improves the efficiency and user experience for controls with many items.
+### Плавная Виртуализация (Переработанный ItemsControl)
+Мы закончили переработку ItemsControl для обеспечения плавной виртуализации. Повышена производительность при использованиии большого количества элементов в Controls.
 
-### Performance Improvements
-Avalonia 11.0 comes with significant performance improvements, enhancing the speed and efficiency of your applications.
+### Повышение производительности
+В версии `11.0` произведены оптимизации для повышения производительности ваших приложений.
 
-### Control Themes, Nested Styles, and Theme Variants
-We've added the ability to theme controls, apply nested styles, and choose theme variants. This makes it easier to build beautiful and consistent UIs.
+### Control Themes, Nested Styles, и Theme Variants
+Мы добавили возможность созания тем для Controls, применение вложенных стилей и переключение между ними.
+Все это упрощает создание красивых и согласованных UI. 
  
 ### Bitmap Effects
-The Bitmap Effects feature lets you apply visual effects to bitmaps. You can add blur, drop shadows, and other effects to images.
+Bitmap Effect позволяют использовать визуальные эффекты к растровым изображениям.
+Вы можете добавить размытие, тени и другие эффекты.
 
-### 3D Transforms
-With 3D Transforms, you can now create stunning three-dimensional effects in your UI.
+### 3D-преобразования
+С помощью 3D-преобразований, вы можете создавать невероятные эффекты в UI.
 
-### AOT (Ahead-Of-Time) Compilation and Trimming
-AOT compilation enables your apps to run faster by compiling them before runtime. Trimming reduces the size of your apps by removing unused code.
+### AOT (Ahead-Of-Time) компиляция и Trimming
+AOT-компиляция, позволяет вашим приложениям работать еще быстрее, благодаря предварительной сборке до запуска. 
+Trimming уменьшает размер вашего приложения, благодаря удалению неиспользуемого кода.
 
-### GPU Interop
-The GPU Interop feature allows Avalonia to work more efficiently with the GPU, improving rendering performance and visuals.
+### Прямая работа с GPU
+Благодаря прамой работе с GPU, Avalonia может более эффективно работать GPU, что повышает производительность.
 
-### Experimental Metal Support
-We're testing Metal support to improve performance on iOS and macOS devices.
+### Экспериментальная поддержка Metal
+Мы тестируем поддержку Metal, для повышения производительности на устройствах iOS и macOS.
 
-## Important Notes
-This version also includes many bug fixes and improvements based on community feedback. As always, your feedback and contributions help us make Avalonia better. Please report any issues or suggestions on [GitHub](https://www.github.com/avaloniaui/avalonia).
+## Важные примечания
+Данная версия включает в себя множество улучшений и исправлений, полученных от сообщества.
+Ваши отзывы и содействия, помогают нам сделать Avalonia лучше.
+О любых ошибках и предложениях, пожалуйста, сообщайте на [GitHub](https://www.github.com/avaloniaui/avalonia).

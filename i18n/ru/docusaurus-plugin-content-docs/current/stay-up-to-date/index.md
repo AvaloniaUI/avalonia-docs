@@ -1,4 +1,4 @@
-# Stay Up-To-Date
+# Последние события
 
 <!--```mdx-code-block
 import {DocsCardList} from '../../../../src/components/DocsCard';

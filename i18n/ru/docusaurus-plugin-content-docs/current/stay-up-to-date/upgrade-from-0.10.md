@@ -1,23 +1,25 @@
 ---
 id: upgrade-from-0.10
-title: Upgrading from 0.10
+title: Обновление с версии 0.10
 ---
 
 Avalonia 11 introduces a number of breaking changes from 0.10. The following guide converse the most commonly-encountered changes and gives solutions for them.
 
-## Updating the project
+## Обновление проекта
 
-1. Update the Avalonia packages to 11.x
-2. Themes are no longer included in the Avalonia.Desktop package, so you will need to add a package reference to either
+1. Обновите пакеты Avalonia до версии 11.x
+2. Themes больше не находятся в пакете `Avalonia.Desktop`, поэтому вам необходимо добавить один из следующих:
     - `Avalonia.Themes.Fluent`
     - `Avalonia.Themes.Simple`
-3. Remove the package reference to `XamlNameReferenceGenerator` - Avalonia now includes an inbuilt generator by default
-4. If necessary, update the `<LangVersion>` to at least 9 in order to be able to use init-only properties
-5. If you want the same fonts as in 0.10, also include `Avalonia.Fonts.Inter` package and add `.WithInterFont()` to the app builder. By default, 11.0 doesn't include any custom fonts.
+3. Удалите ссылку на пакет `XamlNameReferenceGenerator` - теперь Avalonia по-умолчанию имеет встроенный генератор.
+4. Если требуется, обновите `<LangVersion>` хотя бы до 9 версии, чтобы использовать `Init-only Properties`
+5. Если вы хотите использовать те же шрифты, что и в версии `0.10`, то добавьте пакет `Avalonia.Fonts.Inter`, 
+а также `.WithInterFont()` в `app builder`. С версии 11.0, по-умолчанию **не поддерживаются** сторонние шрифты.
 
 ## Theme Handling
 
-In v0.10, the theme is specified directly inside the `Application.Styles` tag in the `Application.axaml` file. An example of this is shown below:
+Для версии `0.10`, тема указывается внутри тега `Application.Styles` в файле `Application.axaml`.
+Пример:
 
 ```xml
 <Application.Styles>
@@ -25,11 +27,15 @@ In v0.10, the theme is specified directly inside the `Application.Styles` tag in
 </Application.Styles>
 ```
 
-In this example, the `Mode` attribute of the `FluentTheme` tag is used to specify the theme mode, which can be either "Light" or "Dark".
+В примере выше, для тега `FluentTheme` указывается атрибут `Mode`, через который задается режим темы. 
+Он может быть как `Light`, так и `Dark`.
 
-Theme management is improved by introducing a new attribute to the `Application` tag: `RequestedThemeVariant`. This new attribute is used to set the theme of your application, overriding the system's current theme if specified. If you want to follow the system's current theme, you can set it to "Default". Other available options are "Dark" and "Light".
+Для улучшения управления темами, в тег `Application` был добавлен атрибут `RequestedThemeVariant`.
+Он используется для установки темы приложения, в обход системной.
+Если требуется, чтобы приложение соответствовала системной теме, то необходимо установить значение `Default`.
+Другие доступные варианты: `Light` и `Dark`.
 
-An example of how this attribute is used is shown below:
+Пример использования:
 
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
@@ -39,7 +45,7 @@ An example of how this attribute is used is shown below:
              RequestedThemeVariant="Default">
 ```
 
-The `FluentTheme` tag no longer requires the `Mode` attribute and can be left empty.
+Тег `FluentTheme` больше не требует обязательного указания атрибута `Mode`.
 
 ```xml
 <Application.Styles>
@@ -49,11 +55,15 @@ The `FluentTheme` tag no longer requires the `Mode` attribute and can be left em
 
 ### Theme Dictionary and Theme Variant
 
-The method, `Styles.TryGetResource` method now requires a nullable `ThemeVariant` parameter as per PR [#8166](https://github.com/AvaloniaUI/Avalonia/pull/8166). This allows users to specify `Light`, `Dark`, and `Default`
+Согласно PR [#8166](https://github.com/AvaloniaUI/Avalonia/pull/8166), теперь метод `Styles.TryGetResource` требует, чтобы параметр `ThemeVariant` был `nullable`.
+Это позволяет указывать темы `Light`, `Dark` и `Default`.
 
-Using `ThemeVariant.Default` as the key marks a specific theme dictionary as a fallback in case the theme variant or resource key is not found in other theme dictionaries.
+Параметр `ThemeVariant.Default` позволяет указать тему по-умолчанию, если искомый вариант не найден.
 
-In addition to the built-in values of `Light`, `Dark`, and `Default`, any object value can be used as a key (_since it's wrapped in the `ThemeVariant(object key)` structure_). `{x:Static}` markup extension can also be used here if a developer wants to define multiple custom themes as static properties and reference them from the XAML code.
+Помимо встроенных значений `Light`, `Dark` и `Default`, любое другое значение объекта можно использовать в качестве ключа
+(_поскольку оно заключено в структуру `ThemeVariant(object key)`_).
+Расширение разметки `{x:Static}`, можно использовать для определения тем в качестве статических,
+что позволит ссылаться на них в коде XAML.
 
 ```cs
 // Before
@@ -65,21 +75,24 @@ bool TryGetResource(object key, ThemeVariant? theme, out object? value)
 
 ## System.Reactive/Observables
 
-Avalonia no longer has a dependency on `System.Reactive`. If you're using reactive features, add a package reference to `System.Reactive` to your project.
+Avalonia больше не зависит от `System.Reactive`. Если вы используете его, то необходимо добавить пакет `System.Reactive` в ваш проект.
 
-If you don't need the whole of `System.Reactive` but just want to make a simple subscription to an `IObservable<T>` you can use the utility class `AnonymousObserver<T>` provided by Avalonia, for example:
+Если вы не используете весь `System.Reactive`, но при этом хотите использовать простые подписки `IObservable<T>`,
+то можно использовать служебный класс Avalonia `AnonymousObserver<T>`, например:
 
 ```csharp
 observable.Subscribe(new AnonymousObserver<string>(() => { /* Code to execute when the observable changes. */ }));
 ```
 
-If you need to subscribe on property or event changes, you can `AddClassHandler` instead of observables.
+Если вам требуется подписаться на изменения свойств или событий, то вместо `observables` можно использовать `AddClassHandler`.
 
-See [#9749](https://github.com/AvaloniaUI/Avalonia/pull/9749), [#10105](https://github.com/AvaloniaUI/Avalonia/pull/10105) for more information.
+Подробнее в [#9749](https://github.com/AvaloniaUI/Avalonia/pull/9749), [#10105](https://github.com/AvaloniaUI/Avalonia/pull/10105)
 
 ## Updating Interfaces
 
-Many interfaces have been removed in Avalonia 11. You should be able to do a global find/replace to replace each of the follow interfaces with its concrete type:
+Множество интерфейсов были убраны в Avalonia 11.
+У вас не должно быть проблем, чтобы используя глобальный поиск/замену, провести указанную ниже замену интерфейса на реализацию:
+interfaces with its concrete type:
 
 - `IAvaloniaObject` -> `AvaloniaObject`
 - `IBitmap` -> `Bitmap`
@@ -93,13 +106,15 @@ Many interfaces have been removed in Avalonia 11. You should be able to do a glo
 - `ITemplatedControl` -> `TemplatedControl`
 - `IVisual` -> `Visual`
 
-If you have your own interfaces that derive from one of these interfaces you'll need to remove the interface base, and do a cast to the concrete class at the point of usage.
+Если вы используете собственный интерфейсы на базе одного из вышеперечисленных,
+то необходимо удалить базовый интерфейс и провести приведение к конкретному классу.
 
-See [#9553](https://github.com/AvaloniaUI/Avalonia/pull/9553), [#11495](https://github.com/AvaloniaUI/Avalonia/pull/11495) for more information.
+Подробнее в [#9553](https://github.com/AvaloniaUI/Avalonia/pull/9553), [#11495](https://github.com/AvaloniaUI/Avalonia/pull/11495).
 
-### Optional, but recommended:
+### Опционально (рекомендуем):
 
-The `IStyleable` interface is now deprecated. In Avalonia 0.10.x, to override a control's style key you implemented `IStyleable` and added an explicit interface implementation for `StyleKey`:
+Интерфейс `IStyleable` стал `Deprecated`, В версии `0.10.x`, для переопределения ключа стиля `Control`,
+вам требовалось переопределять `IStyleable` и добавлять явную реализацию для `StyleKey`:
 
 ```csharp
 class MyButton : Button, IStyleable
@@ -107,8 +122,8 @@ class MyButton : Button, IStyleable
     Type IStyleable.StyleKey => typeof(Button);
 }
 ```
-
-In Avalonia 11, the `IStyleable` reference will give a deprecated warning. The following should be used instead:
+С версии `11`, при использовании `IStyleable`, вы получите предупреждение `Deprecated`.
+Теперь следует делать так:
 
 ```csharp
 class MyButton : Button
@@ -117,56 +132,66 @@ class MyButton : Button
 }
 ```
 
-See [#11380](https://github.com/AvaloniaUI/Avalonia/pull/11380) for more information.
+Подробнее в [#11380](https://github.com/AvaloniaUI/Avalonia/pull/11380).
 
 ## Views
 
-Views that are in the form of a `.axaml`/`.axaml.cs` (or `.xaml`/`.xaml.cs`) pair now have auto-generated C# code. To facilitate this:
+Теперь ваши `View`, которые представлены парами `.axaml`/`.axaml.cs` (или `.xaml`/`.xaml.cs`),
+имеют автоматически-сгенерированный код на C#.
 
-- Make the class in the .cs file `partial`
-- Remove the `private void InitializeComponent()` method
-- Do **NOT** remove the call to `InitializeComponent()` in the constructor: this method is now a generated method and still needs to be called
-- Remove the `this.AttachDevTools()` call from the constructor - `InitializeComponent` now has a parameter which controls whether DevTools is attached in debug mode whose default is `true`
+Для этого?
 
-Previously, to find a named control declared in the XAML file, a call to `this.FindControl<T>(string name)` or `this.GetControl<T>(string name)` was needed. This is now unnecessary - controls in the XAML file with a `Name` or `x:Name` attribute will automatically cause a field to be generated in the class to access the named control (as in WPF/UWP etc).
+- В файле `.cs`, пометьте класс как `partial`
+- Удалите метод `private void InitializeComponent()`
+- **НЕ** удаляйте вызов `InitializeComponent()` из конструктора: данный метод теперь генерируется автоматически, но все также необходим.
+- Удалите вызов `this.AttachDevTools()` из конструктора.
+Теперь `InitializeComponent` имеет параметр, который управляет подключением `DevTools` в режиме отладки, по-умолчанию он включен.
 
-Note, this source generator is available for C# only. For F# nothing was changed.
+Раньше, чтобы найти именнованый элемент объявленный в XAML файлы, нужен был вызов `this.FindControl<T>(string name)` 
+или `this.GetControl<T>(string name)`. Сейчас это не обязательно - XAML элементы с выставленными
+`Name` или `x:Name` атрибутами будут автоматически сгенерированны для доступа в C# классах (так же как это работало в WPF и UWP).
+
+Обратите внимание, что автомамтически, код генерируется только для C#. Для F# изменений не было.
 
 ## ItemsControl
 
-`ItemsControl` and derived classes such as `ListBox` and `ComboBox` now have both an `Items` property and an `ItemsSource` as in WPF/UWP.
+`ItemsControl`, а также его производные классы, такие как `ListBox` и `ComboBox`,
+теперь имеют свойства `Items` и `ItemsSource`, по-аналогии с WPF/UWP.
 
-`Items` is a readonly collection property that is pre-populated, and `ItemsSource` is the read/write version that has a default value of null.
+`Items` - это коллекция, доступная только для чтения, предварительно заполняется.
+`ItemsSource` - это коллекция, которая' используется для чтения и записи, по-умолчанию равна `null`.
 
-Replace any bindings to `Items` with a binding to `ItemsSource`:
+Замените все привязки к `Items` на `ItemsSource`:
 
 ```xml
 <ListBox Items="{Binding Items}">
 ```
 
-Becomes
+Стало:
 
 ```xml
 <ListBox ItemsSource="{Binding Items}">
 ```
 
-In addition:
+Дополнительно:
 
-- `ListBox.VirtualizationMode` has been removed, the virtualization mode is changed by changing the `ItemsPanel`:
-  - To disable virtualization use a `StackPanel`.
-  - To enable virtualization use a `VirtualizingStackPanel`.
-- `Carousel.IsVirtualizing` has been removed, there is now only a "virtualizing" mode for `Carousel`
-- Item container lookup was moved to `ItemsControl` as in UWP (old methods are left on ItemContainerGenerator marked with [Obsolete]):
+- Был удален `ListBox.VirtualizationMode`, теперь виртуализация указывается через `ItemsPanel`:
+  - Для отключения виртуализации, используйте `StackPanel`.
+  - Для включения виртуализации, используйте `VirtualizingStackPanel`.
+
+- Был удален `Carousel.IsVirtualizing`, теперь для `Carousel` **всегда** используется виртуализация.
+- Item container lookup перенесен в `ItemsControl`, как в UWP (старые методы остались в ItemContainerGenerator, но помечены как [Obsolete]):
   - `ItemsControl.ContainerFromIndex(object item)`
   - `ItemsControl.IndexFromContainer(Control container)`
-- The `Items` and `ItemTemplate` properties on `ItemsPresenter` have been removed. The template bindings to these properties in control templates can simply be removed
+- В `ItemsPresenter` были удалены свойства `Items` и `ItemTemplate`. 
+Привязку шаблона к ним, можно просто удалить.
 
-See [#10590](https://github.com/AvaloniaUI/Avalonia/pull/10590), [#10827](https://github.com/AvaloniaUI/Avalonia/pull/10827) for more information.
+Подрбнее в [#10590](https://github.com/AvaloniaUI/Avalonia/pull/10590), [#10827](https://github.com/AvaloniaUI/Avalonia/pull/10827).
 
 ## Classes
 
-`StyledElement.Classes` is now a readonly property. When used in an object initializer, code which did the following:
-
+`StyledElement.Classes` теперь доступен только для чтения.
+Нижеуказанный код инициализации:
 ```csharp
 var c = new Control
 {
@@ -174,7 +199,7 @@ var c = new Control
 };
 ```
 
-Should be changed to:
+Замените на:
 
 ```csharp
 var c = new Control
@@ -183,28 +208,29 @@ var c = new Control
 };
 ```
 
-To manipulate a `Classes` collection outside of an object initializer use the standard `IList<string>` methods.
+Для работы с `Classes` вне инициализации объекта, следует использовать стандартные функции `IList<string>`.
 
-See [#11013](https://github.com/AvaloniaUI/Avalonia/pull/11013) for more information.
+Подробнее в [#11013](https://github.com/AvaloniaUI/Avalonia/pull/11013).
 
 ## Windows
 
-The `TopLEvel.PlatformImpl` API is no longer available for controls such as `Window`. The relevant methods have been moved to `TopLevel`, `WindowBase` or `Window` itself:
+API `TopLEvel.PlatformImpl` больше недоступно для Controls, таких как `Window`.
+Соответствующие методы были перемещены в `TopLevel`, `WindowBase` или `Window`:
 
-- `window.PlatformImpl.Handle` becomes `window.TryGetPlatformHandle()`
-- `window.PlatformImpl.BeginMove(e)` becomes `window.BeginMove()`
-- `window.PlatformImpl.Resized` becomes `window.Resized`
+- `window.PlatformImpl.Handle` -> `window.TryGetPlatformHandle()`
+- `window.PlatformImpl.BeginMove(e)` -> `window.BeginMove()`
+- `window.PlatformImpl.Resized` -> `window.Resized`
 
 ## AssetLoader
 
-The `IAssetLoader` interface is no longer available. Use the static `AssetLoader` class:
+Интерфейс `IAssetLoader` больше не доступен. Используйте статический класс `AssetLoader`:
 
 ```csharp
 var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
 var bitmap = new Bitmap(assets.Open(new Uri(uri)));
 ```
 
-Becomes:
+Стало:
 
 ```csharp
 var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
@@ -212,29 +238,29 @@ var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
 
 ## OnPropertyChanged
 
-The virtual `AvaloniaObject.OnPropertyChanged` method is now non-generic. Replace
+Виртуальный метод `AvaloniaObject.OnPropertyChanged`, больше не использует дженерики. Замените
 
 ```csharp
 protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
 ```
 
-with
+на
 
 ```csharp
 protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
 ```
 
-Also the technique for getting the old and new values from `AvaloniaPropertyChangedEventArgs` without boxing has changed:
+Также изменился способ старых и новых значений из `AvaloniaPropertyChangedEventArgs` без `boxing`:
 
-- Replace `change.NewValue.GetValueOrDefault<T>()` with `change.GetNewValue<bool>()`
-- Replace `change.OldValue.GetValueOrDefault<T>()` with `change.GetOldValue<bool>()`
-- You can also use `change.GetOldAndNewValue<T>()` to get both
+- Замените `change.NewValue.GetValueOrDefault<T>()` на `change.GetNewValue<bool>()`
+- Замените `change.OldValue.GetValueOrDefault<T>()` на `change.GetOldValue<bool>()`
+- Можно использовать `change.GetOldAndNewValue<T>()` для получения обеих значений.
 
 See [#7980](https://github.com/AvaloniaUI/Avalonia/pull/7980) for more information.
 
 ## Events
 
-The following events have been renamed:
+Нижеуказанный события были переименованы:
 
 - `PointerEnter` -> `PointerEntered`
 - `PointerLeave` -> `PointerExited`
@@ -245,59 +271,66 @@ The following events have been renamed:
   - `MenuClosed` -> `Closed`
   - `MenuOpened` -> `Opened`
 
-`RoutedEventArgs.Source` has changed from type `IInteractive` to type `object`: cast to a concrete type such as `Control` to use it.
+`RoutedEventArgs.Source` поменяли тип с `IInteractive` на `object`: сделайте приведение к конкретному типу, скажем `Control`, и используйте.
 
 ## Layout
 
-Previously a full layout pass was achieved by getting the layout root and calling a method on the layout manager:
+Раньше, чтобы вызвать полный перепросчет макета элементов, нужно было вытащить корневой элемент и на нем вызвать следующий код:
 
 ```csharp
 ((ILayoutRoot)control).LayoutManager.ExecuteLayout();
 ```
 
-The `LayoutManager` is no longer exposed from the `ILayoutRoot`, instead call the `UpdateLayout` method on any control as in WPF/UWP:
+Сейчас же `LayoutManager` больше не доступен из `ILayoutRoot`. Вместо него испоьзуйте метод `UpdateLayout` на любом Control, как в WPF/UWP:
 
 ```csharp
 control.UpdateLayout();
 ```
 
-`ILayoutable` was used in 0.10.x to get the previous measure constraints and arrange bounds. Because `ILayoutable` is no longer available, these are now exposed from `LayoutInformation`:
+`ILayoutable` использовался в версии `0.10.x` для доступа к `Constraints` и `Arrange Bounds`.
+Теперь они доступны через `LayoutInformation`:
 
 - `Size? LayoutInformation.GetPreviousMeasureConstraint(Layoutable control)`
 - `Rect? LayoutInformation.GetPreviousArrangeBounds(Layoutable control)`
 
 ## Focus
 
-The focus manager is no longer available via `FocusManager.Instance` and has instead been moved to the `TopLevel`:
+Focus Manager был перемещен из `FocusManager.Instance` в `TopLevel`:
+
+Было:
 
 ```csharp
 var focusManager = FocusManager.Instance;
 ```
 
-Becomes:
+Стало:
 
 ```csharp
 var focusManager = TopLevel.GetTopLevel(control).FocusManager;
 ```
 
-In addition, the `IFocusManager` API has been changed.
+Также было изменено API `IFocusManager`.
 
-- To get the currently focused element, use `IFocusManager.GetFocusedElement()`
-- To focus a control use `control.Focus()`
+- Для получения элемента, находящегося в фокусе, используйте `IFocusManager.GetFocusedElement()`
+- Для установки фокуса на `control`, используйту `control.Focus()`
 
-There is currently no event for listening to focus changes on `IFocusManager`. To listen for focus changes, add a listener to the `InputElement.GotFocusEvent`:
+На данный момент нет события для отслеживания смены фокуса в `IFocusManager`. 
+Для отслеживания изменений, добавьте событие `InputElement.GotFocusEvent`:
 
 ```csharp
 InputElement.GotFocusEvent.AddClassHandler<InputElement>((element, args) => { });
 ```
 
-The same applied to KeyboardDevice, which isn't accessible anymore. Use the same focus related APIs as a replacement.
+Вышесказанное относится и к `KeyboardDevice`, который больше недоступен.
+The same applied to KeyboardDevice, which isn't accessible anymore. 
+В качестве замены, ипользуйте API, связанное с фокусом.
 
-See [#11407](https://github.com/AvaloniaUI/Avalonia/pull/11407) for more information.
+Подробнее в [#11407](https://github.com/AvaloniaUI/Avalonia/pull/11407).
 
 ## Visual Tree
 
-`IVisual` was used in 0.10.x to expose the visual parent and visual children of a control. Because `IVisual` is no longer available, these are now exposed as extension methods in the `Avalonia.VisualTree` namespace:
+В версии `0.10.x`, `IVisual` использовался для получения элементов Control.
+Поскольку `IVisual` больше недоступен, то теперь их можно использовать из `Avalonia.VisualTree`:
 
 ```csharp
 using Avalonia.VisualTree;
@@ -306,32 +339,36 @@ var visualParent = control.GetVisualParent();
 var visualChildren = control.GetVisualChildren();
 ```
 
-## Rendering
+## Rendering (рус: Отрисовка)
 
-The `Render` method on certain controls is now sealed. This is because it is planned to make these controls use composition primitives instead of rendering via `DrawingContext`.
+Метод `Render` теперь недоступен для некоторых `Controls`.
+Это связано с планами использовать для их отрисовки примитивы, вместо отрисовки через `DrawingContext`.
 
-If you have a control whose `Render` method was being overloaded but it's now sealed, consider using a base class, for example instead of `Border` use `Decorator`. Note that you will now be responsible for drawing the background/border.
-
-See [#10299](https://github.com/AvaloniaUI/Avalonia/pull/10299) for more information.
+Подробнее в [#10299](https://github.com/AvaloniaUI/Avalonia/pull/10299).
 
 ## Locator
 
-The `AvaloniaLocator` is no longer available. Most services that were available via the locator now have alternative methods of access:
+`AvaloniaLocator` больше недоступен.
+Большинство сервисов, использовавших его, теперь имеют альтернативные способы доступа:
 
-1. `AssetLoader` is a static class now with all of the old methods.
-2. `IPlatformSettings` was moved to `TopLevel.PlatformSettings` and `Application.PlatformSettings`. Note, it's always preferred to use settings of the specific top level (window) rather than global ones.
-3. `IClipboard` was moved to the `TopLevel.Clipboard`. Note, that `Application.Clipboard` was removed as well.
-4. `PlatformHotkeyConfiguration` was moved to the `PlatformSettings.HotkeyConfiguration`.
+1. Теперь `AssetLoader` стал статических, методы не изменились.
+2. `IPlatformSettings` был разделен между `TopLevel.PlatformSettings` и `Application.PlatformSettings`. 
+Обратите внимание, что желательно использовать настройки окна, а не глобальные.
+3. `IClipboard` перемещен в `TopLevel.Clipboard`. Обратите внимание, что `Application.Clipboard` также был удален.
+4. `PlatformHotkeyConfiguration` перемещен в `PlatformSettings.HotkeyConfiguration`.
 
-Some applications were using the `AvaloniaLocator` as a general-purpose service locator. This was never an intended usage of `AvaloniaLocator` and those application should move to a service locator or DI container designed for the purpose, e.g. [`Splat`](https://www.reactiveui.net/docs/handbook/dependency-inversion/) or `Microsoft.Extensions.DependencyInjection`.
+Вы могли использовать `AvaloniaLocator` в качестве локатора общего назначения.
+Такое использовани никогда не предполагалось, и теперь вы должны использовать `Service Locator` или DI-контейнер,
+например [`Splat`](https://www.reactiveui.net/docs/handbook/dependency-inversion/) или `Microsoft.Extensions.DependencyInjection`.
 
-## Miscellaneous/Advanced Scenarios
+## Прочие особенности
 
-- `IRenderer`/`DeferredRenderer`/`ImmediateRenderer` have now been removed. For performance reasons it is no longer possible to supply your own renderer, everything uses the new composition renderer.
-- `Renderer.Diagnostics` is now `RendererDiagnostics`
-- `ICustomDrawOperation.Render` now takes an `ImmediateDrawingContext` instead of a `DrawingContext`
-- Add `.GetTask()` to the end of calls to `Dispatcher.UIThread.InvokeAsync` if directly returning the value in a method which returns a `Task`
-- `IRenderRoot.RenderScaling` has been moved to `TopLevel.RenderScaling`
-- `LightweightObservableBase` and `SingleSubscriberObservableBase` have been made internal. These were utility classes designed for a specific purpose in Avalonia and were not intended to be used by clients as they do not handle certain edge cases. Use the mechanisms provided by `System.Reactive` to create observables, such as `Observable.Create`
-- When binding to methods, the method must either have no parameters or a single object parameter.
-- `OpenFileDialog` and `SaveFileDialog` have been removed. For file system storage service use `IStorageProvider` on the Top Level.
+- `IRenderer`/`DeferredRenderer`/`ImmediateRenderer` были удалены. По соображениям  производительности, больше нельзя использовать собственную отрисовку.
+- `Renderer.Diagnostics` стал `RendererDiagnostics`
+- `ICustomDrawOperation.Render` теперь использует `ImmediateDrawingContext` вместо `DrawingContext`
+- Если вы напрямую возвращаете значения метода с `Task`, то в конце вызова `Dispatcher.UIThread.InvokeAsync`, добавьте `.GetTask()`.
+- `IRenderRoot.RenderScaling` перемещен в `TopLevel.RenderScaling`
+- `LightweightObservableBase` и `SingleSubscriberObservableBase` стали `internal`. Это служебные классы, созданные для обработки кокнкретных ситуаций в Avalonia. 
+Они не предназначены для клиентского использования. Используйте `System.Reactive` для создания `observables`, таких как `Observable.Create`.
+- При привязке к методам, метод должен быть либо без параметров, либо только с одним параметром.
+- `OpenFileDialog` и `SaveFileDialog` были удалены. Для работы с файловой системой, используйте `IStorageProvider`.
