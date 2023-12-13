@@ -43,9 +43,12 @@ namespace ToDoList.DataModel
 
 ### Создание фейкового сервиса данных
 
-In a real application, you might use a SQL database and write services based on the _Microsoft Entity Framework_ to read and write data.  However, this is well beyond the scope of this tutorial! So to test the app, you will create a fake data service that acts as if it has a database, but really just uses an array in memory.
+В реальном приложениии, вы могли использовать базу данных SQL и написать сервис с использование
+_Microsoft Entity Framework_ для записи и чтения данных. Но это выходит за рамки данного руководства!
+Поэтому, для тестирования приложения, мы создадим фейковый сервис данных, который будет имитировать базу данных,
+но в реальности будет использовать массив в памятию
 
-Follow this procedure to create the fake database service:
+Для добавления фейкового сервиса базы данных, выполите следующие действия:
 
 - Создайте новую папку проекта с названием 'Services'.
 - В созданную папку, добавьте класс с названием 'ToDoListService'.
@@ -69,4 +72,6 @@ namespace ToDoList.Services
 }
 ```
 
-That is the model done for now. On the next page, you will learn how to add a view model to the app to complete the MVVM pattern.
+Теперь создание модели завершено,
+На следубщей странице вы узнаете, как добавить `view model` в приложение,
+чтобы завершить внедрение паттерна MVVM.
