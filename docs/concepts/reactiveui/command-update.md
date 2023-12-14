@@ -8,7 +8,7 @@ This page introduces how you can use Avalonia UI binding to initiate changes on 
 
 For example, you can use this view model with an action defined in the method `ButtonAction`:
 
-```
+```csharp
 public class MainWindowViewModel : ViewModelBase
 {
     private string _greeting = "Welcome to Avalonia!";
@@ -28,7 +28,7 @@ public class MainWindowViewModel : ViewModelBase
 
 Then in the corresponding XAML define two controls:
 
-```
+```xml
 <TextBlock Text="{Binding Greeting}" />
 <Button Command="{Binding ButtonAction}" >Change It</Button>
 ```
