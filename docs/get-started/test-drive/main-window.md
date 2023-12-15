@@ -42,7 +42,7 @@ For more information about the concept of control layout zones, see [here](../..
 ## The Visual Studio Designer
 
 If you're using Visual Studio you should see the XAML code and preview pane.
-Navigate to the **MainWindow.axaml** file and click the **Design View** button at the top of the editor window.
+Navigate to the **MainView.axaml** file and click the **Split View** button at the top of the editor window.
 
 <img className="center" src={VsDesignerScreenshot} alt="" />
 
