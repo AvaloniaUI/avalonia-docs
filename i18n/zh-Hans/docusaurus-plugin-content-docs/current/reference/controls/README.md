@@ -2,18 +2,18 @@
 description: REFERENCE
 ---
 
-# Built-in Controls
+# 内置控件
 
-_Avalonia UI_ provides following groups of built-in controls:
+_Avalonia UI_ 提供内置控件:
 
-* Layout controls
-* Buttons
-* Data display controls
-* Text display and editing
-* Value selection
-* Displaying images
-* Date and time controls
-* Menus
+* 布局控件
+* 按钮
+* 数据展示控件
+* 文本展示和编辑
+* 值选择
+* 显示图片
+* 日期和时间控件
+* 菜单
 
 ##
 
