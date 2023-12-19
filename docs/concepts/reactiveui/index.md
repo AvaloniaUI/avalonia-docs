@@ -36,7 +36,7 @@ For detailed information about _ReactiveUI_ itself, see the website [https://rea
 For more background about the MVVM pattern, see the _Microsoft_ article [here](https://msdn.microsoft.com/en-us/library/hh848246.aspx).
 :::
 
-The package includes helpers specifically for _Avalonia U_I to handle the _ReactiveUI_ tasks of view model-based routing, view activation and scheduling. (see the above reference for full details of these tasks).
+The package includes helpers specifically for _Avalonia UI_ to handle the _ReactiveUI_ tasks of view model-based routing, view activation and scheduling. (see the above reference for full details of these tasks).
 
 :::info
 If you start your application from the Avalonia MVVM Application solution template; then you will already have the _ReactiveUI_ package installed and configured.
