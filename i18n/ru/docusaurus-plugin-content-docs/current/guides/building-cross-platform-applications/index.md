@@ -1,6 +1,6 @@
 ---
 id: index
-title: Building Cross-Platform Applications
+title: Создание кроссплатформенных приложений
 ---
 
 This guide introduces Avalonia and outlines how to architect a cross-platform application to maximize code re-use and deliver a high-quality UI experience across all major platforms: Windows, Linux, macOS, iOS, Android and WebAssembly.
