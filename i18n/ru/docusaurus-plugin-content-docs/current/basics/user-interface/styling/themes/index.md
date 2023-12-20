@@ -1,6 +1,6 @@
 ---
 id: index
-title: Themes
+title: Темы
 ---
 
 In Avalonia, themes are complete sets of [control themes](../control-themes) and [theme resources](../../../../guides/styles-and-resources/how-to-use-theme-variants) for build-in controls.
