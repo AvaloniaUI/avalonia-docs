@@ -1,49 +1,74 @@
 ---
 id: solution-setup
-title: Setting Up A Cross Platform Solution
+title: Настройка кроссплатформенного решения
 ---
 
-Despite the platform diversity, Avalonia projects all leverage the same solution file format (the Visual Studio ".SLN” file format). Solutions can be shared across development environments, providing a unified approach to multi-platform app development.
+Несмотря на разнообразие платформ, все проекты Avalonia используют один и тот же файл решения
+(в Visual Studio его формат ".SLN").
+Решения можно открывать в разных средах разработки, что обеспечивает унифицированный подход
+к разработке мультиплатформенных приложений.
 
-The first step to creating a new cross platform application is to create a solution. This section will elaborate on what happens next: the process of setting up the projects for building cross-platform applications with Avalonia.
+Первым шагом к созданию такого кроссплатформенного приложения, является создание решения.
+В данном разделе будет подробно разобран процесс настройки проектов для создания
+кроссплатформенных приложение на Avalonia.
 
-## Populating the Solution
+## Структура решения
 
-The `Avalonia Cross Platform Application` template creates a solution structure that includes the following projects to allow seamless sharing and reusability of code across multiple platforms:
+Для обеспечения совместного использования и переиспользование кода между платформами,
+шаблон `Avalonia Cross Platform Application` создает решение, 
+включающее указанные ниже проекты:
 
 :::info
-[Ensure you've installed the Avalonia Templates.](../../get-started/install#install-avalonia-ui-templates)
+[Проверьте, установлены ли шаблоны Avalonia.](../../get-started/install#install-avalonia-ui-templates)
 :::
 
-### Core Project
-This forms the heart of your application and is designed to be platform-agnostic. It contains all the reusable components of your application, including business logic, view models, and views. All other projects reference this core project. The majority of your development efforts should reside here.
+### Проект Core
+Данный проект составляет основу вашего приложения, и спроектирован как платформонезависимый.
+Он содержит все переиспользуемые компоненты вашего приложения, включая бизнес-логику, `view model` и `views`.
+Все остальные проекты ссылаются на проект Core.
+Основная часть времени по развитию приложения, должна быть состредоточена здесь.
 
-### Desktop Project
-This project enables running the app to run on Windows, macOS, and Linux platforms, with an output type of 'WinExe'.
+### Проект Desktop
+Данный проект позволяет запускать приложение на платформах Windows, macOS и Linux
+с выходным файлом типа 'WinExe'.
 
-### Android Project 
-This is a `NET-Android` based project that references the Core Project. It features a MainActivity that inherits from `AvaloniaMainActivity`, acting as the entry point for the Android application.
+### Проект Android
+Проект `NET-Android` разработан специально для платформы Android.
+В него включен файл `MainActivity`, который наследуется от `AvaloniaMainActivity`
+и выступает точкой входа для приложения.
 
-### iOS Project 
-This is a `NET-iOS` project tailored for iOS and iPadOS platforms. The entry point for this project is the `AppDelegate`, which inherits from `AvaloniaAppDelegate`. 
+### Проект iOS 
+Проект `NET-iOS` разработан специально для платформ iOS и iPadOS.
+В него включен файл `AppDelegate`, который наследуется от `AvaloniaAppDelegate`
+и выступает точкой входа для приложения.
 
-### Browser Project
-This WebAssembly (WASM) project allows your Avalonia application to run in a web browser. Its RuntimeIdentifier is `'browser-wasm'`.
+### Проект Browser
+Проект WebAssembly (WASM) позволяет запускать ваше приложение на Avalonia прямо в браузере.
+Его RuntimeIdentifier - это `'browser-wasm'`.
 
-## Core Project
+## Проект Core
+Проекты с общим кодом, должны использовать только универсальные зависимости,
+существующие для всех платформ.
+Обычно, они включают в себя пространства имен фреймворка, 
+такие как `System`, `System.Core` и `System.Xml`.
 
-Shared code projects should only reference assemblies that are universally available across all platforms. This generally includes common framework namespaces like `System`, `System.Core`, and `System.Xml`.
+Общие проекты должны быть направлены на реализацию большинства функциональных возможностей приложения,
+его UI компонентов, а также максимизацию переиспользования кода.
 
-These shared projects aim to implement as much application functionality as possible, including UI components, thereby maximizing the reusability of code. 
+Блягодаря разделению функциональности на слои, код становится более управляемым, тестируемым,
+а также может повторно использоваться на нескольких платформах.
+Такое разделение на слови в проектах Avalonia, способствуют повышению эффективности 
+и масштабируемости разработки приложений.
 
-By separating functionalities into distinct layers, code becomes easier to manage, test, and reuse across multiple platforms. This layered architecture approach in Avalonia UI projects promotes efficiency and scalability in application development.
+## Платформоориентированные проекты приложения.
 
-## Platform-Specific Application Projects
+Платформозависимые проекты должны ссылаться на проект `Core`.
+Они существуют для возможности запуска приложений на специфичных платформах, таких как iOS, Android и WASM.
 
-Platform-Specific projects must reference the Core Project. The Platform Specific projects exist to enable the application to run on unique platforms including iOS, Android and WASM. 
-
-While desktop platforms can be all share a single project, it may be benefitual to create a seperate project for macOS using the [Xamarin.Mac Target Framework](https://learn.microsoft.com/en-us/xamarin/mac/platform/target-framework). This will enable easier distribution and packaging of your application.   
-
+В то же время, настольные приложения могут использовать один общий проект,
+хотя иногда может потредобваться создать отдельный проект для macOS с использованием 
+[Xamarin.Mac Target Framework](https://learn.microsoft.com/en-us/xamarin/mac/platform/target-framework).
+Это облегчит распостранение и упаковку вашего приложения.
 
 
 
