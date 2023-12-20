@@ -1,13 +1,22 @@
 ---
 id: architecture
-title: Architecture
+title: Архитектура
 ---
 
-A crucial aspect of building cross-platform applications with Avalonia is creating an architecture that enables maximum code sharing across different platforms. By adhering to the fundamental principles of Object-Oriented Programming, you can establish a well-structured application:
+Важнейшим аспектов при создании кроссплатформенного приложения на Avalonia,
+является создание архитектуры, которая обеспечивает максимально возможное количество общего кода между платформами.
+Для создания хорошо структурированного приложения, советуем придерживаться фундаментальных принципов ООП:
 
-1. **Encapsulation** – This involves ensuring that classes and architectural layers only expose a minimal API that performs their necessary functions while concealing the internal implementation details. In practical terms, this means that objects operate as 'black boxes', and the code utilizing them doesn't need to comprehend their internal workings. Architecturally, it implies implementing patterns like the Façade that promote a simplified API orchestrating more complex interactions on behalf of the code in higher abstract layers. Hence, the UI code should focus solely on displaying screens and accepting user input, never directly interacting with databases or other lower-level operations.
-2. **Separation of Responsibilities** – Every component, whether at the architectural or class level, should have a clear and defined purpose. Each component should perform its specified tasks and expose that functionality via an API accessible to other classes needing to use it.
-3. **Polymorphism** – Programming to an interface (or an abstract class) supporting multiple implementations allows core code to be written and shared across platforms while still interacting with platform-specific features offered by Avalonia.
+1. **Инкапсуляция** – This involves ensuring that classes and architectural layers only expose a minimal API that performs their necessary functions while concealing the internal implementation details. In practical terms, this means that objects operate as 'black boxes', and the code utilizing them doesn't need to comprehend their internal workings. Architecturally, it implies implementing patterns like the Façade that promote a simplified API orchestrating more complex interactions on behalf of the code in higher abstract layers. Hence, the UI code should focus solely on displaying screens and accepting user input, never directly interacting with databases or other lower-level operations.
+2. **Разделение ответственности** – Каждый компонент архитектуры или класса, должен иметь четкое назначение,
+выполнять только свои определенные задачи, а также предоставлять доступ к этой функциональности
+для других классов через API.
+3. **Полиморфизм** – Использование интерфейсов (или абстрактных классов),
+позволяет писать общий код для приложений
+Programming to an interface (or an abstract class) 
+supporting multiple implementations allows core code to be written 
+and shared across platforms while still interacting with platform-specific
+features offered by Avalonia.
 
 The result of these principles is an application modelled after real-world or abstract entities with distinct logical layers. 
 
@@ -17,12 +26,12 @@ Separating code into layers makes the application easier to understand, test, an
 
 In this document and the relevant case studies, we reference the following five application layers:
 
-1. **Data Layer** – This is where non-volatile data persistence occurs, likely through a database like SQLite or LiteDB, but could be implemented with XML files or other suitable mechanisms.
-2. **Data Access Layer** – This layer is a wrapper around the Data Layer providing Create, Read, Update, Delete (CRUD) operations on the data without revealing implementation details to the caller. For instance, the DAL might contain SQL queries to interact with the data, but the code referencing it doesn't need to be aware of this.
-3. **Business Layer** – Sometimes referred to as the Business Logic Layer or BLL, this layer houses business entity definitions (the Model) and business logic. It is a prime candidate for the Business Facade pattern.
-4. **Service Access Layer** – This layer is used to access services in the cloud, ranging from complex web services (REST, JSON) to simple retrieval of data and images from remote servers. It encapsulates networking behaviour and provides a streamlined API for consumption by the Application and UI layers.
-5. **Application Layer** – This layer contains code that is generally platform-specific or code that is specific to the application (not typically reusable). In the Avalonia framework, this layer is where you decide which platform-specific features to leverage if any. The distinction between this layer and the UI layer becomes clearer with Avalonia since the UI code can be shared across platforms.
-6. **User Interface (UI) Layer** – This user-facing layer contains views and the view-models that manage them. Avalonia makes it possible for this layer shared across every supported platform, unlike traditional architectures where the UI layer would be platform-specific.
+1. **Слой данных** – This is where non-volatile data persistence occurs, likely through a database like SQLite or LiteDB, but could be implemented with XML files or other suitable mechanisms.
+2. **Слой доступа к данным** – This layer is a wrapper around the Data Layer providing Create, Read, Update, Delete (CRUD) operations on the data without revealing implementation details to the caller. For instance, the DAL might contain SQL queries to interact with the data, but the code referencing it doesn't need to be aware of this.
+3. **Слой бизнес-логики** – Sometimes referred to as the Business Logic Layer or BLL, this layer houses business entity definitions (the Model) and business logic. It is a prime candidate for the Business Facade pattern.
+4. **Слой доступа к сервисам** – This layer is used to access services in the cloud, ranging from complex web services (REST, JSON) to simple retrieval of data and images from remote servers. It encapsulates networking behaviour and provides a streamlined API for consumption by the Application and UI layers.
+5. **Слой приложения** – This layer contains code that is generally platform-specific or code that is specific to the application (not typically reusable). In the Avalonia framework, this layer is where you decide which platform-specific features to leverage if any. The distinction between this layer and the UI layer becomes clearer with Avalonia since the UI code can be shared across platforms.
+6. **Слой пользовательского интерфейса (UI)** – This user-facing layer contains views and the view-models that manage them. Avalonia makes it possible for this layer shared across every supported platform, unlike traditional architectures where the UI layer would be platform-specific.
 
 An application might not contain all layers – for instance, the Service Access Layer would not be present in an application that doesn't access network resources. A simpler application might merge the Data Layer and Data Access Layer because the operations are extremely basic. With Avalonia, you have the flexibility to shape your application architecture to suit your specific needs, enjoying a high degree of code reusability across platforms.
 
@@ -31,10 +40,16 @@ An application might not contain all layers – for instance, the Service Access
 Patterns are a well-established approach to capture recurring solutions to common problems. There are several key patterns that are valuable to comprehend when building maintainable and understandable applications with Avalonia.
 
 ### Model, View, ViewModel (MVVM) 
-A popular and often misunderstood pattern, MVVM is primarily employed when constructing User Interfaces and promotes a separation between the actual definition of a UI Screen (View), the logic behind it (ViewModel), and the data that populates it (Model). The ViewModel acts as an intermediary between the View and the Model. The Model, although crucial, is a distinct and optional piece, and thus, the essence of understanding this pattern resides in the relationship between the View and ViewModel.
+A popular and often misunderstood pattern, 
+MVVM is primarily employed when constructing 
+User Interfaces and promotes a separation between the actual definition of a UI Screen (View), 
+the logic behind it (ViewModel), and the data that populates it (Model). 
+The ViewModel acts as an intermediary between the View and the Model. 
+The Model, although crucial, is a distinct and optional piece, and thus, 
+the essence of understanding this pattern resides in the relationship between the View and ViewModel.
 
 :::info
-[Learn more about MVVM](../../concepts/the-mvvm-pattern/).
+Подробнее о паттерне MVVM, см. [здесь](../../concepts/the-mvvm-pattern/).
 :::
 
 ### Business Façade
