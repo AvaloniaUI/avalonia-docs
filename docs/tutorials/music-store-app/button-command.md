@@ -20,7 +20,7 @@ The first step in linking the view and view model is to make the view model able
 using ReactiveUI;
 using System.Windows.Input;
 
-namespace AvaloniaApplication11.ViewModels
+namespace Avalonia.MusicStore.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
