@@ -37,7 +37,9 @@ An application might not contain all layers – for instance, the Service Access
 
 ## Common Architectual Patterns
 
-Patterns are a well-established approach to capture recurring solutions to common problems. There are several key patterns that are valuable to comprehend when building maintainable and understandable applications with Avalonia.
+Patterns are a well-established approach to capture recurring solutions to common problems. 
+There are several key patterns that are valuable to comprehend when building maintainable 
+and understandable applications with Avalonia.
 
 ### Model, View, ViewModel (MVVM) 
 A popular and often misunderstood pattern, 
@@ -53,19 +55,37 @@ the essence of understanding this pattern resides in the relationship between th
 :::
 
 ### Business Façade
-Also known as the Manager Pattern, this provides a simplified point of entry for intricate operations. For instance, in a Task Tracking application, you might have a TaskManager class with methods such as GetAllTasks(), GetTask(taskID), SaveTask (task), etc. The TaskManager class provides a Façade to the inner mechanisms of saving/retrieving tasks objects.
+Also known as the Manager Pattern, this provides a simplified point of entry for intricate operations.
+For instance, in a Task Tracking application, you might have a TaskManager class with methods such as GetAllTasks(),
+GetTask(taskID), SaveTask (task), etc.
+The TaskManager class provides a Façade to the inner mechanisms of saving/retrieving tasks objects.
 
 ### Singleton 
-The Singleton pattern ensures that only a single instance of a particular object can ever exist. For example, when using SQLite in applications, you typically want only one instance of the database. The Singleton pattern is an efficient method to enforce this.
+The Singleton pattern ensures that only a single instance of a particular object can ever exist.
+For example, when using SQLite in applications, you typically want only one instance of the database.
+The Singleton pattern is an efficient method to enforce this.
 
 ### Provider
-A pattern originally coined by Microsoft to promote code re-use across Silverlight, WPF and WinForms applications. Shared code can be written against an interface or abstract class, and platform-specific concrete implementations are written and passed in when the code is utilised. In Avalonia, since we can share both UI and application logic, this pattern can help handle platform-specific exceptions or leverage platform-specific features.
+A pattern originally coined by Microsoft to promote code re-use across Silverlight, WPF and WinForms applications.
+Shared code can be written against an interface or abstract class, 
+and platform-specific concrete implementations are written and passed in when the code is utilised.
+In Avalonia, since we can share both UI and application logic,
+this pattern can help handle platform-specific exceptions or leverage platform-specific features.
 
 ### Async
-Not to be confused with the `Async` keyword, the Async pattern is used when long-running tasks need to be executed without holding up the UI or current processing. In its simplest form, the Async pattern describes that long-running tasks should be kicked off in another thread (or a similar thread abstraction such as a Task) while the current thread continues to process and listens for a response from the background process, updating the UI when data and/or state is returned. This is essential in maintaining a responsive UI in Avalonia applications.
+Not to be confused with the `Async` keyword, 
+the Async pattern is used when long-running tasks need to be executed without holding up the UI or current processing.
+In its simplest form, the Async pattern describes that long-running tasks should be kicked off in another thread 
+(or a similar thread abstraction such as a Task)
+while the current thread continues to process and listens for a response from the background process, 
+updating the UI when data and/or state is returned. This is essential in maintaining a responsive UI in Avalonia applications.
 
 ---
-Each of the aforementioned patterns will be explored in-depth as their practical application is demonstrated in our case studies. For a more comprehensive understanding of the [Facade](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), and [Provider](https://en.wikipedia.org/wiki/Provider_model) patterns, as well as [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) in general, you may want to delve into resources available on platforms like Wikipedia.
+Each of the aforementioned patterns will be explored in-depth as their practical application
+is demonstrated in our case studies.
+For a more comprehensive understanding of the [Facade](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), and [Provider](https://en.wikipedia.org/wiki/Provider_model) patterns,
+as well as [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) in general,
+you may want to delve into resources available on platforms like Wikipedia.
 
 
 
