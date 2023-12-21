@@ -3,28 +3,29 @@ id: index
 title: Темы
 ---
 
-In Avalonia, themes are complete sets of [control themes](../control-themes) and [theme resources](../../../../guides/styles-and-resources/how-to-use-theme-variants) for build-in controls.
+В Avalonia, темы представляют собой готовые наборы [control themes](../control-themes) и [theme resources](../../../../guides/styles-and-resources/how-to-use-theme-variants),
+которые используются для встроенных `controls`.
 
 
-## Official themes
-Avalonia provides two build in theme:
+## Официальные темы
+Avalonia имеет две встроенные темы:
 
-### Fluent theme
+### Тема Fluent
 
-- [Fluent Theme](fluent) is a modern theme inspired by [Microsoft's Fluent Design System](https://en.wikipedia.org/wiki/Fluent_Design_System).
+- [Fluent](fluent) - это современная тема, вдохновленная [Microsoft's Fluent Design System](https://en.wikipedia.org/wiki/Fluent_Design_System).
 
-### Simple theme
+### Тема Simple
 
-- [Simple Theme](simple) is an minimal and lightweight theme with limited build in styling.
+- [Simple](simple) - это минималистичная и легковесная тема, с ограниченным набором стилей.
 
 ---
-## Community themes
-Several themes, in varying stages of development, have been brought to life by our dedicated community
+## Темы сообщества
+Наше преданное сообщество создало несколько тем, находящихся на разной стадии разработки:
 
 ### Material.Avalonia 
 
-- [Material.Avalonia](https://github.com/AvaloniaCommunity/Material.Avalonia) is a modern theme inspired by [Google's Material Design System](https://m3.material.io/).
+- [Material.Avalonia](https://github.com/AvaloniaCommunity/Material.Avalonia) - это современная тема, вдохновленная [Google's Material Design System](https://m3.material.io/).
 
 ### Semi.Avalonia
 
-- [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia) is inspired by [Semi Design](https://semi.design/en-US)
+- [Semi.Avalonia](https://github.com/irihitech/Semi.Avalonia) - это тема, вдохновленная [Semi Design](https://semi.design/en-US)
