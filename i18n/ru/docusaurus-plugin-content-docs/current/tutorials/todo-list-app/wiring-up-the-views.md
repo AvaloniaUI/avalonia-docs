@@ -5,17 +5,23 @@ description: TUTORIALS - To Do List App
 import ToDoDataContextWiringDiagram from '/img/gitbook-import/assets/image (7) (3).png';
 import ToDoBlankAfterWiringScreenshot from '/img/gitbook-import/assets/image (42) (2).png';
 
-# Data Binding
+# Data Binding (рус: Привязка данных)
 
-Now that you have the view model and model (data service) connected, the next step is to link the views and view models, so the list of items can be displayed.
+Теперь, когда у вас добавлены `view model` и `model (data service)`,
+необходимо связать `views` и `view models`, чтобы отобразить элементы списка.
 
-This step uses _Avalonia UI_ concepts of data templates and data binding. Here a data template inside an items control defines how to display the to do list; and data bindings define how to get the list, and how to get the name and check status for each item.
+Для этого мы будем использовать концепты _Avalonia UI_, 
+такие как `data templates (рус: шаблоны данных)` и `data binding (рус: привязка данных)`.
+Шаблоны данных задают отображение элементов внутри `control` для элементов списка дел,
+а привязка данных указывает, как получить этот список и данные по каждому его элементу.
 
-Follow this procedure to adapt your user control to use the items control:
+Для адаптации вашего `user control` для использования `items control`, 
+выполните следующие действия:
 
-- Locate and open the **ToDoListView.axaml** file.
-- Add `xmlns:vm="using:ToDoList.ViewModels"` and `x:DataType="vm:ToDoListViewModel"` attributes to `<UserControl>` element. 
-- Replace the `<StackPanel>` element, so that the code looks like this:
+- Найдите и откройте файл **ToDoListView.axaml**.
+- Добавьте атрибуты `xmlns:vm="using:ToDoList.ViewModels"` и `x:DataType="vm:ToDoListViewModel"`
+в элемент `<UserControl>`. 
+- Замените элемент `<StackPanel>`, как показано ниже:
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -45,24 +51,36 @@ Follow this procedure to adapt your user control to use the items control:
 </UserControl>
 ```
 
-Take some time here to examine the code that you just added: 
+Потратьте некоторое время на изучение только что добавленного кода:
 
-The items control `<ItemsControl>` repeats its display for each item in a collection source that is defined by the `ItemsSource` attribute. Here the data binding expression `{Binding ListItems}` means we are looking for a data context with this property name.
+Для отрисовки каждого элемента коллекции, используется `<ItemsControl>`.
+Сам `<ItemsControl>` повторяет отрисовку для каждого элемента коллекции,
+которая определена в атрибуте `ItemsSource`. 
+Также, выражение привязки данных `{Binding ListItems}`, говорит о том,
+что мы ищем контекст данных с таким именем свойства.
 
-How each item is displayed inside the items control is controlled by the item template `ItemTemplate>`. This can be any combination of controls, but in this example a **data template** is being used.
+За вид отображаемого элемента, внутри `<ItemsControl>`, отвечает шаблон `ItemTemplate>`.
+Он может содержать любую комбинацию `controls`, но в данном примере используется **data template**.
 
 :::info
-You can review the data template concept [here](../../concepts/templates/).
+Подробнее о концепции Data Template, см. [здесь](../../concepts/templates/).
 :::
 
-The built-in controls inside the data template will expect to find the properties `IsChecked` and `Description`. These will come from the items in the `ListItems` property of a suitable data context that the user control manages to find.
+Встроенные `controls` внутри шаблона данных, будут ожидать обнаруженя свойств `IsChecked` и `Description`.
+Они будут получены из элементов свойства `ListItems`, находящегося в первом подходящем
+контексте данных, который найден `user control`.
 
-So the arrangement of views and view models so far looks like this:
+Теперь схема связей между `views` и `view models`, выглядит следующим образом:
 
 <img className="center" src={ToDoDataContextWiringDiagram} alt="" />
 
-This will work if any parent of the items control has a data context object having  a`ListItems` property. The _Avalonia UI_ binding will search upwards in the control tree to locate a suitable data context. But although the main window data context has been set (during the app initialization - see the file **App.axaml.cs**), at this point there is still no data context with a `ListItems` property.
+Это будет работать, если у любого родителя `items control` есть объект контекста данных со
+свойством `ListItems`.
+Привязка _Avalonia UI_ выполнит поиск по дереву элментов,чтобы найти подходящий контекст данных.
+Пусть контекст данных основного окна и был установлен
+(во время инициализации приложения - см. файл **App.axaml.cs**),
+но по прежнему отсутствует контекст данных со свойством `ListItems`.
 
-So if you run your app, the list is still blank!
+Если вы запустите приложение, то список по-прежнему будет пуст!
 
 <img className="center" src={ToDoBlankAfterWiringScreenshot} alt="" />

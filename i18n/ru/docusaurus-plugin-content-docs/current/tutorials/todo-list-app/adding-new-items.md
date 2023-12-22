@@ -4,20 +4,23 @@ description: TUTORIALS - To Do List App
 
 import ToDoAddNewItemsScreenshot from '/img/gitbook-import/assets/image (44).png';
 
-# Add New Items
+# Добавление новых элементов
 
-When you created the `ToDoListView` user control earlier in this tutorial, you added a button so that the user can add a new item. On this page you will add an action to the button.
+Ранее, при создании `ToDoListView`, вы добавляли кнопку, 
+которую пользователь может использовать для добавления нового элемента.
+На этой странице вы добавить обработку нажатия кнопки.
 
-When the user clicks the button, you want the application to show a new view that will allow the user to enter the description of a new item.
+Мы хотим, чтобы при нажатии кнопки пользователем,
+поялвялось новое `view`, куда можно внести данные о новом элементе.
 
-## Create the View Model
+## Создание View Model
 
-To create a view model for the new view, follow this procedure:
+Для создания `view model` для новой `view`, выполните следующие действия:
 
-- In the **Solution Explorer** locate and right-click the **ViewModels** folder.
-- Click **Add**, then **Class**.
-- Name the class 'AddItemViewModel'. Click **Add**.
-- Add the description property as shown:
+- В окне **Solution Explorer** найдите папку **ViewModels** и нажмите ПКМ.
+- Нажмите **Add**, а потом **Class**.
+- Имя класса 'AddItemViewModel'. Нажмите **Add**.
+- Добавьте описание свойства, как показано ниже:
 
 ```csharp
 using System;
@@ -31,25 +34,25 @@ namespace ToDoList.ViewModels
 }
 ```
 
-## Create a New View
+## Создание нового View через Visual Studio
 
-To create the new view, follow this procedure if you are using Visual Studio:
+Для создания нового `view`, выполните указанные ниже действия:
 
-- In the **Solution Explorer** locate and right-click the **Views** folder.
-- Click **Add**
-- Click **Avalonia** under **C# Items** and then click **User Control (Avalonia)**
-- In **Name** enter 'AddItemView'
-- Click **Add**
+- В окне **Solution Explorer** найдите папку **Views** и нажмите ПКМ.
+- Нажмите **Add**
+- Выберите **Avalonia** под **C# Items** и нажмите **User Control (Avalonia)**
+- В поле **Name** введите 'AddItemView'
+- Нажмите **Add**
 
-### .NET Core CLI
+### Создание нового View через .NET Core CLI
 
-Run the following command to create the new view, follow this procedure if you are using .Net Core CLI:
+Для создания нового `view`, выполните указанную ниже команду:
 
 ```
 dotnet new avalonia.usercontrol -o Views -n AddItemView  --namespace ToDoList.Views
 ```
 
-Alter the XAML to match the following:
+Изменить XAML как показано ниже:
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -74,15 +77,16 @@ Alter the XAML to match the following:
 </UserControl>
 ```
 
-
-This gives you a view which looks like this:
+После изменений, вы должны увидеть похожее изображение:
 
 <img className="center" src={ToDoAddNewItemsScreenshot} alt="" />
 
-The new view has a text box control which has three properties for you to review:
+Новое `view` содержит `TextBox`, который имеет 3 визуальных свойства:
 
-* `AcceptsReturn` creates a multi-line text box.
-* `Text` binds the text that is displayed in the text box to the `Description` property on a view model (that you created above).
-* `Watermark` causes a placeholder to be displayed when the text box is empty.
+* `AcceptsReturn` создает многострочное текствопое поле
+* `Text` привязывает текст для отображения внутри `TextBox`, указанный с свойстве 
+`Description` у `view model` (ее мы создали ранее).
+* `Watermark` отображает справочный текст, если поле `Text` пустое.
 
-On the next page you will learn how to change the view in the main window to display the new item view in place of the to do list view.
+На следующей странице вы узнаете, как поменять `view` в основном окне,
+чтобы отображалось `view` создания нового элемента, а не `view` списка дел.

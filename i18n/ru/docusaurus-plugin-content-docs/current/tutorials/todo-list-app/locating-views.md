@@ -6,9 +6,11 @@ import ToDoViewLocatorArchitectureDiagram from '/img/gitbook-import/assets/image
 
 # The View Locator
 
-On this page you will learn how the view locator class that the solution template added to your project is being used. You will see how this implements a 'convention over configuration' paradigm inside the content zone of your main window.
+На этой странице вы узнаете, для чего используется `view locator`, который был добавлен из шаблона решения.
+Вы увидите, как реализуется парадигма 'Соглашения по конфигурации' внутри
+содержимого вашего основного окна.
 
-To help learn how it works, take some time to examine the view locator class:
+Для понимания, как это работает, ознакомьтесь с классом `view locator`:
 
 ```csharp
 using Avalonia.Controls;
@@ -43,12 +45,16 @@ namespace ToDoList
 }
 ```
 
-The view locator class defines a data template in code which takes a view model and can return a corresponding view. It works by defining two methods:
+Класс `view locator` определяет шаблон данных в коде, который принимает `view model` и возвращает соответствующую `view`.
+Это работает благодаря двум метода:
 
-* `Match(object data)` looks at the data and checks that it inherits from the  `ViewModelBase` class - as both your view models do! If this check passes, then the `Build` method is called:
-* `Build(object data)` takes the fully qualified name of the view model type and replaces the string `"ViewModel"` with the string `"View"`. It then tries to create the view type, and if that is successful returns it.
+* `Match(object data)` проверяет, что ваши `view model` наследуются от класса `ViewModelBase` - как это и делают обе ваши `view models`!
+При усмушном прохождении проверки, вызывается метод `Build`:
+* `Build(object data)` принимает полное имя вашей `view model`, и заменяет ее часть `"ViewModel"` на `"View"`.
+Затем он пытается создать тип `view` и, в случае успеха, возвращает его.
 
-An instance of `ViewLocator` is present in the **App.axaml** file in the app project (it was added by the solution template). It should look like this:
+Экземпляр `ViewLocator` находит внутри файла проекта **App.xaml** (он был добавлен шаблоном решения).
+Он выглядит примерно так:
 
 ```markup
 <Application xmlns="https://github.com/avaloniaui"
@@ -68,22 +74,27 @@ An instance of `ViewLocator` is present in the **App.axaml** file in the app pro
 </Application>
 ```
 
-In your to do list app, the main window has had its content set to an object that is not a built-in control, user control or custom control. So _Avalonia UI_ searches up the tree of controls for a **data template** that matches the class of the content data.
+В вашем приложении списка дел, содержимое основного окна указывает на объект, который не является встроенным `control`,
+`user control` или пользовательским `control`.
+Поэтому _Avalonia UI_ ищет **data template (рус: шаблон данных)** в дереве `controls`, который соответствует классу в содержимом основного окна.
 
 :::info
-For more information about the concepts behind data templates, see [here](../../concepts/templates/).
+Подробнее о концепте `data templates (рус: шаблоны данных)`,  см [здесь](../../concepts/templates/).
 :::
 
-As no other data templates match, the search will eventually reach the `ViewLocator` in the application data templates element. This will run its checks and if they pass, return an instance of the corresponding view. In your app this will be the to do list view.
+Поскольку никаких других data templates (рус: шаблонов данных) нет, то поиск укажет на `ViewLocator` - элемент `data templates` приложения.
+Он запустит свои проверки и, в случае успеха, веренет соответствующий экземпляр `view`. 
+В вашем приложении, это будет `view` списка дел.
 
 <img className="center" src={ToDoViewLocatorArchitectureDiagram} alt="" />
 
-In this way the content of the main window is set to the correct view, based on the type of the view model and the naming convention.
+Таким образом, содержимому основного окна присваивается нужная `view`, согласно типу `view model` и соглашения об именовании.
 
 ## Source not Framework
 
-Note that the view locator class is included in the project source rather than being part of the _Avalonia UI_ framework itself. This is because using an implementation of the 'convention over configuration' paradigm is an architectural choice for the application developer.
+Обратите внимание, что класс `View Locator`, включен в исходники проекта, и не является часть фреймворка _Avalonia UI_.
+Это связано с тем, что парадигма 'Соглашение по конфигурации', является архитектурным выбором разработчика прилоежения.
 
-If you do not want to use the view locator (in a different app); then remove it from the project and the **App.axaml** file.
+Поэтому, если вы не ходите использовать `view locator` (в другом приложении), то удалит его из проекта и файла **App.axaml**.
 
-On the next page you will learn how to add revealed functionality and actions to the **OK** and **Cancel** buttons.
+На следующей странице вы узнаете, как добавить функкционал и события для кнопок **OK** и **Cancel**.

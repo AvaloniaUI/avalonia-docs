@@ -5,17 +5,21 @@ description: TUTORIALS - To Do List App
 import ToDoOkDisabledScreenshot from '/img/gitbook-import/assets/image (21) (2).png';
 import ToDoOkEnabledScreenshot from '/img/gitbook-import/assets/image (41).png';
 
-# Add Item Buttons
+# Кнопки для Add Item
 
-On this page, you will learn how to complete the to do list app by adding actions for the buttons in the add item view. You will include some revealed functionality that disables the OK button until the user enters text in the input.
+На этой страницу вы узнаете, как дополнить обработку кнопок для `add item view`.
+Вы добавите некоторые `revealed functionality`, которая делает кнопку `OK` неактивной,
+пока пользователь не введет текст в поле ввода.
 
-Also the OK button action needs to pass the description text back to the main window view model, so it can be added to the items collection.  You will do this by passing an argument to the command.
+Также, нажатие кнопки `OK`, должно передать описание из поля текста во `view model` основного окна,
+чтобы потом добавить его в коллекцию элементов.
+Вы сделаете это, передав аргумент команде.
 
-To alter the add item view model, follow this procedure:
+Для изменения `view model`, выполните следующие действия:
 
-- Stop the app if it is running.
-- Locate the **AddItemViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.
+- Остановите приложение, если оно запущено.
+- В папке **/ViewModels** найдите файл **AddItemViewModel.cs**.
+- Измените код, как показано ниже.
 
 ```csharp
 using ReactiveUI;
@@ -51,17 +55,21 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Earlier in this tutorial, you bound the add item button directly to the main window view model `AddItem` method. In contrast, the OK button here requires some revealed functionality, and an argument.
+Ранее в руководстве, вы привязали кнопку добавления элемента прямо к методу `AddItem` у `view model` основного окна.
+Здесь же, кнопка `OK` требует указание аргумента и `revealed functionality`.
 
-Therefore this view model code declares a reactive command for the OK button, with its second type parameter `ToDoItem` (from the data model).
+Следовательно, код `view model` определяет реактивную команду для кнопки `OK` со вторым параметром типа `ToDoItem` (из модели данных).
 
 :::info
-The reactive command is part of _ReactiveUI_. For an introduction to this concept, see [here](../../concepts/reactiveui/reactive-command.md).
+Реактивные команды являются частью _ReactiveUI_. Подробнее об этом концепте, см. [здесь](../../concepts/reactiveui/reactive-command.md).
 :::
 
-Although there is nothing special about the cancel button, a reactive command is declared for that as well. You will see later how this will allow the output from both commands to be handled in the same place.
+Хотя в кнопке `Cancel` и не использует какой-либо особенный функционал, она тоже объявлена реактивной командой.
+Позже вы увидите, что такое объявление позволяет обрабатывать обме команды в одном и том же месте.
 
-Both reactive command objects are then created in the constructor. The OK command defines a function that passes a to do item parameter. The cancel command has an empty object parameter.
+Далее, обе реаксивные команды создаются в конструкторе.
+Команда `OK` определяет функцию, которая передает элемент списка дел, как параметр.
+Команда `Cancel` имеет пустой объект, как параметр.
 
 ```csharp
 var isValidObservable = this.WhenAnyValue(
@@ -69,7 +77,8 @@ var isValidObservable = this.WhenAnyValue(
     x => !string.IsNullOrWhiteSpace(x));
 ```
 
-To implement the revealed functionality, the code creates an observable based on the description property. The `WhenAnyValue` method returns the result of the second lambda function (second parameter) every time the value of the description property changes.
+Для реализации показанного функционала, код создает `observable` свойство для поля `description`.
+Метод `WhenAnyValue` возвращает результат второй лямбда-функции (второй параметр), каждый раз при изменении свойства `description`.
 
 ```csharp
 private string _description = string.Empty;
@@ -80,35 +89,37 @@ public string Description
 }
 ```
 
-To ensure that the observable operates correctly, the code also adds the `RaiseAndSetIfChanged` pattern to the description property.
+Чтобы гарантировать корректность работы `observable`, ко свойству `description` добавлен шаблон `RaiseAndSetIfChanged`.
 
-Examine how the OK reactive command is created:
+Изучите, как создается реактивная команда `OK`:
 
 ```csharp
 OkCommand = ReactiveCommand.Create(
    () => new ToDoItem { Description = Description }, isValidObservable);
 ```
 
-The first parameter is a lambda function that is run whenever the command is executed. The function here creates an instance of the data model `TodoItem` including the current value of the description.
+Первый параметр - это лямбда-функция, которая запускается каждый раз при выполнении команды.
+Эта функция создает экземляр модели данных `TodoItem` с текущим значениям `Description`.
 
-The second lambda function ('can execute' parameter) determines the enabled state of the reactive command. So this is passed the observable created just before.
+Вторая лямбда-функция (параметр 'can execute') определяет состояние доступа реактивной команды
 
-The code also creates a reactive command for the cancel button:
+В коде также создается реактивная команда для кнопки `Cancel`:
 
 ```csharp
 CancelCommand = ReactiveCommand.Create(() => { });
 ```
 
-The cancel command has no execution, so its first and only parameter does nothing. The cancel button is always enabled, so it does not have a 'can execute' parameter.
+Команда `Cancel` не выполняется. поэтому ее первый параметр никак не используется.
+Кнопка `Cancel` всегда доступка, поэтому у нее нет параметра `can execute`.
 
-## Bind the OK and Cancel Buttons
+## Привязка кнопок `OK` и `Cancel`
 
-Your next step is to create binding for the OK and cancel buttons in the view.
+На этом этапе требуется создать привязку для кнопок `OK` и `Cancel` во `view`.
 
-To do this, follow this procedure:
+Для этого выполните следующие действия:
 
-- Locate the **AddItemView.axaml** file in the **/Views** folder.
-- Edit the XAML as shown.
+- В папке **/Views** найдите файл **AddItemView.axaml**.
+- Измените XAML как показано ниже:
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -135,10 +146,11 @@ To do this, follow this procedure:
 </UserControl>
 ```
 
-Run the application and click **Add Item**. You should now see that the OK button is only enabled when there is some text in the description input.
+Запустите приложение и нажмите **Add Item**.
+Вы должны увидеть, что кнопка `OK` доступна только тогда, когда в поле ввода описания есть какой-либо текст
 
 <img className="center" src={ToDoOkDisabledScreenshot} alt="" />
 
 <img className="center" src={ToDoOkEnabledScreenshot} alt="" />
 
-On the next page you will learn how to process the new to do item, so that it appears on the list, if the user clicks OK.
+На следующей странице вы узнаете, как обработать новый элемент, чтобы он появился в списке, после нажатия кнопки `OK`.

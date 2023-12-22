@@ -1,31 +1,44 @@
 ---
 id: index
-title: Samples & Tutorials
+title: Примеры и Руководства
 ---
 
-This section has practical tutorials that are designed to help you learn _Avalonia UI_ and build your confidence. Here is a brief guide to what you can expect from each of the tutorials:
+Данный раздел поможет вам изучить _Avalonia UI_, а также закрепить полученные знания.
+Ниже представлено краткое содержание о руководствах и их содержимом:
 
-## To Do List App
+## Приложение: *"To Do List"* (рус: Список Дел)
 
-A simple to do list application using the Model View View-Model (MVVM) pattern, with binding to a collection and _Reactive UI_ programming, from which you will meet:
+Простое приложение "Список дел". Оно использует шаблон проектирования MVVM,
+привязку к коллекциям, а также _Rective UI_ из которого вы изучите:
 
 * `RaiseAndSetIfChanged`
 * `ReactiveCommand`
 * `IObservable<>`
-* `Observable.Merge()` with `Select()`, `Take()`, and `Subscribe()` methods.
+* `Observable` и его методы: `Merge()`, `Select()`, `Take()` и `Subscribe()`.
 
-This is a very good introduction to the MVVM and _ReactiveUI_ techniques recommended for _Avalonia UI_ programming. Follow the tutorial [here](./todo-list-app/).
+Это хорошая база для освоения MVVM и _ReactiveUI_, рекомендуемая для работы с _Avalonia UI_.
+Ознакомиться с руководством можно [здесь](./todo-list-app/).
 
-## Music Store App
+## Приложение: *"Music Store"*
 
-This app was made for a demonstration on a webinar hosted by _JetBrains_, and co-hosted by Dan Walmsley, one of the creators of _Avalonia UI_.
+Данное приложение было создана как демо для вебинара,
+организованного _JetBrains_ совместно с Dan Walmsley, одним из создателей _Avalonia UI_.
+
 
 :::info
-To view the JetBrains and Avalonia UI webinar on YouTube, see [here](https://www.youtube.com/watch?v=kZCIporjJ70).
+Ознакомиться с вебинаром JetBrains и Avalonia UI, вы можете на платформе [YouTube](https://www.youtube.com/watch?v=kZCIporjJ70).
 :::
 
-It uses the _JetBrains Rider_ IDE running on macOS, but the steps will be equivalent on other platforms; and the developer experience will also be similar on other IDEs such as Visual Studio.
+Для запуска на macOS, используется _JetBrains Rider_,
+но все действия будут эквивалентны и на других платформах, 
+как и сама разработка в других IDE, скажем Visual Studio.
 
-The app features a highly graphical application using the MVVM pattern, and including how to display a dialog, present images and collections of data, and implement data persistence.
+В приложении используется продвинутая графика, для отображения красивого интерфейса.
+Также стоит отметить следующие функции, используемые в приложении:
+* паттерн MVVM
+* Отображение дилоговых окон.
+* Отрисовка изображения
+* Коллеции данных
+* Сохранение данных
 
-Follow this demonstration [here](./music-store-app/).
+Ознакомиться с руководством можно [здесь](./music-store-app/).

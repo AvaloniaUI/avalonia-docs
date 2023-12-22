@@ -7,19 +7,22 @@ import ToDoNavigationArchitectureDiagram from '/img/gitbook-import/assets/image 
 import ToDoBeforeNavigationScreenshot from '/img/gitbook-import/assets/image (43) (1).png';
 import ToDoAfterNavigationScreenshot from '/img/gitbook-import/assets/image (21) (1).png';
 
-# Navigate Views
+# Навигация по Views
 
-On this page you will learn how to change the view in the content zone of the main window to display the new item view, when the user clicks **Add Item**.
+На этой странице вы узнаете, как поменять `view` в зоне содержимого у основного окна,
+для отображения `view` нового элемента, после нажатия кнопки **Add Item**.
 
 <img className="center" src={ToDoNavigationConceptDiagram} alt="" />
 
-Up to this point, you have used the MVVM pattern for this tutorial app. This means that the application logic is controlled from the view models, and the view model in charge of what appears in the main window is the main window view model.
+До этого момента, вы использовали паттерн MVVM.
+Это значит, что логическая часть приложения управляется из `view models`.
+Основное окно управляется из одноименной `view model`.
 
-Therefore to start with, follow this procedure to add a method to the main window view model that will change what is loaded in the main window content zone:
+Чтобы добавить во `view model` метод для смены содержимого в основном окно, выполните следующие действия:
 
-- Stop the app if it is running.
-- Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.
+- Остановите ваше приложение, если оно запущено.
+- В папке **/ViewModels** найдите файл **MainWindowViewModel.cs**.
+- Измените код, как показано ниже.
 
 ```csharp
 using ReactiveUI;
@@ -56,20 +59,27 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Take some time to examine the code you just added. There is a new `ContentViewModel` property that can get and set the view model in the main window content zone. This is initially set in the constructor to be the to do list view model, with to do list data provided from the service.
+Потратьте некоторое время на изучение только что добавленного кода.
+Было добавлено новое свойство `ContentViewModel`, которое может получать и изменять `view model`
+в содержимом основного окна.
 
-There is also now a new `AddItem()` method that can reassign the content to be the add item view model.
+Также, данное свойство инициализируется в конструкторе через сервис.
 
-Notice that the `ContentViewModel` property set calls `RaiseAndSetIfChanged` which will cause a notification to be generated every time the property changes value. The _Avalonia UI_ binding system requires change notifications like this so it knows when to update the user interface.
+Еще добавлено новый метод `AddItem()`, который меняет значение `ContentViewModel` на `view model` добавления нового элемента.
 
-## Main Window Content Binding
+Обратите внимание, что изменение свойства `ContentViewModel` вызывает `RaiseAndSetIfChanged`,
+который генерирует уведомление каждый раз при смене значения.
+Система привязки _Avalonia UI_, требует наличия подобных уведомлений, чтобы понимать, когда обновлять пользовательский интерфейс.
 
-Now that you have passed control of what is shown in the main window over to the main window view model (in accordance with the MVVM pattern), you need to complete the link by changing the main window content to use a binding.
+## Main Window Content Binding (рус: Привязка содержимого в основном окне)
 
-Follow this procedure:
+Теперь, когда вы передали управление содержимым окна во `view model` (в соответствии с паттерном MVVM), 
+необходимо закончить изменения, добавив привязку содержимого в основное окно.
 
-- Locate the **MainWindow.axaml** file in the **/Views** folder.
-- Edit the XAML as shown.
+Для этого выполните следующие действия:
+
+- В папке **/Views** найдите файл **MainWindow.axaml**.
+- Измините XAML как показано ниже.
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -88,12 +98,12 @@ Follow this procedure:
 
 <img className="center" src={ToDoNavigationArchitectureDiagram} alt="" />
 
-## Button Command
+## Команда кнопки
 
-Lastly, to make the add item button call the `AddItem()` method, follow this procedure:
+Теперь, чтобы нажатие на кнопку вызывало метод `AddIten()`, выполните следующие действия:
 
-* Locate the **ToDoListView.axaml** file in the **/Views** folder.
-* Edit the XAML for the button as shown:
+* В папке **/Views** найдите файл **ToDoListView.axaml**.
+* Измините XAML у кнопки, как показано ниже:
 
 ```markup
 <Button DockPanel.Dock="Bottom"
@@ -105,36 +115,39 @@ Lastly, to make the add item button call the `AddItem()` method, follow this pro
 </Button>
 ```
 
-Take some time to examine the binding that you added to the button.
+Потратьте некоторое время на изучение только что добавленной привязки к кнопке.
 
-Firstly, the `Command` property defines a method to be called whenever the button is clicked.
-
-Then the binding gives the exact **binding path** to the method using a binding source expression:
+Во первых, свойство `Command` определяет метод, который будет вызван при нажатии на кнопку.
+Во вторых, привязка позволяет указать точный путь используемого метода через выражение:
 
 ```
 $parent[Window].DataContext.AddItem
 ```
 
-The **binding source expression** redirects the source of the binding. The _Avalonia UI_ binding system will use the source in the expression, instead of the control's data context.
+**Binding source expression** перенаправляет источник привязки.
+Система привязки _Avalonia UI_ будет использовать источник из выражения, вместо контекста данных `Control`.
 
-In this case the expression is looking for any parent of the control with the type `Window`. It will then use that control's data context to call the `AddItem` method.
+В данном случае, выражение ищет любой родительский `Control` с типом `Window`.
+Затем, выражение будет использовать котекст данных найденного `Control` для вызова метода `AddItem`.
 
 :::info
-For information about the concept of binding source expressions, see [here](../../basics/data/data-binding/data-binding-syntax).
+Подробнее о концепте привязки, см [здесь](../../basics/data/data-binding/data-binding-syntax).
 :::
 
-## Run the Application
+## Запуск приложения
 
-Now If you run the application and click **Add Item**, you will see the new view appear.
+Запустите приложение и нажмите кнопку **Add Item**, чтобы увидеть новое `view`.
 
 <img className="center" src={ToDoBeforeNavigationScreenshot} alt="" />
 
 <img className="center" src={ToDoAfterNavigationScreenshot} alt="" />
 
-Have noticed something about this behaviour? The main window swaps the view model bound to its content zone, and the display correctly loads the add item view!
+А вы заметили?
+Основное окно меняет `view model`, привязанную к содержимому и корректно загружает `view` добавления элемента!
 
 :::info
-In _Avalonia UI_ you can call a simple method on the view model directly like this. You will see later in this tutorial a scenario where you must use a different implementation.
+В _Avalonia UI_, вы можете вызвать простой метод `view model` напрямую, как было показано.
+Позже, в рамках данного руководства, вы познакомитесь со сценариями, требующими другой способ реализации.
 :::
 
-On the next page you will learn how this is happening due to the presence of the view locator.
+На следующей странице вы узнаете, какую роль в разобранном материале играет `view locator`.

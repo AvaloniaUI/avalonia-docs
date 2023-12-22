@@ -1,12 +1,13 @@
 ---
 id: samples
-title: Samples
+title: Примеры
 ---
 
 ## Avalonia.Samples
 
-[`Avalonia.Samples`](https://github.com/AvaloniaUI/Avalonia.Samples) is a collection of minimal samples, which should make it easy for everyone to get started with Avalonia. Each sample focuses on a single aspect of Avalonia.
+[`Avalonia.Samples`](https://github.com/AvaloniaUI/Avalonia.Samples) - это набор различных примеров, предназначенных облегчить изучение Avalonia.
+Каждый пример затрагивает один из аспектов Avalonia. (MVVM, тестирование, Data Templates и т.д.)
 
 ## AvaloniaUI.QuickGuides
 
-[`AvaloniaUI.QuickGuides`](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides) are bitesized demos covering some of the more advanced aspects of Avalonia.
+[`AvaloniaUI.QuickGuides`](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides) - это небольшие демоверсии, в которых рассматриваются продвинутые аспекты Avalonia.

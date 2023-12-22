@@ -5,52 +5,55 @@ description: TUTORIALS - To Do List App
 import ToDoCreateNewProjectScreenshot from '/img/gitbook-import/assets/image (43).png';
 import ToDoNewSolutionScreenshot from '/img/gitbook-import/assets/image (3) (1) (1).png';
 
-# Create a New Project
+# Создание нового проекта
 
-On this page, you will learn how to create a new project for the To-Do List app. There are two methods to choose from:
+На этой странице вы узнаете, как можно создать проект для приложения *"To Do List"*.
+Есть 2 варианта:
 
-1. **Visual Studio Extension Template**: If you prefer using Visual Studio, follow the instructions below to create your project.
+1. **Visual Studio Extension Template**: 
+Если вы предпочитаете использовать Visual Studio, то следуйте инструкции, представленной ниже.
 
-2. **.NET Core CLI Command**: Alternatively, if you prefer command-line tools, you can use the .NET Core CLI command. Here's how:
+2. **.NET Core CLI Command**: Если вы предпочитаете использовать командную строку,
+то вы можете использовать команды .NET Core CLI, как показано ниже.
 
 ## Visual Studio
 
-Before you start, check if you have installed the _Avalonia UI_ extension for Visual Studio.
+Перед началом работы, убедитесь, что у вас установлено расширение _Avalonia UI_ для Visual Studio.
 
 :::info
-For full instructions about the extension, see [here](../../get-started/install-the-avalonia-extension.md).
+Подробную информацию об установке расширения _Avalonia UI_, см. [здесь](../../get-started/install-the-avalonia-extension.md).
 :::
 
 <p><img className="center" src={ToDoCreateNewProjectScreenshot} alt="" /></p>
 
-With the extension installed, start this tutorial by following these instructions:
+После завершения установки расширения, следуйте инструкции ниже:
 
-- Start _Microsoft Visual Studio_
-- Click **Create a new project**
-- In **Search for Templates**, enter 'Avalonia'
-- Click  **Avalonia MVVM Application**
-- Click **Next**
-- In **Project name**, enter 'ToDoList' as the project name and click **Create**
+- Запустите _Microsoft Visual Studio_
+- Нажмите **Create a new project**
+- В поле **Search for Templates**, введите 'Avalonia'
+- Нажмите  **Avalonia MVVM Application**
+- Нажмите **Next**
+- В поле **Project name**, укахиже 'ToDoList' как имя проекта и нажмите **Create**
 
-The newly created solution will look like this:
+Созданное решение будет иметь следующий вид:
 
 <img className="center" src={ToDoNewSolutionScreenshot} alt="" />
 
 ## .NET Core CLI
 
-Before you start, check if you have installed the _Avalonia UI_ templates for .NET Core.
+Перед началом работы, убедитесь, что у вас установлено шаблоны _Avalonia UI_ для .NET Core.
 
 :::info
-For full instructions about starting with the CLI, see [here](../../get-started/getting-started.md).
+Подробную информацию об установке шаблонов _Avalonia UI_, см. [здесь](../../get-started/getting-started.md).
 :::
 
-With the templates installed, you can create the application from the template:
+После установки шаблонов, вы можете создать приложение на их основе:
 
 ```bash
 dotnet new avalonia.mvvm -o ToDoList -n ToDoList
 ```
 
-The newly created project will look like this:
+Созданный проект будет иметь следующий вид:
 
 ```bash
 ToDoList
@@ -71,24 +74,30 @@ ToDoList
  |- ToDoList.csproj
 ```
 
-## MVVM Project Structure
+## Структура проекта с паттерном MVVM
 
-This section applies to both Visual Studio and CLI.
+Данный раздел является общим для Visual Studio и CLI.
 
-You can see there are folders for each of the concepts in the MVVM pattern (models, views, and view models) as well as some other files and folders.
+Как вы могли заметить, каждая концепция паттерна MVVM (models, views, и view models) имеет собственные папки, а также некоторые дополнительные файлы и папки.
 
-* The `/Assets` folder contains binary assets for your application such as icons and bitmaps. Files placed here will automatically be included as resources in the application.
-* The `/Models` folder is currently empty, you will add a file here later in this tutorial.
-* The `/ViewModels` folder contains a base class for view models and a rudimentary view model for the application's main window.
-* The `/Views` folder contains the application main window AXAML file. You will add other view files here during this tutorial.
-* The `App.axaml` file is for XAML styles and data templates that apply to the whole application. You will not change this file in this tutorial.
-* The `Program.cs` file is the entry point for the execution of the application. You can configure additional platform options for _Avalonia UI_ here if necessary, however, you will not change this file in this tutorial.
-* The `ViewLocator.cs` file is a special helper class, and it is used in the `App.axaml` file. The significance of this file will be explained later in this tutorial.
+* Папка `/Assets` содержит бинарные ассеты для вашего приложения. Размешенные в ней файлы, будут автоматически включены в приложение в виде ресурсов.
+* Папка `/Models` пока пуста, в дальнейшем, следуя руководству, вы добавите сюда файл.
+* Папка `/ViewModels` содержит базовый класс для `view models` и view model по-умочанию для основного окна приложения.
+* Папка `/Views` содержит AXAML-файл основного окна. Позже, вы добавите в нее дополнительные файлы.
+* Файл `App.axaml` используется для XAML стилей и шаблонов данных, которые применяются на все приложение. 
+В данном руководстве вы не будете менять данный файл.
+* Файл `Program.cs` является точкой входа при запуске приложения.
+В нем вы можете настроить дополнительные параметры платформы для _Avalonia UI_.
+В данном руководстве вы не будете менять данный файл.
+* Файл `ViewLocator.cs` определяет вспомогательный класс, который используется в файле `App.axaml`.
+Его значение будет объяснено позже, в рамках руководства.
 
-## AXAML Files
+## Файлы AXAML
 
-_Avalonia UI_ uses the file extension `.axaml` for its XAML files, and this includes those created by the Visual Studio solution template and more recent versions of the .NET Core CLI templates. If you previously used older .NET Core CLI templates, the extension may be `.xaml`.
+Для собственных XAML-файлов, _Avalonia UI_ использует расширение `.axaml`.
+Они создаются с помощью Visual Studio и более поздних версий шаблонов .NET Core CLI.
+Если вы ранее использовали более старые шаблоны .NET Core CLI, то расширение файлом может быть `.xaml`.
 
 :::info
-For more background on Avalonia UI XAML see [here](../../basics/user-interface/introduction-to-xaml.md).
+Подробнее об Avalonia UI XAML, см. [здесь](../../basics/user-interface/introduction-to-xaml.md).
 :::

@@ -1,30 +1,33 @@
 ---
 id: index
-title: To Do List App
+title: Приложение To Do List (Список дел)
 ---
 
 import ToDoFinishedApplicationScreenshot from '/img/tutorials/todo-list-app/image (14).png';
 
-In this tutorial you will create a simple to do list application using _Avalonia UI_ and the Model View View-Model (MVVM) pattern with binding to the to do list (collection) data.
+В данном руководстве, вы создадите простое приложение для составления списка дел. В нем будут задествованы _Avalonia UI_ и шаблон MVVM, с привязкой ко списку (коллекции) дел.
 
 <img className="center" src={ToDoFinishedApplicationScreenshot} alt="The finished application" />
 
 :::info
-You can find the code for the completed application [here](https://github.com/grokys/todo-tutorial).
+Готовый код приложения вы можете найти [здесь](https://github.com/grokys/todo-tutorial).
 :::
 
-## MVVM Pattern
+## Паттерн MVVM
 
-In this tutorial you will learn more about using the Model-View-ViewModel (MVVM) pattern. It is common to use the MVVM pattern when writing GUI applications, and MVVM is recommended in most scenarios for _Avalonia UI_ applications.
+В данном руководстве, вы узнаете об использовании паттерна MVVM.
+В основном, паттерн MVVM используется для написания графических приложений,
+и рекомендуется в большинстве случаев при использовании _Avaloni UI_.
 
 :::info
-To revise some of the background concepts behind using the MVVM pattern with _Avalonia UI_, and when its use is appropriate, see [here](../../concepts/the-mvvm-pattern/).
+Подробнее о MVVM и его использовании в _Avalonia UI_, см. [здесь](../../concepts/the-mvvm-pattern/).
 :::
 
-## Development Methods
+## Способы Разработки
 
-This tutorial contains instructions for you to use whether you program with _Microsoft Visual Studio_ on Windows, or the .NET Core Command Line Interface (.NET Core CLI) and a different editor. The screenshots shown are all from _Microsoft Visual Studio_ and running on Windows. 
+Данное руководство содержит инструкции по разработке, независящие от выбранной IDE.
+Все скриншоты сделаны для _Microsoft Visual Studio_, работающей под управлением Windows.
 
 :::info
-To read about other tutorials in this documentation, see [here](../index.md).
+Подробнее о других руководствах из документации, см [здесь](../index.md).
 :::

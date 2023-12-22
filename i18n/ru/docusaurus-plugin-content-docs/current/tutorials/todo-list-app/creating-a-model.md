@@ -2,26 +2,31 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Create a Model
+# Создание Model (рус: Модели)
 
-So far the in this tutorial, you have created a basic view where none of the controls do anything yet; and linking it all together using the MVVM pattern is still a couple of steps away.
+Пока мы создали базовую `view`, которая еще ничего не делает.
 
-On this page you will create the model part of the MVVM pattern for app.
+На этой странице вы создадите `model`, часть паттерна MVVM, используемого в приложении.
 
-In a real MVVM application, the model handles everything that is not in the application-specific logic of the view model, or the view itself. This may include data storage and any services needed to supply storage, and maybe other external services that the app needs (email for example).
+В реальном MVVM-приложении, модель обрабатывает все события, за исключением специфичной для приложения,
+они обрабатываются во `view model` или `view`.
+Модель включает хранилище данных, любые сервисы для работы с ними,
+а также любые другие сервисы, которые потребуются приложению (например почта).
 
-In this tutorial example, you will create a mock database and a service to access it. These will take the place of the model part of the application.
+В данном руководстве, вы создадите имитацию базы данных и сервиса для доступа к ней.
+Они заменят часть `model` приложения.
 
-### Data Model
+### Data Model (рус: Модель данных)
 
-The data model contains data entities (as they would appear if stored in a database for example).
+Модель данных содержит сущности данных (так они бы выглядели, если бы хранились, к примеру, в базе данных).
 
-In this tutorial, you will create a single entity for the data model.  Follow this procedure to create the data model:
+В данном руководстве, вы создадите одну сущность для модели данных.
+Для ее создания, выполните следующие действия:
 
-- Stop the app if it is still running.
-- Locate the **Models** folder in the project, and rename it as 'DataModel'.
-- Add a new class to the folder. Name the class 'ToDoItem'.
-- Change the code in the class as shown:
+- Остановите приложение, если оно запущено.
+- Внутри проекта, найдите папку **Models** и переименуйте ее на 'DataModel'.
+- В эту папку добавьте новый класс, назовите его 'ToDoItem'.
+- Измените код класс, как показано ниже:
 
 ```csharp
 using System;
@@ -36,15 +41,18 @@ namespace ToDoList.DataModel
 }
 ```
 
-### Create a Fake Data Service
+### Создание фейкового сервиса данных
 
-In a real application, you might use a SQL database and write services based on the _Microsoft Entity Framework_ to read and write data.  However, this is well beyond the scope of this tutorial! So to test the app, you will create a fake data service that acts as if it has a database, but really just uses an array in memory.
+В реальном приложениии, вы могли использовать базу данных SQL и написать сервис с использование
+_Microsoft Entity Framework_ для записи и чтения данных. Но это выходит за рамки данного руководства!
+Поэтому, для тестирования приложения, мы создадим фейковый сервис данных, который будет имитировать базу данных,
+но в реальности будет использовать массив в памятию
 
-Follow this procedure to create the fake database service:
+Для добавления фейкового сервиса базы данных, выполите следующие действия:
 
-- Create a new project folder and name it 'Services'.
-- Add a new class to the folder, name it 'ToDoListService'.
-- Add the code shown to the new class:
+- Создайте новую папку проекта с названием 'Services'.
+- В созданную папку, добавьте класс с названием 'ToDoListService'.
+- Добавьте код класса, как показано ниже:
 
 ```csharp
 using System.Collections.Generic;
@@ -64,4 +72,6 @@ namespace ToDoList.Services
 }
 ```
 
-That is the model done for now. On the next page, you will learn how to add a view model to the app to complete the MVVM pattern.
+Теперь создание модели завершено,
+На следубщей странице вы узнаете, как добавить `view model` в приложение,
+чтобы завершить внедрение паттерна MVVM.

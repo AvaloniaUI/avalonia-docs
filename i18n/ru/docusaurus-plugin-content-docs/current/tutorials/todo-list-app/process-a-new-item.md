@@ -2,15 +2,18 @@
 description: TUTORIALS - To Do List App
 ---
 
-# Process a New Item
+# Обработка нового элемента
 
-On this page you will learn how to process the output from the OK and cancel buttons being pressed and re-show the list. If OK was pressed we also need to add the new item to the list. We'll implement this functionality in `MainWindowViewModel`:
+На этой страницу вы узнаете, как обработать нажатие кнопок `OK` и `Cancel`, 
+а также повторно отобразить список.
+Если была нажата кнопка `OK`, мы должны добавить новый элемент в список.
+Данный функционал мы добавим в `MainWindowViewModel`:
 
-To alter the main window view model, follow this procedure:
+Для изменения `view model` основного окна, выполните следующие действия:
 
-- Stop the app if it is running.
-- Locate the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-- Edit the code as shown.
+- Остановите приложение, если оно уже запущено.
+- В папке **/ViewModels** найдите файл **MainWindowViewModel.cs**.
+- Измените код, как показано ниже.
 
 ```csharp
 using ReactiveUI;
@@ -65,7 +68,10 @@ namespace ToDoList.ViewModels
 }
 ```
 
-Take some time to examine the code that you just added. The main change is to the `AddItem` method. This now sets up an observable that subscribes to the merged output of the two reactive commands (defined on the last page - in the add item view model). 
+Потратьте некоторое время на изучение только что добавленного кода.
+Основные изменения произошли в методе `AddItem`.
+В нем настроен `observable`, который подписывается на вывод двух реактивных команд
+(определен на последней странице - в `AddItem` у  `view model`). 
 
 ```csharp
 Observable.Merge(
@@ -73,26 +79,34 @@ Observable.Merge(
                 addItemViewModel.CancelCommand.Select(_ => (ToDoItem?)null))
 ```
 
-This code takes advantage of the fact that a reactive command is itself an observable that has a value generated every time it is executed.
+Данный код пользуется тем, что реактивные команды являются `observable`,
+из-за чего они генерируют значение при каждом выполнении.
 
-The merge method combines the output from any number of observable streams, but they must have the same value type.
+`Merge` объединяет результат любого количества `observable` потоков,
+но они обязаны иметь одинаковы тип значения.
 
-You will remember that the two reactive command declarations were different. They were:
+Как вы помните, эти две реактивные команды имели разное объявление:
 
 ```csharp
 public ReactiveCommand<Unit, ToDoItem> OkCommand { get; }
 public ReactiveCommand<Unit, Unit> CancelCommand { get; }
 ```
 
-The OK command generates an object of class `ToDoItem` whenever it executes, and the cancel command generates only a `Unit`. The `Unit` is the reactive version of `void` - it means the command generates no value, but still notifies that it has happened!
+Команда `OK` генерирует объект класса `ToDoItem`, а команда `Cancel` генерирует только `Unit`.
+`Unit` - это реактивная версия `void`, то есть, команда не генерирует никакого значения,
+но все-равно посылает уведомление, что команда сработала!
 
-So to combine the output from the different reactive command observable streams, the code converts the cancel command output into a stream of null `ToDoItem` objects.
+Поэтому, для объединения вывода различных `observable` потоков у реактивных команд,
+мы преобразуем код команды `Cancel`, чтобы он возвращал пустные объекты типа `ToDoItem`.
 
 ```csharp
 .Take(1)
 ```
 
-You are only interested in the first click of either the OK or cancel buttons; once one of these buttons has been clicked other clicks can be ignored. So the [`Take(1)`](https://reactivex.io/documentation/operators/take.html) method means that only the first item in the observable sequence will be processed.
+Нас интересует кнопки `OK` и `Cancel`, после нажатия на любую из них, все другие нажатия
+должны быть проигнорированы.
+Таким образом, метод [`Take(1)`](https://reactivex.io/documentation/operators/take.html) обрабатывае только первый сработавший элемент
+в `observable` последовательности.
 
 ```csharp
 .Subscribe(newItem =>
@@ -105,18 +119,27 @@ You are only interested in the first click of either the OK or cancel buttons; o
 });
 ```
 
-Lastly the code subscribes to the first item in the merged observable sequence. The subscribe pulls out the new to do item object, and examines it to see it it is null.
+Теперь код подписан на первый элемент в `observable` последовательности.
+Подписка извлекает новый объект для списка дел и проверяет, что он не `null`.
 
-A null value means that the cancel button was clicked - and no further action is required; except to restore the main window content to show the (unchanged) to do list.
+Значение `null` говорит о том, что была нажата кнопка `Cancel`, и иных действий не треубется,
+за исключением восстановления содержимого основного окна для отображения (неизмененного) списка дел.
 
 ```csharp
 ContentViewModel = ToDoList;
 ```
 
-If the value is not null, then it is because the OK button was clicked; and in this case the value should be a `ToDoItem` containing the description that the user typed.  SO this can be added to the list.
+Если значение **не** `null`, то это говорит о том, что была нажата кнопка `OK`.
+В этом случае, значение имеет тип `ToDoItem`, и имеет описание введенное пользователем.
+Таким образом, его можно добавить в список дел.
 
-You may notice one other important addition to the code here: The to do list view model has been declared as a public member of the main window view model. This will ensure the list is preserved during view changes; it acts as the application state for your app. 
+Здесь вы также можете заметить одно важное дополнение кода:
+You may notice one other important addition to the code here:
+`View Model` списка дел, была объявлена как публичный член `view model` основного окна.
+Это гарантирует сохранение списка во время изменения `view`;
+В данном случае, он работает как состояние приложения.
 
-Run the app to check it works as described!
+Запустите приложение и убедитесь, что оно работает как было написано!
 
-On the next page you will learn why the app was implemented in the way that it has been, and recommended some further reading.
+На следующей странице вы узнаете, почему приложение было реализовано именно таким образом,
+а также некоторые рекомендации по дальнейшему изучению.

@@ -5,17 +5,17 @@ description: TUTORIALS - To Do List App
 import ToDoDataContextResolvedArchitectureDiagram from '/img/gitbook-import/assets/image (20) (3).png';
 import ToDoDataContextResolvedScreenshot from '/img/gitbook-import/assets/image (5) (1) (2).png';
 
-# Add a Data Context
+# Добавление Data Context (рус: Контекст Данных)
 
-On this page, you will set the data context of the to do list view to be the `ToDoList` property.
+На это страницу вы научитесь указывать контекст данных для списка дел, как свойство `ToDoList`.
 
-To set the data context, follow this procedure:
+Для изменения контекста данных, выполните следующие действия:
 
-- Locate the **MainWindow.axaml** file in the **Views** folder.
-- Remove the `<Design.DataContext>` tag completely.
-- Add the `x:DataType="vm:MainWindowViewModel"` attribute to `<Window>` element.
-- Locate the content `<views:ToDoListView/>`
-- Add the attribute `DataContext="{Binding ToDoList}"` as follows:
+- В папке **Views** найдите файл **MainWindow.axaml**.
+- Полностью удалите тег `<Design.DataContext>`.
+- Добавьте атрибут `x:DataType="vm:MainWindowViewModel"` к тегу `<Window>`.
+- Найдите содержимое `<views:ToDoListView/>`
+- Добавить атрибут `DataContext="{Binding ToDoList}"` как показано ниже:
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -33,12 +33,17 @@ To set the data context, follow this procedure:
 </Window>
 ```
 
-The arrangement of views and view models now has an additional data context; defined as a binding, that will allow the _Avalonia UI_ binder to locate the `ToDoList` property on the `ToDoListViewModel` object. This object has already been instantiated in code during app initialization.
+Теперь `views` и `view models` имеют дополнительный контекст данных,
+указанный как привязка, что позволяет `Avalonia UI binder` 
+найти свойства `ToDoList` в объекте `ToDoListViewModel`.
+Данный объект был создал в коде во время инициализации приложения.
 
-So here is the arrangement after the data context binding has been resolved:
+Ниже указана схема, актуальная после привязки контекста данных:
 
 <img className="center" src={ToDoDataContextResolvedArchitectureDiagram} alt="" />
 
-Now if you run the app, the _Avalonia UI_ binder has a suitable data context for the items control binding; and the items show up in the view:
+Теперь вы можете запустить приложение и убедиться,
+что указанное `view` имеет привязку к нужному контексту данных,
+а элементы отобразятся в следующем виде:
 
 <img className="center" src={ToDoDataContextResolvedScreenshot} alt="" />
