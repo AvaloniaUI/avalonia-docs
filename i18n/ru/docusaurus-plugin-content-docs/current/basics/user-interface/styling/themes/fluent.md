@@ -8,10 +8,11 @@ import FluentThemeForestScreenshot from '/img/basics/user-interface/styling/flue
 
 ## Вступление
 
-Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, 
-which is a set of design guidelines and components for creating visually appealing and interactive user interfaces.
-The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. 
-It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with our styling system.
+Тема `Fluent` для Avalonia, ыбла вдохновлена `Microsoft's Fluent Design System`, 
+которая представляет собой набор рекомендаций по дизайну и компонентам для создания визуально-приятных и интерактивных
+пользовательских интерфейсов.
+Систему дизайна `Fluent`, выделяет современность, эстетичность, плавная анимация и интуитивно-понятный интерфейс для взаимодействия.
+Все это обеспечивает единообразный и безупречный интерфейс для разных платформ, а также предоставляет разработчикам гибкость в использовании системы стилей.
 
 <p><img className="medium-image-zoom" src={FluentThemeNormalScreenshot} alt="Fluent Theme" /></p>
 
@@ -93,7 +94,7 @@ It provides a consistent and polished look-and-feel across different platforms, 
 Однако другие свойства менять нельзя, в целях производительности, они инициализируются один раз при старте приложения.
 
 Можно создавать палитры из исходного кода, но они подчиняются тем же правилам - только `Accent` можно изменить динамически,
-а палитры должны быть..
+а палитры должны быть инициализированы один раз.
 
 :::note
 `FluentTheme` поддерживает только темную и светлую темы, в ней нельзя определить иные.
