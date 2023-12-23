@@ -8,7 +8,7 @@ import FluentThemeForestScreenshot from '/img/basics/user-interface/styling/flue
 
 ## Вступление
 
-Тема `Fluent` для Avalonia, ыбла вдохновлена `Microsoft's Fluent Design System`, 
+Тема `Fluent` для Avalonia, была вдохновлена `Microsoft's Fluent Design System`, 
 которая представляет собой набор рекомендаций по дизайну и компонентам для создания визуально-приятных и интерактивных
 пользовательских интерфейсов.
 Систему дизайна `Fluent`, выделяет современность, эстетичность, плавная анимация и интуитивно-понятный интерфейс для взаимодействия.
@@ -42,7 +42,7 @@ import FluentThemeForestScreenshot from '/img/basics/user-interface/styling/flue
 Для добавление вариантов темной и светлой темы, см. документацию [Theme Variants](../../../../guides/styles-and-resources/how-to-use-theme-variants.md).
 :::
 
-## Изменени плотности темы
+## Изменение плотности темы
 
 Тема `Fluent` имеет два предопределенных набора плотности.
 Для переключение к компактному виду, вы должны изменить свойство `DensityStyle`:
