@@ -5,6 +5,7 @@ title: 添加控件
 
 import Highlight from '@site/src/components/Highlight';
 import AvaloniaPropertyIntellisenseScreenshot from '/img/get-started/add-a-control/image (1) (2) (1).png';
+import CalculateButton from '/img/get-started/add-a-control/calculate-button.png';
 
 到目前为止，您的应用程序的主窗口只显示一个文本字符串。在本页中，您将学习如何添加一些Avalonia的内置控件。
 
@@ -13,14 +14,14 @@ import AvaloniaPropertyIntellisenseScreenshot from '/img/get-started/add-a-contr
 Avalonia包含一个内置控件，用于创建按钮。按照以下步骤，将当前在窗口的内容区域中的文本字符串替换为按钮控件。
 
 - 如果应用程序正在运行，请停止它。
-- 在XAML窗格中找到“Welcome to Avalonia!”消息，并删除该文本。
+- 在 `MainView.axaml` 文件中找到
+  `<TextBlock Text="text" HorizontalAlignment="Center" VerticalAlignment="Center"/>`。
+- 删除整行。
 - 插入一个`Button`标签，如下所示：
-
 ```xml
-<Window .... >
   <Button>Calculate</Button>
-</Window>
 ```
+<img className="center" src={CalculateButton} alt="" />
 
 :::tip
 如果您正在使用预览器，只要XAML有效，您就能在预览窗格中看到按钮出现。您还可以尝试在按钮上移动鼠标并单击，查看它在不同状态下显示的不同颜色。

@@ -17,7 +17,7 @@
 
 ## 开始使用内置控件
 
-要开始使用 Avalonia UI 中的控件，您可以参考每种控件类型的文档。文档提供了详细的解释、示例和代码片段，帮助您有效地理解和利用这些控件。
+要开始使用 Avalonia UI 中的控件，您可以参考每种控件类型的文档。文档提供了详细的解释、示例和代码片段，帮助您有效地理解和使用这些控件。
 
 - [按钮控件文档](../../../reference/controls/buttons/button)
 - [文本框控件文档](../../../reference/controls/detailed-reference/textbox)
@@ -28,6 +28,70 @@
 
 通过探索这些资源，您将对 Avalonia UI 中的控件使用建立坚实的基础，并能够为应用程序创建丰富且交互性强的用户界面。
 
-## 创建自定义控件
+## 内置控件的类型
 
-在 Avalonia 中，您有灵活性来创建符合您的应用程序特定要求的自定义控件。请参阅 [创建控件](creating-controls) 部分，了解更多信息。
+_Avalonia UI_ 的内置控件可以大体分类为以下类型：
+
+* 绘制控件(Drawn Controls)
+* 布局控件(Layout Controls)
+* 用户控件(User Controls)*
+* 模板化控件(Templated Controls)
+    * 完全可定制(Fully Customizable)
+    * 部分可定制(Partially Customizable)
+
+*User controls are only available for apps.
+
+:::note
+这些分类与 [选择自定义控件类型](creating-controls/choosing-a-custom-control-type) 中的讨论有一定关联。
+:::
+
+### 绘制控件
+
+绘制控件负责生成其自己的几何图形或位图并进行渲染。这些控件的示例包括 `Border`、`TextBlock` 和 `Image`。绘制控件是用于构建其他所有内容的基础控件。
+
+大多数绘制控件具有可以用于调整其外观和大小的标准属性，但它们不允许重新模板化。这意味着作为应用程序开发人员，您不能在不陷入 C#、派生新版本的控件并拦截渲染方法的情况下更改这些控件的功能或样式。
+
+### 布局控件
+
+布局控件是特殊的，因为它们本身没有外观。像 `Grid`、`StackPanel` 等布局控件负责定义其子元素的布局，并充当父容器。子控件负责渲染 UI，而布局父控件只设置大小和位置（它们本身没有外观）。
+
+应用程序开发人员很少修改框架提供的布局控件。
+
+:::note
+某些布局控件，如 `Grid`，具有诸如 `Background` 之类的属性，以简化常见用例。使用这些属性确实为这些控件提供了一些外观。
+:::
+
+## 用户控件
+
+_Avalonia UI_ 自身不会提供 `UserControl`，因为这不通用。有关在应用程序中创建和使用 `UserControl` 的更多信息，请参阅 [选择自定义控件类型](creating-controls/choosing-a-custom-control-type)。
+
+### 模板化控件
+
+_Avalonia UI_ 中的大多数标准控件都是模板化控件，这意味着它们的视觉外观是在与功能分离的 XAML 控件模板中定义的。这是 WPF 中起源的无外观控件概念的基础。
+
+应用程序开发人员可以更改模板化控件的 XAML 模板，使其外观完全不同。这种功能并非所有 UI 框架都具备的，是基于 XAML 的 UI 框架中最强大的功能之一。
+
+:::note
+重新模板化控件是应用程序开发人员的最后手段。这还意味着您将负责将模板与上游的任何更改保持同步。相反，更好的做法是：
+
+1. 尝试使用现有属性自定义控件
+2. 使用 _Avalonia UI_ 强大的样式选择器创建新样式，以修改现有模板中所需的内容
+3. 作为最后手段，重新模板化
+   :::
+
+#### 完全可定制
+
+_Avalonia UI_ 中的大多数模板化控件都是完全可定制的。这意味着可以完全替换控件的模板并更改其外观。`Button` 控件是一个很好的例子，但 _Avalonia UI_ 中的所有模板化控件都试图默认情况下是完全可定制的。对于完全可定制的模板化控件，应用程序几乎可以完全自由地样式或更改 UI 中所见的一切。
+The majority of templated controls in _Avalonia UI_ are fully customizable. This means it is possible to completely replace the control’s template and change its appearance. The `Button` control is a good example but all templated controls in _Avalonia UI_ try to be fully customizable by default. With a fully customizable templated control the app has near total ability to style or change everything you see drawn in the UI.
+
+#### 部分可定制
+
+实际上，不总是有完全可替换的控件模板。在控件设计中，在支持常见用例和使控件完全可重新模板化之间存在一种平衡。对于高复杂性控件（例如 `DataGrid`），该平衡偏向于支持预期用例，并且不应该完全重新模板化控件。这些控件通常还具有非常多的模板部件（由 C# 控件实现直接使用的必需控件元素）。
+
+在 `DataGrid` 这样的控件中，仍然可以重新模板化控件的各个组件或部分。只是完全改变它的外观和功能是极其困难的。
+
+像 `DataGrid` 这样的部分可定制的模板化控件在由框架本身提供的第一方控件中很少见。
+
+## 创建控件
+
+在 Avalonia 中，您可以灵活地根据应用程序的特定要求创建所有类型的自定义控件。有关更多信息，请参阅[创建控件](creating-controls)。

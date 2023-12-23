@@ -37,7 +37,7 @@ namespace Avalonia.MusicStore.ViewModels
 * 一个文本字符串，作为搜索条件，
 * 一个布尔值，指示搜索是否繁忙。
 
-添加以下代码来实现上述属性：
+- 添加以下代码来实现上述属性：
 
 ```csharp
 using ReactiveUI;
@@ -76,17 +76,21 @@ namespace AvaloniaApplication11.ViewModels
 - 找到并打开 **MusicStoreView.axaml** 文件。
 - 添加所示的绑定表达式：
 
-```markup
-<DockPanel>
-  <StackPanel DockPanel.Dock="Top">
-    <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
-    <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
-  </StackPanel>
-  <Button Content="Buy Album"
-          DockPanel.Dock="Bottom"
-          HorizontalAlignment="Center" />
-  <ListBox/>
-</DockPanel>
+```xml
+<UserControl ...>
+    <!-- ... -->
+    <DockPanel>
+      <StackPanel DockPanel.Dock="Top">
+        <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
+        <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
+      </StackPanel>
+      <Button Content="Buy Album"
+              DockPanel.Dock="Bottom"
+              HorizontalAlignment="Center" />
+      <ListBox/>
+    </DockPanel>
+    <!-- ... -->
+</UserControl>
 ```
 
 ## 专辑搜索与选择
@@ -114,12 +118,13 @@ public AlbumViewModel? SelectedAlbum
     set => this.RaiseAndSetIfChanged(ref _selectedAlbum, value);
 }
 ```
+
 接下来，将这些属性绑定到视图中的列表框，按照以下步骤进行操作：
 
 - 定位并打开 **MusicStoreView.axaml** 文件。
 - 将所示的绑定表达式添加到 `<ListBox>` 元素中：
 
-```
+```xml
 <ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
 ```
 
