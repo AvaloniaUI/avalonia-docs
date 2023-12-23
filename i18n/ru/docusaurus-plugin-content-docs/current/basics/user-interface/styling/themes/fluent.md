@@ -8,19 +8,22 @@ import FluentThemeForestScreenshot from '/img/basics/user-interface/styling/flue
 
 ## Вступление
 
-Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, which is a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with our styling system.
+Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, 
+which is a set of design guidelines and components for creating visually appealing and interactive user interfaces.
+The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. 
+It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with our styling system.
 
 <p><img className="medium-image-zoom" src={FluentThemeNormalScreenshot} alt="Fluent Theme" /></p>
 
 ## Начало работы
 
-As a first step, [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/) nuget package needs to be installed.
+Установите nuget-пакет  [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/).
 
 :::info
-On how to add a nuget package, you can follow steps from the Nuget page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
+Для добавления nuget-пакета, следуйте соответствующим инструкциям: [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html).
 :::
 
-After that theme needs to be included in the Application class:
+Добавьте тему в класс Application:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -35,13 +38,13 @@ After that theme needs to be included in the Application class:
 ```
 
 :::note
-If you need to specify theme dark or light variant, please follow [Theme Variants](../../../../guides/styles-and-resources/how-to-use-theme-variants.md) documentation.
+Для добавление вариантов темной и светлой темы, см. документацию [Theme Variants](../../../../guides/styles-and-resources/how-to-use-theme-variants.md).
 :::
 
-## Changing theme density
+## Изменени плотности темы
 
-Fluent theme has two sets of predefined density variants.
-To switch to more compact look, you can set it with DensityStyle property:
+Тема `Fluent` имеет два предопределенных набора плотности.
+Для переключение к компактному виду, вы должны изменить свойство `DensityStyle`:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -57,10 +60,10 @@ To switch to more compact look, you can set it with DensityStyle property:
 
 ## Создание пользовательской цветовой палитры
 
-While FluentTheme has build-in resources for dark and light variants, it's still possible to override base palette for these variants.
-It is useful, when developers want to use the same base theme, but with different colors.
+Хоть во `FluentTheme` и есть встроенные ресурсы для темного и светлого варианта, вы все-равно можете переопределить основную палитру для этих вариантов.
+Это полезно, когда вы используете одну и ту же основную тему, но в разных цветах.
 
-To do so, you need to define
+Для это вы должны определить их, как показано ниже:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -80,13 +83,17 @@ To do so, you need to define
   </Application.Styles>
 </Application>
 ```
+`ColorPaletteResources` имеет множество цветовых свойств для переопределения, которые можно указывать, в том числе только для одного варианта.
+Также нет необходимости переопределять все свойства, вы можете указать только необходимые свойства, в то время как оставшиеся
+будут использовать значения по-умолчанию.
+К примеру, ранее были переопределены только некоторые из цветов.
 
-While `ColorPaletteResources` has many color properties that can be overridden independently for each variant, it is possible to redefine only minimal set of what's needed, and keep everything else as per defaults. As in examples above, only a couple of colors are overridden.
+Если не указано свойство `Accent`, то Avalonia берет его значение из системы, если оно доступно.
+Также, `Accent` поддерживает `bindings (рус: привязки)`, что позволяет менять его во время работы.
+Однако другие свойства менять нельзя, в целях производительности, они инициализируются один раз при старте приложения.
 
-If Accent is not overridden, Avalonia uses platform OS accent color if available.
-Also, Accent supports bindings and can be changed in runtime. But not other properties, as they are read once after app started and are statically used for performance reasons.
-
-It is possible to build palettes from the code behind, but same rules apply - only Accent can be updated dynamically, and palettes should be
+Можно создавать палитры из исходного кода, но они подчиняются тем же правилам - только `Accent` можно изменить динамически,
+а палитры должны быть..
 
 :::note
 `FluentTheme` поддерживает только темную и светлую темы, в ней нельзя определить иные.
