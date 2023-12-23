@@ -1,18 +1,18 @@
 ---
 id: fluent
-title: Fluent Theme
+title: Тема Fluent
 ---
 
 import FluentThemeNormalScreenshot from '/img/basics/user-interface/styling/fluent-theme-normal.png';
 import FluentThemeForestScreenshot from '/img/basics/user-interface/styling/fluent-theme-forest.png';
 
-## Introduction
+## Вступление
 
 Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, which is a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with our styling system.
 
 <p><img className="medium-image-zoom" src={FluentThemeNormalScreenshot} alt="Fluent Theme" /></p>
 
-## How to use
+## Начало работы
 
 As a first step, [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/) nuget package needs to be installed.
 
@@ -55,7 +55,7 @@ To switch to more compact look, you can set it with DensityStyle property:
 </Application>
 ```
 
-## Creating custom color palettes
+## Создание пользовательской цветовой палитры
 
 While FluentTheme has build-in resources for dark and light variants, it's still possible to override base palette for these variants.
 It is useful, when developers want to use the same base theme, but with different colors.
@@ -89,20 +89,20 @@ Also, Accent supports bindings and can be changed in runtime. But not other prop
 It is possible to build palettes from the code behind, but same rules apply - only Accent can be updated dynamically, and palettes should be
 
 :::note
-FluentTheme supports only Dark and Light theme variants, and it's not possible to define palettes for custom variants.
+`FluentTheme` поддерживает только темную и светлую темы, в ней нельзя определить иные.
 :::
 
-## Creating custom color palettes with online editor
+## Создание пользовательских цветовых палитр в онлайн редакторе
 
-Microsoft Fluent Theme Editor was ported to Avalonia and now available to be used with our FluentTheme as well.
-It is available on https://theme.xaml.live/ page and supports following features:
+`Microsoft Fluent Theme Editor` был портирован на Avalonia и теперь доступен для использования с наше `FluentTheme`.
+Он доступен на страницу https://theme.xaml.live/ и поддерживает следующие функции:
 
-1. Editing palette colors for both Light and Dark variants.
-2. Previewing of the current palette.
-3. Exporting current palettes as XAML code that can be copy pasted into `App.axaml` file.
-4. Saving current colors in a json file and loading it from the file system.
-5. Automatic hints, when palette has a low contrast between colors.
-6. Couple of quick start presets.
+1. Переключение цветовой палитры на светлую или темную.
+2. Предварительный просмотр текущей палитры.
+3. Экспортирование текущей палитры в XAML-код, которые можно вставить в файл `App.axaml`.
+4. Сохранение текущих цветов в json-файл, а также загрузка из него.
+5. Автоматические подсказки при низкой контрастности между цветами.
+6. Пара предустановок для быстрого старта.
 
-Example of FluentTheme with a Forest palette preset available on the web app:
+Пример `FluentTheme` с предустановленной палитрой `Forest`, доступный в веб-приложении:
 <p><img className="medium-image-zoom" src={FluentThemeForestScreenshot} alt="Fluent Theme Forest Palette" /></p>
