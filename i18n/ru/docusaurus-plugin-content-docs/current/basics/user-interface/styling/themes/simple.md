@@ -16,7 +16,7 @@ title: Тема Simple
 Установите nuget-пакет [Avalonia.Themes.Simple](https://www.nuget.org/packages/Avalonia.Themes.Simple/). 
 
 :::info
-Для добавления nuget-пакета, следуйте соответсвующим инструкциям: [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html).
+Для добавления nuget-пакета, следуйте соответствующим инструкциям: [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html).
 :::
 
 Добавьте тему в класс Application:
