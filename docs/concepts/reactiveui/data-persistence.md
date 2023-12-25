@@ -105,7 +105,7 @@ public class NewtonsoftJsonSuspensionDriver : ISuspensionDriver
 
 ### Wiring The Things Together
 
-On the final step, we initialize the `AutoSuspendHelper`, following the [new Avalonia lifetimes pattern](https://github.com/AvaloniaUI/Avalonia/wiki/Application-lifetimes). In the `App.xaml.cs` file we create an override for the `OnFrameworkInitializationCompleted` method and initialize the variables required for the suspension feature to work fine.
+On the final step, we initialize the `AutoSuspendHelper`, following the [new Avalonia lifetimes pattern](https://docs.avaloniaui.net/docs/concepts/application-lifetimes). In the `App.xaml.cs` file we create an override for the `OnFrameworkInitializationCompleted` method and initialize the variables required for the suspension feature to work fine.
 
 ```csharp
 public class App : Application
