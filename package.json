@@ -27,13 +27,20 @@
     "docusaurus-plugin-image-zoom": "^1.0.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
+    "@fluentui/react-icons": "^2.0.204"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "@styled-icons/boxicons-logos": "^10.47.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
     "@docusaurus/module-type-aliases": "3.0.1",
     "@docusaurus/tsconfig": "^3.0.1",
     "@docusaurus/types": "^3.0.1",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.2",
+    "url": "^0.11.0"
   },
   "browserslist": {
     "production": [

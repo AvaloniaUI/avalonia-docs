@@ -3,40 +3,36 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import HeroSection from '../components/homepage/HeroSection';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import CommunitySection from '../components/homepage/CommunitySection';
+import GuidesAndSamplesSection from '../components/homepage/GuidesAndSamples';
+import HelpSection from '../components/homepage/HelpSection';
+import HomeFooter from '../components/homepage/HomeFooter';
+import ResourcesSection from '../components/homepage/ResourcesSection';
+import CTASection from '../components/homepage/CallToActionSection';
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/welcome">
-            Get Started! 
-          </Link>
-       
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Welcome to ${siteConfig.title}`}
-      description="Learn to build with Avalonia">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      title={`${siteConfig.title} Docs`}
+      description="Learn to build with Avalonia"
+      noFooter>
+      <HeroSection/>
+      <GuidesAndSamplesSection/>
+      
+      <CTASection/>
+
+      <ResourcesSection/>
+
+      <div className="z-0">
+        <HelpSection className="-mb-48" />
+      </div>
+
+      <CommunitySection />
+      <HomeFooter/>
     </Layout>
   );
 }
