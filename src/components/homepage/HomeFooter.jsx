@@ -95,91 +95,89 @@ const services = [
 
   function Links({ name, links }) {
     return (
-        <div class="col-6 col-md-4 col-lg-2">
-      
-        
-        <h6 class="fw-bold text-uppercase text-gray-700">
+      <div>
+        <h3 className="font-jakarta text-base font-semibold uppercase text-gray-400">
           {name}
-        </h6>
-
- 
-        <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
-            {links.map(({ name, href }) => (
-                <li class="mb-3">
-                    <Link
-                        href={href}
-                        className="text-reset">
-                        {name}
-                    </Link>
-                </li>
-            ))}          
-        </ul>
-
+        </h3>
+        <div className="flex flex-col gap-3">
+          {links.map(({ name, href }) => (
+            <Link
+              href={href}
+              className="text-base text-gray-700 hover:text-primary hover:no-underline"
+            >
+              {name}
+            </Link>
+          ))}
+        </div>
       </div>
     );
   }
 
 
-export default function Footer() {
+  export default function Footer() {
     return (
-        <footer class="py-8 py-md-8 bg-dark mt-auto">
-        <div class="container" style={{ maxWidth: '1600px' }}>
-          <div class="row">
-            <div class="col-12 col-md-4 col-lg-2">
-              
-              <h4 class="text-white"><b>Avalonia UI</b></h4>
-              
-              <p class="text-gray-700 mb-2">
-                Your App. Everywhere.
-              </p>
-      
-
-              <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">    
-                <li class="list-inline-item list-social-item me-3">
-                  <a href="https://github.com/avaloniaui/avalonia" class="text-decoration-none">
-                    <GitHubIcon class="list-social-icon"/>
-                  </a>
-                </li>
-                <li class="list-inline-item list-social-item me-3">
-                  <a href="https://twitter.com/avaloniaui" class="text-decoration-none">
-                    <TwitterIcon class="list-social-icon"/>
-                  </a>
-                </li>
-                <li class="list-inline-item list-social-item me-3">
-                    <a href="https://www.linkedin.com/company/avaloniaui/" class="text-decoration-none">
-                    <LinkedInIcon class="list-social-icon"/>
-                    </a>
-                </li>
-              <li class="list-inline-item list-social-item me-3">
-                    <a href="https://www.youtube.com/channel/UC54i4ILpN7JKUhP6liNYxkA" class="text-decoration-none">
-                          <YouTubeIcon class="list-social-icon"/>
-                  </a>
-              </li>
-                
-              </ul>
-      
+      <footer className="bg-[#F4F7FF]">
+        <div className="mx-auto flex w-full max-w-[1080px] flex-col px-6 py-12">
+          <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <img src="/logo/avalonia.svg" alt="Avalonia" className="h-9 w-fit lg:h-12" />
+          </div>
+  
+          <div className="grid grid-cols-2 gap-6 gap-y-12 md:justify-between lg:flex lg:flex-wrap">
+            <Links name="Projects" links={projects} />
+            <Links name="Services" links={services} />
+            <Links name="Resources" links={resources} />
+            <Links name="Other" links={other} />
+          </div>
+  
+          <hr className="my-12 !bg-gray-300" />
+  
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-0">
+           
+            <div className="flex flex-wrap gap-2 text-sm text-gray-500">
+              <Link
+                href="https://avaloniaui.net/Privacy"
+                className="text-inherit hover:text-black hover:underline"
+              >
+                Privacy Policy
+              </Link>
+              &bull;
+              <Link
+                href="https://avaloniaui.net/Tos"
+                className="text-inherit hover:text-black hover:underline"
+              >
+                Website Terms of Use
+              </Link>
+              &bull;
+              <span className="text-inherit">
+                &copy; {new Date().getFullYear()} AvaloniaUI OÜ (14839404).
+              </span>
             </div>
   
-    
-            <Links name="Product" links={projects} />
-  
-            <Links name="Services" links={services} />
-       
-            <Links name="Resources" links={resources} />
-  
-            <Links name="Other" links={other} />
-
-  
-          </div> 
-        </div> 
-  
-        <div class="container mt-5 text-gray-700 text-center">
-          &copy; {new Date().getFullYear()} - AvaloniaUI OÜ (14839404). 
+            <div className="flex items-center gap-4">
+              <Link
+                href="https://github.com/avaloniaui"
+                aria-label="Avalonia's GitHub Organization"
+              >
+                <GitHubIcon className="h-7 w-7 text-zinc-400 hover:text-primary" />
+              </Link>
+              <Link
+                href="https://linkedin.com/company/avaloniaui"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon className="h-7 w-7 text-zinc-400 hover:text-primary" />
+              </Link>
+              <Link href="https://twitter.com/avaloniaui" aria-label="Twitter">
+                <TwitterIcon className="h-7 w-7 text-zinc-400 hover:text-primary" />
+              </Link>
+              <Link
+                href="https://www.youtube.com/channel/UC54i4ILpN7JKUhP6liNYxkA"
+                aria-label="Avalonia's YouTube Channel"
+              >
+                <YouTubeIcon className="h-7 w-7 text-zinc-400 hover:text-primary" />
+              </Link>
+            </div>
+          </div>
         </div>
-        <div class="container text-gray-700 text-center">
-          Avalonia™ is a registered trademark of AvaloniaUI OÜ. 
-        </div>
-  
       </footer>
     );
   }

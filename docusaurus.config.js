@@ -4,6 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
+
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Avalonia UI',
@@ -108,7 +110,6 @@ const config = {
         
         theme: {
           customCss: [
-            require.resolve('./node_modules/bootstrap/dist/css/bootstrap.css'),
             require.resolve('./src/css/custom.css'),
           ],
       
@@ -117,6 +118,7 @@ const config = {
     ],
   ],
   plugins: [
+    require('./plugins/tailwind-plugin.cjs'),
     require.resolve('docusaurus-plugin-image-zoom'),
     require.resolve("@cmfcmf/docusaurus-search-local"),
     [
