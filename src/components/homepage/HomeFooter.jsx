@@ -145,7 +145,7 @@ const services = [
                 href="https://avaloniaui.net/Tos"
                 className="text-inherit hover:text-black hover:underline"
               >
-                Website Terms of Use
+                Terms of Use
               </Link>
               &bull;
               <span className="text-inherit">

@@ -10,7 +10,7 @@ import GuidesAndSamplesSection from '../components/homepage/GuidesAndSamples';
 import HelpSection from '../components/homepage/HelpSection';
 import HomeFooter from '../components/homepage/HomeFooter';
 import ResourcesSection from '../components/homepage/ResourcesSection';
-
+import CTASection from '../components/homepage/CallToActionSection';
 
 
 export default function Home(): JSX.Element {
@@ -23,6 +23,8 @@ export default function Home(): JSX.Element {
       <HeroSection/>
       <GuidesAndSamplesSection/>
       
+      <CTASection/>
+
       <ResourcesSection/>
 
       <div className="z-0">
