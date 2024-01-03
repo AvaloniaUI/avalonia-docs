@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
+import HomeFooter from '../components/homepage/HomeFooter';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -32,11 +32,13 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Welcome to ${siteConfig.title}`}
-      description="Learn to build with Avalonia">
+      description="Learn to build with Avalonia"
+      noFooter>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
       </main>
+      <HomeFooter/>
     </Layout>
   );
 }

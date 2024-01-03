@@ -9,8 +9,8 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: 'Nunito', sans-serif;
-  --ifm-font-size-base: 1.1rem;
+  --ifm-font-family-base: Nunito, sans-serif; 
+  --ifm-font-size-base: 1.0625rem; 
   --ifm-color-primary: #8b44ac;
   --ifm-color-primary-dark: #9757b4;
   --ifm-color-primary-darker: #a269bd;
@@ -129,3 +129,101 @@ img.center {
   padding: 0 var(--ifm-pre-padding);
 }
 
+.bg-dark {
+  background-color: #1b2a4e!important;
+}
+
+.text-gray-700 {
+  color: #506690!important;
+}
+
+.text-muted {
+  color: #869ab8!important;
+}
+
+.h6.text-uppercase, .text-uppercase.h6, h6.text-uppercase {
+  letter-spacing: .08em;
+}
+
+.text-uppercase {
+  text-transform: uppercase!important;
+}
+
+.fw-bold, .fw-semibold {
+  font-weight: 600!important;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(22,27,45,0);
+  background-color: var(--av-body-bg);
+  color: var(--av-body-color);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+footer {
+  display: block;
+}
+
+.h6, h6 {
+  font-size: .75rem;
+  line-height: 1.55;
+}
+
+.py-8 { 
+  padding-bottom: 3rem!important; 
+  padding-top: 3rem!important;
+} 
+
+.container { 
+  --av-gutter-x: 2.5rem; 
+  --av-gutter-y: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding-left: calc(var(--av-gutter-x)*.5); 
+  padding-right: calc(var(--av-gutter-x)*.5); 
+  width: 100%;
+} 
+
+
+img { 
+  vertical-align: middle;
+} 
+
+.list-social-icon { 
+  height: auto; 
+  max-width: 1.25rem;
+} 
+
+a { 
+  color: var(--av-link-color); 
+  text-decoration: none;
+} 
+
+.text-decoration-none { 
+  text-decoration: none!important;
+} 
+
+a:hover { 
+  color: var(--av-link-hover-color); 
+  text-decoration: underline;
+} 
+
+.text-reset { 
+  color: inherit!important;
+} 
+
+.mb-3 { 
+  margin-bottom: .75rem!important;
+} 
+
+.me-3 { 
+  margin-right: .75rem!important;
+} 
+
+.list-inline-item:not(:last-child) { 
+  margin-right: .5rem;
+} 

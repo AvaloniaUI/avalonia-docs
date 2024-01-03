@@ -107,7 +107,11 @@ const config = {
         },
         
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('./node_modules/bootstrap/dist/css/bootstrap.css'),
+            require.resolve('./src/css/custom.css'),
+          ],
+      
         },
       }),
     ],
