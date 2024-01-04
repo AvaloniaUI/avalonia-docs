@@ -2,7 +2,7 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Add Data Persistence
+# Добавление Data Persistence
 
 На этой странице, вы добавите немного кода в модель альбома, 
 который будет сохранять на диск, а потом считывать при запуске коллекцию альбомов пользователя.
@@ -74,8 +74,8 @@ public static async Task<IEnumerable<Album>> LoadCachedAsync()
 
 ## `View Model` альбома
 
-Your next step is to add a method to the album view model 
-that it can call the business service persistence save methods:
+Следующим шагом, вы добавите метод во `view model` альбома, который взаимодействует
+со следующими `persistence` методами сохранения:
 
 `SaveAsync` - сохраняет тектовые данные альбома как JSON-файл,
 
@@ -106,15 +106,14 @@ public async Task SaveToDiskAsync()
 }
 ```
 
-Once again, you will notice that the bitmap is saved from 
-a copy in case the `Cover` property gets changed mid-operation by another thread.
+Также обратите внимание,что изображение сохраняется из копии, на случай, если свойство `Cover` изменится другим поток во время выполнения операции.
 
 ## `View Model` основного окна
 
-Lastly, you will call the new album view model persistence method `SaveToDiskAsync`
-whenever the dialog returns with a non-null result.
+Вы будете вызывать метод `SaveToDiskAsync` из `view model` нового альбома,
+когда диалоговое окно будет возвращать `non-null` значение.
 
-To alter the main window view model, follow this procedure:
+Для изменения `view model` основного окна, выполните следующие действия:
 
 - Найдите и откройте файл **MainWindowViewModel.cs**.
 - Добавьте код `await result.SaveToDiskAsync();`, как показано ниже.
@@ -143,17 +142,20 @@ BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 - Нажмите **Buy Album**.
 - Повторите действия для другого альбома.
 
-You will not see any difference in the app yet. 
-But you can check to see that the persistence files are being written. 
-To do this open the project location and browse to the **/bin/Debug** folder. 
-Open the folder for your .NET version, and you will find the **/Cache** folder there. 
-You will see two cache files for each of the albums that you just selected.
+Пока вы не увидите изменений в приложении, но вы можете проверить, записываются ли на диск сохраняемые файлы.
+Для этого откройте проект и перейдите в папку **/bin/Debug**.
+Далее откройте папку с названием вашей версии .NET, в ней вы найдете папку **/Cache**.
+Вы увидите два кэш-файла для каждого из альбомов, которые вы выбрали ранее.
 
 ## Bitmap Cache Activated
 
-Notice that because the `SaveToDiskAsync` method writes both the JSON data and the album cover art bitmap to the cache folder, this step has effectively activated the bitmap loading cache behaviour that you built earlier. This is where: if an album cover has already been retrieved from the Web API and saved to the cache, the next bitmap load will be from the file not the API - saving time and making the app more responsive.
+Обратите внимание, что поскольку метод `SaveToDiskAsync` пишет оба файл, и JSON-файл, и изображение альбома
+в папку с кэшем, то этим повышается эффетивность при последующей загрузки данных.
+Смотрите сами: если обложка альбома уже была загружена ранее по Web API и сохранена в кэш,
+то последующая загрузка этого же изображения будет идти с диска, а не по API.
+А это экономит время и делает приложение более отзывчивым.
 
-To show that the bitmap loading cache is now in operation, follow this procedure:
+Чтобы увидеть работу загрузки из кэша, выполните следующие действия:
 
 - Остановите приложение, если оно запущено.
 - В папке **/Models** найдите и откройте файл **Album.cs**.
