@@ -21,7 +21,7 @@ const guides: Guide[] = [
   {
     title: 'Data Binding',
     text: 'Learn how to implement data binding and MVVM',
-    link: '/docs/guides/data-binding/inotifypropertychanged',
+    link: '/docs/basics/data/data-binding/',
   },
   {
     title: 'Improving Performance',
