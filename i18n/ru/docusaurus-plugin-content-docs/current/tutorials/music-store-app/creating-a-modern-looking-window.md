@@ -6,40 +6,45 @@ import MusicStoreDarkModePreviewScreenshot from '/img/tutorials/music-store-app/
 import MusicStoreAcrylicMaterialScreenshot from '/img/tutorials/music-store-app/creating-a-modern-looking-window/acrylic-material.png';
 import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-app/creating-a-modern-looking-window/full-acrylic-window.png';
 
-# Window Styling
+# Стилизация окна
 
-On this page, you will make the main window look modern by applying a dark theme, and an acrylic blur to the window background.
+На следующей страницу вы узнаете, как добавить современный темный фон с акриловым размытием.
 
-## Dark Mode
+На этой странице вы измените вид основного окна на современное,
+путем добавления темной темы и акрилового размытия.
 
-Follow this procedure to style the main window in 'dark' mode:
+## Темная тема
 
-- Stop the app if it is still running.
-- Locate and open the file **App.axaml**.
-- In the XAML, change the `RequestedThemeVariant` attribute in the `<Application>` element from "Default" to "Dark"
+Для окраса основного окна в темную тему, выполните следующие действия:
+
+- Остановите приложение, если оно запущено.
+- Найдите и откройте файл **App.axaml**.
+- В нем, у элемента `<Application>`,
+поменяйте атрибут `RequestedThemeVariant` со значения "Default" на "Dark".
 
 ```markup
 <Application ...
     RequestedThemeVariant="Dark">
 ```
 
-- Now locate and open the **MainWindow.axaml** file in the **/Views** folder.
+- В папке **/Views**, найдите и откройте файл **MainWindow.axaml**.
 
-Notice that the preview pane is still showing the window in 'light' mode. The application will require a rebuild for the new mode to show in the preview pane.
+Обратите внимание, что панель предпросмотра по-прежнему отображает окно со светлой темой.
+Для исправления данной ситуации, необходимо пересобрать проект.
 
-- Click **Build Startup Project** on the **Build** menu.
+- В меню **Build** нажмите **Build Startup Project**.
 
-The preview pane now changes to the dark mode.
+Панель предпросмотра должна измениться на темную.
 
 <p><img className="image-medium-zoom" src={MusicStoreDarkModePreviewScreenshot} alt="" /></p>
 
-## Acrylic Blur
+## Acrylic Blur (рус: Акриловое размытие)
 
-Follow this procedure to style the background of the main window with an acrylic blur:
+Для задания фону акрилового размытия, выполните следующие действия:
 
-- Locate and open the **MainWindow.axaml** file in the **/Views** folder.
-- Find the end of the opening tag of the `<Window>` element.
-- After the `Title="Avalonia.MusicStore"` attribute, add two new attributes as follows:
+- В папке **/Views** найдите и откройте файл **MainWindow.axaml**.
+- Найдите окончания открывающего тега `<Window>`.
+- После атрибута `Title="Avalonia.MusicStore"`, добавьте два новых, как показано ниже:
 
 ```markup
 <Window ...
@@ -49,7 +54,8 @@ Follow this procedure to style the background of the main window with an acrylic
         Background="Transparent">
 ```
 
-- To apply the acrylic effect to the whole window, replace the `<TextBlock>` element in the content zone of the main window with the following XAML for a panel:
+- Для применения акрилового эффекта на все окно, замените элемент `<TextBlock>` в зоне содержимого
+основного окна, как показано ниже:
 
 ```markup
 <Window ... >
@@ -67,21 +73,23 @@ Follow this procedure to style the background of the main window with an acrylic
    </Window>
 ```
 
-- Click **Debug** (top right of the IDE) to compile and run the project.
+- Нажмите кнопку **Debug** в правом верхнем углу IDE, чтобы собрать и запустить проект.
+
 
 <p><img className="image-medium-zoom" src={MusicStoreAcrylicMaterialScreenshot} alt="" /></p>
 
-Notice that, as expected, the acrylic window effect covers the content zone of the main window. However the effect does not yet extend to the title bar.
+Обратите внимание, что хоть акриловый эффект и распространился на всю зону содержимого основного окна,
+но он не влияет на строку заголовка.
 
 :::warning
-Note that _Linux_ users can not yet take advantage of the following code due to limitations of the X11 version. The tutorial code will run and the window will still work on _Linux_, but the full effect will not be realised.
+На _Linux_, в силу ограничений версии X11, данный эффект не будет работать частично или полностью, но в остальном приложение будет работать корректно.
 :::
 
-Follow this procedure to extend the acrylic blur effect onto the title bar:
+Для применения акрилового эффекта на строку заголовка, выполните следующие действия:
 
-- Stop the app if is still running.
-- Find the end of the opening tag of the `<Window>` element again.
-- Add the `ExtendClientAreaToDecorationsHint` attribute as shown:
+- Остановите приложение, если оно запущено.
+- Найдите окончания открывающего тега `<Window>`.
+- Добавьте атрибут `ExtendClientAreaToDecorationsHint`, как показано ниже
 
 ```markup
    <Window ...
@@ -91,8 +99,9 @@ Follow this procedure to extend the acrylic blur effect onto the title bar:
            ExtendClientAreaToDecorationsHint="True">
 ```
 
-- Click **Debug** to compile and run the project.
+- Нажмите кнопку **Debug** в правом верхнем углу IDE, чтобы собрать и запустить проект.
 
 <p><img className="image-medium-zoom" src={MusicStoreFullAcrylicWindowScreenshot} alt="" /></p>
 
-Now you have the acrylic blur effect extending into the title bar. On the next page you will learn how to add and layout a control in the window.
+Теперь эффект акрилового размытия распостряняется и на строку заголовка.
+На следующей странице вы узнаете, как добавить и расположить `control` в окне.
