@@ -4,29 +4,35 @@ description: TUTORIALS - Music Store App
 
 import MusicStoreAddedAlbumsScreenshot from '/img/tutorials/music-store-app/add-items-to-users-collection/image-20210310175949319.png';
 
-# Add Items to the User's Collection
+# Добавление элементов в пользовательскую коллекцию
 
-On this page you will implement a collection of albums that the user has selected using the search dialog and the **Buy Album** button, and display them in the main window.
+На этой странице вы реализуете коллекцию из альбомов, которые пользователь добавил, 
+путем выбира в диалоговом окне поиска и нажатии кнопки **Buy Album**.
+Также вы отобразите их в основном окне.
 
-## Observable Collection
+## Observable Collection (рус: Наблюдаемая коллекция)
 
-Your first step here is to add an observable collection to the main window view model. This will hold the albums that the user has selected using the search dialog.
+Первым шагом, вы добавите `observable` коллекцию во `view model` основного окна.
+Она будет содержать альбомы, которые пользователь выбрал в диалоговом окне поиска.
 
-Follow this procedure:
+Выполните следующие действия:
 
-- Stop the app if it is running.
-- Locate and open the **MainWindowViewModel.cs** file.
-- Add an observable collection, as shown:
+- Остановите приложение, если оно запущено.
+- Найдите и откройте файл **MainWindowViewModel.cs**.
+- Добавьте `observable` коллекцию, как показано ниже:
 
 ```csharp
 public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 ```
 
-## Process the Dialog Result
+## Обработка результата диалогового окна
 
-Your next step is to alter the buy music reactive command so that it adds the dialog return object (an `AlbumViewModel`) to the observable collection. Follow this procedure:
+Вторым шагом, мы измеги реактивную команду покупки альбома так, чтобы диалоговое окно возвращало
+объект (`AlbumViewModel`) в `observable` коллекцию.
 
-- Alter the code that initializes the reactive command, as shown:
+Выполните следующие действия:
+
+- Измените код инициализации реактивной команды, как показано ниже:
 
 ```csharp
 BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
@@ -40,20 +46,23 @@ BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 });
 ```
 
-## Main Window View
+## `View` основного окна
 
-Next you will add XAML to the main window view to display the items in the observable collection. Again you will use a **data template**, this time inside an `ItemsControl`. The items control is actually  the base class for controls that display multiple items (like the list box), so some of this will already be familiar.
+Теперь вы добавите XAML во `view` основного окна, чтобы отобразить элементы `observable` коллекции.
+Вы снова будете использовать **data template (рус: шаблон данных)**, но в этот раз внутри `ItemsControl`.
+Это базовый класс для `controls`, которые отображают несколько элементов, к примеру `ListBox`,
+поэтому кое-что вам уже будет знакомо.
 
-To add the items control and its data template, follow this procedure:
+Для добавления `ItemsControl` и его `data template (рус: шаблона данных)`, выполните следующие действия:
 
-- Locate and open the **MainWindow.axaml** file.
-- Add the following namespace declaration to the `<Window>` element:
+- Найдите и откройте файл **MainWindow.axaml**.
+- В элемент `<Window>` добавьте следующее пространство имен:
 
 ```
 xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 ```
 
-- Under the button element, add the XAML as shown:
+- Под элементом `button` добавьте следующий XAML, как показано ниже:
 
 ```xml
 <ItemsControl Margin="0 40 0 0" ItemsSource="{Binding Albums}">
@@ -71,15 +80,16 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 </ItemsControl>
 ```
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
-- Type some search text.
-- Click an album to select it.
-- Click **Buy Album**.
-- Repeat another time.
+- Нажмите **Debug** для сборки и запуска проекта.
+- Нажмите на кнопку с иконкой.
+- Введите текст.
+- Выберите альбом нажав на него.
+- Нажмите **Buy Album**.
+- Повторите еще раз.
 
 <p><img className="image-medium-zoom" src={MusicStoreAddedAlbumsScreenshot} alt="" /></p>
 
-You will see the user's album collection building as you search and select. However, if you stop the app running and then start it again, the collection reverts to empty.
+По мере поиска и выбора альбомов, вы увидите увеличение пользовательской коллекции.
+Однако после перезапуска приложения, коллекция будет снова пуста.
 
-For the finishing touch, on the next page you will learn how to add some data persistence to the app.
+На следующей странице вы узнаете, как добавить в приложение `persistence` данные.
