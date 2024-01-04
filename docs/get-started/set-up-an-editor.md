@@ -41,3 +41,14 @@ Alternatively you can download the extension [here](https://marketplace.visualst
 :::info
 If you are using VS2019 or VS2017 you will need to download the extension for older versions [here](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio).
 :::
+
+## Visual Studio Code 
+The Avalonia for [Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.vscode-avalonia) contains support for Avalonia XAML autocomplete and previewer.
+
+
+
+
+
+
+
+
