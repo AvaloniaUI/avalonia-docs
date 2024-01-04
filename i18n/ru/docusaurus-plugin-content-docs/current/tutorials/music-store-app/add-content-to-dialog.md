@@ -6,6 +6,7 @@ import MusicStoreDialogContentDiagram from '/img/gitbook-import/assets/image (9)
 
 # Добавление содержимого диалогового окна
 
+На это страницу вы узнаете, как добавить содержимое в диалоговое окно.
 On the this page you will learn how to add some content to the dialog window. 
 This will be some controls for the search and a dialog close button; together with 
 a list of placeholders for the album covers - these will eventually be loaded as the results of the search.
@@ -18,24 +19,25 @@ so it will always take up all the remaining content zone.
 <img className="center" src={MusicStoreDialogContentDiagram} alt="" />
 
 :::info
-For full information on the dock panel control, see the reference [here](../../reference/controls/dockpanel.md).
+Подробнее об элементе `dock panel`, см. [здесь](../../reference/controls/dockpanel.md).
 :::
 
-The dock panel itself will be located on an _Avalonia UI_ user control. 
-This is so the code that shows the dialog can be separated from the code that operates the controls within the dialog.
+`Dock panel` будет расположена внутри `user control` из _Avalonia UI_.
+Это сделано для того, чтобы отделить код отображения диалогового окна
+от кода управляющего его `controls`.
 
 :::info
-This is a common pattern of UI Composition, to read about this concept, see [here](../../concepts/ui-composition.md).
+Подробнее о `UI Composition (рус: Составлении ГШ)`, см. [здесь](../../concepts/ui-composition.md).
 :::
 
-Follow this procedure to add the user control and constituent controls for the dialog:
+Для добавления `user control` и составных `controls` диалогового окна, выполните следующие действия:
 
 - Остановите приложение, если оно запущено.
-- In the solution explorer, right-click the **/Views** folder and then click **Add**.
-- Click **Avalonia User Control**.
-- When prompted for the name, type 'MusicStoreView'.
+- В обозревателе решений нажмите ПКМ по папке **/Views** и выберите **Add**.
+- Нажмите **Avalonia User Control**.
+- При появлении запроса на ввод, укажите 'MusicStoreView'.
 - Нажмите `Enter`.
-- Alter the XAML for the user control's content zone as follows:
+- Измените в XAML зону содержимого `user control`, как показано ниже:
 
 ```xml
 <UserControl ... >
@@ -62,7 +64,7 @@ You will add this functionality later in the tutorial.
 
 Now the next step is for you to add the new user control to the content zone of the dialog window.
 
-To add the user control, follow this procedure:
+Для добавления `user control`, выполните следующие действия:
 
 - Найдите и откройте файл **MusicStoreWindow.axaml**.
 - Add the namespace for the views to the `<Window>` element:
@@ -80,8 +82,8 @@ To add the user control, follow this procedure:
 </Panel>
 ```
 
-You will see the controls appear in the preview pane.
+Вы увидите, что `controls` появятся на панели предпросмотра.
 
-On the next page,
-you will learn how to use a mock for the album search feature - this is so that 
-you can create the view and view model for the results, and leave the implementation of the real search until later.
+На следующей страницу вы узнаете, как имитировать фунцию поиска альбомов,
+чтобы создать `view` и `view model` для просмотра результатов,
+а реализацию реального поиска оставить на потом.
