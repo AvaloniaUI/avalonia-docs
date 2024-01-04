@@ -1,23 +1,25 @@
 ---
 id: simple
-title: Simple Theme
+title: Тема Simple
 ---
 
-## Introduction
+## Вступление
 
-Avalonia Simple theme is specifically designed to be minimal and lightweight, with limited built-in styling. It provides a simple and clean foundation for building custom styles on top. Low visual and structural complexity makes it a perfect choice for applications running on embedded devices.
+`Simple` - это минималистичная и легковеская тема, с ограниченной встроенной стилизацией.
+Что обеспечивает простую и понятную основу при создании пользовательских стилей.
+Низкие визуализация и структурная сложность - это отличный выбор для приложений на встраиваемых устройств.
 
-![Simple Theme](/img/basics/user-interface/styling/simple-theme.png)
+![Тема Simple](/img/basics/user-interface/styling/simple-theme.png)
 
-## How to use
+## Начало работы
 
-As a first step, [Avalonia.Themes.Simple](https://www.nuget.org/packages/Avalonia.Themes.Simple/) nuget package needs to be installed. 
+Установите nuget-пакет [Avalonia.Themes.Simple](https://www.nuget.org/packages/Avalonia.Themes.Simple/). 
 
 :::info
-On how to add a nuget package, you can follow steps from the Nuget page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
+Для добавления nuget-пакета, следуйте соответствующим инструкциям: [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html).
 :::
 
-After that theme needs to be included in the Application class:
+Добавьте тему в класс Application:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -33,5 +35,5 @@ After that theme needs to be included in the Application class:
 ```
 
 :::note
-If you need to specify theme dark or light variant, please follow [Theme Variants](../../../../guides/styles-and-resources/how-to-use-theme-variants.md) documentation.
+Для добавление вариантов темной и светлой темы, см. документацию [Theme Variants](../../../../guides/styles-and-resources/how-to-use-theme-variants.md).
 :::
