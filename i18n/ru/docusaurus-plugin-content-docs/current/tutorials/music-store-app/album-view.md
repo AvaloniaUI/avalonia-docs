@@ -8,8 +8,8 @@ import MusicStoreWrapPanelScreenshot from '/img/tutorials/music-store-app/add-co
 
 # Album View
 
-On this page you will continue developing the search results list for the app 
-by replacing the text currently shown with graphical album tiles.
+На это странице мы продожим разработку списка результатов поиска.
+Заменим отображаемый текст на графические плитки альбомов.
 
 ## Icon Resource
 
@@ -21,7 +21,8 @@ To add the music note icon resource, follow this procedure:
 
 - Остановите приложение, если оно запущено.
 - Navigate to the _Avalonia UI_ _GitHub_ to find the list of Fluent Icons at [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
-- Use your browser's text search to locate the name of the icon 'music_regular'. There should be some code similar to:
+- Use your browser's text search to locate the name of the icon 'music_regular'.
+There should be some code similar to:
 
 ```markup
 <StreamGeometry x:Key="music_regular">M11.5,2.75 C11.5,2.22634895 12.0230228,1.86388952 12.5133347,2.04775015 L18.8913911,4.43943933 C20.1598961,4.91511241 21.0002742,6.1277638 21.0002742,7.48252202 L21.0002742,10.7513533 C21.0002742,11.2750044 20.4772513,11.6374638 19.9869395,11.4536032 L13,8.83332147 L13,17.5 C13,17.5545945 12.9941667,17.6078265 12.9830895,17.6591069 C12.9940859,17.7709636 13,17.884807 13,18 C13,20.2596863 10.7242052,22 8,22 C5.27579485,22 3,20.2596863 3,18 C3,15.7403137 5.27579485,14 8,14 C9.3521238,14 10.5937815,14.428727 11.5015337,15.1368931 L11.5,2.75 Z M8,15.5 C6.02978478,15.5 4.5,16.6698354 4.5,18 C4.5,19.3301646 6.02978478,20.5 8,20.5 C9.97021522,20.5 11.5,19.3301646 11.5,18 C11.5,16.6698354 9.97021522,15.5 8,15.5 Z M13,3.83223733 L13,7.23159672 L19.5002742,9.669116 L19.5002742,7.48252202 C19.5002742,6.75303682 19.0477629,6.10007069 18.3647217,5.84393903 L13,3.83223733 Z</StreamGeometry>
@@ -90,7 +91,7 @@ The data template registration looks like this:
 The view locator can therefore always be found by _Avalonia UI,_ when it searches for a data template.
 
 :::info
-For more details about the **data template** concept, see [here](../../concepts/templates/).
+Подробнее о **data template (рус: шаблонах данных)**, см. [здесь](../../concepts/templates/).
 :::
 
 The view locator acts as a data template for a view model (in this case the album view model) 
