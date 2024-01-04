@@ -82,7 +82,6 @@ _Avalonia UI_ 中的大多数标准控件都是模板化控件，这意味着它
 #### 完全可定制
 
 _Avalonia UI_ 中的大多数模板化控件都是完全可定制的。这意味着可以完全替换控件的模板并更改其外观。`Button` 控件是一个很好的例子，但 _Avalonia UI_ 中的所有模板化控件都试图默认情况下是完全可定制的。对于完全可定制的模板化控件，应用程序几乎可以完全自由地样式或更改 UI 中所见的一切。
-The majority of templated controls in _Avalonia UI_ are fully customizable. This means it is possible to completely replace the control’s template and change its appearance. The `Button` control is a good example but all templated controls in _Avalonia UI_ try to be fully customizable by default. With a fully customizable templated control the app has near total ability to style or change everything you see drawn in the UI.
 
 #### 部分可定制
 
