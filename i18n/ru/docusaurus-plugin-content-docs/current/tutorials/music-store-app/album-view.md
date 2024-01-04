@@ -8,15 +8,18 @@ import MusicStoreWrapPanelScreenshot from '/img/tutorials/music-store-app/add-co
 
 # Album View
 
-On this page you will continue developing the search results list for the app by replacing the text currently shown with graphical album tiles.
+On this page you will continue developing the search results list for the app 
+by replacing the text currently shown with graphical album tiles.
 
 ## Icon Resource
 
-The first step here is to add a resource for the 'music note' icon. You will use this to act as a placeholder icon for the album covers in the app - they will eventually be replaced by the downloaded album cover artwork. 
+The first step here is to add a resource for the 'music note' icon. 
+You will use this to act as a placeholder icon for the album covers in the app - they will eventually be replaced
+by the downloaded album cover artwork. 
 
 To add the music note icon resource, follow this procedure:
 
-- Stop the app if it is still running.
+- Остановите приложение, если оно запущено.
 - Navigate to the _Avalonia UI_ _GitHub_ to find the list of Fluent Icons at [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
 - Use your browser's text search to locate the name of the icon 'music_regular'. There should be some code similar to:
 
@@ -25,19 +28,20 @@ To add the music note icon resource, follow this procedure:
 ```
 
 - Copy all of the code for the icon.
-- Locate and open the **Icons.axaml** file that you created earlier.
+- Найдите и откройте ранее созданный файл **Icons.axaml**.
 - Paste the copied`<StreamGeometry>` element inside `<Style.Resources>` element.
 
 ## Album View
 
-The next step is to create a graphical 'tile' view for an album. You will then cause this to be used instead of the text that currently shows for each album in the list.
+The next step is to create a graphical 'tile' view for an album. 
+You will then cause this to be used instead of the text that currently shows for each album in the list.
 
 To create the graphical 'tile' view, follow this procedure:
 
 - In the solution explorer, right-click the **/Views** folder and then click **Add**. 
-- Click **Avalonia User Control**.
+- Нажмите **Avalonia User Control**.
 - When prompted for the name, type 'AlbumView'.
-- Press enter.
+- Нажмите `Enter`.
 - Add the attribute `Width="200"` to the `<UserControl>` element.
 - Alter the XAML for the user control's content zone as follows:
 
@@ -58,13 +62,19 @@ The preview pane will now show the new tile view with the music note icon placed
 
 ## View Locator
 
-The album view model will eventually contain data for the name of an album, the artist, and its downloaded cover art, but at this stage you will continue to use just the placeholder music note icon. 
+The album view model will eventually contain data for the name of an album, 
+the artist, and its downloaded cover art, but at this stage you will continue
+to use just the placeholder music note icon. 
 
-As you saw on the last page, at this point the album list currently just shows the (fully qualified) name of the album view model class.
+As you saw on the last page, at this point the album list currently just shows
+the (fully qualified) name of the album view model class.
 
 <img className="center" src={MusicStoreBeforeTemplateScreenshot} alt="" />
 
-In this step you will be using the view locator class (**ViewLocator.cs** file) that was added to the project by the solution template. This class was registered (by the solution template) as a data template at the highest level in the app in the **App.axaml** file. The data template registration looks like this:
+In this step you will be using the view locator class (**ViewLocator.cs** file) that was added 
+to the project by the solution template. This class was registered (by the solution template) 
+as a data template at the highest level in the app in the **App.axaml** file. 
+The data template registration looks like this:
 
 ```
 <Application ...
@@ -83,17 +93,20 @@ The view locator can therefore always be found by _Avalonia UI,_ when it searche
 For more details about the **data template** concept, see [here](../../concepts/templates/).
 :::
 
-The view locator acts as a data template for a view model (in this case the album view model) under the conditions that:
+The view locator acts as a data template for a view model (in this case the album view model) 
+under the conditions that:
 
 * the view model inherits from the `ViewModelBase` class,
 * and there is a view that exists with the same base name.
 
-The view `AlbumView` and the view model `AlbumViewModel` already have the same base name 'Album' and the view `AlbumView` exists. So the only remaining condition for the view locator to work is that the view model has to inherit from the `ViewModelBase` class.
+The view `AlbumView` and the view model `AlbumViewModel` already have the same base name 'Album' 
+and the view `AlbumView` exists. So the only remaining condition for the view locator 
+to work is that the view model has to inherit from the `ViewModelBase` class.
 
 Follow this procedure:
 
-- Locate and open the **AlbumViewModel.cs** file you created earlier.
-- Add the code for the class to inherit from `ViewModelBase` as shown:
+- Найдите и откройте ранее соданный файл **AlbumViewModel.cs**.
+- Для наследование класса от `ViewModelBase`, добавьте код, как показано ниже:
 
 ```csharp
 public class AlbumViewModel : ViewModelBase
@@ -101,8 +114,8 @@ public class AlbumViewModel : ViewModelBase
 }
 ```
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
+- Нажмите **Debug** для сборки и запуска проекта.
+- Нажмите кнопку с иконкой.
 
 <p><img className="image-medium-zoom" src={MusicStoreBeforeWrapPanelScreenshot} alt="" /></p>
 
@@ -112,14 +125,16 @@ The view locator is finding the view `AlbumView` to use as a data template for t
 
 In this step you will tidy up the list display so that the album covers wrap around to fill all the space available.
 
-A list box has a property that contains a template control for laying out the list items. By default this is a stack panel. To make the album covers wrap around to fill all the space, you can change the panel template to be a wrap panel.
+A list box has a property that contains a template control for laying out the list items. 
+By default this is a stack panel. To make the album covers wrap around to fill all the space, 
+you can change the panel template to be a wrap panel.
 
 You will also add some style attributes to the list box.
 
 To tidy up the list, follow this procedure:
 
-- Stop the app if it is still running.
-- Locate and open the **MusicStoreView.axaml** file.
+- Остановите приложение, если оно запущено.
+- Найдите и откройте файл **MusicStoreView.axaml**.
 - Expand the `<ListBox>` element so that it has start and end tags.
 - Add the `<ListBox.ItemsPanel>` XAML shown:
 
@@ -134,9 +149,10 @@ To tidy up the list, follow this procedure:
 </ListBox>
 ```
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
+- Нажмите **Debug** для сборки и запуска проекта.
+- Нажмите на кнопку с иконкой.
 
 <p><img className="image-medium-zoom" src={MusicStoreWrapPanelScreenshot} alt="" /></p>
 
-On the next page, you will add some business logic in the form of a data service, so that you can get real album data from the search.
+On the next page, you will add some business logic in the form of a data service, 
+so that you can get real album data from the search.
