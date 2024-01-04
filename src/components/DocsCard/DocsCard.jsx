@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Link from '@docusaurus/Link';
 import styles from './DocsCard.css'
 
 export const DocsCard = ({ label, link, height = 40, width = 40, title }) => {
@@ -23,7 +24,7 @@ export const DocsCard = ({ label, link, height = 40, width = 40, title }) => {
         "Deploying ToolJet on a subpath": "Steps to deploy ToolJet on a subpath rather than root of domain.",
         "V2 migration guide": "Things to know before migrating to ToolJet V2",
     }
-
+/*
     return (
 
         <a href={link} className="card" style={{ textDecoration: "none", color: "inherit" }}>
@@ -36,6 +37,18 @@ export const DocsCard = ({ label, link, height = 40, width = 40, title }) => {
                 </div>
             </div>
         </a>
+
+        
+    )*/
+
+    return (
+        <Link to={link} className="homepage-card">
+        <div className="card-content">
+          <div className="title py-5 px-3">
+            {label}
+          </div>
+        </div>
+      </Link>
     )
 }
 

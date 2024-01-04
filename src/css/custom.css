@@ -70,7 +70,7 @@
 
     --docs-color-secondary-700: 71 71 71;
     --docs-color-secondary-800: 38 38 38;
-    --docs-color-secondary-900: 25 25 25;
+    --docs-color-secondary-900: 27 42 78;
     --docs-color-secondary-1000: 0 0 0;
   }
 
@@ -1213,4 +1213,10 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
 
 .center {
   min-height: unset!important;
+}
+
+.pagination-nav__link--next {
+  background-color: rgba(139, 68, 172, 0.1)!important;
+  color: #C469EE;
+  border-color: #C469EE;
 }

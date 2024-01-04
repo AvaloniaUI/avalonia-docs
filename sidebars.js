@@ -263,6 +263,10 @@ const sidebars = {
         {
           'type': 'category',
           'label': 'Implementation Guides',
+          'link': {
+            'type': 'doc',
+            'id': 'guides/implementation-guides/index',
+          },
           'items': [
             'guides/implementation-guides/how-to-use-the-mvvm-pattern',
             'guides/implementation-guides/how-to-implement-dependency-injection',
