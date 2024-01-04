@@ -910,6 +910,26 @@ img[src$='#terminal'] {
   overflow: hidden;
 }
 
+.github-sample-card {
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: white;
+  
+  --ifm-link-hover-decoration: none;
+  --ifm-link-hover-color: inherit;
+  cursor: pointer;
+  @apply flex flex-row items-center;
+  @apply border-secondary-800 bg-purple-500 hover:bg-purple-400;
+  border-width: 1px;
+  transition-property: background-color, color;
+
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
 .homepage-card.row {
   flex-direction: row;
 }

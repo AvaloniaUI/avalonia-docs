@@ -3,6 +3,8 @@ import React from 'react';
 import MDXComponents from '@theme-original/MDXComponents';
 import Highlight from '@site/src/components/Highlight';
 import { CardSection, Card } from '../components/CardComponents'; 
+import HelpNeeded from '../components/HelpNeeded'; 
+import GitHubSampleLink from '../components/GitHubSampleLink';
 
 export default {
   // Re-use the default mapping
@@ -11,5 +13,7 @@ export default {
   // `Highlight` will receive all props that were passed to `<Highlight>` in MDX
   Highlight,
   CardSection,
+  GitHubSampleLink,
   Card,
+  HelpNeeded,
 };
