@@ -5,9 +5,7 @@ title: File Dialogs
 
 The file dialog functionality is accessed through the [`StorageProvider`](../../concepts/services/storage-provider) service API, which is available from the `Window` or `TopLevel` classes. This page shows only basic usage and for more information about this API please visit StorageProvider page.
 
-:::info
-For a complete, runnable example of these concepts in action, check out [the sample application.](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/FileOps) 
-:::
+<GitHubSampleLink title="File Dialogs" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/FileOps"/>
 
 ## OpenFilePickerAsync
 

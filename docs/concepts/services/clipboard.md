@@ -5,9 +5,8 @@ title: Clipboard
 
 The `Clipboard` class enables interacting with the system clipboard, providing functionality for setting and retrieving text, clearing the clipboard, handling data objects and working with different data formats. 
 
-:::info
-For a complete, runnable example of these concepts in action, check out [the sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ClipboardOps).
-:::
+<GitHubSampleLink title="Clipboard" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ClipboardOps"/>
+
 
 The `Clipboard` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../toplevel) page:
 ```cs

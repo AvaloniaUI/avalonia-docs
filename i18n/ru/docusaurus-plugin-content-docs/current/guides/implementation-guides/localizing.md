@@ -5,9 +5,8 @@ title: Localizing using ResX
 
 Localization is a crucial step in delivering a great user experience for a global audience. In .NET, the `ResXResourceReader` and `ResXResourceWriter` classes are used to read and write resources in an XML-based format (.resx). This guide will walk you through the process of localizing an Avalonia application using ResX files.
 
-:::info
-For a complete, runnable example of these concepts in action, check out the [sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/Localization/).
-:::
+<GitHubSampleLink title="Localization" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/Localization/"/>
+
 
 ## Add ResX Files to the Project
 

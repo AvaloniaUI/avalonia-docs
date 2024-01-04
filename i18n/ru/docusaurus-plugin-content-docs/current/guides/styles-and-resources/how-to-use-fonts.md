@@ -5,9 +5,8 @@ title: How To Use Custom Fonts
 
 Customizing your Avalonia application with unique fonts can add a distinctive look and feel. This guide will walk you through the process of integrating custom fonts into your Avalonia application.
 
-:::info
-For a complete, runnable example of these concepts in action, check out the [sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/GoogleFonts).
-:::
+<GitHubSampleLink title="Google Fonts" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/GoogleFonts"/>
+
 
 ## Add Your Custom Font to the Project
 

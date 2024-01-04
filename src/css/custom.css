@@ -918,7 +918,7 @@ img[src$='#terminal'] {
   color: white;
   
   --ifm-link-hover-decoration: none;
-  --ifm-link-hover-color: inherit;
+  --ifm-link-hover-color: white;
   cursor: pointer;
   @apply flex flex-row items-center;
   @apply border-secondary-800 bg-purple-500 hover:bg-purple-400;
