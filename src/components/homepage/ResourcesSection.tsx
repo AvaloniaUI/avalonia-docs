@@ -90,7 +90,7 @@ function Resource({
             className="aspect-video h-full w-full object-cover transition-transform group-hover:scale-110"
           />
         </div>
-        <h3 className="font-semibold text-black group-hover:text-primary dark:text-white dark:group-hover:text-primary-100 lg:text-xl">
+        <h3 className="font-semibold text-black group-hover:text-primary-100 dark:text-white dark:group-hover:text-primary-100 lg:text-xl">
           {title}
         </h3>
         <p className="leading-snug text-text-400">{description}</p>
@@ -135,7 +135,7 @@ export default function ResourcesSection() {
           </div>
           <Link
             to="https://avaloniaui.net/blog"
-            className="font-jakarta text-sm font-semibold text-primary"
+            className="font-jakarta text-sm font-semibold text-primary-500"
           >
             All Blogs <ArrowRightFilled className="ml-1" />
           </Link>

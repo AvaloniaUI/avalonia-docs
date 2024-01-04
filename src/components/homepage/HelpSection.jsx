@@ -23,7 +23,7 @@ export default function HelpSection({ className = '' }) {
             </p>
             <Link
               href="https://avaloniaui.net/support"
-              className="text-primary dark:text-primary-100"
+              className="text-primary-500 dark:text-primary-100"
             >
               Explore Subscriptions &rarr;
             </Link>
@@ -37,7 +37,7 @@ export default function HelpSection({ className = '' }) {
             </p>
             <Link
               href="https://avaloniaui.net/Services"
-              className="text-primary dark:text-primary-100"
+              className="text-primary-500 dark:text-primary-100"
             >
               Learn More &rarr;
             </Link>
@@ -49,7 +49,7 @@ export default function HelpSection({ className = '' }) {
               Browse through our FAQs to find answers to commonly asked
               questions.
             </p>
-            <Link href="https://avaloniaui.net/FAQ" className="text-primary dark:text-primary-100">
+            <Link href="https://avaloniaui.net/FAQ" className="text-primary-500 dark:text-primary-100">
               View FAQs &rarr;
             </Link>
           </div>

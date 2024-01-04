@@ -127,7 +127,7 @@ body {
 
 /* avalonia Docs Tokens */
 :root {
-  --docs-color-primary: #2160fd;
+  --docs-color-primary: #C469EE;
   /* --docs-color-primary-100: #1a90ff; */
   --docs-color-primary-tint: rgba(33, 96, 253, 0.16);
   --docs-color-primary-tint-light: rgba(33 96 253/0.24);
@@ -180,7 +180,7 @@ body {
     Consolas, 'Liberation Mono', 'Courier New', monospace;
 
   /* Theme colors */
-  --ifm-color-primary: #8b44ac;
+  --ifm-color-primary: #C469EE;
   --ifm-color-primary-dark: #1959fc;
   --ifm-color-primary-darker: #0f51f8;
   --ifm-color-primary-darkest: #0042e7;
@@ -203,11 +203,11 @@ body {
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 html[data-theme='dark'] {
-  --ifm-link-color: #6f42c1;
-  --ifm-tabs-color-active-border: #6f42c1;
-  --ifm-tabs-color-active: #6f42c1;
+  --ifm-link-color: #C469EE;
+  --ifm-tabs-color-active-border: #C469EE;
+  --ifm-tabs-color-active: #C469EE;
 
-  --ifm-color-primary: #6f42c1;
+  --ifm-color-primary: #C469EE;
 
   --ifm-footer-background-color: #1c1c1c;
   --ifm-background-surface-color: #161616;
