@@ -7,50 +7,59 @@ import MusicStoreProjectStructureScreenshot from '/img/tutorials/music-store-app
 import MusicStoreRiderDebugButtonScreenshot from '/img/tutorials/music-store-app/creating-the-project/debug-button.png';
 import MusicStoreNewAppScreenshot from '/img/tutorials/music-store-app/creating-the-project/image-20210310192926578.png';
 
-# Create a New Project
+# Создание нового проекта
 
-On this page you will lean how to create a new project for the app.
+На этой странице вы узнаете, как можно создать проект вашего приложения.
 
 ### JetBrains Rider
 
-Before you start, check you have installed the _Avalonia UI_ solution templates for _JetBrains Rider_.
+Перед началом работы, убедитесь, что у вас установлено расширение _Avalonia UI_ для _JetBrains Rider_.
 
 :::info
-For full instructions on preparing _JetBrains Rider_ for developing with _Avalonia UI_, see [here](../../reference/jetbrains-rider-ide/jetbrains-rider-setup.md).
+Подробную информацию об установке расширения _Avalonia UI_, см. [здесь](../../reference/jetbrains-rider-ide/jetbrains-rider-setup.md).
 :::
 
-With the solution templates installed, begin this tutorial by following these instructions:
+После завершения установки расширения, следуйте инструкции ниже:
 
-- On the **Welcome to JetBrains Rider** screen, click **New Solution**.
-- From the project types list on the left, locate and click **Avalonia .NET Core MVVM App**. It will be under the section **Other**.
-- Leave the **MVVM Toolkit** option as (the default) _ReactiveUI_ framework.
-- Enter the **Solution name** as 'Avalonia.MusicStore'.
-- Click **Create**.
+- В окне **Welcome to JetBrains Rider**, нажмите **New Solution**.
+- В списке типов проектов найдите и выберите **Avalonia .NET Core MVVM App**.
+Он должен быть под секцией **Other**.
+- Оставьте без изменений параметр **MVVM Toolkit**. По-умолчанию выбран фреймворк _ReactiveUI_.
+- В поле **Solution name** введите 'Avalonia.MusicStore'.
+- Нажмите **Create**.
 
 <p><img className="image-medium-zoom" src={MusicStoreCreateSolutionScreenshot} alt="" /></p>
 
-A new project will be created with the following solution folders and files:
+Новый проект решения будет включать файлы и папки, как показано ниже:
 
 <p><img className="image-medium-zoom" src={MusicStoreProjectStructureScreenshot} alt="" /></p>
 
-Take some time to review the files and folders that the solution template created. You will see that the following the MVVM pattern, these folders were created:
+Потратьте некоторое время на изучения файлов и папок, которые были созданы шаблоном решения.
+Как вы могли заметить, в соблюдение паттерна MVVM, были созданы следующие папки:
 
-<table><thead><tr><th width="188">Folder Name</th><th>Description</th></tr></thead><tbody><tr><td>Assets</td><td>Contains any embedded assets that are compiled into the program. <code>Images</code>, <code>Icons</code>, <code>Fonts</code> etc, anything that the UI might need to display,</td></tr><tr><td>Models</td><td>This is an empty folder for code that is the 'model' part of the MVVM pattern. This often contains everything else the app needs that is not part of the UI. For example: interaction with a database, Web API, or  interfaces with a hardware device. </td></tr><tr><td>View Models</td><td>This is a folder for all the view models in the project, and it already contains an example. View models contain the application logic in the MVVM pattern. For example: a button is enabled only when the user has typed something; or open a dialog when the user clicks here; or show an error if the user enters too high a number type of logic in this input.</td></tr><tr><td>Views</td><td>This is a folder for all the views in the project, and it already contains the view for the application main window. Views in the MVVM pattern contain only the presentation for the application; that is layout and form, fonts, colors, icons and images. In MVVM they have only enough code to link them to the view model layer. In <em>Avalonia UI</em> there is only enough code to manage windows and dialogs here.</td></tr></tbody></table>
+| Папка        | Описание                                                                                                                                                                                                                                                                                                                                                                                                                |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Assets       | Содержит любые встроенные ресурсы, которые компилируются в программу. Все что требуется для отображения в UI, к примеру `Images (рус: изображения)`, `Icons (рус: иконки)`, `Fonts (рус: шрифты)` и т.д.                                                                                                                                                                                                                |
+| Models       | Данная пустая папка предназначена для кода, относящегося к части 'model' паттерна MVVM. Обычно она содержит все, что не является частью UI. К примеру, работа с базой данных, Web API или взаимодействие с устройствами.                                                                                                                                                                                                |
+| View Models  | Данная папка предназначена для всех `view models` проекта, и она уже включает готовый пример. Согласно паттерну MVVM, `View models` содержат логику приложения. К примеру: кнопка доступна только тогда, когда пользователь ввел данные; открытие диалогового окна при нажатии; отображение ошибки, когда пользователь вводит некорректное значение.                                                                    |
+| Views        | Данная папка предназначена для всех `views` проекта, и она уже содержит `view` для основного окна приложения. Согласно паттерну MVVM, `views` содержат только визуальные части приложения, такие как разметка, шрифты, цвета, иконки и изображения. По MVVM, `views` должны содержать код только для взаимодействия со слоем `view model`. В Avalonia UI, во `view` вы должны управлять обычными и диалоговыми окнами.  |
 
 :::info
-To explore the concepts behind the MVVM pattern, and when is appropriate to use it, see [here](../../concepts/the-mvvm-pattern/).
+Подробнее о паттерне MVVM, см. [здесь](../../concepts/the-mvvm-pattern/).
 :::
 
-The solution template has created enough files for the application to run. You will meet all of these during the rest of this tutorial.   
+Шаблон решения создал достаточное файлов для запуска приложения.
+Вы изучите их все далее в руководстве.
 
-## Run the Project
+## Запуск проекта
 
-Press the debug button top-right of the IDE to compile and run the project.
+Нажмите кнопку `debug` в правом верхнем углу IDE, чтобы собрать и запустить проект.
 
 <p><img className="image-medium-zoom" src={MusicStoreRiderDebugButtonScreenshot} alt="" /></p>
 
-This will show a window that looks like:
+Появится окно следующего вида:
 
 <p><img className="image-medium-zoom" src={MusicStoreNewAppScreenshot} alt="" /></p>
 
-It is a little plain - but you now have a running application, and a blank canvas to start developing with. On the next page you will learn how to add a modern-looking acrylic blur dark background.
+Пусть и упрощенно, но теперь у вас есть запущенное приложение и чистый холст для начала разработки.
+На следующей страницу вы узнаете, как добавить современный темный фон с акриловым размытием.
