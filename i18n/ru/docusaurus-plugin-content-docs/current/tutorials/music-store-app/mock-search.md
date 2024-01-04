@@ -4,17 +4,21 @@ description: TUTORIALS - Music Store App
 
 import MusicStoreMockSearchScreenshot from '/img/tutorials/music-store-app/add-content-to-dialog/text-list.png';
 
-# Mock Search
+# Mock Search (рус: Фейковый поиск)
 
-On this page you will create the view model for the album search feature, and then bind it to the controls on the new user control. At this stage you will use a mock of the search itself, so that you can concentrate on the view model.
+On this page you will create the view model for the album search feature, 
+and then bind it to the controls on the new user control. At this stage you will use a mock of the search itself, 
+so that you can concentrate on the view model.
 
 ## Reactive View Model  
 
-The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data binding system. You add this support by deriving your view model from the `ReactiveObject` class, via the `ViewModelBase` class that was added to your project at the start, by the solution template.
+The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data binding system. 
+You add this support by deriving your view model from the `ReactiveObject` class, 
+via the `ViewModelBase` class that was added to your project at the start, by the solution template.
 
 Follow this procedure to derive from the `ReactiveObject` class:
 
-- Locate and open the **MusicStoreViewModel.cs** file.
+- Найдите и откройте файл **MusicStoreViewModel.cs**.
 - Add the code to derive the class from `ViewModelBase`.
 
 ```csharp
@@ -26,7 +30,8 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-This adds the important extension method `RaiseAndSetIfChanged` to your view model, and will allow you to give the properties there the ability to notify changes to the view.  
+This adds the important extension method `RaiseAndSetIfChanged` to your view model, 
+and will allow you to give the properties there the ability to notify changes to the view.  
 
 :::info
 To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).
@@ -65,16 +70,19 @@ namespace AvaloniaApplication11.ViewModels
 }
 ```
 
-You can see that the properties have a normal public getter which returns the private value field; but the setter calls the `RaiseAndSetIfChanged` method - in order to implement the notification.
+You can see that the properties have a normal public getter which returns the private value field;
+but the setter calls the `RaiseAndSetIfChanged` method - in order to implement the notification.
 
-## Data Binding
+## Data Binding (рус: Привязка данных)
 
-Next you will add a data binding to link the view to the view model. The text box will be bound to the search text, and whether the progress bar is visible to the user will  be bound to the Boolean.
+Next you will add a data binding to link the view to the view model. 
+The text box will be bound to the search text, 
+and whether the progress bar is visible to the user will  be bound to the Boolean.
 
 Follow this procedure to add data binding to the view:
 
-- Locate and open the **MusicStoreView.axaml** file.
-- Add the binding expressions shown:
+- Найдите и откройте файл **MusicStoreView.axaml**.
+- Добавьте выражение `binding (рус: привязки)`, как показано ниже:
 
 ```xml
 <UserControl ...>
@@ -93,19 +101,20 @@ Follow this procedure to add data binding to the view:
 </UserControl>
 ```
 
-## Album Search and Selection
+## Поиск и выбор альбома
 
 Your next step is to create the music store view model properties needed to process albums. These are:
 
 * a collection of album view models to represent the albums that the search might find,
 * and a property to hold an album if the user selects one.
 
-Here you will use the `ObservableCollection` - this is a collection is capable of notification, and it is provided by the .NET framework.
+Here you will use the `ObservableCollection` - this is a collection is capable of notification,
+and it is provided by the .NET framework.
 
 Follow this procedure to add the above properties:
 
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Add the following code to the class:
+- Найдите и откройте файл **MusicStoreViewModel.cs**.
+- Добавьте в класс указанный ниже код:
 
 ```csharp
 private AlbumViewModel? _selectedAlbum;
@@ -121,21 +130,21 @@ public AlbumViewModel? SelectedAlbum
 
 Next to bind these properties to the list box in the view, follow this procedure:
 
-- Locate and open the **MusicStoreView.axaml** file.
-- Add the binding expressions shown to the `<ListBox>` element:
+- Найдите и откройте файл **MusicStoreView.axaml**.
+- Добавьте выражение `binding (рус: привязки)` к элементу `<ListBox>`:
 
 ```xml
 <ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
 ```
 
-## Mock Data
+## Mock Data (рус: Фейковые данные)
 
 Now, to test the app at this stage, you will add some mock data directly to the view model.
 
-Follow this procedure:
+Выполните следующие действия:
 
-- Locate and open the **MusicStoreViewModel.cs** file again.
-- Add a constructor to the class, as shown:
+- Найдите и откройте файл **MusicStoreViewModel.cs**.
+- Добавьте конструктор класса, как показано ниже:
 
 ```csharp
 public MusicStoreViewModel()
@@ -146,8 +155,10 @@ public MusicStoreViewModel()
 }
 ```
 
-- Click **Debug** to compile and run the project.
+- Нажмите **Debug** для сборки и запуска проекта.
 
 <p><img className="image-medium-zoom" src={MusicStoreMockSearchScreenshot} alt="" /></p>
 
-This shows that the data binding from the list to the album collection in the view model is working, but the view is not graphical yet. On the next page you will develop the app further by replacing the text with graphical album tiles. 
+This shows that the data binding from the list to the album collection in the view model is working,
+but the view is not graphical yet. On the next page you will develop the app further 
+by replacing the text with graphical album tiles. 
