@@ -18,9 +18,9 @@ Creating a `UserControl` involves the following steps:
 
 3. **Reuse and Customization**: `UserControl`s can be easily reused and customized within an application. They are especially useful when you want to encapsulate a specific set of controls and behaviors into a reusable component or "view".
 
-:::info 
-For a complete, runnable example of these concepts in action, check out [the sample application](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl).
-:::
+
+<GitHubSampleLink title="Custom Control" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl"/>
+
 
 ## Templated (Lookless) Controls
 
