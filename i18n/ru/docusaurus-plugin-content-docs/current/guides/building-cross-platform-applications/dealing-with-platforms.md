@@ -1,83 +1,130 @@
 ---
 id: dealing-with-platforms
-title: Dealing with Multiple Platforms
+title: Работа с несколькими платформами
 ---
 
 ## Managing Platform Differences & Capabilities
 
-Platform differences aren't just an issue in cross-platform development; even devices within the same platform can possess diverse capabilities.
+Различия между платформами, являются проблемой не только для кроссплатформенной разработки;
+даже в рамках одной платформы могут существовать различия.
 
-Most notably, this includes differences in screen size, but numerous other device characteristics may also vary, requiring the application to verify certain capabilities and adapt its behavior based on their presence (or absence). This is espically important when designing for cross paradigm situations, with desktop and mobile operating systems providing very different interaction models.  
+В первую очередь, можно выделить разнообразие размеров экрана, но также не стоит забывать об иных многочисленных характеристик устройств,
+требующих обработки в приложении, в зависимости от их наличия или отсутствия.
+Это особенно важно при проектировании для устройств с разными парадигмами.
+К примеру, настольные и мобильные операционные системы, предоставляют абсолютно разные модели взаимодействия.
 
-Therefore, all applications must be equipped to handle a graceful scaling back of functionality, or risk presenting a minimal feature set that does not leverage the full potential of the underlying platform. 
+Следовательно, все приложения должны иметь возможность плавного изменения функциональности,
+иначе существует риск появления в общей части функциональности, которая не используется для конкретной платформы.
 
-### Examples of Platform Divergence
+### Примеры различия платформ
 
-There are certain fundamental characteristics inherent to applications that are universally applicable. These are high-level concepts that hold true across all devices and platforms and can thus form the core of your application's design:
+Существует ряд фундаментальных характеристик, которые являются универсальными,
+от чего могут использоваться в вашем приложении на любой платформе.
+Таким образом, общими частями можно считать:
 
-* A screen, which can display your application UI.
-* Some form of input devices, typically touch for mobile and mouse and keyboard for desktop. 
-* Display views of data.
-* Editing data.
-* Navigation capabilities. 
+* Экран для отображения пользовательского интерфейса.
+* Некоторые виды устройств ввода. К примеру, сенсоры для смартфонов, а мышь и клавиатура для компьютеров.
+* Отображение данных во `views`.
+* Изменение данных.
+* Возможность навигации.
 
-### Platform-specific features
+### Платформозависимые особенности
 
-Beyond the universal application characteristics, you will also have to address key platform differences in your design. You may need to consider, and possibly write or tweak code specifically to handle, these differences:
+Помимо универсальных характеристик, вам также надо учитывать ключевые различия между платформами.
+Вам потребуется проанализировать такие ситуации и написать код специально для их обработки:
 
-* **Screen Sizes**: While some platforms (like iOS) have standardized screen sizes that are relatively easy to target, others, like Desktop and WebAssembly, enable an unlimited variety of screen dimensions which would require more effort to support in your application.
+* **Размеры экрана**: В то время как некоторые платформы (к примеру iOS) имеют стандартизированные размеры экраны,
+  что позволяет относительно легко сверстать пользовательский интерфейс,
+  другие платформы (к примеру Desktop или WebAssembly) имеют самые разнообразные размеры экрана,
+  что затрудняет верстку пользовательского интерфейса.
 
-* **Navigation Metaphors**: These can vary across platforms (e.g., hardware 'back' button) and even within platforms (e.g., differences between Android 2 and 4, iPhone vs iPad).
+* **Навигационные метафоры**: Они могут сильно отличаться как между разными платформами (к примеру, аппаратная кнопка '
+  back(рус: назад)'),
+  так и в рамках одной платформы (к примеру, различия между Android 2 и 4, iPhone и iPad).
 
-* **Keyboards**: Some devices may come with physical keyboards, while others only feature a software keyboard. Code that detects when a soft-keyboard is obscuring part of the screen needs to be sensitive to these differences.
+* **Клавиатура**: Некоторые устройства имеют отдельную физическую клавиатура, в то время как другие используют
+  виртуальную.
+  Такие нюансы вы должны отслеживать в коде, поскольку виртуальная клавиатура, при появлении, закрывает часть экрана.
 
-These platform-specific differences should be carefully considered when designing your Avalonia application to ensure a seamless user experience across all platforms. While you should strive to maximise your code reuse, you should also avoid attempting to reuse 100% of your code across all supported platforms. Instead, talyor each platform UIs to the feel at home on the device. 
+Указанные ранее различия, стоит учитывать при разработке вашего приложения для различных платформ на Avalonia.
+Пусть вы и должны стремиться к максимальному переиспользованию вашего кода,
+вам также следует избегать и полного использования одно и того же кода для всех платформ.
+Вместо этого, для каждой платформы настройте UI так, чтобы им было удобно пользоваться.
 
 ### Dealing with Platform Divergence
 
-Supporting multiple platforms from the same code-base can be achieved through abstracting platform features. 
+Поддержки нескольких платформ из общей кодовой базы, можно добиться через абстрагирования особенностей платформ.
 
-* **Platform Abstraction**: This approach leverages the Business Façade pattern to provide uniform access across platforms. It abstracts the unique platform implementations into a single, cohesive API. The primary advantage is the ability to write platform-agnostic code, enhancing code reusability and maintainability. However, this approach may not fully exploit the unique features and capabilities of each platform.
+* **Абстракция платформы**: Данный подход использует паттерн "Фасад", который обеспечивает одинаковый доступ на разных платформах.
+Он абстрагирует конкретные реализации под каждую платформу в общий API.
+Основным преимуществом такого подхода, является возможность написания кода, не зависящего от платформы,
+что повышает возможность повторного использования кода, а также его сопровождения.
+Однако такой подход не позволяет в полной мере использовать специфичный функционал каждой платформы.
 
 <!--
 :::tip
-[Avalonia.Essentials](https://github.com/AvaloniaUI/Avalonia.Essentials) provides pre-built abstractions for common mobile features. Including: 
+[Avalonia.Essentials](https://github.com/AvaloniaUI/Avalonia.Essentials) 
+предоставляет готовые абстракции для распространенных функций смартфонов, включая: 
 
-* Accelerometer
-* Barometer
-* Battery
-* Camera
+* Акселерометр
+* Барометр
+* Батарея
+* Камера
 * Connectivity
-* Flashlight
-* Geolocation
-* Gyroscope
-* Orientation
+* Фонарик
+* Геолокация
+* Гироскоп
+* Ориентация
 :::
 -->
 
-## Platform Abstraction
+## Абстракции для платформ
 
-In Avalonia, you can employ class abstractions to streamline your development process across different platforms. This can be achieved using interfaces or base classes defined in the shared code, then implemented or extended in platform-specific projects.
+В Avalonia, вы можете использовать абстракции классов для оптимизации разработки под разные платформы.
+Этого можно добиться с помощью интерфейсов или базовых классов, определенных в общем коде,
+а уже под конкретную платформу, добавлять реализацию или расширение соответственно.
 
-### Interfaces
+### Интерфейсы
 
-The utilization of interfaces empowers you to create platform-specific classes that can be incorporated into your shared libraries for code reuse.
+Благодаря интерфейсам, вы можете создавать платформозависимые классы для использования их в общий библиотеках.
 
-#### How it works
-The interface is defined within the shared code and passed into the shared library as a parameter or property. The platform-specific applications can then implement the interface, allowing shared code to process it effectively.
+#### Как это работает
 
-#### Advantages
-The main advantage of this approach is that the implementation can contain platform-specific code and even reference platform-specific external libraries, offering high flexibility.
+Интерфейсы определяются в общем коде, а после передаются как параметр или свойство.
+Для Платформозависимых приложений, можно создавать реализации интерфейсов, что позволяет эффективнее использовать общую
+кодовую базу.
 
-####  Disadvantages
-A potential disadvantage is the need to create and pass implementations into the shared code. If the interface is employed deep within the shared code, it may have to be passed through multiple method parameters, which might lead to a more complex call chain. If the shared code uses numerous different interfaces, they all must be created and set within the shared code.
+#### Преимущества
 
-### Inheritance
-Your shared code can implement abstract or virtual classes that could be extended in one or more platform-specific projects. This technique resembles the use of interfaces but provides some already implemented behaviors.
+Основным преимуществом такого подхода, является возможность использовать платформозависимые и код, и внешние библиотеки,
+в реализации для каждой платформы,
 
-#### How it works
-By using inheritance, you can create base classes in your shared code that can be optionally extended in your platform-specific projects. However, as C# allows only single inheritance, this approach may influence your future API design. Hence, use inheritance with caution.
+#### Недостатки
 
-#### Advantages and Disadvantages
-The advantages and disadvantages of using interfaces apply equally to inheritance. However, an additional advantage of inheritance is that the base class can contain some implementation code. This potentially could provide an entire platform-agnostic implementation that can be optionally extended as needed.
+Потенциальным недостатком является необходимость создания и передачи реализации в общий код.
+Если интерфейс используется в глубинах общего кода, то это может привести к необходимости передачи его через несколько
+методов,
+что приводит усложнению цепочки вызова.
+Если общий код использует множество различных интерфейсов, то все они должны быть созданы и установлены в рамках общего
+кода.
 
+### Наследование
+
+Ваш общий код, может содержать абстракции и виртуальные классы, которые можно дополнить в платформозависимых проектах.
+Данный метод напоминает интерфейсы, но в то же время позволяет задавать готовые реализации.
+
+#### Как это работает
+
+Вы можете создавать базовые классы в общем коде, которые могут быть дополнены в проектах под конкретную платформу через
+наследование.
+Однако C# допускает наследование только от одного класса, из-за чего этот подход может повлиять на будущий дизайн вашего
+API.
+Поэтому вам следует использовать наследование с осторожностью.
+
+#### Преимущества и недостатки
+
+Преимущества и недостатки при использовании интерфейсов, в равной степени применимы и к наследованию.
+В то же время, дополнительным преимуществом наследования, является базовый класс, который может содержать некоторую
+реализацию в коде.
+В теории, это может обеспечить независимость от платформозависимых реализаций, которые можно расширять по мере
+необходимости.

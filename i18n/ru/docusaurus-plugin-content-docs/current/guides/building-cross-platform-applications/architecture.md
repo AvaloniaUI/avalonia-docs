@@ -1,69 +1,103 @@
 ---
 id: architecture
-title: Architecture
+title: Архитектура
 ---
 
-A crucial aspect of building cross-platform applications with Avalonia is creating an architecture that enables maximum code sharing across different platforms. By adhering to the fundamental principles of Object-Oriented Programming, you can establish a well-structured application:
+Важнейшим аспектов при создании кроссплатформенного приложения на Avalonia,
+является создание архитектуры, которая обеспечивает максимально возможное количество общего кода между платформами.
+Для создания хорошо структурированного приложения, советуем придерживаться фундаментальных принципов ООП:
 
-1. **Encapsulation** – This involves ensuring that classes and architectural layers only expose a minimal API that performs their necessary functions while concealing the internal implementation details. In practical terms, this means that objects operate as 'black boxes', and the code utilizing them doesn't need to comprehend their internal workings. Architecturally, it implies implementing patterns like the Façade that promote a simplified API orchestrating more complex interactions on behalf of the code in higher abstract layers. Hence, the UI code should focus solely on displaying screens and accepting user input, never directly interacting with databases or other lower-level operations.
-2. **Separation of Responsibilities** – Every component, whether at the architectural or class level, should have a clear and defined purpose. Each component should perform its specified tasks and expose that functionality via an API accessible to other classes needing to use it.
-3. **Polymorphism** – Programming to an interface (or an abstract class) supporting multiple implementations allows core code to be written and shared across platforms while still interacting with platform-specific features offered by Avalonia.
+1. **Инкапсуляция** – Необходимо обеспечивать минимальный API для взаимодействия с классами и слоями архитектуры, скрывая детали реализации.
+На практике это означает, что объекты представлены "черными ящиками", и коду не нужно понимать, как их внутреннее устройство.
+Архитектурно, это означает реализацию паттернов на подобие `Façade (рус: Фасад)`, которые способствуют упрощению API
+на более высоких слоях абстракций.
+Следовательно, код UI должен отвечать исключительно за отображение экранов и обработку пользовательского ввода,
+никогда напрямую не взаимодействуя с базами данных или другими операциями более низкого уровня.
+2. **Разделение ответственности** – Каждый компонент архитектуры или класса, должен иметь четкое назначение,
+выполнять только свои определенные задачи, а также предоставлять доступ к этой функциональности
+для других классов через API.
+3. **Полиморфизм** – Использование интерфейсов или абстрактных классов,
+позволяет писать реализации с учетом предлагаемых Avalonia специфичных функций конкретных платформ,
+которые потом взаимодействуют с основным кодом.
 
-The result of these principles is an application modelled after real-world or abstract entities with distinct logical layers. 
+Результатом применения этих принципов, является приложение, основанное на реальных или абстрактных сущностях с различными логическими слоями.
 
-Separating code into layers makes the application easier to understand, test, and maintain. It's advisable to keep the code in each layer physically separate (either in different directories or even separate projects for larger applications) as well as logically separate (using namespaces). With Avalonia, you can share not just the business logic, but the UI code too across platforms, reducing the need for multiple UI projects and further enhancing code reuse.
+Разделение кода на слои, упрощает понимание, тестирование и поддержку приложения.
+Рекомендуется как хранить код для каждого из уровней раздельно (разные каталоги или отдельные проекты), так и логически, используя пространства имен.
+Avalonia позволяет совместно использовать не только бизнес-логику, но и код UI для разных платформ, что уменьшает необходимость
+в нескольких проектах пользовательского интерфейса и еще больше расширяет возможности повторного использования кода.
 
-## Typical Application Layers
+## Типичные слои приложения
 
-In this document and the relevant case studies, we reference the following five application layers:
+В данном документе и тематических исследованиях, мы ссылаемся на следующие шесть слоев приложения:
 
-1. **Data Layer** – This is where non-volatile data persistence occurs, likely through a database like SQLite or LiteDB, but could be implemented with XML files or other suitable mechanisms.
-2. **Data Access Layer** – This layer is a wrapper around the Data Layer providing Create, Read, Update, Delete (CRUD) operations on the data without revealing implementation details to the caller. For instance, the DAL might contain SQL queries to interact with the data, but the code referencing it doesn't need to be aware of this.
-3. **Business Layer** – Sometimes referred to as the Business Logic Layer or BLL, this layer houses business entity definitions (the Model) and business logic. It is a prime candidate for the Business Facade pattern.
-4. **Service Access Layer** – This layer is used to access services in the cloud, ranging from complex web services (REST, JSON) to simple retrieval of data and images from remote servers. It encapsulates networking behaviour and provides a streamlined API for consumption by the Application and UI layers.
-5. **Application Layer** – This layer contains code that is generally platform-specific or code that is specific to the application (not typically reusable). In the Avalonia framework, this layer is where you decide which platform-specific features to leverage if any. The distinction between this layer and the UI layer becomes clearer with Avalonia since the UI code can be shared across platforms.
-6. **User Interface (UI) Layer** – This user-facing layer contains views and the view-models that manage them. Avalonia makes it possible for this layer shared across every supported platform, unlike traditional architectures where the UI layer would be platform-specific.
+1. **Слой данных** – здесь происходит сохранение данных, вероятно, с помощью базы данных, таких как `SQLite` или `LiteDB`,
+но может быть реализовано и с помощью других механизмов, к примеру XML-файлов.
+2. **Слой доступа к данным** – Данный слой является оберткой над слоем данных, и обеспечивает доступ к операциям 
+`Create (рус: Создание)`, `Read (рус: Чтение)`, `Update (рус: Обновление)` и `Delete (рус: Удаление)` (CRUD), 
+без деталей реализации для вызывающей стороны. Например, этот слой может содержать SQL-запросы для базы данных, 
+но коду, обращающемуся к нему, это знать необязательно.
+3. **Слой бизнес-логики** – Данный слой содержит определения бизнес-сущностей (`Model`) и бизнес-логику.
+Это основной кандидат для паттерна `Facade (рус: Фасад)`.
+4. **Слой доступа к сервисам** – Данный слой используется для доступа к сетевым сервисам, начиная от сложных веб-сервисов (REST, GraphQL)
+и заканчивая простым извлечением данных и ресурсов с удаленных серверов.
+Он инкапсулирует сетевое поведения и предоставляет упрощенное API для работы на слоях приложения и UI.
+5. **Слой приложения** – Данный слой, обычно используется для платформозависимого или специфичного кода (обычно не используется повторно).
+Различие между данным слоем и слоем UI, становится более наглядным в Avalonia, поскольку код UI может быть общим для разных платформ.
+6. **Слой пользовательского интерфейса (UI)** – Данный слой содержит `views`, и управляющие ими `view-models`.
+В отличии от традиционной архитектуры, где слой UI зависит от платформы,
+Avalonia позволяет совместно использовать данный слой на каждой поддерживаемой платформе.
 
-An application might not contain all layers – for instance, the Service Access Layer would not be present in an application that doesn't access network resources. A simpler application might merge the Data Layer and Data Access Layer because the operations are extremely basic. With Avalonia, you have the flexibility to shape your application architecture to suit your specific needs, enjoying a high degree of code reusability across platforms.
+Приложение может не содержать некоторые из слоев. Например, уровень доступа к сервисам может не присутствовать в приложении,
+которое не работает с сетевыми ресурсами.
+В более простых приложениях, можно объединить слой данных со слоем доступа данных, поскольку эти операции довольно просты.
+Avalonia поддерживает возможность гибкого формирования архитектуры приложения, в соответствии с вашими потребностями,
+что обеспечивает высокую степень повторного использования кода на разных платформах.
 
-## Common Architectual Patterns
+## Общие архитектурные паттерны
 
-Patterns are a well-established approach to capture recurring solutions to common problems. There are several key patterns that are valuable to comprehend when building maintainable and understandable applications with Avalonia.
+Паттерны - это хорошо зарекомендовавший себя подход, для стандартизации решения распространенных проблем.
+Есть несколько ключевых паттернов, которые стоит использовать при создании приложений на Avalonia.
 
 ### Model, View, ViewModel (MVVM) 
-A popular and often misunderstood pattern, MVVM is primarily employed when constructing User Interfaces and promotes a separation between the actual definition of a UI Screen (View), the logic behind it (ViewModel), and the data that populates it (Model). The ViewModel acts as an intermediary between the View and the Model. The Model, although crucial, is a distinct and optional piece, and thus, the essence of understanding this pattern resides in the relationship between the View and ViewModel.
+MVVM - это популярный, но в то же время часто неправильно используемый шаблон.
+В основном, он используется при построении пользовательских интерфейсов и способствует разделению между фактическим определением экрана UI (View),
+стоящей за ней логику (`ViewModel`) и заполняющих его данных (`Model`).
+В нем, `ViewModel` выступает посредником между `View` и `Model`.
+И пусть `Model` важна, но она является независимой, опциональной частью.
+Поэтому суть паттерна сводится ко взаимосвязи между `View` и `ViewModel`.
 
 :::info
-[Learn more about MVVM](../../concepts/the-mvvm-pattern/).
+Подробнее о паттерне MVVM, см. [здесь](../../concepts/the-mvvm-pattern/).
 :::
 
-### Business Façade
-Also known as the Manager Pattern, this provides a simplified point of entry for intricate operations. For instance, in a Task Tracking application, you might have a TaskManager class with methods such as GetAllTasks(), GetTask(taskID), SaveTask (task), etc. The TaskManager class provides a Façade to the inner mechanisms of saving/retrieving tasks objects.
+### Business Façade (рус: Фасад)
+Данный паттерн обеспечивает упрощенную точку входа для сложных операций.
+Например, в приложении отслеживаются задачи через класс TaskManager с методами GetAllTasks(), GetTask(TaskId),
+SaveTask(task) и т.д.
+Данный класс обеспечивает `Faсade` для внутренних механизмов объектов `tasks`.
 
-### Singleton 
-The Singleton pattern ensures that only a single instance of a particular object can ever exist. For example, when using SQLite in applications, you typically want only one instance of the database. The Singleton pattern is an efficient method to enforce this.
+### Singleton (рус: Одиночка)
+Паттерн `Singleton` гарантирует, что может существовать только один единственный экземпляр указанного объекта.
+Например, при использовании в приложениях `SQLite`, обычно требуется только один экземпляр базы данных.
 
-### Provider
-A pattern originally coined by Microsoft to promote code re-use across Silverlight, WPF and WinForms applications. Shared code can be written against an interface or abstract class, and platform-specific concrete implementations are written and passed in when the code is utilised. In Avalonia, since we can share both UI and application logic, this pattern can help handle platform-specific exceptions or leverage platform-specific features.
+### Provider (рус: Поставщик)
+Паттерн впервые придумал Microsoft для решения проблемы повторного использования кода между приложениями на `Silverlight`, `WPF` и `WinForms`.
+Общий код описывается с помощью интерфейсов или абстрактных классов, а уже конкретные реализации пишутся под конкретную платформу,
+и потом передаются при использовании кода.
+Поскольку в Avalonia мы можем и UI, и логику в общем коде приложений, то данный паттерн может помочь в обработке исключений
+на разных платформах, а также использовать платформозависимые функции.
 
-### Async
-Not to be confused with the `Async` keyword, the Async pattern is used when long-running tasks need to be executed without holding up the UI or current processing. In its simplest form, the Async pattern describes that long-running tasks should be kicked off in another thread (or a similar thread abstraction such as a Task) while the current thread continues to process and listens for a response from the background process, updating the UI when data and/or state is returned. This is essential in maintaining a responsive UI in Avalonia applications.
+### Async (рус: Асинхронность)
+Не следует путать шаблон `Async` с одноименным ключевым словом.
+Шаблон используется, когда необходимо выполнять длительные задачи без зависания UI или текущей обработки.
+В простой форме, паттерн `Async` указывает, что длительные задачи должны запускаться в другом потоке (или аналогичной абстракции, к примеру `Task`),
+в то время как текущий поток продолжает обработку и ожидает ответа от фонового процесса.
+Обновление UI происходит при возврате данных или состояния.
+Это важно для поддержания отзывчивого UI в приложениях Avalonia.
 
 ---
-Each of the aforementioned patterns will be explored in-depth as their practical application is demonstrated in our case studies. For a more comprehensive understanding of the [Facade](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), and [Provider](https://en.wikipedia.org/wiki/Provider_model) patterns, as well as [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) in general, you may want to delve into resources available on platforms like Wikipedia.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Каждый из упомянутых выше паттернов, будет подробно изучен в рамках демонстрации наших тематических исследований.
+Для подробного понимания паттерном, рекомендуем ознакомиться со статьями [Facade (рус: Фасад)](https://en.wikipedia.org/wiki/Facade_pattern), 
+[Singleton (рус: Одиночка)](https://en.wikipedia.org/wiki/Singleton_pattern) и [Provider (рус: Поставщик)](https://en.wikipedia.org/wiki/Provider_model), 
+а также с [Design Patterns (рус: Паттернами проектирования)](https://en.wikipedia.org/wiki/Design_Patterns) в целом.
