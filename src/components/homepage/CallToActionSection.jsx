@@ -5,7 +5,7 @@ const Cta = () => {
     <>
       <section className="py-10 lg:py-[20px] mx-auto max-w-7xl">
         <div className="container mx-auto">
-          <div className="relative z-10 overflow-hidden rounded-3xl bg-primary py-12 px-8 md:p-[70px] ">
+          <div className="relative z-10 overflow-hidden rounded-3xl bg-gradient-to-r from-purple-500 to-purple-700 py-12 px-8 md:p-[70px] ">
             <div className="flex flex-wrap items-center -mx-4">
               <div className="w-full px-4 lg:w-1/2">
                 <span className="block mb-4 text-base font-medium text-white">

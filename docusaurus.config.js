@@ -4,11 +4,12 @@
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
-
+const fs = require('fs');
+const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Avalonia UI',
+  title: 'Avalonia Docs',
   tagline: 'Developer Documentation Portal',
   url: 'https://docs.avaloniaui.net',
   baseUrl: '/',
@@ -135,14 +136,7 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/social-card.png',
-      announcementBar: {
-        id: 'support_us',
-        content:
-          '⭐️ If you like Avalonia, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/avaloniaui/avalonia">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/AvaloniaUI">Twitter</a>',
-        backgroundColor: '#335EEA',
-        textColor: '#ffffff',
-        isCloseable: false,
-      },
+     
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -174,28 +168,36 @@ const config = {
         },
         items: [
           {
+            label: 'API Reference',
+            to: 'https://reference.avaloniaui.net/api/',
+          },
+          {
+              label: 'Resources',
+              type: 'dropdown',
+              className: 'avalonia-dropdown resources-dropdown',
+              items: [
+                {
+                  type: 'html',
+                  value: resourcesHTML,
+                  className: 'avalonia-dropdown',
+                },
+              ],
+          },
+          {
+            label: 'Support',
+            to: 'https://avaloniaui.net/support',
+          },
+          {
             type: 'docsVersionDropdown',
-            position: 'left',
+            position: 'right',
           },
           {
             type: 'localeDropdown',
-            position: 'left',
+            position: 'right',
           },
           {
             type: 'search',
             position: 'right',
-          },
-          {
-            href: 'https://github.com/avaloniaui/avalonia',
-            position: 'right',
-            className: 'navbar-social-link navbar-github-logo',
-            'aria-label': 'GitHub repository',
-          },
-          {
-            href: 'https://twitter.com/AvaloniaUI',
-            position: 'right',
-            className: 'navbar-social-link navbar-twitter-logo',
-            'aria-label': 'Twitter account',
           },
         ],
       },

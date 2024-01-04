@@ -17,9 +17,21 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} Docs`}
+      title={`${siteConfig.title}`}
       description="Learn to build with Avalonia"
       noFooter>
+
+      <div>
+        <div className="w-full bg-gradient-to-r from-purple-500 to-purple-700 p-4 text-center font-medium text-white">
+          Support the future of Avalonia by {' '}
+          <Link
+            to="https://github.com/sponsors/AvaloniaUI"
+            className="text-white underline hover:text-white"
+          >
+            sponsoring.
+          </Link>
+        </div>
+      </div>
       <HeroSection/>
       <GuidesAndSamplesSection/>
       

@@ -27,8 +27,7 @@ export default function CommunitySection() {
           Join the <span className="text-primary-100">community</span>
         </h2>
         <p className="mb-10 text-zinc-500">
-          Engage with our ever-growing community to get the latest updates,
-          product support, and more.
+          Join us and be welcomed into our supportive and vibrant community.
         </p>
         <div className="mx-auto mb-16 flex flex-wrap -space-x-1.5">
           {githubUsernames.map((username) => (
