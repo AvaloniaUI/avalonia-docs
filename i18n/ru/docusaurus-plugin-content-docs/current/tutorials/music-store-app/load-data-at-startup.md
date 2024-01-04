@@ -4,17 +4,18 @@ description: TUTORIALS - Music Store App
 
 import MusicStoreLoadedDataStartScreenshot from '/img/tutorials/music-store-app/load-data-at-startup/image-20210310184202271.png';
 
-# Load Data at Start-up
+# Загрузка данных при запуске
 
-On this page you will add code to load the user's album collection from disk when the app starts.
+На этой страницу вы добавите код для загрузки с диска альбомов пользователя при запуске приложения.
 
-You have already added code to the business service that can load both the files you will need from disk. All that remains for you to do, is to add some code to the main window view model to handle the start-up.
+Ранее, вы уже добавили код в сервис, который может загрузить нужные файлы с диска.
+Все что осталось сделать - это добавить немного кода во `view model` основного окна для обработки запуска.
 
-Follow this procedure to add a method to load the user's album collection from disk:
+Для добавления метода загрузки с диска коллекции альбомов пользователя, выполните следующие действия:
 
-- Stop the app if it is running
-- Locate and open the **MainWindowViewModel.cs** file.
-- Add the code as shown:
+- Остановите приложение, если оно запущено.
+- Найдите и откройте файл **MainWindowViewModel.cs**.
+- Добавьте код, как показано ниже:
 
 ```csharp
 private async void LoadAlbums()
@@ -33,22 +34,27 @@ private async void LoadAlbums()
 }
 ```
 
-As you can see this method uses the business service to load the list of albums from the disk cache. It then transforms each data model (`Album` class) into a view model (`AlbumViewModel` class). After this all the album view models are added to the observable collection - this will instantly update the UI with the text data for the albums.
+Как вы можете заметить, метод использует сервис для загрузки списка альбомов из кэша диска.
+Далее, мы преобразовываем каждую `data model` (класс `Album`) во `view model` (класс `AlbumViewModel`).
+После этого, все `view models` альбомов добавлены в `observable` коллекцию, что позволяет моментально обновлять UI
+данными из альбомов.
 
-You will notice that after the JSON album files are loaded, the second loop loads the cover art image files. This provides your user with visual feedback as quickly as possible (in the form of album tiles with text and the placeholder music note icon) about what albums are in the collection. The cover art is then loaded asynchronously. This ensures that the app remains responsive during the image loading process.
+Обратите внимание, что после загрузки альбомов из JSON-файла, вторым циклом идет загрузка обложек альбомов.
+Это позволяет пользователю сразу увидеть, какие альбомы есть в коллекции (в виде плиток и значком по-умолчанию вместо иконки).
+После происходит **асинхронная** загрузка обложек, что гарантирует отзывчивость приложения.
 
-You next step is to schedule the `LoadAlbum` method to run when the app starts.
+Теперь осталось добавить включение метода `LoadAlbum` при запуске приложения.
 
-To schedule the method on the main thread, follow this procedure:
+Для запуска метода в основном потоке, выполните следующие действия:
 
-- Keep the **MainWindowViewModel.cs** file open.
-- Add a reference to `using System.Reactive.Concurrency;`
-- Add this code to the class constructor:
+- Оставьте открытым файл **MainWindowViewModel.cs**.
+- Добавьте зависимость `using System.Reactive.Concurrency;`
+- Добавьте код в конструктор класса:
 
 ```csharp
 RxApp.MainThreadScheduler.Schedule(LoadAlbums);
 ```
 
-- Click **Debug** to compile and run the project.
+- Нажмите  **Debug** для сборки и запуска проекта.
 
 <p><img className="image-medium-zoom" src={MusicStoreLoadedDataStartScreenshot} alt="" /></p>
