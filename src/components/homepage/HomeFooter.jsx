@@ -96,14 +96,14 @@ const services = [
   function Links({ name, links }) {
     return (
       <div>
-        <h3 className="font-jakarta text-base font-semibold uppercase text-gray-400">
+        <h3 className="font-jakarta text-base font-semibold uppercase text-gray-300">
           {name}
         </h3>
         <div className="flex flex-col gap-3">
           {links.map(({ name, href }) => (
             <Link
               href={href}
-              className="text-base text-gray-700 hover:text-primary hover:no-underline"
+              className="text-base text-gray-400 hover:text-primary-100 hover:no-underline"
             >
               {name}
             </Link>
@@ -116,7 +116,7 @@ const services = [
 
   export default function Footer() {
     return (
-      <footer className="bg-[#F4F7FF]">
+      <footer className="bg-darkblue">
         <div className="mx-auto flex w-full max-w-[1080px] flex-col px-6 py-12">
           <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <img src="/logo/avalonia.svg" alt="Avalonia" className="h-9 w-fit lg:h-12" />
@@ -133,7 +133,7 @@ const services = [
   
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-0">
            
-            <div className="flex flex-wrap gap-2 text-sm text-gray-500">
+            <div className="flex flex-wrap gap-2 text-sm text-gray-200">
               <Link
                 href="https://avaloniaui.net/Privacy"
                 className="text-inherit hover:text-black hover:underline"

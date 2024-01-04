@@ -7,7 +7,7 @@ export default function HelpSection({ className = '' }) {
     <section className="px-4">
       <div
         className={clsx(
-          'mx-auto max-w-7xl rounded-3xl bg-white p-4 py-10 text-black dark:bg-black dark:text-white lg:p-24 lg:py-20',
+          'mx-auto max-w-7xl rounded-3xl bg-white p-4 py-10 text-black dark:bg-darkblue dark:text-white lg:p-24 lg:py-20',
           className
         )}
       >
@@ -23,7 +23,7 @@ export default function HelpSection({ className = '' }) {
             </p>
             <Link
               href="https://avaloniaui.net/support"
-              className="text-primary-500 dark:text-primary-100"
+              className="text-primary-00 dark:text-primary-100"
             >
               Explore Subscriptions &rarr;
             </Link>

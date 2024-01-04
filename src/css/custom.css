@@ -112,7 +112,6 @@
   @apply rounded-lg;
 }
 
-
 /* Fonts */
 
 pre,
@@ -210,8 +209,12 @@ html[data-theme='dark'] {
   --ifm-color-primary: #C469EE;
 
   --ifm-footer-background-color: #1c1c1c;
-  --ifm-background-surface-color: #161616;
-  --ifm-background-color: #161616;
+
+  /* Navigation Bar */ 
+  --ifm-background-surface-color: #171B2D;
+
+  /* background */ 
+  --ifm-background-color: #171B2D;
   --ifm-toc-border-color: #2e2e2e;
 
   --ifm-color-content: #e7e7e7;
