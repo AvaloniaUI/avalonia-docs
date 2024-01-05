@@ -9,9 +9,9 @@ import ToDoNewSolutionScreenshot from '/img/gitbook-import/assets/image (3) (1) 
 
 在本页中，您将学习如何为待办事项列表应用创建一个新项目。有两种方式可以选择：
 
-1. **Visual Studio Extension Template**: If you prefer using Visual Studio, follow the instructions below to create your project.
+1. **Visual Studio扩展模板**：如果您喜欢使用Visual Studio，请按照以下说明创建您的项目。
 
-2. **.NET Core CLI Command**: Alternatively, if you prefer command-line tools, you can use the .NET Core CLI command. Here's how:
+2. **.NET Core CLI命令**：或者，如果您喜欢命令行工具，也可以使用.NET Core CLI命令。方法如下：
 
 ## Visual Studio
 

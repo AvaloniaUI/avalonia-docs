@@ -15,13 +15,13 @@ title: 如何创建附加属性
 * 如何在_Avalonia UI_中创建附加属性
 * 如何以MVVM的方式使用它们
 
-首先，我们需要创建我们的附加属性。使用`AvaloniaProperty.RegisterAttached`方法来实现。请注意，按照约定，附加属性的**public static** CLR属性的名称应为_XxxxProperty_。还请注意，按照约定，附加属性的名称（参数）应为_Xxxx_，不包括_Property_。最后，请注意，按照约定，必须提供两个名为_SetXxxx(element,value)_和_GetXxxx(element)_的**public static**方法。
+首先，我们需要创建我们的附加属性。使用`AvaloniaProperty.RegisterAttached`方法来实现。请注意，按照约定，附加属性的**public static** CLR属性的名称应为 _XxxxProperty_。还请注意，按照约定，附加属性的名称（参数）应为 _Xxxx_，不包括 _Property_。最后，请注意，按照约定，必须提供两个名为 _SetXxxx(element,value)_ 和 _GetXxxx(element)_ 的**public static**方法。
 
 这个调用确保属性具有类型、所有者类型和可以使用的类型。
 
 验证方法可以用来清理正在设置的值。可以通过返回更正后的值或返回`AvaloniaProperty.UnsetValue`来丢弃该过程。或者可以执行与托管属性的元素相关的特殊任务。获取器和设置器方法应该只设置值，不要做其他任何操作。实际上，它们通常不会被调用，因为绑定系统会识别约定并直接在存储属性的位置设置属性。
 
-在这个示例文件中，我们创建了两个相互交互的附加属性：一个_Command_属性和一个_CommandParameter_属性，用于在调用命令时使用。
+在这个示例文件中，我们创建了两个相互交互的附加属性：一个 _Command_ 属性和一个 _CommandParameter_ 属性，用于在调用命令时使用。
 
 ```csharp
 /// <summary>
@@ -31,7 +31,7 @@ public class DoubleTappedBehav : AvaloniaObject
 {
     static DoubleTappedBehav()
     {
-        CommandProperty.Changed.Subscribe(x => HandleCommandChanged(x.Sender, x.NewValue.GetValueOrDefault<ICommand>()));
+        CommandProperty.Changed.AddClassHandler<Interactive>(HandleCommandChanged);
     }
 
     /// <summary>
@@ -53,22 +53,18 @@ public class DoubleTappedBehav : AvaloniaObject
     /// <summary>
     /// <see cref="CommandProperty"/>的变化事件处理程序。
     /// </summary>
-    private static void HandleCommandChanged(IAvaloniaObject element, ICommand commandValue)
+    private static void HandleCommandChanged(Interactive interactElem, AvaloniaPropertyChangedEventArgs args)
     {
-        if (element is Interactive interactElem)
+        if (args.NewValue is ICommand commandValue)
         {
-            if (commandValue != null)
-            {
-                // 添加非空值
-                interactElem.AddHandler(InputElement.DoubleTappedEvent, Handler);
-            }
-            else
-            {
-                // 删除先前的值
-                interactElem.RemoveHandler(InputElement.DoubleTappedEvent, Handler);
-            }
+             // 添加非空值
+             interactElem.AddHandler(InputElement.DoubleTappedEvent, Handler);
         }
-
+        else
+        {
+             // 删除之前的值
+             interactElem.RemoveHandler(InputElement.DoubleTappedEvent, Handler);
+        }
         // 本地处理函数
         static void Handler(object s, RoutedEventArgs e)
         {

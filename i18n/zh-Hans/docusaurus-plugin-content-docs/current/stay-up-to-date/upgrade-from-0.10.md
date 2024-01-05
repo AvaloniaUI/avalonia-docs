@@ -73,6 +73,8 @@ Avalonia 不再依赖`System.Reactive`。如果您使用了响应式特性，请
 observable.Subscribe(new AnonymousObserver<string>(() => { /* 当可观察对象发生更改时执行的代码 */ }));
 ```
 
+如果需要订阅属性或事件更改，可以使用 `AddClassHandler` 而不是 observables。
+
 更多信息请参见[#9749](https://github.com/AvaloniaUI/Avalonia/pull/9749)和[#10105](https://github.com/AvaloniaUI/Avalonia/pull/10105)。
 
 ## 更新接口
@@ -286,7 +288,7 @@ var focusManager = TopLevel.GetTopLevel(control).FocusManager;
 目前没有监听 `IFocusManager` 的焦点更改的事件。要监听焦点更改，请添加一个监听器到 `InputElement.GotFocusEvent`：
 
 ```csharp
-InputElement.GotFocusEvent.Raised.Subscribe(new AnonymousObserver<(object, RoutedEventArgs)>(x => { }));
+InputElement.GotFocusEvent.AddClassHandler<InputElement>((element, args) => { });
 ```
 
 键盘设备也是如此，不再可访问。请使用与焦点相关的相同 API 进行替换。
