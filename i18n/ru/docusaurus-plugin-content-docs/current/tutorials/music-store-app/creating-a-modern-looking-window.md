@@ -103,5 +103,5 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 
 <p><img className="image-medium-zoom" src={MusicStoreFullAcrylicWindowScreenshot} alt="" /></p>
 
-Теперь эффект акрилового размытия распостряняется и на строку заголовка.
+Теперь эффект акрилового размытия распространяется и на строку заголовка.
 На следующей странице вы узнаете, как добавить и расположить `control` в окне.
