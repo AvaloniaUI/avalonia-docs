@@ -3,6 +3,7 @@ description: REFERENCE - Built-in Controls
 ---
 
 import SliderScreenshot from '/img/gitbook-import/assets/slider.gif';
+import SliderMaxValueScreenshot from '/img/gitbook-import/assets/slider_max_value.gif';
 
 # Slider
 
@@ -37,6 +38,45 @@ Here the maximum and minimum values are default (0 and 100 respectively).
 The slider looks like this on Windows:
 
 <img src={SliderScreenshot} alt="" />
+
+## Binding to TextBox
+In this example, the slider value is bound to the text box above using binding to the control.
+
+```xml
+<StackPanel>
+  <TextBlock Text="Damage: " />
+  <TextBox Text="{Binding Damage}" />
+  <TextBlock Text="MaxDamage: " />
+  <TextBox Text="{Binding MaxDamage}" />
+  <Slider Maximum="{Binding MaxDamage}" Value="{Binding Damage}" />
+  <Button Command="{Binding UnlimitedDamage}" Content="∞" />
+</StackPanel>
+```
+```cs
+using System.Windows.Input;
+using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
+
+namespace AvaloniaControls.ViewModels;
+
+public class MainViewModel : ViewModelBase
+{
+    [Reactive]
+    public int Damage { get; set; }
+    [Reactive]
+    public int MaxDamage { get; set; }
+    public ICommand UnlimitedDamage { get; }
+    public MainViewModel()
+    {
+        MaxDamage = 9999;
+        UnlimitedDamage = ReactiveCommand.Create(
+            () => Damage = MaxDamage = 0xFFFF);
+    }
+}
+```
+Values ​​are updated in both View and ViewModel.:
+
+<img src={SliderMaxValueScreenshot} alt="" />
 
 ## More Information
 
