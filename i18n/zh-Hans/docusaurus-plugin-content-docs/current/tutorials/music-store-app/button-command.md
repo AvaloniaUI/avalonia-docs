@@ -20,7 +20,7 @@ description: TUTORIALS - Music Store App
 using ReactiveUI;
 using System.Windows.Input;
 
-namespace AvaloniaApplication11.ViewModels
+namespace Avalonia.MusicStore.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {

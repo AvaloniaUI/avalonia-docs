@@ -29,12 +29,9 @@ Avalonia 通过以下几个关键方面与其他 UI 框架（如 WPF 和 Xamarin
 
 ## 我可以使用什么版本的.NET？
 
-* .NET Framework 
-* .NET Core
-* .NET 5
-* .NET 6
-* .NET 7
-* .NET 8 (previews)
+* .NET Framework 4.6.2+
+* .NET Core 2.0+
+* .NET 5+ (包括最新的 .NET 8)
 
 ---
 
@@ -78,7 +75,7 @@ Avalonia的强大样式系统受到WPF和CSS的启发，使您能够打造美丽
 
 ## Avalonia能与原生API进行交互吗？
 
-可以的。请参阅我们的 [指南](guides/building-cross-platform-applications/dealing-with-platforms#platform-abstraction)，了解如何使用平台特定功能。
+可以的。请参阅我们的 [指南](guides/building-cross-platform-applications/dealing-with-platforms#平台抽象)，了解如何使用平台特定功能。
 
 ---
 
@@ -103,24 +100,69 @@ Avalonia的强大样式系统受到WPF和CSS的启发，使您能够打造美丽
 
 ---
 
-## 支持哪些Linux发行版？
+## 支持哪些平台？
 
-* Debian 9 (Stretch)+
+:::warning
+您还必须了解您的.NET版本支持哪些平台。
+通常，.NET将停止对较旧的操作系统版本的支持，而Avalonia仍然可以与它们一起使用。因此，您可能需要保持SDK的更新。
+例如，[这个列表](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md)是.NET 8支持的操作系统版本列表。
+:::
+
+## Linux发行版
+
+* Debian 9+
 * Ubuntu 16.04+
 * Fedora 30+
 
+其他发行版可能也能工作。主要的限制在于.NET SDK 的支持和 X11 系统的可用性。
+此外，还支持使用 framebuffer linux 后端。
+具有 Wayland 支持的版本尚处于预览阶段，尚未发布。
+
+WSL 2 发行版也受支持，但必须单独安装 `libice6`、`libsm6` 和 `libfontconfig1` 依赖项。
+
 :::info
-Skia是针对glibc构建的。如果您的发行版使用了其他替代品，您需要在 [SkiaSharp](https://github.com/mono/SkiaSharp) 中构建自己的libSkiaSharp.so。我们仅提供Intel x86-64的预编译二进制文件。ARM/ARM64支持正在计划中。
+Skia 是针对 glibc 2.17 构建的。如果您的发行版使用其他东西，您需要在 SkiaSharp 处构建自己的 libSkiaSharp.so。您还可以访问 [SkiaSharp](https://github.com/mono/SkiaSharp) 主页以获取有关支持的版本的更多信息。
 :::
+
+### 支持哪些 Windows 版本？
+
+* Windows 8.1
+
+Avalonia 也可以在 Windows 7 上运行，但在那里将不提供新的平台特定功能，并且我们不再为此版本提供错误修复。
 
 ## 支持哪些版本的macOS？
 
-* macOS High Sierra 10.13+
+* macOS 10.14+
+
+Avalonia 也可以在 macOS 10.13 上运行，但我们正在迁移到 Metal GPU API 的过程中，该 API 目前默认禁用。计划在其中一个小更新期间启用它。
 
 ## 支持哪些版本的Android？
 
 * Android 5.0+ (API 21)
 
 :::note
-**鸣谢** - 部分文档内容来源于 [Dotnet docs](https://github.com/dotnet/docs/)，使用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可证授权。
+Android 支持需要.NET 7。
 :::
+
+### 支持哪些 iOS 版本？
+
+* iOS 13.0+
+
+:::note
+iOS 支持需要.NET 7。
+:::
+
+### 支持哪些浏览器版本？
+
+任何具有完整 WebAssembly 支持的浏览器在技术上都应该可以工作 - https://caniuse.com/wasm。
+
+为了获得最佳性能和支持，我们建议使用最新版本的 Chrome 或 Safari。
+
+:::note
+浏览器支持需要.NET 7。
+从 11.0.6 开始，我们建议使用.NET 8。
+:::
+
+## 鸣谢
+
+* 本文档的部分内容改编自 [Dotnet docs](https://github.com/dotnet/docs/)，根据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授权。

@@ -129,12 +129,13 @@ Dotted underline under event name or control type indicates that quick navigatio
 
 ## Hotkeys
 
-| Keys Combination | Function                     |
-| ---------------- | ---------------------------- |
-| Alt+S            | Enable Snapshot Styles       |
-| Alt+D            | Disable Snapshot Styles      |
-| CTRL+Shift       | Inspect Control over Pointer |
-| CTRL+Alt+F       | Toggle Popup freeze          |
+| Keys Combination | Function                      |
+| ---------------- | ------------------------------|
+| Alt+S            | Enable Snapshot Styles        |
+| Alt+D            | Disable Snapshot Styles       |
+| CTRL+Shift       | Inspect Control over Pointer  |
+| CTRL+Alt+F       | Toggle Popup freeze           |
+| F8               | Make screenshot of selected item in Logical or Visual Tree|
 
 ## Examples
 

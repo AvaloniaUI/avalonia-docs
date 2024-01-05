@@ -4,8 +4,9 @@ title: 主窗口
 ---
 
 import LayoutZonesDiagram from '/img/gitbook-import/assets/image (25) (2) (1).png';
-import MainWindowScreenshot from '/img/get-started/the-main-window/image (15) (1) (1).png';
-import VsDesignerScreenshot from '/img/get-started/the-main-window/image (22) (1).png';
+import MainWindowScreenshot from '/img/get-started/the-main-window/main-window-screenshot.png';
+import RunningAppWindowScreenshot from '/img/get-started/the-main-window/runningrapp-window-screenshot.png';
+import VsDesignerScreenshot from '/img/get-started/the-main-window/vs-designer-screenshot.png';
 import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) (2).png';
 
 您现在可以开始 Avalonia 项目之旅了。我们将从主应用程序窗口开始。打开 **MainWindow.axaml** 文件。
@@ -20,11 +21,19 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 
 <img className="center" src={LayoutZonesDiagram} alt="" />
 
-在当前应用程序中，窗口的内容区域只包含一个简单的字符串，即您最新的消息；因此显示的就是这个消息。
+在当前应用程序中，窗口的内容区域引用另一个视图：**<views:MainView />**。这是对 **MainView.axaml** 文件的引用，它是一个将显示在窗口的内容区域的用户控件。
+
+## MainView 用户控件
+
+在此用户控件中，您将看到一个 `<TextBlock>...</TextBlock>` XAML 标记。这代表一个文本块控件。文本块的 `Text` 属性绑定到 **MainViewModel** 类的 **Greeting** 属性。这是在视图模型类的构造函数中设置的属性。
+```
+<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+```
+
+您可以更改文件 **MainViewModel.cs** 中的文本，以查看界面上的更改。
 
 <img className="center" src={MainWindowScreenshot} alt="" />
-
-在这个阶段，您没有定义边距、边框或任何内边距，所以消息显示在窗口的左上角。
+<img className="center" src={RunningAppWindowScreenshot} alt="" />
 
 :::info
 有关控件布局区域概念的更多信息，请参阅[这里](../../concepts/layout/layout-zones)。
@@ -33,11 +42,12 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 ## Visual Studio 设计器
 
 如果您使用的是 Visual Studio，则应该看到 XAML 代码和预览窗格。
+切换到 **MainView.axaml** 文件，并单击编辑窗口顶部的 **Split View** 按钮。
 
 <img className="center" src={VsDesignerScreenshot} alt="" />
 
 :::info
-请注意红色感叹号图标（左上角）和消息 **The designer is loading...**。这表示必须将项目构建一次预览窗格才能开始响应。
+可能会有一个红色的感叹号图标（左上角）和消息 **The designer is loading...**。这表示必须将项目构建一次预览窗格才能开始响应。
 :::
 
 - 构建项目。
@@ -45,7 +55,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 
 <img className="center" src={VsPreviewPaneScreenshot} alt="" />
 
-- 在 XAML 代码窗格中找到 `Welcome to Avalonia!` 消息文本，并进行更改。
+- 删除绑定 `{Binding Greeting}` 并更改文本 `<TextBlock Text="my text" ...`
 
 您会看到在输入时预览窗格中的新文本也会更改。这是 Avalonia 的**设计时预览行为**的一个示例，它将帮助您准确快速地开发用户界面呈现。
 
