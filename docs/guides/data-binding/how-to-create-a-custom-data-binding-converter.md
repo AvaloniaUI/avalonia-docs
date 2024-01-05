@@ -144,6 +144,51 @@ public class AnimalConverter : IValueConverter
 }
 ```
 
+## FuncValueConverter and FuncMultiConverter
+
+You can also implement a `FuncValueConverter` if you don't need to convert back and also not the the `ConverterParameter`. The FuncValueConverter has two generic parameters:
+
+* **TIn**: This parameter defines the expected input type. This can also be an array in case you want to use this converter in a MultiBinding.
+
+* **TOut**: This parameter defines the expected output type.
+
+### Example:
+
+```cs
+public static class MyConverters 
+{
+    /// <summary>
+    /// Gets a Converter that takes a number as input and converts it into a text representation
+    /// </summary>
+    public static FuncValueConverter<decimal?, string> MyConverter { get; } = 
+        new FuncValueConverter<decimal?, string> (num => $"Your number is: '{num}'");
+    
+    /// <summary>
+    /// Gets a Converter that takes several numbers as input and converts it into a text representation
+    /// </summary>
+    public static FuncMultiValueConverter<decimal?, string> MyMultiConverter { get; } = 
+        new FuncMultiValueConverter<decimal?, string> (num => $"Your numbers are: '{string.Join(", ", num)}'");
+}
+```
+
+```xml
+<StackPanel>
+    <!-- Input -->
+    <NumericUpDown x:Name="Num1" Value="3" />
+    <NumericUpDown x:Name="Num2" Value="3" />
+    <!-- Output -->
+    <TextBlock Text="{Binding #Num1.Value, Converter={x:Static my:MyConverters.MyConverter}}" />
+    <TextBlock>
+        <TextBlock.Text>
+            <MultiBinding Converter="{x:Static my:MyConverters.MyMultiConverter}">
+                <Binding Path="#Num1.Value" />
+                <Binding Path="#Num2.Value" />
+            </MultiBinding>
+        </TextBlock.Text>
+    </TextBlock>
+</StackPanel>
+```
+
 ## More Information
 
 :::info
