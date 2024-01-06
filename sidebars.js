@@ -365,6 +365,14 @@ const sidebars = {
           'items': [
             {
               'type': 'category',
+              'label': 'Platform-Specific Code',
+              'items': [
+                'guides/platforms/platform-specific-code/dotnet',
+                'guides/platforms/platform-specific-code/xaml',
+              ],
+            },
+            {
+              'type': 'category',
               'label': 'Android',
               'link': {
                 'type': 'doc',

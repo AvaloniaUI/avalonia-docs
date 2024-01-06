@@ -16,3 +16,5 @@ description: REFERENCE
 | `DynamicResource` | 用于资源绑定。动态资源绑定可以在运行时反映代码中所做的更改。     | [概念](../basics/data/data-binding)              |
 | `StaticResource`  | 用于资源绑定。静态资源在加载后在应用程序的生命周期内保持不变。    | [指南](../guides/styles-and-resources/resources) |
 | `TemplateBinding` | 用于创建控件模板并绑定到模板的父级。                 | [指南](../guides/styles-and-resources/resources) |
+| `OnPlatform`  |  | [指南](../guides/platform/platform-specific-code/xaml)   |
+| `OnFormFactor`  |  | [指南](../guides/platform/platform-specific-code/xaml)   |
