@@ -52,6 +52,7 @@ These controls display repeating data, in either a tabular or list format:
 |[Auto Complete Box](../../../reference/controls/autocompletebox.md)|A control that shows a text box for user input and a drop-down that contains possible matches based on what has been typed.|
 |[Text Block](../../../reference/controls/detailed-reference/textblock.md)|A control that displays a block of text. Read-only.|
 |[Text Box](../../../reference/controls/detailed-reference/textbox.md)|Used to display or edit text without formatting restrictions.|
+|[Selectable Text Box](../../../reference/controls/detailed-reference/selectabletextbox.md)|Used to display or edit text without formatting restrictions. Allows selecting and copying.|
 |[Masked Text Box](../../../reference/controls/maskedtextbox.md)|Used to display text in the format contained in a mask; or used to edit text using the format mask to prevent invalid user input.|
 
 ## Value selection
