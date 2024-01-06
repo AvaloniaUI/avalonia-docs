@@ -16,5 +16,5 @@ description: REFERENCE
 | `TemplateBinding` | Используется для создания шаблона элемента для привязки к шаблону родительского элемента.                                     | [Концепт](../basics/data/data-binding) |
 | `StaticResource`  | Статические ресурсы загружаются **только один раз** и не меняются во время выполенния приложения. | [Гайд](../guides/styles-and-resources/resources)   |
 | `DynamicResource` | Динамические ресурсы позволяют отображать изменения в коде во время выполнения приложения.            | [Гайд](../guides/styles-and-resources/resources)   |
-| `OnPlatform`  | Используется для выбора значения в зависимости от платформы. | [Гайд](../guides/platform/platform-specific-code/xaml)   |
-| `OnFormFactor`  | Используется для выбора значения в зависимости от форм-фактора устройства. | [Гайд](../guides/platform/platform-specific-code/xaml)   |
+| `OnPlatform`  | Используется для выбора значения в зависимости от платформы. | [Гайд](../guides/platforms/platform-specific-code/xaml)   |
+| `OnFormFactor`  | Используется для выбора значения в зависимости от форм-фактора устройства. | [Гайд](../guides/platforms/platform-specific-code/xaml)   |
