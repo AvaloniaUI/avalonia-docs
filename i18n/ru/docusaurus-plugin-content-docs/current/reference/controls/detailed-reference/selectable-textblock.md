@@ -4,9 +4,9 @@ description: REFERENCE - Built-in Controls
 
 import TextBlockStylePreviewScreenshot from '/img/gitbook-import/assets/image (2) (5).png';
 
-# Text Block
+# Selectable Text Block
 
-The text block is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.
+The selectable text block is a label for the display of text that allows selecting and copying of text. It can display multiple lines, and features full control over the font used.
 
 ## Useful Properties
 
@@ -14,6 +14,10 @@ You will probably use these properties most often:
 
 | Property        | Description                                                                                                                                                                                                           |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SelectionStart  | a character index for the start of the current selection.                                                                                                                                                             |
+| SelectionEnd    | a character index for the end of the current selection.                                                                                                                                                               |
+| SelectionBrush  | The brush that highlights selected text.                                                                                                                                                                              |
+| SelectionForeground | Brush that is used for the foreground of selected text.                                                                                                                                                           |
 | FontSize        | The size of the font.                                                                                                                                                                                                 |
 | FontWeight      | The weight of the font. Default is normal, options include `Bold`.                                                                                                                                                    |
 | FontStyle       | A style to apply to the lettering. Default is normal, options include `Italic`.                                                                                                                                       |
@@ -25,13 +29,13 @@ You will probably use these properties most often:
 This example shows a text block used as a heading, single line and multi-line displays.
 
 ```xml
-<StackPanel Margin="20">
-  <TextBlock Margin="0 5" FontSize="18" FontWeight="Bold">Heading</TextBlock>
-  <TextBlock Margin="0 5" FontStyle="Italic" xml:space="preserve">This is  a single line.</TextBlock>
-  <TextBlock Margin="0 5" xml:space="preserve">This is a multi-line display
-that has returns in it.
-The text block respects the line breaks
-as set out in XAML.</TextBlock>
+  <StackPanel Margin="20">
+  <SelectableTextBlock Margin="0 5" FontSize="18" FontWeight="Bold" >Heading</SelectableTextBlock>
+  <SelectableTextBlock Margin="0 5" FontStyle="Italic" xml:space="preserve" SelectionBrush="Red">This is a single line.</SelectableTextBlock>
+  <SelectableTextBlock Margin="0 5" xml:space="preserve" SelectionStart="3" SelectionEnd="13">This is a multi-line display
+    that has returns in it.
+    The text block respects the line breaks
+    as set out in XAML.</SelectableTextBlock>
 </StackPanel>
 ```
 
@@ -42,9 +46,9 @@ The styling works in the preview pane:
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TextBlock/).
+For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/SelectableTextBlock/).
 :::
 
 :::info
-View the source code on GitHub [`TextBlock.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBlock.cs)
+View the source code on GitHub [`SelectableTextBlock.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SelectableTextBlock.cs)
 :::

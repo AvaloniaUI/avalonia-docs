@@ -34,7 +34,7 @@ This example shows a text block used as a heading, single line and multi-line di
   <SelectableTextBlock Margin="0 5" FontStyle="Italic" xml:space="preserve" SelectionBrush="Red">This is a single line.</SelectableTextBlock>
   <SelectableTextBlock Margin="0 5" xml:space="preserve" SelectionStart="3" SelectionEnd="13">This is a multi-line display
     that has returns in it.
-    The text block repects the line breaks
+    The text block respects the line breaks
     as set out in XAML.</SelectableTextBlock>
 </StackPanel>
 ```

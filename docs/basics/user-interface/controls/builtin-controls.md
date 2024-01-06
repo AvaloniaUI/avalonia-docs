@@ -1,6 +1,6 @@
 # Built-in Controls
 
-Here are some of the more commonly-used Avalonia controls, organised by category:
+Here are some of the more commonly-used Avalonia controls, organized by category:
 
 ## Layout controls
 
@@ -14,7 +14,7 @@ Here are some of the more commonly-used Avalonia controls, organised by category
 |[Grid Splitter](../../../reference/controls/gridsplitter.md)|Can be added to a grid to allow the user to resize rows or columns at runtime.|
 |[Panel](../../../reference/controls/panel.md)|Stacks child controls on top of one another.|
 |[Relative Panel](../../../reference/controls/relativepanel.md)|Allows multiple child controls. The position and alignment of the child controls can be specified in relation to the panel itself, or in relation to other child controls.  The size of child controls can be specified, or calculated from relations and alignments.|
-|[Scroll Viewer](../../../reference/controls/scrollviewer.md)|Adds scroll bars and scrolling behaviour if the (single) child is larger than the space available.|
+|[Scroll Viewer](../../../reference/controls/scrollviewer.md)|Adds scroll bars and scrolling behavior if the (single) child is larger than the space available.|
 |[Split View](../../../reference/controls/splitview.md)|Adds a collapsible pane to the edge of its (single child) content zone.|
 |[Stack Panel](../../../reference/controls/stackpanel.md)|Allows multiple child controls, arranged in sequence, horizontally or vertically.|
 |[Tab Control](../../../reference/controls/detailed-reference/tabcontrol.md)|The tab control allows you to sub-divide a view into tab items.|
@@ -52,7 +52,7 @@ These controls display repeating data, in either a tabular or list format:
 |[Auto Complete Box](../../../reference/controls/autocompletebox.md)|A control that shows a text box for user input and a drop-down that contains possible matches based on what has been typed.|
 |[Text Block](../../../reference/controls/detailed-reference/textblock.md)|A control that displays a block of text. Read-only.|
 |[Text Box](../../../reference/controls/detailed-reference/textbox.md)|Used to display or edit text without formatting restrictions.|
-|[Selectable Text Box](../../../reference/controls/detailed-reference/selectabletextbox.md)|Used to display or edit text without formatting restrictions. Allows selecting and copying.|
+|[Selectable Text Block](../../../reference/controls/detailed-reference/selectable-textblock.md)|Used to display or edit text without formatting restrictions. Allows selecting and copying.|
 |[Masked Text Box](../../../reference/controls/maskedtextbox.md)|Used to display text in the format contained in a mask; or used to edit text using the format mask to prevent invalid user input.|
 
 ## Value selection

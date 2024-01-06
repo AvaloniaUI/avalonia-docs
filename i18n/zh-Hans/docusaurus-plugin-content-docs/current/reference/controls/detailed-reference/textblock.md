@@ -30,7 +30,7 @@ This example shows a text block used as a heading, single line and multi-line di
   <TextBlock Margin="0 5" FontStyle="Italic" xml:space="preserve">This is  a single line.</TextBlock>
   <TextBlock Margin="0 5" xml:space="preserve">This is a multi-line display
 that has returns in it.
-The text block repects the line breaks
+The text block respects the line breaks
 as set out in XAML.</TextBlock>
 </StackPanel>
 ```
