@@ -1,6 +1,6 @@
 ---
 id: dotnet
-title: Platform-specific .NET
+title: Platform-Specific .NET
 ---
 
 ## Overview 

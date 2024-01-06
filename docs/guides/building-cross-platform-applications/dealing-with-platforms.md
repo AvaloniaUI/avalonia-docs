@@ -7,7 +7,7 @@ title: Dealing with Multiple Platforms
 
 Platform differences aren't just an issue in cross-platform development; even devices within the same platform can possess diverse capabilities.
 
-Most notably, this includes differences in screen size, but numerous other device characteristics may also vary, requiring the application to verify certain capabilities and adapt its behavior based on their presence (or absence). This is espically important when designing for cross paradigm situations, with desktop and mobile operating systems providing very different interaction models.  
+Most notably, this includes differences in screen size, but numerous other device characteristics may also vary, requiring the application to verify certain capabilities and adapt its behavior based on their presence (or absence). This is especially important when designing for cross paradigm situations, with desktop and mobile operating systems providing very different interaction models.  
 
 Therefore, all applications must be equipped to handle a graceful scaling back of functionality, or risk presenting a minimal feature set that does not leverage the full potential of the underlying platform. 
 
@@ -21,7 +21,7 @@ There are certain fundamental characteristics inherent to applications that are 
 * Editing data.
 * Navigation capabilities. 
 
-### Platform-specific features
+### Platform-Specific features
 
 Beyond the universal application characteristics, you will also have to address key platform differences in your design. You may need to consider, and possibly write or tweak code specifically to handle, these differences:
 
@@ -31,29 +31,13 @@ Beyond the universal application characteristics, you will also have to address 
 
 * **Keyboards**: Some devices may come with physical keyboards, while others only feature a software keyboard. Code that detects when a soft-keyboard is obscuring part of the screen needs to be sensitive to these differences.
 
-These platform-specific differences should be carefully considered when designing your Avalonia application to ensure a seamless user experience across all platforms. While you should strive to maximise your code reuse, you should also avoid attempting to reuse 100% of your code across all supported platforms. Instead, talyor each platform UIs to the feel at home on the device. 
+These platform-specific differences should be carefully considered when designing your Avalonia application to ensure a seamless user experience across all platforms. While you should strive to maximize your code reuse, you should also avoid attempting to reuse 100% of your code across all supported platforms. Instead, talyor each platform UIs to the feel at home on the device. 
 
 ### Dealing with Platform Divergence
 
-Supporting multiple platforms from the same code-base can be achieved through abstracting platform features. 
+Supporting multiple platforms from the same code-base can be achieved through abstracting platform features or [conditional code](../../guides/platforms/platform-specific-code/dotnet.md). 
 
 * **Platform Abstraction**: This approach leverages the Business Façade pattern to provide uniform access across platforms. It abstracts the unique platform implementations into a single, cohesive API. The primary advantage is the ability to write platform-agnostic code, enhancing code reusability and maintainability. However, this approach may not fully exploit the unique features and capabilities of each platform.
-
-<!--
-:::tip
-[Avalonia.Essentials](https://github.com/AvaloniaUI/Avalonia.Essentials) provides pre-built abstractions for common mobile features. Including: 
-
-* Accelerometer
-* Barometer
-* Battery
-* Camera
-* Connectivity
-* Flashlight
-* Geolocation
-* Gyroscope
-* Orientation
-:::
--->
 
 ## Platform Abstraction
 
@@ -81,3 +65,12 @@ By using inheritance, you can create base classes in your shared code that can b
 #### Advantages and Disadvantages
 The advantages and disadvantages of using interfaces apply equally to inheritance. However, an additional advantage of inheritance is that the base class can contain some implementation code. This potentially could provide an entire platform-agnostic implementation that can be optionally extended as needed.
 
+## Using Maui.Essentials
+
+Another approach would be to use any library that abstracts some features under a common higher level API.
+[Maui.Essentials](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/?view=net-maui-8.0) is one of these libraries, that can be used with Avalonia on .NET 8 or higher via [Microsoft.Maui.Essentials](https://www.nuget.org/packages/Microsoft.Maui.Essentials) nuget package.
+Alternatively, you can use full set of MAUI packages with [Avalonia.Maui](https://github.com/AvaloniaUI/AvaloniaMauiHybrid) hybrid package. This package provides a deeper integration with MAUI packages.
+
+:::note
+While `Maui.Essentials` is a great library that abstracts platform APIs, MAUI itself has a limited set of supported platforms. It doesn't provide APIs for Linux, Browser and macOS (non macCatalyst) platforms.
+:::
