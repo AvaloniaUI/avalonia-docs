@@ -10,13 +10,13 @@ The OnPlatform markup extension in Avalonia allows developers to specify differe
 
 ### Basic usage in markup extension syntax
 
-You can specify values for each platform and a default value that will be used if no specific platform match is found.
+You can specify values for each platform and a default value that will be used if no specific platform match is found:
 
 ```xml
 <TextBlock Text="{OnPlatform Default='Unknown', Windows='Im Windows', macOS='Im macOS', Linux='Im Linux'}"/>
 ```
 
-Alternatively, you can use constructor syntax to define the default value directly, skipping `Default` keyword. Platform-specific properties still needs to be defined.
+Alternatively, you can use constructor syntax to define the default value directly, skipping `Default` keyword. Platform-specific properties still need to be defined:
 
 ```xml
 <TextBlock Text="{OnPlatform 'Hello World', Android='Im Android'}"/>
@@ -30,7 +30,7 @@ You can use this markup extension with any other type, not only strings:
 
 ### Specifying Type Arguments
 
-You can use custom TypeArguments to explicitly specify the type for the values.
+You can use custom TypeArguments to explicitly specify the type for the values:
 
 ```xml
 <TextBlock Tag="{OnPlatform '0, 0, 0, 0', Windows='10, 10, 10, 10', x:TypeArguments=Thickness}"/>
@@ -40,7 +40,7 @@ In this sample above, `Tag` property has type of `object`, so compiler doesn't h
 
 ### Nested Markup Extensions
 
-The OnPlatform extension supports nesting other markup extensions within it.
+The OnPlatform extension supports nesting other markup extensions within it:
 
 ```xml
 <Border Background="{OnPlatform Default={StaticResource DefaultBrush}, Windows={StaticResource WindowsBrush}}"/>
@@ -48,7 +48,7 @@ The OnPlatform extension supports nesting other markup extensions within it.
 
 ### XML Syntax
 
-OnPlatform can also be used in XML syntax for defining property values.
+OnPlatform can also be used in XML syntax for defining property values:
 
 ```xml
 <StackPanel>
@@ -67,7 +67,7 @@ Note, in this sample, `OnPlatform` is a child of `StackPanel`. But in runtime on
 
 ### Complex Property Setters
 
-Similarly to the previous sample, OnPlatform can be part of complex property setters within a ResourceDictionary or other dictionaries or collections.
+Similarly to the previous sample, OnPlatform can be part of complex property setters within a ResourceDictionary or other dictionaries or collections:
 
 ```xml
 <ResourceDictionary>
@@ -84,8 +84,7 @@ Similarly to the previous sample, OnPlatform can be part of complex property set
 
 ### XML Combining Syntax
 
-To avoid branches duplication, it is possible to define multiple platforms in a single branch.
-Another useful example would be including platform specific styles:
+To avoid branches duplication, it is possible to define multiple platforms in a single branch. Another useful example would be including platform-specific styles:
 
 ```xml
 <Application.Styles>
@@ -108,15 +107,14 @@ Another useful example would be including platform specific styles:
 
 ### Additional details
 
-`OnPlatform` markup extension work in a similar way how `switch-case` works in C# code.
-Compiler will generate branches for all possible values, but only single branch will be executed in runtime depending on the condition.
+`OnPlatform` markup extension works in a similar way to how switch-case works in C# code. Compiler will generate branches for all possible values, but only one branch will be executed at runtime depending on the condition.
 
-It's also useful to remember, that if application is build with specific [Runtime Identifier](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog) and with [Trimming Enabled](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options), `OnPlatform` extension will have its branches trimmed only to these that are possible. For example, if `OnPlatform` had branches for `Windows` and `macOS`, but was built for `Windows` only, other branches will be removed. Which also reduces application size.
+It is also useful to remember that if an application is built with a specific [Runtime Identifier](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog) and with [Trimming Enabled](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options), `OnPlatform` extension will have its branches trimmed only to those that are possible. For example, if `OnPlatform` had branches for Windows and macOS, but was built for Windows only, other branches will be removed, which also reduces application size.
 
 
 ## OnFormFactor Markup Extension
 
-The `OnFormFactor` markup extension functions similarly to the `OnPlatform` and has the same general syntax. The main difference is that it allows defining values not per platform, but per device form factor, such as Desktop and Mobile.
+The `OnFormFactor` markup extension functions similarly to the `OnPlatform` and has the same general syntax. The main difference is that it allows defining values not per platform, but per device form factor, such as Desktop and Mobile:
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -125,5 +123,4 @@ The `OnFormFactor` markup extension functions similarly to the `OnPlatform` and 
 </UserControl>
 ```
 
-`OnFormFactor` doesn't have any compile-time trimming kinds of optimizations, as form factor cannot be known in compile time.
-None of these markup extensions are dynamic, which means, once value was set, it will not be changed.
+`OnFormFactor` doesn't have any compile-time trimming optimizations, as form factor cannot be known in compile time. None of these markup extensions are dynamic; once a value is set, it will not be changed.
