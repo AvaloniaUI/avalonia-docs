@@ -42,6 +42,7 @@ The slider looks like this on Windows:
 ## Binding to TextBox
 In this example, the slider value is bound to the text box above using binding to the control.
 
+### Views
 ```xml
 <StackPanel>
   <TextBlock Text="Damage: " />
@@ -52,19 +53,48 @@ In this example, the slider value is bound to the text box above using binding t
   <Button Command="{Binding UnlimitedDamage}" Content="∞" />
 </StackPanel>
 ```
+### ViewModels
+- You can choose [ReactiveUI](../../concepts/reactiveui/index.md) or [CommunityToolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/) when creating a project.
+- The ViewModel code will change depending on which one you select.
+- It doesn't matter which you choose, but here i will only detail how to binding using ReactiveUI.
+
 ```cs
-using System.Windows.Input;
 using ReactiveUI;
+using System.Windows.Input;
+public class MainViewModel : ViewModelBase
+{
+    private int _damage;
+    public int Damage
+    {
+        get => _damage;
+        set => this.RaiseAndSetIfChanged(ref _damage, value);
+    }
+    private int _maxDamage;
+    public int MaxDamage
+    {
+        get => _maxDamage;
+        set => this.RaiseAndSetIfChanged(ref _maxDamage, value);
+    }
+```
+
+- using [ReactiveUI.Fody.Helpers](https://www.reactiveui.net/docs/handbook/view-models/boilerplate-code.html) NOTE: Fody.Helpers is not required (optional).
+
+:::info
+On how to add a nuget package, you can follow steps from the Nuget page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
+:::
+
+```cs
 using ReactiveUI.Fody.Helpers;
-
-namespace AvaloniaControls.ViewModels;
-
 public class MainViewModel : ViewModelBase
 {
     [Reactive]
     public int Damage { get; set; }
     [Reactive]
     public int MaxDamage { get; set; }
+```
+- In the above configuration (i.e. when a change notification is bound between the Views and the ViewModels) can the values ​​in the view be updated seemless.
+- You can also values ​​are updated in ViewModels.:
+```cs
     public ICommand UnlimitedDamage { get; }
     public MainViewModel()
     {
@@ -72,9 +102,7 @@ public class MainViewModel : ViewModelBase
         UnlimitedDamage = ReactiveCommand.Create(
             () => Damage = MaxDamage = 0xFFFF);
     }
-}
 ```
-Values ​​are updated in both View and ViewModel.:
 
 <img src={SliderMaxValueScreenshot} alt="" />
 
