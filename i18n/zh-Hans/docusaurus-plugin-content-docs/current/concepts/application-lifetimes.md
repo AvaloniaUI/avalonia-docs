@@ -4,7 +4,7 @@ description: CONCEPTS
 
 # 应用程序生命周期
 
-并非所有平台都是相同的！例如，您可能习惯于在Windows Forms或WPF中开发的生命周期管理仅适用于桌面平台。_Avalonia UI_是一个跨平台框架；因此，为了使您的应用程序可移植，它提供了几种不同的应用程序生命周期模型，并且还允许您在目标平台允许的情况下手动控制一切。
+并非所有平台都是相同的！例如，您可能习惯于在Windows Forms或WPF中开发的生命周期管理仅适用于桌面平台。_Avalonia UI_ 是一个跨平台框架；因此，为了使您的应用程序可移植，它提供了几种不同的应用程序生命周期模型，并且还允许您在目标平台允许的情况下手动控制一切。
 
 ## 生命周期如何工作？
 
@@ -83,7 +83,7 @@ _Avalonia UI_提供了一系列接口，允许您选择适合您的应用程序�
 某些平台没有桌面主窗口的概念，只允许在设备屏幕上同时显示一个视图。对于这些平台，生命周期允许您设置和更改主视图类（`MainView`）。
 
 :::info
-要在这样的平台上实现导航堆栈（具有单个主视图），您可以使用[_ReactiveUI_路由](https://www.reactiveui.net/docs/handbook/routing/)或其他路由控件。
+要在这样的平台上实现导航堆栈（具有单个主视图），您可以使用[_ReactiveUI_ 路由](https://www.reactiveui.net/docs/handbook/routing/)或其他路由控件。
 :::
 
 ## 手动管理生命周期
@@ -110,7 +110,7 @@ class Program
      // 用于停止主循环
      var cts = new CancellationTokenSource();
      
-     // 你在这里启动代码
+     // 在这里启动你的代码
      new Window().Show();
 
      // 启动主循环

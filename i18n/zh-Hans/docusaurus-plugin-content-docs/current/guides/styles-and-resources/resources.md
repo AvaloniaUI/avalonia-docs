@@ -247,3 +247,48 @@ Window
 然后，搜索父级（StackPanel）控件中定义的任何样式，接着再搜索同一级别的任何合并的字典。
 
 在逻辑控件树中向上搜索，每个级别都以类似的方式行为。最后到达应用程序级别的资源和样式。
+
+## 从代码中使用资源
+
+Avalonia 提供了不同的选项来从代码中访问资源。
+
+:::note
+
+在下面的示例中，`ResourceNode` 可以是支持 `Resource` 的任何节点，比如 `Appliction.Current`、`Window`、`UserControl` 等等。
+
+:::
+
+- **ResourceNode.Resources["TheKey"]**: <br/>
+  这将直接访问底层的 `Dictionary`。请注意：合并的字典和父级将不会被扫描。
+- **ResourceNode.TryGetResource**: <br/>
+  此函数将尝试获取特定资源，并在成功时返回 `true`，否则返回 `false`。将扫描合并的字典，但不会遵循逻辑树。
+- **ResourceNode.TryFindResource**:  <br/>
+  此扩展方法将尝试获取特定资源，并在成功时返回 `true`，否则返回 `false`。将扫描合并字典和逻辑树。
+- **ResourceNode.GetResourceObservable**: <br/>
+  这将返回一个可用于观察资源更改的 [`IObservable`](https://learn.microsoft.com/en-us/dotnet/api/System.IObservable-1)。例如，您可以绑定到它。
+
+```cs
+// 在此示例中，我们在 App.axaml 中定义了资源，并且希望在 MainWindow 构造函数中查找该值。
+//
+//    </Application.Resources>
+//         <x:String x:Key="TheKey">HelloWorld</x:String>
+//    </Application.Resources>
+
+public MainWindow()
+{
+    InitializeComponent();
+
+    // found1 = false | result1 = null
+    var found1 = this.TryGetResource("TheKey", this.ActualThemeVariant, out var result1);
+
+    // found2 = true | result2 = "Hello World" 
+    var found2 = this.TryFindResource("TheKey", this.ActualThemeVariant, out var result2);
+
+    // 从代码中找到资源并将其绑定到 TextBlock
+    myTextBlock.Bind(TextBlock.TextProperty, Resources.GetResourceObservable("TheKey"));
+
+    // 通过绑定的 observable 更新 myTextBlock.Text
+    this.Resources["TheKey"] = "Hello from code behind"; 
+}
+```
+

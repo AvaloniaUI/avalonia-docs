@@ -34,75 +34,77 @@ Dispatcher.UIThread
 
 ## 示例
 
-在此示例中，使用文本块来显示长时间运行任务的结果，并使用按钮来启动该任务。在此版本中，使用了 `fire-and-forget` `Post`方法：
+此示例演示了如何从工作线程访问 UI 线程以更新或获取 TextBlock 的文本。
+创建一个新的 Avalonia 项目，并替换以下两个文件的内容：
 
+MainView.axaml:
 ```xml title='XAML'
-<StackPanel Margin="20">    
-  <Button x:Name="RunButton" Content="Run long running process" 
-          Click="ButtonClickHandler" />
-  <TextBlock x:Name="ResultText" Margin="10"/>
-</StackPanel>
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaApplication1.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApplication1.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- 这仅为IDE中的预览器设置DataContext，要设置运行时的实际DataContext，
+         请在代码中设置DataContext属性（参考App.axaml.cs） -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+	<StackPanel Margin="20">
+		<TextBlock Name="TextBlock1" />
+	</StackPanel>
+</UserControl>
 ```
 
-```csharp title='Task C#'
+
+MainView.axaml.cs:
+```csharp title='MainView C#'
+using Avalonia.Controls;
+using Avalonia.Threading;
+using System;
 using System.Threading.Tasks;
-...
-private async Task LongRunningTask()
+
+namespace AvaloniaApplication1.Views;
+
+public partial class MainView : UserControl
 {
-    this.FindControl<Button>("RunButton").IsEnabled = false;
-    this.FindControl<TextBlock>("ResultText").Text = "I'm working ...";
-    await Task.Delay(5000);
-    this.FindControl<TextBlock>("ResultText").Text = "Done";
-    this.FindControl<Button>("RunButton").IsEnabled = true;
+    public MainView()
+    {
+        InitializeComponent();
+
+        // 在线程池上执行 OnTextFromAnotherThread，
+        // 演示如何从那里访问 UI 线程。
+        _ = Task.Run(() => OnTextFromAnotherThread("test"));
+    }
+
+    private void SetText(string text) => TextBlock1.Text = text;
+    private string GetText() => TextBlock1.Text ?? "";
+
+    private async void OnTextFromAnotherThread(string text)
+    {
+        try
+        {
+            // 在 UI 线程上开始作业并立即返回。
+            Dispatcher.UIThread.Post(() => SetText(text));
+
+            // 在 UI 线程上开始作业并等待结果。
+            var result = await Dispatcher.UIThread.InvokeAsync(GetText);
+
+            // 此调用会导致异常，因为我们在工作线程上运行：
+            // System.InvalidOperationException: 'Call from invalid thread'
+            //SetText(text);
+        }
+        catch (Exception)
+        {
+            throw; // Todo: 处理异常。
+        }
+    }
 }
+
 ```
-
-```csharp title='Post C#'
-private void ButtonClickHandler(object sender, RoutedEventArgs e)
-{
-    // 启动作业并立即返回
-    Dispatcher.UIThread.Post(() => LongRunningTask(), 
-                                            DispatcherPriority.Background);
-}
-```
-
-<img src={DispatchPostLongRunningScreenshot} alt=""/>
-
-请注意，由于长时间运行的任务在其自己的线程上执行，UI不会失去响应。
-
-要从长时间运行的任务获取结果，XAML代码保持不变，但此版本使用`InvokeAsync`方法：
-
-```xml title='XAML'
-<StackPanel Margin="20">    
-  <Button x:Name="RunButton" Content="Run long running process" 
-          Click="ButtonClickHandler" />
-  <TextBlock x:Name="ResultText" Margin="10"/>
-```
-
-```csharp title='Task C#'
-using System.Threading.Tasks;
-...
-private async Task<string> LongRunningTask()
-{
-    this.FindControl<Button>("RunButton").IsEnabled = false;
-    this.FindControl<TextBlock>("ResultText").Text = "I'm working ...";
-    await Task.Delay(5000);    
-    return "Success";
-}
-```
-
-```csharp title='InvokeAsync C#'
-private async void ButtonClickHandler(object sender, RoutedEventArgs e)
-{
-    var result = await Dispatcher.UIThread.InvokeAsync(LongRunningTask, 
-                                    DispatcherPriority.Background);
-    //结果将在这里返回
-    this.FindControl<TextBlock>("ResultText").Text = result;
-    this.FindControl<Button>("RunButton").IsEnabled = true;
-}
-```
-
-<img src={DispatchInvokeAsyncLongRunningScreenshot} alt=""/>
 
 ## 更多信息
 
