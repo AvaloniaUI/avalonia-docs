@@ -136,7 +136,14 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/social-card.png',
-     
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '⭐️ Make sure to sponsor Avalonia on <a target="_blank" rel="noopener noreferrer" href="https://github.com/sponsors/AvaloniaUI">GitHub</a> or sign up for <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/Support">Premium Support!</a>',
+        backgroundColor: '#22CE86',
+        textColor: '#ffffff',
+        isCloseable: false,
+      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
