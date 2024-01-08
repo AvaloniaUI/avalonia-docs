@@ -10,3 +10,5 @@ So to recap:
 * `UIElement` 🠞 `Control`
 * `FrameworkElement`🠞 `Control`
 * `Control` 🠞 `TemplatedControl`
+
+<XpfAd/>

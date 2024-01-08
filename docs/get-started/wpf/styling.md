@@ -21,3 +21,4 @@ The following code shows a `UserControl` which defines its own CSS-like style.
 <UserControl>
 ```
 
+<XpfAd/>

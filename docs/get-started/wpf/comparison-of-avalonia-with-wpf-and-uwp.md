@@ -195,3 +195,5 @@ This section describes the differences in controls in vanilla WPF and UWP (with 
 * Several UWP controls are sealed and new controls cannot derive from them
 * For advanced rendering, UWP has fewer features built in. This requires falling back to Win2D or composition more often.
 * There are several namespaces differences in UWP and WPF. For example, WPF has System.Windows.Media.Colors while UWP moves this to Windows.UI.Colors.
+
+<XpfAd/>

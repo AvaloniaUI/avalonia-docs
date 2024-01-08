@@ -5,6 +5,7 @@ import Highlight from '@site/src/components/Highlight';
 import { CardSection, Card } from '../components/CardComponents'; 
 import HelpNeeded from '../components/HelpNeeded'; 
 import GitHubSampleLink from '../components/GitHubSampleLink';
+import XpfAd from '../components/XpfAdvert';
 
 export default {
   // Re-use the default mapping
@@ -16,4 +17,5 @@ export default {
   GitHubSampleLink,
   Card,
   HelpNeeded,
+  XpfAd,
 };
