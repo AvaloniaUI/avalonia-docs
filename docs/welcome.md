@@ -54,6 +54,8 @@ We have specific guidance and some detailed reference material for developers wh
 See our WPF migration guide [here](get-started/wpf).
 :::
 
+<XpfAd/>
+
 ## Consult Our Reference
 
 :::info
