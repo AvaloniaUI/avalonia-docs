@@ -19,7 +19,11 @@ Before localizing, you need to include ResX files for each language you want to 
 
 Each ResX file will contain translated text that corresponds to the keys used in the application.
 
-In this example, we added new files to the `Assets` folder. Since .NET generator creates namespaces depending on folder structure, it might be different for you.  
+In this example, we added new files to a new folder called `Lang`. Since .NET generator creates namespaces depending on folder structure, it might be different for you.  
+
+:::warning
+If you add the files into the `Assets` folder make sure to swtich `Build Action` to `Embedded resource`, otherwise the code generation may fail.
+:::
 
 ## Set the Culture
 
@@ -36,7 +40,7 @@ public partial class App : Application
     public override void OnFrameworkInitializationCompleted()
     {
         // highlight-start
-        Assets.Resources.Culture = new CultureInfo("fil-PH");
+        Lang.Resources.Culture = new CultureInfo("fil-PH");
         // highlight-end
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
@@ -57,9 +61,9 @@ Replace "fil-PH" with the appropriate culture code as required.
 To use the localized text in a view, you can refer to the resources statically in XAML:
 
 ```xml
-<TextBlock Text="{x:Static assets:Resources.GreetingText}"/>
+<TextBlock Text="{x:Static lang:Resources.GreetingText}"/>
 ```
 
-In the above example, `GreetingText` is the key that corresponds to a string in the ResX file. The `{x:Static}` markup extension is used to reference a static property that's been defined in a .NET class, which, in this case, is the resources file (`assets:Resources.GreetingText`).
+In the above example, `GreetingText` is the key that corresponds to a string in the ResX file. The `{x:Static}` markup extension is used to reference a static property that's been defined in a .NET class, which, in this case, is the resources file (`lang:Resources.GreetingText`).
 
 That's it! You've now successfully localized your Avalonia application using ResX. By setting the culture to a different locale, you can display the user interface in the selected language, thereby creating an application that supports multiple languages and caters to a global audience.
