@@ -7,6 +7,7 @@ import MusicStoreDialogContentDiagram from '/img/gitbook-import/assets/image (9)
 # Добавление содержимого диалогового окна
 
 На это страницу вы узнаете, как добавить содержимое в диалоговое окно.
+Речь идет о `controls` для поиска, а также кнопки закрытия дилогового окна.
 On the this page you will learn how to add some content to the dialog window. 
 This will be some controls for the search and a dialog close button; together with 
 a list of placeholders for the album covers - these will eventually be loaded as the results of the search.
@@ -54,15 +55,15 @@ so it will always take up all the remaining content zone.
 </UserControl>
 ```
 
-Inside the dialog the user will be able to search for albums, but this will use a Web API, 
-and may take some time to return. It is for this reason that you have added a progress bar. 
-The progress bar will be active during the search - to provide visual feedback to the user.
+Внутри диалогового окна, пользователь может вести поиск альбомов посредствам Web API.
+Но данная процедура занимает время, в связи с чем мы добавили шкалу прогресса,
+которая будет активна во время поиска. Даный аспект повышает отзывчивость интерфейса для пользователя.
 
-Also, to ensure that the app remains responsive during the search,
-you will implement the operation itself as both asynchronous and cancellable. 
-You will add this functionality later in the tutorial.
+Также, чтобы гарантировать отзывчивость приложения во время поиска, 
+мы реализуем данную операцию как асинхронную, с возможностью отмены поиска.
+В рамках руководства, мы реализуем этот функционал позже.
 
-Now the next step is for you to add the new user control to the content zone of the dialog window.
+Нашим следующим шагом, будет добавление нового `user control` в зону содержимого диалогового окна.
 
 Для добавления `user control`, выполните следующие действия:
 
