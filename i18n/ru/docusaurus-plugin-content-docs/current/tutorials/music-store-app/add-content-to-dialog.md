@@ -8,14 +8,13 @@ import MusicStoreDialogContentDiagram from '/img/gitbook-import/assets/image (9)
 
 На это страницу вы узнаете, как добавить содержимое в диалоговое окно.
 Речь идет о `controls` для поиска, а также кнопки закрытия дилогового окна.
-On the this page you will learn how to add some content to the dialog window. 
-This will be some controls for the search and a dialog close button; together with 
-a list of placeholders for the album covers - these will eventually be loaded as the results of the search.
+Также будет добавлен список элементов с заполнителем по-умолчанию для обложек альбомов,
+которые мы потом загрузим при поиске.
 
-To arrange the dialog controls, you will use the dock panel layout control, 
-that is part of the _Avalonia UI_ built-in controls. This will keep the search controls at the top of the dialog, 
-and the button at the bottom, whatever the height. The list will be the 'fill' area of the dock panel, 
-so it will always take up all the remaining content zone.
+Для компоновки `ccontrols` у диалогового окна, мы будем использовать `dock panel`,
+который является частью встроенных `controls` в _Avalonia UI_.
+С его помощью, мы расположим строку поиска в верхней части окна, а кнопку внизу.
+Список будет заполнять всю свободную площадь `dock panel`, то есть все оставшуюся зону содержимого.
 
 <img className="center" src={MusicStoreDialogContentDiagram} alt="" />
 
@@ -28,7 +27,7 @@ so it will always take up all the remaining content zone.
 от кода управляющего его `controls`.
 
 :::info
-Подробнее о `UI Composition (рус: Составлении ГШ)`, см. [здесь](../../concepts/ui-composition.md).
+Подробнее о `UI Composition (рус: Составлении UI)`, см. [здесь](../../concepts/ui-composition.md).
 :::
 
 Для добавления `user control` и составных `controls` диалогового окна, выполните следующие действия:
@@ -55,9 +54,9 @@ so it will always take up all the remaining content zone.
 </UserControl>
 ```
 
-Внутри диалогового окна, пользователь может вести поиск альбомов посредствам Web API.
+Внутри диалогового окна, пользователь может вести поиск альбомов посредством Web API.
 Но данная процедура занимает время, в связи с чем мы добавили шкалу прогресса,
-которая будет активна во время поиска. Даный аспект повышает отзывчивость интерфейса для пользователя.
+которая будет активна во время поиска. Данный аспект повышает отзывчивость интерфейса для пользователя.
 
 Также, чтобы гарантировать отзывчивость приложения во время поиска, 
 мы реализуем данную операцию как асинхронную, с возможностью отмены поиска.
@@ -75,7 +74,7 @@ so it will always take up all the remaining content zone.
     xmlns:views="using:Avalonia.MusicStore.Views" >    
 ```
 
-- Inside the panel element, add an element for new user control:
+- Внутри элемента `Panel`, добавьте новый элемент пользовательского `control:
 
 ```xml
 <Panel Margin="40">
@@ -85,6 +84,6 @@ so it will always take up all the remaining content zone.
 
 Вы увидите, что `controls` появятся на панели предпросмотра.
 
-На следующей страницу вы узнаете, как имитировать фунцию поиска альбомов,
+На следующей страницу вы узнаете, как имитировать функцию поиска альбомов,
 чтобы создать `view` и `view model` для просмотра результатов,
 а реализацию реального поиска оставить на потом.
