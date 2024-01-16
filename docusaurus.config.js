@@ -121,7 +121,6 @@ const config = {
   plugins: [
     require('./plugins/tailwind-plugin.cjs'),
     require.resolve('docusaurus-plugin-image-zoom'),
-    require.resolve("@cmfcmf/docusaurus-search-local"),
     [
       '@docusaurus/plugin-client-redirects',
       require("./redirects"),
@@ -164,7 +163,8 @@ const config = {
         config: {
           // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
           margin: 50,
-        }
+        },
+      
       },
       navbar: {
         title: 'Avalonia',
@@ -257,6 +257,15 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['csharp'],
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'V9UF6750GH',
+        // Public API key: it is safe to commit it
+        apiKey: '028e3dad834905a2a2c2a7ad9da9e666',
+        indexName: 'avaloniaui',
+        contextualSearch: true,
+        searchParameters: {},
       },
     }),
 };
