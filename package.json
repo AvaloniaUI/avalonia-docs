@@ -15,7 +15,6 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@cmfcmf/docusaurus-search-local": "^1.1.0",
     "@docusaurus/core": "^3.1.0",
     "@docusaurus/plugin-client-redirects": "^3.1.0",
     "@docusaurus/plugin-google-gtag": "^3.1.0",
