@@ -13,6 +13,7 @@ import ResourcesSection from '../components/homepage/ResourcesSection';
 import CTASection from '../components/homepage/CallToActionSection';
 
 
+
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -21,17 +22,6 @@ export default function Home(): JSX.Element {
       description="Learn to build with Avalonia"
       noFooter>
 
-      <div>
-        <div className="w-full bg-gradient-to-r from-purple-500 to-purple-700 p-4 text-center font-medium text-white">
-          Support the future of Avalonia by {' '}
-          <Link
-            to="https://github.com/sponsors/AvaloniaUI"
-            className="text-white underline hover:text-white"
-          >
-            sponsoring.
-          </Link>
-        </div>
-      </div>
       <HeroSection/>
       <GuidesAndSamplesSection/>
       

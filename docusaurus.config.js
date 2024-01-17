@@ -174,6 +174,10 @@ const config = {
         },
         items: [
           {
+            label: 'Documentation',
+            to: '/docs/welcome'
+          },
+          {
             label: 'API Reference',
             to: 'https://reference.avaloniaui.net/api/',
           },
