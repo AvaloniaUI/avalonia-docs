@@ -42,6 +42,13 @@ dotnet run
 
 1. In the console output you will see HTTP and HTTPS links to open the app.
 
+### Deployment
+In the `BrowserTest.Browser` directory, run:
+```bash
+dotnet build -c Release -o artifact
+```
+Now you can serve the `artifact/AppBundle` folder from your favorite web server such as Azure Static Web Apps.
+
 ## Interop
 
 It is possible to call JavaScript code from the Avalonia Web application. Avalonia app is compatible with standard **\[JSImport]/\[JSExport]** interop from Microsoft. You can find more information on [their documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/import-export-interop?view=aspnetcore-7.0).
