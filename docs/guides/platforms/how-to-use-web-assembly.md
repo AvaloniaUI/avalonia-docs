@@ -47,7 +47,7 @@ In the `BrowserTest.Browser` directory, run:
 ```bash
 dotnet build -c Release -o artifact
 ```
-Now you can serve the `artifact/AppBundle` folder from your favorite web server such as Azure Static Web Apps.
+Now you can serve your app from the `artifact/AppBundle` folder from your favorite web server such as Azure Static Web Apps.
 
 ## Interop
 
