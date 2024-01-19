@@ -66,7 +66,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 
 - Удалите привязку `{Binding Greeting}` и измените текст `<TextBlock Text="my text">...`
 
-You will see the new text in the preview pane change as you type. This is an example of the Avalonia **design-time preview behaviour** that will help you develop user interface presentation accurately and quickly.
+Вы увидите, как новый текст в панели предварительного просмотра меняется по мере ввода. Это пример работы предварительного просмотра во время проектирования Avalonia (**design-time preview behaviour**), который поможет вам точно и быстро разработать пользовательский интерфейс.
 
 - Запустите проект, чтобы убедиться, что новый текст также появляется по время выполнения программы.
 
