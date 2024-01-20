@@ -45,9 +45,15 @@ dotnet run
 ### Deployment
 In the `BrowserTest.Browser` directory, run:
 ```bash
-dotnet build -c Release -o artifact
+dotnet publish
+
+# ... (build output)
+# Generated app bundle at .../bin/Release/net8.0/browser-wasm/AppBundle/
 ```
-Now you can serve your app from the `artifact/AppBundle` folder using your favorite web server (such as Azure Static Web Apps).
+Now you can serve your app from the `bin/Release/net8.0/browser-wasm/AppBundle` folder (for .NET 8.0, for example) using your favorite web server (such as Azure Static Web Apps).
+
+**Beware:**
+Currently using `dotnet publish` with the `-o` or `--output` flag does not produce the AppBundle folder in the output directory. You'll still have to grab it out of the `bin` directory at the path specified by the publish output.
 
 ## Interop
 
