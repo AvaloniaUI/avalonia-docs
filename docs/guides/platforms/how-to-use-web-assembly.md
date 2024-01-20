@@ -52,8 +52,21 @@ dotnet publish
 ```
 Now you can serve your app from the `bin/Release/net8.0/browser-wasm/AppBundle` folder (for .NET 8.0, for example) using your favorite web server (such as Azure Static Web Apps).
 
-**Beware:**
-Currently using `dotnet publish` with the `-o` or `--output` flag does not produce the AppBundle folder in the output directory. You'll still have to grab it out of the `bin` directory at the path specified by the publish output.
+> **Beware:**
+Currently using `dotnet publish` with the `-o` or `--output` flag does not produce the AppBundle folder in the output directory. (See [this issue](https://github.com/dotnet/runtime/issues/94319).) You'll still have to grab it out of the `bin` directory at the path specified by the publish output.
+
+#### Testing AppBundle locally
+You can serve your wasm app from the AppBundle directly using the [dotnet-serve](https://github.com/natemcmaster/dotnet-serve) tool as follows:
+```bash
+dotnet tool install --global dotnet-serve
+
+dotnet serve -d:bin/Release/net8.0/browser-wasm/AppBundle 
+
+# Output: 
+# Starting server, serving bin/Release/net8.0/browser-wasm/AppBundle
+# Listening on any IP:
+#   http://localhost:49875
+```
 
 ## Interop
 
