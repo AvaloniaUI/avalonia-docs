@@ -14,16 +14,5 @@ Access the Avalonia chat using the _Telegram_ app (recommended for the best expe
 You can access the _Telegram_ chat [here](https://t.me/Avalonia).
 :::
 
-## Gitter
-
-<img src={GitterLogoScreenshot} alt="" data-size="original"/>
-
-We run a chat in English on the Gitter platform.
-
-<img src={GitterChatScreenshot} alt="" />
-
-:::info
-Access the chat in your browser using Gitter [here](https://gitter.im/AvaloniaUI/Avalonia).
-:::
 
 
