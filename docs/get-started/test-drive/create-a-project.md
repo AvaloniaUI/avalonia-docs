@@ -23,14 +23,14 @@ dotnet new install Avalonia.Templates
 
 ## Create the Project
 
-To get started, we're going to use the simplest Avalonia template: `Avalonia Application` (or `avalonia.app` in the CLI).
+To get started, we're going to use the MVVM Avalonia template: `Avalonia MVVM Application` (or `avalonia.mvvm` in the CLI).
 
 <Tabs>
   <TabItem value="cli" label="Command Line" default>
 Run the command:
 
 ```bash
-dotnet new avalonia.app -o GetStartedApp
+dotnet new avalonia.mvvm -o GetStartedApp
 ```
 
 This will create a new folder called `GetStartedApp` containing the new project.
