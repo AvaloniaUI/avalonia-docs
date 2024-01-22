@@ -64,13 +64,14 @@ import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/ope
 ## Ввод и вывод диалогового окна
 
 Работа диалогового окна будет обрабатываться его собственной `view model`.
-Она будет создана и связана с ним, в момент когда диалоговое окно должно будет отобразиться.
+Она будет создана и связана с ним в момент, когда диалоговое окно должно будет отобразиться.
 
-Similarly, the result of the users interaction with the dialog will eventually have 
-to be passed back to the application logic for the main window for processing.
+Аналогичным образом, результат взаимодействия пользователя с диалоговым окном,
+должен быть передан обратно для обработки в основном окне.
 
-At this stage you will create two empty view model classes to act as placeholders for the dialog view model, 
-and the dialog return (selected album) object. To create these view models, follow this procedure:
+На этом этапе вы создадите два пустых класса `view model`, которые будут выступать в качестве заполнителей для `dialog view model`
+и объекта `dialog return` (выбранный альбом).
+Выполните следующие действия:
 
 - В обозревателе решений нажмите ПКМ по папке **/ViewModels** и выберите **Add**.
 - Нажмите **Class**.
@@ -81,23 +82,24 @@ and the dialog return (selected album) object. To create these view models, foll
 
 ## Отображение диалогового окна
 
-Now you have a new window for the dialog, and some view model classes for its interaction; 
-there are two steps to create the dialog interaction:
+Теперь у нас есть новое окно, которое можно будет использовать как диалоговое.
+А также классы `view model` для взаимодействия с ним. Для создания самого взаимодействия, нужно выполнить 2 условия:
 
-* The main window view model starts the interaction.
-* The main window view knows how to start the interaction.
+* `View model` основного окна запускает взаимодействие.
+* `View` основного окна знает "как" начать взаимодействие.
 
-Firstly, to alter the main window view model code so it starts the interaction to show the dialog, 
-follow this procedure:
+Первым делом изменим код `view model` основного окна так,
+чтобы он запускал взаимодействие для отображения диалогового окна.
+Выполните следующие действия:
 
 - Найдите и откройте файл **MainWindowViewModel.cs**.
-- Add a declaration for the interaction with the new dialog window, as shown:
+- Добавьте объявление взаимодействия с новым диалоговым окном, как показано ниже:
 
 ```csharp
 public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
 ```
 
-- Alter the constructor code to create the reactive command from a asynchronous task, as shown:
+- Для создания реактивной команды из асинхронный задачи, измените код конструктора, как показано ниже:
 
 ```csharp
 using System;
@@ -130,16 +132,15 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-At this point, the code for the interaction is still incomplete. 
-If you attempt to run the app now and click the icon button,
-you will get an exception of class `ReactiveUI.UnhandledInteractionException`.
+На данный момент, код для взаимодействия все еще не закончен.
+При запуске приложения и попытке нажать кнопку с иконой, вы получите исключение `ReactiveUI.UnhandledInteractionException`.
 
-Your next step is to make sure that the main window view knows how to start the interaction.
-This is implemented in the code-behind file for the main window view, 
-and uses some features of the _ReactiveUI_ framework.  Follow this procedure:
+Нашим следующим шагом станет внесение изменений во `view` основного окна, чтобы она знала "как" запустить взаимодействие.
+Они добавляются в код нашей `view`, и используют функционал из фреймворка _ReactiveUI_.
+Выполните указанные ниже действия:
 
-- Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
-- Alter the class wo that it inherits from `ReactiveWindow<MainWindowViewModel>`.
+- Найдите и откройте файл **MainWindow.axaml.cs**. (Чтобы найти его, вы можете раскрыть файл **MainWindow.axaml**)
+- Измените класс, чтобы он наследовался от `ReactiveWindow<MainWindowViewModel>`.
 - Добавьте метод `DoShowDialogAsync`, как показано ниже:
 
 ```csharp
@@ -154,18 +155,18 @@ private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel,
 }
 ```
 
-- Add the following code to the end of the constructor:
+- В конец конструктора добавьте следующий код:
 
 ```csharp
 this.WhenActivated(action => 
          action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
 ```
 
-This means that whenever the main window view is activated, the `DoShowDialogAsync` handler is registered.
-The action is disposable, so that _ReactiveUI_ can clean up the registration when 
-the main window view is not on the screen.
+Данный код означает, что когда активируется `view` основного окна, то регистрируется событие `DoShowDialogAsync`,
+Данное действие является `disposable`, поэтому _ReactiveUI_ может очистить регистрацию,
+когда `view` основного экрана уйдет с экрана.
 
-Your whole file should now look like this:
+Теперь ваш файл должен выглядеть следующим образом:
 
 ```csharp
 using Avalonia.ReactiveUI;
@@ -200,12 +201,12 @@ namespace AvaloniaApplication11.Views
 - Нажмите **Debug** для сборки и запуска проекта.
 - Нажмите кнопку с иконкой.
 
-It all works - but the dialog window opens at the same size as the main window, and offset from it.
+Все работает, но диалоговое окно имеет такой же размер что и основное, а также сдвинуто от него.
 
 ## Позиция и размер диалогового окна
 
-In the last step here, you will make the dialog smaller that the main window, and open centered on it. 
-You will also make the main window open in the center of the user's screen.
+На заключительном этапе, вы уменьшите размер диалогового окна относительно основного, но и разместите прямо по его центру.
+Вы также настроите, чтобы основное окно открывалось по центру экрана пользователя.
 
 Выполните следующие действия:
 
@@ -219,7 +220,7 @@ You will also make the main window open in the center of the user's screen.
 ```
 
 - Найдите и откройте файл **MusicStoreWindow.axaml**.
-- Add attributes for the width and height of the dialog, set at 1000 and 550 respectively.
+- В диалоговое окно добавьте атрибуты ширины и высоты, а их значения установите `1000` и `500`, соответственно.
 - Добавьте атрибут начальной позиции измените его значение на `CenterOwner`, как показано ниже:
 
 ```
@@ -233,7 +234,6 @@ You will also make the main window open in the center of the user's screen.
 
 <p><img className="image-medium-zoom" src={MusicStoreDialogOpenedScreenshot} alt="" /></p>
 
-The dialog window is now opened centered inside the main window.
+Теперь диалоговое окно открывается прямо по центру, внутри основного окна.
 
-On the next page, you will learn how to add some content to the dialog window to represent a search for albums,
-and present the results.
+На следующей странице вы узнаете, как изменить содержимое диалогового окна для поиска альбомов и их отображения.
