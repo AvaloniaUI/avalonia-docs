@@ -2,25 +2,26 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Dialog Return
+# Результат диалогового окна
 
-On the this page you add code to return a selected album from the search dialog to the main window.
+На этой страницу вы узнаете, как добавить в код возврат выбранного альбома в основное окно из диалогового окна поиска.
 
-## Buy Album Command
+## Команда покупки альбома
 
-The first step here is for you to add a reactive command to the music store view model. You will bind this to the **Buy Album** button on the music store view.  
+Первым шагом мы добавим реактивную команду во `view model` музыкального магазина.
+А также привяжем ее к кнопке **Buy Album** во `view`.
 
-Follow this procedure to add the reactive command:
+Выполните указанные ниже действия:
 
-- Stop the app if it is running.
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Add the reactive command declaration, as shown:
+- Остановите приложение, если оно запущено.
+- Найдите и откройте файл **MusicStoreViewModel.cs**.
+- Добавьте объявление реактивной команды, как показано ниже:
 
 ```csharp
 public ReactiveCommand<Unit, AlbumViewModel?> BuyMusicCommand { get; }
 ```
 
-- Add code to the constructor to initialize the reactive command, as shown:
+- Для инициализации реактивной команды, добавьте в конструктор указанный ниже код:
 
 ```csharp
 public MusicStoreViewModel()
@@ -34,35 +35,41 @@ public MusicStoreViewModel()
 }
 ```
 
-Notice you are using `ReactiveCommand` here. This is provided by the _ReactiveUI_ framework to implement some of the MVVM interactions. Specifically, it will allow us to pass an argument of class `AlbumViewModel` back to the main window view model, when the button is clicked.
+Обратите внимание, что здесь вы используете `ReactiveCommand`.
+Она поставляется фреймворком _RectiveUI_ для реализации взаимодействия по MVVM.
+Кстати, именно она поможет нам передать аргумент класса `AlbumViewModel` во `view model` основного окна при нажатии кнопки.
 
-## Button Data Binding
+## Data Binding (рус: Привязка данных) кнопки
 
-Your next step is bind the **Buy Album** button to the reactive command in the music store view model, follow this procedure:
+На этом шаге, к кнопке **Buy Album** вы привяжете реактивную команду из `view model` музыкального магазина.
+Выполните следующие действия:
 
-- Locate and open the **MusicStoreView .axaml** file. 
-- Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
+- Найдите и откройте файл **MusicStoreView .axaml**. 
+- Добавьте `data binding (рус: привязку данных)` `Command="{Binding BuyMusicCommand}"` к элементу кнопки.
 
-## Close the Dialog
+## Закрытие диалогового окна
 
-In this step, you will add some window management so that the dialog closes when the user clicks the **Buy Album** button. This is needed in addition to the data binding you just added.
+Теперь вы добавите немного управления окном, чтобы диалоговое окно закрывалось при нажатии кнопки **Buy Album**.
+Это необходимое дополнение к добавленной вам ранее `data binding (рус: привязки данных)`.
 
-As you saw during coding for the dialog open, you implement window management in the code-behind for a window, and use features of the `ReactiveWindow` from the _ReactiveUI_ framework.
+Как вы могли заметить при написании кода открытия диалогового окна, вы реализуете управление окном внутри кода для самого окна,
+и используете функции `ReactiveWindow` из фреймворка _ReactiveUI_.
 
-To add code to close the dialog, follow this procedure:
+Выполните указанные ниже действия:
 
-- Locate and open the **MusicStoreWindow.axaml.cs** file.
-- Add a reference to the system `using System;`
+- Найдите и откройте файл **MusicStoreWindow.axaml.cs**.
+- Добавьте ссылку `using System;`
 - Change the base class so the view inherits from `ReactiveWindow<MusicStoreViewModel>`.
-- Then add the following line to the end of the constructor:
+- Добавьте в конструктор указанную ниже строку:
 
 ```csharp
 this.WhenActivated(action => action(ViewModel!.BuyMusicCommand.Subscribe(Close)));
 ```
 
-The _ReactiveUI_ `WhenActivated` method defines what happens when the window is activated (becomes visible on the screen). The lambda expression will be called, and it is passed an action that is disposable, so that it can be unsubscribed when the window is no longer active.
+Метод `WhenActivated` из _ReactiveUI_, определяет действия, которые должны произойти при активации окна (когда оно появляется на экране).
+Будет вызвано лямбда-выражение, которое получит на вход одноразовое действие, поэтому от него можно отписаться, когда окно перестанет быть активным.
 
-Your music store window code-behind should now look like this.
+Ваш код окна музыкального приложения должен быть похож на указанный ниже:
 
 ```csharp
 using Avalonia.ReactiveUI;
@@ -83,10 +90,11 @@ namespace Avalonia.MusicStore.Views
 }
 ```
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
-- Type some search text.
-- Click an album to select it.
-- Click **Buy Album**.
+- Нажмите кнопку **Debug** в правом верхнем углу IDE, чтобы собрать и запустить проект.
+- Нажмите кнопку с иконкой.
+- Введите текст для поиска
+- Нажмите на альбом для его выбора.
+- Нажмите **Buy Album**.
 
-You will see the dialog close, but nothing happens in the main window! On the next page you will learn how to add the selected album to a collection in the main window.
+Диалоговое окно закрывается и... В основном окне ничего не происходит!
+На следующей страницу вы узнаете, как добавить  выбранный альбом в коллекцию основного окна.
