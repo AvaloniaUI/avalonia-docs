@@ -26,12 +26,12 @@ Here are some of the more commonly-used Avalonia controls, organized by category
 |Control|Description|
 |:----|:----|
 |[Button](../../../reference/controls/buttons/button.md)|The basic button control - can display text, an icon or both. Has standard 'click' behavior.|
-|[Repeat Button](../../../reference/controls/buttons/repeatbutton.md)|A button that raises its click event repeatedly when it is pressed and held.|
-|[Radio Button](../../../reference/controls/buttons/radiobutton.md)|A button that has a selected state. It can be placed in a group so that selection of one button deselects all the others in the group.|
-|[Toggle Button](../../../reference/controls/buttons/togglebutton.md)|A button that has a selected state and a unselected state. Subsequent clicks 'toggle' this state. A 'checked' pseudo class allows different styles to be allocated to the selected  and unselected states.|
-|[Button Spinner](../../../reference/controls/buttons/buttonspinner.md)|A control with two spin buttons and a content zone.|
-|[Split Button](../../../reference/controls/buttons/splitbutton.md)|This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like standard button, and the secondary part opens a flyout with additional actions.|
-|[Toggle Split Button](../../../reference/controls/buttons/togglesplitbutton.md)|This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like toggle button, and the secondary part opens a flyout with additional actions.|
+|[RepeatButton](../../../reference/controls/buttons/repeatbutton.md)|A button that raises its click event repeatedly when it is pressed and held.|
+|[RadioButton](../../../reference/controls/buttons/radiobutton.md)|A button that has a selected state. It can be placed in a group so that selection of one button deselects all the others in the group.|
+|[ToggleButton](../../../reference/controls/buttons/togglebutton.md)|A button that has a selected state and a unselected state. Subsequent clicks 'toggle' this state. A 'checked' pseudo class allows different styles to be allocated to the selected  and unselected states.|
+|[ButtonSpinner](../../../reference/controls/buttons/buttonspinner.md)|A control with two spin buttons and a content zone.|
+|[SplitButton](../../../reference/controls/buttons/splitbutton.md)|This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like standard button, and the secondary part opens a flyout with additional actions.|
+|[ToggleSplitButton](../../../reference/controls/buttons/togglesplitbutton.md)|This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like toggle button, and the secondary part opens a flyout with additional actions.|
 
 ## Repeating Data Controls
 
@@ -39,40 +39,40 @@ These controls display repeating data, in either a tabular or list format:
 
 |Control|Description|
 |:----|:----|
-|[Data Grid](../../../reference/controls/datagrid)|Displays data in a customizable grid.|
-|[Items Control](../../../reference/controls/itemscontrol.md)|Displays a collection of items from a bound data source.|
-|[Items Repeater](../../../reference/controls/itemsrepeater.md)|Displays repeating data from a bound data source. It has both a layout template and a data template.|
-|[List Box](../../../reference/controls/listbox.md)|A control with items that can be selected.|
-|[Combo Box](../../../reference/controls/combobox.md)|A control with a drop-down list with items that can be selected.|
+|[DataGrid](../../../reference/controls/datagrid)|Displays data in a customizable grid.|
+|[ItemsControl](../../../reference/controls/itemscontrol.md)|Displays a collection of items from a bound data source.|
+|[ItemsRepeater](../../../reference/controls/itemsrepeater.md)|Displays repeating data from a bound data source. It has both a layout template and a data template.|
+|[ListBox](../../../reference/controls/listbox.md)|A control with items that can be selected.|
+|[ComboBox](../../../reference/controls/combobox.md)|A control with a drop-down list with items that can be selected.|
 
 ## Text display and editing
 
 |Control|Description|
 |:----|:----|
-|[Auto Complete Box](../../../reference/controls/autocompletebox.md)|A control that shows a text box for user input and a drop-down that contains possible matches based on what has been typed.|
-|[Text Block](../../../reference/controls/detailed-reference/textblock.md)|A control that displays a block of text. Read-only.|
-|[Text Box](../../../reference/controls/detailed-reference/textbox.md)|Used to display or edit text without formatting restrictions.|
-|[Selectable Text Block](../../../reference/controls/detailed-reference/selectable-textblock.md)|Used to display or edit text without formatting restrictions. Allows selecting and copying.|
-|[Masked Text Box](../../../reference/controls/maskedtextbox.md)|Used to display text in the format contained in a mask; or used to edit text using the format mask to prevent invalid user input.|
+|[AutoCompleteBox](../../../reference/controls/autocompletebox.md)|A control that shows a text box for user input and a drop-down that contains possible matches based on what has been typed.|
+|[TextBlock](../../../reference/controls/detailed-reference/textblock.md)|A control that displays a block of text. Read-only.|
+|[TextBox](../../../reference/controls/detailed-reference/textbox.md)|Used to display or edit text without formatting restrictions.|
+|[SelectableTextBlock](../../../reference/controls/detailed-reference/selectable-textblock.md)|Used to display or edit text without formatting restrictions. Allows selecting and copying.|
+|[MaskedTextBox](../../../reference/controls/maskedtextbox.md)|Used to display text in the format contained in a mask; or used to edit text using the format mask to prevent invalid user input.|
 
 ## Value selection
 
 |Control|Type|Description|
 |:----|:----|:----|
-|[Check Box](../../../reference/controls/checkbox.md)|Boolean|True value presented as a check mark. Click interaction toggles the value. Has an option to display an 'unknown' value.|
+|[CheckBox](../../../reference/controls/checkbox.md)|Boolean|True value presented as a check mark. Click interaction toggles the value. Has an option to display an 'unknown' value.|
 |[Slider](../../../reference/controls/slider.md)|Double|Relative value compared to a maximum and minimum value presented as the position along the length of the slider track of the slider button. Drag interaction on the slider button can alter the value between the maximum and minimum values. Keyboard and click interactions can also nudge the value.|
 |[Calendar](../../../reference/controls/detailed-reference/calendar)|DateTime|The calendar is a control for users to select dates or date ranges.|
-|[Calendar Date Picker](../../../reference/controls/detailed-reference/calendar/calendar-date-picker.md)|DateTime|An extension of the calendar control that includes a text box and button.|
-|[Color Picker](../../../reference/controls/colorpicker)|Color / HsvColor|The color picker supports user-selection and editing of colors using a spectrum, palette and component sliders. It also supports an optional alpha component, RGB or HSV color models and hexadecimal color values.|
-|[Date Picker](../../../reference/controls/datepicker.md)|DateTime|The date picker has three 'spinner' controls to allow the user to pick a date value.|
-|[Time Picker](../../../reference/controls/detailed-reference/timepicker.md)|TimeSpan|The time picker has three 'spinner' controls to allow the user to pick a time from hours, minutes and seconds.|
+|[CalendarDatePicker](../../../reference/controls/detailed-reference/calendar/calendar-date-picker.md)|DateTime|An extension of the calendar control that includes a text box and button.|
+|[ColorPicker](../../../reference/controls/colorpicker)|Color / HsvColor|The color picker supports user-selection and editing of colors using a spectrum, palette and component sliders. It also supports an optional alpha component, RGB or HSV color models and hexadecimal color values.|
+|[DatePicker](../../../reference/controls/datepicker.md)|DateTime|The date picker has three 'spinner' controls to allow the user to pick a date value.|
+|[TimePicker](../../../reference/controls/detailed-reference/timepicker.md)|TimeSpan|The time picker has three 'spinner' controls to allow the user to pick a time from hours, minutes and seconds.|
 
 ## Displaying images
 
 |Control|Description|
 |:----|:----|
 |[Image](../../../reference/controls/image.md)|Displays a bitmap or vector image.|
-|[Path Icon](../../../reference/controls/detailed-reference/path-icon.md)|Draws a vector image using the current `Foreground`.|
+|[PathIcon](../../../reference/controls/detailed-reference/path-icon.md)|Draws a vector image using the current `Foreground`.|
 
 ## Menus and Popups
 
@@ -80,4 +80,4 @@ These controls display repeating data, in either a tabular or list format:
 |:----|:----|
 |[Menu](../../../reference/controls/menu.md)|Displays an application menu.|
 |[Flyouts](../../../reference/controls/flyouts.md)|Attaches a popup or a context menu to a control.|
-|[Tool Tip](../../../reference/controls/detailed-reference/tooltip.md)|Displays a tool tip when a control is hovered.|
+|[ToolTip](../../../reference/controls/detailed-reference/tooltip.md)|Displays a tool tip when a control is hovered.|

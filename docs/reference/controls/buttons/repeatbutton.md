@@ -1,4 +1,5 @@
 ---
+title: RepeatButton
 description: REFERENCE - Built-in Controls
 ---
 
@@ -6,7 +7,7 @@ import RepeatButtonScreenshot from '/img/gitbook-import/assets/repeatbutton.gif'
 
 # Repeat Button
 
-The repeat button is a control that has the added feature of regularly generating click events while the button is being pressed down.
+The `RepeatButton` is a control that has the added feature of regularly generating click events while the button is being pressed down.
 
 ## Useful Properties
 

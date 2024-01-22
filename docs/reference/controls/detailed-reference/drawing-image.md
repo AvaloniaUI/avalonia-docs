@@ -1,8 +1,9 @@
 ---
+title: DrawingImage
 description: REFERENCE - Built-in Controls
 ---
 
-# Drawing Image
+# DrawingImage
 
 ## Useful Properties
 

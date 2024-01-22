@@ -1,14 +1,15 @@
 ---
+title: TrayIcon
 description: REFERENCE - Built-in Controls
 ---
 
 import TrayIconScreenshot from '/img/gitbook-import/assets/tray.gif';
 
-# Tray Icon
+# TrayIcon
 
 ## Overview
 
-The tray icon allows an _Avalonia UI_ application to display an icon and a native menu in the system tray. It is supported on _Windows_, _macOS_ and some _Linux_ distributions (it is confirmed to work on _Ubuntu_).
+The `TrayIcon` allows an _Avalonia UI_ application to display an icon and a native menu in the system tray. It is supported on _Windows_, _macOS_ and some _Linux_ distributions (it is confirmed to work on _Ubuntu_).
 
 You must define a tray menu in the application XAML file.
 

@@ -1,13 +1,14 @@
 ---
+title: DockPanel
 description: REFERENCE - Built-in Controls
 ---
 
 import DockPanelTopScreenshot from '/img/gitbook-import/assets/image (23).png';
 import DockPanelFillNoOverlapScreenshot from '/img/gitbook-import/assets/image (3) (2).png'; 
 
-# Dock Panel
+# DockPanel
 
-The dock panel control arranges its child controls along specified 'docking edges' (top, bottom, left, and right) with the last child filling any remaining space. The dock panel can maintain the child control's dimension that is parallel to the docking edge, so that the child fills all the available space along the docking edge.
+The `DockPanel` control arranges its child controls along specified 'docking edges' (top, bottom, left, and right) with the last child filling any remaining space. The dock panel can maintain the child control's dimension that is parallel to the docking edge, so that the child fills all the available space along the docking edge.
 
 For example, if the docking edge on a child control is defined as 'top' and it has a height defined, but no width, it will draw like this:
 

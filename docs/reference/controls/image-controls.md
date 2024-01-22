@@ -12,6 +12,6 @@ If you plan to bind an image source, you will need to use an image converter. To
 
 |                                                      |                                                  |   |
 | ---------------------------------------------------- | ------------------------------------------------ | - |
-| [Drawing Image](detailed-reference/drawing-image.md) | Displays a vector image.                         |   |
+| [DrawingImage](detailed-reference/drawing-image.md) | Displays a vector image.                         |   |
 | [Image](image.md)                                    | Displays a bitmap image.                         |   |
-| [Path Icon](detailed-reference/path-icon.md)         | Draws an icon from stream geometry instructions. |   |
+| [PathIcon](detailed-reference/path-icon.md)         | Draws an icon from stream geometry instructions. |   |

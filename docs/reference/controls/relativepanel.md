@@ -1,12 +1,13 @@
 ---
+title: RelativePanel
 description: REFERENCE - Built-in Controls
 ---
 
 import RelativePanelScreenshot from '/img/gitbook-import/assets/image (19) (2).png';
 
-# Relative Panel
+# RelativePanel
 
-The relative panel control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
+The `RelativePanel` control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
 
 :::info
 To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones).

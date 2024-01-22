@@ -1,12 +1,13 @@
 ---
+title: ScrollViewer
 description: REFERENCE - Built-in Controls
 ---
 
 import ScrollViewerScreenshot from '/img/gitbook-import/assets/scrollview.gif';
 
-# Scroll Viewer
+# ScrollViewer
 
-The scroll viewer control can have content that is bigger than its content zone, and will can provide scroll bars to move hidden content into view.
+The `ScrollViewer` control can have content that is bigger than its content zone, and will can provide scroll bars to move hidden content into view.
 
 A `ScrollViewer` cannot be contained in a control that has infinite height or width (depending on scrolling direction) such as a `StackPanel`. To avoid it, you can either set fixed Height/Width or MaxHeight/MaxWidth or choose another container panel.
 

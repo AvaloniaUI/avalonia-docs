@@ -1,12 +1,13 @@
 ---
+title: MaskedTextBox
 description: REFERENCE - Built-in Controls
 ---
 
 import MaskedTextBoxScreenshot from '/img/gitbook-import/assets/masked.gif';
 
-# Masked Text Box
+# MaskedTextBox
 
-The masked text box presents an area for typed (keyboard) input, but where the format and characters permitted can be constrained by a mask pattern formed from special characters.
+The `MaskedTextBox` presents an area for typed (keyboard) input, but where the format and characters permitted can be constrained by a mask pattern formed from special characters.
 
 The mask pattern can also contain literal characters that appear in the input, and cannot be typed over.
 

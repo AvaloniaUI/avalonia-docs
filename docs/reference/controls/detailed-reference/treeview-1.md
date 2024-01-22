@@ -1,13 +1,14 @@
 ---
+title: TreeView
 description: REFERENCE - Built-in Controls
 ---
 
 import TreeViewAnimalHierarchyScreenshot from '/img/gitbook-import/assets/tree1.gif';
 import TreeViewEnhancedAnimalHierarchyScreenshot from '/img/gitbook-import/assets/tree2.gif';
 
-# Tree View
+# TreeView
 
-The tree view control can present hierarchical data and allows item selection. The items are templated so you can customise how they are displayed.
+The `TreeView` control can present hierarchical data and allows item selection. The items are templated so you can customise how they are displayed.
 
 There are two data sources: the main items source for the control, this gives the root of the hierarchical data. Then there is the items source in the item template which allows the control to list the next level in the hierarchical data.
 

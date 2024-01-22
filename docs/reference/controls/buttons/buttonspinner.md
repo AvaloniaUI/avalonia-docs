@@ -1,4 +1,5 @@
 ---
+title: ButtonSpinner
 description: REFERENCE - Built-in Controls
 ---
 
@@ -6,7 +7,7 @@ import ButtonSpinnerScreenshot from '/img/gitbook-import/assets/image (3) (3).pn
 
 # Button Spinner
 
-The button spinner presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
+The `ButtonSpinner` presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
 
 ## Useful Properties
 

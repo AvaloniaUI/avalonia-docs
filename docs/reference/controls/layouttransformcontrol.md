@@ -1,10 +1,11 @@
 ---
+title: LayoutTransformControl
 description: REFERENCE - Built-in Controls
 ---
 
-# Layout Transform Control
+# LayoutTransformControl
 
-The layout transform control can dynamically transform a UI layout completely within a view.
+The `LayoutTransformControl` can dynamically transform a UI layout completely within a view.
 
 ## Useful Properties
 

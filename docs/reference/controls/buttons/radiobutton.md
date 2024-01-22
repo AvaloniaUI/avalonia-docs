@@ -1,4 +1,5 @@
 ---
+title: RadioButton
 description: REFERENCE - Built-in Controls
 ---
 
@@ -6,7 +7,7 @@ import RadioButtonScreenshot from '/img/gitbook-import/assets/radio.gif';
 
 # Radio Button
 
-The radio button control presents a group of options from which only one may be selected at a time. A selected option is drawn as a filled circle, and an unselected option as an empty circle.
+The `RadioButton` control presents a group of options from which only one may be selected at a time. A selected option is drawn as a filled circle, and an unselected option as an empty circle.
 
 The content of the radio button control is presented as a label next to the circle.
 

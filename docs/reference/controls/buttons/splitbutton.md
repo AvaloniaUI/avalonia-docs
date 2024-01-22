@@ -1,4 +1,9 @@
-# Split Button
+---
+title: SplitButton
+description: REFERENCE - Built-in Controls
+---
+
+# SplitButton
 
 import SplitButtonClosedScreenshot from '/img/gitbook-import/assets/SplitButtonClosed.png';
 import SplitButtonOpenedScreenshot from '/img/gitbook-import/assets/SplitButtonOpened.png';

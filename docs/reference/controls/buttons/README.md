@@ -22,13 +22,13 @@ _Avalonia UI_ has a variety of button-type controls:
         </tr>
         <tr>
             <td>
-                <a href="repeatbutton">Repeat Button</a>
+                <a href="repeatbutton">RepeatButton</a>
             </td>
             <td>A button that raises its click event repeatedly when it is pressed and held.</td>
         </tr>
         <tr>
             <td>
-                <a href="radiobutton">Radio Button</a>
+                <a href="radiobutton">RadioButton</a>
             </td>
             <td>A button that has a selected state. It can be placed in a group so that selection of one button deselects all the others in the group.</td>
         </tr>
@@ -40,19 +40,19 @@ _Avalonia UI_ has a variety of button-type controls:
         </tr>
         <tr>
             <td>
-                <a href="buttonspinner">Button Spinner</a>
+                <a href="buttonspinner">ButtonSpinner</a>
             </td>
             <td>A control with two spin buttons and a content zone.</td>
         </tr>
         <tr>
             <td>
-                <a href="splitbutton">Split Button</a>
+                <a href="splitbutton">SplitButton</a>
             </td>
             <td>This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like standard button, and the secondary part opens a flyout with additional actions.</td>
         </tr>
         <tr>
             <td>
-                <a href="togglesplitbutton">Toggle Split Button</a>
+                <a href="togglesplitbutton">ToggleSplitButton</a>
             </td>
             <td>This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like toggle button, and the secondary part opens a flyout with additional actions.</td>
         </tr>

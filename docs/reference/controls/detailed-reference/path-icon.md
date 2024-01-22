@@ -1,12 +1,13 @@
 ---
+title: PathIcon
 description: REFERENCE - Built-in Controls
 ---
 
 import PathIconHouseScreenshot from '/img/gitbook-import/assets/image (18).png';
 
-# Path Icon
+# PathIcon
 
-The path icon control can draw an icon graphic from a stream geometry. For example, you can use the icon geometries from the _Avalonia UI_ Fluent icons resource.
+The `PathIcon` control can draw an icon graphic from a stream geometry. For example, you can use the icon geometries from the _Avalonia UI_ Fluent icons resource.
 
 :::info
 To see the full list of Fluent icons available with _Avalonia UI_, see [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)

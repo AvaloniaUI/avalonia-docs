@@ -1,13 +1,14 @@
 ---
+title: TransitioningContentControl
 description: REFERENCE - Built-in Controls
 ---
 
 import TransitioningContentControlFadeScreenshot from '/img/controls/transitioningcontentcontrol/TransitioningContentControl_01.webp';
 import TransitioningContentControlSlideScreenshot from '/img/controls/transitioningcontentcontrol/TransitioningContentControl_02.webp';
 
-# Transitioning Content Control
+# TransitioningContentControl
 
-The transitioning content control can use a page transition to animate a content change on an inner control.
+The `TransitioningContentControl` can use a page transition to animate a content change on an inner control.
 
 You can use this control to display a collection of different images in a slideshow.
 

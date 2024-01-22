@@ -1,12 +1,13 @@
 ---
+title: ContextMenu
 description: REFERENCE - Built-in Controls
 ---
 
 import ContextMenuScreenshot from '/img/gitbook-import/assets/contextmenu.gif';
 
-# Context Menu
+# ContextMenu
 
-The context menu can be applied to any host control to implement a right-click 'context sensitive' menu. This uses an **attached property** of the host control.
+The `ContextMenu` can be applied to any host control to implement a right-click 'context sensitive' menu. This uses an **attached property** of the host control.
 
 :::info
 To review the concept behind this use of  an **attached property**, see [here](../../concepts/attached-property.md).

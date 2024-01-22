@@ -1,10 +1,11 @@
 ---
+title: CalendarDatePicker
 description: REFERENCE - Built-in Controls
 ---
 
 import CalendarDatePickerScreenshot from '/img/gitbook-import/assets/calendardatepicker.gif';
 
-# Calendar Date Picker
+# CalendarDatePicker
 
 This is an extension of the calendar control that includes a text box and button. The calendar shows when the user clicks the button (and hides on a subsequent click). The selected date shows in the text box when a date on the calendar is clicked.
 

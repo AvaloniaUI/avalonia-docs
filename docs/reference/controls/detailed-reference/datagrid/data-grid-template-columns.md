@@ -1,8 +1,9 @@
 ---
+title: DataGridTemplateColumn
 description: REFERENCE - Built-in Controls
 ---
 
-# Data Grid Template Columns
+# DataGridTemplateColumn
 
 You can use this column type to customise the display and editing for a data grid column.
 

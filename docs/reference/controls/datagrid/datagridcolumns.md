@@ -1,12 +1,13 @@
 ---
+title: DataGridColumn
 description: REFERENCE - Built-in Controls
 ---
 
 import DataGridColumnPreviewScreenshot from '/img/gitbook-import/assets/image (4) (1).png';
 
-# Data Grid Columns
+# DataGridColumn
 
-A data grid can contain multiple data grid columns and _Avalonia UI_ has two built-in column types which can be used to display a different data types, and a template type that can customise the column appearance.
+A `DataGrid` can contain multiple data grid columns and _Avalonia UI_ has two built-in column types which can be used to display a different data types, and a template type that can customise the column appearance.
 
 | Column Type              | Description                                                                                                                                                               |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

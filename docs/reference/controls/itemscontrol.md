@@ -1,12 +1,13 @@
 ---
+title: ItemsControl
 description: REFERENCE - Built-in Control
 ---
 
 import ItemsControlScreenshot from '/img/gitbook-import/assets/items.gif';
 
-# Items Control
+# ItemsControl
 
-The items control is the basis for controls that display repeating data (like the list box for example). It has no built-in formatting or interactions; but you can use it with data binding, styling and data templates to create a completely custom repeating data control.
+The `ItemsControl` is the basis for controls that display repeating data (like the list box for example). It has no built-in formatting or interactions; but you can use it with data binding, styling and data templates to create a completely custom repeating data control.
 
 :::info
 To see the full list of _Avalonia UI_ built-in repeating data controls, see [here](repeating-data-controls.md).

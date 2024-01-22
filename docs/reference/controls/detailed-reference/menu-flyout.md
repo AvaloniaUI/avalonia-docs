@@ -1,12 +1,13 @@
 ---
+title: MenuFlyout
 description: REFERENCE - Built-in Controls
 ---
 
 import MenuFlyoutScreenshot from '/img/gitbook-import/assets/menuflyout.gif';
 
-# Menu Flyout
+# MenuFlyout
 
-A menu flyout allows you to host a simple menu as the flyout for a control. You might use this as an alternative to the context menu.
+A 'MenuFlyout' allows you to host a simple menu as the flyout for a control. You might use this as an alternative to the context menu.
 
 :::info
 For details of the context menu, see the reference [here](../contextmenu.md).

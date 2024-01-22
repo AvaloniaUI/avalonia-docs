@@ -1,12 +1,13 @@
 ---
+title: TextBlock
 description: REFERENCE - Built-in Controls
 ---
 
 import TextBlockStylePreviewScreenshot from '/img/gitbook-import/assets/image (2) (5).png';
 
-# Text Block
+# TextBlock
 
-The text block is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.
+The `TextBlock` is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.
 
 ## Useful Properties
 

@@ -1,12 +1,13 @@
 ---
+title: ProgressBar
 description: REFERENCE - Built-in Controls
 ---
 
 import ProgressBarScreenshot from '/img/gitbook-import/assets/progressbar.png';
 
-# Progress Bar
+# ProgressBar
 
-The progress bar presents a value as a proportionately filled bar, with the option to show a caption.
+The `ProgressBar` presents a value as a proportionately filled bar, with the option to show a caption.
 
 ## Useful Properties
 

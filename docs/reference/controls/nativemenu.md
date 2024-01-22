@@ -1,10 +1,11 @@
 ---
+title: NativeMenu
 description: REFERENCE - Built-in Controls
 ---
 
-# Native Menu
+# NativeMenu
 
-The native menu can display a menu on _macOS_ and some Linux distributions.
+The `NativeMenu` can display a menu on _macOS_ and some Linux distributions.
 
 :::warning
 This control can only be used attached to a tray icon. For full details about the tray icon, see the reference [here](detailed-reference/tray-icon.md).

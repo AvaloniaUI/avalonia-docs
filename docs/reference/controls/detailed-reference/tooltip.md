@@ -1,13 +1,14 @@
 ---
+title: ToolTip
 description: REFERENCE - Built-in Controls
 ---
 
 import ToolTipTextScreenshot from '/img/gitbook-import/assets/tooltip.gif';
 import ToolTipContentScreenshot from '/img/gitbook-import/assets/tooltip2.gif';
 
-# Tool Tip
+# ToolTip
 
-The tool tip is a popup that shows its content when the user hovers over the 'host' control to which it is attached.
+The `ToolTip` is a popup that shows its content when the user hovers over the 'host' control to which it is attached.
 
 ## Useful Properties
 

@@ -1,13 +1,14 @@
 ---
+title: CheckBox
 description: REFERENCE - Built-in Control
 ---
 
 import CheckBoxTwoStateScreenshot from '/img/gitbook-import/assets/checkbox1.gif';
 import CheckBoxThreeStateScreenshot from '/img/gitbook-import/assets/checkbox2.gif';
 
-# Check Box
+# CheckBox
 
-The check box control presents a Boolean value where the true value is represented using a check mark, and the false value is an empty box. The check box has an option to present a nullable Boolean, where the null value represents 'unknown' and is drawn as a shaded box.
+The `CheckBox` control presents a Boolean value where the true value is represented using a check mark, and the false value is an empty box. The check box has an option to present a nullable Boolean, where the null value represents 'unknown' and is drawn as a shaded box.
 
 Click interaction toggles the value in the sequence: checked, unchecked, unknown (if three-state).
 

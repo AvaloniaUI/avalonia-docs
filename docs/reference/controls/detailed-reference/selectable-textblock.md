@@ -1,12 +1,13 @@
 ---
+title: SelectableTextBlock
 description: REFERENCE - Built-in Controls
 ---
 
 import TextBlockStylePreviewScreenshot from '/img/gitbook-import/assets/image (2) (5).png';
 
-# Selectable Text Block
+# SelectableTextBlock
 
-The selectable text block is a label for the display of text that allows selecting and copying of text. It can display multiple lines, and features full control over the font used.
+The `SelectableTextBlock` block is a label for the display of text that allows selecting and copying of text. It can display multiple lines, and features full control over the font used.
 
 ## Useful Properties
 

@@ -1,12 +1,13 @@
 ---
+title: ScrollBar
 description: REFERENCE - Built-in Controls
 ---
 
 import ScrollBarScreenshot from '/img/gitbook-import/assets/scrollbar.gif';
 
-# Scroll Bar
+# ScrollBar
 
-A scroll bar control can be displayed in a horizontal or vertical orientation. The default value (double) range for the scroll bar is 0-100.
+A `ScrollBar` control can be displayed in a horizontal or vertical orientation. The default value (double) range for the scroll bar is 0-100.
 
 You can configure the range and how the value changes (small and large steps). Small steps can be controlled by the keyboard arrow keys, and large steps by mouse clicks in the scroll bar track, or by the page-up and page-down keys.
 

@@ -1,4 +1,5 @@
 ---
+title: ListBox
 description: REFERENCE - Built-in Controls
 ---
 
@@ -7,9 +8,9 @@ import ListBoxDataTemplateScreenshot from '/img/gitbook-import/assets/listbox2.g
 import ListBoxDevToolsScreenshot from '/img/gitbook-import/assets/image (6) (1) (4).png';
 import ListBoxItemStyleScreenshot from '/img/gitbook-import/assets/listbox3.gif';
 
-# List Box
+# ListBox
 
-The list box displays items from an items source collection, on multiple lines, and allows individual or multiple selection.
+The `ListBox` displays items from an items source collection, on multiple lines, and allows individual or multiple selection.
 
 The items in the list can be composed, bound and templated.
 

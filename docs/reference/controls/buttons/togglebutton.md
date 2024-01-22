@@ -1,4 +1,5 @@
 ---
+title: ToggleButton
 description: REFERENCE - Built-in Controls
 ---
 
@@ -6,7 +7,7 @@ import ToggleButtonScreenshot from '/img/gitbook-import/assets/toggle.gif';
 
 # Toggle Button
 
-The toggle button can present a Boolean value by using styles and a pseudo class that is either present (true) or absent (false).
+The `ToggleButton` can present a Boolean value by using styles and a pseudo class that is either present (true) or absent (false).
 
 :::info
 To review the concepts behind a pseudo class, see [here](../../../concepts/pseudo-classes.md).

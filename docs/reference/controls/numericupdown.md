@@ -1,13 +1,14 @@
 ---
+title: NumericUpDown
 description: REFERENCE - Built-in Controls
 ---
 
 import NumericUpDownBasicScreenshot from '/img/gitbook-import/assets/updown.gif';
 import NumericUpDownFormatStringScreenshot from '/img/gitbook-import/assets/updown2.gif';
 
-# Numeric Up-Down
+# NumericUpDown
 
-The numeric up-down is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The mouse wheel (if present) will also change the value.
+The `NumericUpDown` is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The mouse wheel (if present) will also change the value.
 
 ## Useful Properties
 

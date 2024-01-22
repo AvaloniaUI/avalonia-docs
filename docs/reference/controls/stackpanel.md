@@ -1,12 +1,13 @@
 ---
+title: StackPanel
 description: REFERENCE - Built-in Controls
 ---
 
 import StackPanelVerticalRectanglesScreenshot from '/img/gitbook-import/assets/image (14) (2).png';
 
-# Stack Panel
+# StackPanel
 
-The stack panel arranges its child controls by stacking them horizontally or vertically. The stack panel is often used to arrange a small subsection of the UI on a page.
+The `StackPanel` arranges its child controls by stacking them horizontally or vertically. The stack panel is often used to arrange a small subsection of the UI on a page.
 
 Inside a stack panel, if the size property perpendicular to the stack on a child control is not set, the child control will stretch to fill the available space. For example in horizontal orientation, the height of child controls will stretch if not set.
 

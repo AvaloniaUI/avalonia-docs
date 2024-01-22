@@ -1,12 +1,13 @@
 ---
+title: TextBox
 description: REFERENCE - Built-in Controls
 ---
 
 import TextBoxSampleScreenshot from '/img/gitbook-import/assets/textbox.gif';
 
-# Text Box
+# TextBox
 
-The text box presents an area for typed (keyboard) input. It can be for a single or multiple lines of input.
+The `TextBox` presents an area for typed (keyboard) input. It can be for a single or multiple lines of input.
 
 ## Useful Properties
 

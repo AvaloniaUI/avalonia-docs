@@ -1,13 +1,14 @@
 ---
+title: SplitView
 description: REFERENCE - Built-in Controls
 ---
 
 import SplitViewScreenshot from '/img/gitbook-import/assets/image (5) (5) (1).png';
 import SplitViewCompactScreenshot from '/img/gitbook-import/assets/splitview2.gif';
 
-# Split View
+# SplitView
 
-A split view presents a container with two parts: the main content zone and a side pane. The main content zone is always visible. The pane can be expanded and collapsed. The collapsed pane can be completely hidden, or left slightly open - with enough space to host some icon buttons for example. 
+A `SplitView` presents a container with two parts: the main content zone and a side pane. The main content zone is always visible. The pane can be expanded and collapsed. The collapsed pane can be completely hidden, or left slightly open - with enough space to host some icon buttons for example. 
 
 ## Useful Properties
 

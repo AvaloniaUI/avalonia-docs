@@ -1,13 +1,14 @@
 ---
+title: ItemsRepeater
 description: REFERENCE - Built-in Controls
 ---
 
 import ItemsRepeaterVerticalScreenshot from '/img/gitbook-import/assets/image (2) (6).png';
 import ItemsRepeaterHorizontalScreenshot from '/img/gitbook-import/assets/repeater.gif';
 
-# Items Repeater
+# ItemsRepeater
 
-The items repeater can display repeating data from a bound data source. It has both a layout template and a data template.
+The `ItemsRepeater` can display repeating data from a bound data source. It has both a layout template and a data template.
 
 :::info
 The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [here](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater).

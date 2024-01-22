@@ -1,12 +1,13 @@
 ---
+title: DatePicker
 description: REFERENCE - Built-in Controls
 ---
 
 import DatePickerScreenshot from '/img/gitbook-import/assets/datepicker.gif';
 
-# Date Picker
+# DatePicker
 
-The date picker has three 'spinner' controls to allow the user to pick a date value. The spinners display when the control is clicked.
+The `DatePicker` has three 'spinner' controls to allow the user to pick a date value. The spinners display when the control is clicked.
 
 ## Useful Properties
 

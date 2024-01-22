@@ -1,4 +1,5 @@
 ---
+title: ComboBox
 description: REFERENCE - Built-in Control
 ---
 
@@ -6,9 +7,9 @@ import ComboBoxMaxDropDownHeightScreenshot from '/img/gitbook-import/assets/comb
 import ComboBoxComplexContentScreenshot from '/img/gitbook-import/assets/combobox2.gif';
 import ComboBoxDataTemplateScreenshot from '/img/gitbook-import/assets/combobox3.gif';
 
-# Combo Box
+# ComboBox
 
-The combo box presents a selected item and a drop-down button that displays a list of options. The length and height of the combo box are determined by the selected item, unless otherwise defined.
+The `ComboBox` presents a selected item and a drop-down button that displays a list of options. The length and height of the combo box are determined by the selected item, unless otherwise defined.
 
 The items in the list can be composed, bound and templated.
 

@@ -1,10 +1,11 @@
 ---
+title: TabStrip
 description: REFERENCE - Built-in Controls
 ---
 
 import TabStripNavigation from '/img/gitbook-import/assets/tabstrip.gif';
 
-# Tab Strip
+# TabStrip
 
 Displays a strip of tab headers. You can use this control as a horizontal menu.
 

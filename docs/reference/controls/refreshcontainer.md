@@ -1,10 +1,11 @@
 ---
+title: RefreshContainer
 description: REFERENCE - Built-in Controls
 ---
 
-# Refresh Container
+# RefreshContainer
 
-The refresh container allows a user to pull down on content or a list of data to refresh the content or retrieve more data. The refresh progress is indicated by a `RefreshVisualizer` that appears from the edge by which the pull gesture was initiated. The content of a `RefreshContainer` must be a `ScrollViewer`, or a control that has one.
+The `RefreshContainer` allows a user to pull down on content or a list of data to refresh the content or retrieve more data. The refresh progress is indicated by a `RefreshVisualizer` that appears from the edge by which the pull gesture was initiated. The content of a `RefreshContainer` must be a `ScrollViewer`, or a control that has one.
 
 ## Example
 

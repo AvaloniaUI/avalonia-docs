@@ -1,13 +1,14 @@
 ---
+title: TabControl
 description: REFERENCE - Built-in Controls
 ---
 
 import TabControlZonesScreenshot from '/img/gitbook-import/assets/image (2) (4).png';
 import TabControlNavigationScreenshot from '/img/gitbook-import/assets/tabcontrol1.gif';
 
-# Tab Control
+# TabControl
 
-The tab control allows you to sub-divide a view into tab items.
+The `TabControl` allows you to sub-divide a view into tab items.
 
 <img src={TabControlZonesScreenshot} alt="" />
 

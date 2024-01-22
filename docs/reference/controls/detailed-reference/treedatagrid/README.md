@@ -1,4 +1,5 @@
 ---
+title: TreeDataGrid
 description: REFERENCE - Built-in Controls
 ---
 
@@ -6,9 +7,9 @@ import TreeDataGridFilesScreenshot from '/img/gitbook-import/assets/files.png';
 import TreeDataGridCountriesScreenshot from '/img/gitbook-import/assets/countries.png';
 import TreeDataGridNuGetScreenshot from '/img/gitbook-import/assets/image (4).png';
 
-# Tree Data Grid
+# TreeDataGrid
 
-The tree data grid displays hierarchical and tabular data together in a single view. It is a combination of a tree view and data grid.
+The `TreeDataGrid` displays hierarchical and tabular data together in a single view. It is a combination of a tree view and data grid.
 
 :::info
 For full information on the tree view control, see the reference [here](../treeview-1.md).

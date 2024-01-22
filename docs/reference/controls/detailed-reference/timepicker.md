@@ -1,12 +1,13 @@
 ---
+title: TimePicker
 description: REFERENCE - Built-in Controls
 ---
 
 import TimePickerScreenshot from '/img/gitbook-import/assets/timepicker.gif';
 
-# Time Picker
+# TimePicker
 
-The time picker has two or three 'spinner' controls to allow the user to pick a time value. The time picker can work in 24 or 12 hour formats. The picker controls display when the control is clicked.
+The `TimePicker` has two or three 'spinner' controls to allow the user to pick a time value. The time picker can work in 24 or 12 hour formats. The picker controls display when the control is clicked.
 
 ## Useful Properties
 
