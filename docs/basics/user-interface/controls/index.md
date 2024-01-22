@@ -11,7 +11,7 @@ Controls are UI elements that allow users to interact with an application. They 
 - **Labels**: Labels are used to display static text or captions for other controls. They provide additional information or context to the user and are generally non-interactive.
 - **Checkboxes and RadioButtons**: Checkboxes and radio buttons are used for selection and multiple-choice options. Checkboxes allow users to select one or more options, while radio buttons enable users to choose a single option from a group.
 - **Sliders**: Sliders are used to select a value from a range. They provide a visual representation of a value that can be adjusted by dragging a handle along a track. Sliders are commonly used for settings such as volume controls or image adjustments.
-- **ListBoxes and ComboBoxes**: List boxes and combo boxes allow users to select an item from a list or a dropdown menu. List boxes display multiple items at once, while combo boxes show a single item initially and expand to display a list when clicked.
+- **ListBoxes and ComboBoxes**: ListBoxes and combo boxes allow users to select an item from a list or a dropdown menu. ListBoxes display multiple items at once, while ComboBoxes show a single item initially and expand to display a list when clicked.
 
 These are just a few examples of the many controls available in Avalonia UI. Each control has its own set of properties, methods, and events, allowing developers to customize their appearance and behavior to suit their application's needs.
 
@@ -20,11 +20,11 @@ These are just a few examples of the many controls available in Avalonia UI. Eac
 To get started with using controls in Avalonia UI, you can refer to the documentation for each control type. The documentation provides detailed explanations, examples, and code snippets to help you understand and utilize the controls effectively.
 
 - [Button Control Documentation](../../../reference/controls/buttons/button)
-- [Text Box Control Documentation](../../../reference/controls/detailed-reference/textbox)
+- [TextBox Control Documentation](../../../reference/controls/detailed-reference/textbox)
 - [Label Control Documentation](../../../reference/controls/detailed-reference/label)
 - [Checkbox Control Documentation](../../../reference/controls/checkbox)
 - [Slider Control Documentation](../../../reference/controls/slider)
-- [List Box Control Documentation](../../../reference/controls/listbox)
+- [ListBox Control Documentation](../../../reference/controls/listbox)
 
 By exploring these resources, you'll gain a solid foundation in using controls within Avalonia UI and be able to create rich and interactive user interfaces for your applications.
 
