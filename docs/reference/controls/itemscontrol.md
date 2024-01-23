@@ -17,9 +17,34 @@ To see the full list of _Avalonia UI_ built-in repeating data controls, see [her
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="316">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ItemsSource</code></td><td>The bound collection that is used as the data source for the control.</td></tr><tr><td><code>ItemsControl.ItemTemplate</code></td><td>Attached property element to contain the data template for an individual item. </td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th width="316">Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ItemsSource</code></td>
+      <td>The bound collection that is used as the data source for the control.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.ItemTemplate</code></td>
+      <td>Attached property element to contain the data template for an individual item.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.ItemPanel</code></td>
+      <td>Parent panel to display the items in. By default, this is a StackPanel</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.Styles</code></td>
+      <td>The style that is applied to each individual item.</td>
+    </tr>
+  </tbody>
+</table>
 
-## Example
+## Example 01
 
 This example binds an observable collection of crockery items to an items control, where some custom layout and formatting is provided by a data template:
 
@@ -88,6 +113,60 @@ public class Crockery
 ```
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
+
+<img src={ItemsControlScreenshot} alt="" />
+
+## Example 02
+This example bind an observable collection of tile items to an items control. The ItemPanel is set to a canvas and we use a style to position the Tile within the canvas.
+
+```xml
+<ItemsControl ItemsSource="{Binding TileList}">
+  <ItemsControl.ItemsPanel>
+    <ItemsPanelTemplate>
+      <Canvas Width="50" Height="50" Background="Yellow" Margin="3"/>
+  </ItemsPanelTemplate>
+  </ItemsControl.ItemsPanel>
+  <ItemsControl.ItemTemplate>
+    <DataTemplate>
+      <Rectangle Fill="Green" Height="{Binding Size}" Width="{Binding Size}"/>
+    </DataTemplate>
+  </ItemsControl.ItemTemplate>
+  <ItemsControl.Styles>
+    <Style Selector="ContentPresenter"  x:DataType="vm:Tile">
+      <Setter Property="Canvas.Left" Value="{Binding TopX}"/>
+      <Setter Property="Canvas.Top" Value="{Binding TopY}"/>
+    </Style>
+  </ItemsControl.Styles>
+</ItemsControl>
+```
+
+```csharp title='C# View Model'
+using AvaloniaControls.Models;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
+namespace AvaloniaControls.ViewModels
+{
+    public class MainWindowViewModel : ViewModelBase
+    {
+        public ObservableCollection<Tile> TileList { get; set; }
+        
+        public MainWindowViewModel()
+        {
+            TileList = new ObservableCollection<Tile>(new List<Tile>
+            {
+                new Tile(10, 10, 10),
+                new Tile(10, 20, 20),
+                new Tile(10, 30, 30),
+            });    
+        }
+    }
+}
+```
+
+```csharp title='C# Item Class'
+public record Tile(int Size, int TopX, int TopY);
+```
 
 <img src={ItemsControlScreenshot} alt="" />
 
