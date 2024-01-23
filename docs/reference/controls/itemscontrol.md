@@ -32,15 +32,15 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td><code>ItemsControl.ItemTemplate</code></td>
-      <td>Attached property element to contain the data template for an individual item.</td>
+      <td>The item template, contains a DataTemplate which will be applied to individual items and can be used to change how items look.</td>
     </tr>
     <tr>
       <td><code>ItemsControl.ItemPanel</code></td>
-      <td>Parent panel to display the items in. By default, this is a StackPanel</td>
+      <td>The container panel to place items in.</td>
     </tr>
     <tr>
       <td><code>ItemsControl.Styles</code></td>
-      <td>The style that is applied to each individual item.</td>
+      <td>The style that is applied to any child element of the ItemControl.</td>
     </tr>
   </tbody>
 </table>
@@ -118,7 +118,7 @@ The view resizes horizontally, but content is hidden when it is too high. This c
 <img src={example01Screenshot} alt="" />
 
 ## Example 02
-This example bind an observable collection of tile items to an items control. The ItemPanel is set to a canvas and we use a style to position the Tile within the canvas.
+This example binds an observable collection of Rectangles (which are bound to a tile VM) to an ItemsControl. The ItemPanel is set to a canvas and we use a style to position the Tile within the canvas.
 
 ```xml
 <ItemsControl ItemsSource="{Binding TileList}">
