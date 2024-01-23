@@ -3,7 +3,8 @@ title: ItemsControl
 description: REFERENCE - Built-in Control
 ---
 
-import ItemsControlScreenshot from '/img/gitbook-import/assets/items.gif';
+import example01Screenshot from '/img/controls/itemscontrol/itemsControl-with-custom-layout-and-formatting.gif';
+import example02Screenshot from '/img/controls/itemscontrol/ItemsControl-with-ItemPanel-and-Styles.png';
 
 # ItemsControl
 
@@ -114,7 +115,7 @@ public class Crockery
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
 
-<img src={ItemsControlScreenshot} alt="" />
+<img src={example01Screenshot} alt="" />
 
 ## Example 02
 This example bind an observable collection of tile items to an items control. The ItemPanel is set to a canvas and we use a style to position the Tile within the canvas.
@@ -168,7 +169,7 @@ namespace AvaloniaControls.ViewModels
 public record Tile(int Size, int TopX, int TopY);
 ```
 
-<img src={ItemsControlScreenshot} alt="" />
+<img src={example02Screenshot} alt="" />
 
 ## More Information
 
