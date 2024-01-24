@@ -94,7 +94,7 @@ Assert.True(buttonClicked);
 ```
 
 :::tip
-Just like in any other Avalonia application, it's also possible to raise events directly. For example, with button click `button.RaiseEvent(new RoutedEventArgs(Button.ClickEvent))`. This can be more convenient for most use cases but lacks some flexibility with input parameters. RaiseEvent will trigger the click event on the button but a bound command will not be ignored. If yyou need to test a button comannd you can use `button.Focus()` together with `window.KeyReleaseQwerty(PhysicalKey.Space, RawInputModifiers.None)`.
+Just like in any other Avalonia application, it's also possible to raise events directly. For example, with button click `button.RaiseEvent(new RoutedEventArgs(Button.ClickEvent))`. This can be more convenient for most use cases but lacks some flexibility with input parameters. RaiseEvent will trigger the click event on the button but a bound command will not be executed. If you need to test a button command you can use `button.Focus()` together with `window.KeyReleaseQwerty(PhysicalKey.Space, RawInputModifiers.None)`.
 :::
 
 ## Capturing the Last Rendered Frame
