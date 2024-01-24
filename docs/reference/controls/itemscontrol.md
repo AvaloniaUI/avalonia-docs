@@ -36,7 +36,7 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td><code>ItemsControl.ItemPanel</code></td>
-      <td>The container panel to place items in.</td>
+      <td>The container panel to place items in. By default, this is a StackPanel.</td>
     </tr>
     <tr>
       <td><code>ItemsControl.Styles</code></td>
@@ -118,14 +118,14 @@ The view resizes horizontally, but content is hidden when it is too high. This c
 <img src={example01Screenshot} alt="" />
 
 ## Example 02
-This example binds an observable collection of Rectangles (which are bound to a tile VM) to an ItemsControl. The ItemPanel is set to a canvas and we use a style to position the Tile within the canvas.
+This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas` and we use a style to position the `Rectangle` within the `Canvas`.
 
 ```xml
 <ItemsControl ItemsSource="{Binding TileList}">
   <ItemsControl.ItemsPanel>
     <ItemsPanelTemplate>
       <Canvas Width="50" Height="50" Background="Yellow" Margin="3"/>
-  </ItemsPanelTemplate>
+    </ItemsPanelTemplate>
   </ItemsControl.ItemsPanel>
   <ItemsControl.ItemTemplate>
     <DataTemplate>
