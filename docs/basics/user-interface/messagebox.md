@@ -11,5 +11,5 @@ We invite you to refer to the [issue on our GitHub repository](https://github.co
 
 ## 3rd Party MessageBox Implementations 
 
-* [Avalonia UI Controls](https://www.actiprosoftware.com/products/controls/avalonia)
+* [Actipro Avalonia UI Controls](https://www.actiprosoftware.com/products/controls/avalonia)
 * [MessageBox.Avalonia](https://github.com/AvaloniaCommunity/MessageBox.Avalonia)
