@@ -3,8 +3,7 @@ title: ItemsControl
 description: REFERENCE - Built-in Control
 ---
 
-import example01Screenshot from '/img/controls/itemscontrol/itemsControl-with-custom-layout-and-formatting.gif';
-import example02Screenshot from '/img/controls/itemscontrol/ItemsControl-with-ItemPanel-and-Styles.png';
+import exampleScreenshot from '/img/controls/itemscontrol/itemsControl-with-custom-layout-and-formatting.gif';
 
 # ItemsControl
 
@@ -36,7 +35,7 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td><code>ItemsControl.ItemPanel</code></td>
-      <td>The container panel to place items in. By default, this is a StackPanel.</td>
+      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](../../concepts/custom-itemspanel.md) to customise the ItemsPanel.</td>
     </tr>
     <tr>
       <td><code>ItemsControl.Styles</code></td>
@@ -45,7 +44,7 @@ You will probably use these properties most often:
   </tbody>
 </table>
 
-## Example 01
+## Example
 
 This example binds an observable collection of crockery items to an items control, where some custom layout and formatting is provided by a data template:
 
@@ -115,66 +114,12 @@ public class Crockery
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
 
-<img src={example01Screenshot} alt="" />
-
-## Example 02
-This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas` and we use a style to position the `Rectangle` within the `Canvas`.
-
-```xml
-<ItemsControl ItemsSource="{Binding TileList}">
-  <ItemsControl.ItemsPanel>
-    <ItemsPanelTemplate>
-      <Canvas Width="50" Height="50" Background="Yellow" Margin="3"/>
-    </ItemsPanelTemplate>
-  </ItemsControl.ItemsPanel>
-  <ItemsControl.ItemTemplate>
-    <DataTemplate>
-      <Rectangle Fill="Green" Height="{Binding Size}" Width="{Binding Size}"/>
-    </DataTemplate>
-  </ItemsControl.ItemTemplate>
-  <ItemsControl.Styles>
-    <Style Selector="ContentPresenter"  x:DataType="vm:Tile">
-      <Setter Property="Canvas.Left" Value="{Binding TopX}"/>
-      <Setter Property="Canvas.Top" Value="{Binding TopY}"/>
-    </Style>
-  </ItemsControl.Styles>
-</ItemsControl>
-```
-
-```csharp title='C# View Model'
-using AvaloniaControls.Models;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
-namespace AvaloniaControls.ViewModels
-{
-    public class MainWindowViewModel : ViewModelBase
-    {
-        public ObservableCollection<Tile> TileList { get; set; }
-        
-        public MainWindowViewModel()
-        {
-            TileList = new ObservableCollection<Tile>(new List<Tile>
-            {
-                new Tile(10, 10, 10),
-                new Tile(10, 20, 20),
-                new Tile(10, 30, 30),
-            });    
-        }
-    }
-}
-```
-
-```csharp title='C# Item Class'
-public record Tile(int Size, int TopX, int TopY);
-```
-
-<img src={example02Screenshot} alt="" />
+<img src={exampleScreenshot} alt="" />
 
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/).
+For the complete ItemsControl API documentation, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/).
 :::
 
 :::info
