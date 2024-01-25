@@ -20,11 +20,13 @@ While the Headless platform can be initialized without any dependencies, for con
 
 As the headless platform doesn't have any real input, every event needs to be raised from the unit test. The Avalonia.Headless package is shipped with a number of helper methods that can be used:
 
-#### `Window.KeyPress(Key key, RawInputModifiers modifiers)`
+#### `Window.KeyPress(Key key, RawInputModifiers modifiers, PhysicalKey physicalKey, string? keySymbol)`
+#### `Window.KeyPressQwerty(PhysicalKey physicalKey, RawInputModifiers modifiers)`
 
 Simulates a keyboard press on the headless window/toplevel.
 
-#### `Window.KeyRelease(Key key, RawInputModifiers modifiers)`
+#### `Window.KeyRelease(Key key, RawInputModifiers modifiers, PhysicalKey physicalKey, string? keySymbol)`
+#### `Window.KeyReleaseQwerty(PhysicalKey physicalKey, RawInputModifiers modifiers)`
 
 Simulates a keyboard release on the headless window/toplevel.
 
@@ -92,7 +94,7 @@ Assert.True(buttonClicked);
 ```
 
 :::tip
-Just like in any other Avalonia application, it's also possible to raise events directly. For example, with button click `button.RaiseEvent(new RoutedEventArgs(Button.ClickEvent))`. This can be more convenient for most use cases but lacks some flexibility with input parameters.
+Just like in any other Avalonia application, it's also possible to raise events directly. For example, with button click `button.RaiseEvent(new RoutedEventArgs(Button.ClickEvent))`. This can be more convenient for most use cases but lacks some flexibility with input parameters. RaiseEvent will trigger the click event on the button but a bound command will not be executed. If you need to test a button command you can use `button.Focus()` together with `window.KeyReleaseQwerty(PhysicalKey.Space, RawInputModifiers.None)`.
 :::
 
 ## Capturing the Last Rendered Frame
