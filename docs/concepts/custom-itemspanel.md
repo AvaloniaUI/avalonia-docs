@@ -6,15 +6,14 @@ import exampleScreenshot from '/img/concepts/customitemspanel/ItemsControl-with-
 
 # Custom ItemsPanel
 
-the following built-in controls, display their items in a StackPanel by default: 
+All `ItemsControl`s have an item container panel which is used to layout their items. It is possible to override the type of panel used by the control to achieve custom/alternative layouts of items in a control. This document provides some examples showcasing how and why you would do this.
+ 
 - [`ItemsControl`](../reference/controls/itemscontrol.md)
 - [`TreeView`](../reference/controls/detailed-reference/treeview-1.md)
 - [`Carousel`](../reference/controls/carousel.md)
 - [`Menu`](../reference/controls/menu.md)
 - [`ComboBox`](../reference/controls/combobox.md)
 - `ListBox` 
-
-You can customise this default behaviour via the property `ItemsPanel` of the control. The example below demonstrate a customisation of an `ItemsControls`
 
 ## Example
 This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas` and we use a style to position the `Rectangle` within the `Canvas`.
