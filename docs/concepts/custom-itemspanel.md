@@ -13,7 +13,7 @@ All `ItemsControl`s have an item container panel which is used to layout their i
 - [`Carousel`](../reference/controls/carousel.md)
 - [`Menu`](../reference/controls/menu.md)
 - [`ComboBox`](../reference/controls/combobox.md)
-- `ListBox` 
+- [`ListBox`](../reference/controls/listbox.md) 
 
 ## Example
 This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas` and we use a style to position the `Rectangle` within the `Canvas`.
