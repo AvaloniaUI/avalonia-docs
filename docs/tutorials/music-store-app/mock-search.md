@@ -42,7 +42,7 @@ At this stage, you will create two properties for the search application logic:
 ```csharp
 using ReactiveUI;
 
-namespace AvaloniaApplication11.ViewModels
+namespace Avalonia.MusicStore.ViewModels
 {
     public class MusicStoreViewModel : ViewModelBase
     {
