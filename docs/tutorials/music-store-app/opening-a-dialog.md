@@ -159,7 +159,7 @@ using AvaloniaApplication11.ViewModels;
 using ReactiveUI;
 using System.Threading.Tasks;
 
-namespace AvaloniaApplication11.Views
+namespace Avalonia.MusicStore.Views
 {
     public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
