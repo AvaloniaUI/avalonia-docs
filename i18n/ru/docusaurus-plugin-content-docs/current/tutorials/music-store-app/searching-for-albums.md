@@ -9,29 +9,32 @@ import MusicStoreAlbumViewScreenshot from '/img/tutorials/music-store-app/search
 
 On this page, you will add some business logic to the app This will allow you to replace the mock data and get some real album data from the search. This business logic code forms the 'Model' part of the MVVM pattern.
 
-To implement a real album search in the app, you will use a _NuGet_ package that can call the _Apple iTunes_ Web API album search.
+To implement a real album search in the app, you will use a _NuGet_ package that can call 
+the _Apple iTunes_ Web API album search.
 
 ## Apple Web API Package
 
 Follow this procedure to add the required _NuGet_ package:
 
-- Stop the app if it is still running.
-- Right-click the project.
-- Click **Manage NuGet Packages**.
+- Остановите приложение, если оно запущено.
+- Нажмите ПКМ по проекту.
+- Нажмите **Manage NuGet Packages**.
 
 <p><img className="image-medium-zoom" src={MusicStoreiTunesSearchNugetScreenshot} alt="" /></p>
 
 - Type 'itunes' in the search box (top-left).
-- Click **iTunesSearch**, then click **Install**.
+- Нажмите **iTunesSearch**, а после **Install**.
 
 ## MVVM Model
 
-In this tutorial the application is simple, and you can implement the business services required for the 'Model' part of the MVVM pattern, in one class. This class will contain both the data model for an album, and the method needed for the search.
+In this tutorial the application is simple, and you can implement 
+the business services required for the 'Model' part of the MVVM pattern, in one class. 
+This class will contain both the data model for an album, and the method needed for the search.
 
 Follow this procedure to add the album business logic:
 
 - In the solution explorer, right-click the **/Models** folder and then click **Add**. 
-- Click **Class**.
+- Нажмите **Class**.
 - When prompted for the name, type 'Album'.
 - Add the following code:
 
@@ -73,11 +76,15 @@ namespace Avalonia.MusicStore.Models
 
 ## Album View Model
 
-In order to display the data from the Web API for each album (data model) in the search results list, you will create an album view model, and this will be bound to the album view (tile) for display.
+In order to display the data from the Web API for each album (data model) in the search results list, 
+you will create an album view model, and this will be bound to the album view (tile) for display.
 
-Your album view model is currently empty. It will need to be able to store the album data from the search, and have some properties for the artist name and album title. These will then be bound to the view for display.
+Your album view model is currently empty. It will need to be able to store the album data from the search, 
+and have some properties for the artist name and album title. These will then be bound to the view for display.
 
-In this step you will use a common pattern for the dependent relationship between a view model and a (business logic) model. This is where the view model contains an instance of the data model, and then exposes certain of its properties, as required for display.
+In this step you will use a common pattern for the dependent relationship between 
+a view model and a (business logic) model. This is where the view model contains an instance of the data model, 
+and then exposes certain of its properties, as required for display.
 
 Follow this procedure to prepare the album view model:
 
@@ -97,16 +104,20 @@ public string Artist => _album.Artist;
 public string Title => _album.Title;
 ```
 
-Note that as the view model properties will not change in the UI during runtime, they have no setter and a plain getter - there is no need to use the `RaiseAndSetIfChanged` method here.
+Note that as the view model properties will not change in the UI during runtime, 
+they have no setter and a plain getter - there is no need to use the `RaiseAndSetIfChanged` method here.
 
 ## Start the Search
 
-In this step, you will add some code to the music store view model so that whenever the search text changes, the `SearchAsync` method on the album model (business service) is started. When it finishes, the search places its results in the observable collection `SearchResults`. This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
+In this step, you will add some code to the music store view model so that whenever the search text changes, 
+the `SearchAsync` method on the album model (business service) is started. 
+When it finishes, the search places its results in the observable collection `SearchResults`. 
+This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
 
 Follow this procedure to start the search whenever the search text changes:
 
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Replace the constructor code, and add the extra code as shown:
+- Найдите и откройте файл **MusicStoreViewModel.cs**.
+- Замените код конструктора и добавьте дополнительный код, как показано ниже:\
 
 ```csharp
 using Avalonia.MusicStore.Models;
@@ -168,7 +179,7 @@ Your work on the previous page to format the album 'tile' view did not add any w
 
 Follow this procedure to add the album name and artist name to the tile:
 
-- Locate and open the **AlbumView.asaml** file.
+- Найдите и откройте файл **AlbumView.asaml**.
 - Add the two text block controls with their data bindings, as shown:
 - To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
 
@@ -192,10 +203,11 @@ Follow this procedure to add the album name and artist name to the tile:
 </UserControl>
 ```
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
-- Type some search text.
+- Нажмите кнопку **Debug**, чтобы собрать и запустить проект.
+- Нажмите на кнопку с иконкой.
+- Введите какой-нибудь текст.
 
 <p><img className="image-medium-zoom" src={MusicStoreAlbumViewScreenshot} alt="" /></p>
 
-On the next page, you will learn how to improve the look of the app by retrieving the cover art for each album. This will be displayed on the tile instead of the note icon.
+On the next page, you will learn how to improve the look of the app by retrieving the cover art for each album. 
+This will be displayed on the tile instead of the note icon.
