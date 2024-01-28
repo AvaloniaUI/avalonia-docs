@@ -6,20 +6,21 @@ import MusicStoreMockSearchScreenshot from '/img/tutorials/music-store-app/add-c
 
 # Mock Search (рус: Фейковый поиск)
 
-On this page you will create the view model for the album search feature, 
-and then bind it to the controls on the new user control. At this stage you will use a mock of the search itself, 
-so that you can concentrate on the view model.
+На этой страницу вы узнаете, как создать `view model` для поиска альбомов,
+а потом связать ее с `controls` на новом `user control`.
+На этом шаге вы будете использовать фейковый поиск, что позволит сосредоточиться на `view model`.
 
-## Reactive View Model  
+## Reactive View Model
 
-The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data binding system. 
-You add this support by deriving your view model from the `ReactiveObject` class, 
-via the `ViewModelBase` class that was added to your project at the start, by the solution template.
+Фреймворк _ReactiveUI_ предоставляет собственную систему `data binding (рус: привязки данных)`.
+Вы можете добавить ее во `view model` через класс `ViewModelBase`,
+который наследуется от `ReactiveObject`.
+Эти действия были выполнены при сощлании проекта через `solution template (рус: шаблон решений)`.
 
-Follow this procedure to derive from the `ReactiveObject` class:
+Для наследования от класса `ReactiveObject`, выполните указанные ниже действия:
 
 - Найдите и откройте файл **MusicStoreViewModel.cs**.
-- Add the code to derive the class from `ViewModelBase`.
+- Добавьте код для наследования от `ViewModelBase`.
 
 ```csharp
 namespace Avalonia.MusicStore.ViewModels
@@ -30,19 +31,19 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-This adds the important extension method `RaiseAndSetIfChanged` to your view model, 
-and will allow you to give the properties there the ability to notify changes to the view.  
+Данное действие добавило во `view model` важный метод `RaiseAndSetIfChanged`,
+который позволяет указанным свойствам уведомлять `view` об изменениях.
 
 :::info
-To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).
+Подробнее о принципах паттерна MVVM и уведомлениях, см. [здесь](../../concepts/the-mvvm-pattern/).
 :::
 
-At this stage, you will create two properties for the search application logic:
+На текущем этапе вы добавить два свойств для логики поиска:
 
-* A text string that is the search criteria,
-* A Boolean that indicates whether the search is busy.
+* Текстовая строка (критерий поиска)
+* Логическое значение (индикатор поиска)
 
-- Add the following code to implement the above properties:
+- Для добавления указанных ранее свойств, добавьте указанный ниже код:
 
 ```csharp
 using ReactiveUI;
@@ -70,16 +71,15 @@ namespace AvaloniaApplication11.ViewModels
 }
 ```
 
-You can see that the properties have a normal public getter which returns the private value field;
-but the setter calls the `RaiseAndSetIfChanged` method - in order to implement the notification.
+Как вы могли заметить, данные свойства имеют обычный публичный `getter`, который возвращает значение приватного поля.
+Но вот `setter` вызывает метод `RaiseAndSetIfChanged` - уведомление об изменении.
 
 ## Data Binding (рус: Привязка данных)
 
-Next you will add a data binding to link the view to the view model. 
-The text box will be bound to the search text, 
-and whether the progress bar is visible to the user will  be bound to the Boolean.
+Теперь вы добавите `data binding (рус: привязку данных)` для связи `view` и `view model`.
+Текстовое поле будет привязано к `SearchText`, а индикатор прогресса к `IsBusy`.
 
-Follow this procedure to add data binding to the view:
+Выполните указанные ниже действия:
 
 - Найдите и откройте файл **MusicStoreView.axaml**.
 - Добавьте выражение `binding (рус: привязки)`, как показано ниже:
@@ -103,15 +103,15 @@ Follow this procedure to add data binding to the view:
 
 ## Поиск и выбор альбома
 
-Your next step is to create the music store view model properties needed to process albums. These are:
+Ваш следующий шаг - это создать свойства необходимые для обработки альбомов во `music store view model`.
 
-* a collection of album view models to represent the albums that the search might find,
-* and a property to hold an album if the user selects one.
+* коллекция `view models` альбомов  (найденные во время поиска альбомы)
+* свойство для хранения выбранных пользователем альбомов
 
-Here you will use the `ObservableCollection` - this is a collection is capable of notification,
-and it is provided by the .NET framework.
+Здесь мы будем использовать `ObservableCollection` - это коллекция может уведомлять об изменениях,
+а также поставляется самим фреймворком .NET.
 
-Follow this procedure to add the above properties:
+Выполните указанные ниже действия:
 
 - Найдите и откройте файл **MusicStoreViewModel.cs**.
 - Добавьте в класс указанный ниже код:
@@ -128,7 +128,7 @@ public AlbumViewModel? SelectedAlbum
 }
 ```
 
-Next to bind these properties to the list box in the view, follow this procedure:
+Для привязки свойств ко списку по `view`, выполните указанные ниже действия:
 
 - Найдите и откройте файл **MusicStoreView.axaml**.
 - Добавьте выражение `binding (рус: привязки)` к элементу `<ListBox>`:
@@ -139,7 +139,7 @@ Next to bind these properties to the list box in the view, follow this procedure
 
 ## Mock Data (рус: Фейковые данные)
 
-Now, to test the app at this stage, you will add some mock data directly to the view model.
+Для тестирования приложения, добавьте немного фейковых данных во `view model`.
 
 Выполните следующие действия:
 
@@ -159,6 +159,6 @@ public MusicStoreViewModel()
 
 <p><img className="image-medium-zoom" src={MusicStoreMockSearchScreenshot} alt="" /></p>
 
-This shows that the data binding from the list to the album collection in the view model is working,
-but the view is not graphical yet. On the next page you will develop the app further 
-by replacing the text with graphical album tiles. 
+Как вы можете видеть, `data binding (рус: привязка данных)` из списка к коллекции альбомов из `view model` работает,
+но наша `view` еще не является графической.
+На следующей страницу вы уузнаете, как заменить текст на графические тайлы альбомов.
