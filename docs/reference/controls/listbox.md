@@ -48,7 +48,7 @@ These values can be combined, for example:
 
 ## Example
 
-This simple example has the `Items` property set to an array in the C# code-behind.
+This simple example has the `ItemsSource` property set to an array in the C# code-behind.
 
 ```xml
 <StackPanel Margin="20">
@@ -68,7 +68,7 @@ namespace AvaloniaControls.Views
         public MainWindow()
         {
             InitializeComponent();
-            animals.Items = new string[]
+            animals.ItemsSource = new string[]
                 {"cat", "camel", "cow", "chameleon", "mouse", "lion", "zebra" }
             .OrderBy(x => x);
         }
@@ -115,7 +115,7 @@ namespace AvaloniaControls.Views
         public MainWindow()
         {
             InitializeComponent();
-            animals.Items = new string[]
+            animals.ItemsSource = new string[]
                 {"cat", "camel", "cow", "chameleon", "mouse", "lion", "zebra" }
             .OrderBy(x => x);
         }
@@ -162,7 +162,7 @@ namespace AvaloniaControls.Views
         public MainWindow()
         {
             InitializeComponent();
-            animals.Items = new string[]
+            animals.ItemsSource = new string[]
                 {"cat", "camel", "cow", "chameleon", "mouse", "lion", "zebra" }
             .OrderBy(x => x);
         }
