@@ -7,14 +7,15 @@ import MusicStoreAlbumViewScreenshot from '/img/tutorials/music-store-app/search
 
 # Album Service
 
-On this page, you will add some business logic to the app This will allow you to replace the mock data and get some real album data from the search. This business logic code forms the 'Model' part of the MVVM pattern.
+На этой страницу вы расширите бизнес-логику приложения, заменив фейковые данные при поиске альбомов на реальные.
+Код бизнес-логики относится к 'Model (рус: модели)' паттерна MVVM.
 
-To implement a real album search in the app, you will use a _NuGet_ package that can call 
-the _Apple iTunes_ Web API album search.
+Для реализации реального поиска альбомов в приложении, вы будете использовать _NuGet_ пакет,
+именуемый _Apple iTunes_ Web API.
 
-## Apple Web API Package
+## Пакет Apple Web API
 
-Follow this procedure to add the required _NuGet_ package:
+Для добавления требуемого _NuGet_ пакета, выполните указанные ниже действия:
 
 - Остановите приложение, если оно запущено.
 - Нажмите ПКМ по проекту.
@@ -22,21 +23,21 @@ Follow this procedure to add the required _NuGet_ package:
 
 <p><img className="image-medium-zoom" src={MusicStoreiTunesSearchNugetScreenshot} alt="" /></p>
 
-- Type 'itunes' in the search box (top-left).
+- Введите 'itunes' в строку поиска (слева-сверху).
 - Нажмите **iTunesSearch**, а после **Install**.
 
 ## MVVM Model
 
-In this tutorial the application is simple, and you can implement 
-the business services required for the 'Model' part of the MVVM pattern, in one class. 
-This class will contain both the data model for an album, and the method needed for the search.
+Поскольку в данном руководстве рассматривается простое приложение,
+то вы можете реализовать требуемую бизнес-логику для 'Model (рус: модели)' паттерна MVVM, в одном классе.
+Данный класс будет включать как модель данных альбома, так и методы поиска.
 
-Follow this procedure to add the album business logic:
+Для добавления бизнес логики альбома, выполните указанные ниже действия:
 
-- In the solution explorer, right-click the **/Models** folder and then click **Add**. 
+- В обозревателе решений нажмите ПКМ по папке **/Models** и выберите **Add**.
 - Нажмите **Class**.
-- When prompted for the name, type 'Album'.
-- Add the following code:
+- Введите название 'Album'.
+- Добавьте указанный ниже код:
 
 ```csharp
 using iTunesSearch.Library;
@@ -76,20 +77,20 @@ namespace Avalonia.MusicStore.Models
 
 ## Album View Model
 
-In order to display the data from the Web API for each album (data model) in the search results list, 
-you will create an album view model, and this will be bound to the album view (tile) for display.
+Чтобы отобразить список альбомов по результатам поиска через Web API, вы создадите `album view model`,
+которая будет связана с `album view` (тайл).
 
-Your album view model is currently empty. It will need to be able to store the album data from the search, 
-and have some properties for the artist name and album title. These will then be bound to the view for display.
+На данный момент, вы имеете пустую `album view model`.
+В нее необходимо добавить возможность сохранения данных об альбоме из поиска, такое как исполнитель и название альбома.
+Затем, эти данные будут связаны с `view` для отображения.
 
-In this step you will use a common pattern for the dependent relationship between 
-a view model and a (business logic) model. This is where the view model contains an instance of the data model, 
-and then exposes certain of its properties, as required for display.
+На данном этапе, вы будете обычный шаблон для связи `view model` и `model` (бизнес-логика).
+Наша `view model` содержит экземпляр модели данных, из которого она считывает требуемые для отображения свойства.
 
-Follow this procedure to prepare the album view model:
+Для подготовки `album view model`, выполните указанные ниже действия:
 
-- Locate and open the **AlbumViewModel.cs** file.
-- Add the code as shown:
+- Найдите и откройте файл **AlbumViewModel.cs**.
+- Добавьте код, как показано ниже:
 
 ```csharp
 private readonly Album _album;
@@ -104,20 +105,21 @@ public string Artist => _album.Artist;
 public string Title => _album.Title;
 ```
 
-Note that as the view model properties will not change in the UI during runtime, 
-they have no setter and a plain getter - there is no need to use the `RaiseAndSetIfChanged` method here.
+Обратите внимание, что поскольку свойства `view model` не будут изменяться через UI во время работы приложения,
+поэтому здесь нет `setter`, а также используется обычный `getter`. Отсутствует необходимость использовать метод `RaiseAndSetIfChanged`.
 
-## Start the Search
+## Запуск поиска
 
-In this step, you will add some code to the music store view model so that whenever the search text changes, 
-the `SearchAsync` method on the album model (business service) is started. 
-When it finishes, the search places its results in the observable collection `SearchResults`. 
-This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
+На этом шаге, вы добавите код в `music store view model`, который будет запускать метод `SearchAsync` из `album model`,
+при каждом изменении текста поиска.
+По завершению поиска, полученные данные будут помещены в `observable (рус: наблюдаемую)` коллекцию `SearchResults`.
+Данная коллекция уже связана с `ListBox`, и при небольших изменениях, вы сможете настроить отображение
+результатов поиска в виде тайлов, которые мы подготовили ранее.
 
-Follow this procedure to start the search whenever the search text changes:
+Для запуска поиска всякий раз, как меняется текст, выполните указанный ниже действия:
 
 - Найдите и откройте файл **MusicStoreViewModel.cs**.
-- Замените код конструктора и добавьте дополнительный код, как показано ниже:\
+- Замените код конструктора и добавьте дополнительный код, как показано ниже:
 
 ```csharp
 using Avalonia.MusicStore.Models;
@@ -163,25 +165,32 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-The `WhenAnyValue` method is provided by the _ReactiveUI_ framework as part of the `ReactiveObject`(inherited via `ViewModelBase`). The method takes a lambda expression parameter that gets the property you want to observe for changes. So in the above code, an event occurs whenever the user types to change the search text.
+Метод `WhenAnyValue` поставляется фреймворком _ReactiveUI_, как часть `ReactiveObject` (наследуется через `ViewModelBase`).
+Он принимает лямбда-выражение, которое возвращает `observable (рус: наблюдаемое)` свойство при его изменении.
+Итак, в приведенном выше коде, событие возникает каждый раз, когда пользователь меняет строку поиска.
 
-It will be good design to wait until the user has stopped typing before attempting to run the search. The `Throttle` method prevents the events being processed until the time span (400 milliseconds) is up. This means processing will not start until the user has stopped typing for 400 milliseconds or longer.
+Хорошей идеей будет немного подождать, пока пользователь не перестанет вводите текст, прежде чем запустить поиск.
+Метод `Throttle` ожидает указанное время (400 мс), прежде чем запустить обработку события.
+Это означает, что поиск не запустится, пока пользователь не перестанет вводить текст в течение 400 мс или более.
 
 :::info
-The `ObserveOn` method is required to ensure that the subscribed method is always called on the UI thread. In _Avalonia UI_ applications, you must always update the UI on the UI thread.
+Метод `ObserveOn` необходим для обеспечения вызова подписанного метода в UI-потоке.
+В приложениях на _Avalonia UI_, вы должны обновлять UI **только** в UI-потоке.
 :::
 
-Lastly, the `Subscribe` method calls the `DoSearch` method for each observed event. The `DoSearch` method  runs asynchronously, and has no return value.
+Метод `Subscribe` вызывает метод `DoSearch` для каждого наблюдаемого события.
+Метод `DoSearch` запускается асинхронно, а также не имеет возвращаемого значения.
 
 ## Bind the Album View
 
-Your work on the previous page to format the album 'tile' view did not add any way to display the text results of the search.
+На предыдущей странице, наши действия по изменению тайла `album view`, не включали никакого способа отображения текстовых данных результата поиска.
 
-Follow this procedure to add the album name and artist name to the tile:
+Для добавления названия альбома и исполнителя в тайл, выполните указанные действия:
 
 - Найдите и откройте файл **AlbumView.asaml**.
-- Add the two text block controls with their data bindings, as shown:
-- To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
+- Добавьте два элемента `TextBlock` и их `data bindings (рус: привязки данных)`, как показано ниже:
+- Для корректной работы с `compiled binding (рус: собранными привязками)`, необходимо указать используемый во `view` тип данных: AlbumViewModel.
+
 
 ```xml
 <UserControl ...
@@ -209,5 +218,5 @@ Follow this procedure to add the album name and artist name to the tile:
 
 <p><img className="image-medium-zoom" src={MusicStoreAlbumViewScreenshot} alt="" /></p>
 
-On the next page, you will learn how to improve the look of the app by retrieving the cover art for each album. 
-This will be displayed on the tile instead of the note icon.
+На следующей странице вы узнаете, как улучшить внешний вид приложения, путем загрузки обложки для каждого альбома.
+Они будут отображаться вместо иконки музыкальной ноты.
