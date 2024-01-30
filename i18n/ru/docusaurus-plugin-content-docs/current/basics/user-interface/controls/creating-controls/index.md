@@ -3,7 +3,7 @@ id: index
 title: Creating Controls
 ---
 
-# Creating Controls
+# Создание Controls
 
 import {DocsCardList} from '../../../../../../../../src/components/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
