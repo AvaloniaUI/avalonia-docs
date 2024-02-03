@@ -217,13 +217,18 @@ Replace the direct reference to <MainView> with just a content control.
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="LearningAvalonia.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
+        x:DataType="vm:MainViewModel"
         Title="Welcome">
+    <Design.DataContext>
+      <!-- This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+      <vm:MainViewModel />
+    </Design.DataContext>
 
-        <!-- No need for direct references to your views they are all dynamically data driven now -->
-        <!--<views:MainView />-->
-
-        <!-- Placeholder for the data template registered in your ServicesRegistry -->
-        <ContentControl Content="{Binding}"/>
+    <!-- No need for direct references to your views they are all dynamically data driven now -->
+    <!--<views:MainView />-->
+    <!-- Placeholder for the data template registered in your ServicesRegistry -->
+    <ContentControl Content="{Binding}"/>
 </Window>
 ```
 
