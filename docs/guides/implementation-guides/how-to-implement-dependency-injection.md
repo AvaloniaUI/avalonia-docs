@@ -210,14 +210,14 @@ Replace the direct reference to <MainView> with just a content control.
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:JamSeshun.ViewModels"
+        xmlns:vm="using:LearningAvalonia.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:views="clr-namespace:JamSeshun.Views"
+        xmlns:views="clr-namespace:LearningAvalonia.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="JamSeshun.Views.MainWindow"
+        x:Class="LearningAvalonia.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Jam Seshun">
+        Title="Welcome">
 
         <!-- No need for direct references to your views they are all dynamically data driven now -->
         <!--<views:MainView />-->
