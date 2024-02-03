@@ -107,7 +107,7 @@ public static IServiceProvider ConfigureServices()
 }
 ```
 
-## Step 2: Remove the reference the ServiceProvider from your view model.
+## Step 2: Remove the reference to the ServiceProvider from your View Model.
 ```csharp
 public class MyViewModel
 {
@@ -127,6 +127,7 @@ public class MyViewModel
 ```
 
 ## Step 3: Create a View Locator class
+The View Locator will attempt to provide a user interface for any view model via a naming convention (see [View Locator](../../concepts/view-locator.md) pattern for more information).
 ```csharp
 public class ViewLocator : IDataTemplate
 {
@@ -160,6 +161,7 @@ public class ViewLocator : IDataTemplate
 ```
 
 ## Step 4: Add the View Locator to the Application's DataTemplates
+Add the ViewLocator to DataTempaltes so that it is available to your entire application's views.
 Ensure that its appropriate 'using' statement is in the xmlns:local property of the Application root tag.
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
@@ -180,8 +182,7 @@ Ensure that its appropriate 'using' statement is in the xmlns:local property of 
 
 ## Step 5: Update the application to resolve the Window or View
 
-This allows each platform to potentially have different views registered.
-
+This allows you main window or view to take view models as dependencies, this also could be used to support different views on different platforms.
 ```csharp
 public override void OnFrameworkInitializationCompleted()
 {
@@ -204,12 +205,29 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-Step 6: Update MainWindow to resolve the MainViewModel as it's DataContext
+## Step 6: Update MainWindow to resolve the MainViewModel as it's DataContext
 Replace the direct reference to <MainView> with just a content control.
 ```xml
-        <!-- Placeholder for the template registered in your ServicesRegistry -->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:JamSeshun.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:JamSeshun.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="JamSeshun.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Jam Seshun">
+
+        <!-- No need for direct references to your views they are all dynamically data driven now -->
+        <!--<views:MainView />-->
+
+        <!-- Placeholder for the data template registered in your ServicesRegistry -->
         <ContentControl Content="{Binding}"/>
+</Window>
 ```
+
+Make the main window take the ViewModel as a dependency and set it as the Window's binding data context.
 ```csharp
 public partial class MainWindow : Window
 {
@@ -227,3 +245,10 @@ public partial class MainWindow : Window
     }
 }
 ```
+
+## Conclusion
+You now have an application framework that:
+1. Is completely flexible in how your views are tied to your view models.
+2. Allows for additional services to be resolved anywhere in your code (Views, View Models etc.)
+3. Still supports designer previews of what your user interface looks like.
+4. Avoids any references to App.ServiceProvider in almost all of your application code.
