@@ -5,7 +5,7 @@ title: 控件主题（Control Themes）
 
 import StylingEllipseButtonScreenshot from '/img/basics/user-interface/styling/ellipse-button.png';
 
-控件主题是在[样式](Styles)的基础上构建的，用于为控件创建可切换的主题。尽管控件主题与 WPF/UWP 中的样式类似，但它们的机制略有不同。
+控件主题是在[样式](styles)的基础上构建的，用于为控件创建可切换的主题。尽管控件主题与 WPF/UWP 中的样式类似，但它们的机制略有不同。
 
 :::tip
 因为控件主题是基于样式的，所以首先需要理解 Avalonia 的[样式系统](styles)。
