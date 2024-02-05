@@ -77,7 +77,9 @@ Follow this procedure to add data binding to the view:
 - Add the binding expressions shown:
 
 ```xml
-<UserControl ...>
+<UserControl ...
+    xmlns:vm="clr-namespace:Avalonia.MusicStore.ViewModels"
+    x:DataType="vm:MusicStoreViewModel">
     <!-- ... -->
     <DockPanel>
       <StackPanel DockPanel.Dock="Top">
