@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 import CustomPageTransitionScreenshot from '/img/animations/page-transitions/TransitioningContentControl_03.webp';
 
-`PageTransitions` are used to render a transition between two views, for example in a [Carousel](../controls/carousel) or [TransitioningContentControl](../controls/TransitioningContentControl)
+`PageTransitions` are used to render a transition between two views, for example in a [Carousel](../controls/carousel) or [TransitioningContentControl](../controls/transitioningcontentcontrol)
 
 :::warning
 The duration must be set before the transition is used and must be greater than 0. If not, you will get an error. 
