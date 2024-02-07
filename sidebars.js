@@ -422,6 +422,7 @@ const sidebars = {
         'concepts/application-lifetimes',
         'concepts/attached-property',
         'concepts/control-trees',
+        'concepts/custom-itemspanel',
         {
           'type': 'category',
           'label': 'Data Templates',

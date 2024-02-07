@@ -10,6 +10,37 @@ The carousel has an items collection, and displays each item as a page, in seque
 
 You can use the carousel control to create a slide show.
 
+## Useful Properties
+
+You will probably use these properties most often:
+
+<table>
+  <thead>
+    <tr>
+      <th width="316">Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ItemsSource</code></td>
+      <td>The bound collection that is used as the data source for the control.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.ItemTemplate</code></td>
+      <td>The item template, contains a DataTemplate which will be applied to individual items and can be used to change how items look.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.ItemPanel</code></td>
+      <td>The container panel to place items in. See [this page](../../concepts/custom-itemspanel) to customise the ItemsPanel.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.Styles</code></td>
+      <td>The style that is applied to any child element of the ItemControl.</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Example
 
 This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.

@@ -3,7 +3,7 @@ title: ItemsControl
 description: REFERENCE - Built-in Control
 ---
 
-import ItemsControlScreenshot from '/img/gitbook-import/assets/items.gif';
+import exampleScreenshot from '/img/controls/itemscontrol/itemsControl-with-custom-layout-and-formatting.gif';
 
 # ItemsControl
 
@@ -17,7 +17,32 @@ To see the full list of _Avalonia UI_ built-in repeating data controls, see [her
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="316">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ItemsSource</code></td><td>The bound collection that is used as the data source for the control.</td></tr><tr><td><code>ItemsControl.ItemTemplate</code></td><td>Attached property element to contain the data template for an individual item. </td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th width="316">Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ItemsSource</code></td>
+      <td>The bound collection that is used as the data source for the control.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.ItemTemplate</code></td>
+      <td>The item template, contains a DataTemplate which will be applied to individual items and can be used to change how items look.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.ItemPanel</code></td>
+      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](../../concepts/custom-itemspanel.md) to customise the ItemsPanel.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.Styles</code></td>
+      <td>The style that is applied to any child element of the ItemControl.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Example
 
@@ -89,12 +114,12 @@ public class Crockery
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
 
-<img src={ItemsControlScreenshot} alt="" />
+<img src={exampleScreenshot} alt="" />
 
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/).
+For the complete ItemsControl API documentation, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/).
 :::
 
 :::info
