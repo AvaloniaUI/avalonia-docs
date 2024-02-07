@@ -29,7 +29,52 @@ You can add menu separator lines by including a `<Separator>` element or by addi
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="147.33333333333331">Element</th><th width="190">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Menu</code></td><td><code>DockPanel.Dock</code></td><td>Position the menu on the top edge of a dock panel.</td></tr><tr><td><code>MenuItem</code></td><td><code>Header</code></td><td>The menu item caption.</td></tr><tr><td><code>MenuItem</code></td><td><code>Command</code></td><td>The command to be executed when the menu item is clicked or selected with the keyboard.</td></tr><tr><td><code>MenuItem</code></td><td><code>MenuItem.Icon</code></td><td>Contains an icon graphic to display alongside the menu item.</td></tr><tr><td><code>Separator</code></td><td></td><td>A menu item separator line.</td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th width="147.33333333333331">Element</th>
+      <th width="190">Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Menu</code></td>
+      <td><code>DockPanel.Dock</code></td>
+      <td>Position the menu on the top edge of a dock panel.</td>
+    </tr>
+    <tr>
+      <td><code>MenuItem</code></td>
+      <td><code>Header</code></td>
+      <td>The menu item caption.</td>
+    </tr>
+    <tr>
+      <td><code>MenuItem</code></td>
+      <td><code>Command</code></td>
+      <td>The command to be executed when the menu item is clicked or selected with the keyboard.</td>
+    </tr>
+    <tr>
+      <td><code>MenuItem</code></td>
+      <td><code>MenuItem.Icon</code></td>
+      <td>Contains an icon graphic to display alongside the menu item.</td>
+    </tr>
+    <tr>
+      <td><code>Separator</code></td>
+      <td></td>
+      <td>A menu item separator line.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>ItemPanel</code></td>
+      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](../../concepts/custom-itemspanel) to customise the ItemsPanel.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><code>Styles</code></td>
+      <td>The style that is applied to any child element of the ItemControl.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Example
 

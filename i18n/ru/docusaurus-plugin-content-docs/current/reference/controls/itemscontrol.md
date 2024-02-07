@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Control
 ---
 
-import ItemsControlScreenshot from '/img/gitbook-import/assets/items.gif';
+import ItemsControlScreenshot from '/img/controls/itemscontrol/itemsControl-with-custom-layout-and-formatting.gif';
 
 # Items Control
 

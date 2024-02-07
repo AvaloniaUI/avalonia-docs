@@ -12,6 +12,37 @@ The `TreeView` control can present hierarchical data and allows item selection. 
 
 There are two data sources: the main items source for the control, this gives the root of the hierarchical data. Then there is the items source in the item template which allows the control to list the next level in the hierarchical data.
 
+## Useful Properties
+
+You will probably use these properties most often:
+
+<table>
+  <thead>
+    <tr>
+      <th width="316">Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ItemsSource</code></td>
+      <td>The bound collection that is used as the data source for the control.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.ItemTemplate</code></td>
+      <td>The item template, contains a DataTemplate which will be applied to individual items and can be used to change how items look.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.ItemPanel</code></td>
+      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](../../../concepts/custom-itemspanel) to customise the ItemsPanel.</td>
+    </tr>
+    <tr>
+      <td><code>ItemsControl.Styles</code></td>
+      <td>The style that is applied to any child element of the ItemControl.</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Example
 
 This example uses a MVVM pattern view model to hold some hierarchical data based on a C# node class. In this example, there is a single root node in the `Nodes` collection of the view model:
