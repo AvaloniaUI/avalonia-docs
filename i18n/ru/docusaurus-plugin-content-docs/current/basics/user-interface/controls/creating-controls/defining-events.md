@@ -23,7 +23,7 @@ Here's an example of how to define a routed event for a hypothetical custom slid
 public class MyCustomSlider : Control
 {
     public static readonly RoutedEvent<RoutedEventArgs> ValueChangedEvent =
-        RoutedEvent.Register<MyCustomSlider, RoutedEventArgs>(nameof(ValueChanged));
+        RoutedEvent.Register<MyCustomSlider, RoutedEventArgs>(nameof(ValueChanged), RoutingStrategies.Direct);
 
     public event EventHandler<RoutedEventArgs> ValueChanged
     {

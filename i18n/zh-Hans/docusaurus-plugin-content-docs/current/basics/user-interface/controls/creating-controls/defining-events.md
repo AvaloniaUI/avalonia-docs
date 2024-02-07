@@ -23,7 +23,7 @@ Avalonia的路由事件在需要处理可能发生在嵌套控件内部的事件
 public class MyCustomSlider : Control
 {
     public static readonly RoutedEvent<RoutedEventArgs> ValueChangedEvent =
-        RoutedEvent.Register<MyCustomSlider, RoutedEventArgs>(nameof(ValueChanged));
+        RoutedEvent.Register<MyCustomSlider, RoutedEventArgs>(nameof(ValueChanged), RoutingStrategies.Direct);
 
     public event EventHandler<RoutedEventArgs> ValueChanged
     {
