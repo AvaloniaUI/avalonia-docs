@@ -68,7 +68,7 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td><code>ItemPanel</code></td>
-      <td>The container panel to place items in. See [this page](../../concepts/custom-itemspanel.md) to customise the ItemsPanel.</td>
+      <td>The container panel to place items in. See [this page](../../concepts/custom-itemspanel) to customise the ItemsPanel.</td>
     </tr>
     <tr>
       <td><code>Styles</code></td>
