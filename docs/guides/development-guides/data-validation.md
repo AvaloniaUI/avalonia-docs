@@ -97,9 +97,9 @@ To display the validation messages, Avalonia has a control called [`DataValidati
                           Padding="{TemplateBinding Padding}"/>
       </DockPanel>
     </ControlTemplate>
-  </Setter>
+  </Setter>   
   <Setter Property="ErrorTemplate">
-    <DataTemplate>
+    <DataTemplate x:DataType="{x:Type x:Object}">
       <Canvas Width="14" Height="14" Margin="4 0 1 0" 
               Background="Transparent">
         <Canvas.Styles>
