@@ -3,7 +3,7 @@ title: SelectableTextBlock
 description: REFERENCE - Built-in Controls
 ---
 
-import TextBlockStylePreviewScreenshot from '/img/gitbook-import/assets/image (2) (5).png';
+import TextBlockBasicScreenshot from '/img/controls/textblock/textblock-basic.png';
 
 # SelectableTextBlock
 
@@ -42,7 +42,7 @@ This example shows a text block used as a heading, single line and multi-line di
 
 The styling works in the preview pane:
 
-<img src={TextBlockStylePreviewScreenshot} alt="" />
+<img src={TextBlockBasicScreenshot} alt="" />
 
 ## More Information
 
