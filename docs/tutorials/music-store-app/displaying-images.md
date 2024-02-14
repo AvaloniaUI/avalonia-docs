@@ -146,7 +146,7 @@ _cancellationTokenSource = new CancellationTokenSource();
 var cancellationToken = _cancellationTokenSource.Token;
 ```
 
-So if there is an existing request still loading album art, this will cancel it. Again, because `_cancellationTokenSource` might be replaced asynchronously by anther thread, you have to work with a copy stored as a local variable.
+So if there is an existing request still loading album art, this will cancel it. Again, because `_cancellationTokenSource` might be replaced asynchronously by another thread, you have to work with a copy stored as a local variable.
 
 - Add the following code to the end of `DoSearch` method:
 
