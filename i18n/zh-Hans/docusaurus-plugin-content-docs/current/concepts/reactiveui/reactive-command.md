@@ -57,7 +57,7 @@ public class MainWindowViewModel : ViewModelBase
 
 这个视图模型还没有执行功能逐步展示。`SubmitCommand`被声明为没有参数和结果（void）。`Create`方法的同步操作参数是您在命令运行时（用户点击按钮时）执行的操作。上面的示例只是在调试窗口中报告该操作。
 
-<img src={ReactiveCommandRunOutputScreenshot} alt="图片"/>
+<img src={ReactiveCommandOutputScreenshot} alt="图片"/>
 
 ## 可执行吗？
 

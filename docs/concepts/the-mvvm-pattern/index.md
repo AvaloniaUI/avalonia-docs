@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-import MvvmPatternDiagram from '/img/gitbook-import/assets/image (60).png';
+import MvvmPatternDiagram from '/img/guides/implementation-guides/mvvm-architecture.png';
 
 # The MVVM Pattern
 

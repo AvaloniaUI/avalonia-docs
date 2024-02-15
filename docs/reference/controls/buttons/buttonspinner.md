@@ -3,7 +3,7 @@ title: ButtonSpinner
 description: REFERENCE - Built-in Controls
 ---
 
-import ButtonSpinnerScreenshot from '/img/reference/controls/buttons/button_spinner.png';
+import ButtonSpinnerScreenshot from '/img/reference/controls/buttons/button-spinner.png';
 
 # Button Spinner
 

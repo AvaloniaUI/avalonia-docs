@@ -3,7 +3,7 @@ title: RepeatButton
 description: REFERENCE - Built-in Controls
 ---
 
-import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbutton_hold.gif';
+import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbutton-hold.gif';
 
 # Repeat Button
 

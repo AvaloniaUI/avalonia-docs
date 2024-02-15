@@ -48,7 +48,7 @@ text block控件使您可以完全控制其包含的文本的样式。
   </StackPanel>
 ```
 
-<img className="center" src={StackPanelSampleScreenshot} alt="" />
+<img className="center" src={TemperatureStackPanelScreenshot} alt="" />
 
 :::info
 您可以从参考文档[这里](../../reference/controls/layout-controls.md)了解Avalonia中的其他布局控件。

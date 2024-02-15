@@ -3,7 +3,7 @@ title: Button
 description: REFERENCE - Built-in Controls
 ---
 
-import ButtonClickScreenshot from '/img/reference/controls/buttons/button_click.gif';
+import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.gif';
 
 # Button
 
