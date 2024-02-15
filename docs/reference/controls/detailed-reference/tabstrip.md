@@ -3,7 +3,7 @@ title: TabStrip
 description: REFERENCE - Built-in Controls
 ---
 
-import TabStripNavigation from '/img/gitbook-import/assets/tabstrip.gif';
+import TabStripNavigation from '/img/reference/controls/detailed-reference/tabstrip/tabstrip-navigation.gif';
 
 # TabStrip
 

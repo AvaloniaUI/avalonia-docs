@@ -3,7 +3,7 @@ title: MaskedTextBox
 description: REFERENCE - Built-in Controls
 ---
 
-import MaskedTextBoxScreenshot from '/img/gitbook-import/assets/masked.gif';
+import MaskedTextPhoneBoxScreenshot from '/img/reference/controls/maskedtextbox/maskedtextbox-phone.gif';
 
 # MaskedTextBox
 
@@ -40,7 +40,7 @@ This is a basic example:
 </StackPanel>
 ```
 
-<img src={MaskedTextBoxScreenshot} alt=""/>
+<img src={MaskedTextPhoneBoxScreenshot} alt=""/>
 
 ## More Information
 

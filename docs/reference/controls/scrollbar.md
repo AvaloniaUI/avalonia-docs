@@ -3,7 +3,7 @@ title: ScrollBar
 description: REFERENCE - Built-in Controls
 ---
 
-import ScrollBarScreenshot from '/img/gitbook-import/assets/scrollbar.gif';
+import ScrollBarScreenshot from '/img/reference/controls/scrollbar/scrollbar.gif';
 
 # ScrollBar
 

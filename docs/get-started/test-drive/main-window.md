@@ -3,11 +3,11 @@ id: main-window
 title: The Main Window
 ---
 
-import LayoutZonesDiagram from '/img/gitbook-import/assets/image (25) (2) (1).png';
-import MainWindowScreenshot from '/img/get-started/the-main-window/main-window-screenshot.png';
-import RunningAppWindowScreenshot from '/img/get-started/the-main-window/runningrapp-window-screenshot.png';
-import VsDesignerScreenshot from '/img/get-started/the-main-window/vs-designer-screenshot.png';
-import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) (2).png';
+import LayoutZonesDiagram from '/img/concepts/layout/layout-zones.png';
+import ViewModelScreenshot from '/img/get-started/test-drive/main-window-viewmodel.png';
+import AppRunningScreenshot from '/img/get-started/test-drive/main-window-app-running.png';
+import VsPreviewerScreenshot from '/img/get-started/test-drive/vs-previewer.png';
+import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane.png';
 
 You can now start your tour of an Avalonia project. We'll start with the main application window. Open the **MainWindow.axaml** file.
 
@@ -19,7 +19,7 @@ Notice that in Avalonia, XAML files have the extension **.axaml** (and not .xaml
 
 In the **MainWindow.axaml** XAML file, the `<Window>...</Window>` XAML tag represents an Avalonia window. Like other Avalonia controls; the window will be drawn on the target platform with 4 **layout zones**: margin, border, padding and content.
 
-<img className="center" src={LayoutZonesDiagram} alt="" />
+<img src={LayoutZonesDiagram} alt="" />
 
 In the current application, the content zone of the window references another view: **<views:MainView />**. This is a reference to the **MainView.axaml** file, which is a user control that will be displayed in the content zone of the window.
 
@@ -32,8 +32,8 @@ Inside this user control, you will see a `<TextBlock>...</TextBlock>` XAML tag. 
 
 You can change the text in the file **MainViewModel.cs** to see the change reflected in the user interface.
 
-<img className="center" src={MainWindowScreenshot} alt="" />
-<img className="center" src={RunningAppWindowScreenshot} alt="" />
+<img className="center" src={ViewModelScreenshot} alt="" />
+<img className="center" src={AppRunningScreenshot} alt="" />
 
 :::info
 For more information about the concept of control layout zones, see [here](../../concepts/layout/layout-zones).
@@ -44,7 +44,7 @@ For more information about the concept of control layout zones, see [here](../..
 If you're using Visual Studio you should see the XAML code and preview pane.
 Navigate to the **MainView.axaml** file and click the **Split View** button at the top of the editor window.
 
-<img className="center" src={VsDesignerScreenshot} alt="" />
+<img className="center" src={VsPreviewerScreenshot} alt="" />
 
 :::info
 There may be a red exclamation icon (top left) and the message **The designer is loading...**. This indicates that the project must be built before the preview pane will respond.

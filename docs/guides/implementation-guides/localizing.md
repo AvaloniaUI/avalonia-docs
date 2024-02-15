@@ -22,7 +22,7 @@ Each ResX file will contain translated text that corresponds to the keys used in
 In this example, we added new files to a new folder called `Lang`. Since .NET generator creates namespaces depending on folder structure, it might be different for you.  
 
 :::warning
-If you add the files into the `Assets` folder make sure to swtich `Build Action` to `Embedded resource`, otherwise the code generation may fail.
+If you add the files into the `Assets` folder make sure to switch `Build Action` to `Embedded resource`, otherwise the code generation may fail.
 :::
 
 ## Set the Culture

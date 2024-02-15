@@ -3,7 +3,7 @@ title: UniformGrid
 description: REFERENCE - Built-in Controls
 ---
 
-import UniformGridFrenchFlagScreenshot from '/img/gitbook-import/assets/image (1) (2).png';
+import UniformGridFrenchFlagScreenshot from '/img/reference/controls/detailed-reference/uniformgrid/uniformgrid-french-flag.png';
 
 # UniformGrid
 

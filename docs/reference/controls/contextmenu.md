@@ -3,7 +3,7 @@ title: ContextMenu
 description: REFERENCE - Built-in Controls
 ---
 
-import ContextMenuScreenshot from '/img/gitbook-import/assets/contextmenu.gif';
+import ContextMenuCopyPasteScreenshot from '/img/reference/controls/contextmenu/contextmenu-copy-paste.gif';
 
 # ContextMenu
 
@@ -28,7 +28,7 @@ This example, a context menu is attached to a multi-line text box:
 </TextBox>
 ```
 
-<img src={ContextMenuScreenshot} alt="" />
+<img src={ContextMenuCopyPasteScreenshot} alt="" />
 
 ## Context Flyout
 

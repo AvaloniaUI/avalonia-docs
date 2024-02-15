@@ -5,14 +5,14 @@ title: How To Create a Custom Controls Library
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import CustomControlsSolutionScreenshot from '/img/gitbook-import/assets/image (22) (3).png';
-import CustomControlNuGetScreenshot from '/img/gitbook-import/assets/image (11) (2).png';
+import CustomControlSolutionScreenshot from '/img/guides/custom-controls/custom-control-solution.png';
+import CustomControlNuGetScreenshot from '/img/guides/custom-controls/custom-control-nuget.png';
 
 # How To Create a Custom Controls Library
 
 This guide shows you how to create a custom controls library and reference it for use in an _Avalonia UI_ app.
 
-<img src={CustomControlsSolutionScreenshot} alt=""/>
+<img src={CustomControlSolutionScreenshot} alt=""/>
 
 In this example, a custom control file is added to a .NET class library. The library has the _Avalonia UI_ _NuGet_ package installed:
 

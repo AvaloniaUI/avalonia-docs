@@ -3,9 +3,9 @@ id: running-on-raspbian-lite-via-drm
 title: Running on Raspberry Pi with Raspbian Lite
 ---
 
-import RaspbianLiteDrmKmsCubeScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-kmscube.gif';
-import RaspbianLiteDrmDesktopScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-desktop.jpg';
-import RaspianLiteRaspberryScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-run-on-raspberry.jpg';
+import RaspbianLiteDrmKmsCubeScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-kmscube.gif';
+import RaspbianLiteDrmDesktopScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-desktop.jpg';
+import RaspianLiteRaspberryScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-run-on-raspberry.jpg';
 
 # Running on Raspberry Pi with Raspbian Lite
 

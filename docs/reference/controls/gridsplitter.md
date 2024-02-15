@@ -3,8 +3,8 @@ title: GridSplitter
 description: REFERENCE - Built-in Controls
 ---
 
-import GridSplitterColumnsScreenshot from '/img/gitbook-import/assets/gridsplitter-in-action-columns.gif';
-import GridSplitterRowsScreenshot from '/img/gitbook-import/assets/gridsplitter-in-action-rows.gif';
+import GridSplitterColumnsScreenshot from '/img/reference/controls/gridsplitter/gridsplitter-columns.gif';
+import GridSplitterRowsScreenshot from '/img/reference/controls/gridsplitter/gridsplitter-rows.gif';
 
 # GridSplitter
 

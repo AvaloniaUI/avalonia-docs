@@ -3,7 +3,7 @@ title: DatePicker
 description: REFERENCE - Built-in Controls
 ---
 
-import DatePickerScreenshot from '/img/gitbook-import/assets/datepicker.gif';
+import DatePickerScreenshot from '/img/reference/controls/datepicker/datepicker.gif';
 
 # DatePicker
 

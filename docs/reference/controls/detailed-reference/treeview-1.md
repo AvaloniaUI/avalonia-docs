@@ -3,8 +3,8 @@ title: TreeView
 description: REFERENCE - Built-in Controls
 ---
 
-import TreeViewAnimalHierarchyScreenshot from '/img/gitbook-import/assets/tree1.gif';
-import TreeViewEnhancedAnimalHierarchyScreenshot from '/img/gitbook-import/assets/tree2.gif';
+import TreeViewAnimalHierarchyScreenshot from '/img/reference/controls/detailed-reference/treeview/treeview-animal-hierarchy.gif';
+import TreeViewEnhancedAnimalHierarchyScreenshot from '/img/reference/controls/detailed-reference/treeview/treeview-enhanced-animal-hierarchy.gif';
 
 # TreeView
 

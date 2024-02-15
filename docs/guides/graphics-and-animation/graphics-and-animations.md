@@ -3,7 +3,7 @@ id: graphics-and-animations
 title: How To Draw Graphics
 ---
 
-import ShapeAndGeometrySampleScreenshot from '/img/gitbook-import/assets/shapes.png';
+import ShapeAndGeometrySampleScreenshot from '/img/guides/graphics-and-animations/shapes-and-geometry.png';
 
 # How To Draw Graphics
 

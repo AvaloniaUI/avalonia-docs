@@ -3,8 +3,8 @@ id: add-some-layout
 title: Add Some Layout
 ---
 
-import StackPanelDiagram from '/img/get-started/add-some-layout/image (40) (1) (1).png';
-import StackPanelSampleScreenshot from '/img/get-started/add-some-layout/image (41) (1).png';
+import StackPanelZonesDiagram from '/img/get-started/test-drive/stackpanel-zones.png';
+import TemperatureStackPanelScreenshot from '/img/get-started/test-drive/temperature-stackpanel.png';
 
 Avalonia provides a range of built-in controls to help you layout the visual elements of an application. On this page you will see how to use some of these layout controls.
 
@@ -16,7 +16,7 @@ In fact an Avalonia window allows only a single other control in its content zon
 
 The stack panel control allows multiple controls in its content zone, and arranges them in a vertical stack in the sequence they are defined in the XAML.
 
-<img className="center" src={StackPanelDiagram} alt="" />
+<img src={StackPanelZonesDiagram} alt="" />
 
 ```xml
 <StackPanel>
@@ -48,7 +48,7 @@ To take the example forwards, add a stack panel as follows (you can include the 
   </StackPanel>
 ```
 
-<img className="center" src={StackPanelSampleScreenshot} alt="" />
+<img className="center" src={TemperatureStackPanelScreenshot} alt="" />
 
 :::info
 You can explore the other layout controls in Avalonia from the reference [here](../../reference/controls/layout-controls.md).

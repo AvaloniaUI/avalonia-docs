@@ -3,7 +3,7 @@ title: RepeatButton
 description: REFERENCE - Built-in Controls
 ---
 
-import RepeatButtonScreenshot from '/img/gitbook-import/assets/repeatbutton.gif';
+import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbutton_hold.gif';
 
 # Repeat Button
 
@@ -46,7 +46,7 @@ public partial class MainWindow : Window
 }
 ```
 
-<img src={RepeatButtonScreenshot} alt=""/>
+<img src={RepeatButtonHoldScreenshot} alt=""/>
 
 ## More Information
 

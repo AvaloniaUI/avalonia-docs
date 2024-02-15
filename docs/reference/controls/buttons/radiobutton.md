@@ -3,7 +3,7 @@ title: RadioButton
 description: REFERENCE - Built-in Controls
 ---
 
-import RadioButtonScreenshot from '/img/gitbook-import/assets/radio.gif';
+import RadioButtonScreenshot from '/img/reference/controls/buttons/radiobutton.gif';
 
 # Radio Button
 

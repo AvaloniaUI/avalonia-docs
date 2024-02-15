@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-import ReactiveUINuGetScreenshot from '/img/gitbook-import/assets/image (44) (1).png';
+import ReactiveUINuGetScreenshot from '/img/concepts/reactiveui/reactiveui-nuget.png';
 
 # ReactiveUI
 

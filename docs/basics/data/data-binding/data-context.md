@@ -2,16 +2,16 @@
 description: CONCEPTS
 ---
 
-import DataContextBindingOverviewDiagram from '/img/gitbook-import/assets/image (56).png';
-import DataContextTreeSearchDiagram from '/img/gitbook-import/assets/image (62).png';
-import DataContextContentBindingScreenshot from '/img/gitbook-import/assets/image (20) (2).png';
-import DataContextPreviewerScreenshot from '/img/gitbook-import/assets/image (40) (1).png'
+import DataContextOverviewDiagram from '/img/basics/data-binding/data-context/data-context-overview.png';
+import DataContextTreeSearchDiagram from '/img/basics/data-binding/data-context/data-context-tree-search.png';
+import DataContextGreetingBindingScreenshot from '/img/basics/data-binding/data-context/data-context-greeting.png';
+import DataContextPreviewerScreenshot from '/img/basics/data-binding/data-context/data-context-previewer.png';
 
 # Data Context
 
 When Avalonia performs data binding, it has to locate an application object to bind to. This location is represented by a **Data Context**.
 
-<img src={DataContextBindingOverviewDiagram} alt=''/>
+<img src={DataContextOverviewDiagram} alt=''/>
 
 Every control in Avalonia has a property called `DataContext`, and this includes built-in controls, user controls and windows.
 
@@ -77,7 +77,7 @@ In the main window file **MainWindow.axaml** you can see that the window content
 
 When the project runs, the data binder searches up the logical control tree from the text block and finds a data context set at the main window level. So the bound text appears as:
 
-<img src={DataContextContentBindingScreenshot} alt=""/>
+<img src={DataContextGreetingBindingScreenshot} alt=""/>
 
 ## Design Data Context
 
