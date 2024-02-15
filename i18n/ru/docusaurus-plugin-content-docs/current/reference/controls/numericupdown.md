@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import NumericUpDownBasicScreenshot from '/img/gitbook-import/assets/updown.gif';
-import NumericUpDownFormatStringScreenshot from '/img/gitbook-import/assets/updown2.gif';
+import NumericUpDownBasicScreenshot from '/img/reference/controls/numericupdown/numericupdown-basic.gif';
+import NumericUpDownFormatStringScreenshot from '/img/reference/controls/numericupdown/numericupdown-format-string.gif';
 
 # Numeric Up-Down
 

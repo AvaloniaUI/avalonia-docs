@@ -2,9 +2,9 @@
 description: CONCEPTS - Data Templates
 ---
 
-import ControlContentButtonScreenshot from '/img/gitbook-import/assets/image (42) (1).png';
-import ControlContentStringScreenshot from '/img/gitbook-import/assets/image (51).png';
-import ControlContentTypeScreenshot from '/img/gitbook-import/assets/image (52).png';
+import ControlContentButtonScreenshot from '/img/concepts/templates/content-button.png';
+import ControlContentStringScreenshot from '/img/concepts/templates/content-string.png';
+import ControlContentTypeScreenshot from '/img/concepts/templates/content-type.png';
 
 # Control Content
 

@@ -2,8 +2,8 @@
 description: REFERENCE
 ---
 
-import RiderWelcomeScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-1-rider-welcome.png';
-import RiderInstallAvaloniaPluginScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-4-plugin-install.png';
+import RiderWelcomeScreenshot from '/img/reference/jetbrains-rider-ide/rider-welcome.png';
+import RiderInstallAvaloniaPluginScreenshot from '/img/reference/jetbrains-rider-ide/rider-install-avalonia-plugin.png';
 
 # Настройка JetBrains Rider
 
@@ -61,6 +61,9 @@ Rider предоставляет наибольшее удобство при р
 
 Откроется окно **Preferences**.
 - Нажмите **Marketplace** и введите в поле поиска'Avalonia'. Найдите и выберете **AvaloniaRider**, после чего нажмите **Install**.
+
+<img src={RiderInstallAvaloniaPluginScreenshot} alt="" />
+
 - После завершения установки, нажмите **Restart IDE** (кнопка появится).
 
 Теперь _JetBrains Rider_ настроен для разработки приложений на _Avalonia UI_.

@@ -2,7 +2,7 @@
 description: REFERENCE
 ---
 
-import SineEaseOutScreenshot from '/img/gitbook-import/assets/image (67).png';
+import SineEaseOutScreenshot from '/img/reference/animation-settings/sine-ease-out.png';
 
 # Настройка Анимации
 

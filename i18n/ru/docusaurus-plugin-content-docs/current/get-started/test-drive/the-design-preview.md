@@ -3,6 +3,8 @@ id: the-design-preview
 title: The Design Preview (Предварительный просмотр)
 ---
 
+import TemperatureDesignPreviewScreenshot from '/img/get-started/test-drive/temperature-design-preview.png';
+
 На этой странице вы познакомитесь с аттрибутами окна, 
 а затем используете некоторые из них для настройки его отображения на панели предварительного просмотра.
 
@@ -26,8 +28,6 @@ title: The Design Preview (Предварительный просмотр)
 
 После установки новых значений, предварительный просмотр должен выглядеть так:
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/test-drive/design-preview.png" alt="The design preview" width='460'/>
-</div>
+<img className="center" src={TemperatureDesignPreviewScreenshot} alt="" />
 
 На следующей странице вы узнаете, как добавить обработку пользовательских событий. (нажатие, касание и т.д.)

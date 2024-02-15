@@ -3,8 +3,8 @@ id: assets
 title: Assets and Images
 ---
 
-import AssetIncludeFileAssetDiagram from '/img/gitbook-import/assets/image (8).png';
-import AssetIncludeLibraryAssetDiagram from '/img/gitbook-import/assets/image.png';
+import AssetFileDiagram from '/img/basics/user-interface/asset-file.png';
+import AssetLibraryDiagram from '/img/basics/user-interface/asset-library.png';
 
 # Assets
 
@@ -12,7 +12,7 @@ Many applications need to include assets such as bitmaps, styles and resource di
 
 ## Including assets
 
-<img src={AssetIncludeFileAssetDiagram} alt=''/>
+<img src={AssetFileDiagram} alt=''/>
 
 You include assets in an application by using the `<AvaloniaResource>` element in your project file.
 
@@ -49,7 +49,7 @@ As an alternative, you can use the rooted path:
 
 ## Library Assets
 
-<img src={AssetIncludeLibraryAssetDiagram} alt=''/>
+<img src={AssetLibraryDiagram} alt=''/>
 
 If the asset is included in a different assembly from the XAML file, then you use the `avares:` URI scheme. For example, if the asset is contained in an assembly called `MyAssembly.dll` in a `Assets` folder, then you use:
 

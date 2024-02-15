@@ -3,7 +3,7 @@ id: build-and-run-your-application-on-a-simulator
 title: How To Build and Run on the iOS Simulator
 ---
 
-import RuniOSSimulatorScreenshot from '/img/guides/platforms/ios/run-ios-simulator.png';
+import IOSSimulatorScreenshot from '/img/guides/platforms/ios/run-ios-simulator.png';
 
 # How To Build and Run on the iOS Simulator
 
@@ -23,6 +23,6 @@ To run the project in a simulator, run the following command.
 dotnet run
 ```
 
-<img src={RuniOSSimulatorScreenshot} alt='Application running on iPad simulator'/>
+<img src={IOSSimulatorScreenshot} alt='Application running on iPad simulator'/>
 
 If you use `JetBrains Rider` or `Visual Studio for Mac` you can open the solution and run, build and debug your program inside the simulator.

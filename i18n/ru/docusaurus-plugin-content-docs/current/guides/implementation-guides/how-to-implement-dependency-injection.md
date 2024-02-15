@@ -3,7 +3,7 @@ id: how-to-implement-dependency-injection
 title: How To Implement Dependency Injection
 ---
 
-import MvvmArchitectureDiagram from '/img/gitbook-import/assets/image (3) (1) (2).png';
+import MvvmArchitectureDiagram from '/img/guides/implementation-guides/mvvm-architecture.png';
 
 # How To Implement Dependency Injection
 

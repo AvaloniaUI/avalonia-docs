@@ -3,15 +3,15 @@ id: developer-tools
 title: Developer Tools
 ---
 
-import DevToolsOverviewScreenshot from '/img/getting-started/developer-tools/image (23).png';
-import DevToolsPropertiesScreenshot from '/img/getting-started/developer-tools/image (26).png';
-import DevToolsLayoutScreenshot from '/img/getting-started/developer-tools/image (24) (1) (1).png';
-import DevToolsStylesScreenshot from '/img/getting-started/developer-tools/image (27).png';
-import DevToolsOverriddenStylesScreenshot from '/img/getting-started/developer-tools/image (28).png';
-import DevToolsSetterContextMenuScreenshot from '/img/getting-started/developer-tools/image (25).png';
-import DevToolsEventsScreenshot from '/img/getting-started/developer-tools/image (29).png';
-import DevToolsChangePropertyScreenshot from '/img/getting-started/developer-tools/devtools-change-property.gif';
-import DevToolsChangeLayoutScreenshot from '/img/getting-started/developer-tools/devtools-change-layout.gif';
+import DevToolsOverviewScreenshot from '/img/guides/implementation-guides/devtools-overview.png';
+import DevToolsPropertiesScreenshot from '/img/guides/implementation-guides/devtools-properties.png';
+import DevToolsLayoutScreenshot from '/img/guides/implementation-guides/devtools-layout.png';
+import DevToolsStylesScreenshot from '/img/guides/implementation-guides/devtools-styles.png';
+import DevToolsOverriddenStylesScreenshot from '/img/guides/implementation-guides/devtools-overridden-styles.png';
+import DevToolsSetterContextMenuScreenshot from '/img/guides/implementation-guides/devtools-setter-contextmenu.png';
+import DevToolsEventsScreenshot from '/img/guides/implementation-guides/devtools-events.png';
+import DevToolsChangePropertyScreenshot from '/img/guides/implementation-guides/devtools-change-property.gif';
+import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/devtools-change-layout.gif';
 
 # Developer Tools
 

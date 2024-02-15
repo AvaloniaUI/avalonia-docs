@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ToggleButtonScreenshot from '/img/gitbook-import/assets/toggle.gif';
+import ToggleButtonMuteScreenshot from '/img/reference/controls/buttons/togglebutton-mute.gif';
 
 # Toggle Button
 
@@ -86,7 +86,7 @@ To see the full list of Fluent icons available with _Avalonia UI_, see [https://
 
 The visibility of the path icons is set by the window styles, and these use the `:checked` pseudo class to determine when the toggle button is in its checked state. So, when the toggle button is checked, then the `audio-on` path icon is visible, and the `audio-mute` path icon is hidden. And conversely, when the toggle button is not checked, then the `audio-mute` path icon is visible, and the `audio-on` path icon is hidden.
 
-<img src={ToggleButtonScreenshot} alt="" />
+<img src={ToggleButtonMuteScreenshot} alt="" />
 
 ## More Information
 

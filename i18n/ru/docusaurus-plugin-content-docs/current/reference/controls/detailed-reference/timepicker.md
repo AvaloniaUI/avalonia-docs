@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TimePickerScreenshot from '/img/gitbook-import/assets/timepicker.gif';
+import TimePickerScreenshot from '/img/reference/controls/detailed-reference/timepicker/timepicker.gif';
 
 # Time Picker
 

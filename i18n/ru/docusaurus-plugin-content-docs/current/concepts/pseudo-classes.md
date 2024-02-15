@@ -25,7 +25,7 @@ To use pseudo classes, you append a colon (:) and the pseudo class to the select
 
 In this example, the button's background will change to red when the pointer is over it, thanks to the `pointerover` pseudo class.
 
-## Built-in Pseudo Classes
+## Built-in Pseudo Classes
 Some of the built-in pseudo classes include:
 
 * `:pointerover`: The mouse pointer is over the control.

@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ButtonClickHandlerScreenshot from '/img/gitbook-import/assets/button.gif';
+import ButtonClickScreenshot from '/img/reference/controls/buttons/button_click.gif';
 
 # Button
 
@@ -64,7 +64,7 @@ public partial class MainWindow : Window
 }
 ```
 
-<img src={ButtonClickHandlerScreenshot} alt=""/>
+<img src={ButtonClickScreenshot} alt=""/>
 
 ## More Information
 
