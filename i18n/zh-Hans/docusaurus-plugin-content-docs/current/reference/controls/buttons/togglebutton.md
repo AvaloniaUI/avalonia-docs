@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ToggleButtonScreenshot from '/img/gitbook-import/assets/toggle.gif';
+import ToggleButtonMuteScreenshot from '/img/reference/controls/buttons/togglebutton-mute.gif';
 
 # 切换按钮
 
@@ -87,7 +87,7 @@ import ToggleButtonScreenshot from '/img/gitbook-import/assets/toggle.gif';
 
 路径图标的可见性由窗口样式设置，这些样式使用`:checked`伪类来确定切换按钮何时处于已选中状态。因此，当切换按钮被选中时，`audio-on`路径图标可见，而`audio-mute`路径图标隐藏。反之，当切换按钮未选中时，`audio-mute`路径图标可见，而`audio-on`路径图标隐藏。
 
-<img src={ToggleButtonScreenshot} alt="" />
+<img src={ToggleButtonMuteScreenshot} alt="" />
 
 ## 更多信息
 

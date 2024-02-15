@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import CanvasContentZoneScreenshot from '/img/gitbook-import/assets/image (16) (2).png';
-import CanvasChildOverlapScreenshot from '/img/gitbook-import/assets/image (9) (2).png';
+import CanvasContentZoneScreenshot from '/img/reference/controls/canvas/canvas-contentzone.png';
+import CanvasChildOverlapScreenshot from '/img/reference/controls/canvas/canvas-child-overlap.png';
 
 # Canvas
 

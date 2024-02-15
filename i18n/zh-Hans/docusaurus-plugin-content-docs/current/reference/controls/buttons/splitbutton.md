@@ -2,6 +2,11 @@
 
 `SplitButton` 作为 [`Button`](./button) 的扩展，具有可以单独按下的主要和次要部分。主要部分的行为与普通的 `Button` 相同，而次要部分会打开一个 [`Flyout`](../flyouts)，其中包含额外的操作。
 
+import SplitButtonClosedScreenshot from '/img/reference/controls/buttons/splitbutton-closed.png';
+import SplitButtonOpenedScreenshot from '/img/reference/controls/buttons/splitbutton-opened.png';
+import SplitButtonPaletteFlyoutScreenshot from '/img/reference/controls/buttons/splitbutton-palette-flyout.png';
+import SplitButtonExportButtonScreenshot from '/img/reference/controls/buttons/splitbutton-export.png';
+
 ## 这是否是正确的控件？
 
 `SplitButton` 应该只由类似的操作组成。从根本上讲，此控件用于将常用操作分组，其中一个操作明显优先于其他操作。最常见的操作应该作为默认操作显示在 `SplitButton` 的主要部分中。较不常见的操作应添加到 `Flyout` 中，在按下次要（下拉）部分时显示。
@@ -54,10 +59,12 @@
 </SplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/SplitButtonClosed.png' alt=''/>
-_SplitButton（Flyout已关闭）_
+<img src={SplitButtonClosedScreenshot} alt="" />
 
-<img src='/img/gitbook-import/assets/SplitButtonOpened.png' alt=''/>
+_SplitButton (Flyout closed)_
+
+<img src={SplitButtonOpenedScreenshot} alt="" />
+
 _SplitButton（Flyout已打开）_
 
 ### 颜色选择示例
@@ -95,7 +102,8 @@ _SplitButton（Flyout已打开）_
 </SplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/SplitButton\_ColorPickerSample.png' alt=''/>
+<img src={SplitButtonPaletteFlyoutScreenshot} alt=""/>
+
 _用于颜色选择的 SplitButton 示例_
 
 ### 导出按钮示例
@@ -119,5 +127,6 @@ _用于颜色选择的 SplitButton 示例_
 </SplitButton>
 ```
 
-<img src='/img/gitbook-import/assets/SplitButton\_ExportButtonSample.png' alt=''/>
+<img src={SplitButtonExportButtonScreenshot} alt="" />
+
 _带有不同导出选项的 SplitButton 示例_

@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import RepeatButtonScreenshot from '/img/gitbook-import/assets/repeatbutton.gif';
+import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbutton_hold.gif';
 
 # 重复按钮
 

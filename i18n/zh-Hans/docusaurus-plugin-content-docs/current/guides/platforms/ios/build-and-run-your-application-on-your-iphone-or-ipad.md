@@ -3,15 +3,15 @@ id: build-and-run-your-application-on-your-iphone-or-ipad
 title: 如何在iPhone或iPad上构建和运行应用程序
 ---
 
-import BuildiOSOpenXcodeScreenshot from '/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.09.54.png';
-import BuildiOSCreateXcodeProjectScreenshot from '/img/gitbook-import/assets/image (36).png';
-import BuildiOSSelectProjectOptionsScreenshot from '/img/gitbook-import/assets/image (30).png';
-import BuildiOSSelectAnyDeviceScreenshot from '/img/gitbook-import/assets/image (35).png';
-import BuildiOSAddAdditionalSimulatorsScreenshot from '/img/gitbook-import/assets/image (32).png';
-import BuildiOSProvisionPhoneScreenshot from '/img/gitbook-import/assets/Screenshot 2022-03-17 at 12.19.06.png';
-import BuildiOSSelectDeviceScreenshot from '/img/gitbook-import/assets/image (24) (1).png';
-import BuildiOSChangeBundleIdentifierScreenshot from '/img/gitbook-import/assets/image (18) (2).png';
-import BuildiOSCertScreenshot from '/img/gitbook-import/assets/image (33).png';
+import IOSOpenXcodeScreenshot from '/img/guides/platforms/ios/ios-open-xcode.png';
+import IOSCreateXcodeProjectScreenshot from '/img/guides/platforms/ios/ios-create-xcode-project.png';
+import IOSSelectProjectOptionsScreenshot from '/img/guides/platforms/ios/ios-select-project-options.png';
+import IOSSelectAnyDeviceScreenshot from '/img/guides/platforms/ios/ios-select-any-device.png';
+import IOSAddAdditionalSimulatorsScreenshot from '/img/guides/platforms/ios/ios-add-additional-simulators.png';
+import IOSProvisionPhoneScreenshot from '/img/guides/platforms/ios/ios-provision-phone.png';
+import IOSSelectDeviceScreenshot from '/img/guides/platforms/ios/ios-select-device.png';
+import IOSChangeBundleIdentifierScreenshot from '/img/guides/platforms/ios/ios-change-bundle-identifier.png';
+import IOSCertScreenshot from '/img/guides/platforms/ios/ios-cert.png';
 
 # 如何在iPhone或iPad上构建和运行应用程序
 
@@ -23,15 +23,15 @@ import BuildiOSCertScreenshot from '/img/gitbook-import/assets/image (33).png';
 
 1. 打开 Xcode
 
-<img src={BuildiOSOpenXcodeScreenshot} alt=''/>
+<img src={IOSOpenXcodeScreenshot} alt=''/>
 
 2\. 选择创建一个新的Xcode项目
 
-<img src={BuildiOSCreateXcodeProjectScreenshot} alt=''/>
+<img src={IOSCreateXcodeProjectScreenshot} alt=''/>
 
 3\. 选择iOS和应用程序，然后点击下一步。
 
-<img src={BuildiOSSelectProjectOptionsScreenshot} alt=''/>
+<img src={IOSSelectProjectOptionsScreenshot} alt=''/>
 
 4\. 为您的项目和组织输入名称。其余信息保持不变。
 
@@ -39,19 +39,19 @@ import BuildiOSCertScreenshot from '/img/gitbook-import/assets/image (33).png';
 
 6\. 在顶部的状态栏中点击"Any device (arm64)"。
 
-<img src={BuildiOSSelectAnyDeviceScreenshot} alt=''/>
+<img src={IOSSelectAnyDeviceScreenshot} alt=''/>
 
 7\. 在列表底部点击"Add Additional Simulators..."
 
-<img src={BuildiOSAddAdditionalSimulatorsScreenshot} alt=''/>
+<img src={IOSAddAdditionalSimulatorsScreenshot} alt=''/>
 
 8\. 点击设备，然后用USB电缆连接您的iPhone或iPad。Xcode将开始为您的手机进行开发配置。
 
-<img src={BuildiOSProvisionPhoneScreenshot} alt=''/>
+<img src={IOSProvisionPhoneScreenshot} alt=''/>
 
 9\. 从设备列表中选择您的iPhone或iPad。
 
-<img src={BuildiOSSelectDeviceScreenshot} alt=''/>
+<img src={IOSSelectDeviceScreenshot} alt=''/>
 
 10\. 点击播放按钮，应用程序将被安装并运行在您的手机上。
 
@@ -59,7 +59,7 @@ import BuildiOSCertScreenshot from '/img/gitbook-import/assets/image (33).png';
 
 11\. 将bundle identifier更改为您在步骤3中在Xcode中选择的标识符相同。
 
-<img src={BuildiOSChangeBundleIdentifierScreenshot} alt=''/>
+<img src={IOSChangeBundleIdentifierScreenshot} alt=''/>
 
 12\. 现在编辑`.iOS.csproj`文件。
 
@@ -78,7 +78,7 @@ import BuildiOSCertScreenshot from '/img/gitbook-import/assets/image (33).png';
 
 要找到此值，请打开`KeyChain Access`应用程序。在搜索框中搜索development。
 
-<img src={BuildiOSCertScreenshot} alt=''/>
+<img src={IOSCertScreenshot} alt=''/>
 
 将该值设置为窗口顶部粗体文本中所示的选定开发证书。
 

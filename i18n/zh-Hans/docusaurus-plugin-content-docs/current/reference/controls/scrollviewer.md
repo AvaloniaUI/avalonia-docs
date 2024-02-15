@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ScrollViewerScreenshot from '/img/gitbook-import/assets/scrollview.gif';
+import ScrollViewerScreenshot from '/img/reference/controls/scrollviewer/scrollviewer.gif';
 
 # Scroll Viewer
 

@@ -2,10 +2,10 @@
 description: CONCEPTS
 ---
 
-import CompositionBasicLayoutDiagram from '/img/gitbook-import/assets/image (10) (2).png';
-import CompositionTreesDiagram from '/img/gitbook-import/assets/image (3) (1).png';
-import CompositionUserControlsDiagram from '/img/gitbook-import/assets/image (8) (2).png';
-import CompositionCollectionControlsDiagram from '/img/gitbook-import/assets/image (8) (3).png';
+import CompositionBasicLayoutDiagram from '/img/concepts/composition-basic-layout.png';
+import CompositionTreesDiagram from '/img/concepts/composition-trees.png';
+import CompositionUserControlsDiagram from '/img/concepts/composition-usercontrol.png';
+import CompositionCollectionControlsDiagram from '/img/concepts/composition-collection-controls.png';
 
 # UI组合
 
@@ -42,6 +42,8 @@ _Avalonia UI_包含大量内置控件，可以满足大多数UI需求。
 
 无论您使用的是哪种控件排列方式，_Avalonia UI_都将它们的关系表示为树结构，以“最外层”控件作为根。因此，例如，前面的UI组合可以表示为此处显示的树：
 
+<img src={CompositionTreesDiagram} alt=""/>
+
 这是**逻辑控件树**，它表示应用程序控件（包括主窗口）在XAML中定义的层次结构。_Avalonia UI_中有许多处理逻辑控件树及其伴生的**视觉控件树**的系统。
 
 :::info
@@ -51,6 +53,8 @@ _Avalonia UI_包含大量内置控件，可以满足大多数UI需求。
 ## 用户控件
 
 用户控件是_Avalonia UI_中UI组合的主要组成部分。
+
+<img src={CompositionUserControlsDiagram} alt=""/>
 
 您可以将用户控件添加到主窗口的内容区域中，以表示“页面视图”（上图左侧）。这允许您使用自己的用户控件（XAML和代码文件）为每个页面实现布局和功能，从而创建一个更复杂的应用程序。
 

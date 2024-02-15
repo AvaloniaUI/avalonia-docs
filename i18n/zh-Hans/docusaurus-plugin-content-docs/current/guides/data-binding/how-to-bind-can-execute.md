@@ -3,7 +3,7 @@ id: how-to-bind-can-execute
 title: 如何绑定 Can Execute
 ---
 
-import BindCanExecuteScreenshot from '/img/gitbook-import/assets/command4.gif';
+import BindCanExecuteScreenshot from '/img/guides/data-binding/bind-canexecute.gif';
 
 # 如何绑定 Can Execute
 

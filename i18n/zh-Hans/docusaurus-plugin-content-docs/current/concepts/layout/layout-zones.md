@@ -2,7 +2,7 @@
 description: CONCEPTS - Layout
 ---
 
-import LayoutZonesDiagram from '/img/gitbook-import/assets/image (25) (2) (1).png';
+import LayoutZonesDiagram from '/img/concepts/layout/layout-zones.png';
 
 # 布局区域
 

@@ -3,8 +3,8 @@ id: set-up-an-editor
 title: 设置编辑器
 ---
 
-import AvaloniaVsExtensionMarketplaceScreenshot from '/img/get-started/install-the-avalonia-extension/image (17) (2).png';
-import AvaloniaVsExtensionNuGetScreenshot from '/img/get-started/install-the-avalonia-extension/image (3) (1) (1) (1).png';
+import AvaloniaVsExtensionMarketplaceScreenshot from '/img/get-started/avalonia-vs-extension-marketplace.png';
+import AvaloniaVsExtensionNuGetScreenshot from '/img/get-started/avalonia-vs-extension-nuget.png';
 
 # 设置编辑器
 

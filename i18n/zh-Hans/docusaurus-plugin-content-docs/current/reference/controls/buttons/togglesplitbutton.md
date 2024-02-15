@@ -1,9 +1,9 @@
 # 切换分裂按钮
 
-import ToggleSplitButtonClosedUncheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_unchecked.png';
-import ToggleSplitButtonClosedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_checked.png';
-import ToggleSplitButtonOpenedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_opened_checked.png';
-import ToggleSplitButtonTextListScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_TextListExample.png';
+import ToggleSplitButtonClosedUncheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-closed-unchecked.png';
+import ToggleSplitButtonClosedCheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-closed-checked.png';
+import ToggleSplitButtonOpenedCheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-opened-checked.png';
+import ToggleSplitButtonTextListScreenshot from '/img/reference/controls/buttons/togglesplitbutton-text-list.png';
 
 `ToggleSplitButton` 作为一个带有主要和次要部分的 [`ToggleButton`](togglebutton)，每个部分都可以单独按下。主要部分的行为类似于普通的 `ToggleButton`，而次要部分会打开一个带有附加操作的 [`Flyout`](../flyouts)。
 

@@ -3,9 +3,9 @@ id: ide-support
 title: 如何使用实时预览
 ---
 
-import VsXamlPreviewerScreenshot from '/img/gitbook-import/assets/vs-designer.png';
-import VsLogVerbosityScreenshot from '/img/gitbook-import/assets/image (1) (4).png';
-import VsDiagnosticsOutputScreenshot from '/img/gitbook-import/assets/image (7) (4).png';
+import VsXamlPreviewerScreenshot from '/img/guides/implementation-guides/vs-xaml-previewer.png';
+import VsLogVerbosityScreenshot from '/img/guides/implementation-guides/vs-log-verbosity.png';
+import VsDiagnosticsOutputScreenshot from '/img/guides/implementation-guides/vs-diagnostics-output.png';
 
 # 如何使用实时预览
 

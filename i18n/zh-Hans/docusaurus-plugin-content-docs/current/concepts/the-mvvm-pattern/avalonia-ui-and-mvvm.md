@@ -2,7 +2,7 @@
 description: CONCEPTS - The MVVM Pattern
 ---
 
-import MvvmDataBindingDiagram from '/img/gitbook-import/assets/mvvm.png';
+import MvvmDataBindingDiagram from '/img/concepts/mvvm/mvvm.png';
 
 # Avalonia UI和MVVM
 

@@ -3,7 +3,7 @@ id: logging-errors-and-warnings
 title: 如何记录错误和警告
 ---
 
-import LogToTraceOutputScreenshot from '/img/gitbook-import/assets/image (3).png';
+import LogToTraceOutputScreenshot from '/img/guides/implementation-guides/log-to-trace-output.png';
 
 # 如何记录错误和警告
 

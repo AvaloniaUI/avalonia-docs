@@ -3,7 +3,7 @@ id: graphics-and-animations
 title: 如何绘制图形
 ---
 
-import ShapeAndGeometrySampleScreenshot from '/img/gitbook-import/assets/shapes.png';
+import ShapeAndGeometrySampleScreenshot from '/img/guides/graphics-and-animations/shapes-and-geometry.png';
 
 # 如何绘制图形
 

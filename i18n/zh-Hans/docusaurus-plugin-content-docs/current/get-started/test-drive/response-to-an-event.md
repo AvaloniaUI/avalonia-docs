@@ -3,9 +3,9 @@ id: respond-to-an-event
 title: 响应事件
 ---
 
-import SolutionCodeBehindScreenshot from '/img/get-started/respond-to-an-event/image (59).png';
-import AvaloniaEventIntellisenseScreenshot from '/img/get-started/respond-to-an-event/image (25) (2).png';
-import EventDebugOutputScreenshot from '/img/get-started/respond-to-an-event/image (54).png';
+import SolutionCodeBehindScreenshot from '/img/get-started/test-drive/solution-code-behind.png';
+import ButtonIntellisenseClickScreenshot from '/img/get-started/test-drive/button-intellisense-click.png';
+import EventDebugOutputScreenshot from '/img/get-started/test-drive/event-debug-output.png';
 
 在Avalonia应用程序中，您可以使用多种方式实现操作。在本页面中，您将了解如何使用最简单的方法之一：如何编写按钮点击的事件处理代码。
 
@@ -79,7 +79,7 @@ using System.Diagnostics;
 :::tip
 如果您使用的是一个IDE，您将在输入时看到Avalonia UI的智能感知。
 
-<img className="center" src={AvaloniaEventIntellisenseScreenshot} alt="" />
+<img className="center" src={ButtonIntellisenseClickScreenshot} alt="" />
 :::
 
 - 运行应用程序并点击按钮。

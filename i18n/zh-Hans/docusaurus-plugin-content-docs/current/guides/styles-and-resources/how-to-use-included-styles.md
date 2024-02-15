@@ -3,6 +3,7 @@ id: how-to-use-included-styles
 title: 如何使用包含的样式
 ---
 
+import VsStylesTemplateScreenshot from '/img/guides/styles-and-resources/vs-styles-template.png';
 
 # 如何使用包含的样式
 
@@ -27,7 +28,7 @@ _Avalonia UI_ 解决方案模板提供了一种快速添加样式文件到您的
 -  在Avalonia项目中，点击 **Styles(Avalonia)**
 -  为您的样式文件输入一个名称
 
-<img src="/img/gitbook-import/assets/image (1) (4) (2).png" alt=""/>
+<img src={VsStylesTemplateScreenshot} alt=""/>
 
 要使用在一个单独文件中定义的样式，您需要通过`StyleInclude`元素来引用它。`source`属性定义了样式文件的位置。您可以选择在哪个级别添加这个元素。
 

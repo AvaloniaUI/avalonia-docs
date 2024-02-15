@@ -3,7 +3,7 @@ id: build-and-run-your-application-on-a-simulator
 title: 如何在iOS模拟器上构建和运行
 ---
 
-import RuniOSSimulatorScreenshot from '/img/gitbook-import/assets/image (34).png';
+import RuniOSSimulatorScreenshot from '/img/guides/platforms/ios/run-ios-simulator.png';
 
 # 如何在iOS模拟器上构建和运行
 

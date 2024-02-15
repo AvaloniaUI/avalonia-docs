@@ -2,9 +2,9 @@
 description: CONCEPTS - ReactiveUI
 ---
 
-import ReactiveCommandViewScreenshot from '/img/gitbook-import/assets/image (2) (1) (1) (1).png';
-import ReactiveCommandRunOutputScreenshot from '/img/gitbook-import/assets/image (6) (1) (1).png';
-import ReactiveCommandCanExecuteScreenshot from '/img/gitbook-import/assets/image (6) (1) (2).png';
+import ReactiveCommandViewScreenshot from '/img/concepts/reactiveui/reactivecommand-view.png';
+import ReactiveCommandOutputScreenshot from '/img/concepts/reactiveui/reactivecommand-output.png';
+import ReactiveCommandCanExecuteScreenshot from '/img/concepts/reactiveui/reactivecommand-canexecute.png';
 
 # 响应式命令
 

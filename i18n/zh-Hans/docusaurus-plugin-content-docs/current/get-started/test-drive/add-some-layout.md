@@ -3,8 +3,8 @@ id: add-some-layout
 title: 添加一些布局
 ---
 
-import StackPanelDiagram from '/img/get-started/add-some-layout/image (40) (1) (1).png';
-import StackPanelSampleScreenshot from '/img/get-started/add-some-layout/image (41) (1).png';
+import StackPanelZonesDiagram from '/img/get-started/test-drive/stackpanel-zones.png';
+import TemperatureStackPanelScreenshot from '/img/get-started/test-drive/temperature-stackpanel.png';
 
 Avalonia提供了一系列内置的控件来帮助您布局应用程序的可视元素。在本页，您将看到如何使用其中一些布局控件。
 
@@ -16,7 +16,7 @@ Avalonia提供了一系列内置的控件来帮助您布局应用程序的可视
 
 stack panel控件允许在其内容区域中放置多个控件，并按照在XAML中定义的顺序以垂直堆栈的方式排列它们。
 
-<img className="center" src={StackPanelDiagram} alt="" />
+<img src={StackPanelZonesDiagram} alt="" />
 
 ```xml
 <StackPanel>

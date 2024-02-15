@@ -3,8 +3,8 @@ id: assets
 title: 资产和图像
 ---
 
-import AssetIncludeFileAssetDiagram from '/img/gitbook-import/assets/image (8).png';
-import AssetIncludeLibraryAssetDiagram from '/img/gitbook-import/assets/image.png';
+import AssetFileDiagram from '/img/basics/user-interface/asset-file.png';
+import AssetLibraryDiagram from '/img/basics/user-interface/asset-library.png';
 
 # 资产(Assets)
 
@@ -12,7 +12,7 @@ import AssetIncludeLibraryAssetDiagram from '/img/gitbook-import/assets/image.pn
 
 ## 包含资产
 
-<img src={AssetIncludeFileAssetDiagram} alt=''/>
+<img src={AssetFileDiagram} alt=''/>
 
 您可以通过在项目文件中使用`<AvaloniaResource>`元素来将资产包含在应用程序中。
 
@@ -49,7 +49,7 @@ import AssetIncludeLibraryAssetDiagram from '/img/gitbook-import/assets/image.pn
 
 ## 库资产
 
-<img src={AssetIncludeLibraryAssetDiagram} alt=''/>
+<img src={AssetLibraryDiagram} alt=''/>
 
 如果资产包含在与XAML文件不同的程序集中，则可以使用 `avares:` URI方案。例如，如果资产包含在名为`MyAssembly.dll`的程序集中的`Assets`文件夹中，则可以使用：
 

@@ -2,7 +2,7 @@
 description: REFERENCE - Controls
 ---
 
-import GridSpanningColumnsScreenshot from '/img/gitbook-import/assets/grid_example.png';
+import GridSpanningColumnsScreenshot from '/img/reference/controls/grid/grid-column-spanning.png';
 
 # Grid
 
