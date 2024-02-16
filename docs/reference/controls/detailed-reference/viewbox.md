@@ -28,9 +28,9 @@ The values for the `Stretch` property are as follows:
 
 <table><thead><tr><th width="250">Stretch</th><th>Description</th></tr></thead><tbody><tr><td><code>Uniform</code></td><td>(Default) The content is resized to fit in the container's dimensions while preserving its native aspect ratio.</td></tr><tr><td><code>Fill</code></td><td>The content is resized to fill the container's dimensions. The aspect ratio is not preserved.</td></tr><tr><td><code>UniformToFill</code></td><td>The content is resized to completely fill the container while preserving its native aspect ratio. However, a portion of the content may be hidden if the aspect ratio of the content does not match the aspect ratio of the allocated space.</td></tr></tbody></table>
 
-The values for the `StretchDirecton` property are as follows:
+The values for the `StretchDirection` property are as follows:
 
-| Stretch Directon  | Description                                                                                                                         |
+| Stretch Direction  | Description                                                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `UpOnly`          | Only scales the content up when the content is smaller than the available space. If the content is larger, no scaling down is done. |
 | `DownOnly`        | Only scales the content down when the content is larger than the available space. If the content is smaller, no scaling up is done. |
