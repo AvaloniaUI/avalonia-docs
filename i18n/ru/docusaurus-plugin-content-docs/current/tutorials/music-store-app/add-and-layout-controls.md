@@ -6,7 +6,7 @@ import MusicStoreBuyButtonScreenshot from '/img/tutorials/music-store-app/add-an
 import MusicStoreAddStylesScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/add-styles.png';
 import MusicStorePrettyButtonScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/pretty-button.png';
 
-# Add and Layout Controls
+# Добавление и размещение компонентов UI
 
 В конечном итоге, основное окно приложения будет отображать обложки альбомов из коллекции пользователя. 
 А в правом верхнем углу будет кнопка, которая будет открывать окно для поиска и добавления альбомов.

@@ -6,8 +6,7 @@ import MusicStoreMockSearchScreenshot from '/img/tutorials/music-store-app/add-c
 
 # Mock Search (рус: Фейковый поиск)
 
-На этой страницу вы узнаете, как создать `view model` для поиска альбомов,
-а потом связать ее с `controls` на новом `user control`.
+На этой страницу вы узнаете, как создать `view model` для поиска альбомов, а потом связать ее с компонентами UI на новом `user control`.
 На этом шаге вы будете использовать фейковый поиск, что позволит сосредоточиться на `view model`.
 
 ## Reactive View Model
