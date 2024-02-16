@@ -105,11 +105,11 @@ namespace RoutingExample
 
 **MainWindow.xaml**
 
-现在我们需要将`RoutedViewHost` XAML控件放置在我们的主视图中。它将根据提供的`IViewLocator`实现和传递的`Router`实例（类型为`RoutingState`）解析和嵌入适当的视图模型。请注意，您需要导入`rxui`命名空间以使`RoutedViewHost`正常工作。此外，您可以在XAML中重写`RoutedViewHost.PageTransition`属性，以覆盖`RoutedViewHost`更改视图时播放的动画。对于来自MyGet的最新构建，请使用`xmlns:rxui="https://reactiveui.net"`，对于NuGet上的0.8.0版本，请使用`xmlns:rxui="clr-namespace:Avalonia;assembly=Avalonia.ReactiveUI"`，如下面的示例所示。
+现在我们需要将`RoutedViewHost` XAML控件放置在我们的主视图中。它将根据提供的`IViewLocator`实现和传递的`Router`实例（类型为`RoutingState`）解析和嵌入适当的视图模型。请注意，您需要导入`rxui`命名空间以使`RoutedViewHost`正常工作。此外，您可以在XAML中重写`RoutedViewHost.PageTransition`属性，以覆盖`RoutedViewHost`更改视图时播放的动画。
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+        xmlns:rxui="http://reactiveui.net"
         xmlns:app="clr-namespace:RoutingExample"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
