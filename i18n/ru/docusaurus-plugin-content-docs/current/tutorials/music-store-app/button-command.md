@@ -2,19 +2,25 @@
 description: TUTORIALS - Music Store App
 ---
 
-# Button Command
+# Команда кнопки
 
-So far in this tutorial, you have altered only files from the view part of the MVVM pattern (for the main window and app). On this page you will learn how to link the button in the view for the main window, to a command in the view model. This will cause user interaction with the view (in this case a button click) to have an effect in the application logic of the view model.
+До этого, в рамках руководства, вы изменяли файлы относящие к части `view` паттерна MVVM. 
+На этой страницу вы узнаете, как связать кнопку во `view` основного окна и команду из `view model`.
+Это позволит пользователю влиять на логику приложения во `view model` при взаимодействии со `view`.
 
-When you are develop with _Avalonia UI_ and the MVVM pattern, the solution template will give you a choice of MVVM toolkits. This tutorial is using the _ReactiveUI_ framework, and the solution template has already added the packages necessary.
+Когда вы используете для разработки _Avalonia UI_ и паттерн MVVM,
+шаблон решения предоставляет возможность выбора инструментария для MVVM.
+Данное руководство использует фреймворк _ReactiveUI_, также шаблон решения уже содержит все необходимые пакеты.
 
-## Reactive Command
+## Реактивная команда
 
-The first step in linking the view and view model is to make the view model able to accept a command. You will achieve this by adding the .NET `ICommand` interface to the main window, and then implementing it with a _ReactiveUI_ `ReactiveCommand`. Follow this procedure:
+Первым шагом в связывании `view` и `view model`, является добавление во `view model` возможность работать с командами.
+Этого можно добиться, путем добавления интерфейса `ICommand` из .NET, а также последующей реализации с помощью
+`ReactiveCommand` из _ReactiveUI_. Для этого, выполните следующие действия:
 
-- Stop the app if it is still running.
-- Locate and open the **MainWindowViewModel.cs** file in the **/ViewModels** folder.
-- Delete the existing content of the class, and add the code shown:
+- Остановите приложение, если оно запущено.
+- В папке **/ViewModels**, найдите и откройте файл **MainWindowViewModel.cs**.
+- Удалите текущее содержимое класса и добавьте код, как показано ниже:
 
 ```csharp
 using ReactiveUI;
@@ -37,18 +43,19 @@ namespace AvaloniaApplication11.ViewModels
 }
 ```
 
-- Place a debug breakpoint at the open (curly) bracket just above the comment line.
+- Установите точку останова в открытую фигурную скобку, которая чуть выше комментария.
 
-To complete the link from the view to your new `BuyMusicCommand` view model property, you will add a data binding to the button.
+Для завершения связывания `view` и нового свойства `BuyMusicCommand` из `view model`,
+вам необходимо добавить `data binding (рус: привязку данных)` для кнопки.
 
 :::info
-For more information about the concept of data binding, see [here](../../basics/data/data-binding).
+Подробнее о `data binding (рус: привязке данных)`, см. [здесь](../../basics/data/data-binding).
 :::
 
-To add the button data binding, follow this procedure:
+Для добавления кнопке `data binding (рус: привязки данных)`, выполните следующие действия:
 
-- Locate and open the **MainWindow.axaml** file.
-- Find the XAML for the button and add the command attribute and binding, as shown:
+- Найдите и откройте файл **MainWindow.axaml**.
+- Найдите XAML для `button` и добавьте атрибут `command`, а также укажите `binding (рус: привязку)`, как показано ниже:
 
 ```
 <Button HorizontalAlignment="Right" VerticalAlignment="Top"
@@ -57,11 +64,14 @@ To add the button data binding, follow this procedure:
 </Button>
 ```
 
-The Command attribute of an _Avalonia UI_ button determines what happens when the button is clicked. In this case the data binding expression links to the `BuyMusicCommand` property of an underlying view model. To confirm that this is what happens:
+Атрибут `Command` определяет события у кнопки, которое происходит при ее нажатии.
+В данном случае, выражение `data binding (рус: привязки данных)` связано со свойством `BuyMusicCommand` из  `view model`.
+Чтобы убедиться в описанном ранее, выполните следующие действия:
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
+- Нажмите кнопку **Debug** в правом верхнем углу IDE, чтобы собрать и запустить проект.
+- Нажмите на кнопку с иконкой.
 
-You will see the app stop executing at the breakpoint you previously set in the view model.
+Вы увидите, что приложение остановилось на установленной вами точке остановки во `view model`.
 
-On the next page, you will create a new dialog window, and then add some code to display it (where the breakpoint currently is in the view model).
+На следующей странице вы создадите новое диалоговое окно,а потом добавите немного кода для его отображения
+(в то самое место, где сейчас установлена точка останова во `view model`).

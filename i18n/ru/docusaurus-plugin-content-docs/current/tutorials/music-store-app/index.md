@@ -4,24 +4,34 @@ description: TUTORIALS
 
 import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/image-20210310184538120.png';
 
-# Music Store App
+# Прилжение "Music Store"
 
-In this tutorial you will create a desktop app based on the idea of a music store.  The app is highly graphical - it presents images of album covers, and uses semi-transparent 'acrylic' blurred window backgrounds to give a very up-to-date look. By the end of the tutorial, you will be able search the iTunes online list of albums, and select albums for your own list.
+В данном руководстве, вы создадите настольное приложение, вдохновленное мыслями о музыкальном магазине.
+Это приложение отличается своей высококлассной графикой. В нем представлены изображения обложек альбомов,
+а также используется полупрозрачный фон с акриловым размытием, чтобы придать приложение еще более современный вид.
+По окончанию руководства, вы научитесь выполнять онлайн-поиск альбомов в iTunes,  а также выбирать альбомы для создания собственной коллекции.
 
 <p><img className="image-zoom-medium" src={MusicStoreFinishedAppScreenshot} alt="" /></p>
 
-In this tutorial you will use the MVVM pattern with the _ReactiveUI_ framework to manage multiple application windows. Also you will use advanced asynchronous techniques to implement the album search and other features, so that application responsiveness is maintained.
+В руководстве будут использованы паттерн MVVM и фреймворк _ReactiveUI_, который поможет управлять несколькими окнами приложения.
+Также вы узнаете, как использовать продвинутую асинхронность для реализации поиска альбомов и других функций,
+что повысит отзывчивость вашего приложения.
 
 :::warning
-This is a more advanced tutorial. The 'To Do List App' is a recommended prerequisite if you have limited experience with the MVVM pattern. Read about the 'To Do List App' tutorial [here](../todo-list-app/).
+Данное руководство требует более глубоких знаний.
+Если у вас небольшой опыт работы с паттерном MVVM,
+то рекомендуем ознакомиться с руководством 'Приложение To Do List (рус: Список дел)' по [ссылке](../todo-list-app/).
 :::
 
 :::info
-For information and background on the concept of the MVVM pattern, see [here](../../concepts/the-mvvm-pattern/).
+Подробнее о MVVM и его использовании в _Avalonia UI_, см. [здесь](../../concepts/the-mvvm-pattern/).
 :::
 
-This tutorial contains instructions for using the _Rider_ IDE on macOS; however the steps will be similar on other operating systems, and using other IDEs such as Visual Studio on _Microsoft Windows_.
+Данное руководство содержит инструкции для IDE _Rider_ на macOS;
+Тем не менее, все они похожи и для других операционных систем,
+например, вы можете использовать _Visual Studio_ на _Microsoft Windows_.
 
 :::info
-You can find the code for the completed application [here](https://github.com/AvaloniaUI/MusicStoreTutorial/). 
+Готовый код приложения вы можете найти [здесь](https://github.com/AvaloniaUI/MusicStoreTutorial/).
 :::
+

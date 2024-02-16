@@ -4,19 +4,20 @@ description: TUTORIALS - Music Store App
 
 import MusicStoreDisplayingImagesScreenshot from '/img/tutorials/music-store-app/displaying-images/image-20210310173858088.png';
 
-# Displaying Images
+# Отображение картинок
 
-On this page, you will learn how to retrieve the cover art bitmap for each album in the search results. You will then be able to display the image on each album tile view instead of the placeholder note icon.
+На этой страницу вы узнаете, как получить растровое изображения для каждого альбома из результатов поиска.
+После этого, вы сможете отображать на картинку внутри тайла альбома во `view`, вместо заглушки в виде иконки музыкальной ноты.
 
 ## Album Service
 
-Your first step is to modify the business service to retrieve the album cover art from the _Apple iTunes_ Web API.
+Первым делом мы изменим бизнес-сервис, чтобы получать обложки альбомов через Web API _Apple iTunes_.
 
-Follow this procedure to get the album cover art from the Web API:
+Выполните указанные ниже действия:
 
-- Stop the app if it is still running.
-- Locate and open the **Album.cs** file in the **/Models** folder.
-- Add the code as shown:
+- Остановите приложение, если оно запущено.
+- В папке **/Models** найдите и откройте файл **Album.cs**.
+- Добавьте код, как показано ниже:
 
 ```csharp
 private static HttpClient s_httpClient = new();
@@ -36,31 +37,32 @@ public async Task<Stream> LoadCoverBitmapAsync()
 }
 ```
 
-This method returns a stream that can be used to load a bitmap from, either from a cache file or from the API.
+Данный метод возвращает поток, который можно использовать для загрузки изображения из кэш-файла или API.
 
 :::info
-Note that the cache is not active at this time, you will implement it later in the tutorial.
+Обратите внимание, что на данный момент кэш недоступен, по руководству он будет реализован позже.
 :::
 
-- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:;
+- Чтобы увидеть, когда кэш станет доступен, установите точку останова на указанной строке:
 
 ```csharp
 return File.OpenRead(CachePath + ".bmp");
 ```
 
-## Album View Model
+## View Model альбома
 
-In this step , you will add a property to the album view model to store the cover art as a bitmap.
+На данном этапе, вы добавите свойство для `album view model`, чтобы сохранить обложку как растровое изображение.
 
 :::warning
-Note: You must reference `Avalonia.Media.Imaging` in the album view model because you must use the _Avalonia UI_ bitmap here, and **not** the .NET `System.Bitmap`.
+Вы должны использовать ссылку на `Avalonia.Media.Imaging`, поскольку `album view model` должен использовать
+растровое изображение _Avalonia UI_, а **не** `System.Bitmap` из .NET.
 :::
 
-Follow this procedure to update the album view model:
+Выполните указанные ниже действия:
 
-- Locate and open the **AlbumViewModel.cs** file.
-- Add the `using Avalonia.Media.Imaging;` reference.
-- Add the extra code for the album cover, as shown:
+- Найдите и откройте файл **AlbumViewModel.cs**.
+- Добавьте ссылку на `using Avalonia.Media.Imaging;`.
+- Добавьте дополнительный код для обложки альбома, как показано ниже:
 
 ```csharp
 using Avalonia.Media.Imaging;
@@ -88,22 +90,28 @@ public class AlbumViewModel : ViewModelBase
 }   
 ```
 
-Take some time to examine this code because it gives an insight into manipulating images with _Avalonia UI._ For example, the above uses the `DecodeToWidth` method to convert the image stream for display in _Avalonia UI_. This method can convert a stream for a large high resolution image into a smaller bitmap, at a specified width and while maintaining the aspect ratio.
+Потратьте немного времени на изучения написанного кода, в нем описано манипулирование изображениями с помощью _Avalonia UI_.
+К примеру, в приведенном выше примере используется метод `DecodeToWidth`, который преобразует поток изображений для отображения через _Avalonia UI_.
+Этот метод может преобразовать поток для изображения с высоким разрешением в растровое меньшего размера, с заданной шириной и сохранением соотношения сторон.
 
-This means that you will not waste large amounts of memory to display the album cover art, even though the Web API returns quite large files.
+Это означает, что вы не будете тратить много памяти для отображения обложек альбомов, несмотря на то, что Web API возвращает довольно большие файлы.
 
-Also notice how the `LoadCover` method is coded to run asynchronously, and on a background thread. This is so that the UI thread does not get blocked and make the UI unresponsive.
+Также обратите внимание на метод `LoadCover`, он написан для асинхронного запуска в фоновом потоке.
+Это делается для того, чтобы блокировать UI-поток, иначе UI будет зависать.
 
-## Load Cover Art
+## Загрузка обложек
 
-In this step you will alter the album search (in the music store view model) so that the cover art is loaded for each album that is found. To maintain the responsiveness of the app, you will make this process both asynchronous and cancellable.
+На этом шаге, вы измените поиска альбома (в `music store view model`) таким образом,
+чтобы обложка загружалась для каждого найденного альбома.
+Для сохранения отзывчивости приложения, вы сделаете этот процесс асинхронным, с возможностью его отмены.
 
-Firstly, you will need to add a method that can start loading the album covers whenever search results are returned. You will make this method asynchronous and cancellable.
+Во-первых, вам необходимо добавить метод, который сможет запускать загрузку обложек альбомов при изменении результатов поиска.
+Вы сделаете его асинхронным и отменяемым.
 
-To add the method to load album cover art, follow this procedure:
+Для добавления метода загрузки обложек альбомов, выполните указанные ниже действия:
 
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Add the code as shown:
+- Найдите и откройте файл **MusicStoreViewModel.cs**.
+- Добавьте код, как показано ниже:
 
 ```csharp
 private async void LoadCovers(CancellationToken cancellationToken)
@@ -121,24 +129,25 @@ private async void LoadCovers(CancellationToken cancellationToken)
 ```
 
 :::warning
-Important note: this method iterates through a **copy** of the search results collection  (created by the `ToList` method). This is because it runs asynchronously on its own thread, and the original  results collection could get changed at any time by another thread.
+Вжное примечание: данный метод выполняет итерации по **копии** коллекции результатов поиска (создается методом `ToList`).
+Это связано с тем, что он выполняется асинхронно в другом потоке, а исходная коллекция может быть изменена другим поток в любое время.
 :::
 
-The cancellation token argument will allow you to stop the method loading album covers whenever needed.
+Аргумент `cancellation token (рус: токена отмены)`, позволит вам по необходимости отменить выполнение метода по загрузке обложек альбомов.
 
-## Cancellable Image Load
+## Отмена загрузки картинок
 
-In this step you will call the `LoadCovers` method in the `DoSearch` method (in the music store view model) but with full cancellation management.
+На этом шаге, вы вызовите метод `LoadCovers` в методе `DoSearch`, но с возможностью отмены.
 
-Follow this procedure:
+Выполните указанные ниже действия:
 
-- Add this field to the **MusicStoreViewModel.cs** file.
+- В файл **MusicStoreViewModel.cs**, добавьте указанное ниже поле.
 
 ```csharp
 private CancellationTokenSource? _cancellationTokenSource;
 ```
 
-- Modify the code at the beginning of the `DoSearch` method to set up the cancellation token:
+- Для установки `cancellation token (рус: отменяемого токена)`, измените код в начале метода `DoSearch`:
 
 ```csharp
 _cancellationTokenSource?.Cancel();
@@ -146,9 +155,11 @@ _cancellationTokenSource = new CancellationTokenSource();
 var cancellationToken = _cancellationTokenSource.Token;
 ```
 
-So if there is an existing request still loading album art, this will cancel it. Again, because `_cancellationTokenSource` might be replaced asynchronously by anther thread, you have to work with a copy stored as a local variable.
+Теперь, если запрос загрузки обложек альбомов существует, то он будет отменен.
+Опять же, поскольку `_cancellationTokenSource` может быть асинхронно заменен другим потоком,
+вам придется работать с копией, сохраненной как локальная переменная.
 
-- Add the following code to the end of `DoSearch` method:
+- В конец метода `DoSearch`, добавьте указанный ниже код:
 
 ```csharp
 if (!cancellationToken.IsCancellationRequested)
@@ -157,7 +168,7 @@ if (!cancellationToken.IsCancellationRequested)
 }
 ```
 
-At this stage, your `DoSearch` method should look like this:
+На данный момент, метод `DoSearch` должен быть похож на указанный ниже:
 
 ```csharp
 private async void DoSearch(string s)
@@ -190,32 +201,35 @@ private async void DoSearch(string s)
 }
 ```
 
-## Album View
+## View альбома
 
-In the last step here, you will alter the data bindings in the album view so that the tile can display the album cover image. You will also add a test so that the placeholder panel is visible only when the album cover image is not available (is null).
+Последним шагом, вы измените `data bindings (рус: привязки данных)` в `album view`,
+чтобы на тайле можно было вывести обложку альбома.
+Вы также добавите проверку, чтобы заполнитель был виден в моменты, когда обложка альбома недоступна (имеет значение `null`).
 
-Follow this procedure:
+Выполните указанные ниже действия:
 
-- Locate and open the **AlbumView.axaml** file.
-- Add the data binding `Source="{Binding Cover}"` to the `<Image>` element:
-- Add this data binding and converter to the panel element below:
+- Найдите и откройте файл **AlbumView.axaml**.
+- Добавьте `data binding (рус: привязку данных)` `Source="{Binding Cover}"` к элементу `<Image>`.
+- Добавьте `data binding (рус: привязку данных)` и `converter (рус: преобразователь)` в `Panel`, как показано ниже:
 
 ```
 IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNotNull}}"
 ```
 
-A converter is an extension of a data binding expression that can convert the binding value before it is passed to the bound control. The `IsNull` converter returns a Boolean that is true when the value object is null.
+`Converter (рус: преобразователь)` - это расширение `data binding expression (рус: выражения привязки данных)`, которое может преобразовать привязанное значение перед его передачей к привязанному элементу.
+Значение `IsNull` возвращает логический результат, равный `true`, если объект `value` равен `null`.
 
 :::info
-For more information about the _Avalonia UI_ built-in binding converters, see the reference [here](../../reference/built-in-data-binding-converters.md).
+Подробнее о встроенных в _Avalonia UI_ `converters (рус: преобразователях)`, см. [здесь](../../reference/built-in-data-binding-converters.md).
 :::
 
-- Click **Debug** to compile and run the project.
-- Click the icon button.
-- Type some search text.
+- Нажмите кнопку **Debug**, чтобы собрать и запустить проект.
+- Нажмите на кнопку с иконкой.
+- Введите какой-нибудь текст.
 
 <p><img className="image-medium-zoom" src={MusicStoreDisplayingImagesScreenshot} alt="" /></p>
 
-Notice how the album covers load one by one, and the UI remains responsive.
+Обратите внимание, что обложки альбомов загружаются один за другим, а UI не зависает.
 
-On the next page, you will learn how to return the selected album from dialog, when the user clicks  **Buy Album**.
+На следующей страницу вы узнаете, как при нажатии кнопки **Buy Album**, получить выбранный в диалоговом окне альбом.

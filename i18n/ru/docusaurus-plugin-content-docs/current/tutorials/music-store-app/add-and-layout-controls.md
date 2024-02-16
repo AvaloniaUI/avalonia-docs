@@ -6,19 +6,20 @@ import MusicStoreBuyButtonScreenshot from '/img/tutorials/music-store-app/add-an
 import MusicStoreAddStylesScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/add-styles.png';
 import MusicStorePrettyButtonScreenshot from '/img/tutorials/music-store-app/add-and-layout-controls/pretty-button.png';
 
-# Add and Layout Controls
+# Добавление и размещение компонентов UI
 
-The main window of the app will eventually show a list of album covers in the user's collection, with a button at its top-right corner to allow the user to add a new album. The button will open a search dialog window to find new albums to add.
+В конечном итоге, основное окно приложения будет отображать обложки альбомов из коллекции пользователя. 
+А в правом верхнем углу будет кнопка, которая будет открывать окно для поиска и добавления альбомов.
 
-On this page you will learn how to layout the main window so that the button appears at its top-right corner, as required.
+На этой странице вы узнаете, как расположить кнопку в правом верхнем углу основного окна.
 
-## Button Layout
+## Расположение кнопки
 
-To display a button in the content zone of the main window, follow this procedure:
+Для отображения кнопки в зоне содержимого основного окна, выполните следующие действия:
 
-- Stop the app if it is still running.
-- Locate and open the **MainWindow.axaml** file.
-- Inside the panel element, add the following XAML for a button. The panel XAML should look like this:
+- Остановите приложение, если оно запущено.
+- Найдите и откройте файл **MainWindow.axaml**.
+- Внутри элемента `panel`, добавьте XAML кнопки. Содержимое файла должно выглядеть, как показано ниже:
 
 ```markup
 <Panel>
@@ -36,18 +37,17 @@ To display a button in the content zone of the main window, follow this procedur
 </Panel>
 ```
 
-- Click **Debug** to compile and run the project.
+- Нажмите кнопку **Debug** в правом верхнем углу IDE, чтобы собрать и запустить проект.
 
 <p><img className="image-medium-zoom" src={MusicStoreBuyButtonScreenshot} alt="" /></p>
 
-You will see the button, but it is in the default position and not at the top-right of the window as required.
+Вы можете увидеть кнопку, но ее текущая позиция не в правом верхнем углу окна.
+Для правильного позиционирования кнопки, выполните следующие действия:
 
-Follow this procedure to position the button correctly:
-
-- Stop the app if it is still running
-- Wrap the button element in a new panel element.
-- Add a margin attribute to the new panel element, with a value of 40. 
-- Add horizontal and vertical alignment attributes to the button element, as shown:
+- Остановите приложение, если оно запущено.
+- Оберните элемент `button` в **новый** элемент `panel`.
+- В него добавьте атрибут `margin` со значением **40**.
+- Добавьте атрибуты `HorizontalAlignment` и `VerticalAlignment` в элемент `button`, как показано ниже:
 
 ```markup
 <Panel Margin="40">
@@ -56,31 +56,33 @@ Follow this procedure to position the button correctly:
 </Panel>
 ```
 
-You should see all these changes reflected in the preview pane as you add them.
+Вы должны видеть изменения в панели предпросмотра по мере изменения кода.
 
-## Button Icon
+## Иконка кнопки
 
-Have a look back at the image of the finished app [here](./). 
+Посмотрите еще раз на [изображение готового приложения](./). 
 
-You will see that the button shows an icon, and not text (as it currently does). This is actually the Microsoft Store icon from the Fluent Icons collection, and _Avalonia UI_ has definitions for all these for you to use.
+Как вы могли заметить, кнопка отображается иконкой и не имеет текста.
+Данная иконка называется `Microsoft Store`, и она является частью коллекции `Fluent Icons`.
 
-To use the Microsoft Store icon, follow this procedure:
+Для использования иконки `Microsoft Store`, выполните следующие действия:
 
-- Navigate to the _Avalonia UI_ _GitHub_ to find the list of Fluent Icons at [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
-- Use your browser's text search to locate the name of the icon 'store\_microsoft\_regular'. There should be some code similar to:
+- Для получения списка `Fluent Icons`, перейдите на _GitHub_ _Avalonia UI_ по ссылке [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
+- Используйте поиск по страницу, чтобы найти иконку с именем 'store\_microsoft\_regular'. 
+Там должен быть код, похожий на указанный ниже:
 
 ```markup
 <StreamGeometry x:Key="store_microsoft_regular">M11.5 9.5V13H8V9.5H11.5Z M11.5 17.5V14H8V17.5H11.5Z M16 9.5V13H12.5V9.5H16Z M16 17.5V14H12.5V17.5H16Z M8 6V3.75C8 2.7835 8.7835 2 9.75 2H14.25C15.2165 2 16 2.7835 16 3.75V6H21.25C21.6642 6 22 6.33579 22 6.75V18.25C22 19.7688 20.7688 21 19.25 21H4.75C3.23122 21 2 19.7688 2 18.25V6.75C2 6.33579 2.33579 6 2.75 6H8ZM9.5 3.75V6H14.5V3.75C14.5 3.61193 14.3881 3.5 14.25 3.5H9.75C9.61193 3.5 9.5 3.61193 9.5 3.75ZM3.5 18.25C3.5 18.9404 4.05964 19.5 4.75 19.5H19.25C19.9404 19.5 20.5 18.9404 20.5 18.25V7.5H3.5V18.25Z</StreamGeometry>
 ```
 
-- Copy all of the code for the icon.
-- In the _Rider s_olution explorer, right-click the project.
-- Click **Add**, then click  **Avalonia Styles**
+- Полностью скопируйте код иконки.
+- Нажмите ПКМ по проекту в обозревателе решений _Rider_.
+- Нажмите **Add** и выберите **Avalonia Styles**
 
 <p><img className="image-medium-zoom" src={MusicStoreAddStylesScreenshot} alt="" /></p>
 
-- Enter the **Name** 'Icons', press enter.
-- Locate and open the new **Icons.axaml** file that is created. The XAML will look like this:
+- Введите название 'Icons' и нажмите `enter`.
+- Найдите и откройте созданный файл **Icons.axaml**. Его XAML будет выглядеть, как показано ниже:
 
 ```markup
 <Styles xmlns="https://github.com/avaloniaui"
@@ -95,11 +97,10 @@ To use the Microsoft Store icon, follow this procedure:
 </Styles>
 ```
 
-- Add a new `<Style>` element with start and end tags.
-- Add a new `<Style.Resources>` element with start and end tags inside the new `<Style>` element.
-- Paste your icon code inside the `<Style.Resources>` element.
+- Внутри элемента `<Style>`, добавьте элемент `<Style>` с открывающим и закрывающим тегами.
+- Вставьте вашу иконку внутрь элемента `<Style.Resources>`.
 
-The icons file now looks like this:
+Файл `Icons` должен выглядеть примерно так:
 
 ```markup
 <Styles xmlns="https://github.com/avaloniaui"
@@ -119,12 +120,12 @@ The icons file now looks like this:
 </Styles>
 ```
 
-With a new icons file prepared, you must now include it in your app.
+Теперь, после подготовки файла с иконками, вы должны включить его в ваше приложение.
 
-Follow this procedure to include the icons file:
+Для включения файла иконок, выполните следующие действия:
 
-- Locate and open the **App.axaml** file.
-- Add a `<StyleInclude>` element as shown:
+- Найдите и откройте файл **App.axaml**.
+- Добавьте элемент `<StyleInclude>`, как показано ниже:
 
 ```markup
 <Application.Styles>
@@ -133,12 +134,12 @@ Follow this procedure to include the icons file:
 </Application.Styles>
 ```
 
-You need to build the application so that the icons become available to the preview pane.
+Для отображения иконки в предпросмотре, необходимо собрать ваше приложение.
 
-To change the button from text to icon content, follow this procedure:
+Для изменения содержимого кнопки с текста на иконку, выполните следующие действия:
 
-- Locate and open the **MainWindow.axaml** file.
-- Alter the XAML for the button, as shown:
+- Найдите и откройте файл **MainWindow.axaml**.
+- Измените XAML кнопки, как показано ниже:
 
 ```markup
 <Button HorizontalAlignment="Right" VerticalAlignment="Top">       
@@ -146,8 +147,9 @@ To change the button from text to icon content, follow this procedure:
 </Button>
 ```
 
-- Click **Debug** to compile and run the project.
+- Нажмите кнопку **Debug** в правом верхнем углу IDE, чтобы собрать и запустить проект.
 
 <p><img className="image-medium-zoom" src={MusicStorePrettyButtonScreenshot} alt="" /></p>
 
-On the next page, you will learn how to link the button in the view (of the MVVM pattern) to a command in the view model, so it can act on the application logic there.
+На следующей странице вы узнаете, как связать кнопку из `view` с командой во `view model`,
+чтобы она могла взаимодействовать с логикой приложения.
