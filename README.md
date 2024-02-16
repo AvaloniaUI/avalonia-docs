@@ -42,22 +42,22 @@ The two suggested workflows are:
   ---
   ```
 
-- Use lowercase for file and folder names and dashes `-` as separators.
+- Use `kebab-case` for file and folder names.
   For example:
   - `/docs/getting-started/ide-extensions.md`
   - `/docs/how-to/use-google-fonts.md`
 
 - Images are important to bring the product to life and clarify the written content. For images you're adding to the repo, store them in the `img` subfolder inside `static` folder. For every topic there needs to be a folder inside `\static\img\` section, for example: `static\img\how-to\use-google-fonts\download-font.png`.
-  When you link to an image, the path and filename are case-sensitive. The convention is for image filenames to be all lowercase and use dashes `-` for separators.
+  
+  When you link to an image, the path and filename are case-sensitive. The convention is `kebab-case`. `import` should be used to help detect broken images and placed near the top of the document for easier maintenance.
 
   > Example code for adding an image in markdown file:
   ```
-  <div style={{textAlign: 'center'}}>
-
-  <img className="screenshot-full" src="/img/button-group.png" alt="Button group" />
-
-  </div>
+  import ButtonGroup from '/img/button-group.png';
+  <img className="screenshot-full" src={ButtonGroup} alt="Button group" />
   ```
+  
+  Do not include quotes around the `src`'s attribute value.  
 
 ## Local setup
 
