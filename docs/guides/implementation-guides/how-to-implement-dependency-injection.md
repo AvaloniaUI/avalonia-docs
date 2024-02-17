@@ -7,6 +7,10 @@ import MvvmArchitectureDiagram from '/img/gitbook-import/assets/image (3) (1) (2
 
 # How To Implement Dependency Injection
 
+:::info
+For views you can make a simple [ViewLocator](../../concepts/view-locator) which will automatically resolve the view from the Locator.
+:::
+
 This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
 
 <img src={MvvmArchitectureDiagram} alt=""/>
