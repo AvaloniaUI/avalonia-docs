@@ -7,11 +7,10 @@ title: How To Implement Dependency Injection
 
 [Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It accomplishes this by creating discrete services that are passed around/created as needed. It is especially useful when you are developing multi-platform applications that need specific service implementations for each platform.
 
-Microsoft.Extensions.DependencyInjection is a lightweight, extensible dependency injection (DI) container that is part of the .NET Framework. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
-
 This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
 
 Let's assume that your MainViewModel has a dependency on MyService. The constructor for ViewModel should looks like this:
+
 ```csharp
 private readonly MyService _myService;
 
@@ -22,12 +21,14 @@ public MapsViewModel(MyService myService)
 ```
 These are the steps you need to do in order to resolve that dependencu using DI.
 
-## Step 1: Install the NuGet package Microsoft.Extensions.DependencyInjection
+## Step 1: Install the NuGet package for DI
+`Microsoft.Extensions.DependencyInjection` is a lightweight, extensible dependency injection (DI) container that is part of the .NET Framework. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
+
 ```shell
 dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
-## Step 2: ServiceCollectionExtensions 
+## Step 2: Add ServiceCollectionExtensions 
 The following code is creating an extension for IServiceCollection. This is where you will register all your common dependencies. It's recomended to create that class in the shared project used by all avalonia target platform.
 
 ```csharp
@@ -39,8 +40,9 @@ public static class ServiceCollectionExtensions {
 }
 ```
 
-## Step 3: ServiceManager
-The following code create a ServiceManager class that is used to retrieve an instance of a given object.
+## Step 3: Add ServiceManager
+The following code create a ServiceManager class that is used to retrieve an instance of a given object. It's recomended to create that class in the shared project used by all avalonia target platform.
+
 ```csharp
 public static class ServiceManager {
     public static IServiceProvider Locator { get; private set; }
@@ -86,6 +88,7 @@ class Program
 
 ## Step 5: Modify App.axaml.cs
 Next, the App.xaml.cs class should be modified to use the DI container. This will allow the previously registered view model to be resolved via the dependency injection container. The fully realised view model can then be set to the data context of the main view. 
+
 ```csharp
 public partial class App : Application
 {
