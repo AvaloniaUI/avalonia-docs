@@ -5,7 +5,7 @@ title: How To Implement Dependency Injection
 
 # How To Implement Dependency Injection in Avalonia
 
-[Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It is especially useful when you are developing multi-platform applications that need specific service implementations for each platform.
+[Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code.It accomplishes this by creating discrete services that are passed around/created as needed.q It is especially useful when you are developing multi-platform applications that need specific service implementations for each platform.
 
 Microsoft.Extensions.DependencyInjection is a lightweight, extensible dependency injection (DI) container that is part of the .NET Framework. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
 
@@ -85,7 +85,7 @@ class Program
 ```
 
 ## Step 5: Modify App.axaml.cs
-We are using the `ServiceManager` class to retrieve the right view model.
+Modiying the `App` class to use `ServiceManager` to retrieve instances of the data context with all their dependencies resolved via DI.
 ```csharp
 public partial class App : Application
 {
@@ -100,6 +100,8 @@ public partial class App : Application
         // Without this line you will get duplicate validations from both Avalonia and CT
         BindingPlugins.DataValidators.RemoveAt(0);
 
+        // `ServiceManager` retrieve an instance of `MainViewModel`
+        // The dependency to `MyService` is resolved by DI.
         var vm = ServiceManager.Locator.GetRequiredService<MainViewModel>();
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
