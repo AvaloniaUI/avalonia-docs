@@ -3,19 +3,15 @@ id: how-to-implement-dependency-injection
 title: How To Implement Dependency Injection
 ---
 
-import MvvmArchitectureDiagram from '/img/gitbook-import/assets/image (3) (1) (2).png';
+# How To Implement Dependency Injection in Avalonia
 
-# How To Implement Dependency Injection
+[Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It is especially useful when you are developing multi-platform applications that need specific service implementations for each platform.
 
-:::info
-For views you can make a simple [ViewLocator](../../concepts/view-locator) which will automatically resolve the view from the Locator.
-:::
+Microsoft.Extensions.DependencyInjection is a lightweight, extensible dependency injection (DI) container that is part of the .NET Framework. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
 
 This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
 
-<img src={MvvmArchitectureDiagram} alt=""/>
-
-Let's assume that your MainViewModel as a dependency on MyService. The contructor for ViewModel should looks like this:
+Let's assume that your MainViewModel has a dependency on MyService. The constructor for ViewModel should looks like this:
 ```csharp
 private readonly MyService _myService;
 
@@ -89,7 +85,7 @@ class Program
 ```
 
 ## Step 5: Modify App.axaml.cs
-We are using the ServiceManager class to retrieve the right viewModel.
+We are using the `ServiceManager` class to retrieve the right view model.
 ```csharp
 public partial class App : Application
 {
