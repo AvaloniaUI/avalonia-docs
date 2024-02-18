@@ -40,7 +40,7 @@ The main window XAML should now look like this:
 
 ## Examine the XAML
 
-This XAML is similar in may ways to the user control XAML you had a lookup on the previous page. Specifically, here you added:
+This XAML is similar in many ways to the user control XAML you had a lookup on the previous page. Specifically, here you added:
 
 ```markup
 <Window ... xmlns:views="clr-namespace:ToDoList.Views" ...>
