@@ -1,6 +1,6 @@
-# Defining a ControlTheme
+# Определение Control Theme (рус: темы компонета UI)
 
-Avalonia allows you to define custom control themes to customize the appearance and style of your controls. In particular, a lookless control will have no visual representation without a control theme; however you can define control themes for all types of control.
+Avalonia позволяет определять пользовательские темы компонентов для настройки их внешнего вида и стилей.
+Стоит отметить, что без темы, компонент не будет иметь визуального представления.
 
-
-See the introduction to [control themes](../../styling/control-themes) for more information.
+Подробнее смотрите по ссылке [control themes (рус: Темы компонентов UI)](../../styling/control-themes).
