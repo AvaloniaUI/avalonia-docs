@@ -1,9 +1,9 @@
 ---
 id: index
-title: Creating Controls
+title: Создание компонентов UI
 ---
 
-# Создание Controls
+# Создание компонентов UI
 
 import {DocsCardList} from '../../../../../../../../src/components/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
