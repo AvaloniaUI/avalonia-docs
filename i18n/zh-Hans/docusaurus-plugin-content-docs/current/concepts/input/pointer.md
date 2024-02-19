@@ -2,7 +2,7 @@
 description: CONCEPTS - Input
 ---
 
-import PointerPressedSampleScreenshot from '/img/gitbook-import/assets/pressed.gif';
+import PointerPressedSampleScreenshot from '/img/concepts/input/pointer-pressed.gif';
 
 # 鼠标和指针设备
 

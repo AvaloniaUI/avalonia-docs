@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-import DataBindingModeDiagram from '/img/gitbook-import/assets/image (2).png';
+import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax/data-binding-mode.png';
 
 # Data Binding Syntax (рус: Синтаксис Привязки Данных)
 

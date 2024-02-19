@@ -2,17 +2,17 @@
 description: CONCEPTS
 ---
 
-import DataContextBindingOverviewDiagram from '/img/gitbook-import/assets/image (56).png';
-import DataContextTreeSearchDiagram from '/img/gitbook-import/assets/image (62).png';
-import DataContextContentBindingScreenshot from '/img/gitbook-import/assets/image (20) (2).png';
-import DataContextPreviewerScreenshot from '/img/gitbook-import/assets/image (40) (1).png'
+import DataContextOverviewDiagram from '/img/basics/data-binding/data-context/data-context-overview.png';
+import DataContextTreeSearchDiagram from '/img/basics/data-binding/data-context/data-context-tree-search.png';
+import DataContextGreetingBindingScreenshot from '/img/basics/data-binding/data-context/data-context-greeting.png';
+import DataContextPreviewerScreenshot from '/img/basics/data-binding/data-context/data-context-previewer.png';
 
 # Data Context (рус: Контекст Данных)
 
 Для привязки данных, Avalonia должна найти объект привязки.
 Расположение такого объекта в приложении и  называется контекстом данных.
 
-<img src={DataContextBindingOverviewDiagram} alt=''/>
+<img src={DataContextOverviewDiagram} alt=''/>
 
 Каждый элемент Avalonia содержит свойство `DataContext`.
 К ним относятся Controls, User Controls и Window.
@@ -83,7 +83,8 @@ public class MainWindowViewModel : ViewModelBase
 
 После запуска проекта, `Data Binder` (рус: Привязщик Данных) ищет контекст данных в логическом дереве и находит его на уровне основного окна.
 Пример привязанного текста:
-<img src={DataContextContentBindingScreenshot} alt=""/>
+
+<img src={DataContextGreetingBindingScreenshot} alt=""/>
 
 ## Design Data Context (рус: Контекст Данных для предварительного просмотра)
 

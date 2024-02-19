@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ProgressBarScreenshot from '/img/gitbook-import/assets/progressbar.png';
+import ProgressBarScreenshot from '/img/reference/controls/progressbar/progressbar.png';
 
 # Progress Bar
 

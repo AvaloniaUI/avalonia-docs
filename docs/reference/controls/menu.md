@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import MenuTopDockScreenshot from '/img/gitbook-import/assets/menu.gif';
-import MenuWithIconScreenshot from '/img/gitbook-import/assets/menu2.gif';
+import MenuTopDockScreenshot from '/img/reference/controls/menu/menu-top-dock.gif';
+import MenuIconScreenshot from '/img/reference/controls/menu/menu-icon.gif';
 
 # Menu
 
@@ -151,7 +151,7 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 </MenuItem>
 ```
 
-<img src={MenuWithIconScreenshot} alt="" />
+<img src={MenuIconScreenshot} alt="" />
 
 :::info
 For more detailed guidance on how to add icons to your menus, see [here](../../guides/graphics-and-animation/how-to-add-menu-icons.md).

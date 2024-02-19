@@ -3,7 +3,7 @@ id: draw-with-a-property
 title: Draw with a Property
 ---
 
-import DrawWithPropertyScreenshot from '/img/gitbook-import/assets/image (1) (2) (2).png';
+import DrawWithPropertyScreenshot from '/img/guides/custom-controls/draw-property.png';
 
 # Draw with a Property
 

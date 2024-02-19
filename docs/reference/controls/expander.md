@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ExpanderClosedScreenshot from '/img/gitbook-import/assets/image (2) (1) (1).png';
-import ExpanderOpenedScreenshot from '/img/gitbook-import/assets/image (12) (2).png';
+import ExpanderClosedScreenshot from '/img/reference/controls/expander/expander-closed.png';
+import ExpanderOpenedScreenshot from '/img/reference/controls/expander/expander-opened.png';
 
 # Expander
 

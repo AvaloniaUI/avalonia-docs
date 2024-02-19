@@ -3,8 +3,8 @@ title: CheckBox
 description: REFERENCE - Built-in Control
 ---
 
-import CheckBoxTwoStateScreenshot from '/img/gitbook-import/assets/checkbox1.gif';
-import CheckBoxThreeStateScreenshot from '/img/gitbook-import/assets/checkbox2.gif';
+import CheckBoxTwoStateScreenshot from '/img/reference/controls/checkbox/checkbox-two-state.gif';
+import CheckBoxThreeStateScreenshot from '/img/reference/controls/checkbox/checkbox-three-state.gif';
 
 # CheckBox
 

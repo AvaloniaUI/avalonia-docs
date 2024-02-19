@@ -2,7 +2,7 @@
 description: CONCEPTS - Input
 ---
 
-import InputEventRoutingDiagram from '/img/gitbook-import/assets/input-event-routing.png';
+import InputEventRoutingDiagram from '/img/concepts/input/pointer-pressed-routing.png';
 
 # Routed Events
 

@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import MenuFlyoutScreenshot from '/img/gitbook-import/assets/menuflyout.gif';
+import MenuFlyoutScreenshot from '/img/reference/controls/detailed-reference/menuflyout/menuflyout-button.gif';
 
 # Menu Flyout
 

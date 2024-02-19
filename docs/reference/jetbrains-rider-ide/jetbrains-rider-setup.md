@@ -2,8 +2,8 @@
 description: REFERENCE
 ---
 
-import RiderWelcomeScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-1-rider-welcome.png';
-import RiderInstallAvaloniaPluginScreenshot from '/img/gitbook-import/assets/jetbrains-rider-setup-4-plugin-install.png';
+import RiderWelcomeScreenshot from '/img/reference/jetbrains-rider-ide/rider-welcome.png';
+import RiderInstallAvaloniaPluginScreenshot from '/img/reference/jetbrains-rider-ide/rider-install-avalonia-plugin.png';
 
 # JetBrains Rider Setup
 

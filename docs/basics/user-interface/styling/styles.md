@@ -3,7 +3,7 @@ id: styles
 title: Styles
 ---
 
-import StyleH1SampleScreenshot from '/img/gitbook-import/assets/image (5) (5).png';
+import StyleH1SampleScreenshot from '/img/basics/user-interface/styling/style-h1.png';
 
 # Styles
 

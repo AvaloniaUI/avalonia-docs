@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ItemsRepeaterVerticalScreenshot from '/img/gitbook-import/assets/image (2) (6).png';
-import ItemsRepeaterHorizontalScreenshot from '/img/gitbook-import/assets/repeater.gif';
+import ItemsRepeaterVerticalScreenshot from '/img/reference/controls/itemsrepeater/itemsrepeater-vertical.png';
+import ItemsRepeaterHorizontalScreenshot from '/img/reference/controls/itemsrepeater/itemsrepeater-horizontal.gif';
 
 # Items Repeater
 

@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import FlyoutAttachedScreenshot from '/img/gitbook-import/assets/flyout2.gif';
+import FlyoutShowAttachedScreenshot from '/img/reference/controls/flyouts/flyout-show-attached.gif';
 
 # Flyout
 
@@ -53,7 +53,7 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 }
 ```
 
-<img src={FlyoutAttachedScreenshot} alt="" />
+<img src={FlyoutShowAttachedScreenshot} alt="" />
 
 ## Useful Properties
 

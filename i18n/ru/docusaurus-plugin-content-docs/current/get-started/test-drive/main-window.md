@@ -3,11 +3,11 @@ id: main-window
 title: The Main Window
 ---
 
-import LayoutZonesDiagram from '/img/gitbook-import/assets/image (25) (2) (1).png';
-import MainWindowScreenshot from '/img/get-started/the-main-window/main-window-screenshot.png';
-import RunningAppWindowScreenshot from '/img/get-started/the-main-window/runningrapp-window-screenshot.png';
-import VsDesignerScreenshot from '/img/get-started/the-main-window/vs-designer-screenshot.png';
-import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) (2).png';
+import LayoutZonesDiagram from '/img/concepts/layout/layout-zones.png';
+import ViewModelScreenshot from '/img/get-started/test-drive/main-window-viewmodel.png';
+import AppRunningScreenshot from '/img/get-started/test-drive/main-window-app-running.png';
+import VsPreviewerScreenshot from '/img/get-started/test-drive/vs-previewer.png';
+import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane.png';
 
 Теперь вы можете приступить к изучению проекта на Avalonia. Для начала, мы изучим основное окно приложения.
 Откройте файл **MainWindow.axaml**.
@@ -23,7 +23,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 Как и другие Controls, окно будет отрисовано на целевой платформе с **4 зонами**: Margin, Border, Padding и Content.
 
 
-<img className="center" src={LayoutZonesDiagram} alt="" />
+<img src={LayoutZonesDiagram} alt="" />
 
 В текущем приложении, для зоны Content указана ссылка на другое view: **<views:MainView />**.
 Оно находится внутри файла MainView.axaml, и является User Control, который будет отображаться у окна внутри зоны **Content**.
@@ -40,8 +40,8 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 Вы можете изменить значение **Greeting** в **MainViewModel**, 
 чтобы увидеть, как измениться отображаемый текст в интерфейсе.
 
-<img className="center" src={MainWindowScreenshot} alt="" />
-<img className="center" src={RunningAppWindowScreenshot} alt="" />
+<img className="center" src={ViewModelScreenshot} alt="" />
+<img className="center" src={AppRunningScreenshot} alt="" />
 
 :::info
 Подробную информацию о зонах размемщения, см. [здесь](../../concepts/layout/layout-zones).
@@ -52,7 +52,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 Если вы используете Visual Studio, то вы можете открыть окно с кодом XAML и окно предварительного просмотра.
 Откройте файл **MainWindow.axaml** и нажмите кнопку **Design View**, она находится в верхней части редактора.
 
-<img className="center" src={VsDesignerScreenshot} alt="" />
+<img className="center" src={VsPreviewerScreenshot} alt="" />
 
 :::info
 Если вы видете значок красного восклицательного знака и сообщение **The designer is loading...**,

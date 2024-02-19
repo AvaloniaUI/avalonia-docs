@@ -3,8 +3,8 @@ title: DockPanel
 description: REFERENCE - Built-in Controls
 ---
 
-import DockPanelTopScreenshot from '/img/gitbook-import/assets/image (23).png';
-import DockPanelFillNoOverlapScreenshot from '/img/gitbook-import/assets/image (3) (2).png'; 
+import DockPanelTopScreenshot from '/img/reference/controls/dockpanel/dockpanel-top.png';
+import DockPanelFillNoOverlapScreenshot from '/img/reference/controls/dockpanel/dockpanel-fill-no-overlap.png'; 
 
 # DockPanel
 
@@ -12,7 +12,7 @@ The `DockPanel` control arranges its child controls along specified 'docking edg
 
 For example, if the docking edge on a child control is defined as 'top' and it has a height defined, but no width, it will draw like this:
 
-<img src="/img/gitbook-import/assets/image (23).png" alt=""/>
+<img src={DockPanelTopScreenshot} alt=""/>
 
 :::warning
 You must define the child control dimension perpendicular to the docking edge, or it will not show.

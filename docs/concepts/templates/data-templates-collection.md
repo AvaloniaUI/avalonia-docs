@@ -2,7 +2,7 @@
 description: CONCEPTS - Data Templates
 ---
 
-import DataTemplatesCollectionStudentScreenshot from '/img/gitbook-import/assets/image (57).png';
+import DataTemplatesCollectionStudentScreenshot from '/img/concepts/templates/datatemplates-collection-student.png';
 
 # Data Templates Collection
 

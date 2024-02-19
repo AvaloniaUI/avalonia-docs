@@ -3,6 +3,8 @@ id: the-design-preview
 title: 设计预览
 ---
 
+import TemperatureDesignPreviewScreenshot from '/img/get-started/test-drive/temperature-design-preview.png';
+
 在这个页面上，您将探索窗口的属性；然后使用其中一些属性来调整窗口在预览窗格中显示时的大小。
 
 检查`<Window>`标签的XAML。它看起来像这样：
@@ -23,8 +25,6 @@ title: 设计预览
 
 设置了这些属性后，窗口的预览现在看起来像这样：
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/test-drive/design-preview.png" alt="The design preview" width='460'/>
-</div>
+<img className="center" src={TemperatureDesignPreviewScreenshot} alt="" />
 
 在下一页中，您将看到如何通过响应按钮点击事件为应用程序添加一些动作。

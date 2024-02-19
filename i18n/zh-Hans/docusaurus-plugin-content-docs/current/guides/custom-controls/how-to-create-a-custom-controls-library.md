@@ -5,14 +5,14 @@ title: 如何创建自定义控件库
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import CustomControlsSolutionScreenshot from '/img/gitbook-import/assets/image (22) (3).png';
-import CustomControlNuGetScreenshot from '/img/gitbook-import/assets/image (11) (2).png';
+import CustomControlSolutionScreenshot from '/img/guides/custom-controls/custom-control-solution.png';
+import CustomControlNuGetScreenshot from '/img/guides/custom-controls/custom-control-nuget.png';
 
 # 如何创建自定义控件库
 
 本指南将向您展示如何创建自定义控件库并在_Avalonia UI_应用程序中引用它。
 
-<img src={CustomControlsSolutionScreenshot} alt=""/>
+<img src={CustomControlSolutionScreenshot} alt=""/>
 
 在此示例中，将一个自定义控件文件添加到一个.NET类库中。该库已安装了_Avalonia UI_ _NuGet_包：
 

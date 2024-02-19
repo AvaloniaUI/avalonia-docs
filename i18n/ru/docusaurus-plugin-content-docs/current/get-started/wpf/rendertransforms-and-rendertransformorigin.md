@@ -1,5 +1,8 @@
 # RenderTransforms и RenderTransformOrigin
 
+import RenderTransformOriginWpfScreenshot from '/img/get-started/wpf/rendertransformorigin-wpf.png';
+import RenderTransformOriginAvaloniaScreenshot from '/img/get-started/wpf/rendertransformorigin-avalonia.png';
+
 RenderTransformOrigins отличается в WPF и Avalonia:
 
 |          | RenderTransformOrigin (по-умолчанию) |
@@ -10,8 +13,10 @@ RenderTransformOrigins отличается в WPF и Avalonia:
 
 - Один и тот же код в Controls типа ViewBox, отобразится следующим образом:
 
-**WPF:** ![WPF](https://files.gitter.im/AvaloniaUI/Avalonia/cDrM/image.png)
+**WPF:**
+<img src={RenderTransformOriginWpfScreenshot} alt="WPF" />
 
-**Avalonia:** ![Avalonia](https://files.gitter.im/AvaloniaUI/Avalonia/KGk7/image.png)
+**Avalonia:**
+<img src={RenderTransformOriginAvaloniaScreenshot} alt="Avalonia" />
 
 Чтобы получить в Avalonia такое же преобразование, мы должны указать, что RenderTransformOrigin относится к левой верхней части отображения.

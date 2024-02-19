@@ -3,10 +3,10 @@ title: ListBox
 description: REFERENCE - Built-in Controls
 ---
 
-import ListBoxStringScreenshot from '/img/gitbook-import/assets/listbox1.gif';
-import ListBoxDataTemplateScreenshot from '/img/gitbook-import/assets/listbox2.gif';
-import ListBoxDevToolsScreenshot from '/img/gitbook-import/assets/image (6) (1) (4).png';
-import ListBoxItemStyleScreenshot from '/img/gitbook-import/assets/listbox3.gif';
+import ListBoxStringScreenshot from '/img/reference/controls/listbox/listbox-string.gif';
+import ListBoxDataTemplateScreenshot from '/img/reference/controls/listbox/listbox-datatemplate.gif';
+import ListBoxDevToolsScreenshot from '/img/reference/controls/listbox/listbox-devtools.png';
+import ListBoxItemStyleScreenshot from '/img/reference/controls/listbox/listbox-item-style.gif';
 
 # ListBox
 

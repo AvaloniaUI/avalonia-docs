@@ -1,6 +1,6 @@
 # UIElement, FrameworkElement и Control
 
-`UIElemnt` и `FrameworkElement` из WPF - это не шаблонные, базовые классы Control,
+`UIElement` и `FrameworkElement` из WPF - это не шаблонные, базовые классы Control,
 которые в Avalonia соответствуют классу `Control`.
 `Control` из WPF - является шаблонным Control, которому в Avalonia соответствует `TemplatedControl`.
 

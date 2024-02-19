@@ -2,9 +2,9 @@
 description: CONCEPTS
 ---
 
-import ControlTreesLogicalScreenshot from '/img/gitbook-import/assets/image (61).png';
-import ControlTreesVisualScreenshot from '/img/gitbook-import/assets/image (15) (2).png';
-import ControlTreesEventScreenshot from '/img/gitbook-import/assets/image (1) (1) (2).png';
+import ControlTreesLogicalScreenshot from '/img/concepts/control-trees-logical.png';
+import ControlTreesVisualScreenshot from '/img/concepts/control-trees-visual.png';
+import ControlTreesEventScreenshot from '/img/concepts/control-trees-events.png';
 
 # Control Trees
 

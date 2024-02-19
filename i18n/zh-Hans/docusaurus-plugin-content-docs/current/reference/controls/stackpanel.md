@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import StackPanelVerticalRectanglesScreenshot from '/img/gitbook-import/assets/image (14) (2).png';
+import StackPanelVerticalRectanglesScreenshot from '/img/reference/controls/stackpanel/stackpanel-vertical-rectangles.png';
 
 # Stack Panel
 

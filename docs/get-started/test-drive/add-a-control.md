@@ -4,8 +4,8 @@ title: Add a Control
 ---
 
 import Highlight from '@site/src/components/Highlight';
-import AvaloniaPropertyIntellisenseScreenshot from '/img/get-started/add-a-control/image (1) (2) (1).png';
-import CalculateButton from '/img/get-started/add-a-control/calculate-button.png';
+import CalculateButton from '/img/get-started/test-drive/calculate-button.png';
+import ButtonIntellisenseScreenshot from '/img/get-started/test-drive/button-intellisense.png';
 
 So far the main window of your application displays only a text string. On this page, you will learn how to add some of the built-in controls that are part of Avalonia.
 
@@ -45,7 +45,7 @@ For example, you  will notice that the button you just implemented is rendered h
 :::tip
 If you're using an IDE, notice how the Avalonia Intellisense guides you as you add attributes to the XAML.
 
-<img className="center" src={AvaloniaPropertyIntellisenseScreenshot} alt="" />
+<img className="center" src={ButtonIntellisenseScreenshot} alt="" />
 :::
 
 The button should now move to the center of the window content zone (both horizontally and vertically).

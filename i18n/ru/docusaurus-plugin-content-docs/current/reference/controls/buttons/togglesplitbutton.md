@@ -1,9 +1,9 @@
 # Toggle Split Button
 
-import ToggleSplitButtonClosedUncheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_unchecked.png';
-import ToggleSplitButtonClosedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_closed_checked.png';
-import ToggleSplitButtonOpenedCheckedScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_opened_checked.png';
-import ToggleSplitButtonTextListScreenshot from '/img/controls/buttons/togglesplitbutton/ToggleSplitButton_TextListExample.png';
+import ToggleSplitButtonClosedUncheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-closed-unchecked.png';
+import ToggleSplitButtonClosedCheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-closed-checked.png';
+import ToggleSplitButtonOpenedCheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-opened-checked.png';
+import ToggleSplitButtonTextListScreenshot from '/img/reference/controls/buttons/togglesplitbutton-text-list.png';
 
 The `ToggleSplitButton` functions as a [`ToggleButton`](togglebutton) with primary and secondary parts that can each be pressed separately. The primary part behaves like a normal `ToggleButton` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 

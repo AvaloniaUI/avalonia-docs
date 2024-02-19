@@ -3,7 +3,7 @@ title: ItemsControl
 description: REFERENCE - Built-in Control
 ---
 
-import exampleScreenshot from '/img/controls/itemscontrol/itemsControl-with-custom-layout-and-formatting.gif';
+import exampleScreenshot from '/img/reference/controls/itemscontrol/itemscontrol-with-custom-layout-and-formatting.gif';
 
 # ItemsControl
 

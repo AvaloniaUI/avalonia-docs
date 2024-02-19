@@ -1,9 +1,9 @@
 # Split Button
 
-import SplitButtonClosedScreenshot from '/img/gitbook-import/assets/SplitButtonClosed.png';
-import SplitButtonOpenedScreenshot from '/img/gitbook-import/assets/SplitButtonOpened.png';
-import SplitButtonColorPickerScreenshot from '/img/controls/buttons/splitbutton/SplitButton_ColorPickerSample.png';
-import SplitButtonExportButtonScreenshot from '/img/controls/buttons/splitbutton/SplitButton_ExportButtonSample.png';
+import SplitButtonClosedScreenshot from '/img/reference/controls/buttons/splitbutton-closed.png';
+import SplitButtonOpenedScreenshot from '/img/reference/controls/buttons/splitbutton-opened.png';
+import SplitButtonPaletteFlyoutScreenshot from '/img/reference/controls/buttons/splitbutton-palette-flyout.png';
+import SplitButtonExportButtonScreenshot from '/img/reference/controls/buttons/splitbutton-export.png';
 
 The `SplitButton` functions as a [`Button`](./button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 
@@ -102,7 +102,7 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 </SplitButton>
 ```
 
-<img src={SplitButtonColorPickerScreenshot} alt=""/>
+<img src={SplitButtonPaletteFlyoutScreenshot} alt=""/>
 
 _Sample of SplitButton for color selection_
 

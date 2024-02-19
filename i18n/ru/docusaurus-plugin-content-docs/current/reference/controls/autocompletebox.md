@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import AutoCompleteBoxScreenshot from '/img/gitbook-import/assets/autocomplete.gif';
+import AutoCompleteBoxScreenshot from '/img/reference/controls/autocompletebox/autocompletebox.gif';
 
 # Поле автозаполнения
 

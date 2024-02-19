@@ -3,7 +3,7 @@ id: binding-classes
 title: 如何绑定样式类
 ---
 
-import BindStyleClassSampleScreenshot from '/img/gitbook-import/assets/image (5).png';
+import BindStyleClassSampleScreenshot from '/img/guides/data-binding/bind-style-class.png';
 
 # 如何绑定样式类
 

@@ -3,7 +3,7 @@ id: how-to-bind-can-execute
 title: 如何绑定 Can Execute
 ---
 
-import BindCanExecuteScreenshot from '/img/gitbook-import/assets/command4.gif';
+import BindCanExecuteScreenshot from '/img/guides/data-binding/bind-canexecute.gif';
 
 # 如何绑定 Can Execute
 
@@ -87,4 +87,4 @@ namespace AvaloniaGuides.ViewModels
 实际上，`WhenAnyValue` 方法有多个重载，最多可以接受 10 个不同的值获取器（用于验证函数参数），以及验证函数本身。
 :::
 
-<img src="{BindCanExecuteScreenshot}" alt=""/>
+<img src={BindCanExecuteScreenshot} alt=""/>

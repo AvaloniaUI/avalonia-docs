@@ -3,11 +3,11 @@ id: main-window
 title: 主窗口
 ---
 
-import LayoutZonesDiagram from '/img/gitbook-import/assets/image (25) (2) (1).png';
-import MainWindowScreenshot from '/img/get-started/the-main-window/main-window-screenshot.png';
-import RunningAppWindowScreenshot from '/img/get-started/the-main-window/runningrapp-window-screenshot.png';
-import VsDesignerScreenshot from '/img/get-started/the-main-window/vs-designer-screenshot.png';
-import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) (2).png';
+import LayoutZonesDiagram from '/img/concepts/layout/layout-zones.png';
+import ViewModelScreenshot from '/img/get-started/test-drive/main-window-viewmodel.png';
+import AppRunningScreenshot from '/img/get-started/test-drive/main-window-app-running.png';
+import VsPreviewerScreenshot from '/img/get-started/test-drive/vs-previewer.png';
+import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane.png';
 
 您现在可以开始 Avalonia 项目之旅了。我们将从主应用程序窗口开始。打开 **MainWindow.axaml** 文件。
 
@@ -19,7 +19,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 
 在 **MainWindow.axaml** XAML 文件中，`<Window>...</Window>` XAML 标记表示 Avalonia 窗口。与其他 Avalonia 控件一样，窗口将在目标平台上绘制，具有 4 个**布局区域**：边距、边框、内边距和内容。
 
-<img className="center" src={LayoutZonesDiagram} alt="" />
+<img src={LayoutZonesDiagram} alt="" />
 
 在当前应用程序中，窗口的内容区域引用另一个视图：**<views:MainView />**。这是对 **MainView.axaml** 文件的引用，它是一个将显示在窗口的内容区域的用户控件。
 
@@ -32,8 +32,8 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 
 您可以更改文件 **MainViewModel.cs** 中的文本，以查看界面上的更改。
 
-<img className="center" src={MainWindowScreenshot} alt="" />
-<img className="center" src={RunningAppWindowScreenshot} alt="" />
+<img className="center" src={ViewModelScreenshot} alt="" />
+<img className="center" src={AppRunningScreenshot} alt="" />
 
 :::info
 有关控件布局区域概念的更多信息，请参阅[这里](../../concepts/layout/layout-zones)。
@@ -44,7 +44,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/the-main-window/image (6) 
 如果您使用的是 Visual Studio，则应该看到 XAML 代码和预览窗格。
 切换到 **MainView.axaml** 文件，并单击编辑窗口顶部的 **Split View** 按钮。
 
-<img className="center" src={VsDesignerScreenshot} alt="" />
+<img className="center" src={VsPreviewerScreenshot} alt="" />
 
 :::info
 可能会有一个红色的感叹号图标（左上角）和消息 **The designer is loading...**。这表示必须将项目构建一次预览窗格才能开始响应。

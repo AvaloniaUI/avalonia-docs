@@ -3,9 +3,9 @@ id: running-on-raspbian-lite-via-drm
 title: 在树莓派上通过 Raspbian Lite 运行
 ---
 
-import RaspbianLiteDrmKmsCubeScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-kmscube.gif';
-import RaspbianLiteDrmDesktopScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-desktop.jpg';
-import RaspianLiteRaspberryScreenshot from '/img/gitbook-import/assets/avalonia-raspbian-lite-drm-run-on-raspberry.jpg';
+import RaspbianLiteDrmKmsCubeScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-kmscube.gif';
+import RaspbianLiteDrmDesktopScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-desktop.jpg';
+import RaspbianLiteRaspberryScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-run-on-raspberry.jpg';
 
 # 在树莓派上通过 Raspbian Lite 运行
 
@@ -225,6 +225,6 @@ sudo ./path/to/app/AvaloniaRaspbianLiteDrm --drm
 
 您应该在树莓派上看到应用程序正在运行：
 
-<img src={RaspianLiteRaspberryScreenshot} alt=''/>
+<img src={RaspbianLiteRaspberryScreenshot} alt=''/>
 
 如果您安装了触摸显示器，请尝试滑动滑动条控件 :)

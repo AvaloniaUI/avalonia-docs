@@ -3,6 +3,8 @@ id: how-to-use-design-time-data
 title: 如何使用设计时数据
 ---
 
+import DesignTimeMockDiagram from '/img/guides/implementation-guides/design-time-mock.png';
+import DesignTimeMockPreviewDiagram from '/img/guides/implementation-guides/design-time-mock-preview.png';
 
 # 如何使用设计时数据
 
@@ -12,7 +14,7 @@ _Avalonia UI_ 解决方案模板会为您的主窗口添加设计时代码供您
 
 本指南将向您展示如何使用MVVM模式和设计时数据创建一个真实的UI，仅使用模拟数据（即没有数据服务层）。
 
-<img src="/img/gitbook-import/assets/image (6).png" alt=""/>
+<img src={DesignTimeMockDiagram} alt=""/>
 
 这个实现模式基于以下概念：您可以从您创建的任何视图模型派生出一个设计版本，并将模拟数据添加到它的构造函数中。然后，您的XAML文件可以声明一个设计数据上下文，并引用该视图模型的设计版本，以在预览窗格中显示模拟数据。
 
@@ -107,4 +109,4 @@ public class DesignAppointmentViewModel: AppointmentViewModel
 
 预览窗格显示了使用模拟数据完成的UI设计：
 
-<img src="/img/gitbook-import/assets/image (10).png" alt=""/>
+<img src={DesignTimeMockPreviewDiagram} alt=""/>

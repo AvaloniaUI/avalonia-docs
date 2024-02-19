@@ -3,7 +3,7 @@ id: draw-with-a-property
 title: 使用属性绘制
 ---
 
-import DrawWithPropertyScreenshot from '/img/gitbook-import/assets/image (1) (2) (2).png';
+import DrawWithPropertyScreenshot from '/img/guides/custom-controls/draw-property.png';
 
 # 使用属性进行绘制
 

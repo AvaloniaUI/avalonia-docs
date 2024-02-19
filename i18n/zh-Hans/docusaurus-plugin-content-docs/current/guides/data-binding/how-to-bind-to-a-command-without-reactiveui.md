@@ -3,8 +3,8 @@ id: how-to-bind-to-a-command-without-reactiveui
 title: 如何不使用ReactiveUI绑定命令
 ---
 
-import BindCommandMethodScreenshot from '/img/gitbook-import/assets/command2.gif';
-import BindCanExecuteMethodScreenshot from '/img/gitbook-import/assets/command3.gif';
+import BindCommandMethodScreenshot from '/img/guides/data-binding/bind-method.gif';
+import BindCanExecuteMethodScreenshot from '/img/guides/data-binding/bind-method-canexecute.gif';
 
 # 如何不使用ReactiveUI绑定命令
 

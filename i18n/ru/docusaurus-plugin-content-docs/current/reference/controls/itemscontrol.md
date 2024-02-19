@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Control
 ---
 
-import ItemsControlScreenshot from '/img/controls/itemscontrol/itemsControl-with-custom-layout-and-formatting.gif';
+import exampleScreenshot from '/img/reference/controls/itemscontrol/itemscontrol-with-custom-layout-and-formatting.gif';
 
 # Items Control
 
@@ -88,7 +88,7 @@ public class Crockery
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
 
-<img src={ItemsControlScreenshot} alt="" />
+<img src={exampleScreenshot} alt="" />
 
 ## More Information
 

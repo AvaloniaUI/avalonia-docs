@@ -3,7 +3,7 @@ id: how-to-bind-to-a-command-with-reactiveui
 title: How to Bind to a Command with ReactiveUI
 ---
 
-import BindReactiveCommandScreenshot from '/img/gitbook-import/assets/command.gif';
+import BindReactiveCommandScreenshot from '/img/guides/data-binding/bind-reactivecommand.gif';
 
 # How to Bind to a Command with ReactiveUI
 

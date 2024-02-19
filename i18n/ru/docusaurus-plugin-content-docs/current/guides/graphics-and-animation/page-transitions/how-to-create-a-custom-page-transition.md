@@ -3,7 +3,7 @@ id: how-to-create-a-custom-page-transition
 title: How To Create a Custom Page Transition
 ---
 
-import CustomPageTransitionScreenshot from '/img/animations/page-transitions/TransitioningContentControl_03.webp';
+import CustomPageTransitionScreenshot from '/img/guides/graphics-and-animations/custom-page-transition.webp';
 
 # How To Create a Custom Page Transition
 

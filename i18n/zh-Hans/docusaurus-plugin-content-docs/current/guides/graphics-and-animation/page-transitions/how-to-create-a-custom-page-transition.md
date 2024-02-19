@@ -3,7 +3,7 @@ id: how-to-create-a-custom-page-transition
 title: 如何创建自定义页面过渡效果
 ---
 
-import CustomPageTransitionScreenshot from '/img/animations/page-transitions/TransitioningContentControl_03.webp';
+import CustomPageTransitionScreenshot from '/img/guides/graphics-and-animations/custom-page-transition.webp';
 
 # 如何创建自定义页面过渡效果
 

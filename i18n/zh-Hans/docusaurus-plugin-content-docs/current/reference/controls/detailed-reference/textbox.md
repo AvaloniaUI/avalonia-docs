@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TextBoxSampleScreenshot from '/img/gitbook-import/assets/textbox.gif';
+import TextBoxEntryScreenshot from '/img/reference/controls/detailed-reference/textbox/textbox-entry.gif';
 
 # Text Box
 
@@ -29,7 +29,7 @@ This example has a basic one line text box, a password box, and a text-wrapping 
 </StackPanel>
 ```
 
-<img src={TextBoxSampleScreenshot} alt="" />
+<img src={TextBoxEntryScreenshot} alt="" />
 
 ## More Information
 

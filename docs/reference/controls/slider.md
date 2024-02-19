@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import SliderScreenshot from '/img/gitbook-import/assets/slider.gif';
-import SliderMaxValueScreenshot from '/img/gitbook-import/assets/slider_max_value.gif';
+import SliderScreenshot from '/img/reference/controls/slider/slider.gif';
+import SliderMaxValueScreenshot from '/img/reference/controls/slider/slider-max-value.gif';
 
 # Slider
 

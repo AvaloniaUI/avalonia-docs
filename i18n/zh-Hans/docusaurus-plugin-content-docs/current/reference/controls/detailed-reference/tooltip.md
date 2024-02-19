@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ToolTipTextScreenshot from '/img/gitbook-import/assets/tooltip.gif';
-import ToolTipContentScreenshot from '/img/gitbook-import/assets/tooltip2.gif';
+import ToolTipTextHoverScreenshot from '/img/reference/controls/detailed-reference/tooltip/tooltip-text-hover.gif';
+import ToolTipContentScreenshot from '/img/reference/controls/detailed-reference/tooltip/tooltip-content-hover.gif';
 
 # Tool Tip
 
@@ -24,7 +24,7 @@ This is a simple text-based tooltip, using default values for the placement and 
             ToolTip.Tip="This is a rectangle" />
 ```
 
-<img src={ToolTipTextScreenshot} alt="" />
+<img src={ToolTipTextHoverScreenshot} alt="" />
 
 To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. For example:
 

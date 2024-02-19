@@ -3,8 +3,8 @@ title: WrapPanel
 description: REFERENCE - Built-in Controls
 ---
 
-import WrapPanelHorizontalScreenshot from '/img/gitbook-import/assets/image (5) (1).png';
-import WrapPanelVerticalScreenshot from '/img/gitbook-import/assets/image (15) (1).png';
+import WrapPanelHorizontalScreenshot from '/img/reference/controls/detailed-reference/wrappanel/wrappanel-horizontal.png';
+import WrapPanelVerticalScreenshot from '/img/reference/controls/detailed-reference/wrappanel/wrappanel-vertical.png';
 
 # WrapPanel
 

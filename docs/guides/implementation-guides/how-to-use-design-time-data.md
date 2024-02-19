@@ -3,6 +3,8 @@ id: how-to-use-design-time-data
 title: How To Use Design-time Data
 ---
 
+import DesignTimeMockDiagram from '/img/guides/implementation-guides/design-time-mock.png';
+import DesignTimeMockPreviewDiagram from '/img/guides/implementation-guides/design-time-mock-preview.png';
 
 # How To Use Design-time Data
 
@@ -12,7 +14,7 @@ The _Avalonia UI_ solution templates all add design-time code to the main window
 
 This guide shows you how to use design-time data with the MVVM pattern to create a realistic UI with only mock data (that is without a data service layer). 
 
-<img src="/img/gitbook-import/assets/image (6).png" alt=""/>
+<img src={DesignTimeMockDiagram} alt=""/>
 
 This implementation pattern is based on the concept of deriving a design version of any view model that you create, and adding mock data to its constructor. Your XAML files can then declare a design data context, and reference the design version of the view model to display mock data in the preview pane for you.
 
@@ -107,6 +109,4 @@ This means that when you start to write the XAML for the UI, you can see your pr
 
 The preview pane shows the completed UI design with the mock data:
 
-<img src="/img/gitbook-import/assets/image (10).png" alt=""/>
-
-
+<img src={DesignTimeMockPreviewDiagram} alt=""/>

@@ -2,6 +2,8 @@
 description: CONCEPTS
 ---
 
+import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax/data-binding-mode.png';
+
 # 数据绑定语法
 
 在Avalonia中，您可以使用XAML或代码定义数据绑定。要在XAML中定义数据绑定，您可以使用数据绑定标记扩展，其语法如下所述。
@@ -54,7 +56,7 @@ description: CONCEPTS
 
 您可以通过指定数据绑定模式来更改数据在数据绑定中的移动方式。
 
-<img src="/img/gitbook-import/assets/image (2).png" alt=""/>
+<img src={DataBindingModeDiagram} alt=''/>
 
 例如：
 

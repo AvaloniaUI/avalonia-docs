@@ -3,7 +3,7 @@ id: logging-errors-and-warnings
 title: How To Log Errors and Warnings
 ---
 
-import LogToTraceOutputScreenshot from '/img/gitbook-import/assets/image (3).png';
+import LogToTraceOutputScreenshot from '/img/guides/implementation-guides/log-to-trace-output.png';
 
 # How To Log Errors and Warnings
 

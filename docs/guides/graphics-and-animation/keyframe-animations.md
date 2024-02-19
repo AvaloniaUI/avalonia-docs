@@ -3,11 +3,11 @@ id: keyframe-animations
 title: How To Use Keyframe Animations
 ---
 
-import AnimationKeyframeDiagram from '/img/gitbook-import/assets/image (2) (1) (4).png';
-import KeyframeFadeScreenshot from '/img/gitbook-import/assets/anim1 (1).gif';
-import KeyframeCompositeAnimationScreenshot from '/img/gitbook-import/assets/anim2.gif';
-import LinearEasingScreenshot from '/img/gitbook-import/assets/image (72).png';
-import BounceEaseInScreenshot from '/img/gitbook-import/assets/image (76).png';
+import AnimationKeyframeDiagram from '/img/basics/user-interface/animation-keyframe.png';
+import KeyframeFadeScreenshot from '/img/guides/graphics-and-animations/keyframe-fade.gif';
+import KeyframeCompositeAnimationScreenshot from '/img/guides/graphics-and-animations/keyframe-composite-animation.gif';
+import LinearEasingScreenshot from '/img/guides/graphics-and-animations/linear-easing.gif';
+import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-ease-in.gif';
 
 # How To Use Keyframe Animations
 

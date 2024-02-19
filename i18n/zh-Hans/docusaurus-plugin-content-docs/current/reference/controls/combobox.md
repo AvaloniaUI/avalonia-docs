@@ -2,9 +2,9 @@
 description: REFERENCE - Built-in Control
 ---
 
-import ComboBoxMaxDropDownHeightScreenshot from '/img/gitbook-import/assets/combobox1.gif';
-import ComboBoxComplexContentScreenshot from '/img/gitbook-import/assets/combobox2.gif';
-import ComboBoxDataTemplateScreenshot from '/img/gitbook-import/assets/combobox3.gif';
+import ComboBoxMaxDropDownHeightScreenshot from '/img/reference/controls/combobox/combobox-maxdropdownheight.gif';
+import ComboBoxComplexContentScreenshot from '/img/reference/controls/combobox/combobox-complex-content.gif';
+import ComboBoxDataTemplateScreenshot from '/img/reference/controls/combobox/combobox-data-template.gif';
 
 # Combo Box
 

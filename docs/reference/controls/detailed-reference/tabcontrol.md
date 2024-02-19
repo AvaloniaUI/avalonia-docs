@@ -3,8 +3,8 @@ title: TabControl
 description: REFERENCE - Built-in Controls
 ---
 
-import TabControlZonesScreenshot from '/img/gitbook-import/assets/image (2) (4).png';
-import TabControlNavigationScreenshot from '/img/gitbook-import/assets/tabcontrol1.gif';
+import TabControlZonesScreenshot from '/img/reference/controls/detailed-reference/tabcontrol/tabcontrol-zones.png';
+import TabControlNavigationScreenshot from '/img/reference/controls/detailed-reference/tabcontrol/tabcontrol-navigation.gif';
 
 # TabControl
 

@@ -3,6 +3,8 @@ id: the-design-preview
 title: The Design Preview
 ---
 
+import TemperatureDesignPreviewScreenshot from '/img/get-started/test-drive/temperature-design-preview.png';
+
 On this page, you will explore the attributes of the window; and then use some of them to adjust the size of the window when it is shown in the preview pane.
 
 Examine the XAML for the `<Window>` tag. It will look like this:
@@ -23,8 +25,6 @@ The design namespace 'd' allows the design-time attributes `d:DesignWidth` and `
 
 With these attributes set, the preview of the window now looks like this:
 
-<div style={{textAlign: 'center'}}>
-    <img src="/img/get-started/test-drive/design-preview.png" alt="The design preview" width='460'/>
-</div>
+<img className="center" src={TemperatureDesignPreviewScreenshot} alt="" />
 
 On the next page, you will see how to add some action to the app by responding to the button click event. 

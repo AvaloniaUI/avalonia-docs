@@ -3,7 +3,7 @@ id: contentcontrol
 title: ContentControl
 ---
 
-import ControlContentStudentScreenshot from '/img/controls/contentcontrol/student-first-last-name (1) (1) (1) (1).png';
+import ControlContentStudentScreenshot from '/img/reference/controls/contentcontrol/contentcontrol-student.png';
 
 ## Common Properties
 
