@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import PanelOverlapBlendScreenshot from '/img/gitbook-import/assets/image (7) (1).png';
+import PanelOverlapBlendScreenshot from '/img/reference/controls/panel/panel-overlap-blend.png';
 
 # Panel
 

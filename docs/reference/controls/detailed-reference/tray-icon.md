@@ -3,7 +3,7 @@ title: TrayIcon
 description: REFERENCE - Built-in Controls
 ---
 
-import TrayIconScreenshot from '/img/gitbook-import/assets/tray.gif';
+import TrayIconScreenshot from '/img/reference/controls/detailed-reference/trayicon/trayicon.gif';
 
 # TrayIcon
 

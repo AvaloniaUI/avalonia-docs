@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ImageUnscaledScreenshot from '/img/gitbook-import/assets/image (6) (1).png';
-import ImageUniformToFillScreenshot from '/img/gitbook-import/assets/image (4) (1) (2).png';
+import ImageUnscaledScreenshot from '/img/reference/controls/image/image-unscaled.png';
+import ImageUniformToFillScreenshot from '/img/reference/controls/image/image-uniform-to-fill.png';
 
 # Image
 

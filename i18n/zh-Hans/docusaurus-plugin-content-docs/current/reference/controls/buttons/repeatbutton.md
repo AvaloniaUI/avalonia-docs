@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import RepeatButtonScreenshot from '/img/gitbook-import/assets/repeatbutton.gif';
+import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbutton-hold.gif';
 
 # 重复按钮
 
@@ -45,7 +45,7 @@ public partial class MainWindow : Window
 }
 ```
 
-<img src={RepeatButtonScreenshot} alt="示例图片"/>
+<img src={RepeatButtonHoldScreenshot} alt="示例图片"/>
 
 ## 更多信息
 

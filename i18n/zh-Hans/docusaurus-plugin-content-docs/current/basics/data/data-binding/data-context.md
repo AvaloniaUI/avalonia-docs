@@ -2,16 +2,16 @@
 description: CONCEPTS
 ---
 
-import DataContextBindingOverviewDiagram from '/img/gitbook-import/assets/image (56).png';
-import DataContextTreeSearchDiagram from '/img/gitbook-import/assets/image (62).png';
-import DataContextContentBindingScreenshot from '/img/gitbook-import/assets/image (20) (2).png';
-import DataContextPreviewerScreenshot from '/img/gitbook-import/assets/image (40) (1).png'
+import DataContextOverviewDiagram from '/img/basics/data-binding/data-context/data-context-overview.png';
+import DataContextTreeSearchDiagram from '/img/basics/data-binding/data-context/data-context-tree-search.png';
+import DataContextGreetingBindingScreenshot from '/img/basics/data-binding/data-context/data-context-greeting.png';
+import DataContextPreviewerScreenshot from '/img/basics/data-binding/data-context/data-context-previewer.png';
 
 # 数据上下文
 
 当Avalonia执行数据绑定时，它必须定位要绑定的应用程序对象。这个位置由**数据上下文**表示。
 
-<img src={DataContextBindingOverviewDiagram} alt=''/>
+<img src={DataContextOverviewDiagram} alt=''/>
 
 Avalonia中的每个控件都有一个名为`DataContext`的属性，包括内置控件、用户控件和窗口。
 
@@ -77,7 +77,7 @@ public class MainWindowViewModel : ViewModelBase
 
 项目运行时，数据绑定器从文本块开始向上搜索逻辑控件树，找到在主窗口级别设置的数据上下文。因此，绑定的文本显示为：
 
-<img src={DataContextContentBindingScreenshot} alt=""/>
+<img src={DataContextGreetingBindingScreenshot} alt=""/>
 
 ## 设计时数据上下文
 

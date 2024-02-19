@@ -1,8 +1,8 @@
-import LayoutMarginsPaddingAlignmentBasicScreenshot from '/img/gitbook-import/assets/layout-margins-padding-alignment-graphic1.png';
-import LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot from '/img/gitbook-import/assets/layout-margins-padding-alignment-graphic2.png';
-import LayoutHorizontalAlignmentScreenshot from '/img/gitbook-import/assets/layout-horizontal-alignment-graphic.png';
-import LayoutVerticalAlignmentScreenshot from '/img/gitbook-import/assets/layout-vertical-alignment-graphic.png';
-import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/gitbook-import/assets/layout-margins-padding-aligment-graphic3.png';
+import LayoutMarginsPaddingAlignmentBasicScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-margins-padding-alignment-graphic1.png';
+import LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-margins-padding-alignment-graphic2.png';
+import LayoutHorizontalAlignmentScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-horizontal-alignment-graphic.png';
+import LayoutVerticalAlignmentScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-vertical-alignment-graphic.png';
+import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-margins-padding-alignment-graphic3.png';
 
 # Alignment、Margin 和 Padding
 
@@ -226,5 +226,5 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 编译时，前面的应用程序生成的UI与下图类似。各种属性值的影响在元素之间的间距中很明显，每列元素的重要属性值展示在`TextBlock`元素中。
 
-<img src='/img/gitbook-import/assets/layout-margins-padding-aligment-graphic3.png' alt='Several positioning properties in one application'/>
+<img src={LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot} alt="Several positioning properties in one application"/>
 

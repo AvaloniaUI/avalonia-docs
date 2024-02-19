@@ -3,7 +3,7 @@ id: how-to-bind-to-a-command-with-reactiveui
 title: 如何使用ReactiveUI绑定命令
 ---
 
-import BindReactiveCommandScreenshot from '/img/gitbook-import/assets/command.gif';
+import BindReactiveCommandScreenshot from '/img/guides/data-binding/bind-reactivecommand.gif';
 
 # 如何使用ReactiveUI绑定命令
 

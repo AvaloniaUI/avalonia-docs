@@ -3,9 +3,9 @@ id: respond-to-an-event
 title: Обработка событий
 ---
 
-import SolutionCodeBehindScreenshot from '/img/get-started/respond-to-an-event/image (59).png';
-import AvaloniaEventIntellisenseScreenshot from '/img/get-started/respond-to-an-event/image (25) (2).png';
-import EventDebugOutputScreenshot from '/img/get-started/respond-to-an-event/image (54).png';
+import SolutionCodeBehindScreenshot from '/img/get-started/test-drive/solution-code-behind.png';
+import ButtonIntellisenseClickScreenshot from '/img/get-started/test-drive/button-intellisense-click.png';
+import EventDebugOutputScreenshot from '/img/get-started/test-drive/event-debug-output.png';
 
 Есть несколько способов обработки событий на Avalonia.
 На этой странице вы узнаете, как использовать один из самых распостраненных: нажатие кнопки.
@@ -80,7 +80,7 @@ using System.Diagnostics;
 :::tip
 Если вы используете IDE, то при вводе должны отобразиться возможные варианты.
 
-<img className="center" src={AvaloniaEventIntellisenseScreenshot} alt="" />
+<img className="center" src={ButtonIntellisenseClickScreenshot} alt="" />
 :::
 
 - Запустите приложение и нажмите кнопку.

@@ -2,9 +2,9 @@
 description: CONCEPTS - ReactiveUI
 ---
 
-import ReactiveCommandViewScreenshot from '/img/gitbook-import/assets/image (2) (1) (1) (1).png';
-import ReactiveCommandRunOutputScreenshot from '/img/gitbook-import/assets/image (6) (1) (1).png';
-import ReactiveCommandCanExecuteScreenshot from '/img/gitbook-import/assets/image (6) (1) (2).png';
+import ReactiveCommandViewScreenshot from '/img/concepts/reactiveui/reactivecommand-view.png';
+import ReactiveCommandOutputScreenshot from '/img/concepts/reactiveui/reactivecommand-output.png';
+import ReactiveCommandCanExecuteScreenshot from '/img/concepts/reactiveui/reactivecommand-canexecute.png';
 
 # Reactive Command
 
@@ -57,7 +57,7 @@ public class MainWindowViewModel : ViewModelBase
 
 This view model does not yet perform revealed functionality. The `SubmitCommand` is declared with no parameter, and no result (void). The synchronous action parameter of the `Create` method is where you implement what happens when the command is run (when the user clicks the button). The example above just reports the action in the debug window.
 
-<img src={ReactiveCommandRunOutputScreenshot} alt=""/>
+<img src={ReactiveCommandOutputScreenshot} alt=""/>
 
 ## Can Execute?
 

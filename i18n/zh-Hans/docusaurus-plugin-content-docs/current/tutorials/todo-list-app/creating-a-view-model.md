@@ -2,7 +2,7 @@
 description: TUTORIALS - To Do List App
 ---
 
-import MvvmArchitectureDiagram from '/img/gitbook-import/assets/image (3) (1) (2).png';
+import MvvmArchitectureDiagram from '/img/guides/implementation-guides/mvvm-architecture.png';
 
 # 创建视图模型
 

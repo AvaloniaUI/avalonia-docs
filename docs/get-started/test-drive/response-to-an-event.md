@@ -3,9 +3,9 @@ id: respond-to-an-event
 title: Respond to an Event
 ---
 
-import SolutionCodeBehindScreenshot from '/img/get-started/respond-to-an-event/image (59).png';
-import AvaloniaEventIntellisenseScreenshot from '/img/get-started/respond-to-an-event/image (25) (2).png';
-import EventDebugOutputScreenshot from '/img/get-started/respond-to-an-event/image (54).png';
+import SolutionCodeBehindScreenshot from '/img/get-started/test-drive/solution-code-behind.png';
+import ButtonIntellisenseClickScreenshot from '/img/get-started/test-drive/button-intellisense-click.png';
+import EventDebugOutputScreenshot from '/img/get-started/test-drive/event-debug-output.png';
 
 There are a number of ways you can implement actions in an Avalonia application. On this page, you will see how to use one of the simplest: how to write event handling code for a button click.
 
@@ -80,7 +80,7 @@ using System.Diagnostics;
 :::tip
 If you're using an IDE you will see the Avalonia UI Intellisense as you type.
 
-<img className="center" src={AvaloniaEventIntellisenseScreenshot} alt="" />
+<img className="center" src={ButtonIntellisenseClickScreenshot} alt="" />
 :::
 
 - Run the app and click the button.

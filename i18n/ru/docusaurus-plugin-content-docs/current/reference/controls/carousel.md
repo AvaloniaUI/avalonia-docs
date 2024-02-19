@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import CarouselScreenshot from '/img/gitbook-import/assets/carousel.gif';
+import CarouselScreenshot from '/img/reference/controls/carousel/carousel.gif';
 
 # Carousel
 

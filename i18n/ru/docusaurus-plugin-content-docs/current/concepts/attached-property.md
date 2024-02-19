@@ -2,8 +2,8 @@
 description: CONCEPTS
 ---
 
-import AttachedControlDiagram from '/img/gitbook-import/assets/image (9).png';
-import AttachedLayoutPropertyDiagram from '/img/gitbook-import/assets/image (17).png';
+import AttachedControlDiagram from '/img/concepts/attached-control.png';
+import AttachedLayoutPropertyDiagram from '/img/concepts/attached-layout-property.png';
 
 # Attached Properties
 

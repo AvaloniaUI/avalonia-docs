@@ -3,8 +3,8 @@ id: add-some-layout
 title: Добавление Нескольких Элементов
 ---
 
-import StackPanelDiagram from '/img/get-started/add-some-layout/image (40) (1) (1).png';
-import StackPanelSampleScreenshot from '/img/get-started/add-some-layout/image (41) (1).png';
+import StackPanelZonesDiagram from '/img/get-started/test-drive/stackpanel-zones.png';
+import TemperatureStackPanelScreenshot from '/img/get-started/test-drive/temperature-stackpanel.png';
 
 Avalonia содержит встроенные элементы. На это страницу вы увидите некоторые из них, а также как их использовать.
 
@@ -16,7 +16,7 @@ Avalonia позволяет добавлять **только один** эле�
 
 Данный элемент размещает дочерние элементы последовательно по вертикали.
 
-<img className="center" src={StackPanelDiagram} alt="" />
+<img src={StackPanelZonesDiagram} alt="" />
 
 ```xml
 <StackPanel>
@@ -46,7 +46,7 @@ Avalonia позволяет добавлять **только один** эле�
   </StackPanel>
 ```
 
-<img className="center" src={StackPanelSampleScreenshot} alt="" />
+<img className="center" src={TemperatureStackPanelScreenshot} alt="" />
 
 :::info
 Для ознакомления с другими элементами компоновки, перейдите по [ссылке](../../reference/controls/layout-controls.md).

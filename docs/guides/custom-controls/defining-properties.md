@@ -3,6 +3,8 @@ id: defining-properties
 title: Defining Properties
 ---
 
+import DefiningPropertyPreviewScreenshot from '/img/guides/custom-controls/defining-property-preview.png';
+
 # Styled Property
 
 If you are creating a custom control, you will usually want it to have properties that can be set by the _Avalonia UI_ styling system.
@@ -92,7 +94,7 @@ Note that the getter/setter of the property uses the special Avalonia UI `GetVal
 
 The styled property will work both at run-time and in the preview panel.
 
-<img src='/img/gitbook-import/assets/image (4) (3).png' alt=''/>
+<img src={DefiningPropertyPreviewScreenshot} alt=''/>
 
 :::info
 For more advanced information about how to create a custom control, see [here](../custom-controls/how-to-create-advanced-custom-controls.md).

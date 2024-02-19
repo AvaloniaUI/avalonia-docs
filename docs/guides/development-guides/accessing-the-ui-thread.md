@@ -3,9 +3,6 @@ id: accessing-the-ui-thread
 title: How To Access the UI Thread
 ---
 
-import DispatchPostLongRunningScreenshot from '/img/gitbook-import/assets/long1.gif';
-import DispatchInvokeAsyncLongRunningScreenshot from '/img/gitbook-import/assets/long2.gif';
-
 # How To Access the UI Thread
 
 This guide will show you how to access the UI thread in your _Avalonia UI_ application.
@@ -58,7 +55,6 @@ MainView.axaml:
 	</StackPanel>
 </UserControl>
 ```
-
 
 MainView.axaml.cs:
 ```csharp title='MainView C#'

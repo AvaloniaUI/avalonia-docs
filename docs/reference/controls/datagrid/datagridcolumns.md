@@ -3,7 +3,7 @@ title: DataGridColumn
 description: REFERENCE - Built-in Controls
 ---
 
-import DataGridColumnPreviewScreenshot from '/img/gitbook-import/assets/image (4) (1).png';
+import DataGridColumnPreviewScreenshot from '/img/reference/controls/datagrid/datagridtextcolumn.png';
 
 # DataGridColumn
 

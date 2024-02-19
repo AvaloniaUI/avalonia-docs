@@ -2,10 +2,10 @@
 description: CONCEPTS
 ---
 
-import CompositionBasicLayoutDiagram from '/img/gitbook-import/assets/image (10) (2).png';
-import CompositionTreesDiagram from '/img/gitbook-import/assets/image (3) (1).png';
-import CompositionUserControlsDiagram from '/img/gitbook-import/assets/image (8) (2).png';
-import CompositionCollectionControlsDiagram from '/img/gitbook-import/assets/image (8) (3).png';
+import CompositionBasicLayoutDiagram from '/img/concepts/composition-basic-layout.png';
+import CompositionTreesDiagram from '/img/concepts/composition-trees.png';
+import CompositionUserControlsDiagram from '/img/concepts/composition-usercontrol.png';
+import CompositionCollectionControlsDiagram from '/img/concepts/composition-collection-controls.png';
 
 # UI Composition
 

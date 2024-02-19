@@ -2,7 +2,7 @@
 description: CONCEPTS
 ---
 
-import exampleScreenshot from '/img/concepts/customitemspanel/ItemsControl-with-ItemPanel-and-Styles.png';
+import ItemsControlCanvasScreenshot from '/img/concepts/itemscontrol-with-canvas.png';
 
 # Custom ItemsPanel
 
@@ -67,4 +67,4 @@ namespace AvaloniaControls.ViewModels
 public record Tile(int Size, int TopX, int TopY);
 ```
 
-<img src={exampleScreenshot} alt="" />
+<img src={ItemsControlCanvasScreenshot} alt="" />

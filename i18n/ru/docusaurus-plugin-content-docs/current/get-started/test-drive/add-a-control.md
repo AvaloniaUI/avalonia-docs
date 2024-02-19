@@ -4,8 +4,8 @@ title: Добавление Control
 ---
 
 import Highlight from '@site/src/components/Highlight';
-import AvaloniaPropertyIntellisenseScreenshot from '/img/get-started/add-a-control/image (1) (2) (1).png';
-import CalculateButton from '/img/get-started/add-a-control/calculate-button.png';
+import CalculateButton from '/img/get-started/test-drive/calculate-button.png';
+import ButtonIntellisenseScreenshot from '/img/get-started/test-drive/button-intellisense.png';
 
 Сейчас ваше основное окно отображает одну единствуенную строку.
 В этом разделе вы узнаете, как добавить встроенный в _Avalonia_ элемент управления.
@@ -47,7 +47,7 @@ Avalonia XAML использует атрибуты для изменения в
 :::tip
 При использовании IDE, вы можете увидеть подсказки по названию атрибутов элемента при вводе внутри XAML.
 
-<img className="center" src={AvaloniaPropertyIntellisenseScreenshot} alt="" />
+<img className="center" src={ButtonIntellisenseScreenshot} alt="" />
 :::
 
 Теперь кнопка переместится в центр по горизонтали.

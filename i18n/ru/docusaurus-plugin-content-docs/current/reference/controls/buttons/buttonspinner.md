@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ButtonSpinnerScreenshot from '/img/gitbook-import/assets/image (3) (3).png';
+import ButtonSpinnerScreenshot from '/img/reference/controls/buttons/button-spinner.png';
 
 # Button Spinner
 

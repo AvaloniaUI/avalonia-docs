@@ -3,7 +3,7 @@ id: animations
 title: Animations
 ---
 
-import AnimationKeyframeDiagram from '/img/gitbook-import/assets/image (2) (1) (4).png';
+import KeyframeDiagram from '/img/basics/user-interface/animation-keyframe.png';
 
 # Animations
 
@@ -16,7 +16,7 @@ There are two types of animations in _Avalonia UI_:
 
 The simplest keyframe animation will change one property value over a a specified duration by defining two keyframes with cue points at the start (0% of the duration) and the end (100% of the duration).
 
-<img src={AnimationKeyframeDiagram} alt=''/>
+<img src={KeyframeDiagram} alt=''/>
 
 The property value is then changed over time between the keyframes using the profile defined by an easing function. The default easing function is also the simplest - a straight-line interpolation between two keyframes.
 

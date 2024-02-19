@@ -2,7 +2,7 @@
 description: TUTORIALS - To Do List App
 ---
 
-import MvvmArchitectureDiagram from '/img/gitbook-import/assets/image (3) (1) (2).png';
+import MvvmArchitectureDiagram from '/img/guides/implementation-guides/mvvm-architecture.png';
 
 # Create a View Model
 
@@ -12,7 +12,7 @@ On this page, you will learn how to create a view model to provide the applicati
 To review the concepts behind MVVM pattern programming using ReactiveUI, see [here](../../concepts/reactiveui/).
 :::
 
-The purpose of the view model is organise data and actions for the application in a way that suits the views. For reasons that will become clear in a future step of this tutorial, you will adopt the convention of naming a view model after the view that it supports in this way.
+The purpose of the view model is to organise data and actions for the application in a way that suits the views. For reasons that will become clear in a future step of this tutorial, you will adopt the convention of naming a view model after the view that it supports in this way.
 
 Follow this procedure to add the to do list view model to your app:
 

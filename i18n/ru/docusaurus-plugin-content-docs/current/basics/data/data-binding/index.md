@@ -2,13 +2,13 @@
 description: CONCEPTS
 ---
 
-import DataBindingBasicOverviewDiagram from '/img/gitbook-import/assets/image (31) (1).png';
+import DataBindingOverviewDiagram from '/img/basics/data-binding/data-binding-overview.png';
 
 # Data Binding (рус: Привязка Данных)
 
 Привязка данных используется отображения данных, а также для настройки взаимодействия пользователя с интерфейсом программы.
 
-<img src={DataBindingBasicOverviewDiagram} alt=''/>
+<img src={DataBindingOverviewDiagram} alt=''/>
 
 В указанной схеме, `Control` - элемент к которому идет **привязка**, а `Object` - **источник данных**.
 

@@ -6,7 +6,7 @@ title: How To Bind Image Files
 
 # How To Bind Image Files
 
-<GitHubSampleLink title="Loadimg Images" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/LoadingImages"/>
+<GitHubSampleLink title="Loading Images" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/LoadingImages"/>
 
 
 In Avalonia UI, binding to an image file opens up opportunities for displaying dynamic image content within your application. This guide provides an overview on how to bind image files from various sources.

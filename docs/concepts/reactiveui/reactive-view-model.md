@@ -2,7 +2,7 @@
 description: CONCEPTS - ReactiveUI
 ---
 
-import ReactiveObjectDiagram from '/img/gitbook-import/assets/image (4) (2).png';
+import ReactiveObjectDiagram from '/img/concepts/reactiveui/reactiveobject.png';
 
 # Reactive View Model
 

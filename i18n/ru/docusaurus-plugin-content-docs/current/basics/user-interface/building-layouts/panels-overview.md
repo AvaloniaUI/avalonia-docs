@@ -1,12 +1,12 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import CanvasOverlapScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/CanvasExample.png';
-import DockPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/DockPanelExample.png';
-import GridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/GridExample.png';
-import StackPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/StackPanelExample.png';
-import WrapPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/WrapPanelExample.png';
-import UniformGridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/UniformGridExample.png';
+import CanvasOverlapScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/canvas-example.png';
+import DockPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/dockpanel-example.png';
+import GridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/grid-example.png';
+import StackPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/stackpanel-example.png';
+import WrapPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/wrappanel-example.png';
+import UniformGridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/uniformgrid-example.png';
 
 # Panels Overview
 

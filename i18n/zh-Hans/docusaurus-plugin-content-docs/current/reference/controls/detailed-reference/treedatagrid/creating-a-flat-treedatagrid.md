@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import FlatTreeDataGridSourceScreenshot from '/img/gitbook-import/assets/treedatagrid2.gif';
+import FlatTreeDataGridSourceScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedatagrid-flat.gif';
 
 # Flat Tree Data Grid
 

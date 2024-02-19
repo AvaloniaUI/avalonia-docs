@@ -3,8 +3,8 @@ title: SplitView
 description: REFERENCE - Built-in Controls
 ---
 
-import SplitViewScreenshot from '/img/gitbook-import/assets/image (5) (5) (1).png';
-import SplitViewCompactScreenshot from '/img/gitbook-import/assets/splitview2.gif';
+import SplitViewScreenshot from '/img/reference/controls/splitview/splitview.png';
+import SplitViewCompactScreenshot from '/img/reference/controls/splitview/splitview-expander.gif';
 
 # SplitView
 

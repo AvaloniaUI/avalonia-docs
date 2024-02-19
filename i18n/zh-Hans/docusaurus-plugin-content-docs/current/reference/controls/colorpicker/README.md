@@ -2,12 +2,12 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ColorPaletteFluent from '/img/controls/colorpicker/color-palette-fluent.png';
-import ColorPaletteFlat from '/img/controls/colorpicker/color-palette-flat.png';
-import ColorPaletteFlatHalf from '/img/controls/colorpicker/color-palette-flat-half.png';
-import ColorPaletteMaterial from '/img/controls/colorpicker/color-palette-material.png';
-import ColorPaletteMaterialHalf from '/img/controls/colorpicker/color-palette-material-half.png';
-import ColorPaletteSixteen from '/img/controls/colorpicker/color-palette-sixteen.png';
+import ColorPaletteFluent from '/img/reference/controls/colorpicker/color-palette-fluent.png';
+import ColorPaletteFlat from '/img/reference/controls/colorpicker/color-palette-flat.png';
+import ColorPaletteFlatHalf from '/img/reference/controls/colorpicker/color-palette-flat-half.png';
+import ColorPaletteMaterial from '/img/reference/controls/colorpicker/color-palette-material.png';
+import ColorPaletteMaterialHalf from '/img/reference/controls/colorpicker/color-palette-material-half.png';
+import ColorPaletteSixteen from '/img/reference/controls/colorpicker/color-palette-sixteen.png';
 
 # ColorPicker
 
@@ -93,31 +93,31 @@ Several pre-defined color palettes implementing the `IColorPalette` interface ar
   </tr>
   <tr>
     <td>
-      <img src="{ColorPaletteFlat}" alt="Flat UI Color Palette" width="300" />
+      <img src={ColorPaletteFlat} alt="Flat UI Color Palette" width="300" />
     </td>
     <td>Contains the full <a href="https://github.com/designmodo/Flat-UI">Flat UI color palette</a>.</td>
   </tr>
   <tr>
     <td>
-      <img src="{ColorPaletteFlatHalf}" alt="Flat UI Half Color Palette" width="300" />
+      <img src={ColorPaletteFlatHalf} alt="Flat UI Half Color Palette" width="300" />
     </td>
     <td>Contains half of <a href="https://github.com/designmodo/Flat-UI">Flat UI color palette</a> for improved usability especially on mobile devices.</td>
   </tr>
   <tr>
     <td>
-      <img src="{ColorPaletteMaterial}" alt="Material Color Palette" width="300" />
+      <img src={ColorPaletteMaterial} alt="Material Color Palette" width="300" />
     </td>
     <td>Contains most of the <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Material design color palette</a>. In order to make the palette uniform and rectangular the following alterations were made 1. The A100-A700 shades of each color are excluded. These shades do not exist for all colors (Brown/Gray). 2. Black/White are stand-alone colors and are also excluded.</td>
   </tr>
   <tr>
     <td>
-      <img src="{ColorPaletteMaterialHalf}" alt="Material Half Color Palette" width="300" />
+      <img src={ColorPaletteMaterialHalf} alt="Material Half Color Palette" width="300" />
     </td>
     <td>Contains half of the <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Material design color palette</a> shown above for improved usability especially on mobile devices.</td>
   </tr>
   <tr>
     <td>
-      <img src="{ColorPaletteSixteen}" alt="Sixteen Color Palette" width="300" />
+      <img src={ColorPaletteSixteen} alt="Sixteen Color Palette" width="300" />
     </td>
     <td>Contains the standard <a href="https://en.wikipedia.org/wiki/Web_colors#HTML_color_names">sixteen color palette</a> from the HTML 4.01 specification.</td>
   </tr>

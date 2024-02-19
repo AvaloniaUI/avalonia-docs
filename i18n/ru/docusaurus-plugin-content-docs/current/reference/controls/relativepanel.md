@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import RelativePanelScreenshot from '/img/gitbook-import/assets/image (19) (2).png';
+import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relativepanel.png';
 
 # Relative Panel
 

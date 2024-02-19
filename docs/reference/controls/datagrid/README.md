@@ -3,10 +3,10 @@ title: DataGrid
 description: REFERENCE - Built-in Controls
 ---
 
-import DataGridNuGetScreenshot from '/img/gitbook-import/assets/image (8) (4).png';
-import DataGridSortColumnScreenshot from '/img/gitbook-import/assets/grid1.gif';
-import DataGridReorderColumnScreenshot from '/img/gitbook-import/assets/grid2.gif';
-import DataGridColumnTypesScreenshot from '/img/gitbook-import/assets/grid3.gif';
+import DataGridNuGetScreenshot from '/img/reference/controls/datagrid/datagrid-nuget.png';
+import DataGridSortColumnScreenshot from '/img/reference/controls/datagrid/datagrid-sort-column.gif';
+import DataGridReorderColumnScreenshot from '/img/reference/controls/datagrid/datagrid-reorder-column.gif';
+import DataGridColumnTypesScreenshot from '/img/reference/controls/datagrid/datagrid-column-types.gif';
 
 # DataGrid
 

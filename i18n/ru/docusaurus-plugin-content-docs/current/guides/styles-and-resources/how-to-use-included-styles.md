@@ -3,6 +3,7 @@ id: how-to-use-included-styles
 title: How to Use Included Styles
 ---
 
+import VsStylesTemplateScreenshot from '/img/guides/styles-and-resources/vs-styles-template.png';
 
 # How to Use Included Styles
 
@@ -27,7 +28,7 @@ The _Avalonia U_I solution templates provide a quick way of adding a styles file
 -  From the Avalonia Items, click **Styles(Avalonia)**
 -  Type a name for your styles file
 
-<img src="/img/gitbook-import/assets/image (1) (4) (2).png" alt=""/>
+<img src={VsStylesTemplateScreenshot} alt=""/>
 
 To use the styles defined in a separate file, you must reference it using a `StyleInclude` element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.
 
