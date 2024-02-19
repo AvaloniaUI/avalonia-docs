@@ -64,7 +64,7 @@ namespace AvaloniaControls.Views
         public MainWindow()
         {
             InitializeComponent();
-            animals.Items = new string[] 
+            animals.ItemsSource = new string[] 
                 {"кот", "верблюд", "корова", "хамелеон", "мышь", "лев", "зебра" }
             .OrderBy(x=>x);
         }

@@ -67,7 +67,7 @@ namespace AvaloniaControls.Views
         public MainWindow()
         {
             InitializeComponent();
-            animals.Items = new string[]
+            animals.ItemsSource = new string[]
                 {"cat", "camel", "cow", "chameleon", "mouse", "lion", "zebra" }
             .OrderBy(x => x);
         }
@@ -114,7 +114,7 @@ namespace AvaloniaControls.Views
         public MainWindow()
         {
             InitializeComponent();
-            animals.Items = new string[]
+            animals.ItemsSource = new string[]
                 {"cat", "camel", "cow", "chameleon", "mouse", "lion", "zebra" }
             .OrderBy(x => x);
         }
@@ -161,12 +161,12 @@ namespace AvaloniaControls.Views
         public MainWindow()
         {
             InitializeComponent();
-            animals.Items = new string[]
+            animals.ItemsSource = new string[]
                 {"cat", "camel", "cow", "chameleon", "mouse", "lion", "zebra" }
             .OrderBy(x => x);
         }
     }
-}code
+}
 ```
 
 <img src={ListBoxItemStyleScreenshot} alt="" />

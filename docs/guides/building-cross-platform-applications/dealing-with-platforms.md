@@ -31,7 +31,7 @@ Beyond the universal application characteristics, you will also have to address 
 
 * **Keyboards**: Some devices may come with physical keyboards, while others only feature a software keyboard. Code that detects when a soft-keyboard is obscuring part of the screen needs to be sensitive to these differences.
 
-These platform-specific differences should be carefully considered when designing your Avalonia application to ensure a seamless user experience across all platforms. While you should strive to maximize your code reuse, you should also avoid attempting to reuse 100% of your code across all supported platforms. Instead, talyor each platform UIs to the feel at home on the device. 
+These platform-specific differences should be carefully considered when designing your Avalonia application to ensure a seamless user experience across all platforms. While you should strive to maximize your code reuse, you should also avoid attempting to reuse 100% of your code across all supported platforms. Instead, tailor each platform UIs to the feel at home on the device. 
 
 ### Dealing with Platform Divergence
 

@@ -423,7 +423,7 @@ Second is to sign app executable and a whole app bundle. It should contain all a
 </plist>
 ```
 
-Also here is some optional parameters your app can need:
+Here are some optional permissions your app may need:
 
 ```xml
     <key>com.apple.security.network.client</key>

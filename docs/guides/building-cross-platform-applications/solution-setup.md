@@ -42,7 +42,7 @@ By separating functionalities into distinct layers, code becomes easier to manag
 
 Platform-Specific projects must reference the Core Project. The Platform Specific projects exist to enable the application to run on unique platforms including iOS, Android and WASM. 
 
-While desktop platforms can be all share a single project, it may be benefitual to create a seperate project for macOS using the [Xamarin.Mac Target Framework](https://learn.microsoft.com/en-us/xamarin/mac/platform/target-framework). This will enable easier distribution and packaging of your application.   
+While desktop platforms can share a single project, it may be beneficial to create a separate project for macOS using the [Xamarin.Mac Target Framework](https://learn.microsoft.com/en-us/xamarin/mac/platform/target-framework). This will enable easier distribution and packaging of your application.   
 
 
 
