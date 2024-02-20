@@ -20,14 +20,16 @@ public MainViewModel(MyService myService)
 }
 ```
 
-You could solve that by instanciating `MyService` and passing as a parameter everytime you need a `MainViewModel` instance, like this:
+You could solve that by instantiating `MyService` and passing as a parameter everytime you need a `MainViewModel` instance, like this:
+
 ```csharp
 var window = new MainWindow
 {
     DataContext = new MainViewModel(new MyService())
 }
 ```
-but this will get quickly difficult as when your application scale and your classes have more dependencies, hence the need of DI.
+
+But this will get quickly difficult as when your application scale and your classes have more dependencies, hence the need of DI.
 
 These are the steps you need to do in order to resolve that dependencu using DI.
 
