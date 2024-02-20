@@ -6,7 +6,7 @@ import DataTemplatesScopeScreenshot from '/img/concepts/templates/datatemplates-
 
 # Reusing Data Templates
 
-If you define a data template in the `Window.DataTemplates`collection (as on the previous page), you can reuse it anywhere in the window. However, you can also extend the reuse of a data template to any window in your application.
+If you define a data template in the `Window.DataTemplates` collection (as on the previous page), you can reuse it anywhere in the window. However, you can also extend the reuse of a data template to any window in your application.
 
 This works because _Avalonia UI_ performs a hierarchical search of its logical tree to choose a data template. At its most extensive, the search starts in a control, extends to any parent controls (recursively), then looks in the window (as on the previous page), and finally looks at the application itself for a data templates collection.
 

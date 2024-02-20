@@ -85,7 +85,7 @@ Task<IStorageFile?> TryGetFileFromPathAsync(Uri filePath);
 ```
 The method returns a file or null if it doesn't exist. The filePath parameter is expected to be an absolute path with a "file" scheme, but can be a URI with a "content" scheme on Android.
 
-### TryGetFolderFromPathAsync
+### TryGetFolderFromPathAsync
 Attempts to read a folder from the file system by its path.
 
 ```cs
@@ -113,7 +113,7 @@ The method returns a file or null if it doesn't exist.
 This method accepts local file path string as a parameter without any scheme.
 Only supported on the OS, with physical file paths, primarily only desktop.
 
-### TryGetFolderFromPathAsync
+### TryGetFolderFromPathAsync
 Attempts to read a folder from the file system by its path.
 
 ```cs

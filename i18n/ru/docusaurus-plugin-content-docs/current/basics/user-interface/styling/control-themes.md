@@ -29,7 +29,7 @@ Control themes are typically applied to [templated (lookless)](../controls/creat
 
 ## Example: Round Button
 
-The following example shows a simple `Button` theme which displays a button with an ellipse background with a 90's geocities aesthetic:
+The following example shows a simple `Button` theme which displays a button with an ellipse background with a 90's Geocities aesthetic:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -192,6 +192,6 @@ The `ControlTheme.TargetType` property specifies the type to which setter proper
 ## Additional Resources
 
 - The [ButtonCustomize](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ButtonCustomize) sample has an `WinClassicButtonTheme`
-- You can see the control themes for the inbuilt Avalonia controls here:
+- You can see the control themes for the built-in Avalonia controls here:
   - [Simple Theme](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Simple/Controls)
   - [Fluent Theme](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls)

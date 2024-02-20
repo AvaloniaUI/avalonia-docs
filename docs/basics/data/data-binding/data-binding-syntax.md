@@ -13,7 +13,7 @@ In Avalonia, you can define data binding in XAML or code. To define data binding
 The data binding mark-up extension uses the keyword `Binding` in combination with parameters that define the data source, and other options. The format of the mark-up extension is like this:
 
 ```xml
-<SomeControl SomeProperty="{Binding Path, Mode=ModeValue, StringFormat=Pattern>
+<SomeControl SomeProperty="{Binding Path, Mode=ModeValue, StringFormat=Pattern}" />
 ```
 
 When there is more than one option parameter, the list is comma-separated.

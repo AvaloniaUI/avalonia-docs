@@ -100,7 +100,7 @@ const config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: "11.0.0",
+              label: "11.0.x",
               banner: "none"
             },
             "0.10.x": {

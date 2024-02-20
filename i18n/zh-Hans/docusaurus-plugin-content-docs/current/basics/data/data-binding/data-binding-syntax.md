@@ -13,7 +13,7 @@ import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax
 数据绑定标记扩展使用关键字`Binding`，结合定义数据源和其他选项的参数。标记扩展的格式如下：
 
 ```xml
-<SomeControl SomeProperty="{Binding Path, Mode=ModeValue, StringFormat=Pattern>
+<SomeControl SomeProperty="{Binding Path, Mode=ModeValue, StringFormat=Pattern}" />
 ```
 
 当有多个选项参数时，它们之间用逗号分隔。

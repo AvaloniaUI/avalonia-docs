@@ -214,7 +214,7 @@ namespace AvaloniaControls.Views
             .OrderBy(x => x);
         }
     }
-}code
+}
 ```
 
 <img src={ListBoxItemStyleScreenshot} alt="" />

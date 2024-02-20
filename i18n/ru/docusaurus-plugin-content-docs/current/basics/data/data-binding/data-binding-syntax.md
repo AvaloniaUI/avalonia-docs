@@ -15,7 +15,7 @@ import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax
 Ниже приведен пример:
 
 ```xml
-<SomeControl SomeProperty="{Binding Path, Mode=ModeValue, StringFormat=Pattern>
+<SomeControl SomeProperty="{Binding Path, Mode=ModeValue, StringFormat=Pattern}" />
 ```
 
 Если используется более одного параметра, то их следует разделять запятой.

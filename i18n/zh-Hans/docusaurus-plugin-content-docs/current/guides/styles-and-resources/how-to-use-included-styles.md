@@ -25,7 +25,7 @@ _Avalonia UI_ 解决方案模板提供了一种快速添加样式文件到您的
 
 -  在**解决方案资源管理器**中，右键单击您的项目。
 -  点击**添加**和**新建项**
--  在Avalonia项目中，点击 **Styles(Avalonia)**
+-  在Avalonia项目中，点击 **Styles (Avalonia)**
 -  为您的样式文件输入一个名称
 
 <img src={VsStylesTemplateScreenshot} alt=""/>

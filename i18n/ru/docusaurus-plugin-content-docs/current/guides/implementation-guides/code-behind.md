@@ -7,7 +7,7 @@ title: How To Use Code-behind
 
 This guide will show you how to use the code-behind programming pattern with _Avalonia UI_.
 
-You can use this pattern for small and simple applications. For large or complex applications it is  recommended that you use the alternative MVVM pattern.
+You can use this pattern for small and simple applications. For large or complex applications it is recommended that you use the alternative MVVM pattern.
 
 :::info
 For information about the concept of the MVVM programming pattern, see [here](../../concepts/the-mvvm-pattern/).

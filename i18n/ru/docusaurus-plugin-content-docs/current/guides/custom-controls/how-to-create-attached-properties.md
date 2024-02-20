@@ -15,7 +15,7 @@ It may not be the ideal solution as there are projects such as [Avalonia Behavio
 * How to create attached properties in _Avalonia UI_
 * How to use them in a MVVM way.
 
-First we have to create our attached property. The method `AvaloniaProperty.RegisterAttached` is used for that purpose. Note that by convention the **public static** CLR-property for the attached property is named _XxxxProperty_. Also note that by convention the name (the parameter) of the attaced property is _Xxxx_ without the _Property_. And finally note that by convention one must provide two **public static** methods called _SetXxxx(element,value)_ and _GetXxxx(element)_.
+First we have to create our attached property. The method `AvaloniaProperty.RegisterAttached` is used for that purpose. Note that by convention the **public static** CLR-property for the attached property is named _XxxxProperty_. Also note that by convention the name (the parameter) of the attached property is _Xxxx_ without the _Property_. And finally note that by convention one must provide two **public static** methods called _SetXxxx(element,value)_ and _GetXxxx(element)_.
 
 This call ensures that the property has a type, an owner type and one where it may be used.
 

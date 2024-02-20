@@ -163,5 +163,5 @@ The available transitions are:
 | `matrix`     | `matrix(1,2,3,4,5,6)`                     |                              |
 
 :::info
-Avalonia also supports WPF-style render transforms such as`RotateTransform` ,`ScaleTransform` etc. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
+Avalonia also supports WPF-style render transforms such as `RotateTransform`, `ScaleTransform`, etc. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
 :::

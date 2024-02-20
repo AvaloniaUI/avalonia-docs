@@ -10,7 +10,7 @@ Bookmarks are particularly important for maintaining access to files and folders
 In Avalonia's `StorageProvider`, these bookmarks are represented as `IStorageBookmarkFile` and `IStorageBookmarkFolder` interfaces.
 
 To get bookmark ID from the specific folder or file, please use `SaveBookmarkAsync` async method on storage item.
-After retriving bookmark ID, it can be saved in a local database for the futher use instead of asking user to pick a folder each time.
+After retrieving bookmark ID, it can be saved in a local database for the further use instead of asking user to pick a folder each time.
 You can use the `OpenFileBookmarkAsync` and `OpenFolderBookmarkAsync` methods to open a bookmarked file or folder using its bookmark ID. This will return the bookmarked file or folder, or null if the operating system denies the request.
 
 :::note
@@ -18,5 +18,5 @@ The exact behavior and capabilities can depend on the specific operating system 
 :::
 
 :::note
-It's not recommended to store bookmark IDs on a remote data bases, as bookmark might not be persistent and might contain sensitive file path information.
+It's not recommended to store bookmark IDs in a remote database, as bookmarks might not be persistent and might contain sensitive file path information.
 :::
