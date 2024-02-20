@@ -61,7 +61,10 @@ public static class ServiceManager {
     public static IServiceProvider Locator { get; private set; }
 
     public static void InitialiseLocatorFromCollection(IServiceCollection collection) {
-        Locator = collection.BuildServiceProvider();
+        if (Locator != null)
+        {
+            Locator = collection.BuildServiceProvider();
+        }
     }
 }
 ``` 
