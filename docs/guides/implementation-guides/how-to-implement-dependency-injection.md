@@ -77,6 +77,18 @@ class Program
     // yet and stuff might break.
     [STAThread]
     public static void Main(string[] args)
+        => BuildAvaloniaApp()
+            .StartWithClassicDesktopLifetime(args);
+
+    // Avalonia configuration, don't remove; also used by visual designer.
+    public static AppBuilder BuildAvaloniaApp()
+        => AppBuilder.Configure<App>()
+            .UsePlatformDetect()
+            .WithInterFont()
+            .LogToTrace()
+            .AfterSetup(SetupDependencyInjection);
+
+    private static void SetupDependencyInjection(AppBuilder builder)
     {
         var collection = new ServiceCollection();
         collection.AddCommonServices();
@@ -84,18 +96,7 @@ class Program
         //Register platform specific services here with the collection
 
         ServiceManager.InitialiseLocatorFromCollection(collection);
-
-        BuildAvaloniaApp()
-        .StartWithClassicDesktopLifetime(args);
     }
-
-    // Avalonia configuration, don't remove; also used by visual designer.
-    public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
-            .UsePlatformDetect()
-            .WithInterFont()
-            .LogToTrace();
-
 }
 ```
 
