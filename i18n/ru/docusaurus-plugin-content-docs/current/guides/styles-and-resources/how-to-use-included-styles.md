@@ -21,11 +21,11 @@ To do this, you define styles in a new XAML file. Here, the root element must th
 </Styles>
 ```
 
-The _Avalonia U_I solution templates provide a quick way of adding a styles file to your project. Follow this procedure:
+The _Avalonia UI_ solution templates provide a quick way of adding a styles file to your project. Follow this procedure:
 
 -  In the **Solution Explorer**, right-click your project.
 -  Click **Add** and **New Item**
--  From the Avalonia Items, click **Styles(Avalonia)**
+-  From the Avalonia Items, click **Styles (Avalonia)**
 -  Type a name for your styles file
 
 <img src={VsStylesTemplateScreenshot} alt=""/>

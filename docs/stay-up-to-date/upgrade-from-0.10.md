@@ -11,7 +11,7 @@ Avalonia 11 introduces a number of breaking changes from 0.10. The following gui
 2. Themes are no longer included in the Avalonia.Desktop package, so you will need to add a package reference to either
     - `Avalonia.Themes.Fluent`
     - `Avalonia.Themes.Simple`
-3. Remove the package reference to `XamlNameReferenceGenerator` - Avalonia now includes an inbuilt generator by default
+3. Remove the package reference to `XamlNameReferenceGenerator` - Avalonia now includes this generator by default
 4. If necessary, update the `<LangVersion>` to at least 9 in order to be able to use init-only properties
 5. If you want the same fonts as in 0.10, also include `Avalonia.Fonts.Inter` package and add `.WithInterFont()` to the app builder. By default, 11.0 doesn't include any custom fonts.
 

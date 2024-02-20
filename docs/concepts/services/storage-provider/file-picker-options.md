@@ -84,18 +84,18 @@ Gets or sets an option indicating whether open picker allows users to select mul
 
 # Defining custom file types
 
-Avalonia has set of build in file types:
+Avalonia has set of built-in file types:
 
 - FilePickerFileTypes.All - all files
 - FilePickerFileTypes.TextPlain - txt files
 - FilePickerFileTypes.ImageAll - all images
 - FilePickerFileTypes.ImageJpg - jpg images
 - FilePickerFileTypes.ImagePng - png images
-- FilePickerFileTypes.Pdf - pdf images
+- FilePickerFileTypes.Pdf - pdf documents
 
-However it is possible to define custom file types that can be used by the picker:
+However it is possible to define custom file types that can be used by the picker.
 
-For instance, build-in ImageAll type is defined as
+For instance, the built-in ImageAll type is defined as:
 
 ```cs
 public static FilePickerFileType ImageAll { get; } = new("All Images")
@@ -106,13 +106,13 @@ public static FilePickerFileType ImageAll { get; } = new("All Images")
 };
 ```
 
-Where each file type has following hints that are used by the different platforms:
+Where each file type has the following hints that are used by the different platforms:
 
 - `Patterns` are used by most Windows, Linux and Browser platforms, and is a basic GLOB patten that can be matched on types.
 - `AppleUniformTypeIdentifiers` is a standard identifier defined by Apple and is used on macOS and iOS platforms.
-- And `MimeTypes` is a web identfier for the files used on most of platforms, but Windows and iOS.
+- `MimeTypes` is a web identifier for the files used on most platforms, but not Windows and iOS.
 
-In general, it is recommended to define as much as possible information in each file type. But at least `Patterns` and `MimeTypes` have to defined.
+Defining all hints is recommended if the information is known.
 
 :::note
 If specific hint is not known, don't set random values or "*.*" wildcard, instead keep this collection null. It will tell the platform to ignore this collection and instead try to use another one.
