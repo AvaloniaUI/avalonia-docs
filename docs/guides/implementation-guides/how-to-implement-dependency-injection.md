@@ -20,7 +20,7 @@ public MainViewModel(IMyService myService)
 }
 ```
 
-You could solve that by instantiating `MyService` and passing as a parameter everytime you need a `MainViewModel` instance, like this:
+Typically you would directly instantiate `MyService` and pass it into `MainViewModel`, like this:
 
 ```csharp
 var window = new MainWindow
@@ -30,9 +30,14 @@ var window = new MainWindow
 }
 ```
 
-But this will get quickly difficult as when your application scale and your classes have more dependencies, hence the need of DI.
+ This works great for simple constructors that are not used very often and don't change. But this technique does not scale very well because:
+- The more dependencies your constructor has the more things you will need to instantiate and pass in. Instantiating the dependencies locally (such as by doing new MainViewModel(new MyService())) results in direct rigid coupling to a specific instance of the dependencies.
+- Similarly if MainViewModel creates it's dependencies itself (such as in the constructor body) it also becomes directly coupled to the creation of the dependencies which can result in mostly the same problems. 
+- Furthermore, if the object is instantiated in many places, every single reference to any of the dependencies would also need to be updated should the dependencies of `MainViewModel` ever change (such as by requiring additional dependencies) or require a different implementation of a dependency. 
 
-These are the steps you need to do in order to resolve that dependencu using DI.
+Dependency injection solves these problem by abstracting away the creation of objects and their dependencies. This allows for well encapsulated services to be used and registered that will be automatically passed into any other service that is registered to use them. 
+
+See below the steps you need to do in order to resolve that dependencu using DI.
 
 ## Step 1: Install the NuGet package for DI
 There are many dependency injection (DI) container providers available ([DryIoC](https://github.com/dadhi/DryIoc), [Autofac](https://github.com/autofac/Autofac), [Pure.DI](https://github.com/DevTeam/Pure.DI)) but this guide will only focus on `Microsoft.Extensions.DependencyInjection`. This is a lightweight, extensible dependency injection container that is part of the .NET Framework. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
