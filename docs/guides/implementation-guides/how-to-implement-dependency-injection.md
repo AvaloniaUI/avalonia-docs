@@ -9,12 +9,12 @@ title: How To Implement Dependency Injection
 
 This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
 
-Let's assume that your MainViewModel has a dependency on MyService. The constructor for ViewModel should looks like this:
+Let's assume that your MainViewModel has a dependency on IMyService. The constructor for ViewModel should looks like this:
 
 ```csharp
-private readonly MyService _myService;
+private readonly IMyService _myService;
 
-public MainViewModel(MyService myService)
+public MainViewModel(IMyService myService)
 {
     _myService = myService;
 }
@@ -25,6 +25,7 @@ You could solve that by instantiating `MyService` and passing as a parameter eve
 ```csharp
 var window = new MainWindow
 {
+    // Note: we assume that MyService implements IMyService
     DataContext = new MainViewModel(new MyService())
 }
 ```
@@ -34,14 +35,14 @@ But this will get quickly difficult as when your application scale and your clas
 These are the steps you need to do in order to resolve that dependencu using DI.
 
 ## Step 1: Install the NuGet package for DI
-`Microsoft.Extensions.DependencyInjection` is a lightweight, extensible dependency injection (DI) container that is part of the .NET Framework. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
+There are many dependency injection (DI) container providers available ([DryIoC](https://github.com/dadhi/DryIoc), [Autofac](https://github.com/autofac/Autofac), [Pure.DI](https://github.com/DevTeam/Pure.DI)) but this guide will only focus on `Microsoft.Extensions.DependencyInjection`. This is a lightweight, extensible dependency injection container that is part of the .NET Framework. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
 
 ```shell
 dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
 ## Step 2: Add ServiceCollectionExtensions 
-The following code is creating an extension for IServiceCollection. This is where you will register all your common dependencies. It's recomended to create that class in the shared project used by all avalonia target platform.
+The following code is creating an extension for IServiceCollection. This is where you will register all your platform independent shared dependencies. It's recomended to create that class in the shared project used by all avalonia target platform.
 
 ```csharp
 public static class ServiceCollectionExtensions {
@@ -53,7 +54,7 @@ public static class ServiceCollectionExtensions {
 ```
 
 ## Step 3: Add ServiceManager
-The following code create a ServiceManager class that is used to retrieve an instance of a given object. It's recomended to create that class in the shared project used by all avalonia target platform.
+The following code creates a ServiceManager class that is used to retrieve an instance of a given object. It's recomended to create that class in the shared project used by all avalonia target platform.
 
 ```csharp
 public static class ServiceManager {
