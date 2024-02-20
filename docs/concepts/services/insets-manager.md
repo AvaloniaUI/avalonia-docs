@@ -44,7 +44,7 @@ Gets or sets the color of the platform's system bars. Returns null if the platfo
 Color? SystemBarColor { get; set; }
 ```
 
-## Events
+## Events
 
 ### SafeAreaChanged
 Occurs when the safe area for the current window changes. This can happen when system bars are shown or hidden, or when the window's size or orientation changes.
@@ -55,7 +55,7 @@ event EventHandler<SafeAreaChangedArgs>? SafeAreaChanged;
 
 ---
 
-# SafeAreaChangedArgs
+# SafeAreaChangedArgs
 SafeAreaChangedArgs is a class that provides data for the SafeAreaChanged event.
 
 ## Properties 

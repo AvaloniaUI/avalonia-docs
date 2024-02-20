@@ -36,7 +36,7 @@ public string? EMail
 Avalonia also supports validation of classes that implement [`INotifyDataErrorInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo). Several `MVVM`-libraries are using this interface for their data validation, for example the [Microsoft.Toolkit.Mvvm](https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/observablevalidator)-package and the [`ReactiveUI.Validation`](https://github.com/reactiveui/ReactiveUI.Validation#inotifydataerrorinfo-support)-package. For usage instructions please visit the documentation of the `MVVM`-package of your choice.
 
 :::info
-Some libraries like the `Microsoft.Toolkit.Mvvm` use `DataAnnotiations` for their validation. This may result in conflicts with the [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin). Please see [Manage ValidationPlugins](data-validation.md#manage-validationplugins) how to solve this issue.
+Some libraries like the `Microsoft.Toolkit.Mvvm` use `DataAnnotations` for their validation. This may result in conflicts with the [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin). Please see [Manage ValidationPlugins](data-validation.md#manage-validationplugins) how to solve this issue.
 :::
 
 ### Exception - ValidationPlugin

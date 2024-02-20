@@ -3,11 +3,11 @@ id: index
 title: Themes
 ---
 
-In Avalonia, themes are complete sets of [control themes](../control-themes) and [theme resources](../../../../guides/styles-and-resources/how-to-use-theme-variants) for build-in controls.
+In Avalonia, themes are complete sets of [control themes](../control-themes) and [theme resources](../../../../guides/styles-and-resources/how-to-use-theme-variants) for built-in controls.
 
 
 ## Official themes
-Avalonia provides two build in theme:
+Avalonia provides two built-in themes:
 
 ### Fluent theme
 
@@ -15,7 +15,7 @@ Avalonia provides two build in theme:
 
 ### Simple theme
 
-- [Simple Theme](simple) is an minimal and lightweight theme with limited build in styling.
+- [Simple Theme](simple) is an minimal and lightweight theme with limited built-in styling.
 
 ---
 ## Community themes

@@ -53,7 +53,7 @@ The duration between pointer press and when the `Holding` event is fired.
 TimeSpan HoldWaitDuration { get; }
 ```
 
-### HotkeyConfiguration
+### HotkeyConfiguration
 The configuration for platform-specific hotkeys in an Avalonia application.
 
 ```cs

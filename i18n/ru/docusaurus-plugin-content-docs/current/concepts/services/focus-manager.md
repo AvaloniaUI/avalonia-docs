@@ -12,7 +12,7 @@ var focusManager = window.FocusManager;
 
 ## Methods
 
-### GetFocusedElement()
+### GetFocusedElement()
 Returns the currently focused element.
 
 ```cs

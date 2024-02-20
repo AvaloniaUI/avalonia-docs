@@ -40,7 +40,7 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-This method is called when the framework has initilized and the `ApplicationLifetime` property contains the chosen lifetime if any.
+This method is called when the framework has initialized and the `ApplicationLifetime` property contains the chosen lifetime if any.
 
 :::info
 If you run the application in design mode (this uses the IDE previewer process), then `ApplicationLifetime` is null.
