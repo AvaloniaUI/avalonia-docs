@@ -22,7 +22,9 @@ import ToDoBlankAfterWiringScreenshot from '/img/gitbook-import/assets/image (42
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:ToDoList.ViewModels"
              mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
+             x:DataType="vm:ToDoListViewModel"
              x:Class="ToDoList.Views.ToDoListView">
     <DockPanel>
         <Button DockPanel.Dock="Bottom"
