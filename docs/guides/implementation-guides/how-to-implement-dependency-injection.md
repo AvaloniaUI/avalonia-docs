@@ -9,24 +9,44 @@ title: How To Implement Dependency Injection
 
 This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
 
-Let's assume that your MainViewModel has a dependency on IMyService. The constructor for ViewModel should looks like this:
+Let's assume that you have an app with a MainViewModel, a BusinessService and a Repository. MainViewModel has a dependency to BusinessService and BusinessService to Repository. A simple implementation would look like this:
 
 ```csharp
-private readonly IMyService _myService;
-
-public MainViewModel(IMyService myService)
+public partial class MainViewModel : ObservableObject
 {
-    _myService = myService;
+    private readonly IBusinessService _businessService;
+
+    public MainViewModel(IBusinessService businessService)
+    {
+        _businessService = businessService;
+    }
 }
 ```
 
-Typically you would directly instantiate `MyService` and pass it into `MainViewModel`, like this:
+```csharp
+public class BusinessService : IBusinessService
+{
+    private readonly IRepository _repository;
+
+    public MainViewModel(IRepository repository)
+    {
+        _repository = repository;
+    }
+}
+```
+
+```csharp
+public class Repository : IRepository
+{
+}
+```
+
+Typically you would directly instantiate `Repository` and pass it into `BusinessService` then pass it into `MainViewModel`, like this:
 
 ```csharp
 var window = new MainWindow
 {
-    // Note: we assume that MyService implements IMyService
-    DataContext = new MainViewModel(new MyService())
+    DataContext = new MainViewModel(new BusinessService(new Repository()))
 }
 ```
 
@@ -51,64 +71,25 @@ The following code is creating an extension for IServiceCollection. This is wher
 
 ```csharp
 public static class ServiceCollectionExtensions {
+
+    public static void RegisterDesignTimeServices(this IServiceCollection collection)
+    {
+        collection.AddTransient<MockRepository>(); // MockRepository is a mock instance of IRepository
+    }
+
+    public static void RegisterRealServices(this IServiceCollection collection)
+    {
+        collection.AddTransient<Repository>();
+        collection.AddTransient<BusinessService>();
+    }
+
     public static void AddCommonServices(this IServiceCollection collection) {
         collection.AddTransient<MainViewModel>();
-        collection.AddTransient<MyService>();
     }
 }
 ```
 
-## Step 3: Add ServiceManager
-The following code creates a ServiceManager class that is used to retrieve an instance of a given object. It's recomended to create that class in the shared project used by all avalonia target platform.
-
-```csharp
-public static class ServiceManager {
-    public static IServiceProvider Locator { get; private set; }
-
-    public static void InitialiseLocatorFromCollection(IServiceCollection collection) {
-        if (Locator == null)
-        {
-            Locator = collection.BuildServiceProvider();
-        }
-    }
-}
-``` 
-
-## Step 4: Modify Program.cs
-This should be modified for each target platform project. You can add specific platform dependency at this location too (see comment in code below)
-
-```csharp
-class Program
-{
-    // Initialization code. Don't use any Avalonia, third-party APIs or any
-    // SynchronizationContext-reliant code before AppMain is called: things aren't initialized
-    // yet and stuff might break.
-    [STAThread]
-    public static void Main(string[] args)
-        => BuildAvaloniaApp()
-            .StartWithClassicDesktopLifetime(args);
-
-    // Avalonia configuration, don't remove; also used by visual designer.
-    public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
-            .UsePlatformDetect()
-            .WithInterFont()
-            .LogToTrace()
-            .AfterSetup(SetupDependencyInjection);
-
-    private static void SetupDependencyInjection(AppBuilder builder)
-    {
-        var collection = new ServiceCollection();
-        collection.AddCommonServices();
-
-        //Register platform specific services here with the collection
-
-        ServiceManager.InitialiseLocatorFromCollection(collection);
-    }
-}
-```
-
-## Step 5: Modify App.axaml.cs
+## Step 3: Modify App.axaml.cs
 Next, the App.xaml.cs class should be modified to use the DI container. This will allow the previously registered view model to be resolved via the dependency injection container. The fully realised view model can then be set to the data context of the main view. 
 
 ```csharp
@@ -125,11 +106,23 @@ public partial class App : Application
         // Without this line you will get duplicate validations from both Avalonia and CT
         BindingPlugins.DataValidators.RemoveAt(0);
 
-        // ServiceManager retrieve an instance of MainViewModel
-        // The service manager's locator instance is used to resolve an instance of MainViewModel, 
-        // with all the constructor dependencies of MainViewModel such as MyService that 
-        // was configured during the container creation.
-        var vm = ServiceManager.Locator.GetRequiredService<MainViewModel>();
+        // Register all the services needed for the application to run
+        // If in design mode we register different set of services using the extension method from step 2
+        var collection = new ServiceCollection();
+        collection.AddCommonServices();
+        if (Design.IsDesignMode)
+        {
+            collection.RegisterDesignTimeServices();
+        }
+        else
+        {
+            collection.RegisterRealServices();
+        }
+
+        // Creates a ServiceProvider containing services from the provided IServiceCollection
+        var services = collection.BuildServiceProvider();
+
+        var vm = services.GetRequiredService<MainViewModel>();
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new MainWindow
