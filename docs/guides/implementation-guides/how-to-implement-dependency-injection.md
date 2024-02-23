@@ -5,7 +5,7 @@ title: How To Implement Dependency Injection
 
 # How To Implement Dependency Injection in Avalonia
 
-[Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It accomplishes this by creating discrete services that are passed around/created as needed. It is especially useful when you are developing multi-platform applications that need specific service implementations for each platform.
+[Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It accomplishes this by creating discrete services that are passed around/created as needed.
 
 This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
 
@@ -67,7 +67,7 @@ dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
 ## Step 2: Add ServiceCollectionExtensions 
-The following code is creating an extension for IServiceCollection. This is where you will register all your platform independent shared dependencies. It's recomended to create that class in the shared project used by all avalonia target platform.
+The following code is creating an extension for IServiceCollection. We are creating different methods to be use in different settings (Design mode and real usage). You usually want to mock services in design mode with the library of your choice.    
 
 ```csharp
 public static class ServiceCollectionExtensions {
