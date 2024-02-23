@@ -3,23 +3,24 @@ id: headless-xunit
 title: Headless Testing with XUnit
 ---
 
-## Preparation 
+## 准备
 
-This page assumes that XUnit project was already created.
-If not, please follow XUnit "Getting Started" and "Installation" here https://xunit.net/docs/getting-started/netfx/visual-studio.
+本页假定 XUnit 项目已经创建。
+如果没有，请按照 XUnit 的 "入门" 和 "安装" 在这里 https://xunit.net/docs/getting-started/netfx/visual-studio。
 
-## Install packages
+## 安装包
 
-Aside from XUnit packages, we need to install two more packages:
-- [Avalonia.Headless.XUnit](https://www.nuget.org/packages/Avalonia.Headless.XUnit) which also includes Avalonia.
-- [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent) as even headless controls need a theme
+除了 XUnit 包外，我们还需要安装两个包：
+- [Avalonia.Headless.XUnit](https://www.nuget.org/packages/Avalonia.Headless.XUnit) 这也包括了 Avalonia。
+- [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent) 因为即使是无头控件也需要一个主题。
 
-:::tip
-Headless platform doesn't require any specific theme, and it is possible to swap FluentTheme with any other.
+:::提示
+无头平台不需要任何特定的主题，可以用任何其他主题替换 FluentTheme。
 :::
 
-## Setup Application 
-As in any other Avalonia app, an `Application` instance needs to be created, and themes need to be applied. When using the Headless platform, the setup is not much different from a regular Avalonia app and can mostly be reused.
+## 设置应用程序
+
+与任何其他 Avalonia 应用一样，需要创建一个 `Application` 实例，并应用主题。在使用无头平台时，设置与常规 Avalonia 应用并没有太大区别，大部分代码都可以重用。
 
 ```xml title=App.axaml
 <Application xmlns="https://github.com/avaloniaui"
@@ -31,7 +32,7 @@ As in any other Avalonia app, an `Application` instance needs to be created, and
 </Application>
 ```
 
-And the code:
+和代码：
 
 ```csharp title=App.axaml.cs
 using Avalonia;
@@ -46,13 +47,13 @@ public class App : Application
 }
 ```
 
-:::note
-Usually, the `BuildAvaloniaApp` method is defined in the Program.cs file, but NUnit/XUnit tests don't have it, so it is defined in the `App` file instead.
+:::注意
+通常，`BuildAvaloniaApp` 方法是在 Program.cs 文件中定义的，但 NUnit/XUnit 测试没有它，所以在 `App` 文件中定义它。
 :::
 
-## Initialize XUnit Tests
+## 初始化 XUnit 测试
 
-The `[AvaloniaTestApplication]` attribute wires the tests in the current project with the specific application. It needs to be defined once per project in any file.
+`[AvaloniaTestApplication]` 属性将当前项目中的测试与特定应用程序连接起来。需要在任何文件中每个项目中定义一次。
 
 ```csharp
 [assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]
@@ -64,28 +65,28 @@ public class TestAppBuilder
 }
 ```
 
-## Test Example
+## 测试示例
 
 ```csharp
 [AvaloniaFact]
 public void Should_Type_Text_Into_TextBox()
 {
-    // Setup controls:
+    // 设置控件：
     var textBox = new TextBox();
     var window = new Window { Content = textBox };
 
-    // Open window:
+    // 打开窗口：
     window.Show();
 
-    // Focus text box:
+    // 焦点在文本框上：
     textBox.Focus();
 
-    // Simulate text input:
+    // 模拟文本输入：
     window.KeyTextInput("Hello World");
 
-    // Assert:
+    // 断言：
     Assert.Equal("Hello World", textBox.Text);
 }
 ```
 
-Instead of the typical `[Fact]` attribute, we need to use `[AvaloniaFact]` as it sets up the UI thread. Similarly, instead of `[Theory]`, there is a `[AvaloniaTheory]` attribute.
+与典型的 `[Fact]` 属性不同，我们需要使用 `[AvaloniaFact]`，因为它设置了 UI 线程。类似地，不是 `[Theory]`，而是 `[AvaloniaTheory]` 属性。
