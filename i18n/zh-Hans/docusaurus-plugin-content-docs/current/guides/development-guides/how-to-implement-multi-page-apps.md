@@ -4,15 +4,13 @@ title: How To Implement Multi-page Apps
 ---
 
 
-# How To Implement Multi-page Apps
+# 如何实现多页面应用
 
-Content in preparation.
+内容准备中。
 
-This guide will show you how to employ user controls as page views, and the view locator class, to implement a multiple-page application.
+本指南将向您展示如何使用用户控件作为页面视图以及视图定位器类来实现多页面应用。
 
-
-
-that is added by the Avalonia MVVM solution template.
+这是Avalonia MVVM解决方案模板添加的功能。
 
 ```csharp
 public class ViewLocator : IDataTemplate

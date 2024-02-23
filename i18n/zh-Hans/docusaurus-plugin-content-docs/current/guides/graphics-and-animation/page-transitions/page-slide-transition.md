@@ -3,9 +3,9 @@ id: page-slide-transition
 title: Page Slide Transition
 ---
 
-# Page Slide Transition
+# 页面滑动过渡
 
-The page slide transition moves the old page out of view, and the new page into view, for the given duration. You can specify the slide direction using the orientation property (default horizontal).
+页面滑动过渡将旧页面移出视图，并将新页面视图移入，持续一定的时间。您可以使用orientation属性指定滑动方向（默认为水平）。
 
 ```markup title='XAML'
 <PageSlide Duration="0:00:00.500" Orientation="Vertical" />
@@ -16,12 +16,12 @@ var transition = new PageSlide(TimeSpan.FromMilliseconds(500),
                                 PageSlide.SlideAxis.Vertical);
 ```
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this transition, see [here](http://reference.avaloniaui.net/api/Avalonia.Animation/PageSlide/).
+有关此过渡的完整API文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Animation/PageSlide/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`PageSlide.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Animation/PageSlide.cs)
+在_GitHub_上查看源代码 [`PageSlide.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Animation/PageSlide.cs)
 :::
