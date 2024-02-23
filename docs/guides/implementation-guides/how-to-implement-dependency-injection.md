@@ -9,10 +9,10 @@ title: How To Implement Dependency Injection
 
 This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
 
-Let's assume that you have an app with a MainViewModel, a BusinessService and a Repository. MainViewModel has a dependency to BusinessService and BusinessService to Repository. A simple implementation would look like this:
+Let's assume that you have an app with a MainViewModel, a BusinessService and a Repository. MainViewModel has a dependency on IBusinessService and BusinessService on IRepository. A simple implementation would look like this:
 
 ```csharp
-public partial class MainViewModel : ObservableObject
+public partial class MainViewModel
 {
     private readonly IBusinessService _businessService;
 
@@ -79,7 +79,7 @@ public static class ServiceCollectionExtensions {
 
     public static void RegisterRealServices(this IServiceCollection collection)
     {
-        collection.AddTransient<Repository>();
+        collection.AddSingleton<IRepository, Repository>();
         collection.AddTransient<BusinessService>();
     }
 
@@ -93,7 +93,7 @@ public static class ServiceCollectionExtensions {
 Next, the App.xaml.cs class should be modified to use the DI container. This will allow the previously registered view model to be resolved via the dependency injection container. The fully realised view model can then be set to the data context of the main view. 
 
 ```csharp
-public partial class App : Application
+public class App : Application
 {
     public override void Initialize()
     {
