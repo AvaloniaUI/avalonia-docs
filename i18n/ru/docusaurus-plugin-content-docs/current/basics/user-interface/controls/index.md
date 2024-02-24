@@ -1,4 +1,4 @@
-# Controls
+# Controls (рус: Компоненты UI)
 
 Controls in Avalonia UI are fundamental building blocks used to create user interfaces. They represent various interactive elements such as buttons, text boxes, sliders, and more. Understanding controls is essential for developing applications using Avalonia UI.
 
