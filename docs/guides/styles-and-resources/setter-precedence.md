@@ -210,9 +210,17 @@ applied to `Button`.
 
 However, when the `Button` is hovered, the `:pointerover` `Selector` is activated with its `StyleTrigger` 
 priority, overrides the `TemplateBinding`, and fetches `ButtonBackgroundPointerOver` instead. This circumvents 
-fetching the `Button`'s `Background` that our original `Animation` `Selector` targeted. Instead, we should target 
-the `ContentPresenter` with a `Setter` that has priority of at least `StyleTrigger`. `BindingPriority.Animation` fits that.
-This is an observation that cannot be made without examining the original `ControlTemplate` and emphasizes that relying 
+fetching the `Button`'s `Background` that our original `Animation` `Selector` targeted. This is summarized in the following table:
+
+| Background Setters and Styles While Hovered                         | Priority                          | Location        |
+|---------------------------------------------------------------------|-----------------------------------|-----------------|
+| ~~Background="Green"~~                                              | LocalValue                        | Button          |
+| Background="Red"                                                    | Animation (Overrides LocalValue)  | Keyframe        |
+| ~~`<ContentPresenter Background="{TemplateBinding Background}"/>`~~ | Template                          | ControlTemplate |
+| `^:pointerover /template/ ContentPresenter#PART_ContentPresenter`   | StyleTrigger (Overrides Template) | ControlTheme    |
+
+Instead, we should target the `ContentPresenter` with a `Setter` that has priority of at least `StyleTrigger`. `BindingPriority.Animation` 
+fits that. This is an observation that cannot be made without examining the original `ControlTemplate` and emphasizes that relying 
 on priority alone is insufficient to effectively style an application.
 
 ```xml title='Corrected to override :pointerover priority'
