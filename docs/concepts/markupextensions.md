@@ -104,7 +104,7 @@ public class MultiplyBinding
         _second = second;
     }
 
-    public object ProvideValue(IServiceProvider provider)
+    public object ProvideValue()
     {
         var mb = new MultiBinding()
         {
