@@ -288,6 +288,7 @@ const sidebars = {
             'guides/data-binding/how-to-bind-to-a-collection',
             'guides/data-binding/binding-from-code',
             'guides/data-binding/how-to-create-a-custom-data-binding-converter',
+            'guides/data-binding/how-to-bind-multiple-properties',
             'guides/data-binding/how-to-bind-tabs',
             'guides/data-binding/how-to-bind-image-files',
             'guides/data-binding/how-to-bind-can-execute',
