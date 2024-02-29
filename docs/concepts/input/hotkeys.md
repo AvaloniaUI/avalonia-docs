@@ -52,7 +52,7 @@ A Hotkey must have one [Key](http://reference.avaloniaui.net/api/Avalonia.Input/
 </Button>
 <!--  Alt+Number  -->
 <Button Command="{Binding CommandX}" Content="_1" />
-
+```
 ### Reference
 
 * [HotKeyManager](http://reference.avaloniaui.net/api/Avalonia.Controls/HotKeyManager/)
