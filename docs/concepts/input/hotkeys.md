@@ -30,7 +30,7 @@ A Hotkey must have one [Key](http://reference.avaloniaui.net/api/Avalonia.Input/
   see: [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/)
 - By binding the same command to two buttons and hiding one button, you can differentiate between a single number on the numpad and a simple Ctrl+number key.
 - If you want to limit command malfunctions caused by pressing numbers on the numpad, you can also use [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/).
-~~~xml
+```xml
 <!--  It's worked fine  -->
 <!--  e.g. Ctrl+1  -->
 <Button
@@ -52,7 +52,6 @@ A Hotkey must have one [Key](http://reference.avaloniaui.net/api/Avalonia.Input/
 </Button>
 <!--  Alt+Number  -->
 <Button Command="{Binding CommandX}" Content="_1" />
-~~~
 
 ### Reference
 
