@@ -59,7 +59,7 @@ To add the user control, follow this procedure:
 
 ```xml
 <Window ...
-    xmlns:views="using:Avalonia.MusicStore.Views" >    
+    xmlns:views="using:Avalonia.MusicStore" >    
 ```
 
 - Inside the panel element, add an element for new user control:
