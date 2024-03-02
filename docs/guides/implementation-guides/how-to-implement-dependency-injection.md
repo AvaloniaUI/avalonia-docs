@@ -7,7 +7,9 @@ title: How To Implement Dependency Injection
 
 [Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It accomplishes this by creating discrete services that are passed around/created as needed.
 
-This guide will show you how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
+This guide will show you step by step how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
+
+## Step 0: Context and Initial Code
 
 Let's assume that you have an app with a MainViewModel, a BusinessService and a Repository. MainViewModel has a dependency on IBusinessService and BusinessService on IRepository. A simple implementation would look like this:
 
@@ -57,8 +59,6 @@ var window = new MainWindow
 
 Dependency injection solves these problem by abstracting away the creation of objects and their dependencies. This allows for well encapsulated services to be used that will be automatically passed into any other service that is registered to use them. 
 
-See below the steps you need to do in order to resolve that dependency using DI.
-
 ## Step 1: Install the NuGet package for DI
 There are many dependency injection (DI) container providers available ([DryIoC](https://github.com/dadhi/DryIoc), [Autofac](https://github.com/autofac/Autofac), [Pure.DI](https://github.com/DevTeam/Pure.DI)) but this guide will only focus on `Microsoft.Extensions.DependencyInjection` which is a lightweight, extensible dependency injection container. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
 
@@ -67,23 +67,13 @@ dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
 ## Step 2: Add ServiceCollectionExtensions 
-The following code is creating an extension for IServiceCollection. We are creating different methods to be use in different settings (Design mode and real usage). You usually want to mock services in design mode with the library of your choice.    
+The following code is creating an extension for IServiceCollection.    
 
 ```csharp
 public static class ServiceCollectionExtensions {
-
-    public static void RegisterDesignTimeServices(this IServiceCollection collection)
-    {
-        collection.AddTransient<MockRepository>(); // MockRepository is a mock instance of IRepository
-    }
-
-    public static void RegisterRealServices(this IServiceCollection collection)
-    {
+    public static void AddCommonServices(this IServiceCollection collection) {
         collection.AddSingleton<IRepository, Repository>();
         collection.AddTransient<BusinessService>();
-    }
-
-    public static void AddCommonServices(this IServiceCollection collection) {
         collection.AddTransient<MainViewModel>();
     }
 }
@@ -107,17 +97,8 @@ public class App : Application
         BindingPlugins.DataValidators.RemoveAt(0);
 
         // Register all the services needed for the application to run
-        // If in design mode we register different set of services using the extension method from step 2
         var collection = new ServiceCollection();
         collection.AddCommonServices();
-        if (Design.IsDesignMode)
-        {
-            collection.RegisterDesignTimeServices();
-        }
-        else
-        {
-            collection.RegisterRealServices();
-        }
 
         // Creates a ServiceProvider containing services from the provided IServiceCollection
         var services = collection.BuildServiceProvider();
