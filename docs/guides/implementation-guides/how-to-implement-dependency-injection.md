@@ -62,12 +62,14 @@ Dependency injection solves these problem by abstracting away the creation of ob
 ## Step 1: Install the NuGet package for DI
 There are many dependency injection (DI) container providers available ([DryIoC](https://github.com/dadhi/DryIoc), [Autofac](https://github.com/autofac/Autofac), [Pure.DI](https://github.com/DevTeam/Pure.DI)) but this guide will only focus on `Microsoft.Extensions.DependencyInjection` which is a lightweight, extensible dependency injection container. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
 
+Run the following command in a terminal inside your project directory to install the DI package:
+
 ```shell
 dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
 ## Step 2: Add ServiceCollectionExtensions 
-The following code is creating an extension for IServiceCollection.    
+The following code is creating an extension method for `IServiceCollection` that will register services to our service collection and make them available for injection.  
 
 ```csharp
 public static class ServiceCollectionExtensions {
@@ -80,7 +82,7 @@ public static class ServiceCollectionExtensions {
 ```
 
 ## Step 3: Modify App.axaml.cs
-Next, the App.xaml.cs class should be modified to use the DI container. This will allow the previously registered view model to be resolved via the dependency injection container. The fully realised view model can then be set to the data context of the main view. 
+Next, the `App.xaml.cs` class should be modified to use the DI container. This will allow the previously registered view model to be resolved via the dependency injection container. The fully realised view model can then be set to the data context of the main view. 
 
 ```csharp
 public class App : Application
