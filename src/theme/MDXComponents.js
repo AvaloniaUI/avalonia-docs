@@ -5,6 +5,7 @@ import Highlight from '@site/src/components/Highlight';
 import { CardSection, Card } from '../components/CardComponents'; 
 import HelpNeeded from '../components/HelpNeeded'; 
 import GitHubSampleLink from '../components/GitHubSampleLink';
+import MinVersion from '../components/MinVersion';
 import XpfAd from '../components/XpfAdvert';
 
 export default {
@@ -17,5 +18,6 @@ export default {
   GitHubSampleLink,
   Card,
   HelpNeeded,
+  MinVersion,
   XpfAd,
 };
