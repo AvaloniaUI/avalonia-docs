@@ -133,4 +133,12 @@ If none of the built-in converters are meet your requirements, then you can impl
 An example of a custom converter can bind an image file. For guidance on how to create a custom converter for an image, see [here](../../../guides/data-binding/how-to-bind-image-files.md).
 :::
 
+## Fallback values
+
+You may optionally define fallback values in the XAML in case the binding fails.
+
+```xml
+<TextBlock Text="{Binding Name, FallBackValue=Bob}"/>
+```
+
 
