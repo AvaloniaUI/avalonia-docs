@@ -138,7 +138,7 @@ An example of a custom converter can bind an image file. For guidance on how to 
 You may optionally define fallback values in the XAML in case the binding fails.
 
 ```xml
-<TextBlock Text="{Binding Name, FallBackValue=Bob}"/>
+<TextBlock Text="{Binding Name, FallbackValue=Bob}"/>
 ```
 
 
