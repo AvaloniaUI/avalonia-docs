@@ -1,26 +1,27 @@
-# Defining Properties
+# Defining Properties (рус: Определяющие свойства)
 
-Control properties in Avalonia UI allow you to expose configurable aspects of your custom controls, enabling users of your controls to customize their behavior and appearance. This document will introduce the process of defining properties for your custom controls.
+Свойства компонентов UI в Avalonia позволяют раскрывать настраиваемые аспекты ваших пользовательких компонентов, что позволяет настраивать их поведение и внешний вид любому из пользователей означенных компонентов.
+В текущем документе будет представлен процесс определения свойств пользовательских компонентов.
 
-## Styled Properties
+## Styled Properties (рус: Стилизованные свойства)
 
-Styled properties in Avalonia offer a powerful and flexible way to define properties for controls. These properties are specifically designed to support the Avalonia styling system and data binding. Styled properties in Avalonia are registered using the `AvaloniaProperty` class.
+Стилизованные свойства предоставляют мощный и гибкий способ определения свойств компонентов в Avalonia.
+Данные свойства разработаны специально для поддержки в Avalonia системы стилей и `data bindong (рус: привязки данных)`.
+Стилизованные свойства регистрируются через класс `AvaloniaProperty`.
 
-Styled Avalonia properties have the following key characteristics:
+Стилизованные свойства обладают следующими ключевыми характеристиками в Avalonia:
 
-- **Styling Support**: They can be easily targeted and modified using styles, and setters defined in XAML or programmatically.
-Inheritance: They support inheritance, meaning that a property value defined on a parent control can be automatically inherited by its child controls unless explicitly overridden.
+- **Поддержка стилей**: Они легко указываются и изменяются через стили, путем определения в XAML или программно. Наследование: Поддержка наследования означает, что значение свойств, определенное в родительском компоненте, может автоматически наследоваться его дочерними компонентами, если оно не переопределено явно.
 
-- **Default Values**: They can have default values specified at the control level or within control templates, ensuring consistent behavior across multiple instances of the control.
+- **Значения по-умолчанию**: Они могут иметь значения по-умолчанию, указанные внутри компонента или через `control templates (рус: шаблоны компонентов)`, что обеспечивает согласованное поведение в разных экземплярах компонента.
 
-- **Property Value Precedence**: They follow a well-defined precedence order, allowing values to be resolved based on factors such as local values, style setters, triggers, and default values.
-Styled Avalonia properties are commonly used for control properties that are intended to be easily customizable through styling, allowing for dynamic changes in appearance and behavior based on various conditions.
+- **Приоритет значения свойств**: Они следуют явно определенному порядку приоритета, что позволяет разрешать значения на основе таких факторов, как локальные значения, установщики стилей, триггеры и значения по-умолчанию. Стилизованные свойства Avalonia, обычно используют для управления свойствами, которые предназначены для простой настройки через стили, позволяющие динамически менять внешний вид и поведение в зависимости от различных условий.
 
-- **Validation and Coercion**: Styled properties allow a control to validate and coerce the values passed to it, ensuring that the control is never in an invalid state.
+- **Проверка и применение**: Стилизованные свойства позволяют компоненту проверять и применять передаваемые ему значения, что гарантирует нахождение компонента только в допустимом состоянии.
 
-## Example
+## Пример
 
-Here's an example of how to define a custom styled property for a hypothetical custom button control:
+Ниже указан пример, как определить свойство пользовательского стиля для гипотетического пользовательского компонента типа `Button (рус: кнопка)`:
 
 ```csharp
 public class MyCustomButton : Button
@@ -36,8 +37,10 @@ public class MyCustomButton : Button
 }
 ```
 
-In this example, a custom property called `RepeatCount` is defined as an integer property for the `MyCustomButton` control. The property is registered using the `AvaloniaProperty` system, allowing it to be accessed, modified, styled, and data-bound by users of the control. A CLR property is also defined for convenience, allowing the property to be consumed in manner consistent with standard .NET APIs.
+В данном примере, пользовательское свойство определено под именем `RepeatCount`, как целочисленное свойство для компонента `MyCustomButton`.
+Система `AvaloniaProperty` регистрирует свойство, что дает ее пользователям доступ к свойству, его изменению, стилизации и привязки данных.
+Для удобства также определено CLR-свойство, что позволяет его использовать способом, совместимым со стандартами .NET API.
 
-## Further Reading
+## Дальнейшее изучение
 
-For more information see the [Defining Properties How-To](../../../../guides/custom-controls/defining-properties.md)
+Подробнее смотрите по [ссылке](../../../../guides/custom-controls/defining-properties.md)

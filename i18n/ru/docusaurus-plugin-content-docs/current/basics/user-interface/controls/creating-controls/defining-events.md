@@ -1,23 +1,27 @@
-# Defining Events
+# Defining Events (рус: Определяющие события)
 
-Events in Avalonia allow your custom controls to communicate and notify users of specific actions or occurrences. By defining events, you provide a way for users of your controls to respond and react to these events within their applications. This document will guide you through the process of defining events for your custom controls.
+В Avalonia, события позволяют пользовательским компонентам UI взаимодействовать с пользователем, а также оповещать его о конкретных действиях и инцидентах.
+Определяя события, вы предоставляете пользователям ваших компонентов возможность реагировать и отвечать на события внутри собственных приложений.
+В текущем документе будет представлено руководство по определению событий для ваших компонентов.
 
-## Routed Event
+## Routed Event (рус: Перенаправленное событие)
 
-Routed events in Avalonia offer a mechanism for handling events that can travel (or "route") through the control tree, allowing multiple controls to respond to the same event. Routed events provide the following key features:
+Перенаправленные события предоставляют механизм обработки событий, которые могут перемещаться (или перенаправляться) по дереву компонентов, что позволяет нескольких компонентам реагировать на одно и то же событие.
 
-- **Event Routing**: Routed events can propagate up the tree (bubbling) or down the tree (tunneling), enabling controls at different levels to handle the same event. This allows for more flexible and centralized event handling.
+Перенаправленные события обладают следующими ключевыми функциями:
 
-- **Event Handlers**: Routed events use event handlers to respond to events. Event handlers are associated with specific controls or can be attached at higher levels in the visual tree to handle events from multiple controls.
+- **Event Routing (рус: Перенаправление событий)**: Перенаправляемые события могут распространяться вверх (`bubbling (рус: пузырение)`) или вниз (`tunneling (рус: туннелирование)`) по дереву, что позволяет компонентам на разных уровнях обрабатывать одно и тоже событие. Такой подход обеспечивает более гибкую и централизованную обработку событий.
 
-- **Handled State**: Routed events have a `Handled` property that can be used to mark an event as handled, preventing further propagation. This allows fine-grained control over event handling.
+- **Event Handlers (рус: Обработчики событий)**: Перенаправляемые события используют обработчики событий для реагирования на них. Обработка событий связана с определенными компонентами или может быть добавлена на более высоких уровнях визуального дерева для обработки событий от нескольких компонентов.
 
-- **Event Routing Strategies**: Avalonia supports different routing strategies for routed events, such as bubbling, tunneling, and direct routing. These strategies determine the order in which controls receive and handle events.
-Avalonia routed events are particularly useful when you need to handle events that may occur within nested controls or when you want to centralize event handling logic higher up in the visual tree.
+- **Handled State (рус: Обрабатываемое состояние)**: Перенаправляемые события имею свойство `Handled`, которое можно использовать для пометки события как `handled (рус: обработанное)`, что предотвращает дальнейшее распостранение. Такой способ позволяет осуществлять детальный контроль над обработкой событий.
 
-## Example
+- **Event Routing Strategies (рус: Стратегия перенаправления событий)**: Avalonia поддерживает различные стратегии перенаправления для перенаправляемых событий, такие как `bubbling (рус: пузырение)`, `tunneling (рус: туннелирование)` и прямое перенаправление. Эти стратегии определяют порядок, в котором компоненты получают и обрабатывают события. Перенаправляемые события особенно полезны, когда вам требуется обрабатывать события, возникающие внутри вложенных компонентов или если вы хотите централизованную логику обработки событий выше по визуальному дереву.
 
-Here's an example of how to define a routed event for a hypothetical custom slider control:
+## Пример
+
+Ниже указан пример, как определить перенаправленное событие для гипотетического пользовательского компонента "ползунок":
+
 
 ```csharp
 public class MyCustomSlider : Control
@@ -39,8 +43,10 @@ public class MyCustomSlider : Control
 }
 ```
 
-In this example, a custom routed event called `ValueChangedEvent` is defined for the `MyCustomSlider` control. The event is registered using the `RoutedEvent` system, allowing it to be subscribed by users of the control. A CLR event is also defined for convenience, allowing the event to be consumed in manner consistent with standard .NET APIs.
+В данном примере, пользовательское перенаправляемое событие определено под именем `ValueChangedEvent` для компонента `MyCustomSlider`.
+Система `RoutedEvent` регистрирует событие, что дает возможность пользователям компонента подписаться на него.
+Для удобства также определено CLR-событие, что позволяет и его использовать способом, совместимым со стандартами .NET API.
 
-## Further Reading
+## Дальнейшее изучение
 
-For more information see the [Routed Events Deep Dive](../../../../concepts/input/routed-events.md)
+Подробную информацию смотрите по ссылке [Routed Events Deep Dive](../../../../concepts/input/routed-events.md)
