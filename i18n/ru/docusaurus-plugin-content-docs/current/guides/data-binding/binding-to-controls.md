@@ -86,7 +86,7 @@ If you need to include a XAML namespace in the ancestor type, you separate the n
 </local:MyControl>
 ```
 
-To access a property of a parents `DataContext` it will be necessary to cast it with a casting expression `(vm:MyUserControlViewModel)DataContext` to it's actual type. Otherwise `DataContext` would be considered as of type `object` and accessing a custom property would result in an compile time error.
+'To access a property of a parent's `DataContext` it will be necessary to cast it with a casting expression `(vm:MyUserControlViewModel)DataContext` to its actual type. Otherwise `DataContext` would be considered as of type `object` and accessing a custom property would result in an compile-time error.
 
 ```markup
 <local:MyControl Tag="Hello World!">
