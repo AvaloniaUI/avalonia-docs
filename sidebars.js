@@ -304,6 +304,7 @@ const sidebars = {
           'items': [
             'guides/styles-and-resources/selectors',
             'guides/styles-and-resources/property-setters',
+            'guides/styles-and-resources/setter-precedence',
             'guides/styles-and-resources/how-to-use-included-styles',
             'guides/styles-and-resources/resources',
             'guides/styles-and-resources/how-to-use-theme-variants',
