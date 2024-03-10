@@ -4,10 +4,10 @@ description: CONCEPTS
 
 import ItemsControlCanvasScreenshot from '/img/concepts/itemscontrol-with-canvas.png';
 
-# Custom ItemsPanel
+# 自定义 ItemsPanel
 
-All `ItemsControl`s have an item container panel which is used to layout their items. It is possible to override the type of panel used by the control to achieve custom/alternative layouts of items in a control. This document provides some examples showcasing how and why you would do this.
- 
+所有 `ItemsControl` 都有一个用于布局其项的项容器面板。可以重写控件使用的面板类型，以实现控件中项的自定义/替代布局。本文档提供了一些示例，展示了如何以及为什么要这样做。
+
 - [`ItemsControl`](./../reference/controls/itemscontrol)
 - [`TreeView`](./../reference/controls/detailed-reference/treeview-1)
 - [`Carousel`](./../reference/controls/carousel)
@@ -15,8 +15,8 @@ All `ItemsControl`s have an item container panel which is used to layout their i
 - [`ComboBox`](./../reference/controls/combobox)
 - [`ListBox`](./../reference/controls/listbox) 
 
-## Example
-This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas` and we use a style to position the `Rectangle` within the `Canvas`.
+## 示例
+此示例将可观察集合中的 `Rectangle`（基于 Tile VM 数据）绑定到 `ItemsControl`。ItemsControl.ItemPanel 设置为 `Canvas`，我们使用样式来在 `Canvas` 中定位 `Rectangle`。
 
 ```xml
 <ItemsControl ItemsSource="{Binding TileList}">
@@ -39,7 +39,7 @@ This example binds an observable collection of `Rectangle`s (based on the Tile V
 </ItemsControl>
 ```
 
-```csharp title='C# View Model'
+```csharp title='C# 视图模型'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -63,7 +63,7 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-```csharp title='C# Item Class'
+```csharp title='C# 项类'
 public record Tile(int Size, int TopX, int TopY);
 ```
 

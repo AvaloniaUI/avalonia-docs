@@ -4,23 +4,22 @@ title: Manual Setup of Headless Platform
 ---
 
 :::warning
-This page explains an advanced usage scenario with the Headless platform.
-We recommend using the [XUnit](headless-xunit.md) or [NUnit](headless-nunit.md) testing frameworks instead.
+这个页面介绍了Headless平台的一个高级使用场景。我们建议使用[XUnit](headless-xunit.md)或[NUnit](headless-nunit.md)测试框架。
 :::
 
-## Install Packages
+## 安装包
 
-To set up the Headless platform, you need to install two packages:
-- [Avalonia.Headless](https://www.nuget.org/packages/Avalonia.Headless), which also includes Avalonia.
-- [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent), as even headless controls need a theme.
+要设置Headless平台，您需要安装两个包：
+- [Avalonia.Headless](https://www.nuget.org/packages/Avalonia.Headless)，其中也包括了Avalonia。
+- [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent)，因为即使是无头控件也需要一个主题。
 
 :::tip
-The Headless platform doesn't require any specific theme, and it is possible to swap FluentTheme with any other.
+Headless平台不需要任何特定的主题，可以用任何其他主题替换FluentTheme。
 :::
 
-## Setup Application
+## 设置应用程序
 
-As in any other Avalonia app, an `Application` instance needs to be created, and themes need to be applied. When using the Headless platform, the setup is not much different from a regular Avalonia app and can mostly be reused.
+与任何其他Avalonia应用程序一样，需要创建一个`Application`实例，并应用主题。在使用Headless平台时，设置与常规Avalonia应用程序并没有太大区别，大部分可以重用。
 
 ```xml title=App.axaml
 <Application xmlns="https://github.com/avaloniaui"
@@ -32,7 +31,7 @@ As in any other Avalonia app, an `Application` instance needs to be created, and
 </Application>
 ```
 
-And the code:
+以及代码：
 
 ```csharp title=App.axaml.cs
 using Avalonia;
@@ -47,32 +46,32 @@ public class App : Application
 }
 ```
 
-## Run Headless Session
+## 运行Headless会话
 
 ```csharp title=Program.cs
 using Avalonia.Controls;
 using Avalonia.Headless;
 
-// Start Headless session passing Application type.
+// 启动Headless会话，传递Application类型。
 using var session = HeadlessUnitTestSession.StartNew(typeof(App));
 
-// Since the Headless session has its own thread internally, we need to dispatch actions there:
+// 由于Headless会话在内部有自己的线程，我们需要在那里分发操作：
 await session.Dispatch(() =>
 {
-    // Setup controls:
+    // 设置控件：
     var textBox = new TextBox();
     var window = new Window { Content = textBox };
 
-    // Open window:
+    // 打开窗口：
     window.Show();
 
-    // Focus text box:
+    // 焦点放在文本框上：
     textBox.Focus();
 
-    // Simulate text input:
+    // 模拟文本输入：
     window.KeyTextInput("Hello World");
 
-    // Assert:
+    // 断言：
     if (textBox.Text != "Hello World")
     {
         throw new Exception("Assert");
