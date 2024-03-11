@@ -1,5 +1,6 @@
 ---
 id: activatable-lifetime
+title: Activatable Lifetime
 ---
 
 # Activatable Lifetime <MinVersion version="11.1" />
