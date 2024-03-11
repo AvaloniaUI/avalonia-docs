@@ -134,7 +134,7 @@ To make a `MarkupExtension` compatible with multiple target property types, retu
 supported type individually.
 
 ```csharp
-public double ProvideValue(IServiceProvider provider)
+public object ProvideValue(IServiceProvider provider)
 {
     var target = (IProvideValueTarget)provider.GetService(typeof(IProvideValueTarget))!;
     var targetProperty = target.TargetProperty as AvaloniaProperty;
