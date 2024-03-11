@@ -1,7 +1,9 @@
 ---
 id: activatable-lifetime
-title: Activatable Lifetime <MinVersion version="11.1" />
+title: Activatable Lifetime
 ---
+
+<MinVersion version="11.1" />
 
 The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an application. `IActivatableLifetime` is a global app-level service that can be accessed from the Application instance using the `TryGetService` method: `Application.Current.TryGetService<IActivatableLifetime>()`.
 
