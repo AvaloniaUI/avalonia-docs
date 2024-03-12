@@ -51,7 +51,7 @@ These pseudoclasses are helpful in creating visual indicators when styling `Cont
 ## FocusManager
 
 The `FocusManager` provides global access to focus functionality, such as retrieving the currently focused element or
-clearing focus. For additional information, see the [FocusManager docs](../services/focus-manager.md).
+clearing focus. For additional information, see the [FocusManager docs](../services/focus-manager).
 
 ## Tab Focus Navigation
 
