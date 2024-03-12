@@ -111,8 +111,8 @@ parameters or with their shorthand syntax as part of the `Path` (`#controlName` 
 
 ```xml
 <TextBox Name="input" />
-<TextBlock Text="Text, ElementName=input" />
-<TextBlock Text="#input.Text" />
+<TextBlock Text="{Binding Text, ElementName=input}" />
+<TextBlock Text="{Binding #input.Text}" />
 
 <TextBlock Text="{Binding Title, 
     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
