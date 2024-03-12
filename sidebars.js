@@ -463,6 +463,7 @@ const sidebars = {
           'items': [
             'concepts/input/routed-events',
             'concepts/input/pointer',
+            'concepts/input/focus',
             'concepts/input/gestures',
             'concepts/input/hotkeys',
           ],
