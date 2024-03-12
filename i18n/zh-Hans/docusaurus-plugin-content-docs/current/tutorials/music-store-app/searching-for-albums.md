@@ -168,7 +168,7 @@ namespace Avalonia.MusicStore.ViewModels
 
 按照以下步骤，将专辑名称和艺术家名称添加到磁贴中：
 
-- 定位并打开 **AlbumView.asaml** 文件。
+- 定位并打开 **AlbumView.axaml** 文件。
 - 添加两个文本块控件及其数据绑定，如下所示：
 - To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
 
