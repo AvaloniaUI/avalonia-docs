@@ -37,7 +37,7 @@ You will probably use these properties most often:
 
 Setting the opacity of the orange rectangle to 0.5 demonstrates that there are no overlaps.
 
-```markup
+```xml
 <DockPanel Width="300" Height="300">
     <Rectangle Fill="Red" Height="100" DockPanel.Dock="Top"/>
     <Rectangle Fill="Blue" Width="100" DockPanel.Dock="Left" />

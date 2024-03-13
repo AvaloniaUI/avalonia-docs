@@ -26,7 +26,7 @@ private async Task<string> GetTextAsync()
 
 You can bind to the result in the following way:
 
-```markup
+```xml
 <TextBlock Text="{Binding MyAsyncText^, FallbackValue='Wait a second'}" />
 ```
 

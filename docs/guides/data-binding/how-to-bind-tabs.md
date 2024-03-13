@@ -38,7 +38,7 @@ The `TabStrip` header content is defined by ItemTemplate property, while `TabIte
 
 Finally create a `TabControl` and bind its `ItemsSource` property to the DataContext.
 
-```markup
+```xml
 <TabControl ItemsSource="{Binding}">
     <TabControl.ItemTemplate>
       <DataTemplate>

@@ -7,7 +7,7 @@ title: Page Slide Transition
 
 页面滑动过渡将旧页面移出视图，并将新页面视图移入，持续一定的时间。您可以使用orientation属性指定滑动方向（默认为水平）。
 
-```markup title='XAML'
+```xml title='XAML'
 <PageSlide Duration="0:00:00.500" Orientation="Vertical" />
 ```
 

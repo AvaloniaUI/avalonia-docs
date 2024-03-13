@@ -37,7 +37,7 @@ dotnet new avalonia.usercontrol -o Views -n TodoListView  --namespace Todo.Views
 
 The template should create a XAML file with the following contents in the `Views` directory, alongside `MainWindow.axaml`
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -74,7 +74,7 @@ We're not going to touch the code-behind file for a little while, but notice tha
 
 Edit the contents of `Views/TodoListView.axaml` to contain the following:
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -102,7 +102,7 @@ If you're using the Visual Studio extension you should see the contents of the c
 
 Lets take a look at the code we just entered line-by-line.
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -131,7 +131,7 @@ This line tells the XAML engine where the class that accompanies the XAML can be
 
 Ok, that's the boilerplate out of the way! Now onto the meat of the code:
 
-```markup
+```xml
 <DockPanel>
 ```
 
@@ -139,13 +139,13 @@ First we add a `DockPanel` as the child of the `UserControl`. A `UserControl` ca
 
 `DockPanel` is a type of panel which lays out its controls at the top, bottom, left and right sides, with a single control filling the remaining space in the middle.
 
-```markup
+```xml
 <Button DockPanel.Dock="Bottom" HorizontalAlignment="Center">Add an item</Button>
 ```
 
 Now we declare the `Button` that appears at the bottom of the view. The `DockPanel.Dock` attribute tells the containing `DockPanel` that we want the button to appear at the bottom. `HorizontalAlignment` centers button in the middle of the parent. As the element content we set the button text: `"Add an item"`.
 
-```markup
+```xml
 <StackPanel>
 ```
 
@@ -153,7 +153,7 @@ Next we add another panel: a `StackPanel`. `StackPanel` lays out its child contr
 
 Because this is the last child in the `DockPanel` it will fill the remaining space in the center of the control.
 
-```markup
+```xml
 <CheckBox Margin="4">Walk the dog</CheckBox>
 <CheckBox Margin="4">Buy some milk</CheckBox>
 ```
@@ -166,7 +166,7 @@ To see the view we've just created, we need to add it to the application's main 
 
 Views/MainWindow.axaml
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:views="clr-namespace:Todo.Views"
@@ -186,7 +186,7 @@ xmlns:views="clr-namespace:Todo.Views"
 
 We want to display the `TodoListView` control we just created, which is in the `Todo.Views` C# namespace. Here we're mapping the `Todo.Views` namespace to the `views` XML namespace. Any control that is not a core Avalonia control will generally need this type of mapping in order for the XAML engine to find the control.
 
-```markup
+```xml
 <views:TodoListView/>
 ```
 

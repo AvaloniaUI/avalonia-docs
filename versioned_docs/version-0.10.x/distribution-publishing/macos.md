@@ -94,7 +94,7 @@ More documentation on possible `Info.plist` keys is available [here](https://dev
 
 If at any point the tooling gives you an error that your assets file doesn't have a target for `osx-64`, add the following [runtime identifiers](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog) to the top `<PropertyGroup>` in your `.csproj`:
 
-```markup
+```xml
 <RuntimeIdentifiers>osx-x64</RuntimeIdentifiers>
 ```
 
@@ -114,7 +114,7 @@ The file that is actually executed by macOS when starting your `.app` bundle wil
 
 * Add the following to your `.csproj` file:
 
-```markup
+```xml
 <PropertyGroup>
   <UseAppHost>true</UseAppHost>
 </PropertyGroup>
@@ -128,7 +128,7 @@ The file that is actually executed by macOS when starting your `.app` bundle wil
 
 You'll first have to add the project as a `PackageReference` in your project. Add it to your project via NuGet package manager or by adding the following line to your `.csproj` file:
 
-```markup
+```xml
 <PackageReference Include="Dotnet.Bundle" Version="*" />
 ```
 
@@ -153,7 +153,7 @@ dotnet msbuild -t:BundleApp -p:RuntimeIdentifier=osx-x64 -p:CFBundleDisplayName=
 
 Instead of specifying `CFBundleDisplayName`, etc., on the command line, you can also specify them in your project file:
 
-```markup
+```xml
 <PropertyGroup>
     <CFBundleName>AppName</CFBundleName> <!-- Also defines .app file name -->
     <CFBundleDisplayName>MyBestThingEver</CFBundleDisplayName>
@@ -514,7 +514,7 @@ When upload succeeds - you will see your package in App Store Connect.
 
 This means that your application most likely does not specify a menu. On startup, Avalonia creates the default menu items for an application and automatically adds the _About Avalonia_ item when no menu has been configured. This can be resolved by adding one to your `App.xaml`:
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:RoadCaptain.App.RouteBuilder"

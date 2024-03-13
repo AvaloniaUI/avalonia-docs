@@ -16,7 +16,7 @@ Note that this technique does not use a data context at all. When you do this, y
 
 If you want to bind to a property on another named control, you can use the control name prefixed by a `#` character.
 
-```markup
+```xml
 <TextBox Name="other">
 
 <!-- Binds to the Text property of the "other" control -->
@@ -25,7 +25,7 @@ If you want to bind to a property on another named control, you can use the cont
 
 This is the equivalent to the long-form binding that will be familiar to WPF and UWP users:
 
-```markup
+```xml
 <TextBox Name="other">
 <TextBlock Text="{Binding Text, ElementName=other}"/>
 ```
@@ -36,7 +36,7 @@ _Avalonia UI_ supports both syntaxes.
 
 You can bind to the (logical control tree) parent of the target using the `$parent` syntax:
 
-```markup
+```xml
 <Border Tag="Hello World!">
   <TextBlock Text="{Binding $parent.Tag}"/>
 </Border>
@@ -44,7 +44,7 @@ You can bind to the (logical control tree) parent of the target using the `$pare
 
 Or to any level of ancestor by using an index with the `$parent` syntax:
 
-```markup
+```xml
 <Border Tag="Hello World!">
   <Border>
     <TextBlock Text="{Binding $parent[1].Tag}"/>
@@ -56,7 +56,7 @@ The index is zero based so `$parent[0]` is equivalent to `$parent`.
 
 You can also bind to the closest ancestor of a given type, like this:
 
-```markup
+```xml
 <Border Tag="Hello World!">
   <Decorator>
     <TextBlock Text="{Binding $parent[Border].Tag}"/>
@@ -66,7 +66,7 @@ You can also bind to the closest ancestor of a given type, like this:
 
 Finally, you can combine the index and the type:
 
-```markup
+```xml
 <Border Tag="Hello World!">
   <Border>
     <Decorator>
@@ -78,7 +78,7 @@ Finally, you can combine the index and the type:
 
 If you need to include a XAML namespace in the ancestor type, you separate the namespace and class using a colon, like this:
 
-```markup
+```xml
 <local:MyControl Tag="Hello World!">
   <Decorator>
     <TextBlock Text="{Binding $parent[local:MyControl].Tag}"/>
@@ -88,7 +88,7 @@ If you need to include a XAML namespace in the ancestor type, you separate the n
 
 'To access a property of a parent's `DataContext` it will be necessary to cast it with a casting expression `(vm:MyUserControlViewModel)DataContext` to its actual type. Otherwise `DataContext` would be considered as of type `object` and accessing a custom property would result in an compile-time error.
 
-```markup
+```xml
 <local:MyControl Tag="Hello World!">
   <Decorator>
     <TextBlock Text="{Binding $parent[local:MyControl].((vm:MyUserControlViewModel)DataContext).CustomProperty}"/>

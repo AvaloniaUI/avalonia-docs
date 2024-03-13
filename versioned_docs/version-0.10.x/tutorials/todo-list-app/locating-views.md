@@ -7,7 +7,7 @@ Hold on, rewind a second. An observant reader will have noticed something strang
 
 Views/MainWindow.axaml
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="Todo.Views.MainWindow"
@@ -66,7 +66,7 @@ namespace Todo
 
 An instance of `ViewLocator` is present in `Application.DataTemplates`:
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Todo"

@@ -2,7 +2,7 @@
 
 Column and row definitions can be specified in Avalonia using strings, avoiding the clunky syntax in WPF:
 
-```markup
+```xml
 <Grid ColumnDefinitions="Auto,*,32" RowDefinitions="*,Auto">
 ```
 

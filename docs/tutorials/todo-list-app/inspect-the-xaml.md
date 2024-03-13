@@ -53,7 +53,7 @@ The entry `mc:Ignorable="d"` tells the _Avalonia UI_ XAML engine that entries be
 
 The last line links the XAML file with its code-behind class. Note that the fully-qualified class name has to be used here.
 
-```markup
+```xml
 <UserControl ...
    x:Class="ToDoList.Views.ToDoListView">
 ```
@@ -98,7 +98,7 @@ To more detail about the stack panel, see the reference [here](../../reference/c
 
 The remaining XAML adds the hard-coded to do list items as check boxes:
 
-```markup
+```xml
 <CheckBox Margin="4">Walk the dog</CheckBox>
 <CheckBox Margin="4">Buy some milk</CheckBox>
 ```

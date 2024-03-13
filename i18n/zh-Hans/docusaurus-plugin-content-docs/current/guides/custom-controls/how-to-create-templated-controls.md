@@ -10,7 +10,7 @@ title: 如何创建模板化控件
 
 当你创建一个控件模板并且想要绑定到模板化的父级时，你可以使用以下方式：
 
-```markup
+```xml
 <TextBlock Name="tb" Text="{TemplateBinding Caption}"/>
 
 <!-- 这与以下方式相同 -->
@@ -21,7 +21,7 @@ title: 如何创建模板化控件
 
 1. `TemplateBinding` 只接受单个属性而不是属性路径，所以如果你想要使用属性路径进行绑定，你必须使用第二种语法：
 
-    ```markup
+    ```xml
     <!-- 这样是行不通的，因为 TemplateBinding 只接受单个属性 -->
     <TextBlock Name="tb" Text="{TemplateBinding Caption.Length}"/>
 
@@ -35,7 +35,7 @@ title: 如何创建模板化控件
     ```
 3. `TemplateBinding` 只能在 `IStyledElement` 上使用。
 
-```markup
+```xml
 <!-- 这样是行不通的，因为 GeometryDrawing 不是 IStyledElement。 -->
 <GeometryDrawing Brush="{TemplateBinding Foreground}"/>
 

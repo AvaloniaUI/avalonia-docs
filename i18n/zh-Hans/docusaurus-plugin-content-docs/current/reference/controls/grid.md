@@ -135,7 +135,7 @@ This example shows:
 
 An example of a Grid with 3 equal Rows and 3 Columns with (1 fixed width), (2 grabbing the rest proportionally) would be:
 
-```markup
+```xml
 <Grid ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
   <TextBlock Text="Col0Row0:" Grid.Row="0" Grid.Column="0"/>
   <TextBlock Text="Col0Row1:" Grid.Row="1" Grid.Column="0"/>

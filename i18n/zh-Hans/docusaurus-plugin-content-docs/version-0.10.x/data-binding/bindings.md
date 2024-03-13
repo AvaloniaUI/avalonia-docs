@@ -7,7 +7,7 @@ You bind in XAML using the `{Binding}` markup extension. By using bindings \(ass
 
 By default a binding binds to a property on the [`DataContext`](the-datacontext), e.g.:
 
-```markup
+```xml
 <!-- Binds to the TextBlock's DataContext.Name property -->
 <TextBlock Text="{Binding Name}"/>
 
@@ -17,7 +17,7 @@ By default a binding binds to a property on the [`DataContext`](the-datacontext)
 
 An empty binding binds to DataContext itself
 
-```markup
+```xml
 <!-- Binds to the TextBlock's DataContext property -->
 <TextBlock Text="{Binding}"/>
 
@@ -31,13 +31,13 @@ We call the property on the control the binding _target_ and the property on the
 
 The binding path above can be a single property, or it can be a chain of properties. For example if the object assigned to the `DataContext` has a `Student` property, and the value of this property has a `Name`, you can bind to the student name using:
 
-```markup
+```xml
 <TextBlock Text="{Binding Student.Name}"/>
 ```
 
 You can also include array/list indexers in binding paths:
 
-```markup
+```xml
 <TextBlock Text="{Binding Students[0].Name}"/>
 ```
 
@@ -45,7 +45,7 @@ You can also include array/list indexers in binding paths:
 
 You can change the behavior of a `{Binding}` by specifying a binding `Mode`:
 
-```markup
+```xml
 <TextBlock Text="{Binding Name, Mode=OneTime}">
 ```
 
@@ -65,7 +65,7 @@ The `Default` mode is assumed if one is not specified. This mode is generally `O
 
 You can apply a format string to the binding to influence how the value is represented in the UI:
 
-```markup
+```xml
 <!-- Option 1: Use string format without curly braces -->
 <TextBlock Text="{Binding FloatValue, StringFormat=0.0}" />
 

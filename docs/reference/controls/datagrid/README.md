@@ -50,7 +50,7 @@ You must reference the `DataGrid` themes to include the additional styles that t
 
 For example:
 
-```markup
+```xml
 <Application.Styles>
     <FluentTheme />
     <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
@@ -129,7 +129,7 @@ These examples use the MVVM pattern with data binding to an `ObservableCollectio
 
 Property names from the item class will generally not make good column names. This example adds custom header names to the grid. It also allows column reordering and resizing and disallows the default column sorting option:
 
-```markup
+```xml
 <DataGrid Margin="20" ItemsSource="{Binding People}"
           IsReadOnly="True"
           CanUserReorderColumns="True"

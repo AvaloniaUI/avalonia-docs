@@ -9,7 +9,7 @@ The most obvious difference from other XAML frameworks is in its styling system.
 
 The following code shows a `UserControl` which defines its own CSS-like style.
 
-```markup
+```xml
 <UserControl>
     <UserControl.Styles>
         <!-- Make TextBlocks with the h1 style class have a font size of 24 points -->

@@ -17,7 +17,7 @@ var template = new FuncDataTemplate<Student>((value, namescope) =>
 
 Is equivalent to:
 
-```markup
+```xml
 <DataTemplate DataType="{x:Type local:Student}">
     <TextBlock Text="{Binding FirstName}"/>
 </DataTemplate>

@@ -9,7 +9,7 @@ Many applications need to include assets such as bitmaps and [resource dictionar
 
 Assets can be included in an application by using the `<AvaloniaResource>` item in your project file. The MVVM Application template by default includes all files in the `Assets` directory as an `<AvaloniaResource>`:
 
-```markup
+```xml
 <ItemGroup>
   <AvaloniaResource Include="Assets\**"/>
 </ItemGroup>
@@ -23,7 +23,7 @@ You will notice that we're referring to _assets_ here whereas the MSBuild item i
 
 Assets can be referenced in XAML by specifying their relative path:
 
-```markup
+```xml
 <Image Source="icon.png"/>
 <Image Source="images/icon.png"/>
 <Image Source="../icon.png"/>
@@ -31,19 +31,19 @@ Assets can be referenced in XAML by specifying their relative path:
 
 Or their rooted path:
 
-```markup
+```xml
 <Image Source="/Assets/icon.png"/>
 ```
 
 If the asset is located in a different assembly from the XAML file, then use the `avares:` URI scheme. For example, if the asset is contained in an assembly called `MyAssembly.dll`, then you would use:
 
-```markup
+```xml
 <Image Source="avares://MyAssembly/Assets/icon.png"/>
 ```
 
 In case of fonts, you can provide a font name after a '#' sign:
 
-```markup
+```xml
 <TextBlock FontFamily="avares://MyAssembly/Assets/font.ttf#FontName">test</TextBlock>
 ```
 
@@ -55,13 +55,13 @@ Assets can also be included in .NET applications by using the `<EmbeddedResource
 
 You can reference manifest resources using the `resm:` URL scheme:
 
-```markup
+```xml
 <Image Source="resm:MyApp.Assets.icon.png"/>
 ```
 
 Or if the resource is embedded in a different assembly to the XAML file:
 
-```markup
+```xml
 <Image Source="resm:MyApp.Assets.icon.png?assembly=MyAssembly"/>
 ```
 

@@ -10,7 +10,7 @@ title: How To Create Templated Controls
 
 When you're creating a control template and you want to bind to the templated parent you can use:
 
-```markup
+```xml
 <TextBlock Name="tb" Text="{TemplateBinding Caption}"/>
 
 <!-- Which is the same as -->
@@ -21,7 +21,7 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
 
 1.  `TemplateBinding` accepts only a single property rather than a property path, so if you want to bind using a property path you must use the second syntax:
 
-    ```markup
+    ```xml
     <!-- This WON'T work as TemplateBinding only accepts single properties -->
     <TextBlock Name="tb" Text="{TemplateBinding Caption.Length}"/>
 
@@ -35,7 +35,7 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
     ```
 3. `TemplateBinding` can only be used on `IStyledElement`.
 
-```markup
+```xml
 <!-- This WON'T work as GeometryDrawing is not a IStyledElement. -->
 <GeometryDrawing Brush="{TemplateBinding Foreground}"/>
 

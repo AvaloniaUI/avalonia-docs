@@ -34,7 +34,7 @@ dotnet new avalonia.usercontrol -o Views -n ToDoListView  --namespace ToDoList.V
 
 You will see the new AXAML file created in the `/Views` folder
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -81,7 +81,7 @@ Repeat the process with the main window.
 
 Edit the contents of `Views/TodoListView.axaml` to contain the following:
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

@@ -121,7 +121,7 @@ In the verify method we utilize the routed event system to attach a new handler.
 
 This example UI shows how to use the attached property. After making the namespace known to the XAML compiler it can be used by qualifying it with a dot. Then bindings can be used.
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:loc="clr-namespace:MyApp.Behaviors"

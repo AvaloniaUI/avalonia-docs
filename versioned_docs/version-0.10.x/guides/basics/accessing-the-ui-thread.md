@@ -19,7 +19,7 @@ In the below example we have a `TextBlock` which shows the result and a `Button`
 
 Our view looks like this: 
 
-```markup
+```xml
 <StackPanel>
   <TextBlock x:Name="TextBlock_Result" />
   <Button Content="Run long running process" Click="Button_OnClick" />

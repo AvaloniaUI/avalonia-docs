@@ -39,7 +39,7 @@ If you use the four value pattern; you must provide all four values, even if one
 
 This example adds some border controls to create a 'pod' look in the layout:
 
-```markup
+```xml
 <StackPanel>
   <Border Background="Gainsboro"
         BorderBrush="Black"
@@ -86,7 +86,7 @@ If both offset values are set to zero, the shadow is placed behind the element, 
 
 This is an example of a drop-shadow:
 
-```markup
+```xml
 <<StackPanel>
   <Border Background="Gainsboro"
         BorderBrush="Black"

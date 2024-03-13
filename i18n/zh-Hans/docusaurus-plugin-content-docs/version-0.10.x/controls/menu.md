@@ -5,7 +5,7 @@ title: Menu
 
 The `Menu` control adds a top-level menu to an application. A `Menu` is usually placed in a `DockPanel` in a `Window`, docked to the top of the window:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <DockPanel>
@@ -40,7 +40,7 @@ If you will press Alt with the example above you will see that some letters are 
 
 Like `Button`, commands can be [bound](../data-binding/binding-to-commands) to `MenuItem`s. The command will be executed when the menu item is clicked or selected with the keyboard:
 
-```markup
+```xml
 <Menu>
     <MenuItem Header="_File">
         <MenuItem Header="_Open..." Command="{Binding OpenCommand}"/>
@@ -54,7 +54,7 @@ Like `Button`, commands can be [bound](../data-binding/binding-to-commands) to `
 
 A menu icon can be displayed by placing an `Image` in the `Icon` property:
 
-```markup
+```xml
     <MenuItem Header="_Open...">
         <MenuItem.Icon>
             <Image Source="resm:MyApp.Assets.Open.png"/>
@@ -66,7 +66,7 @@ A menu icon can be displayed by placing an `Image` in the `Icon` property:
 
 Similarly, a `CheckBox` can be displayed in the `Icon` property to make the `MenuItem` checkable:
 
-```markup
+```xml
     <MenuItem Header="_Open...">
         <MenuItem.Icon>
             <CheckBox BorderThickness="0"
@@ -192,7 +192,7 @@ public MainWindow()
 
 Finally assign the bindings to the view model in a `Style` within the menu:
 
-```markup
+```xml
 <Menu Items="{Binding MenuItems}">
     <Menu.Styles>
         <Style Selector="MenuItem">

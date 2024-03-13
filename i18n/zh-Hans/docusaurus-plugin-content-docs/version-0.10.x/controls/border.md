@@ -10,7 +10,7 @@ The `Border` control decorates a child with a border and background. It can also
 
 An example of a border with a red background, 2 pixel black border, 3 pixel corner radius and a 4 pixel padding around its content:
 
-```markup
+```xml
 <Border Background="Red"
         BorderBrush="Black"
         BorderThickness="2"
@@ -48,7 +48,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 * `spread-radius`: Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink. If not specified, it will be 0 \(the shadow will be the same size as the element\).
 * `color`: The color of the shadow using a color name \(such as `red`\) or a `#` hexadecimal color value
 
-```markup
+```xml
 <Border Background="Red"
         BorderBrush="Black"
         BorderThickness="2"

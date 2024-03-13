@@ -21,7 +21,7 @@ Depending on the template that was used to create the Avalonia project, compiled
 
 If you want your application to use compiled bindings globally by default, you can add
 
-```markup
+```xml
 <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 ```
 
@@ -33,7 +33,7 @@ To enable compiled bindings, you will need to define the `DataType` of the objec
 
 You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
 
-```markup
+```xml
 <!-- Set DataType and enable compiled bindings -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -59,7 +59,7 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
 
 If you don't want to enable compiled bindings for all child nodes, you can also use the `CompiledBinding`-markup. You still need to define the `DataType`, but you can omit `x:CompileBindings="True"`.
 
-```markup
+```xml
 <!-- Set DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -85,7 +85,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
 
 If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use compiled binding at a certain position or you hit one of the [known limitations](#known-limitations), you can use the `ReflectionBinding`-markup.
 
-```markup
+```xml
 <!-- Set DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -111,7 +111,7 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
 
 In some cases the target type of the binding expression cannot be automatically evaluated. In such cases you must provide an explicit type cast in the binding expression.
 
-```markup
+```xml
 <ItemsRepeater ItemsSource="{Binding MyItems}">
 <ItemsRepeater.ItemTemplate>
     <DataTemplate>

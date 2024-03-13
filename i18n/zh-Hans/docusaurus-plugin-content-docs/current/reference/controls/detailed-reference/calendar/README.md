@@ -23,7 +23,7 @@ You will probably use these properties most often:
 
 This is a basic calendar allowing a single date selection. The calendar's selected date is shown in the text block below.
 
-```markup
+```xml
 <StackPanel Margin="20">
   <Calendar x:Name="calendar" SelectionMode="MultipleRange"/>
   <TextBlock Margin="20" 
@@ -35,7 +35,7 @@ This is a basic calendar allowing a single date selection. The calendar's select
 
 This example allows multiple range selections:
 
-```markup
+```xml
 <StackPanel Margin="20">
   <Calendar SelectionMode="MultipleRange"/>
 </StackPanel>

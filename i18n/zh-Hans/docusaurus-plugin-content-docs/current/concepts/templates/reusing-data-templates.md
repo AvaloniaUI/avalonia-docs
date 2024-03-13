@@ -31,7 +31,7 @@ namespace MySample
 
 然后在`app.axaml`文件中添加一个`Teacher`类型的数据模板：
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MySample"

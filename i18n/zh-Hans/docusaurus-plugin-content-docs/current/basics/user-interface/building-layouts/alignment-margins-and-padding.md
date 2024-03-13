@@ -20,7 +20,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 以下示例描述了如何创建上图中的布局。一个`Border`元素封装了一个父元素`StackPanel`，`Padding`值为15个设备独立像素。这就说明了围绕子`StackPanel`的狭窄的`LightBlue`部分。`StackPanel`的子元素用于说明本章节中详细介绍的每个不同的定位属性。三个`Button`元素用于演示`Margin`和`HorizontalAlignment`属性。
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication2.MainWindow"
@@ -69,7 +69,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 下面的示例展示了如何将`HorizontalAlignment`属性应用于`Button`元素。为了更好地说明各种渲染行为，每种特性值的效果都被展示了出来。
 
-```markup
+```xml
 <Button HorizontalAlignment="Left">Button 1 (Left)</Button>
 <Button HorizontalAlignment="Right">Button 2 (Right)</Button>
 <Button HorizontalAlignment="Center">Button 3 (Center)</Button>
@@ -93,7 +93,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 下面的示例展示了如何将`VerticalAlignment`属性应用于`Button`元素。为了更好地说明各种渲染行为，每种特性值的效果都被展示了出来。在本示例中，使用具有可见网格线的`Grid`元素作为父元素，以更好地说明每种属性值的布局行为。
 
-```markup
+```xml
 <Border Background="LightBlue" BorderBrush="Black" BorderThickness="2" Padding="15">
     <Grid Background="White" ShowGridLines="True">
       <Grid.RowDefinitions>
@@ -128,7 +128,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 下面的示例展示了如何在一组`Button`元素周围应用相同的边距。这些`Button`元素的间距是均匀的，每个方向都有10像素的边距缓冲。
 
-```markup
+```xml
 <Button Margin="10">Button 7</Button>
 <Button Margin="10">Button 8</Button>
 <Button Margin="10">Button 9</Button>
@@ -136,7 +136,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 在许多情况下，统一的边距是不合适的。在这些情况下，可以应用非统一间距。以下示例展示了如何将非统一边距应用于子元素。边距按该顺序描述：左、上、右、下。
 
-```markup
+```xml
 <Button Margin="0,10,0,10">Button 1</Button>
 <Button Margin="0,10,0,10">Button 2</Button>
 <Button Margin="0,10,0,10">Button 3</Button>
@@ -148,7 +148,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 以下示例展示了如何将`Padding`应用于父`Border`元素。
 
-```markup
+```xml
 <Border Background="LightBlue"
         BorderBrush="Black"
         BorderThickness="2"
@@ -162,7 +162,7 @@ Avalonia定位元素有许多使用方式。然而，实现理想的布局不仅
 
 下面的示例演示了本章节中详细介绍的每个概念。在本章节第一个示例的基础上，这个示例添加了一个`Grid`元素作为第一个示例中`Border`的子元素。`Padding`应用于父`Border`元素。`Grid`用于三个子`StackPanel`元素之间划分空间。`Button`元素再次被用来展示`Margin`和`HorizontalAlignment`的各种效果。`TextBlock`元素被添加到每个`ColumnDefinition`中，以更好地定义应用于每一列中`Button`元素的各种属性。
 
-```markup
+```xml
 <Border Background="LightBlue"
         BorderBrush="Black"
         BorderThickness="2"

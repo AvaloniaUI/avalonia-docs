@@ -20,7 +20,7 @@ You will probably use these properties most often:
 
 This is a simple text-based tooltip, using default values for the placement and delay properties; this rectangle is placed in a window with larger dimensions:
 
-```markup
+```xml
 <Rectangle Fill="Aqua" Height="200" Width="400"
             ToolTip.Tip="This is a rectangle" />
 ```
@@ -29,7 +29,7 @@ This is a simple text-based tooltip, using default values for the placement and 
 
 To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. For example:
 
-```markup
+```xml
 <Rectangle Fill="Aqua" Height="200" Width="400"
     ToolTip.Placement="Bottom">
     <ToolTip.Tip>

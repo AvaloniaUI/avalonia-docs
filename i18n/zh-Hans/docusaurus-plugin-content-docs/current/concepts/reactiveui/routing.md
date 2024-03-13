@@ -38,7 +38,7 @@ namespace RoutingExample
 
 **FirstView.xaml**
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="RoutingExample.FirstView">
@@ -107,7 +107,7 @@ namespace RoutingExample
 
 现在我们需要将`RoutedViewHost` XAML控件放置在我们的主视图中。它将根据提供的`IViewLocator`实现和传递的`Router`实例（类型为`RoutingState`）解析和嵌入适当的视图模型。请注意，您需要导入`rxui`命名空间以使`RoutedViewHost`正常工作。此外，您可以在XAML中重写`RoutedViewHost.PageTransition`属性，以覆盖`RoutedViewHost`更改视图时播放的动画。
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:rxui="http://reactiveui.net"
         xmlns:app="clr-namespace:RoutingExample"
@@ -152,7 +152,7 @@ namespace RoutingExample
 
 要禁用动画，只需将`RoutedViewHost.PageTransition`属性设置为`{x:Null}`，如下所示：
 
-```markup
+```xml
 <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}" PageTransition="{x:Null}">
     <rxui:RoutedViewHost.DefaultContent>
         <TextBlock Text="Default content"

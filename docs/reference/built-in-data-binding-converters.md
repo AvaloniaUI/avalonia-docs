@@ -20,7 +20,7 @@ _Avalonia UI_ includes a number of built-in data binding converters for common s
 
 This example shows the text block when the bound value is false:
 
-```markup
+```xml
 <StackPanel>
   <TextBox Name="input" IsEnabled="{Binding AllowInput}"/>
   <TextBlock IsVisible="{Binding !AllowInput}">Input is not allowed</TextBlock>
@@ -31,7 +31,7 @@ Negation also works when you bind to a non-Boolean value. This works because the
 
 For example, as the integer zero is converted to false (by the function `Convert.ToBoolean`) and all other integer values are converted to true, you can use the negation operator to show a message when a collection is empty, like this:
 
-```markup
+```xml
 <Panel>
   <ListBox ItemsSource="{Binding Items}"/>
   <TextBlock IsVisible="{Binding !Items.Count}">No results found</TextBlock>
@@ -42,7 +42,7 @@ You can also use the negation operator twice. For example, where you want to per
 
 You can use this to hide a control when a collection is empty (count is zero), like this:
 
-```markup
+```xml
 <Panel>
   <ListBox ItemsSource="{Binding Items}" IsVisible="{Binding !!Items.Count}"/>
 </Panel>
@@ -52,7 +52,7 @@ You can use this to hide a control when a collection is empty (count is zero), l
 
 This example binding will hide the text block if its bound text is null or empty:
 
-```markup
+```xml
 <TextBlock Text="{Binding MyText}"
            IsVisible="{Binding MyText, 
                        Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
@@ -60,7 +60,7 @@ This example binding will hide the text block if its bound text is null or empty
 
 And this example will hide the content control if the bound object is null or empty:
 
-```markup
+```xml
 <ContentControl Content="{Binding MyContent}"
                 IsVisible="{Binding MyContent, 
                             Converter={x:Static ObjectConverters.IsNotNull}}"/>

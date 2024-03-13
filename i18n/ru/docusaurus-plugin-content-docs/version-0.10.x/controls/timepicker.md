@@ -50,7 +50,7 @@ Use a `TimePicker` to let a user enter a single time value. You can customize th
 
 By default, the time picker shows a 12-hour clock with an AM/PM selector. You can set the [ClockIdentifier](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.timepicker.clockidentifier?view=winrt-19041#Windows\_UI\_Xaml\_Controls\_TimePicker\_ClockIdentifier) property to "24HourClock" to show a 24-hour clock instead.
 
-```markup
+```xml
 <TimePicker Header="12HourClock" SelectedTime="14:30"/>
 <TimePicker Header="24HourClock" SelectedTime="14:30" ClockIdentifier="24HourClock"/>
 ```
@@ -61,7 +61,7 @@ By default, the time picker shows a 12-hour clock with an AM/PM selector. You ca
 
 You can set the [MinuteIncrement](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.timepicker.minuteincrement?view=winrt-19041#Windows\_UI\_Xaml\_Controls\_TimePicker\_MinuteIncrement) property to indicate the time increments shown in the minute picker. For example, 15 specifies that the `TimePicker` minute control displays only the choices 00, 15, 30, 45.
 
-```markup
+```xml
 <TimePicker MinuteIncrement="15"/>
 ```
 
@@ -88,7 +88,7 @@ TimePicker timePicker = new TimePicker
 
 You can set the time value as an attribute in XAML. This is probably easiest if you're already declaring the `TimePicker` object in XAML and aren't using bindings for the time value. Use a string in the form _Hh:Mm_ where _Hh_ is hours and can be between 0 and 23 and _Mm_ is minutes and can be between 0 and 59.
 
-```markup
+```xml
 <TimePicker SelectedTime="14:15"/>
 ```
 

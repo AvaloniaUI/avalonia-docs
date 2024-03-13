@@ -89,7 +89,7 @@ When we work via FrameBuffer there are no windows, so we need a separate view (U
 
 `MainView` will be our app base in which we develop our UI:
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -112,7 +112,7 @@ When we work via FrameBuffer there are no windows, so we need a separate view (U
 
 Now create a new UserControl with name `MainSingleView` and host the `MainView`:
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -128,7 +128,7 @@ Now create a new UserControl with name `MainSingleView` and host the `MainView`:
 
 Also change the `MainWindow.axaml` to host the `MainView` inside:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

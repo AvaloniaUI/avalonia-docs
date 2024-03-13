@@ -21,13 +21,13 @@ The declarative approaches keep images in memory and won't have to load them in 
 
 **Binding Converter Approach**
 
-```markup
+```xml
 <UserControl.Resources>
     <ext:BitmapAssetValueConverter x:Key="variableImage"/>
 </UserControl.Resources>
 ```
 
-```markup
+```xml
 <Image Width="75"
        Height="73"
        Source="{Binding PlaySource, Converter={StaticResource variableImage}}">

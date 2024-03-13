@@ -57,7 +57,7 @@ description: TUTORIALS - To Do List App
 Последняя строка, связывает XAML-файл с его `code-behind` классом.
 Обратите внимание, что здесь используется полное имя класса.
 
-```markup
+```xml
 <UserControl ...
    x:Class="ToDoList.Views.ToDoListView">
 ```
@@ -112,7 +112,7 @@ description: TUTORIALS - To Do List App
 
 Оставшийся XAML добавит захардкоженные элементы списка дел в виде флажков:
 
-```markup
+```xml
 <CheckBox Margin="4">Walk the dog</CheckBox>
 <CheckBox Margin="4">Buy some milk</CheckBox>
 ```

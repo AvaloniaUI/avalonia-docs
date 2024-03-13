@@ -34,9 +34,9 @@ public class MyDataTemplate : IDataTemplate
 
 You can now use the class `MyDataTemplate` in your view, like this:
 
-```markup
-xmlns:dataTemplates="using:MyApp.DataTemplates" -->
-...
+```xml
+<!-- xmlns:dataTemplates="using:MyApp.DataTemplates" -->
+
 <ContentControl Content="{Binding MyContent}">
 	<ContentControl.ContentTemplate>
 		<dataTemplates:MyDataTemplate />

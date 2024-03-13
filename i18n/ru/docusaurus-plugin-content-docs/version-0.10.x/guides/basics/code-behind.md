@@ -39,7 +39,7 @@ namespace AvaloniaApplication1
 
 Note that this class definition corresponds closely to the XAML file:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication1.MainWindow">
@@ -60,7 +60,7 @@ In addition, the class contains two more things of interest:
 
 One of the main uses of the code-behind file is to manipulate controls using C\# code. To do this you'll usually first want to get a reference to a named control. This can be done using the `FindControl<T>` method:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication4.MainWindow">
@@ -154,7 +154,7 @@ For the rest of the documentation, we'll assume you're either using Avalonia tem
 
 Another common use for the code-behind file is to define _event handlers_. Event handlers are defined as methods in the code-behind and referenced from XAML. For example to add a handler for a button click:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication4.MainWindow">

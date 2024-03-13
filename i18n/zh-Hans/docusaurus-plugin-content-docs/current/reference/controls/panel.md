@@ -16,7 +16,7 @@ For a discussion about using other panels, see [here](../../basics/user-interfac
 
 This example uses some 50% opacities to demonstrate that child controls overlap.
 
-```markup
+```xml
 <Panel Height="300" Width="300">
     <Rectangle Fill="Red" Height="100" VerticalAlignment="Top"/>
     <Rectangle Fill="Blue" Opacity="0.5" Width="100" HorizontalAlignment="Right" />

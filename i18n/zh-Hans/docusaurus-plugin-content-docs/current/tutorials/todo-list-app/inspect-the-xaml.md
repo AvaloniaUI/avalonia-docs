@@ -52,7 +52,7 @@ XAML 文件中的根元素以 `<UserControl` 开始，后面跟着一些 _Avalon
 
 最后一行将 XAML 文件链接到其代码后台类。请注意，这里必须使用完全限定的类名。
 
-```markup
+```xml
 <UserControl ...
    x:Class="ToDoList.Views.ToDoListView">
 ```
@@ -97,7 +97,7 @@ StackPanel 在默认情况下会将其子控件垂直堆叠。（您可以通过
 
 剩余的 XAML 将硬编码的待办事项列表项作为复选框添加：
 
-```markup
+```xml
 <CheckBox Margin="4">Walk the dog</CheckBox>
 <CheckBox Margin="4">Buy some milk</CheckBox>
 ```

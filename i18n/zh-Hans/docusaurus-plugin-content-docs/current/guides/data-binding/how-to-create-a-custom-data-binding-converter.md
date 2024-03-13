@@ -18,7 +18,7 @@ title: 如何创建自定义数据绑定转换器
 
 在使用自定义转换器之前，您必须在某些资源中引用它。这可以在应用程序的任何级别进行。在此示例中，自定义转换器 `myConverter` 被引用在 Window 资源中：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:ExampleApp;assembly=ExampleApp">
@@ -35,7 +35,7 @@ title: 如何创建自定义数据绑定转换器
 
 此示例数据绑定转换器可以将文本转换为特定的大小写形式，使用参数进行控制：
 
-```markup
+```xml
 <TextBlock Text="{Binding TheContent, 
     Converter={StaticResource textCaseConverter},
     ConverterParameter=lower}" />

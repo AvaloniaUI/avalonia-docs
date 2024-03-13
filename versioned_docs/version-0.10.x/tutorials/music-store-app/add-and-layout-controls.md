@@ -13,7 +13,7 @@ Let's start by adding a `Button` to the `MainWindow`. The button will allow the 
 
 In `MainWindow.axaml` change the code as follows, adding a Button inside the Panel.
 
-```markup
+```xml
 <Panel>
     <ExperimentalAcrylicBorder IsHitTestVisible="False">
         <ExperimentalAcrylicBorder.Material>
@@ -72,7 +72,7 @@ Place the `<Button>` element inside a simple `<Panel>` element.
 
 The simplest way to control the layout of a control is with the `HorizontalAlignment`and `VerticalAlignment` properties.
 
-```markup
+```xml
 <Panel>
   <Button Content="Buy Music" Margin="40" Command="{Binding BuyMusicCommand}" HorizontalAlignment="Right" VerticalAlignment="Top" />
 </Panel>
@@ -88,7 +88,7 @@ Find the name, in this case `store_microsoft_regular`.
 
 There should be some code similar to:
 
-```markup
+```xml
 <StreamGeometry x:Key="store_microsoft_regular">M11.5 9.5V13H8V9.5H11.5Z M11.5 17.5V14H8V17.5H11.5Z M16 9.5V13H12.5V9.5H16Z M16 17.5V14H12.5V17.5H16Z M8 6V3.75C8 2.7835 8.7835 2 9.75 2H14.25C15.2165 2 16 2.7835 16 3.75V6H21.25C21.6642 6 22 6.33579 22 6.75V18.25C22 19.7688 20.7688 21 19.25 21H4.75C3.23122 21 2 19.7688 2 18.25V6.75C2 6.33579 2.33579 6 2.75 6H8ZM9.5 3.75V6H14.5V3.75C14.5 3.61193 14.3881 3.5 14.25 3.5H9.75C9.61193 3.5 9.5 3.61193 9.5 3.75ZM3.5 18.25C3.5 18.9404 4.05964 19.5 4.75 19.5H19.25C19.9404 19.5 20.5 18.9404 20.5 18.25V7.5H3.5V18.25Z</StreamGeometry>
 ```
 
@@ -102,7 +102,7 @@ Enter the name `Icons` when prompted and press `Enter`.
 
 A new `xaml` file will be created that we can put styles or icons inside.
 
-```markup
+```xml
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
@@ -117,7 +117,7 @@ A new `xaml` file will be created that we can put styles or icons inside.
 
 Add your Icon code inside wrapped in a `Style` element as a resource like so.
 
-```markup
+```xml
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
@@ -137,7 +137,7 @@ Add your Icon code inside wrapped in a `Style` element as a resource like so.
 
 Open `App.axaml` and add a `StyleInclude` so that the `Icons.axaml`can be loaded.
 
-```markup
+```xml
 <Application.Styles>
     <FluentTheme Mode="Dark"/>
     <StyleInclude Source="avares://Avalonia.MusicStore/Icons.axaml" />
@@ -148,7 +148,7 @@ Now build the application so that the Icons are available in the previewer.
 
 Return to `MainWindow.axaml`, we can add the Icon to the Button like so...
 
-```markup
+```xml
 <Button Margin="40" HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding BuyMusicCommand}">
     <PathIcon Data="{StaticResource store_microsoft_regular}" />
 </Button>

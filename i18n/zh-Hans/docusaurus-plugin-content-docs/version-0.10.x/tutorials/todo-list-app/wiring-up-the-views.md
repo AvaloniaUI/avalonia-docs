@@ -13,7 +13,7 @@ We're exposing the list in `MainWindowViewModel.List` so let's use that property
 
 Views/MainWindow.axaml
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="Todo.Views.MainWindow"
@@ -34,13 +34,13 @@ Content="{Binding List}"
 
 The `Window.Content` property can either be set by placing a control as a child of the `Window` \([as we were doing previously](creating-a-view#display-the-view-in-the-window)\), or by assigning a value to the `Content` property. Both of these syntaxes are equivalent, meaning that writing:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">Hello World!</Window>
 ```
 
 Is _exactly_ the same as writing:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui" Content="Hello World!"/>
 ```
 
@@ -50,7 +50,7 @@ Now we need to make `TodoListView` get the list of TODO items from the view mode
 
 Views/TodoListView.axaml
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -77,7 +77,7 @@ Views/TodoListView.axaml
 
 The first thing to notice here is that we've changed the `<StackPanel>` control to an `ItemsControl`:
 
-```markup
+```xml
 <ItemsControl Items="{Binding Items}">
 ```
 
@@ -85,7 +85,7 @@ The `ItemsControl` is a very simple control which displays each item in the coll
 
 How each item is displayed is controlled by the `ItemTemplate`. The `ItemTemplate` takes a [`DataTemplate`](https://avaloniaui.net/docs/templates/datatemplate) whose content is repeated for each item. In this case we display each item as a `CheckBox`, with the check state bound to the `IsChecked` property of the `TodoItemViewModel` and the content bound to the `Description`. We also set a `Margin` as before to space the items out a little:
 
-```markup
+```xml
 <ItemsControl.ItemTemplate>
   <DataTemplate>
     <CheckBox Margin="4"
