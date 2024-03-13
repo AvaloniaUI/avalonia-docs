@@ -40,13 +40,19 @@ to the next `InputControl` once the current input has been satisfied.
 
 ## Focus Pseudoclasses
 
-These pseudoclasses are helpful in creating visual indicators when styling `Control`s that are `Focusable`.
+These pseudoclasses are helpful when styling `Control`s that are `Focusable`.
 
-| Pseudoclass    | Description                                                                    |
-|:---------------|--------------------------------------------------------------------------------|
-| :focus         | The Control has focus.                                                         |
-| :focus-within  | The Control has focus or contains a descendant that has focus.                 |
-| :focus-visible | The Control has focus and received it from Tab or Directional focus navigation |
+| Pseudoclass    | Description                                                    |
+|:---------------|----------------------------------------------------------------|
+| :focus         | The Control has focus.                                         |
+| :focus-within  | The Control has focus or contains a descendant that has focus. |
+| :focus-visible | The Control has focus and should show a visual indicator.      |
+
+:::tip
+The `FocusAdorner` property is used to show a default focus visual, typically a `Border`, around a `Control` with 
+`:focus-visible`. When using `:focus-visible` to show a custom visual indicator, setting `FocusAdorner` to `null` will 
+avoid showing a duplicate indicator.
+:::
 
 ## FocusManager
 
@@ -57,7 +63,7 @@ clearing focus. For additional information, see the [FocusManager docs](../servi
 
 Focus navigation by tab occurs when the user presses tab on their keyboard. `InputElement`s with their `IsTabStop` property 
 set to `true` will be available for tab focus navigation. The `TabIndex` specifies the priority with lower numeric values being 
-navigated to first. When `TabIndex` is equal, the order of appearance within the Visual Tree is used.
+navigated to first. When the `TabIndex` of multiple controls is equal, the priority is based on a Visual Tree traversal order.
 
 The `KeyboardNavigation.TabNavigation` attached property can set a `KeyboardNavigationMode` onto any `InputElement` acting as 
 a container and modify its tab navigation characteristics.
@@ -74,21 +80,19 @@ a container and modify its tab navigation characteristics.
 ## Directional Focus Navigation <MinVersion version="11.1" />
 
 Focus navigation through `XYFocus` is a 2D directional scheme enabling spatial navigation from the focused control 
-towards another control to a cardinal direction: left, right, up, or down. `XYFocus.NavigationModes` is `Disabled` by 
-default and must be set to use this feature.
+towards another control in a cardinal direction: left, right, up, or down. By default, `XYFocus.NavigationModes` is set 
+to allow `Gamepad` and `Remote` navigation.
 
 | KeyDeviceType | Device                                    |
 |:--------------|:------------------------------------------|
 | Disabled      | Any key device XY navigation is disabled. |
 | Keyboard      | Keyboard arrow keys can be used.          |
-| Gamepad       | Gamepad controller DPad keys can be used. |
+| Gamepad       | Gamepad controller DPad can be used.      |
 | Remote        | Remote control can be used.               |
 | Enabled       | All devices can be used.                  |
 
-:::warning
-`KeyDeviceType.Gamepad` is not yet supported, so `XYFocus` navigation is currently limited to `Keyboard` (arrow keys)
-and `Remote` (tvOS most commonly).
-:::
+Gamepad inputs are supported on devices that can natively send these inputs, such as Android and Tizen. However, 
+Avalonia currently lacks cross-platform Gamepad APIs required for broad out-of-the-box support.
 
 ### Navigation Strategy
 
@@ -114,36 +118,36 @@ directional input themselves may have some limitations, especially with visuals.
 ### Example
 
 The following demonstrates how to use Directional focus navigation in a `WrapPanel`. It explicitly allows navigation to 
-wrap from the first to the last element and vice-versa. The `Slider` provides an example of mixing navigation with 
-control interaction. Pressing the Enter key while the `Slider` is focused will begin an interaction where the user will 
-modify the `Slider.Value` instead of causing navigation. Pressing Enter a second time will end the interaction.
+wrap from the first to the last element and vice-versa.
+
+The `Slider` provides an example of mixing navigation with control interaction. On Desktop, pressing the Enter key while 
+the `Slider` is focused will begin an interaction where the user will modify the `Slider.Value` instead of causing 
+navigation. Pressing Enter a second time will end the interaction and resume Directional focus navigation.
 
 ```xml
-<Window.Styles>
-    <Style Selector=":is(Control).directional-navigation">
-        <Setter Property="XYFocus.NavigationModes" Value="Enabled" />
-        <Setter Property="XYFocus.UpNavigationStrategy" Value="Projection" />
-        <Setter Property="XYFocus.DownNavigationStrategy" Value="Projection" />
-        <Setter Property="XYFocus.LeftNavigationStrategy" Value="Projection" />
-        <Setter Property="XYFocus.RightNavigationStrategy" Value="Projection" />
-    </Style>
-</Window.Styles>
-<Grid Classes="directional-navigation">
-    <WrapPanel>
-        <Button x:Name="first"
-            Content="First"
-            XYFocus.Left="{Binding #last}" />
-        <Button Content="Second" />
-        <Button Content="Third" />
-
-        <Slider Width="100" Maximum="100" />
-
-        <Button Content="Fourth" />
-        <Button x:Name="last"
-            Content="Last"
-            XYFocus.Right="{Binding #first}" />
-    </WrapPanel>
-</Grid>
+<Window
+    XYFocus.NavigationModes="Enabled"
+    XYFocus.UpNavigationStrategy="Projection"
+    XYFocus.DownNavigationStrategy="Projection"
+    XYFocus.LeftNavigationStrategy="Projection"
+    XYFocus.RightNavigationStrategy="Projection">
+    <Grid>
+        <WrapPanel>
+            <Button x:Name="first"
+                Content="First"
+                XYFocus.Left="{Binding #last}" />
+            <Button Content="Second" />
+            <Button Content="Third" />
+    
+            <Slider Width="100" Maximum="100" />
+    
+            <Button Content="Fourth" />
+            <Button x:Name="last"
+                Content="Last"
+                XYFocus.Right="{Binding #first}" />
+        </WrapPanel>
+    </Grid>
+</Window>
 ```
 
 <img src={DirectionalNavigationScreenshot} alt="Directional Navigation Example"/>
