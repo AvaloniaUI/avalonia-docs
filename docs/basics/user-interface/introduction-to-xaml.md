@@ -17,10 +17,6 @@ These pages will introduce you to how XAML is used specifically in _Avalonia UI_
 
 The file extension for XAML files used elsewhere is `.xaml` but due to technical issues integrating with Visual Studio, _Avalonia UI_ uses its own `.axaml` extension - 'Avalonia XAML'.
 
-:::info
-From _Avalonia UI_ version 0.9.11 all XAML files created in Visual Studio have the `.axaml` extension; and from version 0.10 all _Avalonia UI_ templates create files using the `.axaml` extension.
-:::
-
 ## File Format
 
 A typical Avalonia XAML file looks like this:

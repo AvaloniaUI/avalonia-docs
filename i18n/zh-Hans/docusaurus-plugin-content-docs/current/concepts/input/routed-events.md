@@ -74,7 +74,6 @@ public class SampleControl: Control
 
 添加标准CLR事件处理程序的XAML语法与添加路由事件处理程序的语法相同，因为您实际上是将处理程序添加到具有路由事件实现的CLR事件包装器上。
 
-从Avalonia 0.9.x开始，Avalonia设计器要求事件处理程序被声明为`public`方法。我们希望在将来能够取消这个限制。
 ## 路由策略
 
 路由事件使用以下三种路由策略：
