@@ -75,8 +75,6 @@ To add a handler for an event using XAML, you declare the event name as an attri
 
 The XAML syntax for adding standard CLR event handlers is the same for adding routed event handlers, because you are really adding handlers to the CLR event wrapper, which has a routed event implementation underneath.
 
-As of Avalonia 0.9.x the Avalonia designer requires event handlers to be declared as `public` methods. We hope to remove this restriction in future.
-
 ## Routing Strategies
 
 Routed events use one of three routing strategies:
