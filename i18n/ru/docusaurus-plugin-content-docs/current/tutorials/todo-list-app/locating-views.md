@@ -56,7 +56,7 @@ namespace ToDoList
 Экземпляр `ViewLocator` находит внутри файла проекта **App.xaml** (он был добавлен шаблоном решения).
 Он выглядит примерно так:
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="ToDoList.App"

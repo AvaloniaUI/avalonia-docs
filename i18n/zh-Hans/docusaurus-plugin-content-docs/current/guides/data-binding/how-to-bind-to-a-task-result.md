@@ -26,7 +26,7 @@ private async Task<string> GetTextAsync()
 
 您可以按照以下方式绑定到结果：
 
-```markup
+```xml
 <TextBlock Text="{Binding MyAsyncText^, FallbackValue='Wait a second'}" />
 ```
 

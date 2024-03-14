@@ -11,7 +11,7 @@ The `CalendarDatePicker` control allows the user to pick a date value using a ca
 
 The placeholder (the text that appears when the input is empty) can be changed using the `Watermark` property.
 
-```markup
+```xml
 <CalendarDatePicker
 	Watermark="01/01/1970" />
 ```
@@ -20,7 +20,7 @@ The placeholder (the text that appears when the input is empty) can be changed u
 
 The format of the date displayed can be customised by setting the `SelectedDateFormat` to `Custom` and providing a custom format in `CustomDateFormatString` in the same way `DateTime.ToString(string format)` accepts.
 
-```markup
+```xml
 <CalendarDatePicker 
 	SelectedDateFormat="Custom"
 	CustomDateFormatString="yyyy-MM-dd" />

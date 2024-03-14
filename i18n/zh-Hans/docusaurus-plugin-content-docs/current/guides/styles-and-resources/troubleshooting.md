@@ -24,20 +24,20 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 
 样式按照声明的顺序应用。如果有多个包含了针对相同控件属性的样式文件，则最后一个包含的样式将覆盖之前的样式。例如：
 
-```markup
+```xml
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Green" />
 </Style>
 ```
 
-```markup
+```xml
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Blue" />
     <Style Property="FontSize" Value="16" />
 </Style>
 ```
 
-```markup
+```xml
 <StyleInclude Source="Style1.axaml" />
 <StyleInclude Source="Style2.axaml" />
 ```
@@ -48,7 +48,7 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 
 直接在控件上定义的本地值通常比任何样式值具有更高的优先级。因此，在这个例子中，文本块的前景色将是红色的：
 
-```markup
+```xml
 <Style Selector="TextBlock.header">
     <Setter Property="Foreground" Value="Green" />
 </Style>
@@ -72,7 +72,7 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 
 假设有一种情况，您希望第二个样式覆盖前一个样式，但实际上并没有覆盖：
 
-```markup
+```xml
 <Style Selector="Border:pointerover">
     <Setter Property="Background" Value="Blue" />
 </Style>
@@ -93,7 +93,7 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 
 以下代码示例中的样式应该在默认样式之上起作用：
 
-```markup
+```xml
 <Style Selector="Button">
     <Setter Property="Background" Value="Red" />
 </Style>
@@ -106,7 +106,7 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 
 原因在于 Button 的模板中。您可以在 Avalonia 源代码中找到默认模板（旧版 [Default](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Default/Button.xaml) 主题和新版 [Fluent](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml) 主题），但为了方便起见，我们在此处简化了来自 Fluent 主题的模板：
 
-```markup
+```xml
 <Style Selector="Button">
     <Setter Property="Background" Value="{DynamicResource ButtonBackground}"/>
     <Setter Property="Template">
@@ -124,7 +124,7 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 
 实际背景是由 `ContentPresenter` 渲染的，在默认情况下它与按钮的 `Background` 属性绑定。然而，在 pointerover 状态下，选择器直接将背景应用于 `ContentPresenter (Button:pointerover /template/ ContentPresenter#PART_ContentPresenter)`。这就是为什么在前一个代码示例中我们的 setter 被忽略的原因。修正后的代码应该直接针对 content presenter：
 
-```markup
+```xml
 <!-- 这里的 #PART_ContentPresenter 名称选择器不是必需的，但为了具有更具体的样式而添加 -->
 <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
     <Setter Property="Background" Value="Blue" />

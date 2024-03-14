@@ -15,7 +15,7 @@ The Canvas does not do any sizing of its children. Each element must specify its
 
 Here's an example of a Canvas in XAML.
 
-```markup
+```xml
 <Canvas Width="120" Height="120">
     <Rectangle Fill="Red" Height="44" Width="44"/>
     <Rectangle Fill="Blue" Height="44" Width="44" Canvas.Left="20" Canvas.Top="20"/>

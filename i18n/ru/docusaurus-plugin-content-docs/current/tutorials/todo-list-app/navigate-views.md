@@ -81,7 +81,7 @@ namespace ToDoList.ViewModels
 - В папке **/Views** найдите файл **MainWindow.axaml**.
 - Измините XAML как показано ниже.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:ToDoList.ViewModels"
@@ -105,7 +105,7 @@ namespace ToDoList.ViewModels
 * В папке **/Views** найдите файл **ToDoListView.axaml**.
 * Измините XAML у кнопки, как показано ниже:
 
-```markup
+```xml
 <Button DockPanel.Dock="Bottom"
         HorizontalAlignment="Stretch"
         HorizontalContentAlignment="Center"

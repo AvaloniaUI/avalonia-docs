@@ -13,7 +13,7 @@ Modify the `MainWindow.axaml` so that it places the existing `Button` inside a p
 
 We can then use an `ItemsControl` instead of a `ListBox` as we did before. An `ItemsControl` is the exact same as a `ListBox` except it doesn't allow the user to select anything.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:Avalonia.MusicStore.ViewModels"

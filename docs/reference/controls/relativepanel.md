@@ -49,7 +49,7 @@ You will probably use these properties most often:
 
 This XAML shows how to arrange some child controls in different ways:
 
-```markup
+```xml
 <Border BorderBrush="DarkGray" BorderThickness="1" Width="300" Height="300">
   <RelativePanel >
     <Rectangle x:Name="RedRect" Fill="Red" Height="50" Width="50"/>

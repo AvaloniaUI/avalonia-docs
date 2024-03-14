@@ -110,7 +110,7 @@ To do this, follow this procedure:
 - Locate the **AddItemView.axaml** file in the **/Views** folder.
 - Edit the XAML as shown.
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:ToDoList.ViewModels"

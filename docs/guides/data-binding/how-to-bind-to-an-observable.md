@@ -14,6 +14,6 @@ You can subscribe to the result of a task or an observable by using the `^` stre
 
 For example if `DataContext.Name` is an `IObservable<string>` then the following example will bind to the length of each string produced by the observable as each value is produced
 
-```markup
+```xml
 <TextBlock Text="{Binding Name^.Length}"/>
 ```

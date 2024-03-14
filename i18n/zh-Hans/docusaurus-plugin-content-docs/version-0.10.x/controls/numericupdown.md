@@ -23,7 +23,7 @@ The control has a up and down button spinner attached, used to increment and dec
 
 The value stored in the `NumericUpDown` is a double.
 
-```markup
+```xml
 <NumericUpDown Value="10" Width="100"/>
 ```
 
@@ -35,13 +35,13 @@ produces the following output on **Linux**
 
 A custom increment/decrement value can be set for the button spinner. The default increment value is set to 1.
 
-```markup
+```xml
 <NumericUpDown Value="0.5" Increment="0.01" Minimum="0" Maximum="1"/>
 ```
 
 ### NumericUpDown without a button spinner
 
-```markup
+```xml
 <NumericUpDown Value="42" AllowSpin="False" ShowButtonSpinner="False"/>
 ```
 

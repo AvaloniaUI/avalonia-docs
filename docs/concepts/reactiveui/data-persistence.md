@@ -54,7 +54,7 @@ public class MainWindow : ReactiveWindow<MainViewModel>
 
 The XAML of our `ReactiveWindow` will look like as follows:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="ReactiveUI.Samples.Suspension.MainWindow"

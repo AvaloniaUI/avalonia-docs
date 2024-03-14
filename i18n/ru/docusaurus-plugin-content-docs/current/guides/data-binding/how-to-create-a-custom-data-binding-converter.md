@@ -18,7 +18,7 @@ As the `IValueConverter` interface was not available in .NET standard 2.0, Avalo
 
 You must reference a custom converter in some resources before it can be used. This can be at any level in your application. In this example, the custom converter `myConverter` is referenced in the window resources:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:ExampleApp;assembly=ExampleApp">
@@ -35,7 +35,7 @@ You must reference a custom converter in some resources before it can be used. T
 
 This example data binding converter can convert text to specific case from a parameter:
 
-```markup
+```xml
 <TextBlock Text="{Binding TheContent, 
     Converter={StaticResource textCaseConverter},
     ConverterParameter=lower}" />

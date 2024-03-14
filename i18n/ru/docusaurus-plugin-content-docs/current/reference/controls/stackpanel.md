@@ -25,7 +25,7 @@ You will probably use these properties most often:
 
 The following XAML shows how to create a vertical stack panel.
 
-```markup
+```xml
 <StackPanel Width="200">
     <Rectangle Fill="Red" Height="50"/>
     <Rectangle Fill="Blue" Height="50"/>

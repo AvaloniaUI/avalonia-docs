@@ -11,7 +11,7 @@ description: GUIDES - WPF Conversion
 
 К примеру, указанный ниже код, добавит шаблон данных для отображения данных класса `MyViewModel`:
 
-```markup
+```xml
 <UserControl xmlns:viewmodels="using:MyApp.ViewModels"
              x:DataType="viewmodels:ControlViewModel">
     <UserControl.DataTemplates>

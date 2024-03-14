@@ -5,7 +5,7 @@ title: DataTemplates
 
 As styles aren't stored in `Resources`, neither are `DataTemplates`. Instead, `DataTemplates` are placed in a `DataTemplates` collection on each control \(and on `Application`\):
 
-```markup
+```xml
 <UserControl xmlns:viewmodels="clr-namespace:MyApp.ViewModels;assembly=MyApp">
     <UserControl.DataTemplates>
         <DataTemplate DataType="viewmodels:FooViewModel">

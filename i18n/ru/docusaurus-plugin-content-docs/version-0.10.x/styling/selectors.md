@@ -227,7 +227,7 @@ Matches any control which has the specified property set to the specified value.
 :::info
 **Note:** When using a `AttachedProperty` in selectors inside XAML, it has to be wrapped in parenthesis.
 
-```markup
+```xml
 <Style Selector="TextBlock[(Grid.Row)=0]">
 ```
 :::

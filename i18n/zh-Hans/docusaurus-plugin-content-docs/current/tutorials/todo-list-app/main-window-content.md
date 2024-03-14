@@ -17,7 +17,7 @@ import ToDoMainWindowContentScreenshot from '/img/gitbook-import/assets/image (4
 
 现在，主窗口的 XAML 应如下所示：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:ToDoList.ViewModels"
@@ -53,7 +53,7 @@ import ToDoMainWindowContentScreenshot from '/img/gitbook-import/assets/image (4
 
 最后一步将窗口的内容区域设置为显示您的新用户控件视图：
 
-```markup
+```xml
 <views:ToDoListView/>
 ```
 

@@ -18,7 +18,7 @@ import ToDoMainWindowContentScreenshot from '/img/gitbook-import/assets/image (4
 
 XAML основного окна должен выглядеть примерно так:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:ToDoList.ViewModels"
@@ -44,7 +44,7 @@ XAML основного окна должен выглядеть примерн�
 Данный XAML во многом похож на XAML `user control`, с которым вы ознакомились на предыдущей страницу.
 В частности, здесь вы добавили:
 
-```markup
+```xml
 <Window ... xmlns:views="clr-namespace:ToDoList.Views" ...>
 ```
 
@@ -57,7 +57,7 @@ XAML основного окна должен выглядеть примерн�
 
 Последним шагом, меняем содержимое окна для отображения вышего нового `user control`:
 
-```markup
+```xml
 <views:ToDoListView/>
 ```
 

@@ -33,7 +33,7 @@ import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/ope
 - Найдите и откройте файл **MusicStoreWindow.axaml**.
 - Для добавления акрилового размытия фона и строки заголовка, измените код, как показано ниже:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

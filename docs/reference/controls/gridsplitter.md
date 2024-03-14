@@ -24,7 +24,7 @@ To provide any meaningful movement, the direction of travel of the splitter must
 
 This is a column splitter:
 
-```markup
+```xml
 <Grid ColumnDefinitions="*, 4, *">
     <Rectangle Grid.Column="0" Fill="Blue"/>
     <GridSplitter Grid.Column="1" Background="Black" ResizeDirection="Columns"/>
@@ -36,7 +36,7 @@ This is a column splitter:
 
 This is a row splitter:
 
-```markup
+```xml
 <Grid RowDefinitions="*, 4, *">
     <Rectangle Grid.Row="0" Fill="Blue"/>
     <GridSplitter Grid.Row="1" Background="Black" ResizeDirection="Rows"/>

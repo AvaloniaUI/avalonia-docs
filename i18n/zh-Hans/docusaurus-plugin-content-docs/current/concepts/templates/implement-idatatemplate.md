@@ -34,7 +34,7 @@ public class MyDataTemplate : IDataTemplate
 
 现在您可以在视图中使用`MyDataTemplate`类，如下所示：
 
-```markup
+```xml
 xmlns:dataTemplates="using:MyApp.DataTemplates" -->
 ...
 <ContentControl Content="{Binding MyContent}">

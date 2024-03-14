@@ -17,7 +17,7 @@ Follow this procedure to change the main window content:
 
 The main window XAML should now look like this:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:ToDoList.ViewModels"
@@ -42,7 +42,7 @@ The main window XAML should now look like this:
 
 This XAML is similar in many ways to the user control XAML you had a lookup on the previous page. Specifically, here you added:
 
-```markup
+```xml
 <Window ... xmlns:views="clr-namespace:ToDoList.Views" ...>
 ```
 
@@ -54,7 +54,7 @@ Any user control that you create will need this kind of mapping, or the Avalonia
 
 The last step sets the content zone of the window to display your new user control view:
 
-```markup
+```xml
 <views:ToDoListView/>
 ```
 

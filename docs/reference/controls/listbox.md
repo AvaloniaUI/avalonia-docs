@@ -89,7 +89,7 @@ The following selection modes are available for the list box:
 
 These values can be combined, for example:
 
-```markup
+```xml
 <ListBox SelectionMode="Multiple,Toggle">
 ```
 

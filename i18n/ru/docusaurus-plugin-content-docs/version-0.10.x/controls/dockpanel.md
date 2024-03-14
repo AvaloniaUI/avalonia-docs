@@ -9,7 +9,7 @@ import DockPanelFillNoOverlapScreenshot from '/img/controls/dockpanel/dockpanel.
 
 The `DockPanel` control is a `Panel` which lays out its children by "docking" them to the sides or floating in the center.
 
-```markup
+```xml
 <DockPanel Width="300" Height="300">
     <Rectangle Fill="Red" Height="100" DockPanel.Dock="Top"/>
     <Rectangle Fill="Blue" Width="100" DockPanel.Dock="Left"/>

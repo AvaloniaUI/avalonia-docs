@@ -79,7 +79,7 @@ namespace AvaloniaGuides.ViewModels
 
 通常需要向绑定到控件的Reactive命令传递参数。您可以在XAML中使用 `CommandParameter` 属性来实现这一点。例如：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
    ...
    <StackPanel Margin="20">
@@ -114,7 +114,7 @@ namespace AvaloniaGuides.ViewModels
 
 例如，要传递整数参数：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:sys="clr-namespace:System;assembly=mscorlib">
  ...   

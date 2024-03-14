@@ -13,14 +13,14 @@ title: 属性设置器
 
 例如：
 
-```markup
+```xml
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Padding" Value="4 2 0 4"/>
 ```
 
 您也可以使用长格式语法将控件属性设置为具有多个设置的对象，如下所示：
 
-```markup
+```xml
 <Setter Property="MyProperty">
    <MyObject Property1="My Value" Property2="999"/>
 </Setter>
@@ -28,7 +28,7 @@ title: 属性设置器
 
 样式还可以使用绑定来设置属性。在常规选择过程之后，这将使 _Avalonia UI_ 使用目标控件的数据上下文中的值。例如，可以这样定义设置器：
 
-```markup
+```xml
 <Setter Property="FontSize" Value="{Binding SelectedFontSize}"/>
 ```
 
@@ -60,7 +60,7 @@ title: 属性设置器
 
 还要注意，在设置器值中定义的对象上的绑定将无法访问目标控件的数据上下文。这是因为可能有多个目标控件。这种情况可能在像这样定义的样式中出现：
 
-```markup
+```xml
 <Style Selector="local|MyControl">
   <Setter Property="MyProperty">
      <MyObject Property1="{Binding MyViewModelProperty}"/>
@@ -72,7 +72,7 @@ title: 属性设置器
 
 注意：如果您使用编译后的绑定，需要在 `<Style>` 元素中显式设置绑定源的数据类型：
 
-```markup
+```xml
 <Style Selector="MyControl" x:DataType="MyViewModelClass">
   <Setter Property="ControlProperty" Value="{Binding MyViewModelProperty}" />
 </Style>
@@ -86,7 +86,7 @@ For more information about compiled bindings, see here. --> TO DO
 
 如前面所述，当使用没有**数据模板**的设置器时，将创建一个设置器值的单个实例，并在所有匹配的控件之间共享。要根据数据模板更改值，请将目标控件放置在模板元素内，如下所示：
 
-```markup
+```xml
 <Style Selector="Border.empty">
   <Setter Property="Child">
     <Template>

@@ -88,7 +88,7 @@ The columns above are defined as `TextColumn`s - again, `TextColumn` is a generi
 
 It's now time to add the `TreeDataGrid` control to a window and bind it to the source.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication.MainWindow">

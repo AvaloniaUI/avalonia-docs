@@ -94,7 +94,7 @@ MyProgram.app
 
 如果在任何时候工具给出错误，表示您的资产文件没有 `osx-64` 的目标，那么请在 `.csproj` 的顶层 `<PropertyGroup>` 中添加以下[运行时标识符](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog)：
 
-```markup
+```xml
 <RuntimeIdentifiers>osx-x64</RuntimeIdentifiers>
 ```
 
@@ -115,7 +115,7 @@ MyProgram.app
 
 * 将以下内容添加到您的 `.csproj` 文件中：
 
-```markup
+```xml
 <PropertyGroup>
   <UseAppHost>true</UseAppHost>
 </PropertyGroup>
@@ -135,7 +135,7 @@ MyProgram.app
 
 首先，您需要将该项目作为 `PackageReference` 添加到您的项目中。可以通过 NuGet 包管理器添加它，或者通过将以下行添加到您的 `.csproj` 文件中：
 
-```markup
+```xml
 <PackageReference Include="Dotnet.Bundle" Version="*" />
 ```
 
@@ -160,7 +160,7 @@ dotnet msbuild -t:BundleApp -p:RuntimeIdentifier=osx-x64 -p:CFBundleDisplayName=
 
 您还可以在命令行中指定 `CFBundleDisplayName` 等，也可以在项目文件中指定它们：
 
-```markup
+```xml
 <PropertyGroup>
     <CFBundleName>AppName</CFBundleName> <!-- 同时定义 .app 文件名 -->
     <CFBundleDisplayName>MyBestThingEver</CFBundleDisplayName>
@@ -523,7 +523,7 @@ productbuild --component App/AppName.app /Applications --sign "$INSTALLER_SIGNIN
 
 这意味着您的应用程序很可能没有指定菜单。在启动时，Avalonia 会为应用程序创建默认的菜单项，并在未配置菜单时自动添加 _关于Avalonia_ 项。您可以通过将以下内容添加到 `App.xaml` 来解决这个问题：
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:RoadCaptain.App.RouteBuilder"

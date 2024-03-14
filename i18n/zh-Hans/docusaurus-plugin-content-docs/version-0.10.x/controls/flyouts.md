@@ -69,7 +69,7 @@ There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `F
 
 In order to be shown Flyouts have to be attached to a specific control, though this is not a static assignment and can be changed at runtime. `Button` has a `Flyout` property that can be used to open a Flyout upon click.
 
-```markup
+```xml
 <Button Content="Click me">
     <Button.Flyout>
         <Flyout>
@@ -83,7 +83,7 @@ In order to be shown Flyouts have to be attached to a specific control, though t
 
 For other controls that don't have built-in support for flyouts, one can be assigned using attached flyouts
 
-```markup
+```xml
 <Border Background="Red" PointerPressed="Border_PointerPressed">
     <FlyoutBase.AttachedFlyout>
         <Flyout>
@@ -112,7 +112,7 @@ ContextFlyouts are invoked automatically like normal `ContextMenu`s. Although cu
 
 As previously mentioned, Flyouts can be shared between various elements within your app.
 
-```markup
+```xml
 <Window.Resources>
     <Flyout x:Key="MySharedFlyout">
         <!-- Flyout content here -->
@@ -128,7 +128,7 @@ As previously mentioned, Flyouts can be shared between various elements within y
 
 Although `Flyout`s are not controls themselves, their general appearance can still be customized by targeting the presenter the `Flyout` uses to display its content. For a normal `Flyout` this is `FlyoutPresenter` and for `MenuFlyout` this is `MenuFlyoutPresenter`. Because flyout presenters are not exposed, special style classes that should pertain to specific flyouts can be passed using the `FlyoutPresenterClasses` property on `FlyoutBase`
 
-```markup
+```xml
 <Style Selector="FlyoutPresenter.mySpecialClass">
     <Setter Property="Background" Value="Red" />
 </Style>

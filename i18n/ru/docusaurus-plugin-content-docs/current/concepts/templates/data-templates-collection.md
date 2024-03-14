@@ -14,7 +14,7 @@ Data templates are matched by type: a match occurs when the class of the object 
 
 So you can modify the previous sample to use the `DataTemplates` collection, as follows:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

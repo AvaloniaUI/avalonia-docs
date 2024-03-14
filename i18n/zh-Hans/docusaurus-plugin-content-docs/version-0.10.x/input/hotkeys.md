@@ -5,7 +5,7 @@ title: Hotkeys
 
 Various Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. Pressing the hotkey will execute the command [bound](../data-binding/binding-to-commands) to the Control.
 
-```markup
+```xml
 <Menu>
     <MenuItem Header="_File">
         <MenuItem x:Name="SaveMenuItem" Header="_Save" Command="{Binding SaveCommand}" HotKey="Ctrl+S"/>

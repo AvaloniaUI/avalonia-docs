@@ -22,7 +22,7 @@ Avalonia引入了一个广泛、可伸缩、灵活的图形功能集，具有以
 
 Avalonia提供了一组常见的矢量绘制2D形状，如`Ellipse`（椭圆）、`Line`（线）、`Path`（路径）、`Polygon`（多边形）和`Rectangle`（矩形）。
 
-```markup
+```xml
 <Canvas Background="Yellow" Width="300" Height="400">
     <Rectangle Fill="Blue" Width="63" Height="41" Canvas.Left="40" Canvas.Top="31">
         <Rectangle.OpacityMask>

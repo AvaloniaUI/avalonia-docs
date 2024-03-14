@@ -49,7 +49,7 @@ dotnet add package Avalonia.Controls.DataGrid
 
 例如：
 
-```markup
+```xml
 <Application.Styles>
     <FluentTheme />
     <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
@@ -128,7 +128,7 @@ public class Person
 
 通常来说，从项类中获取的属性名称通常不会成为好的列名。下面这个示例为网格添加了自定义的列头名称。它还允许列重新排序和调整大小，并禁用了默认的列排序选项：
 
-```markup
+```xml
 <DataGrid Margin="20" ItemsSource="{Binding People}"
           IsReadOnly="True"
           CanUserReorderColumns="True"

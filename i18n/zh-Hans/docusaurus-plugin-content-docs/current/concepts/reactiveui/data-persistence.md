@@ -54,7 +54,7 @@ public class MainWindow : ReactiveWindow<MainViewModel>
 
 我们的`ReactiveWindow`的XAML如下所示：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="ReactiveUI.Samples.Suspension.MainWindow"

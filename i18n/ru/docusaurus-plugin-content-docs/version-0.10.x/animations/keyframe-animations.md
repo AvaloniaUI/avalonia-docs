@@ -9,7 +9,7 @@ Keyframe animations in Avalonia are heavily inspired by CSS Animations. They can
 
 Keyframe animations are applied using styles. They can be defined on any style by adding an `Animation` object to the `Style.Animation` property:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     <Window.Styles>
         <Style Selector="Rectangle.red">
@@ -51,7 +51,7 @@ All `Animation` objects should contain at least one `KeyFrame`, with a `Setter` 
 
 Multiple properties can be also animated in a single Animation by adding additional `Setter` objects on the desired `KeyFrame`:
 
-```markup
+```xml
 <Animation Duration="0:0:1"> 
     <KeyFrame Cue="0%">
         <Setter Property="Opacity" Value="0.0"/>
@@ -68,7 +68,7 @@ Multiple properties can be also animated in a single Animation by adding additio
 
 You can add a delay in a `Animation` by defining the desired delay time on its `Delay` property:
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1"> 
     ...
@@ -114,7 +114,7 @@ The following table describes the possible behaviors:
 
 Easing functions can be set by setting the name of the desired function to the `Animation`'s `Easing` property:
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1"
            Easing="BounceEaseIn"> 
@@ -124,7 +124,7 @@ Easing functions can be set by setting the name of the desired function to the `
 
 You can also add your custom easing function class like this:
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1">
     <Animation.Easing>

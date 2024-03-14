@@ -43,7 +43,7 @@ public MainWindowViewModel(){
 
 Now that the `_sourceCache` is created and populated and the `ReadOnlyObservableCollection<T>` is created and bound we can go into our view and bind exactly the way we normally would with an `ObservableCollection<T>`
 
-```markup
+```xml
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>

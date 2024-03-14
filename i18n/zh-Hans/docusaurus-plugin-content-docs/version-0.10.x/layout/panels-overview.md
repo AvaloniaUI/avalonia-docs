@@ -79,7 +79,7 @@ myParentCanvas.Children.Add(myCanvas3);
 
 XAML
 
-```markup
+```xml
 <Canvas Height="400" Width="400">
   <Canvas Height="100" Width="100" Top="0" Left="0" Background="Red"/>
   <Canvas Height="100" Width="100" Top="100" Left="100" Background="Green"/>
@@ -176,7 +176,7 @@ myDockPanel.Children.Add(myBorder5);
 
 XAML
 
-```markup
+```xml
 <DockPanel LastChildFill="True">
   <Border Height="25" Background="SkyBlue" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
     <TextBlock Foreground="Black">Dock = "Top"</TextBlock>
@@ -378,7 +378,7 @@ myWrapPanel.Children.Add(btn4);
 
 XAML
 
-```markup
+```xml
 <Border HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2">
   <WrapPanel Background="LightBlue" Width="200" Height="100">
     <Button Width="200">Button 1</Button>

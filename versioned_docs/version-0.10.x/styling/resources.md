@@ -9,7 +9,7 @@ Often, styles and controls will need to share resources such as \(but not limite
 
 If a resource is to be available to your entire application, you can define it in `App.xaml`/`App.axaml`:
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MyApp.App">
@@ -21,7 +21,7 @@ If a resource is to be available to your entire application, you can define it i
 
 Alternatively you can declare resources on a `Window` or `UserControl`: the resource will be available to the `Window`/`UserControl` and its children:
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MyApp.MyUserControl">
@@ -33,7 +33,7 @@ Alternatively you can declare resources on a `Window` or `UserControl`: the reso
 
 Or in fact any control at all:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MyApp.MainWindow">
@@ -47,7 +47,7 @@ Or in fact any control at all:
 
 You can also declare resources on styles:
 
-```markup
+```xml
 <Style Selector="TextBlock.warn">
   <Style.Resources>
     <SolidColorBrush x:Key="Warning">Yellow</SolidColorBrush>
@@ -59,7 +59,7 @@ You can also declare resources on styles:
 
 You can references resources from controls using the `{DynamicResource}` markup extensions, e.g.:
 
-```markup
+```xml
 <Border Background="{DynamicResource Warning}">
   Look out!
 </Border>
@@ -76,7 +76,7 @@ In return, `StaticResource` doesn't need to add an event handler to listen for c
 
 Resources are resolved by walking up the logical tree from the point of the `DynamicResource` or `StaticResource` until a resource with the requested key is found. This means that resources can be "overridden" in sub-trees of the application, for example:
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MyApp.MyUserControl">
@@ -102,7 +102,7 @@ Here's the `Border`'s background will be `Orange` because its parent `StackPanel
 
 The `Resources` property on each control and style is of type `ResourceDictionary`. Resource dictionaries can also include other resource dictionaries by making use of the `MergedDictionaries` property. To include a resource dictionary in another you can use the `ResourceInclude` class, e.g.:
 
-```markup
+```xml
 <Window.Resources>
   <ResourceDictionary>
     <ResourceDictionary.MergedDictionaries>

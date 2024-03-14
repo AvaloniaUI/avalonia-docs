@@ -31,7 +31,7 @@ Below is an example that shows:
 
 An example of a Grid with 3 equal Rows and 3 Columns with \(1 fixed width\), \(2 grabbing the rest proportionally\) would be:
 
-```markup
+```xml
 <Grid ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
   <TextBlock Text="Col0Row0:" Grid.Row="0" Grid.Column="0"/>
   <TextBlock Text="Col0Row1:" Grid.Row="1" Grid.Column="0"/>
@@ -54,7 +54,7 @@ Here is another example showing the difference between those two.
 
 First let's create sample 2x2 grid in our View, we can achieve this simply by writing code looking like this:
 
-```markup
+```xml
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -77,7 +77,7 @@ Now let's fill our grid with some elements, I will fill every field with button,
 
 Now our View code look's like this:
 
-```markup
+```xml
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -103,7 +103,7 @@ As you can see our grid become sticky to its content, it is very useful when we 
 
 This new View code looks like this:
 
-```markup
+```xml
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -125,7 +125,7 @@ This new View code looks like this:
 
 For more complex row and column definitions it's possible to explicitly use `Grid.ColumnDefinitions` and `Grid.RowDefinitions` XAML fields to provide access to these additional settings. The below code produces is exactly the same except for the fact we set the minimum width on the second column to be 300.
 
-```markup
+```xml
 <Grid Margin="4">
   <Grid.ColumnDefinitions>
     <ColumnDefinition Width="100" />

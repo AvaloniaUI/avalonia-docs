@@ -5,7 +5,7 @@ title: RadioButton
 
 The `RadioButton` control allows users to select one or more things from a collection of presented things.
 
-```markup
+```xml
 <!-- First Group -->
 <RadioButton IsChecked="{Binding Option1Enabled }"
              GroupName="First Group"

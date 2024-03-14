@@ -15,7 +15,7 @@ Let's try and make this look a little more modern by applying `Dark` mode and so
 
    Change the FluentTheme Mode from Default to Dark.
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avolonia.MusicStore.App"
@@ -38,7 +38,7 @@ Let's try and make this look a little more modern by applying `Dark` mode and so
 
 1. After where it says `Title="Avalonia.MusicStore"` add the following code:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:Avalonia.MusicStore.ViewModels"
@@ -57,7 +57,7 @@ This will make the Window Transparent and apply a Blur.
 
 To apply acrylic to the window, that we can tint and customize for a modern look, replace the `<TextBlock>` with the following code:
 
-```markup
+```xml
    <Window xmlns="https://github.com/avaloniaui"
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:vm="using:Avalonia.MusicStore.ViewModels"
@@ -102,7 +102,7 @@ Notice we have a nice acrylic window effect. Shame about the titlebar, though. L
 
    To enable this mode on the `Window` element set the `ExtendClientAreaToDecorationsHint` property to `True`.
 
-```markup
+```xml
    <Window xmlns="https://github.com/avaloniaui"
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:vm="using:Avalonia.MusicStore.ViewModels"

@@ -13,7 +13,7 @@ Avalonia includes comprehensive support for [binding](../../data-binding/binding
 
 The following example shows a `TextBlock` when an associated `TextBox` is disabled, by using a binding:
 
-```markup
+```xml
 <StackPanel>
     <TextBox Name="input" IsEnabled="False"/>
     <TextBlock IsVisible="{Binding !#input.IsEnabled}">Sorry, no can do!</TextBlock>
