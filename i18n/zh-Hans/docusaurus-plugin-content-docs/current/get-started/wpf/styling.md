@@ -9,7 +9,7 @@ Avalonia与其他XAML框架最明显的不同之一在于其样式系统。在Av
 
 以下代码显示了一个`UserControl`，其中定义了自己的CSS样式。
 
-```markup
+```xml
 <UserControl>
     <UserControl.Styles>
         <!-- 让带有 h1 样式类的 TextBlock 具有 24 点的字体大小 -->

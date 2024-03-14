@@ -9,7 +9,7 @@ title: 样式类
 
 例如，这个按钮同时应用了 `h1` 和 `blue` 样式类：
 
-```markup
+```xml
 <Button Classes="h1 blue"/>
 ```
 
@@ -21,7 +21,7 @@ title: 样式类
 
 这是一个使用 `:pointerover` 伪类选择器的示例：
 
-```markup
+```xml
 <StackPanel>
   <StackPanel.Styles>
     <Style Selector="Border:pointerover">
@@ -36,7 +36,7 @@ title: 样式类
 
 在此示例中，伪类选择器更改了控件模板内的属性：
 
-```markup
+```xml
 <StackPanel>
   <StackPanel.Styles>
     <Style Selector="Button:pressed /template/ ContentPresenter">
@@ -57,7 +57,7 @@ title: 样式类
 
 如果你需要使用绑定条件添加或删除类，则可以使用以下特殊语法：
 
-```markup
+```xml
 <Button Classes.accent="{Binding IsSpecial}" />
 ```
 

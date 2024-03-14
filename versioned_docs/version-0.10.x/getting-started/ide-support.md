@@ -50,7 +50,7 @@ With the namespace added, the following design-time properties become available:
 
 The `d:DesignWidth` and `d:DesignHeight` properties apply a width and height to the control being previewed.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -64,7 +64,7 @@ The `d:DesignWidth` and `d:DesignHeight` properties apply a width and height to 
 
 The `d:DataContext` property applies a `DataContext` only at design-time. It is recommended that you use this property in conjunction with the `{x:Static}` directive to reference a static property in one of your assemblies:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -91,7 +91,7 @@ namespace My.Namespace
 ### Design.DataContext
 
 Alternatively you can use `Design.DataContext` attached property. As well as Design.Width and Design.Height.
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

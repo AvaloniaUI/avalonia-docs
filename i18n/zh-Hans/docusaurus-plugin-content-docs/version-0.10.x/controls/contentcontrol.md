@@ -25,19 +25,19 @@ At its simplest, a `ContentControl` displays the data assigned to its [`Content`
 
 For example:
 
-```markup
+```xml
 <ContentControl Content="Hello World!"/>
 ```
 
 Will display the string "Hello World!". The `Content` property is the control's default property and so the above example can also be written as:
 
-```markup
+```xml
 <ContentControl>Hello World!</ContentControl>
 ```
 
 If you assign a control to a `ContentControl` then it will display the control, for example:
 
-```markup
+```xml
 <ContentControl>
   <Button>Click Me!</Button>
 </ContentControl>
@@ -79,7 +79,7 @@ namespace Example
 
 We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
   <ContentControl Content="{Binding Content}">
     <ContentControl.ContentTemplate>

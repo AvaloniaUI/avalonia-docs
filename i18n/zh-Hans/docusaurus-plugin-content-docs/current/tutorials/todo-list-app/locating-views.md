@@ -50,7 +50,7 @@ namespace ToDoList
 
 视图定位器的一个实例存在于应用程序项目的 **App.axaml** 文件中（它由解决方案模板添加）。它应该如下所示：
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="ToDoList.App"

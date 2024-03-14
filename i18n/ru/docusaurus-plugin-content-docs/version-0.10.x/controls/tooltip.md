@@ -28,7 +28,7 @@ The `ToolTip` is a control that pops up with hint text when hovered over the app
 
 ### Text ToolTip
 
-```markup
+```xml
 <Border Margin="5"
         Padding="10"
         Background="{DynamicResource ThemeAccentBrush}"
@@ -39,7 +39,7 @@ The `ToolTip` is a control that pops up with hint text when hovered over the app
 
 ### Rich Tooltip
 
-```markup
+```xml
 <Border Margin="5"
         Padding="10"
         Background="{DynamicResource ThemeAccentBrush}"

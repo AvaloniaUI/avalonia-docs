@@ -7,7 +7,7 @@ import SplitViewScreenshot from '/img/controls/splitview/image (9).png';
 
 Represents a container with two views; one view for the main content and another view that is typically used for navigation commands.
 
-```markup
+```xml
 <SplitView IsPaneOpen="True"
            DisplayMode="Inline"
            OpenPaneLength="296">

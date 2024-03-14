@@ -29,7 +29,7 @@ namespace Example
 }
 ```
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     <Button Command="{Binding DoTheThing}">Do the thing!</Button>
 </Window>
@@ -59,7 +59,7 @@ namespace Example
 }
 ```
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     <Button Command="{Binding DoTheThing}" CommandParameter="Hello World">Do the thing!</Button>
 </Window>
@@ -67,7 +67,7 @@ namespace Example
 
 Note that no type conversion is carried out on `CommandParameter`, so if you need your type parameter to be something other than `string` you must supply an object of that type in XAML. For example to pass an `int` parameter you could use:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <Button Command="{Binding DoTheThing}">
@@ -100,7 +100,7 @@ namespace Example
 }
 ```
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
   <Button Command="{Binding RunTheThing}" CommandParameter="Hello World">Do the thing!</Button>
 </Window>

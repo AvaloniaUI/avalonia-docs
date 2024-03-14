@@ -30,7 +30,7 @@ The `Calendar` control is a standard Calendar control for users to select date\(
 
 ### Basic Calendar
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -46,7 +46,7 @@ The `Calendar` control is a standard Calendar control for users to select date\(
 
 ### Range selection Calendar
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -64,7 +64,7 @@ After selecting the start date, a single range can be selected by holding the sh
 
 ### Calendar with custom start and end dates
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

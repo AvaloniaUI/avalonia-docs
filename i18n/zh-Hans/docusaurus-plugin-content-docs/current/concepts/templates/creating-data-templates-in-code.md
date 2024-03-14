@@ -18,7 +18,7 @@ var template = new FuncDataTemplate<Student>((value, namescope) =>
 
 这等同于以下 XAML：
 
-```markup
+```xml
 <DataTemplate DataType="{x:Type local:Student}">
     <TextBlock Text="{Binding FirstName}"/>
 </DataTemplate>

@@ -41,7 +41,7 @@ namespace RoutingExample
 
 **FirstView.xaml**
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="RoutingExample.FirstView">
@@ -113,7 +113,7 @@ namespace RoutingExample
 
 Now we need to place the `RoutedViewHost` XAML control to our main view. It will resolve and embed appropriate views for the view models based on the supplied `IViewLocator` implementation and the passed `Router` instance of type `RoutingState`. Note, that you need to import `rxui` namespace for `RoutedViewHost` to work. Additionally, you can override animations that are played when `RoutedViewHost` changes a view — simply override `RoutedViewHost.PageTransition` property in XAML. For latest builds from MyGet use `xmlns:rxui="http://reactiveui.net"`, for 0.8.0 release on NuGet use `xmlns:rxui="clr-namespace:Avalonia;assembly=Avalonia.ReactiveUI"` as in the example below.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
         xmlns:app="clr-namespace:RoutingExample"
@@ -158,7 +158,7 @@ Now we need to place the `RoutedViewHost` XAML control to our main view. It will
 
 To disable the animations, simply set the `RoutedViewHost.PageTransition` property to `{x:Null}`, like so:
 
-```markup
+```xml
 <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}" PageTransition="{x:Null}">
     <rxui:RoutedViewHost.DefaultContent>
         <TextBlock Text="Default content"

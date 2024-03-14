@@ -16,7 +16,7 @@ import ControlContentTypeScreenshot from '/img/concepts/templates/content-type.p
 
 例如：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -34,7 +34,7 @@ import ControlContentTypeScreenshot from '/img/concepts/templates/content-type.p
 
 如果您将一个字符串放入窗口的内容区域，例如：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -67,7 +67,7 @@ namespace MySample
 
 并且将XML命名空间`local`定义为`MySample`命名空间（来自上面的代码），您可以在窗口的内容区域中定义一个学生对象，如下所示：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="using:MySample"

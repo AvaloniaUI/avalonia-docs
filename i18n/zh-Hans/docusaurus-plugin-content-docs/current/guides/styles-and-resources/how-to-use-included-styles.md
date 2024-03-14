@@ -11,7 +11,7 @@ import VsStylesTemplateScreenshot from '/img/guides/styles-and-resources/vs-styl
 
 要实现这一点，您需要在一个新的XAML文件中定义样式。在这里，根元素必须是`Style`或`Styles`元素之一。例如：
 
-```markup
+```xml
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style Selector="TextBlock.h1">
@@ -34,7 +34,7 @@ _Avalonia UI_ 解决方案模板提供了一种快速添加样式文件到您的
 
 例如，要使用在名为`AppStyles.axaml`的文件中定义的样式（保存在`/Styles`文件夹中），您可以在窗口中添加如下的`StyleInclude`元素：
 
-```markup
+```xml
 <Window ... >
     <Window.Styles>
         <StyleInclude Source="/Styles/AppStyles.axaml" />

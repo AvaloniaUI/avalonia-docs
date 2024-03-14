@@ -8,7 +8,7 @@ title: 如何使用过渡效果
 
 Avalonia中的过渡效果也受到CSS动画的很大启发。它们监听目标属性的值的任何变化，并根据其参数对变化进行动画处理。可以通过`Transitions`属性在任何`Control`上定义过渡效果：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     <Window.Styles>
         <Style Selector="Rectangle.red">
@@ -37,7 +37,7 @@ Avalonia中的过渡效果也受到CSS动画的很大启发。它们监听目标
 
 过渡效果也可以在任何样式中使用`Setter`来定义，目标属性设为`Transitions`，并将它们封装在`Transitions`对象中，如下所示：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     <Window.Styles>
         <Style Selector="Rectangle.red">
@@ -90,7 +90,7 @@ Avalonia中的过渡效果也受到CSS动画的很大启发。它们监听目标
 
 可以过渡应用于使用类似CSS语法的控件的渲染变换。以下示例显示了一个边框，在指针悬停在其上方时旋转45度：
 
-```markup title='XAML'
+```xml title='XAML'
 <Border Width="100" Height="100" Background="Red">
     <Border.Styles>
         <Style Selector="Border">

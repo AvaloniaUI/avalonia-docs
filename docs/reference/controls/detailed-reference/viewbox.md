@@ -40,7 +40,7 @@ The values for the `StretchDirection` property are as follows:
 
 This simple example shows a `Viewbox` scaling up a circle uniformly (both stretch and direction are default).
 
-```markup
+```xml
 <Viewbox Stretch="Uniform" Width="300" Height="300">
    <Ellipse Width="50" Height="50" Fill="CornflowerBlue" />  
 </Viewbox>

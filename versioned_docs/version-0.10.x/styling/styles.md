@@ -9,7 +9,7 @@ A style applies to the control that it is defined on and all descendent controls
 
 The following style selects any `TextBlock` with a `h1` _style class_ and sets its font size to 24 point and font weight to bold:
 
-```markup
+```xml
 <Style Selector="TextBlock.h1">
     <Setter Property="FontSize" Value="24"/>
     <Setter Property="FontWeight" Value="Bold"/>
@@ -18,7 +18,7 @@ The following style selects any `TextBlock` with a `h1` _style class_ and sets i
 
 Styles can be defined on any control or on the `Application` object by adding them to the [`Control.Styles`](http://reference.avaloniaui.net/api/Avalonia/StyledElement/0A46A84A) or [`Application.Styles`](http://reference.avaloniaui.net/api/Avalonia/Application/04017CAF) collections.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Window.Styles>
@@ -34,7 +34,7 @@ Styles can be defined on any control or on the `Application` object by adding th
 
 Styles can also be included from other files using the `StyleInclude` class, e.g.:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Window.Styles>
@@ -49,7 +49,7 @@ Where `CustomStyles.xaml` is a XAML file with a root of either `Style` or `Style
 
 CustomStyles.xaml
 
-```markup
+```xml
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style Selector="TextBlock.h1">
@@ -64,12 +64,12 @@ Note that unlike WPF/UWP, styles will have no effect if they're added to a contr
 
 As in CSS, controls can be given _style classes_ which can be used in selectors. Style classes can be assigned in XAML by setting the `Classes` property to a space-separated list of strings. The following example applies the `h1` and `blue` style classes to a `Button`:
 
-```markup
+```xml
 <Button Classes="h1 blue"/>
 ```
 
 If you need to add or remove class by condition, you can use the following special syntax:
-```markup
+```xml
 <Button Classes.blue="{Binding IsSpecial}" />
 ```
 
@@ -88,7 +88,7 @@ One example of a pseudoclass is the `:pointerover` \(similar to `:hover` in CSS\
 
 Pseudoclasses provide the functionality of `Triggers` in WPF and `VisualStateManager` in UWP:
 
-```markup
+```xml
 <StackPanel>
   <StackPanel.Styles>
     <Style Selector="Border:pointerover">
@@ -103,7 +103,7 @@ Pseudoclasses provide the functionality of `Triggers` in WPF and `VisualStateMan
 
 Another example that involves changing properties inside of control [template](selectors.md#template):
 
-```markup
+```xml
 <StackPanel>
   <StackPanel.Styles>
     <Style Selector="Button:pressed /template/ ContentPresenter">
@@ -147,14 +147,14 @@ For more information see the [selectors documentation](selectors.md).
 
 A style's setters describe what will happen when the selector matches a control. They are simple property/value pairs written in the format:
 
-```markup
+```xml
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Padding" Value="4 2 0 4"/>
 ```
 
 You can also use long-form syntax to declare more complex object values:
 
-```markup
+```xml
 <Setter Property="MyProperty">
    <MyObject Property1="My Value"/>
 </Setter>
@@ -162,7 +162,7 @@ You can also use long-form syntax to declare more complex object values:
 
 Bindings can also be applied using setters and can bind to the target control's `DataContext`:
 
-```markup
+```xml
 <Setter Property="FontSize" Value="{Binding SelectedFontSize}"/>
 ```
 
@@ -170,7 +170,7 @@ Whenever a style is matched with a control, all of the setters will be applied t
 
 Note that the `Setter` creates a single instance of `Value` which will be applied to all controls that the style matches: if the object is mutable then changes will be reflected on all controls. Following on from this, any bindings on an _object within the setter `Value`_ will not have access to the target control's `DataContext` as there may be multiple target controls:
 
-```markup
+```xml
 <Style Selector="local|MyControl">
   <Setter Property="MyProperty">
      <MyObject Property1="{Binding MyViewModelProperty}"/>
@@ -182,7 +182,7 @@ In the above example, the binding source will be `MyObject.DataContext`, not `My
 
 Note: at present, if you are using compiled bindings, you need to explicitly set the data type of the binding source in the `<Style>` element:
 
-```markup
+```xml
 <Style Selector="MyControl" x:DataType="MyViewModelClass">
   <Setter Property="ControlProperty" Value="{Binding MyViewModelProperty}" />
 </Style>
@@ -192,7 +192,7 @@ Note: at present, if you are using compiled bindings, you need to explicitly set
 
 As mentioned above, usually a single instance of a setter's `Value` is created and shared across all matching controls. Due to this, to use a control as a setter value, the control must be wrapped in a `<Template>`:
 
-```markup
+```xml
 <Style Selector="Border.empty">
   <Setter Property="Child">
     <Template>
@@ -206,7 +206,7 @@ As mentioned above, usually a single instance of a setter's `Value` is created a
 
 If multiple styles match a control, and they both attempt to set the same property then the style _closest to the control_ will win. Consider the following example:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Window.Styles>

@@ -75,7 +75,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 
 此示例展示了如何在同一时间轴上同时动画两个属性。
 
-```markup
+```xml
 <Window.Styles>
     <Style Selector="Rectangle.red">
       <Setter Property="Fill" Value="Red"/>
@@ -103,7 +103,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 
 您可以通过设置动画元素的延迟属性来延迟动画的启动。例如：
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1"> 
     ...
@@ -170,7 +170,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 
 默认的缓动函数是线性的（上图左），但您可以通过在缓动属性中设置所需函数的名称来使用其他模式。例如，要使用“弹跳淡入”函数（上图右）：
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1"
            Easing="BounceEaseIn"> 
@@ -184,7 +184,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 
 您还可以添加自定义的缓动函数类，如下所示：
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1">
     <Animation.Easing>

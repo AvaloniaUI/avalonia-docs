@@ -35,7 +35,7 @@ You will probably use these properties most often:
 
 This example creates a menu docked at the top edge of a window.
 
-```markup
+```xml
 <Window ...>
     <DockPanel>
     <Menu DockPanel.Dock="Top">
@@ -76,7 +76,7 @@ Once keyboard interaction has been initiated with the Alt key, the user can also
 
 To initiate an action, the command property of a menu item can be bound to an `ICommand` object. The command will be executed when the menu item is clicked or selected with the keyboard. For example:
 
-```markup
+```xml
 <Menu>
     <MenuItem Header="_File">
         <MenuItem Header="_Open..." Command="{Binding OpenCommand}"/>
@@ -92,7 +92,7 @@ For guidance on how to bind to commands, see [here](../../basics/user-interface/
 
 A menu icon can be displayed by placing an image or a path icon in the `<MenuItem.Icon>` attached property. For example:
 
-```markup
+```xml
 <MenuItem Header="_Edit">
   <MenuItem Header="Copy">
      <MenuItem.Icon>

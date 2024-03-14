@@ -24,20 +24,20 @@ Check whether you have used a child selector where there are no children to matc
 
 Styles are applied in order of declaration. If there are multiple style files included that target the same control property, the last style included will override the previous ones. For example:
 
-```markup
+```xml
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Green" />
 </Style>
 ```
 
-```markup
+```xml
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Blue" />
     <Style Property="FontSize" Value="16" />
 </Style>
 ```
 
-```markup
+```xml
 <StyleInclude Source="Style1.axaml" />
 <StyleInclude Source="Style2.axaml" />
 ```
@@ -48,7 +48,7 @@ Here styles from file **Styles1.axaml** were applied first, so setters in styles
 
 A local value defined directly on a control often has higher priority than any style value. So in this example the text block will have a red foreground:
 
-```markup
+```xml
 <Style Selector="TextBlock.header">
     <Setter Property="Foreground" Value="Green" />
 </Style>
@@ -72,7 +72,7 @@ Some default _Avalonia UI_ styles use local values in their templates instead of
 
 Let's imagine a situation in which you might expect a second style to override previous one, but it doesn't:
 
-```markup
+```xml
 <Style Selector="Border:pointerover">
     <Setter Property="Background" Value="Blue" />
 </Style>
@@ -93,7 +93,7 @@ Visit the Avalonia source code to find the [original templates](https://github.c
 
 The following code example of styles that can be expected to work on top of default styles:
 
-```markup
+```xml
 <Style Selector="Button">
     <Setter Property="Background" Value="Red" />
 </Style>
@@ -106,7 +106,7 @@ You might expect the `Button` to be red by default and blue when pointer is over
 
 The reason is hidden in the Button's template. You can find the default templates in the Avalonia source code (old [Default](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Default/Button.xaml) theme and new [Fluent](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml) theme), but for convenience here we have simplified one from the Fluent theme:
 
-```markup
+```xml
 <Style Selector="Button">
     <Setter Property="Background" Value="{DynamicResource ButtonBackground}"/>
     <Setter Property="Template">
@@ -124,7 +124,7 @@ The reason is hidden in the Button's template. You can find the default template
 
 The actual background is rendered by a `ContentPresenter`, which in the default is bound to the Buttons `Background` property. However in the pointer-over state the selector is directly applying the background to the `ContentPresenter (Button:pointerover /template/ ContentPresenter#PART_ContentPresenter`) That's why when our setter was ignored in the previous code example. The corrected code should target content presenter directly as well:
 
-```markup
+```xml
 <!-- Here #PART_ContentPresenter name selector is not necessary, but was added to have more specific style -->
 <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
     <Setter Property="Background" Value="Blue" />

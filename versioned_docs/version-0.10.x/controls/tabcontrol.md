@@ -14,7 +14,7 @@ Here is an animation of what you can achieve :
 
 To create this, we'll describe the entire control \(TabControl\) and each individual tab+page \(TabItem\). Here is an example :
 
-```markup
+```xml
 <TabControl>
   <TabItem Header="Circle" VerticalContentAlignment="Center">
     <TextBlock Text="I am in the circle page !" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -48,7 +48,7 @@ Let's have a look at a customized `TabControl` :
 
 The grey part is the `TabItem`... Yes, the `TabItem` includes the tab **AND** the page associated to the tab. The tab is called the `header`of the `TabItem`. Moreover, given the way `TabControl` has been implemented, tabs are in a `WrapPanel`. Thus, if you want to color in blue \(like this is done above\) the empty bar of the tabbed bar, you must change the background color of the `WrapPanel` of the `TabControl`. Here is the code used to obtain the result above \(_Note the workaround used to color some tabs : this is due to the way the control is implemented. It might change in the future._\)
 
-```markup
+```xml
 <Window.Styles>
 
   <Style Selector="TabControl">
@@ -123,7 +123,7 @@ DataContext = new TabItemModel[] {
 
 Finally create a `TabControl` and bind its Items property to the DataContext.
 
-```markup
+```xml
 <TabControl Items="{Binding}">
     <TabControl.ItemTemplate>
       <DataTemplate>

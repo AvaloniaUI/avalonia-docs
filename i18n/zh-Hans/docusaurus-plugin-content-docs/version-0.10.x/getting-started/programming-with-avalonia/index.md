@@ -11,7 +11,7 @@ XAML is an XML-based markup language that implements an application's appearance
 
 The following example uses XAML to implement the appearance of a window that contains a single button:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication1.MainWindow"

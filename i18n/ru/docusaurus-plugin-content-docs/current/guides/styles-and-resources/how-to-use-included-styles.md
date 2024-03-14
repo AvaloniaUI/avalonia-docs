@@ -11,7 +11,7 @@ This guide shows you how to share styles from a separate styles file (that is in
 
 To do this, you define styles in a new XAML file. Here, the root element must then be either a `Style` or `Styles` element. For example:
 
-```markup
+```xml
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style Selector="TextBlock.h1">
@@ -34,7 +34,7 @@ To use the styles defined in a separate file, you must reference it using a `Sty
 
 For example, to use styles defined in a file `AppStyles.axaml` (saved in the folder `/Styles`), you could write a a `StyleInclude` element in the window like this:
 
-```markup
+```xml
 <Window ... >
     <Window.Styles>
         <StyleInclude Source="/Styles/AppStyles.axaml" />

@@ -7,7 +7,7 @@ The `ListBox` is an `ItemsControl` which displays items in a multi-line list box
 
 The items to display in the `ListBox` are specified using the `Items` property. This property will often be bound to a collection on the control's `DataContext`:
 
-```markup
+```xml
 <ListBox Items="{Binding MyItems}"/>
 ```
 
@@ -15,7 +15,7 @@ The items to display in the `ListBox` are specified using the `Items` property. 
 
 You can customize how an item is displayed by specifying an `ItemTemplate`. For example to display each item inside a red border with rounded corners:
 
-```markup
+```xml
 <ListBox Items="{Binding MyItems}">
     <ListBox.ItemTemplate>
         <DataTemplate>
@@ -33,7 +33,7 @@ Each item displayed in a `ListBox` will be wrapped in a `ListBoxItem` - this is 
 
 Sometimes you will want to customize the container itself. You can do this by including a style targeting `ListBoxItem` in the `ListBox`:
 
-```markup
+```xml
 <ListBox Items="{Binding Items}">
     <ListBox.Styles>
         <!-- Give the ListBoxItems a fixed with of 100 and right-align them -->
@@ -66,7 +66,7 @@ Controls the type of selection that can be made on the `ListBox`:
 
 These values can be combined, e.g.:
 
-```markup
+```xml
 <ListBox SelectionMode="Multiple,Toggle"/>
 ```
 
@@ -74,7 +74,7 @@ These values can be combined, e.g.:
 
 Exposes the index of the selected item, or in the case of multiple selection the first selected item. You will often want to bind this to a view model if your list `SelectionMode` is set to `Single`.
 
-```markup
+```xml
 <ListBox SelectedIndex="{Binding SelectedIndex}"/>
 ```
 
@@ -97,7 +97,7 @@ By default bindings to this property are two-way.
 
 Exposes the selected item in the `Items` collection, or in the case of multiple selection the first selected item. You will often want to bind this to a view model if your list `SelectionMode` is set to `Single`.
 
-```markup
+```xml
 <ListBox SelectedItem="{Binding SelectedItem}"/>
 ```
 
@@ -128,7 +128,7 @@ Once `Selection` is bound to a `SelectionModel`, `SelectedItems` will no longer 
 
 `SelectionModel` also exposes batching functionality through its `Update()` method and a `SelectionChanged` event which details exactly which items have been selected and deselected.
 
-```markup
+```xml
 <ListBox Items="{Binding Items}" Selection="{Binding Selection}"/>
 ```
 
@@ -172,7 +172,7 @@ This property holds the selected items in an `IList`. It can be bound to any lis
 
 For various reasons the performance of `SelectedItems` can be very poor, particularly on large collections. It is recommended that you use the `Selection` property instead.
 
-```markup
+```xml
 <ListBox SelectedItems="{Binding SelectedItems}"/>
 ```
 
@@ -187,7 +187,7 @@ public MyViewModel : ReactiveObject
 
 By default if an item is too wide to display in the `ListBox`, a horizontal scrollbar will be displayed. If instead you want items to be constrained to the width of the `ListBox` \(for example if you want wrapping text in the items\) you can disable the horizontal scrollbar by setting `ScrollViewer.HorizontalScrollBarVisibility="Disabled"`.
 
-```markup
+```xml
 <ListBox Items="{Binding MyItems}" Width="250" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
     <ListBox.ItemTemplate>
         <DataTemplate>

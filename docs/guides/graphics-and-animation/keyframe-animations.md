@@ -75,7 +75,7 @@ The animation runs as soon as the rectangle control is loaded and can be selecte
 
 This example shows you how to animate two properties on the same timeline.
 
-```markup
+```xml
 <Window.Styles>
     <Style Selector="Rectangle.red">
       <Setter Property="Fill" Value="Red"/>
@@ -103,7 +103,7 @@ The red rectangle is faded-in and rotated at the same time.
 
 You can add a delay to the start of an animation by setting the delay attribute of the animation element. For example:
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1"> 
     ...
@@ -170,7 +170,7 @@ An easing function defines how a property is varied over time during an animatio
 
 The default easing function is linear (above left), but you use another pattern by setting the name of the desired function in the easing attribute. For example to use the 'bounce ease in' function (above right):
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1"
            Easing="BounceEaseIn"> 
@@ -184,7 +184,7 @@ For a full list of the _Avalonia UI_ easing functions, see the reference [here](
 
 You can also add your own custom easing function class like this:
 
-```markup
+```xml
 <Animation Duration="0:0:1"
            Delay="0:0:1">
     <Animation.Easing>

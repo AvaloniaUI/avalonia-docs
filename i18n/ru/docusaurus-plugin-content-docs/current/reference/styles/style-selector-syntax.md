@@ -10,7 +10,7 @@ description: REFERENCE - Styles
 
 
 
-```markup
+```xml
 <Style Selector="Button">
 <Style Selector="local|Button">
 ```
@@ -40,7 +40,7 @@ Note the type of an object is actually determined by looking at its `StyleKey` p
 
 
 
-```markup
+```xml
 <Style Selector="#myButton">
 <Style Selector="Button#myButton">
 ```
@@ -59,7 +59,7 @@ Selects a control by its `Name` attribute, with an added `#` (hash) character pr
 
 
 
-```markup
+```xml
 <Style Selector="Button.large">
 <Style Selector="Button.large.red">
 ```
@@ -101,7 +101,7 @@ For more detail about pseudo classes, see the reference [here](pseudo-classes.md
 
 
 
-```markup
+```xml
 <Style Selector=":is(Button)">
 <Style Selector=":is(local|Button)">
 ```
@@ -124,7 +124,7 @@ INterestingly, this allows you to write very general class-based selectors. As c
 
 
 
-```markup
+```xml
 <Style Selector=":is(Control).margin2">
 <Style Selector=":is(local|Control.margin2)">
 ```
@@ -141,7 +141,7 @@ new Style(x => x.Is(typeof(Control)).Class("margin2"));
 
 
 
-```markup
+```xml
 <Style Selector="StackPanel > Button">
 ```
 
@@ -176,7 +176,7 @@ The selector will match the first button, but not the second. This is because th
 
 
 
-```markup
+```xml
 <Style Selector="StackPanel Button">
 ```
 
@@ -195,7 +195,7 @@ Therefore applying the above selector to the previous XAML sample, both buttons 
 
 
 
-```markup
+```xml
 <Style Selector="Button[IsDefault=true]">
 ```
 
@@ -220,7 +220,7 @@ For example, in the XAML above, the first button will be selected, but not the s
 :::info
 Note: when you use an attached property as a property match, the property name must be wrapped in parentheses. Fro example:
 
-```markup
+```xml
 <Style Selector="TextBlock[(Grid.Row)=0]">
 ```
 :::
@@ -233,7 +233,7 @@ Further note: when you use a property match, the property type must support the 
 
 
 
-```markup
+```xml
 <Style Selector="Button /template/ ContentPresenter">
 ```
 
@@ -252,7 +252,7 @@ In the example above, if a button has a template, then the selector matches sele
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:not(.h1)">
 ```
 
@@ -269,7 +269,7 @@ This function negates the selection in the brackets. In the example above all th
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock, Button">
 ```
 
@@ -286,7 +286,7 @@ You can select any element that matches a comma-separated list of selectors. Any
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-child(2n+3)">
 ```
 
@@ -311,7 +311,7 @@ There is a corresponding selector with a formula that counts from the end of the
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-last-child(2n+3)">
 ```
 
@@ -328,7 +328,7 @@ You can omit the **A** and **n** from the formula in XAML to specify a single po
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-child(3)">
 ```
 

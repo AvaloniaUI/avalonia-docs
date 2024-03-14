@@ -7,7 +7,7 @@ The `TreeView` is a control that presents hierarchical tree data and allows sele
 
 One example for populating a `TreeView` can be from a directory on the computer. You can create a `TreeView` in the `MainWindow.axaml` file in an Avalonia MVVM project.
 
-```markup
+```xml
 <TreeView Items="{Binding Items}" 
 	  Width="400" Height="480" 
 	  HorizontalAlignment="Left">

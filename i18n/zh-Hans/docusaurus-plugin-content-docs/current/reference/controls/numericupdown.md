@@ -28,7 +28,7 @@ You will probably use these properties most often:
 
 This is a basic example of a numeric up-down control. There are no limits to the value here:
 
-```markup
+```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">Number of items:</TextBlock>
   <NumericUpDown Value="10" />
@@ -45,7 +45,7 @@ Remember to specify a `FormatString` property when you create a custom decimal i
 
 For example:
 
-```markup
+```xml
 <StackPanel Margin="20">  
   <TextBlock Margin="0 5">Opacity:</TextBlock>
   <NumericUpDown Value="0.5" Increment="0.05" 

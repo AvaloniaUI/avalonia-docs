@@ -34,7 +34,7 @@ You will probably use these properties most often:
 
 This is basic example with text items has a limit set on the drop-down list height.
 
-```markup
+```xml
 <StackPanel Margin="20">
   <ComboBox SelectedIndex="0" MaxDropDownHeight="100">
     <ComboBoxItem>Text Item 1</ComboBoxItem>
@@ -54,7 +54,7 @@ This is basic example with text items has a limit set on the drop-down list heig
 
 This example uses a composed view for each item:
 
-```markup
+```xml
 <StackPanel Margin="20">
   <ComboBox SelectedIndex="0">
     <ComboBoxItem>

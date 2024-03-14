@@ -18,7 +18,7 @@ You will probably use these properties most often:
 
 This example has a basic one line text box, a password box, and a text-wrapping multiline text box:
 
-```markup
+```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5" >Name:</TextBlock>
   <TextBox  Watermark="Enter your name"/>

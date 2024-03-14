@@ -10,7 +10,7 @@ description: GUIDES - WPF Conversion
 
 例如，以下代码添加了一个数据模板来显示视图模型类`MyViewModel`：
 
-```markup
+```xml
 <UserControl xmlns:viewmodels="using:MyApp.ViewModels"
              x:DataType="viewmodels:ControlViewModel">
     <UserControl.DataTemplates>

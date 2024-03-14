@@ -10,7 +10,7 @@ import ControlContentStudentScreenshot from '/img/templates/data-templates/stude
 
 Many controls have a `Content` property, such as [`ContentControl.Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756). `Window` inherits from [`ContentControl`](../controls/contentcontrol), so lets use that as an example. You're probably familiar with what happens when you put a control in the `Window.Content` property - the window displays the control:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Button HorizontalAlignment="Center"
@@ -24,7 +24,7 @@ Many controls have a `Content` property, such as [`ContentControl.Content`](http
 
 Similarly if you put a string as the window content, the window will display the string:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   Hello World!
@@ -52,7 +52,7 @@ namespace Example
 }
 ```
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Example">
@@ -66,7 +66,7 @@ Not very helpful. That's because Avalonia doesn't know _how_ to display an objec
 
 The easiest way to do this on `Window` (and any control that inherits from `ContentControl`) is to set the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/7AA9343E) property:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Example">
@@ -97,7 +97,7 @@ The data template for the window content doesn't only come from the `ContentTemp
 
 Using the `DataTemplates` collection the previous example could be written as:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Example">
@@ -139,7 +139,7 @@ namespace Example
 
 Now we can add a separate data template for the `Teacher` type and depending on the type of object in the `MainWindowViewModel.Content` property, the appropriate view will be displayed:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Example">

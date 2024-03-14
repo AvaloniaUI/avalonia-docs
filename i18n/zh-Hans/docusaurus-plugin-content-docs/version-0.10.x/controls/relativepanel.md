@@ -22,7 +22,7 @@ Attached properties are used to control the layout of elements. This table shows
 
 This XAML shows how to arrange elements in a RelativePanel.
 
-```markup
+```xml
 <RelativePanel BorderBrush="Gray" BorderThickness="1">
     <Rectangle x:Name="RedRect" Fill="Red" Height="44" Width="44"/>
     <Rectangle x:Name="BlueRect" Fill="Blue"

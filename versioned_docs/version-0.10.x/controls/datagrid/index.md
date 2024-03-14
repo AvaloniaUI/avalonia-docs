@@ -28,7 +28,7 @@ Note, that version should match Avalonia version you are using.
 
 The Themes can be changed to light or dark to fit your application theme.
 
-```markup
+```xml
 <Application.Styles>
     <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
@@ -38,7 +38,7 @@ The Themes can be changed to light or dark to fit your application theme.
 
 Or if you are using new Fluent theme, you will need to include styles created specifically for that:
 
-```markup
+```xml
 <Application.Styles>
     <FluentTheme Mode="Light" />
     <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
@@ -51,7 +51,7 @@ Or if you are using new Fluent theme, you will need to include styles created sp
 
 This will generate a DataGrid with column header names. FirstName and LastName.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -78,7 +78,7 @@ public class Person
 
 The DataGrid uses the same class Person as before, but now with custom column header name. Forename and Surname.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

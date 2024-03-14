@@ -12,7 +12,7 @@ You can use the [**Orientation**](https://docs.microsoft.com/en-us/uwp/api/windo
 
 The following XAML shows how to create a vertical StackPanel of items.
 
-```markup
+```xml
 <StackPanel>
     <Rectangle Fill="Red" Height="44"/>
     <Rectangle Fill="Blue" Height="44"/>
@@ -29,7 +29,7 @@ In a StackPanel, if a child element's size is not set explicitly, it stretches t
 
 StackPanel has a `Spacing` property to allow an even spacing between items.
 
-```markup
+```xml
 <StackPanel Spacing="5">
     <Rectangle Fill="Red" Height="44"/>
     <Rectangle Fill="Blue" Height="44"/>

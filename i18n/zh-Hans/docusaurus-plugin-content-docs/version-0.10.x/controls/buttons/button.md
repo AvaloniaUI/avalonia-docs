@@ -49,7 +49,7 @@ The Button control's full documentation can be found [here](http://reference.ava
 
 ### Basic button
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -69,7 +69,7 @@ produces following output with **Windows 10**
 
 ### Colored button
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -91,7 +91,7 @@ produces following output with **Windows 10**
 
 Toggles between a "Play" icon and a "Pause" icon on click.
 
-```markup
+```xml
 <UserControl.Resources>
     <Bitmap x:Key="Play">
         <x:Arguments>
@@ -106,7 +106,7 @@ Toggles between a "Play" icon and a "Pause" icon on click.
 </UserControl.Resources>
 ```
 
-```markup
+```xml
 <Button Name="PlayButton" HorizontalAlignment="Center" Width="36" Command="{Binding PlayCommand}">
     <Panel>
         <Image Source="{DynamicResource Play}" IsVisible="{Binding !IsPlaying}" Width="20"
@@ -121,7 +121,7 @@ Toggles between a "Play" icon and a "Pause" icon on click.
 
 It is possible to bind a view model command to a simple method or with a ReactiveCommand. There are lots of advantages to the ReactiveCommand binding for all but the simplest user interfaces such as being able to pass an `IObservable<bool>` object in to have it dynamically calculate state. Both methods are displayed below. First the "simple" method binding:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -157,7 +157,7 @@ public ReactiveCommand OnClickCommand { get; }
 
 ### Binding to Events
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

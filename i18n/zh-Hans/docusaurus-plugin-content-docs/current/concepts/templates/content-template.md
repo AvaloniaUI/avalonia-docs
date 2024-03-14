@@ -17,7 +17,7 @@ import ContentTemplateStudentScreenshot from '/img/concepts/templates/contenttem
 
 您可以使用 `DataTemplate` 标签定义数据模板（针对任何特定的类），它是内置控件和一些绑定的组合。例如：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

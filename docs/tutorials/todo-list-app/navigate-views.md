@@ -71,7 +71,7 @@ Follow this procedure:
 - Locate the **MainWindow.axaml** file in the **/Views** folder.
 - Edit the XAML as shown.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:ToDoList.ViewModels"
@@ -95,7 +95,7 @@ Lastly, to make the add item button call the `AddItem()` method, follow this pro
 * Locate the **ToDoListView.axaml** file in the **/Views** folder.
 * Edit the XAML for the button as shown:
 
-```markup
+```xml
 <Button DockPanel.Dock="Bottom"
         HorizontalAlignment="Stretch"
         HorizontalContentAlignment="Center"

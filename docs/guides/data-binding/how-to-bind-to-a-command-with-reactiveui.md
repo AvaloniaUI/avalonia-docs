@@ -79,7 +79,7 @@ When the control bound to the reactive command is activated (in this example: wh
 
 You will often need to pass an argument to the reactive command that is bound to a control. You can achieve this using the `CommandParameter` attribute in the XAML. For example:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
    ...
    <StackPanel Margin="20">
@@ -114,7 +114,7 @@ Note that no type conversion is carried out on the `CommandParameter` attribute,
 
 For example to pass an integer parameter:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:sys="clr-namespace:System;assembly=mscorlib">
  ...   

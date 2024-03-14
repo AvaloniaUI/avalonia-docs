@@ -27,7 +27,7 @@ Negation also works when binding to non-boolean values. First of all, the value 
 
 A "double-bang" can be used to convert a non-boolean value to a boolean value. For example to hide a control when a collection is empty:
 
-```markup
+```xml
 <Panel>
   <ListBox Items="{Binding Items}" IsVisible="{Binding !!Items.Count}"/>
 </Panel>

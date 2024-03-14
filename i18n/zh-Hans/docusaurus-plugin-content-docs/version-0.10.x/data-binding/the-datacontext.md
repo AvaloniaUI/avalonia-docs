@@ -23,7 +23,7 @@ private static void AppMain(Application app, string[] args)
 
 This means that when the `MainWindow` is created, a new instance of `MainWindowViewModel` will be created and assigned to the window's `DataContext` property. From here all bindings will by default bind to properties on this object:
 
-```markup
+```xml
 <Window>
     <Button Content="{Binding ButtonCaption}"/>
 </Window>

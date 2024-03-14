@@ -20,7 +20,7 @@ When prompted name this MusicStoreWindow and press the `Enter` key.
 
 This will add the following code:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -34,7 +34,7 @@ This will add the following code:
 
 Change this code as follows to enable the Acrylic and extended client area so the Window will look like our `MainWindow`.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

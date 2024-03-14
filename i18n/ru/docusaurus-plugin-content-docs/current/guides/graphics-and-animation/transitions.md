@@ -8,7 +8,7 @@ title: How To Use Transitions
 
 Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via `Transitions` property:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     <Window.Styles>
         <Style Selector="Rectangle.red">
@@ -37,7 +37,7 @@ The above example will listen to changes in the `Rectangle`'s `Opacity` property
 
 Transitions can also be defined in any style by using a `Setter` with `Transitions` as the target property and encapsulating them in a `Transitions` object, like so:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     <Window.Styles>
         <Style Selector="Rectangle.red">
@@ -90,7 +90,7 @@ The following transition types are available. The correct type must be used depe
 
 Render transforms applied to controls using CSS-like syntax can be transitioned. The following example shows a Border which rotates 45 degrees when the pointer is hovered over it:
 
-```markup title='XAML'
+```xml title='XAML'
 <Border Width="100" Height="100" Background="Red">
     <Border.Styles>
         <Style Selector="Border">

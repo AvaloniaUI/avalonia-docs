@@ -39,7 +39,7 @@ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 
 `d:DesignWidth` 和 `d:DesignHeight` 属性为预览的控件应用宽度和高度。
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -53,7 +53,7 @@ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 
 `d:DataContext` 属性仅在设计时应用 `DataContext` 。建议您与 `{x:Static}` 指令结合使用此属性，以引用您的一个程序集中的静态属性：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -81,7 +81,7 @@ namespace My.Namespace
 
 或者您可以使用 `Design.DataContext` 附加属性，以及 `Design.Width` 和 `Design.Height`。
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

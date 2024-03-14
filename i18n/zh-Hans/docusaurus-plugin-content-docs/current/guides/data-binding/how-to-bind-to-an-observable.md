@@ -14,6 +14,6 @@ title: 如何绑定到可观察对象
 
 例如，如果 `DataContext.Name` 是一个 `IObservable<string>`，那么以下示例将绑定到可观察对象产生的每个字符串的长度，随着每个值的产生而变化：
 
-```markup
+```xml
 <TextBlock Text="{Binding Name^.Length}"/>
 ```

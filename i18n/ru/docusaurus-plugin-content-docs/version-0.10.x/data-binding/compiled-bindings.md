@@ -13,7 +13,7 @@ Compiled bindings are not enabled by default. To enable compiled bindings, you w
 
 You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
 
-```markup
+```xml
 <!-- Set DataType and enable compiled bindings -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -48,7 +48,7 @@ Starting from Avalonia `11.0-preview5` you can also enable or disable it in whol
 
 If you don't want to enable compiled bindings for all child nodes, you can also use the `CompiledBinding`-markup. You still need to define the `DataType`, but you can omit `x:CompileBindings="True"`.
 
-```markup
+```xml
 <!-- Set DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -73,7 +73,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
 ## ReflectionBinding-Markup
 If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use compiled binding at a certain position or you hit one of the [known limitations](#known-limitations), you can use the `ReflectionBinding`-markup.
 
-```markup
+```xml
 <!-- Set DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

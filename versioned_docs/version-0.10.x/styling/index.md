@@ -4,7 +4,7 @@
 
 The following style selects any `TextBlock` in the `Window` with a `h1` _style class_ and sets its font size to 24 point and font weight to bold:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Window.Styles>

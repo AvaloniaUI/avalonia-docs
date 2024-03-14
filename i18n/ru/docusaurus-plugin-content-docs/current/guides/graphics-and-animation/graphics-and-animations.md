@@ -22,7 +22,7 @@ Avalonia introduces an extensive, scalable, and flexible set of graphics feature
 
 Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, `Line`, `Path`, `Polygon` and `Rectangle`.
 
-```markup
+```xml
 <Canvas Background="Yellow" Width="300" Height="400">
     <Rectangle Fill="Blue" Width="63" Height="41" Canvas.Left="40" Canvas.Top="31">
         <Rectangle.OpacityMask>

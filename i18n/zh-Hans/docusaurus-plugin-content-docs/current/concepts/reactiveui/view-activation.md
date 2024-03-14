@@ -35,7 +35,7 @@ public class ViewModel : ReactiveObject, IActivatableViewModel
 
 这是上面所示视图模型的用户界面。
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         Background="#f0f0f0" FontFamily="Ubuntu"

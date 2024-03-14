@@ -27,7 +27,7 @@ This column is used to display text data, normally represented by a `string`. In
 
 ### Example
 
-```markup
+```xml
 <DataGrid Name="MyDataGrid" Items="{Binding People}" AutoGenerateColumns="False" >
     <DataGrid.Columns>
         <DataGridTextColumn Header="Forename" Binding="{Binding FirstName}"/>
@@ -50,7 +50,7 @@ This column is used to represent a `bool` value. The  value is represented by a 
 
 ### Example
 
-```markup
+```xml
 <DataGrid Name="MyDataGrid" Items="{Binding ToDoListItems}" AutoGenerateColumns="False" >
     <DataGrid.Columns>
         <DataGridCheckBoxColumn Header="✔" Binding="{Binding IsChecked}"/>
@@ -77,7 +77,7 @@ The DataGridTemplateColumn is editable from Avalonia version 0.10.12 onward. If 
 
 ### Example
 
-```markup
+```xml
 <DataGrid Name="MyDataGrid"
           xmlns:model="using:MyApp.Models"  >
   <DataGrid.Columns>

@@ -30,7 +30,7 @@ The escape character (backslash) can be used to include a special character as a
 
 This is a basic example:
 
-```markup
+```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">International phone number:</TextBlock>
   <MaskedTextBox Mask="(+09) 000 000 0000" />

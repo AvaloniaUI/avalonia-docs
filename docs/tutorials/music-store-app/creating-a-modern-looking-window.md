@@ -18,7 +18,7 @@ Follow this procedure to style the main window in 'dark' mode:
 - Locate and open the file **App.axaml**.
 - In the XAML, change the `RequestedThemeVariant` attribute in the `<Application>` element from "Default" to "Dark"
 
-```markup
+```xml
 <Application ...
     RequestedThemeVariant="Dark">
 ```
@@ -41,7 +41,7 @@ Follow this procedure to style the background of the main window with an acrylic
 - Find the end of the opening tag of the `<Window>` element.
 - After the `Title="Avalonia.MusicStore"` attribute, add two new attributes as follows:
 
-```markup
+```xml
 <Window ...
         Title="Avalonia.MusicStore"
 
@@ -51,7 +51,7 @@ Follow this procedure to style the background of the main window with an acrylic
 
 - To apply the acrylic effect to the whole window, replace the `<TextBlock>` element in the content zone of the main window with the following XAML for a panel:
 
-```markup
+```xml
 <Window ... >
        <Panel>
            <ExperimentalAcrylicBorder IsHitTestVisible="False">
@@ -83,7 +83,7 @@ Follow this procedure to extend the acrylic blur effect onto the title bar:
 - Find the end of the opening tag of the `<Window>` element again.
 - Add the `ExtendClientAreaToDecorationsHint` attribute as shown:
 
-```markup
+```xml
    <Window ...
            TransparencyLevelHint="AcrylicBlur"
            Background="Transparent"

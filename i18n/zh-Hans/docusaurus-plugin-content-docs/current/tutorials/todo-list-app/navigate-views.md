@@ -71,7 +71,7 @@ namespace ToDoList.ViewModels
 - 在 **/Views** 文件夹中找到 **MainWindow.axaml** 文件。
 - 编辑 XAML 如下：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:ToDoList.ViewModels"
@@ -95,7 +95,7 @@ namespace ToDoList.ViewModels
 * 在 **/Views** 文件夹中找到 **ToDoListView.axaml** 文件。
 * 编辑按钮的 XAML 如下：
 
-```markup
+```xml
 <Button DockPanel.Dock="Bottom"
         HorizontalAlignment="Stretch"
         HorizontalContentAlignment="Center"

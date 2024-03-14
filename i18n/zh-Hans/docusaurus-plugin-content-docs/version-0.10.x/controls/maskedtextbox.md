@@ -14,7 +14,7 @@ The `MaskedTextBox` control is an editable text field where a user can input tex
 
 ### Basic example line TextBox
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

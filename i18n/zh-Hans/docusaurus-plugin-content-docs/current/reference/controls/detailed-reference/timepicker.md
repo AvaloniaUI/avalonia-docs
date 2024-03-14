@@ -32,7 +32,7 @@ This example shows how to create a time picker for the 24 hour clock, with 20 mi
 
 You can set the time value as an attribute in XAML.  Use a string in the form _Hh:Mm_ where _Hh_ is hours and can be between 0 and 23 and _Mm_ is minutes and can be between 0 and 59.
 
-```markup
+```xml
 <TimePicker SelectedTime="09:15"/>
 ```
 

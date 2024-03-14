@@ -9,7 +9,7 @@ The `Panel` is the base class for controls that can contain multiple children li
 
 The `Panel` class can be useful on its own for very basic layouts, or simply to allow multiple controls to be to be contained.
 
-```markup
+```xml
 <Panel Height="300" Width="300">
     <Rectangle Fill="Red" Height="100" VerticalAlignment="Top"/>
     <Rectangle Fill="Blue" Width="100" HorizontalAlignment="Right" />

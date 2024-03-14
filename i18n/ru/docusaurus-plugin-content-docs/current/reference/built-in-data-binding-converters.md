@@ -21,7 +21,7 @@ _Avalonia UI_ includes a number of built-in data binding converters for common s
 
 Ниже приведен пример блока текста, когда его привязанное значение равно `false`:
 
-```markup
+```xml
 <StackPanel>
   <TextBox Name="input" IsEnabled="{Binding AllowInput}"/>
   <TextBlock IsVisible="{Binding !AllowInput}">Ввод запрещен</TextBlock>
@@ -32,7 +32,7 @@ _Avalonia UI_ includes a number of built-in data binding converters for common s
 
 Целочисленное `0` преобразуется в `false`, а все остальные целочисленные в `true`. Вы можете использовать оператор отрицания, чтобы вывести сообщение, когда коллекция пуста, к примеру:
 
-```markup
+```xml
 <Panel>
   <ListBox ItemsSource="{Binding Items}"/>
   <TextBlock IsVisible="{Binding !Items.Count}">No results found</TextBlock>
@@ -42,7 +42,7 @@ _Avalonia UI_ includes a number of built-in data binding converters for common s
 
 Вы можете использовать такаой способ, чтобы скрыть элемент, если коллексция пуста (кол-во элементов `0`):
 
-```markup
+```xml
 <Panel>
   <ListBox ItemsSource="{Binding Items}" IsVisible="{Binding !!Items.Count}"/>
 </Panel>
@@ -52,7 +52,7 @@ _Avalonia UI_ includes a number of built-in data binding converters for common s
 
 В примере ниже, элемент `TextBlock` будет скрыт, если значение привязанных данных равно `null` или пустое:
 
-```markup
+```xml
 <TextBlock Text="{Binding MyText}"
            IsVisible="{Binding MyText, 
                        Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
@@ -61,7 +61,7 @@ _Avalonia UI_ includes a number of built-in data binding converters for common s
 А этот пример скроет элемент `ContentControl`, если значение привязанных данных равно `null`:
 And this example will hide the content control if the bound object is null or empty:
 
-```markup
+```xml
 <ContentControl Content="{Binding MyContent}"
                 IsVisible="{Binding MyContent, 
                             Converter={x:Static ObjectConverters.IsNotNull}}"/>

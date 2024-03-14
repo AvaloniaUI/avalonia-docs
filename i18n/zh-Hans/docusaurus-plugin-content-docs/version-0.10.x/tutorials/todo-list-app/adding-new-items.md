@@ -15,7 +15,7 @@ We start by creating the view \(see [here](../todo-list-app/creating-a-view#crea
 
 Views/AddItemView.axaml
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -104,7 +104,7 @@ We now want to bind our `Window.Content` property to this new `Content` property
 
 Views/MainWindow.axaml
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="Todo.Views.MainWindow"
@@ -119,7 +119,7 @@ And finally we need to make the "Add an item" button call `MainWindowViewModel.A
 
 Views/TodoListView.axaml
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -146,7 +146,7 @@ Views/TodoListView.axaml
 
 The binding we've added to `<Button>` is:
 
-```markup
+```xml
 Command="{Binding $parent[Window].DataContext.AddItem}"
 ```
 
@@ -254,7 +254,7 @@ We can now bind the OK and Cancel buttons in the view to the `Ok` and `Cancel` c
 
 Views/AddItemView.axaml
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

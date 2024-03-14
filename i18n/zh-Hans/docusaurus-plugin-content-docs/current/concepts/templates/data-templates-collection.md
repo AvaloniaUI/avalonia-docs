@@ -14,7 +14,7 @@ _Avalonia UI_中的每个控件都有一个`DataTemplates`（数据模板）集�
 
 因此，您可以修改前面的示例以使用`DataTemplates`集合，如下所示：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

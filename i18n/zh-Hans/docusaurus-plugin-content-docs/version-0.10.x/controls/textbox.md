@@ -22,7 +22,7 @@ The `TextBox` control is an editable text field where a user can input text.
 
 ### Basic one line TextBox
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -42,7 +42,7 @@ produces the following output in **Windows 10**
 
 ### Password input TextBox
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -62,7 +62,7 @@ produces the following output in **Windows 10** when text is input
 
 When using the Fluent theme, you can apply the style class, `revealPasswordButton`, and the TextBox will provide an eye 👁 glyph for the user to show the plane text temporally. Please note, the `TextBox` may be written to but not copied from.
 
-```markup
+```xml
 <TextBox Classes="revealPasswordButton" PasswordChar="•" />
 ```
 
@@ -70,7 +70,7 @@ When using the Fluent theme, you can apply the style class, `revealPasswordButto
 
 Avalonia can show a "watermark" in a `TextBox`, which is a piece of text that is displayed when the `TextBox` is empty \(in HTML5 this is called a _placeholder_\)
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -90,7 +90,7 @@ produces the following output in **Windows 10**
 
 ### Multiline TextBox
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

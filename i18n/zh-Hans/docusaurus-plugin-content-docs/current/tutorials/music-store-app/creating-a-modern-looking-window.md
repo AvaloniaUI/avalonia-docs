@@ -18,7 +18,7 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 - 找到并打开文件 **App.axaml**。
 - 在 XAML 中，将 `<Application>` 元素中的 `RequestedThemeVariant` 属性从 `Default` 更改为 `Dark`：
 
-```markup
+```xml
 <Application ...
     RequestedThemeVariant="Dark">
 ```
@@ -41,7 +41,7 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 - 找到 `<Window>` 元素的结束标签。
 - 在 `Title="Avalonia.MusicStore"` 属性后添加两个新属性，如下所示：
 
-```markup
+```xml
 <Window ...
         Title="Avalonia.MusicStore"
 
@@ -51,7 +51,7 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 
 - 为了将亚克力效果应用到整个窗口，将主窗口的内容区域中的 `<TextBlock>` 元素替换为以下用于 Panel 的 XAML 代码：
 
-```markup
+```xml
 <Window ... >
        <Panel>
            <ExperimentalAcrylicBorder IsHitTestVisible="False">
@@ -83,7 +83,7 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 - 再次找到 `<Window>` 元素的结束标签。
 - 添加 `ExtendClientAreaToDecorationsHint` 属性，如下所示：
 
-```markup
+```xml
    <Window ...
            TransparencyLevelHint="AcrylicBlur"
            Background="Transparent"

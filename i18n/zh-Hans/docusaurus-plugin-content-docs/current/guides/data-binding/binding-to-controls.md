@@ -16,7 +16,7 @@ title: 如何绑定到控件
 
 如果要绑定到另一个命名控件上的属性，可以使用以 `#` 字符为前缀的控件名称。
 
-```markup
+```xml
 <TextBox Name="other">
 
 <!-- 绑定到命名为 other 控件的 Text 属性 -->
@@ -25,7 +25,7 @@ title: 如何绑定到控件
 
 这相当于 WPF 和 UWP 开发者熟悉的长格式绑定：
 
-```markup
+```xml
 <TextBox Name="other">
 <TextBlock Text="{Binding Text, ElementName=other}"/>
 ```
@@ -36,7 +36,7 @@ _Avalonia UI_ 支持这两种语法。
 
 您可以使用 `$parent` 语法绑定到目标的（逻辑控件树）父级：
 
-```markup
+```xml
 <Border Tag="Hello World!">
   <TextBlock Text="{Binding $parent.Tag}"/>
 </Border>
@@ -44,7 +44,7 @@ _Avalonia UI_ 支持这两种语法。
 
 或者使用带有 `$parent` 语法的索引绑定到任何级别的祖先：
 
-```markup
+```xml
 <Border Tag="Hello World!">
   <Border>
     <TextBlock Text="{Binding $parent[1].Tag}"/>
@@ -56,7 +56,7 @@ _Avalonia UI_ 支持这两种语法。
 
 您还可以绑定到指定类型的最近祖先，如下所示：
 
-```markup
+```xml
 <Border Tag="Hello World!">
   <Decorator>
     <TextBlock Text="{Binding $parent[Border].Tag}"/>
@@ -66,7 +66,7 @@ _Avalonia UI_ 支持这两种语法。
 
 最后，您可以结合索引和类型：
 
-```markup
+```xml
 <Border Tag="Hello World!">
   <Border>
     <Decorator>
@@ -78,7 +78,7 @@ _Avalonia UI_ 支持这两种语法。
 
 如果需要在祖先类型中包含 XAML 命名空间，则使用冒号分隔命名空间和类名，如下所示：
 
-```markup
+```xml
 <local:MyControl Tag="Hello World!">
   <Decorator>
     <TextBlock Text="{Binding $parent[local:MyControl].Tag}"/>

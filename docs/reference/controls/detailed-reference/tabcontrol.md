@@ -24,7 +24,7 @@ If you only need the function of the tab headers part of this control, consider 
 
 This is simple tab example. The tab content is just some text: 
 
-```markup
+```xml
 <TabControl Margin="5">
   <TabItem Header="Tab 1">
     <TextBlock Margin="5">This is tab 1 content</TextBlock>

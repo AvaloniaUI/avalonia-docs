@@ -22,7 +22,7 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 - В нем, у элемента `<Application>`,
 поменяйте атрибут `RequestedThemeVariant` со значения "Default" на "Dark".
 
-```markup
+```xml
 <Application ...
     RequestedThemeVariant="Dark">
 ```
@@ -46,7 +46,7 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 - Найдите окончания открывающего тега `<Window>`.
 - После атрибута `Title="Avalonia.MusicStore"`, добавьте два новых, как показано ниже:
 
-```markup
+```xml
 <Window ...
         Title="Avalonia.MusicStore"
 
@@ -57,7 +57,7 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 - Для применения акрилового эффекта на все окно, замените элемент `<TextBlock>` в зоне содержимого
 основного окна, как показано ниже:
 
-```markup
+```xml
 <Window ... >
        <Panel>
            <ExperimentalAcrylicBorder IsHitTestVisible="False">
@@ -91,7 +91,7 @@ import MusicStoreFullAcrylicWindowScreenshot from '/img/tutorials/music-store-ap
 - Найдите окончания открывающего тега `<Window>`.
 - Добавьте атрибут `ExtendClientAreaToDecorationsHint`, как показано ниже
 
-```markup
+```xml
    <Window ...
            TransparencyLevelHint="AcrylicBlur"
            Background="Transparent"

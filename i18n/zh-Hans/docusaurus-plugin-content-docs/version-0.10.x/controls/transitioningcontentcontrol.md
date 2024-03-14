@@ -26,7 +26,7 @@ import TransitioningContentControlSlideScreenshot from '/img/controls/transition
 
 Let's assume we have a collection of different images and we want to show them in a slideshow like view. In order to do this we can setup our `TransitioningContentControl` like this:
 
-```markup
+```xml
 <TransitioningContentControl Content="{Binding SelectedImage}" >
     <TransitioningContentControl.ContentTemplate>
         <DataTemplate DataType="Bitmap">
@@ -44,7 +44,7 @@ If you don't like the `PageTransition` which is provided by the applied theme, y
 
 In the sample below we will change the [PageTransition](../animations/page-transitions.md) to slide the images horizontally.
 
-```markup
+```xml
 <TransitioningContentControl Content="{Binding SelectedImage}" >
     <TransitioningContentControl.PageTransition>
         <PageSlide Orientation="Horizontal" Duration="0:00:00.500" />
@@ -63,7 +63,7 @@ In the sample below we will change the [PageTransition](../animations/page-trans
 
 If you want to disable the transition, set the `PageTransition` to `null`.
 
-```markup
+```xml
 <TransitioningContentControl Content="{Binding SelectedImage}" PageTransition="{x:Null}" >
     <TransitioningContentControl.ContentTemplate>
         <DataTemplate DataType="Bitmap">

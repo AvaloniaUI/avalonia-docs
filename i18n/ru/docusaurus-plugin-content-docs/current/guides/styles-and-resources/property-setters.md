@@ -13,14 +13,14 @@ The setters in a style define what properties will be changed after _Avalonia UI
 
 For example:
 
-```markup
+```xml
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Padding" Value="4 2 0 4"/>
 ```
 
 You can also use a long-form syntax to set a control property to an object with several properties set, like this:
 
-```markup
+```xml
 <Setter Property="MyProperty">
    <MyObject Property1="My Value" Property2="999"/>
 </Setter>
@@ -28,7 +28,7 @@ You can also use a long-form syntax to set a control property to an object with 
 
 A style can also set properties using bindings. After the usual selection process, this causes _Avalonia UI_ to use a value from data context of the target control. For example, the setter can be defined like this:
 
-```markup
+```xml
 <Setter Property="FontSize" Value="{Binding SelectedFontSize}"/>
 ```
 
@@ -60,7 +60,7 @@ Note that the `Setter` creates a single instance of `Value` which will be applie
 
 Also note that bindings on an object defined in a setter value will not have access to the target control's data context. This is because there may be multiple target controls. This scenario may arise with a style defined like this:
 
-```markup
+```xml
 <Style Selector="local|MyControl">
   <Setter Property="MyProperty">
      <MyObject Property1="{Binding MyViewModelProperty}"/>
@@ -72,7 +72,7 @@ This means that in the example above, the binding source for the setter will be 
 
 Note: if you are using compiled bindings, you need to explicitly set the data type of the binding source in the `<Style>` element:
 
-```markup
+```xml
 <Style Selector="MyControl" x:DataType="MyViewModelClass">
   <Setter Property="ControlProperty" Value="{Binding MyViewModelProperty}" />
 </Style>
@@ -86,7 +86,7 @@ For more information about compiled bindings, see here. --> TO DO
 
 As previously described here, when you use a setter without a **data template**, a single instance of the setter value is created and shared across all matching controls. To change the value depending on a data template, you place the target control inside a template element, like this:
 
-```markup
+```xml
 <Style Selector="Border.empty">
   <Setter Property="Child">
     <Template>

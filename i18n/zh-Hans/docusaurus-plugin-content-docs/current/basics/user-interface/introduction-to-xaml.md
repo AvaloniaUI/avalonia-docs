@@ -25,7 +25,7 @@ _Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记�
 
 一个典型的Avalonia XAML文件如下所示：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication1.MainWindow">
@@ -54,7 +54,7 @@ _Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记�
 
 例如，下面的XAML将按钮添加到窗口的内容中：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button>Hello World!</Button>
@@ -71,7 +71,7 @@ _Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记�
 
 例如，要为按钮控件指定蓝色背景，您可以添加`Background`属性并将值设置为`"Blue"`。如下所示：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Background="Blue">Hello World!</Button>
@@ -82,7 +82,7 @@ _Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记�
 
 您可能已经注意到上面示例中的按钮的内容（"Hello World"字符串）放置在其打开和关闭标签之间。或者，您可以使用Content属性来设置内容。
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Content="Hello World!"/>
@@ -95,7 +95,7 @@ _Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记�
 
 您经常会使用 _Avalonia UI_ 绑定系统将控件属性链接到底层对象。链接是通过`{Binding}`标记扩展来声明的。例如：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Content="{Binding Greeting}"/>
