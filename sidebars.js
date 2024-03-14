@@ -499,7 +499,6 @@ const sidebars = {
             'concepts/reactiveui/binding-to-sorted-filtered-list',
           ],
         },
-        'concepts/pseudo-classes',
         {
           'type': 'category',
           'label': 'Services',
