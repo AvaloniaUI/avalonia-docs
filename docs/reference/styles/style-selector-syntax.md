@@ -369,7 +369,7 @@ This table lists some examples of selection by child position:
 | `:nth-child(3n+4)` | Every 3rd element start from 4th: **4**_(3×0+4)_, **7**_(3×1+4)_, **10**_(3×2+4)_, **13**_(3×3+4)_, etc                                                                                                         |
 | `:nth-child(-n+3)` | First 3 elements: **3**_(-1×0+3)_, **2**_(-1×1+3)_, **1**_(-1×2+3)_. All subsequent indices are less than 1 so they are not matching any elements.                                                              |
 
-## Online Child Position Tester
+### Online Child Position Tester
 
 Although this is a CSS site, it will work for _Avalonia UI_ child position selectors because the rules are the same.
 
@@ -377,3 +377,30 @@ Although this is a CSS site, it will work for _Avalonia UI_ child position selec
 You can use this site to test your child position selector: \
 [https://css-tricks.com/examples/nth-child-tester/](https://css-tricks.com/examples/nth-child-tester/)
 :::
+
+## Nesting
+
+```xml
+<Style Selector="TextBlock">
+    <Setter Property="FontSize" Value="24"/>
+    
+    <!-- Effectively "TextBlock:pointerover" -->
+    <Style Selector="^:pointerover">
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+</Style>
+```
+
+```csharp title='C#'
+new Style(x => x.OfType<TextBlock>())
+{
+    Setters = { new Setter(TextBlock.FontSizeProperty, 24d) },
+    Children =
+    {
+        new Style(x => x.Nesting().Class(":pointerover"))
+        {
+            Setters = { new Setter(TextBlock.FontWeightProperty, FontWeight.Bold) }
+        }
+    }
+};
+```
