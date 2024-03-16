@@ -84,7 +84,7 @@ In this example, you are using the dock panel `<DockPanel>` control. This is a t
     HorizontalContentAlignment="Center">Add Item</Button>
 ```
 
-In a dock panel there must be a single control filling the remaining space in its content zone (wherever that is located); or it will not display correctly. This filling control must have no `DockPanel.Dock` attribute. The tutorial uses a stack panel to fill the remainng space:
+In a dock panel there must be a single control filling the remaining space in its content zone (wherever that is located); or it will not display correctly. This filling control must have no `DockPanel.Dock` attribute. The tutorial uses a stack panel to fill the remaining space:
 
 ```xml
 <StackPanel>
