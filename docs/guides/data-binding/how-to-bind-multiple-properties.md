@@ -87,7 +87,7 @@ public sealed class RgbToBrushMultiConverter : IMultiValueConverter
 
 <img src={MultiBindingRgbScreenshot} alt=''/>
 
-:::info
-Consider creating a `MarkupExtension` to simplify the XAML syntax when a `MultiBinding` is frequently used and 
-`FuncMultiValueConverter` to reduce the amount of code needed for simpler converters.
+:::tip
+* Consider creating a `MarkupExtension` to simplify the XAML syntax when a `MultiBinding` is frequently reused.
+* Consider using `FuncMultiValueConverter` to reduce the amount of code needed for simpler converters.
 :::
