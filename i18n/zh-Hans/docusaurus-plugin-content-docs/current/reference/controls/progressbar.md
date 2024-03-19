@@ -1,22 +1,26 @@
 ---
+title: ProgressBar
 description: REFERENCE - Built-in Controls
 ---
 
 import ProgressBarScreenshot from '/img/reference/controls/progressbar/progressbar.png';
 
-# Progress Bar
+# ProgressBar
 
-The progress bar presents a value as a proportionately filled bar, with the option to show a caption.
+The `ProgressBar` presents a value as a proportionately filled bar with the option to show a caption.
 
 ## Useful Properties
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="241">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Minimum</code></td><td>Minimum value.</td></tr><tr><td><code>Maximum</code></td><td>Maximum value.</td></tr><tr><td><code>Value</code></td><td>Current value.</td></tr><tr><td><code>Foreground</code></td><td>The bar color.</td></tr><tr><td><code>ShowProgressText</code></td><td>Determines if the progress bar shows the value as a caption.</td></tr></tbody></table>
-
-:::warning
-The progress caption always shows the value with a percentage sign. This is only correct when the maximum to minimum range is 0 to 100.
-:::
+| Property             | Description                                        |
+|----------------------|----------------------------------------------------|
+| `Minimum`            | Minimum value.                                     |
+| `Maximum`            | Maximum value.                                     |
+| `Value`              | Current value.                                     |
+| `Foreground`         | The bar color.                                     |
+| `ShowProgressText`   | The progress bar shows progress as a text caption. |
+| `ProgressTextFormat` | The format string applied to the progress text.    |
 
 ## Example
 
@@ -33,6 +37,27 @@ The progress caption always shows the value with a percentage sign. This is only
 ```
 
 <img src={ProgressBarScreenshot} alt="" />
+
+## `ProgressTextFormat` Example
+
+By default, `ShowProgressText` shows the percentage completion according to the
+[`Value`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/E111DF5B),
+[`Minimum`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/8F9BD1EA), and
+[`Maximum`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/C07B22E9). The format of this
+text can be customised by using the `ProgressTextFormat` property. This expects a string which will be passed to
+a [`string.Format`](https://docs.microsoft.com/en-us/dotnet/api/system.string.format#system-string-format(system-string-system-object())) call
+with the value of `ProgressTextFormat` as the format string. The following format items are available at the given indices:
+
+* 0 = Value
+* 1 = Value as a Percentage from 0 to 100 (e.g. `Minimum = 0`, `Maximum = 50`, `Value = 25`, then `Percentage = 50`)
+* 2 = Minimum
+* 3 = Maximum
+
+| Min | Max | Value | `ProgressTextFormat`                | Output                       |
+|-----|-----|-------|-------------------------------------|------------------------------|
+| 0   | 20  | 17    | `{}{0}/{3} Tasks Complete ({1:0}%)` | `17/20 Tasks Complete (85%)` |
+
+Since `{0}` would appear at the start of the string in this example, it must be escaped.
 
 ## More Information
 
