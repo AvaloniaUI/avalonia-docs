@@ -6,19 +6,27 @@ description: REFERENCE
 
 _Avalonia UI_ includes a number of built-in data binding converters for common scenarios:
 
-| Converter                           | Description                                                                                                                         |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Negation Operator                   | The ! operator can be placed in front of the data binding path to return the inversion of a Boolean value. See also the note below. |
-| `StringConverters.IsNullOrEmpty`    | Returns `true` if the input string is null or empty                                                                                 |
-| `StringConverters.IsNotNullOrEmpty` | Returns `false` if the input string is null or empty                                                                                |
-| `ObjectConverters.IsNull`           | Returns `true` if the input is null                                                                                                 |
-| `ObjectConverters.IsNotNull`        | Returns `false` if the input is null                                                                                                |
-| `BoolConverters.And`                | A multi-value converter that returns `true` if all inputs are true.                                                                 |
-| `BoolConverters.Or`                 | A multi-value converter that returns `true` if any input is true.                                                                   |
+| Converter                           | Direction | Description                                                                                                |
+|-------------------------------------|-----------|------------------------------------------------------------------------------------------------------------|
+| Negation Operator                   | OneWay    | The ! operator can be placed in front of the data binding path to return the inversion of a Boolean value. |
+| `StringConverters.IsNullOrEmpty`    | OneWay    | Returns `true` if the input string is null or empty.                                                       |
+| `StringConverters.IsNotNullOrEmpty` | OneWay    | Returns `false` if the input string is null or empty.                                                      |
+| `ObjectConverters.IsNull`           | OneWay    | Returns `true` if the input is null.                                                                       |
+| `ObjectConverters.IsNotNull`        | OneWay    | Returns `false` if the input is null.                                                                      |
+| `BoolConverters.And`                | OneWay    | A multi-value converter that returns `true` if all inputs are true.                                        |
+| `BoolConverters.Or`                 | OneWay    | A multi-value converter that returns `true` if any input is true.                                          |
+| `BoolConverters.Not`                | OneWay    | Returns `true` if input is false, otherwise returns `false`. Similar to negation operator.                 |
+| `StringFormatValueConverter`        | OneWay    | Returns a formatted string with the supplied parameter.                                                    |
+| `StringFormatMultiValueConverter`   | OneWay    | Returns a formatted string with multiple input parameters.                                                 |
+| `EnumToBoolConverter`               | TwoWay    | Returns `true` if the input and parameter are the same, else `false`.                                      |
+
+:::caution
+Most of these are contained within `Avalonia.Data.Converters`, but some are within `Avalonia.Controls.Converters`
+:::
 
 ## Negation Operator Examples
 
-This example shows the text block when the bound value is false:
+This example shows the `TextBlock` when the bound value is false:
 
 ```xml
 <StackPanel>
@@ -48,7 +56,7 @@ You can use this to hide a control when a collection is empty (count is zero), l
 </Panel>
 ```
 
-## Other Conversion Examples
+## Null-checking Examples
 
 This example binding will hide the text block if its bound text is null or empty:
 
@@ -66,8 +74,61 @@ And this example will hide the content control if the bound object is null or em
                             Converter={x:Static ObjectConverters.IsNotNull}}"/>
 ```
 
-## More Information
+## StringFormatMultiValueConverter
 
+```xml
+<TextBlock>
+    <TextBlock.Resources>
+        <converter:StringFormatMultiValueConverter x:Key="RgbFormatConverter">
+            <x:Arguments>
+                <x:String>(r: {0}, g: {1}, b: {2})</x:String>
+                <x:Null />
+            </x:Arguments>
+        </converter:StringFormatMultiValueConverter>
+    </TextBlock.Resources>
+    <TextBlock.Text>
+        <MultiBinding Converter="{StaticResource RgbFormatConverter}">
+            <Binding ElementName="red" Path="Value" />
+            <Binding ElementName="green" Path="Value" />
+            <Binding ElementName="blue" Path="Value" />
+        </MultiBinding>
+    </TextBlock.Text>
+</TextBlock>
+```
+
+:::tip
+It may be simpler to define a `FuncMultiValueConverter` for this particular case.
+:::
+
+## EnumToBooleanConverter
+
+The following example enables only the `Button` with a matching enum value as selected by the `ComboBox`.
+
+```csharp
+public enum ProductSize { Small, Medium, Large }
+```
+
+`xmlns:con="using:Avalonia.Controls.Converters"`
+
+```xml
+<StackPanel>
+    <StackPanel.Resources>
+        <con:EnumToBoolConverter x:Key="EnumToBool" />
+    </StackPanel.Resources>
+    <ComboBox x:Name="combo">
+        <v:ProductSize>Small</v:ProductSize>
+        <v:ProductSize>Medium</v:ProductSize>
+        <v:ProductSize>Large</v:ProductSize>
+    </ComboBox>
+    <StackPanel Orientation="Horizontal">
+        <Button Content="Small" IsEnabled="{Binding #combo.SelectedItem, Converter={StaticResource EnumToBool}, ConverterParameter={x:Static v:ProductSize.Small}}" />
+        <Button Content="Medium" IsEnabled="{Binding #combo.SelectedItem, Converter={StaticResource EnumToBool}, ConverterParameter={x:Static v:ProductSize.Medium}}" />
+        <Button Content="Large" IsEnabled="{Binding #combo.SelectedItem, Converter={StaticResource EnumToBool}, ConverterParameter={x:Static v:ProductSize.Large}}}" />
+    </StackPanel>
+</StackPanel>
+```
+
+## More Information
 
 :::info
 You can follow the Avalonia UI value converter sample, [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/ValueConversionSample).

@@ -171,12 +171,13 @@ When the `StringFormat` parameter is present, the value of the binding will be c
 
 Avalonia has a range of built-in data binding converters. These include:
 
-* A string formatting converter
 * Null-testing converters
 * Boolean operation converters
+* An enum converter
+* A string formatting converter (`StringFormatValueConverter`)
 
 :::info
-For full information on Avalonia built-in data binding converters, see the reference [here](../../../reference/built-in-data-binding-converters.md).
+For a listing of Avalonia built-in data binding converters, see the reference [here](../../../reference/built-in-data-binding-converters.md).
 :::
 
 ### Custom Conversions
