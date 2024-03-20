@@ -12,20 +12,26 @@ import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane
 You can now start your tour of an Avalonia project. We'll start with the main application window. Open the **MainWindow.axaml** file.
 
 :::info
-Notice that in Avalonia, XAML files have the extension **.axaml** (and not .xaml). This represents 'Avalonia XAML' and the file extension was introduced for technical reasons.
+In Avalonia, XAML files have the extension **.axaml** (and not .xaml). This represents 'Avalonia XAML' and 
+the file extension was introduced for technical reasons.
 :::
 
 ## What is Happening?
 
-In the **MainWindow.axaml** XAML file, the `<Window>...</Window>` XAML tag represents an Avalonia window. Like other Avalonia controls; the window will be drawn on the target platform with 4 **layout zones**: margin, border, padding and content.
+In the **MainWindow.axaml** XAML file, the `<Window>...</Window>` XAML tag represents an Avalonia window. Like other 
+Avalonia controls; the window will be drawn on the target platform with 4 **layout zones**: margin, border, padding and content.
 
 <img src={LayoutZonesDiagram} alt="" />
 
-In the current application, the content zone of the window references another view: **<views:MainView />**. This is a reference to the **MainView.axaml** file, which is a user control that will be displayed in the content zone of the window.
+In the current application, the content zone of the `Window` references another view: **`<views:MainView />`**. This is a 
+reference to the **MainView.axaml** file, which is a `UserControl` that will be displayed in the content zone of the `Window`.
 
 ## The MainView User Control
 
-Inside this user control, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a text block control. The `Text` property of the text block is bound to the **Greeting** property of the **MainViewModel** class. This is a property that will be set in the constructor of the view model class.
+Inside this user control, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a `TextBlock` control which draws 
+`Text` to the screen. The `Text` property of the `TextBlock` is bound to the **Greeting** property of 
+the **MainViewModel** class.
+
 ```
 <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
@@ -55,10 +61,10 @@ There may be a red exclamation icon (top left) and the message **The designer is
 
 <img className="center" src={VsPreviewPaneScreenshot} alt="" />
 
-- Remove the binding `{Binding Greeting}` and change the text `<TextBlock Text="`my text`" ...`
+- Remove the binding `{Binding Greeting}` and change the text `<TextBlock Text="my text" />`
 
 You will see the new text in the preview pane change as you type. This is an example of the Avalonia **design-time preview behaviour** that will help you develop user interface presentation accurately and quickly.
 
 - Run the project to see your new text also appear at runtime.
 
-On the next page you will see how to add a simple button to the window.
+On the next page, you will add a simple `Button` to the window.

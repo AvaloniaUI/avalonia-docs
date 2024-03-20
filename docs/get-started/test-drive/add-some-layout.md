@@ -6,15 +6,18 @@ title: Add Some Layout
 import StackPanelZonesDiagram from '/img/get-started/test-drive/stackpanel-zones.png';
 import TemperatureStackPanelScreenshot from '/img/get-started/test-drive/temperature-stackpanel.png';
 
-Avalonia provides a range of built-in controls to help you layout the visual elements of an application. On this page you will see how to use some of these layout controls.
+Avalonia provides a range of built-in controls to help you layout the visual elements of an application. On this page, 
+you will see how to use some of these layout controls.
 
 At this stage, your application has a single button located in the content zone of the main window.
 
-In fact an Avalonia window allows only a single other control in its content zone. So to add the multiple visual elements required for most applications, you will need to use one of the built-in layout controls that allows multiple other controls inside its content zone.
+In fact, an Avalonia `Window` allows only one control in its content zone. To show multiple visual elements, you 
+must use a layout control that allows multiple controls within its content zone.
 
-## Stack Panel
+## StackPanel
 
-The stack panel control allows multiple controls in its content zone, and arranges them in a vertical stack in the sequence they are defined in the XAML.
+The `StackPanel` control lays out a sequence of controls in the order they are defined in XAML. By default, it lays out 
+in a vertical stack but this can be changed to horizontal with its `Orientation` property.
 
 <img src={StackPanelZonesDiagram} alt="" />
 
@@ -25,33 +28,30 @@ The stack panel control allows multiple controls in its content zone, and arrang
 </StackPanel>
 ```
 
-## Text Block
+## TextBlock
 
-The text block control gives you full control over the styling of the text it contains.
+The `TextBlock` control allows extensive styling of its contained text.
 
-To take the example forwards, add a stack panel as follows (you can include the existing the button XAML).
+To take the example forward, add a `StackPanel` as follows (include the preexisting `Button` XAML):
 
 ```xml
 <StackPanel>
-    <Border Margin="5" 
-      CornerRadius="10"
-      Background="LightBlue">
-      <TextBlock Margin="5"
-         FontSize="24" 
-         HorizontalAlignment="Center"
-         Text="Temperature Converter">
-      </TextBlock>
+    <Border Margin="5" CornerRadius="10" Background="LightBlue">
+        <TextBlock Margin="5"
+            FontSize="24" 
+            HorizontalAlignment="Center"
+            Text="Temperature Converter">
+        </TextBlock>
     </Border>
-    <StackPanel>
-    </StackPanel>    
+
     <Button HorizontalAlignment="Center">Calculate</Button>
-  </StackPanel>
+</StackPanel>
 ```
 
 <img className="center" src={TemperatureStackPanelScreenshot} alt="" />
 
 :::info
-You can explore the other layout controls in Avalonia from the reference [here](../../reference/controls/layout-controls.md).
+You can explore the other layout controls in Avalonia using the reference [here](../../reference/controls/layout-controls.md).
 :::
 
 On the next page, you will add some inputs to the middle of the window.

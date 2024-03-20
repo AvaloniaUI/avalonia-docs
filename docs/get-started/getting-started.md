@@ -1,4 +1,4 @@
-s---
+---
 id: getting-started
 title: Starting with the CLI
 ---
