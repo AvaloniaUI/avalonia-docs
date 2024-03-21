@@ -9,7 +9,7 @@ import UpdateSourceTriggerScreenshot from '/img/basics/data-binding/data-binding
 # Data Binding Syntax
 
 Avalonia supports creating data bindings in XAML and code. Data bindings in XAML are typically created with the 
-`Binding` `MarkupExtension` which is described by this document. To create data bindings in code, 
+`Binding` `MarkupExtension` described by this document. To create data bindings in code, 
 see [here](../../../guides/data-binding/binding-from-code.md).
 
 ## Data Binding MarkupExtension
@@ -162,21 +162,50 @@ escape. For example:
     StringFormat='{}{0} animals live in the farm.'}" />
 ```
 
+### String Formatting with Multiple Parameters
+
+`MultiBinding` can be used to format a string that requires multiple bound parameters. The example below formats multiple 
+numeric inputs as a single string to be displayed.
+
+```xml
+<StackPanel Spacing="8">
+  <NumericUpDown x:Name="red" Minimum="0" Maximum="255" Value="0" FormatString="{}{0:0.}" Foreground="Red" />
+  <NumericUpDown x:Name="green" Minimum="0" Maximum="255" Value="0" FormatString="{}{0:0.}" Foreground="Green" />
+  <NumericUpDown x:Name="blue" Minimum="0" Maximum="255" Value="0" FormatString="{}{0:0.}" Foreground="Blue" />
+
+  <TextBlock>
+    <TextBlock.Text>
+      <MultiBinding StringFormat="(r: {0:0.}, g: {1:0.}, b: {2:0.})">
+        <Binding Path="Value" ElementName="red" />
+        <Binding Path="Value" ElementName="green" />
+        <Binding Path="Value" ElementName="blue" />
+      </MultiBinding>
+    </TextBlock.Text>
+  </TextBlock>
+</StackPanel>
+```
+
+`FormatString` is used internally by `NumericUpDown` to change how its value is displayed. Here, because RGB colors are 
+integers, we should not display the decimal portion so `0.` is supplied as a custom numeric format specifier 
+that .NET understands.
+
+If the values for the inputs are `red = 100`, `green = 80`, and `blue = 255`, then the text displayed will 
+be `(r: 100, g: 80, b: 255)`.
+
 :::tip
-When the `StringFormat` parameter is present, the value of the binding will be converted using 
-`StringFormatValueConverter`, a built-in converter - see below.
+An alternative is to use an `InlineCollection` of `Run` elements each with their own single parameter 
+binding. This allows visual customization of each segment. See the example [here](/docs/reference/controls/detailed-reference/textblock#run)
 :::
 
 ### Built-in Conversions
 
 Avalonia has a range of built-in data binding converters. These include:
 
-* A string formatting converter
 * Null-testing converters
 * Boolean operation converters
 
 :::info
-For full information on Avalonia built-in data binding converters, see the reference [here](../../../reference/built-in-data-binding-converters.md).
+For a listing of Avalonia built-in data binding converters, see the reference [here](../../../reference/built-in-data-binding-converters.md).
 :::
 
 ### Custom Conversions
