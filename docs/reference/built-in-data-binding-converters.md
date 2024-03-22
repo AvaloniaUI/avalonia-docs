@@ -18,7 +18,7 @@ _Avalonia UI_ includes a number of built-in data binding converters for common s
 
 ## Negation Operator Examples
 
-This example shows the text block when the bound value is false:
+This example shows the `TextBlock` when the bound value is false:
 
 ```xml
 <StackPanel>
