@@ -1238,3 +1238,11 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   color: #C469EE;
   border-color: #C469EE;
 }
+
+img.center {
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+}
