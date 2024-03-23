@@ -15,7 +15,7 @@ The items repeater is a port of the UWP `ItemsRepeater` control. For further inf
 :::
 
 :::info
-The `ItemsRepeater` was moved inside an additional _Avalonia UI_ package. To use the `ItemsRepeater` in your project, you must reference the [Avalonia.Controls.ItemsRepeater](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater) _NuGet_ package. Check this [PR](https://github.com/AvaloniaUI/Avalonia/pull/14989) for additional information.
+The `ItemsRepeater` was moved inside an additional _Avalonia UI_ package. To use the `ItemsRepeater` in your project, you must reference the [Avalonia.Controls.ItemsRepeater](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater) _NuGet_ package. Check this [PR](https://github.com/AvaloniaUI/Avalonia/pull/10112) for additional information.
 :::
 
 The default layout template is a vertical stack layout, so that items appear in a vertical list.
