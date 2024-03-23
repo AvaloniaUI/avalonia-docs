@@ -544,6 +544,7 @@ const sidebars = {
       },
       'items': [
         'deployment/macOS',
+        'deployment/debian-ubuntu',
       ],
     },
     {
