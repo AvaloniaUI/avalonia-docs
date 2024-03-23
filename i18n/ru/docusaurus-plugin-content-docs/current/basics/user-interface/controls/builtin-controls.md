@@ -1,4 +1,4 @@
-# Built-in Controls
+# Built-in Controls (рус: Встроенные компоненты UI)
 
 Here are some of the more commonly-used Avalonia controls, organised by category:
 
