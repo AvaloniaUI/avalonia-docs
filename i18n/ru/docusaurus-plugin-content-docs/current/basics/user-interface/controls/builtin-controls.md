@@ -10,7 +10,7 @@ Here are some of the more commonly-used Avalonia controls, organised by category
 |[Canvas](../../../reference/controls/canvas.md)|Displays child controls at specified positions.|
 |[Dock Panel](../../../reference/controls/dockpanel.md)|Arranges child controls along specified edges (top, bottom, left, right) with one filling any remaining space.|
 |[Expander](../../../reference/controls/expander.md)|Has a header area (always visible) and a collapsible content section (single child).|
-|[Grid](../../../reference/controls/grid.md)|Arranges child controls in the cells of a grid, positioned by row and column. The cells can span rows and columns.|
+|[Grid](../../../reference/controls/grid/README.md)|Arranges child controls in the cells of a grid, positioned by row and column. The cells can span rows and columns.|
 |[Grid Splitter](../../../reference/controls/gridsplitter.md)|Can be added to a grid to allow the user to resize rows or columns at runtime.|
 |[Panel](../../../reference/controls/panel.md)|Stacks child controls on top of one another.|
 |[Relative Panel](../../../reference/controls/relativepanel.md)|Allows multiple child controls. The position and alignment of the child controls can be specified in relation to the panel itself, or in relation to other child controls.  The size of child controls can be specified, or calculated from relations and alignments.|

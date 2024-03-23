@@ -4,22 +4,22 @@ Here are some of the more commonly-used Avalonia controls, organized by category
 
 ## Layout controls
 
-|Control|Description|
-|:----|:----|
-|[Border](../../../reference/controls/detailed-reference/border.md)|Decorates a single child with a border and background.|
-|[Canvas](../../../reference/controls/canvas.md)|Displays child controls at specified positions.|
-|[Dock Panel](../../../reference/controls/dockpanel.md)|Arranges child controls along specified edges (top, bottom, left, right) with one filling any remaining space.|
-|[Expander](../../../reference/controls/expander.md)|Has a header area (always visible) and a collapsible content section (single child).|
-|[Grid](../../../reference/controls/grid.md)|Arranges child controls in the cells of a grid, positioned by row and column. The cells can span rows and columns.|
-|[Grid Splitter](../../../reference/controls/gridsplitter.md)|Can be added to a grid to allow the user to resize rows or columns at runtime.|
-|[Panel](../../../reference/controls/panel.md)|Stacks child controls on top of one another.|
-|[Relative Panel](../../../reference/controls/relativepanel.md)|Allows multiple child controls. The position and alignment of the child controls can be specified in relation to the panel itself, or in relation to other child controls.  The size of child controls can be specified, or calculated from relations and alignments.|
-|[Scroll Viewer](../../../reference/controls/scrollviewer.md)|Adds scroll bars and scrolling behavior if the (single) child is larger than the space available.|
-|[Split View](../../../reference/controls/splitview.md)|Adds a collapsible pane to the edge of its (single child) content zone.|
-|[Stack Panel](../../../reference/controls/stackpanel.md)|Allows multiple child controls, arranged in sequence, horizontally or vertically.|
-|[Tab Control](../../../reference/controls/detailed-reference/tabcontrol.md)|The tab control allows you to sub-divide a view into tab items.|
-|[Uniform Grid](../../../reference/controls/detailed-reference/uniform-grid.md)|Allows multiple child controls, arranged in a grid with cells of uniform column and row size.|
-|[Wrap Panel](../../../reference/controls/detailed-reference/wrappanel.md)|Arranges child controls in sequence from left to right, while they fit in the width. Starts a new line when there is no space left.|
+| Control                                                                        |Description|
+|:-------------------------------------------------------------------------------|:----|
+| [Border](../../../reference/controls/detailed-reference/border.md)             |Decorates a single child with a border and background.|
+| [Canvas](../../../reference/controls/canvas.md)                                |Displays child controls at specified positions.|
+| [Dock Panel](../../../reference/controls/dockpanel.md)                         |Arranges child controls along specified edges (top, bottom, left, right) with one filling any remaining space.|
+| [Expander](../../../reference/controls/expander.md)                            |Has a header area (always visible) and a collapsible content section (single child).|
+| [Grid](../../../reference/controls/grid/README.md)                             |Arranges child controls in the cells of a grid, positioned by row and column. The cells can span rows and columns.|
+| [Grid Splitter](../../../reference/controls/gridsplitter.md)                   |Can be added to a grid to allow the user to resize rows or columns at runtime.|
+| [Panel](../../../reference/controls/panel.md)                                  |Stacks child controls on top of one another.|
+| [Relative Panel](../../../reference/controls/relativepanel.md)                 |Allows multiple child controls. The position and alignment of the child controls can be specified in relation to the panel itself, or in relation to other child controls.  The size of child controls can be specified, or calculated from relations and alignments.|
+| [Scroll Viewer](../../../reference/controls/scrollviewer.md)                   |Adds scroll bars and scrolling behavior if the (single) child is larger than the space available.|
+| [Split View](../../../reference/controls/splitview.md)                         |Adds a collapsible pane to the edge of its (single child) content zone.|
+| [Stack Panel](../../../reference/controls/stackpanel.md)                       |Allows multiple child controls, arranged in sequence, horizontally or vertically.|
+| [Tab Control](../../../reference/controls/detailed-reference/tabcontrol.md)    |The tab control allows you to sub-divide a view into tab items.|
+| [Uniform Grid](../../../reference/controls/detailed-reference/uniform-grid.md) |Allows multiple child controls, arranged in a grid with cells of uniform column and row size.|
+| [Wrap Panel](../../../reference/controls/detailed-reference/wrappanel.md)      |Arranges child controls in sequence from left to right, while they fit in the width. Starts a new line when there is no space left.|
 
 ## Buttons
 
