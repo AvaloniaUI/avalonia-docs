@@ -110,7 +110,7 @@ CancelCommand = ReactiveCommand.Create(() => { });
 - 在 **/Views** 文件夹中找到 **AddItemView.axaml** 文件。
 - 编辑 XAML 如下。
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:ToDoList.ViewModels"

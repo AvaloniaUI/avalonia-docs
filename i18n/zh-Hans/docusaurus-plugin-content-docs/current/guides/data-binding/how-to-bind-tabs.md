@@ -38,7 +38,7 @@ DataContext = new TabItemModel[] {
 
 最后，创建一个 `TabControl`，并将其 `Items` 属性绑定到数据上下文(`DataContext`)。
 
-```markup
+```xml
 <TabControl ItemsSource="{Binding}">
     <TabControl.ItemTemplate>
       <DataTemplate>

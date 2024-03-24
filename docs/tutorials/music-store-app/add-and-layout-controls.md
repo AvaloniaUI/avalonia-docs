@@ -20,7 +20,7 @@ To display a button in the content zone of the main window, follow this procedur
 - Locate and open the **MainWindow.axaml** file.
 - Inside the panel element, add the following XAML for a button. The panel XAML should look like this:
 
-```markup
+```xml
 <Panel>
     <ExperimentalAcrylicBorder IsHitTestVisible="False">
         <ExperimentalAcrylicBorder.Material>
@@ -49,7 +49,7 @@ Follow this procedure to position the button correctly:
 - Add a margin attribute to the new panel element, with a value of 40. 
 - Add horizontal and vertical alignment attributes to the button element, as shown:
 
-```markup
+```xml
 <Panel Margin="40">
   <Button Content="Buy Music" 
      HorizontalAlignment="Right" VerticalAlignment="Top" />
@@ -69,7 +69,7 @@ To use the Microsoft Store icon, follow this procedure:
 - Navigate to the _Avalonia UI_ _GitHub_ to find the list of Fluent Icons at [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
 - Use your browser's text search to locate the name of the icon 'store\_microsoft\_regular'. There should be some code similar to:
 
-```markup
+```xml
 <StreamGeometry x:Key="store_microsoft_regular">M11.5 9.5V13H8V9.5H11.5Z M11.5 17.5V14H8V17.5H11.5Z M16 9.5V13H12.5V9.5H16Z M16 17.5V14H12.5V17.5H16Z M8 6V3.75C8 2.7835 8.7835 2 9.75 2H14.25C15.2165 2 16 2.7835 16 3.75V6H21.25C21.6642 6 22 6.33579 22 6.75V18.25C22 19.7688 20.7688 21 19.25 21H4.75C3.23122 21 2 19.7688 2 18.25V6.75C2 6.33579 2.33579 6 2.75 6H8ZM9.5 3.75V6H14.5V3.75C14.5 3.61193 14.3881 3.5 14.25 3.5H9.75C9.61193 3.5 9.5 3.61193 9.5 3.75ZM3.5 18.25C3.5 18.9404 4.05964 19.5 4.75 19.5H19.25C19.9404 19.5 20.5 18.9404 20.5 18.25V7.5H3.5V18.25Z</StreamGeometry>
 ```
 
@@ -82,7 +82,7 @@ To use the Microsoft Store icon, follow this procedure:
 - Enter the **Name** 'Icons', press enter.
 - Locate and open the new **Icons.axaml** file that is created. The XAML will look like this:
 
-```markup
+```xml
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
@@ -101,7 +101,7 @@ To use the Microsoft Store icon, follow this procedure:
 
 The icons file now looks like this:
 
-```markup
+```xml
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
@@ -126,7 +126,7 @@ Follow this procedure to include the icons file:
 - Locate and open the **App.axaml** file.
 - Add a `<StyleInclude>` element as shown:
 
-```markup
+```xml
 <Application.Styles>
     <FluentTheme />
     <StyleInclude Source="avares://Avalonia.MusicStore/Icons.axaml" />
@@ -140,7 +140,7 @@ To change the button from text to icon content, follow this procedure:
 - Locate and open the **MainWindow.axaml** file.
 - Alter the XAML for the button, as shown:
 
-```markup
+```xml
 <Button HorizontalAlignment="Right" VerticalAlignment="Top">       
     <PathIcon Data="{StaticResource store_microsoft_regular}" /> 
 </Button>

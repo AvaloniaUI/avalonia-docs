@@ -63,7 +63,7 @@ You must reference the data grid themes to include the additional styles that th
 
 For example:
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AvaloniaApplication.App">

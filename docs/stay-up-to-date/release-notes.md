@@ -4,6 +4,58 @@ title: Release Notes
 ---
 
 You can find release notes for all version on https://github.com/AvaloniaUI/Avalonia/releases
+## 11.0.7
+
+https://www.nuget.org/packages/Avalonia/11.0.7
+
+**Full Changelog**: 11.0.6...11.0.7
+
+### What's Changed
+* Fixed issue: Default font family name cannot be null or empty by @mihnea-radulescu in https://github.com/AvaloniaUI/Avalonia/pull/12817
+* Fixed missing resources for TimePicker & DatePicker in simple theme by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/12851
+* Fixed memory leak in Animatable transitions by @DmitryZhelnin in https://github.com/AvaloniaUI/Avalonia/pull/12861
+* Fixed issue with VirtualizingPanel's RemoveInternalChildRange() by @liwuqingxin in https://github.com/AvaloniaUI/Avalonia/pull/12877
+* Fixed Xaml Compiler error when code-behind class contains a DllImport method by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/12882
+* Fixed memory leak in TopLevel's Cursor property subscriptions by @DmitryZhelnin in https://github.com/AvaloniaUI/Avalonia/pull/12996
+* Added Clear function to Date and Time pickers by @rabbitism in https://github.com/AvaloniaUI/Avalonia/pull/13082
+* Fixed typo in ItemsControlFromItemContainer by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/13118
+* Updated RenderDataRectangleNode.HitTest for proper hit-testing of rounded rectangles by @billhenn in https://github.com/AvaloniaUI/Avalonia/pull/13797
+* Fixed initialization property order in SelectedItemsControl by @MrJul in https://github.com/AvaloniaUI/Avalonia/pull/13800
+* Implemented helper OutputApiDiff target by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/13818
+* Unsubscribed Android back handler when toplevel is disposed by @emmauss in https://github.com/AvaloniaUI/Avalonia/pull/13831
+* Fixed DataGrid IList editing issue by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/13845
+* Fixed TextLine run bounds union calculation by @Gillibald in https://github.com/AvaloniaUI/Avalonia/pull/13847
+* Fixed TabItem.TabStripPlacement not being set for new tab items by @pavelovcharov in https://github.com/AvaloniaUI/Avalonia/pull/13849
+* Hackfix for calling SelectAll with SelectedItem binding by @grokys in https://github.com/AvaloniaUI/Avalonia/pull/13868
+* Fix OutOfMemory crash with LowLatencyDxgiSwapChain enabled by @ShadowMarker789 https://github.com/AvaloniaUI/Avalonia/pull/13869
+* Added transition leak tests by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/13870
+* Fixed ToggleSwitch dragging by @Splitwirez in https://github.com/AvaloniaUI/Avalonia/pull/13893
+* Fixed Adorner Layer Clipping by @grokys in https://github.com/AvaloniaUI/Avalonia/pull/13921
+* Fixed BoxShadow style changes not triggering render updates on ContentPresenter by @Al12rs in https://github.com/AvaloniaUI/Avalonia/pull/13932
+* Added feature to allow treating Avalonia Access Unstable Private APIs Warning as Error by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/13937
+* OpenglControl - Don't queue update if control is not attached by @emmauss in https://github.com/AvaloniaUI/Avalonia/pull/13938
+* Fixed iOS Dispatcher by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/13942
+* Used ShowNoActivate in Win32NativeControlHost by @grokys in https://github.com/AvaloniaUI/Avalonia/pull/13966
+* Don't override ContextMenu.Placement when Open is called from code by @grokys in https://github.com/AvaloniaUI/Avalonia/pull/13967
+* Don't share style instances with Or selector by @grokys in https://github.com/AvaloniaUI/Avalonia/pull/13969
+* Fixed IOSStorageFolder permission problem by @sghctoma in https://github.com/AvaloniaUI/Avalonia/pull/13976
+* Fixed Border and Shape border re-rendering when changing Brush value by @SKProCH in https://github.com/AvaloniaUI/Avalonia/pull/13980
+* Fixed DBus Exception on window close by @affederaffe in https://github.com/AvaloniaUI/Avalonia/pull/13997
+* Updated Tmds.DBus.SourceGenerator to 0.0.13 by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/14010
+* Fixed Relative line drawing in Geometries by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/14013
+* Removed missing MVID warning on XAML compilation by @MrJul in https://github.com/AvaloniaUI/Avalonia/pull/14014
+* Fixed color of selected DataGridRow by @zavaleriy in https://github.com/AvaloniaUI/Avalonia/pull/14026
+* Fixed regression in rendering of non-clear type text by @danwalmsley in https://github.com/AvaloniaUI/Avalonia/pull/14080
+* Don't crash on IsCurrent checks by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/14089
+* Implemented ApiInformation checks by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/14090
+* Fixed XML Docs: Renamed inheritdocs to inheritdoc by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/14093
+* Added an event to detect when an Application icon is clicked by @danwalmsley in https://github.com/AvaloniaUI/Avalonia/pull/14106
+* Improved TextBox behavior on Ctrl+Backspace down event by @exGensImpl in https://github.com/AvaloniaUI/Avalonia/pull/14138
+* Added InheritDataTypeFromItems for AutoCompleteBox.ValueMemberBinding by @gehongyan in https://github.com/AvaloniaUI/Avalonia/pull/14162
+* Fixed exception when SelectedValueBinding evaluates to null by @TomEdwardsEnscape in https://github.com/AvaloniaUI/Avalonia/pull/14171
+* Updated SkiaSharp to 2.88.7 to fix a memory exception by @MontagueM in https://github.com/AvaloniaUI/Avalonia/pull/14179
+* Ported DragMove logic from WPF by @jmacato in https://github.com/AvaloniaUI/Avalonia/pull/14186
+---
 
 ## 11.0.6
 

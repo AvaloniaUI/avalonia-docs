@@ -23,7 +23,7 @@ description: CONCEPTS
 
 Для включение компиляции привязок по-умолчанию, в файл проекта необходимо добавить:
 
-```markup
+```xml
 <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 ```
 
@@ -38,7 +38,7 @@ description: CONCEPTS
 Для включение или отключения компиляции привязок, укажите `x:CompileBindings="[True|False]"`. 
 Все вложенные элементы унаследуют данное свойство, однако вы можете переопределить его для них:
 
-```markup
+```xml
 <!-- Set DataType and enable compiled bindings -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -65,7 +65,7 @@ description: CONCEPTS
 Если вы не хотите использовать компилируемые привязки для всех вложенных элементов, то можно использовать `CompiledBinding` вмест `Binding`.
 Вам необходимо указывать `DataType`, но вы можете не указывать `x:CompileBindings="True"`.
 
-```markup
+```xml
 <!-- Set DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -92,7 +92,7 @@ description: CONCEPTS
 Если в основном элементе у вас указана компиляция привязок (через `x:CompileBindings="True"`),
 а вам требуется использовать рефлексиб в силу разных причин, то замените `Binding` на `ReflectionBinding`, как в примере ниже:
 
-```markup
+```xml
 <!-- Set DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -118,7 +118,7 @@ description: CONCEPTS
 
 Иногда невозможно автоматически определить тип привязки. В этом случае, вам необходимо указать его явно:
 
-```markup
+```xml
 <ItemsRepeater ItemsSource="{Binding MyItems}">
 <ItemsRepeater.ItemTemplate>
     <DataTemplate>

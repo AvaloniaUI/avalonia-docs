@@ -1,57 +1,64 @@
-# Choosing A Custom Control Type
+# Choosing A Custom Control Type (рус: Выбор типа пользовательского компонента UI)
 
-Avalonia provides various approaches for creating custom controls to meet your application's specific needs. Understanding the different types of custom controls will help you choose the most appropriate approach for your requirements. In Avalonia, the three common types of custom controls are  UserControls`, lookless controls, and custom-drawn controls.
+Avalonia позволяет использовать различные способы создания пользовательских компонентов, которые помогают решать конкретные потребности в приложении.
+Понимание различных типов пользовательских компонентов, поможет вам эффективнее выбирать более подходящий вариант решения проблемы.
+Тремя самыми распространенными типами являются `UserControls (рус: Пользовательские компоненты)`, `lookless controls (рус: компоненты без внешнего вида)` и `custom-drawn controls (рус: нарисованные компоненты)`.
 
-## UserControl
+## UserControl (рус: Пользовательские компоненты)
 
-A `UserControl` is a high-level approach for creating custom controls in Avalonia. It allows you to compose a control by combining existing controls and defining the layout using XAML. A `UserControl` acts as a container that encapsulates multiple controls and provides a cohesive user interface.
+`UserControl (рус: Пользовательские компоненты)` - это высокоуровневый подход к созданию пользовательских компонентов в Avalonia. Он позволяет создать компонент, путем объединения существующих и определения макета через XAML.
+`UserControl (рус: Пользовательские компоненты)` действует как контейнер, который инкапсулирует несколько компонентов и обеспечивает единый UI.
 
 :::info
-Typically, `UserControls` are used to represent specialized views within an application, such as a "User Details View," rather than serving as general-purpose user interface elements.
+Как правило, `UserControls (рус: Пользовательские компоненты)` используются для представления в приложении специализированных `view`, таких как "Сведения о пользователе", и не должны использоваться в UI как элементы общего назначения.
 :::
 
-Creating a `UserControl` involves the following steps:
+Создание `UserControl (рус: Пользовательского компонента)` состоит из нескольких шагов:
 
-1. **Define the XAML**: Create a new `UserControl` XAML file that defines the layout and appearance of the control by placing controls, setting properties, and applying styles.
+1. **Define the XAML (рус: Определить XAML)**: Создание XAML-файла для нового `UserControl (рус: Пользовательского компонента)`, в котором определяются макет и внешний вид компонента, путем размещения других компонентов, изменения свойств и применения стилей.
 
-2. **Code-behind**: Optionally, you can define additional code-behind logic to handle events, modify the behavior, or provide additional functionality to the `UserControl`.
+2. **Code-behind**: Опционально, вы можете добавить `code-behind` логику для обработки событий, изменения поведения или внесения дополнительной функциональности для создаваемого компонента.
 
-3. **Reuse and Customization**: `UserControl`s can be easily reused and customized within an application. They are especially useful when you want to encapsulate a specific set of controls and behaviors into a reusable component or "view".
+3. **Reuse and Customization (рус: Переиспользование и настройка)**: Новый компонент может быть легко переиспользован и настроен в приложении. Это особенно полезно, если вы хотите инкапсулировать определенный набор компонентов или поведений в переиспользуемом компоненте или `view`.
 
 <GitHubSampleLink title="Custom Control" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl"/>
 
-## Templated (Lookless) Controls
+## Templated (Lookless) Controls (рус: Шаблонные компоненты (без внешнего вида))
 
-Templated controls (also known as "Lookless controls") provide a more advanced and customizable approach for creating custom controls in Avalonia. A templated control separates the control's behavior and logic from its visual appearance, allowing the control to be styled and templated by the application developer.
+`Templated controls (рус: Шаблонные компоненты)` (также известные как `Lookless controls (рус: компоненты без внешнего вида`) - это более продвинутые и гибкий подход к созданию пользовательских компонентов в Avalonia.
+Он отделяет поведение и логику компонента от внешнего вида, что позволяет разработчику создавать стили и шаблоны для компонента.
 
-With templated controls, you define the control's behavior and properties in a code-behind class, while the visual representation is specified through control templates defined in XAML. This separation allows the application developer to customize the look and feel of the control without modifying its underlying behavior.
-
-:::info
-Templated controls are typically used for general-purpose user-interface elements that are not specific to business logic and may require different themes or visual styles. Most of the [built-in controls](../builtin-controls.md) supplied by Avalonia are templated controls.
-:::
-
-Creating a templated control involves the following steps:
-
-1. **Define the Control Class**: Create a new class that derives from `TemplatedControl`. This class defines the behavior, properties, and events of the control.
-
-2. **Control Template**: Create a [`ControlTheme`](control-themes) in XAML that specifies the visual appearance and structure of the control. The control template defines the parts of the control and how they should be styled.
-
-3. **Styling and Templating**: The application developer can customize the look of the control by modifying its control template or applying styles. This allows for a consistent and unified visual design across the application.
-
-Templated controls provide greater flexibility and reusability, making them ideal for scenarios where you want to provide a control that can be styled to match different visual themes or adapt to various user preferences.
-
-## Custom-drawn Controls
-
-Custom-drawn controls offer the highest level of customization in Avalonia. With custom-drawn controls, you have complete control over the rendering of the control's visual elements, allowing you to create unique and complex visual representations.
+С помощью `templated controls (рус: шаблонных компонентов)` вы определяете поведение и свойства комопнента в `code-behind` классе, в то время как визуальное представление задается с помощью определенных в XAML шаблонов компонента.
+Такое разделение позволяет разработчику настраивать внешний вид компонента без изменения его базового поведения.
 
 :::info
-Custom-drawn controls are typically used where the control represents a mostly non-interactive graphical element that will not need to be themed.
+`Templated controls (рус: Шаблонные компоненты)` обычно используются для элементов UI общего назначения, которые не являются специализированными для бизнес-логики и требуют различных тем и стилей.
+Большинство [built-in controls (рус: встроенных компонентов)](../builtin-controls.md), поддерживаемых Avalonia, являются `templated controls (рус: шаблонными компонентами)`.
 :::
 
-To create a custom-drawn control, you override the control's `Render` method and use low-level drawing APIs, such as `DrawingContext`, to define the control's appearance. This approach provides fine-grained control over every pixel of the control's visual representation.
+Создание `templated control (рус: шаблонного компонента)` состоит из следующих шагов:
 
-Creating a custom-drawn control involves the following steps:
+1. **Определите класс компонента**: Создайте новый класс и наследуйте его от `TemplatedControl`. Данный класс определяет поведение, свойства и события компонента.
 
-1. **Define the Control Class**: Create a new class that derives from `Control`. This class will define the behavior and rendering logic of the control.
+2. **Control Template (рус: Шаблон компонента)**: Для определения внешнего вида и структуры компонента, создайте в XAML [`ControlTheme (рус: тему компонента)`](control-themes). `Control template (рус: Шаблон компонента)` оопределяет части компонента и его стили.
 
-2. **Override the Render Method**: Override the `Render` method in the control class and use the `DrawingContext` to draw the control's content.
+3. **Стилизация и шаблонизация**: Разработчик приложения может настроить внешний вид компонента путем изменения `control template (рус: шаблона компонента)` или применив стили. Это обеспечивает согласованный и унифицированный дизайн интерфейса в приложении.
+
+`Templated controls (рус: Шаблонные компоненты)` обеспечивают отличную гибкость и возможность переиспользования, что делает их идеальными для ситуаций, где требуется проводить стилизацию под различные темы или адаптировать под предпочтения пользователя.
+
+## Custom-drawn Controls (рус: Нарисованные компоненты)
+
+`Custom-drawn controls (рус: Нарисованные компоненты)` обеспечивают наибольшую гибкость настроек в Avalonia. С помощью него, вы получаете полный контроль над отображением визуальных элементов компонента, что позволяет создавать уникальные и комплексные варианты отображения.
+
+:::info
+`Custom-drawn controls (рус: Нарисованные компоненты)` обычно используются в ситуациях, когда требуется отобразить не интерактивный графический элемент. Как правило, он не зависит от выбранной темы.
+:::
+
+Для создание `custom-drawn control (рус: нарисованного компонента)`, вы должны переопределить метод `Render` и использовать низкоуровневое API для отрисовки внешнего вида компонета, такое как `DrawingContext`. Данный подход обеспечивает полный контроль над каждым пикселем отображаемого компонента.
+
+Создание `custom-drawn control (рус: нарисованного компонента)` состоит из следующих шагов:
+
+1. **Определите класс компонента**: Создайте новый класс, наследованный от `Control`. Он будет определять поведение и логику отображения компонента.
+
+2. **Переопределите метод отрисовки**: В классе `Control`, переопределите метод `Render`, а затем используйте `DrawingContext` для отрисовки его содержимого.
+

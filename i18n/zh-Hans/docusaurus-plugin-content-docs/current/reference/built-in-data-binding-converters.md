@@ -20,7 +20,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 这个例子展示了当绑定的值为false时，文本块的情况：
 
-```markup
+```xml
 <StackPanel>
   <TextBox Name="input" IsEnabled="{Binding AllowInput}"/>
   <TextBlock IsVisible="{Binding !AllowInput}">Input is not allowed</TextBlock>
@@ -31,7 +31,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 例如，整数零会被转换为false（通过函数`Convert.ToBoolean`），而其他所有整数值都会被转换为true，因此你可以使用否定运算符来在集合为空时显示一条消息，像这样：
 
-```markup
+```xml
 <Panel>
   <ListBox ItemsSource="{Binding Items}"/>
   <TextBlock IsVisible="{Binding !Items.Count}">No results found</TextBlock>
@@ -42,7 +42,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 你可以使用这种方式来在集合为空时隐藏一个控件（计数为零），像这样：
 
-```markup
+```xml
 <Panel>
   <ListBox ItemsSource="{Binding Items}" IsVisible="{Binding !!Items.Count}"/>
 </Panel>
@@ -52,7 +52,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 这个绑定示例将在绑定的文本为null或空字符串时隐藏文本块：
 
-```markup
+```xml
 <TextBlock Text="{Binding MyText}"
            IsVisible="{Binding MyText, 
                        Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
@@ -60,7 +60,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 而这个示例将在绑定的对象为null或为空时隐藏内容控件：
 
-```markup
+```xml
 <ContentControl Content="{Binding MyContent}"
                 IsVisible="{Binding MyContent, 
                             Converter={x:Static ObjectConverters.IsNotNull}}"/>

@@ -10,7 +10,7 @@ Instead, data templates are placed either inside a `DataTemplates` collection in
 
 For example, this code adds a data template to display the view model class `MyViewModel`:
 
-```markup
+```xml
 <UserControl xmlns:viewmodels="using:MyApp.ViewModels"
              x:DataType="viewmodels:ControlViewModel">
     <UserControl.DataTemplates>

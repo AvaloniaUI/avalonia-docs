@@ -19,7 +19,7 @@ Both `.xaml` and `.axaml` will be supported going forward, so feel free to use t
 
 A basic Avalonia XAML file looks like this:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication1.MainWindow">
@@ -97,7 +97,7 @@ using Avalonia.Metadata;
 
 Controls are added to the XAML by adding an XML element with the control's class name. For example to add a button as the child of the window you would write:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button>Hello World!</Button>
@@ -110,7 +110,7 @@ See the [controls documentation](../../controls) for a list of the controls incl
 
 You can set a property of a control by adding an XML attribute to an element. For example to create a button with a blue background you could write:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Background="Blue">Hello World!</Button>
@@ -123,7 +123,7 @@ You can also use _property element syntax_ for setting properties. For more info
 
 You may notice that the button above has its "Hello World!" content placed directly inside the XML element. This could also be written as a property using:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Content="Hello World"/>
@@ -136,7 +136,7 @@ This is because [`Button.Content`](http://reference.avaloniaui.net/api/Avalonia.
 
 You can bind a property using the `{Binding}` markup extension:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Content="{Binding Greeting}"/>

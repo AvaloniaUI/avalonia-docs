@@ -69,13 +69,11 @@ public class SampleControl: Control
 
 To add a handler for an event using XAML, you declare the event name as an attribute on the element that is an event listener. The value of the attribute is the name of your implemented handler method, which must exist in the class of the code-behind file.
 
-```markup
+```xml
 <Button Click="b1SetColor">button</Button>
 ```
 
 The XAML syntax for adding standard CLR event handlers is the same for adding routed event handlers, because you are really adding handlers to the CLR event wrapper, which has a routed event implementation underneath.
-
-As of Avalonia 0.9.x the Avalonia designer requires event handlers to be declared as `public` methods. We hope to remove this restriction in future.
 
 ## Routing Strategies
 
@@ -106,7 +104,7 @@ Each of the above considerations is discussed in a separate section of this topi
 
 To add an event handler in XAML, you simply add the event name to an element as an attribute and set the attribute value as the name of the event handler that implements an appropriate delegate, as in the following example.
 
-```markup
+```xml
 <Button Click="b1SetColor">button</Button>
 ```
 
@@ -203,7 +201,7 @@ The Avalonia input system uses attached events extensively. However, nearly all 
 
 Another syntax usage that resembles _typename_._eventname_ attached event syntax but is not strictly speaking an attached event usage is when you attach handlers for routed events that are raised by child elements. You attach the handlers to a common parent, to take advantage of event routing, even though the common parent might not have the relevant routed event as a member. Consider this example again:
 
-```markup
+```xml
 <Border Height="50" Width="300">
   <StackPanel Orientation="Horizontal" Button.Click="CommonClickHandler">
     <Button Name="YesButton">Yes</Button>

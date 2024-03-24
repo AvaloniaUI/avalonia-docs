@@ -8,7 +8,7 @@ import GridSplitterRowsScreenshot from '/img/controls/gridsplitter/gridsplitter-
 
 The `GridSplitter` control is a control that allows a user to resize the space between `Grid` rows or columns.
 
-```markup
+```xml
 <Grid ColumnDefinitions="*, 4, *">
     <Rectangle Grid.Column="0" Fill="Blue"/>
     <GridSplitter Grid.Column="1" Background="Black" ResizeDirection="Columns"/>
@@ -18,7 +18,7 @@ The `GridSplitter` control is a control that allows a user to resize the space b
 
 <img className="center" src={GridSplitterColumnsScreenshot} alt="GridSplitter in Action for Columns" />
 
-```markup
+```xml
 <Grid RowDefinitions="*, 4, *">
     <Rectangle Grid.Row="0" Fill="Blue"/>
     <GridSplitter Grid.Row="1" Background="Black" ResizeDirection="Rows"/>

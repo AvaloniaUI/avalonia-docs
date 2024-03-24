@@ -9,7 +9,7 @@ You can assign an _Avalonia UI_ control one or more style classes, and use these
 
 For example, this button has both the `h1` and `blue` style classes applied:
 
-```markup
+```xml
 <Button Classes="h1 blue"/>
 ```
 
@@ -21,7 +21,7 @@ For example `:pointerover` pseudo class indicates that the pointer input is curr
 
 This is an example of  a `:pointerover` pseudo class selector:
 
-```markup
+```xml
 <StackPanel>
   <StackPanel.Styles>
     <Style Selector="Border:pointerover">
@@ -36,7 +36,7 @@ This is an example of  a `:pointerover` pseudo class selector:
 
 In this example, the pseudo class selector changes properties inside a control template:
 
-```markup
+```xml
 <StackPanel>
   <StackPanel.Styles>
     <Style Selector="Button:pressed /template/ ContentPresenter">
@@ -57,7 +57,7 @@ For more detail about pseudo classes, see the reference [here](../../../referenc
 
 If you need to add or remove a class using a bound condition, then you can use following special syntax:
 
-```markup
+```xml
 <Button Classes.accent="{Binding IsSpecial}" />
 ```
 

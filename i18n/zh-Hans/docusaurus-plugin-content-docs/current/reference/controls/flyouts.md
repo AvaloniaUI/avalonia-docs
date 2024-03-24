@@ -30,7 +30,7 @@ Only the button and split button controls support the `Flyout` property. You can
 
 For controls that do not have the `Flyout` property, use the `AttachedFlyout` property like this:
 
-```markup
+```xml
 <Border Background="Red" PointerPressed="Border_PointerPressed">
     <FlyoutBase.AttachedFlyout>
         <Flyout>
@@ -82,7 +82,7 @@ This setting describes how the flyout shows and hides:
 
 You can share flyouts between two or more elements in your app. For example, to share a flyout from the resources collection of a window:
 
-```markup
+```xml
 <Window.Resources>
     <Flyout x:Key="MySharedFlyout">
         <!-- Flyout content here -->
@@ -98,7 +98,7 @@ You can share flyouts between two or more elements in your app. For example, to 
 
 Although flyouts are not themselves controls, their general appearance can be customized by targeting the presenter the `Flyout` uses to display its content. For a normal `Flyout` this is `FlyoutPresenter` and for `MenuFlyout` this is `MenuFlyoutPresenter`. Because flyout presenters are not exposed, special style classes that should pertain to specific flyouts can be passed using the `FlyoutPresenterClasses` property on `FlyoutBase`
 
-```markup
+```xml
 <Style Selector="FlyoutPresenter.mySpecialClass">
     <Setter Property="Background" Value="Red" />
 </Style>

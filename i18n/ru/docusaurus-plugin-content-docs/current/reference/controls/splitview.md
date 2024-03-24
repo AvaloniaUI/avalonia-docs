@@ -38,7 +38,7 @@ The display mode property controls how the pane is drawn in its open and closed 
 
 ## Example
 
-```markup
+```xml
 <SplitView IsPaneOpen="True"
            DisplayMode="Inline"
            OpenPaneLength="300">

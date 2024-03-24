@@ -22,7 +22,7 @@ You will probably use these properties most often:
 
 In this example, the view model contains a collection of different images to show them in a slideshow. The following XAML will use the default page transition to change the image (in the data template) whenever the bound `SelectedImage` property changes:
 
-```markup
+```xml
 <TransitioningContentControl Content="{Binding SelectedImage}" >
     <TransitioningContentControl.ContentTemplate>
         <DataTemplate DataType="Bitmap">
@@ -36,7 +36,7 @@ In this example, the view model contains a collection of different images to sho
 
 In this example, a different page transition has been specified to slide the images horizontally:
 
-```markup
+```xml
 <TransitioningContentControl Content="{Binding SelectedImage}" >
     <TransitioningContentControl.PageTransition>
         <PageSlide Orientation="Horizontal" Duration="0:00:00.500" />

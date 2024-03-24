@@ -37,7 +37,7 @@ public class MyDataTemplate : IDataTemplate
 
 You can now use the class `MyDataTemplate` in your view like this:
 
-```markup
+```xml
 <!-- remember to add the needed prefix in your view -->
 <!-- xmlns:dataTemplates="using:MyApp.DataTemplates" -->
 

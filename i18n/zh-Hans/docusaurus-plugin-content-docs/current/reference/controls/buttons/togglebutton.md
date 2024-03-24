@@ -8,10 +8,6 @@ import ToggleButtonMuteScreenshot from '/img/reference/controls/buttons/togglebu
 
 切换按钮可以通过使用样式和伪类来呈现布尔值，这些样式和伪类可以存在（true）或不存在（false）。
 
-:::info
-要查看伪类背后的概念，请参阅[这里](../../../concepts/pseudo-classes.md)。
-:::
-
 这允许在每个伪类状态中对控件进行广泛的可能的图形呈现。
 
 ## 示例

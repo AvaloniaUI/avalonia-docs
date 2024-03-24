@@ -2,7 +2,7 @@
 
 在Avalonia中，可以使用字符串来指定列和行定义，避免了WPF中笨重的语法：
 
-```markup
+```xml
 <Grid ColumnDefinitions="Auto,*,32" RowDefinitions="*,Auto">
 ```
 

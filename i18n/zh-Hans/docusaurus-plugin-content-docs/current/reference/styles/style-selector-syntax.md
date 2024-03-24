@@ -10,7 +10,7 @@ description: REFERENCE - Styles
 
 
 
-```markup
+```xml
 <Style Selector="Button">
 <Style Selector="local|Button">
 ```
@@ -41,7 +41,7 @@ new Style(x => x.OfType(typeof(Button)));
 
 
 
-```markup
+```xml
 <Style Selector="#myButton">
 <Style Selector="Button#myButton">
 ```
@@ -60,7 +60,7 @@ new Style(x => x.OfType<Button>().Name("myButton"));
 
 
 
-```markup
+```xml
 <Style Selector="Button.large">
 <Style Selector="Button.large.red">
 ```
@@ -102,7 +102,7 @@ new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 
 
 
-```markup
+```xml
 <Style Selector=":is(Button)">
 <Style Selector=":is(local|Button)">
 ```
@@ -125,7 +125,7 @@ new Style(x => x.Is(typeof(Button)));
 
 
 
-```markup
+```xml
 <Style Selector=":is(Control).margin2">
 <Style Selector=":is(local|Control.margin2)">
 ```
@@ -142,7 +142,7 @@ new Style(x => x.Is(typeof(Control)).Class("margin2"));
 
 
 
-```markup
+```xml
 <Style Selector="StackPanel > Button">
 ```
 
@@ -177,7 +177,7 @@ new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 
 
 
-```markup
+```xml
 <Style Selector="StackPanel Button">
 ```
 
@@ -196,7 +196,7 @@ new Style(x => x.OfType<StackPanel>().Descendant().OfType<Button>());
 
 
 
-```markup
+```xml
 <Style Selector="Button[IsDefault=true]">
 ```
 
@@ -221,7 +221,7 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 :::info
 注意：当您将附加属性用作属性匹配时，属性名必须用括号括起来。例如：
 
-```markup
+```xml
 <Style Selector="TextBlock[(Grid.Row)=0]">
 ```
 :::
@@ -234,7 +234,7 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 
 
 
-```markup
+```xml
 <Style Selector="Button /template/ ContentPresenter">
 ```
 
@@ -253,7 +253,7 @@ new Style(x => x.OfType<Button>().Template().OfType<ContentPresenter>());
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:not(.h1)">
 ```
 
@@ -270,7 +270,7 @@ new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock, Button">
 ```
 
@@ -287,7 +287,7 @@ new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-child(2n+3)">
 ```
 
@@ -312,7 +312,7 @@ new Style(x => x.OfType<TextBlock>().NthChild(2, 3));
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-last-child(2n+3)">
 ```
 
@@ -329,7 +329,7 @@ new Style(x => x.OfType<TextBlock>().NthLastChild(2, 3));
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-child(3)">
 ```
 

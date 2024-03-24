@@ -288,6 +288,7 @@ const sidebars = {
             'guides/data-binding/how-to-bind-to-a-collection',
             'guides/data-binding/binding-from-code',
             'guides/data-binding/how-to-create-a-custom-data-binding-converter',
+            'guides/data-binding/how-to-bind-multiple-properties',
             'guides/data-binding/how-to-bind-tabs',
             'guides/data-binding/how-to-bind-image-files',
             'guides/data-binding/how-to-bind-can-execute',
@@ -303,6 +304,7 @@ const sidebars = {
           'items': [
             'guides/styles-and-resources/selectors',
             'guides/styles-and-resources/property-setters',
+            'guides/styles-and-resources/setter-precedence',
             'guides/styles-and-resources/how-to-use-included-styles',
             'guides/styles-and-resources/resources',
             'guides/styles-and-resources/how-to-use-theme-variants',
@@ -462,6 +464,7 @@ const sidebars = {
           'items': [
             'concepts/input/routed-events',
             'concepts/input/pointer',
+            'concepts/input/focus',
             'concepts/input/gestures',
             'concepts/input/hotkeys',
             'concepts/input/binding-key-and-mouse',
@@ -479,6 +482,7 @@ const sidebars = {
             'concepts/the-mvvm-pattern/avalonia-ui-and-mvvm',
           ],
         },
+        'concepts/markupextensions',
         {
           'type': 'category',
           'label': 'ReactiveUI',
@@ -496,7 +500,6 @@ const sidebars = {
             'concepts/reactiveui/binding-to-sorted-filtered-list',
           ],
         },
-        'concepts/pseudo-classes',
         {
           'type': 'category',
           'label': 'Services',
@@ -505,6 +508,7 @@ const sidebars = {
             'id': 'concepts/services/index',
           },
           'items': [
+            'concepts/services/activatable-lifetime',
             'concepts/services/clipboard',
             'concepts/services/focus-manager',
             'concepts/services/insets-manager',

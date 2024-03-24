@@ -6,9 +6,9 @@ title: Cross Fade Page Transition
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Cross Fade Page Transition
+# 跨淡入淡出页面过渡
 
-The cross fade page transition fades out the current page and fades in the new page by animating the opacity.
+跨淡入淡出页面过渡通过动画方式改变不透明度，从而使当前页面淡出，新页面淡入。
 
 <Tabs
   defaultValue="xaml"
@@ -33,12 +33,12 @@ var transition = new CrossFade(TimeSpan.FromMilliseconds(500));
 
 </Tabs>
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this transition, see [here](http://reference.avaloniaui.net/api/Avalonia.Animation/PageSlide/).
+有关此过渡效果的完整 API 文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Animation/CrossFade/).
 :::
 
 :::info
-View the source code on _GitHub_ [`CrossFade.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Animation/CrossFade.cs)
+在 _GitHub_ 上查看源代码 [`CrossFade.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Animation/CrossFade.cs)
 :::

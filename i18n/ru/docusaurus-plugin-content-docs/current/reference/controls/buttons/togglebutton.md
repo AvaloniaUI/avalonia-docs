@@ -8,10 +8,6 @@ import ToggleButtonMuteScreenshot from '/img/reference/controls/buttons/togglebu
 
 The toggle button can present a Boolean value by using styles and a pseudo class that is either present (true) or absent (false).
 
-:::info
-To review the concepts behind a pseudo class, see [here](../../../concepts/pseudo-classes.md).
-:::
-
 This allows a wide range of possible graphical presentations for the control in each of the pseudo class states.
 
 ## Example

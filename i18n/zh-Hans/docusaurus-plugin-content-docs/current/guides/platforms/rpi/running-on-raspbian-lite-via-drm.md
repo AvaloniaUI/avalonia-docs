@@ -89,7 +89,7 @@ dotnet add package Avalonia.LinuxFramebuffer
 
 `MainView` 将是我们开发 UI 的应用基础：
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -112,7 +112,7 @@ dotnet add package Avalonia.LinuxFramebuffer
 
 现在创建一个名为 `MainSingleView` 的新 `UserControl`，并托管 `MainView`：
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -128,7 +128,7 @@ dotnet add package Avalonia.LinuxFramebuffer
 
 还要更改 `MainWindow.axaml` 以在其中托管 `MainView`：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

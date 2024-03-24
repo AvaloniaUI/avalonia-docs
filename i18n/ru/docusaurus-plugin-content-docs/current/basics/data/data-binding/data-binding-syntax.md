@@ -46,14 +46,14 @@ import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax
 Например, если источником данных указано свойство `Student`, 
 а объект, возвращаемый этим свойством, имеет свойство `Name`, то мы можем привязаться к нему, как указано ниже:
 
-```markup
+```xml
 <TextBlock Text="{Binding Student.Name}"/>
 ```
 
 Если источких данных представлен в виде массика или списка (с индексом), 
 то вы можете указать конкретный индекс, как показана в примере ниже:
 
-```markup
+```xml
 <TextBlock Text="{Binding Students[0].Name}"/>
 ```
 
@@ -76,7 +76,7 @@ import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax
 
 Пример:
 
-```markup
+```xml
 <TextBlock Text="{Binding Name, Mode=OneTime}">
 ```
 
@@ -118,20 +118,20 @@ import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax
 
 Пример с обратной косой чертой:
 
-```markup
+```xml
 <TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}}" />
 ```
 
 Однако, если ваш шаблон начинается с нуля, то вам не требуется экранирование.
 Кроме того, если ваш шаблон надо заключать в одинарные кавычки, если он содержит пробелы.
 
-```markup
+```xml
 <TextBlock Text="{Binding Animals.Count, StringFormat='I have {0} animals.'}" />
 ```
 
 Обратите внимание, что если ваш шаблон начинается с привязанного значения, то вы обязаны его экранировать:
 
-```markup
+```xml
 <TextBlock Text="{Binding Animals.Count, 
                                 StringFormat='{}{0} animals live in the farm.'}" />
 ```

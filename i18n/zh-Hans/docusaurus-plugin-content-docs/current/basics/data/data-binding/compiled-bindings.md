@@ -21,7 +21,7 @@ description: CONCEPTS
 
 如果您希望应用程序默认情况下全局使用编译绑定，可以将以下内容添加到您的项目文件中：
 
-```markup
+```xml
 <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 ```
 
@@ -33,7 +33,7 @@ description: CONCEPTS
 
 现在，您可以通过设置`x:CompileBindings="[True|False]"`来启用或禁用编译绑定。所有子节点都将继承此属性，因此您可以在根节点中启用它，并在需要时禁用特定子节点。
 
-```markup
+```xml
 <!-- 设置DataType并启用编译绑定 -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -59,7 +59,7 @@ description: CONCEPTS
 
 如果您不希望为所有子节点启用编译绑定，还可以使用`CompiledBinding`标记。您仍然需要定义`DataType`，但可以省略`x:CompileBindings="True"`。
 
-```markup
+```xml
 <!-- 设置DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -85,7 +85,7 @@ description: CONCEPTS
 
 如果您已在根节点启用了编译绑定（通过`x:CompileBindings="True"`），并且您要么不想在某个位置使用编译绑定，要么遇到了[已知的限制](#known-limitations)，则可以使用`ReflectionBinding`标记。
 
-```markup
+```xml
 <!-- 设置DataType -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -111,7 +111,7 @@ description: CONCEPTS
 
 在某些情况下，绑定表达式的目标类型无法自动计算。在这种情况下，您必须在绑定表达式中提供一个明确的类型转换。
 
-```markup
+```xml
 <ItemsRepeater ItemsSource="{Binding MyItems}">
 <ItemsRepeater.ItemTemplate>
     <DataTemplate>

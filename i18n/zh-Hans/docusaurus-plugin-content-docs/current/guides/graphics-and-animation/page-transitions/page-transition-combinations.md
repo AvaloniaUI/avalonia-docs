@@ -1,15 +1,15 @@
 ---
 id: page-transition-combinations
-title: Page Transition Combinations
+title: 页面过渡组合
 ---
 
-# Page Transition Combinations
+# 页面过渡组合
 
-You can combine two or more built-in page transitions to create a new effect.
+您可以组合两种或更多内置的页面过渡效果，以创建新的效果。
 
-Add a `CompositePageTransition` element to combine the effects of two or more different built-in transitions.
+添加一个 `CompositePageTransition` 元素来结合两种或更多不同内置过渡的效果。
 
-For example, the code here sample creates a transition that slides the views diagonally (the result of combining a horizontal and vertical slide), and also fades the old views out and the new in.
+例如，这里的代码示例创建了一个过渡效果，它以对角线方式滑动视图（水平和垂直滑动的组合效果），并且还淡出旧视图并淡入新视图。
 
 ```xml title='XAML'
 <CompositePageTransition>

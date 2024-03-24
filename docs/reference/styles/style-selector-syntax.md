@@ -10,7 +10,7 @@ This page lists the XAML syntax for style selectors with the C# code methods tha
 
 
 
-```markup
+```xml
 <Style Selector="Button">
 <Style Selector="local|Button">
 ```
@@ -41,7 +41,7 @@ Note the type of an object is actually determined by looking at its `StyleKey` p
 
 
 
-```markup
+```xml
 <Style Selector="#myButton">
 <Style Selector="Button#myButton">
 ```
@@ -60,7 +60,7 @@ Selects a control by its `Name` attribute, with an added `#` (hash) character pr
 
 
 
-```markup
+```xml
 <Style Selector="Button.large">
 <Style Selector="Button.large.red">
 ```
@@ -102,7 +102,7 @@ For more detail about pseudo classes, see the reference [here](pseudo-classes.md
 
 
 
-```markup
+```xml
 <Style Selector=":is(Button)">
 <Style Selector=":is(local|Button)">
 ```
@@ -125,7 +125,7 @@ INterestingly, this allows you to write very general class-based selectors. As c
 
 
 
-```markup
+```xml
 <Style Selector=":is(Control).margin2">
 <Style Selector=":is(local|Control.margin2)">
 ```
@@ -142,7 +142,7 @@ new Style(x => x.Is(typeof(Control)).Class("margin2"));
 
 
 
-```markup
+```xml
 <Style Selector="StackPanel > Button">
 ```
 
@@ -177,7 +177,7 @@ The selector will match the first button, but not the second. This is because th
 
 
 
-```markup
+```xml
 <Style Selector="StackPanel Button">
 ```
 
@@ -196,7 +196,7 @@ Therefore applying the above selector to the previous XAML sample, both buttons 
 
 
 
-```markup
+```xml
 <Style Selector="Button[IsDefault=true]">
 ```
 
@@ -221,7 +221,7 @@ For example, in the XAML above, the first button will be selected, but not the s
 :::info
 Note: when you use an attached property as a property match, the property name must be wrapped in parentheses. Fro example:
 
-```markup
+```xml
 <Style Selector="TextBlock[(Grid.Row)=0]">
 ```
 :::
@@ -234,7 +234,7 @@ Further note: when you use a property match, the property type must support the 
 
 
 
-```markup
+```xml
 <Style Selector="Button /template/ ContentPresenter">
 ```
 
@@ -253,7 +253,7 @@ In the example above, if a button has a template, then the selector matches sele
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:not(.h1)">
 ```
 
@@ -270,7 +270,7 @@ This function negates the selection in the brackets. In the example above all th
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock, Button">
 ```
 
@@ -287,7 +287,7 @@ You can select any element that matches a comma-separated list of selectors. Any
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-child(2n+3)">
 ```
 
@@ -312,7 +312,7 @@ There is a corresponding selector with a formula that counts from the end of the
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-last-child(2n+3)">
 ```
 
@@ -329,7 +329,7 @@ You can omit the **A** and **n** from the formula in XAML to specify a single po
 
 
 
-```markup
+```xml
 <Style Selector="TextBlock:nth-child(3)">
 ```
 
@@ -369,7 +369,7 @@ This table lists some examples of selection by child position:
 | `:nth-child(3n+4)` | Every 3rd element start from 4th: **4**_(3×0+4)_, **7**_(3×1+4)_, **10**_(3×2+4)_, **13**_(3×3+4)_, etc                                                                                                         |
 | `:nth-child(-n+3)` | First 3 elements: **3**_(-1×0+3)_, **2**_(-1×1+3)_, **1**_(-1×2+3)_. All subsequent indices are less than 1 so they are not matching any elements.                                                              |
 
-## Online Child Position Tester
+### Online Child Position Tester
 
 Although this is a CSS site, it will work for _Avalonia UI_ child position selectors because the rules are the same.
 
@@ -377,3 +377,30 @@ Although this is a CSS site, it will work for _Avalonia UI_ child position selec
 You can use this site to test your child position selector: \
 [https://css-tricks.com/examples/nth-child-tester/](https://css-tricks.com/examples/nth-child-tester/)
 :::
+
+## Nesting
+
+```xml
+<Style Selector="TextBlock">
+    <Setter Property="FontSize" Value="24"/>
+    
+    <!-- Effectively "TextBlock:pointerover" -->
+    <Style Selector="^:pointerover">
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+</Style>
+```
+
+```csharp title='C#'
+new Style(x => x.OfType<TextBlock>())
+{
+    Setters = { new Setter(TextBlock.FontSizeProperty, 24d) },
+    Children =
+    {
+        new Style(x => x.Nesting().Class(":pointerover"))
+        {
+            Setters = { new Setter(TextBlock.FontWeightProperty, FontWeight.Bold) }
+        }
+    }
+};
+```

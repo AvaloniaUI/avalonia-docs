@@ -40,7 +40,7 @@ namespace AvaloniaApplication1.Views
 
 Notice that this class name is the same as name of the XAML file, and is also referenced in the `x:Class` attribute of the window element.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:AvaloniaApplication1.ViewModels"
@@ -68,11 +68,11 @@ To do this you will first need a reference to a control. Your code will use find
 
 In this example, the button in the XAML has the name attribute defined:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication5.MainWindow">
-  <Button Name=GreetingButton">Hello World</Button>
+  <Button Name="GreetingButton">Hello World</Button>
 </Window>
 ```
 
@@ -94,7 +94,7 @@ Any useful application will require you to implement some action! When you use t
 
 You write event handlers as methods in the code-behind file, and then reference them in the XAML with an event attribute. For example to add a handler for a button click:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication4.MainWindow">

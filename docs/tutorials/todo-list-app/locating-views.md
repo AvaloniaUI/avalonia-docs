@@ -50,7 +50,7 @@ The view locator class defines a data template in code which takes a view model 
 
 An instance of `ViewLocator` is present in the **App.axaml** file in the app project (it was added by the solution template). It should look like this:
 
-```markup
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="ToDoList.App"

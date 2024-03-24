@@ -6,7 +6,7 @@ description: CONCEPTS - Input
 
 实现了`ICommandSource`接口的各种控件都有一个`HotKey`属性，您可以设置或绑定它。按下快捷键将执行与控件绑定的命令。
 
-```markup
+```xml
 <Menu>
     <MenuItem Header="_File">
         <MenuItem x:Name="SaveMenuItem" Header="_Save" Command="{Binding SaveCommand}" HotKey="Ctrl+S"/>

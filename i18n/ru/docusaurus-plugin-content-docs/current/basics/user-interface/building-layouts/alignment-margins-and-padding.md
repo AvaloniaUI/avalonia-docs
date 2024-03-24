@@ -20,7 +20,7 @@ At first glance, the `Button` elements in this illustration may appear to be pla
 
 The following example describes how to create the layout in the preceding illustration. A `Border` element encapsulates a parent `StackPanel`, with a `Padding` value of 15 device independent pixels. This accounts for the narrow `LightBlue` band that surrounds the child `StackPanel`. Child elements of the `StackPanel` are used to illustrate each of the various positioning properties that are detailed in this topic. Three `Button` elements are used to demonstrate both the `Margin` and `HorizontalAlignment` properties.
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication2.MainWindow"
@@ -69,7 +69,7 @@ The `HorizontalAlignment` property declares the horizontal alignment characteris
 
 The following example shows how to apply the `HorizontalAlignment` property to `Button` elements. Each attribute value is shown, to better illustrate the various rendering behaviors.
 
-```markup
+```xml
 <Button HorizontalAlignment="Left">Button 1 (Left)</Button>
 <Button HorizontalAlignment="Right">Button 2 (Right)</Button>
 <Button HorizontalAlignment="Center">Button 3 (Center)</Button>
@@ -93,7 +93,7 @@ The `VerticalAlignment` property describes the vertical alignment characteristic
 
 The following example shows how to apply the `VerticalAlignment` property to `Button` elements. Each attribute value is shown, to better illustrate the various rendering behaviors. For purposes of this sample, a `Grid` element with visible gridlines is used as the parent, to better illustrate the layout behavior of each property value.
 
-```markup
+```xml
 <Border Background="LightBlue" BorderBrush="Black" BorderThickness="2" Padding="15">
     <Grid Background="White" ShowGridLines="True">
       <Grid.RowDefinitions>
@@ -128,7 +128,7 @@ A non-zero margin applies space outside the element's `Bounds`.
 
 The following example shows how to apply uniform margins around a group of `Button` elements. The `Button` elements are spaced evenly with a ten-pixel margin buffer in each direction.
 
-```markup
+```xml
 <Button Margin="10">Button 7</Button>
 <Button Margin="10">Button 8</Button>
 <Button Margin="10">Button 9</Button>
@@ -136,7 +136,7 @@ The following example shows how to apply uniform margins around a group of `Butt
 
 In many instances, a uniform margin is not appropriate. In these cases, non-uniform spacing can be applied. The following example shows how to apply non-uniform margin spacing to child elements. Margins are described in this order: left, top, right, bottom.
 
-```markup
+```xml
 <Button Margin="0,10,0,10">Button 1</Button>
 <Button Margin="0,10,0,10">Button 2</Button>
 <Button Margin="0,10,0,10">Button 3</Button>
@@ -148,7 +148,7 @@ Padding is similar to `Margin` in most respects. The Padding property is exposed
 
 The following example shows how to apply `Padding` to a parent `Border` element.
 
-```markup
+```xml
 <Border Background="LightBlue"
         BorderBrush="Black"
         BorderThickness="2"
@@ -162,7 +162,7 @@ The following example shows how to apply `Padding` to a parent `Border` element.
 
 The following example demonstrates each of the concepts that are detailed in this topic. Building on the infrastructure found in the first sample in this topic, this example adds a`Grid` element as a child of the `Border` in the first sample. `Padding` is applied to the parent `Border` element. The`Grid` is used to partition space between three child `StackPanel` elements. `Button` elements are again used to show the various effects of `Margin` and `HorizontalAlignment`. `TextBlock` elements are added to each `ColumnDefinition` to better define the various properties applied to the `Button` elements in each column.
 
-```markup
+```xml
 <Border Background="LightBlue"
         BorderBrush="Black"
         BorderThickness="2"

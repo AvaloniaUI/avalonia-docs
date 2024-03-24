@@ -33,13 +33,13 @@ import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax
 
 绑定路径可以是单个属性，也可以是属性链。例如，如果数据源有一个`Student`属性，该属性返回的对象具有一个`Name`属性，您可以使用以下语法绑定到学生姓名：
 
-```markup
+```xml
 <TextBlock Text="{Binding Student.Name}"/>
 ```
 
 如果数据源有一个数组或列表（带有索引器），则可以将索引添加到绑定路径中，如下所示：
 
-```markup
+```xml
 <TextBlock Text="{Binding Students[0].Name}"/>
 ```
 
@@ -60,7 +60,7 @@ import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax
 
 例如：
 
-```markup
+```xml
 <TextBlock Text="{Binding Name, Mode=OneTime}">
 ```
 
@@ -90,19 +90,19 @@ import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax
 
 或者，您可以使用反斜杠转义模式所需的花括号。例如：
 
-```markup
+```xml
 <TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}}" />
 ```
 
 但是，如果您的模式不以零开头，则不需要转义。此外，如果模式中有空格，则必须用单引号括起来。例如：
 
-```markup
+```xml
 <TextBlock Text="{Binding Animals.Count, StringFormat='I have {0} animals.'}" />
 ```
 
 请注意，这意味着如果模式以您绑定的值开头，则需要转义。例如：
 
-```markup
+```xml
 <TextBlock Text="{Binding Animals.Count, 
                                 StringFormat='{}{0} animals live in the farm.'}" />
 ```

@@ -68,13 +68,12 @@ public class SampleControl: Control
 
 要使用XAML添加事件处理程序，您需要将事件名称声明为元素的属性，该元素是事件的监听器。属性的值是您实现的处理程序方法的名称，该方法必须存在于代码后台文件的类中。
 
-```markup
+```xml
 <Button Click="b1SetColor">button</Button>
 ```
 
 添加标准CLR事件处理程序的XAML语法与添加路由事件处理程序的语法相同，因为您实际上是将处理程序添加到具有路由事件实现的CLR事件包装器上。
 
-从Avalonia 0.9.x开始，Avalonia设计器要求事件处理程序被声明为`public`方法。我们希望在将来能够取消这个限制。
 ## 路由策略
 
 路由事件使用以下三种路由策略：
@@ -104,7 +103,7 @@ public class SampleControl: Control
 
 要在XAML中添加事件处理程序，只需将事件名称作为属性添加到元素中，并将属性值设置为实现适当委托的事件处理程序的名称，如下例所示。
 
-```markup
+```xml
 <Button Click="b1SetColor">button</Button>
 ```
 
@@ -201,7 +200,7 @@ Avalonia输入系统广泛使用附加事件。然而，几乎所有这些附加
 
 另一种类似于_typename_._eventname_附加事件语法的语法用法，严格来说不是附加事件用法，是当您为由子元素引发的路由事件附加处理程序时使用的。您将处理程序附加到一个共同的父元素上，以利用事件路由，即使该共同的父元素可能没有相关的路由事件作为成员。再次考虑以下示例：
 
-```markup
+```xml
 <Border Height="50" Width="300">
   <StackPanel Orientation="Horizontal" Button.Click="CommonClickHandler">
     <Button Name="YesButton">Yes</Button>

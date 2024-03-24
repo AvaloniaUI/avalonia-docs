@@ -11,7 +11,7 @@
 
 Нижеуказанный код показывает, как использовать CSS-подобный стиль в `UserControl`.
 
-```markup
+```xml
 <UserControl>
     <UserControl.Styles>
         <!-- Make TextBlocks with the h1 style class have a font size of 24 points -->

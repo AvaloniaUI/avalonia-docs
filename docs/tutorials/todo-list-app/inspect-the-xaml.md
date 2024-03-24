@@ -53,7 +53,7 @@ The entry `mc:Ignorable="d"` tells the _Avalonia UI_ XAML engine that entries be
 
 The last line links the XAML file with its code-behind class. Note that the fully-qualified class name has to be used here.
 
-```markup
+```xml
 <UserControl ...
    x:Class="ToDoList.Views.ToDoListView">
 ```
@@ -84,7 +84,7 @@ In this example, you are using the dock panel `<DockPanel>` control. This is a t
     HorizontalContentAlignment="Center">Add Item</Button>
 ```
 
-In a dock panel there must be a single control filling the remaining space in its content zone (wherever that is located); or it will not display correctly. This filling control must have no `DockPanel.Dock` attribute. The tutorial uses a stack panel to fill the remainng space:
+In a dock panel there must be a single control filling the remaining space in its content zone (wherever that is located); or it will not display correctly. This filling control must have no `DockPanel.Dock` attribute. The tutorial uses a stack panel to fill the remaining space:
 
 ```xml
 <StackPanel>
@@ -98,7 +98,7 @@ To more detail about the stack panel, see the reference [here](../../reference/c
 
 The remaining XAML adds the hard-coded to do list items as check boxes:
 
-```markup
+```xml
 <CheckBox Margin="4">Walk the dog</CheckBox>
 <CheckBox Margin="4">Buy some milk</CheckBox>
 ```

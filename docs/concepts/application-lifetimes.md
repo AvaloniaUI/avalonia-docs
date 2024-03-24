@@ -79,6 +79,7 @@ Provided by:
 
 * `StartLinuxFramebuffer`
 * mobile platforms
+* web platform (WebAssembly/WASM) 
 
 Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.
 

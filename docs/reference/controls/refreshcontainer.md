@@ -12,7 +12,7 @@ The `RefreshContainer` allows a user to pull down on content or a list of data t
 This example shows hows to use a RefreshContainer with a
 
 _In the axaml file._
-```markup
+```xml
 <RefreshContainer PullDirection="TopToBottom"
                 RefreshRequested="RefreshContainerPage_RefreshRequested">
     <ListBox ItemsSource="{Binding Items}"/>

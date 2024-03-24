@@ -30,7 +30,7 @@ import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/ope
 - 找到并打开 **MusicStoreWindow.axaml** 文件。
 - 如下更改代码，以添加亚克力模糊背景，并将其延伸到标题栏中（与之前相同）：
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

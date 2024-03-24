@@ -30,7 +30,7 @@ To style the new dialog window so that it matches the main window, follow this p
 - Locate and open the **MusicStoreWindow.axaml** file.
 - Change this code as follows to add the acrylic blur background, extended into the title bar (as before) as shown:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

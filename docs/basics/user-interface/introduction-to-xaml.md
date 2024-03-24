@@ -17,15 +17,11 @@ These pages will introduce you to how XAML is used specifically in _Avalonia UI_
 
 The file extension for XAML files used elsewhere is `.xaml` but due to technical issues integrating with Visual Studio, _Avalonia UI_ uses its own `.axaml` extension - 'Avalonia XAML'.
 
-:::info
-From _Avalonia UI_ version 0.9.11 all XAML files created in Visual Studio have the `.axaml` extension; and from version 0.10 all _Avalonia UI_ templates create files using the `.axaml` extension.
-:::
-
 ## File Format
 
 A typical Avalonia XAML file looks like this:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication1.MainWindow">
@@ -54,7 +50,7 @@ A UI can be composed of several different types of control. To learn more about 
 
 For example, this XAML adds a button to the content of a window:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button>Hello World!</Button>
@@ -71,7 +67,7 @@ The XML elements that represent controls have attributes corresponding to contro
 
 For example, to specify a blue background for a button control, you add the `Background` attribute set the value to `"Blue"`. Like this:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Background="Blue">Hello World!</Button>
@@ -82,7 +78,7 @@ For example, to specify a blue background for a button control, you add the `Bac
 
 You might have noticed that the button in the above sample has its content (the 'Hello World' string) placed between its opening and closing tags. As an alternative, you can set the content attribute, as follows:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Content="Hello World!"/>
@@ -95,7 +91,7 @@ This behaviour is specific to the content of an _Avalonia UI_ control.
 
 You will often use the _Avalonia UI_ binding system to link a control property to an underlying object. The link is declared using the `{Binding}` mark-up extension. For example:
 
-```markup
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Button Content="{Binding Greeting}"/>

@@ -42,7 +42,7 @@ public MainWindowViewModel(){
 
 现在，`_sourceCache`已创建并填充，`ReadOnlyObservableCollection<T>`已创建并绑定，我们可以像通常使用`ObservableCollection<T>`一样在视图中进行绑定。
 
-```markup
+```xml
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>

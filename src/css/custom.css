@@ -423,8 +423,6 @@ aside.theme-doc-sidebar-container {
 }
 
 .theme-doc-sidebar-container div[title='Expand sidebar'] {
-  position: sticky;
-  margin-left: 16px;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.293 4.293a1 1 0 0 0 0 1.414L14.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414l-7-7a1 1 0 0 0-1.414 0Z' fill='%23181818'/%3E%3C/svg%3E");
 }
 
@@ -1239,4 +1237,12 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   background-color: rgba(139, 68, 172, 0.1)!important;
   color: #C469EE;
   border-color: #C469EE;
+}
+
+img.center {
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
 }

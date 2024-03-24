@@ -121,7 +121,7 @@ public class DoubleTappedBehav : AvaloniaObject
 
 这个示例UI展示了如何使用附加属性。在将命名空间告知XAML编译器后，可以通过在前面加上一个点来使用它。然后可以使用绑定。
 
-```markup
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:loc="clr-namespace:MyApp.Behaviors"
