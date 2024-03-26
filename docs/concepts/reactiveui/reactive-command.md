@@ -63,7 +63,7 @@ This view model does not yet perform revealed functionality. The `SubmitCommand`
 
 When you use _ReactiveUI_ to implement revealed functionality, you create an observable object that indicates whether your command can execute or not.
 
-For example, you can add this code to the above view model to create an observable object to validate the view model:
+For example, you can add this code to the above view model constructor (`public MainWindowViewModel()`) to create an observable object to validate the view model:
 
 ```
 IObservable<bool> isInputValid = this.WhenAnyValue(
