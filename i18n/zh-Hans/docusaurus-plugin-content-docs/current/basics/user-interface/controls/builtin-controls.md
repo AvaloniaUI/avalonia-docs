@@ -10,7 +10,7 @@
 | [Canvas](../../../reference/controls/canvas.md)                                | 在指定位置显示子控件。                                                               |
 | [Dock Panel](../../../reference/controls/dockpanel.md)                         | 将子控件沿指定边缘（顶部、底部、左侧、右侧）排列，并使其中一个填充剩余空间。                                    |
 | [Expander](../../../reference/controls/expander.md)                            | 具有标题区域（始终可见）和可折叠的内容区域（单个子元素）。                                             |
-| [Grid](../../../reference/controls/grid.md)                                    | 将子控件排列在网格的单元格中，按行和列定位。单元格可以跨行和跨列。                                         |
+| [Grid](../../../reference/controls/grid/README.md)                                    | 将子控件排列在网格的单元格中，按行和列定位。单元格可以跨行和跨列。                                         |
 | [Grid Splitter](../../../reference/controls/gridsplitter.md)                   | 可以添加到网格中，允许用户在运行时调整行或列大小。                                                 |
 | [Panel](../../../reference/controls/panel.md)                                  | 将子控件堆叠在一起。                                                                |
 | [Relative Panel](../../../reference/controls/relativepanel.md)                 | 允许多个子控件。子控件的位置和对齐方式可以相对于面板本身指定，也可以相对于其他子控件指定。可以指定子控件的大小，也可以根据关系和对齐方式计算大小。 |
