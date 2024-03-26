@@ -156,7 +156,7 @@ public static int Main(string[] args)
     if (args.Contains("--drm"))
     {
         SilenceConsole();
-        return builder.StartLinuxDrm(args);
+        return builder.StartLinuxDrm(args: args, card: "/dev/dri/card1", scaling: 1.0);
     }
 
     return builder.StartWithClassicDesktopLifetime(args);
