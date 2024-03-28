@@ -2,7 +2,10 @@
 description: CONCEPTS - Input
 ---
 
-import KeyMouseScreenshot from '/img/reference/controls/input/KeyMouseBindingTest.gif';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import KeyMouseScreenshot from '/img/reference/controls/input/binding-key-mouse-test.gif';
 
 # KeyBinding and MouseBinding 
 - This section explains how to place shortcut keys that often appear in business tools in various controls.
@@ -13,8 +16,8 @@ import KeyMouseScreenshot from '/img/reference/controls/input/KeyMouseBindingTes
   defaultValue="xaml"
   values={[
       { label: 'XAML', value: 'xaml', },
-      { label: 'code-behind', value: 'cs', },
-      { label: 'ViewModel', value: 'cs', },
+      { label: 'CodeBehind', value: 'code-behind', },
+      { label: 'ViewModel', value: 'ViewModel', },
   ]}
 >
 <TabItem value="xaml">
