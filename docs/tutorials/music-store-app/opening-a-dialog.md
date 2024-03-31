@@ -127,7 +127,7 @@ At this point, the code for the interaction is still incomplete. If you attempt 
 Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view, and uses some features of the _ReactiveUI_ framework.  Follow this procedure:
 
 - Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
-- Alter the class wo that it inherits from `ReactiveWindow<MainWindowViewModel>`.
+- Alter the class so that it inherits from `ReactiveWindow<MainWindowViewModel>`.
 - Add the `DoShowDialogAsync` method as follows:
 
 ```csharp
