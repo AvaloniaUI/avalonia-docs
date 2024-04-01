@@ -52,7 +52,7 @@ public class MyViewModel : INotifyPropertyChanged
 以下是如何使用 `ObservableObject` 实现相同结果的示例：
 
 ```csharp
-using Microsoft.Toolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 public partial class MyViewModel : ObservableObject
 {
