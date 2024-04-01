@@ -100,7 +100,7 @@ Lastly, to make the add item button call the `AddItem()` method, follow this pro
         HorizontalAlignment="Stretch"
         HorizontalContentAlignment="Center"
         x:CompileBindings="False"
-        Command="{Binding $parent[Window].DataContext.AddItem}">
+        Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).AddItem}">
         Add Item
 </Button>
 ```
