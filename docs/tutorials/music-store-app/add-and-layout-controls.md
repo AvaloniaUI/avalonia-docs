@@ -74,7 +74,7 @@ To use the Microsoft Store icon, follow this procedure:
 ```
 
 - Copy all of the code for the icon.
-- In the _Rider s_olution explorer, right-click the project.
+- In the Rider solution explorer, right-click the project.
 - Click **Add**, then click  **Avalonia Styles**
 
 <p><img className="image-medium-zoom" src={MusicStoreAddStylesScreenshot} alt="" /></p>
