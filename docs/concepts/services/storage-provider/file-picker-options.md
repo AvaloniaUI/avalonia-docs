@@ -91,6 +91,7 @@ Avalonia has set of built-in file types:
 - FilePickerFileTypes.ImageAll - all images
 - FilePickerFileTypes.ImageJpg - jpg images
 - FilePickerFileTypes.ImagePng - png images
+- FilePickerFileTypes.ImageWebP - webp images
 - FilePickerFileTypes.Pdf - pdf documents
 
 However it is possible to define custom file types that can be used by the picker.
@@ -100,7 +101,7 @@ For instance, the built-in ImageAll type is defined as:
 ```cs
 public static FilePickerFileType ImageAll { get; } = new("All Images")
 {
-    Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.bmp" },
+    Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.bmp", "*.webp" },
     AppleUniformTypeIdentifiers = new[] { "public.image" },
     MimeTypes = new[] { "image/*" }
 };
@@ -109,7 +110,7 @@ public static FilePickerFileType ImageAll { get; } = new("All Images")
 Where each file type has the following hints that are used by the different platforms:
 
 - `Patterns` are used by most Windows, Linux and Browser platforms, and is a basic GLOB patten that can be matched on types.
-- `AppleUniformTypeIdentifiers` is a standard identifier defined by Apple and is used on macOS and iOS platforms.
+- `AppleUniformTypeIdentifiers` is a standard identifier defined by Apple and is used on macOS and iOS platforms. You can find the correct value for a given file in the macOS terminal with `mdls -name kMDItemContentType yourfile.ext`.
 - `MimeTypes` is a web identifier for the files used on most platforms, but not Windows and iOS.
 
 Defining all hints is recommended if the information is known.
