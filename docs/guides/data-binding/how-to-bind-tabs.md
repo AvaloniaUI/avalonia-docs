@@ -49,7 +49,7 @@ Finally create a `TabControl` and bind its `ItemsSource` property to the DataCon
       <DataTemplate>
         <DockPanel LastChildFill="True">
           <TextBlock Text="This is content of selected tab" DockPanel.Dock="Top" FontWeight="Bold" />
-          <TextBlock Text="{Binding Content}" />
+          <TextBlock Text="{Binding Content DataType="TabItemModel"}" />
         </DockPanel>
       </DataTemplate>
     </TabControl.ContentTemplate>
