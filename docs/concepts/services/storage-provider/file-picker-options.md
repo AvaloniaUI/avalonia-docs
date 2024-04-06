@@ -118,3 +118,18 @@ Defining all hints is recommended if the information is known.
 :::note
 If specific hint is not known, don't set random values or "*.*" wildcard, instead keep this collection null. It will tell the platform to ignore this collection and instead try to use another one.
 :::
+
+## WebP Inclusion in Options <MinVersion version="11.1" />
+
+Keep in mind that `FilePickerFileTypes.ImageWebP` and the addition of "*.webp" to the "All Images" patterns were introduced in version 11.1. You can still create custom file picker types in older versions to incorporate WebP images. For example, to allow only a WebP image to be picked, you can use this:
+
+```cs
+var customWebPFileType = new FilePickerFileType("Only WebP Images")
+{
+    Patterns = new[] { "*.webp" },
+    AppleUniformTypeIdentifiers = new[] { "org.webmproject.webp" },
+    MimeTypes = new[] { "image/webp" }
+};
+```
+
+And if you want to include WebP as one of the file types you consider to be an image, you can use the "ImageAll" example shown above.
