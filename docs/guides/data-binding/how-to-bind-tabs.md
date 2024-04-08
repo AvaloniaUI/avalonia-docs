@@ -10,14 +10,16 @@ You can dynamically create tab items with **data binding**. To do this, bind the
 
 You can then use a **data template** to display the objects.
 
-This example uses an array of objects created from this `TabItemModel` class:
+This example uses an array of objects created from this `TabItemViewModel` class:
 
 ```csharp
-public class TabItemModel
+namespace MyApp.ViewModel;
+
+public class TabItemViewModel
 {
     public string Header { get; }
     public string Content { get; }
-    public TabItemModel(string header, string content)
+    public TabItemViewModel(string header, string content)
     {
         Header = header;
         Content = content;
@@ -25,12 +27,12 @@ public class TabItemModel
 }
 ```
 
-Create an array of two `TabItemModel` instances and bind it to the DataContext.
+Create an array of two `TabItemViewModel` instances and bind it to the DataContext.
 
 ```csharp
-DataContext = new TabItemModel[] { 
-    new TabItemModel("One", "Some content on first tab"),
-    new TabItemModel("Two", "Some content on second tab"),
+DataContext = new TabItemViewModel[] { 
+    new TabItemViewModel("One", "Some content on first tab"),
+    new TabItemViewModel("Two", "Some content on second tab"),
 };
 ```
 
@@ -46,7 +48,13 @@ Finally create a `TabControl` and bind its `ItemsSource` property to the DataCon
       </DataTemplate>
     </TabControl.ItemTemplate>
     <TabControl.ContentTemplate>
-      <DataTemplate DataType="TabItemModel">
+        <!-- ContentTemplate's DataTemplate must specify the view model in DataType.
+        The alias 'vm' references the specification of the view model's namespace in 
+        an attribute of the XAML's root element, which will look like
+            xmlns:vm="using:MyApp.ViewModel"
+        or
+            xmlns:vm="clr-namespace:MyApp.ViewModel;assembly=MyApp.ViewModel" -->
+      <DataTemplate DataType="vm:TabItemViewModel">
         <DockPanel LastChildFill="True">
           <TextBlock Text="This is content of selected tab" DockPanel.Dock="Top" FontWeight="Bold" />
           <TextBlock Text="{Binding Content}" />
