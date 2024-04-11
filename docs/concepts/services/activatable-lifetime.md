@@ -93,7 +93,7 @@ On Android, you need to add `intent-filter` with specific `android:scheme` to yo
 ## Platform compatibility:
 
 | Feature        |  Windows | macOS | Linux | Browser | Android |  iOS | Tizen |
-|---------------|-------|-------|-------|-------|-------|-------|
+|---------------|-------|-------|-------|-------|-------|-------|-------|
 | `ActivationKind.Background` | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ | ✖ |
 | `ActivationKind.File` | ✖ | ✔ | ✖ | ✖ | ✔ | ✔ | ✖ |
 | `ActivationKind.OpenUri` | ✖ | ✔ | ✖ | ✖ | ✔ | ✔ | ✖ |
