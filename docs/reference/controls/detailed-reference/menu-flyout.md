@@ -21,8 +21,8 @@ The properties of a menu flyout are the same as for a flyout. See [here](../flyo
 
 This is a simple example of the menu flyout:
 
-```
-<Button HorizontalAlignment="Center">
+```xml
+<Button Content="Button" HorizontalAlignment="Center">
   <Button.Flyout>
     <MenuFlyout>
       <MenuItem Header="Open"/>
@@ -30,7 +30,6 @@ This is a simple example of the menu flyout:
       <MenuItem Header="Close"/>        
     </MenuFlyout>
   </Button.Flyout>
-  Button
 </Button>
 ```
 
@@ -41,6 +40,30 @@ Note the `<Separator/>` element will not work in a menu flyout. To make a separa
 The resulting menu flyout looks like this:
 
 <img src={MenuFlyoutScreenshot} alt="" />
+
+## Dynamic MenuFlyout
+
+This is an example for a `MenuFlyout` that is created dynamically during runtime based on a collection `MyMenuItems` with items of type `MyMenuItemViewModel`.
+
+```xml
+<Button Content="Button">
+  <Button.Flyout>
+    <MenuFlyout ItemsSource="{Binding MyMenuItems}">
+      <MenuFlyout.ItemContainerTheme>
+        <ControlTheme TargetType="MenuItem" BasedOn="{StaticResource {x:Type MenuItem}}" 
+          x:DataType="l:MyMenuItemViewModel">
+
+          <Setter Property="Header" Value="{Binding Header}"/>
+          <Setter Property="ItemsSource" Value="{Binding Items}"/>
+          <Setter Property="Command" Value="{Binding Command}"/>
+          <Setter Property="CommandParameter" Value="{Binding CommandParameter}"/>
+          
+        </ControlTheme>
+      </MenuFlyout.ItemContainerTheme>
+    </MenuFlyout>
+  </Button.Flyout>
+</Button>
+```
 
 ## More Information
 
