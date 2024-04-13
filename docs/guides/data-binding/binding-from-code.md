@@ -110,7 +110,7 @@ Sometimes when you want the additional features that XAML bindings provide, it's
 
 ```csharp
 var textBlock = new TextBlock();
-var viewModelProperty = textBlock.GetObservable(TextBlock.DataContext)
+var viewModelProperty = textBlock.GetObservable(TextBlock.DataContextProperty)
     .OfType<MyViewModel>()
     .Select(x => x?.Name);
 textBlock.Bind(TextBlock.TextProperty, viewModelProperty);
