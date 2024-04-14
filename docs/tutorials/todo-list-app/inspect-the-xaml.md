@@ -55,7 +55,7 @@ The last line links the XAML file with its code-behind class. Note that the full
 
 ```xml
 <UserControl ...
-   x:Class="ToDoList.Views.ToDoListView">
+   x:Class="ToDoList.ToDoListView">
 ```
 
 ## Control Content
