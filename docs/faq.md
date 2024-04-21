@@ -126,7 +126,7 @@ Skia is built against glibc 2.17. If your distro uses something else instead, yo
 
 ### What versions of Windows are supported?
 
-* Windows 8.1
+* Windows 8.1+
 
 Avalonia also runs on Windows 7, but new platforms specific features won't be available there, and we do not provide bug fixes for this version anymore. 
 
