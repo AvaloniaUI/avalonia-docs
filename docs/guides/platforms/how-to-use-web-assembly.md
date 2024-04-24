@@ -14,33 +14,37 @@ Run in the browser with WebAssembly
 dotnet workload install wasm-tools
 ```
 
-1. Install or update the dotnet templates to the latest version.
+2. Install or update the dotnet templates to the latest version.
 
 ```bash
 dotnet new install avalonia.templates
 ```
 
-1. Create a new directory for the project.
+3. Create a new directory for the project.
 
 ```bash
 mkdir BrowserTest
 cd BrowserTest
 ```
 
-1. Generate a new project that supports running in the browser.
+4. Generate a new project that supports running in the browser. To lookup the available templates via `dotnet new list` see [dotnet documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new-sdk-templates).
 
 ```bash
 dotnet new avalonia.xplat
 ```
 
-1. In order to run simply do:
+5. In the console output you will see HTTP and HTTPS links to open the app.
+In order to run, simply do the following:
 
 ```bash
 cd BrowserTest.Browser
 dotnet run
+
+# Output:
+# App url: http://localhost:5000/index.html
+# App url: https://localhost:5001/index.html
 ```
 
-1. In the console output you will see HTTP and HTTPS links to open the app.
 
 ### Deployment
 In the `BrowserTest.Browser` directory, run:
