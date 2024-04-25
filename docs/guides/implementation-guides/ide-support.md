@@ -97,7 +97,7 @@ Alternatively you can use `Design.DataContext` attached property. As well as `De
 
 ### Setting the Design-Time DataContext in Code
 
-Setting the design-time `DataContext` in XAML by one of the methods shown above is only possible if the view model has a parameterless constructor. Yet view model constructors with parameters are required with typical [dependency injection patterns](how-to-implement-dependency-injection). One option is to use a special [design-time data model](how-to-use-design-time-data) with a parameterless constructor.  However, a design-time `DataContext` that references a view model constructor with parameters may be set in code with the `Design.SetDataContext` method.
+Setting the design-time `DataContext` in XAML by one of the methods shown above is only possible if the view model has a parameterless constructor. Yet view model constructors with parameters are required with typical [dependency injection patterns](how-to-implement-dependency-injection). One option is to use a special [design-time view model](how-to-use-design-time-data) with a parameterless constructor.  However, a design-time `DataContext` that references a view model constructor with parameters may be set in code with the `Design.SetDataContext` method.
 
 ```csharp
 public MainWindow()
