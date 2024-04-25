@@ -130,7 +130,7 @@ namespace Avalonia.MusicStore.ViewModels
                 .Subscribe(DoSearch!);
         }
        
-        private async void DoSearch(string s)
+        private async void DoSearch(string? s)
         {
             IsBusy = true;
             SearchResults.Clear();
