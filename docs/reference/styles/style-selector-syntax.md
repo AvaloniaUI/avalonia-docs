@@ -81,18 +81,20 @@ Selects a control with the specified style class or classes. Multiple classes ar
 
 ```xml
 <Style Selector="Button:focus">
+<Style Selector="Button:focus:pointerover">
 <Style Selector="Button.large:focus">
 ```
 
 
 ```csharp title='C#'
 new Style(x => x.OfType<Button>().Class(":focus"));
+new Style(x => x.OfType<Button>().Class(":focus").Class(":pointerover"));
 new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 ```
 
 
 
-Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. There can only be one pseudo class in the selector. When used in combination with other classes, the pseudo class must be the last in the list. 
+Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. Multiple pseudo classes may be applied to the same Control.
 
 :::info
 For more detail about pseudo classes, see the reference [here](pseudo-classes.md).
