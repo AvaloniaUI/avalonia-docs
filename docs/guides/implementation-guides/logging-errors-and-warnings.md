@@ -63,3 +63,35 @@ public static AppBuilder BuildAvaloniaApp()
         .UsePlatformDetect()
         .LogToTrace(LogEventLevel.Debug, LogArea.Property, LogArea.Layout);
 ```
+
+## Log Sinks
+
+The `LogToTrace` extension method uses `TraceLogSink` which writes its messages to `Trace`. Avalonia supports custom sinks by implementing `ILogSink`. Assigning your custom sink to `Avalonia.Logging.Logger.Sink` will allow Avalonia to use it.
+
+```csharp title='Extension method to assign Logger.Sink'
+using Avalonia.Controls;
+using Avalonia.Logging;
+
+namespace MyNamespace;
+public static class MyLogExtensions
+{
+    public static AppBuilder LogToMySink(this AppBuilder builder, 
+        LogEventLevel level = LogEventLevel.Warning, 
+        params string[] areas)
+    {
+        Logger.Sink = new MyLogSink(level, areas);
+        return builder;
+    }
+}
+```
+
+```csharp title='Startup with custom sink'
+public static AppBuilder BuildAvaloniaApp()
+    => AppBuilder.Configure<App>()
+        .UsePlatformDetect()
+        .LogToMySink();
+```
+
+:::info
+View the source code on _GitHub_ [`TraceLogSink.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Logging/TraceLogSink.cs)
+:::
