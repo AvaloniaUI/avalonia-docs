@@ -50,6 +50,11 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td><code>MenuItem</code></td>
+      <td><code>InputGesture</code></td>
+      <td>The displayed key shortcut for the menu item. Setting this property does not cause the input gesture to be handled by the menu item, it simply displays the gesture text in the menu.</td>
+    </tr>
+    <tr>
+      <td><code>MenuItem</code></td>
       <td><code>Command</code></td>
       <td>The command to be executed when the menu item is clicked or selected with the keyboard.</td>
     </tr>

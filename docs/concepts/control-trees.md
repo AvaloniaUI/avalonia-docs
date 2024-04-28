@@ -12,7 +12,7 @@ _Avalonia UI_ creates control trees from the XAML files in an application so tha
 
 ## Logical Tree
 
-The logical control tree represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. For example: and control (button) inside another control (stack panel) in a window will have the 3-layer logical tree shown here:
+The logical control tree represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. For example, a control (button) inside another control (stack panel) in a window will have the 3-layer logical tree shown here:
 
 <img src={ControlTreesLogicalScreenshot} alt=""/>
 

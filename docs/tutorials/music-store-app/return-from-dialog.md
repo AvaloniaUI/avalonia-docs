@@ -78,10 +78,10 @@ namespace Avalonia.MusicStore.Views
         {
             InitializeComponent();
             
-            // This line is needed to make the previwer happy (the previewer plugin cannot handle the following line).
+            // This line is needed to make the previewer happy (the previewer plugin cannot handle the following line).
             if (Design.IsDesignMode) return;
             
-            this.WhenActivated(d => d(ViewModel!.BuyMusicCommand.Subscribe(Close)));
+            this.WhenActivated(action => action(ViewModel!.BuyMusicCommand.Subscribe(Close)));
         }
     }
 }

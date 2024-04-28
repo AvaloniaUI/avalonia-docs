@@ -33,10 +33,10 @@ public string? EMail
 
 ### INotifyDataErrorInfo - ValidationPlugin
 
-Avalonia 还支持实现 [`INotifyDataErrorInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo) 接口的类的验证。一些 `MVVM`-库使用此接口进行数据验证，例如 [Microsoft.Toolkit.Mvvm](https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/observablevalidator) 库和 [`ReactiveUI.Validation`](https://github.com/reactiveui/ReactiveUI.Validation#inotifydataerrorinfo-support) 库。有关使用说明，请参阅您选择的 `MVVM`-库的文档。
+Avalonia 还支持实现 [`INotifyDataErrorInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo) 接口的类的验证。一些 `MVVM`-库使用此接口进行数据验证，例如 [CommunityToolkit.Mvvm](https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/observablevalidator) 库和 [`ReactiveUI.Validation`](https://github.com/reactiveui/ReactiveUI.Validation#inotifydataerrorinfo-support) 库。有关使用说明，请参阅您选择的 `MVVM`-库的文档。
 
 :::info
-像 `Microsoft.Toolkit.Mvvm` 这样的库使用 `DataAnnotations` 进行验证。这可能会与 [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin) 冲突。请参阅 [管理 ValidationPlugins](data-validation.md#manage-validationplugins) 来解决此问题。
+像 `CommunityToolkit.Mvvm` 这样的库使用 `DataAnnotations` 进行验证。这可能会与 [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin) 冲突。请参阅 [管理 ValidationPlugins](data-validation.md#manage-validationplugins) 来解决此问题。
 :::
 
 ### Exception - ValidationPlugin
