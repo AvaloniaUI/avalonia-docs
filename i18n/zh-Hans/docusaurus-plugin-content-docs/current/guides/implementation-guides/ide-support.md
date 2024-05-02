@@ -35,7 +35,7 @@ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 
 添加了该命名空间后，以下设计时属性可用：
 
-### d:DesignWidth 和 d:DesignHeight
+### d\:DesignWidth 和 d\:DesignHeight
 
 `d:DesignWidth` 和 `d:DesignHeight` 属性为预览的控件应用宽度和高度。
 
@@ -49,7 +49,7 @@ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 </Window>
 ```
 
-### d:DataContext
+### d\:DataContext
 
 `d:DataContext` 属性仅在设计时应用 `DataContext` 。建议您与 `{x:Static}` 指令结合使用此属性，以引用您的一个程序集中的静态属性：
 

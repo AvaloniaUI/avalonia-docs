@@ -35,7 +35,7 @@ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 
 With the namespace added, the following design-time properties become available:
 
-### d:DesignWidth and d:DesignHeight
+### d\:DesignWidth and d\:DesignHeight
 
 The `d:DesignWidth` and `d:DesignHeight` properties apply a width and height to the control being previewed.
 
@@ -49,7 +49,7 @@ The `d:DesignWidth` and `d:DesignHeight` properties apply a width and height to 
 </Window>
 ```
 
-### d:DataContext
+### d\:DataContext
 
 The `d:DataContext` property applies a `DataContext` only at design-time. It is recommended that you use this property in conjunction with the `{x:Static}` directive to reference a static property in one of your assemblies:
 
