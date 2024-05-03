@@ -15,7 +15,7 @@ As for now, this service has implementation only on mobile and browser backends.
 :::
 
 :::note
-Starting with Avalonia 11.1, any Avalonia app will automatically adjsut its root view accordingly to the inset values. This behavior can be disabled by setting `TopLevel.AutoSafeAreaPadding="False"` attached property value on the root view.
+Starting with Avalonia 11.1, any Avalonia app will automatically adjust its root view accordingly to the inset values. This behavior can be disabled by setting `TopLevel.AutoSafeAreaPadding="False"` attached property value on the root view.
 :::
 
 ## Properties 
