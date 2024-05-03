@@ -14,6 +14,10 @@ var insetsManager = TopLevel.GetTopLevel(control).InsetsManager;
 As for now, this service has implementation only on mobile and browser backends. If you need to adjust desktop window decorations, please use `Window.ExtendClientAreaToDecorationsHint`, `Window.ExtendClientAreaChromeHints`, `Window.ExtendClientAreaTitleBarHeightHint` properties.
 :::
 
+:::note
+Starting with Avalonia 11.1, any Avalonia app will automatically adjsut its root view accordingly to the inset values. This behavior can be disabled by setting `TopLevel.AutoSafeAreaPadding="False"` attached property value on the root view.
+:::
+
 ## Properties 
 
 ### IsSystemBarVisible
@@ -81,6 +85,14 @@ The system bar has a light background and a dark foreground.
 The system bar has a dark background and a light foreground.
 
 
+## Platform compatibility:
 
+| Feature        | Windows | macOS | Linux | Browser | Android |  iOS | Tizen |
+|---------------|-------|-------|-------|-------|-------|-------|-------|
+| `IsSystemBarVisible` | ✖ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
+| `DisplayEdgeToEdge` | ✖ | ✖ | ✖ | ✖  | ✔ | ✔ | ✖ |
+| `SafeAreaPadding` | ✖ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
+| `SystemBarColor` | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ | ✖ |
+| `SafeAreaChanged` | ✖ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
 
-
+\* - only mobile Chromium browsers support IInsetsManager API.
