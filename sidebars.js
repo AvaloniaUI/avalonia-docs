@@ -509,7 +509,9 @@ const sidebars = {
           'items': [
             'concepts/services/activatable-lifetime',
             'concepts/services/clipboard',
+            'concepts/services/launcher',
             'concepts/services/focus-manager',
+            'concepts/services/input-pane',
             'concepts/services/insets-manager',
             'concepts/services/platform-settings',
             {
