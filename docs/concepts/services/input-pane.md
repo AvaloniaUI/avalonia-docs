@@ -13,9 +13,9 @@ var inputPane = TopLevel.GetTopLevel(control).InputPane;
 ```
 
 :::note
-Currently, Avalonia does not* automatically adjust root view and scrolling position depending on state of the input pane. Instead, it is recommended for developers to use IInputPane API and adjust their apps accordingly.
+Currently, Avalonia does not automatically adjust root view and scrolling position depending on state of the input pane. Instead, it is recommended for developers to use IInputPane API and adjust their apps accordingly.
 
-\* Automatic adjustment is planned for future 11.* releases.
+Automatic adjustment is planned for future 11.* releases.
 :::
 
 ## Properties 
