@@ -47,7 +47,7 @@ public class DoubleTappedBehav : AvaloniaObject
     /// </summary>
     /// <value>任何类型为<see cref="object"/>的值。</value>
     public static readonly AttachedProperty<object> CommandParameterProperty = AvaloniaProperty.RegisterAttached<DoubleTappedBehav, Interactive, object>(
-        "CommandParameter," default(object), false, BindingMode.OneWay, null);
+        "CommandParameter", default(object), false, BindingMode.OneWay, null);
 
 
     /// <summary>
