@@ -8,8 +8,8 @@ import PointerPressedSampleScreenshot from '/img/concepts/input/pointer-pressed.
 
 In _Avalonia UI_ you implement the interaction of pointing devices with your application using a 'pointer' abstraction. This can represent devices including, but not limited to a mouse, touchpad, and pen. _Avalonia UI_ controls have events that allow you to subscribe to pointer movements, clicks and wheel movements. These are as follows:
 
-* PointerEnter
-* PointerLeave
+* PointerEntered
+* PointerExited
 * PointerMoved
 * PointerPressed
 * PointerReleased
