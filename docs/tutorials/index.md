@@ -7,14 +7,14 @@ This section has practical tutorials that are designed to help you learn _Avalon
 
 ## To Do List App
 
-A simple to do list application using the Model View View-Model (MVVM) pattern, with binding to a collection and _Reactive UI_ programming, from which you will meet:
+A simple to do list application using the Model View View-Model (MVVM) pattern, with binding to a collection, from which you will meet:
 
-* `RaiseAndSetIfChanged`
-* `ReactiveCommand`
-* `IObservable<>`
-* `Observable.Merge()` with `Select()`, `Take()`, and `Subscribe()` methods.
+* How to use Bindings
+* How to use Commands
+* Some basic Styling
+* Some very basic I/O operations
 
-This is a very good introduction to the MVVM and _ReactiveUI_ techniques recommended for _Avalonia UI_ programming. Follow the tutorial [here](./todo-list-app/).
+This is a very good introduction to the MVVM pattern recommended for _Avalonia UI_ programming. Follow the tutorial [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList).
 
 ## Music Store App
 
