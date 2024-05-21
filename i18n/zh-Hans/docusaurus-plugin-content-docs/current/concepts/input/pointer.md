@@ -8,8 +8,8 @@ import PointerPressedSampleScreenshot from '/img/concepts/input/pointer-pressed.
 
 在_Avalonia UI_中，您可以使用'pointer'抽象来实现指针设备与应用程序的交互。这可以表示包括但不限于鼠标、触摸板和笔在内的设备。_Avalonia UI_控件具有允许您订阅指针移动、点击和滚轮移动的事件。它们如下所示：
 
-* PointerEnter
-* PointerLeave
+* PointerEntered
+* PointerExited
 * PointerMoved
 * PointerPressed
 * PointerReleased
