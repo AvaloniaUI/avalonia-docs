@@ -8,15 +8,18 @@ import AvaloniaVsExtensionNuGetScreenshot from '/img/get-started/avalonia-vs-ext
 
 # Set Up an Editor
 
-You can create an Avalonia application using any code editor, but using an IDE will give you support for authoring Avalonia XAML files with a previewer and code completion.
+You can create an Avalonia application using any code editor, but using an IDE will give you support for authoring 
+Avalonia XAML files with a previewer and code completion.
 
 ## JetBrains Rider
 
-The [JetBrains Rider](https://www.jetbrains.com/rider/) IDE has built-in support for Avalonia XAML [starting in 2020.3](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support) including first-class support for Avalonia-specific XAML features and custom code inspections.
+The [JetBrains Rider](https://www.jetbrains.com/rider/) IDE has built-in support for Avalonia XAML [starting in 2020.3](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support) including first-class 
+support for Avalonia-specific XAML features and custom code inspections.
 
 See the [JetBrains Rider 2020.3 release announcement](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support) for more information.
 
-Rider does not yet provide a visual designer, but this is in development. See [the GitHub project](https://github.com/ForNeVeR/AvaloniaRider) for more information and instructions on how to install.
+Rider does not yet provide a visual designer, but this is in development. See [the GitHub project](https://github.com/ForNeVeR/AvaloniaRider) for more 
+information and instructions on how to install.
 
 ## Visual Studio
 
@@ -24,7 +27,7 @@ If you're developing Avalonia with Visual Studio you should install the [Avaloni
 
 <img className="center" src={AvaloniaVsExtensionMarketplaceScreenshot} alt="" />
 
-The extension provides intellisense support for Avalonia XAML together with a previewer.
+The extension provides IntelliSense support for Avalonia XAML together with a previewer.
 
 To install the Avalonia for Visual Studio extension:
 

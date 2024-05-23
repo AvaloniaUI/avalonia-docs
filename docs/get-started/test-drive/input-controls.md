@@ -5,63 +5,77 @@ title: Input Controls
 
 import InputControlsScreenshot from '/img/get-started/test-drive/input-controls.png';
 
-On this page, you will learn how to add some of the Avalonia input controls in a neat layout. The aim is to add a numerical inputs with their associated labels in horizontal rows; with an output control in the row below. 
+On this page, you will learn how to add input controls and arrange them in a neatly aligned layout. The aim is to add 
+numerical inputs with labels and an output control following in the row below. 
 
-To achieve this layout, you will use the built-in grid control, and locate label and input controls in its cells.
+To achieve this layout, you will use the built-in `Grid` control to create cells and assign our controls to those cells.
 
-This picture shows the resulting layout (running) with the gridlines showing. The gridlines are showing for the purpose of visualizing the layout - you would not usually do this on a production UI.
+The following picture shows the finished application at runtime with the gridlines showing for layout visualization purposes. Normally, 
+these are invisible on a production UI.
 
 <img className="center" src={InputControlsScreenshot} alt="" />
 
-To create a layout using the grid control, follow this procedure:
+To create a layout using the `Grid` control with 2 columns and 3 rows, follow this procedure:
 
 - Stop the app if it is running.
-- Locate the middle stack panel in the XAML, and delete the tag.
+- Locate the empty line in the XAML between `<Border>` and `<Button>`
 - Insert a `<Grid>` tag as shown:
 
 ```xml
-<Grid ShowGridLines="True" Margin="5"
-      ColumnDefinitions="120, 100" 
-      RowDefinitions="Auto, Auto, Auto">  
-</Grid>
+<StackPanel>
+    <Border Margin="5" CornerRadius="10" Background="LightBlue">
+        <TextBlock Margin="5"
+            HorizontalAlignment="Center"
+            FontSize="24"
+            Text="Temperature Converter" />
+    </Border>
+    // highlight-start
+    <Grid ShowGridLines="True" Margin="5" 
+          ColumnDefinitions="120, 100"
+          RowDefinitions="Auto, Auto, Auto">
+    </Grid>
+    // highlight-end
+    <Button HorizontalAlignment="Center">Calculate</Button>
+</StackPanel>
 ```
 
-This sets out the column and row sizes for the grid (and makes the gridlines visible - although it will show as just a straight line now, as the grid is still empty).
+This assigns the number of rows and columns, their sizes, and makes the gridlines visible. Currently, it will show as a 
+straight line because the grid cells are empty. The `Auto` rows size to their content and will have zero height until 
+content is added.
 
-Now add label and input controls to the cells of the grid:
-
-- Add `<Label>` and `<TextBox>` (text input) controls as shown:
+- Add `<Label>` and `<TextBox>` (text input) controls to the `Grid`'s children as shown:
 
 ```xml
 <Grid ShowGridLines="True" Margin="5"
       ColumnDefinitions="120, 100" 
       RowDefinitions="Auto, Auto, Auto">
-   <Label Grid.Row="0" Grid.Column="0">Celsius</Label>
-   <TextBox Grid.Row="0" Grid.Column="1"/>
-   <Label Grid.Row="1" Grid.Column="0">Fahrenheit</Label>
-   <TextBox Grid.Row="1"  Grid.Column="1"/>
+    // highlight-start
+    <Label Grid.Row="0" Grid.Column="0">Celsius</Label>
+    <TextBox Grid.Row="0" Grid.Column="1"/>
+    <Label Grid.Row="1" Grid.Column="0">Fahrenheit</Label>
+    <TextBox Grid.Row="1"  Grid.Column="1"/>
+    // highlight-end
 </Grid>
 ```
 
-Finally, you can tidy up the alignment of the controls in the grid using their margin property. Also move the button into the grid, as follows:
-
-- Modify the XAML as shown:
+To complete the layout, tidy up the alignment of the controls in the `Grid` using their `Margin` property. Also, move 
+the `Button` inside the `Grid`.
 
 ```xml
 <Grid ShowGridLines="True"  Margin="5" 
       ColumnDefinitions="120, 100" 
       RowDefinitions="Auto, Auto, Auto">
-     <Label Grid.Row="0" Grid.Column="0" Margin="10">Celsius</Label>
-     <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0"/>
-     <Label Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</Label>
-     <TextBox Grid.Row="1"  Grid.Column="1" Margin="0 5" Text="0"/>
-     <Button Grid.Row="2" Grid.Column="1" Margin="0 5">Calculate</Button>
+    // highlight-start
+    <Label Grid.Row="0" Grid.Column="0" Margin="10">Celsius</Label>
+    <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0"/>
+    <Label Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</Label>
+    <TextBox Grid.Row="1"  Grid.Column="1" Margin="0 5" Text="0"/>
+    <Button Grid.Row="2" Grid.Column="1" Margin="0 5">Calculate</Button>
+    // highlight-end
 </Grid>
 ```
 
 - Run the app to see the result
-
-
 
 :::info
 For full information about the complete range of Avalonia built-in controls, and their attributes, see the reference section [here](../../reference/controls/).
