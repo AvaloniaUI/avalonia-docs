@@ -30,7 +30,7 @@ public class BusinessService : IBusinessService
 {
     private readonly IRepository _repository;
 
-    public MainViewModel(IRepository repository)
+    public BusinessService(IRepository repository)
     {
         _repository = repository;
     }
