@@ -42,7 +42,7 @@ namespace Avalonia.MusicStore.ViewModels
 ```csharp
 using ReactiveUI;
 
-namespace AvaloniaApplication11.ViewModels
+namespace Avalonia.MusicStore.ViewModels
 {
     public class MusicStoreViewModel : ViewModelBase
     {
@@ -77,7 +77,10 @@ namespace AvaloniaApplication11.ViewModels
 - 添加所示的绑定表达式：
 
 ```xml
-<UserControl ...>
+<UserControl ...
+xmlns:vm="using:Avalonia.MusicStore.ViewModels"
+x:DataType="vm:MusicStoreViewModel"
+>
     <!-- ... -->
     <DockPanel>
       <StackPanel DockPanel.Dock="Top">
