@@ -14,6 +14,8 @@ import MusicStoreLoadedDataStartScreenshot from '/img/tutorials/music-store-app/
 
 - 如果应用程序正在运行，请停止它。
 - 找到并打开 **MainWindowViewModel.cs** 文件。
+- 顶部添加'using Avalonia.MusicStore.Models;'
+- 顶部添加'using System.Linq;'
 - 添加如下所示的代码：
 
 ```csharp
