@@ -66,7 +66,7 @@ _ReactiveUI_ 的 `WhenActivated` 方法定义了窗口激活时（在屏幕上�
 
 ```csharp
 using Avalonia.ReactiveUI;
-using AvaloniaApplication11.ViewModels;
+using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System;
 
