@@ -99,7 +99,9 @@ The red rectangle is faded-in and rotated at the same time.
 
 <img src={KeyframeCompositeAnimationScreenshot} alt=""/>
 
-## Delay
+## Configuring animation
+
+### Delay
 
 You can add a delay to the start of an animation by setting the delay attribute of the animation element. For example:
 
@@ -110,7 +112,7 @@ You can add a delay to the start of an animation by setting the delay attribute 
 </Animation>
 ```
 
-## Repeat
+### Repeat
 
 You can make an animation repeat for a set number of times, or indefinitely. To repeat for a finite number of iterations set the `IterationCount` attribute on the animation element like this:
 
@@ -128,7 +130,7 @@ To repeat an animation indefinitely, use the special  `"INFINITE"` value. For ex
 </Animation>
 ```
 
-## Playback Direction
+### Playback Direction
 
 By default an animation plays forward. That is it follows the profile of the easing function from left to right. You can alter this behavior by setting the `PlaybackDirection` attribute on the animation element. For example:
 
@@ -142,7 +144,7 @@ The following table describes the options:
 
 <table><thead><tr><th width="245">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>Normal</code></td><td>(Default) The animation is played forwards.</td></tr><tr><td><code>Reverse</code></td><td>The animation is played in reverse direction.</td></tr><tr><td><code>Alternate</code></td><td>The animation is played forwards first, then backwards.</td></tr><tr><td><code>AlternateReverse</code></td><td>The animation is played backwards first, then forwards.</td></tr></tbody></table>
 
-## Fill Mode
+### Fill Mode
 
 The fill mode attribute of an animation defines how the properties being set will persist after it runs, or during any gaps between runs. For example:
 
@@ -156,7 +158,7 @@ The following table describes the options:
 
 <table><thead><tr><th width="240">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>None</code></td><td>Value will not persist after animation nor the first value will be applied when the animation is delayed.</td></tr><tr><td><code>Forward</code></td><td>The last interpolated value will be persisted to the target property.</td></tr><tr><td><code>Backward</code></td><td>The first interpolated value will be displayed on animation delay.</td></tr><tr><td><code>Both</code></td><td>Both <code>Forward</code> and <code>Backward</code> behaviors will be applied.</td></tr></tbody></table>
 
-## Easing Function
+### Easing Function
 
 An easing function defines how a property is varied over time during an animation.
 
@@ -194,7 +196,7 @@ You can also add your own custom easing function class like this:
 </Animation>
 ```
 
-# Running animation from the code behind
+## Running animation from the code behind
 
 In some situations, developers need more flexibility with animation lifetime, comparing to the XAML style selectors. Easiest would be to define animation in the `Resources` dictionary.
 
