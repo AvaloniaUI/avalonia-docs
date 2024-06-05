@@ -193,3 +193,42 @@ You can also add your own custom easing function class like this:
     ...
 </Animation>
 ```
+
+# Running animation from the code behind
+
+In some situations, developers need more flexibility with animation lifetime, comparing to the XAML style selectors. Easiest would be to define animation in the `Resources` dictionary.
+
+While defining `Animation` this way, it's important to specify both `x:Key` and `x:SetterTargetType`. First one will be used to access animation by the key, and second helps compiler to create strongly typed setters.
+
+```xml
+<Window xmlns="https://github.com/avaloniaui">
+    <Window.Resources>
+        <Animation x:Key="ResourceAnimation"
+                   x:SetterTargetType="Rectangle"
+                   Duration="0:0:3"> 
+            <KeyFrame Cue="0%">
+                <Setter Property="Opacity" Value="0.0"/>
+            </KeyFrame>
+            <KeyFrame Cue="100%">
+                <Setter Property="Opacity" Value="1.0"/>
+            </KeyFrame>
+        </Animation>
+    </Window.Resources>
+
+    <Rectangle x:Name="Rect" />
+</Window>
+```
+
+Now, this animation can be accessed and executed in a custom code behind handler.
+
+```csharp
+var animation = (Animation)this.Resources["ResourceAnimation"];
+// Running XAML animation on the Rect control. 
+await animation.RunAsync(Rect);
+```
+
+`RunAsync` returns a task which is completed with the animation. If animation is infinite/repeating, task will never end, unless cancelled externally by passing `CancellationToken` to the RunAsync method.
+
+:::info
+While it's easier to define animations in XAML, it's also possible to do completely in C# code. It's possible to create an instance of `Animation` type, and populate key frames collection.
+:::
