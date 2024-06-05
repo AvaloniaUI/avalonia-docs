@@ -4,7 +4,7 @@ description: TUTORIALS
 
 import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/image-20210310184538120.png';
 
-# Прилжение "Music Store"
+# Приложение "Music Store"
 
 В данном руководстве, вы создадите настольное приложение, вдохновленное мыслями о музыкальном магазине.
 Это приложение отличается своей высококлассной графикой. В нем представлены изображения обложек альбомов,
