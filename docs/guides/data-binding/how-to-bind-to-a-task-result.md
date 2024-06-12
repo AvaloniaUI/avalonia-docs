@@ -6,9 +6,7 @@ title: How to Bind to a Task Result
 
 # How to Bind to a Task Result
 
-Content in preparation.
-
-## Example 2: Binding to a task
+## Example 1: Binding to a task
 
 If you need to do some heavy work to load the content of a property you can bind to the result of an `async Task<TResult>`
 

@@ -15,11 +15,11 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.3.2",
-    "@docusaurus/plugin-client-redirects": "^3.3.2",
-    "@docusaurus/plugin-google-gtag": "^3.3.2",
-    "@docusaurus/plugin-sitemap": "^3.3.2",
-    "@docusaurus/preset-classic": "^3.3.2",
+    "@docusaurus/core": "^3.4.0",
+    "@docusaurus/plugin-client-redirects": "^3.4.0",
+    "@docusaurus/plugin-google-gtag": "^3.4.0",
+    "@docusaurus/plugin-sitemap": "^3.4.0",
+    "@docusaurus/preset-classic": "^3.4.0",
     "@gracefullight/docusaurus-plugin-microsoft-clarity": "^1.0.0",
     "@mdx-js/react": "^3.0.1",
     "clsx": "^2.1.1",
@@ -28,16 +28,16 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-feather": "^2.0.10",
-    "@fluentui/react-icons": "^2.0.239"
+    "@fluentui/react-icons": "^2.0.242"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "@styled-icons/boxicons-logos": "^10.47.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
-    "@docusaurus/module-type-aliases": "3.3.2",
-    "@docusaurus/tsconfig": "^3.3.2",
-    "@docusaurus/types": "^3.3.2",
+    "@docusaurus/module-type-aliases": "3.4.0",
+    "@docusaurus/tsconfig": "^3.4.0",
+    "@docusaurus/types": "^3.4.0",
     "typescript": "^5.4.5",
     "url": "^0.11.3"
   },
