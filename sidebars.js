@@ -84,7 +84,7 @@ const sidebars = {
         {
           'type': 'link',
           'label': 'ToDo List App',
-          'href': https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList ,
+          'href': 'https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList' ,
         },
         {
           'type': 'category',
