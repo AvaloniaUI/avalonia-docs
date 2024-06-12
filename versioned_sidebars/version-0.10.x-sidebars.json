@@ -329,12 +329,9 @@
       },
       "items": [
         {
-          "type": "category",
+          "type": "doc",
           "label": "ToDo List App",
-          "link": {
-            "type": "doc",
-            "id": "tutorials/todo-list-app/index"
-          }
+          "id": "tutorials/todo-list-app/index"
         },
         {
           "type": "category",
