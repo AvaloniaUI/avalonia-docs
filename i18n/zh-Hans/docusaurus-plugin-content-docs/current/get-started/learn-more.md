@@ -13,7 +13,7 @@ title: 了解更多
 * 在[这里](../concepts/the-mvvm-pattern/)了解MVVM概念。
 * 在[这里](../basics/user-interface/styling)探索Avalonia UI的样式。
 
-您推荐的下一个实践步骤是尝试完成“待办事项列表应用程序”教程，[点击这里](../tutorials/todo-list-app/)。
+您推荐的下一个实践步骤是尝试完成“待办事项列表应用程序”教程，[点击这里](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList)。
 
 :::info
 有关Avalonia教程的完整列表，请参见[这里](../tutorials)。
