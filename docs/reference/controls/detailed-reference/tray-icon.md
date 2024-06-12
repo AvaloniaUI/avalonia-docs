@@ -28,25 +28,39 @@ You must use a **native menu** with the tray icon, and not the _Avalonia UI_ men
 This example defines a simple tray icon menu in the `App.xaml` file :
 
 ```xml
-<TrayIcon.Icons>
-  <TrayIcons>
-    <TrayIcon Icon="/Assets/avalonia-logo.ico" 
-              ToolTipText="Avalonia Tray Icon ToolTip">
-      <TrayIcon.Menu>
-        <NativeMenu>
-          <NativeMenuItem Header="Settings">
-            <NativeMenu>
-              <NativeMenuItem Header="Option 1"   />
-              <NativeMenuItem Header="Option 2"   />
-              <NativeMenuItemSeparator />
-              <NativeMenuItem Header="Option 3"  />
-            </NativeMenu>
-          </NativeMenuItem>
-        </NativeMenu>
-      </TrayIcon.Menu>
-    </TrayIcon>
-  </TrayIcons>
-</TrayIcon.Icons>
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MyApplication.App">
+  <TrayIcon.Icons>
+    <TrayIcons>
+      <TrayIcon Icon="/Assets/avalonia-logo.ico" 
+                ToolTipText="Avalonia Tray Icon ToolTip">
+        <TrayIcon.Menu>
+          <NativeMenu>
+            <NativeMenuItem Header="Settings">
+              <NativeMenu>
+                <NativeMenuItem Header="Option 1"   />
+                <NativeMenuItem Header="Option 2"   />
+                <NativeMenuItemSeparator />
+                <NativeMenuItem Header="Option 3"  />
+              </NativeMenu>
+            </NativeMenuItem>
+          </NativeMenu>
+        </TrayIcon.Menu>
+      </TrayIcon>
+    </TrayIcons>
+  </TrayIcon.Icons>
+</Application>
+```
+
+Include the `.ico` file in the `.csproj` file using an `AvaloniaResource` item:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <AvaloniaResource Include="Assets/avalonia-logo.ico" />
+  </ItemGroup>
+</Project>
 ```
 
 <img src={TrayIconScreenshot} alt="" />

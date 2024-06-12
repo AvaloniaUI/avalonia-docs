@@ -69,9 +69,11 @@ import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/ope
 - 在解决方案资源管理器中，右键单击 **/ViewModels** 文件夹，然后点击 **添加**。
 - 点击 **类**。
 - 将类命名为 'MusicStoreViewModel'，然后点击 **添加**。
+- 'internal class MusicStoreViewModel' 改为'public class MusicStoreViewModel'
 - 再次右键单击 **/ViewModels** 文件夹，然后点击 **添加**。
 - 点击 **类**。
 - 将类命名为 'AlbumViewModel'，然后点击 **添加**。
+- 'internal class AlbumViewModel' 改为 'public class AlbumViewModel'
 
 ## 显示对话框
 
@@ -155,11 +157,11 @@ this.WhenActivated(action =>
 
 ```csharp
 using Avalonia.ReactiveUI;
-using AvaloniaApplication11.ViewModels;
+using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System.Threading.Tasks;
 
-namespace AvaloniaApplication11.Views
+namespace Avalonia.MusicStore.Views
 {
     public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
