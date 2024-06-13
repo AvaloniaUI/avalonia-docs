@@ -1,6 +1,6 @@
 ---
 id: developer-tools
-title: Developer Tools
+title: 开发者工具
 ---
 
 import DevToolsOverviewScreenshot from '/img/guides/implementation-guides/devtools-overview.png';
@@ -13,9 +13,9 @@ import DevToolsEventsScreenshot from '/img/guides/implementation-guides/devtools
 import DevToolsChangePropertyScreenshot from '/img/guides/implementation-guides/devtools-change-property.gif';
 import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/devtools-change-layout.gif';
 
-# Developer Tools
+# 开发者工具
 
-Avalonia has a built-in DevTools window which is enabled by calling the attached `AttachDevTools()` method in a `Window` constructor. The default templates have this enabled when the program is compiled in `DEBUG` mode:
+Avalonia 内置了一个开发工具窗口，可以通过在 `Window` 构造函数中调用附加的 `AttachDevTools()` 方法来启用。在程序以 `DEBUG` 模式编译时，默认模板已启用此功能：
 
 ```csharp
 public partial class MainWindow : Window
@@ -44,105 +44,103 @@ partial class MainWindow
 }
 ```
 
-To open the DevTools, press F12, or pass a different `Gesture` to the `this.AttachDevTools()` method.
+要打开开发工具，请按 F12，或者传递不同的 `Gesture` 给 `this.AttachDevTools()` 方法。
 
 :::info
-To use DevTools, you must add `Avalonia.Diagnostics` nuget package.
+要使用开发工具，必须添加 `Avalonia.Diagnostics` NuGet 包。
 
 ```bash
 dotnet add package Avalonia.Diagnostics --version 11.0.0
 ```
 
-But by default, it is already installed.
+但默认情况下，它已经安装好了。
 :::
 
 <img className="center" src={DevToolsOverviewScreenshot} alt="" />
 
-There is a known issue when running under .NET core 2.1 that pressing F12 will cause the program to quit. In this case, either switch to .NET core 2.0 or 3.0+ or change the open gesture to something different, such as `Ctrl+F12`.
+在 .NET Core 2.1 下运行时，按 F12 会导致程序退出，这是一个已知问题。在这种情况下，可以选择切换到 .NET Core 2.0 或 3.0 以上版本，或者将打开手势更改为其他的，比如 `Ctrl+F12`。
 
-## Logical and Visual Trees
+## 逻辑树和视觉树
 
-The `Logical Tree` and `Visual Tree` tabs display the controls in the window's logical and visual trees. Selecting a control will show the properties of that control in the right-hand pane where they can be edited.
+`逻辑树` 和 `视觉树` 选项卡显示窗口中逻辑树和视觉树中的控件。选择一个控件后，其属性会显示在右侧窗格中，用户可以在此编辑这些属性。
 
-### Properties
+### 属性
 
-Allows for quickly checking and editing properties of the control. One can also search for properties (by name or by using a regex).
+该部分允许快速检查和编辑控件的属性。用户还可以通过名称或使用正则表达式搜索属性。
 
-| Column   | Description                   |
-| -------- | ----------------------------- |
-| Property | Name of the property          |
-| Value    | Current value of the property |
-| Type     | Type of the current value     |
-| Priority | Priority of the value         |
+| 列      | 描述                   |
+| ------- | ---------------------- |
+| 属性    | 属性的名称             |
+| 值      | 属性的当前值           |
+| 类型    | 当前值的类型           |
+| 优先级  | 值的优先级             |
 
 <img className="center" src={DevToolsPropertiesScreenshot} alt="" />
 
-### Layout
+### 布局
 
-Allows for inspecting and editing of common layout properties (`Margin`, `Border` , `Padding`).\
-Control size and size constraints are also shown.
+允许检查和编辑常见的布局属性（`Margin`、`Border`、`Padding`）。\
+控件的尺寸和尺寸约束也会显示。
 
 :::info
-If `Width` or `Height` are underlined that means there is an active constraint. Hover over the value to see a tooltip containing relevant information.
+如果 `Width` 或 `Height` 带有下划线，这表明该属性属于活动约束。悬停在值上会显示包含相关信息的工具提示。
 :::
 
 <img className="center" src={DevToolsLayoutScreenshot} alt="" />
 
-### Styles
+### 样式
 
-While [properties](developer-tools.md#properties) panel shows currently active values of properties, styles panel shows all values and origin of the value.
+虽然 [属性](developer-tools.md#properties) 面板显示当前活动的属性值，但样式面板显示所有值及其来源。
 
-Additionally one can see all styles that could potentially match this control (by toggling `Show inactive` option).
+此外，可以看到所有可能匹配此控件的样式（通过切换 `显示非活动` 选项）。
 
-Current styles can be snap-shotted by either pressing the `Snapshot` button or pressing `Alt+S` while hovering over the target window. Snap-shotting means that styles panel won't update to reflect new state of the control. This is especially useful when troubleshooting problems with `:pointerover` or `:pressed` selectors.
+当前样式可以通过按 `快照` 按钮或在目标窗口上悬停时按 `Alt+S` 来捕捉。捕捉快照意味着样式面板不会更新以反映控件的新状态。这在排查 `:pointerover` 或 `:pressed` 选择器问题时特别有用。
 
 :::info
-If setter value is bound to a resource it will be indicated by a circle followed by the resource key.
+如果设置器的值绑定到资源，它将由一个圆圈和资源键表示。
 :::
-
 
 <img className="center" src={DevToolsStylesScreenshot} alt="" />
 
 :::info
-If given value has a strikethrough it means that it is being overridden by a value in style with higher priority.
+如果给定值有删除线，表示它被优先级更高的样式值覆盖。
 :::
 
 <img className="center" src={DevToolsOverriddenStylesScreenshot} alt="" />
 
-Setters have a context menu that allows for quickly copying names and values to the clipboard.
-
+Setters 有一个上下文菜单，允许快速将名称和值复制到剪贴板。
 
 <img className="center" src={DevToolsSetterContextMenuScreenshot} alt="" />
 
-## Events
+## 事件
 
-The events tab can be used to track the propagation of [events](../../concepts/input/). Select the events to track in the left pane, and all events of that type will be shown in the center upper pane. Select one of these events to see the event route.
+事件选项卡可用于跟踪 [事件](../../concepts/input/) 的传播。在左侧窗格中选择要跟踪的事件类型，所有此类型的事件将显示在中上方窗格中。选择其中一个事件以查看事件路由。
 
 :::info
-Dotted underline under event name or control type indicates that quick navigation is possible.
+事件名称或控件类型下的虚线表示可以进行快速导航。
 
-* Double clicking an event type will select and scroll to the given event type
-* Double clicking a control type (and/or name) will navigate to the visual tree tab and select said control.
+* 双击事件类型将选择并滚动到给定的事件类型
+* 双击控件类型（和/或名称）将导航到视觉树选项卡并选择该控件。
 :::
 
 <img className="center" src={DevToolsEventsScreenshot} alt="" />
 
-## Hotkeys
+## 快捷键
 
-| Keys Combination | Function                      |
-| ---------------- | ------------------------------|
-| Alt+S            | Enable Snapshot Styles        |
-| Alt+D            | Disable Snapshot Styles       |
-| CTRL+Shift       | Inspect Control over Pointer  |
-| CTRL+Alt+F       | Toggle Popup freeze           |
-| F8               | Make screenshot of selected item in Logical or Visual Tree|
+| 键组合          | 功能                            |
+| --------------- | ------------------------------ |
+| Alt+S           | 启用快照样式                   |
+| Alt+D           | 禁用快照样式                   |
+| CTRL+Shift      | 检查指针上的控件               |
+| CTRL+Alt+F      | 切换弹出窗口冻结               |
+| F8              | 对逻辑树或视觉树中选定的项目截图 |
 
-## Examples
+## 示例
 
-### Changing a property value
+### 更改属性值
 
 <img className="center" src={DevToolsChangePropertyScreenshot} alt="" />
 
-### Changing layout properties
+### 更改布局属性
 
 <img className="center" src={DevToolsChangeLayoutScreenshot} alt="" />
