@@ -14,7 +14,7 @@ import DataGridColumnPreviewScreenshot from '/img/reference/controls/datagrid/da
 | `DataGridCheckBoxColumn` | 用于显示和编辑列数据的复选框，当数据类型为布尔值时。此列类型还支持当值为可空时的三态复选框。                             |
 | `DataGridTemplateColumn` | 可用于自定义列数据的展示和编辑。                                                                             |
 
-## 有用的属性
+## 常用属性
 
 大部分属性在这三种列类型中都是通用的：
 
@@ -71,7 +71,7 @@ import DataGridColumnPreviewScreenshot from '/img/reference/controls/datagrid/da
 </Window>
 ```
 
-```csharp title='C# 视图模型'
+```csharp title='C# ViewModel'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -96,7 +96,7 @@ namespace AvaloniaControls.ViewModels
 }
 ```
 
-```csharp title='C# 项类'
+```csharp title='数据源 Person 类'
 public class Person
 {
     public string FirstName { get; set; }
@@ -110,7 +110,7 @@ public class Person
 }
 ```
 
-在预览窗格中可以看到效果，因为 `<Design.DataContext>` 元素创建了绑定的视图模型：
+在预览窗口中可以看到效果，因为 `<Design.DataContext>` 元素创建了绑定的 ViewModel：
 
 <img src={DataGridColumnPreviewScreenshot} alt="" />
 
