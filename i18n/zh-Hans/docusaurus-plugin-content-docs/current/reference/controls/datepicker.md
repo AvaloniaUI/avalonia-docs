@@ -4,19 +4,27 @@ description: REFERENCE - Built-in Controls
 
 import DatePickerScreenshot from '/img/reference/controls/datepicker/datepicker.gif';
 
-# Date Picker
+# 日期选择器
 
-The date picker has three 'spinner' controls to allow the user to pick a date value. The spinners display when the control is clicked.
+日期选择器包含三个“轮盘”控制器，允许用户选择日期值。点击控件时会显示这些旋转器。
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-<table><thead><tr><th width="219">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>DayVisible</code></td><td>Sets if the day column is visible.</td></tr><tr><td><code>MonthVisible</code></td><td>Sets if the month column is visible.</td></tr><tr><td><code>YearVisible</code></td><td>Sets if the year column is visible.</td></tr><tr><td><code>DayFormat</code></td><td>Format string for the day part of the date.</td></tr><tr><td><code>MonthFormat</code></td><td>Format string for the month part of the date.</td></tr><tr><td><code>YearFormat</code></td><td>Format string for the year part of the date.</td></tr><tr><td><code>SelectedDate</code></td><td>The date selected (null when no selection).</td></tr></tbody></table>
+| 属性          | 描述                       |
+| ------------- | -------------------------- |
+| `DayVisible`  | 设置是否显示日列。         |
+| `MonthVisible`| 设置是否显示月列。         |
+| `YearVisible` | 设置是否显示年列。         |
+| `DayFormat`   | 日期中日部分的格式字符串。 |
+| `MonthFormat` | 日期中月部分的格式字符串。 |
+| `YearFormat`  | 日期中年部分的格式字符串。 |
+| `SelectedDate`| 选择的日期（无选择时为 null）。 |
 
-## Example
+## 示例
 
-This example uses the date format attribute to display the name of the day as well as the number:
+此示例使用日期格式属性来显示星期名及日期号：
 
 ```xml
 <StackPanel Margin="20">
@@ -26,18 +34,18 @@ This example uses the date format attribute to display the name of the day as we
 
 <img src={DatePickerScreenshot} alt="" />
 
-## **Initializing the Date**
+## **初始化日期**
 
-The date properties of this control cannot be set in XAML using an attribute. This is because there is no conversion available for converting strings to date objects like `DateTime` and `DateTimeOffset`.
+这个控件的日期属性不能在 XAML 中使用属性设置，因为没有可用的转换器来将字符串转换为日期对象，如 `DateTime` 和 `DateTimeOffset`。
 
-You will need to write code-behind like this:
+你需要编写如下 code-behind 代码：
 
 ```csharp
 datePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
 ```
 
-## More Information
+## 更多信息
 
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/DatePicker/).
+要查看此控件的完整 API 文档，请参阅[这里](https://reference.avaloniaui.net/api/Avalonia.Controls/DatePicker/)。
 
-View the source code on _GitHub_ [`DatePicker.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)
+在 _GitHub_ 上查看源代码 [`DatePicker.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)
