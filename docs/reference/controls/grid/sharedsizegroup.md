@@ -1,17 +1,17 @@
 ﻿---
 id: sharedsizegroup
-title: SharedSizeGroup
+title: SharedSizeGroup 共享尺寸组
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import GridSharedSizeGroupScreenshot from '/img/reference/controls/grid/grid-sharedsizegroup.png';
 
-`SharedSizeGroup` allows sharing size information for autosized row and column definitions across multiple `Grid` controls.
+`SharedSizeGroup` 允许跨多个 `Grid` 控件共享自动调整大小的行和列的尺寸信息。
 
-## Example
+## 示例
 
-The following example demonstrates how `SharedSizeGroup` can be used to consistently size columns within a `ListBox` and outside.
+以下示例演示了如何在 `ListBox` 内部及外部一致地调整列的大小。
 
 <Tabs>
 <TabItem value="xml" label="XML" default>
@@ -44,7 +44,7 @@ The following example demonstrates how `SharedSizeGroup` can be used to consiste
     </ListBox.ItemTemplate>
   </ListBox>
     
-  <!-- Controls may appear in-between Grids with SharedSizeGroups -->
+  <!-- 可以在具有共享尺寸组的网格之间放置控件 -->
   <Separator />
 
   <Grid>
@@ -52,7 +52,7 @@ The following example demonstrates how `SharedSizeGroup` can be used to consiste
       <ColumnDefinition SharedSizeGroup="A" />
       <ColumnDefinition SharedSizeGroup="B" />
       <ColumnDefinition Width="*" />
-      <ColumnDefinition SharedSizeGroup="C" />
+      <ColumnDefinition SharedSize,Group="C" />
     </Grid.ColumnDefinitions>
 
     <Button Content="This is the First Name" HorizontalAlignment="Stretch" Grid.Column="0" />
@@ -87,5 +87,4 @@ public partial class MainWindowViewModel : ViewModelBase
 
 <img src={GridSharedSizeGroupScreenshot} alt="" />
 
-Notice how each column is sized: the first column is sized by the `Button`, the second and fourth are sized 
-by the `ListBox` content, and the third takes the remaining space.
+注意每个列的尺寸：第一列由 `Button` 设置尺寸，第二和第四列由 `ListBox` 的内容设置尺寸，第三列占据剩余的空间。

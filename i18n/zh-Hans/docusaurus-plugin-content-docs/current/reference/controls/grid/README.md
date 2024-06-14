@@ -1,63 +1,58 @@
 ---
-title: Grid
+title: 网格布局
 description: REFERENCE - Controls
 ---
 
 import GridSpanningColumnsScreenshot from '/img/reference/controls/grid/grid-column-spanning.png';
 
-# Grid
+# Grid 网格布局
 
-The `Grid` control is useful for arranging child controls in columns and rows. You can define absolute, proportional, and
-autosized row and column geometries for the `Grid`.
+`Grid` 控件非常适用于按列和行排列子控件。您可以为 `Grid` 定义绝对大小、比例大小和自动大小的行和列几何形状。
 
-Each child control in the `Grid` can be positioned in a `Grid` cell using column and row coordinates. These are
-zero-based, and both have a zero default.
+每个位于 `Grid` 中的子控件都可以使用列和行坐标定位在 `Grid` 单元格中。这些坐标是从零开始的，并且默认值为零。
 
-If you position multiple child controls in the same cell, they will be drawn in that cell in the sequence they appear
-in the XAML. This is another strategy to implement layer stacking besides `Panel`.
+如果在同一单元格中定位多个子控件，它们将按照在 XAML 中出现的顺序在该单元格中绘制。这是实现层叠堆叠的另一种策略，除了使用 `Panel`。
 
 :::warning
-If you omit column and row coordinates for the child controls of a `Grid`, they will all be drawn in the top left
-corner (column=0, row=0).
+如果您忽略了 `Grid` 的子控件的列和行坐标，它们都将被绘制在左上角（列=0，行=0）。
 :::
 
-It is also possible to make a child control span more than one cell in either rows or columns, or both.
+也可以使子控件跨越一个或多个单元格的行或列，或两者都跨越。
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+您可能最常使用这些属性：
 
-| Property               | Description                                                         |
-|------------------------|---------------------------------------------------------------------|
-| ColumnDefinitions      | Size definitions describing the widths of columns in the `Grid`.    |
-| RowDefinitions         | Size definitions describing the heights of rows in the `Grid`.      |
-| ShowGridLines          | Shows the gridlines between cells (as dashed lines).                |
-| Grid.Column            | Lays out the control into the specified zero-based column.          |
-| Grid.Row               | Lays out the control into the specified zero-based row.             |
-| Grid.ColumnSpan        | Spans the control across 1 or more columns.                         |
-| Grid.RowSpan           | Spans the control across 1 or more rows.                            |
-| Grid.IsSharedSizeScope | Defines the control as the containing scope for a `SharedSizeGroup` |
+| 属性                     | 描述                                                           |
+|------------------------|---------------------------------------------------------------|
+| ColumnDefinitions      |  `Grid` 中列宽的尺寸定义。                                  |
+| RowDefinitions         |  `Grid` 中行高的尺寸定义。                                  |
+| ShowGridLines          | 显示单元格之间的网格线（作为虚线显示）。                        |
+| Grid.Column            | 将控件布局到指定的从零开始的列中。                              |
+| Grid.Row               | 将控件布局到指定的从零开始的行中。                              |
+| Grid.ColumnSpan        | 将控件跨越一个或多个列。                                        |
+| Grid.RowSpan           | 将控件跨越一个或多个行。                                        |
+| Grid.IsSharedSizeScope | 定义控件为 `SharedSizeGroup` 的包含范围。                        |
 
-## Size Definitions
+## 尺寸定义
 
-You can define the size of rows and columns as:
+您可以如下定义行和列的大小：
 
-* Absolute - sized in device-independent pixels (integer)
-* Proportional - sized in proportion to remaining `Grid` size
-* Automatic - sized to fit the contained child control
+* 绝对大小 - 以设备独立像素（整数）为单位。
+* 比例大小 - 根据剩余 `Grid` 大小的比例。
+* 自动大小 - 根据包含的子控件的大小自动调整。
 
-Size definitions can be written either as a list of short codes, or fully expanded using XAML elements.
+尺寸定义可以通过简短代码列表或使用 XAML 元素完全展开来编写。
 
-Full definitions support additional constraints such as `SharedSizeGroup` and specifying minimum and maximum lengths in
-absolute sizes.
+完整定义支持额外的约束，如 `SharedSizeGroup` 和指定最小和最大长度的绝对大小。
 
-### Absolute Size Definitions
+### 绝对大小定义
 
-Absolute size definitions are written as integers in the list format. For example:
+绝对大小定义在列网格式中以整数形式编写。例如：
 
 `ColumnDefinitions="200, 200, 300"`
 
-Using full expanded XAML, this is the same as:
+通过完全展开的 XAML 定义，这与以下相同：
 
 ```xml
 <Grid>
@@ -69,14 +64,13 @@ Using full expanded XAML, this is the same as:
 </Grid>
 ```
 
-### Proportional Size Definitions
+### 比例大小定义
 
-Proportional size definitions are written as proportions of available `Grid` space using an
-asterisk. For example, to create two columns with the same width and then one with twice the width:
+比例大小定义使用星号表示可用 `Grid` 空间的比例。例如，要创建两个宽度相同的列，然后是一个宽度是前两个的两倍（单个宽度的两倍）的列：
 
 `ColumnDefinitions="*, *, 2*"`
 
-Using full expanded XAML, this is the same as:
+通过完全展开的 XAML 定义，这与以下相同：
 
 ```xml
 <Grid>
@@ -89,18 +83,16 @@ Using full expanded XAML, this is the same as:
 ```
 
 :::tip
-Size definitions do not support percentages. One trick to overcome this is to create a definition where all proportional
-values sum to 100 such as `<Grid ColumnDefinitions="25*, 25*, 50*">` for 3 columns with 25%, 25%, and 50% of the remaining
-available width.
+尺寸定义不支持百分比。一个解决方法是创建一个定义，其中所有比例值加起来等于 100，例如 `<Grid ColumnDefinitions="25*, 25*, 50*">` 用于 3 个列，每个列分别占剩余可用宽度的 25%、25% 和 50%。
 :::
 
-### Automatic Size Definitions
+### 自动大小定义
 
-To size a row or column automatically to the largest child control in it, use the code 'Auto'.  For example:
+要自动调整行或列的大小以适应其中最大的子控件，请使用 'Auto' 代码。例如：
 
 `RowDefinitions="Auto, Auto, Auto"`
 
-Using full expanded XAML, this is the same as:
+通过完全展开的 XAML 定义下相同：，这与以
 
 ```xml
 <Grid>
@@ -113,17 +105,16 @@ Using full expanded XAML, this is the same as:
 ```
 
 :::warning
-If a child control has its own explicitly set dimensions, these will be obeyed when it is drawn. This means that if it
-is larger than its grid cell, it will overlap adjacent cells.
+如果子控件有自己显式设置的尺寸，当绘制时将遵循这些尺寸。这意味着如果它大于其网格单元格，它将重叠相邻的单元格。
 :::
 
-### Mixing Size Definitions
+### 混合尺寸定义
 
-You can mix any of the above in the same size definition sequence. For example:
+您可以在同一尺寸定义序列中混合使用上述任何一种。例如：
 
 `ColumnDefinitions="200, *, 2*"`
 
-Using full expanded XAML, this is the same as:
+通过完全展开的 XAML 定义，这与以下相同：
 
 ```xml
 <Grid>
@@ -135,33 +126,29 @@ Using full expanded XAML, this is the same as:
 </Grid>
 ```
 
-## Drawing Rules
+## 绘图规则
 
-When calculating sizes, any proportional columns are made to fit in the space left after the absolute and automatic values have been calculated.
+在计算尺寸时，任何比例列都将适应在计算绝对值和自动值后剩余的空间。
 
-The calculation for automatic sizing is made using the outside of the margin layout zone of a child control.
-
+自动尺寸的计算是使用子控件的边距布局区域外缘进行的。
 :::info
-To review the concept of control layout zones, see [here](../../../concepts/layout/layout-zones).
+要回顾控制布局区域的概念，请参阅[此处](../../../concepts/layout/layout-zones)。
 :::
 
-Child controls are drawn in their assigned grid cells in the sequence they appear in the XAML. This rule governs both
-what happens when two child controls are assigned the same cell, and how child controls overlap when they are larger
-than their allotted cell.
+子控件按照它们在 XAML 中出现的顺序在其分配的网格单元格中绘制。这条规则既适用于当两个子控件被分配到同一单元格时的情况，也适用于子控件大于其分配单元格时的重叠情况。
 
-When a child control has its own dimensions, and is smaller than its assigned cell, it will be drawn aligned in the
-cell according to its horizontal and vertical alignment properties (both are centered by default).
+当子控件有自己的尺寸，并且小于其分配的单元格时，它将根据其水平和垂直对齐属性（默认都是居中）在单元格中对齐绘制。
 
-## Example
+## 示例
 
-This example shows:
+这个示例展示了：
 
-* How to use the shortened syntax for column and row definitions.
-* How to mix absolute and proportional column widths.
-* How to assign the cell for child controls.
-* How to span rows and columns.
+* 如何使用简短语法定义列和行。
+* 如何混合绝对和比例列宽。
+* 如何为子控件分配单元格。
+* 如何跨行和列。
 
-An example of a `Grid` with 3 equal Rows and 3 Columns with (1 fixed width), (2 grabbing the rest proportionally) would be:
+一个包含 3 个相等行和 3 列（1 个固定宽度），（2 个按比例抓取剩余宽度）的 `Grid` 的示例是：
 
 ```xml
 <Grid ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
@@ -173,18 +160,18 @@ An example of a `Grid` with 3 equal Rows and 3 Columns with (1 fixed width), (2 
 </Grid>
 ```
 
-Here, after the absolute width of 100 has been subtracted (for column 0), column 1 will get 1.5 parts and column 2 will get 4 parts of the remaining width.
+在这里，100 的绝对宽度被减去后（对于列 0），列 1 将获得 1.5 个部分，列 2 将获得剩余宽度的 4 个部分。
 
-The button is drawn to fill the span from the cell (column 1, row 1) plus one column (to the right) and one row down. The result looks like this:
+按钮被绘制以填充从单元格（列 1，行 1）加一个列（向右）和一行向下的跨度。结果看起来是这样的：
 
 <img src={GridSpanningColumnsScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Grid/).
+要查看此控件的完整 API 文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Grid/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`Grid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
+在 _GitHub_ 上查看源代码 [`Grid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
 :::
