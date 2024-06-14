@@ -5,23 +5,28 @@ description: REFERENCE - Built-in Controls
 import GridSplitterColumnsScreenshot from '/img/reference/controls/gridsplitter/gridsplitter-columns.gif';
 import GridSplitterRowsScreenshot from '/img/reference/controls/gridsplitter/gridsplitter-rows.gif';
 
-# Grid Splitter
+# Grid Splitter 网格分割器
 
-The grid splitter control allows a user to resize the columns or rows in a grid at runtime. The splitter is drawn as a column or row (size can be specified), and has a grip that the user can manipulate at runtime.
+网格分割器控件允许用户在运行时调整网格中的列或行的大小。分割器被绘制为一列或一行（可以指定大小），并具有一个用户可以在运行时操作的把手。
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-<table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Background</code></td><td>Background color for the splitter bar.</td></tr><tr><td><code>Grid.Column</code></td><td>Attached to give the (column) position of the splitter.</td></tr><tr><td><code>Grid.Row</code></td><td>Attached to give the (row) position of the splitter.</td></tr><tr><td><code>ResizeDirection</code></td><td>The direction of travel for the splitter. (See note below.)</td></tr></tbody></table>
+| 属性                   | 描述                             |
+| ---------------------- | -------------------------------- |
+| `Background`           | 分割条的背景颜色。               |
+| `Grid.Column`          | 附加属性，用来指定分割器的列位置。|
+| `Grid.Row`             | 附加属性，用来指定分割器的行位置。|
+| `ResizeDirection`      | 分割器的移动方向。（见下面的注释）|
 
 :::warning
-To provide any meaningful movement, the direction of travel of the splitter must be the same as its position definition. That is: for a column splitter specify `ResizeDirection="Columns"` and for a row splitter specify `ResizeDirection="Rows"`.
+为了提供任何有意义的移动，分割器的移动方向必须与其位置定义相同。即：对于列分割器指定 `ResizeDirection="Columns"`，对于行分割器指定 `ResizeDirection="Rows"`。
 :::
 
-## Examples
+## 示例
 
-This is a column splitter:
+这是一个列分割器：
 
 ```xml
 <Grid ColumnDefinitions="*, 4, *">
@@ -33,7 +38,7 @@ This is a column splitter:
 
 <img src={GridSplitterColumnsScreenshot} alt=""/>
 
-This is a row splitter:
+这是一个行分割器：
 
 ```xml
 <Grid RowDefinitions="*, 4, *">
@@ -45,12 +50,12 @@ This is a row splitter:
 
 <img src={GridSplitterRowsScreenshot} alt=""/>
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/GridSplitter/).
+查看此控件的完整 API 文档，请访问[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/GridSplitter/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`GridSplitter.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GridSplitter.cs)
+在 _GitHub_ 上查看源代码 [`GridSplitter.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GridSplitter.cs)
 :::
