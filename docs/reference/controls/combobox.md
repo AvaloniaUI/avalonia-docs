@@ -26,7 +26,6 @@ You will probably use these properties most often:
 | `Items`                    | The list items collection.                                                                                               |
 | `SelectedIndex`            | The index (zero-based) of the selected item.                                                                             |
 | `SelectedItem`             | The selected item itself.                                                                                                |
-| `SelectedItems`            | A collection of selected items that has more than one item when selection mode is set to multiple.                       |
 | `AutoScrollToSelectedItem` | Indicates whether to automatically scroll to newly selected items.                                                       |
 | `IsDropDownOpen`           | Indicates whether the dropdown is currently open.                                                                        |
 | `MaxDropDownHeight`        | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show. |
