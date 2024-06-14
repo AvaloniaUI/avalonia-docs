@@ -15,7 +15,7 @@ import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/de
 
 # 开发者工具
 
-Avalonia 有一个内置的 DevTools 窗口，可通过调用 `Window` 构造函数中附加的 `AttachDevTools()` 方法启用。默认模板会在程序以 `DEBUG` 模式编译时启用该功能：
+Avalonia 内置了一个开发工具窗口，可以通过在 `Window` 构造函数中调用附加的 `AttachDevTools()` 方法来启用。在程序以 `DEBUG` 模式编译时，默认模板已启用此功能：
 
 ```csharp
 public partial class MainWindow : Window
@@ -53,16 +53,16 @@ partial class MainWindow
 dotnet add package Avalonia.Diagnostics --version 11.0.0
 ```
 
-但在默认情况下，它已经安装好了。
+但默认情况下，它已经安装好了。
 :::
 
 <img className="center" src={DevToolsOverviewScreenshot} alt="" />
 
 在 .NET core 2.1 下运行时存在一个已知问题，即按 F12 会导致程序退出。在这种情况下，要么切换到 .NET core 2.0 或 3.0+，要么将打开手势改为其他手势，如 "Ctrl+F12"。
 
-## 逻辑树和可视化树
+## 逻辑树和视觉树
 
-`Logical Tree` 和 `Visual Tree` 选项卡显示窗口逻辑树和可视化树中的控件。选择一个控件后，右侧窗格中将显示该控件的属性，可以对其进行编辑。
+`Logical Tree` 和 `Visual Tree` 选项卡显示窗口逻辑树和视觉树中的控件。选择一个控件后，右侧窗格中将显示该控件的属性，可以对其进行编辑。
 
 ### 属性
 
@@ -79,11 +79,11 @@ dotnet add package Avalonia.Diagnostics --version 11.0.0
 
 ### 布局
 
-允许检查和编辑常用布局属性（`Margin`、`Border`、`Padding`）。\
-同时还显示了控件尺寸和尺寸限制。
+允许检查和编辑常见的布局属性（`Margin`、`Border`、`Padding`）。\
+控件的尺寸和尺寸约束也会显示。
 
 :::info
-如果 `Width` 或 `Height` 有下划线，则表示存在活动限制。将鼠标悬停在该值上可看到包含相关信息的工具提示。
+如果 `Width` 或 `Height` 带有下划线，这表明该属性属于活动约束。悬停在值上会显示包含相关信息的工具提示。
 :::
 
 <img className="center" src={DevToolsLayoutScreenshot} alt="" />
@@ -100,7 +100,6 @@ dotnet add package Avalonia.Diagnostics --version 11.0.0
 如果设置值与资源绑定，则会以一个圆圈表示，后面跟着资源键。
 :::
 
-
 <img className="center" src={DevToolsStylesScreenshot} alt="" />
 
 :::info
@@ -109,20 +108,20 @@ dotnet add package Avalonia.Diagnostics --version 11.0.0
 
 <img className="center" src={DevToolsOverriddenStylesScreenshot} alt="" />
 
-设置器有一个上下文菜单，可以快速将名称和数值复制到剪贴板。
-
+Setters 有一个上下文菜单，允许快速将名称和值复制到剪贴板。
 
 <img className="center" src={DevToolsSetterContextMenuScreenshot} alt="" />
 
 ## 事件
 
-事件选项卡可用于跟踪 [事件](../../concepts/input/)的传播。在左侧窗格中选择要跟踪的事件，该类型的所有事件都将显示在中间上部窗格中。选择其中一个事件即可查看事件路径。
+事件选项卡可用于跟踪 [事件](../../concepts/input/) 的传播。在左侧窗格中选择要跟踪的事件类型，所有此类型的事件将显示在中上方窗格中。选择其中一个事件以查看事件路由。
 
 :::info
-事件名称或控件类型下的虚线表示可以快速导航。
+事件名称或控件类型下的虚线表示可以进行快速导航。
 
 * 双击事件类型将选择并滚动到给定的事件类型
-* 双击控件类型（和/或名称）将导航至可视化树选项卡并选择该控件。
+* 双击控件类型（和/或名称）将导航到视觉树选项卡并选择该控件。
+
 :::
 
 <img className="center" src={DevToolsEventsScreenshot} alt="" />
