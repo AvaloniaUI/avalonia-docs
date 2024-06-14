@@ -6,33 +6,34 @@ import ComboBoxMaxDropDownHeightScreenshot from '/img/reference/controls/combobo
 import ComboBoxComplexContentScreenshot from '/img/reference/controls/combobox/combobox-complex-content.gif';
 import ComboBoxDataTemplateScreenshot from '/img/reference/controls/combobox/combobox-data-template.gif';
 
-# Combo Box
+# 组合框
 
-The combo box presents a selected item and a drop-down button that displays a list of options. The length and height of the combo box are determined by the selected item, unless otherwise defined.
+组合框展示了一个选定的元素和一个下拉按钮，该按钮显示一个选项列表。组合框的长度和高度由选定的元素决定，除非另有定义。
 
-The items in the list can be composed, bound and templated.
+列表中的元素可以组合、绑定和模板化。
 
 :::info
-To review the concept behind **data templates**, see [here](../../concepts/templates/).
+要回顾**数据模板**背后的概念，请查看[这里](../../concepts/templates/)。
 :::
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-| Property                   | Description                                                                                                              |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `Items`                    | The list items collection.                                                                                               |
-| `SelectedIndex`            | The index (zero-based) of the selected item.                                                                             |
-| `SelectedItem`             | The selected item itself.                                                                                                |
-| `SelectedItems`            | A collection of selected items that has more than one item when selection mode is set to multiple.                       |
-| `AutoScrollToSelectedItem` | Indicates whether to automatically scroll to newly selected items.                                                       |
-| `IsDropDownOpen`           | Indicates whether the dropdown is currently open.                                                                        |
-| `MaxDropDownHeight`        | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show. |
+| 属性                        | 描述                                                                                                                     |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `Items`                     | 列表项集合。                                                                                                             |
+| `SelectedIndex`             | 选定元素的索引（从零开始）。                                                                                             |
+| `SelectedItem`              | 选定的元素本身。                                                                                                         |
+| `SelectedItems`             | 在设置为多选模式时，选定多个元素的集合。                                                                                 |
+| `AutoScrollToSelectedItem`  | 表示是否自动滚动到新选定的元素。                                                                                         |
+| `IsDropDownOpen`            | 表示下拉列表当前是否打开。                                                                                               |
+| `MaxDropDownHeight`         | 下拉列表的最大高度。这是列表部分的实际高度，而不是显示的元素数量。                                                       |
 
-## Examples
+## 示例
 
-This is basic example with text items has a limit set on the drop-down list height.
+
+这是最基本的示例，其中对文本项的下拉列表高度设置了限制。
 
 ```xml
 <StackPanel Margin="20">
@@ -52,7 +53,7 @@ This is basic example with text items has a limit set on the drop-down list heig
 
 <img src={ComboBoxMaxDropDownHeightScreenshot} alt="" />
 
-This example uses a composed view for each item:
+该示例使用组合视图的方式展示元素:
 
 ```xml
 <StackPanel Margin="20">
@@ -84,7 +85,7 @@ This example uses a composed view for each item:
 
 <img src={ComboBoxComplexContentScreenshot} alt="" />
 
-This example binds the items in a combo box using a data template. The C# code-behind loads the installed font family names and binds them to the items property.
+这个示例使用数据模板绑定了组合框中的每一个元素。在 c# code-behind 代码中，我们将加载系统中安装的字体家族名称，并将它们绑定到 ComboBox 的 Items 属性。
 
 ```xml
 <StackPanel Margin="20">
@@ -123,12 +124,12 @@ namespace AvaloniaControls.Views
 
 <img src={ComboBoxDataTemplateScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ComboBox/).
+要查看有关此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ComboBox/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`ComboBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ComboBox.cs)
+在 _GitHub_ 上查看源代码 [`ComboBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ComboBox.cs)
 :::
