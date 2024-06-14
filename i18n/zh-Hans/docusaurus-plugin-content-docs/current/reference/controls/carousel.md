@@ -4,15 +4,15 @@ description: REFERENCE - Built-in Controls
 
 import CarouselScreenshot from '/img/reference/controls/carousel/carousel.gif';
 
-# Carousel
+# 轮播图
 
-The carousel has an items collection, and displays each item as a page, in sequence, so that it fills the control.
+轮播图拥有一个元素集合，并且按顺序将每个元素作为一页显示，以填充整个控件。
 
-You can use the carousel control to create a slide show.
+你可以使用轮播图控件来创建幻灯片展示。
 
-## Example
+## 示例
 
-This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.
+此示例在元素集合中包含三张图片，配有前进和后退按钮来移动显示内容。这些按钮在 C# code-behind 代码中有点击事件处理程序。
 
 
 
@@ -67,8 +67,8 @@ namespace AvaloniaControls.Views
 
 <img src={CarouselScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Carousel/).
+要查看此控件的完整 API 文档，请点击[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/Carousel/)。
 
-View the source code on _GitHub_ [`Carousel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Carousel.cs)
+在 _GitHub_ 上查看源代码 [`Carousel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Carousel.cs)。
