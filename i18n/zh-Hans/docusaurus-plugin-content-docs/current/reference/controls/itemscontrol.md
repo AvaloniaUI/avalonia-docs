@@ -4,27 +4,27 @@ description: REFERENCE - Built-in Control
 
 import exampleScreenshot from '/img/reference/controls/itemscontrol/itemscontrol-with-custom-layout-and-formatting.gif';
 
-# Items Control
+# Items Control 元素集合控件
 
-The items control is the basis for controls that display repeating data (like the list box for example). It has no built-in formatting or interactions; but you can use it with data binding, styling and data templates to create a completely custom repeating data control.
+元素集合控件是用于显示重复数据的控件（例如列表框）的基础。它本身不包含内置的格式化或交互功能；但你可以结合数据绑定、样式和数据模板使用，创建一个完全自定义的重复数据控件。
 
 :::info
-To see the full list of _Avalonia UI_ built-in repeating data controls, see [here](repeating-data-controls.md).
+要查看 _Avalonia UI_ 内置的所有重复数据控件的完整列表，请查看[这里](repeating-data-controls.md)。
 :::
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-<table><thead><tr><th width="316">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ItemsSource</code></td><td>The bound collection that is used as the data source for the control.</td></tr><tr><td><code>ItemsControl.ItemTemplate</code></td><td>Attached property element to contain the data template for an individual item. </td></tr></tbody></table>
+<table><thead><tr><th width="316">属性</th><th>描述</th></tr></thead><tbody><tr><td><code>ItemsSource</code></td><td>用作控件数据源的绑定集合。</td></tr><tr><td><code>ItemsControl.ItemTemplate</code></td><td>附加属性元素，包含单个元素的数据模板。</td></tr></tbody></table>
 
-## Example
+## 示例
 
-This example binds an observable collection of crockery items to an items control, where some custom layout and formatting is provided by a data template:
+此示例将一个可观察的餐具项集合绑定到一个元素控件，其中通过数据模板提供了一些自定义布局和格式化：
 
 ```xml
 <StackPanel Margin="20">
-  <TextBlock Margin="0 5">List of crockery:</TextBlock>
+  <TextBlock Margin="0 5">餐具列表：</TextBlock>
   <ItemsControl ItemsSource="{Binding CrockeryList}" >
     <ItemsControl.ItemTemplate>
     <DataTemplate>
@@ -44,7 +44,7 @@ This example binds an observable collection of crockery items to an items contro
 </StackPanel>
 ```
 
-```csharp title='C# View Model'
+```csharp title='C# ViewModel'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -59,20 +59,20 @@ namespace AvaloniaControls.ViewModels
         {
             CrockeryList = new ObservableCollection<Crockery>(new List<Crockery>
             {
-                new Crockery("dinner plate", 12),
-                new Crockery("side plate", 12),
-                new Crockery("breakfast bowl", 6),
-                new Crockery("cup", 10),
-                new Crockery("saucer", 10),
-                new Crockery("mug", 6),
-                new Crockery("milk jug", 1)
+                new Crockery("晚餐盘", 12),
+                new Crockery("小碟", 12),
+                new Crockery("早餐碗", 6),
+                new Crockery("杯子", 10),
+                new Crockery("茶碟", 10),
+                new Crockery("马克杯", 6),
+                new Crockery("牛奶壶", 1)
             });    
         }
     }
 }
 ```
 
-```csharp title='C# Item Class'
+```csharp title='C# 数据源的类定义'
 public class Crockery
 {
     public string Title { get; set; }
@@ -86,19 +86,18 @@ public class Crockery
 }
 ```
 
-The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
+视图水平方向可调整大小，但内容在过高时会被隐藏。这个控件没有内置滚动条（与 `ListBox` 不同）。
 
 <img src={exampleScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/).
+要查看关于此控件的完整 API 文档，请查看[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`ItemsControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)
+在 _GitHub_ 上查看源代码 [`ItemsControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)
 :::
-
 
 
