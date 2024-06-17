@@ -82,28 +82,9 @@ const sidebars = {
       'items': [
         'tutorials/samples',
         {
-          'type': 'category',
+          'type': 'link',
           'label': 'ToDo List App',
-          'link': {
-            'type': 'doc',
-            'id': 'tutorials/todo-list-app/index',
-          },
-          'items': [
-            'tutorials/todo-list-app/creating-a-new-project',
-            'tutorials/todo-list-app/creating-a-view',
-            'tutorials/todo-list-app/inspect-the-xaml',
-            'tutorials/todo-list-app/main-window-content',
-            'tutorials/todo-list-app/creating-a-model',
-            'tutorials/todo-list-app/creating-a-view-model',
-            'tutorials/todo-list-app/wiring-up-the-views',
-            'tutorials/todo-list-app/add-a-data-context',
-            'tutorials/todo-list-app/adding-new-items',
-            'tutorials/todo-list-app/navigate-views',
-            'tutorials/todo-list-app/locating-views',
-            'tutorials/todo-list-app/add-item-buttons',
-            'tutorials/todo-list-app/process-a-new-item',
-            'tutorials/todo-list-app/conclusion',
-          ],
+          'href': 'https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList' ,
         },
         {
           'type': 'category',

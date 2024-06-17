@@ -13,7 +13,7 @@ import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/imag
 在本教程中，您将使用 MVVM 模式和 _ReactiveUI_ 框架来管理多个应用程序窗口。您还将使用高级异步技术来实现专辑搜索和其他功能，以保持应用程序的响应性。
 
 :::warning
-这是一个更高级的教程。如果您对 MVVM 模式的经验有限，建议先完成“待办事项列表应用”教程。请在[此处](../todo-list-app/)阅读有关“待办事项列表应用”的教程。
+这是一个更高级的教程。如果您对 MVVM 模式的经验有限，建议先完成“待办事项列表应用”教程。请在[此处](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList)阅读有关“待办事项列表应用”的教程。
 :::
 
 :::info

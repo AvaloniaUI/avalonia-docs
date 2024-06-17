@@ -7,7 +7,7 @@ title: UserControls
 
 A `UserControl` usually consists of two parts: a XAML file \(e.g. `MyUserControl.axaml`\) and a code-behind file \(e.g. `MyUserControl.axaml.cs`\). The code-behind defines a .NET class which represents the control.
 
-`UserControl`s are often paired with "view models" when using the MVVM pattern. For more information see the [tutorial](../tutorials/todo-list-app).
+`UserControl`s are often paired with "view models" when using the MVVM pattern. For more information see the [Avalonia.Samples](https://github.com/AvaloniaUI/Avalonia.Samples).
 
 You can create `UserControl`s from templates:
 
