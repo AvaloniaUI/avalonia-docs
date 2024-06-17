@@ -20,7 +20,7 @@ import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/imag
 :::warning
 Данное руководство требует более глубоких знаний.
 Если у вас небольшой опыт работы с паттерном MVVM,
-то рекомендуем ознакомиться с руководством 'Приложение To Do List (рус: Список дел)' по [ссылке](../todo-list-app/).
+то рекомендуем ознакомиться с руководством 'Приложение To Do List (рус: Список дел)' по [ссылке](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList).
 :::
 
 :::info
