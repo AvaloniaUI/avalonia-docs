@@ -155,7 +155,7 @@ Your whole file should now look like this:
 
 ```csharp
 using Avalonia.ReactiveUI;
-using AvaloniaApplication11.ViewModels;
+using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System.Threading.Tasks;
 
