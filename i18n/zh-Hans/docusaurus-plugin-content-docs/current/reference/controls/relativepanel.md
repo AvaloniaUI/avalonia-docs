@@ -4,49 +4,49 @@ description: REFERENCE - Built-in Controls
 
 import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relativepanel.png';
 
-# Relative Panel
+# RelativePanel 相对面板
 
-The relative panel control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
+相对面板控件允许您通过指定其子控件相对于其他（同级）子控件或相对于面板本身的位置来排列它们。位置是根据面板控件的内部（内容区）和子控件的边缘区的外边缘计算的。
 
 :::info
-To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones).
+要回顾控件布局区域的概念，请参见[这里](../../concepts/layout/layout-zones)。
 :::
 
-The default position for a child control, is the upper left corner of the panel.
+子控件的默认位置是面板的左上角。
 
-You use attached relative position properties to specify the layout of child controls. The format is like this:
+您使用附加的相对位置属性来指定子控件的布局。格式如下：
 
 `RelativePanel.PositionProperty="NameOfSibling"`
 
-Where `PositionProperty` property is one of the relative position properties (see table below), and `NameOfSibling` is the name property of one of the other child controls.
+其中 `PositionProperty` 属性是相对位置属性之一（见下表），`NameOfSibling` 是其他子控件的名称属性。
 
 :::danger
-It is an error to give the value of a relative position property as the name of the child control itself. That would be a circular reference!
+将相对位置属性的值给定为子控件本身的名称是一个错误。这将是一个循环引用！
 :::
 
-You can specify up to four relative position properties per child control - for how the top, bottom, left and right edges are to be calculated.
+您可以为每个子控件指定最多四个相对位置属性——计算顶部、底部、左侧和右侧的边缘。
 
 :::danger
-It is an error to define the same relative position property twice for the same child control.
+为同一个子控件两次定义相同的相对位置属性是错误的。
 :::
 
-It is not an error to specify different, but potentially conflicting relative position properties, although you may find the result difficult to understand.
+指定不同但潜在冲突的相对位置属性不是错误，尽管您可能会发现结果难以理解。
 
-If more than one child control ends up in the same calculated position, then they are drawn in the sequence that they appear in the XAML, and may overlap or obscure another child control.
+如果多个子控件最终在相同的计算位置上，那么它们将按照它们在 XAML 中出现的顺序绘制，并且可能会重叠或遮挡其他子控件。
 
 :::warning
-This means you must give child controls a name, and use the correct name in any relative position property values. If you get this wrong, the control will adopt the default (top-left) position, and may overlap or obscure another.
+这意味着您必须给子控件命名，并在任何相对位置属性值中使用正确的名称。如果搞错了，控件将采用默认的（左上角）位置，并可能重叠或遮挡其他控件。
 :::
 
 ## 常用属性
 
 你可能最常使用这些属性：
 
-<table><thead><tr><th width="348">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>AlignTopWithPanel</code></td><td>Boolean. Align the top edge of the child control with the top edge of the panel.</td></tr><tr><td><code>AlignBottomWithPanel</code></td><td>Boolean. Attached to a child control to align the bottom edge of the child control with the bottom edge of the panel.</td></tr><tr><td><code>AlignLeftWithPanel</code></td><td>Boolean. Attached to a child control to align the left edge of the child control with the left edge of the panel.</td></tr><tr><td><code>AlignRightWithPanel</code></td><td>Boolean. Attached to a child control to align the right edge of the child control with the right edge of the panel.</td></tr><tr><td><code>AlignHorizontalCenterWithPanel</code></td><td>Boolean. Attached to a child control to align the horizontal center of the child control with the horizontal center of the panel.</td></tr><tr><td><code>AlignVerticalCenterWithPanel</code></td><td>Boolean. Attached to a child control to align the vertical center of the child control with the vertical center of the panel.</td></tr><tr><td><code>AlignTopWith</code></td><td>Attached to a child control to align its top edge with the top edge of the named sibling.</td></tr><tr><td><code>AlignBottomWith</code></td><td>Attached to a child control to align its bottom edge with the bottom edge of the named sibling.</td></tr><tr><td><code>AlignLeftWith</code></td><td>Attached to a child control to align its left edge with the left edge of the named sibling.</td></tr><tr><td><code>AlignRightWith</code></td><td>Attached to a child control to align its right edge with the right edge of the named sibling.</td></tr><tr><td><code>AlignHorizontalCenterWith</code></td><td>Attached to a child control to align its horizontal center with the horizontal center of the named sibling.</td></tr><tr><td><code>AlignVerticalCenterWith</code></td><td>Attached to a child control to align its vertical center with the vertical center of the named sibling.</td></tr><tr><td><code>Above</code></td><td>Attached to a child control to align its bottom edge with the top edge of the named sibling.</td></tr><tr><td><code>Below</code></td><td>Attached to a child control to align its top edge with the bottom edge of the named sibling.</td></tr><tr><td><code>LeftOf</code></td><td>Attached to a child control to align its right edge with the left edge of the named sibling.</td></tr><tr><td><code>RightOf</code></td><td>Attached to a child control to align its left edge with the right edge of the named sibling.</td></tr></tbody></table>
+<table><thead><tr><th width="348">属性</th><th>描述</th></tr></thead><tbody><tr><td><code>AlignTopWithPanel</code></td><td>布尔值。将子控件的顶边与面板的顶边对齐。</td></tr><tr><td><code>AlignBottomWithPanel</code></td><td>布尔值。附加到子控件以将其底边与面板的底边对齐。</td></tr><tr><td><code>AlignLeftWithPanel</code></td><td>布尔值。附加到子控件以将其左边与面板的左边对齐。</td></tr><tr><td><code>AlignRightWithPanel</code></td><td>布尔值。附加到子控件以将其右边与面板的右边对齐。</td></tr><tr><td><code>AlignHorizontalCenterWithPanel</code></td><td>布尔值。附加到子控件以将其水平中心与面板的水平中心对齐。</td></tr><tr><td><code>AlignVerticalCenterWithPanel</code></td><td>布尔值。附加到子控件以将其垂直中心与面板的垂直中心对齐。</td></tr><tr><td><code>AlignTopWith</code></td><td>附加到子控件以将其顶边与命名同级的顶边对齐。</td></tr><tr><td><code>AlignBottomWith</code></td><td>附加到子控件以将其底边与命名同级的底边对齐。</td></tr><tr><td><code>AlignLeftWith</code></td><td>附加到子控件以将其左边与命名同级的左边对齐。</td></tr><tr><td><code>AlignRightWith</code></td><td>附加到子控件以将其右边与命名同级的右边对齐。</td></tr><tr><td><code>AlignHorizontalCenterWith</code></td><td>附加到子控件以将其水平中心与命名同级的水平中心对齐。</td></tr><tr><td><code>AlignVerticalCenterWith</code></td><td>附加到子控件以将其垂直中心与命名同级的垂直中心对齐。</td></tr><tr><td><code>Above</code></td><td>附加到子控件以将其底边与命名同级的顶边对齐。</td></tr><tr><td><code>Below</code></td><td>附加到子控件以将其顶边与命名同级的底边对齐。</td></tr><tr><td><code>LeftOf</code></td><td>附加到子控件以将其右边与命名同级的左边对齐。</td></tr><tr><td><code>RightOf</code></td><td>附加到子控件以将其左边与命名同级的右边对齐。</td></tr></tbody></table>
 
 ## 示例
 
-This XAML shows how to arrange some child controls in different ways:
+此 XAML 展示了如何以不同方式排列一些子控件：
 
 ```xml
 <Border BorderBrush="DarkGray" BorderThickness="1" Width="300" Height="300">
@@ -67,23 +67,23 @@ This XAML shows how to arrange some child controls in different ways:
 </Border>
 ```
 
-The result looks like this:
+结果如下所示：
 
 <img src={RelativePanelScreenshot} alt="" />
 
-Here are some notes about the above example:
+以下是关于上述示例的一些说明：
 
-* The red rectangle is given a size (50x50) but no relative position. It is therefore placed in the default (top-left) position.
-* The blue rectangle has a 50% opacity to demonstrate that is is not overlapping any other.
-* The green rectangle is given a height (100), but no width. Its left side is aligned with the red rectangle, and its right side is aligned with the blue rectangle, this calculates its width.
-* The orange rectangle has not been given a size. Its left side is aligned with the blue rectangle. Its right and bottom edges are aligned with the edge of the panel. Therefore its size is determined by the alignments and it will resize if the panel itself is resized.
+* 红色矩形被赋予了尺寸（50x50）但没有相对位置。因此，它被放置在默认的（左上角）位置。
+* 蓝色矩形的不透明度为 50%，以示它没有与其他任何物体重叠。
+* 绿色矩形被赋予了高度（100），但没有宽度。其左侧与红色矩形对齐，右侧与蓝色矩形对齐，这样计算其宽度。
+* 橙色矩形没有被赋予尺寸。其左侧与蓝色矩形对齐。其右侧和底边与面板的边缘对齐。因此，其尺寸由对齐决定，如果面板本身调整大小，它将会调整大小。
 
 ## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/RelativePanel/).
+要查看此控件的完整 API 文档，请参见[这里](https://reference.avaloniaui.net/api/Avalonia.Controls/RelativePanel/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`RelativePanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RelativePanel.cs)
+在 _GitHub_ 上查看源代码 [`RelativePanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RelativePanel.cs)
 :::
