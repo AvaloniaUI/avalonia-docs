@@ -12,9 +12,9 @@ import TextBlockUIContainerScreenshot from '/img/reference/controls/detailed-ref
 
 The `TextBlock` is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property        | Description                                                                                                                                                                                                           |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -25,7 +25,7 @@ You will probably use these properties most often:
 | TextDecorations | A line decoration to apply to the lettering. Default is none, options include `Underline`, `Strikethrough`, `Baseline` and `Overline`. To apply more than one at the same time, list the options with spaces between. |
 | xml:space       | `xml:space="preserve"` directs the XML parser to preserve line breaks and whitespace for content assigned to `TextBlock` else it is stripped by default.                                                              |
 
-## Example
+## 示例
 
 This example demonstrates using multiple `TextBlock` controls to show a heading, single line containing extra space, and multi-line displays.
 
@@ -121,7 +121,7 @@ The `InlineUIContainer` allows any `Control` to be included as an inline.
 
 <img src={TextBlockUIContainerScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TextBlock/).

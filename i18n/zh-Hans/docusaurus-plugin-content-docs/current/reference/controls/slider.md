@@ -11,13 +11,13 @@ The slider control presents its numerical value as the relative position of a sl
 
 Drag interaction on the slider button can alter the value between the maximum and minimum values. Keyboard and click interactions can also nudge the value.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="197">Property</th><th>Description</th></tr></thead><tbody><tr><td>Maximum</td><td>Sets the maximum value.</td></tr><tr><td>Minimum</td><td>Sets the minimum value.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 In this example the slider value is displayed in the text block below, using binding to a control.
 
@@ -39,7 +39,7 @@ The slider looks like this on Windows:
 
 <img src={SliderScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Slider/).
 

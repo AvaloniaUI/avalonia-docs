@@ -12,16 +12,16 @@ Inside a stack panel, if the size property perpendicular to the stack on a child
 
 In the direction of the stack, the stack panel will always expand to fit all the child controls.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property      | Description                                                                    |
 | ------------- | ------------------------------------------------------------------------------ |
 | `Orientation` | Sets the direction of the stack. Choose from horizontal or vertical (default). |
 | `Spacing`     | Creates an even spacing between the child controls.                            |
 
-## Example
+## 示例
 
 The following XAML shows how to create a vertical stack panel.
 
@@ -38,7 +38,7 @@ The result shows the child controls stretched to fit the width, and the overall 
 
 <img src={StackPanelVerticalRectanglesScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/StackPanel/).

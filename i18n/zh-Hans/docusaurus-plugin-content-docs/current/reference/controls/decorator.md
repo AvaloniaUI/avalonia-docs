@@ -1,6 +1,6 @@
 ---
 id: decorator
-title: 装饰器
+title: Decorator 装饰器
 ---
 
 `Decorator` 是用于装饰单个子控件的基础装饰器类。

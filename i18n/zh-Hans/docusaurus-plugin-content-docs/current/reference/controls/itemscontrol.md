@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Control
 
 import exampleScreenshot from '/img/reference/controls/itemscontrol/itemscontrol-with-custom-layout-and-formatting.gif';
 
-# Items Control 元素集合控件
+# ItemsControl 元素集合控件
 
 元素集合控件是用于显示重复数据的控件（例如列表框）的基础。它本身不包含内置的格式化或交互功能；但你可以结合数据绑定、样式和数据模板使用，创建一个完全自定义的重复数据控件。
 

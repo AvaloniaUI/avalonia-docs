@@ -6,7 +6,7 @@ import ComboBoxMaxDropDownHeightScreenshot from '/img/reference/controls/combobo
 import ComboBoxComplexContentScreenshot from '/img/reference/controls/combobox/combobox-complex-content.gif';
 import ComboBoxDataTemplateScreenshot from '/img/reference/controls/combobox/combobox-data-template.gif';
 
-# 组合框
+# ComboBox 组合框
 
 组合框展示了一个选定的元素和一个下拉按钮，该按钮显示一个选项列表。组合框的长度和高度由选定的元素决定，除非另有定义。
 

@@ -5,7 +5,7 @@ description: REFERENCE - Built-in Controls
 import GridSplitterColumnsScreenshot from '/img/reference/controls/gridsplitter/gridsplitter-columns.gif';
 import GridSplitterRowsScreenshot from '/img/reference/controls/gridsplitter/gridsplitter-rows.gif';
 
-# Grid Splitter 网格分割器
+# GridSplitter 网格分割器
 
 网格分割器控件允许用户在运行时调整网格中的列或行的大小。分割器被绘制为一列或一行（可以指定大小），并具有一个用户可以在运行时操作的把手。
 

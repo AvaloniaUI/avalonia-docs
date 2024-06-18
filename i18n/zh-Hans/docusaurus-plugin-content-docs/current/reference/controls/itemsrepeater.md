@@ -5,7 +5,7 @@ description: REFERENCE - Built-in Controls
 import ItemsRepeaterVerticalScreenshot from '/img/reference/controls/itemsrepeater/itemsrepeater-vertical.png';
 import ItemsRepeaterHorizontalScreenshot from '/img/reference/controls/itemsrepeater/itemsrepeater-horizontal.gif';
 
-# Items Repeater 元素重复器
+# ItemsRepeater 元素重复器
 
 元素重复器可以从绑定的数据源显示重复数据。它具有布局模板和数据模板。
 

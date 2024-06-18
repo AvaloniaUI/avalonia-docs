@@ -7,7 +7,7 @@ import DataGridSortColumnScreenshot from '/img/reference/controls/datagrid/datag
 import DataGridReorderColumnScreenshot from '/img/reference/controls/datagrid/datagrid-reorder-column.gif';
 import DataGridColumnTypesScreenshot from '/img/reference/controls/datagrid/datagrid-column-types.gif';
 
-# 数据表格
+# DataGrid 数据表格
 
 数据表格以自定义的网格形式展示重复的数据。该控件可以进行样式定制、模板化和绑定。
 

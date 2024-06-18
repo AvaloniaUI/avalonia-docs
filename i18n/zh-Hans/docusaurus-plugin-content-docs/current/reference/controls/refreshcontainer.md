@@ -6,7 +6,7 @@ description: REFERENCE - Built-in Controls
 
 The refresh container allows a user to pull down on content or a list of data to refresh the content or retrieve more data. The refresh progress is indicated by a `RefreshVisualizer` that appears from the edge by which the pull gesture was initiated. The content of a `RefreshContainer` must be a `ScrollViewer`, or a control that has one.
 
-## Example
+## 示例
 
 This example shows hows to use a RefreshContainer with a
 
@@ -53,7 +53,7 @@ In this state, the visualizer is fully visible, and the refresh animation begins
 * #### Peeking
 This occurs when the user starts a pull gesture while the content is in a position where refresh is not allowed. This typical happens when the child ScrollViewer isn't at Offset 0, with respect to the pull direction and scroll direction, when the pull is started. The visualizer is hidden and the visualizer's state can only progress to `Idle` when the pull is released.
 
-## More Information
+## 更多信息
 
 :::info
 View the source code on GitHub [`RefreshContainer.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PullToRefresh/RefreshContainer.cs)

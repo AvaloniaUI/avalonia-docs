@@ -11,9 +11,9 @@ The `MaskedTextBox` presents an area for typed (keyboard) input, but where the f
 
 The mask pattern can also contain literal characters that appear in the input and cannot be typed over.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property    | Description                                                                  |
 |-------------|------------------------------------------------------------------------------|
@@ -50,7 +50,7 @@ The escape character (backslash) can be used to include a special character as a
 
 `Mask="\$999,000.00"`
 
-## Example
+## 示例
 
 This is a basic example:
 
@@ -65,7 +65,7 @@ This is a basic example:
 
 <img src={MaskedTextPhoneBoxScreenshot} alt=""/>
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see here.

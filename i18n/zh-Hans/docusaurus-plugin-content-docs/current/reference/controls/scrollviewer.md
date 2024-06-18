@@ -10,9 +10,9 @@ The scroll viewer control can have content that is bigger than its content zone,
 
 A `ScrollViewer` cannot be contained in a control that has infinite height or width (depending on scrolling direction) such as a `StackPanel`. To avoid it, you can either set fixed Height/Width or MaxHeight/MaxWidth or choose another container panel.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="288">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>AllowAutoHide</code></td><td>Boolean, default is true. Sets whether the scroll bar hides itself automatically when the pointer is not over, or it does not have the focus. </td></tr><tr><td><code>ScrollViewer</code>. <code>IsScrollChainingEnabled</code></td><td>Boolean, default is true. Attached to an inner controlSee below for more details. </td></tr></tbody></table>
 
@@ -30,7 +30,7 @@ This attached property is available on these controls:
 * Text Box
 * Tree View
 
-## Example
+## 示例
 
 This example creates a stack panel that is bigger than the border it is inside. The scroll viewer automatically creates a vertical scroll bar.
 
@@ -50,7 +50,7 @@ This example creates a stack panel that is bigger than the border it is inside. 
 
 <img src={ScrollViewerScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ScrollViewer/).

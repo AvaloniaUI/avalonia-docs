@@ -18,13 +18,13 @@ You can add menu separator lines by including a `<NativeMenuItemSeparator>` elem
 <NativeMenuItemSeparator Header="-" />
 ```
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="204">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Header</code></td><td>The menu caption.</td></tr><tr><td><code>Command</code></td><td>A command to execute when the user clicks the menu item.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 This example defines a native menu that can be attached to a tray icon:
 
@@ -41,7 +41,7 @@ This example defines a native menu that can be attached to a tray icon:
 </NativeMenu>
 ```
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/NativeMenu/).

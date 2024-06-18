@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Controls
 
 import ContextMenuCopyPasteScreenshot from '/img/reference/controls/contextmenu/contextmenu-copy-paste.gif';
 
-# 上下文菜单
+# ContextMenu 上下文菜单
 
 上下文菜单可以应用于任何宿主控件，以实现右键点击的“上下文敏感”菜单。这使用了宿主控件的一个**附加属性**。
 

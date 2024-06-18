@@ -9,9 +9,9 @@ import ProgressBarScreenshot from '/img/reference/controls/progressbar/progressb
 
 The `ProgressBar` presents a value as a proportionately filled bar with the option to show a caption.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property             | Description                                        |
 |----------------------|----------------------------------------------------|
@@ -22,7 +22,7 @@ You will probably use these properties most often:
 | `ShowProgressText`   | The progress bar shows progress as a text caption. |
 | `ProgressTextFormat` | The format string applied to the progress text.    |
 
-## Example
+## 示例
 
 ```xml
 <StackPanel Margin="20">
@@ -59,7 +59,7 @@ with the value of `ProgressTextFormat` as the format string. The following forma
 
 Since `{0}` would appear at the start of the string in this example, it must be escaped.
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ProgressBar/).

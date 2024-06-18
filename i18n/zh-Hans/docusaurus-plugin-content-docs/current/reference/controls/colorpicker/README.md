@@ -9,7 +9,7 @@ import ColorPaletteMaterial from '/img/reference/controls/colorpicker/color-pale
 import ColorPaletteMaterialHalf from '/img/reference/controls/colorpicker/color-palette-material-half.png';
 import ColorPaletteSixteen from '/img/reference/controls/colorpicker/color-palette-sixteen.png';
 
-# 取色器
+# ColorPicker 取色器
 
 `ColorPicker` 提供了一个高度可定制的通用控件，用户可以使用它在 RGB 或 HSV 色彩空间中选择颜色。这种实现不仅提供了开发者可以用来构建自己的取色器的基本控件，也提供了一个现成的取色器。
 

@@ -9,9 +9,9 @@ import NumericUpDownFormatStringScreenshot from '/img/reference/controls/numeric
 
 The numeric up-down is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The mouse wheel (if present) will also change the value.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property                | Description                                                                                                                 |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -24,7 +24,7 @@ You will probably use these properties most often:
 | `AllowSpin`             | Determines if incrementing and decrementing using the spinner buttons, keyboard and mouse wheel is active. Default is true. |
 | `ShowButtonSpinner`     | Determines whether the spinner buttons are shown. Default is true.                                                          |
 
-## Examples
+## 示例
 
 This is a basic example of a numeric up-down control. There are no limits to the value here:
 
@@ -56,7 +56,7 @@ For example:
 
 <img src={NumericUpDownFormatStringScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/NumericUpDown/).

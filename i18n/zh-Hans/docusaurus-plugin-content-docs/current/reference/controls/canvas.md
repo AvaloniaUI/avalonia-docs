@@ -5,7 +5,7 @@ description: REFERENCE - Built-in Controls
 import CanvasContentZoneScreenshot from '/img/reference/controls/canvas/canvas-contentzone.png';
 import CanvasChildOverlapScreenshot from '/img/reference/controls/canvas/canvas-child-overlap.png';
 
-# 画布控件
+# Canvas 画布控件
 
 画布控件在指定的位置（以坐标形式给出）显示其子控件。
 

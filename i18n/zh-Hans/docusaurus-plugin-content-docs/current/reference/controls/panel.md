@@ -12,7 +12,7 @@ The panel is the most basic control that can contain multiple child controls. Ch
 For a discussion about using other panels, see [here](../../basics/user-interface/building-layouts/panels-overview.md).
 :::
 
-## Example
+## 示例
 
 This example uses some 50% opacities to demonstrate that child controls overlap.
 
@@ -42,7 +42,7 @@ If you have specific requirements for positioning the child controls in a panel,
 For instructions about how to create a custom panel control, see [here](../../guides/custom-controls/create-a-custom-panel.md).
 :::
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Panel/).

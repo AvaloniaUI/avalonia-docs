@@ -5,7 +5,7 @@ description: REFERENCE - Built-in Control
 import CheckBoxTwoStateScreenshot from '/img/reference/controls/checkbox/checkbox-two-state.gif';
 import CheckBoxThreeStateScreenshot from '/img/reference/controls/checkbox/checkbox-three-state.gif';
 
-# 复选框
+# CheckBox 复选框
 
 复选框控件展示一个布尔值，其中真值用勾选标记表示，假值则显示为空白框。复选框有一个选项可以表示可空的布尔值，其中空值表示“未知”，并以阴影框的形式呈现。
 

@@ -38,13 +38,13 @@ If more than one child control ends up in the same calculated position, then the
 This means you must give child controls a name, and use the correct name in any relative position property values. If you get this wrong, the control will adopt the default (top-left) position, and may overlap or obscure another.
 :::
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="348">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>AlignTopWithPanel</code></td><td>Boolean. Align the top edge of the child control with the top edge of the panel.</td></tr><tr><td><code>AlignBottomWithPanel</code></td><td>Boolean. Attached to a child control to align the bottom edge of the child control with the bottom edge of the panel.</td></tr><tr><td><code>AlignLeftWithPanel</code></td><td>Boolean. Attached to a child control to align the left edge of the child control with the left edge of the panel.</td></tr><tr><td><code>AlignRightWithPanel</code></td><td>Boolean. Attached to a child control to align the right edge of the child control with the right edge of the panel.</td></tr><tr><td><code>AlignHorizontalCenterWithPanel</code></td><td>Boolean. Attached to a child control to align the horizontal center of the child control with the horizontal center of the panel.</td></tr><tr><td><code>AlignVerticalCenterWithPanel</code></td><td>Boolean. Attached to a child control to align the vertical center of the child control with the vertical center of the panel.</td></tr><tr><td><code>AlignTopWith</code></td><td>Attached to a child control to align its top edge with the top edge of the named sibling.</td></tr><tr><td><code>AlignBottomWith</code></td><td>Attached to a child control to align its bottom edge with the bottom edge of the named sibling.</td></tr><tr><td><code>AlignLeftWith</code></td><td>Attached to a child control to align its left edge with the left edge of the named sibling.</td></tr><tr><td><code>AlignRightWith</code></td><td>Attached to a child control to align its right edge with the right edge of the named sibling.</td></tr><tr><td><code>AlignHorizontalCenterWith</code></td><td>Attached to a child control to align its horizontal center with the horizontal center of the named sibling.</td></tr><tr><td><code>AlignVerticalCenterWith</code></td><td>Attached to a child control to align its vertical center with the vertical center of the named sibling.</td></tr><tr><td><code>Above</code></td><td>Attached to a child control to align its bottom edge with the top edge of the named sibling.</td></tr><tr><td><code>Below</code></td><td>Attached to a child control to align its top edge with the bottom edge of the named sibling.</td></tr><tr><td><code>LeftOf</code></td><td>Attached to a child control to align its right edge with the left edge of the named sibling.</td></tr><tr><td><code>RightOf</code></td><td>Attached to a child control to align its left edge with the right edge of the named sibling.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 This XAML shows how to arrange some child controls in different ways:
 
@@ -78,7 +78,7 @@ Here are some notes about the above example:
 * The green rectangle is given a height (100), but no width. Its left side is aligned with the red rectangle, and its right side is aligned with the blue rectangle, this calculates its width.
 * The orange rectangle has not been given a size. Its left side is aligned with the blue rectangle. Its right and bottom edges are aligned with the edge of the panel. Therefore its size is determined by the alignments and it will resize if the panel itself is resized.
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/RelativePanel/).

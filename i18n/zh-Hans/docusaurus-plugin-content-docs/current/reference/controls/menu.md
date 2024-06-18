@@ -25,13 +25,13 @@ You can add menu separator lines by including a `<Separator>` element or by addi
 <MenuItem Header="-" />
 ```
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="147.33333333333331">Element</th><th width="190">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Menu</code></td><td><code>DockPanel.Dock</code></td><td>Position the menu on the top edge of a dock panel.</td></tr><tr><td><code>MenuItem</code></td><td><code>Header</code></td><td>The menu item caption.</td></tr><tr><td><code>MenuItem</code></td><td><code>Command</code></td><td>The command to be executed when the menu item is clicked or selected with the keyboard.</td></tr><tr><td><code>MenuItem</code></td><td><code>MenuItem.Icon</code></td><td>Contains an icon graphic to display alongside the menu item.</td></tr><tr><td><code>Separator</code></td><td></td><td>A menu item separator line.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 This example creates a menu docked at the top edge of a window.
 
@@ -112,7 +112,7 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 For more detailed guidance on how to add icons to your menus, see [here](../../guides/graphics-and-animation/how-to-add-menu-icons.md).
 :::
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Menu/).

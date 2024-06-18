@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Controls
 
 import DatePickerScreenshot from '/img/reference/controls/datepicker/datepicker.gif';
 
-# 日期选择器
+# DatePicker 日期选择器
 
 日期选择器包含三个“轮盘”控制器，允许用户选择日期值。点击控件时会显示这些旋转器。
 

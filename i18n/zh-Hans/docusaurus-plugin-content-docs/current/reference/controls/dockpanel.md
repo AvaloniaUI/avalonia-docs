@@ -5,7 +5,7 @@ description: REFERENCE - Built-in Controls
 import DockPanelTopScreenshot from '/img/reference/controls/dockpanel/dockpanel-top.png';
 import DockPanelFillNoOverlapScreenshot from '/img/reference/controls/dockpanel/dockpanel-fill-no-overlap.png'; 
 
-# 边缘布局面板
+# DockPanel 边缘布局面板
 
 边缘布局面板（Dock Panel）控件可以沿着指定的“停靠边缘”（顶部、底部、左侧和右侧）排列其子控件，最后一个子控件填充剩余的空间。边缘布局面板可以保持与停靠边缘平行的子控件尺寸，使得子控件沿停靠边缘填满所有可用空间。
 

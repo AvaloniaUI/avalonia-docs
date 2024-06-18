@@ -14,13 +14,13 @@ To see the full list of Fluent icons available with _Avalonia UI_, see [https://
 
 This control is most often used as part of a composition inside another control. For example, to create an icon in a menu or a button.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="163">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Data</code></td><td>The geometry for the icon.</td></tr><tr><td><code>Foreground</code></td><td>The color used to draw the icon.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 ```xml
 <PathIcon Height="200" Width="200" Foreground="Blue"             
@@ -37,7 +37,7 @@ It works in the preview pane as well:
 
 <img src={PathIconHouseScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/PathIcon/).
 

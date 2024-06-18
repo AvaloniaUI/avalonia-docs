@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Layout Controls 布局控件
+# 布局控件
 
 布局控件允许您使用 **UI 组合** 以多种方式排列您的用户界面。有些控件只能包含一个子控件，而其他控件可以包含多个子控件，并遵循特定的排列规则。
 

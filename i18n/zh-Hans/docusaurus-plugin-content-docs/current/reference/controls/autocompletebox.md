@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Controls
 
 import AutoCompleteBoxScreenshot from '/img/reference/controls/autocompletebox/autocompletebox.gif';
 
-# 自动补全输入框
+# AutoCompleteBox 自动补全输入框
 
 自动补全输入框提供了一个供用户输入的文本框和一个包含可能匹配项的下拉列表。下拉列表会在用户开始输入时显示，并且每输入一个字符，匹配项都会更新。用户可以从下拉列表中选择匹配项。
 

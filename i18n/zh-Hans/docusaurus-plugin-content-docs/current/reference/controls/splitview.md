@@ -9,9 +9,9 @@ import SplitViewCompactScreenshot from '/img/reference/controls/splitview/splitv
 
 A split view presents a container with two parts: the main content zone and a side pane. The main content zone is always visible. The pane can be expanded and collapsed. The collapsed pane can be completely hidden, or left slightly open - with enough space to host some icon buttons for example. 
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property            | Description                                                                      |
 | ------------------- | -------------------------------------------------------------------------------- |
@@ -36,7 +36,7 @@ The display mode property controls how the pane is drawn in its open and closed 
 
     A narrow portion of the pane is always visible in this mode, which is just wide enough to show icons. The default closed pane width is 48px, which can be modified with `CompactPaneLength` property value. If the pane is opened, it will reduce the size of the content zone.
 
-## Example
+## 示例
 
 ```xml
 <SplitView IsPaneOpen="True"
@@ -72,7 +72,7 @@ You can use the MVVM pattern with the split view control and one of the compact 
 To learn how to use the split view control in this way, see the guide [here](../../guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm.md).
 :::
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/SplitView/).

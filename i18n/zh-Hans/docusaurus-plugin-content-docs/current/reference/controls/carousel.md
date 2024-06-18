@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Controls
 
 import CarouselScreenshot from '/img/reference/controls/carousel/carousel.gif';
 
-# 轮播图
+# Carousel 轮播图
 
 轮播图拥有一个元素集合，并且按顺序将每个元素作为一页显示，以填充整个控件。
 

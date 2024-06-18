@@ -1,6 +1,6 @@
 ---
 id: contentcontrol
-title: 内容控件
+title: ContentControl 内容控件
 ---
 
 import ControlContentStudentScreenshot from '/img/reference/controls/contentcontrol/contentcontrol-student.png';
