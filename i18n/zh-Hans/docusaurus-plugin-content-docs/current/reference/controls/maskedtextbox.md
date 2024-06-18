@@ -1,64 +1,64 @@
 ---
-title: MaskedTextBox
+title: MaskedTextBox 掩码文本框
 description: REFERENCE - Built-in Controls
 ---
 
 import MaskedTextPhoneBoxScreenshot from '/img/reference/controls/maskedtextbox/maskedtextbox-phone.gif';
 
-# MaskedTextBox
+# MaskedTextBox 掩码文本框
 
-The `MaskedTextBox` presents an area for typed (keyboard) input, but where the format and characters permitted can be constrained by a mask pattern formed from special characters.
+`MaskedTextBox` 提供了一个用于键盘输入的区域，但输入的格式和允许的字符可以通过由特殊字符组成的掩码模式来限制。
 
-The mask pattern can also contain literal characters that appear in the input and cannot be typed over.
+掩码模式中还可以包含固定字符，这些字符会出现在输入中且不能被覆盖。
 
 ## 常用属性
 
 你可能最常使用这些属性：
 
-| Property    | Description                                                                  |
-|-------------|------------------------------------------------------------------------------|
-| `Mask`      | The mask pattern to use. See the special mask characters in the table below. |
-| `AsciiOnly` | Restricts input to the ASCII letters a-z and A-Z.                            |
-| `Text`      | The resulting text input including any literal characters.                   |
+| 属性          | 描述                                                                 |
+|---------------|---------------------------------------------------------------------|
+| `Mask`        | 要使用的掩码模式。请参阅下面的特殊掩码字符表。                        |
+| `AsciiOnly`   | 限制输入为 ASCII 字母 a-z 和 A-Z。                                    |
+| `Text`        | 包含任何固定字符的结果文本输入。                                      |
 
-## Mask Characters
+## 掩码字符
 
-The mask property accepts a string that can contain a combination of fixed characters and the following special characters:
+掩码属性接受一个字符串，该字符串可以包含固定字符和以下特殊字符的组合：
 
-| Mask Character | Description                                                                                                                                                                             |
-|:--------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      `0`       | Digit, required. This element will accept any single digit between 0 and 9.                                                                                                             |
-|      `9`       | Digit or space, optional.                                                                                                                                                               |
-|      `#`       | Digit or space, optional. If this position is blank in the mask, it will be rendered as a space in the Text property. Plus (+) and minus (-) signs are allowed.                         |
-|      `L`       | Letter, required. Restricts input to the ASCII letters a-z and A-Z                                                                                                                      |
-|      `?`       | Letter, optional. Restricts input to the ASCII letters a-z and A-Z                                                                                                                      |
-|      `&`       | Character, required. If the AsciiOnly property is true, this element behaves like the "L" element.                                                                                      |
-|      `C`       | Character, optional. Any non-control character. If the AsciiOnly property is set to true, this element behaves like the "?" element.                                                    |
-|      `A`       | Alphanumeric, required. If the AsciiOnly property is true, the only characters it will accept are the ASCII letters a-z and A-Z. This mask element behaves like the "a" element.        |
-|      `a`       | Alphanumeric, optional. If the AsciiOnly property is set to true, the only characters it will accept are the ASCII letters a-z and A-Z. This mask element behaves like the "A" element. |
-|      `.`       | Decimal placeholder. The actual display character used will be the decimal symbol appropriate to the format provider, as determined by the control's FormatProvider property.           |
-|      `,`       | Thousands placeholder. The actual display character used will be the thousands placeholder appropriate to the format provider, as determined by the control's FormatProvider property.  |
-|      `:`       | Time separator. The actual display character used will be the time symbol appropriate to the format provider, as determined by the control's FormatProvider property.                   |
-|      `/`       | Date separator. The actual display character used will be the date symbol appropriate to the format provider, as determined by the control's FormatProvider property.                   |
-|      `$`       | Currency symbol. The actual character displayed will be the currency symbol appropriate to the format provider, as determined by the control's FormatProvider property.                 |
-|      `<`       | Shift down. Converts all characters that follow to lowercase.                                                                                                                           |
-|      `>`       | Shift up. Converts all characters that follow to uppercase.                                                                                                                             |
-|      `\|`      | Disable a previous shift up or shift down.                                                                                                                                              |
-|      `\`       | Escape. Escapes a mask character, turning it into a literal.                                                                                                                            |
+| 掩码字符      | 描述                                                                                                                                                 |
+|:-------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `0`           | 数字，必填。此元素将接受 0 到 9 之间的任何单个数字。                                                                                                 |
+| `9`           | 数字或空格，可选。                                                                                                                                   |
+| `#`           | 数字或空格，可选。如果此位置在掩码中为空，则在 Text 属性中将其呈现为空格。允许加号 (+) 和减号 (-)。                                                |
+| `L`           | 字母，必填。限制输入为 ASCII 字母 a-z 和 A-Z。                                                                                                       |
+| `?`           | 字母，可选。限制输入为 ASCII 字母 a-z 和 A-Z。                                                                                                       |
+| `&`           | 字符，必填。如果 AsciiOnly 属性为 true，则此元素的行为类似于 "L" 元素。                                                                              |
+| `C`           | 字符，可选。任何非控制字符。如果 AsciiOnly 属性设置为 true，则此元素的行为类似于 "?" 元素。                                                          |
+| `A`           | 字母数字，必填。如果 AsciiOnly 属性为 true，则它只接受 ASCII 字母 a-z 和 A-Z。此掩码元素的行为类似于 "a" 元素。                                      |
+| `a`           | 字母数字，可选。如果 AsciiOnly 属性设置为 true，则它只接受 ASCII 字母 a-z 和 A-Z。此掩码元素的行为类似于 "A" 元素。                                  |
+| `.`           | 小数点占位符。实际显示的字符将是适合格式提供者的十进制符号，由控件的 FormatProvider 属性确定。                                                       |
+| `,`           | 千位分隔符。实际显示的字符将是适合格式提供者的千位分隔符，由控件的 FormatProvider 属性确定。                                                         |
+| `:`           | 时间分隔符。实际显示的字符将是适合格式提供者的时间符号，由控件的 FormatProvider 属性确定。                                                           |
+| `/`           | 日期分隔符。实际显示的字符将是适合格式提供者的日期符号，由控件的 FormatProvider 属性确定。                                                           |
+| `$`           | 货币符号。实际显示的字符将是适合格式提供者的货币符号，由控件的 FormatProvider 属性确定。                                                             |
+| `<`           | 向下转换。将后续所有字符转换为小写。                                                                                                                 |
+| `>`           | 向上转换。将后续所有字符转换为大写。                                                                                                                 |
+| `\|`          | 禁用之前的向上或向下转换。                                                                                                                           |
+| `\`           | 转义。转义一个掩码字符，将其变为文字字符。                                                                                                           |
 
-The escape character (backslash) can be used to include a special character as a literal. For example, to include the dollar sign:
+转义字符（反斜杠）可用于将特殊字符包含为文字。例如，要包含美元符号：
 
 `Mask="\$999,000.00"`
 
 ## 示例
 
-This is a basic example:
+这是一个基本示例：
 
 ```xml
 <StackPanel Margin="20">
-    <TextBlock Margin="0 5">International phone number:</TextBlock>
+    <TextBlock Margin="0 5">国际电话号码：</TextBlock>
     <MaskedTextBox Mask="(+09) 000 000 0000" />
-    <TextBlock Margin="0 15 0 5">UK VAT number:</TextBlock>
+    <TextBlock Margin="0 15 0 5">英国增值税号：</TextBlock>
     <MaskedTextBox Mask="GB 000 000 000" />
 </StackPanel>
 ```
@@ -68,9 +68,9 @@ This is a basic example:
 ## 更多信息
 
 :::info
-For the complete API documentation about this control, see here.
+有关此控件的完整 API 文档，请参见此处。
 :::
 
 :::info
-View the source code on _GitHub_ [`MaskedTextBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/MaskedTextBox.cs)
+在 _GitHub_ 上查看源代码 [`MaskedTextBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/MaskedTextBox.cs)
 :::
