@@ -66,7 +66,7 @@ Your music store window code-behind should now look like this.
 
 ```csharp
 using Avalonia.ReactiveUI;
-using AvaloniaApplication11.ViewModels;
+using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System;
 
