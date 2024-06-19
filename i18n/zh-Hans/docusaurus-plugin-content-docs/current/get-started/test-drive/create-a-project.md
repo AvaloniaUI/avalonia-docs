@@ -23,14 +23,14 @@ dotnet new install Avalonia.Templates
 
 ## 创建项目
 
-首先，我们将使用最简单的Avalonia模板：`Avalonia Application`（或是CLI中的`avalonia.app`）。
+首先，我们将使用Avalonia MVVM模板：`Avalonia MVVM Application`（或是CLI中的`avalonia.mvvm`）。
 
 <Tabs>
   <TabItem value="cli" label="命令行" default>
 运行以下命令：
 
 ```bash
-dotnet new avalonia.app -o GetStartedApp
+dotnet new avalonia.mvvm -o GetStartedApp
 ```
 
 这将创建一个名为`GetStartedApp`的新文件夹，其中包含新的项目。

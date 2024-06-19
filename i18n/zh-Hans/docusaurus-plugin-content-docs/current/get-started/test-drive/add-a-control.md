@@ -14,7 +14,7 @@ import ButtonIntellisenseScreenshot from '/img/get-started/test-drive/button-int
 Avalonia包含一个内置控件，用于创建按钮。按照以下步骤，将当前在窗口的内容区域中的文本字符串替换为按钮控件。
 
 - 如果应用程序正在运行，请停止它。
-- 在 `MainView.axaml` 文件中找到
+- 在 `MainWindow.axaml` 文件中找到
   `<TextBlock Text="text" HorizontalAlignment="Center" VerticalAlignment="Center"/>`。
 - 删除整行。
 - 插入一个`Button`标签，如下所示：
