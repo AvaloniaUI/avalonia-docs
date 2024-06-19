@@ -4,26 +4,26 @@ description: REFERENCE - Built-in Controls
 
 import StackPanelVerticalRectanglesScreenshot from '/img/reference/controls/stackpanel/stackpanel-vertical-rectangles.png';
 
-# Stack Panel
+# StackPanel 堆栈面板
 
-The stack panel arranges its child controls by stacking them horizontally or vertically. The stack panel is often used to arrange a small subsection of the UI on a page.
+堆栈面板通过水平或垂直堆叠其子控件来排列它们。堆栈面板通常用于在页面上排列UI的一个小部分。
 
-Inside a stack panel, if the size property perpendicular to the stack on a child control is not set, the child control will stretch to fill the available space. For example in horizontal orientation, the height of child controls will stretch if not set.
+在堆栈面板内部，如果子控件在垂直于堆栈的方向上没有设置大小属性，那么子控件将扩展以填充可用空间。例如，在水平方向上，如果未设置，子控件的高度将会扩展。
 
-In the direction of the stack, the stack panel will always expand to fit all the child controls.
+在堆栈的方向上，堆栈面板将总是扩展以适应所有子控件。
 
 ## 常用属性
 
 你可能最常使用这些属性：
 
-| Property      | Description                                                                    |
+| 属性          | 描述                                                                          |
 | ------------- | ------------------------------------------------------------------------------ |
-| `Orientation` | Sets the direction of the stack. Choose from horizontal or vertical (default). |
-| `Spacing`     | Creates an even spacing between the child controls.                            |
+| `Orientation` | 设置堆栈的方向。可选择水平或垂直（默认）。                                       |
+| `Spacing`     | 在子控件之间创建均匀间距。                                                      |
 
 ## 示例
 
-The following XAML shows how to create a vertical stack panel.
+以下XAML展示了如何创建一个垂直的堆栈面板。
 
 ```xml
 <StackPanel Width="200">
@@ -34,16 +34,16 @@ The following XAML shows how to create a vertical stack panel.
 </StackPanel>
 ```
 
-The result shows the child controls stretched to fit the width, and the overall height of the stack panel equal to the sum of the child control heights.
+结果显示子控件被拉伸以适应宽度，而堆栈面板的总高度等于子控件高度的总和。
 
 <img src={StackPanelVerticalRectanglesScreenshot} alt="" />
 
 ## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/StackPanel/).
+有关此控件的完整API文档，请参见[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/StackPanel/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`StackPanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/StackPanel.cs)
+在_GitHub_上查看源代码 [`StackPanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/StackPanel.cs)
 :::
