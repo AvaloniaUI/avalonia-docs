@@ -24,7 +24,7 @@ private void RefreshContainerPage_RefreshRequested(object? sender, RefreshReques
     // 获取一个延期对象。
     var deferral = e.GetDeferral();
 
-    // 刷新列表框项目
+    // 刷新列表
 
     // 通知刷新容器刷新完成。
     deferral.Complete();

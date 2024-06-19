@@ -19,7 +19,7 @@ import AutoCompleteBoxScreenshot from '/img/reference/controls/autocompletebox/a
 <tr><th width="233">属性</th><th>描述</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Items</code></td><td>要匹配的项目列表。</td></tr>
+<tr><td><code>Items</code></td><td>要匹配的元素列表。</td></tr>
 <tr><td><code>FilterMode</code></td><td>匹配方式的选项。请参见下表。</td></tr>
 <tr><td><code>AsyncPopulator</code></td><td>一个异步函数，可以根据给定的（字符串）条件提供匹配列表。</td></tr>
 </tbody>
@@ -32,18 +32,18 @@ import AutoCompleteBoxScreenshot from '/img/reference/controls/autocompletebox/a
 <tr><th width="350">筛选模式</th><th>描述</th></tr>
 </thead>
 <tbody>
-<tr><td><code>StartsWith</code></td><td>一种文化敏感的、不区分大小写的筛选器，返回的项目以指定的文本开头。</td></tr>
-<tr><td><code>StartsWithCaseSensitive</code></td><td>一种文化敏感的、区分大小写的筛选器，返回的项目以指定的文本开头。</td></tr>
-<tr><td><code>StartsWithOrdinal</code></td><td>一种基于序数的、不区分大小写的筛选器，返回的项目以指定的文本开头。</td></tr>
-<tr><td><code>StartsWithOrdinalCaseSensitive</code></td><td>一种基于序数的、区分大小写的筛选器，返回的项目以指定的文本开头。</td></tr>
-<tr><td><code>Contains</code></td><td>一种文化敏感的、不区分大小写的筛选器，返回的项目包含指定的文本。</td></tr>
-<tr><td><code>ContainsCaseSensitive</code></td><td>一种文化敏感的、区分大小写的筛选器，返回的项目包含指定的文本。</td></tr>
-<tr><td><code>ContainsOrdinal</code></td><td>一种基于序数的、不区分大小写的筛选器，返回的项目包含指定的文本。</td></tr>
-<tr><td><code>ContainsOrdinalCaseSensitive</code></td><td>一种基于序数的、区分大小写的筛选器，返回的项目包含指定的文本。</td></tr>
-<tr><td><code>Equals</code></td><td>一种文化敏感的、不区分大小写的筛选器，返回的项目等于指定的文本。</td></tr>
-<tr><td><code>EqualsCaseSensitive</code></td><td>一种文化敏感的、区分大小写的筛选器，返回的项目等于指定的文本。</td></tr>
-<tr><td><code>EqualsOrdinal</code></td><td>一种基于序数的、不区分大小写的筛选器，返回的项目等于指定的文本。</td></tr>
-<tr><td><code>EqualsOrdinalCaseSensitive</code></td><td>一种基于序数的、区分大小写的筛选器，返回的项目等于指定的文本。</td></tr>
+<tr><td><code>StartsWith</code></td><td>一种文化敏感的、不区分大小写的筛选器，返回的元素以指定的文本开头。</td></tr>
+<tr><td><code>StartsWithCaseSensitive</code></td><td>一种文化敏感的、区分大小写的筛选器，返回的元素以指定的文本开头。</td></tr>
+<tr><td><code>StartsWithOrdinal</code></td><td>一种基于序数的、不区分大小写的筛选器，返回的元素以指定的文本开头。</td></tr>
+<tr><td><code>StartsWithOrdinalCaseSensitive</code></td><td>一种基于序数的、区分大小写的筛选器，返回的元素以指定的文本开头。</td></tr>
+<tr><td><code>Contains</code></td><td>一种文化敏感的、不区分大小写的筛选器，返回的元素包含指定的文本。</td></tr>
+<tr><td><code>ContainsCaseSensitive</code></td><td>一种文化敏感的、区分大小写的筛选器，返回的元素包含指定的文本。</td></tr>
+<tr><td><code>ContainsOrdinal</code></td><td>一种基于序数的、不区分大小写的筛选器，返回的元素包含指定的文本。</td></tr>
+<tr><td><code>ContainsOrdinalCaseSensitive</code></td><td>一种基于序数的、区分大小写的筛选器，返回的元素包含指定的文本。</td></tr>
+<tr><td><code>Equals</code></td><td>一种文化敏感的、不区分大小写的筛选器，返回的元素等于指定的文本。</td></tr>
+<tr><td><code>EqualsCaseSensitive</code></td><td>一种文化敏感的、区分大小写的筛选器，返回的元素等于指定的文本。</td></tr>
+<tr><td><code>EqualsOrdinal</code></td><td>一种基于序数的、不区分大小写的筛选器，返回的元素等于指定的文本。</td></tr>
+<tr><td><code>EqualsOrdinalCaseSensitive</code></td><td>一种基于序数的、区分大小写的筛选器，返回的元素等于指定的文本。</td></tr>
 </tbody>
 </table>
 

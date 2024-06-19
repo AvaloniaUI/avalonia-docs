@@ -17,11 +17,11 @@ import ItemsRepeaterHorizontalScreenshot from '/img/reference/controls/itemsrepe
 元素重复器已移至[这里](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater)。
 :::
 
-默认的布局模板是垂直堆叠布局，因此项目会以垂直列表的形式显示。
+默认的布局模板是垂直堆叠布局，因此元素会以垂直列表的形式显示。
 
 ## 示例
 
-此示例将一个可观察的餐具项集合绑定到元素重复器控件，其中每个项目的自定义布局和格式由数据模板提供：
+此示例将一个可观察的餐具项集合绑定到元素重复器控件，其中每个元素的自定义布局和格式由数据模板提供：
 
 ```xml
 <StackPanel Margin="20">
@@ -89,7 +89,7 @@ public class Crockery
 
 <img src={ItemsRepeaterVerticalScreenshot} alt="" />
 
-默认情况下，元素重复器将以垂直堆叠布局渲染项目。你可以通过使用 `<ItemsRepeater.Layout>` 元素覆盖此设置，使项目水平显示。例如：
+默认情况下，元素重复器将以垂直堆叠布局渲染元素。你可以通过使用 `<ItemsRepeater.Layout>` 元素覆盖此设置，使元素水平显示。例如：
 
 ```xml
 <StackPanel Margin="20">
@@ -119,7 +119,7 @@ public class Crockery
 </StackPanel>
 ```
 
-项目水平显示，如果没有添加围绕元素重复器的滚动查看器元素，那么过于靠右的项目将会被隐藏。
+元素水平显示，如果没有添加围绕元素重复器的滚动查看器元素，那么过于靠右的元素将会被隐藏。
 
 <img src={ItemsRepeaterHorizontalScreenshot} alt="" />
 
