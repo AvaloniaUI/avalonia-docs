@@ -17,7 +17,7 @@ title: Примеры и Руководства
 * `Observable` и его методы: `Merge()`, `Select()`, `Take()` и `Subscribe()`.
 
 Это хорошая база для освоения MVVM и _ReactiveUI_, рекомендуемая для работы с _Avalonia UI_.
-Ознакомиться с руководством можно [здесь](./todo-list-app/).
+Ознакомиться с руководством можно [здесь](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList).
 
 ## Приложение: *"Music Store"*
 

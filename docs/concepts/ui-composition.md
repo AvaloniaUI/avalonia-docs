@@ -69,7 +69,7 @@ Another use for a user control is as a component control (above, right). You mig
 ## Tutorial
 
 :::info
-In the 'To Do List App' tutorial you will learn about how to add user controls as page views; and how to use a repeating layout control to present a collection of items with data templates. Try the tutorial [here](../tutorials/todo-list-app/).  
+For tutorials about `DataTemplates` see [Avalonia.Samples](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main?tab=readme-ov-file#%EF%B8%8F-datatemplate-samples).  
 :::
 
 ## Collection Controls

@@ -7,7 +7,7 @@ The `Control.DataContext` property describes where controls will look by default
 
 When using the MVVM pattern, the data context will usually be an instance of a view model.
 
-If you created your application with the [Avalonia MVVM Application](../tutorials/todo-list-app/creating-a-new-project#net-core-cli) template then you will see something like this in your `Program.cs` file:
+If you created your application with the Avalonia MVVM Application template then you will see something like this in your `Program.cs` file:
 
 ```csharp
 private static void AppMain(Application app, string[] args)

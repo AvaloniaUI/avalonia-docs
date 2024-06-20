@@ -357,10 +357,6 @@ const redirects = [
         "to": "/docs/guides/platforms/how-to-use-web-assembly"
     },
     {
-        "from": "/docs/tutorials/todo-list-app/creating-a-model-and-viewmodel",
-        "to": "/docs/tutorials/todo-list-app/creating-a-model"
-    },
-    {
         "from": "/docs/tutorials/developing-for-mobile/create-a-cross-platform-solution",
         "to": "/docs/guides/building-cross-platform-applications/solution-setup"
     }
