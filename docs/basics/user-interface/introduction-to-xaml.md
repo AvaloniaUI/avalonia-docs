@@ -138,7 +138,7 @@ There are two valid syntax options for the definition part of a XAML namespace a
 
 ### **Using Prefix**
 
-The prefix `using:` can use be used when providing an alias for a namespace in either the current assembly or a referenced assembly. The syntax is the same in both cases.  For example:
+The prefix `using:` can be used when providing an alias for a namespace in either the current assembly or a referenced assembly. The syntax is the same in both cases.  For example:
 
 ```xml
 xmlns:myAlias1="using:AppNameSpace.MyNamespace"
