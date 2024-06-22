@@ -21,16 +21,16 @@ import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane
 
 <img src={LayoutZonesDiagram} alt="" />
 
-在当前应用程序中，窗口的内容区域引用另一个视图：**<views:MainView />**。这是对 **MainView.axaml** 文件的引用，它是一个将显示在窗口的内容区域的用户控件。
 
-## MainView 用户控件
 
-在此用户控件中，您将看到一个 `<TextBlock>...</TextBlock>` XAML 标记。这代表一个文本块控件。文本块的 `Text` 属性绑定到 **MainViewModel** 类的 **Greeting** 属性。这是在视图模型类的构造函数中设置的属性。
+## MainWindow 用户控件
+
+在这个**MainWindow.axaml**文件当中，您将看到一个 `<TextBlock>...</TextBlock>` XAML 标记。这代表一个文本块控件。文本块的 `Text` 属性绑定到 **MainWindowViewModel** 类的 **Greeting** 属性。这是在视图模型类的构造函数中设置的属性。
 ```
 <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
 
-您可以更改文件 **MainViewModel.cs** 中的文本，以查看界面上的更改。
+您可以更改文件 **MainWindowViewModel.cs** 中的文本，以查看界面上的更改。
 
 <img className="center" src={ViewModelScreenshot} alt="" />
 <img className="center" src={AppRunningScreenshot} alt="" />
@@ -42,7 +42,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane
 ## Visual Studio 设计器
 
 如果您使用的是 Visual Studio，则应该看到 XAML 代码和预览窗格。
-切换到 **MainView.axaml** 文件，并单击编辑窗口顶部的 **Split View** 按钮。
+切换到 **MainWindow.axaml** 文件，并单击编辑窗口顶部的 **Split View** 按钮。
 
 <img className="center" src={VsPreviewerScreenshot} alt="" />
 
