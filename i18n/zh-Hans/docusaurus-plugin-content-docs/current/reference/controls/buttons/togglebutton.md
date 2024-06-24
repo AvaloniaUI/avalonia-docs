@@ -4,13 +4,13 @@ description: REFERENCE - Built-in Controls
 
 import ToggleButtonMuteScreenshot from '/img/reference/controls/buttons/togglebutton-mute.gif';
 
-# 切换按钮
+# ToggleButton 切换按钮
 
 切换按钮可以通过使用样式和伪类来呈现布尔值，这些样式和伪类可以存在（true）或不存在（false）。
 
 这允许在每个伪类状态中对控件进行广泛的可能的图形呈现。
 
-## 示例
+## 更多信息
 
 此示例显示了一个切换按钮，其中包含一个扬声器图标或静音扬声器图标，具体取决于按钮是否具有已检查的伪类。
 

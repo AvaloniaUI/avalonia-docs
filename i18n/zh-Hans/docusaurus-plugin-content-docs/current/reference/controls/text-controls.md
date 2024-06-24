@@ -2,14 +2,14 @@
 description: REFERENCE
 ---
 
-# Text Controls
+# 文本控件
 
-These controls are for displaying and editing text:
+这些控件用于显示和编辑文本：
 
-| Control | Description |
+| 控件 | 描述 |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [Auto Complete Box](autocompletebox) | A control that shows a text box for user input and a drop-down that contains possible matches based on what has been typed. |
-| [Text Block](detailed-reference/textblock) | A control that displays a block of text. Read-only. |
-| [Selectable Text Block](detailed-reference/selectable-textblock) | A control that displays a block of text and can be selected with a pointer. Read-only. |
-| [Text Box](detailed-reference/textbox) | Used to display or edit text without formatting restrictions. |
-| [Masked Text Box](maskedtextbox) | Used to display text in the format contained in a mask; or used to edit text using the format mask to prevent invalid user input. |
+| [自动补全输入框](autocompletebox) | 一个控件，显示一个文本框供用户输入，并且基于已输入的内容显示一个包含可能匹配项的下拉列表。 |
+| [文本块](detailed-reference/textblock) | 一个用于显示文本块的控件。只读。 |
+| [可选择文本块](detailed-reference/selectable-textblock) | 一个控件，显示一个文本块，并且可以用指针选择。只读。 |
+| [文本框](detailed-reference/textbox) | 用于显示或编辑无格式限制的文本。 |
+| [掩码文本框](maskedtextbox) | 用于按照掩码中包含的格式显示文本；或用于使用格式掩码编辑文本以防止无效的用户输入。 |

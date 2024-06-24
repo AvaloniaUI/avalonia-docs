@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Controls
 
 import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.gif';
 
-# 按钮
+# Button 按钮
 
 按钮是一种对指针动作做出反应的控件（也有一些键盘等效操作）。当指针按下时，它会呈现出被按下的状态。
 
@@ -35,7 +35,7 @@ import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.
 | `ClickMode`  | 描述按钮如何对点击做出反应。                          |
 | `Command`    | 点击按钮时要调用的`ICommand`实例。                     |
 
-## 示例
+## 更多信息
 
 以下示例展示了一个简单的按钮和一个C#代码后台的点击事件处理程序。
 

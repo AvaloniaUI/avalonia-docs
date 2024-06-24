@@ -5,47 +5,47 @@ description: REFERENCE - Built-in Controls
 import ItemsRepeaterVerticalScreenshot from '/img/reference/controls/itemsrepeater/itemsrepeater-vertical.png';
 import ItemsRepeaterHorizontalScreenshot from '/img/reference/controls/itemsrepeater/itemsrepeater-horizontal.gif';
 
-# Items Repeater
+# ItemsRepeater 元素重复器
 
-The items repeater can display repeating data from a bound data source. It has both a layout template and a data template.
+元素重复器可以从绑定的数据源显示重复数据。它具有布局模板和数据模板。
 
 :::info
-The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [here](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater).
+元素重复器是 UWP `ItemsRepeater` 控件的移植版本。更多信息请参见[这里](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater)。
 :::
 
 :::info
-The items repeater was moved [here](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater)
+元素重复器已移至[这里](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater)。
 :::
 
-The default layout template is a vertical stack layout, so that items appear in a vertical list.
+默认的布局模板是垂直堆叠布局，因此元素会以垂直列表的形式显示。
 
-## Example
+## 示例
 
-This example binds an observable collection of crockery items to an items repeater control, where some custom layout and formatting for each item is provided by the data template:
+此示例将一个可观察的餐具项集合绑定到元素重复器控件，其中每个元素的自定义布局和格式由数据模板提供：
 
 ```xml
 <StackPanel Margin="20">
-  <TextBlock Margin="0 5">List of crockery:</TextBlock>
-  <ItemsRepeater  ItemsSource="{Binding CrockeryList}" >
+  <TextBlock Margin="0 5">餐具列表：</TextBlock>
+  <ItemsRepeater ItemsSource="{Binding CrockeryList}">
     <ItemsRepeater.ItemTemplate>
-    <DataTemplate>
-      <Border Margin="0,10,0,0"
-          CornerRadius="5"
-          BorderBrush="Blue" BorderThickness="1"
-          Padding="5">
-        <StackPanel Orientation="Horizontal">
-          <TextBlock Text="{Binding Title}"/>
-          <TextBlock Margin="5 0" FontWeight="Bold" 
-                      Text="{Binding Number}"/>
-        </StackPanel>
-      </Border>
-    </DataTemplate>
+      <DataTemplate>
+        <Border Margin="0,10,0,0"
+            CornerRadius="5"
+            BorderBrush="Blue" BorderThickness="1"
+            Padding="5">
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Title}"/>
+            <TextBlock Margin="5 0" FontWeight="Bold" 
+                        Text="{Binding Number}"/>
+          </StackPanel>
+        </Border>
+      </DataTemplate>
     </ItemsRepeater.ItemTemplate>
-    </ItemsRepeater>
+  </ItemsRepeater>
 </StackPanel>
 ```
 
-```csharp title='C# View Model'
+```csharp title='C# ViewModel'
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -60,24 +60,24 @@ namespace AvaloniaControls.ViewModels
         {
             CrockeryList = new ObservableCollection<Crockery>(new List<Crockery>
             {
-                new Crockery("dinner plate", 12),
-                new Crockery("side plate", 12),
-                new Crockery("breakfast bowl", 6),
-                new Crockery("cup", 10),
-                new Crockery("saucer", 10),
-                new Crockery("mug", 6),
-                new Crockery("milk jug", 1)
+                new Crockery("晚餐盘", 12),
+                new Crockery("小盘", 12),
+                new Crockery("早餐碗", 6),
+                new Crockery("杯子", 10),
+                new Crockery("茶托", 10),
+                new Crockery("马克杯", 6),
+                new Crockery("牛奶壶", 1)
             });    
         }
     }
 }
 ```
 
-```csharp title='C# Item Class'
+```csharp title='C# 数据源的类定义'
 public class Crockery
 {
     public string Title { get; set; }
-    public int Number{ get; set; }
+    public int Number { get; set; }
 
     public Crockery(string title, int number)
     {
@@ -89,11 +89,11 @@ public class Crockery
 
 <img src={ItemsRepeaterVerticalScreenshot} alt="" />
 
-By default, an items repeater will render the items in a vertical stack layout. You can display the items horizontally by overriding this using a `<ItemsRepeater.Layout>` element, which must contain a stack layout. For example:
+默认情况下，元素重复器将以垂直堆叠布局渲染元素。你可以通过使用 `<ItemsRepeater.Layout>` 元素覆盖此设置，使元素水平显示。例如：
 
 ```xml
 <StackPanel Margin="20">
-  <TextBlock Margin="0 5">List of crockery:</TextBlock>
+  <TextBlock Margin="0 5">餐具列表：</TextBlock>
   <ScrollViewer HorizontalScrollBarVisibility="Auto">
     <ItemsRepeater ItemsSource="{Binding CrockeryList}" Margin="0 20">
       <ItemsRepeater.Layout>
@@ -119,16 +119,16 @@ By default, an items repeater will render the items in a vertical stack layout. 
 </StackPanel>
 ```
 
-The items display horizontally, and those too far to the right would be hidden if it were not for the scroll viewer element added around the items repeater.   
+元素水平显示，如果没有添加围绕元素重复器的滚动查看器元素，那么过于靠右的元素将会被隐藏。
 
 <img src={ItemsRepeaterHorizontalScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsRepeater/).
+有关此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsRepeater/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`ItemsRepeater.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)
+在 _GitHub_ 上查看源代码 [`ItemsRepeater.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)
 :::

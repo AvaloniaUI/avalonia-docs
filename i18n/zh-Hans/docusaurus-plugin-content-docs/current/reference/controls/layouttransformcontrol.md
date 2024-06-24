@@ -2,26 +2,26 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Layout Transform Control
+# LayoutTransformControl 布局变换控件
 
-The layout transform control can dynamically transform a UI layout completely within a view.
+布局变换控件可以在视图内完全动态地变换用户界面布局。
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-| Property | Description |
-| -------- | ----------- |
-|          |             |
-|          |             |
-|          |             |
+| 属性 | 描述 |
+| ---- | ---- |
+|      |      |
+|      |      |
+|      |      |
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/LayoutTransformControl/).
+要查看此控件的完整 API 文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/LayoutTransformControl/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`LayoutTransformControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/LayoutTransformControl.cs)
+在 _GitHub_ 上查看源代码 [`LayoutTransformControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/LayoutTransformControl.cs)
 :::

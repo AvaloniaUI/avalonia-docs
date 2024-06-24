@@ -5,27 +5,27 @@ description: REFERENCE - Built-in Controls
 import SliderScreenshot from '/img/reference/controls/slider/slider.gif';
 import SliderMaxValueScreenshot from '/img/reference/controls/slider/slider-max-value.gif';
 
-# Slider
+# Slider 滑块
 
-The slider control presents its numerical value as the relative position of a slider button along the length of a track. The position is relative to maximum and minimum values.
+滑块控件通过沿轨道长度移动滑块按钮的相对位置来展示其数值。位置是相对于最大值和最小值而定的。
 
-Drag interaction on the slider button can alter the value between the maximum and minimum values. Keyboard and click interactions can also nudge the value.
+在滑块按钮上进行拖动交互可以改变值，使其在最大值和最小值之间变动。键盘和点击交互也可以微调数值。
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-<table><thead><tr><th width="197">Property</th><th>Description</th></tr></thead><tbody><tr><td>Maximum</td><td>Sets the maximum value.</td></tr><tr><td>Minimum</td><td>Sets the minimum value.</td></tr></tbody></table>
+<table><thead><tr><th width="197">属性</th><th>描述</th></tr></thead><tbody><tr><td>Maximum</td><td>设置最大值。</td></tr><tr><td>Minimum</td><td>设置最小值。</td></tr></tbody></table>
 
-## Example
+## 示例
 
-In this example the slider value is displayed in the text block below, using binding to a control.
+在此示例中，滑块的值将显示在下方的文本块中，通过绑定到一个控件实现。
 
 :::info
-To review how to bind one control to another, see the guide [here](../../guides/data-binding/binding-to-controls.md).
+要了解如何将一个控件绑定到另一个控件，请参阅[这里](../../guides/data-binding/binding-to-controls.md)的指南。
 :::
 
-Here the maximum and minimum values are default (0 and 100 respectively).
+这里的最大值和最小值是默认的（分别为0和100）。
 
 ```xml
 <StackPanel Margin="20">
@@ -35,12 +35,12 @@ Here the maximum and minimum values are default (0 and 100 respectively).
 </StackPanel>
 ```
 
-The slider looks like this on Windows:
+在Windows上，滑块看起来是这样的：
 
 <img src={SliderScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Slider/).
+要获取关于此控件的完整API文档，请查看[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Slider/)。
 
-View the source code on _GitHub_ [`Slider.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Slider.cs)
+在_GitHub_上查看源代码 [`Slider.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Slider.cs)

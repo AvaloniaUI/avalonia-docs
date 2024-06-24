@@ -5,39 +5,39 @@ description: REFERENCE - Built-in Controls
 import CanvasContentZoneScreenshot from '/img/reference/controls/canvas/canvas-contentzone.png';
 import CanvasChildOverlapScreenshot from '/img/reference/controls/canvas/canvas-child-overlap.png';
 
-# Canvas
+# Canvas 画布控件
 
-The canvas control displays its child controls at specified positions (given as coordinates).
+画布控件在指定的位置（以坐标形式给出）显示其子控件。
 
-The position of each child control is defined as two distances between edge the canvas content zone, and the outer edge of the child margin zone. For example, this might be the top-left corner of the child to the top-left of canvas, as shown here:
+每个子控件的位置定义为画布内容区域的边缘与子控件边距区域的外边缘之间的两个距离。例如，这可能是子控件的左上角到画布的左上角，如下图所示：
 
 <img src={CanvasContentZoneScreenshot} alt="" />
 
 :::info
-To review the concept of layout zones, see [here](../../concepts/layout/layout-zones).
+要回顾布局区域的概念，请参阅[这里](../../concepts/layout/layout-zones)。
 :::
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能会经常使用这些属性：
 
-<table><thead><tr><th width="205">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Canvas.Left</code></td><td>Attached to a child control - gives the distance between the inner left edge of the canvas content zone to the outer left edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Top</code></td><td>Attached to a child control - gives the distance between the inner top edge of the canvas content zone to the outer top edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Right</code></td><td>Attached to a child control - gives the distance between the inner right edge of the canvas content zone to the outer right edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Bottom</code></td><td>Attached to a child control - gives the distance between the inner bottom edge of the canvas content zone to the outer bottom edge of the child (margin zone).</td></tr><tr><td><code>Canvas.ZIndex</code></td><td>Attached to a child control - this can override the default drawing sequence (see below).</td></tr></tbody></table>
+<table><thead><tr><th width="205">属性</th><th>描述</th></tr></thead><tbody><tr><td><code>Canvas.Left</code></td><td>附加到子控件 - 表示从画布内容区域的内左边缘到子控件（边距区域）的外左边缘的距离。</td></tr><tr><td><code>Canvas.Top</code></td><td>附加到子控件 - 表示从画布内容区域的内上边缘到子控件（边距区域）的外上边缘的距离。</td></tr><tr><td><code>Canvas.Right</code></td><td>附加到子控件 - 表示从画布内容区域的内右边缘到子控件（边距区域）的外右边缘的距离。</td></tr><tr><td><code>Canvas.Bottom</code></td><td>附加到子控件 - 表示从画布内容区域的内下边缘到子控件（边距区域）的外下边缘的距离。</td></tr><tr><td><code>Canvas.ZIndex</code></td><td>附加到子控件 - 这可以覆盖默认的绘制顺序（见下文）。</td></tr></tbody></table>
 
-Child controls in a canvas are drawn in the sequence that the are defined. This can cause them to overlap.
+画布中的子控件按照定义的顺序绘制。这可能导致它们重叠。
 
 :::warning
-The canvas does not size any of its child controls. You must set width and height properties on a child control, or it will not appear!
+画布不会调整其子控件的大小。你必须在子控件上设置宽度和高度属性，否则它们将不会显示！
 :::
 
 ## Z-index
 
-By default each child has a z-index of zero. However, the canvas supports the `Canvas.ZIndex` attached property that you can set any of the child controls. This will override the drawing sequence (highest number is drawn last) and may therefore change how the child controls overlap.
+默认情况下，每个子控件的 z-index 为零。然而，画布支持你可以设置的 `Canvas.ZIndex` 附加属性。这将覆盖绘制顺序（数字最大的最后绘制），因此可能会改变子控件的重叠方式。
 
-## Opacity
+## 透明度
 
-However you define the drawing sequence, the opacity of child controls is respected. This means that where child controls elements overlap, the contents shown in overlap areas might be blended where the top control has an opacity value less than one.
+无论你如何定义绘制顺序，子控件的透明度都会进行渲染。这意味着，当子控件元素重叠时，重叠区域中显示的内容可能会混合，尤其是当顶层控件的透明度值小于一时。
 
-## Example
+## 示例
 
 ```xml
 <Canvas Background="AliceBlue" Margin="20">
@@ -51,20 +51,20 @@ However you define the drawing sequence, the opacity of child controls is respec
 </Canvas>
 ```
 
-The result looks like this:
+结果看起来是这样的：
 
 <img src={CanvasChildOverlapScreenshot} alt="" />
 
 :::info
-Use the canvas panel with discretion. While it may be convenient to position child controls like this, your UI will no longer be adaptive to changes in the app window size.
+谨慎使用画布面板。虽然它可以方便地定位子控件，但你的用户界面将不再适应应用窗口大小的变化。
 :::
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Canvas/).
+有关此控件的完整 API 文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Canvas/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`Canvas.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)
+在 _GitHub_ 上查看源代码 [`Canvas.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)
 :::

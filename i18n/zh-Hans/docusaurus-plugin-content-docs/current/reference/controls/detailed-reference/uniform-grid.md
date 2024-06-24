@@ -10,13 +10,13 @@ The uniform grid divides the available space evenly in both directions, into cel
 
 You can then allocate child controls to the cells created, using attached row and column index properties (zero-based).
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Rows</code></td><td>Integer. Sets the number of equal rows in the height.</td></tr><tr><td><code>Columns</code></td><td>Integer. Sets the number of equal columns in the width</td></tr><tr><td><code>Grid.Column</code></td><td>Attached to a child control to set its column index.</td></tr><tr><td><code>Grid.Row</code></td><td>Attached to a child control to set its row index.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 ```xml
 <UniformGrid Rows="1" Columns="3" Width="300" Height="200">
@@ -28,7 +28,7 @@ You will probably use these properties most often:
 
 <img src={UniformGridFrenchFlagScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/UniformGrid/).

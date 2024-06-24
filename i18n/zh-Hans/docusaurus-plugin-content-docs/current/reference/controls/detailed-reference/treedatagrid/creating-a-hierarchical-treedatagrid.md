@@ -6,7 +6,7 @@ import HierarchicalTreeDataGridSourceScreenshot from '/img/reference/controls/de
 
 # Hierarchical Tree Data Grid
 
-## Example
+## 示例
 
 In this example the view model contains an observable collection that is filled with data and then used to create a `HierarchicalTreeDataGridSource` property to bind on to the source of the tree data grid. The items of the grid are class `Person`.
 

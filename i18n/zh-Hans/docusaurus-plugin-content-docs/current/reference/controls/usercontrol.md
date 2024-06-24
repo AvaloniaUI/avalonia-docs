@@ -1,22 +1,22 @@
 ---
 id: usercontrol
-title: UserControl
+title: UserControl 用户控件
 ---
 
-[`UserControl`](http://reference.avaloniaui.net/api/Avalonia.Controls/UserControl/) control is a [ContentControl](contentcontrol) that represents a reusable collection of controls in a predefined layout.
+`UserControl` 控件是一种 [ContentControl](contentcontrol)，它代表了一组在预定义布局中可重用的控件。
 
-`UserControl` actually provides very little functionality on top of `ContentControl`. The difference is that you will not usually create instances of the `UserControl` class directly; instead a new subclass of the `UserControl` class is usually created for each "view" to be shown by an application.
+实际上，`UserControl` 在 `ContentControl` 的基础上提供的功能非常有限。不同之处在于，通常不会直接创建 `UserControl` 类的实例；相反，通常会为应用程序要显示的每个“视图”创建一个 `UserControl` 类的新子类。
 
-### Common Properties
+### 常见属性
 
-| Property | Description |
+| 属性 | 描述 |
 | :--- | :--- |
-| `Content` | The content to display in the control |
+| `Content` | 控件中显示的内容 |
 
-### Reference
+### 参考资料
 
 [UserControl](http://reference.avaloniaui.net/api/Avalonia.Controls/UserControl/)
 
-### Source code
+### 源代码
 
 [UserControl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/UserControl.cs)
