@@ -448,6 +448,7 @@ const sidebars = {
             'concepts/input/focus',
             'concepts/input/gestures',
             'concepts/input/hotkeys',
+            'concepts/input/binding-key-and-mouse',
           ],
         },
         'concepts/the-main-window',
