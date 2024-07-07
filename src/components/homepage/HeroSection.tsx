@@ -19,8 +19,7 @@ export default function HeroSection() {
         </div>
         <div className="relative z-5 flex flex-col items-center justify-between py-32">
           <h2
-            className="mb-4 font-outfit font-normal text-white text-center"
-            style={{ fontSize: '4.5rem', whiteSpace: 'normal', width: 'fit-content', lineHeight: '1.2' }}
+            className="mb-4 font-outfit font-normal text-white text-center hero-title"
           >
             Avalonia <br/> Documentation
           </h2>

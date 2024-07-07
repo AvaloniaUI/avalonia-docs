@@ -1353,3 +1353,16 @@ img.center {
 .community-bg {
   background-color: var(--ifm-footer-background-color);
 }
+
+.hero-title {
+  font-size: 3.5rem;
+  white-space: 'normal';
+  width: 'fit-content';
+  line-height: '1.2';
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+      font-size: 3rem; /* Adjust the size as needed */
+  }
+}
