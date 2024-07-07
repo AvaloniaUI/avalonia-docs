@@ -24,23 +24,7 @@ export const DocsCard = ({ label, link, height = 40, width = 40, title }) => {
         "Deploying ToolJet on a subpath": "Steps to deploy ToolJet on a subpath rather than root of domain.",
         "V2 migration guide": "Things to know before migrating to ToolJet V2",
     }
-/*
-    return (
-
-        <a href={link} className="card" style={{ textDecoration: "none", color: "inherit" }}>
-            <div className="card-body">
-                <div className="card-info">
-                    <h3 style={{ margin: "0", paddingTop: "1rem" }}>{label}</h3>
-                    <p>
-                        {description[label]}
-                    </p>
-                </div>
-            </div>
-        </a>
-
-        
-    )*/
-
+    
     return (
         <Link to={link} className="homepage-card">
         <div className="card-content">

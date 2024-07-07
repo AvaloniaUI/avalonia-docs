@@ -160,6 +160,8 @@ body {
   --docs-color-background-200: #efefef;
   --docs-color-background-300: #dcdcdc;
 
+  
+
   /* Color from prism themes */
   --docs-color-code-background: #f6f8fa;
 
@@ -217,6 +219,7 @@ body {
   --ifm-breadcrumb-padding-horizontal: 0;
 
   --ifm-brand-logo-color: #0d6efd;
+  --docs-card-background: rgb(241, 244, 248);
 }
 
 
@@ -229,6 +232,7 @@ html[data-theme='dark'] {
   --ifm-color-primary: #0d6efd;
 
   --ifm-brand-logo-color: white;
+  --docs-card-background: #1b2a4e;
 
   --ifm-footer-background-color: #1c1c1c;
   --ifm-footer-brand-color: white;
@@ -918,7 +922,7 @@ img[src$='#terminal'] {
   padding: 0.75rem;
   text-decoration: none;
   color: var(--docs-color-text);
-
+  background-color: var(--docs-card-background) !important;
   --ifm-link-hover-decoration: none;
   --ifm-link-hover-color: inherit;
   cursor: pointer;
@@ -1321,6 +1325,7 @@ img.center {
 
 .navbar {
   font-family: 'Outfit';
+  height: 90px;
 }
 
 .navbar__title {
@@ -1328,6 +1333,14 @@ img.center {
 }
 
 .navbar__logo {
-  height: 1.8rem !important;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  margin-right: 1px;
+  margin-left: 8px;
   padding-bottom: 4px;
+}
+
+
+.community-bg {
+  background-color: var(--ifm-footer-background-color);
 }

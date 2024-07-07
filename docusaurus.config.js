@@ -166,7 +166,7 @@ const config = {
         }
       },
       navbar: {
-        title: 'Avalonia',
+        title: 'Avalonia UI',
         logo: {
           alt: 'Avalonia Logo',
           src: 'img/purple-border-gradient-icon.png',

@@ -27,8 +27,6 @@ export default function Home(): JSX.Element {
       
       <CTASection/>
 
-      <ResourcesSection/>
-
       <div className="z-0">
         <HelpSection className="-mb-48" />
       </div>
