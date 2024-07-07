@@ -138,8 +138,8 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          '⭐️ Make sure to sponsor Avalonia on <a target="_blank" rel="noopener noreferrer" href="https://github.com/sponsors/AvaloniaUI">GitHub</a> or sign up for <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/Support">Premium Support!</a>',
-        backgroundColor: '#22CE86',
+          'Get the help you need with our <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/Support">Enhanced Support!</a>',
+        backgroundColor: '#0d6efd',
         textColor: '#ffffff',
         isCloseable: false,
       },
@@ -166,7 +166,7 @@ const config = {
         }
       },
       navbar: {
-        title: 'Avalonia',
+        title: 'Avalonia UI',
         logo: {
           alt: 'Avalonia Logo',
           src: 'img/purple-border-gradient-icon.png',
@@ -176,10 +176,6 @@ const config = {
           {
             label: 'Documentation',
             to: '/docs/welcome'
-          },
-          {
-            label: 'API Reference',
-            to: 'https://reference.avaloniaui.net/api/',
           },
           {
               label: 'Resources',
