@@ -23,7 +23,7 @@ export default function HeroSection() {
           >
             Avalonia <br/> Documentation
           </h2>
-          <p className="max-w-xl text-center font-outfit text-xl text-white mt-5">
+          <p className="mobile-hidden max-w-xl text-center font-outfit text-xl text-white mt-5">
             Avalonia empowers developers to create cross-platform applications for Windows, macOS, Linux, iOS, Android, and web browsers using .NET with unparalleled ease. One codebase, infinite possibilities.
           </p>
           <div>

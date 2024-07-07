@@ -1361,8 +1361,17 @@ img.center {
   line-height: '1.2';
 }
 
+.mobile-hidden {
+  
+}
+
 @media (max-width: 600px) {
   .hero-title {
       font-size: 3rem; /* Adjust the size as needed */
   }
+
+  .mobile-hidden {
+    display: none;
+  }
 }
+
