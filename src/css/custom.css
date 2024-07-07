@@ -215,7 +215,10 @@ body {
 
   --ifm-breadcrumb-item-background-active: transparent;
   --ifm-breadcrumb-padding-horizontal: 0;
+
+  --ifm-brand-logo-color: #0d6efd;
 }
+
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 html[data-theme='dark'] {
@@ -225,7 +228,10 @@ html[data-theme='dark'] {
 
   --ifm-color-primary: #0d6efd;
 
+  --ifm-brand-logo-color: white;
+
   --ifm-footer-background-color: #1c1c1c;
+  --ifm-footer-brand-color: white;
 
   /* Navigation Bar */ 
   --ifm-background-surface-color: #171B2D;
@@ -1264,6 +1270,10 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   font-family: Outfit;
 }
 
+.pagination-nav__label {
+  font-weight: 400;
+}
+
 img.center {
   width: auto;
   max-width: 100%;
@@ -1307,4 +1317,17 @@ img.center {
   font-family: 'Outfit';
   font-weight: 500;
 
+}
+
+.navbar {
+  font-family: 'Outfit';
+}
+
+.navbar__title {
+  color: var(--ifm-brand-logo-color) !important;
+}
+
+.navbar__logo {
+  height: 1.8rem !important;
+  padding-bottom: 4px;
 }

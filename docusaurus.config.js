@@ -178,10 +178,6 @@ const config = {
             to: '/docs/welcome'
           },
           {
-            label: 'API Reference',
-            to: 'https://reference.avaloniaui.net/api/',
-          },
-          {
               label: 'Resources',
               type: 'dropdown',
               className: 'avalonia-dropdown resources-dropdown',
