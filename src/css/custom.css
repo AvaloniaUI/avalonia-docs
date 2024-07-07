@@ -1353,3 +1353,9 @@ img.center {
 .community-bg {
   background-color: var(--ifm-footer-background-color);
 }
+
+@media (max-width: 600px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
