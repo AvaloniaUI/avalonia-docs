@@ -98,7 +98,7 @@ export default function GuidesAndSamples() {
         <div className="mb-8 flex items-center justify-between">
           <h3 className="m-0">Popular how to guides</h3>
 
-          <Link to="/docs/guides" className="font-jakarta text-sm font-semibold">
+          <Link to="/docs/guides" className="font-outfit text-sm font-semibold">
             View more guides <ArrowRightFilled className="ml-1" />
           </Link>
         </div>
@@ -123,7 +123,7 @@ export default function GuidesAndSamples() {
 
           <Link
             to="https://github.com/AvaloniaUI/Avalonia.Samples"
-            className="font-jakarta text-sm font-semibold"
+            className="font-outfit text-sm font-semibold"
           >
             All apps <ArrowRightFilled className="ml-1" />
           </Link>

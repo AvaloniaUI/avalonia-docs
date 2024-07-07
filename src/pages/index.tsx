@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title={`${siteConfig.title}`}x
       description="Learn to build with Avalonia"
       noFooter>
 
