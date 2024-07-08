@@ -10,11 +10,11 @@ import MenuFlyoutScreenshot from '/img/reference/controls/detailed-reference/men
 A 'MenuFlyout' allows you to host a simple menu as the flyout for a control. You might use this as an alternative to the context menu.
 
 :::info
-For details of the context menu, see the reference [here](../contextmenu.md).
+For details of the context menu, see the reference [here](./contextmenu.md).
 :::
 
 :::info
-The properties of a menu flyout are the same as for a flyout. See [here](../flyouts.md).
+The properties of a menu flyout are the same as for a flyout. See [here](./flyouts.md).
 :::
 
 ## Example

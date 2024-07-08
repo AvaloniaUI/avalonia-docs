@@ -16,7 +16,7 @@ For full information on the tree view control, see the reference [here](../treev
 :::
 
 :::info
-For full information on the data grid control, see the reference [here](../../datagrid/).
+For full information on the data grid control, see the reference [here](../datagrid/).
 :::
 
 The control has two modes of operation:

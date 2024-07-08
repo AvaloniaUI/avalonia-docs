@@ -17,7 +17,7 @@ Each tab item has a header and a content zone. The headers are presented in a st
 You can compose the UI in both the header and content zones to suit the UI requirements of your _Avalonia UI_ app.
 
 :::info
-If you only need the function of the tab headers part of this control, consider using the tab strip instead. See [here](tabstrip.md).
+If you only need the function of the tab headers part of this control, consider using the tab strip instead. See [here](./tabstrip.md).
 :::
 
 ## Examples
