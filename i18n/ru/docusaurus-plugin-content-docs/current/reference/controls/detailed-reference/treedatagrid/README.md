@@ -2,9 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TreeDataGridFilesScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-files.png';
-import TreeDataGridCountriesScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-countries.png';
-import TreeDataGridNuGetScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-nuget.png';
+import TreeDataGridFilesScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-files.png';
+import TreeDataGridCountriesScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-countries.png';
+import TreeDataGridNuGetScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-nuget.png';
 
 # Tree Data Grid
 

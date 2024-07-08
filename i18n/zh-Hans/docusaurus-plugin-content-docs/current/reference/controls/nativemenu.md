@@ -7,7 +7,7 @@ description: REFERENCE - Built-in Controls
 The native menu can display a menu on _macOS_ and some Linux distributions.
 
 :::warning
-This control can only be used attached to a tray icon. For full details about the tray icon, see the reference [here](detailed-reference/tray-icon.md).
+This control can only be used attached to a tray icon. For full details about the tray icon, see the reference [here](tray-icon.md).
 :::
 
 You can create sub-menus by nesting `<MenuItem>` elements.

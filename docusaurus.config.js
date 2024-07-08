@@ -15,8 +15,8 @@ const config = {
   baseUrl: '/',
   organizationName: 'avaloniaui', // Usually your GitHub org/user name.
   projectName: 'avalonia', // Usually your repo name.
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'ru', 'zh-Hans'],

@@ -3,9 +3,9 @@ title: TreeDataGrid
 description: REFERENCE - Built-in Controls
 ---
 
-import TreeDataGridFilesScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-files.png';
-import TreeDataGridCountriesScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-countries.png';
-import TreeDataGridNuGetScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-nuget.png';
+import TreeDataGridFilesScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-files.png';
+import TreeDataGridCountriesScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-countries.png';
+import TreeDataGridNuGetScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-nuget.png';
 
 # TreeDataGrid
 
@@ -16,7 +16,7 @@ For full information on the tree view control, see the reference [here](../treev
 :::
 
 :::info
-For full information on the data grid control, see the reference [here](../../datagrid/).
+For full information on the data grid control, see the reference [here](../datagrid/).
 :::
 
 The control has two modes of operation:

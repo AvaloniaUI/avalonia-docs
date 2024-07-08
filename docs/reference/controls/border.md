@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import BorderPodLookScreenshot from '/img/reference/controls/detailed-reference/border/border-pod-look.png';
-import BorderDropShadowScreenshot from '/img/reference/controls/detailed-reference/border/border-drop-shadow.png'; 
+import BorderPodLookScreenshot from '/img/reference/controls/border/border-pod-look.png';
+import BorderDropShadowScreenshot from '/img/reference/controls/border/border-drop-shadow.png'; 
 
 # Border
 

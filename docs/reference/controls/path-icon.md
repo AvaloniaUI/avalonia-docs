@@ -3,7 +3,7 @@ title: PathIcon
 description: REFERENCE - Built-in Controls
 ---
 
-import PathIconHouseScreenshot from '/img/reference/controls/detailed-reference/pathicon/pathicon-house.png';
+import PathIconHouseScreenshot from '/img/reference/controls/pathicon/pathicon-house.png';
 
 # PathIcon
 
