@@ -60,5 +60,5 @@ new TemplateColumn<ItemClass>("Column Header",
 The above is the signature of the `TemplateColumn`constructor.  It has two required parameters: the first is the column header, and the second is a function that returns `IDataTemplate`.
 
 :::info
-For more information about the concept of creating a **data template** in code, see [here](../../../concepts/templates/creating-data-templates-in-code.md).
+For more information about the concept of creating a **data template** in code, see [here](../../../concepts/templates/creating-data-templates-in-code).
 :::

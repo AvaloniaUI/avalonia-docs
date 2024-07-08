@@ -3,7 +3,7 @@ title: TextBox
 description: REFERENCE - Built-in Controls
 ---
 
-import TextBoxEntryScreenshot from '/img/reference/controls/detailed-reference/textbox/textbox-entry.gif';
+import TextBoxEntryScreenshot from '/img/reference/controls/textbox/textbox-entry.gif';
 
 # TextBox
 

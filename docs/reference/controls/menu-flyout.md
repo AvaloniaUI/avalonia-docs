@@ -3,18 +3,18 @@ title: MenuFlyout
 description: REFERENCE - Built-in Controls
 ---
 
-import MenuFlyoutScreenshot from '/img/reference/controls/detailed-reference/menuflyout/menuflyout-button.gif';
+import MenuFlyoutScreenshot from '/img/reference/controls/menuflyout/menuflyout-button.gif';
 
 # MenuFlyout
 
 A 'MenuFlyout' allows you to host a simple menu as the flyout for a control. You might use this as an alternative to the context menu.
 
 :::info
-For details of the context menu, see the reference [here](./contextmenu.md).
+For details of the context menu, see the reference [here](./contextmenu).
 :::
 
-:::info
-The properties of a menu flyout are the same as for a flyout. See [here](./flyouts.md).
+:::infos
+The properties of a menu flyout are the same as for a flyout. See [here](flyouts).
 :::
 
 ## Example

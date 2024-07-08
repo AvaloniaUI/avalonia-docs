@@ -3,8 +3,8 @@ title: TabControl
 description: REFERENCE - Built-in Controls
 ---
 
-import TabControlZonesScreenshot from '/img/reference/controls/detailed-reference/tabcontrol/tabcontrol-zones.png';
-import TabControlNavigationScreenshot from '/img/reference/controls/detailed-reference/tabcontrol/tabcontrol-navigation.gif';
+import TabControlZonesScreenshot from '/img/reference/controls/tabcontrol/tabcontrol-zones.png';
+import TabControlNavigationScreenshot from '/img/reference/controls/tabcontrol/tabcontrol-navigation.gif';
 
 # TabControl
 

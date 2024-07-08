@@ -3,8 +3,8 @@ title: ToolTip
 description: REFERENCE - Built-in Controls
 ---
 
-import ToolTipTextHoverScreenshot from '/img/reference/controls/detailed-reference/tooltip/tooltip-text-hover.gif';
-import ToolTipContentScreenshot from '/img/reference/controls/detailed-reference/tooltip/tooltip-content-hover.gif';
+import ToolTipTextHoverScreenshot from '/img/reference/controls/tooltip/tooltip-text-hover.gif';
+import ToolTipContentScreenshot from '/img/reference/controls/tooltip/tooltip-content-hover.gif';
 
 # ToolTip
 

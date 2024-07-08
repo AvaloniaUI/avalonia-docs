@@ -3,7 +3,7 @@ title: TimePicker
 description: REFERENCE - Built-in Controls
 ---
 
-import TimePickerScreenshot from '/img/reference/controls/detailed-reference/timepicker/timepicker.gif';
+import TimePickerScreenshot from '/img/reference/controls/timepicker/timepicker.gif';
 
 # TimePicker
 
