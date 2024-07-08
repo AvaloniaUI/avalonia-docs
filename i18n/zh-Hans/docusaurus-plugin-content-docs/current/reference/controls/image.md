@@ -18,7 +18,7 @@ Images can be used to compose the content of another control. For example, you c
 The image displayed can be resized and scaled.  The default settings for scaling (uniform stretch in both directions) will result in the image being fitted to the size (width and/or height) given.
 
 :::info
-The scaling settings for an image are the same as for the view box, see the reference [here](detailed-reference/viewbox.md).
+The scaling settings for an image are the same as for the view box, see the reference [here](viewbox.md).
 :::
 
 ## Example

@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TextBlockBasicScreenshot from '/img/reference/controls/detailed-reference/textblock/textblock-basic.png';
+import TextBlockBasicScreenshot from '/img/reference/controls/textblock/textblock-basic.png';
 
 # Selectable Text Block
 

@@ -9,7 +9,7 @@ import ItemsControlCanvasScreenshot from '/img/concepts/itemscontrol-with-canvas
 所有 `ItemsControl` 都有一个用于布局其项的项容器面板。可以重写控件使用的面板类型，以实现控件中项的自定义/替代布局。本文档提供了一些示例，展示了如何以及为什么要这样做。
 
 - [`ItemsControl`](./../reference/controls/itemscontrol)
-- [`TreeView`](./../reference/controls/detailed-reference/treeview-1)
+- [`TreeView`](./../reference/controls/treeview-1)
 - [`Carousel`](./../reference/controls/carousel)
 - [`Menu`](./../reference/controls/menu)
 - [`ComboBox`](./../reference/controls/combobox)
