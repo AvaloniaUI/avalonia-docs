@@ -125,7 +125,6 @@ const sidebars = {
           'type': 'category',
           'label': 'User Interface',
           'items': [
-            'basics/user-interface/introduction-to-xaml',
             'basics/user-interface/code-behind',
             {
               'type': 'category',
@@ -402,6 +401,22 @@ const sidebars = {
         'id': 'concepts/index',
       },
       'items': [
+        {
+          'type': 'category',
+          'label': 'XAML in Avalonia',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/xaml/index',
+          },
+          'items': [
+            'concepts/xaml/introduction-to-xaml',
+            'concepts/xaml/markup-extensions-and-avalonia-xaml',
+            'concepts/xaml/xaml-and-custom-classes',
+            'concepts/xaml/xaml-namespaces-and-namespace-mapping',
+            'concepts/xaml/code-behind-and-xaml',
+            'concepts/xaml/typeconverters-and-xaml',
+          ],
+        },
         'concepts/application-lifetimes',
         'concepts/attached-property',
         'concepts/control-trees',
