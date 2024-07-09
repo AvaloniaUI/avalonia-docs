@@ -27,7 +27,7 @@ description: REFERENCE - Built-in Controls
 <td>在 macOS 和某些 Linux 发行版上显示原生菜单。</td>
 </tr>
 <tr>
-<td><a href="detailed-reference/tabstrip">选项卡条</a></td>
+<td><a href="tabstrip">选项卡条</a></td>
 <td>选项卡条的作用类似于水平菜单。</td>
 </tr>
 </tbody>

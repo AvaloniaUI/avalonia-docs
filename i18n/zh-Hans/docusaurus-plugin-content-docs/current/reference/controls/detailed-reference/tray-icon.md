@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TrayIconScreenshot from '/img/reference/controls/detailed-reference/trayicon/trayicon.gif';
+import TrayIconScreenshot from '/img/reference/controls/trayicon/trayicon.gif';
 
 # Tray Icon
 

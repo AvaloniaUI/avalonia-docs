@@ -18,8 +18,7 @@ import ImageUniformToFillScreenshot from '/img/reference/controls/image/image-un
 显示的图像可以被调整大小和缩放。默认的缩放设置（两个方向上均匀拉伸）将导致图像适应给定的大小（宽度和/或高度）。
 
 :::info
-图像的缩放设置与视图框的相同，参见[ViewBox](detailed-reference/viewbox.md)。
-:::
+图像的缩放设置与视图框的相同，参见[ViewBox](viewbox.md)。
 
 ## 示例
 

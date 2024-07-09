@@ -14,4 +14,5 @@ description: REFERENCE
 | ---------------------------------------------------- | ------------------------------------------------ | - |
 | [DrawingImage](detailed-reference/drawing-image.md) | 显示矢量图像。                                   |   |
 | [Image](image.md)                                    | 显示位图图像。                                   |   |
-| [PathIcon](detailed-reference/path-icon.md)         | 通过流几何指令绘制图标。                         |   |
+| [PathIcon](path-icon.md)         | 通过流几何指令绘制图标。                         |   |
+

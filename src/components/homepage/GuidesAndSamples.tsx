@@ -54,7 +54,7 @@ function Guide({ title, text, link }: (typeof guides)[0]) {
   return (
     <Link
       to={link}
-      className="group flex cursor-pointer items-start gap-2 rounded-lg border-2 border-transparent p-3 text-inherit transition-colors hover:border-primary-100 hover:text-primary-100"
+      className="group flex cursor-pointer items-start gap-2 rounded-lg border-2 border-transparent p-3 text-inherit transition-colors hover:border-primary hover:text-primary"
     >
 
       <div className="flex flex-col">
@@ -71,7 +71,7 @@ function Sample({ title, source }: Sample) {
   return (
     <div className="group flex cursor-pointer items-center justify-between rounded-lg border-2 border-transparent p-3 text-text-400/60 transition-colors hover:border-primary hover:text-primary">
       <div className="flex flex-col">
-        <h4 className="mb-1 text-black group-hover:text-primary-100 dark:text-white">
+        <h4 className="mb-1 text-black group-hover:text-primary dark:text-white">
           {title}
         </h4>
       </div>
@@ -80,7 +80,7 @@ function Sample({ title, source }: Sample) {
         {source && (
           <Link
             to={source}
-            className="flex items-center gap-1 rounded-lg py-1 px-3 text-inherit transition-colors group-hover:bg-primary-100 group-hover:text-white"
+            className="flex items-center gap-1 rounded-lg py-1 px-3 text-inherit transition-colors group-hover:bg-primary group-hover:text-white"
           >
             <GitHub className="h-4 w-4" />
             <span className="font-semibold">Clone</span>
@@ -98,7 +98,7 @@ export default function GuidesAndSamples() {
         <div className="mb-8 flex items-center justify-between">
           <h3 className="m-0">Popular how to guides</h3>
 
-          <Link to="/docs/guides" className="font-jakarta text-sm font-semibold">
+          <Link to="/docs/guides" className="font-outfit text-sm font-semibold">
             View more guides <ArrowRightFilled className="ml-1" />
           </Link>
         </div>
@@ -123,7 +123,7 @@ export default function GuidesAndSamples() {
 
           <Link
             to="https://github.com/AvaloniaUI/Avalonia.Samples"
-            className="font-jakarta text-sm font-semibold"
+            className="font-outfit text-sm font-semibold"
           >
             All apps <ArrowRightFilled className="ml-1" />
           </Link>

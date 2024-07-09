@@ -2,13 +2,13 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ViewboxScaleUniformBothScreenshot from '/img/reference/controls/detailed-reference/viewbox/viewbox-scale-uniform-both.gif';
-import ViewboxScaleUniformFillBothScreenshot from '/img/reference/controls/detailed-reference/viewbox/viewbox-scale-uniformtofill-both.gif';
-import ViewboxScaleFillBothScreenshot from '/img/reference/controls/detailed-reference/viewbox/viewbox-scale-fill-both.gif';
-import ViewboxScaleNoneBothScreenshot from '/img/reference/controls/detailed-reference/viewbox/viewbox-scale-none-both.gif';
+import ViewboxScaleUniformBothScreenshot from '/img/reference/controls/viewbox/viewbox-scale-uniform-both.gif';
+import ViewboxScaleUniformFillBothScreenshot from '/img/reference/controls/viewbox/viewbox-scale-uniformtofill-both.gif';
+import ViewboxScaleFillBothScreenshot from '/img/reference/controls/viewbox/viewbox-scale-fill-both.gif';
+import ViewboxScaleNoneBothScreenshot from '/img/reference/controls/viewbox/viewbox-scale-none-both.gif';
 
-import ViewboxScaleUniformDownOnlyScreenshot from '/img/reference/controls/detailed-reference/viewbox/viewbox-uniform-downonly.gif';
-import ViewboxScaleUniformUpOnlyScreenshot from '/img/reference/controls/detailed-reference/viewbox/viewbox-uniform-uponly.gif';
+import ViewboxScaleUniformDownOnlyScreenshot from '/img/reference/controls/viewbox/viewbox-uniform-downonly.gif';
+import ViewboxScaleUniformUpOnlyScreenshot from '/img/reference/controls/viewbox/viewbox-uniform-uponly.gif';
 
 # Viewbox
 

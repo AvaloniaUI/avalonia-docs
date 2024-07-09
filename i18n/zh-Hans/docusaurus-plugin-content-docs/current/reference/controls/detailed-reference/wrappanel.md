@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import WrapPanelHorizontalScreenshot from '/img/reference/controls/detailed-reference/wrappanel/wrappanel-horizontal.png';
-import WrapPanelVerticalScreenshot from '/img/reference/controls/detailed-reference/wrappanel/wrappanel-vertical.png';
+import WrapPanelHorizontalScreenshot from '/img/reference/controls/wrappanel/wrappanel-horizontal.png';
+import WrapPanelVerticalScreenshot from '/img/reference/controls/wrappanel/wrappanel-vertical.png';
 
 # Wrap Panel
 

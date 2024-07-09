@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TransitioningContentControlFadeScreenshot from '/img/reference/controls/detailed-reference/transitioningcontentcontrol/transitioningcontentcontrol-fade.webp';
-import TransitioningContentControlSlideScreenshot from '/img/reference/controls/detailed-reference/transitioningcontentcontrol/transitioningcontentcontrol-slide.webp';
+import TransitioningContentControlFadeScreenshot from '/img/reference/controls/transitioningcontentcontrol/transitioningcontentcontrol-fade.webp';
+import TransitioningContentControlSlideScreenshot from '/img/reference/controls/transitioningcontentcontrol/transitioningcontentcontrol-slide.webp';
 
 # Transitioning Content Control
 

@@ -194,7 +194,7 @@ be `(r: 100, g: 80, b: 255)`.
 
 :::tip
 An alternative is to use an `InlineCollection` of `Run` elements each with their own single parameter 
-binding. This allows visual customization of each segment. See the example [here](/docs/reference/controls/detailed-reference/textblock#run)
+binding. This allows visual customization of each segment. See the example [here](/docs/reference/controls/textblock#run)
 :::
 
 ### Built-in Conversions

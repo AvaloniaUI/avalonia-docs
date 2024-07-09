@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import HierarchicalTreeDataGridSourceScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedatagrid-hierarchical.gif';
+import HierarchicalTreeDataGridSourceScreenshot from '/img/reference/controls/treedatagrid/treedatagrid-hierarchical.gif';
 
 # Hierarchical Tree Data Grid
 

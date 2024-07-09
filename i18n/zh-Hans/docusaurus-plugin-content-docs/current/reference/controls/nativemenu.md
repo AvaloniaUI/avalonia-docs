@@ -7,7 +7,7 @@ description: REFERENCE - Built-in Controls
 原生菜单可以在 _macOS_ 和一些 Linux 发行版上显示菜单。
 
 :::warning
-此控件仅可用于附加到托盘图标。有关托盘图标的完整详细信息，请参阅参考资料[这里](detailed-reference/tray-icon.md)。
+此控件仅可用于附加到托盘图标。有关托盘图标的完整详细信息，请参阅参考资料[这里](tray-icon.md)。
 :::
 
 你可以通过嵌套 `<MenuItem>` 元素来创建子菜单。
