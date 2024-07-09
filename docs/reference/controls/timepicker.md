@@ -7,13 +7,13 @@ import TimePickerScreenshot from '/img/reference/controls/timepicker/timepicker.
 
 # TimePicker
 
-The `TimePicker` has two or three 'spinner' controls to allow the user to pick a time value. The time picker can work in 24 or 12 hour formats. The picker controls display when the control is clicked.
+The `TimePicker` has two to four 'spinner' controls to allow the user to pick a time value. The time picker can work in 24 or 12 hour formats and supports hours, minutes, and seconds. The picker controls display when the control is clicked.
 
 ## Useful Properties
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="231">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ClockIdentifier</code></td><td>Choose between 12 and 24 hour formats. The 12 hour format shows a third spinner for AM/PM.</td></tr><tr><td><code>MinuteIncrement</code></td><td>Defines selectable increments for the minutes. The default is 1 (all minutes can be selected).</td></tr><tr><td><code>SelectedTime</code></td><td>(Nullable TimeSpan) the selected time.</td></tr></tbody></table>
+<table><thead><tr><th width="231">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ClockIdentifier</code></td><td>Choose between 12 and 24 hour formats. The 12 hour format shows an additional spinner for AM/PM.</td></tr><tr><td><code>UseSeconds</code></td><td>Shows an additional spinner for seconds when true. The default is false (seconds spinner is not shown).</td></tr><tr><td><code>MinuteIncrement</code></td><td>Defines selectable increments for the minutes. The default is 1 (all minutes can be selected).</td></tr><tr><td><code>SecondIncrement</code></td><td>Defines selectable increments for the seconds. The default is 1 (all seconds can be selected).</td></tr><tr><td><code>SelectedTime</code></td><td>(Nullable TimeSpan) the selected time.</td></tr></tbody></table>
 
 ## Example
 
