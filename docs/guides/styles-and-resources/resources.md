@@ -108,7 +108,21 @@ To add a resource dictionary file, follow this procedure:
 -  Type the file name you want to use.
 -  Click **Add**.
 
-You can now add the resources you want to define in the position indicated. It looks like this:
+After the resource file is created you have to specify it in the **Application.Resources** section of the application XAML file:
+
+```xml
+<Application.Resources>
+  <ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+      <MergeResourceInclude Source="/Assets/AppResources.axaml" />
+    </ResourceDictionary.MergedDictionaries>
+  </ResourceDictionary>
+</Application.Resources>
+```
+
+In the above example, the resources file AppResources.axaml is located in the /Assets project folder.
+
+You can now add the resources you want to define into AppResources.axaml in the position indicated. It looks like this:
 
 ```xml
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
