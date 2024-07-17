@@ -94,7 +94,48 @@ The ```x:True``` and ```x:False``` literals have use cases where the target bind
 The ```x:``` prefix is used for the typical XAML namespace mapping of the XAML language intrinsics, in the root element of a XAML file or production. For example, the .NET templates for Avalonia applications initiate a XAML file using this x: mapping. You could choose a different prefix token in your own XAML namespace mapping, but this documentation will assume the default x: mapping as a means of identifying those entities that are a defined part of the XAML namespace for the XAML language, as opposed to the Avalonia default namespace or other XAML namespaces not related to a specific framework.
 :::
 
- 
+ ## *Extension Classes
 
+ For both the general XAML language and Avalonia-specific markup extensions, the behavior of each markup extension is identified to a XAML processor through a ```*Extension``` class that derives from MarkupExtension, and provides an implementation of the ProvideValue method. This method on each extension provides the object that is returned when the markup extension is evaluated. The returned object is typically evaluated based on the various string tokens that are passed to the markup extension.
 
+For example, the StaticResourceExtension class provides the surface implementation of actual resource lookup so that its ProvideValue implementation returns the object that is requested, with the input of that particular implementation being a string that is used to look up the resource by its ```x:Key```. Much of this implementation detail is unimportant if you are using an existing markup extension.
+Some markup extensions do not use string token arguments. This is either because they return a static or consistent value, or because context for what value should be returned is available through one of the services passed through the ```serviceProvider``` parameter.
 
+The ```*Extension``` naming pattern is for convenience and consistency. It is not necessary in order for a XAML processor to identify that class as support for a markup extension. So long as your codebase includes the necessary XAML processing capabilities, all that is necessary to be recognized as a XAML markup extension is to derive from MarkupExtension and to support a construction syntax. Avalonia defines markup extension-enabling classes that do not follow the ```*Extension``` naming pattern, for example Binding. Typically the reason for this is that the class supports scenarios beyond pure markup extension support. In the case of Binding, that class supports run-time access to methods and properties of the object for scenarios that have nothing to do with XAML.
+
+## Extension Class Interpretation of Initialization Text
+
+The string tokens following the markup extension name and still within the braces are interpreted by a XAML processor in one of the following ways:
+
+* A comma always represents the separator or delimiter of individual tokens.
+
+* If the individual separated tokens do not contain any equals signs, each token is treated as a constructor argument. Each constructor parameter must be given as the type expected by that signature, and in the proper order expected by that signature.
+
+:::note
+Note: A XAML processor must call the constructor that matches the argument count of the number of pairs. For this reason, if you are implementing a custom markup extension, do not provide multiple constructors with the same argument count. The behavior for how a XAML processor behaves if more than one markup extension constructor path with the same parameter count exists is not defined, but you should anticipate that a XAML processor is permitted to throw an exception on usage if this situation exists in the markup extension type definitions.
+:::
+
+* If the individual separated tokens contain equals signs, then a XAML processor first calls the parameterless constructor for the markup extension. Then, each name=value pair is interpreted as a property name that exists on the markup extension, and a value to assign to that property.
+
+* If there is a parallel result between the constructor behavior and the property setting behavior in a markup extension, it does not matter which behavior you use. It is more common usage to use the property```=```value pairs for markup extensions that have more than one settable property, if only because it makes your markup more intentional and you are less likely to accidentally transpose constructor parameters. (When you specify property=value pairs, those properties may be in any order.) Also, there is no guarantee that a markup extension supplies a constructor parameter that sets every one of its settable properties. For example, Binding is a markup extension, with many properties that are settable through the extension in property```=```value form, but Binding only supports two constructors: a parameterless constructor, and one that sets an initial path.
+
+* A literal comma cannot be passed to a markup extension without escapement.
+
+## Escape Sequences and Markup Extensions
+
+Attribute handling in a XAML processor uses the curly braces as indicators of a markup extension sequence. It is also possible to produce a literal curly brace character attribute value if necessary, by entering an escape sequence using an empty curly brace pair followed by the literal curly brace. See {} Escape Sequence - Markup Extension.
+
+## Nesting Markup Extensions in XAML Usage
+Nesting of multiple markup extensions is supported, and each markup extension will be evaluated deepest first. For example, consider the following usage:
+
+```xml
+<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />
+```
+
+In this usage, the x:Static statement is evaluated first and returns a string. That string is then used as the argument for ```DynamicResource```.
+
+## Markup Extensions and Property Element Syntax
+
+When used as an object element that fills a property element value, a markup extension class is visually indistinguishable from a typical type-backed object element that can be used in XAML. The practical difference between a typical object element and a markup extension is that the markup extension is either evaluated to a typed value or deferred as an expression. Therefore the mechanisms for any possible type errors of property values for the markup extension will be different, similar to how a late-bound property is treated in other programming models. An ordinary object element will be evaluated for type match against the target property it is setting when the XAML is parsed.
+
+Most markup extensions, when used in object element syntax to fill a property element, would not have content or any further property element syntax within. Thus you would close the object element tag, and provide no child elements. Whenever any object element is encountered by a XAML processor, the constructor for that class is called, which instantiates the object created from the parsed element. A markup extension class is no different: if you want your markup extension to be usable in object element syntax, you must provide a parameterless constructor. Some existing markup extensions have at least one required property value that must be specified for effective initialization. If so, that property value is typically given as a property attribute on the object element. 

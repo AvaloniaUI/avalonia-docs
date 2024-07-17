@@ -1,5 +1,5 @@
 ---
-description: CONCEPTS - Input
+description: CONCEPTS
 ---
 
 import InputEventRoutingDiagram from '/img/concepts/input/pointer-pressed-routing.png';

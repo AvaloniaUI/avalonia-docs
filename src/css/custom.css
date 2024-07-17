@@ -229,6 +229,9 @@ body {
 
   --ifm-brand-logo-color: #0d6efd;
   --docs-card-background: rgb(241, 244, 248);
+
+  --notes-background: #EBDAFA;
+  --notes-border: #d2c1e1;
 }
 
 
@@ -237,6 +240,9 @@ html[data-theme='dark'] {
   --ifm-link-color: #0d6efd;
   --ifm-tabs-color-active-border: #0d6efd;
   --ifm-tabs-color-active: #4690ff;
+
+  --notes-background: #5d4177;
+  --notes-border: #46315a;
 
   --ifm-color-primary: #0d6efd;
 
@@ -1375,3 +1381,7 @@ img.center {
   }
 }
 
+.theme-admonition-note {
+  background-color: var(--notes-background) !important;
+  border-color: var(--notes-border) !important;
+}

@@ -460,6 +460,10 @@ const redirects = [
         "from": "/docs/reference/controls/detailed-reference/wrappanel",
         "to": "/docs/reference/controls/wrappanel"
     },
+    {
+        "from": "/docs/concepts/input/routed-events",
+        "to": "/docs/concepts/events/routed-events"
+    },
 
 
     // Can't be redirected, as plugin treats it as the same file

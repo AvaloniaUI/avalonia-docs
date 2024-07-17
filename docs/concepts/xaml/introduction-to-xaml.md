@@ -301,7 +301,64 @@ For more information about requirements for code-behind programming in Avalonia,
 If you do not want to create a separate code-behind file, you can also inline your code in a XAML file. However, inline code is a less versatile technique that has substantial limitations. For more informaiton, see [Code-Behind and XAML](/docs/concepts/xaml/code-behind-and-xaml).
 
 ## Routed events
-A particular event feature that is fundamental to Avalonia is a routed event. Routed events enable an element to handle an event that was raised by a different element, as long as the elements are connected through a tree relationship. When specifying event handling with a XAML attribute, the routed event can be listened for and handled on any element, including elements that do not list that particular event in the class members table. This is accomplished by qualifying the event name attribute with the owning class name. For instance, the parent ```StackPanel``` in the ongoing ```StackPanel``` / ```Button``` example could register a handler for the child element button's Click event by specifying the attribute ```Button.Click``` on the ```StackPanel``` object element, with your handler name as the attribute value. For more information, see [Routed Events Overview](/docs/concepts/input/routed-events).
+A particular event feature that is fundamental to Avalonia is a routed event. Routed events enable an element to handle an event that was raised by a different element, as long as the elements are connected through a tree relationship. When specifying event handling with a XAML attribute, the routed event can be listened for and handled on any element, including elements that do not list that particular event in the class members table. This is accomplished by qualifying the event name attribute with the owning class name. For instance, the parent ```StackPanel``` in the ongoing ```StackPanel``` / ```Button``` example could register a handler for the child element button's Click event by specifying the attribute ```Button.Click``` on the ```StackPanel``` object element, with your handler name as the attribute value. For more information, see [Routed Events Overview](/docs/events/input/routed-events).
 
+## XAML named elements
+
+By default, the object instance that is created in an object graph by processing a XAML object element does not possess a unique identifier or object reference. In contrast, if you call a constructor in code, you almost always use the constructor result to set a variable to the constructed instance, so that you can reference the instance later in your code. In order to provide standardized access to objects that were created through a markup definition, XAML defines the ```x:Name``` attribute. You can set the value of the x:Name attribute on any object element. In your code-behind, the identifier you choose is equivalent to an instance variable that refers to the constructed instance. In all respects, named elements function as if they were object instances (the name references that instance), and your code-behind can reference the named elements to handle run-time interactions within the app. This connection between instances and variables is accomplished by the Avalonia XAML markup compiler, and more specifically involve features and patterns such as InitializeComponent that will not be discussed in detail in this article.
+
+Avalonia framework-level XAML elements inherit a Name property, which is equivalent to the XAML defined x:Name attribute. Certain other classes also provide property-level equivalents for x:Name, which is also generally defined as a Name property. Generally speaking, if you cannot find a Name property in the members table for your chosen element/type, use x:Name instead. The x:Name values will provide an identifier to a XAML element that can be used at run-time, either by specific subsystems or by utility methods such as FindName.
+
+The following example sets Name on a [StackPanel](../../reference/controls/stackpanel) element. Then, a handler on a [Button](../../reference/controls/buttons/button) within that [StackPanel](../../reference/controls/stackpanel) references the [StackPanel](../../reference/controls/stackpanel) through its instance reference buttonContainer as set by Name.
+
+```xml
+<StackPanel Name="buttonContainer">
+  <Button Click="RemoveThis">Click to remove this button</Button>
+</StackPanel>
+```
+
+```csharp
+void RemoveThis(object sender, RoutedEventArgs e)
+{
+    Control co = e.Source as Control;
+    if (buttonContainer.Children.Contains(co))
+    {
+        buttonContainer.Children.Remove(co);
+    }
+}
+```
+Just like a variable, the XAML name for an instance is governed by a concept of scope, so that names can be enforced to be unique within a certain scope that is predictable. The primary markup that defines a window denotes one unique XAML namescope, with the XAML namescope boundary being the root element of that window. However, other markup sources can interact with a window at run-time, such as styles or templates within styles, and such markup sources often have their own XAML namescopes that do not necessarily connect with the XAML namescope of the window. 
+
+## Attached properties and attached events
+
+XAML specifies a language feature that enables certain properties or events to be specified on any element, regardless of whether the property or event exists in the type's definitions for the element it is being set on. The properties version of this feature is called an attached property, the events version is called an attached event. Conceptually, you can think of attached properties and attached events as global members that can be set on any XAML element/object instance. However, that element/class or a larger infrastructure must support a backing property store for the attached values.
+
+Attached properties in XAML are typically used through attribute syntax. In attribute syntax, you specify an attached property in the form ```ownerType.propertyName```.
+
+Superficially, this resembles a property element usage, but in this case the ```ownerType``` you specify is always a different type than the object element where the attached property is being set. ```ownerType``` is the type that provides the accessor methods that are required by a XAML processor in order to get or set the attached property value.
+
+The most common scenario for attached properties is to enable child elements to report a property value to their parent element.
+
+The following example illustrates the [DockPanel.Dock](../../reference/controls/dockpanel) attached property. The [DockPanel](../../reference/controls/dockpanel) class defines the accessors for [DockPanel.Dock](../../reference/controls/dockpanel) and therefore owns the attached property. The [DockPanel](../../reference/controls/dockpanel) class also includes logic that iterates its child elements and specifically checks each element for a set value of [DockPanel.Dock](../../reference/controls/dockpanel). If a value is found, that value is used during layout to position the child elements. Use of the [DockPanel.Dock](../../reference/controls/dockpanel) attached property and this positioning capability is in fact the motivating scenario for the [DockPanel](../../reference/controls/dockpanel) class.
+
+```xml
+<DockPanel>
+  <Button DockPanel.Dock="Left" Width="100" Height="20">I am on the left</Button>
+  <Button DockPanel.Dock="Right" Width="100" Height="20">I am on the right</Button>
+</DockPanel>
+```
+In Avalonia, most or all the attached properties are also implemented as styled or direct properties. For more information, see [Styled Properties Overview](../../guides/custom-controls/defining-properties.md).
+
+Attached events use a similar ```ownerType.eventName``` form of attribute syntax. Just like the non-attached events, the attribute value for an attached event in XAML specifies the name of the handler method that is invoked when the event is handled on the element. Attached event usages in Avalonia XAML are less common. For more information, see [Attached Events Overview](../events/attached-events-overview).
+
+## Base types and XAML
+
+Underlying Avalonia XAML and its XAML namespace is a collection of types that correspond to CLR objects in addition to markup elements for XAML. However, not all classes can be mapped to elements. Abstract classes, such as IconElement, and certain non-abstract base classes, are used for inheritance in the CLR objects model. Base classes, including abstract ones, are still important to XAML development because each of the concrete XAML elements inherits members from some base class in its hierarchy. Often these members include properties that can be set as attributes on the element, or events that can be handled. [Control](https://github.com/AvaloniaUI/Avalonia/blob/3eda9a0e2251cfd3e31da71448c3a236e7147334/src/Avalonia.Controls/Control.cs#L27) is the concrete base UI class of Avalonia at the Avalonia framework level. When designing UI, you will use various shape, panel, decorator, or control classes, which all derive from Control. The combination of attributes at the element level and a CLR object model provides you with a set of common properties that are settable on most concrete XAML elements, regardless of the specific XAML element and its underlying type.
+
+## XAML security
+XAML is a markup language that directly represents object instantiation and execution. Therefore, elements created in XAML have the same ability to interact with system resources (network access, file system IO, for example) as the equivalent generated code does. XAML loaded in to a fully trusted app has the same access to the system resources as the hosting app does.
+
+## Loading XAML from code
+XAML can be used to define all of the UI, but it is sometimes also appropriate to define just a piece of the UI in XAML. This capability could be used to enable partial customization, local storage of information, using XAML to provide a business object, or a variety of possible scenarios. The key to these scenarios is the ```AvaloniaRuntimeXamlLoader``` class and its [Load](https://github.com/AvaloniaUI/Avalonia/blob/3eda9a0e2251cfd3e31da71448c3a236e7147334/src/Markup/Avalonia.Markup.Xaml.Loader/AvaloniaRuntimeXamlLoader.cs#L25) method. The input is a XAML file, and the output is an object that represents all of the run-time tree of objects that was created from that markup. You then can insert the object to be a property of another object that already exists in the app. So long as the property is an appropriate property in the content model that has eventual display capabilities and that will notify the execution engine that new content has been added into the app, you can modify a running app's contents easily by loading in XAML. 
 
 

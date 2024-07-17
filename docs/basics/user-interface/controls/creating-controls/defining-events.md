@@ -43,4 +43,4 @@ In this example, a custom routed event called `ValueChangedEvent` is defined for
 
 ## Further Reading
 
-For more information see the [Routed Events Deep Dive](../../../../concepts/input/routed-events.md)
+For more information see the [Routed Events Deep Dive](../../../../concepts/events/routed-events.md)

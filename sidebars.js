@@ -7,7 +7,7 @@ const sidebars = {
     'welcome',
     {
       'type': 'category',
-      'label': 'Get Started',
+      'label': 'Getting Started',
       'link': {
         'type': 'doc',
         'id': 'get-started/index',
@@ -221,6 +221,185 @@ const sidebars = {
     },
     {
       'type': 'category',
+      'label': 'Advanced',
+      'link': {
+        'type': 'doc',
+        'id': 'concepts/index',
+      },
+      'items': [
+        {
+          'type': 'category',
+          'label': 'XAML',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/xaml/index',
+          },
+          'items': [
+            'concepts/xaml/introduction-to-xaml',
+            'concepts/xaml/xaml-syntax-in-detail',
+            'concepts/xaml/code-behind-and-xaml',
+            'concepts/xaml/xaml-and-custom-classes',
+            'concepts/xaml/markup-extensions-and-avalonia-xaml',            
+            'concepts/xaml/xaml-namespaces-and-namespace-mapping',  
+            'concepts/xaml/avalonia-xaml-namescopes',  
+            'concepts/xaml/inline-styles-and-templates',            
+            'concepts/xaml/typeconverters-and-xaml',           
+          ],
+        },
+        {
+          'type': 'category',
+          'label': 'Events',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/events/index',
+          },
+          'items': [
+            'concepts/events/routed-events',
+            'concepts/events/attached-events-overview',
+            'concepts/events/object-lifetime-events',
+            'concepts/events/property-change-events',
+          ],
+        },
+        {
+          'type': 'category',
+          'label': 'Control Customization',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/controls/index',
+          },
+          'items': [
+            'concepts/controls/control-authoring-overview',
+          ],
+        },
+        'concepts/application-lifetimes',
+        'concepts/attached-property',
+        'concepts/control-trees',
+        'concepts/custom-itemspanel',
+        {
+          'type': 'category',
+          'label': 'Data Templates',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/templates/index',
+          },
+          'items': [
+            'concepts/templates/data-templates',
+            'concepts/templates/content-template',
+            'concepts/templates/data-templates-collection',
+            'concepts/templates/reusing-data-templates',
+            'concepts/templates/creating-data-templates-in-code',
+            'concepts/templates/implement-idatatemplate',
+          ],
+        },
+        {
+          'type': 'category',
+          'label': 'Headless Platform',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/headless/index',
+          },
+          'items': [
+            'concepts/headless/headless-xunit',
+            'concepts/headless/headless-nunit',
+            'concepts/headless/headless-custom',
+          ],
+        },
+        {
+          'type': 'category',
+          'label': 'Input',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/input/index',
+          },
+          'items': [
+            'concepts/input/pointer',
+            'concepts/input/focus',
+            'concepts/input/gestures',
+            'concepts/input/hotkeys',
+          ],
+        },
+        'concepts/the-main-window',
+        {
+          'type': 'category',
+          'label': 'The MVVM Pattern',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/the-mvvm-pattern/index',
+          },
+          'items': [
+            'concepts/the-mvvm-pattern/avalonia-ui-and-mvvm',
+          ],
+        },
+        'concepts/markupextensions',
+        {
+          'type': 'category',
+          'label': 'ReactiveUI',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/reactiveui/index',
+          },
+          'items': [
+            'concepts/reactiveui/reactive-view-model',
+            'concepts/reactiveui/command-update',
+            'concepts/reactiveui/reactive-command',
+            'concepts/reactiveui/view-activation',
+            'concepts/reactiveui/routing',
+            'concepts/reactiveui/data-persistence',
+            'concepts/reactiveui/binding-to-sorted-filtered-list',
+          ],
+        },
+        {
+          'type': 'category',
+          'label': 'Services',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/services/index',
+          },
+          'items': [
+            'concepts/services/activatable-lifetime',
+            'concepts/services/clipboard',
+            'concepts/services/launcher',
+            'concepts/services/focus-manager',
+            'concepts/services/input-pane',
+            'concepts/services/insets-manager',
+            'concepts/services/platform-settings',
+            {
+              'type': 'category',
+              'label': 'Storage Provider',
+              'link': {
+                'type': 'doc',
+                'id': 'concepts/services/storage-provider/index',
+              },
+              'items': [
+                'concepts/services/storage-provider/storage-item',
+                'concepts/services/storage-provider/bookmarks',
+                'concepts/services/storage-provider/file-picker-options',
+              ],
+            },
+              ],
+        },
+        'concepts/templated-controls',
+        'concepts/themes',
+        'concepts/ui-composition',
+        'concepts/unhandledexceptions',
+        'concepts/toplevel',
+        'concepts/view-locator'
+      ],
+    },
+    {
+      'type': 'category',
+      'label': 'Deployment',
+      'link': {
+        'type': 'doc',
+        'id': 'deployment/index',
+      },
+      'items': [
+        'deployment/macOS',
+        'deployment/debian-ubuntu',
+      ],
+    },
+    {
+      'type': 'category',
       'label': 'How-To Guides',
       'link': {
         'type': 'doc',
@@ -391,158 +570,6 @@ const sidebars = {
             'guides/platforms/macos-development',
           ],
         },
-      ],
-    },
-    {
-      'type': 'category',
-      'label': 'Deep Dives',
-      'link': {
-        'type': 'doc',
-        'id': 'concepts/index',
-      },
-      'items': [
-        {
-          'type': 'category',
-          'label': 'XAML in Avalonia',
-          'link': {
-            'type': 'doc',
-            'id': 'concepts/xaml/index',
-          },
-          'items': [
-            'concepts/xaml/introduction-to-xaml',
-            'concepts/xaml/markup-extensions-and-avalonia-xaml',
-            'concepts/xaml/xaml-and-custom-classes',
-            'concepts/xaml/xaml-namespaces-and-namespace-mapping',
-            'concepts/xaml/code-behind-and-xaml',
-            'concepts/xaml/typeconverters-and-xaml',
-          ],
-        },
-        'concepts/application-lifetimes',
-        'concepts/attached-property',
-        'concepts/control-trees',
-        'concepts/custom-itemspanel',
-        {
-          'type': 'category',
-          'label': 'Data Templates',
-          'link': {
-            'type': 'doc',
-            'id': 'concepts/templates/index',
-          },
-          'items': [
-            'concepts/templates/data-templates',
-            'concepts/templates/content-template',
-            'concepts/templates/data-templates-collection',
-            'concepts/templates/reusing-data-templates',
-            'concepts/templates/creating-data-templates-in-code',
-            'concepts/templates/implement-idatatemplate',
-          ],
-        },
-        {
-          'type': 'category',
-          'label': 'Headless Platform',
-          'link': {
-            'type': 'doc',
-            'id': 'concepts/headless/index',
-          },
-          'items': [
-            'concepts/headless/headless-xunit',
-            'concepts/headless/headless-nunit',
-            'concepts/headless/headless-custom',
-          ],
-        },
-        {
-          'type': 'category',
-          'label': 'Input',
-          'link': {
-            'type': 'doc',
-            'id': 'concepts/input/index',
-          },
-          'items': [
-            'concepts/input/routed-events',
-            'concepts/input/pointer',
-            'concepts/input/focus',
-            'concepts/input/gestures',
-            'concepts/input/hotkeys',
-          ],
-        },
-        'concepts/the-main-window',
-        {
-          'type': 'category',
-          'label': 'The MVVM Pattern',
-          'link': {
-            'type': 'doc',
-            'id': 'concepts/the-mvvm-pattern/index',
-          },
-          'items': [
-            'concepts/the-mvvm-pattern/avalonia-ui-and-mvvm',
-          ],
-        },
-        'concepts/markupextensions',
-        {
-          'type': 'category',
-          'label': 'ReactiveUI',
-          'link': {
-            'type': 'doc',
-            'id': 'concepts/reactiveui/index',
-          },
-          'items': [
-            'concepts/reactiveui/reactive-view-model',
-            'concepts/reactiveui/command-update',
-            'concepts/reactiveui/reactive-command',
-            'concepts/reactiveui/view-activation',
-            'concepts/reactiveui/routing',
-            'concepts/reactiveui/data-persistence',
-            'concepts/reactiveui/binding-to-sorted-filtered-list',
-          ],
-        },
-        {
-          'type': 'category',
-          'label': 'Services',
-          'link': {
-            'type': 'doc',
-            'id': 'concepts/services/index',
-          },
-          'items': [
-            'concepts/services/activatable-lifetime',
-            'concepts/services/clipboard',
-            'concepts/services/launcher',
-            'concepts/services/focus-manager',
-            'concepts/services/input-pane',
-            'concepts/services/insets-manager',
-            'concepts/services/platform-settings',
-            {
-              'type': 'category',
-              'label': 'Storage Provider',
-              'link': {
-                'type': 'doc',
-                'id': 'concepts/services/storage-provider/index',
-              },
-              'items': [
-                'concepts/services/storage-provider/storage-item',
-                'concepts/services/storage-provider/bookmarks',
-                'concepts/services/storage-provider/file-picker-options',
-              ],
-            },
-              ],
-        },
-        'concepts/templated-controls',
-        'concepts/themes',
-        'concepts/ui-composition',
-        'concepts/unhandledexceptions',
-        'concepts/toplevel',
-        'concepts/view-locator'
-      ],
-    },
-    {
-      'type': 'category',
-      'label': 'Deployment',
-      'link': {
-        'type': 'doc',
-        'id': 'deployment/index',
-      },
-      'items': [
-        'deployment/macOS',
-        'deployment/debian-ubuntu',
       ],
     },
     {
