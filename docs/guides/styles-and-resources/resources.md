@@ -108,19 +108,9 @@ To add a resource dictionary file, follow this procedure:
 -  Type the file name you want to use.
 -  Click **Add**.
 
-After the resource file is created you have to specify it in the **Application.Resources** section of the application XAML file:
-
-```xml
-<Application.Resources>
-  <ResourceDictionary>
-    <ResourceDictionary.MergedDictionaries>
-      <MergeResourceInclude Source="/Assets/AppResources.axaml" />
-    </ResourceDictionary.MergedDictionaries>
-  </ResourceDictionary>
-</Application.Resources>
-```
-
-In the above example, the resources file AppResources.axaml is located in the /Assets project folder.
+:::note
+After the resource file is created you have to correctly include it into your application. See [Include and Merge Resources](#include-and-merge-resources) section.
+:::
 
 You can now add the resources you want to define into AppResources.axaml in the position indicated. It looks like this:
 
@@ -187,6 +177,22 @@ Here the border control is using the resource with the key 'Warning'. This is de
 
 Resources can be included from a resource dictionary file, and merged with the resources defined in another file (even if there are not any).
 
+<img src="/img/gitbook-import/assets/image (1) (4).png" alt=""/>
+
+In case, if you would like to merge resource dictionary on the whole application level, you have to declare a resource dictionary in the in the **Application.Resources** section of application XAML **App.axaml** file, like this
+
+```xml
+<Application.Resources>
+  <ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+      <MergeResourceInclude Source="/Assets/AppResources.axaml" />
+    </ResourceDictionary.MergedDictionaries>
+  </ResourceDictionary>
+</Application.Resources>
+```
+
+You can also merge resource dictionary to declare merged resources to be specific to a style.
+
 <img src="/img/gitbook-import/assets/image (1) (3).png" alt=""/>
 
 This means that you can implement styles in one file, and use resources defined in another. This keeps your styling consistent, and your application solution well organised and easy to maintain.
@@ -203,7 +209,7 @@ To include the resources dictionary from a file in a styles file, add the follow
   </Styles.Resources>
 ```
 
-In the above example, the resources file `AppResources.axaml` is located in the `/Assets` project folder. You can then define the styles using the resources, for example:
+In the above examples, the resources file `AppResources.axaml` is located in the `/Assets` project folder. You can then define the styles using the resources, for example:
 
 ```xml
 <Style Selector="Button.btn-info">
