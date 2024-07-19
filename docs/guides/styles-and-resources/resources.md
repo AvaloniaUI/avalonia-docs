@@ -112,7 +112,7 @@ To add a resource dictionary file, follow this procedure:
 After the resource file is created you have to correctly include it into your application. See [Include and Merge Resources](#include-and-merge-resources) section.
 :::
 
-You can now add the resources you want to define into AppResources.axaml in the position indicated. It looks like this:
+You can now add the resources you want to define in the position indicated. It looks like this:
 
 ```xml
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
