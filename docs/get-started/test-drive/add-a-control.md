@@ -16,7 +16,7 @@ Avalonia contains a built-in control that creates a button. Follow this procedur
 - Stop the app if it is running.
 - Locate the 
 `<TextBlock Text="text" HorizontalAlignment="Center" VerticalAlignment="Center"/>`	
-in the `MainWindow.axaml` file.. 
+in the `MainView.axaml` file.. 
 - Delete the entire line.
 - Insert a 'Button' tag as shown:
 ```xml
