@@ -9,19 +9,18 @@ Avalonia controls can be hosted in Windows Forms applications. This enables a st
 
 ## Overview
 
-An exemplary Windows Forms application with Avalonia controls requires at least three projects:
+An exemplary Windows Forms application with Avalonia controls requires at least two projects:
 
 1. `YourApp` Cross platform library where you put your Avalonia controls 
-2. `YourApp.Desktop` Executable Avalonia application, required for the Visual Studio Avalonia designer
-3. `YourApp.WinForms` Your existing Windows Forms application
+2. `YourApp.WinForms` Your existing Windows Forms application
+3. `YourApp.Desktop` (optional) Executable Avalonia application, required only for the Visual Studio Avalonia designer
 
-## Prerequisites
-
-- Visual Studio 2022
-- Avalonia extension for Visual Studio 2022
-- A solution with a Windows Forms project
+As Windows Forms is only supported on Microsoft Windows, adding Avalonia controls to your app will not make it cross platform.
 
 ## Step-by-step instructions
+
+These instruction assume that you use Visual Studio 2022 with the Avalonia extension.
+You can adjust the steps and leave out the `YourApp.Desktop` project if you are using VS Code or Rider.
 
 1. Create both Avalonia projects
    - In Visual Studio add a new project to your solution
@@ -30,14 +29,13 @@ An exemplary Windows Forms application with Avalonia controls requires at least 
    - Click _Create_
    - You should now have a `YourApp` and a `YourApp.Desktop` project in your solution
 2. Add references to your existing Windows Forms project
-   - A package reference to `Avalonia.Skia`
+   - A package reference to `Avalonia.Desktop`
    - A package reference to `Avalonia.Win32.Interoperability`
    - A project reference to `YourApp.csproj`
 3. Add the following lines in your `Program.cs` before you call `Application.Run()`
 ```cs
 AppBuilder.Configure<App>()
-    .UseWin32()
-    .UseSkia()
+    .UsePlatformDetect()
     .SetupWithoutStarting();
 ```
 4. Add an `WinFormsAvaloniaControlHost` control from the Toolbox
