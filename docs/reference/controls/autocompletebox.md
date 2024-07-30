@@ -25,6 +25,11 @@ These are the options for the filter mode property:
 In an **ordinal** string comparison, each character is compared using its simple byte value (independent of language).
 :::
 
+:::info
+**culture-sensitive** refers to considering the needs of users from different cultural backgrounds in design and technology implementations. This includes using different string processing and sorting patterns based on language. For example, English is typically sorted alphabetically from A-Z, Chinese may be sorted based on pinyin or stroke order, and other languages may have different sorting rules.
+:::
+
+
 ## Examples
 
 This example has a fixed items source (array) that is set in the C# code-behind.

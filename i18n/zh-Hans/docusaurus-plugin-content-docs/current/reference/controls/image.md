@@ -5,25 +5,24 @@ description: REFERENCE - Built-in Controls
 import ImageUnscaledScreenshot from '/img/reference/controls/image/image-unscaled.png';
 import ImageUniformToFillScreenshot from '/img/reference/controls/image/image-uniform-to-fill.png';
 
-# Image
+# Image 图像
 
-The image can display raster images from a specified image source. The source can be:
+图像可以从指定的图像源显示栅格图像。源可以是：
 
-* a string constant naming an application asset,
-* loaded as a bitmap from the bound name of an asset (by using a binding converter),
-* or can be loaded directly as a bitmap from a memory stream.  
+* 一个字符串常量，对应一个应用程序资源，
+* 从资源的绑定名称加载为位图（通过使用绑定转换器），
+* 或者可以直接从内存流加载为位图。
 
-Images can be used to compose the content of another control. For example, you can create a graphical button using image controls.
+图像可以用来组成其他控件的内容。例如，您可以使用图像控件创建一个图形按钮。
 
-The image displayed can be resized and scaled.  The default settings for scaling (uniform stretch in both directions) will result in the image being fitted to the size (width and/or height) given.
+显示的图像可以被调整大小和缩放。默认的缩放设置（两个方向上均匀拉伸）将导致图像适应给定的大小（宽度和/或高度）。
 
 :::info
-The scaling settings for an image are the same as for the view box, see the reference [here](viewbox.md).
-:::
+图像的缩放设置与视图框的相同，参见[ViewBox](viewbox.md)。
 
-## Example
+## 示例
 
-This example shows a bitmap asset loaded into an image control where the height and width have been restricted, but the scaling settings remain defaulted. The image itself is not square, but the image width and height are set to the same value. The rectangle is included to give an idea of how the image has been scaled:
+此示例展示了一个位图资源被加载到图像控件中，其中高度和宽度被限制，但缩放设置保持默认。图像本身不是正方形，但图像的宽度和高度设置为相同的值。包括矩形是为了给出图像被缩放的一个概念：
 
 ```xml
 <Panel>
@@ -35,7 +34,7 @@ This example shows a bitmap asset loaded into an image control where the height 
 
 <img src={ImageUnscaledScreenshot} alt="" />
 
-In this next example, introducing the stretch setting `UniformToFill` fits in all the height of the image, but crops the width because it would otherwise be wider than specified.  The image is not distorted by this treatment.
+在下一个示例中，引入了 `UniformToFill` 的拉伸设置，使得图像完全填满指定的高度，但会裁剪掉超出指定宽度的部分。图像没有因此处理而失真。
 
 ```xml
 <Panel>
@@ -48,12 +47,12 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 
 <img src={ImageUniformToFillScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Image/).
+关于此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Image/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`Image.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Image.cs)
+在 _GitHub_ 上查看源代码 [`Image.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Image.cs)
 :::

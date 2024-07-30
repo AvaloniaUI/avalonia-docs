@@ -2,16 +2,17 @@
 description: REFERENCE
 ---
 
-# Image Controls
+# 图像控件
 
-These _Avalonia UI_ controls allow you to images to your app.
+这些 _Avalonia UI_ 控件允许你在应用程序中添加图像。
 
 :::info
-If you plan to bind an image source, you will need to use an image converter. To learn how to do this, see here.
+如果你计划绑定一个图像源，你将需要使用一个图像转换器。要了解如何做到这一点，请参见此处。
 :::
 
 |                                                      |                                                  |   |
 | ---------------------------------------------------- | ------------------------------------------------ | - |
-| [Drawing Image](drawing-image.md) | Displays a vector image.                         |   |
-| [Image](image.md)                                    | Displays a bitmap image.                         |   |
-| [Path Icon](path-icon.md)         | Draws an icon from stream geometry instructions. |   |
+| [DrawingImage](detailed-reference/drawing-image.md) | 显示矢量图像。                                   |   |
+| [Image](image.md)                                    | 显示位图图像。                                   |   |
+| [PathIcon](path-icon.md)         | 通过流几何指令绘制图标。                         |   |
+

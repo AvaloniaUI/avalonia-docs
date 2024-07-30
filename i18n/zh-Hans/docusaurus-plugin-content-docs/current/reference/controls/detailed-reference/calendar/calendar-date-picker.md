@@ -14,7 +14,7 @@ The user can also enter a date by typing in the text box. The date picker is abl
 For details on the calendar part of this control, see the previous reference [here](./).
 :::
 
-## Example
+## 示例
 
 This example shows a basic single date selection calendar when the button is clicked:
 
@@ -26,7 +26,7 @@ This example shows a basic single date selection calendar when the button is cli
 
 <img src={CalendarDatePickerScreenshot} alt=""/>
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/CalendarDatePicker/).

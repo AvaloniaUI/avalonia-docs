@@ -1,41 +1,41 @@
 ---
 id: contentcontrol
-title: ContentControl
+title: ContentControl 内容控件
 ---
 
 import ControlContentStudentScreenshot from '/img/reference/controls/contentcontrol/contentcontrol-student.png';
 
-## Common Properties
+## 常用属性
 
-| Property  | Description                           |
-| --------- | ------------------------------------- |
-| `Content` | The content to display in the control |
+| 属性      | 描述                   |
+| --------- | ---------------------- |
+| `Content` | 控件中显示的内容       |
 
-## Reference
+## 参考文献
 
 [ContentControl](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/)
 
-## Source code
+## 源代码
 
 [ContentControl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ContentControl.cs)
 
-## Display content
+## 显示内容
 
-At its simplest, a `ContentControl` displays the data assigned to its [`Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756) property.
+最简单的情况下，内容控件显示分配给其 [`Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756) 属性的数据。
 
-For example:
+例如：
 
 ```xml
 <ContentControl Content="Hello World!"/>
 ```
 
-Will display the string "Hello World!". The `Content` property is the control's default property and so the above example can also be written as:
+将显示字符串 "Hello World!"。`Content` 属性是控件的默认属性，因此上述示例也可以写为：
 
 ```xml
 <ContentControl>Hello World!</ContentControl>
 ```
 
-If you assign a control to a `ContentControl` then it will display the control, for example:
+如果你将一个控件分配给内容控件，则它将显示该控件，例如：
 
 ```xml
 <ContentControl>
@@ -43,9 +43,9 @@ If you assign a control to a `ContentControl` then it will display the control, 
 </ContentControl>
 ```
 
-### Display content with templates
+### 使用模板显示内容
 
-So far so uninteresting. Where `ContentControl` becomes useful is in tandem with data binding and data templates. By setting the `ContentTemplate` property one can specify how the data in the `Content` property is displayed. For example given the following view models:
+到目前为止还算普通。内容控件在与数据绑定和数据模板结合使用时变得有用。通过设置 `ContentTemplate` 属性，可以指定 `Content` 属性中的数据如何显示。例如，给定以下视图模型：
 
 ```csharp
 namespace Example
@@ -75,9 +75,9 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](../../basics/data/data-binding/data-context) for more information.
+> 注意：以下示例假设 `MainWindowViewModel` 的一个实例被分配给窗口的 `DataContext`。有关更多信息，请参阅[关于 `DataContext`](../../basics/data/data-binding/data-context)的部分。
 
-We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
+我们可以使用 `ContentTemplate` 属性在内容控件中显示学生的名和姓：
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui">
@@ -96,6 +96,6 @@ We can display the student's first and last name in a `ContentControl` using the
 </Window>
 ```
 
-<img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
+<img className="center" src={ControlContentStudentScreenshot} alt="学生的名和姓" />
 
-For more information see the [data templates](../../basics/data/data-templates.md) section.
+有关更多信息，请查看[数据模板](../../basics/data/data-templates.md)部分。

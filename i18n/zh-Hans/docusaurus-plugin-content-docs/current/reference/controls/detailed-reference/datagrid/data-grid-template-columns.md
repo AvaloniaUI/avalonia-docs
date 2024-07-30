@@ -14,7 +14,7 @@ There are two data templates which you define as attached properties:
 If you do not set a editing template, the column will stay read-only.
 :::
 
-## Example
+## 示例
 
 This example adds a numeric up-down control when the age property for a person is being edited:
 
@@ -102,7 +102,7 @@ public class Person
 
 <img src='/img/gitbook-import/assets/grid4.gif' alt=''/>
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTemplateColumn/).

@@ -5,24 +5,24 @@ description: REFERENCE - Built-in Control
 import CheckBoxTwoStateScreenshot from '/img/reference/controls/checkbox/checkbox-two-state.gif';
 import CheckBoxThreeStateScreenshot from '/img/reference/controls/checkbox/checkbox-three-state.gif';
 
-# CheckBox
+# CheckBox 复选框
 
-The check box control presents a Boolean value where the true value is represented using a check mark, and the false value is an empty box. The check box has an option to present a nullable Boolean, where the null value represents 'unknown' and is drawn as a shaded box.
+复选框控件展示一个布尔值，其中真值用勾选标记表示，假值则显示为空白框。复选框有一个选项可以表示可空的布尔值，其中空值表示“未知”，并以阴影框的形式呈现。
 
-Click interaction toggles the value in the sequence: checked, unchecked, unknown (if three-state).
+点击交互会按以下顺序切换值：勾选、未勾选、未知（如果是三态的）。
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-| Property       | Description                          |
+| 属性            | 描述                                 |
 | -------------- | ------------------------------------ |
-| `IsChecked`    | Sets the Boolean value.              |
-| `IsThreeState` | (Boolean) Sets the three state mode. |
+| `IsChecked`    | 设置布尔值。                         |
+| `IsThreeState` | （布尔值）设置三态模式。             |
 
-## Examples
+## 示例
 
-This is an example of two-state check boxes:
+这是一个两态复选框的示例：
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -39,11 +39,11 @@ This is an example of two-state check boxes:
 </Window>
 ```
 
-Looks like this when running on Windows:
+在窗口中实际运行时的外观:
 
 <img src={CheckBoxTwoStateScreenshot} alt="" />
 
-This is an example of a three-state checkbox:
+这是一个三态复选框的示例：
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -61,12 +61,12 @@ This is an example of a three-state checkbox:
 </Window>
 ```
 
-Looks like this when running on Windows:
+在窗口中实际运行时的外观:
 
 <img src={CheckBoxThreeStateScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/CheckBox/).
+要查看有关此控件的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/CheckBox/)。
 
-View the source code on _GitHub_ [`CheckBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)
+在 _GitHub_ 上查看源代码 [`CheckBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)
