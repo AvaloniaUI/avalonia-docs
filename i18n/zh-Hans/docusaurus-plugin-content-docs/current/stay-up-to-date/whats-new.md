@@ -1,53 +1,53 @@
 ---
 id: whats-new
-title: What's new
+title: 最新功能
 ---
 
-The Avalonia team has been working hard on this release and we're excited to share with you all the new features and improvements. Let's dive in!
+Avalonia 团队在本次发布中付出了巨大努力，我们非常兴奋地分享所有新的特性和改进。让我们一起来看看！
 
-## New Features
+## 新特性
 
-### A11y (Accessibility)
-This version of Avalonia takes major strides in making applications more accessible. We've added support for various accessibility tools, making it easier for everyone to use Avalonia applications.
+### A11y（无障碍功能）
+Avalonia 的这一版本在使应用程序更加无障碍方面迈出了重大步伐。我们增加了对各种辅助工具的支持，使得每个人都能更容易地使用Avalonia应用程序。
 
-### IME (Input Method Editor) Support
-We have introduced support for Input Method Editor (IME), facilitating users to input characters and symbols not found on their input devices.
+### IME（输入法编辑器）支持
+我们引入了对输入法编辑器（IME）的支持，让用户能够输入在输入设备上找不到的字符和符号。
 
-### Composition Renderer
-The new composition renderer enhances the graphical rendering capabilities, providing a more robust, efficient, and flexible rendering pipeline.
+### 组合渲染器
+新的组合渲染器增强了图形渲染能力，提供了一个更强大、高效和灵活的渲染管线。
 
-### WebAssembly (WASM) Support
-WASM support allows Avalonia applications to run directly in the browser, broadening our platform support and giving developers more freedom and flexibility.
+### WebAssembly (WASM) 支持
+WASM 支持使得Avalonia应用程序可以直接在浏览器中运行，扩展了我们的平台支持，为开发者提供了更多自由和灵活性。
 
-### iOS and Android Support
-We've added support for both iOS and Android platforms. Developers can now build and run Avalonia applications on two of the most popular mobile platforms.
+### iOS 和 Android 支持
+我们添加了对iOS和Android平台的支持。现在开发者可以在这两个最受欢迎的移动平台上构建和运行Avalonia应用程序。
 
-### Text Inlines
-With the Text Inlines feature, you can easily construct complex formatted text blocks. It enables you to add annotations, hyperlinks, and other inline elements in your text.
+### 文本内联
+通过文本内联功能，你可以轻松构建复杂的格式化文本块。这使得在文本中添加注解、超链接和其他内联元素变得更加容易。
 
-### Smooth Virtualization (Reworked ItemsControl)
-We've completely reworked the ItemsControl to provide smooth virtualization. This improves the efficiency and user experience for controls with many items.
+### 平滑虚拟化（重做的ItemsControl）
+我们完全重做了ItemsControl以实现平滑虚拟化。这提升了包含大量项的控件的效率和用户体验。
 
-### Performance Improvements
-Avalonia 11.0 comes with significant performance improvements, enhancing the speed and efficiency of your applications.
+### 性能提升
+Avalonia 11.0带来了显著的性能提升，增强了应用程序的速度和效率。
 
-### Control Themes, Nested Styles, and Theme Variants
-We've added the ability to theme controls, apply nested styles, and choose theme variants. This makes it easier to build beautiful and consistent UIs.
+### 控件主题、嵌套样式和主题变体
+我们增加了为控件主题化、应用嵌套样式以及选择主题变体的能力。这使得构建美观且一致的UI变得更加容易。
 
-### Bitmap Effects
-The Bitmap Effects feature lets you apply visual effects to bitmaps. You can add blur, drop shadows, and other effects to images.
+### 图像效果
+图像效果功能允许你对位图应用视觉效果，如模糊、投影等。
 
-### 3D Transforms
-With 3D Transforms, you can now create stunning three-dimensional effects in your UI.
+### 3D 变换
+现在，你可以使用3D变换在UI中创建令人惊叹的三维效果。
 
-### AOT (Ahead-Of-Time) Compilation and Trimming
-AOT compilation enables your apps to run faster by compiling them before runtime. Trimming reduces the size of your apps by removing unused code.
+### AOT（预编译）和修剪
+AOT编译让你的应用程序在运行前进行编译，从而运行更快。修剪功能通过移除未使用的代码减小应用的大小。
 
-### GPU Interop
-The GPU Interop feature allows Avalonia to work more efficiently with the GPU, improving rendering performance and visuals.
+### GPU 交互
+GPU交互特性使Avalonia能更有效地与GPU协同工作，提升渲染性能和视觉效果。
 
-### Experimental Metal Support
-We're testing Metal support to improve performance on iOS and macOS devices.
+### 实验性Metal支持
+我们正在测试Metal支持，以提高iOS和macOS设备上的性能。
 
-## Important Notes
-This version also includes many bug fixes and improvements based on community feedback. As always, your feedback and contributions help us make Avalonia better. Please report any issues or suggestions on [GitHub](https://www.github.com/avaloniaui/avalonia).
+## 重要注意事项
+此版本还包括许多基于社区反馈的错误修复和改进。一如既往，你的反馈和贡献帮助我们让Avalonia变得更好。请在 [GitHub](https://www.github.com/avaloniaui/avalonia) 上报告任何问题或建议。
