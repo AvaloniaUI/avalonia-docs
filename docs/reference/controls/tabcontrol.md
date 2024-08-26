@@ -35,7 +35,7 @@ This is simple tab example. The tab content is just some text:
   <TabItem Header="Tab 3">
     <TextBlock Margin="5">This is tab 3 content</TextBlock>
   </TabItem>
-</TabControl> Some code
+</TabControl>
 ```
 
 The tab control even works in the preview pane!
