@@ -1,11 +1,14 @@
 ---
 description: REFERENCE
 id: index
-title: Reference
-sidebar_class_name: hidden
+title: Controls Reference
 ---
 
-import {DocsCardList} from '../../src/components/DocsCard';
+import {DocsCardList} from '../../../src/components/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+# Built-in Controls
+
+Avalonia provides following groups of built-in controls:
 
 <DocsCardList list={useCurrentSidebarCategory().items} />

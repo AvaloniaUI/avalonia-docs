@@ -67,7 +67,11 @@ Don't worry too much about filling all possible fields, most aren't required. Th
 
 :::
 
-The .NET dependencies can be listed by running `apt show dotnet-runtime-deps-8.0` (suffix changes for other .NET versions); they will appear on the line starting with *Depends: ...*. Avalonia required dependencies are: `libx11-6, libice6, libsm6, libfontconfig1`. Overall, all .NET and Avalonia dependencies are required, plus any others specific of your app.
+The .NET dependencies can be listed by running `apt show dotnet-runtime-deps-8.0` (suffix changes for other .NET versions); they will appear on the line starting with *Depends: ...*. You can also check them in the [.NET Core repo](https://github.com/dotnet/core/blob/main/release-notes/8.0/linux-packages.md).
+
+Avalonia required dependencies are: `libx11-6, libice6, libsm6, libfontconfig1`.
+
+Overall, all .NET and Avalonia dependencies are required, plus any others specific of your app.
 
 Below is a simple example of a `control` file.
 
@@ -78,7 +82,7 @@ Section: devel
 Priority: optional
 Architecture: amd64
 Installed-Size: 68279
-Depends: libx11-6, libice6, libsm6, libfontconfig1, ca-certificates, tzdata, libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3, libicu | libicu72 | libicu71 | libicu70 | libicu69 | libicu68 | libicu67 | libicu66 | libicu65 | libicu63 | libicu60 | libicu57 | libicu55 | libicu52
+Depends: libx11-6, libice6, libsm6, libfontconfig1, ca-certificates, tzdata, libc6, libgcc1 | libgcc-s1, libgssapi-krb5-2, libstdc++6, zlib1g, libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3, libicu | libicu74 | libicu72 | libicu71 | libicu70 | libicu69 | libicu68 | libicu67 | libicu66 | libicu65 | libicu63 | libicu60 | libicu57 | libicu55 | libicu52
 Maintainer: Ken Lee <kenlee@outlook.com>
 Homepage: https://github.com/kenlee/myprogram
 Description: This is MyProgram, great for doing X.

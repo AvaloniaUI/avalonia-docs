@@ -11,7 +11,7 @@ export default function HelpSection({ className = '' }) {
           className
         )}
       >
-        <h2 className="mb-12 text-center lg:text-3xl">
+        <h2 className="mb-12 text-center lg:text-5xl">
           How can we help?
         </h2>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
