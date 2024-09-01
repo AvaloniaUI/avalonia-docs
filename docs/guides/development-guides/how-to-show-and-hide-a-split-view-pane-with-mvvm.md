@@ -154,3 +154,127 @@ By doing so the command will be invoked each time the button is clicked and will
 <br><br>
 **If you followed this guide step by step you should now have something like this:**
 <img className="screenshot-full" src={SecondExample} alt="Second example" />
+
+## Adding content to the button
+Finally, you now just need to add some content to the button that indicates whether you need to show or hide the SplitView's pane. In this guide I will be using the following characters:
+- '<' to indicate the pane will be shown.
+- '>' to indicate the pane will be hidden.
+
+### Implement a converter
+To do this step we will need the char to change as the Pane goes from shown to hidden and viceversa. To do so we need to create a converter function that will return the necessary char to the button when clicked.<br>
+In the `models` folder create a class named SplitViewIconConverter and make it inherit from the IMultiValueConverter interface.<br>
+:::info
+I will use a MultiValueConverter because we need it to be called whenever the IsSplitViewPaneOpen value is changed. (For more information on how IMultiValueConverter behaves see [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-bind-multiple-properties))  
+:::
+<br>
+First, implement the interface as follows:
+``` C#
+public object? Convert(IList<object?> values, Type targetType, object? parameter, CultureInfo culture)
+{
+    throw new NotImplementedException();
+}
+```
+Second, define how the method will behave based on the value which will be passed to it in the IList object. We will assume that the first value of the list will be the value of `IsSplitViewPaneOpen`, and will treat it accordingly. When the value is true the method will return '>', otherwise it will return '<'.
+``` C#
+public object? Convert(IList<object?> values, Type targetType, object? parameter, CultureInfo culture)
+{
+    if(values.Any(x => x is null or UnsetValueType or not bool))
+        return BindingOperations.DoNothing;
+
+    bool value = (bool)values[0];
+
+    if (value)
+        return ">";
+
+    return "<";
+}
+```
+:::warning
+Since we need only one value in this code we assume that every single value passed to this function should be a boolean. 
+:::
+### Bind the converter to the button content.
+Lastly, all that remains to do is bind the converter to the button's content. To do so import the namespace of the converter in the MainWindow.axaml file by adding the following line
+``` xml
+xmlns:convs="clr-namespace:how_to_show_and_hide_a_split_view_pane_with_mvvm.Models"
+```
+So that the Window tag will look something like
+``` xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:how_to_show_and_hide_a_split_view_pane_with_mvvm.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="how_to_show_and_hide_a_split_view_pane_with_mvvm.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="how_to_show_and_hide_a_split_view_pane_with_mvvm"
+
+		xmlns:convs="clr-namespace:how_to_show_and_hide_a_split_view_pane_with_mvvm.Models"
+		>
+```
+Now add the converter to the static resources of the Window by doing the following.
+``` xml
+<Window.Resources>
+    <convs:SplitViewIconConverter x:Key="SplitViewIconConverter"/>
+</Window.Resources>
+```
+Bind the button's content to the converter and pass as parameter to the converter the IsSplitViewPaneOpen property.
+``` xml
+<Button Command="{Binding ChangeSplitViewPaneStatusCommand}">
+    <Button.Content>
+        <MultiBinding Converter="{StaticResource SplitViewIconConverter}">
+            <Binding Path="IsSplitViewPaneOpen"/>
+        </MultiBinding>
+    </Button.Content>
+</Button>
+```
+<br>
+The final MainWindow code should look like this:
+
+``` xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:how_to_show_and_hide_a_split_view_pane_with_mvvm.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="how_to_show_and_hide_a_split_view_pane_with_mvvm.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="how_to_show_and_hide_a_split_view_pane_with_mvvm"
+
+		xmlns:convs="clr-namespace:how_to_show_and_hide_a_split_view_pane_with_mvvm.Models"
+		>
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Window.Resources>
+		<convs:SplitViewIconConverter x:Key="SplitViewIconConverter"/>
+	</Window.Resources>
+	
+		<SplitView PanePlacement="Right" DisplayMode="CompactInline" IsPaneOpen="{Binding IsSplitViewPaneOpen}">
+			<SplitView.Pane>
+				<StackPanel VerticalAlignment="Top" Margin="5" Orientation="Horizontal">
+					<Button Command="{Binding ChangeSplitViewPaneStatusCommand}">
+						<Button.Content>
+							<MultiBinding Converter="{StaticResource SplitViewIconConverter}">
+								<Binding Path="IsSplitViewPaneOpen"/>
+							</MultiBinding>
+						</Button.Content>
+					</Button>
+					<TextBlock VerticalAlignment="Center" Margin="15, 0, 0, 0" FontSize="25" Text="Settings"/>
+				</StackPanel>
+			</SplitView.Pane>
+			<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="MainWindow" FontSize="25"/>
+		</SplitView>
+</Window>
+```
+
+:::warning
+If you want to approach the problem by using just a normal converter and passing to it, as parameter, the IsSplitViewPaneOpen property, don't try to do that as ConverterParameter does not currently support binding. 
+:::
