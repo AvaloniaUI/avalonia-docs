@@ -26,10 +26,29 @@ Although here I will be using the MainWindow.axaml and MainWindowViewModel.cs fi
 ## Adding the SplitView panel to the MainWindow
 The starting point will be something like this:
 ``` xml
-add
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ciao.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ciao.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ciao">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+</Window>
 ```
 
-For the sake of simplicity I will be deleting everything in the main window and adding the SplitView panel.
+For the sake of simplicity I will be deleting the default TextBlock and its value in the MainWindowViewModel.
 <br>
 Start by creating the panel and by defining the basics of how you want it to behave (for more informations on how this control works see [here](https://docs.avaloniaui.net/docs/reference/controls/splitview)) 
 ``` xml
