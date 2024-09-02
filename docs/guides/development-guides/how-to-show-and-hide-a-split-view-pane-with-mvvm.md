@@ -83,7 +83,7 @@ We will now add some additional elements to the pane. First a StackPanel, then a
 ```
 
 ### Adding some content to the SplitView
-To make things more clear, I will add a TextBlock in the main part of the SplitView, which will be the content you may add and that will be always visible.
+To make things more clear, I will add a TextBlock in the main part of the SplitView, which will be the content you may add and that will always be visible.
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
@@ -100,7 +100,7 @@ To make things more clear, I will add a TextBlock in the main part of the SplitV
 ## Binding the SplitView's `IsPaneOpen` property to a ViewModel's property.
 Fist of all, create a boolean property with a private backing field in the ViewModel which will contains the boolean value. Now, by using Reactive UI, make it notify every change to the field to the UI. Remember to initialize the backing property with the value you need in the VewModel's constructor.
 :::info
-By default in an MVVM project each ViewModel inherit from a ViewModelBase which inherits from the ReactiveObject class. By doing so in every ViewModel there will be the necessary methods to notify the UI. For more informations see [here](https://docs.avaloniaui.net/docs/concepts/reactiveui/reactive-view-model).
+By default in an MVVM project each ViewModel inherits from a ViewModelBase which inherits from the ReactiveObject class. By doing so in every ViewModel there will be the necessary methods to notify the UI. For more informations see [here](https://docs.avaloniaui.net/docs/concepts/reactiveui/reactive-view-model).
 :::
 ``` C#
 private bool _isSplitViewPaneOpen;
@@ -212,10 +212,10 @@ public object? Convert(IList<object?> values, Type targetType, object? parameter
 }
 ```
 :::warning
-Since we need only one value in this code we assume that every single value passed to this function should be a boolean. 
+Since we need only one value in this code we will assume that every single value passed to this function should be a boolean. 
 :::
 ### Bind the converter to the button content.
-Lastly, all that remains to do is bind the converter to the button's content. To do so import the namespace of the converter in the MainWindow.axaml file by adding the following line
+Lastly, all that's left to do is bind the converter to the button's content. To do so import the namespace of the converter in the MainWindow.axaml file by adding the following line
 ``` xml
 xmlns:convs="clr-namespace:how_to_show_and_hide_a_split_view_pane_with_mvvm.Models"
 ```
@@ -241,7 +241,7 @@ Now add the converter to the static resources of the Window by doing the followi
     <convs:SplitViewIconConverter x:Key="SplitViewIconConverter"/>
 </Window.Resources>
 ```
-Bind the button's content to the converter and pass as parameter to the converter the IsSplitViewPaneOpen property.
+Bind the button's content to the converter and pass the IsSplitViewPaneOpen property as a parameter to the converter.
 ``` xml
 <Button Command="{Binding ChangeSplitViewPaneStatusCommand}">
     <Button.Content>
@@ -297,7 +297,7 @@ The final MainWindow code should look like this:
 </Window>
 ```
 :::warning
-If you want to approach the problem by using just a normal converter and passing to it, as parameter, the IsSplitViewPaneOpen property, don't try to do that as ConverterParameter does not currently support binding. 
+If you want to approach the problem by using just a normal converter and passing the IsSplitViewPaneOpen property to it as parameter, don't try to do that since ConverterParameter does not currently support binding. 
 :::
 ## Final result:
 **Pane hidden**
