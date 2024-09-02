@@ -50,11 +50,13 @@ There may be a red exclamation icon (top left) and the message **The designer is
 :::
 
 - Build the project.
-- Scroll the preview pane to the left to view the preview outline and the text displayed in the top left corner.
+- You will see a preview of the greeting message in the center of the designer section.
 
 <img className="center" src={VsPreviewPaneScreenshot} alt="" />
 
-- Remove the binding `{Binding Greeting}` and change the text `<TextBlock Text="`my text`" ...`
+- Remove the binding `{Binding Greeting}` and change the value of the text attribute, e.g.
+
+    `<TextBlock Text="Hello world!" .../>`
 
 You will see the new text in the preview pane change as you type. This is an example of the Avalonia **design-time preview behaviour** that will help you develop user interface presentation accurately and quickly.
 
