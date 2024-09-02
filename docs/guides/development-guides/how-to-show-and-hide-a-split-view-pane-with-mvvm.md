@@ -5,6 +5,8 @@ title: How To Show and Hide a Split View Pane with MVVM
 
 import FirstExample from '/img/guides/development-guides/How-to-show-and-hide-a-split-view-pane-with-MVVM/First-example.PNG';
 import SecondExample from '/img/guides/development-guides/How-to-show-and-hide-a-split-view-pane-with-MVVM/Second-example.PNG';
+import PaneHidden from '/img/guides/development-guides/How-to-show-and-hide-a-split-view-pane-with-MVVM/Pane-Hidden.PNG';
+import PaneShown from '/img/guides/development-guides/How-to-show-and-hide-a-split-view-pane-with-MVVM/Pane-shown.PNG';
 
 # How To Show and Hide a Split View Pane with MVVM
 In this guide you will learn how to show and hide a split view panel using the MVVM pattern. If you are new to Avalonia UI please check out the following documents: [The MVVM patter](https://docs.avaloniaui.net/docs/concepts/the-mvvm-pattern/) - [Avalonia UI and MVVM](https://docs.avaloniaui.net/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm).
@@ -48,9 +50,9 @@ The starting point will be something like this:
 </Window>
 ```
 
-For the sake of simplicity I will be deleting the default TextBlock and its value in the MainWindowViewModel.
+For the sake of simplicity we will be deleting the default TextBlock and its value in the MainWindowViewModel.
 <br>
-Start by creating the panel and by defining the basics of how you want it to behave (for more informations on how this control works see [here](https://docs.avaloniaui.net/docs/reference/controls/splitview)) 
+Now, create the panel and define the basics of how you want it to behave (for more informations on how this control works see [here](https://docs.avaloniaui.net/docs/reference/controls/splitview)) 
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
 </SplitView>
@@ -67,7 +69,7 @@ Now that we have the SplitView we need to create its pane, which is the part tha
     </SplitView.Pane>
 </SplitView>
 ```
-We will now add some additional elements to the pane. First we will add a StackPanel, then a button and a textbox with the text "Settings". The following configurations will ensure that the button and the text are aligned.
+We will now add some additional elements to the pane. First a StackPanel, then a button and a textbox with the text "Settings". The following configurations will ensure that the button and the text are aligned.
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
@@ -81,7 +83,7 @@ We will now add some additional elements to the pane. First we will add a StackP
 ```
 
 ### Adding some content to the SplitView
-To make things more clear, I will add a TextBlock in the main part of the SplitView, which will be the content you may add and that will be alway visible.
+To make things more clear, I will add a TextBlock in the main part of the SplitView, which will be the content you may add and that will be always visible.
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
@@ -96,7 +98,7 @@ To make things more clear, I will add a TextBlock in the main part of the SplitV
 ```
 
 ## Binding the SplitView's `IsPaneOpen` property to a ViewModel's property.
-Fist of all, create a boolean property with a private backing field in the ViewModel which will contains the boolean value. Now, by using Reactive UI, make it notify every change to the backing field to the UI. Remember to initialize the backing property with the value you need in the VewModel's constructor.
+Fist of all, create a boolean property with a private backing field in the ViewModel which will contains the boolean value. Now, by using Reactive UI, make it notify every change to the field to the UI. Remember to initialize the backing property with the value you need in the VewModel's constructor.
 :::info
 By default in an MVVM project each ViewModel inherit from a ViewModelBase which inherits from the ReactiveObject class. By doing so in every ViewModel there will be the necessary methods to notify the UI. For more informations see [here](https://docs.avaloniaui.net/docs/concepts/reactiveui/reactive-view-model).
 :::
@@ -137,6 +139,7 @@ this.ChangeSplitViewPaneStatusCommand = ReactiveCommand.Create(() =>
     this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen;
 });
 ```
+In this example I will be using a very simple logic: if the value is true it becomes false, and if it's false it becomes true.
 <br>
 You should now have the following code in the ViewModel:
 
@@ -175,9 +178,9 @@ By doing so the command will be invoked each time the button is clicked and will
 <img className="screenshot-full" src={SecondExample} alt="Second example" />
 
 ## Adding content to the button
-Finally, you now just need to add some content to the button that indicates whether you need to show or hide the SplitView's pane. In this guide I will be using the following characters:
-- '<' to indicate the pane will be shown.
-- '>' to indicate the pane will be hidden.
+Finally, you now just need to add some content to the button that indicates whether you need to show or hide the SplitView's pane. In this guide we will be using the following characters:
+- '<' to indicate the pane will be shown on click.
+- '>' to indicate the pane will be hidden on click.
 
 ### Implement a converter
 To do this step we will need the char to change as the Pane goes from shown to hidden and viceversa. To do so we need to create a converter function that will return the necessary char to the button when clicked.<br>
@@ -216,7 +219,7 @@ Lastly, all that remains to do is bind the converter to the button's content. To
 ``` xml
 xmlns:convs="clr-namespace:how_to_show_and_hide_a_split_view_pane_with_mvvm.Models"
 ```
-So that the Window tag will look something like
+So that the Window tag will look something like this.
 ``` xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -293,7 +296,11 @@ The final MainWindow code should look like this:
 		</SplitView>
 </Window>
 ```
-
 :::warning
 If you want to approach the problem by using just a normal converter and passing to it, as parameter, the IsSplitViewPaneOpen property, don't try to do that as ConverterParameter does not currently support binding. 
 :::
+## Final result:
+**Pane hidden**
+<img className="screenshot-full" src={PaneHidden} alt="Pane hidden" />
+**Pane shown**
+<img className="screenshot-full" src={PaneShown} alt="Pane shown" />
