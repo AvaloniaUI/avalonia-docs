@@ -11,7 +11,7 @@ Avalonia 11 版本引入了许多与 0.10 版本不兼容的变化。以下指�
 2. Avalonia.Desktop 包不再包含主题，因此您需要添加以下任一包引用：
     - `Avalonia.Themes.Fluent`
     - `Avalonia.Themes.Simple`
-3. 移除对`XamlNameReferenceGenerator`包的引用，Avalonia 现在默认包含内置的生成器。
+3. 移除对`XamlNameReferenceGenerator`包的引用，Avalonia 现在默认包含这个生成器。
 4. 如有需要，将`<LangVersion>`更新至至少 9，以便使用仅限初始化属性 (init-only properties)。
 5. 如果需要与 0.10 版本相同的字体，还需包括`Avalonia.Fonts.Inter`包，并在应用程序构建器中添加`.WithInterFont()`。在 11.0 版本中，默认情况下不包含任何自定义字体。
 
