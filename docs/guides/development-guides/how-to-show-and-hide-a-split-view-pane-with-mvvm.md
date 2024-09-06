@@ -9,9 +9,8 @@ import PaneHidden from '/img/guides/development-guides/How-to-show-and-hide-a-sp
 import PaneShown from '/img/guides/development-guides/How-to-show-and-hide-a-split-view-pane-with-MVVM/Pane-shown.PNG';
 
 # How To Show and Hide a Split View Pane with MVVM
-In this guide you will learn how to show and hide a split view panel using the MVVM pattern. If you are new to Avalonia UI please check out the following documents: [The MVVM patter](https://docs.avaloniaui.net/docs/concepts/the-mvvm-pattern/) - [Avalonia UI and MVVM](https://docs.avaloniaui.net/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm).
+In this guide you will learn how to show and hide a split view panel using the MVVM pattern. If you are new to Avalonia UI please check out the following documents: [The MVVM pattern](https://docs.avaloniaui.net/docs/concepts/the-mvvm-pattern/) - [Avalonia UI and MVVM](https://docs.avaloniaui.net/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm).
 To proceed in this guide you will need at least a basic understanding of what Data Binding is and how it works in Avalonia.
-If you are coming from WPF, then the mechanism is nearly the same, except for some differences that will not be covered in this guide.
 
 ## Starting
 First of all, you need to create an MVVM application project, which you can do by reading the following guide [Create and run a project](https://docs.avaloniaui.net/docs/get-started/test-drive/create-a-project).<br>
@@ -19,14 +18,14 @@ Once you created the project you should be presented with the following files:
 - MainWindow.axaml
 - MainWindowViewModel.cs
 
-Those are the files that you will be editing, except for the one that you will be creating during this guide.
+Those are the files you will be editing the most. (Please note that additional files may need to be created as you proceed through this guide.)
 
 :::info
-Although here I will be using the MainWindow.axaml and MainWindowViewModel.cs files, this guide will work for every other View and its respective ViewModel.
+Although in this guide we will be using the MainWindow.axaml and MainWindowViewModel.cs files, this guide will work for every additional View and ViewModel you may create.
 :::
 
 ## Adding the SplitView panel to the MainWindow
-The starting point will be something like this:
+Open the MainWindow.xaml file. The file should have the following content in it by default:
 ``` xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -52,7 +51,7 @@ The starting point will be something like this:
 
 For the sake of simplicity we will be deleting the default TextBlock and its value in the MainWindowViewModel.
 <br>
-Now, create the panel and define the basics of how you want it to behave (for more informations on how this control works see [here](https://docs.avaloniaui.net/docs/reference/controls/splitview)) 
+Now, create the SplitView and define the basics of how you want it to behave (for more informations on how this control works see [here](https://docs.avaloniaui.net/docs/reference/controls/splitview)) 
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
 </SplitView>
@@ -65,7 +64,7 @@ Now that we have the SplitView we need to create its pane, which is the part tha
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
-
+	<!-- content -->
     </SplitView.Pane>
 </SplitView>
 ```
@@ -83,7 +82,7 @@ We will now add some additional elements to the pane. First a StackPanel, then a
 ```
 
 ### Adding some content to the SplitView
-To make things more clear, I will add a TextBlock in the main part of the SplitView, which will be the content you may add and that will always be visible.
+To make things more clear, we will add a TextBlock in the main part of the SplitView, outside the Pane. In the future you may replace the TextBlock with the content you need. This part of the SplitView will always be visible.
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
@@ -98,7 +97,7 @@ To make things more clear, I will add a TextBlock in the main part of the SplitV
 ```
 
 ## Binding the SplitView's `IsPaneOpen` property to a ViewModel's property.
-Fist of all, create a boolean property with a private backing field in the ViewModel which will contains the boolean value. Now, by using Reactive UI, make it notify every change to the field to the UI. Remember to initialize the backing property with the value you need in the VewModel's constructor.
+First, create a boolean property with a private backing field in the ViewModel which will contains the boolean value. Now, by using Reactive UI, make it notify every change to the field to the UI. Remember to initialize the backing property with the value you need in the VewModel's constructor.
 :::info
 By default in an MVVM project each ViewModel inherits from a ViewModelBase which inherits from the ReactiveObject class. By doing so in every ViewModel there will be the necessary methods to notify the UI. For more informations see [here](https://docs.avaloniaui.net/docs/concepts/reactiveui/reactive-view-model).
 :::
@@ -168,7 +167,7 @@ public class MainWindowViewModel : ViewModelBase
     }
 }
 ```
-Now, to make the button invoke the command you just need to bind it. (For more informations see [here](https://docs.avaloniaui.net/docs/0.10.x/data-binding/binding-to-commands))
+Now, to make the button invoke the command you just need to bind it. (For more informations see [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-bind-to-a-command-with-reactiveui))
 ``` xml
 <Button Command="{Binding ChangeSplitViewPaneStatusCommand}">
 ```
@@ -184,9 +183,9 @@ Finally, you now just need to add some content to the button that indicates whet
 
 ### Implement a converter
 To do this step we will need the char to change as the Pane goes from shown to hidden and viceversa. To do so we need to create a converter function that will return the necessary char to the button when clicked.<br>
-In the `models` folder create a class named SplitViewIconConverter and make it inherit from the IMultiValueConverter interface.<br>
+In the `Models` folder create a class named SplitViewIconConverter and make it inherit from the IMultiValueConverter interface.<br>
 :::info
-I will use a MultiValueConverter because we need it to be called whenever the IsSplitViewPaneOpen value is changed. (For more information on how IMultiValueConverter behaves see [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-bind-multiple-properties))  
+We will use a MultiValueConverter because we need it to be called whenever the IsSplitViewPaneOpen value is changed. (For more information on how IMultiValueConverter behaves see [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-bind-multiple-properties))  
 :::
 <br>
 First, implement the interface as follows:
