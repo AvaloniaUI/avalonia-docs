@@ -14,9 +14,9 @@ import ViewboxScaleUniformUpOnlyScreenshot from '/img/reference/controls/viewbox
 
 The `Viewbox` is a container control which can scale its contents. The way in which the contents are stretched can be defined, as well as when the stretch will occur (stretch direction).
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property           | Default | Description                                                  |
 | ------------------ | ------- |--------------------------------------------------------------|
@@ -35,7 +35,7 @@ The values for the `StretchDirecton` property are as follows:
 | `DownOnly`        | Only scales the content down when the content is larger than the available space. If the content is smaller, no scaling up is done. |
 | `Both`            | (Default) Always stretches to fit the available space according to the stretch mode.                                                |
 
-### Example
+### 示例
 
 This simple example shows a `Viewbox` scaling up a circle uniformly (both stretch and direction are default).
 
@@ -55,7 +55,7 @@ This set of demonstrations shows the effect of the stretch direction property:
 
 <table><thead><tr><th width="276">Stretch Direction</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>UpOnly</code></td><td><img src={ViewboxScaleUniformUpOnlyScreenshot} alt="" /></td></tr><tr><td><code>DownOnly</code></td><td><img src={ViewboxScaleUniformDownOnlyScreenshot} alt="" /></td></tr></tbody></table>
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Viewbox/).

@@ -8,9 +8,9 @@ import TextBlockBasicScreenshot from '/img/reference/controls/textblock/textbloc
 
 The selectable text block is a label for the display of text that allows selecting and copying of text. It can display multiple lines, and features full control over the font used.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property        | Description                                                                                                                                                                                                           |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -24,7 +24,7 @@ You will probably use these properties most often:
 | TextDecorations | A line decoration to apply to the lettering. Default is none, options include `Underline`, `Strikethrough`, `Baseline` and `Overline`. To apply more than one at the same time, list the options with spaces between. |
 | xml:space       | TextBlock itself would respect the line breaks and whitespace of its content as set out in XAML, but it will be filtered out by the parser without `xml:space="preserve"`.                                            |
 
-## Example
+## 示例
 
 This example shows a text block used as a heading, single line and multi-line displays.
 
@@ -43,7 +43,7 @@ The styling works in the preview pane:
 
 <img src={TextBlockBasicScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/SelectableTextBlock/).

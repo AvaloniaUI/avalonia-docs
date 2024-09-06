@@ -5,49 +5,49 @@ description: REFERENCE - Built-in Controls
 import NumericUpDownBasicScreenshot from '/img/reference/controls/numericupdown/numericupdown-basic.gif';
 import NumericUpDownFormatStringScreenshot from '/img/reference/controls/numericupdown/numericupdown-format-string.gif';
 
-# Numeric Up-Down
+# NumericUpDown 数字上下调节器
 
-The numeric up-down is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The mouse wheel (if present) will also change the value.
+数字上下调节器是一个可编辑的数字输入控件，附带有上下调节按钮。输入中的非数字字符将被忽略。该值还可以通过点击按钮或使用键盘箭头键来更改。如果存在鼠标滚轮，也可以用来改变数值。
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-| Property                | Description                                                                                                                 |
-|-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| `Value`                 | The value (decimal?).                                                                                                       |
-| `Increment`             | The increment used by the button spinner, keyboard and mouse wheel. Default increment is 1.                                 |
-| `Minimum`               | The minimum value allowed.                                                                                                  |
-| `Maximum`               | The maximum value allowed.                                                                                                  |
-| `FormatString`          | The format string for the numerical value. This is important if you are setting a custom increment.                         |
-| `ButtonSpinnerLocation` | The location of the spinner buttons. Choose from left and right (default).                                                  |
-| `AllowSpin`             | Determines if incrementing and decrementing using the spinner buttons, keyboard and mouse wheel is active. Default is true. |
-| `ShowButtonSpinner`     | Determines whether the spinner buttons are shown. Default is true.                                                          |
+| 属性名                  | 描述                                                                                                                     |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------|
+| `Value`               | 数值（可能是十进制？）。                                                                                                   |
+| `Increment`           | 按钮调节器、键盘和鼠标滚轮使用的增量。默认增量为1。                                                                        |
+| `Minimum`             | 允许的最小值。                                                                                                             |
+| `Maximum`             | 允许的最大值。                                                                                                             |
+| `FormatString`        | 数值的格式字符串。如果你设置了自定义增量，这一点非常重要。                                                                   |
+| `ButtonSpinnerLocation` | 调节按钮的位置。可选择左侧和右侧（默认）。                                                                                    |
+| `AllowSpin`           | 确定是否激活使用调节按钮、键盘和鼠标滚轮的增减功能。默认为真。                                                               |
+| `ShowButtonSpinner`   | 确定是否显示调节按钮。默认为真。                                                                                           |
 
-## Examples
+## 示例
 
-This is a basic example of a numeric up-down control. There are no limits to the value here:
+这是一个基本的数字上下调节器控件示例。这里没有对数值的限制：
 
 ```xml
 <StackPanel Margin="20">
-  <TextBlock Margin="0 5">Number of items:</TextBlock>
+  <TextBlock Margin="0 5">物品数量：</TextBlock>
   <NumericUpDown Value="10" />
 </StackPanel>
 ```
 
 <img src={NumericUpDownBasicScreenshot} alt="" />
 
-The value and other properties are nullable decimals; so you can create a custom decimal increment/decrement and range if you need to.
+数值和其他属性是可空的十进制数；因此，如果需要，你可以创建自定义的十进制增量/减量和范围。
 
 :::info
-Remember to specify a `FormatString` property when you create a custom decimal increment and range.
+记得在创建自定义的十进制增量和范围时指定 `FormatString` 属性。
 :::
 
-For example:
+例如：
 
 ```xml
-<StackPanel Margin="20">  
-  <TextBlock Margin="0 5">Opacity:</TextBlock>
+<StackPanel Margin="20">
+  <TextBlock Margin="0 5">透明度：</TextBlock>
   <NumericUpDown Value="0.5" Increment="0.05" 
       FormatString="0.00"
       Minimum="0" Maximum="1"/>
@@ -56,12 +56,12 @@ For example:
 
 <img src={NumericUpDownFormatStringScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/NumericUpDown/).
+关于此控件的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/NumericUpDown/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`NumericUpDown.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NumericUpDown/NumericUpDown.cs)
+在 _GitHub_ 上查看源代码 [`NumericUpDown.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NumericUpDown/NumericUpDown.cs)
 :::

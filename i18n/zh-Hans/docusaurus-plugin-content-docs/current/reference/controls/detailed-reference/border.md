@@ -9,9 +9,9 @@ import BorderDropShadowScreenshot from '/img/reference/controls/border/border-dr
 
 The border control decorates a (single) child with a border and background. It can also be used to display rounded corners.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Background</code></td><td>Background color.</td></tr><tr><td><code>BorderBrush</code></td><td>Border color.</td></tr><tr><td><code>BorderThickness</code></td><td>Border line thickness (integer).</td></tr><tr><td><code>CornerRadius</code></td><td>Radius for all four corners (one value), or specified as list - see below.</td></tr><tr><td><code>BoxShadow</code></td><td>Defines a shadow (see below).</td></tr></tbody></table>
 
@@ -35,7 +35,7 @@ When all four values are in the list, _Avalonia UI_ will interpret them using th
 If you use the four value pattern; you must provide all four values, even if one of them is zero. Three values are not permitted in the list.
 :::
 
-### Example
+### 示例
 
 This example adds some border controls to create a 'pod' look in the layout:
 
@@ -82,7 +82,7 @@ This table describes the box shadow values, in the order in which they appear:
 If both offset values are set to zero, the shadow is placed behind the element, and will only generate a blur effect if `blur-radius` and/or `spread-radius` are set.
 :::
 
-### Example
+### 示例
 
 This is an example of a drop-shadow:
 
@@ -101,7 +101,7 @@ This is an example of a drop-shadow:
 
 <img src={BorderDropShadowScreenshot} alt=""/>
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Border/).
