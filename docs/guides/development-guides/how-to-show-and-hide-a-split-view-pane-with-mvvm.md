@@ -73,8 +73,7 @@ We will now add some additional elements to the pane. First a StackPanel, then a
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
         <StackPanel VerticalAlignment="Top" Margin="5" Orientation="Horizontal">
-            <Button>
-            </Button>
+            <Button />
             <TextBlock VerticalAlignment="Center" Margin="15, 0, 0, 0" FontSize="25" Text="Settings"/>
         </StackPanel>
     </SplitView.Pane>
@@ -87,8 +86,7 @@ We will add a TextBlock in the main part of the SplitView, outside the Pane. In 
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
         <StackPanel VerticalAlignment="Top" Margin="5" Orientation="Horizontal">
-            <Button>
-            </Button>
+            <Button />
             <TextBlock VerticalAlignment="Center" Margin="15, 0, 0, 0" FontSize="25" Text="Settings"/>
         </StackPanel>
     </SplitView.Pane>
@@ -97,10 +95,12 @@ We will add a TextBlock in the main part of the SplitView, outside the Pane. In 
 ```
 
 ## Binding the SplitView's `IsPaneOpen` property to a ViewModel's property.
-First, create a boolean property with a private backing field in the ViewModel which will contains the boolean value. Now, by using Reactive UI, make it notify every change to the field to the UI. Remember to initialize the backing property with the value you need in the VewModel's constructor.
-:::info
-By default in an MVVM project each ViewModel inherits from a ViewModelBase which inherits from the ReactiveObject class. By doing so in every ViewModel there will be the necessary methods to notify the UI. For more informations see [here](https://docs.avaloniaui.net/docs/concepts/reactiveui/reactive-view-model).
-:::
+First, create a boolean property with a private backing field in the ViewModel which will contains the boolean value. Now, make it notify every change to the field to the UI. Remember to initialize the backing property with the value you need in the VewModel's constructor.
+To make the it notify the UI of every change you can use two different approaches:
+<br>
+<br>
+**If you are using Reactive UI**
+By default in an MVVM project with Reactive UI each ViewModel inherits from a ViewModelBase which inherits from the ReactiveObject class. By doing so in every ViewModel there will be the necessary methods to notify the UI. For more informations see [here](https://docs.avaloniaui.net/docs/concepts/reactiveui/reactive-view-model).
 ``` C#
 private bool _isSplitViewPaneOpen;
 public bool IsSplitViewPaneOpen
@@ -111,6 +111,34 @@ public bool IsSplitViewPaneOpen
         this.RaiseAndSetIfChanged(ref this._isSplitViewPaneOpen, value);
     }
 }
+```
+
+**If you are _not_ using Reactive UI**
+If you are not using Reactive UI, instead you can use the built in interface INotifyPropertyChanged. Keep in mind that you need to implement it in your ViewModels as follows:
+``` C#
+public event PropertyChangedEventHandler PropertyChanged;
+protected virtual void OnPropertyChanged(string propertyName)
+{
+    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+}
+```
+For more informations about this interface please see [here](https://docs.avaloniaui.net/docs/guides/data-binding/inotifypropertychanged).
+Below the code for the property and it's backing field without Reactive UI:
+``` C#
+private bool _isSplitViewPaneOpen;
+public bool IsSplitViewPaneOpen
+{
+    get => this._isSplitViewPaneOpen;
+    set
+    {
+        this._isSplitViewPaneOpen = value;
+        OnPropertyChanged(nameof(IsSplitViewPaneOpen));
+    }
+}
+```
+Finally, the code in the constructor will be the same for both versions:
+
+``` C#
 public MainWindowViewModel()
 {
     // The default value of a boolean variable is false. Hence if you need the Pane to start closed you can avoid this initialization.
@@ -128,7 +156,11 @@ You should now have the following configuration:
 
 ## Configuring the button
 At this point all we need to do is make the button open and close the SplitView's pane when clicked.
-To do so create a public property of type ICommand in the ViewModel with just the "getter method".
+To do so the process is different based on if you are using Reactive UI or not:
+<br>
+<br>
+**If you are using Reactive UI**
+Create a public property of type ICommand in the ViewModel with just the "getter method".
 ``` C#
 public ICommand ChangeSplitViewPaneStatusCommand { get; }
 ```
@@ -139,12 +171,52 @@ this.ChangeSplitViewPaneStatusCommand = ReactiveCommand.Create(() =>
     this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen;
 });
 ```
-In this example I will be using a very simple logic: if the value is true it becomes false, and if it's false it becomes true.
+**If you are _not_ using Reactive UI**
+Create a normal public function with no return type (void) and add to it's body the logic:
+``` C#
+public void ChangeSplitViewPaneStatusCommand()
+{
+    this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen;
+}
+```
+:::info
+In both the version with and without Reactive UI there will be the same logic: if the value is true it becomes false, and if it's false it becomes true.
+:::
 <br>
-You should now have the following code in the ViewModel:
-
+You should now have the following code in the ViewModel depending on the approach you chose:
+<Tabs>
+    <TabItem label="Reactive UI" default>
 ``` C#
 public class MainWindowViewModel : ViewModelBase
+{
+    private bool _isSplitViewPaneOpen;
+    public bool IsSplitViewPaneOpen
+    {
+	get => this._isSplitViewPaneOpen;
+	set
+	{
+	    this.RaiseAndSetIfChanged(ref this._isSplitViewPaneOpen, value);
+	}
+    }
+
+    public ICommand ChangeSplitViewPaneStatusCommand { get; }
+
+    public MainWindowViewModel()
+    {
+	// The default value of a boolean variable is false. Hence if you need the Pane to start closed you can avoid this initialization.
+	this._isSplitViewPaneOpen = false;
+	this.ChangeSplitViewPaneStatusCommand = ReactiveCommand.Create(() =>
+	{
+	    this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen;
+	});
+    }
+}
+```
+    </TabItem>
+    
+    <TabItem label="No Reactive UI">
+``` C#
+public class MainWindowViewModel : INotifyPropertyChanged
 {
     private bool _isSplitViewPaneOpen;
     public bool IsSplitViewPaneOpen
@@ -152,24 +224,33 @@ public class MainWindowViewModel : ViewModelBase
         get => this._isSplitViewPaneOpen;
         set
         {
-            this.RaiseAndSetIfChanged(ref this._isSplitViewPaneOpen, value);
+            this._isSplitViewPaneOpen = value;
+            OnPropertyChanged(nameof(IsSplitViewPaneOpen));
         }
     }
 
-    public ICommand ChangeSplitViewPaneStatusCommand { get; }
+    public event PropertyChangedEventHandler PropertyChanged;
+    protected virtual void OnPropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
 
     public MainWindowViewModel()
     {
         // The default value of a boolean variable is false. Hence if you need the Pane to start closed you can avoid this initialization.
         this._isSplitViewPaneOpen = false;
-        this.ChangeSplitViewPaneStatusCommand = ReactiveCommand.Create(() =>
-        {
-            this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen;
-        });
+    }
+    public void ChangeSplitViewPaneStatusCommand()
+    {
+        this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen;
     }
 }
 ```
-Now, to make the button invoke the command you just need to bind it. (For more informations see [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-bind-to-a-command-with-reactiveui))
+    </TabItem>
+</Tabs
+
+Now, to make the button invoke the command (or the function in case you're not using Reactive UI) you just need to bind it. The process is the same with and without Reactive UI.<br>
+For more informations see [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-bind-to-a-command-with-reactiveui) for Reactive UI and [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-bind-to-a-command-without-reactiveui) without Reactive UI.
 ``` xml
 <Button Command="{Binding ChangeSplitViewPaneStatusCommand}">
 ```
