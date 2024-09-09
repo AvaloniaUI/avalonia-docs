@@ -18,7 +18,7 @@ Once you created the project you should be presented with the following files:
 - MainWindow.axaml
 - MainWindowViewModel.cs
 
-Those are the files you will be editing the most. (Please note that additional files may need to be created as you proceed through this guide.)
+Those are the files you will be editing the most. Please note that additional files may need to be created as you proceed through this guide.
 
 :::info
 Although in this guide we will be using the MainWindow.axaml and MainWindowViewModel.cs files, this guide will work for every additional View and ViewModel you may create.
@@ -33,10 +33,10 @@ Open the MainWindow.xaml file. The file should have the following content in it 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="ciao.Views.MainWindow"
+        x:Class="YourNamespace.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="ciao">
+        Title="Mainwindow">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -51,7 +51,7 @@ Open the MainWindow.xaml file. The file should have the following content in it 
 
 For the sake of simplicity we will be deleting the default TextBlock and its value in the MainWindowViewModel.
 <br>
-Now, create the SplitView and define the basics of how you want it to behave (for more informations on how this control works see [here](https://docs.avaloniaui.net/docs/reference/controls/splitview)) 
+Now, create the SplitView and define the basics of how you want it to behave (for more information on how this control works see [here](https://docs.avaloniaui.net/docs/reference/controls/splitview)) 
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
 </SplitView>
@@ -82,7 +82,7 @@ We will now add some additional elements to the pane. First a StackPanel, then a
 ```
 
 ### Adding some content to the SplitView
-To make things more clear, we will add a TextBlock in the main part of the SplitView, outside the Pane. In the future you may replace the TextBlock with the content you need. This part of the SplitView will always be visible.
+We will add a TextBlock in the main part of the SplitView, outside the Pane. In the future you may replace the TextBlock with the content you need. This part of the SplitView will always be visible.
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
@@ -113,6 +113,7 @@ public bool IsSplitViewPaneOpen
 }
 public MainWindowViewModel()
 {
+    // The default value of a boolean variable is false. Hence if you need the Pane to start closed you can avoid this initialization.
     this._isSplitViewPaneOpen = false;
 }
 ```
@@ -159,6 +160,7 @@ public class MainWindowViewModel : ViewModelBase
 
     public MainWindowViewModel()
     {
+        // The default value of a boolean variable is false. Hence if you need the Pane to start closed you can avoid this initialization.
         this._isSplitViewPaneOpen = false;
         this.ChangeSplitViewPaneStatusCommand = ReactiveCommand.Create(() =>
         {
@@ -182,73 +184,71 @@ Finally, you now just need to add some content to the button that indicates whet
 - '>' to indicate the pane will be hidden on click.
 
 ### Implement a converter
-To do this step we will need the char to change as the Pane goes from shown to hidden and viceversa. To do so we need to create a converter function that will return the necessary char to the button when clicked.<br>
-In the `Models` folder create a class named SplitViewIconConverter and make it inherit from the IMultiValueConverter interface.<br>
+To do this step we will need the char to change as the Pane goes from shown to hidden and vice versa. To do so we need to create a converter function that will return the necessary char to the button when clicked.<br>
+In the `Models` folder create a class named SplitViewIconConverter and make it inherit from the IValueConverter interface.<br>
 :::info
-We will use a MultiValueConverter because we need it to be called whenever the IsSplitViewPaneOpen value is changed. (For more information on how IMultiValueConverter behaves see [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-bind-multiple-properties))  
+For more information on how converters behave please see [here](https://docs.avaloniaui.net/docs/guides/data-binding/how-to-create-a-custom-data-binding-converter).
 :::
 <br>
 First, implement the interface as follows:
 ``` C#
-public object? Convert(IList<object?> values, Type targetType, object? parameter, CultureInfo culture)
+public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+{
+    throw new NotImplementedException();
+}
+
+public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
 {
     throw new NotImplementedException();
 }
 ```
-Second, define how the method will behave based on the value which will be passed to it in the IList object. We will assume that the first value of the list will be the value of `IsSplitViewPaneOpen`, and will treat it accordingly. When the value is true the method will return '>', otherwise it will return '<'.
+Second, define how the method will behave based on the value which will be passed to it in the IList object. We will assume that the first value of the list will be the value of `IsSplitViewPaneOpen`, and will treat it accordingly. When the value is true the method will return '>', otherwise it will return '<'. Please note that in this guide we will not use the function `ConvertBack`.
 ``` C#
-public object? Convert(IList<object?> values, Type targetType, object? parameter, CultureInfo culture)
+public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
 {
-    if(values.Any(x => x is null or UnsetValueType or not bool))
-        return BindingOperations.DoNothing;
-
-    bool value = (bool)values[0];
-
-    if (value)
-        return ">";
+    if ((bool)value)
+	return ">";
 
     return "<";
 }
 ```
 :::warning
-Since we need only one value in this code we will assume that every single value passed to this function should be a boolean. 
+In this code we are assuming that the converter will be used only with booleans.
 :::
 ### Bind the converter to the button content.
 Lastly, all that's left to do is bind the converter to the button's content. To do so import the namespace of the converter in the MainWindow.axaml file by adding the following line
 ``` xml
-xmlns:convs="clr-namespace:how_to_show_and_hide_a_split_view_pane_with_mvvm.Models"
+xmlns:convs="clr-namespace:YourNamespace.Models"
 ```
 So that the Window tag will look something like this.
 ``` xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:how_to_show_and_hide_a_split_view_pane_with_mvvm.ViewModels"
+        xmlns:vm="using:YourNamespace.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="how_to_show_and_hide_a_split_view_pane_with_mvvm.Views.MainWindow"
+        x:Class="YourNamespace.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="how_to_show_and_hide_a_split_view_pane_with_mvvm"
 
-		xmlns:convs="clr-namespace:how_to_show_and_hide_a_split_view_pane_with_mvvm.Models"
+	xmlns:convs="clr-namespace:YourNamespace.Models"
 		>
 ```
+:::warning
+In the code above the namespace is YourNamespace. Please remember that if you want to use this code you must change it to what correspond to yours.
+:::
+
 Now add the converter to the static resources of the Window by doing the following.
 ``` xml
 <Window.Resources>
     <convs:SplitViewIconConverter x:Key="SplitViewIconConverter"/>
 </Window.Resources>
 ```
-Bind the button's content to the converter and pass the IsSplitViewPaneOpen property as a parameter to the converter.
+Bind the button's content to the converter and specify the Path to the value we need to pass to the converter. In this case the path is `IsSplitViewPaneOpen`.
 ``` xml
-<Button Command="{Binding ChangeSplitViewPaneStatusCommand}">
-    <Button.Content>
-        <MultiBinding Converter="{StaticResource SplitViewIconConverter}">
-            <Binding Path="IsSplitViewPaneOpen"/>
-        </MultiBinding>
-    </Button.Content>
-</Button>
+<Button Command="{Binding ChangeSplitViewPaneStatusCommand}" Content="{Binding Converter={StaticResource SplitViewIconConverter} Path=IsSplitViewPaneOpen} "/>
 ```
 <br>
 The final MainWindow code should look like this:
@@ -256,16 +256,16 @@ The final MainWindow code should look like this:
 ``` xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:how_to_show_and_hide_a_split_view_pane_with_mvvm.ViewModels"
+        xmlns:vm="using:YourNamespace.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="how_to_show_and_hide_a_split_view_pane_with_mvvm.Views.MainWindow"
+        x:Class="YourNamespace.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="how_to_show_and_hide_a_split_view_pane_with_mvvm"
 
-		xmlns:convs="clr-namespace:how_to_show_and_hide_a_split_view_pane_with_mvvm.Models"
+	xmlns:convs="clr-namespace:YourNamespace.Models"
 		>
 
     <Design.DataContext>
@@ -281,13 +281,7 @@ The final MainWindow code should look like this:
 		<SplitView PanePlacement="Right" DisplayMode="CompactInline" IsPaneOpen="{Binding IsSplitViewPaneOpen}">
 			<SplitView.Pane>
 				<StackPanel VerticalAlignment="Top" Margin="5" Orientation="Horizontal">
-					<Button Command="{Binding ChangeSplitViewPaneStatusCommand}">
-						<Button.Content>
-							<MultiBinding Converter="{StaticResource SplitViewIconConverter}">
-								<Binding Path="IsSplitViewPaneOpen"/>
-							</MultiBinding>
-						</Button.Content>
-					</Button>
+					<Button Command="{Binding ChangeSplitViewPaneStatusCommand}" Content="{Binding Converter={StaticResource SplitViewIconConverter} Path=IsSplitViewPaneOpen} "/>
 					<TextBlock VerticalAlignment="Center" Margin="15, 0, 0, 0" FontSize="25" Text="Settings"/>
 				</StackPanel>
 			</SplitView.Pane>
@@ -296,7 +290,7 @@ The final MainWindow code should look like this:
 </Window>
 ```
 :::warning
-If you want to approach the problem by using just a normal converter and passing the IsSplitViewPaneOpen property to it as parameter, don't try to do that since ConverterParameter does not currently support binding. 
+In the code above the namespace is YourNamespace. Please remember that if you want to use this code you must change it to what correspond to yours.
 :::
 ## Final result:
 **Pane hidden**
