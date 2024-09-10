@@ -2,54 +2,55 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# ColorView
+# 选色视图
 
-Presents a color for user editing using a spectrum, palette and component sliders.
+提供一个颜色选择界面，用户可以通过光谱、调色板和组件滑块进行颜色编辑。
 
-## Common Properties
+## 常见属性
 
-| Property | Description |
-|----------|-------------|
-| `Color` | Gets or sets the currently selected color in the RGB color model. For control authors, use `HsvColor` instead to avoid loss of precision and color drifting. |
-| `ColorModel` | Gets or sets the active color model used by the sliders. This property is only applicable to the components tab. The spectrum tab must always be in HSV and the palette tab contains only pre-defined colors. |
-| `ColorSpectrumComponents` | Gets or sets the two HSV color components displayed by the spectrum. |
-| `ColorSpectrumShape` | Gets or sets the displayed shape of the spectrum. |
-| `HexInputAlphaPosition` | Gets or sets the position of the alpha component in the hexadecimal input box relative to all other color components. |
-| `HsvColor` | Gets or sets the currently selected color in the HSV color model. This should be used in all cases instead of the `Color` property. Internally, the `ColorSpectrum` uses the HSV color model and using this property will avoid loss of precision and color drifting. |
-| `IsAccentColorsVisible` | Gets or sets a value indicating whether accent colors are visible along with the preview color. |
-| `IsAlphaEnabled` | Gets or sets a value indicating whether the alpha component is enabled. When disabled (set to false) the alpha component will be fixed to maximum and editing controls disabled. |
-| `IsAlphaVisible` | Gets or sets a value indicating whether the alpha component editing controls (Slider(s) and TextBox) are visible. When hidden, the existing alpha component value is maintained. Note that `IsComponentTextInputVisible` also controls the alpha component TextBox visibility. |
-| `IsColorComponentsVisible` | Gets or sets a value indicating whether the color components tab/panel/page (subview) is visible. |
-| `IsColorModelVisible` | Gets or sets a value indicating whether the active color model indicator/selector is visible. |
-| `IsColorPaletteVisible` | Gets or sets a value indicating whether the color palette tab/panel/page (subview) is visible. |
-| `IsColorPreviewVisible` | Gets or sets a value indicating whether the color preview is visible. Note that accent color visibility is controlled separately by `IsAccentColorsVisible`. |
-| `IsColorSpectrumVisible` | Gets or sets a value indicating whether the color spectrum tab/panel/page (subview) is visible. |
-| `IsColorSpectrumSliderVisible` | Gets or sets a value indicating whether the color spectrum's third component slider is visible. |
-| `IsComponentSliderVisible` | Gets or sets a value indicating whether color component sliders are visible. All color components are controlled by this property but alpha can also be controlled with `IsAlphaVisible`. |
-| `IsComponentTextInputVisible` | Gets or sets a value indicating whether color component text inputs are visible. All color components are controlled by this property but alpha can also be controlled with `IsAlphaVisible`. |
-| `IsHexInputVisible` | Gets or sets a value indicating whether the hexadecimal color value text input is visible. |
-| `MaxHue` | Gets or sets the maximum value of the Hue component in the range from 0..359. This property must be greater than `MinHue`. |
-| `MaxSaturation` | Gets or sets the maximum value of the Saturation component in the range from 0..100. This property must be greater than `MinSaturation`. |
-| `MaxValue` | Gets or sets the maximum value of the Value component in the range from 0..100. This property must be greater than `MinValue`. |
-| `MinHue` | Gets or sets the minimum value of the Hue component in the range from 0..359. This property must be less than `MaxHue`. |
-| `MinSaturation` | Gets or sets the minimum value of the Saturation component in the range from 0..100. This property must be less than `MaxSaturation`. |
-| `MinValue` | Gets or sets the minimum value of the Value component in the range from 0..100. This property must be less than `MaxValue`. |
-| `PaletteColors` | Gets or sets the collection of individual colors in the palette. This is not commonly set manually. Instead, it should be set automatically by providing an `IColorPalette` to the `Palette` property. |
-| `PaletteColumnCount` | Gets or sets the number of colors in each row (section) of the color palette. Within a standard palette, rows are shades and columns are colors. This is not commonly set manually. Instead, it should be set automatically by providing an `IColorPalette` to the `Palette` property. |
-| `Palette` | Gets or sets the color palette. This will automatically set both `PaletteColors` and `PaletteColumnCount` overwriting any existing values. |
-| `SelectedIndex` | Gets or sets the index of the selected tab/panel/page (subview). When using the default control theme, this property is designed to be used with the `ColorViewTab` enum. The `ColorViewTab` enum defines the index values of each of the three standard tabs. Use like `SelectedIndex = (int)ColorViewTab.Palette`. |
+| 属性 | 描述 |
+|------|-----|
+| `Color` | 获取或设置当前选中的 RGB 色彩模型中的颜色。对于控件作者，建议使用 `HsvColor` 以避免精度损失和颜色漂移。 |
+| `ColorModel` | 获取或设置滑块使用的活动色彩模型。该属性仅适用于组件标签页。光谱标签页必须始终使用 HSV 模型，调色板标签页只包含预定义颜色。 |
+| `ColorSpectrumComponents` | 获取或设置光谱显示的两个 HSV 色彩组件。 |
+| `ColorSpectrumShape` | 获取或设置光谱的显示形状。 |
+| `HexInputAlphaPosition` | 获取或设置十六进制输入框中透明度组件相对于所有其他颜色组件的位置。 |
+| `HsvColor` | 获取或设置当前选中的 HSV 色彩模型中的颜色。应在所有情况下使用此属性，而不是 `Color` 属性。内部，`ColorSpectrum` 使用 HSV 色彩模型，使用此属性可以避免精度损失和颜色漂移。 |
+| `IsAccentColorsVisible` | 获取或设置一个值，指示是否显示重点颜色和预览颜色。 |
+| `IsAlphaEnabled` | 获取或设置一个值，指示是否启用透明度组件。当禁用（设置为 false）时，透明度组件将固定为最大值，编辑控件被禁用。 |
+| `IsAlphaVisible` | 获取或设置一个值，指示是否显示透明度组件的编辑控件（滑块和文本框）。隐藏时，现有的透明度值将被保持。注意，`IsComponentTextInputVisible` 也控制透明度组件文本框的可见性。 |
+| `IsColorComponentsVisible` | 获取或设置一个值，指示是否显示颜色组件标签页/面板/页面（子视图）。 |
+| `IsColorModelVisible` | 获取或设置一个值，指示是否显示活动色彩模型指示器/选择器。 |
+| `IsColorPaletteVisible` | 获取或设置一个值，指示是否显示调色板标签页/面板/页面（子视图）。 |
+| `IsColorPreviewVisible` | 获取或设置一个值，指示是否显示颜色预览。注意，重点颜色的可见性由 `IsAccentColorsVisible` 另外控制。 |
+| `IsColorSpectrumVisible` | 获取或设置一个值，指示是否显示颜色光谱标签页/面板/页面（子视图）。 |
+| `IsColorSpectrumSliderVisible` | 获取或设置一个值，指示是否显示颜色光谱的第三组件滑块。 |
+| `IsComponentSliderVisible` | 获取或设置一个值，指示是否显示颜色组件滑块。所有颜色组件都由此属性控制，但透明度也可以通过 `IsAlphaVisible` 控制。 |
+| `IsComponentTextInputVisible` | 获取或设置一个值，指示是否显示颜色组件文本输入。所有颜色组件都由此属性控制，但透明度也可以通过 `IsAlphaVisible` 控制。 |
+| `IsHexInputVisible` | 获取或设置一个值，指示是否显示十六进制颜色值文本输入。 |
+| `MaxHue` | 获取或设置色调组件的最大值，范围从 0 到 359。此属性必须大于 `MinHue`。 |
+| `MaxSaturation` | 获取或设置饱和度组件的最大值，范围从 0 到 100。此属性必须大于 `MinSaturation`。 |
+| `MaxValue` | 获取或设置明度组件的最大值，范围从 0 到 100。此属性必须大于 `MinValue`。 |
+| `MinHue` | 获取或设置色调组件的最小值，范围从 0 到 359。此属性必须小于 `MaxHue`。 |
+| `MinSaturation` | 获取或设置饱和度组件的最小值，范围从 0 到 100。此属性必须小于 `MaxSaturation`。 |
+| `MinValue` | 获取或设置明度组件的最小值，范围从 0 到 100。此属性必须小于 `MaxValue`。 |
+| `PaletteColors` | 获取或设置调色板中的单独颜色集合。通常不手动设置此属性。而应通过提供一个 `IColorPalette` 自动设置给 `Palette` 属性。 |
+| `PaletteColumnCount` | 获取或设置调色板每行的颜色数（部分）。在标准调色板中，行是色调，列是颜色。通常不手动设置此属性。而应通过提供一个 `IColorPalette` 自动设置给 `Palette` 属性。 |
+| `Palette` | 获取或设置调色板。这将自动设置 `PaletteColors` 和 `PaletteColumnCount`，覆盖任何现有值。 |
+| `SelectedIndex` | 获取或设置选中的标签页/面板/页面（子视图）的索引。在使用默认控件主题时，此属性设计用于与 `ColorViewTab` 枚举一起使用。`ColorViewTab` 枚举定义了每个三个标准标签页的索引值。使用方式如 `SelectedIndex = (int)ColorViewTab.Palette`。 |
 
 :::note
-The properties for visibility use the naming pattern "IsThingVisible" rather than "ShowThing" because some elements of the UI have the ability to control both enabled and visible status separately. Naming also matches `Control` in this case.
+关于可见性的属性需使用 "IsThingVisible" 而不是 "ShowThing" 命名模式，是因为某些 UI 元素具有分别控制启用状态和可见状态的能力。命名也与 `Control` 一致。
 :::
 
-## Pseudoclasses
+## 伪类
 
-None
+无
 
-## Template Parts
+## 模板部分
 
-| Name | Type | Description |
-|------|----- |-------------|
-| `PART_HexTextBox` | TextBox | Provides an input or output for hexadecimal color notation that can be parsed by the control. |
-| `PART_TabControl` | TabControl | The main control used to navigate through the spectrum, palette and components tab/panel/page (subviews). This template part is optional and is only required for some validation scenarios of the `SelectedIndex`. |
+| 名称 | 类型 | 描述 |
+|------|----- |-----|
+| `PART_HexTextBox` | TextBox | 提供一个输入或输出，用于解析控件可以识别的十六进制颜色表示法。 |
+| `PART_TabControl` | TabControl | 用于通过光谱、调色板和组件标签页/面板/页面（子视图）导航的主控件。这个模板部分是可选的，仅在某些验证场景中需要 `SelectedIndex`。 |
+

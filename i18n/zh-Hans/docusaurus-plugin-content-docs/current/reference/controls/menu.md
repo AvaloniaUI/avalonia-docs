@@ -5,35 +5,35 @@ description: REFERENCE - Built-in Controls
 import MenuTopDockScreenshot from '/img/reference/controls/menu/menu-top-dock.gif';
 import MenuIconScreenshot from '/img/reference/controls/menu/menu-icon.gif';
 
-# Menu
+# Menu 菜单
 
-The menu control can add menu structure to an application. You will usually place a menu at the top edge of a dock panel control, so that it is drawn at the top of a window.
+菜单控件可以为应用程序添加菜单结构。通常你会将菜单放置在边缘布局面板控件的顶部边缘，这样它就会绘制在窗口的顶部。
 
 :::info
-For reference information about the dock panel, see [here](dockpanel.md).
+有关边缘布局面板的参考信息，请参见[这里](dockpanel.md)。
 :::
 
-## Menu Items
+## 菜单项
 
-A menu element will usually contain a set of nested `<MenuItem>` elements. The first level of menu items defines the horizontal part of the menu. Subsequent levels of menu items are drop-downs.
+一个菜单元素通常包含一组嵌套的 `<MenuItem>` 元素。第一层菜单项定义菜单的水平部分。后续层次的菜单项是下拉菜单。
 
-The caption of a menu item is set by the `Header` property. The content zone of a menu item can contain sub-items if required.
+菜单项的标题通过 `Header` 属性设置。菜单项的内容区可以根据需要包含子项。
 
-You can add menu separator lines by including a `<Separator>` element or by adding a menu item with its header set to the minus sign, like this:
+你可以通过包含 `<Separator>` 元素或添加标题设置为减号的菜单项来添加菜单分隔线，如下所示：
 
 ```xml
 <MenuItem Header="-" />
 ```
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-<table><thead><tr><th width="147.33333333333331">Element</th><th width="190">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Menu</code></td><td><code>DockPanel.Dock</code></td><td>Position the menu on the top edge of a dock panel.</td></tr><tr><td><code>MenuItem</code></td><td><code>Header</code></td><td>The menu item caption.</td></tr><tr><td><code>MenuItem</code></td><td><code>Command</code></td><td>The command to be executed when the menu item is clicked or selected with the keyboard.</td></tr><tr><td><code>MenuItem</code></td><td><code>MenuItem.Icon</code></td><td>Contains an icon graphic to display alongside the menu item.</td></tr><tr><td><code>Separator</code></td><td></td><td>A menu item separator line.</td></tr></tbody></table>
+<table><thead><tr><th width="147.33333333333331">元素</th><th width="190">属性</th><th>描述</th></tr></thead><tbody><tr><td><code>Menu</code></td><td><code>DockPanel.Dock</code></td><td>将菜单定位在停靠面板的顶部边缘。</td></tr><tr><td><code>MenuItem</code></td><td><code>Header</code></td><td>菜单项的标题。</td></tr><tr><td><code>MenuItem</code></td><td><code>Command</code></td><td>当菜单项被点击或通过键盘选择时执行的命令。</td></tr><tr><td><code>MenuItem</code></td><td><code>MenuItem.Icon</code></td><td>包含一个图标，用于在菜单项旁显示。</td></tr><tr><td><code>Separator</code></td><td></td><td>菜单项分隔线。</td></tr></tbody></table>
 
-## Example
+## 示例
 
-This example creates a menu docked at the top edge of a window.
+此示例创建一个停靠在窗口顶部边缘的菜单。
 
 ```xml
 <Window ...>
@@ -56,25 +56,25 @@ This example creates a menu docked at the top edge of a window.
 
 <img src={MenuTopDockScreenshot} alt="" />
 
-## Accelerator Keys
+## 快捷键
 
-An accelerator key is identified by a single letter in the header preceded by an underscore. For example:
+快捷键通过标题中的下划线和一个字母来标识。例如：
 
 ```xml
  <MenuItem Header="_File">
 ```
 
-It allows the user to access a menu item quickly. It is also sometimes called a hot key, access key or mnemonic.
+这允许用户快速访问菜单项。有时也称为热键、访问键或助记符。
 
-The user can access this feature by first pressing the Alt key, and then the accelerator key (or they can be pressed together). This is demonstrated in the second of the menu sequences in the example above.
+用户可以通过首先按下 Alt 键，然后按下快捷键（或一起按下）来访问此功能。这在上面示例的第二个菜单序列中演示了这一点。
 
-You will see that accelerator keys, where defined, are underlined on the menu as soon as the Alt key is pressed. Then any sub-menus are dropped down as soon as the accelerator key above is pressed.
+你会看到，一旦按下 Alt 键，定义了快捷键的菜单项就会在菜单上显示下划线。然后，当按下相应的快捷键时，任何子菜单都会下拉。
 
-Once keyboard interaction has been initiated with the Alt key, the user can also navigate the menus using the keyboard arrow keys. Menu items may be selected using the Enter key on the keyboard.
+一旦通过 Alt 键启动了键盘交互，用户还可以使用键盘箭头键导航菜单。菜单项可以通过键盘上的 Enter 键选择。
 
-## Menu Commands
+## 菜单命令
 
-To initiate an action, the command property of a menu item can be bound to an `ICommand` object. The command will be executed when the menu item is clicked or selected with the keyboard. For example:
+要启动一个操作，可以将菜单项的命令属性绑定到一个 `ICommand` 对象。当菜单项被点击或通过键盘选择时，将执行该命令。例如：
 
 ```xml
 <Menu>
@@ -85,12 +85,12 @@ To initiate an action, the command property of a menu item can be bound to an `I
 ```
 
 :::info
-For guidance on how to bind to commands, see [here](../../basics/user-interface/adding-interactivity.md).
+有关如何绑定命令的指导，请参见[这里](../../basics/user-interface/adding-interactivity.md)。
 :::
 
-## Menu Icons
+## 菜单图标
 
-A menu icon can be displayed by placing an image or a path icon in the `<MenuItem.Icon>` attached property. For example:
+可以通过在 `<MenuItem.Icon>` 附加属性中放置图像或路径图标来显示菜单图标。例如：
 
 ```xml
 <MenuItem Header="_Edit">
@@ -109,15 +109,15 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 <img src={MenuIconScreenshot} alt="" />
 
 :::info
-For more detailed guidance on how to add icons to your menus, see [here](../../guides/graphics-and-animation/how-to-add-menu-icons.md).
+有关如何向菜单添加图标的详细指导，请参见[这里](../../guides/graphics-and-animation/how-to-add-menu-icons.md)。
 :::
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Menu/).
+有关此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Menu/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`Menu.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)
+在 _GitHub_ 上查看源代码 [`Menu.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)
 :::

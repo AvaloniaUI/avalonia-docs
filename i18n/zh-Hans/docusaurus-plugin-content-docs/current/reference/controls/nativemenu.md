@@ -2,31 +2,31 @@
 description: REFERENCE - Built-in Controls
 ---
 
-# Native Menu
+# NativeMenu 原生菜单
 
-The native menu can display a menu on _macOS_ and some Linux distributions.
+原生菜单可以在 _macOS_ 和一些 Linux 发行版上显示菜单。
 
 :::warning
-This control can only be used attached to a tray icon. For full details about the tray icon, see the reference [here](tray-icon.md).
+此控件仅可用于附加到托盘图标。有关托盘图标的完整详细信息，请参阅参考资料[这里](tray-icon.md)。
 :::
 
-You can create sub-menus by nesting `<MenuItem>` elements.
+你可以通过嵌套 `<MenuItem>` 元素来创建子菜单。
 
-You can add menu separator lines by including a `<NativeMenuItemSeparator>` element or by adding a menu item with its header set to the minus sign, like this:
+你可以通过包含一个 `<NativeMenuItemSeparator>` 元素或添加一个其标题设置为减号的菜单项来添加菜单分隔线，如下所示：
 
 ```xml
 <NativeMenuItemSeparator Header="-" />
 ```
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-<table><thead><tr><th width="204">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Header</code></td><td>The menu caption.</td></tr><tr><td><code>Command</code></td><td>A command to execute when the user clicks the menu item.</td></tr></tbody></table>
+<table><thead><tr><th width="204">属性</th><th>描述</th></tr></thead><tbody><tr><td><code>Header</code></td><td>菜单标题。</td></tr><tr><td><code>Command</code></td><td>用户点击菜单项时执行的命令。</td></tr></tbody></table>
 
-## Example
+## 示例
 
-This example defines a native menu that can be attached to a tray icon:
+此示例定义了一个可以附加到托盘图标的本地菜单：
 
 ```xml
 <NativeMenu>
@@ -41,12 +41,12 @@ This example defines a native menu that can be attached to a tray icon:
 </NativeMenu>
 ```
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/NativeMenu/).
+有关此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/NativeMenu/)。
 :::
 
 :::info
-View the source code on GitHub [NativeMenu.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NativeMenu.cs)
+在 GitHub 上查看源代码 [NativeMenu.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NativeMenu.cs)
 :::

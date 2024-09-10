@@ -382,6 +382,13 @@ const sidebars = {
             },
             {
               'type': 'category',
+              'label': 'Windows',
+              'items': [
+                'guides/platforms/windows/host-avalonia-controls-in-winforms',
+              ],
+            },
+            {
+              'type': 'category',
               'label': 'Raspberry PI',
               'items': [
                 'guides/platforms/rpi/running-your-app-on-a-raspberry-pi',

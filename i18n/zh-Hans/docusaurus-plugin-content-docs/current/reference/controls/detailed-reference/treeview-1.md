@@ -11,7 +11,7 @@ The tree view control can present hierarchical data and allows item selection. T
 
 There are two data sources: the main items source for the control, this gives the root of the hierarchical data. Then there is the items source in the item template which allows the control to list the next level in the hierarchical data.
 
-## Example
+## 示例
 
 This example uses a MVVM pattern view model to hold some hierarchical data based on a C# node class. In this example, there is a single root node in the `Nodes` collection of the view model:
 
@@ -170,7 +170,7 @@ The tree view adds a scroll bar when it is needed. The selection can be extended
 
 <img src={TreeViewEnhancedAnimalHierarchyScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TreeView/).

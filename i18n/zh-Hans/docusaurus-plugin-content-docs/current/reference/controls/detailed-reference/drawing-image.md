@@ -4,11 +4,11 @@ description: REFERENCE - Built-in Controls
 
 # Drawing Image
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see here.
