@@ -25,7 +25,7 @@ Although in this guide we will be using the MainWindow.axaml and MainWindowViewM
 :::
 
 ## Adding the SplitView panel to the MainWindow
-Open the MainWindow.xaml file. The file should have the following content in it by default:
+Open the MainWindow.xaml file. The default MVVM project template will generate a project populated with the following default files:
 ``` xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -256,7 +256,7 @@ For more informations see [here](https://docs.avaloniaui.net/docs/guides/data-bi
 ```
 By doing so the command will be invoked each time the button is clicked and will update the IsSplitViewPaneOpen's value accordingly.
 <br><br>
-**If you followed this guide step by step you should now have something like this:**
+**If you followed this guide step by step you should now have the following window:**
 <img className="screenshot-full" src={SecondExample} alt="Second example" />
 
 ## Adding content to the button
@@ -283,7 +283,7 @@ public object? ConvertBack(object? value, Type targetType, object? parameter, Cu
     throw new NotImplementedException();
 }
 ```
-Second, define how the method will behave based on the value which will be passed to it in the IList object. We will assume that the first value of the list will be the value of `IsSplitViewPaneOpen`, and will treat it accordingly. When the value is true the method will return '>', otherwise it will return '<'. Please note that in this guide we will not use the function `ConvertBack`.
+Second, define how the method will behave based on the value which will be passed to it in the `value` paramter. When the value is true the method will return '>', otherwise it will return '<'. Please note that in this guide we will not use the function `ConvertBack`.
 ``` C#
 public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
 {
@@ -301,7 +301,7 @@ Lastly, all that's left to do is bind the converter to the button's content. To 
 ``` xml
 xmlns:convs="clr-namespace:YourNamespace.Models"
 ```
-So that the Window tag will look something like this.
+So that the Window tag will have the following content.
 ``` xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
