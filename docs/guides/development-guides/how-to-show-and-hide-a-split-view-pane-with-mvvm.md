@@ -81,7 +81,7 @@ We will now add some additional elements to the pane. First a StackPanel, then a
 ```
 
 ### Adding some content to the SplitView
-We will add a TextBlock in the main part of the SplitView, outside the Pane. In the future you may replace the TextBlock with the content you need. This part of the SplitView will always be visible.
+We will add a TextBlock in the main part of the SplitView, outside the Pane. In future, you may replace the TextBlock with the content you need. This part of the SplitView will always be visible.
 ``` xml
 <SplitView PanePlacement="Right" DisplayMode="CompactInline">
     <SplitView.Pane>
@@ -283,7 +283,7 @@ public object? ConvertBack(object? value, Type targetType, object? parameter, Cu
     throw new NotImplementedException();
 }
 ```
-Second, define how the method will behave based on the value which will be passed to it in the `value` paramter. When the value is true the method will return '>', otherwise it will return '<'. Please note that in this guide we will not use the function `ConvertBack`.
+Second, define how the method will behave based on the value which will be passed to it in the `value` parameter. When the value is true the method will return '>', otherwise it will return '<'. Please note that in this guide we will not use the function `ConvertBack`.
 ``` C#
 public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
 {
