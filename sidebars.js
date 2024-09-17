@@ -252,6 +252,7 @@ const sidebars = {
           'items': [
             'guides/implementation-guides/how-to-use-the-mvvm-pattern',
             'guides/implementation-guides/how-to-implement-dependency-injection',
+            'guides/implementation-guides/how-to-implement-dependency-injection-with-pure-di',
             'guides/implementation-guides/developer-tools',
             'guides/implementation-guides/logging-errors-and-warnings',
             'guides/implementation-guides/ide-support',
