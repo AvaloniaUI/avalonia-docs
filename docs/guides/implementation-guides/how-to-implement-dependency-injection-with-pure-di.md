@@ -137,7 +137,7 @@ Next, modify the `App.axaml` file to use view models according to the MVVM appro
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:avaloniaSimpleApp="clr-namespace:AvaloniaSimpleApp"
+             xmlns:app="clr-namespace:AvaloniaSimpleApp"
              x:Class="AvaloniaSimpleApp.App"
              RequestedThemeVariant="Default">
 
@@ -148,7 +148,7 @@ Next, modify the `App.axaml` file to use view models according to the MVVM appro
   </Application.Styles>
   
   <Application.Resources>
-    <avaloniaSimpleApp:Composition x:Key="Composition" />
+    <app:Composition x:Key="Composition" />
   </Application.Resources>
 
 </Application>
@@ -158,7 +158,7 @@ This markup fragment
 
 ```xml
 <Application.Resources>
-    <avaloniaSimpleApp:Composition x:Key="Composition" />
+    <app:Composition x:Key="Composition" />
 </Application.Resources>
 ```
 
