@@ -104,7 +104,7 @@ For further information about the concept behind data binding, see [here](../dat
 
 ## Code-behind Files
 
-Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.
+Many Avalonia XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.axaml.cs`.
 
 :::info
 For guidance about programming using code-behind files, see [here](code-behind).
