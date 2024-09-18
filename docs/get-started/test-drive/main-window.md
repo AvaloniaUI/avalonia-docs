@@ -22,7 +22,7 @@ In the **MainWindow.axaml** XAML file, the `<Window>...</Window>` XAML tag repre
 <img src={LayoutZonesDiagram} alt="" />
 
 
-## The MainView User Control
+## The MainView control
 
 Inside **MainView.axaml**, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a text block control. The `Text` property of the text block is bound to the **Greeting** property of the **MainViewModel** class. This is a property that will be set in the constructor of the view model class.
 ```
