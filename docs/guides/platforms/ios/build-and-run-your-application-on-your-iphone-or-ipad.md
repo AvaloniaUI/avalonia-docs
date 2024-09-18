@@ -85,7 +85,3 @@ Set the value exactly as the bold text at the top of the window on your selected
 `Apple Development: dan@walms.co.uk (3L323F7VSS)` in this case.
 
 After this you can run and debug your application on the iPhone or iPad like any normal
-
-:::info
-`Note that this certificate is not bound to the Bundle ID. It basically is the certificate for the Mac user account. The very same certificate can be used in many different projects with different Bundle IDs`
-:::
