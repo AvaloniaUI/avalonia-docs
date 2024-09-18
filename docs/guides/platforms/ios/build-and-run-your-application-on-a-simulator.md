@@ -26,3 +26,11 @@ dotnet run
 <img src={IOSSimulatorScreenshot} alt='Application running on iPad simulator'/>
 
 If you use `JetBrains Rider` or `Visual Studio for Mac` you can open the solution and run, build and debug your program inside the simulator.
+
+:::info
+`Dependent on the .NET version and the iOS Simulator version it may require Rosetta 2 to be installed on Apple Slicon Macs. To install Rosetta 2, you can use the following command in the terminal:`
+
+```bash
+/usr/sbin/softwareupdate --install-rosetta
+```
+:::
