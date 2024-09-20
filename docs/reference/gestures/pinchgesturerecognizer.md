@@ -26,6 +26,24 @@ image.GestureRecognizers.Add(new PinchGestureRecognizer());
 The PinchGestureRegonizer raises a `Gestures.PinchEvent` when it detects the start of a pull gesture. When the pull ends, from the pointer being released or another gesture start, it raises a `Gestures.PinchEndedEvent`.
 The `Scale` property in the args passed to the `Gestures.PinchEvent` event handler contains the relative size of the pinch since it started.
 
+## Binding Events
+After the PinchGestureRecognizer has been added to your control, you need to bind them in your code behind either through an inline handler or to an event function:
+```csharp title='C#'
+image.AddHandler(Gestures.PinchEvent, (s, e) => { });
+image.AddHandler(Gestures.PinchEndedEvent, (s, e) => { });
+```
+```csharp title='C#'
+image.AddHandler(Gestures.PinchEvent, Image_PinchGesture);
+image.AddHandler(Gestures.PinchEndedEvent, Image_PinchGestureEnded);
+...
+private void Image_PinchGesture(object? sender, PinchGestureEventArgs e) { }
+private void Image_PinchGestureEnded(object? sender, PinchGestureEndedEventArgs e) { }
+```
+If your event handles the gesture completely, you can mark the event as handled by setting:
+```csharp title='C#'
+e.Handled = true;
+```
+
 ## More Information
 
 :::info
