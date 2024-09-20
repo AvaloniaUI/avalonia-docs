@@ -1,5 +1,4 @@
 ---
-title: MaskedTextBox 掩码文本框
 description: REFERENCE - Built-in Controls
 ---
 
