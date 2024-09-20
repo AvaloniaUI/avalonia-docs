@@ -17,7 +17,7 @@ import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbu
 | `Delay`   | 在开始生成重复点击之前等待的时间（毫秒）。默认为300毫秒。                          |
 | `Interval`| 生成点击事件之间的时间间隔（毫秒）。默认为100毫秒。                               |
 
-## 更多信息
+## 示例代码
 
 下面的示例演示了一个重复按钮，使用默认的间隔和延迟来生成点击事件。
 
