@@ -136,7 +136,7 @@ Only supported on the OS, with physical file paths, primarily only desktop.
 | `TryGetFolderFromPathAsync` | ✔ | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ |
 | `TryGetWellKnownFolderAsync` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
-\* Bookmarks are not properly supported on desktop platforms and instead return file path instead. MacOS support is planned in order to get it work with Sandboxed Apple Store apps.
+\* Bookmarks are not properly supported on desktop platforms and instead return file path instead. macOS support is planned in order to get it work with Sandboxed Apple Store apps.
 
 ** Managed file picker works only on desktop platforms where it's possible to open a custom window.
 

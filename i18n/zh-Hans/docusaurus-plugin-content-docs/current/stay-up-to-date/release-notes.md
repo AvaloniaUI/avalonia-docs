@@ -192,14 +192,14 @@ https://www.nuget.org/packages/Avalonia/11.0.5
 * Fixes font family definitions that mix embedded and system fonts by @Gillibald in https://github.com/AvaloniaUI/Avalonia/pull/12871
 * Fix DataGrid' SelectedItems removing wrong item when DataGrid is grou. by @liwuqingxin in https://github.com/AvaloniaUI/Avalonia/pull/12875
 * Fix focus loss issue with AutocompleteBox by @emmauss in https://github.com/AvaloniaUI/Avalonia/pull/12883
-* MacOS file type filter in native file dialog by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/12899
+* macOS file type filter in native file dialog by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/12899
 * Change iOS initialization order by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/12915
 * Detect recursion and check for cancellation in analyser `while` loops by @TomEdwardsEnscape in https://github.com/AvaloniaUI/Avalonia/pull/12916
 * Trimmable runtime xaml loader by @maxkatz6 in https://github.com/AvaloniaUI/Avalonia/pull/12937
 * [X11] Don't convert the current time from long to int by @kekekeks in https://github.com/AvaloniaUI/Avalonia/pull/12941
 * [Windows] [IME] Prevent duplicate input for some IMEs by @Gillibald in https://github.com/AvaloniaUI/Avalonia/pull/12942
 * Fix - TextPresenter ignores FontStretch property by @VladimirDrobyshev in https://github.com/AvaloniaUI/Avalonia/pull/12947
-* Add support for setting tooltip text for TrayIcons on MacOS by @Takoooooo in https://github.com/AvaloniaUI/Avalonia/pull/12948
+* Add support for setting tooltip text for TrayIcons on macOS by @Takoooooo in https://github.com/AvaloniaUI/Avalonia/pull/12948
 * Fix VirtualizingStackPanel and nth-child for the currently realizing item container by @MrJul in https://github.com/AvaloniaUI/Avalonia/pull/12957
 * FluentTheme: settable ListBoxItem.FontWeight/FontSize by @MrJul in https://github.com/AvaloniaUI/Avalonia/pull/12958
 * Added guards for compositor reentrancy and exposed batch lifetime events by @kekekeks in https://github.com/AvaloniaUI/Avalonia/pull/12968
@@ -285,7 +285,7 @@ https://www.nuget.org/packages/Avalonia/11.0.2
 
 ### What's Changed
 * Use embedded pdb for analyzers and build tasks by @MrJul in https://github.com/AvaloniaUI/Avalonia/pull/12336
-* Fix window incorrect positioning with window startup location CenterScreen on MacOS by @Takoooooo in https://github.com/AvaloniaUI/Avalonia/pull/12327
+* Fix window incorrect positioning with window startup location CenterScreen on macOS by @Takoooooo in https://github.com/AvaloniaUI/Avalonia/pull/12327
 * Fixed issue where RowDetailsTemplate was getting the wrong DataContext by @Gundz in https://github.com/AvaloniaUI/Avalonia/pull/12174
 * Catch dbus errors so that WatchAsync can register all names by @ThereGoesMySanity in https://github.com/AvaloniaUI/Avalonia/pull/12377
 
