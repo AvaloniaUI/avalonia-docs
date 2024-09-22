@@ -37,7 +37,7 @@ import ColorPaletteSixteen from '/img/reference/controls/colorpicker/color-palet
 
 ## 在您的应用程序中使用
 
-Avalonia 在一些资源受限的环境中使用，例如嵌入式设备。因此根据种种原因，像 `ColorPicker` 这样的较大控件没有包含在主要的 Avalonia UI Nuget 包中。这意味着需要额外的步骤将 `ColorPicker` 添加到您的应用中：
+Avalonia 在一些资源受限的环境中使用，例如嵌入式设备。因此根据种种原因，像 `ColorPicker` 这样的较大控件没有包含在主要的 Avalonia UI NuGet 包中。这意味着需要额外的步骤将 `ColorPicker` 添加到您的应用中：
 
 1. 将 `Avalonia.Controls.ColorPicker` nuget 添加到您的项目中。这必须与您的 Avalonia 其他包的版本匹配。
 2. 通过在 `App.axaml` 中添加控件主题和样式，为所有取色器控件添加：

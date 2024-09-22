@@ -80,7 +80,7 @@ public class MainViewModel : ViewModelBase
 - using [ReactiveUI.Fody.Helpers](https://www.reactiveui.net/docs/handbook/view-models/boilerplate-code.html) NOTE: Fody.Helpers is not required (optional).
 
 :::info
-On how to add a nuget package, you can follow steps from the Nuget page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
+On how to add a nuget package, you can follow steps from the NuGet page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
 :::
 
 ```cs
