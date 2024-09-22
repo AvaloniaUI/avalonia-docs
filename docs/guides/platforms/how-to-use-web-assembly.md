@@ -8,11 +8,16 @@ title: Web Assembly
 
 Run in the browser with WebAssembly
 
-1. Install `wasm-tools` workload tools. See [dotnet documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-workload-install). If you have an older .NET SDK, it might ask you to install other workloads like `wasm-experimental` as well.
+1. Install `wasm-tools` workload tools. See [dotnet documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-workload-install).
 
 ```bash
 dotnet workload install wasm-tools
 ```
+
+:::note
+If you are running `net8.0-browser` application on .NET 9 SDK, you should install `wasm-tools-net8` workload instead.
+If you have an older .NET SDK, it might ask you to install other workloads like `wasm-experimental` as well.
+:::
 
 2. Install or update the dotnet templates to the latest version.
 
