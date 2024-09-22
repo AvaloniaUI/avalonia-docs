@@ -7,7 +7,7 @@ title: macOS Development
 
 It's actually really simple. If you're developing in Windows (which is easier for a Windows developer), once your AvaloniaUI application is looking about right and you're ready to try it on macOS, copy your entire project folder to your Mac (don't worry - all the files will be treated as basic flat files). If you have a github for it, commit it and then check it out on your dev Mac machine.
 
-You'll need a development platform for macOS such as Visual Studio for MacOS, JetBrains Rider or you can build from the command line if you have the dotnet SDK installed on you Mac.
+You'll need a development platform for macOS such as Visual Studio for macOS, JetBrains Rider or you can build from the command line if you have the dotnet SDK installed on you Mac.
 See the Getting Started>>IDE Support for more details.
 
 ### Visual Studio for Mac or JetBrains Rider
@@ -26,7 +26,7 @@ To run either type "dotnet run --project pathToProject/myproject.csproj" where "
 
 Your build platform will recompile the code and since it's target independent, it will build the native (ie: Mac) version and link all the Mac target DLLs for .Net Core 6.0 and AvaloniaUI.
 
-The following instructions are for more advanced builds such as having a proper Mac app bundle or of you need better intergration with native MacOS.
+The following instructions are for more advanced builds such as having a proper Mac app bundle or of you need better intergration with native macOS.
 
 ## Native code
 
