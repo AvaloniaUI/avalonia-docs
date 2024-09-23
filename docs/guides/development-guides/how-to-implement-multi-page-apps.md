@@ -8,11 +8,17 @@ title: How To Implement Multi-page Apps
 
 Content in preparation.
 
+<GitHubSampleLink title="Clipboard" link="https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList"/>
+
 This guide will show you how to employ user controls as page views, and the view locator class, to implement a multiple-page application.
 
 
 
-that is added by the Avalonia MVVM solution template.
+ViewLocator.cs is added by the Avalonia MVVM solution template.
+
+:::info 
+See the [The View Locator](../../concepts/view-locator).
+:::
 
 ```csharp
 public class ViewLocator : IDataTemplate
