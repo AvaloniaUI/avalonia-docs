@@ -2,11 +2,11 @@
 description: REFERENCE - Gestures
 ---
 
-# ScrollGestureRecognizer
+# ScrollGestureRecognizer 滚动手势识别器
 
 一个用于跟踪滚动手势的手势识别器。可以将其附加到控件上，以便在控件的边界内检测指针在特定方向上的移动。当控件水平、垂直或同时进行内容平移时，这将特别有用。
 
-## 使用 ScrollGestureRecognizer
+## 使用滚动手势识别器
 可以使用控件的 `GestureRecognizers` 属性将 `ScrollGestureRecognizer` 附加到控件上。
 ```xml
 <Image Stretch="UniformToFill"

@@ -1,11 +1,9 @@
 ---
 description: REFERENCE
-id: index
-title: 参考资料
-sidebar_class_name: hidden
+id: 控件指南
 ---
 
-import {DocsCardList} from '../../../../../src/components/DocsCard';
+import {DocsCardList} from '../../../../../../src/components/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocsCardList list={useCurrentSidebarCategory().items} />

@@ -38,7 +38,7 @@ import SplitButtonExportButtonScreenshot from '/img/reference/controls/buttons/s
 
 [SplitButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/SplitButton.cs)
 
-## 更多信息
+## 示例代码
 
 ### 基本示例
 

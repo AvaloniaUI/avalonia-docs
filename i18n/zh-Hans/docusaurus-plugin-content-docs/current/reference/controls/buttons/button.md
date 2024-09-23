@@ -8,7 +8,7 @@ import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.
 
 按钮是一种对指针动作做出反应的控件（也有一些键盘等效操作）。当指针按下时，它会呈现出被按下的状态。
 
-将指针按下到释放的序列解释为点击；此行为是可配置的。
+指针按下到释放的序列会解释为点击，并且此行为是可配置的。
 
 :::warning
 在确定按钮是否被用户按下时，请始终使用`Click`事件而不是`PointerPressed`。`Click`是`Button`特有的高级事件，表示按钮已被按下。

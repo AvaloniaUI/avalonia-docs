@@ -46,7 +46,7 @@ import ToggleSplitButtonTextListScreenshot from '/img/reference/controls/buttons
 
 [ToggleSplitButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/ToggleSplitButton.cs)
 
-## 更多信息
+## 示例代码
 
 ### 基本示例
 
