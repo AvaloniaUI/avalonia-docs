@@ -53,19 +53,15 @@ The template will create a new solution and project.
   <TabItem value="vs" label="Visual Studio">
 
 - In **Visual Studio**, click **Create a new project**.
-- Type `Avalonia` in the search box.
-- Click **Avalonia Application** then click **Next**.
+- Type `Avalonia MVVM` in the search box.
+- Click **Avalonia .NET MVVM App** then click **Next**.
 
 <img className="center" src={VsFindAvaloniaTemplateScreenshot} />
 
-- Name the project `GetStartedApp`, and click **Create**.
+- Name the project `GetStartedApp`, and click **Next**.
 
-- The next screen allows selecting the platforms you wish to target: click **Desktop** then click **Next**.
-
-- The next screen allows selecting a design pattern: click **ReactiveUI** then click **Create**.
-
-The template will create a new solution and two new projects. `GetStartedApp` is the main project that is shared between each platform. `GetStartedApp.Desktop` is the platform-specific project for the desktop platform.
-
+- The next screen allows selecting a design pattern: select **ReactiveUI** as the MVVM Toolkit then click **Create**.
+- The template will create a new solution and project.
 <img className="center" src={VsNewAvaloniaProjectScreenshot} />
 
   </TabItem>
@@ -91,9 +87,6 @@ Press the **Run** button in the Rider toolbar:
 
   </TabItem>
   <TabItem value="vs" label="Visual Studio">
-
-  Right-click on the `GetStartedApp.Desktop` project and select **Set as Startup Project**.
-
   Hit `F5` to run the project.
 
   </TabItem>

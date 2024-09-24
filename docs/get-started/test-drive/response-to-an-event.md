@@ -44,7 +44,7 @@ The partial class `MainWindow` corresponds to the window object that is created 
 ```xml
 <Window 
     ...
-    x:Class="GetStartedApp.MainWindow" >
+    x:Class="GetStartedApp.Views.MainWindow" >
 </Window>
 ```
 
@@ -83,7 +83,7 @@ If you're using an IDE you will see the Avalonia UI Intellisense as you type.
 <img className="center" src={ButtonIntellisenseClickScreenshot} alt="" />
 :::
 
-- Run the app and click the button.
+- Run the app (in debug mode) and click the button.
 
 You should see the result on the Output window for Debug, like this:
 
