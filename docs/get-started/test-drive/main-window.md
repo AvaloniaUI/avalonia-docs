@@ -22,14 +22,14 @@ In the **MainWindow.axaml** XAML file, the `<Window>...</Window>` XAML tag repre
 <img src={LayoutZonesDiagram} alt="" />
 
 
-## The MainWindow control
+## The MainView control
 
-Inside **MainWindow.axaml**, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a text block control. The `Text` property of the text block is bound to the **Greeting** property of the **MainWindowViewModel** class. This is a property that will be set in the constructor of the view model class.
+Inside **MainView.axaml**, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a text block control. The `Text` property of the text block is bound to the **Greeting** property of the **MainViewModel** class. This is a property that will be set in the constructor of the view model class.
 ```
 <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
 
-You can change the text in the file **MainWindowViewModel.cs** to see the change reflected in the user interface.
+You can change the text in the file **MainViewModel.cs** to see the change reflected in the user interface.
 
 <img className="center" src={ViewModelScreenshot} alt="" />
 <img className="center" src={AppRunningScreenshot} alt="" />
@@ -41,7 +41,7 @@ For more information about the concept of control layout zones, see [here](../..
 ## The Visual Studio Designer
 
 If you're using Visual Studio you should see the XAML code and preview pane.
-Navigate to the **MainWindow.axaml** file and click the **Split View** button at the top of the editor window.
+Navigate to the **MainView.axaml** file and click the **Split View** button at the top of the editor window.
 
 <img className="center" src={VsPreviewerScreenshot} alt="" />
 

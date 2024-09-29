@@ -8,11 +8,16 @@ title: Web Assembly
 
 Run in the browser with WebAssembly
 
-1. Install `wasm-tools` workload tools. See [dotnet documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-workload-install). If you have an older .NET SDK, it might ask you to install other workloads like `wasm-experimental` as well.
+1. Install `wasm-tools` workload tools. See [dotnet documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-workload-install).
 
 ```bash
 dotnet workload install wasm-tools
 ```
+
+:::note
+If you are running `net8.0-browser` application on .NET 9 SDK, you should install `wasm-tools-net8` workload instead.
+If you have an older .NET SDK, it might ask you to install other workloads like `wasm-experimental` as well.
+:::
 
 2. Install or update the dotnet templates to the latest version.
 
@@ -41,33 +46,40 @@ cd BrowserTest.Browser
 dotnet run
 
 # Output:
-# App url: http://localhost:5000/index.html
-# App url: https://localhost:5001/index.html
+# App url: http://127.0.0.1:53576/
+# App url: https://127.0.0.1:53577/
+# Debug at url: http://127.0.0.1:53576/_framework/debug
+# Debug at url: https://127.0.0.1:53577/_framework/debug
 ```
-
 
 ### Deployment
 In the `BrowserTest.Browser` directory, run:
 ```bash
 dotnet publish
-
-# ... (build output)
-# Generated app bundle at .../bin/Release/net8.0/browser-wasm/AppBundle/
 ```
-Now you can serve your app from the `bin/Release/net8.0/browser-wasm/AppBundle` folder (for .NET 8.0, for example) using your favorite web server (such as Azure Static Web Apps).
 
-> **Beware:**
+After project was published, .NET SDK creates an app bundle directory with `index.html` file and compiled application files.
+With latest .NET 8 SDK, this directory is located at `bin/Release/net8.0-browser/browser-wasm/publish`.
+Now you can serve your app from this directory using your favorite web server (such as Azure Static Web Apps).
+
+:::note
+On older .NET SDK versions, app bundle was located in different directory: `bin/Release/net8.0-browser/browser-wasm/AppBundle` (search for `AppBundle`).
+:::
+
+:::warning
 Currently using `dotnet publish` with the `-o` or `--output` flag does not produce the AppBundle folder in the output directory. (See [this issue](https://github.com/dotnet/runtime/issues/94319).) You'll still have to grab it out of the `bin` directory at the path specified by the publish output.
+:::
 
 #### Testing AppBundle locally
-You can serve your wasm app from the AppBundle directly using the [dotnet-serve](https://github.com/natemcmaster/dotnet-serve) tool as follows:
+
+You can serve your wasm app from this directly using the [dotnet-serve](https://github.com/natemcmaster/dotnet-serve) tool as follows:
 ```bash
 dotnet tool install --global dotnet-serve
 
-dotnet serve -d:bin/Release/net8.0/browser-wasm/AppBundle 
+dotnet serve -d:bin/Release/net8.0-browser/browser-wasm/publish
 
 # Output: 
-# Starting server, serving bin/Release/net8.0/browser-wasm/AppBundle
+# Starting server, serving bin/Release/net8.0-browser/browser-wasm/publish
 # Listening on any IP:
 #   http://localhost:49875
 ```
