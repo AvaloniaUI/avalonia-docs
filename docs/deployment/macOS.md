@@ -104,7 +104,7 @@ Add other runtime identifiers as necessary. Each one should be separated by a se
 
 This type of icon file can not only be created on Apple devices, but it is also possible on Linux devices.  
 You can find more information about how you can achieve that in this blog post:  
-[Creating Mac OS X Icons (icns) on Linux](https://dentrassi.de/2014/02/25/creating-mac-os-x-icons-icns-on-linux/)
+[Creating macOS Icons (icns) on Linux](https://dentrassi.de/2014/02/25/creating-mac-os-x-icons-icns-on-linux/)
 
 ### Notes on the `.app` executable file
 
