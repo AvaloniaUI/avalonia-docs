@@ -18,7 +18,7 @@ The following code shows a `UserControl` which defines its own CSS-like style.
         </Style>
     </UserControl.Styles>
     <TextBlock Classes="h1">Header</TextBlock>
-<UserControl>
+</UserControl>
 ```
 
 <XpfAd/>
