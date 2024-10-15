@@ -4,27 +4,27 @@ description: REFERENCE - Built-in Controls
 
 import PathIconHouseScreenshot from '/img/reference/controls/pathicon/pathicon-house.png';
 
-# Path Icon
+# PathIcon 路径图标
 
-The path icon control can draw an icon graphic from a stream geometry. For example, you can use the icon geometries from the _Avalonia UI_ Fluent icons resource.
+`PathIcon` 控件可以从流几何图形绘制图标。例如，您可以使用 _Avalonia UI_ Fluent 图标资源中的图标几何图形。
 
 :::info
-To see the full list of Fluent icons available with _Avalonia UI_, see [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
+要查看 _Avalonia UI_ 提供的 Fluent 图标的完整列表，请参见 [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
 :::
 
-This control is most often used as part of a composition inside another control. For example, to create an icon in a menu or a button.
+此控件通常作为另一个控件内部组合的一部分使用。例如，在菜单或按钮中创建图标。
 
-## 常用属性
+## 有用的属性
 
-你可能最常使用这些属性：
+您可能最常使用这些属性：
 
-<table><thead><tr><th width="163">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Data</code></td><td>The geometry for the icon.</td></tr><tr><td><code>Foreground</code></td><td>The color used to draw the icon.</td></tr></tbody></table>
+<table><thead><tr><th width="163">属性</th><th>描述</th></tr></thead><tbody><tr><td><code>Data</code></td><td>图标的几何图形。</td></tr><tr><td><code>Foreground</code></td><td>用于绘制图标的颜色。</td></tr></tbody></table>
 
 ## 示例
 
 ```xml
 <PathIcon Height="200" Width="200" Foreground="Blue"             
-            Data="{StaticResource building_shop_regular}"/>
+      Data="{StaticResource building_shop_regular}"/>
 ```
 
 ```xml title='Resources'
@@ -33,12 +33,12 @@ This control is most often used as part of a composition inside another control.
 </Window.Resources>
 ```
 
-It works in the preview pane as well:
+它在预览窗格中也能正常工作：
 
 <img src={PathIconHouseScreenshot} alt="" />
 
 ## 更多信息
 
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/PathIcon/).
+有关此控件的完整 API 文档，请参见 [这里](https://reference.avaloniaui.net/api/Avalonia.Controls/PathIcon/)。
 
-View the source code on _GitHub_ [`PathIcon.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PathIcon.cs)
+在 _GitHub_ 上查看源代码 [`PathIcon.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PathIcon.cs)

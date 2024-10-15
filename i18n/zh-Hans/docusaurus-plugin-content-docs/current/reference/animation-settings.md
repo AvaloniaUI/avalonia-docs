@@ -36,18 +36,14 @@ import SineEaseOutScreenshot from '/img/reference/animation-settings/sine-ease-o
 
 # 动画设置
 
-This section contains full lists of the _Avalonia UI_ animation settings:
-本节包含 _Avalonia UI_ 动画设置的完整列表：
-
-* 缓动函数（Easing Functions）
-* 填充模式（FillMode）
-* 播放方向（PlaybackDirection）
-* 重复（IterationCount）
+本节描述了如何自定义 `Animation` 播放。
 
 ## 缓动函数（Easing Functions）
 
-| Default                                                       |
-|---------------------------------------------------------------|
+`Easing` 函数描述了动画属性在动画时间内从起始值到结束值的变化速度。`Avalonia.Animation.Easings` 包含以下缓动函数：
+
+| 默认                                                         |
+|-------------------------------------------------------------|
 | `LinearEasing`<br/><img src={LinearEasingScreenshot} alt=""/> |
 
 | Ease-In                                                                 | Ease-Out                                                                  | Ease-In-Out                                                                   |
@@ -63,36 +59,38 @@ This section contains full lists of the _Avalonia UI_ animation settings:
 | `ElasticEaseIn`<br/><img src={ElasticEaseInScreenshot} alt=""/>         | `ElasticEaseOut`<br/><img src={ElasticEaseOutScreenshot} alt=""/>         | `ElasticEaseInOut`<br/><img src={ElasticEaseInOutScreenshot} alt=""/>         |
 | `BounceEaseIn`<br/><img src={BounceEaseInScreenshot} alt=""/>           | `BounceEaseOut`<br/><img src={BounceEaseOutScreenshot} alt=""/>           | `BounceEaseInOut`<br/><img src={BounceEaseInOutScreenshot} alt=""/>           |
 
-## 填充模式（FillMode）
+此外，您可以通过继承 `Easing` 或通过向 `SplineEasing` 或 `SpringEasing` 提供参数来提供自己的缓动函数。
 
-动画的填充模式属性定义了动画运行后设置属性在延迟运行之间的持续方式。
+## 填充模式（FillModes）
 
-以下表格描述了可能的行为：
+`Animation` 的 `FillMode` 属性定义了动画完成后以及在运行之间的延迟期间动画属性的持久化方式。
 
-| 值          | 描述                              |
-|------------|---------------------------------|
-| `None`     | 在动画后值不会持续，也不会在延迟时应用第一个值。        |
-| `Forward`  | 最后一个插值值将持续到目标属性。                |
-| `Backward` | 第一个插值值将在动画延迟时显示。                |
-| `Both`     | 同时应用 `Forward` 和 `Backward` 行为。 |
+下表描述了支持的行为：
+
+| 值        | 描述                                                                                                       |
+|------------|-----------------------------------------------------------------------------------------------------------|
+| `None`     | 动画完成后值不会持久化，动画延迟时不会应用第一个值。                                                      |
+| `Forward`  | 最后插值的值将持久化到目标属性。                                                                          |
+| `Backward` | 动画延迟时将显示第一个插值的值。                                                                          |
+| `Both`     | 将应用 `Forward` 和 `Backward` 行为。                                                                     |
 
 ## 播放方向（PlaybackDirection）
 
-播放方向定义了动画的播放方式，包括任何重复。以下表格描述了可能的设置：
+`PlaybackDirection` 定义了 `Animation` 的播放方式。下表描述了可能的设置：
 
-
-| Value              | Description     |
-|--------------------|-----------------|
-| `Normal`           | 动画以正常方式播放。      |
-| `Reverse`          | 动画以反向方向播放。      |
-| `Alternate`        | 动画先正向播放，然后反向播放。 |
-| `AlternateReverse` | 动画先反向播放，然后正向播放。 |
+| 值                  | 描述                                                     |
+|--------------------|---------------------------------------------------------|
+| `Normal`           | 动画正常播放。                                           |
+| `Reverse`          | 动画反向播放。                                           |
+| `Alternate`        | 动画先正向播放，然后反向播放。                           |
+| `AlternateReverse` | 动画先反向播放，然后正向播放。                           |
 
 ## 重复（IterationCount）
 
-动画元素上的重复属性设置了动画的重复次数。有两种格式的设置方式：
+`Animation` 元素上的 `IterationCount` 设置动画要重播的次数。此设置有两种格式：
 
-| 值          | 描述                    |
-|------------|-----------------------|
-| `N`        | N 是整数——重复 N 次。N 可以是零。 |
-| `Infinite` | 无限重复。                 |
+| 值        | 描述                                      |
+|------------|------------------------------------------|
+| `N`        | (N 是一个整数) - 播放 N 次, N 可以为零。 |
+| `Infinite` | 永远重复                                  |
+

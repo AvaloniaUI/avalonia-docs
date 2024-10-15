@@ -6,41 +6,41 @@ description: REFERENCE
 
 _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
-| 转换器                                 | 描述                                      |
-|-------------------------------------|-----------------------------------------|
-| 否定运算符                               | 可以将 `!` 运算符放在数据绑定路径前面，返回布尔值的反转。参见下面的备注。 |
-| `StringConverters.IsNullOrEmpty`    | 如果输入字符串为 null 或空字符串，则返回 `true`。         |
-| `StringConverters.IsNotNullOrEmpty` | 如果输入字符串不为 null 且不为空字符串，则返回 `false`。     |
-| `ObjectConverters.IsNull`           | 如果输入对象为 null，则返回 `true`。                |
-| `ObjectConverters.IsNotNull`        | 如果输入对象不为 null，则返回 `false`。              |
-| `BoolConverters.And`                | 这是一个多值转换器，如果所有输入值都为 `true`，则返回 true。    |
-| `BoolConverters.Or`                 | 这是一个多值转换器，如果任何输入值为 `true`，则返回 true。     |
+| 转换器                              | 描述                                                                                                                               |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 取反运算符                         | 可以在数据绑定路径前面放置 ! 运算符以返回布尔值的反值。另请参见下面的注释。                                                        |
+| `StringConverters.IsNullOrEmpty`    | 如果输入字符串为空或为 null，则返回 `true`                                                                                         |
+| `StringConverters.IsNotNullOrEmpty` | 如果输入字符串为空或为 null，则返回 `false`                                                                                        |
+| `ObjectConverters.IsNull`           | 如果输入为 null，则返回 `true`                                                                                                     |
+| `ObjectConverters.IsNotNull`        | 如果输入为 null，则返回 `false`                                                                                                    |
+| `BoolConverters.And`                | 一个多值转换器，如果所有输入都为 true，则返回 `true`                                                                             |
+| `BoolConverters.Or`                 | 一个多值转换器，如果任何输入为 true，则返回 `true`                                                                               |
 
-## 否定运算符示例
+## 取反运算符示例
 
-这个例子展示了当绑定的值为false时，文本块的情况：
+此示例显示当绑定值为 false 时的 `TextBlock`：
 
 ```xml
 <StackPanel>
   <TextBox Name="input" IsEnabled="{Binding AllowInput}"/>
-  <TextBlock IsVisible="{Binding !AllowInput}">Input is not allowed</TextBlock>
+  <TextBlock IsVisible="{Binding !AllowInput}">不允许输入</TextBlock>
 </StackPanel>
 ```
 
-否定运算符在绑定到非布尔值时也可以工作。这是因为绑定的值首先会被转换为布尔值（使用函数`Convert.ToBoolean`），然后结果会被取反。
+当您绑定到非布尔值时，取反运算符也有效。这是因为绑定值首先转换为布尔值（使用函数 `Convert.ToBoolean`），然后结果被取反。
 
-例如，整数零会被转换为false（通过函数`Convert.ToBoolean`），而其他所有整数值都会被转换为true，因此你可以使用否定运算符来在集合为空时显示一条消息，像这样：
+例如，由于整数零被转换为 false（通过函数 `Convert.ToBoolean`），而所有其他整数值被转换为 true，您可以使用取反运算符在集合为空时显示消息，如下所示：
 
 ```xml
 <Panel>
   <ListBox ItemsSource="{Binding Items}"/>
-  <TextBlock IsVisible="{Binding !Items.Count}">No results found</TextBlock>
+  <TextBlock IsVisible="{Binding !Items.Count}">未找到结果</TextBlock>
 </Panel>
 ```
 
-你也可以连续使用否定运算符两次。例如，在你想要将整数转换为布尔值，然后对该值取反时，可以这样写：
+您还可以使用取反运算符两次。例如，当您希望执行从整数到布尔值的转换，然后取反该值时。
 
-你可以使用这种方式来在集合为空时隐藏一个控件（计数为零），像这样：
+您可以使用此方法在集合为空（计数为零）时隐藏控件，如下所示：
 
 ```xml
 <Panel>
@@ -50,7 +50,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 ## 其他转换示例
 
-这个绑定示例将在绑定的文本为null或空字符串时隐藏文本块：
+此示例绑定将在绑定文本为空或为 null 时隐藏文本块：
 
 ```xml
 <TextBlock Text="{Binding MyText}"
@@ -58,7 +58,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
                        Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
 ```
 
-而这个示例将在绑定的对象为null或为空时隐藏内容控件：
+此示例将在绑定对象为空或为 null 时隐藏内容控件：
 
 ```xml
 <ContentControl Content="{Binding MyContent}"
@@ -68,7 +68,7 @@ _Avalonia UI_ 包含许多用于常见场景的内置数据绑定转换器：
 
 ## 更多信息
 
-
 :::info
-你可以查看 Avalonia UI 的[值转换器示例](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/ValueConversionSample)。
+您可以在 [这里](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/ValueConversionSample) 查看 Avalonia UI 值转换器示例。
 :::
+

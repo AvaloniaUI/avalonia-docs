@@ -2,11 +2,10 @@
 description: REFERENCE - Gestures
 ---
 
-# PinchGestureRecognizer
-
+# PinchGestureRecognizer 捏合手势识别器
 一个用于追踪捏合手势的手势识别器。捏合手势发生在两个触控点向彼此靠近或远离的情况下。这在实现捏合缩放交互的控件中非常有用。
 
-## Using a PinchGestureRecognizer
+## 使用捏合手势识别器
 可以通过将 `PinchGestureRecognizer` 添加到控件的 `GestureRecognizers` 属性来将其附加到控件上。
 ```xml
 <Image Stretch="UniformToFill"
