@@ -15,7 +15,7 @@ Examine the XAML for the `<Window>` tag. It will look like this:
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="550"
-        x:Class="GetStartedApp.MainWindow"
+        x:Class="GetStartedApp.Views.MainWindow"
         Title="GetStartedApp">
 ```
 
