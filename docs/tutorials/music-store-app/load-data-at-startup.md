@@ -37,7 +37,7 @@ As you can see this method uses the business service to load the list of albums 
 
 You will notice that after the JSON album files are loaded, the second loop loads the cover art image files. This provides your user with visual feedback as quickly as possible (in the form of album tiles with text and the placeholder music note icon) about what albums are in the collection. The cover art is then loaded asynchronously. This ensures that the app remains responsive during the image loading process.
 
-You next step is to schedule the `LoadAlbum` method to run when the app starts.
+Your next step is to schedule the `LoadAlbum` method to run when the app starts.
 
 To schedule the method on the main thread, follow this procedure:
 
