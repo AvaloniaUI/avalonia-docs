@@ -129,6 +129,18 @@ const config = {
       "@gracefullight/docusaurus-plugin-microsoft-clarity",
       { projectId: "hqhy3ac3l1" },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'xpf',
+        path: 'xpf',
+        routeBasePath: 'xpf',
+        sidebarPath: require.resolve('./xpf-sidebar.js'),
+        // Maintain consistency with main docs features
+        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
+        editLocalizedFiles: true,
+      },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -188,6 +200,10 @@ const config = {
                   className: 'avalonia-dropdown',
                 },
               ],
+          },
+          {
+            label: 'Avalonia XPF',
+            to: '/xpf/getting-started',
           },
           {
             label: 'Support',
@@ -268,3 +284,4 @@ const config = {
 };
 
 module.exports = config;
+
