@@ -20,8 +20,8 @@
 要开始使用 Avalonia UI 中的控件，您可以参考每种控件类型的文档。文档提供了详细的解释、示例和代码片段，帮助您有效地理解和使用这些控件。
 
 - [按钮控件文档](../../../reference/controls/buttons/button)
-- [文本框控件文档](../../../reference/controls/detailed-reference/textbox)
-- [标签控件文档](../../../reference/controls/detailed-reference/label)
+- [文本框控件文档](../../../reference/controls/textbox)
+- [标签控件文档](../../../reference/controls/label)
 - [复选框控件文档](../../../reference/controls/checkbox)
 - [滑动条控件文档](../../../reference/controls/slider)
 - [列表框控件文档](../../../reference/controls/listbox)

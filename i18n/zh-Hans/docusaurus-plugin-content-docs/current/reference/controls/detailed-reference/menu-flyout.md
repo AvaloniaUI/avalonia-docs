@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import MenuFlyoutScreenshot from '/img/reference/controls/detailed-reference/menuflyout/menuflyout-button.gif';
+import MenuFlyoutScreenshot from '/img/reference/controls/menuflyout/menuflyout-button.gif';
 
 # Menu Flyout
 
@@ -16,7 +16,7 @@ For details of the context menu, see the reference [here](../contextmenu.md).
 The properties of a menu flyout are the same as for a flyout. See [here](../flyouts.md).
 :::
 
-## Example
+## 示例
 
 This is a simple example of the menu flyout:
 
@@ -41,7 +41,7 @@ The resulting menu flyout looks like this:
 
 <img src={MenuFlyoutScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/MenuFlyout/).
 

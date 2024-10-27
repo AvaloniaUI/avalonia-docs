@@ -2,9 +2,9 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TreeDataGridFilesScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-files.png';
-import TreeDataGridCountriesScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-countries.png';
-import TreeDataGridNuGetScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedataggrid-nuget.png';
+import TreeDataGridFilesScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-files.png';
+import TreeDataGridCountriesScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-countries.png';
+import TreeDataGridNuGetScreenshot from '/img/reference/controls/treedatagrid/treedataggrid-nuget.png';
 
 # Tree Data Grid
 
@@ -74,9 +74,9 @@ For example:
 </Application>
 ```
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 | Property               | Description                                                                                   |
 | ---------------------- | --------------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ You will probably use these properties most often:
 
 You will use the `Source` property to bind to a view model that is defined in code. The view model  includes the definition of how the columns map to the properties of the class that holds the grid items.
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see here.

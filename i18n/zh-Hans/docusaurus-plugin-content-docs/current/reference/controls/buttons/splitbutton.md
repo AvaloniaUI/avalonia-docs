@@ -1,4 +1,4 @@
-# 分裂按钮
+# SplitButton 分裂按钮
 
 `SplitButton` 作为 [`Button`](./button) 的扩展，具有可以单独按下的主要和次要部分。主要部分的行为与普通的 `Button` 相同，而次要部分会打开一个 [`Flyout`](../flyouts)，其中包含额外的操作。
 
@@ -38,7 +38,7 @@ import SplitButtonExportButtonScreenshot from '/img/reference/controls/buttons/s
 
 [SplitButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/SplitButton.cs)
 
-## 示例
+## 示例代码
 
 ### 基本示例
 

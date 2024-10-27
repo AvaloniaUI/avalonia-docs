@@ -6,6 +6,6 @@ description: REFERENCE - Built-in Controls
 
 These controls can be added to other controls to provide popup content.
 
-<table><thead><tr><th width="238">Control</th><th>Description</th></tr></thead><tbody><tr><td><a href="contextmenu">ContextMenu</a></td><td></td></tr><tr><td><a href="flyouts">Flyouts</a></td><td></td></tr><tr><td><a href="detailed-reference/tooltip">ToolTip</a></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="238">Control</th><th>Description</th></tr></thead><tbody><tr><td><a href="contextmenu">ContextMenu</a></td><td></td></tr><tr><td><a href="flyouts">Flyouts</a></td><td></td></tr><tr><td><a href="./tooltip">ToolTip</a></td><td></td></tr></tbody></table>
 
 

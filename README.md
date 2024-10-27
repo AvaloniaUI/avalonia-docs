@@ -14,6 +14,7 @@ The repository holds the code and markdown source files for the Avalonia UI docu
   - [Conventions](#conventions)
 - [Local setup](#local-setup)
   - [Requirements](#requirements)
+  - [Setup](#setup)
   - [Starting](#starting)
 - [Thanks 💜](#thanks-)
 

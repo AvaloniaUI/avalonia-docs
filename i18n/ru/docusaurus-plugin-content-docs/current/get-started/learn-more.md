@@ -13,7 +13,7 @@ title: Дальнейшее изучение
 * Шаблон проектирвоания MVVM [перейти](../concepts/the-mvvm-pattern/).
 * Стилизация в _Avalonia UI_ [перейти](../basics/user-interface/styling).
 
-Также рекомендуем ознакомиться с пошаговой инструкцией по созданию приложения 'To Do List App' [перейти](../tutorials/todo-list-app/).
+Также рекомендуем ознакомиться с пошаговой инструкцией по созданию приложения 'To Do List App' [перейти](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList).
 
 :::info
 Полную версию документации по Avalonia можно найти [здесь](../tutorials).

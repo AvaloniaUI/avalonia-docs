@@ -4,43 +4,43 @@ description: REFERENCE - Built-in Controls
 
 import FlyoutShowAttachedScreenshot from '/img/reference/controls/flyouts/flyout-show-attached.gif';
 
-# Flyout
+# Flyout 弹出层
 
-Flyouts are dismissible containers that can be attached to some classes of 'host' control; although flyouts themselves are not controls. They show when their host control receives the focus, and are hidden again in a number of different ways.
+弹出层是一种可关闭的容器，可以附加到某些类型的“宿主”控件上；尽管弹出层本身并不是控件。当宿主控件获得焦点时，弹出层会显示出来，并且可以通过多种不同的方式再次隐藏。
 
-A flyout can contain simple or richer, composed, UI content.
+弹出层可以包含简单或更丰富的、组合的用户界面内容。
 
-Flyouts can be declared as a resource and shared between two or more host controls in an _Avalonia UI_ app.
+在 _Avalonia UI_ 应用中，弹出层可以声明为资源，并在两个或更多宿主控件之间共享。
 
-## Examples
+## 示例
 
-A flyout is attached to a host control using the host's `Flyout` property. For example:
+通过宿主控件的 `Flyout` 属性附加弹出层。例如：
 
 ```xml
-<Button Content="Button with Flyout">
-  <Button.Flyout >
-    <Flyout>This is the button flyout.</Flyout>
+<Button Content="带弹出层的按钮">
+  <Button.Flyout>
+    <Flyout>这是按钮的弹出层</Flyout>
   </Button.Flyout>
 </Button>
 ```
 
 :::warning
-Only the button and split button controls support the `Flyout` property. You can attach a flyout to other _Avalonia UI_ built-in controls using the `AttachedFlyout` property instead.
+只有按钮和分隔按钮控件支持 `Flyout` 属性。你可以使用 `AttachedFlyout` 属性将弹出层附加到其他 _Avalonia UI_ 内置控件上。
 :::
 
-For controls that do not have the `Flyout` property, use the `AttachedFlyout` property like this:
+对于没有 `Flyout` 属性的控件，使用 `AttachedFlyout` 属性如下：
 
 ```xml
 <Border Background="Red" PointerPressed="Border_PointerPressed">
     <FlyoutBase.AttachedFlyout>
         <Flyout>
-            <TextBlock Text="Red Rectangle Flyout." />
+            <TextBlock Text="红色矩形弹出层" />
         </Flyout>
     </FlyoutBase.AttachedFlyout>
 </Border>
 ```
 
-The flyout will not show automatically, it has to be shown from code-behind. For example:
+弹出层不会自动显示，必须从 code-behind 显示。例如：
 
 ```csharp
 public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
@@ -55,48 +55,48 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 
 <img src={FlyoutShowAttachedScreenshot} alt="" />
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
-| Property    | Description                                                                          |
-| ----------- | ------------------------------------------------------------------------------------ |
-| `Placement` | The position where the flyout opens relative to the control to which it is attached. |
-| `ShowMode`  | This describes how the flyout shows and hides. See the options below.                |
+| 属性         | 描述                                                                         |
+| ------------ | ---------------------------------------------------------------------------- |
+| `Placement`  | 弹出层相对于其附加控件的打开位置。                                           |
+| `ShowMode`   | 描述弹出层的显示和隐藏方式。请看下面的选项。                                 |
 
-## Show Mode
+## ShowMode 
 
-This setting describes how the flyout shows and hides:
+此设置描述弹出层的显示和隐藏方式：
 
-<table><thead><tr><th width="259">Mode</th><th>Description</th></tr></thead><tbody><tr><td><code>Standard</code></td><td>The flyout shows when the control to which it is attached gets the focus. The flyout hides when the control to which it is attached loses the focus (the user either tabs away or clicks elsewhere). </td></tr><tr><td><code>Transient</code></td><td></td></tr><tr><td><code>TransientWithDismiss OnPointerMoveAway</code></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="259">模式</th><th>描述</th></tr></thead><tbody><tr><td><code>Standard</code></td><td>当附加的控件获得焦点时显示弹出层。当附加的控件失去焦点时隐藏弹出层（用户切换焦点或点击其他地方）。 </td></tr><tr><td><code>Transient</code></td><td>在弹出层外做出操作时（如点击）消失。</td></tr><tr><td><code>TransientWithDismiss OnPointerMoveAway</code></td><td>当光标移开一定距离后，弹出层自动消失。</td></tr></tbody></table>
 
-## Common Methods for all Flyouts
+## 所有弹出层的常用方法
 
-| Property                | Description                                                                             |
-| ----------------------- | --------------------------------------------------------------------------------------- |
-| `ShowAt(Control)`       | Shows the Flyout at the specified target                                                |
-| `ShowAt(Control, bool)` | Shows the Flyout at the specified target, but places it at the current pointer position |
-| `Hide`                  | Hides the Flyout                                                                        |
+| 属性                      | 描述                                                             |
+| ------------------------- | ---------------------------------------------------------------- |
+| `ShowAt(Control)`         | 在指定的目标控件上显示弹出层。                                    |
+| `ShowAt(Control, bool)`   | 在指定的目标控件上显示弹出层，但位置基于当前指针位置。            |
+| `Hide`                    | 隐藏弹出层。                                                      |
 
-## Sharing Flyouts
+## 共享弹出层
 
-You can share flyouts between two or more elements in your app. For example, to share a flyout from the resources collection of a window:
+你可以在应用中的两个或更多元素之间共享弹出层。例如，从窗口的资源集合中共享弹出层：
 
 ```xml
 <Window.Resources>
     <Flyout x:Key="MySharedFlyout">
-        <!-- Flyout content here -->
+        <!-- 弹出层内容在此 -->
     </Flyout>
 </Window.Resources>
 
-<Button Content="Click me!" Flyout="{StaticResource MySharedFlyout}" />
+<Button Content="点击我！" Flyout="{StaticResource MySharedFlyout}" />
 
-<Button Content="Now click me!" Flyout="{StaticResource MySharedFlyout}" />
+<Button Content="现在点击我！" Flyout="{StaticResource MySharedFlyout}" />
 ```
 
-## Styling Flyouts
+## 弹出层的样式定制
 
-Although flyouts are not themselves controls, their general appearance can be customized by targeting the presenter the `Flyout` uses to display its content. For a normal `Flyout` this is `FlyoutPresenter` and for `MenuFlyout` this is `MenuFlyoutPresenter`. Because flyout presenters are not exposed, special style classes that should pertain to specific flyouts can be passed using the `FlyoutPresenterClasses` property on `FlyoutBase`
+虽然弹出层本身不是控件，但可以通过`Flyout`用来显示其内容的展示器来自定义其外观。对于普通的`Flyout`，这个展示器是`FlyoutPresenter`；对于`MenuFlyout`，则是`MenuFlyoutPresenter`。因为弹出层的展示器不是公开的，特定的弹出层相关的特殊样式类可以通过`FlyoutBase`上的`FlyoutPresenterClasses`属性传递:
 
 ```xml
 <Style Selector="FlyoutPresenter.mySpecialClass">
@@ -104,16 +104,16 @@ Although flyouts are not themselves controls, their general appearance can be cu
 </Style>
 
 <Flyout FlyoutPresenterClasses="mySpecialClass">
-    <!-- Flyout content here -->
+    <!-- 弹出层内容在此 -->
 </Flyout>
 ```
 
-## More Information
+## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Flyout/).
+有关此控件的完整 API 文档，请查看[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Flyout/)。
 :::
 
 :::info
-View the source code on _GitHub_ [`Flyout.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/Flyout.cs)
+在 _GitHub_ 上查看源代码 [`Flyout.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/Flyout.cs)
 :::

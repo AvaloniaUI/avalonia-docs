@@ -2,19 +2,19 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TextBoxEntryScreenshot from '/img/reference/controls/detailed-reference/textbox/textbox-entry.gif';
+import TextBoxEntryScreenshot from '/img/reference/controls/textbox/textbox-entry.gif';
 
 # Text Box
 
 The text box presents an area for typed (keyboard) input. It can be for a single or multiple lines of input.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="220">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Text</code></td><td>The current text in the input.</td></tr><tr><td><code>PasswordChar</code></td><td>Hides any characters typed, and replacing them with the given  character instead.</td></tr><tr><td><code>Watermark</code></td><td>Appears as a faded hint whenever the input is empty.</td></tr><tr><td><code>AcceptsReturn</code></td><td>Makes the input multi-line by allowing the user to enter line returns. A vertical scrollbar will appear if the content exceeds the height available.</td></tr><tr><td><code>TextWrapping</code></td><td>Defines how horizontal line overflow will be handled. Options are: 'NoWrap', 'Wrap' and 'WrapWithOverflow'.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 This example has a basic one line text box, a password box, and a text-wrapping multiline text box:
 
@@ -31,7 +31,7 @@ This example has a basic one line text box, a password box, and a text-wrapping 
 
 <img src={TextBoxEntryScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TextBox/).

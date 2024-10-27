@@ -52,7 +52,7 @@ While implementing `INotifyPropertyChanged` isn't particularly complex, it can b
 Here's how you can achieve the same result as before, but using `ObservableObject`:
 
 ```csharp
-using Microsoft.Toolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 public partial class MyViewModel : ObservableObject
 {

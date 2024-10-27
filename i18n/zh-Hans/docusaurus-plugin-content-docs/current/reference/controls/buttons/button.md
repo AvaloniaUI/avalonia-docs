@@ -4,11 +4,11 @@ description: REFERENCE - Built-in Controls
 
 import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.gif';
 
-# 按钮
+# Button 按钮
 
 按钮是一种对指针动作做出反应的控件（也有一些键盘等效操作）。当指针按下时，它会呈现出被按下的状态。
 
-将指针按下到释放的序列解释为点击；此行为是可配置的。
+指针按下到释放的序列会解释为点击，并且此行为是可配置的。
 
 :::warning
 在确定按钮是否被用户按下时，请始终使用`Click`事件而不是`PointerPressed`。`Click`是`Button`特有的高级事件，表示按钮已被按下。
@@ -35,7 +35,7 @@ import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.
 | `ClickMode`  | 描述按钮如何对点击做出反应。                          |
 | `Command`    | 点击按钮时要调用的`ICommand`实例。                     |
 
-## 示例
+## 更多信息
 
 以下示例展示了一个简单的按钮和一个C#代码后台的点击事件处理程序。
 

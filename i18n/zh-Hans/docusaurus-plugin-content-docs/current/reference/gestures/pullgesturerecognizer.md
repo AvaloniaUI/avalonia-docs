@@ -2,11 +2,11 @@
 description: REFERENCE - Gestures
 ---
 
-# PullGestureRecognizer
+# PullGestureRecognizer 拉动手势识别器
 
 一个用于追踪拉动手势的手势识别器。拉动手势发生在指针从控件的边缘拖动时。拉动的方向由 `PullDirection` 属性定义。
 
-## Using a PullGestureRecognizer
+## 使用拉动手势识别器
 可以通过将 `PullGestureRecognizer` 添加到控件的`GestureRecognizers`属性来将其附加到控件上。
 ```xml
 <Border Width="500"

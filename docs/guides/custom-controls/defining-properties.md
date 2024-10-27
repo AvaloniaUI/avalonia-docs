@@ -57,7 +57,7 @@ For example, with a styled property in place, you can control the background col
 </Window>
 ```
 
-```csharp title='MainWindow.axaml.cs'
+```csharp title='MyCustomControl.cs'
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;

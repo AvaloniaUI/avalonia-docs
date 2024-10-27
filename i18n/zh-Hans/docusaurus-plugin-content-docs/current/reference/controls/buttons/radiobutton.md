@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Controls
 
 import RadioButtonScreenshot from '/img/reference/controls/buttons/radiobutton.gif';
 
-# 单选按钮
+# RadioButton 单选按钮
 
 单选按钮控件展示了一组选项，用户一次只能选择其中一个。选中的选项以实心圆圈表示，未选中的选项以空心圆圈表示。
 
@@ -22,7 +22,7 @@ import RadioButtonScreenshot from '/img/reference/controls/buttons/radiobutton.g
 | `IsChecked` | 单选按钮选项是否被选中（true）或未选中（false）。 |
 | `IsEnabled` | 单选按钮选项是否启用。禁用的选项呈现为透明。 |
 
-## 示例
+## 示例代码
 
 以下示例展示了两组独立工作的单选按钮：
 

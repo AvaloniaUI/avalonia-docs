@@ -14,7 +14,7 @@ title: 示例和教程
 * `IObservable<>`
 * `Observable.Merge()` 与 `Select()`、`Take()` 和 `Subscribe()` 方法的使用。
 
-这是一个非常好的 MVVM 和 _ReactiveUI_ 技术入门教程，特别适合用于 _Avalonia UI_ 编程。您可以在 [这里](todo-list-app/) 找到教程。
+这是一个非常好的 MVVM 和 _ReactiveUI_ 技术入门教程，特别适合用于 _Avalonia UI_ 编程。您可以在 [这里](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList) 找到教程。
 
 ## 音乐商店应用
 

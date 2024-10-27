@@ -4,7 +4,7 @@ description: REFERENCE - Built-in Controls
 
 import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbutton-hold.gif';
 
-# 重复按钮
+# RepeatButton 重复按钮
 
 重复按钮是一种控件，其特点是在按住按钮时定期生成点击事件。
 
@@ -17,7 +17,7 @@ import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbu
 | `Delay`   | 在开始生成重复点击之前等待的时间（毫秒）。默认为300毫秒。                          |
 | `Interval`| 生成点击事件之间的时间间隔（毫秒）。默认为100毫秒。                               |
 
-## 示例
+## 示例代码
 
 下面的示例演示了一个重复按钮，使用默认的间隔和延迟来生成点击事件。
 

@@ -2,7 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TabStripNavigation from '/img/reference/controls/detailed-reference/tabstrip/tabstrip-navigation.gif';
+import TabStripNavigation from '/img/reference/controls/tabstrip/tabstrip-navigation.gif';
 
 # Tab Strip
 
@@ -16,7 +16,7 @@ You will probably use this property most often:
 
 <table><thead><tr><th width="244">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>TabItem.Header</code></td><td>The text for the tab.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 ```xml
 <TabStrip Margin="5">
@@ -30,7 +30,7 @@ It looks like this running on Windows:
 
 <img src={TabStripNavigation} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/TabStrip/).

@@ -1,4 +1,4 @@
-# 切换分裂按钮
+# ToggleSplitButton 切换分裂按钮
 
 import ToggleSplitButtonClosedUncheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-closed-unchecked.png';
 import ToggleSplitButtonClosedCheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-closed-checked.png';
@@ -46,7 +46,7 @@ import ToggleSplitButtonTextListScreenshot from '/img/reference/controls/buttons
 
 [ToggleSplitButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/ToggleSplitButton.cs)
 
-## 示例
+## 示例代码
 
 ### 基本示例
 

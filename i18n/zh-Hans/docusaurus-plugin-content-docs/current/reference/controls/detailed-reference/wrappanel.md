@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import WrapPanelHorizontalScreenshot from '/img/reference/controls/detailed-reference/wrappanel/wrappanel-horizontal.png';
-import WrapPanelVerticalScreenshot from '/img/reference/controls/detailed-reference/wrappanel/wrappanel-vertical.png';
+import WrapPanelHorizontalScreenshot from '/img/reference/controls/wrappanel/wrappanel-horizontal.png';
+import WrapPanelVerticalScreenshot from '/img/reference/controls/wrappanel/wrappanel-vertical.png';
 
 # Wrap Panel
 
@@ -11,13 +11,13 @@ The wrap panel uses a default arrangement of (multiple) child elements is in seq
 
 When the orientation property is set to vertical, the arrangement is top to bottom with a new column started when there is no more height remaining.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td>Orientation</td><td>Change the direction of the arrangement flow.</td></tr></tbody></table>
 
-## Examples
+## 示例
 
 ```
 <WrapPanel>
@@ -43,7 +43,7 @@ You will probably use these properties most often:
 
 <img src={WrapPanelVerticalScreenshot} alt="" />
 
-### More Information
+### 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/WrapPanel/).

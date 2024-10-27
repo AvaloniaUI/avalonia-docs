@@ -135,13 +135,13 @@ export default function ResourcesSection() {
           </div>
           <Link
             to="https://avaloniaui.net/blog"
-            className="font-jakarta text-sm font-semibold text-primary-500"
+            className="font-outfit text-sm font-semibold text-primary-500"
           >
             All Blogs <ArrowRightFilled className="ml-1" />
           </Link>
         </div>
 
-        <div className="mb-6 inline-flex gap-1 rounded-lg bg-secondary-700 p-2 font-jakarta text-sm font-semibold dark:bg-secondary-700">
+        <div className="mb-6 inline-flex gap-1 rounded-lg bg-secondary-700 p-2 font-outfit text-sm font-semibold dark:bg-secondary-700">
           <button
             className={clsx(
               'rounded-lg px-4 py-2 transition-colors',

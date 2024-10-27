@@ -1,19 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Outfit';
   font-weight: 100 900;
-  font-display: block;
+  font-display: swap;
   font-style: normal;
-  font-named-instance: Regular;
-  src: url(/assets/fonts/Inter.woff2) format('woff2');
+  src: url('https://fonts.gstatic.com/s/outfit/v11/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1O4i0EwItq6fNIhnL.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Nunito", sans-serif;
   font-weight: 100 900;
-  font-display: block;
-  font-style: italic;
-  font-named-instance: 'Italic';
-  src: url(/assets/fonts/Inter-italic.woff2) format('woff2');
+  font-display: swap;
+  font-style: normal;
+  src: url('https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQ.woff2') format('woff2');
 }
 
 @font-face {
@@ -86,8 +87,35 @@
     --ifm-link-hover-decoration: none;
   }
 
+
+
   a {
     @apply cursor-pointer;
+  }
+
+  p {
+    font-size: 1rem!important;
+  }
+
+  h1 {
+    font-size: 2.8125rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -.01em;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -.01em;
   }
 
   h1,
@@ -126,20 +154,22 @@ body {
 
 /* avalonia Docs Tokens */
 :root {
-  --docs-color-primary: #C469EE;
+  --docs-color-primary: #0d6efd;
   /* --docs-color-primary-100: #1a90ff; */
   --docs-color-primary-tint: rgba(33, 96, 253, 0.16);
   --docs-color-primary-tint-light: rgba(33 96 253/0.24);
 
   --docs-color-border: #dadde1;
 
-  --docs-color-text: #000000;
+  --docs-color-text: #1b2a4e;
   --docs-color-text-100: #646464;
 
   --docs-color-background: #ffffff;
   --docs-color-background-100: #f8f8f8;
   --docs-color-background-200: #efefef;
   --docs-color-background-300: #dcdcdc;
+
+  
 
   /* Color from prism themes */
   --docs-color-code-background: #f6f8fa;
@@ -170,16 +200,14 @@ body {
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-navbar-padding-horizontal: 0.75rem;
 
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto,
-    Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI',
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  --ifm-font-family-base: 'Outfit', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
 
   --ifm-font-family-monospace: 'Fira Code', SFMono-Regular, Menlo, Monaco,
     Consolas, 'Liberation Mono', 'Courier New', monospace;
 
   /* Theme colors */
-  --ifm-color-primary: #C469EE;
+  --ifm-color-primary: #0d6efd;
   --ifm-color-primary-dark: #1959fc;
   --ifm-color-primary-darker: #0f51f8;
   --ifm-color-primary-darkest: #0042e7;
@@ -198,17 +226,25 @@ body {
 
   --ifm-breadcrumb-item-background-active: transparent;
   --ifm-breadcrumb-padding-horizontal: 0;
+
+  --ifm-brand-logo-color: #0d6efd;
+  --docs-card-background: rgb(241, 244, 248);
 }
+
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 html[data-theme='dark'] {
-  --ifm-link-color: #C469EE;
-  --ifm-tabs-color-active-border: #C469EE;
-  --ifm-tabs-color-active: #C469EE;
+  --ifm-link-color: #0d6efd;
+  --ifm-tabs-color-active-border: #0d6efd;
+  --ifm-tabs-color-active: #4690ff;
 
-  --ifm-color-primary: #C469EE;
+  --ifm-color-primary: #0d6efd;
+
+  --ifm-brand-logo-color: white;
+  --docs-card-background: #1b2a4e;
 
   --ifm-footer-background-color: #1c1c1c;
+  --ifm-footer-brand-color: white;
 
   /* Navigation Bar */ 
   --ifm-background-surface-color: #171B2D;
@@ -232,7 +268,7 @@ pre.prism-code {
 
 .navbar__item,
 .menu__link {
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 .menu__link {
@@ -423,8 +459,6 @@ aside.theme-doc-sidebar-container {
 }
 
 .theme-doc-sidebar-container div[title='Expand sidebar'] {
-  position: sticky;
-  margin-left: 16px;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.293 4.293a1 1 0 0 0 0 1.414L14.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414l-7-7a1 1 0 0 0-1.414 0Z' fill='%23181818'/%3E%3C/svg%3E");
 }
 
@@ -739,6 +773,7 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
 
 .avalonia-dropdown :is(h1, h2, h3, h4, h5) {
   @apply font-medium;
+
 }
 
 .avalonia-dropdown h3 {
@@ -896,7 +931,7 @@ img[src$='#terminal'] {
   padding: 0.75rem;
   text-decoration: none;
   color: var(--docs-color-text);
-
+  background-color: var(--docs-card-background) !important;
   --ifm-link-hover-decoration: none;
   --ifm-link-hover-color: inherit;
   cursor: pointer;
@@ -1236,7 +1271,107 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
 }
 
 .pagination-nav__link--next {
-  background-color: rgba(139, 68, 172, 0.1)!important;
-  color: #C469EE;
-  border-color: #C469EE;
+  background-color: rgba(68, 110, 172, 0.1)!important;
+  color: #0d6efd;
+  border-color: #0d6efd;
+  font-family: Outfit;
 }
+
+.pagination-nav__link--prev {
+  color: #0d6efd;
+  border-color: #0d6efd;
+  font-family: Outfit;
+}
+
+.pagination-nav__label {
+  font-weight: 400;
+}
+
+img.center {
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+}
+
+.dropdown__menu 
+{
+  min-width: 20rem;
+}
+
+#__docusaurus > div.announcementBar_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-styles-module {
+  font-size: 19px;
+  min-height: 50px;
+}
+
+#__docusaurus > nav > div.navbar__inner > div:nth-child(1) > a.navbar__brand > b {
+  color: #0d6efd;
+  font-family: Nunito;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.wavesCard {
+  background-color: #335EEA;
+}
+
+.bg-gray-200 {
+  background-color: rgb(241, 244, 248);
+}
+
+.text-gray-700 {
+  color: rgb(80, 102, 144);
+}
+
+.footer-text {
+  font-size: 1 !important;
+  font-family: 'Outfit';
+  font-weight: 500;
+
+}
+
+.navbar {
+  font-family: 'Outfit';
+  height: 90px;
+}
+
+.navbar__title {
+  color: var(--ifm-brand-logo-color) !important;
+}
+
+.navbar__logo {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  margin-right: 1px;
+  margin-left: 8px;
+  padding-bottom: 4px;
+}
+
+
+.community-bg {
+  background-color: var(--ifm-footer-background-color);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  white-space: 'normal';
+  width: 'fit-content';
+  line-height: '1.2';
+}
+
+.mobile-hidden {
+  
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+      font-size: 3rem; /* Adjust the size as needed */
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+}
+

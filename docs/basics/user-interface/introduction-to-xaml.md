@@ -104,7 +104,7 @@ For further information about the concept behind data binding, see [here](../dat
 
 ## Code-behind Files
 
-Many XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.xaml.cs`.
+Many Avalonia XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.axaml.cs`.
 
 :::info
 For guidance about programming using code-behind files, see [here](code-behind).
@@ -136,30 +136,29 @@ For detailed guidance on how namespace declarations work, see [here](../../guide
 
 There are two valid syntax options for the definition part of a XAML namespace attribute that references code:
 
+### **Using Prefix**
+
+The prefix `using:` can be used when providing an alias for a namespace in either the current assembly or a referenced assembly. The syntax is the same in both cases.  For example:
+
+```xml
+xmlns:myAlias1="using:AppNameSpace.MyNamespace"
+```
 ### **CLR Namespace Prefix**
 
-There is a prefix `clr-namespace:` you can use to reference both code in the current assembly and code in a referenced assembly.
+The prefix `clr-namespace:`, the same as in WPF, is also supported. However, the syntax depends on whether the namespace for which an alias is required is in the current assembly or a referenced assembly.
 
-For example, when the code is present in the same assembly as the XAML, you can use this syntax:
+For example, when the namespace is in the same assembly as the XAML, you can use this syntax:
 
 ```xml
 <Window ...
-    xmlns:myAlias1="clr-namespace:MyNamespace.AppNameSpace.UI" 
+    xmlns:myAlias1="clr-namespace:AppNameSpace.MyNamespace" 
 ... >
 ```
 
-And if the code is in another referenced assembly (for example in a library), you must extend the description to include the name of the referenced assembly:
+If the namespace is in another referenced assembly (for example in a library), you must extend the description to include the name of the referenced assembly:
 
 ```xml
 <Window ...
-    xmlns:myAlias2="clr-namespace:MyNameSpace.OtherAssembly;assembly=OtherAssembly"
+    xmlns:myAlias2="clr-namespace:OtherAssembly.MyNameSpace;assembly=OtherAssembly"
  ... >
-```
-
-### **Using Prefix**
-
-There is an alternative prefix `using:` that you can use to reference code in the current assembly. For example:
-
-```xml
-xmlns:myAlias3="using:MyNamespace.AppNameSpace.UI"
 ```

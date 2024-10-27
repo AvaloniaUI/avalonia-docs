@@ -26,7 +26,7 @@ Avalonia controls; the window will be drawn on the target platform with 4 **layo
 In the current application, the content zone of the `Window` references another view: **`<views:MainView />`**. This is a 
 reference to the **MainView.axaml** file, which is a `UserControl` that will be displayed in the content zone of the `Window`.
 
-## The MainView User Control
+## The MainView User control
 
 Inside this user control, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a `TextBlock` control which draws 
 `Text` to the screen. The `Text` property of the `TextBlock` is bound to the **Greeting** property of 

@@ -4,12 +4,12 @@ description: TUTORIALS
 
 import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/image-20210310184538120.png';
 
-# Прилжение "Music Store"
+# Приложение "Music Store"
 
 В данном руководстве, вы создадите настольное приложение, вдохновленное мыслями о музыкальном магазине.
 Это приложение отличается своей высококлассной графикой. В нем представлены изображения обложек альбомов,
 а также используется полупрозрачный фон с акриловым размытием, чтобы придать приложение еще более современный вид.
-По окончанию руководства, вы научитесь выполнять онлайн-поиск альбомов в iTunes,  а также выбирать альбомы для создания собственной коллекции.
+По окончанию руководства, вы научитесь выполнять онлайн-поиск альбомов в iTunes, а также выбирать альбомы для создания собственной коллекции.
 
 <p><img className="image-zoom-medium" src={MusicStoreFinishedAppScreenshot} alt="" /></p>
 
@@ -20,7 +20,7 @@ import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/imag
 :::warning
 Данное руководство требует более глубоких знаний.
 Если у вас небольшой опыт работы с паттерном MVVM,
-то рекомендуем ознакомиться с руководством 'Приложение To Do List (рус: Список дел)' по [ссылке](../todo-list-app/).
+то рекомендуем ознакомиться с руководством 'Приложение To Do List (рус: Список дел)' по [ссылке](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList).
 :::
 
 :::info

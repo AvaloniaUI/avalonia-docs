@@ -9,7 +9,7 @@ import ItemsControlCanvasScreenshot from '/img/concepts/itemscontrol-with-canvas
 All `ItemsControl`s have an item container panel which is used to layout their items. It is possible to override the type of panel used by the control to achieve custom/alternative layouts of items in a control. This document provides some examples showcasing how and why you would do this.
  
 - [`ItemsControl`](./../reference/controls/itemscontrol)
-- [`TreeView`](./../reference/controls/detailed-reference/treeview-1)
+- [`TreeView`](./../reference/controls/treeview-1)
 - [`Carousel`](./../reference/controls/carousel)
 - [`Menu`](./../reference/controls/menu)
 - [`ComboBox`](./../reference/controls/combobox)

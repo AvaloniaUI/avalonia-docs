@@ -21,14 +21,28 @@ This implementation pattern is based on the concept of deriving a design version
 In this example you are working on the UI for an appointment card to display an appointment view model, like this:
 
 ```csharp
-public class AppointmentViewModel: ViewModelBase
-{
+    // Data Properties
     public string ServerName { get; set; } = null!;
     public string ServiceTitle { get; set; } = null!;    
     public decimal ServicePrice { get; set; }
     public DateTime ServiceDateTime { get; set; }
-    public string Description { get; set; } = null!;   
-}
+    public string Description { get; set; } = null!;  
+    
+    // Commands
+    private bool _isCancelVisible = true;
+
+    public bool IsCancelVisible
+    {
+        get => _isCancelVisible;
+        set => this.RaiseAndSetIfChanged(ref _isCancelVisible, value);
+    }
+
+    public ReactiveCommand<Unit, Unit> CancelAppointmentCommand =>
+        ReactiveCommand.Create(() =>
+        {
+            IsCancelVisible = false;
+        });
+
 ```
 
 This code creates the design version of this view model:
@@ -47,16 +61,22 @@ public class DesignAppointmentViewModel: AppointmentViewModel
 }
 ```
 
-To continue with this example: you are next working on a user control to present the appointment card. Firstly, you must first add a reference to the view models. Next check that you have set a suitable design width and/or height. Then you can add some XAML for the design data context, as shown:
+To continue with this example: you are next working on a user control to present the appointment card. Firstly, you must first add a reference to the view models. Next check that you have set a suitable design width and/or height. Then you can add some XAML for the design data context. 
 
+As of Avalonia version 11, the default sample app is set to use Compiled bindings. This requires two declarations:
+1. Import the ViewModels namespace: this is done from the line **xmlns:vm** is to include the ViewModel namespace. In this example the project name is **AvaloniaApplication1**.
+2. Declare the ViewModel class, so that the design time environment can do a type check on the class properties. This is done through the line **x:DataType**
+   
 ```
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:DesignTimeData.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="400" 
-             x:Class="DesignTimeData.Views.AppointmentView">
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="250"
+             x:Class="DesignTimeData.Views.AppointmentView"
+             xmlns:vm="using:AvaloniaApplication1.ViewModels"
+             x:DataType="vm:DesignAppointmentViewModel">
    
    <Design.DataContext>    
        <vm:DesignAppointmentViewModel/>
@@ -110,3 +130,44 @@ This means that when you start to write the XAML for the UI, you can see your pr
 The preview pane shows the completed UI design with the mock data:
 
 <img src={DesignTimeMockPreviewDiagram} alt=""/>
+
+To have the project fully compiled, you can use the example MainWindow.axaml to include the AppointmentView UserControl into the main window view.
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="using:AvaloniaApplication1.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        WindowStartupLocation="CenterScreen" Width="400" Height="250"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaApplication1">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <views:AppointmentView></views:AppointmentView>
+</Window>
+```
+
+The AppointmentView will need to have its DataContext set. This can be done in the code behind file AppointmentView.axaml.cs. Sample code below:
+
+```csharp
+namespace AvaloniaApplication1.Views;
+
+public partial class AppointmentView : UserControl
+{
+    public AppointmentView()
+    {
+        InitializeComponent();
+        this.DataContext = new AppointmentViewModel();
+    }
+}
+```

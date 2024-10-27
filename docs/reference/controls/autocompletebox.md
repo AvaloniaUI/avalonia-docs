@@ -15,7 +15,7 @@ The way in which the text is matched to possible items in the items source is co
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="233">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Items</code></td><td>The list of items to match from. </td></tr><tr><td><code>FilterMode</code></td><td>Option for how the matching is to be done. See table below.</td></tr><tr><td><code>AsyncPopulator</code></td><td>An asynchronous function that can can provide the list of matches for a given (string) criteria. This </td></tr></tbody></table>
+<table><thead><tr><th width="233">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ItemsSource</code></td><td>The list of items to match from. </td></tr><tr><td><code>FilterMode</code></td><td>Option for how the matching is to be done. See table below.</td></tr><tr><td><code>AsyncPopulator</code></td><td>An asynchronous function that can can provide the list of matches for a given (string) criteria. This </td></tr></tbody></table>
 
 These are the options for the filter mode property:
 
@@ -24,6 +24,11 @@ These are the options for the filter mode property:
 :::info
 In an **ordinal** string comparison, each character is compared using its simple byte value (independent of language).
 :::
+
+:::info
+**culture-sensitive** refers to considering the needs of users from different cultural backgrounds in design and technology implementations. This includes using different string processing and sorting patterns based on language. For example, English is typically sorted alphabetically from A-Z, Chinese may be sorted based on pinyin or stroke order, and other languages may have different sorting rules.
+:::
+
 
 ## Examples
 

@@ -2,19 +2,19 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TimePickerScreenshot from '/img/reference/controls/detailed-reference/timepicker/timepicker.gif';
+import TimePickerScreenshot from '/img/reference/controls/timepicker/timepicker.gif';
 
 # Time Picker
 
 The time picker has two or three 'spinner' controls to allow the user to pick a time value. The time picker can work in 24 or 12 hour formats. The picker controls display when the control is clicked.
 
-## Useful Properties
+## 常用属性
 
-You will probably use these properties most often:
+你可能最常使用这些属性：
 
 <table><thead><tr><th width="231">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ClockIdentifier</code></td><td>Choose between 12 and 24 hour formats. The 12 hour format shows a third spinner for AM/PM.</td></tr><tr><td><code>MinuteIncrement</code></td><td>Defines selectable increments for the minutes. The default is 1 (all minutes can be selected).</td></tr><tr><td><code>SelectedTime</code></td><td>(Nullable TimeSpan) the selected time.</td></tr></tbody></table>
 
-## Example
+## 示例
 
 This example shows how to create a time picker for the 24 hour clock, with 20 minute time slots:
 
@@ -47,7 +47,7 @@ TimePicker timePicker = new TimePicker
 
 You can clear the display by resetting the selected time to null.
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TimePicker/).

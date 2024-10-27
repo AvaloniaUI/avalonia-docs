@@ -3,8 +3,8 @@ id: breaking-changes
 title: Breaking Changes
 ---
 
-This page will list any breaking changes in Avalonia 11. Although we endeavour not to break our API for major versions, some changes to behavior may result in your application not working.
+这个页面将列出Avalonia 11中的任何破坏性变更。尽管我们尽量不在主要版本中破坏我们的API，但某些行为的改变可能导致你的应用程序无法正常工作。
 
 :::info
-To see a list of breaking changes between Avalonia 0.10 and 11 see the [upgrade guide](upgrade-from-0.10).
+要查看Avalonia 0.10和11之间的破坏性变更列表，请参阅[升级指南](upgrade-from-0.10).
 :::

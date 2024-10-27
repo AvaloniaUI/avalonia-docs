@@ -62,16 +62,10 @@ public class View : ReactiveWindow<ViewModel>
 
 ### Code-Behind ReactiveUI Bindings
 
-The Avalonia XAML engine doesn't generate strongly typed `x:Name` references to controls. The only way to use [code-behind ReactiveUI bindings](https://reactiveui.net/docs/handbook/data-binding/) for now is to use the `FindControl` method that will find a control by the name specified in XAML, or to use `{Binding Path}` syntax.
-
-The `FindControl` method shouldn't be used inside an expression. Instead, create a custom property which calls the `FindControl` method, or store the control in a variable. See the example below illustrating how to use ReactiveUI code-behind bindings with Avalonia.
-
 ```csharp
 public class View : ReactiveWindow<ViewModel>
 {
     // Assume the Button control has the Name="ExampleButton" attribute defined in XAML.
-    public Button ExampleButton => this.FindControl<Button>("ExampleButton");
-
     public View()
     {
         this.WhenActivated(disposables => 

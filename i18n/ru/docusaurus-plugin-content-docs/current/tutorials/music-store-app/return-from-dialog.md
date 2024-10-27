@@ -73,7 +73,7 @@ this.WhenActivated(action => action(ViewModel!.BuyMusicCommand.Subscribe(Close))
 
 ```csharp
 using Avalonia.ReactiveUI;
-using AvaloniaApplication11.ViewModels;
+using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System;
 

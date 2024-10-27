@@ -12,7 +12,7 @@ export default function GitHubSampleLink({title, link}) {
     className="github-sample-card bg-slate-400"
   >
     <div className="p-6 !pb-0">
-      <h3 className="mb-1 flex items-center gap-3 font-jakarta group-hover:text-white">
+      <h3 className="mb-1 flex items-center gap-3 font-outfit group-hover:text-white">
       <img
         src="/static/resources/github-white.svg"
         width="30"

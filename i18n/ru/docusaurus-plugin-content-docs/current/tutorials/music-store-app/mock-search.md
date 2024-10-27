@@ -47,7 +47,7 @@ namespace Avalonia.MusicStore.ViewModels
 ```csharp
 using ReactiveUI;
 
-namespace AvaloniaApplication11.ViewModels
+namespace Avalonia.MusicStore.ViewModels
 {
     public class MusicStoreViewModel : ViewModelBase
     {

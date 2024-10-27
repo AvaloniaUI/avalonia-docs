@@ -130,7 +130,7 @@ namespace Avalonia.MusicStore.ViewModels
                 .Subscribe(DoSearch!);
         }
        
-        private async void DoSearch(string s)
+        private async void DoSearch(string? s)
         {
             IsBusy = true;
             SearchResults.Clear();
@@ -168,7 +168,7 @@ Your work on the previous page to format the album 'tile' view did not add any w
 
 Follow this procedure to add the album name and artist name to the tile:
 
-- Locate and open the **AlbumView.asaml** file.
+- Locate and open the **AlbumView.axaml** file.
 - Add the two text block controls with their data bindings, as shown:
 - To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
 

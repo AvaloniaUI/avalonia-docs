@@ -2,8 +2,8 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import TabControlZonesScreenshot from '/img/reference/controls/detailed-reference/tabcontrol/tabcontrol-zones.png';
-import TabControlNavigationScreenshot from '/img/reference/controls/detailed-reference/tabcontrol/tabcontrol-navigation.gif';
+import TabControlZonesScreenshot from '/img/reference/controls/tabcontrol/tabcontrol-zones.png';
+import TabControlNavigationScreenshot from '/img/reference/controls/tabcontrol/tabcontrol-navigation.gif';
 
 # Tab Control
 
@@ -19,7 +19,7 @@ You can compose the UI in both the header and content zones to suit the UI requi
 If you only need the function of the tab headers part of this control, consider using the tab strip instead. See [here](tabstrip.md).
 :::
 
-## Examples
+## 示例
 
 This is simple tab example. The tab content is just some text: 
 
@@ -41,7 +41,7 @@ The tab control even works in the preview pane!
 
 <img src={TabControlNavigationScreenshot} alt="" />
 
-## More Information
+## 更多信息
 
 :::info
 For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TabControl/).

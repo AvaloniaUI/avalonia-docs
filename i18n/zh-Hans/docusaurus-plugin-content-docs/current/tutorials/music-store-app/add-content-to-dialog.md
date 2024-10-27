@@ -59,7 +59,7 @@ import MusicStoreDialogContentDiagram from '/img/gitbook-import/assets/image (9)
 
 ```xml
 <Window ...
-    xmlns:views="using:Avalonia.MusicStore" >    
+    xmlns:views="using:Avalonia.MusicStore.Views" >    
 ```
 
 - 在面板元素内部，添加一个新的用户控件元素：

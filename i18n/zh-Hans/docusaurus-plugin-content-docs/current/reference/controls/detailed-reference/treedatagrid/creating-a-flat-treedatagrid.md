@@ -2,11 +2,11 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import FlatTreeDataGridSourceScreenshot from '/img/reference/controls/detailed-reference/treedatagrid/treedatagrid-flat.gif';
+import FlatTreeDataGridSourceScreenshot from '/img/reference/controls/treedatagrid/treedatagrid-flat.gif';
 
 # Flat Tree Data Grid
 
-## Example
+## 示例
 
 In this example the view model contains an observable collection that is filled with data and then used to create a `FlatTreeDataGridSource` property to bind to the source of the tree data grid. The items of the grid are class `Person`.
 

@@ -25,7 +25,7 @@ For example, this code adds a data template to display the view model class `MyV
          radius of 8 containing a TextBox will be displayed here.
          DataType is required only if you use Compiled Bindings, so it can be type-checked.  -->
     <ContentControl Content="{Binding Foo}"/>
-<UserControl>
+</UserControl>
 ```
 
 Data templates in Avalonia can also target interfaces and derived classes (which cannot be done in WPF) and so the order of `DataTemplate`s can be important: `DataTemplate`s within the same collection are evaluated in declaration order so you need to place them from most-specific to least-specific as you would in code.

@@ -67,7 +67,7 @@ _Avalonia UI_包含大量内置控件，可以满足大多数UI需求。
 ## 教程
 
 :::info
-在“待办事项列表应用程序”教程中，您将学习如何将用户控件添加为页面视图；以及如何使用重复布局控件来呈现带有数据模板的项目集合。请在[这里](../tutorials/todo-list-app/)尝试教程。  
+For tutorials about `DataTemplates` see [Avalonia.Samples](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main?tab=readme-ov-file#%EF%B8%8F-datatemplate-samples).
 :::
 
 ## 集合控件

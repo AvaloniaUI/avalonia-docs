@@ -69,7 +69,7 @@ const redirects = [
     },
     {
         "from": "/docs/controls/calendardatepicker",
-        "to": "/docs/reference/controls/detailed-reference/calendar/calendar-date-picker"
+        "to": "/docs/reference/controls/calendar/calendar-date-picker"
     },
     {
         "from": "/docs/controls/radiobutton",
@@ -88,14 +88,14 @@ const redirects = [
             "/docs/controls/tray-icon",
             "/docs/controls/trayicon"
         ],
-        "to": "/docs/reference/controls/detailed-reference/tray-icon"
+        "to": "/docs/reference/controls/tray-icon"
     },
     {
         "from": [
             "/docs/controls/treeview-1",
             "/docs/controls/treeview"
         ],
-        "to": "/docs/reference/controls/detailed-reference/treeview-1"
+        "to": "/docs/reference/controls/treeview-1"
     },
     {
         "from": "/docs/data-binding/",
@@ -357,13 +357,110 @@ const redirects = [
         "to": "/docs/guides/platforms/how-to-use-web-assembly"
     },
     {
-        "from": "/docs/tutorials/todo-list-app/creating-a-model-and-viewmodel",
-        "to": "/docs/tutorials/todo-list-app/creating-a-model"
-    },
-    {
         "from": "/docs/tutorials/developing-for-mobile/create-a-cross-platform-solution",
         "to": "/docs/guides/building-cross-platform-applications/solution-setup"
-    }
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/border",
+        "to": "/docs/reference/controls/border"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/calendar",
+        "to": "/docs/reference/controls/calendar/"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/calendar/calendar-date-picker",
+        "to": "/docs/reference/controls/calendar/calendar-date-picker"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/datagrid/data-grid-template-columns",
+        "to": "/docs/reference/controls/datagrid/data-grid-template-columns"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/drawing-image",
+        "to": "/docs/reference/controls/drawing-image"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/label",
+        "to": "/docs/reference/controls/label"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/menu-flyout",
+        "to": "/docs/reference/controls/menu-flyout"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/path-icon",
+        "to": "/docs/reference/controls/path-icon"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/selectable-textblock",
+        "to": "/docs/reference/controls/selectable-textblock"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/tabcontrol",
+        "to": "/docs/reference/controls/tabcontrol"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/tabstrip",
+        "to": "/docs/reference/controls/tabstrip"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/textblock",
+        "to": "/docs/reference/controls/textblock"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/textbox",
+        "to": "/docs/reference/controls/textbox"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/timepicker",
+        "to": "/docs/reference/controls/timepicker"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/tooltip",
+        "to": "/docs/reference/controls/tooltip"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/transitioningcontentcontrol",
+        "to": "/docs/reference/controls/transitioningcontentcontrol"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/tray-icon",
+        "to": "/docs/reference/controls/tray-icon"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/treedatagrid",
+        "to": "/docs/reference/controls/treedatagrid/"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/treedatagrid/creating-a-flat-treedatagrid",
+        "to": "/docs/reference/controls/treedatagrid/creating-a-flat-treedatagrid"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/treedatagrid/creating-a-hierarchical-treedatagrid",
+        "to": "/docs/reference/controls/treedatagrid/creating-a-hierarchical-treedatagrid"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/treedatagrid/treedatagrid-column-types",
+        "to": "/docs/reference/controls/treedatagrid/treedatagrid-column-types"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/treeview-1",
+        "to": "/docs/reference/controls/treeview-1"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/uniform-grid",
+        "to": "/docs/reference/controls/uniform-grid"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/viewbox",
+        "to": "/docs/reference/controls/viewbox"
+    },
+    {
+        "from": "/docs/reference/controls/detailed-reference/wrappanel",
+        "to": "/docs/reference/controls/wrappanel"
+    },
+
 
     // Can't be redirected, as plugin treats it as the same file
     // { '/docs/controls/TransitioningContentControl' },
