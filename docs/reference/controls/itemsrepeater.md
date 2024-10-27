@@ -131,5 +131,5 @@ For the complete API documentation about this control, see [here](http://referen
 :::
 
 :::info
-View the source code on _GitHub_ [`ItemsRepeater.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)
+View the source code on _GitHub_ [`ItemsRepeater.cs`](https://github.com/AvaloniaUI/Avalonia.Controls.ItemsRepeater/blob/main/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)
 :::
