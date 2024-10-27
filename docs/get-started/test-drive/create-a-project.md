@@ -25,7 +25,7 @@ dotnet new install Avalonia.Templates
 
 To get started, we're going to use the MVVM Avalonia template: `Avalonia MVVM Application` (or `avalonia.mvvm` in the CLI).
 
-<Tabs>
+<Tabs groupId="ide">
   <TabItem value="cli" label="Command Line" default>
 Run the command:
 
@@ -75,7 +75,7 @@ The template will create a new solution and two new projects. `GetStartedApp` is
 
 We're now ready to run the project!
 
-<Tabs>
+<Tabs groupId="ide">
   <TabItem value="cli" label="Command Line" default>
 Go into the `GetStartedApp` directory and run:
 

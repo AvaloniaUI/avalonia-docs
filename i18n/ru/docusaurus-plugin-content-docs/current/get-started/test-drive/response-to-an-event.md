@@ -4,7 +4,6 @@ title: Обработка событий
 ---
 
 import SolutionCodeBehindScreenshot from '/img/get-started/test-drive/solution-code-behind.png';
-import ButtonIntellisenseClickScreenshot from '/img/get-started/test-drive/button-intellisense-click.png';
 import EventDebugOutputScreenshot from '/img/get-started/test-drive/event-debug-output.png';
 
 Есть несколько способов обработки событий на Avalonia.
@@ -76,12 +75,6 @@ using System.Diagnostics;
    Click="ButtonClicked">
 </Button>
 ```
-
-:::tip
-Если вы используете IDE, то при вводе должны отобразиться возможные варианты.
-
-<img className="center" src={ButtonIntellisenseClickScreenshot} alt="" />
-:::
 
 - Запустите приложение и нажмите кнопку.
 
