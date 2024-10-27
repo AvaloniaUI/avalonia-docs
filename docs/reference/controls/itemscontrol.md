@@ -34,7 +34,7 @@ You will probably use these properties most often:
       <td>The item template, contains a DataTemplate which will be applied to individual items and can be used to change how items look.</td>
     </tr>
     <tr>
-      <td><code>ItemsControl.ItemPanel</code></td>
+      <td><code>ItemsControl.ItemsPanel</code></td>
       <td>The container panel to place items in. By default, this is a StackPanel. See [this page](../../concepts/custom-itemspanel.md) to customise the ItemsPanel.</td>
     </tr>
     <tr>
