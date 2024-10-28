@@ -221,7 +221,7 @@ You can refine a selector so that it includes the value of a property. The prope
 For example, in the XAML above, the first button will be selected, but not the second button.
 
 :::info
-Note: when you use an attached property as a property match, the property name must be wrapped in parentheses. Fro example:
+Note: when you use an attached property as a property match, the property name must be wrapped in parentheses. For example:
 
 ```xml
 <Style Selector="TextBlock[(Grid.Row)=0]">
