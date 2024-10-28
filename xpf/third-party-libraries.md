@@ -22,7 +22,7 @@ AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.
   .AutoEnable(asm =>
   {
     var name = asm.GetName().Name.ToLowerInvariant();
-    if (name is "iface.oik.tm.native" or "sqlite" or "jint" or "esprima")
+    if (name is "sqlite" or "jint" or "esprima")
       return true;
     return false;
   });
