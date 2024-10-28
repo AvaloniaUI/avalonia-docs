@@ -3,6 +3,25 @@ id: linux
 title: Linux
 ---
 
+## Supported Distributions
+We maintain comprehensive testing and support for the following Linux distributions:
+
+* **Debian**: Version 9 and newer
+* **Ubuntu**: Version 16.04 and newer
+* **Fedora**: Version 30 and newer
+
+### Other Distributions
+While we focus our testing efforts on the distributions listed above, Avalonia XPF can run on many other Linux distributions. If you're using a distribution that's not listed in our officially supported platforms:
+
+* We will work with you to ensure compatibility with your chosen distribution
+* Our support team can assist with distribution-specific issues
+* The distribution may require additional configuration or testing
+
+:::note
+Distribution-specific support is provided on a case-by-case basis. We recommend reaching out to our support team early in your development process if you plan to deploy on a non-listed distribution.
+:::
+
+
 ## Installing .NET
 
 Many distributions provide a version of .NET in their package repositories, but these **should not** be used as they do not ship the required `Microsoft.NET.Sdk.WindowsDesktop` SDK.

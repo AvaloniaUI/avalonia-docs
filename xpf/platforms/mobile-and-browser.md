@@ -1,11 +1,10 @@
 ---
-id: running-on-mobile-and-browser
-title: Running on Mobile and Browser
+id: mobile-and-browser
+title: Mobile and Browser
 ---
 
 :::danger
-XPF support for Mobile and Browser targets is in early stages.
-As well as it highly depends on app complexity and dependencies.
+XPF support for Mobile and Browser targets is in private-preview. 
 :::
 
 :::tip

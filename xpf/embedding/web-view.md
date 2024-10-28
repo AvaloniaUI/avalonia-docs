@@ -1,6 +1,6 @@
 ---
 id: web-view
-title: Using Web View control
+title: Using WebView control
 ---
 
 ## Overview

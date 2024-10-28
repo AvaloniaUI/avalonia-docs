@@ -4,6 +4,7 @@
 const sidebars = {
 
   documentationSidebar: [
+    'welcome',
     'getting-started',
     'porting-tips',
     'build-feeds',
@@ -14,7 +15,8 @@ const sidebars = {
       'label': 'Platforms',
       'items': [
         'platforms/linux',
-        'platforms/macos'
+        'platforms/macos',
+        'platforms/mobile-and-browser'
       ]
     },
     {
@@ -44,8 +46,7 @@ const sidebars = {
           'advanced/customizing-window-decorations',
           'advanced/headless-testing',
           'advanced/key-mapping',
-          'advanced/window-handles',
-          'advanced/running-on-mobile-and-browser'
+          'advanced/window-handles'
       ]
     },
     'troubleshooting',

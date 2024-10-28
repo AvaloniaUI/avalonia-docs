@@ -186,8 +186,12 @@ const config = {
         },
         items: [
           {
-            label: 'Documentation',
+            label: 'Avalonia Docs',
             to: '/docs/welcome'
+          },
+          {
+            label: 'XPF Docs',
+            to: '/xpf/welcome',
           },
           {
               label: 'Resources',
@@ -200,10 +204,6 @@ const config = {
                   className: 'avalonia-dropdown',
                 },
               ],
-          },
-          {
-            label: 'Avalonia XPF',
-            to: '/xpf/getting-started',
           },
           {
             label: 'Support',
