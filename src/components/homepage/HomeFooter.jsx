@@ -90,11 +90,11 @@ const Footer = () => {
                     Company
                 </p>
                 <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/xpf"> Avalonia XPF </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/support"> Enhanced Support </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/services"> Development Services </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/about"> About Us </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/careers"> Careers  </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Avalonia XPF </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Enhanced Support </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/services?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Development Services </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/about?utm_source=docs&utm_medium=referral&utm_content=footer_link"> About Us </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/careers?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Careers  </a>
                 </nav>
                 </div>
                 <div>
@@ -102,12 +102,12 @@ const Footer = () => {
                     Resources
                 </p>
                 <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/blog"> Blog </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/blog?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Blog </a>
                     <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://docs.avaloniaui.net/"> Documentation </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/faqs"> FAQs </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/showcase"> Showcase </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/faqs?utm_source=docs&utm_medium=referral&utm_content=footer_link"> FAQs </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/showcase?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Showcase </a>
                     <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://drive.google.com/uc?id=1laynvVMvQn123I45q4EjexHpDBZcx6rk&export=download"> Press Kit </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/contact"> Contact Us </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/contact?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Contact Us </a>
                 </nav>
                 </div>
                 <div>
@@ -115,9 +115,9 @@ const Footer = () => {
                     Other
                 </p>
                 <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/mvps"> MVPs </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/privacy"> Privacy </a>
-                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/tos"> Terms of Service </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/mvps?utm_source=docs&utm_medium=referral&utm_content=footer_link"> MVPs </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/privacy?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Privacy </a>
+                    <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://avaloniaui.net/tos?utm_source=docs&utm_medium=referral&utm_content=footer_link"> Terms of Service </a>
                     <a className="hover:opacity-75 text-gray-600 text-lg font-jakarta" href="https://t.me/Avalonia"> Telegram Community </a>
                 </nav>
                 </div>

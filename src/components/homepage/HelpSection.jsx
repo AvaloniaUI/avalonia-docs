@@ -22,7 +22,7 @@ export default function HelpSection({ className = '' }) {
             Partner with the creators of Avalonia to ensure you have the best support, every step of the way.
             </p>
             <Link
-              href="https://avaloniaui.net/support"
+              href="https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=homepage_link"
               className="text-primary-00 dark:text-primary-100"
             >
               Explore Subscriptions &rarr;
@@ -36,7 +36,7 @@ export default function HelpSection({ className = '' }) {
               Whether it's app modernisation, custom controls or additional features, we're here to help.
             </p>
             <Link
-              href="https://avaloniaui.net/Services"
+              href="https://avaloniaui.net/services?utm_source=docs&utm_medium=referral&utm_content=homepage_link"
               className="text-primary-500 dark:text-primary-100"
             >
               Learn More &rarr;
@@ -49,7 +49,7 @@ export default function HelpSection({ className = '' }) {
               Browse through our FAQs to find answers to commonly asked
               questions.
             </p>
-            <Link href="https://avaloniaui.net/FAQ" className="text-primary-500 dark:text-primary-100">
+            <Link href="https://avaloniaui.net/faq?utm_source=docs&utm_medium=referral&utm_content=homepage_link" className="text-primary-500 dark:text-primary-100">
               View FAQs &rarr;
             </Link>
           </div>

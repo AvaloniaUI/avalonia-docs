@@ -51,7 +51,7 @@ Trial periods are exclusively available for Business and Enterprise licenses. Th
 For Indie developers, we offer a 30-day money-back guarantee instead of a trial period. This approach allows developers to test XPF's compatibility with their projects while ensuring they receive the appropriate level of support for their needs. We ask that Indie developers not apply for Business or Enterprise trials.
 
 ### Pricing 
-For the latest pricing, please see our [website](https://avaloniaui.net/xpf#pricing). 
+For the latest pricing, please see our [website](https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=welcome_link#pricing). 
 
 ## Hybrid XPF
 One of Avalonia XPF's unique features is its [hybrid capability](embedding/xpf-in-avalonia.md), allowing Avalonia developers to use WPF controls within applications. This flexibility enables Avalonia developers to leverage over 700 existing WPF controls from major vendors such as [Telerik](https://www.telerik.com/), [Actipro](https://www.actiprosoftware.com/), [DevExpress](https://www.devexpress.com/), [Infragistics](https://www.infragistics.com/), and [Syncfusion](https://www.syncfusion.com/), bridging the gap between traditional WPF development and modern cross-platform applications.

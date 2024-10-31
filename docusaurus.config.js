@@ -150,7 +150,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'Get the help you need with our <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/Support">Enhanced Support!</a>',
+          'Get the help you need with our <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=header_link">Enhanced Support!</a>',
         backgroundColor: '#0d6efd',
         textColor: '#ffffff',
         isCloseable: false,
@@ -207,7 +207,7 @@ const config = {
           },
           {
             label: 'Support',
-            to: 'https://avaloniaui.net/support',
+            to: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
           },
           {
             type: 'docsVersionDropdown',
@@ -257,7 +257,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                href: 'https://avaloniaui.net/Blog',
+                href: 'https://avaloniaui.net/blog?utm_source=docs&utm_medium=referral&utm_content=nav_link',
               },
               {
                 label: 'GitHub',

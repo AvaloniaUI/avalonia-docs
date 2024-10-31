@@ -17,7 +17,7 @@ interface Resource {
 
 const ALL_RESOURCES: Resource[] = [
   {
-    url: 'https://avaloniaui.net/Blog/is-wpf-dead',
+    url: 'https://avaloniaui.net/Blog/is-wpf-dead?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
     type: 'blog',
     title: 'Is WPF Dead?',
     description:
@@ -26,7 +26,7 @@ const ALL_RESOURCES: Resource[] = [
       'https://sq.avaloniaui.net/api/assets/a87f1f33-353b-40c8-a47c-d58fec240880',
   },
   {
-    url: 'https://avaloniaui.net/Blog/balancing-growth-and-sustainability-avalonia-s-financial-evolution',
+    url: 'https://avaloniaui.net/Blog/balancing-growth-and-sustainability-avalonia-s-financial-evolution?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
     type: 'blog',
     title: 'Balancing Growth and Sustainability - Avalonias Financial Evolution',
     description:
@@ -35,7 +35,7 @@ const ALL_RESOURCES: Resource[] = [
       'https://sq.avaloniaui.net/api/assets/015d1f17-3b5a-4359-ae26-2501de542c5f',
   },
   {
-    url: 'https://avaloniaui.net/Blog/10-years-of-avalonia',
+    url: 'https://avaloniaui.net/Blog/10-years-of-avalonia?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
     type: 'blog',
     title: '10 years of Avalonia!',
     description:

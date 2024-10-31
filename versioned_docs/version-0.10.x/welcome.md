@@ -35,4 +35,4 @@ You can find instructions on how to install the Avalonia extension for Visual St
 
 If you encounter any issues or bugs with Avalonia, please open a new issue on [GitHub](https://github.com/AvaloniaUI/Avalonia). Our active developer community on [Telegram](https://t.me/Avalonia) is also a great resource for help with your projects.
 
-In addition to community support, we offer a range of commercial support plans that provide priority assistance from the core contributors. You can learn more about these plans on [our website](https://avaloniaui.net/Support).
+In addition to community support, we offer a range of commercial support plans that provide priority assistance from the core contributors. You can learn more about these plans on [our website](https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=welcome_link).
