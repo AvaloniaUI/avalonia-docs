@@ -1,54 +1,55 @@
 ---
 id: xaml
-title: Platform-Specific XAML
+title: 特定平台的XAML
 ---
 
-## OnPlatform Markup Extension
+## OnPlatform 标记扩展
 
-### Overview
-The OnPlatform markup extension in Avalonia allows developers to specify different values for a property based on the operating system on which the application is running. This is particularly useful for creating cross-platform applications that need to adapt their UI or behavior according to the platform.
+### 概述
 
-### Basic usage in markup extension syntax
+Avalonia中的OnPlatform标记扩展(Markup Extension)允许开发人员根据应用程序运行的操作系统指定属性的不同值。这对于创建需要根据平台调整其 UI 或行为的跨平台应用程序特别有用。
 
-You can specify values for each platform and a default value that will be used if no specific platform match is found.
+### 标记扩展语法的基本用法
+
+您可以在标记扩展语法中为每个平台指定值，并为未找到特定平台匹配的情况指定默认值：
 
 ```xml
 <TextBlock Text="{OnPlatform Default='Unknown', Windows='Im Windows', macOS='Im macOS', Linux='Im Linux'}"/>
 ```
 
-Alternatively, you can use constructor syntax to define the default value directly, skipping `Default` keyword. Platform-specific properties still needs to be defined.
+或者，您可以使用构造函数语法直接定义默认值，跳过 `Default` 关键字。但是平台特定的属性仍需定义：
 
 ```xml
 <TextBlock Text="{OnPlatform 'Hello World', Android='Im Android'}"/>
 ```
 
-You can use this markup extension with any other type, not only strings:
+您可以将此标记扩展搭配任何其他类型使用，而不仅仅是字符串：
 
 ```xml
 <Border Height="{OnPlatform 10, Windows=50.5}"/>
 ```
 
-### Specifying Type Arguments
+### 指定类型参数
 
-You can use custom TypeArguments to explicitly specify the type for the values.
+您可以使用自定义的TypeArguments 显式指定值的类型：
 
 ```xml
 <TextBlock Tag="{OnPlatform '0, 0, 0, 0', Windows='10, 10, 10, 10', x:TypeArguments=Thickness}"/>
 ```
 
-In this sample above, `Tag` property has type of `object`, so compiler doesn't have enough information to parse input strings. Without specifying TypeArguments, property will have value of `string` on all platforms. But since we have `TypeArguments` here, compiler will parse them as `Thickness` values.
+在上面的示例中，`Tag` 属性的类型为 `object`，因此编译器没有足够的信息来解析输入字符串。如果不指定 TypeArguments，属性在所有平台上都将具有 `string` 类型。但由于我们有 `TypeArguments`，编译器将解析它们为 `Thickness` 值。
 
-### Nested Markup Extensions
+### 嵌套标记扩展
 
-The OnPlatform extension supports nesting other markup extensions within it.
+OnPlatform 扩展支持在其内部嵌套其他标记扩展：
 
 ```xml
 <Border Background="{OnPlatform Default={StaticResource DefaultBrush}, Windows={StaticResource WindowsBrush}}"/>
 ```
 
-### XML Syntax
+### XML 语法
 
-OnPlatform can also be used in XML syntax for defining property values.
+OnPlatform 也可以在 XML 语法中用于定义属性值：
 
 ```xml
 <StackPanel>
@@ -58,16 +59,16 @@ OnPlatform can also be used in XML syntax for defining property values.
         </OnPlatform.Default>
         <OnPlatform.iOS>
             <ToggleSwitch Content="Hello iOS" />
-        </OnPlatform.Windows>
+        </OnPlatform.iOS>
     </OnPlatform>
 </StackPanel>
 ```
 
-Note, in this sample, `OnPlatform` is a child of `StackPanel`. But in runtime only single actual control will be created (`ToggleButton` or `ToggleSwitch`) and added to the StackPanel.
+注意，在此示例中，`OnPlatform` 是 `StackPanel` 的子元素。但在运行时，只会创建一个实际的控件（`ToggleButton` 或 `ToggleSwitch`）并添加到 `StackPanel` 中。
 
-### Complex Property Setters
+### 复杂属性设置器
 
-Similarly to the previous sample, OnPlatform can be part of complex property setters within a ResourceDictionary or other dictionaries or collections.
+类似于前面的示例，OnPlatform 可以作为复杂属性设置器的一部分，用于资源字典或其他字典或集合中：
 
 ```xml
 <ResourceDictionary>
@@ -77,22 +78,21 @@ Similarly to the previous sample, OnPlatform can be part of complex property set
         </OnPlatform.Default>
         <OnPlatform.iOS>
             <SolidColorBrush Color="Yellow" />
-        </OnPlatform.Windows>
+        </OnPlatform.iOS>
     </OnPlatform>
 </ResourceDictionary>
 ```
 
-### XML Combining Syntax
+### XML 组合语法
 
-To avoid branches duplication, it is possible to define multiple platforms in a single branch.
-Another useful example would be including platform specific styles:
+为了避免分支重复，可以在单个分支中定义多个平台。另一个有用的示例是包含平台特定的样式：
 
 ```xml
 <Application.Styles>
-    <!-- Always included -->
+    <!-- 始终包含 -->
     <FluentTheme />
 
-    <!-- Only one branch is executed in runtime -->
+    <!-- 运行时只执行一个分支 -->
     <OnPlatform>
         <!-- if (Android || iOS) -->
         <On Options="Android, iOS">
@@ -106,17 +106,15 @@ Another useful example would be including platform specific styles:
 </Application.Styles>
 ```
 
-### Additional details
+### 其他细节
 
-`OnPlatform` markup extension work in a similar way how `switch-case` works in C# code.
-Compiler will generate branches for all possible values, but only single branch will be executed in runtime depending on the condition.
+OnPlatform 标记扩展的工作方式类似于 C# 代码中的 switch-case。编译器将为所有可能的值生成分支，但在运行时仅根据条件执行一个分支。
 
-It's also useful to remember, that if application is build with specific [Runtime Identifier](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog) and with [Trimming Enabled](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options), `OnPlatform` extension will have its branches trimmed only to these that are possible. For example, if `OnPlatform` had branches for `Windows` and `macOS`, but was built for `Windows` only, other branches will be removed. Which also reduces application size.
+还值得注意的是，如果应用程序是使用特定的 [运行时标识符](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog) 并且启用了 [Trim](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options)，OnPlatform 扩展将只保留可能的分支。例如，如果OnPlatform有Windows和macOS的分支，但仅构建为 Windows，其他分支将被移除，这也减少了应用程序的大小。
 
+## OnFormFactor 标记扩展
 
-## OnFormFactor Markup Extension
-
-The `OnFormFactor` markup extension functions similarly to the `OnPlatform` and has the same general syntax. The main difference is that it allows defining values not per platform, but per device form factor, such as Desktop and Mobile.
+`OnFormFactor` 标记扩展的功能类似于 `OnPlatform`，并且具有相同的通用语法。主要区别在于，它允许根据设备的外形因素（如桌面和移动设备）而不是平台来定义值：
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -125,5 +123,4 @@ The `OnFormFactor` markup extension functions similarly to the `OnPlatform` and 
 </UserControl>
 ```
 
-`OnFormFactor` doesn't have any compile-time trimming kinds of optimizations, as form factor cannot be known in compile time.
-None of these markup extensions are dynamic, which means, once value was set, it will not be changed.
+`OnFormFactor` 没有编译时的修剪优化，因为外形因素在编译时无法确定。这些标记扩展都不是动态的；一旦设置了值，就不会再改变。
