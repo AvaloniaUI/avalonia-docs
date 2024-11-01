@@ -1,47 +1,47 @@
 ---
 id: dotnet
-title: Platform-Specific .NET
+title: 特定平台的.NET
 ---
+## 概述
 
-## Overview 
+.NET当中的条件编译允许根据某些条件编译或省略代码的不同部分。这对于处理需要在不同平台或开发环境中不同行为的代码时特别有用。
 
-Conditional compilation in .NET allows different parts of the code to be compiled or omitted based on certain conditions. This is particularly useful in .NET when dealing with code that needs to behave differently on various platforms or under different development environments.
+这些方案并不特定于Avalonia，可以用于任何类型的项目。
 
-None of these solutions are specific to Avalonia, and they can be used with any type of projects.
+## 运行时条件
 
-## Runtime Conditions
+.NET 6 及更高版本提供了一组在运行时获取操作系统信息的API -
+[OperatingSystem](https://learn.microsoft.com/en-us/dotnet/api/system.operatingsystem)。
 
-.NET 6 and newer provide a set of APIs to get operating system in runtime - [OperatingSystem](https://learn.microsoft.com/en-us/dotnet/api/system.operatingsystem).
+这个类中常用的一些静态方法包括：
 
-Commonly used static methods of this class are:
-| Method | Description |
+| 方法 | 描述 |
 | --- | --- |
-| IsWindows()	 | Indicates whether the current application is running on Windows. |
-| IsLinux() |	Indicates whether the current application is running on Linux. |
-| IsMacOS() |	Indicates whether the current application is running on macOS. |
-| IsAndroid() |	Indicates whether the current application is running on Android. |
-| IsIOS() |	Indicates whether the current application is running on iOS or MacCatalyst. |
-| IsBrowser() |	Indicates whether the current application is running as WASM in a browser. |
-| IsOSPlatform(String) | 	Indicates whether the current application is running on the specified platform. |
+| IsWindows() | 指示当前应用程序是否在Windows上运行。 |
+| IsLinux() | 指示当前应用程序是否在Linux上运行。 |
+| IsMacOS() | 指示当前应用程序是否在macOS上运行。 |
+| IsAndroid() | 指示当前应用程序是否在Android上运行。 |
+| IsIOS() | 指示当前应用程序是否在iOS或MacCatalyst上运行。 |
+| IsBrowser() | 指示当前应用程序是否在浏览器中以WASM形式运行。 |
+| IsOSPlatform(String) | 指示当前应用程序是否在指定的平台上运行。 |
 
-These methods do not require any changes in the project structure, and can be used anywhere.
-The disadvantage of using them, it is not possible to separate platform specific APIs in compile time. As otherwise it would require platform specific dependencies to be referenced in a common assembly.
+这些方法不需要对项目结构进行任何更改，并且可以在任何地方使用。
+缺点是无法在编译时分离平台特定的API，这样就需要在公共的程序集中引用平台特定的依赖项。
 
-This approach is recommended for simpler scenarios, or when it's desired to keep simple project structure. In the last case, 
+这种方法适用于简单的场景，或者希望保持简单的项目结构。在后一种情况下
 
 :::note
-It's the only possible approach to write a conditional .NET code for Linux OS. As .NET doesn't have a special Target Framework for Linux.
+这是编写针对Linux操作系统的条件.NET代码的唯一可能方法，因为.NET没有专门针对Linux的目标框架。
 :::
 
-## Conditional compilation
+## 条件编译
 
-C# specifically allows to have conditional compilation with `#if`, `#elif`, `#else`, `#endif` - [C# preprocessor directives](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives#conditional-compilation).
+C# 特别地允许使用 `#if`、`#elif`、`#else` 和 `#endif` 进行条件编译 - [C# 预处理器指令](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives#conditional-compilation)。
 
-`DEBUG` compile time constant is a well known one. But it's not really useful with writing platform specific code.
-Depending on the project time, C# compiler might define additional constants per each [OS specific Target Framework](https://learn.microsoft.com/en-us/dotnet/standard/frameworks#net-5-os-specific-tfms) used in the project:
+`DEBUG` 是一个众所周知的编译时常量。但编写平台特定的代码时它并不是特别有用。根据项目的需要，C# 编译器可能会为每个 [操作系统特定的 Target Framework](https://learn.microsoft.com/en-us/dotnet/standard/frameworks#net-5-os-specific-tfms) 定义额外的常量：
 
-|Target Framework | Constant |
-|----|----|
+| 目标框架 | 常量 |
+| ---- | ---- |
 | net8.0 | - |
 | net8.0-windows | WINDOWS |
 | net8.0-macos | MACOS |
@@ -50,20 +50,19 @@ Depending on the project time, C# compiler might define additional constants per
 | net8.0-android | ANDROID |
 | net8.0-tizen | TIZEN |
 
-From this table, we can see couple of notes:
-1. If project doesn't use any OS specific Target Framework, none of these constants will be defined
-2. **There is no constant for LINUX**, as there is no `net8.0-linux` Target Framework as of now. Note, it might be changed in the future versions of .NET.
-3. Additionally, `net8.0-browser` is only available starting with .NET 8 SDK. Other Target Frameworks are supported with .NET 6 or higher.
+从上表中，我们可以注意到几点：
+1. 如果项目没有使用任何特定于操作系统的目标Framework，则不会定义这些常量。
+2. **没有针对 LINUX 的常量**，因为目前没有 `net8.0-linux` 的目标框架。请注意，这可能会在未来版本的 .NET 中发生变化。
+3. 此外，`net8.0-browser` 仅在 .NET 8 SDK 中可用。其他目标框架支持 .NET 6 或更高版本。
 
 :::note
-Similar approach can be used to define special code compilation for .NET Framework or .NET Standard projects, if it's required. Visit Microsoft [Cross-platform targeting
-](https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting) documentation for more information.
+类似的方法也可以用于定义 .NET Framework 或 .NET Standard 项目的特殊代码编译，如果需要的话。请访问 Microsoft [跨平台目标](https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting) 文档以获取更多信息。
 :::
 
-### Practical example
+### 实际案例
 
-Let's imagine, we want to use platform APIs from C# code. It can be Avalonia APIs, or Xamarin APIs, or anything else really.
-First of all, expected Target Frameworks needs to be defined in the project. To keep it simple, we will have three possible target framework - "net8.0" (default), "net8.0-ios" and "net8.0-android" in `.csproj` file:
+假设我们想在 C# 代码中使用平台 API。它可以是 Avalonia API、Xamarin API 或其他任何 API。
+首先，需要在项目中定义预期的目标框架。为了简单起见，我们在 `.csproj` 文件中定义三个可能的目标框架 - "net8.0"（默认）、"net8.0-ios" 和 "net8.0-android"：
 
 ```xml
 <PropertyGroup>
@@ -71,7 +70,7 @@ First of all, expected Target Frameworks needs to be defined in the project. To 
 </PropertyGroup>
 ```
 
-And then it's possible to create a method like this:
+然后可以创建如下方法：
 ```csharp
 public enum DeviceOrientation
 {
@@ -98,16 +97,14 @@ public static DeviceOrientation GetOrientation()
 ```
 
 :::note
-This sample code is referenced from the Microsoft documentation: https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/invoke-platform-code?view=net-maui-8.0#conditional-compilation
+此示例代码引用自Microsoft文档：https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/invoke-platform-code?view=net-maui-8.0#conditional-compilation
 :::
 
+## 平台特定的项目
 
-## Platform specific projects
+类似于前面的方法，可以为每个平台创建引导项目，并保留包含主要逻辑和布局的共享项目。例如，默认的 Avalonia.Xplat模板会创建一个包含以下项目的解决方案：
 
-Similarly to the previous approach, it is possible to create bootstrap projects per each platform, and keep shared project with main logic and layouts.
-For example, default Avalonia.Xplat template creates solution with following projects:
-
-| Project | Target Framework |
+| 项目 | 目标框架 |
 | --- | --- |
 | Project.Shared | net8.0 |
 | Project.Desktop | net8.0 |
@@ -115,12 +112,12 @@ For example, default Avalonia.Xplat template creates solution with following pro
 | Project.iOS | net8.0-ios |
 | Project.Browser | net8.0-browser |
 
-Desktop project combines Windows, macOS and Linux. While mobile and browser platforms have their own projects.
-This is default approach for Avalonia projects. If desired, developers can split Desktop project into multiple as well.
-Although, it should be kept in mind, that .NET SDK doesn't have any target framework for Linux yet, so it still would have to use generic `net8.0` target framework.
+Windows、macOS 和 Linux的桌面平台项目是统一的一个，而移动和浏览器平台则有自己的项目。
+这是Avalonia项目的默认方式。如果需要，开发者也可以将桌面项目拆分为多个项目。
+不过需要注意的是，.NET SDK 目前还没有针对Linux的目标框架，因此仍然需要使用通用的 `net8.0` 目标框架。
 
-Commonly, when any platform specific code is required, a new interface is created in shared project, with different implementations per each platform.
-Adapting previous sample would look like this:
+通常，当需要任何平台特定的代码时，会在共享项目中创建一个新的接口，并为每个平台提供不同的实现。
+之前的示例将如下所示：
 ```csharp title='Project.Shared IDeviceOrientation.cs'
 public interface IDeviceOrientation
 {
@@ -153,4 +150,4 @@ public class iOSDeviceOrientation : IDeviceOrientation
 }
 ```
 
-Each implementation then can be registered using dependency injection library of choice, or using a static registry property.
+每个实现可以使用所选的依赖注入库或静态注册属性进行注册。

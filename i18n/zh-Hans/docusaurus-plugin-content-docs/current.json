@@ -99,6 +99,10 @@
     "message": "平台",
     "description": "The label for category Platforms in sidebar documentationSidebar"
   },
+  "sidebar.documentationSidebar.category.Platform-Specific Code": {
+    "message": "特定平台代码",
+    "description": "The label for category Platform-Specific Code in sidebar documentationSidebar"
+  },
   "sidebar.documentationSidebar.category.Android": {
     "message": "Android",
     "description": "The label for category Android in sidebar documentationSidebar"
