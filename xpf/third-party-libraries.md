@@ -53,50 +53,103 @@ If you find that a control marked as `Fix In Progress` or `Untested` is mission-
 
 Below is an overview of the Windows API (WinAPI) shims available in Avalonia XPF. These shims allow for native Windows functionality while maintaining cross-platform compatibility. Some APIs may not be fully implemented. 
 
+### Window Management
 
-### Window Creation and Manipulation
+#### Window Creation and Manipulation
 ```csharp
+// Window Creation
 IntPtr CreateWindowEx(uint dwExStyle, void* lpClassName, void* lpWindowName, uint dwStyle, 
     int x, int y, int nWidth, int nHeight, IntPtr hWndParent, IntPtr hMenu, 
     IntPtr hInstance, IntPtr lpParam);
 IntPtr CreateWindowExW(uint dwExStyle, void* lpClassName, void* lpWindowName, uint dwStyle, 
     int x, int y, int nWidth, int nHeight, IntPtr hWndParent, IntPtr hMenu, 
     IntPtr hInstance, IntPtr lpParam);
+short RegisterClass(void* wc);
+short RegisterClassExW(WNDCLASSEX* lpwcx);
+
+// Window State and Properties
 int GetWindowPlacement(IntPtr hWnd, IntPtr lpwndpl);
 int GetWindowRect(IntPtr hWnd, RECT* lpRect);
-int SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int x, int y, int cx, int cy, int uFlags);
+int GetClientRect(IntPtr hWnd, RECT* lpRect);
 int IsWindowEnabled(IntPtr hWnd);
 int IsWindowVisible(IntPtr hWnd);
 int IsWindow(IntPtr hWnd);
-```
+int GetWindowInfo(IntPtr hwnd, WINDOWINFO* pwi);
 
-#### Window Properties and Attributes
-```csharp
+// Window Position and Layout
+IntPtr BeginDeferWindowPos(int nNumWindows);
+int EndDeferWindowPos(IntPtr hWinPosInfo);
+int SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int x, int y, int cx, int cy, int uFlags);
+uint AdjustWindowRectEx(RECT* lpRect, uint dwStyle, uint bMenu, uint dwExStyle);
+
+// Window Properties
 int GetWindowLong(IntPtr hWnd, int nIndex);
 int SetWindowLong(IntPtr hWnd, int nIndex, int newVal);
 IntPtr GetWindowLongPtr(IntPtr hWnd, int nIndex);
 IntPtr GetWindowLongPtrW(IntPtr hWnd, int nIndex);
 IntPtr SetWindowLongPtr(IntPtr hWnd, int nIndex, IntPtr newVal);
-IntPtr GetSystemMenu(IntPtr hWnd, int bRevert);
+
+// Window Hierarchy and Relations
+IntPtr GetActiveWindow();
+IntPtr GetTopWindow(IntPtr hWnd);
+IntPtr GetWindow(IntPtr hWnd, uint uCmd);
+IntPtr GetDesktopWindow();
+IntPtr WindowFromPoint(long p);
+IntPtr FindWindow(void* lpClassName, void* lpWindowName);
+int EnumChildWindows(IntPtr window, IntPtr callback, IntPtr lParam);
+
+// Window Display and Region
 int SetWindowDisplayAffinity(IntPtr hWnd, int* dwAffinity);
-int GetWindowInfo(IntPtr hwnd, WINDOWINFO* pwi);
+int SetWindowRgn(IntPtr hWnd, IntPtr hRgn, int bRedraw);
+int RedrawWindow(IntPtr hWnd, RECT* lprcUpdate, IntPtr hrgnUpdate, uint flags);
+int InvalidateRect(IntPtr hWnd, RECT* lpRect, int bErase);
+
+// System Menu
+IntPtr GetSystemMenu(IntPtr hWnd, int bRevert);
 ```
 
-### Device Context and Graphics
+#### Focus and Input Management
+```csharp
+IntPtr GetFocus();
+IntPtr GetCapture();
+int ReleaseCapture();
+int SetForegroundWindow(IntPtr hWnd);
+short GetKeyState(int vKey);
+int GetMessagePos();
+int GetMessageTime();
+int GetCursorPos(POINT* lpPoint);
+```
+
+### Graphics and Device Context
+
+#### Device Context Management
 ```csharp
 IntPtr GetDC(IntPtr hWnd);
 IntPtr CreateCompatibleDC(IntPtr hdc);
 int DeleteDC(IntPtr hdc);
 int GetDeviceCaps(IntPtr hdc, int nIndex);
 int ReleaseDC(IntPtr hWnd, IntPtr hDC);
+```
+
+#### Region and Drawing Objects
+```csharp
 IntPtr CreateRectRgn(int x1, int y1, int x2, int y2);
 IntPtr CreateRoundRectRgn(int x1, int y1, int x2, int y2, int cx, int cy);
 IntPtr CreateRectRgnIndirect(RECT* lprc);
 int DeleteObject(IntPtr obj);
-int SetWindowRgn(IntPtr hWnd, IntPtr hRgn, int bRedraw);
+IntPtr GetStockObject(int i);
 ```
 
-### DWM (Desktop Window Manager)
+#### Coordinate System and Mapping
+```csharp
+int GetMapMode(IntPtr hdc);
+int SetMapMode(IntPtr hdc, int fnMapMode);
+int SetWindowExtEx(IntPtr hdc, int x, int y, SIZE* lpsz);
+int SetViewportExtEx(IntPtr hdc, int x, int y, SIZE* lpsz);
+int OffsetRect(IntPtr lprc, int x, int y);
+```
+
+### Desktop Window Manager (DWM)
 ```csharp
 int DwmIsCompositionEnabled(int* enabled);
 int DwmExtendFrameIntoClientArea(IntPtr hWnd, MARGINS* pMarInset);
@@ -113,6 +166,7 @@ int GetMonitorInfo(IntPtr hMonitor, IntPtr lpmi);
 int EnumDisplayMonitors(IntPtr hdc, IntPtr lprcClip, IntPtr lpfnEnum, IntPtr data);
 int GetDpiForMonitor(IntPtr hMonitor, int dpiType, uint* dpiX, uint* dpiY);
 int GetDpiForWindow(IntPtr hWnd);
+int GetProcessDpiAwareness(IntPtr hWnd, int* value);
 ```
 
 ### Input Method Editor (IME)
@@ -124,12 +178,16 @@ int ImmReleaseContext(IntPtr hWnd, IntPtr hIMC);
 IntPtr ImmAssociateContext(IntPtr hWnd, IntPtr hIMC);
 int ImmSetOpenStatus(IntPtr hIMC, int open);
 int ImmGetOpenStatus(IntPtr hIMC);
+int ImmNotifyIME(IntPtr hIMC, int dwAction, int dwIndex, int dwValue);
+int ImmGetProperty(IntPtr hkl, int flags);
 int ImmGetCompositionString(IntPtr hIMC, int dwIndex, void* lpBuf, int dwBufLen);
 int ImmGetCompositionStringW(IntPtr hIMC, int dwIndex, void* lpBuf, int dwBufLen);
 int ImmSetCompositionFont(IntPtr hIMC, void* lf);
 int ImmSetCompositionFontW(IntPtr hIMC, void* lf);
+int ImmConfigureIMEW(IntPtr hkl, IntPtr hwnd, int dwData, void* registerWord);
 int ImmSetCompositionWindow(IntPtr hIMC, void* compform);
 int ImmSetCandidateWindow(IntPtr hIMC, void* candform);
+IntPtr ImmGetDefaultIMEWnd(IntPtr hwnd);
 ```
 
 ### System Information and Settings
@@ -143,23 +201,22 @@ int RtlGetVersion(RTL_OSVERSIONINFOW* lpVersionInformation);
 uint GetCaretBlinkTime();
 ```
 
-### Clipboard and Shell
-```csharp
-int AddClipboardFormatListener(IntPtr hwnd);
-IntPtr SHGetFileInfo(void* pszPath, uint dwFileAttributes, SHFILEINFOA* psfi, 
-    uint cbFileInfo, uint uFlags);
-IntPtr SHGetFileInfoW(void* pszPath, uint dwFileAttributes, SHFILEINFOW* psfi, 
-    uint cbFileInfo, uint uFlags);
-```
-
-### Window Messages and Hooks
+### Messages and Window Procedures
 ```csharp
 IntPtr SendMessage(IntPtr hWnd, int uMsg, IntPtr wParam, IntPtr lParam);
 int PostMessage(IntPtr hWnd, int uMsg, IntPtr wParam, IntPtr lParam);
-IntPtr SetWindowsHookEx(int idHook, IntPtr lpfn, IntPtr hMod, uint dwThreadId);
-int UnhookWindowsHookEx(IntPtr hWnd);
 IntPtr DefWindowProc(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
 IntPtr DefWindowProcW(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
+uint FormatMessageW(int dwFlags, IntPtr lpSource, int dwMessageId, int dwLanguageId, 
+    IntPtr* lpBuffer, int nSize, IntPtr Arguments);
+```
+
+### Hooks and Thread Management
+```csharp
+IntPtr SetWindowsHookEx(int idHook, IntPtr lpfn, IntPtr hMod, uint dwThreadId);
+int UnhookWindowsHookEx(IntPtr hWnd);
+int GetCurrentThreadId();
+int EnumThreadWindows(int dwThreadId, IntPtr lpfn, IntPtr lParam);
 ```
 
 ### File and Resource Management
@@ -174,32 +231,69 @@ IntPtr MapViewOfFile(IntPtr hFileMappingObject, uint dwDesiredAccess, uint dwFil
     uint dwFileOffsetLow, IntPtr dwNumberOfBytesToMap);
 int UnmapViewOfFile(IntPtr lpBaseAddress);
 int CloseHandle(IntPtr hObject);
+IntPtr FindFirstFile(char* lpFilename, IntPtr findData);
+int FindNextFile(IntPtr findHandle, IntPtr findData);
+int FindClose(IntPtr findHandle);
+int GetModuleFileName(IntPtr module, char* lpFilename, int nSize);
+IntPtr GetModuleHandle(char* lpModuleName);
+IntPtr GetModuleHandleW(char* lpModuleName);
 ```
 
-### UI Elements
+### UI Elements and Theming
 ```csharp
+// Caret
 int CreateCaret(IntPtr hWnd, IntPtr hBitmap, int width, int height);
 int ShowCaret(IntPtr hWnd);
 int HideCaret(IntPtr hWnd);
 int DestroyCaret();
 int SetCaretPos(int x, int y);
+
+// Menus
 uint TrackPopupMenuEx(IntPtr hmenu, uint fuFlags, int x, int y, IntPtr hwnd, IntPtr lptpm);
+int EnableMenuItem(IntPtr hMenu, int uIDEnableItem, int uEnable);
+
+// Theming
+int IsThemeActive();
+int SetWindowThemeAttribute(IntPtr hWnd, uint wtype, WTA_OPTIONS* attributes, uint size);
+```
+
+### Shell and Icons
+```csharp
+int AddClipboardFormatListener(IntPtr hwnd);
+IntPtr SHGetFileInfo(void* pszPath, uint dwFileAttributes, SHFILEINFOA* psfi, 
+    uint cbFileInfo, uint uFlags);
+IntPtr SHGetFileInfoW(void* pszPath, uint dwFileAttributes, SHFILEINFOW* psfi, 
+    uint cbFileInfo, uint uFlags);
+int ExtractIconEx(void* lpszFile, int nIconIndex, void* phiconLarge, void* phiconSmall, int nIcons);
+int ExtractIconExW(void* lpszFile, int nIconIndex, void* phiconLarge, void* phiconSmall, int nIcons);
+```
+
+### Memory Operations
+```csharp
+void RtlMoveMemory(IntPtr destination, IntPtr source, uint length);
+```
+
+### Text Services
+```csharp
+int TF_CreateThreadMgr(void* threadMgr);
 ```
 
 ### Notes
 - Functions with 'W' suffix are Unicode versions
-- Many functions return non-zero value for success, zero for failure
+- Most functions return non-zero for success, zero for failure
 - IntPtr parameters typically represent handles (HWND, HDC, etc.)
-- void* parameters are typically used for strings or structures in unmanaged code
+- void* parameters are typically for strings or structures in unmanaged code
 
 ### Usage Example
 ```csharp
-// Example of getting window dimensions
+// Example of getting window dimensions and position
 var hwnd = window.PlatformImpl.Handle.Handle;
 var rect = new RECT();
 if (GetWindowRect(hwnd, &rect) != 0)
 {
     int width = rect.right - rect.left;
     int height = rect.bottom - rect.top;
+    int x = rect.left;
+    int y = rect.top;
 }
 ```
