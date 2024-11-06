@@ -72,8 +72,10 @@ dotnet add package Microsoft.Extensions.DependencyInjection
 The following code is creating an extension method for `IServiceCollection` that will register services to our service collection and make them available for injection.  
 
 ```csharp
-public static class ServiceCollectionExtensions {
-    public static void AddCommonServices(this IServiceCollection collection) {
+public static class ServiceCollectionExtensions
+{
+    public static void AddCommonServices(this IServiceCollection collection)
+    {
         collection.AddSingleton<IRepository, Repository>();
         collection.AddTransient<BusinessService>();
         collection.AddTransient<MainViewModel>();
