@@ -16,7 +16,7 @@ In order for our application to work we are going to need some business logic. T
 
 To add this business logic we need 2 steps.
 
-1. Add the ItunesSearch nuget package to the project. In Rider right click on our project and select `Manage Nuget Packages`
+1. Add the ItunesSearch nuget package to the project. In Rider right click on our project and select `Manage NuGet Packages`
 
 This will open the `Packages` tool at the bottom of the IDE, like so.
 

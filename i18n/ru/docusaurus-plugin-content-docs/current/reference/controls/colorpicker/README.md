@@ -39,7 +39,7 @@ Developers using this control may:
 
 ## Using in Your App
 
-Avalonia is used in several resource-constrained environments such as embedded devices. For this and other reasons, certain larger controls such as the `ColorPicker` are not included with the main Avalonia UI Nuget packages. This means a bit of extra work is required to add the `ColorPicker` to your app:
+Avalonia is used in several resource-constrained environments such as embedded devices. For this and other reasons, certain larger controls such as the `ColorPicker` are not included with the main Avalonia UI NuGet packages. This means a bit of extra work is required to add the `ColorPicker` to your app:
 
  1. Add the `Avalonia.Controls.ColorPicker` nuget to your project. This MUST match your version of Avalonia's other packages.
  2. Add control themes and styles for all color picker controls in `App.axaml` by adding:
