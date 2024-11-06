@@ -54,7 +54,7 @@ ln -s /opt/dotnet/dotnet /usr/local/bin
 
 * To run an `Avalonia` application on `Raspberry Pi` you need to use this nuGet package:
 
-[https://www.nuget.org/packages/Avalonia.Skia.Linux.Natives/1.68.0.2](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/)
+[SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/)
 
 It includes the `libSkiaSharp.so`.
 
