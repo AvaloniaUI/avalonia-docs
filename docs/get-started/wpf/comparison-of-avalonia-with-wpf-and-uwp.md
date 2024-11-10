@@ -160,7 +160,7 @@ This section describes the differences in controls in vanilla WPF and UWP (with 
 |        ScrollBar       |         ScrollBar        |        ScrollBar       |                                                                                                                               |
 | ScrollContentPresenter |   ScrollContentPresenter | ScrollContentPresenter |                                                                                                                               |
 |      ScrollViewer      |       ScrollViewer       |      ScrollViewer      |                                                                                                                               |
-|   SelectableTextBlock  |             ✖            |           ✖           | UWP TextBlock has a TextSelectionEnabled property                                                                             |
+|   SelectableTextBlock  |             ✖            |           ✖           | UWP TextBlock has a IsTextSelectionEnabled property                                                                             |
 |            ✖           |             ✖            |      SemanticZoom      |                                                                                                                               |
 |        Separator       |         Separator        |    MenuFlyoutSeparator  |                                                                                                                               |
 |         Slider         |          Slider          |         Slider         |                                                                                                                               |
