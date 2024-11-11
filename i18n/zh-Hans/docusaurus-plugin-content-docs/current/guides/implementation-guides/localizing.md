@@ -5,11 +5,9 @@ title: 使用 ResX 进行本地化
 
 本地化是为全球用户提供出色用户体验的关键步骤。在 .NET 中，可以使用 `ResXResourceReader` 和 `ResXResourceWriter` 类来读取和写入基于 XML 的资源文件（.resx）。本指南将引导您通过使用 ResX 文件来本地化 Avalonia 应用程序。
 
-:::info
-要了解这些概念在实际操作中的完整示例，请查看 [示例应用程序](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/Localization/).
-:::
+<GitHubSampleLink title="本地化" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/Localization/"/>
 
-## 添加 ResX 文件到项目
+## 在项目中添加 ResX 文件
 
 在进行本地化之前，您需要为每种语言添加相应的 ResX 文件。对于本指南，我们将考虑三个 ResX 文件，分别对应以下语言：
 
@@ -19,7 +17,11 @@ title: 使用 ResX 进行本地化
 
 每个 ResX 文件将包含与应用程序中使用的键相对应的翻译文本。
 
-在本例中，我们将新文件添加到`Assets`文件夹中。由于.NET生成器根据文件夹结构创建名称空间，可能会有所不同。
+在本例中，我们将新文件添加到`Lang`文件夹中。由于.NET生成器根据文件夹结构创建名称空间，可能会有所不同。
+
+:::warning
+如果您将文件添加到 `Assets` 文件夹中，请确保将 `Build Action` 切换为 `Embedded resource`，否则代码生成可能会失败。
+:::
 
 ## 设置文化（Culture）
 
@@ -36,7 +38,7 @@ public partial class App : Application
     public override void OnFrameworkInitializationCompleted()
     {
         // highlight-start
-        Assets.Resources.Culture = new CultureInfo("fil-PH");
+        Lang.Resources.Culture = new CultureInfo("fil-PH");
         // highlight-end
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
@@ -50,16 +52,40 @@ public partial class App : Application
     }
 }
 ```
-根据需要，将 `fil-PH` 替换为适当的文化代码。
+
+将 "fil-PH" 替换为正确的所需的文化代码。
 
 ## 在视图中使用本地化文本
 
 要在视图中使用本地化文本，您可以在 XAML 中静态地引用资源：
 
 ```xml
-<TextBlock Text="{x:Static assets:Resources.GreetingText}"/>
+<TextBlock Text="{x:Static lang:Resources.GreetingText}"/>
 ```
 
-在上面的示例中，`GreetingText` 是与 ResX 文件中的字符串对应的键。`{x:Static}` 标记扩展用于引用在 .NET 类中定义的静态属性，而在这种情况下，即资源文件（`assets:Resources.GreetingText`）。
+在上面的示例中，`GreetingText` 是与 ResX 文件中的字符串对应的键。`{x:Static}` 标记扩展用于引用在 .NET 类中定义的静态属性，而在这种情况下，即资源文件（`Lang:Resources.GreetingText`）。
 
-就是这样！现在您已成功使用 ResX 进行了 Avalonia 应用程序的本地化。通过设置文化为不同的区域设置，您可以以所选语言显示用户界面，从而创建支持多种语言并面向全球用户的应用程序。
+就是这样！您现在已经成功使用 ResX 文件本地化了您的 Avalonia 应用程序。通过将文化设置为不同的区域，您可以显示所选语言的用户界面，从而创建支持多种语言并面向全球受众的应用程序。
+
+:::warning
+为了让 XAML 中的本地化属性可用，从资源文件生成的代码必须是公开可访问的。默认情况下，`Resources` 类由 `ResXFileCodeGenerator` 生成，并且是 `internal`。请确保将自定义工具更改为 `PublicResXFileCodeGenerator`。`csproj` 文件的相关部分应如下所示：
+
+```xml
+<ItemGroup>
+  <EmbeddedResource Update="Resources.resx">
+    <Generator>PublicResXFileCodeGenerator</Generator>
+    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+  </EmbeddedResource>
+</ItemGroup>
+
+<ItemGroup>
+  <Compile Update="Resources.Designer.cs">
+    <DesignTime>True</DesignTime>
+    <AutoGen>True</AutoGen>
+    <DependentUpon>Resources.resx</DependentUpon>
+  </Compile>
+</ItemGroup>
+```
+
+注意：还请注意，只有默认资源文件（`Resources.resx`）应该生成代码。
+:::
