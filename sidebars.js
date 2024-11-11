@@ -302,6 +302,7 @@ const sidebars = {
             'guides/graphics-and-animation/how-to-use-icons',
             'guides/graphics-and-animation/keyframe-animations',
             'guides/graphics-and-animation/transitions',
+            'guides/graphics-and-animation/gradients',
             {
               'type': 'category',
               'label': 'Page Transitions',
