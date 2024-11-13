@@ -54,9 +54,7 @@ ln -s /opt/dotnet/dotnet /usr/local/bin
 
 * 要在树莓派上运行 `Avalonia` 应用程序，您需要使用此 NuGet 包：
 
-```
-https://www.nuget.org/packages/Avalonia.Skia.Linux.Natives/1.68.0.2
-```
+[SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/)
 
 其中包含 `libSkiaSharp.so`。
 

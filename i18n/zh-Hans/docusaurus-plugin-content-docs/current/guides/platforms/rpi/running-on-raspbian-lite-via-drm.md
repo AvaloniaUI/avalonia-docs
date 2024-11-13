@@ -156,7 +156,9 @@ public static int Main(string[] args)
     if (args.Contains("--drm"))
     {
         SilenceConsole();
-        return builder.StartLinuxDrm(args);
+        // 默认情况下，Avalonia会尝试自动检测输出的显卡设备，
+        // 但是你也可以指定一个,比如： "/dev/dri/card1"
+        return builder.StartLinuxDrm(args: args, card: null, scaling: 1.0);
     }
 
     return builder.StartWithClassicDesktopLifetime(args);
