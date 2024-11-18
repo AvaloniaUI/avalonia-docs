@@ -78,7 +78,7 @@ import DirectionalNavigationScreenshot from '/img/concepts/input/directional-nav
 当启用 2D 方向性导航时，将使用一种消歧策略来选择导航目标。
 | XYFocusNavigationStrategy   | 导航目标                                                             |
 |:----------------------------|:------------------------------------------------------------------------------|
-| Auto                        | 继承自祖先的策略。如果没有任何祖先指定，则使用投影策略。         |
+| Auto                        | 继承自祖先的策略。如果没有任何祖先指定，则使用Projection策略。         |
 | Projection                  | 在导航方向上投影一条线时遇到的第一个元素。 |
 | NavigationDirectionDistance | 最接近导航线轴的元素。                           |
 | RectilinearDistance         | 基于最短曼哈顿距离的最近元素。                     |

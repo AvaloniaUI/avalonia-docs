@@ -7,7 +7,7 @@ title: Markup Extensions
 Avalonia 提供了以下内容：
 | MarkupExtension                                                                                  | 分配给属性                                                |
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| [StaticResource](/docs/guides/styles-and-resources/resources#static-resource)                    | 一个现有的键资源，并且不会在更改时更新          |
+| [StaticResource](/docs/guides/styles-and-resources/resources#static-resource)                    | 一个存在的有键值的资源，并且不会在更改时更新          |
 | [DynamicResource](/docs/guides/styles-and-resources/resources#using-resources)                   | 延迟加载的键资源，会在更改时更新   |
 | Binding                                                                                          | 基于默认的绑定偏好：编译或反射    |
 | [CompiledBinding](/docs/basics/data/data-binding/compiled-bindings#compiledbinding-markup)       | 基于编译的绑定                                        |
