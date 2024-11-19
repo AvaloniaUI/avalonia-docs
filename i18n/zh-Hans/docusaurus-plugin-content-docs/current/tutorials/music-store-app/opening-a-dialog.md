@@ -133,7 +133,7 @@ namespace Avalonia.MusicStore.ViewModels
 - 添加以下 `DoShowDialogAsync` 方法：
 
 ```csharp
-private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel,
+private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel,
                                         AlbumViewModel?> interaction)
 {
      var dialog = new MusicStoreWindow();
@@ -172,7 +172,7 @@ namespace Avalonia.MusicStore.Views
                 action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
         }
 
-        private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel, 
+        private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel, 
                                                 AlbumViewModel?> interaction)
         {
             var dialog = new MusicStoreWindow();
