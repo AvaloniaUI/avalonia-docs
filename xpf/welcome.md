@@ -17,7 +17,7 @@ Avalonia XPF maintains both API and binary compatibility with WPF while replacin
 As a commercial product, Avalonia XPF offers different licensing tiers to suit various needs:
 
 | Platform        | Business | Enterprise |
-|---------------|-------|-------|-------|
+|---------------|-------|-------|
 | `Windows` | ✔ | ✔ | 
 | `macOS` | ✔ | ✔ | 
 | `Desktop Linux` | ✔ | ✔ | 
