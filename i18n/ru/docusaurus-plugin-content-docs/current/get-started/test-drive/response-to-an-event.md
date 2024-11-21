@@ -6,10 +6,10 @@ title: Обработка событий
 import SolutionCodeBehindScreenshot from '/img/get-started/test-drive/solution-code-behind.png';
 import EventDebugOutputScreenshot from '/img/get-started/test-drive/event-debug-output.png';
 
-Есть несколько способов обработки событий на Avalonia.
+В Avalonia есть несколько способов обработки событий.
 На этой странице вы узнаете, как использовать один из самых распостраненных: нажатие кнопки.
 
-В начале, вы напишите обработку нажатия кнопки, которое никак не взаимодействует с другими Controls.
+Для начала, вы напишите обработку нажатия кнопки, которое никак не взаимодействует с другими Controls.
 
 ## Code-behind
 
@@ -21,7 +21,7 @@ XAML файл главного окна, связан с файлом C#. Есл
 
 - Откройте файл `MainWindows.axaml.cs`
 
-Вы увидите код C#, похожий на нижеуказанный:
+Вы увидите код C#, похожий на нижеприведенный:
 
 ```csharp
 using Avalonia.Controls;
@@ -48,7 +48,7 @@ namespace GetStartedApp
 </Window>
 ```
 
-To add an event handler for the button, follow this procedure:
+Чтобы добавить обработчик событий для кнопки, выполните следующие шаги:
 - В файле `MainWindows.axaml.cs`, найдите конструктор `MainWindows` (инструкция была ранее)
 - Добавьте следующий код после конструктора:
 
@@ -82,4 +82,4 @@ using System.Diagnostics;
 
 <img className="center" src={EventDebugOutputScreenshot} alt="" />
 
-На следующей странице вы узнаете, как использовать Code-Behind для чтение и изменения свойств Controls во время работы программы.
+На следующей странице вы узнаете, как использовать Code-Behind для чтения и изменения свойств Controls во время работы программы.
