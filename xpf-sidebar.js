@@ -16,7 +16,6 @@ const sidebars = {
       'items': [
         'platforms/linux',
         'platforms/macos',
-        'platforms/mobile-and-browser'
       ]
     },
     {

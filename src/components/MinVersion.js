@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 
-const newVersion = '11.0';
-const previewVersion = '11.1';
+const newVersion = '11.2';
+const previewVersion = '11.3';
 export default function MinVersion({version}) {
     let backgroundColor;
     let description;
