@@ -61,13 +61,13 @@ const Footer = () => {
                             </defs>
                             </svg>
                     </a>
-
-                    <a className="hover:opacity-75" href="https://www.youtube.com/channel/UC54i4ILpN7JKUhP6liNYxkA" target="_blank" rel="noreferrer">
+                    
+                    <a className="hover:opacity-75" href="https://www.linkedin.com/company/avaloniaui/" target="_blank" rel="noreferrer">
                         <span className="sr-only"> YouTube </span>
                         <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476z" fill="currentColor"/></svg>
                     </a>
                   
-                    <a className="hover:opacity-75 mt-1" href="https://www.linkedin.com/company/avaloniaui/" target="_blank" rel="noreferrer">
+                    <a className="hover:opacity-75 mt-1" href="https://www.youtube.com/channel/UC54i4ILpN7JKUhP6liNYxkA" target="_blank" rel="noreferrer">
                         <span className="sr-only"> YouTube </span>
                         <svg fill="none" height="20" viewBox="0 0 24 20" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m23.4984 2.6232c-.276-1.032-1.0896-1.8456-2.1216-2.1216-1.872-.50159975-9.3768-.5016-9.3768-.5016s-7.5048.00000025-9.3768.5016c-1.032.276-1.8456 1.0896-2.1216 2.1216-.50160004 1.872-.5016 6.9768-.5016 6.9768s-.00000004 5.1048.5016 6.9768c.276 1.032 1.0896 1.8456 2.1216 2.1216 1.872.5016 9.3768.5016 9.3768.5016s7.5048 0 9.3768-.5016c1.0332-.276 1.8456-1.0896 2.1216-2.1216.5016-1.872.5016-6.9768.5016-6.9768s0-5.1048-.5016-6.9768zm-13.8984 11.1336v-8.3136l7.2 4.1568z" fill="currentColor"/></svg>
                     </a>
