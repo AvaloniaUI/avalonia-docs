@@ -11,7 +11,7 @@ The same controls can't be supported in cross platform environment, as these bro
 XPF provides an optional control that abstracts over `WebView2` on Windows and `WKWebView` on macOS. Native browsers that don't require any heavy dependencies like Chromium.
 
 :::note
-Since Linux doesn't have any standardized build-in native browser, this platform is not currently supported.
+Since Linux doesn't have any standardized built-in native browser, this platform is not currently supported.
 :::
 
 ## Installing AvaloniaUI.WebView.Wpf package
