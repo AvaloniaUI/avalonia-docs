@@ -59,7 +59,7 @@ dotnet publish
 ```
 
 After project was published, .NET SDK creates an app bundle directory with `index.html` file and compiled application files.
-With latest .NET 8 SDK, this directory is located at `bin/Release/net8.0-browser/browser-wasm/publish`.
+With latest .NET 9 SDK, this directory is located at `bin/Release/net9.0-browser/publish/wwwroot`.
 Now you can serve your app from this directory using your favorite web server (such as Azure Static Web Apps).
 
 :::note
