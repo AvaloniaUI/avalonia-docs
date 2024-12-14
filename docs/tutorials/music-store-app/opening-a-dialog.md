@@ -131,6 +131,7 @@ Your next step is to make sure that the main window view knows how to start the 
 - Add the `DoShowDialogAsync` method as follows:
 
 ```csharp
+// This code is only valid in newer ReactiveUI which is shipped since avalonia 11.2.0 
 private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel,
                                         AlbumViewModel?> interaction)
 {

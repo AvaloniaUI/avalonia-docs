@@ -144,6 +144,7 @@ namespace Avalonia.MusicStore.ViewModels
 - Добавьте метод `DoShowDialogAsync`, как показано ниже:
 
 ```csharp
+// This code is only valid in newer ReactiveUI which is shipped since avalonia 11.2.0 
 private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel,
                                         AlbumViewModel?> interaction)
 {
