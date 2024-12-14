@@ -131,7 +131,7 @@ Your next step is to make sure that the main window view knows how to start the 
 - Add the `DoShowDialogAsync` method as follows:
 
 ```csharp
-private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel,
+private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel,
                                         AlbumViewModel?> interaction)
 {
      var dialog = new MusicStoreWindow();
@@ -170,7 +170,7 @@ namespace Avalonia.MusicStore.Views
                 action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
         }
 
-        private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel, 
+        private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel, 
                                                 AlbumViewModel?> interaction)
         {
             var dialog = new MusicStoreWindow();
