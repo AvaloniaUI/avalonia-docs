@@ -62,10 +62,6 @@ should be changed to:
 ```xml
 <Project Sdk="Xpf.Sdk/1.3.0">
 ```
-or for XPF Indie users, please use the following: 
-```xml
-<Project Sdk="Xpf.Sdk/1.4.0-cibuild001853">
-```
 
 :::note
 XPF is in active development and the CI build version changes frequently. The version given here was the latest version at the time of writing, but it is likely that newer versions are available. You can find the latest CI build version at https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk. See [nightly builds](build-feeds) for more information.

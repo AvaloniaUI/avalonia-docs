@@ -54,7 +54,7 @@ public class ViewLocator : IDataTemplate
 
 ## Using the View Locator
 
-By default, the View Locator is referenced in App.axaml as a DataTemplate, in the content of the `Application.DataTemplates` XAML tag. Ensure that its appropriate 'using' statement is in the `xmlns:local` property of the Application root tag.
+默认情况下，视图定位器在 App.axaml 中作为 DataTemplate 引用，位于 `Application.DataTemplates XAML` 标签的内容中。确保在应用程序根标签的 `xmlns:local` 属性中包含其适当的 using 语句。
 
 ```xaml
 <Application xmlns="https://github.com/avaloniaui"
@@ -63,6 +63,7 @@ By default, the View Locator is referenced in App.axaml as a DataTemplate, in th
              xmlns:local="using:LearningAvalonia"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+             <!-- "Default" ThemeVariant 是取决于系统的主题变体属性，"Dark" 和 "Light" 是另外可用的选项 -->
     <Application.DataTemplates>
         <local:ViewLocator />
     </Application.DataTemplates>

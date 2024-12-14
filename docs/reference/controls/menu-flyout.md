@@ -13,7 +13,7 @@ A 'MenuFlyout' allows you to host a simple menu as the flyout for a control. You
 For details of the context menu, see the reference [here](./contextmenu).
 :::
 
-:::infos
+:::info
 The properties of a menu flyout are the same as for a flyout. See [here](flyouts).
 :::
 

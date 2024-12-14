@@ -63,3 +63,35 @@ public static AppBuilder BuildAvaloniaApp()
         .UsePlatformDetect()
         .LogToTrace(LogEventLevel.Debug, LogArea.Property, LogArea.Layout);
 ```
+
+## 日志池
+
+`LogToTrace` 扩展方法使用 `TraceLogSink`，该池将消息写入 `Trace`。Avalonia 支持通过实现 `ILogSink` 来创建自定义池。将您的自定义池分配给 `Avalonia.Logging.Logger.Sink` 将允许 Avalonia 使用它。
+
+```csharp title='扩展方法来分配 Logger.Sink'
+using Avalonia.Controls;
+using Avalonia.Logging;
+
+namespace MyNamespace;
+public static class MyLogExtensions
+{
+    public static AppBuilder LogToMySink(this AppBuilder builder, 
+        LogEventLevel level = LogEventLevel.Warning, 
+        params string[] areas)
+    {
+        Logger.Sink = new MyLogSink(level, areas);
+        return builder;
+    }
+}
+```
+
+```csharp title='使用自定义池启动'
+public static AppBuilder BuildAvaloniaApp()
+    => AppBuilder.Configure<App>()
+        .UsePlatformDetect()
+        .LogToMySink();
+```
+
+:::info
+在 _GitHub_ 上查看源代码 [`TraceLogSink.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Logging/TraceLogSink.cs)
+:::

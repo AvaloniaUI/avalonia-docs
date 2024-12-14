@@ -16,25 +16,14 @@ Avalonia XPF maintains both API and binary compatibility with WPF while replacin
 
 As a commercial product, Avalonia XPF offers different licensing tiers to suit various needs:
 
-| Platform        |  Indie | Business | Enterprise |
-|---------------|-------|-------|-------|
-| `Windows` | ✔ | ✔ | ✔ | 
-| `macOS` | ✔ | ✔ | ✔ | 
-| `Desktop Linux` | ✖ | ✔ | ✔ | 
-| `Embedded Linux` | ✖ | ✖ | ✔ | 
-| `iOS` | ✖ | ✖ | ✔ | 
-| `Android` | ✖ | ✖ | ✔ | 
-| `WebAssembly` | ✖ | ✖ | ✔ | 
+| Platform        | Business | Enterprise |
+|---------------|-------|-------|
+| `Windows` | ✔ | ✔ | 
+| `macOS` | ✔ | ✔ | 
+| `Desktop Linux` | ✔ | ✔ | 
+| `Embedded Linux` | ✖ | ✔ | 
 
 All applications built with Avalonia XPF will continue to work in perpetuity, regardless of license status. This ensures that your deployed applications remain functional and stable for your end users.
-
-### Indie Licenses
-The Indie license is offered as an annual subscription and includes:
-
-* 30-day money-back guarantee 
-* Full access to Avalonia XPF features on Windows & macOS
-
-If an Indie license expires, developers will no longer be able to build new versions of their applications using XPF. However, all previously built applications will continue to function normally.
 
 ### Business & Enterprise Licenses
 Business and Enterprise licenses are perpetual, offering a permanent right to use Avalonia XPF. These licenses include:
@@ -48,7 +37,6 @@ Both Business and Enterprise licenses enable organizations to thoroughly evaluat
 ### Trial Availability
 Trial periods are exclusively available for Business and Enterprise licenses. These trials are fully supported by our engineering team to ensure organizations can thoroughly evaluate XPF's capabilities with their specific applications and use cases.
 
-For Indie developers, we offer a 30-day money-back guarantee instead of a trial period. This approach allows developers to test XPF's compatibility with their projects while ensuring they receive the appropriate level of support for their needs. We ask that Indie developers not apply for Business or Enterprise trials.
 
 ### Pricing 
 For the latest pricing, please see our [website](https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=welcome_link#pricing). 
