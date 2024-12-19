@@ -120,6 +120,43 @@ const config = {
   ],
   plugins: [
     require('./plugins/tailwind-plugin.cjs'),
+    function cioPlugin() {
+      return {
+        name: 'docusaurus-plugin-cio',
+        injectHtmlTags() {
+          return {
+            headTags: [
+              {
+                tagName: 'script',
+                innerHTML: `
+                  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdp-eu.customer.io/v1/analytics-js/snippet/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._writeKey=key;analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.15.3";
+                  analytics.load("4fe6898c1dcf35b4fb67");
+                  analytics.page();
+                  }}();
+
+                  function getCookie(name) {
+                      const value = \`; \${document.cookie}\`;
+                      const parts = value.split(\`; \${name}=\`);
+                      if (parts.length === 2) {
+                          return parts.pop().split(';').shift();
+                      }
+                      return null;
+                  }
+
+                  // Wait for DOM content to be loaded
+                  document.addEventListener('DOMContentLoaded', function() {
+                      const userId = getCookie('user_id');
+                      if (userId) {
+                          analytics.identify(userId, {});
+                      }
+                  });
+                `,
+              }
+            ],
+          };
+        },
+      };
+    },
     require.resolve('docusaurus-plugin-image-zoom'),
     [
       '@docusaurus/plugin-client-redirects',
@@ -136,12 +173,11 @@ const config = {
         path: 'xpf',
         routeBasePath: 'xpf',
         sidebarPath: require.resolve('./xpf-sidebar.js'),
-        // Maintain consistency with main docs features
         editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
         editLocalizedFiles: true,
       },
     ],
-  ],
+],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
