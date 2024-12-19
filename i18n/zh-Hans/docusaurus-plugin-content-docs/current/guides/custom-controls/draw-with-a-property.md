@@ -55,3 +55,8 @@ namespace AvaloniaCCExample.CustomControls
 请注意，控件现在在运行时（如上图）和预览窗格中都显示出来。
 
 在下一页中，您将看到如何实现背景属性，以便可以通过_Avalonia UI_样式系统进行更改。
+
+:::tip
+You can find a more advanced tutorial in [Avalonia.Samples](
+https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample)
+:::
