@@ -14,8 +14,6 @@ import AvaloniaVsExtensionNuGetScreenshot from '/img/get-started/avalonia-vs-ext
 
 [JetBrains Rider](https://www.jetbrains.com/rider/) IDE在2020.3版本中开始内置支持Avalonia XAML，包括对Avalonia特定XAML功能和自定义代码检查的一流支持。
 
-有关更多信息，请参阅[JetBrains Rider 2020.3版本发布公告](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support)。
-
 Rider目前还没有提供可视化设计工具，但正在开发中。请参阅[GitHub项目](https://github.com/ForNeVeR/AvaloniaRider)获取更多信息和安装说明。
 
 ## Visual Studio

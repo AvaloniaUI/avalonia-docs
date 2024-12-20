@@ -13,9 +13,7 @@ import AvaloniaVsExtensionNuGetScreenshot from '/img/get-started/avalonia-vs-ext
 ## JetBrains Rider
 
 
-Среда разработки [JetBrains Rider](https://www.jetbrains.com/rider/), имеет встроенную поддержку Avalonia XAML [с версии 2020.3](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support), а также имеет отличнуюю поддержку специфичных для Avalonia XAML функций и пользовательского кода.
-
-Для подробностей, ознакомьтесь с информацией о версии [JetBrains Rider 2020.3](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support)
+Среда разработки [JetBrains Rider](https://www.jetbrains.com/rider/), имеет встроенную поддержку Avalonia XAML с версии 2020.3, а также имеет отличную поддержку специфичных для Avalonia XAML функций и пользовательского кода.
 
 Rider не имеет встроенного предпросмотра, но он находится в разработке. Смотрите [GitHub проект](https://github.com/ForNeVeR/AvaloniaRider) для дополнительной информации и инструкции по установке.
 
