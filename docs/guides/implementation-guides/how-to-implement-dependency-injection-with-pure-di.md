@@ -19,12 +19,18 @@ public interface IMainViewModel
     string Greetings { get; }
 }
 
-public class MainViewModel(IBusinessService businessService)
-    : IMainViewModel
+public class MainViewModel : IMainViewModel
 {
+    private readonly IBusinessService _businessService;
+
+    public MainViewModel(IBusinessService businessService)
+    {
+        _businessService = businessService;
+    }
+
     public string Title => "Avalonia application";
 
-    public string Greetings => businessService.CreateGreetings();
+    public string Greetings => _businessService.CreateGreetings();
 }
 
 public interface IBusinessService
@@ -32,12 +38,18 @@ public interface IBusinessService
     string CreateGreetings();
 }
 
-public class BusinessService(IRepository repository)
-    : IBusinessService
+public class BusinessService : IBusinessService
 {
+    private readonly IRepository _repository;
+
+    public BusinessService(IRepository repository)
+    {
+        _repository = repository;
+    }
+
     public string CreateGreetings()
     {
-        repository.RegisterSomething();
+        _repository.RegisterSomething();
         return "Example of Dependency Injection implementation using Pure.DI";
     }
 }
@@ -47,7 +59,7 @@ public interface IRepository
     void RegisterSomething();
 }
 
-public class Repository: IRepository
+public class Repository : IRepository
 {
     public void RegisterSomething()
     {
@@ -127,7 +139,7 @@ This will be useful if the main window will require dependencies to be injected.
 
 Advantages over classical DI container libraries:
 - No explicit initialisation of data contexts is required. Data contexts are configured directly in `.axaml` files according to the MVVM approach.
-- The code is simpler, more compact, and requires less maintenance effort.
+- The code looks simple, compact and doesn't require much maintenance effort.
 - The main window is created in a pure DI paradigm, and it can be easily supplied with all necessary dependencies via DI as regular types.
 
 ## Step 4: Modify App.axaml
