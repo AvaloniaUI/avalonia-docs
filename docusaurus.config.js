@@ -183,14 +183,6 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/social-card.png',
-      announcementBar: {
-        id: 'support_us',
-        content:
-          'Get the help you need with our <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=header_link">Enhanced Support!</a>',
-        backgroundColor: '#0d6efd',
-        textColor: '#ffffff',
-        isCloseable: false,
-      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
