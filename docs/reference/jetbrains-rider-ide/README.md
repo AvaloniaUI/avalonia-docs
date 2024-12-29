@@ -10,4 +10,3 @@ For more information about the _JetBrains Rider_ IDE, see the website [https://w
 
 For the _JetBrains Rider_ 2020.3 release announcement, see [here](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support).
 
-_JetBrains Rider_ does not yet provide a visual designer, but this is in development. For more information and instructions on how to install the visual designer, see the _GitHub_ project [here](https://github.com/ForNeVeR/AvaloniaRider).
