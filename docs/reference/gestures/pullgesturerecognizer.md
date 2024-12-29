@@ -26,7 +26,7 @@ border.GestureRecognizers.Add(new PullGestureRecognizer()
             });
 ```
 
-The PullGestureRegonizer raises a `Gestures.PullGestureEvent` when it detects the start of a pull gesture. When the pull ends, from the pointer being released or another gesture start, it raises a `Gestures.PullGestureEndedEvent`.
+The PullGestureRecognizer raises a `Gestures.PullGestureEvent` when it detects the start of a pull gesture. When the pull ends, from the pointer being released or another gesture start, it raises a `Gestures.PullGestureEndedEvent`.
 
 ### PullDirection
 This defines the direction of the pull. There are 4 available values;
@@ -34,6 +34,24 @@ This defines the direction of the pull. There are 4 available values;
 * `PullDirection.BottomToTop` : Pull starts from the bottom edge and moves towards the top
 * `PullDirection.LeftToRight` : Pull starts from the left edge and moves towards the right
 * `PullDirection.RightToLeft` : Pull starts from the right edge and moves towards the left
+
+## Binding Events
+After the PullGestureRecognizer has been added to your control, you need to bind them in your code behind either through an inline handler or to an event function:
+```csharp title='C#'
+image.AddHandler(Gestures.PullGestureEvent, (s, e) => { });
+image.AddHandler(Gestures.PullGestureEndedEvent, (s, e) => { });
+```
+```csharp title='C#'
+image.AddHandler(Gestures.PullGestureEvent, Image_PullGesture);
+image.AddHandler(Gestures.PullGestureEndedEvent, Image_PullGestureEnded);
+...
+private void Image_PullGesture(object? sender, PullGestureEventArgs e) { }
+private void Image_PullGestureEnded(object? sender, PullGestureEndedEventArgs e) { }
+```
+If your event handles the gesture completely, you can mark the event as handled by setting:
+```csharp title='C#'
+e.Handled = true;
+```
 
 ## Useful Properties
 
