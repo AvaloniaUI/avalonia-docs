@@ -19,7 +19,7 @@ const Cta = () => {
               <div className="w-full px-4 lg:w-1/3">
                 <div className="flex flex-wrap lg:justify-end">
                   <a
-                    href="https://www.avaloniaui.net/xpf"
+                    href="https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=advert"
                     className="inline-flex py-3 my-1 mr-4 text-base font-medium transition bg-white rounded-md hover:bg-shadow-1 text-primary px-7"
                   >
                     Start Free Trial
