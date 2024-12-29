@@ -44,12 +44,6 @@ A Hotkey must have one [Key](http://reference.avaloniaui.net/api/Avalonia.Input/
     IsVisible="False" />
 
 <!--  These didn't work  -->
-<!--  Button.KeyBindings  -->
-<Button Command="{Binding CommandX}" Content="X">
-    <Button.KeyBindings>
-        <KeyBinding Gesture="Ctrl+1" />
-    </Button.KeyBindings>
-</Button>
 <!--  Alt+Number  -->
 <Button Command="{Binding CommandX}" Content="_1" />
 ```
