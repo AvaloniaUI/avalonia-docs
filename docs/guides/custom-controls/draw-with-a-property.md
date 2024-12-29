@@ -55,3 +55,8 @@ The drawing code uses the _Avalonia UI_ graphics context (that is passed to the 
 Notice how the control now shows both at runtime (above) and in the preview pane.
 
 On the next page, you will see how to implement the background property so that it can be changed by the _Avalonia UI_ styling system. 
+
+:::tip
+You can find a more advanced tutorial in [Avalonia.Samples](
+https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample)
+:::
