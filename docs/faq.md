@@ -63,7 +63,9 @@ Yes. You can code your entire UI with your preferred .NET language.
 
 ## Is there a drag and drop visual designer?
 
-No. Instead of providing a drag and drop designer, the Avalonia IDE extensions support a live previewer, which will render a preview of the UI, refreshing as you modify the XAML.
+We are working on bringing a full drag-and-drop designer experience to Avalonia in 2025. This designer will be part of [Avalonia Accelerate](https://github.com/AvaloniaUI/Avalonia/discussions/16997), a paid offering designed to enhance developer productivity in the Avalonia ecosystem.
+
+Avalonia Accelerate will help developers build applications more efficiently through visual design tools, complementing the existing XAML-first approach that Avalonia is known for.
 
 ---
 
