@@ -537,6 +537,7 @@ const sidebars = {
       'items': [
         'deployment/macOS',
         'deployment/debian-ubuntu',
+        'deployment/native-aot',
       ],
     },
     {
