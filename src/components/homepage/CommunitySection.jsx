@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 
 import { Linkedin, Twitter } from 'react-feather';
-import { DiscordIcon, LinkedInIcon, TelegramIcon } from '@site/src/icons';
+import { BlueSkyIcon, DiscordIcon, LinkedIn2Icon, LinkedInIcon, TelegramIcon } from '@site/src/icons';
 
 const githubUsernames = [
   'grokys',
@@ -49,15 +49,15 @@ export default function CommunitySection() {
           </Link>
           <Link
             className="flex w-full items-center justify-center gap-2 rounded-sm border border-solid border-primary bg-primary/10 px-2 py-2 text-primary lg:w-auto"
-            href="https://twitter.com/avaloniaui"
+            href="https://bsky.app/profile/avaloniaui.net"
           >
-            <Twitter className="h-5 w-5" /> Twitter &rarr;
+            <BlueSkyIcon className="h-5 w-5" /> Bluesky &rarr;
           </Link>
           <Link
             className="flex w-full items-center justify-center gap-2 rounded-sm border border-solid border-primary bg-primary/10 px-2 py-2 text-primary lg:w-auto"
             href="https://www.linkedin.com/company/avaloniaui"
           >
-            <Linkedin className="h-5 w-5" /> LinkedIn &rarr;
+            <LinkedIn2Icon className="h-5 w-5" /> LinkedIn &rarr;
           </Link>
         </div>
       </div>
