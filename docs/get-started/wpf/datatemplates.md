@@ -8,7 +8,7 @@ In Avalonia UI, data templates are not stored in the application resources. (The
 
 Instead, data templates are placed either inside a `DataTemplates` collection in a control, or inside the  (and on `Application`):
 
-For example, this code adds a data template to display the view model class `MyViewModel`:
+For example, this code adds a data template to display the view model class `FooViewModel`:
 
 ```xml
 <UserControl xmlns:viewmodels="using:MyApp.ViewModels"
