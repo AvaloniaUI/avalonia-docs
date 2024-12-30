@@ -17,6 +17,7 @@ The following features are available, but with limitations:
 The following features will be available later but require significant engineering effort:
 
 - `Viewport3D` and related 3D APIs
+- `MediaElement` and `MediaPlayer`
 
 The following features are unlikely to be supported due to platform restrictions:
 
