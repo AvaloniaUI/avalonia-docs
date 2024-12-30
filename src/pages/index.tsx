@@ -12,7 +12,7 @@ import HomeFooter from '../components/homepage/HomeFooter';
 import ResourcesSection from '../components/homepage/ResourcesSection';
 import CTASection from '../components/homepage/CallToActionSection';
 import HelloBar from '../components/homepage/HelloBar';
-
+import HeroQuickLinks from '../components/homepage/HeroQuickLinks';
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
@@ -23,6 +23,9 @@ export default function Home(): JSX.Element {
       noFooter>
       <HelloBar/>
       <HeroSection/>
+
+      <HeroQuickLinks />
+
       <GuidesAndSamplesSection/>
       
       <div className="z-0">

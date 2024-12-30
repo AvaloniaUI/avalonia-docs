@@ -5,6 +5,8 @@ const sidebars = {
 
   documentationSidebar: [
     'welcome',
+    'overview/what-is-avalonia',
+    'overview/supported-platforms',
     {
       'type': 'category',
       'label': 'Get Started',
