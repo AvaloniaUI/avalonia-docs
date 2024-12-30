@@ -5,6 +5,10 @@ title: Getting started
 
 ## Step 1: Prepare your WPF project
 
+:::note
+This document uses .NET 7.0 as an example, but .NET 6.0 and above are supported by XPF
+:::
+
 Make sure that your project has been updated/ported to `net7.0-windows` and uses the new [SDK](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview) csproj format. 
 
 For more information see the Microsoft [How to upgrade a WPF desktop app to .NET 7](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/migration) guide.
@@ -21,10 +25,6 @@ If you are running on Linux, see the [linux](platforms/linux) guide **before** y
 
 :::tip
 See our [porting tips](porting-tips) for a more detailed run-through of this step.
-:::
-
-:::note
-This document specifies .NET 7.0, but `net6.0` should also work
 :::
 
 ## Step 2: Add a `NuGet.config`
