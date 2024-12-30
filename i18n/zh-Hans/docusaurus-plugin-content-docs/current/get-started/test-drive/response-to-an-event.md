@@ -8,47 +8,44 @@ import EventDebugOutputScreenshot from '/img/get-started/test-drive/event-debug-
 
 在Avalonia应用程序中，您可以使用多种方式实现操作。在本页面中，您将了解如何使用最简单的方法之一：如何编写按钮点击的事件处理代码。
 
-首先，您将编写一个按钮点击事件处理程序，该处理程序不与任何其他控件交互。
+首先，您将编写一个不与任何其他控件交互的按钮单击事件处理程序。
 
 ## Code-behind
 
-主窗口的XAML文件与一个关联的C#代码后台文件。如果您使用的是一个IDE，您可以在**Solution Explorer**中找到这个文件 - 它是`.axaml`文件的子项。
+主窗口的XAML文件可以拥有一个关联的C#代码后台文件，用于访问命名控件并处理其的事件。如果您使用的是IDE，您可以在**Solution Explorer**中找到这个文件，它是`.axaml`文件的子项。
 
 <img className="center" src={SolutionCodeBehindScreenshot} alt="" />
 
-要更改主窗口的代码后台：
+修改 `MainView` 的代码后台：
 
-- 打开`MainWindow.axaml.cs`文件
+- 打开`MainView.axaml.cs`文件
 
 您将看到一些类似于以下代码的C#代码：
 
 ```csharp
 using Avalonia.Controls;
 
-namespace GetStartedApp
+namespace GetStartedApp.Views;
+public partial class MainView : UserControl
 {
-    public partial class MainWindow : Window
+    public MainView()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }
 ```
 
-部分类`MainWindow`对应于由Avalonia UI根据您已有的XAML创建的窗口对象。您可以在XAML窗口标记中找到此类名称：
+分部类 `MainView` 对应于由 Avalonia 根据您已有的 XAML 创建的用户控件。分部类的命名空间必须XAML与保持一致，您可以在XAML标记中找到该类名：
 
 ```xml
-<Window 
-    ...
-    x:Class="GetStartedApp.MainWindow" >
-</Window>
+<UserControl x:Class="GetStartedApp.Views.MainView"
+    ...>
+</UserControl>
 ```
 
 要为按钮添加事件处理程序，请按照以下步骤进行操作：
 
-- 在代码后台文件中找到主窗口的`MainWindow`构造函数（参见上述说明）。
+- 在代码后台文件中找到主窗口的`MainView`构造函数（参见上述说明）。
 - 在构造函数之后添加以下代码：
 
 ```csharp
@@ -66,12 +63,11 @@ using System.Diagnostics;
 ```
 
 - 切换到XAML文件，找到`<Button>`标记。
-- 在标记的末尾输入click属性，如下所示：
+- 在标记的末尾添加 `Click` 属性，如下所示：
 
 ```xml
-<Button
-   ...
-   Click="ButtonClicked">
+<Button Grid.Row="2" Grid.Column="1" Margin="0,5" Click="ButtonClicked">
+    Calculate
 </Button>
 ```
 

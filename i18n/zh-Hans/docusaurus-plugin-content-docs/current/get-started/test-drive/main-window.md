@@ -17,20 +17,21 @@ import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane
 
 ## 发生了什么？
 
-在 **MainWindow.axaml** XAML 文件中，`<Window>...</Window>` XAML 标记表示 Avalonia 窗口。与其他 Avalonia 控件一样，窗口将在目标平台上绘制，具有 4 个**布局区域**：边距、边框、内边距和内容。
+在 **MainWindow.axaml** XAML 文件中，`<Window>...</Window>` XAML 标记表示 Avalonia 窗口。与其他 Avalonia 控件一样，窗口将在目标平台上绘制，并具有 4 个**布局区域**：边距、边框、内边距和内容。
 
 <img src={LayoutZonesDiagram} alt="" />
 
+在当前的应用程序中，`Window` 的内容区域中引用了另一个视图 **`<views:MainView />`**。这是对 **MainView.axaml** 文件的引用，该文件是一个 `UserControl`，将显示在 `Window` 的内容区域中。
 
+## MainView 用户控件
 
-## MainWindow 用户控件
+在这个用户控件中，您将看到一个 `<TextBlock>...</TextBlock>` XAML 标记。这代表一个文本块控件。文本块的 `Text` 属性绑定到 **MainViewModel** 类中的 **Greeting** 属性。
 
-在这个**MainWindow.axaml**文件当中，您将看到一个 `<TextBlock>...</TextBlock>` XAML 标记。这代表一个文本块控件。文本块的 `Text` 属性绑定到 **MainWindowViewModel** 类的 **Greeting** 属性。这是在视图模型类的构造函数中设置的属性。
 ```
 <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
 
-您可以更改文件 **MainWindowViewModel.cs** 中的文本，以查看界面上的更改。
+您可以更改文件 **MainViewModel.cs** 中的文本，以查看界面上的更改。
 
 <img className="center" src={ViewModelScreenshot} alt="" />
 <img className="center" src={AppRunningScreenshot} alt="" />
@@ -42,7 +43,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane
 ## Visual Studio 设计器
 
 如果您使用的是 Visual Studio，则应该看到 XAML 代码和预览窗格。
-切换到 **MainWindow.axaml** 文件，并单击编辑窗口顶部的 **Split View** 按钮。
+切换到 **MainView.axaml** 文件，并单击编辑窗口顶部的 **Split View** 按钮。
 
 <img className="center" src={VsPreviewerScreenshot} alt="" />
 
@@ -55,7 +56,7 @@ import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane
 
 <img className="center" src={VsPreviewPaneScreenshot} alt="" />
 
-- 删除绑定 `{Binding Greeting}` 并更改文本 `<TextBlock Text="my text" ...`
+- 删除绑定 `{Binding Greeting}` 并更改文本 `<TextBlock Text="my text" />`
 
 您会看到在输入时预览窗格中的新文本也会更改。这是 Avalonia 的**设计时预览行为**的一个示例，它将帮助您准确快速地开发用户界面呈现。
 
