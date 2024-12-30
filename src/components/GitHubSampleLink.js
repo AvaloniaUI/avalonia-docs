@@ -1,31 +1,21 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import { ArrowRightFilled } from '@fluentui/react-icons';
 import clsx from 'clsx';
+import { ChevronRight, GitHub } from 'react-feather';
 
 export default function GitHubSampleLink({title, link}) {
   return (
-    <Link
-    to={link}
-    style={{
-      borderWidth: '1px',
-    }}
-    className="github-sample-card bg-slate-400"
-  >
-    <div className="p-6 !pb-0">
-      <h3 className="mb-1 flex items-center gap-3 font-outfit group-hover:text-white">
-      <img
-        src="/static/resources/github-white.svg"
-        width="30"
-        height="30"
-      />
-        <div>
-        {title} - Sample on GitHub
-        </div>
-      </h3>
+    <div className="flex items-center gap-2.5">
+      {link && (
+        <Link
+          to={link}
+          className="flex items-center gap-1 rounded-lg py-1 px-3 text-white bg-primary hover:text-white transition-colors"
+        >
+          <GitHub className="h-4 w-4" />
+          <span className="font-semibold">Clone the {title} sample</span>
+        </Link>
+      )}
     </div>
-    
-  </Link>
   );
 }
-
-
