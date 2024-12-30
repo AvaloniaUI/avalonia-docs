@@ -16,11 +16,10 @@ Use the username `license` and your license key as the password when asked.
 :::
 
 - https://xpf-nuget-feed.avaloniaui.net/
-- https://nuget-feed-all.avaloniaui.net/
 - https://xpf-nuget-feed.avaloniaui.net/v3/index.json
 - https://nuget-feed-all.avaloniaui.net/v3/index.json
 
-The first two URLs should display a page similar to the package listing on [nuget.org](https://www.nuget.org/packages); the second two URLs should display some JSON.
+The first URL should display a page similar to the package listing on [nuget.org](https://www.nuget.org/packages); the second two URLs should display some JSON.
 
 If you are unable to view any of these URls, check your firewall settings.
 
