@@ -28,7 +28,7 @@ const Cta = () => {
               </div>
             </div>
           </div>
-          <div className="absolute inset-0 z-0 overflow-hidden rounded-3xl">
+          <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
             <Waves />
           </div>
         </div>
