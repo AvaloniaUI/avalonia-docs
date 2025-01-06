@@ -70,7 +70,7 @@ Avalonia UI has built-in converters which can load assets for bitmaps, icons and
 
 You can write code to load assets using the `AssetLoader` static class. For example:
 
-```csharp
+```csharp title='C#'
 var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
 ```
 

@@ -14,7 +14,7 @@ The best way to get started with Avalonia is by creating an application using a 
 
 To install the [Avalonia templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates), run the following command:
 
-```bash
+```bash title='Bash'
 dotnet new install Avalonia.Templates
 ```
 
@@ -24,7 +24,7 @@ For .NET 6.0 and earlier, replace `install` with `--install`
 
 To list the installed templates run
 
-```bash
+```bash title='Bash'
  dotnet new list
 ```
 
@@ -47,13 +47,13 @@ Avalonia Window                               avalonia.window             [C#],F
 
 Once the project templates are installed, you can create a new _Avalonia UI_ application from CLI by running the following command:
 
-```bash
+```bash title='Bash'
 dotnet new avalonia.app -o MyApp
 ```
 
 This will create a new folder called `MyApp` containing your application files. To run the application, navigate to the `MyApp` folder and run:
 
-```bash
+```bash title='Bash'
 cd MyApp
 dotnet run
 ```

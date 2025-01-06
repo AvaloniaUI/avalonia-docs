@@ -32,7 +32,7 @@ Inside this user control, you will see a `<TextBlock>...</TextBlock>` XAML tag. 
 `Text` to the screen. The `Text` property of the `TextBlock` is bound to the **Greeting** property of 
 the **MainViewModel** class.
 
-```
+```xml title='XAML'
 <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
 

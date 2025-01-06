@@ -14,12 +14,14 @@ So far, the main window of your application displays only a text string. On this
 Avalonia contains a built-in control that creates a button. Follow this procedure to replace the text string currently in the `Window`'s content zone with a button control.
 
 - Stop the app if it is running.
-- Locate the 
-`<TextBlock Text="text" HorizontalAlignment="Center" VerticalAlignment="Center"/>`	
+- Locate
+```xml title='XAML' 
+<TextBlock Text="text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+```
 in the `MainView.axaml` file.. 
 - Delete the entire line.
 - Insert a `Button` tag as shown:
-```xml
+```xml title='XAML'
   <Button>Calculate</Button>
 ```
 <img className="center" src={CalculateButton} alt="" />
@@ -42,7 +44,7 @@ procedure to set the `HorizontalAlignment` to centered instead.
 
 - Add a new attribute to the Button tag as follows:
 
-```xml
+```xml title='XAML'
 <Button HorizontalAlignment="Center">Calculate</Button>
 ```
 

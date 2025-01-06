@@ -87,7 +87,7 @@ namespace AvaloniaApplication1.Views
 
 With the control reference available in the code-behind, you can set properties. For example, you can change the background property like this:
 
-```csharp
+```csharp title='C#'
 greetingButton.Background = Brushes.Blue;
 ```
 

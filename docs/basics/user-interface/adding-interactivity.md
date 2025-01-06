@@ -53,7 +53,7 @@ The simplest way of using commands is to bind to a method in the object's data c
 
 1. **Add a method to the view model**: Define a method in a view model which will handle the command.
 
-    ```csharp
+```csharp title='C#'
     public class MainWindowViewModel
     {
         // highlight-start
@@ -67,6 +67,6 @@ The simplest way of using commands is to bind to a method in the object's data c
 
 2. **Bind the Method**: Associate the method with the control that triggers it.
 
-    ```xml
+    ```xml title='XAML'
     <Button Content="Click Me" Command="{Binding HandleButtonClick}" />
     ```

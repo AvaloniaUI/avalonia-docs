@@ -13,11 +13,20 @@ import VsNewAvaloniaProjectScreenshot from '/img/get-started/test-drive/vs-new-a
 import RiderRunScreenshot from '/img/get-started/test-drive/rider-run.png';
 import InitialWindowScreenshot from '/img/get-started/test-drive/initial-window.png';
 
+import vscode1 from '/img/get-started/test-drive/vscode-command-new-project.png';
+import vscode2 from '/img/get-started/test-drive/vscode-select-project-template.png';
+import vscode3 from '/img/get-started/test-drive/vscode-name-new-project.png';
+import vscode4 from '/img/get-started/test-drive/vscode-create-project.png';
+import vscode6 from '/img/get-started/test-drive/vscode-select-csharp.png';
+import vscode7 from '/img/get-started/test-drive/vscode-launch-app.png';
+import vscode8 from '/img/get-started/test-drive/vscode-app-running.png';
+
+
 ## Install Templates
 
 Before starting, ensure that you have [installed the Avalonia templates](../install.md):
 
-```bash
+```bash title='Bash'
 dotnet new install Avalonia.Templates
 ```
 
@@ -29,7 +38,7 @@ To get started, we're going to use the MVVM Avalonia template: `Avalonia MVVM Ap
   <TabItem value="cli" label="Command Line" default>
 Run the command:
 
-```bash
+```bash title='Bash'
 dotnet new avalonia.mvvm -o GetStartedApp
 ```
 
@@ -69,6 +78,17 @@ The template will create a new solution and two new projects. `GetStartedApp` is
 <img className="center" src={VsNewAvaloniaProjectScreenshot} />
 
   </TabItem>
+
+  <TabItem value="vsc" label="Visual Studio Code">
+     * Bring up the Command Palette using `⇧ ⌘ P` and then type ".NET" and find and select the **.NET: New Project** command.
+     <img className="center" src={vscode1} />
+     * After selecting the command, you'll need to choose the project template. Choose **Avalonia MVVM app**.
+    <img className="center" src={vscode2} />
+    * Name the project G`etStartedApp`, and press enter.
+    <img className="center" src={vscode3} />
+    * You'll need to provide a path for where the project should be created. Do this, and then press **Create project**
+    <img className="center" src={vscode4} />
+  </TabItem>
 </Tabs>
 
 ## Run the Project
@@ -79,7 +99,7 @@ We're now ready to run the project!
   <TabItem value="cli" label="Command Line" default>
 Go into the `GetStartedApp` directory and run:
 
-```bash
+```bash title='Bash'
 dotnet run
 ```
   </TabItem>
@@ -96,6 +116,13 @@ Press the **Run** button in the Rider toolbar:
 
   Hit `F5` to run the project.
 
+  </TabItem>
+
+  <TabItem value="vsc" label="Visual Studio Code">
+   * Hit `F5` to run the project and Select `C#` as the debugger
+    <img className="center" src={vscode6} />
+  * Select **C#: GetStartedApp Demo** to launch the application with the debugger connected.
+    <img className="center" src={vscode7} />
   </TabItem>
 </Tabs>
 
