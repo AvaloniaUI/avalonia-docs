@@ -88,6 +88,7 @@ const sidebars = {
           'label': 'ToDo List App',
           'href': 'https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList' ,
         },
+        'tutorials/groupbox',
         {
           'type': 'category',
           'label': 'Music Store App',
