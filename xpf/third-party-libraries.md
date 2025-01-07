@@ -37,7 +37,7 @@ AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup
 
 ## Compatibility Database
 
-We maintain a comprehensive [compatibility database](avaloniaui.net/xpf/packages) for third-party controls. This database provides up-to-date status information for controls from major vendors.
+We maintain a comprehensive [compatibility database](https://avaloniaui.net/xpf/packages) for third-party controls. This database provides up-to-date status information for controls from major vendors.
 
 :::info 
 If you find that a control marked as `Fix In Progress` or `Untested` is mission-critical for your application, please contact our support team. We're committed to working with you to ensure compatibility.
