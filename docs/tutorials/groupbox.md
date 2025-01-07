@@ -9,6 +9,8 @@ import groupboxscreenshot from '/img/tutorials/groupbox/groupbox.png';
 
 While Avalonia doesn't include a built-in `GroupBox` control, you can achieve the same functionality and appearance using a `HeaderedContentControl` with custom styling. The `HeaderedContentControl` provides a header area and content region, making it perfect for grouping related interface elements.
 
+<GitHubSampleLink title="Custom GroupBox" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/GroupBox"/>
+
 ## Implementation
 Add the following style to your application resources (typically in App.axaml) or to the specific `Window` or `UserControl` where you need the `GroupBox` functionality:
 
