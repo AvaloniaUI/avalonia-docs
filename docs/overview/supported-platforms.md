@@ -92,7 +92,7 @@ Skia is built against glibc 2.17. If your distro uses something else instead, yo
 .NET 7 is required for Android support.
 :::
 
-## WebAssemnly (Browser)
+## WebAssembly (Browser)
 Any browser with full WebAssembly support technically should work - https://caniuse.com/wasm.
 
 For the best performance and support we recommend latest Chrome or Safari versions.
