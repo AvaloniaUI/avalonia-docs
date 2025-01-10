@@ -8,21 +8,15 @@ import TabStripNavigation from '/img/reference/controls/tabstrip/tabstrip-naviga
 
 显示一条选项卡头的条带。您可以将此控件用作水平菜单。
 
-选项卡条由 `<TabItem>` 元素组成。这些元素按它们在 XAML 中出现的顺序显示。
-
-## 有用的属性
-
-您可能最常使用此属性：
-
-<table><thead><tr><th width="244">属性</th><th>描述</th></tr></thead><tbody><tr><td><code>TabItem.Header</code></td><td>选项卡的文本。</td></tr></tbody></table>
+选项卡条由 `<TabStripItem>` 元素组成。这些元素按它们在 XAML 中出现的顺序显示。
 
 ## 示例
 
 ```xml
 <TabStrip Margin="5">
-  <TabItem Header="Tab 1"/>
-  <TabItem Header="Tab 2"/>
-  <TabItem Header="Tab 3"/>
+  <TabStripItem>Tab 1</TabStripItem>
+  <TabStripItem>Tab 2</TabStripItem>
+  <TabStripItem>Tab 3</TabStripItem>
 </TabStrip>
 ```
 
