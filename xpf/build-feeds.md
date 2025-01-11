@@ -3,7 +3,7 @@ id: build-feeds
 title: XPF Versioning
 ---
 
-The latest stable version of Avalonia XPF is 1.3.0. And if you are planning to make a release of your product you should choose the stable version. But for development purposes you may want to update to the latest development version frequently. The latest version can be found on our [nuget server](https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk).
+The latest stable version of Avalonia XPF is 1.4.0. And if you are planning to make a release of your product you should choose the stable version. But for development purposes you may want to update to the latest development version frequently. The latest version can be found on our [nuget server](https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk).
 
 To log into the web portal, use the following credentials:
 
