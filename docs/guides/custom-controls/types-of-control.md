@@ -7,7 +7,7 @@ If you want to create your own controls, there are three main categories of cont
 
 ### User Controls
 
-UserControls are the simplest way to author controls. This type of control is best for "views" or "pages" that are specific to an application. UserControls are authored in the same way as you would author a Window: by creating a new UserControl from a template and adding controls to it.
+[UserControls](./how-to-create-a-user-control.md) are the simplest way to author controls. This type of control is best for big "views" and "pages" or smaller simple controls, like "badges" or "notifications". UserControls are authored in the same way as you would author a Window: by creating a new UserControl from a template and adding controls to it.
 
 ### Templated Controls
 

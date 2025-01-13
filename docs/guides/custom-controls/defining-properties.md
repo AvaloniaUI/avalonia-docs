@@ -112,4 +112,6 @@ The styled property will work both at run-time and in the preview panel.
 
 :::info
 For more advanced information about how to create a custom control, see [here](../custom-controls/how-to-create-advanced-custom-controls.md).
+
+For info on how to bind to these properties on a user control, see [here](./how-to-create-a-user-control.md)
 :::
