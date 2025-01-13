@@ -60,7 +60,7 @@ In the executable WPF project, change the SDK to use the XPF SDK in the `.csproj
 should be changed to:
 
 ```xml
-<Project Sdk="Xpf.Sdk/1.3.0">
+<Project Sdk="Xpf.Sdk/1.4.0">
 ```
 
 :::note

@@ -3,6 +3,45 @@ id: release-notes
 title: Release Notes
 ---
 
+## XPF 1.4.0 
+
+* Remove System.Configuration.ConfigurationManager usages
+* Fix ModifierKeys.MacControl value
+* Replace WebRequest/WebResponse base ctor calls with RuntimeHelpers.GetUninitializedObject + Frame control fixes
+* Fix key remapping exception
+* Reset modifier keys on lost focus
+* Simple 3d support
+* Fix Paragraph TextAlignment
+* Fix compilation error in MuceViewport3DVisual
+* Add GetAvaloniaTopLevelForWindow
+* Window frame for single-view platforms like browser
+* Resizable single view windows, fix decorations
+* Implemented online licensing tickets
+* Include remaining platforms in License check
+* Fix avalon dock resizing issue
+* Fix lower right corner cursor
+* Replace binary formatter
+* Stub ShowSystemMenu
+* Fix DragOver exposing already disposed IDataObject
+* Do not crash when path simplification fails
+* Added ScreenToClient win32 API shim.
+* Fix XPF popups when embedded in Avalonia.
+* Use OpenGL by default on macOS
+* Implement JpegMetadata and allow reading the orientation
+* Fix NRE in ElementProxy
+* Add a runtime flag to enable interop for DataObject custom formats
+* Add support for reading and writing the exif MakerNote
+* Fix up "control is not in any visual tree"
+* Fix Cursors.None
+* Fix popup memory leak
+* Release mouse capture on Window deactivation.
+* Update Avalonia.Licensing
+* Ensure visual root dpi is set
+* Fix BitmapSource 4 byte alignment
+* Normalize some metadata queries to lower case
+* Use default WPF behavior if ALC support wasn't explicitly enabled
+* Adjust TextLine clipping when the line isn't collapsed
+
 ## XPF 1.3.0 
 
 * Enable ECDSA-based license keys
