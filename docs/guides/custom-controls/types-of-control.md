@@ -11,7 +11,7 @@ UserControls are the simplest way to author controls. This type of control is be
 
 ### Templated Controls
 
-TemplatedControls are best used for generic controls that can be shared among various applications. They are lookless controls, meaning that they can be restyled for different themes and applications. The majority of standard controls defined by Avalonia fit into this category.
+[TemplatedControls](./how-to-create-templated-controls.md) are best used for generic controls that can be shared among various applications. They are lookless controls, meaning that they can be restyled for different themes and applications. The majority of standard controls defined by Avalonia fit into this category.
 
 :::info
 In WPF/UWP you would inherit from the Control class to create a new templated control, but in Avalonia you should inherit from TemplatedControl. 
@@ -23,7 +23,7 @@ If you want to provide a Style for your TemplatedControl in a separate file, rem
 
 ### Basic Controls
 
-Basic Controls are the foundation of user interfaces - they draw themselves using geometry by overriding the Visual.Render method. Controls such as TextBlock and Image fall into this category.
+[Basic Controls](./index.md) are the foundation of user interfaces - they draw themselves using geometry by overriding the Visual.Render method. Controls such as TextBlock and Image fall into this category.
 
 :::info
 In WPF/UWP you would inherit from the FrameworkElement class to create a new basic control, but in Avalonia you should inherit from Control. 

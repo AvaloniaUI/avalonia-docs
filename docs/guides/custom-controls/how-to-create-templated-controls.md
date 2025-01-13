@@ -6,6 +6,8 @@ title: How To Create Templated Controls
 
 # How To Create Templated Controls
 
+Templated Controls are one of the [types of controls](./types-of-control.md) available for authoring custom controls.They are lookless controls, meaning that they can be restyled for different themes and applications.
+
 ## Data Binding
 
 When you're creating a control template and you want to bind to the templated parent you can use:
