@@ -7,13 +7,13 @@ import VsSolutionExplorerScreenshot from '/img/basics/user-interface/code-behind
 
 # Code-behind
 
-In addition to a XAML file, most Avalonia controls also have a _code-behind_ file that is commonly written in C#. The code-behind file by convention has the file extension `.axaml.cs` and is often displayed nested below the XAML file in your IDE.
+Помимо XAML-файла, большинство элементов управления Avalonia также имеют файл _code-behind_, который обычно пишется на C#. По соглашению файл code-behind имеет расширение `.axaml.cs` и часто отображается вложенным под XAML-файлом в вашей IDE.
 
-For instance, in the Visual Studio solution explorer, you can see a `MainWindow.axaml` file along with its code-behind file `MainWindow.axaml.cs`:
+Например, в обозревателе решений Visual Studio можно увидеть файл `MainWindow.axaml` вместе с его файлом code-behind `MainWindow.axaml.cs`:
 
 <p><img src={VsSolutionExplorerScreenshot} className="medium-zoom-image" /></p>
 
-The code-behind file contains a class that shares the same name as the XAML file. For example:
+Файл code-behind содержит класс с тем же именем, что и у XAML-файла. Например:
 
 ```csharp title='MainWindow.axaml.cs'
 using Avalonia.Controls;
@@ -30,41 +30,41 @@ namespace AvaloniaApplication1.Views
 }
 ```
 
-Notice that the class name matches the name of the XAML file, and is also referenced in the `x:Class` attribute of the window element.
+Обратите внимание, что имя класса совпадает с именем XAML-файла и также указано в атрибуте `x:Class` элемента окна.
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         // highlight-next-line
         x:Class="AvaloniaApplication1.Views.MainWindow">
-  ...
-</Window>
+        ...
+        </Window>
 ```
 
 :::tip
-If you make any changes to the class name in code, or its namespace, ensure that the  `x:Class` attribute always matches, or you will get an error.
+Если вы изменяете имя класса в коде или его пространство имен, убедитесь, что атрибут `x:Class` всегда совпадает, иначе произойдет ошибка.
 :::
 
-When the code-behind file is first added, it has only a constructor, which calls the  `InitializeComponent()` method. This method call is required to load the XAML at runtime.
+Когда файл code-behind создается впервые, он содержит только конструктор, который вызывает метод `InitializeComponent()`. Этот вызов обязателен для загрузки XAML во время выполнения.
 
-## Locating Controls
+## Поиск элементов управления
 
-When working with code-behind, you often need to access the controls defined in XAML.
+При работе с code-behind часто возникает необходимость получить доступ к элементам управления, определенным в XAML.
 
-To do this, you first need to obtain a reference to the desired control. Give the control a name using the `Name` (or `x:Name`) attribute in XAML.
+Для этого сначала нужно получить ссылку на нужный элемент управления. Назначьте элементу управления имя с помощью атрибута `Name` (или `x:Name`) в XAML.
 
-Here's an example of a XAML file with a named button:
+Пример XAML-файла с именованной кнопкой:
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication5.MainWindow">
-  // highlight-next-line
-  <Button Name="greetingButton">Hello World</Button>
+    // highlight-next-line
+    <Button Name="greetingButton">Hello World</Button>
 </Window>
 ```
 
-You can now access the button via an auto-generated `greetingButton` field from the code-behind:
+Теперь вы можете получить доступ к кнопке через автоматически созданное поле `greetingButton` из code-behind:
 
 ```csharp title='MainWindow.axaml.cs'
 using Avalonia.Controls;
@@ -83,25 +83,25 @@ namespace AvaloniaApplication1.Views
 }
 ```
 
-## Set Properties
+## Установка свойств
 
-With the control reference available in the code-behind, you can set properties. For example, you can change the background property like this:
+Имея ссылку на элемент управления в code-behind, вы можете установить его свойства. Например, можно изменить фон кнопки следующим образом:
 
 ```csharp
 greetingButton.Background = Brushes.Blue;
 ```
 
-## Handling Events
+## Обработка событий
 
-Any useful application will require you to implement some action! When using the code-behind pattern, you write event handlers in the code-behind file.
+Полезное приложение требует выполнения каких-либо действий! При использовании подхода code-behind вы пишете обработчики событий в файле code-behind.
 
-Event handlers are written as methods in the code-behind file, and then referenced in the XAML using an event attribute. For example, to add a handler for a button click event:
+Обработчики событий пишутся как методы в файле code-behind и затем указываются в XAML с помощью атрибута события. Например, чтобы добавить обработчик для события клика кнопки:
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication4.MainWindow">
-  <Button Click="GreetingButtonClickHandler">Hello World</Button>
+    <Button Click="GreetingButtonClickHandler">Hello World</Button>
 </Window>
 ```
 
@@ -115,13 +115,13 @@ public partial class MainWindow : Window
 
     public void GreetingButtonClickHandler(object sender, RoutedEventArgs e)
     {
-        // code here.
+        // код здесь
     }
 }
 ```
 
-Note that many Avalonia event handlers pass a special argument of class `RoutedEventArgs`. This includes information about how the event has been generated and propagated.
+Обратите внимание, что многие обработчики событий Avalonia передают специальный аргумент класса `RoutedEventArgs`. Этот аргумент содержит информацию о том, как событие было создано и распространено.
 
 :::info
-For more information on the concepts of event routing, see [here](../../concepts/input/routed-events.md).
+Для получения дополнительной информации о концепциях маршрутизации событий см. [здесь](../../concepts/input/routed-events.md).
 :::
