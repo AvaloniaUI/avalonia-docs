@@ -50,7 +50,7 @@ This will create a new folder called `GetStartedApp` containing the new project.
 
 <img className="center" src={RiderSplashScreenshot} width="600"/>
 
-- In the sidebar, scroll down and select **Avalonia App**
+- In the sidebar, scroll down and select **Avalonia .NET MVVM App**
 - Type `GetStartedApp` in the **Solution Name** field
 - Click **Create**
 
