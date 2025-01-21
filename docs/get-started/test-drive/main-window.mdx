@@ -24,12 +24,9 @@ Avalonia controls; the window will be drawn on the target platform with 4 **layo
 
 <img src={LayoutZonesDiagram} alt="" />
 
-In the current application, the content zone of the `Window` references another view: **`<views:MainView />`**. This is a 
-reference to the **MainView.axaml** file, which is a `UserControl` that will be displayed in the content zone of the `Window`.
+## The MainWindow Content
 
-## The MainView User control
-
-Inside this user control, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a `TextBlock` control which draws 
+Inside the Windows Content, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a `TextBlock` control which draws 
 `Text` to the screen. The `Text` property of the `TextBlock` is bound to the **Greeting** property of 
 the **MainViewModel** class.
 
@@ -37,7 +34,7 @@ the **MainViewModel** class.
 <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
 
-You can change the text in the file **MainViewModel.cs** to see the change reflected in the user interface.
+You can change the text in the file **MainWindowViewModel.cs** to see the change reflected in the user interface.
 
 ```csharp title='C#'
 namespace GetStartedApp.ViewModels;
@@ -69,7 +66,7 @@ The XAML Previewer create an instance of your app in a special authoring mode, k
 
 <Tabs groupId="ide">
     <TabItem value="rider" label="Rider">
-        Navigate to the **MainView.axaml** file and click the **Split View** button at the top right of the editor window.
+        Navigate to the **MainWindow.axaml** file and click the **Split View** button at the top right of the editor window.
 
         <ThemedImage
             alt="Rider Avalonia Previewer Controls"

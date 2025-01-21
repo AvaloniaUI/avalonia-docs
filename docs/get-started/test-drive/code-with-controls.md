@@ -17,28 +17,28 @@ To add control names, follow this procedure:
 - Add the `Name` attribute like this:
 
 ```xml
-<TextBox ... Name="celsius"/>
+<TextBox ... Name="Celsius"/>
 ```
 
 - Repeat the above for the Fahrenheit input:
 
 ```xml
-<TextBox ... Name="fahrenheit"/>
+<TextBox ... Name="Fahrenheit"/>
 ```
 
 ## Get Control Values in Code-Behind 
 
 To access the `Text` value of the `celsius` input, follow this procedure:
 
-- Switch to the **MainView.axaml.cs** code-behind file.
-- Locate the `ButtonClicked` event handler.
-- Alter the `Debug` statement to display the text property of the `celsius` input, like this:
+- Switch to the **MainWindow.axaml.cs** code-behind file.
+- Locate the `Button_OnClick` event handler.
+- Alter the `Debug` statement to display the text property of the `Celsius` input, like this:
 
 ```csharp
-Debug.WriteLine($"Click! Celsius={celsius.Text}");
+Debug.WriteLine($"Click! Celsius={Celsius.Text}");
 ```
 
-- Run the app to confirm that you can see the value in the Celsius appear in the debug window.
+- Run the app again (in debug mode) to confirm that you can see the value in the Celsius appear in the debug window.
 
 ## Set Control Values in Code-Behind 
 
@@ -51,7 +51,7 @@ Tf = Tc * (9/5) + 32
 
 To add the conversion formula, follow this procedure:
 
-- Locate the `ButtonClicked` event handler.
+- Locate the `Button_OnClick` event handler.
 - Validate the Celsius input text as a number.
 - Use the conversion formula.
 - Update the `Text` in the Fahrenheit input.
@@ -60,17 +60,17 @@ To add the conversion formula, follow this procedure:
 One implementation of the above is as follows:
 
 ```csharp
-public void ButtonClicked(object source, RoutedEventArgs args)
+private void Button_OnClick(object? sender, RoutedEventArgs e)
 {
-    if (Double.TryParse(celsius.Text, out double C))
+    if (double.TryParse(Celsius.Text, out double C))
     {
         var F = C * (9d / 5d) + 32;
-        fahrenheit.Text = F.ToString("0.0");
+        Fahrenheit.Text = F.ToString("0.0");
     }
     else
     {
-        celsius.Text = "0";
-        fahrenheit.Text = "0";
+        Celsius.Text = "0";
+        Fahrenheit.Text = "0";
     }
 }
 ```

@@ -1,0 +1,57 @@
+---
+id: the-design-preview
+title: The Design Preview
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+On this page, you will explore the attributes of the `Window` and then use some of them to adjust the size of the `Window` when it is shown in the preview pane.
+
+Examine the XAML for the `<Window>` tag. It will look like this:
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GetStartedApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        x:Class="GetStartedApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="GetStartedApp">
+```
+
+The `Window` tag starts by defining some of the XML namespaces that Avalonia uses. The aliases 'x', 'd' and 'mc' are used.
+
+The design namespace 'd' allows the design-time attributes `d:DesignWidth` and `d:DesignHeight`to be set. In the above 
+code sample, these have been set to make the preview look more like a mobile (portrait orientation) display. 
+
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GetStartedApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        // highlight-next-line
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        x:Class="GetStartedApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="GetStartedApp">
+```
+
+
+With these attributes set, the preview of the window now looks like this:
+
+<ThemedImage
+            alt="Application running"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/temperature-design-preview-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/temperature-design-preview-dark.png'),
+            }}
+            />
+
+On the next page, you will learn how to add some action to the app by responding to the `Button` `Click` event. 
