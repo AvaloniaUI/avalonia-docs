@@ -2,8 +2,7 @@
 id: input-controls
 title: Input Controls
 ---
-
-import InputControlsScreenshot from '/img/get-started/test-drive/input-controls.png';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 On this page, you will learn how to add input controls and arrange them in a neatly aligned layout. The aim is to add 
 numerical inputs with labels and an output control following in the row below. 
@@ -13,7 +12,14 @@ To achieve this layout, you will use the built-in `Grid` control to create cells
 The following picture shows the finished application at runtime with the gridlines showing for layout visualization purposes. Normally, 
 these are invisible on a production UI.
 
-<img className="center" src={InputControlsScreenshot} alt="" />
+<ThemedImage
+        alt="Tempature StackPanel"
+        className="center"
+        sources={{
+            light: useBaseUrl('/img/get-started/test-drive/input-controls-light.png'),
+            dark: useBaseUrl('/img/get-started/test-drive/input-controls-dark.png'),
+        }}
+        />
 
 To create a layout using the `Grid` control with 2 columns and 3 rows, follow this procedure:
 
@@ -70,7 +76,7 @@ the `Button` inside the `Grid`.
     <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0"/>
     <Label Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</Label>
     <TextBox Grid.Row="1"  Grid.Column="1" Margin="0 5" Text="0"/>
-    <Button Grid.Row="2" Grid.Column="1" Margin="0 5">Calculate</Button>
+    <Button Grid.Row="2"  Grid.Column="1">Calculate</Button>
     // highlight-end
 </Grid>
 ```

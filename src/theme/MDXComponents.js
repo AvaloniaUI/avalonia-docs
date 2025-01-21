@@ -7,6 +7,11 @@ import HelpNeeded from '../components/HelpNeeded';
 import GitHubSampleLink from '../components/GitHubSampleLink';
 import MinVersion from '../components/MinVersion';
 import XpfAd from '../components/XpfAdvert';
+import Button from '../components/Button';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ThemedImage from '@theme/ThemedImage';
+import Shortcut from '../components/Shortcut';
 
 export default {
   // Re-use the default mapping
@@ -20,4 +25,9 @@ export default {
   HelpNeeded,
   MinVersion,
   XpfAd,
+  Button,
+  Tabs,
+  TabItem,
+  ThemedImage,
+  Shortcut
 };

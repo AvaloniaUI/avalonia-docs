@@ -3,11 +3,8 @@ id: create-a-project
 title: Create and Run a Project
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-import RiderSplashScreenshot from '/img/get-started/test-drive/rider-splashscreen.png';
-import RiderSolutionScreenshot from '/img/get-started/test-drive/rider-solution.png';
 import VsFindAvaloniaTemplateScreenshot from '/img/get-started/test-drive/vs-find-avalonia-template-screenshot.png';
 import VsNewAvaloniaProjectScreenshot from '/img/get-started/test-drive/vs-new-avalonia-project-screenshot.png';
 import RiderRunScreenshot from '/img/get-started/test-drive/rider-run.png';
@@ -22,45 +19,43 @@ import vscode7 from '/img/get-started/test-drive/vscode-launch-app.png';
 import vscode8 from '/img/get-started/test-drive/vscode-app-running.png';
 
 
-## Install Templates
-
-Before starting, ensure that you have [installed the Avalonia templates](../install.md):
-
-```bash title='Bash'
-dotnet new install Avalonia.Templates
-```
-
 ## Create the Project
 
 To get started, we're going to use the MVVM Avalonia template: `Avalonia MVVM Application` (or `avalonia.mvvm` in the CLI).
 
-<Tabs groupId="ide">
-  <TabItem value="cli" label="Command Line" default>
-Run the command:
-
-```bash title='Bash'
-dotnet new avalonia.mvvm -o GetStartedApp
-```
-
-This will create a new folder called `GetStartedApp` containing the new project.
-  </TabItem>
+<Tabs groupId="ide">  
   <TabItem value="rider" label="Rider">
 
-- On the Rider startup screen, select **New Solution**
+1. On the Rider startup screen, select **New Solution** to bring up the `New Solution` Wizard. If you have installed the [Avalonia Templates](../install.md), then you will see three options.
+    * **Avalonia .NET App:** A template for desktop apps (Windows, macOS & Linux) that uses code-behind rather than MVVM.
+    * **Avalonia .NET MVVM App:** A template for desktop apps (Windows, macOS & Linux) that uses MVVM (by default with RxUI).
+    * **Avalonia Cross-Platform Application:** A template for all supported platforms (Windows, macOS, Linux, iOS, Android and WASM). This template requires additional workloads. 
 
-<img className="center" src={RiderSplashScreenshot} width="600"/>
-
-- In the sidebar, scroll down and select **Avalonia .NET MVVM App**
-- Type `GetStartedApp` in the **Solution Name** field
-- Click **Create**
+2. In the sidebar, scroll down and select `Avalonia .NET MVVM App`
+<ThemedImage
+            alt="Create Avalonia Solution with JetBrains Rider"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/rider-new-solution-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/rider-new-solution-dark.png'),
+            }}
+            />
+3. Type `GetStartedApp` in the **Solution Name** field
+4. Click **Create**
 
 The template will create a new solution and project.
 
-<img className="center" src={RiderSolutionScreenshot} width="600"/>
+<ThemedImage
+            alt="Create Avalonia Solution with JetBrains Rider"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/rider-solution-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/rider-solution-dark.png'),
+            }}
+            />
 
   </TabItem>
   <TabItem value="vs" label="Visual Studio">
-
 - In **Visual Studio**, click **Create a new project**.
 - Type `Avalonia` in the search box.
 - Click **Avalonia Application** then click **Next**.
@@ -78,7 +73,6 @@ The template will create a new solution and two new projects. `GetStartedApp` is
 <img className="center" src={VsNewAvaloniaProjectScreenshot} />
 
   </TabItem>
-
   <TabItem value="vsc" label="Visual Studio Code">
      * Bring up the Command Palette using `⇧ ⌘ P` and then type ".NET" and find and select the **.NET: New Project** command.
      <img className="center" src={vscode1} />
@@ -89,20 +83,22 @@ The template will create a new solution and two new projects. `GetStartedApp` is
     * You'll need to provide a path for where the project should be created. Do this, and then press **Create project**
     <img className="center" src={vscode4} />
   </TabItem>
+  <TabItem value="cli" label="Command Line" default>
+Run the command:
+
+```bash title='Bash'
+dotnet new avalonia.mvvm -o GetStartedApp
+```
+
+This will create a new folder called `GetStartedApp` containing the new project.
+  </TabItem>
 </Tabs>
 
 ## Run the Project
 
 We're now ready to run the project!
 
-<Tabs groupId="ide">
-  <TabItem value="cli" label="Command Line" default>
-Go into the `GetStartedApp` directory and run:
-
-```bash title='Bash'
-dotnet run
-```
-  </TabItem>
+<Tabs groupId="ide">  
   <TabItem value="rider" label="Rider">
 
 Press the **Run** button in the Rider toolbar:
@@ -117,12 +113,18 @@ Press the **Run** button in the Rider toolbar:
   Hit `F5` to run the project.
 
   </TabItem>
-
   <TabItem value="vsc" label="Visual Studio Code">
    * Hit `F5` to run the project and Select `C#` as the debugger
     <img className="center" src={vscode6} />
   * Select **C#: GetStartedApp Demo** to launch the application with the debugger connected.
     <img className="center" src={vscode7} />
+  </TabItem>
+  <TabItem value="cli" label="Command Line" default>
+Go into the `GetStartedApp` directory and run:
+
+```bash title='Bash'
+dotnet run
+```
   </TabItem>
 </Tabs>
 
@@ -130,4 +132,11 @@ The solution will build and run.
 
 You should now be running your first Avalonia application!
 
-<img className="center" src={InitialWindowScreenshot} />
+<ThemedImage
+  alt="Application running"
+  className="center"
+  sources={{
+      light: useBaseUrl('/img/get-started/test-drive/main-window-app-running-light.png'),
+      dark: useBaseUrl('/img/get-started/test-drive/main-window-app-running-dark.png'),
+  }}
+  />

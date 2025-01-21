@@ -1272,12 +1272,12 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
 }
 
 img.center {
-  width: auto;
+  width: auto !important;
   max-width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 1rem;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-bottom: 1rem !important;
 }
 
 .dropdown__menu 

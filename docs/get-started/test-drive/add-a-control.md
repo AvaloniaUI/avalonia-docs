@@ -14,17 +14,58 @@ So far, the main window of your application displays only a text string. On this
 Avalonia contains a built-in control that creates a button. Follow this procedure to replace the text string currently in the `Window`'s content zone with a button control.
 
 - Stop the app if it is running.
-- Locate
+- Locate the highlighted line of XAML in the `MainWindow.xaml` file. 
 ```xml title='XAML' 
-<TextBlock Text="text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GetStartedApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        x:Class="GetStartedApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="GetStartedApp">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    // highlight-next-line
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    
+</Window>
 ```
-in the `MainView.axaml` file.. 
-- Delete the entire line.
-- Insert a `Button` tag as shown:
+
+- Replace the entire line with the following:
 ```xml title='XAML'
   <Button>Calculate</Button>
 ```
-<img className="center" src={CalculateButton} alt="" />
+- Your XAML should now look like this: 
+```xml title='XAML'
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GetStartedApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        x:Class="GetStartedApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="GetStartedApp">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    // highlight-next-line
+    <Button>Calculate</Button>    
+</Window>
+```
 
 :::tip
 If you're using the previewer, you will see the button appear in the preview pane as soon as the XAML is valid. You can 
