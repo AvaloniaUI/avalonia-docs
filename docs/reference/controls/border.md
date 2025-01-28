@@ -87,7 +87,7 @@ If both offset values are set to zero, the shadow is placed behind the element, 
 This is an example of a drop-shadow:
 
 ```xml
-<<StackPanel>
+<StackPanel>
   <Border Background="Gainsboro"
         BorderBrush="Black"
         BorderThickness="2"
