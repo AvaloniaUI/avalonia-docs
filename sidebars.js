@@ -522,6 +522,7 @@ const sidebars = {
               ],
         },
         'concepts/image-interpolation',
+        'concepts/blend-modes',
         'concepts/templated-controls',
         'concepts/themes',
         'concepts/ui-composition',

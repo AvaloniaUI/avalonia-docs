@@ -4,6 +4,7 @@ description: REFERENCE - Built-in Controls
 
 import ImageUnscaledScreenshot from '/img/reference/controls/image/image-unscaled.png';
 import ImageUniformToFillScreenshot from '/img/reference/controls/image/image-uniform-to-fill.png';
+import BlendModeMultiply from '/img/concepts/blend/Multiply.png';
 
 # Image
 
@@ -15,7 +16,7 @@ The image can display raster images from a specified image source. The source ca
 
 Images can be used to compose the content of another control. For example, you can create a graphical button using image controls.
 
-The image can be rendered in a few different blend modes, which changes the way the image interacts with what's behind it. see the [reference](https://reference.avaloniaui.net/api/Avalonia.Visuals.Media.Imaging/BitmapBlendingMode/) page for a list of all supported blend modes. See the [Wikipedia page](https://en.wikipedia.org/wiki/Blend_modes) on blend modes for examples of how they work.
+The image can be rendered in a few different blend modes, which changes the way the image interacts with what's behind it. see the  [Bitmap Blend Modes](../../concepts/blend-modes.md) page for a list of all supported blend modes and an example gallery.
 
 The image displayed can be resized and scaled.  The default settings for scaling (uniform stretch in both directions) will result in the image being fitted to the size (width and/or height) given.
 
@@ -23,7 +24,9 @@ The image displayed can be resized and scaled.  The default settings for scaling
 The scaling settings for an image are the same as for the view box, see the reference [here](./viewbox.md).
 :::
 
-## Example
+## Examples
+
+### Basic
 
 This example shows a bitmap asset loaded into an image control where the height and width have been restricted, but the scaling settings remain defaulted. The image itself is not square, but the image width and height are set to the same value. The rectangle is included to give an idea of how the image has been scaled:
 
@@ -37,6 +40,8 @@ This example shows a bitmap asset loaded into an image control where the height 
 
 <img src={ImageUnscaledScreenshot} alt="" />
 
+### Stretch
+
 In this next example, introducing the stretch setting `UniformToFill` fits in all the height of the image, but crops the width because it would otherwise be wider than specified.  The image is not distorted by this treatment.
 
 ```xml
@@ -49,6 +54,19 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 ```
 
 <img src={ImageUniformToFillScreenshot} alt="" />
+
+### BlendMode
+
+This example is using two images, where the second image is using the `Multiply` Blend mode. For more information, read the [Bitmap Blend Modes](../../concepts/blend-modes.md) page.
+
+```xml
+<Panel>
+    <Image Source="./Cat.jpg"/>
+    <Image Source="./Overlay-Color.png" BlendMode="Multiply"/>
+</Panel>
+```
+
+<img src={BlendModeMultiply} alt="" width="350"/>
 
 ## More Information
 
