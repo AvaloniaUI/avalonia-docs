@@ -122,6 +122,8 @@ The file that is actually executed by macOS when starting your `.app` bundle wil
 
 * Add `-p:UseAppHost=true` to your `dotnet publish` command.
 
+Additionally, you might want to add the '-p:PublishSingleFile=true' to your dotnet command, compiling most of the DLLs into a your single application, simplifying the signing and notarizing process. 
+
 ### dotnet-bundle
 
 :::warning
