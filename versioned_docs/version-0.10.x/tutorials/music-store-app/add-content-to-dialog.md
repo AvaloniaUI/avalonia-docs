@@ -316,7 +316,7 @@ This shows a `StackPanel` to contain the controls. They are:
 
 A border with a `Corner` radius set, and `ClipToBounds` set to `True`, this means that the content will be clipped with rounded corners.
 
-The border contains a `Panel` with a `Background` set, using a hexadecimal colour code.
+The border contains a `Panel` with a `Background` set, using a hexadecimal color code.
 
 This `Panel` contains an `Image` and a `PathIcon` in front of it. Add the source for the Icon to `Icons.axaml`:
 
