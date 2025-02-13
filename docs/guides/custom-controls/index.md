@@ -14,6 +14,8 @@ Before you start to create your own control, you must decide which type of custo
 
 ### Custom Control
 
+Basic Controls are one of the [types of controls](./types-of-control.md) available for authoring custom controls.
+
 A custom control draws itself using the _Avalonia UI_ graphics system, using basic methods for shapes, lines, fills, text, and many others. You can define your own properties, events and pseudo classes.
 
 Some of the _Avalonia UI_ built-in controls are like this. For example, the text block control (`TextBlock` class) and the image control (`Image` class).

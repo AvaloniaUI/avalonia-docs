@@ -20,21 +20,39 @@ On this page, you will see how to implement a property so that it can be changed
 
 ### Register a Styled Property
 
-You register a styled property by defining a static read-only field and using the `AvaloniaProperty.Register` method.
+You register a styled property by defining a `public static read-only` field of type `StyledProperty<T>` and set it's value using the `AvaloniaProperty.Register` method.
 
-There is a convention for the name of a property. It must follow the pattern:
+:::warning
+The name of this static field **MUST** be the same name as the public attribute, followed by "`Property`" at the end.
+Failure to follow this naming convention may result in "*Unable to find suitable setter or adder for property*" errors during compilation.
+:::
 
+### Styled Property Register Example
+
+```csharp
+public static readonly StyledProperty<string> ExampleProperty =
+    AvaloniaProperty.Register<MyCustomControl, string>(nameof(Example), "Default value here");
+
+public string Example
+{
+    get => GetValue(ExampleProperty);
+    set => SetValue(ExampleProperty, value);
+}
 ```
-[AttributeName]Property
+
+:::info
+Note that the getter/setter of the public property uses the special Avalonia UI `GetValue` and `SetValue` methods and should not be changed to something else nor do any extra work inside of the get/set.
+:::
+
+Then, _Avalonia UI_ will look for an attribute in the XAML, like this:
+
+```xml
+<MyCustomControl Example="value" ... >
 ```
 
-This means that _Avalonia UI_ will look for an attribute in the XAML, like this:
+### Styled property in a custom control example
 
-```
-<MyCustomControl AttributeName="value" ... >
-```
-
-For example, with a styled property in place, you can control the background color of the custom control from the window styles collection:
+With a styled property in place, you can control the background color of the custom control from the window styles collection:
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
@@ -88,14 +106,12 @@ namespace AvaloniaCCExample.CustomControls
 }
 ```
 
-:::info
-Note that the getter/setter of the property uses the special Avalonia UI `GetValue` and `SetValue` methods.
-:::
-
 The styled property will work both at run-time and in the preview panel.
 
 <img src={DefiningPropertyPreviewScreenshot} alt=''/>
 
 :::info
 For more advanced information about how to create a custom control, see [here](../custom-controls/how-to-create-advanced-custom-controls.md).
+
+For info on how to bind to these properties on a user control, see [here](./how-to-create-a-user-control.md)
 :::

@@ -326,6 +326,7 @@ const sidebars = {
             'guides/custom-controls/create-a-custom-panel',
             'guides/custom-controls/defining-properties',
             'guides/custom-controls/draw-with-a-property',
+            'guides/custom-controls/how-to-create-a-user-control',
             'guides/custom-controls/how-to-create-a-custom-controls-library',
             'guides/custom-controls/how-to-create-a-custom-flyout',
             'guides/custom-controls/how-to-create-advanced-custom-controls',
