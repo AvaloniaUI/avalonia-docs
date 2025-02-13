@@ -234,7 +234,7 @@ Before we can run this we need to add our `MusicStoreView` to our `MusicStoreWin
 
 At the top of `MusicStoreWindow.axaml` you will find some lines that begin `xmlns:x` etc.. add a line:
 
-```markup
+```xml
 xmlns:local="using:Avalonia.MusicStore.Views"
 ```
 

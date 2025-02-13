@@ -29,7 +29,7 @@ In some cases, due to bugs/limitations in Visual Studio, the Avalonia XAML desig
 
 There are a number of properties that can be applied to your controls which will take effect only at design-time. To use these you must add a namespace to your XAML file:
 
-```csharp
+```xml
 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 ```
 

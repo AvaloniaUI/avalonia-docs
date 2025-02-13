@@ -47,7 +47,7 @@ these [steps](https://www.raspberrypi.com/documentation/computers/compute-module
   named **ssh** (with no extension, e.q with `touch ssh`) in the boot drive of the Raspberry. This will ensure that the SSH daemon is enabled
   once the Raspberry Pi has started and you can logon over the network.
 - ***Only for Cm4** add the following to `/boot/config.txt` to enable the Usb 2.0 ports*
-```text
+```conf
 dtoverlay=dwc2,dr_mode=host
 ```
 - Start up your Raspberry and login.  
