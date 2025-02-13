@@ -85,7 +85,7 @@ public class TextCaseConverter : IValueConverter
 
 ## Target Property Type
 
-You may want to write a a custom converter that can switch the output type depending on what the target property requires. You can achieve this becuase the `Convert` method receives a `targetType` argument that you can test with the `IsAssignableTo` function.
+You may want to write a a custom converter that can switch the output type depending on what the target property requires. You can achieve this because the `Convert` method receives a `targetType` argument that you can test with the `IsAssignableTo` function.
 
 In this example, the `animalConverter` can find an image, or a text name for a bound `Animal` class object:  
 

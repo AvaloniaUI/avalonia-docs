@@ -40,7 +40,7 @@ If you have installed .NET from your distribution's package repository, you must
 
 The following dependencies are required to run XPF: `libice6 libsm6 libfontconfig1 libgdiplus`
 
-On a [Debian-based distibution](https://en.wikipedia.org/wiki/Category:Debian-based_distributions) run the following command to install these dependencies:
+On a [Debian-based distribution](https://en.wikipedia.org/wiki/Category:Debian-based_distributions) run the following command to install these dependencies:
 
 ```bash
 sudo apt install libice6 libsm6 libfontconfig1 libgdiplus

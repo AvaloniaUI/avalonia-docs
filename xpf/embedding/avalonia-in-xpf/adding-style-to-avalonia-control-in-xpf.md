@@ -5,7 +5,7 @@ title: Adding style to Avalonia control in XPF
 
 # Adding Style to the Avalonia control in XPF
 
-In XPF you can add Style to the Avalonia control only with the code-behind. Plese consider the sample below.
+In XPF you can add Style to the Avalonia control only with the code-behind. Please consider the sample below.
 
 ## XAML Code
 

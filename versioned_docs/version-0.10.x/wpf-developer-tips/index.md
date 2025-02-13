@@ -65,7 +65,7 @@ WPF has uses `Visibility` property which can be `Collapsed`, `Hidden` or `Visibl
 
 # Handling attachment to visual tree
 
-There no events like `Loaded`/`Unloaded` in Avalonia, but you can override `OnAttachedToVisualTree`/`OnDetachedFromVisualTree` on the control, to know when control attached to virtual tree, or detatched from it. Alternatively you can use `TemplateApplied` instead of `Loaded` event.
+There no events like `Loaded`/`Unloaded` in Avalonia, but you can override `OnAttachedToVisualTree`/`OnDetachedFromVisualTree` on the control, to know when control attached to virtual tree, or detached from it. Alternatively you can use `TemplateApplied` instead of `Loaded` event.
 
 **WPF**
 ```csharp

@@ -259,7 +259,7 @@ Avalonia provides different options to access Resources from code.
 :::
 
 - **ResourceNode.Resources["TheKey"]**: <br/>
-  This will directly access the underlaying `Dictionary`. Be aware: Merged Dictionaries and parents will not be scanned. 
+  This will directly access the underlying `Dictionary`. Be aware: Merged Dictionaries and parents will not be scanned. 
 - **ResourceNode.TryGetResource**: <br/>
   This function will try to get a specific resource and return `true` if successful, otherwise `false`. Merged dictionaries will be scanned, but it will not follow the logical tree. 
 - **ResourceNode.TryFindResource**:  <br/>

@@ -23,7 +23,7 @@ A PinchGestureRecognizer can be attached to a control using the control's `Gestu
 image.GestureRecognizers.Add(new PinchGestureRecognizer());
 ```
 
-The PinchGestureRegonizer raises a `Gestures.PinchEvent` when it detects the start of a pull gesture. When the pull ends, from the pointer being released or another gesture start, it raises a `Gestures.PinchEndedEvent`.
+The PinchGestureRecognizer raises a `Gestures.PinchEvent` when it detects the start of a pull gesture. When the pull ends, from the pointer being released or another gesture start, it raises a `Gestures.PinchEndedEvent`.
 The `Scale` property in the args passed to the `Gestures.PinchEvent` event handler contains the relative size of the pinch since it started.
 
 ## Binding Events

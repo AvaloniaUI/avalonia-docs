@@ -274,12 +274,12 @@ Avalonia provides different options to access Resources from code.
 
 :::note
 
-`ResourceNode` in the below samples can be any node that supports `Resource`, like `Appliction.Current`, `Window`, `UserControl`, ... 
+`ResourceNode` in the below samples can be any node that supports `Resource`, like `Application.Current`, `Window`, `UserControl`, ... 
 
 :::
 
 - **ResourceNode.Resources["TheKey"]**: <br/>
-  This will directly access the underlaying `Dictionary`. Be aware: Merged Dictionaries and parents will not be scanned. 
+  This will directly access the underlying `Dictionary`. Be aware: Merged Dictionaries and parents will not be scanned. 
 - **ResourceNode.TryGetResource**: <br/>
   This function will try to get a specific resource and return `true` if successful, otherwise `false`. Merged dictionaries will be scanned, but it will not follow the logical tree. 
 - **ResourceNode.TryFindResource**:  <br/>
@@ -304,10 +304,10 @@ public MainWindow()
     // found2 = true | result2 = "Hello World" 
     var found2 = this.TryFindResource("TheKey", this.ActualThemeVariant, out var result2);
 
-    // Dound the resource to a TextBlock from code behind
+    // Bind the resource to a TextBlock from code behind
     myTextBlock.Bind(TextBlock.TextProperty, Resources.GetResourceObservable("TheKey"));
 
-    // this will update myTextBlock.Text via the bound observable
+    // This will update myTextBlock.Text via the bound observable
     this.Resources["TheKey"] = "Hello from code behind"; 
 }
 ```

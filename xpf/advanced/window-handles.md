@@ -20,5 +20,5 @@ if (XpfWpfAbstraction.GetAvaloniaWindowForWindow(xpfWindow) is { } avaloniaWindo
 ```
 
 :::note
-The type of the handle retreived in this manner will be different depending on the OS platform and cannot be passed to the win32 API emulation layer. For example, on Windows it will be a `HWND` but on macOS it will be an `NSWindow` pointer. The type of the handle can be retreived by using the `IPlatformHandle.HandleDescriptor` property.
+The type of the handle retrieved in this manner will be different depending on the OS platform and cannot be passed to the win32 API emulation layer. For example, on Windows it will be a `HWND` but on macOS it will be an `NSWindow` pointer. The type of the handle can be retrieved by using the `IPlatformHandle.HandleDescriptor` property.
 :::

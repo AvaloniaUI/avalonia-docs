@@ -159,7 +159,7 @@ import SampleCardsGrid from '@site/src/components/SampleCardsGrid';
   samples={[    
   {
       title: 'Clipboard Operations',
-      description: 'This sample demonstrates how to interat with the devices clipboard and copy and paste text.',
+      description: 'This sample demonstrates how to interact with the devices clipboard and copy and paste text.',
       tags: ['XAML', 'C#', 'Clipboard'],
       url: 'https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ClipboardOps'
     },  
