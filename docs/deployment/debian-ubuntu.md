@@ -75,7 +75,7 @@ Overall, all .NET and Avalonia dependencies are required, plus any others specif
 
 Below is a simple example of a `control` file.
 
-```
+```yaml
 Package: myprogram
 Version: 3.1.0
 Section: devel

@@ -53,7 +53,7 @@ The two suggested workflows are:
   When you link to an image, the path and filename are case-sensitive. The convention is `kebab-case`. `import` should be used to help detect broken images and placed near the top of the document for easier maintenance.
 
   > Example code for adding an image in markdown file:
-  ```
+  ```markdown
   import ButtonGroup from '/img/button-group.png';
   <img className="screenshot-full" src={ButtonGroup} alt="Button group" />
   ```
@@ -68,13 +68,13 @@ The two suggested workflows are:
 
 ### Setup
 
-```
+```bash
 npm install
 ```
 
 ### Starting 
 
-```
+```bash
 npx docusaurus start
 npx docusaurus start --locale zh-Hans
 npx docusaurus start --locale ru

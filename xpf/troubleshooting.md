@@ -34,7 +34,7 @@ If you are unable to login with your license key, it may have expired. Ask suppo
 
 Run the following commands from the command-line:
 
-```
+```bash
 dotnet nuget locals http-cache --clear
 dotnet restore
 ```

@@ -44,7 +44,7 @@ For example, firstly this means that styles defined at window level will overrid
 :::warning
 If you were comparing style classes to CSS you must note that: **unlike CSS**, the list sequence of class names in the `Classes` attribute has no effect on setter priority in _Avalonia UI_. That is, if both these style classes set the colour, then either way of listing the classes has the same result:
 
-```
+```xml
 <Button Classes="h1 blue"/>
 <Button Classes="blue h1"/>
 ```

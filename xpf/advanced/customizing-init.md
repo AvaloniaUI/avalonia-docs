@@ -56,7 +56,7 @@ In the above example `App` is your XPF `Application` class defined in `App.xaml.
 
 Configure your project to use the new `Main` method by adding the following to your `.csproj`:
 
-```
+```xml
  <PropertyGroup>
      <StartupObject>MyXpfApp.Program</StartupObject>
  </PropertyGroup>

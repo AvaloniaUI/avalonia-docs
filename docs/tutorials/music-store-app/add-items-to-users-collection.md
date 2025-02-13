@@ -49,7 +49,7 @@ To add the items control and its data template, follow this procedure:
 - Locate and open the **MainWindow.axaml** file.
 - Add the following namespace declaration to the `<Window>` element:
 
-```
+```xml
 xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 ```
 

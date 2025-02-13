@@ -30,7 +30,7 @@ There is a convention for the name of a property. It must follow the pattern:
 
 This means that _Avalonia UI_ will look for an attribute in the XAML, like this:
 
-```
+```xml
 <MyCustomControl AttributeName="value" ... >
 ```
 
