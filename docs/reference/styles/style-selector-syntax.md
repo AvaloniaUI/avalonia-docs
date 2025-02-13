@@ -123,7 +123,7 @@ This is very similar to the style class selector except it also matches derived 
 Technical detail: during the matching process, _Avalonia UI_ determines the type of a control by examining its `StyleKey` property.
 :::
 
-INterestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
+Interestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
 
 
 
