@@ -169,7 +169,7 @@ For example, applying the above selector to this XAML:
    <DockPanel Width="300" Height="300">
        <Button DockPanel.Dock="Top">Top</Button>
        <TextBlock>Some text</TextBlock>
-   </DockPanel
+   </DockPanel>
 </StackPanel>
 ```
 
