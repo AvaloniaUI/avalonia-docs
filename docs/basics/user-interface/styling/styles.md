@@ -29,7 +29,7 @@ When a match is located by the selection step, then the matched control's proper
 
 The XAML for a style has two parts: a selector attribute, and one or more setter elements. The selector value contains a string that uses the _Avalonia UI_ **style selector syntax**. Each setter element identifies the property that will be changed by name, and the new value that will be substituted. The pattern is like this:
 
-```
+```xml
 <Style Selector="selector syntax">
      <Setter Property="property name" Value="new value"/>
      ...

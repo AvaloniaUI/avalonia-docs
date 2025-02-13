@@ -24,7 +24,7 @@ You register a styled property by defining a static read-only field and using th
 
 There is a convention for the name of a property. It must follow the pattern:
 
-```
+```csharp
 [AttributeName]Property
 ```
 

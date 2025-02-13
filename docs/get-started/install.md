@@ -64,7 +64,7 @@ The project templates will also allow for project creation from your IDE.
 
 ### Ensure .NET SDK is installed
 
-```
+```bash
 dotnet --list-sdks
 
 8.0.202 [C:\Program Files\dotnet\sdk] <-- Your version may vary
@@ -79,7 +79,7 @@ associated with the terminal. On Windows, this involves checking environment var
 If while installing the project templates, you receive an error stating the `Avalonia.Templates` package cannot be found, 
 then ensure NuGet is correctly setup with .NET's standard global package source.
 
-```
+```bash
 dotnet nuget list source
 
 Registered Sources:
@@ -89,7 +89,7 @@ Registered Sources:
 
 If this source is not listed, add it:
 
-```
+```bash
 dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
 ```
 

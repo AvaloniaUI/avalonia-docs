@@ -112,7 +112,7 @@ The desktop shortcut file follows the [freedesktop specification](https://specif
 
 Below is an example of a desktop shortcut file.
 
-```
+```conf
 [Desktop Entry]
 Name=MyProgram
 Comment=MyProgram, great for doing X

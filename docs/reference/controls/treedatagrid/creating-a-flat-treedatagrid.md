@@ -10,7 +10,7 @@ import FlatTreeDataGridSourceScreenshot from '/img/reference/controls/treedatagr
 
 In this example the view model contains an observable collection that is filled with data and then used to create a `FlatTreeDataGridSource` property to bind to the source of the tree data grid. The items of the grid are class `Person`.
 
-```
+```xml
 <TreeDataGrid Source="{Binding PersonSource}"/>
 ```
 

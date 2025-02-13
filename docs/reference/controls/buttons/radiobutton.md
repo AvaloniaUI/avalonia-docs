@@ -23,7 +23,7 @@ You will probably use these properties most often:
 
 This example shows two groups of radio buttons working independently:
 
-```
+```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 10 0 5">First Group</TextBlock>
     <RadioButton GroupName="First Group"

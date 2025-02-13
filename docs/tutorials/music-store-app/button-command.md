@@ -50,7 +50,7 @@ To add the button data binding, follow this procedure:
 - Locate and open the **MainWindow.axaml** file.
 - Find the XAML for the button and add the command attribute and binding, as shown:
 
-```
+```xml
 <Button HorizontalAlignment="Right" VerticalAlignment="Top"
         Command="{Binding BuyMusicCommand}">
    <PathIcon Data="{StaticResource store_microsoft_regular}"/>

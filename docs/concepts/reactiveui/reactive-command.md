@@ -65,7 +65,7 @@ When you use _ReactiveUI_ to implement revealed functionality, you create an obs
 
 For example, you can add this code to the above view model constructor (`public MainWindowViewModel()`) to create an observable object to validate the view model:
 
-```
+```csharp
 IObservable<bool> isInputValid = this.WhenAnyValue(
                 x => x.UserName,
                 x => !string.IsNullOrWhiteSpace(x) && x.Length > 7

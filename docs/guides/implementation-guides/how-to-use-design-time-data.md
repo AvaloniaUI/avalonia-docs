@@ -67,7 +67,7 @@ As of Avalonia version 11, the default sample app is set to use Compiled binding
 1. Import the ViewModels namespace: this is done from the line **xmlns:vm** is to include the ViewModel namespace. In this example the project name is **AvaloniaApplication1**.
 2. Declare the ViewModel class, so that the design time environment can do a type check on the class properties. This is done through the line **x:DataType**
    
-```
+```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
