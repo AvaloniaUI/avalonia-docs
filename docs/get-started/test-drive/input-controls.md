@@ -13,7 +13,7 @@ The following picture shows the finished application at runtime with the gridlin
 these are invisible on a production UI.
 
 <ThemedImage
-        alt="Tempature StackPanel"
+        alt="Temperature StackPanel"
         className="center"
         sources={{
             light: useBaseUrl('/img/get-started/test-drive/input-controls-light.png'),

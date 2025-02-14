@@ -40,7 +40,7 @@ Some of the important files are:
 | MainWindow.axaml | This is the `xaml` UI code that describes how the `MainWindow` looks and its contents. |
 | App.axaml | This is a `xaml` file that sets up the application, it chooses the theme the UI will use and declares the `ViewLocator` `DataTemplate`. |
 | Program.cs | `Main` method where the program starts and `Avalonia` is configured and started. |
-| ViewLocator.cs | `ViewLocator` is a special `DataTemplate`. When some `Data` appears in the UI, it quickly looks to see if a `View` exists for it. This is done by naming convention. If the datas `Type` is `MyDataViewModel` then the `ViewLocator` will use the `View` named `MyDataView` \(if it exists\) in that part of the UI. This is very powerful for list based controls \(`ItemsControl`, `ListBox`, etc\) and `ContentControl`. |
+| ViewLocator.cs | `ViewLocator` is a special `DataTemplate`. When some `Data` appears in the UI, it quickly looks to see if a `View` exists for it. This is done by naming convention. If the data's `Type` is `MyDataViewModel` then the `ViewLocator` will use the `View` named `MyDataView` \(if it exists\) in that part of the UI. This is very powerful for list based controls \(`ItemsControl`, `ListBox`, etc\) and `ContentControl`. |
 
 ### Compiling and Running the Project
 

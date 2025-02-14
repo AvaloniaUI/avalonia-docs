@@ -123,7 +123,7 @@ This is very similar to the style class selector except it also matches derived 
 Technical detail: during the matching process, _Avalonia UI_ determines the type of a control by examining its `StyleKey` property.
 :::
 
-INterestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
+Interestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
 
 
 
@@ -163,13 +163,13 @@ For the concept behind the logical controls tree, see [here](../../concepts/cont
 
 For example, applying the above selector to this XAML:
 
-```
+```xml
 <StackPanel>
    <Button>Save</Button>
    <DockPanel Width="300" Height="300">
        <Button DockPanel.Dock="Top">Top</Button>
        <TextBlock>Some text</TextBlock>
-   </DockPanel
+   </DockPanel>
 </StackPanel>
 ```
 
@@ -211,7 +211,7 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 
 You can refine a selector so that it includes the value of a property. The property=value pair is defined inside square brackets. This matches any control that has the specified property set to the specified value.
 
-```
+```xml
 <StackPanel Orientation="Horizontal">
    <Button IsDefault="True">Save</Button>
    <Button>Cancel</Button>   
@@ -346,12 +346,12 @@ new Style(x => x.OfType<TextBlock>().NthChild(0, 3));
 
 You can also use a keyword notation in place of the formula: `odd` or `even`. So these are selectors are equivalent:
 
-```
+```xml
 <Style Selector="TextBlock:nth-child(2n)">
 <Style Selector="TextBlock:nth-child(even)">
 ```
 
-```
+```xml
 <Style Selector="TextBlock:nth-child(2n+1)">
 <Style Selector="TextBlock:nth-child(odd)">
 ```

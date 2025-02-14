@@ -19,7 +19,7 @@ Then the `_sourceCache` can be populated through the `AddOrUpdate` method
 
 ## Creating Sorted Or Filtered Views
 
-Next the `ReadOnlyObservableCollection<T>` can be bound to the filtered or sorted `_sourceCache`. The sorting/filtering is done similarly to linq.
+Next the `ReadOnlyObservableCollection<T>` can be bound to the filtered or sorted `_sourceCache`. The sorting/filtering is done similarly to Linq.
 
 ```csharp
 private readonly ReadOnlyObservableCollection<TestViewModel> _testViewModels;

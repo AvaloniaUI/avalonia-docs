@@ -18,8 +18,8 @@ Let's try and make this look a little more modern by applying `Dark` mode and so
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="Avolonia.MusicStore.App"
-             xmlns:local="using:Avolonia.MusicStore"
+             x:Class="Avalonia.MusicStore.App"
+             xmlns:local="using:Avalonia.MusicStore"
              RequestedThemeVariant="Dark">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 ```

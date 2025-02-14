@@ -37,7 +37,7 @@ The example above animates the target `Control` as defined by its [selector](../
 
 ## Triggering Animations
 
-Unlike WPF's `Triggers`, Animations defined in XAML rely on [selectors](../styling/selectors) for their triggering behavior. Selectors can always apply to a control, or they can conditionally apply \(for example if the control has a style class appled\).
+Unlike WPF's `Triggers`, Animations defined in XAML rely on [selectors](../styling/selectors) for their triggering behavior. Selectors can always apply to a control, or they can conditionally apply \(for example if the control has a style class applied\).
 
 If the selector isn't conditional then the animation will be triggered when a matching `Control` is spawned into the visual tree. Otherwise, the animations will run whenever its selector is activated. When the selector no longer matches, the currently running animation will be canceled.
 

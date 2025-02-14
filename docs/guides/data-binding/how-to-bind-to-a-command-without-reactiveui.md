@@ -50,7 +50,7 @@ namespace AvaloniaGuides.ViewModels
 
 _Avalonia UI_ data binding provides a simple way of implementing a 'can execute?' feature using a naming convention.
 
-If you need to have execution dependent on the value of a command parameter or a view model property, then you can write a second Boolean method to check if the action m,ethod can execute.
+If you need to have execution dependent on the value of a command parameter or a view model property, then you can write a second Boolean method to check if the action method can execute.
 
 To make this work, _Avalonia UI_ uses the naming convention that the Boolean method has the same root name as the action method, but with the added prefix 'Can'.
 

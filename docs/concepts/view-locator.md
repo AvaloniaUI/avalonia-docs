@@ -56,7 +56,7 @@ You can customize the View Locator to use different conventions. For example, yo
 
 By default, the View Locator is referenced in App.axaml as a DataTemplate, in the content of the `Application.DataTemplates` XAML tag. Ensure that its appropriate 'using' statement is in the `xmlns:local` property of the Application root tag.
 
-```xaml
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="LearningAvalonia.App"

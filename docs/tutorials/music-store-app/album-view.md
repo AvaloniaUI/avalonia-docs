@@ -66,7 +66,7 @@ As you saw on the last page, at this point the album list currently just shows t
 
 In this step you will be using the view locator class (**ViewLocator.cs** file) that was added to the project by the solution template. This class was registered (by the solution template) as a data template at the highest level in the app in the **App.axaml** file. The data template registration looks like this:
 
-```
+```xml
 <Application ...
              xmlns:local="using:Avalonia.MusicStore"
              ... >

@@ -75,7 +75,7 @@ Overall, all .NET and Avalonia dependencies are required, plus any others specif
 
 Below is a simple example of a `control` file.
 
-```
+```yaml
 Package: myprogram
 Version: 3.1.0
 Section: devel
@@ -112,7 +112,7 @@ The desktop shortcut file follows the [freedesktop specification](https://specif
 
 Below is an example of a desktop shortcut file.
 
-```
+```conf
 [Desktop Entry]
 Name=MyProgram
 Comment=MyProgram, great for doing X

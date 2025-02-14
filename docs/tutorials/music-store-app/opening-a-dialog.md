@@ -208,7 +208,7 @@ Follow this procedure:
 - Add attributes for the width and height of the dialog, set at 1000 and 550 respectively.
 - Add the start-up position attribute set to `CenterOwner`, as shown:
 
-```
+```xml
 <Window ...
     Width="1000" Height="550"
     WindowStartupLocation="CenterOwner">

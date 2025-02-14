@@ -43,7 +43,7 @@ Follow this procedure to define a simple color fade animation using XAML:
 
 The finished code will look like this: 
 
-```
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     <Window.Styles>
         <Style Selector="Rectangle.red">

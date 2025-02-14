@@ -113,7 +113,7 @@ https://www.nuget.org/packages/Avalonia/11.0.6
 * Fixed passing current_folder to DBus for save file dialog by @HermanKirshin in https://github.com/AvaloniaUI/Avalonia/pull/13491
 * Fix issue #11006 by correcting SelectionChanged event to be fired AFTER (not before) raising Prop. by @lnxon in https://github.com/AvaloniaUI/Avalonia/pull/13503
 * Fix ImageBrush crash when source bitmap gets disposed by @kekekeks in https://github.com/AvaloniaUI/Avalonia/pull/13506
-* fix: Navigation when CanExecute is fasle by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/13507
+* fix: Navigation when CanExecute is false by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/13507
 * DataGrid inertial scroll support (#13502) by @stogle in https://github.com/AvaloniaUI/Avalonia/pull/13511
 * Fix for issue #13493 by @laolarou726 in https://github.com/AvaloniaUI/Avalonia/pull/13518
 * fix: Potential TransformGroup memory leak by @workgroupengineering in https://github.com/AvaloniaUI/Avalonia/pull/13529

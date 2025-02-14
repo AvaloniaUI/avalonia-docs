@@ -20,7 +20,7 @@ You will probably use these properties most often:
 
 ## Examples
 
-```
+```xml
 <WrapPanel>
     <Rectangle Fill="Navy" Width="100" Height="100" Margin="20"/>
     <Rectangle Fill="Yellow" Width="100" Height="100" Margin="20"/>

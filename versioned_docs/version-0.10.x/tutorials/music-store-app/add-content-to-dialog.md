@@ -87,7 +87,7 @@ namespace Avalonia.MusicStore.ViewModels
 
 Here we can see that we have a normal getter which returns the field, and we have a Setter that calls a method.
 
-This calls `RaiseAndSetIfChanged` this method checks to see if `value` is different from the current `_seachText` field and if so, it changes it to the new value, and then raises an event to notify the `View` that it has changed.
+This calls `RaiseAndSetIfChanged` this method checks to see if `value` is different from the current `_searchText` field and if so, it changes it to the new value, and then raises an event to notify the `View` that it has changed.
 
 Any View that has a `{Binding SearchText}` expression will automatically update, and stay in sync with this property.
 
@@ -219,7 +219,7 @@ This ViewLocator is a special `DataTemplate` that will take the typename, in thi
 
 If the ListBox finds one, it will display whatever `xaml` that `View` describes inside the `ListBox`, otherwise it will just show the typename inside the `ListBox` as a string.
 
-Lets test this by adding a contructor on the `MusicStoreViewModel.cs`.
+Lets test this by adding a constructor on the `MusicStoreViewModel.cs`.
 
 ```csharp
 public MusicStoreViewModel()
@@ -234,7 +234,7 @@ Before we can run this we need to add our `MusicStoreView` to our `MusicStoreWin
 
 At the top of `MusicStoreWindow.axaml` you will find some lines that begin `xmlns:x` etc.. add a line:
 
-```markup
+```xml
 xmlns:local="using:Avalonia.MusicStore.Views"
 ```
 
@@ -316,7 +316,7 @@ This shows a `StackPanel` to contain the controls. They are:
 
 A border with a `Corner` radius set, and `ClipToBounds` set to `True`, this means that the content will be clipped with rounded corners.
 
-The border contains a `Panel` with a `Background` set, using a hexadecimal colour code.
+The border contains a `Panel` with a `Background` set, using a hexadecimal color code.
 
 This `Panel` contains an `Image` and a `PathIcon` in front of it. Add the source for the Icon to `Icons.axaml`:
 

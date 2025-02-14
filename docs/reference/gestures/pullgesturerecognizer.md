@@ -30,7 +30,7 @@ The PullGestureRecognizer raises a `Gestures.PullGestureEvent` when it detects t
 
 ### PullDirection
 This defines the direction of the pull. There are 4 available values;
-* `PullDirection.TopToBottom` : Pull starts from the top edge and moves towards the buttom
+* `PullDirection.TopToBottom` : Pull starts from the top edge and moves towards the bottom
 * `PullDirection.BottomToTop` : Pull starts from the bottom edge and moves towards the top
 * `PullDirection.LeftToRight` : Pull starts from the left edge and moves towards the right
 * `PullDirection.RightToLeft` : Pull starts from the right edge and moves towards the left

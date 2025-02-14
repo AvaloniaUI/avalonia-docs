@@ -7,7 +7,7 @@ title: Running on Raspberry Pi
 
 ### Step 1
 
-Flash 8GB SD Card with Raspbian Stretch (2018-11-13). `BelenaEtcher` is a nice tool for that.
+Flash 8GB SD Card with Raspbian Stretch (2018-11-13). `balenaEtcher` is a nice tool for that.
 
 Plug in the card and start the `Raspberry Pi`.
 

@@ -7,7 +7,7 @@ macOS applications are typically distributed in a `.app` [application bundle](ht
 
 With Avalonia, you'll have a `.app` folder structure that looks like this:
 
-```csharp
+```
 MyProgram.app
 |
 ----Contents\

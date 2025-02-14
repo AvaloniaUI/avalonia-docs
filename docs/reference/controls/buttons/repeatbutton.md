@@ -22,7 +22,7 @@ You will probably use these properties most often:
 
 This example shows a repeat button generating click events with the default interval and delay.
 
-```
+```xml
 <Grid Margin="20" RowDefinitions="50,*">
   <RepeatButton Grid.Row="0" Click="ClickHandler">Press and hold down</RepeatButton>
   <ScrollViewer Grid.Row="1">

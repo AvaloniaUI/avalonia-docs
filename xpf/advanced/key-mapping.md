@@ -62,9 +62,9 @@ private void OnMapKey(object? sender, XpfMapKeyEventArgs e)
 
 Modifier keys can be mapped in one of two ways:
 
-The first option is to handle the initial modifier key press. An example of this would be receiving `e.Key == System.Windows.Input.Key.LeftCtrl` and setting `e.MappedKey = System.Windows.Input.Key.LeftAlt` in response. In this case, the application will receive a `KeyDown`/`KeyUp` event pair for `LeftAlt`; and `Keyboard.Modifiers` will be set to `Alt` for the duration of the key press. `e.MappedModifers` does not need to be touched in this case.
+The first option is to handle the initial modifier key press. An example of this would be receiving `e.Key == System.Windows.Input.Key.LeftCtrl` and setting `e.MappedKey = System.Windows.Input.Key.LeftAlt` in response. In this case, the application will receive a `KeyDown`/`KeyUp` event pair for `LeftAlt`; and `Keyboard.Modifiers` will be set to `Alt` for the duration of the key press. `e.MappedModifiers` does not need to be touched in this case.
 
-The problem with this technique is that often it's not known what the modifier should be mapped to until the second key is pressed. In this case, one should wait for the second key press and set `e.MappedModifiers`. Bear in mind when using this technique that the raised `KeyDown` events will not match the current `Keyboard.Modifiers` value. That is, no "fake" `KeyDown` events will be raised for the modifier key, the mapping will only be reflected by `Keyboard.Modifers` and `Keyboard.IsKeyDown`.
+The problem with this technique is that often it's not known what the modifier should be mapped to until the second key is pressed. In this case, one should wait for the second key press and set `e.MappedModifiers`. Bear in mind when using this technique that the raised `KeyDown` events will not match the current `Keyboard.Modifiers` value. That is, no "fake" `KeyDown` events will be raised for the modifier key, the mapping will only be reflected by `Keyboard.Modifiers` and `Keyboard.IsKeyDown`.
 
 ## Conditional Mapping
 

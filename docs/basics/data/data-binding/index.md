@@ -30,7 +30,7 @@ If the user edits the text in the text box, then the `FirstName` property of the
 
 Bindings can be unidirectional: where changes in the properties of a bound application object are reflected in the control, but the user cannot change the control. An example of this would be the text block control, which is read-only.
 
-```
+```xml
 <TextBlock Text="{Binding StatusMessage}" />
 ```
 

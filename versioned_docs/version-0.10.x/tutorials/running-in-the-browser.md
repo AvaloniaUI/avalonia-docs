@@ -46,7 +46,7 @@ Avalonia app is compatible with standard **[JSImport]/[JSExport]** interop from 
 ## Legacy Blazor backend
 
 Starting from Avalonia 11.0 [Avalonia.Web](https://www.nuget.org/packages/Avalonia.Web/) package relies on build-in .NET interop with better stability and performance.
-Legacy Blazor backend is still available for compatability and can be referenced using [Avalonia.Web.Blazor](https://www.nuget.org/packages/Avalonia.Web.Blazor/) package.
+Legacy Blazor backend is still available for compatibility and can be referenced using [Avalonia.Web.Blazor](https://www.nuget.org/packages/Avalonia.Web.Blazor/) package.
 
 
 ## Troubleshooting

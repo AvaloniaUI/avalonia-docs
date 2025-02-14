@@ -67,7 +67,7 @@ SafeAreaChangedArgs is a class that provides data for the SafeAreaChanged event.
 ### SafeAreaPadding
 Gets the new safe area padding.
 
-```
+```csharp
 public Thickness SafeAreaPadding { get; }
 ```
 

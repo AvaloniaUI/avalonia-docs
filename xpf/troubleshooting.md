@@ -34,7 +34,7 @@ If you are unable to login with your license key, it may have expired. Ask suppo
 
 Run the following commands from the command-line:
 
-```
+```bash
 dotnet nuget locals http-cache --clear
 dotnet restore
 ```
@@ -53,7 +53,7 @@ Typically, there are two possible ways to listen for Avalonia logs
 
 ### .LogToTrace in a custom Avalonia initialization
 
-1. Follow [instructions](./customizing-init) on how to setup custom Avalonia intiialization.
+1. Follow [instructions](./customizing-init) on how to setup custom Avalonia initialization.
 2. Then you will be able to call `.LogToTrace()` with optional severity parameter in the AppBuilder chain, like this:
 ```diff
         AppBuilder.Configure<AvaloniaUI.Xpf.Helpers.DefaultXpfAvaloniaApplication>()
@@ -66,7 +66,7 @@ This will redirect all Avalonia logs to the .NET Trace listener. Which can be re
 
 ### Override Logger.Sink
 
-Static property `Logger.Sink` has a public setter and can be overriden by custom implementation.
+Static property `Logger.Sink` has a public setter and can be overridden by custom implementation.
 ```csharp
 public void Initialize()
 {

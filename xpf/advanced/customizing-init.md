@@ -56,7 +56,7 @@ In the above example `App` is your XPF `Application` class defined in `App.xaml.
 
 Configure your project to use the new `Main` method by adding the following to your `.csproj`:
 
-```
+```xml
  <PropertyGroup>
      <StartupObject>MyXpfApp.Program</StartupObject>
  </PropertyGroup>
@@ -92,7 +92,7 @@ public class MyAvaloniaApp : Application
 }
 ```
 
-```csharp title="MyAvaloniaApp.axaml"
+```xml title="MyAvaloniaApp.axaml"
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="MyXpfApp.MyAvaloniaApp">

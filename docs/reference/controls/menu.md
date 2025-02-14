@@ -153,6 +153,7 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
      <MenuItem.Icon>
         <PathIcon Data="{StaticResource clipboard_paste_regular}"/>
      </MenuItem.Icon>
+  </MenuItem>
 </MenuItem>
 ```
 

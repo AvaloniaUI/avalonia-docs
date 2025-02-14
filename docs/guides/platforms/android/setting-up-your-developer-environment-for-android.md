@@ -42,12 +42,12 @@ If you use _JetBrains Rider_ then follow the guide [here](https://www.jetbrains.
 Alternatively you can install the _Android_ command line tools from [here](https://developer.android.com/studio#command-tools).
 
 This toolset has a command line based SDK manager that can be used to install the SDK. On successfully installing the Android SDK, add the path to the sdk to your PATH environment variable, directly in bash or in your profile's .bashrc file on Linux.
-```
+```bash
 export ANDROID_HOME=/path/to/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 ```
 You can also directly specify the Android SDK location in the `dotnet` commands when you build, run or deploy the dotnet Android project, by setting the `AndroidSdkDirectory` variable in the command:
-```
+```bash
 dotnet build ... /p:AndroidSdkDirectory=/path/to/sdk
 ```
 Ensure you've installed the JDK 11 or above using your platform's package manager. This is already done if set up using Visual Studio or JetBrains Rider as stated above.

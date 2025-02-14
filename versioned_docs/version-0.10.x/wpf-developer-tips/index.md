@@ -24,24 +24,24 @@ Avalonia is in general very similar to WPF, but you will find differences. Here 
 If you use `Application.Current.Dispatcher`, you should use `Dispatcher.UIThread` instead which provide similar facilities.
 
 **WPF**
-```
+```csharp
 Application.Current.Dispatcher.InvokeAsync(handler, DispatcherPriority.Background);
 ```
 
 **Avalonia**
-```
+```csharp
 Dispatcher.UIThread.InvokeAsync(handler, DispatcherPriority.Background);
 ```
 
 If you previously access dispatcher on the control itself, you should use global static instance `Dispatcher.UIThread` too.
 
 **WPF**
-```
+```csharp
 this.Dispatcher.InvokeAsync(handler, DispatcherPriority.Background);
 ```
 
 **Avalonia**
-```
+```csharp
 Dispatcher.UIThread.InvokeAsync(handler, DispatcherPriority.Background);
 ```
 
@@ -54,21 +54,21 @@ WPF has uses `Visibility` property which can be `Collapsed`, `Hidden` or `Visibl
 # Binding
 
 **WPF**
-```
+```xml
 <TextBox Name="MyTextbox" Text="{Binding ElementName=searchTextBox, Path=Text}"" />
 ```
 
 **Avalonia**
-```
+```xml
 <TextBox Name="MyTextbox" Text="{Binding #searchTextBox.Text}" />
 ```
 
 # Handling attachment to visual tree
 
-There no events like `Loaded`/`Unloaded` in Avalonia, but you can override `OnAttachedToVisualTree`/`OnDetachedFromVisualTree` on the control, to know when control attached to virtual tree, or detatched from it. Alternatively you can use `TemplateApplied` instead of `Loaded` event.
+There no events like `Loaded`/`Unloaded` in Avalonia, but you can override `OnAttachedToVisualTree`/`OnDetachedFromVisualTree` on the control, to know when control attached to virtual tree, or detached from it. Alternatively you can use `TemplateApplied` instead of `Loaded` event.
 
 **WPF**
-```
+```csharp
 Unloaded += OnControl_Unloaded;
 Loaded += OnControl_Loaded;
 
@@ -84,7 +84,7 @@ private void OnControl_Unloaded(object sender, RoutedEventArgs e)
 ```
 
 **Avalonia**
-```
+```csharp
 TemplateApplied += OnControl_Loaded;
 private void OnControl_Loaded(object sender, RoutedEventArgs e)
 {

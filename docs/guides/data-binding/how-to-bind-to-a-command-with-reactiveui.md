@@ -9,7 +9,7 @@ import BindReactiveCommandScreenshot from '/img/guides/data-binding/bind-reactiv
 
 This guide shows you how to bind a view model method (that performs an action) to a control that can initiate an action in response to user interaction (for example, a button). This binding is defined in XAML using the `Command` attribute, for example:
 
-```csharp
+```xml
 <Window xmlns="https://github.com/avaloniaui">
     ...
   <StackPanel Margin="20">
