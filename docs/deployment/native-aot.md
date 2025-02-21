@@ -94,6 +94,8 @@ If controls are missing at runtime:
 <ItemGroup>
     <!-- Add specific Avalonia controls you're using -->
     <TrimmerRootAssembly Include="Avalonia.Controls" />
+    <TrimmerRootAssembly Include="Avalonia.Base" />
+    <TrimmerRootAssembly Include="Avalonia.Markup.Xaml" />
 </ItemGroup>
 ```
 
