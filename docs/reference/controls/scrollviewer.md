@@ -7,7 +7,7 @@ import ScrollViewerScreenshot from '/img/reference/controls/scrollviewer/scrollv
 
 # ScrollViewer
 
-The `ScrollViewer` control can have content that is bigger than its content zone, and will can provide scroll bars to move hidden content into view.
+The `ScrollViewer` control can have content that is bigger than its content zone, and will provide scroll bars to move hidden content into view.
 
 A `ScrollViewer` cannot be contained in a control that has infinite height or width (depending on scrolling direction) such as a `StackPanel`. To avoid it, you can either set fixed Height/Width or MaxHeight/MaxWidth or choose another container panel.
 
