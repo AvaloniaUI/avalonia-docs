@@ -177,6 +177,17 @@ const config = {
         editLocalizedFiles: true,
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api',
+        path: 'api',
+        routeBasePath: 'api',
+        sidebarPath: require.resolve('./api-sidebar.js'),
+        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
+        editLocalizedFiles: true,
+      },
+    ],
 ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -220,6 +231,10 @@ const config = {
           {
             label: 'XPF Docs',
             to: '/xpf/welcome',
+          },
+          {
+            label: 'API',
+            to: '/api/avalonia/appbuilder',
           },
           {
               label: 'Resources',

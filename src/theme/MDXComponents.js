@@ -12,6 +12,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ThemedImage from '@theme/ThemedImage';
 import Shortcut from '../components/Shortcut';
+import PropertyTable from '../components/PropertyTable';
 
 export default {
   // Re-use the default mapping
@@ -29,5 +30,6 @@ export default {
   Tabs,
   TabItem,
   ThemedImage,
-  Shortcut
+  Shortcut,
+  PropertyTable
 };

@@ -1,0 +1,47 @@
+.propertyTable {
+    margin: 20px 0;
+  }
+  
+  .propertyTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .propertyTable tr {
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .propertyTable tr:first-child {
+    border-top: none;
+  }
+  
+  .propertyTable td {
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    vertical-align: top;
+  }
+  
+  .propertyName {
+    width: 30%;
+  }
+  
+  .propertyName a {
+    color: #3b5ff9;
+    text-decoration: none;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .propertyDescription {
+    width: 70%;
+  }
+  
+  .propertyDescription a {
+    color: #3b5ff9;
+    text-decoration: none;
+  }
+  
+  .propertyName a:hover,
+  .propertyDescription a:hover {
+    text-decoration: underline;
+  }
