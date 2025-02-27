@@ -652,3 +652,134 @@ When you run this workflow you will have an app bundle that is signed and notari
 To verify that code signing worked you will need to download it first to trigger the quarantine functionality of macOS. You can do this by e-mailing it to yourself or using a service like WeTransfer or similar.
 
 Once you've downloaded the app bundle and want to start it you should see the popup from macOS saying that the app was scanned and no malware was found.
+
+## Building on MacOS for Non-App Store Distribution
+
+macOS distribution can be tricky, especially if you are not familiar with macOS or xcode.  By default, xcode will leverage cloud signing certificates and keys, which can make deployment of dotnet packages extremely difficult.
+
+### Prerequisites
+
+* Ensure that you have xcode installed.
+* Navigate to your Apple Developer Account and either request a Developer ID Application certificate from the owner of the account or from Apple (if you are the owner).
+* Ensure that you have an Apple ID App-Specific password (for Notarization).
+
+### Install the Developer ID Application certificate
+
+There are two different ways to install this, based on your role within your organization.
+
+**If You Are the Owner**:
+
+* Open xcode
+* Navigate the file menu Xcode \ Settings
+* Click the Accounts tab
+* Add your Apple ID Account (if not already added)
+* Download Manual Profiles
+* The certificate should now be downloaded; Additionally, you can EXPORT this certificate for another developer (needed for the other path)
+
+**If You Are NOT the Owner**:
+
+* Open Keychain Access
+* Navigate the file menu File \ Import Items
+* Find the Developer ID Application certificate (export instructions at the end of the "If You Are the Owner" section)
+* Enter the password
+
+> **Verification**: You should be able to see a "Developer ID Application" identity if you run the command ```security find-identity -v``` now.
+
+*** You CANNOT distribute your application without this certificate installed. ***
+
+### Build
+
+You can build the application now using the standard dotnet build process from the command line.
+
+```dotnet build "path/to/your/project/Project.csproj"```
+
+> Typically, you will want to include the framework, runtime identifier, and the configuration, such as: ``` --framework net8.0-macos /p:RuntimeIdentifier=osx-arm64 --configuration Release```, which would correspond to a .NET 8, OSX-targeted, ARM64 build.  There are other guides on how to make Universal apps.  This is not an exhaustive guide on how to do it or what configuration to leverage.
+
+If everything runs correctly, your bin directory should have a "build" of the .app for your Application (which is a glorified directory).
+
+> For best practices, it may be advisable to copy the resulting app out to an intermediary directory, so as to prevent having to make "long" strings to access the .app and all of its contents in future steps.
+
+### Code Signing
+
+The guide above is (mostly) correct.  Some guides reference the --deep flag, which has been deprecated -- do not use it.
+
+MacOS wants anything it identifies as an executable (.dylib, as well as the contents of Contents/MacOS) to be codesigned.  Contents/MacOS will be signed by default when you sign the App.  The .dylib's produced by .NET (and Avalonia) will not be, which reside in the Contents/MonoBundle directory of the app.
+
+### Pack the App
+
+Notarizing your Application requires the .app to be zipped up (or in a .pkg).
+
+```ditto -c -k --keepParent "path/to/your/App.app" "path/to/destination/App.zip"```
+
+### Notarize
+
+If you've made it this far, it is time to notarize your Application!
+
+The password is the "App Specific Password" noted in the Pre-Requisites.  The Team ID will be listed in parenthesis after your Developer ID Application: Company Name (<your team>).
+
+```xcrun notarytool submit "path/to/destination/App.zip" --wait --apple-id <your apple developer email> --password <your apps-specific password> --team-id <your team>```
+
+If the result shows Status: Accepted -- you're good to go, congratulations!
+
+If the result shows anything else, you can run the following command with the "id" given as output from the prior command to see what went wrong:
+
+```xcrun notarytool log --apple-id <your apple developer email> --password <your apps-specific password> --team-id <your team> <id>```
+
+### A Basic Script
+
+The following is all of the prior steps, with variables exported at the top -- feel free to use this and adjust as necessary.
+
+```bash
+
+# --- Variable Declaration ---
+
+export ARTIFACTS_PATH="path/to/artifacts"
+
+export CSPROJ_SRC_PATH="path/to/your/project.csproj"
+export CODESIGN_KEY="Developer ID Application: Your Organization (ABC123DEF5)"
+
+export APPLE_ID="your-email@domain.com"
+export APPLE_PASSWORD="your-app-specific-password"
+export APPLE_TEAM_ID="ABC123DEF5"
+
+export APP_NAME="your-app-name.app"
+export APP_ENTITLEMENTS="path/to/your/Entitlements.plist"
+export APP_PACKNAME="your-app-name.zip"
+
+# --- Cleaning ---
+
+# Ensure that you have your directories and paths set up correctly, before uncommenting below
+# This cleans/purges the directories and can be catastrophic if done incorrectly
+# rm -rf "path/to/your/bin"
+# rm -rf "path/to/your/obj"
+# rm -rf "$ARTIFACTS_PATH"
+
+# --- Building and Copying ---
+
+# Adjust the following according to your project-specific details
+dotnet build "$CSPROJ_SRC_PATH" --framework net9.0-macos /p:RuntimeIdentifier=osx-arm64 --configuration Release
+
+mkdir "$ARTIFACTS_PATH"
+
+# Adjust the following according to your project's build path
+# cp -R "path/to/your/bin/configuration/platform/runtime/$APP_NAME" "$ARTIFACTSPATH"/"$APP_NAME"
+
+# --- Codesigning ---
+
+find "$ARTIFACTSPATH"/"$APP_NAME"/Contents/MonoBundle/" -name *.dylib|while read fname; do
+    if [[ -f $fname ]]; then
+        echo "[INFO] Signing $fname"
+        codesign --force --timestamp --options=runtime --entitlements="$APP_ENTITLEMENTS" "$CODESIGN_KEY" "$fname"
+    fi
+done
+
+codesign --force --timestamp --options=runtime --entitlements="$APP_ENTITLEMENTS" --sign $CODESIGN_KEY "$ARTIFACTSPATH"/"$APP_NAME"
+
+# --- Packing ---
+
+ditto -c -k --keepParent "$ARTIFACTSPATH"/"$APP_NAME" "$ARTIFACTSPATH"/"$APP_PACKNAME"
+
+# --- Notarizing ---
+
+xcrun notarytool submit "$ARTIFACTSPATH"/"$APP_PACKNAME" --wait --apple-id $APPLE_ID --password $APPLE_PASSWORD --team-id $APPLE_TEAM_ID
+```
