@@ -22,6 +22,11 @@ These guides show you how to use various implementation architectures and techni
     description="A guide to understanding how to use Dependency Injection (DI) in your apps."
   />
   <Card
+    title="How To Implement Dependency Injection with Pure.DI code generator"
+    to="/docs/guides/implementation-guides/how-to-implement-dependency-injection-with-pure-di"
+    description="A guide to understanding how to use Pure DI in your apps."
+  />
+  <Card
     title="Developer Tools"
     to="/docs/guides/implementation-guides/developer-tools"
     description="Learn how to debug your applications visuals."
