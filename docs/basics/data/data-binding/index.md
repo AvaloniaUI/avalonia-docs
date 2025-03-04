@@ -37,7 +37,7 @@ Bindings can be unidirectional: where changes in the properties of a bound appli
 Binding is used with the MVVM architectural pattern, and this is one of the principle ways of programming with Avalonia UI.
 
 :::info
-For more information about how to use the MVVM Pattern with Avalonia, see the concept page [here](../../../concepts/the-mvvm-pattern).
+For more information about how to use the MVVM Pattern with Avalonia, see the concept page [here](../../concepts/the-mvvm-pattern).
 :::
 
 :::info
