@@ -8,13 +8,13 @@ import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/ope
 
 ## Opening a Dialog
 
-Opening a dialog is an advanced topic, if you are very new to Avalonia, try not to get too stuck on this section, you may want to just copy in the code and move on. Then come back once you have a better understanding of some of the basics.
+Opening a dialog is an advanced topic; if you are very new to Avalonia, try not to get too stuck on this section.  You may want to just copy in the code and move on, then come back once you have a better understanding of some of the basics.
 
-In this section we shall make it so that clicking the Store Button opens a `modal dialog` where the user can search for albums to buy.
+In this section we shall make it so that clicking the "Store" button opens a modal dialog where the user can search for albums to buy.
 
-First we need to add a Window to the project, right click on the `Views` folder and select `Add` → `Avalonia Window`.
+First, we need to add a `Window` to the project.  Right-click on the `Views` folder and select "Add" → "Avalonia Window".
 
-When prompted name this MusicStoreWindow and press the `Enter` key.
+When prompted, name this "MusicStoreWindow" and press the "Enter" key.
 
 <img className="center" src={MusicStoreAddWindowScreenshot} alt="Add Window" />
 
@@ -32,7 +32,7 @@ This will add the following code:
 </Window>
 ```
 
-Change this code as follows to enable the Acrylic and extended client area so the Window will look like our `MainWindow`.
+Change this code as follows to enable the Acrylic and extended client area so the `Window` will look like our `MainWindow`.
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -62,19 +62,19 @@ Change this code as follows to enable the Acrylic and extended client area so th
 </Window>
 ```
 
-Now lets see how we can open this Window.
+Now let's see how we can open this Window.
 
 Avalonia comes with the [ReactiveUI - An advanced, composable, reactive model-view-viewmodel framework](https://www.reactiveui.net/). Other MVVM frameworks are available and you can work without one if you wish.
 
 ReactiveUI makes it very easy to get started and provides a lot of functionality out of the box.
 
-In order that we can open the dialog from the ViewModel, we will use what is called an `interaction` \([ReactiveUI - Interactions](https://www.reactiveui.net/docs/handbook/interactions/)\)
+In order that we can open the dialog from the viewmodel, we will use what is called an "interaction" \([ReactiveUI - Interactions](https://www.reactiveui.net/docs/handbook/interactions/)\)
 
-Firstly right click on your ViewModel folder and `Add` → `Class / Interface` the following class names:
+Firstly, right-click on your viewmodel folder and "Add" → "Class / Interface" for the following class names:
 
 `MusicStoreViewModel`, `AlbumViewModel`
 
-we will leave the code as it is for now.
+We will leave the code as it is for now.
 
 Now open `MainWindowViewModel.cs` and add the following code:
 
@@ -115,18 +115,18 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-This still wont do much because some plumbing code is required in the so called "code behind".
+This still won't do much because some plumbing code is required in the so-called "code behind".
 
-Open `MainWindow.axaml.cs` you may need to expand the `MainWindow.axaml` file in to see this file.
+Open `MainWindow.axaml.cs`. You may need to expand the `MainWindow.axaml` file line to see this file.
 
 * Make the `MainWindow` class inherit `ReactiveWindow<MainWindowViewModel>` instead of just `Window`.
 
-  This allows ReactiveUI to help us out a little bit. It also shows that this View knows about its ViewModel, this is allowed. Check the MVVM section above.
+  This allows ReactiveUI to help us out a little bit. It also shows that this view knows about its viewmodel; this is allowed. Check the MVVM section above.
 
 * Add a `DoShowDialogAsync` method like so:
 
 ```csharp
-private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel, AlbumViewModel?> interaction)
+private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel, AlbumViewModel?> interaction)
 {
      var dialog = new MusicStoreWindow();
      dialog.DataContext = interaction.Input;
@@ -136,23 +136,23 @@ private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel, Alb
 }
 ```
 
-This method creates the MusicStoreWindow, it sets its `DataContext` to interaction.Input, which is the instance of the `MusicStoreViewModel`.
+This method creates the `MusicStoreWindow` and sets its `DataContext` to interaction.Input, which is the instance of the `MusicStoreViewModel`.
 
-It then calls `await dialog.ShowDialog<AlbumViewModel?>(this)` on the dialog, passing `this` as an argument, showing that the `MainWindow` currently represented by `this` pointer will be the `owner` or `parent` window.
+It then calls `await dialog.ShowDialog<AlbumViewModel?>(this)` on the dialog, passing `this` as an argument, showing that the `MainWindow` currently represented by `this` pointer will be the "owner" or "parent" window.
 
 The code will stay awaiting asynchronously until the viewmodel closes the dialog and sets a result on the interaction.
 
 Once the dialog has closed, it will return the result, which will be of type `AlbumViewModel` or `null` if the dialog is cancelled.
 
-`interaction.SetOutput (result)` is then called. This causes the interaction to end, and the program will return to our `MainWindowViewModel` where we left of at the call to `var result = await ShowDialog.Handle(store);`.
+`interaction.SetOutput (result)` is then called. This causes the interaction to end, and the program will return to our `MainWindowViewModel` where we left off at the call to `var result = await ShowDialog.Handle(store);`.
 
-* Add the following `WhenActivated` call to the Windows constructor.
+* Add the following `WhenActivated` call to the window's constructor.
 
 ```csharp
-this.WhenActivated(d => d(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+this.WhenActivated(d => d((DataContext as MainWindowViewModel)!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
 ```
 
-`d` is an `Action` that takes a `disposable`, this means that ReactiveUI will clean up any subscriptions when this View is not on the screen for us.
+`d` is an `Action` that takes a `disposable`, this means that ReactiveUI will clean up any subscriptions when this view is not on the screen for us.
 
 Our entire `MainWindow.xaml.cs` should now look like:
 
@@ -172,10 +172,10 @@ namespace Avalonia.MusicStore.Views
         public MainWindow()
         {
             InitializeComponent();
-            this.WhenActivated(d => d(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+            this.WhenActivated(d => d((DataContext as MainWindowViewModel)!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
         }
 
-        private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel, AlbumViewModel?> interaction)
+        private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel, AlbumViewModel?> interaction)
         {
             var dialog = new MusicStoreWindow();
             dialog.DataContext = interaction.Input;
@@ -187,16 +187,16 @@ namespace Avalonia.MusicStore.Views
 }
 ```
 
-Now open `MainWindow.axaml` and set the property `WindowStartupLocation="CenterScreen"`on the `<Window>` element.
+Now open `MainWindow.axaml` and set the property `WindowStartupLocation="CenterScreen"` on the `<Window>` element.
 
 Open `MusicStoreWindow.axaml` and set `WindowStartupLocation="CenterOwner"` on the `<Window>` element.
 
-These properties mean that the `MainWindow` will be positioned in the center of the users monitor when the program loads, and that the dialog window will be positioned in the center of the `MainWindow` that owns it.
+These properties mean that the `MainWindow` will be positioned in the center of the user's monitor when the program loads, and that the dialog window will be positioned in the center of the `MainWindow` that owns it.
 
-Also set `Width` and `Height` properties of the `MusicStoreWindows` `<Window>` element to 1000 and 550 respectively.
+Also set `Width` and `Height` properties of the `MusicStoreWindows` `<Window>` element to 1000 and 550, respectively.
 
-Now run the application and click the Store button.
+Now run the application and click the "Store" button.
 
 <img className="center" src={MusicStoreDialogOpenedScreenshot} alt="Dialog opened" />
 
-As you can see the dialog window is opened perfectly centered inside the MainWindow.
+As you can see, the dialog window is opened perfectly centered inside the MainWindow.
