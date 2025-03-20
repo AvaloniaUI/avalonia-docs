@@ -4,7 +4,7 @@ This page assumes both apps are deployed on the same local network or same machi
 
 :::note
 
-For all platforms, `AvaloniaUI.DiagnosticsSupport.Avalonia` package can be installed in the shared project. As well as `this.AttachDeveloperTools()` code can be kept in the shared `Application` class. If any custom configuration is needed per each platform, `OperatingSystem.IsPlatform` APIs can be used. 
+For all platforms, `AvaloniaUI.DiagnosticsSupport` package can be installed in the shared project. As well as `this.AttachDeveloperTools()` code can be kept in the shared `Application` class. If any custom configuration is needed per each platform, `OperatingSystem.IsPlatform` APIs can be used. 
 
 :::
 

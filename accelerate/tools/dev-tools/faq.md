@@ -14,7 +14,7 @@ See [Attaching Browser or Mobile application](./advanced/attaching-browser-or-mo
 
 Yes. DiagnosticsPackage is fully trimming friendly. Even though it does use reflection, the tool was tested with AOT.
 
-## Is it necessary to exclude `AvaloniaUI.DiagnosticsSupport.Avalonia` package from Release/Production build?
+## Is it necessary to exclude `AvaloniaUI.DiagnosticsSupport` package from Release/Production build?
 
 Tool can be useful for internal testing of Release builds. And it's not necessary to only include it with Debug builds.
 
@@ -24,7 +24,7 @@ But it is still advised to exclude this package on production builds for securit
 
 To do that, `Condition="'$(Configuration)' == 'Debug'"'` can be used. But modern option with IncludeAssets/PrivateAssets is recommended to keep .NET SDK restore process stable with packages lock files:
 ```xml
-<PackageReference Include="AvaloniaUI.DiagnosticsSupport.Avalonia" Version="">
+<PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="">
   <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
   <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
 </PackageReference>
