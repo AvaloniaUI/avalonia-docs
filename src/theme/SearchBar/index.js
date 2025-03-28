@@ -16,7 +16,9 @@ import {
 import Translate from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import translations from '@theme/SearchTranslations';
+
 let DocSearchModal = null;
+
 function importDocSearchModalIfNeeded() {
   if (DocSearchModal) {
     return Promise.resolve();
@@ -29,6 +31,7 @@ function importDocSearchModalIfNeeded() {
     DocSearchModal = Modal;
   });
 }
+
 function useNavigator({externalUrlRegex}) {
   const history = useHistory();
   const [navigator] = useState(() => {
@@ -46,6 +49,7 @@ function useNavigator({externalUrlRegex}) {
   });
   return navigator;
 }
+
 function useTransformSearchClient() {
   const {
     siteMetadata: {docusaurusVersion},
@@ -58,6 +62,7 @@ function useTransformSearchClient() {
     [docusaurusVersion],
   );
 }
+
 function useTransformItems(props) {
   const processSearchResultUrl = useSearchResultUrlProcessor();
   const [transformItems] = useState(() => {
@@ -73,6 +78,7 @@ function useTransformItems(props) {
   });
   return transformItems;
 }
+
 function useResultsFooterComponent({closeModal}) {
   return useMemo(
     () =>
@@ -81,9 +87,11 @@ function useResultsFooterComponent({closeModal}) {
     [closeModal],
   );
 }
+
 function Hit({hit, children}) {
   return <Link to={hit.url}>{children}</Link>;
 }
+
 function ResultsFooter({state, onClose}) {
   const createSearchLink = useSearchLinkCreator();
   return (
@@ -96,34 +104,56 @@ function ResultsFooter({state, onClose}) {
     </Link>
   );
 }
+
 function useSearchParameters({contextualSearch, ...props}) {
   function mergeFacetFilters(f1, f2) {
     const normalize = (f) => (typeof f === 'string' ? [f] : f);
     return [...normalize(f1), ...normalize(f2)];
   }
+
   const contextualSearchFacetFilters = useAlgoliaContextualFacetFilters();
   const configFacetFilters = props.searchParameters?.facetFilters ?? [];
+
+  // Get the current path to determine which product we're viewing
+  const path = typeof window !== 'undefined' ? window.location.pathname : '';
+  let product = null;
+
+  // Determine the product based on the URL path
+  if (path.startsWith('/xpf/')) {
+    product = 'xpf';
+  } else if (path.startsWith('/docs/')) {
+    product = 'avalonia';
+  } else if (path.startsWith('/accelerate/')) {
+    product = 'accelerate';
+  }
+
+  // Only add product facet if we've determined a product
+  const dynamicFacet = product ? [`product:${product}`] : [];
+
+  // Merge all facet filters
   const facetFilters = contextualSearch
-    ? // Merge contextual search filters with config filters
-      mergeFacetFilters(contextualSearchFacetFilters, configFacetFilters)
-    : // ... or use config facetFilters
-      configFacetFilters;
-  // We let users override default searchParameters if they want to
+    ? mergeFacetFilters(contextualSearchFacetFilters, [
+        ...configFacetFilters,
+        ...dynamicFacet,
+      ])
+    : mergeFacetFilters(configFacetFilters, dynamicFacet); // Fix: properly merge configFacetFilters with dynamicFacet
+
   return {
     ...props.searchParameters,
     facetFilters,
   };
 }
+
 function DocSearch({externalUrlRegex, ...props}) {
   const navigator = useNavigator({externalUrlRegex});
   const searchParameters = useSearchParameters({...props});
   const transformItems = useTransformItems(props);
   const transformSearchClient = useTransformSearchClient();
   const searchContainer = useRef(null);
-  // TODO remove "as any" after React 19 upgrade
   const searchButtonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [initialQuery, setInitialQuery] = useState(undefined);
+
   const prepareSearchContainer = useCallback(() => {
     if (!searchContainer.current) {
       const divElement = document.createElement('div');
@@ -131,15 +161,18 @@ function DocSearch({externalUrlRegex, ...props}) {
       document.body.insertBefore(divElement, document.body.firstChild);
     }
   }, []);
+
   const openModal = useCallback(() => {
     prepareSearchContainer();
     importDocSearchModalIfNeeded().then(() => setIsOpen(true));
   }, [prepareSearchContainer]);
+
   const closeModal = useCallback(() => {
     setIsOpen(false);
     searchButtonRef.current?.focus();
     setInitialQuery(undefined);
   }, []);
+
   const handleInput = useCallback(
     (event) => {
       if (event.key === 'f' && (event.metaKey || event.ctrlKey)) {
@@ -153,7 +186,9 @@ function DocSearch({externalUrlRegex, ...props}) {
     },
     [openModal],
   );
+
   const resultsFooterComponent = useResultsFooterComponent({closeModal});
+
   useDocSearchKeyboardEvents({
     isOpen,
     onOpen: openModal,
@@ -161,6 +196,7 @@ function DocSearch({externalUrlRegex, ...props}) {
     onInput: handleInput,
     searchButtonRef,
   });
+
   return (
     <>
       <Head>
@@ -208,29 +244,16 @@ function DocSearch({externalUrlRegex, ...props}) {
     </>
   );
 }
+
 export default function SearchBar(props) {
-  const path = typeof window !== 'undefined' ? window.location.pathname : '';
-  let product = null;
-
-  if (path.startsWith('/xpf/')) {
-    product = 'xpf';
-  } else if (path.startsWith('/docs/')) {
-    product = 'avalonia';
-  } else if (path.startsWith('/accelerate/')) {
-    product = 'accelerate';
+  const {siteConfig} = useDocusaurusContext();
+  const searchConfig = siteConfig.themeConfig.algolia;
+  
+  // If Algolia config is missing, fall back to the default search bar
+  if (!searchConfig || !searchConfig.appId || !searchConfig.apiKey || !searchConfig.indexName) {
+    console.warn('Algolia search configuration is incomplete. Check your themeConfig.algolia settings in docusaurus.config.js');
+    return <DefaultSearchBar {...props} />;
   }
-
-  const dynamicSearchParameters = product
-    ? { facetFilters: [`product:${product}`] }
-    : {};
-
-  return (
-    <DefaultSearchBar
-      {...props}
-      searchParameters={{
-        ...props.searchParameters,
-        ...dynamicSearchParameters,
-      }}
-    />
-  );
+  
+  return <DocSearch {...searchConfig} {...props} />;
 }
