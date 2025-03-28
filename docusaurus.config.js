@@ -212,11 +212,13 @@ const config = {
         items: [
           {
             label: 'Avalonia Docs',
-            to: '/docs/welcome'
+            to: '/docs/welcome',
+            activeBasePath: '/docs'
           },
           {
             label: 'XPF Docs',
             to: '/xpf/welcome',
+            activeBasePath: '/xpf'
           },
           {
               label: 'Resources',
