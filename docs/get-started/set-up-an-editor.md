@@ -23,9 +23,11 @@ Rider offers the most complete and polished development experience for Avalonia,
 * Built-in performance profiling
 
 ### AvaloniaRider Plugin
-While Rider includes native Avalonia XAML support out of the box, we recommend installing the 3rd party [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider) plugin to enable live XAML preview functionality. This plugin provides a live preview of your XAML changes as you type, similar to the preview feature available in Visual Studio and Visual Studio Code.
+The 3rd party [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider) plugin adds the [Avalonia file templates](./install.md) to Rider, as well as enables live XAML preview functionality.
 
-Note that the plugin is optional - you can develop Avalonia applications in Rider without it, but the live preview capability makes XAML development more efficient.
+While Rider includes native Avalonia XAML support out of the box, This plugin provides a live preview of your XAML changes as you type, similar to the preview feature available in Visual Studio and Visual Studio Code.
+
+Note that the plugin is optional - you can develop Avalonia applications in Rider without it, but the live preview capability and file templates makes XAML development more efficient.
 
 ## Visual Studio
 
