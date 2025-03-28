@@ -102,9 +102,6 @@ const config = {
             current: {
               label: "11.0.x",
               banner: "none"
-            },
-            "0.10.x": {
-              banner: "none"
             }
           }
         },
@@ -236,11 +233,7 @@ const config = {
           {
             label: 'Support',
             to: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
-          },
-          {
-            type: 'docsVersionDropdown',
-            position: 'right',
-          },
+          },          
           {
             type: 'localeDropdown',
             position: 'right',

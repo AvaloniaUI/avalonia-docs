@@ -208,8 +208,7 @@ function DocSearch({externalUrlRegex, ...props}) {
     </>
   );
 }
-export default function SearchBar() {
-  // Detect product from the current pathname
+export default function SearchBar(props) {
   const path = typeof window !== 'undefined' ? window.location.pathname : '';
   let product = null;
 
@@ -221,14 +220,17 @@ export default function SearchBar() {
     product = 'accelerate';
   }
 
-  const searchParameters = product ? { facetFilters: [`product:${product}`] } : {};
+  const dynamicSearchParameters = product
+    ? { facetFilters: [`product:${product}`] }
+    : {};
 
   return (
-    <DocSearch
-      appId="V9UF6750GH"
-      indexName="avaloniaui_docs"
-      apiKey="028e3dad834905a2a2c2a7ad9da9e666"
-      searchParameters={searchParameters}
+    <DefaultSearchBar
+      {...props}
+      searchParameters={{
+        ...props.searchParameters,
+        ...dynamicSearchParameters,
+      }}
     />
   );
 }
