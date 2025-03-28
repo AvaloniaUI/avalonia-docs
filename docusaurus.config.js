@@ -307,6 +307,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: '028e3dad834905a2a2c2a7ad9da9e666',
         indexName: 'avaloniaui_docs',
+        contextualSearch: true,
       },
     }),
 };
