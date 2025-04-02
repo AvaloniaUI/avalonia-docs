@@ -107,7 +107,7 @@ mediaPlayer.OnErrorOccurred += (sender, args) =>
 
 ## Template Parts and Customization
 
-The default control template for `MediaPlayerControl` in `Avalonia.Accelerate.Media.Themes.Fluent`
+The default control template for `MediaPlayerControl` in `Avalonia.Media.Themes.Fluent`
 includes several key parts:
 
 - **PART_MediaPlayerPresenter**: Displays the video content
