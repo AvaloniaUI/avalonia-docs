@@ -31,8 +31,8 @@ You will probably use these properties most often:
 | `MaxDropDownHeight`        | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show. |
 | `ItemPanel`                | The container panel to place items in. By default, this is a StackPanel. See [this page](../../concepts/custom-itemspanel) to customise the ItemsPanel.|
 | `Styles`                   | The style that is applied to any child element of the ItemControl.                                                       |
-| `IsEditable`               | Allows the user to type any value into the `ComboBox`. Make sure to use `DisplayMemberBinding` or `TextSearch.TextBinding` if using complex item types. |
-| `Text`                     | When `IsEditable` will be the text value of the `SelectedItem` or the text a user has entered.                           |
+| `IsEditable`               | Allows the user to type any value into the `ComboBox`. Make sure to use `DisplayMemberBinding` or `TextSearch.TextBinding` if using complex item types as otherwise it will use `ToString` on the object. |
+| `Text`                     | When `IsEditable` `Text` will be the text value of the `SelectedItem` or the text a user has entered.                           |
 
 ## Examples
 
@@ -127,11 +127,13 @@ namespace AvaloniaControls.Views
 
 <img src={ComboBoxDataTemplateScreenshot} alt="" />
 
-When using `IsEditable` with complex types it is important to set either `DisplayMemberBinding` or `TextSearch.TextBinding`, or both.
-A complex example of the editable text using `Id` to match items when typing in text, but the showing `DisplayValue` in the dropdown is found below: 
+When using `IsEditable` with complex types by default the `Text` will retreived from `ComplexType`.`ToString`, to change this set either `DisplayMemberBinding` or `TextSearch.TextBinding`, or both.
+
+The below example of an `IsEditable` `ComboBox` uses a property named `Id` to match items when typing in text. When the `ComboBox` is open the items in the dropdown will be displayed using `DisplayValue`: 
 
 ```xml
-<ComboBox PlaceholderText="Editable" IsEditable="true"
+<ComboBox PlaceholderText="Editable"
+          IsEditable="true"
           ItemsSource="{Binding MyComplexItems}"
           Text="{Binding EditableText}"
           DisplayMemberBinding="{Binding DisplayValue}"
@@ -140,7 +142,11 @@ A complex example of the editable text using `Id` to match items when typing in 
 ```
 
 ```csharp title='C#'
-public record ComplexItem(int Id, string DisplayValue);
+public class ComplexItem
+{
+    public int Id { get; set; }
+    public string DisplayValue { get; set; }
+}
 
 public class ViewModel
 {
