@@ -10,7 +10,34 @@ The WebView component includes three main APIs:
 
 ## Installation
 
-### 1. Add the NuGet Package
+
+## Step 1: Configure NuGet Package Source
+
+Avalonia Accelerate packages are distributed via a dedicated NuGet feed that can be accessed with your AvaloniaUI portal credentials.
+
+Refer to Visual Studio documentation on how to add custom NuGet feed: [Install NuGet packages with Visual Studio](https://learn.microsoft.com/en-us/azure/devops/artifacts/nuget/consume?view=azure-devops&tabs=windows).
+Or manually create a NuGet.config file at the root of your solution, or modify an existing one to contain the following:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
+    <add key="avalonia-pro" value="https://pro-nuget-feed.avaloniaui.net/v3/index.json" />
+  </packageSources>
+  <packageSourceCredentials>
+    <avalonia-pro>
+      <add key="Username" value="license" />
+      <add key="ClearTextPassword" value="<YOUR_LICENSE_KEY>" />
+    </avalonia-pro>
+  </packageSourceCredentials>
+</configuration>
+```
+
+Where `<YOUR_LICENSE_KEY>` is a license key that was received after completing seat purchase.
+
+### Step 2: Add the NuGet Package
 
 Add the WebView package to your project:
 
@@ -18,13 +45,13 @@ Add the WebView package to your project:
 dotnet add package Avalonia.Controls.WebView
 ```
 
-### 2. Add License Key
+### Step 3: Add License Key
 
 Include your Avalonia UI license key in the executable project file (`.csproj`):
 
 ```xml
 <ItemGroup>
-  <AvaloniaUILicenseKey Include="avln_on_key:v1:*****" />
+  <AvaloniaUILicenseKey Include="<YOUR_LICENSE_KEY>" />
 </ItemGroup>
 ```
 

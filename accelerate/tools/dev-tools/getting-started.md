@@ -42,14 +42,14 @@ Or manually create a NuGet.config file at the root of your solution, or modify a
   </packageSources>
   <packageSourceCredentials>
     <avalonia-pro>
-      <add key="Username" value="<YOUR_PORTAL_USERNAME>" />
-      <add key="ClearTextPassword" value="<YOUR_PORTAL_LICENSE_KEY>" />
+      <add key="Username" value="license" />
+      <add key="ClearTextPassword" value="<YOUR_LICENSE_KEY>" />
     </avalonia-pro>
   </packageSourceCredentials>
 </configuration>
 ```
 
-Where `<YOUR_PORTAL_USERNAME>` is username for `https://portal.avaloniaui.net/` and `<YOUR_PORTAL_LICENSE_KEY>` is a license key that was received after completing seat purchase.
+Where `<YOUR_LICENSE_KEY>` is a license key that was received after completing seat purchase.
 
 :::note
 This NuGet Feed can also be configured globally, by modifying common NuGet.Config that can be found by following [Common NuGet configurations](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior).
