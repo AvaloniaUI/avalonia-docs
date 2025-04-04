@@ -1,7 +1,7 @@
-﻿# NativeWebViewDialog
+﻿# NativeWebDialog
 
 ## Overview
-`NativeWebViewDialog` is a dialog window that hosts a native web browser implementation. It provides a way to display web content in a separate window, particularly useful for platforms like Linux where embedded WebView controls might not be available.
+`NativeWebDialog` is a dialog window that hosts a native web browser implementation. It provides a way to display web content in a separate window, particularly useful for platforms like Linux where embedded WebView controls might not be available.
 
 ## Properties
 
@@ -164,7 +164,7 @@ Returns a platform handle of the dialog window itself.
 ## Usage Example
 
 ```csharp
-var dialog = new NativeWebViewDialog
+var dialog = new NativeWebDialog
 {
     Title = "Avalonia Docs",
     CanUserResize = false,

@@ -174,14 +174,14 @@ Asynchronously delays destruction of the native control during parent changes.
 
 | Feature                | Windows WebView2-Edge | Linux | macOS/iOS WKWebView | Android | Browser |
 |------------------------|-----------------------|-------|---------------------|---------|---------|
-| `NativeWebView`        | ✔                     | ✖     | ✔                   | ✖*      | ✖*      |
-| `TryGetCommandManager` | ✖*                    | ✖     | ✔                   | ✖       | ✖       |
-| `TryGetCookieManager`  | ✖*                    | ✖     | ✔                   | ✖*      | ✖       |
+| `NativeWebView`        | ✔                     | ✖     | ✔                   | ✔      | ✖*      |
+| `TryGetCommandManager` | ✔                    | ✖     | ✔                   | ✔       | ✖*       |
+| `TryGetCookieManager`  | ✖*                    | ✖     | ✔                   | ✖      | ✖*       |
 
 \* Support is possible, but wasn't implemented yet. Let us know if it's a blocker for you. 
 
 :::note
 
-For Linux support, please use [NativeWebViewDialog](./nativewebviewdialog.md)
+For Linux support, please use [NativeWebDialog](./nativewebdialog.md)
 
 :::

@@ -44,7 +44,6 @@ const sidebars = {
             'tools/dev-tools/advanced/attaching-wsl',        
           ]
         }, 
-        'tools/dev-tools/early-access',
         'tools/dev-tools/faq',
         'tools/dev-tools/reporting-issues',
       ]
@@ -64,7 +63,7 @@ const sidebars = {
       'label': 'Web View',
       'items': [
         'components/webview/nativewebview',
-        'components/webview/nativewebviewdialog',
+        'components/webview/nativewebdialog',
         'components/webview/webauthenticationbroker',
       ]
     },    

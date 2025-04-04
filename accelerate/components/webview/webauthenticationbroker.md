@@ -33,9 +33,9 @@ public Uri RedirectUri { get; init; }
 URI that indicates the completion of the authentication flow.
 
 ```csharp
-public bool PreferNativeWebViewDialog { get; init; }
+public bool PreferNativeWebDialog { get; init; }
 ```
-If true, WebAuthenticationBroker will avoid platform specific implementation option, and will use [NativeWebViewDialog](nativewebviewdialog.md) based implementation.
+If true, WebAuthenticationBroker will avoid platform specific implementation option, and will use [NativeWebDialog](nativewebdialog.md) based implementation.
 
 ## WebAuthenticationResult
 
@@ -71,9 +71,11 @@ Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/e
 
 ## Platform Support
 
-| Feature                     | Windows | macOS | Linux | iOS | Android*  | Browser*  |
+| Feature                     | Windows | macOS (10.15+) | Linux | iOS (iOS 12.0+) | Android  | Browser  |
 |-----------------------------|---------|-------|-------|-----|-----------|-----------|
-| ASWebAuthenticationSession  | ✖       | ✔     | ✖     | ✔   | ✖         | ✖         |
-| NativeWebViewDialog         | ✔       | ✔     | ✔     | ✖   | ✖         | ✖         |
+| Platform Implementation  | ✖       | ✔*     | ✖     | ✔*   | ✔**         | ✔***         |
+| NativeWebDialog         | ✔       | ✔     | ✔     | ✖   | ✖         | ✖         |
 
-\* Support is possible, but wasn't implemented yet. Let us know if it's a blocker for you. 
+\* Apple platforms use ASWebAuthenticationSession implementation.
+\** Android uses CustomTabsIntent implementation, but support is experimental and might be changed.
+\*** Browser solution requires CORS to be configured to allow access to the redirected page.
