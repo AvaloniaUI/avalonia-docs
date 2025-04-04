@@ -1,4 +1,4 @@
-# Quick Start Guide
+# MediaPlayer Quick Start Guide
 
 This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia
 Accelerate MediaControls package.
