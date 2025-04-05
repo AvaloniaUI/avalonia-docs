@@ -62,6 +62,7 @@ const sidebars = {
       'type': 'category',
       'label': 'Web View',
       'items': [
+        'components/webview/quickstart',
         'components/webview/nativewebview',
         'components/webview/nativewebdialog',
         'components/webview/webauthenticationbroker',
