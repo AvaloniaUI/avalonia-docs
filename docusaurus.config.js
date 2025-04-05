@@ -174,6 +174,17 @@ const config = {
         editLocalizedFiles: true,
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'accelerate',
+        path: 'accelerate',
+        routeBasePath: 'accelerate',
+        sidebarPath: require.resolve('./accelerate-sidebar.js'),
+        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
+        editLocalizedFiles: true,
+      },
+    ],
 ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -216,7 +227,11 @@ const config = {
             activeBasePath: '/docs'
           },
           {
-            label: 'XPF Docs',
+            label: 'Accelerate',
+            to: '/accelerate/welcome',
+          },
+          {
+            label: 'Avalonia XPF',
             to: '/xpf/welcome',
             activeBasePath: '/xpf'
           },
