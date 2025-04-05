@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-### `Developer Tools` requirements
+### Developer Tools requirements
 
 | Requirement | Version/Details |
 |------------|-----------------|
@@ -11,9 +11,9 @@
 | macOS | 13 or newer |
 | Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
 
-No admin/sudo permissions are required to run the tool. Firewall exception might need to be configured, if you plan to use `Developer Tools` remotely.  
+No admin/sudo permissions are required to run the tool. Firewal l exception might need to be configured, if you plan to use Developer Tools remotely.  
 
-### `Diagnostics Support` requirements
+### Diagnostics Support requirements
 
 Support package requires **Avalonia 11.2.0** or newer, and built on **.NET Standard 2.0** compatible APIs.
 
@@ -21,7 +21,7 @@ This package is compatible with Browser and Android/iOS projects.
 
 :::note
 
-Demo project with `Developer Tools` preconfigured can be found at [AvaloniaUI/AvaloniaUI.DeveloperTools/samples/SimpleToDoList](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/tree/main/samples/SimpleToDoList#simpletodolist).
+Demo project with Developer Tools preconfigured can be found at [AvaloniaUI/AvaloniaUI.DeveloperTools/samples/SimpleToDoList](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/tree/main/samples/SimpleToDoList#simpletodolist).
 
 :::
 
@@ -78,12 +78,12 @@ For Linux:
 dotnet tool install --global AvaloniaUI.DeveloperTools.Linux
 ```
 
-The `Developer Tools` will notify you when a new version is available.
+The Developer Tools will notify you when a new version is available.
 It can be then updated via similar `dotnet tool update` command.
 
 ## Step 3: Installing Diagnostics Support package
 
-The `Diagnostics Support` package is responsible for establishing a connection bridge between the user app and `Developer Tools` process.
+The `Diagnostics Support` package is responsible for establishing a connection bridge between the user app and Developer Tools process.
 
 This package can be installed either in the executable project with your Program AppBuilder or shared project with your Application, depending on your application's architecture.
 
@@ -120,7 +120,7 @@ Initial execution on `macOS` might take several seconds due to Gatekeeper valida
 
 ## Step 6: Activate the tool
 
-Once `Developer Tools` opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to purchase and license the tool. This is the only time when the tool requires an internet connection. After that, the tool can be used offline or until license key session expires.
+Once the Developer Tools has opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to purchase and license the tool. This is the only time when the tool requires an internet connection. After that, the tool can be used offline or until license key session expires.
 
 ![Tool Activation](../../../static/img/dev-tools/tool-activation.png)
 
