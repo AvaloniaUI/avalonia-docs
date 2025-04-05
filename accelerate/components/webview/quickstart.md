@@ -1,15 +1,16 @@
 # WebView Quick Start Guide
 
 ## Overview
+
 The Avalonia WebView component provides native web browser functionality for your Avalonia applications. Unlike embedded WebView solutions that require bundling Chromium, this implementation leverages the platform's native web rendering capabilities, resulting in smaller application size and better performance.
 
 The WebView component includes three main APIs:
+
 - `NativeWebView` - A control for embedding web content directly in your application UI
 - `NativeWebDialog` - A separate dialog window that hosts web content
 - `WebAuthenticationBroker` - A utility for handling OAuth and web-based authentication flows
 
 ## Installation
-
 
 ## Step 1: Configure NuGet Package Source
 
@@ -126,33 +127,42 @@ if (result.CallbackUri != null)
 The WebView component relies on native web rendering implementations that must be available on the user's machine:
 
 ### Windows
+
 Uses Microsoft Edge WebView2, which is:
+
 - Pre-installed on Windows 11
 - May need installation on Windows 10
 
 For Windows 10 users, you can include the WebView2 runtime with your installer:
+
 - [WebView2 Runtime Download](https://developer.microsoft.com/en-us/microsoft-edge/webview2?form=MA13LH#download)
 - [Distribution Guide](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?tabs=dotnetcsharp)
 
 ### macOS/iOS
+
 Uses `WKWebView` which is pre-installed on all modern macOS/iOS devices.
+
 - No additional setup required
 - For WebAuthenticationBroker: macOS 10.15+ or iOS 12.0+ required
 
 ### Linux
+
 Requires GTK 3.0 and WebKitGTK 4.1:
 
 Debian/Ubuntu:
+
 ```bash
 apt install libgtk-3-0 libwebkit2gtk-4.1-0
 ```
 
 Fedora:
+
 ```bash
 dnf install gtk3 webkit2gtk4.1
 ```
 
 ### Android
+
 Requires Android API 21 or higher.
 
 ## Platform Support Summary
@@ -171,6 +181,7 @@ Requires Android API 21 or higher.
 ## Next Steps
 
 For detailed API documentation, see:
+
 - [NativeWebView API](nativewebview.md)
 - [NativeWebDialog API](nativewebdialog.md)
 - [WebAuthenticationBroker API](webauthenticationbroker.md)
