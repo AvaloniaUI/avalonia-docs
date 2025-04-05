@@ -559,7 +559,12 @@ const sidebars = {
       ],
     },
     'faq',
-    'community'
+    'community',
+    {
+      type: 'link',
+      label: 'API Reference', // The link label
+      href: 'https://api-docs.avaloniaui.net/docs/category/avalonia', // The external URL
+    },
   ],
 };
 
