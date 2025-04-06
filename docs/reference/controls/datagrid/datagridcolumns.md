@@ -118,17 +118,17 @@ It works in the preview pane because the `<Design.DataContext>` element creates 
 ## More Information
 
 :::info
-For the complete API documentation about the data grid text column, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTextColumn/).
+For the complete API documentation about the data grid text column, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTextColumn/).
 :::
 
 :::info
-For the complete API documentation about data grid check box column, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridCheckBoxColumn/).
+For the complete API documentation about data grid check box column, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/DataGridCheckBoxColumn/).
 :::
 
 :::info
-View the source code on _GitHub_ [`DataGridTextColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridTextColumn.cs)
+View the source code on _GitHub_ [`DataGridTextColumn.cs`](https://github.com/AvaloniaUI/Avalonia.Controls.DataGrid/blob/master/src/Avalonia.Controls.DataGrid/DataGridTextColumn.cs)
 :::
 
 :::info
-View the source code on _GitHub_ [`DataGridCheckBoxColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridCheckBoxColumn.cs)
+View the source code on _GitHub_ [`DataGridCheckBoxColumn.cs`](https://github.com/AvaloniaUI/Avalonia.Controls.DataGrid/blob/master/src/Avalonia.Controls.DataGrid/DataGridCheckBoxColumn.cs)
 :::
