@@ -106,9 +106,9 @@ public class Person
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTemplateColumn/).
+For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTemplateColumn/).
 :::
 
 :::info
-View the source code on _GitHub_ [`DataGridTemplateColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridTemplateColumn.cs)
+View the source code on _GitHub_ [`DataGridTemplateColumn.cs`](https://github.com/AvaloniaUI/Avalonia.Controls.DataGrid/blob/master/src/Avalonia.Controls.DataGrid/DataGridTemplateColumn.cs)
 :::
