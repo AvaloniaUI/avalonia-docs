@@ -20,11 +20,10 @@ Accelerate MediaControls package.
 
 ## Installation
 
-Add the Avalonia Accelerate MediaControls packages to your project:
+Add the Avalonia Accelerate MediaPlayer package to your project:
 
 ```bash
-dotnet add package Avalonia.Media
-dotnet add package Avalonia.Media.Theme.Fluent
+dotnet add package Avalonia.Controls.MediaPlayer
 ```
 
 Add the default theme to your App.axaml:
