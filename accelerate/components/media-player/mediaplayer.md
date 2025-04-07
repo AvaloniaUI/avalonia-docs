@@ -71,7 +71,7 @@ the `MediaPlayerControl`.
 | MediaPaused            | Occurs when media playback has been paused.           |
 | MediaStopped           | Occurs when media playback has been stopped.          |
 | MediaPlaybackCompleted | Occurs when media playback has completed.             |
-| OnErrorOccurred        | Occurs when an error is encountered.                  |
+| ErrorOccurred        | Occurs when an error is encountered.                  |
 | PropertyChanged        | Standard INotifyPropertyChanged event.                |
 
 ## Methods
@@ -135,7 +135,7 @@ player.MediaStarted += (s, e) => Console.WriteLine("Playback started");
 player.MediaPlaybackCompleted += (s, e) => Console.WriteLine("Playback completed");
 
 // Error handling
-player.OnErrorOccurred += (s, e) => {
+player.ErrorOccurred += (s, e) => {
     Console.WriteLine($"Error: {e.ErrorMessage}");
 };
 ```
@@ -154,13 +154,13 @@ await player.UnInitialize();
 The MediaPlayer uses an event-based approach to error handling:
 
 - When an error occurs, the player transitions to MediaPlayerState.Error
-- The `OnErrorOccurred` event is raised with detailed error information
+- The `ErrorOccurred` event is raised with detailed error information
 - Most methods check for the Error state and will not proceed
 - Call ReleaseAsync() to reset the error state
 
 ```csharp
 // Subscribe to error events
-player.OnErrorOccurred += (sender, args) => async {
+player.ErrorOccurred += (sender, args) => async {
     // Handle the error appropriately here with your custom logic.
     // ...
     Console.WriteLine($"Error: {args.ErrorMessage}");
@@ -195,7 +195,7 @@ catch (Exception ex) {
     - Call `UnInitialize()` when completely done with `MediaPlayer`.
 
 2. **Error Handling**:
-    - Subscribe to the `OnErrorOccurred` event to handle playback errors.
+    - Subscribe to the `ErrorOccurred` event to handle playback errors.
     - Use `ReleaseAsync()` to reset the player after an error.
 
 3. **Resource Management**:
