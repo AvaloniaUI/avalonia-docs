@@ -160,16 +160,11 @@ The MediaPlayer uses an event-based approach to error handling:
 
 ```csharp
 // Subscribe to error events
-player.ErrorOccurred += (sender, args) => async {
+player.ErrorOccurred += (sender, args) =>
+{
     // Handle the error appropriately here with your custom logic.
     // ...
     Console.WriteLine($"Error: {args.ErrorMessage}");
-
-    // Optionally reset the player
-    await player.ReleaseAsync();
-    
-    // Set this to true to avoid unhandled exception crash.
-    args.Handled = true;
 };
 
 // Try to play media
@@ -196,7 +191,6 @@ catch (Exception ex) {
 
 2. **Error Handling**:
     - Subscribe to the `ErrorOccurred` event to handle playback errors.
-    - Use `ReleaseAsync()` to reset the player after an error.
 
 3. **Resource Management**:
     - Properly clean up to avoid resource leaks.
