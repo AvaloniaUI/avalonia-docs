@@ -107,8 +107,7 @@ mediaPlayer.OnErrorOccurred += (sender, args) =>
 
 ## Template Parts and Customization
 
-The default control template for `MediaPlayerControl` in `Avalonia.Media.Themes.Fluent`
-includes several key parts:
+The default control template for `MediaPlayerControl` includes several key parts:
 
 - **PART_MediaPlayerPresenter**: Displays the video content
 - **MediaControlOverlay**: Contains the playback controls
@@ -161,7 +160,8 @@ The most basic configuration of the `MediaPlayerControl` can be like this:
       </Border>
     </ControlTemplate>
   </Setter>
-</ControlTheme>```
+</ControlTheme>
+```
 
 You can use that and the default theme as a jumping point for your desired look for `MediaPlayerControl`
 
