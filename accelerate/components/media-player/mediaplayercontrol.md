@@ -117,51 +117,51 @@ includes several key parts:
 The most basic configuration of the `MediaPlayerControl` can be like this:
 
 ```xml
-<!-- Put this in a ResourceDictionary referenced by your app. 
-     This by default replaces the -->
+<!-- In a ResourceDictionary referenced by your app. -->
 <ControlTheme x:Key="{x:Type MediaPlayerControl}" TargetType="MediaPlayerControl">
+  <Setter Property="Template">
     <ControlTemplate>
-        <!-- This border is for decoration and for setting a default background for the control 
-             When there's no media. -->
-        <Border Background="Gray" ClipToBounds="True" CornerRadius="4">
-            <Panel>
-                <!-- This is used to have a dark background against the MediaPlayerPresenter when there's a 
-                     video to be displayed. -->
-                <Border IsVisible="{TemplateBinding HasVideo}">
-                    <Border Background="Black" IsVisible="{TemplateBinding IsMediaActive}"/>
-                </Border>
+      <!-- This border is for decoration and for setting a default background for the control 
+         When there's no media. -->
+      <Border Background="Gray" ClipToBounds="True" CornerRadius="4">
+        <Panel>
+          <!-- This is used to have a dark background against the MediaPlayerPresenter when there's a 
+                 video to be displayed. -->
+          <Border IsVisible="{TemplateBinding HasVideo}">
+            <Border Background="Black" IsVisible="{TemplateBinding IsMediaActive}"/>
+          </Border>
 
-                <!-- This ViewBox is responsible on how the MediaPlayerPresenter is stretched to fit
-                     the bounding area of the control. -->
-                <Viewbox>
-                    <!-- The control in which the internal MediaPlayer draws the video -->
-                    <MediaPlayerPresenter Name="PART_MediaPlayerPresenter"/>
-                </Viewbox>
+          <!-- This ViewBox is responsible on how the MediaPlayerPresenter is stretched to fit
+                 the bounding area of the control. -->
+          <Viewbox>
+            <!-- The control in which the internal MediaPlayer draws the video -->
+            <MediaPlayerPresenter Name="PART_MediaPlayerPresenter"/>
+          </Viewbox>
 
-                <!-- Example of the overlay playback controls. 
-                     Use the built-in Commands to easily control the playback. -->
-                <DockPanel LastChildFill="True" MaxHeight="64" VerticalAlignment="Bottom">
-                    <ProgressBar DockPanel.Dock="Bottom"
-                                 IsIndeterminate="True"
-                                 IsVisible="{TemplateBinding IsBuffering}"/>
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Center"
-                                Spacing="10"
-                                Margin="5"
-                                TextElement.FontSize="24">
-                        <Button Content="&#x23EF;"
-                                Padding="5,-5,5,0"
-                                Command="{TemplateBinding PlayPauseCommand}"/>
-                        <Button Content="&#x23F9;"
-                                Padding="5,-5,5,0"
-                                Command="{TemplateBinding StopCommand}"/>
-                    </StackPanel>
-                </DockPanel>
-            </Panel>
-        </Border>
+          <!-- Example of the overlay playback controls. 
+                 Use the built-in Commands to easily control the playback. -->
+          <DockPanel LastChildFill="True" MaxHeight="64" VerticalAlignment="Bottom">
+            <ProgressBar DockPanel.Dock="Bottom"
+                         IsIndeterminate="True"
+                         IsVisible="{TemplateBinding IsBuffering}"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Spacing="10"
+                        Margin="5"
+                        TextElement.FontSize="24">
+              <Button Content="&#x23EF;"
+                      Padding="5,-5,5,0"
+                      Command="{TemplateBinding PlayPauseCommand}"/>
+              <Button Content="&#x23F9;"
+                      Padding="5,-5,5,0"
+                      Command="{TemplateBinding StopCommand}"/>
+            </StackPanel>
+          </DockPanel>
+        </Panel>
+      </Border>
     </ControlTemplate>
-</ControlTheme>
-```
+  </Setter>
+</ControlTheme>```
 
 You can use that and the default theme as a jumping point for your desired look for `MediaPlayerControl`
 
