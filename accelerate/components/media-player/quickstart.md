@@ -168,7 +168,7 @@ TimeSpan position = mediaPlayer.Position;
 ### Error Handling
 
 ```csharp
-mediaPlayer.OnErrorOccurred += (sender, args) =>
+mediaPlayer.ErrorOccurred += (sender, args) =>
 {
     Console.WriteLine($"Media error: {args.Message}");
     args.Handled = true; // Prevents the exception from being thrown.
@@ -241,7 +241,7 @@ Common issues and solutions:
 
 5. **Player in error state**
     - Call `Player.ReleaseAsync()` to reset from the error state
-    - Handle the `OnErrorOccurred` event for any error messages and reset accordingly.
+    - Handle the `ErrorOccurred` event for any error messages and reset accordingly.
 
 For more detailed information on the components:
 

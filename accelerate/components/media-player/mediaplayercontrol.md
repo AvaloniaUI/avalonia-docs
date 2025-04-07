@@ -71,7 +71,7 @@ interface for media playback.
 
 | Event           | Description                                                  |
 |-----------------|--------------------------------------------------------------|
-| OnErrorOccurred | Occurs when an error is encountered during media operations. |
+| ErrorOccurred | Occurs when an error is encountered during media operations. |
 
 ## Usage Examples
 
@@ -96,7 +96,7 @@ interface for media playback.
 ### Error Handling
 
 ```csharp
-mediaPlayer.OnErrorOccurred += (sender, args) =>
+mediaPlayer.ErrorOccurred += (sender, args) =>
 {
     Console.WriteLine($"Media error: {args.Message}");
     args.Handled = true; // Prevents the exception from being thrown.
@@ -247,8 +247,8 @@ flowchart LR
 ## Best Practices
 
 1. **Error Handling**:
-    - Always subscribe to the `OnErrorOccurred` event to handle errors gracefully.
-    - Set the `Handled` property to true on the `OnErrorOccurred` event handler if you've managed the error.
+    - Always subscribe to the `ErrorOccurred` event to handle errors gracefully.
+    - Set the `Handled` property to true on the `ErrorOccurred` event handler if you've managed the error.
 
 2. **Resource Management**:
     - The control manages the `MediaPlayer` lifecycle automatically.
