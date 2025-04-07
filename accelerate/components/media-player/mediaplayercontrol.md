@@ -79,8 +79,8 @@ interface for media playback.
 
 ```xaml
 <MediaPlayerControl Name="mediaPlayer" Source="{Binding MediaSource}" 
-                          Volume="0.8"
-                          LoadedBehavior="AutoPlay" />
+                    Volume="0.8"
+                    LoadedBehavior="AutoPlay" />
 ```
 
 ### Binding to Commands
