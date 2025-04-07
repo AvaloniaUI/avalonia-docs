@@ -133,11 +133,11 @@ public async void OpenFile_Click(object sender, RoutedEventArgs e)
 
 ```csharp
 // Play/pause
-await mediaPlayer.Player.PlayAsync();
-await mediaPlayer.Player.PauseAsync();
+await mediaPlayer.PlayAsync();
+await mediaPlayer.PauseAsync();
 
 // Stop
-await mediaPlayer.Player.StopAsync();
+await mediaPlayer.StopAsync();
 
 // Seek to position
 mediaPlayer.Position = TimeSpan.FromSeconds(30);
@@ -146,7 +146,7 @@ mediaPlayer.Position = TimeSpan.FromSeconds(30);
 mediaPlayer.Volume = 0.75;
 
 // Mute/unmute
-mediaPlayer.Player.IsMuted = true;
+mediaPlayer.IsMuted = true;
 ```
 
 ### Media Information
