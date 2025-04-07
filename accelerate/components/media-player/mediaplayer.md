@@ -118,7 +118,7 @@ await player.InitializeAsync();
 
 // Configure
 player.Volume = 0.8;
-player.LoadedBehavior = MediaPlayerState.AutoPlay;
+player.LoadedBehavior = MediaPlayerState.Manual;
 
 // Load and play media
 player.Source = new UriSource("https://example.com/audio.mp3");
