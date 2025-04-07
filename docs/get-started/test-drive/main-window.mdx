@@ -28,7 +28,15 @@ Avalonia controls; the window will be drawn on the target platform with 4 **layo
 
 Inside the Windows Content, you will see a `<TextBlock>...</TextBlock>` XAML tag. This represents a `TextBlock` control which draws 
 `Text` to the screen. The `Text` property of the `TextBlock` is bound to the **Greeting** property of 
-the **MainWindowViewModel** class.
+the **MainWindowModel** class.
+
+:::note
+The class name may appear as either:  
+- `MainViewModel`  
+- `MainWindowViewModel`  
+
+Check which template your project uses to confirm the correct name.  
+:::
 
 ```xml title='XAML'
 <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
