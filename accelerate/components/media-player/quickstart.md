@@ -3,21 +3,6 @@
 This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia
 Accelerate MediaControls package.
 
-- [Installation](#installation)
-- [Basic Usage](#basic-usage)
-    - [Using MediaPlayerControl (Recommended)](#using-mediaplayercontrol-recommended)
-    - [Using MediaPlayer Directly](#using-mediaplayer-directly)
-- [Loading Media Sources](#loading-media-sources)
-    - [From Files or URLs (UriSource)](#from-files-or-urls-urisource)
-    - [From Streams (StreamSource)](#from-streams-streamsource)
-    - [Using File Picker](#using-file-picker)
-- [Common Operations](#common-operations)
-    - [Playback Control](#playback-control)
-    - [Media Information](#media-information)
-    - [Error Handling](#error-handling)
-    - [Basic Example](#basic-example)
-- [Troubleshooting](#troubleshooting)
-
 ## Installation
 
 ### Configure the NuGet Package Source

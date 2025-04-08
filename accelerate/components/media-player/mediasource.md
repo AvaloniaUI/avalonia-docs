@@ -4,25 +4,6 @@ The `MediaSource` class hierarchy provides an abstraction for different types of
 This allows the media playback system to handle various content sources (files, URLs, streams) through
 a unified interface.
 
-- [MediaSource (Abstract Base Class)](#mediasource-abstract-base-class)
-    - [Methods](#methods)
-- [UriSource Class](#urisource-class)
-    - [Properties](#properties)
-    - [Constructors](#constructors)
-    - [Methods](#methods-1)
-    - [Usage Examples](#usage-examples)
-- [StreamSource Class](#streamsource-class)
-    - [Properties](#properties-1)
-    - [Constructors](#constructors-1)
-    - [Methods](#methods-2)
-    - [Usage Examples](#usage-examples-1)
-- [Choosing Between UriSource and StreamSource](#choosing-between-urisource-and-streamsource)
-    - [When to Use UriSource](#when-to-use-urisource)
-    - [When to Use StreamSource](#when-to-use-streamsource)
-- [Resource Management](#resource-management)
-- [Best Practices](#best-practices)
-- [Related Components](#related-components)
-
 ## MediaSource (Abstract Base Class)
 
 `MediaSource` is an abstract base class that defines the common interface for all media sources.

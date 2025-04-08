@@ -4,22 +4,6 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
 display, volume control, and video rendering. It encapsulates a `MediaPlayer` instance and provides a rich user
 interface for media playback.
 
-- [Properties](#properties)
-    - [Basic Properties](#basic-properties)
-    - [Playback Properties](#playback-properties)
-    - [State Properties](#state-properties)
-    - [Audio Properties](#audio-properties)
-    - [Command Properties](#command-properties)
-- [Events](#events)
-- [Usage Examples](#usage-examples)
-    - [Basic Usage](#basic-usage)
-    - [Binding to Commands](#binding-to-commands)
-    - [Error Handling](#error-handling)
-- [Template Parts and Customization](#template-parts-and-customization)
-- [Lifecycle Management](#lifecycle-management)
-- [Best Practices](#best-practices)
-- [Related Components](#related-components)
-
 ## Properties
 
 ### Basic Properties

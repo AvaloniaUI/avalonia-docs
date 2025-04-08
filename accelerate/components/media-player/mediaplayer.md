@@ -4,23 +4,6 @@ The `MediaPlayer` class provides the core functionality for media playback in Av
 loading, playback control, and platform-specific backend management, serving as the engine behind
 the `MediaPlayerControl`.
 
-- [Properties](#properties)
-    - [Media Source Properties](#media-source-properties)
-    - [Playback Properties](#playback-properties)
-    - [State Properties](#state-properties)
-    - [Audio Properties](#audio-properties)
-    - [Advanced Properties](#advanced-properties)
-- [Events](#events)
-- [Methods](#methods)
-- [Backend Architecture](#backend-architecture)
-- [Usage Examples](#usage-examples)
-    - [Basic Playback](#basic-playback)
-    - [Event Handling](#event-handling)
-    - [Resource Cleanup](#resource-cleanup)
-- [Error Handling](#error-handling)
-- [Best Practices](#best-practices)
-- [Related Components](#related-components)
-
 ## Properties
 
 ### Media Source Properties
