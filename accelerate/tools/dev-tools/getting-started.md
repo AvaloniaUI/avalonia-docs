@@ -48,8 +48,30 @@ For Linux:
 dotnet tool install --global AvaloniaUI.DeveloperTools.Linux
 ```
 
-The Developer Tools will notify you when a new version is available.
-It can be then updated via similar `dotnet tool update` command.
+The Developer Tools will notify you when a new version is available. It can be then updated by running `dotnet tool update` command.
+
+<details>
+<summary>Developer tools update commands</summary>
+
+To update on macOS:
+
+```bash
+dotnet tool update --global AvaloniaUI.DeveloperTools.macOS
+```
+
+To update on Windows:
+
+```bash
+dotnet tool update --global AvaloniaUI.DeveloperTools.Windows
+```
+
+To update on Linux:
+
+```bash
+dotnet tool update --global AvaloniaUI.DeveloperTools.Linux
+```
+</details>
+
 
 ## Step 2: Installing Diagnostics Support package
 
