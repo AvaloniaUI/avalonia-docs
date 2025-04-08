@@ -90,11 +90,10 @@ For multi-project solutions, you can store your license key in an [environment v
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:webview="using:Avalonia.Controls.WebView">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <webview:NativeWebView Source="https://avaloniaui.net/"
-                           NavigationCompleted="WebView_NavigationCompleted" />
+    <NativeWebView Source="https://avaloniaui.net/"
+                   NavigationCompleted="WebView_NavigationCompleted" />
 </Window>
 ```
 
