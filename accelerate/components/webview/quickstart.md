@@ -145,6 +145,8 @@ if (result.CallbackUri != null)
 }
 ```
 
+Replace `YOUR_CLIENT_ID` with the client ID for your application.
+
 ## Platform Prerequisites
 
 The WebView component relies on native web rendering implementations that must be available on the user's machine:
