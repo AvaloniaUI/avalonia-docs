@@ -11,14 +11,14 @@ Avalonia Accelerate brings powerful enhancements and professional-grade features
 ## What’s Included in Avalonia Accelerate?
 Avalonia Accelerate is released in phases, with each update introducing significant new capabilities. The first phase includes three essential modules designed to unlock immediate productivity:
 
-### Dev Tools
+### [Dev Tools](./tools/dev-tools/getting-started)
 Elevate your debugging experience with professional-grade developer tooling that gives you unparalleled insight into your Avalonia applications. Inspect visual trees, debug bindings effortlessly, and fine-tune your UI for maximum responsiveness, all with ease and precision.
 
-### WebView
+### [Web View](./components/webview/quickstart)
 
 Bring modern web content into your Avalonia applications seamlessly. With Accelerate’s integrated WebView component, embedding secure, high-performance web browsing experiences within your apps has never been easier, whether it’s for help documentation, dashboards, or interactive content.
 
-### MediaPlayer
+### [Media Player](./components/media-player/quickstart)
 
 Deliver immersive multimedia experiences right out of the box. Avalonia Accelerate’s MediaPlayer module provides native playback of video and audio content, supporting various formats across Windows, macOS, and Linux, ensuring your users enjoy smooth, high-quality media playback everywhere.
 
