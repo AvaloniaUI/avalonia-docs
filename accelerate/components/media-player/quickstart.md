@@ -20,11 +20,10 @@ Accelerate MediaControls package.
 
 ## Installation
 
-Add the Avalonia Accelerate MediaControls packages to your project:
+Add the Avalonia Accelerate MediaPlayer package to your project:
 
 ```bash
-dotnet add package Avalonia.Media
-dotnet add package Avalonia.Media.Theme.Fluent
+dotnet add package Avalonia.Controls.MediaPlayer
 ```
 
 Add the default theme to your App.axaml:
@@ -134,11 +133,11 @@ public async void OpenFile_Click(object sender, RoutedEventArgs e)
 
 ```csharp
 // Play/pause
-await mediaPlayer.Player.PlayAsync();
-await mediaPlayer.Player.PauseAsync();
+await mediaPlayer.PlayAsync();
+await mediaPlayer.PauseAsync();
 
 // Stop
-await mediaPlayer.Player.StopAsync();
+await mediaPlayer.StopAsync();
 
 // Seek to position
 mediaPlayer.Position = TimeSpan.FromSeconds(30);
@@ -147,7 +146,7 @@ mediaPlayer.Position = TimeSpan.FromSeconds(30);
 mediaPlayer.Volume = 0.75;
 
 // Mute/unmute
-mediaPlayer.Player.IsMuted = true;
+mediaPlayer.IsMuted = true;
 ```
 
 ### Media Information
@@ -169,7 +168,7 @@ TimeSpan position = mediaPlayer.Position;
 ### Error Handling
 
 ```csharp
-mediaPlayer.OnErrorOccurred += (sender, args) =>
+mediaPlayer.ErrorOccurred += (sender, args) =>
 {
     Console.WriteLine($"Media error: {args.Message}");
     args.Handled = true; // Prevents the exception from being thrown.
@@ -242,7 +241,7 @@ Common issues and solutions:
 
 5. **Player in error state**
     - Call `Player.ReleaseAsync()` to reset from the error state
-    - Handle the `OnErrorOccurred` event for any error messages and reset accordingly.
+    - Handle the `ErrorOccurred` event for any error messages and reset accordingly.
 
 For more detailed information on the components:
 
