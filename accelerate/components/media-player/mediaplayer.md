@@ -146,8 +146,9 @@ The MediaPlayer uses an event-based approach to error handling:
 player.ErrorOccurred += (sender, args) =>
 {
     // Handle the error appropriately here with your custom logic.
+    // Reset with ReleaseAsync() elsewhere if you need to playback again.
     // ...
-    Console.WriteLine($"Error: {args.ErrorMessage}");
+    Console.WriteLine($"Error: {args.Message}");
 };
 
 // Try to play media
