@@ -31,7 +31,7 @@ Avalonia Accelerate packages are distributed through a dedicated NuGet feed that
     <clear />
     <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
     // highlight-start
-    <add key="avalonia-accelerate" value="https://pro-nuget-feed.avaloniaui.net/v3/index.json" />
+    <add key="avalonia-accelerate" value="https://accelerate-nuget-feed.avaloniaui.net/v3/index.json" />
     // highlight-end
   </packageSources>
   // highlight-start
@@ -54,7 +54,7 @@ Avalonia Accelerate packages are distributed through a dedicated NuGet feed that
 3. Click the _+_ button to add a new source:
 
     - **Name**: `avalonia-accelerate`
-    - **Source**: https://pro-nuget-feed.avaloniaui.net/v3/index.json
+    - **Source**: https://accelerate-nuget-feed.avaloniaui.net/v3/index.json
 
 4. Click _Update_ to save the new source
 5. When prompted for credentials during package installation:
