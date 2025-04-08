@@ -131,7 +131,7 @@ dialog.Show();
 ### Using WebAuthenticationBroker
 
 ```csharp
-var authOptions = new WebAuthenticationOptions(
+var authOptions = new WebAuthenticatorOptions(
     RequestUri: new Uri("https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=http://localhost&scope=openid"),
     RedirectUri: new Uri("http://localhost")
 );
