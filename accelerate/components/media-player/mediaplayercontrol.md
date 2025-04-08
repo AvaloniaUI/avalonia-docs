@@ -71,44 +71,44 @@ interface for media playback.
 
 | Event           | Description                                                  |
 |-----------------|--------------------------------------------------------------|
-| OnErrorOccurred | Occurs when an error is encountered during media operations. |
+| ErrorOccurred | Occurs when an error is encountered during media operations. |
 
 ## Usage Examples
 
 ### Basic Usage
 
 ```xaml
-<MediaPlayerControl Name="mediaPlayer" Source="{Binding MediaSource}" 
-                          Volume="0.8"
-                          LoadedBehavior="AutoPlay" />
+<MediaPlayerControl Name="mediaPlayerControl" Source="{Binding MediaSource}" 
+                    Volume="0.8"
+                    LoadedBehavior="AutoPlay" />
 ```
 
 ### Binding to Commands
 
 ```xaml
-<Button Command="{Binding #mediaPlayer.PlayPauseCommand}" 
+<Button Command="{Binding #mediaPlayerControl.PlayPauseCommand}" 
         Content="Play/Pause" />
         
-<Button Command="{Binding #mediaPlayer.StopCommand}" 
+<Button Command="{Binding #mediaPlayerControl.StopCommand}" 
         Content="Stop" />
 ```
 
 ### Error Handling
 
 ```csharp
-mediaPlayer.OnErrorOccurred += (sender, args) =>
+mediaPlayerControl.ErrorOccurred += (sender, args) =>
 {
     Console.WriteLine($"Media error: {args.Message}");
     args.Handled = true; // Prevents the exception from being thrown.
 };
 ```
 
-**Note**: This callback gives you the opportunity to reset the state of the `MediaPlayer` gracefully.
+**Note**: This callback gives you the opportunity to reset the state of the `MediaPlayerControl` gracefully.
+
 
 ## Template Parts and Customization
 
-The default control template for `MediaPlayerControl` in `Avalonia.Media.Themes.Fluent`
-includes several key parts:
+The default control template for `MediaPlayerControl` includes several key parts:
 
 - **PART_MediaPlayerPresenter**: Displays the video content
 - **MediaControlOverlay**: Contains the playback controls
@@ -117,49 +117,50 @@ includes several key parts:
 The most basic configuration of the `MediaPlayerControl` can be like this:
 
 ```xml
-<!-- Put this in a ResourceDictionary referenced by your app. 
-     This by default replaces the -->
+<!-- In a ResourceDictionary referenced by your app. -->
 <ControlTheme x:Key="{x:Type MediaPlayerControl}" TargetType="MediaPlayerControl">
+  <Setter Property="Template">
     <ControlTemplate>
-        <!-- This border is for decoration and for setting a default background for the control 
-             When there's no media. -->
-        <Border Background="Gray" ClipToBounds="True" CornerRadius="4">
-            <Panel>
-                <!-- This is used to have a dark background against the MediaPlayerPresenter when there's a 
-                     video to be displayed. -->
-                <Border IsVisible="{TemplateBinding HasVideo}">
-                    <Border Background="Black" IsVisible="{TemplateBinding IsMediaActive}"/>
-                </Border>
+      <!-- This border is for decoration and for setting a default background for the control 
+         When there's no media. -->
+      <Border Background="Gray" ClipToBounds="True" CornerRadius="4">
+        <Panel>
+          <!-- This is used to have a dark background against the MediaPlayerPresenter when there's a 
+                 video to be displayed. -->
+          <Border IsVisible="{TemplateBinding HasVideo}">
+            <Border Background="Black" IsVisible="{TemplateBinding IsMediaActive}"/>
+          </Border>
 
-                <!-- This ViewBox is responsible on how the MediaPlayerPresenter is stretched to fit
-                     the bounding area of the control. -->
-                <Viewbox>
-                    <!-- The control in which the internal MediaPlayer draws the video -->
-                    <MediaPlayerPresenter Name="PART_MediaPlayerPresenter"/>
-                </Viewbox>
+          <!-- This ViewBox is responsible on how the MediaPlayerPresenter is stretched to fit
+                 the bounding area of the control. -->
+          <Viewbox>
+            <!-- The control in which the internal MediaPlayer draws the video -->
+            <MediaPlayerPresenter Name="PART_MediaPlayerPresenter"/>
+          </Viewbox>
 
-                <!-- Example of the overlay playback controls. 
-                     Use the built-in Commands to easily control the playback. -->
-                <DockPanel LastChildFill="True" MaxHeight="64" VerticalAlignment="Bottom">
-                    <ProgressBar DockPanel.Dock="Bottom"
-                                 IsIndeterminate="True"
-                                 IsVisible="{TemplateBinding IsBuffering}"/>
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Center"
-                                Spacing="10"
-                                Margin="5"
-                                TextElement.FontSize="24">
-                        <Button Content="&#x23EF;"
-                                Padding="5,-5,5,0"
-                                Command="{TemplateBinding PlayPauseCommand}"/>
-                        <Button Content="&#x23F9;"
-                                Padding="5,-5,5,0"
-                                Command="{TemplateBinding StopCommand}"/>
-                    </StackPanel>
-                </DockPanel>
-            </Panel>
-        </Border>
+          <!-- Example of the overlay playback controls. 
+                 Use the built-in Commands to easily control the playback. -->
+          <DockPanel LastChildFill="True" MaxHeight="64" VerticalAlignment="Bottom">
+            <ProgressBar DockPanel.Dock="Bottom"
+                         IsIndeterminate="True"
+                         IsVisible="{TemplateBinding IsBuffering}"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Spacing="10"
+                        Margin="5"
+                        TextElement.FontSize="24">
+              <Button Content="&#x23EF;"
+                      Padding="5,-5,5,0"
+                      Command="{TemplateBinding PlayPauseCommand}"/>
+              <Button Content="&#x23F9;"
+                      Padding="5,-5,5,0"
+                      Command="{TemplateBinding StopCommand}"/>
+            </StackPanel>
+          </DockPanel>
+        </Panel>
+      </Border>
     </ControlTemplate>
+  </Setter>
 </ControlTheme>
 ```
 
@@ -195,7 +196,7 @@ flowchart LR
     class Init,Setup,Cleanup phase
 ```
 
-Here's a more comprehensive graph of `MediaPlayerControl`'s interactions with `MediaPlayer` over the course of its
+Here's a more comprehensive graph of `MediaPlayerControl`'s interactions with its internal `MediaPlayer` over the course of its
 lifetime:
 
 ```mermaid
@@ -247,11 +248,11 @@ flowchart LR
 ## Best Practices
 
 1. **Error Handling**:
-    - Always subscribe to the `OnErrorOccurred` event to handle errors gracefully.
-    - Set the `Handled` property to true on the `OnErrorOccurred` event handler if you've managed the error.
+    - Always subscribe to the `ErrorOccurred` event to handle errors gracefully.
+    - Set the `Handled` property to true on the `ErrorOccurred` event handler if you've managed the error.
 
 2. **Resource Management**:
-    - The control manages the `MediaPlayer` lifecycle automatically.
+    - The control manages the `MediaPlayerControl` lifecycle automatically.
 
 3. **UI Integration**:
     - Use the built-in commands for integrating with custom buttons/controls.

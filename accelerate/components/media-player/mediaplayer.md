@@ -31,11 +31,11 @@ the `MediaPlayerControl`.
 
 ### Playback Properties
 
-| Property       | Type             | Description                                                        |
-|----------------|------------------|--------------------------------------------------------------------|
-| Position       | TimeSpan         | Gets or sets the current playback position.                        |
-| Duration       | TimeSpan?        | Gets the total duration of the media. Null for non-seekable media. |
-| LoadedBehavior | MediaPlayerState | Gets or sets playback behavior when media is loaded.               |
+| Property       | Type                      | Description                                                        |
+|----------------|---------------------------|--------------------------------------------------------------------|
+| Position       | TimeSpan                  | Gets or sets the current playback position.                        |
+| Duration       | TimeSpan?                 | Gets the total duration of the media. Null for non-seekable media. |
+| LoadedBehavior | MediaPlayerLoadedBehavior | Gets or sets playback behavior when media is loaded.               |
 
 ### State Properties
 
@@ -71,7 +71,7 @@ the `MediaPlayerControl`.
 | MediaPaused            | Occurs when media playback has been paused.           |
 | MediaStopped           | Occurs when media playback has been stopped.          |
 | MediaPlaybackCompleted | Occurs when media playback has completed.             |
-| OnErrorOccurred        | Occurs when an error is encountered.                  |
+| ErrorOccurred        | Occurs when an error is encountered.                  |
 | PropertyChanged        | Standard INotifyPropertyChanged event.                |
 
 ## Methods
@@ -118,7 +118,7 @@ await player.InitializeAsync();
 
 // Configure
 player.Volume = 0.8;
-player.LoadedBehavior = MediaPlayerState.AutoPlay;
+player.LoadedBehavior = MediaPlayerLoadedBehavior.Manual;
 
 // Load and play media
 player.Source = new UriSource("https://example.com/audio.mp3");
@@ -135,7 +135,7 @@ player.MediaStarted += (s, e) => Console.WriteLine("Playback started");
 player.MediaPlaybackCompleted += (s, e) => Console.WriteLine("Playback completed");
 
 // Error handling
-player.OnErrorOccurred += (s, e) => {
+player.ErrorOccurred += (s, e) => {
     Console.WriteLine($"Error: {e.ErrorMessage}");
 };
 ```
@@ -153,23 +153,18 @@ await player.UnInitialize();
 
 The MediaPlayer uses an event-based approach to error handling:
 
-- When an error occurs, the player transitions to MediaPlayerState.Error
-- The `OnErrorOccurred` event is raised with detailed error information
+- When an error occurs, the player transitions to an Error state internally
+- The `ErrorOccurred` event is raised with detailed error information
 - Most methods check for the Error state and will not proceed
 - Call ReleaseAsync() to reset the error state
 
 ```csharp
 // Subscribe to error events
-player.OnErrorOccurred += (sender, args) => async {
+player.ErrorOccurred += (sender, args) =>
+{
     // Handle the error appropriately here with your custom logic.
     // ...
     Console.WriteLine($"Error: {args.ErrorMessage}");
-
-    // Optionally reset the player
-    await player.ReleaseAsync();
-    
-    // Set this to true to avoid unhandled exception crash.
-    args.Handled = true;
 };
 
 // Try to play media
@@ -195,8 +190,7 @@ catch (Exception ex) {
     - Call `UnInitialize()` when completely done with `MediaPlayer`.
 
 2. **Error Handling**:
-    - Subscribe to the `OnErrorOccurred` event to handle playback errors.
-    - Use `ReleaseAsync()` to reset the player after an error.
+    - Subscribe to the `ErrorOccurred` event to handle playback errors.
 
 3. **Resource Management**:
     - Properly clean up to avoid resource leaks.
