@@ -78,7 +78,7 @@ interface for media playback.
 ### Basic Usage
 
 ```xaml
-<MediaPlayerControl Name="mediaPlayer" Source="{Binding MediaSource}" 
+<MediaPlayerControl Name="mediaPlayerControl" Source="{Binding MediaSource}" 
                     Volume="0.8"
                     LoadedBehavior="AutoPlay" />
 ```
@@ -86,24 +86,25 @@ interface for media playback.
 ### Binding to Commands
 
 ```xaml
-<Button Command="{Binding #mediaPlayer.PlayPauseCommand}" 
+<Button Command="{Binding #mediaPlayerControl.PlayPauseCommand}" 
         Content="Play/Pause" />
         
-<Button Command="{Binding #mediaPlayer.StopCommand}" 
+<Button Command="{Binding #mediaPlayerControl.StopCommand}" 
         Content="Stop" />
 ```
 
 ### Error Handling
 
 ```csharp
-mediaPlayer.ErrorOccurred += (sender, args) =>
+mediaPlayerControl.ErrorOccurred += (sender, args) =>
 {
     Console.WriteLine($"Media error: {args.Message}");
     args.Handled = true; // Prevents the exception from being thrown.
 };
 ```
 
-**Note**: This callback gives you the opportunity to reset the state of the `MediaPlayer` gracefully.
+**Note**: This callback gives you the opportunity to reset the state of the `MediaPlayerControl` gracefully.
+
 
 ## Template Parts and Customization
 
@@ -195,7 +196,7 @@ flowchart LR
     class Init,Setup,Cleanup phase
 ```
 
-Here's a more comprehensive graph of `MediaPlayerControl`'s interactions with `MediaPlayer` over the course of its
+Here's a more comprehensive graph of `MediaPlayerControl`'s interactions with its internal `MediaPlayer` over the course of its
 lifetime:
 
 ```mermaid
@@ -251,7 +252,7 @@ flowchart LR
     - Set the `Handled` property to true on the `ErrorOccurred` event handler if you've managed the error.
 
 2. **Resource Management**:
-    - The control manages the `MediaPlayer` lifecycle automatically.
+    - The control manages the `MediaPlayerControl` lifecycle automatically.
 
 3. **UI Integration**:
     - Use the built-in commands for integrating with custom buttons/controls.
