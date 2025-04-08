@@ -90,11 +90,10 @@ For multi-project solutions, you can store your license key in an [environment v
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:webview="using:Avalonia.Controls.WebView">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <webview:NativeWebView Source="https://avaloniaui.net/"
-                           NavigationCompleted="WebView_NavigationCompleted" />
+    <NativeWebView Source="https://avaloniaui.net/"
+                   NavigationCompleted="WebView_NavigationCompleted" />
 </Window>
 ```
 
@@ -132,7 +131,7 @@ dialog.Show();
 ### Using WebAuthenticationBroker
 
 ```csharp
-var authOptions = new WebAuthenticationOptions(
+var authOptions = new WebAuthenticatorOptions(
     RequestUri: new Uri("https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=http://localhost&scope=openid"),
     RedirectUri: new Uri("http://localhost")
 );
@@ -145,6 +144,8 @@ if (result.CallbackUri != null)
     var code = HttpUtility.ParseQueryString(result.CallbackUri.Query)["code"];
 }
 ```
+
+Replace `YOUR_CLIENT_ID` with the client ID for your application.
 
 ## Platform Prerequisites
 

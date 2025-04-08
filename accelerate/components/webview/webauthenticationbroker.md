@@ -73,9 +73,9 @@ googleAuthRequestUri += "&redirect_uri=" + googleAuthRedirectUri;
 
 var result = await WebAuthenticationBroker.AuthenticateAsync(
     mainWindow,
-    new WebAuthenticationOptions(
-        RequestUri: new Uri(googleAuthRequestUri)
-        RedirectUri: new Uri(googleAuthRedirectUri));
+    new WebAuthenticatorOptions(
+        RequestUri: new Uri(googleAuthRequestUri),
+        RedirectUri: new Uri(googleAuthRedirectUri)));
 ```
 
 Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow), [Facebook Login](https://developers.facebook.com/docs/facebook-login/) or other OAuth2 standard compatible options.
@@ -87,6 +87,6 @@ Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/e
 | Platform Implementation  | ✖       | ✔*     | ✖     | ✔*   | ✔**         | ✔***         |
 | NativeWebDialog         | ✔       | ✔     | ✔     | ✖   | ✖         | ✖         |
 
-\* Apple platforms use ASWebAuthenticationSession implementation.
-\** Android uses CustomTabsIntent implementation, but support is experimental and might be changed.
-\*** Browser solution requires CORS to be configured to allow access to the redirected page.
+\* Apple platforms use ASWebAuthenticationSession implementation.  
+\** Android uses CustomTabsIntent implementation, but support is experimental and might be changed.  
+\*** Browser solution requires CORS to be configured to allow access to the redirected page.  

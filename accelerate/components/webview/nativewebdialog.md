@@ -224,7 +224,7 @@ var dialog = new NativeWebDialog
 
 // Create TaskCompletionSource so we can wait until window is closed.
 var tcs = new TaskCompletionSource();
-dialog.Closing += (s, e) => tcs.SetCompleted();
+dialog.Closing += (s, e) => tcs.SetResult();
 
 // Show the dialog
 dialog.Show(mainWindow);
