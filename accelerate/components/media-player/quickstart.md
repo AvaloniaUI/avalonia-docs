@@ -1,13 +1,13 @@
 # MediaPlayer Quick Start Guide
 
 This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia
-Accelerate MediaControls package.
+Accelerate `MediaPlayer` package.
 
 ## Installation
 
 ### Configure the NuGet Package Source
 
-Avalonia Accelerate packages are distributed through a dedicated NuGet feed that requires authentication with your AvaloniaUI license key. Follow these steps to configure access to this feed in your C# project.
+Avalonia Accelerate packages are distributed through a dedicated NuGet feed that requires authentication with your Avalonia Accelerate license key. Follow these steps to configure access to this feed in your C# project.
 
 #### Option 1: Configure via `nuget.config` (Recommended)
 
@@ -93,7 +93,7 @@ For multi-project solutions, you can store your license key in an [environment v
 
 ### Using MediaPlayerControl (Recommended)
 
-The easiest way to add media playback is using the MediaPlayerControl, which provides a full-featured UI by default:
+The easiest way to add media playback to your Avalonia app is using the `MediaPlayerControl`, which provides a full-featured UI by default:
 
 ```xml
 
@@ -109,7 +109,7 @@ The easiest way to add media playback is using the MediaPlayerControl, which pro
 
 ### Using MediaPlayer Directly
 
-For more control, you can use the MediaPlayer class directly:
+For more control, you can use the `MediaPlayer` class directly:
 
 ```csharp
 // Create and initialize a MediaPlayer
@@ -267,6 +267,57 @@ public partial class MainWindow : Window
     }
 }
 ```
+
+## Platform Prerequisites
+
+The `MediaPlayer` component relies on native Media Playback API's on each supported platforms.
+
+### Windows
+
+For Windows 10/11:
+
+- No additional setup required.
+
+For Windows 10N/11N or 10KN/11KN:
+
+- Please see the [Troubleshooting](#troubleshooting) section below.
+
+### macOS/iOS
+
+For macOS 10.15 or iOS 12.0 or higher. 
+
+- No additional setup required.
+
+### Android
+
+For Android API 21 (Android 5.0) or higher.
+
+- No additional setup required.
+
+### Linux
+
+Requires LibVLC 3.21 or higher.
+
+Debian/Ubuntu:
+
+```bash
+apt install libvlc
+```
+
+Fedora:
+
+```bash
+dnf install libvlc
+```
+
+## Video/Audio Codecs Support
+
+The media codecs that `MediaPLayer` supports will depend on the target platform's built-in codecs & additional plugins.
+
+The safest assumption is that most platforms can support for video is `MPEG-4 Part 10 - Advanced Video Coding` or
+more commonly known as `H.264`, with `MPEG-4 Part 14` or `MP4` as video container. 
+
+As for audio, the safe to assume supported codecs are `MP3`, `AAC` and `WAV`.
 
 ## Troubleshooting
 
