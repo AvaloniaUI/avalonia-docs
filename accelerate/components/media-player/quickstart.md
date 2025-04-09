@@ -270,7 +270,7 @@ public partial class MainWindow : Window
 
 ## Platform Prerequisites
 
-The `MediaPlayer` component relies on native media playback API's on each supported platforms.
+The `MediaPlayer` component relies on native Media Playback API's on each supported platforms.
 
 ### Windows
 
@@ -284,19 +284,19 @@ For Windows 10N/11N or 10KN/11KN:
 
 ### macOS/iOS
 
-For macOS Ventura/iOS 16 and above: 
+For macOS 10.15 or iOS 12.0 or higher. 
 
 - No additional setup required.
 
 ### Android
 
-For Android 5 and above:
+For Android API 21 (Android 5.0) or higher.
 
 - No additional setup required.
 
 ### Linux
 
-Requires LibVLC 3.21 or newer.
+Requires LibVLC 3.21 or higher.
 
 Debian/Ubuntu:
 
@@ -309,6 +309,15 @@ Fedora:
 ```bash
 dnf install libvlc
 ```
+
+## Video/Audio Codecs Support
+
+The media codecs that `MediaPLayer` supports will depend on the target platform's built-in codecs & additional plugins.
+
+The safest assumption is that most platforms can support for video is `MPEG-4 Part 10 - Advanced Video Coding` or
+more commonly known as `H.264`, with `MPEG-4 Part 14` or `MP4` as video container. 
+
+As for audio, the safe to assume supported codecs are `MP3`, `AAC` and `WAV`.
 
 ## Troubleshooting
 
