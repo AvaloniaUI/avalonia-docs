@@ -341,7 +341,7 @@ As for platform-specific resources on which codecs are supported, please check t
 
 ### Linux 
 
-- https://wiki.videolan.org/Codec/
+- https://www.videolan.org/vlc/features.html
 
 ### macOS and iOS
 
