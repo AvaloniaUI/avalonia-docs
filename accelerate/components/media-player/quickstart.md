@@ -312,7 +312,7 @@ dnf install libvlc
 
 ## Video/Audio Codecs Support
 
-The media codecs that `MediaPLayer` supports will depend on the target platform's built-in codecs & additional plugins.
+The media codecs that `MediaPlayer` supports will depend on the target platform's built-in codecs & additional plugins.
 
 The safest assumption is that most platforms can support for video is `MPEG-4 Part 10 - Advanced Video Coding` or
 more commonly known as `H.264`, with `MPEG-4 Part 14` or `MP4` as video container. 
