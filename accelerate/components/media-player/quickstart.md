@@ -270,9 +270,12 @@ public partial class MainWindow : Window
 
 ## Platform Prerequisites
 
-The `MediaPlayer` component relies on native Media Playback API's on each supported platforms.
+The `MediaPlayer` component relies on native media playback frameworks on each supported platforms:
 
 ### Windows
+
+`MediaPlayer` uses Windows's Media Foundation to render multimedia content, 
+while utilizing Vulkan Graphics API whenever possible or available on the end-user's installation.
 
 For Windows 10/11:
 
@@ -284,17 +287,24 @@ For Windows 10N/11N or 10KN/11KN:
 
 ### macOS/iOS
 
+`MediaPlayer` uses Apple's AVFoundation to render multimedia content on macOS and iOS. 
+
 For macOS 10.15 or iOS 12.0 or higher. 
 
 - No additional setup required.
 
 ### Android
 
+`MediaPlayer` uses Android's ExoPlayer component to render multimedia content together with Vulkan Graphics API if
+the end-user device supports it.
+
 For Android API 21 (Android 5.0) or higher.
 
 - No additional setup required.
 
 ### Linux
+
+`MediaPlayer` uses the system-installed LibVLC library to render multimedia content for Linux distros.
 
 Requires LibVLC 3.21 or higher.
 
@@ -310,7 +320,7 @@ Fedora:
 dnf install libvlc
 ```
 
-## Video/Audio Codecs Support
+## Codecs Support
 
 The media codecs that `MediaPlayer` supports will depend on the target platform's built-in codecs & additional plugins.
 
@@ -318,6 +328,24 @@ The safest assumption is that most platforms can support for video is `MPEG-4 Pa
 more commonly known as `H.264`, with `MPEG-4 Part 14` or `MP4` as video container. 
 
 As for audio, the safe to assume supported codecs are `MP3`, `AAC` and `WAV`.
+
+As for platform-specific resources on which codecs are supported, please check the following:
+
+### Windows
+
+- https://support.microsoft.com/en-us/windows/codecs-in-media-player-d5c2cdcd-83a2-4805-abb0-c6888138e456
+
+### Android
+
+- https://developer.android.com/media/platform/supported-formats
+
+### Linux 
+
+- https://wiki.videolan.org/Codec/
+
+### macOS and iOS
+
+- Unfortunately, we haven't yet found a definitive primary source on which default codecs are supported in macOS/iOS.
 
 ## Troubleshooting
 
