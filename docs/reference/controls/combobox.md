@@ -23,7 +23,8 @@ You will probably use these properties most often:
 
 | Property                   | Description                                                                                                              |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `Items`                    | The list items collection.                                                                                               |
+| `ItemsSource`              | Gets or sets the list items collection. (Inherited from [ItemsControl](https://docs.avaloniaui.net/docs/reference/controls/itemscontrol))                                                                                              |
+| `Items`                    | Get (read only) the list items collection.                                                                                               |
 | `SelectedIndex`            | The index (zero-based) of the selected item.                                                                             |
 | `SelectedItem`             | The selected item itself.                                                                                                |
 | `AutoScrollToSelectedItem` | Indicates whether to automatically scroll to newly selected items.                                                       |
@@ -91,7 +92,7 @@ This example binds the items in a combo box using a data template. The C# code-b
 ```xml
 <StackPanel Margin="20">
   <ComboBox x:Name="fontComboBox" SelectedIndex="0"
-            Width="200" MaxDropDownHeight="300">
+            Width="200" MaxDropDownHeight="300" x:CompileBindings="False">
     <ComboBox.ItemTemplate>
       <DataTemplate>
         <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
@@ -113,10 +114,9 @@ namespace AvaloniaControls.Views
         public MainWindow()
         {
             InitializeComponent();            
-            fontComboBox.Items = FontManager.Current
-                .GetInstalledFontFamilyNames()
-                .Select(x => new FontFamily(x))
-                .OrderBy(x=>x.Name);
+            fontComboBox.ItemsSource = FontManager.Current
+                .SystemFonts 
+                .OrderBy(x => x.Name); 
             fontComboBox.SelectedIndex = 0;
         }
     }
