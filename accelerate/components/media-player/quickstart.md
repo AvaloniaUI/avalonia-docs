@@ -128,7 +128,7 @@ await player.PlayAsync();
 
 ## Loading Media Sources
 
-### From Files or URLs (UriSource)
+### From Files or URLs using UriSource
 
 ```csharp
 // Local file
@@ -143,7 +143,7 @@ mediaPlayer.Source = new UriSource("https://example.com/video.mp4");
 **Note**: If it's possible, always add the `file://` schema to your local file URI's. This makes sure that
 the player recognizes the file's path as local.
 
-### From Streams (StreamSource)
+### From Streams with StreamSource
 
 ```csharp
 // From file stream
@@ -158,7 +158,7 @@ mediaPlayer.Source = new StreamSource(memoryStream);
 **Note**: Make sure to not control the disposal of the stream you passed to the `StreamSource` as the player will take
 care of its lifetime.
 
-### Using File Picker
+### Using File Picker with StorageFileSource
 
 ```csharp
 public async void OpenFile_Click(object sender, RoutedEventArgs e)
@@ -174,7 +174,7 @@ public async void OpenFile_Click(object sender, RoutedEventArgs e)
     if (files.Count != 1) return;
     if (files[0].Path is not { } path) return;
     
-    mediaPlayer.Source = new UriSource(files[0].Path.ToString());
+    mediaPlayer.Source = new StorageFileSource(files[0]);
 }
 ```
 
@@ -263,7 +263,7 @@ public partial class MainWindow : Window
         if (files.Count != 1) return;
         if (files[0].Path is not { } path) return;
         
-        mediaPlayer.Source = new UriSource(files[0].Path.ToString());
+        mediaPlayer.Source = new StorageFileSource(files[0]);
     }
 }
 ```
