@@ -28,3 +28,5 @@ While `Microsoft.Identity.Client` and `Google.Apis.Auth` include their own Web-U
 ## Does NativeWebView support camera/microphone/screenshare access via getUserMedia() API?
 
 Yes, `getUserMedia()` API is supported across platforms. Users will receive permission prompts for camera, microphone, or screen sharing access, similar to desktop browsers. macOS support was added in version `11.2.4`.
+
+Some platforms also require developer to configure permissions on the application bundle. If any particular permission is necessary for a main application, it's likely to be necessary for a web view. For example, [NSCameraUsageDescription](https://developer.apple.com/documentation/bundleresources/information-property-list/nscamerausagedescription?language=objc) is necessary for macOS/iOS on bundled apps.
