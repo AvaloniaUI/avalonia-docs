@@ -4,8 +4,8 @@
 которые в Avalonia соответствуют классу `Control`.
 `Control` из WPF - является шаблонным Control, которому в Avalonia соответствует `TemplatedControl`.
 
-- В WPF/UWP, для создания нового шаблонного Control, вам нужна использовать `Control`, а в Avalonia `TemplatedControl.`
-- В WPF/UWP, для создания пользовательского Control, вам нужна использовать `FrameworkElement`, а в Avalonia `Control.`
+- В WPF/UWP для создания нового шаблонного Control вам нужно использовать `Control`, а в Avalonia - `TemplatedControl`.
+- В WPF/UWP для создания пользовательского Control вам нужно использовать `FrameworkElement`, а в Avalonia - `Control`.
 
 Подведем итоги:
 
