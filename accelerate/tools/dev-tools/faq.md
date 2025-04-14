@@ -14,6 +14,12 @@ See [Attaching Browser or Mobile application](./advanced/attaching-browser-or-mo
 
 Yes. DiagnosticsPackage is fully trimming friendly. Even though it does use reflection, the tool was tested with AOT.
 
+## Can everybody build project referencing `AvaloniaUI.DiagnosticsSupport`, even without a license?
+
+Yes, `AvaloniaUI.DiagnosticsSupport` is an integration package, a bridge between `Developer Tools` and user app. On its own, it doesn't require any license, and can be referenced in public projects.
+
+But to actually open `Developer Tools`, you would need the license and Avalonia portal account.
+
 ## Is it necessary to exclude `AvaloniaUI.DiagnosticsSupport` package from Release/Production build?
 
 Tool can be useful for internal testing of Release builds. And it's not necessary to only include it with Debug builds.
