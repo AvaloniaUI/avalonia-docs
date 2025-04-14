@@ -66,6 +66,7 @@ const sidebars = {
         'components/webview/nativewebview',
         'components/webview/nativewebdialog',
         'components/webview/webauthenticationbroker',
+        'components/webview/faq',
       ]
     },    
     
