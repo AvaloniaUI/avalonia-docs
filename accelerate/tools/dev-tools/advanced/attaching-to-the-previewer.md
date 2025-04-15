@@ -16,12 +16,12 @@ With `Developer Tools` running out-of-process, it is now possible to attach a pr
 
 ## Configuration
 
-Preview extensions don't support any form of keyboard input, making `ConnectOnStartup` the only option at the moment:
+Preview extensions don't support any form of keyboard input, making `AutoConnectFromDesignMode` the only option at the moment:
 
 ```csharp
 this.AttachDeveloperTools(o =>
 {
-    o.ConnectOnStartup |= Design.IsDesignMode;
+    o.AutoConnectFromDesignMode = true;
 });
 ```
 
@@ -30,19 +30,6 @@ By default, `DeveloperToolsOptions.Runner` is disabled in `IsDesignMode`. It was
 Instead, like on the browser or mobile, the `Developer Tools` app should be opened independently.
 
 ## Troubleshooting
-
-### Opening `Developer Tools` after the previewing window doesn't work
-
-By default, HTTP connection protocol is configured with `5 seconds` timeout. Which can be a common reason of `ConnectOnStartup` being cancelled, if the tool wasn't opened in time before that.
-
-This behavior can be reconfigured by changing `DeveloperToolsOptions.Protocol`:
-
-```csharp
-this.AttachDeveloperTools(o =>
-{
-    o.Protocol = DeveloperToolsOptions.CreateHttp(connectionTimeOut: TimeSpan.FromMinutes(1));
-});
-```
 
 ### Shortcuts are ignored
 
