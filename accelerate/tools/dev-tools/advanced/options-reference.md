@@ -15,6 +15,11 @@ If unset, `Application.Name` or entry assembly name is used.
 Defines if the app should be connected to dev tools on startup.
 By default: `true` on iOS and Android, `false` everywhere else.
 
+## DeveloperToolsOptions.AutoConnectFromDesignMode
+
+Defines if design mode app should be connected to dev tools.
+Default is 'false'.
+
 ## DeveloperToolsOptions.Runner
 
 By default, `DiagnosticsSupport` package attempts to run global `avdt` .NET tool when requested, if `DevTools` instance is not already running.
