@@ -178,6 +178,7 @@ const sidebars = {
                 'basics/user-interface/styling/styles',
                 'basics/user-interface/styling/style-classes',
                 'basics/user-interface/styling/control-themes',
+                'basics/user-interface/styling/container-queries',
                 {
                   'type': 'category',
                   'label': 'Themes',
