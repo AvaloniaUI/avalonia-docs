@@ -1,6 +1,6 @@
 ---
 id: developer-tools
-title: Developer Tools
+title: Legacy Developer Tools
 ---
 
 import DevToolsOverviewScreenshot from '/img/guides/implementation-guides/devtools-overview.png';
@@ -14,6 +14,12 @@ import DevToolsChangePropertyScreenshot from '/img/guides/implementation-guides/
 import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/devtools-change-layout.gif';
 
 # Developer Tools
+
+:::note
+
+Эта документация описывает устаревшие Developer Tools. Сейчас доступно новое приложение  [AvaloniaUI Developer Tools](https://avaloniaui.net/accelerate), предлагающие расширенные возможности и улучшенные инструменты отладки. Старые Developer Tools продолжают поддерживаться обновлениями стабильности.
+
+:::
 
 Avalonia has a built-in DevTools window which is enabled by calling the attached `AttachDevTools()` method in a `Window` constructor. The default templates have this enabled when the program is compiled in `DEBUG` mode:
 
@@ -50,7 +56,7 @@ To open the DevTools, press F12, or pass a different `Gesture` to the `this.Atta
 To use DevTools, you must add `Avalonia.Diagnostics` nuget package.
 
 ```bash
-dotnet add package Avalonia.Diagnostics --version 11.0.0
+dotnet add package Avalonia.Diagnostics
 ```
 
 But by default, it is already installed.

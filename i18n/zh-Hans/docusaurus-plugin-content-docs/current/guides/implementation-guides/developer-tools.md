@@ -1,6 +1,6 @@
 ---
 id: developer-tools
-title: 开发者工具
+title: 开发者工具 (Legacy)
 ---
 
 import DevToolsOverviewScreenshot from '/img/guides/implementation-guides/devtools-overview.png';
@@ -14,6 +14,12 @@ import DevToolsChangePropertyScreenshot from '/img/guides/implementation-guides/
 import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/devtools-change-layout.gif';
 
 # 开发者工具
+
+:::note
+
+本文档涵盖了传统开发者工具。新版[开发者工具](https://avaloniaui.net/accelerate)现已推出，提供增强功能和改进的调试能力。传统开发者工具将继续获得稳定性更新支持。
+
+:::
 
 Avalonia 内置了一个开发工具窗口，可以通过在 `Window` 构造函数中调用附加的 `AttachDevTools()` 方法来启用。在程序以 `DEBUG` 模式编译时，默认模板已启用此功能：
 
@@ -50,7 +56,7 @@ partial class MainWindow
 要使用 DevTools，必须添加 `Avalonia.Diagnostics` nuget 软件包。
 
 ```bash
-dotnet add package Avalonia.Diagnostics --version 11.0.0
+dotnet add package Avalonia.Diagnostics
 ```
 
 但默认情况下，它已经安装好了。
