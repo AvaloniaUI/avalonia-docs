@@ -85,6 +85,12 @@ In both cases, command is the same:
 dotnet add package AvaloniaUI.DiagnosticsSupport
 ```
 
+:::note
+
+Old package `Avalonia.Diagnostics` can be safely removed. It's not used by new `Developer Tools`.
+
+:::
+
 ## Step 3: Configuring your project
 
 Once the `DiagnosticsSupport` package is installed, you need to enable it in your `Application` class:

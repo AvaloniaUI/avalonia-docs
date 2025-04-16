@@ -14,6 +14,12 @@ See [Attaching Browser or Mobile application](./advanced/attaching-browser-or-mo
 
 Yes. DiagnosticsPackage is fully trimming friendly. Even though it does use reflection, the tool was tested with AOT.
 
+## Does `AvaloniaUI.DiagnosticsSupport` replace `Avalonia.Diagnostics` package? Or do I need both?
+
+You only need `AvaloniaUI.DiagnosticsSupport`.
+`Avalonia.Diagnostics` is an old package used for legacy developer tools. It can be safely removed from the project.
+If for some reason necessary, both packages can be referenced, but you might want to setup different gestures for each tool.
+
 ## Can everybody build project referencing `AvaloniaUI.DiagnosticsSupport`, even without a license?
 
 Yes, `AvaloniaUI.DiagnosticsSupport` is an integration package, a bridge between `Developer Tools` and user app. On its own, it doesn't require any license, and can be referenced in public projects.
