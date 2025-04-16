@@ -3,7 +3,7 @@ id: index
 title: Styling
 ---
 
-Avalonia provides two primary mechanisms for styling controls:
+Avalonia provides three primary mechanisms for styling controls:
 
 ## Styles
 
@@ -12,3 +12,6 @@ Avalonia provides two primary mechanisms for styling controls:
 ## Control themes
 
 - [Control Themes](control-themes) are similar to WPF/UWP styles and are usually used to apply a theme to controls.
+
+## Container Queries
+- [Container Queries](container-queries) are collection of [styles](styles) that are applied based on the size of a container.
