@@ -13,7 +13,7 @@ import DevToolsEventsScreenshot from '/img/guides/implementation-guides/devtools
 import DevToolsChangePropertyScreenshot from '/img/guides/implementation-guides/devtools-change-property.gif';
 import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/devtools-change-layout.gif';
 
-# 开发者工具
+# 开发者工具 (Legacy)
 
 :::note
 

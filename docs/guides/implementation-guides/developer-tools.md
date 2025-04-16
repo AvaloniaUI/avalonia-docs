@@ -13,7 +13,7 @@ import DevToolsEventsScreenshot from '/img/guides/implementation-guides/devtools
 import DevToolsChangePropertyScreenshot from '/img/guides/implementation-guides/devtools-change-property.gif';
 import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/devtools-change-layout.gif';
 
-# Developer Tools
+# Legacy Developer Tools
 
 :::note
 
