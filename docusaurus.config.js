@@ -196,6 +196,14 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+      announcementBar: {
+        id: 'accelerate',
+        content:
+          'Accelerate your Avalonia development - <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/accelerate">see what you’re missing.</a>',
+        backgroundColor: '#0043FF',
+        textColor: '#FFFFFF',
+        isCloseable: false,
+      },
       docs: {
         sidebar: {
           hideable: true,
