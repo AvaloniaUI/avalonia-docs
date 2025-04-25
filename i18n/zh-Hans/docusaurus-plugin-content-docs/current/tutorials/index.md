@@ -7,14 +7,14 @@ title: 示例和教程
 
 ## 待办事项列表应用
 
-这是一个简单的待办事项列表应用，使用了 Model-View-ViewModel (MVVM) 模式，并绑定到一个集合和 _Reactive UI_ 编程。您将会了解以下内容：
+一个使用模型-视图-视图模型（MVVM）模式的简单待办事项列表应用程序，通过绑定到集合，您将了解：
 
-* `RaiseAndSetIfChanged`
-* `ReactiveCommand`
-* `IObservable<>`
-* `Observable.Merge()` 与 `Select()`、`Take()` 和 `Subscribe()` 方法的使用。
+* 如何使用绑定(Bindings)
+* 如何使用命令(Commands)
+* 基本样式设置(Styling)
+* 一些非常基础的文件读写(I/O)操作
 
-这是一个非常好的 MVVM 和 _ReactiveUI_ 技术入门教程，特别适合用于 _Avalonia UI_ 编程。您可以在 [这里](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList) 找到教程。
+这是一个推荐的很好的使用 MVVM 模式在 _Avalonia UI_ 下编程的教程。在[这里](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/SimpleToDoList)查看教程。
 
 ## 音乐商店应用
 
@@ -28,4 +28,4 @@ title: 示例和教程
 
 该应用以 MVVM 模式呈现高度图形化的界面，并演示了如何显示对话框、展示图像和数据集合，并实现数据持久化。
 
-您可以在 [这里](music-store-app/) 查看这个演示。
+您可以在 [这里](./music-store-app/) 查看这个演示。
