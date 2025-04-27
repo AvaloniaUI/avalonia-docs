@@ -1,0 +1,54 @@
+---
+id: the-design-preview
+title: 设计预览
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+在本页面中，您将探索`Window`的属性，并通过其中部分属性在预览窗格中调整`Window`的显示尺寸。
+
+首先观察`<Window>`标签的XAML代码，其结构如下：
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GetStartedApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        x:Class="GetStartedApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="GetStartedApp">
+```
+
+`Window`标签首先定义了Avalonia使用的XML命名空间。其中'x'、'd'和'mc'是命名空间别名。
+
+设计命名空间'd'允许设置设计时属性`d:DesignWidth`和`d:DesignHeight`。在上述代码示例中，这些属性值使预览界面呈现出类似移动设备（竖屏方向）的显示效果。
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GetStartedApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        // highlight-next-line
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        x:Class="GetStartedApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="GetStartedApp">
+```
+
+设置这些属性后，窗口的预览效果如下所示：
+
+<ThemedImage
+            alt="Application running"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/temperature-design-preview-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/temperature-design-preview-dark.png'),
+            }}
+            />
+
+在下一页中，您将学习如何通过响应`Button`的`Click`事件为应用程序添加交互功能。 
