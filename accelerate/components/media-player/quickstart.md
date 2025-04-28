@@ -34,7 +34,15 @@ Avalonia Accelerate packages are distributed through a dedicated NuGet feed that
       <add key="ClearTextPassword" value="YOUR_LICENSE_KEY" />
     </avalonia-accelerate>
   </packageSourceCredentials>
-// highlight-end
+  <packageSourceMapping>
+     <packageSource key="api.nuget.org">
+        <package pattern="*" />
+     </packageSource>
+     <packageSource key="avalonia-accelerate">
+        <package pattern="Avalonia.Controls.MediaPlayer" />
+     </packageSource>
+  </packageSourceMapping>
+   // highlight-end
 </configuration>
 ```
 
