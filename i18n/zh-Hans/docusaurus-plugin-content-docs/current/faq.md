@@ -4,7 +4,7 @@ title: 常见问题
 ---
 
 ## Avalonia是什么？
-Avalonia 是一个开源的跨平台 UI 框架。它是 [.NET 基金会](https://dotnetfoundation.org/) 的一部分，并被认为是其中最活跃的社区项目之一。它专为创建灵活且美观的用户界面而设计。Avalonia 支持多种应用程序开发平台，包括 Windows、Linux、macOS、iOS、Android 和 WebAssembly。
+Avalonia 是一个开源的跨平台 UI 框架。它是最受 .NET 开发人员欢迎的跨平台用户界面框架。它专为创建灵活美观的用户界面而设计。Avalonia 支持多种应用程序开发平台，包括 Windows、Linux、macOS、iOS、Android 和 WebAssembly。
 
 Avalonia 基于现代的 .NET 技术栈，允许开发人员使用 C# 或任何其他 .NET 语言编写代码，并使用 XAML 标记语言定义用户界面。类似于 WPF，Avalonia 使用基于 XAML 的样式系统，其布局系统和绑定基础设施模型为熟悉 XAML 框架的开发人员提供了一个熟悉的环境。
 
@@ -63,7 +63,9 @@ Avalonia的强大样式系统受到WPF和CSS的启发，使您能够打造美丽
 
 ## 是否有拖放式的可视化设计器？
 
-没有。Avalonia没有提供拖放式的设计器，而是支持实时预览功能。预览器会在您修改XAML时即时渲染UI。
+我们正在努力在2025年为Avalonia带来完整的拖放设计器体验。这个设计器将是[Avalonia Accelerate](https://github.com/AvaloniaUI/Avalonia/discussions/16997)的一部分，这是一个付费产品，旨在提高Avalonia生态系统中的开发者生产力。
+
+Avalonia Accelerate将通过可视化设计工具帮助开发者更高效地构建应用程序，这些工具将补充Avalonia所擅长的现有XAML优先方法。
 
 ---
 
