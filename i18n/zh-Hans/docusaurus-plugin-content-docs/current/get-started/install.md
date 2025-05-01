@@ -3,9 +3,9 @@ id: install
 title: 安装
 ---
 
-## 预安装
+## 预先安装
 
-请先安装您选择的受支持的IDE。Avalonia 支持 Visual Studio、Rider 和 Visual Studio Code。
+请先安装您选择的受支持的 IDE。Avalonia 支持 Visual Studio、Rider 和 Visual Studio Code。
 
 ## 安装 Avalonia UI 模板
 
@@ -13,7 +13,7 @@ title: 安装
 
 要安装 [Avalonia 模板](https://github.com/AvaloniaUI/avalonia-dotnet-templates)，请运行以下命令：
 
-```bash
+```bash title='Bash'
 dotnet new install Avalonia.Templates
 ```
 
@@ -23,7 +23,7 @@ dotnet new install Avalonia.Templates
 
 要列出已安装的模板，请运行
 
-```bash
+```bash title='Bash'
 dotnet new list
 ```
 
@@ -46,13 +46,13 @@ Avalonia Window                               avalonia.window             [C#],F
 
 项目模板安装完成后，您可以通过命令行运行以下命令创建一个新的 Avalonia UI 应用程序：
 
-```bash
+```bash title='Bash'
 dotnet new avalonia.app -o MyApp
 ```
 
 这会创建一个名为 `MyApp` 的新文件夹，其中包含您的应用程序文件。要运行应用程序，请导航到 `MyApp` 文件夹并运行：
 
-```bash
+```bash title='Bash'
 cd MyApp
 dotnet run
 ```
@@ -67,9 +67,11 @@ dotnet run
 
 ```bash
 dotnet --version
+
+8.0.202 [C:\Program Files\dotnet\sdk] <-- 您的版本可能有所不同
 ```
 
-如果 `dotnet` 不是识别的程序，请确保您已经安装了 IDE。接下来，确保 `dotnet` 已关联到终端。在 Windows 上，这涉及检查环境变量：在命令提示符中运行 `echo %PATH%` 或在 PowerShell 中运行 `echo $Env:PATH`。
+如果 `dotnet` 不是可识别的程序，请确保您已经安装了 IDE。接下来，确保 `dotnet` 已关联到终端。在 Windows 上，这涉及检查环境变量：在命令提示符中运行 `echo %PATH%` 或在 PowerShell 中运行 `echo $Env:PATH`。
 
 ### 确保 NuGet 源配置正确
 
@@ -77,6 +79,10 @@ dotnet --version
 
 ```bash
 dotnet nuget list source
+
+注册的源:
+  1.  nuget.org [已启用]
+      https://api.nuget.org/v3/index.json
 ```
 
 如果未列出此源，请运行以下命令添加 NuGet 源：
@@ -85,4 +91,4 @@ dotnet nuget list source
 dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
 ```
 
-如果NuGet已列出，但是包安装仍然失败，请考虑网络连接或防火墙问题。
+如果 NuGet 已列出，但是包安装仍然失败，请考虑网络连接或防火墙问题。
