@@ -34,7 +34,9 @@ You will probably use these properties most often:
 
 This example modifies the default application menu in macOS.
 
- > **_NOTE:_** Changing the application's `Name` property will cause the application menu header to change. In this example, it is set to *Sample Application*.
+:::info
+Changing the application's `Name` property will cause the application menu header to change. In this example, it is set to *Sample Application*.
+:::
 
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
@@ -116,7 +118,9 @@ public void CopyCommand() { }
 public void PasteCommand() { }
 ```
 
- > **_NOTE:_** Note that the menu item will not be enabled without either a code-behind `Click` event handler or a function bound using the `Command` attribute.
+:::info
+Note that the menu item will not be enabled without either a code-behind `Click` event handler or a function bound using the `Command` attribute.
+:::
 
 ## Example
 
