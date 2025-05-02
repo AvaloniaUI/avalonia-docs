@@ -120,6 +120,10 @@ public void CopyCommand() { }
 public void PasteCommand() { }
 ```
 
+### Gesture Format
+
+The `Gesture` attribute is a `+`-delimited list of key modifiers following by a `+`, then followed by a single key character (which itself may be `+`). Permissible modifiers include `Alt`, `Control`, `Shift`, and `Meta`. If the `Gesture` attribute is the empty string or contains only a single key character, no exception will be thrown but the gesture will not activate the menu item. If a key modifier is provided without a key, or if the attribute value isn't formatted correctly, an `ArgumentException` will be thrown. For more details, see the source code for [`KeyGesture`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/KeyGesture.cs), [`Key`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/Key.cs), and [`KeyModifier`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/IKeyboardDevice.cs).
+
 :::info
 Note that the menu item will not be enabled without either a code-behind `Click` event handler or a function bound using the `Command` attribute.
 :::
