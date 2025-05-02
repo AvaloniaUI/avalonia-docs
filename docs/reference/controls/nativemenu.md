@@ -94,10 +94,10 @@ This example adds a *File* menu and an *Edit* menu. For context regarding where 
                 </NativeMenu>
             </NativeMenuItem>
             <NativeMenuItem Header="Edit" IsEnabled="true">
-                <NativeMenu>                    
-                    <NativeMenuItem Header="Cut" Command="{Binding CutCommand}" Gesture="Meta-X" />
-                    <NativeMenuItem Header="Copy" Command="{Binding CopyCommand}" Gesture="Meta-C" />
-                    <NativeMenuItem Header="Past" Command="{Binding PasteCommand}" Gesture="Meta-V" />
+                <NativeMenu>
+                    <NativeMenuItem Header="Cut" Command="{Binding CutCommand}" Gesture="Meta+X" />
+                    <NativeMenuItem Header="Copy" Command="{Binding CopyCommand}" Gesture="Meta+C" />
+                    <NativeMenuItem Header="Past" Command="{Binding PasteCommand}" Gesture="Meta+V" />
                 </NativeMenu>
             </NativeMenuItem>
         </NativeMenu>
