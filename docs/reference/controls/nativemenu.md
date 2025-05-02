@@ -38,6 +38,8 @@ This example modifies the default application menu in macOS.
 Changing the application's `Name` property will cause the application menu header to change. In this example, it is set to *Sample Application*.
 :::
 
+![image](https://github.com/user-attachments/assets/d30bab47-f133-4f79-9bdb-d4fb4569ed61)
+
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
