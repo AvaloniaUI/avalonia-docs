@@ -128,6 +128,10 @@ The `Gesture` attribute is a `+`-delimited list of key modifiers following by a 
 Note that the menu item will not be enabled without either a code-behind `Click` event handler or a function bound using the `Command` attribute.
 :::
 
+:::info
+Note that on macOS, a menu bar-level `NativeMenuItem` with the header `Edit` will include some additional macOS features by default.
+:::
+
 ## Example
 
 This example defines a native menu that can be attached to a tray icon:
