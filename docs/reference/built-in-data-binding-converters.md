@@ -58,12 +58,25 @@ This example binding will hide the text block if its bound text is null or empty
                        Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
 ```
 
-And this example will hide the content control if the bound object is null or empty:
+This example will hide the content control if the bound object is null or empty:
 
 ```xml
 <ContentControl Content="{Binding MyContent}"
                 IsVisible="{Binding MyContent, 
                             Converter={x:Static ObjectConverters.IsNotNull}}"/>
+```
+
+And this example demonstrates binding to multiple bound parameters. It will show the text block if the `MyText` property of the bound object is not null or empty and the `IsMyNotEmptyTextVisible` property is set to `true`:
+
+```xml
+<TextBlock Text="{Binding MyText, StringFormat='My text: {0}'}">
+  <TextBlock.IsVisible>
+    <MultiBinding Converter="{x:Static BoolConverters.And}">
+        <Binding Path="MyText" Converter="{x:Static StringConverters.IsNotNullOrEmpty}"/>
+        <Binding Path="IsMyNotEmptyTextVisible"/>
+    </MultiBinding>
+  </TextBlock.IsVisible>
+</TextBlock>
 ```
 
 ## More Information
