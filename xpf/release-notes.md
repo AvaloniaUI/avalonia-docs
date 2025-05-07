@@ -3,6 +3,51 @@ id: release-notes
 title: Release Notes
 ---
 
+## XPF 1.5.0
+
+* Apply TextAlignment to overflowed AVTextLine
+* BmpBitmapDecoderHandle - support 1-Bit BMP
+* Fix Window.Closing event not being fired in certain situations
+* Fix ImageBrush being broken when used as opacity mask
+* Fix radial gradient and dash array rendering
+* Fix hiding/showing dialogs.
+* Set dialog task to complete when dialog is hidden
+* Constrain subtree content bounds by the clip bounds
+* Fix crash in file dialog when no filename is specified
+* Make sure draw rounded rectangle is executed with valid radii
+* Alternative menu capture fix
+* Use first monitor if no primary
+* Fix AvalonEdit completion window crash
+* Add support for FontFamily.FamilyTypefaces
+* Implemented SetCursorPos API shim
+* Improve bitmap performance
+* Invoke MediaContext update handler via BeginInvokeOnRender
+* Remove native calls in ribbon control
+* Fix win32 shims on x86
+* Added logging for APISHIM calls
+* File ok handling 
+* Update System.IO.Packaging to 6.0.2
+* Make sure the paragraphWidth is rounded up
+* Add support for VB MsgBox function
+* Add support for VB `InputBox`.
+* Fix Border Position of RichTextBox
+* Fix crash when XpfContain detached from tree
+* Handle Case for 8bpp Bitmaps
+* Rework font loading
+* Handle RectangleNode with zero height
+* Fix Font Metrics Rounding Error
+* Fix frame decode finalize
+* Fix PngBitmapDecoder alpha channel
+* Do not share the same FontMetrics between Font and FontFamily
+* Handle duplicate fonts when loading font collections
+* Fix custom font face simulation
+* Ensure localized font strings are mapped to available cultures
+* Simplify target pixel format for decoded bitmap data
+* Allow showing popups without placement target.
+* Add support for indexed bitmap sources
+* Implement OpenFolderDialog
+* Don't call win32 `GetCursorPos` in `Popup`.
+
 ## XPF 1.4.0 
 
 * Remove System.Configuration.ConfigurationManager usages
