@@ -146,8 +146,13 @@ private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel,
 - Add the following code to the end of the constructor:
 
 ```csharp
-this.WhenActivated(action => 
-         action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+this.WhenActivated(action =>
+{
+     if (viewModel != null)
+     {
+        action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+     }
+}
 ```
 
 This means that whenever the main window view is activated, the `DoShowDialogAsync` handler is registered. The action is disposable, so that _ReactiveUI_ can clean up the registration when  the main window view is not on the screen.
@@ -168,7 +173,12 @@ namespace Avalonia.MusicStore.Views
         {
             InitializeComponent();
             this.WhenActivated(action =>
-                action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+            {
+                if (viewModel != null)
+                {
+                   action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+                }
+            }
         }
 
         private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel, 
