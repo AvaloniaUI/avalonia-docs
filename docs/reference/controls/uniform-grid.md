@@ -38,9 +38,9 @@ You will probably use these properties most often:
 
 ```xml
 <UniformGrid Rows="1" Columns="3" Width="300" Height="200">
-    <Rectangle Fill="navy" Grid.Column="0" Grid.Row="0"/>
-    <Rectangle Fill="white" Grid.Column="1" Grid.Row="0"/>
-    <Rectangle Fill="red" Grid.Column="2" Grid.Row="0"/>
+    <Rectangle Fill="navy" />
+    <Rectangle Fill="white" />
+    <Rectangle Fill="red" />
 </UniformGrid>
 ```
 
