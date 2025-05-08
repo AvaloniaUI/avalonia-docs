@@ -15,7 +15,24 @@ You can then allocate child controls to the cells created, using attached row an
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Rows</code></td><td>Integer. Sets the number of equal rows in the height.</td></tr><tr><td><code>Columns</code></td><td>Integer. Sets the number of equal columns in the width</td></tr><tr><td><code>Grid.Column</code></td><td>Attached to a child control to set its column index.</td></tr><tr><td><code>Grid.Row</code></td><td>Attached to a child control to set its row index.</td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th width="261">Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Rows</code></td>
+      <td>Integer. Sets the number of equal rows in the height.</td>
+    </tr>
+    <tr>
+      <td><code>Columns</code></td>
+      <td>Integer. Sets the number of equal columns in the width</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Example
 
