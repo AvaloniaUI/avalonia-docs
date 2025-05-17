@@ -6,7 +6,7 @@ title: 什么是 Avalonia?
 import AvaloniaArchitecture from '/img/overview/Architecture.png';
 import MauiComparision from '/img/overview/MAUI-Comparision.png';
 
-Avalonia 是一个可以让开发人员使用 .NET 为 Windows, macOS, Linux, iOS, Android 和 WebAssembly 平台开发应用程序的开源、跨平台UI框架。 
+Avalonia 是一个开源的跨平台 UI 框架，使开发者能够使用 .NET 为 Windows、macOS、Linux、iOS、Android 和 WebAssembly 创建应用程序。
 
 它使用自己的渲染引擎来绘制 UI 控件，确保在所有支持的平台上具有一致的外观和行为。这意味着开发者可以共享他们的 UI 代码，并在不同的目标平台上保持统一的外观和体验。
 

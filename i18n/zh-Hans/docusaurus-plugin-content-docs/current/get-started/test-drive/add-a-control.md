@@ -91,7 +91,7 @@ XAML 使用 XML 特性来指定控件的呈现和行为。这些特性可以通�
 <img className="center" src={ButtonIntellisenseScreenshot} alt="" />
 :::
 
-`按钮`现在应该移动到窗口内容区域的中心。水平方向由于更改而移动，垂直方则为按钮的默认设置。
+按钮现在应该移动到窗口内容区域的中心。水平方向由于更改而移动，垂直方则为按钮的默认设置。
 
 :::info
 有关Avalonia UI内置控件及其属性的完整信息，请参考[此处](../../reference/controls)。
