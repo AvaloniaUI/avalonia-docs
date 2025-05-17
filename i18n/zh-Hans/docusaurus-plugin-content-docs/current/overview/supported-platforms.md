@@ -32,10 +32,10 @@ Avalonia 应用程序可以为以下平台编写：
 * macOS 14 (Sonoma)
 * macOS 15 (Sequoia)
 
-Avalonia 也可以在 macOS 10.13 (High Sierra) 上运行，但我们正在迁移到 Metal GPU API，该 API 目前默认是禁用的。计划在某个小版本更新中启用它。
+Avalonia 也可以在 macOS 10.13 (High Sierra) 上运行，但我们正在迁移到 Metal GPU API，该 API 目前默认处于禁用状态。计划在某个小版本更新中启用它。
 
 :::important
-使用 Avalonia 可以在 Windows、macOS 和 Linux 上开发 macOS 应用程序。如果您计划签名和公证您的 macOS 应用程序以进行分发，您将需要一台安装了 XCode 的 Mac 设备。
+可以使用 Avalonia 在 Windows、macOS 和 Linux 上开发 macOS 应用程序。如果您计划签名和公证您的 macOS 应用程序以进行分发，您将需要一台安装了 XCode 的 Mac 设备。
 :::
 
 ## Linux
@@ -44,14 +44,14 @@ Avalonia 也可以在 macOS 10.13 (High Sierra) 上运行，但我们正在迁�
 * Ubuntu 16.04+
 * Fedora 30+
 
-Avalonia 在大多数支持 .NET SDK 并具有 X11 或帧缓冲功能的 Linux 发行版上运行良好。虽然我们官方支持 Debian 9+、Ubuntu 16.04+ 和 Fedora 30+，但许多其他发行版也可以无问题地运行 Avalonia 应用程序，我们积极努力确保广泛的 Linux 兼容性。
+Avalonia 在大多数支持 .NET SDK 并具有 X11 或帧缓冲功能的 Linux 发行版上运行良好。虽然我们官方支持 Debian 9+、Ubuntu 16.04+ 和 Fedora 30+，但许多其他发行版也可以毫无问题地运行 Avalonia 应用程序，而且我们积极努力确保广泛的 Linux 兼容性。
 
-对于拥有[支持协议](https://avaloniaui.net/support)的客户，我们提供扩展的 Linux 发行版覆盖范围，并可以协助满足特定的发行版需求。Wayland 支持目前处于私有预览阶段，并将在即将发布的版本中提供。
+对于拥有 [支持协议](https://avaloniaui.net/support) 的客户，我们提供扩展的 Linux 发行版覆盖范围，并可以协助满足特定的发行版需求。Wayland 支持目前处于内部预览阶段，并将在即将发布的版本中提供。
 
 WSL 2 发行版也受支持，但需要单独安装 `libice6`、`libsm6` 和 `libfontconfig1` 依赖项。
 
 :::info
-Skia 是基于 glibc 2.17 构建的。如果您的发行版使用其他版本，您需要在 [SkiaSharp](https://github.com/mono/SkiaSharp) 上自行构建 libSkiaSharp.so。您也可以访问 SkiaSharp 的主页以获取有关支持版本的更多信息。
+Skia 是基于 glibc 2.17 构建的。如果您的发行版使用的是其他版本，则需要在 [SkiaSharp](https://github.com/mono/SkiaSharp) 上自行构建 libSkiaSharp.so。您也可以访问 SkiaSharp 的主页以获取有关支持版本的更多信息。
 :::
 
 ## iOS 
@@ -93,7 +93,7 @@ Android 支持需要 .NET 7。
 :::
 
 ## WebAssembly (浏览器)
-任何完全支持 WebAssembly 的浏览器都应该可以运行 - https://caniuse.com/wasm。
+从技术上讲，任何具有完整 WebAssembly 支持的浏览器都应该可以运行 - https://caniuse.com/wasm。
 
 为了获得最佳性能和支持，我们推荐使用最新版本的 Chrome 或 Safari。
 

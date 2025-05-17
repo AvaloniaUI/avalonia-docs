@@ -3,21 +3,28 @@ id: input-controls
 title: 输入控件
 ---
 
-import InputControlsScreenshot from '/img/get-started/test-drive/input-controls.png';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-在这个页面上，您将学习如何添加一些Avalonia输入控件并将其排列整齐。目标是在一行中添加带有标签的数字输入控件，并在其下面一行中添加对应的输出控件。
+在这个页面上，您将学习如何添加一些 Avalonia 输入控件并将其排列整齐。目标是在一行中添加带有标签的数字输入控件，并在其下面一行中添加对应的输出控件。
 
-为了实现这个布局，您将使用内置的网格控件，并将标签和输入控件放置在其单元格中。
+为了实现这个布局，您将使用内置的网格控件 `Grid`，并将标签和输入控件放置在其单元格中。
 
-这张图片展示了结果布局（运行中）并显示了网格线。网格线是为了可视化布局而显示的 - 在生产界面上通常不会这样做。
+这张图片展示了完成时的布局（运行中）并显示了网格线。网格线是为了可视化布局而显示的 - 在生产环境的界面上通常不会这样做。
 
-<img className="center" src={InputControlsScreenshot} alt="Window showing input controls" />
+<ThemedImage
+        alt="Temperature StackPanel"
+        className="center"
+        sources={{
+            light: useBaseUrl('/img/get-started/test-drive/input-controls-light.png'),
+            dark: useBaseUrl('/img/get-started/test-drive/input-controls-dark.png'),
+        }}
+        />
 
-要使用网格控件创建布局，请按照以下步骤进行操作：
+要使用网格控件创建一个2行3列的布局，请按照以下步骤进行操作：
 
 - 如果应用正在运行，请停止应用。
 - 在 XAML 中找到 `<Border>` 和 `<Button>` 之间的空行
-- 插入一个`<Grid>`标签，如下所示：
+- 插入一个 `<Grid>` 标签，如下所示：
 
 ```xml
 <StackPanel>
@@ -65,7 +72,7 @@ import InputControlsScreenshot from '/img/get-started/test-drive/input-controls.
     <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0"/>
     <Label Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</Label>
     <TextBox Grid.Row="1"  Grid.Column="1" Margin="0 5" Text="0"/>
-    <Button Grid.Row="2" Grid.Column="1" Margin="0 5">Calculate</Button>
+    <Button Grid.Row="2" Grid.Column="1">Calculate</Button>
     // highlight-end
 </Grid>
 ```
