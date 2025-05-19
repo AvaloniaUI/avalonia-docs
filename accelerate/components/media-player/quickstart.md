@@ -39,7 +39,7 @@ Avalonia Accelerate packages are distributed through a dedicated NuGet feed that
         <package pattern="*" />
      </packageSource>
      <packageSource key="avalonia-accelerate">
-        <package pattern="Avalonia.Controls.MediaPlayer" />
+        <package pattern="*" />
      </packageSource>
   </packageSourceMapping>
    // highlight-end
