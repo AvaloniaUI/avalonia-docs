@@ -93,7 +93,7 @@ Android 支持需要 .NET 7。
 :::
 
 ## WebAssembly (浏览器)
-从技术上讲，任何具有完整 WebAssembly 支持的浏览器都应该可以运行 - https://caniuse.com/wasm。
+从技术上讲，任何具有完整 WebAssembly 支持的浏览器都应该可以运行 - [https://caniuse.com/wasm](https://caniuse.com/wasm)。
 
 为了获得最佳性能和支持，我们推荐使用最新版本的 Chrome 或 Safari。
 
