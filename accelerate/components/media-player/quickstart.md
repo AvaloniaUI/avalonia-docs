@@ -306,7 +306,7 @@ For Android API 21 (Android 5.0) or higher.
 
 `MediaPlayer` uses the system-installed LibVLC library to render multimedia content for Linux distros.
 
-Requires LibVLC 3.21 or higher.
+Requires LibVLC 3.0.21 or higher.
 
 Debian/Ubuntu:
 
