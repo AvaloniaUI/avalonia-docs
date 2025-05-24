@@ -111,7 +111,7 @@ Depending on the sizing stratedy, the container will use the maximum avialable s
 The following queries are available.
 * `min-width`: equivalent to `x >= width`
 * `min-height`: equivalent to `x >= height`
-* `min-width`: equivalent to `x <= width`
+* `max-width`: equivalent to `x <= width`
 * `max-height`: equivalent to `x <= height`
 * `height`: equivalent to `x == width`
 * `width`: equivalent to `x == height`
