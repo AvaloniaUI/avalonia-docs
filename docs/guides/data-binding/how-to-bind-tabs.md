@@ -10,16 +10,16 @@ You can dynamically create tab items with **data binding**. To do this, bind the
 
 You can then use a **data template** to display the objects.
 
-This example uses a collection of objects created from this `TabItemTemplate` class:
+This example uses a collection of objects created from this `ItemViewModel` class:
 
 ```csharp
 namespace MyApp.ViewModel;
 
-public class TabItemTemplate
+public class ItemViewModel
 {
     public string Header { get; }
     public string Content { get; }
-    public TabItemTemplate(string header, string content)
+    public ItemViewModel(string header, string content)
     {
         Header = header;
         Content = content;
@@ -27,12 +27,12 @@ public class TabItemTemplate
 }
 ```
 
-Create a property that accesses a collection of `TabItemTemplate` instances.
+Create a property that accesses a collection of `ItemViewModel` instances.
 
 ```csharp
-public ObservableCollection<TabItemTemplate> Items { get; set; } = new() { 
-    new TabItemTemplate("One", "Some content on first tab"),
-    new TabItemTemplate("Two", "Some content on second tab"),
+public ObservableCollection<ItemViewModel> Items { get; set; } = new() { 
+    new ItemViewModel("One", "Some content on first tab"),
+    new ItemViewModel("Two", "Some content on second tab"),
 };
 ```
 
@@ -54,7 +54,7 @@ Finally create a `TabControl` and bind its `ItemsSource` property to the `Items`
             xmlns:vm="using:MyApp.ViewModel"
         or
             xmlns:vm="clr-namespace:MyApp.ViewModel;assembly=MyApp.ViewModel" -->
-      <DataTemplate DataType="vm:TabItemTemplate">
+      <DataTemplate DataType="vm:ItemViewModel">
         <DockPanel LastChildFill="True">
           <TextBlock Text="This is content of selected tab" DockPanel.Dock="Top" FontWeight="Bold" />
           <TextBlock Text="{Binding Content}" />
