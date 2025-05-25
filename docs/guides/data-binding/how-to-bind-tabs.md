@@ -6,20 +6,20 @@ title: How To Bind Tabs
 
 ## Binding Support Example
 
-You can dynamically create tab items with **data binding**. To do this, bind the `ItemsSource` property of a tab control to an array of objects representing the tab header and content.
+You can dynamically create tab items with **data binding**. To do this, bind the `ItemsSource` property of a tab control to a collection of objects representing the tab header and content.
 
 You can then use a **data template** to display the objects.
 
-This example uses an array of objects created from this `TabItemViewModel` class:
+This example uses a collection of objects created from this `ItemViewModel` class:
 
 ```csharp
 namespace MyApp.ViewModel;
 
-public class TabItemViewModel
+public class ItemViewModel
 {
     public string Header { get; }
     public string Content { get; }
-    public TabItemViewModel(string header, string content)
+    public ItemViewModel(string header, string content)
     {
         Header = header;
         Content = content;
@@ -27,21 +27,21 @@ public class TabItemViewModel
 }
 ```
 
-Create an array of two `TabItemViewModel` instances and bind it to the DataContext.
+Create a property that accesses a collection of `ItemViewModel` instances.
 
 ```csharp
-DataContext = new TabItemViewModel[] { 
-    new TabItemViewModel("One", "Some content on first tab"),
-    new TabItemViewModel("Two", "Some content on second tab"),
+public ObservableCollection<ItemViewModel> Items { get; set; } = new() { 
+    new ItemViewModel("One", "Some content on first tab"),
+    new ItemViewModel("Two", "Some content on second tab"),
 };
 ```
 
 The `TabStrip` header content is defined by ItemTemplate property, while `TabItem`'s content is defined by ContentTemplate property.
 
-Finally create a `TabControl` and bind its `ItemsSource` property to the DataContext.
+Finally create a `TabControl` and bind its `ItemsSource` property to the `Items`.
 
 ```xml
-<TabControl ItemsSource="{Binding}">
+<TabControl ItemsSource="{Binding Items}">
     <TabControl.ItemTemplate>
       <DataTemplate>
         <TextBlock Text="{Binding Header}" />
@@ -54,7 +54,7 @@ Finally create a `TabControl` and bind its `ItemsSource` property to the DataCon
             xmlns:vm="using:MyApp.ViewModel"
         or
             xmlns:vm="clr-namespace:MyApp.ViewModel;assembly=MyApp.ViewModel" -->
-      <DataTemplate DataType="vm:TabItemViewModel">
+      <DataTemplate DataType="vm:ItemViewModel">
         <DockPanel LastChildFill="True">
           <TextBlock Text="This is content of selected tab" DockPanel.Dock="Top" FontWeight="Bold" />
           <TextBlock Text="{Binding Content}" />
