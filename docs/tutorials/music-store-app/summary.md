@@ -5,6 +5,7 @@ description: TUTORIALS - Music Store App
 # Conclusion
 
 In this tutorial you have seen how _Avalonia UI_ can be used to create a highly graphical desktop app.
+For the full source code of the Music Store App tutorial, visit the [GitHub repository](https://github.com/AvaloniaUI/MusicStoreTutorial).
 
 ## Application Solution Architecture
 
