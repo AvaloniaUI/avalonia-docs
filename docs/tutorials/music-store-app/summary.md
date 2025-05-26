@@ -8,7 +8,7 @@ In this tutorial you have seen how _Avalonia UI_ can be used to create a highly 
 
 ## Application Solution Architecture
 
-This tutorial has used an application solution architecture that uses the MVVM pattern with the help of the _ReactiveUI_ framework. It manages multiple windows from the code-behind files.
+This tutorial has used an application solution architecture that uses the MVVM pattern with the help of the _CommunityToolkit.Mvvm_ framework. It manages multiple windows from the code-behind files.
 
 Application state is kept in the 'top level' view model, and can be persisted to disk. The main window and search dialog are composed from in _Avalonia UI_ window controls, built-in controls and user controls.
 

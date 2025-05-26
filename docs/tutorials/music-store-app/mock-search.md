@@ -8,11 +8,11 @@ import MusicStoreMockSearchScreenshot from '/img/tutorials/music-store-app/add-c
 
 On this page you will create the view model for the album search feature, and then bind it to the controls on the new user control. At this stage you will use a mock of the search itself, so that you can concentrate on the view model.
 
-## Reactive View Model  
+##  MVVM Toolkit View Model
 
-The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data binding system. You add this support by deriving your view model from the `ReactiveObject` class, via the `ViewModelBase` class that was added to your project at the start, by the solution template.
+The _CommunityToolkit.Mvvm_ framework provides _Avalonia UI_ with support for its data binding system. You add this support by deriving your view model from the `ObservableObject` class, via the `ViewModelBase` class that was added to your project at the start, by the solution template.
 
-Follow this procedure to derive from the `ReactiveObject` class:
+Follow this procedure to derive from the `ObservableObject` class:
 
 - Locate and open the **MusicStoreViewModel.cs** file.
 - Add the code to derive the class from `ViewModelBase`.
@@ -25,8 +25,7 @@ namespace Avalonia.MusicStore.ViewModels
     }
 }
 ```
-
-This adds the important extension method `RaiseAndSetIfChanged` to your view model, and will allow you to give the properties there the ability to notify changes to the view.  
+This setup allows you to use attributes like `[ObservableProperty]`, which automatically generate backing fields and property change notifications needed for UI binding.
 
 :::info
 To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).
@@ -37,35 +36,25 @@ At this stage, you will create two properties for the search application logic:
 * A text string that is the search criteria,
 * A Boolean that indicates whether the search is busy.
 
-- Add the following code to implement the above properties:
+- Add the following properties using the  `[ObservableProperty]` attribute:
 
 ```csharp
-using ReactiveUI;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Avalonia.MusicStore.ViewModels
 {
     public class MusicStoreViewModel : ViewModelBase
     {
-        private string? _searchText;
-        private bool _isBusy;
+        [ObservableProperty]
+        private string? searchText;
 
-        public string? SearchText
-        {
-            get => _searchText;
-            set => this.RaiseAndSetIfChanged(ref _searchText, value);
-        }
-
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set => this.RaiseAndSetIfChanged(ref _isBusy, value);
-        }
+        [ObservableProperty]
+        private bool isBusy;
 
     }
 }
 ```
 
-You can see that the properties have a normal public getter which returns the private value field; but the setter calls the `RaiseAndSetIfChanged` method - in order to implement the notification.
 
 ## Data Binding
 
@@ -110,15 +99,10 @@ Follow this procedure to add the above properties:
 - Add the following code to the class:
 
 ```csharp
-private AlbumViewModel? _selectedAlbum;
+[ObservableProperty]
+private AlbumViewModel? selectedAlbum;
 
 public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
-
-public AlbumViewModel? SelectedAlbum
-{
-    get => _selectedAlbum;
-    set => this.RaiseAndSetIfChanged(ref _selectedAlbum, value);
-}
 ```
 
 Next to bind these properties to the list box in the view, follow this procedure:

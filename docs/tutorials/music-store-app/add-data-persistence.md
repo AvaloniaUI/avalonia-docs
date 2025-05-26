@@ -114,21 +114,24 @@ To alter the main window view model, follow this procedure:
 - Locate and open the **MainWindowViewModel.cs** file.
 - Add the code `await result.SaveToDiskAsync();` as shown below.
 
-Your code to initialize the reactive command will now look like this:
+Your code to initialize the relay command will now look like this:
 
 ```csharp
-BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
+[RelayCommand]
+private async Task AddAlbumAsync()
 {
     var store = new MusicStoreViewModel();
 
-    var result = await ShowDialog.Handle(store);
-
-    if (result != null)
+    if (OnShowDialog is not null)
     {
-        Albums.Add(result);
-        await result.SaveToDiskAsync();
+        var result = await OnShowDialog(store);
+        if (result != null)
+        {
+            Albums.Add(result);
+            await result.SaveToDiskAsync();
+        }
     }
-});
+}
 ```
 
 - Click **Debug** to compile and run the project.

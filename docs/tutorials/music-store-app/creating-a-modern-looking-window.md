@@ -25,7 +25,7 @@ Follow this procedure to style the main window in 'dark' mode:
 
 - Now locate and open the **MainWindow.axaml** file in the **/Views** folder.
 
-Notice that the preview pane is still showing the window in 'light' mode. The application will require a rebuild for the new mode to show in the preview pane.
+:::info Notice that the preview pane is still showing the window in 'light' mode. The application will require a rebuild for the new mode to show in the preview pane. :::
 
 - Click **Build Startup Project** on the **Build** menu.
 

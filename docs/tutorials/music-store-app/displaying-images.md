@@ -64,27 +64,23 @@ Follow this procedure to update the album view model:
 
 ```csharp
 using Avalonia.Media.Imaging;
+using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 ...
 
 public class AlbumViewModel : ViewModelBase
 {
     ...
     
-    private Bitmap? _cover;
-
-    public Bitmap? Cover
-    {
-        get => _cover;
-        private set => this.RaiseAndSetIfChanged(ref _cover, value);
-    }
+    [ObservableProperty] private Bitmap? cover;
     
     public async Task LoadCover()
-    {
-        await using (var imageStream = await _album.LoadCoverBitmapAsync())
         {
-            Cover = await Task.Run(() => Bitmap.DecodeToWidth(imageStream, 400));
+            await using (var imageStream = await _album.LoadCoverBitmapAsync())
+            {
+                Cover = await Task.Run(() => Bitmap.DecodeToWidth(imageStream, 400));
+            }
         }
-    }
 }   
 ```
 
@@ -107,17 +103,17 @@ To add the method to load album cover art, follow this procedure:
 
 ```csharp
 private async void LoadCovers(CancellationToken cancellationToken)
-{
-    foreach (var album in SearchResults.ToList())
-    {
-        await album.LoadCover();
-
-        if (cancellationToken.IsCancellationRequested)
         {
-            return;
+            foreach (var album in SearchResults.ToList())
+            {
+                await album.LoadCover();
+
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
+            }
         }
-    }
-}
 ```
 
 :::warning
@@ -143,7 +139,6 @@ private CancellationTokenSource? _cancellationTokenSource;
 ```csharp
 _cancellationTokenSource?.Cancel();
 _cancellationTokenSource = new CancellationTokenSource();
-var cancellationToken = _cancellationTokenSource.Token;
 ```
 
 So if there is an existing request still loading album art, this will cancel it. Again, because `_cancellationTokenSource` might be replaced asynchronously by another thread, you have to work with a copy stored as a local variable.
@@ -160,30 +155,26 @@ if (!cancellationToken.IsCancellationRequested)
 At this stage, your `DoSearch` method should look like this:
 
 ```csharp
-private async void DoSearch(string s)
+private async Task DoSearch(string term)
 {
-    IsBusy = true;
-    SearchResults.Clear();
-
     _cancellationTokenSource?.Cancel();
     _cancellationTokenSource = new CancellationTokenSource();
     var cancellationToken = _cancellationTokenSource.Token;
 
-    if (!string.IsNullOrWhiteSpace(s))
+    IsBusy = true;
+    SearchResults.Clear();
+
+    var albums = await Album.SearchAsync(term);
+
+    foreach (var album in albums)
     {
-        var albums = await Album.SearchAsync(s);
+        var vm = new AlbumViewModel(album);
+        SearchResults.Add(vm);
+    }
 
-        foreach (var album in albums)
-        {
-            var vm = new AlbumViewModel(album);
-
-            SearchResults.Add(vm);
-        }
-
-        if (!cancellationToken.IsCancellationRequested)
-        {
-            LoadCovers(cancellationToken);
-        }
+    if (!cancellationToken.IsCancellationRequested)
+    {
+        LoadCovers(cancellationToken);
     }
 
     IsBusy = false;
