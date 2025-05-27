@@ -11,7 +11,7 @@ import SplitViewExpanderScreenshot from '/img/reference/controls/splitview/split
 
 :::info
 此方法通过复杂的 **binding path** 来定位父视图模型。
-
+:::
 TO DO
 
 <img src={SplitViewExpanderScreenshot} alt=""/>
