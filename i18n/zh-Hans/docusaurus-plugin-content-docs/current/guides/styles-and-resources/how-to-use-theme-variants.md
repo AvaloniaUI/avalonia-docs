@@ -126,4 +126,8 @@ RequestedThemeVariant 属性允许覆盖主题变体并为 `Application`、`Wind
 
 ![自定义主题字典](/img/basics/user-interface/styling/custom-theme-dictionaries.png)
 
+:::warning
+注意，在 `ThemeDictionaries` 中定义的资源只能通过 `DynamicResource` 标记扩展来引用。`StaticResource` 标记扩展无法找到这些资源，如果在非 `ThemeDictionaries` 部分没有同名资源，则会在运行时抛出异常。
+:::
+
 有关使用资源的更多详细信息，请参阅 [如何使用资源](resources) 页面。
