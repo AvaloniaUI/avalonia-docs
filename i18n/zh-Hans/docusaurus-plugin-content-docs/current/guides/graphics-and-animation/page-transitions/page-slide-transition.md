@@ -1,6 +1,6 @@
 ---
 id: page-slide-transition
-title: Page Slide Transition
+title: 页面滑动过渡
 ---
 
 # 页面滑动过渡
