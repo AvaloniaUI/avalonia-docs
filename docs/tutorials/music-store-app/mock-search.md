@@ -28,7 +28,7 @@ namespace Avalonia.MusicStore.ViewModels
 This setup allows you to use attributes like `[ObservableProperty]`, which automatically generate backing fields and property change notifications needed for UI binding.
 
 :::info
-To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).
+You can learn more about `[ObservableProperty]` and `INotifyPropertyChanged` [here](../../guides/data-binding/inotifypropertychanged.md).
 :::
 
 At this stage, you will create two properties for the search application logic:
@@ -45,17 +45,16 @@ namespace Avalonia.MusicStore.ViewModels
 {
     public class MusicStoreViewModel : ViewModelBase
     {
-        [ObservableProperty]
-        private string? searchText;
-
-        [ObservableProperty]
-        private bool isBusy;
+       [ObservableProperty] public partial string? SearchText { get; set; }
+        
+       [ObservableProperty] public partial bool IsBusy { get; private set; }
 
     }
 }
 ```
-
-
+:::info
+Note that the partial property syntax was introduced in C# 13 Community Toolkit 8.4, visit [here](creating-the-project.md) for correct setup.
+:::
 ## Data Binding
 
 Next you will add a data binding to link the view to the view model. The text box will be bound to the search text, and whether the progress bar is visible to the user will  be bound to the Boolean.
@@ -99,8 +98,7 @@ Follow this procedure to add the above properties:
 - Add the following code to the class:
 
 ```csharp
-[ObservableProperty]
-private AlbumViewModel? selectedAlbum;
+[ObservableProperty] public partial AlbumViewModel? SelectedAlbum { get; set; }
 
 public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
 ```

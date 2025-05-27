@@ -72,7 +72,7 @@ public class AlbumViewModel : ViewModelBase
 {
     ...
     
-    [ObservableProperty] private Bitmap? cover;
+    [ObservableProperty] public partial Bitmap? Cover { get; private set; }
     
     public async Task LoadCover()
         {
