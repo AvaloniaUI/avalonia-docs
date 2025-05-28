@@ -1,96 +1,96 @@
-# Controls
+**Контролы**
 
-Controls in Avalonia UI are fundamental building blocks used to create user interfaces. They represent various interactive elements such as buttons, text boxes, sliders, and more. Understanding controls is essential for developing applications using Avalonia UI.
+Контролы в Avalonia UI — это основные строительные блоки для создания пользовательских интерфейсов. Они представляют собой различные интерактивные элементы, такие как кнопки, текстовые поля, слайдеры и многое другое. Понимание работы с контролами является ключевым для разработки приложений с использованием Avalonia UI.
 
-## What are Controls?
+## Что такое контролы?
 
-Controls are UI elements that allow users to interact with an application. They provide functionality for input, display, and manipulation of data. Controls can be categorized into several types based on their purpose and behavior.
+Контролы — это элементы пользовательского интерфейса, которые позволяют пользователям взаимодействовать с приложением. Они обеспечивают функциональность для ввода, отображения и обработки данных. Контролы можно классифицировать на несколько типов в зависимости от их назначения и поведения:
 
-- **Buttons**: Buttons are commonly used for triggering actions when clicked or tapped. They can have text, icons, or both, and are often used for tasks like submitting forms, opening dialogs, or executing commands.
-- **Text Boxes**: Text boxes allow users to enter and edit text. They are used for capturing user input, such as usernames, passwords, or any form of textual information. Text boxes can also be customized for specific input patterns and validation.
-- **Labels**: Labels are used to display static text or captions for other controls. They provide additional information or context to the user and are generally non-interactive.
-- **Checkboxes and RadioButtons**: Checkboxes and radio buttons are used for selection and multiple-choice options. Checkboxes allow users to select one or more options, while radio buttons enable users to choose a single option from a group.
-- **Sliders**: Sliders are used to select a value from a range. They provide a visual representation of a value that can be adjusted by dragging a handle along a track. Sliders are commonly used for settings such as volume controls or image adjustments.
-- **ListBoxes and ComboBoxes**: ListBoxes and ComboBoxes allow users to select an item from a list or a dropdown menu. ListBoxes display multiple items at once, while combo boxes show a single item initially and expand to display a list when clicked.
+- **Кнопки (Buttons)**: Кнопки используются для выполнения действий при нажатии или касании. Они могут содержать текст, иконки или оба элемента и часто применяются для отправки форм, открытия диалоговых окон или выполнения команд.
+- **Текстовые поля (Text Boxes)**: Позволяют пользователям вводить и редактировать текст. Используются для ввода данных, таких как имена пользователей, пароли или другая текстовая информация. Текстовые поля можно настроить для определенных шаблонов ввода и проверки данных.
+- **Метки (Labels)**: Используются для отображения статичного текста или подписей к другим элементам управления. Метки предоставляют пользователю дополнительную информацию или контекст и обычно не являются интерактивными.
+- **Флажки и переключатели (Checkboxes and Radio Buttons)**: Применяются для выбора и работы с вариантами выбора. Флажки позволяют выбирать несколько опций, а переключатели ограничивают выбор одним вариантом из группы.
+- **Слайдеры (Sliders)**: Используются для выбора значения из диапазона. Обеспечивают визуальное представление значения, которое можно изменить, перетаскивая ползунок по дорожке. Чаще всего применяются для таких настроек, как регулировка громкости или параметры изображения.
+- **Списки и выпадающие списки (ListBoxes and ComboBoxes)**: Позволяют пользователям выбирать элемент из списка или выпадающего меню. Списки (ListBoxes) отображают несколько элементов сразу, тогда как выпадающие списки (ComboBoxes) изначально показывают один элемент, а при нажатии раскрывают полный список.
 
-These are just a few examples of the many controls available in Avalonia UI. Each control has its own set of properties, methods, and events, allowing developers to customize their appearance and behavior to suit their application's needs.
+Это лишь несколько примеров множества доступных в Avalonia UI контролов. Каждый из них имеет собственный набор свойств, методов и событий, что позволяет разработчикам адаптировать их внешний вид и поведение под нужды приложения.
 
-## Getting Started with Builtin Controls
+## Начало работы с встроенными контролами
 
-To get started with using controls in Avalonia UI, you can refer to the documentation for each control type. The documentation provides detailed explanations, examples, and code snippets to help you understand and utilize the controls effectively.
+Для начала работы с контролами Avalonia UI вы можете обратиться к документации для каждого типа контрола. В документации содержатся подробные объяснения, примеры и фрагменты кода, помогающие эффективно использовать контролы.
 
-- [Button Control Documentation](../../../reference/controls/buttons/button)
-- [Text Box Control Documentation](../../../reference/controls/textbox)
-- [Label Control Documentation](../../../reference/controls/label)
-- [Checkbox Control Documentation](../../../reference/controls/checkbox)
-- [Slider Control Documentation](../../../reference/controls/slider)
-- [List Box Control Documentation](../../../reference/controls/listbox)
+- [Документация по кнопкам](../../../reference/controls/buttons/button)
+- [Документация по текстовым полям](../../../reference/controls/textbox)
+- [Документация по меткам](../../../reference/controls/label)
+- [Документация по флажкам](../../../reference/controls/checkbox)
+- [Документация по слайдерам](../../../reference/controls/slider)
+- [Документация по спискам](../../../reference/controls/listbox)
 
-By exploring these resources, you'll gain a solid foundation in using controls within Avalonia UI and be able to create rich and interactive user interfaces for your applications.
+Изучив эти ресурсы, вы получите прочную основу для использования контролов в Avalonia UI и сможете создавать богатые и интерактивные пользовательские интерфейсы для ваших приложений.
 
-## Types of Builtin Controls
+## Типы встроенных контролов
 
-_Avalonia UI_'s builtin controls can be loosely classified into the below types:
+Встроенные контролы Avalonia UI можно условно классифицировать на следующие типы:
 
-* Drawn Controls
-* Layout Controls
-* User Controls*
-* Templated Controls
-    * Fully Customizable
-    * Partially Customizable
+- Рисуемые контролы (Drawn Controls)
+- Контролы компоновки (Layout Controls)
+- Пользовательские контролы (User Controls)*
+- Шаблонные контролы (Templated Controls)
+  - Полностью настраиваемые
+  - Частично настраиваемые
 
-*User controls are only available for apps.
+*Пользовательские контролы доступны только для приложений.
 
-:::note
-These classifications are somewhat related to the discussion in [Choosing A Custom Control Type](creating-controls/choosing-a-custom-control-type).
+:::note  
+Эти классификации частично связаны с обсуждением в статье [Выбор типа пользовательского контрола](creating-controls/choosing-a-custom-control-type).  
 :::
 
-### Drawn Controls
+### Рисуемые контролы
 
-Drawn controls are those that are responsible for generating their own geometry or bitmaps and rendering themselves. Examples of these controls include `Border`, `TextBlock` and `Image`. Drawn controls are the foundational controls used to construct everything else.
+Рисуемые контролы отвечают за создание собственной геометрии или битмапов и их рендеринг. Примеры таких контролов: `Border`, `TextBlock`, `Image`. Они являются основой для построения всех остальных контролов.
 
-Most drawn controls have standard properties that can be used to adjust their appearance and size but they do not allow re-templating. This means as an app developer you can’t change the functionality or style of these controls without dropping into C#, deriving a new version of the control and intercepting the rendering methods.
+Большинство рисуемых контролов имеют стандартные свойства для настройки их внешнего вида и размеров, но не позволяют изменять шаблон (re-templating). Чтобы изменить их функциональность или стиль, разработчикам приложений нужно создавать производные классы на C# и перехватывать методы рендеринга.
 
-### Layout Controls
+### Контролы компоновки
 
-Layout controls are special in that they have no appearance by themselves. Layout controls like `Grid`, `StackPanel` and others are responsible for defining the layout of their children and behave as a parent container. The child controls are responsible for rendering the UI while the layout parent control simply sets size and position (which have no appearance by themselves).
+Контролы компоновки сами по себе не имеют внешнего вида. Такие контролы, как `Grid`, `StackPanel` и другие, отвечают за компоновку своих дочерних элементов и работают как контейнеры. Дочерние элементы управления отвечают за рендеринг, в то время как контрол компоновки только задает размеры и положение.
 
-It is not very common for app developers to modify framework provided layout controls.
+Изменение встроенных контролов компоновки в рамках приложений — редкая практика.
 
-:::note
-Some layout controls like `Grid` have properties such as `Background` to simplify common use cases. Using these properties does give some appearance to these controls.
+:::note  
+Некоторые контролы компоновки, такие как `Grid`, имеют свойства, такие как `Background`, чтобы упростить общие случаи использования. Эти свойства придают контролам некоторый внешний вид.  
 :::
 
-## User Controls
+### Пользовательские контролы
 
-_Avalonia UI_ never provides `UserControl`s by itself as these are not considered general-purpose. For more information on creating and using `UserControl`s in your app see [Choosing A Custom Control Type](creating-controls/choosing-a-custom-control-type).
+_Avalonia UI_ не предоставляет `UserControl` по умолчанию, так как они не считаются универсальными. Подробнее о создании и использовании `UserControl` в вашем приложении можно узнать в разделе [Выбор типа пользовательского контрола](creating-controls/choosing-a-custom-control-type).
 
-### Templated Controls
+### Шаблонные контролы
 
-Most standard controls in _Avalonia UI_ are templated controls which means their visual appearance is defined in a XAML control template separated from functionality. It is the foundation for the concept of lookless controls that originated in WPF.
+Большинство стандартных контролов Avalonia UI являются шаблонными. Это означает, что их визуальный внешний вид определяется в XAML-шаблоне, который отделен от функциональности. Это основа концепции контролов без жестко заданного внешнего вида, возникшей в WPF.
 
-Application developers can change the XAML template of a templated control and make it appear completely differently. This functionality is not available in all UI frameworks and is one of the most powerful features of XAML-based UI frameworks.
+Разработчики приложений могут изменять XAML-шаблон шаблонного контрола и полностью изменять его внешний вид. Эта возможность отсутствует во многих UI-фреймворках, и она является одной из самых мощных функций фреймворков на основе XAML.
 
-:::note
-Re-templating controls is a last-resort for app developers. It also means you will be responsible for keeping the template updated with any changes upstream. Instead, it is better to:
+:::note  
+Перешаблонизация (re-templating) должна быть крайней мерой для разработчиков. Это также означает, что вы будете нести ответственность за обновление шаблона при любых изменениях в основной версии. Вместо этого рекомендуется:
 
- 1. Attempt to use existing properties to customize the control
- 2. Create a new style with _Avalonia UI_'s extremely powerful style selectors to modify what you need in the existing template
- 3. As a last resort, re-template
-:::
+1. Попробовать использовать существующие свойства для настройки контрола.
+2. Создать новый стиль с использованием мощных селекторов стилей Avalonia UI, чтобы внести изменения в существующий шаблон.
+3. И только в крайнем случае использовать перешаблонизацию.  
+   :::
 
-#### Fully Customizable
+#### Полностью настраиваемые
 
-The majority of templated controls in _Avalonia UI_ are fully customizable. This means it is possible to completely replace the control’s template and change its appearance. The `Button` control is a good example but all templated controls in _Avalonia UI_ try to be fully customizable by default. With a fully customizable templated control the app has near total ability to style or change everything you see drawn in the UI.
+Большинство шаблонных контролов Avalonia UI полностью настраиваемые. Это означает, что можно полностью заменить шаблон контрола и изменить его внешний вид. Например, `Button` — хороший пример полностью настраиваемого контрола. Такие контролы дают приложениям практически полную возможность стилизовать или изменять все, что отображается в UI.
 
-#### Partially Customizable
+#### Частично настраиваемые
 
-In practice, having fully replaceable control templates is not always possible. There is a spectrum in control design between supporting common use-cases easily and making the control fully re-templatable. For high-complexity controls like the `DataGrid` the spectrum shifts towards supporting the intended use cases and the control cannot, and should not, be fully re-templated. These controls also usually have a very high number of template parts (required control elements that are used directly by the C# implementation of the control).
+Не всегда возможно сделать контрол полностью настраиваемым. В случае сложных контролов, таких как `DataGrid`, акцент делается на поддержке типичных сценариев использования, и контрол не может (и не должен) быть полностью перешаблонизирован. Такие контролы обычно имеют множество частей шаблона, которые напрямую используются C#-реализацией.
 
-In the case of a `DataGrid` it is still possible to re-template individual components or parts of the control. It is just extremely difficult to completely change how it looks and functions.
+Например, в случае `DataGrid` можно изменить отдельные компоненты или части контрола, но полностью изменить его внешний вид и функциональность крайне сложно.
 
-Partially customizable templated controls on the order of `DataGrid` are rare as first-party controls provided by the framework itself.
+Частично настраиваемые шаблонные контролы, такие как `DataGrid`, встречаются редко среди встроенных контролов фреймворка.
 
-## Creating Controls
+## Создание контролов
 
-In Avalonia, you have the flexibility to create custom controls of all types tailored to your application's specific requirements. See the [Creating Controls](creating-controls) section for more information
+В Avalonia вы можете создавать собственные контролы всех типов, адаптированные к требованиям вашего приложения. Подробнее смотрите в разделе [Создание контролов](creating-controls).  
