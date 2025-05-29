@@ -60,7 +60,7 @@ However, it is more common to reference a styles file in the `App.axaml` file li
 
 This will allow you to use the styles from the separate file throughout your application.
 
-You can also include styles from a another assembly by using the `avares://` prefix:
+You can also include styles from another assembly by using the `avares://` prefix:
 
 ```xml
 <Application... > 
