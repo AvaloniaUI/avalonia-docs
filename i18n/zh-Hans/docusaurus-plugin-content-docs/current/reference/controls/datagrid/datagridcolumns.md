@@ -121,13 +121,13 @@ public class Person
 :::
 
 :::info
-有关数据表格复选框列的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridCheckBoxColumn/)。
+有关数据表格复选框列的完整 API 文档，请参阅[此处](https://reference.avaloniaui.net/api/Avalonia.Controls.DataGrid/DataGridCheckBoxColumn/)。
 :::
 
 :::info
-查看 _GitHub_ 上的源代码[`DataGridTextColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridTextColumn.cs)。
+查看 _GitHub_ 上的源代码[`DataGridTextColumn.cs`](https://github.com/AvaloniaUI/Avalonia.Controls.DataGrid/blob/master/src/Avalonia.Controls.DataGrid/DataGridTextColumn.cs)。
 :::
 
 :::info
-查看 _GitHub_ 上的源代码[`DataGridCheckBoxColumn.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGridCheckBoxColumn.cs)。
+查看 _GitHub_ 上的源代码[`DataGridCheckBoxColumn.cs`](https://github.com/AvaloniaUI/Avalonia.Controls.DataGrid/blob/master/src/Avalonia.Controls.DataGrid/DataGridCheckBoxColumn.cs)。
 :::

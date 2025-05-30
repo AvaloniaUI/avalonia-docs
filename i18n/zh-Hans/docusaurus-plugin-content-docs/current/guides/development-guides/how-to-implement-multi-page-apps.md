@@ -1,6 +1,6 @@
 ---
 id: how-to-implement-multi-page-apps
-title: How To Implement Multi-page Apps
+title: 如何实现多页面应用
 ---
 
 
