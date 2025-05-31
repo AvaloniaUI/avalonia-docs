@@ -97,70 +97,161 @@ public string Artist => _album.Artist;
 public string Title => _album.Title;
 ```
 
-Note that as the view model properties will not change in the UI during runtime, they have no setter and a plain getter - there is no need to use the `RaiseAndSetIfChanged` method here.
+Note that as the view model properties will not change in the UI during runtime, they have no setter and a plain getter.
 
 ## Start the Search
 
 In this step, you will add some code to the music store view model so that whenever the search text changes, the `SearchAsync` method on the album model (business service) is started. When it finishes, the search places its results in the observable collection `SearchResults`. This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
 
-Follow this procedure to start the search whenever the search text changes:
+Follow this procedure to trigger the search when the search text changes:
 
 - Locate and open the **MusicStoreViewModel.cs** file.
-- Replace the constructor code, and add the extra code as shown:
+- Use the following logic in your constructor and supporting methods:
 
 ```csharp
+         public MusicStoreViewModel()
+        {
+            PropertyChanged += async (s, e) =>
+            {
+                if (e.PropertyName == nameof(SearchText))
+                {
+                    await SearchWithDelayAsync(SearchText);
+                }
+            };
+        }
+```
+This event handler listens for changes to any property, but filters specifically for changes to SearchText. When the user types, this event is raised and triggers a debounced search.
+To avoid making a request on every keystroke, a small delay is used before starting the actual search:
+```csharp
+private async Task SearchWithDelayAsync(string? term)
+{
+    _searchDebounceCts?.Cancel();
+    _searchDebounceCts = new CancellationTokenSource();
+    var token = _searchDebounceCts.Token;
+
+    try
+    {
+        await Task.Delay(400, token);
+        if (!token.IsCancellationRequested && !string.IsNullOrWhiteSpace(term))
+        {
+            await DoSearch(term);
+        }
+    }
+    catch (TaskCanceledException)
+    {
+    }
+}
+```
+This method introduces a 400ms delay. If the user continues typing before the delay completes, the previous search is canceled. This prevents unnecessary calls to the album API and ensures the app only performs the search once the user pauses.
+
+Once the debounce period completes, the actual search logic runs:
+```csharp
+private async Task DoSearch(string term)
+{
+    _cancellationTokenSource?.Cancel();
+    _cancellationTokenSource = new CancellationTokenSource();
+    var cancellationToken = _cancellationTokenSource.Token;
+
+    IsBusy = true;
+    SearchResults.Clear();
+
+    var albums = await Album.SearchAsync(term);
+
+    foreach (var album in albums)
+    {
+        var vm = new AlbumViewModel(album);
+        SearchResults.Add(vm);
+    }
+
+    IsBusy = false;
+}
+```
+This method:
+- Cancels any previous ongoing search (_cancellationTokenSource).
+- Sets a busy flag to show the loading spinner in the UI.
+- Clears existing results.
+- Calls the album model's SearchAsync method to fetch data from the iTunes API.
+- Wraps each result in an AlbumViewModel and adds it to SearchResults.
+
+Now your **MusicStoreViewModel** file should now look like this:
+```csharp
 using Avalonia.MusicStore.Models;
-using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
-using System.Reactive.Linq;
+using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace Avalonia.MusicStore.ViewModels
 {
-    public class MusicStoreViewModel : ViewModelBase
+    public partial class MusicStoreViewModel : ViewModelBase
     {
-        ...
-       
+        private CancellationTokenSource? _cancellationTokenSource;
+        private CancellationTokenSource? _searchDebounceCts;
+
+        [ObservableProperty] private string? searchText;
+
+        [ObservableProperty] private bool isBusy;
+
+        public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
+
+
         public MusicStoreViewModel()
         {
-            this.WhenAnyValue(x => x.SearchText)
-                .Throttle(TimeSpan.FromMilliseconds(400))
-                .ObserveOn(RxApp.MainThreadScheduler)
-                .Subscribe(DoSearch!);
+            PropertyChanged += async (s, e) =>
+            {
+                if (e.PropertyName == nameof(SearchText))
+                {
+                    await SearchWithDelayAsync(SearchText);
+                }
+            };
         }
-       
-        private async void DoSearch(string? s)
+
+        private async Task SearchWithDelayAsync(string? term)
         {
+            _searchDebounceCts?.Cancel();
+            _searchDebounceCts = new CancellationTokenSource();
+            var token = _searchDebounceCts.Token;
+
+            try
+            {
+                await Task.Delay(400, token);
+                if (!token.IsCancellationRequested && !string.IsNullOrWhiteSpace(term))
+                {
+                    DoSearch(term);
+                }
+            }
+            catch (TaskCanceledException)
+            {
+            }
+        }
+
+        private async Task DoSearch(string term)
+        {
+            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource = new CancellationTokenSource();
+            var cancellationToken = _cancellationTokenSource.Token;
+
             IsBusy = true;
             SearchResults.Clear();
 
-            if (!string.IsNullOrWhiteSpace(s))
-            {
-                var albums = await Album.SearchAsync(s);
+            var albums = await Album.SearchAsync(term);
 
-                foreach (var album in albums)
-                {
-                    var vm = new AlbumViewModel(album);
-                    SearchResults.Add(vm);
-                }
+            foreach (var album in albums)
+            {
+                var vm = new AlbumViewModel(album);
+                SearchResults.Add(vm);
             }
 
             IsBusy = false;
         }
+
     }
 }
+
 ```
-
-The `WhenAnyValue` method is provided by the _ReactiveUI_ framework as part of the `ReactiveObject`(inherited via `ViewModelBase`). The method takes a lambda expression parameter that gets the property you want to observe for changes. So in the above code, an event occurs whenever the user types to change the search text.
-
-It will be good design to wait until the user has stopped typing before attempting to run the search. The `Throttle` method prevents the events being processed until the time span (400 milliseconds) is up. This means processing will not start until the user has stopped typing for 400 milliseconds or longer.
-
-:::info
-The `ObserveOn` method is required to ensure that the subscribed method is always called on the UI thread. In _Avalonia UI_ applications, you must always update the UI on the UI thread.
-:::
-
-Lastly, the `Subscribe` method calls the `DoSearch` method for each observed event. The `DoSearch` method  runs asynchronously, and has no return value.
 
 ## Bind the Album View
 

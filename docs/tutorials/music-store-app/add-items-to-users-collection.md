@@ -24,20 +24,25 @@ public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 
 ## Process the Dialog Result
 
-Your next step is to alter the buy music reactive command so that it adds the dialog return object (an `AlbumViewModel`) to the observable collection. Follow this procedure:
+Your next step is to alter the add album command so that it adds the dialog return object (an `AlbumViewModel`) to the observable collection. Follow this procedure:
 
-- Alter the code that initializes the reactive command, as shown:
+- In the same **MainWindowViewModel.cs** file update the _AddAlbumAsync_ command method:
 
 ```csharp
-BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
+[RelayCommand]
+private async Task AddAlbumAsync()
 {
     var store = new MusicStoreViewModel();
-    var result = await ShowDialog.Handle(store);
-    if (result != null)
+
+    if (OnShowDialog is not null)
     {
-        Albums.Add(result);
+        var result = await OnShowDialog(store);
+        if (result != null)
+        {
+            Albums.Add(result);
+        }
     }
-});
+}
 ```
 
 ## Main Window View
@@ -56,19 +61,21 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 - Under the button element, add the XAML as shown:
 
 ```xml
-<ItemsControl Margin="0 40 0 0" ItemsSource="{Binding Albums}">
-  <ItemsControl.ItemsPanel>
-    <ItemsPanelTemplate>
-      <WrapPanel />
-    </ItemsPanelTemplate>
-  </ItemsControl.ItemsPanel>
+     <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 40 0 0">
+        <ItemsControl ItemsSource="{Binding Albums}">
+          <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+              <WrapPanel />
+            </ItemsPanelTemplate>
+          </ItemsControl.ItemsPanel>
 
-  <ItemsControl.ItemTemplate>
-    <DataTemplate>
-      <views:AlbumView Margin="0 0 20 20" />
-    </DataTemplate>
-  </ItemsControl.ItemTemplate>
-</ItemsControl>
+          <ItemsControl.ItemTemplate>
+            <DataTemplate>
+              <views:AlbumView Margin="0 0 20 20" />
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ItemsControl>
+      </ScrollViewer>
 ```
 
 - Click **Debug** to compile and run the project.

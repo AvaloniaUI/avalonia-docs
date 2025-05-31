@@ -14,11 +14,22 @@ Follow this procedure to add the reactive command:
 
 - Stop the app if it is running.
 - Locate and open the **MusicStoreViewModel.cs** file.
-- Add the reactive command declaration, as shown:
+- Add the following code to the class, as shown:
 
 ```csharp
-public ReactiveCommand<Unit, AlbumViewModel?> BuyMusicCommand { get; }
+public event Action<AlbumViewModel>? AlbumPurchased;
+
+[RelayCommand]
+private void BuyMusic()
+{
+    if (SelectedAlbum != null)
+    {
+        AlbumPurchased?.Invoke(SelectedAlbum);
+    }
+}
 ```
+This method is automatically exposed to the view as a bindable command named BuyMusicCommand. When the Buy Album button is clicked, this command is invoked and raises the AlbumPurchased event if an album is selected.
+.
 
 - Add code to the constructor to initialize the reactive command, as shown:
 
@@ -34,7 +45,7 @@ public MusicStoreViewModel()
 }
 ```
 
-Notice you are using `ReactiveCommand` here. This is provided by the _ReactiveUI_ framework to implement some of the MVVM interactions. Specifically, it will allow us to pass an argument of class `AlbumViewModel` back to the main window view model, when the button is clicked.
+This method is automatically exposed to the view as a bindable command named BuyMusicCommand. When the Buy Album button is clicked, this command is invoked and raises the AlbumPurchased event if an album is selected.
 
 ## Button Data Binding
 
@@ -45,43 +56,57 @@ Your next step is bind the **Buy Album** button to the reactive command in the m
 
 ## Close the Dialog
 
-In this step, you will add some window management so that the dialog closes when the user clicks the **Buy Album** button. This is needed in addition to the data binding you just added.
-
-As you saw during coding for the dialog open, you implement window management in the code-behind for a window, and use features of the `ReactiveWindow` from the _ReactiveUI_ framework.
+In this step, you will add some window management so that the dialog closes when the user clicks the **Buy Album** button. This is needed in addition to the data binding you just added. 
+Now you’ll ensure the dialog window is closed when the Buy Album button is clicked and a selection is made. As you saw during coding for the dialog open, you implement window management in the code-behind for a window.
 
 To add code to close the dialog, follow this procedure:
 
 - Locate and open the **MusicStoreWindow.axaml.cs** file.
-- Add a reference to the system `using System;`
-- Change the base class so the view inherits from `ReactiveWindow<MusicStoreViewModel>`.
-- Then add the following line to the end of the constructor:
+- Add this logic to subscribe to the event and close the dialog:
 
 ```csharp
-this.WhenActivated(action => action(ViewModel!.BuyMusicCommand.Subscribe(Close)));
-```
+protected override void OnDataContextChanged(EventArgs e)
+        {
+            base.OnDataContextChanged(e);
 
-The _ReactiveUI_ `WhenActivated` method defines what happens when the window is activated (becomes visible on the screen). The lambda expression will be called, and it is passed an action that is disposable, so that it can be unsubscribed when the window is no longer active.
+            if (DataContext is MusicStoreViewModel vm)
+            {
+                vm.AlbumPurchased += (album) =>
+                {
+                    Close(album);
+                };
+            }
+        }
+```
+Close(album) returns the album to the caller (the main window) using Avalonia’s dialog result system. The AlbumPurchased event acts as the bridge from the view model to the view logic.
 
 Your music store window code-behind should now look like this.
 
 ```csharp
-using Avalonia.ReactiveUI;
-using Avalonia.MusicStore.ViewModels;
-using ReactiveUI;
 using System;
+using Avalonia.Controls;
+using Avalonia.MusicStore.ViewModels;
 
 namespace Avalonia.MusicStore.Views
 {
-    public partial class MusicStoreWindow : ReactiveWindow<MusicStoreViewModel>
+    public partial class MusicStoreWindow : Window
     {
         public MusicStoreWindow()
         {
             InitializeComponent();
-            
-            // This line is needed to make the previewer happy (the previewer plugin cannot handle the following line).
-            if (Design.IsDesignMode) return;
-            
-            this.WhenActivated(action => action(ViewModel!.BuyMusicCommand.Subscribe(Close)));
+        }
+
+        protected override void OnDataContextChanged(EventArgs e)
+        {
+            base.OnDataContextChanged(e);
+
+            if (DataContext is MusicStoreViewModel vm)
+            {
+                vm.AlbumPurchased += (album) =>
+                {
+                    Close(album);
+                };
+            }
         }
     }
 }

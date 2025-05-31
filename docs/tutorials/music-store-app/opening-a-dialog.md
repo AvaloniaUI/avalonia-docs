@@ -7,11 +7,11 @@ import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/ope
 
 # Open a Dialog
 
-On this page you will learn how to use _ReactiveUI_ to manage another window in your app. The new window will eventually contain a search facility, and a button to add one of the album covers found to a list in the main window.  This new window will be opened as a dialog - that is it will prevent activity in the main window while it is showing.
+On this page you will learn how to open another window in your app. The new window will eventually contain a search facility, and a button to add one of the album covers found to a list in the main window.  This new window will be opened as a dialog - that is it will prevent activity in the main window while it is showing.
 
 ## Add a New Dialog Window
 
-There is nothing special about a window view file that makes it into a dialog; that is up to the way in which the window is controlled by the app; and you will use _ReactiveUI_ to manage this. So the first step is to create a new window for the app.
+There is nothing special about a window view file that makes it into a dialog; that is up to the way in which the window is controlled by the app. You will use Avalonia UI features and _CommunityToolkit.Mvvm_ to manage this. So the first step is to create a new window for the app.
 
 To create a new window, follow this procedure:
 
@@ -86,104 +86,73 @@ Firstly, to alter the main window view model code so it starts the interaction t
 - Add a declaration for the interaction with the new dialog window, as shown:
 
 ```csharp
-public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
+public Func<MusicStoreViewModel, Task<AlbumViewModel?>>? OnShowDialog { get; set; }
 ```
+This is a delegate that the view will assign. It allows the ViewModel to request a dialog without needing to know how it's displayed.
 
-- Alter the constructor code to create the reactive command from a asynchronous task, as shown:
+- Update the _AddAlbumAsync_ method to define an asynchronous command as shown:
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Reactive.Linq;
-using System.Text;
-using System.Windows.Input;
-using ReactiveUI;
 
-namespace Avalonia.MusicStore.ViewModels
-{
-    public class MainWindowViewModel : ViewModelBase
-    {
-        public MainWindowViewModel()
+        [RelayCommand]
+        private async Task AddAlbumAsync()
         {
-            ShowDialog = new Interaction<MusicStoreViewModel, AlbumViewModel?>();
+            var store = new MusicStoreViewModel();
 
-            BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
+            if (OnShowDialog is not null)
             {
-                var store = new MusicStoreViewModel();
-
-                var result = await ShowDialog.Handle(store);
-            });
+                var result = await OnShowDialog(store);
+            }
         }
-
-        public ICommand BuyMusicCommand { get; }
-
-        public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
     }
-}
 ```
 
-At this point, the code for the interaction is still incomplete. If you attempt to run the app now and click the icon button, you will get an exception of class `ReactiveUI.UnhandledInteractionException`.
+At this point, the code for the interaction is still incomplete. If you attempt to run the app now and click the icon button, nothing will happen yet — because the dialog handler hasn't been connected.
 
-Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view, and uses some features of the _ReactiveUI_ framework.  Follow this procedure:
+Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view.  Follow this procedure:
 
 - Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
-- Alter the class so that it inherits from `ReactiveWindow<MainWindowViewModel>`.
-- Add the `DoShowDialogAsync` method as follows:
+- Add the following code to the constructor to handle dialog interaction:
 
 ```csharp
-// This code is only valid in newer ReactiveUI which is shipped since avalonia 11.2.0 
-private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel,
-                                        AlbumViewModel?> interaction)
-{
-     var dialog = new MusicStoreWindow();
-     dialog.DataContext = interaction.Input;
-
-     var result = await dialog.ShowDialog<AlbumViewModel?>(this);
-     interaction.SetOutput(result);
-}
-```
-
-- Add the following code to the end of the constructor:
-
-```csharp
-this.WhenActivated(action => 
-         action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
-```
-
-This means that whenever the main window view is activated, the `DoShowDialogAsync` handler is registered. The action is disposable, so that _ReactiveUI_ can clean up the registration when  the main window view is not on the screen.
-
-Your whole file should now look like this:
-
-```csharp
-using Avalonia.ReactiveUI;
+using Avalonia;
+using Avalonia.Controls;
 using Avalonia.MusicStore.ViewModels;
-using ReactiveUI;
-using System.Threading.Tasks;
 
 namespace Avalonia.MusicStore.Views
 {
-    public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            this.WhenActivated(action =>
-                action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
-        }
 
-        private async Task DoShowDialogAsync(IInteractionContext<MusicStoreViewModel, 
-                                                AlbumViewModel?> interaction)
-        {
-            var dialog = new MusicStoreWindow();
-            dialog.DataContext = interaction.Input;
+            this.Opened += (_, _) =>
+            {
+                if (DataContext is MainWindowViewModel vm)
+                {
+                    vm.OnShowDialog = async (musicStoreVm) =>
+                    {
+                        var dialog = new MusicStoreWindow
+                        {
+                            DataContext = musicStoreVm
+                        };
 
-            var result = await dialog.ShowDialog<AlbumViewModel?>(this);
-            interaction.SetOutput(result);
+                        return await dialog.ShowDialog<AlbumViewModel?>(this);
+                    };
+                }
+            };
         }
     }
 }
 ```
+The added code in the Opened event connects the ViewModel OnShowDialog property to a real method that shows the dialog window.
+Specifically, it assigns a function that:
+- Creates a new instance of the MusicStoreWindow.
+- Sets the window’s DataContext to the dialog’s view model (MusicStoreViewModel).
+- Shows the dialog and returns the selected AlbumViewModel result back to the view model.
 
+Now:
 - Click **Debug** to compile and run the project.
 - Click the icon button.
 
