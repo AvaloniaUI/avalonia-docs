@@ -22,16 +22,16 @@ Container queries can be defined in XAML as the direct child of a control's `Sty
 
 ```xml
 <StackPanel Orientation="Horizontal">
-    <StackPanel.Styles>
-      <ContainerQuery Name="container"
-                 Query="max-width:400">
-        <Style Selector="Button">
-          <Setter Property="Background"
-                  Value="Red"/>
-        </Style>
-      </ContainerQuery>
+  <StackPanel.Styles>
+    <ContainerQuery Name="container"
+                    Query="max-width:400">
+      <Style Selector="Button">
+        <Setter Property="Background"
+                Value="Red"/>
+      </Style>
+    </ContainerQuery>
+  </StackPanel.Styles>
 <StackPanel>
-
 ```
 
 They can also be part of a `ControlTheme`'s styles:
@@ -61,7 +61,6 @@ They can also be part of a `ControlTheme`'s styles:
     </Style>
   </ContainerQuery>
 </ControlTheme>
-
 ```
 The `Name` property defines the name of the container it will attach to. This isn't a unique identifier, and multiple container queries can use the same name.
 The `Query` defines the rules to activate the containing size. See [Queries](#queries) below.
@@ -71,16 +70,17 @@ This make them quite easy to use in themes targeting difference screen sizes, or
    The following is invalid.
 ```xml
 <StackPanel Orientation="Horizontal">
-    <StackPanel.Styles>
-        <Style Selector="...">
-            <ContainerQuery Name="container"
-                        Query="max-width:400">
-                <Style Selector="Button">
-                <Setter Property="Background"
-                        Value="Red"/>
-                </Style>
-            </ContainerQuery>
+  <StackPanel.Styles>
+    <Style Selector="...">
+      <ContainerQuery Name="container"
+                      Query="max-width:400">
+        <Style Selector="Button">
+          <Setter Property="Background"
+                  Value="Red"/>
         </Style>
+      </ContainerQuery>
+    </Style>
+  </StackPanel.Styles>
 <StackPanel>
 ```
 2. Styles declared in Queries can not affect the container or its ancestors. This is different from normal `Styles` being able to affect their parent control. Because container queries rely on the actual size of the container, having the container be affected by styles activated by its queries can cause cyclic behaviors where the container's size is being updated continuously by two or more queries.
@@ -90,15 +90,14 @@ Container queries only work if a control that's a descendant of the `ContainerQu
 
 ```xml
 <Button
-    Container.Name="container-name"
-    Container.Sizing="container-sizing
+  Container.Name="container-name"
+  Container.Sizing="container-sizing"
 />
-
 ```
 
 `Container.Name` defines the name of the container. It isn't unique to that container, and multiple controls in the same scope can have the same container name, and they will all be affected by the same container queries.
 
-`Container.Sizing` defines the sizing strategy of the container for queries. The container's final size depends on the value. Its an enum with the following values
+`Container.Sizing` defines the sizing strategy of the container for queries. The container's final size depends on the value. Its an enum with the following values:
 
 * `Normal`: The container's size isn't queried. This is the default value. The control follows normal measurement and arrangement.
 * `Width`: The container's width is queried. The container will use the maximum width allowed by its parent, and that value is used in all related container queries. In most cases, the final width is the max width allowed.
@@ -120,21 +119,21 @@ The following is an example of using multiple container queries with different q
 
 ```xml
 <ContainerQuery Name="uniformGrid"
-           Query="max-width:400">
+                Query="max-width:400">
   <Style Selector="UniformGrid#ContentGrid">
     <Setter Property="Columns"
             Value="1"/>
   </Style>
 </ContainerQuery>
 <ContainerQuery Name="uniformGrid"
-           Query="min-width:400">
+                Query="min-width:400">
   <Style Selector="UniformGrid#ContentGrid">
     <Setter Property="Columns"
             Value="2"/>
   </Style>
 </ContainerQuery>
 <ContainerQuery Name="uniformGrid"
-           Query="min-width:800">
+                Query="min-width:800">
   <Style Selector="UniformGrid#ContentGrid">
     <Setter Property="Columns"
             Value="3"/>
@@ -145,14 +144,14 @@ Multiple queries can be combine with `,` for OR combination, or `and` for AND co
 
 ```xml
 <ContainerQuery Name="uniformGrid"
-           Query="max-width:400,min-width:300">
+                Query="max-width:400,min-width:300">
   <Style Selector="UniformGrid#ContentGrid">
     <Setter Property="Columns"
             Value="1"/>
   </Style>
 </ContainerQuery>
 <ContainerQuery Name="uniformGrid"
-           Query="min-width:400 and min-width:300">
+                Query="min-width:400 and min-width:300">
   <Style Selector="UniformGrid#ContentGrid">
     <Setter Property="Columns"
             Value="2"/>
