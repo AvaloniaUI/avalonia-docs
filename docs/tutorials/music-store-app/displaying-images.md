@@ -20,7 +20,7 @@ Follow this procedure to get the album cover art from the Web API:
 
 ```csharp
 private static HttpClient s_httpClient = new();
-private string CachePath => $"./Cache/{Artist} - {Title}";
+private string CachePath => $"./Cache/{SanitizeFileName(Artist)} - {SanitizeFileName(Title)}";
 
 public async Task<Stream> LoadCoverBitmapAsync()
 {
@@ -34,15 +34,23 @@ public async Task<Stream> LoadCoverBitmapAsync()
         return new MemoryStream(data);
     }
 }
+private static string SanitizeFileName(string input)
+        {
+            foreach (var c in Path.GetInvalidFileNameChars())
+            {
+                input = input.Replace(c, '_');
+            }
+            return input;
+        }
 ```
 
-This method returns a stream that can be used to load a bitmap from, either from a cache file or from the API.
-
+Method _LoadCoverBitmapAsync()_ returns a stream that can be used to load a bitmap from, either from a cache file or from the API.
+Method  _SanitizeFileName()_ sanitizes input to replace characters that cannot be used in the file name with `_`.
 :::info
 Note that the cache is not active at this time, you will implement it later in the tutorial.
 :::
 
-- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:;
+- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:
 
 ```csharp
 return File.OpenRead(CachePath + ".bmp");

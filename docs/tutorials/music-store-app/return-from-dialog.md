@@ -4,88 +4,31 @@ description: TUTORIALS - Music Store App
 
 # Dialog Return
 
-On the this page you add code to return a selected album from the search dialog to the main window.
-
-## Buy Album Command
-
-The first step here is for you to add a reactive command to the music store view model. You will bind this to the **Buy Album** button on the music store view.  
-
-Follow this procedure to add the reactive command:
-
-- Stop the app if it is running.
-- Locate and open the **MusicStoreViewModel.cs** file.
-- Add the following code to the class, as shown:
-
+On this page, you’ll complete the logic for returning a selected album from the search dialog _MusicStoreWindow_ back to the main window. This will be done using the CommunityToolkit.Mvvm messaging system, allowing the dialog to communicate back without tight coupling.
+## Create the MusicStoreClosedMessage Class
+Firstly, let's create a message class that will carry the selected album from the dialog to the window handler.
+- Inside previously created **/Messages** folder create file **MusicStoreClosedMessage.cs**
+- Into newly created file add the following code:
 ```csharp
-public event Action<AlbumViewModel>? AlbumPurchased;
-
-[RelayCommand]
-private void BuyMusic()
-{
-    if (SelectedAlbum != null)
-    {
-        AlbumPurchased?.Invoke(SelectedAlbum);
-    }
-}
-```
-This method is automatically exposed to the view as a bindable command named BuyMusicCommand. When the Buy Album button is clicked, this command is invoked and raises the AlbumPurchased event if an album is selected.
-.
-
-- Add code to the constructor to initialize the reactive command, as shown:
-
-```csharp
-public MusicStoreViewModel()
-{
-    BuyMusicCommand = ReactiveCommand.Create(() =>
-    {
-         return SelectedAlbum;
-    });
-    
-    ...
-}
-```
-
-This method is automatically exposed to the view as a bindable command named BuyMusicCommand. When the Buy Album button is clicked, this command is invoked and raises the AlbumPurchased event if an album is selected.
-
-## Button Data Binding
-
-Your next step is bind the **Buy Album** button to the reactive command in the music store view model, follow this procedure:
-
-- Locate and open the **MusicStoreView .axaml** file. 
-- Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
-
-## Close the Dialog
-
-In this step, you will add some window management so that the dialog closes when the user clicks the **Buy Album** button. This is needed in addition to the data binding you just added. 
-Now you’ll ensure the dialog window is closed when the Buy Album button is clicked and a selection is made. As you saw during coding for the dialog open, you implement window management in the code-behind for a window.
-
-To add code to close the dialog, follow this procedure:
-
-- Locate and open the **MusicStoreWindow.axaml.cs** file.
-- Add this logic to subscribe to the event and close the dialog:
-
-```csharp
-protected override void OnDataContextChanged(EventArgs e)
-        {
-            base.OnDataContextChanged(e);
-
-            if (DataContext is MusicStoreViewModel vm)
-            {
-                vm.AlbumPurchased += (album) =>
-                {
-                    Close(album);
-                };
-            }
-        }
-```
-Close(album) returns the album to the caller (the main window) using Avalonia’s dialog result system. The AlbumPurchased event acts as the bridge from the view model to the view logic.
-
-Your music store window code-behind should now look like this.
-
-```csharp
-using System;
-using Avalonia.Controls;
 using Avalonia.MusicStore.ViewModels;
+
+namespace Avalonia.MusicStore.Messages;
+
+public class MusicStoreClosedMessage(AlbumViewModel selectedAlbum)
+{
+public AlbumViewModel SelectedAlbum { get; } = selectedAlbum;
+}
+```
+
+## Register the Message Handler in MusicStoreWindow
+To close the dialog and return the selected album to the main window, you’ll register a handler that listens for a MusicStoreClosedMessage.
+- Locate and open the MusicStoreWindow.axaml.cs file.
+- Add the following code to the constructor:
+
+```csharp
+using Avalonia.Controls;
+using Avalonia.MusicStore.Messages;
+using CommunityToolkit.Mvvm.Messaging;
 
 namespace Avalonia.MusicStore.Views
 {
@@ -94,23 +37,49 @@ namespace Avalonia.MusicStore.Views
         public MusicStoreWindow()
         {
             InitializeComponent();
-        }
 
-        protected override void OnDataContextChanged(EventArgs e)
-        {
-            base.OnDataContextChanged(e);
-
-            if (DataContext is MusicStoreViewModel vm)
-            {
-                vm.AlbumPurchased += (album) =>
+            // Register a handler to listen for the message sent by the view model
+            WeakReferenceMessenger.Default.Register<MusicStoreWindow, MusicStoreClosedMessage>(this,
+                static (window, message) =>
                 {
-                    Close(album);
-                };
-            }
+                    // Close the dialog and return the selected album
+                    window.Close(message.SelectedAlbum);
+                });
         }
     }
 }
+
 ```
+When MusicStoreViewModel sends a MusicStoreClosedMessage, this handler will close the dialog and return the selected album using Avalonia’s dialog result system.
+
+## Define the Command in MusicStoreViewModel
+
+Now you will add a relay command to the music store view model. You will bind this command to the **Buy Album** button on the music store view.  
+
+- Locate and open the **MusicStoreViewModel.cs** file.
+- Add the following RelayCommand method to the class, as shown:
+
+```csharp
+[RelayCommand]
+private void BuyMusic()
+{
+    if (SelectedAlbum != null)
+    {
+        WeakReferenceMessenger.Default.Send(new MusicStoreClosedMessage(SelectedAlbum));
+    }
+}
+
+```
+This command is exposed to the view as BuyMusicCommand. When invoked, it sends a MusicStoreClosedMessage with the currently selected album.
+
+## Bind the Command to the Button
+
+Your next step is bind the **Buy Album** button to the relay command in the music store view model, follow this procedure:
+
+- Locate and open the **MusicStoreView .axaml** file. 
+- Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
+
+
 
 - Click **Debug** to compile and run the project.
 - Click the icon button.

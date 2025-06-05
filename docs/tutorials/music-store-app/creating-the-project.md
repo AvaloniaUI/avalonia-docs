@@ -40,8 +40,12 @@ Let's make sure you use correct version of CommunityToolkit.Mvvm:
  - Select 'Edit' -> 'Edit Avalonia.MusicStore.csproj'
 <p><img className="image-medium-zoom" src={MusicStoreEditCsprojScreenshot} alt="" /></p>
 
-In the opened .csproj file, ensure you have the correct CommunityToolkit.Mvvm package version no older than 8.4.0:
+In the opened .csproj file, ensure you have the correct CommunityToolkit.Mvvm package version no older than 8.4.0 and 
+Avalonia version no older tha 11.3.0.
 ```xml
+<PackageReference Include="Avalonia" Version="11.3.0" />
+<PackageReference Include="Avalonia.Desktop" Version="11.3.0" />
+<PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.0" />
 <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 ```
 In the same file enable preview C# language features:

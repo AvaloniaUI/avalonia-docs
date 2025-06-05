@@ -19,18 +19,15 @@ Follow this procedure to add a method to load the user's album collection from d
 ```csharp
 private async void LoadAlbums()
 {
-    var albums = (await Album.LoadCachedAsync()).Select(x => new AlbumViewModel(x));
-
+    var albums = (await Album.LoadCachedAsync()).Select(x => new AlbumViewModel(x)).ToList();
     foreach (var album in albums)
     {
         Albums.Add(album);
     }
-
-    foreach (var album in Albums.ToList())
-    {
-        await album.LoadCover();
-    }
+    var coverTasks = albums.Select(album => album.LoadCover());
+    await Task.WhenAll(coverTasks);
 }
+
 ```
 
 As you can see this method uses the business service to load the list of albums from the disk cache. It then transforms each data model (`Album` class) into a view model (`AlbumViewModel` class). After this all the album view models are added to the observable collection - this will instantly update the UI with the text data for the albums.
@@ -40,11 +37,15 @@ You will notice that after the JSON album files are loaded, the second loop load
 Your next step is to schedule the `LoadAlbum` method to run when the app starts:
 
 - Keep the **MainWindowViewModel.cs** file open.
-- Add this code to the MainWindowViewModel class constructor:
+- Call LoadAlbums() from the MainWindowViewModel constructor:
 
 ```csharp
-Task.Run(LoadAlbums);
+public MainWindowViewModel()
+{
+    LoadAlbums();
+}
 ```
+With this change, now the app will automatically load previously added albums every time it starts.
 
 - Click **Debug** to compile and run the project.
 

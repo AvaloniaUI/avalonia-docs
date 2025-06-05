@@ -71,7 +71,7 @@ Follow this procedure to add data binding to the view:
     <!-- ... -->
     <DockPanel>
       <StackPanel DockPanel.Dock="Top">
-        <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
+          <TextBox Watermark="Search for Albums...." Text="{Binding SearchText}" />
         <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
       </StackPanel>
       <Button Content="Buy Album"

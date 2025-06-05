@@ -32,15 +32,10 @@ Your next step is to alter the add album command so that it adds the dialog retu
 [RelayCommand]
 private async Task AddAlbumAsync()
 {
-    var store = new MusicStoreViewModel();
-
-    if (OnShowDialog is not null)
+    var album = await WeakReferenceMessenger.Default.Send(new PurchaseAlbumMessage());
+    if (album is not null)
     {
-        var result = await OnShowDialog(store);
-        if (result != null)
-        {
-            Albums.Add(result);
-        }
+        Albums.Add(album);
     }
 }
 ```

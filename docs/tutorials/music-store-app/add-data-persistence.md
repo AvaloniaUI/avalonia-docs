@@ -120,16 +120,11 @@ Your code to initialize the relay command will now look like this:
 [RelayCommand]
 private async Task AddAlbumAsync()
 {
-    var store = new MusicStoreViewModel();
-
-    if (OnShowDialog is not null)
+    var album = await WeakReferenceMessenger.Default.Send(new PurchaseAlbumMessage());
+    if (album is not null)
     {
-        var result = await OnShowDialog(store);
-        if (result != null)
-        {
-            Albums.Add(result);
-            await result.SaveToDiskAsync();
-        }
+        Albums.Add(album);
+        await album.SaveToDiskAsync(); // Add this line
     }
 }
 ```

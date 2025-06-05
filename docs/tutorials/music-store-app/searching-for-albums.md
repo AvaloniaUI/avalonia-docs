@@ -101,50 +101,29 @@ Note that as the view model properties will not change in the UI during runtime,
 
 ## Start the Search
 
-In this step, you will add some code to the music store view model so that whenever the search text changes, the `SearchAsync` method on the album model (business service) is started. When it finishes, the search places its results in the observable collection `SearchResults`. This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
+In this step, you’ll add the ability to search for albums in real-time as the user types in the music store dialog. When it finishes, the search places its results in the observable collection `SearchResults`. This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
 
-Follow this procedure to trigger the search when the search text changes:
+Follow this procedure to trigger the search with a short delay when the search text changes:
+- Locate and open the **MusicStoreView.axaml** file.
+- Find the line with SearchText binding and add a Delay property as shown below:
+```xml
+<TextBox Watermark="Search for Albums...." Text="{Binding SearchText, Delay=400}" />
+```
+Delay=400 ensures that input is only propagated to the view model after the user pauses for 400ms, preventing unnecessary search calls.
 
+Now:
 - Locate and open the **MusicStoreViewModel.cs** file.
-- Use the following logic in your constructor and supporting methods:
+- Add the following method there:
 
 ```csharp
-         public MusicStoreViewModel()
+partial void OnSearchTextChanged(string value)
         {
-            PropertyChanged += async (s, e) =>
-            {
-                if (e.PropertyName == nameof(SearchText))
-                {
-                    await SearchWithDelayAsync(SearchText);
-                }
-            };
+            _ = DoSearch(SearchText);
         }
 ```
-This event handler listens for changes to any property, but filters specifically for changes to SearchText. When the user types, this event is raised and triggers a debounced search.
-To avoid making a request on every keystroke, a small delay is used before starting the actual search:
-```csharp
-private async Task SearchWithDelayAsync(string? term)
-{
-    _searchDebounceCts?.Cancel();
-    _searchDebounceCts = new CancellationTokenSource();
-    var token = _searchDebounceCts.Token;
+This method is automatically called whenever the SearchText property changes.
 
-    try
-    {
-        await Task.Delay(400, token);
-        if (!token.IsCancellationRequested && !string.IsNullOrWhiteSpace(term))
-        {
-            await DoSearch(term);
-        }
-    }
-    catch (TaskCanceledException)
-    {
-    }
-}
-```
-This method introduces a 400ms delay. If the user continues typing before the delay completes, the previous search is canceled. This prevents unnecessary calls to the album API and ensures the app only performs the search once the user pauses.
-
-Once the debounce period completes, the actual search logic runs:
+- Add `DoSearch` implementation:
 ```csharp
 private async Task DoSearch(string term)
 {
@@ -175,60 +154,35 @@ This method:
 
 Now your **MusicStoreViewModel** file should now look like this:
 ```csharp
-using Avalonia.MusicStore.Models;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Avalonia.MusicStore.Messages;
+using Avalonia.MusicStore.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 
 namespace Avalonia.MusicStore.ViewModels
 {
     public partial class MusicStoreViewModel : ViewModelBase
     {
         private CancellationTokenSource? _cancellationTokenSource;
-        private CancellationTokenSource? _searchDebounceCts;
 
-        [ObservableProperty] private string? searchText;
+        [ObservableProperty]
+        public partial string? SearchText { get; set; }
 
-        [ObservableProperty] private bool isBusy;
+        [ObservableProperty]
+        public partial bool IsBusy { get; private set; }
+
+        [ObservableProperty]
+        public partial AlbumViewModel? SelectedAlbum { get; set; }
 
         public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
 
-
-        public MusicStoreViewModel()
-        {
-            PropertyChanged += async (s, e) =>
-            {
-                if (e.PropertyName == nameof(SearchText))
-                {
-                    await SearchWithDelayAsync(SearchText);
-                }
-            };
-        }
-
-        private async Task SearchWithDelayAsync(string? term)
-        {
-            _searchDebounceCts?.Cancel();
-            _searchDebounceCts = new CancellationTokenSource();
-            var token = _searchDebounceCts.Token;
-
-            try
-            {
-                await Task.Delay(400, token);
-                if (!token.IsCancellationRequested && !string.IsNullOrWhiteSpace(term))
-                {
-                    DoSearch(term);
-                }
-            }
-            catch (TaskCanceledException)
-            {
-            }
-        }
-
-        private async Task DoSearch(string term)
+        private async Task DoSearch(string? term)
         {
             _cancellationTokenSource?.Cancel();
             _cancellationTokenSource = new CancellationTokenSource();
@@ -245,12 +199,20 @@ namespace Avalonia.MusicStore.ViewModels
                 SearchResults.Add(vm);
             }
 
+            if (!cancellationToken.IsCancellationRequested)
+            {
+                LoadCovers(cancellationToken);
+            }
+
             IsBusy = false;
         }
 
+        partial void OnSearchTextChanged(string value)
+        {
+            _ = DoSearch(SearchText);
+        }
     }
 }
-
 ```
 
 ## Bind the Album View

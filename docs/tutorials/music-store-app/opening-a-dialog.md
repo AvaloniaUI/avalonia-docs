@@ -7,7 +7,7 @@ import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/ope
 
 # Open a Dialog
 
-On this page you will learn how to open another window in your app. The new window will eventually contain a search facility, and a button to add one of the album covers found to a list in the main window.  This new window will be opened as a dialog - that is it will prevent activity in the main window while it is showing.
+On this page you will learn how to open dialog window in your app and exchange data between windows using Mvvm.Messaging. The dialog will be used to search for and select an album to add to a list in the main window.
 
 ## Add a New Dialog Window
 
@@ -75,83 +75,76 @@ At this stage you will create two empty view model classes to act as placeholder
 
 ## Show Dialog
 
-Now you have a new window for the dialog, and some view model classes for its interaction; there are two steps to create the dialog interaction:
+Now that you have a new window _MusicStoreWindow_ and the corresponding view models _MusicStoreViewModel_ and _AlbumViewModel_.
+You are going to complete the logic so that:
 
-* The main window view model starts the interaction.
-* The main window view knows how to start the interaction.
+* The main window view model sends a message requesting the dialog to be shown.
+* The main window view receives that message, opens the dialog, and returns the result.
 
-Firstly, to alter the main window view model code so it starts the interaction to show the dialog, follow this procedure:
+Below is how this works step-by-step using the CommunityToolkit.Mvvm messaging API.
 
-- Locate and open the **MainWindowViewModel.cs** file.
-- Add a declaration for the interaction with the new dialog window, as shown:
+### Define the PurchaseAlbumMessage
+- In the project root directory create new folder **/Messages** 
+- Into newly created **/Messages** folder add a class **PurchaseAlbumMessage.cs**.
 
-```csharp
-public Func<MusicStoreViewModel, Task<AlbumViewModel?>>? OnShowDialog { get; set; }
-```
-This is a delegate that the view will assign. It allows the ViewModel to request a dialog without needing to know how it's displayed.
+First, you are going to define a message _PurchaseAlbumMessage_ class that carries an AlbumViewModel response. 
+This message will be sent by the view model when it needs to show the dialog.
 
-- Update the _AddAlbumAsync_ method to define an asynchronous command as shown:
-
-```csharp
-
-        [RelayCommand]
-        private async Task AddAlbumAsync()
-        {
-            var store = new MusicStoreViewModel();
-
-            if (OnShowDialog is not null)
-            {
-                var result = await OnShowDialog(store);
-            }
-        }
-    }
-```
-
-At this point, the code for the interaction is still incomplete. If you attempt to run the app now and click the icon button, nothing will happen yet — because the dialog handler hasn't been connected.
-
-Your next step is to make sure that the main window view knows how to start the interaction. This is implemented in the code-behind file for the main window view.  Follow this procedure:
-
-- Locate and open the code-behind **MainWindow.axaml.cs** file. (You may need to expand the **MainWindow.axaml** file to find it.)
-- Add the following code to the constructor to handle dialog interaction:
+- Open **PurchaseAlbumMessage.cs** and add the following code there:
 
 ```csharp
-using Avalonia;
-using Avalonia.Controls;
 using Avalonia.MusicStore.ViewModels;
+using CommunityToolkit.Mvvm.Messaging.Messages;
 
-namespace Avalonia.MusicStore.Views
-{
-    public partial class MainWindow : Window
-    {
+namespace Avalonia.MusicStore.Messages;
+
+public class PurchaseAlbumMessage : AsyncRequestMessage<AlbumViewModel?>;
+
+```
+_`AsyncRequestMessage<T>`_ lets you send a request and await a reply of type T (in our case, AlbumViewModel?).
+
+### Register the Message Handler in  MainWindow
+In _MainWindow.axaml.cs_ register a handler for PurchaseAlbumMessage. This handler runs whenever the view model sends that message. Its job is to:
+
+- Create the dialog window.
+- Assign `MusicStoreViewModel` as its DataContext.
+- Call `ShowDialog<AlbumViewModel?>` and pass the result back via m.Reply(...).
+
+Open _MainWindow.axaml.cs_ and add the following code into MainWindow constructor:
+```csharp
         public MainWindow()
         {
             InitializeComponent();
 
-            this.Opened += (_, _) =>
+            if (Design.IsDesignMode)
+                return;
+            
+            // Whenever any code will call 'Send(new PurchaseAlbumMessage())', invoke this callback on the MainWindow instance:
+            WeakReferenceMessenger.Default.Register<MainWindow, PurchaseAlbumMessage>(this, static (w, m) =>
             {
-                if (DataContext is MainWindowViewModel vm)
+            // Set an instance of MusicStoreWindow and MusicStoreViewModel as its DataContext
+                var dialog = new MusicStoreWindow
                 {
-                    vm.OnShowDialog = async (musicStoreVm) =>
-                    {
-                        var dialog = new MusicStoreWindow
-                        {
-                            DataContext = musicStoreVm
-                        };
-
-                        return await dialog.ShowDialog<AlbumViewModel?>(this);
-                    };
-                }
-            };
+                    DataContext = new MusicStoreViewModel()
+                };
+            // Show dialog window and reply with returned AlbumViewModel or null when dialog will get closed
+                m.Reply(dialog.ShowDialog<AlbumViewModel?>(w));
+            });
         }
-    }
+```
+### Send the Message from the ViewModel
+Now, update the AddAlbumAsync() inside MainWindowViewModel to send the PurchaseAlbumMessage when the user clicks on the store button.
+- Open MainWindowViewModel.cs
+- Locate AddAlbumAsync() RelayCommand that we added in the previous steps.
+- Edit AddAlbumAsync() as shown:
+```csharp
+[RelayCommand]
+private async Task AddAlbumAsync()
+{
+    // Send the message to the previously registered handler and await the selected album
+    var album = await WeakReferenceMessenger.Default.Send(new PurchaseAlbumMessage());
 }
 ```
-The added code in the Opened event connects the ViewModel OnShowDialog property to a real method that shows the dialog window.
-Specifically, it assigns a function that:
-- Creates a new instance of the MusicStoreWindow.
-- Sets the window’s DataContext to the dialog’s view model (MusicStoreViewModel).
-- Shows the dialog and returns the selected AlbumViewModel result back to the view model.
-
 Now:
 - Click **Debug** to compile and run the project.
 - Click the icon button.
