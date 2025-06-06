@@ -9,6 +9,22 @@ import MusicStoreDialogOpenedScreenshot from '/img/tutorials/music-store-app/ope
 
 On this page you will learn how to open dialog window in your app and exchange data between windows using Mvvm.Messaging. The dialog will be used to search for and select an album to add to a list in the main window.
 
+Two messages will be used in your app:
+- **PurchaseAlbumMessage** — sent by the main view model to request the dialog window be shown and await a result.
+- **MusicStoreClosedMessage** — sent by the dialog's view model when the user selects an album, to return the result and close the dialog.
+
+Below is a diagram showing the message flow between the components that you are going to implement in the next steps:
+
+```mermaid
+graph TD;
+    A[MainWindowViewModel] -->|Send PurchaseAlbumMessage| B(MainWindow)
+    B -->|Show MusicStoreWindow<br>await AlbumViewModel| C[MusicStoreWindow]
+    C -->|BuyMusic| D[MusicStoreViewModel]
+    D -->|Send MusicStoreClosedMessage<br>with SelectedAlbum| C
+    C -->|Close dialog<br>return SelectedAlbum| B
+    B -->|Reply with AlbumViewModel| A
+```
+
 ## Add a New Dialog Window
 
 There is nothing special about a window view file that makes it into a dialog; that is up to the way in which the window is controlled by the app. You will use Avalonia UI features and _CommunityToolkit.Mvvm_ to manage this. So the first step is to create a new window for the app.
