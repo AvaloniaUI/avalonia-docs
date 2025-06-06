@@ -13,6 +13,10 @@ const config = {
   tagline: 'Developer Documentation Portal',
   url: 'https://docs.avaloniaui.net',
   baseUrl: '/',
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   organizationName: 'avaloniaui', // Usually your GitHub org/user name.
   projectName: 'avalonia', // Usually your repo name.
   onBrokenLinks: 'warn',
