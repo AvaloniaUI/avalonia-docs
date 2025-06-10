@@ -43,7 +43,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Avalonia.MusicStore.ViewModels
 {
-    public class MusicStoreViewModel : ViewModelBase
+    public partial class MusicStoreViewModel : ViewModelBase
     {
        [ObservableProperty] public partial string? SearchText { get; set; }
         
