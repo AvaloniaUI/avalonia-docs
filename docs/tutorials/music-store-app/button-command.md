@@ -67,7 +67,7 @@ To add the button data binding, follow this procedure:
 The `[RelayCommand]` attribute automatically generates command properties based on your method names. If your method name ends with _Async_, the generator removes the _Async_ suffix and appends _Command_ to form the property name.
 If the method returns a Task, `[RelayCommand]` automatically generates an IAsyncRelayCommand instead of a regular IRelayCommand, giving you full support for asynchronous execution.
 This means:
-- If your method is named _AddAlbumAsync()_, the generated property will be called AddAlbumCommand.
+- If your method is named `AddAlbumAsync`, the generated property will be called `AddAlbumCommand`.
 - If your method is named _AddAlbum()_, it also becomes AddAlbumCommand.
 :::info
 Learn more about asynchronous _RelayCommand_ generation in the official docs [here](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/generators/relaycommand#asynchronous-commands).
