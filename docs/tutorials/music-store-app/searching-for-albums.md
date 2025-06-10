@@ -58,7 +58,7 @@ namespace Avalonia.MusicStore.Models
             CoverUrl = coverUrl;
         }
 
-        public static async Task<IEnumerable<Album>> SearchAsync(string searchTerm)
+        public static async Task<IEnumerable<Album>> SearchAsync(string? searchTerm)
         {
             var query = await s_SearchManager.GetAlbumsAsync(searchTerm)
                 .ConfigureAwait(false);
