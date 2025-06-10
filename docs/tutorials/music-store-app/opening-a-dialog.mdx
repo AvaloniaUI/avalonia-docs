@@ -143,7 +143,7 @@ Open _MainWindow.axaml.cs_ and add the following code into MainWindow constructo
                 {
                     DataContext = new MusicStoreViewModel()
                 };
-            // Show dialog window and reply with returned AlbumViewModel or null when dialog will get closed
+                // Show dialog window and reply with returned AlbumViewModel or null when the dialog is closed.
                 m.Reply(dialog.ShowDialog<AlbumViewModel?>(w));
             });
         }
