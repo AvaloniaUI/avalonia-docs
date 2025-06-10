@@ -121,7 +121,7 @@ Follow this procedure to trigger the search with a short delay when the search t
 ```xml
 <TextBox Watermark="Search for Albums...." Text="{Binding SearchText, Delay=400}" />
 ```
-Delay=400 ensures that input is only propagated to the view model after the user pauses for 400ms, preventing unnecessary search calls.
+`Delay=400` ensures that input is only propagated to the view model after the user pauses for 400ms, preventing unnecessary search calls.
 
 Now:
 - Locate and open the **MusicStoreViewModel.cs** file.
