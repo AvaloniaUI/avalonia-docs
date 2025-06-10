@@ -135,7 +135,7 @@ Open _MainWindow.axaml.cs_ and add the following code into MainWindow constructo
             if (Design.IsDesignMode)
                 return;
             
-            // Whenever any code will call 'Send(new PurchaseAlbumMessage())', invoke this callback on the MainWindow instance:
+            // Whenever 'Send(new PurchaseAlbumMessage())' is called, invoke this callback on the MainWindow instance:
             WeakReferenceMessenger.Default.Register<MainWindow, PurchaseAlbumMessage>(this, static (w, m) =>
             {
                 // Create an instance of MusicStoreWindow and set MusicStoreViewModel as its DataContext.
