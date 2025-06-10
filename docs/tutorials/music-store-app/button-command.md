@@ -6,7 +6,7 @@ description: TUTORIALS - Music Store App
 
 So far in this tutorial, you have altered only files from the view part of the MVVM pattern (for the main window and app). On this page you will learn how to link the button in the view for the main window, to a command in the view model. This will cause user interaction with the view (in this case a button click) to have an effect in the application logic of the view model.
 
-When you develop with _Avalonia UI_ and the MVVM pattern, the solution template will give you a choice of MVVM toolkits.  This tutorial now uses _CommunityToolkit.Mvvm_, and the solution template has already added the necessary packages.
+When you develop with _Avalonia UI_ and the MVVM pattern, the solution template will give you a choice of MVVM toolkits. This tutorial now uses _CommunityToolkit.Mvvm_, and the solution template has already added the necessary packages.
 
 ## RelayCommand
 

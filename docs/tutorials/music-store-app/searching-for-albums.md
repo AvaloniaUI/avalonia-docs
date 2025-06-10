@@ -125,12 +125,8 @@ This method is automatically called whenever the SearchText property changes.
 
 - Add `DoSearch` implementation:
 ```csharp
-private async Task DoSearch(string term)
+private async Task DoSearch(string? term)
 {
-    _cancellationTokenSource?.Cancel();
-    _cancellationTokenSource = new CancellationTokenSource();
-    var cancellationToken = _cancellationTokenSource.Token;
-
     IsBusy = true;
     SearchResults.Clear();
 
@@ -146,7 +142,6 @@ private async Task DoSearch(string term)
 }
 ```
 This method:
-- Cancels any previous ongoing search (_cancellationTokenSource).
 - Sets a busy flag to show the loading spinner in the UI.
 - Clears existing results.
 - Calls the album model's SearchAsync method to fetch data from the iTunes API.
@@ -169,8 +164,6 @@ namespace Avalonia.MusicStore.ViewModels
 {
     public partial class MusicStoreViewModel : ViewModelBase
     {
-        private CancellationTokenSource? _cancellationTokenSource;
-
         [ObservableProperty]
         public partial string? SearchText { get; set; }
 
@@ -184,10 +177,6 @@ namespace Avalonia.MusicStore.ViewModels
 
         private async Task DoSearch(string? term)
         {
-            _cancellationTokenSource?.Cancel();
-            _cancellationTokenSource = new CancellationTokenSource();
-            var cancellationToken = _cancellationTokenSource.Token;
-
             IsBusy = true;
             SearchResults.Clear();
 
@@ -197,11 +186,6 @@ namespace Avalonia.MusicStore.ViewModels
             {
                 var vm = new AlbumViewModel(album);
                 SearchResults.Add(vm);
-            }
-
-            if (!cancellationToken.IsCancellationRequested)
-            {
-                LoadCovers(cancellationToken);
             }
 
             IsBusy = false;
