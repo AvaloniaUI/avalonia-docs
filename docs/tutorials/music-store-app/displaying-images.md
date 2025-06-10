@@ -34,18 +34,19 @@ public async Task<Stream> LoadCoverBitmapAsync()
         return new MemoryStream(data);
     }
 }
+
 private static string SanitizeFileName(string input)
-        {
-            foreach (var c in Path.GetInvalidFileNameChars())
-            {
-                input = input.Replace(c, '_');
-            }
-            return input;
-        }
+{
+    foreach (var c in Path.GetInvalidFileNameChars())
+    {
+        input = input.Replace(c, '_');
+    }
+    return input;
+}
 ```
 
-Method _LoadCoverBitmapAsync()_ returns a stream that can be used to load a bitmap from, either from a cache file or from the API.
-Method  _SanitizeFileName()_ sanitizes input to replace characters that cannot be used in the file name with `_`.
+Method `LoadCoverBitmapAsync()` returns a stream that can be used to load a bitmap from, either from a cache file or from the API.
+Method  `SanitizeFileName()` sanitizes input to replace characters that cannot be used in the file name with `_`.
 :::info
 Note that the cache is not active at this time, you will implement it later in the tutorial.
 :::
@@ -83,12 +84,12 @@ public class AlbumViewModel : ViewModelBase
     [ObservableProperty] public partial Bitmap? Cover { get; private set; }
     
     public async Task LoadCover()
+    {
+        await using (var imageStream = await _album.LoadCoverBitmapAsync())
         {
-            await using (var imageStream = await _album.LoadCoverBitmapAsync())
-            {
-                Cover = await Task.Run(() => Bitmap.DecodeToWidth(imageStream, 400));
-            }
+            Cover = await Task.Run(() => Bitmap.DecodeToWidth(imageStream, 400));
         }
+    }
 }   
 ```
 
@@ -111,17 +112,16 @@ To add the method to load album cover art, follow this procedure:
 
 ```csharp
 private async void LoadCovers(CancellationToken cancellationToken)
+{
+    foreach (var album in SearchResults.ToList())
+    {
+        await album.LoadCover();
+        if (cancellationToken.IsCancellationRequested)
         {
-            foreach (var album in SearchResults.ToList())
-            {
-                await album.LoadCover();
-
-                if (cancellationToken.IsCancellationRequested)
-                {
-                    return;
-                }
-            }
+            return;
         }
+    }
+}
 ```
 
 :::warning
@@ -218,4 +218,4 @@ For more information about the _Avalonia UI_ built-in binding converters, see th
 
 Notice how the album covers load one by one, and the UI remains responsive.
 
-On the next page, you will learn how to return the selected album from dialog, when the user clicks  **Buy Album**.
+On the next page, you will learn how to return the selected album from dialog, when the user clicks  **Buy Album** button.

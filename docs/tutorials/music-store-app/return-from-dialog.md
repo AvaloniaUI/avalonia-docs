@@ -4,11 +4,11 @@ description: TUTORIALS - Music Store App
 
 # Dialog Return
 
-On this page, you’ll complete the logic for returning a selected album from the search dialog _MusicStoreWindow_ back to the main window. This will be done using the CommunityToolkit.Mvvm messaging system, allowing the dialog to communicate back without tight coupling.
+On this page, you’ll complete the logic for returning a selected album from the search dialog `MusicStoreWindow` back to the main window. This will be done using the _CommunityToolkit.Mvvm_ messaging system, allowing the dialog to communicate back without tight coupling.
 ## Create the MusicStoreClosedMessage Class
 Firstly, let's create a message class that will carry the selected album from the dialog to the window handler.
-- Inside previously created **/Messages** folder create file **MusicStoreClosedMessage.cs**
-- Into newly created file add the following code:
+- In the previously created **/Messages** folder add new class `MusicStoreClosedMessage`.
+- In the newly created file add the following code:
 ```csharp
 using Avalonia.MusicStore.ViewModels;
 
@@ -16,13 +16,13 @@ namespace Avalonia.MusicStore.Messages;
 
 public class MusicStoreClosedMessage(AlbumViewModel selectedAlbum)
 {
-public AlbumViewModel SelectedAlbum { get; } = selectedAlbum;
+    public AlbumViewModel SelectedAlbum { get; } = selectedAlbum;
 }
 ```
 
 ## Register the Message Handler in MusicStoreWindow
-To close the dialog and return the selected album to the main window, you’ll register a handler that listens for a MusicStoreClosedMessage.
-- Locate and open the MusicStoreWindow.axaml.cs file.
+To close the dialog and return the selected album to the main window, you’ll register a handler that listens for a `MusicStoreClosedMessage`.
+- Locate and open the **MusicStoreWindow.axaml.cs** file.
 - Add the following code to the constructor:
 
 ```csharp
@@ -38,11 +38,11 @@ namespace Avalonia.MusicStore.Views
         {
             InitializeComponent();
 
-            // Register a handler to listen for the message sent by the view model
+            // Register a handler to listen for the message sent by the view model.
             WeakReferenceMessenger.Default.Register<MusicStoreWindow, MusicStoreClosedMessage>(this,
                 static (window, message) =>
                 {
-                    // Close the dialog and return the selected album
+                    // Close the dialog and return the selected album.
                     window.Close(message.SelectedAlbum);
                 });
         }
@@ -50,7 +50,7 @@ namespace Avalonia.MusicStore.Views
 }
 
 ```
-When MusicStoreViewModel sends a MusicStoreClosedMessage, this handler will close the dialog and return the selected album using Avalonia’s dialog result system.
+When `MusicStoreViewModel` sends a `MusicStoreClosedMessage`, this handler will close the dialog and return the selected album using Avalonia’s dialog result system.
 
 ## Define the Command in MusicStoreViewModel
 
@@ -70,17 +70,14 @@ private void BuyMusic()
 }
 
 ```
-This command is exposed to the view as BuyMusicCommand. When invoked, it sends a MusicStoreClosedMessage with the currently selected album.
+This command is exposed to the view as `BuyMusicCommand`. When invoked, it sends a `MusicStoreClosedMessage` with the currently selected album.
 
 ## Bind the Command to the Button
 
 Your next step is bind the **Buy Album** button to the relay command in the music store view model, follow this procedure:
 
-- Locate and open the **MusicStoreView .axaml** file. 
+- Locate and open the **MusicStoreView.axaml** file. 
 - Add the data binding `Command="{Binding BuyMusicCommand}"` to the button element.
-
-
-
 - Click **Debug** to compile and run the project.
 - Click the icon button.
 - Type some search text.

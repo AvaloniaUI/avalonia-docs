@@ -20,7 +20,7 @@ Follow this procedure to derive from the `ObservableObject` class:
 ```csharp
 namespace Avalonia.MusicStore.ViewModels
 {
-    public class MusicStoreViewModel : ViewModelBase
+    public partial class MusicStoreViewModel : ViewModelBase
     {
     }
 }
@@ -48,7 +48,6 @@ namespace Avalonia.MusicStore.ViewModels
        [ObservableProperty] public partial string? SearchText { get; set; }
         
        [ObservableProperty] public partial bool IsBusy { get; private set; }
-
     }
 }
 ```
