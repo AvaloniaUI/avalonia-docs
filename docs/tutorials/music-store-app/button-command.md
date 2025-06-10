@@ -72,7 +72,7 @@ This means:
 :::info
 Learn more about asynchronous `RelayCommand` generation in the official docs [here](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/generators/relaycommand#asynchronous-commands).
 :::
-The Command attribute of an _Avalonia UI_ button determines what happens when the button is clicked. In this case it binds to the _AddAlbumCommand_ generated in your view model, causing the _AddAlbumAsync()_ method to run.
+The `Command` property of an _Avalonia UI_ button determines what happens when the button is clicked. In this case it binds to the `AddAlbumCommand` generated in your view model, causing the `AddAlbumAsync` method to run.
 
 - Click **Debug** to compile and run the project.
 - Click the icon button.
