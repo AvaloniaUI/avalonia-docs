@@ -10,6 +10,18 @@ import MusicStoreAlbumViewScreenshot from '/img/tutorials/music-store-app/search
 On this page, you will add some business logic to the app This will allow you to replace the mock data and get some real album data from the search. This business logic code forms the 'Model' part of the MVVM pattern.
 
 To implement a real album search in the app, you will use a _NuGet_ package that can call the _Apple iTunes_ Web API album search.
+Firstly, let's remove the constructor for mock search that we will not need anymore. 
+- Go to **MusicStoreViewModel.cs** file
+- Remove constructor
+```csharp
+public MusicStoreViewModel()
+{
+SearchResults.Add(new AlbumViewModel());
+SearchResults.Add(new AlbumViewModel());
+SearchResults.Add(new AlbumViewModel());
+}
+```
+This constructor was only used for testing the UI with mock data and is no longer needed.
 
 ## Apple Web API Package
 
