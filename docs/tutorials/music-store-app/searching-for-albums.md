@@ -128,7 +128,7 @@ Now:
 - Add the following method there:
 
 ```csharp
-partial void OnSearchTextChanged(string value)
+        partial void OnSearchTextChanged(string? value)
         {
             _ = DoSearch(SearchText);
         }
