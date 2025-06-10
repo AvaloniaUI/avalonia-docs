@@ -44,7 +44,7 @@ The `[RelayCommand]` attribute generates a public property for you at compile ti
 
 This means that even though you only wrote a method named `AddAlbumAsync`, Avalonia's data-binding system can bind directly to `AddAlbumCommand` in your AXAML — without you writing any boilerplate command logic.
 
-- Now place a debug breakpoint at the opening curly brace inside the AddAlbumAsync() method.
+- Now place a debug breakpoint at the opening curly brace inside the `AddAlbumAsync()` method.
 
 To complete the link from the view to your new `AddAlbumAsync` view model property, you will add a data binding to the button.
 
