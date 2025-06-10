@@ -120,7 +120,7 @@ public class PurchaseAlbumMessage : AsyncRequestMessage<AlbumViewModel?>;
 _`AsyncRequestMessage<T>`_ lets you send a request and await a reply of type T (in our case, AlbumViewModel?).
 
 ### Register the Message Handler in  MainWindow
-In _MainWindow.axaml.cs_ register a handler for PurchaseAlbumMessage. This handler runs whenever the view model sends that message. Its job is to:
+In _MainWindow.axaml.cs_ register a handler for `PurchaseAlbumMessage`. This handler runs whenever the view model sends that message. Its job is to:
 
 - Create the dialog window.
 - Assign `MusicStoreViewModel` as its DataContext.
