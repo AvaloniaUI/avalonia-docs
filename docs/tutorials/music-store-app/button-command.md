@@ -68,7 +68,7 @@ The `[RelayCommand]` attribute automatically generates command properties based 
 If the method returns a Task, `[RelayCommand]` automatically generates an `IAsyncRelayCommand` instead of a regular `IRelayCommand`, giving you full support for asynchronous execution.
 This means:
 - If your method is named `AddAlbumAsync`, the generated property will be called `AddAlbumCommand`.
-- If your method is named _AddAlbum()_, it also becomes AddAlbumCommand.
+- If your method is named `AddAlbum`, it also becomes `AddAlbumCommand`.
 :::info
 Learn more about asynchronous _RelayCommand_ generation in the official docs [here](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/generators/relaycommand#asynchronous-commands).
 :::
