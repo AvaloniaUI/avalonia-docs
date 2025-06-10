@@ -70,7 +70,7 @@ This means:
 - If your method is named `AddAlbumAsync`, the generated property will be called `AddAlbumCommand`.
 - If your method is named `AddAlbum`, it also becomes `AddAlbumCommand`.
 :::info
-Learn more about asynchronous _RelayCommand_ generation in the official docs [here](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/generators/relaycommand#asynchronous-commands).
+Learn more about asynchronous `RelayCommand` generation in the official docs [here](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/generators/relaycommand#asynchronous-commands).
 :::
 The Command attribute of an _Avalonia UI_ button determines what happens when the button is clicked. In this case it binds to the _AddAlbumCommand_ generated in your view model, causing the _AddAlbumAsync()_ method to run.
 
