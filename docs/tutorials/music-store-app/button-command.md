@@ -40,7 +40,7 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 ### How it works
-The `[RelayCommand]` attribute generates a public property for you at compile time named AddAlbumCommand, which implements ICommand.
+The `[RelayCommand]` attribute generates a public property for you at compile time named `AddAlbumCommand`, which implements `ICommand`.
 
 This means that even though you only wrote a method named AddAlbumAsync, Avalonia's data-binding system can bind directly to AddAlbumCommand in your AXAML — without you writing any boilerplate command logic.
 
