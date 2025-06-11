@@ -93,10 +93,10 @@ The view `AlbumView` and the view model `AlbumViewModel` already have the same b
 Follow this procedure:
 
 - Locate and open the **AlbumViewModel.cs** file you created earlier.
-- Add the code for the class to inherit from `ViewModelBase` as shown:
+- Add the code for the class to inherit from `ViewModelBase` as shown and make the class `partial`:
 
 ```csharp
-public class AlbumViewModel : ViewModelBase
+public partial class AlbumViewModel : ViewModelBase
 {        
 }
 ```

@@ -20,7 +20,7 @@ Follow this procedure to get the album cover art from the Web API:
 
 ```csharp
 private static HttpClient s_httpClient = new();
-private string CachePath => $"./Cache/{Artist} - {Title}";
+private string CachePath => $"./Cache/{SanitizeFileName(Artist)} - {SanitizeFileName(Title)}";
 
 public async Task<Stream> LoadCoverBitmapAsync()
 {
@@ -34,15 +34,24 @@ public async Task<Stream> LoadCoverBitmapAsync()
         return new MemoryStream(data);
     }
 }
+
+private static string SanitizeFileName(string input)
+{
+    foreach (var c in Path.GetInvalidFileNameChars())
+    {
+        input = input.Replace(c, '_');
+    }
+    return input;
+}
 ```
 
-This method returns a stream that can be used to load a bitmap from, either from a cache file or from the API.
-
+Method `LoadCoverBitmapAsync()` returns a stream that can be used to load a bitmap from, either from a cache file or from the API.
+Method  `SanitizeFileName()` sanitizes input to replace characters that cannot be used in the file name with `_`.
 :::info
 Note that the cache is not active at this time, you will implement it later in the tutorial.
 :::
 
-- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:;
+- So that you will see as soon as the cache becomes active, place a debug breakpoint at the following line:
 
 ```csharp
 return File.OpenRead(CachePath + ".bmp");
@@ -64,19 +73,15 @@ Follow this procedure to update the album view model:
 
 ```csharp
 using Avalonia.Media.Imaging;
+using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 ...
 
-public class AlbumViewModel : ViewModelBase
+public partial class AlbumViewModel : ViewModelBase
 {
     ...
     
-    private Bitmap? _cover;
-
-    public Bitmap? Cover
-    {
-        get => _cover;
-        private set => this.RaiseAndSetIfChanged(ref _cover, value);
-    }
+    [ObservableProperty] public partial Bitmap? Cover { get; private set; }
     
     public async Task LoadCover()
     {
@@ -111,7 +116,6 @@ private async void LoadCovers(CancellationToken cancellationToken)
     foreach (var album in SearchResults.ToList())
     {
         await album.LoadCover();
-
         if (cancellationToken.IsCancellationRequested)
         {
             return;
@@ -160,30 +164,26 @@ if (!cancellationToken.IsCancellationRequested)
 At this stage, your `DoSearch` method should look like this:
 
 ```csharp
-private async void DoSearch(string s)
+private async Task DoSearch(string? term)
 {
-    IsBusy = true;
-    SearchResults.Clear();
-
     _cancellationTokenSource?.Cancel();
     _cancellationTokenSource = new CancellationTokenSource();
     var cancellationToken = _cancellationTokenSource.Token;
 
-    if (!string.IsNullOrWhiteSpace(s))
+    IsBusy = true;
+    SearchResults.Clear();
+
+    var albums = await Album.SearchAsync(term);
+
+    foreach (var album in albums)
     {
-        var albums = await Album.SearchAsync(s);
+        var vm = new AlbumViewModel(album);
+        SearchResults.Add(vm);
+    }
 
-        foreach (var album in albums)
-        {
-            var vm = new AlbumViewModel(album);
-
-            SearchResults.Add(vm);
-        }
-
-        if (!cancellationToken.IsCancellationRequested)
-        {
-            LoadCovers(cancellationToken);
-        }
+    if (!cancellationToken.IsCancellationRequested)
+    {
+        LoadCovers(cancellationToken);
     }
 
     IsBusy = false;
@@ -197,11 +197,14 @@ In the last step here, you will alter the data bindings in the album view so tha
 Follow this procedure:
 
 - Locate and open the **AlbumView.axaml** file.
-- Add the data binding `Source="{Binding Cover}"` to the `<Image>` element:
-- Add this data binding and converter to the panel element below:
+- Add the data binding `Source="{Binding Cover}"` to the `<Image>` element as shown below:
+```
+<Image Width="200" Stretch="Uniform" Source="{Binding Cover}" />
+```
+- Add data binding and converter to the panel element below as shown:
 
 ```
-IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
+<Panel Height="200" IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}">
 ```
 
 A converter is an extension of a data binding expression that can convert the binding value before it is passed to the bound control. The `IsNull` converter returns a Boolean that is true when the value object is null.
@@ -218,4 +221,4 @@ For more information about the _Avalonia UI_ built-in binding converters, see th
 
 Notice how the album covers load one by one, and the UI remains responsive.
 
-On the next page, you will learn how to return the selected album from dialog, when the user clicks  **Buy Album**.
+On the next page, you will learn how to return the selected album from dialog, when the user clicks  **Buy Album** button.

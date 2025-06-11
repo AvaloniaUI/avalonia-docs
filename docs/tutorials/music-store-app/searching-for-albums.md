@@ -10,6 +10,18 @@ import MusicStoreAlbumViewScreenshot from '/img/tutorials/music-store-app/search
 On this page, you will add some business logic to the app This will allow you to replace the mock data and get some real album data from the search. This business logic code forms the 'Model' part of the MVVM pattern.
 
 To implement a real album search in the app, you will use a _NuGet_ package that can call the _Apple iTunes_ Web API album search.
+Firstly, let's remove the constructor for mock search that we will not need anymore. 
+- Go to **MusicStoreViewModel.cs** file.
+- Remove constructor.
+```csharp
+public MusicStoreViewModel()
+{
+    SearchResults.Add(new AlbumViewModel());
+    SearchResults.Add(new AlbumViewModel());
+    SearchResults.Add(new AlbumViewModel());
+}
+```
+This constructor was only used for testing the UI with mock data and is no longer needed.
 
 ## Apple Web API Package
 
@@ -58,8 +70,13 @@ namespace Avalonia.MusicStore.Models
             CoverUrl = coverUrl;
         }
 
-        public static async Task<IEnumerable<Album>> SearchAsync(string searchTerm)
+        public static async Task<IEnumerable<Album>> SearchAsync(string? searchTerm)
         {
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                return Enumerable.Empty<Album>();
+            }
+            
             var query = await s_SearchManager.GetAlbumsAsync(searchTerm)
                 .ConfigureAwait(false);
                 
@@ -97,70 +114,107 @@ public string Artist => _album.Artist;
 public string Title => _album.Title;
 ```
 
-Note that as the view model properties will not change in the UI during runtime, they have no setter and a plain getter - there is no need to use the `RaiseAndSetIfChanged` method here.
+Note that as the view model properties will not change in the UI during runtime, they have no setter and a plain getter.
 
 ## Start the Search
 
-In this step, you will add some code to the music store view model so that whenever the search text changes, the `SearchAsync` method on the album model (business service) is started. When it finishes, the search places its results in the observable collection `SearchResults`. This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
+In this step, you’ll add the ability to search for albums in real-time as the user types in the music store dialog. When it finishes, the search places its results in the observable collection `SearchResults`. This collection is already bound to the list box, so with a small adjustment to the album view, the results of the search will display as the tiles you prepared earlier.  
 
-Follow this procedure to start the search whenever the search text changes:
+Follow this procedure to trigger the search with a short delay when the search text changes:
+- Locate and open the **MusicStoreView.axaml** file.
+- Find the line with SearchText binding and add a Delay property as shown below:
+```xml
+<TextBox Watermark="Search for Albums...." Text="{Binding SearchText, Delay=400}" />
+```
+`Delay=400` ensures that input is only propagated to the view model after the user pauses for 400ms, preventing unnecessary search calls.
 
+Now:
 - Locate and open the **MusicStoreViewModel.cs** file.
-- Replace the constructor code, and add the extra code as shown:
+- Add the following method there:
 
 ```csharp
-using Avalonia.MusicStore.Models;
-using ReactiveUI;
+partial void OnSearchTextChanged(string? value)
+{
+    _ = DoSearch(SearchText);
+}
+```
+This method is automatically called whenever the SearchText property changes.
+
+- Add `DoSearch` implementation:
+```csharp
+private async Task DoSearch(string? term)
+{
+    IsBusy = true;
+    SearchResults.Clear();
+
+    var albums = await Album.SearchAsync(term);
+
+    foreach (var album in albums)
+    {
+        var vm = new AlbumViewModel(album);
+        SearchResults.Add(vm);
+    }
+
+    IsBusy = false;
+}
+```
+This method:
+- Sets a busy flag to show the loading spinner in the UI.
+- Clears existing results.
+- Calls the album model's `SearchAsync` method to fetch data from the iTunes API.
+- Wraps each result in an `AlbumViewModel` and adds it to `SearchResults`.
+
+Now your **MusicStoreViewModel** file should now look like this:
+```csharp
 using System;
 using System.Collections.ObjectModel;
-using System.Reactive.Linq;
+using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
+using Avalonia.MusicStore.Messages;
+using Avalonia.MusicStore.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 
 namespace Avalonia.MusicStore.ViewModels
 {
-    public class MusicStoreViewModel : ViewModelBase
+    public partial class MusicStoreViewModel : ViewModelBase
     {
-        ...
-       
-        public MusicStoreViewModel()
-        {
-            this.WhenAnyValue(x => x.SearchText)
-                .Throttle(TimeSpan.FromMilliseconds(400))
-                .ObserveOn(RxApp.MainThreadScheduler)
-                .Subscribe(DoSearch!);
-        }
-       
-        private async void DoSearch(string? s)
+        [ObservableProperty]
+        public partial string? SearchText { get; set; }
+
+        [ObservableProperty]
+        public partial bool IsBusy { get; private set; }
+
+        [ObservableProperty]
+        public partial AlbumViewModel? SelectedAlbum { get; set; }
+
+        public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
+
+        private async Task DoSearch(string? term)
         {
             IsBusy = true;
             SearchResults.Clear();
 
-            if (!string.IsNullOrWhiteSpace(s))
-            {
-                var albums = await Album.SearchAsync(s);
+            var albums = await Album.SearchAsync(term);
 
-                foreach (var album in albums)
-                {
-                    var vm = new AlbumViewModel(album);
-                    SearchResults.Add(vm);
-                }
+            foreach (var album in albums)
+            {
+                var vm = new AlbumViewModel(album);
+                SearchResults.Add(vm);
             }
 
             IsBusy = false;
         }
+
+        partial void OnSearchTextChanged(string value)
+        {
+            _ = DoSearch(SearchText);
+        }
     }
 }
 ```
-
-The `WhenAnyValue` method is provided by the _ReactiveUI_ framework as part of the `ReactiveObject`(inherited via `ViewModelBase`). The method takes a lambda expression parameter that gets the property you want to observe for changes. So in the above code, an event occurs whenever the user types to change the search text.
-
-It will be good design to wait until the user has stopped typing before attempting to run the search. The `Throttle` method prevents the events being processed until the time span (400 milliseconds) is up. This means processing will not start until the user has stopped typing for 400 milliseconds or longer.
-
-:::info
-The `ObserveOn` method is required to ensure that the subscribed method is always called on the UI thread. In _Avalonia UI_ applications, you must always update the UI on the UI thread.
-:::
-
-Lastly, the `Subscribe` method calls the `DoSearch` method for each observed event. The `DoSearch` method  runs asynchronously, and has no return value.
 
 ## Bind the Album View
 
@@ -170,7 +224,7 @@ Follow this procedure to add the album name and artist name to the tile:
 
 - Locate and open the **AlbumView.axaml** file.
 - Add the two text block controls with their data bindings, as shown:
-- To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
+- To have compiled binding working, you need to indicate the datatype used in the view : `AlbumViewModel`.
 
 ```xml
 <UserControl ...

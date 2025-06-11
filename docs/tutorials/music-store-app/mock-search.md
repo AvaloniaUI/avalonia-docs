@@ -8,28 +8,27 @@ import MusicStoreMockSearchScreenshot from '/img/tutorials/music-store-app/add-c
 
 On this page you will create the view model for the album search feature, and then bind it to the controls on the new user control. At this stage you will use a mock of the search itself, so that you can concentrate on the view model.
 
-## Reactive View Model  
+##  MVVM Toolkit View Model
 
-The _ReactiveUI_ framework provides _Avalonia UI_ with support for its data binding system. You add this support by deriving your view model from the `ReactiveObject` class, via the `ViewModelBase` class that was added to your project at the start, by the solution template.
+The _CommunityToolkit.Mvvm_ framework provides _Avalonia UI_ with support for its data binding system. You add this support by deriving your view model from the `ObservableObject` class, via the `ViewModelBase` class that was added to your project at the start, by the solution template.
 
-Follow this procedure to derive from the `ReactiveObject` class:
+Follow this procedure to derive from the `ObservableObject` class:
 
 - Locate and open the **MusicStoreViewModel.cs** file.
-- Add the code to derive the class from `ViewModelBase`.
+- Add the code to derive the class from `ViewModelBase` and make the class `partial`.
 
 ```csharp
 namespace Avalonia.MusicStore.ViewModels
 {
-    public class MusicStoreViewModel : ViewModelBase
+    public partial class MusicStoreViewModel : ViewModelBase
     {
     }
 }
 ```
-
-This adds the important extension method `RaiseAndSetIfChanged` to your view model, and will allow you to give the properties there the ability to notify changes to the view.  
+This setup allows you to use attributes like `[ObservableProperty]`, which automatically generate backing fields and property change notifications needed for UI binding.
 
 :::info
-To review the concepts behind the MVVM pattern and notification, see [here](../../concepts/the-mvvm-pattern/).
+You can learn more about `[ObservableProperty]` and `INotifyPropertyChanged` [here](../../guides/data-binding/inotifypropertychanged.md).
 :::
 
 At this stage, you will create two properties for the search application logic:
@@ -37,36 +36,24 @@ At this stage, you will create two properties for the search application logic:
 * A text string that is the search criteria,
 * A Boolean that indicates whether the search is busy.
 
-- Add the following code to implement the above properties:
+- Add the following properties using the  `[ObservableProperty]` attribute:
 
 ```csharp
-using ReactiveUI;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Avalonia.MusicStore.ViewModels
 {
-    public class MusicStoreViewModel : ViewModelBase
+    public partial class MusicStoreViewModel : ViewModelBase
     {
-        private string? _searchText;
-        private bool _isBusy;
-
-        public string? SearchText
-        {
-            get => _searchText;
-            set => this.RaiseAndSetIfChanged(ref _searchText, value);
-        }
-
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set => this.RaiseAndSetIfChanged(ref _isBusy, value);
-        }
-
+       [ObservableProperty] public partial string? SearchText { get; set; }
+        
+       [ObservableProperty] public partial bool IsBusy { get; private set; }
     }
 }
 ```
-
-You can see that the properties have a normal public getter which returns the private value field; but the setter calls the `RaiseAndSetIfChanged` method - in order to implement the notification.
-
+:::info
+Note that the partial property syntax was introduced in C# 13 Community Toolkit 8.4, visit [here](creating-the-project.md) for correct setup.
+:::
 ## Data Binding
 
 Next you will add a data binding to link the view to the view model. The text box will be bound to the search text, and whether the progress bar is visible to the user will  be bound to the Boolean.
@@ -83,7 +70,7 @@ Follow this procedure to add data binding to the view:
     <!-- ... -->
     <DockPanel>
       <StackPanel DockPanel.Dock="Top">
-        <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
+          <TextBox Watermark="Search for Albums...." Text="{Binding SearchText}" />
         <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
       </StackPanel>
       <Button Content="Buy Album"
@@ -110,15 +97,9 @@ Follow this procedure to add the above properties:
 - Add the following code to the class:
 
 ```csharp
-private AlbumViewModel? _selectedAlbum;
+[ObservableProperty] public partial AlbumViewModel? SelectedAlbum { get; set; }
 
 public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
-
-public AlbumViewModel? SelectedAlbum
-{
-    get => _selectedAlbum;
-    set => this.RaiseAndSetIfChanged(ref _selectedAlbum, value);
-}
 ```
 
 Next to bind these properties to the list box in the view, follow this procedure:
