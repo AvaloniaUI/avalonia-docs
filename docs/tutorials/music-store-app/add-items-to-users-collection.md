@@ -56,21 +56,21 @@ xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 - Under the button element, add the XAML as shown:
 
 ```xml
-     <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 40 0 0">
-        <ItemsControl ItemsSource="{Binding Albums}">
-          <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-              <WrapPanel />
-            </ItemsPanelTemplate>
-          </ItemsControl.ItemsPanel>
+<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 40 0 0">
+  <ItemsControl ItemsSource="{Binding Albums}">
+    <ItemsControl.ItemsPanel>
+      <ItemsPanelTemplate>
+        <WrapPanel />
+      </ItemsPanelTemplate>
+    </ItemsControl.ItemsPanel>
 
-          <ItemsControl.ItemTemplate>
-            <DataTemplate>
-              <views:AlbumView Margin="0 0 20 20" />
-            </DataTemplate>
-          </ItemsControl.ItemTemplate>
-        </ItemsControl>
-      </ScrollViewer>
+    <ItemsControl.ItemTemplate>
+      <DataTemplate>
+        <views:AlbumView Margin="0 0 20 20" />
+      </DataTemplate>
+    </ItemsControl.ItemTemplate>
+  </ItemsControl>
+</ScrollViewer>
 ```
 
 - Click **Debug** to compile and run the project.
