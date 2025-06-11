@@ -77,7 +77,7 @@ using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 ...
 
-public class AlbumViewModel : ViewModelBase
+public partial class AlbumViewModel : ViewModelBase
 {
     ...
     
