@@ -197,11 +197,14 @@ In the last step here, you will alter the data bindings in the album view so tha
 Follow this procedure:
 
 - Locate and open the **AlbumView.axaml** file.
-- Add the data binding `Source="{Binding Cover}"` to the `<Image>` element:
-- Add this data binding and converter to the panel element below:
+- Add the data binding `Source="{Binding Cover}"` to the `<Image>` element as shown below:
+```
+<Image Width="200" Stretch="Uniform" Source="{Binding Cover}" />
+```
+- Add data binding and converter to the panel element below as shown below:
 
 ```
-IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
+<Panel Height="200" IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}">
 ```
 
 A converter is an extension of a data binding expression that can convert the binding value before it is passed to the bound control. The `IsNull` converter returns a Boolean that is true when the value object is null.
