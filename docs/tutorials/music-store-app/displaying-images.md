@@ -201,7 +201,7 @@ Follow this procedure:
 ```
 <Image Width="200" Stretch="Uniform" Source="{Binding Cover}" />
 ```
-- Add data binding and converter to the panel element below as shown below:
+- Add data binding and converter to the panel element below as shown:
 
 ```
 <Panel Height="200" IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}">
