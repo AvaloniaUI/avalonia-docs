@@ -15,7 +15,7 @@ The _CommunityToolkit.Mvvm_ framework provides _Avalonia UI_ with support for it
 Follow this procedure to derive from the `ObservableObject` class:
 
 - Locate and open the **MusicStoreViewModel.cs** file.
-- Add the code to derive the class from `ViewModelBase`.
+- Add the code to derive the class from `ViewModelBase` and make the class `partial`.
 
 ```csharp
 namespace Avalonia.MusicStore.ViewModels

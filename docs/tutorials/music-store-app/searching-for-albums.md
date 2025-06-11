@@ -156,8 +156,8 @@ private async Task DoSearch(string? term)
 This method:
 - Sets a busy flag to show the loading spinner in the UI.
 - Clears existing results.
-- Calls the album model's SearchAsync method to fetch data from the iTunes API.
-- Wraps each result in an AlbumViewModel and adds it to SearchResults.
+- Calls the album model's `SearchAsync` method to fetch data from the iTunes API.
+- Wraps each result in an `AlbumViewModel` and adds it to `SearchResults`.
 
 Now your **MusicStoreViewModel** file should now look like this:
 ```csharp
@@ -219,7 +219,7 @@ Follow this procedure to add the album name and artist name to the tile:
 
 - Locate and open the **AlbumView.axaml** file.
 - Add the two text block controls with their data bindings, as shown:
-- To have compiled binding working, you need to indicate the datatype used in the view : AlbumViewModel.
+- To have compiled binding working, you need to indicate the datatype used in the view : `AlbumViewModel`.
 
 ```xml
 <UserControl ...

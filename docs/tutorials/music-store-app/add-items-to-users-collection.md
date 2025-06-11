@@ -24,7 +24,7 @@ public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 
 ## Process the Dialog Result
 
-Your next step is to alter the add album command so that it adds the dialog return object (an `AlbumViewModel`) to the observable collection. Follow this procedure:
+Your next step is to alter the `AddAlbumAsync` command so that it adds the dialog return object (an `AlbumViewModel`) to the observable collection. Follow this procedure:
 
 - In the same **MainWindowViewModel.cs** file update the `AddAlbumAsync()` command method:
 
