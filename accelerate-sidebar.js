@@ -67,6 +67,14 @@ const sidebars = {
         'components/webview/nativewebdialog',
         'components/webview/webauthenticationbroker',
         'components/webview/faq',
+        {
+          'type': 'category',
+          'label': 'Interop',
+          'items': [
+            'components/webview/interop/environment-options',
+            'components/webview/interop/native-browser-interop',
+          ]
+        }, 
       ]
     },    
     

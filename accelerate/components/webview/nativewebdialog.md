@@ -58,6 +58,34 @@ public event EventHandler Closing;
 
 Fires before the WebView dialog is closed.
 
+### AdapterCreated
+
+```csharp
+public event EventHandler<WebViewAdapterEventArgs>? AdapterCreated;
+```
+
+Fires after underlying webview adapter was initialized.
+
+### AdapterDestroyed
+
+```csharp
+public event EventHandler<WebViewNavigationCompletedEventArgs>? AdapterDestroyed;
+```
+
+Fires after underlying webview adapter was destroyed.
+
+### EnvironmentRequested
+
+```csharp
+public event EventHandler<WebViewEnvironmentRequestedEventArgs>? EnvironmentRequested;
+```
+
+Fired before the underlying webview adapter is created, allowing customization of the webview environment.
+Use this event to modify environment options (such as enabling private mode or dev tools) before the webview is initialized.
+The event argument type depends on the platform.
+
+See [WebView Environment Options](./interop/environment-options.md) for more details.
+
 ### NavigationCompleted
 
 ```csharp
@@ -74,6 +102,14 @@ public event EventHandler<WebViewNavigationStartingEventArgs>? NavigationStarted
 
 Fires before a new navigation starts for the top-level document.
 
+### NewWindowRequested
+
+```csharp
+public event EventHandler<WebViewNewWindowRequestedEventArgs>? NewWindowRequested;
+```
+
+Fires before a new navigate starts for the top level document.
+
 ### WebMessageReceived
 
 ```csharp
@@ -81,6 +117,20 @@ public event EventHandler<WebMessageReceivedEventArgs>? WebMessageReceived;
 ```
 
 Fires after web content sends a message to the app host via `invokeCSharpAction(body)`.
+
+### WebResourceRequested
+
+```csharp
+public event EventHandler<WebResourceRequestedEventArgs>? WebResourceRequested;
+```
+
+Fires when the WebView is performing a URL request to a matching URL.
+Arguments include request information, and headers dictionary.
+
+:::note
+Headers dictionary can be readonly depending on the request or platform.
+Always check result of the `TrySet` and `TryRemove` methods.
+:::
 
 ## Methods
 
@@ -202,7 +252,8 @@ Returns an instance of `NativeWebViewCookieManager` for managing cookies if supp
 public IPlatformHandle? TryGetWebViewPlatformHandle()
 ```
 
-Gets platform handle of the webview hosted inside the dialog
+Gets platform handle of the webview hosted inside the dialog.
+See [Native Browser interop](./interop/native-browser-interop.md) for details.
 
 ### TryGetPlatformHandle
 
@@ -211,6 +262,8 @@ public IPlatformHandle? TryGetPlatformHandle()
 ```
 
 Returns a platform handle of the dialog window itself.
+For Avalonia dialog, returned value is Avalonia window handle itself.
+For GTK native dialog returned value uses GtkWindow as a handle.
 
 ## Usage Example
 

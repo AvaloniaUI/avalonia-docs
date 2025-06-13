@@ -41,10 +41,22 @@ public Uri RedirectUri { get; init; }
 URI that indicates the completion of the authentication flow.
 
 ```csharp
+public bool NonPersistent { get; init; }
+```
+
+Hint for the platform implementation to not store any session data persistently.
+
+```csharp
 public bool PreferNativeWebDialog { get; init; }
 ```
 
 If true, WebAuthenticationBroker will avoid platform specific implementation option, and will use [NativeWebDialog](nativewebdialog.md) based implementation.
+
+```csharp
+public Func<NativeWebDialog?> NativeWebDialogFactory { get; init; }
+```
+
+Callback that can be used to override [NativeWebDialog](nativewebdialog.md) creation when WebAuthenticationBroker uses dialog implementation instead of system auth APIs.
 
 ## WebAuthenticationResult
 
