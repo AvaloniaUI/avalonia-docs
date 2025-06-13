@@ -72,7 +72,7 @@ public interface IWindowsWebView1PlatformHandle : IPlatformHandle
 
 ### MacOS/iOS
 
-**Recommended Approach**: Use official .NET Xamarin.Native macOS/iOS bindings for strongly-typed wrappers. Typically using [NSObject.GetNSObject<WKWebView>(IntPtr, false)](https://learn.microsoft.com/en-us/dotnet/api/objcruntime.runtime.getnsobject?view=xamarin-ios-sdk-12#objcruntime-runtime-getnsobject-1(system-intptr-system-boolean)).
+**Recommended Approach**: Use official .NET Xamarin.Native macOS/iOS bindings for strongly-typed wrappers. Typically using [NSObject.GetNSObject\<WKWebView\>(IntPtr, false)](https://learn.microsoft.com/en-us/dotnet/api/objcruntime.runtime.getnsobject?view=xamarin-ios-sdk-12#objcruntime-runtime-getnsobject-1(system-intptr-system-boolean)).
 
 ```csharp
 var wkWebView = NSObject.GetNSObject<WKWebView>(handle.WKWebView, false);
