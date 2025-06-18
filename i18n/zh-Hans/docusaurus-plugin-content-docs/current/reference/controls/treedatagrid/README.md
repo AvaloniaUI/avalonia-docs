@@ -35,6 +35,8 @@ import TreeDataGridNuGetScreenshot from '/img/reference/controls/treedatagrid/tr
 
 <img src={TreeDataGridCountriesScreenshot} alt="" />
 
+# 配置步骤
+
 ## NuGet 包引用
 
 您必须安装数据网格的 _NuGet_ 包，有几种方法可以做到这一点。您可以使用 IDE 项目菜单中的 **Manage NuGet Packages**：
@@ -58,7 +60,7 @@ dotnet add package Avalonia.Controls.TreeDataGrid
 
 ## 包含数据网格样式
 
-您必须引用数据网格主题以包含树数据网格使用的附加样式。您可以通过在应用程序 (`App.axaml` 文件) 中添加 `<StyleInclude>` 元素来实现这一点。
+您必须引用数据网格主题以包含树数据网格使用的附加样式。您可以通过在应用程序 (`App.axaml` 文件) 中添加 `<StyleInclude>` 元素来实现这一点。否则运行之后，可能会只显示空白。
 
 例如：
 
@@ -73,6 +75,7 @@ dotnet add package Avalonia.Controls.TreeDataGrid
   </Application.Styles>
 </Application>
 ```
+#补充说明
 
 ## 有用的属性
 
