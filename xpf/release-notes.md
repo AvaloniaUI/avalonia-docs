@@ -3,6 +3,22 @@ id: release-notes
 title: Release Notes
 ---
 
+## XPF 1.5.3
+
+* Fix MediaContext to use Stopwatch instead of system clock
+* Adjust WinForms MessageBoxTheme
+* Enforce WPF LineSpacing
+
+## XPF 1.5.2
+
+* Limit the width of a MessageBox to 400px to closely follow the WIN32 behavior
+* Limit the MessageBox to 80% of the current screen's height
+* Update Avalonia to stable 11.3.1
+
+## XPF 1.5.1
+
+* Change VB MsgBox default title to be identical to Windows
+
 ## XPF 1.5.0
 
 * Apply TextAlignment to overflowed AVTextLine
