@@ -38,12 +38,12 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold  text-darkblue dark:text-white mb-6">Products</h3>
                         <nav className="flex flex-col space-y-3">
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/">Avalonia</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/platforms">Avalonia</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/xpf">Avalonia XPF</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/accelerate">Avalonia Accelerate</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/support">Enhanced support</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/services">Development services</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/orgs">Orgs using Avalonia</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/organisations">Orgs using Avalonia</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/startups">For startups</a>
                         </nav>
                     </div>
@@ -57,8 +57,8 @@ const Footer = () => {
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://github.com/avaloniaui/avalonia">GitHub</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/mvps">MVPs</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/showcase">App showcase</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://t.me/Avalonia">Community hub</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/portal">Customer portal</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.community">Community hub</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://portal.avaloniaui.net">Customer portal</a>
                         </nav>
                     </div>
 
@@ -66,11 +66,11 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold  text-darkblue dark:text-white mb-6">Platforms</h3>
                         <nav className="flex flex-col space-y-3">
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://docs.avaloniaui.net/docs/deployment/windows">Windows</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://docs.avaloniaui.net/docs/deployment/macos">macOS</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://docs.avaloniaui.net/docs/deployment/linux">Linux</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://docs.avaloniaui.net/docs/deployment/mobile">iOS & Android</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://docs.avaloniaui.net/docs/deployment/web">WebAssembly</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/platforms/windows">Windows</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/platforms/macos">macOS</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/platforms/linux">Linux</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/platforms/mobile">iOS & Android</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/platforms/wasm">WebAssembly</a>
                         </nav>
                     </div>
 
@@ -78,14 +78,14 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold  text-darkblue dark:text-white mb-6">Handbook</h3>
                         <nav className="flex flex-col space-y-3">
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/why">Why we exist</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/philosophy">Our OSS philosophy</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/values">Values</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/building">Who we're building for</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/marketing">Marketing</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/value">Value proposition</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/sell">How we "sell"</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/pricing">Pricing principles</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/handbook/why-does-avalonia-ui-exist">Why we exist</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/handbook/oss-philosophy">Our OSS philosophy</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/handbook/our-values">Values</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/handbook/who-we-are-building-for">Who we're building for</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/handbook/marketing-overview">Marketing</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/handbook/value-proposition">Value proposition</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/handbook/how-we-sell">How we "sell"</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/handbook/pricing-principles">Pricing principles</a>
                         </nav>
                     </div>
 
@@ -94,7 +94,7 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold  text-darkblue dark:text-white mb-6">Company</h3>
                         <nav className="flex flex-col space-y-3">
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/about">About</a>
-                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/team">Team</a>
+                            <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/about#team">Team</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/blog">Blog</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/faqs">FAQ</a>
                             <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/brand">Brand guidelines</a>

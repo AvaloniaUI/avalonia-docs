@@ -273,6 +273,8 @@ pre.prism-code {
 .navbar__item,
 .menu__link {
   font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
 }
 
 .menu__link {
