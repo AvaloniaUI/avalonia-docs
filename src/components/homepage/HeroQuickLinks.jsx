@@ -9,26 +9,44 @@ const QuickLinkCard = ({
 }) => {
   return (
     <Link 
-      to={href}
-      className="block p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-500 no-underline"
-    >
-      <div className="flex items-start gap-4">
-        <div className="flex-shrink-0">
-          <div className="w-12 h-12 flex items-center justify-center">
-            {Icon && <Icon className="w-8 h-8 text-blue-600" />}
-          </div>
-        </div>
-        
-        <div className="flex flex-col">
-          <span className="text-sm font-medium text-gray-600 uppercase mb-1">
-            {category}
-          </span>
-          <h3 className="text-lg font-semibold text-gray-900 mb-1">
-            {title}
-          </h3>
-        </div>
+  to={href}
+  className="block p-6 bg-white dark:bg-[rgb(27,42,78)] rounded-lg shadow-sm hover:shadow-md hover:scale-105 hover:no-underline transition-all duration-200 border border-[#EDF2F9] dark:border-gray-600 no-underline"
+  style={{
+    borderWidth: '1px',
+    borderRadius: '8px'
+  }}
+>
+  <div className="flex flex-col items-start">
+    <div className="mb-4">
+      <div className="w-12 h-12 flex items-center justify-center">
+        {Icon && <Icon className="w-8 h-8 text-blue-600" />}
       </div>
-    </Link>
+    </div>
+    
+    <div className="flex flex-col">
+      <h3 
+        className="mb-2 text-[#14114A] dark:text-gray-300"
+        style={{
+          fontFamily: 'Outfit, sans-serif',
+          fontWeight: '400',
+          fontSize: '1.3rem'
+        }}
+      >
+        {title}
+      </h3>
+      <span class="text-[#222D42] dark:text-gray-300"
+        style={{
+          fontFamily: 'Open Sans, sans-serif',
+          fontWeight: 'normal',
+          fontSize: '0.9rem',
+          lineHeight: '1.1em'
+        }}
+      >
+        {category}
+      </span>
+    </div>
+  </div>
+</Link>
   );
 };
 

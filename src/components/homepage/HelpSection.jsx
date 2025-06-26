@@ -7,10 +7,13 @@ export default function HelpSection({ className = '' }) {
     <section className="px-4">
       <div
         className={clsx(
-          'mx-auto max-w-7xl rounded-3xl bg-white p-4 py-10 text-black dark:bg-darkblue dark:text-white lg:p-24 lg:py-20',
+          'mx-auto max-w-7xl bg-white p-4 py-10 text-black dark:bg-darkblue dark:text-white lg:p-24 lg:py-20 border border-[#EDF2F9] dark:border-gray-600',
           className
         )}
-      >
+         style={{
+    borderWidth: '1px',
+    borderRadius: '8px'
+  }}      >
         <h2 className="mb-12 text-center lg:text-5xl">
           How can we help?
         </h2>

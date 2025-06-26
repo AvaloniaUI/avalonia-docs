@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap');
 
 @font-face {
   font-family: 'Plus Jakarta Sans';
@@ -75,6 +75,7 @@
 
   a {
     @apply cursor-pointer;
+    font-family: "Open-Sans", sans-serif;
   }
 
   p {
@@ -82,6 +83,7 @@
   }
 
   h1 {
+    font-family: "Outfit", sans-serif;
     font-size: 2.8125rem;
     font-weight: 400;
     line-height: 1.2;
@@ -89,6 +91,7 @@
   }
 
   h2 {
+    font-family: "Outfit", sans-serif;
     font-size: 1.7rem;
     font-weight: 400;
     line-height: 1.35;
@@ -96,6 +99,7 @@
   }
 
   h3 {
+    font-family: "Outfit", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.35;
@@ -143,23 +147,28 @@ body {
   --docs-color-primary-tint: rgba(33, 96, 253, 0.16);
   --docs-color-primary-tint-light: rgba(33 96 253/0.24);
 
-  --docs-color-border: #dadde1;
+  --docs-color-border: #E3EBF6;
 
   --docs-color-text: #1b2a4e;
   --docs-color-text-100: #646464;
 
-  --docs-color-background: #ffffff;
+  --docs-color-background: #F9FBFD;
   --docs-color-background-100: #f8f8f8;
   --docs-color-background-200: #efefef;
   --docs-color-background-300: #dcdcdc;
 
-  
+  --navbar-second-row-background: #F9FBFC;
+  --navbar-second-row-border: #E3EBF6;
+
 
   /* Color from prism themes */
-  --docs-color-code-background: #f6f8fa;
+  --docs-color-code-background: #E3EBF6;
 
   --docs-color-android: #44db85;
   --docs-color-apple: var(--docs-color-text) !important;
+
+  --ifm-background-color: var(--docs-color-background);
+  --ifm-background-surface-color: var(--docs-color-background);
 }
 
 [data-theme='dark'] {
@@ -168,12 +177,19 @@ body {
   --docs-color-text: #ffffff;
   --docs-color-text-100: #b4b4b4;
 
-  --docs-color-background: #161616;
+  --docs-color-background: #0b192b;
   --docs-color-background-100: #1c1c1c;
   --docs-color-background-200: #2a2a2a;
   --docs-color-background-300: #2e2e2e;
 
   --docs-color-code-background: #1e1e1e;
+
+  --navbar-second-row-background: #1a202c; /* Very dark blue-gray */
+  --navbar-second-row-border: #2d3748;     /* Medium gray */
+
+  --ifm-background-color: var(--docs-color-background);
+  --ifm-background-surface-color: var(--docs-color-background);
+
 }
 
 /* Docusaurus Theming */
@@ -184,7 +200,7 @@ body {
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-navbar-padding-horizontal: 0.75rem;
 
-  --ifm-font-family-base: 'Outfit', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  --ifm-font-family-base: "Open Sans", sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
 
   --ifm-font-family-monospace: 'Fira Code', SFMono-Regular, Menlo, Monaco,
@@ -213,6 +229,10 @@ body {
 
   --ifm-brand-logo-color: #0d6efd;
   --docs-card-background: rgb(241, 244, 248);
+
+  --ifm-footer-background-color: white;
+
+  --ifm-footer-brand-color: #0d6efd;
 }
 
 
@@ -415,6 +435,23 @@ nav.menu {
 .navbar-sidebar .dev-portal-link {
   padding: 0.75rem;
   margin-top: 1rem;
+}
+
+.theme-doc-sidebar-container {
+  position: sticky !important;
+  height: calc(100vh - var(--ifm-navbar-height)) !important;
+  top: var(--ifm-navbar-height) !important;
+}
+
+.main-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+/* Ensure the sidebar content stays properly positioned */
+.theme-doc-sidebar-container .theme-doc-sidebar-menu {
+  position: static !important;
 }
 
 /* Custom design for sidebar hide and expand buttons */
@@ -1258,13 +1295,13 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   background-color: rgba(68, 110, 172, 0.1)!important;
   color: #0d6efd;
   border-color: #0d6efd;
-  font-family: Outfit;
+  font-family: "Open Sans", sans-serif;
 }
 
 .pagination-nav__link--prev {
   color: #0d6efd;
   border-color: #0d6efd;
-  font-family: Outfit;
+  font-family: "Open Sans", sans-serif;
 }
 
 .pagination-nav__label {
@@ -1292,7 +1329,7 @@ img.center {
 
 #__docusaurus > nav > div.navbar__inner > div:nth-child(1) > a.navbar__brand > b {
   color: #0d6efd;
-  font-family: Nunito;
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
 }
@@ -1311,13 +1348,13 @@ img.center {
 
 .footer-text {
   font-size: 1 !important;
-  font-family: 'Outfit';
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
 
 }
 
 .navbar {
-  font-family: 'Outfit';
+  font-family: "Open Sans", sans-serif;
   height: 90px;
 }
 
@@ -1401,7 +1438,7 @@ img.center {
 }
 .ph_banner_txt {
   color: #fff;
-  font-family: Inter, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
@@ -1432,7 +1469,7 @@ img.center {
 
 .text-block-98 {
   color: #1a1c21;
-  font-family: Inter, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
@@ -1441,4 +1478,139 @@ img.center {
 .image-213 {
   width: 16px;
   height: 16px;
+}
+
+/* Modify the navbar to support two rows */
+/* src/css/custom.css - Avalonia Two-Row Navigation */
+
+/* Container for the two-row navbar */
+.navbar-two-row-container {
+  background-color: var(--ifm-navbar-background-color);
+  box-shadow: var(--ifm-navbar-shadow);
+  position: sticky;
+  top: 0;
+  z-index: var(--ifm-z-index-fixed);
+}
+
+/* First row adjustments - keep logo and search in top row */
+.navbar-two-row-container .navbar {
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+/* Second row containing main navigation */
+.navbar-second-row {
+background-color: var(--navbar-second-row-background);
+  border-bottom: 1px solid var(--navbar-second-row-border);
+  padding: 0;
+}
+
+.navbar-second-row .container {
+  max-width: var(--ifm-container-width-xl);
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.navbar-second-row .navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Style the second row navigation items */
+.navbar-second-row .navbar__item {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-second-row .navbar__link {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: var(--ifm-navbar-link-color);
+  text-decoration: none;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.navbar-second-row .navbar__link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-navbar-link-hover-color);
+  text-decoration: none;
+}
+
+/* Active state styling - matches Avalonia's purple theme */
+.navbar-second-row .navbar__link--active,
+.navbar-second-row .navbar__link[aria-current="page"] {
+  background-color: var(--ifm-color-primary-lighter);
+  border-bottom-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-darker);
+}
+
+/* Dropdown styling for Resources menu */
+.navbar-second-row .dropdown {
+  position: relative;
+}
+
+.navbar-second-row .dropdown:hover .dropdown__menu {
+  display: block;
+}
+
+.navbar-second-row .dropdown__menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-border-radius);
+  box-shadow: var(--ifm-box-shadow-lw);
+  padding: 0.5rem 0;
+  min-width: 200px;
+  z-index: var(--ifm-z-index-dropdown);
+}
+
+/* Hide first-row classes from appearing in second row */
+.navbar-first-row-item {
+  /* These will be handled by the original navbar */
+}
+
+/* Responsive behavior */
+@media (max-width: 996px) {
+  .navbar-two-row-container {
+    flex-direction: column;
+  }
+  
+  .navbar-second-row {
+    display: none; /* Hide second row on mobile, use hamburger menu instead */
+  }
+  
+  /* You might want to add the second row items back to the main navbar for mobile */
+  .navbar-second-row-item {
+    display: none;
+  }
+}
+
+/* Ensure proper spacing and alignment */
+.navbar-second-row .navbar__items--left {
+  flex: 1;
+}
+
+/* Custom styling for Avalonia branding */
+.navbar-two-row-container .navbar__title {
+  font-weight: 600;
+  color: var(--ifm-navbar-link-color);
+}
+
+.navbar-two-row-container .navbar__logo {
+  margin-right: 0.75rem;
+}
+
+/* Ensure search and locale dropdown stay in first row */
+.navbar-two-row-container .navbar__search,
+.navbar-two-row-container .navbar__locale {
+  margin-left: 0.5rem;
 }

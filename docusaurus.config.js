@@ -199,15 +199,7 @@ const config = {
         defaultMode: 'light',
         disableSwitch: false,
         respectPrefersColorScheme: true,
-      },
-      announcementBar: {
-        id: 'accelerate',
-        content:
-          'Accelerate your Avalonia development - <a target="_blank" rel="noopener noreferrer" href="https://avaloniaui.net/accelerate">see what you’re missing.</a>',
-        backgroundColor: '#0043FF',
-        textColor: '#FFFFFF',
-        isCloseable: false,
-      },
+      },      
       docs: {
         sidebar: {
           hideable: true,
@@ -226,7 +218,6 @@ const config = {
         }
       },
       navbar: {
-        title: 'Avalonia UI',
         logo: {
           alt: 'Avalonia Logo',
           src: 'img/purple-border-gradient-icon.png',
@@ -274,49 +265,6 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/get-started/test-drive/introduction',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/avaloniaui',
-              },
-              {
-                label: 'Telegram',
-                href: 'https://t.me/Avalonia',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/avaloniaui',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                href: 'https://avaloniaui.net/blog?utm_source=docs&utm_medium=referral&utm_content=nav_link',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/avaloniaui/avalonia',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} AvaloniaUI OÜ (14839404)`,
       },
       prism: {
         theme: lightCodeTheme,

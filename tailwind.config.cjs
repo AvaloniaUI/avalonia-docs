@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Inter"', ...fontFamily.sans],
+        sans: ['"Open-Sans"', ...fontFamily.sans],
         jakarta: ['"Outfit"', ...fontFamily.sans],
         mono: ['"Fira Code"', ...fontFamily.mono],
       },

@@ -22,7 +22,7 @@ const githubUsernames = [
 export default function CommunitySection() {
   return (
     <section className="no-underline-links">
-      <div className="mx-auto flex w-full flex-col items-center justify-center community-bg px-4 py-16 pt-64 text-white dark:from-zinc-200/90 dark:to-white dark:text-zinc-700">
+      <div className="mx-auto flex w-full flex-col items-center justify-center px-4 py-16 pt-64 text-white dark:from-zinc-200/90 dark:to-white dark:text-zinc-700">
         <h2 className="text-3xl  text-darkblue dark:text-white">
           Join the <span className="text-primary">community</span>
         </h2>
