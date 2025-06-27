@@ -209,9 +209,9 @@ public class Person
 :::
 
 :::info
-有关此控件的完整API文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGrid/)。
+有关此控件的完整API文档，请参阅[这里](https://reference.avaloniaui.net/api/Avalonia.Controls/DataGrid/)。
 :::
 
 :::info
-在 _GitHub_ 上查看源代码 [`DataGrid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGrid.cs)
+在 _GitHub_ 上查看源代码 [`DataGrid.cs`](https://github.com/AvaloniaUI/Avalonia.Controls.DataGrid/blob/master/src/Avalonia.Controls.DataGrid/DataGridTemplateColumn.cs)
 :::

@@ -1,6 +1,6 @@
 ---
 id: cross-fade-page-transition
-title: Cross Fade Page Transition
+title: 跨淡入淡出页面过渡
 ---
 
 import Tabs from '@theme/Tabs';
