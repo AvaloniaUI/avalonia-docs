@@ -66,6 +66,30 @@ Configure your project to use the new `Main` method by adding the following to y
 Change the namespace in the above example to the namespace defined in `Program.cs`.
 :::
 
+## Custom Assembly Loading
+
+If you have a custom mechanism for loading managed assemblies, you may find that using the `AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable` function causes lock-ups in your app. If that happens, we suggest that you try to use the deferred way of adding assemblies with `AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AddLibrary` like so:
+
+```csharp
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Controls.ApplicationLifetimes;
+using AvaloniaUI.Xpf;
+using AvaloniaUI.Xpf.WinApiShim;
+
+namespace MyXpfApp;
+
+internal class Program
+{
+    public void CalledFromYourCustomAssemblyLoading(Assembly targetAssembly)
+    {
+        // This call will add the assembly to the list of assemblies that will 
+        // be intercepted with XPF's Win32 Shimming system.
+        WinApiShimSetup.AddLibrary(targetAssembly);
+    }
+}
+```
+
 ## Optional: Define a custom Avalonia Application
 
 In certain cases you may want to use a custom Avalonia `Application` class; some use-cases for this scenario are:
@@ -114,3 +138,5 @@ AppBuilder.Configure<MyAvaloniaApp>()
         ShutdownMode = ShutdownMode.OnExplicitShutdown 
     });
 ```
+
+
