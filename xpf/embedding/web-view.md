@@ -18,9 +18,9 @@ Since Linux doesn't have any standardized built-in native browser, this platform
 
 First of all, make sure you have installed XPF nuget feed as per [instruction](../build-feeds.md).
 
-With nuget feed working, install `AvaloniaUI.WebView.Wpf` package:
+With nuget feed working, install `Avalonia.Xpf.Controls.WebView` package:
 ```xml
-<PackageReference Include="AvaloniaUI.WebView.Wpf" Version="1.0.999-cibuild0000025-alpha" />
+<PackageReference Include="Avalonia.Xpf.Controls.WebView" Version="11.3.3" />
 ```
 
 :::note
@@ -30,7 +30,7 @@ On Windows, when WebView2 is not available, legacy Internet Explorer is embedded
 
 ## Using NativeWebView control
 
-Add `xmlns:wpf="clr-namespace:AvaloniaUI.WebView;assembly=AvaloniaUI.WebView.Wpf"` xmlns to your XAML file.
+Add `xmlns:wpf="clr-namespace:Avalonia.Xpf.Controls;assembly=Avalonia.Xpf.Controls.WebView"` xmlns to your XAML file.
 
 Typical usage of the NativeWebView looks like this:
 ```xml
@@ -87,3 +87,8 @@ In this scenario, all the API members and underlying browsers are the same. As w
 | `NavigationCompleted` | ✔ | ✔ | ✔ | ✖ |
 | `WebMessageReceived` | ✔ | ✖ | ✔ | ✖ |
 | `InvokeScript` | ✔ | ✖ | ✔ | ✖ |
+
+## Accelerate WebView
+
+XPF NativeWebView control is based on Avalonia Accelerate version of [NativeWebView](https://docs.avaloniaui.net/accelerate/components/webview/nativewebview).
+All functionality and configuration documentation can be applied for both.
