@@ -101,6 +101,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
           editLocalizedFiles: true,
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           lastVersion: 'current',
           versions: {
             current: {
