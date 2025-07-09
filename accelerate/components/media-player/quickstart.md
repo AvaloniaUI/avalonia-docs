@@ -324,7 +324,7 @@ dnf install libvlc
 
 Similar to the requirements on regular Linux, `MediaPlayer` uses the system-installed LibVLC library to render multimedia content for embedded Linux devices.
 
-Please follow the guide in setting up Avalonia on Linux DRM Framebuffer [here]().
+Please follow the guide in setting up Avalonia on Linux DRM Framebuffer [here](https://avaloniaui.net/blog/unleashing-net-on-embedded-linux).
 
 Afterwards, install the VLC dependencies as described above.
 
