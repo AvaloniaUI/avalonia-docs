@@ -328,7 +328,7 @@ Please follow the guide in setting up Avalonia on Linux DRM Framebuffer [here](h
 
 Afterwards, install the VLC dependencies as described above.
 
-No special requirements are needed for the Linux DRM setup and you can continue on using the `MediaPlayer` control like on the regular Linux.
+No special requirements are needed for the Linux DRM setup and you can continue on using the `MediaPlayer` control like on regular Linux.
 
 ## Codecs Support
 
