@@ -55,85 +55,27 @@ Remember that the `FontFamily` attribute can be applied to any control that has 
 
 And that's it! You've successfully integrated a custom font into your Avalonia application. Now you can add a unique touch to your application's UI with the fonts of your choice.
 
-## Adding a Font to the Font Collection
+## Using an embedded font like Inter
 
-The `EmbeddedFontCollection` provides an easy way to add fonts to your application's collection of fonts without requiring a reference to a resource when using them. For example, instead of setting the `FontFamily` to `{StaticResource NunitoFont}`, you can simply reference the name of the font family directly.
+The Inter font is shipped as a nuget package. It adds fonts to your application's collection of fonts using an `EmbeddedFontCollection`. Instead of referencing a resource uri like `avares://Avalonia.Fonts.Inter/Assets#Inter`, you can use a font uri:
 
 ```xml
 <TextBlock
     Text="{Binding Greeting}"
     FontSize="70"
-    FontFamily="Nunito"
+    FontFamily="font:Inter#Inter"
     HorizontalAlignment="Center" VerticalAlignment="Center" />
 ```
 
-This requires additional setup on application construction, but it removes the need to remember a unique resource key when authoring your controls.
+The uri specifies (a) the font uri scheme used by the font manager (b) a name registered with the font manager (c) the font family name.
 
-### Defining a Font Collection
-
-First, we need to define a collection of fonts by specifying the font family name and the directory in which the font files reside.
-
-```csharp title="InterFontCollection.cs"
-public sealed class InterFontCollection : EmbeddedFontCollection
-{
-    public InterFontCollection() : base(
-        new Uri("fonts:Inter", UriKind.Absolute),
-        new Uri("avares://Avalonia.Fonts.Inter/Assets", UriKind.Absolute))
-    {
-    }
-}
+```
+font:Inter#Inter
+└┬─┘ └─┬─┘ └─┬─┘
+ a     b     c
 ```
 
-Here, `Inter` is the name of the font family and `avares://Avalonia.Fonts.Inter/Assets` is the resource locator for the directory containing the font files. The actual names of the font files are not significant since the `EmbeddedFontCollection` will search every file in the given directory and only load those fonts with the given font family name.
-
-For more information on how to create a resource locator, see [Assets](../../basics/user-interface/assets) for a primer on including assets in your project.
-
-### Adding the Font Collection
-
-Next, we need to add this font collection to the application. This can be done by using `AppBuilder.ConfigureFonts` to configure the `FontManager` to include your fonts on application construction.
-
-```csharp title="Program.cs"
-public static class Program
-{
-    [STAThread]
-    public static void Main(string[] args) =>
-        BuildAvaloniaApp()
-            .StartWithClassicDesktopLifetime(args);
-
-    public static AppBuilder BuildAvaloniaApp() =>
-        AppBuilder.Configure<App>()
-            .UsePlatformDetect()
-// highlight-start
-            .ConfigureFonts(fontManager =>
-            {
-                fontManager.AddFontCollection(new InterFontCollection());
-            })
-// highlight-end
-            .LogToTrace();
-}
-```
-
-### Creating Font Packages
-
-The [`Avalonia.Fonts.Inter`](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Fonts.Inter) package shows how you can create a separate project to contain one or many fonts that you might use in multiple projects. Once you have created and published a project similar to this, using the font becomes as simple as appending a method call to your application construction.
-
-```csharp title="Program.cs"
-public static class Program
-{
-    [STAThread]
-    public static void Main(string[] args) =>
-        BuildAvaloniaApp()
-            .StartWithClassicDesktopLifetime(args);
-
-    public static AppBuilder BuildAvaloniaApp() =>
-        AppBuilder.Configure<App>()
-            .UsePlatformDetect()
-// highlight-start
-            .WithInterFont()
-// highlight-end
-            .LogToTrace();
-}
-```
+There may be many font families inside the collection. The collection name was chosen by the author of the nuget package. The font family name is from the font itself.
 
 ## Which Fonts Are Supported?
 
