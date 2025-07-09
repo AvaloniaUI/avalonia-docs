@@ -320,6 +320,16 @@ Fedora:
 dnf install libvlc
 ```
 
+### Embedded Linux (Direct Rendering Manager)
+
+Similar to the requirements on regular Linux, `MediaPlayer` uses the system-installed LibVLC library to render multimedia content for embedded Linux devices.
+
+Please follow the guide in setting up Avalonia on Linux DRM Framebuffer [here](https://avaloniaui.net/blog/unleashing-net-on-embedded-linux).
+
+Afterwards, install the VLC dependencies as described above.
+
+No special requirements are needed for the Linux DRM setup and you can continue on using the `MediaPlayer` control like on regular Linux.
+
 ## Codecs Support
 
 The media codecs that `MediaPlayer` supports will depend on the target platform's built-in codecs & additional plugins.
