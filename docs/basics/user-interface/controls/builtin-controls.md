@@ -65,7 +65,7 @@ These controls display repeating data, in either a tabular or list format:
 |[CalendarDatePicker](../../../reference/controls/calendar/calendar-date-picker.md)|DateTime|An extension of the calendar control that includes a text box and button.|
 |[ColorPicker](../../../reference/controls/colorpicker)|Color / HsvColor|The color picker supports user-selection and editing of colors using a spectrum, palette and component sliders. It also supports an optional alpha component, RGB or HSV color models and hexadecimal color values.|
 |[DatePicker](../../../reference/controls/datepicker.md)|DateTime|The date picker has three 'spinner' controls to allow the user to pick a date value.|
-|[TimePicker](../../../reference/controls/timepicker.md)|TimeSpan|The time picker has three 'spinner' controls to allow the user to pick a time from hours, minutes and seconds.|
+|[TimePicker](../../../reference/controls/timepicker.md)|TimeSpan|The time picker has two to four 'spinner' controls to allow the user to pick a time from hours, minutes and seconds.|
 
 ## Displaying images
 
