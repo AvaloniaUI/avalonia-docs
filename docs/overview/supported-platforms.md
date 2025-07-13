@@ -95,10 +95,8 @@ Skia is built against glibc 2.17. If your distro uses something else instead, yo
 ## WebAssembly (Browser)
 Any browser with full WebAssembly support technically should work - https://caniuse.com/wasm.
 
-For the best performance and support we recommend latest Chrome or Safari versions.
-
 :::note
-.NET 7 is required for Browser support. Starting with 11.0.6 we recommend .NET 8.
+Browser support requires .NET 8 or later. We recommend using .NET 8 (current LTS) or .NET 9 for the best experience.
 :::
 
 ## Additional platform support

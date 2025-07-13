@@ -158,8 +158,6 @@ Avalonia also runs on macOS 10.13, but we are in the process of migrating to the
 
 Any browser with full WebAssembly support technically should work - https://caniuse.com/wasm.
 
-For the best performance and support we recommend latest Chrome or Safari versions.
-
 :::note
 .NET 7 is required for Browser support.
 Starting with 11.0.6 we recommend .NET 8.

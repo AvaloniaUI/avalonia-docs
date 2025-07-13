@@ -6,10 +6,12 @@ title: Getting started
 ## Step 1: Prepare your WPF project
 
 :::note
-This document uses .NET 7.0 as an example, but .NET 6.0 and above are supported by XPF
+This document uses .NET 7.0 as an example, but .NET 6.0 and above are supported by XPF. 
+
+We recommend using .NET 8 (current LTS) or .NET 9. 
 :::
 
-Make sure that your project has been updated/ported to `net7.0-windows` and uses the new [SDK](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview) csproj format. 
+Make sure that your project has been updated/ported to at least `net6.0-windows` and uses the new [SDK](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview) csproj format. 
 
 For more information see the Microsoft [How to upgrade a WPF desktop app to .NET 7](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/migration) guide.
 
