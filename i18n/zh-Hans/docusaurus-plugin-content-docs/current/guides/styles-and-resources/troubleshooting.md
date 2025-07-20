@@ -145,4 +145,4 @@ _Avalonia UI_ 的选择器，就像 CSS 选择器一样，当没有匹配的控�
 
 在 Avalonia 中，我们有多种类型的属性，其中之一是直接属性（Direct Property），它根本不支持样式。这些属性以简化的方式工作，以实现较低的开销和更高的性能，并且不存储多个依赖于优先级的值。而是只保存最新的值，无法恢复之前的值。您可以在 [此处](../custom-controls/defining-properties) 找到有关属性的更多详情。
 
-典型的例子是 [CommandProperty](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/B9689B29)。它被定义为直接属性，因此它永远不会正常工作。将来，尝试为直接属性设置样式将导致编译时错误，详见 [#6837](https://github.com/AvaloniaUI/Avalonia/issues/6837)。
+典型的例子是 [CommandProperty](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Button_Command)。它被定义为直接属性，因此它永远不会正常工作。将来，尝试为直接属性设置样式将导致编译时错误，详见 [#6837](https://github.com/AvaloniaUI/Avalonia/issues/6837)。

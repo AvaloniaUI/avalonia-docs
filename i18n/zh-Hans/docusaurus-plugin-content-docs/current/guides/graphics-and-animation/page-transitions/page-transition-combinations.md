@@ -32,4 +32,4 @@ compositeTransition.PageTransitions.Add(new CrossFade(TimeSpan.FromMilliseconds(
 
 #### Reference
 
-[CompositePageTransition](http://reference.avaloniaui.net/api/Avalonia.Animation/CompositePageTransition/)
+[CompositePageTransition](https://api-docs.avaloniaui.net/docs/T_Avalonia_Animation_CompositePageTransition)

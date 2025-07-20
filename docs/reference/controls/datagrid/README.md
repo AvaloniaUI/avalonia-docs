@@ -210,7 +210,7 @@ For more information about the different kinds of `DataGridColumn`, see the [nex
 :::
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/DataGrid/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataGrid).
 :::
 
 :::info

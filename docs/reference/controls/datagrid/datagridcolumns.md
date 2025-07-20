@@ -118,7 +118,7 @@ It works in the preview pane because the `<Design.DataContext>` element creates 
 ## More Information
 
 :::info
-For the complete API documentation about the data grid text column, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTextColumn/).
+For the complete API documentation about the data grid text column, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataGridTextColumn).
 :::
 
 :::info

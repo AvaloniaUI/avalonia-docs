@@ -77,7 +77,7 @@ namespace AvaloniaControls.Views
 ## Больше информации
 
 :::info
-Детальная информация об API элемента, смотрите [здесь](http://reference.avaloniaui.net/api/Avalonia.Controls/AutoCompleteBox/).
+Детальная информация об API элемента, смотрите [здесь](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_AutoCompleteBox).
 :::
 
 :::info

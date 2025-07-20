@@ -32,7 +32,7 @@ The user-selection action should be invoked immediately when pressing either the
 
 ## API Reference
 
-[SplitButton](http://reference.avaloniaui.net/api/Avalonia.Controls/SplitButton/)
+[SplitButton](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitButton)
 
 ## Source code
 

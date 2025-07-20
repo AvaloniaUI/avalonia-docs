@@ -88,7 +88,7 @@ The visibility of the path icons is set by the window styles, and these use the 
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/ToggleButton/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ToggleButton).
 :::
 
 :::info

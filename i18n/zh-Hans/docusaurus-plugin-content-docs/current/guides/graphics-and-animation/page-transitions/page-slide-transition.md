@@ -19,7 +19,7 @@ var transition = new PageSlide(TimeSpan.FromMilliseconds(500),
 ## 更多信息
 
 :::info
-有关此过渡的完整API文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Animation/PageSlide/)。
+有关此过渡的完整API文档，请参阅[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Animation_PageSlide)。
 :::
 
 :::info

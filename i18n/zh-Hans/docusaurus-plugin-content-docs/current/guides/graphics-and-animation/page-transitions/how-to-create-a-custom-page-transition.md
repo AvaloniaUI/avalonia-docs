@@ -168,7 +168,7 @@ public class CustomTransition : IPageTransition
 ## 更多信息
 
 :::info
-有关此接口的完整 API 文档，请参阅 [此处](http://reference.avaloniaui.net/api/Avalonia.Animation/IPageTransition/).
+有关此接口的完整 API 文档，请参阅 [此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Animation_IPageTransition).
 :::
 
 :::info

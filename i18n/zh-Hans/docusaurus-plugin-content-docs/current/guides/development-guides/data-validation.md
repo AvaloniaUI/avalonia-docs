@@ -9,7 +9,7 @@ Avalonia 提供了不同的数据验证选项。在本节中，我们将向您�
 
 ## 验证属性
 
-Avalonia 使用 [`DataValidationPlugins`](http://reference.avaloniaui.net/api/Avalonia.Data.Core.Plugins/IDataValidationPlugin/) 来验证您绑定的**属性**。Avalonia 提供了以下三个内置的验证插件：
+Avalonia 使用 [`DataValidationPlugins`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Data_Core_Plugins_IDataValidationPlugin) 来验证您绑定的**属性**。Avalonia 提供了以下三个内置的验证插件：
 
 * [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin)
 * [INotifyDataErrorInfo - ValidationPlugin](data-validation.md#inotifydataerrorinfo---validationplugin)

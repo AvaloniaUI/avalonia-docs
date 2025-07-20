@@ -26,7 +26,7 @@ Use `InvokeAsync` when you need to wait for the result, and potentially want to 
 Both of the above methods have a dispatcher priority parameter. You can use this with the `DispatcherPriority` enumeration to specify the queue priority that the given job should be given.
 
 :::info
-For the possible values of the `DispatcherPriority` enumeration, see [here](http://reference.avaloniaui.net/api/Avalonia.Threading/DispatcherPriority/).
+For the possible values of the `DispatcherPriority` enumeration, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Threading_DispatcherPriority#fields).
 :::
 
 ## Example

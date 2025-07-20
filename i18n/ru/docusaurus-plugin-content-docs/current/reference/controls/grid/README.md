@@ -182,7 +182,7 @@ The button is drawn to fill the span from the cell (column 1, row 1) plus one co
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Grid/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Grid).
 :::
 
 :::info

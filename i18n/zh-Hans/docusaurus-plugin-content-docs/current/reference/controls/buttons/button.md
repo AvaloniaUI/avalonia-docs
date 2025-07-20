@@ -17,7 +17,7 @@ import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.
 :::
 
 :::info
-点击是众多按钮事件之一，完整列表请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events)。
+点击是众多按钮事件之一，完整列表请参阅[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Button#events)。
 :::
 
 按钮可以在代码后台引发点击事件。或者，您可以将`ICommand`的实例绑定到`Command`属性。绑定的命令将在每次按钮被点击时执行。

@@ -97,6 +97,6 @@ namespace AvaloniaControls.Views
 
 ## More Information
 
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Carousel/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Carousel).
 
 View the source code on _GitHub_ [`Carousel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Carousel.cs)

@@ -13,7 +13,7 @@ title: 如何创建自定义数据绑定转换器
 :::
 
 :::info
-由于在 .NET标准2.0 中无法使用 `IValueConverter` 接口，Avalonia UI 在 `Avalonia.Data.Converters`命名空间中提供了该接口的副本。您可以在这里查看有关此接口的API文档：[这里](https://reference.avaloniaui.net/api/Avalonia.Data.Converters/IValueConverter/)。
+由于在 .NET标准2.0 中无法使用 `IValueConverter` 接口，Avalonia UI 在 `Avalonia.Data.Converters`命名空间中提供了该接口的副本。您可以在这里查看有关此接口的API文档：[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Data_Converters_IValueConverter)。
 :::
 
 在使用自定义转换器之前，您必须在某些资源中引用它。这可以在应用程序的任何级别进行。在此示例中，自定义转换器 `myConverter` 被引用在 Window 资源中：

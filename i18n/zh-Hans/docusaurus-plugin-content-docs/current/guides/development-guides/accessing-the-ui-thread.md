@@ -29,7 +29,7 @@ Dispatcher.UIThread
 上述两种方法都有一个调度程序优先级参数。您可以使用`DispatcherPriority`枚举与此参数配合使用，以指定给定作业应该具有的队列优先级。
 
 :::info
-有关`DispatcherPriority`枚举的可能值，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Threading/DispatcherPriority/)。
+有关`DispatcherPriority`枚举的可能值，请参阅[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Threading_DispatcherPriority#fields)。
 :::
 
 ## 示例

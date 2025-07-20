@@ -50,7 +50,7 @@ public partial class MainWindow : Window
 ## 更多信息
 
 :::info
-有关此控件的完整API文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/RepeatButton/)。
+有关此控件的完整API文档，请参阅[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RepeatButton)。
 :::
 
 :::info

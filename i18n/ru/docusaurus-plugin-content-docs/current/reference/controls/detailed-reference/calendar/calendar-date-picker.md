@@ -29,7 +29,7 @@ This example shows a basic single date selection calendar when the button is cli
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/CalendarDatePicker/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CalendarDatePicker).
 :::
 
 :::info

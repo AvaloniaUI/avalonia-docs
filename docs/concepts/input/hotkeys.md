@@ -23,13 +23,13 @@ HotKeyManager.SetHotKey(saveMenuItem, new KeyGesture(Key.S, KeyModifiers.Control
 
 ## Keys and Modifiers
 
-A Hotkey must have one [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/) and zero or more [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/). When setting a Hotkey in XAML using the `HotKey` property, the string will be parsed as a [KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/). [Enum.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.enum.parse) is used to parse the key and modifiers but synonyms like `Ctrl` instead of `Control` or `Win` instead of `Meta` can be used.
+A Hotkey must have one [Key](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_Key) and zero or more [KeyModifiers](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyModifiers). When setting a Hotkey in XAML using the `HotKey` property, the string will be parsed as a [KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/). [Enum.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.enum.parse) is used to parse the key and modifiers but synonyms like `Ctrl` instead of `Control` or `Win` instead of `Meta` can be used.
 
 ## Assign number keys to hotkeys
 - A Hotkey must be use D1..D0 or NumPad1..NumPad0.
-  see: [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/)
+  see: [Key](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_Key)
 - By binding the same command to two buttons and hiding one button, you can differentiate between a single number on the numpad and a simple Ctrl+number key.
-- If you want to limit command malfunctions caused by pressing numbers on the numpad, you can also use [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/).
+- If you want to limit command malfunctions caused by pressing numbers on the numpad, you can also use [KeyModifiers](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyModifiers).
 ```xml
 <!--  It's worked fine  -->
 <!--  e.g. Ctrl+1  -->
@@ -51,7 +51,7 @@ A Hotkey must have one [Key](http://reference.avaloniaui.net/api/Avalonia.Input/
 
 * [HotKeyManager](http://reference.avaloniaui.net/api/Avalonia.Controls/HotKeyManager/)
 * [KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/)
-* [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/)
+* [KeyModifiers](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyModifiers)
 * [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/)
 
 ### Source code

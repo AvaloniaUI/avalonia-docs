@@ -138,7 +138,7 @@ subscription.Dispose();
 
 `GetObservable` 方法返回一个可观察对象，用于跟踪单个实例上属性的更改。但是，如果您正在编写一个控件，可能希望实现一个与对象实例无关的 `OnPropertyChanged` 方法。
 
-要做到这一点，您可以订阅 [`AvaloniaProperty.Changed`](http://reference.avaloniaui.net/api/Avalonia/AvaloniaProperty/65237C52)，这是一个可观察对象，_每次在任何实例上更改属性时都会触发该对象_。
+要做到这一点，您可以订阅 [`AvaloniaProperty.Changed`](https://api-docs.avaloniaui.net/docs/T_Avalonia_AvaloniaProperty#properties)，这是一个可观察对象，_每次在任何实例上更改属性时都会触发该对象_。
 
 > 在 WPF 中，通过将静态的 `PropertyChangedCallback` 传递给 `DependencyProperty` 注册方法来完成此操作，但这只允许控件作者注册属性更改回调。
 

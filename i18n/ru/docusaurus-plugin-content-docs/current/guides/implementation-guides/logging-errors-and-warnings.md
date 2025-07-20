@@ -35,7 +35,7 @@ public static AppBuilder BuildAvaloniaApp()
 ```
 
 :::info
-For the full API documentation on the `LogEventLevel` enum, see [here](https://reference.avaloniaui.net/api/Avalonia.Logging/LogEventLevel/).
+For the full API documentation on the `LogEventLevel` enum, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Logging_LogEventLevel).
 :::
 
 Log messages are then shown in the **Debug** view of the **Output** window of your IDE. For example, with verbose logging enabled:

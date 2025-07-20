@@ -18,7 +18,7 @@ When determining if a button is pressed by the user, always use the `Click` even
 :::
 
 :::info
-Click is one of many button events, for a full list see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events).
+Click is one of many button events, for a full list see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Button#events).
 :::
 
 A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.

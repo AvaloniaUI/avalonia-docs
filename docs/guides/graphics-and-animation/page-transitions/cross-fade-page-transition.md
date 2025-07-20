@@ -36,7 +36,7 @@ var transition = new CrossFade(TimeSpan.FromMilliseconds(500));
 ## More Information
 
 :::info
-For the complete API documentation about this transition, see [here](http://reference.avaloniaui.net/api/Avalonia.Animation/PageSlide/).
+For the complete API documentation about this transition, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Animation_PageSlide).
 :::
 
 :::info

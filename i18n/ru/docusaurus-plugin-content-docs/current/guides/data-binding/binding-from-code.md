@@ -138,7 +138,7 @@ subscription.Dispose();
 
 The `GetObservable` method returns an observable that tracks changes to a property on a single instance. However, if you're writing a control you may want to implement an `OnPropertyChanged` method which isn't tied to an instance of an object.
 
-To do this you can subscribe to [`AvaloniaProperty.Changed`](http://reference.avaloniaui.net/api/Avalonia/AvaloniaProperty/65237C52) which is an observable which fires _every time the property is changed on any instance_.
+To do this you can subscribe to [`AvaloniaProperty.Changed`](https://api-docs.avaloniaui.net/docs/T_Avalonia_AvaloniaProperty#properties) which is an observable which fires _every time the property is changed on any instance_.
 
 > In WPF this is done by passing a static `PropertyChangedCallback` to the `DependencyProperty` registration method, but this only allows the control author to register a property changed callback.
 

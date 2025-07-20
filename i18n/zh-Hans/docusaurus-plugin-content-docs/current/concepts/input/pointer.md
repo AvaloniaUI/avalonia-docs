@@ -68,4 +68,4 @@ var point = args.GetCurrentPoint(this);
 
 ## 更多信息
 
-有关指针和点击事件的完整API文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Input/PointerEventArgs/)。
+有关指针和点击事件的完整API文档，请参阅[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_PointerEventArgs)。
