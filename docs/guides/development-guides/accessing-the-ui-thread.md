@@ -107,7 +107,7 @@ public partial class MainView : UserControl
 ## More Information
 
 :::info
-For the complete API documentation about the dispatcher, see [here](http://reference.avaloniaui.net/api/Avalonia.Threading/Dispatcher/).
+For the complete API documentation about the dispatcher, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Threading_Dispatcher).
 :::
 
 :::info

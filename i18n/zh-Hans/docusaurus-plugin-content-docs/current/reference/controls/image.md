@@ -50,7 +50,7 @@ import ImageUniformToFillScreenshot from '/img/reference/controls/image/image-un
 ## 更多信息
 
 :::info
-关于此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Image/)。
+关于此控件的完整 API 文档，请参见[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Image)。
 :::
 
 :::info

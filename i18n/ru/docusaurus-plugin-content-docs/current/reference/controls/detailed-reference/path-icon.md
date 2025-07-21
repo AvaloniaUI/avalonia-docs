@@ -39,6 +39,6 @@ It works in the preview pane as well:
 
 ## More Information
 
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/PathIcon/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_PathIcon).
 
 View the source code on _GitHub_ [`PathIcon.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PathIcon.cs)

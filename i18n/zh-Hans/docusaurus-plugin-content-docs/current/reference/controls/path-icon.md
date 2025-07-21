@@ -39,6 +39,6 @@ import PathIconHouseScreenshot from '/img/reference/controls/pathicon/pathicon-h
 
 ## 更多信息
 
-有关此控件的完整 API 文档，请参见 [这里](https://reference.avaloniaui.net/api/Avalonia.Controls/PathIcon/)。
+有关此控件的完整 API 文档，请参见 [这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_PathIcon)。
 
 在 _GitHub_ 上查看源代码 [`PathIcon.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PathIcon.cs)

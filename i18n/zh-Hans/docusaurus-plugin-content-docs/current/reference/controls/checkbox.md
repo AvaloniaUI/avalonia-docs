@@ -67,6 +67,6 @@ import CheckBoxThreeStateScreenshot from '/img/reference/controls/checkbox/check
 
 ## 更多信息
 
-要查看有关此控件的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/CheckBox/)。
+要查看有关此控件的完整 API 文档，请参阅[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CheckBox)。
 
 在 _GitHub_ 上查看源代码 [`CheckBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)

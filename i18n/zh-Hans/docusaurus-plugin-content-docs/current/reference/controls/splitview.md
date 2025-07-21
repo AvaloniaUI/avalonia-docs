@@ -75,7 +75,7 @@ import SplitViewCompactScreenshot from '/img/reference/controls/splitview/splitv
 ## 更多信息
 
 :::info
-有关此控件的完整API文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/SplitView/)。
+有关此控件的完整API文档，请参见[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitView)。
 :::
 
 :::info

@@ -44,7 +44,7 @@ description: REFERENCE - Built-in Controls
 ## 更多信息
 
 :::info
-有关此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/NativeMenu/)。
+有关此控件的完整 API 文档，请参见[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NativeMenu)。
 :::
 
 :::info

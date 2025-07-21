@@ -127,7 +127,7 @@ The items display horizontally, and those too far to the right would be hidden i
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsRepeater/).
+For the complete API documentation about this control, see [here](TODO).
 :::
 
 :::info

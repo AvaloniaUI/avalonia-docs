@@ -53,7 +53,7 @@ import ScrollViewerScreenshot from '/img/reference/controls/scrollviewer/scrollv
 ## 更多信息
 
 :::info
-查看完整的 API 文档，请访问[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ScrollViewer/)。
+查看完整的 API 文档，请访问[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ScrollViewer)。
 :::
 
 :::info

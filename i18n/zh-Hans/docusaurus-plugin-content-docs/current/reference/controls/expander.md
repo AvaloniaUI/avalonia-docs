@@ -43,7 +43,7 @@ import ExpanderOpenedScreenshot from '/img/reference/controls/expander/expander-
 ## 更多信息
 
 :::info
-要查看此控件的完整 API 文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Expander/)。
+要查看此控件的完整 API 文档，请参阅[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Expander)。
 :::
 
 :::info

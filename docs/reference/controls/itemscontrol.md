@@ -119,7 +119,7 @@ The view resizes horizontally, but content is hidden when it is too high. This c
 ## More Information
 
 :::info
-For the complete ItemsControl API documentation, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/).
+For the complete ItemsControl API documentation, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ItemsControl).
 :::
 
 :::info

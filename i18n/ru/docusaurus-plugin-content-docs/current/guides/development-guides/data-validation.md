@@ -73,7 +73,7 @@ Exceptions inside the getter of your property are not allowed and will result in
 
 ## Customize the appearance of the validation message
 
-To display the validation messages, Avalonia has a control called [`DataValidationErrors`](http://reference.avaloniaui.net/api/Avalonia.Controls/DataValidationErrors/). This control is typically placed inside the `ControlTemplate` of all `Controls` that supports data validation, like `TextBox`, `Slider` and other. You can create your own `Style` of the `DataValidationErrors`-control in order to customize the representation of the error messages.
+To display the validation messages, Avalonia has a control called [`DataValidationErrors`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataValidationErrors). This control is typically placed inside the `ControlTemplate` of all `Controls` that supports data validation, like `TextBox`, `Slider` and other. You can create your own `Style` of the `DataValidationErrors`-control in order to customize the representation of the error messages.
 
 **Example Style for DataValidationErrors**
 

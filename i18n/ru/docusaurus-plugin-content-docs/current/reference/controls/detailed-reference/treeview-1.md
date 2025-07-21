@@ -173,7 +173,7 @@ The tree view adds a scroll bar when it is needed. The selection can be extended
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TreeView/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TreeView).
 :::
 
 :::info

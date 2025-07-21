@@ -7,7 +7,7 @@ title: Decorator 装饰器
 
 ### 参考资料
 
-[Decorator](http://reference.avaloniaui.net/api/Avalonia.Controls/Decorator/)
+[Decorator](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Decorator)
 
 ### 源代码
 

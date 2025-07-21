@@ -15,7 +15,7 @@ title: UserControl 用户控件
 
 ### 参考资料
 
-[UserControl](http://reference.avaloniaui.net/api/Avalonia.Controls/UserControl/)
+[UserControl](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_UserControl)
 
 ### 源代码
 

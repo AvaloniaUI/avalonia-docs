@@ -111,7 +111,7 @@ Although flyouts are not themselves controls, their general appearance can be cu
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Flyout/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Flyout).
 :::
 
 :::info

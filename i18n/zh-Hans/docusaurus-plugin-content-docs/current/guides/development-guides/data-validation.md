@@ -73,7 +73,7 @@ public string? EMail
 
 ## 自定义验证消息的外观
 
-为了显示验证消息，Avalonia 提供了一个名为 [`DataValidationErrors`](http://reference.avaloniaui.net/api/Avalonia.Controls/DataValidationErrors/) 的控件。这个控件通常放置在所有支持数据验证的 `Controls` 的 `ControlTemplate` 中，比如 `TextBox`、`Slider` 和其他控件。您可以创建自己的 `DataValidationErrors` 控件的样式来自定义错误消息的显示方式。
+为了显示验证消息，Avalonia 提供了一个名为 [`DataValidationErrors`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataValidationErrors) 的控件。这个控件通常放置在所有支持数据验证的 `Controls` 的 `ControlTemplate` 中，比如 `TextBox`、`Slider` 和其他控件。您可以创建自己的 `DataValidationErrors` 控件的样式来自定义错误消息的显示方式。
 
 **DataValidationErrors 的示例样式**
 

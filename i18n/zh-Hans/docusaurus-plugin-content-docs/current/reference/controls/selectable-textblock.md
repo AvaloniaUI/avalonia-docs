@@ -46,7 +46,7 @@ import TextBlockBasicScreenshot from '/img/reference/controls/textblock/textbloc
 ## 更多信息
 
 :::info
-有关此控件的完整 API 文档，请参见[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/SelectableTextBlock/)。
+有关此控件的完整 API 文档，请参见[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SelectableTextBlock)。
 :::
 
 :::info

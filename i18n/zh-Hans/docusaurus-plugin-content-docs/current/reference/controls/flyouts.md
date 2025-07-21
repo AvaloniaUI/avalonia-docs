@@ -111,7 +111,7 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 ## 更多信息
 
 :::info
-有关此控件的完整 API 文档，请查看[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Flyout/)。
+有关此控件的完整 API 文档，请查看[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Flyout)。
 :::
 
 :::info

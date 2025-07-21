@@ -109,7 +109,7 @@ public partial class MainView : UserControl
 ## 更多信息
 
 :::info
-有关调度程序的完整API文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Threading/Dispatcher/)。
+有关调度程序的完整API文档，请参阅[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Threading_Dispatcher)。
 :::
 
 :::info

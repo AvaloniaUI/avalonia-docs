@@ -41,9 +41,9 @@ import ProgressBarScreenshot from '/img/reference/controls/progressbar/progressb
 ## `ProgressTextFormat` 示例
 
 默认情况下，`ShowProgressText` 根据
-[`Value`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/E111DF5B)、
-[`Minimum`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/8F9BD1EA) 和
-[`Maximum`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/C07B22E9) 显示完成百分比。
+[`Value`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Value)、
+[`Minimum`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Minimum) 和
+[`Maximum`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Maximum) 显示完成百分比。
 这个文本的格式可以通过使用 `ProgressTextFormat` 属性来自定义。这需要一个字符串，将传递给
 [`string.Format`](https://docs.microsoft.com/en-us/dotnet/api/system.string.format#system-string-format(system-string-system-object())) 调用，
 其中 `ProgressTextFormat` 作为格式字符串。以下格式项在给定的索引处可用：
@@ -62,7 +62,7 @@ import ProgressBarScreenshot from '/img/reference/controls/progressbar/progressb
 ## 更多信息
 
 :::info
-要查看关于此控件的完整 API 文档，请查看[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ProgressBar/)。
+要查看关于此控件的完整 API 文档，请查看[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ProgressBar)。
 :::
 
 :::info

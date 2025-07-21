@@ -13,7 +13,7 @@ import ControlContentStudentScreenshot from '/img/reference/controls/contentcont
 
 ## Reference
 
-[ContentControl](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/)
+[ContentControl](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContentControl)
 
 ## Source code
 
@@ -21,7 +21,7 @@ import ControlContentStudentScreenshot from '/img/reference/controls/contentcont
 
 ## Display content
 
-At its simplest, a `ContentControl` displays the data assigned to its [`Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756) property.
+At its simplest, a `ContentControl` displays the data assigned to its [`Content`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_ContentControl_Content) property.
 
 For example:
 

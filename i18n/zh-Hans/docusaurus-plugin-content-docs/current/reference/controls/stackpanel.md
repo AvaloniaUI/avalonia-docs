@@ -41,7 +41,7 @@ import StackPanelVerticalRectanglesScreenshot from '/img/reference/controls/stac
 ## 更多信息
 
 :::info
-有关此控件的完整API文档，请参见[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/StackPanel/)。
+有关此控件的完整API文档，请参见[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_StackPanel)。
 :::
 
 :::info

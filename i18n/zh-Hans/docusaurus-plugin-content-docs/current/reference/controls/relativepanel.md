@@ -81,7 +81,7 @@ import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relat
 ## 更多信息
 
 :::info
-要查看此控件的完整 API 文档，请参见[这里](https://reference.avaloniaui.net/api/Avalonia.Controls/RelativePanel/)。
+要查看此控件的完整 API 文档，请参见[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RelativePanel)。
 :::
 
 :::info

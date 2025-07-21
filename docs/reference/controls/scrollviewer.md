@@ -54,7 +54,7 @@ This example creates a stack panel that is bigger than the border it is inside. 
 ## More Information
 
 :::info
-For the complete API documentation, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ScrollViewer/).
+For the complete API documentation, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ScrollViewer).
 :::
 
 :::info

@@ -117,11 +117,11 @@ public class Person
 ## 更多信息
 
 :::info
-有关数据表格文本列的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridTextColumn/)。
+有关数据表格文本列的完整 API 文档，请参阅[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataGridTextColumn)。
 :::
 
 :::info
-有关数据表格复选框列的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/DataGridCheckBoxColumn/)。
+有关数据表格复选框列的完整 API 文档，请参阅[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataGridCheckBoxColumn)。
 :::
 
 :::info

@@ -122,7 +122,7 @@ For the complete API documentation about the data grid text column, see [here](h
 :::
 
 :::info
-For the complete API documentation about data grid check box column, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/DataGridCheckBoxColumn/).
+For the complete API documentation about data grid check box column, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataGridCheckBoxColumn).
 :::
 
 :::info

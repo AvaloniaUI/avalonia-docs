@@ -42,7 +42,7 @@ import ContextMenuCopyPasteScreenshot from '/img/reference/controls/contextmenu/
 ## 更多信息
 
 :::info
-要查看有关此控件的完整 API 文档，请查看[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ContextMenu/)。
+要查看有关此控件的完整 API 文档，请查看[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContextMenu)。
 :::
 
 :::info

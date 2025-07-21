@@ -41,9 +41,9 @@ You will probably use these properties most often:
 ## `ProgressTextFormat` Example
 
 By default, `ShowProgressText` shows the percentage completion according to the
-[`Value`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/E111DF5B),
-[`Minimum`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/8F9BD1EA), and
-[`Maximum`](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/RangeBase/C07B22E9). The format of this
+[`Value`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Value),
+[`Minimum`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Minimum), and
+[`Maximum`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Maximum). The format of this
 text can be customised by using the `ProgressTextFormat` property. This expects a string which will be passed to
 a [`string.Format`](https://docs.microsoft.com/en-us/dotnet/api/system.string.format#system-string-format(system-string-system-object())) call
 with the value of `ProgressTextFormat` as the format string. The following format items are available at the given indices:
@@ -62,7 +62,7 @@ Since `{0}` would appear at the start of the string in this example, it must be 
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/ProgressBar/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ProgressBar).
 :::
 
 :::info

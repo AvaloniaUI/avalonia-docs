@@ -46,6 +46,6 @@ datePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
 
 ## 更多信息
 
-要查看此控件的完整 API 文档，请参阅[这里](https://reference.avaloniaui.net/api/Avalonia.Controls/DatePicker/)。
+要查看此控件的完整 API 文档，请参阅[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DatePicker)。
 
 在 _GitHub_ 上查看源代码 [`DatePicker.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)
