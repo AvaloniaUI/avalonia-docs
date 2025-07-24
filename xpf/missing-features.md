@@ -18,6 +18,7 @@ The following features will be available later but require significant engineeri
 
 - `Viewport3D` and related 3D APIs
 - `MediaElement` and `MediaPlayer`
+- `InkCanvas`
 
 The following features are unlikely to be supported due to platform restrictions:
 
