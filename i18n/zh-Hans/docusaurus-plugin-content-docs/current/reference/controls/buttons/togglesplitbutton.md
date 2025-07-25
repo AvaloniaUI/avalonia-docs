@@ -40,7 +40,7 @@ import ToggleSplitButtonTextListScreenshot from '/img/reference/controls/buttons
 
 ## API 参考
 
-[ToggleSplitButton](http://reference.avaloniaui.net/api/Avalonia.Controls/ToggleSplitButton/)
+[ToggleSplitButton](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ToggleSplitButton)
 
 ## 源代码
 

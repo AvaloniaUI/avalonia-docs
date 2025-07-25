@@ -61,7 +61,7 @@ With the example code-behind, the text block displays the value of the scrollbar
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/ScrollBar/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ScrollBar).
 :::
 
 :::info

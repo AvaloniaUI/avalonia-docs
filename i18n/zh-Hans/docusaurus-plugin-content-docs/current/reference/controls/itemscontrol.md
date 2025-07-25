@@ -93,7 +93,7 @@ public class Crockery
 ## 更多信息
 
 :::info
-要查看关于此控件的完整 API 文档，请查看[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsControl/)。
+要查看关于此控件的完整 API 文档，请查看[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ItemsControl)。
 :::
 
 :::info

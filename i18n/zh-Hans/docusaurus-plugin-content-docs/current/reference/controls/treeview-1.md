@@ -173,7 +173,7 @@ namespace AvaloniaControls.Models
 ## 更多信息
 
 :::info
-有关此控件的完整 API 文档，请参见[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/TreeView/)。
+有关此控件的完整 API 文档，请参见[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TreeView)。
 :::
 
 :::info

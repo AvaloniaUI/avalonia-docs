@@ -6,7 +6,7 @@ title: Separator 分隔器
 
 ### 参考资料
 
-[Separator](http://reference.avaloniaui.net/api/Avalonia.Controls/Separator/)
+[Separator](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Separator)
 
 ### 源代码
 

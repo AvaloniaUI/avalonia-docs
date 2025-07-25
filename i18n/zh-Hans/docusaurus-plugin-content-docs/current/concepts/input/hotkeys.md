@@ -23,14 +23,14 @@ HotKeyManager.SetHotKey(saveMenuItem, new KeyGesture(Key.S, KeyModifiers.Control
 
 ## 键和修饰键
 
-一个快捷键必须有一个[Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/)和零个或多个[KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/)。在XAML中使用`HotKey`属性设置快捷键时，字符串将被解析为[KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/)。解析键和修饰键使用了[Enum.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.enum.parse)，但可以使用`Ctrl`代替`Control`或`Win`代替`Meta`等同义词。
+一个快捷键必须有一个[Key](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_Key)和零个或多个[KeyModifiers](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyModifiers)。在XAML中使用`HotKey`属性设置快捷键时，字符串将被解析为[KeyGesture](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyGesture)。解析键和修饰键使用了[Enum.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.enum.parse)，但可以使用`Ctrl`代替`Control`或`Win`代替`Meta`等同义词。
 
 ### 参考
 
-* [HotKeyManager](http://reference.avaloniaui.net/api/Avalonia.Controls/HotKeyManager/)
-* [KeyGesture](http://reference.avaloniaui.net/api/Avalonia.Input/KeyGesture/)
-* [KeyModifiers](http://reference.avaloniaui.net/api/Avalonia.Input/KeyModifiers/)
-* [Key](http://reference.avaloniaui.net/api/Avalonia.Input/Key/)
+* [HotKeyManager](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_HotKeyManager)
+* [KeyGesture](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyGesture)
+* [KeyModifiers](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyModifiers)
+* [Key](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_Key)
 
 ### 源代码
 

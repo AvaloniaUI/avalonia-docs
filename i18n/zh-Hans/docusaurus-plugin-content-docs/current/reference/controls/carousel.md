@@ -69,6 +69,6 @@ namespace AvaloniaControls.Views
 
 ## 更多信息
 
-要查看此控件的完整 API 文档，请点击[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/Carousel/)。
+要查看此控件的完整 API 文档，请点击[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Carousel)。
 
 在 _GitHub_ 上查看源代码 [`Carousel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Carousel.cs)。

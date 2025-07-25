@@ -36,7 +36,7 @@ var transition = new CrossFade(TimeSpan.FromMilliseconds(500));
 ## 更多信息
 
 :::info
-有关此过渡效果的完整 API 文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Animation/CrossFade/).
+有关此过渡效果的完整 API 文档，请参阅[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Animation_CrossFade).
 :::
 
 :::info

@@ -66,6 +66,6 @@ import MenuFlyoutScreenshot from '/img/reference/controls/menuflyout/menuflyout-
 
 ## 更多信息
 
-有关此控件的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/MenuFlyout/)。
+有关此控件的完整 API 文档，请参阅[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_MenuFlyout)。
 
 在 _GitHub_ 上查看源代码 [`MenuFlyout.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/MenuFlyout.cs)

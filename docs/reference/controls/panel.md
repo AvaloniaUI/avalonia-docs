@@ -45,7 +45,7 @@ For instructions about how to create a custom panel control, see [here](../../gu
 ## More Information
 
 :::info
-For the complete API documentation about this control see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Panel/).
+For the complete API documentation about this control see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Panel).
 :::
 
 :::info

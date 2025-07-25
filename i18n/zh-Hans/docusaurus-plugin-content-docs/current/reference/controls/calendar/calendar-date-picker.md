@@ -29,7 +29,7 @@ import CalendarDatePickerScreenshot from '/img/gitbook-import/assets/calendardat
 ## 更多信息
 
 :::info
-有关此控件的完整API文档，请参见[这里](https://reference.avaloniaui.net/api/Avalonia.Controls/CalendarDatePicker/)。
+有关此控件的完整API文档，请参见[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CalendarDatePicker)。
 :::
 
 :::info

@@ -169,7 +169,7 @@ import GridSpanningColumnsScreenshot from '/img/reference/controls/grid/grid-col
 ## 更多信息
 
 :::info
-要查看此控件的完整 API 文档，请参阅[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Grid/)。
+要查看此控件的完整 API 文档，请参阅[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Grid)。
 :::
 
 :::info

@@ -13,7 +13,7 @@ import ControlContentStudentScreenshot from '/img/reference/controls/contentcont
 
 ## 参考文献
 
-[ContentControl](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/)
+[ContentControl](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContentControl)
 
 ## 源代码
 
@@ -21,7 +21,7 @@ import ControlContentStudentScreenshot from '/img/reference/controls/contentcont
 
 ## 显示内容
 
-最简单的情况下，内容控件显示分配给其 [`Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756) 属性的数据。
+最简单的情况下，内容控件显示分配给其 [`Content`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_ContentControl_Content) 属性的数据。
 
 例如：
 

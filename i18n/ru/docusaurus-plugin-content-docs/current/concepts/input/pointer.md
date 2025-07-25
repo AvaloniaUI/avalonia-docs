@@ -69,4 +69,4 @@ Note that the maximum distance between a first and second tap, and the time dela
 
 ## More Information
 
-For the complete API documentation about pointer and tap events, see [here](http://reference.avaloniaui.net/api/Avalonia.Input/PointerEventArgs/).
+For the complete API documentation about pointer and tap events, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_PointerEventArgs).

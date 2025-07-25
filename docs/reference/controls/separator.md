@@ -7,7 +7,7 @@ The `Separator` control is used to provide visual separators within a `Menu` con
 
 ### Reference
 
-[Separator](http://reference.avaloniaui.net/api/Avalonia.Controls/Separator/)
+[Separator](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Separator)
 
 ### Source code
 

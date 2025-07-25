@@ -38,6 +38,6 @@ datePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
 
 ## More Information
 
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/DatePicker/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DatePicker).
 
 View the source code on _GitHub_ [`DatePicker.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)

@@ -115,7 +115,7 @@ import MenuIconScreenshot from '/img/reference/controls/menu/menu-icon.gif';
 ## 更多信息
 
 :::info
-有关此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Menu/)。
+有关此控件的完整 API 文档，请参见[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Menu)。
 :::
 
 :::info

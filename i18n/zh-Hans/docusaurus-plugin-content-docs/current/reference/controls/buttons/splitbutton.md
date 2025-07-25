@@ -32,7 +32,7 @@ import SplitButtonExportButtonScreenshot from '/img/reference/controls/buttons/s
 
 ## API 参考
 
-[SplitButton](http://reference.avaloniaui.net/api/Avalonia.Controls/SplitButton/)
+[SplitButton](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitButton)
 
 ## 源代码
 

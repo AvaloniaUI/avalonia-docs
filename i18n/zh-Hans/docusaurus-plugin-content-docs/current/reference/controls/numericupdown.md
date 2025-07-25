@@ -59,7 +59,7 @@ import NumericUpDownFormatStringScreenshot from '/img/reference/controls/numeric
 ## 更多信息
 
 :::info
-关于此控件的完整 API 文档，请参阅[此处](http://reference.avaloniaui.net/api/Avalonia.Controls/NumericUpDown/)。
+关于此控件的完整 API 文档，请参阅[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NumericUpDown)。
 :::
 
 :::info

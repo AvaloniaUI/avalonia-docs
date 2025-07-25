@@ -57,7 +57,7 @@ You will probably use these properties most often:
 ## 更多信息
 
 :::info
-有关此手势识别器的完整 API 文档，请参阅 [此处](https://reference.avaloniaui.net/api/Avalonia.Input.GestureRecognizers/ScrollGestureRecognizer/).
+有关此手势识别器的完整 API 文档，请参阅 [此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_GestureRecognizers_ScrollGestureRecognizer).
 :::
 
 :::info

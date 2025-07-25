@@ -88,7 +88,7 @@ import ToggleButtonMuteScreenshot from '/img/reference/controls/buttons/togglebu
 ## 更多信息
 
 :::info
-有关此控件的完整API文档，请参阅[这里](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/ToggleButton/).
+有关此控件的完整API文档，请参阅[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ToggleButton).
 :::
 
 :::info

@@ -31,7 +31,7 @@ You can then allocate child controls to the cells created, using attached row an
 ## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/UniformGrid/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_UniformGrid).
 :::
 
 :::info

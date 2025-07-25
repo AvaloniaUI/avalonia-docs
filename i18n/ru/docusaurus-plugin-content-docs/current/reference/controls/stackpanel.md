@@ -41,7 +41,7 @@ The result shows the child controls stretched to fit the width, and the overall 
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/StackPanel/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_StackPanel).
 :::
 
 :::info

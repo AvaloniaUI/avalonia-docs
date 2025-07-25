@@ -168,7 +168,7 @@ public class CustomTransition : IPageTransition
 ## More Information
 
 :::info
-For the complete API documentation about this interface see [here](http://reference.avaloniaui.net/api/Avalonia.Animation/IPageTransition/).
+For the complete API documentation about this interface see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Animation_IPageTransition).
 :::
 
 :::info

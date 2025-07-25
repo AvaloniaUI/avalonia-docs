@@ -81,7 +81,7 @@ Here are some notes about the above example:
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/RelativePanel/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RelativePanel).
 :::
 
 :::info

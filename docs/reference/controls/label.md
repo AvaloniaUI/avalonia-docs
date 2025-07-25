@@ -7,7 +7,7 @@ A text label control that does not receive the focus, but transfers it to a defi
 ## More Information
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/Label/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Label).
 :::
 
 :::info

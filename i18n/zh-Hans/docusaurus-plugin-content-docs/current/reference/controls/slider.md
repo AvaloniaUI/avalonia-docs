@@ -41,6 +41,6 @@ import SliderMaxValueScreenshot from '/img/reference/controls/slider/slider-max-
 
 ## 更多信息
 
-要获取关于此控件的完整API文档，请查看[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/Slider/)。
+要获取关于此控件的完整API文档，请查看[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Slider)。
 
 在_GitHub_上查看源代码 [`Slider.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Slider.cs)

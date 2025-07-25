@@ -222,7 +222,7 @@ namespace AvaloniaControls.Views
 ### More Information
 
 :::info
-For the complete API documentation about this control, see [here](https://reference.avaloniaui.net/api/Avalonia.Controls/ListBox/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ListBox).
 :::
 
 :::info

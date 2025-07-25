@@ -50,7 +50,7 @@ You can clear the display by resetting the selected time to null.
 ## 更多信息
 
 :::info
-For the complete API documentation about this control, see [here](http://reference.avaloniaui.net/api/Avalonia.Controls/TimePicker/).
+For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TimePicker).
 :::
 
 :::info

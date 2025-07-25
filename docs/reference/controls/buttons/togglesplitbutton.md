@@ -45,7 +45,7 @@ Pressing a configuration in the `Flyout` should either (1) turn on the feature w
 
 ## API Reference
 
-[ToggleSplitButton](http://reference.avaloniaui.net/api/Avalonia.Controls/ToggleSplitButton/)
+[ToggleSplitButton](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ToggleSplitButton)
 
 ## Source code
 

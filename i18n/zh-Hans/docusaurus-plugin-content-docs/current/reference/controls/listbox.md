@@ -187,7 +187,7 @@ namespace AvaloniaControls.Views
 ### 更多信息
 
 :::info
-完整的 API 文档关于这个控件，请查看[这里](https://reference.avaloniaui.net/api/Avalonia.Controls/ListBox/)。
+完整的 API 文档关于这个控件，请查看[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ListBox)。
 :::
 
 :::info

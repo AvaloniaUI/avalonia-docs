@@ -53,7 +53,7 @@ import GridSplitterRowsScreenshot from '/img/reference/controls/gridsplitter/gri
 ## 更多信息
 
 :::info
-查看此控件的完整 API 文档，请访问[这里](http://reference.avaloniaui.net/api/Avalonia.Controls/GridSplitter/)。
+查看此控件的完整 API 文档，请访问[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_GridSplitter)。
 :::
 
 :::info

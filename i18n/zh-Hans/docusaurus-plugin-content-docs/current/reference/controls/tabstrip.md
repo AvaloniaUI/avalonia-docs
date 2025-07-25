@@ -33,7 +33,7 @@ import TabStripNavigation from '/img/reference/controls/tabstrip/tabstrip-naviga
 ## 更多信息
 
 :::info
-有关此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/TabStrip/)。
+有关此控件的完整 API 文档，请参见[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_TabStrip)。
 :::
 
 :::info

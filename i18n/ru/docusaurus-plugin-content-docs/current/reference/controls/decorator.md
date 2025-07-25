@@ -7,7 +7,7 @@ The `Decorator` is the base decorator class for decorating a single child contro
 
 ### Reference
 
-[Decorator](http://reference.avaloniaui.net/api/Avalonia.Controls/Decorator/)
+[Decorator](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Decorator)
 
 ### Source code
 

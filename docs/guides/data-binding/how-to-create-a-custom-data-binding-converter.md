@@ -13,7 +13,7 @@ To review the _Microsoft_ documentation for the `IValueConverter` interface, see
 :::
 
 :::info
-As the `IValueConverter` interface was not available in .NET standard 2.0, Avalonia UI  contains a copy in the `Avalonia.Data.Converters` namespace. You can see the API documentation about this interface, [here](https://reference.avaloniaui.net/api/Avalonia.Data.Converters/IValueConverter/).
+As the `IValueConverter` interface was not available in .NET standard 2.0, Avalonia UI  contains a copy in the `Avalonia.Data.Converters` namespace. You can see the API documentation about this interface, [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Data_Converters_IValueConverter).
 :::
 
 You must reference a custom converter in some resources before it can be used. This can be at any level in your application. In this example, the custom converter `myConverter` is referenced in the window resources:

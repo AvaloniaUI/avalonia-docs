@@ -61,7 +61,7 @@ namespace AvaloniaControls.Views
 ## 更多信息
 
 :::info
-要查看此控件的完整 API 文档，请参见[这里](http://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/ScrollBar/)。
+要查看此控件的完整 API 文档，请参见[这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ScrollBar)。
 :::
 
 :::info

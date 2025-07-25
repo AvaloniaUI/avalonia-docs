@@ -27,7 +27,7 @@ import ButtonSpinnerScreenshot from '/img/reference/controls/buttons/button-spin
 ## 更多信息
 
 :::info
-有关此控件的完整API文档，请参阅 [这里](http://reference.avaloniaui.net/api/Avalonia.Controls/ButtonSpinner/).
+有关此控件的完整API文档，请参阅 [这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ButtonSpinner).
 :::
 
 :::info

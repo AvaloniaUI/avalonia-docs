@@ -31,7 +31,7 @@ Uniform Grid 将可用空间在两个方向上均匀地划分为单元格。您�
 ## 更多信息
 
 :::info
-有关此控件的完整 API 文档，请参见[此处](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/UniformGrid/)。
+有关此控件的完整 API 文档，请参见[此处](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_UniformGrid)。
 :::
 
 :::info

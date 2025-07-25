@@ -35,7 +35,7 @@ public static AppBuilder BuildAvaloniaApp()
 ```
 
 :::info
-有关 `LogEventLevel` 枚举的完整API文档，请参阅 [这里](https://reference.avaloniaui.net/api/Avalonia.Logging/LogEventLevel/).
+有关 `LogEventLevel` 枚举的完整API文档，请参阅 [这里](https://api-docs.avaloniaui.net/docs/T_Avalonia_Logging_LogEventLevel).
 :::
 
 然后，日志消息会在你的IDE的 **Debug** 窗口的 **Output** 视图中显示。例如，启用详细日志记录时：
