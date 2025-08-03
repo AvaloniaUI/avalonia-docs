@@ -55,7 +55,7 @@ import SineEaseOutScreenshot from '/img/reference/animation-settings/sine-ease-o
 | `QuinticEaseIn`<br/><img src={QuinticEaseInScreenshot} alt=""/>         | `QuinticEaseOut`<br/><img src={QuinticEaseOutScreenshot} alt=""/>         | `QuinticEaseInOut`<br/><img src={QuinticEaseInOutScreenshot} alt=""/>         |
 | `ExponentialEaseIn`<br/><img src={ExponentialEaseInScreenshot} alt=""/> | `ExponentialEaseOut`<br/><img src={ExponentialEaseOutScreenshot} alt=""/> | `ExponentialEaseInOut`<br/><img src={ExponentialEaseInOutScreenshot} alt=""/> |
 | `CircularEaseIn`<br/><img src={CircularEaseInScreenshot} alt=""/>       | `CircularEaseOut`<br/><img src={CircularEaseOutScreenshot} alt=""/>       | `CircularEaseInOut`<br/><img src={CircularEaseInOutScreenshot} alt=""/>       |
-| `BackEaseIn`<br/><img src={BackEaseInScreenshot} alt=""/>               | `BackEaseOut`<br/><img src={BackEaseOutScreenshot} alt=""/>               | `BackEaseInInOut`<br/><img src={BackEaseInOutScreenshot} alt=""/>             |
+| `BackEaseIn`<br/><img src={BackEaseInScreenshot} alt=""/>               | `BackEaseOut`<br/><img src={BackEaseOutScreenshot} alt=""/>               | `BackEaseInOut`<br/><img src={BackEaseInOutScreenshot} alt=""/>             |
 | `ElasticEaseIn`<br/><img src={ElasticEaseInScreenshot} alt=""/>         | `ElasticEaseOut`<br/><img src={ElasticEaseOutScreenshot} alt=""/>         | `ElasticEaseInOut`<br/><img src={ElasticEaseInOutScreenshot} alt=""/>         |
 | `BounceEaseIn`<br/><img src={BounceEaseInScreenshot} alt=""/>           | `BounceEaseOut`<br/><img src={BounceEaseOutScreenshot} alt=""/>           | `BounceEaseInOut`<br/><img src={BounceEaseInOutScreenshot} alt=""/>           |
 
