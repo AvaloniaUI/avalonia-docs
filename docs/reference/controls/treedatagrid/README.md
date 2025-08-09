@@ -92,11 +92,7 @@ You will use the `Source` property to bind to a view model that is defined in co
 ## More Information
 
 :::info
-For the complete API documentation about this control, see here.
-:::
-
-:::info
 View the source code on GitHub [TreeDataGrid.cs](https://github.com/AvaloniaUI/Avalonia.Controls.TreeDataGrid)
 :::
 
-The next page shows an example of creating a hierarchical tree data grid with columns.
+The next page shows an example of creating a flat tree data grid with columns.
