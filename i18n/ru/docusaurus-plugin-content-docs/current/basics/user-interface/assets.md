@@ -1,22 +1,22 @@
 ---
 id: assets
-title: Assets and Images
+title: Ресурсы (Assets) и изображения
 ---
 
 import AssetFileDiagram from '/img/basics/user-interface/asset-file.png';
 import AssetLibraryDiagram from '/img/basics/user-interface/asset-library.png';
 
-# Assets
+# Ресурсы (Assets) 
 
-Many applications need to include assets such as bitmaps, styles and resource dictionaries. Resource dictionaries contain graphical fundamentals that can be declared in XAML. Styles can also be written in XAML, but bitmap assets are binary files, for example PNG and JPEG formats.
+Многим приложениям необходимо включать ресурсы, такие как растровые изображения, стили и словари ресурсов. Словари ресурсов содержат графические базовые элементы, которые могут быть объявлены в XAML. Стили также могут быть написаны в XAML, но растровые изображения - это бинарные файлы, например, форматы PNG и JPEG.
 
-## Including assets
+## Включение ресурсов
 
 <img src={AssetFileDiagram} alt=''/>
 
-You include assets in an application by using the `<AvaloniaResource>` element in your project file.
+Вы включаете ресурсы (Assets) в приложение, используя элемент `<AvaloniaResource>` в файле проекта.
 
-For example, the Avalonia .NET Core MVVM App solution template creates a folder called `Assets` (containing the `avalonia-logo.ico` file) and adds an element to the project file to include any files located there. As follows:
+Например, шаблон решения Avalonia .NET Core MVVM App создает папку с названием `Assets` (содержащую файл `avalonia-logo.ico`) и добавляет элемент в файл проекта для включения всех файлов, расположенных там. Следующим образом:
 
 ```xml
 <ItemGroup>
@@ -24,16 +24,16 @@ For example, the Avalonia .NET Core MVVM App solution template creates a folder 
 </ItemGroup>
 ```
 
-You can include whatever files you want by adding additional `<AvaloniaResource>` elements in this item group.
+Вы можете включить любые файлы, добавив дополнительные элементы `<AvaloniaResource>` в эту группу элементов.
 
 :::tip
-The element name `AvaloniaResource` here only indicates that the assets will be internally stored as .NET resources by the build. However, in _Avalonia UI_ terms, these files are called 'Assets' to distinguish them from 'XAML resources'.
+Имя элемента `AvaloniaResource` здесь только указывает, что ресурсы будут внутренне храниться как ресурсы .NET при сборке. Однако, в терминологии _Avalonia UI_, эти файлы называются 'Ресурсы' (Assets), чтобы отличать их от 'XAML-ресурсов'.
 :::
 
 
-### Referencing Included Assets
+### Ссылки на включенные ресурсы
 
-Once asset files are included, they can be referenced as needed in the XAML that defines your UI. For example, these assets are referenced by specifying their relative path:
+После включения файлов ресурсов на них можно ссылаться по мере необходимости в XAML, определяющем ваш UI. Например, на эти ресурсы можно ссылаться, указав их относительный путь:
 
 ```xml
 <Image Source="icon.png"/>
@@ -41,43 +41,43 @@ Once asset files are included, they can be referenced as needed in the XAML that
 <Image Source="../icon.png"/>
 ```
 
-As an alternative, you can use the rooted path:
+В качестве альтернативы можно использовать путь от корня:
 
 ```xml
 <Image Source="/Assets/icon.png"/>
 ```
 
-## Library Assets
+## Ресурсы библиотек
 
 <img src={AssetLibraryDiagram} alt=''/>
 
-If the asset is included in a different assembly from the XAML file, then you use the `avares:` URI scheme. For example, if the asset is contained in an assembly called `MyAssembly.dll` in a `Assets` folder, then you use:
+Если ресурс включен в другую сборку, отличную от файла XAML, тогда вы используете схему URI `avares:`. Например, если ресурс содержится в сборке с названием `MyAssembly.dll` в папке `Assets`, тогда вы используете:
 
 ```xml
 <Image Source="avares://MyAssembly/Assets/icon.png"/>
 ```
 
-### Asset Type Conversion
+### Преобразование типов ресурсов
 
-Avalonia UI has built-in converters which can load assets for bitmaps, icons and fonts out of the box. So an assets Uri can be automatically converted to any of following:
+Avalonia UI имеет встроенные конвертеры, которые могут загружать ресурсы для растровых изображений, иконок и шрифтов «из коробки». Таким образом, URI ресурса может быть автоматически преобразован в любой из следующих типов:
 
-* Image - `Image` type
-* Bitmap - `Bitmap` type
-* Window Icon - `WindowIcon` type
-* Font - `FontFamily` type
+* Изображение - тип `Image`
+* Растровое изображение - тип `Bitmap`
+* Иконка окна - тип `WindowIcon`
+* Шрифт - тип `FontFamily`
 
-### Loading Assets in Code
+### Загрузка ресурсов в коде
 
-You can write code to load assets using the `AssetLoader` static class. For example:
+Вы можете написать код для загрузки ресурсов, используя статический класс `AssetLoader`. Например:
 
 ```csharp
 var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
 ```
 
-The `uri` variable in the above code can contain any valid URI with `avares:` scheme (as described above).
+Переменная `uri` в приведенном выше коде может содержать любой действительный URI со схемой `avares:` (как описано выше).
 
-_Avalonia UI_ does not provide support for `file://`, `http://`, or `https://` schemes. If you want to load files from disk or the Web, you must implement that functionality yourself or use community implementations.
+_Avalonia UI_ не предоставляет поддержку для схем `file://`, `http://` или `https://`. Если вы хотите загружать файлы с диска или из Интернета, вы должны реализовать эту функциональность самостоятельно или использовать реализации сообщества.
 
 :::info
-Avalonia UI has a community implementation for an image loader at [https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia](https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia)
+Avalonia UI имеет реализацию загрузчика изображений от сообщества по адресу [https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia](https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia)
 :::
