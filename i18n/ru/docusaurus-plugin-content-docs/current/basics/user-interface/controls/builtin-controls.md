@@ -1,82 +1,82 @@
-# Built-in Controls
+# Встроенные компоненты
 
-Here are some of the more commonly-used Avalonia controls, organised by category:
+Ниже представлены некоторые из наиболее часто используемых компонентов Avalonia, организованные по категориям:
 
-## Layout controls
+## Компоненты компоновки
 
-|Control|Description|
+|Компонент|Описание|
 |:----|:----|
-|[Border](../../../reference/controls/border)|Decorates a single child with a border and background.|
-|[Canvas](../../../reference/controls/canvas)|Displays child controls at specified positions.|
-|[Dock Panel](../../../reference/controls/dockpanel)|Arranges child controls along specified edges (top, bottom, left, right) with one filling any remaining space.|
-|[Expander](../../../reference/controls/expander)|Has a header area (always visible) and a collapsible content section (single child).|
-|[Grid](../../../reference/controls/grid/README)|Arranges child controls in the cells of a grid, positioned by row and column. The cells can span rows and columns.|
-|[Grid Splitter](../../../reference/controls/gridsplitter)|Can be added to a grid to allow the user to resize rows or columns at runtime.|
-|[Panel](../../../reference/controls/panel)|Stacks child controls on top of one another.|
-|[Relative Panel](../../../reference/controls/relativepanel)|Allows multiple child controls. The position and alignment of the child controls can be specified in relation to the panel itself, or in relation to other child controls.  The size of child controls can be specified, or calculated from relations and alignments.|
-|[Scroll Viewer](../../../reference/controls/scrollviewer)|Adds scroll bars and scrolling behaviour if the (single) child is larger than the space available.|
-|[Split View](../../../reference/controls/splitview)|Adds a collapsible pane to the edge of its (single child) content zone.|
-|[Stack Panel](../../../reference/controls/stackpanel)|Allows multiple child controls, arranged in sequence, horizontally or vertically.|
-|[Tab Control](../../../reference/controls/tabcontrol)|The tab control allows you to sub-divide a view into tab items.|
-|[Uniform Grid](../../../reference/controls/uniform-grid)|Allows multiple child controls, arranged in a grid with cells of uniform column and row size.|
-|[Wrap Panel](../../../reference/controls/wrappanel)|Arranges child controls in sequence from left to right, while they fit in the width. Starts a new line when there is no space left.|
+|[Border](../../../reference/controls/border)|Оформляет один дочерний элемент границей и фоном.|
+|[Canvas](../../../reference/controls/canvas)|Отображает дочерние компоненты в указанных позициях.|
+|[Dock Panel](../../../reference/controls/dockpanel)|Размещает дочерние компоненты вдоль указанных краев (верхний, нижний, левый, правый), при этом один из них заполняет оставшееся пространство.|
+|[Expander](../../../reference/controls/expander)|Имеет область заголовка (всегда видимую) и сворачиваемую секцию содержимого (один дочерний элемент).|
+|[Grid](../../../reference/controls/grid/README)|Размещает дочерние компоненты в ячейках сетки, расположенных по строкам и столбцам. Ячейки могут охватывать несколько строк и столбцов.|
+|[Grid Splitter](../../../reference/controls/gridsplitter)|Может быть добавлен в сетку, чтобы позволить пользователю изменять размер строк или столбцов во время выполнения.|
+|[Panel](../../../reference/controls/panel)|Укладывает дочерние компоненты друг на друга.|
+|[Relative Panel](../../../reference/controls/relativepanel)|Позволяет размещать несколько дочерних компонентов. Положение и выравнивание дочерних компонентов можно указать относительно самой панели или относительно других дочерних компонентов. Размер дочерних компонентов может быть указан явно или вычислен на основе отношений и выравниваний.|
+|[Scroll Viewer](../../../reference/controls/scrollviewer)|Добавляет полосы прокрутки и поведение прокрутки, если (единственный) дочерний элемент больше доступного пространства.|
+|[Split View](../../../reference/controls/splitview)|Добавляет сворачиваемую панель к краю своей зоны содержимого (один дочерний элемент).|
+|[Stack Panel](../../../reference/controls/stackpanel)|Позволяет размещать несколько дочерних компонентов, расположенных последовательно, горизонтально или вертикально.|
+|[Tab Control](../../../reference/controls/tabcontrol)|Компонент вкладок позволяет разделить представление на элементы вкладок.|
+|[Uniform Grid](../../../reference/controls/uniform-grid)|Позволяет размещать несколько дочерних компонентов в сетке с ячейками одинакового размера столбцов и строк.|
+|[Wrap Panel](../../../reference/controls/wrappanel)|Располагает дочерние компоненты последовательно слева направо, пока они помещаются по ширине. Начинает новую строку, когда не остается места.|
 
-## Buttons
+## Кнопки
 
-|Control|Description|
+|Компонент|Описание|
 |:----|:----|
-|[Button](../../../reference/controls/buttons/button)|The basic button control - can display text, an icon or both. Has standard 'click' behavior.|
-|[Repeat Button](../../../reference/controls/buttons/repeatbutton)|A button that raises its click event repeatedly when it is pressed and held.|
-|[Radio Button](../../../reference/controls/buttons/radiobutton)|A button that has a selected state. It can be placed in a group so that selection of one button deselects all the others in the group.|
-|[Toggle Button](../../../reference/controls/buttons/togglebutton)|A button that has a selected state and a unselected state. Subsequent clicks 'toggle' this state. A 'checked' pseudo class allows different styles to be allocated to the selected  and unselected states.|
-|[Button Spinner](../../../reference/controls/buttons/buttonspinner)|A control with two spin buttons and a content zone.|
-|[Split Button](../../../reference/controls/buttons/splitbutton)|This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like standard button, and the secondary part opens a flyout with additional actions.|
-|[Toggle Split Button](../../../reference/controls/buttons/togglesplitbutton)|This functions as a button with primary and secondary parts that can be pressed independently. The primary part behaves like toggle button, and the secondary part opens a flyout with additional actions.|
+|[Button](../../../reference/controls/buttons/button)|Базовый компонент кнопки - может отображать текст, значок или и то, и другое. Имеет стандартное поведение при нажатии.|
+|[Repeat Button](../../../reference/controls/buttons/repeatbutton)|Кнопка, которая многократно вызывает событие нажатия, когда её нажимают и удерживают.|
+|[Radio Button](../../../reference/controls/buttons/radiobutton)|Кнопка, которая имеет выбранное состояние. Может быть помещена в группу, так что выбор одной кнопки отменяет выбор всех остальных в группе.|
+|[Toggle Button](../../../reference/controls/buttons/togglebutton)|Кнопка, которая имеет выбранное и невыбранное состояния. Последующие нажатия 'переключают' это состояние. Псевдокласс 'checked' позволяет применять различные стили к выбранному и невыбранному состояниям.|
+|[Button Spinner](../../../reference/controls/buttons/buttonspinner)|Компонент с двумя кнопками вращения и зоной содержимого.|
+|[Split Button](../../../reference/controls/buttons/splitbutton)|Функционирует как кнопка с основной и дополнительной частями, которые могут быть нажаты независимо друг от друга. Основная часть работает как стандартная кнопка, а дополнительная открывает всплывающую панель с дополнительными действиями.|
+|[Toggle Split Button](../../../reference/controls/buttons/togglesplitbutton)|Функционирует как кнопка с основной и дополнительной частями, которые могут быть нажаты независимо друг от друга. Основная часть работает как переключаемая кнопка, а дополнительная открывает всплывающую панель с дополнительными действиями.|
 
-## Repeating Data Controls
+## Компоненты повторяющихся данных
 
-These controls display repeating data, in either a tabular or list format:
+Эти компоненты отображают повторяющиеся данные в табличном или списочном формате:
 
-|Control|Description|
+|Компонент|Описание|
 |:----|:----|
-|[Data Grid](../../../reference/controls/datagrid)|Displays data in a customizable grid.|
-|[Items Control](../../../reference/controls/itemscontrol)|Displays a collection of items from a bound data source.|
-|[Items Repeater](../../../reference/controls/itemsrepeater)|Displays repeating data from a bound data source. It has both a layout template and a data template.|
-|[List Box](../../../reference/controls/listbox)|A control with items that can be selected.|
-|[Combo Box](../../../reference/controls/combobox)|A control with a drop-down list with items that can be selected.|
+|[Data Grid](../../../reference/controls/datagrid)|Отображает данные в настраиваемой сетке.|
+|[Items Control](../../../reference/controls/itemscontrol)|Отображает коллекцию элементов из привязанного источника данных.|
+|[Items Repeater](../../../reference/controls/itemsrepeater)|Отображает повторяющиеся данные из привязанного источника данных. Имеет как шаблон компоновки, так и шаблон данных.|
+|[List Box](../../../reference/controls/listbox)|Компонент с элементами, которые могут быть выбраны.|
+|[Combo Box](../../../reference/controls/combobox)|Компонент с выпадающим списком, элементы которого могут быть выбраны.|
 
-## Text display and editing
+## Отображение и редактирование текста
 
-|Control|Description|
+|Компонент|Описание|
 |:----|:----|
-|[Auto Complete Box](../../../reference/controls/autocompletebox)|A control that shows a text box for user input and a drop-down that contains possible matches based on what has been typed.|
-|[Text Block](../../../reference/controls/textblock)|A control that displays a block of text. Read-only.|
-|[Text Box](../../../reference/controls/textbox)|Used to display or edit text without formatting restrictions.|
-|[Masked Text Box](../../../reference/controls/maskedtextbox)|Used to display text in the format contained in a mask; or used to edit text using the format mask to prevent invalid user input.|
+|[Auto Complete Box](../../../reference/controls/autocompletebox)|Компонент, который показывает текстовое поле для ввода пользователем и выпадающий список, содержащий возможные совпадения на основе того, что было введено.|
+|[Text Block](../../../reference/controls/textblock)|Компонент, который отображает блок текста. Только для чтения.|
+|[Text Box](../../../reference/controls/textbox)|Используется для отображения или редактирования текста без ограничений форматирования.|
+|[Masked Text Box](../../../reference/controls/maskedtextbox)|Используется для отображения текста в формате, содержащемся в маске; или для редактирования текста с использованием маски формата, чтобы предотвратить неверный ввод пользователем.|
 
-## Value selection
+## Выбор значений
 
-|Control|Type|Description|
+|Компонент|Тип|Описание|
 |:----|:----|:----|
-|[Check Box](../../../reference/controls/checkbox)|Boolean|True value presented as a check mark. Click interaction toggles the value. Has an option to display an 'unknown' value.|
-|[Slider](../../../reference/controls/slider)|Double|Relative value compared to a maximum and minimum value presented as the position along the length of the slider track of the slider button. Drag interaction on the slider button can alter the value between the maximum and minimum values. Keyboard and click interactions can also nudge the value.|
-|[Calendar](../../../reference/controls/calendar)|DateTime|The calendar is a control for users to select dates or date ranges.|
-|[Calendar Date Picker](../../../reference/controls/calendar/calendar-date-picker)|DateTime|An extension of the calendar control that includes a text box and button.|
-|[Color Picker](../../../reference/controls/colorpicker)|Color / HsvColor|The color picker supports user-selection and editing of colors using a spectrum, palette and component sliders. It also supports an optional alpha component, RGB or HSV color models and hexadecimal color values.|
-|[Date Picker](../../../reference/controls/datepicker)|DateTime|The date picker has three 'spinner' controls to allow the user to pick a date value.|
-|[Time Picker](../../../reference/controls/timepicker)|TimeSpan|The time picker has three 'spinner' controls to allow the user to pick a time from hours, minutes and seconds.|
+|[Check Box](../../../reference/controls/checkbox)|Boolean|Значение 'истина' представлено как отметка. Взаимодействие с помощью нажатия переключает значение. Имеет возможность отображать 'неизвестное' значение.|
+|[Slider](../../../reference/controls/slider)|Double|Относительное значение в сравнении с максимальным и минимальным значениями, представленное как положение вдоль длины дорожки ползунка. Перетаскивание кнопки ползунка может изменять значение между максимальным и минимальным значениями. Взаимодействие с клавиатурой и нажатия также могут изменять значение.|
+|[Calendar](../../../reference/controls/calendar)|DateTime|Календарь - это компонент для выбора пользователями дат или диапазонов дат.|
+|[Calendar Date Picker](../../../reference/controls/calendar/calendar-date-picker)|DateTime|Расширение компонента календаря, которое включает текстовое поле и кнопку.|
+|[Color Picker](../../../reference/controls/colorpicker)|Color / HsvColor|Выбор цвета поддерживает выбор и редактирование цветов пользователем с помощью спектра, палитры и ползунков компонентов. Он также поддерживает необязательный альфа-компонент, цветовые модели RGB или HSV и шестнадцатеричные значения цветов.|
+|[Date Picker](../../../reference/controls/datepicker)|DateTime|Выбор даты имеет три компонента 'прокрутки', которые позволяют пользователю выбрать значение даты.|
+|[Time Picker](../../../reference/controls/timepicker)|TimeSpan|Выбор времени имеет три компонента 'прокрутки', которые позволяют пользователю выбрать время из часов, минут и секунд.|
 
-## Displaying images
+## Отображение изображений
 
-|Control|Description|
+|Компонент|Описание|
 |:----|:----|
-|[Image](../../../reference/controls/image)|Displays a bitmap or vector image.|
-|[Path Icon](../../../reference/controls/path-icon)|Draws a vector image using the current `Foreground`.|
+|[Image](../../../reference/controls/image)|Отображает растровое или векторное изображение.|
+|[Path Icon](../../../reference/controls/path-icon)|Рисует векторное изображение, используя текущий `Foreground`.|
 
-## Menus and Popups
+## Меню и всплывающие окна
 
-|Control|Description|
+|Компонент|Описание|
 |:----|:----|
-|[Menu](../../../reference/controls/menu)|Displays an application menu.|
-|[Flyouts](../../../reference/controls/flyouts)|Attaches a popup or a context menu to a control.|
-|[Tool Tip](../../../reference/controls/tooltip)|Displays a tool tip when a control is hovered.|
+|[Menu](../../../reference/controls/menu)|Отображает меню приложения.|
+|[Flyouts](../../../reference/controls/flyouts)|Прикрепляет всплывающее окно или контекстное меню к компоненту.|
+|[Tool Tip](../../../reference/controls/tooltip)|Отображает всплывающую подсказку при наведении на компонент.|
