@@ -1,37 +1,37 @@
 ---
 id: file-dialogs
-title: File Dialogs
+title: Диалоговые окна файлов
 ---
 
-The file dialog functionality is accessed through the [`StorageProvider`](../../concepts/services/storage-provider) service API, which is available from the `Window` or `TopLevel` classes. This page shows only basic usage and for more information about this API please visit StorageProvider page.
+Функциональность диалоговых окон файлов доступна через API сервиса [`StorageProvider`](../../concepts/services/storage-provider), который доступен из классов `Window` или `TopLevel`. Эта страница показывает только базовое использование, а для получения дополнительной информации об этом API, пожалуйста, посетите страницу StorageProvider.
 
 <GitHubSampleLink title="File Dialogs" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/FileOps"/>
 
 ## OpenFilePickerAsync
 
-This method opens a file picker dialog, allowing the user to select a file. `FilePickerOpenOptions` defines options that are passed to the OS dialog.
+Этот метод открывает диалоговое окно выбора файла, позволяющее пользователю выбрать файл. `FilePickerOpenOptions` определяет параметры, передаваемые в диалоговое окно операционной системы.
 
 ```cs
 public class MyView : UserControl
 {
     private async void OpenFileButton_Clicked(object sender, RoutedEventArgs args)
     {
-        // Get top level from the current control. Alternatively, you can use Window reference instead.
+        // Получаем верхний уровень из текущего элемента управления. Альтернативно можно использовать ссылку на Window.
         var topLevel = TopLevel.GetTopLevel(this);
 
-        // Start async operation to open the dialog.
+        // Запускаем асинхронную операцию для открытия диалогового окна.
         var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
         {
-            Title = "Open Text File",
+            Title = "Открыть текстовый файл",
             AllowMultiple = false
         });
 
         if (files.Count >= 1)
         {
-            // Open reading stream from the first file.
+            // Открываем поток чтения из первого файла.
             await using var stream = await files[0].OpenReadAsync();
             using var streamReader = new StreamReader(stream);
-            // Reads all the content of file as a text.
+            // Читаем всё содержимое файла как текст.
             var fileContent = await streamReader.ReadToEndAsync();
         }
     }
@@ -42,40 +42,40 @@ public class MyView : UserControl
 
 ## SaveFilePickerAsync
 
-This method opens a file save dialog, allowing the user to save a file. `FilePickerSaveOptions` defines options that are passed to the OS dialog.
+Этот метод открывает диалоговое окно сохранения файла, позволяющее пользователю сохранить файл. `FilePickerSaveOptions` определяет параметры, передаваемые в диалоговое окно операционной системы.
 
-### Example
+### Пример
 
 ```cs
 public class MyView : UserControl
 {
     private async void SaveFileButton_Clicked(object sender, RoutedEventArgs args)
     {
-        // Get top level from the current control. Alternatively, you can use Window reference instead.
+        // Получаем верхний уровень из текущего элемента управления. Альтернативно можно использовать ссылку на Window.
         var topLevel = TopLevel.GetTopLevel(this);
 
-        // Start async operation to open the dialog.
+        // Запускаем асинхронную операцию для открытия диалогового окна.
         var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
-            Title = "Save Text File"
+            Title = "Сохранить текстовый файл"
         });
 
         if (file is not null)
         {
-            // Open writing stream from the file.
+            // Открываем поток записи в файл.
             await using var stream = await file.OpenWriteAsync();
             using var streamWriter = new StreamWriter(stream);
-            // Write some content to the file.
+            // Записываем некоторое содержимое в файл.
             await streamWriter.WriteLineAsync("Hello World!");
         }
     }
 }
 ```
 
-For more information on StorageProvider service including on how to keep access to the picked files and what possible options are supported, please visit [`StorageProvider`](../../concepts/services/storage-provider) documentation page and subpages.
+Для получения дополнительной информации о сервисе StorageProvider, включая информацию о том, как сохранить доступ к выбранным файлам и какие возможные параметры поддерживаются, пожалуйста, посетите страницу документации [`StorageProvider`](../../concepts/services/storage-provider) и подстраницы.
 
 :::note
-The provided examples directly access the [`StorageProvider`](../../concepts/services/storage-provider) API inside the ViewModel for learning purposes. In a real-world application, it's recommended to adhere to MVVM principles by creating service classes and locating them with Dependency Injection / Inversion of Control (DI/IoC). Please refer to the [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) and DepInject projects for samples of how to achieve this.
+Приведенные примеры напрямую обращаются к API [`StorageProvider`](../../concepts/services/storage-provider) внутри ViewModel в учебных целях. В реальном приложении рекомендуется придерживаться принципов MVVM, создавая сервисные классы и размещая их с помощью Dependency Injection / Inversion of Control (DI/IoC). Обратитесь к проектам [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) и DepInject для примеров того, как этого достичь.
 :::
 
 
