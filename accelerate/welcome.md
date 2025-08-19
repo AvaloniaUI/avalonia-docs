@@ -9,10 +9,16 @@ sidebar_label: Welcome
 Avalonia Accelerate brings powerful enhancements and professional-grade features to supercharge your Avalonia development. Designed specifically for developers who demand more from their cross-platform applications, Accelerate combines essential productivity tools, seamless integration capabilities, and rich multimedia support—empowering you to build faster, debug smarter, and deliver polished experiences across every platform.
 
 ## What’s Included in Avalonia Accelerate?
+
 Avalonia Accelerate is released in phases, with each update introducing significant new capabilities. The first phase includes three essential modules designed to unlock immediate productivity:
 
 ### [Dev Tools](./tools/dev-tools/getting-started)
+
 Elevate your debugging experience with professional-grade developer tooling that gives you unparalleled insight into your Avalonia applications. Inspect visual trees, debug bindings effortlessly, and fine-tune your UI for maximum responsiveness, all with ease and precision.
+
+### [Parcel](./tools/parcel/getting-started)
+
+Parcel is a packaging and distribution tool for Avalonia UI applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
 
 ### [Web View](./components/webview/quickstart)
 

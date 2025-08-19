@@ -47,7 +47,27 @@ const sidebars = {
         'tools/dev-tools/faq',
         'tools/dev-tools/reporting-issues',
       ]
-    },  
+    },
+    {
+      'type': 'category',
+      'label': 'Parcel',
+      'items': [
+        'tools/parcel/getting-started',
+        {
+          'type': 'category',
+          'label': 'MacOS',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/apple/index'
+          },
+          'items': [
+            'tools/parcel/apple/packaging',
+            'tools/parcel/apple/signing',
+            'tools/parcel/apple/notary'
+          ]
+        }, 
+      ]
+    },
     {
       'type': 'category',
       'label': 'Media Player',
