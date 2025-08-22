@@ -60,12 +60,12 @@ You can see the full list of value priorities in the `BindingPriority` enum, whe
 
 | BindingPriority | Value      | Comment                                              |
 |-----------------|------------|------------------------------------------------------|
-| Animation       | -1         | The highest priority - even overrides a local value  |
-| LocalValue      | 0          | A local value is set on the property of the control. |
-| StyleTrigger    | 1          | This is triggered when a style becomes active.       |
-| Template        | 2          |                                                      |
-| Style           | 3          |                                                      |
-| Unset           | 2147483647 |                                                      |
+| `Animation`     | -1         | The highest priority - even overrides a local value  |
+| `LocalValue`    | 0          | A local value is set on the property of the control. |
+| `StyleTrigger`  | 1          | This is triggered when a style becomes active.       |
+| `Template`      | 2          |                                                      |
+| `Style`         | 3          |                                                      |
+| `Unset`         | 2147483647 |                                                      |
 
 :::warning
 The exception is that `Animation` values have the highest priority and can even override local values.

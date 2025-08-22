@@ -58,14 +58,14 @@ Avalonia UI 的选择器与 CSS 选择器类似，当没有控件被匹配时，
 
 完整的优先级表可以参考 `BindingPriority` 枚举，枚举值越小，优先级越高：
 
-| BindingPriority | 值          | 说明                |
-|-----------------|------------|-------------------|
-| Animation       | -1         | 最高优先级 - 可覆盖本地值 |
-| LocalValue      | 0          | 控件属性上的本地值       |
-| StyleTrigger    | 1          | 样式激活时触发      |
-| Template        | 2          |                   |
-| Style           | 3          |                   |
-| Unset           | 2147483647 |                   |
+| BindingPriority | 值          | 说明             |
+|-----------------|------------|----------------|
+| `Animation`     | -1         | 最高优先级 - 可覆盖本地值 |
+| `LocalValue`    | 0          | 控件属性上的本地值      |
+| `StyleTrigger`  | 1          | 样式激活时触发        |
+| `Template`      | 2          |                |
+| `Style`         | 3          |                |
+| `Unset`         | 2147483647 |                |
 
 :::warning
 例外情况：`Animation` 优先级最高，甚至可以覆盖本地值。
