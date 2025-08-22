@@ -24,13 +24,13 @@ Avalonia UI 的选择器与 CSS 选择器类似，当没有控件被匹配时，
 
 样式会按照声明顺序应用。如果有多个样式匹配到同一控件属性，最后声明的样式会覆盖之前的。例如：
 
-```xml
+```xml title="Style1.axaml"
 <Style Selector="TextBlock.header">
     <Setter Property="Foreground" Value="Green" />
 </Style>
 ```
 
-```xml
+```xml title="Style2.axaml"
 <Style Selector="TextBlock.header">
     <Setter Property="Foreground" Value="Blue" />
     <Setter Property="FontSize" Value="16" />
