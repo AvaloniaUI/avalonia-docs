@@ -24,16 +24,16 @@ Check whether you have used a child selector where there are no children to matc
 
 Styles are applied in order of declaration. If there are multiple style files included that target the same control property, the last style included will override the previous ones. For example:
 
-```xml
+```xml title="Style1.axaml"
 <Style Selector="TextBlock.header">
-    <Style Property="Foreground" Value="Green" />
+    <Setter Property="Foreground" Value="Green" />
 </Style>
 ```
 
-```xml
+```xml title="Style2.axaml"
 <Style Selector="TextBlock.header">
-    <Style Property="Foreground" Value="Blue" />
-    <Style Property="FontSize" Value="16" />
+    <Setter Property="Foreground" Value="Blue" />
+    <Setter Property="FontSize" Value="16" />
 </Style>
 ```
 
@@ -58,7 +58,14 @@ A local value defined directly on a control often has higher priority than any s
 
 You can see the full list of value priorities in the `BindingPriority` enum, where lower enum values have the higher priority.
 
-<table><thead><tr><th width="218">BindingPriority </th><th width="147.33333333333331">Value</th><th>Comment</th></tr></thead><tbody><tr><td><code>Animation</code></td><td>-1</td><td>The highest priority - even overrides a local value</td></tr><tr><td><code>LocalValue</code></td><td>0</td><td>A local value is set on the property of the control.</td></tr><tr><td><code>StyleTrigger</code></td><td>1</td><td>This is triggered when a pseudo class becomes active.</td></tr><tr><td><code>TemplatedParent</code></td><td>2</td><td></td></tr><tr><td><code>Style</code></td><td>3</td><td></td></tr><tr><td><code>Unset</code></td><td>2147483647</td><td></td></tr></tbody></table>
+| BindingPriority | Value      | Comment                                              |
+|-----------------|------------|------------------------------------------------------|
+| `Animation`     | -1         | The highest priority - even overrides a local value  |
+| `LocalValue`    | 0          | A local value is set on the property of the control. |
+| `StyleTrigger`  | 1          | This is triggered when a style becomes active.       |
+| `Template`      | 2          |                                                      |
+| `Style`         | 3          |                                                      |
+| `Unset`         | 2147483647 |                                                      |
 
 :::warning
 The exception is that `Animation` values have the highest priority and can even override local values.
@@ -104,7 +111,7 @@ The following code example of styles that can be expected to work on top of defa
 
 You might expect the `Button` to be red by default and blue when pointer is over it. In fact, only setter of first style will be applied, and second one will be ignored.
 
-The reason is hidden in the Button's template. You can find the default templates in the Avalonia source code (old [Default](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Default/Button.xaml) theme and new [Fluent](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml) theme), but for convenience here we have simplified one from the Fluent theme:
+The reason is hidden in the Button's template. You can find the default templates in the Avalonia source code ([Simple](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Simple/Controls/Button.xaml) theme and [Fluent](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml) theme), but for convenience here we have simplified one from the Fluent theme:
 
 ```xml
 <Style Selector="Button">
@@ -132,7 +139,7 @@ The actual background is rendered by a `ContentPresenter`, which in the default 
 ```
 
 :::info
-You can see this behavior for all controls in the default themes (both old Default and the new Fluent), not just Button. And not just for Background, but also other state-dependent properties.
+You can see this behavior for all controls in the default themes (both Simple and Fluent), not just Button. And not just for Background, but also other state-dependent properties.
 :::
 
 :::info
