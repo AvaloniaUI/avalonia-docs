@@ -1,31 +1,31 @@
 ---
-description: CONCEPTS
+description: КОНЦЕПЦИИ
 ---
 
-# Application Lifetimes
+# Жизненные циклы приложения
 
-Not all platforms are created equal! For example, the lifetime management that you may be used to developing with in Windows Forms or WPF can operate only on desktop-style platforms. _Avalonia UI_ is a cross-platform framework; so to make your application portable, it provides several different lifetime models for your application, and also allows you to control everything manually if the target platform permits.
+Не все платформы созданы одинаковыми! Например, управление жизненным циклом, с которым вы, возможно, привыкли работать в Windows Forms или WPF, может функционировать только на платформах в стиле настольных приложений. _Avalonia UI_ - это кроссплатформенный фреймворк; поэтому, чтобы сделать ваше приложение переносимым, он предоставляет несколько различных моделей жизненного цикла для вашего приложения, а также позволяет управлять всем вручную, если целевая платформа это позволяет.
 
-## How do lifetimes work?
+## Как работают жизненные циклы?
 
-For a desktop application, you initialise like this:
+Для настольного приложения вы инициализируете его следующим образом:
 
 ```csharp
 class Program
 {
-  // This method is needed for IDE previewer infrastructure
+  // Этот метод необходим для инфраструктуры предпросмотра IDE
   public static AppBuilder BuildAvaloniaApp() 
     => AppBuilder.Configure<App>().UsePlatformDetect();
 
-  // The entry point. Things aren't ready yet, so at this point
-  // you shouldn't use any Avalonia types or anything that expects
-  // a SynchronizationContext to be ready
+  // Точка входа. На этом этапе всё ещё не готово,
+  // поэтому не следует использовать какие-либо типы Avalonia или что-либо,
+  // что ожидает готовности SynchronizationContext
   public static int Main(string[] args) 
     => BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
 }
 ```
 
-Then the main window is created in the `Application` class:
+Затем главное окно создается в классе `Application`:
 
 ```csharp
 public override void OnFrameworkInitializationCompleted()
@@ -40,80 +40,80 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-This method is called when the framework has initialized and the `ApplicationLifetime` property contains the chosen lifetime if any.
+Этот метод вызывается, когда фреймворк инициализирован, и свойство `ApplicationLifetime` содержит выбранный жизненный цикл, если таковой имеется.
 
 :::info
-If you run the application in design mode (this uses the IDE previewer process), then `ApplicationLifetime` is null.
+Если вы запускаете приложение в режиме дизайна (это использует процесс предпросмотра IDE), то `ApplicationLifetime` будет равен null.
 :::
 
-## Lifetime Interfaces
+## Интерфейсы жизненного цикла
 
-_Avalonia UI_ provides a range of interfaces to allow you to choose a level of control that is suitable for your application. These are provided by the `BuildAvaloniaApp().Start[Something]` family of methods.
+_Avalonia UI_ предоставляет набор интерфейсов, позволяющих выбрать уровень контроля, подходящий для вашего приложения. Они предоставляются семейством методов `BuildAvaloniaApp().Start[Something]`.
 
 ### IControlledApplicationLifetime
 
-Provided by:
+Предоставляется:
 
 * `StartWithClassicDesktopLifetime`
 * `StartLinuxFramebuffer`
 
-Allows you to subscribe to `Startup` and `Exit` events and permits explicitly shutting down of the application by calling the `Shutdown` method. This interface gives you control of the application's exit procedures.
+Позволяет подписаться на события `Startup` и `Exit` и дает возможность явно завершить работу приложения, вызывая метод `Shutdown`. Этот интерфейс дает вам контроль над процедурами завершения приложения.
 
 ### IClassicDesktopStyleApplicationLifetime
 
-Inherits: `IControlledApplicationLifetime`
+Наследует: `IControlledApplicationLifetime`
 
-Provided by:
+Предоставляется:
 
 * `StartWithClassicDesktopLifetime`
 
-Allows you to control your application lifetime in the manner of a Windows Forms or WPF application. This interface provides a way to access the list of the currently opened windows, to set a main window, and has three shutdown modes:
+Позволяет управлять жизненным циклом вашего приложения по образцу приложения Windows Forms или WPF. Этот интерфейс предоставляет способ доступа к списку открытых в данный момент окон, установки главного окна и имеет три режима завершения работы:
 
-* `OnLastWindowClose` - shuts down the application when the last window is closed
-* `OnMainWindowClose` - shuts down the application when the main window is closed (if it has been set).
-* `OnExplicitShutdown` - disables automatic shutdown of the application, you need to call the `Shutdown` method in your code.
+* `OnLastWindowClose` - завершает работу приложения при закрытии последнего окна
+* `OnMainWindowClose` - завершает работу приложения при закрытии главного окна (если оно было установлено).
+* `OnExplicitShutdown` - отключает автоматическое завершение работы приложения, вам нужно вызвать метод `Shutdown` в вашем коде.
 
 ### ISingleViewApplicationLifetime
 
-Provided by:
+Предоставляется:
 
 * `StartLinuxFramebuffer`
-* mobile platforms
+* мобильные платформы
 
-Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.
+Некоторые платформы не имеют концепции главного окна рабочего стола и позволяют отображать только один вид на экране устройства одновременно. Для этих платформ жизненный цикл позволяет вместо этого установить и изменить класс главного представления (`MainView`).
 
 :::info
-To implement the navigation stack on platforms like this (with a single main view), you can use [_ReactiveUI_ routing](https://www.reactiveui.net/docs/handbook/routing/) or another routing control.
+Для реализации стека навигации на таких платформах (с одним главным представлением) вы можете использовать [маршрутизацию _ReactiveUI_](https://www.reactiveui.net/docs/handbook/routing/) или другой элемент управления маршрутизацией.
 :::
 
-## Manual Lifetime Management
+## Ручное управление жизненным циклом
 
-If you need to, you can take full control of your application's lifetime management. For example on a desktop platform you can pass a delegate to `AppMain` to the `BuildAvaloniaApp.Start` method, and then manage things manually from there:
+При необходимости вы можете взять полный контроль над управлением жизненным циклом вашего приложения. Например, на настольной платформе вы можете передать делегат в `AppMain` методу `BuildAvaloniaApp.Start`, а затем управлять всем вручную оттуда:
 
 ```csharp
 class Program
 {
-  // This method is needed for IDE previewer infrastructure
+  // Этот метод необходим для инфраструктуры предпросмотра IDE
   public static AppBuilder BuildAvaloniaApp() 
     => AppBuilder.Configure<App>().UsePlatformDetect();
 
-  // The entry point. Things aren't ready yet, so at this point
-  // you shouldn't use any Avalonia types or anything that expects
-  // a SynchronizationContext to be ready
+  // Точка входа. На этом этапе всё ещё не готово,
+  // поэтому не следует использовать какие-либо типы Avalonia или что-либо,
+  // что ожидает готовности SynchronizationContext
   public static int Main(string[] args) 
     => BuildAvaloniaApp().Start(AppMain, args);
 
-  // Application entry point. Avalonia is completely initialized.
+  // Точка входа приложения. Avalonia полностью инициализирована.
   static void AppMain(Application app, string[] args)
   {
-     // A cancellation token source that will be 
-     // used to stop the main loop
+     // Источник токена отмены, который будет
+     // использоваться для остановки основного цикла
      var cts = new CancellationTokenSource();
-     
-     // Do you startup code here
+
+     // Здесь ваш код запуска
      new Window().Show();
 
-     // Start the main loop
+     // Запуск основного цикла
      app.Run(cts.Token);
   }
 }
