@@ -11,7 +11,7 @@ This guide will show you step by step how to use Dependency Injection (DI) with 
 
 ## Step 0: Context and Initial Code
 
-Let's assume that you have an app with a MainViewModel, a BusinessService and a Repository. MainViewModel has a dependency on IBusinessService and BusinessService on IRepository. A simple implementation would look like this:
+Let's assume that you have an app with a `MainViewModel`, a `BusinessService` and a `Repository`. `MainViewModel` has a dependency on `IBusinessService` and `BusinessService` on `IRepository`. A simple implementation would look like this:
 
 ```csharp
 public partial class MainViewModel
@@ -43,7 +43,7 @@ public class Repository : IRepository
 }
 ```
 
-Typically you would directly instantiate `Repository` and pass it into `BusinessService` then pass it into `MainViewModel`, like this:
+Traditionally, you would directly instantiate `Repository` and pass it into `BusinessService` then pass it into `MainViewModel`, like this:
 
 ```csharp
 var window = new MainWindow
@@ -52,12 +52,12 @@ var window = new MainWindow
 }
 ```
 
- This works great for simple constructors that are not used very often and don't change. But this technique does not scale very well because:
-- The more dependencies your constructor has the more things you will need to instantiate and pass in. Instantiating the dependencies locally (such as by doing new MainViewModel(new MyService())) results in direct rigid coupling to a specific instance of the dependencies.
-- Similarly if MainViewModel creates its dependencies itself, (such as in the constructor body) it also becomes directly coupled to the creation of the dependencies which can result in mostly the same problems. 
-- Furthermore, if the object is instantiated in many places, every single reference to any of the dependencies would also need to be updated should the dependencies of `MainViewModel` ever change (such as by requiring additional dependencies or require a different implementation of a dependency). 
+This works great for simple constructors that are not used very often and don't ever change. But this pattern does not scale well, because:
+- The more dependencies your constructor has the more things you will need to instantiate yourself and pass in. Instantiating the dependencies locally in the constructor (such as by doing `new MainViewModel(new MyService())`) results in direct rigid coupling to a specific instance of the dependencies. 
+- Similarly if the `MainViewModel` constructor itself creates its own dependencies, it also becomes directly coupled to the creation of the dependencies which can result in many of the same problems. 
+- Furthermore, if `MainViewModel` is instantiated in many places, _every_ instantiation of the dependencies would also need to be updated should the dependencies of `MainViewModel` ever change (such as the addition of new dependencies, or changing which implementation of a dependency to use).
 
-Dependency injection solves these problem by abstracting away the creation of objects and their dependencies. This allows for well encapsulated services to be used that will be automatically passed into any other service that is registered to use them. 
+Dependency injection solves these problem by abstracting away the creation of objects and their dependthe DI guideencies. This allows for well encapsulated services that will be automatically passed into any other service that is registered to use them.
 
 ## Step 1: Install the NuGet package for DI
 There are many dependency injection (DI) container providers available ([DryIoC](https://github.com/dadhi/DryIoc), [Autofac](https://github.com/autofac/Autofac), [Pure.DI](https://github.com/DevTeam/Pure.DI)) but this guide will only focus on `Microsoft.Extensions.DependencyInjection` which is a lightweight, extensible dependency injection container. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
@@ -69,7 +69,7 @@ dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
 ## Step 2: Add ServiceCollectionExtensions 
-The following code is creating an extension method for `IServiceCollection` that will register services to our service collection and make them available for injection.  
+The following code creates an extension method for `IServiceCollection`. The method will register services to the service collection and make them available for injection.
 
 ```csharp
 public static class ServiceCollectionExtensions
@@ -84,7 +84,7 @@ public static class ServiceCollectionExtensions
 ```
 
 ## Step 3: Modify App.axaml.cs
-Next, the `App.xaml.cs` class should be modified to use the DI container. This will allow the previously registered view model to be resolved via the dependency injection container. The fully realised view model can then be set to the data context of the main view. 
+Next: the `App.xaml.cs` class should be modified to use the DI container. This will allow the view model which was registered in the previous step to be resolved via the dependency injection container. The fully realised view model can then be set to the data context of the `MainWindow`/`MainView`. 
 
 ```csharp
 public class App : Application
