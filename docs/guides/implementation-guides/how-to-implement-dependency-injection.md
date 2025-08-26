@@ -55,7 +55,7 @@ var window = new MainWindow
 This works great for simple constructors that are not used very often and don't ever change. But this pattern does not scale well, because:
 - The more dependencies your constructor has the more things you will need to instantiate yourself and pass in. Instantiating the dependencies locally in the constructor (such as by doing `new MainViewModel(new MyService())`) results in direct rigid coupling to a specific instance of the dependencies. 
 - Similarly if the `MainViewModel` constructor itself creates its own dependencies, it also becomes directly coupled to the creation of the dependencies which can result in many of the same problems. 
-- Furthermore, if `MainViewModel` is instantiated in many places, _every_ instantiation of the dependencies would also need to be updated should the dependencies of `MainViewModel` ever change (such as the addition of new dependencies, or changing which implementation of a dependency to use).
+- Furthermore, if `MainViewModel` is instantiated in many places, _every_ instantiation of `MainViewModel` would also need to be updated should the dependencies of `MainViewModel` ever change (such as the addition of new dependencies, or changing which implementation of a dependency to use).
 
 Dependency injection solves these problem by abstracting away the creation of objects and their dependthe DI guideencies. This allows for well encapsulated services that will be automatically passed into any other service that is registered to use them.
 
