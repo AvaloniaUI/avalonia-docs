@@ -57,7 +57,7 @@ This works great for simple constructors that are not used very often and don't 
 - Similarly if the `MainViewModel` constructor itself creates its own dependencies, it also becomes directly coupled to the creation of the dependencies which can result in many of the same problems. 
 - Furthermore, if `MainViewModel` is instantiated in many places, _every_ instantiation of `MainViewModel` would also need to be updated should the dependencies of `MainViewModel` ever change (such as the addition of new dependencies, or changing which implementation of a dependency to use).
 
-Dependency injection solves these problem by abstracting away the creation of objects and their dependthe DI guideencies. This allows for well encapsulated services that will be automatically passed into any other service that is registered to use them.
+Dependency injection solves these problem by abstracting away the creation of objects and their dependencies. This allows for well encapsulated services that will be automatically passed into any other service that is registered to use them.
 
 ## Step 1: Install the NuGet package for DI
 There are many dependency injection (DI) container providers available ([DryIoC](https://github.com/dadhi/DryIoc), [Autofac](https://github.com/autofac/Autofac), [Pure.DI](https://github.com/DevTeam/Pure.DI)) but this guide will only focus on `Microsoft.Extensions.DependencyInjection` which is a lightweight, extensible dependency injection container. It provides an easy-to-use and convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
