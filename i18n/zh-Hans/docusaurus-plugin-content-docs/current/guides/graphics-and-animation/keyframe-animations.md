@@ -112,10 +112,10 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 
 ## 重复
 
-您可以使动画重复一定次数，或无限次数。要重复有限次数的动画，请在动画元素上设置 `RepeatCount` 属性，例如：
+您可以使动画重复一定次数，或无限次数。要重复有限次数的动画，请在动画元素上设置 `IterationCount` 属性，例如：
 
 ```xml
-<Animation RepeatCount="5">
+<Animation IterationCount="5">
     ...
 </Animation>
 ```
@@ -123,7 +123,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 要无限次地重复动画，请使用特殊值 `INFINITE`。例如：
 
 ```xml
-<Animation RepeatCount="INFINITE">
+<Animation IterationCount="INFINITE">
     ...
 </Animation>
 ```
@@ -133,7 +133,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 默认情况下，动画正向播放，即它按照缓动函数的曲线从左向右进行。您可以通过设置动画元素的 `PlaybackDirection` 属性来改变这种行为。例如：
 
 ```xml
-<Animation RepeatCount="9" PlaybackDirection="AlternateReverse">
+<Animation IterationCount="9" PlaybackDirection="AlternateReverse">
     ...
 </Animation>
 ```
@@ -147,7 +147,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 动画的填充模式属性定义了动画运行后，属性如何持续保留或在运行之间的任何间隙中显示。例如：
 
 ```xml
-<Animation RepeatCount="9" FillMode="Backward">
+<Animation IterationCount="9" FillMode="Backward">
     ...
 </Animation>
 ```
