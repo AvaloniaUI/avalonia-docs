@@ -1,39 +1,39 @@
 ---
 id: animations
-title: Animations
+title: Анимации
 ---
 
 import KeyframeDiagram from '/img/basics/user-interface/animation-keyframe.png';
 
-# Animations
+# Анимации
 
-There are two types of animations in _Avalonia UI_:
+В _Avalonia UI_ существует два типа анимаций:
 
-* Keyframe Animation -  can change one or more property values using a timeline. Keyframes are defined along the timeline at cue points. The properties being changed are adjusted between keyframes using an easing function (which is a straight-line interpolation by default). Keyframe animations are a very versatile type of animation.
-* Transitions - can change a single property.
+* Покадровая анимация (Keyframe Animation) - может изменять одно или несколько значений свойств с использованием временной шкалы. Ключевые кадры определяются вдоль временной шкалы в опорных точках. Изменяемые свойства корректируются между ключевыми кадрами с использованием функции плавности (по умолчанию это прямолинейная интерполяция). Покадровые анимации являются очень универсальным типом анимации.
+* Переходы (Transitions) - могут изменять одно свойство.
 
-## Keyframe Animation
+## Покадровая анимация
 
-The simplest keyframe animation will change one property value over a a specified duration by defining two keyframes with cue points at the start (0% of the duration) and the end (100% of the duration).
+Простейшая покадровая анимация изменяет одно значение свойства в течение указанной продолжительности, определяя два ключевых кадра с опорными точками в начале (0% продолжительности) и в конце (100% продолжительности).
 
 <img src={KeyframeDiagram} alt=''/>
 
-The property value is then changed over time between the keyframes using the profile defined by an easing function. The default easing function is also the simplest - a straight-line interpolation between two keyframes.
+Затем значение свойства изменяется со временем между ключевыми кадрами, используя профиль, определенный функцией плавности. Функция плавности по умолчанию также является самой простой - прямолинейная интерполяция между двумя ключевыми кадрами.
 
 :::info
-You can see the full range of easing functions in the reference, [here](../../reference/animation-settings.md).
+Полный набор функций плавности можно найти в справочнике [здесь](../../reference/animation-settings.md).
 :::
 
-## Triggering Animations
+## Запуск анимаций
 
-_Avalonia UI_ animations defined in XAML rely on selectors for their triggering behavior. Selectors can always apply to a control, or they can conditionally apply (for example if the control has a style class applied).
+Анимации _Avalonia UI_, определенные в XAML, используют селекторы для их поведения запуска. Селекторы могут всегда применяться к элементу управления или могут применяться условно (например, если к элементу управления применен класс стиля).
 
-If the selector is not conditional then the animation will be triggered when a matching `Control` is spawned into the visual tree. Otherwise, the animations will run whenever its selector is activated. When the selector no longer matches, the currently running animation will be cancelled.
+Если селектор не является условным, то анимация будет запущена, когда соответствующий `Control` появляется в визуальном дереве. В противном случае анимации будут запускаться всякий раз, когда их селектор активируется. Когда селектор больше не соответствует, текущая выполняемая анимация будет отменена.
 
-## Other Animation Settings
+## Другие настройки анимации
 
-* Delay
-* Repeat
-* Playback Direction
-* Value Fill Mode
-* Easing Function
+* Задержка (Delay)
+* Повторение (Repeat)
+* Направление воспроизведения (Playback Direction)
+* Режим заполнения значений (Value Fill Mode)
+* Функция плавности (Easing Function)
