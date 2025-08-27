@@ -194,6 +194,10 @@ Fedora:
 dnf install gtk3 webkit2gtk4.1
 ```
 
+:::note
+NativeWebDialog also supports libwebkit2gtk-4.0 and soup-2.4 for older Ubuntu distributives. But it is recommended to use libwebkit2gtk-4.1.
+:::
+
 ### Android
 
 Requires Android API 21 or higher.
