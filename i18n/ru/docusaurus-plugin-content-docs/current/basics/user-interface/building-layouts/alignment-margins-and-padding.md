@@ -4,21 +4,21 @@ import LayoutHorizontalAlignmentScreenshot from '/img/basics/user-interface/buil
 import LayoutVerticalAlignmentScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-vertical-alignment-graphic.png';
 import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-margins-padding-alignment-graphic3.png';
 
-# Alignment, Margins and Padding
+# Выравнивание, Внешние и Внутренние отступы
 
-An Avalonia control exposes several properties that are used to precisely position child elements. This topic discusses four of the most important properties: `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment`. The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in Avalonia applications.
+Компонент Avalonia предоставляет несколько свойств, которые используются для точного позиционирования дочерних элементов. В этой теме рассматриваются четыре наиболее важных свойства: `HorizontalAlignment`, `Margin`, `Padding` и `VerticalAlignment`. Понимание действия этих свойств важно, поскольку они обеспечивают основу для управления положением элементов в приложениях Avalonia.
 
-### Introduction to Element Positioning
+### Введение в позиционирование элементов
 
-There are numerous ways to position elements using Avalonia. However, achieving ideal layout goes beyond simply choosing the right `Panel` element. Fine control of positioning requires an understanding of the `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment` properties.
+Существует множество способов позиционирования элементов с использованием Avalonia. Однако достижение идеального макета выходит за рамки простого выбора правильного элемента `Panel`. Тонкий контроль позиционирования требует понимания свойств `HorizontalAlignment`, `Margin`, `Padding` и `VerticalAlignment`.
 
-The following illustration shows a layout scenario that utilizes several positioning properties.
+Следующая иллюстрация показывает сценарий макета, использующий несколько свойств позиционирования.
 
-<img src={LayoutMarginsPaddingAlignmentBasicScreenshot} alt="Positioning Example"/>
+<img src={LayoutMarginsPaddingAlignmentBasicScreenshot} alt="Пример позиционирования"/>
 
-At first glance, the `Button` elements in this illustration may appear to be placed randomly. However, their positions are actually precisely controlled by using a combination of margins, alignments, and padding.
+На первый взгляд, элементы `Button` на этой иллюстрации могут казаться размещенными случайным образом. Однако их положения на самом деле точно контролируются с помощью комбинации отступов, выравниваний и полей.
 
-The following example describes how to create the layout in the preceding illustration. A `Border` element encapsulates a parent `StackPanel`, with a `Padding` value of 15 device independent pixels. This accounts for the narrow `LightBlue` band that surrounds the child `StackPanel`. Child elements of the `StackPanel` are used to illustrate each of the various positioning properties that are detailed in this topic. Three `Button` elements are used to demonstrate both the `Margin` and `HorizontalAlignment` properties.
+Следующий пример описывает, как создать макет, показанный на предыдущей иллюстрации. Элемент `Border` инкапсулирует родительский `StackPanel` со значением `Padding`, равным 15 независимым от устройства пикселям. Это объясняет узкую полосу `LightBlue`, которая окружает дочерний `StackPanel`. Дочерние элементы `StackPanel` используются для иллюстрации каждого из различных свойств позиционирования, подробно описанных в этой теме. Три элемента `Button` используются для демонстрации как свойства `Margin`, так и `HorizontalAlignment`.
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -46,28 +46,28 @@ The following example describes how to create the layout in the preceding illust
 
 ```
 
-The following diagram provides a close-up view of the various positioning properties that are used in the preceding sample. Subsequent sections in this topic describe in greater detail how to use each positioning property.
+Следующая диаграмма предоставляет детальный вид различных свойств позиционирования, которые используются в предыдущем примере. Последующие разделы в этой теме описывают более подробно, как использовать каждое свойство позиционирования.
 
-<img src={LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot} alt="Positioning Properties"/>
+<img src={LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot} alt="Свойства позиционирования"/>
 
-### Understanding Alignment Properties
+### Понимание свойств выравнивания
 
-The `HorizontalAlignment` and `VerticalAlignment` properties describe how a child element should be positioned within a parent element's allocated layout space. By using these properties together, you can position child elements precisely. For example, child elements of a `DockPanel` can specify four different horizontal alignments: `Left`, `Right`, `Center`, or to `Stretch` to fill available space. Similar values are available for vertical positioning.
+Свойства `HorizontalAlignment` и `VerticalAlignment` описывают, как дочерний элемент должен быть расположен в выделенном пространстве макета родительского элемента. Используя эти свойства вместе, вы можете точно позиционировать дочерние элементы. Например, дочерние элементы `DockPanel` могут указать четыре различных горизонтальных выравнивания: `Left` (Слева), `Right` (Справа), `Center` (По центру) или `Stretch` (Растянуть) для заполнения доступного пространства. Аналогичные значения доступны для вертикального позиционирования.
 
-Explicitly set `Height` and `Width` properties on an element take precedence over the `Stretch` property value. Attempting to set `Height`, `Width`, and a `HorizontalAlignment` value of `Stretch` results in the `Stretch` request being ignored.
+Явно установленные свойства `Height` и `Width` для элемента имеют приоритет над значением свойства `Stretch`. Попытка установить `Height`, `Width` и значение `HorizontalAlignment` равное `Stretch` приведет к игнорированию запроса `Stretch`.
 
-#### HorizontalAlignment Property
+#### Свойство HorizontalAlignment
 
-The `HorizontalAlignment` property declares the horizontal alignment characteristics to apply to child elements. The following table shows each of the possible values of the `HorizontalAlignment` property.
+Свойство `HorizontalAlignment` определяет характеристики горизонтального выравнивания, применяемые к дочерним элементам. В следующей таблице показаны все возможные значения свойства `HorizontalAlignment`.
 
-| Member | Description |
-| :--- | :--- |
-| `Left` | Child elements are aligned to the left of the parent element's allocated layout space. |
-| `Center` | Child elements are aligned to the center of the parent element's allocated layout space. |
-| `Right` | Child elements are aligned to the right of the parent element's allocated layout space. |
-| `Stretch` \(Default\) | Child elements are stretched to fill the parent element's allocated layout space. Explicit `Width` and `Height` values take precedence. |
+| Значение                   | Описание                                                                                                                                                            |
+|:---------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Left`                     | Дочерние элементы выравниваются по левому краю выделенного пространства макета родительского элемента.                                                              |
+| `Center`                   | Дочерние элементы выравниваются по центру выделенного пространства макета родительского элемента.                                                                   |
+| `Right`                    | Дочерние элементы выравниваются по правому краю выделенного пространства макета родительского элемента.                                                             |
+| `Stretch` \(По умолчанию\) | Дочерние элементы растягиваются, чтобы заполнить выделенное пространство макета родительского элемента. Явно указанные значения `Width` и `Height` имеют приоритет. |
 
-The following example shows how to apply the `HorizontalAlignment` property to `Button` elements. Each attribute value is shown, to better illustrate the various rendering behaviors.
+Следующий пример показывает, как применить свойство `HorizontalAlignment` к элементам `Button`. Каждое значение атрибута показано для лучшей иллюстрации различных вариантов отображения.
 
 ```xml
 <Button HorizontalAlignment="Left">Button 1 (Left)</Button>
@@ -76,22 +76,22 @@ The following example shows how to apply the `HorizontalAlignment` property to `
 <Button HorizontalAlignment="Stretch">Button 4 (Stretch)</Button>
 ```
 
-The preceding code yields a layout similar to the following image. The positioning effects of each `HorizontalAlignment` value are visible in the illustration.
+Приведенный выше код создает макет, подобный следующему изображению. Эффекты позиционирования для каждого значения `HorizontalAlignment` видны на иллюстрации.
 
-<img src={LayoutHorizontalAlignmentScreenshot} alt='HorizontalAlignment Sample'/>
+<img src={LayoutHorizontalAlignmentScreenshot} alt='Пример HorizontalAlignment'/>
 
-#### VerticalAlignment Property
+#### Свойство VerticalAlignment
 
-The `VerticalAlignment` property describes the vertical alignment characteristics to apply to child elements. The following table shows each of the possible values for the `VerticalAlignment` property.
+Свойство `VerticalAlignment` описывает характеристики вертикального выравнивания, применяемые к дочерним элементам. В следующей таблице показаны все возможные значения свойства `VerticalAlignment`.
 
-| Member | Description |
-| :--- | :--- |
-| `Top` | Child elements are aligned to the top of the parent element's allocated layout space. |
-| `Center` | Child elements are aligned to the center of the parent element's allocated layout space. |
-| `Bottom` | Child elements are aligned to the bottom of the parent element's allocated layout space. |
-| `Stretch` \(Default\) | Child elements are stretched to fill the parent element's allocated layout space. Explicit `Width` and `Height` values take precedence. |
+| Значение                   | Описание                                                                                                                                                            |
+|:---------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Top`                      | Дочерние элементы выравниваются по верхнему краю выделенного пространства макета родительского элемента.                                                            |
+| `Center`                   | Дочерние элементы выравниваются по центру выделенного пространства макета родительского элемента.                                                                   |
+| `Bottom`                   | Дочерние элементы выравниваются по нижнему краю выделенного пространства макета родительского элемента.                                                             |
+| `Stretch` \(По умолчанию\) | Дочерние элементы растягиваются, чтобы заполнить выделенное пространство макета родительского элемента. Явно указанные значения `Width` и `Height` имеют приоритет. |
 
-The following example shows how to apply the `VerticalAlignment` property to `Button` elements. Each attribute value is shown, to better illustrate the various rendering behaviors. For purposes of this sample, a `Grid` element with visible gridlines is used as the parent, to better illustrate the layout behavior of each property value.
+Следующий пример показывает, как применить свойство `VerticalAlignment` к элементам `Button`. Каждое значение атрибута показано для лучшей иллюстрации различных вариантов отображения. Для целей этого примера элемент `Grid` с видимыми линиями сетки используется в качестве родительского, чтобы лучше проиллюстрировать поведение макета для каждого значения свойства.
 
 ```xml
 <Border Background="LightBlue" BorderBrush="Black" BorderThickness="2" Padding="15">
@@ -116,17 +116,17 @@ The following example shows how to apply the `VerticalAlignment` property to `Bu
 </Border>
 ```
 
-The preceding code yields a layout similar to the following image. The positioning effects of each `VerticalAlignment` value are visible in the illustration.
+Приведенный выше код создает макет, подобный следующему изображению. Эффекты позиционирования для каждого значения `VerticalAlignment` видны на иллюстрации.
 
-<img src={LayoutVerticalAlignmentScreenshot} alt='VerticalAlignment property sample'/>
+<img src={LayoutVerticalAlignmentScreenshot} alt='Пример свойства VerticalAlignment'/>
 
-### Understanding Margin Properties
+### Понимание свойств отступов
 
-The `Margin` property describes the distance between an element and its child or peers. `Margin` values can be uniform, by using syntax like `Margin="20"`. With this syntax, a uniform `Margin` of 20 device independent pixels would be applied to the element. `Margin` values can also take the form of four distinct values, each value describing a distinct margin to apply to the left, top, right, and bottom \(in that order\), like `Margin="0,10,5,25"`. Proper use of the `Margin` property enables very fine control of an element's rendering position and the rendering position of its neighbor elements and children.
+Свойство `Margin` описывает расстояние между элементом и его дочерними элементами или соседями. Значения `Margin` могут быть одинаковыми с помощью синтаксиса вроде `Margin="20"`. С этим синтаксисом к элементу будет применен равномерный отступ `Margin` в 20 независимых от устройства пикселей. Значения `Margin` также могут принимать форму четырех различных значений, каждое из которых описывает отдельный отступ для применения слева, сверху, справа и снизу (в таком порядке), например, `Margin="0,10,5,25"`. Правильное использование свойства `Margin` позволяет очень точно контролировать положение отрисовки элемента и положение отрисовки его соседних элементов и дочерних элементов.
 
-A non-zero margin applies space outside the element's `Bounds`.
+Ненулевой отступ применяет пространство за пределами `Bounds` (границ) элемента.
 
-The following example shows how to apply uniform margins around a group of `Button` elements. The `Button` elements are spaced evenly with a ten-pixel margin buffer in each direction.
+Следующий пример показывает, как применить равномерные отступы вокруг группы элементов `Button`. Элементы `Button` расположены равномерно с десятипиксельным буфером отступов в каждом направлении.
 
 ```xml
 <Button Margin="10">Button 7</Button>
@@ -134,7 +134,7 @@ The following example shows how to apply uniform margins around a group of `Butt
 <Button Margin="10">Button 9</Button>
 ```
 
-In many instances, a uniform margin is not appropriate. In these cases, non-uniform spacing can be applied. The following example shows how to apply non-uniform margin spacing to child elements. Margins are described in this order: left, top, right, bottom.
+Во многих случаях равномерный отступ не подходит. В этих случаях можно применить неравномерные отступы. Следующий пример показывает, как применить неравномерные отступы к дочерним элементам. Отступы описываются в следующем порядке: слева, сверху, справа, снизу.
 
 ```xml
 <Button Margin="0,10,0,10">Button 1</Button>
@@ -142,11 +142,11 @@ In many instances, a uniform margin is not appropriate. In these cases, non-unif
 <Button Margin="0,10,0,10">Button 3</Button>
 ```
 
-#### Understanding the Padding Property
+#### Понимание свойства Padding
 
-Padding is similar to `Margin` in most respects. The Padding property is exposed on only on a few classes, primarily as a convenience: `Border`, `TemplatedControl`, and `TextBlock` are samples of classes that expose a Padding property. The `Padding` property enlarges the effective size of a child element by the specified `Thickness` value.
+Внутренние отступы (Padding) во многом похожи на `Margin`. Свойство Padding доступно только в нескольких классах, в основном для удобства: `Border`, `TemplatedControl` и `TextBlock` - это примеры классов, которые предоставляют свойство Padding. Свойство `Padding` увеличивает эффективный размер дочернего элемента на указанное значение `Thickness`.
 
-The following example shows how to apply `Padding` to a parent `Border` element.
+Следующий пример показывает, как применить `Padding` к родительскому элементу `Border`.
 
 ```xml
 <Border Background="LightBlue"
@@ -154,13 +154,15 @@ The following example shows how to apply `Padding` to a parent `Border` element.
         BorderThickness="2"
         CornerRadius="45"
         Padding="25">
+    <!-- Ваш код -->
+</Border>
 ```
 
-#### Using Alignment, Margins, and Padding in an Application
+#### Использование Выравнивания, Внешних и Внутренних отступов в приложении
 
-`HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment` provide the positioning control necessary to create a complex UI. You can use the effects of each property to change child-element positioning, enabling flexibility in creating dynamic applications and user experiences.
+`HorizontalAlignment`, `Margin`, `Padding` и `VerticalAlignment` обеспечивают контроль позиционирования, необходимый для создания сложного пользовательского интерфейса. Вы можете использовать эффекты каждого свойства для изменения позиционирования дочерних элементов, обеспечивая гибкость при создании динамических приложений и пользовательского опыта.
 
-The following example demonstrates each of the concepts that are detailed in this topic. Building on the infrastructure found in the first sample in this topic, this example adds a`Grid` element as a child of the `Border` in the first sample. `Padding` is applied to the parent `Border` element. The`Grid` is used to partition space between three child `StackPanel` elements. `Button` elements are again used to show the various effects of `Margin` and `HorizontalAlignment`. `TextBlock` elements are added to each `ColumnDefinition` to better define the various properties applied to the `Button` elements in each column.
+Следующий пример демонстрирует каждую из концепций, подробно описанных в этой теме. Основываясь на инфраструктуре, найденной в первом примере этой темы, этот пример добавляет элемент `Grid` в качестве дочернего к элементу `Border` из первого примера. К родительскому элементу `Border` применяется `Padding`. `Grid` используется для разделения пространства между тремя дочерними элементами `StackPanel`. Элементы `Button` снова используются для показа различных эффектов `Margin` и `HorizontalAlignment`. Элементы `TextBlock` добавлены к каждому `ColumnDefinition`, чтобы лучше определить различные свойства, применяемые к элементам `Button` в каждом столбце.
 
 ```xml
 <Border Background="LightBlue"
@@ -224,7 +226,7 @@ The following example demonstrates each of the concepts that are detailed in thi
 </Border>
 ```
 
-When compiled, the preceding application yields a UI that looks like the following illustration. The effects of the various property values are evident in the spacing between elements, and significant property values for elements in each column are shown within `TextBlock` elements.
+При компиляции предыдущее приложение создает пользовательский интерфейс, который выглядит как на следующей иллюстрации. Эффекты различных значений свойств очевидны в интервалах между элементами, а значимые значения свойств для элементов в каждом столбце показаны внутри элементов `TextBlock`.
 
-<img src={LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot} alt="Several positioning properties in one application"/>
+<img src={LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot} alt="Несколько свойств позиционирования в одном приложении"/>
 
