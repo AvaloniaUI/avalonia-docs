@@ -6,7 +6,7 @@ In a resource lookup, Avalonia searches through this hierarchy until it finds a 
 
 You can read more about Avalonia Resources on this documentation page - [How To Use Resources](https://docs.avaloniaui.net/docs/guides/styles-and-resources/resources).
 
-::: note
+:::note
 
 Control-specific resources (those defined on individual controls or within control templates) are not currently displayed in this tool.
 
