@@ -30,7 +30,7 @@ But to actually open `Developer Tools`, you would need the license and Avalonia 
 
 Tool can be useful for internal testing of Release builds. And it's not necessary to only include it with Debug builds.
 
-Unlikely the legacy Avalonia DevTools, this package is not shipped with heavy dependencies that might break Release compilation.
+Unlike the legacy Avalonia DevTools, this package is not shipped with heavy dependencies that might break Release compilation.
 
 But it is still advised to exclude this package on production builds for security and bundle size reasons.
 
