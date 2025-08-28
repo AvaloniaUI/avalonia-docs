@@ -11,7 +11,7 @@
 | macOS | 13 or newer |
 | Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
 
-No admin/sudo permissions are required to run the tool. Firewal l exception might need to be configured, if you plan to use Developer Tools remotely.  
+No admin/sudo permissions are required to run the tool. A firewall exception might need to be configured, if you plan to use Developer Tools remotely.  
 
 ### Diagnostics Support requirements
 
