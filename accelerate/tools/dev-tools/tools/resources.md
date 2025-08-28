@@ -33,7 +33,7 @@ Resources can be edited directly in this view, allowing you to experiment with d
 
 ![Provider Tree](../../../../static/img/dev-tools/resources-provider-values.png)
 
-::: note
+:::note
 
 Adding new resources to the provider is not yet supported
 
