@@ -1,48 +1,48 @@
 ---
 id: styles
-title: Styles
+title: Стили
 ---
 
 import StyleH1SampleScreenshot from '/img/basics/user-interface/styling/style-h1.png';
 
-# Styles
+# Стили
 
-The _Avalonia UI_ style system is a mechanism that can share property settings between controls. 
+Система стилей _Avalonia UI_ - это механизм, который позволяет общим свойствам использоваться между элементами управления. 
 
 :::tip
-A `Style` in Avalonia is more similar to a CSS style than a WPF/UWP style. The equivalent of a WPF/UWP Style in Avalonia is a [`ControlTheme`](control-themes).
+`Style` в Avalonia больше похож на стиль CSS, чем на стиль WPF/UWP. Эквивалентом стиля WPF/UWP в Avalonia является [`ControlTheme`](control-themes).
 :::
 
-## How It Works
+## Как это работает
 
-In essence, the styling mechanism has two steps: selection and substitution. The XAML for the style can define how both of these steps are to be done, but often you will help the selection step by defining 'class' labels on control elements.
+По сути, механизм стилизации состоит из двух шагов: выбора и подстановки. XAML для стиля может определять, как должны выполняться оба эти шага, но часто вы будете помогать шагу выбора, определяя метки 'class' на элементах управления.
 
 :::info
-The _Avalonia UI_ styling system's use of 'class' labels on control elements is analogous to how CSS (cascading style sheets) work with HTML elements.
+Использование меток 'class' на элементах управления в системе стилизации _Avalonia UI_ аналогично тому, как CSS (каскадные таблицы стилей) работают с элементами HTML.
 :::
 
-The styling system implements cascading styles by searching the [logical tree](../../../concepts/control-trees.md) upwards from a control, during the selection step. This means styles defined at the highest level of the application (the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
+Система стилизации реализует каскадные стили, выполняя поиск вверх по [логическому дереву](../../../concepts/control-trees.md) от элемента управления на этапе выбора. Это означает, что стили, определенные на самом высоком уровне приложения (файл `App.axaml`), могут использоваться в любом месте приложения, но все равно могут быть переопределены ближе к элементу управления (например, в окне или пользовательском элементе управления).
 
-When a match is located by the selection step, then the matched control's properties are altered according to the setters in the style.
+Когда на этапе выбора находится совпадение, свойства соответствующего элемента управления изменяются в соответствии с установщиками в стиле.
 
-## How it is Written
+## Как это пишется
 
-The XAML for a style has two parts: a selector attribute, and one or more setter elements. The selector value contains a string that uses the _Avalonia UI_ **style selector syntax**. Each setter element identifies the property that will be changed by name, and the new value that will be substituted. The pattern is like this:
+XAML для стиля имеет две части: атрибут селектора и один или несколько элементов установщика. Значение селектора содержит строку, использующую **синтаксис селектора стилей** _Avalonia UI_. Каждый элемент установщика определяет свойство, которое будет изменено по имени, и новое значение, которое будет подставлено. Шаблон выглядит так:
 
 ```
-<Style Selector="selector syntax">
-     <Setter Property="property name" Value="new value"/>
+<Style Selector="селектор стилей">
+     <Setter Property="имя свойства" Value="новое значение"/>
      ...
 </Style>
 ```
 
 :::info
-The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (cascading style sheets). For detailed reference information, see [here](../../../reference/styles/style-selector-syntax.md). 
+**селектор стилей** _Avalonia UI_ аналогичен используемому в CSS (каскадные таблицы стилей). Для подробной справочной информации см. [здесь](../../../reference/styles/style-selector-syntax.md). 
 :::
 
-## Example
+## Пример
 
-This is an example of how a style is written and applied to a control element, with a [style class](style-classes) to help selection:
+Вот пример того, как стиль написан и применен к элементу управления, с [классом стиля](style-classes) для помощи в выборе:
 
 ```xml
 <Window ... >
@@ -53,18 +53,18 @@ This is an example of how a style is written and applied to a control element, w
         </Style>
     </Window.Styles>
     <StackPanel Margin="20">
-       <TextBlock Classes="h1">Heading 1</TextBlock>
+       <TextBlock Classes="h1">Заголовок 1</TextBlock>
     </StackPanel>
 </Window>
 ```
 
-In this example, all `TextBlock` elements with the `h1` style class will be displayed with the font size and weight set by the style. This works in the preview pane:
+В этом примере все элементы `TextBlock` с классом стиля `h1` будут отображаться с размером и весом шрифта, установленными стилем. Это работает в панели предварительного просмотра:
 
 <img src={StyleH1SampleScreenshot} alt=""/>
 
-## Where to put Styles 
+## Где размещать стили 
 
-Styles are placed inside a `Styles` collection element on a `Control` or on the `Application`. For example, a window styles collection looks like this:
+Стили размещаются внутри элемента коллекции `Styles` на `Control` или на `Application`. Например, коллекция стилей окна выглядит так:
 
 ```xml
 <Window.Styles>
@@ -72,46 +72,46 @@ Styles are placed inside a `Styles` collection element on a `Control` or on the 
 </Window.Styles>
 ```
 
-The location of a styles collection defines the scope of the styles it contains. In the above example, the styles will apply to the window and all of its contents. If a style is added to the `Application` then it will apply globally.
+Местоположение коллекции стилей определяет область действия содержащихся в ней стилей. В приведенном выше примере стили будут применяться к окну и всему его содержимому. Если стиль добавлен к `Application`, то он будет применяться глобально.
 
-## The Selector
+## Селектор
 
-The style selector defines what controls the style will act upon. The selector uses a variety of formats, one of the simplest is this:
+Селектор стиля определяет, на какие элементы управления будет действовать стиль. Селектор использует различные форматы, один из самых простых:
 
 ```xml
 <Style Selector="TargetControlClass.styleClassName">
 ```
 
-This selector will match all controls with a style key of `TargetControlClass`, having a style class of `styleClassName`.
+Этот селектор будет соответствовать всем элементам управления с ключом стиля `TargetControlClass`, имеющим класс стиля `styleClassName`.
 
 :::info
-A full list of selectors can be found [here](../../../reference/styles/style-selector-syntax.md).
+Полный список селекторов можно найти [здесь](../../../reference/styles/style-selector-syntax.md).
 :::
 
-## Setters
+## Установщики
 
-Setters describe what will happen when the selector matches a control. They are simple property/value pairs written in the format:
+Установщики описывают, что произойдет, когда селектор соответствует элементу управления. Это простые пары свойство/значение, записанные в формате:
 
 ```xml
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Padding" Value="4 2 0 4"/>
 ```
 
-Whenever a style is matched with a control, all of the setters within the style will be applied to the control.
+Когда стиль сопоставляется с элементом управления, все установщики в стиле будут применены к элементу управления.
 
 :::info
-For more information on setters see [here](../../../guides/styles-and-resources/property-setters.md).
+Для получения дополнительной информации об установщиках см. [здесь](../../../guides/styles-and-resources/property-setters.md).
 :::
 
-## Nested Styles
+## Вложенные стили
 
-Styles can be nested in other styles. To nest a style, simply include the child style as a child of the parent `<Style>` element, and start the selector with the [`Nesting Selector (^)`](../../../reference/styles/style-selector-syntax.md#nesting):
+Стили могут быть вложены в другие стили. Чтобы вложить стиль, просто включите дочерний стиль как дочерний элемент родительского элемента `<Style>` и начните селектор с [`Селектора вложения (^)`](../../../reference/styles/style-selector-syntax.md#nesting):
 
 ```xml
 <Style Selector="TextBlock.h1">
     <Setter Property="FontSize" Value="24"/>
     <Setter Property="FontWeight" Value="Bold"/>
-    
+
     // highlight-start
     <Style Selector="^:pointerover">
         <Setter Property="Foreground" Value="Red"/>
@@ -120,44 +120,44 @@ Styles can be nested in other styles. To nest a style, simply include the child 
 </Style>
 ```
 
-When this happens, the selector from the parent style will automatically apply to the child style. In the above example the nested style will effectively have a selector of `TextBlock.h1:pointerover`, meaning that it will display with a red foreground when the pointer is over the control.
+Когда это происходит, селектор из родительского стиля будет автоматически применяться к дочернему стилю. В приведенном выше примере вложенный стиль фактически будет иметь селектор `TextBlock.h1:pointerover`, что означает, что он будет отображаться с красным передним планом, когда указатель находится над элементом управления.
 
 :::info
-The nesting selector must be present and must appear at the start of the child selector.
+Селектор вложения должен присутствовать и должен появляться в начале дочернего селектора.
 :::
 
-## Style Key
+## Ключ стиля
 
-The type of an object matched by a style selector is not determined by the concrete type of the control, but rather by examining its `StyleKey` property.
+Тип объекта, соответствующего селектору стиля, определяется не конкретным типом элемента управления, а путем изучения его свойства `StyleKey`.
 
-By default, the `StyleKey `property returns the type of the current instance. However, if you want your control, which inherits from Button, to be styled as a Button, you can override the `StyleKeyOverride` property in your class and have it return `typeof(Button)`.
+По умолчанию свойство `StyleKey` возвращает тип текущего экземпляра. Однако, если вы хотите, чтобы ваш элемент управления, который наследуется от Button, стилизовался как Button, вы можете переопределить свойство `StyleKeyOverride` в вашем классе и вернуть `typeof(Button)`.
 
 ```csharp
 public class MyButton : Button
 {
-    // `MyButton` will be styled as a standard `Button` control.
+    // `MyButton` будет стилизован как стандартный элемент управления `Button`.
     protected override Type StyleKeyOverride => typeof(Button);
 }
 ```
 
 :::info
-Note this this logic is inverted as compared with WPF/UWP: in those frameworks, when you derive a new control it will be styled as its base control unless you override the `DefaultStyleKey` property. In Avalonia the control will be styled using its concrete type unless a different style key is provided.
+Обратите внимание, что эта логика инвертирована по сравнению с WPF/UWP: в этих фреймворках, когда вы создаете новый элемент управления, он будет стилизован как его базовый элемент управления, если вы не переопределите свойство `DefaultStyleKey`. В Avalonia элемент управления будет стилизован с использованием его конкретного типа, если не предоставлен другой ключ стиля.
 :::
 
 :::info
-Before Avalonia 11, the style key was overridden by implementing `IStyleable` and providing a new implementation of the `IStyleable.StyleKey` property. This mechanism is still supported in Avalonia 11 for compatibility, but may be removed in a future version.
+До Avalonia 11 ключ стиля переопределялся путем реализации `IStyleable` и предоставления новой реализации свойства `IStyleable.StyleKey`. Этот механизм все еще поддерживается в Avalonia 11 для совместимости, но может быть удален в будущей версии.
 :::
 
-## Styles and Resources
+## Стили и ресурсы
 
-Resources are often used with styles to help maintain consistent presentation. Resources can help define standard colors and icons in an application; or across multiple applications when included from separate files.
+Ресурсы часто используются со стилями для поддержания согласованного представления. Ресурсы могут помочь определить стандартные цвета и значки в приложении; или в нескольких приложениях, когда они включены из отдельных файлов.
 
 :::info
-For guidance on how to use resources in you application, see [here](../../../guides/styles-and-resources/resources.md).
+Для руководства по использованию ресурсов в вашем приложении см. [здесь](../../../guides/styles-and-resources/resources.md).
 :::
 
-## Further Information
+## Дополнительная информация
 
 :::info
-For guidance on how to share styles by including a styles file, see [here](../../../guides/styles-and-resources/how-to-use-included-styles.md).
+Для руководства по совместному использованию стилей путем включения файла стилей см. [здесь](../../../guides/styles-and-resources/how-to-use-included-styles.md).
 :::
