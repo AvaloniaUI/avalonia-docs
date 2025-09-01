@@ -53,6 +53,8 @@ const sidebars = {
       'label': 'Parcel',
       'items': [
         'tools/parcel/getting-started',
+        'tools/parcel/cli-reference',
+        'tools/parcel/mcp',
         {
           'type': 'category',
           'label': 'MacOS',
@@ -66,6 +68,29 @@ const sidebars = {
             'tools/parcel/apple/notary'
           ]
         }, 
+        {
+          'type': 'category',
+          'label': 'Windows',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/windows/index'
+          },
+          'items': [
+            'tools/parcel/windows/signing',
+            'tools/parcel/windows/installer'
+          ]
+        },
+        {
+          'type': 'category',
+          'label': 'Linux',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/linux/index'
+          },
+          'items': [
+            'tools/parcel/linux/packaging'
+          ]
+        },
       ]
     },
     {
