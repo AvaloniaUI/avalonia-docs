@@ -15,7 +15,7 @@ Before setting up the MCP server, ensure you have:
 2. **Valid license key** - Set `PARCEL_LICENSE_KEY` environment variable to a valid license key from the portal
 
 :::note
-Parcel MCP is only available with full Accelerate license
+Parcel MCP is only available for full Accelerate license
 :::
 
 ## Supported AI Assistants
@@ -106,8 +106,6 @@ Simply describe what you want to accomplish in natural language. The AI assistan
 ```
 
 The AI assistant will guide you through the process, execute commands, and help resolve any configuration issues that arise.
-
-## Demo
 
 <video controls width="90%">
   <source src="/video/parcel/parcel_mcp.mp4" />
