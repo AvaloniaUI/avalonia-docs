@@ -18,7 +18,7 @@ Elevate your debugging experience with professional-grade developer tooling that
 
 ### [Parcel](./tools/parcel/getting-started)
 
-Parcel is a packaging and distribution tool for Avalonia UI applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
+Parcel is a packaging tool for Avalonia UI applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
 
 ### [Web View](./components/webview/quickstart)
 
