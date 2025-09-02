@@ -1,15 +1,15 @@
 ---
 id: adding-interactivity
-title: Adding Interactivity
+title: Добавление интерактивности
 ---
 
-One of the fundamental things that a user interface must do is interact with the user. In Avalonia, you can add interactivity to your applications by leveraging events and commands. This guide will introduce events and commands with simple examples.
+Одна из фундаментальных задач пользовательского интерфейса - взаимодействие с пользователем. В Avalonia вы можете добавить интерактивность к вашим приложениям, используя события и команды. Это руководство познакомит вас с событиями и командами на простых примерах.
 
-## Handling Events
+## Обработка событий
 
-Events in Avalonia provide a way to respond to user interactions and control-specific actions. You can handle events by following these steps:
+События в Avalonia предоставляют способ реагировать на взаимодействия пользователя и специфические действия элементов управления. Вы можете обрабатывать события, выполнив следующие шаги:
 
-1. **Implement the Event Handler**: Write an event handler in the [code-behind](../user-interface/code-behind.md) that will be executed when the event is triggered. The event handler should contain the logic you want to execute in response to the event.
+1. **Реализуйте обработчик события**: Напишите обработчик события в [code-behind](../user-interface/code-behind.md), который будет выполняться при срабатывании события. Обработчик события должен содержать логику, которую вы хотите выполнить в ответ на событие.
 
 ```csharp title='MainWindow.axaml.cs'
 public partial class MainWindow : Window
@@ -22,36 +22,36 @@ public partial class MainWindow : Window
     // highlight-start
     private void HandleButtonClick(object sender, RoutedEventArgs e)
     {
-        // Event handling logic goes here
+        // Логика обработки события размещается здесь
     }
     // highlight-end
 }
 ```
 
-2. **Subscribe to the Event**: Identify the event you want to handle in your control. Most controls in Avalonia expose various events, such as `Click` or `SelectionChanged`. Subscribe to the event in XAML by locating the control and adding an attribute with the name of the event and a value indicating the name of the event handler method.
+2. **Подпишитесь на событие**: Определите событие, которое вы хотите обрабатывать в вашем элементе управления. Большинство элементов управления в Avalonia предоставляют различные события, такие как `Click` или `SelectionChanged`. Подпишитесь на событие в XAML, найдя элемент управления и добавив атрибут с именем события и значением, указывающим имя метода обработчика события.
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApplication1.Views.MainWindow">
   // highlight-next-line
-  <Button Name="myButton" Content="Click Me" Click="HandleButtonClick" />
+  <Button Name="myButton" Content="Нажми меня" Click="HandleButtonClick" />
 </Window>
 ```
 
-The above example adds a handler called `HandleButtonClick` to a `Button`'s `Click` event.
+Приведенный выше пример добавляет обработчик с именем `HandleButtonClick` к событию `Click` кнопки.
 
-## Using Commands
+## Использование команд
 
-Commands in Avalonia provide a higher-level approach to handling user interactions, decoupling the user action from the implementation logic. Whereas events are defined in a control's code-behind, commands are usually bound to a property or method on the [data context](../data/data-binding/data-context.md).
+Команды в Avalonia предоставляют более высокоуровневый подход к обработке взаимодействий пользователя, отделяя действие пользователя от логики реализации. В то время как события определяются в code-behind элемента управления, команды обычно привязываются к свойству или методу в [контексте данных](../data/data-binding/data-context.md).
 
 :::info
-Commands are available in all controls which provide a `Command` property. The command is usually triggered when the control's primary method of interaction occurs, for example a button click.
+Команды доступны во всех элементах управления, которые предоставляют свойство `Command`. Команда обычно запускается при основном методе взаимодействия элемента управления, например, при нажатии кнопки.
 :::
 
-The simplest way of using commands is to bind to a method in the object's data context.
+Самый простой способ использования команд - это привязка к методу в контексте данных объекта.
 
-1. **Add a method to the view model**: Define a method in a view model which will handle the command.
+1. **Добавьте метод в модель представления**: Определите метод в модели представления, который будет обрабатывать команду.
 
     ```csharp
     public class MainWindowViewModel
@@ -59,14 +59,14 @@ The simplest way of using commands is to bind to a method in the object's data c
         // highlight-start
         public bool HandleButtonClick()
         {
-            // Event handling logic here
+            // Логика обработки события здесь
         }
         // highlight-end
     }
     ```
 
-2. **Bind the Method**: Associate the method with the control that triggers it.
+    2. **Привяжите метод**: Свяжите метод с элементом управления, который его вызывает.
 
     ```xml
-    <Button Content="Click Me" Command="{Binding HandleButtonClick}" />
+    <Button Content="Нажми меня" Command="{Binding HandleButtonClick}" />
     ```
