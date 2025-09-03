@@ -1,19 +1,19 @@
 ---
 id: troubleshooting
-title: Troubleshooting
+title: Устранение неполадок
 ---
 
-## My Control Theme isn't being found
+## Не удается найти тему элемента управления
 
-If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](styles#style-key) which matches the `x:Key` and `TargetType` of your control theme.
+Если у вас возникают проблемы с поиском вашей темы в Avalonia, убедитесь, что она возвращает [ключ стиля](styles#style-key), соответствующий `x:Key` и `TargetType` вашей темы элемента управления.
 
-## My Control Theme is Breaking Other Controls
+## Моя тема элемента управления нарушает работу других элементов управления
 
-Many Avalonia controls consist of a combination of other Avalonia controls. If you create a style or control theme that applies to all controls of a type, you might get unexpected results. For example, if you create a style that targets the `TextBlock` type in a `Window`, the style is applied to all `TextBlock` controls in the window, even if the `TextBlock` is part of another control, such as a `ListBox`.
+Многие элементы управления Avalonia состоят из комбинации других элементов управления Avalonia. Если вы создаете стиль или тему элемента управления, которая применяется ко всем элементам управления определенного типа, вы можете получить неожиданные результаты. Например, если вы создаете стиль, нацеленный на тип `TextBlock` в `Window`, этот стиль применяется ко всем элементам управления `TextBlock` в окне, даже если `TextBlock` является частью другого элемента управления, такого как `ListBox`.
 
-## Application Window is transparent or there is no content rendered
+## Окно приложения прозрачное или контент не отображается
 
-Make sure you have installed and included Avalonia theme in your application. 
-If you use build-in [Fluent](themes/fluent.md) or [Simple](themes/simple.md) themes, please visit their corresponding pages on how to install them.
+Убедитесь, что вы установили и включили тему Avalonia в ваше приложение. 
+Если вы используете встроенные темы [Fluent](themes/fluent.md) или [Simple](themes/simple.md), посетите соответствующие страницы, чтобы узнать, как их установить.
 
-If you use third party themes, please contact their maintainers.
+Если вы используете сторонние темы, обратитесь к их разработчикам.
