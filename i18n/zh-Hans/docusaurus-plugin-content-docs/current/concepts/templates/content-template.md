@@ -27,7 +27,7 @@ import ContentTemplateStudentScreenshot from '/img/concepts/templates/contenttem
         x:Class="MySample.MainWindow"
         Title="MySample">
   <Window.ContentTemplate>
-    <DataTemplate>
+    <DataTemplate  x:DataType="local:Student">
       <StackPanel>
         <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
           <TextBlock Grid.Row="0" Grid.Column="0">First Name:</TextBlock>
