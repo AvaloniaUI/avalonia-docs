@@ -5,15 +5,15 @@ title: Container Queries
 
 # Container Queries <MinVersion version="11.3" /> 
 
-Container Queries allows styles to be activated for control based on the size of an ancestor, which acts as a container. 
+Container Queries allow styles to be activated for a control based on the size of an ancestor, which acts as a container. 
 
 :::tip
-Avalonia's Container Queries are similar to CSS's Container Queries, with a more limited functionality to suit platforms and form factors Avalonia supports. They can also behave like media queries if the Toplevel is set as a container.
+Avalonia's Container Queries are similar to CSS's Container Queries, with a more limited functionality to suit the platforms and form factors Avalonia supports. They can also behave like media queries if the Toplevel is set as a container.
 :::
 
 ## How It Works
 
-Container queries rely on there being an ancestor control being set as a container. Changes to the size of the container activate styles based on queries. Those queries can check either the width or height of the container, or both. Any control can be a container, but a control set as a container can not be affected by styles hosted by a container query linked to it. When a query is activated, all styles hosted in the query will also be activated based on their selectors.
+Container queries rely on an ancestor control being set as a container. Changes to the size of the container activate styles based on queries. Those queries can check either the width or height of the container, or both. Any control can be a container, but a control set as a container can not be affected by styles hosted by a container query linked to it. When a query is activated, all styles hosted in the query will also be activated based on their selectors.
 
 ## How To Use Queries
 
@@ -65,7 +65,7 @@ They can also be part of a `ControlTheme`'s styles:
 The `Name` property defines the name of the container it will attach to. This isn't a unique identifier, and multiple container queries can use the same name.
 The `Query` defines the rules to activate the containing size. See [Queries](#queries) below.
 
-This make them quite easy to use in themes targeting difference screen sizes, or themes thathave different forms depending on the space available in its parent. This comes with a few restrictions. 
+This makes them quite easy to use in themes targeting different screen sizes, or themes that have different forms depending on the space available in its parent. This comes with a few restrictions. 
 1. Container Queries can't be hosted in a `Style` element.
    The following is invalid.
 ```xml
@@ -97,14 +97,14 @@ Container queries only work if a control that's a descendant of the `ContainerQu
 
 `Container.Name` defines the name of the container. It isn't unique to that container, and multiple controls in the same scope can have the same container name, and they will all be affected by the same container queries.
 
-`Container.Sizing` defines the sizing strategy of the container for queries. The container's final size depends on the value. Its an enum with the following values:
+`Container.Sizing` defines the sizing strategy of the container for queries. The container's final size depends on the value. It's an enum with the following values:
 
 * `Normal`: The container's size isn't queried. This is the default value. The control follows normal measurement and arrangement.
 * `Width`: The container's width is queried. The container will use the maximum width allowed by its parent, and that value is used in all related container queries. In most cases, the final width is the max width allowed.
 * `Height`: Same as `Width`, but only the container's height is queried.
 * `WidthAndHeight`: Both width and height of the container is queried.
 
-Depending on the sizing stratedy, the container will use the maximum avialable size as its desired size.
+Depending on the sizing strategy, the container will use the maximum available size as its desired size.
 
 ### Queries
 The following queries are available.
@@ -140,7 +140,7 @@ The following is an example of using multiple container queries with different q
   </Style>
 </ContainerQuery>
 ```
-Multiple queries can be combine with `,` for OR combination, or `and` for AND combination.
+Multiple queries can be combined with `,` for OR combination, or `and` for AND combination.
 
 ```xml
 <ContainerQuery Name="uniformGrid"
