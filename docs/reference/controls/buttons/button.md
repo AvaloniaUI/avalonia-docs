@@ -31,10 +31,11 @@ For guidance on how to bind to a command, see [here](../../../basics/user-interf
 
 You will probably use these properties most often:
 
-| Property    | Description                                                         |
-| ----------- | ------------------------------------------------------------------- |
-| `ClickMode` | Describes how the button should react to clicks.                    |
-| `Command`   | An instance of `ICommand` to be invoked when the button is clicked. |
+| Property           | Description                                                         |
+| ------------------ | ------------------------------------------------------------------- |
+| `ClickMode`        | Describes how the button should react to clicks.                    |
+| `Command`          | An instance of `ICommand` to be invoked when the button is clicked. |
+| `CommandParameter` | The parameter passed into the command upon invocation.              |
 
 ## Example
 
