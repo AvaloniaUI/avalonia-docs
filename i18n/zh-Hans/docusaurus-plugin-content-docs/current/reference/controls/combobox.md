@@ -88,37 +88,52 @@ import ComboBoxDataTemplateScreenshot from '/img/reference/controls/combobox/com
 这个示例使用数据模板绑定了组合框中的每一个元素。在 c# code-behind 代码中，我们将加载系统中安装的字体家族名称，并将它们绑定到 ComboBox 的 Items 属性。
 
 ```xml
-<StackPanel Margin="20">
-  <ComboBox x:Name="fontComboBox" SelectedIndex="0"
-            Width="200" MaxDropDownHeight="300">
-    <ComboBox.ItemTemplate>
-      <DataTemplate>
-        <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
-      </DataTemplate>
-    </ComboBox.ItemTemplate>
-  </ComboBox>
-</StackPanel>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:TmpAvaloniaApp"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TmpAvaloniaApp.MainWindow"
+        x:DataType="local:MainWindow"
+        Title="TmpAvaloniaApp">
+  <StackPanel Margin="20">
+    <ComboBox x:Name="fontComboBox" SelectedIndex="0"
+              Width="200" MaxDropDownHeight="300"
+              ItemsSource="{Binding FontFamilies}"
+              SelectedValue="{Binding SelectedFont}">
+      <ComboBox.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
+        </DataTemplate>
+      </ComboBox.ItemTemplate>
+    </ComboBox>
+  </StackPanel>
+</Window>
 ```
 
 ```csharp title='C#'
 using Avalonia.Controls;
 using Avalonia.Media;
+using Avalonia.Media.Fonts;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace AvaloniaControls.Views
+namespace TmpAvaloniaApp;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();            
-            fontComboBox.Items = FontManager.Current
-                .GetInstalledFontFamilyNames()
-                .Select(x => new FontFamily(x))
-                .OrderBy(x=>x.Name);
-            fontComboBox.SelectedIndex = 0;
-        }
+        InitializeComponent();
+        IFontCollection fontCollection = FontManager.Current.SystemFonts;
+        FontFamilies = new List<FontFamily>(fontCollection).OrderBy(x=>x.Name).ToList();
+        DataContext = this;
     }
+
+    public FontFamily? SelectedFont { get; set; }
+
+    public List<FontFamily> FontFamilies { get; set; }
 }
 ```
 
