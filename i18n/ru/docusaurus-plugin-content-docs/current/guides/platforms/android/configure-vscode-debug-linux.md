@@ -55,7 +55,8 @@ where `port` value can be arbitrary (make sure it's not used already by other ap
 				"-p:TargetFramework=net6.0-android",
 				"-p:Configuration=Debug",
 				"-p:AndroidAttachDebugger=true",
-				"-p:AndroidSdbHostPort=10000"
+				"-p:AndroidSdbHostPort=10000",
+				"-p:AndroidSdbTargetPort=10000"
 			],
 			"problemMatcher": "$msCompile"
 		}
@@ -66,7 +67,7 @@ where `port` value can be arbitrary (make sure it's not used already by other ap
 where `<ProjectName>` is your Android-specific Avalonia project name.
 
 :::info
-Make sure that the value of `port` variable in `launch.json` matches the one of `AndroidSdbHostPort` in `tasks.json`, otherwise the debugger won't be able to connect.
+Make sure that the value of `port` variable in `launch.json` matches the one of `AndroidSdbHostPort` and `AndroidSdbTargetPort` in `tasks.json`, otherwise the debugger won't be able to connect.
 :::
 
 After the setup, you can run the `Debug - Android` task via the Debug panel. Dotnet runtime will build and deploy the app, and Mono debugger will connect to the open port on the device, with all standard debugging functionality available.
