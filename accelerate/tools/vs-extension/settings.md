@@ -12,4 +12,4 @@ These can be accessed by selecting **Options** from the **Tools** menu inside Vi
 | Split Orientation     | Whether to split the orientation horizontally or vertically | Horizontal (Default) - The editor and previewer are displayed side by side<br />Vertical - The editor and previewer are displayed one above the other |
 | Swapped               | Whether the default position of the editor and previewer should be inverted when opening a document in 'Split' mode | True if checked |
 | Default Zoom level    | How to size the content in the  | 100% (Default)<br />Various percentages<br />Fit to Width - Allow the preview to take the full width of the available space<br />Fit All - Fill the entire previewer |
-| Minimum Log Verbosity | The minimum LogLevel for information output by the extension | Trace<br />Debug<br />Information (Default)<>Warning<br />Error<br />Critical<br />None |
+| Minimum Log Verbosity | The minimum LogLevel for information output by the extension | Trace<br />Debug<br />Information (Default)<br />Warning<br />Error<br />Critical<br />None |
