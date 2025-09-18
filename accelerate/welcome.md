@@ -28,7 +28,6 @@ Bring modern web content into your Avalonia applications seamlessly. With Accele
 
 Deliver immersive multimedia experiences right out of the box. Avalonia Accelerate’s MediaPlayer module provides native playback of video and audio content, supporting various formats across Windows, macOS, and Linux, ensuring your users enjoy smooth, high-quality media playback everywhere.
 
-
 ## How to Get Avalonia Accelerate
 
 Avalonia Accelerate is available now. You can purchase your licence directly through our [website](https://avaloniaui.net/accelerate).
