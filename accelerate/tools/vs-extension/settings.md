@@ -2,6 +2,8 @@
 
 Multiple options are provided to allow you to configure the way the editor and previewer behave.
 
+These can be accessed by selecting **Options** from the **Tools** menu inside Visual Studio.
+
 ![Options dialog](../../../static/img/vs-extension/visual-studio-avalonia-options.png)
 
 |  Setting              | Description | Options       |
