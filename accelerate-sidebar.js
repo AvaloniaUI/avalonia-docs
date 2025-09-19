@@ -54,6 +54,7 @@ const sidebars = {
       'items': [
         'tools/vs-extension/getting-started',
         'tools/vs-extension/settings',
+        'tools/vs-extension/previewer',
       ]
     },    
     {
