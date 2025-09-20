@@ -91,7 +91,9 @@ This example binds the items in a combo box using a data template. The C# code-b
 ```xml
 <StackPanel Margin="20">
   <ComboBox x:Name="fontComboBox" SelectedIndex="0"
-            Width="200" MaxDropDownHeight="300">
+            Width="200" MaxDropDownHeight="300"
+            ItemsSource="{Binding FontFamilies}"
+            SelectedValue="{Binding SelectedFont}">
     <ComboBox.ItemTemplate>
       <DataTemplate>
         <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
@@ -104,22 +106,25 @@ This example binds the items in a combo box using a data template. The C# code-b
 ```csharp title='C#'
 using Avalonia.Controls;
 using Avalonia.Media;
+using Avalonia.Media.Fonts;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace AvaloniaControls.Views
+namespace TmpAvaloniaApp;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();            
-            fontComboBox.Items = FontManager.Current
-                .GetInstalledFontFamilyNames()
-                .Select(x => new FontFamily(x))
-                .OrderBy(x=>x.Name);
-            fontComboBox.SelectedIndex = 0;
-        }
+        InitializeComponent();
+        IFontCollection fontCollection = FontManager.Current.SystemFonts;
+        FontFamilies = new List<FontFamily>(fontCollection).OrderBy(x=>x.Name).ToList();
+        DataContext = this;
     }
+
+    public FontFamily? SelectedFont { get; set; }
+
+    public List<FontFamily> FontFamilies { get; set; }
 }
 ```
 

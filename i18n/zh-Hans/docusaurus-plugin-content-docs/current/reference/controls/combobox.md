@@ -90,7 +90,9 @@ import ComboBoxDataTemplateScreenshot from '/img/reference/controls/combobox/com
 ```xml
 <StackPanel Margin="20">
   <ComboBox x:Name="fontComboBox" SelectedIndex="0"
-            Width="200" MaxDropDownHeight="300">
+            Width="200" MaxDropDownHeight="300"
+            ItemsSource="{Binding FontFamilies}"
+            SelectedValue="{Binding SelectedFont}">
     <ComboBox.ItemTemplate>
       <DataTemplate>
         <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
@@ -103,22 +105,25 @@ import ComboBoxDataTemplateScreenshot from '/img/reference/controls/combobox/com
 ```csharp title='C#'
 using Avalonia.Controls;
 using Avalonia.Media;
+using Avalonia.Media.Fonts;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace AvaloniaControls.Views
+namespace TmpAvaloniaApp;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();            
-            fontComboBox.Items = FontManager.Current
-                .GetInstalledFontFamilyNames()
-                .Select(x => new FontFamily(x))
-                .OrderBy(x=>x.Name);
-            fontComboBox.SelectedIndex = 0;
-        }
+        InitializeComponent();
+        IFontCollection fontCollection = FontManager.Current.SystemFonts;
+        FontFamilies = new List<FontFamily>(fontCollection).OrderBy(x=>x.Name).ToList();
+        DataContext = this;
     }
+
+    public FontFamily? SelectedFont { get; set; }
+
+    public List<FontFamily> FontFamilies { get; set; }
 }
 ```
 
