@@ -1,35 +1,35 @@
 ---
 id: control-themes
-title: Control Themes
+title: Темы элементов управления
 ---
 
 import StylingEllipseButtonScreenshot from '/img/basics/user-interface/styling/ellipse-button.png';
 
-Control themes build upon [Styles](styles) to create switchable themes for controls. Control themes are analogous to Styles in WPF/UWP, though their mechanism is slightly different.
+Темы элементов управления основаны на [стилях](styles) для создания переключаемых тем для элементов управления. Темы элементов управления аналогичны стилям в WPF/UWP, хотя их механизм немного отличается.
 
 :::tip
-Because control themes are based on styles, it is important to understand the Avalonia [styling system](styles) first.
+Поскольку темы элементов управления основаны на стилях, важно сначала понять [систему стилизации](styles) Avalonia.
 :::
 
-## Introduction
+## Введение
 
-Before Avalonia 11, control themes were created using standard styles. However, this approach had a fundamental problem: once a style was applied to a control, there was no way to remove it. Consequently, if you wanted to change the theme for a specific instance of a control or a section of the user interface (UI), the only option was to apply a second theme to the control and hope that it would override all the properties set in the original theme.
+До Avalonia 11 темы элементов управления создавались с использованием стандартных стилей. Однако у этого подхода была фундаментальная проблема: как только стиль применялся к элементу управления, не было способа удалить его. Следовательно, если вы хотели изменить тему для конкретного экземпляра элемента управления или раздела пользовательского интерфейса, единственным вариантом было применить вторую тему к элементу управления и надеяться, что она переопределит все свойства, установленные в исходной теме.
 
-The solution for this was introduced in Avalonia 11 in the form of _Control Themes_.
+Решение для этого было представлено в Avalonia 11 в виде _тем элементов управления_.
 
-Control themes are themselves styles, but with some important differences:
+Темы элементов управления сами по себе являются стилями, но с некоторыми важными отличиями:
 
-- Control themes don't have a selector: instead they have a `TargetType` property which describes the control that they target
-- Control themes are stored in a `ResourceDictionary` instead of a `Styles` collection
-- Control themes are assigned to a control by setting the `Theme` property, usually using the `{StaticResource}` markup extension
+- Темы элементов управления не имеют селектора: вместо этого у них есть свойство `TargetType`, которое описывает целевой элемент управления
+- Темы элементов управления хранятся в `ResourceDictionary` вместо коллекции `Styles`
+- Темы элементов управления назначаются элементу управления путем установки свойства `Theme`, обычно с использованием расширения разметки `{StaticResource}`
 
 :::info
-Control themes are typically applied to [templated (lookless)](../controls/creating-controls/choosing-a-custom-control-type.md) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
+Темы элементов управления обычно применяются к [шаблонным (без внешнего вида)](../controls/creating-controls/choosing-a-custom-control-type.md) элементам управления, но фактически могут быть применены к любому элементу управления. Однако для нешаблонных элементов управления часто удобнее использовать стандартные стили.
 :::
 
-## Example: Round Button
+## Пример: круглая кнопка
 
-The following example shows a simple `Button` theme which displays a button with an ellipse background with a 90's Geocities aesthetic:
+Следующий пример показывает простую тему `Button`, которая отображает кнопку с эллиптическим фоном в эстетике 90-х Geocities:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -71,21 +71,21 @@ The following example shows a simple `Button` theme which displays a button with
   <Button Theme="{StaticResource EllipseButton}"
           HorizontalAlignment="Center"
           VerticalAlignment="Center">
-    Hello World!
+    Привет, мир!
   </Button>
   // highlight-end
 </Window>
 ```
 
-<p><img className="medium-image-zoom" src={StylingEllipseButtonScreenshot} alt="Ellipse Button" /></p>
+<p><img className="medium-image-zoom" src={StylingEllipseButtonScreenshot} alt="Эллиптическая кнопка" /></p>
 
-## Interaction in Control Themes
+## Взаимодействие в темах элементов управления
 
-Like standard styles, control themes support [nested styles](../styling/styles.md#nesting-styles) which can be used to add interactions such as pointer-over and pressed states.
+Как и стандартные стили, темы элементов управления поддерживают [вложенные стили](../styling/styles.md#nesting-styles), которые можно использовать для добавления взаимодействий, таких как состояния при наведении указателя и нажатии.
 
-## Example: Round Button Hover State
+## Пример: состояние наведения для круглой кнопки
 
-Using nested styles we can make our button change color when the pointer is hovered over it:
+Используя вложенные стили, мы можем сделать так, чтобы наша кнопка меняла цвет при наведении на неё указателя:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -124,30 +124,30 @@ Using nested styles we can make our button change color when the pointer is hove
 </Application>
 ```
 
-## Control Theme Lookup
+## Поиск темы элемента управления
 
-There a two ways in which a control theme can be found:
+Существует два способа, которыми может быть найдена тема элемента управления:
 
-- If the control's `Theme` property is set, then that control theme will be used; otherwise
-- Avalonia will search the upwards through the logical tree for a `ControlTheme` resource with an `x:Key` which matches the control's [style key](styles#style-key)
+- Если свойство `Theme` элемента управления установлено, то будет использована эта тема элемента управления; в противном случае
+- Avalonia будет искать вверх по логическому дереву ресурс `ControlTheme` с `x:Key`, соответствующим [ключу стиля](styles#style-key) элемента управления
 
 :::tip
-If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](styles#style-key) which matches the `x:Key` and `TargetType` of your control theme
+Если у вас возникают проблемы с поиском вашей темы в Avalonia, убедитесь, что она возвращает [ключ стиля](styles#style-key), соответствующий `x:Key` и `TargetType` вашей темы элемента управления
 :::
 
-In effect this means that you have two choices for how to define your control theme:
+По сути это означает, что у вас есть два варианта определения темы элемента управления:
 
-- **If you want the control theme to apply to all instances of the control** then use an `{x:Type}` as the resource key. For example
+- **Если вы хотите, чтобы тема элемента управления применялась ко всем экземплярам элемента управления**, используйте `{x:Type}` в качестве ключа ресурса. Например,
   `<ControlTheme x:Key="{x:Type Button}" TargetType="Button">`
-- **If you want the control theme to be applied to selected instances of the control** then use anything else as the resource key and look up this resource using `{StaticResource}`. Commonly this key will be a `string`
+- **Если вы хотите, чтобы тема элемента управления применялась к выбранным экземплярам элемента управления**, используйте что-то другое в качестве ключа ресурса и ищите этот ресурс с помощью `{StaticResource}`. Обычно этот ключ будет `string`
 
 :::info
-Notice that this means that only a single control theme can be applied to a control at any one time.
+Обратите внимание, что это означает, что к элементу управления в любой момент времени может быть применена только одна тема элемента управления.
 :::
 
-## Example: Make all the Buttons Round
+## Пример: сделать все кнопки круглыми
 
-We can apply our new control theme to all of the buttons in the application by simply changing the `x:Key` of the control theme to match the `Button` type.
+Мы можем применить нашу новую тему элемента управления ко всем кнопкам в приложении, просто изменив `x:Key` темы элемента управления, чтобы он соответствовал типу `Button`.
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -187,11 +187,11 @@ We can apply our new control theme to all of the buttons in the application by s
 
 ## TargetType
 
-The `ControlTheme.TargetType` property specifies the type to which setter properties apply. If you don't specify a `TargetType`, you must qualify the properties in your Setter objects with a class name by using the syntax `Property="ClassName.Property"`. For example, instead of setting Property="FontSize", you must set Property to `TextBlock.FontSize` or `Control.FontSize`.
+Свойство `ControlTheme.TargetType` указывает тип, к которому применяются свойства установщика. Если вы не указываете `TargetType`, вы должны квалифицировать свойства в ваших объектах Setter с именем класса, используя синтаксис `Property="ClassName.Property"`. Например, вместо установки Property="FontSize", вы должны установить Property в `TextBlock.FontSize` или `Control.FontSize`.
 
-## Additional Resources
+## Дополнительные ресурсы
 
-- The [ButtonCustomize](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ButtonCustomize) sample has an `WinClassicButtonTheme`
-- You can see the control themes for the built-in Avalonia controls here:
+- Пример [ButtonCustomize](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ButtonCustomize) имеет `WinClassicButtonTheme`
+- Вы можете увидеть темы элементов управления для встроенных элементов управления Avalonia здесь:
   - [Simple Theme](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Simple/Controls)
   - [Fluent Theme](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls)
