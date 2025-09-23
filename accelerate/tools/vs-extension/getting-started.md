@@ -21,11 +21,12 @@ The extension provides an enhanced way of working with Avalonia XAML files. It d
 
 The editor for Avalonia XAML includes the following capabilities:
 
-- Intellisense auto-complete while typing.
+- Smarter, more helpful Intellisense while typing.
 - Error highlighting and fix suggestions.
+- Automatic XAML namespace imports.
 - Full colorization of the XAML.
 - "Go To Definition" navigation.
-- Quick Info for when hovering over an element or attribute.
+- Intelligent hover tips.
 - Automatic document formatting.
 - Outlining of the document so you can collapse elements.
 
