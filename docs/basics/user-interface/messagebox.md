@@ -12,6 +12,8 @@ We invite you to refer to the [issue on our GitHub repository](https://github.co
 ## 3rd Party MessageBox Implementations 
 
 * [Actipro Avalonia UI Controls](https://www.actiprosoftware.com/products/controls/avalonia)
+* [Eremex Avalonia UI Controls ($)](https://eremexcontrols.net/controls/windows-and-dialogs/messagebox/)
+
 * [DialogHost.Avalonia](https://github.com/AvaloniaUtils/DialogHost.Avalonia)
 * [MessageBox.Avalonia](https://github.com/AvaloniaCommunity/MessageBox.Avalonia)
 * [Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia)
