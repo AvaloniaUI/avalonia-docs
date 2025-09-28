@@ -1,5 +1,7 @@
 import React from 'react';
 import LinkItem from '@theme/Footer/LinkItem';
+import DOMPurify from 'dompurify'; // Import DOMPurify
+
 function Separator() {
   return <span className="footer__link-separator">·</span>;
 }
@@ -9,7 +11,7 @@ function SimpleLinkItem({item}) {
       className="footer__link-item"
       // Developer provided the HTML, so assume it's safe.
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{__html: item.html}}
+      dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(item.html)}} // Sanitize HTML
     />
   ) : (
     <LinkItem item={item} />
