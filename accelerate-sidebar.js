@@ -60,6 +60,15 @@ const sidebars = {
     },    
     {
       'type': 'category',
+      'label': 'TreeDataGrid',
+      'items': [
+        'components/treedatagrid/quickstart',
+        'components/treedatagrid/quickstart-flat',
+        'components/treedatagrid/quickstart-hierarchical',
+      ]
+    },    
+    {
+      'type': 'category',
       'label': 'Web View',
       'items': [
         'components/webview/quickstart',
