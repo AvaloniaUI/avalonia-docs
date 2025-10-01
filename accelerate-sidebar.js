@@ -77,7 +77,22 @@ const sidebars = {
         }, 
       ]
     },    
-    
+     {
+      'type': 'category',
+      'label': 'Markdown',
+      'items': [
+        'components/markdown/quickstart',
+        'components/markdown/markdown',
+        {
+          'type': 'category',
+          'label': 'Advanced',
+          'items': [
+            'components/markdown/styling',
+            'components/markdown/custom-image-loader'
+          ]
+        }, 
+      ]
+    }
   ],
 };
 

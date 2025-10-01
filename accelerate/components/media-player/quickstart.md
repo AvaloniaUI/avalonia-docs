@@ -3,57 +3,13 @@
 This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia
 Accelerate `MediaPlayer` package.
 
+
 ## Installation
 
-### Configure the NuGet Package Source
+See the [Installation Guide](../../installation.md) for step-by-step instructions on configuring the NuGet package source and license key.
 
-Avalonia Accelerate packages are distributed through a dedicated NuGet feed that requires authentication with your Avalonia Accelerate license key. Follow these steps to configure access to this feed in your C# project.
-
-#### Option 1: Configure via `nuget.config` (Recommended)
-
-1. Locate or create a nuget.config file:
-    - Look for an existing `nuget.config` file in your solution directory
-    - If none exists, create a new file named `nuget.config` in the same folder as your solution file (`.sln`)
-
-2. Add the following configuration:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <clear />
-    <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
-    // highlight-start
-    <add key="avalonia-accelerate" value="https://accelerate-nuget-feed.avaloniaui.net/v3/index.json" />
-    // highlight-end
-  </packageSources>
-  // highlight-start
-  <packageSourceCredentials>
-    <avalonia-accelerate>
-      <add key="Username" value="license" />
-      <add key="ClearTextPassword" value="YOUR_LICENSE_KEY" />
-    </avalonia-accelerate>
-  </packageSourceCredentials>
-   // highlight-end
-</configuration>
-```
-
-3. Replace `YOUR_LICENSE_KEY` with your actual Avalonia license key
-
-#### Option 2: Configure via Visual Studio
-
-1. Open Visual Studio and go to _Tools → NuGet Package Manager → Package Manager Settings_
-2. Navigate to _Package Sources_
-3. Click the _+_ button to add a new source:
-
-    - **Name**: `avalonia-accelerate`
-    - **Source**: https://accelerate-nuget-feed.avaloniaui.net/v3/index.json
-
-4. Click _Update_ to save the new source
-5. When prompted for credentials during package installation:
-
-    - **Username**: `license`
-    - **Password**: Your Avalonia license key
+- [Option 1: Configure via nuget.config](../../installation.md#option-1-configure-via-nugetconfig-recommended)
+- [Option 2: Configure via Visual Studio](../../installation.md#option-2-configure-via-visual-studio)
 
 ### Add the NuGet Package
 
