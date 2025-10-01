@@ -4,6 +4,17 @@ The `Markdown` control supports custom image loading via the `ImageLoader` prope
 
 ## Example: Loading SVG Images
 
+
+### Required Packages
+
+To use the custom image loader example above, you need to install the following NuGet packages:
+
+```bash
+ dotnet add package Avalonia.Svg.Skia
+```
+
+### Implementation
+
 Below is an example of a custom image loader that supports SVG images:
 
 ```csharp
