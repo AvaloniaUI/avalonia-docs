@@ -67,6 +67,7 @@ const sidebars = {
         'components/treedatagrid/quickstart-hierarchical',
         'components/treedatagrid/column-types',
         'components/treedatagrid/selection',
+        'components/treedatagrid/expanding-collapsing',
       ]
     },    
     {
