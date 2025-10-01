@@ -32,18 +32,34 @@ public class CustomImageLoader : MarkdownImageLoader
     public override async Task<IImage?> LoadImageAsync(string url)
     {
         IImage? image = null;
+
         if (Uri.TryCreate(url, UriKind.Absolute, out var uri))
         {
+            Stream? stream = null;
+
             if (uri.Scheme == "http" || uri.Scheme == "https")
             {
-                using var stream = await DownloadImage(uri);
-                var isSvg = IsSvgFile(stream);
-                if (isSvg)
+                stream = await DownloadImage(uri);
+            }
+            else if (uri.Scheme == "file" && File.Exists(uri.LocalPath))
+            {
+                stream = File.OpenRead(uri.LocalPath);
+            }
+
+            if (stream is null)
+            {
+                return null;
+            }
+
+            using (stream)
+            {
+                if (IsSvgFile(stream))
                 {
                     var svg = new SvgImage
                     {
                         Source = SvgSource.LoadFromStream(stream)
                     };
+
                     image = svg;
                 }
                 else
@@ -51,11 +67,8 @@ public class CustomImageLoader : MarkdownImageLoader
                     image = new Bitmap(stream);
                 }
             }
-            else if (uri.Scheme == "file" && File.Exists(uri.LocalPath))
-            {
-                image = new Bitmap(uri.LocalPath);
-            }
         }
+
         return image;
     }
 
