@@ -7,6 +7,23 @@ There are two parts to any `TreeDataGrid`:
 
 If you're using the MVVM pattern then the Source is usually defined at the view model layer, but it can also be defined in code-behind. This introduction will assume that you're using the MVVM pattern.
 
+## Installation
+
+First of all, ensure that you've [included the theme](./quickstart#install-the-theme) in your `App.axaml`:
+
+```xml
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MyApp"
+             RequestedThemeVariant="Default">
+    <Application.Styles>
+        <FluentTheme />
+        // highlight-next-line
+        <StyleInclude Source="avares://Avalonia.Controls.TreeDataGrid/Themes/Fluent.axaml"/>
+    </Application.Styles>
+</Application>
+```
+
 ## The Data Model
 
 The data model is your "source" data that will be displayed in the `TreeDataGrid` and will be specific to your application. For this introduction we will be using a very simple `Person` class:
