@@ -68,6 +68,7 @@ const sidebars = {
         'components/treedatagrid/column-types',
         'components/treedatagrid/selection',
         'components/treedatagrid/expanding-collapsing',
+        'components/treedatagrid/sorting',
       ]
     },    
     {
