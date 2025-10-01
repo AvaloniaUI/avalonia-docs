@@ -1,4 +1,4 @@
-# TreeDataGrid column types
+# Column Types
 
 ## TextColumn
 
