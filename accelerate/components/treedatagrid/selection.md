@@ -63,13 +63,13 @@ Access selected items through the selection model:
 
 ```csharp
 // Get single selected item
-if (PersonSource.RowSelection?.SelectedItem is Person selectedPerson)
+if (Source.RowSelection?.SelectedItem is Person selectedPerson)
 {
     Debug.WriteLine($"Selected: {selectedPerson.Name}");
 }
 
 // Get multiple selected items
-var selectedItems = PersonSource.RowSelection?.SelectedItems;
+var selectedItems = Source.RowSelection?.SelectedItems;
 if (selectedItems != null)
 {
     foreach (var item in selectedItems.OfType<Person>())
@@ -84,7 +84,7 @@ if (selectedItems != null)
 You can select rows programmatically using the selection model:
 
 ```csharp
-var selection = PersonSource.RowSelection;
+var selection = Source.RowSelection;
 
 // Select by index
 selection.SelectedIndex = 2;
@@ -115,7 +115,7 @@ selection.EndBatchUpdate();
 Handle selection changes with the `SelectionChanged` event:
 
 ```csharp
-PersonSource.RowSelection.SelectionChanged += (sender, e) =>
+Source.RowSelection.SelectionChanged += (sender, e) =>
 {
     Debug.WriteLine($"Selection changed");
     Debug.WriteLine($"Added: {e.SelectedItems.Count}");
@@ -141,7 +141,7 @@ Source = new FlatTreeDataGridSource<Person>(_people)
 Source.Selection = new TreeDataGridCellSelectionModel<Person>(Source);
 ```
 
-For multiple cell selection:
+When multiple cell selection is enabled, a single rectangular range of cells can be selected:
 
 ```csharp
 Source.Selection = new TreeDataGridCellSelectionModel<Person>(Source)
@@ -149,6 +149,8 @@ Source.Selection = new TreeDataGridCellSelectionModel<Person>(Source)
     SingleSelect = false
 };
 ```
+
+
 
 Cell selection is exposed via the `CellSelection` property on the source.
 
@@ -160,4 +162,64 @@ if (Source.CellSelection?.SelectedIndex is { } selectedCell)
 {
     Debug.WriteLine($"Selected cell - Row: {selectedCell.RowIndex}, Column: {selectedCell.ColumnIndex}");
 }
+```
+
+### Getting Selected Items
+
+Access selected items through the selection model:
+
+```csharp
+// Get single selected cell
+var selection = Source.CellSelection!;
+
+if (selection.SelectedIndex.ColumnIndex != -1 &&
+    selection.SelectedIndex.RowIndex.Count == 1)
+{
+    var column = Source.Columns[selection.SelectedIndex.ColumnIndex];
+    var model = _data[selection.SelectedIndex.RowIndex[0]];
+
+    Debug.WriteLine("Selected column: " + column.Header);
+    Debug.WriteLine("Selected item: " + model);
+}
+
+// Get multiple selected cells
+var selection = Source.CellSelection!;
+
+foreach (var selected in selection.SelectedIndexes)
+{
+    if (selected.ColumnIndex != -1 && selected.RowIndex.Count == 1)
+    {
+        var column = Source.Columns[selected.ColumnIndex];
+        var model = _data[selected.RowIndex[0]];
+
+        Debug.WriteLine("Selected column: " + column.Header);
+        Debug.WriteLine("Selected item: " + model);
+    }
+}
+```
+
+### Programmatically Selecting Cells
+
+You can select cells programmatically using the selection model:
+
+```csharp
+var selection = Source.CellSelection;
+
+// Select by index
+selection.SelectedIndex = new CellIndex(2, 1);
+selection.SelectedIndex = new CellIndex(3, new IndexPath(2));
+
+// Select a range
+selection.SetSelectedRange(new CellIndex(1, 1), columnCount: 2, rowCount: 2);
+```
+
+### Selection Changed Event
+
+Handle selection changes with the `SelectionChanged` event:
+
+```csharp
+Source.CellSelection!.SelectionChanged += (s, e) =>
+{
+    Debug.WriteLine($"Selection changed");
+};
 ```
