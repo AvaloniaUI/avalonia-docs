@@ -77,6 +77,16 @@ const sidebars = {
         }, 
       ]
     },    
+    {
+      'type': 'category',
+      'label': 'Virtual Keyboard',
+      'items': [
+        'components/virtual-keyboard/getting-started',
+        'components/virtual-keyboard/virtual-keyboard-scope',
+        'components/virtual-keyboard/virtual-keyboard',
+        'components/virtual-keyboard/input-method-identifiers',
+      ]
+    },
     
   ],
 };
