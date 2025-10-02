@@ -91,6 +91,22 @@ Include your Avalonia UI license key in the executable project file (`.csproj`):
 For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
+### Include the Control Theme
+
+To ensure the virtual keyboard is properly styled, add the keyboard theme to your application. Open your `App.axaml` file and include the following within the `Application.Styles` section:
+
+```xml
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="YourNamespace.App">
+    <Application.Styles>
+        <FluentTheme />
+        <!-- Include the Virtual Keyboard theme -->
+        <StyleInclude Source="avares://Avalonia.Controls.Keyboard/Themes/Fluent.axaml"/>
+    </Application.Styles>
+</Application>
+```
+
 ## Requirements
 
 - Avalonia 11.3.7 or newer
