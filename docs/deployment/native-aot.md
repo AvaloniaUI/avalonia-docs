@@ -17,29 +17,16 @@ Native AOT compilation provides several advantages specifically relevant to Aval
 
 ## Setting Up Native AOT for Avalonia
 
-### 1. Project Configuration
+### Project Configuration
 
 Add the following to your csproj file:
 
 ```xml
 <PropertyGroup>
     <PublishAot>true</PublishAot>
-    <!-- Recommended Avalonia trimming settings for Native AOT -->
+    <!-- Necessary before Avalonia 12.0, was used for accessiblity APIs -->
     <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
-    <TrimMode>link</TrimMode>
 </PropertyGroup>
-```
-
-### 2. Trimming Configuration
-
-Native AOT requires trimming. Add these trim settings specific to Avalonia:
-
-```xml
-<ItemGroup>
-    <!-- Preserve Avalonia types for reflection -->
-    <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
-    <TrimmerRootAssembly Include="Avalonia.Themes.Default" />
-</ItemGroup>
 ```
 
 ## Avalonia-Specific Considerations
@@ -77,6 +64,7 @@ Intel based macOS
 ```bash
 dotnet publish -r osx-x64 -c Release
 ```
+
 Apple silicon based macOS 
 ```bash
 dotnet publish -r osx-arm64 -c Release
@@ -88,16 +76,8 @@ You can then use Apple's [lipo tool](https://developer.apple.com/documentation/a
 
 ## Troubleshooting Common Issues
 
-### 1. Missing XAML Controls
-If controls are missing at runtime:
-```xml
-<ItemGroup>
-    <!-- Add specific Avalonia controls you're using -->
-    <TrimmerRootAssembly Include="Avalonia.Controls" />
-</ItemGroup>
-```
 
-### 2. Reflection-Related Errors
+### 1. Reflection-Related Errors
 For ViewModels or services using reflection:
 ```xml
 <ItemGroup>
@@ -124,33 +104,9 @@ When using Native AOT with Avalonia, be aware of these limitations:
 
 ## Platform Support
 
-| Platform | Status |
-|----------|--------|
-| Windows x64 | ✅ Supported | 
-| Windows Arm64 | ✅ Supported | 
-| Linux x64 | ✅ Supported | |
-| Linux Arm64 | ✅ Supported | 
-| macOS x64 | ✅ Supported | |
-| macOS Arm64 | ✅ Supported | 
-| Browser | ❌ Not Supported |
-
-## Best Practices
-
-1. **Application Structure**
-   - Use MVVM pattern consistently
-   - Minimize reflection usage
-   - Prefer compile-time configuration
-
-2. **Resource Management**
-   - Use static resources when possible
-   - Bundle all required assets
-   - Implement proper cleanup in IDisposable
-
-3. **Performance Optimization**
-   - Enable binding compilation
-   - Use compiled bindings
-   - Implement proper virtualization for large collections
+For platform support, please refer to [Platform/architecture restrictions](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/#platformarchitecture-restrictions).
 
 ## Additional Resources
 
+- [Native AOT deployment](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet9plus#platformarchitecture-restrictions)
 - [Avalonia Sample Applications with Native AOT](https://github.com/AvaloniaUI/Avalonia.Samples)

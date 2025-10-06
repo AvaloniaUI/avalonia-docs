@@ -18,27 +18,11 @@ See the [Installation Guide](../../installation.md) for step-by-step instruction
 - [Option 1: Configure via nuget.config](../../installation.md#option-1-configure-via-nugetconfig-recommended)
 - [Option 2: Configure via Visual Studio](../../installation.md#option-2-configure-via-visual-studio)
 
-### Add the NuGet Package
-
 Add the WebView package to your project:
 
 ```bash
 dotnet add package Avalonia.Controls.WebView
 ```
-
-### Add the License Key
-
-Include your Avalonia UI license key in the executable project file (`.csproj`):
-
-```xml
-<ItemGroup>
-  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
-</ItemGroup>
-```
-
-:::tip
-For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
-:::
 
 ## Basic Usage
 

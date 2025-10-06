@@ -10,7 +10,7 @@ See the [Installation Guide](../../installation.md) for step-by-step instruction
 - [Option 1: Configure via nuget.config](../../installation.md#option-1-configure-via-nugetconfig-recommended)
 - [Option 2: Configure via Visual Studio](../../installation.md#option-2-configure-via-visual-studio)
 
-Add the `Avalonia.Controls.Markdown` NuGet package to your Avalonia project:
+Add the Markdown package to your project:
 
 ```bash
 dotnet add package Avalonia.Controls.Markdown

@@ -55,7 +55,8 @@ title: 在Visual Studio Code中配置调试（Linux）
 				"-p:TargetFramework=net6.0-android",
 				"-p:Configuration=Debug",
 				"-p:AndroidAttachDebugger=true",
-				"-p:AndroidSdbHostPort=10000"
+				"-p:AndroidSdbHostPort=10000",
+				"-p:AndroidSdbTargetPort=10000"
 			],
 			"problemMatcher": "$msCompile"
 		}
@@ -66,7 +67,7 @@ title: 在Visual Studio Code中配置调试（Linux）
 其中，`<ProjectName>`是您的Android特定Avalonia项目名称。
 
 :::info
-请确保`launch.json`中`port`变量的值与`tasks.json`中`AndroidSdbHostPort`的值相匹配，否则调试器将无法连接。
+请确保`launch.json`中`port`变量的值与`tasks.json`中`AndroidSdbHostPort`和`AndroidSdbTargetPort`的值相匹配，否则调试器将无法连接。
 :::
 
 设置完成后，您可以通过调试面板运行`Debug - Android`任务。 Dotnet运行时将构建和部署应用程序，而Mono调试器将连接到设备上的开放端口，并提供所有标准的调试功能。

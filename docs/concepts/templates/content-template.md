@@ -27,7 +27,7 @@ You can define a data template (for no particular class) using the `DataTemplate
         x:Class="MySample.MainWindow"
         Title="MySample">
   <Window.ContentTemplate>
-    <DataTemplate>
+    <DataTemplate DataType="{x:Type local:Student}">
       <StackPanel>
         <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
           <TextBlock Grid.Row="0" Grid.Column="0">First Name:</TextBlock>
