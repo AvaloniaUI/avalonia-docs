@@ -1,6 +1,6 @@
 # Markdown Quick Start Guide
 
-This guide provides a practical introduction to rendering Markdown in Avalonia applications using the Avalonia.Controls.Markdown package.
+This guide provides a practical introduction to rendering Markdown in Avalonia applications using the `Avalonia.Controls.Markdown` package.
 
 
 ## Installation
@@ -41,7 +41,7 @@ You can override named resources for custom styling. See the [Markdown Styling a
 
 ## License Key
 
-If required, add your Avalonia UI license key to your project file (`.csproj`):
+Add your Avalonia UI license key to your project file (`.csproj`):
 
 ```xml
 <ItemGroup>

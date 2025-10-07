@@ -5,7 +5,7 @@ title: Model Context Protocol
 
 ## What is MCP?
 
-Model Context Protocol (MCP) is an open standard that lets AI models use external tools and services through a unified interface. Parcel provides an MCP server that allows AI assistants like GitHub Copilot, Claude, and Cursor to directly interact with Parcel's packaging tools, making it easier to set up and manage your Avalonia application builds.
+Model Context Protocol (MCP) is an open standard that allows AI models to use external tools and services through a unified interface. Parcel provides an MCP server that enables AI assistants like GitHub Copilot, Claude, and Cursor to directly interact with Parcel's packaging tools, making it easier to set up and manage your Avalonia application builds.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Before setting up the MCP server, ensure you have:
 2. **Valid license key** - Set `PARCEL_LICENSE_KEY` environment variable to a valid license key from the portal
 
 :::note
-Parcel MCP is only available for full Accelerate license
+Parcel MCP is only available with a full Accelerate license.
 :::
 
 ## Supported AI Assistants
@@ -29,7 +29,7 @@ Parcel's MCP server works with various AI coding assistants:
 
 ## Setting Up the MCP Server
 
-Parcel provides a STDIO type MCP server, available by running the `parcel mcp` command.
+Parcel provides an STDIO type MCP server, available by running the `parcel mcp` command.
 
 ### Adding MCP Server in VSCode
 
@@ -90,7 +90,7 @@ Simply describe what you want to accomplish in natural language. The AI assistan
 **Project Setup:**
 
 ```text
-"Create a packaging config for my Avalonia project and set up MacOS signing"
+"Create a packaging config for my Avalonia project and set up macOS signing"
 ```
 
 **Packaging:**

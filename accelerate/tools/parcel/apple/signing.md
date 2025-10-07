@@ -1,4 +1,4 @@
-# MacOS Code Signing
+# macOS Code Signing
 
 Parcel signs macOS bundles using Apple Developer certificates. Cross-platform signing is supported on Windows, Linux, and macOS platforms.
 
@@ -15,14 +15,14 @@ Parcel supports multiple certificate formats depending on development environmen
 
 ### KeyChain Identity (macOS Only)
 
-Uses certificates from macOS Keychain installed with a certificate request.
+Uses certificates from the macOS Keychain that are installed via a certificate request.
 
-Requires "Developer ID Application" certificate linked to team ID for distribution outside the Mac App Store.
+Requires a "Developer ID Application" certificate linked to your team ID for distribution outside the Mac App Store.
 
 ### P12 Certificate (Cross-Platform)
 
-Portable certificate format containing certificate and private key.
-Apple doesn't provide P12 certificates directly, but they can be exported from Keychain or generated with OpenSSL.
+Portable certificate format containing both the certificate and private key.
+Apple doesn't provide P12 certificates directly, but they can be exported from the Keychain or generated with OpenSSL.
 
 Parcel uses [rcodesign](https://github.com/indygreg/apple-platform-rs/tree/main/apple-codesign) to sign binaries and bundles on Windows and Linux machines.
 
@@ -30,24 +30,24 @@ Parcel uses [rcodesign](https://github.com/indygreg/apple-platform-rs/tree/main/
 
 ### Method 1: Keychain (macOS Only)
 
-Requires macOS machine for initial setup.
+Requires a macOS machine for initial setup.
 
-**To create certificate with Keychain:**
+**To create a certificate with Keychain:**
 
 1. Open **Keychain Access** on macOS
 2. **Keychain Access** > **Certificate Assistant** > **Request a Certificate From a Certificate Authority**
-3. Enter name in Common Name field, leave CA Email Address empty
-4. Choose **Saved to disk**, click **Continue** to generate `certificate.csr`
+3. Enter a name in the Common Name field, leave CA Email Address empty
+4. Choose **Saved to disk**, then click **Continue** to generate `certificate.csr`
 5. Go to [Apple Developer Account](https://developer.apple.com/account/) > **Certificates, Identifiers & Profiles**
 6. Navigate to **Certificates** > **All Certificates**
-7. Click ➕ to create new certificate
-8. Choose **Developer ID Application** for apps distributed outside App Store
+7. Click ➕ to create a new certificate
+8. Choose **Developer ID Application** for apps distributed outside the App Store
 9. Upload `certificate.csr` when prompted
 10. Download the resulting `.cer` file
-11. Import certificate into Keychain
+11. Import the certificate into Keychain
 
 :::tip
-Export certificate as P12 to enable cross-platform signing without requiring macOS.
+Export the certificate as P12 to enable cross-platform signing without requiring macOS.
 :::
 
 ### Method 2: OpenSSL (Cross-Platform)
@@ -58,9 +58,9 @@ Generate certificates on any platform using OpenSSL.
 
 - OpenSSL installed (WSL2 recommended for Windows)
 
-**To create certificate with OpenSSL:**
+**To create a certificate with OpenSSL:**
 
-1. Create private key:
+1. Create a private key:
 
     ```bash
     openssl genrsa -out private.key 2048
@@ -72,18 +72,18 @@ Generate certificates on any platform using OpenSSL.
     openssl req -new -key private.key -out certificate.csr
     ```
 
-3. Upload CSR to [Apple Developer Portal](https://developer.apple.com/account/)
+3. Upload the CSR to [Apple Developer Portal](https://developer.apple.com/account/)
     - Go to **Certificates, Identifiers & Profiles** > **Certificates**
     - Click ➕, choose **Developer ID Application**
-    - Upload `certificate.csr`, download `.cer` file
+    - Upload `certificate.csr`, then download the `.cer` file
 
-4. Convert certificate to PEM format:
+4. Convert the certificate to PEM format:
 
     ```bash
     openssl x509 -in development.cer -inform DER -out certificate.pem -outform PEM
     ```
 
-5. Create P12 file, you would need previously created `private.key` file:
+5. Create a P12 file (you will need the previously created `private.key` file):
 
     ```bash
     openssl pkcs12 -export -out certificate.p12 -inkey private.key -in certificate.pem
@@ -99,13 +99,13 @@ The resulting `certificate.p12` and password can be used with Parcel on any plat
 
 ### Common Issues
 
-**"Developer ID Application" not available when creating certificate**:
+**"Developer ID Application" not available when creating a certificate**:
 
-This option requires Apple Developer Account team membership. Contact the team's account holder for access.
+This option requires Apple Developer Account team membership. Contact your team's account holder for access.
 
 **App signs successfully but cannot execute on other machines**:
 
-Verify you used "Developer ID Application" certificate. "Apple Development" certificates only work for development builds.
+Verify that you used a "Developer ID Application" certificate. "Apple Development" certificates only work for development builds.
 
 ### Getting Help
 

@@ -1,8 +1,8 @@
-# MacOS Notarization
+# macOS Notarization
 
 Apple notarization verifies that applications have been checked by Apple for malicious software. Notarization is required for macOS 10.15 (Catalina) and later when distributing applications outside the Mac App Store.
 
-The process uploads the application to Apple servers for scanning and associates the bundle hash with the developer account.
+The process uploads an application to Apple's servers for scanning and associates the bundle hash with the developer account.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ Before notarizing applications, ensure you have:
 
 - **Apple Developer Account**: Paid Apple Developer Program membership ($99/year)
 - **Valid Developer ID Certificate**: For code signing applications distributed outside the Mac App Store
-- (MacOS only) **Xcode Command Line Tools**: Available on [Apple Developer Resources](https://developer.apple.com/xcode/resources/)
+- (macOS only) **Xcode Command Line Tools**: Available on [Apple Developer Resources](https://developer.apple.com/xcode/resources/)
 
 ## Apple Account Authentication
 
@@ -23,9 +23,9 @@ Apple requires app-specific passwords instead of user passwords for the Notary A
 **To configure credentials in Parcel:**
 
 1. Select "Apple Account" as the notary credentials option
-2. Enter Apple ID (email address)
-3. Enter app-specific password
-4. Enter Team ID (from [Apple Developer Membership](https://developer.apple.com/account/#/membership) page)
+2. Enter your Apple ID (email address)
+3. Enter your app-specific password
+4. Enter your Team ID (from the [Apple Developer Membership](https://developer.apple.com/account/#/membership) page)
 
 :::tip
 Use environment variables to store credentials instead of hardcoding them in configuration files.
@@ -33,7 +33,7 @@ Use environment variables to store credentials instead of hardcoding them in con
 
 ### Keychain Profile (macOS Only)
 
-Store Apple Account credentials in macOS Keychain and reference by profile name. Credentials are encrypted and stored locally.
+Store Apple Account credentials in macOS Keychain and reference them by profile name. Credentials are encrypted and stored locally.
 
 **Setting up a keychain profile:**
 
@@ -58,7 +58,7 @@ Store Apple Account credentials in macOS Keychain and reference by profile name.
 2. Enter the profile name (e.g., "MyParcelProfile")
 
 :::warning
-Apple Keychain is only available on macOS. Use App-Specific Password method on Windows or Linux.
+Apple Keychain is only available on macOS. Use the App-Specific Password method on Windows or Linux.
 :::
 
 ## Running Non-Notarized Apps (Testing & Personal Use)
@@ -74,22 +74,22 @@ When macOS blocks a non-notarized app, users can bypass the warning:
 5. Confirm by clicking **"Open"** in the dialog
 
 :::note
-Code sign applications with a Developer ID certificate when available, even without notarization.
+Code-sign applications with a Developer ID certificate when available, even without notarization.
 :::
 
 ## Troubleshooting
 
 ### Common Issues
 
-**Notarization takes too much time**:
+**Notarization takes too long**:
 
 Notarization typically takes a few minutes but can take up to an hour during peak times. In worst cases, it can take several hours depending on application size.
 
 **"Invalid credentials" error:**
 
-- Verify Apple ID and app-specific password are correct
-- Ensure Team ID is accurate
-- Check Apple Developer account status
+- Verify that your Apple ID and app-specific password are correct
+- Ensure your Team ID is accurate
+- Check your Apple Developer account status
 
 **"License agreement must be accepted" error:**
 
@@ -101,7 +101,7 @@ Notarization typically takes a few minutes but can take up to an hour during pea
 
 **Notarization fails during upload:**
 
-- Check internet connection
+- Check your internet connection
 
 ### Getting Help
 

@@ -57,7 +57,7 @@ const sidebars = {
         'tools/parcel/mcp',
         {
           'type': 'category',
-          'label': 'MacOS',
+          'label': 'macOS',
           'link' : {
             'type' : 'doc',
             'id': 'tools/parcel/apple/index'
