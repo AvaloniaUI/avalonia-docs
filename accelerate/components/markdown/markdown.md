@@ -84,5 +84,3 @@ See the dedicated [Custom Image Loader](custom-image-loader.md) page for a detai
 ## Styling
 
 See the dedicated [Markdown Styling and Customization](styling.md) page for a full list of resources you can override.
-
----
