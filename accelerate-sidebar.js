@@ -5,6 +5,7 @@ const sidebars = {
 
   documentationSidebar: [
     'welcome', 
+    'installation',
     {
       'type': 'category',
       'label': 'Dev Tools',
