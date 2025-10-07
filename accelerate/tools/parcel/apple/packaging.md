@@ -71,7 +71,7 @@ Parcel supports custom Info.plist files for advanced bundle configuration.
 Parcel creates DMG installers with a drag-and-drop interface, custom backgrounds, and symbolic links.
 
 :::warning
-WSL2 is required for DMG creation on Windows. ZIP packages can be created without WSL2.
+[WSL2](https://learn.microsoft.com/en-us/windows/wsl/) is required for DMG creation on Windows. ZIP packages can be created without WSL2.
 :::
 
 ## ZIP Creation
