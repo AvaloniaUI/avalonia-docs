@@ -16,6 +16,10 @@ Avalonia Accelerate is released in phases, with each update introducing signific
 
 Elevate your debugging experience with professional-grade developer tooling that gives you unparalleled insight into your Avalonia applications. Inspect visual trees, debug bindings effortlessly, and fine-tune your UI for maximum responsiveness, all with ease and precision.
 
+### [Parcel](./tools/parcel/getting-started)
+
+Parcel is a packaging tool for Avalonia UI applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
+
 ### [Visual Studio Extension](./tools/vs-ext/getting-started)
 
 The enhanced version of the Avalonia Visual Studio Extension provides a richer editing experience that is now faster, smarter, and more accurate. Combined with the Previewer, you can write code faster and see what it will look like without needing to run the app.

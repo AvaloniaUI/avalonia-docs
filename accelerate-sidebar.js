@@ -47,7 +47,52 @@ const sidebars = {
         'tools/dev-tools/faq',
         'tools/dev-tools/reporting-issues',
       ]
-    },  
+    },
+    {
+      'type': 'category',
+      'label': 'Parcel',
+      'items': [
+        'tools/parcel/getting-started',
+        'tools/parcel/cli-reference',
+        'tools/parcel/mcp',
+        {
+          'type': 'category',
+          'label': 'MacOS',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/apple/index'
+          },
+          'items': [
+            'tools/parcel/apple/packaging',
+            'tools/parcel/apple/signing',
+            'tools/parcel/apple/notary'
+          ]
+        }, 
+        {
+          'type': 'category',
+          'label': 'Windows',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/windows/index'
+          },
+          'items': [
+            'tools/parcel/windows/signing',
+            'tools/parcel/windows/installer'
+          ]
+        },
+        {
+          'type': 'category',
+          'label': 'Linux',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/linux/index'
+          },
+          'items': [
+            'tools/parcel/linux/packaging'
+          ]
+        },
+      ]
+    },
     {
       'type': 'category',
       'label': 'VS Extension',
