@@ -42,7 +42,7 @@ Styles are applied in order of declaration. If there are multiple style files in
 <StyleInclude Source="Style2.axaml" />
 ```
 
-Here styles from file **Styles1.axaml** were applied first, so setters in styles of file **Styles2.axaml** take priority. The resulting TextBlock will have FontSize="16" and Foreground="Green". The same order prioritization happens within style files also.
+Here styles from file **Styles1.axaml** were applied first, so setters in styles of file **Styles2.axaml** take priority. The resulting TextBlock will have FontSize="16" and Foreground="Blue". The same order prioritization happens within style files also.
 
 ## Locally Set Properties Have Priority
 
