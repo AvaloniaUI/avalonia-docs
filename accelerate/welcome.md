@@ -10,7 +10,7 @@ Avalonia Accelerate brings powerful enhancements and professional-grade features
 
 ## What’s Included in Avalonia Accelerate?
 
-Avalonia Accelerate is released in phases, with each update introducing significant new capabilities. The first phase includes three essential modules designed to unlock immediate productivity:
+Avalonia Accelerate is released in phases, with each update introducing significant new capabilities. The current phase includes these essential modules designed to unlock immediate productivity:
 
 ### [Dev Tools](./tools/dev-tools/getting-started)
 
@@ -19,6 +19,10 @@ Elevate your debugging experience with professional-grade developer tooling that
 ### [Parcel](./tools/parcel/getting-started)
 
 Parcel is a packaging tool for Avalonia UI applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
+
+### [Visual Studio Extension](./tools/vs-ext/getting-started)
+
+The enhanced version of the Avalonia Visual Studio Extension provides a richer editing experience that is now faster, smarter, and more accurate. Combined with the Previewer, you can write code faster and see what it will look like without needing to run the app.
 
 ### [Web View](./components/webview/quickstart)
 
@@ -36,12 +40,6 @@ Render rich Markdown content in your Avalonia applications with custom styling a
 
 Deliver immersive multimedia experiences right out of the box. Avalonia Accelerate’s MediaPlayer module provides native playback of video and audio content, supporting various formats across Windows, macOS, and Linux, ensuring your users enjoy 
 smooth, high-quality media playback everywhere.
-
-## Upcoming: Enhanced Visual Studio Extension (Preview)
-
-We’re also preparing an enhanced version of the Avalonia Visual Studio Extension, exclusively available in preview soon to business and enterprise customers. 
-
-Stay tuned for updates!
 
 ## How to Get Avalonia Accelerate
 

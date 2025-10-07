@@ -95,6 +95,15 @@ const sidebars = {
     },
     {
       'type': 'category',
+      'label': 'VS Extension',
+      'items': [
+        'tools/vs-extension/getting-started',
+        'tools/vs-extension/settings',
+        'tools/vs-extension/previewer',
+      ]
+    },    
+    {
+      'type': 'category',
       'label': 'Media Player',
       'items': [
         'components/media-player/quickstart',
