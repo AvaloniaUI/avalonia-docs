@@ -1,4 +1,4 @@
-# MacOS Packaging
+# macOS Packaging
 
 Parcel creates macOS application bundles (.app) that can be distributed via DMG images or ZIP archives. The tool handles bundle structure, Info.plist generation, and file permissions. Parcel can create macOS bundles on Windows and Linux platforms.
 
@@ -6,23 +6,23 @@ Parcel creates macOS application bundles (.app) that can be distributed via DMG 
 
 ### Bundle Properties
 
-Essential bundle metadata that defines how the application appears and behaves on macOS.
+Essential bundle metadata that defines how an application appears and behaves on macOS.
 
 **Bundle Identifier**:
 
-A unique reverse-DNS identifier for the application (e.g., `com.Company.AppName`). Must follow Apple's reverse DNS notation guidelines. Avoid special characters except dots and hyphens, and start with a letter.
+A unique reverse-DNS identifier for the application (e.g., `com.Company.AppName`). This must follow Apple's reverse DNS notation guidelines. Avoid special characters except dots and hyphens, and ensure the identifier starts with a letter.
 
 **App Category**:
 
-Application category for macOS and App Store classification. Maps to Apple's `public.app-category.*` identifiers.
+The application category for macOS and App Store classification. This maps to Apple's `public.app-category.*` identifiers.
 
 **App Icon**:
 
-Application icon in **ICNS** or **SVG** format. ICNS files should include multiple resolutions from 16x16 to 1024x1024 pixels. Parcel generates the bundle icon structure from the source file.
+The application icon in **ICNS** or **SVG** format. ICNS files should include multiple resolutions from 16x16 to 1024x1024 pixels. Parcel generates the bundle icon structure from the source file.
 
 **DMG Background**:
 
-Background image for DMG installer in TIFF format.
+The background image for the DMG installer in TIFF format.
 
 Parcel uses a fixed DMG window size of **660x422** pixels with the following layout:
 
@@ -33,7 +33,7 @@ Parcel uses a fixed DMG window size of **660x422** pixels with the following lay
 Design background images to accommodate these fixed positions and the drag-and-drop workflow.
 
 :::note
-DMG customization is currently limited to background images. More flexible editor is planned, let us know if we need to prioritize it.
+DMG customization is currently limited to background images. A more flexible editor is planned—let us know if we need to prioritize it.
 :::
 
 **Permissions**:
@@ -41,7 +41,7 @@ DMG customization is currently limited to background images. More flexible edito
 System permissions with custom usage descriptions. Each permission requires a usage description that appears in macOS permission dialogs.
 
 :::note
-Usage descriptions are mandatory, otherwise the OS may deny access to system resources.
+Usage descriptions are mandatory; otherwise, the OS may deny access to system resources.
 :::
 
 **File Type Associations**:
@@ -52,7 +52,7 @@ To handle these files in Avalonia applications, see [Activatable Lifetime](https
 
 **URL Scheme Handlers**:
 
-Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). Enables other applications to launch the app with specific parameters.
+Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This enables other applications to launch the app with specific parameters.
 
 To handle URL schemes in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
 
@@ -68,7 +68,7 @@ Parcel supports custom Info.plist files for advanced bundle configuration.
 
 ## DMG Creation
 
-Parcel creates DMG installers with drag-and-drop interface, custom backgrounds, and symbolic links.
+Parcel creates DMG installers with a drag-and-drop interface, custom backgrounds, and symbolic links.
 
 :::warning
 WSL2 is required for DMG creation on Windows. ZIP packages can be created without WSL2.
@@ -76,7 +76,7 @@ WSL2 is required for DMG creation on Windows. ZIP packages can be created withou
 
 ## ZIP Creation
 
-Parcel maintains executable permissions during ZIP creation. Bundle structure remains intact when extracted on macOS, and applications remain executable without additional steps.
+Parcel maintains executable permissions during ZIP creation. The bundle structure remains intact when extracted on macOS, and applications remain executable without additional steps.
 
 ## Troubleshooting
 
