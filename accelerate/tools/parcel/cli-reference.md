@@ -7,13 +7,13 @@ Parcel provides a command-line tool that packages Avalonia apps for Windows, mac
 
 ## Prerequisites
 
-Before setting up the MCP server, ensure you have:
+Before using Parcel, ensure you have:
 
 1. **Parcel .NET tool installed** - Follow the [Getting Started](getting-started) guide
-2. **Valid license key** - Set `PARCEL_LICENSE_KEY` environment variable or `--license-key` option to a valid license key from the portal
+2. **Valid license key** - Set the `PARCEL_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal
 
 :::note
-Parcel CLI is only available for full Accelerate license
+Parcel CLI is only available with a full Accelerate license
 :::
 
 ## Overview
@@ -94,7 +94,7 @@ parcel step [command] <input> <output> [options]
 
 ### install-build-deps
 
-Downloads or updates tool dependencies necessary for the packaging configuration.
+Downloads or updates tool dependencies required for the packaging configuration.
 
 ```bash
 parcel install-build-deps <project> [options]
@@ -118,11 +118,11 @@ parcel install-build-deps <project> [options]
 parcel install-build-deps MyApp.parcel -r win-x64 -r osx-x64 -p nsis -p dmg
 ```
 
-For instance, this command will pre-download **NSIS** and **DMG** tooling necessary for Parcel to run.
+For instance, this command will pre-download **NSIS** and **DMG** tooling required for Parcel to run.
 
 ### mcp
 
-Runs Model Context Protocol server, allowing Parcel commands to be executed from LLM AI sessions.
+Runs a Model Context Protocol server, allowing Parcel commands to be executed from LLM AI sessions.
 
 ```bash
 parcel mcp
