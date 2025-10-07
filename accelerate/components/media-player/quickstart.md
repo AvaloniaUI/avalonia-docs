@@ -6,10 +6,7 @@ Accelerate `MediaPlayer` package.
 
 ## Installation
 
-See the [Installation Guide](../../installation.md) for step-by-step instructions on configuring the NuGet package source and license key.
-
-- [Option 1: Configure via nuget.config](../../installation.md#option-1-configure-via-nugetconfig-recommended)
-- [Option 2: Configure via Visual Studio](../../installation.md#option-2-configure-via-visual-studio)
+See the [Installation Guide](../../installation.md) for step-by-step instructions on how to install Accelerate components.
 
 Add the MediaPlayer package to your project:
 
@@ -20,7 +17,6 @@ dotnet add package Avalonia.Controls.MediaPlayer
 Add the default theme to your App.axaml:
 
 ```xml
-
 <Application.Styles>
     <FluentTheme/>
 

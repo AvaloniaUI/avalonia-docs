@@ -1,49 +1,14 @@
-# Installation Guide for Avalonia Accelerate
+# Installation
 
-This guide explains how to configure your project to use Avalonia Accelerate packages, including setting up the NuGet package source and license key.
+This guide explains how to configure your project to use Avalonia Accelerate packages.
 
-## Configure the NuGet Package Source
+## NuGet Package Source
 
-Avalonia Accelerate packages are distributed through a dedicated NuGet feed that requires authentication with your Avalonia Accelerate license key.
+Avalonia Accelerate packages are distributed via [nuget.org](https://www.nuget.org/).
 
-### Option 1: Configure via `nuget.config` (Recommended)
-
-1. Locate or create a `nuget.config` file:
-    - Look for an existing `nuget.config` file in your solution directory
-    - If none exists, create a new file named `nuget.config` in the same folder as your solution file (`.sln`)
-
-2. Add the following configuration:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <clear />
-    <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
-    <add key="avalonia-accelerate" value="https://accelerate-nuget-feed.avaloniaui.net/v3/index.json" />
-  </packageSources>
-  <packageSourceCredentials>
-    <avalonia-accelerate>
-      <add key="Username" value="license" />
-      <add key="ClearTextPassword" value="YOUR_LICENSE_KEY" />
-    </avalonia-accelerate>
-  </packageSourceCredentials>
-</configuration>
-```
-
-3. Replace `YOUR_LICENSE_KEY` with your actual Avalonia license key.
-
-### Option 2: Configure via Visual Studio
-
-1. Open Visual Studio and go to _Tools → NuGet Package Manager → Package Manager Settings_
-2. Navigate to _Package Sources_
-3. Click the _+_ button to add a new source:
-    - **Name**: `avalonia-accelerate`
-    - **Source**: https://accelerate-nuget-feed.avaloniaui.net/v3/index.json
-4. Click _Update_ to save the new source
-5. When prompted for credentials during package installation:
-    - **Username**: `license`
-    - **Password**: Your Avalonia license key
+:::note
+Prior to October 13 2025, installing Avalonia Accelerate components required setting up a dedicated NuGet feed. That feed is no longer required and you should use [nuget.org](https://www.nuget.org/) instead.
+:::
 
 ## Add the NuGet Package
 
