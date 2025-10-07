@@ -69,6 +69,20 @@ const sidebars = {
     },    
     {
       'type': 'category',
+      'label': 'TreeDataGrid',
+      'items': [
+        'components/treedatagrid/quickstart',
+        'components/treedatagrid/quickstart-flat',
+        'components/treedatagrid/quickstart-hierarchical',
+        'components/treedatagrid/column-types',
+        'components/treedatagrid/selection',
+        'components/treedatagrid/expanding-collapsing',
+        'components/treedatagrid/sorting',
+        'components/treedatagrid/faq',
+      ]
+    },    
+    {
+      'type': 'category',
       'label': 'Web View',
       'items': [
         'components/webview/quickstart',
@@ -86,7 +100,33 @@ const sidebars = {
         }, 
       ]
     },    
+    {
+      'type': 'category',
+      'label': 'Virtual Keyboard',
+      'items': [
+        'components/virtual-keyboard/getting-started',
+        'components/virtual-keyboard/virtual-keyboard-scope',
+        'components/virtual-keyboard/virtual-keyboard',
+        'components/virtual-keyboard/input-method-identifiers',
+      ]
+    },
     
+     {
+      'type': 'category',
+      'label': 'Markdown',
+      'items': [
+        'components/markdown/quickstart',
+        'components/markdown/markdown',
+        {
+          'type': 'category',
+          'label': 'Advanced',
+          'items': [
+            'components/markdown/styling',
+            'components/markdown/custom-image-loader'
+          ]
+        }, 
+      ]
+    }
   ],
 };
 
