@@ -14,7 +14,7 @@ AvaloniaUI Parcel is a packaging tool for Avalonia UI applications. It's designe
 ## Step 1: Installing AvaloniaUI Parcel
 
 `AvaloniaUI Parcel` is a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with an update mechanism provided by the SDK.
-This guide demonstrates global installation of the tool. Local installation is also possible with a limitation: the tool will only work from the same working directory (or a descendant directory) as the tool installation solution/project.
+This guide demonstrates global installation of the tool. Local installation is also possible but be aware: the tool will only work in the project that it's installed into.
 
 <Tabs>
 <TabItem value="net10" label=".NET 10+" default>
