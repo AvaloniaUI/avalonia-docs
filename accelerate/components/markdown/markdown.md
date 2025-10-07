@@ -1,51 +1,42 @@
-
 # Markdown
 
 The Avalonia.Controls.Markdown control renders Markdown-formatted text in Avalonia applications, supporting common Markdown features and theming.
 
 ## Usage Examples
-### XAML Usage
+
+### XAML Usage (with ViewModel Binding)
 
 ```xml
-  <Markdown Text="
-# Markdown&#x0a;
-## Headings&#x0a;
-### Heading 3&#x0a;
-#### Heading 4&#x0a;
-##### Heading 5&#x0a;
-###### Heading 6&#x0a;
-&#x0a;
-**Bold Text**&#x0a;
-*Italic Text*&#x0a;
-~~Strikethrough~~&#x0a;
-__Bold__ and _Italic_&#x0a;
-&#x0a;
-[Link to Avalonia](https://avaloniaui.net)&#x0a;
-&#x0a;
-`Inline code`&#x0a;
-&#x0a;
-&#x0a;
-- Unordered list item 1&#x0a;
-- Unordered list item 2&#x0a;
-  - Nested item 2a&#x0a;
-  - Nested item 2b&#x0a;
-&#x0a;
-1. Ordered list item 1&#x0a;
-2. Ordered list item 2&#x0a;
-   1. Nested ordered 2a&#x0a;
-   2. Nested ordered 2b&#x0a;
-&#x0a;
-&#x0a;
-> Blockquote example&#x0a;
->> Nested blockquote&#x0a;
-&#x0a;
-| Header 1 | Header 2 |&#x0a;
-|----------|----------|&#x0a;
-| Cell 1   | Cell 2   |&#x0a;
-| Cell 3   | Cell 4   |&#x0a;
-&#x0a;
-![Sample Image](https://private-user-images.githubusercontent.com/552074/446176752-21950b56-cd28-4574-9a0a-73bb17b89d31.png)&#x0a;
-"/>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:MarkdownSample"
+        mc:Ignorable="d"
+        x:Class="MarkdownSample.MainWindow">
+    <Window.DataContext>
+        <local:MarkdownViewModel/>
+    </Window.DataContext>
+    <Markdown Text="{Binding MarkdownText}" />
+</Window>
+```
+
+#### ViewModel Example (Load from File)
+
+[Example.md](./Example.md)
+
+```csharp
+namespace MarkdownSample;
+
+public class MarkdownViewModel
+{
+    public string MarkdownText { get; }
+
+    public MarkdownViewModel()
+    {
+        MarkdownText = File.ReadAllText("Example.md");
+    }
+}
 ```
 
 ### C# Usage
