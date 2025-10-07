@@ -22,9 +22,14 @@ Bring modern web content into your Avalonia applications seamlessly. With Accele
 
 Deliver immersive multimedia experiences right out of the box. Avalonia Accelerate’s MediaPlayer module provides native playback of video and audio content, supporting various formats across Windows, macOS, and Linux, ensuring your users enjoy smooth, high-quality media playback everywhere.
 
+### [Markdown Control](./components/markdown/quickstart)
+
+Render rich Markdown content in your Avalonia applications with custom styling and selection support. The Markdown control makes it easy to display documentation, formatted text, and interactive content.
+
 ### [Tree Data Grid](./components/treedatagrid/quickstart)
 
-Deliver immersive multimedia experiences right out of the box. Avalonia Accelerate’s MediaPlayer module provides native playback of video and audio content, supporting various formats across Windows, macOS, and Linux, ensuring your users enjoy smooth, high-quality media playback everywhere.
+Deliver immersive multimedia experiences right out of the box. Avalonia Accelerate’s MediaPlayer module provides native playback of video and audio content, supporting various formats across Windows, macOS, and Linux, ensuring your users enjoy 
+smooth, high-quality media playback everywhere.
 
 ## Upcoming: Enhanced Visual Studio Extension (Preview)
 
