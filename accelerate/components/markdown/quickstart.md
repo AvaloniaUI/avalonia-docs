@@ -39,15 +39,5 @@ var markdown = new Markdown
 
 You can override named resources for custom styling. See the [Markdown Styling and Customization](styling.md) page for details.
 
-## License Key
-
-Add your Avalonia UI license key to your project file (`.csproj`):
-
-```xml
-<ItemGroup>
-  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
-</ItemGroup>
-```
-
 ## Related Links
 - [Markdown Overview](markdown.md)
