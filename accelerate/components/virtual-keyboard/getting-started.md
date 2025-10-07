@@ -11,16 +11,36 @@ The Virtual Keyboard component includes two main controls:
 
 ## Installation
 
+### Confugure NuGet package sources and license keys
+
 See the [Installation Guide](../../installation.md) for step-by-step instructions on configuring the NuGet package source and license key.
 
 - [Option 1: Configure via nuget.config](../../installation.md#option-1-configure-via-nugetconfig-recommended)
 - [Option 2: Configure via Visual Studio](../../installation.md#option-2-configure-via-visual-studio)
 
-Add the Virtual Keyboard package to your project:
+### Add the Virtual Keyboard package to your project:
 
 ```bash
-dotnet add package Avalonia.Controls.Keyboard
+dotnet add package Avalonia.Controls.VirtualKeyboard
 ```
+
+### Include the Control Theme
+
+To ensure the virtual keyboard is properly styled, add the keyboard theme to your application. Open your `App.axaml` file and include the following within the `Application.Styles` section:
+
+```xml
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="YourNamespace.App">
+    <Application.Styles>
+        <FluentTheme />
+        <!-- Include the Virtual Keyboard theme -->
+        <StyleInclude Source="avares://Avalonia.Controls.VirtualKeyboard/Themes/Fluent.axaml"/>
+    </Application.Styles>
+</Application>
+```
+
+
 
 ## Requirements
 
@@ -57,12 +77,11 @@ For more control, you can also use the `VirtualKeyboard` control directly and sp
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vk="clr-namespace:Avalonia.Controls.Keyboard;assembly=Avalonia.Controls.Keyboard"
         Title="Virtual Keyboard Sample"
         Width="400" Height="600">
     <StackPanel>
         <TextBox x:Name="InputBox" Width="300" Margin="10"/>
-        <vk:VirtualKeyboard Target="{Binding ElementName=InputBox}" 
+        <VirtualKeyboard Target="{Binding ElementName=InputBox}" 
                            InputMethods="en-US:kbd:standard, de:kbd:standard, ja:ime:kana"
                            Margin="10"/>
     </StackPanel>
