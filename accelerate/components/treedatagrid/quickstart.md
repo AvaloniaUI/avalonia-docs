@@ -11,10 +11,12 @@ The control has two modes of operation:
 
 ## Installation
 
-Avalonia Accelerate packages are via [nuget.org](https://www.nuget.org/packages/Avalonia.Controls.TreeDataGrid). To add the `Avalonia.Controls.TreeDataGrid` package to your project:
+See the [Installation Guide](../../installation.md) for step-by-step instructions on how to install Accelerate components.
+
+Add the `TreeDataGrid` package to your project:
 
 ```bash
-dotnet add package Avalonia.Controls.WebView
+dotnet add package Avalonia.Controls.TreeDataGrid
 ```
 
 ### Add the License Key

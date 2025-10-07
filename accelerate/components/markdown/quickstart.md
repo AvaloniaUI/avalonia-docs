@@ -5,10 +5,7 @@ This guide provides a practical introduction to rendering Markdown in Avalonia a
 
 ## Installation
 
-See the [Installation Guide](../../installation.md) for step-by-step instructions on configuring the NuGet package source and license key.
-
-- [Option 1: Configure via nuget.config](../../installation.md#option-1-configure-via-nugetconfig-recommended)
-- [Option 2: Configure via Visual Studio](../../installation.md#option-2-configure-via-visual-studio)
+See the [Installation Guide](../../installation.md) for step-by-step instructions on how to install Accelerate components.
 
 Add the Markdown package to your project:
 

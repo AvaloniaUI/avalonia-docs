@@ -11,18 +11,27 @@ The Virtual Keyboard component includes two main controls:
 
 ## Installation
 
-### Confugure NuGet package sources and license keys
+See the [Installation Guide](../../installation.md) for step-by-step instructions on how to install Accelerate components.
 
-See the [Installation Guide](../../installation.md) for step-by-step instructions on configuring the NuGet package source and license key.
-
-- [Option 1: Configure via nuget.config](../../installation.md#option-1-configure-via-nugetconfig-recommended)
-- [Option 2: Configure via Visual Studio](../../installation.md#option-2-configure-via-visual-studio)
-
-### Add the Virtual Keyboard package to your project:
+Add the Virtual Keyboard package to your project:
 
 ```bash
 dotnet add package Avalonia.Controls.VirtualKeyboard
 ```
+
+### Add the License Key
+
+Include your Avalonia UI license key in the executable project file (`.csproj`):
+
+```xml
+<ItemGroup>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+</ItemGroup>
+```
+
+:::tip
+For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+:::
 
 ### Include the Control Theme
 

@@ -27,7 +27,7 @@ Demo project with Developer Tools preconfigured can be found at [AvaloniaUI/Aval
 
 ## Step 1: Installing AvaloniaUI Developer Tools
 
-`AvaloniaUI Developer Tools` is currently a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
+AvaloniaUI Developer Tools is currently a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
 This guide demonstrates global installation of the tool. But local installation is possible with a limitation: this tool will only work from the same working directory or descendant as the tool installation solution/project.
 
 <Tabs>
