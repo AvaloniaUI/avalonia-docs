@@ -7,22 +7,22 @@ Parcel signs Windows executables and MSI installers using Authenticode certifica
 Before signing Windows applications, ensure you have:
 
 - **Code Signing Certificate**: Valid Authenticode certificate from a trusted Certificate Authority
-- **Windows SDK** (Windows only): Can be installed with Visual Studio Build Tools (on CI) or standard Visual Studio (on Desktop) from [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/)
-- **Java Runtime** (Linux and macOS only): Required for cross-platform signing operations. Parcel expects JAVA_HOME to be set.
+- **Windows SDK** (Windows only): Can be installed with Visual Studio Build Tools (on CI) or Visual Studio (on Desktop) from [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/)
+- **Java Runtime** (Linux and macOS only): Required for cross-platform signing operations. Parcel expects `JAVA_HOME` to be set.
 
 Linux and macOS support is powered by [JSign](https://github.com/ebourg/jsign).
 
 ## Signing Methods
 
-Parcel supports multiple certificate formats depending on development environment and workflow.
+Parcel supports multiple certificate formats depending on your development environment and workflow.
 
 ### Microsoft Trusted Signing (Cross-Platform)
 
 Cloud-based signing service that provides the highest trust level without managing local certificates.
 
-Requires Microsoft Trusted Signing account and Azure authentication. Provides immediate SmartScreen bypass and enhanced security through hardware security modules (HSMs).
+Requires a Microsoft Trusted Signing account and Azure authentication. Provides immediate SmartScreen bypass and enhanced security through hardware security modules (HSMs).
 
-The certificates issued by Azure Trusted Signing have a lifetime of 3 days only, and timestamping is automatically enabled to ensure long term validity of the signature.
+The certificates issued by Azure Trusted Signing have a lifetime of only 3 days, and timestamping is automatically enabled to ensure long-term validity of the signature.
 
 **Required Configuration:**
 - **Trusted Signing Endpoint**: Azure Trusted Signing service endpoint URL (format: `https://[region].codesigning.azure.net/`)
@@ -34,7 +34,7 @@ Please refer to [Microsoft Trusted Signing](https://learn.microsoft.com/en-us/az
 
 ### Azure Key Vault
 
-Store certificates and keys in Azure Key Vault key management system for centralized certificate management.
+Store certificates and keys in the Azure Key Vault key management system for centralized certificate management.
 
 **Required Configuration:**
 - **Azure Key Vault Name**: Name of the Azure Key Vault instance
@@ -86,14 +86,14 @@ Use AWS KMS for private key storage. The certificate must be provided separately
 - **AWS Signing Certificate File**: Path to the certificate file
 - **AWS Signing Key ID or Alias**: AWS KMS key identifier or alias
 
-**Authentication**: Uses AWS credentials from environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`), ECS container credentials, or EC2 IMDSv2 service.
+**Authentication**: Uses AWS credentials from environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`), ECS container credentials, or the EC2 IMDSv2 service.
 
 **Required Permissions:**
 - `kms:ListKeys`
 - `kms:DescribeKey`
 - `kms:Sign`
 
-**FIPS Compliance**: Set `AWS_USE_FIPS_ENDPOINT=true` environment variable to use FIPS endpoints.
+**FIPS Compliance**: Set the `AWS_USE_FIPS_ENDPOINT=true` environment variable to use FIPS endpoints.
 
 ## Troubleshooting
 
@@ -101,7 +101,7 @@ Use AWS KMS for private key storage. The certificate must be provided separately
 
 **Signed executable still triggers SmartScreen warnings**:
 
-This is normal for new certificates and applications. EV certificates and Trusted Signing bypass warnings immediately, while OV certificates require reputation building over time.
+This is normal for new certificates and applications. EV certificates and Microsoft Trusted Signing bypass warnings immediately, while OV certificates require reputation building over time.
 
 ### Getting Help
 
