@@ -5,6 +5,7 @@ const sidebars = {
 
   documentationSidebar: [
     'welcome', 
+    'installation',
     {
       'type': 'category',
       'label': 'Dev Tools',
@@ -47,7 +48,61 @@ const sidebars = {
         'tools/dev-tools/faq',
         'tools/dev-tools/reporting-issues',
       ]
-    },  
+    },
+    {
+      'type': 'category',
+      'label': 'Parcel',
+      'items': [
+        'tools/parcel/getting-started',
+        'tools/parcel/cli-reference',
+        'tools/parcel/mcp',
+        {
+          'type': 'category',
+          'label': 'macOS',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/apple/index'
+          },
+          'items': [
+            'tools/parcel/apple/packaging',
+            'tools/parcel/apple/signing',
+            'tools/parcel/apple/notary'
+          ]
+        }, 
+        {
+          'type': 'category',
+          'label': 'Windows',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/windows/index'
+          },
+          'items': [
+            'tools/parcel/windows/signing',
+            'tools/parcel/windows/installer'
+          ]
+        },
+        {
+          'type': 'category',
+          'label': 'Linux',
+          'link' : {
+            'type' : 'doc',
+            'id': 'tools/parcel/linux/index'
+          },
+          'items': [
+            'tools/parcel/linux/packaging'
+          ]
+        },
+      ]
+    },
+    {
+      'type': 'category',
+      'label': 'VS Extension',
+      'items': [
+        'tools/vs-extension/getting-started',
+        'tools/vs-extension/settings',
+        'tools/vs-extension/previewer',
+      ]
+    },    
     {
       'type': 'category',
       'label': 'Media Player',
@@ -56,6 +111,20 @@ const sidebars = {
         'components/media-player/mediaplayer',
         'components/media-player/mediaplayercontrol',
         'components/media-player/mediasource',
+      ]
+    },    
+    {
+      'type': 'category',
+      'label': 'TreeDataGrid',
+      'items': [
+        'components/treedatagrid/quickstart',
+        'components/treedatagrid/quickstart-flat',
+        'components/treedatagrid/quickstart-hierarchical',
+        'components/treedatagrid/column-types',
+        'components/treedatagrid/selection',
+        'components/treedatagrid/expanding-collapsing',
+        'components/treedatagrid/sorting',
+        'components/treedatagrid/faq',
       ]
     },    
     {
@@ -77,7 +146,33 @@ const sidebars = {
         }, 
       ]
     },    
+    {
+      'type': 'category',
+      'label': 'Virtual Keyboard',
+      'items': [
+        'components/virtual-keyboard/getting-started',
+        'components/virtual-keyboard/virtual-keyboard-scope',
+        'components/virtual-keyboard/virtual-keyboard',
+        'components/virtual-keyboard/input-method-identifiers',
+      ]
+    },
     
+     {
+      'type': 'category',
+      'label': 'Markdown',
+      'items': [
+        'components/markdown/quickstart',
+        'components/markdown/markdown',
+        {
+          'type': 'category',
+          'label': 'Advanced',
+          'items': [
+            'components/markdown/styling',
+            'components/markdown/custom-image-loader'
+          ]
+        }, 
+      ]
+    }
   ],
 };
 
