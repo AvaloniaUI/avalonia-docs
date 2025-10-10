@@ -15,12 +15,14 @@ const config = {
   baseUrl: '/',
   markdown: {
     mermaid: true,
+    hooks : {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
   organizationName: 'avaloniaui', // Usually your GitHub org/user name.
   projectName: 'avalonia', // Usually your repo name.
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'ru', 'zh-Hans'],
