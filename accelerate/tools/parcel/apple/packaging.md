@@ -4,6 +4,20 @@ Parcel creates macOS application bundles (.app) that can be distributed via DMG 
 
 ## Bundle Configuration
 
+### Common Properties
+
+**Application Name**:
+
+Display name used for the app display name, as `CFBundleDisplayName`.
+
+:::note
+Currently cannot be localized.
+:::
+
+**Package Name**:
+
+Package name used as a bundle and output dmg file names.
+
 ### Bundle Properties
 
 Essential bundle metadata that defines how an application appears and behaves on macOS.
@@ -23,24 +37,6 @@ The application category for macOS and App Store classification. This maps to Ap
 **App Icon**:
 
 The application icon in **ICNS** or **SVG** format. ICNS files should include multiple resolutions from 16x16 to 1024x1024 pixels. Parcel generates the bundle icon structure from the source file.
-
-**DMG Background**:
-
-The background image for the DMG installer in TIFF format.
-
-Parcel uses a fixed DMG window size of **660x422** pixels with the following layout:
-
-- **App Bundle icon**: positioned at coordinates (180, 170) with 160px icon size
-- **Applications folder**: positioned at coordinates (480, 170) with 160px icon size  
-- **Text size**: 12px for icon labels
-
-Icons are positioned from the top left corner to the icon center.
-
-Design background images to accommodate these fixed positions and the drag-and-drop workflow.
-
-:::note
-DMG customization is currently limited to background images. A more flexible editor is planned—let us know if we need to prioritize it.
-:::
 
 **Permissions**:
 
@@ -80,6 +76,24 @@ Parcel creates DMG installers with a drag-and-drop interface, custom backgrounds
 
 :::warning
 [WSL2](https://learn.microsoft.com/en-us/windows/wsl/) is required for DMG creation on Windows. ZIP packages can be created without WSL2.
+:::
+
+**DMG Background**:
+
+The background image for the DMG installer in TIFF format.
+
+Parcel uses a fixed DMG window size of **660x422** pixels with the following layout:
+
+- **App Bundle icon**: positioned at coordinates (180, 170) with 160px icon size
+- **Applications folder**: positioned at coordinates (480, 170) with 160px icon size  
+- **Text size**: 12px for icon labels
+
+Icons are positioned from the top left corner to the icon center.
+
+Design background images to accommodate these fixed positions and the drag-and-drop workflow.
+
+:::note
+DMG customization is currently limited to background images. A more flexible editor is planned—let us know if we need to prioritize it.
 :::
 
 ## ZIP Creation
