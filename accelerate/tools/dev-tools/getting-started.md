@@ -37,6 +37,8 @@ This guide demonstrates global installation of the tool. But local installation 
 dotnet tool install --global AvaloniaUI.DeveloperTools
 ```
 
+If you are upgrading app from .NET 8/9 installation, you should first uninstall it with `dotnet tool uninstall --global AvaloniaUI.DeveloperTools.Windows`  or `avdt uninstall`.
+
 Developer Tools can be then updated by running `dotnet tool update` command.
 
 <details>
@@ -50,9 +52,9 @@ dotnet tool update --global AvaloniaUI.DeveloperTools
 
 
 </TabItem>
-<TabItem value="net6" label=".NET 8">
+<TabItem value="net8" label=".NET 8/9">
 
-Before .NET 10, you have to install specific package depending on the running platform.
+I've you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
 
 **Windows:**
 

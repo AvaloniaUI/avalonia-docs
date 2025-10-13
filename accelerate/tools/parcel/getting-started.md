@@ -23,6 +23,8 @@ This guide demonstrates global installation of the tool. Local installation is a
 dotnet tool install --global AvaloniaUI.Parcel
 ```
 
+If you are upgrading app from .NET 8/9 installation, you should first uninstall it with `dotnet tool uninstall --global AvaloniaUI.Parcel.Windows`  or `parcel uninstall`.
+
 Parcel can then be updated by running the `dotnet tool update` command.
 
 <details>
@@ -36,9 +38,9 @@ dotnet tool update --global AvaloniaUI.Parcel
 
 
 </TabItem>
-<TabItem value="net6" label=".NET 8">
+<TabItem value="net8" label=".NET 8/9">
 
-I've you're using a version of the .NET SDK that is older than version 10, you must install a specific package depending on the running platform.
+I've you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
 
 **Windows:**
 
