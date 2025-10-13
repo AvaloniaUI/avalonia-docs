@@ -37,7 +37,7 @@ This guide demonstrates global installation of the tool. But local installation 
 dotnet tool install --global AvaloniaUI.DeveloperTools
 ```
 
-The Developer Tools will notify you when a new version is available. It can be then updated by running `dotnet tool update` command.
+Developer Tools can be then updated by running `dotnet tool update` command.
 
 <details>
 <summary>Developer tools update command</summary>
@@ -72,7 +72,7 @@ dotnet tool install --global AvaloniaUI.DeveloperTools.macOS
 dotnet tool install --global AvaloniaUI.DeveloperTools.Linux
 ```
 
-The Developer Tools will notify you when a new version is available. It can be then updated by running `dotnet tool update` command.
+Developer Tools can be then updated by running `dotnet tool update` command.
 
 <details>
 <summary>Developer tools update commands</summary>

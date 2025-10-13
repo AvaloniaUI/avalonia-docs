@@ -23,10 +23,10 @@ This guide demonstrates global installation of the tool. Local installation is a
 dotnet tool install --global AvaloniaUI.Parcel
 ```
 
-The Developer Tools will notify you when a new version is available. It can then be updated by running the `dotnet tool update` command.
+Parcel can then be updated by running the `dotnet tool update` command.
 
 <details>
-<summary>Developer tools update command</summary>
+<summary>Parcel update command</summary>
 
 ```bash
 dotnet tool update --global AvaloniaUI.Parcel
@@ -58,10 +58,10 @@ dotnet tool install --global AvaloniaUI.Parcel.macOS
 dotnet tool install --global AvaloniaUI.Parcel.Linux
 ```
 
-The Developer Tools will notify you when a new version is available. It can then be updated by running the `dotnet tool update` command.
+Parcel can then be updated by running the `dotnet tool update` command.
 
 <details>
-<summary>Developer tools update commands</summary>
+<summary>Parcel update commands</summary>
 
 **Windows:**
 
