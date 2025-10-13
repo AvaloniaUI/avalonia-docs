@@ -29,6 +29,7 @@ parcel [command] [options]
 | `-?, -h, --help` | Show help and usage information |
 | `--version` | Show version information |
 | `--license-key` | License key necessary to run Parcel. If unset, falls back to the "PARCEL_LICENSE_KEY" environment variable, or existing app session |
+| `--verbosity` | Set the verbosity level (quiet, minimal, normal, detailed, diagnostic) |
 
 ## Commands
 
@@ -75,16 +76,97 @@ parcel step [command] <input> <output> [options]
 
 | Command | Description | Input | Output |
 |---------|-------------|-------|--------|
-| `publish` | Publishes .NET project for target platform | - | Published application directory |
+| `publish` | Publishes .NET project for target platform | -unused- | Published application directory |
 | `merge-mac` | Merges multiple architectures into universal macOS app | Directory with arch subdirectories (osx-x64, osx-arm64) | Universal app directory |
-| `bundle-mac` | Packages macOS app into single bundle | macOS app directory | App bundle (.app) |
-| `sign-mac` | Signs macOS app bundle with credentials | App bundle or directory | Signed app bundle |
-| `notary-mac` | Submits app for Apple notarization | Zipped app bundle or DMG | Notarized file |
-| `sign-win` | Signs Windows executable | Application directory | Signed executable |
+| `bundle-mac` | Packages macOS app into single bundle | Application directory | App bundle (.app) |
+| `sign-mac` | Signs macOS app bundle with credentials | App bundle or flat directory | Signed bundle |
+| `notary-mac` | Submits app for Apple notarization | Zipped app bundle or DMG | Notarized file (stapled in case of DMG) |
+| `sign-win` | Signs Windows executable | Application executable or installed | Signed executable or installer |
 | `create-zip` | Creates zip archive for distribution | Directory or file | Zip archive (.zip) |
-| `create-dmg` | Creates DMG disk image for macOS | App bundle (.app) | DMG image file |
+| `create-dmg` | Creates DMG disk image for macOS | App bundle (.app) | Unsigned DMG image file |
 | `create-deb` | Creates Debian package for Linux | Application directory | Debian package (.deb) |
-| `create-nsis` | Creates Windows NSIS installer | Application directory | NSIS installer (.exe) |
+| `create-nsis` | Creates Windows NSIS installer | Application directory | Unsigned NSIS installer (.exe) |
+
+**Example:**
+
+While these commands don't have a strict order, and can be executed independently, standard approach is following per platform.
+
+Any of these steps can be replaced with your scripts allowing for higher flexibility than standard "parcel pack" command.
+
+
+<Tabs>
+<TabItem value="win" label="Windows" default>
+
+```bash
+# `parcel step publish ./ ./publish -r win-x64 -p project.parcel` can be used instead
+dotnet publish -r win-x64 -o ./publish
+
+# signing, with parameters populated from .parcel config file
+parcel step sign-win ./publish ./signed -p project.parcel
+
+# installer
+parcel step create-nsis ./signed ./installer.exe -p project.parcel
+
+# or ZIP archive
+parcel step create-zip ./signed ./archive.zip -p project.parcel
+```
+
+</TabItem>
+<TabItem value="mac" label="macOS">
+
+```bash
+mkdir ./publish
+
+# for universal packages, need to publish both archs
+dotnet publish -r osx-x64 -o ./publish/osx-x64
+dotnet publish -r osx-arm64 -o ./publish/osx-arm64
+
+# merge two archs into a universal one
+parcel step merge-mac ./publish ./merged -p project.parcel
+
+# create app bundle
+parcel step bundle-mac ./merged ./bundle.app -p project.parcel
+
+# signing, with parameters populated from .parcel config file
+parcel step sign-mac ./bundle.app ./signed.app -p project.parcel
+
+# notarization
+parcel step notary-mac ./signed.app ./notarized.app -p project.parcel
+
+# DMG package
+parcel step create-dmg ./notarized.app ./package.dmg -p project.parcel
+
+# or ZIP archive
+parcel step create-zip ./notarized.app ./archive.zip -p project.parcel
+```
+
+:::note
+
+Universal packages are necessary if you aim for native performance on both Intel and Apple Silicon processors, avoiding layer of emulation.
+
+As a downside, universal packages are up to x2 in size of executable binaries.
+
+If you don't need that, `merge-mac` step can be skipped completely.
+
+:::
+
+</TabItem>
+<TabItem value="lin" label="Linux">
+
+
+```bash
+# `parcel step publish ./ ./publish -r linux-x64 -p project.parcel` can be used instead
+dotnet publish -r linux-x64 -o ./publish 
+
+# installer
+parcel step create-deb ./publish ./installer.deb -p project.parcel
+
+# or ZIP archive
+parcel step create-zip ./publish ./archive.zip -p project.parcel
+```
+
+</TabItem>
+</Tabs>
 
 **Common Options:**
 
@@ -92,33 +174,29 @@ parcel step [command] <input> <output> [options]
 - `-w, --overwrite` - Overwrite existing output files
 - `-r, --runtime` - Runtime identifier (for publish command)
 
-### install-build-deps
+### install-tools
 
 Downloads or updates tool dependencies required for the packaging configuration.
 
 ```bash
-parcel install-build-deps <project> [options]
+parcel install-tools [options]
 ```
-
-**Arguments:**
-
-- `<project>` - Parcel project file to load config from
 
 **Options:**
 
 | Option | Description |
-|--------|-------------|---------|
+|--------|-------------|
 | `-r, --runtimes` | Runtime identifiers (can specify multiple) |
 | `-p, --packages` | Package formats: `deb`, `dmg`, `nsis`, `zip` (can specify multiple) |
 
 **Example:**
 
 ```bash
-# Install dependencies for specific platforms and formats
-parcel install-build-deps MyApp.parcel -r win-x64 -r osx-x64 -p nsis -p dmg
+# Install dependencies for specific platforms and package formats
+parcel install-tools -r win-x64 -r osx-x64 -p nsis -p dmg
 ```
 
-For instance, this command will pre-download **NSIS** and **DMG** tooling required for Parcel to run.
+This specific command will pre-download **NSIS** and **DMG** tooling required for Parcel to run.
 
 ### mcp
 
