@@ -4,6 +4,20 @@ Parcel creates macOS application bundles (.app) that can be distributed via DMG 
 
 ## Bundle Configuration
 
+### Common Properties
+
+**Application Name**:
+
+Display name used for the app display name, as `CFBundleDisplayName`.
+
+:::note
+Currently cannot be localized.
+:::
+
+**Package Name**:
+
+Package name used as a bundle and output dmg file names.
+
 ### Bundle Properties
 
 Essential bundle metadata that defines how an application appears and behaves on macOS.
@@ -11,6 +25,10 @@ Essential bundle metadata that defines how an application appears and behaves on
 **Bundle Identifier**:
 
 A unique reverse-DNS identifier for the application (e.g., `com.Company.AppName`). This must follow Apple's reverse DNS notation guidelines. Avoid special characters except dots and hyphens, and ensure the identifier starts with a letter.
+
+**Team ID**:
+
+A unique identifier for your Apple Developer account. Using during signing and notarization process, optional otherwise.
 
 **App Category**:
 
@@ -20,22 +38,6 @@ The application category for macOS and App Store classification. This maps to Ap
 
 The application icon in **ICNS** or **SVG** format. ICNS files should include multiple resolutions from 16x16 to 1024x1024 pixels. Parcel generates the bundle icon structure from the source file.
 
-**DMG Background**:
-
-The background image for the DMG installer in TIFF format.
-
-Parcel uses a fixed DMG window size of **660x422** pixels with the following layout:
-
-- **App Bundle icon**: positioned at coordinates (180, 170) with 160px icon size
-- **Applications folder**: positioned at coordinates (480, 170) with 160px icon size  
-- **Text size**: 12px for icon labels
-
-Design background images to accommodate these fixed positions and the drag-and-drop workflow.
-
-:::note
-DMG customization is currently limited to background images. A more flexible editor is planned—let us know if we need to prioritize it.
-:::
-
 **Permissions**:
 
 System permissions with custom usage descriptions. Each permission requires a usage description that appears in macOS permission dialogs.
@@ -44,6 +46,7 @@ System permissions with custom usage descriptions. Each permission requires a us
 Usage descriptions are mandatory; otherwise, the OS may deny access to system resources.
 :::
 
+<!--- NOT YET AVAILABLE IN STABLE PARCEL
 **File Type Associations**:
 
 Associate the application with specific file types by specifying file extensions (e.g., `.myfile`) and optionally adding MIME types.
@@ -55,6 +58,7 @@ To handle these files in Avalonia applications, see [Activatable Lifetime](https
 Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This enables other applications to launch the app with specific parameters.
 
 To handle URL schemes in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
+--->
 
 ### Custom Info.plist Configuration
 
@@ -72,6 +76,24 @@ Parcel creates DMG installers with a drag-and-drop interface, custom backgrounds
 
 :::warning
 [WSL2](https://learn.microsoft.com/en-us/windows/wsl/) is required for DMG creation on Windows. ZIP packages can be created without WSL2.
+:::
+
+**DMG Background**:
+
+The background image for the DMG installer in TIFF format.
+
+Parcel uses a fixed DMG window size of **660x422** pixels with the following layout:
+
+- **App Bundle icon**: positioned at coordinates (180, 170) with 160px icon size
+- **Applications folder**: positioned at coordinates (480, 170) with 160px icon size  
+- **Text size**: 12px for icon labels
+
+Icons are positioned from the top left corner to the icon center.
+
+Design background images to accommodate these fixed positions and the drag-and-drop workflow.
+
+:::note
+DMG customization is currently limited to background images. A more flexible editor is planned—let us know if we need to prioritize it.
 :::
 
 ## ZIP Creation

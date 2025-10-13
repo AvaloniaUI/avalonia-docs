@@ -1,20 +1,74 @@
 # Windows Packaging
 
-Parcel creates Windows installers (MSI) and portable executables that can be distributed via setup files or ZIP archives. The tool handles executable configuration, registry entries, and file associations, and can create Windows packages on all supported platforms.
+Parcel creates Windows installers (NSIS executable) and portable executables that can be distributed via setup files or ZIP archives. The tool handles executable configuration, registry entries, and can create Windows packages on all supported platforms.
 
 ## Package Configuration
 
-### Application Properties
+### Common Properties
 
-Essential application metadata that defines how the application appears and behaves on Windows.
+**Application Name**:
+
+Display name used for the application install directory, Start Menu entry, and shortcut file name.
+
+:::note
+Currently cannot be localized.
+:::
+
+**Package Name**:
+
+The output installer file name (without extension).
+
+### NSIS Installer Properties
+
+Parcel uses NSIS (Nullsoft Scriptable Install System) that creates lightweight, self-extracting installers with flexible installation options.
 
 **Company**:
 
-The publisher name displayed in Windows properties, installers, and system dialogs. This is used to organize applications in Program Files and registry entries.
+The publisher name displayed in Windows properties, installers, and system dialogs. This name is used to organize applications in Program Files and registry entries when **Create Company Folder** is enabled.
 
-**App Icon**:
+**Create Company Folder**:
 
-The application icon in **ICO** or **SVG** format. ICO files should include multiple resolutions from 16x16 to 256x256 pixels. Parcel generates the executable icon and installer resources from the source file.
+When enabled, the application will be installed in a company-specific subdirectory:
+- Admin install: `Program Files\[Company]\[Application Name]\`
+- User install: `%LocalAppData%\[Company]\[Application Name]\`
+
+This also affects the Start Menu shortcut location, organizing shortcuts under `Start Menu\Programs\[Company]\[Application Name]`.
+
+Default: false.
+
+**Installer Icon**:
+
+The installer icon in **ICO** or **SVG** format. ICO files should include multiple resolutions from 16x16 to 256x256 pixels. This icon appears in Windows Explorer for the installer executable, during installation, and in the Windows uninstaller list.
+
+:::note
+This is separate from the application icon. 
+
+Application icon is defined by the standard .NET `<ApplicationIcon>file.ico</ApplicationIcon>` property in the .csproj file.
+:::
+
+**Requires Admin**:
+
+Controls whether the installer requires administrator privileges for installation.
+
+When enabled (default), the application is installed to `Program Files` and requires User Account Control (UAC) elevation. When disabled, the application is installed to the current user's `%LocalAppData%` directory without requiring elevation.
+
+Default: true.
+
+**Include Uninstaller**:
+
+When enabled, Parcel includes an uninstaller executable with the application and creates an entry in Windows Settings > Apps & Features (or Control Panel > Programs and Features on older Windows versions).
+
+Default: true.
+
+**License File**:
+
+Optional license file to be displayed during installation. Supported formats:
+- Plain text (.txt)
+- Rich Text Format (.rtf)
+
+The license is displayed on a dedicated page during installation, and users must accept it to proceed.
+
+<!--- NOT YET AVAILABLE IN STABLE PARCEL
 
 **File Type Associations**:
 
@@ -24,24 +78,8 @@ To handle these files in Avalonia applications, see [Activatable Lifetime](https
 
 **URL Scheme Handlers**:
 
-Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This creates registry entries that enable other applications to launch your app with specific parameters.
+Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This creates registry entries that enable other applications and web browsers to launch your app with specific parameters.
 
 To handle URL schemes in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
 
-### Installer Configuration
-
-**Installation Directory**:
-
-Default installation path, typically under `Program Files` or `Program Files (x86)`. Users can change this during installation unless restricted by enterprise policies.
-
-**Start Menu Integration**:
-
-Automatically creates Start Menu shortcuts with optional folder organization. Supports both user and system-wide installations.
-
-**Desktop Shortcut**:
-
-Optionally creates a desktop shortcut with user consent during the installation process.
-
-**Uninstaller**:
-
-Automatically registers an uninstaller in Windows Add/Remove Programs with proper cleanup of files, registry entries, and shortcuts.
+--->

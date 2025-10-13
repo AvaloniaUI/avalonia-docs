@@ -177,6 +177,6 @@ NativeWebDialog also supports libwebkit2gtk-4.0 and soup-2.4 for older Ubuntu di
 
 For detailed API documentation, see:
 
-- [NativeWebView API](/accelerate/components/webview/nativewebview.md)
-- [NativeWebDialog API](/accelerate/components/webview/nativewebdialog.md)
-- [WebAuthenticationBroker API](/accelerate/components/webview/webauthenticationbroker.md)
+- [NativeWebView API](../../../accelerate/components/webview/nativewebview.md)
+- [NativeWebDialog API](../../../accelerate/components/webview/nativewebdialog.md)
+- [WebAuthenticationBroker API](../../../accelerate/components/webview/webauthenticationbroker.md)

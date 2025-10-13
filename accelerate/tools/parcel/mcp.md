@@ -61,6 +61,36 @@ VSCode will generate a `.vscode/mcp.json` file:
 }
 ```
 
+### Adding MCP Server in Claude Desktop
+
+1. Open Claude's Setting -> Developer page, you will find "Edit Config" button
+2. This button opens "claude_desktop_config.json" manifest file.
+3. Edit this file to include Parcel MCP server:
+
+```json
+{
+    "mcpServers": {
+        "parcel": {
+            "command": "parcel",
+            "args": [
+                "mcp"
+            ],
+            "env": {
+                "PARCEL_LICENSE_KEY": "YOUR_ACCELERATE_LICENSE_KEY"
+            }
+        }
+    }
+}
+```
+
+4. You will also likely need standard FileSystem MCP server in addition to Parcel MCP. Claude Desktop doesn't have it enabled by default.
+
+:::note
+
+Unlike VSCode, in our testing, Claude Desktop didn't pass system-wide env variable to the MCP servers. Which is why this config has `PARCEL_LICENSE_KEY` defined explicitly.
+
+:::
+
 ## Capabilities
 
 Once the MCP server is configured, your AI assistant can help with:
