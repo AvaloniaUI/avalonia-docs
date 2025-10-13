@@ -12,6 +12,10 @@ Essential bundle metadata that defines how an application appears and behaves on
 
 A unique reverse-DNS identifier for the application (e.g., `com.Company.AppName`). This must follow Apple's reverse DNS notation guidelines. Avoid special characters except dots and hyphens, and ensure the identifier starts with a letter.
 
+**Team ID**:
+
+A unique identifier for your Apple Developer account. Using during signing and notarization process, optional otherwise.
+
 **App Category**:
 
 The application category for macOS and App Store classification. This maps to Apple's `public.app-category.*` identifiers.
@@ -29,6 +33,8 @@ Parcel uses a fixed DMG window size of **660x422** pixels with the following lay
 - **App Bundle icon**: positioned at coordinates (180, 170) with 160px icon size
 - **Applications folder**: positioned at coordinates (480, 170) with 160px icon size  
 - **Text size**: 12px for icon labels
+
+Icons are positioned from the top left corner to the icon center.
 
 Design background images to accommodate these fixed positions and the drag-and-drop workflow.
 

@@ -28,7 +28,8 @@ Parcel uses [rcodesign](https://github.com/indygreg/apple-platform-rs/tree/main/
 
 ## Create Developer Certificate
 
-### Method 1: Keychain (macOS Only)
+<Tabs>
+<TabItem value="keychain" label="Keychain (macOS Only)" default>
 
 Requires a macOS machine for initial setup.
 
@@ -47,10 +48,12 @@ Requires a macOS machine for initial setup.
 11. Import the certificate into Keychain
 
 :::tip
-Export the certificate as P12 to enable cross-platform signing without requiring macOS.
+Export the certificate as P12 to enable cross-platform signing without requiring macOS after this step.
 :::
 
-### Method 2: OpenSSL (Cross-Platform)
+</TabItem>
+
+<TabItem value="openssl" label="OpenSSL (Cross-Platform)">
 
 Generate certificates on any platform using OpenSSL.
 
@@ -91,9 +94,13 @@ Generate certificates on any platform using OpenSSL.
 
     Set a secure password when prompted.
 
-:::note
+:::tip
 The resulting `certificate.p12` and password can be used with Parcel on any platform.
 :::
+
+</TabItem>
+
+</Tabs>
 
 ## Troubleshooting
 
