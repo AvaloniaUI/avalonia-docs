@@ -16,6 +16,7 @@ The publisher name displayed in Windows properties, installers, and system dialo
 
 The application icon in **ICO** or **SVG** format. ICO files should include multiple resolutions from 16x16 to 256x256 pixels. Parcel generates the executable icon and installer resources from the source file.
 
+<!--- NOT YET AVAILABLE IN STABLE PARCEL
 **File Type Associations**:
 
 Associate the application with specific file types by specifying file extensions (e.g., `.myfile`) and optionally adding MIME types and custom icons. This creates registry entries for proper Windows Explorer integration.
@@ -27,6 +28,8 @@ To handle these files in Avalonia applications, see [Activatable Lifetime](https
 Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This creates registry entries that enable other applications to launch your app with specific parameters.
 
 To handle URL schemes in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
+
+--->
 
 ### Installer Configuration
 

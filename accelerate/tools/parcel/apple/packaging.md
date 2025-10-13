@@ -44,6 +44,7 @@ System permissions with custom usage descriptions. Each permission requires a us
 Usage descriptions are mandatory; otherwise, the OS may deny access to system resources.
 :::
 
+<!--- NOT YET AVAILABLE IN STABLE PARCEL
 **File Type Associations**:
 
 Associate the application with specific file types by specifying file extensions (e.g., `.myfile`) and optionally adding MIME types.
@@ -55,6 +56,7 @@ To handle these files in Avalonia applications, see [Activatable Lifetime](https
 Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This enables other applications to launch the app with specific parameters.
 
 To handle URL schemes in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
+--->
 
 ### Custom Info.plist Configuration
 
