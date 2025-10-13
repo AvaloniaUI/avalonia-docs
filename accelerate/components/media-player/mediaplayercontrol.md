@@ -20,7 +20,7 @@ interface for media playback.
 |------------------------------|-----------|------------------------------------------------------------------------------|
 | Position                     | TimeSpan  | Gets or sets the current playback position.                                  |
 | Duration                     | TimeSpan? | Gets the total duration of the current media. Null for non-seekable media.   |
-| <a name="skipTime"/>SkipTime | TimeSpan  | Gets or sets the time to skip with forward/backward commands (default: 10s). |
+| SkipTime                     | TimeSpan  | Gets or sets the time to skip with forward/backward commands (default: 10s). |
 
 ### State Properties
 

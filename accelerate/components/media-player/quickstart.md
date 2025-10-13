@@ -337,4 +337,4 @@ For more detailed information on the components:
 
 - [MediaPlayerControl](mediaplayercontrol.md)
 - [MediaPlayer](mediaplayer.md)
-- [MediaSource](MediaSource.html)
+- [MediaSource](mediasource.md)
