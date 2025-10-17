@@ -2,18 +2,18 @@
 
 import ReactiveUIRoutingScreenshot from '/img/concepts/reactiveui/reactiveui-routing.gif';
 
-[ReactiveUI 路由](https://reactiveui.net/docs/handbook/routing/)由包含当前 [RoutingState](https://reactiveui.net/api/reactiveui/routingstate/) 的 [IScreen](https://reactiveui.net/api/reactiveui/iscreen/)、多个 [IRoutableViewModel](https://reactiveui.net/api/reactiveui/iroutableviewmodel/) 和一个特定于平台的 XAML 控件 [RoutedViewHost](https://github.com/AvaloniaUI/Avalonia/blob/55458cf7af24d6c987268ab5ff8a1ead1173310b/src/Avalonia.ReactiveUI/RoutedViewHost.cs) 组成。`RoutingState` 管理视图模型导航堆栈，并允许视图模型导航到其他视图模型。`IScreen` 是导航堆栈的根；尽管名称如此，但它的视图不必占据整个屏幕。`RoutedViewHost` 监视 `RoutingState` 的实例，通过创建和嵌入适当的视图来响应导航堆栈中的任何更改。
+[ReactiveUI 路由](https://reactiveui.net/docs/handbook/routing/)由包含当前 [RoutingState](https://reactiveui.net/api/reactiveui/routingstate/) 的 [IScreen](https://reactiveui.net/api/reactiveui/iscreen/)、多个 [IRoutableViewModel](https://reactiveui.net/api/reactiveui/iroutableviewmodel/) 和一个特定于平台的 XAML 控件 [RoutedViewHost](https://github.com/reactiveui/ReactiveUI.Avalonia/blob/main/src/ReactiveUI.Avalonia/RoutedViewHost.cs) 组成。`RoutingState` 管理视图模型导航堆栈，并允许视图模型导航到其他视图模型。`IScreen` 是导航堆栈的根；尽管名称如此，但它的视图不必占据整个屏幕。`RoutedViewHost` 监视 `RoutingState` 的实例，通过创建和嵌入适当的视图来响应导航堆栈中的任何更改。
 
 ## 路由示例
 
-从 Avalonia 模板创建一个新的空项目。要使用这些模板，请克隆 [avalonia-dotnet-templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates) 存储库，安装模板，并基于 `avalonia.app` 模板创建一个名为 `RoutingExample` 的新项目。将 `Avalonia.ReactiveUI` 包安装到项目中。
+从 Avalonia 模板创建一个新的空项目。要使用这些模板，请克隆 [avalonia-dotnet-templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates) 存储库，安装模板，并基于 `avalonia.app` 模板创建一个名为 `RoutingExample` 的新项目。将 `ReactiveUI.Avalonia` 包安装到项目中。
 
 ```bash
 git clone https://github.com/AvaloniaUI/avalonia-dotnet-templates
 dotnet new --install ./avalonia-dotnet-templates
 dotnet new avalonia.app -o RoutingExample
 cd ./RoutingExample
-dotnet add package Avalonia.ReactiveUI
+dotnet add package ReactiveUI.Avalonia
 ```
 
 **FirstViewModel.cs**

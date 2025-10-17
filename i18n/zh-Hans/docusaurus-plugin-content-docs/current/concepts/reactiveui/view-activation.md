@@ -4,7 +4,7 @@ description: CONCEPTS - ReactiveUI
 
 # 查看激活
 
-为了使[WhenActivated](https://reactiveui.net/docs/handbook/when-activated/) ReactiveUI功能正常工作，您需要使用`Avalonia.ReactiveUI`包中的自定义基类，例如`ReactiveWindow<TViewModel>`或`ReactiveUserControl<TViewModel>`。当然，您也可以手动在类中实现`IViewFor<TViewModel>`接口，但请确保将`ViewModel`存储在`AvaloniaProperty`中。
+为了使[WhenActivated](https://reactiveui.net/docs/handbook/when-activated/) ReactiveUI功能正常工作，您需要使用`ReactiveUI.Avalonia`包中的自定义基类，例如`ReactiveWindow<TViewModel>`或`ReactiveUserControl<TViewModel>`。当然，您也可以手动在类中实现`IViewFor<TViewModel>`接口，但请确保将`ViewModel`存储在`AvaloniaProperty`中。
 
 ### 激活示例
 
