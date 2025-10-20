@@ -18,14 +18,14 @@ _ReactiveUI_是一个高级的、可组合的、功能反应式的模型-视图-
 有关函数式反应式编程的完整技术背景，请参阅维基百科文章[这里](https://en.wikipedia.org/wiki/Functional\\_reactive\\_programming)。
 :::
 
-_Avalonia UI_附带了自己的_ReactiveUI_分支，位于`Avalonia.ReactiveUI` _NuGet_包中。
+_Avalonia UI_通过`ReactiveUI.Avalonia` _NuGet_包与_ReactiveUI_集成。
 
 <img src={ReactiveUINuGetScreenshot} alt=""/>
 
 要在您的_Avalonia UI_应用程序中使用_ReactiveUI_和MVVM模式，请使用_NuGet_包管理器（如上所示）将包添加到您的项目中，或执行以下CLI命令：
 
 ```bash
-dotnet add package Avalonia.ReactiveUI
+dotnet add package ReactiveUI.Avalonia
 ```
 
 :::info

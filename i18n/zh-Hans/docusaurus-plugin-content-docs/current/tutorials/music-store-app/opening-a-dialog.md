@@ -157,7 +157,7 @@ this.WhenActivated(action =>
 您的整个文件现在应该如下所示：
 
 ```csharp
-using Avalonia.ReactiveUI;
+using ReactiveUI.Avalonia;
 using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System.Threading.Tasks;
