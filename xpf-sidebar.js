@@ -38,7 +38,6 @@ const sidebars = {
     {
       'type': 'category',
       'label': 'Advanced',
-      'key': 'Advanced-xpf',
       'items': [
           'advanced/avalonia-interop',
           'advanced/centralized-management',
