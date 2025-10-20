@@ -64,7 +64,7 @@ The two suggested workflows are:
 
 ### Requirements
 
-- **Node version >= 20**
+- **Node version >= 18**
 
 ### Setup
 
