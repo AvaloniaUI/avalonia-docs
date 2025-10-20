@@ -142,7 +142,7 @@ Requires Android API 21 or higher.
 \* For Linux, use NativeWebDialog instead of NativeWebView  
 \** Uses NativeWebDialog implementation  
 \*** Android support is experimental  
-\**** Requires CORS configuration for the redirect page
+\**** Requires CORS configuration for the redirect page. .NET 10 is also necessary to run this library in browser.
 
 ## Next Steps
 
