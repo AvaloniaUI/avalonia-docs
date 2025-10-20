@@ -35,7 +35,7 @@ const sidebars = {
         }, 
         {
           'type': 'category',
-          'label': 'Advanced',
+          'label': 'Advanced Markdown',
           'items': [
             'tools/dev-tools/advanced/options-reference', 
             'tools/dev-tools/advanced/attaching-browser-or-mobile',      
