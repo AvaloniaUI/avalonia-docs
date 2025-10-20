@@ -101,4 +101,4 @@ Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/e
 
 \* Apple platforms use ASWebAuthenticationSession implementation.  
 \** Android uses CustomTabsIntent implementation, but support is experimental and might be changed.  
-\*** Browser solution requires CORS to be configured to allow access to the redirected page.  
+\*** Browser solution requires CORS to be configured to allow access to the redirected page. .NET 10 is also necessary to run this library in browser.
