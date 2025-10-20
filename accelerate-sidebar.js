@@ -37,6 +37,7 @@ const sidebars = {
         {
           'type': 'category',
           'label': 'Advanced',
+          'key': 'Advanced-accelerate',
           'items': [
             'tools/dev-tools/advanced/options-reference', 
             'tools/dev-tools/advanced/attaching-browser-or-mobile',      
