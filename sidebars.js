@@ -209,7 +209,6 @@ const sidebars = {
             {
               'type': 'category',
               'label': 'Data Binding',
-              'key': 'Data-Binding-basics',
               'link': {
                 'type': 'doc',
                 'id': 'basics/data/data-binding/index',
@@ -267,7 +266,6 @@ const sidebars = {
         {
           'type': 'category',
           'label': 'Data Binding',
-          'key': 'Data-Binding-guides',
           'items': [
             'guides/data-binding/inotifypropertychanged',
             'guides/data-binding/binding-classes',
