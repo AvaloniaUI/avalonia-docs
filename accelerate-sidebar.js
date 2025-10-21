@@ -36,7 +36,7 @@ const sidebars = {
         }, 
         {
           'type': 'category',
-          'label': 'Advanced Markdown',
+          'label': 'Advanced Tools',
           'items': [
             'tools/dev-tools/advanced/options-reference', 
             'tools/dev-tools/advanced/attaching-browser-or-mobile',      
@@ -165,7 +165,7 @@ const sidebars = {
         'components/markdown/markdown',
         {
           'type': 'category',
-          'label': 'Advanced',
+          'label': 'Advanced Markdown',
           'items': [
             'components/markdown/styling',
             'components/markdown/custom-image-loader'
