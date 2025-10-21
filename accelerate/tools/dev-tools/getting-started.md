@@ -11,7 +11,7 @@
 | macOS | 13 or newer |
 | Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
 
-No admin/sudo permissions are required to run the tool. A firewall exception might need to be configured, if you plan to use Developer Tools remotely.  
+No admin/sudo permissions are required to run the tool. A firewall exception might need to be configured, if you plan to use Developer Tools remotely.
 
 ### Diagnostics Support requirements
 
@@ -27,51 +27,80 @@ Demo project with Developer Tools preconfigured can be found at [AvaloniaUI/Aval
 
 ## Step 1: Installing AvaloniaUI Developer Tools
 
-`AvaloniaUI Developer Tools` is currently a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
-This guide demonstrates global installation of the tool. But local installation is possible with a limitation: this tool will only work from the same working directory or descendant as the tool installation solution/project.    
+AvaloniaUI Developer Tools is currently a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
+This guide demonstrates global installation of the tool. But local installation is possible with a limitation: this tool will only work from the same working directory or descendant as the tool installation solution/project.
 
-For macOS:
+<Tabs>
+<TabItem value="net10" label=".NET 10+" default>
 
 ```bash
-dotnet tool install --global AvaloniaUI.DeveloperTools.macOS
+dotnet tool install --global AvaloniaUI.DeveloperTools
 ```
 
-For Windows:
+If you are upgrading app from .NET 8/9 installation, you should first uninstall it with `dotnet tool uninstall --global AvaloniaUI.DeveloperTools.Windows`  or `avdt uninstall`.
+
+Developer Tools can be then updated by running `dotnet tool update` command.
+
+<details>
+<summary>Developer tools update command</summary>
+
+```bash
+dotnet tool update --global AvaloniaUI.DeveloperTools
+```
+
+</details>
+
+
+</TabItem>
+<TabItem value="net8" label=".NET 8/9">
+
+I've you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
+
+**Windows:**
 
 ```bash
 dotnet tool install --global AvaloniaUI.DeveloperTools.Windows
 ```
 
-For Linux:
+**macOS:**
+
+```bash
+dotnet tool install --global AvaloniaUI.DeveloperTools.macOS
+```
+
+**Linux:**
 
 ```bash
 dotnet tool install --global AvaloniaUI.DeveloperTools.Linux
 ```
 
-The Developer Tools will notify you when a new version is available. It can be then updated by running `dotnet tool update` command.
+Developer Tools can be then updated by running `dotnet tool update` command.
 
 <details>
 <summary>Developer tools update commands</summary>
 
-To update on macOS:
-
-```bash
-dotnet tool update --global AvaloniaUI.DeveloperTools.macOS
-```
-
-To update on Windows:
+**Windows:**
 
 ```bash
 dotnet tool update --global AvaloniaUI.DeveloperTools.Windows
 ```
 
-To update on Linux:
+**macOS:**
+
+```bash
+dotnet tool update --global AvaloniaUI.DeveloperTools.macOS
+```
+
+**Linux:**
 
 ```bash
 dotnet tool update --global AvaloniaUI.DeveloperTools.Linux
 ```
+
 </details>
 
+</TabItem>
+</Tabs>
 
 ## Step 2: Installing Diagnostics Support package
 
@@ -100,7 +129,9 @@ public override void Initialize()
 {
     AvaloniaXamlLoader.Load(this);
 
+#if DEBUG
     this.AttachDeveloperTools();
+#endif
 }
 ```
 
@@ -118,7 +149,7 @@ Initial execution on `macOS` might take several seconds due to Gatekeeper valida
 
 ## Step 5: Activate the tool
 
-Once the Developer Tools has opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to purchase and license the tool. This is the only time when the tool requires an internet connection. After that, the tool can be used offline or until license key session expires.
+Once the Developer Tools has opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to license the tool. This is the only time when the tool requires an internet connection. After that, the tool can be used offline or until license key session expires.
 
 ![Tool Activation](../../../static/img/dev-tools/tool-activation.png)
 

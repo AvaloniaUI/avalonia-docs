@@ -53,7 +53,7 @@ Typically, there are two possible ways to listen for Avalonia logs
 
 ### .LogToTrace in a custom Avalonia initialization
 
-1. Follow [instructions](./customizing-init) on how to setup custom Avalonia initialization.
+1. Follow [instructions](./advanced/customizing-init) on how to setup custom Avalonia initialization.
 2. Then you will be able to call `.LogToTrace()` with optional severity parameter in the AppBuilder chain, like this:
 ```diff
         AppBuilder.Configure<AvaloniaUI.Xpf.Helpers.DefaultXpfAvaloniaApplication>()

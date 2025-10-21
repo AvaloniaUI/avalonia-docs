@@ -495,7 +495,7 @@ find "$APP_NAME/Contents/Frameworks/"|while read fname; do
 done
 
 echo "[INFO] Signing app executable"
-codesign --force --entitlements "$FILE_ENTITLEMENTS" --sign "$APP_SIGNING_IDENTITY" "App/AppName.app/Contents/MacOS/AppName"
+codesign --force --entitlements "$APP_ENTITLEMENTS" --sign "$APP_SIGNING_IDENTITY" "App/AppName.app/Contents/MacOS/AppName"
 
 echo "[INFO] Signing app bundle"
 codesign --force --entitlements "$APP_ENTITLEMENTS" --sign "$APP_SIGNING_IDENTITY" "$APP_NAME"

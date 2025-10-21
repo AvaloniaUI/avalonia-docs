@@ -15,7 +15,7 @@ The `DataGrid` displays repeating data in a customizable grid. The control can b
 The `DataGrid` needs to be bound to an observable collection in a view model that can be found in a related **data context**.
 
 :::info
-To review the concept behind the **data context**, see [here](../../../basics/data/data-binding/data-context).
+To review the concept behind the **data context**, see [here](./../../../basics/data/data-binding/data-context).
 :::
 
 :::info

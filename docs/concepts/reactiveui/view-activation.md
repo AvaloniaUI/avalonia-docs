@@ -4,7 +4,7 @@ description: CONCEPTS - ReactiveUI
 
 # View Activation
 
-For the [WhenActivated](https://reactiveui.net/docs/handbook/when-activated/) ReactiveUI feature to work, you need to use custom base classes from the `Avalonia.ReactiveUI` package, such as `ReactiveWindow<TViewModel>` or `ReactiveUserControl<TViewModel>`. Of course, you can also implement the `IViewFor<TViewModel>` interface by hand in your class, but make sure you store the `ViewModel` in an `AvaloniaProperty`.
+For the [WhenActivated](https://reactiveui.net/docs/handbook/when-activated/) ReactiveUI feature to work, you need to use custom base classes from the `ReactiveUI.Avalonia` package, such as `ReactiveWindow<TViewModel>` or `ReactiveUserControl<TViewModel>`. Of course, you can also implement the `IViewFor<TViewModel>` interface by hand in your class, but make sure you store the `ViewModel` in an `AvaloniaProperty`.
 
 ### Activation Example
 

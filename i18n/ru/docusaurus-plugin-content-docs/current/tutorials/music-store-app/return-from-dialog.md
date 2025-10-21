@@ -72,7 +72,7 @@ this.WhenActivated(action => action(ViewModel!.BuyMusicCommand.Subscribe(Close))
 Ваш код окна музыкального приложения должен быть похож на указанный ниже:
 
 ```csharp
-using Avalonia.ReactiveUI;
+using ReactiveUI.Avalonia;
 using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System;

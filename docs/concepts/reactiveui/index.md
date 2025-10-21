@@ -18,14 +18,14 @@ _ReactiveUI_ is an advanced, composable, functional reactive model-view-viewmode
 For a full technical background on functional reactive programming, see the Wikipedia article [here](https://en.wikipedia.org/wiki/Functional\_reactive\_programming).
 :::
 
-_Avalonia UI_ ships with its own fork of _ReactiveUI_ in the `Avalonia.ReactiveUI` _NuGet_ package.
+_Avalonia UI_ integrates with _ReactiveUI_ through the `ReactiveUI.Avalonia` _NuGet_ package.
 
 <img src={ReactiveUINuGetScreenshot} alt=""/>
 
 To use _ReactiveUI_ and the MVVM pattern in your _Avalonia UI_ application, add the package to your project using the _NuGet_ package manager (as above), or execute the following CLI command:
 
 ```bash
-dotnet add package Avalonia.ReactiveUI
+dotnet add package ReactiveUI.Avalonia
 ```
 
 :::info

@@ -65,7 +65,7 @@ _ReactiveUI_ 的 `WhenActivated` 方法定义了窗口激活时（在屏幕上�
 您的音乐商店窗口代码后台现在应该如下所示：
 
 ```csharp
-using Avalonia.ReactiveUI;
+using ReactiveUI.Avalonia;
 using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System;

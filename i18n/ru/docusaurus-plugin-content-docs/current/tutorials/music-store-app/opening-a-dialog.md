@@ -170,7 +170,7 @@ this.WhenActivated(action =>
 Теперь ваш файл должен выглядеть следующим образом:
 
 ```csharp
-using Avalonia.ReactiveUI;
+using ReactiveUI.Avalonia;
 using Avalonia.MusicStore.ViewModels;
 using ReactiveUI;
 using System.Threading.Tasks;
