@@ -36,12 +36,13 @@ An entirely new application (not an update to the legacy FOSS solution) for debu
 | Visual Tree Inspector | ✓ | ✓ |
 | Property Editor | ✓ | ✓ |
 | Layout Debugging | ✓ | ✓ |
+| Event Inspection | ✓ | ✓ |
 | 3D View Debugging | ✗ | ✓ |
 | Performance Profiling | ✗ | ✓ |
+| Metrics Visualizer | ✗ | ✓ |
 | Logging | ✗ | ✓ |
-| Event Inspection | ✗ | ✓ |
 | Asset Manager | ✗ | ✓ |
-| In App Overlays | ✗ | ✓ |
+| In App Overlays | Partial | ✓ |
 | Technical Support | ✗ | ✓ |
 
 ### Avalonia Parcel
@@ -61,6 +62,8 @@ A brand new packaging tool built specifically to make packaging Avalonia applica
 | CLI Support | ✗ | ✓ |
 | Package Size Limit | 200MB | None |
 | Technical Support | ✗ | ✓ |
+
+In addition, community-license Parcel allows packaging for the current platform only.
 
 ### What's Not Included:
 - Accelerate UI components:
