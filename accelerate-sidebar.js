@@ -156,7 +156,6 @@ const sidebars = {
         'components/virtual-keyboard/input-method-identifiers',
       ]
     },
-    
      {
       'type': 'category',
       'label': 'Markdown',
@@ -172,7 +171,8 @@ const sidebars = {
           ]
         }, 
       ]
-    }
+    },
+    'community'
   ],
 };
 
