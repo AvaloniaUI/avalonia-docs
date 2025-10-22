@@ -8,45 +8,45 @@ import StackPanelSampleScreenshot from '/img/basics/user-interface/building-layo
 import WrapPanelSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/wrappanel-example.png';
 import UniformGridSampleScreenshot from '/img/basics/user-interface/building-layouts/panels-overview/uniformgrid-example.png';
 
-# Panels Overview
+# Обзор панелей
 
-`Panel` elements are components that control the rendering of elements - their size and dimensions, their position, and the arrangement of their child content. _Avalonia UI_ provides a number of predefined `Panel` elements as well as the ability to construct custom `Panel` elements.
+Элементы `Panel` - это компоненты, которые управляют отрисовкой элементов - их размером и габаритами, их позицией и расположением их дочернего содержимого. _Avalonia UI_ предоставляет ряд предопределенных элементов `Panel`, а также возможность создавать пользовательские элементы `Panel`.
 
-## The Panel Class
+## Класс Panel
 
-`Panel` is the base class for all elements that provide layout support in Avalonia. Derived `Panel` elements are used to position and arrange elements in XAML and code.
+`Panel` является базовым классом для всех элементов, обеспечивающих поддержку макета в Avalonia. Производные элементы `Panel` используются для позиционирования и размещения элементов в XAML и коде.
 
-Avalonia includes a comprehensive suite of derived panel implementations that enable many complex layouts. These derived classes expose properties and methods that enable most standard UI scenarios. Developers who are unable to find a child arrangement behavior that meets their needs can create new layouts by overriding the `ArrangeOverride` and `MeasureOverride` methods. For more information on custom layout behaviors, see [Create a Custom Panel](../../../guides/custom-controls/create-a-custom-panel.md).
+Avalonia включает комплексный набор производных реализаций панелей, которые позволяют создавать множество сложных макетов. Эти производные классы предоставляют свойства и методы, обеспечивающие реализацию большинства стандартных сценариев пользовательского интерфейса. Разработчики, не сумевшие найти поведение размещения дочерних элементов, соответствующее их потребностям, могут создавать новые макеты, переопределяя методы `ArrangeOverride` и `MeasureOverride`. Для получения дополнительной информации о пользовательском поведении макета см. [Создание пользовательской панели](../../../guides/custom-controls/create-a-custom-panel.md).
 
-### Panel Common Members
+### Общие члены Panel
 
-All `Panel` elements support the base sizing and positioning properties defined by `Control`, including `Height`, `Width`, `HorizontalAlignment`, `VerticalAlignment` and `Margin`. For additional information on positioning properties defined by `Control`, see [Alignment, Margins, and Padding Overview](alignment-margins-and-padding.md).
+Все элементы `Panel` поддерживают базовые свойства размера и позиционирования, определенные `Control`, включая `Height`, `Width`, `HorizontalAlignment`, `VerticalAlignment` и `Margin`. Для получения дополнительной информации о свойствах позиционирования, определенных `Control`, см. [Обзор выравнивания, полей и отступов](alignment-margins-and-padding.md).
 
-`Panel` exposes additional properties that are of critical importance in understanding and using layout. The `Background` property is used to fill the area between the boundaries of a derived panel element with a `Brush`. `Children` represents the child collection of elements that the `Panel` is comprised of.
+`Panel` предоставляет дополнительные свойства, имеющие решающее значение для понимания и использования макета. Свойство `Background` используется для заполнения области между границами производного элемента панели с помощью `Brush`. `Children` представляет коллекцию дочерних элементов, из которых состоит `Panel`.
 
-**Attached Properties**
+**Присоединенные свойства**
 
-Derived panel elements make extensive use of attached properties. An attached property is a specialized form of dependency property that does not have the conventional common language runtime (CLR) property "wrapper". Attached properties have a specialized syntax in XAML, which can be seen in several of the examples that follow.
+Производные элементы панели широко используют присоединенные свойства. Присоединенное свойство — это специализированная форма свойства зависимости, которая не имеет обычной «обертки» свойства CLR (common language runtime). Присоединенные свойства имеют специализированный синтаксис в XAML, который можно увидеть в нескольких примерах ниже.
 
-One purpose of an attached property is to allow child elements to store unique values of a property that is actually defined by a parent element. An application of this functionality is having child elements inform the parent how they wish to be presented in the UI, which is extremely useful for application layout.
+Одно из назначений присоединенного свойства — позволить дочерним элементам хранить уникальные значения свойства, которое фактически определено родительским элементом. Применение этой функциональности заключается в том, что дочерние элементы информируют родителя о том, как они хотели бы быть представлены в пользовательском интерфейсе, что чрезвычайно полезно для макета приложения.
 
-### User Interface Panels
+### Панели пользовательского интерфейса
 
-There are several panel classes available in Avalonia that are optimized to support UI scenarios: `Panel`, `Canvas`, `DockPanel`, `Grid`, `StackPanel`, `WrapPanel` and `RelativePanel`. These panel elements are easy to use, versatile, and extensible enough for most applications.
+В Avalonia доступно несколько классов панелей, оптимизированных для поддержки сценариев пользовательского интерфейса: `Panel`, `Canvas`, `DockPanel`, `Grid`, `StackPanel`, `WrapPanel` и `RelativePanel`. Эти элементы панели просты в использовании, универсальны и достаточно расширяемы для большинства приложений.
 
 ## Canvas
 
-The `Canvas` element enables positioning of content according to absolute _x-_ and _y-_ coordinates. Elements can be drawn in a unique location; or, if elements occupy the same coordinates, the order in which they appear in markup determines the order in which the elements are drawn.
+Элемент `Canvas` позволяет позиционировать содержимое в соответствии с абсолютными координатами _x_ и _y_. Элементы могут быть отрисованы в уникальном местоположении; или, если элементы занимают одни и те же координаты, порядок, в котором они появляются в разметке, определяет порядок, в котором элементы отрисовываются.
 
-`Canvas` provides the most flexible layout support of any `Panel`. Height and Width properties are used to define the area of the canvas, and elements inside are assigned absolute coordinates relative to the area of the parent `Canvas`. Four attached properties, `Canvas.Left`, `Canvas.Top`, `Canvas.Right` and `Canvas.Bottom`, allow fine control of object placement within a `Canvas`, allowing the developer to position and arrange elements precisely on the screen.
+`Canvas` обеспечивает наиболее гибкую поддержку макета среди всех `Panel`. Свойства Height и Width используются для определения области холста, а элементам внутри назначаются абсолютные координаты относительно области родительского `Canvas`. Четыре присоединенных свойства, `Canvas.Left`, `Canvas.Top`, `Canvas.Right` и `Canvas.Bottom`, обеспечивают точный контроль размещения объектов в пределах `Canvas`, позволяя разработчику точно позиционировать и располагать элементы на экране.
 
-### ClipToBounds Within a Canvas
+### ClipToBounds в Canvas
 
-`Canvas` can position child elements at any position on the screen, even at coordinates that are outside of its own defined `Height` and `Width`. Furthermore, `Canvas` is not affected by the size of its children. As a result, it is possible for a child element to overdraw other elements outside the bounding rectangle of the parent `Canvas`. The default behavior of a `Canvas` is to allow children to be drawn outside the bounds of the parent `Canvas`. If this behavior is undesirable, the `ClipToBounds` property can be set to `true`. This causes `Canvas` to clip to its own size. `Canvas` is the only layout element that allows children to be drawn outside its bounds.
+`Canvas` может размещать дочерние элементы в любом положении на экране, даже в координатах, которые находятся за пределами его собственных определенных `Height` и `Width`. Кроме того, на `Canvas` не влияет размер его дочерних элементов. В результате дочерний элемент может перерисовать другие элементы за пределами ограничивающего прямоугольника родительского `Canvas`. По умолчанию `Canvas` позволяет дочерним элементам отрисовываться за пределами границ родительского `Canvas`. Если такое поведение нежелательно, свойство `ClipToBounds` можно установить в значение `true`. Это заставляет `Canvas` обрезать содержимое до своего собственного размера. `Canvas` — единственный элемент макета, который позволяет дочерним элементам отрисовываться за пределами своих границ.
 
-### Defining and Using a Canvas
+### Определение и использование Canvas
 
-A `Canvas` can be instantiated simply by using XAML or code. The following example demonstrates how to use `Canvas` to absolutely position content. This code produces three 100-pixel squares. The first square is red, and its top-left (_x, y_) position is specified as (0, 0). The second square is green, and its top-left position is (100, 100), just below and to the right of the first square. The third square is blue, and its top-left position is (50, 50), thus encompassing the lower-right quadrant of the first square and the upper-left quadrant of the second. Because the third square is laid out last, it appears to be on top of the other two squares—that is, the overlapping portions assume the color of the third box.
+`Canvas` можно создать, просто используя XAML или код. Следующий пример демонстрирует, как использовать `Canvas` для абсолютного позиционирования содержимого. Этот код создает три квадрата размером 100 пикселей. Первый квадрат красный, и его верхняя левая позиция (_x, y_) указана как (0, 0). Второй квадрат зеленый, и его верхняя левая позиция — (100, 100), чуть ниже и правее первого квадрата. Третий квадрат синий, и его верхняя левая позиция — (50, 50), таким образом, он охватывает нижний правый квадрант первого квадрата и верхний левый квадрант второго. Поскольку третий квадрат размещается последним, он появляется поверх двух других квадратов, то есть перекрывающиеся части принимают цвет третьего квадрата.
 
 <img className="center" src={CanvasOverlapScreenshot} alt="StackPanel Example" />
 
@@ -110,21 +110,21 @@ myParentCanvas.Children.Add(myCanvas3);
 
 ## DockPanel
 
-The `DockPanel` element uses the `DockPanel.Dock` attached property as set in child content elements to position content along the edges of a container. When `DockPanel.Dock` is set to `Top` or `Bottom`, it positions child elements above or below each other. When `DockPanel.Dock` is set to `Left` or `Right`, it positions child elements to the left or right of each other. The `LastChildFill` property determines the position of the final element added as a child of a `DockPanel`.
+Элемент `DockPanel` использует присоединенное свойство `DockPanel.Dock`, установленное в дочерних элементах содержимого, для позиционирования содержимого вдоль краев контейнера. Когда `DockPanel.Dock` установлен в `Top` или `Bottom`, он располагает дочерние элементы выше или ниже друг друга. Когда `DockPanel.Dock` установлен в `Left` или `Right`, он располагает дочерние элементы слева или справа друг от друга. Свойство `LastChildFill` определяет положение последнего элемента, добавленного в качестве дочернего элемента `DockPanel`.
 
-You can use `DockPanel` to position a group of related controls, such as a set of buttons. Alternately, you can use it to create a "paned" UI.
+Вы можете использовать `DockPanel` для позиционирования группы связанных элементов, таких как набор кнопок. Или вы можете использовать его для создания «панельного» пользовательского интерфейса.
 
-### Sizing to Content
+### Изменение размера по содержимому
 
-If its `Height` and `Width` properties are not specified, `DockPanel` sizes to its content. The size can increase or decrease to accommodate the size of its child elements. However, when these properties are specified and there is no longer room for the next specified child element, `DockPanel` does not display that child element or subsequent child elements and does not measure subsequent child elements.
+Если свойства `Height` и `Width` не указаны, `DockPanel` изменяет размер в соответствии с содержимым. Размер может увеличиваться или уменьшаться в соответствии с размером его дочерних элементов. Однако, когда эти свойства указаны и больше нет места для следующего указанного дочернего элемента, `DockPanel` не отображает этот дочерний элемент или последующие дочерние элементы и не измеряет последующие дочерние элементы.
 
 ### LastChildFill
 
-By default, the last child of a `DockPanel` element will "fill" the remaining, unallocated space. If this behavior is not desired, set the `LastChildFill` property to `false`.
+По умолчанию последний дочерний элемент элемента `DockPanel` «заполняет» оставшееся, нераспределенное пространство. Если такое поведение нежелательно, установите свойство `LastChildFill` в значение `false`.
 
-### Defining and Using a DockPanel
+### Определение и использование DockPanel
 
-The following example demonstrates how to partition space using a `DockPanel`. Five `Border` elements are added as children of a parent `DockPanel`. Each uses a different positioning property of a `DockPanel` to partition space. The final element "fills" the remaining, unallocated space.
+Следующий пример демонстрирует, как разделить пространство с помощью `DockPanel`. Пять элементов `Border` добавляются как дочерние элементы родительского `DockPanel`. Каждый использует различное свойство позиционирования `DockPanel` для разделения пространства. Последний элемент «заполняет» оставшееся, нераспределенное пространство.
 
 <img className="center" src={DockPanelSampleScreenshot} alt="StackPanel Example" />
 
@@ -232,15 +232,15 @@ myDockPanel.Children.Add(myBorder5);
 
 ## Grid
 
-The `Grid` element merges the functionality of an absolute positioning and tabular data control. A `Grid` enables you to easily position and style elements. `Grid` allows you to define flexible row and column groupings, and even provides a mechanism to share sizing information between multiple `Grid` elements.
+Элемент `Grid` объединяет функциональность абсолютного позиционирования и табличного элемента управления данными. `Grid` позволяет легко позиционировать элементы и применять к ним стили. `Grid` позволяет определять гибкие группировки строк и столбцов, и даже предоставляет механизм для обмена информацией о размерах между несколькими элементами `Grid`.
 
-### Sizing Behavior of Columns and Rows
+### Поведение размеров столбцов и строк
 
-Columns and rows defined within a `Grid` can take advantage of `Star` sizing in order to distribute remaining space proportionally. When `Star` is selected as the Height or Width of a row or column, that column or row receives a weighted proportion of remaining available space. This is in contrast to `Auto`, which will distribute space evenly based on the size of the content within a column or row. This value is expressed as `*` or `2*` when using XAML. In the first case, the row or column would receive one times the available space, in the second case, two times, and so on. By combining this technique to proportionally distribute space with a `HorizontalAlignment` and `VerticalAlignment` value of `Stretch` it is possible to partition layout space by percentage of screen space. `Grid` is the only layout panel that can distribute space in this manner.
+Столбцы и строки, определенные в `Grid`, могут использовать преимущества размера `Star` для пропорционального распределения оставшегося пространства. Когда `Star` выбран в качестве высоты или ширины строки или столбца, этот столбец или строка получает взвешенную долю оставшегося доступного пространства. Это отличается от `Auto`, который будет распределять пространство равномерно в зависимости от размера содержимого в столбце или строке. Это значение выражается как `*` или `2*` при использовании XAML. В первом случае строка или столбец получили бы пространство, равное доступному, во втором случае — в два раза больше и так далее. Комбинируя этот метод для пропорционального распределения пространства со значениями `HorizontalAlignment` и `VerticalAlignment`, равными `Stretch`, можно разделить пространство макета по процентам от экранного пространства. `Grid` — единственная панель макета, способная распределять пространство таким образом.
 
-### Defining and Using a Grid
+### Определение и использование Grid
 
-The following example demonstrates how to build a UI similar to that found on the Run dialog available on the Windows Start menu.
+Следующий пример демонстрирует, как создать пользовательский интерфейс, похожий на диалоговое окно "Выполнить", доступное в меню "Пуск" Windows.
 
 <img className="center" src={GridSampleScreenshot} alt="Grid Example App" />
 
@@ -383,15 +383,15 @@ grid1.Children.Add(button3);
 
 ## StackPanel
 
-A `StackPanel` enables you to "stack" elements in an assigned direction. The default stack direction is vertical. The `Orientation` property can be used to control content flow.
+Панель `StackPanel` позволяет «складывать» элементы в заданном направлении. Направление стека по умолчанию — вертикальное. Для управления потоком содержимого можно использовать свойство `Orientation`.
 
-### StackPanel vs. DockPanel
+### StackPanel в сравнении с DockPanel
 
-Although `DockPanel` can also "stack" child elements, `DockPanel` and `StackPanel` do not produce analogous results in some usage scenarios. For example, the order of child elements can affect their size in a `DockPanel` but not in a `StackPanel`. This is because `StackPanel` measures in the direction of stacking at `PositiveInfinity`, whereas `DockPanel` measures only the available size.
+Хотя `DockPanel` также может «складывать» дочерние элементы, `DockPanel` и `StackPanel` не дают аналогичных результатов в некоторых сценариях использования. Например, порядок дочерних элементов может влиять на их размер в `DockPanel`, но не в `StackPanel`. Это происходит потому, что `StackPanel` измеряет в направлении укладки как `PositiveInfinity`, тогда как `DockPanel` измеряет только доступный размер.
 
-### Defining and Using a StackPanel
+### Определение и использование StackPanel
 
-The following example demonstrates how to use a `StackPanel` to create a set of vertically-positioned buttons. For horizontal positioning, set the `Orientation` property to `Horizontal`.
+Следующий пример демонстрирует, как использовать `StackPanel` для создания набора вертикально расположенных кнопок. Для горизонтального расположения установите свойство `Orientation` в значение `Horizontal`.
 
 <img className="center" src={StackPanelSampleScreenshot} alt="StackPanel Example" />
 
@@ -444,9 +444,9 @@ myStackPanel.Children.Add(myButton3);
 
 ## WrapPanel
 
-`WrapPanel` is used to position child elements in sequential position from left to right, breaking content to the next line when it reaches the edge of its parent container. Content can be oriented horizontally or vertically. `WrapPanel` is useful for simple flowing UI scenarios. It can also be used to apply uniform sizing to all of its child elements.
+`WrapPanel` используется для последовательного размещения дочерних элементов слева направо, с переносом содержимого на следующую строку при достижении края родительского контейнера. Содержимое может быть ориентировано горизонтально или вертикально. `WrapPanel` полезен для простых сценариев плавающего пользовательского интерфейса. Его также можно использовать для применения единого размера ко всем его дочерним элементам.
 
-The following example demonstrates how to create a `WrapPanel` to display `Button` controls that wrap when they reach the edge of their container.
+Следующий пример демонстрирует, как создать `WrapPanel` для отображения элементов управления `Button`, которые переносятся на новую строку при достижении края своего контейнера.
 
 <img className="center" src={WrapPanelSampleScreenshot} alt="StackPanel Example" />
 
@@ -508,30 +508,30 @@ myWrapPanel.Children.Add(btn4);
 </Tabs>
 
 
-### Nested Panel Elements
+### Вложенные элементы панели
 
-`Panel` elements can be nested within each other in order to produce complex layouts. This can prove very useful in situations where one `Panel` is ideal for a portion of a UI, but may not meet the needs of a different portion of the UI.
+Элементы `Panel` могут быть вложены друг в друга для создания сложных макетов. Это может оказаться очень полезным в ситуациях, когда одна `Panel` идеально подходит для части пользовательского интерфейса, но может не соответствовать потребностям другой части пользовательского интерфейса.
 
-There is no practical limit to the amount of nesting that your application can support, however, it is generally best to limit your application to only use those panels that are actually necessary for your desired layout. In many cases, a `Grid` element can be used instead of nested panels due to its flexibility as a layout container. This can increase performance in your application by keeping unnecessary elements out of the tree.
+Нет практического ограничения на количество вложений, которое может поддерживать ваше приложение, однако обычно лучше ограничить ваше приложение, используя только те панели, которые действительно необходимы для желаемого макета. Во многих случаях элемент `Grid` можно использовать вместо вложенных панелей благодаря его гибкости как контейнера макета. Это может повысить производительность вашего приложения, не допуская попадания ненужных элементов в дерево.
 
 ## UniformGrid
 
-The `UniformGrid` is a type of Panel that provides uniform grid layout. This means that it lays out its children in a grid where all cells in the grid have the same size. Unlike the standard `Grid`, `UniformGrid` doesn't support explicit rows and columns, nor does it provide the `Grid.Row` or `Grid.Column` attached properties.
+`UniformGrid` — это тип панели, обеспечивающий однородный макет сетки. Это означает, что он располагает свои дочерние элементы в сетке, где все ячейки в сетке имеют одинаковый размер. В отличие от стандартной `Grid`, `UniformGrid` не поддерживает явные строки и столбцы, а также не предоставляет присоединенные свойства `Grid.Row` или `Grid.Column`.
 
-The primary use case for a `UniformGrid` is when you need to display a collection of items in a grid format where each item takes up an equal amount of space.
+Основной случай использования `UniformGrid` — когда вам нужно отобразить коллекцию элементов в формате сетки, где каждый элемент занимает одинаковое количество места.
 
-### UniformGrid Properties
+### Свойства UniformGrid
 
-* **Rows and Columns**: The `UniformGrid` uses the `Rows` and `Columns` properties to determine the layout of its child elements. If you only set one of these properties, the `UniformGrid` will automatically calculate the other to create a grid that fits the total number of child elements. If you don't set either property, the `UniformGrid` defaults to a 1x1 grid.
+* **Rows и Columns**: `UniformGrid` использует свойства `Rows` и `Columns` для определения макета своих дочерних элементов. Если вы установите только одно из этих свойств, `UniformGrid` автоматически вычислит другое, чтобы создать сетку, соответствующую общему количеству дочерних элементов. Если вы не установите ни одно из свойств, `UniformGrid` по умолчанию будет использовать сетку 1x1.
 
-For example, if you have 12 items and set `Rows` to 3, the `UniformGrid` will automatically create 4 columns. If you set `Columns` to 4, it will automatically create 3 rows.
+Например, если у вас 12 элементов и вы установите `Rows` на 3, `UniformGrid` автоматически создаст 4 столбца. Если вы установите `Columns` на 4, он автоматически создаст 3 строки.
 
-* **FirstColumn**: The`FirstColumn` property allows you to leave a certain number of cells empty in the first row of the grid.
+* **FirstColumn**: Свойство `FirstColumn` позволяет оставить определенное количество ячеек пустыми в первой строке сетки.
 
 
-### Defining and Using a UniformGrid
+### Определение и использование UniformGrid
 
-The following example demonstrates how to define and use a `UniformGrid`. The example creates a `UniformGrid` with 3 rows and 4 columns and adds 12 rectangles as child elements.
+Следующий пример демонстрирует, как определить и использовать `UniformGrid`. Пример создает `UniformGrid` с 3 строками и 4 столбцами и добавляет 12 прямоугольников в качестве дочерних элементов.
 
 <img className="center" src={UniformGridSampleScreenshot} alt="StackPanel Example" />
 
@@ -585,6 +585,6 @@ for (int i = 0; i < 12; i++)
 
 </Tabs>
 
-In the above example, each `Rectangle` is automatically assigned to a cell in the grid in the order they were added.
+В приведенном выше примере каждый `Rectangle` автоматически назначается ячейке в сетке в том порядке, в котором они были добавлены.
 
 
