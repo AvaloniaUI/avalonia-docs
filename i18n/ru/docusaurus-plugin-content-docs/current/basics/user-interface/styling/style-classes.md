@@ -1,25 +1,25 @@
 ---
 id: style-classes
-title: Style Classes
+title: Классы стилей
 ---
 
-# Style Classes
+# Классы стилей
 
-You can assign an _Avalonia UI_ control one or more style classes, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, then use a space-separated list.
+Вы можете назначить элементу управления _Avalonia UI_ один или несколько классов стилей и использовать их для определения выбора стиля. Классы стилей назначаются в элементе управления с помощью атрибута `Classes`. Если вы хотите назначить более одного класса, используйте список с разделителями-пробелами.
 
-For example, this button has both the `h1` and `blue` style classes applied:
+Например, эта кнопка имеет применённые классы стилей `h1` и `blue`:
 
 ```xml
 <Button Classes="h1 blue"/>
 ```
 
-## Pseudo Classes
+## Псевдоклассы
 
-Like in CSS, controls can have pseudo classes; these are classes that are defined in the control itself rather than by the user. The names of pseudo classes in a selector always start with a colon.
+Как и в CSS, элементы управления могут иметь псевдоклассы; это классы, которые определены в самом элементе управления, а не пользователем. Имена псевдоклассов в селекторе всегда начинаются с двоеточия.
 
-For example `:pointerover` pseudo class indicates that the pointer input is currently over (inside the bounds of) a control. (This is pseudo class is the similar to `:hover` in CSS.)
+Например, псевдокласс `:pointerover` указывает, что указатель ввода в настоящее время находится над элементом управления (внутри его границ). (Этот псевдокласс аналогичен `:hover` в CSS.)
 
-This is an example of  a `:pointerover` pseudo class selector:
+Вот пример селектора псевдокласса `:pointerover`:
 
 ```xml
 <StackPanel>
@@ -29,12 +29,12 @@ This is an example of  a `:pointerover` pseudo class selector:
     </Style>
   </StackPanel.Styles>
   <Border>
-    <TextBlock>I will have red background when hovered.</TextBlock>
+    <TextBlock>У меня будет красный фон при наведении.</TextBlock>
   </Border>
 </StackPanel>
 ```
 
-In this example, the pseudo class selector changes properties inside a control template:
+В этом примере селектор псевдокласса изменяет свойства внутри шаблона элемента управления:
 
 ```xml
 <StackPanel>
@@ -43,27 +43,27 @@ In this example, the pseudo class selector changes properties inside a control t
         <Setter Property="TextBlock.Foreground" Value="Red"/>
     </Style>
   </StackPanel.Styles>
-  <Button>I will have red text when pressed.</Button>
+  <Button>У меня будет красный текст при нажатии.</Button>
 </StackPanel>
 ```
 
-Other pseudo classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
+Другие псевдоклассы включают `:focus`, `:disabled`, `:pressed` для кнопок и `:checked` для флажков.
 
 :::info
-For more detail about pseudo classes, see the reference [here](../../../reference/styles/pseudo-classes.md).
+Для получения более подробной информации о псевдоклассах см. справочник [здесь](../../../reference/styles/pseudo-classes.md).
 :::
 
-## Conditional Classes
+## Условные классы
 
-If you need to add or remove a class using a bound condition, then you can use following special syntax:
+Если вам нужно добавить или удалить класс, используя привязанное условие, вы можете использовать следующий специальный синтаксис:
 
 ```xml
 <Button Classes.accent="{Binding IsSpecial}" />
 ```
 
-## Classes in Code
+## Классы в коде
 
-You can manipulate style classes in code using the `Classes` collection:
+Вы можете управлять классами стилей в коде, используя коллекцию `Classes`:
 
 ```csharp
 control.Classes.Add("blue");

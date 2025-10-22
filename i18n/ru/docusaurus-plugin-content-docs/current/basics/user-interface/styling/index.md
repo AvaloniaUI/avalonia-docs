@@ -1,14 +1,14 @@
 ---
 id: index
-title: Styling
+title: Стилизация
 ---
 
-Avalonia provides two primary mechanisms for styling controls:
+Avalonia предоставляет два основных механизма для стилизации элементов управления:
 
-## Styles
+## Стили
 
-- [Styles](styles) are similar to CSS styles and are usually used to style controls based on their content or purpose within the application; for example creating a style for header text blocks.
+- [Стили](styles) похожи на CSS-стили и обычно используются для стилизации элементов управления в зависимости от их содержимого или назначения в приложении; например, создание стиля для текстовых блоков заголовков.
 
-## Control themes
+## Темы элементов управления
 
-- [Control Themes](control-themes) are similar to WPF/UWP styles and are usually used to apply a theme to controls.
+- [Темы элементов управления](control-themes) похожи на стили WPF/UWP и обычно используются для применения темы к элементам управления.
