@@ -25,7 +25,7 @@ A completely rewritten Visual Studio XAML service built from scratch (not an upd
 | Advanced Refactoring | Limited | ✓ |
 | Technical Support | ✗ | ✓ |
 
-*An additional 30+ features are on the roadmap for the Visual Studio Extension which is be exclusive to paying users*
+*An additional 30+ features are on the roadmap for the Visual Studio Extension, which are exclusive to users with a paid license.*
 
 ### Avalonia Dev Tools
 
@@ -84,13 +84,13 @@ Individual developers working on their own equipment, including commercial proje
 ### Small Organizations
 Non-Enterprise organizations where **up to five people** can use the software concurrently.
 
-### Educational Institutions
-Educational and research institutions with **unlimited users** for teaching and academic research.
-
-### Enterprise Definition
+#### "Enterprise" Definition
 An "Enterprise" is defined as an organization with:
 - More than 250 users/PCs, **OR**
 - Annual revenues exceeding €1,000,000
+
+### Educational Institutions
+Educational and research institutions with **unlimited users** for teaching and academic research.
 
 Based on Avalonia's telemetry, **67% of current users** qualify for the Community License at no cost.
 
@@ -103,11 +103,11 @@ A 30-day free trial is available that includes all functionality of paid tools a
 A 6-month grace period is provided for Visual Studio users. When you open Visual Studio, you can click **"Skip until April 13th 2026"** to continue using the new Visual Studio extension with full Community Edition access without requiring signups or license keys.
 
 ### Registration
-Community License registration is available at the [Avalonia customer portal](https://portal.avaloniaui.net).
+Community License registration is available at the [Avalonia portal](https://portal.avaloniaui.net).
 
 ## Telemetry and Data Collection
 
-To improve Avalonia and ensure continued support for free community tools, Avalonia Accelerate collects usage telemetry and crash reports. This data helps us understand tool usage and identify issues that need addressing.
+To improve Avalonia and ensure continued support for free community tools, Avalonia Accelerate collects usage telemetry and crash reports. This data helps us understand tool usage and identify issues.
 
 ### Build Telemetry
 
@@ -142,8 +142,8 @@ The telemetry system looks for license keys in the `LicenseTickets` directory to
 
 For complete transparency, we've made the telemetry collection code open source:
 
-- **Source code**: [AvaloniaStatsTask.cs](https://github.com/AvaloniaUI/Avalonia.BuildServices/blob/main/BuildTask/AvaloniaStatsTask.cs) - Review exactly what data is collected and how
-- **Telemetry Inspector**: A utility application for viewing the telemetry data being collected. Clone and build from [GitHub](https://github.com/AvaloniaUI/Avalonia.BuildServices/tree/main/TelemetryInspector) to verify the data yourself
+- **Source code**: [AvaloniaStatsTask.cs](https://github.com/AvaloniaUI/Avalonia.BuildServices/blob/main/BuildTask/AvaloniaStatsTask.cs) - Review exactly what data is collected and how.
+- **Telemetry Inspector**: A utility application for viewing the telemetry data being collected. Clone and build from [GitHub](https://github.com/AvaloniaUI/Avalonia.BuildServices/tree/main/TelemetryInspector) to verify the data yourself.
 
 ### Crash Reporting (Parcel and Dev Tools Only)
 
@@ -170,7 +170,7 @@ When a crash occurs in Parcel or Dev Tools, the following diagnostic information
 
 3. **Residual PII Disclosure**: Despite these safeguards, we acknowledge that incidental PII may remain embedded in crash data, for example, usernames or machine names appearing in file paths or custom error messages. Under GDPR, such residual data is treated as personal data and handled accordingly.
 
-4. **Data Location**: All crash data is processed in compliance with GDPR requirements.
+4. **Data Location**: All crash data is processed in Europe, in compliance with GDPR requirements.
 
 ### Data Transparency Commitment
 
@@ -233,8 +233,8 @@ The Avalonia telemetry task ([source code](https://github.com/AvaloniaUI/Avaloni
 When you uninstall .NET tools, this directory is not automatically removed due to a limitation of .NET tools. This means the telemetry system continues to operate under Community License settings even after uninstalling the tools.
 
 By manually removing this directory, you ensure that:
-- License information is completely cleared from your system
-- Telemetry reverts to pre-Accelerate behavior
+- License information is completely cleared from your system.
+- Telemetry reverts to pre-Accelerate behavior.
 
 ## Startup Program for Growing Companies
 
@@ -244,10 +244,10 @@ For privately held companies **less than 5 years old** with annual revenue or to
 ## License Compliance
 
 By using the Avalonia Community License, you agree to:
-- Accurately represent your eligibility status
-- Use the tools only for qualifying purposes
-- Comply with all telemetry and data collection terms
-- Upgrade to a paid license if your circumstances change and you no longer qualify
+- Accurately represent your eligibility status.
+- Use the tools only for qualifying purposes.
+- Comply with all telemetry and data collection terms.
+- Upgrade to a paid license if your circumstances change and you no longer qualify.
 
 For complete legal terms, refer to the [Accelerate Community License Agreement](https://avaloniaui.net/legal-center/accelerate-community-license).
 
