@@ -146,11 +146,14 @@ public class AnimalConverter : IValueConverter
 
 ## FuncValueConverter and FuncMultiConverter
 
-You can also implement a `FuncValueConverter` if you don't need to convert back and also not the the `ConverterParameter`. The FuncValueConverter has two generic parameters:
+You can also implement a `FuncValueConverter`. The FuncValueConverter has two or three generic parameters:
 
 * **TIn**: This parameter defines the expected input type. This can also be an array in case you want to use this converter in a MultiBinding.
 
+* **TParam** (optional): This parameter defines the type for `Binding.ConverterParameter` which gets passed in.
+
 * **TOut**: This parameter defines the expected output type.
+
 
 ### Example:
 
@@ -161,13 +164,13 @@ public static class MyConverters
     /// Gets a Converter that takes a number as input and converts it into a text representation
     /// </summary>
     public static FuncValueConverter<decimal?, string> MyConverter { get; } = 
-        new FuncValueConverter<decimal?, string> (num => $"Your number is: '{num}'");
+        new FuncValueConverter<decimal?, string>(num => $"Your number is: '{num}'");
     
     /// <summary>
     /// Gets a Converter that takes several numbers as input and converts it into a text representation
     /// </summary>
     public static FuncMultiValueConverter<decimal?, string> MyMultiConverter { get; } = 
-        new FuncMultiValueConverter<decimal?, string> (num => $"Your numbers are: '{string.Join(", ", num)}'");
+        new FuncMultiValueConverter<decimal?, string>(num => $"Your numbers are: '{string.Join(", ", num)}'");
 }
 ```
 
