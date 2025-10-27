@@ -17,7 +17,10 @@ const config = {
     { from: '/docs/next/guides/graphics-and-animation/how-to-use-page-transitions/page-slide-transition', to: '/docs/guides/graphics-and-animation/page-transitions/cross-fade-page-transition' },
     { from: '/docs/next/guides/graphics-and-animation/how-to-use-page-transitions/page-transition-combinations', to: '/docs/guides/graphics-and-animation/page-transitions/cross-fade-page-transition' },
     // Forgotten empty `upgrade-to-v11` page
-    { from: '/docs/next/reference/upgrade-to-v11', to: '/docs/stay-up-to-date/upgrade-from-0.10' }
+    { from: '/docs/next/reference/upgrade-to-v11', to: '/docs/stay-up-to-date/upgrade-from-0.10' },
+    // Parcel invalid links
+    { from: '/accelerate/tools/parcel/guies/apple-notary', to: '/accelerate/tools/parcel/apple/signing' },
+    { from: '/accelerate/tools/parcel/guies/apple-signing', to: '/accelerate/tools/parcel/apple/notary' }
   ],
   createRedirects(existingPath) {
     const redirects = from10to11.createRedirects(existingPath) || [];
