@@ -44,7 +44,7 @@ To ensure the virtual keyboard is properly styled, add the keyboard theme to you
     <Application.Styles>
         <FluentTheme />
         <!-- Include the Virtual Keyboard theme -->
-        <StyleInclude Source="avares://Avalonia.Controls.Keyboard/Themes/Fluent.axaml"/>
+        <StyleInclude Source="avares://Avalonia.Controls.VirtualKeyboard/Themes/Fluent.axaml"/>
     </Application.Styles>
 </Application>
 ```
