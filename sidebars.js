@@ -432,6 +432,8 @@ const sidebars = {
             'concepts/templates/reusing-data-templates',
             'concepts/templates/creating-data-templates-in-code',
             'concepts/templates/implement-idatatemplate',
+            // Keep old link for backward compatibility, but it belongs in this category
+            'concepts/view-locator'
           ],
         },
         {
@@ -528,8 +530,7 @@ const sidebars = {
         'concepts/templated-controls',
         'concepts/ui-composition',
         'concepts/unhandledexceptions',
-        'concepts/toplevel',
-        'concepts/view-locator'
+        'concepts/toplevel'
       ],
     },
     {
