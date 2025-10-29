@@ -8,7 +8,7 @@ description: CONCEPTS
 ViewLocator is optional and included in default Avalonia templates. You can use explicit [DataTemplates](templates/data-templates-collection.md) instead.
 :::
 
-ViewLocator resolves views for view models in MVVM applications. It implements `IDataTemplate` and maps view model types to view types using naming conventions.
+ViewLocator resolves views for view models in MVVM applications. It implements `IDataTemplate` to map view model types to view types using naming conventions.
 
 ## Default Implementation
 
@@ -45,8 +45,8 @@ public class ViewLocator : IDataTemplate
 }
 ```
 
-- `Match` method checks if the data is a `ViewModelBase`.
-- `Build` method creates the view instance using reflection, or returns an error TextBlock if the view isn't found.
+- The `Match` method checks if the data is a `ViewModelBase`
+- The `Build` method creates the view instance using reflection, or returns an error TextBlock if the view isn't found
 
 ## Registration
 
@@ -103,7 +103,9 @@ public class ViewLocator : IDataTemplate
 }
 ```
 
-Provides compile-time safety, better performance, and is AOT-compatible. Supports IDE refactoring.
+- Compile-time safety and better performance
+- AOT-compatible
+- IDE refactoring support
 
 ### DataTemplates in XAML
 
