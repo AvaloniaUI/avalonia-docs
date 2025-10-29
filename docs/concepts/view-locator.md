@@ -8,17 +8,17 @@ description: CONCEPTS
 ViewLocator is optional and included in default Avalonia templates. You can use explicit [DataTemplates](templates/data-templates-collection.md) instead.
 :::
 
-ViewLocator resolves views for view models in MVVM applications. It implements `IDataTemplate` to map view model types to view types using naming conventions.
+ViewLocator resolves views for view models in MVVM applications. It implements `IDataTemplate` to map view model types to view types.
 
 ## Default Implementation
 
 The default implementation uses reflection. It replaces "ViewModel" with "View" in the fully-qualified type name and searches for the expected view type.
 
+**Example:** `MyApp.ViewModels.MainViewModel` → `MyApp.Views.MainView`
+
 :::tip
 While the reflection-based approach is the simplest to get started with, consider implementing a custom ViewLocator tailored to your application using one of the alternatives below for better performance, type safety, and AOT compatibility.
 :::
-
-**Example:** `MyApp.ViewModels.MainWindowViewModel` → `MyApp.Views.MainWindowView`
 
 ```cs
 public class ViewLocator : IDataTemplate
@@ -71,7 +71,7 @@ Register the ViewLocator in `App.axaml`:
 Once registered, ViewLocator works automatically:
 
 ```csharp
-DataContext = new MainWindowViewModel(); // ViewLocator resolves to MainWindowView
+DataContext = new MainViewModel(); // ViewLocator resolves to MainView
 ```
 
 Or with data binding:
@@ -93,7 +93,7 @@ public class ViewLocator : IDataTemplate
     {
         return data switch
         {
-            MainWindowViewModel vm => new MainWindowView { DataContext = vm },
+            MainViewModel vm => new MainView { DataContext = vm },
             SettingsViewModel vm => new SettingsView { DataContext = vm },
             _ => new TextBlock { Text = $"View not found for {data.GetType().Name}" }
         };
@@ -113,8 +113,8 @@ Define view-viewmodel mappings declaratively:
 
 ```xml
 <Application.DataTemplates>
-    <DataTemplate DataType="{x:Type vm:MainWindowViewModel}">
-        <views:MainWindowView />
+    <DataTemplate DataType="{x:Type vm:MainViewModel}">
+        <views:MainView />
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
         <views:SettingsView />
