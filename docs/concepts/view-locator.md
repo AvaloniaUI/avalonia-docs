@@ -17,7 +17,7 @@ The default implementation uses reflection. It replaces "ViewModel" with "View" 
 **Example:** `MyApp.ViewModels.MainViewModel` → `MyApp.Views.MainView`
 
 :::tip
-While the reflection-based approach is the simplest to get started with, consider implementing a custom ViewLocator tailored to your application using one of the alternatives below for better performance, type safety, and AOT compatibility.
+While the reflection-based approach is the simplest to get started with, consider implementing a custom ViewLocator tailored to your application using one of the alternatives below for better performance, type safety, and ahead-of-time (AOT) compatibility.
 :::
 
 ```cs
@@ -126,7 +126,7 @@ See [DataTemplates Collection](templates/data-templates-collection.md).
 
 ### Dependency Injection / IoC
 
-When using DI, you can integrate ViewLocator with your container to resolve views with their dependencies:
+When using dependency injection (DI), you can integrate ViewLocator with your container to resolve views with their dependencies:
 
 - **Pattern Matching + DI**: Combine pattern matching with `IServiceProvider.GetRequiredService()` for type-safe resolution
 - **Factory Registration**: Register view factories in your DI container that ViewLocator calls
