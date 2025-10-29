@@ -136,16 +136,15 @@ Choose based on whether you need to avoid reflection or prefer simpler configura
 
 ### Source Generators
 
-Use source generators like [StaticViewLocator](https://github.com/wieslawsoltes/StaticViewLocator) for compile-time view resolution:
+You can create a custom source generator to generate ViewLocator code at compile time. This provides zero runtime overhead and full AOT compatibility.
 
-```csharp
-public class ViewLocator : ViewLocatorBase
-{
-    // Code is generated at compile time
-}
-```
+For details on creating source generators, see [Microsoft's Source Generators documentation](https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview).
 
-No reflection, AOT-compatible, and provides compile-time errors for missing views.
+#### Third-Party Options
+
+**[StaticViewLocator](https://github.com/wieslawsoltes/StaticViewLocator)** - A NuGet package that automatically discovers and registers views.
+
+**[ViewLocatorGenerator](https://github.com/peaceshi/Avalonia-NativeAOT-SingleFile)** - An example implementation of a source generator for ViewLocator (not a package, reference implementation).
 
 ## See Also
 
