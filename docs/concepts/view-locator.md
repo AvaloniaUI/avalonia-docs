@@ -14,13 +14,15 @@ ViewLocator resolves views for view models in MVVM applications. It implements `
 
 The default implementation uses reflection. It replaces "ViewModel" with "View" in the fully-qualified type name and searches for the expected view type.
 
+:::tip
+While the reflection-based approach is the simplest to get started with, consider implementing a custom ViewLocator tailored to your application using one of the alternatives below for better performance, type safety, and AOT compatibility.
+:::
+
 **Example:** `MyApp.ViewModels.MainWindowViewModel` → `MyApp.Views.MainWindowView`
 
 ```cs
 public class ViewLocator : IDataTemplate
 {
-    public bool SupportsRecycling => false;
-
     public Control Build(object data)
     {
         var name = data.GetType().FullName!.Replace("ViewModel", "View");
