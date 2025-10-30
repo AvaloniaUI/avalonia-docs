@@ -2,36 +2,35 @@
 description: CONCEPTS
 ---
 
-# The View Locator
+# View Locator
 
+:::info
+ViewLocator является опциональным и включен в стандартные шаблоны Avalonia. Вместо него можно использовать явные [DataTemplates](templates/data-templates-collection.md).
+:::
 
-While the use of the View Locator comes as part of the default templates, it's important to note that it's not a mandatory requirement. It's an optional tool provided to help you structure your Avalonia application using the Model-View-ViewModel (MVVM) design pattern.
+ViewLocator разрешает View для ViewModel в MVVM-приложениях. Он реализует `IDataTemplate` для сопоставления ViewModel и View типов.
 
-The View Locator is a mechanism in Avalonia that is used to resolve the view (user interface) that corresponds to a specific ViewModel. This is a core part of the MVVM (Model-View-ViewModel) pattern, which is a design pattern that separates the development of the graphical user interface from the development of the business logic or back-end logic.
+## Реализация по умолчанию
 
-## How it works
+Реализация по умолчанию использует рефлексию. Она заменяет "ViewModel" на "View" в полном имени типа и ищет ожидаемый тип View.
 
-The View Locator uses naming conventions to map ViewModel types to view types. By default, it replaces every occurrence of the string "ViewModel" within the fully-qualified ViewModel type name with "View".
+**Пример:** `MyApp.ViewModels.MainViewModel` → `MyApp.Views.MainView`
 
-For example, given a ViewModel named `MyApplication.ViewModels.ExampleViewModel`, the View Locator will look for a View named `MyApplication.Views.ExampleView`.
-
-The View Locator is typically used in conjunction with the `DataContext` property, which is used to link a view to its ViewModel.
-
-Here's a simple usage example:
+:::tip
+Хотя подход на основе рефлексии является самым простым, рекомендуется реализовать собственный ViewLocator, адаптированный к вашему приложению, используя одну из приведенных ниже альтернатив для повышения производительности, типобезопасности и совместимости с AOT.
+:::
 
 ```cs
 public class ViewLocator : IDataTemplate
 {
-    public bool SupportsRecycling => false;
-
     public Control Build(object data)
     {
-        var name = data.GetType().FullName.Replace("ViewModel", "View");
+        var name = data.GetType().FullName!.Replace("ViewModel", "View");
         var type = Type.GetType(name);
 
         if (type != null)
         {
-            return (Control)Activator.CreateInstance(type);
+            return (Control)Activator.CreateInstance(type)!;
         }
         else
         {
@@ -46,23 +45,19 @@ public class ViewLocator : IDataTemplate
 }
 ```
 
-In this example, the View Locator is implemented as an `IDataTemplate`. The `Build` method creates the view for the ViewModel, and the `Match` method checks if the data object is a ViewModel that this locator knows how to handle. If you do not have a `ViewModelBase` class, at a minimum your ViewModel must implement `INotifyPropertyChanged`, and the comparison in `Match` should be changed accordingly. 
+- Метод `Match` проверяет, является ли данные экземпляром `ViewModelBase`
+- Метод `Build` создает экземпляр View с помощью рефлексии или возвращает TextBlock с ошибкой, если View не найдена
 
-## Customizing the View Locator
+## Регистрация
 
-You can customize the View Locator to use different conventions. For example, you might want to look for views in a different assembly, or use a different naming convention. To do this, you can implement your own View Locator by creating a class that implements the `IDataTemplate` interface, and replace the default View Locator with your own.
+Зарегистрируйте ViewLocator в `App.axaml`:
 
-## Using the View Locator
-
-By default, the View Locator is referenced in App.axaml as a DataTemplate, in the content of the `Application.DataTemplates` XAML tag. Ensure that its appropriate 'using' statement is in the `xmlns:local` property of the Application root tag.
-
-```xaml
+```xml
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="LearningAvalonia.App"
-             xmlns:local="using:LearningAvalonia"
+             x:Class="MyApp.App"
+             xmlns:local="using:MyApp"
              RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
     <Application.DataTemplates>
         <local:ViewLocator />
     </Application.DataTemplates>
@@ -72,3 +67,87 @@ By default, the View Locator is referenced in App.axaml as a DataTemplate, in th
     </Application.Styles>
 </Application>
 ```
+
+После регистрации ViewLocator работает автоматически:
+
+```csharp
+DataContext = new MainViewModel(); // ViewLocator разрешает в MainView
+```
+
+Или с привязкой данных:
+
+```xml
+<ContentControl Content="{Binding CurrentViewModel}" />
+```
+
+## Альтернативные реализации
+
+### Сопоставление с образцом (Pattern Matching)
+
+Типобезопасный подход без рефлексии:
+
+```csharp
+public class ViewLocator : IDataTemplate
+{
+    public Control Build(object data)
+    {
+        return data switch
+        {
+            MainViewModel vm => new MainView { DataContext = vm },
+            SettingsViewModel vm => new SettingsView { DataContext = vm },
+            _ => new TextBlock { Text = $"View not found for {data.GetType().Name}" }
+        };
+    }
+
+    public bool Match(object data) => data is ViewModelBase;
+}
+```
+
+- Типобезопасность на этапе компиляции и лучшая производительность
+- Совместимость с Native AOT
+- Поддержка рефакторинга в IDE
+
+### DataTemplates в XAML
+
+Декларативное определение сопоставлений View и ViewModel:
+
+```xml
+<Application.DataTemplates>
+    <DataTemplate DataType="{x:Type vm:MainViewModel}">
+        <views:MainView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+        <views:SettingsView />
+    </DataTemplate>
+</Application.DataTemplates>
+```
+
+См. [DataTemplates коллекция](templates/data-templates-collection.md).
+
+### Внедрение зависимостей / IoC
+
+При использовании DI вы можете интегрировать ViewLocator с вашим контейнером зависимостей:
+
+- **Сопоставление с образцом + DI**: Комбинируйте сопоставление с образцом с `IServiceProvider.GetRequiredService()` для типобезопасного разрешения
+- **Регистрация фабрик**: Регистрируйте View фабрики в вашем DI-контейнере, которые вызывает ViewLocator
+- **Прямое разрешение**: Передайте service provider в ViewLocator (может по-прежнему требовать рефлексию, если не комбинировать с сопоставлением с образцом или генераторами исходного кода)
+
+Выбирайте на основе того, нужно ли вам избегать рефлексии или предпочитаете более простую конфигурацию.
+
+### Генераторы исходного кода (Source Generators)
+
+Вы можете создать собственный генератор исходного кода для генерации ViewLocator кода во время компиляции. Это обеспечивает нулевые накладные расходы во время выполнения и полную совместимость с AOT.
+
+Подробности о создании генераторов исходного кода см. в [документации Microsoft по генераторам исходного кода](https://learn.microsoft.com/ru-ru/dotnet/csharp/roslyn-sdk/source-generators-overview).
+
+#### Сторонние решения
+
+**[StaticViewLocator](https://github.com/wieslawsoltes/StaticViewLocator)** - NuGet-пакет, который автоматически обнаруживает и регистрирует View.
+
+**[ViewLocatorGenerator](https://github.com/peaceshi/Avalonia-NativeAOT-SingleFile)** - Пример реализации генератора исходного кода для ViewLocator (не пакет, референсная реализация).
+
+## См. также
+
+- [DataTemplates](templates/data-templates.md)
+- [Коллекция DataTemplates](templates/data-templates-collection.md)
+- [Реализация IDataTemplate](templates/implement-idatatemplate.md)
