@@ -113,17 +113,17 @@ In some cases the target type of the binding expression cannot be automatically 
 
 ```xml
 <ItemsRepeater ItemsSource="{Binding MyItems}">
-<ItemsRepeater.ItemTemplate>
-    <DataTemplate>
-    <StackPanel Orientation="Horizontal">
-        <TextBlock Text="{Binding DisplayName}"/>
-        <Grid>
-        <Button Command="{Binding $parent[ItemsRepeater].((vm:MyUserControlViewModel)DataContext).DoItCommand}"
-                CommandParameter="{Binding ItemId}"/>
-        </Grid>
-    </StackPanel>
-    </DataTemplate>
-</ItemsRepeater.ItemTemplate>
+    <ItemsRepeater.ItemTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding DisplayName}"/>
+                <Grid>
+                    <Button Command="{Binding $parent[ItemsRepeater].((vm:MyUserControlViewModel)DataContext).DoItCommand}"
+                            CommandParameter="{Binding ItemId}"/>
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+    </ItemsRepeater.ItemTemplate>
 </ItemsRepeater>
 ```
 
