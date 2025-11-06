@@ -77,16 +77,16 @@ It is also possible to define resources for specific theme variants: Dark, Light
 
 ```xml
 <ResourceDictionary>
-    <ResourceDictionary.ThemeDictionaries>
-        <ResourceDictionary x:Key='Light'>
-            <SolidColorBrush x:Key='BackgroundBrush'>White</SolidColorBrush>
-            <SolidColorBrush x:Key='ForegroundBrush'>Black</SolidColorBrush>
-        </ResourceDictionary>
-        <ResourceDictionary x:Key='Dark'>
-            <SolidColorBrush x:Key='BackgroundBrush'>Black</SolidColorBrush>
-            <SolidColorBrush x:Key='ForegroundBrush'>White</SolidColorBrush>
-        </ResourceDictionary>
-    </ResourceDictionary.ThemeDictionaries>
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key='Light'>
+      <SolidColorBrush x:Key='BackgroundBrush'>White</SolidColorBrush>
+      <SolidColorBrush x:Key='ForegroundBrush'>Black</SolidColorBrush>
+    </ResourceDictionary>
+    <ResourceDictionary x:Key='Dark'>
+      <SolidColorBrush x:Key='BackgroundBrush'>Black</SolidColorBrush>
+      <SolidColorBrush x:Key='ForegroundBrush'>White</SolidColorBrush>
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>
 ```
 
@@ -201,19 +201,19 @@ To include the resources dictionary from a file in a styles file, add the follow
 
 ```xml
 <Styles.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceInclude Source="/Assets/AppResources.axaml"/>
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Styles.Resources>
+  <ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+      <ResourceInclude Source="/Assets/AppResources.axaml"/>
+    </ResourceDictionary.MergedDictionaries>
+  </ResourceDictionary>
+</Styles.Resources>
 ```
 
 In the above examples, the resources file `AppResources.axaml` is located in the `/Assets` project folder. You can then define the styles using the resources, for example:
 
 ```xml
 <Style Selector="Button.btn-info">
-    <Setter Property="Background" Value="{StaticResource InfoColor}"/>
+  <Setter Property="Background" Value="{StaticResource InfoColor}"/>
 </Style>
 ```
 
@@ -290,7 +290,7 @@ Avalonia provides different options to access Resources from code.
 ```cs
 // In this sample we have defined the resource in App.axaml and we want to look up the value in the MainWindow constructor.
 //
-//    </Application.Resources>
+//    <Application.Resources>
 //         <x:String x:Key="TheKey">HelloWorld</x:String>
 //    </Application.Resources>
 
