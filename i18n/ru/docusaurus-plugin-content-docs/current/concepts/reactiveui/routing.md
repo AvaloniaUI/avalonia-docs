@@ -190,7 +190,7 @@ Here is the code-behind for `MainWindow.xaml` declared above.
 ```csharp
 namespace RoutingExample
 {
-    public class MainWindow : ReactiveWindow<MainWindowViewModel>
+    public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
         public MainWindow()
         {
