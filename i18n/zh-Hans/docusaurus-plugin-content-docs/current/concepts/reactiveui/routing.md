@@ -187,7 +187,7 @@ namespace RoutingExample
 ```csharp
 namespace RoutingExample
 {
-    public class MainWindow : ReactiveWindow<MainWindowViewModel>
+    public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
         public MainWindow()
         {
