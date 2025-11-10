@@ -6,6 +6,10 @@ import FlatTreeDataGridSourceScreenshot from '/img/reference/controls/treedatagr
 
 # Flat Tree Data Grid
 
+:::warning
+`TreeDataGrid` is maintained as part of Avalonia Accelerate as of October 2025. See the [Accelerate documentation for flat `TreeDataGrid`](/accelerate/components/treedatagrid/quickstart-flat).
+:::
+
 ## Example
 
 In this example the view model contains an observable collection that is filled with data and then used to create a `FlatTreeDataGridSource` property to bind to the source of the tree data grid. The items of the grid are class `Person`.
