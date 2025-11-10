@@ -53,7 +53,7 @@ public static async Task<IEnumerable<Album>> LoadCachedAsync()
 {
     if (!Directory.Exists("./Cache"))
     {
-        Directory.CreateDirectory("./Cache");
+        return Array.Empty<Album>();
     }
 
     var results = new List<Album>();
