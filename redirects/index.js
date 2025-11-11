@@ -32,11 +32,6 @@ const config = {
     console.log(existingPath, redirects);
     return redirects.length ? redirects : undefined;
   },
-  createRedirects(existingPath) {
-    if (existingPath.includes('/docs/tutorials/music-store-app/')) {
-
-    } 
-  },
 };
 
 module.exports = config;
