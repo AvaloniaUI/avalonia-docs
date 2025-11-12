@@ -146,7 +146,7 @@ public class AnimalConverter : IValueConverter
 
 ## FuncValueConverter and FuncMultiConverter
 
-You can also implement a `FuncValueConverter` if you don't need to convert back. The FuncValueConverter has two or three generic parameters:
+You can also implement a `FuncValueConverter`. The `FuncValueConverter` has two or three generic parameters:
 
 * **TIn**: This parameter defines the expected input type. This can also be an array in case you want to use this converter in a MultiBinding.
 
