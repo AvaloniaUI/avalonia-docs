@@ -14,7 +14,51 @@ The `ToolTip` is a popup that shows its content when the user hovers over the 'h
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="298">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ToolTip.Tip</code></td><td>Attached property for the tooltip contents.</td></tr><tr><td><code>ToolTip.Placement</code></td><td>Defines the placement for the tooltip relative to the host or the pointer. Choose from top, bottom, left, right, anchor and gravity, pointer. The default value is pointer which places the tip content at the position where the pointer stops moving.</td></tr><tr><td><code>ToolTip.HorizontalOffset</code></td><td>The tooltip horizontal offset from the placement (default 0).</td></tr><tr><td><code>ToolTip.VerticalOffset</code></td><td>The tooltip vertical offset from the placement (default 20).</td></tr><tr><td><code>ToolTip.ShowDelay</code></td><td>The amount of time the pointer has to be still before the tooltip appears, in milliseconds (default 400).</td></tr></tbody></table>
+<table>
+    <thead>
+        <tr>
+            <th width="298">Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>ToolTip.Tip</code></td>
+            <td>Attached property for the tooltip contents.</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.Placement</code></td>
+            <td>Defines the placement for the tooltip relative to the host or the pointer. Choose from top, bottom,
+                left, right, anchor and gravity, pointer. The default value is pointer which places the tip content at
+                the position where the pointer stops moving.</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.HorizontalOffset</code></td>
+            <td>The tooltip horizontal offset from the placement (default 0).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.VerticalOffset</code></td>
+            <td>The tooltip vertical offset from the placement (default 20).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.ShowDelay</code></td>
+            <td>The amount of time the pointer has to be still before the tooltip appears, in milliseconds (default
+                400).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.BetweenShowDelay</code></td>
+            <td>The amount of time the tooltip will not show up for after last show, in milliseconds (default 100).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.ShowOnDisabled</code></td>
+            <td>Determines whether the tooltip should be shown for disabled elements (default false).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.ServiceEnabled</code></td>
+            <td>Determines whether the tooltip service is enabled (default true).</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Examples
 
