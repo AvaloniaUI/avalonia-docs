@@ -2,7 +2,7 @@
 // can be tested with this script https://gist.github.com/maxkatz6/760bc0615b1af2ead4bf1f0582fdcd10
 
 import {from10to11} from './migrate-010-to-110.js';
-import {music_store_redirects} from './music-store-redirect.js';
+import {music_store_redirects} from './music-store-redirects.js';
 
 const config = {
   redirects: [
