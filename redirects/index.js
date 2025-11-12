@@ -22,7 +22,7 @@ const config = {
     { from: '/accelerate/tools/parcel/guies/apple-notary', to: '/accelerate/tools/parcel/apple/signing' },
     { from: '/accelerate/tools/parcel/guies/apple-signing', to: '/accelerate/tools/parcel/apple/notary' },
 
-    { to: '/docs/tutorials/',
+    { to: 'pathname:///music-store-redirect.html',
       from: [
             '/docs/tutorials/music-store-app/',
             '/docs/tutorials/music-store-app/creating-the-project',
