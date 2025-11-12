@@ -349,10 +349,6 @@ const redirects = [
         "to": "/docs/concepts/templates/implement-idatatemplate"
     },
     {
-        "from": "/docs/tutorials/music-store-app/setup-development-environment",
-        "to": "/docs/tutorials/music-store-app/creating-the-project"
-    },
-    {
         "from": "/docs/tutorials/running-in-the-browser",
         "to": "/docs/guides/platforms/how-to-use-web-assembly"
     },
