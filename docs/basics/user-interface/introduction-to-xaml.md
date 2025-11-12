@@ -9,7 +9,7 @@ _Avalonia UI_ uses XAML to define a user interface. XAML is an XML-based mark-up
 :::info
 These pages will introduce you to how XAML is used specifically in _Avalonia UI_. For background information about how XAML is used elsewhere in Microsoft technologies, you can use these references:
 
-* Microsoft XAML documentation for WPF, see [here](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/xaml-overview-wpf). 
+* Microsoft XAML documentation for WPF, see [here](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/). 
 * Microsoft XAML documentation for UWP, see [here](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview).
 :::
 
