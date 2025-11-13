@@ -70,8 +70,12 @@ const sidebars = {
       'items': [
         'stay-up-to-date/upgrade-from-0.10',
         'stay-up-to-date/whats-new',
-        'stay-up-to-date/release-notes',
         'stay-up-to-date/breaking-changes',
+        {
+          'type': 'link',
+          'label': 'Release notes',
+          'href': 'https://github.com/AvaloniaUI/Avalonia/releases',
+        },
       ],
     },
     {

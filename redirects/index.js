@@ -23,6 +23,8 @@ const config = {
     // Parcel invalid links
     { from: '/accelerate/tools/parcel/guies/apple-notary', to: '/accelerate/tools/parcel/apple/signing' },
     { from: '/accelerate/tools/parcel/guies/apple-signing', to: '/accelerate/tools/parcel/apple/notary' },
+    // Redirect release notes to Releases page on GitHub
+    { from: '/docs/stay-up-to-date/release-notes', to: 'https://github.com/AvaloniaUI/Avalonia/releases' },
   ],
   createRedirects(existingPath) {
     const redirects = from10to11.createRedirects(existingPath) || [];
