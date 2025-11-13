@@ -10,13 +10,11 @@ import TreeDataGridNuGetScreenshot from '/img/reference/controls/treedatagrid/tr
 
 `TreeDataGrid` 在单个视图中同时显示分层数据和表格数据。它是树视图和数据网格的组合。
 
-:::info
-有关树视图控件的完整信息，请参见[此处](../treeview-1.md)的参考。
+:::warning
+自 2025 年 10 月起，`TreeDataGrid` 已作为 Avalonia Accelerate 的一部分进行维护。请参阅[Accelerate 中关于 `TreeDataGrid` 的文档](/accelerate/components/treedatagrid/quickstart)。
 :::
 
-:::info
-有关数据网格控件的完整信息，请参见[此处](../datagrid/)的参考。
-:::
+有关 [树视图控件](../treeview-1.md) 和 [数据网格控件](../datagrid/) 的更多信息，请参阅参考页面。
 
 该控件有两种操作模式：
 

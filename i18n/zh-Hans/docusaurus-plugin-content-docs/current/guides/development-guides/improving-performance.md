@@ -16,12 +16,20 @@ title: 提高性能
 
 如果不需要编辑功能，请避免使用`DataGrid`控件，因为它通常被认为对性能不太优化。
 
+:::warning
+[`TreeDataGrid`](/accelerate/welcome) 自 2025 年 10 月起作为 Avalonia Accelerate 的一部分进行维护。目前它仍然是大型数据集的推荐选项。
+:::
+
 ## 虚拟化
 
 在处理大量数据时，启用虚拟化可以提高Avalonia应用程序的性能。虚拟化意味着只有可见控件中的项目才会被渲染，这在需要显示大量项目时显著提高了性能。
 
 ### TreeDataGrid
 `TreeDataGrid`支持虚拟化，并且可以有效地处理成千上万行复杂的单元格。
+
+:::warning
+[`TreeDataGrid`](/accelerate/welcome) 自 2025 年 10 月起作为 Avalonia Accelerate 的一部分进行维护。目前它仍然是大型数据集的推荐选项。
+:::
 
 ## 优化可视树结构
 
