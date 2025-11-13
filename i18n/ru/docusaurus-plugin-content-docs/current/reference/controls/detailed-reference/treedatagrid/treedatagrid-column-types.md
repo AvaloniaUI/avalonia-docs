@@ -4,6 +4,10 @@ description: REFERENCE - Built-in Controls
 
 # Tree Data Grid Column Types
 
+:::warning
+`TreeDataGrid` is maintained as part of Avalonia Accelerate as of October 2025. See the [Accelerate documentation for `TreeDataGrid` column types](/accelerate/components/treedatagrid/column-types).
+:::
+
 The tree data grid supports three different column types:
 
 * Text Column

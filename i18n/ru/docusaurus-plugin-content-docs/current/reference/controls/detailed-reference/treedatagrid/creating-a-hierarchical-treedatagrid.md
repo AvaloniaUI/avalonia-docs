@@ -6,6 +6,10 @@ import HierarchicalTreeDataGridSourceScreenshot from '/img/reference/controls/tr
 
 # Hierarchical Tree Data Grid
 
+:::warning
+`TreeDataGrid` is maintained as part of Avalonia Accelerate as of October 2025. See the [Accelerate documentation for hierarchical `TreeDataGrid`](/accelerate/components/treedatagrid/quickstart-hierarchical).
+:::
+
 ## Example
 
 In this example the view model contains an observable collection that is filled with data and then used to create a `HierarchicalTreeDataGridSource` property to bind on to the source of the tree data grid. The items of the grid are class `Person`.
