@@ -1,5 +1,5 @@
 const redirects = [
-    { to: 'https://docs.avaloniaui.net/external-redirects/music-store-redirect.html',
+    { to: 'https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/Avalonia.MusicStore',
       from: [
             '/docs/tutorials/music-store-app/',
             '/docs/tutorials/music-store-app/creating-the-project',
