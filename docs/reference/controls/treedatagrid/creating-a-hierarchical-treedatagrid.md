@@ -4,7 +4,12 @@ description: REFERENCE - Built-in Controls
 
 import HierarchicalTreeDataGridSourceScreenshot from '/img/reference/controls/treedatagrid/treedatagrid-hierarchical.gif';
 
+
 # Hierarchical Tree Data Grid
+
+:::warning
+`TreeDataGrid` is maintained as part of Avalonia Accelerate as of October 2025. See the [Accelerate documentation for hierarchical `TreeDataGrid`](/accelerate/components/treedatagrid/quickstart-hierarchical).
+:::
 
 ## Example
 

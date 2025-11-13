@@ -11,13 +11,11 @@ import TreeDataGridNuGetScreenshot from '/img/reference/controls/treedatagrid/tr
 
 The `TreeDataGrid` displays hierarchical and tabular data together in a single view. It is a combination of a tree view and data grid.
 
-:::info
-For full information on the tree view control, see the reference [here](../treeview-1.md).
+:::warning
+`TreeDataGrid` is maintained as part of Avalonia Accelerate as of October 2025. See the [Accelerate documentation for TreeDataGrid](/accelerate/components/treedatagrid/quickstart).
 :::
 
-:::info
-For full information on the data grid control, see the reference [here](../datagrid/).
-:::
+See the reference pages for more information on the [tree view control](../treeview-1.md) and the [data grid control](../datagrid/).
 
 The control has two modes of operation:
 

@@ -6,6 +6,10 @@ import FlatTreeDataGridSourceScreenshot from '/img/reference/controls/treedatagr
 
 # 扁平树数据表格
 
+:::warning
+自 2025 年 10 月起，`TreeDataGrid` 作为 Avalonia Accelerate 的一部分进行维护。请参阅[Accelerate 文档中关于扁平化 `TreeDataGrid` 的说明](/accelerate/components/treedatagrid/quickstart-flat)。
+:::
+
 ## 示例
 
 在此示例中，视图模型包含一个可观察集合，该集合填充了数据，然后用于创建一个 `FlatTreeDataGridSource` 属性以绑定到树数据网格的源。网格的项是 `Person` 类。

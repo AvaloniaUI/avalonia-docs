@@ -15,6 +15,10 @@ When you need to display a large amount of data in a `DataGrid` or a `TreeView` 
 
 Avoid using the `DataGrid` control if you don't need editing features. It's generally regarded as a less optimal control for performance.
 
+:::warning
+[`TreeDataGrid`](/accelerate/welcome) is maintained as part of Avalonia Accelerate as of October 2025. It is presently still the recommended option for large datasets.
+:::
+
 ## Virtualization
 
 When working with large amounts of data, enabling virtualization can improve the performance of your Avalonia application. Virtualization means that only the visible items in the control are rendered, which significantly improves the performance when there are a large number of items to display.
@@ -22,6 +26,10 @@ When working with large amounts of data, enabling virtualization can improve the
 ### TreeDataGrid
 
 `TreeDataGrid` supports virtualization and can handle thousands of rows with complex cells effectively.
+
+:::warning
+[`TreeDataGrid`](/accelerate/welcome) is maintained as part of Avalonia Accelerate as of October 2025. It is presently still the recommended option for large datasets.
+:::
 
 ## Optimize Your Visual Tree Structure
 

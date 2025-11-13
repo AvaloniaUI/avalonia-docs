@@ -4,6 +4,10 @@ description: REFERENCE - Built-in Controls
 
 # 树形数据表格列类型
 
+:::warning
+自 2025 年 10 月起，`TreeDataGrid` 已作为 Avalonia Accelerate 的一部分进行维护。请参阅[Accelerate 文档中关于 `TreeDataGrid` 列类型的说明](/accelerate/components/treedatagrid/column-types)。
+:::
+
 树形数据网格支持三种不同的列类型：
 
 * 文本列
