@@ -7,7 +7,7 @@ import FlatTreeDataGridSourceScreenshot from '/img/reference/controls/treedatagr
 # 扁平树数据表格
 
 :::warning
-自 2025 年 10 月起，`TreeDataGrid` 作为 Avalonia Accelerate 的一部分进行维护。请参阅[Accelerate 文档中关于扁平化 `TreeDataGrid` 的说明](/accelerate/components/treedatagrid/quickstart-flat)。
+自 2025 年 10 月起，`TreeDataGrid` 作为 Avalonia Accelerate 的一部分进行维护。请参阅[Accelerate 文档中关于扁平 `TreeDataGrid` 的说明](/accelerate/components/treedatagrid/quickstart-flat)。
 :::
 
 ## 示例
