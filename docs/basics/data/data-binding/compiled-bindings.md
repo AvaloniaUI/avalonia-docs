@@ -55,6 +55,47 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
 </UserControl>
 ```
 
+## DataContext type inference
+
+With compiled bindings enabled and `x:DataType` set on your root element, the Avalonia XAML compiler can infer the target type, even when you reference it via a named element (`#MyElement.DataContext`) or a parent lookup (`$parent[ControlType].DataContext`).  
+
+Explicit type casting is not required in most cases.
+
+For example:
+
+```xml
+<Window x:Name="MyWindow"
+        xmlns:vm="using:MyApp.ViewModels"
+        x:DataType="vm:TestDataContext">
+    <TextBlock Text="{Binding #MyWindow.DataContext.StringProperty}" />
+    <TextBlock Text="{Binding $parent[Window].DataContext.StringProperty}" />
+</Window>
+```
+
+:::note
+DataContext type inference was introduced in 11.3.0. Earlier versions of Avalonia needed explicit type casting for instances where the target type of the binding expression could not be automatically determined.
+:::
+
+:::note
+If you use [Rider](https://www.jetbrains.com/rider/) as your IDE, the syntax highlighting may flag an error. However, the compiler should still work.
+:::
+
+### Explicit type casting
+
+If you are using an earlier version of Avalonia, or if the compiler fails to infer the type, you can still use an explicit type cast in the binding expression to ensure the correct type is used.
+
+We do not generally recommend explicit type casting.
+
+
+```xml
+<Window x:Name="MyWindow"
+        xmlns:vm="using:MyApp.ViewModels"
+        x:DataType="vm:TestDataContext">
+    <TextBlock Text="{Binding #MyWindow.((vm:TestDataContext)DataContext).StringProperty}" />
+    <TextBlock Text="{Binding $parent[Window].((vm:TestDataContext)DataContext).StringProperty}" />
+</Window>
+```
+
 ## CompiledBinding-Markup
 
 If you don't want to enable compiled bindings for all child nodes, you can also use the `CompiledBinding`-markup. You still need to define the `DataType`, but you can omit `x:CompileBindings="True"`.
@@ -106,25 +147,3 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
     </StackPanel>
 </UserControl>
 ```
-
-## Type casting
-
-In some cases the target type of the binding expression cannot be automatically evaluated. In such cases you must provide an explicit type cast in the binding expression.
-
-```xml
-<ItemsRepeater ItemsSource="{Binding MyItems}">
-    <ItemsRepeater.ItemTemplate>
-        <DataTemplate>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding DisplayName}"/>
-                <Grid>
-                    <Button Command="{Binding $parent[ItemsRepeater].((vm:MyUserControlViewModel)DataContext).DoItCommand}"
-                            CommandParameter="{Binding ItemId}"/>
-                </Grid>
-            </StackPanel>
-        </DataTemplate>
-    </ItemsRepeater.ItemTemplate>
-</ItemsRepeater>
-```
-
-In this case, the button command shall not be bound to the item's `DataContext` but to a command that is defined in the `DataContext`of the `ItemsRepeater`. The single item will be identified using a `CommandParameter` bound to the item's `DataContext`. Therefore, you must specify the type of the "parent" `DataContext` via cast expression `((vm:MyUserControlViewModel)DataContext)`.
