@@ -2,7 +2,7 @@
 
 import ReactiveUIRoutingScreenshot from '/img/concepts/reactiveui/reactiveui-routing.gif';
 
-[ReactiveUI routing](https://reactiveui.net/docs/handbook/routing/) consists of an [IScreen](https://reactiveui.net/api/reactiveui/iscreen/) that contains current [RoutingState](https://reactiveui.net/api/reactiveui/routingstate/), several [IRoutableViewModel](https://reactiveui.net/api/reactiveui/iroutableviewmodel/)s, and a platform-specific XAML control called [RoutedViewHost](https://github.com/reactiveui/ReactiveUI.Avalonia/blob/main/src/ReactiveUI.Avalonia/RoutedViewHost.cs). `RoutingState` manages the view model navigation stack and allows view models to navigate to other view models. `IScreen` is the root of a navigation stack; despite the name, its views don't have to occupy the whole screen. `RoutedViewHost` monitors an instance of `RoutingState`, responding to any changes in the navigation stack by creating and embedding the appropriate view.
+[ReactiveUI routing](https://reactiveui.net/docs/handbook/routing/) consists of an IScreen that contains current RoutingState, several IRoutableViewModels, and a platform-specific XAML control called [RoutedViewHost](https://github.com/reactiveui/ReactiveUI.Avalonia/blob/main/src/ReactiveUI.Avalonia/RoutedViewHost.cs). `RoutingState` manages the view model navigation stack and allows view models to navigate to other view models. `IScreen` is the root of a navigation stack; despite the name, its views don't have to occupy the whole screen. `RoutedViewHost` monitors an instance of `RoutingState`, responding to any changes in the navigation stack by creating and embedding the appropriate view.
 
 ## Routing Example
 
