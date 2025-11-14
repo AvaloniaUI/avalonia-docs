@@ -86,7 +86,6 @@ If you are using an earlier version of Avalonia, or if the compiler fails to inf
 
 We do not generally recommend explicit type casting.
 
-
 ```xml
 <Window x:Name="MyWindow"
         xmlns:vm="using:MyApp.ViewModels"
