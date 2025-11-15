@@ -23,7 +23,8 @@ this.AttachDeveloperTools(o =>
 });
 ```
 3. Start `Developer Tools` (via avdt command)
-4. Launch your application on second machine press `F12` to connect.
+4. In the settings, make sure that `Allow Any IP` is enabled (if not, you would need to restart the app)
+5. Launch your application on second machine press `F12` to connect.
 
 :::note
 
