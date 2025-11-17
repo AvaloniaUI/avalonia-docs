@@ -250,7 +250,34 @@ the end-user device supports it.
 
 For Android API 21 (Android 5.0) or higher.
 
-- No additional setup required.
+- Call `UseAndroidPlayer` in your app builder;
+```csharp
+protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+{
+    return base.CustomizeAppBuilder(builder)
+        ...
+        .UseAndroidPlayer(this)
+        ...
+        .LogToTrace();
+}
+  ```
+- For Vulkan support;
+```csharp
+protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+{
+    return base.CustomizeAppBuilder(builder)
+        .UseAndroidPlayer(this)
+        .With(new VulkanOptions()
+        {
+            VulkanDeviceCreationOptions = new VulkanDeviceCreationOptions()
+            {
+                DeviceExtensions = new[] { "VK_ANDROID_external_memory_android_hardware_buffer", "VK_EXT_queue_family_foreign" }
+            }
+        })
+        ...
+        .LogToTrace();
+}
+```
 
 ### Linux
 
