@@ -1,0 +1,39 @@
+// Main SASS entry point that imports all component styles
+// This file orchestrates all SASS-specific features and component imports
+
+// Tailwind CSS directives must come first so utility layers load before overrides
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Core imports (order matters)
+@import 'components/variables';  // Variables and mixins must come first
+@import 'components/fonts';       // Font definitions
+@import 'components/typography';  // Base typography styles
+
+// Layout components
+@import 'components/navbar';
+@import 'components/sidebar';
+@import 'components/footer';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+
+// UI Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/dropdown';
+@import 'components/tabs';
+@import 'components/tables';
+@import 'components/code';
+@import 'components/search';
+@import 'components/sections-menu';
+
+// Page-specific styles
+@import 'components/homepage';
+@import 'components/hello-bar';
+
+// Utility classes (should come last)
+@import 'components/utilities';
+
+// Additional SASS-specific enhancements
+// You can add more custom SASS features here that weren't in the original CSS

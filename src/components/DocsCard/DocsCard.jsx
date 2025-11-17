@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from '@docusaurus/Link';
-import styles from './DocsCard.css'
+import styles from './DocsCard.scss'
 
 export const DocsCard = ({ label, link, height = 40, width = 40, title }) => {
     console.log(title);

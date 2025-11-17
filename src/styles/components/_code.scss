@@ -1,0 +1,19 @@
+// Code Block Styles
+
+pre.prism-code {
+  border: 1px solid var(--code-border-color);
+}
+
+code[data-code='required'] {
+  font-size: 12px;
+  background-color: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger);
+}
+
+.code-block-error-line {
+  background-color: #ff000020;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #ff000080;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { DocsCard } from './';
-import styles from './DocsCard.css'
+import styles from './DocsCard.scss'
 
 export const DocsCardList = ({ list }) => {
     console.log('list', list);

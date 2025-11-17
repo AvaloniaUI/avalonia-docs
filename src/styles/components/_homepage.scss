@@ -1,0 +1,97 @@
+// Homepage Styles
+
+.homepage {
+  a {
+    --ifm-link-hover-color: currentColor;
+  }
+
+  section,
+  section * {
+    box-sizing: border-box;
+  }
+
+  &-content {
+    padding-bottom: 6rem;
+  }
+
+  &-section {
+    margin-bottom: 3rem;
+
+    h3 {
+      font-weight: 600;
+    }
+  }
+}
+
+// Hero Section
+#hero {
+  padding: 2rem 0 1.5rem 0;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid var(--docs-color-border);
+
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    color: var(--docs-color-text-100);
+  }
+}
+
+// Hero Title
+.hero-title {
+  font-size: 3.5rem;
+  white-space: 'normal';
+  width: 'fit-content';
+  line-height: '1.2';
+
+  @media (max-width: 600px) {
+    font-size: 3rem;
+  }
+}
+
+// Section Layout
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.two-cols .section-content {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+// Has sub-sections
+.has-sub-sections {
+  > h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  > .section-content {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    > .homepage-section {
+      margin-bottom: 1rem;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .section-description {
+      font-size: 14px;
+    }
+  }
+}
+
+// Section Description
+.section-description {
+  color: var(--docs-color-text-100);
+  margin: 0rem 0 1.25rem 0;
+  margin-top: -0.5rem;
+}

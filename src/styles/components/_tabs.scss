@@ -1,0 +1,16 @@
+// Tabs Styles
+
+.tabs {
+  border-bottom: 1px solid var(--docs-color-border);
+
+  &__item {
+    --ifm-tabs-padding-vertical: 0.75rem;
+    --ifm-tabs-color-active: theme('colors.primary.100');
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &--active {
+      border-bottom: 2px solid theme('colors.primary.100');
+    }
+  }
+}

@@ -1,0 +1,106 @@
+// Table Styles
+
+table {
+  border-collapse: collapse;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  font-size: 90%;
+
+  :is(tr, td, th, thead) {
+    --ifm-table-stripe-background: transparent;
+    --table-cell-color: transparent;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--docs-color-border);
+  }
+
+  thead tr {
+    border-bottom: 1px solid var(--docs-color-border);
+  }
+
+  th {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--docs-color-text-100);
+  }
+}
+
+// Table with borders
+.table-w-border {
+  th {
+    border: 1px solid rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(210, 210, 210);
+  }
+
+  td {
+    border-right: 1px solid rgb(240, 240, 240);
+    border-left: 1px solid rgb(240, 240, 240);
+  }
+}
+
+// Notes container tables
+.notesContainer {
+  h4 {
+    margin-bottom: 2rem;
+  }
+
+  .type {
+    width: 11rem;
+    border-right: 2px solid;
+    border-bottom: 0;
+    vertical-align: top;
+    font-weight: 600;
+    color: rgb(var(--docs-color-text-400) / 1);
+
+    @media screen and (max-width: 768px) {
+      width: 6rem;
+    }
+  }
+
+  .deprecated {
+    .type {
+      color: #de4e2b;
+    }
+
+    .sublist {
+      background-color: #e01e5a1a;
+    }
+  }
+
+  .newAPI {
+    .type {
+      color: #1264a3;
+    }
+
+    .sublist {
+      background-color: #1264a31a;
+    }
+  }
+}
+
+.releaseNotes ul {
+  margin-bottom: 0;
+}
+
+.sublist {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  tr {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    &:last-child {
+      border: 0;
+
+      > td {
+        border: 0;
+      }
+    }
+  }
+}
+
+.changeline p {
+  margin-bottom: 0;
+}

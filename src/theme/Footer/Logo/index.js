@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 import ThemedImage from '@theme/ThemedImage';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 function LogoImage({logo}) {
   const {withBaseUrl} = useBaseUrlUtils();
   const sources = {

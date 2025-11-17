@@ -1,0 +1,187 @@
+// Variables and CSS Custom Properties
+// This file contains all CSS variables and SASS variables
+
+// CSS Custom Properties for colors
+:root {
+  // Primary colors
+  --docs-color-primary: #0d6efd;
+  --docs-color-primary-100: 26 144 255;
+  --docs-color-primary-200: 33 96 253;
+  --docs-color-primary-tint: rgba(33, 96, 253, 0.16);
+  --docs-color-primary-tint-light: rgba(33 96 253/0.24);
+
+  // Secondary colors
+  --docs-color-secondary-700: 232 232 236;
+  --docs-color-secondary-800: 245 245 247;
+  --docs-color-secondary-900: 251 251 251;
+  --docs-color-secondary-1000: 255 255 255;
+
+  // Text colors
+  --docs-color-text: #1b2a4e;
+  --docs-color-text-100: #646464;
+  --docs-color-text-400: 71 71 71;
+
+  // Background colors
+  --docs-color-background: #F9FBFD;
+  --docs-color-background-100: #f8f8f8;
+  --docs-color-background-200: #efefef;
+  --docs-color-background-300: #dcdcdc;
+
+  // Border colors
+  --docs-color-border: #E3EBF6;
+  --code-border-color: var(--docs-color-border);
+
+  // Navbar colors
+  --navbar-second-row-background: #F9FBFC;
+  --navbar-second-row-border: #E3EBF6;
+
+  // Code colors
+  --docs-color-code-background: #E3EBF6;
+
+  // Platform colors
+  --docs-color-android: #44db85;
+  --docs-color-apple: var(--docs-color-text) !important;
+
+  // Card colors
+  --docs-card-background: rgb(241, 244, 248);
+
+  // Video colors
+  --avalonia-colors-video-bg: 50 50 50;
+
+  // Docusaurus theme colors
+  --ifm-color-primary: #0d6efd;
+  --ifm-color-primary-dark: #1959fc;
+  --ifm-color-primary-darker: #0f51f8;
+  --ifm-color-primary-darkest: #0042e7;
+  --ifm-color-primary-light: #3d72f8;
+  --ifm-color-primary-lighter: #477af8;
+  --ifm-color-primary-lightest: #6791fc;
+
+  // Layout
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-navbar-padding-horizontal: 0.75rem;
+
+  // Typography
+  --ifm-font-family-base: "Open Sans", sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ifm-font-family-monospace: 'Fira Code', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --ifm-code-font-size: 92%;
+
+  // Effects
+  --ifm-navbar-shadow: none;
+  --ifm-toc-border-color: #dedede;
+  --ifm-table-border-color: var(--docs-color-border);
+  --docusaurus-highlighted-code-line-bg: rgba(147, 178, 244, 0.38);
+
+  // Breadcrumb
+  --ifm-breadcrumb-item-background-active: transparent;
+  --ifm-breadcrumb-padding-horizontal: 0;
+
+  // Brand
+  --ifm-brand-logo-color: #0d6efd;
+
+  // Footer
+  --ifm-footer-background-color: white;
+  --ifm-footer-brand-color: #0d6efd;
+
+  // Backgrounds
+  --ifm-background-color: var(--docs-color-background);
+  --ifm-background-surface-color: var(--docs-color-background);
+}
+
+// Dark theme overrides
+html[data-theme='dark'] {
+  // Text colors
+  --docs-color-text: #ffffff;
+  --docs-color-text-100: #b4b4b4;
+  --docs-color-text-400: 153 153 153;
+
+  // Secondary colors
+  --docs-color-secondary-700: 71 71 71;
+  --docs-color-secondary-800: 38 38 38;
+  --docs-color-secondary-900: 27 42 78;
+  --docs-color-secondary-1000: 0 0 0;
+
+  // Background colors
+  --docs-color-background: #0b192b;
+  --docs-color-background-100: #1c1c1c;
+  --docs-color-background-200: #2a2a2a;
+  --docs-color-background-300: #2e2e2e;
+
+  // Border colors
+  --docs-color-border: #2e2e2e;
+
+  // Code colors
+  --docs-color-code-background: #1e1e1e;
+
+  // Navbar colors
+  --navbar-second-row-background: #1a202c;
+  --navbar-second-row-border: #2d3748;
+
+  // Card colors
+  --docs-card-background: #1b2a4e;
+
+  // Links
+  --ifm-link-color: #0d6efd;
+  --ifm-tabs-color-active-border: #0d6efd;
+  --ifm-tabs-color-active: #4690ff;
+
+  // Brand
+  --ifm-brand-logo-color: white;
+
+  // Footer
+  --ifm-footer-background-color: #1c1c1c;
+  --ifm-footer-brand-color: white;
+
+  // Navigation
+  --ifm-background-surface-color: #171B2D;
+  --ifm-background-color: #171B2D;
+  --ifm-toc-border-color: #2e2e2e;
+
+  // Content
+  --ifm-color-content: #e7e7e7;
+
+  // Code highlighting
+  --docusaurus-highlighted-code-line-bg: rgba(105, 105, 105, 0.3);
+
+  // Primary color
+  --ifm-color-primary: #0d6efd;
+}
+
+// SASS Variables for reuse
+$primary-color: #0d6efd;
+$primary-dark: #1959fc;
+$primary-darker: #0f51f8;
+$primary-darkest: #0042e7;
+$primary-light: #3d72f8;
+$primary-lighter: #477af8;
+$primary-lightest: #6791fc;
+
+// Breakpoints
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 996px;
+$desktop-breakpoint: 1160px;
+
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet-breakpoint + 1}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$desktop-breakpoint + 1}) {
+    @content;
+  }
+}

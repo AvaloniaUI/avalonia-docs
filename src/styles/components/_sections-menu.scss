@@ -1,0 +1,121 @@
+// Sections Menu Styles
+
+.sections-menu {
+  &-trigger {
+    flex: 1;
+    display: inline-flex;
+    background-color: var(--docs-color-background-100);
+    color: var(--docs-color-text);
+    height: 48px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid var(--docs-color-background-200);
+    padding: 0 15px;
+    padding-left: 10px;
+
+    &:hover {
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &.compact {
+      min-width: 5rem;
+      height: 2.5rem;
+    }
+
+    .item-indicator {
+      height: 20px;
+      width: 20px;
+      color: theme('colors.primary.100');
+    }
+
+    .item-text {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1.2;
+
+      > svg {
+        height: 32px;
+        width: 32px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &-item {
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    cursor: pointer;
+    padding: 0 15px;
+    padding-left: 10px;
+
+    &:hover {
+      background-color: var(--docs-color-background-200);
+    }
+
+    &[data-disabled] {
+      cursor: not-allowed;
+      background-color: var(--docs-color-border);
+    }
+
+    .item-indicator {
+      height: 20px;
+      width: 20px;
+      color: theme('colors.primary.100');
+    }
+
+    .item-text {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1.2;
+
+      > svg {
+        height: 32px;
+        width: 32px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &-content {
+    box-sizing: border-box;
+    background-color: var(--docs-color-background-100);
+    border-radius: 6px;
+    padding: 6px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+
+    &.compact {
+      width: 5rem;
+      min-width: 5rem;
+    }
+  }
+
+  &-scrollButton {
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    color: var(--docs-color-text);
+    cursor: default;
+  }
+}
+
+// Compact sections menu
+.compact .sections-menu-item {
+  min-width: initial;
+  height: 2.5rem;
+  width: auto;
+}

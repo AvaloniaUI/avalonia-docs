@@ -1,0 +1,83 @@
+// Footer Styles
+
+.footer {
+  // Disable link hover decoration
+  --ifm-link-hover-decoration: none;
+
+  &__description {
+    color: rgb(var(--docs-color-text-400) / 1);
+    font-size: 14px;
+  }
+
+  &__copyright {
+    margin-top: 32px;
+    font-size: 14px;
+    color: rgb(var(--docs-color-text-400) / 1);
+  }
+
+  &__row {
+    display: flex;
+
+    @media only screen and (max-width: 996px) {
+      flex-direction: column;
+    }
+  }
+
+  &__cta {
+    padding-right: 24px;
+    font-size: 14px;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      --ifm-link-hover-color: #fff;
+      margin-top: 0.25rem;
+      display: inline-block;
+      padding: 0.25rem 1.5rem;
+      border-radius: 4px;
+      background-color: theme('colors.primary.200');
+      color: #ffffff;
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--ifm-color-primary-darker);
+      }
+    }
+  }
+
+  &__data {
+    flex: 2;
+
+    @media only screen and (max-width: 996px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__row .links {
+    flex: 3;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    color: rgb(var(--docs-color-text-400) / 1);
+  }
+
+  &__item {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  &__link-item:hover {
+    text-decoration: none;
+  }
+
+  &-text {
+    font-size: 1 !important;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+  }
+}

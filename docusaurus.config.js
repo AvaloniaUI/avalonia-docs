@@ -114,14 +114,15 @@ const config = {
         
         theme: {
           customCss: [
-            require.resolve('./src/css/custom.css'),
+            require.resolve('./src/styles/custom.scss'),
           ],
-      
+
         },
       }),
     ],
   ],
   plugins: [
+    'docusaurus-plugin-sass',
     require('./plugins/tailwind-plugin.cjs'),
     function cioPlugin() {
       return {

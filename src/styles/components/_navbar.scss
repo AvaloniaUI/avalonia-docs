@@ -1,0 +1,187 @@
+// Navigation Bar Styles
+
+nav.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  font-family: "Open Sans", sans-serif;
+  height: 90px;
+}
+
+.navbar {
+  &__item,
+  &__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  &__link {
+    // Disable link hover decoration
+    --ifm-link-hover-decoration: none;
+  }
+
+  &__title {
+    color: var(--ifm-brand-logo-color) !important;
+    font-weight: 600;
+  }
+
+  &__logo {
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    margin-right: 1px;
+    margin-left: 8px;
+    padding-bottom: 4px;
+  }
+
+  &__search,
+  &__locale {
+    margin-left: 0.5rem;
+  }
+
+  &-sidebar {
+    &__item {
+      padding-right: 0;
+    }
+
+    &__back {
+      background: none;
+      font-size: 14px;
+    }
+
+    .dev-portal-link {
+      padding: 0.75rem;
+      margin-top: 1rem;
+    }
+  }
+
+  &-book-demo svg {
+    display: none;
+  }
+}
+
+// Two-row navbar styles
+.navbar-two-row-container {
+  background-color: var(--ifm-navbar-background-color);
+  box-shadow: var(--ifm-navbar-shadow);
+  position: sticky;
+  top: 0;
+  z-index: var(--ifm-z-index-fixed);
+
+  .navbar {
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+
+  .navbar__title {
+    font-weight: 600;
+    color: var(--ifm-navbar-link-color);
+  }
+
+  .navbar__logo {
+    margin-right: 0.75rem;
+  }
+
+  .navbar__search,
+  .navbar__locale {
+    margin-left: 0.5rem;
+  }
+}
+
+// Second row navbar
+.navbar-second-row {
+  background-color: var(--navbar-second-row-background);
+  border-bottom: 1px solid var(--navbar-second-row-border);
+  padding: 0;
+
+  .container {
+    max-width: var(--ifm-container-width-xl);
+    padding: 0 var(--ifm-spacing-horizontal);
+  }
+
+  .navbar__items {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &--left {
+      flex: 1;
+    }
+  }
+
+  .navbar__item {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--ifm-navbar-link-color);
+    text-decoration: none;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
+
+    &:hover {
+      background-color: var(--ifm-color-emphasis-100);
+      color: var(--ifm-navbar-link-hover-color);
+      text-decoration: none;
+    }
+
+    &--active,
+    &[aria-current="page"] {
+      background-color: var(--ifm-color-primary-lighter);
+      border-bottom-color: var(--ifm-color-primary);
+      color: var(--ifm-color-primary-darker);
+    }
+  }
+
+  // Dropdown in second row
+  .dropdown {
+    position: relative;
+
+    &:hover .dropdown__menu {
+      display: block;
+    }
+  }
+
+  .dropdown__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: var(--ifm-border-radius);
+    box-shadow: var(--ifm-box-shadow-lw);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    z-index: var(--ifm-z-index-dropdown);
+  }
+}
+
+// Responsive styles for navbar
+@media (max-width: 996px) {
+  .navbar-two-row-container {
+    flex-direction: column;
+  }
+
+  .navbar-second-row {
+    display: none;
+  }
+
+  .navbar-second-row-item {
+    display: none;
+  }
+}
+
+// Navbar branding text
+#__docusaurus > nav > div.navbar__inner > div:nth-child(1) > a.navbar__brand > b {
+  color: #0d6efd;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
