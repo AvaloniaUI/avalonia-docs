@@ -191,6 +191,11 @@ const config = {
         editLocalizedFiles: true,
       },
     ],
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-999X9XX9XX',
+        anonymizeIP: true,
+      },
 ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -283,17 +288,4 @@ const config = {
     }),
 };
 
-module.exports = {
-  presets: [
-    [
-      '@docusaurus/preset-classic',
-      {
-        gtag: {
-          trackingID: 'G-71TN4RT4YS',
-          anonymizeIP: true,
-        },
-      },
-    ],
-  ],
-};
-
+module.exports = config;
