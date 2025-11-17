@@ -283,5 +283,17 @@ const config = {
     }),
 };
 
-module.exports = config;
+module.exports = {
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        gtag: {
+          trackingID: 'G-71TN4RT4YS',
+          anonymizeIP: true,
+        },
+      },
+    ],
+  ],
+};
 
