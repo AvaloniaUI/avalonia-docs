@@ -109,6 +109,59 @@ await player.PrepareAsync();
 await player.PlayAsync();
 ```
 
+### Using a Custom Visual
+
+You can attach a custom visual target:
+
+```xaml
+<Window xmlns="https://github.com/avaloniaui"
+        Width="800" Height="450">
+    
+    <Grid RowDefinitions="*, Auto">
+        <Viewbox VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <MediaPlayerPresenter Name="presenter" />
+        </Viewbox>
+    </Grid>
+    
+</Window>
+```
+
+```csharp
+private MediaPlayer _player = new MediaPlayer();
+
+protected async override void OnLoaded(EventArgs e)
+{
+    base.OnLoaded(e);
+
+    await _player.InitializeAsync();
+
+    _player.UpdateTargetVisual(presenter);
+    _player.NaturalSizeChanged += Player_NaturalSizeChanged;
+}
+
+private void Player_NaturalSizeChanged(object? sender, NaturalSizeChangedEventArgs e)
+{
+    UpdatePlayerSize(e.NewSize ?? default);
+}
+
+private void UpdatePlayerSize(Size size)
+{
+    var elemVisual = ElementComposition.GetElementChildVisual(presenter);
+    var compositor = elemVisual?.Compositor;
+
+    if (compositor is null || elemVisual is null)
+    {
+        return;
+    }
+
+    elemVisual.Size = new Vector(size.Width, size.Height);
+    (presenter as MediaPlayerPresenter)?.SetNaturalSize(size);
+    presenter.InvalidateMeasure();
+}
+```
+`MediaPlayerPresenter` is provided for convenience, but you can use any custom visual. Ensure that you update the visual with the size provided by the `MediaPlayer` instance.
+
+
 ### Event Handling
 
 ```csharp
