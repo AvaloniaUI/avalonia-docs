@@ -191,11 +191,13 @@ const config = {
         editLocalizedFiles: true,
       },
     ],
+    [
       '@docusaurus/plugin-google-gtag',
       {
         trackingID: 'G-999X9XX9XX',
         anonymizeIP: true,
       },
+    ],
 ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
