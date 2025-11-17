@@ -192,10 +192,9 @@ const config = {
       },
     ],
     [
-      '@docusaurus/plugin-google-gtag',
+      'docusaurus-plugin-plausible',
       {
-        trackingID: 'G-71TN4RT4YS',
-        anonymizeIP: true,
+        domain: 'docs.avaloniaui.net',
       },
     ],
 ],
