@@ -3,16 +3,16 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HeroSection from '../components/homepage/HeroSection';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import CommunitySection from '../components/homepage/CommunitySection';
-import GuidesAndSamplesSection from '../components/homepage/GuidesAndSamples';
-import HelpSection from '../components/homepage/HelpSection';
-import HomeFooter from '../components/homepage/HomeFooter';
-import ResourcesSection from '../components/homepage/ResourcesSection';
-import CTASection from '../components/homepage/CallToActionSection';
-import HelloBar from '../components/homepage/HelloBar';
-import HeroQuickLinks from '../components/homepage/HeroQuickLinks';
+import HeroSection from '../components/page/homepage/HeroSection';
+import HomepageFeatures from '@site/src/components/page/homepage/HomepageFeatures';
+import CommunitySection from '../components/page/homepage/CommunitySection';
+import GuidesAndSamplesSection from '../components/page/homepage/GuidesAndSamples';
+import HelpSection from '../components/page/homepage/HelpSection';
+import HomeFooter from '../components/page/homepage/HomeFooter';
+import ResourcesSection from '../components/page/homepage/ResourcesSection';
+import CTASection from '../components/page/homepage/CallToActionSection';
+import HelloBar from '../components/page/homepage/HelloBar';
+import HeroQuickLinks from '../components/page/homepage/HeroQuickLinks';
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();

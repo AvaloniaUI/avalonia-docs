@@ -3,7 +3,7 @@ id: choose-a-solution-template
 title: Choose a Template
 ---
 
-import Highlight from '@site/src/components/Highlight';
+import Highlight from '@site/src/components/global/Highlight';
 
 The _Avalonia for Visual Studio_ extension includes some solution templates that you can use to start an _Avalonia UI_ project. To get started, you will use the simplest of these templates.
 

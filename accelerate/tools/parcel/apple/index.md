@@ -3,7 +3,7 @@ id: index
 title: MacOS
 ---
 
-import {DocsCardList} from '../../../../src/components/DocsCard';
+import {DocsCardList} from '../../../../src/components/global/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 Parcel provides comprehensive macOS application packaging with cross-platform support. Build, sign, and distribute macOS applications from Windows, Linux, or macOS—even without requiring a physical macOS machine.

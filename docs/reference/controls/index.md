@@ -4,7 +4,7 @@ id: index
 title: Controls Reference
 ---
 
-import {DocsCardList} from '../../../src/components/DocsCard';
+import {DocsCardList} from '../../../src/components/global/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # Built-in Controls

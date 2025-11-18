@@ -3,7 +3,7 @@ id: add-a-control
 title: Add a Control 
 ---
 
-import Highlight from '@site/src/components/Highlight';
+import Highlight from '@site/src/components/global/Highlight';
 import CalculateButton from '/img/get-started/test-drive/calculate-button.png';
 import ButtonIntellisenseScreenshot from '/img/get-started/test-drive/button-intellisense.png';
 

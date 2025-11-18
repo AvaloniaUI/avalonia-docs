@@ -114,6 +114,8 @@ const config = {
         
         theme: {
           customCss: [
+            require.resolve('./node_modules/modern-normalize/modern-normalize.css'),
+            require.resolve('./node_modules/@ionic-internal/ionic-ds/dist/tokens/tokens.css'),
             require.resolve('./src/styles/custom.scss'),
           ],
 
@@ -173,6 +175,17 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'controls',
+        path: 'controls',
+        routeBasePath: 'controls',
+        sidebarPath: require.resolve('./controls-sidebar.js'),
+        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
+        editLocalizedFiles: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'xpf',
         path: 'xpf',
         routeBasePath: 'xpf',
@@ -205,16 +218,8 @@ const config = {
       // Replace with your project's social card
       image: 'img/social-card.png',
       colorMode: {
-        defaultMode: 'light',
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
-      },      
-      docs: {
-        sidebar: {
-          hideable: true,
-          autoCollapseCategories: true
-        }
-      },
+      defaultMode: 'light',
+    },
       zoom: {
         selector: '.markdown :not(em) > img',
         background: {
@@ -229,14 +234,27 @@ const config = {
       navbar: {
         logo: {
           alt: 'Avalonia Logo',
-          src: 'img/purple-border-gradient-icon.png',
-          srcDark: "img/white-border-gradient-icon.png"
+          src: 'logo/docs-logo-light.svg',
+          srcDark: "logo/docs-logo-dark.svg",
+          height: 28,
+          width: 139,
+          href: '/',
+          target: '_self',
         },
         items: [
           {
-            label: 'Avalonia Docs',
+            label: 'Guide',
             to: '/docs/welcome',
             activeBasePath: '/docs'
+          },
+          {
+            label: 'Controls',
+            to: '/controls',
+            activeBasePath: '/controls'
+          },
+          {
+            type: 'html',
+            value: '<div class="separator" aria-hidden></div>',
           },
           {
             label: 'Accelerate',
@@ -248,27 +266,52 @@ const config = {
             activeBasePath: '/xpf'
           },
           {
-              label: 'Resources',
-              type: 'dropdown',
-              className: 'avalonia-dropdown resources-dropdown',
-              items: [
-                {
-                  type: 'html',
-                  value: resourcesHTML,
-                  className: 'avalonia-dropdown',
-                },
-              ],
-          },
-          {
-            label: 'Support',
-            to: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
-          },          
-          {
-            type: 'localeDropdown',
+            type: 'search',
             position: 'right',
           },
-          {
-            type: 'search',
+                  {
+          label: 'Community',
+          position: 'right',
+          items: [
+            {
+              href: 'https://avaloniaui.community',
+              label: 'Community Hub',
+              target: '_blank',
+              rel: null,
+            },
+            {
+              href: 'https://github.com/AvaloniaUI/Avalonia/discussions',
+              label: 'GitHub Discussions',
+              target: '_blank',
+              rel: null,
+            },
+            {
+              href: 'https://avaloniaui.net/blog',
+              label: 'Blog',
+              target: '_blank',
+              rel: null,
+            },
+            {
+              href: 'https://twitter.com/avaloniaui',
+              label: 'Twitter',
+              target: '_blank',
+              rel: null,
+            },
+          ],
+          className: 'navbar__link--community',
+        },
+        {
+          label: 'Support',
+          position: 'right',
+          to: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+        }, 
+        {
+          type: 'html',
+          position: 'right',
+          value: '<div class="separator" aria-hidden></div>',
+        },
+        {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
@@ -278,7 +321,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['csharp', 'bash'],
+        additionalLanguages: ['csharp', 'bash', 'shell-session', 'diff'],
       },
       algolia: {
         // The application ID provided by Algolia

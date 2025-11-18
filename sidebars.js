@@ -8,11 +8,12 @@ const sidebars = {
     'overview/what-is-avalonia',
     'overview/supported-platforms',
     {
-      'type': 'category',
-      'label': 'Get Started',
-      'link': {
-        'type': 'doc',
-        'id': 'get-started/index',
+      type: 'category',
+      label: 'Get Started',
+      collapsed: false,
+      link: {
+        type: 'doc',
+        id: 'get-started/index',
       },
       'items': [
         'get-started/install',

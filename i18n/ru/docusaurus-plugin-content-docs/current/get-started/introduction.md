@@ -3,7 +3,7 @@ id: introduction
 title: Introduction
 ---
 
-import Highlight from '@site/src/components/Highlight';
+import Highlight from '@site/src/components/global/Highlight';
 
 You can use this section to get started straight away with _Avalonia UI_ and _Visual Studio_. This will take you through a simple tutorial example step-by-step; and introduce you to some of the _Avalonia UI_ concepts and techniques.
 

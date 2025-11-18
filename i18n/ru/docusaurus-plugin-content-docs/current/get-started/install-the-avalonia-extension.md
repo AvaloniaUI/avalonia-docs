@@ -3,7 +3,7 @@ id: install-the-avalonia-extension
 title: Install the Avalonia Extension
 ---
 
-import Highlight from '@site/src/components/Highlight';
+import Highlight from '@site/src/components/global/Highlight';
 
 To implement applications using _Avalonia UI_, you first need to install the _Avalonia for Visual Studio_ extension.
 

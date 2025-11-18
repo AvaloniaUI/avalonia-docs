@@ -3,7 +3,7 @@ id: code-with-controls
 title: Code With Controls
 ---
 
-import Highlight from '@site/src/components/Highlight';
+import Highlight from '@site/src/components/global/Highlight';
 
 На этой странице вы узнаете, как обновить информацию температуры в Фаренгейтах, при изменении значения по Цельсия после каждого нажатия кнопки.
 

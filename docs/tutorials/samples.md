@@ -3,7 +3,7 @@ id: samples
 title: Samples
 ---
 
-import SampleCardsGrid from '@site/src/components/SampleCardsGrid';
+import SampleCardsGrid from '@site/src/components/global/SampleCardsGrid';
 
 ## Model-View-ViewModel (MVVM)
 

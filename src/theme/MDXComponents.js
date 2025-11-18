@@ -1,17 +1,17 @@
 import React from 'react';
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
-import Highlight from '@site/src/components/Highlight';
-import { CardSection, Card } from '../components/CardComponents'; 
-import HelpNeeded from '../components/HelpNeeded'; 
-import GitHubSampleLink from '../components/GitHubSampleLink';
-import MinVersion from '../components/MinVersion';
-import XpfAd from '../components/XpfAdvert';
-import Button from '../components/Button';
+import Highlight from '@site/src/components/global/Highlight';
+import { CardSection, Card } from '../components/global/CardComponents'; 
+import HelpNeeded from '../components/global/HelpNeeded'; 
+import GitHubSampleLink from '../components/global/GitHubSampleLink';
+import MinVersion from '../components/global/MinVersion';
+import XpfAd from '../components/global/XpfAdvert';
+import Button from '../components/global/Button';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ThemedImage from '@theme/ThemedImage';
-import Shortcut from '../components/Shortcut';
+import Shortcut from '../components/global/Shortcut';
 
 export default {
   // Re-use the default mapping
