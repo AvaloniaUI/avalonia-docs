@@ -186,6 +186,17 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'samples',
+        path: 'samples',
+        routeBasePath: 'samples',
+        sidebarPath: require.resolve('./samples-sidebar.js'),
+        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
+        editLocalizedFiles: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'xpf',
         path: 'xpf',
         routeBasePath: 'xpf',
@@ -251,6 +262,11 @@ const config = {
             label: 'Controls',
             to: '/controls',
             activeBasePath: '/controls'
+          },
+          {
+            label: 'Samples',
+            to: '/samples',
+            activeBasePath: '/samples'
           },
           {
             type: 'html',
