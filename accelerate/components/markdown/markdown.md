@@ -74,7 +74,7 @@ The Avalonia.Controls.Markdown control renders Markdown-formatted text in Avalon
 
 #### ViewModel Example (Load from File)
 
-[Example.md](./example.md)
+[example.md](./example.md)
 
 ```csharp
 namespace MarkdownSample;
