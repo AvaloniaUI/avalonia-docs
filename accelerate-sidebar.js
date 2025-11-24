@@ -167,7 +167,8 @@ const sidebars = {
           'label': 'Advanced Markdown',
           'items': [
             'components/markdown/styling',
-            'components/markdown/custom-image-loader'
+            'components/markdown/custom-image-loader',
+            'components/markdown/code-highlighter'
           ]
         }, 
       ]
