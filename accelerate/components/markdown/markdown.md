@@ -74,7 +74,7 @@ The Avalonia.Controls.Markdown control renders Markdown-formatted text in Avalon
 
 #### ViewModel Example (Load from File)
 
-[Example.md](./Example.md)
+[example.md](./example.md)
 
 ```csharp
 namespace MarkdownSample;
@@ -131,6 +131,10 @@ var markdown = new Markdown
 ## Custom Image Loader
 
 See the dedicated [Custom Image Loader](custom-image-loader.md) page for a detailed example how to customize image loading.
+
+## Code Highlighter
+
+See the dedicated [Code Highlighter](code-highlighter.md) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
 
 ## Styling
 
