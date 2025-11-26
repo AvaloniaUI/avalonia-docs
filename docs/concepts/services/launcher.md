@@ -46,7 +46,7 @@ Starts the default app associated with the specified storage file.
 Task<bool> LaunchFileInfoAsync(FileInfo fileInfo)
 ```
 
-### LaunchFileAsync
+### LaunchDirectoryInfoAsync
 Starts the default app associated with the specified storage directory (folder).
 
 ```cs
