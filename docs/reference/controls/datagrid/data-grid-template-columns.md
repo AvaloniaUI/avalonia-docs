@@ -23,7 +23,7 @@ This example adds a numeric up-down control when the age property for a person i
 
 ```xml
 <Window ...
-  xmlns:model="using:AvaloniaControls.Models" >
+  xmlns:model="using:AvaloniaControls.Models">
   
   <DataGrid Margin="20" ItemsSource="{Binding People}"
           GridLinesVisibility="All"
@@ -34,7 +34,7 @@ This example adds a numeric up-down control when the age property for a person i
       <DataGridTextColumn Header="Last Name" Width="2*"
          Binding="{Binding LastName}" />
       
-      <DataGridTemplateColumn Header="Age">
+      <DataGridTemplateColumn Header="Age" SortMemberPath="AgeInYears">
         <DataGridTemplateColumn.CellTemplate>
           <DataTemplate DataType="model:Person">
             <TextBlock Text="{Binding AgeInYears, StringFormat='{}{0} years'}" 
@@ -89,8 +89,7 @@ public class Person
     public string LastName { get; set; }
     public int AgeInYears { get; set; } 
 
-
-    public Person(string firstName , string lastName, int ageInYears)
+    public Person(string firstName, string lastName, int ageInYears)
     {
         FirstName = firstName;
         LastName = lastName;
