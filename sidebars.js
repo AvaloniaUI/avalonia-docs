@@ -9,12 +9,24 @@ const sidebars = {
     'overview/supported-platforms',
     {
       'type': 'category',
-      'label': 'Get Started',
+      'label': 'Getting started',
       'link': {
         'type': 'doc',
         'id': 'get-started/index',
       },
       'items': [
+        {
+          'type': 'category',
+          'label': 'Starter tutorial',
+          'link' : {
+            'type' : 'doc',
+            'id': 'get-started/starter-tutorial/index'
+          },
+          'items': [
+            'get-started/starter-tutorial/adding-a-control',
+          ],
+        },
+        'get-started/xaml-previewers',
         'get-started/install',
         'get-started/set-up-an-editor',
         {
