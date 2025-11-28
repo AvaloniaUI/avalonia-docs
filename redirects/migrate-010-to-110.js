@@ -177,7 +177,7 @@ const redirects = [
     },
     {
         "from": "/docs/getting-started/ide-support",
-        "to": "/docs/get-started/index"
+        "to": "/docs/get-started/"
     },
     {
         "from": [
@@ -192,7 +192,7 @@ const redirects = [
     },
     {
         "from": "/docs/getting-started/programming-with-avalonia/",
-        "to": "/docs/get-started/index"
+        "to": "/docs/get-started/"
     },
     {
         "from": "/docs/getting-started/programming-with-avalonia/controls-and-layouts",
