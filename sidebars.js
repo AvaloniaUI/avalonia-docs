@@ -24,30 +24,14 @@ const sidebars = {
           },
           'items': [
             'get-started/starter-tutorial/adding-a-control',
+            'get-started/starter-tutorial/adding-some-layout',
+            'get-started/starter-tutorial/customizing-the-avalonia-window',
+            'get-started/starter-tutorial/establishing-events-and-responses',
+            'get-started/starter-tutorial/converting-data',
+            'get-started/starter-tutorial/exercises',
           ],
         },
         'get-started/xaml-previewers',
-        'get-started/install',
-        'get-started/set-up-an-editor',
-        {
-          'type': 'category',
-          'label': 'Test Drive',
-          'link' : {
-            'type' : 'doc',
-            'id': 'get-started/test-drive/index'
-          },
-          'items': [
-            'get-started/test-drive/introduction',
-            'get-started/test-drive/create-a-project',
-            'get-started/test-drive/main-window',
-            'get-started/test-drive/add-a-control',
-            'get-started/test-drive/add-some-layout',
-            'get-started/test-drive/input-controls',
-            'get-started/test-drive/the-design-preview',
-            'get-started/test-drive/respond-to-an-event',
-            'get-started/test-drive/code-with-controls',
-          ],
-        },
         {
           'type': 'category',
           'label': 'Coming from WPF?',
