@@ -3,6 +3,8 @@ const redirects = [
       from: [
             '/docs/get-started/install',
             '/docs/get-started/set-up-an-editor',
+            '/docs/get-started/getting-started',
+            '/docs/get-started/introduction',
           ],
     },
     { to: '/docs/get-started/starter-tutorial/index',
