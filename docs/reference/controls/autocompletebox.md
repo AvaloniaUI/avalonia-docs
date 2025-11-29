@@ -65,7 +65,7 @@ namespace AvaloniaControls.Views
 ### Using AutoCompleteBox with Objects
 When working with complex objects instead of simple strings, specify which property should be shown and how the control should filter the underlying data. The sections below cover display binding, custom filtering, and formatting the presented text.
 
-#### Displaying Objects Using ValueMemberBinding
+#### Filtering Objects Using ValueMemberBinding
 ValueMemberBinding tells the control which property of your object is displayed in the text box and used for built-in filtering.
 
 ```xml
@@ -212,13 +212,17 @@ public partial class MainWindow : Window
 
 ```
 
-#### Customizing Display Text Using a Value Converter
-You can format the text shown in the drop-down using a value converter. This is useful when you want to show multiple fields (for example, name and price).
+#### Customizing Text Using a Value Converter
+You can control the text displayed in the drop-down by using a value converter. This is helpful when you want to show a combination of fields—for example, a product’s name and price. Keep in mind that this also affects how filtering works: if you display both name and price, the control will allow filtering by either value.
+
+If you only want to change how the item appears visually (without affecting filtering), use the standard ItemTemplate property instead.
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:converters="using:YourNamespace.Converters">
+        xmlns:converters="using:YourNamespace.Converters"
+        xmlns:vm="clr-namespace:YourNamespace.ViewModels;assembly=YourNamespace"
+        x:DataType="vm:MainViewModel">
 
     <Window.Resources>
         <converters:ProductDisplayConverter x:Key="ProductDisplayConverter" />
