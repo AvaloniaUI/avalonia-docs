@@ -184,7 +184,7 @@ const redirects = [
             "/docs/getting-started/ide-support/jetbrains-rider-setup",
             "/docs/getting-started/jetbrains-rider-setup"
         ],
-        "to": "/docs/reference/jetbrains-rider-ide/jetbrains-rider-setup"
+        "to": "/docs/get-started/"
     },
     {
         "from": "/docs/getting-started/logging-errors-and-warnings",
