@@ -84,7 +84,10 @@ const sidebars = {
       'items': [
         'tutorials/samples',
         'tutorials/groupbox',
-        'get-started/starter-tutorial/index',
+        {'type': 'link',
+         'label': 'Starter tutorial',
+         'href': 'https://docs.avalonia.net/docs/get-started/starter-tutorial',
+        },
         {
           'type': 'link',
           'label': 'ToDo List App',
