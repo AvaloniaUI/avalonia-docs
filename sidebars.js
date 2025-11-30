@@ -86,7 +86,7 @@ const sidebars = {
         'tutorials/groupbox',
         {'type': 'link',
          'label': 'Starter tutorial',
-         'href': 'https://docs.avalonia.net/docs/get-started/starter-tutorial',
+         'href': 'https://docs.avaloniaui.net/docs/get-started/starter-tutorial',
         },
         {
           'type': 'link',
