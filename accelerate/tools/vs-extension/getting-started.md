@@ -8,7 +8,7 @@ It supports Visual Studio 2022 version 17.10 and above.
 
 In addition to downloading and installing the extension from the marketplace you can also search within the **Manage Extensions** window on the **Extensions** menu
 
-![Avalonia extension in the Manage Extensions window](../../../static/img/get-started/avalonia-vs-extension-nuget.png)
+![Avalonia extension in the Manage Extensions window](../../../static/img/vs-extension/avalonia-vs-extension-nuget.png)
 
 ## Features
 
