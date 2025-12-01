@@ -11,7 +11,7 @@ import MainWindowFileLocation from '/img/get-started/mainwindow-file-location.pn
 
 ## Build a temperature converter app
 
-Now that you’re [set up with an Avalonia project in your integrated development environment (IDE)](/docs/get-started), we can go through some basic concepts and functionalities in Avalonia. We’re going to do that by turning the default Avalonia template into a temperature converter app.
+Now that you’re [set up with an Avalonia project in your integrated development environment (IDE)](/docs/get-started#creating-your-first-project), we can go through some basic concepts and functionalities in Avalonia. We’re going to do that by turning the default Avalonia template into a temperature converter app.
 
 Follow through this tutorial to create the app. As you do so, you will learn about:
 
