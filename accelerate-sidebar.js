@@ -153,6 +153,7 @@ const sidebars = {
         'components/virtual-keyboard/getting-started',
         'components/virtual-keyboard/virtual-keyboard-scope',
         'components/virtual-keyboard/virtual-keyboard',
+        'components/virtual-keyboard/styling',
         'components/virtual-keyboard/input-method-identifiers',
       ]
     },
