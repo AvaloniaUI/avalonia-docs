@@ -80,9 +80,25 @@ Visual Studio Code is also supported, although we do not recommend it due to mor
 
 ## Installing Avalonia templates
 
-Start by installing the [Avalonia templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates).
+Depending on which IDE you are using, you may already have the [Avalonia templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates) installed. This is the case for Visual Studio with the Avalonia for Visual Studio extension.
 
-To do so, run this command:
+You can run this command to check what .NET templates you have available:
+
+```
+dotnet new list
+```
+
+Look for these Avalonia templates among the other .NET templates:
+
+```
+Template Name                                 Short Name                  Language    Tags
+--------------------------------------------  --------------------------  ----------  ---------------------------------------------------------
+Avalonia .NET App                             avalonia.app                [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia .NET MVVM App                        avalonia.mvvm               [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia Cross Platform Application           avalonia.xplat              [C#],F#     Desktop/Xaml/Avalonia/Browser/Mobile
+```
+
+If you do not see these templates on the list, you can install them by running this command:
 
 ```
 dotnet new install Avalonia.Templates
@@ -101,22 +117,6 @@ Avalonia Styles                               avalonia.styles                   
 Avalonia TemplatedControl                     avalonia.templatedcontrol   [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
 Avalonia UserControl                          avalonia.usercontrol        [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
 Avalonia Window                               avalonia.window             [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
-```
-
-You can run this command to check what templates you have available for `dotnet new`:
-
-```
- dotnet new list
-```
-
-Along with other .NET templates, you should see these Avalonia templates:
-
-```
-Template Name                                 Short Name                  Language    Tags
---------------------------------------------  --------------------------  ----------  ---------------------------------------------------------
-Avalonia .NET App                             avalonia.app                [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
-Avalonia .NET MVVM App                        avalonia.mvvm               [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
-Avalonia Cross Platform Application           avalonia.xplat              [C#],F#     Desktop/Xaml/Avalonia/Browser/Mobile
 ```
 
 ### Installation troubleshooting
