@@ -29,7 +29,7 @@ using Avalonia.Interactivity;
 using System.Diagnostics;
 ```
 
-4. Locate the line `public partial class MainWindow : Window` further down the file. This class currently contains only the constructor for the main window, `public MainWindow()`. Above the constructor, add the following code:
+4. Locate the line `public partial class MainWindow : Window` further down the file. This class currently contains only the constructor for the main window, `public MainWindow()`. Below the constructor, add the following code:
 
 ```cs
 private void Button_OnClick(object? sender, RoutedEventArgs e)
@@ -49,14 +49,14 @@ namespace GetStartedApp.Views;
 
 public partial class MainWindow : Window
 {
-    private void Button_OnClick(object? sender, RoutedEventArgs e)
-    {
-        Debug.WriteLine("Click!");
-    }
-
     public MainWindow()
     {
         InitializeComponent();
+    }
+    
+    private void Button_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Debug.WriteLine("Click!");
     }
 }
 ```
