@@ -19,7 +19,7 @@ const redirects = [
             '/docs/get-started/test-drive/add-a-control',
           ],
     },
-    { to: '/docs/get-started/starter-tutorial/adding-some=layout',
+    { to: '/docs/get-started/starter-tutorial/adding-some-layout',
       from: [
             '/docs/get-started/test-drive/add-some-layout',
             '/docs/get-started/test-drive/input-controls',
