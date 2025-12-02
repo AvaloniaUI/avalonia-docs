@@ -124,6 +124,7 @@ const sidebars = {
         'components/treedatagrid/selection',
         'components/treedatagrid/expanding-collapsing',
         'components/treedatagrid/sorting',
+        'components/treedatagrid/filtering',
         'components/treedatagrid/faq',
       ]
     },    
