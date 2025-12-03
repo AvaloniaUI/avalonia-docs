@@ -1,6 +1,6 @@
 ---
-index: text-trimming
-title: Text trimming
+index: texttrimming
+title: TextTrimming
 description: About the TextTrimming property
 ---
 
@@ -11,7 +11,7 @@ import PrefixCharacterEllipsis from '/img/reference/properties/texttrimming/text
 import WordEllipsis from '/img/reference/properties/texttrimming/texttrimming-wordellipsis.png';
 import TextWrappingWithTextTrimming from '/img/reference/properties/texttrimming/textwrapping-with-texttrimming.png';
 
-# Text trimming
+# TextTrimming
 
 ## Overview
 

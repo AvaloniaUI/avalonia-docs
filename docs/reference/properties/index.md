@@ -1,6 +1,6 @@
 ---
 id: index
-title: Properties reference
+title: Properties
 description: Reference page for properties of Avalonia controls
 ---
 
