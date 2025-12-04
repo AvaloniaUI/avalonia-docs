@@ -30,7 +30,7 @@ Source.Filter(x =>
     x.Name.Contains(_filterString, StringComparison.CurrentCultureIgnoreCase) &&
     x.Age >= _minimumAge);
 
-// Filter by multiple properties using OR
+// Filter by first name OR last name OR email
 Source.Filter(x => 
     x.FirstName.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase) ||
     x.LastName.Contains(_searchText, StringComparison.CurrentCultureIgnoreCase) ||
