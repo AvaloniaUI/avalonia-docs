@@ -107,6 +107,8 @@ Filter operations run on the UI thread and re-evaluate every item in the source.
 
 Here's a complete example showing filtering with a search box:
 
+C#:
+
 ```csharp
 public class PersonListViewModel : ViewModelBase
 {
