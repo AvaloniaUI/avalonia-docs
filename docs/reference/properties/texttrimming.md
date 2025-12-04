@@ -15,7 +15,7 @@ import TextWrappingWithTextTrimming from '/img/reference/properties/texttrimming
 
 ## Overview
 
-The `TextTrimming` property allows you to control how text is displayed when it exceeds the maximum available space in a control. This property is accessible by text-displaying controls, such as [`TextBlock`](https://github.com/AvaloniaUI/Avalonia/blob/6e04c167f0aead96a7489f88779d596d6d3766c8/src/Avalonia.Controls/TextBlock.cs#L478) or [`ContentPresenter`](https://github.com/AvaloniaUI/Avalonia/blob/6e04c167f0aead96a7489f88779d596d6d3766c8/src/Avalonia.Controls/Presenters/ContentPresenter.cs).
+The `TextTrimming` property allows you to control how text is displayed when it exceeds the maximum available space in a control. This property is accessible by text-displaying controls, such as [`TextBlock`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBlock.cs), [`SelectableTextBlock`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SelectableTextBlock.cs) or [`ContentPresenter`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Presenters/ContentPresenter.cs).
 
 Text trimming adds an ellipsis (…) to indicate truncated text, instead of abruptly cutting off the text.
 
@@ -143,5 +143,6 @@ Combine `TextTrimming` and `TextWrapping` to apply trimming to the last visible 
 
 ## See also
 
-- [TextBlock reference](https://docs.avaloniaui.net/docs/reference/controls/textblock)
+- [TextBlock](https://docs.avaloniaui.net/docs/reference/controls/textblock)
+- [SelectableTextBlock](https://docs.avaloniaui.net/docs/reference/controls/selectable-textblock)
 - [TextTrimming API reference](https://reference.avaloniaui.net/api/Avalonia.Media/TextTrimming/)
