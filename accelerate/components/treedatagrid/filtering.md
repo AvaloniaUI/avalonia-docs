@@ -98,7 +98,7 @@ When filtering hierarchical data with `HierarchicalTreeDataGridSource`, the filt
 
 Filter operations run on the UI thread and re-evaluate every item in the source. For large datasets:
 
-- Use `Throttle` when filtering based on user input (as shown in the ReactiveUI example)
+- Use `Throttle` when filtering based on user input
 - Keep filter predicates simple and avoid expensive operations
 - Consider filtering the underlying data collection before binding to the grid for very large datasets
 - Use indexes or pre-computed properties when possible
