@@ -143,6 +143,6 @@ Combine `TextTrimming` and `TextWrapping` to apply trimming to the last visible 
 
 ## See also
 
-- [TextBlock](https://docs.avaloniaui.net/docs/reference/controls/textblock)
-- [SelectableTextBlock](https://docs.avaloniaui.net/docs/reference/controls/selectable-textblock)
+- [TextBlock control](https://docs.avaloniaui.net/docs/reference/controls/textblock)
+- [SelectableTextBlock control](https://docs.avaloniaui.net/docs/reference/controls/selectable-textblock)
 - [TextTrimming API reference](https://reference.avaloniaui.net/api/Avalonia.Media/TextTrimming/)
