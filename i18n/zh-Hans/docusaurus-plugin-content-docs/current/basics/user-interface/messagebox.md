@@ -12,6 +12,8 @@ title: 消息框 MessageBox
 ## 第三方 MessageBox 实现
 
 * [Actipro Avalonia UI Controls](https://www.actiprosoftware.com/products/controls/avalonia)
+* [Eremex Avalonia UI Controls ($)](https://eremexcontrols.net/controls/windows-and-dialogs/messagebox/)
 * [DialogHost.Avalonia](https://github.com/AvaloniaUtils/DialogHost.Avalonia)
 * [MessageBox.Avalonia](https://github.com/AvaloniaCommunity/MessageBox.Avalonia)
 * [Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia)
+* [AtomUI.Avalonia](https://github.com/chinware/AtomUI)
