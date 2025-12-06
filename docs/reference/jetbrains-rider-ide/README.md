@@ -8,5 +8,5 @@ The _JetBrains Rider_ IDE has built-in support for _Avalonia UI_ XAML starting i
 
 For more information about the _JetBrains Rider_ IDE, see the website [https://www.jetbrains.com/rider](https://www.jetbrains.com/rider/).
 
-For the _JetBrains Rider_ 2020.3 release announcement, see [here](https://www.jetbrains.com/rider/whatsnew/2020-3/#version-2020-3-avalonia-support).
+For the _JetBrains Rider_ 2020.3 release announcement, see [here](https://blog.jetbrains.com/dotnet/2020/12/14/rider-2020-3-release/).
 
