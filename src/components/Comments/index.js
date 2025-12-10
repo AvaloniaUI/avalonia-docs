@@ -9,7 +9,7 @@ export default function Comments() {
     <div>
       <Giscus
         id="comments"
-        repo="AvaloniaUI/avalonia-docss"
+        repo="AvaloniaUI/avalonia-docs"
         repoId="R_kgDOJarc8w"
         category="General"
         categoryId="DIC_kwDOJarc884CbUsp"
