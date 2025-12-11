@@ -1,6 +1,7 @@
 ---
 id: index
 title: Starter tutorial
+description: Learn the basics of Avalonia by building a temperature converter app. Part 1 of 7 the Avalonia starter tutorial.
 ---
 
 import DocCardList from '@theme/DocCardList';

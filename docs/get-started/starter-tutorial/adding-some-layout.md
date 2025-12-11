@@ -1,6 +1,7 @@
 ---
 id: adding-some-layout
 title: Adding some layout
+description: How to use layout controls to have multiple controls on your temperature converter app. Part 3 of 7 the Avalonia starter tutorial.
 ---
 
 import TemperatureConverterTextOnly from '/img/get-started/temperature-converter-text-only.png';

@@ -1,6 +1,7 @@
 ---
 id: customizing-the-avalonia-window
 title: Customizing the Avalonia window
+description: How to adjust the attributes of the Avalonia window. Part 4 of 7 the Avalonia starter tutorial.
 ---
 
 import AvaloniaWindowLayout from '/img/get-started/avalonia-window-layout.png';

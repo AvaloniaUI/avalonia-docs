@@ -1,6 +1,7 @@
 ---
 id: adding-a-control
 title: Adding a control
+description: How to add a button to your temperature converter app. Part 2 of 7 the Avalonia starter tutorial.
 ---
 
 import CalculateButtonLeft from '/img/get-started/calculate-button-left.png';
