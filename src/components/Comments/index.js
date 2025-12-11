@@ -18,7 +18,7 @@ export default function Comments() {
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="top"
-        theme="dark"
+        theme={colorMode}
         lang="en"
         loading="lazy"
       />
