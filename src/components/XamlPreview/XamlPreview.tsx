@@ -10,10 +10,14 @@ import Admonition from '@theme/Admonition';
 import { extractCodeBlocks } from './utils';
 import styles from './XamlPreview.module.css';
 
+const IFRAME_TIMEOUT_MS = 20000; // 20 seconds
+
 interface XamlPreviewProps {
   xaml?: string;
   csharp?: string;
   showCSharp?: boolean;
+  fallbackImage?: string;
+  fallbackAlt?: string;
   children?: ReactNode;
 }
 
@@ -71,6 +75,8 @@ export default function XamlPreview({
   xaml: propXaml,
   csharp: propCSharp,
   showCSharp = true,
+  fallbackImage,
+  fallbackAlt = 'Preview of the XAML control',
   children,
 }: XamlPreviewProps): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -92,12 +98,16 @@ export default function XamlPreview({
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isReady, setIsReady] = useState(false);
+  const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [timedOut, setTimedOut] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const [xaml, setXaml] = useState(initialXaml);
   const [csharp, setCSharp] = useState(initialCSharp || '');
 
   const hasCSharp = showCSharp && initialCSharp;
+  const showFallback = fallbackImage && (isLoading || timedOut);
+  const showIframe = isBrowser && !timedOut;
 
   // Send code to the iframe
   const sendCodeToPreview = useCallback(() => {
@@ -128,6 +138,7 @@ export default function XamlPreview({
         case 'viewcreated':
           setError(null);
           setIsLoading(false);
+          setIframeLoaded(true);
           break;
         case 'error':
           setError(message || 'An error occurred');
@@ -138,6 +149,20 @@ export default function XamlPreview({
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
   }, [previewUrl, isBrowser]);
+
+  // Timeout for iframe loading
+  useEffect(() => {
+    if (!isBrowser || iframeLoaded || !fallbackImage) return;
+
+    const timer = setTimeout(() => {
+      if (!iframeLoaded) {
+        setTimedOut(true);
+        setIsLoading(false);
+      }
+    }, IFRAME_TIMEOUT_MS);
+
+    return () => clearTimeout(timer);
+  }, [isBrowser, iframeLoaded, fallbackImage]);
 
   // Send code when ready or when code changes
   useEffect(() => {
@@ -173,12 +198,35 @@ export default function XamlPreview({
       <div className={styles.previewPane}>
         <div className={styles.previewHeader}>Preview</div>
         <div className={styles.previewContent}>
-          {isLoading && (
+          {/* Fallback image shown while loading or if timed out */}
+          {showFallback && (
+            <div className={`${styles.fallbackContainer} ${iframeLoaded ? styles.fadeOut : ''}`}>
+              <img 
+                src={fallbackImage} 
+                alt={fallbackAlt}
+                className={styles.fallbackImage}
+              />
+              {isLoading && !timedOut && (
+                <div className={styles.fallbackLoader}>
+                  <div className={styles.spinnerSmall} />
+                </div>
+              )}
+              {timedOut && (
+                <div className={styles.fallbackBadge}>
+                  Static preview (interactive unavailable)
+                </div>
+              )}
+            </div>
+          )}
+          
+          {/* Loading overlay when no fallback image */}
+          {isLoading && !fallbackImage && (
             <div className={styles.loadingOverlay}>
               <div className={styles.spinner} />
               <span>Loading Avalonia Preview...</span>
             </div>
           )}
+          
           {error && (
             <div className={styles.errorOverlay}>
               <Admonition type="danger" title="Error">
@@ -186,13 +234,16 @@ export default function XamlPreview({
               </Admonition>
             </div>
           )}
-          <iframe
-            ref={iframeRef}
-            src={previewUrl}
-            className={styles.previewIframe}
-            title="Avalonia XAML Preview"
-            sandbox="allow-scripts allow-same-origin"
-          />
+          
+          {showIframe && (
+            <iframe
+              ref={iframeRef}
+              src={previewUrl}
+              className={`${styles.previewIframe} ${!iframeLoaded ? styles.iframeHidden : ''}`}
+              title="Avalonia XAML Preview"
+              sandbox="allow-scripts allow-same-origin"
+            />
+          )}
         </div>
       </div>
     </div>
