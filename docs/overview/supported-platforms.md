@@ -64,7 +64,7 @@ Skia is built against glibc 2.17. If your distro uses something else instead, yo
 * iOS 18
 
 :::note
-.NET 7 is required for iOS support.
+.NET support on iOS follows the MAUI lifecycle. See the [MAUI support policy page](https://dotnet.microsoft.com/en-us/platform/support/policy/maui) for details.
 :::
 
 ## Android 
@@ -89,7 +89,7 @@ Skia is built against glibc 2.17. If your distro uses something else instead, yo
 | Android 16          | 16      | 36  |
 
 :::note
-.NET 7 is required for Android support.
+.NET support on Android follows the MAUI lifecycle. See the [MAUI support policy page](https://dotnet.microsoft.com/en-us/platform/support/policy/maui) for details.
 :::
 
 ## WebAssembly (Browser)
