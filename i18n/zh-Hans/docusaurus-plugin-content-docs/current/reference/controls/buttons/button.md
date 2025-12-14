@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.gif';
-
 # Button 按钮
 
 按钮是一种对指针动作做出反应的控件（也有一些键盘等效操作）。当指针按下时，它会呈现出被按下的状态。
@@ -39,29 +37,34 @@ import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.
 
 以下示例展示了一个简单的按钮和一个C#代码后台的点击事件处理程序。
 
+<XamlPreview>
+
 ```xml
-<StackPanel Margin="20">
-  <Button Click="ClickHandler">Press Me!</Button>
-  <TextBlock Margin="0 10" x:Name="message">Ready...</TextBlock>
-</StackPanel>
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <Button Click="OnClick"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center">
+    Press Me!
+  </Button>
+</UserControl>
 ```
 
-```csharp title='C#'
-public partial class MainWindow : Window
+```csharp
+public partial class MainView : UserControl
 {
-    public MainWindow()
-    {
-        InitializeComponent();
-    }
+    private int _clickCount = 0;
 
-    public void ClickHandler(object sender, RoutedEventArgs args)
+    public void OnClick(object sender, RoutedEventArgs args)
     {
-        message.Text = "Button clicked!";
+        var btn = (Button)sender;
+        btn.Content = $"Clicked: {++_clickCount} times";
     }
 }
 ```
 
-<img src={ButtonClickScreenshot} alt=""/>
+</XamlPreview>
+
 
 ## 更多信息
 

@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.gif';
-
 # Button
 
 The button is a control that reacts to pointer actions (and has some keyboard equivalents). It presents visual feedback in the form of a depressed state when the pointer is down.
@@ -39,32 +37,34 @@ You will probably use these properties most often:
 
 This example shows a simple button and a C# code-behind click event handler.
 
-
+<XamlPreview>
 
 ```xml
-<StackPanel Margin="20">
-  <Button Click="ClickHandler">Press Me!</Button>
-  <TextBlock Margin="0 10" x:Name="message">Ready...</TextBlock>
-</StackPanel>
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <Button Click="OnClick"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center">
+    Press Me!
+  </Button>
+</UserControl>
 ```
 
-
-```csharp title='C#'
-public partial class MainWindow : Window
+```csharp
+public partial class MainView : UserControl
 {
-    public MainWindow()
-    {
-        InitializeComponent();
-    }
+    private int _clickCount = 0;
 
-    public void ClickHandler(object sender, RoutedEventArgs args)
+    public void OnClick(object sender, RoutedEventArgs args)
     {
-        message.Text = "Button clicked!";
+        var btn = (Button)sender;
+        btn.Content = $"Clicked: {++_clickCount} times";
     }
 }
 ```
 
-<img src={ButtonClickScreenshot} alt=""/>
+</XamlPreview>
+
 
 ## More Information
 

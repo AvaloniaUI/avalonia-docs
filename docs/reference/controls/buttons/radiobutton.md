@@ -3,8 +3,6 @@ title: RadioButton
 description: REFERENCE - Built-in Controls
 ---
 
-import RadioButtonScreenshot from '/img/reference/controls/buttons/radiobutton.gif';
-
 # Radio Button
 
 The `RadioButton` control presents a group of options from which only one may be selected at a time. A selected option is drawn as a filled circle, and an unselected option as an empty circle.
@@ -23,26 +21,30 @@ You will probably use these properties most often:
 
 This example shows two groups of radio buttons working independently:
 
-```xml
-<StackPanel Margin="20">
-  <TextBlock Margin="0 10 0 5">First Group</TextBlock>
-    <RadioButton GroupName="First Group"
-              Content="First Option"/>
-    <RadioButton GroupName="First Group"
-              Content="Second Option"/>
-    <RadioButton IsEnabled="False"
-              GroupName="First Group"
-              Content="Third Option"/>
+<XamlPreview>
 
-  <TextBlock Margin="0 10 0 5">Second Group</TextBlock> 
-    <RadioButton GroupName="Second Group"
-              Content="Fourth Option"/>
-    <RadioButton GroupName="Second Group"
-              Content="Fifth Option"/>
-</StackPanel>
+```xml
+<UserControl xmlns="https://github.com/avaloniaui">
+  <StackPanel Margin="20">
+    <TextBlock Margin="0 10 0 5">First Group</TextBlock>
+      <RadioButton GroupName="First Group"
+                Content="First Option"/>
+      <RadioButton GroupName="First Group"
+                Content="Second Option"/>
+      <RadioButton IsEnabled="False"
+                GroupName="First Group"
+                Content="Third Option"/>
+
+    <TextBlock Margin="0 10 0 5">Second Group</TextBlock> 
+      <RadioButton GroupName="Second Group"
+                Content="Fourth Option"/>
+      <RadioButton GroupName="Second Group"
+                Content="Fifth Option"/>
+  </StackPanel>
+</UserControl>
 ```
 
-<img src={RadioButtonScreenshot} alt="" />
+</XamlPreview>
 
 ## More Information
 

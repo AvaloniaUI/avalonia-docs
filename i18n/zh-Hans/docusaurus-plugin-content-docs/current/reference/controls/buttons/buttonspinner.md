@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import ButtonSpinnerScreenshot from '/img/reference/controls/buttons/button-spinner.png';
-
 # ButtonSpinner 按钮微调器
 
 按钮微调器是一个包含向上和向下微调按钮的控件。该按钮的内容是灵活的，但您需要编写相当多的行为代码。
@@ -16,13 +14,38 @@ import ButtonSpinnerScreenshot from '/img/reference/controls/buttons/button-spin
 
 ## 示例代码
 
+<XamlPreview>
+
 ```xml
-<ButtonSpinner Height="20" Width="130" ButtonSpinnerLocation="Left">
-  123
-</ButtonSpinner>
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <ButtonSpinner Spin="OnSpin"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center">
+    Press the spinner
+  </ButtonSpinner>
+</UserControl>
 ```
 
-<img src={ButtonSpinnerScreenshot} alt=''/>
+```csharp
+public partial class MainView : UserControl
+{
+    private int _currentValue = 0;
+
+    public void OnSpin(object sender, SpinEventArgs args)
+    {
+        if (args.Direction == SpinDirection.Increase)
+            _currentValue++;
+        else
+            _currentValue--;
+
+        var btn = (ButtonSpinner)sender;
+        btn.Content = $"Value: {_currentValue}";
+    }
+}
+```
+
+</XamlPreview>
 
 ## 更多信息
 

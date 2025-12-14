@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import RadioButtonScreenshot from '/img/reference/controls/buttons/radiobutton.gif';
-
 # RadioButton 单选按钮
 
 单选按钮控件展示了一组选项，用户一次只能选择其中一个。选中的选项以实心圆圈表示，未选中的选项以空心圆圈表示。
@@ -26,26 +24,31 @@ import RadioButtonScreenshot from '/img/reference/controls/buttons/radiobutton.g
 
 以下示例展示了两组独立工作的单选按钮：
 
-```xml
-<StackPanel Margin="20">
-  <TextBlock Margin="0 10 0 5">First Group</TextBlock>
-    <RadioButton GroupName="First Group"
-              Content="First Option"/>
-    <RadioButton GroupName="First Group"
-              Content="Second Option"/>
-    <RadioButton IsEnabled="False"
-              GroupName="First Group"
-              Content="Third Option"/>
+<XamlPreview>
 
-  <TextBlock Margin="0 10 0 5">Second Group</TextBlock> 
-    <RadioButton GroupName="Second Group"
-              Content="Fourth Option"/>
-    <RadioButton GroupName="Second Group"
-              Content="Fifth Option"/>
-</StackPanel>
+```xml
+<UserControl xmlns="https://github.com/avaloniaui">
+  <StackPanel Margin="20">
+    <TextBlock Margin="0 10 0 5">First Group</TextBlock>
+      <RadioButton GroupName="First Group"
+                Content="First Option"/>
+      <RadioButton GroupName="First Group"
+                Content="Second Option"/>
+      <RadioButton IsEnabled="False"
+                GroupName="First Group"
+                Content="Third Option"/>
+
+    <TextBlock Margin="0 10 0 5">Second Group</TextBlock> 
+      <RadioButton GroupName="Second Group"
+                Content="Fourth Option"/>
+      <RadioButton GroupName="Second Group"
+                Content="Fifth Option"/>
+  </StackPanel>
+</UserControl>
 ```
 
-<img src={RadioButtonScreenshot} alt="示例图片" />
+</XamlPreview>
+
 
 ## 更多信息
 

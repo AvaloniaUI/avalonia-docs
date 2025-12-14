@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbutton-hold.gif';
-
 # RepeatButton 重复按钮
 
 重复按钮是一种控件，其特点是在按住按钮时定期生成点击事件。
@@ -21,31 +19,34 @@ import RepeatButtonHoldScreenshot from '/img/reference/controls/buttons/repeatbu
 
 下面的示例演示了一个重复按钮，使用默认的间隔和延迟来生成点击事件。
 
+
+<XamlPreview>
+
 ```xml
-<Grid Margin="20" RowDefinitions="50,*">
-  <RepeatButton Grid.Row="0" Click="ClickHandler">Press and hold down</RepeatButton>
-  <ScrollViewer Grid.Row="1">
-    <TextBlock  Margin="0 10" x:Name="message">Ready...</TextBlock>
-  </ScrollViewer>
-</Grid>
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <RepeatButton Click="OnClick"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+    Press and hold down
+  </RepeatButton>
+</UserControl>
 ```
 
-```csharp title='C#'
-public partial class MainWindow : Window
+```csharp
+public partial class MainView : UserControl
 {
-    public MainWindow()
-    {
-        InitializeComponent();
-    }
+    private int _clickCount = 0;
 
-    public void ClickHandler(object sender, RoutedEventArgs args)
+    public void OnClick(object sender, RoutedEventArgs args)
     {
-        message.Text += "\rButton clicked!";
+        var btn = (RepeatButton)sender;
+        btn.Content = $"Clicked: {++_clickCount} times";
     }
 }
 ```
 
-<img src={RepeatButtonHoldScreenshot} alt="示例图片"/>
+</XamlPreview>
 
 ## 更多信息
 
