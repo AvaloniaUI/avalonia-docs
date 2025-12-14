@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-code-border-radius);
+  overflow: hidden;
+  margin: var(--ifm-spacing-vertical) 0;
+  min-height: 300px;
+}
+
+.codePane {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--ifm-color-emphasis-300);
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Override Docusaurus tab margins */
+.codePane :global(.tabs-container) {
+  margin-bottom: 0 !important;
+  flex: 1;
+}
+.codePane :global(.tabs-container) > div {
+  margin-top: 0 !important;
+}
+
+/* Fixed height for tab header row */
+.codePane :global(.tabs) {
+  height: 50px;
+}
+
+/* Remove padding from tab panel */
+.codePane :global([role="tabpanel"]) {
+  padding: 0 !important;
+  margin-top: 0 !important;
+}
+
+.codeContent {
+  max-height: 400px;
+  overflow: auto;
+  background-color: var(--prism-background-color);
+}
+
+/* Ensure minimum height for code block itself, including text background */
+.codeContent pre {
+  min-height: 246px;
+}
+
+.codeBlock {
+  margin: 0 !important;
+  padding: var(--ifm-pre-padding) !important;
+  border-radius: 0 !important;
+  font-size: var(--ifm-code-font-size) !important;
+  line-height: var(--ifm-pre-line-height) !important;
+  min-height: 100%;
+  min-width: max-content;
+  outline: none;
+  white-space: pre;
+  caret-color: var(--ifm-color-primary);
+}
+
+.previewPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.previewHeader {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 var(--ifm-tabs-padding-horizontal, 1rem);
+  border-bottom: 1px solid var(--docs-color-border);
+  font-size: var(--ifm-code-font-size);
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.previewContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ifm-background-surface-color);
+  position: relative;
+}
+
+.previewIframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+}
+
+.loadingOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ifm-spacing-vertical);
+  background-color: var(--ifm-background-surface-color);
+  z-index: 10;
+  color: var(--ifm-color-emphasis-600);
+  font-size: var(--ifm-code-font-size);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--ifm-color-emphasis-300);
+  border-top-color: var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  margin: var(--ifm-spacing-vertical);
+}
+
+/* Responsive: Stack vertically on smaller screens */
+@media (max-width: 996px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .codePane {
+    border-right: none;
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  }
+
+  .previewPane {
+    min-height: 250px;
+  }
+}

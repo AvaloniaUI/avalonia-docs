@@ -13,6 +13,13 @@ const config = {
   tagline: 'Developer Documentation Portal',
   url: 'https://docs.avaloniaui.net',
   baseUrl: '/',
+  
+  // Custom fields for site-wide configuration
+  customFields: {
+    // URL for the Avalonia XAML preview iframe
+    avaloniaPreviewUrl: 'https://white-hill-09a5c3303.3.azurestaticapps.net',
+  },
+
   markdown: {
     mermaid: true,
   },
