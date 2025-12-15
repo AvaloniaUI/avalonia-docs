@@ -7,6 +7,7 @@ description: How to add a button to your temperature converter app. Part 2 of 7 
 import CalculateButtonLeft from '/img/get-started/calculate-button-left.png';
 import CalculateButtonCenter from '/img/get-started/calculate-button-center.png';
 
+
 # Adding a control
 
 The first step for our temperature converter app is to add a **control**. By “controls”, we mean UI elements that allow interaction with your app. Some examples of controls are buttons, sliders, checkboxes or menus.
@@ -33,9 +34,7 @@ Let’s try replacing the text in the app with a button.
 4. Run the app or check the previewer. You should now see a **Calculate** button in the app window.
 5. You can try hovering over or clicking the button to see how its appearance changes.
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={CalculateButtonLeft} alt="A screenshot of an app running in a window, with the button aligned left." />
-</div>
+<Image light={CalculateButtonLeft} alt="A screenshot of an app running in a window, with the button aligned left." position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Setting the button's attributes
 
@@ -57,13 +56,6 @@ Your **Calculate** button is currently aligned against the left edge of the wind
 
 3. Run the app or check the previewer. You should see that the Calculate button moves to the center of the window.
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={CalculateButtonCenter} alt="A screenshot of an app running in a window, with the button aligned center." />
-</div>
+<Image light={CalculateButtonCenter} alt="A screenshot of an app running in a window, with the button aligned center." maxWidth={400} cornerRadius="true" margin="0,0,30,0"/>
 
 On the next page of this tutorial, you will learn how to add multiple elements to your app using layout controls.
-
-<br />
-<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-  <Button label="Adding some layout →" link="/docs/get-started/starter-tutorial/adding-some-layout" variant="primary" outline />
-</div>

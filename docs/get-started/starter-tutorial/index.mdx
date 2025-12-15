@@ -18,9 +18,7 @@ Follow through this tutorial to create the app. As you do so, you will learn abo
 
 <DocCardList />
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={TemperatureConverterComplete} alt="A screenshot of a completed app that converts temperatures from Celsius to Fahrenheit." />
-</div>
+<Image light={TemperatureConverterComplete} alt="A screenshot of a completed app that converts temperatures from Celsius to Fahrenheit." position="center" maxWidth={400} cornerRadius="true" margin={10}/>
 
 ## .axaml
 
@@ -36,15 +34,8 @@ See the [XAML previewers page](/docs/get-started/xaml-previewers) for how to ena
 
 In the **Views** folder of your project directory, open the file **MainWindow.axaml**. We will mainly be working on this file throughout this tutorial.
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={MainWindowFileLocation} alt="A screenshot showing the location of the main window file in a file tree." />
-</div>
+<Image light={MainWindowFileLocation} alt="A screenshot showing the location of the main window file in a file tree." position="center" maxWidth={400} cornerRadius="true" margin="20,0,50,0"/>
 
 Nearly everything in **MainWindow.axaml** goes between the `<Window>...</Window>` XAML tag. This tag represents the Avalonia window, where your app will run on the target platform. We’ll look at Avalonia windows in more detail later, when we get to [customizing the Avalonia window](/docs/get-started/starter-tutorial/customizing-the-avalonia-window).
 
 Proceed to the next page of this tutorial to learn how to add a button to the app.
-
-<br />
-<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-  <Button label="Adding a control →" link="/docs/get-started/starter-tutorial/adding-a-control" variant="primary" outline />
-</div>

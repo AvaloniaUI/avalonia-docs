@@ -21,9 +21,7 @@ Some layout controls, like `StackPanel` which you used earlier, create smaller s
 Each Avalonia window only accepts one control in its content zone.
 :::
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={AvaloniaWindowLayout} alt="A diagram displaying four overlapping, rectangular areas, representing the Avalonia window." />
-</div>
+<Image light={AvaloniaWindowLayout} alt="A diagram displaying four overlapping, rectangular areas, representing the Avalonia window." position="center" maxWidth={400} cornerRadius="true" margin="0,0,30,0"/>
 
 ## Default window attributes
 
@@ -65,9 +63,7 @@ mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 2. Set `d:DesignWidth` to 400.
 3. Observe the previewer. You should see that the preview now resembles a mobile display.
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={TemperatureConverterPortraitOrientation} alt="A screenshot of an app running in a window in portrait orientation." />
-</div>
+<Image light={TemperatureConverterPortraitOrientation} alt="A screenshot of an app running in a window in portrait orientation." position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Setting the runtime window size
 
@@ -94,8 +90,3 @@ Most mobile platforms actually ignore window sizes and automatically resize wind
 :::
 
 On the next page of this tutorial, you will learn how to create event handling so that the button responds to clicks.
-
-<br />
-<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-  <Button label="Establishing events and responses →" link="/docs/get-started/starter-tutorial/establishing-events-and-responses" variant="primary" outline />
-</div>
