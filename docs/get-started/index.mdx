@@ -1,0 +1,247 @@
+---
+id: index
+title: Getting started
+description: Get started with Avalonia. Install Avalonia and its prerequisites, then launch your first project using an Avalonia template.
+---
+import DownloadAvaloniaRider from '/img/get-started/download-rider-avaloniarider.png';
+import DownloadAvaloniaExtensionForVS from '/img/get-started/download-vs-avalonia-extension.png';
+import WelcomeToAvalonia from '/img/get-started/welcome-to-avalonia.png';
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# Getting started
+
+Let’s get started with Avalonia. This guide takes you through installing Avalonia and launching your first project in your integrated development environment (IDE).
+
+## Prerequisites
+
+You must have installed:
+
+- .NET (8.0 or above, as of October 2025)
+- IDE of your choice (we recommend JetBrains Rider or Visual Studio)
+
+### Installing .NET
+
+Download from the [.NET website](https://dotnet.microsoft.com/en-us/download/dotnet), then follow the installation instructions.
+
+### Choosing an IDE
+
+Avalonia works best in Visual Studio or JetBrains Rider.
+
+Visual Studio Code is also supported, although we do not recommend it due to more limited features.
+
+<Tabs groupId="ide">  
+  <TabItem value="rider" label="Rider">
+	We recommend [JetBrains Rider](https://www.jetbrains.com/rider/) if you use macOS or Linux. JetBrains Rider offers a complete, polished development experience on these operating systems, including built-in support for XAML.
+
+	Consider installing the third-party plugin [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider), which enables live preview of your XAML as you work.
+
+	To install AvaloniaRider:
+
+	1. In JetBrains Rider, go to **Settings → Plugins**.
+	2. Go to the **Marketplace** tab.
+	3. In the search bar, input “AvaloniaRider”.
+	4. Click **Install**.
+	5. Follow any additional installation instructions. You may need to close and reopen JetBrains Rider to complete the installation.
+
+	<div className="center" style={{maxWidth:400}}>
+	<img className="center" src={DownloadAvaloniaRider} alt="A screenshot displaying how to download the AvaloniaRider extension in Rider." />
+	</div>
+
+	For more information on using the XAML previewer, see the page on [XAML previewers](/docs/get-started/xaml-previewers).
+  </TabItem>
+  <TabItem value="vs" label="Visual Studio">
+  If you’re working on Windows, you can use [Visual Studio](https://visualstudio.microsoft.com/) with the Avalonia for Visual Studio extension.
+
+  To install Avalonia for Visual Studio:
+
+  1. In Visual Studio, go to **Extensions → Manage Extensions**.
+  2. In the search bar, input “Avalonia”.
+  3. Click **Install**.
+  4. Follow any additional installation instructions. You may need to close and reopen Visual Studio to complete the installation.
+
+	<div className="center" style={{maxWidth:400}}>
+	<img className="center" src={DownloadAvaloniaExtensionForVS} alt="A screenshot displaying how to download the Avalonia extension in Visual Studio." />
+	</div>
+  
+  Alternatively, you can [download the extension from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS).
+
+  :::note
+  If you are using an older version of Visual Studio, you may need to download an older version of the extension from the Marketplace, e.g., the [2019 version](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio).
+  :::
+
+  For more information on using the XAML previewer, see the page on [XAML previewers](/docs/get-started/xaml-previewers).
+  </TabItem>
+  <TabItem value="vsc" label="Visual Studio Code">
+  If you prefer to use [Visual Studio Code](https://code.visualstudio.com/), the Avalonia for VSCode extension provides basic functionalities like autocomplete and previewer. You can [download the extension from the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.vscode-avalonia).
+
+  Due to limited support, we do not recommend Visual Studio Code.
+  </TabItem>
+</Tabs>
+
+## Installing Avalonia templates
+
+Depending on which IDE you are using, you may already have the [Avalonia templates](https://github.com/AvaloniaUI/avalonia-dotnet-templates) installed. This is the case for Visual Studio with the Avalonia for Visual Studio extension.
+
+You can run this command to check what .NET templates you have available:
+
+```
+dotnet new list
+```
+
+Look for these Avalonia templates among the other .NET templates:
+
+```
+Template Name                                 Short Name                  Language    Tags
+--------------------------------------------  --------------------------  ----------  ---------------------------------------------------------
+Avalonia .NET App                             avalonia.app                [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia .NET MVVM App                        avalonia.mvvm               [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia Cross Platform Application           avalonia.xplat              [C#],F#     Desktop/Xaml/Avalonia/Browser/Mobile
+```
+
+If you do not see these templates on the list, you can install them by running this command:
+
+```
+dotnet new install Avalonia.Templates
+```
+
+Check the output. You should see that these templates are installed:
+
+```
+Template Name                                 Short Name                  Language    Tags
+--------------------------------------------  --------------------------  ----------  ---------------------------------------------------------
+Avalonia .NET App                             avalonia.app                [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia .NET MVVM App                        avalonia.app                [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia Cross Platform Application           avalonia.xplat              [C#],F#     Desktop/Xaml/Avalonia/Web/Mobile
+Avalonia Resource Dictionary                  avalonia.resource                       Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia Styles                               avalonia.styles                         Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia TemplatedControl                     avalonia.templatedcontrol   [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia UserControl                          avalonia.usercontrol        [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia Window                               avalonia.window             [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+```
+
+### Installation troubleshooting
+
+#### .NET is not a recognized program
+
+First, ensure the .NET SDK is installed. Run this command:
+
+```
+dotnet --list-sdks
+```
+
+If a .NET SDK is correctly installed, this returns an output similar to the following:
+
+```
+8.0.202 [C:\Program Files\dotnet\sdk]
+```
+
+If the terminal continues to report that .NET is missing, try restarting the terminal.
+
+#### `Avalonia.Templates` package cannot be found
+
+Ensure NuGet is correctly set up. Run this command:
+
+```
+dotnet nuget list source
+```
+
+Check that the output displays the following as a registered source:
+
+```
+nuget.org [Enabled]
+https://api.nuget.org/v3/index.json
+```
+
+If this source is not listed, add it using this command:
+
+```
+dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+```
+
+If the package install continues to fail even with NuGet listed as a registered source, check your network connectivity or firewall settings.
+
+## Creating your first project
+
+For your first project, we’re going to use the MVVM template.
+
+<Tabs groupId="ide">  
+  <TabItem value="rider" label="Rider">
+	1. On the Rider startup screen, select **New Solution**.
+  2. In the side bar, scroll down to “Custom Templates”. Select **Avalonia .NET MVVM App**.
+  3. Name your solution “GetStartedApp”.
+  4. Click **Create**.
+  </TabItem>
+  <TabItem value="vs" label="Visual Studio">
+  1. In Visual Studio, click **File → New → Project/Solution**.
+  2. In the search box, input “Avalonia”.
+  3. Select **Avalonia .NET MVVM App** from the search results. If Visual Studio offers multiple options, select the one for **C#**. Then, click **Next**.
+  4. Name your project “GetStartedApp”.
+  5. Change the target directory if desired. Then, click **Next**.
+  6. Select your preferred version of **.NET** as the framework.
+  7. If given the option to choose target platforms, select **Desktop**.
+  8. Click **Create**.
+  </TabItem>
+  <TabItem value="vsc" label="Visual Studio Code">
+  1. In Visual Studio Code, bring up the command palette. This is Ctrl + Shift + P on Windows, or Cmd + Shift + P on macOS.
+  2. Input “.NET” into the search.
+  3. From the search results, select **.NET: New Project...**
+  4. From the list of project templates, select **Avalonia MVVM App**.
+  5. Specify a directory on your device for the project.
+  6. Name your project “GetStartedApp”.
+  7. Click **Create project**.
+  </TabItem>
+  <TabItem value="cli" label="Command line">
+  1. In the command line, run this command:
+
+  ```
+  dotnet new avalonia.mvvm -o GetStartedApp
+  ```
+
+  2. Check your device for a new folder named **GetStartedApp**, containing the new project files.
+  </TabItem>
+</Tabs>
+
+## Running your project
+<Tabs groupId="ide">  
+  <TabItem value="rider" label="Rider">
+	Click **Run** in the top toolbar.
+
+  The solution builds and runs your app in a new window. By default, this displays the string, “Welcome to Avalonia!”
+  </TabItem>
+  <TabItem value="vs" label="Visual Studio">
+  In the top toolbar, select "GetStartedApp" next to the **Run** button. Then, click **Run**.
+
+  The solution builds and runs your app in a new window. By default, this displays the string, “Welcome to Avalonia!”
+  </TabItem>
+  <TabItem value="vsc" label="Visual Studio Code">
+  1. Select **Run and Debug** in the side navigation bar.
+  2. If prompted to select a debugger, choose **C#**.
+  3. Click **Run and Debug.**
+
+  The solution builds and runs your app in a new window. By default, this displays the string, “Welcome to Avalonia!”
+  </TabItem>
+  <TabItem value="cli" label="Command line">
+  1. Navigate to the directory containing your **GetStartedApp** project.
+  2. Run the command `dotnet run`.
+
+  The solution builds and runs your app in a new window. By default, this displays the string, “Welcome to Avalonia!”
+  </TabItem>
+</Tabs>
+
+<div className="center" style={{maxWidth:400}}>
+<img className="center" src={WelcomeToAvalonia} alt="A screenshot of the default Avalonia app running in a window." />
+</div>
+
+## Next steps
+
+You have now installed Avalonia on your device and know how to create and run Avalonia projects.
+
+You can start developing an app right away, if you wish.
+
+Or, for a short tutorial building a simple app that introduces you to basic concepts and functions in Avalonia, proceed to the next page:
+
+<br />
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <Button label="Starter tutorial: Build a temperature converter app →" link="/docs/get-started/starter-tutorial" variant="primary" outline />
+</div>

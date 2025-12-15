@@ -12,7 +12,8 @@ const Button = ({
     className, // Custom classes for the button
     style, // Custom styles for the button
     link, // The URL the button should link to
-    label // The text of the button
+    label, // The text of the button
+    position = null // The position of the button (e.g., 'center')
 }) => {
     const sizeMap = {
         sm: 'sm',
@@ -29,10 +30,17 @@ const Button = ({
     const disabledClass = disabled ? 'disabled' : '';
     // If the button is disabled, set the destination to null.
     const destination = disabled ? null : link;
-    return (
+
+    const positionMap = {
+        start: 'flex-start',
+        end: 'flex-end',
+        center: 'center',
+    };
+
+    const button = (
         <Link to={destination}>
             <button
-                className={clsx('button text-white', sizeClass, outlineClass, variantClass, blockClass, disabledClass, className)}
+                className={clsx('button', sizeClass, outlineClass, variantClass, blockClass, disabledClass, className)}
                 style={style}
                 role="button"
                 aria-disabled={disabled}
@@ -41,6 +49,16 @@ const Button = ({
             </button>
         </Link>
     );
+
+    if (position in positionMap) {
+        return (
+            <div style={{ display: 'flex', justifyContent: positionMap[position], gap: '10px' }}>
+                {button}
+            </div>
+        );
+    }
+
+    return button;
 };
 
 export default Button;
