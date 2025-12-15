@@ -71,3 +71,13 @@ And in the `Contents` output directory place a valid `Info.plist` file. An examp
 ```
 
 If you're using Rider < 2021.1 then you'll need to run the application from the command line, not the IDE (see [https://youtrack.jetbrains.com/issue/RIDER-53892](https://youtrack.jetbrains.com/issue/RIDER-53892)).
+
+
+### Publish an MacOS Bundle
+
+Several steps is required to publish an MacOS Bundle, but you can acelerate this proccess using 3dparty scripts and utilityes avaliable on internet
+
+One of these utilities is MacOsPublish that can be installed from nuget and their sources can be downloaded from github at
+
+https://github.com/CastelloBrancoTecnologia/MacOsPublish
+
