@@ -130,7 +130,6 @@ const config = {
   ],
   plugins: [
     require('./plugins/tailwind-plugin.cjs'),
-    require('./plugins/preview-generator.cjs'),
     function cioPlugin() {
       return {
         name: 'docusaurus-plugin-cio',
