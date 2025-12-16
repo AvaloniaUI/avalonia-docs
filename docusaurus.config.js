@@ -14,12 +14,6 @@ const config = {
   url: 'https://docs.avaloniaui.net',
   baseUrl: '/',
   
-  // Custom fields for site-wide configuration
-  customFields: {
-    // URL for the Avalonia XAML preview iframe
-    avaloniaPreviewUrl: 'https://localhost:53425',
-  },
-
   markdown: {
     mermaid: true,
   },
@@ -95,6 +89,13 @@ const config = {
         name: "msapplication-config",
         content: "/favicons/browserconfig.xml",
       },
+    },
+  ],
+  scripts: [
+    {
+      src: 'https://white-hill-09a5c3303.3.azurestaticapps.net/AvaloniaPreviewElement.js',
+      type: 'module',
+      async: true,
     },
   ],
   presets: [

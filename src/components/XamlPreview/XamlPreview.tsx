@@ -2,7 +2,6 @@ import React, { useState, useRef, useCallback, useEffect, ReactNode } from 'reac
 import { Highlight, themes } from 'prism-react-renderer';
 import { useEditable } from 'use-editable';
 import { useColorMode } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -17,15 +16,29 @@ interface XamlPreviewProps {
   children?: ReactNode;
 }
 
-interface PreviewMessage {
-  type: 'viewcreated' | 'error' | 'ready' | 'compiled';
-  message?: string;
-}
-
 interface EditableCodeBlockProps {
   code: string;
   language: string;
   onChange: (code: string) => void;
+}
+
+// Wait for the avalonia-preview custom element to be defined
+let customElementPromise: Promise<void> | null = null;
+
+function waitForAvaloniaElement(): Promise<void> {
+  // Check if already defined
+  if (customElements.get('avalonia-preview')) {
+    return Promise.resolve();
+  }
+
+  if (customElementPromise) {
+    return customElementPromise;
+  }
+
+  // Wait for the custom element to be defined (script loaded via docusaurus.config.js)
+  customElementPromise = customElements.whenDefined('avalonia-preview').then(() => {});
+  
+  return customElementPromise;
 }
 
 function EditableCodeBlock({ code, language, onChange }: EditableCodeBlockProps) {
@@ -73,14 +86,8 @@ export default function XamlPreview({
   showCSharp = true,
   children,
 }: XamlPreviewProps): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
   const isBrowser = useIsBrowser();
   const { colorMode } = useColorMode();
-  const previewUrl = siteConfig.customFields?.avaloniaPreviewUrl as string;
-  
-  if (!previewUrl) {
-    throw new Error('Avalonia Preview URL is not configured in docusaurus.config.js');
-  }
 
   // Extract code from children (code fences) or use props
   const codeBlocks = children ? extractCodeBlocks(children) : [];
@@ -93,72 +100,114 @@ export default function XamlPreview({
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isReady, setIsReady] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const [xaml, setXaml] = useState(initialXaml);
   const [csharp, setCSharp] = useState(initialCSharp || '');
+  const previewElementRef = useRef<HTMLElement | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const hasCSharp = showCSharp && initialCSharp;
 
-  // Send code to the iframe
-  const sendCodeToPreview = useCallback(() => {
-    if (iframeRef.current?.contentWindow && isReady) {
-      iframeRef.current.contentWindow.postMessage(
-        { type: 'update', xaml, csharp },
-        previewUrl
-      );
-    }
-  }, [xaml, csharp, isReady, previewUrl]);
-
-  // Send dark mode setting to the iframe
-  const sendDarkModeToPreview = useCallback(() => {
-    if (iframeRef.current?.contentWindow && isReady) {
-      iframeRef.current.contentWindow.postMessage(
-        { type: 'set-dark-mode', darkMode: colorMode === 'dark' },
-        previewUrl
-      );
-    }
-  }, [colorMode, isReady, previewUrl]);
-
-  // Sync dark mode with iframe when color mode or ready state changes
-  useEffect(() => {
-    sendDarkModeToPreview();
-  }, [sendDarkModeToPreview]);
-
-  // Handle messages from the iframe
+  // Load script and create the custom element
   useEffect(() => {
     if (!isBrowser) return;
 
-    const handleMessage = (event: MessageEvent<PreviewMessage>) => {
-      if (!event.origin.startsWith(previewUrl.replace(/\/$/, ''))) return;
+    let mounted = true;
 
-      const { type, message } = event.data || {};
+    const initializePreview = async () => {
+      try {
+        // Wait for the Avalonia custom element to be defined (loaded via script tag)
+        await waitForAvaloniaElement();
+        
+        if (!mounted || !containerRef.current) return;
 
-      switch (type) {
-        case 'ready':
-          setIsReady(true);
-          break;
-        case 'compiled':
-          setError(null);
-          break;
-        case 'viewcreated':
-          setError(null);
+        // Create the custom element if it doesn't exist
+        if (!previewElementRef.current) {
+          const element = document.createElement('avalonia-preview');
+          element.style.width = '100%';
+          element.style.height = '100%';
+          element.style.display = 'block';
+          
+          // Set up event listeners
+          element.addEventListener('viewcreated', () => {
+            if (mounted) {
+              setError(null);
+              setIsLoading(false);
+              setIsReady(true);
+            }
+          });
+
+          element.addEventListener('compiled', () => {
+            if (mounted) {
+              setError(null);
+            }
+          });
+
+          element.addEventListener('error', (e: CustomEvent) => {
+            if (mounted) {
+              const errorMessage = e.detail?.error?.message || String(e.detail?.error) || 'An error occurred';
+              setError(errorMessage);
+            }
+          });
+
+          containerRef.current.appendChild(element);
+          previewElementRef.current = element;
+        }
+
+        // Set initial attributes
+        const element = previewElementRef.current;
+        if (element) {
+          element.setAttribute('xaml', xaml);
+          if (csharp) {
+            element.setAttribute('csharp', csharp);
+          }
+          element.setAttribute('dark-mode', colorMode === 'dark' ? 'true' : 'false');
+        }
+      } catch (err) {
+        console.error('Failed to load Avalonia preview:', err);
+        if (mounted) {
+          setError(`Failed to load preview: ${err instanceof Error ? err.message : String(err)}`);
           setIsLoading(false);
-          break;
-        case 'error':
-          setError(message || 'An error occurred');
-          break;
+        }
       }
     };
 
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, isBrowser]);
+    initializePreview();
 
-  // Send code when ready or when code changes
+    return () => {
+      mounted = false;
+      // Clean up the element on unmount
+      if (previewElementRef.current && containerRef.current) {
+        containerRef.current.removeChild(previewElementRef.current);
+        previewElementRef.current = null;
+      }
+    };
+  }, [isBrowser]); // Only run once on mount
+
+  // Update XAML when it changes
   useEffect(() => {
-    sendCodeToPreview();
-  }, [sendCodeToPreview]);
+    if (previewElementRef.current && isReady) {
+      previewElementRef.current.setAttribute('xaml', xaml);
+    }
+  }, [xaml, isReady]);
+
+  // Update C# when it changes
+  useEffect(() => {
+    if (previewElementRef.current && isReady) {
+      if (csharp) {
+        previewElementRef.current.setAttribute('csharp', csharp);
+      } else {
+        previewElementRef.current.removeAttribute('csharp');
+      }
+    }
+  }, [csharp, isReady]);
+
+  // Update dark mode when it changes
+  useEffect(() => {
+    if (previewElementRef.current && isReady) {
+      previewElementRef.current.setAttribute('dark-mode', colorMode === 'dark' ? 'true' : 'false');
+    }
+  }, [colorMode, isReady]);
 
   return (
     <div className={styles.container}>
@@ -205,12 +254,9 @@ export default function XamlPreview({
           )}
           
           {isBrowser && (
-            <iframe
-              ref={iframeRef}
-              src={previewUrl}
-              className={styles.previewIframe}
-              title="Avalonia XAML Preview"
-              sandbox="allow-scripts allow-same-origin"
+            <div 
+              ref={containerRef} 
+              className={styles.previewContainer}
             />
           )}
         </div>
