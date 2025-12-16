@@ -6,7 +6,7 @@ const redirects = [
             '/docs/get-started/getting-started',
             '/docs/get-started/introduction',
             '/docs/reference/jetbrains-rider-ide',
-            '/docs/reference/jetbrains-rider-ide/jetbrains-rider=setup',
+            '/docs/reference/jetbrains-rider-ide/jetbrains-rider-setup',
           ],
     },
     { to: '/docs/get-started/starter-tutorial/index',
