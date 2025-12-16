@@ -41,14 +41,14 @@ This example adds some border controls to create a 'pod' look in the layout:
 
 ```xml
 <StackPanel>
-  <Border Background="Gainsboro"
+  <Border Background="Gray"
         BorderBrush="Black"
         BorderThickness="2"
         CornerRadius="3"
         Padding="10" Margin="10">
     <TextBlock>Box 1</TextBlock>
   </Border>
-  <Border Background="Gainsboro"
+  <Border Background="Gray"
           BorderBrush="Black"
           BorderThickness="2"
           CornerRadius="3"
@@ -88,7 +88,7 @@ This is an example of a drop-shadow:
 
 ```xml
 <<StackPanel>
-  <Border Background="Gainsboro"
+  <Border Background="Gray"
         BorderBrush="Black"
         BorderThickness="2"
         CornerRadius="3"

@@ -3,7 +3,6 @@ description: REFERENCE - Built-in Controls
 ---
 
 import CanvasContentZoneScreenshot from '/img/reference/controls/canvas/canvas-contentzone.png';
-import CanvasChildOverlapScreenshot from '/img/reference/controls/canvas/canvas-child-overlap.png';
 
 # Canvas 画布控件
 
@@ -39,8 +38,11 @@ import CanvasChildOverlapScreenshot from '/img/reference/controls/canvas/canvas-
 
 ## 示例
 
+<XamlPreview>
+
 ```xml
-<Canvas Background="AliceBlue" Margin="20">
+<Canvas xmlns="https://github.com/avaloniaui"
+        Background="AliceBlue" Margin="20">
   <Rectangle Fill="Red" Height="100" Width="100" Margin="10"/>
   <Rectangle Fill="Blue" Height="100" Width="100" Opacity="0.5"
              Canvas.Left="50" Canvas.Top="20"/>
@@ -51,9 +53,7 @@ import CanvasChildOverlapScreenshot from '/img/reference/controls/canvas/canvas-
 </Canvas>
 ```
 
-结果看起来是这样的：
-
-<img src={CanvasChildOverlapScreenshot} alt="" />
+</XamlPreview>
 
 :::info
 谨慎使用画布面板。虽然它可以方便地定位子控件，但你的用户界面将不再适应应用窗口大小的变化。

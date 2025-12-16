@@ -3,8 +3,6 @@ title: StackPanel
 description: REFERENCE - Built-in Controls
 ---
 
-import StackPanelVerticalRectanglesScreenshot from '/img/reference/controls/stackpanel/stackpanel-vertical-rectangles.png';
-
 # StackPanel
 
 The `StackPanel` arranges its child controls by stacking them horizontally or vertically. The stack panel is often used to arrange a small subsection of the UI on a page.
@@ -24,20 +22,21 @@ You will probably use these properties most often:
 
 ## Example
 
-The following XAML shows how to create a vertical stack panel.
+The following XAML shows how to create a vertical stack panel. The result shows the child controls stretched to fit the width, and the overall height of the stack panel equal to the sum of the child control heights.
+
+<XamlPreview>
 
 ```xml
-<StackPanel Width="200">
+<StackPanel xmlns="https://github.com/avaloniaui"
+            Width="200">
     <Rectangle Fill="Red" Height="50"/>
     <Rectangle Fill="Blue" Height="50"/>
-    <Rectangle Fill="Green" Height="100"/>
+    <Rectangle Fill="Green" Height="50"/>
     <Rectangle Fill="Orange" Height="50"/>
 </StackPanel>
 ```
 
-The result shows the child controls stretched to fit the width, and the overall height of the stack panel equal to the sum of the child control heights.
-
-<img src={StackPanelVerticalRectanglesScreenshot} alt="" />
+</XamlPreview>
 
 ## More Information
 

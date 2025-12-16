@@ -2,8 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import DockPanelTopScreenshot from '/img/reference/controls/dockpanel/dockpanel-top.png';
-import DockPanelFillNoOverlapScreenshot from '/img/reference/controls/dockpanel/dockpanel-fill-no-overlap.png'; 
+import DockPanelTopScreenshot from '/img/reference/controls/dockpanel/dockpanel-top.png'; 
 
 # DockPanel 边缘布局面板
 
@@ -37,8 +36,11 @@ import DockPanelFillNoOverlapScreenshot from '/img/reference/controls/dockpanel/
 
 将橙色矩形的透明度设置为0.5，以证实图形间没有重叠。
 
+<XamlPreview>
+
 ```xml
-<DockPanel Width="300" Height="300">
+<DockPanel xmlns="https://github.com/avaloniaui"
+           Width="300" Height="300">
     <Rectangle Fill="Red" Height="100" DockPanel.Dock="Top"/>
     <Rectangle Fill="Blue" Width="100" DockPanel.Dock="Left" />
     <Rectangle Fill="Green" Height="100" DockPanel.Dock="Bottom"/>
@@ -47,7 +49,7 @@ import DockPanelFillNoOverlapScreenshot from '/img/reference/controls/dockpanel/
 </DockPanel>
 ```
 
-<img src={DockPanelFillNoOverlapScreenshot} alt="" />
+</XamlPreview>
 
 ## 更多信息
 

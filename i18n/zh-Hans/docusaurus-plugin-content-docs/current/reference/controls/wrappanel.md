@@ -2,9 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import WrapPanelHorizontalScreenshot from '/img/reference/controls/wrappanel/wrappanel-horizontal.png';
-import WrapPanelVerticalScreenshot from '/img/reference/controls/wrappanel/wrappanel-vertical.png';
-
 # WrapPanel 顺序换行面板
 
 WrapPanel 使用默认排列方式将多个子元素从左到右依次排列，直到宽度不够时换行（包括任何边距和边框）。当没有剩余空间时，它会开始新的一行。
@@ -19,29 +16,38 @@ WrapPanel 使用默认排列方式将多个子元素从左到右依次排列，�
 
 ## 示例
 
+<XamlPreview>
+
 ```xml
-<WrapPanel>
-    <Rectangle Fill="Navy" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Yellow" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Green" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Red" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Purple" Width="100" Height="100" Margin="20"/>
+<WrapPanel xmlns="https://github.com/avaloniaui"
+           ItemSpacing="20" LineSpacing="20"
+           Margin="20">
+    <Rectangle Fill="Navy" Width="80" Height="80" />
+    <Rectangle Fill="Yellow" Width="80" Height="80" />
+    <Rectangle Fill="Green" Width="80" Height="80" />
+    <Rectangle Fill="Red" Width="80" Height="80" />
+    <Rectangle Fill="Purple" Width="80" Height="80" />
 </WrapPanel>
 ```
 
-<img src={WrapPanelHorizontalScreenshot} alt="" />
+</XamlPreview>
+
+<XamlPreview>
 
 ```xml
-<WrapPanel Orientation="Vertical">
-    <Rectangle Fill="Navy" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Yellow" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Green" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Red" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Purple" Width="100" Height="100" Margin="20"/>
+<WrapPanel xmlns="https://github.com/avaloniaui"
+           Orientation="Vertical"
+           ItemSpacing="20" LineSpacing="20"
+           Margin="20">
+    <Rectangle Fill="Navy" Width="80" Height="80" />
+    <Rectangle Fill="Yellow" Width="80" Height="80" />
+    <Rectangle Fill="Green" Width="80" Height="80" />
+    <Rectangle Fill="Red" Width="80" Height="80" />
+    <Rectangle Fill="Purple" Width="80" Height="80" />
 </WrapPanel>
 ```
 
-<img src={WrapPanelVerticalScreenshot} alt="" />
+</XamlPreview>
 
 ### 更多信息
 

@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import StackPanelVerticalRectanglesScreenshot from '/img/reference/controls/stackpanel/stackpanel-vertical-rectangles.png';
-
 # StackPanel 堆栈面板
 
 堆栈面板通过水平或垂直堆叠其子控件来排列它们。堆栈面板通常用于在页面上排列UI的一个小部分。
@@ -23,20 +21,21 @@ import StackPanelVerticalRectanglesScreenshot from '/img/reference/controls/stac
 
 ## 示例
 
-以下XAML展示了如何创建一个垂直的堆栈面板。
+以下XAML展示了如何创建一个垂直的堆栈面板。结果显示子控件被拉伸以适应宽度，而堆栈面板的总高度等于子控件高度的总和。
+
+<XamlPreview>
 
 ```xml
-<StackPanel Width="200">
+<StackPanel xmlns="https://github.com/avaloniaui"
+            Width="200">
     <Rectangle Fill="Red" Height="50"/>
     <Rectangle Fill="Blue" Height="50"/>
-    <Rectangle Fill="Green" Height="100"/>
+    <Rectangle Fill="Green" Height="50"/>
     <Rectangle Fill="Orange" Height="50"/>
 </StackPanel>
 ```
 
-结果显示子控件被拉伸以适应宽度，而堆栈面板的总高度等于子控件高度的总和。
-
-<img src={StackPanelVerticalRectanglesScreenshot} alt="" />
+</XamlPreview>
 
 ## 更多信息
 

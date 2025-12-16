@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import PanelOverlapBlendScreenshot from '/img/reference/controls/panel/panel-overlap-blend.png';
-
 # Panel 面板
 
 面板是最基本的控件，可包含多个子控件。子控件根据其水平和垂直对齐属性进行绘制，并按照它们在 XAML 中出现的顺序排列。如果子控件占据相同的空间，则会发生重叠。
@@ -16,16 +14,19 @@ import PanelOverlapBlendScreenshot from '/img/reference/controls/panel/panel-ove
 
 此示例使用一些50%的透明度来演示子控件的重叠。
 
+<XamlPreview>
+
 ```xml
-<Panel Height="300" Width="300">
+<Panel xmlns="https://github.com/avaloniaui"
+       Margin="10">
     <Rectangle Fill="Red" Height="100" VerticalAlignment="Top"/>
-    <Rectangle Fill="Blue" Opacity="0.5" Width="100" HorizontalAlignment="Right" />
-    <Rectangle Fill="Green" Opacity="0.5" Height="100" VerticalAlignment="Bottom"/>
+    <Rectangle Fill="Green" Height="100" VerticalAlignment="Bottom"/>
+    <Rectangle Fill="Blue" Width="100" HorizontalAlignment="Right" />
     <Rectangle Fill="Orange" Width="100" HorizontalAlignment="Left"/>
 </Panel>
 ```
 
-<img src={PanelOverlapBlendScreenshot} alt="" />
+</XamlPreview>
 
 ## 其他面板控件
 

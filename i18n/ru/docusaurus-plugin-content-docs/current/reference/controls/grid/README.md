@@ -3,8 +3,6 @@ title: Grid
 description: REFERENCE - Controls
 ---
 
-import GridSpanningColumnsScreenshot from '/img/reference/controls/grid/grid-column-spanning.png';
-
 # Grid
 
 The `Grid` control is useful for arranging child controls in columns and rows. You can define absolute, proportional, and
@@ -163,21 +161,34 @@ This example shows:
 
 An example of a `Grid` with 3 equal Rows and 3 Columns with (1 fixed width), (2 grabbing the rest proportionally) would be:
 
-```xml
-<Grid ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
-  <TextBlock Text="Col0Row0:" Grid.Row="0" Grid.Column="0"/>
-  <TextBlock Text="Col0Row1:" Grid.Row="1" Grid.Column="0"/>
-  <TextBlock Text="Col0Row2:" Grid.Row="2" Grid.Column="0"/>
-  <CheckBox Content="Col2Row0" Grid.Row="0" Grid.Column="2"/>
-  <Button Content="SpansCol1-2Row1-2" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-</Grid>
-```
-
 Here, after the absolute width of 100 has been subtracted (for column 0), column 1 will get 1.5 parts and column 2 will get 4 parts of the remaining width.
 
 The button is drawn to fill the span from the cell (column 1, row 1) plus one column (to the right) and one row down. The result looks like this:
 
-<img src={GridSpanningColumnsScreenshot} alt="" />
+<XamlPreview>
+
+```xml
+<Grid xmlns="https://github.com/avaloniaui"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+      RowSpacing="10"
+      ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
+  <TextBlock Grid.Row="0" Grid.Column="0"
+             Text="Col0Row0:" />
+  <TextBlock Grid.Row="1" Grid.Column="0"
+             Text="Col0Row1:" />
+  <TextBlock Grid.Row="2" Grid.Column="0"
+             Text="Col0Row2:" />
+  <TextBlock Grid.Row="0" Grid.Column="2"
+             Text="Col2Row0" />
+  <Button Grid.Row="1" Grid.Column="1"
+          Grid.RowSpan="2" Grid.ColumnSpan="2"
+          HorizontalAlignment="Stretch"
+          Content="SpansCol1-2Row1-2" />
+</Grid>
+```
+
+</XamlPreview>
 
 ## More Information
 

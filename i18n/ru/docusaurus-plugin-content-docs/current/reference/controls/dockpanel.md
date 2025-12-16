@@ -2,8 +2,7 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import DockPanelTopScreenshot from '/img/reference/controls/dockpanel/dockpanel-top.png';
-import DockPanelFillNoOverlapScreenshot from '/img/reference/controls/dockpanel/dockpanel-fill-no-overlap.png'; 
+import DockPanelTopScreenshot from '/img/reference/controls/dockpanel/dockpanel-top.png'; 
 
 # Dock Panel
 
@@ -37,8 +36,11 @@ You will probably use these properties most often:
 
 Setting the opacity of the orange rectangle to 0.5 demonstrates that there are no overlaps.
 
+<XamlPreview>
+
 ```xml
-<DockPanel Width="300" Height="300">
+<DockPanel xmlns="https://github.com/avaloniaui"
+           Width="300" Height="300">
     <Rectangle Fill="Red" Height="100" DockPanel.Dock="Top"/>
     <Rectangle Fill="Blue" Width="100" DockPanel.Dock="Left" />
     <Rectangle Fill="Green" Height="100" DockPanel.Dock="Bottom"/>
@@ -47,7 +49,7 @@ Setting the opacity of the orange rectangle to 0.5 demonstrates that there are n
 </DockPanel>
 ```
 
-<img src={DockPanelFillNoOverlapScreenshot} alt="" />
+</XamlPreview>
 
 ## More Information
 

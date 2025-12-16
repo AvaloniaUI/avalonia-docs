@@ -3,8 +3,6 @@ title: RelativePanel
 description: REFERENCE - Built-in Controls
 ---
 
-import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relativepanel.png';
-
 # RelativePanel
 
 The `RelativePanel` control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
@@ -49,9 +47,14 @@ You will probably use these properties most often:
 
 This XAML shows how to arrange some child controls in different ways:
 
+<XamlPreview>
+
 ```xml
-<Border BorderBrush="DarkGray" BorderThickness="1" Width="300" Height="300">
-  <RelativePanel >
+<Border xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        BorderBrush="DarkGray" BorderThickness="1"
+        Margin="20">
+  <RelativePanel>
     <Rectangle x:Name="RedRect" Fill="Red" Height="50" Width="50"/>
     <Rectangle x:Name="BlueRect" Fill="Blue" Opacity="0.5" Height="50" Width="150"
                RelativePanel.RightOf="RedRect" />
@@ -68,9 +71,7 @@ This XAML shows how to arrange some child controls in different ways:
 </Border>
 ```
 
-The result looks like this:
-
-<img src={RelativePanelScreenshot} alt="" />
+</XamlPreview>
 
 Here are some notes about the above example:
 

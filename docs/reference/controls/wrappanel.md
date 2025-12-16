@@ -3,9 +3,6 @@ title: WrapPanel
 description: REFERENCE - Built-in Controls
 ---
 
-import WrapPanelHorizontalScreenshot from '/img/reference/controls/wrappanel/wrappanel-horizontal.png';
-import WrapPanelVerticalScreenshot from '/img/reference/controls/wrappanel/wrappanel-vertical.png';
-
 # WrapPanel
 
 The `WrapPanel` uses a default arrangement of (multiple) child elements is in sequence from left to right, while they fit in the width. It starts a new line when there is no space left (including any margins and borders). 
@@ -20,29 +17,38 @@ You will probably use these properties most often:
 
 ## Examples
 
+<XamlPreview>
+
 ```xml
-<WrapPanel>
-    <Rectangle Fill="Navy" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Yellow" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Green" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Red" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Purple" Width="100" Height="100" Margin="20"/>
+<WrapPanel xmlns="https://github.com/avaloniaui"
+           ItemSpacing="20" LineSpacing="20"
+           Margin="20">
+    <Rectangle Fill="Navy" Width="80" Height="80" />
+    <Rectangle Fill="Yellow" Width="80" Height="80" />
+    <Rectangle Fill="Green" Width="80" Height="80" />
+    <Rectangle Fill="Red" Width="80" Height="80" />
+    <Rectangle Fill="Purple" Width="80" Height="80" />
 </WrapPanel>
 ```
 
-<img src={WrapPanelHorizontalScreenshot} alt="" />
+</XamlPreview>
+
+<XamlPreview>
 
 ```xml
-<WrapPanel Orientation="Vertical">
-    <Rectangle Fill="Navy" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Yellow" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Green" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Red" Width="100" Height="100" Margin="20"/>
-    <Rectangle Fill="Purple" Width="100" Height="100" Margin="20"/>
+<WrapPanel xmlns="https://github.com/avaloniaui"
+           Orientation="Vertical"
+           ItemSpacing="20" LineSpacing="20"
+           Margin="20">
+    <Rectangle Fill="Navy" Width="80" Height="80" />
+    <Rectangle Fill="Yellow" Width="80" Height="80" />
+    <Rectangle Fill="Green" Width="80" Height="80" />
+    <Rectangle Fill="Red" Width="80" Height="80" />
+    <Rectangle Fill="Purple" Width="80" Height="80" />
 </WrapPanel>
 ```
 
-<img src={WrapPanelVerticalScreenshot} alt="" />
+</XamlPreview>
 
 ### More Information
 

@@ -3,8 +3,6 @@ title: UniformGrid
 description: REFERENCE - Built-in Controls
 ---
 
-import UniformGridFrenchFlagScreenshot from '/img/reference/controls/uniformgrid/uniformgrid-french-flag.png';
-
 # UniformGrid
 
 The `UniformGrid` divides the available space evenly in both directions, into cells. You can specify how many divisions to use, and these can be different in either direction.
@@ -34,15 +32,20 @@ You will probably use these properties most often:
 
 ## Example
 
+<XamlPreview>
+
 ```xml
-<UniformGrid Rows="1" Columns="3" Width="300" Height="200">
-    <Rectangle Fill="navy" />
-    <Rectangle Fill="white" />
-    <Rectangle Fill="red" />
+<UniformGrid xmlns="https://github.com/avaloniaui"
+             Rows="1" Columns="3"
+             ColumnSpacing="10"
+             Margin="20">
+    <Rectangle Fill="Navy" />
+    <Rectangle Fill="White" />
+    <Rectangle Fill="Red" />
 </UniformGrid>
 ```
 
-<img src={UniformGridFrenchFlagScreenshot} alt="" />
+</XamlPreview>
 
 ## More Information
 

@@ -3,7 +3,6 @@ description: REFERENCE - Built-in Controls
 ---
 
 import CanvasContentZoneScreenshot from '/img/reference/controls/canvas/canvas-contentzone.png';
-import CanvasChildOverlapScreenshot from '/img/reference/controls/canvas/canvas-child-overlap.png';
 
 # Canvas
 
@@ -39,8 +38,11 @@ However you define the drawing sequence, the opacity of child controls is respec
 
 ## Example
 
+<XamlPreview>
+
 ```xml
-<Canvas Background="AliceBlue" Margin="20">
+<Canvas xmlns="https://github.com/avaloniaui"
+        Background="AliceBlue" Margin="20">
   <Rectangle Fill="Red" Height="100" Width="100" Margin="10"/>
   <Rectangle Fill="Blue" Height="100" Width="100" Opacity="0.5"
              Canvas.Left="50" Canvas.Top="20"/>
@@ -51,9 +53,7 @@ However you define the drawing sequence, the opacity of child controls is respec
 </Canvas>
 ```
 
-The result looks like this:
-
-<img src={CanvasChildOverlapScreenshot} alt="" />
+</XamlPreview>
 
 :::info
 Use the canvas panel with discretion. While it may be convenient to position child controls like this, your UI will no longer be adaptive to changes in the app window size.

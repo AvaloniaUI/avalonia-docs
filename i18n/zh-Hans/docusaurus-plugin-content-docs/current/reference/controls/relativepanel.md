@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relativepanel.png';
-
 # RelativePanel 相对面板
 
 相对面板控件允许您通过指定其子控件相对于其他（同级）子控件或相对于面板本身的位置来排列它们。位置是根据面板控件的内部（内容区）和子控件的边缘区的外边缘计算的。
@@ -47,10 +45,14 @@ import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relat
 ## 示例
 
 此 XAML 展示了如何以不同方式排列一些子控件：
+<XamlPreview>
 
 ```xml
-<Border BorderBrush="DarkGray" BorderThickness="1" Width="300" Height="300">
-  <RelativePanel >
+<Border xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        BorderBrush="DarkGray" BorderThickness="1"
+        Margin="20">
+  <RelativePanel>
     <Rectangle x:Name="RedRect" Fill="Red" Height="50" Width="50"/>
     <Rectangle x:Name="BlueRect" Fill="Blue" Opacity="0.5" Height="50" Width="150"
                RelativePanel.RightOf="RedRect" />
@@ -67,9 +69,7 @@ import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relat
 </Border>
 ```
 
-结果如下所示：
-
-<img src={RelativePanelScreenshot} alt="" />
+</XamlPreview>
 
 以下是关于上述示例的一些说明：
 

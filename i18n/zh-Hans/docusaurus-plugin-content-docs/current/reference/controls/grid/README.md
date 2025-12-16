@@ -3,8 +3,6 @@ title: Grid 网格布局
 description: REFERENCE - Controls
 ---
 
-import GridSpanningColumnsScreenshot from '/img/reference/controls/grid/grid-column-spanning.png';
-
 # Grid 网格布局
 
 `Grid` 控件非常适用于按列和行排列子控件。您可以为 `Grid` 定义绝对大小、比例大小和自动大小的行和列几何形状。
@@ -150,21 +148,34 @@ import GridSpanningColumnsScreenshot from '/img/reference/controls/grid/grid-col
 
 一个包含 3 个相等行和 3 列（1 个固定宽度），（2 个按比例抓取剩余宽度）的 `Grid` 的示例是：
 
-```xml
-<Grid ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
-  <TextBlock Text="Col0Row0:" Grid.Row="0" Grid.Column="0"/>
-  <TextBlock Text="Col0Row1:" Grid.Row="1" Grid.Column="0"/>
-  <TextBlock Text="Col0Row2:" Grid.Row="2" Grid.Column="0"/>
-  <CheckBox Content="Col2Row0" Grid.Row="0" Grid.Column="2"/>
-  <Button Content="SpansCol1-2Row1-2" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-</Grid>
-```
-
 在这里，100 的绝对宽度被减去后（对于列 0），列 1 将获得 1.5 个部分，列 2 将获得剩余宽度的 4 个部分。
 
 按钮被绘制以填充从单元格（列 1，行 1）加一个列（向右）和一行向下的跨度。结果看起来是这样的：
 
-<img src={GridSpanningColumnsScreenshot} alt="" />
+<XamlPreview>
+
+```xml
+<Grid xmlns="https://github.com/avaloniaui"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+      RowSpacing="10"
+      ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
+  <TextBlock Grid.Row="0" Grid.Column="0"
+             Text="Col0Row0:" />
+  <TextBlock Grid.Row="1" Grid.Column="0"
+             Text="Col0Row1:" />
+  <TextBlock Grid.Row="2" Grid.Column="0"
+             Text="Col0Row2:" />
+  <TextBlock Grid.Row="0" Grid.Column="2"
+             Text="Col2Row0" />
+  <Button Grid.Row="1" Grid.Column="1"
+          Grid.RowSpan="2" Grid.ColumnSpan="2"
+          HorizontalAlignment="Stretch"
+          Content="SpansCol1-2Row1-2" />
+</Grid>
+```
+
+</XamlPreview>
 
 ## 更多信息
 

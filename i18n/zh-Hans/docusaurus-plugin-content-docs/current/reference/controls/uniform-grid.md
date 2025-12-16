@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import UniformGridFrenchFlagScreenshot from '/img/reference/controls/uniformgrid/uniformgrid-french-flag.png';
-
 # UniformGrid 均匀网格
 
 Uniform Grid 将可用空间在两个方向上均匀地划分为单元格。您可以指定使用多少个划分，并且这些划分在两个方向上可以不同。
@@ -18,15 +16,20 @@ Uniform Grid 将可用空间在两个方向上均匀地划分为单元格。您�
 
 ## 示例
 
+<XamlPreview>
+
 ```xml
-<UniformGrid Rows="1" Columns="3" Width="300" Height="200">
-    <Rectangle Fill="navy" Grid.Column="0" Grid.Row="0"/>
-    <Rectangle Fill="white" Grid.Column="1" Grid.Row="0"/>
-    <Rectangle Fill="red" Grid.Column="2" Grid.Row="0"/>
+<UniformGrid xmlns="https://github.com/avaloniaui"
+             Rows="1" Columns="3"
+             ColumnSpacing="10"
+             Margin="20">
+    <Rectangle Fill="Navy" />
+    <Rectangle Fill="White" />
+    <Rectangle Fill="Red" />
 </UniformGrid>
 ```
 
-<img src={UniformGridFrenchFlagScreenshot} alt="" />
+</XamlPreview>
 
 ## 更多信息
 

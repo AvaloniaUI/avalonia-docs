@@ -2,9 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import BorderPodLookScreenshot from '/img/reference/controls/border/border-pod-look.png';
-import BorderDropShadowScreenshot from '/img/reference/controls/border/border-drop-shadow.png'; 
-
 # Border
 
 The border control decorates a (single) child with a border and background. It can also be used to display rounded corners.
@@ -39,16 +36,18 @@ If you use the four value pattern; you must provide all four values, even if one
 
 This example adds some border controls to create a 'pod' look in the layout:
 
+<XamlPreview>
+
 ```xml
-<StackPanel>
-  <Border Background="Gainsboro"
-        BorderBrush="Black"
-        BorderThickness="2"
-        CornerRadius="3"
-        Padding="10" Margin="10">
+<StackPanel xmlns="https://github.com/avaloniaui">
+  <Border Background="Gray"
+          BorderBrush="Black"
+          BorderThickness="2"
+          CornerRadius="3"
+          Padding="10" Margin="10">
     <TextBlock>Box 1</TextBlock>
   </Border>
-  <Border Background="Gainsboro"
+  <Border Background="Gray"
           BorderBrush="Black"
           BorderThickness="2"
           CornerRadius="3"
@@ -58,7 +57,7 @@ This example adds some border controls to create a 'pod' look in the layout:
 </StackPanel>
 ```
 
-<img src={BorderPodLookScreenshot} alt=""/>
+</XamlPreview>
 
 ## Box Shadows
 
@@ -86,20 +85,22 @@ If both offset values are set to zero, the shadow is placed behind the element, 
 
 This is an example of a drop-shadow:
 
+<XamlPreview>
+
 ```xml
-<StackPanel>
-  <Border Background="Gainsboro"
-        BorderBrush="Black"
-        BorderThickness="2"
-        CornerRadius="3"
+<StackPanel xmlns="https://github.com/avaloniaui">
+  <Border Background="Gray"
+          BorderBrush="Black"
+          BorderThickness="2"
+          CornerRadius="3"
           BoxShadow="5 5 10 0 DarkGray"
-        Padding="10" Margin="40">
+          Padding="10" Margin="40">
     <TextBlock>Box with a drop shadow</TextBlock>
   </Border>
 </StackPanel>
 ```
 
-<img src={BorderDropShadowScreenshot} alt=""/>
+</XamlPreview>
 
 ## More Information
 

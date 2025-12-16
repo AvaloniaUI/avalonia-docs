@@ -2,9 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import BorderPodLookScreenshot from '/img/reference/controls/border/border-pod-look.png';
-import BorderDropShadowScreenshot from '/img/reference/controls/border/border-drop-shadow.png'; 
-
 # Border 边框
 
 边框控件为（单个）子控件装饰边框和背景。它还可以用于显示圆角。
@@ -39,16 +36,18 @@ import BorderDropShadowScreenshot from '/img/reference/controls/border/border-dr
 
 此示例添加了一些边框控件以在布局中创建“pod”外观：
 
+<XamlPreview>
+
 ```xml
-<StackPanel>
-  <Border Background="Gainsboro"
-        BorderBrush="Black"
-        BorderThickness="2"
-        CornerRadius="3"
-        Padding="10" Margin="10">
+<StackPanel xmlns="https://github.com/avaloniaui">
+  <Border Background="Gray"
+          BorderBrush="Black"
+          BorderThickness="2"
+          CornerRadius="3"
+          Padding="10" Margin="10">
     <TextBlock>Box 1</TextBlock>
   </Border>
-  <Border Background="Gainsboro"
+  <Border Background="Gray"
           BorderBrush="Black"
           BorderThickness="2"
           CornerRadius="3"
@@ -58,7 +57,7 @@ import BorderDropShadowScreenshot from '/img/reference/controls/border/border-dr
 </StackPanel>
 ```
 
-<img src={BorderPodLookScreenshot} alt=""/>
+</XamlPreview>
 
 ## 盒廓阴影
 
@@ -86,20 +85,22 @@ import BorderDropShadowScreenshot from '/img/reference/controls/border/border-dr
 
 这是一个投影的示例：
 
+<XamlPreview>
+
 ```xml
-<<StackPanel>
-  <Border Background="Gainsboro"
-        BorderBrush="Black"
-        BorderThickness="2"
-        CornerRadius="3"
+<StackPanel xmlns="https://github.com/avaloniaui">
+  <Border Background="Gray"
+          BorderBrush="Black"
+          BorderThickness="2"
+          CornerRadius="3"
           BoxShadow="5 5 10 0 DarkGray"
-        Padding="10" Margin="40">
+          Padding="10" Margin="40">
     <TextBlock>Box with a drop shadow</TextBlock>
   </Border>
 </StackPanel>
 ```
 
-<img src={BorderDropShadowScreenshot} alt=""/>
+</XamlPreview>
 
 ## 更多信息
 
