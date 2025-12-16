@@ -24,15 +24,17 @@ description: REFERENCE - Built-in Controls
 
 以下示例展示了两组独立工作的单选按钮：
 
-<XamlPreview>
+<XamlPreview height="450">
 
 ```xml
-<UserControl xmlns="https://github.com/avaloniaui">
+<UserControl xmlns="https://github.com/avaloniaui"
+             HorizontalAlignment="Center">
   <StackPanel Margin="20">
     <TextBlock Margin="0 10 0 5">First Group</TextBlock>
       <RadioButton GroupName="First Group"
                 Content="First Option"/>
       <RadioButton GroupName="First Group"
+                IsChecked="True"
                 Content="Second Option"/>
       <RadioButton IsEnabled="False"
                 GroupName="First Group"
@@ -42,7 +44,8 @@ description: REFERENCE - Built-in Controls
       <RadioButton GroupName="Second Group"
                 Content="Fourth Option"/>
       <RadioButton GroupName="Second Group"
-                Content="Fifth Option"/>
+                Content="Fifth Option"
+                IsChecked="True"/>
   </StackPanel>
 </UserControl>
 ```

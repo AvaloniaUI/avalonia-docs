@@ -23,10 +23,11 @@ You will probably use these properties most often:
 
 This example shows two groups of radio buttons working independently:
 
-<XamlPreview fallbackImage={RadioButtonsFallback} fallbackAlt="Two radio button groups">
+<XamlPreview height="450">
 
 ```xml
-<UserControl xmlns="https://github.com/avaloniaui">
+<UserControl xmlns="https://github.com/avaloniaui"
+             HorizontalAlignment="Center">
   <StackPanel Margin="20">
     <TextBlock Margin="0 10 0 5">First Group</TextBlock>
       <RadioButton GroupName="First Group"

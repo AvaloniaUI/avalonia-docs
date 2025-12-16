@@ -20,15 +20,17 @@ You will probably use these properties most often:
 
 This example shows two groups of radio buttons working independently:
 
-<XamlPreview>
+<XamlPreview height="450">
 
 ```xml
-<UserControl xmlns="https://github.com/avaloniaui">
+<UserControl xmlns="https://github.com/avaloniaui"
+             HorizontalAlignment="Center">
   <StackPanel Margin="20">
     <TextBlock Margin="0 10 0 5">First Group</TextBlock>
       <RadioButton GroupName="First Group"
                 Content="First Option"/>
       <RadioButton GroupName="First Group"
+                IsChecked="True"
                 Content="Second Option"/>
       <RadioButton IsEnabled="False"
                 GroupName="First Group"
@@ -38,7 +40,8 @@ This example shows two groups of radio buttons working independently:
       <RadioButton GroupName="Second Group"
                 Content="Fourth Option"/>
       <RadioButton GroupName="Second Group"
-                Content="Fifth Option"/>
+                Content="Fifth Option"
+                IsChecked="True"/>
   </StackPanel>
 </UserControl>
 ```

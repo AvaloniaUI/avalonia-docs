@@ -17,7 +17,7 @@ const config = {
   // Custom fields for site-wide configuration
   customFields: {
     // URL for the Avalonia XAML preview iframe
-    avaloniaPreviewUrl: 'https://white-hill-09a5c3303.3.azurestaticapps.net',
+    avaloniaPreviewUrl: 'https://localhost:53425',
   },
 
   markdown: {
@@ -130,6 +130,7 @@ const config = {
   ],
   plugins: [
     require('./plugins/tailwind-plugin.cjs'),
+    require('./plugins/preview-generator.cjs'),
     function cioPlugin() {
       return {
         name: 'docusaurus-plugin-cio',

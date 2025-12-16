@@ -6,7 +6,6 @@
   border-radius: var(--ifm-code-border-radius);
   overflow: hidden;
   margin: var(--ifm-spacing-vertical) 0;
-  min-height: 300px;
 }
 
 .codePane {
@@ -138,12 +137,22 @@
 .fallbackContainer {
   position: absolute;
   inset: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--ifm-background-surface-color);
   z-index: 8;
   transition: opacity 0.3s ease-out;
+}
+
+/* Light mode background (matches Avalonia preview light theme) */
+.fallbackContainer {
+  background-color: White;
+}
+
+/* Dark mode background (matches Avalonia preview dark theme) */
+[data-theme='dark'] .fallbackContainer {
+  background-color: Black;
 }
 
 .fallbackContainer.fadeOut {
@@ -154,7 +163,6 @@
 .fallbackImage {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
 }
 
 .fallbackLoader {
