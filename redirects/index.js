@@ -3,7 +3,7 @@
 
 import {from10to11} from './migrate-010-to-110.js';
 import {music_store_redirects} from './music-store-redirects.js';
-import {get_started_redirects} from './get-started-redirects.js'
+import {get_started_redirects} from './get-started-redirects.js';
 
 const config = {
   redirects: [
