@@ -10,6 +10,7 @@ const config = {
 
     ...from10to11.redirects,
     ...music_store_redirects.redirects,
+    ...get_started_redirects.redirects,
 
     // 'contro' typo
     { from: '/docs/next/basics/user-interface/controls/creating-controls/choosing-a-custom-contro-type', to: '/docs/basics/user-interface/controls/creating-controls/choosing-a-custom-control-type' },
