@@ -1,5 +1,5 @@
 ﻿---
-id: markupextensions
+id: index
 title: Markup extensions
 description: Markup extensions are simple classes that provide values to XAML properties at runtime. They provide a convenient, reusable option for code-based customization of properties.
 ---

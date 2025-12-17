@@ -1,6 +1,6 @@
 ---
-id: markupextensions
-title: Markup extensions
+id: options-markup-extensions
+title: Options markup extensions
 description: An options markup extension is a special type of markup extension, specialized for switch-like expressions.
 ---
 
