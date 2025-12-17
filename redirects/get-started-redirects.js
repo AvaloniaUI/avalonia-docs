@@ -1,17 +1,17 @@
 const redirects = [
-    { to: '/docs/get-started',
+    { to: '/docs/get-started/',
       from: [
             '/docs/get-started/install',
             '/docs/get-started/set-up-an-editor',
             '/docs/get-started/getting-started',
             '/docs/get-started/introduction',
-            '/docs/reference/jetbrains-rider-ide',
+            '/docs/reference/jetbrains-rider-ide/',
             '/docs/reference/jetbrains-rider-ide/jetbrains-rider-setup',
           ],
     },
-    { to: '/docs/get-started/starter-tutorial',
+    { to: '/docs/get-started/starter-tutorial/',
       from: [
-            '/docs/get-started/test-drive/index',
+            '/docs/get-started/test-drive/',
             '/docs/get-started/test-drive/introduction',
             '/docs/get-started/test-drive/create-a-project',
           ],
