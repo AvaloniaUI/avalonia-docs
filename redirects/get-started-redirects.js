@@ -1,5 +1,5 @@
 const redirects = [
-    { to: '/docs/get-started/index',
+    { to: '/docs/get-started/',
       from: [
             '/docs/get-started/install',
             '/docs/get-started/set-up-an-editor',
@@ -9,7 +9,7 @@ const redirects = [
             '/docs/reference/jetbrains-rider-ide/jetbrains-rider-setup',
           ],
     },
-    { to: '/docs/get-started/starter-tutorial/index',
+    { to: '/docs/get-started/starter-tutorial/',
       from: [
             '/docs/get-started/test-drive/index',
             '/docs/get-started/test-drive/introduction',
