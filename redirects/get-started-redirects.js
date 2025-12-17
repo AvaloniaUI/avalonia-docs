@@ -1,5 +1,5 @@
 const redirects = [
-    { to: '/docs/get-started/',
+    { to: '/docs/get-started',
       from: [
             '/docs/get-started/install',
             '/docs/get-started/set-up-an-editor',
@@ -9,7 +9,7 @@ const redirects = [
             '/docs/reference/jetbrains-rider-ide/jetbrains-rider-setup',
           ],
     },
-    { to: '/docs/get-started/starter-tutorial/',
+    { to: '/docs/get-started/starter-tutorial',
       from: [
             '/docs/get-started/test-drive/index',
             '/docs/get-started/test-drive/introduction',
@@ -17,9 +17,7 @@ const redirects = [
           ],
     },
     { to: '/docs/get-started/starter-tutorial/adding-a-control',
-      from: [
-            '/docs/get-started/test-drive/add-a-control',
-          ],
+      from: '/docs/get-started/test-drive/add-a-control',
     },
     { to: '/docs/get-started/starter-tutorial/adding-some-layout',
       from: [
@@ -34,14 +32,10 @@ const redirects = [
           ],
     },
     { to: '/docs/get-started/starter-tutorial/establishing-events-and-responses',
-      from: [
-            '/docs/get-started/test-drive/respond-to-an-event',
-          ],
+      from: '/docs/get-started/test-drive/respond-to-an-event',
     },
     { to: '/docs/get-started/starter-tutorial/converting-data',
-      from: [
-            '/docs/get-started/test-drive/code-with-controls',
-          ],
+      from: '/docs/get-started/test-drive/code-with-controls',
     },
 ];
 
