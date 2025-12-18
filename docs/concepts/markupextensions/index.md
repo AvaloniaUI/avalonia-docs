@@ -41,7 +41,7 @@ These technically fall outside of `MarkupExtension` as part of the XAML compiler
 | x:Static  | Static member value   |
 | x:Type    | `System.Type` literal |
 
-The `x:True` and `x:False` literals have use cases where the target binding property is `object` and you need  to provide a boolean. In these scenarios that lack type information, providing "True" remains a `string`.
+The `x:True` and `x:False` literals have use cases where the target binding property is `object` and you need to provide a boolean. In these scenarios that lack type information, providing "True" remains a `string`.
 
 ```xml
 <Button Command="{Binding SetStateCommand}" CommandParameter="{x:True}" />
@@ -128,11 +128,9 @@ public class MultiplyLiteral
 
 ### Receiving parameters from bindings
 
-A common scenario is wanting to transform data coming in from a binding and updating the target property. When all parameters 
-come from bindings, this is somewhat straightforward by creating a `MultiBinding` with an `IMultiValueConverter`. In the 
-sample below, `MultiplyBinding` requires two bound parameters. If a mix of literal and bound parameters is necessary, 
-creating an `IMultiValueConverter` would allow for passing of literals as constructor or `init` parameters. `BindingBase` 
-allows for both `CompiledBinding` and `ReflectionBinding` to be used, but does not allow literals.
+A common scenario is to transform data coming in from a binding and updating the target property. When all parameters  come from bindings, this is straightforward by creating a `MultiBinding` with an `IMultiValueConverter`.
+
+In the  sample below, `MultiplyBinding` requires two bound parameters. If a mix of literal and bound parameters is necessary,  creating an `IMultiValueConverter` would allow for passing of literals as constructor or `init` parameters. `BindingBase` allows for both `CompiledBinding` and `ReflectionBinding` to be used, but does not allow literals.
 
 ```csharp
 public class MultiplyBinding
@@ -181,7 +179,8 @@ This includes:
 
 Binding-returning or observable-returning markup extensions are supported and integrate with Avalonia’s property and data-binding systems.
 
-To make a `MarkupExtension` compatible with multiple target property types, you can return an `object` and handle each type individually.
+To make a markup extension compatible with multiple target property types, you can set `ProvideValue` to return an `object` in its method signature, so that each type can be handled individually.
+
 
 ```csharp
 public object ProvideValue(IServiceProvider provider)

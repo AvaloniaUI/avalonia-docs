@@ -4,7 +4,7 @@ title: Options markup extensions
 description: An options markup extension is a special type of markup extension, specialized for switch-like expressions.
 ---
 
-`OptionsMarkupExtension` is a special type of markup extension, specialized for switch-like expressions. Its purpose is to provide optimization by removing branches that will never be used, trimming the compiler as a result.
+`OptionsMarkupExtension` is a special type of markup extension, specialized for switch-like expressions. Its purpose is to provide optimization by removing branches that will never be used, allowing trimming by the compiler.
 
 ## `OnPlatform` markup extension
 
