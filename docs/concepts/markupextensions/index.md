@@ -1,12 +1,22 @@
 ﻿---
-id: markupextensions
-title: Markup Extensions
+id: index
+title: Markup extensions
+description: Markup extensions are simple classes that provide values to XAML properties at runtime. They provide a convenient, reusable option for code-based customization of properties.
 ---
 
-A `MarkupExtension` allows code-based customization of setter logic to a target property in a convenient, reusable 
-syntax within XAML. Curly braces are used to differentiate the usage from plain text.
+Markup extensions are simple classes that provide values to XAML properties at runtime. They provide a convenient, reusable option for code-based customization of properties.
 
-Avalonia provides the following:
+## About markup extensions
+
+A classic markup extension is any class that:
+
+- Implements `object? ProvideValue(IServiceProvider?)`
+- Optionally inherits from `MarkupExtension` (not required in Avalonia)
+- Is used from XAML via the `{ns:Extension ...}` syntax
+
+In Avalonia, `ProvideValue` is allowed to return **any** type. This means the result can be strongly typed, as the returned value is assigned directly to the target property.
+
+Avalonia provides the following markup extensions:
 
 | MarkupExtension                                                                                  | Assigns to Property                                                |
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
@@ -21,7 +31,7 @@ Avalonia provides the following:
 
 ## Compiler intrinsics
 
-These technically fall outside of `MarkupExtension`s as part of the XAML compiler, but the XAML syntax is the same.
+These technically fall outside of `MarkupExtension` as part of the XAML compiler, but the XAML syntax is the same.
 
 | Intrinsic | Assigns to Property   |
 |-----------|-----------------------|
@@ -31,14 +41,13 @@ These technically fall outside of `MarkupExtension`s as part of the XAML compile
 | x:Static  | Static member value   |
 | x:Type    | `System.Type` literal |
 
-The `x:True` and `x:False` literals have use cases where the target binding property is `object` and you need 
-to provide a boolean. In these scenarios that lack type information, providing "True" remains a `string`.
+The `x:True` and `x:False` literals have use cases where the target binding property is `object` and you need to provide a boolean. In these scenarios that lack type information, providing "True" remains a `string`.
 
 ```xml
 <Button Command="{Binding SetStateCommand}" CommandParameter="{x:True}" />
 ```
 
-## Creating MarkupExtensions
+## Creating markup extensions
 
 Derive from `MarkupExtension` or add one of the following signatures which are supported via duck-typing:
 
@@ -49,11 +58,44 @@ object ProvideValue();
 object ProvideValue(IServiceProvider provider);
 ```
 
-When strong types are used instead of `object`, you will receive compile-time errors when there is a mismatch in the 
-XAML use of constructor parameters, properties, or the return value in `ProvideValue`. When returning `object`, the 
-actual type returned must match the target property's type else an `InvalidCastException` is thrown at runtime.
+Here is a basic example with a markup extension used for localization:
 
-### Receiving Literal Parameters
+```csharp
+public class LocExtension
+{
+    public string Key { get; set; } = "";
+
+    public string ProvideValue(IServiceProvider serviceProvider)
+    {
+        // Simplified localization lookup
+        return LocalizationService.GetString(Key) ?? Key;
+    }
+}
+```
+
+```xml
+<TextBlock Text="{local:Loc Key=WelcomeMessage}" />
+```
+
+When strong types are used instead of `object`, you will receive compile-time errors when there is a mismatch in the  XAML use of constructor parameters, properties, or the return value in `ProvideValue`. When returning `object`, the actual type returned must match the target property's type, else an `InvalidCastException` is thrown at runtime.
+
+### Using `IServiceProvider`
+
+The `IServiceProvider` passed to `ProvideValue` exposes XAML context services, enabling the extension to understand where it is used.
+
+Common standard services include:
+
+- **`IProvideValueTarget`** — gives access to the target object and property.
+- **`IRootObjectProvider`** — provides the XAML document’s root object.
+
+Avalonia also provides additional, XAML-IL specific services:
+
+- **`IAvaloniaXamlIlParentStackProvider`** — exposes the parent object stack during XAML parsing.
+- **`IAvaloniaXamlIlXmlNamespaceInfoProvider`** — provides namespace metadata.
+
+These services are optional, but essential for more advanced or context-aware extensions.
+
+### Receiving literal parameters
 
 When parameters are required, use a constructor to receive each parameter in order.
 
@@ -84,13 +126,11 @@ public class MultiplyLiteral
 <TextBlock Text="This has FontSize=40" FontSize="{namespace:MultiplyLiteral 10, 8, Third=0.5}" />
 ```
 
-### Receiving Parameters From Bindings
+### Receiving parameters from bindings
 
-A common scenario is wanting to transform data coming in from a binding and updating the target property. When all parameters 
-come from bindings, this is somewhat straightforward by creating a `MultiBinding` with an `IMultiValueConverter`. In the 
-sample below, `MultiplyBinding` requires two bound parameters. If a mix of literal and bound parameters is necessary, 
-creating an `IMultiValueConverter` would allow for passing of literals as constructor or `init` parameters. `BindingBase` 
-allows for both `CompiledBinding` and `ReflectionBinding` to be used, but does not allow literals.
+A common scenario is to transform data coming in from a binding and updating the target property. When all parameters  come from bindings, this is straightforward by creating a `MultiBinding` with an `IMultiValueConverter`.
+
+In the  sample below, `MultiplyBinding` requires two bound parameters. If a mix of literal and bound parameters is necessary,  creating an `IMultiValueConverter` would allow for passing of literals as constructor or `init` parameters. `BindingBase` allows for both `CompiledBinding` and `ReflectionBinding` to be used, but does not allow literals.
 
 ```csharp
 public class MultiplyBinding
@@ -123,15 +163,24 @@ public class MultiplyBinding
 ```
 
 :::info
-
 An alternate approach is to return an `IObservable<T>.ToBinding()` instead.
-
 :::
 
-### Returning Parameters
+### Returning parameters
 
-To make a `MarkupExtension` compatible with multiple target property types, return an `object` and handle each 
-supported type individually.
+Avalonia’s markup extension model is flexible: `ProvideValue` may return anything.
+
+This includes:
+
+- Static .NET object
+- Typed .NET object, which can be validated at compile time when assigned to a property
+- **Binding** instances
+- **Observables (`IObservable<T>`)** for dynamic, reactive values
+
+Binding-returning or observable-returning markup extensions are supported and integrate with Avalonia’s property and data-binding systems.
+
+To make a markup extension compatible with multiple target property types, you can set `ProvideValue` to return an `object` in its method signature, so that each type can be handled individually.
+
 
 ```csharp
 public object ProvideValue(IServiceProvider provider)

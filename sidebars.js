@@ -461,7 +461,17 @@ const sidebars = {
             'concepts/the-mvvm-pattern/avalonia-ui-and-mvvm',
           ],
         },
-        'concepts/markupextensions',
+        {
+          'type': 'category',
+          'label': 'Markup extensions',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/markupextensions/index',
+          },
+          'items': [
+            'concepts/markupextensions/options-markup-extensions',
+          ],
+        },
         {
           'type': 'category',
           'label': 'ReactiveUI',
