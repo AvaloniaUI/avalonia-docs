@@ -1,0 +1,115 @@
+---
+id: exercises
+title: 练习
+description: 通过三个编码练习测试您对 Avalonia 的了解。Avalonia 入门教程的第 7 部分（共 7 部分）。
+---
+
+# 入门练习
+
+您已经构建了一个温度转换器应用程序，现在请尝试这三个练习，测试您对 Avalonia 的理解。
+
+## 练习 1：更改现有属性
+
+**挑战等级：★**
+
+令 **GetStartedApp** 中的网格线不可见。
+
+<details>
+	<summary>提示</summary>
+
+	您在 MainWindow.axaml 中指定了 `<Grid>`。
+</details>
+
+<details>
+	<summary>答案</summary>
+	
+	在 **MainWindow.axaml** 中，找 `<Grid>` 开始标签。将 `ShowGridLines` 属性更改为 `False`。
+
+    ```xml
+	<Grid ShowGridLines="False" Margin="5" 
+      ColumnDefinitions="120, 100"
+      RowDefinitions="Auto, Auto, Auto">
+    ```
+</details>
+
+## 练习 2：添加新属性
+
+**挑战等级：★★**
+
+令用户无法在 **GetStartedApp** 的华氏度文本框中输入文本。
+
+<details>
+	<summary>提示（第 1 个）</summary>
+
+	查看 [API 文档](https://api-docs.avaloniaui.net/)以获取有关 `TextBox` 控件的更多信息。
+</details>
+
+<details>
+	<summary>提示（第 2 个）</summary>
+
+	在 [`TextBox` 的 API 参考](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBox)，您会找到属性 `IsReadOnly`。
+</details>
+
+<details>
+	<summary>答案</summary>
+
+	在 **MainWindow.axaml** 中，找华氏度框的 `<TextBox>` 标签。添加 `IsReadOnly` 属性，并将其设置为 `True`。
+
+    ```xml
+	<TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="0" Name="Fahrenheit" IsReadOnly="True"/>
+    ```
+</details>
+
+## 练习 3：编程新的事件响应
+
+**挑战等级：★★★**
+
+令 **GetStartedApp** 在用户输入时计算温度转换。
+
+<details>
+	<summary>提示（第 1 个）</summary>
+
+	查看 [API 文档](https://api-docs.avaloniaui.net/)以获取有关 `TextBox` 控件的更多信息。
+</details>
+
+<details>
+	<summary>提示（第 2 个）</summary>
+
+	在 [`TextBox` 的 API 参考](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBox)，您会找到事件 `TextChanged`。
+</details>
+
+<details>
+	<summary>提示（第 3 个）</summary>
+
+	您的事件处理程序在 C# 后置代码 MainWindow.axaml.cs 中定义。它也被 XAML 文件 MainWindow.axaml 引用。
+</details>
+
+<details>
+	<summary>答案</summary>
+
+	1. 在 **MainWindow.axaml** 中，找摄氏度框的 `<TextBox>` 标签。添加 `TextChanged` 事件，并为事件命名，例如 `Celsius_TextChanged`。
+
+    ```xml
+	<TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0" TextChanged="Celsius_TextChanged" Name="Celsius"/>
+    ```
+
+	2. 在 **MainWindow.axaml** 中，删除以 `<Button>` 开头的整行。它不再需要了。
+
+    ~~`<Button HorizontalAlignment="Center" Click="Button_OnClick">Calculate</Button>`~~
+
+    3. 在 **MainWindow.axaml.cs** 中，找到以 `private void` 开头的事件处理程序行。将事件名称从 `Button_OnClick` 更改为您在 XAML 文件中命名的名称，例如 `Celsius_TextChanged`。
+
+    ```csharp
+    private void Celsius_TextChanged(object? sender, RoutedEventArgs e)
+    ```
+
+    4. 运行应用程序，确认当您在摄氏度框中输入时，华氏度框中的值会自动变化。
+</details>
+
+恭喜！您已完成 Avalonia 的入门教程！
+
+## 延伸阅读
+
+[控件参考](/docs/reference/controls)
+
+[API 文档](https://api-docs.avaloniaui.net/)

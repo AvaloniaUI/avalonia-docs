@@ -1,0 +1,41 @@
+---
+id: index
+title: 入门教程
+description: 通过构建温度转换器应用程序学习 Avalonia 的基础知识。Avalonia 入门教程的第 1 部分（共 7 部分）。
+---
+
+import DocCardList from '@theme/DocCardList';
+import TemperatureConverterComplete from '/img/get-started/temperature-converter-complete.png';
+import MainWindowFileLocation from '/img/get-started/mainwindow-file-location.png';
+
+# 入门教程
+
+## 构建温度转换器应用程序
+
+现在您已经在集成开发环境 (IDE) 中设置好了 Avalonia 项目（如[入门指南](/docs/get-started#creating-your-first-project)所述），我们可以学习 Avalonia 中的一些基本概念和功能。我们将通过将默认的 Avalonia 模板转换为温度转换器应用程序来实现这一目标。
+
+按照本教程创建应用程序。在此过程中，您将学习：
+
+<DocCardList />
+
+<Image light={TemperatureConverterComplete} alt="一个将摄氏度转换为华氏度已完成应用程序的屏幕截图。" position="center" maxWidth={400} cornerRadius="true" margin={10}/>
+
+## .axaml
+
+注意到您的项目目录中以 `.axaml` 结尾的文件了吗？这是 Avalonia XAML 的缩写，是 Avalonia 独有的文件扩展名，用于将 Avalonia 文件与标准 XAML 文件区分开来。
+
+## 检查您的 XAML 预览器
+
+如果您刚在 Visual Studio 或 JetBrains Rider 中安装了 Avalonia，并且您是 IDE 开发的新手，现在可能是检查您是否可以使用 XAML 预览器的好时机。
+
+有关如何启用和测试预览器的信息，请参阅 [XAML 预览器页面](/docs/get-started/xaml-previewers)。
+
+## 打开主窗口文件
+
+在项目目录的 **Views** 文件夹中，打开文件 **MainWindow.axaml**。在本教程中，我们主要将使用这个文件。
+
+<Image light={MainWindowFileLocation} alt="显示文件树中主窗口文件位置的屏幕截图。" position="center" maxWidth={400} cornerRadius="true" margin="20,0,50,0"/>
+
+**MainWindow.axaml** 中几乎所有内容都位于 `<Window>...</Window>` XAML 标签之间。此标签代表 Avalonia 窗口，您的应用程序将在目标平台上在其中运行。稍后当我们学习[自定义 Avalonia 窗口](/docs/get-started/starter-tutorial/customizing-the-avalonia-window)时，我们将更详细地了解 Avalonia 窗口。
+
+继续本教程的下一页，学习如何向应用程序添加按钮。

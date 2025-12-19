@@ -92,13 +92,14 @@ Make **GetStartedApp** calculate the temperature conversion as the user types.
 	```xml
 	<TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0" TextChanged="Celsius_TextChanged" Name="Celsius"/>
 	```
+
 	2. In **MainWindow.axaml**, delete the entire line starting `<Button>`. It is no longer needed.
 
     ~~`<Button HorizontalAlignment="Center" Click="Button_OnClick">Calculate</Button>`~~
 
     3. In **MainWindow.axaml.cs**, locate the event handler line starting `private void`. Change the event name from `Button_OnClick` to whatever you named it in the XAML file, e.g. `Celsius_TextChanged`.
 
-    ```xml
+    ```csharp
     private void Celsius_TextChanged(object? sender, RoutedEventArgs e)
     ```
 
