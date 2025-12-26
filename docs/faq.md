@@ -12,16 +12,16 @@ Avalonia stands out from many other UI frameworks as it doesn't rely on controls
 
 ---
 
-## How is Avalonia different from other UI frameworks like WPF or Xamarin.Forms?
-Avalonia distinguishes itself from other UI frameworks such as WPF and Xamarin.Forms through several key aspects:
+## How is Avalonia different from other UI frameworks like WPF or MAUI?
+Avalonia distinguishes itself from other UI frameworks such as WPF and MAUI through several key aspects:
 
 * **Cross-platform by design**: Unlike WPF, which is exclusive to Windows, Avalonia is designed from the ground up to be cross-platform. It supports Windows, Linux, macOS, iOS, Android, WebAssembly and more. It's capable of delivering a consistent look and feel across all these platforms.
 
-* **Independent rendering**: While Xamarin.Forms relies on the native controls of the target platform for rendering, Avalonia has its own rendering engine. This means that it doesn't use the native UI controls of the operating system but instead draws the entire UI itself. This provides a high degree of flexibility and customization.
+* **Independent rendering**: While MAUI relies on the native controls of the target platform for rendering, Avalonia has its own rendering engine. This means that it doesn't use the native UI controls of the operating system but instead draws the entire UI itself. This provides a high degree of flexibility and customization.
 
-* **Flexible styling**: Avalonia uses a powerful styling system similar to WPF. It uses styles to define the appearance of your controls, and unlike Xamarin.Forms, these styles can be dynamically adjusted based on control state and inherited hierarchically.
+* **Flexible styling**: Avalonia uses a powerful styling system similar to WPF. It uses styles to define the appearance of your controls, and unlike MAUI, these styles can be dynamically adjusted based on control state and inherited hierarchically.
 
-* **XAML and code-behind**: Like WPF and Xamarin.Forms, Avalonia lets you define UIs using XAML, a markup language that many .NET developers are familiar with. You can also manipulate your UI directly in code, giving you the flexibility to choose the right approach for your application.
+* **XAML and code-behind**: Like WPF and MAUI, Avalonia lets you define UIs using XAML, a markup language that many .NET developers are familiar with. You can also manipulate your UI directly in code, giving you the flexibility to choose the right approach for your application.
 
 * **Open source and community-driven**: Avalonia is an open-source project with an active community contributing to its development. This means it's continually evolving and improving based on community feedback and needs.
 
@@ -31,7 +31,7 @@ Avalonia distinguishes itself from other UI frameworks such as WPF and Xamarin.F
 
 * .NET Framework 4.6.2+
 * .NET Core 2.0+
-* .NET 5+ (including latest .NET 8)
+* .NET 5+ (including latest .NET 10)
 
 ---
 
@@ -71,7 +71,7 @@ Avalonia Accelerate will help developers build applications more efficiently thr
 
 ## Does Avalonia support Hot Reload?
 
-You can use a [community project](https://github.com/AvaloniaCommunity/Live.Avalonia) to enable hot reload with Avalonia.
+You can use a [community project](https://github.com/Kira-NT/HotAvalonia) to enable hot reload with Avalonia. 
 
 ---
 
@@ -107,7 +107,7 @@ Check out the [community guide](community.md) to see how you can get involved wi
 :::warning
 You also must know which platforms are supported by your .NET version.
 Often .NET will drop support for older OS versions, while Avalonia still can work with them. So you might need to hold on updating the SDK.
-For example, [here is the list](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md) of supported OS versions by .NET 8.
+For example, [here is the list](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md) of supported OS versions by .NET 10.
 :::
 
 ### Linux Distros
