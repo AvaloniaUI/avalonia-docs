@@ -76,7 +76,7 @@ import BorderDropShadowScreenshot from '/img/reference/controls/border/border-dr
 
 此表描述了盒廓阴影值，按它们出现的顺序：
 
-<table><thead><tr><th width="203">值</th><th>描述</th></tr></thead><tbody><tr><td><code>inset</code></td><td>如果未指定（默认），则假定阴影为投影（如同盒廓被抬高在内容之上）。inset 关键字的存在将阴影更改为框架内部（如同内容被压入盒廓内部）。内嵌阴影绘制在边框内（即使是透明的），并且在背景之上但在任何内容之下</td></tr><tr><td><code>offset-x</code> </td><td>指定水平距离。负值将阴影放置在元素的左侧。</td></tr><tr><td><code>offset-y</code></td><td>指定垂直距离。负值将阴影放置在元素的上方。</td></tr><tr><td><code>blur-radius</code></td><td>此值越大，模糊效果越大，因此阴影变得更大且更轻。负值不允许。如果未指定，则使用默认值（零），阴影边缘是锐利的。</td></tr><tr><td><code>spread-radius</code></td><td>正值将导致阴影扩展和变大，负值将导致阴影收缩。如果未指定，它将为 0（阴影将与元素大小相同）。</td></tr><tr><td><code>color</code></td><td>使用颜色名称（例如红色）或带有 # 前缀的十六进制颜色值的阴影颜色。例如：#dadada</td></tr></tbody></table>
+<table><thead><tr><th width="203">值</th><th>描述</th></tr></thead><tbody><tr><td><code>inset</code></td><td>如果未指定（默认），则假定阴影为投影（如同盒廓被抬高在内容之上）。inset 关键字的存在将阴影更改为框架内部（如同内容被压入盒廓内部）。内嵌阴影绘制在边框内（即使是透明的），并且在背景之上但在任何内容之下</td></tr><tr><td><code>offset-x</code> </td><td>指定水平距离。负值将阴影放置在元素的左侧。</td></tr><tr><td><code>offset-y</code></td><td>指定垂直距离。负值将阴影放置在元素的上方。</td></tr><tr><td><code>blur-radius</code></td><td>此值越大，模糊效果越大，因此阴影变得更大且更轻。负值不允许。如果未指定，则使用默认值（零），阴影边缘是锐利的。</td></tr><tr><td><code>spread-radius</code></td><td>正值将导致阴影扩展和变大，负值将导致阴影收缩。如果未指定，它将为 0（阴影将与元素大小相同）。</td></tr><tr><td><code>color</code></td><td>使用颜色名称（例如 Red），或带有 # 前缀的十六进制颜色值，或使用色彩函数（例如 rgb(13, 110, 253)、hsl(215, 98%, 52%)）的阴影颜色。例如：#dadada</td></tr></tbody></table>
 
 :::info
 如果两个偏移值都设置为零，阴影将放置在元素后面，并且只有在同时或者单独设置了 `blur-radius` , `spread-radius` 时才会生成模糊效果。
@@ -87,7 +87,7 @@ import BorderDropShadowScreenshot from '/img/reference/controls/border/border-dr
 这是一个投影的示例：
 
 ```xml
-<<StackPanel>
+<StackPanel>
   <Border Background="Gainsboro"
         BorderBrush="Black"
         BorderThickness="2"
