@@ -11,9 +11,9 @@ import VsDiagnosticsOutputScreenshot from '/img/guides/implementation-guides/vs-
 
 This guide will show you how to use the live preview feature of the _Avalonia UI_ extensions for Visual Studio and _ReSharper_.
 
-The _Avalonia for Visual Studio_ extension includes a XAML designer which can be used to show a live preview of the XAML as you are writing it. With the Avalonia for Visual Studio extension installed, double click on an Avalonia XAML file to open it.
 
 For Visual Studio and ReSharper users, [ReSharper 2020.3 introduces](https://www.jetbrains.com/resharper/whatsnew/2020-3/#version-2020-3-avalonia-support) built-in code analysis, code completion, navigation, and find usages.
+The _Avalonia for Visual Studio_ extension includes a XAML previewer which can be used to show a live preview of the XAML as you are writing it. With the Avalonia for Visual Studio extension installed, double click on an Avalonia XAML file to open it.
 
 <img src={VsXamlPreviewerScreenshot} alt="Shows the XAML Previewer in Visual Studio"/>
 
