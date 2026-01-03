@@ -9,14 +9,14 @@ import VsDiagnosticsOutputScreenshot from '/img/guides/implementation-guides/vs-
 
 # How To Use Live Preview
 
-This guide will show you how to use the live preview feature of the _Avalonia UI_ extensions for Visual Studio.
+This guide will show you how to use the live preview feature of the _Avalonia_ extension for Visual Studio.
 
 The _Avalonia for Visual Studio_ extension includes a XAML previewer which can be used to show a live preview of the XAML as you are writing it. With the Avalonia for Visual Studio extension installed, double click on an Avalonia XAML file to open it.
 
 <img src={VsXamlPreviewerScreenshot} alt="Shows the XAML Previewer in Visual Studio"/>
 
 :::info
-If your XAML is in a library, _Avalonia UI_ needs an executable application in order to be able to preview it. Select an executable project from the dropdown on the top right of the designer. Once your project is built, editing the XAML in the editor will cause the preview to update automatically.
+If your XAML is in a library, the _Avalonia_ extension needs an executable application in order to be able to preview it. Select an executable project from the dropdown on the top right of the designer. Once your project is built, editing the XAML in the editor will cause the preview to update automatically.
 :::
 
 ## Design-Time Properties
