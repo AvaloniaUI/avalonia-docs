@@ -1,6 +1,6 @@
 ---
 id: how-to-create-a-custom-controls-library
-title: 如何创建自定义控件库
+title: 如何引用自定义控件库
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 import CustomControlSolutionScreenshot from '/img/guides/custom-controls/custom-control-solution.png';
 import CustomControlNuGetScreenshot from '/img/guides/custom-controls/custom-control-nuget.png';
 
-# 如何创建自定义控件库
+# 如何引用自定义控件库
 
-本指南将向您展示如何创建自定义控件库并在_Avalonia UI_应用程序中引用它。
+本指南将向您展示如何创建自定义控件库并在 _Avalonia UI_ 应用程序中引用它。
 
 <img src={CustomControlSolutionScreenshot} alt=""/>
 
-在此示例中，将一个自定义控件文件添加到一个.NET类库中。该库已安装了_Avalonia UI_ _NuGet_包：
+在此示例中，将一个自定义控件文件添加到一个.NET类库中。该库已安装了 _Avalonia UI_ _NuGet_ 包：
 
 <img src={CustomControlNuGetScreenshot} alt=""/>
 
@@ -91,7 +91,7 @@ namespace CCLibrary
 
 ## XML命名空间定义
 
-当您在_Avalonia UI_的XAML文件中添加对控件库的引用时，您可能希望使用URL标识格式。例如：
+当您在 _Avalonia UI_ 的XAML文件中添加对控件库的引用时，您可能希望使用URL标识格式。例如：
 
 ```xml
 xmlns:cc="https://my.controls.url"
@@ -104,7 +104,7 @@ xmlns:cc="https://my.controls.url"
 ```
 
 :::info
-您可以在_Avalonia UI_内置控件的源代码中查看此内容[此处](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs)。
+您可以在 _Avalonia UI_ 内置控件的源代码中查看此内容[此处](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs)。
 :::
 
 ### 常见的命名空间定义
