@@ -1,6 +1,6 @@
 ---
 id: how-to-create-a-custom-controls-library
-title: How To Create a Custom Controls Library
+title: How To Reference a Custom Controls Library
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,9 +8,9 @@ import TabItem from '@theme/TabItem';
 import CustomControlSolutionScreenshot from '/img/guides/custom-controls/custom-control-solution.png';
 import CustomControlNuGetScreenshot from '/img/guides/custom-controls/custom-control-nuget.png';
 
-# How To Create a Custom Controls Library
+# How To Reference a Custom Controls Library
 
-This guide shows you how to create a custom controls library and reference it for use in an _Avalonia UI_ app.
+This guide shows you how to reference an existing custom controls library for use in an _Avalonia UI_ app.
 
 <img src={CustomControlSolutionScreenshot} alt=""/>
 
