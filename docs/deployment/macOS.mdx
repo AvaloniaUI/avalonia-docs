@@ -2,35 +2,53 @@
 id: macOS
 title: macOS Deployment
 ---
+import FileTree from '@site/src/components/global/FileTree';
 
 macOS applications are typically distributed in a `.app` [application bundle](https://en.wikipedia.org/wiki/Bundle_%28macOS%29#macOS_application_bundles). To make .NET Core and Avalonia projects work in a `.app` bundle, some extra legwork has to be done after your application has gone through the publishing process.
 
 With Avalonia, you'll have a `.app` folder structure that looks like this:
 
-```
-MyProgram.app
-|
-----Contents\
-    |
-    ------_CodeSignature\ (stores code signing information)
-    |     |
-    |     ------CodeResources
-    |
-    ------MacOS\ (all your DLL files, etc. -- the output of `dotnet publish`)
-    |     |
-    |     ---MyProgram
-    |     |
-    |     ---MyProgram.dll
-    |     |
-    |     ---Avalonia.dll
-    |
-    ------Resources\
-    |     |
-    |     -----MyProgramIcon.icns (icon file)
-    |
-    ------Info.plist (stores information on your bundle identifier, version, etc.)
-    ------embedded.provisionprofile (file with signing information)
-```
+<FileTree data={[
+  {
+    name: 'MyProgram.app',
+    type: 'folder',
+    children: [
+      {
+        name: 'Contents',
+        type: 'folder',
+        children: [
+          {
+            name: '_CodeSignature',
+            type: 'folder',
+            comment: 'stores code signing information',
+            children: [
+              { name: 'CodeResources', type: 'file' }
+            ]
+          },
+          {
+            name: 'MacOS',
+            type: 'folder',
+            comment: 'all your DLL files, etc. -- the output of dotnet publish',
+            children: [
+              { name: 'MyProgram', type: 'file' },
+              { name: 'MyProgram.dll', type: 'file' },
+              { name: 'Avalonia.dll', type: 'file' }
+            ]
+          },
+          {
+            name: 'Resources',
+            type: 'folder',
+            children: [
+              { name: 'MyProgramIcon.icns', type: 'file', comment: 'icon file' }
+            ]
+          },
+          { name: 'Info.plist', type: 'file', comment: 'stores information on your bundle identifier, version, etc.' },
+          { name: 'embedded.provisionprofile', type: 'file', comment: 'file with signing information' }
+        ]
+      }
+    ]
+  }
+]} />
 
 For more information on `Info.plist`, see [Apple's documentation here](https://developer.apple.com/documentation/bundleresources/information_property_list).
 

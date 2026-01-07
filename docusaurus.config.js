@@ -224,7 +224,7 @@ const config = {
       },
     ],
     [
-      'docusaurus-plugin-plausible',
+      require('./plugins/plausible-plugin.cjs'),
       {
         domain: 'docs.avaloniaui.net',
       },
