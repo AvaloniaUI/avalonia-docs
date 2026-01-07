@@ -3,7 +3,7 @@ id: file-dialogs
 title: Диалоговые окна файлов
 ---
 
-Функциональность диалоговых окон файлов доступна через API сервиса [`StorageProvider`](../../concepts/services/storage-provider), который доступен из классов `Window` или `TopLevel`. Эта страница показывает только базовое использование, а для получения дополнительной информации об этом API, пожалуйста, посетите страницу StorageProvider.
+Функциональность диалоговых окон файлов доступна через API сервиса [`StorageProvider`](/docs/concepts/services/storage-provider), который доступен из классов `Window` или `TopLevel`. Эта страница показывает только базовое использование, а для получения дополнительной информации об этом API, пожалуйста, посетите страницу StorageProvider.
 
 <GitHubSampleLink title="File Dialogs" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/FileOps"/>
 
@@ -72,10 +72,10 @@ public class MyView : UserControl
 }
 ```
 
-Для получения дополнительной информации о сервисе StorageProvider, включая информацию о том, как сохранить доступ к выбранным файлам и какие возможные параметры поддерживаются, пожалуйста, посетите страницу документации [`StorageProvider`](../../concepts/services/storage-provider) и подстраницы.
+Для получения дополнительной информации о сервисе StorageProvider, включая информацию о том, как сохранить доступ к выбранным файлам и какие возможные параметры поддерживаются, пожалуйста, посетите страницу документации [`StorageProvider`](/docs/concepts/services/storage-provider) и подстраницы.
 
 :::note
-Приведенные примеры напрямую обращаются к API [`StorageProvider`](../../concepts/services/storage-provider) внутри ViewModel в учебных целях. В реальном приложении рекомендуется придерживаться принципов MVVM, создавая сервисные классы и размещая их с помощью Dependency Injection / Inversion of Control (DI/IoC). Обратитесь к проектам [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) и DepInject для примеров того, как этого достичь.
+Приведенные примеры напрямую обращаются к API [`StorageProvider`](/docs/concepts/services/storage-provider) внутри ViewModel в учебных целях. В реальном приложении рекомендуется придерживаться принципов MVVM, создавая сервисные классы и размещая их с помощью Dependency Injection / Inversion of Control (DI/IoC). Обратитесь к проектам [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) и DepInject для примеров того, как этого достичь.
 :::
 
 

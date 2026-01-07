@@ -5,7 +5,7 @@ title: Platform Settings
 
 `PlatformSettings` 类表示访问特定平台设置和信息的约定。其中一些设置可能会在运行时由用户在操作系统中全局更改。
 
-可以通过 `TopLevel` 或 `Window` 实例来访问 `PlatformSettings`，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](../toplevel) 页面：
+可以通过 `TopLevel` 或 `Window` 实例来访问 `PlatformSettings`，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](/docs/concepts/toplevel) 页面：
 
 ```cs
 var platformSettings = window.PlatformSettings;

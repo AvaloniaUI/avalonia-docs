@@ -7,7 +7,7 @@ title: Launcher 启动器
 
 `Launcher` 允许您在与指定参数关联的默认应用程序中打开文件或 URI 链接。
 
-`Launcher` 可以通过 `TopLevel` 或 `Window` 的实例访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](../toplevel) 页面：
+`Launcher` 可以通过 `TopLevel` 或 `Window` 的实例访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](/docs/concepts/toplevel) 页面：
 ```cs
 var launcher = TopLevel.GetTopLevel(control).Launcher;
 ```

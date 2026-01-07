@@ -54,6 +54,6 @@ public static void Main(string[] args)
 
 ## 来自 Reactive UI 的异常
 
-如果您将 Avalonia 与 [ReactiveUI](../concepts/the-mvvm-pattern/avalonia-ui-and-mvvm#reactiveui) 一起使用，可以订阅它们的 `RxApp.DefaultExceptionHandler`。有关更多信息，请参阅 [ReactiveUI 默认异常处理程序](https://www.reactiveui.net/docs/handbook/default-exception-handler/)。
+如果您将 Avalonia 与 [ReactiveUI](/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm#reactiveui) 一起使用，可以订阅它们的 `RxApp.DefaultExceptionHandler`。有关更多信息，请参阅 [ReactiveUI 默认异常处理程序](https://www.reactiveui.net/docs/handbook/default-exception-handler/)。
 
 注意，`RxApp.DefaultExceptionHandler` 应在创建任何 ReactiveCommand 之前设置。否则，自定义处理程序将不会被使用。您可以在应用程序入口点或在创建任何 Avalonia 视图或窗口之前设置它。"

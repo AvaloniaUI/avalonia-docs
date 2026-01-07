@@ -13,7 +13,7 @@ import ComboBoxDataTemplateScreenshot from '/img/reference/controls/combobox/com
 列表中的元素可以组合、绑定和模板化。
 
 :::info
-要回顾**数据模板**背后的概念，请查看[这里](../../concepts/templates/)。
+要回顾**数据模板**背后的概念，请查看[这里](/docs/concepts/templates/)。
 :::
 
 ## 常用属性

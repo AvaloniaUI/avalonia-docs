@@ -156,7 +156,7 @@ new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 通过使用`>`字符分隔两个选择器来定义子选择器。此选择器仅匹配**逻辑控件树**中的直接子项。
 
 :::info
-有关逻辑控件树背后的概念，请参见[这里](../../concepts/control-trees.md)。
+有关逻辑控件树背后的概念，请参见[这里](/docs/concepts/control-trees.md)。
 :::
 
 例如，将上述选择器应用于以下XAML：

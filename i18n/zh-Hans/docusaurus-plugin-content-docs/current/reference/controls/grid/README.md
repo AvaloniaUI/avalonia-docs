@@ -132,7 +132,7 @@ import GridSpanningColumnsScreenshot from '/img/reference/controls/grid/grid-col
 
 自动尺寸的计算是使用子控件的边距布局区域外缘进行的。
 :::info
-要回顾控制布局区域的概念，请参阅[此处](../../../concepts/layout/layout-zones)。
+要回顾控制布局区域的概念，请参阅[此处](/docs/concepts/layout/layout-zones)。
 :::
 
 子控件按照它们在 XAML 中出现的顺序在其分配的网格单元格中绘制。这条规则既适用于当两个子控件被分配到同一单元格时的情况，也适用于子控件大于其分配单元格时的重叠情况。

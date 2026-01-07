@@ -2,8 +2,8 @@
 
 Avalonia 与其他 XAML 框架最明显的不同之一在于其样式系统。在 Avalonia 中，有两种方法可以为控件设置样式：
 
-- [`Style`](../../basics/user-interface/styling) 是一种类似 CSS 的样式。样式不像在 WPF 中存储在 `Resources` 集合中，而是存储在一个独立的 `Styles` 集合中。
-- [`ControlTheme`](../../basics/user-interface/styling/control-themes) 类似于WPF的 `Style`，通常用于为无外观的控件创建主题。
+- [`Style`](/docs/basic/user-interface/styling) 是一种类似 CSS 的样式。样式不像在 WPF 中存储在 `Resources` 集合中，而是存储在一个独立的 `Styles` 集合中。
+- [`ControlTheme`](/docs/basic/user-interface/styling/control-themes) 类似于WPF的 `Style`，通常用于为无外观的控件创建主题。
 
 ## 示例
 

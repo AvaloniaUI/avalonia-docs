@@ -23,7 +23,7 @@ import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.
 按钮可以在代码后台引发点击事件。或者，您可以将`ICommand`的实例绑定到`Command`属性。绑定的命令将在每次按钮被点击时执行。
 
 :::info
-有关如何绑定到命令的指南，请参阅[这里](../../../basics/user-interface/adding-interactivity)。
+有关如何绑定到命令的指南，请参阅[这里](/docs/basic/user-interface/adding-interactivity)。
 :::
 
 ## 有用的属性

@@ -15,7 +15,7 @@ import MvvmDataBindingDiagram from '/img/concepts/mvvm/mvvm.png';
 在_Avalonia UI_中，视图是由窗口或用户控件（都是带有代码后台的AXAML文件）中的UI元素组成的组合。组合中的UI元素可以是_Avalonia UI_内置控件、用户控件以及您自己设计和实现的（更高级的）控件的混合。
 
 :::info
-要查看_Avalonia UI_内置控件的完整列表，请参阅参考部分[此处](../../reference/controls/)。
+要查看_Avalonia UI_内置控件的完整列表，请参阅参考部分[此处](/docs/reference/controls/)。
 :::
 
 :::info
@@ -23,7 +23,7 @@ import MvvmDataBindingDiagram from '/img/concepts/mvvm/mvvm.png';
 :::
 
 :::info
-要了解如何设计和实现自己的控件，请参阅[此处](../../guides/custom-controls/how-to-create-a-custom-controls-library.md)。
+要了解如何设计和实现自己的控件，请参阅[此处](/docs/guides/custom-controls/how-to-create-a-custom-controls-library.md)。
 :::
 
 ## 数据绑定

@@ -31,7 +31,7 @@ image.GestureRecognizers.Add(new ScrollGestureRecognizer()
 ## 更多信息
 
 :::info
-您可以在[这里](../../reference/gestures)查看更多关于可用手势识别器的信息。
+您可以在[这里](/docs/reference/gestures)查看更多关于可用手势识别器的信息。
 
 您可以查看相关类的源代码：
 

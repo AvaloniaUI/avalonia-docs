@@ -15,11 +15,11 @@ description: TUTORIALS - Music Store App
 本教程应用程序针对的是像 _Apple Mac OS_ 或 _Windows_ 这样的窗口平台。
 
 :::info
-要了解有关针对 iOS（Apple）平台的应用程序的更多信息，请参阅[这里](../../guides/platforms/ios)。
+要了解有关针对 iOS（Apple）平台的应用程序的更多信息，请参阅[这里](/docs/guides/platforms/ios)。
 :::
 
 :::info
-要了解有关针对 Android 移动设备的应用程序的更多信息，请参阅[这里](../../guides/platforms/android)。
+要了解有关针对 Android 移动设备的应用程序的更多信息，请参阅[这里](/docs/guides/platforms/android)。
 :::
 
 ## 进一步阅读

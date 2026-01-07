@@ -28,7 +28,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 您可以使用样式定义关键帧动画。
 
 :::info
-若要了解 _Avalonia UI_ 如何使用样式，请查看 [这里的概念](../../basics/user-interface/styling)。
+若要了解 _Avalonia UI_ 如何使用样式，请查看 [这里的概念](/docs/basic/user-interface/styling)。
 :::
 
 按照以下步骤使用 XAML 定义一个简单的颜色渐变动画：
@@ -179,7 +179,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 ```
 
 :::info
-要获取 _Avalonia UI_ 缓动函数的完整列表，请参阅 [此处的参考](../../reference/animation-settings.md)。
+要获取 _Avalonia UI_ 缓动函数的完整列表，请参阅 [此处的参考](/docs/reference/animation-settings.md)。
 :::
 
 您还可以添加自定义的缓动函数类，如下所示：

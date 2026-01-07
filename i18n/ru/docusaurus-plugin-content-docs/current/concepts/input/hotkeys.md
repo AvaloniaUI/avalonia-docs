@@ -4,7 +4,7 @@ description: CONCEPTS - Input
 
 # Keyboard and Hotkeys
 
-Various Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. Pressing the hotkey will execute the command [bound](../../basics/user-interface/adding-interactivity#commands) to the Control.
+Various Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. Pressing the hotkey will execute the command [bound](/docs/basic/user-interface/adding-interactivity#commands) to the Control.
 
 ```xml
 <Menu>

@@ -37,7 +37,7 @@ When you first meet _Avalonia UI_, you might place a single built-in control in 
 A slightly more complex app may require one of the built-in layout controls to arrange more than one other built-in control in the content zone of a window (above, right).
 
 :::info
-To see the full range of Avalonia UI built-in controls, see the reference section [here](../reference/controls/).
+To see the full range of Avalonia UI built-in controls, see the reference section [here](/docs/reference/controls/).
 :::
 
 ## Logical and Visual Trees
@@ -61,7 +61,7 @@ User controls are the mainstay of UI composition in _Avalonia UI_.
 You can add a user control to the content zone of a main window, to represent a 'page view' (above, left).  This allows you to implement a more complex app with multiple pages; where the layout and function of each page is in its own user control (XAML and code) files.   
 
 :::info
-For more information about how to implement a multi-page app using views, see the guide [here](../guides/development-guides/how-to-implement-multi-page-apps.md).
+For more information about how to implement a multi-page app using views, see the guide [here](/docs/guides/development-guides/how-to-implement-multi-page-apps.md).
 :::
 
 Another use for a user control is as a component control (above, right). You might initially do this to reduce the complexity of a window or page view; but then you might also (perhaps later) reuse the resulting component on another page as well.
@@ -89,7 +89,7 @@ For information about how to  TO DO
 In the unlikely scenario that you cannot find an _Avalonia UI_ built-in control to cover your app's UI requirements, then you can 'roll-your-own' custom control from scratch. This allows you to define your own custom properties, events and methods; but it will require you to implement the drawing of the control presentation from scratch as well.
 
 :::info
-To learn how to implement a custom control, see the guide [here](../basics/user-interface/controls/creating-controls).
+To learn how to implement a custom control, see the guide [here](/docs/basic/user-interface/controls/creating-controls).
 :::
 
 ## Templated Controls
@@ -97,5 +97,5 @@ To learn how to implement a custom control, see the guide [here](../basics/user-
 A templated control uses the _Avalonia UI_ **styling** system to substitute a tag in the UI layout with a
 
 :::info
-For more information about the concepts behind the _Avalonia UI_ **styling** system, see [here](../basics/user-interface/styling).
+For more information about the concepts behind the _Avalonia UI_ **styling** system, see [here](/docs/basic/user-interface/styling).
 :::

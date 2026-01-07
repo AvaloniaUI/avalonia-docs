@@ -68,7 +68,7 @@ MVVM - это популярный, но в то же время часто не
 Поэтому суть паттерна сводится ко взаимосвязи между `View` и `ViewModel`.
 
 :::info
-Подробнее о паттерне MVVM, см. [здесь](../../concepts/the-mvvm-pattern/).
+Подробнее о паттерне MVVM, см. [здесь](/docs/concepts/the-mvvm-pattern/).
 :::
 
 ### Business Façade (рус: Фасад)

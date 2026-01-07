@@ -60,7 +60,7 @@ public Rect Bounds
 
 ### 附加属性
 
-[附加属性](../../concepts/attached-property)的定义与样式化属性几乎相同，只是它们使用`RegisterAttached`方法进行注册，并且它们的访问器被定义为静态方法。
+[附加属性](/docs/concepts/attached-property)的定义与样式化属性几乎相同，只是它们使用`RegisterAttached`方法进行注册，并且它们的访问器被定义为静态方法。
 
 以下是`Grid`如何定义其`Grid.Column`附加属性：
 
@@ -147,7 +147,7 @@ public IEnumerable Items
 * 每个实例不需要额外的对象来存储属性
 * 属性getter是标准的C#属性getter
 * 属性setter是引发事件的标准C#属性setter
-* 您可以添加[数据验证](../../guides/development-guides/data-validation.md)支持
+* 您可以添加[数据验证](/docs/guides/development-guides/data-validation.md)支持
 
 缺点：
 

@@ -42,7 +42,7 @@ namespace Avalonia.MusicStore.ViewModels
 要完成从视图到新的 `BuyMusicCommand` 视图模型属性的链接，您将向按钮添加数据绑定。
 
 :::info
-有关数据绑定概念的更多信息，请参阅[此处](../../basics/data/data-binding)。
+有关数据绑定概念的更多信息，请参阅[此处](/docs/basic/data/data-binding)。
 :::
 
 要为按钮添加数据绑定，请按照以下步骤进行操作：

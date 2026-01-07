@@ -5,7 +5,7 @@ title: Insets Manager
 
 `InsetsManager` 允许您与平台的系统栏进行交互，并处理移动窗口的安全区域变化。
 
-`InsetsManager` 可以通过 `TopLevel` 或 `Window` 的实例来访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](../toplevel) 页面：
+`InsetsManager` 可以通过 `TopLevel` 或 `Window` 的实例来访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](/docs/concepts/toplevel) 页面：
 ```cs
 var insetsManager = TopLevel.GetTopLevel(control).InsetsManager;
 ```

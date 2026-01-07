@@ -123,5 +123,5 @@ public partial class MainWindow : Window
 请注意，许多Avalonia事件处理程序传递了一个名为`RoutedEventArgs`的特殊参数。它包含有关事件的生成和传播方式的信息。
 
 :::info
-有关事件路由概念的更多信息，请参见[这里](../../concepts/input/routed-events.md).
+有关事件路由概念的更多信息，请参见[这里](/docs/concepts/input/routed-events.md).
 :::

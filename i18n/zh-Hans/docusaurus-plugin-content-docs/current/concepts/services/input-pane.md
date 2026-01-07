@@ -7,7 +7,7 @@ title: Input Pane 输入面板
 
 `InputPane` 允许开发者监听平台输入面板（例如，软键盘或屏幕键盘）的当前状态和边界。
 
-`InputPane` 可以通过 `TopLevel` 或 `Window` 的实例访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](../toplevel) 页面：
+`InputPane` 可以通过 `TopLevel` 或 `Window` 的实例访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](/docs/concepts/toplevel) 页面：
 ```cs
 var inputPane = TopLevel.GetTopLevel(control).InputPane;
 ```

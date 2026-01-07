@@ -8,7 +8,7 @@ title: 定义属性
 如果您正在创建自定义控件，通常希望它具有可以由_Avalonia UI_样式系统设置的属性。
 
 :::info
-有关如何在_Avalonia UI_中使用样式的更多信息，请参阅[此处](../../basics/user-interface/styling)的指南。
+有关如何在_Avalonia UI_中使用样式的更多信息，请参阅[此处](/docs/basic/user-interface/styling)的指南。
 :::
 
 在本页面中，您将了解如何实现属性，以便可以通过_Avalonia UI_样式系统进行更改。这是一个两步过程：

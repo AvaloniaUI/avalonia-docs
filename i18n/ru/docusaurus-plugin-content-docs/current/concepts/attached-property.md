@@ -26,7 +26,7 @@ import AttachedLayoutPropertyDiagram from '/img/concepts/attached-layout-propert
 <img src={AttachedLayoutPropertyDiagram} alt=""/>
 
 :::info
-Полный список встроенных элементов управления _Avalonia UI_ смотрите в справочнике [здесь](../reference/controls/).
+Полный список встроенных элементов управления _Avalonia UI_ смотрите в справочнике [здесь](/docs/reference/controls/).
 :::
 
 

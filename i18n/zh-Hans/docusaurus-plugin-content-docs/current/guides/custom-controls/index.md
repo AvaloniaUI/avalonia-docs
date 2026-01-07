@@ -25,7 +25,7 @@ _Avalonia UI_的一些内置控件就是这样的。例如，文本块控件（`
 大部分_Avalonia UI_的内置控件都是模板化的。
 
 :::info
-有关如何创建模板化控件的指导，请参见[此处](../../basics/user-interface/controls/creating-controls)。
+有关如何创建模板化控件的指导，请参见[此处](/docs/basic/user-interface/controls/creating-controls)。
 :::
 
 以下页面将向您展示如何创建一个简单的自定义控件（继承自`Control`）。

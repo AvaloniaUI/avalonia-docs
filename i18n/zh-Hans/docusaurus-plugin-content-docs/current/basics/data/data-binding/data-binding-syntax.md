@@ -120,7 +120,7 @@ _Avalonia_ 拥有许多内置的数据绑定转换器，包括：
 * 布尔操作转换器
 
 :::info
-有关Avalonia内置数据绑定转换器的完整信息，请参阅[此处](../../../reference/built-in-data-binding-converters.md)的参考文档。
+有关Avalonia内置数据绑定转换器的完整信息，请参阅[此处](/docs/reference/built-in-data-binding-converters.md)的参考文档。
 :::
 
 ### 自定义转换器
@@ -128,7 +128,7 @@ _Avalonia_ 拥有许多内置的数据绑定转换器，包括：
 如果内置转换器都不满足您的要求，您可以实现自定义转换器。
 
 :::info
-自定义转换器的一个示例是绑定图像文件。有关如何为图像创建自定义转换器的指南，请参阅[此处](../../../guides/data-binding/how-to-bind-image-files.md)。
+自定义转换器的一个示例是绑定图像文件。有关如何为图像创建自定义转换器的指南，请参阅[此处](/docs/guides/data-binding/how-to-bind-image-files.md)。
 :::
 
 

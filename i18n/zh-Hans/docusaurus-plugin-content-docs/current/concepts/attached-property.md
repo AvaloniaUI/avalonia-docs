@@ -26,7 +26,7 @@ _Avalonia UI_ 控件支持**附加属性**的概念。这是应用于子控件�
 <img src={AttachedLayoutPropertyDiagram} alt=""/>
 
 :::info
-有关 _Avalonia UI_ 内置控件的完整列表，请参阅[此处](../reference/controls/)的参考。
+有关 _Avalonia UI_ 内置控件的完整列表，请参阅[此处](/docs/reference/controls/)的参考。
 :::
 
 

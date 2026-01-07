@@ -9,7 +9,7 @@ title: Clipboard
 有关这些概念实际运用的完整可运行示例，请查看[示例应用](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ClipboardOps)。
 :::
 
-可以通过 `TopLevel` 或 `Window` 实例来访问 `Clipboard`。有关访问 `TopLevel` 的更多详细信息，请访问[TopLevel](../toplevel)页面：
+可以通过 `TopLevel` 或 `Window` 实例来访问 `Clipboard`。有关访问 `TopLevel` 的更多详细信息，请访问[TopLevel](/docs/concepts/toplevel)页面：
 
 ```cs
 var clipboard = window.Clipboard;

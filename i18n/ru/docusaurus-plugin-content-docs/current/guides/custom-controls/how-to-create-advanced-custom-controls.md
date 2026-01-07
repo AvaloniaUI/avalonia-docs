@@ -60,7 +60,7 @@ As can be seen, readonly properties are stored as a field on the object. When re
 
 ### Attached Properties
 
-[Attached properties](../../concepts/attached-property) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
+[Attached properties](/docs/concepts/attached-property) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
 
 Here's how `Grid` defines its `Grid.Column` attached property:
 
@@ -147,7 +147,7 @@ Pros:
 * No additional object is allocated per-instance for the property
 * Property getter is a standard C# property getter
 * Property setter is a standard C# property setter that raises an event.
-* You can add [data validation](../../guides/development-guides/data-validation.md) support
+* You can add [data validation](/docs/guides/development-guides/data-validation.md) support
 
 Cons:
 
