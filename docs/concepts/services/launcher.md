@@ -7,7 +7,7 @@ title: Launcher
 
 The `Launcher` allows you to open file or a URI link in the default app associated with the specified argument.
 
-The `Launcher` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../toplevel) page:
+The `Launcher` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/concepts/toplevel) page:
 ```cs
 var launcher = TopLevel.GetTopLevel(control).Launcher;
 ```

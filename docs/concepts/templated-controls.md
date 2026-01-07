@@ -8,7 +8,7 @@ description: CONCEPTS
 
 
 
-If you want to provide a `Style` for your `TemplatedControl` in a separate file, remember to include this file in your Application via [`StyleInclude`](../basics/user-interface/styling/styles).
+If you want to provide a `Style` for your `TemplatedControl` in a separate file, remember to include this file in your Application via [`StyleInclude`](/docs/basics/user-interface/styling/styles).
 
 
 
