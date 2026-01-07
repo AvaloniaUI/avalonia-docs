@@ -53,9 +53,9 @@
   --ifm-navbar-padding-vertical: 0;
   --ifm-navbar-item-padding-vertical: 0;
 
-  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI emoji';
-  --ifm-font-family-monospace: 'SFMono-Regular', 'Roboto Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  // Font (Customer Portal uses Open Sans / Outfit)
+  --ifm-font-family-base: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
   --ifm-menu-link-sublist-icon: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwIDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik04Ljk5OTg4IDVMNC45OTk4OCAxTDAuOTk5ODc4IDUiIHN0cm9rZT0iIzAzMDYwQiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
 
@@ -66,46 +66,49 @@
 }
 
 html[data-theme='light'] {
-  --token-primary-bg-c: #fff;
-  --token-secondary-bg-c: #fff;
+  // Customer Portal light theme colors
+  --token-primary-bg-c: #f9fafb;
+  --token-secondary-bg-c: white;
 
-  --ifm-link-color: var(--c-blue-90);
-  //rgb value is c-blue-90
-  --ifm-link-hover-color: rgba(27, 109, 255, 0.8);
+  // Brand colors
+  --ifm-link-color: var(--color-brand-500);
+  --ifm-link-hover-color: var(--color-brand-600);
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
+  --ifm-background-color: var(--token-primary-bg-c);
 
-  --ifm-navbar-background-color: var(--token-primary-bg-c);
-  --ifm-navbar-shadow: 0 1px 0 0 var(--c-gray-0);
+  --ifm-navbar-background-color: var(--token-secondary-bg-c);
+  --ifm-navbar-shadow: 0 1px 0 0 var(--color-gray-200);
 
-  --ifm-heading-color: var(--c-carbon-100);
-  --ifm-secondary-heading-color: var(--c-carbon-300);
+  --ifm-heading-color: var(--color-gray-900);
+  --ifm-secondary-heading-color: var(--color-gray-700);
 
-  --ifm-code-background: var(--c-indigo-10);
-  --ifm-font-color-base: var(--c-carbon-90);
-  --ifm-info-color-bg: var(--c-carbon-90);
+  --ifm-code-background: var(--color-gray-100);
+  --ifm-font-color-base: var(--color-gray-700);
+  --ifm-info-color-bg: var(--color-gray-900);
 }
 
 html[data-theme='dark'] {
-  --token-primary-bg-c: #03060b;
-  --token-secondary-bg-c: #13171c;
+  // Customer Portal dark theme colors - dark navy background
+  --token-primary-bg-c: #101828;
+  --token-secondary-bg-c: #1d2939;
 
-  --ifm-link-color: var(--c-blue-70);
-  //rgb value is c-blue-70
-  --ifm-link-hover-color: rgba(77, 141, 255, 0.8);
+  // Brand colors (lighter for dark mode)
+  --ifm-link-color: var(--color-brand-400);
+  --ifm-link-hover-color: var(--color-brand-300);
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
+  --ifm-background-color: var(--token-primary-bg-c);
 
   --ifm-navbar-background-color: var(--token-primary-bg-c);
-  --ifm-navbar-shadow: 0 1px 0 0 var(--c-gray-90);
+  --ifm-navbar-shadow: 0 1px 0 0 #344054;
 
   --ifm-heading-color: #fff;
   --ifm-secondary-heading-color: #f6f6f6;
 
-  --ifm-font-color-base: var(--c-carbon-10);
-  --ifm-background-color: var(--token-primary-bg-c);
+  --ifm-font-color-base: #d0d5dd;
   --ifm-dropdown-background-color: var(--token-secondary-bg-c);
-  --ifm-info-color-bg: var(--c-carbon-10);
+  --ifm-info-color-bg: #d0d5dd;
 
   --ifm-menu-link-sublist-icon-filter: invert(100%);
 }

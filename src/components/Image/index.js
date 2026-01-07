@@ -15,8 +15,9 @@ const Image = ({
   style,
   ...rest
 }) => {
-  const { isDarkTheme } = useColorMode();
-  const src = isDarkTheme ? dark || light : light || dark;
+  const { colorMode } = useColorMode();
+  const isDark = colorMode === 'dark';
+  const src = isDark ? dark || light : light || dark;
 
   let resolvedMargin = margin;
   if (typeof margin === 'number') {

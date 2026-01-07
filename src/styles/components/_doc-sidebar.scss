@@ -1,36 +1,39 @@
 html[data-theme='light'] {
-  --sidebar-category-c: var(--c-gray-100);
-  --sidebar-border-c: var(--c-gray-0);
+  // Category headers (muted gray, uppercase)
+  --sidebar-category-c: var(--color-gray-500);
+  --sidebar-border-c: var(--color-gray-200);
 
-  --ifm-menu-color-background-active: var(--c-blue-0);
-  --ifm-menu-color: var(--c-indigo-80);
+  --ifm-menu-color-background-active: var(--color-brand-50);
+  --ifm-menu-color: var(--color-gray-700);
 
   // Customer Portal-style sidebar colors
-  --sidebar-item-bg-active: var(--c-blue-0);
-  --sidebar-item-text-active: var(--c-blue-90);
-  --sidebar-item-text-inactive: var(--c-carbon-70);
-  --sidebar-item-hover-bg: var(--c-gray-0);
-  --sidebar-item-icon-active: var(--c-blue-90);
-  --sidebar-item-icon-inactive: var(--c-gray-50);
+  --sidebar-item-bg-active: var(--color-brand-50);
+  --sidebar-item-text-active: var(--color-brand-500);
+  --sidebar-item-text-inactive: var(--color-gray-700);
+  --sidebar-item-hover-bg: var(--color-gray-100);
+  --sidebar-item-icon-active: var(--color-brand-500);
+  --sidebar-item-icon-inactive: var(--color-gray-500);
 }
 
 html[data-theme='dark'] {
-  --sidebar-category-c: var(--c-gray-0);
-  --sidebar-border-c: var(--c-gray-90);
+  // Category headers (lighter in dark mode)
+  --sidebar-category-c: var(--color-gray-400);
+  --sidebar-border-c: var(--color-gray-700);
 
-  --ifm-menu-color: var(--c-gray-20);
+  --ifm-menu-color: var(--color-gray-300);
 
   // Customer Portal-style sidebar colors (dark mode)
-  --sidebar-item-bg-active: rgba(27, 109, 255, 0.12);
-  --sidebar-item-text-active: var(--c-blue-70);
-  --sidebar-item-text-inactive: var(--c-gray-20);
+  --sidebar-item-bg-active: rgba(0, 125, 249, 0.12);
+  --sidebar-item-text-active: var(--color-brand-400);
+  --sidebar-item-text-inactive: var(--color-gray-300);
   --sidebar-item-hover-bg: rgba(255, 255, 255, 0.05);
-  --sidebar-item-icon-active: var(--c-blue-70);
-  --sidebar-item-icon-inactive: var(--c-gray-40);
+  --sidebar-item-icon-active: var(--color-brand-400);
+  --sidebar-item-icon-inactive: var(--color-gray-500);
 }
 
 :root {
-  --doc-sidebar-width: 18rem;
+  // Customer Portal sidebar is 249px wide
+  --doc-sidebar-width: 249px;
 
   --dropdown-icon-width: 0.625rem;
   --dropdown-icon-height: 0.375rem;
@@ -48,7 +51,7 @@ html[data-theme='dark'] {
 //overrides
 #__docusaurus {
   .theme-doc-sidebar-container {
-    background: var(--token-primary-bg-c);
+    background: var(--token-secondary-bg-c);
 
     position: sticky;
     top: 0;
@@ -196,10 +199,11 @@ html[data-theme='dark'] {
 
     margin-block-end: 0;
 
+    // Customer Portal style: chevron on the RIGHT
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
 
     color: var(--sidebar-item-text-inactive);
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
@@ -217,10 +221,9 @@ html[data-theme='dark'] {
       width: var(--dropdown-icon-width);
       height: var(--dropdown-icon-height);
 
-      margin-inline-end: var(--dropdown-icon-gap);
+      margin-inline-start: auto;
+      margin-inline-end: 0;
       margin-block-end: 0;
-
-      margin-inline-start: unset;
 
       transition: transform 0.2s ease-out;
     }
@@ -267,9 +270,10 @@ html[data-theme='dark'] {
         width: var(--dropdown-icon-width);
         height: var(--dropdown-icon-height);
 
-        margin-inline-end: var(--dropdown-icon-gap);
+        // Chevron on the right (Customer Portal style)
+        margin-inline-start: auto;
+        margin-inline-end: 0;
         margin-block-end: 0;
-        margin-inline-start: unset;
       }
     }
 

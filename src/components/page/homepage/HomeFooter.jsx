@@ -146,7 +146,7 @@ const Footer = () => {
                 {/* Bottom section - Copyright and Cookie Settings */}
                 <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200">
                     <p className="text-sm  text-darkblue dark:text-gray-200 mb-4 md:mb-0 font-sans">
-                        © 2025 AvaloniaUI OÜ
+                        © 2026 AvaloniaUI OÜ
                     </p>
                  
                 </div>

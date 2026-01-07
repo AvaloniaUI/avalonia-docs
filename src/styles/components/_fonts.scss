@@ -1,6 +1,31 @@
 // Font Imports and Definitions
 
-// Google Fonts
+// Saans Font (from Customer Portal)
+@font-face {
+  font-family: 'Saans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/saans/SaansRegular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Saans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/assets/fonts/saans/SaansMedium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Saans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/assets/fonts/saans/SaansSemiBold.woff2) format('woff2');
+}
+
+// Google Fonts (fallback)
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap');
 
