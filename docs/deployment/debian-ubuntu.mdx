@@ -2,6 +2,7 @@
 id: debian-ubuntu
 title: Debian / Ubuntu packaging
 ---
+import FileTree from '@site/src/components/global/FileTree';
 
 Avalonia Linux programs can be executed in most Linux distros by double-clicking the executable or by starting it from the terminal. Nevertheless, for a better user experience, it is recommended to have the program installed, so the user can start it via desktop shortcut, that exists in desktop environments such as GNOME and KDE, or via command-line, by having the program added to PATH.
 
@@ -15,31 +16,87 @@ In this tutorial, we will use the `dpkg-deb` tool to compile your `.deb` package
 
 Debian packages follow this basic structure:
 
-```sh
-./staging_folder/
-├── DEBIAN
-│   └── control # package control file
-└── usr
-    ├── bin
-    │   └── myprogram # starter script
-    ├── lib
-    │   └── myprogram
-    │       ├── libHarfBuzzSharp.so # Avalonia native library
-    │       ├── libSkiaSharp.so # Avalonia native library
-    │       ├── other_native_library_1.so
-    │       ├── myprogram_executable # main executable
-    │       ├── myprogram.dll 
-    │       ├── my_other_dll.dll 
-    │       ├── ... # all files from dotnet publish
-    └── share
-        ├── applications
-        │   └── MyProgram.desktop # desktop shortcut file
-        ├── icons
-        │   └── hicolor
-        │       ├── ... # other resolution icons (optional)
-        └── pixmaps
-            └── myprogram.png # main application icon
-```
+<FileTree data={[
+  {
+    name: 'staging_folder',
+    type: 'folder',
+    children: [
+      {
+        name: 'DEBIAN',
+        type: 'folder',
+        children: [
+          { name: 'control', type: 'file', comment: 'package control file' }
+        ]
+      },
+      {
+        name: 'usr',
+        type: 'folder',
+        children: [
+          {
+            name: 'bin',
+            type: 'folder',
+            children: [
+              { name: 'myprogram', type: 'file', comment: 'starter script' }
+            ]
+          },
+          {
+            name: 'lib',
+            type: 'folder',
+            children: [
+              {
+                name: 'myprogram',
+                type: 'folder',
+                children: [
+                  { name: 'libHarfBuzzSharp.so', type: 'file', comment: 'Avalonia native library' },
+                  { name: 'libSkiaSharp.so', type: 'file', comment: 'Avalonia native library' },
+                  { name: 'other_native_library_1.so', type: 'file' },
+                  { name: 'myprogram_executable', type: 'file', comment: 'main executable' },
+                  { name: 'myprogram.dll', type: 'file' },
+                  { name: 'my_other_dll.dll', type: 'file' },
+                  { name: '...', type: 'file', comment: 'all files from dotnet publish' }
+                ]
+              }
+            ]
+          },
+          {
+            name: 'share',
+            type: 'folder',
+            children: [
+              {
+                name: 'applications',
+                type: 'folder',
+                children: [
+                  { name: 'MyProgram.desktop', type: 'file', comment: 'desktop shortcut file' }
+                ]
+              },
+              {
+                name: 'icons',
+                type: 'folder',
+                children: [
+                  {
+                    name: 'hicolor',
+                    type: 'folder',
+                    children: [
+                      { name: '...', type: 'folder', comment: 'resolution icons (optional)' }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: 'pixmaps',
+                type: 'folder',
+                children: [
+                  { name: 'myprogram.png', type: 'file', comment: 'main application icon' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]} />
+
 
 Meaning of each folder:
 
@@ -138,34 +195,76 @@ Hicolor icons follow a folder structure like below.
 
 [This blog post](https://martin.hoppenheit.info/blog/2016/where-to-put-application-icons-on-linux/) advises us to put icons on both `hicolor` and `pixmaps` directories, according to [Debian Menu System docs](https://www.debian.org/doc/packaging-manuals/menu.html/ch3.html#s3.7) and [FreeDesktop docs](https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-0.11.html#install_icons).
 
-```
-├── icons
-│   └── hicolor
-│       ├── 128x128
-│       │   └── apps
-│       │       └── myprogram.png
-│       ├── 16x16
-│       │   └── apps
-│       │       └── myprogram.png
-│       ├── 256x256
-│       │   └── apps
-│       │       └── myprogram.png
-│       ├── 32x32
-│       │   └── apps
-│       │       └── myprogram.png
-│       ├── 48x48
-│       │   └── apps
-│       │       └── myprogram.png
-│       ├── 512x512
-│       │   └── apps
-│       │       └── myprogram.png
-│       ├── 64x64
-│       │   └── apps
-│       │       └── myprogram.png
-│       └── scalable
-│           └── apps
-│               └── myprogram.svg
-```
+<FileTree data={[
+  {
+    name: 'icons',
+    type: 'folder',
+    children: [
+      {
+        name: 'hicolor',
+        type: 'folder',
+        children: [
+          {
+            name: '128x128',
+            type: 'folder',
+            children: [
+              { name: 'apps', type: 'folder', children: [{ name: 'myprogram.png', type: 'file' }] }
+            ]
+          },
+          {
+            name: '16x16',
+            type: 'folder',
+            children: [
+              { name: 'apps', type: 'folder', children: [{ name: 'myprogram.png', type: 'file' }] }
+            ]
+          },
+          {
+            name: '256x256',
+            type: 'folder',
+            children: [
+              { name: 'apps', type: 'folder', children: [{ name: 'myprogram.png', type: 'file' }] }
+            ]
+          },
+          {
+            name: '32x32',
+            type: 'folder',
+            children: [
+              { name: 'apps', type: 'folder', children: [{ name: 'myprogram.png', type: 'file' }] }
+            ]
+          },
+          {
+            name: '48x48',
+            type: 'folder',
+            children: [
+              { name: 'apps', type: 'folder', children: [{ name: 'myprogram.png', type: 'file' }] }
+            ]
+          },
+          {
+            name: '512x512',
+            type: 'folder',
+            children: [
+              { name: 'apps', type: 'folder', children: [{ name: 'myprogram.png', type: 'file' }] }
+            ]
+          },
+          {
+            name: '64x64',
+            type: 'folder',
+            children: [
+              { name: 'apps', type: 'folder', children: [{ name: 'myprogram.png', type: 'file' }] }
+            ]
+          },
+          {
+            name: 'scalable',
+            type: 'folder',
+            children: [
+              { name: 'apps', type: 'folder', children: [{ name: 'myprogram.svg', type: 'file' }] }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]} />
 
 ### 6) Compile the `.deb` package
 
