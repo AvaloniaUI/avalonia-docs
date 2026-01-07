@@ -250,7 +250,7 @@ html[data-theme='dark'] {
       &:not(.navbar__link--active) {
         &.navbar__link {
           &:hover {
-            opacity: 0.8;
+            color: var(--ifm-link-color);
           }
         }
       }
