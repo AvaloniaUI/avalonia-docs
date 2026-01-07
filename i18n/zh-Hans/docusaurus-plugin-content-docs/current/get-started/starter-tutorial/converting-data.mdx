@@ -1,0 +1,131 @@
+---
+id: converting-data
+title: 转换数据
+description: 如何使用后置代码在点击按钮时执行响应。Avalonia 入门教程的第 6 部分（共 7 部分）。
+---
+
+# 转换数据
+
+要完成我们的温度转换器应用程序，我们需要赋予它接受数字输入并使用指定公式将其转换为不同数字的能力。
+
+## 命名您的控件
+
+为区分控件，您可以为它们分配名称。我们将为 `TextBox` 控件执行此操作。
+
+1. 如果应用程序正在运行，请停止它。
+2. 在文件 **MainWindow.axaml** 中，找到摄氏度文本框：`<TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0"/>`
+3. 将 `Name` 属性添加到 `<TextBox>` 标签中，如下所示：
+
+```xml
+<TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0" Name="Celsius"/>
+```
+
+4. 找到华氏度文本框：`<TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="0"/>`
+5. 将 `Name` 属性添加到 `<TextBox>` 标签中，如下所示：
+
+```xml
+<TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="0" Name="Fahrenheit"/>
+```
+
+## 获取输入值
+
+接下来，我们需要应用程序能够访问输入到 `Celsius` 文本框中的值。
+
+1. 在后置代码文件 **MainWindow.axaml.cs** 中，找到您[之前创建](/docs/get-started/starter-tutorial/establishing-events-and-responses)的 `Button_OnClick` 事件处理程序。
+2. 更改 `Debug` 语句以显示输入到 `Celsius` 文本框中的文本，如下所示：
+
+```cs
+Debug.WriteLine($"Click! Celsius={Celsius.Text}");
+```
+
+3. 再次运行应用程序，[如果您的 IDE 需要，请在调试模式下运行](/docs/get-started/starter-tutorial/establishing-events-and-responses)。
+4. 多次点击 **Calculate** 按钮。
+5. 更改 `Celsius` 文本框中的数字，再多次点击 **Calculate**。
+6. 检查调试输出。确认 `Celsius` 文本框的输入值被打印。
+
+## 实现转换公式
+
+最后一步是编程应用程序以应用将摄氏度值转换为华氏度的数学公式，然后在华氏度文本框中打印计算输出。
+
+如果您不熟悉摄氏度-华氏度转换公式，它是：
+
+> 华氏度 = 摄氏度 * (9/5) + 32
+
+以下是我们如何在 C# 后置代码中实现此逻辑。
+
+1. 在后置代码文件 **MainWindow.axaml.cs** 中，找到您[之前创建](/docs/get-started/starter-tutorial/establishing-events-and-responses)的 `Button_OnClick` 事件处理程序。
+2. 删除 `Debug` 语句。
+3. （可选）您也可以从文件顶部删除语句 `using System.Diagnostics;`。它不再需要了。
+4. 在 `Button_OnClick` 事件处理程序中，添加此代码以验证摄氏度输入是否数字：
+
+```cs
+if (double.TryParse(Celsius.Text, out double C))
+```
+
+5. 在 `if` 条件子句中，添加此代码以应用转换公式：
+
+```cs
+{
+    var F = C * (9d / 5d) + 32;
+```
+
+6. 添加此代码以将输出作为文本打印到华氏度文本框中，然后关闭条件子句：
+
+```cs
+    Fahrenheit.Text = F.ToString("0.0");
+}
+```
+
+7. 添加 `else` 条件子句，以便在输入无效的情况下将文本框重置为 0：
+
+```cs
+else
+{
+    Celsius.Text = "0";
+    Fahrenheit.Text = "0";
+}
+```
+
+8. 您完成的事件处理程序应如下所示：
+
+```cs
+private void Button_OnClick(object? sender, RoutedEventArgs e)
+{
+    if (double.TryParse(Celsius.Text, out double C))
+    {
+        var F = C * (9d / 5d) + 32;
+        Fahrenheit.Text = F.ToString("0.0");
+    }
+    else
+    {
+        Celsius.Text = "0";
+        Fahrenheit.Text = "0";
+    }
+}
+```
+
+## 检查成品
+
+1. 运行您的 **GetStartedApp**。
+2. 将以下数字输入到摄氏度框中，然后点击 **Calculate**。确认应用程序返回正确的华氏度值：
+
+| **摄氏度** | **华氏度** |
+| --- | --- |
+| -10 | 14.0 |
+| 0 | 32.0 |
+| 10 | 50.0 |
+| 21 | 69.8 |
+| 32.0 | 89.6 |
+
+3. 在华氏度框中输入内容而不更改摄氏度框。确认应用程序将华氏度框中的文本恢复为给定摄氏度值的公式输出。
+4. 在摄氏度框中输入 "abc"。确认应用程序将两个文本框都重置为 0。
+
+:::note
+应用程序可以选择在华氏度框中输入数字，但不会将它们转换为摄氏度，这似乎很奇怪吗？别担心——我们将在接下来的练习中使该框变为只读。
+:::
+
+恭喜！您已使用 Avalonia 创建了一个温度转换器应用程序。更重要的是，您现在已经在 Avalonia 框架的基础知识方面打下了坚实的基础。
+
+您现在可以开始开发自己的应用程序了。
+
+或者，要通过三个简短的练习测试您的知识，请继续阅读本教程的最后一页。

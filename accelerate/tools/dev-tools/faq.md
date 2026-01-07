@@ -34,28 +34,18 @@ Unlike the legacy Avalonia DevTools, this package is not shipped with heavy depe
 
 But it is still advised to exclude this package on production builds for security and bundle size reasons.
 
-To do that, `Condition="'$(Configuration)' == 'Debug'"'` can be used. But modern option with IncludeAssets/PrivateAssets is recommended to keep .NET SDK restore process stable with packages lock files:
+To do that, `Condition="'$(Configuration)' == 'Debug'"'` can be used:
 ```xml
-<PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="">
-  <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
-  <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
-</PackageReference>
+<PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="" Condition="'$(Configuration)' == 'Debug'" />
 ```
 
-Combined with `#if DEBUG` for the `this.AttachDeveloperTools()`.
-
-## Is AvaloniaUI Developer Tools open source?
-
-No, it's not.
+Combined with `#if DEBUG` for the `this.AttachDeveloperTools()` or `.WithDeveloperTools()`.
 
 ## Are arm64 and x86 builds of the tool available or planned?
 
-Only **x64** builds for Windows, macOS and Linux are available at the moment. Where **arm64** is supported via platform emulation.
-
-We have plans to eventually release native **arm64** builds.
-
-No **x86** builds are available nor planned.
+Only **x64** builds for Windows and Linux are available at the moment.
+macOS build is an universal bundle with both **x64** and **arm64** architectures.
 
 ## I have another question. Where can I ask it?
 
-Feel free to leave your questions or feedback on [AvaloniaUI/AvaloniaUI.DeveloperTools](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/ ) repository.
+Feel free to leave your questions or feedback on [Community Hub](https://avaloniaui.community/dev-tools-hvq32ub8) and [Avalonia Support](https://support.avaloniaui.net/).

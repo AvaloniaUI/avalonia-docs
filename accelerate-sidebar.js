@@ -124,6 +124,7 @@ const sidebars = {
         'components/treedatagrid/selection',
         'components/treedatagrid/expanding-collapsing',
         'components/treedatagrid/sorting',
+        'components/treedatagrid/filtering',
         'components/treedatagrid/faq',
       ]
     },    
@@ -153,6 +154,7 @@ const sidebars = {
         'components/virtual-keyboard/getting-started',
         'components/virtual-keyboard/virtual-keyboard-scope',
         'components/virtual-keyboard/virtual-keyboard',
+        'components/virtual-keyboard/styling',
         'components/virtual-keyboard/input-method-identifiers',
       ]
     },
@@ -167,7 +169,8 @@ const sidebars = {
           'label': 'Advanced Markdown',
           'items': [
             'components/markdown/styling',
-            'components/markdown/custom-image-loader'
+            'components/markdown/custom-image-loader',
+            'components/markdown/code-highlighter'
           ]
         }, 
       ]

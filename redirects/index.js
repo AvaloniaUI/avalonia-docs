@@ -3,12 +3,14 @@
 
 import {from10to11} from './migrate-010-to-110.js';
 import {music_store_redirects} from './music-store-redirects.js';
+import {get_started_redirects} from './get-started-redirects.js';
 
 const config = {
   redirects: [
 
     ...from10to11.redirects,
     ...music_store_redirects.redirects,
+    ...get_started_redirects.redirects,
 
     // 'contro' typo
     { from: '/docs/next/basics/user-interface/controls/creating-controls/choosing-a-custom-contro-type', to: '/docs/basics/user-interface/controls/creating-controls/choosing-a-custom-control-type' },
@@ -25,6 +27,8 @@ const config = {
     { from: '/accelerate/tools/parcel/guies/apple-signing', to: '/accelerate/tools/parcel/apple/notary' },
     // Redirect release notes to Releases page on GitHub
     { from: '/docs/stay-up-to-date/release-notes', to: 'https://github.com/AvaloniaUI/Avalonia/releases' },
+    // Exception HelpLink /src/Markup/Avalonia.Markup.Xaml/XamlIl/Runtime/XamlIlRuntimeHelpers.cs#L354
+    { from: '/guides/basics/introduction-to-xaml', to: '/docs/basics/user-interface/introduction-to-xaml' },
   ],
   createRedirects(existingPath) {
     const redirects = from10to11.createRedirects(existingPath) || [];

@@ -8,35 +8,30 @@ const sidebars = {
     'overview/what-is-avalonia',
     'overview/supported-platforms',
     {
-      type: 'category',
-      label: 'Get Started',
-      collapsed: false,
-      link: {
-        type: 'doc',
-        id: 'get-started/index',
+      'type': 'category',
+      'label': 'Getting started',
+      'link': {
+        'type': 'doc',
+        'id': 'get-started/index',
       },
       'items': [
-        'get-started/install',
-        'get-started/set-up-an-editor',
         {
           'type': 'category',
-          'label': 'Test Drive',
+          'label': 'Starter tutorial',
           'link' : {
             'type' : 'doc',
-            'id': 'get-started/test-drive/index'
+            'id': 'get-started/starter-tutorial/index'
           },
           'items': [
-            'get-started/test-drive/introduction',
-            'get-started/test-drive/create-a-project',
-            'get-started/test-drive/main-window',
-            'get-started/test-drive/add-a-control',
-            'get-started/test-drive/add-some-layout',
-            'get-started/test-drive/input-controls',
-            'get-started/test-drive/the-design-preview',
-            'get-started/test-drive/respond-to-an-event',
-            'get-started/test-drive/code-with-controls',
+            'get-started/starter-tutorial/adding-a-control',
+            'get-started/starter-tutorial/adding-some-layout',
+            'get-started/starter-tutorial/customizing-the-avalonia-window',
+            'get-started/starter-tutorial/establishing-events-and-responses',
+            'get-started/starter-tutorial/converting-data',
+            'get-started/starter-tutorial/exercises',
           ],
         },
+        'get-started/xaml-previewers',
         {
           'type': 'category',
           'label': 'Coming from WPF?',
@@ -89,6 +84,10 @@ const sidebars = {
       'items': [
         'tutorials/samples',
         'tutorials/groupbox',
+        {'type': 'link',
+         'label': 'Starter tutorial',
+         'href': 'https://docs.avaloniaui.net/docs/get-started/starter-tutorial',
+        },
         {
           'type': 'link',
           'label': 'ToDo List App',
@@ -462,7 +461,17 @@ const sidebars = {
             'concepts/the-mvvm-pattern/avalonia-ui-and-mvvm',
           ],
         },
-        'concepts/markupextensions',
+        {
+          'type': 'category',
+          'label': 'Markup extensions',
+          'link': {
+            'type': 'doc',
+            'id': 'concepts/markupextensions/index',
+          },
+          'items': [
+            'concepts/markupextensions/options-markup-extensions',
+          ],
+        },
         {
           'type': 'category',
           'label': 'ReactiveUI',

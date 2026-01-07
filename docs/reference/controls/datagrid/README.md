@@ -48,7 +48,7 @@ Note you must always install the data grid version that matches the _Avalonia UI
 
 You must reference the `DataGrid` themes to include the additional styles that the `DataGrid` uses. You can do this by adding a `<StyleInclude>` element to the application (`App.axaml` file).
 
-For example:
+For example (In case you use `FluentTheme`):
 
 ```xml
 <Application.Styles>
@@ -56,6 +56,11 @@ For example:
     <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
 </Application.Styles>
 ```
+
+:::warning
+The DataGrid-styles need to match the overall theme you use, otherwise you will get conflicts and unresolved resources. For third party themes, please lookup their docs and samples.
+:::
+
 
 ## Useful Properties
 

@@ -177,14 +177,14 @@ const redirects = [
     },
     {
         "from": "/docs/getting-started/ide-support",
-        "to": "/docs/get-started/set-up-an-editor"
+        "to": "/docs/get-started/"
     },
     {
         "from": [
             "/docs/getting-started/ide-support/jetbrains-rider-setup",
             "/docs/getting-started/jetbrains-rider-setup"
         ],
-        "to": "/docs/reference/jetbrains-rider-ide/jetbrains-rider-setup"
+        "to": "/docs/get-started/"
     },
     {
         "from": "/docs/getting-started/logging-errors-and-warnings",
@@ -192,7 +192,7 @@ const redirects = [
     },
     {
         "from": "/docs/getting-started/programming-with-avalonia/",
-        "to": "/docs/get-started/test-drive/introduction"
+        "to": "/docs/get-started/"
     },
     {
         "from": "/docs/getting-started/programming-with-avalonia/controls-and-layouts",

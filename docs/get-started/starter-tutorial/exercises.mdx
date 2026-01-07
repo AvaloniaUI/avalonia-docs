@@ -1,0 +1,115 @@
+---
+id: exercises
+title: Exercises
+description: Test your knowledge of Avalonia on three coding exercises. Part 7 of 7 the Avalonia starter tutorial.
+---
+
+# Starter exercises
+
+Now that you have built a temperature converter app, try these three exercises to test your understanding of Avalonia.
+
+## Exercise 1: Change an existing attribute
+
+**Challenge level: ★**
+
+Make the gridlines invisible in **GetStartedApp**.
+
+<details>
+	<summary>Hint</summary>
+
+	You specified `<Grid>` in MainWindow.axaml.
+</details>
+
+<details>
+	<summary>Solution</summary>
+	
+	In **MainWindow.axaml**, locate the `<Grid>` opening tag. Change the `ShowGridLines` attribute to `False`.
+
+	```xml
+	<Grid ShowGridLines="False" Margin="5" 
+      ColumnDefinitions="120, 100"
+      RowDefinitions="Auto, Auto, Auto">
+    ```
+</details>
+
+## Exercise 2: Add a new attribute
+
+**Challenge level: ★★**
+
+Make it impossible for a user to input text into the Fahrenheit text box in **GetStartedApp**.
+
+<details>
+	<summary>Hint (1st)</summary>
+
+	Check the [API docs](https://api-docs.avaloniaui.net/) for more information on the `TextBox` control.
+</details>
+
+<details>
+	<summary>Hint (2nd)</summary>
+
+	Under the [API reference for `TextBox`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBox), you’ll find the attribute `IsReadOnly`.
+</details>
+
+<details>
+	<summary>Solution</summary>
+
+	In **MainWindow.axaml**, locate the `<TextBox>` tag for the Fahrenheit box. Add the `IsReadOnly` attribute, and set it to `True`.
+
+	```xml
+	<TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="0" Name="Fahrenheit" IsReadOnly="True"/>
+	```
+</details>
+
+## Exercise 3:  Program a new event response
+
+**Challenge level: ★★★**
+
+Make **GetStartedApp** calculate the temperature conversion as the user types.
+
+<details>
+	<summary>Hint (1st)</summary>
+
+	Check the [API docs](https://api-docs.avaloniaui.net/) for more information on the `TextBox` control.
+</details>
+
+<details>
+	<summary>Hint (2nd)</summary>
+
+	Under the [API reference for `TextBox`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBox), you’ll find the event `TextChanged`.
+</details>
+
+<details>
+	<summary>Hint (3rd)</summary>
+
+	Your event handler is defined in the C# code-behind MainWindow.axaml.cs. It is also referenced by the XAML file MainWindow.axaml.
+</details>
+
+<details>
+	<summary>Solution</summary>
+
+	1. In **MainWindow.axaml**, locate the `<TextBox>` tag for the Celsius box. Add the `TextChanged` event, and give the event a name, e.g. `Celsius_TextChanged`.
+
+	```xml
+	<TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0" TextChanged="Celsius_TextChanged" Name="Celsius"/>
+	```
+
+	2. In **MainWindow.axaml**, delete the entire line starting `<Button>`. It is no longer needed.
+
+    ~~`<Button HorizontalAlignment="Center" Click="Button_OnClick">Calculate</Button>`~~
+
+    3. In **MainWindow.axaml.cs**, locate the event handler line starting `private void`. Change the event name from `Button_OnClick` to whatever you named it in the XAML file, e.g. `Celsius_TextChanged`.
+
+    ```csharp
+    private void Celsius_TextChanged(object? sender, RoutedEventArgs e)
+    ```
+
+    4. Run the app to confirm that the value in the Fahrenheit box changes as you type in the Celsius box.
+</details>
+
+Congratulations! You have completed this starter tutorial for Avalonia!
+
+## Further reading
+
+[Controls reference](/docs/reference/controls)
+
+[API documentation](https://api-docs.avaloniaui.net/)

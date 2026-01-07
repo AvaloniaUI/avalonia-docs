@@ -3,7 +3,17 @@ description: CONCEPTS
 ---
 # 未处理的异常
 
-_Avalonia UI_ 不提供任何机制来全局处理异常并标记为已处理。原因是无法确定异常是否已被正确处理，因此应用程序可能处于无效状态。相反，强烈建议在应用程序内部处理异常。尽管如此，记录任何未处理的异常以供进一步支持和调试仍然是一个好主意。
+Avalonia offer `Dispatcher.UIThread.UnhandledException` and `Dispatcher.UIThread.UnhandledExceptionFilter`. These APIs allow you to observe and optionally mark UI-thread exceptions as handled. However, this should be used with care: marking an exception as handled does not guarantee that the application can safely continue running. For this reason, it is still strongly recommended to catch and recover from exceptions locally when your application can reliably do so, and to use the global handlers primarily for logging, reporting, and last-resort mitigation.
+
+Example:
+
+```csharp
+Dispatcher.UIThread.UnhandledException += (s, e) =>
+{
+    Console.WriteLine($"Unhandled: {e.Exception}");
+    // e.Handled = true; // Optional, use carefully
+};
+```
 
 ## 日志记录
 
