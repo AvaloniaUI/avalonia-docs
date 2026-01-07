@@ -90,8 +90,9 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
   // Customer Portal dark theme colors - dark navy background
+  // Both sidebar and content use gray-900, border provides separation
   --token-primary-bg-c: #101828;
-  --token-secondary-bg-c: #1d2939;
+  --token-secondary-bg-c: #101828;
 
   // Brand colors (lighter for dark mode)
   --ifm-link-color: var(--color-brand-400);
@@ -101,13 +102,14 @@ html[data-theme='dark'] {
   --ifm-background-color: var(--token-primary-bg-c);
 
   --ifm-navbar-background-color: var(--token-primary-bg-c);
-  --ifm-navbar-shadow: 0 1px 0 0 #344054;
+  // Customer Portal uses border-gray-800 (#1d2939)
+  --ifm-navbar-shadow: 0 1px 0 0 #1d2939;
 
   --ifm-heading-color: #fff;
   --ifm-secondary-heading-color: #f6f6f6;
 
   --ifm-font-color-base: #d0d5dd;
-  --ifm-dropdown-background-color: var(--token-secondary-bg-c);
+  --ifm-dropdown-background-color: #1d2939;
   --ifm-info-color-bg: #d0d5dd;
 
   --ifm-menu-link-sublist-icon-filter: invert(100%);

@@ -1,13 +1,15 @@
 html[data-theme='light'] {
-  --ifm-tabs-color: var(--c-indigo-90);
-  --ifm-tabs-color-active: var(--c-carbon-100);
-  --tabs-border-c: var(--c-indigo-40);
+  // Customer Portal style tabs
+  --ifm-tabs-color: var(--color-gray-700);
+  --ifm-tabs-color-active: #fff;
+  --tabs-border-c: var(--color-gray-300);
 }
 
 html[data-theme='dark'] {
-  --ifm-tabs-color: #fff;
+  // Customer Portal dark mode tabs
+  --ifm-tabs-color: var(--color-gray-300);
   --ifm-tabs-color-active: #fff;
-  --tabs-border-c: #fff;
+  --tabs-border-c: var(--color-gray-600);
 }
 
 :root {

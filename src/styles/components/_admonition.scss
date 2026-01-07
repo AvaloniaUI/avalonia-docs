@@ -1,49 +1,52 @@
 html[data-theme='light'] {
-  --admonition-note-c-bg: var(--c-yellow-10);
-  --admonition-important-c-bg: var(--c-purple-0);
-  --admonition-info-c-bg: var(--c-blue-0);
-  --admonition-tip-c-bg: var(--c-green-10);
-  --admonition-warning-c-bg: var(--c-orange-10);
-  --admonition-danger-c-bg: var(--c-red-0);
+  // Customer Portal style admonition backgrounds
+  --admonition-note-c-bg: var(--color-warning-50);
+  --admonition-important-c-bg: var(--color-brand-50);
+  --admonition-info-c-bg: var(--color-brand-50);
+  --admonition-tip-c-bg: var(--color-success-50);
+  --admonition-warning-c-bg: var(--color-orange-50);
+  --admonition-danger-c-bg: var(--color-error-50);
 
-  --admonition-code-note-c-bg: var(--c-yellow-30);
-  --admonition-code-important-c-bg: var(--c-purple-10);
-  --admonition-code-info-c-bg: var(--c-blue-10);
-  --admonition-code-tip-c-bg: var(--c-green-20);
-  --admonition-code-warning-c-bg: var(--c-orange-20);
-  --admonition-code-danger-c-bg: var(--c-red-10);
+  --admonition-code-note-c-bg: var(--color-warning-100);
+  --admonition-code-important-c-bg: var(--color-brand-100);
+  --admonition-code-info-c-bg: var(--color-brand-100);
+  --admonition-code-tip-c-bg: var(--color-success-100);
+  --admonition-code-warning-c-bg: var(--color-orange-100);
+  --admonition-code-danger-c-bg: var(--color-error-100);
 }
 
 html[data-theme='dark'] {
-  --admonition-note-c-bg: #241800;
-  --admonition-important-c-bg: #0d0024;
-  --admonition-info-c-bg: #000d24;
-  --admonition-tip-c-bg: #00240a;
-  --admonition-warning-c-bg: #240b00;
-  --admonition-danger-c-bg: #240002;
+  // Customer Portal style dark mode admonitions
+  --admonition-note-c-bg: rgba(247, 144, 9, 0.1);
+  --admonition-important-c-bg: rgba(0, 125, 249, 0.1);
+  --admonition-info-c-bg: rgba(0, 125, 249, 0.1);
+  --admonition-tip-c-bg: rgba(18, 183, 106, 0.1);
+  --admonition-warning-c-bg: rgba(251, 101, 20, 0.1);
+  --admonition-danger-c-bg: rgba(240, 68, 56, 0.1);
 
-  --admonition-code-note-c-bg: #3d2900;
-  --admonition-code-important-c-bg: #16003d;
-  --admonition-code-info-c-bg: #00163d;
-  --admonition-code-tip-c-bg: #003d11;
-  --admonition-code-warning-c-bg: #3d1200;
-  --admonition-code-danger-c-bg: #3d0003;
+  --admonition-code-note-c-bg: rgba(247, 144, 9, 0.15);
+  --admonition-code-important-c-bg: rgba(0, 125, 249, 0.15);
+  --admonition-code-info-c-bg: rgba(0, 125, 249, 0.15);
+  --admonition-code-tip-c-bg: rgba(18, 183, 106, 0.15);
+  --admonition-code-warning-c-bg: rgba(251, 101, 20, 0.15);
+  --admonition-code-danger-c-bg: rgba(240, 68, 56, 0.15);
 }
 
 :root {
-  --admonition-bar-note-c-bg: var(--c-yellow-80);
-  --admonition-bar-important-c-bg: var(--c-purple-80);
-  --admonition-bar-info-c-bg: var(--c-blue-80);
-  --admonition-bar-tip-c-bg: var(--c-green-80);
-  --admonition-bar-warning-c-bg: var(--c-orange-80);
-  --admonition-bar-danger-c-bg: var(--c-red-60);
+  // Customer Portal style admonition bars
+  --admonition-bar-note-c-bg: var(--color-warning-500);
+  --admonition-bar-important-c-bg: var(--color-brand-500);
+  --admonition-bar-info-c-bg: var(--color-brand-500);
+  --admonition-bar-tip-c-bg: var(--color-success-500);
+  --admonition-bar-warning-c-bg: var(--color-orange-500);
+  --admonition-bar-danger-c-bg: var(--color-error-500);
 
-  --admonition-link-note-c: var(--c-yellow-90);
-  --admonition-link-important-c: var(--c-purple-90);
-  --admonition-link-info-c: var(--c-blue-90);
-  --admonition-link-tip-c: var(--c-green-90);
-  --admonition-link-warning-c: var(--c-orange-90);
-  --admonition-link-danger-c: var(--c-red-90);
+  --admonition-link-note-c: var(--color-warning-700);
+  --admonition-link-important-c: var(--color-brand-700);
+  --admonition-link-info-c: var(--color-brand-700);
+  --admonition-link-tip-c: var(--color-success-700);
+  --admonition-link-warning-c: var(--color-orange-700);
+  --admonition-link-danger-c: var(--color-error-700);
 }
 
 .theme-admonition {

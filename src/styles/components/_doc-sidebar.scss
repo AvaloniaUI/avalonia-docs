@@ -18,7 +18,8 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
   // Category headers (lighter in dark mode)
   --sidebar-category-c: var(--color-gray-400);
-  --sidebar-border-c: var(--color-gray-700);
+  // Customer Portal uses border-gray-800 (#1d2939) in dark mode
+  --sidebar-border-c: #1d2939;
 
   --ifm-menu-color: var(--color-gray-300);
 
@@ -32,8 +33,8 @@ html[data-theme='dark'] {
 }
 
 :root {
-  // Customer Portal sidebar is 249px wide
-  --doc-sidebar-width: 249px;
+  // Customer Portal sidebar is 290px expanded (matching w-[290px])
+  --doc-sidebar-width: 290px;
 
   --dropdown-icon-width: 0.625rem;
   --dropdown-icon-height: 0.375rem;
@@ -42,6 +43,7 @@ html[data-theme='dark'] {
   --ifm-menu-link-padding-vertical: 0.5rem;
   --ifm-menu-color-active: var(--ifm-link-color);
 
+  // Customer Portal uses px-5 (20px = 1.25rem)
   --sidebar-spacing-horizontal: 1.25rem;
 
   // The variable aims to style the collapsible menu items on the sidebar.

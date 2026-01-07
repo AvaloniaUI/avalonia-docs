@@ -1,11 +1,13 @@
 html[data-theme='light'] {
-  --toc-separator-c: var(--c-indigo-20);
-  --ifm-toc-link-color: var(--c-indigo-80);
+  // Customer Portal style colors
+  --toc-separator-c: var(--color-gray-200);
+  --ifm-toc-link-color: var(--color-gray-700);
 }
 
 html[data-theme='dark'] {
-  --toc-separator-c: var(--c-carbon-90);
-  --ifm-toc-link-color: var(--c-carbon-0);
+  // Customer Portal dark mode colors
+  --toc-separator-c: var(--color-gray-700);
+  --ifm-toc-link-color: var(--color-gray-300);
 }
 
 :root {
@@ -42,7 +44,8 @@ html[data-theme='dark'] {
       line-height: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--c-indigo-60);
+      // Customer Portal style muted heading
+      color: var(--color-gray-500);
     }
 
     .table-of-contents {

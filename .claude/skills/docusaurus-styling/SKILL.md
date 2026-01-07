@@ -3,8 +3,6 @@ name: docusaurus-styling
 description: Style Docusaurus sites to match Avalonia Customer Portal theme using TailwindCSS, CSS variables, and component swizzling. Use when user requests Docusaurus styling, theming, visual customization, or component modifications. Ensures unified brand experience across documentation and portal.
 ---
 
-# Docusaurus Styling with Customer Portal Theme Matching
-
 ## Overview
 
 This skill provides comprehensive guidance for styling Docusaurus sites to match the Avalonia Customer Portal theme. The primary objective is to ensure visual and behavioral consistency between the Docusaurus documentation site and the Customer Portal, making users feel they're navigating a single, unified system.
@@ -25,8 +23,8 @@ This skill provides comprehensive guidance for styling Docusaurus sites to match
 
 ### 3. Technology Stack
 - Customer Portal uses **TailwindCSS** for styling
-- Docusaurus uses React and supports multiple styling approaches
-- Preference order: CSS Variables → TailwindCSS utilities → CSS Modules → Swizzling
+- Docusaurus uses Infima for styling, but when this isn't yielding the results we seek, we can use more advanced options. 
+  - Preference order: CSS Variables → TailwindCSS utilities → CSS Modules → Swizzling
 
 ## Customer Portal Structure Reference
 
@@ -329,21 +327,8 @@ Then map to Docusaurus:
 }
 ```
 
-### Pattern 2: Reusing UI Components
-```jsx
-// Create a shared components directory
-// src/components/shared/
 
-// Import and re-export Customer Portal components
-export { Button } from '@site/../../CustomerPortal/.../button';
-export { Card } from '@site/../../CustomerPortal/.../card';
-// etc.
-
-// Use throughout Docusaurus:
-import { Button, Card } from '@site/src/components/shared';
-```
-
-### Pattern 3: Matching Layout Structure
+### Pattern 2: Matching Layout Structure
 ```jsx
 // Swizzle DocPage or similar
 // Match Customer Portal's layout grid/flex structure
