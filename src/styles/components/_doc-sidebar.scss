@@ -4,6 +4,14 @@ html[data-theme='light'] {
 
   --ifm-menu-color-background-active: var(--c-blue-0);
   --ifm-menu-color: var(--c-indigo-80);
+
+  // Customer Portal-style sidebar colors
+  --sidebar-item-bg-active: var(--c-blue-0);
+  --sidebar-item-text-active: var(--c-blue-90);
+  --sidebar-item-text-inactive: var(--c-carbon-70);
+  --sidebar-item-hover-bg: var(--c-gray-0);
+  --sidebar-item-icon-active: var(--c-blue-90);
+  --sidebar-item-icon-inactive: var(--c-gray-50);
 }
 
 html[data-theme='dark'] {
@@ -11,19 +19,27 @@ html[data-theme='dark'] {
   --sidebar-border-c: var(--c-gray-90);
 
   --ifm-menu-color: var(--c-gray-20);
+
+  // Customer Portal-style sidebar colors (dark mode)
+  --sidebar-item-bg-active: rgba(27, 109, 255, 0.12);
+  --sidebar-item-text-active: var(--c-blue-70);
+  --sidebar-item-text-inactive: var(--c-gray-20);
+  --sidebar-item-hover-bg: rgba(255, 255, 255, 0.05);
+  --sidebar-item-icon-active: var(--c-blue-70);
+  --sidebar-item-icon-inactive: var(--c-gray-40);
 }
 
 :root {
-  --doc-sidebar-width: 17.5rem;
+  --doc-sidebar-width: 18rem;
 
   --dropdown-icon-width: 0.625rem;
   --dropdown-icon-height: 0.375rem;
-  --dropdown-icon-gap: 0.688rem;
+  --dropdown-icon-gap: 0.5rem;
 
   --ifm-menu-link-padding-vertical: 0.5rem;
   --ifm-menu-color-active: var(--ifm-link-color);
 
-  --sidebar-spacing-horizontal: 1.5rem;
+  --sidebar-spacing-horizontal: 1.25rem;
 
   // The variable aims to style the collapsible menu items on the sidebar.
   --ifm-menu-color-background-hover: transparent;
@@ -83,20 +99,32 @@ html[data-theme='dark'] {
   }
 
     .menu__list {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.125rem;
     transition: height 0.35s cubic-bezier(0.36, 0.66, 0.04, 1) 25ms !important;
     will-change: initial !important;
 
     margin-top: 0;
 
     .menu__list {
+      margin-top: 0.25rem;
+      margin-left: 0.75rem;
+      padding-left: 0.75rem;
+      border-left: 1px solid var(--sidebar-border-c);
+
       .menu__link--sublist {
-        margin-inline-start: calc(-1 * (var(--dropdown-icon-width) + var(--dropdown-icon-gap)));
+        margin-inline-start: 0;
 
         &::after {
           // The chevron icon will have less opacity when it's not on the first level.
           opacity: 0.6;
         }
+      }
+
+      .menu__link {
+        // Nested items have slightly smaller padding
+        padding: 0.375rem 0.75rem;
       }
     }
 
@@ -107,7 +135,7 @@ html[data-theme='dark'] {
 
       .menu__list {
         .menu__link {
-          padding-inline-start: calc(var(--dropdown-icon-width) + var(--dropdown-icon-gap));
+          padding-inline-start: 0.75rem;
         }
       }
 
@@ -128,32 +156,43 @@ html[data-theme='dark'] {
 
   .menu__link {
     font-weight: 500;
-    font-size: 0.813rem;
-    line-height: 16px;
-    /* identical to box height */
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 
     display: flex;
     align-items: center;
+    gap: 0.75rem;
     letter-spacing: -0.01em;
 
-    transition: opacity 0.2s ease-out;
+    // Customer Portal-style: rounded with padding
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+
+    color: var(--sidebar-item-text-inactive);
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
 
     &:not(.menu__link--active:not(.menu__link--sublist)) {
-      background: initial;
+      background: transparent;
     }
 
     &:not(.menu__link--active):not(.menu__link--sublist) {
-      &:hover,
-      &:active,
-      &:focus {
-        opacity: 0.7;
+      &:hover {
+        background-color: var(--sidebar-item-hover-bg);
+        color: var(--sidebar-item-text-inactive);
       }
+    }
+
+    // Active state styling (Customer Portal style)
+    &--active:not(.menu__link--sublist) {
+      background-color: var(--sidebar-item-bg-active);
+      color: var(--sidebar-item-text-active);
+      font-weight: 500;
     }
   }
 
   .menu__link--sublist {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
 
     margin-block-end: 0;
 
@@ -161,7 +200,14 @@ html[data-theme='dark'] {
     align-items: center;
     flex-direction: row-reverse;
     justify-content: flex-end;
-  
+
+    color: var(--sidebar-item-text-inactive);
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+    &:hover {
+      background-color: var(--sidebar-item-hover-bg);
+    }
+
     &::after {
       background: var(--ifm-menu-link-sublist-icon) center / var(--dropdown-icon-width) var(--dropdown-icon-height);
       background-repeat: no-repeat;
@@ -175,6 +221,13 @@ html[data-theme='dark'] {
       margin-block-end: 0;
 
       margin-inline-start: unset;
+
+      transition: transform 0.2s ease-out;
+    }
+
+    // Expanded state - rotate chevron
+    &[aria-expanded="true"]::after {
+      transform: rotate(180deg);
     }
   }
 
@@ -182,36 +235,42 @@ html[data-theme='dark'] {
     & > .menu__list-item-collapsible {
       .menu__link {
         color: var(--sidebar-category-c);
-  
+
         font-weight: 600;
-        font-size: 0.938rem;
-        line-height: 100%;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 0.25rem;
       }
     }
-  }
 
-    .theme-doc-sidebar-item-category-level-1 {
     /* Level 1 category labels, with or without a link */
     .menu__link--sublist {
       color: var(--sidebar-category-c);
       font-weight: 600;
-      font-size: 0.938rem;
-      line-height: 100%;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+
       &::after {
-      content: "";
-      background: var(--ifm-menu-link-sublist-icon)
-        center / var(--dropdown-icon-width) var(--dropdown-icon-height)
-        no-repeat;
+        content: "";
+        background: var(--ifm-menu-link-sublist-icon)
+          center / var(--dropdown-icon-width) var(--dropdown-icon-height)
+          no-repeat;
 
-      min-width: auto;
+        min-width: auto;
 
-      width: var(--dropdown-icon-width);
-      height: var(--dropdown-icon-height);
+        width: var(--dropdown-icon-width);
+        height: var(--dropdown-icon-height);
 
-      margin-inline-end: var(--dropdown-icon-gap);
-      margin-block-end: 0;
-      margin-inline-start: unset;
-    }
+        margin-inline-end: var(--dropdown-icon-gap);
+        margin-block-end: 0;
+        margin-inline-start: unset;
+      }
     }
 
     /* When the level 1 category is also a link and is active,
