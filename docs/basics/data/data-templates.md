@@ -36,4 +36,4 @@ Data Templates can be customized and tailored to specific scenarios. You can inc
 
 ## Further Reading
 
-For more information see the Deep Dive into to [data templates](../../concepts/templates).
+For more information see the Deep Dive into to [data templates](/docs/concepts/templates).

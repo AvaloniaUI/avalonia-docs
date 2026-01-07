@@ -10,7 +10,7 @@ import UpdateSourceTriggerScreenshot from '/img/basics/data-binding/data-binding
 
 Avalonia supports creating data bindings in XAML and code. Data bindings in XAML are typically created with the 
 `Binding` `MarkupExtension` described by this document. To create data bindings in code, 
-see [here](../../../guides/data-binding/binding-from-code.md).
+see [here](/docs/guides/data-binding/binding-from-code.md).
 
 ## Data Binding MarkupExtension
 
@@ -120,7 +120,7 @@ parameters or with their shorthand syntax as part of the `Path` (`#controlName` 
 ```
 
 :::info
-For more details on how to bind to controls, see [here](../../../guides/data-binding/binding-to-controls)
+For more details on how to bind to controls, see [here](/docs/guides/data-binding/binding-to-controls)
 :::
 
 ## Converting Bound Values
@@ -205,7 +205,7 @@ Avalonia has a range of built-in data binding converters. These include:
 * Boolean operation converters
 
 :::info
-For a listing of Avalonia built-in data binding converters, see the reference [here](../../../reference/built-in-data-binding-converters.md).
+For a listing of Avalonia built-in data binding converters, see the reference [here](/docs/reference/built-in-data-binding-converters.md).
 :::
 
 ### Custom Conversions
@@ -213,7 +213,7 @@ For a listing of Avalonia built-in data binding converters, see the reference [h
 If the built-in converters do not meet your requirements, then you can create a custom converter by implementing `IValueConverter`.
 
 :::info
-For guidance on how to create a custom converter, see [here](../../../guides/data-binding/how-to-create-a-custom-data-binding-converter).
+For guidance on how to create a custom converter, see [here](/docs/guides/data-binding/how-to-create-a-custom-data-binding-converter).
 :::
 
 ### FallbackValue

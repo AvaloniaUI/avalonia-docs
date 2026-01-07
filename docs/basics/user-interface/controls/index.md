@@ -19,12 +19,12 @@ These are just a few examples of the many controls available in Avalonia UI. Eac
 
 To get started with using controls in Avalonia UI, you can refer to the documentation for each control type. The documentation provides detailed explanations, examples, and code snippets to help you understand and utilize the controls effectively.
 
-- [Button Control Documentation](../../../reference/controls/buttons/button)
-- [TextBox Control Documentation](../../../reference/controls/textbox)
-- [Label Control Documentation](../../../reference/controls/label)
-- [Checkbox Control Documentation](../../../reference/controls/checkbox)
-- [Slider Control Documentation](../../../reference/controls/slider)
-- [ListBox Control Documentation](../../../reference/controls/listbox)
+- [Button Control Documentation](/docs/reference/controls/buttons/button)
+- [TextBox Control Documentation](/docs/reference/controls/textbox)
+- [Label Control Documentation](/docs/reference/controls/label)
+- [Checkbox Control Documentation](/docs/reference/controls/checkbox)
+- [Slider Control Documentation](/docs/reference/controls/slider)
+- [ListBox Control Documentation](/docs/reference/controls/listbox)
 
 By exploring these resources, you'll gain a solid foundation in using controls within Avalonia UI and be able to create rich and interactive user interfaces for your applications.
 

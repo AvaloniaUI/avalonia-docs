@@ -9,7 +9,7 @@ One of the fundamental things that a user interface must do is interact with the
 
 Events in Avalonia provide a way to respond to user interactions and control-specific actions. You can handle events by following these steps:
 
-1. **Implement the Event Handler**: Write an event handler in the [code-behind](../user-interface/code-behind.md) that will be executed when the event is triggered. The event handler should contain the logic you want to execute in response to the event.
+1. **Implement the Event Handler**: Write an event handler in the [code-behind](/docs/basics/user-interface/code-behind.md) that will be executed when the event is triggered. The event handler should contain the logic you want to execute in response to the event.
 
 ```csharp title='MainWindow.axaml.cs'
 public partial class MainWindow : Window
@@ -43,7 +43,7 @@ The above example adds a handler called `HandleButtonClick` to a `Button`'s `Cli
 
 ## Using Commands
 
-Commands in Avalonia provide a higher-level approach to handling user interactions, decoupling the user action from the implementation logic. Whereas events are defined in a control's code-behind, commands are usually bound to a property or method on the [data context](../data/data-binding/data-context.md).
+Commands in Avalonia provide a higher-level approach to handling user interactions, decoupling the user action from the implementation logic. Whereas events are defined in a control's code-behind, commands are usually bound to a property or method on the [data context](/docs/basics/data/data-binding/data-context.md).
 
 :::info
 Commands are available in all controls which provide a `Command` property. The command is usually triggered when the control's primary method of interaction occurs, for example a button click.

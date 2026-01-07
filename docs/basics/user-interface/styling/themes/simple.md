@@ -33,5 +33,5 @@ After that theme needs to be included in the Application class:
 ```
 
 :::note
-If you need to specify theme dark or light variant, please follow [Theme Variants](../../../../guides/styles-and-resources/how-to-use-theme-variants.md) documentation.
+If you need to specify theme dark or light variant, please follow [Theme Variants](/docs/guides/styles-and-resources/how-to-use-theme-variants.md) documentation.
 :::
