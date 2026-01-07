@@ -41,7 +41,7 @@ public override void Initialize()
 
 For MS Dependency Injection solutions, `ILoggerFactory` interfaces can be stored and retrieved from the `ServiceCollection`.
 
-You can find more details about `DeveloperToolsOptions` on [Reference to DeveloperToolsOptions](../advanced/options-reference.md) page.
+You can find more details about `DeveloperToolsOptions` on [Reference to DeveloperToolsOptions](/accelerate/tools/dev-tools/advanced/options-reference.md) page.
 
 ## Attaching custom log source
 

@@ -15,7 +15,7 @@ For all platforms, `AvaloniaUI.DiagnosticsSupport` package can be installed in t
 3. Run browser application either via `dotnet run` or `dotnet serve` on a published project. Please visit [Avalonia WebAssembly documentation](https://docs.avaloniaui.net/docs/guides/platforms/how-to-use-web-assembly) for more details.
 4. By default, iOS projects configured to attach to `Developer Tools` on startup. See [DeveloperToolsOptions.ConnectOnStartup](./options-reference.md#developertoolsoptionsconnectonstartup) for details.
 
-![Browser with Developer Tools](../../../../static/img/dev-tools//attaching-to-browser.png)
+![Browser with Developer Tools](../../../../static/img/dev-tools/attaching-to-browser.png)
 
 :::note
 

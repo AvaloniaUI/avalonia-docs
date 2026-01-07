@@ -6,7 +6,7 @@ Accelerate `MediaPlayer` package.
 
 ## Installation
 
-See the [Installation Guide](../../installation.md) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/accelerate/installation.md) for step-by-step instructions on how to install Accelerate components.
 
 Add the MediaPlayer package to your project:
 
