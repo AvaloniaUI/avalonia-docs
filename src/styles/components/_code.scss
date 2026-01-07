@@ -87,50 +87,15 @@ code {
     }
   }
 
-  // Copy button - pill style (matching Customer Portal)
-  [class*='copyButton_'],
-  [class*='buttonGroup_'] button {
-    border-radius: 9999px; // rounded-full (pill shape)
-    padding: 0.375rem 0.75rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    transition: all 0.15s ease;
-
-    svg {
-      fill: var(--color-gray-400);
+  // Button group - always visible (not hidden on hover)
+  [class*='buttonGroup_'] {
+    button {
+      // Override default Docusaurus hidden state - always visible
+      opacity: 1 !important;
     }
   }
 }
 
-// Light mode copy button
-html[data-theme='light'] #__docusaurus {
-  [class*='copyButton_'],
-  [class*='buttonGroup_'] button {
-    background-color: #fff;
-    border: 1px solid var(--color-gray-200);
-    color: var(--color-gray-700);
-
-    &:hover {
-      background-color: var(--color-gray-50);
-      border-color: var(--color-gray-300);
-    }
-  }
-}
-
-// Dark mode copy button (matching Customer Portal dark:bg-white/2 dark:border-white/5)
-html[data-theme='dark'] #__docusaurus {
-  [class*='copyButton_'],
-  [class*='buttonGroup_'] button {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--color-gray-400);
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-  }
-}
 
 /**
  * prism.js Dark theme for JavaScript, CSS and HTML
