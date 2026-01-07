@@ -13,6 +13,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ThemedImage from '@theme/ThemedImage';
 import Shortcut from '../components/global/Shortcut';
+import XamlPreview from '../components/global/XamlPreview';
 
 export default {
   // Re-use the default mapping
@@ -31,5 +32,6 @@ export default {
   TabItem,
   ThemedImage,
   Shortcut,
-  Image
+  Image,
+  XamlPreview
 };

@@ -90,6 +90,13 @@ const config = {
       },
     },
   ],
+  scripts: [
+    {
+      src: 'https://white-hill-09a5c3303.3.azurestaticapps.net/AvaloniaPreviewElement.js',
+      type: 'module',
+      async: true,
+    },
+  ],
   presets: [
     [
       'classic',

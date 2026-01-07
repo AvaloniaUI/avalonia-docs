@@ -24,7 +24,8 @@ html[data-theme='dark'] {
 .tabs {
   // Bottom border on container matching Customer Portal
   border-bottom: 1px solid var(--tabs-border-c);
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  margin-left: 5px;
 
   .tabs__item {
     font-weight: 500;

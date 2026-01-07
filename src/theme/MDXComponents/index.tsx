@@ -22,7 +22,7 @@ import Shortcut from '../../components/global/Shortcut';
 import Image from '../../components/Image';
 // CUSTOM CODE END
 import type { MDXComponentsObject } from '@theme/MDXComponents';
-
+import XamlPreview from '../../components/global/XamlPreview';
 
 const MDXComponents: MDXComponentsObject = {
   ...MDXComponentsOriginal,
@@ -40,7 +40,8 @@ const MDXComponents: MDXComponentsObject = {
     TabItem,
     ThemedImage,
     Shortcut,
-    Image
+    Image,
+    XamlPreview
   // CUSTOM CODE END
 };
 export default MDXComponents;
