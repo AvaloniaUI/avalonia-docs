@@ -85,4 +85,25 @@ function DocsCard(props: Props): JSX.Element {
   );
 }
 
+interface SidebarItem {
+  docId?: string;
+  label: string;
+  href: string;
+}
+
+interface DocsCardListProps {
+  list: SidebarItem[];
+}
+
+function DocsCardList({ list }: DocsCardListProps): JSX.Element {
+  return (
+    <div className="card-container-setup">
+      {list.map((item) => (
+        <DocsCard key={item.docId || item.href} href={item.href} header={item.label} />
+      ))}
+    </div>
+  );
+}
+
 export default DocsCard;
+export { DocsCard, DocsCardList };

@@ -4,7 +4,7 @@ title: Properties
 description: Reference page for properties of Avalonia controls
 ---
 
-import {DocsCardList} from '../../../src/components/DocsCard';
+import {DocsCardList} from '../../../src/components/global/DocsCard';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # Properties

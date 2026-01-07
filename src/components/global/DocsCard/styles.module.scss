@@ -242,4 +242,17 @@ docs-card[disabled]::after {
   .markdown-content p docs-card {
     margin-top: 1em;
   }
+
+  .card-container-setup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 1rem 0;
+  }
+
+  @media all and (max-width: 768px) {
+    .card-container-setup {
+      grid-template-columns: 1fr;
+    }
+  }
 }
