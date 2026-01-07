@@ -1,42 +1,54 @@
+// Customer Portal underline-style tabs (matching AccelerateDashboard.tsx)
 html[data-theme='light'] {
-  // Customer Portal style tabs
-  --ifm-tabs-color: var(--color-gray-700);
-  --ifm-tabs-color-active: #fff;
-  --tabs-border-c: var(--color-gray-300);
+  --ifm-tabs-color: var(--color-gray-500);
+  --ifm-tabs-color-hover: var(--color-gray-700);
+  --ifm-tabs-color-active: var(--color-brand-500);
+  --ifm-tabs-color-active-border: var(--color-brand-500);
+  --tabs-border-c: var(--color-gray-200);
 }
 
 html[data-theme='dark'] {
-  // Customer Portal dark mode tabs
-  --ifm-tabs-color: var(--color-gray-300);
-  --ifm-tabs-color-active: #fff;
-  --tabs-border-c: var(--color-gray-600);
+  --ifm-tabs-color: var(--color-gray-400);
+  --ifm-tabs-color-hover: var(--color-gray-200);
+  --ifm-tabs-color-active: var(--color-brand-400);
+  --ifm-tabs-color-active-border: var(--color-brand-400);
+  --tabs-border-c: var(--color-gray-800);
 }
 
 :root {
-  --ifm-tabs-padding-horizontal: 0.5rem;
-  --ifm-tabs-padding-vertical: 0.625rem;
-
+  --ifm-tabs-padding-horizontal: 0.625rem;
+  --ifm-tabs-padding-vertical: 0.95rem;
   --ifm-tabs-spacing: 0.5rem;
 }
 
 .tabs {
+  // Bottom border on container matching Customer Portal
+  border-bottom: 1px solid var(--tabs-border-c);
+  margin-bottom: 10px;
+
   .tabs__item {
-    font-weight: 400;
-    font-size: 0.95rem;
-    line-height: 100%;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1;
     letter-spacing: 0;
+    color: var(--ifm-tabs-color);
 
-    border-radius: 1000px;
-    border: 1px solid rgba(0, 0, 0, 0);
+    // Underline style - no pill/rounded borders
+    border-radius: 0;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background-color: transparent;
 
-    padding-block-start: calc(var(--ifm-tabs-padding-vertical) - 1px);
+    padding: var(--ifm-tabs-padding-vertical) var(--ifm-tabs-padding-horizontal);
+    margin-bottom: -1px;
 
-    transition: border-color 0.2s ease-out, opacity 0.2s ease-out;
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
     &--active {
       font-weight: 500;
-      background-color: var(--ifm-color-primary);
-      color: var(--ifm-color-white);
+      color: var(--ifm-tabs-color-active);
+      border-bottom-color: var(--ifm-tabs-color-active-border);
+      background-color: transparent;
     }
 
     + .tabs__item {
@@ -44,11 +56,11 @@ html[data-theme='dark'] {
     }
 
     &:hover {
-       color: var(--ifm-color-white);
+      color: var(--ifm-tabs-color-hover);
+      background-color: transparent;
 
-      &:not(.tabs__item--active) {
-        opacity: 0.8;
-        color: var(--ifm-color-primary);
+      &.tabs__item--active {
+        color: var(--ifm-tabs-color-active);
       }
     }
   }
