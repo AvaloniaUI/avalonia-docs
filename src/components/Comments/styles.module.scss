@@ -1,0 +1,62 @@
+// Comments/Giscus styling
+// Matches the Avalonia docs theme (Customer Portal style)
+
+.commentsContainer {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.commentsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.commentsIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-gray-500);
+}
+
+.giscusWrapper {
+  background: var(--token-secondary-bg-c);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-theme-sm);
+}
+
+// Dark theme overrides
+:global(html[data-theme='dark']) {
+  .commentsContainer {
+    border-top-color: var(--color-gray-800);
+  }
+
+  .giscusWrapper {
+    background: #1d2939;
+    border-color: var(--color-gray-800);
+  }
+
+  .commentsIcon {
+    color: var(--color-gray-400);
+  }
+}
+
+// Giscus iframe styling (applies within the iframe via giscus themes)
+// We control the outer container styling here
+.giscusWrapper {
+  // Ensure the giscus widget fills the container properly
+  :global(.giscus) {
+    width: 100%;
+  }
+
+  :global(.giscus-frame) {
+    width: 100%;
+    border: none;
+  }
+}
