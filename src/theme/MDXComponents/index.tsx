@@ -19,6 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ThemedImage from '@theme/ThemedImage';
 import Shortcut from '../../components/global/Shortcut';
+import Image from '../../components/Image';
 // CUSTOM CODE END
 import type { MDXComponentsObject } from '@theme/MDXComponents';
 
@@ -38,7 +39,8 @@ const MDXComponents: MDXComponentsObject = {
     Tabs,
     TabItem,
     ThemedImage,
-    Shortcut
+    Shortcut,
+    Image
   // CUSTOM CODE END
 };
 export default MDXComponents;
