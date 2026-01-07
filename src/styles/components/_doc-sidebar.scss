@@ -106,30 +106,34 @@ html[data-theme='dark'] {
     .menu__list {
     display: flex !important;
     flex-direction: column;
-    gap: 0.125rem;
+    // Customer Portal uses gap-1 (4px) between menu items
+    gap: 0.25rem;
     transition: height 0.35s cubic-bezier(0.36, 0.66, 0.04, 1) 25ms !important;
     will-change: initial !important;
 
     margin-top: 0;
 
+    // Nested menu lists - Customer Portal style (NO left border, just indentation)
     .menu__list {
-      margin-top: 0.25rem;
-      margin-left: 0.75rem;
-      padding-left: 0.75rem;
-      border-left: 1px solid var(--sidebar-border-c);
+      // Customer Portal: mt-2 space-y-1 ml-9
+      margin-top: 0.5rem;
+      // ml-9 = 36px = 2.25rem for indentation (no border)
+      margin-left: 2.25rem;
+      padding-left: 0;
+      // Remove the left border - Customer Portal doesn't have this
+      border-left: none;
 
       .menu__link--sublist {
         margin-inline-start: 0;
 
         &::after {
-          // The chevron icon will have less opacity when it's not on the first level.
           opacity: 0.6;
         }
       }
 
       .menu__link {
-        // Nested items have slightly smaller padding
-        padding: 0.375rem 0.75rem;
+        // Nested items padding - match Customer Portal
+        padding: 0.625rem 0.75rem;
       }
     }
 
@@ -169,12 +173,15 @@ html[data-theme='dark'] {
     gap: 0.75rem;
     letter-spacing: -0.01em;
 
-    // Customer Portal-style: rounded with padding
+    // Customer Portal-style: rounded with padding (px-3 py-2 = 12px 8px)
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
 
     color: var(--sidebar-item-text-inactive);
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+    // Ensure full width for background
+    width: 100%;
 
     &:not(.menu__link--active:not(.menu__link--sublist)) {
       background: transparent;
@@ -187,7 +194,7 @@ html[data-theme='dark'] {
       }
     }
 
-    // Active state styling (Customer Portal style)
+    // Active state styling (Customer Portal style - light blue bg, blue text)
     &--active:not(.menu__link--sublist) {
       background-color: var(--sidebar-item-bg-active);
       color: var(--sidebar-item-text-active);
@@ -239,27 +246,34 @@ html[data-theme='dark'] {
   .theme-doc-sidebar-item-category-level-1 {
     & > .menu__list-item-collapsible {
       .menu__link {
-        color: var(--sidebar-category-c);
+        // Customer Portal style: expandable items look like regular menu items
+        // NOT uppercase, same font size as other items
+        color: var(--sidebar-item-text-inactive);
 
-        font-weight: 600;
-        font-size: 0.75rem;
+        font-weight: 500;
+        font-size: 0.875rem;
         line-height: 1.25rem;
-        text-transform: uppercase;
-        letter-spacing: 0.02em;
+        text-transform: none;
+        letter-spacing: -0.01em;
 
         padding: 0.5rem 0.75rem;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0;
+
+        &:hover {
+          background-color: var(--sidebar-item-hover-bg);
+        }
       }
     }
 
-    /* Level 1 category labels, with or without a link */
+    /* Level 1 category labels - styled like Customer Portal's expandable items */
     .menu__link--sublist {
-      color: var(--sidebar-category-c);
-      font-weight: 600;
-      font-size: 0.75rem;
+      // Regular text styling, not uppercase (matching Customer Portal's "Account" style)
+      color: var(--sidebar-item-text-inactive);
+      font-weight: 500;
+      font-size: 0.875rem;
       line-height: 1.25rem;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
+      text-transform: none;
+      letter-spacing: -0.01em;
 
       &::after {
         content: "";
@@ -277,13 +291,18 @@ html[data-theme='dark'] {
         margin-inline-end: 0;
         margin-block-end: 0;
       }
+
+      // Active/expanded state - match Customer Portal's active item styling
+      &[aria-expanded="true"] {
+        background-color: var(--sidebar-item-bg-active);
+        color: var(--sidebar-item-text-active);
+      }
     }
 
-    /* When the level 1 category is also a link and is active,
-       keep it looking like a category, not a doc link */
+    /* When the level 1 category is also a link and is active */
     .menu__link--sublist.menu__link--active {
-      background: transparent;
-      color: var(--sidebar-category-c);
+      background-color: var(--sidebar-item-bg-active);
+      color: var(--sidebar-item-text-active);
     }
   }
 
