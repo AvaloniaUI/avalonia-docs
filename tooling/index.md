@@ -1,5 +1,5 @@
 ---
-id: welcome
+id: index
 title: Welcome
 sidebar_label: Welcome
 ---
@@ -7,15 +7,15 @@ sidebar_label: Welcome
 import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
-# Avalonia Accelerate
+# Avalonia Tooling
 
- Accelerate unlocks professional-grade tooling and components to supercharge your Avalonia development. Designed specifically for developers who need more from their cross-platform applications, Accelerate combines  advanced tooling with a suite of pro controls to support you in building faster, debugging smarter, and deliver more polished experiences across every platform.
-
-## Accelerate Tooling
-
-Avalonia Accelerate is released in phases, with each update introducing significant new capabilities. The current phase includes these essential modules designed to unlock immediate productivity:
+Avalonia tooling is released in phases, with each update introducing significant new capabilities. The current phase includes these essential modules designed to unlock immediate productivity:
 
 <DocsCards>
+<DocsCard header="Avalonia for Visual Studio" href="tools/vs-extension/getting-started" img="/icons/feature-accelerate-vs-ext-icon.png">
+  <p>Developed from the ground-up to eliminate friction, accelerate development, and make building cross-platform apps with Avalonia a joy.</p>
+</DocsCard>
+
 <DocsCard header="Dev Tools" href="components/webview/quickstart" img="/icons/feature-accelerate-devtools-icon.png">
   <p>Inspect and diagnose your Avalonia apps visually and make edits that are reflected locally in real-time.</p>
 </DocsCard>
@@ -24,9 +24,6 @@ Avalonia Accelerate is released in phases, with each update introducing signific
   <p>Package your apps for Windows, Mac and Linux in a single, easy-to-use, tool.</p>
 </DocsCard>
 
-<DocsCard header="Visual Studio Extension" href="tools/vs-extension/getting-started" img="/icons/feature-accelerate-vs-ext-icon.png">
-  <p>Developed from the ground-up to eliminate friction, accelerate development, and make building cross-platform apps with Avalonia a joy.</p>
-</DocsCard>
 
 </DocsCards>
 

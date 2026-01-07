@@ -208,9 +208,9 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'accelerate',
-        path: 'accelerate',
-        routeBasePath: 'accelerate',
+        id: 'tooling',
+        path: 'tooling',
+        routeBasePath: 'tooling',
         sidebarPath: require.resolve('./accelerate-sidebar.js'),
         editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
         editLocalizedFiles: true,
@@ -264,6 +264,11 @@ const config = {
             activeBasePath: '/controls'
           },
           {
+            label: 'Tooling',
+            to: '/tooling',
+            activeBasePath: '/tooling'
+          },
+          {
             label: 'Samples',
             to: '/samples',
             activeBasePath: '/samples'
@@ -271,10 +276,6 @@ const config = {
           {
             type: 'html',
             value: '<div class="separator" aria-hidden></div>',
-          },
-          {
-            label: 'Accelerate',
-            to: '/accelerate/welcome',
           },
           {
             label: 'Avalonia XPF',
