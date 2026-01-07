@@ -34,7 +34,7 @@ Patterns are a well-established approach to capture recurring solutions to commo
 A popular and often misunderstood pattern, MVVM is primarily employed when constructing User Interfaces and promotes a separation between the actual definition of a UI Screen (View), the logic behind it (ViewModel), and the data that populates it (Model). The ViewModel acts as an intermediary between the View and the Model. The Model, although crucial, is a distinct and optional piece, and thus, the essence of understanding this pattern resides in the relationship between the View and ViewModel.
 
 :::info
-[Learn more about MVVM](../../concepts/the-mvvm-pattern/).
+[Learn more about MVVM](/docs/concepts/the-mvvm-pattern/).
 :::
 
 ### Business Façade

@@ -122,7 +122,7 @@ Setters have a context menu that allows for quickly copying names and values to 
 
 ## Events
 
-The events tab can be used to track the propagation of [events](../../concepts/input/). Select the events to track in the left pane, and all events of that type will be shown in the center upper pane. Select one of these events to see the event route.
+The events tab can be used to track the propagation of [events](/docs/concepts/input/). Select the events to track in the left pane, and all events of that type will be shown in the center upper pane. Select one of these events to see the event route.
 
 :::info
 Dotted underline under event name or control type indicates that quick navigation is possible.

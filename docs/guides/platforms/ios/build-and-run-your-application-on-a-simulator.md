@@ -7,7 +7,7 @@ import IOSSimulatorScreenshot from '/img/guides/platforms/ios/run-ios-simulator.
 
 # How To Build and Run on the iOS Simulator
 
-Please ensure you have followed the guide [Building Cross-Platform Applications](../../building-cross-platform-applications).
+Please ensure you have followed the guide [Building Cross-Platform Applications](/docs/guides/building-cross-platform-applications).
 
 Assuming you have created a project called `HelloWorld`. Enter the directory `HelloWorld.iOS` from the command line.
 

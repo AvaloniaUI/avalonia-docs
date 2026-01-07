@@ -97,5 +97,5 @@ As previously described here, when you use a setter without a **data template**,
 ```
 
 :::info
-For information about the concepts behind a **data template**, see [here](../../concepts/templates).
+For information about the concepts behind a **data template**, see [here](/docs/concepts/templates).
 :::
