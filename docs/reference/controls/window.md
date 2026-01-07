@@ -5,7 +5,7 @@ title: Window
 
 `Window` is a top-level [`ContentControl`](contentcontrol).
 
-You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application. For information on how to create new window classes from templates see the [quickstart](../../get-started/getting-started).
+You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application. For information on how to create new window classes from templates see the [quickstart](/docs/get-started/getting-started).
 
 ### Common Properties
 
@@ -47,7 +47,7 @@ window.Hide();
 window.Show();
 ```
 
-See also [Prevent a window from closing](../controls/window#prevent-a-window-from-closing)
+See also [Prevent a window from closing](/docs/basics/user-interface/controls/window#prevent-a-window-from-closing)
 
 ### Show a window as a dialog
 
@@ -115,4 +115,4 @@ window.Closing += (s, e) =>
 
 ## Additional Resources
 
-- The [Main Window](../../get-started/test-drive/main-window)
+- The [Main Window](/docs/get-started/test-drive/main-window)

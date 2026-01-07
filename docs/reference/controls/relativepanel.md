@@ -10,7 +10,7 @@ import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relat
 The `RelativePanel` control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
 
 :::info
-To review the concept of control layout zones, see [here](../../concepts/layout/layout-zones).
+To review the concept of control layout zones, see [here](/docs/concepts/layout/layout-zones).
 :::
 
 The default position for a child control, is the upper left corner of the panel.
