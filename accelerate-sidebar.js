@@ -4,7 +4,7 @@
 const sidebars = {
 
   documentationSidebar: [
-    'welcome', 
+    'index',
     'installation',
     {
       'type': 'category',
