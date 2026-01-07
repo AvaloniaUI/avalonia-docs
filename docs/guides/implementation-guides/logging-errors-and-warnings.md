@@ -66,7 +66,7 @@ public static AppBuilder BuildAvaloniaApp()
 
 ## Log Sinks
 
-The `LogToTrace` extension method uses `TraceLogSink` which writes its messages to `Trace`. Avalonia supports custom sinks by implementing `ILogSink`. Assigning your custom sink to `Avalonia.Logging.Logger.Sink` will allow Avalonia to use it.
+The `LogToTrace` extension method uses `StringLogSink`. Avalonia supports custom sinks by implementing `ILogSink`. Assigning your custom sink to `Avalonia.Logging.Logger.Sink` will allow Avalonia to use it.
 
 ```csharp title='Extension method to assign Logger.Sink'
 using Avalonia.Controls;
@@ -93,5 +93,5 @@ public static AppBuilder BuildAvaloniaApp()
 ```
 
 :::info
-View the source code on _GitHub_ [`TraceLogSink.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Logging/TraceLogSink.cs)
+View the source code on _GitHub_ [`StringLogSink.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Logging/StringLogSink.cs)
 :::
