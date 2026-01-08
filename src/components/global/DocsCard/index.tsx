@@ -14,6 +14,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   ionicon?: string;
   img?: string;
   size?: 'md' | 'lg';
+  activeIndex?: number;
 }
 
 function DocsCard(props: Props): JSX.Element {

@@ -1,10 +1,10 @@
 /**
  * DocItemLayout is a component that renders the layout of a page like
  * the individual component pages, guide pages, etc.
- * 
+ *
  * Original source:
  * @link https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-theme-classic/src/theme/DocItem/Layout/index.tsx
- * 
+ *
  * Reason for overriding:
  * - Add a phone demo to the right of the page, e.g. /docs
  */
@@ -25,11 +25,43 @@ import type {Props} from '@theme/DocItem/Layout';
 import Comments from "@site/src/components/Comments";
 import styles from '@docusaurus/theme-classic/lib/theme/DocItem/Layout/styles.module.css';
 
+// Extended frontMatter type for custom demo properties
+interface ExtendedFrontMatter {
+  hide_table_of_contents?: boolean;
+  demoUrl?: string;
+  demoSourceUrl?: string;
+  [key: string]: unknown;
+}
+
+// DocDemo component for rendering embedded demos
+interface DocDemoProps {
+  url: string;
+  source?: string;
+}
+
+function DocDemo({ url, source }: DocDemoProps): JSX.Element {
+  return (
+    <div className="doc-demo">
+      <iframe
+        src={url}
+        title="Demo"
+        style={{ width: '100%', height: '600px', border: 'none', borderRadius: '8px' }}
+      />
+      {source && (
+        <a href={source} target="_blank" rel="noopener noreferrer" className="doc-demo-source">
+          View Source
+        </a>
+      )}
+    </div>
+  );
+}
+
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
 function useDocTOC() {
-  const {frontMatter, toc} = useDoc();
+  const {frontMatter: rawFrontMatter, toc} = useDoc();
+  const frontMatter = rawFrontMatter as ExtendedFrontMatter;
   const windowSize = useWindowSize();
 
   const hidden = frontMatter.hide_table_of_contents;
@@ -53,7 +85,8 @@ function useDocTOC() {
 
 // CUSTOM CODE
 function useDocDemo() {
-  const {frontMatter} = useDoc();
+  const {frontMatter: rawFrontMatter} = useDoc();
+  const frontMatter = rawFrontMatter as ExtendedFrontMatter;
   const demoUrl = frontMatter.demoUrl;
   const demoSourceUrl = frontMatter.demoSourceUrl;
   return {

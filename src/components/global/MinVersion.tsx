@@ -1,0 +1,41 @@
+import React from 'react';
+
+interface MinVersionProps {
+  version: string;
+}
+
+const newVersion = '11.2';
+const previewVersion = '11.3';
+
+export default function MinVersion({ version }: MinVersionProps) {
+    let backgroundColor: string;
+    let description: string;
+
+    if (version === newVersion) {
+        backgroundColor = '#ff8d8d';
+        description = ' New!';
+    } else if (version === previewVersion) {
+        backgroundColor = '#d03737';
+        description = ' Preview!';
+    } else {
+        backgroundColor = '#ebedf0';
+        description = '';
+    }
+
+    return (
+        <span
+            style={{
+                border: '1px solid #fff',
+                display: 'inline-flex',
+                padding: '4px 12px',
+                backgroundColor,
+                borderRadius: '16px',
+                fontSize: '14px',
+                color: '#111',
+                margin: '0 1em 0 1em',
+                verticalAlign: 'middle'
+            }}>
+            v{version}{description}
+        </span>
+    );
+}
