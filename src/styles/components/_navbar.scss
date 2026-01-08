@@ -81,7 +81,7 @@ html[data-theme='dark'] {
         align-items: center;
         align-self: initial;
 
-        padding: 0.375rem 0.625rem;
+        padding: 0.675rem 0.625rem;
 
         // Customer Portal brand button style
         background: var(--color-brand-500);
@@ -96,8 +96,6 @@ html[data-theme='dark'] {
         font-size: 0.75rem;
         line-height: 100%;
 
-        transition: opacity 0.2s ease-out;
-
         margin-inline-start: 0.5rem;
 
         @media (max-width: 1400px) {
@@ -107,6 +105,7 @@ html[data-theme='dark'] {
         &:hover,
         &:active {
           background: var(--color-brand-600);
+          color: #fff !important;
         }
 
         &::after {
@@ -190,26 +189,21 @@ html[data-theme='dark'] {
               }
             }
           }
-
-          //theme toggle
-          &:nth-last-of-type(1) {
-            order: 4;
-          }
         }
 
-        //twitter icon
-        .icon-link-twitter {
-          order: 5;
-        }
-
-        //discord icon
-        .icon-link-discord {
-          order: 6;
+        //theme toggle - before GitHub icon
+        [class*='toggle_'] {
+          order: 10;
         }
 
         //github icon
-        .icon-link-github {
-          order: 7;
+        .header-github-link {
+          order: 20;
+        }
+
+        //login CTA - last item
+        .cta {
+          order: 30;
         }
       }
     }

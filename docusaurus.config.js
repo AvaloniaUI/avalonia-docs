@@ -261,7 +261,7 @@ const config = {
         },
         items: [
           {
-            label: 'Guide',
+            label: 'Guides',
             to: '/docs/welcome',
             activeBasePath: '/docs'
           },
@@ -271,14 +271,47 @@ const config = {
             activeBasePath: '/controls'
           },
           {
-            label: 'Tooling',
-            to: '/tooling',
-            activeBasePath: '/tooling'
-          },
-          {
             label: 'Samples',
             to: '/samples',
             activeBasePath: '/samples'
+          },
+          
+          {
+            label: 'Reference',
+            to: '/tooling',
+            activeBasePath: '/tooling'
+          },
+           {
+          label: 'More',
+          items: [
+            {
+              href: '/troubleshooting',
+              label: 'Troubleshooting',
+              rel: null,
+            },
+            {
+              href: '/tooling',
+              label: 'Tooling',
+              rel: null,
+            },
+            {
+            label: 'Enhanced Support',
+            to: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+            }, 
+            {
+              href: 'https://github.com/AvaloniaUI/Avalonia/discussions',
+              label: 'GitHub Discussions',
+              target: '_blank',
+              rel: null,
+            },
+            {
+              href: 'https://avaloniaui.net/blog',
+              label: 'Blog',
+              target: '_blank',
+              rel: null,
+            },
+          ],
+          className: 'navbar__link--community',
           },
           {
             type: 'html',
@@ -293,51 +326,28 @@ const config = {
             type: 'search',
             position: 'right',
           },
-                  {
-          label: 'Community',
-          position: 'right',
-          items: [
-            {
-              href: 'https://avaloniaui.community',
-              label: 'Community Hub',
-              target: '_blank',
-              rel: null,
-            },
-            {
-              href: 'https://github.com/AvaloniaUI/Avalonia/discussions',
-              label: 'GitHub Discussions',
-              target: '_blank',
-              rel: null,
-            },
-            {
-              href: 'https://avaloniaui.net/blog',
-              label: 'Blog',
-              target: '_blank',
-              rel: null,
-            },
-            {
-              href: 'https://twitter.com/avaloniaui',
-              label: 'Twitter',
-              target: '_blank',
-              rel: null,
-            },
-          ],
-          className: 'navbar__link--community',
-        },
-        {
-          label: 'Support',
-          position: 'right',
-          to: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
-        }, 
-        {
-          type: 'html',
-          position: 'right',
-          value: '<div class="separator" aria-hidden></div>',
-        },
-        {
-            type: 'localeDropdown',
+          {
+            type: 'html',
             position: 'right',
+            value: '<div class="separator" aria-hidden></div>',
           },
+       // {
+       //     type: 'localeDropdown',
+       //     position: 'right',
+       //   },
+        {
+          href: "https://github.com/avaloniaui/",
+          position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
+        },
+        {
+          label: 'Log in',
+          href: 'https://portal.avaloniaui.net',
+          position: 'right',
+          target: '_blank',
+          className: 'cta',
+        },
         ],
       },
       footer: {
