@@ -104,13 +104,9 @@ export default function TOC({ className, ...props }: Props): ReactNode {
         <h3 className="text-base font-medium text-gray-800 dark:text-white/90 m-0 max-[1359px]:mr-0 mr-4">On this page</h3>
         <div className="relative inline-block max-[1359px]:w-full">
           <button
-          onClick={toggleDropdown}
-          className="dropdown-toggle inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors bg-white text-gray-700 hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-300 focus:outline-none max-[1359px]:w-full max-[1359px]:justify-between"
-          style={{
-            border: '1px solid #d0d5dd',
-            boxShadow: 'none',
-          }}
-        >
+            onClick={toggleDropdown}
+            className={`dropdown-toggle ${styles.tocDropdownButton}`}
+          >
           {buttonText}
           <ChevronDownIcon isOpen={isOpen} />
         </button>

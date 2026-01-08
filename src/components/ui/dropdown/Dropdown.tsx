@@ -40,13 +40,9 @@ export const Dropdown: React.FC<DropdownProps> = ({
     <div
       ref={dropdownRef}
       className={clsx(
-        "absolute z-40 right-0 mt-2 rounded-2xl bg-white p-3 dark:bg-[#1E2635]",
+        "absolute z-40 right-0 mt-2 rounded-2xl bg-white p-3 dark:bg-[#1E2635] border border-[#e4e7ec] dark:border-[#353C49] shadow-[0px_12px_16px_-4px_rgba(16,24,40,0.08),0px_4px_6px_-2px_rgba(16,24,40,0.03)] dark:shadow-[0px_12px_16px_-4px_rgba(0,0,0,0.3),0px_4px_6px_-2px_rgba(0,0,0,0.2)]",
         className
       )}
-      style={{
-        border: '1px solid #e4e7ec',
-        boxShadow: '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
-      }}
     >
       {children}
     </div>
