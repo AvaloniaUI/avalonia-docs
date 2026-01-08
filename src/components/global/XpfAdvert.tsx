@@ -15,7 +15,7 @@ const ArrowIcon = () => (
 
 const XpfAdvert = () => {
   return (
-    <section className="py-6 lg:py-4 mx-auto max-w-7xl px-4">
+    <section className="py-6 lg:py-4 mx-auto max-w-7xl">
       <div
         className="relative overflow-hidden rounded-2xl"
         style={{
