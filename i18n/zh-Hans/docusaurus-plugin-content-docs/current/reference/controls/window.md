@@ -47,7 +47,7 @@ window.Hide();
 window.Show();
 ```
 
-另见 [阻止窗口关闭](/docs/basics/user-interface/controls/window#prevent-a-window-from-closing)
+另见 [阻止窗口关闭](#阻止窗口关闭)
 
 ### 以对话框形式显示窗口
 
@@ -115,4 +115,4 @@ window.Closing += (s, e) =>
 
 ## 额外资源
 
-- [主窗口](/docs/get-started/test-drive/main-window)
+- [主窗口](/docs/concepts/the-main-window)

@@ -47,7 +47,7 @@ window.Hide();
 window.Show();
 ```
 
-See also [Prevent a window from closing](/docs/basics/user-interface/controls/window#prevent-a-window-from-closing)
+See also [Prevent a window from closing](#prevent-a-window-from-closing)
 
 ### Show a window as a dialog
 
@@ -115,4 +115,4 @@ window.Closing += (s, e) =>
 
 ## Additional Resources
 
-- The [Main Window](/docs/get-started/test-drive/main-window)
+- The [Main Window](/docs/concepts/the-main-window)
