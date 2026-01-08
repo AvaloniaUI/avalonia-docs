@@ -5,6 +5,7 @@ import fs from 'fs';
 import redirects from './redirects/index';
 import tailwindPlugin from './plugins/tailwind-plugin';
 import plausiblePlugin from './plugins/plausible-plugin';
+import type { PluginOptions as LlmsTxtPluginOptions } from "@signalwire/docusaurus-plugin-llms-txt/public";
 
 const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
 
@@ -224,6 +225,25 @@ const config: Config = {
       {
         domain: 'docs.avaloniaui.net',
       },
+    ],
+    [
+      "@signalwire/docusaurus-plugin-llms-txt",
+      {
+        markdown: {
+          enableFiles: true,
+          includeDocs: true,
+          includeBlog: false,
+          includePages: false,
+        },
+        llmsTxt: {
+          enableLlmsFullTxt: false,
+          includeDocs: true,
+          includeBlog: false,
+          includePages: false,
+          siteTitle: 'Avalonia Docs',
+          siteDescription: 'Developer Documentation Portal for Avalonia UI',
+        },
+      } satisfies LlmsTxtPluginOptions,
     ],
   ],
   themeConfig: {

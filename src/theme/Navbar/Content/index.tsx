@@ -85,8 +85,6 @@ export default function NavbarContent(): ReactNode {
       (item.href && item.href.includes('github.com'))
   );
 
-  console.log('SWIZZLED NavbarContent loaded!', { githubIndex, rightItemsLength: rightItems.length, rightItems: rightItems.map((item: any) => ({ className: item.className, href: item.href, label: item.label })) });
-
   // Split rightItems: items before GitHub, and items from GitHub onwards
   const itemsBeforeGithub = githubIndex >= 0 ? rightItems.slice(0, githubIndex) : rightItems;
   const itemsFromGithub = githubIndex >= 0 ? rightItems.slice(githubIndex) : [];
