@@ -191,7 +191,9 @@ body[data-sdk-menu='plugin'] [data-dropdown-sdks-menu='plugin'] {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    // Horizontal padding inherited from .navbar__link
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     font-size: 0.875rem;
     font-weight: 500;
     border-radius: 0.5rem;
