@@ -186,6 +186,11 @@ body[data-sdk-menu='plugin'] [data-dropdown-sdks-menu='plugin'] {
 // "More" dropdown styling - matches UI Dropdown component (without border on button)
 // Uses #__docusaurus prefix to ensure higher specificity than navbar styles
 #__docusaurus .navbar__item.dropdown:has(.navbar__link--community) {
+  // Hide from desktop navbar on mobile (it appears in mobile sidebar instead)
+  @media (max-width: 996px) {
+    display: none;
+  }
+
   .navbar__link--community {
     // Button styling - like dropdown-toggle but NO border, NO hover bg
     display: inline-flex;

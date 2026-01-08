@@ -276,6 +276,11 @@ html[data-theme='dark'] {
       background: var(--navbar-separator-bg-c);
 
       margin-inline-start: 0.5rem;
+
+      // Hide first separator on mobile (appears alone after "More" is hidden)
+      @media (max-width: 996px) {
+        display: none;
+      }
       margin-inline-end: 0.5rem;
     }
 
