@@ -75,7 +75,7 @@ namespace Example
 }
 ```
 
-> 注意：以下示例假设 `MainWindowViewModel` 的一个实例被分配给窗口的 `DataContext`。有关更多信息，请参阅[关于 `DataContext`](/docs/basic/data/data-binding/data-context)的部分。
+> 注意：以下示例假设 `MainWindowViewModel` 的一个实例被分配给窗口的 `DataContext`。有关更多信息，请参阅[关于 `DataContext`](/docs/basics/data/data-binding/data-context)的部分。
 
 我们可以使用 `ContentTemplate` 属性在内容控件中显示学生的名和姓：
 
@@ -98,4 +98,4 @@ namespace Example
 
 <img className="center" src={ControlContentStudentScreenshot} alt="学生的名和姓" />
 
-有关更多信息，请查看[数据模板](/docs/basic/data/data-templates.md)部分。
+有关更多信息，请查看[数据模板](/docs/basics/data/data-templates.md)部分。

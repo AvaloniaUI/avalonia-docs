@@ -8,7 +8,7 @@ title: 提高性能
 
 ## 使用 CompiledBindings
 
-在Avalonia中提高性能的最有效方法之一是在应用程序中使用[`CompiledBindings`](/docs/basic/data/data-binding/compiled-bindings)。编译绑定通过在编译时编译绑定路径，从而减少了运行时反射的开销，从而加快了数据绑定速度。
+在Avalonia中提高性能的最有效方法之一是在应用程序中使用[`CompiledBindings`](/docs/basics/data/data-binding/compiled-bindings)。编译绑定通过在编译时编译绑定路径，从而减少了运行时反射的开销，从而加快了数据绑定速度。
 
 ## 选择适合数据显示的控件
 

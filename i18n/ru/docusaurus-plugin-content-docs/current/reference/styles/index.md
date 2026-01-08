@@ -10,5 +10,5 @@ Welcome to the _Avalonia UI_ styles reference section. This contains information
 * Pseudo classes
 
 :::info
-To review the concepts behind the Avalonia UI **styling system**, see [here](/docs/basic/user-interface/styling).
+To review the concepts behind the Avalonia UI **styling system**, see [here](/docs/basics/user-interface/styling).
 :::

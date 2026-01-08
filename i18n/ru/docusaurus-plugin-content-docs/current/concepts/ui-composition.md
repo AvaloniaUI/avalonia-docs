@@ -89,7 +89,7 @@ For information about how to  TO DO
 In the unlikely scenario that you cannot find an _Avalonia UI_ built-in control to cover your app's UI requirements, then you can 'roll-your-own' custom control from scratch. This allows you to define your own custom properties, events and methods; but it will require you to implement the drawing of the control presentation from scratch as well.
 
 :::info
-To learn how to implement a custom control, see the guide [here](/docs/basic/user-interface/controls/creating-controls).
+To learn how to implement a custom control, see the guide [here](/docs/basics/user-interface/controls/creating-controls).
 :::
 
 ## Templated Controls
@@ -97,5 +97,5 @@ To learn how to implement a custom control, see the guide [here](/docs/basic/use
 A templated control uses the _Avalonia UI_ **styling** system to substitute a tag in the UI layout with a
 
 :::info
-For more information about the concepts behind the _Avalonia UI_ **styling** system, see [here](/docs/basic/user-interface/styling).
+For more information about the concepts behind the _Avalonia UI_ **styling** system, see [here](/docs/basics/user-interface/styling).
 :::

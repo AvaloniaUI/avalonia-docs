@@ -85,7 +85,7 @@ import MenuIconScreenshot from '/img/reference/controls/menu/menu-icon.gif';
 ```
 
 :::info
-有关如何绑定命令的指导，请参见[这里](/docs/basic/user-interface/adding-interactivity.md)。
+有关如何绑定命令的指导，请参见[这里](/docs/basics/user-interface/adding-interactivity.md)。
 :::
 
 ## 菜单图标

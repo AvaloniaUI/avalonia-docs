@@ -49,7 +49,7 @@ namespace Avalonia.MusicStore.ViewModels
 вам необходимо добавить `data binding (рус: привязку данных)` для кнопки.
 
 :::info
-Подробнее о `data binding (рус: привязке данных)`, см. [здесь](/docs/basic/data/data-binding).
+Подробнее о `data binding (рус: привязке данных)`, см. [здесь](/docs/basics/data/data-binding).
 :::
 
 Для добавления кнопке `data binding (рус: привязки данных)`, выполните следующие действия:

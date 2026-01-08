@@ -14,7 +14,7 @@ The data grid displays repeating data in a customizable grid. The control can be
 The data grid needs to be bound to an observable collection in a view model that can be found in a related **data context**.
 
 :::info
-To review the concept behind the **data context**, see [here](/docs/basic/data/data-binding/data-context).
+To review the concept behind the **data context**, see [here](/docs/basics/data/data-binding/data-context).
 :::
 
 :::info
@@ -123,7 +123,7 @@ public class Person
 <img src={DataGridSortColumnScreenshot} alt="" />
 
 :::info
-These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](/docs/basic/data/data-binding).
+These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](/docs/basics/data/data-binding).
 :::
 
 Property names from the item class will generally not make good column names. This example adds custom header names to the grid. It also allows column reordering and resizing and disallows the default column sorting option:

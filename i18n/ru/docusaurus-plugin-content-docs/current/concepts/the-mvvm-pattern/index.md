@@ -30,7 +30,7 @@ MVVM is a more complex pattern of programming compared to the event-driven code-
 In fact, the code-behind pattern may well be easier for you to understand and maintain for a small simple application.
 
 :::info
-For details of how to program _Avalonia UI_ with the code-behind pattern, see [here](/docs/basic/user-interface/code-behind).
+For details of how to program _Avalonia UI_ with the code-behind pattern, see [here](/docs/basics/user-interface/code-behind).
 :::
 
 The advantages of using the MVVM pattern may only become apparent when an application grows and becomes more complex. You therefore have two development strategies to consider:

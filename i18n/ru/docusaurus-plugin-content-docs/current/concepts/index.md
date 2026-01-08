@@ -12,5 +12,5 @@ If you are new to _Avalonia UI_, we recommend that you complete the ['Get Starte
 :::
 
 :::tip
-If you are looking for practical advice on how to achieve any of the above, learn the [Basics](/docs/basic/).
+If you are looking for practical advice on how to achieve any of the above, learn the [Basics](/docs/basics/).
 :::

@@ -10,7 +10,7 @@ import DefiningPropertyPreviewScreenshot from '/img/guides/custom-controls/defin
 If you are creating a custom control, you will usually want it to have properties that can be set by the _Avalonia UI_ styling system.
 
 :::info
-For more information about how to use styles in _Avalonia UI_, see the guide [here](/docs/basic/user-interface/styling).
+For more information about how to use styles in _Avalonia UI_, see the guide [here](/docs/basics/user-interface/styling).
 :::
 
 On this page, you will see how to implement a property so that it can be changed by the _Avalonia UI_ styling system. This is a two step process:

@@ -10,5 +10,5 @@ description: REFERENCE
 * Псевдоклассы
 
 :::info
-Подробнее о концепции системы стилей в Avalonia UI, можно ознакомиться [здесь](/docs/basic/user-interface/styling).
+Подробнее о концепции системы стилей в Avalonia UI, можно ознакомиться [здесь](/docs/basics/user-interface/styling).
 :::

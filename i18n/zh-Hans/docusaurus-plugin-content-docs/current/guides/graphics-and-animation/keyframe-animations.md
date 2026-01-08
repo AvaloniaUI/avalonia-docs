@@ -28,7 +28,7 @@ import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-e
 您可以使用样式定义关键帧动画。
 
 :::info
-若要了解 _Avalonia UI_ 如何使用样式，请查看 [这里的概念](/docs/basic/user-interface/styling)。
+若要了解 _Avalonia UI_ 如何使用样式，请查看 [这里的概念](/docs/basics/user-interface/styling)。
 :::
 
 按照以下步骤使用 XAML 定义一个简单的颜色渐变动画：
