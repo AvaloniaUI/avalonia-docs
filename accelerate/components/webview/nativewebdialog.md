@@ -230,6 +230,29 @@ public bool Stop()
 
 Stops any ongoing navigation.
 
+### ShowPrintUI
+
+```csharp
+void ShowPrintUI();
+```
+
+Opens the print dialog to print the current web page.
+
+### PrintToPdfStreamAsync
+
+```csharp
+Task<Stream> PrintToPdfStreamAsync();
+```
+
+Provides the Pdf data of current web page asynchronously.
+
+:::note
+
+This API doesn't accept extended print options, such as Margin or Orientation.
+For wider platform support we recommend using custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
+
+:::
+
 ### TryGetCommandManager
 
 ```csharp
@@ -289,8 +312,13 @@ await tcs.Task;
 
 | Feature            | Windows | macOS | Linux | iOS   | Android | Browser |
 |--------------------|---------|-------|-------|-------|---------|---------|
-| Show               | ✔       | ✔     | ✔     | ✖     | ✖       | ✖       |
-| Show(Window)       | ✔       | ✔     | ✔*    | ✖     | ✖       | ✖       |
-| WebMessageReceived | ✔       | ✔     | ✖     | ✖     | ✖       | ✖       |
+| `Show`               | ✔       | ✔     | ✔     | ✖     | ✖       | ✖       |
+| `Show(Window)`       | ✔       | ✔     | ✔*    | ✖     | ✖       | ✖       |
+| `WebMessageReceived` | ✔       | ✔     | ✖     | ✖     | ✖       | ✖       |
+| `ShowPrintUI` | ✔                    | ✔     | ✔        | ✖     | ✖      | ✖       |
+| `PrintToPdfStreamAsync`  | ✔                    | ✔**     | ✔        | ✖     | ✖      | ✖       |
 
 \* Linux support may vary depending on the window manager
+
+\** MacOS doesn't allow extended PrintToPdfStreamAsync print options. We recommend using custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
+
