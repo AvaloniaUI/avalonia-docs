@@ -197,6 +197,29 @@ public bool Stop()
 
 Stops any ongoing navigation.
 
+### ShowPrintUI
+
+```csharp
+void ShowPrintUI();
+```
+
+Opens the print dialog to print the current web page.
+
+### PrintToPdfStreamAsync
+
+```csharp
+Task<Stream> PrintToPdfStreamAsync();
+```
+
+Provides the Pdf data of current web page asynchronously.
+
+:::note
+
+This API doesn't accept extended print options, such as Margin or Orientation.
+For wider platform support we recommend using custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
+
+:::
+
 ### TryGetCommandManager
 
 ```csharp
@@ -262,13 +285,17 @@ Asynchronously delays destruction of the native control during parent changes.
 
 ## Platform Support
 
-| Feature                | Windows WebView2-Edge | Linux | macOS/iOS WKWebView | Android | Browser |
+| Feature                | Windows WebView2-Edge | macOS/iOS WKWebView | Linux | Android | Browser |
 |------------------------|-----------------------|-------|---------------------|---------|---------|
-| `NativeWebView`        | ✔                     | ✖     | ✔                   | ✔      | ✖*      |
-| `TryGetCommandManager` | ✔                    | ✖     | ✔                   | ✔       | ✖*       |
-| `TryGetCookieManager`  | ✔                    | ✖     | ✔                   | ✖      | ✖*       |
+| `NativeWebView`        | ✔                     | ✔                   | ✖     | ✔      | ✖*      |
+| `TryGetCommandManager` | ✔                    | ✔                   | ✖     | ✔       | ✖*       |
+| `TryGetCookieManager`  | ✔                    | ✔                   | ✖     | ✔      | ✖*       |
+| `ShowPrintUI` | ✔                    | ✔                   | ✖      | ✖*     | ✖*       |
+| `PrintToPdfStreamAsync`  | ✔                    |  ✔**                   | ✖     | ✖*      | ✖*       |
 
-\* Support is possible, but wasn't implemented yet. Let us know if it's a blocker for you.
+\* Not yet implemented while possible. Let us know if it's a blocker for you.
+
+\** MacOS doesn't allow extended PrintToPdfStreamAsync print options. We recommend using custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
 
 :::note
 
