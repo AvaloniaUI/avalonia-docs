@@ -96,4 +96,12 @@ Starting from Avalonia 11.0 [Avalonia.Browser](https://www.nuget.org/packages/Av
 
 If you have not performed the step to install required workloads, you might encounter errors when running the app in your browser later (e.g. `System.DllNotFoundException: libSkiaSharp`) and you will need to rebuild again before the app will run.
 
+If you continue to encounter the `System.DllNotFoundException: libSkiaSharp` error even after installing the workloads, you may need to add the `WasmBuildNative` property. To do so, go to the properties of your project, locate the `PropertyGroup`, and add the line `<WasmBuildNative>true</WasmBuildNative>`, as below:
+
+```xml
+<PropertyGroup>
+	<WasmBuildNative>true</WasmBuildNative>
+</PropertyGroup>
+```
+
 Keep in mind, that WebAssembly in general as a technology is limited. .NET Multithreading is not supported by any browser and is only available starting .NET 8. Any normal app also has to comply with Browser sandboxing mechanism. And while Avalonia does its best to keep performance high, any WebAssembly GUI apps in some cases might be slow or with older browsers.
