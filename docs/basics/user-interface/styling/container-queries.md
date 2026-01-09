@@ -31,7 +31,7 @@ Container queries can be defined in XAML as the direct child of a control's `Sty
       </Style>
     </ContainerQuery>
   </StackPanel.Styles>
-<StackPanel>
+</StackPanel>
 ```
 
 They can also be part of a `ControlTheme`'s styles:
@@ -81,7 +81,7 @@ This makes them quite easy to use in themes targeting different screen sizes, or
       </ContainerQuery>
     </Style>
   </StackPanel.Styles>
-<StackPanel>
+</StackPanel>
 ```
 2. Styles declared in Queries can not affect the container or its ancestors. This is different from normal `Styles` being able to affect their parent control. Because container queries rely on the actual size of the container, having the container be affected by styles activated by its queries can cause cyclic behaviors where the container's size is being updated continuously by two or more queries.
 
