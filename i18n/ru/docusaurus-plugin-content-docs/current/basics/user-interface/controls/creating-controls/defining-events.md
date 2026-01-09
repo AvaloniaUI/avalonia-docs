@@ -49,4 +49,4 @@ public class MyCustomSlider : Control
 
 ## Дальнейшее изучение
 
-Подробную информацию смотрите по ссылке [Routed Events Deep Dive](../../../../concepts/input/routed-events.md)
+Подробную информацию смотрите по ссылке [Routed Events Deep Dive](/docs/concepts/input/routed-events.md)

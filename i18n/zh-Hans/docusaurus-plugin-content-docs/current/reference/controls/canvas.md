@@ -14,7 +14,7 @@ import CanvasChildOverlapScreenshot from '/img/reference/controls/canvas/canvas-
 <img src={CanvasContentZoneScreenshot} alt="" />
 
 :::info
-要回顾布局区域的概念，请参阅[这里](../../concepts/layout/layout-zones)。
+要回顾布局区域的概念，请参阅[这里](/docs/concepts/layout/layout-zones)。
 :::
 
 ## 常用属性

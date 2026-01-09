@@ -32,7 +32,7 @@ image.GestureRecognizers.Add(new ScrollGestureRecognizer()
 ## More Information
 
 :::info
-You can view more information on the available gesture recognizers [here](../../reference/gestures)
+You can view more information on the available gesture recognizers [here](/docs/reference/gestures)
 
 You can view the source for related classes
 

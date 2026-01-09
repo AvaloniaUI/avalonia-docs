@@ -14,7 +14,7 @@ The position of each child control is defined as two distances between edge the 
 <img src={CanvasContentZoneScreenshot} alt="" />
 
 :::info
-To review the concept of layout zones, see [here](../../concepts/layout/layout-zones).
+To review the concept of layout zones, see [here](/docs/concepts/layout/layout-zones).
 :::
 
 ## Useful Properties

@@ -43,4 +43,4 @@ public class MyCustomButton : Button
 
 ## Дальнейшее изучение
 
-Подробнее смотрите по [ссылке](../../../../guides/custom-controls/defining-properties.md)
+Подробнее смотрите по [ссылке](/docs/guides/custom-controls/defining-properties.md)

@@ -20,7 +20,7 @@ import BindReactiveCommandScreenshot from '/img/guides/data-binding/bind-reactiv
 本指南假设您正在使用MVVM实现模式，并且您的视图模型基于 _ReactiveUI_ 框架。
 
 :::info
-要了解MVVM实现模式背后的概念，请参阅[此处](../../concepts/the-mvvm-pattern/)。
+要了解MVVM实现模式背后的概念，请参阅[此处](/docs/concepts/the-mvvm-pattern/)。
 :::
 
 如果您使用**Avalonia MVVM Application**解决方案模板创建了应用程序，那么您的解决方案已经包含 _ReactiveUI_ 框架包，您可以像这样引用它：

@@ -40,4 +40,4 @@ In this example, a custom property called `RepeatCount` is defined as an integer
 
 ## Further Reading
 
-For more information see the [Defining Properties How-To](../../../../guides/custom-controls/defining-properties.md)
+For more information see the [Defining Properties How-To](/docs/guides/custom-controls/defining-properties.md)

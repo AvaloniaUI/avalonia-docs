@@ -21,7 +21,7 @@ In essence, the styling mechanism has two steps: selection and substitution. The
 The _Avalonia UI_ styling system's use of 'class' labels on control elements is analogous to how CSS (cascading style sheets) work with HTML elements.
 :::
 
-The styling system implements cascading styles by searching the [logical tree](../../../concepts/control-trees.md) upwards from a control, during the selection step. This means styles defined at the highest level of the application (the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
+The styling system implements cascading styles by searching the [logical tree](/docs/concepts/control-trees.md) upwards from a control, during the selection step. This means styles defined at the highest level of the application (the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
 
 When a match is located by the selection step, then the matched control's properties are altered according to the setters in the style.
 
@@ -37,7 +37,7 @@ The XAML for a style has two parts: a selector attribute, and one or more setter
 ```
 
 :::info
-The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (cascading style sheets). For detailed reference information, see [here](../../../reference/styles/style-selector-syntax.md). 
+The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (cascading style sheets). For detailed reference information, see [here](/docs/reference/styles/style-selector-syntax.md). 
 :::
 
 ## Example
@@ -85,7 +85,7 @@ The style selector defines what controls the style will act upon. The selector u
 This selector will match all controls with a style key of `TargetControlClass`, having a style class of `styleClassName`.
 
 :::info
-A full list of selectors can be found [here](../../../reference/styles/style-selector-syntax.md).
+A full list of selectors can be found [here](/docs/reference/styles/style-selector-syntax.md).
 :::
 
 ## Setters
@@ -100,12 +100,12 @@ Setters describe what will happen when the selector matches a control. They are 
 Whenever a style is matched with a control, all of the setters within the style will be applied to the control.
 
 :::info
-For more information on setters see [here](../../../guides/styles-and-resources/property-setters.md).
+For more information on setters see [here](/docs/guides/styles-and-resources/property-setters.md).
 :::
 
 ## Nested Styles
 
-Styles can be nested in other styles. To nest a style, simply include the child style as a child of the parent `<Style>` element, and start the selector with the [`Nesting Selector (^)`](../../../reference/styles/style-selector-syntax.md#nesting):
+Styles can be nested in other styles. To nest a style, simply include the child style as a child of the parent `<Style>` element, and start the selector with the [`Nesting Selector (^)`](/docs/reference/styles/style-selector-syntax.md#nesting):
 
 ```xml
 <Style Selector="TextBlock.h1">
@@ -153,11 +153,11 @@ Before Avalonia 11, the style key was overridden by implementing `IStyleable` an
 Resources are often used with styles to help maintain consistent presentation. Resources can help define standard colors and icons in an application; or across multiple applications when included from separate files.
 
 :::info
-For guidance on how to use resources in you application, see [here](../../../guides/styles-and-resources/resources.md).
+For guidance on how to use resources in you application, see [here](/docs/guides/styles-and-resources/resources.md).
 :::
 
 ## Further Information
 
 :::info
-For guidance on how to share styles by including a styles file, see [here](../../../guides/styles-and-resources/how-to-use-included-styles.md).
+For guidance on how to share styles by including a styles file, see [here](/docs/guides/styles-and-resources/how-to-use-included-styles.md).
 :::

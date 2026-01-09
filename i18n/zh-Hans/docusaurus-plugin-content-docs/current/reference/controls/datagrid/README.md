@@ -14,7 +14,7 @@ import DataGridColumnTypesScreenshot from '/img/reference/controls/datagrid/data
 数据表格需要绑定到一个可观察的集合（Observable Collection），该集合可以在相关的**数据上下文**中找到。
 
 :::info
-要了解**数据上下文**背后的概念，请查看[这里](../../../basics/data/data-binding/data-context)。
+要了解**数据上下文**背后的概念，请查看[这里](/docs/basics/data/data-binding/data-context)。
 :::
 
 :::info
@@ -123,7 +123,7 @@ public class Person
 <img src={DataGridSortColumnScreenshot} alt="" />
 
 :::info
-这些示例使用了MVVM模式和数据绑定到一个`ObservableCollection`。要了解更多有关数据绑定背后的概念，请参阅[这里](../../../basics/data/data-binding)。
+这些示例使用了MVVM模式和数据绑定到一个`ObservableCollection`。要了解更多有关数据绑定背后的概念，请参阅[这里](/docs/basics/data/data-binding)。
 :::
 
 通常来说，从数据源中获取的属性名称通常不会成为合适的列名。下面这个示例为表格添加了自定义的列头名称。它还允许列重新排序和调整大小，并禁用了默认的列排序选项：

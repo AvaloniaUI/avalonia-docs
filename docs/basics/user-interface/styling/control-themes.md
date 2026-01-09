@@ -24,7 +24,7 @@ Control themes are themselves styles, but with some important differences:
 - Control themes are assigned to a control by setting the `Theme` property, usually using the `{StaticResource}` markup extension
 
 :::info
-Control themes are typically applied to [templated (lookless)](../controls/creating-controls/choosing-a-custom-control-type.md) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
+Control themes are typically applied to [templated (lookless)](/docs/basics/user-interface/controls/creating-controls/choosing-a-custom-control-type.md) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
 :::
 
 ## Example: Round Button
@@ -81,7 +81,7 @@ The following example shows a simple `Button` theme which displays a button with
 
 ## Interaction in Control Themes
 
-Like standard styles, control themes support [nested styles](../styling/styles.md#nesting-styles) which can be used to add interactions such as pointer-over and pressed states.
+Like standard styles, control themes support [nested styles](/docs/basics/user-interface/styling/styles.md#nested-styles) which can be used to add interactions such as pointer-over and pressed states.
 
 ## Example: Round Button Hover State
 

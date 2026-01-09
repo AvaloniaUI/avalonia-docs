@@ -35,7 +35,7 @@ Avalonia Fluent 主题受到微软的 Fluent Design System 的启发，该系统
 ```
 
 :::note
-如果需要指定主题为暗色或浅色变体，请参阅[主题变体](../../../../guides/styles-and-resources/how-to-use-theme-variants.md)文档。
+如果需要指定主题为暗色或浅色变体，请参阅[主题变体](/docs/guides/styles-and-resources/how-to-use-theme-variants.md)文档。
 :::
 
 ## 更改主题密度

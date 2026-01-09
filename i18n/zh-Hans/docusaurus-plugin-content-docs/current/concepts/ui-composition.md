@@ -35,7 +35,7 @@ _Avalonia UI_包含大量内置控件，可以满足大多数UI需求。
 稍微复杂一些的应用程序可能需要使用内置布局控件在窗口的内容区域中排列多个其他内置控件（上图右侧）。
 
 :::info
-要查看Avalonia UI内置控件的完整范围，请参阅此处的参考部分[here](../reference/controls/)。
+要查看Avalonia UI内置控件的完整范围，请参阅此处的参考部分[here](/docs/reference/controls/)。
 :::
 
 ## 逻辑树和视觉树
@@ -59,7 +59,7 @@ _Avalonia UI_包含大量内置控件，可以满足大多数UI需求。
 您可以将用户控件添加到主窗口的内容区域中，以表示“页面视图”（上图左侧）。这允许您使用自己的用户控件（XAML和代码文件）为每个页面实现布局和功能，从而创建一个更复杂的应用程序。
 
 :::info
-有关如何使用视图实现多页面应用程序的更多信息，请参阅此处的指南[here](../guides/development-guides/how-to-implement-multi-page-apps.md)。
+有关如何使用视图实现多页面应用程序的更多信息，请参阅此处的指南[here](/docs/guides/development-guides/how-to-implement-multi-page-apps.md)。
 :::
 
 用户控件的另一个用途是作为组件控件（上图右侧）。您可能最初这样做是为了减少窗口或页面视图的复杂性，但随后您可能还会（也许稍后）在另一个页面上重用生成的组件。
@@ -87,7 +87,7 @@ For tutorials about `DataTemplates` see [Avalonia.Samples](https://github.com/Av
 在不太可能找到一个适用于您的应用程序UI需求的_Avalonia UI_内置控件的情况下，您可以从头开始创建自定义控件。这允许您定义自己的自定义属性、事件和方法；但它还需要您从头开始实现控件呈现的绘制。
 
 :::info
-要了解如何实现自定义控件，请参阅[这里](../basics/user-interface/controls/creating-controls)的指南。
+要了解如何实现自定义控件，请参阅[这里](/docs/basics/user-interface/controls/creating-controls)的指南。
 :::
 
 ## 模板化控件
@@ -95,5 +95,5 @@ For tutorials about `DataTemplates` see [Avalonia.Samples](https://github.com/Av
 模板化控件使用_Avalonia UI_的**样式**系统，将UI布局中的一个标签替换为一个
 
 :::info
-有关_Avalonia UI_ **样式**系统背后的概念的更多信息，请参阅[这里](../basics/user-interface/styling)。
+有关_Avalonia UI_ **样式**系统背后的概念的更多信息，请参阅[这里](/docs/basics/user-interface/styling)。
 :::

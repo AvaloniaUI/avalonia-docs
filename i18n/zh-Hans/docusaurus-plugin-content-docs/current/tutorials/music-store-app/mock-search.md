@@ -29,7 +29,7 @@ namespace Avalonia.MusicStore.ViewModels
 这将为您的视图模型添加重要的扩展方法 `RaiseAndSetIfChanged`，并允许您为其中的属性提供通知更改的能力。
 
 :::info
-要了解 MVVM 模式和通知背后的概念，请参阅[此处](../../concepts/the-mvvm-pattern/)。
+要了解 MVVM 模式和通知背后的概念，请参阅[此处](/docs/concepts/the-mvvm-pattern/)。
 :::
 
 在这个阶段，您将为搜索应用程序逻辑创建两个属性：

@@ -50,7 +50,7 @@ In this example, the pseudo class selector changes properties inside a control t
 Other pseudo classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
 
 :::info
-For more detail about pseudo classes, see the reference [here](../../../reference/styles/pseudo-classes.md).
+For more detail about pseudo classes, see the reference [here](/docs/reference/styles/pseudo-classes.md).
 :::
 
 ## Conditional Classes

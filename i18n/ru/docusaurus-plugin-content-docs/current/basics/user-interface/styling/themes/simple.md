@@ -35,5 +35,5 @@ title: Тема Simple
 ```
 
 :::note
-Для добавление вариантов темной и светлой темы, см. документацию [Theme Variants](../../../../guides/styles-and-resources/how-to-use-theme-variants.md).
+Для добавление вариантов темной и светлой темы, см. документацию [Theme Variants](/docs/guides/styles-and-resources/how-to-use-theme-variants.md).
 :::

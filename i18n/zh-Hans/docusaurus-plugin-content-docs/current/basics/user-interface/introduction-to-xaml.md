@@ -49,7 +49,7 @@ _Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记�
 您可以通过添加表示 _Avalonia UI_ 控件之一的XML元素来构建应用程序的用户界面。元素标签使用与控件类名相同的名称。
 
 :::info
-一个UI可以由多种不同类型的控件组成。要了解有关UI组合概念的更多信息，请参阅[这里](../../concepts/ui-composition.md)。
+一个UI可以由多种不同类型的控件组成。要了解有关UI组合概念的更多信息，请参阅[这里](/docs/concepts/ui-composition.md)。
 :::
 
 例如，下面的XAML将按钮添加到窗口的内容中：
@@ -62,7 +62,7 @@ _Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记�
 ```
 
 :::info
-要获取 _Avalonia UI_ 内置控件的完整列表，请参阅[此处](../../reference/controls)的参考资料。
+要获取 _Avalonia UI_ 内置控件的完整列表，请参阅[此处](/docs/reference/controls)的参考资料。
 :::
 
 ## 控件属性
@@ -103,7 +103,7 @@ _Avalonia UI_ 使用XAML来定义用户界面。XAML是一种基于XML的标记�
 ```
 
 :::info
-有关数据绑定背后的概念的更多信息，请参阅[这里](../data/data-binding)。
+有关数据绑定背后的概念的更多信息，请参阅[这里](/docs/basics/data/data-binding)。
 :::
 
 ## Code-behind文件
@@ -135,7 +135,7 @@ xmlns:alias="definition"
 命名空间声明的定义部分可以是URL或代码定义。这两者都用于定位文件中元素的定义。
 
 :::info
-有关命名空间声明的详细指导，请参阅[这里](../../guides/custom-controls/how-to-create-a-custom-controls-library.md).
+有关命名空间声明的详细指导，请参阅[这里](/docs/guides/custom-controls/how-to-create-a-custom-controls-library.md).
 :::
 
 命名空间属性的定义部分有两种有效的语法选项，可以引用代码：

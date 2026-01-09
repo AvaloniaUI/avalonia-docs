@@ -63,4 +63,4 @@ Avalonia 包含一组派生自 `Panel` 的元素。这些 `Panel` 元素可实�
 
 * [面板概述](panels-overview.md)
 * [Alignment、Margin 和 Padding](alignment-margins-and-padding.md)
-* [创建自定义面板](../../../guides/custom-controls/create-a-custom-panel.md)
+* [创建自定义面板](/docs/guides/custom-controls/create-a-custom-panel.md)

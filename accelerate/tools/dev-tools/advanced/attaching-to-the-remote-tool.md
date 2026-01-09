@@ -69,7 +69,7 @@ this.AttachDeveloperTools(o =>
 4. Start `Developer Tools` (via avdt command)
 5. Launch your application on second machine press `F12` to connect.
 
-![Connected via VPN](../../../../static/img/dev-tools//remote-connect-via-vpn.png)
+![Connected via VPN](../../../../static/img/dev-tools/remote-connect-via-vpn.png)
 
 
 ## Changing default port

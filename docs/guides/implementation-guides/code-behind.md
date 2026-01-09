@@ -10,7 +10,7 @@ This guide will show you how to use the code-behind programming pattern with _Av
 You can use this pattern for small and simple applications. For large or complex applications it is recommended that you use the alternative MVVM pattern.
 
 :::info
-For information about the concept of the MVVM programming pattern, see [here](../../concepts/the-mvvm-pattern/).
+For information about the concept of the MVVM programming pattern, see [here](/docs/concepts/the-mvvm-pattern/).
 :::
 
 ## Code-behind File
@@ -120,7 +120,7 @@ public partial class MainWindow : Window
 Notice that an event handler in _Avalonia UI_ code uses a special argument of class `RoutedEventArgs`. This includes information about how the event has been generated and propagated.
 
 :::info
-For more information on the concepts of event routing, see [here](../../concepts/input/routed-events.md).
+For more information on the concepts of event routing, see [here](/docs/concepts/input/routed-events.md).
 :::
 
  

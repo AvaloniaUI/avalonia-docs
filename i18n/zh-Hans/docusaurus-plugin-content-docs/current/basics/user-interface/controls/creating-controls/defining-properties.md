@@ -42,4 +42,4 @@ public class MyCustomButton : Button
 
 ## 进一步阅读
 
-如需更多信息，请参阅[定义属性指南](../../../../guides/custom-controls/defining-properties.md)
+如需更多信息，请参阅[定义属性指南](/docs/guides/custom-controls/defining-properties.md)

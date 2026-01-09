@@ -3,7 +3,7 @@ id: index
 title: 主题
 ---
 
-在 Avalonia 中，主题是用于内置控件的完整[控件主题](../control-themes)和[主题资源](../../../../guides/styles-and-resources/how-to-use-theme-variants)的集合。
+在 Avalonia 中，主题是用于内置控件的完整[控件主题](../control-themes)和[主题资源](/docs/guides/styles-and-resources/how-to-use-theme-variants)的集合。
 
 
 ## 官方主题

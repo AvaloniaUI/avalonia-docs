@@ -55,6 +55,6 @@ If you are using `Task`s to run some work asynchronously, you can setup `TaskSch
 
 ## Exceptions from Reactive UI
 
-If you are using Avalonia together with [ReactiveUI](../concepts/the-mvvm-pattern/avalonia-ui-and-mvvm#reactiveui), you can subscribe to their `RxApp.DefaultExceptionHandler`. For more information please refer to [ReactiveUI Default Exception Handler](https://www.reactiveui.net/docs/handbook/default-exception-handler/).
+If you are using Avalonia together with [ReactiveUI](/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm#reactiveui), you can subscribe to their `RxApp.DefaultExceptionHandler`. For more information please refer to [ReactiveUI Default Exception Handler](https://www.reactiveui.net/docs/handbook/default-exception-handler/).
 
 Note, `RxApp.DefaultExceptionHandler` should be set before any ReactiveCommand was created. Otherwise, custom handler won't be used. You can set it in your application entry point or before any Avalonia view or window was created.

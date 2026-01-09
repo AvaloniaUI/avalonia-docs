@@ -19,14 +19,14 @@ import MusicStoreDialogContentDiagram from '/img/gitbook-import/assets/image (9)
 <img className="center" src={MusicStoreDialogContentDiagram} alt="" />
 
 :::info
-Подробнее об элементе `dock panel`, см. [здесь](../../reference/controls/dockpanel.md).
+Подробнее об элементе `dock panel`, см. [здесь](/docs/reference/controls/dockpanel.md).
 :::
 
 `Dock panel` будет расположена внутри `user control` из _Avalonia UI_.
 Это сделано для того, чтобы отделить код отображения диалогового окна от кода управляющего им компонентов.
 
 :::info
-Подробнее о `Компоновке UI`, см. [здесь](../../concepts/ui-composition.md).
+Подробнее о `Компоновке UI`, см. [здесь](/docs/concepts/ui-composition.md).
 :::
 
 Для добавления `user control` и составных компонентов диалогового окна, выполните следующие действия:

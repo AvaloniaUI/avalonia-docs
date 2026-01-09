@@ -207,7 +207,7 @@ IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}"
 转换器是数据绑定表达式的扩展，可以在传递给绑定控件之前转换绑定值。`IsNull` 转换器返回一个布尔值，当值对象为 null 时为 true。
 
 :::info
-有关 _Avalonia UI_ 内置绑定转换器的更多信息，请参阅[此处](../../reference/built-in-data-binding-converters.md)的参考文档。
+有关 _Avalonia UI_ 内置绑定转换器的更多信息，请参阅[此处](/docs/reference/built-in-data-binding-converters.md)的参考文档。
 :::
 
 - 单击 **调试** 编译并运行项目。

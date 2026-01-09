@@ -13,7 +13,7 @@ The WebView component includes three main APIs:
 
 ## Installation
 
-See the [Installation Guide](../../installation.md) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/accelerate/installation.md) for step-by-step instructions on how to install Accelerate components.
 
 Add the WebView package to your project:
 

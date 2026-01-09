@@ -5,7 +5,7 @@ This guide provides a practical introduction to rendering Markdown in Avalonia a
 
 ## Installation
 
-See the [Installation Guide](../../installation.md) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/accelerate/installation.md) for step-by-step instructions on how to install Accelerate components.
 
 Add the Markdown package to your project:
 

@@ -79,7 +79,7 @@ import MusicStoreWrapPanelScreenshot from '/img/tutorials/music-store-app/add-co
 因此，当 _Avalonia UI_ 搜索数据模板时，它总是可以找到视图定位器。
 
 :::info
-有关**数据模板**概念的更多详细信息，请参阅[这里](../../concepts/templates/)。
+有关**数据模板**概念的更多详细信息，请参阅[这里](/docs/concepts/templates/)。
 :::
 
 视图定位器作为视图模型（在本例中是专辑视图模型）的数据模板，满足以下条件：

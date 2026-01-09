@@ -11,7 +11,7 @@ import ControlContentTypeScreenshot from '/img/concepts/templates/content-type.p
 You have probably seen what happens if you put a button control into the content zone of an _Avalonia UI_ window.
 
 :::info
-The concept of the zones of an _Avalonia UI_ control is discussed [here](../layout/layout-zones).
+The concept of the zones of an _Avalonia UI_ control is discussed [here](/docs/concepts/layout/layout-zones).
 :::
 
 For example:

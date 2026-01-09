@@ -5,7 +5,7 @@ title: Window 窗口
 
 `Window` 是一个顶级的 [`ContentControl`](contentcontrol)。
 
-通常情况下，你不会直接创建 `Window` 类的实例；相反，通常会为应用程序要显示的每种类型的窗口子类化 `Window` 类。有关如何从模板创建新窗口类的信息，请参见 [快速入门](../../get-started/getting-started)。
+通常情况下，你不会直接创建 `Window` 类的实例；相反，通常会为应用程序要显示的每种类型的窗口子类化 `Window` 类。有关如何从模板创建新窗口类的信息，请参见 [快速入门](/docs/get-started/getting-started)。
 
 ### 常见属性
 
@@ -47,7 +47,7 @@ window.Hide();
 window.Show();
 ```
 
-另见 [阻止窗口关闭](../controls/window#prevent-a-window-from-closing)
+另见 [阻止窗口关闭](#阻止窗口关闭)
 
 ### 以对话框形式显示窗口
 
@@ -115,4 +115,4 @@ window.Closing += (s, e) =>
 
 ## 额外资源
 
-- [主窗口](../../get-started/test-drive/main-window)
+- [主窗口](/docs/concepts/the-main-window)

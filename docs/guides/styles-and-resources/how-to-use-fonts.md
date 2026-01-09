@@ -86,7 +86,7 @@ public sealed class InterFontCollection : EmbeddedFontCollection
 
 Here, `Inter` is the name of the font family and `avares://Avalonia.Fonts.Inter/Assets` is the resource locator for the directory containing the font files. The actual names of the font files are not significant since the `EmbeddedFontCollection` will search every file in the given directory and only load those fonts with the given font family name.
 
-For more information on how to create a resource locator, see [Assets](../../basics/user-interface/assets) for a primer on including assets in your project.
+For more information on how to create a resource locator, see [Assets](/docs/basics/user-interface/assets) for a primer on including assets in your project.
 
 ### Adding the Font Collection
 

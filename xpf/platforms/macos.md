@@ -47,7 +47,7 @@ Calling this method on macOS:
 
 ### macOS Custom Keyboard Mapping
 
-For more flexible key mapping you can [add custom key mappings](../advanced/key-mapping).
+For more flexible key mapping you can [add custom key mappings](/xpf/advanced/key-mapping).
 
 ## Context Menus <MinVersion version="1.6" /> 
 

@@ -52,7 +52,7 @@ namespace RoutingExample
 
 **FirstView.xaml.cs**
 
-如果我们需要处理视图模型的激活和停用，那么我们在视图中添加一个调用WhenActivated的方法。一般来说，一个经验法则是始终在视图中添加WhenActivated，详见[Activation](../../concepts/reactiveui/view-activation)文档了解更多信息。
+如果我们需要处理视图模型的激活和停用，那么我们在视图中添加一个调用WhenActivated的方法。一般来说，一个经验法则是始终在视图中添加WhenActivated，详见[Activation](/docs/concepts/reactiveui/view-activation)文档了解更多信息。
 
 ```csharp
 namespace RoutingExample
