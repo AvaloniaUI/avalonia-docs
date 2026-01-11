@@ -6,7 +6,8 @@ export const DocsCardList = ({ list }) => {
     console.log('list', list);
     return (
         <div className='card-container-setup'>
-            {list.map(item => <DocsCard key={item.docId} label={item.label} link={item.href} />)}
+            {list.filter(item => !item.className?.includes('hidden'))
+                .map(item => <DocsCard key={item.docId} label={item.label} link={item.href} />)}
         </div>
     )
 }
