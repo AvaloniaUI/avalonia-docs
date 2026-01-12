@@ -1,0 +1,298 @@
+html[data-theme='light'] {
+  // Customer Portal navbar colors (light mode)
+  --navbar-link-c: var(--color-gray-700);
+
+  --navbar-separator-bg-c: var(--color-gray-300);
+
+  --ifm-dropdown-background-color: var(--token-secondary-bg-c);
+
+  --navbar-icon-link-c: var(--color-gray-500);
+}
+
+html[data-theme='dark'] {
+  // Customer Portal navbar colors (dark mode)
+  --navbar-link-c: var(--color-gray-300);
+
+  --navbar-separator-bg-c: var(--color-gray-700);
+
+  --navbar-icon-link-c: #fff;
+}
+
+:root {
+  --navbar-dropdown-icon: var(--ifm-menu-link-sublist-icon);
+}
+
+//overrides
+#__docusaurus {
+
+  .navbar {
+    &__inner {
+      width: initial;
+      flex-grow: 1;
+      flex-wrap: nowrap;
+    }
+
+    &__items {
+      min-width: auto;
+
+      &:not(.navbar__items--right) {
+        .navbar__link {
+          @media (max-width: 996px) {
+            display: none;
+          }
+        }
+        :not(.cta) {
+          &.navbar__link {
+            @media (min-width: 996px) {
+              display: flex;
+            }
+
+            align-self: stretch;
+            align-items: center;
+    
+            position: relative;
+    
+            &::after {
+              content: '';
+              position: absolute;
+              height: 2px;
+              left: var(--ifm-navbar-item-padding-horizontal);
+              right: var(--ifm-navbar-item-padding-horizontal);
+              bottom: 0;
+    
+              background: rgba(0, 0, 0, 0);
+    
+              transition: background-color 0.2s ease-out;
+            }
+    
+            &--active {
+              color: var(--ifm-link-color);
+    
+              &::after {
+                background: var(--ifm-link-color);
+              }
+            }
+          }
+        }
+      }
+
+      .cta {
+        display: flex;
+        align-items: center;
+        align-self: initial;
+
+        padding: 0.675rem 0.625rem;
+
+        // Customer Portal brand button style
+        background: var(--color-brand-500);
+
+        color: #fff;
+
+        border-radius: 0.5rem;
+
+        white-space: nowrap;
+
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 100%;
+
+        margin-inline-start: 0.5rem;
+
+        @media (max-width: 1400px) {
+          display: none;
+        }
+
+        &:hover,
+        &:active {
+          background: var(--color-brand-600);
+          color: #fff !important;
+        }
+
+        &::after {
+          content: '';
+          width: 12px;
+          height: 12px;
+          mask-size: 100% 100%;
+          background-color: currentColor;
+          mask-image: url("../../static/icons/arrow-forward-outline.svg");
+          margin-inline-start: 0.125rem;
+        }
+
+        svg {
+          margin-inline-start: 0.125rem;
+
+          &[class^='iconExternalLink'] {
+            display: none;
+          }
+        }
+      }
+
+      &--right {
+        flex-grow: 1;
+
+        .icon-link,
+        [class*='toggle_'] {
+          padding: 0.5rem;
+          display: flex;
+
+          transition: opacity 0.2s ease-out;
+          color: var(--navbar-icon-link-c);
+
+          &:hover,
+          &:focus,
+          &:active {
+            opacity: 0.7;
+          }
+        }
+
+        .icon-link {
+          &-mask {
+            &::before {
+              content: '';
+              height: 16px;
+              display: flex;
+              background-color: currentColor;
+              mask-repeat: no-repeat;
+              mask-position: center;
+              mask-size: 100% 100%;
+            }
+          }
+
+          &-github {
+            &::before {
+              mask-image: url("../../static/logos/github.svg");
+              width: 17px;
+            }
+          }
+    
+          &-twitter {
+            &::before {
+              mask-image: url("../../static/logos/twitter.svg");
+              width: 19px;
+            }
+          }
+        }
+
+        div {
+          &.dropdown {
+            //version dropdown
+            &:nth-of-type(1) {
+              @media (max-width: 996px) {
+                display: none;
+              }
+            }
+            //community and support dropdowns
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+              @media (max-width: 1216px) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        //theme toggle - before GitHub icon
+        [class*='toggle_'] {
+          order: 10;
+        }
+
+        //github icon
+        .header-github-link {
+          order: 20;
+        }
+
+        //login CTA - last item
+        .cta {
+          order: 30;
+        }
+      }
+    }
+
+    &__item {
+      transition: opacity 0.2s ease-out;
+
+      display: inline-block;
+
+      &.dropdown {
+        align-self: stretch;
+        display: flex;
+
+        .navbar__link {
+          display: flex;
+          align-items: center;
+
+          &::after {
+            position: static;
+
+            border: none;
+
+            background: var(--ifm-menu-link-sublist-icon) 50% / 0.5rem 0.3rem;
+            background-repeat: no-repeat;
+
+            min-width: 0.5rem;
+            min-height: 0.25rem;
+
+            transform: rotate(180deg) translateY(-0.125rem);
+          }
+        }
+
+        .dropdown__menu {
+          top: 100%;
+        }
+      }
+
+      &:not(.navbar__link--active) {
+        &.navbar__link {
+          &:hover {
+            color: var(--ifm-link-color);
+          }
+        }
+      }
+
+      &:not(.dropdown):not(.cta):not(.icon-link-mask) {
+        
+      }
+    }
+
+    &__link {
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 17px;
+
+      color: var(--navbar-link-c);
+    }
+
+    &__brand {
+      display: none;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    .separator {
+      width: 1px;
+      height: 1.75rem;
+      background: var(--navbar-separator-bg-c);
+
+      margin-inline-start: 0.5rem;
+
+      // Hide first separator on mobile (appears alone after "More" is hidden)
+      @media (max-width: 996px) {
+        display: none;
+      }
+      margin-inline-end: 0.5rem;
+    }
+
+    .language {
+      padding: 0;
+      margin-inline-start: calc(-1 * var(--ifm-navbar-item-padding-horizontal));
+      margin-inline-end: -0.25rem;
+
+      &::after {
+        // Hide the chevron icon
+        display: none;
+      }
+    }
+  }
+}

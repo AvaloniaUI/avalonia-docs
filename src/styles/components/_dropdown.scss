@@ -1,0 +1,330 @@
+// Dropdown Styles
+
+// Dropdown menu animation (matches Customer Portal)
+.dropdown__menu {
+  animation: dropdownMenu 0.15s ease-out;
+}
+
+@keyframes dropdownMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dropdown {
+  > .navbar__link {
+    display: flex;
+    align-items: center;
+
+    &:after {
+      content: '';
+      border: none;
+      position: static;
+      top: auto;
+      transform: none;
+      width: 12px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%23888888'/%3E%3C/svg%3E");
+      background-size: 12px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &:hover > .navbar__link:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%231a90ff'/%3E%3C/svg%3E") !important;
+  }
+}
+
+html[data-theme='dark'] .dropdown > .navbar__link:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+.dropdown__menu {
+  min-width: 20rem;
+  margin-top: 0.225rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme='dark'] .dropdown__menu {
+  border-color: #22284A;
+  background-color: #111530;
+}
+
+// Dropdown link styling (matches Customer Portal)
+.dropdown__link {
+  padding: 0.375rem 1rem;
+  color: var(--color-gray-700);
+  transition: color 0.15s ease-out;
+
+  &:hover {
+    color: var(--ifm-font-color-base);
+    background-color: transparent;
+  }
+}
+
+html[data-theme='dark'] .dropdown__link {
+  color: var(--color-gray-300);
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+// Avalonia dropdown styles
+.avalonia-dropdown {
+  + ul.dropdown__menu {
+    background-color: rgb(var(--docs-color-secondary-900) / 1);
+    padding: 0;
+  }
+
+  .sdk-link {
+    margin-left: -0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    color: inherit;
+    font-size: 0.75rem;
+
+    &:hover {
+      background-color: rgb(var(--docs-color-secondary-700) / 1);
+    }
+
+    > img {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+
+  .sdk-ul {
+    margin-top: 0.5rem;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding-left: 0;
+
+    > li {
+      flex-basis: 48%;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  :is(h1, h2, h3, h4, h5) {
+    font-weight: 500;
+  }
+
+  h3 {
+    font-weight: 700 !important;
+  }
+}
+
+.sdks-dropdown {
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+}
+
+.resources-dropdown-menu {
+  h2 {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+// SDK menu visibility
+[data-dropdown-sdks] {
+  display: none;
+}
+
+body:not([data-sdk-menu]) [data-dropdown-sdks='web'],
+body[data-sdk-menu='web'] [data-dropdown-sdks='web'] {
+  display: flex;
+}
+
+body[data-sdk-menu='mobile'] [data-dropdown-sdks='mobile'] {
+  display: flex;
+}
+
+body[data-sdk-menu='plugin'] [data-dropdown-sdks='plugin'] {
+  display: flex;
+}
+
+[data-dropdown-sdks-menu] {
+  border: 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: transparent;
+  padding-left: 1rem;
+}
+
+body[data-sdk-menu='web'] [data-dropdown-sdks-menu='web'],
+body[data-sdk-menu='mobile'] [data-dropdown-sdks-menu='mobile'],
+body[data-sdk-menu='plugin'] [data-dropdown-sdks-menu='plugin'] {
+  border-left-color: $primary-color;
+}
+
+// "More" dropdown styling - matches UI Dropdown component (without border on button)
+// Uses #__docusaurus prefix to ensure higher specificity than navbar styles
+#__docusaurus .navbar__item.dropdown:has(.navbar__link--community) {
+  // Hide from desktop navbar on mobile (it appears in mobile sidebar instead)
+  @media (max-width: 996px) {
+    display: none;
+  }
+
+  .navbar__link--community {
+    // Button styling - like dropdown-toggle but NO border, NO hover bg
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    // Horizontal padding inherited from .navbar__link
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: color 0.15s ease-out;
+    background: transparent !important;
+    color: var(--navbar-link-c);
+    border: none !important;
+    box-shadow: none !important;
+
+    &:hover {
+      background: transparent !important;
+    }
+
+    // Custom chevron icon matching the UI component
+    &::after {
+      content: '';
+      border: none;
+      position: static;
+      top: auto;
+      transform: none;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      min-height: 20px;
+      // Use background shorthand to fully override navbar styles
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79199 7.396L10.0003 12.6043L15.2087 7.396' stroke='%23667085' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  // When dropdown container is hovered (including menu items), keep text blue
+  &:hover .navbar__link--community {
+    color: var(--color-brand-500);
+  }
+
+  // When dropdown is open, set text color to brand
+  &.dropdown--show .navbar__link--community {
+    color: var(--color-brand-500);
+  }
+
+  &.dropdown--show .navbar__link--community::after,
+  &:hover .navbar__link--community::after {
+    transform: rotate(180deg);
+  }
+
+  // Dropdown menu styling - matches Dropdown component
+  // Use padding-top with negative margin to create hover "safe zone"
+  .dropdown__menu {
+    min-width: 260px;
+    margin-top: 0;
+    padding: 0.75rem;
+    padding-top: calc(0.75rem); // extra padding for hover zone
+    border-radius: 1rem;
+    background-color: #fff;
+    border: 1px solid #e4e7ec;
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+
+    // Invisible extended hit area above the menu
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      height: 10px;
+    }
+  }
+
+  // Dropdown link styling - matches DropdownItem component
+  .dropdown__link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--navbar-link-c);
+    transition: background-color 0.15s ease-out;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+      color: var(--navbar-link-c);
+    }
+
+    &--active {
+      color: var(--ifm-link-color);
+    }
+  }
+}
+
+// Dark mode styles for "More" dropdown
+html[data-theme='dark'] #__docusaurus .navbar__item.dropdown:has(.navbar__link--community) {
+  .navbar__link--community {
+    color: var(--navbar-link-c);
+    background: transparent !important;
+
+    &:hover {
+      background: transparent !important;
+    }
+
+    &::after {
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79199 7.396L10.0003 12.6043L15.2087 7.396' stroke='%2398A2B3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat;
+    }
+  }
+
+  // When dropdown container is hovered (including menu items), keep text blue
+  &:hover .navbar__link--community {
+    color: var(--color-brand-400);
+  }
+
+  &.dropdown--show .navbar__link--community {
+    color: var(--color-brand-400);
+  }
+
+  .dropdown__menu {
+    background-color: #1E2635;
+    border-color: #353C49;
+  }
+
+  .dropdown__link {
+    color: var(--color-gray-300);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--color-gray-300);
+    }
+  }
+}

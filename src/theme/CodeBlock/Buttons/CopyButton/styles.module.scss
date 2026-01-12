@@ -1,0 +1,82 @@
+/**
+ * CopyButton styles matching Customer Portal
+ * Pill-shaped button with icon and text
+ */
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px; // rounded-full (pill shape)
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  // Light mode styling (matching Customer Portal)
+  background-color: #fff;
+  border: 1px solid var(--color-gray-200, #e4e7ec);
+  color: var(--color-gray-700, #344054);
+
+  svg {
+    width: 18px;
+    height: 18px;
+    color: var(--color-gray-400, #98a2b3);
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background-color: var(--color-gray-50, #f9fafb);
+    border-color: var(--color-gray-300, #d0d5dd);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-brand-100, #d1e6fa);
+  }
+}
+
+.copyText {
+  white-space: nowrap;
+}
+
+.copied {
+  color: var(--color-success-600, #039855);
+
+  svg {
+    color: var(--color-success-500, #12b76a);
+  }
+}
+
+// Dark mode styling
+:global(html[data-theme='dark']) {
+  .copyButton {
+    // Matching Customer Portal: dark:bg-white/2 dark:border-white/5
+    background-color: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-gray-400, #98a2b3);
+
+    svg {
+      color: var(--color-gray-400, #98a2b3);
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(0, 125, 249, 0.3);
+    }
+  }
+
+  .copied {
+    color: var(--color-success-400, #32d583);
+
+    svg {
+      color: var(--color-success-400, #32d583);
+    }
+  }
+}

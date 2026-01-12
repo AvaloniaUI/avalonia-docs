@@ -1,0 +1,72 @@
+// Customer Portal underline-style tabs (matching AccelerateDashboard.tsx)
+html[data-theme='light'] {
+  --ifm-tabs-color: var(--color-gray-500);
+  --ifm-tabs-color-hover: var(--color-gray-700);
+  --ifm-tabs-color-active: var(--color-brand-500);
+  --ifm-tabs-color-active-border: var(--color-brand-500);
+  --tabs-border-c: var(--color-gray-200);
+}
+
+html[data-theme='dark'] {
+  --ifm-tabs-color: var(--color-gray-400);
+  --ifm-tabs-color-hover: var(--color-gray-200);
+  --ifm-tabs-color-active: var(--color-brand-400);
+  --ifm-tabs-color-active-border: var(--color-brand-400);
+  --tabs-border-c: var(--color-gray-800);
+}
+
+:root {
+  --ifm-tabs-padding-horizontal: 0.625rem;
+  --ifm-tabs-padding-vertical: 0.95rem;
+  --ifm-tabs-spacing: 0.5rem;
+}
+
+.tabs {
+  // Bottom border on container matching Customer Portal
+  border-bottom: 1px solid var(--tabs-border-c);
+  margin-bottom: 0px;
+  margin-left: 5px;
+
+  .tabs__item {
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--ifm-tabs-color);
+
+    // Underline style - no pill/rounded borders
+    border-radius: 0;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background-color: transparent;
+
+    padding: var(--ifm-tabs-padding-vertical) var(--ifm-tabs-padding-horizontal);
+    margin-bottom: -1px;
+
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+    &--active {
+      font-weight: 500;
+      color: var(--ifm-tabs-color-active);
+      border-bottom-color: var(--ifm-tabs-color-active-border);
+      background-color: transparent;
+    }
+
+    + .tabs__item {
+      margin-inline-start: var(--ifm-tabs-spacing);
+    }
+
+    &:hover {
+      color: var(--ifm-tabs-color-hover);
+      background-color: transparent;
+
+      &.tabs__item--active {
+        color: var(--ifm-tabs-color-active);
+      }
+    }
+  }
+}
+
+.tabs-container > div {
+  margin-block-start: 0.75rem !important;
+}

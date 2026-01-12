@@ -2,13 +2,13 @@
 description: CONCEPTS
 ---
 
-import DataBindingOverviewDiagram from '/img/basics/data-binding/data-binding-overview.png';
+import DataBindingDiagram from '@site/src/components/global/DataBindingDiagram/DataBindingDiagram';
 
 # Data Binding
 
-Avalonia uses data binding to move data from application objects into UI controls, change the data in application objects in response to user input, and initiate actions on the application objects in response to commands from the user. 
+Avalonia uses data binding to move data from application objects into UI controls, change the data in application objects in response to user input, and initiate actions on the application objects in response to commands from the user.
 
-<img src={DataBindingOverviewDiagram} alt=''/>
+<DataBindingDiagram />
 
 In this arrangement, the control is the **binding target**, and the object is the **data source**.
 

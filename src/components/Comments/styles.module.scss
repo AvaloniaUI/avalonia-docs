@@ -1,0 +1,90 @@
+// Comments/Giscus styling
+// Matches Customer Portal ComponentCard pattern
+
+.commentsContainer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+// Card wrapper - matches Customer Portal ComponentCard
+// rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]
+.commentsCard {
+  border-radius: 16px;
+  border: 1px solid var(--color-gray-200);
+  background: white;
+  overflow: hidden;
+}
+
+// Card header - matches Customer Portal px-6 py-5
+.commentsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  font-family: var(--ifm-font-family-base);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-gray-800, #1d2939);
+}
+
+.commentsIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-gray-500);
+}
+
+.commentsDesc {
+  margin: 0;
+  padding: 0 1.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--color-gray-500);
+}
+
+// Card body with top border - matches Customer Portal border-t border-gray-100
+.giscusWrapper {
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-gray-100, #f2f4f7);
+  background: var(--color-gray-50, #f9fafb);
+
+  :global(.giscus) {
+    width: 100%;
+  }
+
+  :global(.giscus-frame) {
+    width: 100%;
+    border: none;
+  }
+}
+
+// Dark theme overrides
+:global(html[data-theme='dark']) {
+  .commentsContainer {
+    border-top-color: var(--color-gray-800, #1d2939);
+  }
+
+  // Dark card - matches Customer Portal dark:border-gray-800 dark:bg-white/[0.03]
+  .commentsCard {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: var(--color-gray-800, #1d2939);
+  }
+
+  .commentsHeader {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .commentsIcon {
+    color: var(--color-gray-400);
+  }
+
+  .commentsDesc {
+    color: var(--color-gray-400);
+  }
+
+  // Dark body - matches Customer Portal dark:border-gray-800
+  .giscusWrapper {
+    border-top-color: var(--color-gray-800, #1d2939);
+    background: rgba(255, 255, 255, 0.02);
+  }
+}

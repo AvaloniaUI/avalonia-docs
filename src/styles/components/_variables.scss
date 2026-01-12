@@ -1,0 +1,353 @@
+// Variables and CSS Custom Properties
+// This file contains all CSS variables and SASS variables
+
+// CSS Custom Properties for colors
+:root {
+  // Brand colors (from Customer Portal - #007df9)
+  --docs-color-primary: #007df9;
+  --docs-color-primary-100: 0 125 249;
+  --docs-color-primary-200: 0 125 249;
+  --docs-color-primary-tint: rgba(0, 125, 249, 0.16);
+  --docs-color-primary-tint-light: rgba(0 125 249/0.24);
+
+  // Brand color scale (from Customer Portal)
+  --color-brand-25: #f2f7fd;
+  --color-brand-50: #e9f2fb;
+  --color-brand-100: #d1e6fa;
+  --color-brand-200: #99ccff;
+  --color-brand-300: #66b3ff;
+  --color-brand-400: #3399ff;
+  --color-brand-500: #007df9;
+  --color-brand-600: #0066cc;
+  --color-brand-700: #0052a3;
+  --color-brand-800: #0c3d6e;
+  --color-brand-900: #0e2e4e;
+  --color-brand-950: #091f34;
+
+  // Gray scale (from Customer Portal)
+  --color-gray-25: #fcfcfd;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f2f4f7;
+  --color-gray-200: #e4e7ec;
+  --color-gray-300: #d0d5dd;
+  --color-gray-400: #98a2b3;
+  --color-gray-500: #667085;
+  --color-gray-600: #475467;
+  --color-gray-700: #344054;
+  --color-gray-800: #1d2939;
+  --color-gray-900: #101828;
+  --color-gray-950: #0c111d;
+  --color-gray-dark: #1a2231;
+
+  // Success colors (from Customer Portal)
+  --color-success-25: #f6fef9;
+  --color-success-50: #ecfdf3;
+  --color-success-100: #d1fadf;
+  --color-success-200: #a6f4c5;
+  --color-success-300: #6ce9a6;
+  --color-success-400: #32d583;
+  --color-success-500: #12b76a;
+  --color-success-600: #039855;
+  --color-success-700: #027a48;
+  --color-success-800: #05603a;
+  --color-success-900: #054f31;
+  --color-success-950: #053321;
+
+  // Error colors (from Customer Portal)
+  --color-error-25: #fffbfa;
+  --color-error-50: #fef3f2;
+  --color-error-100: #fee4e2;
+  --color-error-200: #fecdca;
+  --color-error-300: #fda29b;
+  --color-error-400: #f97066;
+  --color-error-500: #f04438;
+  --color-error-600: #d92d20;
+  --color-error-700: #b42318;
+  --color-error-800: #912018;
+  --color-error-900: #7a271a;
+  --color-error-950: #55160c;
+
+  // Warning colors (from Customer Portal)
+  --color-warning-25: #fffcf5;
+  --color-warning-50: #fffaeb;
+  --color-warning-100: #fef0c7;
+  --color-warning-200: #fedf89;
+  --color-warning-300: #fec84b;
+  --color-warning-400: #fdb022;
+  --color-warning-500: #f79009;
+  --color-warning-600: #dc6803;
+  --color-warning-700: #b54708;
+  --color-warning-800: #93370d;
+  --color-warning-900: #7a2e0e;
+  --color-warning-950: #4e1d09;
+
+  // Orange colors (from Customer Portal)
+  --color-orange-25: #fffaf5;
+  --color-orange-50: #fff6ed;
+  --color-orange-100: #ffead5;
+  --color-orange-200: #fddcab;
+  --color-orange-300: #feb273;
+  --color-orange-400: #fd853a;
+  --color-orange-500: #fb6514;
+  --color-orange-600: #ec4a0a;
+  --color-orange-700: #c4320a;
+  --color-orange-800: #9c2a10;
+  --color-orange-900: #7e2410;
+  --color-orange-950: #511c10;
+
+  // Blue-light colors (from Customer Portal - used for info alerts)
+  --color-blue-light-25: #F2F9FD;
+  --color-blue-light-50: #E3F4FC;
+  --color-blue-light-100: #C6EAFA;
+  --color-blue-light-200: #9EDDFA;
+  --color-blue-light-300: #60C9FB;
+  --color-blue-light-400: #29BBFF;
+  --color-blue-light-500: #00ADFE;
+  --color-blue-light-600: #0095DB;
+  --color-blue-light-700: #007AB2;
+  --color-blue-light-800: #005E8A;
+  --color-blue-light-900: #034563;
+  --color-blue-light-950: #042F44;
+
+  // Secondary colors
+  --docs-color-secondary-700: 232 232 236;
+  --docs-color-secondary-800: 245 245 247;
+  --docs-color-secondary-900: 251 251 251;
+  --docs-color-secondary-1000: 255 255 255;
+
+  // Text colors
+  --docs-color-text: var(--color-gray-900);
+  --docs-color-text-100: var(--color-gray-500);
+  --docs-color-text-400: 71 71 71;
+
+  // Background colors (Customer Portal uses #f9fafb for content)
+  --docs-color-background: #f9fafb;
+  --docs-color-background-100: var(--color-gray-50);
+  --docs-color-background-200: var(--color-gray-100);
+  --docs-color-background-300: var(--color-gray-200);
+
+  // Border colors
+  --docs-color-border: var(--color-gray-200);
+  --code-border-color: var(--docs-color-border);
+
+  // Navbar colors
+  --navbar-second-row-background: var(--color-gray-50);
+  --navbar-second-row-border: var(--color-gray-200);
+
+  // Code colors
+  --docs-color-code-background: var(--color-gray-100);
+
+  // Platform colors
+  --docs-color-android: #44db85;
+  --docs-color-apple: var(--docs-color-text) !important;
+
+  // Card colors
+  --docs-card-background: var(--color-gray-50);
+
+  // Video colors
+  --avalonia-colors-video-bg: 50 50 50;
+
+  // Docusaurus theme colors (updated to Customer Portal brand)
+  --ifm-color-primary: #007df9;
+  --ifm-color-primary-dark: #0066cc;
+  --ifm-color-primary-darker: #0052a3;
+  --ifm-color-primary-darkest: #0c3d6e;
+  --ifm-color-primary-light: #3399ff;
+  --ifm-color-primary-lighter: #66b3ff;
+  --ifm-color-primary-lightest: #99ccff;
+
+  // Layout (Customer Portal: navbar 77px, sidebar 249px)
+  --ifm-navbar-height: 77px;
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-navbar-padding-horizontal: 0.75rem;
+
+  // Typography (Saans - matching Customer Portal)
+  --ifm-font-family-base: "Saans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --ifm-code-font-size: 92%;
+
+  // Shadows (from Customer Portal)
+  --shadow-theme-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-theme-sm: 0px 1px 3px 0px rgba(16, 24, 40, 0.1), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+  --shadow-theme-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  --shadow-theme-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  --shadow-theme-xl: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+
+  // Effects
+  --ifm-navbar-shadow: none;
+  --ifm-toc-border-color: var(--color-gray-200);
+  --ifm-table-border-color: var(--docs-color-border);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 125, 249, 0.15);
+
+  // Breadcrumb
+  --ifm-breadcrumb-item-background-active: transparent;
+  --ifm-breadcrumb-padding-horizontal: 0;
+
+  // Brand
+  --ifm-brand-logo-color: #007df9;
+
+  // Footer
+  --ifm-footer-background-color: white;
+  --ifm-footer-brand-color: #007df9;
+
+  // Backgrounds
+  --ifm-background-color: var(--docs-color-background);
+  --ifm-background-surface-color: var(--docs-color-background);
+}
+
+// Dark theme overrides
+html[data-theme='dark'] {
+  // Dark mode gray scale (from Customer Portal)
+  --color-gray-25: #1d2939;
+  --color-gray-50: #1d2939;
+  --color-gray-100: #344054;
+  --color-gray-200: #475467;
+  --color-gray-700: #d0d5dd;
+  --color-gray-800: #e4e7ec;
+  --color-gray-900: #f9fafb;
+
+  // Text colors
+  --docs-color-text: #ffffff;
+  --docs-color-text-100: var(--color-gray-400);
+  --docs-color-text-400: 153 153 153;
+
+  // Secondary colors
+  --docs-color-secondary-700: 71 71 71;
+  --docs-color-secondary-800: 38 38 38;
+  --docs-color-secondary-900: 27 42 78;
+  --docs-color-secondary-1000: 0 0 0;
+
+  // Background colors (dark mode - Customer Portal style)
+  --docs-color-background: #101828;
+  --docs-color-background-100: #1d2939;
+  --docs-color-background-200: #344054;
+  --docs-color-background-300: #475467;
+
+  // Border colors
+  --docs-color-border: #344054;
+
+  // Code colors
+  --docs-color-code-background: #1d2939;
+
+  // Navbar colors
+  --navbar-second-row-background: #1d2939;
+  --navbar-second-row-border: #344054;
+
+  // Card colors
+  --docs-card-background: #1d2939;
+
+  // Links (using brand colors)
+  --ifm-link-color: var(--color-brand-400);
+  --ifm-tabs-color-active-border: var(--color-brand-400);
+  --ifm-tabs-color-active: var(--color-brand-400);
+
+  // Brand
+  --ifm-brand-logo-color: white;
+
+  // Footer
+  --ifm-footer-background-color: #1d2939;
+  --ifm-footer-brand-color: white;
+
+  // Navigation
+  --ifm-background-surface-color: #101828;
+  --ifm-background-color: #101828;
+  --ifm-toc-border-color: #344054;
+
+  // Content
+  --ifm-color-content: #e7e7e7;
+
+  // Code highlighting
+  --docusaurus-highlighted-code-line-bg: rgba(0, 125, 249, 0.2);
+
+  // Primary color
+  --ifm-color-primary: #007df9;
+}
+
+// SASS Variables for reuse (updated to Customer Portal brand)
+$primary-color: #007df9;
+$primary-dark: #0066cc;
+$primary-darker: #0052a3;
+$primary-darkest: #0c3d6e;
+$primary-light: #3399ff;
+$primary-lighter: #66b3ff;
+$primary-lightest: #99ccff;
+
+// Breakpoints
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 996px;
+$desktop-breakpoint: 1160px;
+
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet-breakpoint + 1}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$desktop-breakpoint + 1}) {
+    @content;
+  }
+}
+
+html[data-theme='light'] {
+  // Customer Portal: content area bg-gray-50, sidebar bg-white
+  --token-primary-bg-c: #f9fafb;
+  --token-secondary-bg-c: #fff;
+
+  // Links use brand color
+  --ifm-link-color: var(--color-brand-500);
+  --ifm-link-hover-color: var(--color-brand-600);
+
+  --ifm-background-surface-color: var(--token-primary-bg-c);
+
+  // Customer Portal: navbar bg-white (not gray-50 like content area)
+  --ifm-navbar-background-color: #fff;
+  --ifm-navbar-shadow: 0 1px 0 0 var(--color-gray-200);
+
+  --ifm-heading-color: var(--color-gray-900);
+  --ifm-secondary-heading-color: var(--color-gray-700);
+
+  --ifm-code-background: var(--color-gray-100);
+  --ifm-font-color-base: var(--color-gray-700);
+  --ifm-info-color-bg: var(--color-gray-900);
+}
+
+html[data-theme='dark'] {
+  // Customer Portal: sidebar & content both use dark:bg-gray-900
+  // Border (gray-800) provides visual separation
+  --token-primary-bg-c: #101828;
+  --token-secondary-bg-c: #101828;
+
+  // Links use brand color (lighter for dark mode)
+  --ifm-link-color: var(--color-brand-400);
+  --ifm-link-hover-color: var(--color-brand-300);
+
+  --ifm-background-surface-color: var(--token-primary-bg-c);
+
+  --ifm-navbar-background-color: var(--token-primary-bg-c);
+  // Customer Portal uses border-gray-800 in dark mode
+  --ifm-navbar-shadow: 0 1px 0 0 var(--color-gray-800);
+
+  --ifm-heading-color: #fff;
+  --ifm-secondary-heading-color: #f6f6f6;
+
+  --ifm-font-color-base: var(--color-gray-300);
+  --ifm-background-color: var(--token-primary-bg-c);
+  --ifm-dropdown-background-color: var(--token-secondary-bg-c);
+  --ifm-info-color-bg: var(--color-gray-200);
+
+  --ifm-menu-link-sublist-icon-filter: invert(100%);
+}

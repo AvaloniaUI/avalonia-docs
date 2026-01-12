@@ -1,0 +1,63 @@
+.tableOfContentsWrapper {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+  overflow: visible;
+  min-height: 240px;
+}
+
+.tableOfContents {
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.tocDropdownButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s;
+  background: white;
+  color: #374151;
+  border: 1px solid #d0d5dd;
+  cursor: pointer;
+}
+
+.tocDropdownButton:hover {
+  background: #f9fafb;
+}
+
+.tocDropdownButton:focus {
+  outline: none;
+}
+
+@media (max-width: 1359px) {
+  .tocDropdownButton {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+:global(html[data-theme='dark']) .tocDropdownButton {
+  background: #1E2635;
+  color: #9ca3af;
+  border-color: #353C49;
+}
+
+:global(html[data-theme='dark']) .tocDropdownButton:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: #d1d5db;
+}
+
+@media (max-width: 996px) {
+  .tableOfContents {
+    display: none;
+  }
+
+  .docItemContainer {
+    padding: 0 0.3rem;
+  }
+}

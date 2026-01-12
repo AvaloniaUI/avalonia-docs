@@ -1,0 +1,330 @@
+html[data-theme='light'] {
+  // Category headers (muted gray, uppercase)
+  --sidebar-category-c: var(--color-gray-500);
+  --sidebar-border-c: var(--color-gray-200);
+
+  --ifm-menu-color-background-active: var(--color-brand-50);
+  --ifm-menu-color: var(--color-gray-700);
+
+  // Customer Portal-style sidebar colors
+  --sidebar-item-bg-active: var(--color-brand-50);
+  --sidebar-item-text-active: var(--color-brand-500);
+  --sidebar-item-text-inactive: var(--color-gray-700);
+  --sidebar-item-hover-bg: var(--color-gray-100);
+  --sidebar-item-icon-active: var(--color-brand-500);
+  --sidebar-item-icon-inactive: var(--color-gray-500);
+}
+
+html[data-theme='dark'] {
+  // Category headers (lighter in dark mode)
+  --sidebar-category-c: var(--color-gray-400);
+  // Customer Portal uses border-gray-800 (#1d2939) in dark mode
+  --sidebar-border-c: #1d2939;
+
+  --ifm-menu-color: var(--color-gray-300);
+
+  // Customer Portal-style sidebar colors (dark mode)
+  --sidebar-item-bg-active: rgba(0, 125, 249, 0.12);
+  --sidebar-item-text-active: var(--color-brand-400);
+  --sidebar-item-text-inactive: var(--color-gray-300);
+  --sidebar-item-hover-bg: rgba(255, 255, 255, 0.05);
+  --sidebar-item-icon-active: var(--color-brand-400);
+  --sidebar-item-icon-inactive: var(--color-gray-500);
+}
+
+:root {
+  // Customer Portal sidebar is 290px expanded (matching w-[290px])
+  --doc-sidebar-width: 290px;
+
+  --dropdown-icon-width: 0.625rem;
+  --dropdown-icon-height: 0.375rem;
+  --dropdown-icon-gap: 0.5rem;
+
+  --ifm-menu-link-padding-vertical: 0.5rem;
+  --ifm-menu-color-active: var(--ifm-link-color);
+
+  // Customer Portal uses px-5 (20px = 1.25rem)
+  --sidebar-spacing-horizontal: 1.25rem;
+
+  // The variable aims to style the collapsible menu items on the sidebar.
+  --ifm-menu-color-background-hover: transparent;
+}
+
+//overrides
+#__docusaurus {
+  .theme-doc-sidebar-container {
+    background: var(--token-secondary-bg-c);
+
+    position: sticky;
+    top: 0;
+    margin-block-start: 0;
+    will-change: initial;
+
+    height: 100vh;
+
+    border-inline-end: 1px solid var(--sidebar-border-c);
+
+    [class^='sidebarViewport'] {
+      // Targets the logo
+      > a {
+        display: flex;
+        align-items: center;
+        height: var(--ifm-navbar-height);
+  
+        padding-inline-start: var(--sidebar-spacing-horizontal);
+        padding-inline-end: var(--sidebar-spacing-horizontal);
+      }
+    }
+  }
+
+  [class^='sidebar_'] {
+    max-height: calc(100vh - var(--ifm-navbar-height));
+    position: static;
+
+    overflow-y: auto;
+
+    padding-inline-start: var(--sidebar-spacing-horizontal);
+    padding-inline-end: var(--sidebar-spacing-horizontal);
+    padding-block-start: 1rem;
+
+    > .menu {
+      overflow-x: initial;
+      padding-block-end: 2rem;
+      padding: 0;
+    }
+  }
+
+  [class^='sidebarLogo'] {
+    display: none !important;
+  }
+
+  .theme-doc-sidebar-item-category-level-1 > .menu__list {
+    /* removes indentation from first level categories */
+    padding: 0;
+  }
+
+    .menu__list {
+    display: flex !important;
+    flex-direction: column;
+    // Customer Portal uses gap-1 (4px) between menu items
+    gap: 0.25rem;
+    transition: height 0.35s cubic-bezier(0.36, 0.66, 0.04, 1) 25ms !important;
+    will-change: initial !important;
+
+    margin-top: 0;
+
+    // Nested menu lists - Customer Portal style (NO left border, just indentation)
+    .menu__list {
+      // Customer Portal: mt-2 space-y-1 ml-9
+      margin-top: 0.5rem;
+      // ml-9 = 36px = 2.25rem for indentation (no border)
+      margin-left: 2.25rem;
+      padding-left: 0;
+      // Remove the left border - Customer Portal doesn't have this
+      border-left: none;
+
+      .menu__link--sublist {
+        margin-inline-start: 0;
+
+        &::after {
+          opacity: 0.6;
+        }
+      }
+
+      .menu__link {
+        // Nested items padding - match Customer Portal
+        padding: 0.625rem 0.75rem;
+      }
+    }
+
+    &-item {
+      &:not(:first-child) {
+        margin-block-start: 0;
+      }
+
+      .menu__list {
+        .menu__link {
+          padding-inline-start: 0.75rem;
+        }
+      }
+
+      &-collapsible {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .theme-doc-sidebar-item-category-level-1 > .menu__list > .menu__list-item:last-of-type {
+    padding-block-end: 1.5rem;
+  }
+
+  .theme-doc-sidebar-item-category-level-1:last-of-type {
+    margin-block-end: 1.5rem;
+  }
+
+  .menu__link {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: -0.01em;
+
+    // Customer Portal-style: rounded with padding (px-3 py-2 = 12px 8px)
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+
+    color: var(--sidebar-item-text-inactive);
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+    // Ensure full width for background
+    width: 100%;
+
+    &:not(.menu__link--active:not(.menu__link--sublist)) {
+      background: transparent;
+    }
+
+    &:not(.menu__link--active):not(.menu__link--sublist) {
+      &:hover {
+        background-color: var(--sidebar-item-hover-bg);
+        color: var(--sidebar-item-text-inactive);
+      }
+    }
+
+    // Active state styling (Customer Portal style - light blue bg, blue text)
+    &--active:not(.menu__link--sublist) {
+      background-color: var(--sidebar-item-bg-active);
+      color: var(--sidebar-item-text-active);
+      font-weight: 500;
+    }
+  }
+
+  .menu__link--sublist {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+
+    margin-block-end: 0;
+
+    // Customer Portal style: chevron on the RIGHT
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    color: var(--sidebar-item-text-inactive);
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+    &:hover {
+      background-color: var(--sidebar-item-hover-bg);
+    }
+
+    &::after {
+      background: var(--ifm-menu-link-sublist-icon) center / var(--dropdown-icon-width) var(--dropdown-icon-height);
+      background-repeat: no-repeat;
+
+      min-width: auto;
+
+      width: var(--dropdown-icon-width);
+      height: var(--dropdown-icon-height);
+
+      margin-inline-start: auto;
+      margin-inline-end: 0;
+      margin-block-end: 0;
+
+      transition: transform 0.2s ease-out;
+    }
+
+    // Expanded state - rotate chevron
+    &[aria-expanded="true"]::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .theme-doc-sidebar-item-category-level-1 {
+    & > .menu__list-item-collapsible {
+      .menu__link {
+        // Customer Portal style: expandable items look like regular menu items
+        // NOT uppercase, same font size as other items
+        color: var(--sidebar-item-text-inactive);
+
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        text-transform: none;
+        letter-spacing: -0.01em;
+
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 0;
+
+        &:hover {
+          background-color: var(--sidebar-item-hover-bg);
+        }
+      }
+    }
+
+    /* Level 1 category labels - styled like Customer Portal's expandable items */
+    .menu__link--sublist {
+      // Regular text styling, not uppercase (matching Customer Portal's "Account" style)
+      color: var(--sidebar-item-text-inactive);
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      text-transform: none;
+      letter-spacing: -0.01em;
+
+      &::after {
+        content: "";
+        background: var(--ifm-menu-link-sublist-icon)
+          center / var(--dropdown-icon-width) var(--dropdown-icon-height)
+          no-repeat;
+
+        min-width: auto;
+
+        width: var(--dropdown-icon-width);
+        height: var(--dropdown-icon-height);
+
+        // Chevron on the right (Customer Portal style)
+        margin-inline-start: auto;
+        margin-inline-end: 0;
+        margin-block-end: 0;
+      }
+
+      // Active/expanded state - match Customer Portal's active item styling
+      &[aria-expanded="true"] {
+        background-color: var(--sidebar-item-bg-active);
+        color: var(--sidebar-item-text-active);
+      }
+    }
+
+    /* When the level 1 category is also a link and is active */
+    .menu__link--sublist.menu__link--active {
+      background-color: var(--sidebar-item-bg-active);
+      color: var(--sidebar-item-text-active);
+    }
+  }
+
+    /* Make the caret for "category with link" look like the normal small chevron */
+  .menu__list-item-collapsible > .menu__caret {
+    width: var(--dropdown-icon-width);
+    height: var(--dropdown-icon-height);
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    /* keep it on the left, but don't draw its own icon */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide the default big SVG icon, keep button for click handling */
+  .menu__list-item-collapsible > .menu__caret svg {
+    display: none;
+  }
+}
