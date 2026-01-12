@@ -177,7 +177,7 @@ When referencing a controls library in a .axaml file, you can use the URL identi
 xmlns:cc="https://my.controls.url"
 ```
 
-This is possible because of the presence of XML namespace definitions in a controls library. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See the [source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs).) For example:
+This is possible because of the presence of XML namespace definitions in a controls library. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See this [source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs) for an example.)
 
 ```csharp
 [assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
