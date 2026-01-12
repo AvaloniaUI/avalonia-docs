@@ -87,22 +87,24 @@ using Avalonia.Media;
 namespace CCLibrary
 {
 
-    // A custom control that renders a coloured rectangle.
+    /// <summary>A custom control that renders a coloured rectangle.</summary>
     public class MyCustomControl : Control
     {
-        // Defines a styled property for the background colour, which can be set in XAML.
-        // AddOwner reuses the existing BackgroundProperty from Border.
+        /// <remarks>
+        /// Defines a styled property for the background colour, which can be set in XAML.<br/>
+        /// AddOwner reuses the existing BackgroundProperty from Border.<br/>
+        /// </remarks>
         public static readonly StyledProperty<IBrush?> BackgroundProperty =
             Border.BackgroundProperty.AddOwner<MyCustomControl>();
 
-        // Gets and sets the colour used to fill the rectangle.
+        /// <summary>Gets and sets the colour used to fill the rectangle.</summary>
         public IBrush? Background
         {
             get { return GetValue(BackgroundProperty); }
             set { SetValue(BackgroundProperty, value); }
         }
 
-        // Renders the control.
+        /// <summary>Renders the control.</summary>
         public sealed override void Render(DrawingContext context)
         {
             if (Background != null) // Only render if a colour is set.
