@@ -1,6 +1,6 @@
 ---
 id: how-to-create-a-custom-controls-library
-title: How to Create and Reference a Custom Controls Library
+title: How to Create and Reference a Custom Control Library
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,11 +12,11 @@ import InstallAvaloniaInClassLibraryRider from '/img/guides/custom-controls/inst
 import CustomControlSolution from '/img/guides/custom-controls/custom-control-solution.png';
 import CustomControlPreview from '/img/guides/custom-controls/custom-control-preview.png';
 
-# How To Create and Reference a Custom Controls Library
+# How To Create and Reference a Custom Control Library
 
-This guide shows you how to create a custom controls library and reference it for use in an _Avalonia UI_ app.
+This guide shows you how to create a custom control library and reference it for use in an _Avalonia UI_ app.
 
-## Creating a custom controls library
+## Creating a custom control library
 
 ### Creating a new class library project
 
@@ -87,23 +87,28 @@ using Avalonia.Media;
 namespace CCLibrary
 {
 
+    // A custom control that renders a coloured rectangle.
     public class MyCustomControl : Control
     {
+        // Defines a styled property for the background colour, which can be set in XAML.
+        // AddOwner reuses the existing BackgroundProperty from Border.
         public static readonly StyledProperty<IBrush?> BackgroundProperty =
             Border.BackgroundProperty.AddOwner<MyCustomControl>();
 
+        // Gets and sets the colour used to fill the rectangle.
         public IBrush? Background
         {
             get { return GetValue(BackgroundProperty); }
             set { SetValue(BackgroundProperty, value); }
         }
 
+        // Renders the control.
         public sealed override void Render(DrawingContext context)
         {
-            if (Background != null)
+            if (Background != null) // Only render if a colour is set.
             {
-                var renderSize = Bounds.Size;
-                context.FillRectangle(Background, new Rect(renderSize));
+                var renderSize = Bounds.Size; // Get the size of the control.
+                context.FillRectangle(Background, new Rect(renderSize)); // Fill the rectangle with the colour.
             }
             base.Render(context);
         }
@@ -113,9 +118,9 @@ namespace CCLibrary
 
 You can continue adding as many custom controls to the library as you wish.
 
-## Referencing a custom controls library
+## Referencing a custom control library
 
-Reference your custom controls library in an Avalonia project to allow those custom controls to be used.
+Reference your custom control library in an Avalonia project to allow those custom controls to be used.
 
 In this example, we have created a new project using the Avalonia MVVM template titled `AvaloniaCCLib`.
 
@@ -132,22 +137,18 @@ In this example, we have created a new project using the Avalonia MVVM template 
 </ItemGroup>
 ```
 
-### Create XML namespace for custom controls library
+### Add XML namespace declaration
 
-You can now create a namespace in .axaml files of your Avalonia project to access your custom controls in XAML.
+You can now make a namespace declaration in .axaml files of your Avalonia project to access your custom controls in XAML.
 
-1. Add a line similar to this one to the namespace declarations in the opening `<Window>` tag: `xmlns:cc="clr-namespace:CCLibrary;assembly=CCLibrary"`, changing the name of the class library project if you used a different one.
+1. Add a line similar to this one to the opening `<Window>` tag: `xmlns:cc="using:CCLibrary"`. (Remember to change the name of the class library project if you used a different one.)
 
-:::info
-The namespace reference for the control library should include the name of the assembly.
-:::
-
-2. Add a custom control to the window's content zone by calling `cc`.
+2. Add a custom control to the window's content zone by prefixing with `cc`.
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:cc="clr-namespace:CCLibrary;assembly=CCLibrary"
+        xmlns:cc="using:CCLibrary"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
@@ -171,13 +172,13 @@ The namespace reference for the control library should include the name of the a
 
 ## XML Namespace Definitions
 
-When referencing a controls library in a .axaml file, you can use the URL identification format. For example:
+When referencing a control library in a .axaml file, you can use the URL identification format. For example:
 
 ```xml
 xmlns:cc="https://my.controls.url"
 ```
 
-This is possible because of the presence of XML namespace definitions in a controls library. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See this [source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs) for an example.)
+This is possible because of the presence of XML namespace definitions in a control library. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See this [source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs) for an example.)
 
 ```csharp
 [assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
@@ -185,7 +186,7 @@ This is possible because of the presence of XML namespace definitions in a contr
 
 ### Common Namespace Definitions
 
-You can make one URL map several namespaces in your controls library. To do this, simply add multiple XML namespace definitions that use the same URL, but which map to different code namespaces.
+You can make one URL map several namespaces in your control library. To do this, simply add multiple XML namespace definitions that use the same URL, but which map to different code namespaces.
 
 ```cs
 using Avalonia.Metadata;
