@@ -16,7 +16,7 @@ import UniformGridSampleScreenshot from '/img/basics/user-interface/building-lay
 
 `Panel` 是所有在 Avalonia 中提供布局支持的元素的基类。派生的 `Panel` 元素用于在 XAML 和代码中定位和排列元素。
 
-Avalonia 包含一套全面的派生面板实现，支持许多复杂的布局。这些派生类公开了属性和方法，以支持大多数标准的 UI 场景。无法找到满足需求的子元素排列行为的开发人员可以通过重写 `ArrangeOverride` 和 `MeasureOverride` 方法来创建新的布局。有关自定义布局行为的更多信息，请参阅 [Create a Custom Panel](../../../guides/custom-controls/create-a-custom-panel.md)。
+Avalonia 包含一套全面的派生面板实现，支持许多复杂的布局。这些派生类公开了属性和方法，以支持大多数标准的 UI 场景。无法找到满足需求的子元素排列行为的开发人员可以通过重写 `ArrangeOverride` 和 `MeasureOverride` 方法来创建新的布局。有关自定义布局行为的更多信息，请参阅 [Create a Custom Panel](/docs/guides/custom-controls/create-a-custom-panel.md)。
 
 ### Panel 公共成员
 

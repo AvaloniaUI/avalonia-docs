@@ -30,7 +30,7 @@ MVVM通过将应用程序逻辑抽象为仅包含代码的类来解决这个问�
 事实上，对于一个小型简单的应用程序，代码后台模式可能更容易理解和维护。
 
 :::info
-有关如何使用代码后台模式在_Avalonia UI_中编程的详细信息，请参阅[这里](../../basics/user-interface/code-behind)。
+有关如何使用代码后台模式在_Avalonia UI_中编程的详细信息，请参阅[这里](/docs/basics/user-interface/code-behind)。
 :::
 
 使用MVVM模式的优势只有在应用程序增长并变得更加复杂时才会显现出来。因此，您有两种开发策略可以考虑：

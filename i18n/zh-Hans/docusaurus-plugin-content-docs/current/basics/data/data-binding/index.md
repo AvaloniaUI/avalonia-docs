@@ -37,7 +37,7 @@ Avalonia运行数据绑定系统来完成大部分上述活动，而无需您添
 绑定与MVVM（Model-View-ViewModel）架构模式一起使用，这是使用Avalonia UI的主要方式之一。
 
 :::info
-有关如何在Avalonia中使用MVVM模式的更多信息，请参阅[概念页面](../../../concepts/the-mvvm-pattern)。
+有关如何在Avalonia中使用MVVM模式的更多信息，请参阅[概念页面](/docs/concepts/the-mvvm-pattern)。
 :::
 
 :::info

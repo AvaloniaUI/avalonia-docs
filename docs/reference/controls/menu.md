@@ -71,7 +71,7 @@ You will probably use these properties most often:
     <tr>
       <td></td>
       <td><code>ItemPanel</code></td>
-      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](../../concepts/custom-itemspanel) to customise the ItemsPanel.</td>
+      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/concepts/custom-itemspanel) to customise the ItemsPanel.</td>
     </tr>
     <tr>
       <td></td>
@@ -135,7 +135,7 @@ To initiate an action, the command property of a menu item can be bound to an `I
 ```
 
 :::info
-For guidance on how to bind to commands, see [here](../../basics/user-interface/adding-interactivity.md).
+For guidance on how to bind to commands, see [here](/docs/basics/user-interface/adding-interactivity.md).
 :::
 
 ## Menu Icons
@@ -160,7 +160,7 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 <img src={MenuIconScreenshot} alt="" />
 
 :::info
-For more detailed guidance on how to add icons to your menus, see [here](../../guides/graphics-and-animation/how-to-add-menu-icons.md).
+For more detailed guidance on how to add icons to your menus, see [here](/docs/guides/graphics-and-animation/how-to-add-menu-icons.md).
 :::
 
 ## More Information

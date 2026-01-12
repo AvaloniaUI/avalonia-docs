@@ -9,7 +9,7 @@ import RelativePanelScreenshot from '/img/reference/controls/relativepanel/relat
 相对面板控件允许您通过指定其子控件相对于其他（同级）子控件或相对于面板本身的位置来排列它们。位置是根据面板控件的内部（内容区）和子控件的边缘区的外边缘计算的。
 
 :::info
-要回顾控件布局区域的概念，请参见[这里](../../concepts/layout/layout-zones)。
+要回顾控件布局区域的概念，请参见[这里](/docs/concepts/layout/layout-zones)。
 :::
 
 子控件的默认位置是面板的左上角。

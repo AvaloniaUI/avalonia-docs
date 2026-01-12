@@ -63,4 +63,4 @@ The `ArrangeCore` method evaluates the `DesiredSize` of the child and evaluates 
 
 * [Panels Overview](panels-overview.md)
 * [Alignment, Margins and Padding](alignment-margins-and-padding.md)
-* [Create a Custom Panel](../../../guides/custom-controls/create-a-custom-panel.md)
+* [Create a Custom Panel](/docs/guides/custom-controls/create-a-custom-panel.md)

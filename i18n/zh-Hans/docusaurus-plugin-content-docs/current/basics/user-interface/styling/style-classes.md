@@ -50,7 +50,7 @@ title: 样式类
 其他伪类包括 `:focus`、`:disabled`、`:pressed`（用于按钮）和 `:checked`（用于复选框）。
 
 :::info
-有关伪类的更多详细信息，请参阅参考 [此处](../../../reference/styles/pseudo-classes.md).
+有关伪类的更多详细信息，请参阅参考 [此处](/docs/reference/styles/pseudo-classes.md).
 :::
 
 ## 条件类（Conditional Classes）

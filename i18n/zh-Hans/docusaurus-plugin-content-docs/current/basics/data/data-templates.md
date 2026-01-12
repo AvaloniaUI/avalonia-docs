@@ -36,4 +36,4 @@ title: 数据模板
 
 ## 更多阅读
 
-有关更多信息，请参阅深入了解[数据模板](../../concepts/templates)。
+有关更多信息，请参阅深入了解[数据模板](/docs/concepts/templates)。

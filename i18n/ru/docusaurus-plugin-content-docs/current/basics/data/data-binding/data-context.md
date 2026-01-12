@@ -26,7 +26,7 @@ import DataContextPreviewerScreenshot from '/img/basics/data-binding/data-contex
 или, как показано выше, элемент в элементе, тоже может использовать контекст данных окна.
 
 :::info
-Подробную информацию о Control Trees (рус: Деревья элементов), см. [здесь](../../../concepts/control-trees).
+Подробную информацию о Control Trees (рус: Деревья элементов), см. [здесь](/docs/concepts/control-trees).
 :::
 
 ## Пример
@@ -104,11 +104,11 @@ public class MainWindowViewModel : ViewModelBase
 ```
 
 :::tip
-Подробную информацию о Design-Time Data Context, см. [здесь](../../../guides/implementation-guides/how-to-use-design-time-data.md).
+Подробную информацию о Design-Time Data Context, см. [здесь](/docs/guides/implementation-guides/how-to-use-design-time-data.md).
 :::
 
 :::info
-Дальнейшее изучение привязки данных, требует от вам понимание шаблона MVVM. Подробную информацию о нем, см. [здесь](../../../concepts/the-mvvm-pattern).
+Дальнейшее изучение привязки данных, требует от вам понимание шаблона MVVM. Подробную информацию о нем, см. [здесь](/docs/concepts/the-mvvm-pattern).
 :::
 
 Дополнительный материал

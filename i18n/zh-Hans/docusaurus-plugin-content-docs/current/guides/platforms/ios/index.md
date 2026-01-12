@@ -16,4 +16,4 @@ title: 如何开发iOS移动应用
 在发布前，您应该始终在真实设备上进行测试。
 :::
 
-在开始之前，请确保您已经按照[构建跨平台应用程序](../../building-cross-platform-applications)的指南进行操作。
+在开始之前，请确保您已经按照[构建跨平台应用程序](/docs/guides/building-cross-platform-applications)的指南进行操作。

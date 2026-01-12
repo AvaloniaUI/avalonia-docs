@@ -13,7 +13,7 @@ The combo box presents a selected item and a drop-down button that displays a li
 The items in the list can be composed, bound and templated.
 
 :::info
-To review the concept behind **data templates**, see [here](../../concepts/templates/).
+To review the concept behind **data templates**, see [here](/docs/concepts/templates/).
 :::
 
 ## Useful Properties

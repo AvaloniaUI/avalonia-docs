@@ -249,6 +249,10 @@ const sidebars: SidebarsConfig = {
         {
           'type': 'category',
           'label': 'Data Binding',
+          'link': {
+            'type': 'doc',
+            'id': 'guides/data-binding/index',
+          },
           'items': [
             'guides/data-binding/inotifypropertychanged',
             'guides/data-binding/binding-classes',
@@ -305,6 +309,10 @@ const sidebars: SidebarsConfig = {
         {
           'type': 'category',
           'label': 'Custom Controls',
+          'link': {
+            'type': 'doc',
+            'id': 'guides/custom-controls/index',
+          },
           'items': [
             'guides/custom-controls/types-of-control',
             'guides/custom-controls/create-a-custom-panel',

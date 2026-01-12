@@ -9,7 +9,7 @@ title: 添加交互性
 
 Avalonia中的事件提供了一种响应用户交互和控件特定操作的方式。您可以按照以下步骤处理事件：
 
-1. **实现事件处理程序**：在[code-behind](../user-interface/code-behind.md)中编写一个事件处理程序，当事件被触发时将执行该处理程序。事件处理程序应包含您希望对事件响应时执行的逻辑。
+1. **实现事件处理程序**：在[code-behind](/docs/basics/user-interface/code-behind.md)中编写一个事件处理程序，当事件被触发时将执行该处理程序。事件处理程序应包含您希望对事件响应时执行的逻辑。
 
 ```csharp title='MainWindow.axaml.cs'
 public partial class MainWindow : Window
@@ -43,7 +43,7 @@ public partial class MainWindow : Window
 
 ## 使用命令
 
-Avalonia中的命令提供了一种更高级的方式来处理用户交互，将用户操作与实现逻辑解耦。与事件在控件的code-behind中定义不同，命令通常绑定到[数据上下文](../data/data-binding/data-context.md)上的属性或方法。
+Avalonia中的命令提供了一种更高级的方式来处理用户交互，将用户操作与实现逻辑解耦。与事件在控件的code-behind中定义不同，命令通常绑定到[数据上下文](/docs/basics/data/data-binding/data-context.md)上的属性或方法。
 
 :::info
 命令在所有提供`Command`属性的控件中都可用。通常，在控件的主要交互方法发生时，例如按钮点击时触发命令。

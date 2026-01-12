@@ -5,7 +5,7 @@ title: Focus Manager
 
 `FocusManager`服务负责管理应用程序的键盘焦点。它会跟踪当前聚焦的元素和当前焦点范围。
 
-通过`TopLevel`或`Window`的实例可以访问`FocusManager`，有关访问`TopLevel`的更多细节，请访问[TopLevel](../toplevel)页面：
+通过`TopLevel`或`Window`的实例可以访问`FocusManager`，有关访问`TopLevel`的更多细节，请访问[TopLevel](/docs/concepts/toplevel)页面：
 ```cs
 var focusManager = window.FocusManager;
 ```

@@ -89,7 +89,7 @@ import MusicStoreWrapPanelScreenshot from '/img/tutorials/music-store-app/add-co
 Поэтому `view locator` всегда может быть найден _Avalonia UI_, когда она ищет `data template (рус: шаблон данных)`.
 
 :::info
-Подробнее о **data template (рус: шаблонах данных)**, см. [здесь](../../concepts/templates/).
+Подробнее о **data template (рус: шаблонах данных)**, см. [здесь](/docs/concepts/templates/).
 :::
 
 `View locator` выступает `data template (рус: шаблоном данных)` для `view model`, в данном случае `album view model`,

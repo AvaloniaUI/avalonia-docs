@@ -8,7 +8,7 @@ The `Clipboard` class enables interacting with the system clipboard, providing f
 <GitHubSampleLink title="Clipboard" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/ClipboardOps"/>
 
 
-The `Clipboard` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](../toplevel) page:
+The `Clipboard` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/concepts/toplevel) page:
 ```cs
 var clipboard = window.Clipboard;
 ```

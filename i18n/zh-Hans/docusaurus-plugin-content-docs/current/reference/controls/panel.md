@@ -9,7 +9,7 @@ import PanelOverlapBlendScreenshot from '/img/reference/controls/panel/panel-ove
 面板是最基本的控件，可包含多个子控件。子控件根据其水平和垂直对齐属性进行绘制，并按照它们在 XAML 中出现的顺序排列。如果子控件占据相同的空间，则会发生重叠。
 
 :::info
-有关使用其他面板的讨论，请参见[这里](../../basics/user-interface/building-layouts/panels-overview.md)。
+有关使用其他面板的讨论，请参见[这里](/docs/basics/user-interface/building-layouts/panels-overview.md)。
 :::
 
 ## 示例
@@ -39,7 +39,7 @@ import PanelOverlapBlendScreenshot from '/img/reference/controls/panel/panel-ove
 如果您对面板中子控件的定位有特定要求，您可以基于面板创建自己的自定义控件。
 
 :::info
-有关如何创建自定义面板控件的说明，请参见[这里](../../guides/custom-controls/create-a-custom-panel.md)。
+有关如何创建自定义面板控件的说明，请参见[这里](/docs/guides/custom-controls/create-a-custom-panel.md)。
 :::
 
 ## 更多信息

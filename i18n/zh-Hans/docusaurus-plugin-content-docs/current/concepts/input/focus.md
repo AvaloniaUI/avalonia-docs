@@ -44,7 +44,7 @@ import DirectionalNavigationScreenshot from '/img/concepts/input/directional-nav
 
 ## FocusManager
 
-`FocusManager` 提供对焦点功能的全局访问，例如检索当前聚焦的元素或清除焦点。有关更多信息，请参阅 [FocusManager 文档](../services/focus-manager)。
+`FocusManager` 提供对焦点功能的全局访问，例如检索当前聚焦的元素或清除焦点。有关更多信息，请参阅 [FocusManager 文档](/docs/concepts/services/focus-manager)。
 
 ## Tab 焦点导航
 

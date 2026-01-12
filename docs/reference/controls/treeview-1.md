@@ -34,7 +34,7 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td><code>ItemsControl.ItemPanel</code></td>
-      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](../../concepts/custom-itemspanel.md) to customise the ItemsPanel.</td>
+      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/concepts/custom-itemspanel.md) to customise the ItemsPanel.</td>
     </tr>
     <tr>
       <td><code>ItemsControl.Styles</code></td>

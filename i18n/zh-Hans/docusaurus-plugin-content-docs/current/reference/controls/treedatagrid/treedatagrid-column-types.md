@@ -64,6 +64,6 @@ new TemplateColumn<ItemClass>("Column Header",
 上图是 `TemplateColumn` 构造函数的签名。它有两个必需的参数：第一个是列标题，第二个是返回 `IDataTemplate` 的函数。
 
 :::info
-有关在代码中创建**数据模板**概念的更多信息，请参见[此处](../../../concepts/templates/creating-data-templates-in-code)。
+有关在代码中创建**数据模板**概念的更多信息，请参见[此处](/docs/concepts/templates/creating-data-templates-in-code)。
 :::
 

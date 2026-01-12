@@ -16,7 +16,7 @@ import MusicStoreNewAppScreenshot from '/img/tutorials/music-store-app/creating-
 在开始之前，请检查您是否已安装了 _JetBrains Rider_ 的 _Avalonia UI_ 解决方案模板。
 
 :::info
-有关在 _JetBrains Rider_ 上准备 _Avalonia UI_ 开发的完整说明，请参阅[这里](../../reference/jetbrains-rider-ide/jetbrains-rider-setup.md)。
+有关在 _JetBrains Rider_ 上准备 _Avalonia UI_ 开发的完整说明，请参阅[这里](/docs/reference/jetbrains-rider-ide/jetbrains-rider-setup.md)。
 :::
 
 安装了解决方案模板后，请按照以下说明开始本教程：
@@ -39,7 +39,7 @@ import MusicStoreNewAppScreenshot from '/img/tutorials/music-store-app/creating-
 
 
 :::info
-要了解 MVVM 模式背后的概念以及何时适合使用它，请参阅[这里](../../concepts/the-mvvm-pattern/)。
+要了解 MVVM 模式背后的概念以及何时适合使用它，请参阅[这里](/docs/concepts/the-mvvm-pattern/)。
 :::
 
 解决方案模板已经创建了足够的文件来运行应用程序。在本教程的其余部分中，您将会与所有这些文件打交道。

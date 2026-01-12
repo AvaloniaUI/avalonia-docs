@@ -17,11 +17,11 @@ description: TUTORIALS - Music Store App
 Данное руководство нацелено на настольные платформы, такие как _Apple Mac OS_ или _Windows_.
 
 :::info
-Подробнее о разработке под платформу iOS (Apple), см. [здесь](../../guides/platforms/ios).
+Подробнее о разработке под платформу iOS (Apple), см. [здесь](/docs/guides/platforms/ios).
 :::
 
 :::info
-Подробнее о разработке под мобильную платформу Android, см. [здесь](../../guides/platforms/android).
+Подробнее о разработке под мобильную платформу Android, см. [здесь](/docs/guides/platforms/android).
 :::
 
 ## Дополнительные материалы

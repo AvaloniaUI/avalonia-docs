@@ -13,13 +13,13 @@ import MusicStoreDialogContentDiagram from '/img/gitbook-import/assets/image (9)
 <img className="center" src={MusicStoreDialogContentDiagram} alt="" />
 
 :::info
-有关停靠面板控件的完整信息，请参阅[此处](../../reference/controls/dockpanel.md)的参考文档。
+有关停靠面板控件的完整信息，请参阅[此处](/docs/reference/controls/dockpanel.md)的参考文档。
 :::
 
 停靠面板本身将位于一个 _Avalonia UI_ 用户控件上。这样，显示对话框的代码可以与对话框内部控件的操作代码分离。
 
 :::info
-这是 UI 组合的常见模式，要了解这个概念，请参阅[此处](../../concepts/ui-composition.md)。
+这是 UI 组合的常见模式，要了解这个概念，请参阅[此处](/docs/concepts/ui-composition.md)。
 :::
 
 按照以下步骤添加用户控件和对话框的组成控件：

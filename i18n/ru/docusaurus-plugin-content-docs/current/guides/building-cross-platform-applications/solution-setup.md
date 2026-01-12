@@ -19,7 +19,7 @@ title: Настройка кроссплатформенного решения
 включающее указанные ниже проекты:
 
 :::info
-[Проверьте, установлены ли шаблоны Avalonia.](../../get-started/install#install-avalonia-ui-templates)
+[Проверьте, установлены ли шаблоны Avalonia.](/docs/get-started/install#install-avalonia-ui-templates)
 :::
 
 ### Проект Core

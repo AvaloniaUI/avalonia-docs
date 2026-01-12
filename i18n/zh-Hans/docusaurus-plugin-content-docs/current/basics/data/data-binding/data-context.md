@@ -22,7 +22,7 @@ Avalonia中的每个控件都有一个名为`DataContext`的属性，包括内�
 这意味着在窗口中定义的控件可以使用窗口的数据上下文；或者（如上所示），在窗口中的控件中定义的控件可以使用窗口的数据上下文。
 
 :::info
-有关Avalonia中的控件树以及如何在运行时查看它们的信息，请参阅[这里](../../../concepts/control-trees).
+有关Avalonia中的控件树以及如何在运行时查看它们的信息，请参阅[这里](/docs/concepts/control-trees).
 :::
 
 ## 示例
@@ -96,11 +96,11 @@ public class MainWindowViewModel : ViewModelBase
 ```
 
 :::tip
-有关如何使用设计时数据上下文的更详细指南，请参阅[这里](../../../guides/implementation-guides/how-to-use-design-time-data.md).
+有关如何使用设计时数据上下文的更详细指南，请参阅[这里](/docs/guides/implementation-guides/how-to-use-design-time-data.md).
 :::
 
 :::info
-进一步讨论数据绑定需要您对MVVM（Model-View-ViewModel）编程模式有所了解。如果您想了解MVVM模式的基本概念，请参阅[这里](../../../concepts/the-mvvm-pattern).
+进一步讨论数据绑定需要您对MVVM（Model-View-ViewModel）编程模式有所了解。如果您想了解MVVM模式的基本概念，请参阅[这里](/docs/concepts/the-mvvm-pattern).
 :::
 
 更多信息

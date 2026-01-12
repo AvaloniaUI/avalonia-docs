@@ -123,5 +123,5 @@ public partial class MainWindow : Window
 Note that many Avalonia event handlers pass a special argument of class `RoutedEventArgs`. This includes information about how the event has been generated and propagated.
 
 :::info
-For more information on the concepts of event routing, see [here](../../concepts/input/routed-events.md).
+For more information on the concepts of event routing, see [here](/docs/concepts/input/routed-events.md).
 :::

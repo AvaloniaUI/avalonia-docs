@@ -22,7 +22,7 @@ import SliderMaxValueScreenshot from '/img/reference/controls/slider/slider-max-
 在此示例中，滑块的值将显示在下方的文本块中，通过绑定到一个控件实现。
 
 :::info
-要了解如何将一个控件绑定到另一个控件，请参阅[这里](../../guides/data-binding/binding-to-controls.md)的指南。
+要了解如何将一个控件绑定到另一个控件，请参阅[这里](/docs/guides/data-binding/binding-to-controls.md)的指南。
 :::
 
 这里的最大值和最小值是默认的（分别为0和100）。

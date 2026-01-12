@@ -97,5 +97,5 @@ For more information about compiled bindings, see here. --> TO DO
 ```
 
 :::info
-有关**数据模板**背后的概念信息，请参见[此处](../../concepts/templates)。
+有关**数据模板**背后的概念信息，请参见[此处](/docs/concepts/templates)。
 :::

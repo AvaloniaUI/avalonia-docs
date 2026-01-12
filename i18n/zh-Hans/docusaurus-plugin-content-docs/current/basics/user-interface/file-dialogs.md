@@ -3,7 +3,7 @@ id: file-dialogs
 title: 文件对话框
 ---
 
-文件对话框功能可以通过 [`StorageProvider`](../../concepts/services/storage-provider) 服务 API 访问，该服务 API 可在 `Window` 或 `TopLevel` 类中获取。本页面仅展示基本用法，有关此 API 的更多信息，请查阅 StorageProvider 页面。
+文件对话框功能可以通过 [`StorageProvider`](/docs/concepts/services/storage-provider) 服务 API 访问，该服务 API 可在 `Window` 或 `TopLevel` 类中获取。本页面仅展示基本用法，有关此 API 的更多信息，请查阅 StorageProvider 页面。
 
 :::info
 如果要查看这些概念在实际运行中的完整示例，请参阅 [示例应用程序](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/FileOps) 
@@ -74,10 +74,10 @@ public class MyView : UserControl
 }
 ```
 
-有关 StorageProvider 服务的更多信息，包括如何保持对选定文件的访问以及支持哪些可能的选项，请访问 [`StorageProvider`](../../concepts/services/storage-provider) 文档页面和子页面。
+有关 StorageProvider 服务的更多信息，包括如何保持对选定文件的访问以及支持哪些可能的选项，请访问 [`StorageProvider`](/docs/concepts/services/storage-provider) 文档页面和子页面。
 
 :::note
-为了学习目的，提供的示例直接在 ViewModel 中访问 [`StorageProvider`](../../concepts/services/storage-provider) API。在实际的应用程序中，建议遵循 MVVM 原则，通过创建服务类并使用依赖注入/控制反转 (DI/IoC) 来定位它们。请参阅 [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) 和 DepInject 项目，查看如何实现这一功能的示例。
+为了学习目的，提供的示例直接在 ViewModel 中访问 [`StorageProvider`](/docs/concepts/services/storage-provider) API。在实际的应用程序中，建议遵循 MVVM 原则，通过创建服务类并使用依赖注入/控制反转 (DI/IoC) 来定位它们。请参阅 [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) 和 DepInject 项目，查看如何实现这一功能的示例。
 :::
 
 
