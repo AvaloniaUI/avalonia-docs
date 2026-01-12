@@ -1,54 +1,83 @@
 ---
 id: how-to-create-a-custom-controls-library
-title: How To Reference a Custom Controls Library
+title: How to Create and Reference a Custom Controls Library
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import CustomControlSolutionScreenshot from '/img/guides/custom-controls/custom-control-solution.png';
-import CustomControlNuGetScreenshot from '/img/guides/custom-controls/custom-control-nuget.png';
+import NewClassLibraryVS from '/img/guides/custom-controls/new-class-library-vs.png';
+import NewClassLibraryRider from '/img/guides/custom-controls/new-class-library-rider.png';
+import InstallAvaloniaInClassLibraryVS from 'img/guides/custom-controls/install-avalonia-in-class-library-vs.png';
+import InstallAvaloniaInClassLibraryRider from 'img/guides/custom-controls/install-avalonia-in-class-library-rider.png';
+import CustomControlSolution from '/img/guides/custom-controls/custom-control-solution.png';
+import CustomControlPreview from '/img/guides/custom-controls/custom-control-preview.png';
 
-# How To Reference a Custom Controls Library
+# How To Create and Reference a Custom Controls Library
 
-This guide shows you how to reference an existing custom controls library for use in an _Avalonia UI_ app.
+This guide shows you how to create a custom controls library and reference it for use in an _Avalonia UI_ app.
 
-<img src={CustomControlSolutionScreenshot} alt=""/>
+## Creating a custom controls library
 
-In this example, a custom control file is added to a .NET class library. The library has the _Avalonia UI_ _NuGet_ package installed:
+### Creating a new class library project
 
-<img src={CustomControlNuGetScreenshot} alt=""/>
+To start, you need a **class library** project in which to collect your custom control files.
 
-<Tabs
-  defaultValue="xaml"
-  values={[
-      { label: 'XAML', value: 'xaml', },
-      { label: 'C#', value: 'cs', },
-  ]}
->
-<TabItem value="xaml">
+<Tabs>  
+  <TabItem value="rider" label="Rider">
+    1. Go to **File → New Solution**. Alternatively, **Add → New Project** to add the class library as a new project within an existing solution.
+    2. In the left panel, under the section "Project Type", select **Class Library**.
+    3. Name the project, e.g. "CCLibrary".
+    4. For "Target framework", select the preferred .NET version.
+    5. Click **Create**.
 
-```xml
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:cc="clr-namespace:CCLibrary;assembly=CCLibrary"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaCCLib.MainWindow"
-        Title="AvaloniaCCLib">
-  <Window.Styles>
-    <Style Selector="cc|MyCustomControl">
-      <Setter Property="Background" Value="Yellow"/>
-    </Style>
-  </Window.Styles>
+    <Image light={NewClassLibraryRider} alt="A screenshot of the new project menu in Rider." position="center" maxWidth={400} cornerRadius="true"/>
+  </TabItem>
+  <TabItem value="vs" label="Visual Studio">
+    1. Go to **File → New → Project/Solution**.
+    2. Select **.NET Class Library** as the project template. Use the search bar to locate this template if it does not appear on the suggested list.
+    3. Name the project, e.g. "CCLibrary".
+    4. For "Target framework", select the preferred .NET version.
+    5. Click **Create**.
 
-  <cc:MyCustomControl Height="200" Width="300"/>
+    <Image light={NewClassLibraryVS} alt="A screenshot of the new project menu in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
+  </TabItem>
+</Tabs>
 
-</Window>
-```
+### Installing Avalonia in the class library project
 
-</TabItem>
-<TabItem value="cs">
+Next, you must install the Avalonia NuGet package in the class library.
+
+<Tabs>  
+  <TabItem value="rider" label="Rider">
+    1. In the solution panel, select your class library project.
+    2. Click **Tools → NuGet → Manage NuGet Packages**.
+    3. Search for "Avalonia" in the search bar.
+    4. Select **Avalonia**.
+    5. Select the preferred version.
+    6. Click the name of your class library project at the bottom of the panel to install Avalonia to that project.
+
+    <Image light={InstallAvaloniaInClassLibraryRider} alt="A screenshot demonstrating how to install the Avalonia NuGet package in Rider." position="center" maxWidth={400} cornerRadius="true"/>
+  </TabItem>
+  <TabItem value="vs" label="Visual Studio">
+    1. In the solution explorer, select your class library project.
+    2. Click **Project → Manage NuGet Packages**.
+    3. Go to the **Browse** tab. Search for "Avalonia".
+    4. Select **Avalonia**.
+    5. Select the preferred version.
+    6. Click **Install**.
+
+    <Image light={InstallAvaloniaInClassLibraryVS} alt="A screenshot demonstrating how to install the Avalonia NuGet package in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
+  </TabItem>
+</Tabs>
+
+### Adding a custom control to the class library
+
+Now that your class library is set up, you can start adding custom controls to it.
+
+In this example, we'll create a simple custom control named `MyCustomControl`, a blank box that can be filled with a colour of your choice.
+
+1. In the class library project, create a new `.cs` file.
+2. Create the custom control as shown below.
 
 ```cs
 using Avalonia;
@@ -81,35 +110,82 @@ namespace CCLibrary
     }
 }
 ```
-</TabItem>  
 
-</Tabs>
+You can continue adding as many custom controls to the library as you wish.
+
+## Referencing a custom controls library
+
+Reference your custom controls library in an Avalonia project to allow those custom controls to be used.
+
+In this example, we have created a new project using the Avalonia MVVM template titled `AvaloniaCCLib`.
+
+<Image light={CustomControlSolution} alt="A screenshot of a solution containing two projects in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
+
+### Add a project reference
+
+1. Open the .csproj file of your Avalonia project.
+2. Within the `<Project>...</Project>` tags, add a `ProjectReference` tag pointing to the directory path of the .csproj file of the class library project.
+
+```xml
+<ItemGroup>
+  <ProjectReference Include="..\MyControlsLibrary\CCLibrary.csproj" />
+</ItemGroup>
+```
+
+### Create XML namespace for custom controls library
+
+You can now create a namespace in .axaml files of your Avalonia project to access your custom controls in XAML.
+
+1. Add a line similar to this one to the namespace declarations in the opening `<Window>` tag: `xmlns:cc="clr-namespace:CCLibrary;assembly=CCLibrary"`, changing the name of the class library project if you used a different one.
 
 :::info
-Notice that the namespace reference for the control library includes the name of the assembly.
+The namespace reference for the control library should include the name of the assembly.
 :::
+
+2. Add a custom control to the window's content zone by calling `cc`.
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cc="clr-namespace:CCLibrary;assembly=CCLibrary"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaCCLib.Views.MainWindow"
+        Title="AvaloniaCCLib">
+  <Window.Styles>
+    <Style Selector="cc|MyCustomControl">
+      <Setter Property="Background" Value="Yellow"/>
+    </Style>
+  </Window.Styles>
+
+  <cc:MyCustomControl Height="200" Width="300"/>
+
+</Window>
+```
+
+3. Build the solution.
+4. Verify you can see the custom control in the running window or preview.
+
+<Image light={CustomControlPreview} alt="A screenshot of an IDE, displaying XAML code in one window and a preview of a user interface in another." position="center" maxWidth={400} cornerRadius="true"/>
 
 ## XML Namespace Definitions
 
-When you add a reference to a controls library in an _Avalonia UI_ XAML file, you may want to use the URL identification format. For example:
+When referencing a controls library in a .axaml file, you can use the URL identification format. For example:
 
 ```xml
 xmlns:cc="https://my.controls.url"
 ```
 
-This is possible because of the presence of XML namespace definitions in a controls library. These map URLs to the code namespaces, and are in the project `Properties/AssemblyInfo.cs` file. For example:
+This is possible because of the presence of XML namespace definitions in a controls library. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See the [source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs).) For example:
 
 ```csharp
 [assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
 ```
 
-:::info
-You can see this in the _Avalonia UI_ built-in controls source code [here](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs).
-:::
-
 ### Common Namespace Definitions
 
-You can also make one URL map several namespaces in your controls library. To do this simply add multiple XML namespace definitions that use the same URL, but map to different code namespaces, like this:
+You can make one URL map several namespaces in your controls library. To do this, simply add multiple XML namespace definitions that use the same URL, but which map to different code namespaces.
 
 ```cs
 using Avalonia.Metadata;
