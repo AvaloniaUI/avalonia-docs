@@ -2,8 +2,6 @@
 description: REFERENCE - Built-in Controls
 ---
 
-import PanelOverlapBlendScreenshot from '/img/reference/controls/panel/panel-overlap-blend.png';
-
 # Panel
 
 The panel is the most basic control that can contain multiple child controls. Child controls are drawn according to their horizontal and vertical alignment properties, and in the sequence that they appear in the XAML. Child controls will overlap if they occupy the same space.
@@ -16,16 +14,19 @@ For a discussion about using other panels, see [here](/docs/basics/user-interfac
 
 This example uses some 50% opacities to demonstrate that child controls overlap.
 
+<XamlPreview>
+
 ```xml
-<Panel Height="300" Width="300">
+<Panel xmlns="https://github.com/avaloniaui"
+       Margin="10">
     <Rectangle Fill="Red" Height="100" VerticalAlignment="Top"/>
-    <Rectangle Fill="Blue" Opacity="0.5" Width="100" HorizontalAlignment="Right" />
-    <Rectangle Fill="Green" Opacity="0.5" Height="100" VerticalAlignment="Bottom"/>
+    <Rectangle Fill="Green" Height="100" VerticalAlignment="Bottom"/>
+    <Rectangle Fill="Blue" Width="100" HorizontalAlignment="Right" />
     <Rectangle Fill="Orange" Width="100" HorizontalAlignment="Left"/>
 </Panel>
 ```
 
-<img src={PanelOverlapBlendScreenshot} alt="" />
+</XamlPreview>
 
 ## Other Panel Controls
 
