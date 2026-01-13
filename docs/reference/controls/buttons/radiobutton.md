@@ -3,8 +3,6 @@ title: RadioButton
 description: REFERENCE - Built-in Controls
 ---
 
-import RadioButtonsFallback from '/img/reference/controls/buttons/radiobuttons.png';
-
 # Radio Button
 
 The `RadioButton` control presents a group of options from which only one may be selected at a time. A selected option is drawn as a filled circle, and an unselected option as an empty circle.
@@ -23,7 +21,7 @@ You will probably use these properties most often:
 
 This example shows two groups of radio buttons working independently:
 
-<XamlPreview fallbackImage={RadioButtonsFallback} fallbackAlt="Two radio button groups.">
+<XamlPreview>
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui">
@@ -41,8 +39,7 @@ This example shows two groups of radio buttons working independently:
       <RadioButton GroupName="Second Group"
                 Content="Fourth Option"/>
       <RadioButton GroupName="Second Group"
-                Content="Fifth Option"
-                IsChecked="True"/>
+                Content="Fifth Option"/>
   </StackPanel>
 </UserControl>
 ```
