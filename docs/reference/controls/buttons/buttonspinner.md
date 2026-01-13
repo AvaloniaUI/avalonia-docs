@@ -3,8 +3,6 @@ title: ButtonSpinner
 description: REFERENCE - Built-in Controls
 ---
 
-import ButtonSpinnerScreenshot from '/img/reference/controls/buttons/button-spinner.png';
-
 # Button Spinner
 
 The `ButtonSpinner` presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
@@ -17,13 +15,38 @@ You will probably use these properties most often:
 
 ## Example
 
+<XamlPreview>
+
 ```xml
-<ButtonSpinner Height="20" Width="130" ButtonSpinnerLocation="Left">
-  123
-</ButtonSpinner>
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <ButtonSpinner Spin="OnSpin"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center">
+    Press the spinner
+  </ButtonSpinner>
+</UserControl>
 ```
 
-<img src={ButtonSpinnerScreenshot} alt=''/>
+```csharp
+public partial class MainView : UserControl
+{
+    private int _currentValue = 0;
+
+    public void OnSpin(object sender, SpinEventArgs args)
+    {
+        if (args.Direction == SpinDirection.Increase)
+            _currentValue++;
+        else
+            _currentValue--;
+
+        var btn = (ButtonSpinner)sender;
+        btn.Content = $"Value: {_currentValue}";
+    }
+}
+```
+
+</XamlPreview>
 
 ## More Information
 
