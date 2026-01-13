@@ -9,10 +9,14 @@ import Admonition from '@theme/Admonition';
 import { extractCodeBlocks } from './utils';
 import styles from './XamlPreview.module.css';
 
+const IFRAME_TIMEOUT_MS = 20000; // 20 seconds
+
 interface XamlPreviewProps {
   xaml?: string;
   csharp?: string;
   showCSharp?: boolean;
+  fallbackImage?: string;
+  fallbackAlt?: string;
   children?: ReactNode;
 }
 
