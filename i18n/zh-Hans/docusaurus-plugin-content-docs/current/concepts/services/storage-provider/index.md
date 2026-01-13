@@ -7,7 +7,7 @@ title: StorageProvider
 
 `StorageProvider` 是文件和文件夹管理的核心。它提供了用于选择文件和文件夹、检查平台功能以及与存储书签交互的方法。
 
-`StorageProvider` 可以通过 `TopLevel` 或 `Window` 的实例访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](../../toplevel) 页面：
+`StorageProvider` 可以通过 `TopLevel` 或 `Window` 的实例访问，有关访问 `TopLevel` 的更多详细信息，请访问 [TopLevel](/docs/concepts/toplevel) 页面：
 ```cs
 var storage = window.StorageProvider;
 ```

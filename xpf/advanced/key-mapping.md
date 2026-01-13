@@ -8,7 +8,7 @@ Sometimes inbuilt WPF controls may use keyboard shortcuts which are correct on W
 To address this issue, XPF offers a key mapping feature which can automatically map keys at runtime. This feature is most commonly needed on macOS but can also be useful on other operating systems.
 
 :::tip
-See the [macOS](../platforms/macos#key-mapping) section for information on this subject relating specifically to macOS.
+See the [macOS](/xpf/platforms/macos#key-mapping) section for information on this subject relating specifically to macOS.
 :::
 
 ## Adding a Custom Key Map Handler

@@ -69,7 +69,7 @@ import SplitViewCompactScreenshot from '/img/reference/controls/splitview/splitv
 <img src={SplitViewCompactScreenshot} alt="" />
 
 :::info
-要了解如何以这种方式使用分屏视图控件，请参阅[这里的指南](../../guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm.md)。
+要了解如何以这种方式使用分屏视图控件，请参阅[这里的指南](/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm.md)。
 :::
 
 ## 更多信息

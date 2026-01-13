@@ -9,7 +9,7 @@ import PanelOverlapBlendScreenshot from '/img/reference/controls/panel/panel-ove
 The panel is the most basic control that can contain multiple child controls. Child controls are drawn according to their horizontal and vertical alignment properties, and in the sequence that they appear in the XAML. Child controls will overlap if they occupy the same space.
 
 :::info
-For a discussion about using other panels, see [here](../../basics/user-interface/building-layouts/panels-overview.md).
+For a discussion about using other panels, see [here](/docs/basics/user-interface/building-layouts/panels-overview.md).
 :::
 
 ## Example
@@ -39,7 +39,7 @@ There are other more useful panels, that offer better control over the positioni
 If you have specific requirements for positioning the child controls in a panel, you can create your own custom control based on the panel.
 
 :::info
-For instructions about how to create a custom panel control, see [here](../../guides/custom-controls/create-a-custom-panel.md).
+For instructions about how to create a custom panel control, see [here](/docs/guides/custom-controls/create-a-custom-panel.md).
 :::
 
 ## More Information

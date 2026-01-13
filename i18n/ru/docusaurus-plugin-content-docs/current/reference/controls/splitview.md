@@ -69,7 +69,7 @@ You can use the MVVM pattern with the split view control and one of the compact 
 <img src={SplitViewCompactScreenshot} alt="" />
 
 :::info
-To learn how to use the split view control in this way, see the guide [here](../../guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm.md).
+To learn how to use the split view control in this way, see the guide [here](/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm.md).
 :::
 
 ## More Information

@@ -16,7 +16,7 @@ The image can display raster images from a specified image source. The source ca
 
 Images can be used to compose the content of another control. For example, you can create a graphical button using image controls.
 
-The image can be rendered in a few different blend modes, which changes the way the image interacts with what's behind it. see the  [Bitmap Blend Modes](../../concepts/blend-modes.md) page for a list of all supported blend modes and an example gallery.
+The image can be rendered in a few different blend modes, which changes the way the image interacts with what's behind it. see the  [Bitmap Blend Modes](/docs/concepts/blend-modes.md) page for a list of all supported blend modes and an example gallery.
 
 The image displayed can be resized and scaled.  The default settings for scaling (uniform stretch in both directions) will result in the image being fitted to the size (width and/or height) given.
 
@@ -57,7 +57,7 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 
 ### BlendMode
 
-This example is using two images, where the second image is using the `Multiply` Blend mode. For more information, read the [Bitmap Blend Modes](../../concepts/blend-modes.md) page.
+This example is using two images, where the second image is using the `Multiply` Blend mode. For more information, read the [Bitmap Blend Modes](/docs/concepts/blend-modes.md) page.
 
 ```xml
 <Panel>

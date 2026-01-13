@@ -11,7 +11,7 @@ import ControlContentTypeScreenshot from '/img/concepts/templates/content-type.p
 您可能已经看到了在将按钮控件放入_Avalonia UI_窗口的内容区域时会发生什么。
 
 :::info
-关于_Avalonia UI_控件区域的概念，可以在[此处](../layout/layout-zones)找到讨论。
+关于_Avalonia UI_控件区域的概念，可以在[此处](/docs/concepts/layout/layout-zones)找到讨论。
 :::
 
 例如：

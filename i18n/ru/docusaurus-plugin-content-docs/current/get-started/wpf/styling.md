@@ -2,9 +2,9 @@
 
 В Avalonia существует два способа стилизации Controls:
 
-- [`Style (рус: Стили)`](../../basics/user-interface/styling) - это CSS-подобные стили.
+- [`Style (рус: Стили)`](/docs/basics/user-interface/styling) - это CSS-подобные стили.
 Они хранятся в коллекции `Styles`, а не `Resources`, как у WPF. 
-- [`ControlTheme`](../../basics/user-interface/styling/control-themes) подобны `Style` у WPF, 
+- [`ControlTheme`](/docs/basics/user-interface/styling/control-themes) подобны `Style` у WPF, 
 и обычно используются при создании тем для Lookless Controls
 
 ## Пример

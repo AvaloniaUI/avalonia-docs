@@ -22,7 +22,7 @@ When binding, Avalonia performs a hierarchical search of the logical control tre
 This means that a control defined in a window can use the data context of the window; or (as above) a control in a control in a window can use the window's data context.
 
 :::info
-For information about the control trees in Avalonia, and how to see them at run-time, see [here](../../../concepts/control-trees).
+For information about the control trees in Avalonia, and how to see them at run-time, see [here](/docs/concepts/control-trees).
 :::
 
 ## Example
@@ -96,11 +96,11 @@ You can see the design-time data context being set in the XAML:
 ```
 
 :::tip
-For a more detailed guide about using the design-time data context, see [here](../../../guides/implementation-guides/how-to-use-design-time-data.md).
+For a more detailed guide about using the design-time data context, see [here](/docs/guides/implementation-guides/how-to-use-design-time-data.md).
 :::
 
 :::info
-Further discussion of data binding requires you to have a background in the MVVM pattern of programming. For an introduction to the concepts of the MVVM pattern, see [here](../../../concepts/the-mvvm-pattern).
+Further discussion of data binding requires you to have a background in the MVVM pattern of programming. For an introduction to the concepts of the MVVM pattern, see [here](/docs/concepts/the-mvvm-pattern).
 :::
 
 Further Information

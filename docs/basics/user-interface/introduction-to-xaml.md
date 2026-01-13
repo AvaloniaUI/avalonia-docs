@@ -45,7 +45,7 @@ For information about the code-behind concept, see [here](code-behind).
 You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.
 
 :::info
-A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](../../concepts/ui-composition.md).
+A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](/docs/concepts/ui-composition.md).
 :::
 
 For example, this XAML adds a button to the content of a window:
@@ -58,7 +58,7 @@ For example, this XAML adds a button to the content of a window:
 ```
 
 :::info
-For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](../../reference/controls).
+For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](/docs/reference/controls).
 :::
 
 ## Control Attributes
@@ -99,7 +99,7 @@ You will often use the _Avalonia UI_ binding system to link a control property t
 ```
 
 :::info
-For further information about the concept behind data binding, see [here](../data/data-binding).
+For further information about the concept behind data binding, see [here](/docs/basics/data/data-binding).
 :::
 
 ## Code-behind Files
@@ -131,7 +131,7 @@ Only one namespace in a file can be defined without using the alias part of the 
 The definition part of the namespace declaration can be either a URL or a code definition. Both of these are used to locate the definition of the elements in the file.
 
 :::info
-For detailed guidance on how namespace declarations work, see [here](../../guides/custom-controls/how-to-create-a-custom-controls-library.md).
+For detailed guidance on how namespace declarations work, see [here](/docs/guides/custom-controls/how-to-create-a-custom-controls-library.md).
 :::
 
 There are two valid syntax options for the definition part of a XAML namespace attribute that references code:

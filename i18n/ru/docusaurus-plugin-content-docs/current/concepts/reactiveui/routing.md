@@ -52,7 +52,7 @@ namespace RoutingExample
 
 **FirstView.xaml.cs**
 
-If we need to handle view model activation and deactivation, then we add a call to WhenActivated to the view. Generally, a rule of thumb is to always add WhenActivated to your views, see [Activation](../../concepts/reactiveui/view-activation) docs for more info.
+If we need to handle view model activation and deactivation, then we add a call to WhenActivated to the view. Generally, a rule of thumb is to always add WhenActivated to your views, see [Activation](/docs/concepts/reactiveui/view-activation) docs for more info.
 
 ```csharp
 namespace RoutingExample

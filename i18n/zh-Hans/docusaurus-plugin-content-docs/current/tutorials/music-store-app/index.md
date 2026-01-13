@@ -17,7 +17,7 @@ import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/imag
 :::
 
 :::info
-有关 MVVM 模式概念的信息和背景，请参阅[此处](../../concepts/the-mvvm-pattern/)。
+有关 MVVM 模式概念的信息和背景，请参阅[此处](/docs/concepts/the-mvvm-pattern/)。
 :::
 
 本教程包含在 macOS 上使用 _Rider_ IDE 的说明，但在其他操作系统上以及使用其他 IDE（如 _Microsoft Windows_ 上的 Visual Studio）时，大同小异。

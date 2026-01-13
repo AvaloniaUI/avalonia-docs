@@ -43,4 +43,4 @@ public class MyCustomSlider : Control
 
 ## 进一步阅读
 
-如需更多信息，请参阅[路由事件深入](../../../../concepts/input/routed-events.md)
+如需更多信息，请参阅[路由事件深入](/docs/concepts/input/routed-events.md)

@@ -14,7 +14,7 @@ The `ComboBox` presents a selected item and a drop-down button that displays a l
 The items in the list can be composed, bound and templated.
 
 :::info
-To review the concept behind **data templates**, see [here](../../concepts/templates/).
+To review the concept behind **data templates**, see [here](/docs/concepts/templates/).
 :::
 
 ## Useful Properties
@@ -29,7 +29,7 @@ You will probably use these properties most often:
 | `AutoScrollToSelectedItem` | Indicates whether to automatically scroll to newly selected items.                                                       |
 | `IsDropDownOpen`           | Indicates whether the dropdown is currently open.                                                                        |
 | `MaxDropDownHeight`        | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show. |
-| `ItemPanel`                | The container panel to place items in. By default, this is a StackPanel. See [this page](../../concepts/custom-itemspanel) to customise the ItemsPanel.|
+| `ItemPanel`                | The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/concepts/custom-itemspanel) to customise the ItemsPanel.|
 | `Styles`                   | The style that is applied to any child element of the ItemControl.                                                       |
 
 ## Examples

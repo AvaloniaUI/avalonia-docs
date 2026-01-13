@@ -96,7 +96,7 @@ namespace AvaloniaControls.Views
 你可以通过在列表框的 `ItemTemplate` 元素中使用**数据模板**来自定义元素的显示方式。
 
 :::info
-要回顾**数据模板**背后的概念，请参阅[这里](../../concepts/templates/)。
+要回顾**数据模板**背后的概念，请参阅[这里](/docs/concepts/templates/)。
 :::
 
 这个示例在带圆角的蓝色边框内显示每个元素。C# code-behind 与之前相同：

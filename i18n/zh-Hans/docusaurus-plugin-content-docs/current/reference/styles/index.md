@@ -10,5 +10,5 @@ description: REFERENCE
 * 伪类
 
 :::info
-要查阅 Avalonia UI **样式系统**背后的概念，请参阅[这里](../../basics/user-interface/styling)。
+要查阅 Avalonia UI **样式系统**背后的概念，请参阅[这里](/docs/basics/user-interface/styling)。
 :::

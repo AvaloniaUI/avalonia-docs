@@ -3,7 +3,7 @@ id: index
 title: Темы
 ---
 
-В Avalonia, темы представляют собой готовые наборы [control themes](../control-themes) и [theme resources](../../../../guides/styles-and-resources/how-to-use-theme-variants),
+В Avalonia, темы представляют собой готовые наборы [control themes](../control-themes) и [theme resources](/docs/guides/styles-and-resources/how-to-use-theme-variants),
 которые используются для встроенных `controls`.
 
 

@@ -16,7 +16,7 @@ import MusicStoreNewAppScreenshot from '/img/tutorials/music-store-app/creating-
 Перед началом работы, убедитесь, что у вас установлено расширение _Avalonia UI_ для _JetBrains Rider_.
 
 :::info
-Подробную информацию об установке расширения _Avalonia UI_, см. [здесь](../../reference/jetbrains-rider-ide/jetbrains-rider-setup.md).
+Подробную информацию об установке расширения _Avalonia UI_, см. [здесь](/docs/reference/jetbrains-rider-ide/jetbrains-rider-setup.md).
 :::
 
 После завершения установки расширения, следуйте инструкции ниже:
@@ -45,7 +45,7 @@ import MusicStoreNewAppScreenshot from '/img/tutorials/music-store-app/creating-
 | Views        | Данная папка предназначена для всех `views` проекта, и она уже содержит `view` для основного окна приложения. Согласно паттерну MVVM, `views` содержат только визуальные части приложения, такие как разметка, шрифты, цвета, иконки и изображения. По MVVM, `views` должны содержать код только для взаимодействия со слоем `view model`. В Avalonia UI, во `view` вы должны управлять обычными и диалоговыми окнами.  |
 
 :::info
-Подробнее о паттерне MVVM, см. [здесь](../../concepts/the-mvvm-pattern/).
+Подробнее о паттерне MVVM, см. [здесь](/docs/concepts/the-mvvm-pattern/).
 :::
 
 Шаблон решения создал достаточное файлов для запуска приложения.

@@ -221,7 +221,7 @@ IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNotNull}}"
 Значение `IsNull` возвращает логический результат, равный `true`, если объект `value` равен `null`.
 
 :::info
-Подробнее о встроенных в _Avalonia UI_ `converters (рус: преобразователях)`, см. [здесь](../../reference/built-in-data-binding-converters.md).
+Подробнее о встроенных в _Avalonia UI_ `converters (рус: преобразователях)`, см. [здесь](/docs/reference/built-in-data-binding-converters.md).
 :::
 
 - Нажмите кнопку **Debug**, чтобы собрать и запустить проект.

@@ -21,7 +21,7 @@ _Avalonia UI_ 的样式系统是一种可以在控件之间共享属性设置的
 _Avalonia UI_ 样式系统使用在控件元素上的 'class' 标签与 CSS（层叠样式表）在 HTML 元素上的工作方式类似。
 :::
 
-在选择步骤中，样式系统从控件开始沿着[逻辑树](../../../concepts/control-trees.md)向上搜索。这意味着在应用程序的最高级别（例如 `App.axaml` 文件）定义的样式可以在应用程序的任何地方使用，但仍然可以在控件更近的地方（例如在窗口或用户控件中）进行覆盖。
+在选择步骤中，样式系统从控件开始沿着[逻辑树](/docs/concepts/control-trees.md)向上搜索。这意味着在应用程序的最高级别（例如 `App.axaml` 文件）定义的样式可以在应用程序的任何地方使用，但仍然可以在控件更近的地方（例如在窗口或用户控件中）进行覆盖。
 
 当选择步骤找到匹配项时，匹配的控件的属性将根据样式中的设置器进行更改。
 
@@ -37,7 +37,7 @@ _Avalonia UI_ 样式系统使用在控件元素上的 'class' 标签与 CSS（�
 ```
 
 :::info
-_Avalonia UI_ **样式选择器语法** 类似于 CSS（层叠样式表）中使用的语法。有关详细的参考信息，请参阅 [此处](../../../reference/styles/style-selector-syntax.md)。
+_Avalonia UI_ **样式选择器语法** 类似于 CSS（层叠样式表）中使用的语法。有关详细的参考信息，请参阅 [此处](/docs/reference/styles/style-selector-syntax.md)。
 :::
 
 ## 示例
@@ -85,7 +85,7 @@ _Avalonia UI_ **样式选择器语法** 类似于 CSS（层叠样式表）中使
 这个选择器将匹配具有样式键`TargetControlClass`且带有样式类`styleClassName`的所有控件。
 
 :::info
-完整的选择器列表可在[此处](../../../reference/styles/style-selector-syntax.md)找到。
+完整的选择器列表可在[此处](/docs/reference/styles/style-selector-syntax.md)找到。
 :::
 
 ## 设置器
@@ -100,12 +100,12 @@ _Avalonia UI_ **样式选择器语法** 类似于 CSS（层叠样式表）中使
 当样式与控件匹配时，样式中的所有设置器都将应用于控件。
 
 :::info
-有关设置器的更多信息，请参阅[此处](../../../guides/styles-and-resources/property-setters.md).
+有关设置器的更多信息，请参阅[此处](/docs/guides/styles-and-resources/property-setters.md).
 :::
 
 ## 嵌套样式
 
-样式可以嵌套在其他样式中。要嵌套样式，只需将子样式作为父 `<Style>` 元素的子元素包含，并在子选择器的开头加上 [嵌套选择器 `^`](../../../reference/styles/style-selector-syntax.md#nesting):
+样式可以嵌套在其他样式中。要嵌套样式，只需将子样式作为父 `<Style>` 元素的子元素包含，并在子选择器的开头加上 [嵌套选择器 `^`](/docs/reference/styles/style-selector-syntax.md#nesting):
 
 ```xml
 <Style Selector="TextBlock.h1">
@@ -153,11 +153,11 @@ public class MyButton : Button
 样式通常与资源一起使用以帮助维护一致的表现。资源可以帮助定义应用程序中的标准颜色和图标，或者在从单独文件中包含时可以跨多个应用程序中使用。
 
 :::info
-有关如何在应用程序中使用资源的指导，请参阅[此处](../../../guides/styles-and-resources/resources.md).
+有关如何在应用程序中使用资源的指导，请参阅[此处](/docs/guides/styles-and-resources/resources.md).
 :::
 
 ## 更多信息
 
 :::info
-有关如何通过包含样式文件来共享样式的指导，请参阅[此处](../../../guides/styles-and-resources/how-to-use-included-styles.md).
+有关如何通过包含样式文件来共享样式的指导，请参阅[此处](/docs/guides/styles-and-resources/how-to-use-included-styles.md).
 :::

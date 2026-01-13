@@ -24,7 +24,7 @@ import MusicStoreFinishedAppScreenshot from '/img/tutorials/music-store-app/imag
 :::
 
 :::info
-Подробнее о MVVM и его использовании в _Avalonia UI_, см. [здесь](../../concepts/the-mvvm-pattern/).
+Подробнее о MVVM и его использовании в _Avalonia UI_, см. [здесь](/docs/concepts/the-mvvm-pattern/).
 :::
 
 Данное руководство содержит инструкции для IDE _Rider_ на macOS;

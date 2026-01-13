@@ -9,7 +9,7 @@ import ContextMenuCopyPasteScreenshot from '/img/reference/controls/contextmenu/
 The context menu can be applied to any host control to implement a right-click 'context sensitive' menu. This uses an **attached property** of the host control.
 
 :::info
-To review the concept behind this use of  an **attached property**, see [here](../../concepts/attached-property.md).
+To review the concept behind this use of  an **attached property**, see [here](/docs/concepts/attached-property.md).
 :::
 
 ## Example

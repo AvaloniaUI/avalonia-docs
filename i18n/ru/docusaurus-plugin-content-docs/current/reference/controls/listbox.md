@@ -82,7 +82,7 @@ namespace AvaloniaControls.Views
 You can customize how an item is displayed by using an **data template** inside the list box `ItemTemplate` element.
 
 :::info
-To review the concepts behind **data template**, see [here](../../concepts/templates/).
+To review the concepts behind **data template**, see [here](/docs/concepts/templates/).
 :::
 
 This example displays each item inside a blue border with rounded corners. The C# code-behind is the same as before:

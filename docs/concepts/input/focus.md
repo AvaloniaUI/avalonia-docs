@@ -57,7 +57,7 @@ avoid showing a duplicate indicator.
 ## FocusManager
 
 The `FocusManager` provides global access to focus functionality, such as retrieving the currently focused element or
-clearing focus. For additional information, see the [FocusManager docs](../services/focus-manager).
+clearing focus. For additional information, see the [FocusManager docs](/docs/concepts/services/focus-manager).
 
 ## Tab Focus Navigation
 

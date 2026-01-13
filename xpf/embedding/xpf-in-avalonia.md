@@ -5,13 +5,13 @@ title: XPF in Avalonia
 
 ## Step 1: Update the Project File
 
-Change the SDK in your Avalonia application to [use the XPF SDK](../getting-started.md#step-3-use-the-xpf-sdk):
+Change the SDK in your Avalonia application to [use the XPF SDK](/xpf/getting-started.md#step-3-use-the-xpf-sdk):
 
 ```xml
 <Project Sdk="Xpf.Sdk/1.4.0">
 ```
 
-And [disable automatic XPF initialization](../advanced/customizing-init#step-1-disable-automatic-xpf-initialization):
+And [disable automatic XPF initialization](/xpf/advanced/customizing-init.md#step-1-disable-automatic-xpf-initialization):
 
 ```xml
 <PropertyGroup>

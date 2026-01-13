@@ -12,7 +12,7 @@ title: 建立跨平台解决方案
 `Avalonia Cross Platform Application`模板创建了一个解决方案结构，其中包括以下项目，以无缝地实现在多个平台上共享和重用代码：
 
 :::info
-[确保已安装Avalonia模板。](../../get-started/install#install-avalonia-ui-templates)
+[确保已安装Avalonia模板。](/docs/get-started/install#install-avalonia-ui-templates)
 :::
 
 ### 核心项目
