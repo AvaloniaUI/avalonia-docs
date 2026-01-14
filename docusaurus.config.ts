@@ -22,10 +22,6 @@ const config: Config = {
   projectName: 'avalonia',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'ru', 'zh-Hans'],
-  },
   headTags: [
     {
       tagName: "link",
@@ -354,7 +350,6 @@ const config: Config = {
           href: 'https://portal.avaloniaui.net',
           position: 'right',
           target: '_blank',
-          className: 'cta',
         },
       ],
     },
