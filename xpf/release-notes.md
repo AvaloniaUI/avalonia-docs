@@ -3,23 +3,44 @@ id: release-notes
 title: Release Notes
 ---
 
-## XPF 1.5.3
+## XPF 1.6.0 (2026-01-19)
+
+* Avalonia version updated from 11.3.1 to 11.3.11
+* Major rework has been done in the following areas:
+  * Mouse capture and loss of capture
+  * Clipboard (bitmap support, custom formats, round-tripping)
+* Added support for Ctrl+Click on macOS, F10 as system key
+* Added support for System.Windows.Documents.Typography properties
+* Added support for filter index in file dialogs
+* Popup fixes (positioning, disabled when dialog shown)
+* MessageBox functionality aligned with Windows (title, max size)
+* Text fixes and improvements (line spacing, inline blocks, font loading and matching)
+* Automation fixes and improvements
+* DPI and scaling fixes and improvements-
+* All log sinks made available
+
+Known issues:
+* Switching tabs in TabControl does not invalidate UIA tree
+* AvaloniaHost takes all input once focused
+* Closing popup from its button might require an extra click
+
+## XPF 1.5.3 (2025-06-23)
 
 * Fix MediaContext to use Stopwatch instead of system clock
 * Adjust WinForms MessageBoxTheme
 * Enforce WPF LineSpacing
 
-## XPF 1.5.2
+## XPF 1.5.2 (2025-06-09)
 
 * Limit the width of a MessageBox to 400px to closely follow the WIN32 behavior
 * Limit the MessageBox to 80% of the current screen's height
 * Update Avalonia to stable 11.3.1
 
-## XPF 1.5.1
+## XPF 1.5.1 (2025-05-21)
 
 * Change VB MsgBox default title to be identical to Windows
 
-## XPF 1.5.0
+## XPF 1.5.0 (2025-05-07)
 
 * Apply TextAlignment to overflowed AVTextLine
 * BmpBitmapDecoderHandle - support 1-Bit BMP
@@ -64,7 +85,7 @@ title: Release Notes
 * Implement OpenFolderDialog
 * Don't call win32 `GetCursorPos` in `Popup`.
 
-## XPF 1.4.0 
+## XPF 1.4.0 (2025-01-08) 
 
 * Remove System.Configuration.ConfigurationManager usages
 * Fix ModifierKeys.MacControl value
@@ -103,7 +124,7 @@ title: Release Notes
 * Use default WPF behavior if ALC support wasn't explicitly enabled
 * Adjust TextLine clipping when the line isn't collapsed
 
-## XPF 1.3.0 
+## XPF 1.3.0 (2024-08-12)
 
 * Enable ECDSA-based license keys
 * Fix multiple Geometry APIs
@@ -165,7 +186,7 @@ title: Release Notes
 * Reset popup _positionInfo when creating a new win
 
 
-## XPF 1.2.0
+## XPF 1.2.0 (2024-05-29)
 
 * Update ImageSharp
 * Make DragDrop handler work with any Control rather than TopLevel
