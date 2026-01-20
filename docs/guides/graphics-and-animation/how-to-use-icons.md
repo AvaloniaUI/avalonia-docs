@@ -33,7 +33,7 @@ In this example, a `TextBlock` control is used to display an icon from the `Font
 
 ### Using Path Icons
 
-Path icons can draw icons from `Geometry` which includes using paths from the scalable vector graphics (SVG) format that can be customized with size and color. See the [reference](../../reference/controls/path-icon) for how to use this control.
+Path icons can draw icons from `Geometry` which includes using paths from the scalable vector graphics (SVG) format that can be customized with size and color. See the [reference](/docs/reference/controls/path-icon) for how to use this control.
 
 ## Best Practices
 
