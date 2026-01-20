@@ -10,7 +10,7 @@ In Avalonia, using icons in your user interface can help to improve the look of 
 
 
 ## Using Icons in Avalonia
-Icons can be added to your Avalonia application in various ways. This guide will cover two common methods: using image files and using icon fonts.
+Icons can be added to your Avalonia application in various ways. This guide will cover three common methods: using image files, using icon fonts, and using path icons.
 
 ### Using Image Files
 One way to use icons in Avalonia is by using image files. You can use various formats like PNG, JPG, or BMP. Here's an example of how to use an image file as an icon:
@@ -30,6 +30,10 @@ Another way to use icons in Avalonia is by using icon fonts. Icon fonts allow yo
 ```
 
 In this example, a `TextBlock` control is used to display an icon from the `FontAwesome` icon font. The `FontFamily` property of the `TextBlock` control is set to a resource URI that points to the font file, and the Text property is set to the Unicode value of the desired icon.
+
+### Using Path Icons
+
+Path icons can draw icons from `Geometry` which includes using paths from the scalable vector graphics (SVG) format that can be customized with size and color. See the [reference](/docs/reference/controls/path-icon) for how to use this control.
 
 ## Best Practices
 
