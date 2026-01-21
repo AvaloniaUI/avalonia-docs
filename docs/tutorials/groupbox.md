@@ -75,3 +75,9 @@ Once the style is in place, you can use the `HeaderedContentControl` in your XAM
 The style uses Avalonia's theme resources to ensure the control looks appropriate in both light and dark themes. The header text appears to "break" the border line by using a background color matching the window, creating the classic `GroupBox` appearance. The content area features rounded corners and proper padding for a modern look.
 
 This implementation provides all the visual and functional benefits of a traditional `GroupBox` while maintaining consistency with Avalonia's design patterns and theme system.
+
+:::tip
+The above sample assumes you are using the Avalonia template defaults. `HeaderedContentControl` is affected by custom themes or styles, which may cause the control's appearance to render differently. For example, a universal `BorderThickness` of 1 may cause a border to appear around the header.
+
+If this occurs, please adjust the control-specific styles of the `HeaderedContentControl`.
+:::
