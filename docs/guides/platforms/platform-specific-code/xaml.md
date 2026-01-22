@@ -58,7 +58,7 @@ OnPlatform can also be used in XML syntax for defining property values:
         </OnPlatform.Default>
         <OnPlatform.iOS>
             <ToggleSwitch Content="Hello iOS" />
-        </OnPlatform.Windows>
+        </OnPlatform.iOS>
     </OnPlatform>
 </StackPanel>
 ```
