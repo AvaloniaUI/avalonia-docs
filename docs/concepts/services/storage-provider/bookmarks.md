@@ -56,27 +56,29 @@ private async Task SaveBookmarksAsync(Control control)
     {
         // Save the bookmarkId to a local file for later use.
         // ... (code to save bookmarkId)
-        CurrentActiveBookmarkId = bookmarkId;
     }
 }
 ```
 
-You can use the `OpenFolderBookmarkAsync()` methods to open a bookmarked folder via a `bookmark ID`. This will return the bookmarked file or folder or null if the operating system denies the request.
+You can use the `OpenFolderBookmarkAsync()` methods to open a bookmarked folder via a `bookmark ID`. This will return the bookmarked folder or null if the operating system denies the request.
 
 ```csharp
 // Example usage
-private async Task LoadSelectedBookmarkAsync(Control control)
+private async Task LoadFolderByBookmarkAsync(Control control, string bookmarkId)
 {
-    if (string.IsNullOrEmpty(SelectedBookmarkId)) return;
+    if (string.IsNullOrEmpty(bookmarkId)) return;
 
     var toplevel = TopLevel.GetTopLevel(control);
-    var folder = await toplevel.StorageProvider.OpenFolderBookmarkAsync(SelectedBookmarkId);
-
-    if (folder != null)
+    if (toplevel?.StorageProvider != null)
     {
-        // Successfully opened the bookmarked folder.
-        LastSelectedFolder = folder;
-        SelectedFolder = folder.Path.LocalPath;
+        var folder = await toplevel.StorageProvider.OpenFolderBookmarkAsync(bookmarkId);
+
+        if (folder != null)
+        {
+            // Successfully opened the bookmarked folder.
+            // ... (code to save folder as a var)
+            LastSelectedFolder = folder;
+        }
     }
 }
 ```
@@ -85,28 +87,82 @@ private async Task LoadSelectedBookmarkAsync(Control control)
 
 ```csharp
 // Example usage
-private async Task ReleaseBookmarkAsync(Control control)
+private async Task ReleaseBookmarkAsync(Control control, string bookmarkId)
 {
-    if (!string.IsNullOrEmpty(SelectedBookmarkId))
-    {
-        // First, try to release the OS bookmark.
-        var toplevel = TopLevel.GetTopLevel(control);
-        if (toplevel?.StorageProvider != null)
-        {
-            var folder = await toplevel.StorageProvider.OpenFolderBookmarkAsync(SelectedBookmarkId);
-            if (folder is IStorageBookmarkItem storageBookmark)
-            {
-                await storageBookmark.ReleaseBookmarkAsync();
-                storageBookmark.Dispose();
-            }
-        }
-        
-        // Then, remove the ID from local storage.
-        // ... (code to remove bookmarkId from file)
+    if (string.IsNullOrEmpty(bookmarkId)) return;
 
+    // First, try to release the OS bookmark.
+    var toplevel = TopLevel.GetTopLevel(control);
+    if (toplevel?.StorageProvider != null)
+    {
+        var folder = await toplevel.StorageProvider.OpenFolderBookmarkAsync(bookmarkId);
+        if (folder is IStorageBookmarkItem storageBookmark)
+        {
+            await storageBookmark.ReleaseBookmarkAsync();
+            storageBookmark.Dispose();
+        }
+    }
+        
+    // Then, remove the ID from local storage.
+    // ... (code to remove bookmarkId from file)
+
+}
+```
+
+
+### Reading and Writing File Content from a Bookmark
+
+`OpenFileBookmarkAsync()`: This method is used to open a bookmarked file from a stored `bookmark ID`. It will return the bookmarked file or null if the operating system denies the request.
+
+
+Once you retrieve a bookmarked file using `OpenFileBookmarkAsync()`, you can read its content with `OpenReadAsync()` or modify it with `OpenWriteAsync()`.
+
+`OpenReadAsync()`: Opens a stream for read access to the bookmarked file.
+
+```csharp
+// Example usage
+private async Task LoadFileByBookmarkAsync(Control control, string bookmarkId)
+{
+    if (string.IsNullOrEmpty(bookmarkId)) return;
+    var toplevel = TopLevel.GetTopLevel(control);
+    if (toplevel?.StorageProvider != null)
+    {
+        IStorageFile bookmarkedFile = await toplevel.StorageProvider.OpenFileBookmarkAsync(bookmarkId);
+        if (bookmarkedFile != null)
+        {
+            // Read bookmarkedFile content
+            // ... (code to use a read stream)
+            await using var readStream = await bookmarkedFile.OpenReadAsync();
+            using var reader = new StreamReader(readStream, Encoding.UTF8);
+            FileContent = await reader.ReadToEndAsync();
+        }
     }
 }
 ```
+
+`OpenWriteAsync()`: Opens a stream for writing to the bookmarked file.
+
+```csharp
+// Example usage
+private async Task SaveFileByBookmarkAsync(Control control, string bookmarkId)
+{
+    if (string.IsNullOrEmpty(bookmarkId)) return;
+    var toplevel = TopLevel.GetTopLevel(control);
+    if (toplevel?.StorageProvider != null)
+    {
+        IStorageFile bookmarkedFile = await toplevel.StorageProvider.OpenFileBookmarkAsync(bookmarkId);
+        if (bookmarkedFile != null)
+        {
+            // Write bookmarkedFile content
+            // ... (code to use a write stream)
+            await using var writeStream = await bookmarkedFile.OpenWriteAsync();
+            await using var writer = new StreamWriter(writeStream, Encoding.UTF8);
+            await writer.WriteAsync(FileContent);
+        }
+    }
+}
+```
+
 
 ### Managing Bookmarked Files and Folders
 Once a bookmark is loaded, you can use the inherited methods from `IStorageItem` to manipulate the file or folder.
@@ -164,7 +220,7 @@ The way a `bookmark ID` is represented can vary by platform:
 
 **Windows**: A bookmark is a simple absolute path string, so a bookmark might look like `C:\Documents\Avalonia\bookmarks.pdf`
 
-**Android**: Think of the content provider like a waiter that your apps can ask for a certain file/folder through a Content URI. The URI format looks like `content://[Authority]/[path]/[id]`. For example, `com.android.externalstorage.documents` is an `Authority` for accessing External Storage providers, so a bookmark might look like `content://com.android.externalstorage.documents/tree/[your folder path]`.
+**Android**: Think of the content provider like a waiter that your apps can ask for a certain file/folder through a Content URI. The URI format looks like `content://[Authority]/[path]/[id]`. For example, `com.android.externalstorage.documents` is an `Authority` for accessing External Storage providers, so a bookmark might look like `content://com.android.externalstorage.documents/tree/[your folder path]`(Reference: [Create a content provider | Android Developers](https://developer.android.com/guide/topics/providers/content-provider-creating)).
 
 :::note
 The exact behavior and capabilities can depend on the specific operating system and its security policies. For instance, on some platforms, a bookmark might become invalid if the user moves or renames the file or folder that it points to.
