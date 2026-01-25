@@ -106,6 +106,51 @@ Make **GetStartedApp** calculate the temperature conversion as the user types.
     4. Run the app to confirm that the value in the Fahrenheit box changes as you type in the Celsius box.
 </details>
 
+<details>
+    <summary>Optional: Further improvement</summary>
+
+    To allow the Celsius box to accept an empty state or a standalone minus sign, you can adjust the code-behind like so:
+
+    1. In **MainWindow.axaml.cs**, locate the event handler `private void Celsius_TextChanged`. Add a new `if` condition to allow input to be empty or a minus sign only.
+
+    ```csharp
+    if (string.IsNullOrEmpty(Celsius.Text) || Celsius.Text == "-")
+        {
+            Fahrenheit.Text = "";
+        }
+    ```
+
+    2. Change the original `double` parser to start `else if`, as it is now the second condition.
+
+    ```csharp
+    else if (double.TryParse(Celsius.Text, out double C))
+    ```
+
+    3. Your event handler should now look like this:
+
+    ```csharp
+    private void Celsius_TextChanged(object? sender, RoutedEventArgs e)
+    {
+        if (string.IsNullOrEmpty(Celsius.Text) || Celsius.Text == "-")
+        {
+            Fahrenheit.Text = "";
+        }
+        else if (double.TryParse(Celsius.Text, out double C))
+        {
+            var F = C * (9d / 5d) + 32;
+            Fahrenheit.Text = F.ToString("0.0");
+        }
+        else
+        {
+            Celsius.Text = "0";
+            Fahrenheit.Text = "0";
+        }
+    }
+    ```
+
+    4. Run the app to confirm that you can now delete all input from the Celsius box, or input a standalone minus sign, without the box resetting to 0. The Fahrenheit box displays nothing when this is the case. This improvement allows you to type in a negative number without interruption.
+</details>
+
 Congratulations! You have completed this starter tutorial for Avalonia!
 
 ## Further reading
