@@ -48,7 +48,7 @@ Visual Studio Code is also supported, although we do not recommend it due to mor
 	<img className="center" src={DownloadAvaloniaRider} alt="A screenshot displaying how to download the AvaloniaRider extension in Rider." />
 	</div>
 
-	For more information on using the XAML previewer, see the page on [XAML previewers](/docs/get-started/xaml-previewers).
+	For more information on using the XAML previewer, see the page on [using live preview](/docs/guides/ui-development/using-live-preview-in-your-ide).
   </TabItem>
   <TabItem value="vs" label="Visual Studio">
   If you’re working on Windows, you can use [Visual Studio](https://visualstudio.microsoft.com/) with the Avalonia for Visual Studio extension.
@@ -70,7 +70,7 @@ Visual Studio Code is also supported, although we do not recommend it due to mor
   If you are using an older version of Visual Studio, you may need to download an older version of the extension from the Marketplace, e.g., the [2019 version](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio).
   :::
 
-  For more information on using the XAML previewer, see the page on [XAML previewers](/docs/get-started/xaml-previewers).
+  For more information on using the XAML previewer, see the page on [using live preview](/docs/guides/ui-development/using-live-preview-in-your-ide).
   </TabItem>
   <TabItem value="vsc" label="Visual Studio Code">
   If you prefer to use [Visual Studio Code](https://code.visualstudio.com/), the Avalonia for VSCode extension provides basic functionalities like autocomplete and previewer. You can [download the extension from the Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.vscode-avalonia).
@@ -120,46 +120,7 @@ Avalonia UserControl                          avalonia.usercontrol        [C#],F
 Avalonia Window                               avalonia.window             [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
 ```
 
-### Installation troubleshooting
-
-#### .NET is not a recognized program
-
-First, ensure the .NET SDK is installed. Run this command:
-
-```
-dotnet --list-sdks
-```
-
-If a .NET SDK is correctly installed, this returns an output similar to the following:
-
-```
-8.0.202 [C:\Program Files\dotnet\sdk]
-```
-
-If the terminal continues to report that .NET is missing, try restarting the terminal.
-
-#### `Avalonia.Templates` package cannot be found
-
-Ensure NuGet is correctly set up. Run this command:
-
-```
-dotnet nuget list source
-```
-
-Check that the output displays the following as a registered source:
-
-```
-nuget.org [Enabled]
-https://api.nuget.org/v3/index.json
-```
-
-If this source is not listed, add it using this command:
-
-```
-dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
-```
-
-If the package install continues to fail even with NuGet listed as a registered source, check your network connectivity or firewall settings.
+Having issues with the installation? Check the [installation troubleshooting page](/troubleshooting/installation).
 
 ## Creating your first project
 

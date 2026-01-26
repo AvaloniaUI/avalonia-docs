@@ -29,7 +29,6 @@ const sidebars: SidebarsConfig = {
             'get-started/starter-tutorial/exercises',
           ],
         },
-        'get-started/xaml-previewers',
         {
           'type': 'category',
           'label': 'Coming from WPF?',
@@ -51,7 +50,6 @@ const sidebars: SidebarsConfig = {
             'get-started/wpf/comparison-of-avalonia-with-wpf-and-uwp',
           ],
         },
-        'get-started/learn-more',
       ],
     },
     {
