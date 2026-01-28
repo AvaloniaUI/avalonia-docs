@@ -20,31 +20,39 @@ Parcel MCP is only available with a full Accelerate license.
 
 ## Supported AI Assistants
 
-Parcel's MCP server works with various AI coding assistants:
+Parcel's MCP server works with various AI coding assistants. See the documentation for your specific editor or agent:
 
-- **[VSCode with GitHub Copilot](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)** (used in examples below)
-- **[Visual Studio with Copilot](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)** - Supports similar `mcp.json` file formats
+- **[VSCode with Copilot](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)**
+- **[Visual Studio with Copilot](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)**
+- **[Rider Copilot](https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer)**
+- **[Rider AI Assistant](https://www.jetbrains.com/help/ai-assistant/mcp.html)**
 - **[Claude Code](https://claudelog.com/faqs/how-to-setup-claude-code-mcp-servers/)**
 - **[Cursor](https://docs.cursor.com/en/context/mcp)**
 
 ## Setting Up the MCP Server
 
-Parcel provides an STDIO type MCP server, available by running the `parcel mcp` command.
+Parcel provides an STDIO type MCP server, available by running the `parcel mcp` command. Choose the installation method that works best for your editor.
 
-### Adding MCP Server in VSCode
+### Quick Install
 
-1. Open the command palette and run **"MCP: Add Server"**
-2. Select **"stdio"** server type
-3. Set the command to run as:
+Use these one-click installation links to automatically configure the MCP server:
 
-   ```bash
-   parcel mcp
-   ```
+- **[Install for VSCode](https://vscode.dev/redirect/mcp/install?name=avalonia-parcel&config=%7b%22type%22%3a%22stdio%22%2c%22command%22%3a%22parcel%22%2c%22args%22%3a%5b%22mcp%22%5d%7d)** - Opens VSCode and adds the Parcel MCP server
+- **[Install for Cursor](https://cursor.com/en/install-mcp?name=avalonia_parcel&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoicGFyY2VsIiwiYXJncyI6WyJtY3AiXX0=)** - Opens Cursor and adds the Parcel MCP server
 
-4. Set server name to **"parcel"**
-5. Choose to install the server locally or globally
+### CLI Install
 
-VSCode will generate a `.vscode/mcp.json` file:
+#### Claude Code
+
+Run this command to add the Parcel MCP server to Claude Code:
+
+```bash
+claude mcp add parcel -- parcel mcp
+```
+
+### Manual Configuration (mcp.json)
+
+For editors that support `mcp.json` configuration files (VSCode, Visual Studio, Rider, Cursor), add the following to your configuration:
 
 ```json title=".vscode/mcp.json"
 {
@@ -56,62 +64,21 @@ VSCode will generate a `.vscode/mcp.json` file:
                 "mcp"
             ]
         }
-    },
-    "inputs": []
-}
-```
-
-### Adding MCP Server in Claude Desktop
-
-1. Open Claude's Setting -> Developer page, you will find "Edit Config" button
-2. This button opens "claude_desktop_config.json" manifest file.
-3. Edit this file to include Parcel MCP server:
-
-```json
-{
-    "mcpServers": {
-        "parcel": {
-            "command": "parcel",
-            "args": [
-                "mcp"
-            ],
-            "env": {
-                "PARCEL_LICENSE_KEY": "YOUR_ACCELERATE_LICENSE_KEY"
-            }
-        }
     }
 }
 ```
 
-4. You will also likely need standard FileSystem MCP server in addition to Parcel MCP. Claude Desktop doesn't have it enabled by default.
-
-:::note
-
-Unlike VSCode, in our testing, Claude Desktop didn't pass system-wide env variable to the MCP servers. Which is why this config has `PARCEL_LICENSE_KEY` defined explicitly.
-
+:::tip
+Refer to your editor's documentation linked above for the exact location where to place or edit the `mcp.json` file.
 :::
 
-## Capabilities
+## Supported tools
 
-Once the MCP server is configured, your AI assistant can help with:
-
-### Project Configuration
-
-- **Create parcel configurations** from existing .NET projects
-- **Configure application properties** like package name, display name, icons, and bundle identifiers
-- **Set up build targets** for multiple platforms and architectures
-
-### Code Signing Setup
-
-- **Windows Azure Trusted Signing** - Configure certificates and signing parameters
-- **macOS Code Signing** - Set up P12 certificates and provisioning profiles
-- **macOS Notarization** - Configure Apple ID and app-specific passwords
-
-### Building and Packaging
-
-- **Build and package** applications for multiple platforms (Windows, macOS, Linux)
-- **Generate installers** in various formats (DMG, DEB, NSIS, ZIP, etc.)
-- **Cross-platform packaging** with runtime-specific outputs
+**create-project**: Creates *.parcel project file with provided context of the application.
+**pack**: Builds and packs project per settings, like RIDs and packaging formats.
+**setup-trusted-signing**: Enables Windows Trusted Signing in *.parcel file.
+**setup-apple-notary**: Enables macOS notary in *.parcel file, can set up Apple ID and app-specific passwords
+**setup-apple-sign**: Enables macOS codesign in *.parcel file, can set up P12 certificates and provisioning profiles.
 
 ## Usage Examples
 
