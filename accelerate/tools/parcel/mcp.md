@@ -37,7 +37,7 @@ Parcel provides an STDIO type MCP server, available by running the `parcel mcp` 
 
 Use these one-click installation links to automatically configure the MCP server:
 
-- **[Install for VSCode](https://vscode.dev/redirect/mcp/install?name=avalonia-parcel&config=%7b%22type%22%3a%22stdio%22%2c%22command%22%3a%22parcel%22%2c%22args%22%3a%5b%22mcp%22%5d%7d)** - Opens VSCode and adds the Parcel MCP server
+- **[Install for VSCode](https://vscode.dev/redirect/mcp/install?name=avalonia_parcel&config=%7b%22type%22%3a%22stdio%22%2c%22command%22%3a%22parcel%22%2c%22args%22%3a%5b%22mcp%22%5d%7d)** - Opens VSCode and adds the Parcel MCP server
 - **[Install for Cursor](https://cursor.com/en/install-mcp?name=avalonia_parcel&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoicGFyY2VsIiwiYXJncyI6WyJtY3AiXX0=)** - Opens Cursor and adds the Parcel MCP server
 
 ### CLI Install
@@ -47,7 +47,7 @@ Use these one-click installation links to automatically configure the MCP server
 Run this command to add the Parcel MCP server to Claude Code:
 
 ```bash
-claude mcp add parcel -- parcel mcp
+claude mcp add --scope user avalonia_parcel -- avdt mcp
 ```
 
 ### Manual Configuration (mcp.json)
@@ -57,7 +57,7 @@ For editors that support `mcp.json` configuration files (VSCode, Visual Studio, 
 ```json title=".vscode/mcp.json"
 {
     "servers": {
-        "parcel": {
+        "avalonia_parcel": {
             "type": "stdio",
             "command": "parcel",
             "args": [
@@ -76,6 +76,7 @@ Refer to your editor's documentation linked above for the exact location where t
 
 **create-project**: Creates *.parcel project file with provided context of the application.
 **pack**: Builds and packs project per settings, like RIDs and packaging formats.
+
 **setup-trusted-signing**: Enables Windows Trusted Signing in *.parcel file.
 **setup-apple-notary**: Enables macOS notary in *.parcel file, can set up Apple ID and app-specific passwords
 **setup-apple-sign**: Enables macOS codesign in *.parcel file, can set up P12 certificates and provisioning profiles.
