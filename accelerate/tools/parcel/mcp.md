@@ -20,7 +20,7 @@ Parcel MCP is only available with a full Accelerate license.
 
 ## Supported AI Assistants
 
-Parcel's MCP server works with various AI coding assistants. See the documentation for your specific editor or agent:
+Parcel's MCP server works with various AI assistants. 
 
 - **[VSCode with Copilot](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)**
 - **[Visual Studio with Copilot](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)**
@@ -31,20 +31,20 @@ Parcel's MCP server works with various AI coding assistants. See the documentati
 
 ## Setting Up the MCP Server
 
-Parcel provides an STDIO type MCP server, available by running the `parcel mcp` command. Choose the installation method that works best for your editor.
+Parcel provides a STDIO type MCP server, available by running the `parcel mcp` command. Installation methods depend on your editor and are detailed below.
 
 ### Quick Install
 
 Use these one-click installation links to automatically configure the MCP server:
 
-- **[Install for VSCode](https://vscode.dev/redirect/mcp/install?name=avalonia_parcel&config=%7b%22type%22%3a%22stdio%22%2c%22command%22%3a%22parcel%22%2c%22args%22%3a%5b%22mcp%22%5d%7d)** - Opens VSCode and adds the Parcel MCP server
-- **[Install for Cursor](https://cursor.com/en/install-mcp?name=avalonia_parcel&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoicGFyY2VsIiwiYXJncyI6WyJtY3AiXX0=)** - Opens Cursor and adds the Parcel MCP server
+- [Install for VSCode](https://vscode.dev/redirect/mcp/install?name=avalonia_parcel&config=%7b%22type%22%3a%22stdio%22%2c%22command%22%3a%22parcel%22%2c%22args%22%3a%5b%22mcp%22%5d%7d)
+- [Install for Cursor](https://cursor.com/en/install-mcp?name=avalonia_parcel&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoicGFyY2VsIiwiYXJncyI6WyJtY3AiXX0=)
 
 ### CLI Install
 
 #### Claude Code
 
-Run this command to add the Parcel MCP server to Claude Code:
+Run this command:
 
 ```bash
 claude mcp add --scope user avalonia_parcel -- avdt mcp
@@ -69,7 +69,7 @@ For editors that support `mcp.json` configuration files (VSCode, Visual Studio, 
 ```
 
 :::tip
-Refer to your editor's documentation linked above for the exact location where to place or edit the `mcp.json` file.
+Refer to your editor's documentation for the exact location to place or edit the `mcp.json` file.
 :::
 
 ## Supported tools
@@ -78,8 +78,8 @@ Refer to your editor's documentation linked above for the exact location where t
 **pack**: Builds and packs project per settings, like RIDs and packaging formats.
 
 **setup-trusted-signing**: Enables Windows Trusted Signing in *.parcel file.
-**setup-apple-notary**: Enables macOS notary in *.parcel file, can set up Apple ID and app-specific passwords
-**setup-apple-sign**: Enables macOS codesign in *.parcel file, can set up P12 certificates and provisioning profiles.
+**setup-apple-notary**: Enables macOS notary in *.parcel file. Sets up Apple ID and app-specific passwords.
+**setup-apple-sign**: Enables macOS codesign in *.parcel file. Sets up P12 certificates and provisioning profiles.
 
 ## Usage Examples
 

@@ -11,7 +11,7 @@ Model Context Protocol (MCP) is an open standard that allows AI models to use ex
 
 Before setting up the MCP server, ensure you have:
 
-1. **DevTools .NET tool installed** - Follow the [Getting Started](getting-started) guide
+1. **DevTools .NET tool** installed - Follow the [Getting Started](/accelerate/tools/dev-tools/getting-started) guide
 2. **Valid license key** - Set `ACCELERATE_LICENSE_KEY` environment variable to a valid license key from the portal
 
 :::note
@@ -20,7 +20,7 @@ DevTools MCP is only available with a full Accelerate license.
 
 ## Supported AI Assistants
 
-DevTools MCP server works with various AI coding assistants. See the documentation for your specific editor or agent:
+DevTools MCP server works with various AI coding assistants.
 
 - **[VSCode with Copilot](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)**
 - **[Visual Studio with Copilot](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)**
@@ -31,20 +31,20 @@ DevTools MCP server works with various AI coding assistants. See the documentati
 
 ## Setting Up the MCP Server
 
-DevTools provides an STDIO type MCP server, available by running the `avdt mcp` command. Choose the installation method that works best for your editor.
+DevTools provides a STDIO type MCP server, available by running the `avdt mcp` command. Installation methods depend on your editor and are detailed below.
 
 ### Quick Install
 
 Use these one-click installation links to automatically configure the MCP server:
 
-- **[Install for VSCode](https://vscode.dev/redirect/mcp/install?name=avalonia_devtools&config=%7b%22type%22%3a%22stdio%22%2c%22command%22%3a%22avdt%22%2c%22args%22%3a%5b%22mcp%22%5d%7d)** - Opens VSCode and adds the DevTools MCP server
-- **[Install for Cursor](https://cursor.com/en/install-mcp?name=avalonia_devtools&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoiYXZkdCIsImFyZ3MiOlsibWNwIl19)** - Opens Cursor and adds the DevTools MCP server
+- [Install for VSCode](https://vscode.dev/redirect/mcp/install?name=avalonia_devtools&config=%7b%22type%22%3a%22stdio%22%2c%22command%22%3a%22avdt%22%2c%22args%22%3a%5b%22mcp%22%5d%7d)
+- [Install for Cursor](https://cursor.com/en/install-mcp?name=avalonia_devtools&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoiYXZkdCIsImFyZ3MiOlsibWNwIl19)
 
 ### CLI Install
 
 #### Claude Code
 
-Run this command to add the DevTools MCP server to Claude Code:
+Run this command:
 
 ```bash
 claude mcp add --scope user avalonia_devtools -- avdt mcp
@@ -69,22 +69,22 @@ For editors that support `mcp.json` configuration files (VSCode, Visual Studio, 
 ```
 
 :::tip
-Refer to your editor's documentation linked above for the exact location where to place or edit the `mcp.json` file.
+Refer to your editor's documentation for the exact location to place or edit the `mcp.json` file.
 :::
 
 ## Supported Tools
 
-**attach-to-app**: Connects to a running Avalonia app. Lists apps if no processId and multiple available.
-**attach-to-file**: Connects to Avalonia previewer with specified XAML file. Prefer it over attach-to-app for previewing XAML files.
+**attach-to-app**: Connects to a running Avalonia app. Lists apps if no `processId` is found and multiple apps are available.
+**attach-to-file**: Connects to the live previewer with the specified XAML file. This is recommended over attach-to-app for previewing XAML.
 
-**tree**: Gets child elements. Null nodeId returns roots.
+**tree**: Gets child elements. Null `nodeId` returns roots.
 **ancestors**: Gets parent chain from root.
-**search**: Finds elements by type or x:Name.
+**search**: Finds elements by type or `x:Name`.
 
 **props**: Gets property values for a node.
-**set-prop**: Sets a property value. Use 'null' or 'unset' for special values.
+**set-prop**: Sets a property value. Use `null` or `unset` for special values.
 **styles**: Gets applied styles and setters for a node.
-**pseudo-class**: Sets pseudo-class. Omit pseudoClass to list available.
+**pseudo-class**: Sets pseudo-class. Omit `pseudoClass` to list available options.
 
 **resources**: Gets resources. Optionally scoped to a node.
 **assets**: Lists embedded assets (images, fonts). Returns URLs for open-asset.
@@ -101,13 +101,13 @@ Simply describe what you want to accomplish in natural language. The AI assistan
 **Inspecting UI:**
 
 ```text
-"Connect to my running app and show me the visual tree structure"
+"Connect to my running app and show me the visual tree structure."
 ```
 
 **Finding Elements:**
 
 ```text
-"Find all Button elements in my application"
+"Find all Button elements in my application."
 ```
 
 **Debugging Styles:**
@@ -119,8 +119,8 @@ Simply describe what you want to accomplish in natural language. The AI assistan
 **Taking Screenshots:**
 
 ```text
-"Take a screenshot of the login panel"
+"Take a screenshot of the login panel."
 ```
 
-The AI assistant will guide you through the process, execute commands, and help you understand your application's UI structure.
+The AI assistant will guide you, execute commands, and help you understand your application's UI structure.
 
