@@ -1,6 +1,6 @@
 ---
 id: index
-title: Samples & Tutorials
+title: Tutorials
 ---
 
 This section has practical tutorials that are designed to help you learn _Avalonia UI_ and build your confidence. Here is a brief guide to what you can expect from each of the tutorials:
@@ -28,4 +28,4 @@ It uses the _JetBrains Rider_ IDE running on macOS, but the steps will be equiva
 
 The app features a highly graphical application using the MVVM pattern, and including how to display a dialog, present images and collections of data, and implement data persistence.
 
-Follow this demonstration [here](./music-store-app/).
+Follow this demonstration [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CompleteApps/Avalonia.MusicStore).
