@@ -197,6 +197,17 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'concepts',
+        path: 'concepts',
+        routeBasePath: 'concepts',
+        sidebarPath: './concepts-sidebar.ts',
+        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
+        editLocalizedFiles: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'xpf',
         path: 'xpf',
         routeBasePath: 'xpf',
@@ -283,7 +294,11 @@ const config: Config = {
           to: '/samples',
           activeBasePath: '/samples'
         },
-
+        {
+          label: 'Concepts',
+          to: '/concepts',
+          activeBasePath: '/concepts'
+        },
         {
           label: 'Reference',
           to: '/tooling',

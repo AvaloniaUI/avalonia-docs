@@ -1,6 +1,6 @@
 ---
 id: how-to-implement-dependency-injection
-title: How To Implement Dependency Injection
+title: Implementing dependency injection
 ---
 
 # How To Implement Dependency Injection in Avalonia

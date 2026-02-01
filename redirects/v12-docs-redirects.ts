@@ -19,6 +19,18 @@ const redirects: Redirect[] = [
         ],
         "to": "/docs/guides/ui-development/xaml-previewer"
     },
+    {
+        "from": "/docs/guides/implementation-guides/how-to-implement-dependency-injection",
+        "to": "/docs/guides/app-development/dependency-injection"
+    },
+    {
+        "from": "/docs/guides/implementation-guides",
+        "to": "/docs/guides/app-development"
+    },
+    {
+        "from": "/docs/guides/implementation-guides/using-avalonia-with-mvvm-frameworks",
+        "to": "/concepts/architecture/the-mvvm-pattern"
+    }
 ];
 
 export const v12-docs-redirects = { createRedirects, redirects };
