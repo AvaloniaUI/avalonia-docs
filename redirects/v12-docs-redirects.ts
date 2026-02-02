@@ -30,7 +30,19 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/guides/implementation-guides/using-avalonia-with-mvvm-frameworks",
         "to": "/concepts/architecture/the-mvvm-pattern"
-    }
+    },
+    {
+        "from": [
+            "/docs/guides/building-cross-platform-applications/architecture",
+            "/docs/guides/building-cross-platform-applications/dealing-with-platforms",
+            "/docs/guides/building-cross-platform-applications/index",
+        ],
+        "to": "/concepts/architecture/cross-platform-architecture"
+    },
+    {
+        "from": "/docs/guides/building-cross-platform-applications/solution-setup",
+        "to": "/docs/guides/app-development/cross-platform-solution-setup"
+    },
 ];
 
 export const v12-docs-redirects = { createRedirects, redirects };

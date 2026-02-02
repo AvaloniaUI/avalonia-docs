@@ -14,6 +14,7 @@ const sidebars: SidebarsConfig = {
       label: 'Architecture',
       collapsed: false,
       items: [
+        'architecture/cross-platform-architecture',
         'architecture/the-mvvm-pattern',
       ],
     },

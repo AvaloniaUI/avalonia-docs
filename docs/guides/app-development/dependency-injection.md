@@ -3,8 +3,6 @@ id: how-to-implement-dependency-injection
 title: Implementing dependency injection
 ---
 
-# How To Implement Dependency Injection in Avalonia
-
 [Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It accomplishes this by creating discrete services that are passed around/created as needed.
 
 This guide will show you step by step how to use Dependency Injection (DI) with _Avalonia UI_ and the MVVM pattern. 
