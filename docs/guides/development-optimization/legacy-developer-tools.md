@@ -1,6 +1,6 @@
 ---
-id: developer-tools
-title: Legacy Developer Tools
+id: legacy-developer-tools
+title: Using the legacy developer tools
 ---
 
 import DevToolsOverviewScreenshot from '/img/guides/implementation-guides/devtools-overview.png';
@@ -13,13 +13,13 @@ import DevToolsEventsScreenshot from '/img/guides/implementation-guides/devtools
 import DevToolsChangePropertyScreenshot from '/img/guides/implementation-guides/devtools-change-property.gif';
 import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/devtools-change-layout.gif';
 
-# Legacy Developer Tools
-
 :::note
 
 This documentation covers the Legacy Developer Tools. A new [AvaloniaUI Developer Tools](https://avaloniaui.net/accelerate) is now available, offering enhanced features and improved debugging capabilities. The Legacy Developer Tools remain supported with stability updates.
 
 :::
+
+## Attaching the DevTools
 
 Avalonia has a built-in DevTools window which is enabled by calling the attached `AttachDevTools()` method in a `Window` constructor. The default templates have this enabled when the program is compiled in `DEBUG` mode:
 

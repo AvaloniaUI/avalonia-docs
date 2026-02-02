@@ -1,13 +1,13 @@
 ---
 id: logging-errors-and-warnings
-title: How To Log Errors and Warnings
+title: Logging errors and warnings
 ---
 
 import LogToTraceOutputScreenshot from '/img/guides/implementation-guides/log-to-trace-output.png';
 
-# How To Log Errors and Warnings
-
 This guide shows you how to can log warnings and errors in _Avalonia UI_ using the standard _(Microsoft)_`System.Diagnostics.Trace` component. 
+
+## Enabling logs
 
 The code to achieve logging is added to your project by the _Avalonia UI_ solution templates if you use them.
 
@@ -44,7 +44,7 @@ Log messages are then shown in the **Debug** view of the **Output** window of yo
 
 If you want to re-route these messages to different location, you can use the methods on the `System.Diagnostics.Trace` component.
 
-## Log Area
+## Log area
 
 Each message from _Avalonia UI_ is assigned an area that can be used to filter the log. These are described by the members of `Avalonia.Logging.LogArea` static class:
 
@@ -64,7 +64,7 @@ public static AppBuilder BuildAvaloniaApp()
         .LogToTrace(LogEventLevel.Debug, LogArea.Property, LogArea.Layout);
 ```
 
-## Log Sinks
+## Log sinks
 
 The `LogToTrace` extension method uses `StringLogSink`. Avalonia supports custom sinks by implementing `ILogSink`. Assigning your custom sink to `Avalonia.Logging.Logger.Sink` will allow Avalonia to use it.
 

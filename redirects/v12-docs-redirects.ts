@@ -51,6 +51,18 @@ const redirects: Redirect[] = [
         "from": "/docs/guides/building-cross-platform-applications/solution-setup",
         "to": "/docs/guides/app-development/cross-platform-solution-setup"
     },
+    {
+        "from": "/docs/guides/implementation-guides/developer-tools",
+        "to": "/docs/guides/development-optimization/legacy-developer-tools"
+    },
+    {
+        "from": "/docs/guides/implementation-guides/logging-errors-and-warnings",
+        "to": "/docs/guides/app-development/logging-errors-and-warnings"
+    },
+    {
+        "from": "/docs/guides/implementation-guides/localizing",
+        "to": "/docs/guides/app-development/localizing"
+    },
 ];
 
 export const v12_docs_redirects = { redirects };
