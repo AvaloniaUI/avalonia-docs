@@ -3,6 +3,22 @@ interface Redirect {
   from: string | string[];
 }
 
+function createRedirects(existingPath: string): string[] | undefined {
+    if (existingPath.includes('/docs/')) {
+        const redirects: string[] = [];
+
+        // Using whole-folder redirect for folders that are mostly unchanged
+        const v12_redirect = existingPath
+            .replace('/docs/guides/data-binding/', '/docs/guides/data/');
+        if (v12_redirect !== existingPath) {
+          redirects.push(v12_redirect);
+        }
+
+        return redirects;
+    }
+    return undefined; // Return a falsy value: no redirect created
+}
+
 const redirects: Redirect[] = [
     {
         "from": [
@@ -65,4 +81,4 @@ const redirects: Redirect[] = [
     },
 ];
 
-export const v12_docs_redirects = { redirects };
+export const v12_docs_redirects = { createRedirects, redirects };
