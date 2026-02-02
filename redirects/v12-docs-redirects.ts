@@ -1,6 +1,14 @@
+interface Redirect {
+  to: string;
+  from: string | string[];
+}
+
 const redirects: Redirect[] = [
     {
-        "from": "/docs/overview/what-is-avalonia",
+        "from": [
+            "/docs/overview/what-is-avalonia",
+            "/docs/guides/index"
+        ],
         "to": "/docs/welcome"
     },
     {
@@ -45,4 +53,4 @@ const redirects: Redirect[] = [
     },
 ];
 
-export const v12-docs-redirects = { createRedirects, redirects };
+export const v12_docs_redirects = { redirects };

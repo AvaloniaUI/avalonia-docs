@@ -4,6 +4,7 @@
 import { from10to11 } from './migrate-010-to-110';
 import { music_store_redirects } from './music-store-redirects';
 import { get_started_redirects } from './get-started-redirects';
+import { v12_docs_redirects } from './v12-docs-redirects'; 
 
 interface Redirect {
   from: string | string[];
