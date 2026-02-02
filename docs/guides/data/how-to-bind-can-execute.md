@@ -3,7 +3,7 @@ id: how-to-bind-can-execute
 title: How to Bind Can Execute
 ---
 
-import BindCanExecuteScreenshot from '/img/guides/data-binding/bind-canexecute.gif';
+import BindCanExecuteScreenshot from '/img/guides/data/bind-canexecute.gif';
 
 # How to Bind Can Execute
 

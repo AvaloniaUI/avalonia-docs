@@ -3,15 +3,15 @@ id: legacy-developer-tools
 title: Using the legacy developer tools
 ---
 
-import DevToolsOverviewScreenshot from '/img/guides/implementation-guides/devtools-overview.png';
-import DevToolsPropertiesScreenshot from '/img/guides/implementation-guides/devtools-properties.png';
-import DevToolsLayoutScreenshot from '/img/guides/implementation-guides/devtools-layout.png';
-import DevToolsStylesScreenshot from '/img/guides/implementation-guides/devtools-styles.png';
-import DevToolsOverriddenStylesScreenshot from '/img/guides/implementation-guides/devtools-overridden-styles.png';
-import DevToolsSetterContextMenuScreenshot from '/img/guides/implementation-guides/devtools-setter-contextmenu.png';
-import DevToolsEventsScreenshot from '/img/guides/implementation-guides/devtools-events.png';
-import DevToolsChangePropertyScreenshot from '/img/guides/implementation-guides/devtools-change-property.gif';
-import DevToolsChangeLayoutScreenshot from '/img/guides/implementation-guides/devtools-change-layout.gif';
+import DevToolsOverviewScreenshot from '/img/guides/development-optimization/devtools-overview.png';
+import DevToolsPropertiesScreenshot from '/img/guides/development-optimization/devtools-properties.png';
+import DevToolsLayoutScreenshot from '/img/guides/development-optimization/devtools-layout.png';
+import DevToolsStylesScreenshot from '/img/guides/development-optimization/devtools-styles.png';
+import DevToolsOverriddenStylesScreenshot from '/img/guides/development-optimization/devtools-overridden-styles.png';
+import DevToolsSetterContextMenuScreenshot from '/img/guides/development-optimization/devtools-setter-contextmenu.png';
+import DevToolsEventsScreenshot from '/img/guides/development-optimization/devtools-events.png';
+import DevToolsChangePropertyScreenshot from '/img/guides/development-optimization/devtools-change-property.gif';
+import DevToolsChangeLayoutScreenshot from '/img/guides/development-optimization/devtools-change-layout.gif';
 
 :::note
 

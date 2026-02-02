@@ -3,7 +3,7 @@ id: logging-errors-and-warnings
 title: Logging errors and warnings
 ---
 
-import LogToTraceOutputScreenshot from '/img/guides/implementation-guides/log-to-trace-output.png';
+import LogToTraceOutputScreenshot from '/img/guides/app-development/log-to-trace-output.png';
 
 This guide shows you how to can log warnings and errors in _Avalonia UI_ using the standard _(Microsoft)_`System.Diagnostics.Trace` component. 
 

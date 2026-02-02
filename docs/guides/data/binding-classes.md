@@ -3,7 +3,7 @@ id: binding-classes
 title: How To Bind Style Classes
 ---
 
-import BindStyleClassSampleScreenshot from '/img/guides/data-binding/bind-style-class.png';
+import BindStyleClassSampleScreenshot from '/img/guides/data/bind-style-class.png';
 
 # How To Bind Style Classes
 

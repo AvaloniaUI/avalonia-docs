@@ -3,7 +3,7 @@ id: how-to-bind-multiple-properties
 title: How to Bind Multiple Properties
 ---
 
-import MultiBindingRgbScreenshot from '/img/guides/data-binding/multibinding-rgb.gif';
+import MultiBindingRgbScreenshot from '/img/guides/data/multibinding-rgb.gif';
 
 ## MultiBinding
 
