@@ -219,10 +219,10 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'tooling',
-        path: 'tooling',
-        routeBasePath: 'tooling',
-        sidebarPath: './accelerate-sidebar.ts',
+        id: 'reference',
+        path: 'reference',
+        routeBasePath: 'reference',
+        sidebarPath: './reference-sidebar.ts',
         editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
         editLocalizedFiles: true,
       },
@@ -301,8 +301,8 @@ const config: Config = {
         },
         {
           label: 'Reference',
-          to: '/tooling',
-          activeBasePath: '/tooling'
+          to: '/reference',
+          activeBasePath: '/reference'
         },
         {
           label: 'More',
@@ -310,11 +310,6 @@ const config: Config = {
             {
               href: '/troubleshooting',
               label: 'Troubleshooting',
-              rel: null,
-            },
-            {
-              href: '/tooling',
-              label: 'Tooling',
               rel: null,
             },
             {

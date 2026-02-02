@@ -86,6 +86,10 @@ const redirects: Redirect[] = [
         ],
         "to": "/docs/guides/app-development/reactiveui/binding-commands"
     },
+    {
+        "from": "/docs/guides/styles-and-resources/selectors",
+        "to": "/reference/styles/style-selectors"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

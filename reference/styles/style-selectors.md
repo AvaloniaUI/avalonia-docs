@@ -1,5 +1,5 @@
 ---
-id: selectors
+id: style-selectors
 title: Style Selectors
 ---
 

@@ -248,7 +248,6 @@ const sidebars: SidebarsConfig = {
           'type': 'category',
           'label': 'Styles and Resources',
           'items': [
-            'guides/styles-and-resources/selectors',
             'guides/styles-and-resources/property-setters',
             'guides/styles-and-resources/setter-precedence',
             'guides/styles-and-resources/how-to-use-included-styles',
