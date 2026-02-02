@@ -1,5 +1,5 @@
 ---
-id: how-to-implement-dependency-injection
+id: dependency-injection
 title: Implementing dependency injection
 ---
 

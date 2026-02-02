@@ -79,6 +79,13 @@ const redirects: Redirect[] = [
         "from": "/docs/guides/implementation-guides/localizing",
         "to": "/docs/guides/app-development/localizing"
     },
+    {
+        "from": [
+            "/docs/guides/data/how-to-bind-to-a-command-with-reactiveui",
+            "/docs/guides/data-binding/how-to-bind-to-a-command-without-reactiveui"
+        ],
+        "to": "/docs/guides/app-development/reactiveui/binding-commands"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };
