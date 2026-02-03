@@ -1,10 +1,9 @@
 ---
 id: gradients
-title: How To Use Gradients
+title: Creating gradient effects
 ---
 
-
-# How To Use Gradients
+import Gradients from '/img/guides/ui-development/graphics/gradients.png';
 
 This guide explains how to effectively use LinearGradientBrush in Avalonia to create beautiful gradient effects.
 
@@ -98,9 +97,9 @@ A LinearGradientBrush is defined using the following basic structure:
 
 ## Example 
 
-Below is the code to replicate the following sample. 
+Below is the code to replicate the following example. 
 
-![Gradient Sample](../../../static/img/guides/gradients/gradients.png)
+<Image light={Gradients} alt="A series of four brightly colored boxes, demonstrating different implementations of gradient effects." position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"

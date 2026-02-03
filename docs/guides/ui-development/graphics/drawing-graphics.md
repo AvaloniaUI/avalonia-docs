@@ -1,13 +1,9 @@
 ---
-id: graphics-and-animations
-title: How To Draw Graphics
+id: drawing-graphics
+title: Drawing graphics
 ---
 
-import ShapeAndGeometrySampleScreenshot from '/img/guides/graphics-and-animations/shapes-and-geometry.png';
-
-# How To Draw Graphics
-
-Content in preparation.
+import ShapeAndGeometrySampleScreenshot from '/img/guides/ui-development/graphics/shapes-and-geometry.png';
 
 ## Graphics
 
@@ -58,4 +54,4 @@ Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, 
 
 ## Add Animations
 
-Avalonia UI has animation support lets you make controls grow, shake, spin, and fade, to create interesting page transitions, and more. Avalonia uses a CSS-like animation system which supports [property transitions](transitions.md) and [keyframe animations](keyframe-animations.md).
+Avalonia UI has animation support lets you make controls grow, shake, spin, and fade, to create interesting page transitions, and more. Avalonia uses a CSS-like animation system which supports [property transitions](transitions.md) and [keyframe animations](/docs/guides/ui-development/graphics/keyframe-animations).

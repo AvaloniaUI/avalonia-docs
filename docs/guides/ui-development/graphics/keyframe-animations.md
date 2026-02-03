@@ -1,15 +1,13 @@
 ---
 id: keyframe-animations
-title: How To Use Keyframe Animations
+title: Using keyframe animations
 ---
 
-import AnimationKeyframeDiagram from '/img/basics/user-interface/animation-keyframe.png';
-import KeyframeFadeScreenshot from '/img/guides/graphics-and-animations/keyframe-fade.gif';
-import KeyframeCompositeAnimationScreenshot from '/img/guides/graphics-and-animations/keyframe-composite-animation.gif';
-import LinearEasingScreenshot from '/img/guides/graphics-and-animations/linear-easing.gif';
-import BounceEaseInScreenshot from '/img/guides/graphics-and-animations/bounce-ease-in.gif';
-
-# How To Use Keyframe Animations
+import AnimationKeyframeDiagram from '/img/guides/ui-development/graphics/animation-keyframe.png';
+import KeyframeFadeScreenshot from '/img/guides/ui-development/graphics/keyframe-fade.gif';
+import KeyframeCompositeAnimationScreenshot from '/img/guides/ui-development/graphics/keyframe-composite-animation.gif';
+import LinearEasingScreenshot from '/img/guides/ui-development/graphics/linear-easing.gif';
+import BounceEaseInScreenshot from '/img/guides/ui-development/graphics/bounce-ease-in.gif';
 
 You can use a keyframe animation to change one or more control properties following a timeline. The keyframes are defined in _Avalonia UI_ styles with **cue** points along the **duration** of the animation, and set the intermediate values of the properties at a point in time.
 
@@ -28,7 +26,7 @@ If you are familiar with keyframe animations keyframe work in CSS, you will reco
 You define a keyframe animation using styles.
 
 :::info
-To revise how _Avalonia UI_ uses styles, see the concept [here](/docs/basics/user-interface/styling).
+To revise how _Avalonia UI_ uses styles, see the concept [here](/concepts/ui-concepts/styling/styles).
 :::
 
 Follow this procedure to define a simple color fade animation using XAML:
@@ -181,7 +179,7 @@ The default easing function is linear (above left), but you use another pattern 
 ```
 
 :::info
-For a full list of the _Avalonia UI_ easing functions, see the reference [here](/docs/reference/animation-settings.md).
+For a full list of the _Avalonia UI_ easing functions, see the reference [here](/reference/animations/settings).
 :::
 
 You can also add your own custom easing function class like this:

@@ -1,12 +1,11 @@
 ---
-id: transitions
-title: How To Use Transitions
+id: control-transitions
+title: Setting control transitions
 ---
 
+Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via the `Transitions` property:
 
-# How To Use Transitions
-
-Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via `Transitions` property:
+## Basic usage
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui">
@@ -86,7 +85,7 @@ The following transition types are available. The correct type must be used depe
 * `TransformOperationsTransition`: For `ITransform` target properties
 * `VectorTransition`: For `Vector` target properties
 
-## Transitioning Render Transforms
+## Transitioning render transforms
 
 Render transforms applied to controls using CSS-like syntax can be transitioned. The following example shows a Border which rotates 45 degrees when the pointer is hovered over it:
 

@@ -9,7 +9,7 @@ function createRedirects(existingPath: string): string[] | undefined {
 
         // Using whole-folder redirect for folders that are mostly unchanged
         const v12_redirect = existingPath
-            .replace('/docs/guides/data-binding/', '/docs/guides/data/');
+            .replace('/docs/guides/data-binding/', '/docs/guides/data/')
         if (v12_redirect !== existingPath) {
           redirects.push(v12_redirect);
         }
@@ -112,6 +112,38 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/guides/styles-and-resources/how-to-use-fonts",
         "to": "/docs/guides/ui-development/styling/custom-fonts"
+    },
+    {
+        "from": "/docs/guides/graphics-and-animation/graphics-and-animations",
+        "to": "/docs/guides/ui-development/graphics/drawing-graphics"
+    },
+    {
+        "from": [
+            "/docs/guides/ui-development/graphics/how-to-add-menu-icons",
+            "/docs/guides/ui-development/graphics/how-to-use-icons"
+        ],
+        "to": "/docs/guides/ui-development/graphics/adding-icons"
+    },
+    {
+        "from": "/docs/guides/graphics-and-animation/keyframe-animations",
+        "to": "/docs/guides/ui-development/graphics/keyframe-animations"
+    },
+    {
+        "from": "/docs/guides/ui-development/graphics/transitions",
+        "to": "/docs/guides/ui-development/graphics/control-transitions"
+    },
+    {
+        "from": "/docs/guides/graphics-and-animation/gradients",
+        "to": "/docs/guides/ui-development/graphics/gradients"
+    },
+    {
+        "from": [
+            "/docs/guides/graphics-and-animation/page-transitions/cross-fade-page-transition",
+            "/docs/guides/graphics-and-animation/page-transitions/page-slide-transition",
+            "/docs/guides/graphics-and-animation/page-transitions/page-transition-combinations",
+            "/docs/guides/graphics-and-animation/page-transitions/how-to-create-a-custom-page-transition"
+        ],
+        "to": "/docs/guides/ui-development/graphics/page-transitions"
     },
 ];
 
