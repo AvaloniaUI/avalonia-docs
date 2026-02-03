@@ -9,9 +9,9 @@ Android allows an app to register as a file or protocol handler. This guide show
 
 1. Add an `IntentFilter` attribute to your activity. This attribute automatically registers the intent filter in the Android manifest during build.
 
-2. Attach a listener to the `IAvaloniaActivity.Activated` event. It will be raised with `FileActivatedEventArgs` when the user selected your app to open a file.
+2. Attach a listener to the `IAvaloniaActivity.Activated` event. When Android activates your app to open a file, this event will be raised with `FileActivatedEventArgs`.
 
-3. Forward the received storage items into your application/view model.
+3. Forward the storage items from the event data to your view model. You can use the static `Avalonia.Application.Current` property to access your `App` instance from an activity. In your `App` class you can store your view model instance in a field after creating it in `OnFrameworkInitializationCompleted`.
 
 ```csharp
 [Activity(
@@ -51,10 +51,6 @@ public partial class App : Application
     {
         mainViewModel?.OpenFiles(files);
     }
-
-    // override Initialize()
-
-    // override OnFrameworkInitializationCompleted()
 }
 ```
 
