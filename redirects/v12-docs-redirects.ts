@@ -90,6 +90,17 @@ const redirects: Redirect[] = [
         "from": "/docs/guides/styles-and-resources/selectors",
         "to": "/reference/styles/style-selectors"
     },
+    {
+        "from": [
+            "/docs/guides/styles-and-resources/property-setters",
+            "/docs/guides/styles-and-resources/setter-precedence"
+        ],
+        "to": "/reference/styles/property-setters"
+    },
+    {
+        "from": "/docs/guides/styles-and-resources/how-to-use-included-styles",
+        "to": "/docs/guides/ui-development/styling/sharing-styles"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

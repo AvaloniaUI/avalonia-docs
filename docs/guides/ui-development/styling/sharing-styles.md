@@ -1,11 +1,11 @@
 ---
-id: how-to-use-included-styles
-title: How to Use Included Styles
+id: sharing-styles
+title: Sharing styles
 ---
 
-import VsStylesTemplateScreenshot from '/img/guides/styles-and-resources/vs-styles-template.png';
+import VsStylesTemplateScreenshot from '/img/guides/ui-development/styling/vs-styles-template.png';
 
-# How to Use Included Styles
+## How to Use Included Styles
 
 This guide shows you how to share styles from a separate styles file (that is included in your application). This approach allows you to share styles across multiple applications.
 

@@ -15,6 +15,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'styles/style-selectors',
+        'styles/property-setters',
       ],
     },
   ],
