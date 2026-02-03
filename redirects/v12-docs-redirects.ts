@@ -101,6 +101,18 @@ const redirects: Redirect[] = [
         "from": "/docs/guides/styles-and-resources/how-to-use-included-styles",
         "to": "/docs/guides/ui-development/styling/sharing-styles"
     },
+    {
+        "from": "/docs/guides/styles-and-resources/resources",
+        "to": "/docs/guides/ui-development/resource-dictionary"
+    },
+    {
+        "from": "/docs/guides/styles-and-resources/how-to-use-theme-variants",
+        "to": "/docs/guides/ui-development/styling/theme-variants"
+    },
+    {
+        "from": "/docs/guides/styles-and-resources/how-to-use-fonts",
+        "to": "/docs/guides/ui-development/styling/custom-fonts"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

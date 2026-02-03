@@ -1,6 +1,6 @@
 ---
-id: how-to-use-fonts
-title: How To Use Custom Fonts
+id: custom-fonts
+title: Using custom fonts
 ---
 
 Customizing your Avalonia application with unique fonts can add a distinctive look and feel. This guide explains how to integrate custom fonts into your Avalonia application.

@@ -3,9 +3,7 @@ id: installation
 title: Installation
 ---
 
-## Troubleshooting Avalonia installation issues
-
-### .NET is not a recognized program
+## .NET is not a recognized program
 
 First, ensure the .NET SDK is installed. Run this command:
 
@@ -21,7 +19,7 @@ If a .NET SDK is correctly installed, this returns an output similar to the foll
 
 If the terminal continues to report that .NET is missing, try restarting the terminal.
 
-### `Avalonia.Templates` package cannot be found
+## `Avalonia.Templates` package cannot be found
 
 Ensure NuGet is correctly set up. Run this command:
 

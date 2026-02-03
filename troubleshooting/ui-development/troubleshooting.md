@@ -1,12 +1,7 @@
 ---
-id: troubleshooting
-title: How To Troubleshoot Styles
+id: styles
+title: Styles
 ---
-
-
-# 👉 How To Troubleshoot Styles
-
-Much of the _Avalonia UI_ styling system corresponds to CSS styling approaches. So without knowledge of this technology, you may find the hints here helpful.
 
 ## Selector has no Targets
 

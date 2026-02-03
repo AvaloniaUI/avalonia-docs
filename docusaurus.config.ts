@@ -228,6 +228,17 @@ const config: Config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'troubleshooting',
+        path: 'troubleshooting',
+        routeBasePath: 'troubleshooting',
+        sidebarPath: './troubleshooting-sidebar.ts',
+        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
+        editLocalizedFiles: true,
+      },
+    ],
+    [
       plausiblePlugin,
       {
         domain: 'docs.avaloniaui.net',
@@ -308,9 +319,9 @@ const config: Config = {
           label: 'More',
           items: [
             {
-              href: '/troubleshooting',
               label: 'Troubleshooting',
-              rel: null,
+              to: '/troubleshooting',
+              activeBasePath: '/troubleshooting'
             },
             {
               label: 'Enhanced Support',

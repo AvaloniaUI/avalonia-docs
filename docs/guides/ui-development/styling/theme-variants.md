@@ -1,10 +1,13 @@
 ---
-id: how-to-use-theme-variants
-title: How To Use Theme Variants
+id: theme-variants
+title: Setting theme variants
 ---
 
+import OverriddenThemeVariant from '/img/guides/ui-development/overridden-theme-variant.png';
+import CustomThemeDictionaries from '/img/guides/ui-development/custom-theme-dictionaries.png';
+
 :::tip
-Because theme variants are deeply integrated into resources system, it is important to understand the Avalonia [resources](resources) first.
+Because theme variants are deeply integrated into resources system, it is important to understand the Avalonia [resources](/docs/guides/ui-development/resource-dictionary).
 :::
 
 ## Introduction
@@ -44,6 +47,7 @@ To override global application variant instead of using system default:
 ```
 
 Or it is possible to redefine theme variant per specific subtree using `ThemeVariantScope` control. In the example below Window uses Dark variant, while ThemeVariantScope inside redefines it with Light variant:
+
 ```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'
@@ -63,7 +67,7 @@ Or it is possible to redefine theme variant per specific subtree using `ThemeVar
 </Window>
 ```
 
-![Overriden Theme Variant](/img/basics/user-interface/styling/overriden-theme-variant.png)
+<Image light={OverriddenThemeVariant} alt="A screenshot of two buttons, demonstrating opposite appearances when dark or light theme settings are overridden." position="center" maxWidth={400} cornerRadius="true"/>
 
 If it's required to use reset RequestedThemeVariant value, `RequestedThemeVariant="Default"` value can be set on it.
 
@@ -124,10 +128,10 @@ Continuing previous example, let's add `BackgroundBrush` and `ForegroundBrush` w
 
 ```
 
-![Custom Theme Dictionaries](/img/basics/user-interface/styling/custom-theme-dictionaries.png)
+<Image light={CustomThemeDictionaries} alt="A screenshot of two brightly colored buttons in blue and green." position="center" maxWidth={400} cornerRadius="true"/>
 
 :::warning
 Note that resources defined in `ThemeDictionaries` are only available for consumption using the `DynamicResource` markup extension. The `StaticResource` markup extension will not find such resources and will instead produce an exception at runtime unless a resource with an identical key exists in a non-`ThemeDictionaries` portion of a `ResourceDictionary`.
 :::
 
-For more details about using resources please follow [How To Use Resources](resources) page.
+For more details about using resources please see the [resources](/docs/guides/ui-development/resource-dictionary) page.

@@ -1,10 +1,7 @@
 ---
-id: resources
-title: How To Use Resources
+id: resource-dictionary
+title: Creating a resource dictionary
 ---
-
-
-# 👉 How To Use Resources
 
 You will often need to standardise graphical fundamentals such as (but not limited to) brushes and colors in your applications. You can define these as resources at various levels in your _Avalonia UI_ application, as well as in files that can be included as required.
 
@@ -73,7 +70,7 @@ You can also declare resources to be specific to a style.
 Keep in mind, this resource is not visible outside of the this specific style block, meaning it won't make every TextBlock with a "warning" class aware of this resource outside of the Style block.
 :::
 
-It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read [Theme Variants](how-to-use-theme-variants) page.
+It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read the [Theme Variants](/docs/guides/ui-development/theme-variants) page.
 
 ```xml
 <ResourceDictionary>
@@ -109,7 +106,7 @@ To add a resource dictionary file, follow this procedure:
 -  Click **Add**.
 
 :::note
-After the resource file is created you have to correctly include it into your application. See [Include and Merge Resources](#include-and-merge-resources) section.
+After the resource file is created you have to correctly include it into your application. See the [Include and Merge Resources](#include-and-merge-resources) section.
 :::
 
 You can now add the resources you want to define in the position indicated. It looks like this:
