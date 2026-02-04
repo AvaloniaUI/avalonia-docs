@@ -273,6 +273,7 @@ const sidebars: SidebarsConfig = {
         },
         'platform-specific-guides/dotnet',
         'platform-specific-guides/ios',
+        'platform-specific-guides/linux',
         'platform-specific-guides/raspberry-pi',
         'platform-specific-guides/webassembly',
         'platform-specific-guides/winforms',

@@ -13,6 +13,14 @@ const sidebars: SidebarsConfig = {
     'app-performance-issues',
     {
       type: 'category',
+      label: 'Platform-specific issues',
+      collapsed: false,
+      items: [
+        'platform-specific-issues/macos'
+      ],
+    },
+    {
+      type: 'category',
       label: 'UI development',
       collapsed: false,
       items: [

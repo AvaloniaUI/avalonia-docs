@@ -27,7 +27,8 @@ const redirects: Redirect[] = [
             "/docs/guides/implementation-guides",
             "/docs/guides/development-guides/how-to-implement-multi-page-apps",
             "/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm",
-            "docs/guides/platforms/android/index"
+            "/docs/guides/platforms/android/index",
+            "/docs/deployment/index"
         ],
         "to": "/docs/welcome"
     },
@@ -253,6 +254,10 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/guides/platforms/android/intent-filter",
         "to": "/docs/platform-specific-guides/android/intent-filter"
+    },
+    {
+        "from": "/docs/deployment/debian-ubuntu",
+        "to": "/docs/platform-specific-guides/linux"
     },
 ];
 
