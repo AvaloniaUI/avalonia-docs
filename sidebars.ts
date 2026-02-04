@@ -267,18 +267,6 @@ const sidebars: SidebarsConfig = {
         },
         {
           'type': 'category',
-          'label': 'Development Guides',
-          'items': [
-            'guides/development-guides/accessing-the-ui-thread',
-            'guides/development-guides/data-validation',
-            'guides/development-guides/how-to-implement-multi-page-apps',
-            'guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm',
-            'guides/development-guides/improving-performance',
-
-          ],
-        },
-        {
-          'type': 'category',
           'label': 'Platforms',
           'items': [
             {

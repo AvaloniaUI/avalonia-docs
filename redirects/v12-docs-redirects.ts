@@ -23,7 +23,10 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/overview/what-is-avalonia",
-            "/docs/guides/index"
+            "/docs/guides/index",
+            "/docs/guides/implementation-guides",
+            "/docs/guides/development-guides/how-to-implement-multi-page-apps",
+            "/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm"
         ],
         "to": "/docs/welcome"
     },
@@ -46,10 +49,6 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/guides/implementation-guides/how-to-implement-dependency-injection",
         "to": "/docs/guides/app-development/dependency-injection"
-    },
-    {
-        "from": "/docs/guides/implementation-guides",
-        "to": "/docs/guides/app-development"
     },
     {
         "from": "/docs/guides/implementation-guides/using-avalonia-with-mvvm-frameworks",
@@ -184,6 +183,18 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/guides/custom-controls/add-custom-control-class",
         "to": "/docs/guides/ui-development/custom-controls/custom-control-class"
+    },
+    {
+        "from": "/docs/guides/development-guides/accessing-the-ui-thread",
+        "to": "/docs/guides/development-optimization/accessing-the-ui-thread"
+    },
+    {
+        "from": "/docs/guides/development-guides/data-validation",
+        "to": "/docs/guides/data/data-validation"
+    },
+    {
+        "from": "/docs/guides/development-guides/improving-performance",
+        "to": "/troubleshooting/app-performance-issues"
     },
 ];
 

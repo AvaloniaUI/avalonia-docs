@@ -9,11 +9,8 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: ['index'],
     },
-    {
-      type: 'doc',
-      label: 'Installation',
-      id: 'installation'
-    },
+    'installation',
+    'app-performance-issues',
     {
       type: 'category',
       label: 'UI development',

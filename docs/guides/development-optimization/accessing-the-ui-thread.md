@@ -1,9 +1,7 @@
 ---
 id: accessing-the-ui-thread
-title: How To Access the UI Thread
+title: Accessing the UI thread
 ---
-
-# How To Access the UI Thread
 
 This guide will show you how to access the UI thread in your _Avalonia UI_ application.
 
@@ -21,7 +19,7 @@ Use `Post` when you just want to start a job, but you do not need to wait for th
 
 Use `InvokeAsync` when you need to wait for the result, and potentially want to receive the result.
 
-## Dispatcher Priority
+## Dispatcher priority
 
 Both of the above methods have a dispatcher priority parameter. You can use this with the `DispatcherPriority` enumeration to specify the queue priority that the given job should be given.
 
@@ -104,7 +102,7 @@ public partial class MainView : UserControl
 
 ```
 
-## More Information
+## More information
 
 :::info
 For the complete API documentation about the dispatcher, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Threading_Dispatcher).
