@@ -1,9 +1,44 @@
 ---
-id: how-to-create-advanced-custom-controls
-title: How To Create Advanced Custom Controls
+id: index
+title: Creating custom controls
+sidebar_position: 1
 ---
 
-# How To Create Advanced Custom Controls
+## Custom controls
+
+A custom control draws itself using the _Avalonia UI_ graphics system, using basic methods for shapes, lines, fills, text, and many others. You can define your own properties, events and pseudo classes.
+
+Some of the _Avalonia UI_ built-in controls are like this. For example, the text block control (`TextBlock` class) and the image control (`Image` class).
+
+## Types of custom controls
+
+If you want to create your own controls, there are three main categories of control in Avalonia. The first thing to do is choose the category of control that best suits your use-case.
+
+### User controls
+
+UserControls are the simplest way to author controls. This type of control is best for "views" or "pages" that are specific to an application. UserControls are authored in the same way as you would author a Window: by creating a new UserControl from a template and adding controls to it.
+
+### Templated controls
+
+TemplatedControls are best used for generic controls that can be shared among various applications. They are lookless controls, meaning that they can be restyled for different themes and applications. The majority of standard controls defined by Avalonia fit into this category.
+
+:::info
+In WPF/UWP you would inherit from the Control class to create a new templated control, but in Avalonia you should inherit from TemplatedControl. 
+:::
+
+:::info
+If you want to provide a Style for your TemplatedControl in a separate file, remember to include this file in your Application via StyleInclude. 
+:::
+
+### Basic controls
+
+BasicControls are the foundation of user interfaces - they draw themselves using geometry by overriding the Visual.Render method. Controls such as TextBlock and Image fall into this category.
+
+:::info
+In WPF/UWP you would inherit from the FrameworkElement class to create a new basic control, but in Avalonia you should inherit from Control. 
+:::
+
+## Creating advanced custom controls
 
 Stuff clipped from the custom control guide.
 
@@ -20,7 +55,7 @@ The `AvaloniaProperty.Register` method also accepts a number of other parameters
 
 > The naming convention of the property and its backing AvaloniaProperty field is important. The name of the field is always the name of the property, with the suffix Property appended.
 
-### Using a `StyledProperty` on Another Class
+### Using a `StyledProperty` on another class
 
 Sometimes the property you want to add to your control already exists on another control, `Background` being a good example. To register a property defined on another control, you call `StyledProperty.AddOwner`:
 
@@ -58,7 +93,7 @@ public Rect Bounds
 
 As can be seen, readonly properties are stored as a field on the object. When registering the property, a getter is passed which is used to access the property value through `GetValue` and then `SetAndRaise` is used to notify listeners to changes to the property.
 
-### Attached Properties
+### Attached properties
 
 [Attached properties](/docs/concepts/attached-property) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
 
@@ -119,7 +154,7 @@ They don't support the following:
 * Overriding default values.
 * Inherited values
 
-### Using a DirectProperty on Another Class
+### Using a DirectProperty on another class
 
 In the same way that you can call `AddOwner` on a styled property, you can also add an owner to a direct property. Because direct properties reference fields on the control, you must also add a field for the property:
 
@@ -138,7 +173,7 @@ public IEnumerable Items
 }
 ```
 
-### When to use a Direct vs a Styled Property
+### When to use direct vs styled properties
 
 In general you should declare your properties as styled properties. However, direct properties have advantages and disadvantages:
 

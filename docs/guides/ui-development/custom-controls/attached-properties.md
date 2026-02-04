@@ -1,8 +1,7 @@
 ---
-id: how-to-create-attached-properties
+id: attached-properties
 title: How To Create Attached Properties
 ---
-
 
 # How To Create Attached Properties
 

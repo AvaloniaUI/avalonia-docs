@@ -1,5 +1,5 @@
 ---
-id: how-to-create-templated-controls
+id: templated-controls
 title: How To Create Templated Controls
 ---
 

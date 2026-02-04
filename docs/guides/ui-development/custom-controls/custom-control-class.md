@@ -1,5 +1,5 @@
 ---
-id: add-custom-control-class
+id: custom-control-class
 title: Add a Custom Control Class
 ---
 
@@ -8,7 +8,7 @@ title: Add a Custom Control Class
 You create a custom control using a class that inherits from the _Avalonia UI_ `Control` class. You can place your custom control classes anywhere in you app project, or include them in another control library project.
 
 :::info
-For more information on creating a custom control library, see [here](how-to-create-a-custom-controls-library).
+For more information on creating a custom control library, see [here](/docs/guides/ui-development/custom-controls/custom-control-library).
 :::
 
 Wherever you choose to place your custom control class, you must be able to reference it in the XAML. For example, this code shows the custom control `MyControl` class placed in the main window; and the custom control class defines in the `/CustomControls` namespace and project folder:

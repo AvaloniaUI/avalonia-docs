@@ -145,6 +145,46 @@ const redirects: Redirect[] = [
         ],
         "to": "/docs/guides/ui-development/graphics/page-transitions"
     },
+    {
+        "from": [
+            "/docs/guides/custom-controls/index",
+            "/docs/guides/custom-controls/types-of-control",
+            "/docs/guides/custom-controls/how-to-create-advanced-custom-controls"
+        ],
+        "to": "/docs/guides/ui-development/custom-controls/creating-custom-controls"
+    },
+    {
+        "from": "/docs/guides/custom-controls/create-a-custom-panel",
+        "to": "/docs/guides/ui-development/custom-controls/custom-panel"
+    },
+    {
+        "from": "/docs/guides/custom-controls/defining-properties",
+        "to": "/docs/guides/ui-development/custom-controls/defining-properties"
+    },
+    {
+        "from": "/docs/guides/custom-controls/draw-with-a-property",
+        "to": "/docs/guides/ui-development/custom-controls/drawing-custom-controls"
+    },
+    {
+        "from": "/docs/guides/custom-controls/how-to-create-a-custom-controls-library",
+        "to": "/docs/guides/ui-development/custom-controls/custom-control-library"
+    },
+    {
+        "from": "/docs/guides/custom-controls/how-to-create-a-custom-flyout",
+        "to": "/docs/guides/ui-development/custom-controls/custom-flyout"
+    },
+    {
+        "from": "/docs/guides/custom-controls/how-to-create-attached-properties",
+        "to": "/docs/guides/ui-development/custom-controls/attached-properties"
+    },
+    {
+        "from": "/docs/guides/custom-controls/how-to-create-templated-controls",
+        "to": "/docs/guides/ui-development/custom-controls/templated-controls"
+    },
+    {
+        "from": "/docs/guides/custom-controls/add-custom-control-class",
+        "to": "/docs/guides/ui-development/custom-controls/custom-control-class"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

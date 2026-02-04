@@ -1,11 +1,9 @@
 ---
-id: draw-with-a-property
-title: Draw with a Property
+id: drawing-custom-controls
+title: Drawing custom controls
 ---
 
-import DrawWithPropertyScreenshot from '/img/guides/custom-controls/draw-property.png';
-
-# Draw with a Property
+import DrawWithPropertyScreenshot from '/img/guides/ui-development/custom-controls/draw-property.png';
 
 On this page you will see how to draw a custom control, using the value for a simple property that defines the background color. The code now looks like this:
 
