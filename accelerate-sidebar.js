@@ -34,6 +34,7 @@ const sidebars = {
             'tools/dev-tools/tools/metrics',
           ]
         }, 
+        'tools/dev-tools/mcp',
         'tools/dev-tools/shortcuts',
         {
           'type': 'category',
