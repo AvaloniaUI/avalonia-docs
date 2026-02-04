@@ -1,8 +1,7 @@
 ---
-description: GUIDES - WPF Conversion
+id: data-templates
+title: Data templates
 ---
-
-# Data Templates
 
 In Avalonia UI, data templates are not stored in the application resources. (The same is true of styles - see [here](styling).)
 
@@ -33,5 +32,9 @@ Data templates in Avalonia can also target interfaces and derived classes (which
 ## Data Template Selector
 
 In WPF you can create a `DataTemplateSelector` to select or create a `DataTemplate` based on the provided data. In Avalonia you cannot do this; but you can implement `IDataTemplate` which can be seen as a good replacement for the `DataTemplateSelector`. Please find a sample [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/IDataTemplateSample).
+
+## HierarchicalDataTemplate 
+
+WPF's `HierarchicalDataTemplate ` is called `TreeDataTemplate` in Avalonia (as the former is difficult to type!). The two are almost entirely equivalent other than the naming.
 
 <XpfAd/>

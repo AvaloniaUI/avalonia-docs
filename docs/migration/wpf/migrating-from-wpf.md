@@ -1,8 +1,19 @@
 ---
-description: REFERENCE - WPF Conversion
+id: migrating-from-wpf
+title: Migrating from WPF
+description: REFERENCE
 ---
 
-# WPF and UWP Comparison
+This reference will help you leverage your existing knowledge of Windows Presentation Foundation (WPF) to learn _Avalonia UI_ quickly.
+
+You will see how although _Avalonia UI_ is often very similar to WPF; there are some differences. In particular, in the way in which the following work:
+
+* Styling
+* Data Templates
+
+<XpfAd/>
+
+## WPF and UWP Comparison
 
 Originally based on [UWPvsWPF.md](https://github.com/robloo/PublicDocs/blob/master/UWPvsWPF.md) with Avalonia-specific changes.
 
@@ -16,7 +27,7 @@ Legend:
 * ✖ Indicates the feature is generally missing in the platform
 * ⚡ Indicates the feature is only partially implemented compared to other platforms
 
-## Markup Extensions
+### Markup Extensions
 
 | Item                   | Avalonia | WPF | UWP | Notes                                                                                                                                                                                                                                               |
 | ---------------------- | :------: | :-: | :-: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +41,7 @@ Legend:
 | Full Markup Extension  |     ✔    |  ✔  |  ✖  | UWP only implements a subset of the full markup extension support in WPF. This area needs to be expanded upon in the future.                                                                                                                        |
 | Compiled Bindings      |     ✔    |  ✖  |  ✖  |                                                                                                                                                                                                                                                     |
 
-## Binding
+### Binding
 
 | Item                                | Avalonia | WPF | UWP | Notes                                                                                                                                                                                                                                                                                                            |
 | ----------------------------------- | :------: | :-: | :-: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,7 +53,7 @@ Legend:
 | StringFormat                        |     ✔    |  ✔  |  ✖  | XAML such as `{Binding DateValue, StringFormat=Date: {0:dddd yyyy-MM-dd}}` isn't supported in UWP and requires custom converters.                                                                                                                                                                                |
 | Functions in binding                |     ✖    |  ✖  |  ✔  | x:Bind in UWP supports OneWay and TwoWay function binding that can replace converters.                                                                                                                                                                                                                           |
 
-## Styling
+### Styling
 
 | Item                                                                | Avalonia | WPF | UWP | Notes                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------- | :------: | :-: | :-: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -52,7 +63,7 @@ Legend:
 | Binding in Style setter                                             |     ✔    |  ✔  |  ✖  | Any other than TemplateBinding isn't support in a template/style within UWP                                                                                                                                                                                                                                                                                                                               |
 | BasedOn default Style                                               |     ✔    |  ✔  |  ⚡  | `BasedOn={StaticResource {x:Type TextBlock}` isn't supported in UWP but works in WPF. Instead, BasedOn requires the use of a key which is a problem as not all default styles define one. This is a specific example of the missing x:Type markup extension in UWP.                                                                                                                                       |
 
-## Other
+### Other
 
 | Item                                                          | Avalonia | WPF | UWP | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------- | :------: | :-: | :-: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -76,7 +87,7 @@ Legend:
 | Event Tunneling / Event Bubbling / Routed Events              |     ✔    |  ✔  |  ⚡  | A lot more events are simply direct in UWP. Some cases of event bubbling such as ButtonBase.Click to parent are not supported in UWP. Event Tunneling, a concept fully supported in WPF, isn't support at all in UWP.                                                                                                                                                                                                                                |
 | Window                                                        |     ✔    |  ✔  |  ✖  | For some good reasons UWP has no concept of a window. This is fine for mobile devices but can be a problem for purely desktop applications. Without a window, there is no way to control an app's size or position. There are currently proposals to add this in the transition to WinUI 3.0.                                                                                                                                                        |
 
-## Controls
+### Controls
 
 This section describes the differences in controls in vanilla WPF and UWP (with the WinUI 2.x library). It excludes some primitives and shapes (Ellipse, Rect, etc.)
 
@@ -188,7 +199,7 @@ This section describes the differences in controls in vanilla WPF and UWP (with 
 |        WrapPanel       |         WrapPanel        |            ✖           | Available for UWP in the Windows Community Toolkit                                                                            |
 |         Window         |          Window          |            ✖           | There is no top-level window concept in UWP                                                                                   |
 
-## Quirks
+### Quirks
 
 * Several UWP controls have reentrancy issues. For example, changing the selected item while in a ComboBox SelectionChanged event is largely not possible and will result in a crash. This makes validation directly in the event handler nearly impossible.
 * UWP controls are generally not as powerful as the WPF counterparts. For example, for several years the ComboBox in UWP was not editable. The UWP DatePicker also does not allow typing in a specific date.
@@ -199,5 +210,3 @@ This section describes the differences in controls in vanilla WPF and UWP (with 
 * Several UWP controls are sealed and new controls cannot derive from them
 * For advanced rendering, UWP has fewer features built in. This requires falling back to Win2D or composition more often.
 * There are several namespaces differences in UWP and WPF. For example, WPF has System.Windows.Media.Colors while UWP moves this to Windows.UI.Colors.
-
-<XpfAd/>

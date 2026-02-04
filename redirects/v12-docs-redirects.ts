@@ -259,6 +259,46 @@ const redirects: Redirect[] = [
         "from": "/docs/deployment/debian-ubuntu",
         "to": "/docs/platform-specific-guides/linux"
     },
+    {
+        "from": [
+            "/docs/get-started/wpf/index",
+            "/docs/get-started/wpf/comparison-of-avalonia-with-wpf-and-uwp"
+        ],
+        "to": "/docs/migration/wpf/migrating-from-wpf"
+    },
+    {
+        "from": "/docs/get-started/wpf/styling",
+        "to": "/docs/migration/wpf/styling"
+    },
+    {
+        "from": [
+            "/docs/get-started/wpf/datatemplates",
+            "/docs/get-started/wpf/hierarchicaldatatemplate"
+        ],
+        "to": "/docs/migration/wpf/data-templates"
+    },
+    {
+        "from": [
+            "/docs/get-started/wpf/uielement-frameworkelement-and-control",
+            "/docs/get-started/wpf/grid",
+            "/docs/get-started/wpf/rendertransforms-and-rendertransformorigin"
+        ],
+        "to": "/docs/migration/wpf/controls"
+    },
+    {
+        "from": [
+            "/docs/get-started/wpf/dependencyproperty",
+            "/docs/get-started/wpf/propertychangedcallback"
+        ],
+        "to": "/docs/migration/wpf/properties"
+    },
+    {
+        "from": [
+            "/docs/get-started/wpf/tunnelling-events",
+            "/docs/get-started/wpf/class-handlers"
+        ],
+        "to": "/docs/migration/wpf/events"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };
