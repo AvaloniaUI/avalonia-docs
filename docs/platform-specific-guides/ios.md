@@ -12,6 +12,7 @@ import IOSProvisionPhoneScreenshot from '/img/guides/platform-specific-guides/io
 import IOSSelectDeviceScreenshot from '/img/guides/platform-specific-guides/ios/ios-select-device.png';
 import IOSChangeBundleIdentifierScreenshot from '/img/guides/platform-specific-guides/ios/ios-change-bundle-identifier.png';
 import IOSCertScreenshot from '/img/guides/platform-specific-guides/ios/ios-cert.png';
+import IOSSimulatorScreenshot from '/img/guides/platform-specific-guides/ios/run-ios-simulator.png';
 
 ## Setting up your developer environment
 

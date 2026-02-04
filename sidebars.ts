@@ -29,27 +29,6 @@ const sidebars: SidebarsConfig = {
             'get-started/starter-tutorial/exercises',
           ],
         },
-        {
-          'type': 'category',
-          'label': 'Coming from WPF?',
-          'link': {
-            'type': 'doc',
-            'id': 'get-started/wpf/index',
-          },
-          'items': [
-            'get-started/wpf/styling',
-            'get-started/wpf/datatemplates',
-            'get-started/wpf/hierarchicaldatatemplate',
-            'get-started/wpf/uielement-frameworkelement-and-control',
-            'get-started/wpf/dependencyproperty',
-            'get-started/wpf/grid',
-            'get-started/wpf/tunnelling-events',
-            'get-started/wpf/class-handlers',
-            'get-started/wpf/propertychangedcallback',
-            'get-started/wpf/rendertransforms-and-rendertransformorigin',
-            'get-started/wpf/comparison-of-avalonia-with-wpf-and-uwp',
-          ],
-        },
       ],
     },
     {
@@ -433,13 +412,8 @@ const sidebars: SidebarsConfig = {
     {
       'type': 'category',
       'label': 'Deployment',
-      'link': {
-        'type': 'doc',
-        'id': 'deployment/index',
-      },
+      'collapsed': true,
       'items': [
-        'deployment/macOS',
-        'deployment/debian-ubuntu',
         'deployment/native-aot',
       ],
     },
