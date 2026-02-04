@@ -1,6 +1,6 @@
 ---
 id: embed-native-views
-title: Embed Native Views
+title: Embedding Android native views
 ---
 
 In Avalonia UI, you can use the native control host feature on Android by creating an instance of `AndroidViewControlHandle` from an Android view. 

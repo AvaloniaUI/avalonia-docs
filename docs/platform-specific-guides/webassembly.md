@@ -1,12 +1,9 @@
 ---
-id: how-to-use-web-assembly
-title: Web Assembly
+id: webassembly
+title: Running Avalonia in WebAssembly
 ---
 
-
-# 👉 Web Assembly
-
-Run in the browser with WebAssembly
+## Setting up an Avalonia project for WebAssembly
 
 1. Install `wasm-tools` workload tools. See [dotnet documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-workload-install).
 
@@ -52,7 +49,8 @@ dotnet run
 # Debug at url: https://127.0.0.1:53577/_framework/debug
 ```
 
-### Deployment
+## Deployment
+
 In the `BrowserTest.Browser` directory, run:
 ```bash
 dotnet publish
@@ -70,7 +68,7 @@ On older .NET SDK versions, app bundle was located in different directory: `bin/
 Currently using `dotnet publish` with the `-o` or `--output` flag does not produce the AppBundle folder in the output directory. (See [this issue](https://github.com/dotnet/runtime/issues/94319).) You'll still have to grab it out of the `bin` directory at the path specified by the publish output.
 :::
 
-#### Testing AppBundle locally
+## Testing AppBundle locally
 
 You can serve your wasm app from this directly using the [dotnet-serve](https://github.com/natemcmaster/dotnet-serve) tool as follows:
 ```bash

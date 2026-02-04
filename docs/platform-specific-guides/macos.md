@@ -1,12 +1,7 @@
 ---
-id: macos-development
-title: macOS Development
+id: macos
+title: Avalonia for macOS
 ---
-
-
-# macOS Development
-
-Getting started developing for the macOS
 
 ## Native code
 

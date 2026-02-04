@@ -26,7 +26,8 @@ const redirects: Redirect[] = [
             "/docs/guides/index",
             "/docs/guides/implementation-guides",
             "/docs/guides/development-guides/how-to-implement-multi-page-apps",
-            "/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm"
+            "/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm",
+            "docs/guides/platforms/android/index"
         ],
         "to": "/docs/welcome"
     },
@@ -195,6 +196,63 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/guides/development-guides/improving-performance",
         "to": "/troubleshooting/app-performance-issues"
+    },
+    {
+        "from": "/docs/guides/platforms/platform-specific-code/dotnet",
+        "to": "/docs/platform-specific-guides/dotnet"
+    },
+    {
+        "from": "/docs/guides/platforms/platform-specific-code/xaml",
+        "to": "/docs/platform-specific-guides/xaml"
+    },
+    {
+        "from": "/docs/guides/platforms/windows/host-avalonia-controls-in-winforms",
+        "to": "/docs/platform-specific-guides/winforms"
+    },
+    {
+        "from": "/docs/guides/platforms/how-to-use-web-assembly",
+        "to": "/docs/platform-specific-guides/webassembly"
+    },
+    {
+        "from": "/docs/guides/platforms/macos-development",
+        "to": "/docs/platform-specific-guides/macos"
+    },
+    {
+        "from": [
+            "/docs/guides/platforms/rpi/running-your-app-on-a-raspberry-pi",
+            "/docs/guides/platforms/rpi/running-on-raspbian-lite-via-drm"
+        ],
+        "to": "/docs/platform-specific-guides/raspberry-pi"
+    },
+    {
+        "from": [
+            "/docs/guides/platforms/ios/index",
+            "/docs/guides/platforms/ios/setting-up-your-developer-environment-for-ios",
+            "/docs/guides/platforms/ios/build-and-run-your-application-on-your-iphone-or-ipad",
+            "/docs/guides/platforms/ios/build-and-run-your-application-on-a-simulator"
+        ],
+        "to": "/docs/platform-specific-guides/ios"
+    },
+    {
+        "from": [
+            "/docs/guides/platforms/android/index",
+            "/docs/guides/platforms/android/build-and-run-your-application-on-a-device",
+            "/docs/guides/platforms/android/build-and-run-your-application-on-a-simulator",
+            "/docs/guides/platforms/android/setting-up-your-developer-environment-for-android"
+        ],
+        "to": "/docs/platform-specific-guides/android/android"
+    },
+    {
+        "from": "/docs/guides/platforms/android/configure-vscode-debug-linux",
+        "to": "/docs/platform-specific-guides/android/configure-vscode-debug-linux"
+    },
+    {
+        "from": "/docs/guides/platforms/android/embed-native-views",
+        "to": "/docs/platform-specific-guides/android/embed-native-views"
+    },
+    {
+        "from": "/docs/guides/platforms/android/intent-filter",
+        "to": "/docs/platform-specific-guides/android/intent-filter"
     },
 ];
 

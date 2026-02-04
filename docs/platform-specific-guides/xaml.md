@@ -1,6 +1,6 @@
 ---
 id: xaml
-title: Platform-Specific XAML
+title: Platform-specific XAML
 ---
 
 ## OnPlatform Markup Extension

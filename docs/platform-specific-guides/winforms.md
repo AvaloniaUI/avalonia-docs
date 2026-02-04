@@ -1,9 +1,7 @@
 ---
-id: host-avalonia-controls-in-winforms
-title: Host Avalonia controls in Windows Forms
+id: winforms
+title: Avalonia controls in Windows Forms
 ---
-
-# Host Avalonia controls in Windows Forms
 
 Avalonia controls can be hosted in Windows Forms applications. This enables a step-by-step migration of existing Windows Forms applications to Avalonia.
 

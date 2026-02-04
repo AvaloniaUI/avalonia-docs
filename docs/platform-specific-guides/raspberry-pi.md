@@ -1,13 +1,76 @@
 ---
-id: running-on-raspbian-lite-via-drm
-title: Running on Raspberry Pi with Raspbian Lite
+id: raspberry-pi
+title: Running Avalonia on Raspberry Pi
 ---
 
-import RaspbianLiteDrmKmsCubeScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-kmscube.gif';
-import RaspbianLiteDrmDesktopScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-desktop.jpg';
-import RaspbianLiteRaspberryScreenshot from '/img/guides/platforms/rpi/raspbian-lite-drm-run-on-raspberry.jpg';
+import RaspbianLiteDrmKmsCubeScreenshot from '/img/guides/platform-specific-guides/raspberry-pi/raspbian-lite-drm-kmscube.gif';
+import RaspbianLiteDrmDesktopScreenshot from '/img/guides/platform-specific-guides/raspberry-pi/raspbian-lite-drm-desktop.jpg';
+import RaspbianLiteRaspberryScreenshot from '/img/guides/platform-specific-guides/raspberry-pi/raspbian-lite-drm-run-on-raspberry.jpg';
 
-# Running on Raspberry Pi with Raspbian Lite
+## Required hardware
+
+Flash 8GB SD Card with Raspbian Stretch (2018-11-13). `balenaEtcher` is a nice tool for that.
+
+Plug in the card and start the `Raspberry Pi`.
+
+You can follow [this guide](https://blogs.msdn.microsoft.com/david/2017/07/20/setting_up_raspian_and_dotnet_core_2_0_on_a_raspberry_pi/), next steps are summarized below.
+
+## Installing required packages
+
+* Install `curl`, `libunwind8`, `gettext` and `apt-transport-https`. The `curl` and `apt-transport-https` often are up-to-date.
+
+```bash
+sudo apt-get install curl libunwind8 gettext apt-transport-https
+```
+
+* Download tar-ball.
+
+```bash
+curl -sSL -o dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Runtime/release/2.0.0/dotnet-runtime-latest-linux-arm.tar.gz
+```
+
+* Unpack tarball to `/opt/dotnet`.
+
+```bash
+sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
+```
+
+* Link `dotnet` binary.
+
+```bash
+sudo ln -s /opt/dotnet/dotnet /usr/local/bin
+```
+
+Alternative: You can login as superuser (run "sudo su")
+
+```bash
+apt-get -y install curl libunwind8 gettext apt-transport-https
+curl -sSL -o dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Runtime/release/2.0.0/dotnet-runtime-latest-linux-arm.tar.gz
+mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
+ln -s /opt/dotnet/dotnet /usr/local/bin
+```
+
+:::note
+Take care of line endings of the script. It should use `LF` instead of `CR LF`. Save the script as `.sh` file and run it on the `Raspberry Pi` with bash `filename.sh`.
+:::
+
+## Publishing the app
+
+* To run an `Avalonia` application on `Raspberry Pi` you need to use this nuGet package:
+
+[SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/)
+
+It includes the `libSkiaSharp.so`.
+
+* Now publish the app with the following command:
+
+```bash
+dotnet publish -r linux-arm -f netcoreapp2.0
+```
+
+* Copy publish directory to the `Raspberry Pi` and run it with `dotnet publish/ApplicationName.dll`
+
+## Running with Raspbian Lite
 
 This tutorial shows you how to run your Avalonia app on a Raspberry Pi with Raspbian Lite via [DRM](https://en.wikipedia.org/wiki/Direct\_Rendering\_Manager).
 
@@ -15,12 +78,12 @@ This tutorial shows you how to run your Avalonia app on a Raspberry Pi with Rasp
 
 First step is to setup your Raspberry Pi.
 
-#### 1.1 Download the Raspbian lite operation system image.
+#### Download the Raspbian lite operation system image.
 
 You can download the Raspbian lite operating system image from the official Raspberry Pi website.\
 [Link to Raspberry Pi Operating system images](https://www.raspberrypi.com/software/operating-systems/)
 
-#### 1.1 Prepare Raspberry for flashing
+#### Prepare Raspberry for flashing
 
 The installation of Raspberry Lite is a bit different depending on the model.
 
@@ -34,7 +97,7 @@ Since the CM4 is designed for embedded applications you still need an IO board. 
 
 To prepare the EMMC memory for mounting follow these [steps](https://www.raspberrypi.com/documentation/computers/compute-module.html#flashing-the-compute-module-emmc).
 
-#### 1.2 Flashing the operating system
+#### Flashing the operating system
 
 * [Download](https://etcher.io/) the Etcher image writing utility and install it.
 * Open Etcher and select from your hard drive the .zip file you downloaded in step 1.1.
@@ -50,7 +113,7 @@ dtoverlay=dwc2,dr_mode=host
   **Raspberry Pi 4 b**: Put the SD card into the Raspberry and plug in power supply\
   **CM 4**: On CM4 IO Board unplug the power supply, remove J2 jumper, plug in power supply again
 
-#### 1.3 Install missing libraries
+#### Install missing libraries
 
 Some libraries required to run a Avalonia app via DRM on raspbian lite:
 
@@ -61,7 +124,7 @@ sudo reboot
 sudo apt-get install libgbm1 libgl1-mesa-dri libegl1-mesa libinput10
 ```
 
-#### 1.4 Verify DRM (optional)
+#### Verify DRM (optional)
 
 You can test your installation with a simple but useful tool called [kmscube](https://gitlab.freedesktop.org/mesa/kmscube).
 
@@ -75,16 +138,16 @@ You should see the spinning cube on your Raspberry pi screen now:\
 
 ### Step 2 - Prepare Avalonia App
 
-**2.1 Create new Avalonia App (Core or MVVM App)**\
+#### Create new Avalonia App (Core or MVVM App)
 We called it _AvaloniaRaspbianLiteDrm_ in this tutorial.
 
-**2.2 Add package** [**Avalonia.LinuxFrameBuffer**](https://www.nuget.org/packages/Avalonia.LinuxFramebuffer)
+#### Add package [Avalonia.LinuxFrameBuffer](https://www.nuget.org/packages/Avalonia.LinuxFramebuffer)
 
 ```bash
 dotnet add package Avalonia.LinuxFramebuffer
 ```
 
-**2.3 Create MainView**\
+#### 2.3 Create MainView
 When we work via FrameBuffer there are no windows, so we need a separate view (UserControl) which will be our toplevel control. This view is the counterpart to the normal window.
 
 `MainView` will be our app base in which we develop our UI:
@@ -145,7 +208,7 @@ Also change the `MainWindow.axaml` to host the `MainView` inside:
 
 _So as you see the MainView is hosted in booth `MainSingleView` and `MainWindow`. This makes it easier for development to run the app also on desktop and on the Raspberry_
 
-**2.3 Prepare Program.cs**\
+#### Prepare Program.cs
 Next we need to prepare the `Program.cs` to enable the DRM usage.\
 Change the Main void to the following:
 
@@ -195,24 +258,24 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-**2.5 Run and test on desktop**\
+#### Run and test on desktop
 Now you can run/debug your app on desktop as usual.\
 When you start your app you should see this:\
 <img src={RaspbianLiteDrmDesktopScreenshot} alt=''/>
 
 ### Step 3 - Deploy and run on Raspberry
 
-**3.1 Publish app**
+#### Publish app
 
 ```bash
 dotnet publish -c Release -o publish -r linux-arm -p:PublishReadyToRun=true -p:PublishSingleFile=true -p:PublishTrimmed=true --self-contained true -p:IncludeNativeLibrariesForSelfExtract=true
 ```
 
-**3.2 Copy app to Raspberry**\
+#### Copy app to Raspberry
 Copy the files from `/publish` directory of your project to your Raspberry.\
 You can do this via `scp <source> <destination>` or use a app like [CyberDuck](https://cyberduck.io) or via Usb stick.
 
-**3.3 Run app on Raspberry**\
+#### Run app on Raspberry
 First we need to change the permission to executable.
 
 ```bash
@@ -229,4 +292,4 @@ You should see the app running on your Raspberry Pi now:
 
 <img src={RaspbianLiteRaspberryScreenshot} alt=''/>
 
-If you have a touch display installed, try to slide the slider control :)
+If you have a touch display installed, try to slide the slider control.
