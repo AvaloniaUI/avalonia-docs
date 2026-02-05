@@ -1,17 +1,18 @@
 ---
-description: REFERENCE - Built-in Controls
+id: calendar
+title: Calendar
 ---
 
-import CalendarBasicUsageScreenshot from '/img/gitbook-import/assets/calendar3.gif';
-import CalendarSingleSelectionScreenshot from '/img/gitbook-import/assets/calendar.gif';
-import CalendarMultipleSelectionScreenshot from '/img/gitbook-import/assets/calendar2.gif';
-import CalendarCustomRangeScreenshot from '/img/gitbook-import/assets/calendar4.gif';
+import CalendarBasicUsageScreenshot from '/img/controls/calendar/calendar3.gif';
+import CalendarSingleSelectionScreenshot from '/img/controls/calendar/calendar.gif';
+import CalendarMultipleSelectionScreenshot from '/img/controls/calendar/calendar2.gif';
+import CalendarCustomRangeScreenshot from '/img/controls/calendar/calendar4.gif';
 
 # Calendar
 
 The calendar is a control for users to select dates or date ranges.
 
-<img src={CalendarBasicUsageScreenshot} alt=""/>
+<Image light={CalendarBasicUsageScreenshot} alt="An animation of a calendar switching between year, month and day views." position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Useful Properties
 
@@ -25,7 +26,7 @@ This is a basic calendar allowing a single date selection. The calendar's select
 
 ```xml
 <StackPanel Margin="20">
-  <Calendar x:Name="calendar" SelectionMode="MultipleRange"/>
+  <Calendar SelectionMode="SingleDate"/>
   <TextBlock Margin="20" 
              Text="{Binding #calendar.SelectedDate}"/>
 </StackPanel>
@@ -36,23 +37,23 @@ This is a basic calendar allowing a single date selection. The calendar's select
 This example allows multiple range selections:
 
 ```xml
-<StackPanel Margin="20">
-  <Calendar SelectionMode="MultipleRange"/>
-</StackPanel>
+  <StackPanel Margin="20">
+    <Calendar SelectionMode="MultipleRange"/>
+  </StackPanel>
 ```
-
-After clicking a start date you can extend a single range by holding the shift key and clicking on the end date. You can add extra dates and ranges by holding the control key and clicking on other dates.
 
 <img src={CalendarMultipleSelectionScreenshot} alt=""/>
 
+After clicking a start date you can extend a single range by holding the shift key and clicking on the end date. You can add extra dates and ranges by holding the control key and clicking on other dates.
+
 This example has custom start and end dates, and some dates unavailable. This uses C# code behind the window.
 
-
-
 ```xml
+<UserControl xmlns="https://github.org/avaloniaui">
 <StackPanel Margin="20">
   <Calendar x:Name="calendar" SelectionMode="SingleDate"/>
 </StackPanel>
+</UserControl>
 ```
 
 
@@ -70,7 +71,6 @@ public partial class MainWindow : Window
     } 
 }
 ```
-
 
 
 <img src={CalendarCustomRangeScreenshot} alt=""/>

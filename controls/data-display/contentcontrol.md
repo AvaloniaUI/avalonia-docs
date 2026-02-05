@@ -3,7 +3,7 @@ id: contentcontrol
 title: ContentControl
 ---
 
-import ControlContentStudentScreenshot from '/img/reference/controls/contentcontrol/contentcontrol-student.png';
+import ControlContentStudentScreenshot from '/img/controls/contentcontrol/contentcontrol-student.png';
 
 ## Common Properties
 
@@ -75,7 +75,7 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](/docs/basics/data/data-binding/data-context) for more information.
+> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](/concepts/data-concepts/data-binding/data-context) for more information.
 
 We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
@@ -98,4 +98,4 @@ We can display the student's first and last name in a `ContentControl` using the
 
 <img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
 
-For more information see the [data templates](/docs/basics/data/data-templates.md) section.
+For more information see the [data templates](/concepts/data-concepts/data-templates) section.

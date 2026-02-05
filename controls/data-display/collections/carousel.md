@@ -1,5 +1,6 @@
 ---
-description: REFERENCE - Built-in Controls
+id: carousel
+title: Carousel
 ---
 
 import CarouselScreenshot from '/img/reference/controls/carousel/carousel.gif';
@@ -32,7 +33,7 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td><code>ItemsControl.ItemPanel</code></td>
-      <td>The container panel to place items in. See [this page](/docs/concepts/custom-itemspanel) to customise the ItemsPanel.</td>
+      <td>The container panel to place items in. See [this page](/controls/data-display/collections/itemscontrol) to customise the ItemsPanel.</td>
     </tr>
     <tr>
       <td><code>ItemsControl.Styles</code></td>
@@ -64,7 +65,7 @@ This example has three images in the items collection, with buttons to move the 
       <Button Background="White" Click="Next" 
               HorizontalAlignment="Right">&gt;</Button>
     </Panel>
-  </Panel>
+</Panel>
 ```
 
 ```csharp title='C#'

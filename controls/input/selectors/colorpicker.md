@@ -1,13 +1,14 @@
 ---
-description: REFERENCE - Built-in Controls
+id: colorpicker
+title: ColorPicker
 ---
 
-import ColorPaletteFluent from '/img/reference/controls/colorpicker/color-palette-fluent.png';
-import ColorPaletteFlat from '/img/reference/controls/colorpicker/color-palette-flat.png';
-import ColorPaletteFlatHalf from '/img/reference/controls/colorpicker/color-palette-flat-half.png';
-import ColorPaletteMaterial from '/img/reference/controls/colorpicker/color-palette-material.png';
-import ColorPaletteMaterialHalf from '/img/reference/controls/colorpicker/color-palette-material-half.png';
-import ColorPaletteSixteen from '/img/reference/controls/colorpicker/color-palette-sixteen.png';
+import ColorPaletteFluent from '/img/controls/colorpicker/color-palette-fluent.png';
+import ColorPaletteFlat from '/img/controls/colorpicker/color-palette-flat.png';
+import ColorPaletteFlatHalf from '/img/controls/colorpicker/color-palette-flat-half.png';
+import ColorPaletteMaterial from '/img/controls/colorpicker/color-palette-material.png';
+import ColorPaletteMaterialHalf from '/img/controls/colorpicker/color-palette-material-half.png';
+import ColorPaletteSixteen from '/img/controls/colorpicker/color-palette-sixteen.png';
 
 # ColorPicker
 
@@ -71,7 +72,7 @@ Main improvements learning from WinUI were:
 | Control | Link |
 |---------|------|
 | `ColorPicker` | |
-| `ColorView` | See the dedicated [`ColorView`](colorview.md) page. |
+| `ColorView` | See the dedicated [`ColorView`](/controls/input/selectors/colorview) page. |
 | `ColorSpectrum` | |
 | `ColorSlider` | |
 | `ColorPreviewer` | |

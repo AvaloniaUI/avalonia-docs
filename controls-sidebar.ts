@@ -11,6 +11,30 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Data display',
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Collections',
+          collapsed: true,
+          items:[
+              'data-display/collections/carousel',
+          ],
+        },
+        'data-display/contentcontrol',
+        {
+          type: 'category',
+          label: 'Structured data',
+          collapsed: true,
+          items:[
+              'data-display/structured-data/datagrid',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Input',
       collapsed: false,
       items: [
@@ -26,6 +50,26 @@ const sidebars: SidebarsConfig = {
               'input/buttons/splitbutton',
               'input/buttons/togglebutton',
               'input/buttons/togglesplitbutton',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Date and time',
+          collapsed: true,
+          items:[
+            'input/date-and-time/calendar',
+            'input/date-and-time/calendardatepicker',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Selectors',
+          collapsed: true,
+          items:[
+              'input/selectors/checkbox',
+              'input/selectors/colorpicker',
+              'input/selectors/colorview',
+              'input/selectors/combobox',
           ],
         },
         {
@@ -51,8 +95,24 @@ const sidebars: SidebarsConfig = {
               'layout/containers/border',
           ],
         },
+        {
+          type: 'category',
+          label: 'Panels',
+          collapsed: true,
+          items:[
+              'layout/panels/canvas',
+          ],
+        },
       ],
     },
+    {
+      type: 'category',
+      label: 'Menus',
+      collapsed: false,
+      items:[
+        'menus/contextmenu',
+      ],
+    }
   ],
 };
 

@@ -1,6 +1,6 @@
 ---
+id: checkbox
 title: CheckBox
-description: REFERENCE - Built-in Control
 ---
 
 import CheckBoxTwoStateScreenshot from '/img/reference/controls/checkbox/checkbox-two-state.gif';
@@ -25,46 +25,34 @@ You will probably use these properties most often:
 
 This is an example of two-state check boxes:
 
+<XamlPreview>
+
 ```xml
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaAppTemplate.MainWindow"
-        Title="CheckBox sample">
+<UserControl xmlns="https://github.com/avaloniaui">
     <StackPanel Margin="20">
         <CheckBox>Not checked by default</CheckBox>
         <CheckBox IsChecked="True">Checked by default</CheckBox>
     </StackPanel>
-</Window>
+</UserControl>
 ```
 
-Looks like this when running on Windows:
-
-<img src={CheckBoxTwoStateScreenshot} alt="" />
+</XamlPreview>
 
 This is an example of a three-state checkbox:
 
+<XamlPreview>
+
 ```xml
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaAppTemplate.MainWindow"
-        Title="CheckBox sample">
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <StackPanel Margin="20">
         <CheckBox IsThreeState="True" IsChecked="False">Not checked by default</CheckBox>
         <CheckBox IsThreeState="True" IsChecked="True">Checked by default</CheckBox>
         <CheckBox IsThreeState="True" IsChecked="{x:Null}">Unknown by default</CheckBox>
     </StackPanel>
-</Window>
+</UserControl>
 ```
-
-Looks like this when running on Windows:
-
-<img src={CheckBoxThreeStateScreenshot} alt="" />
+</XamlPreview>
 
 ## More Information
 

@@ -1,8 +1,9 @@
 ---
-description: REFERENCE - Built-in Controls
+id: canvas
+title: Canvas
 ---
 
-import CanvasContentZoneScreenshot from '/img/reference/controls/canvas/canvas-contentzone.png';
+import CanvasContentZoneScreenshot from '/img/controls/canvas/canvas-contentzone.png';
 
 # Canvas
 
@@ -13,7 +14,7 @@ The position of each child control is defined as two distances between the edge 
 <img src={CanvasContentZoneScreenshot} alt="" />
 
 :::info
-To review the concept of layout zones, see [here](/docs/concepts/layout/layout-zones).
+To review the concept of layout zones, see [here](/concepts/ui-concepts/layout).
 :::
 
 ## Useful Properties

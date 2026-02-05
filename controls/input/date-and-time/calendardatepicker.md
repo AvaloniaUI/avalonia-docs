@@ -1,6 +1,6 @@
 ---
+id: calendardatepicker
 title: CalendarDatePicker
-description: REFERENCE - Built-in Controls
 ---
 
 import CalendarDatePickerScreenshot from '/img/gitbook-import/assets/calendardatepicker.gif';
@@ -12,20 +12,25 @@ This is an extension of the calendar control that includes a text box and button
 The user can also enter a date by typing in the text box. The date picker is able to process multiple date formats into the format that is displayed as a watermark when there is no selected date.
 
 :::info
-For details on the calendar part of this control, see the previous reference [here](./).
+For details on the calendar part of this control, see [here](/controls/input/date-and-time/calendar).
 :::
 
 ## Example
 
 This example shows a basic single date selection calendar when the button is clicked:
 
+<XamlPreview>
+
 ```xml
-<StackPanel Margin="20">
-  <CalendarDatePicker />
-</StackPanel>
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <StackPanel Margin="20">
+    <CalendarDatePicker />
+  </StackPanel>
+</UserControl>
 ```
 
-<img src={CalendarDatePickerScreenshot} alt=""/>
+</XamlPreview>
 
 ## More Information
 

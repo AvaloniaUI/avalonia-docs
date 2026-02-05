@@ -1,11 +1,9 @@
 ---
+id: combobox
 title: ComboBox
-description: REFERENCE - Built-in Control
 ---
 
-import ComboBoxMaxDropDownHeightScreenshot from '/img/reference/controls/combobox/combobox-maxdropdownheight.gif';
-import ComboBoxComplexContentScreenshot from '/img/reference/controls/combobox/combobox-complex-content.gif';
-import ComboBoxDataTemplateScreenshot from '/img/reference/controls/combobox/combobox-data-template.gif';
+import ComboBoxDataTemplateScreenshot from '/img/controls/combobox/combobox-data-template.gif';
 
 # ComboBox
 
@@ -14,7 +12,7 @@ The `ComboBox` presents a selected item and a drop-down button that displays a l
 The items in the list can be composed, bound and templated.
 
 :::info
-To review the concept behind **data templates**, see [here](/docs/concepts/templates/).
+To review the concept behind **data templates**, see [here](/concepts/data-concepts/data-templates).
 :::
 
 ## Useful Properties
@@ -36,55 +34,63 @@ You will probably use these properties most often:
 
 This is basic example with text items has a limit set on the drop-down list height.
 
+<XamlPreview>
+
 ```xml
-<StackPanel Margin="20">
-  <ComboBox SelectedIndex="0" MaxDropDownHeight="100">
-    <ComboBoxItem>Text Item 1</ComboBoxItem>
-    <ComboBoxItem>Text Item 2</ComboBoxItem>
-    <ComboBoxItem>Text Item 3</ComboBoxItem>
-    <ComboBoxItem>Text Item 4</ComboBoxItem>
-    <ComboBoxItem>Text Item 5</ComboBoxItem>
-    <ComboBoxItem>Text Item 6</ComboBoxItem>
-    <ComboBoxItem>Text Item 7</ComboBoxItem>
-    <ComboBoxItem>Text Item 8</ComboBoxItem>
-    <ComboBoxItem>Text Item 9</ComboBoxItem>
-  </ComboBox>
-</StackPanel>
+<UserControl xmlns="https://github.com/avaloniaui">
+  <StackPanel Margin="20">
+    <ComboBox SelectedIndex="0" MaxDropDownHeight="100">
+      <ComboBoxItem>Text Item 1</ComboBoxItem>
+      <ComboBoxItem>Text Item 2</ComboBoxItem>
+      <ComboBoxItem>Text Item 3</ComboBoxItem>
+      <ComboBoxItem>Text Item 4</ComboBoxItem>
+      <ComboBoxItem>Text Item 5</ComboBoxItem>
+      <ComboBoxItem>Text Item 6</ComboBoxItem>
+      <ComboBoxItem>Text Item 7</ComboBoxItem>
+      <ComboBoxItem>Text Item 8</ComboBoxItem>
+      <ComboBoxItem>Text Item 9</ComboBoxItem>
+    </ComboBox>
+  </StackPanel>
+</UserControl>
 ```
 
-<img src={ComboBoxMaxDropDownHeightScreenshot} alt="" />
+</XamlPreview>
 
 This example uses a composed view for each item:
 
+<XamlPreview>
+
 ```xml
-<StackPanel Margin="20">
-  <ComboBox SelectedIndex="0">
-    <ComboBoxItem>
-      <Panel>
-        <Ellipse Width="50" Height="50" Fill="Red"/>
-        <TextBlock VerticalAlignment="Center"
-                    HorizontalAlignment="Center">Red</TextBlock>
-      </Panel>
-    </ComboBoxItem>
-    <ComboBoxItem>
+<UserControl xmlns="https://github.com/avaloniaui">
+  <StackPanel Margin="20">
+    <ComboBox SelectedIndex="0">
+      <ComboBoxItem>
         <Panel>
-          <Ellipse Width="50" Height="50" Fill="Orange"/>
-          <TextBlock VerticalAlignment="Center" 
-                      HorizontalAlignment="Center">Amber</TextBlock>
+          <Ellipse Width="50" Height="50" Fill="Red"/>
+          <TextBlock VerticalAlignment="Center"
+                     HorizontalAlignment="Center">Red</TextBlock>
         </Panel>
-    </ComboBoxItem>
-    <ComboBoxItem>
-      <Panel>
-        <Ellipse Width="50" Height="50" Fill="Green"/>
-        <TextBlock VerticalAlignment="Center"
-                    HorizontalAlignment="Center">Green</TextBlock>
-      </Panel>
-    </ComboBoxItem>
-  </ComboBox>
-</StackPanel>
+      </ComboBoxItem>
+      <ComboBoxItem>
+          <Panel>
+            <Ellipse Width="50" Height="50" Fill="Orange"/>
+            <TextBlock VerticalAlignment="Center" 
+                       HorizontalAlignment="Center">Amber</TextBlock>
+          </Panel>
+      </ComboBoxItem>
+      <ComboBoxItem>
+        <Panel>
+          <Ellipse Width="50" Height="50" Fill="Green"/>
+          <TextBlock VerticalAlignment="Center"
+                     HorizontalAlignment="Center">Green</TextBlock>
+        </Panel>
+      </ComboBoxItem>
+    </ComboBox>
+  </StackPanel>
+</UserControl>
 ```
 
-<img src={ComboBoxComplexContentScreenshot} alt="" />
+</XamlPreview>
 
 This example binds the items in a combo box using a data template. The C# code-behind loads the installed font family names and binds them to the items property.
 

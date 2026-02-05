@@ -1,5 +1,6 @@
 ---
-description: REFERENCE - Built-in Controls
+id: colorview
+title: ColorView
 ---
 
 # ColorView

@@ -361,6 +361,50 @@ const redirects: Redirect[] = [
         "from": "/docs/reference/controls/buttons/togglesplitbutton",
         "to": "/controls/input/buttons/togglesplitbutton"
     },
+    {
+        "from": "/docs/reference/controls/calendar",
+        "to": "/controls/input/date-and-time/calendar"
+    },
+    {
+        "from": "/docs/reference/controls/calendar-date-picker",
+        "to": "/controls/input/date-and-time/calendardatepicker"
+    },
+    {
+        "from": "/docs/reference/controls/carousel",
+        "to": "/controls/data-display/collections/carousel"
+    },
+    {
+        "from": "/docs/reference/controls/checkbox",
+        "to": "/controls/input/selectors/checkbox"
+    },
+    {
+        "from": "/docs/reference/controls/colorpicker",
+        "to": "/controls/input/selectors/colorpicker"
+    },
+    {
+        "from": "/docs/reference/controls/colorview",
+        "to": "/controls/input/selectors/colorview"
+    },
+    {
+        "from": "/docs/reference/controls/combobox",
+        "to": "/controls/input/selectors/combobox"
+    },
+    {
+        "from": "/docs/reference/controls/contentcontrol",
+        "to": "/controls/data-display/contentcontrol"
+    },
+    {
+        "from": "/docs/reference/controls/contextmenu",
+        "to": "/controls/menus/contextmenu"
+    },
+    {
+        "from": [
+            "/docs/reference/controls/datagrid",
+            "/docs/reference/controls/datagrid/data-grid-template-columns",
+            "/docs/reference/controls/datagrid/datagridcolumns"
+        ],
+        "to": "/controls/data-display/structured-data/datagrid"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };
