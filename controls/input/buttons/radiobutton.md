@@ -1,9 +1,9 @@
 ---
+id: radiobutton
 title: RadioButton
-description: REFERENCE - Built-in Controls
 ---
 
-# Radio Button
+# RadioButton
 
 The `RadioButton` control presents a group of options from which only one may be selected at a time. A selected option is drawn as a filled circle, and an unselected option as an empty circle.
 

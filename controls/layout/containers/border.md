@@ -1,5 +1,6 @@
 ---
-description: REFERENCE - Built-in Controls
+id: border
+title: Border
 ---
 
 # Border

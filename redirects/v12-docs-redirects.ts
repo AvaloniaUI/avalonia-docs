@@ -299,6 +299,68 @@ const redirects: Redirect[] = [
         ],
         "to": "/docs/migration/wpf/events"
     },
+    {
+        "from": [
+            "/docs/reference/controls",
+            "/docs/reference/controls/repeating-data-controls",
+            "/docs/reference/controls/text-controls",
+            "/docs/reference/controls/buttons",
+            "/docs/reference/controls/value-selector-controls",
+            "/docs/reference/controls/layout-controls",
+            "/docs/reference/controls/image-controls",
+            "/docs/reference/controls/menu-controls",
+            "/docs/reference/controls/popup-controls"
+        ],
+        "to": "/controls/index"
+    },
+    {
+        "from": "/docs/reference/animation-settings",
+        "to": "/reference/animations/animation-settings"
+    },
+    {
+        "from": "/docs/reference/index",
+        "to": "/reference/index"
+    },
+    {
+        "from": "/docs/reference/built-in-data-binding-converters",
+        "to": "/reference/data/built-in-data-binding-converters"
+    },
+    {
+        "from": "/docs/reference/controls/autocompletebox",
+        "to": "/controls/input/text-input/autocompletebox"
+    },
+    {
+        "from": "/docs/reference/controls/border",
+        "to": "/controls/layout/containers/border"
+    },
+    {
+        "from": "/docs/reference/controls/buttons/button",
+        "to": "/controls/input/buttons/button"
+    },
+    {
+        "from": "/docs/reference/controls/buttons/buttonspinner",
+        "to": "/controls/input/buttons/buttonspinner"
+    },
+    {
+        "from": "/docs/reference/controls/buttons/radiobutton",
+        "to": "/controls/input/buttons/radiobutton"
+    },
+    {
+        "from": "/docs/reference/controls/buttons/repeatbutton",
+        "to": "/controls/input/buttons/repeatbutton"
+    },
+    {
+        "from": "/docs/reference/controls/buttons/splitbutton",
+        "to": "/controls/input/buttons/splitbutton"
+    },
+    {
+        "from": "/docs/reference/controls/buttons/togglebutton",
+        "to": "/controls/input/buttons/togglebutton"
+    },
+    {
+        "from": "/docs/reference/controls/buttons/togglesplitbutton",
+        "to": "/controls/input/buttons/togglesplitbutton"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

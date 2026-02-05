@@ -1,9 +1,9 @@
 ---
+id: buttonspinner
 title: ButtonSpinner
-description: REFERENCE - Built-in Controls
 ---
 
-# Button Spinner
+# ButtonSpinner
 
 The `ButtonSpinner` presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
 

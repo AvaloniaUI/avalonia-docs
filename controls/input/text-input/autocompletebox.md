@@ -1,9 +1,9 @@
 ---
+id: autocompletebox
 title: AutoCompleteBox
-description: REFERENCE - Built-in Controls
 ---
 
-import AutoCompleteBoxScreenshot from '/img/reference/controls/autocompletebox/autocompletebox.gif';
+import AutoCompleteBoxScreenshot from '/img/controls/autocompletebox/autocompletebox.gif';
 
 # AutoCompleteBox
 

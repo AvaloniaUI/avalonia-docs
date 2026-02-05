@@ -1,9 +1,9 @@
 ---
+id: repeatbutton
 title: RepeatButton
-description: REFERENCE - Built-in Controls
 ---
 
-# Repeat Button
+# RepeatButton
 
 The `RepeatButton` is a control that has the added feature of regularly generating click events while the button is being pressed down.
 

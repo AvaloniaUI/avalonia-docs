@@ -1,11 +1,11 @@
 ---
+id: togglebutton
 title: ToggleButton
-description: REFERENCE - Built-in Controls
 ---
 
-import ToggleButtonMuteScreenshot from '/img/reference/controls/buttons/togglebutton-mute.gif';
+import ToggleButtonMuteScreenshot from '/img/controls/buttons/togglebutton/togglebutton-mute.gif';
 
-# Toggle Button
+# ToggleButton
 
 The `ToggleButton` can present a Boolean value by using styles and a pseudo class that is either present (true) or absent (false).
 
@@ -14,6 +14,8 @@ This allows a wide range of possible graphical presentations for the control in 
 ## Example
 
 This example shows a toggle button containing a speaker icon, or a muted speaker icon, depending on whether the button has the checked pseudo class or not.
+
+<img src={ToggleButtonMuteScreenshot} alt="" />
 
 ```xml
 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -82,8 +84,6 @@ To see the full list of Fluent icons available with _Avalonia UI_, see [https://
 :::
 
 The visibility of the path icons is set by the window styles, and these use the `:checked` pseudo class to determine when the toggle button is in its checked state. So, when the toggle button is checked, then the `audio-on` path icon is visible, and the `audio-mute` path icon is hidden. And conversely, when the toggle button is not checked, then the `audio-mute` path icon is visible, and the `audio-on` path icon is hidden.
-
-<img src={ToggleButtonMuteScreenshot} alt="" />
 
 ## More Information
 

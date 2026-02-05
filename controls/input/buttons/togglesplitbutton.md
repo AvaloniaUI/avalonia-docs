@@ -1,14 +1,11 @@
 ---
+id: togglesplitbutton
 title: ToggleSplitButton
-description: REFERENCE - Built-in Controls
 ---
 
 # ToggleSplitButton
 
-import ToggleSplitButtonClosedUncheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-closed-unchecked.png';
-import ToggleSplitButtonClosedCheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-closed-checked.png';
-import ToggleSplitButtonOpenedCheckedScreenshot from '/img/reference/controls/buttons/togglesplitbutton-opened-checked.png';
-import ToggleSplitButtonTextListScreenshot from '/img/reference/controls/buttons/togglesplitbutton-text-list.png';
+import ToggleSplitButtonTextListScreenshot from '/img/controls/buttons/togglesplitbutton/togglesplitbutton-text-list.png';
 
 The `ToggleSplitButton` functions as a [`ToggleButton`](togglebutton) with primary and secondary parts that can each be pressed separately. The primary part behaves like a normal `ToggleButton` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
 
@@ -55,8 +52,12 @@ Pressing a configuration in the `Flyout` should either (1) turn on the feature w
 
 ### Basic example
 
+<XamlPreview>
+
 ```xml
-<ToggleSplitButton Content="Content"
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <ToggleSplitButton Content="Content"
                    IsChecked="{Binding IsChecked}">
     <ToggleSplitButton.Flyout>
         <MenuFlyout Placement="Bottom">
@@ -70,22 +71,15 @@ Pressing a configuration in the `Flyout` should either (1) turn on the feature w
             <MenuItem Header="Item 3" />
         </MenuFlyout>
     </ToggleSplitButton.Flyout>
-</ToggleSplitButton>
+  </ToggleSplitButton>
+</UserControl>
 ```
 
-<img src={ToggleSplitButtonClosedUncheckedScreenshot} alt=""/>
+</XamlPreview>
 
-_SplitButton (Flyout closed, unchecked)_
+### Text editor with numbered or bulleted list
 
-<img src={ToggleSplitButtonClosedCheckedScreenshot} alt=""/>
-
-_SplitButton (Flyout closed, checked)_
-
-<img src={ToggleSplitButtonOpenedCheckedScreenshot} alt=""/>
-
-_SplitButton (Flyout opened, checked)_
-
-### Text editor with numbered or bulleted list example
+<img src={ToggleSplitButtonTextListScreenshot} alt=""/>
 
 Continuing the text editor example from `SplitButton`, a common use case of the `ToggleSplitButton` is to add bulleted/numbered lists to text. In this example the primary part will toggle the list on/off while the secondary part will open a `Flyout` and allow selecting the bullet or number style.
 
@@ -122,7 +116,3 @@ Continuing the text editor example from `SplitButton`, a common use case of the 
     </ToggleSplitButton.Flyout>
 </ToggleSplitButton>
 ```
-
-<img src={ToggleSplitButtonTextListScreenshot} alt=""/>
-
-_Sample of ToggleSplitButton for toggle text lists on and off and selecting the list format_

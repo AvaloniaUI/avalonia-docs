@@ -1,16 +1,13 @@
 ---
+id: splitbutton
 title: SplitButton
-description: REFERENCE - Built-in Controls
 ---
 
 # SplitButton
 
-import SplitButtonClosedScreenshot from '/img/reference/controls/buttons/splitbutton-closed.png';
-import SplitButtonOpenedScreenshot from '/img/reference/controls/buttons/splitbutton-opened.png';
-import SplitButtonPaletteFlyoutScreenshot from '/img/reference/controls/buttons/splitbutton-palette-flyout.png';
-import SplitButtonExportButtonScreenshot from '/img/reference/controls/buttons/splitbutton-export.png';
+import SplitButtonPaletteFlyoutScreenshot from '/img/controls/buttons/splitbutton/splitbutton-palette-flyout.png';
 
-The `SplitButton` functions as a [`Button`](./button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](../flyouts) with additional actions.
+The `SplitButton` functions as a [`Button`](/controls/input/buttons/button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](/controls/menus/flyouts) with additional actions.
 
 ## Is this the right control?
 
@@ -20,7 +17,7 @@ A `SplitButton` should only be composed of similar actions. Fundamentally, this 
 The user-selection action should be invoked immediately when pressing either the primary part or a secondary action in the flyout. All pressed actions, whether primary or secondary, are immediate.
 :::
 
-## Common Properties
+## Common properties
 
 | Property  | Description                                                    |
 | --------- | -------------------------------------------------------------- |
@@ -47,8 +44,12 @@ The user-selection action should be invoked immediately when pressing either the
 
 ### Basic example
 
+<XamlPreview>
+
 ```xml
-<SplitButton Content="Content" >
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <SplitButton Content="Content">
     <SplitButton.Flyout>
         <MenuFlyout Placement="Bottom">
             <MenuItem Header="Item 1">
@@ -61,28 +62,25 @@ The user-selection action should be invoked immediately when pressing either the
             <MenuItem Header="Item 3" />
         </MenuFlyout>
     </SplitButton.Flyout>
-</SplitButton>
+  </SplitButton>
+</UserControl>
 ```
 
-<img src={SplitButtonClosedScreenshot} alt="" />
+</XamlPreview>
 
-_SplitButton (Flyout closed)_
-
-<img src={SplitButtonOpenedScreenshot} alt="" />
-
-_SplitButton (Flyout opened)_
-
-### Color-Selection example
+### Color selection example
 
 A common use case of a `SplitButton` is for coloring text within an editor. Pressing the primary part of the `SplitButton` will apply the current color to the selected text. Pressing the secondary part will open a `Flyout` and allow another color to be specified and applied. Again note that when another color is specified in the `Flyout`, the selected text color will immediately change and the current color will be updated as well.
+
+<img src={SplitButtonPaletteFlyoutScreenshot} alt=""/>
 
 ```xml
 <!-- We have the following DataTemplate defined -->
 <DataTemplate DataType="Color">
-  <Border CornerRadius="4" Width="20" Height="20" BorderBrush="Gray" BorderThickness="1">
+   <Border CornerRadius="4" Width="20" Height="20" BorderBrush="Gray" BorderThickness="1">
     <Border.Background>
-      <SolidColorBrush Color="{Binding}" />
-    </Border.Background>
+       <SolidColorBrush Color="{Binding}" />
+   </Border.Background>
   </Border>
 </DataTemplate>
 ```
@@ -107,31 +105,31 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 </SplitButton>
 ```
 
-<img src={SplitButtonPaletteFlyoutScreenshot} alt=""/>
-
-_Sample of SplitButton for color selection_
-
-### Export Button Sample
+### Export button sample
 
 Another common example of the `SplitButton` could be an export button. When the primary part is pressed, data will be exported using default settings. However, if the secondary part is pressed, additional export options could be specified like ‘Export to PNG’, ‘Export to JPG’, etc.
 
+<XamlPreview>
+
 ```xml
-<SplitButton Content="Export to PDF"
-             Command="{Binding ExportCommand}"
-             CommandParameter=".pdf">
-    <SplitButton.Flyout>
-        <MenuFlyout Placement="RightEdgeAlignedTop">
-            <MenuItem Header="Export to PNG"
-                      Command="{Binding ExportCommand}"
-                      CommandParameter=".png" />
-            <MenuItem Header="Export to JPG"
-                      Command="{Binding ExportCommand}"
-                      CommandParameter=".jpg" />
-        </MenuFlyout>
-    </SplitButton.Flyout>
-</SplitButton>
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <SplitButton Content="Export to PDF"
+               Command="{Binding ExportCommand}"
+               CommandParameter=".pdf">
+     <SplitButton.Flyout>
+          <MenuFlyout Placement="RightEdgeAlignedTop">
+              <MenuItem Header="Export to PNG"
+                        Command="{Binding ExportCommand}"
+                        CommandParameter=".png" />
+              <MenuItem Header="Export to JPG"
+                        Command="{Binding ExportCommand}"
+                        CommandParameter=".jpg" />
+         </MenuFlyout>
+      </SplitButton.Flyout>
+  </SplitButton>
+</UserControl>
 ```
 
-<img src={SplitButtonExportButtonScreenshot} alt="" />
+</XamlPreview>
 
-_Sample of a SplitButton with different export options_

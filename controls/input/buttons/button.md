@@ -1,9 +1,9 @@
 ---
+id: button
 title: Button
-description: REFERENCE - Built-in Controls
 ---
 
-import ButtonClickScreenshot from '/img/reference/controls/buttons/button-click.gif';
+import ButtonClickScreenshot from '/img/controls/buttons/button/button-click.gif';
 
 # Button
 
@@ -24,7 +24,7 @@ Click is one of many button events, for a full list see [here](https://api-docs.
 A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.
 
 :::info
-For guidance on how to bind to a command, see [here](/docs/basics/user-interface/adding-interactivity).
+For guidance on how to bind to a command, see [here](/docs/ui-development/adding-interactivity).
 :::
 
 ## Useful Properties

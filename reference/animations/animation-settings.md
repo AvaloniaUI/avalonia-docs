@@ -1,40 +1,39 @@
 ---
-description: REFERENCE
+id: animation-settings
+title: Animation settings
 ---
 
-import LinearEasingScreenshot from '/img/reference/animation-settings/linear-easing.png';
-import BackEaseInScreenshot from '/img/reference/animation-settings/back-ease-in.png';
-import BackEaseInOutScreenshot from '/img/reference/animation-settings/back-ease-in-out.png';
-import BackEaseOutScreenshot from '/img/reference/animation-settings/back-ease-out.png';
-import BounceEaseInScreenshot from '/img/reference/animation-settings/bounce-ease-in.png';
-import BounceEaseInOutScreenshot from '/img/reference/animation-settings/bounce-ease-in-out.png';
-import BounceEaseOutScreenshot from '/img/reference/animation-settings/bounce-ease-out.png';
-import CircularEaseInScreenshot from '/img/reference/animation-settings/circular-ease-in.png';
-import CircularEaseInOutScreenshot from '/img/reference/animation-settings/circular-ease-in-out.png';
-import CircularEaseOutScreenshot from '/img/reference/animation-settings/circular-ease-out.png';
-import CubicEaseInScreenshot from '/img/reference/animation-settings/cubic-ease-in.png';
-import CubicEaseInOutScreenshot from '/img/reference/animation-settings/cubic-ease-in-out.png';
-import CubicEaseOutScreenshot from '/img/reference/animation-settings/cubic-ease-out.png';
-import ElasticEaseInScreenshot from '/img/reference/animation-settings/elastic-ease-in.png';
-import ElasticEaseInOutScreenshot from '/img/reference/animation-settings/elastic-ease-in-out.png';
-import ElasticEaseOutScreenshot from '/img/reference/animation-settings/elastic-ease-out.png';
-import ExponentialEaseInScreenshot from '/img/reference/animation-settings/exponential-ease-in.png';
-import ExponentialEaseInOutScreenshot from '/img/reference/animation-settings/exponential-ease-in-out.png';
-import ExponentialEaseOutScreenshot from '/img/reference/animation-settings/exponential-ease-out.png';
-import QuadraticEaseInScreenshot from '/img/reference/animation-settings/quadratic-ease-in.png';
-import QuadraticEaseInOutScreenshot from '/img/reference/animation-settings/quadratic-ease-in-out.png';
-import QuadraticEaseOutScreenshot from '/img/reference/animation-settings/quadratic-ease-out.png';
-import QuarticEaseInScreenshot from '/img/reference/animation-settings/quartic-ease-in.png';
-import QuarticEaseInOutScreenshot from '/img/reference/animation-settings/quartic-ease-in-out.png';
-import QuarticEaseOutScreenshot from '/img/reference/animation-settings/quartic-ease-out.png';
-import QuinticEaseInScreenshot from '/img/reference/animation-settings/quintic-ease-in.png';
-import QuinticEaseInOutScreenshot from '/img/reference/animation-settings/quintic-ease-in-out.png';
-import QuinticEaseOutScreenshot from '/img/reference/animation-settings/quintic-ease-out.png';
-import SineEaseInScreenshot from '/img/reference/animation-settings/sine-ease-in.png';
-import SineEaseInOutScreenshot from '/img/reference/animation-settings/sine-ease-in-out.png';
-import SineEaseOutScreenshot from '/img/reference/animation-settings/sine-ease-out.png';
-
-# Animation Settings
+import LinearEasingScreenshot from '/img/reference/animations/animation-settings/linear-easing.png';
+import BackEaseInScreenshot from '/img/reference/animations/animation-settings/back-ease-in.png';
+import BackEaseInOutScreenshot from '/img/reference/animations/animation-settings/back-ease-in-out.png';
+import BackEaseOutScreenshot from '/img/reference/animations/animation-settings/back-ease-out.png';
+import BounceEaseInScreenshot from '/img/reference/animations/animation-settings/bounce-ease-in.png';
+import BounceEaseInOutScreenshot from '/img/reference/animations/animation-settings/bounce-ease-in-out.png';
+import BounceEaseOutScreenshot from '/img/reference/animations/animation-settings/bounce-ease-out.png';
+import CircularEaseInScreenshot from '/img/reference/animations/animation-settings/circular-ease-in.png';
+import CircularEaseInOutScreenshot from '/img/reference/animations/animation-settings/circular-ease-in-out.png';
+import CircularEaseOutScreenshot from '/img/reference/animations/animation-settings/circular-ease-out.png';
+import CubicEaseInScreenshot from '/img/reference/animations/animation-settings/cubic-ease-in.png';
+import CubicEaseInOutScreenshot from '/img/reference/animations/animation-settings/cubic-ease-in-out.png';
+import CubicEaseOutScreenshot from '/img/reference/animations/animation-settings/cubic-ease-out.png';
+import ElasticEaseInScreenshot from '/img/reference/animations/animation-settings/elastic-ease-in.png';
+import ElasticEaseInOutScreenshot from '/img/reference/animations/animation-settings/elastic-ease-in-out.png';
+import ElasticEaseOutScreenshot from '/img/reference/animations/animation-settings/elastic-ease-out.png';
+import ExponentialEaseInScreenshot from '/img/reference/animations/animation-settings/exponential-ease-in.png';
+import ExponentialEaseInOutScreenshot from '/img/reference/animations/animation-settings/exponential-ease-in-out.png';
+import ExponentialEaseOutScreenshot from '/img/reference/animations/animation-settings/exponential-ease-out.png';
+import QuadraticEaseInScreenshot from '/img/reference/animations/animation-settings/quadratic-ease-in.png';
+import QuadraticEaseInOutScreenshot from '/img/reference/animations/animation-settings/quadratic-ease-in-out.png';
+import QuadraticEaseOutScreenshot from '/img/reference/animations/animation-settings/quadratic-ease-out.png';
+import QuarticEaseInScreenshot from '/img/reference/animations/animation-settings/quartic-ease-in.png';
+import QuarticEaseInOutScreenshot from '/img/reference/animations/animation-settings/quartic-ease-in-out.png';
+import QuarticEaseOutScreenshot from '/img/reference/animations/animation-settings/quartic-ease-out.png';
+import QuinticEaseInScreenshot from '/img/reference/animations/animation-settings/quintic-ease-in.png';
+import QuinticEaseInOutScreenshot from '/img/reference/animations/animation-settings/quintic-ease-in-out.png';
+import QuinticEaseOutScreenshot from '/img/reference/animations/animation-settings/quintic-ease-out.png';
+import SineEaseInScreenshot from '/img/reference/animations/animation-settings/sine-ease-in.png';
+import SineEaseInOutScreenshot from '/img/reference/animations/animation-settings/sine-ease-in-out.png';
+import SineEaseOutScreenshot from '/img/reference/animations/animation-settings/sine-ease-out.png';
 
 This section describes how `Animation` playback can be customized.
 

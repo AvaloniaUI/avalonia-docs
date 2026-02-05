@@ -11,6 +11,22 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Animations',
+      collapsed: false,
+      items: [
+        'animations/animation-settings',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Data',
+      collapsed: false,
+      items: [
+        'data/built-in-data-binding-converters',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Styles',
       collapsed: false,
       items: [
