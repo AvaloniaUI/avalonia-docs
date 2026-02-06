@@ -20,6 +20,9 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items:[
               'data-display/collections/carousel',
+              'data-display/collections/itemscontrol',
+              'data-display/collections/itemsrepeater',
+              'data-display/collections/listbox',
           ],
         },
         'data-display/contentcontrol',
@@ -31,6 +34,24 @@ const sidebars: SidebarsConfig = {
               'data-display/structured-data/datagrid',
           ],
         },
+        {
+          type: 'category',
+          label: 'Text display',
+          collapsed: true,
+          items:[
+              'data-display/text-display/label',
+              'data-display/text-display/selectabletextblock',
+              'data-display/text-display/textblock',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Feedback',
+      collapsed: true,
+      items:[
+        'feedback/progressbar',
       ],
     },
     {
@@ -71,6 +92,8 @@ const sidebars: SidebarsConfig = {
               'input/selectors/colorpicker',
               'input/selectors/colorview',
               'input/selectors/combobox',
+              'input/selectors/numericupdown',
+              'input/selectors/slider',
           ],
         },
         {
@@ -79,6 +102,8 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items:[
               'input/text-input/autocompletebox',
+              'input/text-input/maskedtextbox',
+              'input/text-input/textbox',
           ],
         },
       ],
@@ -96,9 +121,13 @@ const sidebars: SidebarsConfig = {
               'layout/containers/border',
               'layout/containers/expander',
               'layout/containers/flyout',
+              'layout/containers/refreshcontainer',
+              'layout/containers/scrollviewer',
+              'layout/containers/splitview',
           ],
         },
         'layout/decorator',
+        'layout/layouttransformcontrol',
         {
           type: 'category',
           label: 'Panels',
@@ -106,6 +135,11 @@ const sidebars: SidebarsConfig = {
           items:[
               'layout/panels/canvas',
               'layout/panels/dockpanel',
+              'layout/panels/grid',
+              'layout/panels/gridsplitter',
+              'layout/panels/panel',
+              'layout/panels/relativepanel',
+              'layout/panels/stackpanel',
           ],
         },
       ],
@@ -116,6 +150,8 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items:[
         'media/drawingimage',
+        'media/image',
+        'media/pathicon',
       ],
     },
     {
@@ -124,6 +160,27 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items:[
         'menus/contextmenu',
+        'menus/menu',
+        'menus/menuflyout',
+        'menus/nativemenu',
+        'menus/separator',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Navigation',
+      collapsed: true,
+      items:[
+        'navigation/tabcontrol',
+        'navigation/tabstrip',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Primitives',
+      collapsed: true,
+      items:[
+        'primitives/scrollbar',
       ],
     }
   ],

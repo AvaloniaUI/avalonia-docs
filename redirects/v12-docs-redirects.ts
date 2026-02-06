@@ -301,7 +301,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
-            "/docs/reference/controls",
+            "/docs/reference/controls/index",
             "/docs/reference/controls/repeating-data-controls",
             "/docs/reference/controls/text-controls",
             "/docs/reference/controls/buttons",
@@ -428,6 +428,125 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/reference/controls/flyouts",
         "to": "/controls/layout/containers/flyout"
+    },
+    {
+        "from": [
+            "/docs/reference/controls/grid",
+            "/docs/reference/controls/grid/sharedsizegroup"
+        ],
+        "to": "/controls/layout/panels/grid"
+    },
+    {
+        "from": "/docs/reference/controls/gridsplitter",
+        "to": "/controls/layout/panels/gridsplitter"
+    },
+    {
+        "from": "/docs/reference/controls/image",
+        "to": "/controls/media/image"
+    },
+    {
+        "from": "/docs/reference/controls/itemscontrol",
+        "to": "/controls/data-display/collections/itemscontrol"
+    },
+    {
+        "from": "/docs/reference/controls/itemsrepeater",
+        "to": "/controls/data-display/collections/itemsrepeater"
+    },
+    {
+        "from": "/docs/reference/controls/label",
+        "to": "/controls/data-display/text-display/label"
+    },
+    {
+        "from": "/docs/reference/controls/layouttransformcontrol",
+        "to": "/controls/layout/layouttransformcontrol"
+    },
+    {
+        "from": "/docs/reference/controls/listbox",
+        "to": "/controls/data-display/collections/listbox"
+    },
+    {
+        "from": "/docs/reference/controls/maskedtextbox",
+        "to": "/controls/input/text-input/maskedtextbox"
+    },
+    {
+        "from": "/docs/reference/controls/menu-flyout",
+        "to": "/controls/menus/menuflyout"
+    },
+    {
+        "from": "/docs/reference/controls/menu",
+        "to": "/controls/menus/menu"
+    },
+    {
+        "from": "/docs/reference/controls/nativemenu",
+        "to": "/controls/menus/nativemenu"
+    },
+    {
+        "from": "/docs/reference/controls/numericupdown",
+        "to": "/controls/input/selectors/numericupdown"
+    },
+    {
+        "from": "/docs/reference/controls/panel",
+        "to": "/controls/layout/panels/panel"
+    },
+    {
+        "from": "/docs/reference/controls/path-icon",
+        "to": "/controls/media/pathicon"
+    },
+    {
+        "from": "/docs/reference/controls/progressbar",
+        "to": "/controls/feedback/progressbar"
+    },
+    {
+        "from": "/docs/reference/controls/refreshcontainer",
+        "to": "/controls/layout/containers/refreshcontainer"
+    },
+    {
+        "from": "/docs/reference/controls/relativepanel",
+        "to": "/controls/layout/panels/relativepanel"
+    },
+    {
+        "from": "/docs/reference/controls/scrollbar",
+        "to": "/controls/primitives/scrollbar"
+    },
+    {
+        "from": "/docs/reference/controls/scrollviewer",
+        "to": "/controls/layout/containers/scrollviewer"
+    },
+    {
+        "from": "/docs/reference/controls/selectable-textblock",
+        "to": "/controls/data-display/text-display/selectabletextblock"
+    },
+    {
+        "from": "/docs/reference/controls/separator",
+        "to": "/controls/menus/separator"
+    },
+    {
+        "from": "/docs/reference/controls/slider",
+        "to": "/controls/input/selectors/slider"
+    },
+    {
+        "from": "/docs/reference/controls/splitview",
+        "to": "/controls/layout/containers/splitview"
+    },
+    {
+        "from": "/docs/reference/controls/stackpanel",
+        "to": "/controls/layout/panels/stackpanel"
+    },
+    {
+        "from": "/docs/reference/controls/tabcontrol",
+        "to": "/controls/navigation/tabcontrol"
+    },
+    {
+        "from": "/docs/reference/controls/tabstrip",
+        "to": "/controls/navigation/tabstrip"
+    },
+    {
+        "from": "/docs/reference/controls/textblock",
+        "to": "/controls/data-display/text-display/textblock"
+    },
+    {
+        "from": "/docs/reference/controls/textbox",
+        "to": "/controls/input/text-input/textbox"
     },
 ];
 
