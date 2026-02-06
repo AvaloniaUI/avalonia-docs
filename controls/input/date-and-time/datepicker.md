@@ -1,9 +1,9 @@
 ---
+id: datepicker
 title: DatePicker
-description: REFERENCE - Built-in Controls
 ---
 
-import DatePickerScreenshot from '/img/reference/controls/datepicker/datepicker.gif';
+import DatePickerScreenshot from '/img/controls/datepicker/datepicker.gif';
 
 # DatePicker
 

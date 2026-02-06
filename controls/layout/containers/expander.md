@@ -1,9 +1,7 @@
 ---
-description: REFERENCE - Built-in Controls
+id: expander
+title: Expander
 ---
-
-import ExpanderClosedScreenshot from '/img/reference/controls/expander/expander-closed.png';
-import ExpanderOpenedScreenshot from '/img/reference/controls/expander/expander-opened.png';
 
 # Expander
 
@@ -17,12 +15,16 @@ You will probably use these properties most often:
 
 ## Example
 
+<XamlPreview>
+
 ```xml
-<Expander VerticalAlignment="Top">
-    <Expander.Header>
-        Hidden Search
-    </Expander.Header>
-    <Grid RowDefinitions="*,*" ColumnDefinitions="150,*">
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="5">
+  <Expander VerticalAlignment="Top">
+      <Expander.Header>
+          Hidden Search
+      </Expander.Header>
+      <Grid RowDefinitions="*,*" ColumnDefinitions="150,*">
         <TextBlock Grid.Row="0" Grid.Column="0"
                    VerticalAlignment="Center">Search</TextBlock>
         <TextBox Grid.Row="0" Grid.Column="1"
@@ -30,13 +32,12 @@ You will probably use these properties most often:
         <TextBlock Grid.Row="1" Grid.Column="0"
                    VerticalAlignment="Center">Case sensitive?</TextBlock>
         <CheckBox Grid.Row="1" Grid.Column="1" />
-    </Grid>
-</Expander>
+      </Grid>
+  </Expander>
+</UserControl>
 ```
 
-<img src={ExpanderClosedScreenshot} alt="" />
-
-<img src={ExpanderOpenedScreenshot} alt="" />
+</XamlPreview>
 
 ## More Information
 

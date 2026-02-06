@@ -405,6 +405,30 @@ const redirects: Redirect[] = [
         ],
         "to": "/controls/data-display/structured-data/datagrid"
     },
+    {
+        "from": "/docs/reference/controls/datepicker",
+        "to": "/controls/input/date-and-time/datepicker"
+    },
+    {
+        "from": "/docs/reference/controls/decorator",
+        "to": "/controls/layout/decorator"
+    },
+    {
+        "from": "/docs/reference/controls/dockpanel",
+        "to": "/controls/layout/panels/dockpanel"
+    },
+    {
+        "from": "/docs/reference/controls/drawing-image",
+        "to": "/controls/media/drawingimage"
+    },
+    {
+        "from": "/docs/reference/controls/expander",
+        "to": "/controls/layout/containers/expander"
+    },
+    {
+        "from": "/docs/reference/controls/flyouts",
+        "to": "/controls/layout/containers/flyout"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

@@ -1,8 +1,9 @@
 ---
-description: REFERENCE - Built-in Controls
+id: flyout
+title: Flyout
 ---
 
-import FlyoutShowAttachedScreenshot from '/img/reference/controls/flyouts/flyout-show-attached.gif';
+import FlyoutShowAttachedScreenshot from '/img/controls/flyout/flyout-show-attached.gif';
 
 # Flyout
 
@@ -16,19 +17,27 @@ Flyouts can be declared as a resource and shared between two or more host contro
 
 A flyout is attached to a host control using the host's `Flyout` property. For example:
 
+<XamlPreview>
+
 ```xml
-<Button Content="Button with Flyout">
-  <Button.Flyout >
-    <Flyout>This is the button flyout.</Flyout>
-  </Button.Flyout>
-</Button>
+<UserControl xmlns="https://github.com/avaloniaui"
+             Padding="20">
+  <Button Content="Button with flyout">
+    <Button.Flyout >
+      <Flyout>This is the button flyout.</Flyout>
+    </Button.Flyout>
+  </Button>
+</UserControl>
 ```
+
+</XamlPreview>
 
 :::warning
 Only the button and split button controls support the `Flyout` property. You can attach a flyout to other _Avalonia UI_ built-in controls using the `AttachedFlyout` property instead.
 :::
 
-For controls that do not have the `Flyout` property, use the `AttachedFlyout` property like this:
+For controls that do not have the `Flyout` property, use the `AttachedFlyout` property. 
+The flyout will not show automatically, and has to be programmed in the code-behind.
 
 ```xml
 <Border Background="Red" PointerPressed="Border_PointerPressed">
@@ -39,8 +48,6 @@ For controls that do not have the `Flyout` property, use the `AttachedFlyout` pr
     </FlyoutBase.AttachedFlyout>
 </Border>
 ```
-
-The flyout will not show automatically, it has to be shown from code-behind. For example:
 
 ```csharp
 public void Border_PointerPressed(object sender, PointerPressedEventArgs args)

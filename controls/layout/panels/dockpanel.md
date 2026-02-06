@@ -1,9 +1,9 @@
 ---
+id: dockpanel
 title: DockPanel
-description: REFERENCE - Built-in Controls
 ---
 
-import DockPanelTopScreenshot from '/img/reference/controls/dockpanel/dockpanel-top.png';
+import DockPanelTopScreenshot from '/img/controls/dockpanel/dockpanel-top.png';
 
 # DockPanel
 

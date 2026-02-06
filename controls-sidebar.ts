@@ -12,7 +12,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Data display',
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
@@ -36,7 +36,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Input',
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
@@ -59,6 +59,7 @@ const sidebars: SidebarsConfig = {
           items:[
             'input/date-and-time/calendar',
             'input/date-and-time/calendardatepicker',
+            'input/date-and-time/datepicker',
           ],
         },
         {
@@ -85,7 +86,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Layout',
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
@@ -93,22 +94,34 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items:[
               'layout/containers/border',
+              'layout/containers/expander',
+              'layout/containers/flyout',
           ],
         },
+        'layout/decorator',
         {
           type: 'category',
           label: 'Panels',
           collapsed: true,
           items:[
               'layout/panels/canvas',
+              'layout/panels/dockpanel',
           ],
         },
       ],
     },
     {
       type: 'category',
+      label: 'Media',
+      collapsed: true,
+      items:[
+        'media/drawingimage',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Menus',
-      collapsed: false,
+      collapsed: true,
       items:[
         'menus/contextmenu',
       ],

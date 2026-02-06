@@ -1,6 +1,6 @@
 ---
+id: drawingimage
 title: DrawingImage
-description: REFERENCE - Built-in Controls
 ---
 
 # DrawingImage
