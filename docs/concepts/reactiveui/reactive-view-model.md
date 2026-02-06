@@ -11,7 +11,7 @@ This page describes how you can use the _ReactiveUI_ `ReactiveObject` as the bas
 _ReactiveUI_ provides the `ReactiveObject` as a base class for view models. It implements a notification of property changes and observables to monitor object changes.
 
 :::info
-For the detailed _ReactiveUI_ documentation for `ReactiveObject`, see [here](https://www.reactiveui.net/api/reactiveui/reactiveobject/).
+For the detailed _ReactiveUI_ documentation for `ReactiveObject`, see [here](https://www.reactiveui.net/api/reactiveui.reactiveobject/).
 :::
 
 Once you have installed and configured _ReactiveUI_, you can base your view models on the class:
