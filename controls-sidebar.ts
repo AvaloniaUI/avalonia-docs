@@ -32,6 +32,8 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items:[
               'data-display/structured-data/datagrid',
+              'data-display/structured-data/treedatagrid',
+              'data-display/structured-data/treeview',
           ],
         },
         {
@@ -44,6 +46,7 @@ const sidebars: SidebarsConfig = {
               'data-display/text-display/textblock',
           ],
         },
+        'data-display/transitioningcontentcontrol',
       ],
     },
     {
@@ -52,6 +55,7 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items:[
         'feedback/progressbar',
+        'feedback/tooltip',
       ],
     },
     {
@@ -81,6 +85,7 @@ const sidebars: SidebarsConfig = {
             'input/date-and-time/calendar',
             'input/date-and-time/calendardatepicker',
             'input/date-and-time/datepicker',
+            'input/date-and-time/timepicker',
           ],
         },
         {
@@ -124,6 +129,7 @@ const sidebars: SidebarsConfig = {
               'layout/containers/refreshcontainer',
               'layout/containers/scrollviewer',
               'layout/containers/splitview',
+              'layout/containers/viewbox',
           ],
         },
         'layout/decorator',
@@ -140,6 +146,8 @@ const sidebars: SidebarsConfig = {
               'layout/panels/panel',
               'layout/panels/relativepanel',
               'layout/panels/stackpanel',
+              'layout/panels/uniformgrid',
+              'layout/panels/wrappanel',
           ],
         },
       ],
@@ -173,6 +181,7 @@ const sidebars: SidebarsConfig = {
       items:[
         'navigation/tabcontrol',
         'navigation/tabstrip',
+        'navigation/trayicon',
       ],
     },
     {
@@ -181,6 +190,8 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items:[
         'primitives/scrollbar',
+        'primitives/usercontrol',
+        'primitives/window',
       ],
     }
   ],

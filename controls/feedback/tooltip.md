@@ -1,6 +1,6 @@
 ---
+id: tooltip
 title: ToolTip
-description: REFERENCE - Built-in Controls
 ---
 
 import ToolTipTextHoverScreenshot from '/img/reference/controls/tooltip/tooltip-text-hover.gif';
@@ -62,28 +62,40 @@ You will probably use these properties most often:
 
 ## Examples
 
-This is a simple text-based tooltip, using default values for the placement and delay properties; this rectangle is placed in a window with larger dimensions:
+This is a simple text-based tooltip, using default values for the placement and delay properties. Hover over the rectangle in the preview to see the tooltip.
+
+<XamlPreview>
 
 ```xml
-<Rectangle Fill="Aqua" Height="200" Width="400"
-            ToolTip.Tip="This is a rectangle" />
+<UserControl xmlns="https://github.com/avaloniaui">
+  <Rectangle Fill="Aqua" Height="150" Width="200"
+             ToolTip.Tip="This is a rectangle" />
+</UserControl>
 ```
+
+</XamlPreview>
 
 <img src={ToolTipTextHoverScreenshot} alt="" />
 
-To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. For example:
+To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. Hover over the rectangle in the preview to see the tooltip.
+
+<XamlPreview>
 
 ```xml
-<Rectangle Fill="Aqua" Height="200" Width="400"
-    ToolTip.Placement="Bottom">
-    <ToolTip.Tip>
-      <StackPanel>
-        <TextBlock FontSize="16">Rectangle</TextBlock>
-        <TextBlock>Some explanation here.</TextBlock>
-      </StackPanel>
-    </ToolTip.Tip>
-</Rectangle>
+<UserControl xmlns="https://github.com/avaloniaui">
+  <Rectangle Fill="Aqua" Height="150" Width="200"
+             ToolTip.Placement="Bottom">
+      <ToolTip.Tip>
+        <StackPanel>
+          <TextBlock FontSize="16">Rectangle</TextBlock>
+          <TextBlock>Some explanation here.</TextBlock>
+        </StackPanel>
+      </ToolTip.Tip>
+  </Rectangle>
+</UserControl>
 ```
+
+</XamlPreview>
 
 <img src={ToolTipContentScreenshot} alt="" />
 

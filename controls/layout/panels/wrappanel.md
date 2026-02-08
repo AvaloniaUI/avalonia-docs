@@ -1,6 +1,6 @@
 ---
+id: wrappanel
 title: WrapPanel
-description: REFERENCE - Built-in Controls
 ---
 
 # WrapPanel

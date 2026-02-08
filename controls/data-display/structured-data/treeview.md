@@ -1,10 +1,10 @@
 ---
+id: treeview
 title: TreeView
-description: REFERENCE - Built-in Controls
 ---
 
-import TreeViewAnimalHierarchyScreenshot from '/img/reference/controls/treeview/treeview-animal-hierarchy.gif';
-import TreeViewEnhancedAnimalHierarchyScreenshot from '/img/reference/controls/treeview/treeview-enhanced-animal-hierarchy.gif';
+import TreeViewAnimalHierarchyScreenshot from '/img/controls/treeview/treeview-animal-hierarchy.gif';
+import TreeViewEnhancedAnimalHierarchyScreenshot from '/img/controls/treeview/treeview-enhanced-animal-hierarchy.gif';
 
 # TreeView
 

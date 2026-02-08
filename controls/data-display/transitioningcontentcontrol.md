@@ -1,10 +1,10 @@
 ---
+id: transitioningcontentcontrol
 title: TransitioningContentControl
-description: REFERENCE - Built-in Controls
 ---
 
-import TransitioningContentControlFadeScreenshot from '/img/reference/controls/transitioningcontentcontrol/transitioningcontentcontrol-fade.webp';
-import TransitioningContentControlSlideScreenshot from '/img/reference/controls/transitioningcontentcontrol/transitioningcontentcontrol-slide.webp';
+import TransitioningContentControlFadeScreenshot from '/img/controls/transitioningcontentcontrol/transitioningcontentcontrol-fade.webp';
+import TransitioningContentControlSlideScreenshot from '/img/controls/transitioningcontentcontrol/transitioningcontentcontrol-slide.webp';
 
 # TransitioningContentControl
 

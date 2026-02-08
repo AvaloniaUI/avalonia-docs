@@ -548,6 +548,55 @@ const redirects: Redirect[] = [
         "from": "/docs/reference/controls/textbox",
         "to": "/controls/input/text-input/textbox"
     },
+    {
+        "from": "/docs/reference/controls/timepicker",
+        "to": "/controls/input/date-and-time/timepicker"
+    },
+    {
+        "from": "/docs/reference/controls/tooltip",
+        "to": "/controls/feedback/tooltip"
+    },
+    {
+        "from": "/docs/reference/controls/transitioningcontentcontrol",
+        "to": "/controls/data-display/transitioningcontentcontrol"
+    },
+    {
+        "from": "/docs/reference/controls/tray-icon",
+        "to": "/controls/navigation/trayicon"
+    },
+    {
+        "from": [
+            "/docs/reference/controls/treedatagrid/index",
+            "/docs/reference/controls/treedatagrid/creating-a-flat-treedatagrid",
+            "/docs/reference/controls/treedatagrid/creating-a-hierarchical-treedatagrid",
+            "/docs/reference/controls/treedatagrid/treedatagrid-column-types",
+        ],
+        "to": "/controls/data-display/structured-data/treedatagrid"
+    },
+    {
+        "from": "/docs/reference/controls/treeview-1",
+        "to": "/controls/data-display/structured-data/treeview"
+    },
+    {
+        "from": "/docs/reference/controls/uniform-grid",
+        "to": "/controls/layout/panels/uniformgrid"
+    },
+    {
+        "from": "/docs/reference/controls/usercontrol",
+        "to": "/controls/primitives/usercontrol"
+    },
+    {
+        "from": "/docs/reference/controls/viewbox",
+        "to": "/controls/layout/containers/viewbox"
+    },
+    {
+        "from": "/docs/reference/controls/window",
+        "to": "/controls/primitives/window"
+    },
+    {
+        "from": "/docs/reference/controls/wrappanel",
+        "to": "/controls/layout/panels/wrappanel"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

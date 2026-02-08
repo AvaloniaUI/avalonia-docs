@@ -1,15 +1,14 @@
 ---
+id: viewbox
 title: Viewbox
-description: REFERENCE - Built-in Controls
 ---
 
-import ViewboxScaleUniformBothScreenshot from '/img/reference/controls/viewbox/viewbox-scale-uniform-both.gif';
-import ViewboxScaleUniformFillBothScreenshot from '/img/reference/controls/viewbox/viewbox-scale-uniformtofill-both.gif';
-import ViewboxScaleFillBothScreenshot from '/img/reference/controls/viewbox/viewbox-scale-fill-both.gif';
-import ViewboxScaleNoneBothScreenshot from '/img/reference/controls/viewbox/viewbox-scale-none-both.gif';
-
-import ViewboxScaleUniformDownOnlyScreenshot from '/img/reference/controls/viewbox/viewbox-uniform-downonly.gif';
-import ViewboxScaleUniformUpOnlyScreenshot from '/img/reference/controls/viewbox/viewbox-uniform-uponly.gif';
+import ViewboxScaleUniformBothScreenshot from '/img/controls/viewbox/viewbox-scale-uniform-both.gif';
+import ViewboxScaleUniformFillBothScreenshot from '/img/controls/viewbox/viewbox-scale-uniformtofill-both.gif';
+import ViewboxScaleFillBothScreenshot from '/img/controls/viewbox/viewbox-scale-fill-both.gif';
+import ViewboxScaleNoneBothScreenshot from '/img/controls/viewbox/viewbox-scale-none-both.gif';
+import ViewboxScaleUniformDownOnlyScreenshot from '/img/controls/viewbox/viewbox-uniform-downonly.gif';
+import ViewboxScaleUniformUpOnlyScreenshot from '/img/controls/viewbox/viewbox-uniform-uponly.gif';
 
 # Viewbox
 
@@ -41,7 +40,7 @@ The values for the `StretchDirection` property are as follows:
 This simple example shows a `Viewbox` scaling up a circle uniformly (both stretch and direction are default).
 
 ```xml
-<Viewbox Stretch="Uniform" Width="300" Height="300">
+<Viewbox Stretch="Uniform" Width="150" Height="150">
    <Ellipse Width="50" Height="50" Fill="CornflowerBlue" />  
 </Viewbox>
 ```

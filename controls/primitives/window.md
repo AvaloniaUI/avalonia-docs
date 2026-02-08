@@ -3,11 +3,11 @@ id: window
 title: Window
 ---
 
-`Window` is a top-level [`ContentControl`](contentcontrol).
+`Window` is a top-level [`ContentControl`](/controls/data-display/contentcontrol).
 
-You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application. For information on how to create new window classes from templates see the [quickstart](/docs/get-started/getting-started).
+You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application.
 
-### Common Properties
+## Common Properties
 
 | Property | Description |
 | :--- | :--- |
@@ -16,11 +16,7 @@ You will not usually create instances of the `Window` class directly; instead th
 | `SizeToContent` | Describes the window's auto-sizing behavior |
 | `WindowState` | The minimized/maximized state of the window |
 
-### Source code
-
-[Window.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
-
-### Show, hide and close a window
+## Show, hide and close a window
 
 You can show a window using the `Show` method:
 
@@ -49,7 +45,7 @@ window.Show();
 
 See also [Prevent a window from closing](#prevent-a-window-from-closing)
 
-### Show a window as a dialog
+## Show a window as a dialog
 
 You can show a window as a modal dialog by calling the `ShowDialog` method. `ShowDialog` requires an owner window to be passed:
 
@@ -92,7 +88,7 @@ var dialog = new MyDialog();
 var result = await dialog.ShowDialog<string>(ownerWindow);
 ```
 
-### Prevent a window from closing
+## Prevent a window from closing
 
 A window can be prevented from closing by handling the `Closing` event and setting `e.Cancel = true`:
 
@@ -113,6 +109,10 @@ window.Closing += (s, e) =>
 };
 ```
 
+## Source code
+
+[Window.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
+
 ## Additional Resources
 
-- The [Main Window](/docs/concepts/the-main-window)
+- The [Main Window](/concepts/core-concepts/the-main-window)

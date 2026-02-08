@@ -1,9 +1,7 @@
 ---
+id: timepicker
 title: TimePicker
-description: REFERENCE - Built-in Controls
 ---
-
-import TimePickerScreenshot from '/img/reference/controls/timepicker/timepicker.gif';
 
 # TimePicker
 
@@ -19,15 +17,18 @@ You will probably use these properties most often:
 
 This example shows how to create a time picker for the 24 hour clock, with 20 minute time slots:
 
+<XamlPreview>
+
 ```xml
-<StackPanel Margin="20" Spacing="4">
+<StackPanel xmlns="https://github.com/avaloniaui"
+            Margin="20"
+            Spacing="4">
   <Label Content="Please choose your time:"/>
   <TimePicker ClockIdentifier="24HourClock"              
               MinuteIncrement="20"/>
 </StackPanel>
 ```
-
-<img src={TimePickerScreenshot} alt="" />
+</XamlPreview>
 
 ## **Initializing the Time**
 

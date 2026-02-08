@@ -1,11 +1,11 @@
 ---
+id: uniformgrid
 title: UniformGrid
-description: REFERENCE - Built-in Controls
 ---
 
 # UniformGrid
 
-The `UniformGrid` divides the available space evenly in both directions, into cells. You can specify how many divisions to use, and these can be different in either direction.
+The `UniformGrid` divides available space evenly into cells. You can specify how many divisions to use, and these can be different in either direction.
 
 ## Useful Properties
 
