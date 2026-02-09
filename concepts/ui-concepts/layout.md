@@ -1,5 +1,6 @@
 ---
-description: CONCEPTS
+id: layout
+title: Layout
 ---
 
 # Layout
@@ -58,9 +59,3 @@ The ultimate goal of the measure pass is for the child to determine its `Desired
 The arrange pass begins with a call to the `Arrange` method. During the arrange pass, the parent `Panel` element generates a rectangle that represents the bounds of the child. This value is passed to the `ArrangeCore` method for processing.
 
 The `ArrangeCore` method evaluates the `DesiredSize` of the child and evaluates any additional margins that may affect the rendered size of the element. `ArrangeCore` generates an arrange size, which is passed to the `ArrangeOverride` method of the `Panel` as a parameter. `ArrangeOverride` generates the finalSize of the child. Finally, the `ArrangeCore` method does a final evaluation of offset properties, such as margin and alignment, and puts the child within its layout slot. The child does not have to (and frequently does not) fill the entire allocated space. Control is then returned to the parent `Panel` and the layout process is complete.
-
-## In This Section
-
-* [Panels Overview](panels-overview.md)
-* [Alignment, Margins and Padding](alignment-margins-and-padding.md)
-* [Create a Custom Panel](/docs/guides/custom-controls/create-a-custom-panel.md)

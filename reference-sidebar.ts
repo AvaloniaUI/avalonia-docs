@@ -27,6 +27,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Properties',
+      collapsed: false,
+      items: [
+        'properties/positioning',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Styles',
       collapsed: false,
       items: [

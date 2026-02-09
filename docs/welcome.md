@@ -20,7 +20,7 @@ Learn the core concepts on which the Avalonia framework runs.
 
 <br />
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-  <Button label="Core concepts" link="/concepts/core-concepts" variant="primary" outline />
+  <Button label="Core concepts" link="/concepts/index" variant="primary" outline />
 </div>
 
 ## Need help?

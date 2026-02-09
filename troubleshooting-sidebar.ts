@@ -24,7 +24,8 @@ const sidebars: SidebarsConfig = {
       label: 'UI development',
       collapsed: false,
       items: [
-        'ui-development/styles'
+        'ui-development/styles',
+        'ui-development/themes'
       ],
     },
   ],

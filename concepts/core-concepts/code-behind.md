@@ -3,11 +3,11 @@ id: code-behind
 title: Code-behind
 ---
 
-import VsSolutionExplorerScreenshot from '/img/basics/user-interface/code-behind/vs-solution-explorer.png';
+import VsSolutionExplorerScreenshot from '/img/concepts/core-concepts/code-behind/vs-solution-explorer.png';
 
 # Code-behind
 
-In addition to a XAML file, most Avalonia controls also have a _code-behind_ file that is commonly written in C#. The code-behind file by convention has the file extension `.axaml.cs` and is often displayed nested below the XAML file in your IDE.
+In addition to a XAML file, most Avalonia controls have a _code-behind_ file that is commonly written in C#. The code-behind file by convention has the file extension `.axaml.cs` and is often displayed nested below the XAML file in your IDE.
 
 For instance, in the Visual Studio solution explorer, you can see a `MainWindow.axaml` file along with its code-behind file `MainWindow.axaml.cs`:
 
@@ -123,5 +123,5 @@ public partial class MainWindow : Window
 Note that many Avalonia event handlers pass a special argument of class `RoutedEventArgs`. This includes information about how the event has been generated and propagated.
 
 :::info
-For more information on the concepts of event routing, see [here](/docs/concepts/input/routed-events.md).
+For more information on the concepts of event routing, see [here](/concepts/ui-concepts/user-input//routed-events).
 :::

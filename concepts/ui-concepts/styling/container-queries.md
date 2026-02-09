@@ -1,6 +1,6 @@
 ---
 id: container-queries
-title: Container Queries
+title: Container queries
 ---
 
 # Container Queries <MinVersion version="11.3" /> 
@@ -66,8 +66,10 @@ The `Name` property defines the name of the container it will attach to. This is
 The `Query` defines the rules to activate the containing size. See [Queries](#queries) below.
 
 This makes them quite easy to use in themes targeting different screen sizes, or themes that have different forms depending on the space available in its parent. This comes with a few restrictions. 
+
 1. Container Queries can't be hosted in a `Style` element.
    The following is invalid.
+
 ```xml
 <StackPanel Orientation="Horizontal">
   <StackPanel.Styles>
@@ -83,6 +85,7 @@ This makes them quite easy to use in themes targeting different screen sizes, or
   </StackPanel.Styles>
 </StackPanel>
 ```
+
 2. Styles declared in Queries can not affect the container or its ancestors. This is different from normal `Styles` being able to affect their parent control. Because container queries rely on the actual size of the container, having the container be affected by styles activated by its queries can cause cyclic behaviors where the container's size is being updated continuously by two or more queries.
 
 ### Declaring Containers
@@ -108,6 +111,7 @@ Depending on the sizing strategy, the container will use the maximum available s
 
 ### Queries
 The following queries are available.
+
 * `min-width`: equivalent to `x >= width`
 * `min-height`: equivalent to `x >= height`
 * `max-width`: equivalent to `x <= width`

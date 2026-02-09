@@ -10,6 +10,7 @@ function createRedirects(existingPath: string): string[] | undefined {
         // Using whole-folder redirect for folders that are mostly unchanged
         const v12_redirect = existingPath
             .replace('/docs/guides/data-binding/', '/docs/data/')
+            .replace('/docs/basics/user-interface/controls/creating-controls/', '/docs/ui-development/custom-controls/');
         if (v12_redirect !== existingPath) {
           redirects.push(v12_redirect);
         }
@@ -150,7 +151,9 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/guides/custom-controls/index",
             "/docs/guides/custom-controls/types-of-control",
-            "/docs/guides/custom-controls/how-to-create-advanced-custom-controls"
+            "/docs/guides/custom-controls/how-to-create-advanced-custom-controls",
+            "/docs/basics/user-interface/controls/creating-controls/index",
+            "/docs/ui-development/custom-controls/index",
         ],
         "to": "/docs/ui-development/custom-controls/creating-custom-controls"
     },
@@ -309,7 +312,10 @@ const redirects: Redirect[] = [
             "/docs/reference/controls/layout-controls",
             "/docs/reference/controls/image-controls",
             "/docs/reference/controls/menu-controls",
-            "/docs/reference/controls/popup-controls"
+            "/docs/reference/controls/popup-controls",
+            "/docs/basics/user-interface/controls/index",
+            "/docs/basics/user-interface/controls/builtin-controls",
+            "/docs/basics/user-interface/building-layouts/panels-overview"
         ],
         "to": "/controls/index"
     },
@@ -596,6 +602,71 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/reference/controls/wrappanel",
         "to": "/controls/layout/panels/wrappanel"
+    },
+    {
+        "from": "/docs/tutorials/samples",
+        "to": "/samples/index"
+    },
+    {
+        "from": [
+            "/docs/concepts/index",
+            "/docs/basics/index",
+        ],
+        "to": "/concepts/index"
+    },
+    {
+        "from": "/docs/basics/user-interface/introduction-to-xaml",
+        "to": "/concepts/core-concepts/avalonia-xaml"
+    },
+    {
+        "from": "/docs/basics/user-interface/code-behind",
+        "to": "/concepts/core-concepts/code-behind"
+    },
+    {
+        "from": [
+            "/docs/basics/user-interface/controls/creating-controls/control-themes",
+            "/docs/ui-development/custom-controls/control-themes"
+        ],
+        "to": "/concepts/ui-concepts/styling/control-themes"
+    },
+    {
+        "from": "/docs/basics/user-interface/building-layouts/index",
+        "to": "/concepts/ui-concepts/layout"
+    },
+    {
+        "from": "/docs/basics/user-interface/building-layouts/alignment-margins-and-padding",
+        "to": "/reference/properties/positioning"
+    },
+    {
+        "from": [
+            "/docs/basics/user-interface/styling/index",
+            "/docs/basics/user-interface/styling/styles"
+        ],
+        "to": "/concepts/ui-concepts/styling/styles"
+    },
+    {
+        "from": "/docs/basics/user-interface/styling/style-classes",
+        "to": "/concepts/ui-concepts/styling/style-classes"
+    },
+    {
+        "from": "/docs/basics/user-interface/styling/control-themes",
+        "to": "/concepts/ui-concepts/styling/control-themes"
+    },
+    {
+        "from": "/docs/basics/user-interface/styling/container-queries",
+        "to": "/concepts/ui-concepts/styling/container-queries"
+    },
+    {
+        "from": [
+            "/docs/basics/user-interface/styling/themes/index",
+            "/docs/basics/user-interface/styling/themes/fluent",
+            "/docs/basics/user-interface/styling/themes/simple"
+        ],
+        "to": "/concepts/ui-concepts/styling/themes"
+    },
+    {
+        "from": "/docs/basics/user-interface/styling/troubleshooting",
+        "to": "/troubleshooting/ui-development/themes"
     },
 ];
 

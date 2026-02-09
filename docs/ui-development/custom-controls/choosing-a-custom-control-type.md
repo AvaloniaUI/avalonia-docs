@@ -1,3 +1,8 @@
+---
+id: choosing-a-custom-control-type
+title: Choosing a custom control type
+---
+
 # Choosing A Custom Control Type
 
 Avalonia provides various approaches for creating custom controls to meet your application's specific needs. Understanding the different types of custom controls will help you choose the most appropriate approach for your requirements. In Avalonia, the three common types of custom controls are  UserControls`, lookless controls, and custom-drawn controls.
@@ -36,7 +41,7 @@ Creating a templated control involves the following steps:
 
 1. **Define the Control Class**: Create a new class that derives from `TemplatedControl`. This class defines the behavior, properties, and events of the control.
 
-2. **Control Template**: Create a [`ControlTheme`](control-themes) in XAML that specifies the visual appearance and structure of the control. The control template defines the parts of the control and how they should be styled.
+2. **Control Template**: Create a [`ControlTheme`](/concepts/ui-concepts/styling/control-themes) in XAML that specifies the visual appearance and structure of the control. The control template defines the parts of the control and how they should be styled.
 
 3. **Styling and Templating**: The application developer can customize the look of the control by modifying its control template or applying styles. This allows for a consistent and unified visual design across the application.
 

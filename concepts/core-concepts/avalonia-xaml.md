@@ -1,5 +1,6 @@
 ---
-description: CONCEPTS
+id: avalonia-xaml
+title: Avalonia XAML
 ---
 
 # Avalonia XAML
@@ -37,7 +38,7 @@ The sample above uses three interesting attributes:
 * `x:Class="AvaloniaApplication1.MainWindow"` - this is an extension of the above declaration (for 'x') that tells the XAML compiler where to find the associated class for this file. The class is defined in a code-behind file, usually written in C#.
 
 :::info
-For information about the code-behind concept, see [here](code-behind).
+For information about the code-behind concept, see [here](/concepts/core-concepts/code-behind).
 :::
 
 ## Control Elements
@@ -45,7 +46,7 @@ For information about the code-behind concept, see [here](code-behind).
 You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.
 
 :::info
-A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](/docs/concepts/ui-composition.md).
+A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](/concepts/core-concepts/ui-composition).
 :::
 
 For example, this XAML adds a button to the content of a window:
@@ -58,7 +59,7 @@ For example, this XAML adds a button to the content of a window:
 ```
 
 :::info
-For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](/docs/reference/controls).
+For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](/controls).
 :::
 
 ## Control Attributes
@@ -99,7 +100,7 @@ You will often use the _Avalonia UI_ binding system to link a control property t
 ```
 
 :::info
-For further information about the concept behind data binding, see [here](/docs/basics/data/data-binding).
+For further information about the concept behind data binding, see [here](/concepts/data-concepts/data-binding).
 :::
 
 ## Code-behind Files
@@ -107,7 +108,7 @@ For further information about the concept behind data binding, see [here](/docs/
 Many Avalonia XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.axaml.cs`.
 
 :::info
-For guidance about programming using code-behind files, see [here](code-behind).
+For guidance about programming using code-behind files, see [here](/concepts/core-concepts/ui-composition).
 :::
 
 ## XML Namespaces
@@ -131,7 +132,7 @@ Only one namespace in a file can be defined without using the alias part of the 
 The definition part of the namespace declaration can be either a URL or a code definition. Both of these are used to locate the definition of the elements in the file.
 
 :::info
-For detailed guidance on how namespace declarations work, see [here](/docs/guides/custom-controls/how-to-create-a-custom-controls-library.md).
+For detailed guidance on how namespace declarations work, see [here](/docs/ui-development/custom-controls/custom-control-library).
 :::
 
 There are two valid syntax options for the definition part of a XAML namespace attribute that references code:

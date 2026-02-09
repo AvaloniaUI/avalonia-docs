@@ -4,10 +4,18 @@ const sidebars: SidebarsConfig = {
 
   documentationSidebar: [
     {
+      type: 'doc',
+      label: 'Home',
+      id: 'index',
+    },
+    {
       type: 'category',
-      label: 'Getting Started',
+      label: 'Core concepts',
       collapsed: false,
-      items: ['index'],
+      items: [
+        'core-concepts/avalonia-xaml',
+        'core-concepts/code-behind',
+      ],
     },
     {
       type: 'category',
@@ -16,6 +24,26 @@ const sidebars: SidebarsConfig = {
       items: [
         'architecture/cross-platform-architecture',
         'architecture/the-mvvm-pattern',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'UI concepts',
+      collapsed: false,
+      items: [
+        'ui-concepts/layout',
+        {
+          type: 'category',
+         label: 'Styling',
+          collapsed: true,
+          items: [
+            'ui-concepts/styling/styles',
+            'ui-concepts/styling/style-classes',
+            'ui-concepts/styling/control-themes',
+            'ui-concepts/styling/container-queries',
+            'ui-concepts/styling/themes',
+         ],
+        },
       ],
     },
   ],

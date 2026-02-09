@@ -1,14 +1,14 @@
 ---
 id: control-themes
-title: Control Themes
+title: Control themes
 ---
 
-import StylingEllipseButtonScreenshot from '/img/basics/user-interface/styling/ellipse-button.png';
+import StylingEllipseButtonScreenshot from '/img/concepts/ui-concepts/styling/ellipse-button.png';
 
-Control themes build upon [Styles](styles) to create switchable themes for controls. Control themes are analogous to Styles in WPF/UWP, though their mechanism is slightly different.
+Control themes build upon [Styles](/concepts/ui-concepts/styling/styles) to create switchable themes for controls. Control themes are analogous to Styles in WPF/UWP, though their mechanism is slightly different.
 
 :::tip
-Because control themes are based on styles, it is important to understand the Avalonia [styling system](styles) first.
+Because control themes are based on styles, it is important to understand the Avalonia [styling system](/concepts/ui-concepts/styling/styles) first.
 :::
 
 ## Introduction
@@ -24,7 +24,7 @@ Control themes are themselves styles, but with some important differences:
 - Control themes are assigned to a control by setting the `Theme` property, usually using the `{StaticResource}` markup extension
 
 :::info
-Control themes are typically applied to [templated (lookless)](/docs/basics/user-interface/controls/creating-controls/choosing-a-custom-control-type.md) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
+Control themes are typically applied to [templated (lookless)](/docs/ui-development/custom-controls/creating-custom-controls) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
 :::
 
 ## Example: Round Button
@@ -81,7 +81,7 @@ The following example shows a simple `Button` theme which displays a button with
 
 ## Interaction in Control Themes
 
-Like standard styles, control themes support [nested styles](/docs/basics/user-interface/styling/styles.md#nested-styles) which can be used to add interactions such as pointer-over and pressed states.
+Like standard styles, control themes support [nested styles](/concepts/ui-concepts/styling/styles) which can be used to add interactions such as pointer-over and pressed states.
 
 ## Example: Round Button Hover State
 
@@ -129,10 +129,10 @@ Using nested styles we can make our button change color when the pointer is hove
 There a two ways in which a control theme can be found:
 
 - If the control's `Theme` property is set, then that control theme will be used; otherwise
-- Avalonia will search the upwards through the logical tree for a `ControlTheme` resource with an `x:Key` which matches the control's [style key](styles#style-key)
+- Avalonia will search the upwards through the logical tree for a `ControlTheme` resource with an `x:Key` which matches the control's [style key](/concepts/ui-concepts/styling/styles)
 
 :::tip
-If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](styles#style-key) which matches the `x:Key` and `TargetType` of your control theme
+If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](/concepts/ui-concepts/styling/styles) which matches the `x:Key` and `TargetType` of your control theme
 :::
 
 In effect this means that you have two choices for how to define your control theme:

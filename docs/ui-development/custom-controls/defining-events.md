@@ -1,3 +1,8 @@
+---
+id: defining-events
+title: Defining events
+---
+
 # Defining Events
 
 Events in Avalonia allow your custom controls to communicate and notify users of specific actions or occurrences. By defining events, you provide a way for users of your controls to respond and react to these events within their applications. This document will guide you through the process of defining events for your custom controls.
@@ -43,4 +48,4 @@ In this example, a custom routed event called `ValueChangedEvent` is defined for
 
 ## Further Reading
 
-For more information see the [Routed Events Deep Dive](/docs/concepts/input/routed-events.md)
+For more information see [Routed Events](/concepts/ui-concepts/user-input/routed-events).

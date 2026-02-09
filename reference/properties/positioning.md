@@ -1,10 +1,15 @@
-import LayoutMarginsPaddingAlignmentBasicScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-margins-padding-alignment-graphic1.png';
-import LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-margins-padding-alignment-graphic2.png';
-import LayoutHorizontalAlignmentScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-horizontal-alignment-graphic.png';
-import LayoutVerticalAlignmentScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-vertical-alignment-graphic.png';
-import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/basics/user-interface/building-layouts/layout-margins-padding/layout-margins-padding-alignment-graphic3.png';
+---
+id: positioning
+title: Positioning
+---
 
-# Alignment, Margins and Padding
+import LayoutMarginsPaddingAlignmentBasicScreenshot from '/img/reference/properties/positioning/layout-margins-padding-alignment-graphic1.png';
+import LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot from '/img/reference/properties/positioning/layout-margins-padding-alignment-graphic2.png';
+import LayoutHorizontalAlignmentScreenshot from '/img/reference/properties/positioning/layout-horizontal-alignment-graphic.png';
+import LayoutVerticalAlignmentScreenshot from '/img/reference/properties/positioning/layout-vertical-alignment-graphic.png';
+import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/reference/properties/positioning/layout-margins-padding-alignment-graphic3.png';
+
+# Positioning properties
 
 An Avalonia control exposes several properties that are used to precisely position child elements. This topic discusses four of the most important properties: `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment`. The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in Avalonia applications.
 
