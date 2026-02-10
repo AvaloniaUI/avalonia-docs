@@ -1,5 +1,6 @@
 ---
-description: CONCEPTS
+id: application-lifetimes
+title: Application lifetimes
 ---
 
 # Application Lifetimes

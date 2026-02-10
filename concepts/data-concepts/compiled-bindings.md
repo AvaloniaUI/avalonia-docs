@@ -29,7 +29,7 @@ to your project file. You will still need to provide `x:DataType` for the object
 
 ### Enable and disable per UserControl or Window
 
-To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](../data-templates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. You can also specify the `DataType` in the `Binding` directly.
+To enable compiled bindings, you will need to define the `DataType` of the object you want to bind to first. In [`DataTemplates`](/concepts/data-concepts/data-templates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. You can also specify the `DataType` in the `Binding` directly.
 
 You can now enable or disable compiled bindings by setting `x:CompileBindings="[True|False]"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
 

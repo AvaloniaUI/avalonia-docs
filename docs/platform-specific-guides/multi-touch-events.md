@@ -1,12 +1,12 @@
 ---
-id: multi-touch
-title: Multi-Touch
+id: multi-touch-events
+title: Multi-touch events
 ---
 
 Avalonia UI, unlike some other frameworks, doesn't segregate touch events. Instead, it uses a pointer event system which unifies mouse, stylus, and touch events. This means that rather than having separate `TouchEnter` or `TouchLeave` events, you would use `PointerPressed`, `PointerMoved`, and `PointerReleased` events to track touch inputs.
 
 
-## Using Gesture Recognizers
+## Using gesture recognizers
 
 In addition to basic touch events, Avalonia provides built-in gesture recognizers that make handling common touch gestures like pinch and scroll a breeze. Here's how you can use them:
 

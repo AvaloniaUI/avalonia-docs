@@ -1,6 +1,6 @@
 ---
 id: raspberry-pi
-title: Running Avalonia on Raspberry Pi
+title: Raspberry Pi
 ---
 
 import RaspbianLiteDrmKmsCubeScreenshot from '/img/guides/platform-specific-guides/raspberry-pi/raspbian-lite-drm-kmscube.gif';

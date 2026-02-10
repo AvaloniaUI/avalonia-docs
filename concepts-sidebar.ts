@@ -11,7 +11,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Core concepts',
-      collapsed: false,
+      collapsed: true,
       items: [
         'core-concepts/avalonia-xaml',
         'core-concepts/code-behind',
@@ -20,7 +20,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Architecture',
-      collapsed: false,
+      collapsed: true,
       items: [
         'architecture/cross-platform-architecture',
         'architecture/the-mvvm-pattern',
@@ -28,9 +28,32 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'UI concepts',
-      collapsed: false,
+      label: 'Data concepts',
+      collapsed: true,
       items: [
+        'data-concepts/data-binding',
+        'data-concepts/data-binding-syntax',
+        'data-concepts/compiled-bindings',
+        'data-concepts/data-context',
+        'data-concepts/data-templates',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Platform concepts',
+      collapsed: true,
+      items: [
+        'platform-concepts/application-lifetimes',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'UI concepts',
+      collapsed: true,
+      items: [
+        'ui-concepts/animations',
+        'ui-concepts/assets',
+        'ui-concepts/file-dialogs',
         'ui-concepts/layout',
         {
           type: 'category',

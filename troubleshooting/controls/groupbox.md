@@ -1,10 +1,10 @@
 ---
 id: groupbox
-title: Create a GroupBox Using HeaderedContentControl
-sidebar_label: Creating a GroupBox
+title: Creating a GroupBox
+sidebar_label: GroupBox
 ---
 
-import groupboxscreenshot from '/img/tutorials/groupbox/groupbox.png';
+import groupboxscreenshot from '/img/troubleshooting/controls/groupbox.png';
 
 
 While Avalonia doesn't include a built-in `GroupBox` control, you can achieve the same functionality and appearance using a `HeaderedContentControl` with custom styling. The `HeaderedContentControl` provides a header area and content region, making it perfect for grouping related interface elements.

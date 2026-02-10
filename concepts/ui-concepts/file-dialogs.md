@@ -3,7 +3,7 @@ id: file-dialogs
 title: File Dialogs
 ---
 
-The file dialog functionality is accessed through the [`StorageProvider`](/docs/concepts/services/storage-provider) service API, which is available from the `Window` or `TopLevel` classes. This page shows only basic usage and for more information about this API please visit StorageProvider page.
+The file dialog functionality is accessed through the [`StorageProvider`](/reference/services/storage-provider) service API, which is available from the `Window` or `TopLevel` classes. This page shows only basic usage and for more information about this API please visit StorageProvider page.
 
 <GitHubSampleLink title="File Dialog" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/FileOps"/>
 
@@ -72,10 +72,10 @@ public class MyView : UserControl
 }
 ```
 
-For more information on StorageProvider service including on how to keep access to the picked files and what possible options are supported, please visit [`StorageProvider`](/docs/concepts/services/storage-provider) documentation page and subpages.
+For more information on StorageProvider service including on how to keep access to the picked files and what possible options are supported, please visit [`StorageProvider`](/reference/services/storage-provider) documentation page and subpages.
 
 :::note
-The provided examples directly access the [`StorageProvider`](/docs/concepts/services/storage-provider) API inside the ViewModel for learning purposes. In a real-world application, it's recommended to adhere to MVVM principles by creating service classes and locating them with Dependency Injection / Inversion of Control (DI/IoC). Please refer to the [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) and DepInject projects for samples of how to achieve this.
+The provided examples directly access the [`StorageProvider`](/reference/services/storage-provider) API inside the ViewModel for learning purposes. In a real-world application, it's recommended to adhere to MVVM principles by creating service classes and locating them with Dependency Injection / Inversion of Control (DI/IoC). Please refer to the [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) and DepInject projects for samples of how to achieve this.
 :::
 
 

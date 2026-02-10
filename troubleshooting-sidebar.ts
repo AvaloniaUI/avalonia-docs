@@ -13,6 +13,15 @@ const sidebars: SidebarsConfig = {
     'app-performance-issues',
     {
       type: 'category',
+      label: 'Controls',
+      collapsed: false,
+      items: [
+        'controls/groupbox',
+        'controls/messagebox'
+      ],
+    },
+    {
+      type: 'category',
       label: 'Platform-specific issues',
       collapsed: false,
       items: [

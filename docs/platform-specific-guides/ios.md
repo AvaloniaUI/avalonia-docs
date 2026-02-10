@@ -1,6 +1,6 @@
 ---
 id: ios
-title: Developing with Avalonia for iOS
+title: iOS
 ---
 
 import IOSOpenXcodeScreenshot from '/img/guides/platform-specific-guides/ios/ios-open-xcode.png';

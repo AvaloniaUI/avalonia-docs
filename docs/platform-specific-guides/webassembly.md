@@ -1,6 +1,6 @@
 ---
 id: webassembly
-title: Running Avalonia in WebAssembly
+title: WebAssembly
 ---
 
 ## Setting up an Avalonia project for WebAssembly

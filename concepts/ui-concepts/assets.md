@@ -1,10 +1,10 @@
 ---
 id: assets
-title: Assets and Images
+title: Assets
 ---
 
-import AssetFileDiagram from '/img/basics/user-interface/asset-file.png';
-import AssetLibraryDiagram from '/img/basics/user-interface/asset-library.png';
+import AssetFileDiagram from '/img/concepts/ui-concepts/assets/asset-file.png';
+import AssetLibraryDiagram from '/img/concepts/ui-concepts/assets/asset-library.png';
 
 # Assets
 
@@ -31,7 +31,7 @@ The element name `AvaloniaResource` here only indicates that the assets will be 
 :::
 
 
-### Referencing Included Assets
+### Referencing included assets
 
 Once asset files are included, they can be referenced as needed in the XAML that defines your UI. For example, these assets are referenced by specifying their relative path:
 
@@ -47,7 +47,7 @@ As an alternative, you can use the rooted path:
 <Image Source="/Assets/icon.png"/>
 ```
 
-## Library Assets
+## Library assets
 
 <img src={AssetLibraryDiagram} alt=''/>
 
@@ -57,7 +57,7 @@ If the asset is included in a different assembly from the XAML file, then you us
 <Image Source="avares://MyAssembly/Assets/icon.png"/>
 ```
 
-### Asset Type Conversion
+### Asset type conversion
 
 Avalonia UI has built-in converters which can load assets for bitmaps, icons and fonts out of the box. So an assets Uri can be automatically converted to any of following:
 
@@ -66,7 +66,7 @@ Avalonia UI has built-in converters which can load assets for bitmaps, icons and
 * Window Icon - `WindowIcon` type
 * Font - `FontFamily` type
 
-### Loading Assets in Code
+### Loading assets in code
 
 You can write code to load assets using the `AssetLoader` static class. For example:
 

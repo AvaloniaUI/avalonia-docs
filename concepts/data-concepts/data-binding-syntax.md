@@ -1,16 +1,15 @@
 ---
-description: CONCEPTS
+id: data-binding-syntax
+title: Data binding syntax
 ---
 
-import DataBindingModeDiagram from '/img/basics/data-binding/data-binding-syntax/data-binding-mode.png';
-import TargetNullValueScreenshot from '/img/basics/data-binding/data-binding-syntax/targetnullvalue.gif';
-import UpdateSourceTriggerScreenshot from '/img/basics/data-binding/data-binding-syntax/updatesourcetrigger.gif';
+import DataBindingModeDiagram from '/img/concepts/data-concepts/data-binding-syntax/data-binding-mode.png';
 
 # Data Binding Syntax
 
 Avalonia supports creating data bindings in XAML and code. Data bindings in XAML are typically created with the 
 `Binding` `MarkupExtension` described by this document. To create data bindings in code, 
-see [here](/docs/guides/data-binding/binding-from-code.md).
+see [here](/docs/data/binding-from-code).
 
 ## Data Binding MarkupExtension
 
@@ -80,6 +79,7 @@ is defined). These two syntaxes are equivalent:
 You can change the direction(s) data is synchronized by specifying the `Mode`.
 
 <img src={DataBindingModeDiagram} alt=''/>
+<br/><br/>
 
 For example:
 
@@ -120,7 +120,7 @@ parameters or with their shorthand syntax as part of the `Path` (`#controlName` 
 ```
 
 :::info
-For more details on how to bind to controls, see [here](/docs/guides/data-binding/binding-to-controls)
+For more details on how to bind to controls, see [here](/docs/data/binding-to-controls)
 :::
 
 ## Converting Bound Values
@@ -194,7 +194,7 @@ be `(r: 100, g: 80, b: 255)`.
 
 :::tip
 An alternative is to use an `InlineCollection` of `Run` elements each with their own single parameter 
-binding. This allows visual customization of each segment. See the example [here](/docs/reference/controls/textblock#run)
+binding. This allows visual customization of each segment.
 :::
 
 ### Built-in Conversions
@@ -205,7 +205,7 @@ Avalonia has a range of built-in data binding converters. These include:
 * Boolean operation converters
 
 :::info
-For a listing of Avalonia built-in data binding converters, see the reference [here](/docs/reference/built-in-data-binding-converters.md).
+For a listing of Avalonia built-in data binding converters, see the reference [here](/reference/data/built-in-data-binding-converters).
 :::
 
 ### Custom Conversions
@@ -213,7 +213,7 @@ For a listing of Avalonia built-in data binding converters, see the reference [h
 If the built-in converters do not meet your requirements, then you can create a custom converter by implementing `IValueConverter`.
 
 :::info
-For guidance on how to create a custom converter, see [here](/docs/guides/data-binding/how-to-create-a-custom-data-binding-converter).
+For guidance on how to create a custom converter, see [here](/docs/data/how-to-create-a-custom-data-binding-converter).
 :::
 
 ### FallbackValue
@@ -236,14 +236,18 @@ the `FallbackValue` will be used:
 
 When a binding to a property is successfully created and the property value is `null`, `TargetNullValue` may be used to supply a specific value.
 
+<XamlPreview>
+
 ```xml
-<StackPanel>
+<StackPanel xmlns="https://github.com/avaloniaui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            Margin="10">
     <NumericUpDown x:Name="number" Value="200" />
     <TextBlock Text="{Binding #number.Value, TargetNullValue=Value is null}" />
 </StackPanel>
 ```
 
-<img src={TargetNullValueScreenshot} alt=''/>
+</XamlPreview>
 
 ## UpdateSourceTrigger <MinVersion version="11.1" />
 
@@ -251,21 +255,29 @@ Controls like `TextBox` will synchronize their `Text` binding to the source prop
 some use cases, this may trigger a long-running task or undesirable validation. `UpdateSourceTrigger` allows bindings 
 to specify when synchronization should happen.
 
+<XamlPreview>
+
+```xml
+<StackPanel xmlns="https://github.com/avaloniaui">
+    <TextBlock Width="200">PropertyChanged</TextBlock>
+    <TextBox Text="{Binding #propertyChanged.Text}"
+             Width="200" />
+    <TextBlock Name="propertyChanged"
+               Width="200" />
+
+    <TextBlock Width="200">LostFocus</TextBlock>
+    <TextBox Text="{Binding #lostFocus.Text, UpdateSourceTrigger=LostFocus}"
+             Width="200" />
+    <TextBlock Name="lostFocus"
+               Width="200" />
+</StackPanel>
+```
+
+</XamlPreview>
+
 | UpdateSourceTrigger | Description                                                                                      |
 |---------------------|--------------------------------------------------------------------------------------------------|
 | `Default`           | This currently defaults to `PropertyChanged`.                                                    |
 | `PropertyChanged`   | Updates the binding source immediately whenever the binding target property changes.             |
 | `LostFocus`         | Updates the binding source whenever the binding target element loses focus.                      |
 | `Explicit`          | Updates the binding source only when you call the `BindingExpressionBase.UpdateSource()` method. |
-
-```xml
-<StackPanel>
-    <TextBox Text="{Binding #propertyChanged.Text}" />
-    <TextBlock Name="propertyChanged" />
-
-    <TextBox Text="{Binding #lostFocus.Text, UpdateSourceTrigger=LostFocus}" />
-    <TextBlock Name="lostFocus" />
-</StackPanel>
-```
-
-<img src={UpdateSourceTriggerScreenshot} alt=''/>

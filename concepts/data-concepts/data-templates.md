@@ -33,7 +33,3 @@ In this example, the Data Template defines a visual layout using a `StackPanel` 
 ## Customizing Data Templates
 
 Data Templates can be customized and tailored to specific scenarios. You can include additional visual elements, apply styling, and even define nested templates within a Data Template. By leveraging data binding expressions and converters, you can dynamically populate and format the visual elements based on the data properties.
-
-## Further Reading
-
-For more information see the Deep Dive into to [data templates](/docs/concepts/templates).

@@ -10,7 +10,8 @@ function createRedirects(existingPath: string): string[] | undefined {
         // Using whole-folder redirect for folders that are mostly unchanged
         const v12_redirect = existingPath
             .replace('/docs/guides/data-binding/', '/docs/data/')
-            .replace('/docs/basics/user-interface/controls/creating-controls/', '/docs/ui-development/custom-controls/');
+            .replace('/docs/basics/user-interface/controls/creating-controls/', '/docs/ui-development/custom-controls/')
+            .replace('/docs/basics/data/data-binding/', '/concepts/data-concepts/');
         if (v12_redirect !== existingPath) {
           redirects.push(v12_redirect);
         }
@@ -25,11 +26,15 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/overview/what-is-avalonia",
             "/docs/guides/index",
-            "/docs/guides/implementation-guides",
+            "/docs/guides/implementation-guides/index",
             "/docs/guides/development-guides/how-to-implement-multi-page-apps",
             "/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm",
             "/docs/guides/platforms/android/index",
-            "/docs/deployment/index"
+            "/docs/deployment/index",
+            "/docs/stay-up-to-date/index",
+            "/docs/stay-up-to-date/breaking-changes",
+            "/docs/stay-up-to-date/upgrade-from-0.10",
+            "/docs/stay-up-to-date/whats-new"
         ],
         "to": "/docs/welcome"
     },
@@ -619,7 +624,10 @@ const redirects: Redirect[] = [
         "to": "/concepts/core-concepts/avalonia-xaml"
     },
     {
-        "from": "/docs/basics/user-interface/code-behind",
+        "from": [
+            "/docs/basics/user-interface/code-behind",
+            "/docs/guides/implementation-guides/code-behind"
+        ],
         "to": "/concepts/core-concepts/code-behind"
     },
     {
@@ -667,6 +675,49 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/basics/user-interface/styling/troubleshooting",
         "to": "/troubleshooting/ui-development/themes"
+    },
+    {
+        "from": "/docs/basics/user-interface/adding-interactivity",
+        "to": "/docs/ui-development/adding-interactivity"
+    },
+    {
+        "from": "/docs/basics/user-interface/assets",
+        "to": "/concepts/ui-concepts/assets"
+    },
+    {
+        "from": "/docs/basics/user-interface/animations",
+        "to": "/concepts/ui-concepts/animations"
+    },
+    {
+        "from": "/docs/basics/user-interface/file-dialogs",
+        "to": "/concepts/ui-concepts/file-dialogs"
+    },
+    {
+        "from": "/docs/basics/user-interface/multi-touch",
+        "to": "/docs/platform-specific-guides/multi-touch-events"
+    },
+    {
+        "from": "/docs/basics/user-interface/messagebox",
+        "to": "/troubleshooting/controls/messagebox"
+    },
+    {
+        "from": "/docs/tutorials/groupbox",
+        "to": "/troubleshooting/controls/groupbox"
+    },
+    {
+        "from": [
+            "/docs/basics/data/data-binding/index",
+            "/concepts/data-concepts/index"
+        ],
+        "to": "/concepts/data-concepts/data-binding"
+    },
+    {
+        "from": "/docs/basics/data/data-templates",
+        "to": "/concepts/data-concepts/data-templates"
+    },
+    {
+        "from": "/docs/concepts/application-lifetimes",
+        "to": "/concepts/platform-concepts/application-lifetimes"
     },
 ];
 
