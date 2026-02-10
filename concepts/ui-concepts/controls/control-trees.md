@@ -1,10 +1,11 @@
 ---
-description: CONCEPTS
+id: control-trees
+title: Control trees
 ---
 
-import ControlTreesLogicalScreenshot from '/img/concepts/control-trees-logical.png';
-import ControlTreesVisualScreenshot from '/img/concepts/control-trees-visual.png';
-import ControlTreesEventScreenshot from '/img/concepts/control-trees-events.png';
+import ControlTreesLogicalScreenshot from '/img/concepts/ui-concepts/controls/control-trees-logical.png';
+import ControlTreesVisualScreenshot from '/img/concepts/ui-concepts/controls/control-trees-visual.png';
+import ControlTreesEventScreenshot from '/img/concepts/ui-concepts/controls/control-trees-events.png';
 
 # Control Trees
 

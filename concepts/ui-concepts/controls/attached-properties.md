@@ -1,9 +1,10 @@
 ---
-description: CONCEPTS
+id: attached-properties
+title: Attached properties
 ---
 
-import AttachedControlDiagram from '/img/concepts/attached-control.png';
-import AttachedLayoutPropertyDiagram from '/img/concepts/attached-layout-property.png';
+import AttachedControlDiagram from '/img/concepts/ui-concepts/controls/attached-control.png';
+import AttachedLayoutPropertyDiagram from '/img/concepts/ui-concepts/controls/attached-layout-property.png';
 
 # Attached Properties
 
@@ -26,7 +27,7 @@ Attached layout properties are used in scenarios where the container control has
 <img src={AttachedLayoutPropertyDiagram} alt=""/>
 
 :::info
-For a full list of the _Avalonia UI_ built-in controls, see the reference [here](/docs/reference/controls/index.md).
+For a full list of the _Avalonia UI_ built-in controls, see the reference [here](/controls/index).
 :::
 
 

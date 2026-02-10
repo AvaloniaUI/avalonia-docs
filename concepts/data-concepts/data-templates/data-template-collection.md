@@ -1,10 +1,11 @@
 ---
-description: CONCEPTS - Data Templates
+id: data-template-collection
+title: Data template collection
 ---
 
-import DataTemplatesCollectionStudentScreenshot from '/img/concepts/templates/datatemplates-collection-student.png';
+import DataTemplatesCollectionStudentScreenshot from '/img/concepts/data-concepts/data-templates/data-template-collection/datatemplates-collection-student.png';
 
-# Data Templates Collection
+# Data Template Collection
 
 Every control in _Avalonia UI_ has a `DataTemplates` collection where you can place any number of data template definitions. You can then choose the template to use for display by class type. 
 

@@ -23,7 +23,7 @@ When binding, Avalonia performs a hierarchical search of the logical control tre
 This means that a control defined in a window can use the data context of the window; or (as above) a control in a control in a window can use the window's data context.
 
 :::info
-For information about the control trees in Avalonia, and how to see them at run-time, see [here](/concepts/ui-concepts/control-trees).
+For information about the control trees in Avalonia, and how to see them at run-time, see [here](/concepts/ui-concepts/controls/control-trees).
 :::
 
 ## Example

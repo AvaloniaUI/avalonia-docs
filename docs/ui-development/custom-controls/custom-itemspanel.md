@@ -1,19 +1,20 @@
 ---
-description: CONCEPTS
+id: custom-itemspanel
+title: Custom ItemsPanel
 ---
 
-import ItemsControlCanvasScreenshot from '/img/concepts/itemscontrol-with-canvas.png';
+import ItemsControlCanvasScreenshot from '/img/guides/ui-development/custom-controls/itemscontrol-with-canvas.png';
 
 # Custom ItemsPanel
 
 All `ItemsControl`s have an item container panel which is used to layout their items. It is possible to override the type of panel used by the control to achieve custom/alternative layouts of items in a control. This document provides some examples showcasing how and why you would do this.
  
-- [`ItemsControl`](./../reference/controls/itemscontrol)
-- [`TreeView`](./../reference/controls/treeview-1)
-- [`Carousel`](./../reference/controls/carousel)
-- [`Menu`](./../reference/controls/menu)
-- [`ComboBox`](./../reference/controls/combobox)
-- [`ListBox`](./../reference/controls/listbox) 
+- [`ItemsControl`](/controls/data-display/collections/itemscontrol)
+- [`TreeView`](/controls/data-display/structured-data/treeview)
+- [`Carousel`](/controls/data-display/collections/carousel)
+- [`Menu`](/controls/menus/menu)
+- [`ComboBox`](/controls/input/selectors/combobox)
+- [`ListBox`](/controls/data-display/collections/listbox) 
 
 ## Example
 This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas` and we use a style to position the `Rectangle` within the `Canvas`.

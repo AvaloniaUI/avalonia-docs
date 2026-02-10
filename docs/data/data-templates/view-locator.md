@@ -1,11 +1,10 @@
 ---
-description: CONCEPTS
+id: view-locator
+title: Using the view locator
 ---
 
-# View Locator
-
 :::info
-ViewLocator is optional and included in default Avalonia templates. You can use explicit [DataTemplates](templates/data-templates-collection.md) instead.
+ViewLocator is optional and included in default Avalonia templates. You can use explicit [DataTemplates](/concepts/data-concepts/data-templates/data-template-collection) instead.
 :::
 
 ViewLocator resolves views for view models in MVVM applications. It implements `IDataTemplate` to map view model types to view types.
@@ -122,7 +121,7 @@ Define view-viewmodel mappings declaratively:
 </Application.DataTemplates>
 ```
 
-See [DataTemplates Collection](templates/data-templates-collection.md).
+See [DataTemplates Collection](/concepts/data-concepts/data-templates/data-template-collection).
 
 ### Dependency Injection / IoC
 
@@ -148,6 +147,6 @@ For details on creating source generators, see [Microsoft's Source Generators do
 
 ## See Also
 
-- [DataTemplates](templates/data-templates.md)
-- [DataTemplates Collection](templates/data-templates-collection.md)
-- [Implementing IDataTemplate](templates/implement-idatatemplate.md)
+- [DataTemplates](/concepts/data-concepts/data-templates/introduction-to-data-templates)
+- [DataTemplates Collection](/concepts/data-concepts/data-templates/data-template-collection)
+- [Implementing IDataTemplate](/docs/data/data-templates/creating-data-templates-in-code)

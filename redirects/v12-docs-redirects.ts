@@ -11,7 +11,7 @@ function createRedirects(existingPath: string): string[] | undefined {
         const v12_redirect = existingPath
             .replace('/docs/guides/data-binding/', '/docs/data/')
             .replace('/docs/basics/user-interface/controls/creating-controls/', '/docs/ui-development/custom-controls/')
-            .replace('/docs/basics/data/data-binding/', '/concepts/data-concepts/');
+            .replace('/docs/basics/data/data-binding/', '/concepts/data-concepts/data-binding/');
         if (v12_redirect !== existingPath) {
           redirects.push(v12_redirect);
         }
@@ -707,17 +707,55 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/basics/data/data-binding/index",
-            "/concepts/data-concepts/index"
+            "/concepts/data-concepts/data-binding/index"
         ],
-        "to": "/concepts/data-concepts/data-binding"
+        "to": "/concepts/data-concepts/data-binding/introduction-to-data-binding"
     },
     {
-        "from": "/docs/basics/data/data-templates",
-        "to": "/concepts/data-concepts/data-templates"
+        "from": [
+            "/docs/basics/data/data-templates",
+            "/docs/concepts/templates/index",
+        ],
+        "to": "/concepts/data-concepts/data-templates/introduction-to-data-templates"
     },
     {
         "from": "/docs/concepts/application-lifetimes",
         "to": "/concepts/platform-concepts/application-lifetimes"
+    },
+    {
+        "from": "/docs/concepts/attached-property",
+        "to": "/concepts/ui-concepts/controls/attached-properties"
+    },
+    {
+        "from": "/docs/concepts/control-trees",
+        "to": "/concepts/ui-concepts/controls/control-trees"
+    },
+    {
+        "from": "/docs/concepts/custom-itemspanel",
+        "to": "/docs/ui-development/custom-controls/custom-itemspanel"
+    },
+    {
+        "from": "/docs/concepts/templates/data-templates",
+        "to": "/concepts/data-concepts/data-templates/control-content"
+    },
+    {
+        "from": "/docs/concepts/templates/content-template",
+        "to": "/concepts/data-concepts/data-templates/content-templates"
+    },
+    {
+        "from": "/docs/concepts/templates/data-templates-collection",
+        "to": "/concepts/data-concepts/data-templates/data-template-collection"
+    },
+    {
+        "from": [
+            "/docs/concepts/templates/creating-data-templates-in-code",
+            "/docs/concepts/templates/implement-idatatemplate",
+        ],
+        "to": "/docs/data/data-templates/creating-data-templates-in-code"
+    },
+    {
+        "from": "/docs/concepts/view-locator",
+        "to": "/docs/data/data-templates/view-locator"
     },
 ];
 

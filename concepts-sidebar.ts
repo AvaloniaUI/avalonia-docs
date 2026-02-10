@@ -31,11 +31,28 @@ const sidebars: SidebarsConfig = {
       label: 'Data concepts',
       collapsed: true,
       items: [
-        'data-concepts/data-binding',
-        'data-concepts/data-binding-syntax',
-        'data-concepts/compiled-bindings',
-        'data-concepts/data-context',
-        'data-concepts/data-templates',
+        {
+          type: 'category',
+          label: 'Data binding',
+          collapsed: true,
+          items: [
+            'data-concepts/data-binding/introduction-to-data-binding',
+            'data-concepts/data-binding/data-binding-syntax',
+            'data-concepts/data-binding/compiled-bindings',
+            'data-concepts/data-binding/data-context',
+         ],
+        },
+        {
+          type: 'category',
+          label: 'Data templates',
+          collapsed: true,
+          items: [
+            'data-concepts/data-templates/introduction-to-data-templates',
+            'data-concepts/data-templates/control-content',
+            'data-concepts/data-templates/content-templates',
+            'data-concepts/data-templates/data-template-collection',
+         ],
+        },
       ],
     },
     {
@@ -53,6 +70,15 @@ const sidebars: SidebarsConfig = {
       items: [
         'ui-concepts/animations',
         'ui-concepts/assets',
+        {
+          type: 'category',
+         label: 'Controls',
+          collapsed: true,
+          items: [
+            'ui-concepts/controls/attached-properties',
+            'ui-concepts/controls/control-trees',
+         ],
+        },
         'ui-concepts/file-dialogs',
         'ui-concepts/layout',
         {

@@ -1,8 +1,9 @@
 ---
-description: CONCEPTS - Data Templates
+id: reusing-data-templates
+title: Reusing data templates
 ---
 
-import DataTemplatesScopeScreenshot from '/img/concepts/templates/datatemplates-scope.png';
+import DataTemplatesScopeScreenshot from '/img/guides/data/data-templates/datatemplates-scope.png';
 
 # Reusing Data Templates
 
@@ -11,7 +12,7 @@ If you define a data template in the `Window.DataTemplates` collection (as on th
 This works because _Avalonia UI_ performs a hierarchical search of its logical tree to choose a data template. At its most extensive, the search starts in a control, extends to any parent controls (recursively), then looks in the window (as on the previous page), and finally looks at the application itself for a data templates collection.
 
 :::info
-From more information on the logical tree concept in _Avalonia UI_ , see [here](../ui-composition.md).
+From more information on the logical tree concept in _Avalonia UI_ , see [here](/concepts/core-concepts/ui-composition).
 :::
 
 Therefore if you want to reuse a template in any window of your application: define templates in the `Application.DataTemplates` collection, located in the app.axaml file.

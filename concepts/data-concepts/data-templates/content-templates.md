@@ -1,10 +1,11 @@
 ---
-description: CONCEPTS - Data Templates
+id: content-templates
+title: Content templates
 ---
 
-import ContentTemplateStudentScreenshot from '/img/concepts/templates/contenttemplate-student.png';
+import ContentTemplateStudentScreenshot from '/img/concepts/data-concepts/data-templates/content-templates/contenttemplate-student.png';
 
-# Content Template
+# Content Templates
 
 The purpose of a data template is that it defines how _Avalonia UI_ should display an object created from a class that you have defined, and that is not a control, or a simple string.
 

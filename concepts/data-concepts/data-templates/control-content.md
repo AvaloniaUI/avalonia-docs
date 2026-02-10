@@ -1,17 +1,18 @@
 ---
-description: CONCEPTS - Data Templates
+id: control-content
+title: Control content
 ---
 
-import ControlContentButtonScreenshot from '/img/concepts/templates/content-button.png';
-import ControlContentStringScreenshot from '/img/concepts/templates/content-string.png';
-import ControlContentTypeScreenshot from '/img/concepts/templates/content-type.png';
+import ControlContentButtonScreenshot from '/img/concepts/data-concepts/data-templates/control-content/content-button.png';
+import ControlContentStringScreenshot from '/img/concepts/data-concepts/data-templates/control-content/content-string.png';
+import ControlContentTypeScreenshot from '/img/concepts/data-concepts/data-templates/control-content/content-type.png';
 
 # Control Content
 
 You have probably seen what happens if you put a button control into the content zone of an _Avalonia UI_ window.
 
 :::info
-The concept of the zones of an _Avalonia UI_ control is discussed [here](/docs/concepts/layout/layout-zones).
+The concept of the zones of an _Avalonia UI_ control is discussed [here](/concepts/ui-concepts/layout.md).
 :::
 
 For example:
@@ -81,7 +82,3 @@ But you will see only the fully-qualified class name for the student object:
 <img src={ControlContentTypeScreenshot} alt=""/>
 
 This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name. 
-
-On the next page you will see one of the ways you can specify how to display an object created from a class that you have defined (not a control or a simple string).
-
-##
