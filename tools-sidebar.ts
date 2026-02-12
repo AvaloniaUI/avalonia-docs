@@ -12,9 +12,14 @@ const sidebars: SidebarsConfig = {
     'community-edition',
     {
       type: 'category',
-      label: 'Controls',
+      label: 'Accelerate controls',
       collapsed: true,
       items: [
+        {
+          type: 'link',
+          label: 'Markdown',
+          href: 'controls/data-display/text-display/markdown',
+        },
         {
           type: 'link',
           label: 'MediaPlayerControl',

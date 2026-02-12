@@ -42,6 +42,7 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items:[
               'data-display/text-display/label',
+              'data-display/text-display/markdown',
               'data-display/text-display/selectabletextblock',
               'data-display/text-display/textblock',
           ],

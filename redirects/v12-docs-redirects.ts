@@ -906,6 +906,26 @@ const redirects: Redirect[] = [
         "from": "/accelerate/components/media-player/mediasource",
         "to": "/reference/classes/mediasource"
     },
+    {
+        "from": "/accelerate/components/markdown/quickstart",
+        "to": "/docs/ui-development/rendering-markdown"
+    },
+    {
+        "from": "/accelerate/components/markdown/markdown",
+        "to": "/controls/data-display/text-display/markdown"
+    },
+    {
+        "from": "/accelerate/components/markdown/custom-image-loader",
+        "to": "/reference/properties/imageloader"
+    },
+    {
+        "from": "/accelerate/components/markdown/code-highlighter",
+        "to": "/reference/properties/codehighlighter"
+    },
+    {
+        "from": "/accelerate/components/markdown/styling",
+        "to": "/reference/styles/markdown-styling"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };
