@@ -938,6 +938,33 @@ const redirects: Redirect[] = [
         ],
         "to": "/controls/input/text-input/virtualkeyboard"
     },
+    {
+        "from": [
+            "/accelerate/components/webview/quickstart",
+            "/accelerate/components/webview/interop/native-browser-interop"
+        ],
+        "to": "/docs/app-development/embedding-web-content"
+    },
+    {
+        "from": "/accelerate/components/webview/nativewebview",
+        "to": "/controls/web/nativewebview"
+    },
+    {
+        "from": "/accelerate/components/webview/nativewebdialog",
+        "to": "/controls/web/nativewebdialog"
+    },
+    {
+        "from": "/accelerate/components/webview/webauthenticationbroker",
+        "to": "/reference/classes/webauthenticationbroker"
+    },
+    {
+        "from": "/accelerate/components/webview/interop/environment-options",
+        "to": "/reference/classes/webview-environment"
+    },
+    {
+        "from": "/accelerate/components/webview/faq",
+        "to": "/tools/faq"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

@@ -197,6 +197,15 @@ const sidebars: SidebarsConfig = {
         'primitives/usercontrol',
         'primitives/window',
       ],
+    },
+    {
+      type: 'category',
+      label: 'Web',
+      collapsed: true,
+      items:[
+        'web/nativewebdialog',
+        'web/nativewebview',
+      ],
     }
   ],
 };

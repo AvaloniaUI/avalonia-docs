@@ -27,6 +27,16 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'link',
+          label: 'NativeWebDialog',
+          href: 'controls/web/nativewebdialog',
+        },
+        {
+          type: 'link',
+          label: 'NativeWebView',
+          href: 'controls/web/nativewebview',
+        },
+        {
+          type: 'link',
           label: 'VirtualKeyboard',
           href: 'controls/input/text-input/virtualkeyboard',
         },

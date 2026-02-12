@@ -25,6 +25,8 @@ const sidebars: SidebarsConfig = {
       items: [
         'classes/mediaplayer',
         'classes/mediasource',
+        'classes/webauthenticationbroker',
+        'classes/webview-environment',
       ],
     },
     {

@@ -62,6 +62,7 @@ const sidebars: SidebarsConfig = {
       'items': [
         'app-development/cross-platform-solution-setup',
         'app-development/dependency-injection',
+        'app-development/embedding-web-content',
         'app-development/localizing',
         'app-development/logging-errors-and-warnings',
         {

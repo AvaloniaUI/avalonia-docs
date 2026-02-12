@@ -41,11 +41,3 @@ Include your Avalonia UI license key in the executable project file (`.csproj`):
 ```
 
 > For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
-
-## See also
-
-- [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/reference/classes/mediaplayer)
-- [MediaSource class](/reference/classes/mediasource)
-- [Implementing MediaPlayer](/docs/media/media-playback)
-- [Troubleshooting](/troubleshooting/controls/mediaplayer)
