@@ -1,6 +1,6 @@
 ---
 id: installing-accelerate
-title: Installing Accelerate
+title: Installing Avalonia Accelerate
 tags:
   - accelerate
 ---

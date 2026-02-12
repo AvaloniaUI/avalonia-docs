@@ -7,7 +7,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'link',
       label: 'Installation',
-      href: '/docs/development-optimization/accelerate-tools/installing-accelerate',
+      href: '/docs/development-optimization/installing-accelerate',
     },
     'community-edition',
     {
@@ -24,6 +24,16 @@ const sidebars: SidebarsConfig = {
           type: 'link',
           label: 'MediaPlayerControl',
           href: 'controls/media/mediaplayercontrol',
+        },
+        {
+          type: 'link',
+          label: 'VirtualKeyboard',
+          href: 'controls/input/text-input/virtualkeyboard',
+        },
+        {
+          type: 'link',
+          label: 'VirtualKeyboardScope',
+          href: 'controls/layout/containers/virtualkeyboardscope',
         },
       ],
     },

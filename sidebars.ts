@@ -108,14 +108,7 @@ const sidebars: SidebarsConfig = {
       'label': 'Development optimization',
       'collapsed': true,
       'items': [
-        {
-          type: 'category',
-          label: 'Avalonia Accelerate',
-          collapsed: true,
-          items: [
-              'development-optimization/accelerate-tools/installing-accelerate',
-          ],
-        },
+        'development-optimization/installing-accelerate',
         'development-optimization/accessing-the-ui-thread',
         'development-optimization/legacy-developer-tools',
       ],
@@ -163,6 +156,7 @@ const sidebars: SidebarsConfig = {
         'platform-specific-guides/macos',
         'platform-specific-guides/multi-touch-events',
         'platform-specific-guides/raspberry-pi',
+        'platform-specific-guides/virtual-keyboard',
         'platform-specific-guides/webassembly',
         'platform-specific-guides/winforms',
         'platform-specific-guides/xaml'

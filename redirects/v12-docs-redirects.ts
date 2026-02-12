@@ -880,11 +880,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/installation",
-        "to": "/tools/installing-accelerate"
-    },
-    {
-        "from": "/accelerate/installation",
-        "to": "/tools/installing-accelerate"
+        "to": "/docs/development-optimization/installing-accelerate"
     },
     {
         "from": "/accelerate/community",
@@ -925,6 +921,22 @@ const redirects: Redirect[] = [
     {
         "from": "/accelerate/components/markdown/styling",
         "to": "/reference/styles/markdown-styling"
+    },
+    {
+        "from": "/accelerate/components/virtual-keyboard/getting-started",
+        "to": "/docs/platform-specific-guides/virtual-keyboard"
+    },
+    {
+        "from": "/accelerate/components/virtual-keyboard/virtual-keyboard-scope",
+        "to": "/controls/layout/containers/virtualkeyboardscope"
+    },
+    {
+        "from": [
+            "/accelerate/components/virtual-keyboard/virtual-keyboard",
+            "/accelerate/components/virtual-keyboard/styling",
+            "/accelerate/components/virtual-keyboard/input-method-identifiers"
+        ],
+        "to": "/controls/input/text-input/virtualkeyboard"
     },
 ];
 

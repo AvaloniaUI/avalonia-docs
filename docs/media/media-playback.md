@@ -15,7 +15,7 @@ This guide provides a practical introduction to implementing media playback in A
 
 ## Installation
 
-See the [Installation Guide](/docs/development-optimization/accelerate-tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/docs/development-optimization/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
 
 Add the MediaPlayer package to your project:
 

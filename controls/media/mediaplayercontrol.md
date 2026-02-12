@@ -255,5 +255,5 @@ flowchart LR
 - [MediaPlayer class](/reference/classes/mediaplayer)
 - [MediaSource class](/reference/classes/mediasource)
 - [Implementing MediaPlayer](/docs/media/media-playback)
-- [Installing Avalonia Accelerate](/docs/development-optimization/accelerate-tools/installing-accelerate)
+- [Installing Avalonia Accelerate](/docs/development-optimization/installing-accelerate)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)
