@@ -874,6 +874,38 @@ const redirects: Redirect[] = [
         "from": "/docs/reference/styles/style-selector-syntax",
         "to": "/reference/styles/style-selector-syntax"
     },
+    {
+        "from": "/accelerate/welcome",
+        "to": "/tools/index"
+    },
+    {
+        "from": "/accelerate/installation",
+        "to": "/tools/installing-accelerate"
+    },
+    {
+        "from": "/accelerate/installation",
+        "to": "/tools/installing-accelerate"
+    },
+    {
+        "from": "/accelerate/community",
+        "to": "/tools/community-edition"
+    },
+    {
+        "from": "/accelerate/components/media-player/quickstart",
+        "to": "/docs/guides/media/media-playback"
+    },
+    {
+        "from": "/accelerate/components/media-player/mediaplayercontrol",
+        "to": "/controls/media/mediaplayercontrol"
+    },
+    {
+        "from": "/accelerate/components/media-player/mediaplayer",
+        "to": "/reference/classes/mediaplayer"
+    },
+    {
+        "from": "/accelerate/components/media-player/mediasource",
+        "to": "/reference/classes/mediasource"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

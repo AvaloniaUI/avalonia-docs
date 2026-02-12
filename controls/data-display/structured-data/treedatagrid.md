@@ -8,7 +8,7 @@ import TreeDataGridNuGetScreenshot from '/img/controls/treedatagrid/treedataggri
 import FlatTreeDataGridSourceScreenshot from '/img/controls/treedatagrid/treedatagrid-flat.gif';
 import HierarchicalTreeDataGridSourceScreenshot from '/img/controls/treedatagrid/treedatagrid-hierarchical.gif';
 
-<Pill variant="primary" href="https://avaloniaui.net/accelerate">Accelerate</Pill>
+<Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
 :::warning

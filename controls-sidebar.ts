@@ -159,6 +159,7 @@ const sidebars: SidebarsConfig = {
       items:[
         'media/drawingimage',
         'media/image',
+        'media/mediaplayercontrol',
         'media/pathicon',
       ],
     },

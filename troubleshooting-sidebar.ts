@@ -17,6 +17,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'controls/groupbox',
+        'controls/mediaplayer',
         'controls/messagebox'
       ],
     },

@@ -20,6 +20,15 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Classes',
+      collapsed: true,
+      items: [
+        'classes/mediaplayer',
+        'classes/mediasource',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Data',
       collapsed: true,
       items: [
