@@ -15,6 +15,9 @@ const sidebars: SidebarsConfig = {
       items: [
         'core-concepts/avalonia-xaml',
         'core-concepts/code-behind',
+        'core-concepts/main-window',
+        'core-concepts/top-level',
+        'core-concepts/ui-composition',
       ],
     },
     {
@@ -53,6 +56,7 @@ const sidebars: SidebarsConfig = {
             'data-concepts/data-templates/data-template-collection',
          ],
         },
+        'data-concepts/markup-extensions',
       ],
     },
     {
@@ -80,6 +84,7 @@ const sidebars: SidebarsConfig = {
          ],
         },
         'ui-concepts/file-dialogs',
+        'ui-concepts/image-interpolation',
         'ui-concepts/layout',
         {
           type: 'category',
@@ -91,6 +96,18 @@ const sidebars: SidebarsConfig = {
             'ui-concepts/styling/control-themes',
             'ui-concepts/styling/container-queries',
             'ui-concepts/styling/themes',
+         ],
+        },
+        {
+          type: 'category',
+         label: 'User input',
+          collapsed: true,
+          items: [
+            'ui-concepts/user-input/pointer',
+            'ui-concepts/user-input/focus',
+            'ui-concepts/user-input/gestures',
+            'ui-concepts/user-input/keyboard-and-hotkeys',
+            'ui-concepts/user-input/routed-events',
          ],
         },
       ],

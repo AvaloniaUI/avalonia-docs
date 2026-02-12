@@ -5,7 +5,7 @@ title: Image
 
 import ImageUnscaledScreenshot from '/img/controls/image/image-unscaled.png';
 import ImageUniformToFillScreenshot from '/img/controls/image/image-uniform-to-fill.png';
-import BlendModeMultiply from '/img/concepts/blend/Multiply.png';
+import BlendModeMultiply from '/img/reference/animations-and-graphics/bitmap-blend-modes/Multiply.png';
 
 # Image
 

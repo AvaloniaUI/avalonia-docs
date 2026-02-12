@@ -3,6 +3,8 @@ id: layout
 title: Layout
 ---
 
+import LayoutZonesDiagram from '/img/concepts/ui-concepts/layout/layout-zones.png';
+
 # Layout
 
 ## Panels
@@ -59,3 +61,7 @@ The ultimate goal of the measure pass is for the child to determine its `Desired
 The arrange pass begins with a call to the `Arrange` method. During the arrange pass, the parent `Panel` element generates a rectangle that represents the bounds of the child. This value is passed to the `ArrangeCore` method for processing.
 
 The `ArrangeCore` method evaluates the `DesiredSize` of the child and evaluates any additional margins that may affect the rendered size of the element. `ArrangeCore` generates an arrange size, which is passed to the `ArrangeOverride` method of the `Panel` as a parameter. `ArrangeOverride` generates the finalSize of the child. Finally, the `ArrangeCore` method does a final evaluation of offset properties, such as margin and alignment, and puts the child within its layout slot. The child does not have to (and frequently does not) fill the entire allocated space. Control is then returned to the parent `Panel` and the layout process is complete.
+
+## Layout zones
+
+<Image light={LayoutZonesDiagram} maxWidth="400" alignment="center" alt="A diagram with four overlapping rectangles, representing the layout zones of a UI window." />

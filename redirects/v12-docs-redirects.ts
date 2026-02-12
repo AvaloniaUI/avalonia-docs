@@ -11,7 +11,11 @@ function createRedirects(existingPath: string): string[] | undefined {
         const v12_redirect = existingPath
             .replace('/docs/guides/data-binding/', '/docs/data/')
             .replace('/docs/basics/user-interface/controls/creating-controls/', '/docs/ui-development/custom-controls/')
-            .replace('/docs/basics/data/data-binding/', '/concepts/data-concepts/data-binding/');
+            .replace('/docs/basics/data/data-binding/', '/concepts/data-concepts/data-binding/')
+            .replace('/docs/concepts/input/', '/concepts/ui-concepts/user-input/')
+            .replace('/docs/concepts/reactiveui/', '/docs/app-development/reactiveui/')
+            .replace('/docs/concepts/services/', '/reference/services/')
+            .replace('/docs/concepts/services/storage-provider/', '/reference/services/storage/');
         if (v12_redirect !== existingPath) {
           redirects.push(v12_redirect);
         }
@@ -59,7 +63,11 @@ const redirects: Redirect[] = [
         "to": "/docs/app-development/dependency-injection"
     },
     {
-        "from": "/docs/guides/implementation-guides/using-avalonia-with-mvvm-frameworks",
+        "from": [
+            "/docs/guides/implementation-guides/using-avalonia-with-mvvm-frameworks",
+            "/docs/concepts/the-mvvm-pattern/index",
+            "/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm"
+        ],
         "to": "/concepts/architecture/the-mvvm-pattern"
     },
     {
@@ -159,6 +167,7 @@ const redirects: Redirect[] = [
             "/docs/guides/custom-controls/how-to-create-advanced-custom-controls",
             "/docs/basics/user-interface/controls/creating-controls/index",
             "/docs/ui-development/custom-controls/index",
+            "/docs/concepts/templated-controls",
         ],
         "to": "/docs/ui-development/custom-controls/creating-custom-controls"
     },
@@ -326,10 +335,16 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/reference/animation-settings",
-        "to": "/reference/animations/animation-settings"
+        "to": "/reference/animations-and-graphics/animation-settings"
     },
     {
-        "from": "/docs/reference/index",
+        "from": [
+            "/docs/reference/index",
+            "/docs/concepts/services/index",
+            "/docs/reference/gestures/",
+            "/docs/reference/properties/index",
+            "/docs/reference/styles/index",
+        ],
         "to": "/reference/index"
     },
     {
@@ -638,7 +653,10 @@ const redirects: Redirect[] = [
         "to": "/concepts/ui-concepts/styling/control-themes"
     },
     {
-        "from": "/docs/basics/user-interface/building-layouts/index",
+        "from": [
+            "/docs/basics/user-interface/building-layouts/index",
+            "/docs/concepts/layout/layout-zones"
+        ],
         "to": "/concepts/ui-concepts/layout"
     },
     {
@@ -756,6 +774,105 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/concepts/view-locator",
         "to": "/docs/data/data-templates/view-locator"
+    },
+    {
+        "from": [
+            "/docs/concepts/headless/index",
+            "/docs/concepts/headless/headless-custom",
+        ],
+        "to": "/docs/testing/setting-up-the-headless-platform"
+    },
+    {
+        "from": "/docs/concepts/headless/headless-xunit",
+        "to": "/docs/testing/headless-xunit"
+    },
+    {
+        "from": "/docs/concepts/headless/headless-nunit",
+        "to": "/docs/testing/headless-nunit"
+    },
+    {
+        "from": "/docs/concepts/the-main-window",
+        "to": "/concepts/core-concepts/main-window"
+    },
+    {
+        "from": [
+            "/docs/concepts/input/index",
+            "/concepts/ui-concepts/user-input/index",
+            "/docs/concepts/input/pointer",
+        ],
+        "to": "/concepts/ui-concepts/user-input/pointer"
+    },
+    {
+        "from": [
+            "/docs/concepts/input/binding-key-and-mouse",
+            "/concepts/ui-concepts/user-input/binding-key-and-mouse"
+        ],
+        "to": "/docs/ui-development/mouse-and-keyboard-shortcuts"
+    },
+    {
+        "from": [
+            "/docs/concepts/markupextensions/index",
+            "/docs/concepts/markupextensions/options-markup-extensions"
+        ],
+        "to": "/concepts/data-concepts/markup-extensions"
+    },
+    {
+        "from": [
+            "/docs/concepts/reactiveui/index",
+            "/docs/app-development/reactiveui/index"
+        ],
+        "to": "/docs/app-development/reactiveui/setting-up-reactiveui"
+    },
+    {
+        "from": [
+            "/docs/concepts/services/storage-provider/index",
+            "/reference/services/storage/index"
+        ],
+        "to": "/reference/services/storage/storage-provider"
+    },
+    {
+        "from": "/docs/concepts/image-interpolation",
+        "to": "/concepts/ui-concepts/image-interpolation"
+    },
+    {
+        "from": "/docs/concepts/blend-modes",
+        "to": "/reference/animations-and-graphics/bitmap-blend-modes"
+    },
+    {
+        "from": "/docs/concepts/toplevel",
+        "to": "/concepts/core-concepts/top-level"
+    },
+    {
+        "from": "/docs/concepts/ui-composition",
+        "to": "/concepts/core-concepts/ui-composition"
+    },
+    {
+        "from": "/docs/concepts/unhandledexceptions",
+        "to": "/docs/app-development/setting-unhandled-exceptions"
+    },
+    {
+        "from": "/docs/reference/gestures/pinchgesturerecognizer",
+        "to": "/reference/gestures/pinch-gesture-recognizer"
+    },
+    {
+        "from": "/docs/reference/gestures/pullgesturerecognizer",
+        "to": "/reference/gestures/pull-gesture-recognizer"
+    },
+    {
+        "from": "/docs/reference/gestures/scrollgesturerecognizer",
+        "to": "/reference/gestures/scroll-gesture-recognizer"
+    },
+    {
+        "from": "/docs/reference/properties/texttrimming",
+        "to": "/reference/properties/texttrimming"
+    },
+    {
+        "from": "/docs/reference/styles/pseudo-classes",
+        "to": "/reference/styles/pseudoclasses"
+    },
+    {
+        "from": "/docs/reference/styles/style-selector-syntax",
+        "to": "/reference/styles/style-selector-syntax"
     },
 ];
 
