@@ -1,4 +1,7 @@
-# Application Resources Tool
+---
+id: resources-tool
+title: Resources tool
+---
 
 The Resources Tool provides a view of your application's resource hierarchy, allowing you to inspect, navigate, and modify resources at runtime. This tool is invaluable for understanding how resources are organized and resolved in your Avalonia application.
 
@@ -23,7 +26,7 @@ The left panel displays a tree of resource providers, which include:
 
 Each node in the tree represents a resource scope. Selecting a node displays its resources in the right panel.
 
-![Resources Tree](../../../../static/img/dev-tools/resources-providers-list.png)
+![Resources Tree](/img/tools/dev-tools/resources-providers-list.png)
 
 ## Inspecting and Editing resources
 
@@ -31,7 +34,7 @@ The right panel shows resources available in the selected provider.
 
 Resources can be edited directly in this view, allowing you to experiment with different values and see the changes reflected immediately in your application.
 
-![Provider Tree](../../../../static/img/dev-tools/resources-provider-values.png)
+![Provider Tree](/img/tools/dev-tools/resources-provider-values.png)
 
 :::note
 
@@ -47,4 +50,4 @@ The Resources Tool offers several options to help you find specific resources:
 - Order - Sort in ascending or descending order
 - Search filter - Search for resources by key or type
 
-![Filter view](../../../../static/img/dev-tools//resources-filter.png)
+![Filter view](/img/tools/dev-tools//resources-filter.png)

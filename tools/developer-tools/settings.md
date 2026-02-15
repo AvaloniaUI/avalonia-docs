@@ -1,4 +1,8 @@
-# Developer Tools Settings
+---
+id: settings
+title: Developer tools settings
+sidebar_label: Settings
+---
 
 Settings page can be accessed from the Tray Icon menu (on Windows and Linux) or macOS global menu.
 Or, alternatively, when app is already connected, settings page is available on the left navigation bar.

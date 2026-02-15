@@ -1,4 +1,7 @@
-# Application Breakpoints Tool
+---
+id: breakpoints-tool
+title: Breakpoints tool
+---
 
 The Application Breakpoints Tool allows developers to monitor and debug property changes and events in Avalonia applications without modifying code. Breakpoints can be set on properties, events to help diagnose issues and understand application behavior.
 
@@ -11,30 +14,30 @@ A breakpoint considered to be `Hit` (and correspondingly, increment `Hit Count` 
 Depending on how breakpoint was created, it might have Target assigned to it.
 For example, event breakpoints without target are considered global, and are triggered when _any_ element has this event raised.
 
-![List of breakpoints with options panel](../../../../static/img/dev-tools/breakpoints-list.png)
+![List of breakpoints with options panel](/img/tools/dev-tools/breakpoints-list.png)
 
 
 ## Adding Breakpoints
 
 ### Adding a property breakpoint
 
-On the [Properties](./elements/properties.md) list each dependency property has "Set Breakpoint" context menu item.
+On the [Properties](/tools/developer-tools/elements-tool) list each dependency property has "Set Breakpoint" context menu item.
 
 Created breakpoint is bound to the element on which it was set. 
 
-![Setting breakpoint on a property](../../../../static/img/dev-tools/breakpoint-set-on-propety.png)
+![Setting breakpoint on a property](/img/tools/dev-tools/breakpoint-set-on-propety.png)
 
 ### Adding an event breakpoint
 
-On the [Events](./events.md) tool each raised event has an option to set a breakpoint.
+On the [Events](/tools/developer-tools/events-tool) tool each raised event has an option to set a breakpoint.
 
 Setting "On a Source" will bind breakpoint to the source element this previously raised event had. Alternatively, "Globally" option will create an unbound breakpoint, which gets hit on any element with this event. 
 
-![Setting breakpoint on a raised event](../../../../static/img/dev-tools/breakpoint-set-on-raised-event.png)
+![Setting breakpoint on a raised event](/img/tools/dev-tools/breakpoint-set-on-raised-event.png)
 
 It's also possible to set a breakpoint bound to a specific routed chain element. Or from the "Event Listeners" flyout.  
 
-![Setting breakpoint on a chain element](../../../../static/img/dev-tools/breakpoint-set-on-chain-element.png)
+![Setting breakpoint on a chain element](/img/tools/dev-tools/breakpoint-set-on-chain-element.png)
 
 ## Managing Breakpoints
 
@@ -55,9 +58,9 @@ Unfortunately, there is no clean way to override breakpoint Stacktrace, because 
 
 ### Log message
 
-When enabled, breakpoint will write a log message into [Logs](./logs.md) tool.
+When enabled, breakpoint will write a log message into [Logs](/tools/developer-tools/logs-tool) tool.
 
-![Log output from triggered breakpoints](../../../../static/img/dev-tools/breakpoints-logs-ouput.png)
+![Log output from triggered breakpoints](/img/tools/dev-tools/breakpoints-logs-ouput.png)
 
 ### Remove once hit
 

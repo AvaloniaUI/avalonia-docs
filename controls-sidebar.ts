@@ -32,7 +32,21 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items:[
               'data-display/structured-data/datagrid',
-              'data-display/structured-data/treedatagrid',
+              {
+                type: 'category',
+                label: 'TreeDataGrid',
+                link: {
+                  type: 'doc',
+                  id: 'data-display/structured-data/treedatagrid/index'
+                },
+                items: [
+                  'data-display/structured-data/treedatagrid/column-types',
+                  'data-display/structured-data/treedatagrid/selection-modes',
+                  'data-display/structured-data/treedatagrid/expand-and-collapse',
+                  'data-display/structured-data/treedatagrid/sorting',
+                  'data-display/structured-data/treedatagrid/filtering',
+                ],
+              },
               'data-display/structured-data/treeview',
           ],
         },

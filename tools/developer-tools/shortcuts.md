@@ -1,4 +1,8 @@
-# Developer Tools Shortcuts
+---
+id: shortcuts
+title: Developer tools shortcuts
+sidebar_label: Shortcuts
+---
 
 ## Inspection
 

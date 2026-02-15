@@ -1,4 +1,8 @@
-# Reference to DeveloperToolsOptions
+---
+id: options
+title: Developer tools options
+sidebar_label: Options
+---
 
 ## DeveloperToolsOptions.Gesture
 
@@ -55,7 +59,7 @@ this.AttachDeveloperTools(o =>
 Possible options are:
 
 1. `DeveloperToolsProtocol.DefaultHttp` - default HTTP connection on `29414` port and 5 seconds connection timeout.
-2. `DeveloperToolsProtocol.CreateHttp(Uri, TimeSpan)` - creates HTTP connection with provided parameters. Note: you need to reconfigure `Developer Tools` listener port independently by following [Settings page](../settings.md).
+2. `DeveloperToolsProtocol.CreateHttp(Uri, TimeSpan)` - creates HTTP connection with provided parameters. Note: you need to reconfigure `Developer Tools` listener port independently by following [Settings page](/tools/developer-tools/settings).
 3. `DeveloperToolsProtocol.CreateHttp(IpAddress, int? port, TimeSpan)` - creates HTTP connection with provided parameters. When port is unset, default `29414` is used. 
 4. `DeveloperToolsProtocol.CreateNamedPipe(string)` - creates Named Pipe connection. This option is only compatible with Desktop platforms and might be preferred if there are connectivity issues on the local machine. Named Pipe name will be automatically passed to the `Developer Tools` instance.
 5. Default: `DeveloperToolsProtocol.GetDefaultForPlatform()` - currently returns `DefaultHttp` on all platforms.
@@ -72,14 +76,14 @@ Possible options are:
 3. Any user implementation of `DiagnosticLogger` abstract interface.
 
 :::note
-To learn more about `Developer Tools` logging, please read [Reporting Issue](../reporting-issues) page.
+To learn more about `Developer Tools` logging, please read [Reporting Issues](/docs/development-optimization/developer-tools/installation#reportingissues).
 :::
 
 ## DeveloperToolsOptions.LoggerCollector
 
 Defines a collector which listens for logs to be displayed in `Developer Tools`.
 
-By default, `Developer Tools` will listen only to Avalonia logs and display them in the [Logger tools](../tools/logs.md).
+By default, `Developer Tools` will listen only to Avalonia logs and display them in the [Logger tools](/tools/developer-tools/logs-tool).
 
 This behavior can be redefined with options:
 

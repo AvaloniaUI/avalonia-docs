@@ -1,18 +1,21 @@
-# Application Events Tool
+---
+id: events-tool
+title: Events tool
+---
 
 The Events Tool provides real-time monitoring and debugging capabilities for Avalonia's routed event system. Routed events in Avalonia follow a sophisticated event handling mechanism where events can traverse up or down the visual tree. This tool helps developers track event propagation, identify event handlers, and debug event-related issues in their applications.
 
 Visit [Routed Events](https://docs.avaloniaui.net/docs/concepts/input/routed-events) Avalonia documentation for more fundamental information.
 
-![List of Raised Events](../../../../static/img/dev-tools/events-raised-events-list.png)
+![List of Raised Events](/img/tools/dev-tools/events-raised-events-list.png)
 
 ## Enabling Event Listeners
 
-By default, `Button.Click`, `KeyDown`, `KeyUp`, `TextInput`, `PointerReleased`, and `PointerPressed` events are enabled. These defaults can be controlled by the `Default Routed Events` setting; see [Developer Tools Settings](../settings.md) page.
+By default, `Button.Click`, `KeyDown`, `KeyUp`, `TextInput`, `PointerReleased`, and `PointerPressed` events are enabled. These defaults can be controlled by the `Default Routed Events` setting; see [Developer Tools Settings](/tools/developer-tools/settings) page.
 
 Use the "Event Listeners" flyout button to enable or disable any particular routed event or events group.
 
-![Listeners Filter Flyout](../../../../static/img/dev-tools/events-listeners-filter.png)
+![Listeners Filter Flyout](/img/tools/dev-tools/events-listeners-filter.png)
 
 This list is gathered from statically registered routed events at the time when the tab is first opened.
 If an event isn't displayed in this list, it's likely because it was never referenced in the application.
@@ -33,7 +36,7 @@ The element that has handled the event is visually distinct from the others, ind
 
 `Developer Tools` will still show the following element handlers, which could receive already-handled event arguments.
 
-![Raised Event Handlers Chain](../../../../static/img/dev-tools/events-chain-list.png)
+![Raised Event Handlers Chain](/img/tools/dev-tools/events-chain-list.png)
 
 ## Inspecting Event Handler Control
 
@@ -41,4 +44,4 @@ Each element handler is clickable, redirecting the user to the corresponding nod
 
 Note: If nothing happens when clicking on an element, it was likely already removed from the elements tree.
 
-![Inspect Handler](../../../../static/img/dev-tools/events-inspect-handler.gif)
+![Inspect Handler](/img/tools/dev-tools/events-inspect-handler.gif)

@@ -1,4 +1,7 @@
-# Application Logs Tool
+---
+id: logs-tool
+title: Logs tool
+---
 
 ## Viewing Avalonia Logs in the tool
 
@@ -12,7 +15,7 @@ Main features include:
 4. If log entry `Source` is an visual element attached to the elements tree, it can be clicked to navigate to this element inside of `Developer Tools`
 5. Integration with third party loggers.
 
-![Logs Tool with Avalonia warnings](../../../../static/img/dev-tools/logs-avalonia-list.png)
+![Logs Tool with Avalonia warnings](/img/tools/dev-tools/logs-avalonia-list.png)
 
 ## Enabling Microsoft.Extensions.Logging integration
 
@@ -41,11 +44,11 @@ public override void Initialize()
 
 For MS Dependency Injection solutions, `ILoggerFactory` interfaces can be stored and retrieved from the `ServiceCollection`.
 
-You can find more details about `DeveloperToolsOptions` on [Reference to DeveloperToolsOptions](../advanced/options-reference.md) page.
+You can find more details about `DeveloperToolsOptions` on [Reference to DeveloperToolsOptions](/tools/developer-tools/options) page.
 
 ## Attaching custom log source
 
-![Logs Tool with custom Serilog events](../../../../static/img/dev-tools/logs-custom-serilog.png)
+![Logs Tool with custom Serilog events](/img/tools/dev-tools/logs-custom-serilog.png)
 
 Let's create a `Serilog` sink as an example, that is configured to redirect logs into `Developer Tools`.
 

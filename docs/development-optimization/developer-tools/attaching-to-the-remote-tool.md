@@ -1,4 +1,15 @@
-# Attaching to the remote tool
+---
+id: attaching-to-the-remote-tool
+title: Attaching DevTools to the remote tool
+sidebar_label: Attching to the remote tool
+tags:
+  - accelerate
+---
+
+import Pill from '/src/components/global/Pill';
+
+<Pill variant="primary" href="/tools">Accelerate</Pill>
+<br/><br/>
 
 `Developer Tools` can be connected to applications running on different machines. This guide covers two scenarios:
 1. Local network access (e.g., Virtual Machines or devices on same Wi-Fi)
@@ -69,7 +80,7 @@ this.AttachDeveloperTools(o =>
 4. Start `Developer Tools` (via avdt command)
 5. Launch your application on second machine press `F12` to connect.
 
-![Connected via VPN](../../../../static/img/dev-tools//remote-connect-via-vpn.png)
+![Connected via VPN](/img/tools/dev-tools/remote-connect-via-vpn.png)
 
 
 ## Changing default port
@@ -78,6 +89,6 @@ Under some conditions, `29414` default port might not be available.
 
 To change the port, both `Developer Tools` and `AttachDeveloperTools` needs to be adjusted.
 
-On `Developer Tools`, change `HTTP port` parameter on the settings page and restart the app. See [Settings](../settings.md) for more details.
+On `Developer Tools`, change `HTTP port` parameter on the settings page and restart the app. See [Settings](/tools/developer-tools/settings) for more details.
 
 On `AttachDeveloperTools` side, specify new port in the `DeveloperToolsProtocol.CreateHttp` method as an optional parameter.

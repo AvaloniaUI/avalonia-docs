@@ -1,4 +1,7 @@
-# Application Metrics Tool
+---
+id: metrics-tool
+title: Metrics tool
+---
 
 Metrics are numerical measurements reported over time. They are typically used to monitor the health of an app and generate alerts.
 
@@ -10,7 +13,7 @@ There are several main types of metric instruments:
 - Histogram - distribution of measurements. Frame render or HTTP request duration is an example. `Developer Tools` also displays useful P50 (median), P90 and P95 percentiles for histograms.
 - Gauge - a measurement without historical data. Only displays latest value. **Note**: not supported by `Developer Tools` at the moment.
 
-![Histogram](../../../../static/img/dev-tools/metrics-histogram.png)
+![Histogram](/img/tools/dev-tools/metrics-histogram.png)
 
 ## Disabling/Enabling default sources
 
@@ -21,7 +24,7 @@ All instruments are grouped by their meter provider, typically a namespace defin
 
 Keep in mind, this list is dynamic. New instruments are added only when provider has pushed at least single measurement. For example, HttpClient (`System.Http` namespace) instruments will be displayed only after the first request.
 
-![Meters Filter](../../../../static/img/dev-tools/meters-filter.png)
+![Meters Filter](/img/tools/dev-tools/meters-filter.png)
 
 :::note
 

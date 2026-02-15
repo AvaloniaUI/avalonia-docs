@@ -12,6 +12,24 @@ const sidebars: SidebarsConfig = {
     'community-edition',
     {
       type: 'category',
+      label: 'Developer tools',
+      collapsed: true,
+      items: [
+        'developer-tools/settings',
+        'developer-tools/shortcuts',
+        'developer-tools/options',
+        'developer-tools/mcp',
+        'developer-tools/assets-tool',
+        'developer-tools/breakpoints-tool',
+        'developer-tools/elements-tool',
+        'developer-tools/events-tool',
+        'developer-tools/logs-tool',
+        'developer-tools/metrics-tool',
+        'developer-tools/resources-tool',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Accelerate controls',
       collapsed: true,
       items: [
@@ -34,6 +52,11 @@ const sidebars: SidebarsConfig = {
           type: 'link',
           label: 'NativeWebView',
           href: 'controls/web/nativewebview',
+        },
+        {
+          type: 'link',
+          label: 'TreeDataGrid',
+          href: 'controls/data-display/structured-data/treedatagrid',
         },
         {
           type: 'link',

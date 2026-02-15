@@ -596,8 +596,11 @@ const redirects: Redirect[] = [
             "/docs/reference/controls/treedatagrid/creating-a-flat-treedatagrid",
             "/docs/reference/controls/treedatagrid/creating-a-hierarchical-treedatagrid",
             "/docs/reference/controls/treedatagrid/treedatagrid-column-types",
+            "/accelerate/components/treedatagrid/quickstart",
+            "/accelerate/components/treedatagrid/quickstart-flat",
+            "/accelerate/components/treedatagrid/quickstart-hierarchical",
         ],
-        "to": "/controls/data-display/structured-data/treedatagrid"
+        "to": "/controls/data-display/structured-data/treedatagrid/index"
     },
     {
         "from": "/docs/reference/controls/treeview-1",
@@ -962,8 +965,104 @@ const redirects: Redirect[] = [
         "to": "/reference/classes/webview-environment"
     },
     {
-        "from": "/accelerate/components/webview/faq",
+        "from": [
+            "/accelerate/components/webview/faq",
+            "/accelerate/components/treedatagrid/faq",
+            "/accelerate/tools/dev-tools/faq",
+        ],
         "to": "/tools/faq"
+    },
+    {
+        "from": "/accelerate/components/treedatagrid/column-types",
+        "to": "/controls/data-display/structured-data/treedatagrid/column-types"
+    },
+    {
+        "from": "/accelerate/components/treedatagrid/selection",
+        "to": "/controls/data-display/structured-data/treedatagrid/selection-modes"
+    },
+    {
+        "from": "/accelerate/components/treedatagrid/expanding-collapsing",
+        "to": "/controls/data-display/structured-data/treedatagrid/expand-and-collapse"
+    },
+    {
+        "from": "/accelerate/components/treedatagrid/sorting",
+        "to": "/controls/data-display/structured-data/treedatagrid/sorting"
+    },
+    {
+        "from": "/accelerate/components/treedatagrid/filtering",
+        "to": "/controls/data-display/structured-data/treedatagrid/filtering"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/getting-started",
+        "to": "/docs/development-optimization/developer-tools/installation"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/settings",
+        "to": "/tools/developer-tools/settings"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/shortcuts",
+        "to": "/tools/developer-tools/shortcuts"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/tools/assets",
+        "to": "/tools/developer-tools/assets-tool"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/tools/resources",
+        "to": "/tools/developer-tools/resources-tool"
+    },
+    {
+        "from": [
+            "/accelerate/tools/dev-tools/tools/elements/elements",
+            "/accelerate/tools/dev-tools/tools/elements/properties",
+            "/accelerate/tools/dev-tools/tools/elements/overlay",
+            "/accelerate/tools/dev-tools/tools/elements/3d-viewer"
+        ],
+        "to": "/tools/developer-tools/elements-tool"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/tools/logs",
+        "to": "/tools/developer-tools/logs-tool"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/tools/events",
+        "to": "/tools/developer-tools/events-tool"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/tools/breakpoints",
+        "to": "/tools/developer-tools/breakpoints-tool"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/tools/metrics",
+        "to": "/tools/developer-tools/metrics-tool"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/advanced/options-reference",
+        "to": "/tools/developer-tools/options"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/reporting-issues",
+        "to": "/troubleshooting/tools/developer-tools"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/mcp",
+        "to": "/tools/developer-tools/mcp"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/advanced/attaching-to-the-previewer",
+        "to": "/docs/development-optimization/developer-tools/attaching-to-the-previewer"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/advanced/attaching-to-the-remote-tool",
+        "to": "/docs/development-optimization/developer-tools/attaching-to-the-remote-tool"
+    },
+    {
+        "from": [
+            "/accelerate/tools/dev-tools/advanced/attaching-wsl",
+            "/accelerate/tools/dev-tools/advanced/attaching-browser-or-mobile"
+        ],
+        "to": "/docs/development-optimization/developer-tools/attaching-applications"
     },
 ];
 

@@ -1,4 +1,15 @@
-# Attaching to the Previewer
+---
+id: attaching-to-the-previewer
+title: Attaching DevTools to the previewer
+sidebar_label: Attching to the previewer
+tags:
+  - accelerate
+---
+
+import Pill from '/src/components/global/Pill';
+
+<Pill variant="primary" href="/tools">Accelerate</Pill>
+<br/><br/>
 
 :::warning
 
@@ -12,7 +23,7 @@ Yet, these extensions are limited in diagnostic features, making it harder to an
 
 With `Developer Tools` running out-of-process, it is now possible to attach a previewing app to the tool.
 
-![Example of DevTools app attached to the previewer process](../../../../static/img/dev-tools//attaching-to-previewer.png)
+![Example of DevTools app attached to the previewer process](/img/tools/dev-tools//attaching-to-previewer.png)
 
 ## Configuration
 

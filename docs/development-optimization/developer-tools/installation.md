@@ -1,4 +1,16 @@
-# Getting Started
+---
+id: installation
+title: Installing the Accelerate developer tools
+sidebar_label: Installation
+sidebar_position: 1
+tags:
+  - accelerate
+---
+
+import Pill from '/src/components/global/Pill';
+
+<Pill variant="primary" href="/tools">Accelerate</Pill>
+<br/><br/>
 
 ## Prerequisites
 
@@ -137,7 +149,7 @@ public override void Initialize()
 
 Alternatively, it's possible to use `.WithDeveloperTools()` extension method on your AppBuilder.
 
-These methods also accept `DeveloperToolsOptions` options class allowing to customize `Diagnostics Support` setup. See [Reference to DeveloperToolsOptions](./advanced/options-reference.md) for more details.
+These methods also accept `DeveloperToolsOptions` options class allowing to customize `Diagnostics Support` setup. See [Reference to DeveloperToolsOptions](/tools/developer-tools/options) for more details.
 
 By default, **29414** is used and should be available. It is configurable via options.
 
@@ -151,7 +163,7 @@ Initial execution on `macOS` might take several seconds due to Gatekeeper valida
 
 Once the Developer Tools has opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to license the tool. This is the only time when the tool requires an internet connection. After that, the tool can be used offline or until license key session expires.
 
-![Tool Activation](../../../static/img/dev-tools/tool-activation.png)
+![Tool Activation](../../../static/img/tools/dev-tools/tool-activation.png)
 
 ## Step 6: Done!
 
@@ -159,9 +171,12 @@ After activation, the connection with the app will be resumed, and a window with
 
 ## Further Reading
 
-- Documentation on [Elements tool](./tools/elements)
-- Custom [DeveloperToolsOptions configuration](./advanced/options-reference.md) reference
-- [Frequently Asked Questions](./faq)
-- [Settings](./settings.md) and [Shortcuts](./shortcuts.md) documentation
-- [Attaching Browser or Mobile application](./advanced/attaching-browser-or-mobile.md)
-- [Attaching to the Remote Tool](./advanced/attaching-to-the-remote-tool.md)
+- Documentation on [Elements tool](/tools/developer-tools/elements-tool)
+- Custom [DeveloperToolsOptions configuration](/tools/developer-tools/options) reference
+- [Model context protocol (MCP)](/tools/developer-tools/mcp)
+- [Frequently Asked Questions](/tools//faq)
+- [Settings](/tools/developer-tools/settings)
+- [Shortcuts](/tools/developer-tools/shortcuts)
+- [Attaching Browser or Mobile applications](/docs/development-optimization/developer-tools/attaching-applications)
+- [Attaching to the Remote Tool](/docs/development-optimization/developer-tools/attaching-to-the-remote-tool)
+- [Reporting issues](/troubleshooting/tools/developer-tools)

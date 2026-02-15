@@ -1,16 +1,19 @@
-# Application Assets Tool
+---
+id: assets-tool
+title: Assets tool
+---
 
 `Developer Tools` reads list of all Avalonia Resources embedded in the running process.
 
 This tool also includes embedded assets from the dependencies, commonly third party themes or icon libraries these are available as Avalonia Resources.
 
-![Assets Page](../../../../static/img/dev-tools/assets-page.png)
+![Assets Page](/img/tools/dev-tools/assets-page.png)
 
 ## Asset context menu
 
 In the context menu of an asset, it's possible to copy absolute asset Uri which then can be referenced from XAML code or export asset to the file system.
 
-![alt text](../../../../static/img/dev-tools/assets-context-menu.png)
+![alt text](/img/tools/dev-tools/assets-context-menu.png)
 
 ## Asset preview
 
@@ -25,6 +28,6 @@ Depending on the asset media type, additional information can be displayed such 
 Any asset larger than 100mb cannot be previewed, and currently it's not configurable.
 :::
 
-![Image Asset preview example](../../../../static/img/dev-tools/assets-image.png)
+![Image Asset preview example](/img/tools/dev-tools/assets-image.png)
 
-![Font Asset preview example](../../../../static/img/dev-tools/assets-font.png)
+![Font Asset preview example](/img/tools/dev-tools/assets-font.png)

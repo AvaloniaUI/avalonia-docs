@@ -1,4 +1,16 @@
-# Reporting Issue
+---
+id: developer-tools
+title: Developer tools
+tags:
+  - accelerate
+---
+
+# Reporting issues with the developer tools
+
+import Pill from '/src/components/global/Pill';
+
+<Pill variant="primary" href="/tools">Accelerate</Pill>
+<br/><br/>
 
 Developer Tools uses GitHub repository to track any bugs and feature requests: [AvaloniaUI/AvaloniaUI.DeveloperTools](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/issues).
 

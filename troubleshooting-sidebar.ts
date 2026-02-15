@@ -31,6 +31,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Tools',
+      collapsed: false,
+      items: [
+        'tools/developer-tools'
+      ],
+    },
+    {
+      type: 'category',
       label: 'UI development',
       collapsed: false,
       items: [
