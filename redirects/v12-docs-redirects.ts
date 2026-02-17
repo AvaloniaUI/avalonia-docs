@@ -55,6 +55,7 @@ const redirects: Redirect[] = [
             "/docs/get-started/xaml-previewers",
             "/docs/guides/implementation-guides/ide-support",
             "/docs/guides/implementation-guides/how-to-use-design-time-data",
+            "/accelerate/tools/vs-extension/previewer"
         ],
         "to": "/docs/ui-development/xaml-previewer"
     },
@@ -1121,6 +1122,13 @@ const redirects: Redirect[] = [
     {
         "from": "/xpf/troubleshooting",
         "to": "/troubleshooting/xpf"
+    },
+    {
+        "from": [
+            "/accelerate/tools/vs-extension/getting-started",
+            "/accelerate/tools/vs-extension/settings"
+        ],
+        "to": "/tools/visual-studio-extension"
     },
 ];
 

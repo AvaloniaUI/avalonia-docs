@@ -3,13 +3,15 @@ id: index
 title: Getting started
 description: Get started with Avalonia. Install Avalonia and its prerequisites, then launch your first project using an Avalonia template.
 ---
+
+import Pill from '/src/components/global/Pill';
 import DownloadAvaloniaRider from '/img/get-started/download-rider-avaloniarider.png';
 import DownloadAvaloniaExtensionForVS from '/img/get-started/download-vs-avalonia-extension.png';
 import WelcomeToAvalonia from '/img/get-started/welcome-to-avalonia.png';
-
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Getting started
+<p><small>{frontMatter.description}</small></p>
+<br/>
 
 Let’s get started with Avalonia. This guide takes you through installing Avalonia and launching your first project in your integrated development environment (IDE).
 
@@ -51,7 +53,11 @@ Visual Studio Code is also supported, although we do not recommend it due to mor
 	For more information on using the XAML previewer, see the page on [previewing your UI design](/docs/guides/ui-development/preview-and-design-time).
   </TabItem>
   <TabItem value="vs" label="Visual Studio">
-  If you’re working on Windows, you can use [Visual Studio](https://visualstudio.microsoft.com/) with the Avalonia for Visual Studio extension.
+
+  <Pill variant="primary" href="/tools">Accelerate</Pill>
+  <br/><br/>
+
+  If you’re working on Windows, you can use [Visual Studio](https://visualstudio.microsoft.com/) with the Avalonia for Visual Studio extension. This extension supports Visual Studio 2022 version 17.10 and above.
 
   To install Avalonia for Visual Studio:
 
@@ -65,6 +71,8 @@ Visual Studio Code is also supported, although we do not recommend it due to mor
 	</div>
   
   Alternatively, you can [download the extension from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS).
+
+  See the [Avalonia for Visual Studio](/tools/visual-studio-extension) page for details of features and settings.
 
   :::note
   If you are using an older version of Visual Studio, you may need to download an older version of the extension from the Marketplace, e.g., the [2019 version](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio).

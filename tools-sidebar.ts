@@ -28,6 +28,7 @@ const sidebars: SidebarsConfig = {
         'developer-tools/resources-tool',
       ],
     },
+    'visual-studio-extension',
     {
       type: 'category',
       label: 'Accelerate controls',
