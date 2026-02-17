@@ -29,6 +29,10 @@ Child controls in a canvas are drawn in the sequence that they are defined. This
 The canvas does not size any of its child controls. You must set width and height properties on a child control, or it will not appear!
 :::
 
+:::warning
+Canvas has no `Background` set by default. If no background is set, the canvas will not receive pointer events in empty areas.
+:::
+
 ## Z-index
 
 By default each child has a z-index of zero. However, the canvas supports the `Canvas.ZIndex` attached property that you can set any of the child controls. This will override the drawing sequence (highest number is drawn last) and may therefore change how the child controls overlap.
