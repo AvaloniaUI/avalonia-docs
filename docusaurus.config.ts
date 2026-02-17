@@ -363,7 +363,7 @@ const config: Config = {
         },
         {
           label: 'Avalonia XPF',
-          to: '/xpf/welcome',
+          to: '/xpf',
           activeBasePath: '/xpf'
         },
         {

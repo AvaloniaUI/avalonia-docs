@@ -1,6 +1,6 @@
 ---
 id: key-mapping
-title: Key Mapping
+title: Mapping keys
 ---
 
 Sometimes inbuilt WPF controls may use keyboard shortcuts which are correct on Windows but feel alien on other operating systems. If you have the source, you could add logic to switch the keyboard shortcuts depending on the operating system, but this is not an option for third-party controls.
@@ -69,3 +69,7 @@ The problem with this technique is that often it's not known what the modifier s
 ## Conditional Mapping
 
 The currently focused control will be passed to handlers in the `XpfMapKeyEventArgs.Source` property. This property can be used to conditionally map keys based on the currently focused control.
+
+## See also
+
+- [Avalonia on MacOS](/docs/platform-specific-guides/macos)

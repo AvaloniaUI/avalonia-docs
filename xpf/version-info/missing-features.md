@@ -7,7 +7,7 @@ While XPF makes a best attempt to implement all WPF APIs, there are still some p
 
 The following features are available, but with limitations:
 
-- `WebBrowser` see our [WebView docs](embedding/web-view)
+- `WebBrowser` see our [WebView docs](/docs/app-development/embedding-web-content)
 - `FlowDocument`
   - Paginated documents are not supported
   - `PageHeader`/`PageFooter` are not supported

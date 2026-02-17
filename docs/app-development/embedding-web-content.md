@@ -3,11 +3,15 @@ id: embedding-web-content
 title: Embedding web content
 tags:
   - accelerate
+  - xpf
 ---
 
 import Pill from '/src/components/global/Pill';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <Pill variant="primary" href="/tools">Accelerate</Pill>
+<Pill variant="primary" href="/xpf">XPF</Pill>
 <br/><br/>
 
 ## Overview
@@ -20,41 +24,123 @@ The WebView component includes three main APIs:
 - [`NativeWebDialog`](/controls/web/nativewebdialog) - A separate dialog window that hosts web content
 - [`WebAuthenticationBroker`](/reference/classes/webauthenticationbroker) - A utility for handling OAuth and web-based authentication flows
 
+The WebView component is available with both [Avalonia Accelerate](/tools) and [Avalonia XPF](/xpf). All functionalities and configuration options are shared by both.
+
 
 ## Installation
 
-See the [Installation Guide](/docs/development-optimization/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+<Tabs>
 
-Add the WebView package to your project:
+  <TabItem value="Accelerate">
 
-```bash
-dotnet add package Avalonia.Controls.WebView
-```
+    See the [Installation Guide](/docs/development-optimization/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+
+    Add the WebView package to your project:
+
+    ```bash
+    dotnet add package Avalonia.Controls.WebView
+    ```
+  </TabItem>
+
+  <TabItem value="XPF">
+
+    First of all, make sure you have installed XPF nuget feed as per [instruction](/xpf/version-info/versioning).
+
+    With nuget feed working, install `Avalonia.Xpf.Controls.WebView` package:
+
+    ```xml
+    <PackageReference Include="Avalonia.Xpf.Controls.WebView" Version="11.3.9" />
+    ```
+
+    :::note
+    Please use latest version if available. You can check newer versions in the IDE NuGet Packages window.
+
+    On Windows, when WebView2 is not available, legacy Internet Explorer is embedded. It's useful when targeting older Windows versions.
+    :::
+
+  </TabItem>
+
+</Tabs>
 
 ## Basic Usage
 
-### Using NativeWebView
+### NativeWebView
 
-```xml
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+:::note
+Embeddable `NativeWebView` is not supported on Linux. Please use `NativeWebDialog` instead.
+:::
+
+<Tabs>
+
+  <TabItem value="Accelerate">
+
+    ```xml
+    <Window xmlns="https://github.com/avaloniaui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <NativeWebView Source="https://avaloniaui.net/"
-                   NavigationCompleted="WebView_NavigationCompleted" />
-</Window>
-```
+        <NativeWebView Source="https://avaloniaui.net/"
+                       NavigationCompleted="WebView_NavigationCompleted" />
+    </Window>
+    ```
+
+    ```csharp
+    private void WebView_NavigationCompleted(object? sender, WebViewNavigationCompletedEventArgs args)
+    {
+        if (args.IsSuccess)
+        {
+            // Navigation completed successfully
+        }
+    }
+    ```
+
+  </TabItem>
+
+  <TabItem value="XPF">
+
+    Add `xmlns:wpf="clr-namespace:Avalonia.Xpf.Controls;assembly=Avalonia.Xpf.Controls.WebView"` xmlns to your XAML file.
+
+    Typical usage of the NativeWebView looks like this:
+
+    ```xml
+    <wpf:NativeWebView Source="https://avaloniaui.net/" />
+    ```
+
+    Where `Source` is a bindable property.
+
+    To streamline code migration, it's also possible to use `NativeWebView` control with native WPF on Windows. Without XPF involving. In this scenario, all the API members and underlying browsers are the same. As well as steps to install, the same package can be used.
+
+  </TabItem>
+
+</Tabs>
+
+#### Bidirectional JavaScript execution
+
+In some situations it's necessary to execute arbitrary JavaScript code from the web view control.
+`NativeWebView` provides [`InvokeScript` async method](/controls/web/nativewebview#invokescript):
 
 ```csharp
-private void WebView_NavigationCompleted(object? sender, WebViewNavigationCompletedEventArgs args)
+webView.InvokeScript("console.log('Hello World')");
+```
+
+When it's required to receive a data from the JavaScript (web page) and process it on the C# side, you can use `NativeWebView.WebMessageReceived` event combined with `invokeCSharpAction` helper JS method.
+
+Complete bi-directional example looks like this:
+```csharp
+private async void NativeWebView_OnNavigationCompleted(object? sender, WebViewNavigationCompletedEventArgs e)
 {
-    if (args.IsSuccess)
-    {
-        // Navigation completed successfully
-    }
+    await ((NativeWebView)sender!).InvokeScript(""" invokeCSharpAction("{'key': 10}") """);
+}
+
+private void NativeWebView_OnWebMessageReceived(object? sender, WebMessageReceivedEventArgs e)
+{
+    var message = e.Body;
+    // message == "{'key': 10}"
 }
 ```
 
-### Using NativeWebDialog
+![alt text](/img/webview.png)
+
+### NativeWebDialog
 
 ```csharp
 var dialog = new NativeWebDialog
@@ -75,7 +161,7 @@ dialog.NavigationCompleted += (s, e) =>
 dialog.Show();
 ```
 
-### Using WebAuthenticationBroker
+### WebAuthenticationBroker
 
 ```csharp
 var authOptions = new WebAuthenticatorOptions(

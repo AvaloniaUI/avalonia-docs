@@ -1,7 +1,7 @@
 ---
-id: welcome
-title: Welcome
-sidebar_label: Welcome
+id: index
+title: Welcome to Avalonia XPF
+sidebar_label: Avalonia XPF
 ---
 
 Welcome to the documentation for Avalonia XPF, our cross-platform fork of WPF. 
@@ -42,7 +42,7 @@ Trial periods are exclusively available for Business and Enterprise licenses. Th
 For the latest pricing, please see our [website](https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=welcome_link#pricing). 
 
 ## Hybrid XPF
-One of Avalonia XPF's unique features is its [hybrid capability](embedding/xpf-in-avalonia.md), allowing Avalonia developers to use WPF controls within applications. This flexibility enables Avalonia developers to leverage over 700 existing WPF controls from major vendors such as [Telerik](https://www.telerik.com/), [Actipro](https://www.actiprosoftware.com/), [DevExpress](https://www.devexpress.com/), [Infragistics](https://www.infragistics.com/), and [Syncfusion](https://www.syncfusion.com/), bridging the gap between traditional WPF development and modern cross-platform applications.
+One of Avalonia XPF's unique features is its [hybrid capability](/xpf/guides/using-xpf-in-avalonia), allowing Avalonia developers to use WPF controls within applications. This flexibility enables Avalonia developers to leverage over 700 existing WPF controls from major vendors such as [Telerik](https://www.telerik.com/), [Actipro](https://www.actiprosoftware.com/), [DevExpress](https://www.devexpress.com/), [Infragistics](https://www.infragistics.com/), and [Syncfusion](https://www.syncfusion.com/), bridging the gap between traditional WPF development and modern cross-platform applications.
 
 ## Get Started
 Begin your journey with Avalonia XPF using our comprehensive [getting started guide](getting-started), which walks you through the straightforward process of migrating your WPF application to run on additional platforms in just minutes.

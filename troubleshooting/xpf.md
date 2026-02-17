@@ -1,7 +1,15 @@
 ---
-id: troubleshooting
-title: Troubleshooting
+id: xpf
+title: Troubleshooting Avalonia XPF
+sidebar_label: XPF
+tags:
+  - xpf
 ---
+
+import Pill from '/src/components/global/Pill';
+
+<Pill variant="primary" href="/xpf">XPF</Pill>
+<br/><br/>
 
 ## Trouble Restoring NuGet Packages
 
@@ -27,7 +35,7 @@ If you are unable to login with your license key, it may have expired. Ask suppo
 
 ### Check You Have Set Up NuGet.config
 
-- Ensure that you have added a [NuGet.config](./getting-started#step-2-add-a-nugetconfig) file, **and that it is in the same directory** as the `.sln` file you are loading
+- Ensure that you have added a [NuGet.config](/xpf/getting-started#step-2-add-a-nugetconfig) file, **and that it is in the same directory** as the `.sln` file you are loading
 - Ensure that you have added a valid license key to your `NuGet.config` file
 
 ### Clear Your NuGet HTTP Cache
@@ -53,7 +61,7 @@ Typically, there are two possible ways to listen for Avalonia logs
 
 ### .LogToTrace in a custom Avalonia initialization
 
-1. Follow [instructions](./advanced/customizing-init) on how to setup custom Avalonia initialization.
+1. Follow [instructions](/xpf/guides/customizing-initialization) on how to setup custom Avalonia initialization.
 2. Then you will be able to call `.LogToTrace()` with optional severity parameter in the AppBuilder chain, like this:
 ```diff
         AppBuilder.Configure<AvaloniaUI.Xpf.Helpers.DefaultXpfAvaloniaApplication>()

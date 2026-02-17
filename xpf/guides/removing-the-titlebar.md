@@ -1,6 +1,6 @@
 ---
-id: customizing-window-decorations
-title: Customizing Window decorations
+id: removing-the-titlebar
+title: Removing the titlebar
 ---
 
 # Customizing Window decorations
@@ -68,7 +68,7 @@ And in XAML, you would attach the event handlers:
 
 This example shows a basic setup, and you may need to adjust it based on your specific requirements and the functionality you want to provide.
 
-## How to do that using Avalonia API's?
+## How to do that using Avalonia APIs?
 
 First of all, you need to find `MainWindow.xaml.cs` file. And then everything you need is to paste the code below.
 

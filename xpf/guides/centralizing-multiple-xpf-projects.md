@@ -1,6 +1,6 @@
 ---
-id: centralized-management
-title: Centralized Management
+id: centralizing-multiple-xpf-projects
+title: Centralizing multiple XPF projects
 ---
 
 If you're managing multiple XPF projects then it can be useful to centralize the management of your SDK versions and license keys.

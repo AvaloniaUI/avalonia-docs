@@ -120,7 +120,7 @@ var avWindow = XpfWpfAbstraction.GetAvaloniaWindowForWindow(xpfWindow);
 avWindow.KeyTextInput("Hello");
 ```
 
-See [Avalonia Interop](./avalonia-interop.md) for more details on integration with Avalonia.
+See [Avalonia Interop](/xpf/guides/embedding-avalonia-in-xpf#accessing-avalonia-features) for more details on integration with Avalonia.
 
 ## (Optional) Using XPF headless testing with WPF app/project
 
@@ -130,3 +130,9 @@ Which also means that you can have normal "net8.0-windows" project with your con
 It can be useful, if you have shared controls library that and want to headless test it, or maybe if you have normal Windows WPF application and need headless testing without fully using XPF.
 
 All the usage steps are the same, but you also need to set testing project TargetFramework to `net8.0-windows` and set `EnableWindowsTargeting` to true (only if you need to run it on Linux/macOS machines).
+
+## See also
+
+- [Headless testing with XUnit](/docs/testing/headless-xunit)
+- [Headless testing with NUnit](/docs/testing/headless-nunit)
+- [Setting up the headless platform](/docs/testing/setting-up-the-headless-platform)

@@ -3,12 +3,27 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
 
   documentationSidebar: [
-    'welcome',
+    'index',
     'getting-started',
-    'porting-tips',
-    'build-feeds',
-    'third-party-libraries',
-    'missing-features',
+    {
+      'type': 'category',
+      'label': 'XPF Guides',
+      'items': [
+        'guides/embedding-avalonia-in-xpf',
+        'guides/using-xpf-in-avalonia',
+        {
+          type: 'link',
+          label: 'Embedding web content',
+          href: '/docs/app-development/embedding-web-content'
+        },
+        'guides/centralizing-multiple-xpf-projects',
+        'guides/customizing-initialization',
+        'guides/removing-the-titlebar',
+        'guides/headless-testing',
+        'guides/key-mapping',
+        'guides/native-window-handles',
+      ]
+    },
     {
       'type': 'category',
       'label': 'Platforms',
@@ -17,38 +32,21 @@ const sidebars: SidebarsConfig = {
         'platforms/macos',
       ]
     },
+    'third-party-libraries',
     {
       'type': 'category',
-      'label': 'Embedding',
+      'label': 'Version info',
       'items': [
-       {
-         'type': 'category',
-         'label': 'Avalonia in XPF',
-         'items': [
-             'embedding/avalonia-in-xpf/embedding-avalonia-controls-in-XPF',
-             'embedding/avalonia-in-xpf/adding-style-to-avalonia-control-in-xpf',
-             'embedding/avalonia-in-xpf/adding-global-style-for-avalonia-controls-in-XPF'
-         ]
-       },
-        'embedding/xpf-in-avalonia',
-        'embedding/web-view'
+          'version-info/versioning',
+          'version-info/release-notes',
+          'version-info/missing-features',
       ]
     },
     {
-      'type': 'category',
-      'label': 'Advanced',
-      'items': [
-          'advanced/avalonia-interop',
-          'advanced/centralized-management',
-          'advanced/customizing-init',
-          'advanced/customizing-window-decorations',
-          'advanced/headless-testing',
-          'advanced/key-mapping',
-          'advanced/window-handles'
-      ]
+      type: 'link',
+      label: 'Troubleshooting',
+      href: '/troubleshooting/xpf'
     },
-    'troubleshooting',
-    'release-notes'
   ],
 };
 

@@ -1,6 +1,6 @@
 ---
-id: xpf-in-avalonia
-title: XPF in Avalonia
+id: using-xpf-in-avalonia
+title: Using XPF in Avalonia
 ---
 
 ## Step 1: Update the Project File

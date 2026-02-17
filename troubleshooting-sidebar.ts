@@ -46,6 +46,7 @@ const sidebars: SidebarsConfig = {
         'ui-development/themes'
       ],
     },
+    'xpf',
   ],
 };
 

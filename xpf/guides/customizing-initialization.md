@@ -1,6 +1,6 @@
 ---
-id: customizing-init
-title: Customizing Initialization
+id: customizing-initialization
+title: Customizing initialization
 ---
 
 Avalonia provides the [`AppBuilder`](https://docs.avaloniaui.net/docs/getting-started/application-lifetimes) API to customize various aspects of the framework. 

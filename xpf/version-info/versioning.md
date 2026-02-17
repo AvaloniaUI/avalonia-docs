@@ -1,6 +1,6 @@
 ---
-id: build-feeds
-title: XPF Versioning
+id: versioning
+title: XPF versioning
 ---
 
 The latest stable version of Avalonia XPF is 1.5.3.

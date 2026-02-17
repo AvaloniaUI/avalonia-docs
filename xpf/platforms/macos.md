@@ -19,7 +19,7 @@ However there are problems with this mapping:
 
 ### Automatic macOS Key Mapping
 
-To fix many of these problems, one can call the `XpfKeyboard.MapMacOSKeys()` method on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](../third-party-libraries); that is, in the constructor of your `App` class or `Program.Main`:
+To fix many of these problems, one can call the `XpfKeyboard.MapMacOSKeys()` method on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](/xpf/third-party-libraries); that is, in the constructor of your `App` class or `Program.Main`:
 
 ```csharp
 using System.Windows;
@@ -47,11 +47,11 @@ Calling this method on macOS:
 
 ### macOS Custom Keyboard Mapping
 
-For more flexible key mapping you can [add custom key mappings](/xpf/advanced/key-mapping).
+For more flexible key mapping you can [add custom key mappings](/xpf/guides/mapping-keys).
 
 ## Context Menus <MinVersion version="1.6" /> 
 
-On macOS, context menus can be opened by Ctrl+Clicking as well as by right clicking. You can enable this feature by setting `XpfMouse.ShowContextMenuOnMacOSCtrlClick` on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](../third-party-libraries); that is, in the constructor of your `App` class or `Program.Main`:
+On macOS, context menus can be opened by Ctrl+Clicking as well as by right clicking. You can enable this feature by setting `XpfMouse.ShowContextMenuOnMacOSCtrlClick` on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](/xpf/third-party-libraries); that is, in the constructor of your `App` class or `Program.Main`:
 
 ```csharp
 using System.Windows;

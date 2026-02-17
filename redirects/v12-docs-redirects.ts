@@ -944,7 +944,8 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/accelerate/components/webview/quickstart",
-            "/accelerate/components/webview/interop/native-browser-interop"
+            "/accelerate/components/webview/interop/native-browser-interop",
+            "/xpf/embedding/web-view"
         ],
         "to": "/docs/app-development/embedding-web-content"
     },
@@ -1063,6 +1064,63 @@ const redirects: Redirect[] = [
             "/accelerate/tools/dev-tools/advanced/attaching-browser-or-mobile"
         ],
         "to": "/docs/development-optimization/developer-tools/attaching-applications"
+    },
+    {
+        "from": "/xpf/porting-tips",
+        "to": "/xpf/getting-started"
+    },
+    {
+        "from": "/xpf/build-feeds",
+        "to": "/xpf/version-info/versioning"
+    },
+    {
+        "from": "/xpf/build-feeds",
+        "to": "/xpf/version-info/release-notes"
+    },
+    {
+        "from": "/xpf/missing-features",
+        "to": "/xpf/version-info/missing-features"
+    },
+    {
+        "from": [
+            "/xpf/embedding/avalonia-in-xpf/embedding-avalonia-controls-in-XPF",
+            "/xpf/embedding/avalonia-in-xpf/adding-style-to-avalonia-control-in-xpf",
+            "/xpf/embedding/avalonia-in-xpf/adding-global-style-for-avalonia-controls-in-XPF",
+            "/xpf/advanced/avalonia-interop",
+        ],
+        "to": "/xpf/guides/embedding-avalonia-in-xpf"
+    },
+    {
+        "from": "/xpf/embedding/xpf-in-avalonia",
+        "to": "/xpf/guides/using-xpf-in-avalonia"
+    },
+    {
+        "from": "/xpf/advanced/centralized-management",
+        "to": "/xpf/guides/centralizing-multiple-xpf-projects"
+    },
+    {
+        "from": "/xpf/advanced/customizing-init",
+        "to": "/xpf/guides/customizing-initialization"
+    },
+    {
+        "from": "/xpf/advanced/customizing-window-decorations",
+        "to": "/xpf/guides/removing-the-titlebar"
+    },
+    {
+        "from": "/xpf/advanced/headless-testing",
+        "to": "/xpf/guides/headless-testing"
+    },
+    {
+        "from": "/xpf/advanced/key-mapping",
+        "to": "/xpf/guides/key-mapping"
+    },
+    {
+        "from": "/xpf/advanced/window-handles",
+        "to": "/xpf/guides/native-window-handles"
+    },
+    {
+        "from": "/xpf/troubleshooting",
+        "to": "/troubleshooting/xpf"
     },
 ];
 

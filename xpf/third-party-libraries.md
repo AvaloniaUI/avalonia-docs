@@ -1,6 +1,7 @@
 ---
 id: third-party-libraries
-title: Third party libraries
+title: Compatibility with third-party libraries
+sidebar_label: Third-party compatibility
 ---
 
 Avalonia XPF implements WPF's API surface, however a variety of third party libraries also depend on various win32 APIs which are obviously not available cross-platform.

@@ -1,6 +1,6 @@
 ---
 id: release-notes
-title: Release Notes
+title: Release notes
 ---
 
 ## XPF 1.6.0 (2026-01-19)
