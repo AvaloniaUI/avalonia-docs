@@ -28,6 +28,20 @@ const sidebars: SidebarsConfig = {
         'developer-tools/resources-tool',
       ],
     },
+    {
+      type: 'category',
+      label: 'Parcel',
+      collapsed: true,
+      items: [
+        {
+          type: 'link',
+          label: 'Setup',
+          href: '/docs/deployment/parcel/setup',
+        },
+        'parcel/command-line-reference',
+        'parcel/mcp',
+      ],
+    },
     'visual-studio-extension',
     {
       type: 'category',

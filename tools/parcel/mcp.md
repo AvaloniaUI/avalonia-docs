@@ -1,6 +1,7 @@
 ---
 id: mcp
-title: Model Context Protocol
+title: Model context protocol (MCP) for Parcel
+sidebar_label: Model context protocol (MCP)
 ---
 
 ## What is MCP?
@@ -11,8 +12,8 @@ Model Context Protocol (MCP) is an open standard that allows AI models to use ex
 
 Before setting up the MCP server, ensure you have:
 
-1. **Parcel .NET tool installed** - Follow the [Getting Started](getting-started) guide
-2. **Valid license key** - Set `PARCEL_LICENSE_KEY` environment variable to a valid license key from the portal
+1. **Parcel .NET tool installed** - Follow the [Setup guide](/docs/deployment/parcel/setup).
+2. **Valid license key** - Set the `PARCEL_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal.
 
 :::note
 Parcel MCP is only available with a full Accelerate license.

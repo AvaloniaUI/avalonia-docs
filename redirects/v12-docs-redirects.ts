@@ -1130,6 +1130,18 @@ const redirects: Redirect[] = [
         ],
         "to": "/tools/visual-studio-extension"
     },
+    {
+        "from": "/accelerate/tools/parcel/getting-started",
+        "to": "/docs/deployment/parcel/setup"
+    },
+    {
+        "from": "/accelerate/tools/parcel/cli-reference",
+        "to": "/tools/parcel/command-line-reference"
+    },
+    {
+        "from": "/accelerate/tools/parcel/mcp",
+        "to": "/tools/parcel/mcp"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

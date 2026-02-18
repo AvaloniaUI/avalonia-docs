@@ -1,6 +1,7 @@
 ---
-id: cli-reference
-title: Parcel CLI reference
+id: command-line-reference
+title: Parcel command line reference
+sidebar_label: Command line reference
 ---
 
 Parcel provides a command-line tool that packages Avalonia apps for Windows, macOS, and Linux. It includes app signing and packaging capabilities to simplify distribution of ready-to-install binaries.
@@ -9,11 +10,11 @@ Parcel provides a command-line tool that packages Avalonia apps for Windows, mac
 
 Before using Parcel, ensure you have:
 
-1. **Parcel .NET tool installed** - Follow the [Getting Started](getting-started) guide
-2. **Valid license key** - Set the `PARCEL_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal
+1. **Parcel .NET tool installed** - Follow the [Setup guide](/docs/deployment/parcel/setup).
+2. **Valid license key** - Set the `PARCEL_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal.
 
 :::note
-Parcel CLI is only available with a full Accelerate license
+Parcel CLI is only available with a full Accelerate license.
 :::
 
 ## Overview
@@ -206,7 +207,7 @@ Runs a Model Context Protocol server, allowing Parcel commands to be executed fr
 parcel mcp
 ```
 
-See [Model Context Protocol](mcp.md) for more details on usage.
+See [Model Context Protocol](/tools/parcel/mcp) for more details on usage.
 
 ## Environment Variables
 

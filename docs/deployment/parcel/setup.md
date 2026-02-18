@@ -1,4 +1,16 @@
-# Getting Started
+---
+id: setup
+title: Setting up AvaloniaUI Parcel
+sidebar_label: Setup
+sidebar_position: 1
+tags:
+  - accelerate
+---
+
+import Pill from '/src/components/global/Pill';
+
+<Pill variant="primary" href="/tools">Accelerate</Pill>
+<br/><br/>
 
 AvaloniaUI Parcel is a packaging tool for Avalonia UI applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
 
@@ -118,8 +130,8 @@ For the CLI, you can set `--licenseKey` option or `PARCEL_LICENSE_KEY` env varia
 
 ## Further Reading
 
-- [Parcel CLI reference](cli-reference.md)
-- [Model Context Protocol](mcp.md)
-- [Windows packaging](./windows/index.md)
-- [macOS packaging](./apple/index.md)
-- [Linux packaging](./linux/index.md)
+- [Parcel command line reference](/tools/parcel/command-line-reference)
+- [Model Context Protocol](/tools/parcel/mcp)
+- [Windows packaging](/docs/deployment/parcel/windows)
+- [macOS packaging](/docs/deployment/parcel/macos)
+- [Linux packaging](/docs/deployment/parcel/linux)
