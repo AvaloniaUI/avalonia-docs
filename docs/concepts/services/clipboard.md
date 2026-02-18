@@ -134,7 +134,7 @@ Placing a new object on the clipboard always clears any previous data.
 :::
 
 :::warning
-The `IAsyncDataTransfer` object must stay valid while it's on the clipboard. Do **not** call `Dispose()` on it! Avalonia will automatically dispose of the instance once it is certain it's no longer in use.
+Do **not** call `Dispose()` on the `IAsyncDataTransfer` object passed to `SetDataAsync()`! The instance must stay valid while it's on the clipboard. Avalonia takes ownership and automatically disposes of it once it's no longer in use.
 :::
 
 #### Extension Methods
