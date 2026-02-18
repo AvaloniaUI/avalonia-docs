@@ -1,4 +1,103 @@
-# Windows Code Signing
+---
+id: packaging-for-windows
+title: Packaging apps for Windows
+sidebar_label: Windows
+tags:
+  - accelerate
+---
+
+import Pill from '/src/components/global/Pill';
+
+<Pill variant="primary" href="/tools">Accelerate</Pill>
+<br/><br/>
+
+## Packaging
+
+Parcel creates Windows installers (NSIS executable) and portable executables that can be distributed via setup files or ZIP archives. The tool handles executable configuration, registry entries, and can create Windows packages on all supported platforms.
+
+### Package Configuration
+
+#### Common Properties
+
+**Application Name**:
+
+Display name used for the application install directory, Start Menu entry, and shortcut file name.
+
+:::note
+Currently cannot be localized.
+:::
+
+**Package Name**:
+
+The output installer file name (without extension).
+
+### NSIS Installer Properties
+
+Parcel uses NSIS (Nullsoft Scriptable Install System) that creates lightweight, self-extracting installers with flexible installation options.
+
+**Company**:
+
+The publisher name displayed in Windows properties, installers, and system dialogs. This name is used to organize applications in Program Files and registry entries when **Create Company Folder** is enabled.
+
+**Create Company Folder**:
+
+When enabled, the application will be installed in a company-specific subdirectory:
+- Admin install: `Program Files\[Company]\[Application Name]\`
+- User install: `%LocalAppData%\[Company]\[Application Name]\`
+
+This also affects the Start Menu shortcut location, organizing shortcuts under `Start Menu\Programs\[Company]\[Application Name]`.
+
+Default: false.
+
+**Installer Icon**:
+
+The installer icon in **ICO** or **SVG** format. ICO files should include multiple resolutions from 16x16 to 256x256 pixels. This icon appears in Windows Explorer for the installer executable, during installation, and in the Windows uninstaller list.
+
+:::note
+This is separate from the application icon. 
+
+Application icon is defined by the standard .NET `<ApplicationIcon>file.ico</ApplicationIcon>` property in the .csproj file.
+:::
+
+**Requires Admin**:
+
+Controls whether the installer requires administrator privileges for installation.
+
+When enabled (default), the application is installed to `Program Files` and requires User Account Control (UAC) elevation. When disabled, the application is installed to the current user's `%LocalAppData%` directory without requiring elevation.
+
+Default: true.
+
+**Include Uninstaller**:
+
+When enabled, Parcel includes an uninstaller executable with the application and creates an entry in Windows Settings > Apps & Features (or Control Panel > Programs and Features on older Windows versions).
+
+Default: true.
+
+**License File**:
+
+Optional license file to be displayed during installation. Supported formats:
+- Plain text (.txt)
+- Rich Text Format (.rtf)
+
+The license is displayed on a dedicated page during installation, and users must accept it to proceed.
+
+<!--- NOT YET AVAILABLE IN STABLE PARCEL
+
+**File Type Associations**:
+
+Associate the application with specific file types by specifying file extensions (e.g., `.myfile`) and optionally adding MIME types and custom icons. This creates registry entries for proper Windows Explorer integration.
+
+To handle these files in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
+
+**URL Scheme Handlers**:
+
+Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This creates registry entries that enable other applications and web browsers to launch your app with specific parameters.
+
+To handle URL schemes in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
+
+--->
+
+## Code Signing
 
 Parcel signs Windows executables and installers using Authenticode certificates. Cross-platform signing is supported on Windows, Linux, and macOS platforms.
 
@@ -6,7 +105,7 @@ Parcel signs Windows executables and installers using Authenticode certificates.
 This document explains how to integrate various signing methods with Parcel. It does not include detailed setup steps for obtaining certificates or configuring cloud signing services. Please refer to the linked documentation for each method for complete setup instructions.
 :::
 
-## Prerequisites
+### Prerequisites
 
 Before signing Windows applications, ensure you have:
 
@@ -14,11 +113,11 @@ Before signing Windows applications, ensure you have:
 - **Windows SDK** (Windows only): Can be installed with Visual Studio Build Tools (on CI) or Visual Studio (on Desktop) from [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/)
 - **Java Runtime**: Required for cross-platform signing operations.
 
-## Signing Methods
+### Signing Methods
 
 Parcel supports multiple certificate formats depending on your development environment and workflow.
 
-### Local Certificate
+#### Local Certificate
 
 Use a local certificate file (PFX/P12 format) for signing. This method is not recommended for production applications, and is typically untrusted by Windows.
 
@@ -34,7 +133,7 @@ Use a local certificate file (PFX/P12 format) for signing. This method is not re
 **Documentation:**
 - [New-SelfSignedCertificate](https://learn.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2025-ps)
 
-### Windows Certificate Store
+#### Windows Certificate Store
 
 Use certificates installed in the Windows Certificate Store, including hardware security modules (HSMs) and USB tokens.
 
@@ -49,7 +148,7 @@ Use certificates installed in the Windows Certificate Store, including hardware 
 **Documentation:**
 - [Windows Certificate Store Overview](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/certificate-stores)
 
-### Microsoft Trusted Signing (Cross-Platform)
+#### Microsoft Trusted Signing (Cross-Platform)
 
 Cloud-based signing service that provides the highest trust level without managing local certificates. Provides immediate SmartScreen bypass and enhanced security through hardware security modules (HSMs).
 
@@ -78,7 +177,7 @@ Microsoft Trusted Signing is the recommended solution for enterprises requiring 
 - [Microsoft Trusted Signing Documentation](https://learn.microsoft.com/en-us/azure/trusted-signing/)
 - [Trusted Signing Quickstart](https://learn.microsoft.com/en-us/azure/trusted-signing/quickstart)
 
-### Azure Key Vault
+#### Azure Key Vault
 
 Store certificates and private keys securely in Azure Key Vault for centralized certificate management and access control.
 
@@ -103,7 +202,7 @@ Azure CLI authentication or environment variables:
 Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
 :::
 
-### AWS KMS
+#### AWS KMS
 
 Use AWS Key Management Service for secure private key storage with certificates managed separately.
 
@@ -130,7 +229,7 @@ AWS credentials from one of the following sources:
 Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
 :::
 
-### DigiCert
+#### DigiCert
 
 Use certificates and keys stored in DigiCert ONE Secure Software Manager (formerly DigiCert KeyLocker) without installing DigiCert client tools.
 
@@ -148,7 +247,7 @@ Use certificates and keys stored in DigiCert ONE Secure Software Manager (former
 Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
 :::
 
-### Google Cloud KMS
+#### Google Cloud KMS
 
 Use Google Cloud Key Management Service for secure private key storage. The certificate must be provided separately as Google Cloud KMS stores only the private key.
 
@@ -170,7 +269,7 @@ Use Google Cloud Key Management Service for secure private key storage. The cert
 Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
 :::
 
-### SSL.com eSigner
+#### SSL.com eSigner
 
 Cloud-based signing service from SSL.com with hardware security module (HSM) backed certificates and optional sandbox environment for testing.
 
@@ -187,18 +286,3 @@ Cloud-based signing service from SSL.com with hardware security module (HSM) bac
 :::note
 Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
 :::
-
-## Troubleshooting
-
-### Common Issues
-
-**Signed executable still triggers SmartScreen warnings**:
-
-This is normal for new certificates and applications. Different certificate types have different trust timelines:
-- **EV Certificates & Microsoft Trusted Signing**: Immediate SmartScreen bypass
-- **OV Certificates**: Require reputation building (typically 3-6 months of consistent distribution)
-
-**Azure authentication failures**:
-
-1. Verify environment variables are set correctly: `AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`
-2. Consider installing [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and folowing [az login](https://learn.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest#az-login) flow.

@@ -217,3 +217,10 @@ See [Model Context Protocol](/tools/parcel/mcp) for more details on usage.
 
 - All packaging options, signing credentials, and visual customizations are defined in the Parcel project file (.parcel)
 - When using `--no-build`, ensure that publish-related settings (trimming, AOT, single-file) match between your build and Parcel configuration
+
+## See also
+
+- [Parcel setup](/docs/deployment/parcel/setup)
+- [Packaging for macOS](/docs/deployment/parcel/packaging-for-macos)
+- [Packaging for Windows](/docs/deployment/parcel/packaging-for-windows)
+- [Packaging for Linux](/docs/deployment/parcel/packaging-for-linux)

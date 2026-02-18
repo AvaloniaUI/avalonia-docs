@@ -1,4 +1,15 @@
-# Linux Packaging
+---
+id: packaging-for-linux
+title: Packaging apps for Linux
+sidebar_label: Linux
+tags:
+  - accelerate
+---
+
+import Pill from '/src/components/global/Pill';
+
+<Pill variant="primary" href="/tools">Accelerate</Pill>
+<br/><br/>
 
 Parcel packages Linux applications into multiple distribution formats optimized for different Linux package managers and use cases.
 

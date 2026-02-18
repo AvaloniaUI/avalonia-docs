@@ -1142,6 +1142,30 @@ const redirects: Redirect[] = [
         "from": "/accelerate/tools/parcel/mcp",
         "to": "/tools/parcel/mcp"
     },
+    {
+        "from": [
+            "/accelerate/tools/parcel/apple/packaging",
+            "/accelerate/tools/parcel/apple/signing",
+            "/accelerate/tools/parcel/apple/notary",
+            "/accelerate/tools/parcel/apple/index",
+        ],
+        "to": "/docs/deployment/parcel/packaging-for-macos"
+    },
+    {
+        "from": [
+            "/accelerate/tools/parcel/windows/signing",
+            "/accelerate/tools/parcel/windows/installer",
+            "/accelerate/tools/parcel/windows/index",
+        ],
+        "to": "/docs/deployment/parcel/packaging-for-windows"
+    },
+    {
+        "from": [
+            "/accelerate/tools/parcel/linux/packaging",
+            "/accelerate/tools/parcel/linux/index",
+        ],
+        "to": "/docs/deployment/parcel/packaging-for-linux"
+    },
 ];
 
 export const v12_docs_redirects = { createRedirects, redirects };

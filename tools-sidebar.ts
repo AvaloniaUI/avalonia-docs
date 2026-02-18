@@ -40,6 +40,21 @@ const sidebars: SidebarsConfig = {
         },
         'parcel/command-line-reference',
         'parcel/mcp',
+        {
+          type: 'link',
+          label: 'Packaging for macOS',
+          href: '/docs/deployment/parcel/packaging-for-macos',
+        },
+        {
+          type: 'link',
+          label: 'Packaging for Windows',
+          href: '/docs/deployment/parcel/packaging-for-windows',
+        },
+        {
+          type: 'link',
+          label: 'Packaging for Linux',
+          href: '/docs/deployment/parcel/packaging-for-linux',
+        },
       ],
     },
     'visual-studio-extension',

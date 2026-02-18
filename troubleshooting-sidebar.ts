@@ -26,7 +26,8 @@ const sidebars: SidebarsConfig = {
       label: 'Platform-specific issues',
       collapsed: false,
       items: [
-        'platform-specific-issues/macos'
+        'platform-specific-issues/macos',
+        'platform-specific-issues/windows'
       ],
     },
     {

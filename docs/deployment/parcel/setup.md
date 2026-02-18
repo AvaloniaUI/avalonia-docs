@@ -131,7 +131,7 @@ For the CLI, you can set `--licenseKey` option or `PARCEL_LICENSE_KEY` env varia
 ## Further Reading
 
 - [Parcel command line reference](/tools/parcel/command-line-reference)
-- [Model Context Protocol](/tools/parcel/mcp)
-- [Windows packaging](/docs/deployment/parcel/windows)
-- [macOS packaging](/docs/deployment/parcel/macos)
-- [Linux packaging](/docs/deployment/parcel/linux)
+- [Model context protocol (MCP)](/tools/parcel/mcp)
+- [Windows packaging](/docs/deployment/parcel/packaging-for-windows)
+- [macOS packaging](/docs/deployment/parcel/packaging-for-macos)
+- [Linux packaging](/docs/deployment/parcel/packaging-for-linux)
