@@ -12,9 +12,14 @@ const sidebars: SidebarsConfig = {
     'community-edition',
     {
       type: 'category',
-      label: 'Developer tools',
+      label: 'Dev Tools',
       collapsed: true,
       items: [
+        {
+          type: 'link',
+          label: 'Install Dev Tools',
+          href: '/docs/development-optimization/developer-tools/installation',
+        },
         'developer-tools/settings',
         'developer-tools/shortcuts',
         'developer-tools/options',
@@ -35,7 +40,7 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'link',
-          label: 'Setup',
+          label: 'Install Parcel',
           href: '/docs/deployment/parcel/setup',
         },
         'parcel/command-line-reference',
