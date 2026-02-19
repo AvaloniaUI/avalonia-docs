@@ -4,10 +4,9 @@ const sidebars: SidebarsConfig = {
 
   documentationSidebar: [
     {
-      type: 'category',
-      label: 'Getting Started',
-      collapsed: false,
-      items: ['index'],
+      type: 'doc',
+      label: 'Home',
+      id: 'index',
     },
     {
       type: 'category',
