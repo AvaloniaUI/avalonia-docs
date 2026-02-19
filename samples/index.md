@@ -1,6 +1,7 @@
 ---
 id: index
 title: Samples
+hide_table_of_contents: true
 ---
 
 import DocsCard from '@site/src/components/global/DocsCard';
