@@ -14,7 +14,7 @@ This page lists all the breaking changes between Avalonia 11 and 12 and provides
 Avalonia version 12 dropped support for .NET Framework and .NET Standard. Only .NET 8 and later are supported.  
 We recommend targeting .NET 10.
 
-However, if your project targets Android or iOS, only .NET 10 is supported. This matches the support Microsoft provides for the underlying .NET SDK.
+If your project targets Android or iOS, only .NET 10 is supported. This is to match the support Microsoft provides for the underlying .NET SDK.
 
 Update your Avalonia projects to a supported .NET version.
 
@@ -48,10 +48,10 @@ We recommend choosing the latest release from the official [GitHub Releases page
 ## `Avalonia.Diagnostics` package removed
 
 The `Avalonia.Diagnostics` package has been removed.
-The Dev Tools included with [Avalonia Accelerate](https://avaloniaui.net/accelerate) provide a better experience and should be preferred.
+The Dev Tools included with [Avalonia Accelerate](https://avaloniaui.net/accelerate) should be used instead.
 
 Remove the `Avalonia.Diagnostics` package from your projects and replace it with `AvaloniaUI.DiagnosticsSupport`.  
-We recommend following our [Dev Tools documentation](https://docs.avaloniaui.net/accelerate/tools/dev-tools/getting-started) to install the Accelerate Dev Tools properly.
+To install the Accelerate Dev Tools, please follow our [Dev Tools documentation](https://docs.avaloniaui.net/accelerate/tools/dev-tools/getting-started).
 
 **Example:**
 
@@ -74,7 +74,7 @@ PR: [#20332](https://github.com/AvaloniaUI/Avalonia/pull/20332)
 
 ## Binding class hierarchy changes
 
-The binding class hierarchy has changed. Bindings defined in XAML files (e.g., `{Binding}`) should be unaffected. However, binding usages in the C# code need to change.
+The binding class hierarchy has changed. Bindings defined in XAML files (e.g., `{Binding}`) are unaffected. However, you must update binding usages in C# code.
 
 The `IBinding` interface has been removed. Its replacement is the `BindingBase` class.
 
@@ -113,7 +113,7 @@ PR: [#19712](https://github.com/AvaloniaUI/Avalonia/pull/19712)
 
 The text shaper is now configurable independently of the rendering engine. For most applications, this change should be transparent, as HarfBuzz is used by default when `UsePlatformDetect` is called on the `AppBuilder`.
 
-However, if your project was explicitly configuring a rendering engine, such as Skia via `UseSkia`, an `InvalidOperationException` with the message *Unable to locate 'Avalonia.Platform.ITextShaperImpl'* might be thrown on startup. In this case, the project needs to be updated with a call to `UseHarfBuzz` on the `AppBuilder`.
+However, if your project explicitly configures a rendering engine, such as Skia via `UseSkia`, an `InvalidOperationException` with the message *Unable to locate 'Avalonia.Platform.ITextShaperImpl'* might be thrown on startup. In this case, the project needs to be updated with a call to `UseHarfBuzz` on the `AppBuilder`.
 
 **Example:**
 
@@ -162,7 +162,7 @@ PR: [#20132](https://github.com/AvaloniaUI/Avalonia/pull/20132)
 In Avalonia 12, the way an Android application and its activities are initialized has changed, allowing subsequent activities to properly use the `Application` class defined in your project.
 
 1. Change your main activity to inherit from `AvaloniaMainActivity` (non-generic) instead of `AvaloniaMainActivity<TApp>` (generic).
-2. Add a new class deriving from `AvaloniaAndroidApplication<TApp>` and apply the `[Android.App.Application]` attribute to it
+2. Add a new class deriving from `AvaloniaAndroidApplication<TApp>` and apply the `[Android.App.Application]` attribute to it.
 
 **Example:**
 
@@ -189,9 +189,9 @@ PR: [#18756](https://github.com/AvaloniaUI/Avalonia/pull/18756)
 
 ## [iOS] App initialization changed
 
-In Avalonia 12, the way an iOS application is initialized has changed to use the scenes concept, which Apple will make mandatory in the near future. Read [TN3187](https://developer.apple.com/documentation/technotes/tn3187-migrating-to-the-uikit-scene-based-life-cycle) for more information.
+In Avalonia 12, the way an iOS application is initialized has changed to use the ["scenes" concept](https://developer.apple.com/documentation/technotes/tn3187-migrating-to-the-uikit-scene-based-life-cycle), which Apple will make mandatory in the near future.
 
-While most applications should work without any code changes, it's worth noting that `AvaloniaAppDelegate.Window` will remain `null` after the app is initialized, as the window is now managed internally by the scene delegate.
+While most applications should work without any code changes,`AvaloniaAppDelegate.Window` will now remain `null` after the app is initialized, as the window is now managed internally by the scene delegate.
 
 If you need to access the `UIWindow`, we recommend overriding the `AvaloniaView.MovedToWindow` method to detect when the view gets attached to it.
 
@@ -208,7 +208,7 @@ PR: [#19722](https://github.com/AvaloniaUI/Avalonia/pull/19722)
 
 ## [Browser] `Avalonia.Browser.Blazor` package removed
 
-The `Avalonia.Browser.Blazor` package served as a temporary migration step from Avalonia's old browser backend based on Blazor to a new one based on WASM (`Avalonia.Browser`). This package was no longer maintained and has been removed.
+The `Avalonia.Browser.Blazor` package served as a temporary migration step while we upgraded from Avalonia's old browser backend, based on Blazor. We have now fully moved to a new backend based on WASM (`Avalonia.Browser`). This package was no longer maintained and has been removed.
 
 Note that it is still possible to run Avalonia on top of Blazor by using the supported `Avalonia.Browser` package and its `AvaloniaView` class.
 
@@ -218,8 +218,8 @@ PR: [#20105](https://github.com/AvaloniaUI/Avalonia/pull/20105)
 ## [Headless] xUnit.net and NUnit supported versions updated
 
 The underlying test frameworks supported by Avalonia's headless platform have been updated to their latest versions. The unit tests might need updates.
-- xUnit.net support now targets version 3 (up from 2). Read xUnit.net's [official migration guide](https://xunit.net/docs/getting-started/v3/migration) to know how to migrate your unit tests.
- - NUnit support now targets version 4 (up from 3). Read NUnit's [official migration guide](https://docs.nunit.org/articles/nunit/release-notes/Nunit4.0-MigrationGuide.html) to know how to migrate your unit tests.
+- xUnit.net support now targets version 3 (up from 2). Read xUnit.net's [official migration guide](https://xunit.net/docs/getting-started/v3/migration) for how to migrate your unit tests.
+ - NUnit support now targets version 4 (up from 3). Read NUnit's [official migration guide](https://docs.nunit.org/articles/nunit/release-notes/Nunit4.0-MigrationGuide.html) for how to migrate your unit tests.
 
 PR: [#20372](https://github.com/AvaloniaUI/Avalonia/pull/20372), [#20481](https://github.com/AvaloniaUI/Avalonia/pull/20481)
 
@@ -246,9 +246,9 @@ PR: [#19203](https://github.com/AvaloniaUI/Avalonia/pull/19203), [#19753](https:
 
 ## Clipboard changes
 
-During the Avalonia 11 timeframe, the clipboard support was completely rewritten to use a new `IAsyncDataTransfer` interface and related types. To avoid breaking compatibility, the old `IDataObject` interface was kept around (and made obsolete) as a shim for the new system.
+Previously, we rewrote clipboard support to use a new `IAsyncDataTransfer` interface and related types. To avoid breaking compatibility, the old `IDataObject` interface was kept (and made obsolete) as a shim for the new system.
 
-The `IDataObject` interface has been removed, along with all methods that accept that type. Its implementation, `DataObject`, no longer does anything.
+The `IDataObject` interface has been removed in Avalonia v12, along with all methods that accept that type. Its implementation, `DataObject`, no longer does anything.
 
 The `IClipboard` interface has been simplified, with methods for reading specific formats implemented as extension methods (such as `TryGetTextAsync` and `TryGetFile`).
 
@@ -280,14 +280,14 @@ PR: [#20521](https://github.com/AvaloniaUI/Avalonia/pull/20521)
 
 ## `Dispatcher.InvokeAsync` captures the execution context
 
-This change should make most usages behave as the user would expect. `AsyncLocal` will work as expected, and impersonation and culture will flow from the caller.  
+This change should make most usages of asynchronous calls behave as the user would expect. `AsyncLocal` will work as expected, and impersonation and culture will flow from the caller.  
 
 PR: [#19163](https://github.com/AvaloniaUI/Avalonia/pull/19163)
 
 
 ## `FuncMultiValueConverter` accepts an `IReadOnlyList`
 
-This change allows indexing the values directly.   
+This change allows you to index values directly.   
 Most existing usages should be unaffected.
 
 PR: [#19936](https://github.com/AvaloniaUI/Avalonia/pull/19936)
@@ -295,7 +295,7 @@ PR: [#19936](https://github.com/AvaloniaUI/Avalonia/pull/19936)
 
 ## Data validation enabled by default in custom controls
 
-Before v12, Avalonia properties with `enableDataValidation: true` required overriding the `UpdateDataValidation` method for data validation errors to be reported for that property. Now it happens automatically, since that's what most users expect.
+Before v12, Avalonia properties with `enableDataValidation: true` required overriding the `UpdateDataValidation` method for data validation errors to be reported for that property. Now it happens automatically.
 
 We recommend removing `UpdateDataValidation` overrides that only call `DataValidationErrors.SetError`.
 
@@ -324,7 +324,7 @@ PR: [#20067](https://github.com/AvaloniaUI/Avalonia/pull/20067)
 
 ## [Windows] `Window.ExtendClientAreaToDecorationsHint` improved
 
-On Windows, several issues with the `ExtendClientAreaToDecorationsHint` property have been fixed, and this property now works in all supported scenarios. However, due to various quirks, a common workaround was for applications to add or remove margins to the affected window (notably when the window is maximized). All those workarounds should now be removed.
+On Windows, several issues with the `ExtendClientAreaToDecorationsHint` property have been fixed, and this property now works in all supported scenarios. Previously, various workarounds were suggested, such as adding or removing margins in the affected window (notably when the window is maximized). All earlier workarounds should now be removed.
 
 PR: [#20217](https://github.com/AvaloniaUI/Avalonia/pull/20217)
 
@@ -343,7 +343,7 @@ PR: [#20527](https://github.com/AvaloniaUI/Avalonia/pull/20527)
 
 Previously, the underlying virtual key triggered access keys, so accented characters or numbers could not be used as access keys.
 
-To align with other popular UI frameworks and user expectations, access keys are triggered by the symbol printed on the key, starting with Avalonia 12.
+To align with other popular UI frameworks and user expectations, access keys are now triggered by the symbol printed on the key.
 
 PR: [#20662](https://github.com/AvaloniaUI/Avalonia/pull/20662)
 
@@ -352,7 +352,7 @@ PR: [#20662](https://github.com/AvaloniaUI/Avalonia/pull/20662)
 
 The `Screen` class has several internal implementations, and the base class was constructible only for legacy reasons.
 
-In Avalonia v12, it is now abstract. Do not construct a `Screen` class; instead, get an existing instance from the members of `Screen` (e.g., `Screens.All`, `Screens.Primary`, `Screens.ScreenFromWindow`, etc.).
+In Avalonia v12, it is now abstract. Do not construct a `Screen` class. Instead, get an existing instance from its members (e.g., `Screens.All`, `Screens.Primary`, `Screens.ScreenFromWindow`, etc.).
 
 PR: [#20529](https://github.com/AvaloniaUI/Avalonia/pull/20529)
 
@@ -362,7 +362,7 @@ PR: [#20529](https://github.com/AvaloniaUI/Avalonia/pull/20529)
 For performance purposes, `ResourcesChangedEventArgs` is now a struct.
 
 Most projects never construct instances of this type, as it's mainly used through the `StyledElement.ResourcesChanged` event.
-If you were, call `ResourceChangedEventArgs.Create` instead.
+If you did construct `ResourcesChangedEventArgs`, call `ResourceChangedEventArgs.Create` instead.
 
 PR: [#20576](https://github.com/AvaloniaUI/Avalonia/pull/20576)
 
