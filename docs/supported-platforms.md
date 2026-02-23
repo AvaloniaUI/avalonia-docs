@@ -98,6 +98,3 @@ Any browser with full WebAssembly support technically should work - https://cani
 :::note
 Browser support requires .NET 8 or later. We recommend using .NET 8 (current LTS) or .NET 9 for the best experience.
 :::
-
-## Additional platform support
-Avalonia also supports Tizen and tvOS, though this is provided by the community.
