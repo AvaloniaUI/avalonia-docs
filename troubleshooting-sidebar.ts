@@ -3,18 +3,13 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
 
   documentationSidebar: [
-    {
-      type: 'category',
-      label: 'Getting Started',
-      collapsed: false,
-      items: ['index'],
-    },
+    'index',
     'installation',
     'app-performance-issues',
     {
       type: 'category',
       label: 'Controls',
-      collapsed: false,
+      collapsed: true,
       items: [
         'controls/groupbox',
         'controls/mediaplayer',
@@ -24,7 +19,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Platform-specific issues',
-      collapsed: false,
+      collapsed: true,
       items: [
         'platform-specific-issues/macos',
         'platform-specific-issues/windows'
@@ -33,7 +28,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Tools',
-      collapsed: false,
+      collapsed: true,
       items: [
         'tools/developer-tools'
       ],
@@ -41,7 +36,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'UI development',
-      collapsed: false,
+      collapsed: true,
       items: [
         'ui-development/styles',
         'ui-development/themes'
