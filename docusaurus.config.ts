@@ -327,12 +327,13 @@ const config: Config = {
           activeBasePath: '/tools'
         },
         {
+          label: 'Reference',
+          to: '/reference',
+          activeBasePath: '/reference'
+        },
+        {
           label: 'More',
           items: [
-            {label: 'Reference',
-              to: '/reference',
-              activeBasePath: '/reference'
-            },
             {
               label: 'Troubleshooting',
               to: '/troubleshooting',
@@ -341,6 +342,14 @@ const config: Config = {
             {
               label: 'Enhanced Support',
               to: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+              target: '_blank',
+              rel: null
+            },
+            {
+              href: 'https://api-docs.avaloniaui.net/docs/category/avalonia',
+              label: 'API Reference',
+              target: '_blank',
+              rel: null
             },
             {
               href: 'https://github.com/AvaloniaUI/Avalonia/discussions',
