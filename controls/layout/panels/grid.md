@@ -6,6 +6,7 @@ title: Grid
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import GridSharedSizeGroupScreenshot from '/img/controls/grid/grid-sharedsizegroup.png';
+import GridSampleScreenshot from '/img/controls/grid/grid_example.png';
 
 # Grid
 
