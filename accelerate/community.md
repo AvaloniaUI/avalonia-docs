@@ -206,12 +206,12 @@ Due to a general limitation of .NET tools, license data is not automatically rem
 
 Delete the following directory:
 ```
-%LocalAppData%/AvaloniaUI/Licensing
+%LOCALAPPDATA%\AvaloniaUI\Licensing
 ```
 
 To delete this folder:
 1. Press `Win + R` to open the Run dialog
-2. Type `%LocalAppData%/AvaloniaUI/Licensing` and press Enter
+2. Type `%LocalAppData%\AvaloniaUI\Licensing` and press Enter
 3. Delete the entire `Licensing` folder
 
 **macOS:**
