@@ -31,6 +31,7 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    "avalonia12-breaking-changes",
     {
       'type': 'category',
       'label': 'Tutorials',
