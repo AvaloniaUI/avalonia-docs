@@ -206,24 +206,36 @@ Due to a general limitation of .NET tools, license data is not automatically rem
 
 Delete the following directory:
 ```
-%LOCALAPPDATA%\Avalonia\LicenseTickets
+%LocalAppData%/AvaloniaUI/Licensing
 ```
 
 To delete this folder:
 1. Press `Win + R` to open the Run dialog
-2. Type `%LOCALAPPDATA%\Avalonia\LicenseTickets` and press Enter
-3. Delete the entire `LicenseTickets` folder
+2. Type `%LocalAppData%/AvaloniaUI/Licensing` and press Enter
+3. Delete the entire `Licensing` folder
 
-**macOS/Linux:**
+**macOS:**
 
 Delete the following directory:
 ```bash
-~/.local/share/Avalonia/LicenseTickets
+~/Library/Application Support/AvaloniaUI/Licensing
 ```
 
 To delete this folder:
 ```bash
-rm -rf ~/.local/share/Avalonia/LicenseTickets
+rm -rf ~/Library/Application Support/AvaloniaUI/Licensing
+```
+
+**Linux:**
+
+Delete the following directory:
+```bash
+~/.local/share/AvaloniaUI/Licensing
+```
+
+To delete this folder:
+```bash
+rm -rf ~/.local/share/AvaloniaUI/Licensing
 ```
 
 ### Why This Manual Step Is Necessary
