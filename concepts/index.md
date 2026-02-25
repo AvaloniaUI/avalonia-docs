@@ -57,8 +57,12 @@ This section contains pages that will help you understand more abstract concepts
 
 <DocsCards>
 
-  <DocsCard header="Data templates" href="/concepts/data-concepts/data-templates/introduction-to-data-templatesl">
+  <DocsCard header="Data templates" href="/concepts/data-concepts/data-templates/introduction-to-data-templates">
     <p>Use data templates to specify how data of a particular type should be presented.</p>
+  </DocsCard>
+
+  <DocsCard header="Compiled bindings" href="/concepts/data-concepts/data-binding/compiled-bindings">
+    <p>Avalonia uses compiled bindings by default to improve the performance of your app.</p>
   </DocsCard>
 
   <DocsCard header="Assets" href="/concepts/ui-concepts/assets">
