@@ -10,7 +10,7 @@ Most events in Avalonia are implemented as Routed Events. Routed events are even
 
 ## What Is a Routed Event
 
-A typical Avalonia application contains many elements. Whether created in code or declared in XAML, these elements exist in an element tree representing their relationshipa to each other. The event route can travel in one of two directions depending on the event definition, but generally the route travels from the source element and then "bubbles" upward through the element tree until it reaches the element tree root (typically a page or a window). This bubbling concept might be familiar to you if you have worked with the HTML DOM previously.
+A typical Avalonia application contains many elements. Whether created in code or declared in XAML, these elements exist in an element tree representing their relationship to each other. The event route can travel in one of two directions depending on the event definition, but generally the route travels from the source element and then "bubbles" upward through the element tree until it reaches the element tree root (typically a page or a window). This bubbling concept might be familiar to you if you have worked with the HTML DOM previously.
 
 ### Top-level Scenarios for Routed Events
 
