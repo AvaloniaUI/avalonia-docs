@@ -3,7 +3,7 @@ id: versioning
 title: XPF versioning
 ---
 
-For product releases, it is recommended that you use the latest stable version (see the [release notes](/xpf/release-notes)). For general development, you may choose to update to the latest development version.
+For product releases, it is recommended that you use the latest stable version (see the [release notes](/xpf/version-info/release-notes)). For general development, you may choose to update to the latest development version.
 
 The latest version can be found on our [nuget server](https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk).
 
