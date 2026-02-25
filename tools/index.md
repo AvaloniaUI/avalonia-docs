@@ -7,6 +7,19 @@ sidebar_label: Accelerate
 import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
+<head>
+  <title>Avalonia documentation: Accelerate tools</title>
+  <meta
+    name="description"
+    content="Avalonia Accelerate brings powerful enhancements and professional-grade features to supercharge your Avalonia development."
+  />
+  <style>{`
+    :root {
+      --doc-item-container-width: 60rem;
+    }
+  `}</style>
+</head>
+
 # Avalonia Accelerate
 
 Avalonia Accelerate brings powerful enhancements and professional-grade features to supercharge your Avalonia development. Designed for developers who demand more from their cross-platform applications, Accelerate combines essential productivity tools, seamless integration capabilities, and rich multimedia support—empowering you to build faster, debug smarter, and deliver polished experiences across every platform.

@@ -8,6 +8,19 @@ hide_table_of_contents: true
 import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
+<head>
+  <title>Avalonia documentation: Technical reference</title>
+  <meta
+    name="description"
+    content="This section contains detailed technical reference material for Avalonia."
+  />
+  <style>{`
+    :root {
+      --doc-item-container-width: 60rem;
+    }
+  `}</style>
+</head>
+
 This section contains detailed technical reference material for Avalonia. Use it alongside the guides, tutorials and controls library to look up specific information you need to build your application.
 
 ## Animations and graphics

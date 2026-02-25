@@ -5,6 +5,14 @@ title: Welcome
 
 Welcome to the Avalonia docs.
 
+<head>
+  <title>Avalonia documentation: Welcome</title>
+  <meta
+    name="description"
+    content="Welcome to Avalonia docs."
+  />
+</head>
+
 ## Getting started
 
 New to Avalonia? Start by setting up Avalonia, then follow through a short tutorial to be introduced to the basics.

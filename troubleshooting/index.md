@@ -8,7 +8,7 @@ import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
 <head>
-  <title>Troubleshooting</title>
+  <title>Avalonia documentation: Troubleshooting</title>
   <meta
     name="description"
     content="Find guidance on diagnosing and resolving common issues in Avalonia apps, including installation, performance, platform-specific behaviour, and UI development."

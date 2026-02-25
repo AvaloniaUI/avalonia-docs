@@ -8,7 +8,7 @@ import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
 <head>
-  <title>Avalonia samples</title>
+  <title>Avalonia documentation: Samples</title>
   <meta
     name="description"
     content="Avalonia has tons of great samples to help you get started!"

@@ -4,7 +4,15 @@ title: Welcome to Avalonia XPF
 sidebar_label: Avalonia XPF
 ---
 
-Welcome to the documentation for Avalonia XPF, our cross-platform fork of WPF. 
+<head>
+  <title>Avalonia documentation: XPF</title>
+  <meta
+    name="description"
+    content="Avalonia XPF is a powerful solution that enables WPF applications to run natively across multiple platforms."
+  />
+</head>
+
+Welcome to the documentation for Avalonia XPF, our cross-platform fork of WPF.
 
 ## Overview 
 

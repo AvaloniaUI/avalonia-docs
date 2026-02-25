@@ -9,7 +9,7 @@ import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
 <head>
-  <title>Concepts</title>
+  <title>Avalonia documentation: Concepts</title>
   <meta
     name="description"
     content="Learn background, theory and other abstract concepts used by Avalonia."
