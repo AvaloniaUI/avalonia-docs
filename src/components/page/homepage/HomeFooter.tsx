@@ -96,7 +96,7 @@ export default function HomeFooter(): JSX.Element {
               <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/about">About</a>
               <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/about#team">Team</a>
               <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/blog">Blog</a>
-              <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/faqs">FAQ</a>
+              <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/faq">FAQ</a>
               <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/brand">Brand guidelines</a>
               <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/legal">Legal center</a>
               <a className=" text-darkblue dark:text-gray-200 hover: text-darkblue dark:text-gray-200 transition-colors" href="https://avaloniaui.net/contact">Contact</a>

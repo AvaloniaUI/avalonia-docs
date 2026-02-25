@@ -13,6 +13,20 @@ Welcome to the Avalonia docs.
   />
 </head>
 
+## What is Avalonia?
+
+Avalonia is an open-source, cross-platform UI framework for creating apps with .NET. Applications built with Avalonia can be deployed to Windows, macOS, Linux, iOS, Android, WebAssembly and more.
+
+Avalonia uses its own rendering engine to draw UI controls, ensuring consistency across platforms. A single codebase, in C# or F#, is all that's needed for a uniform look and feel on any device.
+
+## Who is Avalonia for?
+
+Use Avalonia if you want to:
+
+- Build cross-platform apps from a single, shared codebase.
+- Have a consistent UI, layout and design on all devices.
+- Share code, tests and business logic across all platforms.
+
 ## Getting started
 
 New to Avalonia? Start by setting up Avalonia, then follow through a short tutorial to be introduced to the basics.
@@ -45,19 +59,6 @@ If you are migrating an existing project to Avalonia from WPF or another develop
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
   <Button label="Migrating to Avalonia" link="/docs/migration" variant="primary" outline />
 </div>
+<br />
 
 <XpfAd/>
-
-## What is Avalonia?
-
-Avalonia is an open-source, cross-platform UI framework for creating apps with .NET. Applications built with Avalonia can be deployed to Windows, macOS, Linux, iOS, Android, WebAssembly and more.
-
-Avalonia uses its own rendering engine to draw UI controls, ensuring consistency across platforms. A single codebase, in C# or F#, is all that's needed for a uniform look and feel on any device.
-
-## Who is Avalonia for?
-
-Use Avalonia if you want to:
-
-- Build cross-platform apps from a single, shared codebase.
-- Have a consistent UI, layout and design on all devices.
-- Share code, tests and business logic across all platforms.

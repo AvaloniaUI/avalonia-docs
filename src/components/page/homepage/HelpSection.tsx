@@ -26,7 +26,7 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
 
             <h3 className="my-3">Premium Support</h3>
             <p className="text-zinc-600 dark:text-zinc-400">
-            Partner with the creators of Avalonia to ensure you have the best support, every step of the way.
+            Partner with the creators of Avalonia to ensure you have full support, every step of the way.
             </p>
             <Link
               href="https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=homepage_link"
@@ -40,7 +40,7 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
 
             <h3 className="my-3">Development Services</h3>
             <p className="text-zinc-600 dark:text-zinc-400">
-              Whether it's app modernisation, custom controls or additional features, we're here to help.
+              Whether it's app modernization, custom controls or additional features, we're here to help.
             </p>
             <Link
               href="https://avaloniaui.net/services?utm_source=docs&utm_medium=referral&utm_content=homepage_link"
@@ -53,7 +53,7 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
           <div className="rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
             <h3 className="my-3">FAQs</h3>
             <p className="text-zinc-600 dark:text-zinc-400">
-              Browse through our FAQs to find answers to commonly asked
+              Browse our FAQs to find answers to commonly asked
               questions.
             </p>
             <Link href="https://avaloniaui.net/faq?utm_source=docs&utm_medium=referral&utm_content=homepage_link" className="text-primary-500 dark:text-primary-100">

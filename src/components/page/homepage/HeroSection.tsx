@@ -10,29 +10,29 @@ export default function HeroSection() {
         }}
       >
         <div className="relative z-5 flex flex-col items-center justify-between py-20">
-          <h1
-            className="mb-4 font-normal text-7xl text-white text-center"
-          >
-            Avalonia documentation
-          </h1>
-        <div className="mobile-hidden max-w-xl text-center text-3xl text-white" style={{
-          fontFamily: 'Outfit',
-          fontWeight: '400',
-          lineHeight: '41px'
-        }}>
-          Harness the power of cross-platform .NET         
-        </div>
-
-         <div className="mobile-hidden max-w-xl text-center text-3xl text-white" style={{
-          fontFamily: 'Outfit',
-          fontWeight: '400',
-          lineHeight: '41px'
-        }}>
-          One codebase. Infinite possibilities        
-        </div>
-          <div>
-           
+          <a href="/docs/welcome">
+            <h1
+              className="mb-4 font-normal text-7xl text-white text-center"
+            >
+              Avalonia documentation
+           </h1>
+          <div className="mobile-hidden max-w-xl text-center text-3xl text-white" style={{
+            fontFamily: 'Outfit',
+            fontWeight: '400',
+            lineHeight: '41px'
+         }}>
+            Harness the power of cross-platform .NET         
           </div>
+
+          <div className="mobile-hidden max-w-xl text-center text-3xl text-white" style={{
+            fontFamily: 'Outfit',
+            fontWeight: '400',
+            lineHeight: '41px'
+          }}>
+            One codebase. Infinite possibilities.     
+          </div>
+          
+          </a>
         </div>
       </section>
     </>

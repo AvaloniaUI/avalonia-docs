@@ -14,19 +14,19 @@ interface Guide {
 
 const guides: Guide[] = [
   {
-    title: 'Building Cross-Platform Applications',
-    text: 'Introduces Avalonia and outlines how to architect a cross-platform application to maximize code re-use.',
-    link: '/docs/guides/building-cross-platform-applications/',
+    title: 'Setting up a cross-platform solution',
+    text: 'Learn how to architect a cross-platform application to maximize code reusability and create a unified development environment.',
+    link: '/docs/app-development/cross-platform-solution-setup',
   },
   {
-    title: 'Data Binding',
-    text: 'Learn how to implement data binding and MVVM',
+    title: 'Data binding from code',
+    text: "Understand how to use Avalonia's data binding system to set up bindings directly from your code, enabling dynamic UI updates.",
     link: '/docs/basics/data/data-binding/',
   },
   {
-    title: 'Improving Performance',
-    text: 'Key considerations to maximise your apps performance',
-    link: '/docs/guides/development-guides/improving-performance',
+    title: 'Creating custom controls',
+    text: 'Discover how to create custom controls in Avalonia to realize your unique UI vision.',
+    link: '/docs/ui-development/custom-controls/index',
   },
 ];
 
@@ -37,7 +37,7 @@ interface Sample {
 
 const samples: Sample[] = [
   {
-    title: 'Model, View, ViewModel (MVVM)',
+    title: 'Model-View-ViewModel (MVVM)',
     source: 'https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM',
   },
   {
@@ -96,7 +96,7 @@ export default function GuidesAndSamples() {
     <section className="no-underline-links my-10 mx-auto flex w-full max-w-5xl flex-col gap-10 p-4 py-0 md:flex-row md:gap-0">
       <div className="flex-1">
         <div className="mb-8 flex items-center justify-between">
-          <h3 className="m-0">Popular how to guides</h3>
+          <h3 className="m-0">Popular how-to guides</h3>
 
           <Link to="/docs/guides" className="font-outfit text-sm font-semibold">
             View more guides <ArrowRightFilled className="ml-1" />
