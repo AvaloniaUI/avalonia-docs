@@ -10,7 +10,7 @@ Most events in Avalonia are implemented as Routed Events. Routed events are even
 
 ## What Is a Routed Event
 
-A typical Avalonia application contains many elements. Whether created in code or declared in XAML, these elements exist in an element tree relationship to each other. The event route can travel in one of two directions depending on the event definition, but generally the route travels from the source element and then "bubbles" upward through the element tree until it reaches the element tree root (typically a page or a window). This bubbling concept might be familiar to you if you have worked with the HTML DOM previously.
+A typical Avalonia application contains many elements. Whether created in code or declared in XAML, these elements exist in an element tree representing their relationshipa to each other. The event route can travel in one of two directions depending on the event definition, but generally the route travels from the source element and then "bubbles" upward through the element tree until it reaches the element tree root (typically a page or a window). This bubbling concept might be familiar to you if you have worked with the HTML DOM previously.
 
 ### Top-level Scenarios for Routed Events
 
@@ -18,7 +18,17 @@ The following is a brief summary of the scenarios that motivated the routed even
 
 **Control composition and encapsulation:** Various controls in Avalonia have a rich content model. For example, you can place an image inside of a `Button`, which effectively extends the visual tree of the button. However, the added image must not break the hit-testing behavior that causes a button to respond to a `Click` of its content, even if the user clicks on pixels that are technically part of the image.
 
-**Singular handler attachment points:** In Windows Forms, you would have to attach the same handler multiple times to process events that could be raised from multiple elements. Routed events enable you to attach that handler only once, as was shown in the previous example, and use handler logic to determine where the event came from if necessary. For instance, this might be the handler for the previously shown XAML:
+**Singular handler attachment points:** In Windows Forms, you would have to attach the same handler multiple times to process events that could be raised from multiple elements. Routed events enable you to attach a handler only once, as shown in this example:
+
+```xml
+ <Border Height="50" Width="300">
+  <StackPanel Orientation="Horizontal" Button.Click="CommonClickHandler">
+    <Button Name="YesButton">Yes</Button>
+    <Button Name="NoButton">No</Button>
+    <Button Name="CancelButton">Cancel</Button>
+  </StackPanel>
+</Border>
+```
 
 ```csharp
 private void CommonClickHandler(object sender, RoutedEventArgs e)
@@ -199,7 +209,7 @@ The Avalonia input system uses attached events extensively. However, nearly all 
 
 ## Qualified Event Names in XAML
 
-Another syntax usage that resembles _typename_._eventname_ attached event syntax but is not strictly speaking an attached event usage is when you attach handlers for routed events that are raised by child elements. You attach the handlers to a common parent, to take advantage of event routing, even though the common parent might not have the relevant routed event as a member. Consider this example again:
+Another syntax usage that resembles _typename_._eventname_ attached event syntax but is not strictly speaking an attached event usage is when you attach handlers for routed events that are raised by child elements. You attach the handlers to a common parent, to take advantage of event routing, even though the common parent might not have the relevant routed event as a member. Consider this example again, which you [examined earlier on this page](#top-level-scenarios-for-routed-events).
 
 ```xml
 <Border Height="50" Width="300">
