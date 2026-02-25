@@ -9,7 +9,7 @@ import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
 <head>
-  <title>UI Controls | User Interface Controls</title>
+  <title>Controls library</title>
   <meta
     name="description"
     content="Avalonia comes with lots of high-quality UI controls, including buttons, lists, tabs and more, to quickly and easily build your app's user interface."
