@@ -44,6 +44,12 @@ This section contains detailed technical reference material for Avalonia. Use it
   <DocsCard header="Scroll" href="/reference/gestures/scroll-gesture-recognizer" />
 </DocsCards>
 
+## Layout
+
+<DocsCards>
+  <DocsCard header="Positioning controls" href="/reference/layout/positioning-controls" />
+</DocsCards>
+
 ## Markdown
 
 <DocsCards>
@@ -62,7 +68,7 @@ This section contains detailed technical reference material for Avalonia. Use it
 ## Properties
 
 <DocsCards>
-  <DocsCard header="Positioning" href="/reference/properties/positioning" />
+
   <DocsCard header="TextTrimming" href="/reference/properties/texttrimming" />
 </DocsCards>
 

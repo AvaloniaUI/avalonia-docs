@@ -665,7 +665,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/basics/user-interface/building-layouts/alignment-margins-and-padding",
-        "to": "/reference/properties/positioning"
+        "to": "/reference/layout/positioning-controls"
     },
     {
         "from": [

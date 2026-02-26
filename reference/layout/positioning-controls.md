@@ -1,15 +1,13 @@
 ---
-id: positioning
-title: Positioning
+id: positioning-controls
+title: Positioning controls
 ---
 
-import LayoutMarginsPaddingAlignmentBasicScreenshot from '/img/reference/properties/positioning/layout-margins-padding-alignment-graphic1.png';
-import LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot from '/img/reference/properties/positioning/layout-margins-padding-alignment-graphic2.png';
-import LayoutHorizontalAlignmentScreenshot from '/img/reference/properties/positioning/layout-horizontal-alignment-graphic.png';
-import LayoutVerticalAlignmentScreenshot from '/img/reference/properties/positioning/layout-vertical-alignment-graphic.png';
-import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/reference/properties/positioning/layout-margins-padding-alignment-graphic3.png';
-
-# Positioning properties
+import LayoutMarginsPaddingAlignmentBasicScreenshot from '/img/reference/layout/positioning/layout-margins-padding-alignment-graphic1.png';
+import LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot from '/img/reference/layout/positioning/layout-margins-padding-alignment-graphic2.png';
+import LayoutHorizontalAlignmentScreenshot from '/img/reference/layout/positioning/layout-horizontal-alignment-graphic.png';
+import LayoutVerticalAlignmentScreenshot from '/img/reference/layout/positioning/layout-vertical-alignment-graphic.png';
+import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/reference/layout/positioning/layout-margins-padding-alignment-graphic3.png';
 
 An Avalonia control exposes several properties that are used to precisely position child elements. This topic discusses four of the most important properties: `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment`. The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in Avalonia applications.
 

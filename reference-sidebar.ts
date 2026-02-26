@@ -33,6 +33,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Layout',
+      collapsed: true,
+      items: [
+        'layout/positioning-controls',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Markdown',
       collapsed: true,
       items: [
@@ -56,7 +64,7 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         
-        'properties/positioning',
+
         'properties/texttrimming',
       ],
     },
