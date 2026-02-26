@@ -30,13 +30,6 @@ This section contains detailed technical reference material for Avalonia. Use it
   <DocsCard header="Bitmap Blend Modes" href="/reference/animations-and-graphics/bitmap-blend-modes" />
 </DocsCards>
 
-## Classes
-
-<DocsCards>
-  <DocsCard header="WebAuthenticationBroker" href="/reference/classes/webauthenticationbroker" />
-  <DocsCard header="WebView environment" href="/reference/classes/webview-environment" />
-</DocsCards>
-
 ## Data
 
 <DocsCards>
@@ -91,4 +84,11 @@ This section contains detailed technical reference material for Avalonia. Use it
   <DocsCard header="Pseudoclasses" href="/reference/styles/pseudoclasses" />
   <DocsCard header="Style selector syntax" href="/reference/styles/style-selector-syntax" />
   <DocsCard header="Style Selectors" href="/reference/styles/style-selectors" />
+</DocsCards>
+
+## WebView
+
+<DocsCards>
+  <DocsCard header="WebAuthenticationBroker" href="/reference/webview/webauthenticationbroker" />
+  <DocsCard header="WebView environment" href="/reference/webview/webview-environment" />
 </DocsCards>

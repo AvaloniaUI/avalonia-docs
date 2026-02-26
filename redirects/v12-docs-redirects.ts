@@ -960,11 +960,11 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/webview/webauthenticationbroker",
-        "to": "/reference/classes/webauthenticationbroker"
+        "to": "/reference/webview/webauthenticationbroker"
     },
     {
         "from": "/accelerate/components/webview/interop/environment-options",
-        "to": "/reference/classes/webview-environment"
+        "to": "/reference/webview/webview-environment"
     },
     {
         "from": [

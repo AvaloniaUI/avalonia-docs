@@ -15,15 +15,6 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Classes',
-      collapsed: true,
-      items: [
-        'classes/webauthenticationbroker',
-        'classes/webview-environment',
-      ],
-    },
-    {
-      type: 'category',
       label: 'Data',
       collapsed: true,
       items: [
@@ -95,6 +86,15 @@ const sidebars: SidebarsConfig = {
         'styles/pseudoclasses',
         'styles/style-selector-syntax',
         'styles/markdown-styling',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'WebView',
+      collapsed: true,
+      items: [
+        'webview/webauthenticationbroker',
+        'webview/webview-environment',
       ],
     },
   ],

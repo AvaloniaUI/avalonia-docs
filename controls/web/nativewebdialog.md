@@ -94,7 +94,7 @@ Fired before the underlying webview adapter is created, allowing customization o
 Use this event to modify environment options (such as enabling private mode or dev tools) before the webview is initialized.
 The event argument type depends on the platform.
 
-See the page on [environment options](/reference/classes/webview-environment) for details.
+See the page on [environment options](/reference/webview/webview-environment) for details.
 
 ### NavigationCompleted
 
@@ -335,7 +335,7 @@ await tcs.Task;
 ## See also
 
 - [NativeWebView](/controls/web/nativewebview)
-- [WebAuthenticationBroker](/reference/classes/webauthenticationbroker)
-- [WebView environment options](/reference/classes/webview-environment)
+- [WebAuthenticationBroker](/reference/webview/webauthenticationbroker)
+- [WebView environment options](/reference/webview/webview-environment)
 - [Embedding web content](/docs/app-development/embedding-web-content)
 - [FAQ](/tools/faq#webview)

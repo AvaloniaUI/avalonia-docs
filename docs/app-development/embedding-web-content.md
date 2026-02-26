@@ -22,7 +22,7 @@ The WebView component includes three main APIs:
 
 - [`NativeWebView`](/controls/web/nativewebview) - A control for embedding web content directly in your application UI
 - [`NativeWebDialog`](/controls/web/nativewebdialog) - A separate dialog window that hosts web content
-- [`WebAuthenticationBroker`](/reference/classes/webauthenticationbroker) - A utility for handling OAuth and web-based authentication flows
+- [`WebAuthenticationBroker`](/reference/webview/webauthenticationbroker) - A utility for handling OAuth and web-based authentication flows
 
 The WebView component is available with both [Avalonia Accelerate](/tools) and [Avalonia XPF](/xpf). All functionalities and configuration options are shared by both.
 
@@ -369,6 +369,6 @@ public interface IAndroidWebViewPlatformHandle : IPlatformHandle
 
 - [NativeWebView](/controls/web/nativewebview)
 - [NativeWebDialog](/controls/web/nativewebdialog)
-- [WebAuthenticationBroker](/reference/classes/webauthenticationbroker)
-- [WebView environment options](reference/classes/webview-environment)
+- [WebAuthenticationBroker](/reference/webview/webauthenticationbroker)
+- [WebView environment options](/reference/webview/webview-environment)
 - [FAQ](/tools/faq#webview)
