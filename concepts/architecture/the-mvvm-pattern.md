@@ -57,11 +57,11 @@ For a full list of the _Avalonia UI_ built-in controls, see the reference sectio
 :::
 
 :::info
-To learn more about the concept of UI composition, see [here](../ui-composition.md).
+To learn more about the concept of UI composition, see [here](/concepts/core-concepts/ui-composition).
 :::
 
 :::info
-To learn how to design and implement your own controls, see [here](/docs/guides/custom-controls/how-to-create-a-custom-controls-library.md).
+To learn how to design and implement your own controls, see [here](/docs/ui-development/custom-controls/index).
 :::
 
 ### Data Binding

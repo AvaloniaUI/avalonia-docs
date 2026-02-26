@@ -182,7 +182,7 @@ Pros:
 * No additional object is allocated per-instance for the property
 * Property getter is a standard C# property getter
 * Property setter is a standard C# property setter that raises an event.
-* You can add [data validation](/docs/guides/development-guides/data-validation.md) support
+* You can add [data validation](/docs/data/data-validation) support
 
 Cons:
 
@@ -210,7 +210,7 @@ public static readonly DirectProperty<MyControl, int> ValueProperty =
         enableDataValidation: true);
 ```
 
-If you want to [re-use a direct property of another class](how-to-create-advanced-custom-controls.md#using-a-directproperty-on-another-class) you can also enable data validation. In this case use `AddOwnerWithDataValidation`.
+If you want to [re-use a direct property of another class](#using-a-directproperty-on-another-class) you can also enable data validation. In this case use `AddOwnerWithDataValidation`.
 
 **Example: TextBox.TextProperty property re-uses TextBlock.TextProperty but adds validation support**
 

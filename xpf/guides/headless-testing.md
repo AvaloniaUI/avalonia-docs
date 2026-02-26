@@ -45,7 +45,7 @@ It's necessary to include integration nuget package in the testing project:
 
 Similarly to Avalonia headless, you can configure cross-platform `AppBuilder` to be used in the project.
 When not defined, headless platform is using default parameters, which might limit your XPF testing experience.
-Note, if you already override AppBuilder for your XPF app (as per [Customizing Initialization](./customizing-init.md) documentation), you can reuse the same initialization code, but add `.UseHeadless()` in the end of the chain.
+Note, if you already override AppBuilder for your XPF app (as per [Customizing Initialization](/xpf/guides/customizing-initialization) documentation), you can reuse the same initialization code, but add `.UseHeadless()` in the end of the chain.
 
 ```csharp
 [assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]

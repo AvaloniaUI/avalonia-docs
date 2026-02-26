@@ -214,7 +214,7 @@ So, extending the example XAML to supply the parameter (string) from a text box:
 ```
 
 :::info
-This example uses the technique of binding directly to another control. You can see how to do this, [here](binding-to-controls.md).
+This example uses the technique of binding directly to another control. You can see how to do this, [here](/docs/data/binding-to-controls).
 :::
 
 You will see that the button becomes enables only when the text box contains a string. 

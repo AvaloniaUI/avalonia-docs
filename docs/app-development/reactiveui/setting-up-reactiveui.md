@@ -1,6 +1,7 @@
 ---
 id: setting-up-reactiveui
 title: Setting up ReactiveUI
+sidebar_position: 1
 ---
 
 import ReactiveUINuGetScreenshot from '/img/guides/app-development/reactiveui/reactiveui-nuget.png';

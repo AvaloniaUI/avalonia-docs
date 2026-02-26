@@ -34,7 +34,7 @@ Templated controls (also known as "Lookless controls") provide a more advanced a
 With templated controls, you define the control's behavior and properties in a code-behind class, while the visual representation is specified through control templates defined in XAML. This separation allows the application developer to customize the look and feel of the control without modifying its underlying behavior.
 
 :::info
-Templated controls are typically used for general-purpose user-interface elements that are not specific to business logic and may require different themes or visual styles. Most of the [built-in controls](../builtin-controls.md) supplied by Avalonia are templated controls.
+Templated controls are typically used for general-purpose user-interface elements that are not specific to business logic and may require different themes or visual styles. Most of the [built-in controls](/controls) supplied by Avalonia are templated controls.
 :::
 
 Creating a templated control involves the following steps:

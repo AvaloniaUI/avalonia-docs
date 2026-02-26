@@ -96,7 +96,7 @@ If `Width` or `Height` are underlined that means there is an active constraint. 
 
 ### Styles
 
-While [properties](developer-tools.md#properties) panel shows currently active values of properties, styles panel shows all values and origin of the value.
+While [properties](#properties) panel shows currently active values of properties, styles panel shows all values and origin of the value.
 
 Additionally one can see all styles that could potentially match this control (by toggling `Show inactive` option).
 

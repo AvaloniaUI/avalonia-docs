@@ -22,7 +22,7 @@ You will probably use these properties most often:
 In this example the slider value is displayed in the text block below, using binding to a control.
 
 :::info
-To review how to bind one control to another, see the guide [here](/docs/guides/data-binding/binding-to-controls.md).
+To review how to bind one control to another, see the guide [here](/docs/data/binding-to-controls).
 :::
 
 Here the maximum and minimum values are default (0 and 100 respectively).
@@ -60,7 +60,7 @@ In this example, the slider value is bound to the text box above using binding t
 ```
 
 ### ViewModels
-- You can choose [ReactiveUI](/docs/concepts/reactiveui/index.md) or [CommunityToolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/) when creating a project.
+- You can choose [ReactiveUI](/docs/app-development/reactiveui/setting-up-reactiveui) or [CommunityToolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/) when creating a project.
 - The ViewModel code will change depending on which one you select.
 - It doesn't matter which you choose, but here i will only detail how to binding using ReactiveUI.
 
