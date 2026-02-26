@@ -46,31 +46,33 @@
 }
 
 // Dark theme overrides
+// NOTE: --color-gray-700/800/900 are remapped to light colors in dark mode by _variables.scss
+// (they serve as foreground/text colors). Use --docs-color-background-* for dark backgrounds instead.
 html[data-theme='dark'] {
   --docsearch-text-color: var(--color-gray-300);
   --docsearch-muted-color: var(--color-gray-400);
   --docsearch-container-background: rgba(0, 0, 0, 0.6);
 
   // Input
-  --docsearch-searchbox-background: var(--color-gray-800);
-  --docsearch-searchbox-focus-background: var(--color-gray-900);
-  --docsearch-searchbox-shadow: inset 0 0 0 1px var(--color-gray-700);
+  --docsearch-searchbox-background: var(--docs-color-background-100);
+  --docsearch-searchbox-focus-background: var(--docs-color-background);
+  --docsearch-searchbox-shadow: inset 0 0 0 1px var(--docs-color-border);
 
   // Modal
-  --docsearch-modal-background: var(--color-gray-900);
+  --docsearch-modal-background: var(--docs-color-background);
   --docsearch-modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 
   // Hit
-  --docsearch-hit-background: var(--color-gray-800);
+  --docsearch-hit-background: var(--docs-color-background-100);
   --docsearch-hit-color: var(--color-gray-300);
 
   // Footer
-  --docsearch-footer-background: var(--color-gray-900);
-  --docsearch-footer-shadow: inset 0 1px 0 0 var(--color-gray-700);
+  --docsearch-footer-background: var(--docs-color-background);
+  --docsearch-footer-shadow: inset 0 1px 0 0 var(--docs-color-border);
 
   // Keys
-  --docsearch-key-gradient: linear-gradient(-26.5deg, var(--color-gray-700) 0%, var(--color-gray-800) 100%);
-  --docsearch-key-shadow: inset 0 -1px 0 var(--color-gray-600), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --docsearch-key-gradient: linear-gradient(-26.5deg, var(--docs-color-background-200) 0%, var(--docs-color-background-100) 100%);
+  --docsearch-key-shadow: inset 0 -1px 0 var(--docs-color-border), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 
   // Logo
   --docsearch-logo-color: var(--color-gray-400);
@@ -156,10 +158,10 @@ html[data-theme='dark'] {
 
 html[data-theme='dark'] .DocSearch-Button {
   background: var(--docsearch-searchbox-background);
-  border-color: var(--color-gray-700);
+  border-color: var(--docs-color-border);
 
   &:hover {
-    background: var(--color-gray-700);
+    background: var(--docs-color-background-200);
     border-color: var(--color-gray-600);
   }
 
@@ -222,7 +224,7 @@ html[data-theme='dark'] .DocSearch-Button {
 }
 
 html[data-theme='dark'] .DocSearch-Modal {
-  border-color: var(--color-gray-700);
+  border-color: var(--docs-color-border);
 }
 
 // =============================================================================
@@ -235,7 +237,7 @@ html[data-theme='dark'] .DocSearch-Modal {
 }
 
 html[data-theme='dark'] .DocSearch-SearchBar {
-  border-bottom-color: var(--color-gray-700);
+  border-bottom-color: var(--docs-color-border);
 }
 
 .DocSearch-Form {
@@ -254,11 +256,11 @@ html[data-theme='dark'] .DocSearch-SearchBar {
 }
 
 html[data-theme='dark'] .DocSearch-Form {
-  background: var(--color-gray-800);
+  background: var(--docs-color-background-100);
   border-color: var(--color-gray-600);
 
   &:focus-within {
-    background: var(--color-gray-900);
+    background: var(--docs-color-background);
     border-color: var(--color-brand-500);
   }
 }
@@ -435,10 +437,10 @@ html[data-theme='dark'] .DocSearch-Hit-source {
 }
 
 html[data-theme='dark'] .DocSearch-Hit a {
-  background: var(--color-gray-800);
+  background: var(--docs-color-background-100);
 
   &:hover {
-    background: var(--color-gray-700);
+    background: var(--docs-color-background-200);
     border-color: var(--color-gray-600);
   }
 }
@@ -547,7 +549,7 @@ html[data-theme='dark'] .DocSearch-Prefill:hover {
 }
 
 html[data-theme='dark'] .DocSearch-Footer {
-  border-top-color: var(--color-gray-700);
+  border-top-color: var(--docs-color-border);
 }
 
 .DocSearch-Logo {

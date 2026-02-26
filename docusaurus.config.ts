@@ -340,8 +340,19 @@ const config: Config = {
               activeBasePath: '/troubleshooting'
             },
             {
+              label: 'Avalonia XPF',
+              to: '/xpf',
+              activeBasePath: '/xpf'
+            },
+            {
+              label: 'Log in',
+              href: 'https://portal.avaloniaui.net',
+              target: '_blank',
+              rel: null
+            },
+            {
               label: 'Enhanced Support',
-              to: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+              href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
               target: '_blank',
               rel: null
             },
@@ -371,11 +382,6 @@ const config: Config = {
           value: '<div class="separator" aria-hidden></div>',
         },
         {
-          label: 'Avalonia XPF',
-          to: '/xpf',
-          activeBasePath: '/xpf'
-        },
-        {
           type: 'search',
           position: 'right',
         },
@@ -389,12 +395,6 @@ const config: Config = {
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
-        },
-        {
-          label: 'Log in',
-          href: 'https://portal.avaloniaui.net',
-          position: 'right',
-          target: '_blank',
         },
       ],
     },
