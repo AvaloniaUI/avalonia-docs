@@ -33,8 +33,6 @@ This section contains detailed technical reference material for Avalonia. Use it
 ## Classes
 
 <DocsCards>
-  <DocsCard header="MediaPlayer" href="/reference/media-player/mediaplayer" />
-  <DocsCard header="MediaSource" href="/reference/media-player/mediasource" />
   <DocsCard header="WebAuthenticationBroker" href="/reference/classes/webauthenticationbroker" />
   <DocsCard header="WebView environment" href="/reference/classes/webview-environment" />
 </DocsCards>
@@ -51,6 +49,13 @@ This section contains detailed technical reference material for Avalonia. Use it
   <DocsCard header="Pinch" href="/reference/gestures/pinch-gesture-recognizer" />
   <DocsCard header="Pull" href="/reference/gestures/pull-gesture-recognizer" />
   <DocsCard header="Scroll" href="/reference/gestures/scroll-gesture-recognizer" />
+</DocsCards>
+
+## Media player
+
+<DocsCards>
+  <DocsCard header="MediaPlayer" href="/reference/media-player/mediaplayer" />
+  <DocsCard header="MediaSource" href="/reference/media-player/mediasource" />
 </DocsCards>
 
 ## Properties
