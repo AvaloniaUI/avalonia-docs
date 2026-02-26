@@ -916,15 +916,15 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/markdown/custom-image-loader",
-        "to": "/reference/properties/imageloader"
+        "to": "/reference/markdown/imageloader"
     },
     {
         "from": "/accelerate/components/markdown/code-highlighter",
-        "to": "/reference/properties/codehighlighter"
+        "to": "/reference/markdown/codehighlighter"
     },
     {
         "from": "/accelerate/components/markdown/styling",
-        "to": "/reference/styles/markdown-styling"
+        "to": "/reference/markdown/markdown-styling"
     },
     {
         "from": "/accelerate/components/virtual-keyboard/getting-started",

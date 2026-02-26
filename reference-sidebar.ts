@@ -33,6 +33,16 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Markdown',
+      collapsed: true,
+      items: [
+        'markdown/codehighlighter',
+        'markdown/imageloader',
+        'markdown/markdown-styling',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Media player',
       collapsed: true,
       items: [
@@ -45,8 +55,7 @@ const sidebars: SidebarsConfig = {
       label: 'Properties',
       collapsed: true,
       items: [
-        'properties/codehighlighter',
-        'properties/imageloader',
+        
         'properties/positioning',
         'properties/texttrimming',
       ],
@@ -85,7 +94,6 @@ const sidebars: SidebarsConfig = {
         'styles/property-setters',
         'styles/pseudoclasses',
         'styles/style-selector-syntax',
-        'styles/markdown-styling',
       ],
     },
     {

@@ -52,8 +52,11 @@ var markdown = new Markdown
 
 ## Styling
 
-You can override named resources for custom styling. See the [Markdown control](/controls/data-display/text-display/markdown) page for details.
+You can override named resources for custom styling. See the [Markdown styling](/reference/markdown/markdown-styling) page for details.
 
 ## See also
 
 - [Markdown control](/controls/data-display/text-display/markdown)
+- [Code highligher](/reference/markdown/codehighlighter)
+- [Image loader](/reference/markdown/imageloader)
+- [Markdown styling](/reference/markdown/markdown-styling)

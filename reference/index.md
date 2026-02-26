@@ -44,6 +44,14 @@ This section contains detailed technical reference material for Avalonia. Use it
   <DocsCard header="Scroll" href="/reference/gestures/scroll-gesture-recognizer" />
 </DocsCards>
 
+## Markdown
+
+<DocsCards>
+  <DocsCard header="CodeHighlighter" href="/reference/markdown/codehighlighter" />
+  <DocsCard header="ImageLoader" href="/reference/markdown/imageloader" />
+  <DocsCard header="Markdown styling" href="/reference/markdown/markdown-styling" />
+</DocsCards>
+
 ## Media player
 
 <DocsCards>
@@ -54,8 +62,6 @@ This section contains detailed technical reference material for Avalonia. Use it
 ## Properties
 
 <DocsCards>
-  <DocsCard header="CodeHighlighter" href="/reference/properties/codehighlighter" />
-  <DocsCard header="ImageLoader" href="/reference/properties/imageloader" />
   <DocsCard header="Positioning" href="/reference/properties/positioning" />
   <DocsCard header="TextTrimming" href="/reference/properties/texttrimming" />
 </DocsCards>
@@ -79,7 +85,6 @@ This section contains detailed technical reference material for Avalonia. Use it
 ## Styles
 
 <DocsCards>
-  <DocsCard header="Markdown styling" href="/reference/styles/markdown-styling" />
   <DocsCard header="Property setters" href="/reference/styles/property-setters" />
   <DocsCard header="Pseudoclasses" href="/reference/styles/pseudoclasses" />
   <DocsCard header="Style selector syntax" href="/reference/styles/style-selector-syntax" />

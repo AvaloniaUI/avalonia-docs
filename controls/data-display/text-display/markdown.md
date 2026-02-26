@@ -138,15 +138,15 @@ var markdown = new Markdown
 
 ## Custom Image Loader
 
-See the [Image Loader](/reference/properties/imageloader) page for a detailed example how to customize image loading.
+See the [Image Loader](/reference/markdown/imageloader) page for a detailed example how to customize image loading.
 
 ## Code Highlighter
 
-See the [Code Highlighter](/reference/properties/codehighlighter) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
+See the [Code Highlighter](/reference/markdown/codehighlighter) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
 
 ## Styling
 
-See the [Markdown Styling and Customization](/reference/styles/markdown-styling) page for a full list of resources you can override.
+See the [Markdown styling](/reference/markdown/markdown-styling) page for a full list of resources you can override.
 
 ## See also
 
