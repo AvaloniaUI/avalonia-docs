@@ -65,13 +65,6 @@ This section contains detailed technical reference material for Avalonia. Use it
   <DocsCard header="MediaSource" href="/reference/media-player/mediasource" />
 </DocsCards>
 
-## Properties
-
-<DocsCards>
-
-  <DocsCard header="TextTrimming" href="/reference/properties/texttrimming" />
-</DocsCards>
-
 ## Services
 
 <DocsCards>
@@ -95,6 +88,12 @@ This section contains detailed technical reference material for Avalonia. Use it
   <DocsCard header="Pseudoclasses" href="/reference/styles/pseudoclasses" />
   <DocsCard header="Style selector syntax" href="/reference/styles/style-selector-syntax" />
   <DocsCard header="Style Selectors" href="/reference/styles/style-selectors" />
+</DocsCards>
+
+## Text
+
+<DocsCards>
+  <DocsCard header="TextTrimming" href="/reference/text/texttrimming" />
 </DocsCards>
 
 ## WebView

@@ -4,12 +4,12 @@ title: TextTrimming
 description: About the TextTrimming property
 ---
 
-import CharacterEllipsis from '/img/reference/properties/texttrimming/texttrimming-characterellipsis.png';
-import LeadingCharacterEllipsis from '/img/reference/properties/texttrimming/texttrimming-leadingcharacterellipsis.png';
-import NoTrimming from '/img/reference/properties/texttrimming/texttrimming-none.png';
-import PrefixCharacterEllipsis from '/img/reference/properties/texttrimming/texttrimming-prefixcharacterellipsis.png';
-import WordEllipsis from '/img/reference/properties/texttrimming/texttrimming-wordellipsis.png';
-import TextWrappingWithTextTrimming from '/img/reference/properties/texttrimming/textwrapping-with-texttrimming.png';
+import CharacterEllipsis from '/img/reference/text/texttrimming/texttrimming-characterellipsis.png';
+import LeadingCharacterEllipsis from '/img/reference/text/texttrimming/texttrimming-leadingcharacterellipsis.png';
+import NoTrimming from '/img/reference/text/texttrimming/texttrimming-none.png';
+import PrefixCharacterEllipsis from '/img/reference/text/texttrimming/texttrimming-prefixcharacterellipsis.png';
+import WordEllipsis from '/img/reference/text/texttrimming/texttrimming-wordellipsis.png';
+import TextWrappingWithTextTrimming from '/img/reference/text/texttrimming/textwrapping-with-texttrimming.png';
 
 # TextTrimming
 

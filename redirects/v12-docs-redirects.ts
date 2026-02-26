@@ -868,7 +868,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/reference/properties/texttrimming",
-        "to": "/reference/properties/texttrimming"
+        "to": "/reference/text/texttrimming"
     },
     {
         "from": "/docs/reference/styles/pseudo-classes",

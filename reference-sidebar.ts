@@ -60,16 +60,6 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Properties',
-      collapsed: true,
-      items: [
-        
-
-        'properties/texttrimming',
-      ],
-    },
-    {
-      type: 'category',
       label: 'Services',
       collapsed: true,
       items: [
@@ -102,6 +92,14 @@ const sidebars: SidebarsConfig = {
         'styles/property-setters',
         'styles/pseudoclasses',
         'styles/style-selector-syntax',
+      ],
+    },
+        {
+      type: 'category',
+      label: 'Text',
+      collapsed: true,
+      items: [
+        'text/texttrimming',
       ],
     },
     {
