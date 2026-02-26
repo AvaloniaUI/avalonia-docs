@@ -900,11 +900,11 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/media-player/mediaplayer",
-        "to": "/reference/classes/mediaplayer"
+        "to": "/reference/media-player/mediaplayer"
     },
     {
         "from": "/accelerate/components/media-player/mediasource",
-        "to": "/reference/classes/mediasource"
+        "to": "/reference/media-player/mediasource"
     },
     {
         "from": "/accelerate/components/markdown/quickstart",

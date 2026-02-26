@@ -33,8 +33,8 @@ This section contains detailed technical reference material for Avalonia. Use it
 ## Classes
 
 <DocsCards>
-  <DocsCard header="MediaPlayer" href="/reference/classes/mediaplayer" />
-  <DocsCard header="MediaSource" href="/reference/classes/mediasource" />
+  <DocsCard header="MediaPlayer" href="/reference/media-player/mediaplayer" />
+  <DocsCard header="MediaSource" href="/reference/media-player/mediasource" />
   <DocsCard header="WebAuthenticationBroker" href="/reference/classes/webauthenticationbroker" />
   <DocsCard header="WebView environment" href="/reference/classes/webview-environment" />
 </DocsCards>

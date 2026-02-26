@@ -18,8 +18,6 @@ const sidebars: SidebarsConfig = {
       label: 'Classes',
       collapsed: true,
       items: [
-        'classes/mediaplayer',
-        'classes/mediasource',
         'classes/webauthenticationbroker',
         'classes/webview-environment',
       ],
@@ -40,6 +38,15 @@ const sidebars: SidebarsConfig = {
         'gestures/pinch-gesture-recognizer',
         'gestures/pull-gesture-recognizer',
         'gestures/scroll-gesture-recognizer',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Media player',
+      collapsed: true,
+      items: [
+        'media-player/mediaplayer',
+        'media-player/mediasource',
       ],
     },
     {
