@@ -21,6 +21,7 @@ const config: Config = {
   organizationName: 'avaloniaui',
   projectName: 'avalonia',
   onBrokenLinks: 'warn',
+  onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
   headTags: [
     {
