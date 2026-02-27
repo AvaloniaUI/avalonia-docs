@@ -1,3 +1,6 @@
+// No longer in use as of Avalonia v12, but kept for reference and potential future use.
+// Relevant redirects have been incorporated in v12-docs-redirects.ts
+
 interface Redirect {
   from: string | string[];
   to: string;
