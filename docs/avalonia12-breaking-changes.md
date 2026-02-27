@@ -1,6 +1,7 @@
 ---
 id: avalonia12-breaking-changes
-title: Avalonia 12 breaking changes
+title: Breaking changes in Avalonia 12
+sidebar_label: Breaking changes
 toc_max_heading_level: 2
 ---
 
