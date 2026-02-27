@@ -45,8 +45,6 @@ The following XAML shows how to create a vertical stack panel. The result shows 
 
 The following example demonstrates how to use a `StackPanel` to create a set of vertically-positioned buttons. For horizontal positioning, set the `Orientation` property to `Horizontal`.
 
-<img className="center" src={StackPanelSampleScreenshot} alt="StackPanel Example" />
-
 <Tabs
   defaultValue="xaml"
   values={[
