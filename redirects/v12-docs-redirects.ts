@@ -59,7 +59,7 @@ const redirects: Redirect[] = [
             "/docs/guides/implementation-guides/how-to-use-design-time-data",
             "/accelerate/tools/vs-extension/previewer"
         ],
-        "to": "/docs/ui-development/xaml-previewer"
+        "to": "/docs/ui-development/xaml-preview-and-design-settings"
     },
     {
         "from": "/docs/guides/implementation-guides/how-to-implement-dependency-injection",
@@ -208,7 +208,7 @@ const redirects: Redirect[] = [
             "/docs/ui-development/custom-controls/index",
             "/docs/concepts/templated-controls",
         ],
-        "to": "/docs/ui-development/custom-controls/creating-custom-controls"
+        "to": "/docs/ui-development/custom-controls/index"
     },
     {
         "from": [
@@ -314,7 +314,7 @@ const redirects: Redirect[] = [
             "/docs/guides/platforms/android/build-and-run-your-application-on-a-simulator",
             "/docs/guides/platforms/android/setting-up-your-developer-environment-for-android"
         ],
-        "to": "/docs/platform-specific-guides/android/android"
+        "to": "/docs/platform-specific-guides/android/"
     },
     {
         "from": "/docs/guides/platforms/android/configure-vscode-debug-linux",
@@ -390,7 +390,7 @@ const redirects: Redirect[] = [
             "/docs/basics/user-interface/controls/builtin-controls",
             "/docs/basics/user-interface/building-layouts/panels-overview"
         ],
-        "to": "/controls/index"
+        "to": "/controls"
     },
     {
         "from": "/docs/reference/animation-settings",
@@ -404,7 +404,7 @@ const redirects: Redirect[] = [
             "/docs/reference/properties/index",
             "/docs/reference/styles/index",
         ],
-        "to": "/reference/index"
+        "to": "/reference"
     },
     {
         "from": "/docs/reference/built-in-data-binding-converters",
@@ -734,7 +734,7 @@ const redirects: Redirect[] = [
             "/accelerate/components/treedatagrid/quickstart-flat",
             "/accelerate/components/treedatagrid/quickstart-hierarchical",
         ],
-        "to": "/controls/data-display/structured-data/treedatagrid/index"
+        "to": "/controls/data-display/structured-data/treedatagrid/"
     },
     {
         "from": [
@@ -778,7 +778,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/tutorials/samples",
-        "to": "/samples/index"
+        "to": "/samples"
     },
     {
         "from": [
@@ -857,7 +857,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/styling/troubleshooting",
-        "to": "/troubleshooting/ui-development/styling"
+        "to": "/troubleshooting/ui-development/styles"
     },
     {
         "from": "/docs/basics/user-interface/styling/troubleshooting",
@@ -1006,7 +1006,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/input/hotkeys",
-        "to": "/concepts/ui-concepts/user-input/hotkeys"
+        "to": "/concepts/ui-concepts/user-input/keyboard-and-hotkeys"
     },
     {
         "from": "/docs/input/routed-events",
@@ -1090,7 +1090,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/welcome",
-        "to": "/tools/index"
+        "to": "/tools"
     },
     {
         "from": "/accelerate/installation",
@@ -1102,7 +1102,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/media-player/quickstart",
-        "to": "/docs/guides/media/media-playback"
+        "to": "/docs/media/media-playback"
     },
     {
         "from": "/accelerate/components/media-player/mediaplayercontrol",
