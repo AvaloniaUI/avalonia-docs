@@ -521,12 +521,12 @@ Resolution: remove the usages.
 PR: [#19133](https://github.com/AvaloniaUI/Avalonia/pull/19133)
 
 ### `Avalonia.Data.IBinding` interface
-Reason: see the [Binding changes](#binding-changes) section.  
+Reason: see the [Binding changes](#binding-class-hierarchy-changes) section.  
 Resolution: use `Avalonia.Data.BindingBase` instead.  
 PR: [#19589](https://github.com/AvaloniaUI/Avalonia/pull/19589)
 
 ### `Avalonia.Data.InstancedBinding` class
-Reason: see the [Binding changes](#binding-changes) section.    
+Reason: see the [Binding changes](#binding-class-hierarchy-changes) section.    
 Resolution: use `Avalonia.Data.BindingExpressionBase` instead.  
 PR: [#19589](https://github.com/AvaloniaUI/Avalonia/pull/19589)
 

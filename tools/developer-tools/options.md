@@ -76,7 +76,7 @@ Possible options are:
 3. Any user implementation of `DiagnosticLogger` abstract interface.
 
 :::note
-To learn more about `Developer Tools` logging, please read [Reporting Issues](/docs/development-optimization/developer-tools/installation#reportingissues).
+To learn more about `Developer Tools` logging, please read [Reporting Issues](/troubleshooting/tools/developer-tools).
 :::
 
 ## DeveloperToolsOptions.LoggerCollector

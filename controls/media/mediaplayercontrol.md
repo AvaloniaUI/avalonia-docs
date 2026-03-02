@@ -56,8 +56,8 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
 | PlayPauseCommand    | ICommand | Gets the command that toggles between play and pause states.          |
 | StopCommand         | ICommand | Gets the command that stops playback.                                 |
 | MuteCommand         | ICommand | Gets the command that toggles audio muting.                           |
-| SkipForwardCommand  | ICommand | Gets the command that skips forward by [SkipTime](#skipTime) amount.  |
-| SkipBackwardCommand | ICommand | Gets the command that skips backward by [SkipTime](#skipTime) amount. |
+| SkipForwardCommand  | ICommand | Gets the command that skips forward by [SkipTime](#playback-properties) amount.  |
+| SkipBackwardCommand | ICommand | Gets the command that skips backward by [SkipTime](#playback-properties) amount. |
 
 ## Events
 
