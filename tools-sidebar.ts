@@ -30,6 +30,7 @@ const sidebars: SidebarsConfig = {
         'developer-tools/events-tool',
         'developer-tools/logs-tool',
         'developer-tools/metrics-tool',
+        'developer-tools/profiler-tool',
         'developer-tools/resources-tool',
       ],
     },
