@@ -10,7 +10,7 @@ export default function HeroSection() {
         }}
       >
         <div className="relative z-5 flex flex-col items-center justify-between py-20">
-          <a href="/docs/welcome">
+          <a href="/docs/welcome" className="flex flex-col items-center">
             <h1
               className="mb-4 font-normal text-7xl text-white text-center"
             >
