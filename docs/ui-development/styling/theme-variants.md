@@ -7,7 +7,7 @@ import OverriddenThemeVariant from '/img/guides/ui-development/overridden-theme-
 import CustomThemeDictionaries from '/img/guides/ui-development/custom-theme-dictionaries.png';
 
 :::tip
-Because theme variants are deeply integrated into resources system, it is important to understand the Avalonia [resources](/docs/guides/ui-development/resource-dictionary).
+Because theme variants are deeply integrated into resources system, it is important to understand the Avalonia [resources](/docs/ui-development/resource-dictionary).
 :::
 
 ## Introduction

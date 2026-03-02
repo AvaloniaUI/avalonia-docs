@@ -115,4 +115,4 @@ window.Closing += (s, e) =>
 
 ## Additional Resources
 
-- The [Main Window](/concepts/core-concepts/the-main-window)
+- The [Main Window](/concepts/core-concepts/main-window)

@@ -60,7 +60,7 @@ Avalonia has tons of great samples to help you get started!
 
 <DocsCards>
 
-  <DocsCard header="Basic DataTemplate" href=" https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/BasicDataTemplateSample">
+  <DocsCard header="Basic DataTemplate" href="https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/BasicDataTemplateSample">
     <p>Use DataTemplates to control how your data is displayed.</p>
   </DocsCard>
 

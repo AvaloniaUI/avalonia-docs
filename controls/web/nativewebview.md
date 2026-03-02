@@ -309,7 +309,7 @@ Asynchronously delays destruction of the native control during parent changes.
 
 :::note
 
-For Linux support, please use [NativeWebDialog](controls/web/nativewebdialog)
+For Linux support, please use [NativeWebDialog](/controls/web/nativewebdialog)
 
 :::
 

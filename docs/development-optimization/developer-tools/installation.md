@@ -174,7 +174,7 @@ After activation, the connection with the app will be resumed, and a window with
 - Documentation on [Elements tool](/tools/developer-tools/elements-tool)
 - Custom [DeveloperToolsOptions configuration](/tools/developer-tools/options) reference
 - [Model context protocol (MCP)](/tools/developer-tools/mcp)
-- [Frequently Asked Questions](/tools//faq)
+- [Frequently Asked Questions](/tools/faq)
 - [Settings](/tools/developer-tools/settings)
 - [Shortcuts](/tools/developer-tools/shortcuts)
 - [Attaching Browser or Mobile applications](/docs/development-optimization/developer-tools/attaching-applications)

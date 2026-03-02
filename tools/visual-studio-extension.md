@@ -4,7 +4,7 @@ title: Avalonia for Visual Studio extension
 sidebar_label: Visual Studio extension
 ---
 
-import TestXamlPreviewer from '/img/guides/ui-development/preview-and-design-time/test-xaml-previewer.png';
+import TestXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/test-xaml-previewer.png';
 
 ## Features
 
@@ -34,7 +34,7 @@ The editor for Avalonia XAML includes the following capabilities:
 
 The previewer allows you to see what the UI of the open document will look like without needing to run the application.
 
-For more information, please see [Previewing your UI design](/docs/ui-development/preview-and-design-time).
+For more information, please see [Previewing your UI design](/docs/ui-development/xaml-preview-and-design-settings).
 
 <Image light={TestXamlPreviewer} alt="A screenshot demonstrating a test of the Avalonia XAML previewer." maxWidth={400} cornerRadius="true"/>
 

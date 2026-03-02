@@ -72,7 +72,7 @@ You will probably use these properties most often:
     <tr>
       <td></td>
       <td><code>ItemPanel</code></td>
-      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/concepts/custom-itemspanel) to customise the ItemsPanel.</td>
+      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/ui-development/custom-controls/custom-itemspanel) to customise the ItemsPanel.</td>
     </tr>
     <tr>
       <td></td>
@@ -161,7 +161,7 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 ```
 
 :::info
-For more detailed guidance on how to add icons to your menus, see [here](/docs/ui-development/adding-icons).
+For more detailed guidance on how to add icons to your menus, see [here](/docs/ui-development/graphics/adding-icons).
 :::
 
 ## More Information

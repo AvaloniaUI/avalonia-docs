@@ -134,7 +134,7 @@ public class Person
 <img src={DataGridSortColumnScreenshot} alt="" />
 
 :::info
-These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](/concepts/data-concepts/data-binding).
+These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](/concepts/data-concepts/data-binding/introduction-to-data-binding).
 :::
 
 Property names from the item class will generally not make good column names. This example adds custom header names to the grid. It also allows column reordering and resizing and disallows the default column sorting option:

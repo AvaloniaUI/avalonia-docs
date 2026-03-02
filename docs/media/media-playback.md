@@ -11,11 +11,11 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
-This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia Accelerate [`MediaPlayer`](/controls/media/mediaplayer).
+This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia Accelerate [`MediaPlayer`](/controls/media/mediaplayercontrol).
 
 ## Installation
 
-See the [Installation Guide](/docs/development-optimization/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/docs/development-optimization/developer-tools/installation) for step-by-step instructions on how to install Accelerate components.
 
 Add the MediaPlayer package to your project:
 

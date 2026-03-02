@@ -115,7 +115,7 @@ public sealed class MyFontCollection : EmbeddedFontCollection
 
 This class acts as a resource locator for the directory containing the custom font files. Here, the directory is `avares://GoogleFonts/Assets/Fonts`, and it is accessed with the key `fonts:MyFonts`.
 
-For more information on how to create a resource locator, see [Assets](/docs/basics/user-interface/assets).
+For more information on how to create a resource locator, see [Assets](/concepts/ui-concepts/assets).
 
 ### Adding the font collection to the app
 

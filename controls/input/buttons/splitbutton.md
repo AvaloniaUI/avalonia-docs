@@ -7,7 +7,7 @@ title: SplitButton
 
 import SplitButtonPaletteFlyoutScreenshot from '/img/controls/buttons/splitbutton/splitbutton-palette-flyout.png';
 
-The `SplitButton` functions as a [`Button`](/controls/input/buttons/button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](/controls/menus/flyouts) with additional actions.
+The `SplitButton` functions as a [`Button`](/controls/input/buttons/button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](/controls/menus/menuflyout) with additional actions.
 
 ## Is this the right control?
 

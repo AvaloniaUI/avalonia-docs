@@ -7,7 +7,7 @@ title: Input Pane
 
 The `InputPane` allows developers to listen for the platform's input pane (e.g., software keyboard or on-screen keyboard) current state and boundaries.
 
-The `InputPane` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/concepts/core-concepts/the-top-level) page.
+The `InputPane` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/concepts/core-concepts/top-level) page.
 
 ```cs
 var inputPane = TopLevel.GetTopLevel(control).InputPane;

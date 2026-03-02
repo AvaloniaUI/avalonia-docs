@@ -21,7 +21,7 @@ const guides: Guide[] = [
   {
     title: 'Data binding from code',
     text: "Understand how to use Avalonia's data binding system to set up bindings directly from your code, enabling dynamic UI updates.",
-    link: '/docs/basics/data/data-binding/',
+    link: '/concepts/data-concepts/data-binding/introduction-to-data-binding',
   },
   {
     title: 'Creating custom controls',
@@ -98,7 +98,7 @@ export default function GuidesAndSamples() {
         <div className="mb-8 flex items-center justify-between">
           <h3 className="m-0">Popular how-to guides</h3>
 
-          <Link to="/docs/guides" className="font-outfit text-sm font-semibold">
+          <Link to="/docs/welcome" className="font-outfit text-sm font-semibold">
             View more guides <ArrowRightFilled className="ml-1" />
           </Link>
         </div>

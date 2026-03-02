@@ -65,7 +65,7 @@ To avoid conflicts with Chrome Developer Tools, Avalonia tools shortcut can be r
    3. For more details, visit https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/
    4. `SimpleToDoList.Android` project in this repository also contains these changes for reference.
 3. Run `Developer Tools` application. `avdt` dotnet tool can be used from the command line.
-4. Run Android application from your IDE. Please visit [Avalonia Android documentation](/docs/platform-specific-guides/android/android) for more details.
+4. Run Android application from your IDE. Please visit [Avalonia Android documentation](/docs/platform-specific-guides/android) for more details.
 5. By default, Android projects configured to attach to `Developer Tools` on startup. See [DeveloperToolsOptions.ConnectOnStartup](/tools/developer-tools/options) for details.
 
 ![Android with Developer Tools](/img/tools/dev-tools/attaching-to-android.png)

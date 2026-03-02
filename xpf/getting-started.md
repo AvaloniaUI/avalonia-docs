@@ -22,7 +22,7 @@ This step is **vital**. XPF will not work with the old/legacy `.csproj` format o
 :::
 
 :::danger
-If you are running on Linux, see the [linux](xpf/platforms/linux) guide **before** you install .NET.
+If you are running on Linux, see the [linux](/xpf/platforms/linux) guide **before** you install .NET.
 :::
 
 ## Step 2: Add a `NuGet.config`
@@ -62,11 +62,11 @@ should be changed to:
 ```
 
 :::note
-XPF is in active development and the CI build version changes frequently. The version given here was the latest version at the time of writing, but it is likely that newer versions are available. You can find the latest CI build version at https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk. See [nightly builds](/xpf/versioning) for more information.
+XPF is in active development and the CI build version changes frequently. The version given here was the latest version at the time of writing, but it is likely that newer versions are available. You can find the latest CI build version at https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk. See [nightly builds](/xpf/version-info/versioning) for more information.
 :::
 
 :::tip
-If you have multiple projects which will need to use the same XPF SDK vesion, you can [specify this version in `global.json`](advanced/centralized-management)
+If you have multiple projects which will need to use the same XPF SDK vesion, you can [specify this version in `global.json`](/xpf/guides/centralizing-multiple-xpf-projects)
 :::
 
 ## Step 4: Add your Licence Key

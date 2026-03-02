@@ -85,4 +85,4 @@ Two separate comparer functions must be provided: one for ascending and one for 
 
 ## See also
 
-- [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/index)
+- [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/)

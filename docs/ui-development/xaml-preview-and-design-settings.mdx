@@ -8,10 +8,10 @@ tags:
 ---
 
 import Pill from '/src/components/global/Pill';
-import RiderXamlPreviewer from '/img/guides/ui-development/preview-and-design-time/rider-xaml-previewer.png';
-import VsXamlPreviewer from '/img/guides/ui-development/preview-and-design-time/vs-xaml-previewer.png';
-import TestXamlPreviewer from '/img/guides/ui-development/preview-and-design-time/test-xaml-previewer.png';
-import DesignTimeMockPreview from '/img/guides/ui-development/preview-and-design-time/design-time-mock-preview.png';
+import RiderXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/rider-xaml-previewer.png';
+import VsXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/vs-xaml-previewer.png';
+import TestXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/test-xaml-previewer.png';
+import DesignTimeMockPreview from '/img/guides/ui-development/xaml-preview-and-design-settings/design-time-mock-preview.png';
 
 <p><small>{frontMatter.description}</small></p>
 
@@ -137,7 +137,7 @@ As an alternative to `d:DataContext`, you can use the `Design.DataContext` attac
 
 ### Setting the design-time DataContext in code
 
-The methods described above for setting the design-time `DataContext` assume the view model has a parameterless constructor. However, you may be required to have a view model constructor with parameters, such as with a typical [dependency injection pattern](/docs/guides/app-development/implementing-dependency-injection). In such cases, you can use the `Design.SetDataContext` method to reference a view model constructor with parameters.
+The methods described above for setting the design-time `DataContext` assume the view model has a parameterless constructor. However, you may be required to have a view model constructor with parameters, such as with a typical [dependency injection pattern](/docs/app-development/dependency-injection). In such cases, you can use the `Design.SetDataContext` method to reference a view model constructor with parameters.
 
 ```csharp
 public MainWindow()

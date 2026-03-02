@@ -3,7 +3,7 @@ id: file-dialogs
 title: File Dialogs
 ---
 
-The file dialog functionality is accessed through the [`StorageProvider`](/reference/services/storage-provider) service API, which is available from the `Window` or `TopLevel` classes. This page shows only basic usage and for more information about this API please visit StorageProvider page.
+The file dialog functionality is accessed through the [`StorageProvider`](/reference/services/storage/storage-provider) service API, which is available from the `Window` or `TopLevel` classes. This page shows only basic usage and for more information about this API please visit StorageProvider page.
 
 <GitHubSampleLink title="File Dialog" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/FileOps"/>
 

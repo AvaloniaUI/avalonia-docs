@@ -20,14 +20,14 @@ Avalonia provides the following markup extensions:
 
 | MarkupExtension                                                                                  | Assigns to Property                                                |
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| [StaticResource](/docs/guides/styles-and-resources/resources#static-resource)                    | An existing keyed resource and does not update on changes          |
-| [DynamicResource](/docs/guides/styles-and-resources/resources#using-resources)                   | Deferred loading of a keyed resource that will update on changes   |
+| [StaticResource](/docs/ui-development/resource-dictionary#static-resource)                    | An existing keyed resource and does not update on changes          |
+| [DynamicResource](/docs/ui-development/resource-dictionary#using-resources)                   | Deferred loading of a keyed resource that will update on changes   |
 | Binding                                                                                          | Based on the default binding preference: Compiled or Reflection    |
-| [CompiledBinding](/docs/basics/data/data-binding/compiled-bindings#compiledbinding-markup)       | Based on a compiled binding                                        |
-| [ReflectionBinding](/docs/basics/data/data-binding/compiled-bindings#reflectionbinding-markup)   | Based on a reflection binding                                      |
-| [TemplateBinding](/docs/guides/custom-controls/how-to-create-templated-controls#data-binding)    | Based on a simplified binding used only within a `ControlTemplate` |
-| [OnPlatform](/docs/guides/platforms/platform-specific-code/xaml#onplatform-markup-extension)     | Conditionally when on the specified platform                       |
-| [OnFormFactor](/docs/guides/platforms/platform-specific-code/xaml#onformfactor-markup-extension) | Conditionally when on the specified factor                         |
+| [CompiledBinding](/concepts/data-concepts/data-binding/compiled-bindings#compiledbinding-markup)       | Based on a compiled binding                                        |
+| [ReflectionBinding](/concepts/data-concepts/data-binding/compiled-bindings#reflectionbinding-markup)   | Based on a reflection binding                                      |
+| [TemplateBinding](/docs/ui-development/custom-controls/templated-controls)    | Based on a simplified binding used only within a `ControlTemplate` |
+| [OnPlatform](/docs/platform-specific-guides/xaml#onplatform-markup-extension)     | Conditionally when on the specified platform                       |
+| [OnFormFactor](/docs/platform-specific-guides/xaml#onformfactor-markup-extension) | Conditionally when on the specified factor                         |
 
 ## Compiler intrinsics
 

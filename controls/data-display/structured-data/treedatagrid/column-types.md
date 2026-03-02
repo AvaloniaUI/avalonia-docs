@@ -234,4 +234,4 @@ Available options:
 
 ## See also
 
-- [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/index)
+- [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/)

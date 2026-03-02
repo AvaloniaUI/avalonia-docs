@@ -33,7 +33,7 @@ image.GestureRecognizers.Add(new ScrollGestureRecognizer()
 ## More Information
 
 :::info
-These gesture recognizers are currently availalbe: [pinch](/reference/gestures/pinchgesturerecognizer), [pull](/reference/gestures/pullgesturerecognizer) and [scroll](/reference/gestures/scrollgesturerecognizer).
+These gesture recognizers are currently availalbe: [pinch](/reference/gestures/pinch-gesture-recognizer), [pull](/reference/gestures/pull-gesture-recognizer) and [scroll](/reference/gestures/scroll-gesture-recognizer).
 
 You can view the source for related classes
 

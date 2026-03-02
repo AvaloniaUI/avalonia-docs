@@ -27,7 +27,7 @@ Avalonia Accelerate brings powerful enhancements and professional-grade features
 ## Tools
 
 <DocsCards>
-<DocsCard header="Avalonia for Visual Studio" href="tools/visual-studio-extension" img="/icons/feature-accelerate-vs-ext-icon.png">
+<DocsCard header="Avalonia for Visual Studio" href="/tools/visual-studio-extension" img="/icons/feature-accelerate-vs-ext-icon.png">
   <p>Developed from the ground up to eliminate friction, accelerate development, and make building cross-platform apps with Avalonia a joy.</p>
 </DocsCard>
 

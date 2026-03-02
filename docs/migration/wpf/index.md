@@ -1,7 +1,7 @@
 ---
-id: migrating-from-wpf
+id: index
 title: Migrating from WPF
-description: REFERENCE
+sidebar_position: 1
 ---
 
 This reference will help you leverage your existing knowledge of Windows Presentation Foundation (WPF) to learn _Avalonia UI_ quickly.

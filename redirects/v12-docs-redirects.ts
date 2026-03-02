@@ -35,7 +35,6 @@ const redirects: Redirect[] = [
             "/docs/guides/implementation-guides/index",
             "/docs/guides/development-guides/how-to-implement-multi-page-apps",
             "/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm",
-            "/docs/guides/platforms/android/index",
             "/docs/deployment/index",
             "/docs/stay-up-to-date/index",
             "/docs/stay-up-to-date/breaking-changes",
@@ -205,7 +204,6 @@ const redirects: Redirect[] = [
             "/docs/guides/custom-controls/types-of-control",
             "/docs/guides/custom-controls/how-to-create-advanced-custom-controls",
             "/docs/basics/user-interface/controls/creating-controls/index",
-            "/docs/ui-development/custom-controls/index",
             "/docs/concepts/templated-controls",
         ],
         "to": "/docs/ui-development/custom-controls/index"
@@ -921,7 +919,6 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/templates/",
             "/docs/templates/creating-data-templates-in-code",
-            "/docs/templates/implement-IDataTemplate",
             "/docs/templates/data-templates",
             "/docs/templates/implement-IDataTemplate",
             "/docs/templates/implement-idatatemplates",
@@ -1283,10 +1280,6 @@ const redirects: Redirect[] = [
     {
         "from": "/xpf/build-feeds",
         "to": "/xpf/version-info/versioning"
-    },
-    {
-        "from": "/xpf/build-feeds",
-        "to": "/xpf/version-info/release-notes"
     },
     {
         "from": "/xpf/missing-features",

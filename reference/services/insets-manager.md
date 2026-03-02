@@ -5,7 +5,7 @@ title: Insets Manager
 
 The `InsetsManager` allows you to interact with the platform's system bars and handle changes to the safe area of the mobile window. 
 
-The `InsetsManager` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/concepts/core-concepts/the-top-level) page.
+The `InsetsManager` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/concepts/core-concepts/top-level) page.
 
 ```cs
 var insetsManager = TopLevel.GetTopLevel(control).InsetsManager;

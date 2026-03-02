@@ -97,7 +97,7 @@ You can see the design-time data context being set in the XAML:
 ```
 
 :::tip
-For a more detailed guide about using the design-time data context, see [here](/docs/ui-development/preview-and-design-time).
+For a more detailed guide about using the design-time data context, see [here](/docs/ui-development/xaml-preview-and-design-settings).
 :::
 
 :::info

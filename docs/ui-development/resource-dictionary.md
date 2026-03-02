@@ -70,7 +70,7 @@ You can also declare resources to be specific to a style.
 Keep in mind, this resource is not visible outside of the this specific style block, meaning it won't make every TextBlock with a "warning" class aware of this resource outside of the Style block.
 :::
 
-It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read the [Theme Variants](/docs/guides/ui-development/theme-variants) page.
+It is also possible to define resources for specific theme variants: Dark, Light or custom. From the example below, `BackgroundBrush` and `ForegroundBrush` will have different values depending on the current theme variant set by the system or application. For more information about theme variants please read the [Theme Variants](/docs/ui-development/styling/theme-variants) page.
 
 ```xml
 <ResourceDictionary>

@@ -53,7 +53,7 @@ When you use the MVVM pattern with _Avalonia UI_, you implement a view with an A
 In _Avalonia UI_, a view is implemented as a composition of UI elements in a window or a user control (both AXAML files with code-behind). The UI elements in a composition can be a mixture of _Avalonia UI_ built-in controls, user controls and (more advanced) controls of your own design and implementation.
 
 :::info
-For a full list of the _Avalonia UI_ built-in controls, see the reference section [here](/docs/reference/controls/).
+For a full list of the _Avalonia UI_ built-in controls, see the reference section [here](/controls).
 :::
 
 :::info

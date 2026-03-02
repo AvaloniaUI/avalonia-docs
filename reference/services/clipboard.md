@@ -57,7 +57,7 @@ var myFormat = DataFormat.CreateBytesApplicationFormat("mycompany-myapp-myformat
 
 The `IClipboard` interface enables interaction with the system clipboard to set and retrieve text, image, and custom data formats.
 
-An instance of `IClipboard` can be accessed through a [`TopLevel`](/docs/concepts/toplevel) object:
+An instance of `IClipboard` can be accessed through a [`TopLevel`](/concepts/core-concepts/top-level) object:
 ```csharp
 var clipboard = window.Clipboard;
 ```

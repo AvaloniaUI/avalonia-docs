@@ -179,7 +179,7 @@ The default easing function is linear (above left), but you use another pattern 
 ```
 
 :::info
-For a full list of the _Avalonia UI_ easing functions, see the reference [here](/reference/animations/settings).
+For a full list of the _Avalonia UI_ easing functions, see the reference [here](/reference/animations-and-graphics/animation-settings).
 :::
 
 You can also add your own custom easing function class like this:

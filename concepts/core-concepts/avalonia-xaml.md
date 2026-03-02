@@ -100,7 +100,7 @@ You will often use the _Avalonia UI_ binding system to link a control property t
 ```
 
 :::info
-For further information about the concept behind data binding, see [here](/concepts/data-concepts/data-binding).
+For further information about the concept behind data binding, see [here](/concepts/data-concepts/data-binding/introduction-to-data-binding).
 :::
 
 ## Code-behind Files

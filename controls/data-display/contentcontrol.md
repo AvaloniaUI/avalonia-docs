@@ -98,4 +98,4 @@ We can display the student's first and last name in a `ContentControl` using the
 
 <img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
 
-For more information see the [data templates](/concepts/data-concepts/data-templates) section.
+For more information see the [data templates](/concepts/data-concepts/data-templates/introduction-to-data-templates) page.

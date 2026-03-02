@@ -42,12 +42,12 @@ Learn the core concepts on which the Avalonia framework runs.
 
 <br />
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-  <Button label="Core concepts" link="/concepts/index" variant="primary" outline />
+  <Button label="Core concepts" link="/concepts" variant="primary" outline />
 </div>
 
 ## Need help?
 
-If you need help using Avalonia, check our [Troubleshooting](/troubleshooting/home) pages, or discuss with the [Avalonia developer community](/docs/community).
+If you need help using Avalonia, check our [Troubleshooting](/troubleshooting) pages, or discuss with the [Avalonia developer community](/docs/community).
 
 To report a bug, open an issue on [GitHub](https://github.com/AvaloniaUI/Avalonia).
 
@@ -57,7 +57,7 @@ If you are migrating an existing project to Avalonia from WPF or another develop
 
 <br />
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-  <Button label="Migrating to Avalonia" link="/docs/migration" variant="primary" outline />
+  <Button label="Migrating to Avalonia" link="/docs/migration/wpf" variant="primary" outline />
 </div>
 <br />
 

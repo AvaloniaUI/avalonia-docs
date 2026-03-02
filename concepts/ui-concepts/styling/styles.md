@@ -27,7 +27,7 @@ In essence, the styling mechanism has two steps: selection and substitution. The
 The _Avalonia UI_ styling system's use of 'class' labels on control elements is analogous to how CSS (cascading style sheets) work with HTML elements.
 :::
 
-The styling system implements cascading styles by searching the [logical tree](/concepts/ui-concepts/control-trees) upwards from a control, during the selection step. This means styles defined at the highest level of the application (the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
+The styling system implements cascading styles by searching the [logical tree](/concepts/ui-concepts/controls/control-trees) upwards from a control, during the selection step. This means styles defined at the highest level of the application (the `App.axaml` file) can be used anywhere in an application, but may still be overridden closer to a control (for example in a window, or user control).
 
 When a match is located by the selection step, then the matched control's properties are altered according to the setters in the style.
 

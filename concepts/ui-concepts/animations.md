@@ -21,7 +21,7 @@ The simplest keyframe animation will change one property value over a a specifie
 The property value is then changed over time between the keyframes using the profile defined by an easing function. The default easing function is also the simplest - a straight-line interpolation between two keyframes.
 
 :::info
-You can see the full range of easing functions in the reference, [here](/reference/animations/animation-settings).
+You can see the full range of easing functions in the reference, [here](/reference/animations-and-graphics/animation-settings).
 :::
 
 ## Triggering Animations

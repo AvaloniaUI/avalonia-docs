@@ -12,7 +12,7 @@ To log into the web portal, use the following credentials:
 - Username: `license`
 - Password: `<YOUR_LICENSE_KEY>`
 
-Nightly builds of XPF may depend on pre-release versions of Avalonia, so ensure that you have the following [feeds configured](getting-started#step-2-add-a-nugetconfig) in your `NuGet.config` file:
+Nightly builds of XPF may depend on pre-release versions of Avalonia, so ensure that you have the following [feeds configured](/xpf/getting-started#step-2-add-a-nugetconfig) in your `NuGet.config` file:
 
 ```xml
     <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />

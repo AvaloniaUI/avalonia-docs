@@ -7,7 +7,7 @@ title: Storage Provider
 
 The `StorageProvider` is central to file and folder management. It provides methods for file and folder selection, checking platform capabilities, and interacting with stored bookmarks.
 
-The `StorageProvider` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/concepts/core-concepts/the-top-level) page.
+The `StorageProvider` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/concepts/core-concepts/top-level) page.
 
 ```cs
 var storage = window.StorageProvider;

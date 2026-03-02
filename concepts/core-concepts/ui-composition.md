@@ -38,7 +38,7 @@ When you first meet _Avalonia UI_, you might place a single built-in control in 
 A slightly more complex app may require one of the built-in layout controls to arrange more than one other built-in control in the content zone of a window (above, right).
 
 :::info
-To see the full range of Avalonia UI built-in controls, see the reference section [here](/controls/index).
+To see the full range of Avalonia UI built-in controls, see the reference section [here](/controls).
 :::
 
 ## Logical and Visual Trees
