@@ -26,7 +26,7 @@ const guides: Guide[] = [
   {
     title: 'Creating custom controls',
     text: 'Discover how to create custom controls in Avalonia to realize your unique UI vision.',
-    link: '/docs/ui-development/custom-controls/index',
+    link: '/docs/ui-development/custom-controls/',
   },
 ];
 
