@@ -58,7 +58,7 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 
 ### BlendMode
 
-This example is using two images, where the second image is using the `Multiply` Blend mode. For more information, read the [Bitmap Blend Modes](/docs/ui-development/blend-modes) page.
+This example is using two images, where the second image is using the `Multiply` Blend mode. For more information, read the [Bitmap Blend Modes](/reference/animations-and-graphics/bitmap-blend-modes) page.
 
 ```xml
 <Panel>

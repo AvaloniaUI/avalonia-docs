@@ -134,4 +134,4 @@ Continuing previous example, let's add `BackgroundBrush` and `ForegroundBrush` w
 Note that resources defined in `ThemeDictionaries` are only available for consumption using the `DynamicResource` markup extension. The `StaticResource` markup extension will not find such resources and will instead produce an exception at runtime unless a resource with an identical key exists in a non-`ThemeDictionaries` portion of a `ResourceDictionary`.
 :::
 
-For more details about using resources please see the [resources](/docs/guides/ui-development/resource-dictionary) page.
+For more details about using resources please see the [resources](/docs/ui-development/resource-dictionary) page.

@@ -206,7 +206,7 @@ const redirects: Redirect[] = [
             "/docs/basics/user-interface/controls/creating-controls/index",
             "/docs/concepts/templated-controls",
         ],
-        "to": "/docs/ui-development/custom-controls/index"
+        "to": "/docs/ui-development/custom-controls/"
     },
     {
         "from": [
@@ -336,7 +336,7 @@ const redirects: Redirect[] = [
             "/docs/get-started/wpf/index",
             "/docs/get-started/wpf/comparison-of-avalonia-with-wpf-and-uwp"
         ],
-        "to": "/docs/migration/wpf/migrating-from-wpf"
+        "to": "/docs/migration/wpf/"
     },
     {
         "from": "/docs/get-started/wpf/styling",

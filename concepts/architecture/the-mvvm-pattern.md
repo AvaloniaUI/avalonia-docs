@@ -61,7 +61,7 @@ To learn more about the concept of UI composition, see [here](/concepts/core-con
 :::
 
 :::info
-To learn how to design and implement your own controls, see [here](/docs/ui-development/custom-controls/index).
+To learn how to design and implement your own controls, see [here](/docs/ui-development/custom-controls).
 :::
 
 ### Data Binding

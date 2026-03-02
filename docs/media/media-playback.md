@@ -348,5 +348,5 @@ As for platform-specific resources on which codecs are supported, please check t
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
 - [MediaPlayer class](/reference/media-player/mediaplayer)
 - [MediaSource class](/reference/media-player/mediasource)
-- [Installing Avalonia Accelerate](/docs/development-optimization/accelerate-tools/installing-accelerate)
+- [Installing Avalonia Accelerate](/docs/development-optimization/installing-accelerate)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

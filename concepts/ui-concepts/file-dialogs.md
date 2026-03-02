@@ -75,7 +75,7 @@ public class MyView : UserControl
 For more information on StorageProvider service including on how to keep access to the picked files and what possible options are supported, please visit [`StorageProvider`](/reference/services/storage-provider) documentation page and subpages.
 
 :::note
-The provided examples directly access the [`StorageProvider`](/reference/services/storage-provider) API inside the ViewModel for learning purposes. In a real-world application, it's recommended to adhere to MVVM principles by creating service classes and locating them with Dependency Injection / Inversion of Control (DI/IoC). Please refer to the [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) and DepInject projects for samples of how to achieve this.
+The provided examples directly access the [`StorageProvider`](/reference/services/storage/storage-provider) API inside the ViewModel for learning purposes. In a real-world application, it's recommended to adhere to MVVM principles by creating service classes and locating them with Dependency Injection / Inversion of Control (DI/IoC). Please refer to the [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) and DepInject projects for samples of how to achieve this.
 :::
 
 
