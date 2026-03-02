@@ -1,16 +1,19 @@
 # Application Profiler Tool
 
-While [metrics](./metrics.md) primarily contain a single dimension of information, suitable for displaying as a chart, profilers capture richer data per each recording. After a recording is completed, `Developer Tools` aggregates the results and displays them as a table.
+While [metrics](./metrics.md) primarily contain a single dimension of information, suitable for displaying as a chart, profilers capture richer data. After a recording is completed, `Developer Tools` aggregates the results and displays them as a table.
 
 ## Recording a Profile
 
-Click the **Record** button to start a profiling session. The application continues running normally while data is collected in the background. Click **Record** again to stop — results are then aggregated and displayed across separate tabs, one for each profiler type.
+1. Click the **Record** button to start a profiling session.
+2. The application continues running normally while data is collected in the background.
+3. Click **Record** again to stop.
+4. Results are aggregated and displayed across separate tabs, one for each profiler type.
 
 For best results, try to isolate the interaction you want to measure. For example, open a specific view or trigger a UI action while recording, so the data isn't diluted by unrelated activity.
 
 ## Style Matching
 
-When a control is created or added to the visual tree, Avalonia evaluates all active style selectors to determine which ones apply. This profiler aggregates those match attempts by selector.
+When a control is created or added to the visual tree, Avalonia evaluates all active style selectors to determine which ones apply. The Style Matching profiler aggregates match attempts.
 
 Columns:
 - **Selector** — the style selector being evaluated (e.g., `TextBlock.h1`, `Button:pointerover > ContentPresenter`)
