@@ -11,7 +11,6 @@ const sidebars: SidebarsConfig = {
       label: 'Controls',
       collapsed: true,
       items: [
-        'controls/groupbox',
         'controls/mediaplayer',
         'controls/messagebox'
       ],

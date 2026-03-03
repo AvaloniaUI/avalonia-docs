@@ -141,6 +141,7 @@ const sidebars: SidebarsConfig = {
               'layout/containers/border',
               'layout/containers/expander',
               'layout/containers/flyout',
+              'layout/containers/groupbox',
               'layout/containers/refreshcontainer',
               'layout/containers/scrollviewer',
               'layout/containers/splitview',

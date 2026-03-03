@@ -382,6 +382,9 @@ const redirects: Redirect[] = [
 
   // Android VS Code debug guide → Tools
   { from: '/docs/platform-specific-guides/android/configure-vscode-debug-linux', to: '/tools/visual-studio-code/configure-vscode-debug-linux' },
+
+  // GroupBox troubleshooting → control page (now a built-in control in Avalonia 12)
+  { from: '/troubleshooting/controls/groupbox', to: '/controls/layout/containers/groupbox' },
 ];
 
 export const restructure_redirects = {

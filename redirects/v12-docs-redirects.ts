@@ -893,7 +893,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/tutorials/groupbox",
-        "to": "/troubleshooting/controls/groupbox"
+        "to": "/controls/layout/containers/groupbox"
     },
     {
         "from": [

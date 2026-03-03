@@ -36,9 +36,6 @@ Find help diagnosing and resolving common issues when building Avalonia apps. Wh
 ## Controls
 
 <DocsCards>
-  <DocsCard header="GroupBox" href="/troubleshooting/controls/groupbox">
-    <p>How to replicate GroupBox functionality using HeaderedContentControl with custom styling.</p>
-  </DocsCard>
   <DocsCard header="MediaPlayer" href="/troubleshooting/controls/mediaplayer">
     <p>Common issues with the Avalonia Accelerate MediaPlayer control.</p>
   </DocsCard>
@@ -52,6 +49,9 @@ Find help diagnosing and resolving common issues when building Avalonia apps. Wh
 <DocsCards>
   <DocsCard header="macOS" href="/troubleshooting/platform-specific-issues/macos">
     <p>Issues specific to macOS, including app menus and system integration.</p>
+  </DocsCard>
+  <DocsCard header="WebAssembly" href="/troubleshooting/platform-specific-issues/webassembly">
+    <p>Common issues when running Avalonia apps in the browser, including missing native libraries.</p>
   </DocsCard>
   <DocsCard header="Windows" href="/troubleshooting/platform-specific-issues/windows">
     <p>Issues specific to Windows, including packaging, signing, and SmartScreen warnings.</p>
