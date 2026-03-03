@@ -24,7 +24,7 @@ Click is one of many button events, for a full list see [here](https://api-docs.
 A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.
 
 :::info
-For guidance on how to bind to a command, see [here](/docs/ui-development/adding-interactivity).
+For guidance on how to bind to a command, see [here](/docs/input-interaction/adding-interactivity).
 :::
 
 ## Useful Properties

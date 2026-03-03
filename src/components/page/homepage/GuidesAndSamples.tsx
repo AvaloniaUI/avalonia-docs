@@ -21,12 +21,12 @@ const guides: Guide[] = [
   {
     title: 'Data binding from code',
     text: "Understand how to use Avalonia's data binding system to set up bindings directly from your code, enabling dynamic UI updates.",
-    link: '/concepts/data-concepts/data-binding/introduction-to-data-binding',
+    link: '/docs/data-binding/introduction-to-data-binding',
   },
   {
     title: 'Creating custom controls',
     text: 'Discover how to create custom controls in Avalonia to realize your unique UI vision.',
-    link: '/docs/ui-development/custom-controls/',
+    link: '/docs/custom-controls/',
   },
 ];
 

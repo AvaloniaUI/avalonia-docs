@@ -12,7 +12,7 @@ Model Context Protocol (MCP) is an open standard that allows AI models to use ex
 
 Before setting up the MCP server, ensure you have:
 
-1. **DevTools .NET tool** installed - Follow the [Getting Started](/docs/development-optimization/developer-tools/installation) guide
+1. **DevTools .NET tool** installed - Follow the [Getting Started](/tools/developer-tools/installation) guide
 2. **Valid license key** - Set `ACCELERATE_LICENSE_KEY` environment variable to a valid license key from the portal
 
 :::note

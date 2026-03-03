@@ -72,4 +72,4 @@ The currently focused control will be passed to handlers in the `XpfMapKeyEventA
 
 ## See also
 
-- [Avalonia on MacOS](/docs/platform-specific-guides/macos)
+- [Avalonia on MacOS](/docs/deployment/macos)

@@ -253,7 +253,7 @@ The `IDataObject` interface has been removed in Avalonia v12, along with all met
 
 The `IClipboard` interface has been simplified, with methods for reading specific formats implemented as extension methods (such as `TryGetTextAsync` and `TryGetFile`).
 
-Read the official [clipboard documentation](/reference/services/clipboard) to know how to use `IAsyncDataTransfer`.
+Read the official [clipboard documentation](/docs/services/clipboard) to know how to use `IAsyncDataTransfer`.
 
 **Example:**
 ```diff

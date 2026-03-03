@@ -187,43 +187,10 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'samples',
-        path: 'samples',
-        routeBasePath: 'samples',
-        sidebarPath: './samples-sidebar.ts',
-        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
-        editLocalizedFiles: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'concepts',
-        path: 'concepts',
-        routeBasePath: 'concepts',
-        sidebarPath: './concepts-sidebar.ts',
-        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
-        editLocalizedFiles: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
         id: 'xpf',
         path: 'xpf',
         routeBasePath: 'xpf',
         sidebarPath: './xpf-sidebar.ts',
-        editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
-        editLocalizedFiles: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'reference',
-        path: 'reference',
-        routeBasePath: 'reference',
-        sidebarPath: './reference-sidebar.ts',
         editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
         editLocalizedFiles: true,
       },
@@ -313,33 +280,18 @@ const config: Config = {
           activeBasePath: '/controls'
         },
         {
-          label: 'Samples',
-          to: '/samples',
-          activeBasePath: '/samples'
-        },
-        {
-          label: 'Concepts',
-          to: '/concepts',
-          activeBasePath: '/concepts'
-        },
-        {
           label: 'Tools',
           to: '/tools',
           activeBasePath: '/tools'
         },
         {
-          label: 'Reference',
-          to: '/reference',
-          activeBasePath: '/reference'
+          label: 'Troubleshooting',
+          to: '/troubleshooting',
+          activeBasePath: '/troubleshooting'
         },
         {
           label: 'More',
           items: [
-            {
-              label: 'Troubleshooting',
-              to: '/troubleshooting',
-              activeBasePath: '/troubleshooting'
-            },
             {
               label: 'Avalonia XPF',
               to: '/xpf',

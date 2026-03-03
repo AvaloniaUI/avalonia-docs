@@ -22,7 +22,7 @@ You will probably use these properties most often:
 In this example the slider value is displayed in the text block below, using binding to a control.
 
 :::info
-To review how to bind one control to another, see the guide [here](/docs/data/binding-to-controls).
+To review how to bind one control to another, see the guide [here](/docs/data-binding/binding-to-controls).
 :::
 
 Here the maximum and minimum values are default (0 and 100 respectively).

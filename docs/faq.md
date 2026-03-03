@@ -77,7 +77,7 @@ You can use a [community project](https://github.com/Kira-NT/HotAvalonia) to ena
 
 ## Can Avalonia interop with native APIs?
 
-Yes. See our [guide on using platform specific features](/concepts/architecture/cross-platform-architecture#platform-abstraction). 
+Yes. See our [guide on using platform specific features](/docs/fundamentals/cross-platform-architecture#platform-abstraction). 
 
 ---
 

@@ -8,7 +8,7 @@ title: ContextMenu
 The `ContextMenu` can be applied to any host control to implement a right-click 'context sensitive' menu. This uses an **attached property** of the host control.
 
 :::info
-To review the concept behind this use of  an **attached property**, see [here](/docs/ui-development/custom-controls/attached-properties).
+To review the concept behind this use of  an **attached property**, see [here](/docs/custom-controls/attached-properties).
 :::
 
 ## Example

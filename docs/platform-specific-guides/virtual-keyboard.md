@@ -20,7 +20,7 @@ The Virtual Keyboard component includes two main controls:
 
 ## Installation
 
-See the [Installation Guide](/docs/development-optimization/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
 
 Add the Virtual Keyboard package to your project:
 

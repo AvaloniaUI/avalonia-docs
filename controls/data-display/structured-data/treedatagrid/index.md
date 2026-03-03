@@ -23,7 +23,7 @@ The control has two modes of operation:
 
 ## Installation
 
-See the [Installation Guide](/docs/development-optimization/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
 
 Add the `TreeDataGrid` package to your project:
 

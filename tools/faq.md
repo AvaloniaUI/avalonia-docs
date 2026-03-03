@@ -48,7 +48,7 @@ Each new connection will open a new Developer Tools window, working independentl
 #### Does it work with Browser/Android/iOS?
 
 It does work with mobile and browser applications.
-See [Attaching Browser or Mobile application](/docs/development-optimization/developer-tools/attaching-applications) for more details.
+See [Attaching Browser or Mobile application](/tools/developer-tools/attaching-applications) for more details.
 
 #### Can I use Developer Tools and DiagnosticsPackage with NativeAOT app?
 

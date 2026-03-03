@@ -36,13 +36,13 @@ New to Avalonia? Start by setting up Avalonia, then follow through a short tutor
   <Button label="Get started" link="/docs/get-started" variant="primary" outline />
 </div>
 
-## Core concepts
+## Fundamentals
 
 Learn the core concepts on which the Avalonia framework runs.
 
 <br />
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-  <Button label="Core concepts" link="/concepts" variant="primary" outline />
+  <Button label="Fundamentals" link="/docs/fundamentals/avalonia-xaml" variant="primary" outline />
 </div>
 
 ## Need help?

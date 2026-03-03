@@ -20,7 +20,7 @@ If elements occupy the same coordinates, the order in which they appear in marku
 `Canvas` provides the most flexible layout support of any `Panel`. Height and Width properties are used to define the area of the canvas, and elements inside are assigned absolute coordinates relative to the area of the parent `Canvas`. Four attached properties, `Canvas.Left`, `Canvas.Top`, `Canvas.Right` and `Canvas.Bottom`, allow fine control of object placement within a `Canvas`, allowing the developer to position and arrange elements precisely on the screen.
 
 :::info
-To review the concept of layout zones, see [here](/concepts/ui-concepts/layout).
+To review the concept of layout zones, see [here](/docs/layout/).
 :::
 
 ## Useful Properties

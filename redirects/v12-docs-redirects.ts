@@ -58,7 +58,7 @@ const redirects: Redirect[] = [
             "/docs/guides/implementation-guides/how-to-use-design-time-data",
             "/accelerate/tools/vs-extension/previewer"
         ],
-        "to": "/docs/ui-development/xaml-preview-and-design-settings"
+        "to": "/docs/app-development/xaml-preview-and-design-settings"
     },
     {
         "from": "/docs/guides/implementation-guides/how-to-implement-dependency-injection",
@@ -71,7 +71,7 @@ const redirects: Redirect[] = [
             "/docs/concepts/the-mvvm-pattern/index",
             "/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm"
         ],
-        "to": "/concepts/architecture/the-mvvm-pattern"
+        "to": "/docs/fundamentals/the-mvvm-pattern"
     },
     {
         "from": [
@@ -80,7 +80,7 @@ const redirects: Redirect[] = [
             "/docs/guides/building-cross-platform-applications/dealing-with-platforms",
             "/docs/guides/building-cross-platform-applications/index",
         ],
-        "to": "/concepts/architecture/cross-platform-architecture"
+        "to": "/docs/fundamentals/cross-platform-architecture"
     },
     {
         "from": "/docs/guides/building-cross-platform-applications/solution-setup",
@@ -91,7 +91,7 @@ const redirects: Redirect[] = [
             "/docs/getting-started/developer-tools",
             "/docs/guides/implementation-guides/developer-tools",
         ],
-        "to": "/docs/development-optimization/legacy-developer-tools"
+        "to": "/tools/legacy-developer-tools"
     },
     {
         "from": [
@@ -116,68 +116,68 @@ const redirects: Redirect[] = [
             "/docs/styling/selectors",
             "/docs/guides/styles-and-resources/selectors",
         ],
-        "to": "/reference/styles/style-selectors"
+        "to": "/docs/styling/style-selectors"
     },
     {
         "from": [
             "/docs/guides/styles-and-resources/property-setters",
             "/docs/guides/styles-and-resources/setter-precedence"
         ],
-        "to": "/reference/styles/property-setters"
+        "to": "/docs/styling/property-setters"
     },
     {
         "from": [
             "/docs/styling/styles",
             "/docs/guides/styles-and-resources/how-to-use-included-styles",
         ],
-        "to": "/docs/ui-development/styling/sharing-styles"
+        "to": "/docs/styling/sharing-styles"
     },
     {
         "from": [
             "/docs/styling/resources",
             "/docs/guides/styles-and-resources/resources",
         ],
-        "to": "/docs/ui-development/resource-dictionary"
+        "to": "/docs/app-development/resource-dictionary"
     },
     {
         "from": "/docs/guides/styles-and-resources/how-to-use-theme-variants",
-        "to": "/docs/ui-development/styling/theme-variants"
+        "to": "/docs/styling/theme-variants"
     },
     {
         "from": "/docs/guides/styles-and-resources/how-to-use-fonts",
-        "to": "/docs/ui-development/styling/custom-fonts"
+        "to": "/docs/styling/custom-fonts"
     },
     {
         "from": [
             "/docs/getting-started/programming-with-avalonia/graphics-and-animations",
             "/docs/guides/graphics-and-animation/graphics-and-animations",
         ],
-        "to": "/docs/ui-development/graphics/drawing-graphics"
+        "to": "/docs/graphics-animation/drawing-graphics"
     },
     {
         "from": [
             "/docs/guides/graphics-and-animation/how-to-add-menu-icons",
             "/docs/guides/graphics-and-animation/how-to-use-icons"
         ],
-        "to": "/docs/ui-development/graphics/adding-icons"
+        "to": "/docs/graphics-animation/adding-icons"
     },
     {
         "from": [
             "/docs/animations/keyframe-animations",
             "/docs/guides/graphics-and-animation/keyframe-animations",
         ],
-        "to": "/docs/ui-development/graphics/keyframe-animations"
+        "to": "/docs/graphics-animation/keyframe-animations"
     },
     {
         "from": [
             "/docs/animations/transitions",
             "/docs/guides/ui-development/graphics/transitions",
         ],
-        "to": "/docs/ui-development/graphics/control-transitions"
+        "to": "/docs/graphics-animation/control-transitions"
     },
     {
         "from": "/docs/guides/graphics-and-animation/gradients",
-        "to": "/docs/ui-development/graphics/gradients"
+        "to": "/docs/graphics-animation/gradients"
     },
     {
         "from": [
@@ -193,7 +193,7 @@ const redirects: Redirect[] = [
             "/docs/guides/graphics-and-animation/page-transitions/page-transition-combinations",
             "/docs/guides/graphics-and-animation/page-transitions/how-to-create-a-custom-page-transition"
         ],
-        "to": "/docs/ui-development/graphics/page-transitions"
+        "to": "/docs/graphics-animation/page-transitions"
     },
     {
         "from": [
@@ -206,59 +206,59 @@ const redirects: Redirect[] = [
             "/docs/basics/user-interface/controls/creating-controls/index",
             "/docs/concepts/templated-controls",
         ],
-        "to": "/docs/ui-development/custom-controls/"
+        "to": "/docs/custom-controls/"
     },
     {
         "from": [
             "/docs/layout/create-a-custom-panel",
             "/docs/guides/custom-controls/create-a-custom-panel",
         ],
-        "to": "/docs/ui-development/custom-controls/custom-panel"
+        "to": "/docs/custom-controls/custom-panel"
     },
     {
         "from": [
             "/docs/authoring-controls/defining-properties",
             "/docs/guides/custom-controls/defining-properties",
         ],
-        "to": "/docs/ui-development/custom-controls/defining-properties"
+        "to": "/docs/custom-controls/defining-properties"
     },
     {
         "from": "/docs/guides/custom-controls/draw-with-a-property",
-        "to": "/docs/ui-development/custom-controls/drawing-custom-controls"
+        "to": "/docs/custom-controls/drawing-custom-controls"
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-a-custom-controls-library",
-        "to": "/docs/ui-development/custom-controls/custom-control-library"
+        "to": "/docs/custom-controls/custom-control-library"
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-a-custom-flyout",
-        "to": "/docs/ui-development/custom-controls/custom-flyout"
+        "to": "/docs/custom-controls/custom-flyout"
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-attached-properties",
-        "to": "/docs/ui-development/custom-controls/attached-properties"
+        "to": "/docs/custom-controls/attached-properties"
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-templated-controls",
-        "to": "/docs/ui-development/custom-controls/templated-controls"
+        "to": "/docs/custom-controls/templated-controls"
     },
     {
         "from": "/docs/guides/custom-controls/add-custom-control-class",
-        "to": "/docs/ui-development/custom-controls/custom-control-class"
+        "to": "/docs/custom-controls/custom-control-class"
     },
     {
         "from": [
             "/docs/guides/basics/accessing-the-ui-thread",
             "/docs/guides/development-guides/accessing-the-ui-thread",
         ],
-        "to": "/docs/development-optimization/accessing-the-ui-thread"
+        "to": "/docs/app-development/accessing-the-ui-thread"
     },
     {
         "from": [
             "/docs/data-binding/data-validation",
             "/docs/guides/development-guides/data-validation",
         ],
-        "to": "/docs/data/data-validation"
+        "to": "/docs/app-development/data-validation"
     },
     {
         "from": "/docs/guides/development-guides/improving-performance",
@@ -285,7 +285,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/platforms/macos-development",
-        "to": "/docs/platform-specific-guides/macos"
+        "to": "/docs/deployment/macos"
     },
     {
         "from": [
@@ -328,7 +328,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/deployment/debian-ubuntu",
-        "to": "/docs/platform-specific-guides/linux"
+        "to": "/docs/deployment/linux"
     },
     {
         "from": [
@@ -392,7 +392,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/reference/animation-settings",
-        "to": "/reference/animations-and-graphics/animation-settings"
+        "to": "/docs/graphics-animation/animation-settings"
     },
     {
         "from": [
@@ -402,11 +402,11 @@ const redirects: Redirect[] = [
             "/docs/reference/properties/index",
             "/docs/reference/styles/index",
         ],
-        "to": "/reference"
+        "to": "/docs/welcome"
     },
     {
         "from": "/docs/reference/built-in-data-binding-converters",
-        "to": "/reference/data/built-in-data-binding-converters"
+        "to": "/docs/data-binding/built-in-data-binding-converters"
     },
     {
         "from": "/docs/reference/controls/autocompletebox",
@@ -776,7 +776,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/tutorials/samples",
-        "to": "/samples"
+        "to": "/docs/samples-tutorials"
     },
     {
         "from": [
@@ -785,7 +785,7 @@ const redirects: Redirect[] = [
             "/docs/concepts/index",
             "/docs/basics/",
         ],
-        "to": "/concepts"
+        "to": "/docs/welcome"
     },
     {
         "from": [
@@ -793,7 +793,7 @@ const redirects: Redirect[] = [
             "/docs/guides/basics/introduction-to-xaml",
             "/docs/basics/user-interface/introduction-to-xaml",
         ],
-        "to": "/concepts/core-concepts/avalonia-xaml"
+        "to": "/docs/fundamentals/avalonia-xaml"
     },
     {
         "from": [
@@ -801,14 +801,14 @@ const redirects: Redirect[] = [
             "/docs/basics/user-interface/code-behind",
             "/docs/guides/implementation-guides/code-behind"
         ],
-        "to": "/concepts/core-concepts/code-behind"
+        "to": "/docs/fundamentals/code-behind"
     },
     {
         "from": [
             "/docs/basics/user-interface/controls/creating-controls/control-themes",
             "/docs/ui-development/custom-controls/control-themes"
         ],
-        "to": "/concepts/ui-concepts/styling/control-themes"
+        "to": "/docs/styling/control-themes"
     },
     {
         "from": [
@@ -816,14 +816,14 @@ const redirects: Redirect[] = [
             "/docs/basics/user-interface/building-layouts/index",
             "/docs/concepts/layout/layout-zones"
         ],
-        "to": "/concepts/ui-concepts/layout"
+        "to": "/docs/layout/"
     },
     {
         "from": [
             "/docs/layout/alignment-margins-and-padding",
             "/docs/basics/user-interface/building-layouts/alignment-margins-and-padding",
         ],
-        "to": "/reference/layout/positioning-controls"
+        "to": "/docs/layout/positioning-controls"
     },
     {
         "from": [
@@ -831,19 +831,19 @@ const redirects: Redirect[] = [
             "/docs/basics/user-interface/styling/index",
             "/docs/basics/user-interface/styling/styles"
         ],
-        "to": "/concepts/ui-concepts/styling/styles"
+        "to": "/docs/styling/styles"
     },
     {
         "from": "/docs/basics/user-interface/styling/style-classes",
-        "to": "/concepts/ui-concepts/styling/style-classes"
+        "to": "/docs/styling/style-classes"
     },
     {
         "from": "/docs/basics/user-interface/styling/control-themes",
-        "to": "/concepts/ui-concepts/styling/control-themes"
+        "to": "/docs/styling/control-themes"
     },
     {
         "from": "/docs/basics/user-interface/styling/container-queries",
-        "to": "/concepts/ui-concepts/styling/container-queries"
+        "to": "/docs/styling/container-queries"
     },
     {
         "from": [
@@ -851,7 +851,7 @@ const redirects: Redirect[] = [
             "/docs/basics/user-interface/styling/themes/fluent",
             "/docs/basics/user-interface/styling/themes/simple"
         ],
-        "to": "/concepts/ui-concepts/styling/themes"
+        "to": "/docs/styling/themes"
     },
     {
         "from": "/docs/styling/troubleshooting",
@@ -863,25 +863,25 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/basics/user-interface/adding-interactivity",
-        "to": "/docs/ui-development/adding-interactivity"
+        "to": "/docs/input-interaction/adding-interactivity"
     },
     {
         "from": [
             "/docs/getting-started/assets",
             "/docs/basics/user-interface/assets",
         ],
-        "to": "/concepts/ui-concepts/assets"
+        "to": "/docs/fundamentals/assets"
     },
     {
         "from": [
             "/docs/animations/",
             "/docs/basics/user-interface/animations",
         ],
-        "to": "/concepts/ui-concepts/animations"
+        "to": "/docs/graphics-animation/animations"
     },
     {
         "from": "/docs/basics/user-interface/file-dialogs",
-        "to": "/concepts/ui-concepts/file-dialogs"
+        "to": "/docs/services/file-dialogs"
     },
     {
         "from": "/docs/basics/user-interface/multi-touch",
@@ -913,7 +913,7 @@ const redirects: Redirect[] = [
             "/docs/basics/data/data-binding/",
             "/concepts/data-concepts/data-binding/"
         ],
-        "to": "/concepts/data-concepts/data-binding/introduction-to-data-binding"
+        "to": "/docs/data-binding/introduction-to-data-binding"
     },
     {
         "from": [
@@ -925,52 +925,52 @@ const redirects: Redirect[] = [
             "/docs/basics/data/data-templates",
             "/docs/concepts/templates/index",
         ],
-        "to": "/concepts/data-concepts/data-templates/introduction-to-data-templates"
+        "to": "/docs/data-templates/introduction-to-data-templates"
     },
     {
         "from": [
             "/docs/getting-started/application-lifetimes",
             "/docs/concepts/application-lifetimes",
         ],
-        "to": "/concepts/platform-concepts/application-lifetimes"
+        "to": "/docs/fundamentals/application-lifetimes"
     },
     {
         "from": [
             "/docs/data-binding/creating-and-binding-attached-properties",
             "/docs/concepts/attached-property",
         ],
-        "to": "/concepts/ui-concepts/controls/attached-properties"
+        "to": "/docs/custom-controls/attached-properties"
     },
     {
         "from": "/docs/concepts/control-trees",
-        "to": "/concepts/ui-concepts/controls/control-trees"
+        "to": "/docs/custom-controls/control-trees"
     },
     {
         "from": "/docs/concepts/custom-itemspanel",
-        "to": "/docs/ui-development/custom-controls/custom-itemspanel"
+        "to": "/docs/custom-controls/custom-itemspanel"
     },
     {
         "from": "/docs/concepts/templates/data-templates",
-        "to": "/concepts/data-concepts/data-templates/control-content"
+        "to": "/docs/data-templates/control-content"
     },
     {
         "from": "/docs/concepts/templates/content-template",
-        "to": "/concepts/data-concepts/data-templates/content-templates"
+        "to": "/docs/data-templates/content-templates"
     },
     {
         "from": "/docs/concepts/templates/data-templates-collection",
-        "to": "/concepts/data-concepts/data-templates/data-template-collection"
+        "to": "/docs/data-templates/data-template-collection"
     },
     {
         "from": [
             "/docs/concepts/templates/creating-data-templates-in-code",
             "/docs/concepts/templates/implement-idatatemplate",
         ],
-        "to": "/docs/data/data-templates/creating-data-templates-in-code"
+        "to": "/docs/data-templates/creating-data-templates-in-code"
     },
     {
         "from": "/docs/concepts/view-locator",
-        "to": "/docs/data/data-templates/view-locator"
+        "to": "/docs/data-templates/view-locator"
     },
     {
         "from": [
@@ -989,7 +989,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/concepts/the-main-window",
-        "to": "/concepts/core-concepts/main-window"
+        "to": "/docs/fundamentals/main-window"
     },
     {
         "from": [
@@ -999,29 +999,29 @@ const redirects: Redirect[] = [
             "/concepts/ui-concepts/user-input/index",
             "/docs/concepts/input/pointer",
         ],
-        "to": "/concepts/ui-concepts/user-input/pointer"
+        "to": "/docs/input-interaction/pointer"
     },
     {
         "from": "/docs/input/hotkeys",
-        "to": "/concepts/ui-concepts/user-input/keyboard-and-hotkeys"
+        "to": "/docs/input-interaction/keyboard-and-hotkeys"
     },
     {
         "from": "/docs/input/routed-events",
-        "to": "/concepts/ui-concepts/user-input/routed-events"
+        "to": "/docs/input-interaction/routed-events"
     },
     {
         "from": [
             "/docs/concepts/input/binding-key-and-mouse",
             "/concepts/ui-concepts/user-input/binding-key-and-mouse"
         ],
-        "to": "/docs/ui-development/mouse-and-keyboard-shortcuts"
+        "to": "/docs/input-interaction/mouse-and-keyboard-shortcuts"
     },
     {
         "from": [
             "/docs/concepts/markupextensions/index",
             "/docs/concepts/markupextensions/options-markup-extensions"
         ],
-        "to": "/concepts/data-concepts/markup-extensions"
+        "to": "/docs/data-binding/markup-extensions"
     },
     {
         "from": [
@@ -1035,23 +1035,23 @@ const redirects: Redirect[] = [
             "/docs/concepts/services/storage-provider/index",
             "/reference/services/storage/index"
         ],
-        "to": "/reference/services/storage/storage-provider"
+        "to": "/docs/services/storage/storage-provider"
     },
     {
         "from": "/docs/concepts/image-interpolation",
-        "to": "/concepts/ui-concepts/image-interpolation"
+        "to": "/docs/graphics-animation/image-interpolation"
     },
     {
         "from": "/docs/concepts/blend-modes",
-        "to": "/reference/animations-and-graphics/bitmap-blend-modes"
+        "to": "/docs/graphics-animation/bitmap-blend-modes"
     },
     {
         "from": "/docs/concepts/toplevel",
-        "to": "/concepts/core-concepts/top-level"
+        "to": "/docs/fundamentals/top-level"
     },
     {
         "from": "/docs/concepts/ui-composition",
-        "to": "/concepts/core-concepts/ui-composition"
+        "to": "/docs/fundamentals/ui-composition"
     },
     {
         "from": [
@@ -1063,27 +1063,27 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/reference/gestures/pinchgesturerecognizer",
-        "to": "/reference/gestures/pinch-gesture-recognizer"
+        "to": "/docs/input-interaction/gestures/pinch-gesture-recognizer"
     },
     {
         "from": "/docs/reference/gestures/pullgesturerecognizer",
-        "to": "/reference/gestures/pull-gesture-recognizer"
+        "to": "/docs/input-interaction/gestures/pull-gesture-recognizer"
     },
     {
         "from": "/docs/reference/gestures/scrollgesturerecognizer",
-        "to": "/reference/gestures/scroll-gesture-recognizer"
+        "to": "/docs/input-interaction/gestures/scroll-gesture-recognizer"
     },
     {
         "from": "/docs/reference/properties/texttrimming",
-        "to": "/reference/text/texttrimming"
+        "to": "/docs/text/texttrimming"
     },
     {
         "from": "/docs/reference/styles/pseudo-classes",
-        "to": "/reference/styles/pseudoclasses"
+        "to": "/docs/styling/pseudoclasses"
     },
     {
         "from": "/docs/reference/styles/style-selector-syntax",
-        "to": "/reference/styles/style-selector-syntax"
+        "to": "/docs/styling/style-selector-syntax"
     },
     {
         "from": "/accelerate/welcome",
@@ -1091,7 +1091,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/installation",
-        "to": "/docs/development-optimization/installing-accelerate"
+        "to": "/tools/installing-accelerate"
     },
     {
         "from": "/accelerate/community",
@@ -1107,15 +1107,15 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/media-player/mediaplayer",
-        "to": "/reference/media-player/mediaplayer"
+        "to": "/docs/media/mediaplayer"
     },
     {
         "from": "/accelerate/components/media-player/mediasource",
-        "to": "/reference/media-player/mediasource"
+        "to": "/docs/media/mediasource"
     },
     {
         "from": "/accelerate/components/markdown/quickstart",
-        "to": "/docs/ui-development/rendering-markdown"
+        "to": "/docs/app-development/rendering-markdown"
     },
     {
         "from": "/accelerate/components/markdown/markdown",
@@ -1123,15 +1123,15 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/markdown/custom-image-loader",
-        "to": "/reference/markdown/imageloader"
+        "to": "/docs/markdown/imageloader"
     },
     {
         "from": "/accelerate/components/markdown/code-highlighter",
-        "to": "/reference/markdown/codehighlighter"
+        "to": "/docs/markdown/codehighlighter"
     },
     {
         "from": "/accelerate/components/markdown/styling",
-        "to": "/reference/markdown/markdown-styling"
+        "to": "/docs/markdown/markdown-styling"
     },
     {
         "from": "/accelerate/components/virtual-keyboard/getting-started",
@@ -1167,11 +1167,11 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/webview/webauthenticationbroker",
-        "to": "/reference/webview/webauthenticationbroker"
+        "to": "/docs/webview/webauthenticationbroker"
     },
     {
         "from": "/accelerate/components/webview/interop/environment-options",
-        "to": "/reference/webview/webview-environment"
+        "to": "/docs/webview/webview-environment"
     },
     {
         "from": [
@@ -1203,7 +1203,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/tools/dev-tools/getting-started",
-        "to": "/docs/development-optimization/developer-tools/installation"
+        "to": "/tools/developer-tools/installation"
     },
     {
         "from": "/accelerate/tools/dev-tools/settings",
@@ -1260,18 +1260,18 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/tools/dev-tools/advanced/attaching-to-the-previewer",
-        "to": "/docs/development-optimization/developer-tools/attaching-to-the-previewer"
+        "to": "/tools/developer-tools/attaching-to-the-previewer"
     },
     {
         "from": "/accelerate/tools/dev-tools/advanced/attaching-to-the-remote-tool",
-        "to": "/docs/development-optimization/developer-tools/attaching-to-the-remote-tool"
+        "to": "/tools/developer-tools/attaching-to-the-remote-tool"
     },
     {
         "from": [
             "/accelerate/tools/dev-tools/advanced/attaching-wsl",
             "/accelerate/tools/dev-tools/advanced/attaching-browser-or-mobile"
         ],
-        "to": "/docs/development-optimization/developer-tools/attaching-applications"
+        "to": "/tools/developer-tools/attaching-applications"
     },
     {
         "from": "/xpf/porting-tips",
@@ -1338,7 +1338,7 @@ const redirects: Redirect[] = [
             "/docs/distribution-publishing/",
             "/accelerate/tools/parcel/getting-started",
         ],
-        "to": "/docs/deployment/parcel/setup"
+        "to": "/tools/parcel/setup"
     },
     {
         "from": "/accelerate/tools/parcel/cli-reference",
@@ -1358,7 +1358,7 @@ const redirects: Redirect[] = [
             "/accelerate/tools/parcel/apple/notary",
             "/accelerate/tools/parcel/apple/index",
         ],
-        "to": "/docs/deployment/parcel/packaging-for-macos"
+        "to": "/tools/parcel/packaging-for-macos"
     },
     {
         "from": [
@@ -1366,14 +1366,14 @@ const redirects: Redirect[] = [
             "/accelerate/tools/parcel/windows/installer",
             "/accelerate/tools/parcel/windows/index",
         ],
-        "to": "/docs/deployment/parcel/packaging-for-windows"
+        "to": "/tools/parcel/packaging-for-windows"
     },
     {
         "from": [
             "/accelerate/tools/parcel/linux/packaging",
             "/accelerate/tools/parcel/linux/index",
         ],
-        "to": "/docs/deployment/parcel/packaging-for-linux"
+        "to": "/tools/parcel/packaging-for-linux"
     },
 ];
 

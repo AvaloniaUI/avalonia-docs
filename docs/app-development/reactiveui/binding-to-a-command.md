@@ -20,7 +20,7 @@ This guide shows you how to use ReactiveUI to bind a view model method (that per
 This guide assumes that you are using the MVVM implementation pattern, and you have based your view model on the _ReactiveUI_ framework.
 
 :::info
-To review the concept behind the MVVM implementation pattern, see [here](/concepts/architecture/the-mvvm-pattern).
+To review the concept behind the MVVM implementation pattern, see [here](/docs/fundamentals/the-mvvm-pattern).
 :::
 
 If you created your application using the **Avalonia MVVM Application** solution template then your solution will already contain the _ReactiveUI_ framework package, and you can reference it like this:
@@ -214,7 +214,7 @@ So, extending the example XAML to supply the parameter (string) from a text box:
 ```
 
 :::info
-This example uses the technique of binding directly to another control. You can see how to do this, [here](/docs/data/binding-to-controls).
+This example uses the technique of binding directly to another control. You can see how to do this, [here](/docs/data-binding/binding-to-controls).
 :::
 
 You will see that the button becomes enables only when the text box contains a string. 

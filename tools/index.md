@@ -31,11 +31,11 @@ Avalonia Accelerate brings powerful enhancements and professional-grade features
   <p>Developed from the ground up to eliminate friction, accelerate development, and make building cross-platform apps with Avalonia a joy.</p>
 </DocsCard>
 
-<DocsCard header="Dev Tools" href="/docs/development-optimization/developer-tools/installation" img="/icons/feature-accelerate-devtools-icon.png">
+<DocsCard header="Dev Tools" href="/tools/developer-tools/installation" img="/icons/feature-accelerate-devtools-icon.png">
   <p>Inspect and diagnose your Avalonia apps visually. Make edits and see your changes in real time.</p>
 </DocsCard>
 
-<DocsCard header="Parcel" href="/docs/deployment/parcel/setup" img="/icons/feature-accelerate-parcel-icon.png">
+<DocsCard header="Parcel" href="/tools/parcel/setup" img="/icons/feature-accelerate-parcel-icon.png">
   <p>Package your apps for Windows, Mac and Linux in a single, easy-to-use tool.</p>
 </DocsCard>
 

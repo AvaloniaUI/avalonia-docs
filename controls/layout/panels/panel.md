@@ -37,7 +37,7 @@ There are other more useful panels, that offer better control over the positioni
 If you have specific requirements for positioning the child controls in a panel, you can create your own custom control based on the panel.
 
 :::info
-For instructions about how to create a custom panel control, see [here](/docs/ui-development/custom-controls/custom-panel).
+For instructions about how to create a custom panel control, see [here](/docs/custom-controls/custom-panel).
 :::
 
 ## More Information

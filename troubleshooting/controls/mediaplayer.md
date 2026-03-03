@@ -36,5 +36,5 @@ import Pill from '/src/components/global/Pill';
 ## See also
 
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/reference/media-player/mediaplayer)
-- [MediaSource class](/reference/media-player/mediasource)
+- [MediaPlayer class](/docs/media/mediaplayer)
+- [MediaSource class](/docs/media/mediasource)

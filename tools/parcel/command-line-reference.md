@@ -10,7 +10,7 @@ Parcel provides a command-line tool that packages Avalonia apps for Windows, mac
 
 Before using Parcel, ensure you have:
 
-1. **Parcel .NET tool installed** - Follow the [Setup guide](/docs/deployment/parcel/setup).
+1. **Parcel .NET tool installed** - Follow the [Setup guide](/tools/parcel/setup).
 2. **Valid license key** - Set the `PARCEL_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal.
 
 :::note
@@ -220,7 +220,7 @@ See [Model Context Protocol](/tools/parcel/mcp) for more details on usage.
 
 ## See also
 
-- [Parcel setup](/docs/deployment/parcel/setup)
-- [Packaging for macOS](/docs/deployment/parcel/packaging-for-macos)
-- [Packaging for Windows](/docs/deployment/parcel/packaging-for-windows)
-- [Packaging for Linux](/docs/deployment/parcel/packaging-for-linux)
+- [Parcel setup](/tools/parcel/setup)
+- [Packaging for macOS](/tools/parcel/packaging-for-macos)
+- [Packaging for Windows](/tools/parcel/packaging-for-windows)
+- [Packaging for Linux](/tools/parcel/packaging-for-linux)

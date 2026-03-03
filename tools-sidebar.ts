@@ -4,22 +4,17 @@ const sidebars: SidebarsConfig = {
 
   documentationSidebar: [
     'index',
-    {
-      type: 'link',
-      label: 'Installation',
-      href: '/docs/development-optimization/installing-accelerate',
-    },
+    'installing-accelerate',
     'community-edition',
     {
       type: 'category',
       label: 'Dev Tools',
       collapsed: true,
       items: [
-        {
-          type: 'link',
-          label: 'Install Dev Tools',
-          href: '/docs/development-optimization/developer-tools/installation',
-        },
+        'developer-tools/installation',
+        'developer-tools/attaching-applications',
+        'developer-tools/attaching-to-the-previewer',
+        'developer-tools/attaching-to-the-remote-tool',
         'developer-tools/settings',
         'developer-tools/shortcuts',
         'developer-tools/options',
@@ -39,34 +34,18 @@ const sidebars: SidebarsConfig = {
       label: 'Parcel',
       collapsed: true,
       items: [
-        {
-          type: 'link',
-          label: 'Install Parcel',
-          href: '/docs/deployment/parcel/setup',
-        },
+        'parcel/setup',
         'parcel/command-line-reference',
         'parcel/mcp',
-        {
-          type: 'link',
-          label: 'Packaging for macOS',
-          href: '/docs/deployment/parcel/packaging-for-macos',
-        },
-        {
-          type: 'link',
-          label: 'Packaging for Windows',
-          href: '/docs/deployment/parcel/packaging-for-windows',
-        },
-        {
-          type: 'link',
-          label: 'Packaging for Linux',
-          href: '/docs/deployment/parcel/packaging-for-linux',
-        },
+        'parcel/packaging-for-macos',
+        'parcel/packaging-for-windows',
+        'parcel/packaging-for-linux',
       ],
     },
     'visual-studio-extension',
     {
       type: 'category',
-      label: 'Accelerate controls',
+      label: 'Accelerate Controls',
       collapsed: true,
       items: [
         {
@@ -106,6 +85,7 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    'legacy-developer-tools',
     'faq',
   ],
 };

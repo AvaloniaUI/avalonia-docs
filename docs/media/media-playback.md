@@ -15,7 +15,7 @@ This guide provides a practical introduction to implementing media playback in A
 
 ## Installation
 
-See the [Installation Guide](/docs/development-optimization/developer-tools/installation) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/developer-tools/installation) for step-by-step instructions on how to install Accelerate components.
 
 Add the MediaPlayer package to your project:
 
@@ -346,7 +346,7 @@ As for platform-specific resources on which codecs are supported, please check t
 ## See also
 
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/reference/media-player/mediaplayer)
-- [MediaSource class](/reference/media-player/mediasource)
-- [Installing Avalonia Accelerate](/docs/development-optimization/installing-accelerate)
+- [MediaPlayer class](/docs/media/mediaplayer)
+- [MediaSource class](/docs/media/mediasource)
+- [Installing Avalonia Accelerate](/tools/installing-accelerate)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

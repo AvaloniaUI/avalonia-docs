@@ -5,7 +5,7 @@ title: Themes
 
 ## My control theme isn't being found
 
-If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](/concepts/ui-concepts/styling/styles) which matches the `x:Key` and `TargetType` of your control theme.
+If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](/docs/styling/styles) which matches the `x:Key` and `TargetType` of your control theme.
 
 ## My control theme is breaking other controls
 
@@ -13,6 +13,6 @@ Many Avalonia controls consist of a combination of other Avalonia controls. If y
 
 ## Application window is transparent or there is no content rendered
 
-Make sure you have installed and included Avalonia themes in your application. See [Themes](/concepts/ui-concepts/styling/themes) for more information on how to install.
+Make sure you have installed and included Avalonia themes in your application. See [Themes](/docs/styling/themes) for more information on how to install.
 
 If you use third party themes, please contact their maintainers.

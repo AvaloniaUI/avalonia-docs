@@ -12,7 +12,7 @@ Model Context Protocol (MCP) is an open standard that allows AI models to use ex
 
 Before setting up the MCP server, ensure you have:
 
-1. **Parcel .NET tool installed** - Follow the [Setup guide](/docs/deployment/parcel/setup).
+1. **Parcel .NET tool installed** - Follow the [Setup guide](/tools/parcel/setup).
 2. **Valid license key** - Set the `PARCEL_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal.
 
 :::note

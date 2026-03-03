@@ -7,7 +7,7 @@ Is your app running too slowly? The performance of Avalonia applications can be 
 
 ## Use CompiledBindings
 
-One of the most effective ways to improve performance in Avalonia is to use [`CompiledBindings`](/concepts/data-concepts/data-binding/compiled-bindings) in your application. Compiled bindings enable faster data binding by compiling the binding path at compile time, thus reducing the overhead of reflection at runtime. 
+One of the most effective ways to improve performance in Avalonia is to use [`CompiledBindings`](/docs/data-binding/compiled-bindings) in your application. Compiled bindings enable faster data binding by compiling the binding path at compile time, thus reducing the overhead of reflection at runtime. 
 
 ## Choose the right control for data display
 
