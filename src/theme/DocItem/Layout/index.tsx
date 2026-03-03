@@ -22,7 +22,6 @@ import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemContent from '@theme/DocItem/Content';
 import ContentVisibility from '@theme/ContentVisibility';
 import type {Props} from '@theme/DocItem/Layout';
-import Comments from "@site/src/components/Comments";
 import styles from '@docusaurus/theme-classic/lib/theme/DocItem/Layout/styles.module.css';
 
 // Extended frontMatter type for custom demo properties
@@ -119,7 +118,6 @@ export default function DocItemLayout({children, ...props}: Props): JSX.Element 
               <DocItemContent>{children}</DocItemContent>
               <DocItemFooter />
               <DocItemPaginator />
-              <Comments />
             </article>
            
           </div>
