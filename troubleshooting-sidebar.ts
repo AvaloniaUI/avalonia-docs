@@ -22,6 +22,7 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'platform-specific-issues/macos',
+        'platform-specific-issues/webassembly',
         'platform-specific-issues/windows'
       ],
     },

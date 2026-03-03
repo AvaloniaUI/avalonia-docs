@@ -3,19 +3,51 @@ id: ios
 title: iOS
 ---
 
+## Running on a simulator
+
+From your iOS project directory, build and run with:
+
+```bash
+dotnet build
+dotnet run
+```
+
+This deploys the app to the default iOS Simulator. If you use JetBrains Rider or Visual Studio for Mac, you can run, build, and debug directly from the IDE.
+
+:::info
+Depending on the .NET version and the iOS Simulator version, Rosetta 2 may be required on Apple Silicon Macs. To install it:
+
+```bash
+/usr/sbin/softwareupdate --install-rosetta
+```
+:::
+
+## Running on a device
+
+To deploy to a physical iPhone or iPad, you must first provision your device using Xcode. This involves creating a signing certificate and associating your device with a development provisioning profile.
+
+See the [iOS platform setup guide](/docs/platform-specific-guides/ios) for detailed steps on device provisioning with Xcode, including creating a free Apple developer signing certificate.
+
+Once your device is provisioned, edit your `.iOS.csproj` to set the runtime identifier and code signing key:
+
+```xml
+<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+<CodesignKey>Apple Development: yourname@example.com (XXXXXXXXXX)</CodesignKey>
+```
+
+Then build and run as normal. The app will be deployed to your connected device.
+
+## Publishing
+
 Publishing an Avalonia app for iOS generates an `.ipa` file, which is an iOS app archive ready for distribution. Distributing an iOS app requires that it is signed using a provisioning profile, which contains code signing information and the intended distribution mechanism.
 
-## Prerequisites
+### Prerequisites
 
 - A Mac with Xcode installed (iOS apps must be built on macOS)
 - An [Apple Developer Program](https://developer.apple.com/programs/) membership (required for distribution)
 - A provisioning profile and signing certificate configured in Xcode
 
-:::tip
-If you're new to iOS provisioning, see the [iOS platform setup guide](/docs/platform-specific-guides/ios) for steps on creating signing certificates and provisioning profiles.
-:::
-
-## Distribution options
+### Distribution options
 
 Apple provides several approaches for distributing iOS apps:
 
@@ -25,9 +57,9 @@ Apple provides several approaches for distributing iOS apps:
 
 All approaches require that apps are signed using an appropriate provisioning profile.
 
-## Build and sign your app
+### Build and sign your app
 
-### Publishing from macOS
+#### Publishing from macOS
 
 Navigate to your iOS project folder and run `dotnet publish`:
 
@@ -43,7 +75,7 @@ This builds, signs, and produces an `.ipa` in `bin/Release/net9.0-ios/ios-arm64/
 
 The distribution channel is determined by the distribution certificate in your provisioning profile (App Store, Ad Hoc, or Enterprise).
 
-### Publishing from Windows
+#### Publishing from Windows
 
 Building iOS apps on Windows requires a network-accessible Mac build host. Provide the connection details as additional parameters:
 
@@ -60,7 +92,7 @@ dotnet publish -f net9.0-ios -c Release \
   -p:_DotNetRootRemoteDirectory=/Users/macuser/Library/Caches/Xamarin/XMA/SDKs/dotnet/
 ```
 
-## Build properties reference
+### Build properties reference
 
 The following properties can be passed on the command line with `-p:` or set in a `<PropertyGroup>` in your project file:
 
@@ -76,7 +108,7 @@ The following properties can be passed on the command line with `-p:` or set in 
 | `ApplicationVersion` | The build version number. |
 | `ApplicationDisplayVersion` | The display version string. |
 
-### Define properties in your project file
+#### Define properties in your project file
 
 Instead of passing all parameters on the command line, you can set them in your `.csproj`:
 
@@ -93,7 +125,7 @@ Then publish with just:
 dotnet publish -f net9.0-ios -c Release
 ```
 
-## Distribute the app
+### Distribute the app
 
 - **App Store**: Upload the `.ipa` using [Transporter](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) or Xcode. You must first create an app record in [App Store Connect](https://appstoreconnect.apple.com) and generate an [app-specific password](https://support.apple.com/HT204397).
 - **Ad-hoc**: Distribute using [Apple Configurator](https://apps.apple.com/app/id1037126344).

@@ -5,7 +5,7 @@ title: WebAssembly
 
 ## Setting up an Avalonia project for WebAssembly
 
-1. Install `wasm-tools` workload tools. See [dotnet documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-workload-install).
+1. Install the `wasm-tools` workload, which provides the build toolchain for compiling .NET to WebAssembly.
 
 ```bash
 dotnet workload install wasm-tools
@@ -29,7 +29,7 @@ mkdir BrowserTest
 cd BrowserTest
 ```
 
-4. Generate a new project that supports running in the browser. To lookup the available templates via `dotnet new list` see [dotnet documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new-sdk-templates).
+4. Generate a new project that supports running in the browser. You can run `dotnet new list` to see all available Avalonia templates.
 
 ```bash
 dotnet new avalonia.xplat
@@ -53,24 +53,113 @@ dotnet run
 
 For information on publishing and deploying your WebAssembly app, see [Deploying WebAssembly](/docs/deployment/webassembly).
 
-## Interop
+## JavaScript interop
 
-It is possible to call JavaScript code from the Avalonia Web application. Avalonia app is compatible with standard **\[JSImport]/\[JSExport]** interop from Microsoft. You can find more information on [their documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/import-export-interop?view=aspnetcore-7.0).
+Avalonia Browser apps can call JavaScript from C# and expose C# methods to JavaScript using the standard `[JSImport]`/`[JSExport]` interop API from .NET. This API is part of the `System.Runtime.InteropServices.JavaScript` namespace and works in any .NET WebAssembly application.
 
-## Legacy Blazor backend
+### Setup
 
-Starting from Avalonia 11.0 [Avalonia.Browser](https://www.nuget.org/packages/Avalonia.Browser/) package relies on build-in .NET interop with better stability and performance. Legacy Blazor backend is still available for compatibility and can be referenced using [Avalonia.Browser.Blazor](https://www.nuget.org/packages/Avalonia.Browser.Blazor/) package.
-
-## Troubleshooting
-
-If you have not performed the step to install required workloads, you might encounter errors when running the app in your browser later (e.g. `System.DllNotFoundException: libSkiaSharp`) and you will need to rebuild again before the app will run.
-
-If you continue to encounter the `System.DllNotFoundException: libSkiaSharp` error even after installing the workloads, you may need to add the `WasmBuildNative` property. To do so, go to the properties of your project, locate the `PropertyGroup`, and add the line `<WasmBuildNative>true</WasmBuildNative>`, as below:
+Add `AllowUnsafeBlocks` to your Browser project file. The .NET source generator that produces the interop bindings requires this:
 
 ```xml
 <PropertyGroup>
-	<WasmBuildNative>true</WasmBuildNative>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 </PropertyGroup>
 ```
 
-Keep in mind, that WebAssembly in general as a technology is limited. .NET Multithreading is not supported by any browser and is only available starting .NET 8. Any normal app also has to comply with Browser sandboxing mechanism. And while Avalonia does its best to keep performance high, any WebAssembly GUI apps in some cases might be slow or with older browsers.
+### Calling JavaScript from C#
+
+Use the `[JSImport]` attribute on a `partial` method to import a JavaScript function. The first argument is the JS function name, and the second is the module name used when loading it.
+
+Create a JavaScript module (e.g., `wwwroot/js/interop.js`):
+
+```javascript
+export function showAlert(message) {
+    globalThis.alert(message);
+}
+
+export function getCurrentUrl() {
+    return globalThis.window.location.href;
+}
+```
+
+Define C# methods that map to the JS functions:
+
+```csharp
+using System.Runtime.InteropServices.JavaScript;
+using System.Runtime.Versioning;
+
+[SupportedOSPlatform("browser")]
+public partial class JsInterop
+{
+    [JSImport("showAlert", "MyInterop")]
+    public static partial void ShowAlert(string message);
+
+    [JSImport("getCurrentUrl", "MyInterop")]
+    public static partial string GetCurrentUrl();
+}
+```
+
+Load the module at startup (typically in `Program.cs`) using `JSHost.ImportAsync`, then call the methods from anywhere in your app:
+
+```csharp
+using System.Runtime.InteropServices.JavaScript;
+
+await JSHost.ImportAsync("MyInterop", "../js/interop.js");
+
+// Now you can call:
+JsInterop.ShowAlert("Hello from Avalonia!");
+string url = JsInterop.GetCurrentUrl();
+```
+
+The module name passed to `JSHost.ImportAsync` must match the second argument in the `[JSImport]` attribute.
+
+### Calling C# from JavaScript
+
+Use the `[JSExport]` attribute to expose a C# method to JavaScript:
+
+```csharp
+[SupportedOSPlatform("browser")]
+public partial class JsInterop
+{
+    [JSExport]
+    public static string GetAppVersion() => "1.0.0";
+}
+```
+
+From JavaScript, access the exported method through the .NET runtime:
+
+```javascript
+export async function callDotNet() {
+    const { getAssemblyExports } = await globalThis.getDotnetRuntime(0);
+    const exports = await getAssemblyExports("MyApp.dll");
+    const version = exports.MyNamespace.JsInterop.GetAppVersion();
+    console.log(version);
+}
+```
+
+### Accessing global functions
+
+To import a function from the global scope (rather than a module), prefix the function name with `globalThis` and omit the module name:
+
+```csharp
+[JSImport("globalThis.console.log")]
+public static partial void ConsoleLog(string message);
+```
+
+### Type marshalling
+
+.NET types are automatically marshalled to their JavaScript equivalents. For explicit control over marshalling, use the `[JSMarshalAs]` attribute:
+
+```csharp
+[JSImport("processData", "MyInterop")]
+public static partial void ProcessData(
+    [JSMarshalAs<JSType.Number>] long value);
+```
+
+You can pass `Action`/`Func` callbacks as parameters (marshalled as callable JS functions), and both JS and managed object references can be passed across the boundary as proxy objects.
+
+## See also
+
+- [Deploying WebAssembly](/docs/deployment/webassembly)
+- [WebAssembly troubleshooting](/troubleshooting/platform-specific-issues/webassembly)

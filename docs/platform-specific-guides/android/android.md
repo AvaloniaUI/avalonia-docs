@@ -63,58 +63,7 @@ maui-check
 
 With the above _Android_ development environment setup, you will be able to build _Android_ applications, and run them in a simulator on your platform.
 
-## Running your app on an Android device
-
-To deploy and run the Application on a real Android device, make sure of the following:
-
-1. Have the Android version on the device match the supported or target versions in AndroidManifest.xml (if no versions are specified, assume that target version is latest, supported by Xamarin/MAUI),
-2. Connect the device to development machine and enable USB Debugging in developer settings,
-3. If default connection mode is "battery charging only", switch to MTP or another mode (otherwise ADB won't connect to the device),
-4. Have matching Android SDK installed to the target SDK version in AndroidManifest.xml,
-
-Deployment is done via running the `dotnet run` command (if using console), or via the following setup (if using Visual Studio Code):
-
-tasks.json:
-
-```json
-{
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"label": "build-android",
-			"command": "dotnet",
-			"type": "process",
-			"args": [
-				"build",
-				"--no-restore",
-				"${workspaceFolder}/<ProjectName>.csproj",
-				"-p:TargetFramework=net6.0-android",
-				"-p:Configuration=Debug"
-			],
-			"problemMatcher": "$msCompile"
-		}
-	]
-}
-```
-
-where `<ProjectName>` is your Android-specific Avalonia project name.
-
-## Running your app on an Android simulator
-
-Assuming you have created a project called `HelloWorld`. Enter the directory `HelloWorld.Android` from the command line.
-
-To build the project for Android run the following command.
-
-```bash
-dotnet build
-```
-
-To run the project in a simulator, run the following command.
-
-```bash
-dotnet run
-```
-
 ## See also
 
+- [Deploying on Android](/docs/deployment/android) (emulator, device, and publishing)
 - [Configure Android debugging in Visual Studio Code on Linux](/tools/visual-studio-code/configure-vscode-debug-linux)
