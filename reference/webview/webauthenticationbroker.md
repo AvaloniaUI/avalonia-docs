@@ -106,8 +106,8 @@ Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/e
 
 | Feature                     | Windows | macOS (10.15+) | Linux | iOS (iOS 12.0+) | Android  | Browser  |
 |-----------------------------|---------|-------|-------|-----|-----------|-----------|
-| Platform Implementation  | ✖       | ✔*     | ✖     | ✔*   | ✔**         | ✔***         |
-| NativeWebDialog         | ✔       | ✔     | ✔     | ✖   | ✖         | ✖         |
+| Platform Implementation  | ✗       | ✓*     | ✗     | ✓*   | ✓**         | ✓***         |
+| NativeWebDialog         | ✓       | ✓     | ✓     | ✗   | ✗         | ✗         |
 
 \* Apple platforms use ASWebAuthenticationSession implementation.  
 \** Android uses CustomTabsIntent implementation, but support is experimental and might be changed.  

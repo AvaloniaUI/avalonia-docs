@@ -128,14 +128,14 @@ Only supported on the OS, with physical file paths, primarily only desktop.
 
 | Feature        | Managed |  Windows | macOS | Linux | Browser | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
-| `OpenFileBookmarkAsync` | ✔* | ✔* | ✔* | ✔* | ✔ | ✔ | ✔ |
-| `OpenFolderBookmarkAsync` | ✔* | ✔* | ✔* | ✔* | ✔ | ✔ | ✔ |
-| `OpenFilePickerAsync` | ✔** | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| `SaveFilePickerAsync` | ✔** | ✔ | ✔ | ✔ | ✔*** | ✔ | ✖ |
-| `OpenFolderPickerAsync` | ✔** | ✔ | ✔ | ✔ | ✔*** | ✔ | ✔ |
-| `TryGetFileFromPathAsync` | ✔ | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ |
-| `TryGetFolderFromPathAsync` | ✔ | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ |
-| `TryGetWellKnownFolderAsync` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| `OpenFileBookmarkAsync` | ✓* | ✓* | ✓* | ✓* | ✓ | ✓ | ✓ |
+| `OpenFolderBookmarkAsync` | ✓* | ✓* | ✓* | ✓* | ✓ | ✓ | ✓ |
+| `OpenFilePickerAsync` | ✓** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `SaveFilePickerAsync` | ✓** | ✓ | ✓ | ✓ | ✓*** | ✓ | ✗ |
+| `OpenFolderPickerAsync` | ✓** | ✓ | ✓ | ✓ | ✓*** | ✓ | ✓ |
+| `TryGetFileFromPathAsync` | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
+| `TryGetFolderFromPathAsync` | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
+| `TryGetWellKnownFolderAsync` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 \* Bookmarks are not properly supported on desktop platforms and instead return file path instead. macOS support is planned in order to get it work with Sandboxed Apple Store apps.
 

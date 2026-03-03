@@ -243,7 +243,7 @@ const sidebars: SidebarsConfig = {
         'platform-specific-guides/macos',
         'platform-specific-guides/webassembly',
         'platform-specific-guides/dotnet',
-        'platform-specific-guides/winforms',
+        'platform-specific-guides/windows',
         'platform-specific-guides/raspberry-pi',
         'platform-specific-guides/xaml',
         'platform-specific-guides/multi-touch-events',

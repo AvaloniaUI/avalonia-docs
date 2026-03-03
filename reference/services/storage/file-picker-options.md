@@ -73,14 +73,14 @@ Gets or sets an option indicating whether open picker allows users to select mul
 
 | Feature        | Managed |  Windows | macOS | Linux | Browser | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
-| `Title` | ✔ | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ |
-| `SuggestedStartLocation` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| `AllowMultiple` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| `FileTypeFilter` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| `SuggestedFileName` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| `DefaultExtension` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| `FileTypeChoices` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| `ShowOverwritePrompt` | ✔ | ✔ | ✖ | ✔ | ✖ | ✖ | ✖ |
+| `Title` | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ | ✓ |
+| `SuggestedStartLocation` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `AllowMultiple` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `FileTypeFilter` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `SuggestedFileName` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+| `DefaultExtension` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+| `FileTypeChoices` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+| `ShowOverwritePrompt` | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✗ |
 
 # Defining custom file types
 

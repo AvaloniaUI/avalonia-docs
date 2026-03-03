@@ -63,7 +63,7 @@ It does not guarantee, that there is an app than can handle launcher request.
 
 | Feature        | Windows | macOS | Linux | Browser | Android |  iOS | Tizen |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
-| `LaunchUriAsync` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| `LaunchFileAsync` | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| `LaunchFileInfoAsync` | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ | ✖ |
-| `LaunchDirectoryInfoAsync` | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ | ✖ |
+| `LaunchUriAsync` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `LaunchFileAsync` | ✓ | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ |
+| `LaunchFileInfoAsync` | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ |
+| `LaunchDirectoryInfoAsync` | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ |

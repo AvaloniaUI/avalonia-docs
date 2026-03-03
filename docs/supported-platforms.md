@@ -7,12 +7,12 @@ Avalonia apps can be written for the following platforms:
 
 | Platform    | Supported |
 |-------------|-----------|
-| `Windows`     | ✔️         |
-| `macOS `      | ✔️         |
-| `Linux`       | ✔️         |
-| `iOS`        | ✔️         |
-| `Android`     | ✔️         |
-| `WebAssembly` | ✔️         |
+| `Windows`     | ✓         |
+| `macOS `      | ✓         |
+| `Linux`       | ✓         |
+| `iOS`        | ✓         |
+| `Android`     | ✓         |
+| `WebAssembly` | ✓         |
 
 ## Windows
 

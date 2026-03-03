@@ -274,7 +274,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/platforms/windows/host-avalonia-controls-in-winforms",
-        "to": "/docs/platform-specific-guides/winforms"
+        "to": "/docs/platform-specific-guides/windows"
     },
     {
         "from": [

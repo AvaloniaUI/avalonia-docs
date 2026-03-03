@@ -65,11 +65,11 @@ Having `AnimationDuration` and `Easing` allows developer to create a transition 
 
 | Feature        | Windows | macOS | Linux | Browser | Android |  iOS | Tizen |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
-| `State` | ✔ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
-| `OccludedRect` | ✔ | ✖ | ✖ | ✔*  | ✔ | ✔ | ✖ |
-| `StateChanged` | ✔ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
-| `StateChanged.StartRect` | ✖ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
-| `StateChanged.AnimationDuration` | ✖ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| `StateChanged.Easing` | ✖ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
+| `State` | ✓ | ✗ | ✗ | ✓* | ✓ | ✓ | ✗ |
+| `OccludedRect` | ✓ | ✗ | ✗ | ✓*  | ✓ | ✓ | ✗ |
+| `StateChanged` | ✓ | ✗ | ✗ | ✓* | ✓ | ✓ | ✗ |
+| `StateChanged.StartRect` | ✗ | ✗ | ✗ | ✓* | ✓ | ✓ | ✗ |
+| `StateChanged.AnimationDuration` | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ | ✗ |
+| `StateChanged.Easing` | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ | ✗ |
 
 \* - only mobile Chromium browsers support IInputPane API.

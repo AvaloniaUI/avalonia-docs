@@ -297,11 +297,11 @@ Asynchronously delays destruction of the native control during parent changes.
 
 | Feature                | Windows WebView2-Edge | macOS/iOS WKWebView | Linux | Android | Browser |
 |------------------------|-----------------------|-------|---------------------|---------|---------|
-| `NativeWebView`        | ✔                     | ✔                   | ✖     | ✔      | ✖*      |
-| `TryGetCommandManager` | ✔                    | ✔                   | ✖     | ✔       | ✖*       |
-| `TryGetCookieManager`  | ✔                    | ✔                   | ✖     | ✔      | ✖*       |
-| `ShowPrintUI` | ✔                    | ✔                   | ✖      | ✖*     | ✖*       |
-| `PrintToPdfStreamAsync`  | ✔                    |  ✔**                   | ✖     | ✖*      | ✖*       |
+| `NativeWebView`        | ✓                     | ✓                   | ✗     | ✓      | ✗*      |
+| `TryGetCommandManager` | ✓                    | ✓                   | ✗     | ✓       | ✗*       |
+| `TryGetCookieManager`  | ✓                    | ✓                   | ✗     | ✓      | ✗*       |
+| `ShowPrintUI` | ✓                    | ✓                   | ✗      | ✗*     | ✗*       |
+| `PrintToPdfStreamAsync`  | ✓                    |  ✓**                   | ✗     | ✗*      | ✗*       |
 
 \* Not yet implemented while possible. Let us know if it's a blocker for you.
 

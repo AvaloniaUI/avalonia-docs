@@ -84,10 +84,10 @@ The system bar has a dark background and a light foreground.
 
 | Feature        | Windows | macOS | Linux | Browser | Android |  iOS | Tizen |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
-| `IsSystemBarVisible` | ✖ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
-| `DisplayEdgeToEdge` | ✖ | ✖ | ✖ | ✖  | ✔ | ✔ | ✖ |
-| `SafeAreaPadding` | ✖ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
-| `SystemBarColor` | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ | ✖ |
-| `SafeAreaChanged` | ✖ | ✖ | ✖ | ✔* | ✔ | ✔ | ✖ |
+| `IsSystemBarVisible` | ✗ | ✗ | ✗ | ✓* | ✓ | ✓ | ✗ |
+| `DisplayEdgeToEdge` | ✗ | ✗ | ✗ | ✗  | ✓ | ✓ | ✗ |
+| `SafeAreaPadding` | ✗ | ✗ | ✗ | ✓* | ✓ | ✓ | ✗ |
+| `SystemBarColor` | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ | ✗ |
+| `SafeAreaChanged` | ✗ | ✗ | ✗ | ✓* | ✓ | ✓ | ✗ |
 
 \* - only mobile Chromium browsers support IInsetsManager API.

@@ -385,6 +385,9 @@ const redirects: Redirect[] = [
 
   // GroupBox troubleshooting → control page (now a built-in control in Avalonia 12)
   { from: '/troubleshooting/controls/groupbox', to: '/controls/layout/containers/groupbox' },
+
+  // WinForms → Windows platform integration
+  { from: '/docs/platform-specific-guides/winforms', to: '/docs/platform-specific-guides/windows' },
 ];
 
 export const restructure_redirects = {

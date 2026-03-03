@@ -322,11 +322,11 @@ await tcs.Task;
 
 | Feature            | Windows | macOS | Linux | iOS   | Android | Browser |
 |--------------------|---------|-------|-------|-------|---------|---------|
-| `Show`               | ✔       | ✔     | ✔     | ✖     | ✖       | ✖       |
-| `Show(Window)`       | ✔       | ✔     | ✔*    | ✖     | ✖       | ✖       |
-| `WebMessageReceived` | ✔       | ✔     | ✖     | ✖     | ✖       | ✖       |
-| `ShowPrintUI` | ✔                    | ✔     | ✔        | ✖     | ✖      | ✖       |
-| `PrintToPdfStreamAsync`  | ✔                    | ✔**     | ✔        | ✖     | ✖      | ✖       |
+| `Show`               | ✓       | ✓     | ✓     | ✗     | ✗       | ✗       |
+| `Show(Window)`       | ✓       | ✓     | ✓*    | ✗     | ✗       | ✗       |
+| `WebMessageReceived` | ✓       | ✓     | ✗     | ✗     | ✗       | ✗       |
+| `ShowPrintUI` | ✓                    | ✓     | ✓        | ✗     | ✗      | ✗       |
+| `PrintToPdfStreamAsync`  | ✓                    | ✓**     | ✓        | ✗     | ✗      | ✗       |
 
 \* Linux support may vary depending on the window manager
 

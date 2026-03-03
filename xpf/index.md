@@ -26,10 +26,10 @@ As a commercial product, Avalonia XPF offers different licensing tiers to suit v
 
 | Platform        | Business | Enterprise |
 |---------------|-------|-------|
-| `Windows` | ✔ | ✔ | 
-| `macOS` | ✔ | ✔ | 
-| `Desktop Linux` | ✔ | ✔ | 
-| `Embedded Linux` | ✖ | ✔ | 
+| `Windows` | ✓ | ✓ | 
+| `macOS` | ✓ | ✓ | 
+| `Desktop Linux` | ✓ | ✓ | 
+| `Embedded Linux` | ✗ | ✓ | 
 
 All applications built with Avalonia XPF will continue to work in perpetuity, regardless of license status. This ensures that your deployed applications remain functional and stable for your end users.
 

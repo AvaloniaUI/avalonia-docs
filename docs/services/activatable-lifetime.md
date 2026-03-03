@@ -94,11 +94,11 @@ On Android, you need to add `intent-filter` with specific `android:scheme` to yo
 
 | Feature        |  Windows | macOS | Linux | Browser | Android |  iOS | Tizen |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
-| `ActivationKind.Background` | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ | ✖ |
-| `ActivationKind.File` | ✖ | ✔ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| `ActivationKind.OpenUri` | ✖ | ✔ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| `ActivationKind.Reopen` | ✖ | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ |
-| `TryLeaveBackground`  | ✖ | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ |
-| `TryEnterBackground` | ✖ | ✔ | ✖ | ✖ | ✔ | ✖ | ✖ |
+| `ActivationKind.Background` | ✗ | ✓ | ✗ | ✓ | ✓ | ✓ | ✗ |
+| `ActivationKind.File` | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ |
+| `ActivationKind.OpenUri` | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ |
+| `ActivationKind.Reopen` | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| `TryLeaveBackground`  | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| `TryEnterBackground` | ✗ | ✓ | ✗ | ✗ | ✓ | ✗ | ✗ |
 
 See https://github.com/AvaloniaUI/Avalonia/issues/15316 for more information on currently supported and unsupported platforms. 

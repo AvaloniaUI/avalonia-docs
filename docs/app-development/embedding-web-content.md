@@ -188,9 +188,9 @@ The WebView component relies on native web rendering implementations that must b
 
 | Component | Windows | macOS | Linux | iOS | Android | Browser |
 |-----------|---------|-------|-------|-----|---------|---------|
-| NativeWebView | ✔ | ✔ | ✖* | ✔ | ✔ | ✖ |
-| NativeWebDialog | ✔ | ✔ | ✔ | ✖ | ✖ | ✖ |
-| WebAuthenticationBroker | ✔** | ✔ | ✔** | ✔ | ✔*** | ✔**** |
+| NativeWebView | ✓ | ✓ | ✗* | ✓ | ✓ | ✗ |
+| NativeWebDialog | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
+| WebAuthenticationBroker | ✓** | ✓ | ✓** | ✓ | ✓*** | ✓**** |
 
 \* For Linux, use NativeWebDialog instead of NativeWebView  
 \** Uses NativeWebDialog implementation  
