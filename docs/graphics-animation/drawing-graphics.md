@@ -3,8 +3,6 @@ id: drawing-graphics
 title: Drawing graphics
 ---
 
-import ShapeAndGeometrySampleScreenshot from '/img/guides/ui-development/graphics/shapes-and-geometry.png';
-
 ## Graphics
 
 Avalonia introduces an extensive, scalable, and flexible set of graphics features that have the following benefits:
@@ -50,7 +48,83 @@ Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, 
 </Canvas>
 ```
 
-<img src={ShapeAndGeometrySampleScreenshot} alt=''/>
+Hover over each shape to identify it:
+
+<div style={{margin: '24px 0', display: 'flex', justifyContent: 'center'}}>
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style={{borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(128,128,128,0.15)'}}>
+  <style>{`
+    .dg-shape { transition: opacity 0.2s ease; cursor: pointer; }
+    .dg-shapes:hover .dg-shape { opacity: 0.3; }
+    .dg-shapes:hover .dg-shape:hover { opacity: 1; }
+    .dg-label {
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+      font-weight: 600;
+      fill: white;
+      paint-order: stroke;
+      stroke: rgba(0,0,0,0.75);
+      stroke-width: 3.5px;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+    .dg-shape:hover .dg-label { opacity: 1; }
+  `}</style>
+  <defs>
+    <linearGradient id="dg-opmask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="white" stopOpacity="1"/>
+      <stop offset="100%" stopColor="white" stopOpacity="0"/>
+    </linearGradient>
+    <mask id="dg-rmask">
+      <rect x="40" y="31" width="63" height="41" fill="url(#dg-opmask)"/>
+    </mask>
+  </defs>
+  {/* Canvas background */}
+  <rect width="300" height="400" fill="#FFFF00"/>
+  <g className="dg-shapes">
+    {/* Rectangle with OpacityMask */}
+    <g className="dg-shape">
+      <rect x="40" y="31" width="63" height="41" fill="blue" mask="url(#dg-rmask)"/>
+      <text className="dg-label" x="71" y="24" textAnchor="middle">Rectangle</text>
+    </g>
+    {/* Ellipse */}
+    <g className="dg-shape">
+      <ellipse cx="117" cy="129" rx="29" ry="29" fill="green"/>
+      <text className="dg-label" x="117" y="172" textAnchor="middle">Ellipse</text>
+    </g>
+    {/* Line */}
+    <g className="dg-shape">
+      <line x1="120" y1="185" x2="30" y2="115" stroke="red" strokeWidth="2"/>
+      {/* Invisible wider hit area for easier hovering */}
+      <line x1="120" y1="185" x2="30" y2="115" stroke="transparent" strokeWidth="14"/>
+      <text className="dg-label" x="82" y="140" textAnchor="middle">Line</text>
+    </g>
+    {/* Polygon */}
+    <g className="dg-shape">
+      <polygon points="75,0 120,120 0,45 150,45 30,120" transform="translate(150,31)" fill="violet" stroke="darkblue" strokeWidth="1"/>
+      <text className="dg-label" x="225" y="25" textAnchor="middle">Polygon</text>
+    </g>
+    {/* Path (mini-language) */}
+    <g className="dg-shape">
+      <path d="M 0,0 c 0,0 50,0 50,-50 c 0,0 50,0 50,50 h -50 v 50 l -50,-50 Z" transform="translate(30,250)" fill="orange"/>
+      <text className="dg-label" x="80" y="242" textAnchor="middle">Path</text>
+    </g>
+    {/* Path (PathGeometry) */}
+    <g className="dg-shape">
+      <path d="M 0,0 Q 50,0 50,-50 Q 100,-50 100,0 L 50,0 L 50,50 Z" transform="translate(180,250)" fill="orangered"/>
+      <text className="dg-label" x="230" y="242" textAnchor="middle">Path</text>
+    </g>
+    {/* Polyline */}
+    <g className="dg-shape">
+      <polyline points="0,0 65,0 78,-26 91,39 104,-39 117,13 130,0 195,0" transform="translate(30,350)" fill="none" stroke="brown" strokeWidth="1"/>
+      {/* Invisible wider hit area */}
+      <polyline points="0,0 65,0 78,-26 91,39 104,-39 117,13 130,0 195,0" transform="translate(30,350)" fill="none" stroke="transparent" strokeWidth="14"/>
+      <text className="dg-label" x="127" y="340" textAnchor="middle">Polyline</text>
+    </g>
+  </g>
+</svg>
+</div>
 
 ## Add Animations
 
