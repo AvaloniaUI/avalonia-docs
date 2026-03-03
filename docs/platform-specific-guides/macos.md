@@ -23,6 +23,163 @@ If your app needs macOS APIs beyond what Avalonia exposes, change your target fr
 
 This gives you access to the complete set of APIs provided by the .NET macOS workload, but it comes with a constraint: **builds targeting a macOS TFM must be performed on macOS**. You lose the ability to cross-compile from Windows or Linux.
 
+## Native menu bar
+
+macOS applications have a menu bar at the top of the screen, separate from the application window. Avalonia supports this through `NativeMenu`, which renders as a native macOS menu bar.
+
+### Application menu
+
+The leftmost menu in the menu bar carries your application's name and typically contains "About", "Preferences", and "Quit" items. Define it by attaching a `NativeMenu` to your `Application` in `App.axaml`:
+
+```xml
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MyApp.App"
+             Name="My Application">
+
+    <NativeMenu.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="About My Application..." Click="About_OnClick" />
+            <NativeMenuItem Header="Preferences..." Click="Preferences_OnClick"
+                            Gesture="Meta+Comma" />
+        </NativeMenu>
+    </NativeMenu.Menu>
+</Application>
+```
+
+The `Name` property on `Application` controls the bold app name shown in the menu bar. If you do not define a `NativeMenu`, Avalonia creates a default application menu that includes an "About Avalonia" item.
+
+:::tip
+When running as an `.app` bundle, the menu bar name is taken from `CFBundleName` in your `Info.plist`, not from the `Name` property. Make sure these values match to avoid confusion. Note that `CFBundleName` is limited to 15 characters. If your app name is longer, set `CFBundleDisplayName` as well.
+:::
+
+### Window menus
+
+To add standard menus like File and Edit, attach a `NativeMenu` to your `Window`:
+
+```xml
+<Window xmlns="https://github.com/avaloniaui">
+    <NativeMenu.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="File">
+                <NativeMenu>
+                    <NativeMenuItem Header="Open..." Gesture="Meta+O"
+                                    Click="FileOpen_OnClick" />
+                    <NativeMenuItem Header="Save" Gesture="Meta+S"
+                                    Command="{Binding SaveCommand}" />
+                    <NativeMenuItemSeparator />
+                    <NativeMenuItem Header="Close" Gesture="Meta+W"
+                                    Click="FileClose_OnClick" />
+                </NativeMenu>
+            </NativeMenuItem>
+            <NativeMenuItem Header="Edit">
+                <NativeMenu>
+                    <NativeMenuItem Header="Cut" Gesture="Meta+X"
+                                    Command="{Binding CutCommand}" />
+                    <NativeMenuItem Header="Copy" Gesture="Meta+C"
+                                    Command="{Binding CopyCommand}" />
+                    <NativeMenuItem Header="Paste" Gesture="Meta+V"
+                                    Command="{Binding PasteCommand}" />
+                </NativeMenu>
+            </NativeMenuItem>
+        </NativeMenu>
+    </NativeMenu.Menu>
+</Window>
+```
+
+A menu item named "Edit" is special on macOS. Avalonia automatically adds standard macOS text editing features (such as autocomplete and character substitution) to any menu with this header.
+
+Each `NativeMenuItem` requires either a `Click` event handler or a `Command` binding to be enabled. Without one of these, the item appears greyed out.
+
+### Keyboard shortcuts
+
+The `Gesture` property assigns a keyboard shortcut to a menu item. Use `Meta` for the Command key. The format is modifier keys joined by `+`, followed by the key name:
+
+| Gesture | macOS shortcut |
+|---|---|
+| `Meta+S` | Cmd+S |
+| `Meta+Shift+S` | Cmd+Shift+S |
+| `Meta+Comma` | Cmd+, |
+| `Meta+Alt+Q` | Cmd+Option+Q |
+
+Available modifiers are `Meta`, `Control`, `Shift`, and `Alt`.
+
+## macOS platform conventions
+
+macOS users expect certain standard keyboard shortcuts and behaviours. Avalonia handles some of these automatically, but others require explicit configuration.
+
+### Standard shortcuts
+
+The following shortcuts are conventions that macOS users expect. Configure them using `NativeMenu` gestures or `KeyBinding`:
+
+| Action | Shortcut | Notes |
+|---|---|---|
+| Preferences | Cmd+, | Should open your settings/preferences view |
+| Quit | Cmd+Q | Handled automatically by the native menu |
+| Close Window | Cmd+W | Bind to close the active window |
+| Minimize | Cmd+M | Handled automatically |
+| Hide | Cmd+H | Handled automatically |
+| Full Screen | Cmd+Ctrl+F | Handled automatically |
+| Select All | Cmd+A | Handled automatically in text controls |
+| Find | Cmd+F | Bind to your search/find functionality |
+
+### PlatformHotkeyConfiguration
+
+Avalonia automatically adapts common hotkeys to the active platform. On macOS, copy/paste/cut use Cmd rather than Ctrl. You can query the current platform's hotkey mappings at runtime through `PlatformSettings.HotkeyConfiguration`:
+
+```csharp
+protected override void OnKeyDown(KeyEventArgs e)
+{
+    var hotkeys = TopLevel.GetTopLevel(this)?.PlatformSettings?.HotkeyConfiguration;
+    if (hotkeys?.Copy.Any(g => g.Matches(e)) == true)
+    {
+        // Handle copy
+    }
+}
+```
+
+This is useful when building custom controls that need to respond to platform-standard shortcuts without hardcoding modifier keys.
+
+## Embedding native views
+
+You can host native macOS views (NSView subclasses) inside an Avalonia control using `NativeControlHost`. This is useful for integrating platform-specific UI components that have no Avalonia equivalent, such as a map view, camera preview, or platform media player.
+
+`NativeControlHost` works by providing a region of the window where a native view is composited alongside the Avalonia rendering surface. To use it, create a platform-specific implementation that returns a handle to the native view:
+
+```csharp
+public class NativeControlHostExample : NativeControlHost
+{
+    protected override IPlatformHandle CreateNativeControlCore(
+        IPlatformHandle parent)
+    {
+        if (OperatingSystem.IsMacOS())
+        {
+            // Create and return a handle to your NSView
+            // The view will be hosted within this control's bounds
+        }
+
+        return base.CreateNativeControlCore(parent);
+    }
+
+    protected override void DestroyNativeControlCore(
+        IPlatformHandle control)
+    {
+        // Clean up native resources
+        base.DestroyNativeControlCore(control);
+    }
+}
+```
+
+Native views rendered this way sit in a separate compositing layer from Avalonia's rendering, so they always appear above or below Avalonia content rather than participating in the normal visual tree z-ordering.
+
+:::note
+Embedding native views requires the `net10.0-macos` target framework, since you need access to the macOS APIs to create the native views. See [Accessing the full macOS API surface](#accessing-the-full-macos-api-surface) above.
+:::
+
+### Embedding Avalonia in a native macOS app
+
+The reverse is also possible. You can host Avalonia UI inside a native macOS (Cocoa or Mac Catalyst) application by embedding Avalonia's rendering surface as an NSView within your native view hierarchy. This is useful when migrating an existing macOS application to Avalonia incrementally, or when you want to use Avalonia for specific views within an otherwise native app.
+
 ## URL protocol handlers
 
 You can register your app to handle custom URL schemes (e.g., `myapp://open`) so that clicking a link in a browser or another app launches yours. Add a `CFBundleURLTypes` entry to your `Info.plist`:
@@ -107,3 +264,5 @@ Then place a valid `Info.plist` in the `Contents` directory. See the [macOS depl
 ## See also
 
 - [Deploying on macOS](/docs/deployment/macos)
+- [NativeMenu control reference](/controls/menus/nativemenu)
+- [Keyboard and hotkeys](/docs/input-interaction/keyboard-and-hotkeys)
