@@ -241,6 +241,7 @@ const sidebars: SidebarsConfig = {
         },
         'platform-specific-guides/ios',
         'platform-specific-guides/macos',
+        'platform-specific-guides/linux',
         'platform-specific-guides/webassembly',
         'platform-specific-guides/dotnet',
         'platform-specific-guides/windows',

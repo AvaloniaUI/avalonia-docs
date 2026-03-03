@@ -3,6 +3,8 @@ id: windows
 title: Windows
 ---
 
+Avalonia uses the Win32 API directly on Windows. No additional workloads or dependencies are needed beyond the .NET SDK.
+
 ## Embedding Avalonia in Windows Forms
 
 Avalonia controls can be hosted inside Windows Forms applications using `WinFormsAvaloniaControlHost`. This enables incremental migration of existing Windows Forms applications to Avalonia without rewriting everything at once.

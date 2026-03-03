@@ -60,25 +60,11 @@ If you're not sure whether your contribution needs a commercial engagement, just
 
 ## Platform notes
 
-### Windows
-
-Avalonia uses the Win32 API directly. No additional workloads or dependencies are needed beyond the .NET SDK.
-
-### macOS
-
-Avalonia ships its own native backend and doesn't require the .NET macOS workload. You can build macOS apps from Windows or Linux. If you need to sign and notarise your app for distribution, you'll need a Mac with Xcode installed. See the [macOS platform integration guide](/docs/platform-specific-guides/macos) for details.
-
 ### Linux
 
-Avalonia works on most Linux distributions that support the .NET SDK and have either X11 or framebuffer capabilities. Wayland support is currently in private preview and will be available in an upcoming release.
+Skia is built against glibc 2.17. If your distribution uses a different C library (such as musl), you'll need to build your own `libSkiaSharp.so`. See [SkiaSharp](https://github.com/mono/SkiaSharp) for details. Distributions that require a custom Skia build are considered Tier 3.
 
-Only the distributions listed in Tier 1 and Tier 2 are supported through the open-source project. Everything else, including musl-based distros like Alpine, rolling-release distros like Arch and NixOS, and source-based distros like Gentoo, falls under Tier 3.
-
-WSL 2 distributions are supported, but you'll need to install `libice6`, `libsm6`, and `libfontconfig1` separately.
-
-:::info
-Skia is built against glibc 2.17. If your distribution uses a different C library, you'll need to build your own `libSkiaSharp.so`. See [SkiaSharp](https://github.com/mono/SkiaSharp) for details. Distributions that require a custom Skia build are considered Tier 3.
-:::
+For setup and configuration details, see the [Linux platform integration guide](/docs/platform-specific-guides/linux).
 
 ### iOS and Android
 

@@ -313,11 +313,6 @@ function createRedirects(existingPath: string): string[] | undefined {
       redirects.push('/samples');
     }
 
-    // Linux moved from platform-specific-guides to deployment
-    if (existingPath === '/docs/deployment/linux') {
-      redirects.push('/docs/platform-specific-guides/linux');
-    }
-
     return redirects.length ? redirects : undefined;
   }
 
