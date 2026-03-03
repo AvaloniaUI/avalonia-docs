@@ -1,19 +1,22 @@
 /**
  * CopyButton styles matching Customer Portal
  * Pill-shaped button with icon and text
+ * Icon-only by default, expands to reveal text on hover
  */
 
 .copyButton {
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 0.5rem;
   border-radius: 9999px; // rounded-full (pill shape)
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1;
   cursor: pointer;
-  transition: all 0.15s ease;
+  overflow: hidden;
+  max-width: 2rem; // icon + padding only
+  transition: max-width 0.25s ease, background-color 0.15s ease, border-color 0.15s ease;
 
   // Light mode styling (matching Customer Portal)
   background-color: #fff;
@@ -28,6 +31,7 @@
   }
 
   &:hover {
+    max-width: 6rem;
     background-color: var(--color-gray-50, #f9fafb);
     border-color: var(--color-gray-300, #d0d5dd);
   }
@@ -40,9 +44,11 @@
 
 .copyText {
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .copied {
+  max-width: 6rem;
   color: var(--color-success-600, #039855);
 
   svg {
@@ -73,6 +79,7 @@
   }
 
   .copied {
+    max-width: 6rem;
     color: var(--color-success-400, #32d583);
 
     svg {

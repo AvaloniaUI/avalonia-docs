@@ -67,7 +67,6 @@ export default function CopyButton({ className }: { className?: string }) {
     <button
       type="button"
       aria-label={label}
-      title={label}
       className={clsx(styles.copyButton, className, isCopied && styles.copied)}
       onClick={copyCode}
     >
