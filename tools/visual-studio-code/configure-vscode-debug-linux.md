@@ -1,9 +1,10 @@
 ---
 id: configure-vscode-debug-linux
-title: Configure debugging in Visual Studio Code (Linux)
+title: Configure Android debugging on Linux
+sidebar_label: Android debugging (Linux)
 ---
 
-# Configure debugging in Visual Studio Code (Linux)
+# Configure Android debugging on Linux
 
 For debugging Avalonia-based Android projects on Linux (using Visual Studio Code), follow the steps:
 

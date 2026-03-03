@@ -316,7 +316,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/platforms/android/configure-vscode-debug-linux",
-        "to": "/docs/platform-specific-guides/android/configure-vscode-debug-linux"
+        "to": "/tools/visual-studio-code/configure-vscode-debug-linux"
     },
     {
         "from": "/docs/guides/platforms/android/embed-native-views",

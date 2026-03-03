@@ -313,10 +313,7 @@ function createRedirects(existingPath: string): string[] | undefined {
       redirects.push('/samples');
     }
 
-    // macOS and Linux moved from platform-specific-guides to deployment
-    if (existingPath === '/docs/deployment/macos') {
-      redirects.push('/docs/platform-specific-guides/macos');
-    }
+    // Linux moved from platform-specific-guides to deployment
     if (existingPath === '/docs/deployment/linux') {
       redirects.push('/docs/platform-specific-guides/linux');
     }
@@ -382,6 +379,9 @@ const redirects: Redirect[] = [
   // Samples → Samples & Tutorials
   { from: '/samples', to: '/docs/samples-tutorials' },
   { from: '/samples/index', to: '/docs/samples-tutorials' },
+
+  // Android VS Code debug guide → Tools
+  { from: '/docs/platform-specific-guides/android/configure-vscode-debug-linux', to: '/tools/visual-studio-code/configure-vscode-debug-linux' },
 ];
 
 export const restructure_redirects = {

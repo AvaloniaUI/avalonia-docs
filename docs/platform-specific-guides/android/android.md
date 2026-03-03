@@ -114,3 +114,7 @@ To run the project in a simulator, run the following command.
 ```bash
 dotnet run
 ```
+
+## See also
+
+- [Configure Android debugging in Visual Studio Code on Linux](/tools/visual-studio-code/configure-vscode-debug-linux)

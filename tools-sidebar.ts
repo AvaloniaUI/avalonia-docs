@@ -45,6 +45,14 @@ const sidebars: SidebarsConfig = {
     'visual-studio-extension',
     {
       type: 'category',
+      label: 'Visual Studio Code',
+      collapsed: true,
+      items: [
+        'visual-studio-code/configure-vscode-debug-linux',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Accelerate Controls',
       collapsed: true,
       items: [
