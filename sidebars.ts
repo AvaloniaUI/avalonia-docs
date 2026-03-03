@@ -121,21 +121,24 @@ const sidebars: SidebarsConfig = {
       items: [
         'input-interaction/pointer',
         'input-interaction/focus',
-        'input-interaction/gestures',
-        'input-interaction/keyboard-and-hotkeys',
-        'input-interaction/routed-events',
-        'input-interaction/adding-interactivity',
-        'input-interaction/mouse-and-keyboard-shortcuts',
         {
           type: 'category',
-          label: 'Gesture Recognizers',
+          label: 'Gestures',
           collapsed: true,
+          link: {
+            type: 'doc',
+            id: 'input-interaction/gestures',
+          },
           items: [
             'input-interaction/gestures/pinch-gesture-recognizer',
             'input-interaction/gestures/pull-gesture-recognizer',
             'input-interaction/gestures/scroll-gesture-recognizer',
           ],
         },
+        'input-interaction/keyboard-and-hotkeys',
+        'input-interaction/routed-events',
+        'input-interaction/adding-interactivity',
+        'input-interaction/mouse-and-keyboard-shortcuts',
       ],
     },
     {
@@ -247,7 +250,6 @@ const sidebars: SidebarsConfig = {
         'platform-specific-guides/windows',
         'platform-specific-guides/raspberry-pi',
         'platform-specific-guides/xaml',
-        'platform-specific-guides/multi-touch-events',
         'platform-specific-guides/virtual-keyboard',
       ],
     },

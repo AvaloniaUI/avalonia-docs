@@ -885,7 +885,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/basics/user-interface/multi-touch",
-        "to": "/docs/platform-specific-guides/multi-touch-events"
+        "to": "/docs/input-interaction/gestures"
     },
     {
         "from": "/docs/basics/user-interface/messagebox",

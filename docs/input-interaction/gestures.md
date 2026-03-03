@@ -3,41 +3,78 @@ id: gestures
 title: Gestures
 ---
 
-# Gestures
+Avalonia uses a unified pointer event system. Mouse, touch, and stylus input all flow through the same `PointerPressed`, `PointerMoved`, and `PointerReleased` events rather than having separate event types for each device. Pointer events tell you what the hardware did: a button went down, a finger moved.
 
-Controls can detect gestures using Gesture Recognizers. These recognizers are hosted in controls, and listen for and track pointer events that the control receives, sending gesture events when they have detected a gesture has started.
+Gestures are a higher-level abstraction built on top of pointer events that represent what the user *intended*: a tap, a pinch-to-zoom, a scroll.
 
-All gesture recognizers derive from the base class `GestureRecognizer`, and can be attached to a control using the control's `GestureRecognizers` property. The following shows an Image hosting a `ScrollGestureRecognizer`;
+Avalonia provides two kinds of gestures:
+
+**Built-in gesture events** cover the most common interactions:
+
+| Event | Description |
+|---|---|
+| `Tapped` | A pointer was pressed and released on a control. |
+| `DoubleTapped` | Two taps occurred in the same location within the platform's double-tap time and distance threshold. |
+| `Holding` | A pointer was pressed and held without moving. Must be enabled per control with `Gestures.IsHoldingEnabled`. |
+
+**Gesture recognizers** detect more complex multi-pointer or directional patterns. You attach them to a control's `GestureRecognizers` collection, and they monitor the control's pointer events to detect specific patterns:
+
+| Recognizer | Description |
+|---|---|
+| [`PinchGestureRecognizer`](/docs/input-interaction/gestures/pinch-gesture-recognizer) | Two pointers moving towards or away from each other. Used for pinch-to-zoom. |
+| [`PullGestureRecognizer`](/docs/input-interaction/gestures/pull-gesture-recognizer) | A pointer dragged from the edge of a control in a specific direction. Used for pull-to-refresh. |
+| [`ScrollGestureRecognizer`](/docs/input-interaction/gestures/scroll-gesture-recognizer) | A pointer dragged to scroll content horizontally, vertically, or both. |
+
+## Attaching a gesture recognizer
+
+Gesture recognizers are added to a control in XAML or code-behind:
 
 ```xml
-<Image Stretch="UniformToFill"
-        Margin="5"
-        Name="image"
-        Source="/image.jpg">
+<Image Stretch="UniformToFill" Name="image" Source="/image.jpg">
   <Image.GestureRecognizers>
-    <ScrollGestureRecognizer CanHorizontallyScroll="True"
-                              CanVerticallyScroll="True"/>
+    <PinchGestureRecognizer />
   </Image.GestureRecognizers>
 </Image>
 ```
 
-
 ```csharp title='C#'
-image.GestureRecognizers.Add(new ScrollGestureRecognizer()
-            {
-                CanVerticallyScroll = true,
-                CanHorizontallyScroll = true,
-            });
+image.GestureRecognizers.Add(new PinchGestureRecognizer());
 ```
 
-## More Information
+Once attached, the recognizer watches the control's pointer events and raises gesture-specific events when it detects a match. Each recognizer raises a start event (e.g. `Gestures.PinchEvent`) and an end event (e.g. `Gestures.PinchEndedEvent`).
 
-:::info
-These gesture recognizers are currently availalbe: [pinch](/docs/input-interaction/gestures/pinch-gesture-recognizer), [pull](/docs/input-interaction/gestures/pull-gesture-recognizer) and [scroll](/docs/input-interaction/gestures/scroll-gesture-recognizer).
+## Subscribing to gesture events
 
-You can view the source for related classes
+Gesture recognizer events are routed events. Subscribe using `AddHandler`:
 
-[GestureRecognizer](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/GestureRecognizers/GestureRecognizer.cs)
+```csharp title='C#'
+image.AddHandler(Gestures.PinchEvent, (sender, args) =>
+{
+    var scale = args.Scale;
+    // Handle pinch
+});
+```
 
-[GestureRecognizerCollection](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/GestureRecognizers/GestureRecognizerCollection.cs)
-:::
+If your handler fully processes the gesture, mark it as handled to prevent it from bubbling further:
+
+```csharp title='C#'
+args.Handled = true;
+```
+
+## Holding gesture
+
+Unlike `Tapped` and `DoubleTapped`, the `Holding` gesture must be enabled per control by setting the `Gestures.IsHoldingEnabled` attached property:
+
+```xml
+<Border Gestures.IsHoldingEnabled="True" Holding="OnHolding" />
+```
+
+The hold duration is defined by `PlatformSettings.HoldWaitDuration` on the `TopLevel`. When the duration elapses, a `Holding` event fires with `HoldingState.Started`. On pointer release, it fires again with `HoldingState.Completed`. If a new gesture begins or a second pointer is pressed while holding, it fires with `HoldingState.Cancelled`.
+
+To allow mouse pointers (not just touch) to trigger holding, set `Gestures.IsHoldWithMouseEnabled`:
+
+```xml
+<Border Gestures.IsHoldingEnabled="True"
+        Gestures.IsHoldWithMouseEnabled="True"
+        Holding="OnHolding" />
+```

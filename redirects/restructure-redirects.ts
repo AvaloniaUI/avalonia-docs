@@ -313,6 +313,11 @@ function createRedirects(existingPath: string): string[] | undefined {
       redirects.push('/samples');
     }
 
+    // Multi-touch merged into gestures
+    if (existingPath === '/docs/input-interaction/gestures') {
+      redirects.push('/docs/platform-specific-guides/multi-touch-events');
+    }
+
     return redirects.length ? redirects : undefined;
   }
 
