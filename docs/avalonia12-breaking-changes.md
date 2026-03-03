@@ -900,6 +900,11 @@ Renamed to `UseFloatingPlaceholder` for consistency with other controls.
 The old property is kept for now, but is obsolete; usages should be updated.  
 PR: [#20303](https://github.com/AvaloniaUI/Avalonia/pull/20303)
 
+### `Avalonia.Controls.Window.SystemDecorations` property
+Renamed to `WindowDecorations` due to the [Window decoration changes](#window-decoration-changes).  
+The old property is kept for now, but is obsolete; usages should be updated.  
+PR: [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796)
+
 ### `Avalonia.Media.RenderOptions.TextRenderingMode` property
 Moved to `TextOptions.TextRenderingMode`.   
 `TextOptions` is new and includes several other knobs that affect text rendering.   
