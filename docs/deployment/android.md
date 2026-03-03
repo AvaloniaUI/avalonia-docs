@@ -10,7 +10,7 @@ Publishing an Avalonia app for Android generates an Android Package (APK) or And
 During development, .NET for Android uses a debug keystore to sign the app, which allows it to be deployed directly to an emulator or to devices configured to run debuggable apps. However, this keystore isn't valid for distributing apps. A private keystore must be created and used for signing release builds.
 
 :::tip
-This step only needs to be performed once. The same keystore will be used for publishing updates and can be used to sign other apps. Back up your keystore and password — if you lose them, you won't be able to sign your app with the same identity.
+This step only needs to be performed once. The same keystore will be used for publishing updates and can be used to sign other apps. Back up your keystore and password. If you lose them, you won't be able to sign your app with the same identity.
 :::
 
 Run `keytool` from the JDK with the following parameters:
@@ -107,8 +107,8 @@ dotnet publish -f net9.0-android -c Release
 
 ## Distribute the app
 
-- **Google Play** — Submit your AAB file via the [Google Play Console](https://play.google.com/console). See [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) for details.
-- **Direct download** — Host the APK on a website or file share. Users must enable installation from unknown sources on their devices. See [User opt-in for unknown apps](https://developer.android.com/studio/publish#publishing-unknown) for details.
+- **Google Play**: Submit your AAB file via the [Google Play Console](https://play.google.com/console). See [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) for details.
+- **Direct download**: Host the APK on a website or file share. Users must enable installation from unknown sources on their devices. See [User opt-in for unknown apps](https://developer.android.com/studio/publish#publishing-unknown) for details.
 
 ## See also
 

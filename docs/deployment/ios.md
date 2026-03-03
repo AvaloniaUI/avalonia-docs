@@ -3,7 +3,7 @@ id: ios
 title: iOS
 ---
 
-Publishing an Avalonia app for iOS generates an `.ipa` file — an iOS app archive ready for distribution. Distributing an iOS app requires that it is signed using a provisioning profile, which contains code signing information and the intended distribution mechanism.
+Publishing an Avalonia app for iOS generates an `.ipa` file, which is an iOS app archive ready for distribution. Distributing an iOS app requires that it is signed using a provisioning profile, which contains code signing information and the intended distribution mechanism.
 
 ## Prerequisites
 
@@ -19,9 +19,9 @@ If you're new to iOS provisioning, see the [iOS platform setup guide](/docs/plat
 
 Apple provides several approaches for distributing iOS apps:
 
-- **App Store** — Submit through [App Store Connect](https://appstoreconnect.apple.com). Apps require Apple's approval. This is the most common approach for reaching end users.
-- **Ad-hoc** — Distribute to up to 100 registered devices for testing. Available to Apple Developer Program members.
-- **In-house (Enterprise)** — Distribute internally within an organization. Requires membership in the [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/).
+- **App Store**: Submit through [App Store Connect](https://appstoreconnect.apple.com). Apps require Apple's approval. This is the most common approach for reaching end users.
+- **Ad-hoc**: Distribute to up to 100 registered devices for testing. Available to Apple Developer Program members.
+- **In-house (Enterprise)**: Distribute internally within an organization. Requires membership in the [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/).
 
 All approaches require that apps are signed using an appropriate provisioning profile.
 
@@ -95,9 +95,9 @@ dotnet publish -f net9.0-ios -c Release
 
 ## Distribute the app
 
-- **App Store** — Upload the `.ipa` using [Transporter](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) or Xcode. You must first create an app record in [App Store Connect](https://appstoreconnect.apple.com) and generate an [app-specific password](https://support.apple.com/HT204397).
-- **Ad-hoc** — Distribute using [Apple Configurator](https://apps.apple.com/app/id1037126344).
-- **In-house** — Distribute via a secure website or Mobile Device Management (MDM). See [Distribute proprietary in-house apps](https://support.apple.com/guide/deployment/depce7cefc4d/web) for details.
+- **App Store**: Upload the `.ipa` using [Transporter](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) or Xcode. You must first create an app record in [App Store Connect](https://appstoreconnect.apple.com) and generate an [app-specific password](https://support.apple.com/HT204397).
+- **Ad-hoc**: Distribute using [Apple Configurator](https://apps.apple.com/app/id1037126344).
+- **In-house**: Distribute via a secure website or Mobile Device Management (MDM). See [Distribute proprietary in-house apps](https://support.apple.com/guide/deployment/depce7cefc4d/web) for details.
 
 ## See also
 
