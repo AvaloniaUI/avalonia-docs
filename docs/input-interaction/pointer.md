@@ -11,17 +11,19 @@ Controls most often detect and respond to user input. The Avalonia input system 
 
 Applications often have complex input requirements. Avalonia provides a [command system](/docs/input-interaction/adding-interactivity) that separates user input actions from the code that responds to those actions.
 
-Controls that implement `ICommandSource` have a `HotKey` property. Additionally, controls have events that allow you to subscribe to pointer movements, clicks and wheel movements. These are as follows:
+Controls that implement `ICommandSource` have a `HotKey` property. Additionally, controls have events that allow you to subscribe to pointer movements, clicks and wheel movements:
 
-* PointerEntered
-* PointerExited
-* PointerMoved
-* PointerPressed
-* PointerReleased
-* PointerWheelChanged
-* Tapped
-* DoubleTapped
-* Holding
+| Event | Description |
+|---|---|
+| `PointerEntered` | Raised when the pointer moves into a control's bounds. |
+| `PointerExited` | Raised when the pointer leaves a control's bounds. |
+| `PointerMoved` | Raised when the pointer moves while inside a control's bounds. |
+| `PointerPressed` | Raised when a pointer button is pressed over a control. |
+| `PointerReleased` | Raised when a previously pressed pointer button is released over a control. |
+| `PointerWheelChanged` | Raised when the mouse wheel or trackpad scroll is used over a control. |
+| `Tapped` | Raised after a pointer press and release on a control. |
+| `DoubleTapped` | Raised after two taps in the same location within the platform's double-tap threshold. |
+| `Holding` | Raised when a pointer is pressed and held for a duration defined by `PlatformSettings.HoldWaitDuration`. |
 
 For example, you can subscribe to the event for one of the pointer buttons being pressed on a control, like this:
 
