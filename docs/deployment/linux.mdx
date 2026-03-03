@@ -8,7 +8,13 @@ Avalonia Linux programs can be executed in most Linux distros by double-clicking
 
 Debian and Ubuntu related distros have their applications packaged in `.deb` files, that can be installed via `sudo apt install ./your_package.deb`.
 
-## Tutorial
+:::tip[Use Parcel for easier packaging]
+[Parcel](/tools/parcel/packaging-for-linux) automates Linux packaging for Avalonia apps — it generates `.deb`, `.rpm`, and `.zip` packages with desktop integration handled for you. See the [Parcel setup guide](/tools/parcel/setup) to get started.
+:::
+
+## Manual packaging
+
+The rest of this page covers how to create a `.deb` package manually using `dpkg-deb`.
 
 In this tutorial, we will use the `dpkg-deb` tool to compile your `.deb` package.
 
