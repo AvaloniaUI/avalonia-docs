@@ -125,7 +125,7 @@ PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
 
 The text shaper is now configurable independently of the rendering engine. For most applications, this change should be transparent, as HarfBuzz is used by default when `UsePlatformDetect` is called on the `AppBuilder`.
 
-However, if your project explicitly configures a rendering engine, such as Skia via `UseSkia`, an `InvalidOperationException` with the message *Unable to locate 'Avalonia.Platform.ITextShaperImpl'* might be thrown on startup. In this case, the project needs to be updated with a call to `UseHarfBuzz` on the `AppBuilder`.
+However, if your project explicitly configures a rendering engine, such as Skia via `UseSkia`, an `InvalidOperationException` with the message *No text shaping system configured* might be thrown on startup. In this case, the project needs to be updated with a call to `UseHarfBuzz` on the `AppBuilder`.
 
 **Example:**
 
