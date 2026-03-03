@@ -3,7 +3,66 @@ id: scroll-gesture-recognizer
 title: Scroll
 ---
 
-A gesture recognizer that tracks a scrolling gesture. This can be attached to a control to detect when a pointer moves in a specific direction inside the control's bounds. This is especially useful when a control pans its contents, either horizontally, vertically or both.
+A gesture recognizer that tracks a scrolling gesture. This can be attached to a control to detect when a pointer moves in a specific direction inside the control's bounds. This is especially useful when a control pans its contents horizontally, vertically, or both.
+
+<div style={{textAlign: 'center', margin: '24px 0'}}>
+<svg width="240" height="190" viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  {/* Trackpad surface */}
+  <rect x="20" y="10" width="200" height="140" rx="14"
+    fill="currentColor" fillOpacity="0.03"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.12"/>
+  <rect x="24" y="14" width="192" height="132" rx="11"
+    fill="none"
+    stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.06"/>
+  {/* Touch point 1: Vertical scroll (active 0-45%) */}
+  <circle cx="120" r="14"
+    fill="currentColor" fillOpacity="0.08"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.35">
+    <animate attributeName="cy"
+      values="40;40;120;120;40;40"
+      keyTimes="0;0.04;0.40;0.44;0.48;1"
+      calcMode="spline"
+      keySplines="0 0 1 1;0.25 0.1 0.25 1;0 0 1 1;0 0 1 1;0 0 1 1"
+      dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0;1;1;0;0;0"
+      keyTimes="0;0.03;0.40;0.45;0.48;1"
+      dur="6s" repeatCount="indefinite"/>
+  </circle>
+  {/* Touch point 2: Horizontal scroll (active 50-95%) */}
+  <circle cy="80" r="14"
+    fill="currentColor" fillOpacity="0.08"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.35">
+    <animate attributeName="cx"
+      values="50;50;50;190;190;50;50"
+      keyTimes="0;0.50;0.54;0.90;0.94;0.98;1"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;0.25 0.1 0.25 1;0 0 1 1;0 0 1 1;0 0 1 1"
+      dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0;0;0;1;1;0;0"
+      keyTimes="0;0.50;0.52;0.54;0.90;0.95;1"
+      dur="6s" repeatCount="indefinite"/>
+  </circle>
+  {/* Labels */}
+  <text x="120" y="176" textAnchor="middle"
+    fill="currentColor" fontSize="13" fontFamily="system-ui, sans-serif">
+    <animate attributeName="opacity"
+      values="0.5;0.5;0;0;0.5"
+      keyTimes="0;0.44;0.48;0.96;1"
+      dur="6s" repeatCount="indefinite"/>
+    Vertical
+  </text>
+  <text x="120" y="176" textAnchor="middle"
+    fill="currentColor" fontSize="13" fontFamily="system-ui, sans-serif">
+    <animate attributeName="opacity"
+      values="0;0;0.5;0.5;0"
+      keyTimes="0;0.48;0.52;0.94;1"
+      dur="6s" repeatCount="indefinite"/>
+    Horizontal
+  </text>
+</svg>
+</div>
 
 ## Using a ScrollGestureRecognizer
 A ScrollGestureRecognizer can be attached to a control using the control's `GestureRecognizers` property.

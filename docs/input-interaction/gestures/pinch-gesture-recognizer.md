@@ -3,7 +3,59 @@ id: pinch-gesture-recognizer
 title: Pinch
 ---
 
-A gesture recognizer that tracks a pinch gesture. A pinch gesture occurs when two pointer contacts are brought towards each other, or away from each other. This is useful in controls that implements a pinch to zoom interaction.
+A gesture recognizer that tracks a pinch gesture. A pinch gesture occurs when two pointer contacts are brought towards each other, or away from each other. This is useful in controls that implement a pinch-to-zoom interaction.
+
+<div style={{textAlign: 'center', margin: '24px 0'}}>
+<svg width="240" height="190" viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  {/* Trackpad surface */}
+  <rect x="20" y="10" width="200" height="140" rx="14"
+    fill="currentColor" fillOpacity="0.03"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.12"/>
+  <rect x="24" y="14" width="192" height="132" rx="11"
+    fill="none"
+    stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.06"/>
+  {/* Left touch point */}
+  <circle cy="80" r="14"
+    fill="currentColor" fillOpacity="0.08"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.35">
+    <animate attributeName="cx"
+      values="108;108;62;62;108;108"
+      keyTimes="0;0.06;0.44;0.56;0.94;1"
+      calcMode="spline"
+      keySplines="0 0 1 1;0.25 0.1 0.25 1;0 0 1 1;0.25 0.1 0.25 1;0 0 1 1"
+      dur="5s" repeatCount="indefinite"/>
+  </circle>
+  {/* Right touch point */}
+  <circle cy="80" r="14"
+    fill="currentColor" fillOpacity="0.08"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.35">
+    <animate attributeName="cx"
+      values="132;132;178;178;132;132"
+      keyTimes="0;0.06;0.44;0.56;0.94;1"
+      calcMode="spline"
+      keySplines="0 0 1 1;0.25 0.1 0.25 1;0 0 1 1;0.25 0.1 0.25 1;0 0 1 1"
+      dur="5s" repeatCount="indefinite"/>
+  </circle>
+  {/* Label: Zoom in */}
+  <text x="120" y="176" textAnchor="middle"
+    fill="currentColor" fontSize="13" fontFamily="system-ui, sans-serif">
+    <animate attributeName="opacity"
+      values="0.5;0.5;0;0;0.5"
+      keyTimes="0;0.46;0.5;0.96;1"
+      dur="5s" repeatCount="indefinite"/>
+    Zoom in
+  </text>
+  {/* Label: Zoom out */}
+  <text x="120" y="176" textAnchor="middle"
+    fill="currentColor" fontSize="13" fontFamily="system-ui, sans-serif">
+    <animate attributeName="opacity"
+      values="0;0;0.5;0.5;0"
+      keyTimes="0;0.46;0.5;0.96;1"
+      dur="5s" repeatCount="indefinite"/>
+    Zoom out
+  </text>
+</svg>
+</div>
 
 ## Using a PinchGestureRecognizer
 A PinchGestureRecognizer can be attached to a control using the control's `GestureRecognizers` property.

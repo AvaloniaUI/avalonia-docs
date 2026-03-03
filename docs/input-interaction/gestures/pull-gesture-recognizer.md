@@ -3,7 +3,112 @@ id: pull-gesture-recognizer
 title: Pull
 ---
 
-A gesture recognizer that tracks a pull gesture. A pull gesture occurs when a pointer is dragged from the edge of a control. The direction of the pull is defined by the `PullDirection` property.
+A gesture recognizer that tracks a pull gesture. A pull gesture occurs when a pointer is dragged from the edge of a control in a specific direction. The direction is defined by the `PullDirection` property.
+
+<div style={{textAlign: 'center', margin: '24px 0'}}>
+<svg width="240" height="190" viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  {/* Trackpad surface */}
+  <rect x="20" y="10" width="200" height="140" rx="14"
+    fill="currentColor" fillOpacity="0.03"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.12"/>
+  <rect x="24" y="14" width="192" height="132" rx="11"
+    fill="none"
+    stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.06"/>
+  {/* Touch point 1: Top to bottom (active 0-22%) */}
+  <circle cx="120" r="14"
+    fill="currentColor" fillOpacity="0.08"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.35">
+    <animate attributeName="cy"
+      values="30;30;115;115;30;30"
+      keyTimes="0;0.03;0.20;0.22;0.24;1"
+      calcMode="spline"
+      keySplines="0 0 1 1;0.25 0.1 0.25 1;0 0 1 1;0 0 1 1;0 0 1 1"
+      dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0;1;1;0;0;0"
+      keyTimes="0;0.02;0.20;0.23;0.25;1"
+      dur="10s" repeatCount="indefinite"/>
+  </circle>
+  {/* Touch point 2: Bottom to top (active 25-47%) */}
+  <circle cx="120" r="14"
+    fill="currentColor" fillOpacity="0.08"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.35">
+    <animate attributeName="cy"
+      values="130;130;130;40;40;130;130"
+      keyTimes="0;0.25;0.28;0.45;0.47;0.49;1"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;0.25 0.1 0.25 1;0 0 1 1;0 0 1 1;0 0 1 1"
+      dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0;0;0;1;1;0;0"
+      keyTimes="0;0.25;0.27;0.28;0.45;0.48;1"
+      dur="10s" repeatCount="indefinite"/>
+  </circle>
+  {/* Touch point 3: Left to right (active 50-72%) */}
+  <circle cy="80" r="14"
+    fill="currentColor" fillOpacity="0.08"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.35">
+    <animate attributeName="cx"
+      values="40;40;40;200;200;40;40"
+      keyTimes="0;0.50;0.53;0.70;0.72;0.74;1"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;0.25 0.1 0.25 1;0 0 1 1;0 0 1 1;0 0 1 1"
+      dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0;0;0;1;1;0;0"
+      keyTimes="0;0.50;0.52;0.53;0.70;0.73;1"
+      dur="10s" repeatCount="indefinite"/>
+  </circle>
+  {/* Touch point 4: Right to left (active 75-97%) */}
+  <circle cy="80" r="14"
+    fill="currentColor" fillOpacity="0.08"
+    stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.35">
+    <animate attributeName="cx"
+      values="200;200;200;40;40;200;200"
+      keyTimes="0;0.75;0.78;0.95;0.97;0.99;1"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;0.25 0.1 0.25 1;0 0 1 1;0 0 1 1;0 0 1 1"
+      dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0;0;0;1;1;0;0"
+      keyTimes="0;0.75;0.77;0.78;0.95;0.98;1"
+      dur="10s" repeatCount="indefinite"/>
+  </circle>
+  {/* Labels */}
+  <text x="120" y="176" textAnchor="middle"
+    fill="currentColor" fontSize="13" fontFamily="system-ui, sans-serif">
+    <animate attributeName="opacity"
+      values="0;0.5;0.5;0;0;0;0;0;0"
+      keyTimes="0;0.02;0.20;0.23;0.25;0.50;0.75;0.98;1"
+      dur="10s" repeatCount="indefinite"/>
+    Top to bottom
+  </text>
+  <text x="120" y="176" textAnchor="middle"
+    fill="currentColor" fontSize="13" fontFamily="system-ui, sans-serif">
+    <animate attributeName="opacity"
+      values="0;0;0;0.5;0.5;0;0;0;0"
+      keyTimes="0;0.23;0.27;0.28;0.45;0.48;0.50;0.98;1"
+      dur="10s" repeatCount="indefinite"/>
+    Bottom to top
+  </text>
+  <text x="120" y="176" textAnchor="middle"
+    fill="currentColor" fontSize="13" fontFamily="system-ui, sans-serif">
+    <animate attributeName="opacity"
+      values="0;0;0;0.5;0.5;0;0"
+      keyTimes="0;0.48;0.52;0.53;0.70;0.73;1"
+      dur="10s" repeatCount="indefinite"/>
+    Left to right
+  </text>
+  <text x="120" y="176" textAnchor="middle"
+    fill="currentColor" fontSize="13" fontFamily="system-ui, sans-serif">
+    <animate attributeName="opacity"
+      values="0;0;0;0.5;0.5;0;0"
+      keyTimes="0;0.73;0.77;0.78;0.95;0.98;1"
+      dur="10s" repeatCount="indefinite"/>
+    Right to left
+  </text>
+</svg>
+</div>
 
 ## Using a PullGestureRecognizer
 A PullGestureRecognizer can be attached to a control using the control's `GestureRecognizers` property.
