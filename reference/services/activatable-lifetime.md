@@ -42,7 +42,7 @@ Returns **true** if it was possible on the given platform. Otherwise, returns **
 You may want an app to pause or stop some code processing when it is in the background, e.g., pausing multimedia playback, or disabling recurrent HTTP requests.
 
 ```csharp
-if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
 {
     activatableLifetime.Activated += (sender, args) =>
     {
@@ -68,7 +68,7 @@ Your app may need to support protocol activation, more commonly called deep link
 Typical use cases are navigating to a specific page, or creating a [redirect URL in OAuth operations](https://www.oauth.com/oauth2-servers/oauth-native-apps/redirect-urls-for-native-apps/).
 
 ```csharp
-if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
 {
     activatableLifetime.Activated += (s, a) =>
    {
