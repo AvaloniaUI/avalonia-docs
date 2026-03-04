@@ -95,7 +95,7 @@ Your app may need to handle file activation, which occurs when the OS launches o
 Typical use cases are opening a document, importing a file, or processing files passed from the OS shell.
 
 ```csharp
-if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
 {
     activatableLifetime.Activated += (s, a) =>
     {
