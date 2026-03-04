@@ -422,6 +422,21 @@ If you did construct `ResourcesChangedEventArgs`, call `ResourceChangedEventArgs
 PR: [#20576](https://github.com/AvaloniaUI/Avalonia/pull/20576)
 
 
+## Gesture events moved
+
+All the attached events previously declared in the `Gestures` class (such as `ScrollGesture`, `Pinch`, etc.) have been moved to `InputElement`, making them available to all elements by default. Remove the `Gestures.` prefix from your XAML files.
+
+The `Gestures` class is not public anymore.
+
+Example:
+
+```diff
+-<Button Gestures.Pinch="Button_Pinch" />
++<Button Pinch="Button_Pinch" />
+```
+
+PR: [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789)
+
 ## Removed members
 
 ### `Avalonia.Android.Platform.IInsetsManager.DisplayEdgeToEdge` property
@@ -734,6 +749,11 @@ Reason: see the [Clipboard changes](#clipboard-changes) section.
 Resolution: use `Avalonia.Input.DragEventArgs.DataTransfer` instead.  
 PR: [#20521](https://github.com/AvaloniaUI/Avalonia/pull/20521)
 
+### `Avalonia.Input.Gestures` property
+Reason: see the [Gesture events moved](#gesture-events-moved) section.  
+Resolution: use the events on `Avalonia.Input.InputElement` instead.  
+PR: [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789)
+
 ### `Avalonia.Input.IDataObject` interface
 Reason: see the [Clipboard changes](#clipboard-changes) section.  
 Resolution: use `Avalonia.Input.IAsyncDataTransfer` instead.  
@@ -878,6 +898,7 @@ PR: [#20544](https://github.com/AvaloniaUI/Avalonia/pull/20544)
 Reason: see the [TopLevel changes](#toplevel-changes) section.  
 Resolution: use `Avalonia.VisualTree.VisualExtensions.GetPresentationSource` in conjunction with `Avalonia.Rendering.IPresentationSource.RootVisual` instead.  
 PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
 
 ## Renamed members
 
