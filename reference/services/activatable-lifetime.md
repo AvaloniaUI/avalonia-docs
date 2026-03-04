@@ -88,6 +88,36 @@ Some platforms have specific steps to update the manifest and enable protocol ha
 **Android:** Add `intent-filter` with specific `android:scheme` to your `AndroidManifest.xml`. See https://developer.android.com/training/app-links/deep-linking for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
 :::
 
+### Handling file activation
+
+Your app may need to handle file activation, which occurs when the OS launches or foregrounds your app (usually because the user opens a file associated with it). Like link schemas, file type associations must be registered in the system and linked to your app. Once registered, opening an associated file also opens your app via this event.
+
+Typical use cases are opening a document, importing a file, or processing files passed from the OS shell.
+
+```csharp
+if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+{
+    activatableLifetime.Activated += (s, a) =>
+    {
+        if (a is FileActivatedEventArgs fileArgs && fileArgs.Kind == ActivationKind.File)
+        {
+            foreach (var file in fileArgs.Files)
+            {
+                Console.WriteLine($"App activated via file: {file.Name}");
+            }
+        }
+    };
+}
+```
+
+:::note
+Some platforms have specific steps to update the manifest and enable file type associations.
+
+**macOS and iOS:** Add `CFBundleDocumentTypes` to your `Info.plist` to declare the file types your app handles. See the [Apple documentation](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledocumenttypes) for details.
+
+**Android:** Add an `intent-filter` with `action.VIEW` and the appropriate `data` MIME type or file extension to your `AndroidManifest.xml`. See the [Android documentation](https://developer.android.com/training/data-storage/shared/documents-files) for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
+:::
+
 ## Platform compatibility:
 
 | Feature        |  Windows | macOS | Linux | Browser | Android |  iOS |
