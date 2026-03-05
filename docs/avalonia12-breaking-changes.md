@@ -110,11 +110,22 @@ We recommend using compiled bindings whenever possible, as they are more perform
 PR: [#19712](https://github.com/AvaloniaUI/Avalonia/pull/19712)
 
 
+## Binding plugins removed
+
+The binding plugins were intended as an extensibility point for adding features to bindings. In practice, they were not working with compiled bindings and were effectively unused by most people. 
+
+Worse, users often had to turn off the default data annotations validation plugin because it conflicted with popular frameworks such as `CommunityToolkit.Mvvm`.
+
+Starting with Avalonia v12, plugins are no longer configurable. The data annotations plugin is now disabled by default.
+
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+
 ## Configurable text shaper
 
 The text shaper is now configurable independently of the rendering engine. For most applications, this change should be transparent, as HarfBuzz is used by default when `UsePlatformDetect` is called on the `AppBuilder`.
 
-However, if your project explicitly configures a rendering engine, such as Skia via `UseSkia`, an `InvalidOperationException` with the message *Unable to locate 'Avalonia.Platform.ITextShaperImpl'* might be thrown on startup. In this case, the project needs to be updated with a call to `UseHarfBuzz` on the `AppBuilder`.
+However, if your project explicitly configures a rendering engine, such as Skia via `UseSkia`, an `InvalidOperationException` with the message *No text shaping system configured* might be thrown on startup. In this case, the project needs to be updated with a call to `UseHarfBuzz` on the `AppBuilder`.
 
 **Example:**
 
@@ -192,7 +203,7 @@ PR: [#18756](https://github.com/AvaloniaUI/Avalonia/pull/18756)
 
 In Avalonia 12, the way an iOS application is initialized has changed to use the ["scenes" concept](https://developer.apple.com/documentation/technotes/tn3187-migrating-to-the-uikit-scene-based-life-cycle), which Apple will make mandatory in the near future.
 
-While most applications should work without any code changes,`AvaloniaAppDelegate.Window` will now remain `null` after the app is initialized, as the window is now managed internally by the scene delegate.
+While most applications should work without any code changes, `AvaloniaAppDelegate.Window` will now remain `null` after the app is initialized, as the window is now managed internally by the scene delegate.
 
 If you need to access the `UIWindow`, we recommend overriding the `AvaloniaView.MovedToWindow` method to detect when the view gets attached to it.
 
@@ -220,7 +231,7 @@ PR: [#20105](https://github.com/AvaloniaUI/Avalonia/pull/20105)
 
 The underlying test frameworks supported by Avalonia's headless platform have been updated to their latest versions. The unit tests might need updates.
 - xUnit.net support now targets version 3 (up from 2). Read xUnit.net's [official migration guide](https://xunit.net/docs/getting-started/v3/migration) for how to migrate your unit tests.
- - NUnit support now targets version 4 (up from 3). Read NUnit's [official migration guide](https://docs.nunit.org/articles/nunit/release-notes/Nunit4.0-MigrationGuide.html) for how to migrate your unit tests.
+- NUnit support now targets version 4 (up from 3). Read NUnit's [official migration guide](https://docs.nunit.org/articles/nunit/release-notes/Nunit4.0-MigrationGuide.html) for how to migrate your unit tests.
 
 PR: [#20372](https://github.com/AvaloniaUI/Avalonia/pull/20372), [#20481](https://github.com/AvaloniaUI/Avalonia/pull/20481)
 
@@ -243,6 +254,29 @@ PR: [#20455](https://github.com/AvaloniaUI/Avalonia/pull/20455)
 - Focus is now changed only when touch and pen devices are released.
 
 PR: [#19203](https://github.com/AvaloniaUI/Avalonia/pull/19203), [#19753](https://github.com/AvaloniaUI/Avalonia/pull/19753)
+
+
+## `TopLevel` changes
+
+To prepare the groundwork for advanced windowing features, notably templated drawn window decorations and virtual window scenarios, several changes happened in Avalonia v12:
+
+- Despite its name, a `TopLevel` (this includes `Window`) object is not necessarily at the root of the visual hierarchy anymore. Code that casts the top `Visual` to `TopLevel` no longer works.
+To access a `TopLevel` instance, always call `TopLevel.GetTopLevel(Visual)`.
+- Interfaces that were previously only implemented by `TopLevel` classes, such as `IInputRoot`, `IRenderRoot`, `ILayoutRoot`, `ITextInputMethodRoot` and `IEmbeddableLayoutRoot`, are either removed or not accessible anymore. Use `TopLevel` instead.
+- A new `IPresentationSource` interface is introduced, which represents an arbitrary host for the visual tree (while not being a visual itself). To get a hold of such an instance, call the new `GetPresentationSource(Visual)` extension method.
+
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
+
+## Window decoration changes
+
+Avalonia v12 overhauls how the decorations (title bar, caption buttons, resize grips, etc.) of a window are drawn when the system chrome is not used:
+
+- A new `WindowDrawnDecorations` class is added. Its role is to provide all the window decorations through a single control.
+- Thanks to this new type, the `TitleBar`, `CaptionButtons` and `ChromeOverlayLayer` types are not necessary anymore and have been removed.
+- The `Window.ExtendClientAreaChromeHints` property consisted of several flags that were not always behaving as expected. This property has been removed, as the `WindowDecorations` property in conjunction with `ExtendClientAreaToDecorationsHint` should be used instead.
+
+PR: [#20770](https://github.com/AvaloniaUI/Avalonia/pull/20770), [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732), [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796)
 
 
 ## Clipboard changes
@@ -279,6 +313,17 @@ Read the official [clipboard documentation](/docs/services/clipboard) to know ho
 PR: [#20521](https://github.com/AvaloniaUI/Avalonia/pull/20521)
 
 
+## Multiple dispatchers support
+
+While not technically a breaking change, Avalonia v12 now supports multiple dispatchers, one per thread.
+
+Using `Dispatcher.UIThread` is still perfectly acceptable for applications. However, we recommend that library and control authors start using the `AvaloniaObject.Dispatcher` and `Dispatcher.CurrentDispatcher` properties to support multiple dispatchers properly.
+
+Note that multiple UI threads are currently still unsupported.
+
+PR: [#18686](https://github.com/AvaloniaUI/Avalonia/pull/18686)
+
+
 ## `Dispatcher.InvokeAsync` captures the execution context
 
 This change should make most usages of asynchronous calls behave as the user would expect. `AsyncLocal` will work as expected, and impersonation and culture will flow from the caller.  
@@ -300,8 +345,6 @@ Before v12, Avalonia properties with `enableDataValidation: true` required overr
 
 We recommend removing `UpdateDataValidation` overrides that only call `DataValidationErrors.SetError`.
 
-If you need to revert to the old behavior for a given property, override `UpdateDataValidation` and do not call the base method for that property.
-
 **Example:**
 ```diff
  public class CustomControl
@@ -319,6 +362,8 @@ If you need to revert to the old behavior for a given property, override `Update
 -    } 
  }
 ```
+
+If you need to revert to the old behavior for a given property, override `UpdateDataValidation` and do not call the base method for that property.
 
 PR: [#20067](https://github.com/AvaloniaUI/Avalonia/pull/20067)
 
@@ -349,6 +394,15 @@ To align with other popular UI frameworks and user expectations, access keys are
 PR: [#20662](https://github.com/AvaloniaUI/Avalonia/pull/20662)
 
 
+## Font support updated
+
+To ensure consistent font loading across platforms, Avalonia v12 includes its own font parser.
+
+Some legacy fonts that are not TrueType (.ttf) or OpenType (.otf) are no longer supported. Such fonts include the ancient Type 1 Font format (.pfb/.pfm).
+
+PR: [#19852](https://github.com/AvaloniaUI/Avalonia/pull/19852)
+
+
 ## `Screen` is abstract
 
 The `Screen` class has several internal implementations, and the base class was constructible only for legacy reasons.
@@ -367,6 +421,21 @@ If you did construct `ResourcesChangedEventArgs`, call `ResourceChangedEventArgs
 
 PR: [#20576](https://github.com/AvaloniaUI/Avalonia/pull/20576)
 
+
+## Gesture events moved
+
+All the attached events previously declared in the `Gestures` class (such as `ScrollGesture`, `Pinch`, etc.) have been moved to `InputElement`, making them available to all elements by default. Remove the `Gestures.` prefix from your XAML files.
+
+The `Gestures` class is not public anymore.
+
+Example:
+
+```diff
+-<Button Gestures.Pinch="Button_Pinch" />
++<Button Pinch="Button_Pinch" />
+```
+
+PR: [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789)
 
 ## Removed members
 
@@ -405,10 +474,25 @@ Reason: this class is an implementation detail that was wrongly exposed publicly
 Resolution: use an alternative implementation (not provided by Avalonia).  
 PR: [#20596](https://github.com/AvaloniaUI/Avalonia/pull/20596)
 
+### `Avalonia.Controls.Chrome.CaptionButtons` class
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.Chrome.WindowDrawnDecorations` instead.  
+PR: [#20770](https://github.com/AvaloniaUI/Avalonia/pull/20770)
+
+### `Avalonia.Controls.Chrome.TitleBar` class
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.Chrome.WindowDrawnDecorations` instead.  
+PR: [#20770](https://github.com/AvaloniaUI/Avalonia/pull/20770)
+
 ### `Avalonia.Controls.ContextMenu.PlacementMode` property
 Reason: this property was obsolete since Avalonia 11.  
 Resolution: use `Avalonia.Controls.ContextMenu.Placement` instead.  
 PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
+
+### `Avalonia.Controls.Diagnostics.IPopupHostProvider` interface
+Reason: this interface is an implementation detail that was exposed publicly for legacy reasons. It's now a private API.  
+Resolution: use `Avalonia.Controls.Primitives.Popup` instead.  
+PR: [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732)
 
 ### `Avalonia.Controls.FileDialog` class
 Reason: this class was obsolete since Avalonia 11.  
@@ -465,10 +549,20 @@ Reason: this class was obsolete since Avalonia 11.
 Resolution: use `Avalonia.Platform.Storage.IStorageProvider.OpenFolderPickerAsync` instead.  
 PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
 
+### `Avalonia.Controls.Primitives.ChromeOverlayLayer` class
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.Chrome.WindowDrawnDecorations` instead.  
+PR: [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732)
+
 ### `Avalonia.Controls.Primitives.IPopupHost` interface
 Reason: this interface is an implementation detail that was exposed publicly for legacy reasons. It's now a private API.  
 Resolution: use `Avalonia.Controls.Primitives.Popup` instead.  
 PR: [#20597](https://github.com/AvaloniaUI/Avalonia/pull/20597)
+
+### `Avalonia.Controls.Primitives.LightDismissOverlayLayer` class
+Reason: this interface is an implementation detail that was exposed publicly for legacy reasons.  It's now a private API.  
+Resolution: use a full `Avalonia.Controls.Primitives.VisualLayerManager` if a new stack of layers is needed.  
+PR: [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732)
 
 ### `Avalonia.Controls.Primitives.OverlayPopupHost.CreatePopupHost` method
 Reason: this method is an implementation detail that was exposed publicly for legacy reasons. It's now a private API.  
@@ -480,15 +574,40 @@ Reason: these events were obsolete since Avalonia 11.
 Resolution: use `Avalonia.Controls.Primitives.ToggleButton.IsCheckedChanged` instead.  
 PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
 
+### `Avalonia.Controls.Primitives.VisualLayerManager.AdornerLayer` property
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.Primitives.AdornerLayer.GetAdornerLayer` instead.  
+PR: [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732)
+
+### `Avalonia.Controls.Primitives.VisualLayerManager.ChromeOverlayLayer` property
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.Chrome.WindowDrawnDecorations` instead.  
+PR: [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732)
+
+### `Avalonia.Controls.Primitives.VisualLayerManager.LightDismissOverlayLayer` property
+Reason: this interface is an implementation detail that was exposed publicly for legacy reasons.  It's now a private API.  
+Resolution: remove the usages.  
+PR: [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732)
+
+### `Avalonia.Controls.Primitives.VisualLayerManager.OverlayLayer` property
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.Primitives.OverlayLayer.GetOverlayLayer` instead.  
+PR: [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732)
+
 ### `Avalonia.Controls.TabItem.SubscribeToOwnerProperties` method
 Reason: this method was obsolete since Avalonia 11 and did nothing.
 Resolution: remove the usages.  
 PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
 
-### `Avalonia.Platform.Popup.PlacementMode` property
-Reason: this property was obsolete since Avalonia 11.  
-Resolution: use `Avalonia.Platform.Popup.Placement` instead.  
-PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
+### `Avalonia.Controls.Remote.RemoteServer` class
+Reason: this class was a leftover from previous versions that was not working correctly.  
+Resolution: remove the usages.  
+PR: [#20767](https://github.com/AvaloniaUI/Avalonia/pull/20767)
+
+### `Avalonia.Controls.Remote.RemoteWidget` class
+Reason: this class was a leftover from previous versions that was not working correctly.  
+Resolution: remove the usages.  
+PR: [#20767](https://github.com/AvaloniaUI/Avalonia/pull/20767)
 
 ### `Avalonia.Controls.ResourcesChangedEventArgs.Empty` field
 Reason: see the [ResourcesChangedEventArgs](#resourceschangedeventargs-is-a-struct) section.  
@@ -500,10 +619,35 @@ Reason: this class was obsolete since Avalonia 11.
 Resolution: use `Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerAsync` instead.  
 PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
 
+### `Avalonia.Controls.SystemDecorations` enum
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.WindowDecorations` instead.  
+PR: [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796)
+
 ### `Avalonia.Controls.SystemDialog` class
 Reason: this class was obsolete since Avalonia 11.  
 Resolution: use `Avalonia.Platform.Storage.IStorageProvider` instead.  
 PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
+
+### `Avalonia.Controls.TopLevel.PlatformSettings` property
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.VisualTree.VisualExtensions.GetPlatformSettings` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
+### `Avalonia.Controls.TopLevel.PointerOverElement` property
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: remove the usages.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
+### `Avalonia.Controls.TopLevel.StartRendering/StopRendering` method
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.Controls.Embedding.StartRendering/StopRendering` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
+### `Avalonia.Controls.Window.ExtendClientAreaChromeHints` property
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.Window.WindowDecorations` instead.  
+PR: [#20770](https://github.com/AvaloniaUI/Avalonia/pull/20770)
 
 ### `Avalonia.Data.BindingPriority.TemplatedParent` enum value
 Reason: this enum value was obsolete since Avalonia 11.  
@@ -514,6 +658,51 @@ PR: [#20613](https://github.com/AvaloniaUI/Avalonia/pull/20613)
 Reason: this method was obsolete since Avalonia 11 and did nothing.  
 Resolution: use `Avalonia.Data.CompiledBinding.Source` instead.  
 PR: [#20613](https://github.com/AvaloniaUI/Avalonia/pull/20613)
+
+### `Avalonia.Data.Core.Plugins.BindingPlugins` class
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+### `Avalonia.Data.Core.Plugins.DataValidationBase` class
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+### `Avalonia.Data.Core.Plugins.ExceptionValidationPlugin` class
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+### `Avalonia.Data.Core.Plugins.IDataValidationPlugin` interface
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+### `Avalonia.Data.Core.Plugins.IndeiValidationPlugin` class
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+### `Avalonia.Data.Core.Plugins.IPropertyAccessorPlugin` interface
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+### `Avalonia.Data.Core.Plugins.IStreamPlugin` interface
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+### `Avalonia.Data.Core.Plugins.PropertyAccessorBase` class
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
+
+### `Avalonia.Data.Core.Plugins.PropertyError` class
+Reason: see the [Bindings plugins removed](#binding-plugins-removed) section.  
+Resolution: remove the usages.  
+PR: [#20623](https://github.com/AvaloniaUI/Avalonia/pull/20623)
 
 ### `Avalonia.Data.Core.PropertyPath` class
 Reason: this class was a leftover from previous Avalonia versions and was not used at all.  
@@ -560,10 +749,20 @@ Reason: see the [Clipboard changes](#clipboard-changes) section.
 Resolution: use `Avalonia.Input.DragEventArgs.DataTransfer` instead.  
 PR: [#20521](https://github.com/AvaloniaUI/Avalonia/pull/20521)
 
+### `Avalonia.Input.Gestures` property
+Reason: see the [Gesture events moved](#gesture-events-moved) section.  
+Resolution: use the events on `Avalonia.Input.InputElement` instead.  
+PR: [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789)
+
 ### `Avalonia.Input.IDataObject` interface
 Reason: see the [Clipboard changes](#clipboard-changes) section.  
 Resolution: use `Avalonia.Input.IAsyncDataTransfer` instead.  
 PR: [#20521](https://github.com/AvaloniaUI/Avalonia/pull/20521)
+
+### `Avalonia.Input.IInputRoot` interface
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.Controls.TopLevel` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
 
 ### `Avalonia.Input.Platform.IClipboard.GetDataAsync` method
 Reason: see the [Clipboard changes](#clipboard-changes) section.  
@@ -590,10 +789,30 @@ Reason: see the [Clipboard changes](#clipboard-changes) section.
 Resolution: use `Avalonia.Input.Platform.IClipboard.TryGetInProcessDataAsync` instead.  
 PR: [#20521](https://github.com/AvaloniaUI/Avalonia/pull/20521)
 
+### `Avalonia.Input.TextInput.ITextInputMethodRoot` interface
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.Controls.TopLevel` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
 ### `Avalonia.Input.TextInput.TextInputMethodClient.ShowInputPanel` method
 Reason: directly showing an input panel was not correct on all platforms.  
 Resolution: use the `Avalonia.Input.TextInput.TextInputMethodClient.InputPaneActivationRequested` event instead.  
 PR: [#20544](https://github.com/AvaloniaUI/Avalonia/pull/20544)
+
+### `Avalonia.Layout.IEmbeddedLayoutRoot` interface
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.Controls.TopLevel` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
+### `Avalonia.Layout.ILayoutRoot` interface
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.Controls.TopLevel` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
+### `Avalonia.Layout.LayoutManager` ckass
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.Layout.ILayoutManager` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
 
 ### `Avalonia.Media.Color.ToUint32` method
 Reason: this method was obsolete since Avalonia 11.  
@@ -620,6 +839,11 @@ Reason: this property was obsolete since Avalonia 11.
 Resolution: use `Avalonia.Media.RadialGradientBrush.RadiusX` and `RadiusY` instead.  
 PR: [#20613](https://github.com/AvaloniaUI/Avalonia/pull/20613)
 
+### `Avalonia.Platform.ExtendClientAreaChromeHints` enum
+Reason: see the [Window decoration changes](#window-decoration-changes) section.  
+Resolution: use `Avalonia.Controls.WindowDecorations` instead.  
+PR: [#20770](https://github.com/AvaloniaUI/Avalonia/pull/20770)
+
 ### `Avalonia.Platform.IApplicationPlatformEvents` interface
 Reason: this interface was obsolete since Avalonia 11.  
 Resolution: use `Application.Current.TryGetFeature<IActivatableLifetime>` instead.  
@@ -629,6 +853,11 @@ PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
 Reason: this interface was merged with `IGeometryContext`.  
 Resolution: use `Avalonia.Platform.IGeometryContext` instead.  
 PR: [#20528](https://github.com/AvaloniaUI/Avalonia/pull/20528)
+
+### `Avalonia.Platform.Popup.PlacementMode` property
+Reason: this property was obsolete since Avalonia 11.  
+Resolution: use `Avalonia.Platform.Popup.Placement` instead.  
+PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
 
 ### `Avalonia.Platform.Screen.PixelDensity` property
 Reason: this property was obsolete since Avalonia 11.  
@@ -645,6 +874,11 @@ Reason: this property was obsolete since Avalonia 11.
 Resolution: use `Avalonia.Rendering.ICompositionGpuImportedObject.ImportCompleted` instead.  
 PR: [#20613](https://github.com/AvaloniaUI/Avalonia/pull/20613)
 
+### `Avalonia.Rendering.IRenderRoot` interface
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.Controls.TopLevel` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
+
 ### `Avalonia.Styling.IStyleable` interface
 Reason: this interface was obsolete since Avalonia 11.  
 Resolution: use `Avalonia.StyledElement` instead.  
@@ -659,6 +893,11 @@ PR: [#19123](https://github.com/AvaloniaUI/Avalonia/pull/19123)
 Reason: this class is an implementation detail that was wrongly exposed publicly.  
 Resolution: use an alternative implementation (not provided by Avalonia).  
 PR: [#20544](https://github.com/AvaloniaUI/Avalonia/pull/20544)
+
+### `Avalonia.VisualTree.VisualExtensions.GetVisualRoot` method
+Reason: see the [TopLevel changes](#toplevel-changes) section.  
+Resolution: use `Avalonia.VisualTree.VisualExtensions.GetPresentationSource` in conjunction with `Avalonia.Rendering.IPresentationSource.RootVisual` instead.  
+PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
 
 
 ## Renamed members
@@ -681,6 +920,11 @@ PR: [#20303](https://github.com/AvaloniaUI/Avalonia/pull/20303)
 Renamed to `UseFloatingPlaceholder` for consistency with other controls.  
 The old property is kept for now, but is obsolete; usages should be updated.  
 PR: [#20303](https://github.com/AvaloniaUI/Avalonia/pull/20303)
+
+### `Avalonia.Controls.Window.SystemDecorations` property
+Renamed to `WindowDecorations` due to the [Window decoration changes](#window-decoration-changes).  
+The old property is kept for now, but is obsolete; usages should be updated.  
+PR: [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796)
 
 ### `Avalonia.Media.RenderOptions.TextRenderingMode` property
 Moved to `TextOptions.TextRenderingMode`.   
