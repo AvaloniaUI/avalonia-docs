@@ -23,6 +23,24 @@ The image displayed can be resized and scaled.  The default settings for scaling
 The scaling settings for an image are the same as for the [Viewbox](/controls/layout/containers/viewbox).
 :::
 
+## Common Properties
+
+| Property | Type | Description |
+|---|---|---|
+| `Source` | `IImage` | The image to display. Can be set from an asset URI string, a `Bitmap`, or a `DrawingImage`. |
+| `Stretch` | `Stretch` | How the image is resized to fill its bounds. See table below. |
+| `StretchDirection` | `StretchDirection` | Controls whether the image can scale up, down, or both. |
+| `BlendMode` | `BitmapBlendMode?` | The blend mode used when compositing the image. |
+
+### Stretch Modes
+
+| Value | Behavior |
+|---|---|
+| `None` | The image is displayed at its original size. |
+| `Fill` | The image is resized to fill the bounds. Aspect ratio is not preserved. |
+| `Uniform` | The image is resized to fit within the bounds while preserving aspect ratio (default). |
+| `UniformToFill` | The image is resized to fill the bounds while preserving aspect ratio. Parts may be clipped. |
+
 ## Examples
 
 ### Basic

@@ -9,7 +9,13 @@ The `GridSplitter` control allows a user to resize the columns or rows in a grid
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Background</code></td><td>Background color for the splitter bar.</td></tr><tr><td><code>Grid.Column</code></td><td>Attached to give the (column) position of the splitter.</td></tr><tr><td><code>Grid.Row</code></td><td>Attached to give the (row) position of the splitter.</td></tr><tr><td><code>ResizeDirection</code></td><td>The direction of travel for the splitter. (See note below.)</td></tr></tbody></table>
+| Property | Type | Description |
+|---|---|---|
+| `Background` | `IBrush` | Background color for the splitter bar. |
+| `ResizeDirection` | `GridResizeDirection` | The direction of travel for the splitter: `Auto`, `Columns`, `Rows`. See note below. |
+| `ResizeBehavior` | `GridResizeBehavior` | Which columns/rows are resized: `BasedOnAlignment`, `CurrentAndNext`, `PreviousAndCurrent`, `PreviousAndNext`. |
+| `DragIncrement` | `double` | The minimum number of pixels the splitter moves at a time. |
+| `ShowsPreview` | `bool` | When `true`, shows a preview line while dragging instead of resizing in real-time. |
 
 :::caution
 To provide any meaningful movement, the direction of travel of the splitter must be the same as its position definition. That is: for a column splitter specify `ResizeDirection="Columns"` and for a row splitter specify `ResizeDirection="Rows"`.
@@ -31,6 +37,27 @@ This is a column splitter. Drag the border of the columns to resize.
 ```
 
 </XamlPreview>
+
+## Min/Max Constraints
+
+Set minimum and maximum sizes on the columns or rows to limit how far the splitter can move:
+
+```xml
+<Grid ColumnDefinitions="200,4,*">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="200" MinWidth="100" MaxWidth="400" />
+        <ColumnDefinition Width="4" />
+        <ColumnDefinition Width="*" MinWidth="200" />
+    </Grid.ColumnDefinitions>
+    <Border Grid.Column="0" Background="LightBlue">
+        <TextBlock Text="Sidebar (100-400px)" Margin="8" />
+    </Border>
+    <GridSplitter Grid.Column="1" Background="Gray" ResizeDirection="Columns" />
+    <Border Grid.Column="2" Background="LightGreen">
+        <TextBlock Text="Content (min 200px)" Margin="8" />
+    </Border>
+</Grid>
+```
 
 This is a row splitter. Drag the border of the rows to resize.
 

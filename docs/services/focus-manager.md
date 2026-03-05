@@ -43,3 +43,40 @@ var hasFocused = button.Focus();
 
 While `FocusManager.GetFocusedElement` method allows to get currently focused control, it's not suitable as an event.
 Instead, please use `InputElement.GotFocusEvent.Raised.Subscribe(handler)` method. Note, it listens events globally across all top levels.
+
+### Tab navigation order
+
+Controls are navigated in the order they appear in the visual tree by default. To change the tab order, use the `TabIndex` property:
+
+```xml
+<StackPanel>
+    <TextBox TabIndex="2" Watermark="Second" />
+    <TextBox TabIndex="1" Watermark="First" />
+    <TextBox TabIndex="3" Watermark="Third" />
+</StackPanel>
+```
+
+### Preventing a control from receiving focus
+
+Set `Focusable="False"` to exclude a control from keyboard navigation:
+
+```xml
+<Button Content="Not focusable" Focusable="False" />
+```
+
+### Focus on load
+
+To focus a specific control when a view loads:
+
+```csharp
+protected override void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
+    myTextBox.Focus();
+}
+```
+
+## See Also
+
+- [Focus](/docs/input-interaction/focus): Focus system overview and focus events.
+- [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings and keyboard navigation.

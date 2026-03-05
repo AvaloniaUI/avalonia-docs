@@ -74,6 +74,62 @@ Note that the maximum distance between a first and second tap, and the time dela
 :::
 
 
+## Cursor Management
+
+### Setting the cursor on a control
+
+Use the `Cursor` property to change the cursor when the pointer is over a control:
+
+```xml
+<Border Cursor="Hand" Background="LightGray" Padding="20">
+    <TextBlock Text="Click me" />
+</Border>
+
+<Border Cursor="SizeWestEast" Background="LightBlue" Padding="20">
+    <TextBlock Text="Resize horizontally" />
+</Border>
+```
+
+### Common cursor types
+
+| Cursor | Description |
+|---|---|
+| `Arrow` | Default arrow pointer. |
+| `Hand` | Pointing hand (indicates a clickable element). |
+| `IBeam` | Text editing cursor. |
+| `Cross` | Crosshair. |
+| `SizeWestEast` | Horizontal resize. |
+| `SizeNorthSouth` | Vertical resize. |
+| `SizeAll` | Move/drag in any direction. |
+| `Wait` | Busy indicator (hourglass/spinner). |
+| `AppStarting` | Arrow with small hourglass. |
+| `No` | Not allowed (circle with line). |
+| `None` | Hidden cursor. |
+
+### Setting the cursor in code
+
+```csharp
+myControl.Cursor = new Cursor(StandardCursorType.Hand);
+```
+
+### Changing the cursor during drag operations
+
+```csharp
+private void OnPointerMoved(object? sender, PointerEventArgs e)
+{
+    if (_isDragging)
+    {
+        Cursor = new Cursor(StandardCursorType.SizeAll);
+    }
+}
+
+private void OnPointerReleased(object? sender, PointerReleasedEventArgs e)
+{
+    _isDragging = false;
+    Cursor = Cursor.Default;
+}
+```
+
 ## More Information
 
 For the complete API documentation about pointer and tap events, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_PointerEventArgs).

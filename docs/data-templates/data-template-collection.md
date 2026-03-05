@@ -43,3 +43,44 @@ This results in exactly the same display as on the previous page:
 
 <img src={DataTemplatesCollectionStudentScreenshot} alt=""/>
 
+## Multiple Data Templates by Type
+
+The real power of the `DataTemplates` collection is selecting different templates for different types. When Avalonia encounters an object, it searches the `DataTemplates` collection for a template whose `DataType` matches the object's type:
+
+```xml
+<Window.DataTemplates>
+    <DataTemplate DataType="{x:Type local:Student}">
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="🎓" />
+            <TextBlock Text="{Binding FirstName}" />
+            <TextBlock Text="{Binding LastName}" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type local:Teacher}">
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="📚" />
+            <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+            <TextBlock Text="{Binding Subject}" Foreground="Gray" />
+        </StackPanel>
+    </DataTemplate>
+</Window.DataTemplates>
+```
+
+With these templates defined, a `ListBox` or `ContentControl` displaying `Student` objects uses the first template, while `Teacher` objects use the second:
+
+```xml
+<ListBox ItemsSource="{Binding People}" />
+```
+
+## Template Search Order
+
+When Avalonia needs a data template for an object, it searches in this order:
+
+1. The control's own `DataTemplates` collection.
+2. Each parent control's `DataTemplates` collection, walking up the tree.
+3. The `Window.DataTemplates` collection.
+4. The `Application.DataTemplates` collection.
+
+The first matching template is used. This lets you override application-wide templates at any level of the tree.
+

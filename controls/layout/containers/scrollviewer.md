@@ -11,7 +11,15 @@ A `ScrollViewer` cannot be contained in a control that has infinite height or wi
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="288">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>AllowAutoHide</code></td><td>Boolean, default is true. Sets whether the scroll bar hides itself automatically when the pointer is not over, or it does not have the focus. </td></tr><tr><td><code>ScrollViewer</code>. <code>IsScrollChainingEnabled</code></td><td>Boolean, default is true. Attached to an inner controlSee below for more details. </td></tr></tbody></table>
+| Property | Type | Description |
+|---|---|---|
+| `HorizontalScrollBarVisibility` | `ScrollBarVisibility` | Controls the horizontal scrollbar: `Auto`, `Visible`, `Hidden`, `Disabled`. |
+| `VerticalScrollBarVisibility` | `ScrollBarVisibility` | Controls the vertical scrollbar: `Auto`, `Visible`, `Hidden`, `Disabled`. |
+| `AllowAutoHide` | `bool` | Default `true`. Sets whether scrollbars hide automatically when the pointer is not over the control. |
+| `Offset` | `Vector` | The current scroll position (X, Y). |
+| `Extent` | `Size` | The total size of the scrollable content. |
+| `Viewport` | `Size` | The size of the visible area. |
+| `IsScrollChainingEnabled` | `bool` | Attached property. Default `true`. When set on an inner scrollable control, determines whether scroll events chain to the outer scroll viewer. |
 
 ## Scroll chaining
 
@@ -48,6 +56,33 @@ This example creates a stack panel that is bigger than the border it is inside. 
 ```
 
 </XamlPreview>
+
+## Scrollbar Visibility Options
+
+| Value | Behavior |
+|---|---|
+| `Auto` | Shows the scrollbar only when content overflows (default). |
+| `Visible` | Always shows the scrollbar. |
+| `Hidden` | Hides the scrollbar but still allows scrolling by touch, wheel, or keyboard. |
+| `Disabled` | Disables scrolling in that direction entirely. |
+
+```xml
+<!-- Always show vertical scrollbar, disable horizontal scrolling -->
+<ScrollViewer VerticalScrollBarVisibility="Visible"
+              HorizontalScrollBarVisibility="Disabled">
+    <TextBlock Text="{Binding LongText}" TextWrapping="Wrap" />
+</ScrollViewer>
+```
+
+## Programmatic Scrolling
+
+```csharp
+// Scroll to a specific position
+scrollViewer.Offset = new Vector(0, 500);
+
+// Scroll a child element into view
+targetControl.BringIntoView();
+```
 
 ## See also
 

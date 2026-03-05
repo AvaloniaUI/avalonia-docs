@@ -11,7 +11,20 @@ The `TextBox` presents an area for typed (keyboard) input. It can be for a singl
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="220">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Text</code></td><td>The current text in the input.</td></tr><tr><td><code>PasswordChar</code></td><td>Hides any characters typed, and replacing them with the given  character instead.</td></tr><tr><td><code>Watermark</code></td><td>Appears as a faded hint whenever the input is empty.</td></tr><tr><td><code>AcceptsReturn</code></td><td>Makes the input multi-line by allowing the user to enter line returns. A vertical scrollbar will appear if the content exceeds the height available.</td></tr><tr><td><code>TextWrapping</code></td><td>Defines how horizontal line overflow will be handled. Options are: 'NoWrap', 'Wrap' and 'WrapWithOverflow'.</td></tr></tbody></table>
+| Property | Type | Description |
+|---|---|---|
+| `Text` | `string` | The current text in the input. |
+| `Watermark` | `string` | Appears as a faded hint whenever the input is empty. |
+| `PasswordChar` | `char` | Hides any characters typed, replacing them with the given character instead. |
+| `RevealPassword` | `bool` | When `true`, shows the actual password text instead of mask characters. |
+| `AcceptsReturn` | `bool` | Makes the input multi-line by allowing the user to enter line returns. |
+| `AcceptsTab` | `bool` | Allows the user to insert tab characters instead of moving focus. |
+| `TextWrapping` | `TextWrapping` | Defines how horizontal line overflow is handled. Options: `NoWrap`, `Wrap`, `WrapWithOverflow`. |
+| `MaxLength` | `int` | Limits the number of characters the user can enter. 0 means no limit. |
+| `IsReadOnly` | `bool` | When `true`, the user can select and copy text but cannot edit it. |
+| `TextAlignment` | `TextAlignment` | Horizontal alignment of the text: `Left`, `Center`, `Right`. |
+| `InnerLeftContent` | `object` | Content displayed inside the TextBox on the left side (for icons or labels). |
+| `InnerRightContent` | `object` | Content displayed inside the TextBox on the right side (for buttons or indicators). |
 
 ## Example
 
@@ -29,6 +42,32 @@ This example has a basic one line text box, a password box, and a text-wrapping 
 ```
 
 <img src={TextBoxEntryScreenshot} alt="" />
+
+## View Model Binding
+
+Bind `Text` with two-way mode (the default for `TextBox.Text`):
+
+```xml
+<TextBox Text="{Binding Username}" Watermark="Enter username" />
+```
+
+```csharp
+[ObservableProperty]
+private string _username = "";
+```
+
+## Input with Inner Content
+
+Add icons or buttons inside the TextBox:
+
+```xml
+<TextBox Watermark="Search...">
+    <TextBox.InnerRightContent>
+        <Button Content="✕" Command="{Binding ClearSearchCommand}"
+                Background="Transparent" BorderThickness="0" Padding="4" />
+    </TextBox.InnerRightContent>
+</TextBox>
+```
 
 ## See also
 

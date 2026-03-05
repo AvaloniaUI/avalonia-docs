@@ -9,7 +9,13 @@ The `TimePicker` has two to four 'spinner' controls to allow the user to pick a 
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="231">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ClockIdentifier</code></td><td>Choose between 12 and 24 hour formats. The 12 hour format shows an additional spinner for AM/PM.</td></tr><tr><td><code>UseSeconds</code></td><td>Shows an additional spinner for seconds when true. The default is false (seconds spinner is not shown).</td></tr><tr><td><code>MinuteIncrement</code></td><td>Defines selectable increments for the minutes. The default is 1 (all minutes can be selected).</td></tr><tr><td><code>SecondIncrement</code></td><td>Defines selectable increments for the seconds. The default is 1 (all seconds can be selected).</td></tr><tr><td><code>SelectedTime</code></td><td>(Nullable TimeSpan) the selected time.</td></tr></tbody></table>
+| Property | Type | Description |
+|---|---|---|
+| `SelectedTime` | `TimeSpan?` | The selected time value. `null` when no time is selected. |
+| `ClockIdentifier` | `string` | Choose between `12HourClock` and `24HourClock` formats. The 12-hour format shows an AM/PM spinner. |
+| `UseSeconds` | `bool` | Shows an additional spinner for seconds when `true`. Default is `false`. |
+| `MinuteIncrement` | `int` | Defines selectable increments for the minutes. Default is 1. |
+| `SecondIncrement` | `int` | Defines selectable increments for the seconds. Default is 1. |
 
 ## Example
 
@@ -46,6 +52,18 @@ TimePicker timePicker = new TimePicker
 ```
 
 You can clear the display by resetting the selected time to null.
+
+## View Model Binding
+
+```xml
+<TimePicker SelectedTime="{Binding AppointmentTime}"
+            ClockIdentifier="12HourClock" />
+```
+
+```csharp
+[ObservableProperty]
+private TimeSpan? _appointmentTime = new TimeSpan(14, 30, 0);
+```
 
 ## See also
 

@@ -48,6 +48,59 @@ A Hotkey must have one [Key](https://api-docs.avaloniaui.net/docs/T_Avalonia_Inp
 <!--  Alt+Number  -->
 <Button Command="{Binding CommandX}" Content="_1" />
 ```
+## KeyBindings
+
+`KeyBinding` allows you to define keyboard shortcuts that trigger commands at the control or window level, independent of any specific UI element:
+
+```xml
+<Window.KeyBindings>
+    <KeyBinding Gesture="Ctrl+N" Command="{Binding NewCommand}" />
+    <KeyBinding Gesture="Ctrl+O" Command="{Binding OpenCommand}" />
+    <KeyBinding Gesture="Ctrl+S" Command="{Binding SaveCommand}" />
+    <KeyBinding Gesture="Ctrl+Shift+S" Command="{Binding SaveAsCommand}" />
+    <KeyBinding Gesture="Delete" Command="{Binding DeleteCommand}" />
+</Window.KeyBindings>
+```
+
+KeyBindings can also be defined on any control:
+
+```xml
+<ListBox KeyboardNavigation.TabNavigation="Continue">
+    <ListBox.KeyBindings>
+        <KeyBinding Gesture="Delete" Command="{Binding DeleteSelectedCommand}" />
+        <KeyBinding Gesture="F2" Command="{Binding RenameCommand}" />
+    </ListBox.KeyBindings>
+</ListBox>
+```
+
+## Common Modifier Keys
+
+| Modifier | Windows/Linux | macOS |
+|---|---|---|
+| `Ctrl` | Ctrl | Cmd |
+| `Alt` | Alt | Option |
+| `Shift` | Shift | Shift |
+| `Meta` | Windows key | Cmd |
+
+:::tip
+On macOS, `Ctrl` in a `KeyGesture` is automatically mapped to the Cmd key. This means `Ctrl+S` works as Cmd+S on macOS without additional configuration.
+:::
+
+## Common Hotkey Patterns
+
+```xml
+<!-- Undo/Redo -->
+<KeyBinding Gesture="Ctrl+Z" Command="{Binding UndoCommand}" />
+<KeyBinding Gesture="Ctrl+Y" Command="{Binding RedoCommand}" />
+
+<!-- Find -->
+<KeyBinding Gesture="Ctrl+F" Command="{Binding FindCommand}" />
+
+<!-- With CommandParameter -->
+<KeyBinding Gesture="Ctrl+1" Command="{Binding SwitchTabCommand}" CommandParameter="0" />
+<KeyBinding Gesture="Ctrl+2" Command="{Binding SwitchTabCommand}" CommandParameter="1" />
+```
+
 ### Reference
 
 * [HotKeyManager](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_HotKeyManager)

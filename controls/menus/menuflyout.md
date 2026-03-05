@@ -35,6 +35,25 @@ This is a simple example of the menu flyout:
 Note the `<Separator/>` element will not work in a menu flyout. To make a separator line, use a `<MenuItem>` element with the header set to '-' as shown above.
 :::
 
+## With Commands and Icons
+
+```xml
+<Button Content="Actions">
+    <Button.Flyout>
+        <MenuFlyout>
+            <MenuItem Header="Open" Command="{Binding OpenCommand}">
+                <MenuItem.Icon>
+                    <PathIcon Data="{StaticResource open_regular}" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="-" />
+            <MenuItem Header="Delete" Command="{Binding DeleteCommand}"
+                      CommandParameter="{Binding SelectedItem}" />
+        </MenuFlyout>
+    </Button.Flyout>
+</Button>
+```
+
 ## Dynamic MenuFlyout
 
 This is an example for a `MenuFlyout` that is created dynamically during runtime based on a collection `MyMenuItems` with items of type `MyMenuItemViewModel`.

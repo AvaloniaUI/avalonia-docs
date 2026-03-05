@@ -23,6 +23,26 @@ This example uses some 50% opacities to demonstrate that child controls overlap.
 
 </XamlPreview>
 
+## Common Properties
+
+| Property | Type | Description |
+|---|---|---|
+| `Background` | `IBrush` | The background brush for the panel. Must be set (even to `Transparent`) for the panel to receive pointer events. |
+| `Children` | `Controls` | The collection of child controls contained in the panel. |
+
+## ZIndex Layering
+
+When children overlap, control the draw order with the `ZIndex` attached property:
+
+```xml
+<Panel>
+    <Border Background="Red" Width="100" Height="100" ZIndex="1" />
+    <Border Background="Blue" Width="100" Height="100" Margin="30,30,0,0" ZIndex="2" />
+</Panel>
+```
+
+Higher `ZIndex` values draw on top of lower values.
+
 ## Other panel controls
 
 There are other more useful panels, that offer better control over the positioning of their child controls:

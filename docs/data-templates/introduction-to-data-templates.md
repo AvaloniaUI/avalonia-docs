@@ -30,6 +30,62 @@ For instance, if you have a `ListBox` that should display a collection of `Item`
 
 In this example, the Data Template defines a visual layout using a `StackPanel` container. Within the `StackPanel`, we have a `TextBlock` bound to the `Name` property of the item and an `Image` control bound to the `ImageSource` property.
 
-## Customizing Data Templates
+## Type-Specific Data Templates
 
-Data Templates can be customized and tailored to specific scenarios. You can include additional visual elements, apply styling, and even define nested templates within a Data Template. By leveraging data binding expressions and converters, you can dynamically populate and format the visual elements based on the data properties.
+Use `DataType` to automatically select a template based on the type of the object being displayed:
+
+```xml
+<Window.DataTemplates>
+    <DataTemplate DataType="{x:Type local:Customer}">
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+            <TextBlock Text="{Binding Email}" Foreground="Gray" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type local:Product}">
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="{Binding ProductName}" />
+            <TextBlock Text="{Binding Price, StringFormat='${0:F2}'}" />
+        </StackPanel>
+    </DataTemplate>
+</Window.DataTemplates>
+```
+
+When Avalonia encounters an object in a content area, it searches for a matching `DataTemplate` by type. The search starts at the control and walks up the tree until a match is found.
+
+## Where Data Templates Can Be Defined
+
+| Location | Scope |
+|---|---|
+| `Control.DataTemplates` | Available to that control and its children. |
+| `Window.DataTemplates` | Available to the entire window. |
+| `Application.DataTemplates` | Available to the entire application. |
+| `ContentTemplate` property | Applied directly to a specific `ContentControl`. |
+| `ItemTemplate` property | Applied to each item in a list or collection control. |
+
+## Data Templates in Resources
+
+Define a reusable template as a resource:
+
+```xml
+<Application.Resources>
+    <DataTemplate x:Key="CustomerTemplate" DataType="{x:Type local:Customer}">
+        <TextBlock Text="{Binding Name}" />
+    </DataTemplate>
+</Application.Resources>
+```
+
+Then reference it:
+
+```xml
+<ContentControl Content="{Binding SelectedCustomer}"
+                ContentTemplate="{StaticResource CustomerTemplate}" />
+```
+
+## Next Steps
+
+- [Control Content](control-content): How controls display non-control content.
+- [Content Templates](content-templates): Using `ContentTemplate` directly.
+- [Data Template Collection](data-template-collection): Defining multiple templates by type.
+- [Reusing Data Templates](reusing-data-templates): Sharing templates across your application.

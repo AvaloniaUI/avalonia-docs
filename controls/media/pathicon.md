@@ -13,7 +13,10 @@ This control is most often used as part of a composition inside another control.
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="163">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Data</code></td><td>The geometry for the icon.</td></tr><tr><td><code>Foreground</code></td><td>The color used to draw the icon.</td></tr></tbody></table>
+| Property | Type | Description |
+|---|---|---|
+| `Data` | `Geometry` | The stream geometry for the icon. |
+| `Foreground` | `IBrush` | The brush used to fill the icon. Inherits from the parent if not set. |
 
 ## Example
 
@@ -31,6 +34,38 @@ You will probably use these properties most often:
 It works in the preview pane as well:
 
 <img src={PathIconHouseScreenshot} alt="" />
+
+## Using in Buttons and Menus
+
+PathIcon is commonly used to add icons to interactive controls:
+
+```xml
+<Button>
+    <StackPanel Orientation="Horizontal" Spacing="8">
+        <PathIcon Data="{StaticResource save_regular}" Width="16" Height="16" />
+        <TextBlock Text="Save" VerticalAlignment="Center" />
+    </StackPanel>
+</Button>
+
+<MenuItem Header="Open">
+    <MenuItem.Icon>
+        <PathIcon Data="{StaticResource open_regular}" />
+    </MenuItem.Icon>
+</MenuItem>
+```
+
+## Defining Icon Resources
+
+Store icon geometries in a resource dictionary for reuse:
+
+```xml
+<Application.Resources>
+    <StreamGeometry x:Key="save_regular">M6.25 3C4.45507 ...</StreamGeometry>
+    <StreamGeometry x:Key="open_regular">M6.10822 3.40625 ...</StreamGeometry>
+</Application.Resources>
+```
+
+Browse the [Avalonia Fluent icons](https://avaloniaui.github.io/icons.html) for ready-to-use geometry data.
 
 ## See also
 

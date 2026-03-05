@@ -13,7 +13,14 @@ You must define a tray menu in the application XAML file.
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="255">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Icon</code></td><td>The icon to display in the system tray. Typically loaded from the application assets.</td></tr><tr><td><code>ToolTipText</code></td><td>Tool tip text displayed when the user hovers over the tray icon.</td></tr><tr><td>TrayIcon.Menu</td><td>The <strong>native menu</strong> control attached to the tray icon.</td></tr></tbody></table>
+| Property | Type | Description |
+|---|---|---|
+| `Icon` | `WindowIcon` | The icon to display in the system tray. Typically loaded from the application assets. |
+| `ToolTipText` | `string` | Tooltip text displayed when the user hovers over the tray icon. |
+| `IsVisible` | `bool` | Controls whether the tray icon is shown. Default is `true`. |
+| `Command` | `ICommand` | The command to execute when the tray icon is clicked. |
+| `CommandParameter` | `object` | The parameter to pass to the command. |
+| `Menu` | `NativeMenu` | The native menu control attached to the tray icon. |
 
 :::info
 You must use a **native menu** with the tray icon, and not the Avalonia menu control. For full details about the native menu, see [NativeMenu](/controls/menus/nativemenu).
@@ -60,6 +67,43 @@ Include the `.ico` file in the `.csproj` file using an `AvaloniaResource` item:
 ```
 
 <img src={TrayIconScreenshot} alt="" />
+
+## Binding Menu Commands
+
+Bind tray menu item commands to a view model:
+
+```xml
+<TrayIcon Icon="/Assets/app-icon.ico"
+          ToolTipText="My Application"
+          Command="{Binding ShowWindowCommand}">
+    <TrayIcon.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="Show" Command="{Binding ShowWindowCommand}" />
+            <NativeMenuItem Header="Settings" Command="{Binding OpenSettingsCommand}" />
+            <NativeMenuItemSeparator />
+            <NativeMenuItem Header="Quit" Command="{Binding QuitCommand}" />
+        </NativeMenu>
+    </TrayIcon.Menu>
+</TrayIcon>
+```
+
+## Showing and Hiding the Tray Icon
+
+Toggle visibility at runtime:
+
+```xml
+<TrayIcon Icon="/Assets/app-icon.ico"
+          IsVisible="{Binding IsMinimizedToTray}"
+          ToolTipText="My Application" />
+```
+
+## Platform Support
+
+| Platform | Support |
+|---|---|
+| Windows | Full support |
+| macOS | Full support |
+| Linux | Works on distributions with `StatusNotifierItem` or `AppIndicator` support (confirmed on Ubuntu) |
 
 ## See also
 

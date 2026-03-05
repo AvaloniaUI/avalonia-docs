@@ -70,3 +70,67 @@ The simplest way of using commands is to bind to a method in the object's data c
     ```xml title='XAML'
     <Button Content="Click Me" Command="{Binding HandleButtonClick}" />
     ```
+
+## Commands with CommunityToolkit.Mvvm
+
+The recommended approach for commands is the `[RelayCommand]` attribute from CommunityToolkit.Mvvm:
+
+```csharp
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+public partial class MainViewModel : ObservableObject
+{
+    [RelayCommand]
+    private void Save()
+    {
+        // Generates a SaveCommand property
+    }
+
+    [RelayCommand]
+    private async Task LoadAsync()
+    {
+        // Generates a LoadCommand with automatic busy state
+    }
+}
+```
+
+```xml
+<Button Content="Save" Command="{Binding SaveCommand}" />
+<Button Content="Load" Command="{Binding LoadCommand}" />
+```
+
+## Command with Parameter
+
+Pass data to a command using `CommandParameter`:
+
+```xml
+<Button Content="Delete"
+        Command="{Binding DeleteCommand}"
+        CommandParameter="{Binding SelectedItem}" />
+```
+
+```csharp
+[RelayCommand]
+private void Delete(Item item)
+{
+    Items.Remove(item);
+}
+```
+
+## Events vs Commands
+
+| Feature | Events | Commands |
+|---|---|---|
+| Defined in | Code-behind | View model |
+| Testable | Difficult (requires UI) | Easy (plain C# method) |
+| Best for | UI-specific actions (drag, resize) | Application logic (save, navigate, delete) |
+| MVVM pattern | Not preferred | Preferred |
+
+Use events for UI-specific behavior (animations, visual feedback). Use commands for application logic that should be testable and decoupled from the view.
+
+## See Also
+
+- [Binding to Commands](/docs/data-binding/binding-to-commands): Full command binding reference.
+- [Commanding](/docs/input-interaction/commanding): ICommand interface details.
+- [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings for commands.
