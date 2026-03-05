@@ -354,8 +354,14 @@ const config: Config = {
     footer: {
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.vsDark,
+      theme: {
+        ...prismThemes.github,
+        plain: { ...prismThemes.github.plain, backgroundColor: '#F3F1F0' },
+      },
+      darkTheme: {
+        ...prismThemes.vsDark,
+        plain: { ...prismThemes.vsDark.plain, backgroundColor: '#05051E' },
+      },
       additionalLanguages: ['csharp', 'bash', 'shell-session', 'diff'],
     },
     algolia: {

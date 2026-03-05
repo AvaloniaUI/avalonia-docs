@@ -11,9 +11,9 @@
 }
 
 html[data-theme='light'] {
-  // Marketing: bone background, warm border
+  // Marketing: bone background, no border
   --code-block-bg-c: #F3F1F0;
-  --code-block-border-c: rgba(0, 0, 0, 0.12);
+  --code-block-border-c: transparent;
   --ifm-code-background: #F3F1F0;
 }
 
@@ -22,6 +22,7 @@ html[data-theme='dark'] {
   --code-block-bg-c: #05051E;
   --code-block-border-c: rgba(255, 255, 255, 0.12);
   --ifm-code-background: #0B2A54;
+  --color-neutral-30: rgba(255, 255, 255, 0.06);
 }
 
 :not(pre) > code {
@@ -62,17 +63,22 @@ code {
 
     box-shadow: none;
     border-radius: var(--code-block-border-radius);
-    border: 1px solid var(--code-block-border-c);
+    border: none;
     overflow: hidden;
 
     // Title/language bar styling
     [class*='codeBlockTitle_'] {
-      background-color: transparent;
+      background-color: var(--color-neutral-30);
       border-bottom: 1px solid var(--code-block-border-c);
       padding: 0.75rem 1.25rem;
       font-size: 0.875rem;
       font-weight: 600;
       color: var(--ifm-heading-color);
+    }
+
+    // When buttons are in the title bar, they need static positioning
+    [class*='codeBlockTitle_'] [class*='buttonGroup_'] {
+      position: static;
     }
   }
 
@@ -104,10 +110,10 @@ code {
 
 code[class*='language-'],
 pre[class*='language-'] {
-  white-space: pre;
+  white-space: pre-wrap;
   word-spacing: normal;
   word-break: normal;
-  word-wrap: normal;
+  word-wrap: break-word;
   line-height: var(--code-block-line-height);
 
   -moz-tab-size: 4;
