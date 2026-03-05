@@ -197,9 +197,12 @@ const sidebars: SidebarsConfig = {
       label: 'Navigation',
       collapsed: true,
       items:[
+        'navigation/contentpage',
+        'navigation/drawerpage',
+        'navigation/navigationpage',
+        'navigation/tabbedpage',
         'navigation/tabcontrol',
         'navigation/tabstrip',
-        'navigation/trayicon',
       ],
     },
     {
@@ -209,6 +212,14 @@ const sidebars: SidebarsConfig = {
       items:[
         'primitives/scrollbar',
         'primitives/usercontrol',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'System',
+      collapsed: true,
+      items:[
+        'navigation/trayicon',
         'primitives/window',
       ],
     },
