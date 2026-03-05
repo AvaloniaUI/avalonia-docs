@@ -3,11 +3,9 @@ id: selectabletextblock
 title: SelectableTextBlock
 ---
 
-# SelectableTextBlock
-
 The `SelectableTextBlock` block is a label for the display of text that allows selecting and copying of text. It can display multiple lines, and features full control over the font used.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -47,12 +45,7 @@ This example shows a text block used as a heading, single line and multi-line di
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SelectableTextBlock).
-:::
-
-:::info
-View the source code on GitHub [`SelectableTextBlock.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SelectableTextBlock.cs)
-:::
+- [SelectableTextBlock API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SelectableTextBlock)
+- [`SelectableTextBlock.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SelectableTextBlock.cs)

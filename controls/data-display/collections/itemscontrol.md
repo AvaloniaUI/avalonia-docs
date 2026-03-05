@@ -5,11 +5,9 @@ title: ItemsControl
 
 import exampleScreenshot from '/img/controls/itemscontrol/itemscontrol-with-custom-layout-and-formatting.gif';
 
-# ItemsControl
-
 The `ItemsControl` is the basis for controls that display repeating data (like the list box for example). It has no built-in formatting or interactions; but you can use it with data binding, styling and data templates to create a completely custom repeating data control.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -112,15 +110,8 @@ public class Crockery
 
 The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
 
-## More Information
+## See also
 
-:::info
-For the complete ItemsControl API documentation, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ItemsControl).
-:::
-
-:::info
-View the source code on _GitHub_ [`ItemsControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)
-:::
-
-
+- [ItemsControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ItemsControl)
+- [`ItemsControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)
 

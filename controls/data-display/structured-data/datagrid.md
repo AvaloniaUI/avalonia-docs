@@ -13,23 +13,21 @@ import DataGridColumnPreviewScreenshot from '/img/controls/datagrid/datagridtext
 
 <Pill variant="warning">Deprecated</Pill>
 
-## DataGrid
-
 The `DataGrid` displays repeating data in a customizable grid. The control can be styled, templated and bound.
 
 The `DataGrid` needs to be bound to an observable collection in a view model that can be found in a related **data context**.
 
 :::info
-To review the concept behind the **data context**, see [here](/docs/data-binding/data-context).
+To review the concept behind the **data context**, see [Data context](/docs/data-binding/data-context).
 :::
 
 :::info
-The `DataGrid` is in an additional _Avalonia UI_ package. To use the `DataGrid` in your project, you must reference the **Avalonia.Controls.DataGrid** _NuGet_ package, and reference the styles that it uses, see below.
+The `DataGrid` is in an additional _Avalonia_ package. To use the `DataGrid` in your project, you must reference the **Avalonia.Controls.DataGrid** _NuGet_ package, and reference the styles that it uses, see below.
 :::
 
-### NuGet Package Reference
+### NuGet package reference
 
-You must install the _NuGet_ package for the `DataGrid`, there are several ways of doing this. You can use **Manage NuGet Packages** from the project menu of your IDE:
+You must install the _NuGet_ package for the `DataGrid`. You can do this using one of the following methods. You can use **Manage NuGet Packages** from the project menu of your IDE:
 
 <img src={DataGridNuGetScreenshot} alt="" />
 
@@ -45,11 +43,11 @@ Or add package reference directly to the project (`.csproj`) file:
 <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.0" />
 ```
 
-:::warning
-Note you must always install the data grid version that matches the _Avalonia UI_ version you are using.
+:::caution
+Note you must always install the data grid version that matches the _Avalonia_ version you are using.
 :::
 
-### Include DataGrid Styles
+### Include DataGrid styles
 
 You must reference the `DataGrid` themes to include the additional styles that the `DataGrid` uses. You can do this by adding a `<StyleInclude>` element to the application (`App.axaml` file).
 
@@ -62,12 +60,12 @@ For example (In case you use `FluentTheme`):
 </Application.Styles>
 ```
 
-:::warning
+:::caution
 The DataGrid-styles need to match the overall theme you use, otherwise you will get conflicts and unresolved resources. For third party themes, please lookup their docs and samples.
 :::
 
 
-### Useful Properties
+### Useful properties
 
 You will probably use these properties most often:
 
@@ -134,7 +132,7 @@ public class Person
 <img src={DataGridSortColumnScreenshot} alt="" />
 
 :::info
-These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [here](/docs/data-binding/introduction-to-data-binding).
+These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [Introduction to data binding](/docs/data-binding/introduction-to-data-binding).
 :::
 
 Property names from the item class will generally not make good column names. This example adds custom header names to the grid. It also allows column reordering and resizing and disallows the default column sorting option:
@@ -312,7 +310,7 @@ public class Person
 
 ## DataGridColumn
 
-A `DataGrid` can contain multiple data grid columns and _Avalonia UI_ has two built-in column types which can be used to display a different data types, and a template type that can customise the column appearance.
+A `DataGrid` can contain multiple data grid columns and _Avalonia_ has two built-in column types which can be used to display a different data types, and a template type that can customise the column appearance.
 
 | Column Type              | Description                                                                                                                                                               |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -320,7 +318,7 @@ A `DataGrid` can contain multiple data grid columns and _Avalonia UI_ has two bu
 | `DataGridCheckBoxColumn` | Presents a check box for display and editing of the column data, when it is Boolean. This column type also supports the three-state check box when the value is nullable. |
 | `DataGridTemplateColumn` | Can be used to customise the presentation of column data, for both display and editing.                                                                                   |
 
-### Useful Properties
+### Useful properties
 
 Most of these properties are common to all three column types:
 
@@ -332,7 +330,7 @@ Most of these properties are common to all three column types:
 | `IsThreeState`   | Check box column only. Enables the third (filled) state when a nullable Boolean value is null.                                                  |
 | `Width`          | The column width can be given in absolute or relative size (see below).                                                                         |
 
-### Column Width
+### Column width
 
 If you do not set the width for a column, it will be resized to fit the contents, and a horizontal scrollbar will be added to the grid if necessary.
 

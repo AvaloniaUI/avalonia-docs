@@ -5,13 +5,11 @@ title: Slider
 
 import SliderMaxValueScreenshot from '/img/controls/slider/slider-max-value.gif';
 
-# Slider
-
 The slider control presents its numerical value as the relative position of a slider button along the length of a track. The position is relative to maximum and minimum values.
 
 Drag interaction on the slider button can alter the value between the maximum and minimum values. Keyboard and click interactions can also nudge the value.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -22,7 +20,7 @@ You will probably use these properties most often:
 In this example the slider value is displayed in the text block below, using binding to a control.
 
 :::info
-To review how to bind one control to another, see the guide [here](/docs/data-binding/binding-to-controls).
+To review how to bind one control to another, see the guide [Binding to controls](/docs/data-binding/binding-to-controls).
 :::
 
 Here the maximum and minimum values are default (0 and 100 respectively).
@@ -110,8 +108,7 @@ public class MainViewModel : ViewModelBase
     }
 ```
 
-## More Information
+## See also
 
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Slider).
-
-View the source code on _GitHub_ [`Slider.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Slider.cs)
+- [Slider API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Slider)
+- [`Slider.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Slider.cs)

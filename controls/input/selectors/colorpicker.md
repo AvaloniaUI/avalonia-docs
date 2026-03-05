@@ -10,8 +10,6 @@ import ColorPaletteMaterial from '/img/controls/colorpicker/color-palette-materi
 import ColorPaletteMaterialHalf from '/img/controls/colorpicker/color-palette-material-half.png';
 import ColorPaletteSixteen from '/img/controls/colorpicker/color-palette-sixteen.png';
 
-# ColorPicker
-
 The `ColorPicker` provides a highly customizable, general-purpose control that users can use to select colors in RGB or HSV color space. This implementation is just as much about providing primitive controls that developers can use to build their own color pickers as it is about providing a ready-to-use picker. 
 
 The `ColorPicker` includes a family of controls (components):
@@ -38,9 +36,9 @@ Developers using this control may:
  3. Create a new color picker to meet a specific app's design and usability requirements using the existing primitive components.
  4. Re-template the existing components to create a brand-new fully customized color picker.
 
-## Using in Your App
+## Using in your app
 
-Avalonia is used in several resource-constrained environments such as embedded devices. For this and other reasons, certain larger controls such as the `ColorPicker` are not included with the main Avalonia UI NuGet packages. This means a bit of extra work is required to add the `ColorPicker` to your app:
+Avalonia is used in several resource-constrained environments such as embedded devices. For this and other reasons, certain larger controls such as the `ColorPicker` are not included with the main Avalonia NuGet packages. This means a bit of extra work is required to add the `ColorPicker` to your app:
 
  1. Add the `Avalonia.Controls.ColorPicker` nuget to your project. This MUST match your version of Avalonia's other packages.
  2. Add control themes and styles for all color picker controls in `App.axaml` by adding:
@@ -55,7 +53,7 @@ This step is not required for some theme packages such as FluentAvalonia which i
 
 This control originated as a re-styling of the one in UWP (later WinUI) using the basic designs implemented for the Windows Community Toolkit. The WinUI `ColorPicker` isn't conducive to smaller screen sizes and the overall design/usability of the control left something to be desired for both users and developers.
 
-With all its features, the WinUI control still wasn't as good as it should be. It couldn't be re-templated and customized without a lot of effort (partially because individual components were highly inter-dependent on each other). It also used a lot of template parts and code-behind. The Avalonia UI version of the control (a complete rewrite) attempts to fix all of these issues and become the predominant XAML color picker design.
+With all its features, the WinUI control still wasn't as good as it should be. It couldn't be re-templated and customized without a lot of effort (partially because individual components were highly inter-dependent on each other). It also used a lot of template parts and code-behind. The Avalonia version of the control (a complete rewrite) attempts to fix all of these issues and become the predominant XAML color picker design.
 
 Main improvements learning from WinUI were:
  * The `ColorPicker` is implemented as a drop-down (matching all other "pickers"). There is also a `ColorView` control for those that want the canvas-type control (similar to WinUI).
@@ -67,7 +65,7 @@ Main improvements learning from WinUI were:
  * Color palettes were added using the `IColorPalette` interface (same as the Windows Community Toolkit). No color palettes are supported in the WinUI version of this control.
  * New properties such as `SelectedIndex` and `ColorModel` allow customizing the color picker and putting it into a pre-defined state. For example, the WinUI ColorPicker always defaults to RGB and this cannot be changed in code or XAML. This implementation does not have such limitations.
 
-## Controls & Primitives
+## Controls and primitives
 
 | Control | Link |
 |---------|------|
@@ -77,7 +75,7 @@ Main improvements learning from WinUI were:
 | `ColorSlider` | |
 | `ColorPreviewer` | |
 
-## Color Palettes
+## Color palettes
 
 Several pre-defined color palettes implementing the `IColorPalette` interface are provided. Instances of these palettes may be set to the `Palette` property of a `ColorView` or `ColorPicker`.
 
@@ -108,7 +106,7 @@ Several pre-defined color palettes implementing the `IColorPalette` interface ar
     <td>
       <img src={ColorPaletteMaterial} alt="Material Color Palette" width="300" />
     </td>
-    <td>Contains most of the <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Material design color palette</a>. In order to make the palette uniform and rectangular the following alterations were made 1. The A100-A700 shades of each color are excluded. These shades do not exist for all colors (Brown/Gray). 2. Black/White are stand-alone colors and are also excluded.</td>
+    <td>Contains most of the <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Material design color palette</a>. To make the palette uniform and rectangular the following alterations were made 1. The A100-A700 shades of each color are excluded. These shades do not exist for all colors (Brown/Gray). 2. Black/White are stand-alone colors and are also excluded.</td>
   </tr>
   <tr>
     <td>
@@ -123,3 +121,8 @@ Several pre-defined color palettes implementing the `IColorPalette` interface ar
     <td>Contains the standard <a href="https://en.wikipedia.org/wiki/Web_colors#HTML_color_names">sixteen color palette</a> from the HTML 4.01 specification.</td>
   </tr>
 </table>
+
+## See also
+
+- [ColorPicker API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ColorPicker)
+- [`ColorPicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.ColorPicker/ColorPicker/ColorPicker.cs)

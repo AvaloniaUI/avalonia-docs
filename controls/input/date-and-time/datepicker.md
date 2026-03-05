@@ -5,11 +5,9 @@ title: DatePicker
 
 import DatePickerScreenshot from '/img/controls/datepicker/datepicker.gif';
 
-# DatePicker
-
 The `DatePicker` has three 'spinner' controls to allow the user to pick a date value. The spinners display when the control is clicked.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -27,7 +25,7 @@ This example uses the date format attribute to display the name of the day as we
 
 <img src={DatePickerScreenshot} alt="" />
 
-## **Initializing the Date**
+## Initializing the date
 
 The date properties of this control cannot be set in XAML using an attribute. This is because there is no conversion available for converting strings to date objects like `DateTime` and `DateTimeOffset`.
 
@@ -37,8 +35,7 @@ You will need to write code-behind like this:
 datePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
 ```
 
-## More Information
+## See also
 
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DatePicker).
-
-View the source code on _GitHub_ [`DatePicker.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)
+- [DatePicker API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DatePicker)
+- [`DatePicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)

@@ -3,11 +3,9 @@ id: timepicker
 title: TimePicker
 ---
 
-# TimePicker
-
 The `TimePicker` has two to four 'spinner' controls to allow the user to pick a time value. The time picker can work in 24 or 12 hour formats and supports hours, minutes, and seconds. The picker controls display when the control is clicked.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -30,7 +28,7 @@ This example shows how to create a time picker for the 24 hour clock, with 20 mi
 ```
 </XamlPreview>
 
-## **Initializing the Time**
+## Initializing the time
 
 You can set the time value as an attribute in XAML.  Use a string in the form _Hh:Mm_ where _Hh_ is hours and can be between 0 and 23 and _Mm_ is minutes and can be between 0 and 59.
 
@@ -49,12 +47,7 @@ TimePicker timePicker = new TimePicker
 
 You can clear the display by resetting the selected time to null.
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TimePicker).
-:::
-
-:::info
-View the source code on _GitHub_ [`TimePicker.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/TimePicker.cs)
-:::
+- [TimePicker API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TimePicker)
+- [`TimePicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/TimePicker.cs)

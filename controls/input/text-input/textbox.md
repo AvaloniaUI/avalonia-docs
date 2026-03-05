@@ -5,11 +5,9 @@ description: REFERENCE - Built-in Controls
 
 import TextBoxEntryScreenshot from '/img/controls/textbox/textbox-entry.gif';
 
-# TextBox
-
 The `TextBox` presents an area for typed (keyboard) input. It can be for a single or multiple lines of input.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -32,12 +30,7 @@ This example has a basic one line text box, a password box, and a text-wrapping 
 
 <img src={TextBoxEntryScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBox).
-:::
-
-:::info
-View the source code on GitHub [TextBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBox.cs)
-:::
+- [TextBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBox)
+- [`TextBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBox.cs)

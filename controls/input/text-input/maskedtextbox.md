@@ -5,13 +5,11 @@ title: MaskedTextBox
 
 import MaskedTextPhoneBoxScreenshot from '/img/reference/controls/maskedtextbox/maskedtextbox-phone.gif';
 
-# MaskedTextBox
-
 The `MaskedTextBox` presents an area for typed (keyboard) input, but where the format and characters permitted can be constrained by a mask pattern formed from special characters.
 
 The mask pattern can also contain literal characters that appear in the input and cannot be typed over.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -21,7 +19,7 @@ You will probably use these properties most often:
 | `AsciiOnly` | Restricts input to the ASCII letters a-z and A-Z.                            |
 | `Text`      | The resulting text input including any literal characters.                   |
 
-## Mask Characters
+## Mask characters
 
 The mask property accepts a string that can contain a combination of fixed characters and the following special characters:
 
@@ -68,8 +66,6 @@ This is a basic example:
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-View the source code on _GitHub_ [`MaskedTextBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/MaskedTextBox.cs)
-:::
+- [`MaskedTextBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/MaskedTextBox.cs)

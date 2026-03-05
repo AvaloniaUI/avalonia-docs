@@ -3,11 +3,9 @@ id: progressbar
 title: ProgressBar
 ---
 
-# ProgressBar
-
 The `ProgressBar` presents a value as a proportionately filled bar with the option to show a caption.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -60,12 +58,7 @@ with the value of `ProgressTextFormat` as the format string. The following forma
 
 Since `{0}` would appear at the start of the string in this example, it must be escaped.
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ProgressBar).
-:::
-
-:::info
-View the source code on _GitHub_ [`ProgressBar.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ProgressBar.cs)
-:::
+- [ProgressBar API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ProgressBar)
+- [`ProgressBar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ProgressBar.cs)

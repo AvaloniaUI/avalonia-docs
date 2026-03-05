@@ -8,13 +8,11 @@ import CalendarSingleSelectionScreenshot from '/img/controls/calendar/calendar.g
 import CalendarMultipleSelectionScreenshot from '/img/controls/calendar/calendar2.gif';
 import CalendarCustomRangeScreenshot from '/img/controls/calendar/calendar4.gif';
 
-# Calendar
-
 The calendar is a control for users to select dates or date ranges.
 
 <Image light={CalendarBasicUsageScreenshot} alt="An animation of a calendar switching between year, month and day views." position="center" maxWidth={400} cornerRadius="true"/>
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -75,8 +73,7 @@ public partial class MainWindow : Window
 
 <img src={CalendarCustomRangeScreenshot} alt=""/>
 
-## More Information
+## See also
 
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Calendar).
-
-View the source code on _GitHub_ [`Calendar.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Calendar/Calendar.cs)
+- [Calendar API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Calendar)
+- [`Calendar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Calendar/Calendar.cs)

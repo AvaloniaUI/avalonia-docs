@@ -3,11 +3,9 @@ id: numericupdown
 title: NumericUpDown
 ---
 
-# NumericUpDown
-
 The `NumericUpDown` is an editable numeric input with up and down spinner buttons attached. Non-numeric characters are ignored in the input. The value can also be changed by clicking the buttons, or by using the keyboard arrow keys. The mouse wheel (if present) will also change the value.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -60,12 +58,7 @@ For example:
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NumericUpDown).
-:::
-
-:::info
-View the source code on _GitHub_ [`NumericUpDown.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NumericUpDown/NumericUpDown.cs)
-:::
+- [NumericUpDown API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NumericUpDown)
+- [`NumericUpDown.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NumericUpDown/NumericUpDown.cs)

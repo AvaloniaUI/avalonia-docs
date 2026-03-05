@@ -10,7 +10,7 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
-## Basic Expand/Collapse Operations
+## Basic expand/collapse operations
 
 For hierarchical TreeDataGrids, you can programmatically expand or collapse rows:
 
@@ -31,7 +31,7 @@ Source.Collapse(new IndexPath(0));
 For more information about `IndexPath` see [Selection modes](/controls/data-display/structured-data/treedatagrid/selection-modes)
 :::
 
-### Expand All / Collapse All
+### Expand all / collapse all
 
 The source provides built-in methods for expanding/collapsing all rows:
 
@@ -43,7 +43,7 @@ Source.ExpandAll();
 Source.CollapseAll();
 ```
 
-### Expand or Collapse Based on Condition
+### Expand or collapse based on condition
 
 You can expand/collapse rows based on a condition:
 
@@ -55,7 +55,7 @@ Source.ExpandCollapseRecursive(person => person.Age > 18);
 Source.ExpandCollapseRecursive(_ => false);
 ```
 
-## Responding to Expand/Collapse Events
+## Responding to expand/collapse events
 
 You can handle expand and collapse events to load data on demand or perform other actions:
 

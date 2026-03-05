@@ -5,13 +5,11 @@ title: Carousel
 
 import CarouselScreenshot from '/img/reference/controls/carousel/carousel.gif';
 
-# Carousel
-
 The carousel has an items collection, and displays each item as a page, in sequence, so that it fills the control.
 
 You can use the carousel control to create a slide show.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -96,8 +94,7 @@ namespace AvaloniaControls.Views
 
 <img src={CarouselScreenshot} alt="" />
 
-## More Information
+## See also
 
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Carousel).
-
-View the source code on _GitHub_ [`Carousel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Carousel.cs)
+- [Carousel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Carousel)
+- [`Carousel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Carousel.cs)

@@ -5,13 +5,11 @@ title: AutoCompleteBox
 
 import AutoCompleteBoxScreenshot from '/img/controls/autocompletebox/autocompletebox.gif';
 
-# AutoCompleteBox
-
 The `AutoCompleteBox` presents a text box for user input and a drop-down that contains possible matches from an items source collection, for the text typed in. The drop-down shows when the user starts to type, and the match is updated for each character typed. The user can select from the drop-down.
 
 The way in which the text is matched to possible items in the items source is configurable.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -62,7 +60,7 @@ namespace AvaloniaControls.Views
 
 <img src={AutoCompleteBoxScreenshot} alt="" />
 
-### Using AutoCompleteBox with Objects
+### Using AutoCompleteBox with objects
 When working with complex objects instead of simple strings, specify which property should be shown and how the control should filter the underlying data. The sections below cover display binding, custom filtering, and formatting the presented text.
 
 #### Filtering Objects Using ValueMemberBinding
@@ -179,7 +177,7 @@ public class MainViewModel : INotifyPropertyChanged
 
 ```
 
-#### Implementing Custom Filtering Using ItemFilter
+#### Implementing custom filtering using ItemFilter
 If you need to search across multiple properties such as both Name and Id, provide a custom filter function.
 
 ```xml
@@ -212,7 +210,7 @@ public partial class MainWindow : Window
 
 ```
 
-#### Customizing Text Using a Value Converter
+#### Customizing text using a value converter
 You can control the text displayed in the drop-down by using a value converter. This is helpful when you want to show a combination of fields—for example, a product’s name and price. Keep in mind that this also affects how filtering works: if you display both name and price, the control will allow filtering by either value.
 
 If you only want to change how the item appears visually (without affecting filtering), use the standard ItemTemplate property instead.
@@ -266,12 +264,7 @@ namespace YourNamespace.Converters
 
 
 ```
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_AutoCompleteBox).
-:::
-
-:::info
-View the source code on _GitHub_ [`AutoCompleteBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/AutoCompleteBox/AutoCompleteBox.cs)
-:::
+- [AutoCompleteBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_AutoCompleteBox)
+- [`AutoCompleteBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/AutoCompleteBox/AutoCompleteBox.cs)

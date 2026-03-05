@@ -10,9 +10,9 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
-## Column Sorting
+## Column sorting
 
-### Enabling Sorting
+### Enabling sorting
 
 Sorting is enabled by default for all columns. Users can click column headers to sort:
 
@@ -34,7 +34,7 @@ To disable sorting for the entire grid:
               CanUserSortColumns="False" />
 ```
 
-### Making Specific Columns Non-Sortable
+### Making specific columns non-sortable
 
 To prevent sorting on specific columns:
 
@@ -48,7 +48,7 @@ new TextColumn<Person, string>(
     })
 ```
 
-### Programmatic Sorting
+### Programmatic sorting
 
 You can sort columns programmatically:
 
@@ -64,7 +64,7 @@ Source.SortBy(null, ListSortDirection.Ascending);
 Source.ClearSort(Source.Columns[0]);
 ```
 
-## Custom Sorting
+## Custom sorting
 
 You can provide custom sorting logic using a comparer.
 

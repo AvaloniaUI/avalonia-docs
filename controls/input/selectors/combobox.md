@@ -5,17 +5,15 @@ title: ComboBox
 
 import ComboBoxDataTemplateScreenshot from '/img/controls/combobox/combobox-data-template.gif';
 
-# ComboBox
-
 The `ComboBox` presents a selected item and a drop-down button that displays a list of options. The length and height of the combo box are determined by the selected item, unless otherwise defined.
 
 The items in the list can be composed, bound and templated.
 
 :::info
-To review the concept behind **data templates**, see [here](/docs/data-templates/introduction-to-data-templates).
+To review the concept behind **data templates**, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
 :::
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -136,12 +134,7 @@ public partial class MainWindow : Window
 
 <img src={ComboBoxDataTemplateScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ComboBox).
-:::
-
-:::info
-View the source code on _GitHub_ [`ComboBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ComboBox.cs)
-:::
+- [ComboBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ComboBox)
+- [`ComboBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ComboBox.cs)

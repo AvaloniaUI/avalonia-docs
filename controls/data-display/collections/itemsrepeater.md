@@ -6,16 +6,14 @@ title: ItemsRepeater
 import ItemsRepeaterVerticalScreenshot from '/img/controls/itemsrepeater/itemsrepeater-vertical.png';
 import ItemsRepeaterHorizontalScreenshot from '/img/controls/itemsrepeater/itemsrepeater-horizontal.gif';
 
-# ItemsRepeater
-
 The `ItemsRepeater` can display repeating data from a bound data source. It has both a layout template and a data template.
 
 :::info
-The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [here](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater).
+The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [UWP ItemsRepeater documentation](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater).
 :::
 
 :::info
-The `ItemsRepeater` was moved inside an additional _Avalonia UI_ package. To use the `ItemsRepeater` in your project, you must reference the [Avalonia.Controls.ItemsRepeater](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater) _NuGet_ package. Check this [PR](https://github.com/AvaloniaUI/Avalonia/pull/10112) for additional information.
+The `ItemsRepeater` was moved inside an additional _Avalonia_ package. To use the `ItemsRepeater` in your project, you must reference the [Avalonia.Controls.ItemsRepeater](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater) _NuGet_ package. Check this [PR](https://github.com/AvaloniaUI/Avalonia/pull/10112) for additional information.
 :::
 
 The default layout template is a vertical stack layout, so that items appear in a vertical list.
@@ -124,8 +122,6 @@ The items display horizontally, and those too far to the right would be hidden i
 
 <img src={ItemsRepeaterHorizontalScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-View the source code on _GitHub_ [`ItemsRepeater.cs`](https://github.com/AvaloniaUI/Avalonia.Controls.ItemsRepeater/blob/main/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)
-:::
+- [`ItemsRepeater.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia.Controls.ItemsRepeater/blob/main/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)

@@ -6,13 +6,11 @@ title: TransitioningContentControl
 import TransitioningContentControlFadeScreenshot from '/img/controls/transitioningcontentcontrol/transitioningcontentcontrol-fade.webp';
 import TransitioningContentControlSlideScreenshot from '/img/controls/transitioningcontentcontrol/transitioningcontentcontrol-slide.webp';
 
-# TransitioningContentControl
-
 The `TransitioningContentControl` can use a page transition to animate a content change on an inner control.
 
 You can use this control to display a collection of different images in a slideshow.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -51,12 +49,7 @@ In this example, a different page transition has been specified to slide the ima
 
 <img src={TransitioningContentControlSlideScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TransitioningContentControl).
-:::
-
-:::info
-View the source code on _GitHub_ [`TransitioningContentControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TransitioningContentControl.cs)
-:::
+- [TransitioningContentControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TransitioningContentControl)
+- [`TransitioningContentControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TransitioningContentControl.cs)

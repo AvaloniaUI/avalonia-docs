@@ -31,9 +31,9 @@ Add the `TreeDataGrid` package to your project:
 dotnet add package Avalonia.Controls.TreeDataGrid
 ```
 
-### Add the License Key
+### Add the license key
 
-Include your Avalonia UI license key in the executable project file (`.csproj`):
+Include your Avalonia license key in the executable project file (`.csproj`):
 
 ```xml
 <ItemGroup>
@@ -45,7 +45,7 @@ Include your Avalonia UI license key in the executable project file (`.csproj`):
 For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
-### Install the Theme
+### Install the theme
 
 The theme for `TreeDataGrid` must be installed into your `App.axaml` in order for anything to appear.
 
@@ -62,7 +62,7 @@ The theme for `TreeDataGrid` must be installed into your `App.axaml` in order fo
 </Application>
 ```
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -81,7 +81,7 @@ There are two parts to any `TreeDataGrid`:
 
 If you're using the MVVM pattern, then the Source is usually defined at the view model layer, but it can also be defined in code-behind. This guide will assume that you're using the MVVM pattern.
 
-## Flat Data
+## Flat data
 
 #### Data model
 
@@ -161,13 +161,13 @@ It's now time to add the `TreeDataGrid` control to a window and bind it to the s
 </Window>
 ```
 
-#### Run the Application
+#### Run the application
 
 Run the application and you should see the data appear:
 
 <Image light={FlatTreeDataGrid} maxWidth={400} alignment="center" />
 
-## Hierarchical Data
+## Hierarchical data
 
 #### Data model
 
@@ -278,7 +278,7 @@ It's now time to add the `TreeDataGrid` control to a window and bind it to the s
 </Window>
 ```
 
-#### Run the Application
+#### Run the application
 
 Run the application and you should see the data appear:
 
@@ -291,3 +291,7 @@ Run the application and you should see the data appear:
 - [Expand and collapse operations](/controls/data-display/structured-data/treedatagrid/expand-and-collapse)
 - [Sorting](/controls/data-display/structured-data/treedatagrid/sorting)
 - [Filtering](/controls/data-display/structured-data/treedatagrid/filtering)
+
+## See also
+
+- [DataGrid](/controls/data-display/structured-data/datagrid/)

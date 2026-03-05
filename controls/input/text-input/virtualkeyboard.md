@@ -83,7 +83,7 @@ myContainer.Children.Add(keyboard);
 </StackPanel>
 ```
 
-## When to Use VirtualKeyboard vs. VirtualKeyboardScope
+## When to use VirtualKeyboard vs. VirtualKeyboardScope
 
 ### Choose VirtualKeyboard when:
 
@@ -96,7 +96,7 @@ myContainer.Children.Add(keyboard);
 - **Simpler Integration**: You prefer a container-based approach with fewer configuration options.
 - **Automatic Visibility**: You want automatic show/hide behavior based on focus changes.
 
-## Best Practices
+## Best practices
 
 1. **Set a Valid Target**:
    - Always set the `Target` property to a valid input element that can receive keystrokes.
@@ -121,7 +121,7 @@ myContainer.Children.Add(keyboard);
 
 The `VirtualKeyboard` control in Avalonia supports custom styling via named resources. You can override these resources in your application to customize the appearance of keyboard elements.
 
-### Customizable Resources
+### Customizable resources
 
 <Image light={VirtualKeyboardStyles} maxWidth={400} alignment="center" />
 
@@ -143,7 +143,7 @@ Below is a list of key resources you can override in your theme or resource dict
 | `KeyboardPopupKeySelectedBackground` | Brush | `PaleTurquoise` | 
 
 
-### How to Override
+### How to override
 
 To customize, define these resources in your application theme or resource dictionary. For example:
 
@@ -151,7 +151,7 @@ To customize, define these resources in your application theme or resource dicti
 <SolidColorBrush x:Key="KeyboardButtonForeground" Color="#FF0000" />
 ```
 
-###ß Example: Custom Theme
+### Example: Custom theme
 
 ```xml
 <ResourceDictionary>

@@ -3,11 +3,9 @@ id: colorview
 title: ColorView
 ---
 
-# ColorView
-
 Presents a color for user editing using a spectrum, palette and component sliders.
 
-## Common Properties
+## Common properties
 
 | Property | Description |
 |----------|-------------|
@@ -48,9 +46,14 @@ The properties for visibility use the naming pattern "IsThingVisible" rather tha
 
 None
 
-## Template Parts
+## Template parts
 
 | Name | Type | Description |
 |------|----- |-------------|
 | `PART_HexTextBox` | TextBox | Provides an input or output for hexadecimal color notation that can be parsed by the control. |
 | `PART_TabControl` | TabControl | The main control used to navigate through the spectrum, palette and components tab/panel/page (subviews). This template part is optional and is only required for some validation scenarios of the `SelectedIndex`. |
+
+## See also
+
+- [ColorView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ColorView)
+- [`ColorView.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.ColorPicker/ColorView/ColorView.cs)

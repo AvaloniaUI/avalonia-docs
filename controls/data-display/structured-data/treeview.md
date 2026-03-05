@@ -6,13 +6,11 @@ title: TreeView
 import TreeViewAnimalHierarchyScreenshot from '/img/controls/treeview/treeview-animal-hierarchy.gif';
 import TreeViewEnhancedAnimalHierarchyScreenshot from '/img/controls/treeview/treeview-enhanced-animal-hierarchy.gif';
 
-# TreeView
-
 The `TreeView` control can present hierarchical data and allows item selection. The items are templated so you can customise how they are displayed.
 
 There are two data sources: the main items source for the control, this gives the root of the hierarchical data. Then there is the items source in the item template which allows the control to list the next level in the hierarchical data.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -202,12 +200,7 @@ The tree view adds a scroll bar when it is needed. The selection can be extended
 
 <img src={TreeViewEnhancedAnimalHierarchyScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TreeView).
-:::
-
-:::info
-View the source code on _GitHub_ [`TreeView.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TreeView.cs)
-:::
+- [TreeView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TreeView)
+- [`TreeView.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TreeView.cs)

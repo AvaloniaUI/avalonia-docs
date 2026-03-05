@@ -6,13 +6,11 @@ title: CheckBox
 import CheckBoxTwoStateScreenshot from '/img/reference/controls/checkbox/checkbox-two-state.gif';
 import CheckBoxThreeStateScreenshot from '/img/reference/controls/checkbox/checkbox-three-state.gif';
 
-# CheckBox
-
 The `CheckBox` control presents a Boolean value where the true value is represented using a check mark, and the false value is an empty box. The check box has an option to present a nullable Boolean, where the null value represents 'unknown' and is drawn as a shaded box.
 
 Click interaction toggles the value in the sequence: checked, unchecked, unknown (if three-state).
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -54,8 +52,7 @@ This is an example of a three-state checkbox:
 ```
 </XamlPreview>
 
-## More Information
+## See also
 
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CheckBox).
-
-View the source code on _GitHub_ [`CheckBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)
+- [CheckBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CheckBox)
+- [`CheckBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)

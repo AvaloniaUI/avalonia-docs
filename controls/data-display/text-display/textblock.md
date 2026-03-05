@@ -6,11 +6,9 @@ title: TextBlock
 import TextBlockRunScreenshot from '/img/controls/textblock/textblock-run.png';
 import TextBlockUIContainerScreenshot from '/img/controls/textblock/textblock-uicontainer.png';
 
-# TextBlock
-
 The `TextBlock` is a read-only label for the display of text. It can display multiple lines, and features full control over the font used.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -124,12 +122,7 @@ The `InlineUIContainer` allows any `Control` to be included as an inline.
 
 <img src={TextBlockUIContainerScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBlock).
-:::
-
-:::info
-View the source code on GitHub [`TextBlock.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBlock.cs)
-:::
+- [TextBlock API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBlock)
+- [`TextBlock.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBlock.cs)

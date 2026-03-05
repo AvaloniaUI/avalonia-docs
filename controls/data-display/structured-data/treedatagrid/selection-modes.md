@@ -17,7 +17,7 @@ Two selection modes are supported:
 
 Both selection types support either single or multiple selection. The default selection type is single row selection.
 
-## Index Paths
+## Index paths
 
 Because `TreeDataGrid` supports hierarchical data, using a simple index to identify a row in the data source isn't enough. Instead indexes are represented using the `IndexPath` struct.
 
@@ -25,7 +25,7 @@ An `IndexPath` is an array of indexes, each element of which specifies the index
 
 Consider the following data source:
 
-```
+```text
 |- A
 |  |- B
 |  |- C
@@ -41,7 +41,7 @@ Consider the following data source:
 
 `IndexPath` is an immutable struct which is constructed with an array of integers, e.g.: `new IndexPath(0, 1, 0)`. There is also an implicit conversion from `int` for when working with a flat data source.
 
-## Row Selection
+## Row selection
 
 Row selection is the default and is exposed via the `RowSelection` property on the source.
 
@@ -63,7 +63,7 @@ Source = new FlatTreeDataGridSource<Person>(_people)
 Source.RowSelection!.SingleSelect = false;
 ```
 
-### Getting Selected Items
+### Getting selected items
 
 Access selected items through the selection model:
 
@@ -85,7 +85,7 @@ if (selectedItems != null)
 }
 ```
 
-### Programmatically Selecting Rows
+### Programmatically selecting rows
 
 You can select rows programmatically using the selection model:
 
@@ -116,7 +116,7 @@ selection.Deselect(2);
 selection.EndBatchUpdate();
 ```
 
-### Selection Changed Event
+### Selection changed event
 
 Handle selection changes with the `SelectionChanged` event:
 
@@ -129,7 +129,7 @@ Source.RowSelection.SelectionChanged += (sender, e) =>
 };
 ```
 
-## Cell Selection
+## Cell selection
 
 To enable cell selection for a TreeDataGrid source, assign an instance of `TreeDataGridCellSelectionModel<TModel>` to the source's `Selection` property:
 
@@ -170,7 +170,7 @@ if (Source.CellSelection?.SelectedIndex is { } selectedCell)
 }
 ```
 
-### Getting Selected Items
+### Getting selected items
 
 Access selected items through the selection model:
 
@@ -204,7 +204,7 @@ foreach (var selected in selection.SelectedIndexes)
 }
 ```
 
-### Programmatically Selecting Cells
+### Programmatically selecting cells
 
 You can select cells programmatically using the selection model:
 
@@ -219,7 +219,7 @@ selection.SelectedIndex = new CellIndex(3, new IndexPath(2));
 selection.SetSelectedRange(new CellIndex(1, 1), columnCount: 2, rowCount: 2);
 ```
 
-### Selection Changed Event
+### Selection changed event
 
 Handle selection changes with the `SelectionChanged` event:
 

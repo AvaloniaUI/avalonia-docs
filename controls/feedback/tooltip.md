@@ -6,11 +6,9 @@ title: ToolTip
 import ToolTipTextHoverScreenshot from '/img/reference/controls/tooltip/tooltip-text-hover.gif';
 import ToolTipContentScreenshot from '/img/reference/controls/tooltip/tooltip-content-hover.gif';
 
-# ToolTip
-
 The `ToolTip` is a popup that shows its content when the user hovers over the 'host' control to which it is attached.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -99,12 +97,7 @@ To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. H
 
 <img src={ToolTipContentScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ToolTip).
-:::
-
-:::info
-View the source code on _GitHub_ [`ToolTip.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ToolTip.cs)
-:::
+- [ToolTip API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ToolTip)
+- [`ToolTip.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ToolTip.cs)

@@ -5,19 +5,11 @@ title: ContentControl
 
 import ControlContentStudentScreenshot from '/img/controls/contentcontrol/contentcontrol-student.png';
 
-## Common Properties
+## Common properties
 
 | Property  | Description                           |
 | --------- | ------------------------------------- |
 | `Content` | The content to display in the control |
-
-## Reference
-
-[ContentControl](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContentControl)
-
-## Source code
-
-[ContentControl.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ContentControl.cs)
 
 ## Display content
 
@@ -99,3 +91,8 @@ We can display the student's first and last name in a `ContentControl` using the
 <img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
 
 For more information see the [data templates](/docs/data-templates/introduction-to-data-templates) page.
+
+## See also
+
+- [ContentControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContentControl)
+- [`ContentControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ContentControl.cs)
