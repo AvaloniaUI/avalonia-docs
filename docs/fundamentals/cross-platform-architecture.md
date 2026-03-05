@@ -3,8 +3,6 @@ id: cross-platform-architecture
 title: Cross-platform architecture
 ---
 
-## Summary
-
 Unlike the Xamarin.Forms and MAUI approach, which tends to yield applications with a lowest-common-denominator feature-set and a generic-looking user interface, Avalonia encourages leveraging its drawn UI capabilities. It allows developers to write their data storage and business logic code once, while offering a responsive and high-performing UI across all platforms. This document discusses a general architectural approach to achieve this goal.
 
 Here is a summary of the key points for creating Avalonia cross-platform apps:
@@ -37,11 +35,11 @@ This document and the relevant case studies reference the following application 
 5. **Application Layer**: This layer contains code that is generally platform-specific or code that is specific to the application (not typically reusable). In the Avalonia framework, this layer is where you decide which platform-specific features to leverage if any. The distinction between this layer and the UI layer becomes clearer with Avalonia since the UI code can be shared across platforms.
 6. **User Interface (UI) Layer**: This user-facing layer contains views and the view models that manage them. Avalonia makes it possible for this layer shared across every supported platform, unlike traditional architectures where the UI layer would be platform-specific.
 
-An application might not contain all layers – for instance, the Service Access Layer would not be present in an application that doesn't access network resources. A simpler application might merge the Data Layer and Data Access Layer because the operations are extremely basic. With Avalonia, you have the flexibility to shape your application architecture to suit your specific needs, enjoying a high degree of code reusability across platforms.
+An application might not contain all layers. For instance, the Service Access Layer would not be present in an application that doesn't access network resources. A simpler application might merge the Data Layer and Data Access Layer because the operations are extremely basic. With Avalonia, you have the flexibility to shape your application architecture to suit your specific needs, enjoying a high degree of code reusability across platforms.
 
 ### Common architectural patterns
 
-Patterns are a well-established approach to capture recurring solutions to common problems. There are several key patterns that are valuable to comprehend when building maintainable and understandable applications with Avalonia.
+Patterns are a well-established approach to capture recurring solutions to common problems. There are key patterns that are valuable to comprehend when building maintainable and understandable applications with Avalonia.
 
 #### Model, View, ViewModel (MVVM) 
 A popular and often misunderstood pattern, MVVM is primarily employed when constructing User Interfaces and promotes a separation between the actual definition of a UI Screen (View), the logic behind it (ViewModel), and the data that populates it (Model). The ViewModel acts as an intermediary between the View and the Model. The Model, although crucial, is a distinct and optional piece, and thus, the essence of understanding this pattern resides in the relationship between the View and ViewModel.
@@ -51,7 +49,7 @@ A popular and often misunderstood pattern, MVVM is primarily employed when const
 :::
 
 #### Business Façade
-Also known as the Manager Pattern, this provides a simplified point of entry for intricate operations. For instance, in a Task Tracking application, you might have a `TaskManager` class with methods such as `GetAllTasks()`, `GetTask(taskID)`, and `SaveTask(task)`. The TaskManager class provides a Façade to the inner mechanisms of saving/retrieving tasks objects.
+Also known as the Manager Pattern, this provides a simplified point of entry for intricate operations. For instance, in a Task Tracking application, you might have a `TaskManager` class with methods such as `GetAllTasks()`, `GetTask(taskID)`, and `SaveTask(task)`. The `TaskManager` class provides a Façade to the inner mechanisms of saving/retrieving tasks objects.
 
 #### Singleton 
 The Singleton pattern ensures that only a single instance of a particular object can ever exist. For example, when using SQLite in applications, you typically want only one instance of the database. The Singleton pattern is an efficient method to enforce this.
