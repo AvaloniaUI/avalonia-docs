@@ -49,6 +49,66 @@ public partial class MainView : UserControl
 
 </XamlPreview>
 
+## Binding to a Command
+
+The preferred approach in MVVM is to bind the `Command` property to an `ICommand` in your view model:
+
+```xml
+<Button Content="Save" Command="{Binding SaveCommand}" />
+```
+
+```csharp
+[RelayCommand]
+private void Save()
+{
+    _repository.Save(CurrentItem);
+}
+```
+
+### Command with a parameter
+
+```xml
+<Button Content="Delete"
+        Command="{Binding DeleteCommand}"
+        CommandParameter="{Binding SelectedItem}" />
+```
+
+### Disabling the button with CanExecute
+
+The button is automatically disabled when the command's `CanExecute` returns `false`:
+
+```csharp
+[ObservableProperty]
+[NotifyCanExecuteChangedFor(nameof(SaveCommand))]
+private string _name = "";
+
+[RelayCommand(CanExecute = nameof(CanSave))]
+private void Save() { /* ... */ }
+
+private bool CanSave() => !string.IsNullOrWhiteSpace(Name);
+```
+
+## Button with Icon
+
+```xml
+<Button>
+    <StackPanel Orientation="Horizontal" Spacing="6">
+        <PathIcon Data="{StaticResource save_regular}" Width="16" />
+        <TextBlock Text="Save" VerticalAlignment="Center" />
+    </StackPanel>
+</Button>
+```
+
+## ClickMode
+
+The `ClickMode` property controls when the `Click` event fires:
+
+| Value | Description |
+|---|---|
+| `Release` | Click fires on pointer release (default). |
+| `Press` | Click fires on pointer press. |
+| `Hover` | Click fires when the pointer enters the button. |
+
 ## Click vs. PointerPressed
 
 Always use the `Click` event to determine whether a user has pressed a button, not `PointerPressed`. `Click` is the high-level event specific to `Button`, while `PointerPressed` is a low-level input event that `Button` handles internally (setting `IsHandled` to `true`). Because the event is marked as handled, your application will not receive `PointerPressed` from a `Button` the way it might from other controls.

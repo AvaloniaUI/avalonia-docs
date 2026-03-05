@@ -52,6 +52,58 @@ This is an example of a three-state checkbox:
 ```
 </XamlPreview>
 
+## Binding to a View Model
+
+```csharp
+public partial class SettingsViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private bool _autoSave = true;
+
+    [ObservableProperty]
+    private bool _showLineNumbers;
+}
+```
+
+```xml
+<StackPanel Spacing="8">
+    <CheckBox IsChecked="{Binding AutoSave}" Content="Auto-save on exit" />
+    <CheckBox IsChecked="{Binding ShowLineNumbers}" Content="Show line numbers" />
+</StackPanel>
+```
+
+## CheckBox List from a Collection
+
+Create a list of checkable items by combining a `ListBox` with `CheckBox` items:
+
+```xml
+<ItemsControl ItemsSource="{Binding Features}">
+    <ItemsControl.ItemTemplate>
+        <DataTemplate>
+            <CheckBox IsChecked="{Binding IsEnabled}" Content="{Binding Name}" />
+        </DataTemplate>
+    </ItemsControl.ItemTemplate>
+</ItemsControl>
+```
+
+## Select All Pattern
+
+Use a three-state checkbox to represent the state of a group:
+
+```csharp
+[ObservableProperty]
+private bool? _selectAll = false;
+
+partial void OnSelectAllChanged(bool? value)
+{
+    if (value.HasValue)
+    {
+        foreach (var item in Items)
+            item.IsSelected = value.Value;
+    }
+}
+```
+
 ## See also
 
 - [CheckBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CheckBox)

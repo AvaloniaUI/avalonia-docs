@@ -122,6 +122,61 @@ The items display horizontally, and those too far to the right would be hidden i
 
 <img src={ItemsRepeaterHorizontalScreenshot} alt="" />
 
+## UniformGridLayout
+
+For a responsive grid of equally-sized items (like a card layout), use `UniformGridLayout`:
+
+```xml
+<ScrollViewer>
+    <ItemsRepeater ItemsSource="{Binding Products}">
+        <ItemsRepeater.Layout>
+            <UniformGridLayout MinItemWidth="250" MinItemHeight="180"
+                               MinColumnSpacing="12" MinRowSpacing="12" />
+        </ItemsRepeater.Layout>
+        <ItemsRepeater.ItemTemplate>
+            <DataTemplate>
+                <Border Background="White" CornerRadius="8" Padding="16"
+                        BorderBrush="#E5E7EB" BorderThickness="1">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap"
+                                   Foreground="Gray" />
+                    </StackPanel>
+                </Border>
+            </DataTemplate>
+        </ItemsRepeater.ItemTemplate>
+    </ItemsRepeater>
+</ScrollViewer>
+```
+
+The `UniformGridLayout` automatically adjusts the number of columns based on available width. Key properties:
+
+| Property | Description |
+|---|---|
+| `MinItemWidth` | Minimum width for each item. |
+| `MinItemHeight` | Minimum height for each item. |
+| `MinColumnSpacing` | Minimum horizontal spacing between items. |
+| `MinRowSpacing` | Minimum vertical spacing between items. |
+| `MaximumRowsOrColumns` | Maximum number of rows or columns. |
+
+## Handling Click Events
+
+Since `ItemsRepeater` does not have built-in selection, handle clicks using Tapped or pointer events on each item:
+
+```xml
+<ItemsRepeater.ItemTemplate>
+    <DataTemplate>
+        <Button Command="{Binding $parent[ItemsRepeater].((vm:MainViewModel)DataContext).SelectCommand}"
+                CommandParameter="{Binding}"
+                Background="Transparent" Padding="0">
+            <Border Padding="12">
+                <TextBlock Text="{Binding Name}" />
+            </Border>
+        </Button>
+    </DataTemplate>
+</ItemsRepeater.ItemTemplate>
+```
+
 ## See also
 
 - [`ItemsRepeater.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia.Controls.ItemsRepeater/blob/main/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)

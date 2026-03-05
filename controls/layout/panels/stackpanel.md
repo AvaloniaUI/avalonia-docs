@@ -89,6 +89,26 @@ myStackPanel.Children.Add(myButton3);
 
 </Tabs>
 
+## Centering Items
+
+Align all children to the center of the stack:
+
+```xml
+<StackPanel HorizontalAlignment="Center" Spacing="8">
+    <Button Content="Short" />
+    <Button Content="A longer button" />
+</StackPanel>
+```
+
+## Horizontal Stack with Spacing
+
+```xml
+<StackPanel Orientation="Horizontal" Spacing="12">
+    <Button Content="Save" />
+    <Button Content="Cancel" />
+</StackPanel>
+```
+
 ## See also
 
 - [StackPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_StackPanel)

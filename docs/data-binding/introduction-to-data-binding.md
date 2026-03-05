@@ -43,4 +43,35 @@ For more information about how to use the MVVM Pattern with Avalonia, see the co
 For background information on the origins and development of the MVVM pattern at _Microsoft_, see the _Microsoft Patterns and Practices_ article [here](https://msdn.microsoft.com/en-us/library/hh848246.aspx).
 :::
 
+## Binding Modes
+
+Bindings can operate in different modes that control how data flows:
+
+| Mode | Description |
+|---|---|
+| `OneWay` | Source changes update the target. Target changes are not sent back. |
+| `TwoWay` | Changes in either source or target update the other. |
+| `OneTime` | The source value is read once when the binding is created. |
+| `OneWayToSource` | Target changes update the source, but not vice versa. |
+| `Default` | The mode is determined by the target property. Most display properties default to `OneWay`; editable properties like `TextBox.Text` default to `TwoWay`. |
+
+```xml
+<TextBox Text="{Binding Name, Mode=TwoWay}" />
+<TextBlock Text="{Binding Name, Mode=OneWay}" />
+```
+
+## FallbackValue and TargetNullValue
+
+| Property | Description |
+|---|---|
+| `FallbackValue` | Value displayed when the binding cannot resolve (e.g., property not found). |
+| `TargetNullValue` | Value displayed when the source property is `null`. |
+
+```xml
+<TextBlock Text="{Binding Description, TargetNullValue='No description available'}" />
+<Image Source="{Binding AvatarUrl, FallbackValue={StaticResource DefaultAvatar}}" />
+```
+
+## What's Next
+
 On the next page, you will learn where the data binder gets the data object from.

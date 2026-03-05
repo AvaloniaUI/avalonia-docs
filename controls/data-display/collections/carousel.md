@@ -94,6 +94,43 @@ namespace AvaloniaControls.Views
 
 <img src={CarouselScreenshot} alt="" />
 
+## Binding to a Collection
+
+Use `ItemsSource` to bind the Carousel to a data collection with a custom template:
+
+```xml
+<Carousel ItemsSource="{Binding Slides}" SelectedIndex="{Binding CurrentSlide}">
+    <Carousel.PageTransition>
+        <CrossFade Duration="0:0:0.3" />
+    </Carousel.PageTransition>
+    <Carousel.ItemTemplate>
+        <DataTemplate>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="{Binding Title}" FontSize="24" FontWeight="Bold" />
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" />
+            </StackPanel>
+        </DataTemplate>
+    </Carousel.ItemTemplate>
+</Carousel>
+```
+
+## Available Transitions
+
+| Transition | Description |
+|---|---|
+| `PageSlide` | Slides content in from a direction. |
+| `CrossFade` | Fades between slides. |
+| `CompositePageTransition` | Combines multiple transitions. |
+
+## Navigation Methods
+
+| Method | Description |
+|---|---|
+| `Next()` | Move to the next item. |
+| `Previous()` | Move to the previous item. |
+
+You can also navigate by setting `SelectedIndex` or `SelectedItem`.
+
 ## See also
 
 - [Carousel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Carousel)

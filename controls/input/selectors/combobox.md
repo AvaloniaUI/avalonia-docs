@@ -134,6 +134,39 @@ public partial class MainWindow : Window
 
 <img src={ComboBoxDataTemplateScreenshot} alt="" />
 
+## Binding to a View Model
+
+Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`:
+
+```csharp
+public partial class MainViewModel : ObservableObject
+{
+    public ObservableCollection<string> Categories { get; } = new()
+    {
+        "Electronics", "Clothing", "Books", "Food"
+    };
+
+    [ObservableProperty]
+    private string? _selectedCategory;
+}
+```
+
+```xml
+<ComboBox ItemsSource="{Binding Categories}"
+          SelectedItem="{Binding SelectedCategory}"
+          PlaceholderText="Select a category" />
+```
+
+## PlaceholderText
+
+Show placeholder text when no item is selected:
+
+```xml
+<ComboBox PlaceholderText="Choose an option..."
+          ItemsSource="{Binding Options}"
+          SelectedItem="{Binding SelectedOption}" />
+```
+
 ## See also
 
 - [ComboBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ComboBox)

@@ -44,6 +44,49 @@ This example shows two groups of radio buttons working independently:
 
 </XamlPreview>
 
+## Binding to an Enum
+
+A common pattern is binding radio buttons to an enum property in a view model. Use a converter or check the value in your view model:
+
+```csharp
+public enum ShippingMethod { Standard, Express, Overnight }
+
+public partial class OrderViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private ShippingMethod _selectedShipping = ShippingMethod.Standard;
+}
+```
+
+```xml
+<StackPanel Spacing="4">
+    <RadioButton Content="Standard (5-7 days)"
+                 IsChecked="{Binding SelectedShipping,
+                     Converter={StaticResource EnumToBoolConverter},
+                     ConverterParameter={x:Static vm:ShippingMethod.Standard}}" />
+    <RadioButton Content="Express (2-3 days)"
+                 IsChecked="{Binding SelectedShipping,
+                     Converter={StaticResource EnumToBoolConverter},
+                     ConverterParameter={x:Static vm:ShippingMethod.Express}}" />
+    <RadioButton Content="Overnight"
+                 IsChecked="{Binding SelectedShipping,
+                     Converter={StaticResource EnumToBoolConverter},
+                     ConverterParameter={x:Static vm:ShippingMethod.Overnight}}" />
+</StackPanel>
+```
+
+## Horizontal Layout
+
+Radio buttons inside a horizontal `StackPanel`:
+
+```xml
+<StackPanel Orientation="Horizontal" Spacing="16">
+    <RadioButton GroupName="Size" Content="Small" />
+    <RadioButton GroupName="Size" Content="Medium" IsChecked="True" />
+    <RadioButton GroupName="Size" Content="Large" />
+</StackPanel>
+```
+
 ## See also
 
 - [RadioButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RadioButton)

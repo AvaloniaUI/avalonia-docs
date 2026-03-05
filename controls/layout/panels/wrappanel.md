@@ -7,11 +7,15 @@ The `WrapPanel` uses a default arrangement of (multiple) child elements is in se
 
 When the orientation property is set to vertical, the arrangement is top to bottom with a new column started when there is no more height remaining.
 
-## Useful properties
+## Useful Properties
 
-You will probably use these properties most often:
-
-<table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td>Orientation</td><td>Change the direction of the arrangement flow.</td></tr></tbody></table>
+| Property | Description |
+|---|---|
+| `Orientation` | Direction of the arrangement flow: `Horizontal` (default) or `Vertical`. |
+| `ItemSpacing` | Horizontal gap between items. |
+| `LineSpacing` | Vertical gap between rows (or horizontal gap between columns in vertical mode). |
+| `ItemWidth` | Fixed width for all items. If not set, items use their natural width. |
+| `ItemHeight` | Fixed height for all items. If not set, items use their natural height. |
 
 ## Examples
 

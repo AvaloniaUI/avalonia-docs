@@ -67,6 +67,59 @@ You can use the MVVM pattern with the split view control and one of the compact 
 
 <img src={SplitViewCompactScreenshot} alt="" />
 
+## Navigation Sidebar Pattern
+
+A common use of `SplitView` is a collapsible navigation sidebar with icon buttons:
+
+```xml
+<SplitView IsPaneOpen="{Binding IsPaneOpen}"
+           DisplayMode="CompactInline"
+           CompactPaneLength="48"
+           OpenPaneLength="200">
+    <SplitView.Pane>
+        <StackPanel>
+            <Button Content="☰" Command="{Binding TogglePaneCommand}"
+                    Width="48" HorizontalAlignment="Left" />
+            <ListBox ItemsSource="{Binding NavItems}"
+                     SelectedItem="{Binding SelectedNavItem}"
+                     Background="Transparent">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="12" Height="40">
+                            <PathIcon Data="{Binding Icon}" Width="16" />
+                            <TextBlock Text="{Binding Title}" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </SplitView.Pane>
+    <SplitView.Content>
+        <ContentControl Content="{Binding CurrentPage}" />
+    </SplitView.Content>
+</SplitView>
+```
+
+```csharp
+[ObservableProperty]
+private bool _isPaneOpen = true;
+
+[RelayCommand]
+private void TogglePane() => IsPaneOpen = !IsPaneOpen;
+```
+
+## Pane Placement
+
+Position the pane on the left or right side:
+
+```xml
+<!-- Pane on the right -->
+<SplitView PanePlacement="Right"
+           IsPaneOpen="True"
+           DisplayMode="Inline"
+           OpenPaneLength="250">
+```
+
 ## See also
 
 - [SplitView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitView)
