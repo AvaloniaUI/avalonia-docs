@@ -29,38 +29,35 @@ export default function Pill({
     borderRadius: '999px',
     fontWeight: '500',
     whiteSpace: 'nowrap',
-    border: '1px solid',
+    border: 'none',
     textDecoration: 'none',
     transition: 'opacity 0.2s ease',
+    letterSpacing: '0.01em',
   };
 
   const variants: Record<PillVariant, React.CSSProperties> = {
     default: {
       backgroundColor: 'var(--ifm-color-emphasis-200)',
-      borderColor: 'var(--ifm-color-emphasis-300)',
       color: 'var(--ifm-color-content)',
     },
     primary: {
-      backgroundColor: 'var(--ifm-color-primary-lighter)',
-      borderColor: 'var(--ifm-color-primary-light)',
-      color: 'var(--ifm-color-primary-darkest)',
+      backgroundColor: '#85b6ff',
+      color: '#1b3a5c',
     },
     success: {
       backgroundColor: '#d1f4e0',
-      borderColor: '#9ee4bd',
       color: '#0d5028',
     },
     warning: {
       backgroundColor: '#fff4db',
-      borderColor: '#ffe299',
       color: '#7d4e00',
     },
   };
 
   const sizes: Record<PillSize, React.CSSProperties> = {
-    small: { padding: '0.125rem 0.5rem', fontSize: '0.75rem' },
-    medium: { padding: '0.25rem 0.75rem', fontSize: '0.875rem' },
-    large: { padding: '0.375rem 1rem', fontSize: '1rem' },
+    small: { padding: '0.2rem 0.625rem', fontSize: '0.75rem' },
+    medium: { padding: '0.3rem 0.875rem', fontSize: '0.875rem' },
+    large: { padding: '0.4rem 1.125rem', fontSize: '1rem' },
   };
 
   const styles: React.CSSProperties = {

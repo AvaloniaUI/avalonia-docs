@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './MinVersion.module.css';
 
 interface MinVersionProps {
   version: string;
@@ -8,33 +9,22 @@ const newVersion = '11.2';
 const previewVersion = '11.3';
 
 export default function MinVersion({ version }: MinVersionProps) {
-    let backgroundColor: string;
+    let variantClass: string;
     let description: string;
 
     if (version === newVersion) {
-        backgroundColor = '#ff8d8d';
+        variantClass = styles.new;
         description = ' New!';
     } else if (version === previewVersion) {
-        backgroundColor = '#d03737';
+        variantClass = styles.preview;
         description = ' Preview!';
     } else {
-        backgroundColor = '#ebedf0';
+        variantClass = styles.default;
         description = '';
     }
 
     return (
-        <span
-            style={{
-                border: '1px solid #fff',
-                display: 'inline-flex',
-                padding: '4px 12px',
-                backgroundColor,
-                borderRadius: '16px',
-                fontSize: '14px',
-                color: '#111',
-                margin: '0 1em 0 1em',
-                verticalAlign: 'middle'
-            }}>
+        <span className={`${styles.badge} ${variantClass}`}>
             v{version}{description}
         </span>
     );

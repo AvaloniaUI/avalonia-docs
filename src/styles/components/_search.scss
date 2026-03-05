@@ -1,26 +1,24 @@
 :root:root {
-  --docsearch-searchbox-background: var(--token-primary-bg-c);
   --docsearch-searchbox-height: 2.25rem;
-  --docsearch-searchbox-focus-background: var(--token-primary-bg-c);
-
-  --docsearch-key-gradient: var(--token-primary-bg-c);
   --docsearch-key-shadow: none;
 }
 
-html[data-theme='light'] {
-  --docsearch-searchbox-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+html[data-theme='light']:root {
+  --docsearch-searchbox-background: var(--token-secondary-bg-c);
+  --docsearch-searchbox-focus-background: var(--token-secondary-bg-c);
+  --docsearch-searchbox-shadow: none;
 
-  --search-keys-border-c: rgba(0, 0, 0, 0.12);
+  --docsearch-key-gradient: #FFFFFF;
 
-  .DocSearch-Button {
-    &:hover {
-      --docsearch-searchbox-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-    }
-  }
+  --search-keys-border-c: rgba(0, 0, 0, 0.15);
 }
 
-html[data-theme='dark'] {
+html[data-theme='dark']:root {
+  --docsearch-searchbox-background: var(--token-primary-bg-c);
+  --docsearch-searchbox-focus-background: var(--token-primary-bg-c);
   --docsearch-searchbox-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+
+  --docsearch-key-gradient: var(--token-primary-bg-c);
 
   --search-keys-border-c: rgba(255, 255, 255, 0.12);
 
@@ -50,15 +48,25 @@ html[data-theme='dark'] {
     border-radius: 8px;
     box-shadow: var(--docsearch-searchbox-shadow);
 
+    html[data-theme='light'] & {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: none;
+
+      &:hover {
+        border-color: rgba(0, 0, 0, 0.25);
+      }
+    }
+
     .DocSearch-Button-Keys {
       min-width: 0;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      padding: 0.125rem;
+      padding: 0.125rem 0.25rem;
       border: 1px solid var(--search-keys-border-c);
       border-radius: 6px;
+      background: var(--docsearch-key-gradient);
 
       .DocSearch-Button-Key {
         position: static;
@@ -67,10 +75,10 @@ html[data-theme='dark'] {
 
         width: auto;
 
-        color: var(--c-indigo-50);
+        color: var(--c-indigo-60, #6B7280);
         border-radius: 0;
 
-        font-weight: 400;
+        font-weight: 500;
 
         // Targets the `CMD/CTRL` symbol
         &:first-child {
@@ -82,7 +90,7 @@ html[data-theme='dark'] {
 
     .DocSearch-Search-Icon {
       max-width: 0.875rem;
-      color: var(--c-indigo-50);
+      color: var(--c-indigo-50, #9CA3AF);
     }
 
     .DocSearch-Button-Placeholder {
@@ -90,7 +98,7 @@ html[data-theme='dark'] {
       font-size: 0.875rem;
       line-height: 17px;
 
-      color: var(--c-indigo-60);
+      color: var(--c-indigo-60, #6B7280);
 
       margin-block-start: -0.125rem;
     }
