@@ -93,9 +93,10 @@ docs-card[disabled]::after {
 
   .Card-icon,
   .Card-iconset__container {
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
 
+    margin-left: -0.5rem;
     margin-bottom: 1.2em;
 
     border-radius: 50%;

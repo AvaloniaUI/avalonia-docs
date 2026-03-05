@@ -247,9 +247,11 @@ const config: Config = {
     image: 'img/social-card.png',
     colorMode: {
       defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     zoom: {
-      selector: '.markdown :not(em) > img',
+      selector: '.markdown :not(em) > img:not(.Card-icon)',
       background: {
         light: 'rgb(196, 196, 196)',
         dark: 'rgb(22, 28, 45)'
