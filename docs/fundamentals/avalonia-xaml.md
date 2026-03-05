@@ -5,10 +5,12 @@ title: Avalonia XAML
 
 # Avalonia XAML
 
-_Avalonia UI_ uses XAML to define a user interface. XAML is an XML-based mark-up language that is used by many UI frameworks.
+Avalonia uses XAML to define user interfaces. XAML is an XML-based markup language that is used by many UI frameworks.
+
+While Avalonia is primarily designed for use with XAML, it is not a requirement. You can develop Avalonia applications entirely with C#, F#, or any .NET language. All learning materials in this documentation assume XAML is used, as this is by far the most popular way to build Avalonia applications.
 
 :::info
-These pages will introduce you to how XAML is used specifically in _Avalonia UI_. For background information about how XAML is used elsewhere in Microsoft technologies, you can use these references:
+These pages introduce how XAML is used specifically in Avalonia. For background information about how XAML is used elsewhere in Microsoft technologies, you can use these references:
 
 * Microsoft XAML documentation for WPF, see [here](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/). 
 * Microsoft XAML documentation for UWP, see [here](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview).

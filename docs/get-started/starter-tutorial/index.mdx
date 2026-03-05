@@ -4,7 +4,8 @@ title: Starter tutorial
 description: Learn the basics of Avalonia by building a temperature converter app. Part 1 of 7 the Avalonia starter tutorial.
 ---
 
-import DocCardList from '@theme/DocCardList';
+import DocsCard from '@site/src/components/global/DocsCard';
+import DocsCards from '@site/src/components/global/DocsCards';
 import TemperatureConverterComplete from '/img/get-started/temperature-converter-complete.png';
 import MainWindowFileLocation from '/img/get-started/mainwindow-file-location.png';
 
@@ -16,7 +17,26 @@ Now that you’re set up with an Avalonia project in your integrated development
 
 Follow through this tutorial to create the app. As you do so, you will learn about:
 
-<DocCardList />
+<DocsCards>
+  <DocsCard header="Adding a control" href="/docs/get-started/starter-tutorial/adding-a-control">
+    <p>Add a button to the app and position it in the window.</p>
+  </DocsCard>
+  <DocsCard header="Adding some layout" href="/docs/get-started/starter-tutorial/adding-some-layout">
+    <p>Use layout controls to arrange multiple controls on screen.</p>
+  </DocsCard>
+  <DocsCard header="Customizing the Avalonia window" href="/docs/get-started/starter-tutorial/customizing-the-avalonia-window">
+    <p>Adjust the window size, title, and other attributes.</p>
+  </DocsCard>
+  <DocsCard header="Establishing events and responses" href="/docs/get-started/starter-tutorial/establishing-events-and-responses">
+    <p>Create an event handler to respond to button clicks.</p>
+  </DocsCard>
+  <DocsCard header="Converting data" href="/docs/get-started/starter-tutorial/converting-data">
+    <p>Use code-behind to convert a temperature value when the button is clicked.</p>
+  </DocsCard>
+  <DocsCard header="Exercises" href="/docs/get-started/starter-tutorial/exercises">
+    <p>Test your understanding of Avalonia with three coding exercises.</p>
+  </DocsCard>
+</DocsCards>
 
 <Image light={TemperatureConverterComplete} alt="A screenshot of a completed app that converts temperatures from Celsius to Fahrenheit." position="center" maxWidth={400} cornerRadius="true" margin={10}/>
 

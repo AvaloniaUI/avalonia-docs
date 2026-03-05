@@ -11,12 +11,14 @@ As of Avalonia 11, the default interpolation mode is set to `LowQuality`. This s
 
 ## Interpolation Modes
 
-Avalonia supports several bitmap interpolation modes that can be applied to image rendering:
+Avalonia supports the following bitmap interpolation modes:
 
-- `None`: No interpolation
-- `LowQuality`: Basic interpolation (default)
-- `MediumQuality`: Balanced interpolation
-- `HighQuality`: Smooth interpolation, best for downsizing images
+| Mode | Description |
+| :--- | :--- |
+| `None` | No interpolation. Pixels are rendered without smoothing |
+| `LowQuality` | Basic interpolation (default). Prioritizes performance |
+| `MediumQuality` | Balanced interpolation between speed and quality |
+| `HighQuality` | Smooth interpolation. Best for downsizing images |
 
 ## Setting the Interpolation Mode
 

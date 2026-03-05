@@ -1,14 +1,12 @@
 ---
 id: gradients
-title: Creating gradient effects
+title: Gradients
 ---
 
-import Gradients from '/img/guides/ui-development/graphics/gradients.png';
+`LinearGradientBrush` creates a gradient that transitions between two or more colors along a line. You can use it anywhere a brush is accepted: backgrounds, foregrounds, borders, and fills.
 
-This guide explains how to effectively use LinearGradientBrush in Avalonia to create beautiful gradient effects.
-
-## Basic Syntax
-A LinearGradientBrush is defined using the following basic structure:
+## Basic syntax
+A `LinearGradientBrush` is defined using the following basic structure:
 
 ```xml
 <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
@@ -17,9 +15,9 @@ A LinearGradientBrush is defined using the following basic structure:
 </LinearGradientBrush>
 ```
 
-## Key Properties
+## Key properties
 
-### StartPoint and EndPoint
+### `StartPoint` and `EndPoint`
 
 * Defines the direction of the gradient
 * Uses percentage values (e.g., "0%,0%") or decimal values (0,0)
@@ -28,16 +26,16 @@ A LinearGradientBrush is defined using the following basic structure:
   * Vertical: StartPoint="50%,0%" EndPoint="50%,100%"
   * Diagonal: StartPoint="0%,0%" EndPoint="100%,100%"
 
-### GradientStop Elements
+### `GradientStop` elements
 
 * Define colors and their positions in the gradient
 * Properties:
   * `Color`: The color value (Hex code or named color)
   * `Offset`: Position in the gradient (0.0 to 1.0)
 
-## Common Gradient Patterns
+## Common gradient patterns
 
-### 1. Simple Horizontal Gradient
+### Horizontal gradient
 
 ```xml
 <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
@@ -46,7 +44,7 @@ A LinearGradientBrush is defined using the following basic structure:
 </LinearGradientBrush>
 ```
 
-### 2. Multi-Color Gradient
+### Multi-color gradient
 
 ```xml
 <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
@@ -57,7 +55,7 @@ A LinearGradientBrush is defined using the following basic structure:
 </LinearGradientBrush>
 ```
 
-### 3. Vertical Gradient
+### Vertical gradient
 
 ```xml
 <LinearGradientBrush StartPoint="50%,0%" EndPoint="50%,100%">
@@ -66,9 +64,9 @@ A LinearGradientBrush is defined using the following basic structure:
 </LinearGradientBrush>
 ```
 
-## Common Use Cases
+## Common use cases
 
-### Button Backgrounds
+### Button backgrounds
 
 ```xml
 <Button>
@@ -81,7 +79,7 @@ A LinearGradientBrush is defined using the following basic structure:
 </Button>
 ```
 
-### Panel Backgrounds
+### Panel backgrounds
 
 ```xml
 <Border CornerRadius="8">
@@ -95,84 +93,75 @@ A LinearGradientBrush is defined using the following basic structure:
 </Border>
 ```
 
-## Example 
+## Full example
 
-Below is the code to replicate the following example. 
-
-<Image light={Gradients} alt="A series of four brightly colored boxes, demonstrating different implementations of gradient effects." position="center" maxWidth={400} cornerRadius="true"/>
+<XamlPreview>
 
 ```xml
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="SampleApp.MainWindow"
-        Title="Gradient Example">
-        
-    <StackPanel Spacing="20" Margin="20">
-        <!-- Horizontal gradient with multiple color stops -->
-        <Border Height="100" CornerRadius="8">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
-                    <GradientStop Color="#FF6B6B" Offset="0.0"/>
-                    <GradientStop Color="#FF8E53" Offset="0.3"/>
-                    <GradientStop Color="#FF5E3A" Offset="0.6"/>
-                    <GradientStop Color="#4ECDC4" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Border.Background>
-            <TextBlock Text="Horizontal Gradient"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Foreground="White"/>
-        </Border>
+<StackPanel Spacing="20" Margin="20" xmlns="https://github.com/avaloniaui">
+    <!-- Horizontal gradient -->
+    <Border Height="100" CornerRadius="8">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
+                <GradientStop Color="#FF6B6B" Offset="0.0"/>
+                <GradientStop Color="#FF8E53" Offset="0.3"/>
+                <GradientStop Color="#FF5E3A" Offset="0.6"/>
+                <GradientStop Color="#4ECDC4" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <TextBlock Text="Horizontal"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"/>
+    </Border>
 
-        <!-- Vertical gradient with smooth transitions -->
-        <Border Height="100" CornerRadius="8">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="50%,0%" EndPoint="50%,100%">
-                    <GradientStop Color="#A8E6CF" Offset="0.0"/>
-                    <GradientStop Color="#3D84A8" Offset="0.5"/>
-                    <GradientStop Color="#46CDCF" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Border.Background>
-            <TextBlock Text="Vertical Gradient"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Foreground="White"/>
-        </Border>
+    <!-- Vertical gradient -->
+    <Border Height="100" CornerRadius="8">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="50%,0%" EndPoint="50%,100%">
+                <GradientStop Color="#A8E6CF" Offset="0.0"/>
+                <GradientStop Color="#3D84A8" Offset="0.5"/>
+                <GradientStop Color="#46CDCF" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <TextBlock Text="Vertical"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"/>
+    </Border>
 
-        <!-- Diagonal gradient with multiple stops -->
-        <Border Height="100" CornerRadius="8">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
-                    <GradientStop Color="#FF9A9E" Offset="0.0"/>
-                    <GradientStop Color="#FAD0C4" Offset="0.25"/>
-                    <GradientStop Color="#FFB6C1" Offset="0.5"/>
-                    <GradientStop Color="#FFD1FF" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Border.Background>
-            <TextBlock Text="Diagonal Gradient"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Foreground="Black"/>
-        </Border>
+    <!-- Diagonal gradient -->
+    <Border Height="100" CornerRadius="8">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+                <GradientStop Color="#FF9A9E" Offset="0.0"/>
+                <GradientStop Color="#FAD0C4" Offset="0.25"/>
+                <GradientStop Color="#FFB6C1" Offset="0.5"/>
+                <GradientStop Color="#FFD1FF" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <TextBlock Text="Diagonal"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="Black"/>
+    </Border>
 
-        <!-- Custom angle gradient with cycling effect -->
-        <Border Height="100" CornerRadius="8">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,50%">
-                    <GradientStop Color="#08AEEA" Offset="0.0"/>
-                    <GradientStop Color="#2AF598" Offset="0.3"/>
-                    <GradientStop Color="#08AEEA" Offset="0.6"/>
-                    <GradientStop Color="#2AF598" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Border.Background>
-            <TextBlock Text="Custom Angle Gradient"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Foreground="White"/>
-        </Border>
-    </StackPanel>
-</Window>
+    <!-- Custom angle gradient -->
+    <Border Height="100" CornerRadius="8">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,50%">
+                <GradientStop Color="#08AEEA" Offset="0.0"/>
+                <GradientStop Color="#2AF598" Offset="0.3"/>
+                <GradientStop Color="#08AEEA" Offset="0.6"/>
+                <GradientStop Color="#2AF598" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <TextBlock Text="Custom angle"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"/>
+    </Border>
+</StackPanel>
 ```
+
+</XamlPreview>
