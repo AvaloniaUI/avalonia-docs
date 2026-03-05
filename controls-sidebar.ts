@@ -113,6 +113,7 @@ const sidebars: SidebarsConfig = {
               'input/selectors/combobox',
               'input/selectors/numericupdown',
               'input/selectors/slider',
+              'input/selectors/toggleswitch',
           ],
         },
         {

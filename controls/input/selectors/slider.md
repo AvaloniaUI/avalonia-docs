@@ -39,64 +39,56 @@ Here the maximum and minimum values are default (0 and 100 respectively).
 
 </XamlPreview>
 
-## Binding to TextBox
-In this example, the slider value is bound to the text box above using binding to the control.
+## Tick Marks and Snapping
+
+Use `TickFrequency` and `IsSnapToTickEnabled` to restrict the slider to discrete steps:
+
+```xml
+<Slider Minimum="0" Maximum="100"
+        TickFrequency="10"
+        IsSnapToTickEnabled="True"
+        TickPlacement="BottomRight" />
+```
+
+## Vertical Slider
+
+Set the `Orientation` property for a vertical slider:
+
+```xml
+<Slider Orientation="Vertical" Height="200"
+        Minimum="0" Maximum="100" Value="30" />
+```
+
+## Binding to a View Model
+
+```xml
+<Slider Maximum="{Binding MaxDamage}" Value="{Binding Damage}" />
+```
+
+```csharp
+[ObservableProperty]
+private double _damage;
+
+[ObservableProperty]
+private double _maxDamage = 9999;
+```
 
 <img src={SliderMaxValueScreenshot} alt="" />
 
-### Views
+## All Properties
 
-```xml
-<StackPanel xmlns="https://github.com/avaloniaui">
-  <TextBlock Text="Damage: " />
-  <TextBox Text="{Binding Damage}" />
-  <TextBlock Text="MaxDamage: " />
-  <TextBox Text="{Binding MaxDamage}" />
-  <Slider Maximum="{Binding MaxDamage}" Value="{Binding Damage}" />
-  <Button Command="{Binding UnlimitedDamage}" Content="∞" />
-</StackPanel>
-```
-
-### ViewModels
-
-The ViewModel implements `INotifyPropertyChanged` to notify the view when property values change.
-
-```cs
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
-
-public class MainViewModel : INotifyPropertyChanged
-{
-    private int _damage;
-    public int Damage
-    {
-        get => _damage;
-        set { if (_damage != value) { _damage = value; OnPropertyChanged(); } }
-    }
-
-    private int _maxDamage;
-    public int MaxDamage
-    {
-        get => _maxDamage;
-        set { if (_maxDamage != value) { _maxDamage = value; OnPropertyChanged(); } }
-    }
-
-    public event PropertyChangedEventHandler? PropertyChanged;
-    protected void OnPropertyChanged([CallerMemberName] string? name = null)
-        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-```
-- In the above configuration (i.e. when a change notification is bound between the Views and the ViewModels) can the values ​​in the view be updated seemless.
-- You can also values ​​are updated in ViewModels.:
-```cs
-    public ICommand UnlimitedDamage { get; }
-    public MainViewModel()
-    {
-        MaxDamage = 9999;
-        UnlimitedDamage = ReactiveCommand.Create(
-            () => Damage = MaxDamage = 0xFFFF);
-    }
-```
+| Property | Type | Description |
+|---|---|---|
+| `Minimum` | `double` | Lower bound of the range. Default: 0. |
+| `Maximum` | `double` | Upper bound of the range. Default: 100. |
+| `Value` | `double` | Current slider value. |
+| `SmallChange` | `double` | Value change per arrow key press. Default: 1. |
+| `LargeChange` | `double` | Value change per track click or Page key. Default: 10. |
+| `TickFrequency` | `double` | Interval between tick marks. |
+| `IsSnapToTickEnabled` | `bool` | Snap to the nearest tick. Default: `false`. |
+| `TickPlacement` | `TickPlacement` | Where to show tick marks: `None`, `TopLeft`, `BottomRight`, `Outside`. |
+| `Orientation` | `Orientation` | `Horizontal` (default) or `Vertical`. |
+| `IsDirectionReversed` | `bool` | Reverse the increasing-value direction. |
 
 ## See also
 

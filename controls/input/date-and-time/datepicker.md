@@ -25,7 +25,19 @@ This example uses the date format attribute to display the name of the day as we
 
 <img src={DatePickerScreenshot} alt="" />
 
-## Initializing the date
+## Hiding Date Parts
+
+Show only the date components you need:
+
+```xml
+<!-- Month and year only -->
+<DatePicker DayVisible="False" />
+
+<!-- Year only -->
+<DatePicker DayVisible="False" MonthVisible="False" />
+```
+
+## Initializing the Date
 
 The date properties of this control cannot be set in XAML using an attribute. This is because there is no conversion available for converting strings to date objects like `DateTime` and `DateTimeOffset`.
 
@@ -33,6 +45,17 @@ You will need to write code-behind like this:
 
 ```csharp
 datePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
+```
+
+Or bind to a view model property:
+
+```csharp
+[ObservableProperty]
+private DateTimeOffset? _selectedDate;
+```
+
+```xml
+<DatePicker SelectedDate="{Binding SelectedDate}" />
 ```
 
 ## See also

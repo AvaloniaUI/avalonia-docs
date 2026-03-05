@@ -49,6 +49,55 @@ In this example, a different page transition has been specified to slide the ima
 
 <img src={TransitioningContentControlSlideScreenshot} alt="" />
 
+## Available Page Transitions
+
+You can use any of these built-in transitions:
+
+| Transition | Description |
+|---|---|
+| `CrossFade` | Fades out old content while fading in new content. |
+| `PageSlide` | Slides content in from a direction. Supports `Horizontal` and `Vertical` orientation. |
+| `CompositePageTransition` | Combines multiple transitions. |
+
+### CrossFade example
+
+```xml
+<TransitioningContentControl Content="{Binding CurrentView}">
+    <TransitioningContentControl.PageTransition>
+        <CrossFade Duration="0:0:0.3" />
+    </TransitioningContentControl.PageTransition>
+</TransitioningContentControl>
+```
+
+### Disabling the transition
+
+Set `PageTransition` to null to switch content instantly:
+
+```xml
+<TransitioningContentControl Content="{Binding CurrentView}"
+                             PageTransition="{x:Null}" />
+```
+
+## Common Use: View Switching
+
+The `TransitioningContentControl` is commonly used with `DataTemplates` to animate between different views:
+
+```xml
+<TransitioningContentControl Content="{Binding CurrentPage}">
+    <TransitioningContentControl.PageTransition>
+        <PageSlide Duration="0:0:0.3" Orientation="Horizontal" />
+    </TransitioningContentControl.PageTransition>
+    <TransitioningContentControl.DataTemplates>
+        <DataTemplate DataType="vm:HomeViewModel">
+            <views:HomeView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:SettingsViewModel">
+            <views:SettingsView />
+        </DataTemplate>
+    </TransitioningContentControl.DataTemplates>
+</TransitioningContentControl>
+```
+
 ## See also
 
 - [TransitioningContentControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TransitioningContentControl)

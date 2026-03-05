@@ -58,6 +58,42 @@ with the value of `ProgressTextFormat` as the format string. The following forma
 
 Since `{0}` would appear at the start of the string in this example, it must be escaped.
 
+## Indeterminate Mode
+
+When you cannot determine the progress percentage, use indeterminate mode to show an animated indicator:
+
+```xml
+<ProgressBar IsIndeterminate="True" Height="20" />
+```
+
+Indeterminate mode is useful for operations where the total work is unknown, such as connecting to a server or loading data of unknown size.
+
+## Vertical Orientation
+
+Display the progress bar vertically by setting the `Orientation` property:
+
+```xml
+<ProgressBar Orientation="Vertical" Height="200" Width="20"
+             Minimum="0" Maximum="100" Value="65"
+             ShowProgressText="True" />
+```
+
+## Binding to a View Model
+
+Bind `Value` to track progress from an async operation:
+
+```xml
+<ProgressBar Minimum="0" Maximum="100"
+             Value="{Binding DownloadProgress}"
+             ShowProgressText="True"
+             ProgressTextFormat="{}{1:0}%" />
+```
+
+```csharp
+[ObservableProperty]
+private double _downloadProgress;
+```
+
 ## See also
 
 - [ProgressBar API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ProgressBar)
