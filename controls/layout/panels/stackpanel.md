@@ -6,15 +6,13 @@ title: StackPanel
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# StackPanel
-
 The `StackPanel` arranges its child controls by stacking them horizontally or vertically. The stack panel is often used to arrange a small subsection of the UI on a page.
 
 Inside a stack panel, if the size property perpendicular to the stack on a child control is not set, the child control will stretch to fill the available space. For example in horizontal orientation, the height of child controls will stretch if not set.
 
 In the direction of the stack, the stack panel will always expand to fit all the child controls.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -91,12 +89,7 @@ myStackPanel.Children.Add(myButton3);
 
 </Tabs>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_StackPanel).
-:::
-
-:::info
-View the source code on _GitHub_ [`StackPanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/StackPanel.cs)
-:::
+- [StackPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_StackPanel)
+- [`StackPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/StackPanel.cs)

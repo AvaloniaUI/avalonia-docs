@@ -7,8 +7,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CanvasContentZoneScreenshot from '/img/controls/canvas/canvas-contentzone.png';
 
-# Canvas
-
 The canvas control displays its child controls at specified positions (given as coordinates).
 
 The position of each child control is defined as two distances between the edge of the canvas content zone, and the outer edge of the child margin zone. For example, this might be the top-left corner of the child to the top-left of canvas, as shown here:
@@ -20,10 +18,10 @@ If elements occupy the same coordinates, the order in which they appear in marku
 `Canvas` provides the most flexible layout support of any `Panel`. Height and Width properties are used to define the area of the canvas, and elements inside are assigned absolute coordinates relative to the area of the parent `Canvas`. Four attached properties, `Canvas.Left`, `Canvas.Top`, `Canvas.Right` and `Canvas.Bottom`, allow fine control of object placement within a `Canvas`, allowing the developer to position and arrange elements precisely on the screen.
 
 :::info
-To review the concept of layout zones, see [here](/docs/layout/).
+To review the concept of layout zones, see [Layout](/docs/layout/).
 :::
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -31,7 +29,7 @@ You will probably use these properties most often:
 
 Child controls in a canvas are drawn in the sequence that they are defined. This can cause them to overlap.
 
-:::warning
+:::caution
 The canvas does not size any of its child controls. You must set width and height properties on a child control, or it will not appear!
 :::
 
@@ -129,12 +127,7 @@ myParentCanvas.Children.Add(myCanvas3);
 
 </Tabs>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Canvas).
-:::
-
-:::info
-View the source code on _GitHub_ [`Canvas.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)
-:::
+- [Canvas API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Canvas)
+- [`Canvas.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)

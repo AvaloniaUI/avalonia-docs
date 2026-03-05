@@ -7,29 +7,27 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DockPanelTopScreenshot from '/img/controls/dockpanel/dockpanel-top.png';
 
-# DockPanel
-
 The `DockPanel` control arranges its child controls along specified 'docking edges' (top, bottom, left, and right) with the last child filling any remaining space. The dock panel can maintain the child control's dimension that is parallel to the docking edge, so that the child fills all the available space along the docking edge.
 
 For example, if the docking edge on a child control is defined as 'top' and it has a height defined, but no width, it will draw like this:
 
 <img src={DockPanelTopScreenshot} alt=""/>
 
-:::warning
+:::caution
 You must define the child control dimension perpendicular to the docking edge, or it will not show.
 :::
 
 You can optionally define the dimension that is parallel to the docking edge. In this case, the child will be drawn according to the alignment setting in the same direction. For example, a child with a defined width, docked to the top edge, will obey its horizontal alignment property (default center).
 
-Child controls are docked in the sequence that they are defined in the XAML. When _Avalonia UI_ is sizing a child control, the presence of any previously drawn controls is taken into account. That means there is never any overlap.
+Child controls are docked in the sequence that they are defined in the XAML. When _Avalonia_ is sizing a child control, the presence of any previously drawn controls is taken into account. That means there is never any overlap.
 
 The last child control defined will fill any remaining space.
 
-:::warning
+:::caution
 You must always define a last child control (with no dock property), or the docking calculation will not perform correctly. This means that a dock panel requires a minimum of two child controls.
 :::
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -166,12 +164,7 @@ myDockPanel.Children.Add(myBorder5);
 
 </Tabs>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DockPanel).
-:::
-
-:::info
-View the source code on _GitHub_ [`DockPanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DockPanel.cs)
-:::
+- [DockPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DockPanel)
+- [`DockPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DockPanel.cs)

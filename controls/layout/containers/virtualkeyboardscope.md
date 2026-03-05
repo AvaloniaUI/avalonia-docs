@@ -23,7 +23,7 @@ The `VirtualKeyboardScope` is a container control that manages [virtual keyboard
 | InputMethods | IEnumerable\<VirtualKeyboardInputMethod> | Gets or sets the collection of input methods (keyboard layouts and IMEs) available to users. |
 
 
-## Usage Examples
+## Usage examples
 
 ### Basic Usage
 
@@ -121,7 +121,7 @@ You can have multiple `VirtualKeyboardScope` controls in your application, but b
 </Grid>
 ```
 
-## Best Practices
+## Best practices
 
 1. **Place at the Right Level**:
    - Place the `VirtualKeyboardScope` at the root of your Window/UserControl or at a level that contains all text input controls that should use the keyboard.

@@ -8,8 +8,6 @@ import TabItem from '@theme/TabItem';
 import GridSharedSizeGroupScreenshot from '/img/controls/grid/grid-sharedsizegroup.png';
 import GridSampleScreenshot from '/img/controls/grid/grid_example.png';
 
-# Grid
-
 The `Grid` control is useful for arranging child controls in columns and rows. You can define absolute, proportional, and 
 autosized row and column geometries for the `Grid`.
 
@@ -19,14 +17,14 @@ zero-based, and both have a zero default.
 If you position multiple child controls in the same cell, they will be drawn in that cell in the sequence they appear 
 in the XAML. This is another strategy to implement layer stacking besides `Panel`.
 
-:::warning
+:::caution
 If you omit column and row coordinates for the child controls of a `Grid`, they will all be drawn in the top left 
 corner (column=0, row=0).
 :::
 
 It is also possible to make a child control span more than one cell in either rows or columns, or both.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -41,7 +39,7 @@ You will probably use these properties most often:
 | Grid.RowSpan           | Spans the control across 1 or more rows.                            |
 | Grid.IsSharedSizeScope | Defines the control as the containing scope for a `SharedSizeGroup` |
 
-## Size Definitions
+## Size definitions
 
 You can define the size of rows and columns as:
 
@@ -54,7 +52,7 @@ Size definitions can be written either as a list of short codes, or fully expand
 Full definitions support additional constraints such as `SharedSizeGroup` and specifying minimum and maximum lengths in 
 absolute sizes.
 
-### Absolute Size Definitions
+### Absolute size definitions
 
 Absolute size definitions are written as integers in the list format. For example:
 
@@ -72,7 +70,7 @@ Using full expanded XAML, this is the same as:
 </Grid>
 ```
 
-### Proportional Size Definitions
+### Proportional size definitions
 
 Proportional size definitions are written as proportions of available `Grid` space using an 
 asterisk. For example, to create two columns with the same width and then one with twice the width:
@@ -97,7 +95,7 @@ values sum to 100 such as `<Grid ColumnDefinitions="25*, 25*, 50*">` for 3 colum
 available width.
 :::
 
-### Automatic Size Definitions
+### Automatic size definitions
 
 To size a row or column automatically to the largest child control in it, use the code 'Auto'.  For example:
 
@@ -115,12 +113,12 @@ Using full expanded XAML, this is the same as:
 </Grid>
 ```
 
-:::warning
+:::caution
 If a child control has its own explicitly set dimensions, these will be obeyed when it is drawn. This means that if it 
 is larger than its grid cell, it will overlap adjacent cells.
 :::
 
-### Mixing Size Definitions
+### Mixing size definitions
 
 You can mix any of the above in the same size definition sequence. For example:
 
@@ -138,14 +136,14 @@ Using full expanded XAML, this is the same as:
 </Grid>
 ```
 
-## Drawing Rules
+## Drawing rules
 
 When calculating sizes, any proportional columns are made to fit in the space left after the absolute and automatic values have been calculated.
 
 The calculation for automatic sizing is made using the outside of the margin layout zone of a child control.
 
 :::info
-To review the concept of control layout zones, see [here](/docs/layout/#layout-zones). 
+To review the concept of control layout zones, see [Layout zones](/docs/layout/#layout-zones). 
 :::
 
 Child controls are drawn in their assigned grid cells in the sequence they appear in the XAML. This rule governs both 
@@ -420,12 +418,7 @@ grid1.Children.Add(button3);
 
 </Tabs>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Grid).
-:::
-
-:::info
-View the source code on _GitHub_ [`Grid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
-:::
+- [Grid API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Grid)
+- [`Grid.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)

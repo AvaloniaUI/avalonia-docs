@@ -3,33 +3,31 @@ id: border
 title: Border
 ---
 
-# Border
-
 The border control decorates a (single) child with a border and background. It can also be used to display rounded corners.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
 <table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Background</code></td><td>Background color.</td></tr><tr><td><code>BorderBrush</code></td><td>Border color.</td></tr><tr><td><code>BorderThickness</code></td><td>Border line thickness (integer).</td></tr><tr><td><code>CornerRadius</code></td><td>Radius for all four corners (one value), or specified as list - see below.</td></tr><tr><td><code>BoxShadow</code></td><td>Defines a shadow (see below).</td></tr></tbody></table>
 
-## Corner Radius Property
+## Corner radius property
 
-You can give the value of the corner radius property as a single value. In this case, _Avalonia UI_ will use the same radius on all four corners of the child control.
+You can give the value of the corner radius property as a single value. In this case, _Avalonia_ will use the same radius on all four corners of the child control.
 
 Alternatively you can specify a list of values; this must be in one of the following two formats.
 
-When only two values are in the list, _Avalonia UI_ will interpret them using the pattern:
+When only two values are in the list, _Avalonia_ will interpret them using the pattern:
 
 `CornerRadius="Top Bottom"`
 
 The top-left and top-right radii are set from the first value, and the bottom-left and bottom-right radii are set from the second value.
 
-When all four values are in the list, _Avalonia UI_ will interpret them using the pattern:
+When all four values are in the list, _Avalonia_ will interpret them using the pattern:
 
 `CornerRadius="TopLeft TopRight BottomRight BottomLeft"`
 
-:::warning
+:::caution
 If you use the four value pattern; you must provide all four values, even if one of them is zero. Three values are not permitted in the list.
 :::
 
@@ -60,7 +58,7 @@ This example adds some border controls to create a 'pod' look in the layout:
 
 </XamlPreview>
 
-## Box Shadows
+## Box shadows
 
 You can define a shadow to a border by setting its box shadow property. You specify a single box shadow using:
 
@@ -103,12 +101,7 @@ This is an example of a drop-shadow:
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Border).
-:::
-
-:::info
-View the source code on _GitHub_ [`Border.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Border.cs)
-:::
+- [Border API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Border)
+- [`Border.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Border.cs)

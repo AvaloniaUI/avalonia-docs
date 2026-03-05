@@ -10,11 +10,9 @@ import ViewboxScaleNoneBothScreenshot from '/img/controls/viewbox/viewbox-scale-
 import ViewboxScaleUniformDownOnlyScreenshot from '/img/controls/viewbox/viewbox-uniform-downonly.gif';
 import ViewboxScaleUniformUpOnlyScreenshot from '/img/controls/viewbox/viewbox-uniform-uponly.gif';
 
-# Viewbox
-
 The `Viewbox` is a container control which can scale its contents. The way in which the contents are stretched can be defined, as well as when the stretch will occur (stretch direction).
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -55,12 +53,7 @@ This set of demonstrations shows the effect of the stretch direction property:
 
 <table><thead><tr><th width="276">Stretch Direction</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>UpOnly</code></td><td><img src={ViewboxScaleUniformUpOnlyScreenshot} alt="" /></td></tr><tr><td><code>DownOnly</code></td><td><img src={ViewboxScaleUniformDownOnlyScreenshot} alt="" /></td></tr></tbody></table>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Viewbox).
-:::
-
-:::info
-View the source code on _GitHub_ [`Viewbox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Viewbox.cs)
-:::
+- [Viewbox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Viewbox)
+- [`Viewbox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Viewbox.cs)

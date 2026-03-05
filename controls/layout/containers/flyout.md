@@ -5,13 +5,11 @@ title: Flyout
 
 import FlyoutShowAttachedScreenshot from '/img/controls/flyout/flyout-show-attached.gif';
 
-# Flyout
-
 Flyouts are dismissible containers that can be attached to some classes of 'host' control; although flyouts themselves are not controls. They show when their host control receives the focus, and are hidden again in a number of different ways.
 
 A flyout can contain simple or richer, composed, UI content.
 
-Flyouts can be declared as a resource and shared between two or more host controls in an _Avalonia UI_ app.
+Flyouts can be declared as a resource and shared between two or more host controls in an _Avalonia_ app.
 
 ## Examples
 
@@ -32,8 +30,8 @@ A flyout is attached to a host control using the host's `Flyout` property. For e
 
 </XamlPreview>
 
-:::warning
-Only the button and split button controls support the `Flyout` property. You can attach a flyout to other _Avalonia UI_ built-in controls using the `AttachedFlyout` property instead.
+:::caution
+Only the button and split button controls support the `Flyout` property. You can attach a flyout to other _Avalonia_ built-in controls using the `AttachedFlyout` property instead.
 :::
 
 For controls that do not have the `Flyout` property, use the `AttachedFlyout` property. 
@@ -62,7 +60,7 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 
 <img src={FlyoutShowAttachedScreenshot} alt="" />
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -71,13 +69,13 @@ You will probably use these properties most often:
 | `Placement` | The position where the flyout opens relative to the control to which it is attached. |
 | `ShowMode`  | This describes how the flyout shows and hides. See the options below.                |
 
-## Show Mode
+## Show mode
 
 This setting describes how the flyout shows and hides:
 
 <table><thead><tr><th width="259">Mode</th><th>Description</th></tr></thead><tbody><tr><td><code>Standard</code></td><td>The flyout shows when the control to which it is attached gets the focus. The flyout hides when the control to which it is attached loses the focus (the user either tabs away or clicks elsewhere). </td></tr><tr><td><code>Transient</code></td><td></td></tr><tr><td><code>TransientWithDismiss OnPointerMoveAway</code></td><td></td></tr></tbody></table>
 
-## Common Methods for all Flyouts
+## Common methods for all flyouts
 
 | Property                | Description                                                                             |
 | ----------------------- | --------------------------------------------------------------------------------------- |
@@ -85,7 +83,7 @@ This setting describes how the flyout shows and hides:
 | `ShowAt(Control, bool)` | Shows the Flyout at the specified target, but places it at the current pointer position |
 | `Hide`                  | Hides the Flyout                                                                        |
 
-## Sharing Flyouts
+## Sharing flyouts
 
 You can share flyouts between two or more elements in your app. For example, to share a flyout from the resources collection of a window:
 
@@ -101,7 +99,7 @@ You can share flyouts between two or more elements in your app. For example, to 
 <Button Content="Now click me!" Flyout="{StaticResource MySharedFlyout}" />
 ```
 
-## Styling Flyouts
+## Styling flyouts
 
 Although flyouts are not themselves controls, their general appearance can be customized by targeting the presenter the `Flyout` uses to display its content. For a normal `Flyout` this is `FlyoutPresenter` and for `MenuFlyout` this is `MenuFlyoutPresenter`. Because flyout presenters are not exposed, special style classes that should pertain to specific flyouts can be passed using the `FlyoutPresenterClasses` property on `FlyoutBase`
 
@@ -115,12 +113,7 @@ Although flyouts are not themselves controls, their general appearance can be cu
 </Flyout>
 ```
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Flyout).
-:::
-
-:::info
-View the source code on _GitHub_ [`Flyout.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/Flyout.cs)
-:::
+- [Flyout API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Flyout)
+- [`Flyout.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/Flyout.cs)

@@ -3,11 +3,9 @@ id: uniformgrid
 title: UniformGrid
 ---
 
-# UniformGrid
-
 The `UniformGrid` divides available space evenly into cells. You can specify how many divisions to use, and these can be different in either direction.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -101,15 +99,8 @@ for (int i = 0; i < 12; i++)
 
 </Tabs>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_UniformGrid).
-:::
-
-:::info
-View the source code on _GitHub_ [`UniformGrid.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/UniformGrid.cs)
-:::
-
-
+- [UniformGrid API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_UniformGrid)
+- [`UniformGrid.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/UniformGrid.cs)
 

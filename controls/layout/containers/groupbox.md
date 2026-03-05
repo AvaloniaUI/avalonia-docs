@@ -3,13 +3,11 @@ id: groupbox
 title: GroupBox
 ---
 
-# GroupBox
-
 The `GroupBox` control visually groups related content under a header label, surrounded by a border. The header text overlaps the top edge of the border, creating the classic "group box" appearance familiar from desktop UI frameworks.
 
 `GroupBox` extends `HeaderedContentControl`, so it supports a `Header` (displayed at the top of the border) and a single `Content` child.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -42,7 +40,7 @@ This example creates two group boxes to organize a form:
 
 </XamlPreview>
 
-## Custom Header Content
+## Custom header content
 
 The `Header` property accepts any content, not just text. You can use it to display icons, formatted text, or any other control:
 
@@ -75,12 +73,7 @@ The GroupBox appearance can be customized through theme resources:
 | `GroupBoxBorderBrush` | `SystemControlForegroundBaseMediumBrush` | Color of the border. |
 | `GroupBoxHeaderForeground` | `SystemBaseHighColor` | Color of the header text. |
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_GroupBox).
-:::
-
-:::info
-View the source code on _GitHub_ [`GroupBox.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GroupBox.cs)
-:::
+- [GroupBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_GroupBox)
+- [`GroupBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GroupBox.cs)

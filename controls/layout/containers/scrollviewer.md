@@ -3,19 +3,17 @@ id: scrollviewer
 title: ScrollViewer
 ---
 
-# ScrollViewer
-
 The `ScrollViewer` control can have content that is bigger than its content zone, and will provide scroll bars to move hidden content into view.
 
 A `ScrollViewer` cannot be contained in a control that has infinite height or width (depending on scrolling direction) such as a `StackPanel`. To avoid it, you can either set fixed Height/Width or MaxHeight/MaxWidth or choose another container panel.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
 <table><thead><tr><th width="288">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>AllowAutoHide</code></td><td>Boolean, default is true. Sets whether the scroll bar hides itself automatically when the pointer is not over, or it does not have the focus. </td></tr><tr><td><code>ScrollViewer</code>. <code>IsScrollChainingEnabled</code></td><td>Boolean, default is true. Attached to an inner controlSee below for more details. </td></tr></tbody></table>
 
-## Scroll Chaining
+## Scroll chaining
 
 If you have a control that can itself scroll (see list below) nested inside a scroll viewer, and the user hits a limit on the control, this property sets whether the outer scroll viewer should continue scrolling or not. You enable or disable this behaviour with an attached property on the inner control, using the format:
 
@@ -51,13 +49,8 @@ This example creates a stack panel that is bigger than the border it is inside. 
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ScrollViewer).
-:::
-
-:::info
-View the source code on _GitHub_ [`ScrollViewer.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ScrollViewer.cs)
-:::
+- [ScrollViewer API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ScrollViewer)
+- [`ScrollViewer.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ScrollViewer.cs)
 

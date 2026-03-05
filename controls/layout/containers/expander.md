@@ -3,11 +3,9 @@ id: expander
 title: Expander
 ---
 
-# Expander
-
 The expander control has a header area (always visible) and a collapsible content section that can contain a single child control.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -39,12 +37,7 @@ You will probably use these properties most often:
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Expander).
-:::
-
-:::info
-View the source code on _GitHub_ [`Expander.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Expander.cs)
-:::
+- [Expander API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Expander)
+- [`Expander.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Expander.cs)

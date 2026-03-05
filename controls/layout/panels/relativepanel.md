@@ -3,8 +3,6 @@ id: relativepanel
 title: RelativePanel
 ---
 
-# RelativePanel
-
 The `RelativePanel` control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
 
 The default position for a child control, is the upper left corner of the panel.
@@ -29,11 +27,11 @@ It is not an error to specify different, but potentially conflicting relative po
 
 If more than one child control ends up in the same calculated position, then they are drawn in the sequence that they appear in the XAML, and may overlap or obscure another child control.
 
-:::warning
+:::caution
 This means you must give child controls a name, and use the correct name in any relative position property values. If you get this wrong, the control will adopt the default (top-left) position, and may overlap or obscure another.
 :::
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -76,12 +74,7 @@ Here are some notes about the above example:
 * The green rectangle is given a height (100), but no width. Its left side is aligned with the red rectangle, and its right side is aligned with the blue rectangle, this calculates its width.
 * The orange rectangle has not been given a size. Its left side is aligned with the blue rectangle. Its right and bottom edges are aligned with the edge of the panel. Therefore its size is determined by the alignments and it will resize if the panel itself is resized.
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RelativePanel).
-:::
-
-:::info
-View the source code on _GitHub_ [`RelativePanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RelativePanel.cs)
-:::
+- [RelativePanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RelativePanel)
+- [`RelativePanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RelativePanel.cs)

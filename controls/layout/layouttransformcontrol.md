@@ -3,16 +3,9 @@ id: layouttransformcontrol
 title: LayoutTransformControl
 ---
 
-# LayoutTransformControl
-
 The `LayoutTransformControl` can dynamically transform a UI layout completely within a view.
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_LayoutTransformControl).
-:::
-
-:::info
-View the source code on _GitHub_ [`LayoutTransformControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/LayoutTransformControl.cs)
-:::
+- [LayoutTransformControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_LayoutTransformControl)
+- [`LayoutTransformControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/LayoutTransformControl.cs)

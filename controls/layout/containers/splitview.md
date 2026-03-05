@@ -5,11 +5,9 @@ title: SplitView
 
 import SplitViewCompactScreenshot from '/img/controls/splitview/splitview-expander.gif';
 
-# SplitView
-
 A `SplitView` presents a container with two parts: the main content zone and a side pane. The main content zone is always visible. The pane can be expanded and collapsed. The collapsed pane can be completely hidden, or left slightly open - with enough space to host some icon buttons for example. 
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -63,18 +61,13 @@ The display mode property controls how the pane is drawn in its open and closed 
 
 </XamlPreview>
 
-## Compact Display Mode
+## Compact display mode
 
 You can use the MVVM pattern with the split view control and one of the compact display mode settings to implement a 'tool pane' style UI. There is enough room on the pane when it is closed to display an icon button that opens the pane.
 
 <img src={SplitViewCompactScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitView).
-:::
-
-:::info
-View the source code on _GitHub_ [`SplitView.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitView/SplitView.cs)
-:::
+- [SplitView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitView)
+- [`SplitView.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitView/SplitView.cs)

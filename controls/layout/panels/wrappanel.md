@@ -3,13 +3,11 @@ id: wrappanel
 title: WrapPanel
 ---
 
-# WrapPanel
-
 The `WrapPanel` uses a default arrangement of (multiple) child elements is in sequence from left to right, while they fit in the width. It starts a new line when there is no space left (including any margins and borders). 
 
 When the orientation property is set to vertical, the arrangement is top to bottom with a new column started when there is no more height remaining.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -54,12 +52,7 @@ You will probably use these properties most often:
 
 </XamlPreview>
 
-### More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_WrapPanel).
-:::
-
-:::info
-View the source code on _GitHub_ [`WrapPanel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/WrapPanel.cs)
-:::
+- [WrapPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_WrapPanel)
+- [`WrapPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/WrapPanel.cs)
