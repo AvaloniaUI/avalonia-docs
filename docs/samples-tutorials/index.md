@@ -64,10 +64,6 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
     <p>Validate properties and display an error message if the values are invalid.</p>
   </DocsCard>
 
-  <DocsCard header="Dialogs" href="https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/ViewInteraction/MvvmDialogSample">
-    <p>Show dialogs using ReactiveUI interactions.</p>
-  </DocsCard>
-
   <DocsCard header="Dialog manager" href="https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/ViewInteraction/DialogManagerSample">
     <p>Create a dialog manager service that helps you show dialogs in your app.</p>
   </DocsCard>

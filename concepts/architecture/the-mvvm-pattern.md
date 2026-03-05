@@ -25,7 +25,7 @@ To discover more about the background to the MVVM pattern, see the _Microsoft Pa
 
 ## When to use MVVM?
 
-MVVM is a more complex pattern of programming compared to the event-driven code-behind pattern. You have an additional learning overhead to master the techniques of the _ReactiveUI_ framework which you will use to implement MVVM with _Avalonia UI_. 
+MVVM is a more complex pattern of programming compared to the event-driven code-behind pattern. You have an additional learning overhead to master the techniques of an MVVM framework when implementing this pattern with _Avalonia UI_.
 
 In fact, the code-behind pattern may well be easier for you to understand and maintain for a small simple application.
 
@@ -78,8 +78,3 @@ Notice how the view model class is not dependent on the view layer, or how it wi
 
 When you use the MVVM pattern in practice, you will use a corresponding view model for each view, and the view model class contains all the application logic for the view.
 
-### ReactiveUI
-
-There are a number of frameworks designed to help write applications using the MVVM pattern.
-
-In the following pages, you will learn about the _ReactiveUI_ framework which is one of the most popular and is supported by one of the _Avalonia UI_ packages.

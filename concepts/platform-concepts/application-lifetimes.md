@@ -85,7 +85,7 @@ Provided by:
 Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.
 
 :::info
-To implement the navigation stack on platforms like this (with a single main view), you can use [_ReactiveUI_ routing](https://www.reactiveui.net/docs/handbook/routing/) or another routing control.
+To implement a navigation stack on platforms like this (with a single main view), you can use a routing control or navigation framework. A common approach is to manage a stack of view models, pushing and popping them as the user navigates, with a host control that automatically displays the corresponding view.
 :::
 
 ## Manual Lifetime Management

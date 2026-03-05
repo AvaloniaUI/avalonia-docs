@@ -52,8 +52,3 @@ public static void Main(string[] args)
 
 If you are using `Task`s to run some work asynchronously, you can setup `TaskScheduler.UnobservedTaskException`. For more information read the [Microsoft .NET-Documentation](https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskscheduler.unobservedtaskexception).
 
-## Exceptions from Reactive UI
-
-If you are using Avalonia together with [ReactiveUI](/docs/app-development/reactiveui/setting-up-reactiveui.md), you can subscribe to their `RxApp.DefaultExceptionHandler`. For more information please refer to [ReactiveUI Default Exception Handler](https://www.reactiveui.net/docs/handbook/default-exception-handler/).
-
-Note, `RxApp.DefaultExceptionHandler` should be set before any ReactiveCommand was created. Otherwise, custom handler won't be used. You can set it in your application entry point or before any Avalonia view or window was created.

@@ -9,15 +9,15 @@ import BindCanExecuteScreenshot from '/img/guides/data/bind-canexecute.gif';
 
 Whether a control, that can initiate an action in response to user interaction, is in its enabled state, is an important principle of the 'revealed functionality' part of user experience design (UX). User confidence is reinforced by disabling commands that cannot run. For example where a button or menu item cannot run due to the current state of an application, they should be presented as inactive.
 
-This example assumes that you are using the MVVM implementation pattern with the _ReactiveUI_ framework. This (recommended) approach gives a very clear separation between the view and the view model.
+This example assumes that you are using the MVVM implementation pattern. This approach gives a clear separation between the view and the view model.
 
-In this example, the button can only be clicked when the message is not empty. As soon as the output is shown; the message is reset to the empty string - which in turn will disable the button again.
+In this example, the button can only be clicked when the message is not empty. As soon as the output is shown, the message is reset to the empty string, which in turn will disable the button again.
 
 ```xml title='XAML'
 <StackPanel Margin="20">
   <TextBox Margin="0 5" Text="{Binding Message}"
            Watermark="Add a message to enable the button"/>
-  <Button Command="{Binding ExampleCommand}">    
+  <Button Command="{Binding ExampleCommand}">
     Run the example
   </Button>
   <TextBlock Margin="0 5" Text="{Binding Output}" />
@@ -25,66 +25,100 @@ In this example, the button can only be clicked when the message is not empty. A
 ```
 
 ```csharp title='MainWindowViewModel.cs'
+using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+
 namespace AvaloniaGuides.ViewModels
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
         private string _message = string.Empty;
         private string _output = "Waiting...";
 
-        public string Message 
-        { 
-            get => _message; 
-            set => this.RaiseAndSetIfChanged(ref _message, value); 
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        public string Message
+        {
+            get => _message;
+            set
+            {
+                if (_message != value)
+                {
+                    _message = value;
+                    OnPropertyChanged();
+                    ExampleCommand.RaiseCanExecuteChanged();
+                }
+            }
         }
 
         public string Output
         {
             get => _output;
-            set => this.RaiseAndSetIfChanged(ref _output, value);
+            set
+            {
+                if (_output != value)
+                {
+                    _output = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
-        public ReactiveCommand<Unit, Unit> ExampleCommand { get; }
+        public RelayCommand ExampleCommand { get; }
 
         public MainWindowViewModel()
         {
-            var isValidObservable = this.WhenAnyValue(
-                x => x.Message,
-                x => !string.IsNullOrWhiteSpace(x));
-            ExampleCommand = ReactiveCommand.Create(PerformAction, 
-                                                    isValidObservable);
+            ExampleCommand = new RelayCommand(
+                PerformAction,
+                () => !string.IsNullOrWhiteSpace(Message));
         }
 
         private void PerformAction()
         {
-             Output = $"The action was called. {_message}";
-             Message = String.Empty;
+            Output = $"The action was called. {Message}";
+            Message = string.Empty;
+        }
+
+        protected void OnPropertyChanged([CallerMemberName] string? name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }
 ```
 
-```csharp title='ViewModelBase.cs'
-using ReactiveUI;
+```csharp title='RelayCommand.cs'
+using System;
+using System.Windows.Input;
 
 namespace AvaloniaGuides.ViewModels
 {
-    public class ViewModelBase : ReactiveObject
+    public class RelayCommand : ICommand
     {
+        private readonly Action _execute;
+        private readonly Func<bool>? _canExecute;
+
+        public RelayCommand(Action execute, Func<bool>? canExecute = null)
+        {
+            _execute = execute;
+            _canExecute = canExecute;
+        }
+
+        public event EventHandler? CanExecuteChanged;
+
+        public bool CanExecute(object? parameter) => _canExecute?.Invoke() ?? true;
+
+        public void Execute(object? parameter) => _execute();
+
+        public void RaiseCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
     }
 }
 ```
 
-In the constructor of the view model, the reactive command is created with two parameters. The first is the private method that performs the action. The second is an observable which is created by the `WhenAnyValue` method of the `ReactiveObject` that underlies the view model (from the `ViewModelBase` class).
+In the constructor of the view model, the command is created with two parameters: the action to execute, and a function that determines whether the command can run. The button automatically disables when `CanExecute` returns `false`.
 
-:::info
-The `ViewModelBase` class is added to your project when you use the 'Avalonia MVVM Application' solution template.
-:::
-
-Here the `WhenAnyValue` method takes two arguments, the first collects a value for the parameter of the validation function, and the second is the validation function that returns a Boolean result.
-
-:::info
-The `WhenAnyValue` method actually has overloads that can take up to 10 different value getters (for the validation function parameters), plus the validation function itself. 
-:::
+When the `Message` property changes, `RaiseCanExecuteChanged` notifies the binding system to re-evaluate whether the button should be enabled.
 
 <img src={BindCanExecuteScreenshot} alt=""/>

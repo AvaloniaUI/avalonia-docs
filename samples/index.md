@@ -47,7 +47,7 @@ Avalonia has tons of great samples to help you get started!
   </DocsCard>
 
   <DocsCard header="Dialogs" href="https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/ViewInteraction/MvvmDialogSample">
-    <p>Show dialogs using ReactiveUI interactions.</p>
+    <p>Show dialogs from a view model using an interaction pattern.</p>
   </DocsCard>
 
   <DocsCard header="Dialog manager" href="https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/ViewInteraction/DialogManagerSample">

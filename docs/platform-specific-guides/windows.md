@@ -49,9 +49,6 @@ winFormsAvaloniaControlHost1.Content = new MainView
 
 You should now see Avalonia's default view rendered inside your Windows Forms application.
 
-:::warning
-You cannot use ReactiveUI for both Windows Forms and Avalonia controls simultaneously. If you want to use ReactiveUI with Avalonia, register it on the `AppBuilder` with `.UseReactiveUI()` in `Program.cs`. Do not include a reference to `ReactiveUI.WinForms`, as it will prevent interactions from working correctly (see [#16478](https://github.com/AvaloniaUI/Avalonia/discussions/16478)).
-:::
 
 ## See also
 

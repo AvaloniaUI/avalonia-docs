@@ -148,6 +148,21 @@ See the [Code Highlighter](/docs/markdown/codehighlighter) page for information 
 
 See the [Markdown styling](/docs/markdown/markdown-styling) page for a full list of resources you can override.
 
-## See also
+## Installation
 
-- [Rendering markdown](/docs/app-development/rendering-markdown)
+See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+
+Add the Markdown package to your project:
+
+```bash
+dotnet add package Avalonia.Controls.Markdown
+```
+
+Add the resources by referencing the shipped `Default.axaml` theme via a `StyleInclude` in `App.axaml`:
+
+```xml
+<Application.Styles>
+   <StyleInclude Source="avares://Avalonia.Controls.Markdown/Themes/Default.axaml" />
+   <!-- other styles -->
+</Application.Styles>
+```
