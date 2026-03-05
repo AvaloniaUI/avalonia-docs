@@ -1,0 +1,237 @@
+---
+id: window-management
+title: Window Management
+---
+
+Avalonia provides a flexible windowing system for creating single-window and multi-window desktop applications. This page covers common window management patterns.
+
+## Creating Windows
+
+Windows are typically defined in XAML with a code-behind class:
+
+```xml title="SecondWindow.axaml"
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MyApp.SecondWindow"
+        Title="Second Window"
+        Width="400" Height="300">
+    <TextBlock Text="Hello from the second window" />
+</Window>
+```
+
+```csharp title="SecondWindow.axaml.cs"
+public partial class SecondWindow : Window
+{
+    public SecondWindow()
+    {
+        InitializeComponent();
+    }
+}
+```
+
+### Opening a window
+
+```csharp
+var window = new SecondWindow();
+window.Show(); // Non-modal: both windows remain interactive
+```
+
+### Opening a modal dialog
+
+```csharp
+var dialog = new SecondWindow();
+var result = await dialog.ShowDialog<string>(parentWindow);
+// Execution resumes here after the dialog closes
+```
+
+The parent window is disabled while the dialog is open. Pass the owner window as the parameter to `ShowDialog`.
+
+### Closing with a result
+
+In the dialog, set the result by calling `Close` with a value:
+
+```csharp
+// Inside the dialog
+Close("user clicked OK");
+```
+
+The value is returned from the `ShowDialog<T>` call in the parent.
+
+## Window Properties
+
+| Property | Description |
+|---|---|
+| `Title` | The text displayed in the window title bar. |
+| `Width`, `Height` | Initial size. |
+| `MinWidth`, `MinHeight` | Minimum allowed size. |
+| `MaxWidth`, `MaxHeight` | Maximum allowed size. |
+| `WindowStartupLocation` | Where the window appears: `Manual`, `CenterScreen`, `CenterOwner`. |
+| `Position` | The window position in screen coordinates (when `WindowStartupLocation` is `Manual`). |
+| `CanResize` | Whether the user can resize the window. |
+| `ShowInTaskbar` | Whether the window appears in the OS taskbar. |
+| `Topmost` | Whether the window stays on top of other windows. |
+| `WindowState` | Current state: `Normal`, `Minimized`, `Maximized`, `FullScreen`. |
+| `SystemDecorations` | Title bar and border style: `Full`, `BorderOnly`, `None`. |
+| `ExtendClientAreaToDecorationsHint` | Extends the client area into the title bar area for custom chrome. |
+| `Icon` | The window icon displayed in the title bar and taskbar. |
+| `TransparencyLevelHint` | Enables window transparency: `None`, `Transparent`, `AcrylicBlur`, `Mica`. |
+
+## Window Sizing
+
+### Sizing to content
+
+Set `SizeToContent` to let the window size itself based on its content:
+
+```xml
+<Window SizeToContent="WidthAndHeight">
+    <StackPanel Margin="20">
+        <TextBlock Text="The window will size to fit this content." />
+        <Button Content="OK" HorizontalAlignment="Right" Margin="0,10,0,0" />
+    </StackPanel>
+</Window>
+```
+
+| Value | Behavior |
+|---|---|
+| `Manual` | Window uses `Width` and `Height` explicitly (default). |
+| `Width` | Width sizes to content, height is explicit. |
+| `Height` | Height sizes to content, width is explicit. |
+| `WidthAndHeight` | Both dimensions size to content. |
+
+### Saving and restoring window position
+
+```csharp
+protected override void OnOpened(EventArgs e)
+{
+    base.OnOpened(e);
+
+    // Restore saved position
+    if (Settings.WindowLeft >= 0 && Settings.WindowTop >= 0)
+    {
+        Position = new PixelPoint(Settings.WindowLeft, Settings.WindowTop);
+        Width = Settings.WindowWidth;
+        Height = Settings.WindowHeight;
+    }
+}
+
+protected override void OnClosing(WindowClosingEventArgs e)
+{
+    base.OnClosing(e);
+
+    // Save position
+    Settings.WindowLeft = Position.X;
+    Settings.WindowTop = Position.Y;
+    Settings.WindowWidth = Width;
+    Settings.WindowHeight = Height;
+}
+```
+
+## Multi-Window Patterns
+
+### Tracking open windows
+
+```csharp
+public static class WindowManager
+{
+    private static readonly List<Window> _openWindows = new();
+
+    public static IReadOnlyList<Window> OpenWindows => _openWindows;
+
+    public static void Register(Window window)
+    {
+        _openWindows.Add(window);
+        window.Closed += (_, _) => _openWindows.Remove(window);
+    }
+
+    public static void CloseAll()
+    {
+        foreach (var window in _openWindows.ToList())
+            window.Close();
+    }
+}
+```
+
+### Finding the parent window from a control
+
+```csharp
+var topLevel = TopLevel.GetTopLevel(myControl);
+if (topLevel is Window window)
+{
+    // Use window
+}
+```
+
+Or using the extension method:
+
+```csharp
+var window = myControl.FindAncestorOfType<Window>();
+```
+
+## Preventing Window Close
+
+Handle the `Closing` event to intercept the close action. Set `e.Cancel = true` to prevent closing:
+
+```csharp
+protected override void OnClosing(WindowClosingEventArgs e)
+{
+    base.OnClosing(e);
+
+    if (HasUnsavedChanges)
+    {
+        e.Cancel = true;
+        // Show a save confirmation dialog instead
+        _ = ShowSavePromptAsync();
+    }
+}
+```
+
+## Custom Title Bar
+
+To create a custom title bar, extend the client area into the decorations:
+
+```xml
+<Window ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="-1">
+    <Grid RowDefinitions="32,*">
+        <!-- Custom title bar -->
+        <Border Grid.Row="0" Background="#2D2D2D" IsHitTestVisible="True">
+            <TextBlock Text="My App" Foreground="White"
+                       VerticalAlignment="Center" Margin="12,0" />
+        </Border>
+        <!-- Content -->
+        <Border Grid.Row="1">
+            <TextBlock Text="Window content" />
+        </Border>
+    </Grid>
+</Window>
+```
+
+Enable window dragging on the custom title bar by handling pointer events or using the platform's native drag support.
+
+## Window Events
+
+| Event | When it fires |
+|---|---|
+| `Opened` | The window has been shown for the first time. |
+| `Closing` | The window is about to close. Can be cancelled. |
+| `Closed` | The window has closed. |
+| `Activated` | The window received focus. |
+| `Deactivated` | The window lost focus. |
+| `PositionChanged` | The window was moved. |
+| `Resized` | The window was resized. |
+
+## Platform Differences
+
+| Feature | Windows | macOS | Linux |
+|---|---|---|---|
+| `Topmost` | Supported | Supported | Supported |
+| `TransparencyLevelHint` | All levels | `Transparent` only | Depends on compositor |
+| `SystemDecorations.None` | Supported | Supported | Supported |
+| `ExtendClientAreaToDecorationsHint` | Supported | Supported | Limited support |
+| Modal dialogs | Blocks parent window | Sheet-style on macOS | Blocks parent window |
+
+## See Also
+
+- [Main Window](/docs/fundamentals/main-window): The primary application window.
+- [Application Lifetimes](/docs/fundamentals/application-lifetimes): How the application lifecycle manages windows.
