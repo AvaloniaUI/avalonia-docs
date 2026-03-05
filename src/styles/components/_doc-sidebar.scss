@@ -147,6 +147,7 @@ html[data-theme='dark'] {
       &-collapsible {
         display: flex;
         align-items: center;
+        position: relative;
       }
     }
   }
@@ -302,10 +303,14 @@ html[data-theme='dark'] {
     }
   }
 
-    /* Make the caret for "category with link" look like the normal small chevron */
+    /* Take the caret out of flow so it doesn't shift the chevron arrow */
   .menu__list-item-collapsible > .menu__caret {
-    width: var(--dropdown-icon-width);
-    height: var(--dropdown-icon-height);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 2.5rem;
+
     visibility: hidden;
     margin: 0;
     padding: 0;
@@ -313,7 +318,6 @@ html[data-theme='dark'] {
     border: 0;
     background: transparent;
 
-    /* keep it on the left, but don't draw its own icon */
     display: inline-flex;
     align-items: center;
     justify-content: center;
