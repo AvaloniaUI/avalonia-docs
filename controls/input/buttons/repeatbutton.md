@@ -3,18 +3,16 @@ id: repeatbutton
 title: RepeatButton
 ---
 
-# RepeatButton
-
 The `RepeatButton` is a control that has the added feature of regularly generating click events while the button is being pressed down.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
 | Property | Description                                                                              |
 | -------- | ---------------------------------------------------------------------------------------- |
-| Delay    | The time (milliseconds) to wait before repeated click generation begins. Default is 300. |
-| Interval | The time (milliseconds) between clicks being generated. Default is 100.                  |
+| `Delay`    | The time (milliseconds) to wait before repeated click generation begins. Default is 300. |
+| `Interval` | The time (milliseconds) between clicks being generated. Default is 100.                  |
 
 ## Example
 
@@ -48,12 +46,7 @@ public partial class MainView : UserControl
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RepeatButton).
-:::
-
-:::info
-View the source code on _GitHub_ [`RepeatButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RepeatButton.cs)
-:::
+- [RepeatButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RepeatButton)
+- [`RepeatButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RepeatButton.cs)

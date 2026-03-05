@@ -3,11 +3,9 @@ id: buttonspinner
 title: ButtonSpinner
 ---
 
-# ButtonSpinner
-
 The `ButtonSpinner` presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -48,12 +46,7 @@ public partial class MainView : UserControl
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ButtonSpinner).
-:::
-
-:::info
-View the source code on _GitHub_ [`ButtonSpinner.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ButtonSpinner.cs)
-:::
+- [ButtonSpinner API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ButtonSpinner)
+- [`ButtonSpinner.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ButtonSpinner.cs)

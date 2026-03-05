@@ -3,15 +3,13 @@ id: radiobutton
 title: RadioButton
 ---
 
-# RadioButton
-
 The `RadioButton` control presents a group of options from which only one may be selected at a time. A selected option is drawn as a filled circle, and an unselected option as an empty circle.
 
 The content of the radio button control is presented as a label next to the circle.
 
 It is possible for no options in a group to be selected, however as soon as one is selected, the radio button interaction cannot be stopped by the user.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -46,12 +44,7 @@ This example shows two groups of radio buttons working independently:
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RadioButton).
-:::
-
-:::info
-View the source code on _GitHub_ [`RadioButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RadioButton.cs)
-:::
+- [RadioButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RadioButton)
+- [`RadioButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RadioButton.cs)

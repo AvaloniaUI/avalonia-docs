@@ -3,8 +3,6 @@ id: togglesplitbutton
 title: ToggleSplitButton
 ---
 
-# ToggleSplitButton
-
 import ToggleSplitButtonTextListScreenshot from '/img/controls/buttons/togglesplitbutton/togglesplitbutton-text-list.png';
 
 The `ToggleSplitButton` functions as a [`ToggleButton`](/controls/input/buttons/togglebutton) with primary and secondary parts that can each be pressed separately. The primary part behaves like a normal `ToggleButton` and the secondary part opens a [`Flyout`](/controls/menus/menuflyout) with additional actions.
@@ -17,13 +15,13 @@ The `ToggleSplitButton` has only two states: checked and unchecked. Indeterminat
 
 A `ToggleSplitButton` is a fairly specialized control and its usage should be restricted to where it makes clear sense from a user-standpoint. It is intended to turn a feature on/off while allowing some additional configurations to be specified rather than the default.
 
-Like a [`SplitButton`](/controls/input/buttons/splitbutton), the most common action should be the default and what is shown in the primary part. However, unlike the `SplitButton`, pressing the primary part will turn this feature on or off instead of simply invoking an action. Additional configurations for the feature should be added to the `Flyout` which is shown when the secondary (drop down) part is pressed.
+Like a [`SplitButton`](/controls/input/buttons/splitbutton), the most common action should be the default and what is shown in the primary part. However, unlike the `SplitButton`, pressing the primary part will turn this feature on or off instead of invoking an action. Additional configurations for the feature should be added to the `Flyout` which is shown when the secondary (drop down) part is pressed.
 
 :::info
-Pressing a configuration in the `Flyout` should either (1) turn on the feature with the selected configuration, or (2) change the feature to the selected configuration. Pressing a configuration in the `Flyout` should never turn off the feature – that can only be done by toggling the primary part.
+Pressing a configuration in the `Flyout` should either (1) turn on the feature with the selected configuration, or (2) change the feature to the selected configuration. Pressing a configuration in the `Flyout` should never turn off the feature; that can only be done by toggling the primary part.
 :::
 
-## Common Properties
+## Common properties
 
 | Property    | Description                                                    |
 | ----------- | -------------------------------------------------------------- |
@@ -39,14 +37,6 @@ Pressing a configuration in the `Flyout` should either (1) turn on the feature w
 | `:pressed`     | Set when the entire `ToggleSplitButton` is pressed using a keyboard input such as Space or Enter. In this state no distinction is made between primary or secondary parts |
 | `:flyout-open` | Set when the `Flyout` is open                                                                                                                                             |
 | `:checked`     | Set when the `ToggleSplitButton` is checked. (`IsChecked="true"`)                                                                                                         |
-
-## API Reference
-
-[ToggleSplitButton](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ToggleSplitButton)
-
-## Source code
-
-[ToggleSplitButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/ToggleSplitButton.cs)
 
 ## Examples
 
@@ -116,3 +106,8 @@ Continuing the text editor example from `SplitButton`, a common use case of the 
     </ToggleSplitButton.Flyout>
 </ToggleSplitButton>
 ```
+
+## See also
+
+- [ToggleSplitButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ToggleSplitButton)
+- [`ToggleSplitButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/ToggleSplitButton.cs)

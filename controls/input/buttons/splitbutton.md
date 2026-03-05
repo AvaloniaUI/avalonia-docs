@@ -3,8 +3,6 @@ id: splitbutton
 title: SplitButton
 ---
 
-# SplitButton
-
 import SplitButtonPaletteFlyoutScreenshot from '/img/controls/buttons/splitbutton/splitbutton-palette-flyout.png';
 
 The `SplitButton` functions as a [`Button`](/controls/input/buttons/button) with primary and secondary parts that can each be pressed separately. The primary part behaves like normal `Button` and the secondary part opens a [`Flyout`](/controls/menus/menuflyout) with additional actions.
@@ -31,14 +29,6 @@ The user-selection action should be invoked immediately when pressing either the
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `:pressed`     | Set when the entire `SplitButton` is pressed using a keyboard input such as Space or Enter. In this state no distinction is made between primary or secondary parts |
 | `:flyout-open` | Set when the `Flyout` is open                                                                                                                                       |
-
-## API Reference
-
-[SplitButton](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitButton)
-
-## Source code
-
-[SplitButton.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/SplitButton.cs)
 
 ## Examples
 
@@ -132,4 +122,9 @@ Another common example of the `SplitButton` could be an export button. When the 
 ```
 
 </XamlPreview>
+
+## See also
+
+- [SplitButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitButton)
+- [`SplitButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitButton/SplitButton.cs)
 

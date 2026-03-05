@@ -5,8 +5,6 @@ title: ToggleButton
 
 import ToggleButtonMuteScreenshot from '/img/controls/buttons/togglebutton/togglebutton-mute.gif';
 
-# ToggleButton
-
 The `ToggleButton` can present a Boolean value by using styles and a pseudo class that is either present (true) or absent (false).
 
 This allows a wide range of possible graphical presentations for the control in each of the pseudo class states.
@@ -77,20 +75,11 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 
 
 
-The content zone of the toggle button contains two path icon elements, only one of which is visible at a time. The path icons get their graphics from an assets file which is referenced as an included style set in the `App.xaml` file. The icon geometries are from the _Avalonia UI_ Fluent icons resource.
-
-:::info
-To see the full list of Fluent icons available with _Avalonia UI_, see [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
-:::
+The content zone of the toggle button contains two path icon elements, only one of which is visible at a time. The path icons get their graphics from an assets file which is referenced as an included style set in the `App.xaml` file. The icon geometries are from the Avalonia [Fluent icons resource](https://avaloniaui.github.io/icons.html).
 
 The visibility of the path icons is set by the window styles, and these use the `:checked` pseudo class to determine when the toggle button is in its checked state. So, when the toggle button is checked, then the `audio-on` path icon is visible, and the `audio-mute` path icon is hidden. And conversely, when the toggle button is not checked, then the `audio-mute` path icon is visible, and the `audio-on` path icon is hidden.
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ToggleButton).
-:::
-
-:::info
-View the source code on _GitHub_ [`ToggleButton.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)
-:::
+- [ToggleButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ToggleButton)
+- [`ToggleButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)
