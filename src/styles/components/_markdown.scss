@@ -1,14 +1,14 @@
 html[data-theme='light'] {
-  --markdown-toc-title-c: var(--c-indigo-60);
-  --markdown-toc-list-item-c: var(--c-indigo-70);
-  --markdown-text-intro-c: var(--c-carbon-80);
-  --markdown-bold-c: var(--c-carbon-100);
+  --markdown-toc-title-c: #686770;
+  --markdown-toc-list-item-c: #21253B;
+  --markdown-text-intro-c: #686770;
+  --markdown-bold-c: #21253B;
 }
 
 html[data-theme='dark'] {
   --markdown-toc-title-c: #fff;
   --markdown-toc-list-item-c: #fff;
-  --markdown-text-intro-c: var(--c-indigo-40);
+  --markdown-text-intro-c: #C1BBB8;
   --markdown-bold-c: #fff;
 }
 

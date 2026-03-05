@@ -1,19 +1,19 @@
 html[data-theme='light'] {
-  // Customer Portal navbar colors (light mode)
-  --navbar-link-c: var(--color-gray-700);
+  // Marketing website navbar colors (light mode)
+  --navbar-link-c: #686770;
 
-  --navbar-separator-bg-c: var(--color-gray-300);
+  --navbar-separator-bg-c: rgba(0, 0, 0, 0.12);
 
   --ifm-dropdown-background-color: var(--token-secondary-bg-c);
 
-  --navbar-icon-link-c: var(--color-gray-500);
+  --navbar-icon-link-c: #686770;
 }
 
 html[data-theme='dark'] {
-  // Customer Portal navbar colors (dark mode)
-  --navbar-link-c: var(--color-gray-300);
+  // Marketing website navbar colors (dark mode)
+  --navbar-link-c: #C1BBB8;
 
-  --navbar-separator-bg-c: var(--color-gray-700);
+  --navbar-separator-bg-c: rgba(255, 255, 255, 0.12);
 
   --navbar-icon-link-c: #fff;
 }
@@ -83,17 +83,18 @@ html[data-theme='dark'] {
 
         padding: 0.675rem 0.625rem;
 
-        // Customer Portal brand button style
+        // Marketing website brand button style
         background: var(--color-brand-500);
 
         color: #fff;
 
-        border-radius: 0.5rem;
+        border-radius: 9999px;
 
         white-space: nowrap;
 
-        font-weight: 600;
+        font-weight: 550;
         font-size: 0.75rem;
+        letter-spacing: 0.28px;
         line-height: 100%;
 
         margin-inline-start: 0.5rem;

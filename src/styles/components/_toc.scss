@@ -1,13 +1,13 @@
 html[data-theme='light'] {
-  // Customer Portal style colors
-  --toc-separator-c: var(--color-gray-200);
-  --ifm-toc-link-color: var(--color-gray-700);
+  // Warm neutral palette
+  --toc-separator-c: rgba(0, 0, 0, 0.12);
+  --ifm-toc-link-color: #686770;
 }
 
 html[data-theme='dark'] {
-  // Customer Portal dark mode colors
-  --toc-separator-c: var(--color-gray-700);
-  --ifm-toc-link-color: var(--color-gray-300);
+  // Obsidian dark palette
+  --toc-separator-c: rgba(255, 255, 255, 0.12);
+  --ifm-toc-link-color: #C1BBB8;
 }
 
 :root {
@@ -42,8 +42,7 @@ html[data-theme='dark'] {
       line-height: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      // Customer Portal style muted heading
-      color: var(--color-gray-500);
+      color: #686770;
     }
 
     .table-of-contents {

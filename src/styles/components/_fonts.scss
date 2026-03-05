@@ -1,18 +1,34 @@
 // Font Imports and Definitions
 
-// Saans Font (from Customer Portal)
+// Saans Font (from Marketing Website)
 @font-face {
   font-family: 'Saans';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/assets/fonts/saans/SaansLight.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Saans';
+  font-style: normal;
+  font-weight: 380;
   font-display: swap;
   src: url(/assets/fonts/saans/SaansRegular.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Saans';
+  font-style: italic;
+  font-weight: 380;
+  font-display: swap;
+  src: url(/assets/fonts/saans/SaansRegularItalic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Saans';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 570;
   font-display: swap;
   src: url(/assets/fonts/saans/SaansMedium.woff2) format('woff2');
 }
@@ -23,6 +39,15 @@
   font-weight: 600;
   font-display: swap;
   src: url(/assets/fonts/saans/SaansSemiBold.woff2) format('woff2');
+}
+
+// Saans Variable Font (full weight range)
+@font-face {
+  font-family: 'Saans Variable';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/fonts/saans/SaansUprights-VF.woff2) format('woff2');
 }
 
 // Google Fonts (fallback)

@@ -1,5 +1,4 @@
-// Admonition styles - matching Customer Portal Alert component
-// Customer Portal Alert: rounded-xl border with colored border and light background
+// Admonition styles - matching marketing website rounded style
 
 html[data-theme='light'] {
   // Customer Portal Alert backgrounds (bg-{variant}-50)
@@ -73,8 +72,8 @@ html[data-theme='dark'] {
 
 .theme-admonition {
   position: relative;
-  // Customer Portal Alert: rounded-xl border p-4
-  border-radius: 0.75rem;
+  // Marketing website: rounded-2xl (16px)
+  border-radius: 1rem;
   border-width: 1px;
   border-style: solid;
   padding: 1rem;

@@ -1,9 +1,9 @@
 html[data-theme='light'] {
-  --ifm-table-border-color: var(--c-indigo-30);
+  --ifm-table-border-color: rgba(0, 0, 0, 0.12);
 }
 
 html[data-theme='dark'] {
-  --ifm-table-border-color: var(--c-gray-90);
+  --ifm-table-border-color: rgba(255, 255, 255, 0.12);
 }
 
 :root {
@@ -23,7 +23,7 @@ th {
 
 table {
   display: table;
-  border-radius: 8px;
+  border-radius: 12px;
 
   border-style: hidden; /* hide standard table (collapsed) border */
   box-shadow: inset 0 0 0 1px var(--ifm-table-border-color);

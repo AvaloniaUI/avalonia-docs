@@ -1,18 +1,18 @@
-// Customer Portal underline-style tabs (matching AccelerateDashboard.tsx)
+// Underline-style tabs (warm palette)
 html[data-theme='light'] {
-  --ifm-tabs-color: var(--color-gray-500);
-  --ifm-tabs-color-hover: var(--color-gray-700);
+  --ifm-tabs-color: #686770;
+  --ifm-tabs-color-hover: #21253B;
   --ifm-tabs-color-active: var(--color-brand-500);
   --ifm-tabs-color-active-border: var(--color-brand-500);
-  --tabs-border-c: var(--color-gray-200);
+  --tabs-border-c: rgba(0, 0, 0, 0.12);
 }
 
 html[data-theme='dark'] {
-  --ifm-tabs-color: var(--color-gray-400);
-  --ifm-tabs-color-hover: var(--color-gray-200);
+  --ifm-tabs-color: #C1BBB8;
+  --ifm-tabs-color-hover: #F3F1F0;
   --ifm-tabs-color-active: var(--color-brand-400);
   --ifm-tabs-color-active-border: var(--color-brand-400);
-  --tabs-border-c: var(--color-gray-800);
+  --tabs-border-c: rgba(255, 255, 255, 0.12);
 }
 
 :root {

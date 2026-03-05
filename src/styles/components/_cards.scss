@@ -1,4 +1,4 @@
-// Card Components
+// Card Components (matching marketing website)
 
 .homepage-card {
   align-items: flex-start;
@@ -13,15 +13,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-color: rgb(var(--docs-color-secondary-800) / 1);
-  background-color: rgb(var(--docs-color-secondary-900) / 1);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: var(--color-bone);
 
   &:hover {
-    background-color: rgb(var(--docs-color-secondary-800) / 1);
+    box-shadow: var(--shadow-card);
   }
-  border-width: 1px;
-  transition-property: background-color, color;
-  border-radius: 8px;
+  transition-property: background-color, color, box-shadow;
+  border-radius: 1.25rem;
   position: relative;
   overflow: hidden;
 
@@ -50,6 +49,13 @@
   }
 }
 
+html[data-theme='dark'] {
+  .homepage-card {
+    border-color: rgba(255, 255, 255, 0.12);
+    background-color: var(--docs-card-background) !important;
+  }
+}
+
 .github-sample-card {
   align-items: flex-start;
   gap: 10px;
@@ -62,15 +68,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-color: rgb(var(--docs-color-secondary-800) / 1);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   background-color: #8b5cf6;
 
   &:hover {
     background-color: #a78bfa;
   }
-  border-width: 1px;
   transition-property: background-color, color;
-  border-radius: 8px;
+  border-radius: 1.25rem;
   position: relative;
   overflow: hidden;
 }
@@ -83,12 +88,19 @@
   .title {
     font-size: 16px;
     letter-spacing: -0.5px;
-    font-weight: 600;
+    font-weight: 570;
+    color: var(--color-card-title);
   }
 
   .description {
     font-size: 14px;
     color: var(--docs-color-text-100);
     line-height: 1.5;
+  }
+}
+
+html[data-theme='dark'] {
+  .card-content .title {
+    color: #fff;
   }
 }
