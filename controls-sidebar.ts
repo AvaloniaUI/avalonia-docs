@@ -209,6 +209,7 @@ const sidebars: SidebarsConfig = {
         'primitives/scrollbar',
         'primitives/usercontrol',
         'primitives/window',
+        'primitives/windowdrawndecorations',
       ],
     },
     {
