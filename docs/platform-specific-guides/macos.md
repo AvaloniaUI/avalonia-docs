@@ -93,16 +93,16 @@ Each `NativeMenuItem` requires either a `Click` event handler or a `Command` bin
 
 ### Keyboard shortcuts
 
-The `Gesture` property assigns a keyboard shortcut to a menu item. Use `Meta` for the Command key. The format is modifier keys joined by `+`, followed by the key name:
+The `Gesture` property assigns a keyboard shortcut to a menu item. In a gesture string, `Meta` represents the macOS Command (⌘) key. The format is modifier names joined by `+`, followed by the key name:
 
-| Gesture | macOS shortcut |
+| Gesture value | macOS shortcut |
 |---|---|
-| `Meta+S` | Cmd+S |
-| `Meta+Shift+S` | Cmd+Shift+S |
-| `Meta+Comma` | Cmd+, |
-| `Meta+Alt+Q` | Cmd+Option+Q |
+| `Meta+S` | ⌘S |
+| `Meta+Shift+S` | ⌘⇧S |
+| `Meta+Comma` | ⌘, |
+| `Meta+Alt+Q` | ⌘⌥Q |
 
-Available modifiers are `Meta`, `Control`, `Shift`, and `Alt`.
+The available modifier names are `Meta` (⌘ Command), `Control` (⌃), `Shift` (⇧), and `Alt` (⌥ Option).
 
 ## macOS platform conventions
 
@@ -238,7 +238,7 @@ You can register your app as the handler for specific file types so that double-
 
 The Avalonia native macOS code is located at `native/Avalonia.Native/src/OSX`. If you need to modify or debug the native layer, open the `Avalonia.Native.OSX.xcodeproj` project in Xcode.
 
-You can compile changes in Xcode using Cmd+B, then point your Avalonia application to the modified dylib. Find the output path by clicking on the dylib under Products in Xcode's project navigator, then specify it in your `AppBuilder`:
+You can compile changes in Xcode using ⌘B, then point your Avalonia application to the modified dylib. Find the output path by clicking on the dylib under **Products** in Xcode's project navigator, then specify it in your `AppBuilder`:
 
 ```csharp
 .With(new AvaloniaNativePlatformOptions

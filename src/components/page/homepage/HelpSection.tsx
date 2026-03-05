@@ -8,24 +8,21 @@ interface HelpSectionProps {
 
 export default function HelpSection({ className = '' }: HelpSectionProps): JSX.Element {
   return (
-    <section className="px-4">
+    <section className="px-4 py-10" style={{ backgroundColor: 'var(--help-section-bg, #F3F1F0)' }}>
       <div
         className={clsx(
-          'mx-auto max-w-7xl bg-white p-4 py-10 text-black dark:bg-darkblue dark:text-white lg:p-24 lg:py-20 border border-[#EDF2F9] dark:border-gray-600',
+          'mx-auto max-w-7xl p-4 py-10 lg:p-24 lg:py-20',
           className
         )}
-         style={{
-    borderWidth: '1px',
-    borderRadius: '8px'
-  }}      >
-        <h2 className="mb-12 text-center lg:text-5xl">
+      >
+        <h2 className="mb-12 text-center text-[#21253B] dark:text-white lg:text-5xl" style={{ fontWeight: 500 }}>
           How can we help?
         </h2>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <div className="rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
+          <div className="rounded-2xl bg-white dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
 
-            <h3 className="my-3">Premium Support</h3>
-            <p className="text-zinc-600 dark:text-zinc-400">
+            <h3 className="my-3 text-[#21253B] dark:text-white font-medium">Premium Support</h3>
+            <p className="text-[#686770] dark:text-[#C1BBB8]">
             Partner with the creators of Avalonia to ensure you have full support, every step of the way.
             </p>
             <Link
@@ -36,10 +33,10 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
             </Link>
           </div>
 
-          <div className="rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
+          <div className="rounded-2xl bg-white dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
 
-            <h3 className="my-3">Development Services</h3>
-            <p className="text-zinc-600 dark:text-zinc-400">
+            <h3 className="my-3 text-[#21253B] dark:text-white font-medium">Development Services</h3>
+            <p className="text-[#686770] dark:text-[#C1BBB8]">
               Whether it's app modernization, custom controls or additional features, we're here to help.
             </p>
             <Link
@@ -50,9 +47,9 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
             </Link>
           </div>
 
-          <div className="rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
-            <h3 className="my-3">FAQs</h3>
-            <p className="text-zinc-600 dark:text-zinc-400">
+          <div className="rounded-2xl bg-white dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+            <h3 className="my-3 text-[#21253B] dark:text-white font-medium">FAQs</h3>
+            <p className="text-[#686770] dark:text-[#C1BBB8]">
               Browse our FAQs to find answers to commonly asked
               questions.
             </p>
@@ -62,6 +59,12 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
           </div>
         </div>
       </div>
+
+      <style>{`
+        [data-theme='dark'] {
+          --help-section-bg: #0B2A54;
+        }
+      `}</style>
     </section>
   );
 }

@@ -1,0 +1,111 @@
+version: 1
+target: avalonia-docs
+
+templates:
+  tutorial:
+    intent: guided_end_to_end_task
+    orientation: task_first
+    required_sections:
+      - title_with_action_outcome
+      - intro_outcome_paragraph
+      - learning_objectives_checklist
+      - prerequisites
+      - ordered_procedure
+      - run_or_verify
+      - see_also_or_related_content
+    optional_sections:
+      - environment_orientation
+      - admonition_blocks
+    ordering_rules:
+      - prerequisites_before_procedure: true
+      - verification_after_procedure: true
+
+  how_to:
+    intent: focused_task
+    orientation: task_first_or_mixed
+    required_sections:
+      - task_title
+      - brief_intro
+      - one_or_more_task_sections
+      - see_also_or_related_content
+    optional_sections:
+      - prerequisites
+      - ordered_steps
+      - admonitions
+    ordering_rules:
+      - prerequisites_if_present_first: true
+
+  conceptual:
+    intent: explain_model_and_behavior
+    orientation: concept_first
+    required_sections:
+      - concept_title
+      - sectioned_explanation
+      - see_also
+    optional_sections:
+      - prerequisites
+      - examples
+      - comparison_tables
+      - diagrams
+
+  overview:
+    intent: orient_and_link
+    orientation: concept_first
+    required_sections:
+      - overview_title
+      - opening_paragraph
+      - sectioned_explanation
+      - see_also
+    optional_sections:
+      - prerequisites
+      - in_this_section
+
+  reference:
+    intent: precise_definition
+    orientation: reference_first
+    required_sections:
+      - title
+      - syntax
+      - return_or_value_semantics
+      - remarks
+      - see_also
+    optional_sections:
+      - exceptions
+      - examples
+    ordering_rules:
+      - syntax_before_remarks: true
+
+  troubleshooting:
+    intent: diagnose_and_fix
+    orientation: problem_first
+    required_sections:
+      - problem_statement
+      - problem_analysis
+      - remediation_options
+    optional_sections:
+      - admonition_blocks
+      - see_also
+
+  release_notes:
+    intent: summarize_version_changes
+    orientation: version_first
+    required_sections:
+      - version_title
+      - change_categories
+    optional_sections:
+      - release_announcements
+      - api_diff
+      - see_also
+
+  migration:
+    intent: phased_upgrade
+    orientation: task_first
+    required_sections:
+      - prerequisites
+      - assessment_or_overview
+      - migration_steps
+      - verification
+      - related_content
+    optional_sections:
+      - breaking_changes_list
+      - post_upgrade_guidance

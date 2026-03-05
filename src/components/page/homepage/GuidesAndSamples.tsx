@@ -54,12 +54,12 @@ function Guide({ title, text, link }: (typeof guides)[0]) {
   return (
     <Link
       to={link}
-      className="group flex cursor-pointer items-start gap-2 rounded-lg border-2 border-transparent p-3 text-inherit transition-colors hover:border-primary hover:text-primary"
+      className="group flex cursor-pointer items-start gap-2 rounded-xl border border-transparent p-3 text-inherit transition-colors hover:border-primary hover:text-primary"
     >
 
       <div className="flex flex-col">
-        <h4 className="mb-1 font-semibold">{title}</h4>
-        <p className="mb-0 text-sm text-text-400">{text}</p>
+        <h4 className="mb-1 font-medium text-[#21253B] dark:text-white">{title}</h4>
+        <p className="mb-0 text-sm text-[#686770]">{text}</p>
       </div>
 
       <ChevronRight className="ml-auto h-5 w-5 self-center opacity-0 transition-opacity group-hover:opacity-100" />
@@ -69,9 +69,9 @@ function Guide({ title, text, link }: (typeof guides)[0]) {
 
 function Sample({ title, source }: Sample) {
   return (
-    <div className="group flex cursor-pointer items-center justify-between rounded-lg border-2 border-transparent p-3 text-text-400/60 transition-colors hover:border-primary hover:text-primary">
+    <div className="group flex cursor-pointer items-center justify-between rounded-xl border border-transparent p-3 text-[#686770] transition-colors hover:border-primary hover:text-primary">
       <div className="flex flex-col">
-        <h4 className="mb-1 text-black group-hover:text-primary dark:text-white">
+        <h4 className="mb-1 text-[#21253B] group-hover:text-primary dark:text-white">
           {title}
         </h4>
       </div>
@@ -83,7 +83,7 @@ function Sample({ title, source }: Sample) {
             className="flex items-center gap-1 rounded-lg py-1 px-3 text-inherit transition-colors group-hover:bg-primary group-hover:text-white"
           >
             <GitHub className="h-4 w-4" />
-            <span className="font-semibold">Clone</span>
+            <span className="font-medium">Clone</span>
           </Link>
         )}
       </div>
@@ -98,7 +98,7 @@ export default function GuidesAndSamples() {
         <div className="mb-8 flex items-center justify-between">
           <h3 className="m-0">Popular how-to guides</h3>
 
-          <Link to="/docs/welcome" className="font-outfit text-sm font-semibold">
+          <Link to="/docs/welcome" className="text-sm font-medium">
             View more guides <ArrowRightFilled className="ml-1" />
           </Link>
         </div>
@@ -112,7 +112,7 @@ export default function GuidesAndSamples() {
 
       <div
         className={clsx(
-          'mx-8 block flex-shrink-0 bg-gradient-to-b from-transparent via-secondary-700 to-transparent',
+          'mx-8 block flex-shrink-0 bg-gradient-to-b from-transparent via-[rgba(0,0,0,0.12)] to-transparent',
           'hidden w-px md:block'
         )}
       />
@@ -123,7 +123,7 @@ export default function GuidesAndSamples() {
 
           <Link
             to="https://github.com/AvaloniaUI/Avalonia.Samples"
-            className="font-outfit text-sm font-semibold"
+            className="text-sm font-medium"
           >
             All apps <ArrowRightFilled className="ml-1" />
           </Link>

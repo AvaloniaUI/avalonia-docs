@@ -1,17 +1,20 @@
 html[data-theme='light'] {
   // Marketing website navbar colors (light mode)
-  --navbar-link-c: #686770;
+  // Nav link text: rgb(22, 28, 45) from marketing framer-styles-preset-13f9t5h
+  --navbar-link-c: #161C2D;
+  --navbar-link-hover-bg: rgba(0, 0, 0, 0.06);
 
   --navbar-separator-bg-c: rgba(0, 0, 0, 0.12);
 
   --ifm-dropdown-background-color: var(--token-secondary-bg-c);
 
-  --navbar-icon-link-c: #686770;
+  --navbar-icon-link-c: #161C2D;
 }
 
 html[data-theme='dark'] {
   // Marketing website navbar colors (dark mode)
   --navbar-link-c: #C1BBB8;
+  --navbar-link-hover-bg: rgba(255, 255, 255, 0.06);
 
   --navbar-separator-bg-c: rgba(255, 255, 255, 0.12);
 
@@ -47,30 +50,25 @@ html[data-theme='dark'] {
               display: flex;
             }
 
-            align-self: stretch;
+            align-self: center;
             align-items: center;
-    
-            position: relative;
-    
+
+            // Pill-shaped nav links (matching marketing site menubar)
+            border-radius: 9999px;
+            padding: 0.5rem 0.75rem;
+            transition: background-color 0.15s ease-out, color 0.15s ease-out;
+
             &::after {
-              content: '';
-              position: absolute;
-              height: 2px;
-              left: var(--ifm-navbar-item-padding-horizontal);
-              right: var(--ifm-navbar-item-padding-horizontal);
-              bottom: 0;
-    
-              background: rgba(0, 0, 0, 0);
-    
-              transition: background-color 0.2s ease-out;
+              // Remove the underline indicator - using pill hover instead
+              display: none;
             }
-    
+
+            &:hover {
+              background-color: var(--navbar-link-hover-bg);
+            }
+
             &--active {
               color: var(--ifm-link-color);
-    
-              &::after {
-                background: var(--ifm-link-color);
-              }
             }
           }
         }
@@ -210,17 +208,20 @@ html[data-theme='dark'] {
     }
 
     &__item {
-      transition: opacity 0.2s ease-out;
+      transition: background-color 0.15s ease-out, color 0.15s ease-out;
 
       display: inline-block;
 
       &.dropdown {
-        align-self: stretch;
+        align-self: center;
         display: flex;
 
-        .navbar__link {
+        // Pill-shaped dropdown triggers (matching marketing)
+        > .navbar__link {
           display: flex;
           align-items: center;
+          border-radius: 9999px;
+          padding: 0.5rem 0.75rem;
 
           &::after {
             position: static;
@@ -237,29 +238,36 @@ html[data-theme='dark'] {
           }
         }
 
+        &:hover > .navbar__link {
+          background-color: var(--navbar-link-hover-bg);
+        }
+
         .dropdown__menu {
           top: 100%;
         }
       }
 
+      // Pill-shaped hover for regular nav links (matching marketing)
       &:not(.navbar__link--active) {
         &.navbar__link {
           &:hover {
-            color: var(--ifm-link-color);
+            background-color: var(--navbar-link-hover-bg);
+            color: var(--navbar-link-c);
           }
         }
       }
 
       &:not(.dropdown):not(.cta):not(.icon-link-mask) {
-        
+
       }
     }
 
     &__link {
-      font-weight: 500;
+      // Marketing site uses "Saans Medium" (weight 570) at 14px
+      font-weight: 570;
       font-size: 0.875rem;
       line-height: 1.7;
-      letter-spacing: 0.42px;
+      letter-spacing: 0.03em;
 
       color: var(--navbar-link-c);
     }

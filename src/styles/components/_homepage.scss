@@ -18,7 +18,7 @@
     margin-bottom: 3rem;
 
     h3 {
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 }
@@ -27,7 +27,7 @@
 #hero {
   padding: 2rem 0 1.5rem 0;
   margin-bottom: 4rem;
-  border-bottom: 1px solid var(--docs-color-border);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
 
   h2 {
     font-size: 36px;
@@ -40,14 +40,10 @@
 
 // Hero Title
 .hero-title {
-  font-size: 3.5rem;
-  white-space: 'normal';
-  width: 'fit-content';
-  line-height: '1.2';
-
-  @media (max-width: 600px) {
-    font-size: 3rem;
-  }
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  white-space: normal;
+  width: fit-content;
+  line-height: 1.1;
 }
 
 // Section Layout
