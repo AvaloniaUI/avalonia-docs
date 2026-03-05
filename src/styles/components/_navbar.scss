@@ -69,7 +69,8 @@ html[data-theme='dark'] {
             }
 
             &--active {
-              color: var(--ifm-link-color);
+              background-color: var(--navbar-link-hover-bg);
+              color: var(--navbar-link-c);
             }
           }
         }

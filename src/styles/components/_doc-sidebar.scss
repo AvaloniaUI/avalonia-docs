@@ -3,11 +3,11 @@ html[data-theme='light'] {
   --sidebar-category-c: #686770;
   --sidebar-border-c: rgba(0, 0, 0, 0.12);
 
-  --ifm-menu-color-background-active: var(--color-brand-50);
+  --ifm-menu-color-background-active: rgba(0, 0, 0, 0.06);
   --ifm-menu-color: #686770;
 
-  --sidebar-item-bg-active: var(--color-brand-50);
-  --sidebar-item-text-active: var(--color-brand-500);
+  --sidebar-item-bg-active: rgba(0, 0, 0, 0.06);
+  --sidebar-item-text-active: #161C2D;
   --sidebar-item-text-inactive: #686770;
   --sidebar-item-hover-bg: rgba(0, 0, 0, 0.06);
   --sidebar-item-icon-active: var(--color-brand-500);
@@ -21,8 +21,8 @@ html[data-theme='dark'] {
 
   --ifm-menu-color: #C1BBB8;
 
-  --sidebar-item-bg-active: rgba(0, 125, 249, 0.12);
-  --sidebar-item-text-active: var(--color-brand-400);
+  --sidebar-item-bg-active: rgba(255, 255, 255, 0.06);
+  --sidebar-item-text-active: #fff;
   --sidebar-item-text-inactive: #C1BBB8;
   --sidebar-item-hover-bg: rgba(255, 255, 255, 0.06);
   --sidebar-item-icon-active: var(--color-brand-400);
