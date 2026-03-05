@@ -160,11 +160,11 @@ rules:
     category: micro-style
     severity: minor
     scope: [tutorial, how-to]
-    pattern: "keyboard key markup"
-    pass_criteria: "keyboard shortcuts use <kbd>...</kbd>"
-    rationale: "Shortcut formatting is explicit in task pages."
-    do_example: "Press <kbd>F5</kbd>."
-    dont_example: "Press F5."
+    pattern: "keyboard shortcut markup"
+    pass_criteria: "keyboard shortcuts use <kbd> tags with platform-native symbols"
+    rationale: "Styled <kbd> tags with symbols (⌘⇧⌥⌃) render as distinct key caps and are universally recognisable."
+    do_example: "Press <kbd>⌘</kbd> <kbd>S</kbd> to save."
+    dont_example: "Press Cmd+S to save."
     automated: true
 
   - id: TERM-001

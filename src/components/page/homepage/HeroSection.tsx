@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from '@docusaurus/Link';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
 function AnimatedBlueLazy() {
@@ -10,6 +9,25 @@ function AnimatedBlueLazy() {
       {() => {
         const { AnimatedBlue } = require('@site/src/components/ui/AnimatedBlue');
         return <AnimatedBlue className="absolute inset-0" />;
+      }}
+    </BrowserOnly>
+  );
+}
+
+function PrimaryButtonLazy({ to, variant, size, children }: { to: string; variant?: 'dark' | 'white'; size?: 'md' | 'lg'; children: React.ReactNode }) {
+  return (
+    <BrowserOnly fallback={
+      <a
+        href={to}
+        className="inline-flex items-center gap-2 rounded-full whitespace-nowrap no-underline"
+        style={{ backgroundColor: '#05051E', color: '#F3F1F0', padding: '12px 12px 12px 20px' }}
+      >
+        {children}
+      </a>
+    }>
+      {() => {
+        const { PrimaryButton } = require('@site/src/components/ui/PrimaryButton');
+        return <PrimaryButton to={to} variant={variant} size={size}>{children}</PrimaryButton>;
       }}
     </BrowserOnly>
   );
@@ -29,7 +47,7 @@ export default function HeroSection() {
         className="absolute inset-x-0 bottom-0 z-[1] pointer-events-none"
         style={{
           height: '35%',
-          background: 'linear-gradient(to bottom, transparent, var(--hero-fade-target, rgb(243, 241, 240)))',
+          background: 'linear-gradient(to bottom, transparent, var(--hero-fade-target, #F3F1F0))',
         }}
       />
 
@@ -46,12 +64,12 @@ export default function HeroSection() {
             className="text-white"
             style={{
               fontWeight: 380,
-              fontSize: 'clamp(40px, 8vw, 72px)',
+              fontSize: 'clamp(48px, 6vw, 96px)',
               lineHeight: '1.125em',
-              letterSpacing: '-0.02em',
+              letterSpacing: '-1.92px',
             }}
           >
-            Avalonia documentation
+            The future of .NET UI
           </h1>
 
           <p
@@ -64,33 +82,20 @@ export default function HeroSection() {
               opacity: 0.8,
             }}
           >
-            Harness the power of cross-platform .NET. One codebase. Infinite possibilities.
+            Avalonia Developer Documentation
           </p>
         </div>
 
-        <div style={{ marginTop: '48px' }}>
-          <Link
-            to="/docs/welcome"
-            className="inline-flex items-center no-underline hover:no-underline"
-            style={{
-              backgroundColor: '#05051E',
-              color: '#F3F1F0',
-              borderRadius: '9999px',
-              padding: '12px 24px',
-              fontWeight: 550,
-              letterSpacing: '0.28px',
-              fontSize: '16px',
-              transition: 'opacity 0.2s',
-            }}
-          >
+        <div className="flex items-center gap-6" style={{ marginTop: '56px' }}>
+          <PrimaryButtonLazy to="/docs/welcome" variant="dark" size="lg">
             Get started
-          </Link>
+          </PrimaryButtonLazy>
         </div>
       </div>
 
       <style>{`
         html[data-theme='dark'] {
-          --hero-fade-target: #1B1B1B;
+          --hero-fade-target: #05051E;
         }
       `}</style>
     </section>

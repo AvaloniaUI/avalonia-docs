@@ -32,6 +32,22 @@ html[data-theme='dark'] {
     color: var(--markdown-bold-c);
   }
 
+  // Keyboard shortcut styling
+  kbd {
+    display: inline-block;
+    padding: 0.15em 0.4em;
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 0.85em;
+    line-height: 1;
+    color: var(--ifm-heading-color);
+    background-color: var(--ifm-code-background);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 4px;
+    box-shadow: 0 1px 0 var(--ifm-color-emphasis-200);
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+
   //differentiate between inline code and code blocks
   code {
     font-size: 95%;

@@ -37,6 +37,7 @@ html[data-theme='dark'] {
 
     &__items {
       min-width: auto;
+      gap: 0.25rem;
 
       &:not(.navbar__items--right) {
         .navbar__link {

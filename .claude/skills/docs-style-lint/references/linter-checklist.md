@@ -23,7 +23,7 @@ Severity levels:
 | `MIC-002` | major | all pages | Code identifiers and literals use `backticks`. | Plain-text identifiers. |
 | `MIC-003` | blocker | all pages with code | Every fenced block has language tag. | Untagged code fence. |
 | `MIC-004` | major | all pages | Admonitions use `:::note`, `:::tip`, `:::info`, `:::caution`, `:::danger`. | Non-standard admonition or MS-style `> [!NOTE]`. |
-| `MIC-005` | minor | task pages | Keyboard shortcuts use `<kbd>...</kbd>`. | Raw key names. |
+| `MIC-005` | minor | task pages | Keyboard shortcuts use `<kbd>` tags with platform symbols (e.g., `<kbd>⌘</kbd> <kbd>S</kbd>`). | Plain text like "Cmd+S" or raw symbols without `<kbd>` wrapper. |
 | `TERM-001` | major | intros with acronyms | First mention expands acronym. | Acronym before expansion. |
 | `TERM-002` | major | all pages | Uses `control` not `widget`. | Uses `widget` for UI components. |
 | `TERM-003` | major | all pages | `must` for requirements; `should` for guidance. | `must` for optional advice. |

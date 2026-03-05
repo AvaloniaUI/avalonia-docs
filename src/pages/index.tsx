@@ -21,19 +21,29 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title}`}
       description="Welcome to the Avalonia documentation site! Here you'll find guides and resources to help you get started with Avalonia, a cross-platform .NET UI framework. Whether you're a beginner or an experienced developer, our documentation provides everything you need to build stunning applications with Avalonia UI."
       noFooter>
-      <HeroSection/>
+      <div style={{ backgroundColor: 'var(--homepage-bg)' }}>
+        <HeroSection/>
 
-      <HeroQuickLinks />
+        <HeroQuickLinks />
 
-      <GuidesAndSamplesSection/>
-      
-      <div className="z-0">
-        <HelpSection className="-mb-48" />
+        <GuidesAndSamplesSection/>
+
+        <div className="z-0">
+          <HelpSection className="-mb-48" />
+        </div>
+
+        <CommunitySection />
+        <HomeFooter/>
       </div>
 
-      <CommunitySection />
-      <HomeFooter/>
+      <style>{`
+        :root {
+          --homepage-bg: #F3F1F0;
+        }
+        html[data-theme='dark'] {
+          --homepage-bg: #05051E;
+        }
+      `}</style>
     </Layout>
   );
 }
-

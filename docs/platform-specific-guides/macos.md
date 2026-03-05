@@ -93,16 +93,23 @@ Each `NativeMenuItem` requires either a `Click` event handler or a `Command` bin
 
 ### Keyboard shortcuts
 
-The `Gesture` property assigns a keyboard shortcut to a menu item. In a gesture string, `Meta` represents the macOS Command (⌘) key. The format is modifier names joined by `+`, followed by the key name:
+The `Gesture` property assigns a keyboard shortcut to a menu item. Avalonia uses platform-neutral modifier names in gesture strings. On macOS, these map to the standard modifier keys:
 
-| Gesture value | macOS shortcut |
+| Avalonia modifier | macOS key | Symbol |
+|---|---|---|
+| `Meta` | Command | <kbd>⌘</kbd> |
+| `Control` | Control | <kbd>⌃</kbd> |
+| `Shift` | Shift | <kbd>⇧</kbd> |
+| `Alt` | Option | <kbd>⌥</kbd> |
+
+A gesture string joins one or more modifiers with `+`, followed by the key name:
+
+| `Gesture` value | macOS shortcut |
 |---|---|
-| `Meta+S` | ⌘S |
-| `Meta+Shift+S` | ⌘⇧S |
-| `Meta+Comma` | ⌘, |
-| `Meta+Alt+Q` | ⌘⌥Q |
-
-The available modifier names are `Meta` (⌘ Command), `Control` (⌃), `Shift` (⇧), and `Alt` (⌥ Option).
+| `Meta+S` | <kbd>⌘</kbd> <kbd>S</kbd> |
+| `Meta+Shift+S` | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>S</kbd> |
+| `Meta+Comma` | <kbd>⌘</kbd> <kbd>,</kbd> |
+| `Meta+Alt+Q` | <kbd>⌘</kbd> <kbd>⌥</kbd> <kbd>Q</kbd> |
 
 ## macOS platform conventions
 
@@ -114,14 +121,14 @@ The following shortcuts are conventions that macOS users expect. Configure them 
 
 | Action | Shortcut | Notes |
 |---|---|---|
-| Preferences | Cmd+, | Should open your settings/preferences view |
-| Quit | Cmd+Q | Handled automatically by the native menu |
-| Close Window | Cmd+W | Bind to close the active window |
-| Minimize | Cmd+M | Handled automatically |
-| Hide | Cmd+H | Handled automatically |
-| Full Screen | Cmd+Ctrl+F | Handled automatically |
-| Select All | Cmd+A | Handled automatically in text controls |
-| Find | Cmd+F | Bind to your search/find functionality |
+| Preferences | <kbd>⌘</kbd> <kbd>,</kbd> | Should open your settings/preferences view |
+| Quit | <kbd>⌘</kbd> <kbd>Q</kbd> | Handled automatically by the native menu |
+| Close Window | <kbd>⌘</kbd> <kbd>W</kbd> | Bind to close the active window |
+| Minimize | <kbd>⌘</kbd> <kbd>M</kbd> | Handled automatically |
+| Hide | <kbd>⌘</kbd> <kbd>H</kbd> | Handled automatically |
+| Full Screen | <kbd>⌘</kbd> <kbd>⌃</kbd> <kbd>F</kbd> | Handled automatically |
+| Select All | <kbd>⌘</kbd> <kbd>A</kbd> | Handled automatically in text controls |
+| Find | <kbd>⌘</kbd> <kbd>F</kbd> | Bind to your search/find functionality |
 
 ### PlatformHotkeyConfiguration
 
@@ -238,7 +245,7 @@ You can register your app as the handler for specific file types so that double-
 
 The Avalonia native macOS code is located at `native/Avalonia.Native/src/OSX`. If you need to modify or debug the native layer, open the `Avalonia.Native.OSX.xcodeproj` project in Xcode.
 
-You can compile changes in Xcode using ⌘B, then point your Avalonia application to the modified dylib. Find the output path by clicking on the dylib under **Products** in Xcode's project navigator, then specify it in your `AppBuilder`:
+You can compile changes in Xcode using <kbd>⌘</kbd> <kbd>B</kbd>, then point your Avalonia application to the modified dylib. Find the output path by clicking on the dylib under **Products** in Xcode's project navigator, then specify it in your `AppBuilder`:
 
 ```csharp
 .With(new AvaloniaNativePlatformOptions

@@ -8,7 +8,7 @@ interface HelpSectionProps {
 
 export default function HelpSection({ className = '' }: HelpSectionProps): JSX.Element {
   return (
-    <section className="px-4 py-10" style={{ backgroundColor: 'var(--help-section-bg, #F3F1F0)' }}>
+    <section className="px-4 py-10" style={{ backgroundColor: 'var(--help-section-bg, #FFFFFF)' }}>
       <div
         className={clsx(
           'mx-auto max-w-7xl p-4 py-10 lg:p-24 lg:py-20',
@@ -19,7 +19,7 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
           How can we help?
         </h2>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <div className="rounded-2xl bg-white dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+          <div className="rounded-2xl bg-[#F3F1F0] dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
 
             <h3 className="my-3 text-[#21253B] dark:text-white font-medium">Premium Support</h3>
             <p className="text-[#686770] dark:text-[#C1BBB8]">
@@ -33,7 +33,7 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
             </Link>
           </div>
 
-          <div className="rounded-2xl bg-white dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+          <div className="rounded-2xl bg-[#F3F1F0] dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
 
             <h3 className="my-3 text-[#21253B] dark:text-white font-medium">Development Services</h3>
             <p className="text-[#686770] dark:text-[#C1BBB8]">
@@ -47,7 +47,7 @@ export default function HelpSection({ className = '' }: HelpSectionProps): JSX.E
             </Link>
           </div>
 
-          <div className="rounded-2xl bg-white dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
+          <div className="rounded-2xl bg-[#F3F1F0] dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
             <h3 className="my-3 text-[#21253B] dark:text-white font-medium">FAQs</h3>
             <p className="text-[#686770] dark:text-[#C1BBB8]">
               Browse our FAQs to find answers to commonly asked

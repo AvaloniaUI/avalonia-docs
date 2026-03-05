@@ -61,7 +61,7 @@ Apply rules from [house-rules.yaml](references/house-rules.yaml) that match the 
 **Minor-level checks (style drift warnings):**
 
 14. **VOI-003**: Intensifiers (`simply`, `obviously`, `just`) are rare (< 1 per 1,000 words)
-15. **MIC-005**: Keyboard shortcuts use `<kbd>` markup
+15. **MIC-005**: Keyboard shortcuts use `<kbd>` tags with platform-native symbols (e.g., `<kbd>⌘</kbd> <kbd>S</kbd>` not plain text "Cmd+S")
 16. **STR-009**: Intro before first H2 is <= 150 words
 
 ### Step 3: Run terminology checks
