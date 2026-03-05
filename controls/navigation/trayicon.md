@@ -5,22 +5,18 @@ title: TrayIcon
 
 import TrayIconScreenshot from '/img/controls/trayicon/trayicon.gif';
 
-# TrayIcon
-
-## Overview
-
-The `TrayIcon` allows an _Avalonia UI_ application to display an icon and a native menu in the system tray. It is supported on _Windows_, _macOS_ and some _Linux_ distributions (it is confirmed to work on _Ubuntu_).
+The `TrayIcon` allows an Avalonia application to display an icon and a native menu in the system tray. It is supported on _Windows_, _macOS_ and some _Linux_ distributions (it is confirmed to work on _Ubuntu_).
 
 You must define a tray menu in the application XAML file.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
 <table><thead><tr><th width="255">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Icon</code></td><td>The icon to display in the system tray. Typically loaded from the application assets.</td></tr><tr><td><code>ToolTipText</code></td><td>Tool tip text displayed when the user hovers over the tray icon.</td></tr><tr><td>TrayIcon.Menu</td><td>The <strong>native menu</strong> control attached to the tray icon.</td></tr></tbody></table>
 
 :::info
-You must use a **native menu** with the tray icon, and not the _Avalonia UI_ menu control. For full details about the native menu, see the reference [here](/controls/menus/nativemenu).
+You must use a **native menu** with the tray icon, and not the Avalonia menu control. For full details about the native menu, see [NativeMenu](/controls/menus/nativemenu).
 :::
 
 ## Example
@@ -65,12 +61,6 @@ Include the `.ico` file in the `.csproj` file using an `AvaloniaResource` item:
 
 <img src={TrayIconScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see here.
-:::
-
-:::info
-View the source code on GitHub [`TrayIcon.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TrayIcon.cs)
-:::
+- [`TrayIcon.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TrayIcon.cs)

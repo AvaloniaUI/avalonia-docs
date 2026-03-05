@@ -7,8 +7,6 @@ import ImageUnscaledScreenshot from '/img/controls/image/image-unscaled.png';
 import ImageUniformToFillScreenshot from '/img/controls/image/image-uniform-to-fill.png';
 import BlendModeMultiply from '/img/reference/animations-and-graphics/bitmap-blend-modes/Multiply.png';
 
-# Image
-
 The image can display raster images from a specified image source. The source can be:
 
 * a string constant naming an application asset,
@@ -22,7 +20,7 @@ The image can be rendered in a few different blend modes, which changes the way 
 The image displayed can be resized and scaled.  The default settings for scaling (uniform stretch in both directions) will result in the image being fitted to the size (width and/or height) given.
 
 :::info
-The scaling settings for an image are the same as for the view box, see the reference [here](/controls/layout/containers/viewbox).
+The scaling settings for an image are the same as for the [Viewbox](/controls/layout/containers/viewbox).
 :::
 
 ## Examples
@@ -69,12 +67,7 @@ This example is using two images, where the second image is using the `Multiply`
 
 <img src={BlendModeMultiply} alt="" width="350"/>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Image).
-:::
-
-:::info
-View the source code on _GitHub_ [`Image.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Image.cs)
-:::
+- [Image API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Image)
+- [`Image.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Image.cs)

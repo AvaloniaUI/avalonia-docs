@@ -5,17 +5,11 @@ title: PathIcon
 
 import PathIconHouseScreenshot from '/img/controls/pathicon/pathicon-house.png';
 
-# PathIcon
-
-The `PathIcon` control can draw an icon graphic from a stream geometry. For example, you can use the icon geometries from the _Avalonia UI_ Fluent icons resource.
-
-:::info
-To see the full list of Fluent icons available with _Avalonia UI_, see [https://avaloniaui.github.io/icons.html](https://avaloniaui.github.io/icons.html)
-:::
+The `PathIcon` control can draw an icon graphic from a stream geometry. For example, you can use the icon geometries from the Avalonia [Fluent icons resource](https://avaloniaui.github.io/icons.html).
 
 This control is most often used as part of a composition inside another control. For example, to create an icon in a menu or a button.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -38,8 +32,7 @@ It works in the preview pane as well:
 
 <img src={PathIconHouseScreenshot} alt="" />
 
-## More Information
+## See also
 
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_PathIcon).
-
-View the source code on _GitHub_ [`PathIcon.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PathIcon.cs)
+- [PathIcon API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_PathIcon)
+- [`PathIcon.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PathIcon.cs)

@@ -6,15 +6,13 @@ title: Menu
 import MenuTopDockScreenshot from '/img/controls/menu/menu-top-dock.gif';
 import MenuIconScreenshot from '/img/controls/menu/menu-icon.gif';
 
-# Menu
-
 The menu control can add menu structure to an application. You will usually place a menu at the top edge of a dock panel control, so that it is drawn at the top of a window.
 
 :::info
-For reference information about the dock panel, see [here](/controls/layout/panels/dockpanel).
+For reference information about the dock panel, see [DockPanel](/controls/layout/panels/dockpanel).
 :::
 
-## Menu Items
+## Menu items
 
 A menu element will usually contain a set of nested `<MenuItem>` elements. The first level of menu items defines the horizontal part of the menu. Subsequent levels of menu items are drop-downs.
 
@@ -26,7 +24,7 @@ You can add menu separator lines by including a `<Separator>` element or by addi
 <MenuItem Header="-" />
 ```
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -107,7 +105,7 @@ This example creates a menu docked at the top edge of a window.
 </Window>
 ```
 
-## Accelerator Keys
+## Accelerator keys
 
 An accelerator key is identified by a single letter in the header preceded by an underscore. For example:
 
@@ -123,7 +121,7 @@ You will see that accelerator keys, where defined, are underlined on the menu as
 
 Once keyboard interaction has been initiated with the Alt key, the user can also navigate the menus using the keyboard arrow keys. Menu items may be selected using the Enter key on the keyboard.
 
-## Menu Commands
+## Menu commands
 
 To initiate an action, the command property of a menu item can be bound to an `ICommand` object. The command will be executed when the menu item is clicked or selected with the keyboard. For example:
 
@@ -136,10 +134,10 @@ To initiate an action, the command property of a menu item can be bound to an `I
 ```
 
 :::info
-For guidance on how to bind to commands, see [here](/docs/input-interaction/adding-interactivity).
+For guidance on how to bind to commands, see [Adding interactivity](/docs/input-interaction/adding-interactivity).
 :::
 
-## Menu Icons
+## Menu icons
 
 A menu icon can be displayed by placing an image or a path icon in the `<MenuItem.Icon>` attached property.
 
@@ -161,15 +159,10 @@ A menu icon can be displayed by placing an image or a path icon in the `<MenuIte
 ```
 
 :::info
-For more detailed guidance on how to add icons to your menus, see [here](/docs/graphics-animation/adding-icons).
+For more detailed guidance on how to add icons to your menus, see [Adding icons](/docs/graphics-animation/adding-icons).
 :::
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Menu).
-:::
-
-:::info
-View the source code on _GitHub_ [`Menu.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)
-:::
+- [Menu API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Menu)
+- [`Menu.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)

@@ -3,13 +3,11 @@ id: tabcontrol
 title: TabControl
 ---
 
-# TabControl
-
 The `TabControl` allows you to sub-divide a view into tab items.
 
 Each tab item has a header and a content zone. The headers are presented in a strip, in the sequence they occur in the XAML. When the user clicks on a tab header, its content becomes visible, and is placed below the tab strip in the content zone of the tab control.
 
-You can compose the UI in both the header and content zones to suit the UI requirements of your _Avalonia UI_ app.
+You can compose the UI in both the header and content zones to suit the UI requirements of your Avalonia app.
 
 :::info
 If you only need the function of the tab headers part of this control, consider using the [tab strip](/controls/navigation/tabstrip) instead.
@@ -36,12 +34,7 @@ This is simple tab example. The tab content is just some text:
 
 </XamlPreview>
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TabControl).
-:::
-
-:::info
-View the source code on _GitHub_ [`TabControl.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TabControl.cs)
-:::
+- [TabControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TabControl)
+- [`TabControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TabControl.cs)

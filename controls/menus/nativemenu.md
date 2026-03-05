@@ -3,8 +3,6 @@ id: nativemenu
 title: NativeMenu
 ---
 
-# NativeMenu
-
 The `NativeMenu` can display a menu on _macOS_ and some Linux distributions.
 
 You can create sub-menus by nesting `<MenuItem>` elements.
@@ -15,7 +13,7 @@ You can add menu separator lines by including a `<NativeMenuItemSeparator>` elem
 <NativeMenuItemSeparator Header="-" />
 ```
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -68,7 +66,7 @@ Changing the application's `Name` property will cause the application menu heade
 
 You will also have to add the appropriate event handlers in the code-behind.
 
-```C#
+```csharp
 private void AppAbout_OnClick(object? sender, System.EventArgs args) {
 
 }
@@ -82,7 +80,7 @@ private void AppPreferences_OnClick(object? sender, System.EventArgs args) {
 
 This example adds a *File* menu and an *Edit* menu. For context regarding where in the XAML the `NativeMenu.Menu` element should go, other XML tags are included but are missing attributes necessary for the application to function for brevity.
 
-```Xml
+```xml
 <Window>
     <Design.DataContext />
 
@@ -112,7 +110,7 @@ This example adds a *File* menu and an *Edit* menu. For context regarding where 
 
 In the view-model, you would then add the command functions:
 
-```C#
+```csharp
 public void CutCommand() { }
 
 public void CopyCommand() { }
@@ -120,7 +118,7 @@ public void CopyCommand() { }
 public void PasteCommand() { }
 ```
 
-### Gesture Format
+### Gesture format
 
 The `Gesture` attribute is a `+`-delimited list of key modifiers following by a `+`, then followed by a single key character (which itself may be `+`). Permissible modifiers include `Alt`, `Control`, `Shift`, and `Meta`. If the `Gesture` attribute is the empty string or contains only a single key character, no exception will be thrown but the gesture will not activate the menu item. If a key modifier is provided without a key, or if the attribute value isn't formatted correctly, an `ArgumentException` will be thrown. For more details, see the source code for [`KeyGesture`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/KeyGesture.cs), [`Key`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/Key.cs), and [`KeyModifier`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/IKeyboardDevice.cs).
 
@@ -149,12 +147,7 @@ This example defines a native menu that can be attached to a tray icon:
 </NativeMenu>
 ```
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NativeMenu).
-:::
-
-:::info
-View the source code on GitHub [NativeMenu.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NativeMenu.cs)
-:::
+- [NativeMenu API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NativeMenu)
+- [`NativeMenu.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NativeMenu.cs)

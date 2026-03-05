@@ -14,7 +14,7 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
 
 ## Properties
 
-### Basic Properties
+### Basic properties
 
 | Property       | Type             | Description                                                                                 |
 |----------------|------------------|---------------------------------------------------------------------------------------------|
@@ -22,7 +22,7 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
 | Source         | MediaSource      | Gets or sets the media source to be played (`UriSource` or `StreamSource`).                 |
 | LoadedBehavior | MediaPlayerState | Gets or sets the behavior when media is loaded (`AutoPlay` or `Manual`).                    |
 
-### Playback Properties
+### Playback properties
 
 | Property                     | Type      | Description                                                                  |
 |------------------------------|-----------|------------------------------------------------------------------------------|
@@ -30,7 +30,7 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
 | Duration                     | TimeSpan? | Gets the total duration of the current media. Null for non-seekable media.   |
 | SkipTime                     | TimeSpan  | Gets or sets the time to skip with forward/backward commands (default: 10s). |
 
-### State Properties
+### State properties
 
 | Property                | Type    | Description                                                        |
 |-------------------------|---------|--------------------------------------------------------------------|
@@ -42,14 +42,14 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
 | IsSeekable              | bool    | Gets whether the current media can be seeked.                      |
 | IsOverlayTimeoutEnabled | bool    | Gets or sets whether control overlay should hide after inactivity. |
 
-### Audio Properties
+### Audio properties
 
 | Property | Type   | Description                                                              |
 |----------|--------|--------------------------------------------------------------------------|
 | Volume   | double | Gets or sets the playback volume with normalized values (e.g., 0.0-1.0). |
 | IsMuted  | bool   | Gets whether audio is currently muted.                                   |
 
-### Command Properties
+### Command properties
 
 | Property            | Type     | Description                                                           |
 |---------------------|----------|-----------------------------------------------------------------------|
@@ -65,19 +65,19 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
 |-----------------|--------------------------------------------------------------|
 | ErrorOccurred | Occurs when an error is encountered during media operations. |
 
-## Usage Examples
+## Usage examples
 
-### Basic Usage
+### Basic usage
 
-```xaml
+```xml
 <MediaPlayerControl Name="mediaPlayerControl" Source="{Binding MediaSource}" 
                     Volume="0.8"
                     LoadedBehavior="AutoPlay" />
 ```
 
-### Binding to Commands
+### Binding to commands
 
-```xaml
+```xml
 <Button Command="{Binding #mediaPlayerControl.PlayPauseCommand}" 
         Content="Play/Pause" />
         
@@ -85,7 +85,7 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
         Content="Stop" />
 ```
 
-### Error Handling
+### Error handling
 
 ```csharp
 mediaPlayerControl.ErrorOccurred += (sender, args) =>
@@ -98,7 +98,7 @@ mediaPlayerControl.ErrorOccurred += (sender, args) =>
 **Note**: This callback gives you the opportunity to reset the state of the `MediaPlayerControl` gracefully.
 
 
-## Template Parts and Customization
+## Template parts and customization
 
 The default control template for `MediaPlayerControl` includes several key parts:
 
@@ -158,7 +158,7 @@ The most basic configuration of the `MediaPlayerControl` can be like this:
 
 You can use that and the default theme as a jumping point for your desired look for `MediaPlayerControl`
 
-## Lifecycle Management
+## Lifecycle management
 
 The `MediaPlayerControl` automatically manages the lifecycle of its internal `MediaPlayer`:
 
@@ -237,7 +237,7 @@ flowchart LR
     class MP_Init,MP_SetSource,MP_Prepare,MP_Play,MP_Pause,MP_Stop,MP_Seek,MP_Complete playerStates
 ```
 
-## Best Practices
+## Best practices
 
 1. **Error Handling**:
     - Always subscribe to the `ErrorOccurred` event to handle errors gracefully.

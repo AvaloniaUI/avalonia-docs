@@ -5,17 +5,9 @@ title: MenuFlyout
 
 import MenuFlyoutScreenshot from '/img/reference/controls/menuflyout/menuflyout-button.gif';
 
-# MenuFlyout
+A `MenuFlyout` allows you to host a simple menu as the flyout for a control. You might use this as an alternative to the [ContextMenu](/controls/menus/contextmenu).
 
-A 'MenuFlyout' allows you to host a simple menu as the flyout for a control. You might use this as an alternative to the context menu.
-
-:::info
-For details of the context menu, see the reference [here](/controls/menus/contextmenu).
-:::
-
-:::info
-The properties of a menu flyout are the same as for a flyout. See [here](/controls/layout/containers/flyout).
-:::
+The properties of a menu flyout are the same as for a [Flyout](/controls/layout/containers/flyout).
 
 ## Example
 
@@ -67,8 +59,7 @@ This is an example for a `MenuFlyout` that is created dynamically during runtime
 </Button>
 ```
 
-## More Information
+## See also
 
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_MenuFlyout).
-
-View the source code on _GitHub_ [`MenuFlyout.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/MenuFlyout.cs)
+- [MenuFlyout API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_MenuFlyout)
+- [`MenuFlyout.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/MenuFlyout.cs)
