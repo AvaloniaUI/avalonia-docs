@@ -5,12 +5,12 @@ title: Cross-platform architecture
 
 ## Summary
 
-Unlike the Xamarin.Forms and MAUI approach, which tends to yield applications with a lowest-common-denominator feature-set and a generic-looking user interface, Avalonia UI encourages leveraging its drawn UI capabilities. It allows developers to write their data storage and business logic code once, while offering a responsive and high-performing UI across all platforms. This document discusses a general architectural approach to achieve this goal.
+Unlike the Xamarin.Forms and MAUI approach, which tends to yield applications with a lowest-common-denominator feature-set and a generic-looking user interface, Avalonia encourages leveraging its drawn UI capabilities. It allows developers to write their data storage and business logic code once, while offering a responsive and high-performing UI across all platforms. This document discusses a general architectural approach to achieve this goal.
 
 Here is a summary of the key points for creating Avalonia cross-platform apps:
 
 1. **Use .NET** - Develop your apps in C#, F# or VB.NET. Existing code written with .NET can be seamlessly ported to Windows, Linux, macOS, iOS, Android and WebAssembly using Avalonia.
-2. **Utilize the MVVM design pattern** - Develop your application’s User Interface using the `Model/View/ViewModel` pattern. This approach promotes a clear separation between the "Model” and the "View", with the "ViewModel" acting as an intermediary. This ensures that your UI logic remains agnostic of the underlying platform, thereby promoting code reuse and maintainability.
+2. **Utilize the Model-View-ViewModel (MVVM) design pattern** - Develop your application’s User Interface using the `Model/View/ViewModel` pattern. This approach promotes a clear separation between the "Model” and the "View", with the "ViewModel" acting as an intermediary. This ensures that your UI logic remains agnostic of the underlying platform, thereby promoting code reuse and maintainability.
 3. **Leverage Avalonia's drawing capabilities** - Avalonia doesn't rely on native UI controls, instead, it operates similarly to Flutter, drawing the entire UI. This not only ensures a consistent look and feel across all platforms but also offers an unparalleled level of customization, allowing you to tailor the UI to your exact needs.
 4. **Balance between core and platform-specific code** - The key to achieving high code reuse is striking the right balance between platform-agnostic core code and platform-specific code. The core code comprises everything that does not interact directly with the underlying operating system.
 
@@ -28,7 +28,7 @@ Separating code into layers makes the application easier to understand, test, an
 
 ### Typical Application Layers
 
-In this document and the relevant case studies, we reference the following five application layers:
+This document and the relevant case studies reference the following application layers:
 
 1. **Data Layer** – This is where non-volatile data persistence occurs, likely through a database like SQLite or LiteDB, but could be implemented with XML files or other suitable mechanisms.
 2. **Data Access Layer** – This layer is a wrapper around the Data Layer providing Create, Read, Update, Delete (CRUD) operations on the data without revealing implementation details to the caller. For instance, the DAL might contain SQL queries to interact with the data, but the code referencing it doesn't need to be aware of this.
@@ -57,12 +57,12 @@ Also known as the Manager Pattern, this provides a simplified point of entry for
 The Singleton pattern ensures that only a single instance of a particular object can ever exist. For example, when using SQLite in applications, you typically want only one instance of the database. The Singleton pattern is an efficient method to enforce this.
 
 #### Provider
-A pattern originally coined by Microsoft to promote code re-use across Silverlight, WPF and WinForms applications. Shared code can be written against an interface or abstract class, and platform-specific concrete implementations are written and passed in when the code is utilised. In Avalonia, since we can share both UI and application logic, this pattern can help handle platform-specific exceptions or leverage platform-specific features.
+A pattern originally coined by Microsoft to promote code re-use across Silverlight, WPF and WinForms applications. Shared code can be written against an interface or abstract class, and platform-specific concrete implementations are written and passed in when the code is utilised. In Avalonia, since Avalonia can share both UI and application logic, this pattern can help handle platform-specific exceptions or leverage platform-specific features.
 
 #### Async
 Not to be confused with the `Async` keyword, the Async pattern is used when long-running tasks need to be executed without holding up the UI or current processing. In its simplest form, the Async pattern describes that long-running tasks should be kicked off in another thread (or a similar thread abstraction such as a Task) while the current thread continues to process and listens for a response from the background process, updating the UI when data and/or state is returned. This is essential in maintaining a responsive UI in Avalonia applications.
 
-Each of the aforementioned patterns will be explored in-depth as their practical application is demonstrated in our case studies. For a more comprehensive understanding of the [Facade](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), and [Provider](https://en.wikipedia.org/wiki/Provider_model) patterns, as well as [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) in general, you may want to delve into resources available on platforms like Wikipedia.
+Each of these patterns is explored in depth as their practical application is demonstrated in case studies.
 
 ## Managing Platform Differences and Capabilities
 
@@ -135,3 +135,8 @@ Alternatively, you can use full set of MAUI packages with [Avalonia.Maui](https:
 :::note
 While `Maui.Essentials` is a great library that abstracts platform APIs, MAUI itself has a limited set of supported platforms. It doesn't provide APIs for Linux, Browser and macOS (non macCatalyst) platforms.
 :::
+
+## See also
+
+- [The MVVM pattern](/docs/fundamentals/the-mvvm-pattern)
+- [Application lifetimes](/docs/fundamentals/application-lifetimes)

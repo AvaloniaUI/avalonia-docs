@@ -3,7 +3,7 @@ id: top-level
 title: Top level
 ---
 
-The TopLevel act as the visual root, and is the base class for all top level controls, eg. `Window`. It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the TopLevel.
+The `TopLevel` acts as the visual root, and is the base class for all top level controls, for example `Window`. It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the `TopLevel`.
 
 ## Getting the TopLevel
 
@@ -13,7 +13,7 @@ Here are two common ways to access TopLevel instance.
 
 You can use the static `GetTopLevel` method of the TopLevel class to get the top-level control that contains the current control.
 
-```cs
+```csharp
 var topLevel = TopLevel.GetTopLevel(control);
 // Here you can reference various services like Clipboard or StorageProvider from topLevel instance.
 ```
@@ -26,9 +26,9 @@ If `TopLevel.GetTopLevel` returns null, likely control is not yet attached to th
 
 ### Using the Window Class
 
-Since the`Window` class inherits from `TopLevel`, you can directly access services from an instance of `Window`:
+Since the `Window` class inherits from `TopLevel`, you can directly access services from an instance of `Window`:
 
-```cs
+```csharp
 var topLevel = window;
 ```
 
@@ -40,7 +40,7 @@ This method is typically used when you're already working within the context of 
 
 Gets the achieved `WindowTransparencyLevel` that the platform was able to provide.
 
-```cs
+```csharp
 WindowTransparencyLevel ActualTransparencyLevel { get; }
 ```
 
@@ -48,7 +48,7 @@ WindowTransparencyLevel ActualTransparencyLevel { get; }
 
 Gets the client size of the window.
 
-```cs
+```csharp
 Size ClientSize { get; }
 ```
 
@@ -56,7 +56,7 @@ Size ClientSize { get; }
 
 Gets the platform's [Clipboard](/docs/services/clipboard) implementation.
 
-```cs
+```csharp
 IClipboard? Clipboard { get; }
 ```
 
@@ -64,7 +64,7 @@ IClipboard? Clipboard { get; }
 
 Gets [focus manager](/docs/services/focus-manager) of the root.
 
-```cs
+```csharp
 IFocusManager? FocusManager { get; }
 ```
 
@@ -72,7 +72,7 @@ IFocusManager? FocusManager { get; }
 
 Gets the total size of the top level including system frame if presented.
 
-```cs
+```csharp
 Size? FrameSize { get; }
 ```
 
@@ -80,7 +80,7 @@ Size? FrameSize { get; }
 
 Gets the platform's [InsetsManager](/docs/services/insets-manager) implementation.
 
-```cs
+```csharp
 IInsetsManager? InsetsManager { get; }
 ```
 
@@ -88,7 +88,7 @@ IInsetsManager? InsetsManager { get; }
 
 Represents a contract for accessing top-level [platform-specific settings](/docs/services/platform-settings).
 
-```cs
+```csharp
 IPlatformSettings? PlatformSettings { get; }
 ```
 
@@ -96,7 +96,7 @@ IPlatformSettings? PlatformSettings { get; }
 
 Gets a value indicating whether the renderer should draw specific diagnostics.
 
-```cs
+```csharp
 RendererDiagnostics RendererDiagnostics { get; }
 ```
 
@@ -104,7 +104,7 @@ RendererDiagnostics RendererDiagnostics { get; }
 
 Gets the scaling factor to use in rendering.
 
-```cs
+```csharp
 double RenderScaling { get; }
 ```
 
@@ -112,7 +112,7 @@ double RenderScaling { get; }
 
 Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with ThemeVariant can override the app-level ThemeVariant.
 
-```cs
+```csharp
 ThemeVariant? RequestedThemeVariant { get; set; }
 ```
 
@@ -120,7 +120,7 @@ ThemeVariant? RequestedThemeVariant { get; set; }
 
 [File System storage](/docs/services/storage/storage-provider) service used for file pickers and bookmarks.
 
-```cs
+```csharp
 IStorageProvider StorageProvider { get; }
 ```
 
@@ -128,7 +128,7 @@ IStorageProvider StorageProvider { get; }
 
 Gets or sets the `IBrush` that transparency will blend with when transparency is not supported. By default this is a solid white brush.
 
-```cs
+```csharp
 IBrush TransparencyBackgroundFallback { get; set; }
 ```
 
@@ -136,7 +136,7 @@ IBrush TransparencyBackgroundFallback { get; set; }
 
 Gets or sets the `WindowTransparencyLevel` that the TopLevel should use when possible. Accepts multiple values which are applied in a fallback order. For instance, with "Mica, Blur" Mica will be applied only on platforms where it is possible, and Blur will be used on the rest of them. Default value is an empty array or "None".
 
-```cs
+```csharp
 IReadOnlyList<WindowTransparencyLevel> TransparencyLevelHint { get; set; }
 ```
 
@@ -146,7 +146,7 @@ IReadOnlyList<WindowTransparencyLevel> TransparencyLevelHint { get; set; }
 
 Occurs when physical Back Button is pressed or a back navigation has been requested.
 
-```cs
+```csharp
 event EventHandler<RoutedEventArgs> BackRequested { add; remove; }
 ```
 
@@ -154,7 +154,7 @@ event EventHandler<RoutedEventArgs> BackRequested { add; remove; }
 
 Fired when the window is closed.
 
-```cs
+```csharp
 event EventHandler Closed;
 ```
 
@@ -162,7 +162,7 @@ event EventHandler Closed;
 
 Fired when the window is opened.
 
-```cs
+```csharp
 event EventHandler Opened;
 ```
 
@@ -170,7 +170,7 @@ event EventHandler Opened;
 
 Occurs when the TopLevel's scaling changes.
 
-```cs
+```csharp
 event EventHandler ScalingChanged;
 ```
 
@@ -185,7 +185,7 @@ Gets the `TopLevel` for which the given `Visual` is hosted in.
 `control`
 The visual to query its TopLevel
 
-```cs
+```csharp
 static TopLevel? GetTopLevel(Visual? visual)
 ```
 
@@ -193,7 +193,7 @@ static TopLevel? GetTopLevel(Visual? visual)
 
 Enqueues a callback to be called on the next animation tick
 
-```cs
+```csharp
 void RequestAnimationFrame(Action<TimeSpan> action)
 ```
 
@@ -201,7 +201,7 @@ void RequestAnimationFrame(Action<TimeSpan> action)
 
 Requests a `PlatformInhibitionType` to be inhibited. The behavior remains inhibited until the return value is disposed. The available set of `PlatformInhibitionType`s depends on the platform. If a behavior is inhibited on a platform where this type is not supported the request will have no effect.
 
-```cs
+```csharp
 async Task<IDisposable> RequestPlatformInhibition(PlatformInhibitionType type, string reason)
 ```
 
@@ -209,10 +209,12 @@ async Task<IDisposable> RequestPlatformInhibition(PlatformInhibitionType type, s
 
 Tries to get the platform handle for the TopLevel-derived control.
 
-```cs
+```csharp
 IPlatformHandle? TryGetPlatformHandle()
 ```
 
-## More Information
+## See also
 
-View the source code on _GitHub_ [`TopLevel.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)
+- [Main window](/docs/fundamentals/main-window)
+- [Application lifetimes](/docs/fundamentals/application-lifetimes)
+- [`TopLevel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)

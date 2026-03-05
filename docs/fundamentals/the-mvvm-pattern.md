@@ -19,18 +19,29 @@ MVVM might be overkill for a simple application; but as applications grow over t
 
 MVVM solves this by abstracting the application logic into code-only classes that do not depend on the target UI platform, and can therefore be unit tested independently.
 
-:::info
-To discover more about the background to the MVVM pattern, see the _Microsoft Patterns and Practices_ article [here](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/hh848246\(v=pandp.10\)).
-:::
+There are three core components in the MVVM pattern, each with a distinct role:
+
+- **View**: Responsible for the structure, layout, and appearance of what the user sees. Ideally defined purely in XAML with minimal code-behind. The view gets data from its view model through bindings.
+- **View model**: Acts as an intermediary between the view and the model. It handles the view logic, provides data in a form the view can use, and implements commands that respond to user actions. The view model raises `PropertyChanged` events to notify the view of updates.
+- **Model**: Represents the application's domain model, including data, business logic, and validation. Examples include repositories, data transfer objects (DTOs), and plain CLR objects.
+
+At the highest level, the view "knows about" the view model, and the view model "knows about" the model, but the model is unaware of the view model, and the view model is unaware of the view. This decoupling enables components to be swapped, developed, and unit tested independently.
+
+The main benefits of MVVM are:
+
+- **Separation of concerns**: Application logic is decoupled from the UI, making the code easier to test, maintain, and evolve.
+- **Natural fit for XAML platforms**: The rich data binding capabilities in Avalonia provide the connection between views and view models, making MVVM a natural architectural choice.
+- **Testability**: View models can be unit tested without any UI dependency, exercising the same functionality used by the view.
+- **UI flexibility**: The view can be redesigned without changing any application logic, because the view is implemented entirely in XAML.
 
 ## When to use MVVM?
 
-MVVM is a more complex pattern of programming compared to the event-driven code-behind pattern. You have an additional learning overhead to master the techniques of the _ReactiveUI_ framework which you will use to implement MVVM with _Avalonia UI_. 
+MVVM is a more complex pattern of programming compared to the event-driven code-behind pattern. You have an additional learning overhead to master the techniques of the _ReactiveUI_ framework which you will use to implement MVVM with Avalonia. 
 
 In fact, the code-behind pattern may well be easier for you to understand and maintain for a small simple application.
 
 :::info
-For details of how to program _Avalonia UI_ with the code-behind pattern, see [here](/docs/fundamentals/code-behind).
+For details of how to program Avalonia with the code-behind pattern, see [Code-behind](/docs/fundamentals/code-behind).
 :::
 
 The advantages of using the MVVM pattern may only become apparent when an application grows and becomes more complex. You therefore have two development strategies to consider:
@@ -48,25 +59,25 @@ The important principle for you to maintain is separation. You should implement 
 
 ### Views and View Models
 
-When you use the MVVM pattern with _Avalonia UI_, you implement a view with an AXAML file, attached to a corresponding code-behind file, and a view model with a plain-old code class file. 
+When you use the MVVM pattern with Avalonia, you implement a view with an AXAML file, attached to a corresponding code-behind file, and a view model with a plain-old code class file. 
 
-In _Avalonia UI_, a view is implemented as a composition of UI elements in a window or a user control (both AXAML files with code-behind). The UI elements in a composition can be a mixture of _Avalonia UI_ built-in controls, user controls and (more advanced) controls of your own design and implementation.
+In Avalonia, a view is implemented as a composition of UI elements in a window or a user control (both AXAML files with code-behind). The UI elements in a composition can be a mixture of Avalonia built-in controls, user controls and (more advanced) controls of your own design and implementation.
 
 :::info
-For a full list of the _Avalonia UI_ built-in controls, see the reference section [here](/controls).
+For a full list of the Avalonia built-in controls, see the [Controls reference](/controls).
 :::
 
 :::info
-To learn more about the concept of UI composition, see [here](/docs/fundamentals/ui-composition).
+To learn more about the concept of UI composition, see [UI composition](/docs/fundamentals/ui-composition).
 :::
 
 :::info
-To learn how to design and implement your own controls, see [here](/docs/custom-controls).
+To learn how to design and implement your own controls, see [Custom controls](/docs/custom-controls).
 :::
 
 ### Data Binding
 
-Data binding is the key technology that allows an _Avalonia UI_ MVVM application to separate views from view models. You can visualise the view to view model relationship as two layers connected by the data bindings:
+Data binding is the key technology that allows an Avalonia MVVM application to separate views from view models. You can visualise the view to view model relationship as two layers connected by the data bindings:
 
 <img src={MvvmDataBindingDiagram} alt=""/>
 
@@ -74,7 +85,7 @@ Notice how some of the data bindings are represented by a two way arrow and othe
 
 The buttons however have one-direction commands, issued by the view and acted out by the view model. 
 
-Notice how the view model class is not dependent on the view layer, or how it will be rendered on the target platform by _Avalonia UI_. Because the view model class is independent, it can be unit tested like any other code.
+Notice how the view model class is not dependent on the view layer, or how it will be rendered on the target platform by Avalonia. Because the view model class is independent, it can be unit tested like any other code.
 
 When you use the MVVM pattern in practice, you will use a corresponding view model for each view, and the view model class contains all the application logic for the view.
 
@@ -82,4 +93,10 @@ When you use the MVVM pattern in practice, you will use a corresponding view mod
 
 There are a number of frameworks designed to help write applications using the MVVM pattern.
 
-In the following pages, you will learn about the _ReactiveUI_ framework which is one of the most popular and is supported by one of the _Avalonia UI_ packages.
+In the following pages, you will learn about the _ReactiveUI_ framework which is one of the most popular and is supported by one of the Avalonia packages.
+
+## See also
+
+- [Code-behind](/docs/fundamentals/code-behind)
+- [UI composition](/docs/fundamentals/ui-composition)
+- [Introduction to data binding](/docs/data-binding/introduction-to-data-binding)

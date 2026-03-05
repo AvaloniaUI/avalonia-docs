@@ -6,8 +6,6 @@ title: Assets
 import AssetFileDiagram from '/img/concepts/ui-concepts/assets/asset-file.png';
 import AssetLibraryDiagram from '/img/concepts/ui-concepts/assets/asset-library.png';
 
-# Assets
-
 Many applications need to include assets such as bitmaps, styles and resource dictionaries. Resource dictionaries contain graphical fundamentals that can be declared in XAML. Styles can also be written in XAML, but bitmap assets are binary files, for example PNG and JPEG formats.
 
 ## Including assets
@@ -27,7 +25,7 @@ For example, the Avalonia .NET Core MVVM App solution template creates a folder 
 You can include whatever files you want by adding additional `<AvaloniaResource>` elements in this item group.
 
 :::tip
-The element name `AvaloniaResource` here only indicates that the assets will be internally stored as .NET resources by the build. However, in _Avalonia UI_ terms, these files are called 'Assets' to distinguish them from 'XAML resources'.
+The element name `AvaloniaResource` here only indicates that the assets will be internally stored as .NET resources by the build. However, in Avalonia terms, these files are called 'Assets' to distinguish them from 'XAML resources'.
 :::
 
 
@@ -59,7 +57,7 @@ If the asset is included in a different assembly from the XAML file, then you us
 
 ### Asset type conversion
 
-Avalonia UI has built-in converters which can load assets for bitmaps, icons and fonts out of the box. So an assets Uri can be automatically converted to any of following:
+Avalonia has built-in converters which can load assets for bitmaps, icons and fonts out of the box. So an assets Uri can be automatically converted to any of following:
 
 * Image - `Image` type
 * Bitmap - `Bitmap` type
@@ -76,8 +74,13 @@ var bitmap = new Bitmap(AssetLoader.Open(new Uri(uri)));
 
 The `uri` variable in the above code can contain any valid URI with `avares:` scheme (as described above).
 
-_Avalonia UI_ does not provide support for `file://`, `http://`, or `https://` schemes. If you want to load files from disk or the Web, you must implement that functionality yourself or use community implementations.
+Avalonia does not provide support for `file://`, `http://`, or `https://` schemes. If you want to load files from disk or the Web, you must implement that functionality yourself or use community implementations.
 
 :::info
-Avalonia UI has a community implementation for an image loader at [https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia](https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia)
+Avalonia has a community implementation for an image loader at [AsyncImageLoader.Avalonia](https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia).
 :::
+
+## See also
+
+- [Avalonia XAML](/docs/fundamentals/avalonia-xaml)
+- [UI composition](/docs/fundamentals/ui-composition)

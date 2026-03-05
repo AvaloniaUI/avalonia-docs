@@ -3,9 +3,7 @@ id: application-lifetimes
 title: Application lifetimes
 ---
 
-# Application Lifetimes
-
-Not all platforms are created equal! For example, the lifetime management that you may be using to developing with in Windows Forms or WPF can operate only on desktop-style platforms. _Avalonia UI_ is a cross-platform framework; so to make your application portable, it provides several different lifetime models for your application, and also allows you to control everything manually if the target platform permits.
+Not all platforms are created equal! For example, the lifetime management that you may be used to developing with in Windows Forms or WPF can operate only on desktop-style platforms. Avalonia is a cross-platform framework; so to make your application portable, it provides several different lifetime models for your application, and also allows you to control everything manually if the target platform permits.
 
 ## How do lifetimes work?
 
@@ -49,7 +47,7 @@ If you run the application in design mode (this uses the IDE previewer process),
 
 ## Lifetime Interfaces
 
-_Avalonia UI_ provides a range of interfaces to allow you to choose a level of control that is suitable for your application. These are provided by the `BuildAvaloniaApp().Start[Something]` family of methods.
+Avalonia provides a range of interfaces to allow you to choose a level of control that is suitable for your application. These are provided by the `BuildAvaloniaApp().Start[Something]` family of methods.
 
 ### IControlledApplicationLifetime
 
@@ -85,7 +83,7 @@ Provided by:
 Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.
 
 :::info
-To implement the navigation stack on platforms like this (with a single main view), you can use [_ReactiveUI_ routing](https://www.reactiveui.net/docs/handbook/routing/) or another routing control.
+To implement a navigation stack on platforms like this (with a single main view), you can use [ReactiveUI routing](https://www.reactiveui.net/docs/handbook/routing/) or another routing control. ReactiveUI routing uses a `RoutingState` object to manage a stack of view models, with `IScreen` as the root navigation container. You push and pop `IRoutableViewModel` instances onto the stack, and a `RoutedViewHost` control automatically displays the corresponding view.
 :::
 
 ## Manual Lifetime Management
@@ -120,3 +118,8 @@ class Program
   }
 }
 ```
+
+## See also
+
+- [Main window](/docs/fundamentals/main-window)
+- [The MVVM pattern](/docs/fundamentals/the-mvvm-pattern)
