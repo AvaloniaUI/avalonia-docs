@@ -91,7 +91,7 @@ to allow `Gamepad` and `Remote` navigation.
 | Remote        | Remote control can be used.               |
 | Enabled       | All devices can be used.                  |
 
-Gamepad inputs are supported on devices that can natively send these inputs, such as Android and Tizen. However, 
+Gamepad inputs are supported on devices that can natively send these inputs, such as Android. However,
 Avalonia currently lacks cross-platform Gamepad APIs required for broad out-of-the-box support.
 
 ### Navigation Strategy

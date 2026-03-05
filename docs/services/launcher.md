@@ -61,9 +61,9 @@ It does not guarantee, that there is an app than can handle launcher request.
 
 ## Platform compatibility:
 
-| Feature        | Windows | macOS | Linux | Browser | Android |  iOS | Tizen |
-|---------------|-------|-------|-------|-------|-------|-------|-------|
-| `LaunchUriAsync` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| `LaunchFileAsync` | ✓ | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ |
-| `LaunchFileInfoAsync` | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ |
-| `LaunchDirectoryInfoAsync` | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ |
+| Feature        | Windows | macOS | Linux | Browser | Android |  iOS |
+|---------------|-------|-------|-------|-------|-------|-------|
+| `LaunchUriAsync` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `LaunchFileAsync` | ✓ | ✓ | ✓ | ✗ | ✓ | ✓ |
+| `LaunchFileInfoAsync` | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
+| `LaunchDirectoryInfoAsync` | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |

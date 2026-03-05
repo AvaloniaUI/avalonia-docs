@@ -48,8 +48,6 @@ Depending on the project time, C# compiler might define additional constants per
 | net8.0-browser | BROWSER |
 | net8.0-ios | IOS |
 | net8.0-android | ANDROID |
-| net8.0-tizen | TIZEN |
-
 From this table, we can see couple of notes:
 1. If project doesn't use any OS specific Target Framework, none of these constants will be defined
 2. **There is no constant for LINUX**, as there is no `net8.0-linux` Target Framework as of now. Note, it might be changed in the future versions of .NET.

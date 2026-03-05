@@ -120,13 +120,13 @@ Some platforms have specific steps to update the manifest and enable file type a
 
 ## Platform compatibility:
 
-| Feature        |  Windows | macOS | Linux | Browser | Android |  iOS | Tizen |
-|---------------|-------|-------|-------|-------|-------|-------|-------|
-| `ActivationKind.Background` | ✗ | ✓ | ✗ | ✓ | ✓ | ✓ | ✗ |
-| `ActivationKind.File` | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ |
-| `ActivationKind.OpenUri` | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ |
-| `ActivationKind.Reopen` | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| `TryLeaveBackground`  | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| `TryEnterBackground` | ✗ | ✓ | ✗ | ✗ | ✓ | ✗ | ✗ |
+| Feature        |  Windows | macOS | Linux | Browser | Android |  iOS |
+|---------------|-------|-------|-------|-------|-------|-------|
+| `ActivationKind.Background` | ✗ | ✓ | ✗ | ✓ | ✓ | ✓ |
+| `ActivationKind.File` | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ |
+| `ActivationKind.OpenUri` | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ |
+| `ActivationKind.Reopen` | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
+| `TryLeaveBackground`  | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
+| `TryEnterBackground` | ✗ | ✓ | ✗ | ✗ | ✓ | ✗ |
 
 See https://github.com/AvaloniaUI/Avalonia/issues/15316
