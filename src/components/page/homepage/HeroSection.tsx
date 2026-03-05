@@ -1,5 +1,6 @@
 import React from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { PrimaryButton } from '@site/src/components/ui/PrimaryButton';
 
 function AnimatedBlueLazy() {
   return (
@@ -9,25 +10,6 @@ function AnimatedBlueLazy() {
       {() => {
         const { AnimatedBlue } = require('@site/src/components/ui/AnimatedBlue');
         return <AnimatedBlue className="absolute inset-0" />;
-      }}
-    </BrowserOnly>
-  );
-}
-
-function PrimaryButtonLazy({ to, variant, size, children }: { to: string; variant?: 'dark' | 'white'; size?: 'md' | 'lg'; children: React.ReactNode }) {
-  return (
-    <BrowserOnly fallback={
-      <a
-        href={to}
-        className="inline-flex items-center gap-2 rounded-full whitespace-nowrap no-underline"
-        style={{ backgroundColor: '#05051E', color: '#F3F1F0', padding: '12px 12px 12px 20px' }}
-      >
-        {children}
-      </a>
-    }>
-      {() => {
-        const { PrimaryButton } = require('@site/src/components/ui/PrimaryButton');
-        return <PrimaryButton to={to} variant={variant} size={size}>{children}</PrimaryButton>;
       }}
     </BrowserOnly>
   );
@@ -87,9 +69,9 @@ export default function HeroSection() {
         </div>
 
         <div className="flex items-center gap-6" style={{ marginTop: '56px' }}>
-          <PrimaryButtonLazy to="/docs/welcome" variant="dark" size="lg">
+          <PrimaryButton to="/docs/welcome" variant="dark" size="lg">
             Get started
-          </PrimaryButtonLazy>
+          </PrimaryButton>
         </div>
       </div>
 
