@@ -8,10 +8,11 @@
     --docs-card-border-c: rgba(255, 255, 255, 0.02);
     --docs-card-shadow: 0px 1px 2px rgba(255, 255, 255, 0.05), 0px 2px 8px rgba(255, 255, 255, 0.1),
       0px -1px 2px rgba(255, 255, 255, 0.05), 0px -2px 8px rgba(255, 255, 255, 0.1);
+    --docs-card-bg-c: #0B2A54;
   }
 
   :root {
-    --docs-card-bg-c: var(--token-secondary-bg-c);
+    --docs-card-bg-c: #EAE6E5;
   }
 }
 
@@ -41,8 +42,8 @@ docs-card[disabled]::after {
 .card {
   color: inherit;
   background-color: var(--docs-card-bg-c);
-  border: 1px solid var(--docs-card-border-c);
-  border-radius: 12px;
+  border: none;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   font-size: 0.75rem;
@@ -151,16 +152,26 @@ docs-card[disabled]::after {
     margin: 0 0 0.65em;
   }
 
-  .Card-content p {
-    font-size: 0.75rem;
+  .markdown docs-card .Card-content p,
+  docs-card .Card-content p {
+    font-size: 0.875rem;
+    color: var(--docs-card-desc-c, #746964);
+  }
+
+  html[data-theme='dark'] .Card-content p {
+    --docs-card-desc-c: #C1BBB8;
   }
 
   .Card-header {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 1.25rem;
+    line-height: 2rem;
     margin-bottom: 0.45em;
     font-weight: 600;
-    color: var(--token-heading-color-dark);
+    color: var(--docs-card-title-c, #05051E);
+  }
+
+  html[data-theme='dark'] .Card-header {
+    --docs-card-title-c: #fff;
   }
 
   .Card-without-image .Card-header {

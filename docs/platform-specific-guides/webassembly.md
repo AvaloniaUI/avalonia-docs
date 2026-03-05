@@ -3,6 +3,8 @@ id: webassembly
 title: WebAssembly
 ---
 
+Avalonia applications can run in the browser using WebAssembly (WASM). This page explains how to set up a project for browser deployment and how to use JavaScript interop.
+
 ## Setting up an Avalonia project for WebAssembly
 
 1. Install the `wasm-tools` workload, which provides the build toolchain for compiling .NET to WebAssembly.
@@ -36,7 +38,7 @@ dotnet new avalonia.xplat
 ```
 
 5. In the console output you will see HTTP and HTTPS links to open the app.
-In order to run, simply do the following:
+To run the app:
 
 ```bash
 cd BrowserTest.Browser
@@ -51,7 +53,7 @@ dotnet run
 
 ## Deployment
 
-For information on publishing and deploying your WebAssembly app, see [Deploying WebAssembly](/docs/deployment/webassembly).
+For information on publishing and deploying your WebAssembly app, see [Deploying WebAssembly](../deployment/webassembly.mdx).
 
 ## JavaScript interop
 
@@ -161,5 +163,5 @@ You can pass `Action`/`Func` callbacks as parameters (marshalled as callable JS 
 
 ## See also
 
-- [Deploying WebAssembly](/docs/deployment/webassembly)
-- [WebAssembly troubleshooting](/troubleshooting/platform-specific-issues/webassembly)
+- [Deploying WebAssembly](../deployment/webassembly.mdx)
+- [WebAssembly troubleshooting](../../troubleshooting/platform-specific-issues/webassembly.md)
