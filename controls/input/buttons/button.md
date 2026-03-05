@@ -5,31 +5,11 @@ title: Button
 
 import ButtonClickScreenshot from '/img/controls/buttons/button/button-click.gif';
 
-# Button
+The `Button` control reacts to pointer actions and provides visual feedback in the form of a depressed state when the pointer is down. A pointer-down to pointer-release sequence is interpreted as a click, and this behaviour is configurable through the `ClickMode` property.
 
-The button is a control that reacts to pointer actions (and has some keyboard equivalents). It presents visual feedback in the form of a depressed state when the pointer is down.
+You can handle a click by subscribing to the `Click` event in code-behind, or by binding an `ICommand` instance to the `Command` property. For guidance on binding to a command, see [Adding interactivity](/docs/input-interaction/adding-interactivity).
 
-A pointer-down to pointer release sequence is interpreted as a click; and this behaviour is configurable.
-
-:::warning
-When determining if a button is pressed by the user, always use the `Click` event instead of `PointerPressed`. `Click` is the high-level event specific to a `Button` that indicates it has been pressed.
-
-`PointerPressed` is more a low-level input event: one that the `Button` needs to handle internally to raise the `Click` event. Since `Button` handles `PointerPressed` (sets `IsHandled` to true), applications will never receive this event as in some other controls.
-:::
-
-:::info
-Click is one of many button events, for a full list see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Button#events).
-:::
-
-A button can raise a click event in the code-behind. Alternatively you can bind an instance of `ICommand` to the command property. The bound command will then be executed whenever the button is clicked.
-
-:::info
-For guidance on how to bind to a command, see [here](/docs/input-interaction/adding-interactivity).
-:::
-
-## Useful Properties
-
-You will probably use these properties most often:
+## Useful properties
 
 | Property           | Description                                                         |
 | ------------------ | ------------------------------------------------------------------- |
@@ -40,8 +20,6 @@ You will probably use these properties most often:
 ## Example
 
 This example shows a simple button and a C# code-behind click event handler.
-
-
 
 <XamlPreview>
 
@@ -71,13 +49,13 @@ public partial class MainView : UserControl
 
 </XamlPreview>
 
+## Click vs. PointerPressed
 
-## More Information
+Always use the `Click` event to determine whether a user has pressed a button, not `PointerPressed`. `Click` is the high-level event specific to `Button`, while `PointerPressed` is a low-level input event that `Button` handles internally (setting `IsHandled` to `true`). Because the event is marked as handled, your application will not receive `PointerPressed` from a `Button` the way it might from other controls.
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Button).
-:::
+For a full list of button events, see the [Button events API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Button#events).
 
-:::info
-View the source code on _GitHub_ [`Button.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Button.cs)
-:::
+## See also
+
+- [Button API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Button)
+- [`Button.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Button.cs)

@@ -200,6 +200,17 @@ rules:
     dont_example: "You must optionally consider..."
     automated: false
 
+  - id: MIC-006
+    category: micro-style
+    severity: blocker
+    scope: [all]
+    pattern: "no em or en dashes"
+    pass_criteria: "text contains no em dashes (—) or en dashes (–)"
+    rationale: "House style forbids em and en dashes. Use commas, parentheses, colons, or separate sentences instead."
+    do_example: "Use the Click event, not PointerPressed."
+    dont_example: "Use the Click event — not PointerPressed."
+    automated: true
+
   - id: LINK-001
     category: links
     severity: blocker

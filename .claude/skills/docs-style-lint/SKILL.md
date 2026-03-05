@@ -41,11 +41,12 @@ Apply rules from [house-rules.yaml](references/house-rules.yaml) that match the 
 
 **Blocker-level checks (must pass):**
 
-1. **STR-001**: Exactly one H1 heading (Docusaurus renders frontmatter `title` as H1, so an explicit `#` heading in the body is not required — count the frontmatter title as the H1)
+1. **STR-001**: Exactly one H1 heading (Docusaurus renders frontmatter `title` as H1, so an explicit `#` heading in the body is not required; count the frontmatter title as the H1)
 2. **STR-003**: Tutorials have `## Prerequisites` before first procedure
 3. **MIC-003**: All fenced code blocks specify a language tag
 4. **LINK-001**: No generic link labels (`click here`, `here`, `this link`)
 5. **QUAL-001**: Tutorials include an outcome verification section
+6. **MIC-006**: No em dashes or en dashes anywhere in the text
 
 **Major-level checks (should pass; justify exceptions):**
 
@@ -95,6 +96,8 @@ Flag any use of:
 | "In order to" | "To" |
 | "It should be noted that" | State fact directly |
 | "Refer to the documentation" | Link to specific page |
+| Em dash (—) | Comma, colon, parentheses, or separate sentence |
+| En dash (–) | Hyphen or "to" for ranges |
 
 ### Step 6: Generate report
 
