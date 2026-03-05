@@ -1,6 +1,6 @@
 ---
 id: linux
-title: Linux
+title: Desktop Linux
 ---
 
 ## How Avalonia runs on Linux
@@ -20,5 +20,5 @@ sudo apt install libice6 libsm6 libfontconfig1
 ## See also
 
 - [Supported platforms](/docs/supported-platforms) for Linux distribution tier support
-- [Deploying to Linux](/docs/deployment/linux)
-- [Raspberry Pi](/docs/platform-specific-guides/raspberry-pi)
+- [Deploying to Desktop Linux](/docs/deployment/linux)
+- [Embedded Linux](/docs/platform-specific-guides/embedded-linux) for framebuffer and DRM scenarios

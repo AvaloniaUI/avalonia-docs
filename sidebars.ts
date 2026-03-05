@@ -245,12 +245,23 @@ const sidebars: SidebarsConfig = {
         'platform-specific-guides/ios',
         'platform-specific-guides/macos',
         'platform-specific-guides/linux',
+        {
+          type: 'category',
+          label: 'Embedded Linux',
+          collapsed: true,
+          link: {
+            type: 'doc',
+            id: 'platform-specific-guides/embedded-linux/embedded-linux',
+          },
+          items: [
+            'platform-specific-guides/embedded-linux/raspberry-pi',
+            'platform-specific-guides/embedded-linux/virtual-keyboard',
+          ],
+        },
         'platform-specific-guides/webassembly',
         'platform-specific-guides/dotnet',
         'platform-specific-guides/windows',
-        'platform-specific-guides/raspberry-pi',
         'platform-specific-guides/xaml',
-        'platform-specific-guides/virtual-keyboard',
       ],
     },
     {
@@ -278,6 +289,7 @@ const sidebars: SidebarsConfig = {
         'deployment/ios',
         'deployment/macos',
         'deployment/linux',
+        'deployment/embedded-linux/embedded-linux',
         'deployment/webassembly',
         'deployment/native-aot',
       ],

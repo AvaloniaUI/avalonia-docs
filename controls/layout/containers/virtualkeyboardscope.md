@@ -142,4 +142,4 @@ You can have multiple `VirtualKeyboardScope` controls in your application, but b
 ## See also
 
 - [VirtualKeyboard](/controls/input/text-input/virtualkeyboard) - The standalone keyboard control for manual placement
-- [Adding a virtual keyboard](/docs/platform-specific-guides/virtual-keyboard)
+- [Adding a virtual keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard)

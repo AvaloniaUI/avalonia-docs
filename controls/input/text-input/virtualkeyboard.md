@@ -251,4 +251,4 @@ To customize, define these resources in your application theme or resource dicti
 ## See also
 
 - [VirtualKeyboardScope](/controls/layout/containers/virtualkeyboardscope) - A container control that automatically manages keyboard visibility
-- [Adding a virtual keyboard](/docs/platform-specific-guides/virtual-keyboard)
+- [Adding a virtual keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard)

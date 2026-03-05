@@ -294,7 +294,7 @@ const redirects: Redirect[] = [
             "/docs/guides/platforms/rpi/running-your-app-on-a-raspberry-pi",
             "/docs/guides/platforms/rpi/running-on-raspbian-lite-via-drm",
         ],
-        "to": "/docs/platform-specific-guides/raspberry-pi"
+        "to": "/docs/platform-specific-guides/embedded-linux/raspberry-pi"
     },
     {
         "from": [
@@ -1135,7 +1135,15 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/virtual-keyboard/getting-started",
-        "to": "/docs/platform-specific-guides/virtual-keyboard"
+        "to": "/docs/platform-specific-guides/embedded-linux/virtual-keyboard"
+    },
+    {
+        "from": "/docs/platform-specific-guides/virtual-keyboard",
+        "to": "/docs/platform-specific-guides/embedded-linux/virtual-keyboard"
+    },
+    {
+        "from": "/docs/platform-specific-guides/raspberry-pi",
+        "to": "/docs/platform-specific-guides/embedded-linux/raspberry-pi"
     },
     {
         "from": "/accelerate/components/virtual-keyboard/virtual-keyboard-scope",
