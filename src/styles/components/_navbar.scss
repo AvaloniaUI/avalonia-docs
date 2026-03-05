@@ -258,7 +258,8 @@ html[data-theme='dark'] {
     &__link {
       font-weight: 500;
       font-size: 0.875rem;
-      line-height: 17px;
+      line-height: 1.7;
+      letter-spacing: 0.42px;
 
       color: var(--navbar-link-c);
     }

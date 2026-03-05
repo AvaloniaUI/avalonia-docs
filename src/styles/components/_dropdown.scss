@@ -1,16 +1,19 @@
-// Dropdown Styles
+// Dropdown Styles (matching marketing website)
 
-// Dropdown menu animation (matches Customer Portal)
+// Dropdown menu animation - scale + translate + opacity (matching marketing)
 .dropdown__menu {
-  animation: dropdownMenu 0.15s ease-out;
+  animation: dropdownMenu 0.2s ease-out;
+  transform-origin: top;
 }
 
 @keyframes dropdownMenu {
   from {
     opacity: 0;
+    transform: scale(0.97) translateY(-8px);
   }
   to {
     opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
 
@@ -42,36 +45,62 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
+// Dropdown menu container - marketing style
 .dropdown__menu {
-  min-width: 20rem;
-  margin-top: 0.225rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  min-width: 240px;
+  margin-top: 0;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.625rem 0.375rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-dropdown);
+  // Position relative for the invisible bridge pseudo-element
+  position: absolute;
+
+  // Invisible bridge to prevent dropdown from closing when moving mouse down
+  &::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+  }
 }
 
 html[data-theme='dark'] .dropdown__menu {
-  border-color: #22284A;
-  background-color: #111530;
+  background-color: #0E1230;
+  box-shadow: 0px 20px 60px -12px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px rgba(255, 255, 255, 0.08);
 }
 
-// Dropdown link styling (matches Customer Portal)
+// Dropdown link styling - marketing rounded items with hover bg
 .dropdown__link {
-  padding: 0.375rem 1rem;
-  color: var(--color-gray-700);
-  transition: color 0.15s ease-out;
+  display: flex;
+  align-items: center;
+  padding: 0.4375rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 550;
+  letter-spacing: 0.02em;
+  color: #05051E;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out;
 
   &:hover {
-    color: var(--ifm-font-color-base);
-    background-color: transparent;
+    background-color: #E3DFDC;
+    color: #05051E;
+  }
+
+  &--active {
+    color: var(--ifm-link-color);
   }
 }
 
 html[data-theme='dark'] .dropdown__link {
-  color: var(--color-gray-300);
+  color: #C1BBB8;
 
   &:hover {
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #F3F1F0;
   }
 }
 
@@ -183,58 +212,51 @@ body[data-sdk-menu='plugin'] [data-dropdown-sdks-menu='plugin'] {
   border-left-color: $primary-color;
 }
 
-// "More" dropdown styling - matches UI Dropdown component (without border on button)
-// Uses #__docusaurus prefix to ensure higher specificity than navbar styles
+// "More" dropdown styling - matches marketing SimpleDropdown component
 #__docusaurus .navbar__item.dropdown:has(.navbar__link--community) {
-  // Hide from desktop navbar on mobile (it appears in mobile sidebar instead)
   @media (max-width: 996px) {
     display: none;
   }
 
   .navbar__link--community {
-    // Button styling - like dropdown-toggle but NO border, NO hover bg
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    // Horizontal padding inherited from .navbar__link
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    gap: 0.375rem;
+    padding: 0.375rem 1rem;
     font-size: 0.875rem;
     font-weight: 500;
-    border-radius: 0.5rem;
-    transition: color 0.15s ease-out;
+    letter-spacing: 0.42px;
+    border-radius: 9999px;
+    transition: color 0.15s ease-out, background-color 0.15s ease-out;
     background: transparent !important;
     color: var(--navbar-link-c);
     border: none !important;
     box-shadow: none !important;
 
     &:hover {
-      background: transparent !important;
+      background: rgba(243, 241, 240, 1) !important;
     }
 
-    // Custom chevron icon matching the UI component
     &::after {
       content: '';
       border: none;
       position: static;
       top: auto;
       transform: none;
-      width: 20px;
-      height: 20px;
-      min-width: 20px;
-      min-height: 20px;
-      // Use background shorthand to fully override navbar styles
-      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79199 7.396L10.0003 12.6043L15.2087 7.396' stroke='%23667085' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat;
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
+      min-height: 14px;
+      opacity: 0.5;
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79199 7.396L10.0003 12.6043L15.2087 7.396' stroke='%23686770' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
       transition: transform 0.2s ease-in-out;
     }
   }
 
-  // When dropdown container is hovered (including menu items), keep text blue
   &:hover .navbar__link--community {
     color: var(--color-brand-500);
   }
 
-  // When dropdown is open, set text color to brand
   &.dropdown--show .navbar__link--community {
     color: var(--color-brand-500);
   }
@@ -244,44 +266,42 @@ body[data-sdk-menu='plugin'] [data-dropdown-sdks-menu='plugin'] {
     transform: rotate(180deg);
   }
 
-  // Dropdown menu styling - matches Dropdown component
-  // Use padding-top with negative margin to create hover "safe zone"
+  // Dropdown menu - marketing style
   .dropdown__menu {
-    min-width: 260px;
+    min-width: 240px;
     margin-top: 0;
-    padding: 0.75rem;
-    padding-top: calc(0.75rem); // extra padding for hover zone
+    padding: 0.625rem 0.375rem;
     border-radius: 1rem;
     background-color: #fff;
-    border: 1px solid #e4e7ec;
-    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    border: none;
+    box-shadow: var(--shadow-dropdown);
 
-    // Invisible extended hit area above the menu
     &::before {
       content: '';
       position: absolute;
-      top: -10px;
+      top: -12px;
       left: 0;
       right: 0;
-      height: 10px;
+      height: 12px;
     }
   }
 
-  // Dropdown link styling - matches DropdownItem component
+  // Dropdown link - marketing item style
   .dropdown__link {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.625rem 0.75rem;
+    padding: 0.4375rem 0.75rem;
     border-radius: 0.5rem;
     font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--navbar-link-c);
+    font-weight: 550;
+    letter-spacing: 0.02em;
+    color: #05051E;
     transition: background-color 0.15s ease-out;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.04);
-      color: var(--navbar-link-c);
+      background-color: #E3DFDC;
+      color: #05051E;
     }
 
     &--active {
@@ -297,15 +317,14 @@ html[data-theme='dark'] #__docusaurus .navbar__item.dropdown:has(.navbar__link--
     background: transparent !important;
 
     &:hover {
-      background: transparent !important;
+      background: rgba(243, 241, 240, 0.12) !important;
     }
 
     &::after {
-      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79199 7.396L10.0003 12.6043L15.2087 7.396' stroke='%2398A2B3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat;
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79199 7.396L10.0003 12.6043L15.2087 7.396' stroke='%23C1BBB8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
     }
   }
 
-  // When dropdown container is hovered (including menu items), keep text blue
   &:hover .navbar__link--community {
     color: var(--color-brand-400);
   }
@@ -315,16 +334,28 @@ html[data-theme='dark'] #__docusaurus .navbar__item.dropdown:has(.navbar__link--
   }
 
   .dropdown__menu {
-    background-color: #1E2635;
-    border-color: #353C49;
+    background-color: #0E1230;
+    border: none;
+    box-shadow: 0px 20px 60px -12px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px rgba(255, 255, 255, 0.08);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
   }
 
   .dropdown__link {
-    color: var(--color-gray-300);
+    color: #F3F1F0;
+    font-weight: 550;
+    letter-spacing: 0.02em;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
-      color: var(--color-gray-300);
+      background-color: rgba(255, 255, 255, 0.06);
+      color: #F3F1F0;
     }
   }
 }

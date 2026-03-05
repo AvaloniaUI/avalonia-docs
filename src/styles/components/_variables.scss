@@ -139,11 +139,12 @@
   --docs-color-text-100: var(--color-body-text);
   --docs-color-text-400: 71 71 71;
 
-  // Background colors (marketing: bone #F3F1F0)
-  --docs-color-background: #F3F1F0;
+  // Background colors (main content: white, chrome: bone)
+  --docs-color-background: #FFFFFF;
   --docs-color-background-100: #FAF7F5;
   --docs-color-background-200: #E3DFDC;
   --docs-color-background-300: #C1BBB8;
+  --docs-color-chrome-bg: #F3F1F0;
 
   // Border colors (marketing: warm subtle)
   --docs-color-border: rgba(0, 0, 0, 0.12);
@@ -328,9 +329,9 @@ $desktop-breakpoint: 1160px;
 }
 
 html[data-theme='light'] {
-  // Marketing: bone for content area, white for sidebar
-  --token-primary-bg-c: #F3F1F0;
-  --token-secondary-bg-c: #fff;
+  // Main content: white, sidebar/navbar: bone
+  --token-primary-bg-c: #FFFFFF;
+  --token-secondary-bg-c: #F3F1F0;
 
   // Links use brand color
   --ifm-link-color: var(--color-brand-500);
@@ -338,8 +339,8 @@ html[data-theme='light'] {
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
 
-  // Navbar bg white (matching marketing)
-  --ifm-navbar-background-color: #fff;
+  // Navbar bg: bone
+  --ifm-navbar-background-color: #F3F1F0;
   --ifm-navbar-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12);
 
   --ifm-heading-color: #21253B;
