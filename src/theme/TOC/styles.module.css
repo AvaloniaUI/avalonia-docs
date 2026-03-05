@@ -15,19 +15,21 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 6px 14px;
+  font-size: 13px;
   font-weight: 500;
-  border-radius: 0.5rem;
-  transition: background-color 0.15s;
-  background: white;
-  color: #374151;
-  border: 1px solid #d0d5dd;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  transition: background-color 0.15s, color 0.15s;
+  background: var(--color-bone, #F3F1F0);
+  color: var(--color-body-text, #686770);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 
 .tocDropdownButton:hover {
-  background: #f9fafb;
+  background: var(--color-neutral-30, #E3DFDC);
+  color: var(--color-card-title, #21253B);
 }
 
 .tocDropdownButton:focus {
@@ -42,14 +44,14 @@
 }
 
 :global(html[data-theme='dark']) .tocDropdownButton {
-  background: #1E2635;
-  color: #9ca3af;
-  border-color: #353C49;
+  background: rgba(255, 255, 255, 0.06);
+  color: #C1BBB8;
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 :global(html[data-theme='dark']) .tocDropdownButton:hover {
-  background: rgba(255, 255, 255, 0.03);
-  color: #d1d5db;
+  background: rgba(255, 255, 255, 0.1);
+  color: #F3F1F0;
 }
 
 @media (max-width: 996px) {

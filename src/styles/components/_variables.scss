@@ -42,6 +42,7 @@
   --color-neutral-40: #C1BBB8;
   --color-neutral-55: #686770;
   --color-neutral-60: #21253B;
+  --color-neutral-70: #161C2D;
 
   // Gray scale (kept for backward compatibility with semantic colors)
   --color-gray-25: #fcfcfd;
@@ -333,9 +334,9 @@ html[data-theme='light'] {
   --token-primary-bg-c: #FFFFFF;
   --token-secondary-bg-c: #F3F1F0;
 
-  // Links use brand color
-  --ifm-link-color: var(--color-brand-500);
-  --ifm-link-hover-color: var(--color-brand-600);
+  // Links use neutral color (matching marketing website)
+  --ifm-link-color: var(--color-neutral-70);
+  --ifm-link-hover-color: var(--color-obsidian);
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
 

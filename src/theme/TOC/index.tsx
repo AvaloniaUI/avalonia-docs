@@ -101,7 +101,7 @@ export default function TOC({ className, ...props }: Props): ReactNode {
     <div className={styles.tableOfContentsWrapper}>
       {/* Header with title and dropdown */}
       <div className="flex items-center justify-between mb-4 max-[1359px]:flex-col max-[1359px]:items-start max-[1359px]:gap-3">
-        <h3 className="text-base font-medium text-gray-800 dark:text-white/90 m-0 max-[1359px]:mr-0 mr-4">On this page</h3>
+        <h3 className="m-0 max-[1359px]:mr-0 mr-4 uppercase" style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--color-muted)' }}>On this page</h3>
         <div className="relative inline-block max-[1359px]:w-full">
           <button
             onClick={toggleDropdown}

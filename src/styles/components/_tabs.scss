@@ -2,8 +2,8 @@
 html[data-theme='light'] {
   --ifm-tabs-color: #686770;
   --ifm-tabs-color-hover: #21253B;
-  --ifm-tabs-color-active: var(--color-brand-500);
-  --ifm-tabs-color-active-border: var(--color-brand-500);
+  --ifm-tabs-color-active: var(--color-neutral-70, #161C2D);
+  --ifm-tabs-color-active-border: var(--color-neutral-70, #161C2D);
   --tabs-border-c: rgba(0, 0, 0, 0.12);
 }
 

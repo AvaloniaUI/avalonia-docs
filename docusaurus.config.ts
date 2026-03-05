@@ -293,19 +293,14 @@ const config: Config = {
           label: 'More',
           items: [
             {
-              label: 'Avalonia XPF',
-              to: '/xpf',
-              activeBasePath: '/xpf'
-            },
-            {
-              label: 'Log in',
-              href: 'https://portal.avaloniaui.net',
+              label: 'Enhanced Support',
+              href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
               target: '_blank',
               rel: null
             },
             {
-              label: 'Enhanced Support',
-              href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+              label: 'Professional Services',
+              href: 'https://avaloniaui.net/services',
               target: '_blank',
               rel: null
             },
@@ -333,6 +328,11 @@ const config: Config = {
         {
           type: 'html',
           value: '<div class="separator" aria-hidden></div>',
+        },
+        {
+          label: 'Avalonia XPF',
+          to: '/xpf',
+          activeBasePath: '/xpf'
         },
         {
           type: 'search',

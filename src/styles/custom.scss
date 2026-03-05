@@ -70,9 +70,9 @@ html[data-theme='light'] {
   --token-primary-bg-c: #FFFFFF;
   --token-secondary-bg-c: #F3F1F0;
 
-  // Brand colors
-  --ifm-link-color: var(--color-brand-500);
-  --ifm-link-hover-color: var(--color-brand-600);
+  // Links: neutral (matching marketing website)
+  --ifm-link-color: var(--color-neutral-70);
+  --ifm-link-hover-color: var(--color-obsidian);
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
   --ifm-background-color: var(--token-primary-bg-c);

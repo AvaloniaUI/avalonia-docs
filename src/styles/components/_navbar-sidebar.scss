@@ -41,12 +41,23 @@
     }
 
     &__back {
-      padding-inline-start: 0;
-      padding-inline-end: 0;
+      margin: 0.25rem var(--ifm-navbar-padding-horizontal) 0.25rem;
+      padding: 0.5rem 0.75rem;
 
-      margin: 0;
+      background: transparent;
+      border-radius: 0.5rem;
 
-      background-color: var(--token-primary-bg-c);
+      font-size: 0.875rem;
+      font-weight: 570;
+      line-height: 1.25rem;
+      letter-spacing: 0.03em;
+      color: var(--sidebar-item-text-inactive);
+
+      transition: background-color 0.15s ease-out;
+
+      &:hover {
+        background-color: var(--sidebar-item-hover-bg);
+      }
     }
 
     &__close {

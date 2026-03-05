@@ -1,13 +1,17 @@
 html[data-theme='light'] {
-  // Warm neutral palette
+  // Warm neutral palette (marketing website alignment)
   --toc-separator-c: rgba(0, 0, 0, 0.12);
-  --ifm-toc-link-color: #686770;
+  --ifm-toc-link-color: var(--color-body-text, #686770);
+  --toc-link-hover-color: var(--color-neutral-70, #161C2D);
+  --toc-link-active-color: var(--color-neutral-70, #161C2D);
 }
 
 html[data-theme='dark'] {
   // Obsidian dark palette
   --toc-separator-c: rgba(255, 255, 255, 0.12);
   --ifm-toc-link-color: #C1BBB8;
+  --toc-link-hover-color: var(--color-brand-400, #3399ff);
+  --toc-link-active-color: var(--color-brand-400, #3399ff);
 }
 
 :root {
@@ -65,6 +69,41 @@ html[data-theme='dark'] {
       font-weight: 600;
       font-size: 0.875rem;
     }
+  }
+
+  // Marketing-aligned TOC link styles
+  .table-of-contents {
+    &__link {
+      font-size: 13px;
+      line-height: 1.4;
+      color: var(--ifm-toc-link-color);
+      text-decoration: none;
+      padding: 4px 0.75rem;
+      display: block;
+      transition: color 0.15s ease;
+      border-left: 2px solid transparent;
+
+      &:hover {
+        color: var(--toc-link-hover-color);
+        text-decoration: none;
+      }
+
+      &--active {
+        color: var(--toc-link-active-color);
+        font-weight: 500;
+        border-left-color: var(--toc-link-active-color);
+      }
+    }
+  }
+
+  // Tighter vertical spacing between TOC items (marketing uses 2px gap)
+  .table-of-contents li {
+    margin: 1px 0;
+  }
+
+  // Nested TOC items: 12px per level (marketing pattern)
+  .table-of-contents .table-of-contents {
+    padding-left: 12px;
   }
 
   .internal-ad {
