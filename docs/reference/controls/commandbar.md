@@ -65,6 +65,7 @@ The items in a `CommandBar` implement the `ICommandBarElement` interface. The bu
 | `Label` | `string?` | `null` | Text label shown below or beside the icon, depending on `DefaultLabelPosition`. |
 | `Icon` | `object?` | `null` | Icon content. Typically a `PathIcon`. |
 | `IsCompact` | `bool` | `false` | When `true`, the label is hidden and the button takes less space. Set automatically by `CommandBar`. |
+| `LabelPosition` | `CommandBarDefaultLabelPosition` | `Bottom` | Per-button label position override. Set automatically by `CommandBar` from `DefaultLabelPosition`, but can be set manually to override a single button. |
 | `DynamicOverflowOrder` | `int` | `0` | Priority for dynamic overflow. Items with a higher value move to overflow first. Items with the same value overflow together. |
 | `IsInOverflow` | `bool` | `false` | Read-only. `true` when the button is currently shown in the overflow popup. |
 
@@ -78,6 +79,7 @@ The items in a `CommandBar` implement the `ICommandBarElement` interface. The bu
 | `Icon` | `object?` | `null` | Icon content. Typically a `PathIcon`. |
 | `IsChecked` | `bool?` | `false` | Whether the button is in the checked state. Nullable for three-state support. |
 | `IsCompact` | `bool` | `false` | When `true`, the label is hidden. |
+| `LabelPosition` | `CommandBarDefaultLabelPosition` | `Bottom` | Per-button label position override. Set automatically by `CommandBar` from `DefaultLabelPosition`, but can be set manually to override a single button. |
 | `DynamicOverflowOrder` | `int` | `0` | Priority for dynamic overflow. |
 | `IsInOverflow` | `bool` | `false` | Read-only. `true` when shown in overflow. |
 

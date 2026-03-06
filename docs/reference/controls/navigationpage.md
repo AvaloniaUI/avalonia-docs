@@ -96,6 +96,18 @@ Navigation is performed through the `INavigation` interface, accessible via `Pag
 
 The system back button automatically calls `PopAsync()` when `StackDepth > 1`.
 
+## Events
+
+| Event | Args type | Description |
+| ----- | --------- | ----------- |
+| `Pushed` | `NavigationEventArgs` | Raised after a page is pushed onto the stack. `args.Page` is the page that was pushed. |
+| `Popped` | `NavigationEventArgs` | Raised after a page is popped from the stack. `args.Page` is the page that was removed. |
+| `PoppedToRoot` | `NavigationEventArgs` | Raised after `PopToRootAsync` completes. `args.Page` is the new top page (the root). |
+| `PageInserted` | `PageInsertedEventArgs` | Raised after `InsertPage` completes. `args.Page` is the inserted page; `args.Before` is the page it was inserted before. |
+| `PageRemoved` | `PageRemovedEventArgs` | Raised after `RemovePage` completes. `args.Page` is the page that was removed. |
+| `ModalPushed` | `ModalPushedEventArgs` | Raised after a modal page is presented. `args.Modal` is the modal page. |
+| `ModalPopped` | `ModalPoppedEventArgs` | Raised after a modal page is dismissed. `args.Modal` is the page that was dismissed. |
+
 ## Example
 
 ### Basic NavigationPage in XAML
