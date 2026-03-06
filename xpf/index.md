@@ -45,9 +45,9 @@ All XPF licenses support Avalonia's [Tier 1 platforms](/docs/supported-platforms
 | [macOS](/docs/supported-platforms#macos) | <TierBadge tier={1} /> | <TierBadge tier={1} /> | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
 | [Desktop Linux](/docs/supported-platforms#desktop-linux) | <TierBadge tier={1} /> | <TierBadge tier={1} /> | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
 | [Embedded Linux](/docs/supported-platforms#embedded-linux) | | Paid add-on | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
-| [iOS](/docs/supported-platforms#ios-and-ipados) | | | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
-| [Android](/docs/supported-platforms#android) | | | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
-| [WebAssembly](/docs/supported-platforms#webassembly) | | | <TierBadge tier={1} /> |
+| [iOS](/xpf/platforms/mobile-and-browser) | | | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
+| [Android](/xpf/platforms/mobile-and-browser) | | | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
+| [WebAssembly](/xpf/platforms/mobile-and-browser) | | | <TierBadge tier={1} /> |
 
 Enterprise licenses include Tier 2 platform support out of the box, and can arrange support for Tier 3 platforms (non-standard distributions and versions) on a case-by-case basis. For details on which OS versions fall into each tier, see [Supported Platforms](/docs/supported-platforms).
 

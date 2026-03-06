@@ -51,6 +51,7 @@ const sidebars: SidebarsConfig = {
         'platforms/windows',
         'platforms/macos',
         'platforms/linux',
+        'platforms/mobile-and-browser',
       ]
     },
     {

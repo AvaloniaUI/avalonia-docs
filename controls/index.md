@@ -37,10 +37,6 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>A full calendar view that lets users browse and select dates visually.</p>
 </DocsCard>
 
-<DocsCard header="Charts" href="/controls/data-display/charts" icon="/icons/charts-icon@2x.png">
-  <p>Display data visually using a variety of chart types for rich data presentation.</p>
-</DocsCard>
-
 <DocsCard header="Checkbox" href="/controls/input/selectors/checkbox" icon="/icons/checkbox-icon@2x.png">
   <p>Use a checkbox for binary user decisions, such as feature toggles, survey questions or task lists.</p>
 </DocsCard>
@@ -55,10 +51,6 @@ Avalonia apps are made of high-level building blocks called controls, which allo
 
 <DocsCard header="Grid" href="/controls/layout/panels/grid" icon="/icons/grid-icon@2x.png">
   <p>The grid is a powerful layout control that arranges other controls in columns and rows.</p>
-</DocsCard>
-
-<DocsCard header="Hot Reload" href="/docs/stay-up-to-date/hot-reload" icon="/icons/hotreload-icon@2x.png">
-  <p>See your XAML and code changes reflected instantly in your running app without restarting.</p>
 </DocsCard>
 
 <DocsCard header="Image" href="/controls/media/image" icon="/icons/image-icon@2x.png">
@@ -91,10 +83,6 @@ Avalonia apps are made of high-level building blocks called controls, which allo
 
 <DocsCard header="Panel" href="/controls/layout/panels/panel" icon="/icons/panel-icon@2x.png">
   <p>The base class for all panel elements used to position and arrange child controls.</p>
-</DocsCard>
-
-<DocsCard header="Printing" href="/docs/concepts/printing" icon="/icons/printing-icon@2x.png">
-  <p>Send content to a printer, including page setup and print preview support.</p>
 </DocsCard>
 
 <DocsCard header="Radio Button" href="/controls/input/buttons/radiobutton" icon="/icons/radiobutton-icon@2x.png">

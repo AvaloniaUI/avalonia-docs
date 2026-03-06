@@ -72,11 +72,11 @@ Free 30-day trials are available for Internal and Business licenses through the 
 
 **Does XPF support Android and iOS?**
 
-Android and iOS support is available with an Enterprise license. The engineering team is actively developing these platforms.
+Android and iOS support is available with an Enterprise license and is currently in private preview. See [Mobile and Browser](/xpf/platforms/mobile-and-browser) for setup instructions.
 
 **Does XPF support WebAssembly?**
 
-WebAssembly support is available with an Enterprise license.
+WebAssembly support is available with an Enterprise license and is currently in private preview. See [Mobile and Browser](/xpf/platforms/mobile-and-browser) for setup instructions.
 
 **Which Linux distributions are supported?**
 

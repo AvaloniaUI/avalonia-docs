@@ -5,7 +5,7 @@ title: Using XPF in Avalonia
 
 ## Step 1: Update the Project File
 
-Change the SDK in your Avalonia application to [use the XPF SDK](/xpf/getting-started.md#step-3-use-the-xpf-sdk):
+Change the SDK in your Avalonia application to [use the XPF SDK](/xpf/getting-started#step-3-use-the-xpf-sdk):
 
 ```xml
 <Project Sdk="Xpf.Sdk/1.6.0">
