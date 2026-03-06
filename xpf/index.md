@@ -12,6 +12,8 @@ sidebar_label: Avalonia XPF
   />
 </head>
 
+import TierBadge from '@site/src/components/global/TierBadge';
+
 Welcome to the documentation for Avalonia XPF, our cross-platform fork of WPF.
 
 ## Overview 
@@ -22,31 +24,46 @@ Avalonia XPF maintains both API and binary compatibility with WPF while replacin
 
 ## Licensing
 
-As a commercial product, Avalonia XPF offers different licensing tiers to suit various needs:
+Avalonia XPF is a commercial product with three licensing tiers:
 
-| Platform        | Business | Enterprise |
-|---------------|-------|-------|
-| `Windows` | ✓ | ✓ | 
-| `macOS` | ✓ | ✓ | 
-| `Desktop Linux` | ✓ | ✓ | 
-| `Embedded Linux` | ✗ | ✓ | 
+### Internal
+For development and internal deployment to employees only. Includes macOS, Desktop Linux, major third-party control compatibility, and a 10 working day SLA.
 
-All applications built with Avalonia XPF will continue to work in perpetuity, regardless of license status. This ensures that your deployed applications remain functional and stable for your end users.
+### Business
+Full commercial license with enhanced cross-platform capabilities. Includes everything from Internal, plus Mix and Match Avalonia Controls, cross-platform System.Drawing, a 5 working day SLA, and Embedded Linux as a paid add-on.
 
-### Business & Enterprise Licenses
-Business and Enterprise licenses are perpetual, offering a permanent right to use Avalonia XPF. These licenses include:
+### Enterprise
+Premium solution with complete platform coverage. Includes everything from Business, plus Desktop platforms (PRO), Embedded Linux, iOS and Android, WebAssembly, and a 3 working day SLA.
+
+### Platform Support by Tier
+
+All XPF licenses support Avalonia's [Tier 1 platforms](/docs/supported-platforms). Platform coverage beyond Tier 1 varies by license:
+
+| Platform | Internal | Business | Enterprise |
+|---|---|---|---|
+| [Windows](/docs/supported-platforms#windows) | <TierBadge tier={1} /> | <TierBadge tier={1} /> | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
+| [macOS](/docs/supported-platforms#macos) | <TierBadge tier={1} /> | <TierBadge tier={1} /> | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
+| [Desktop Linux](/docs/supported-platforms#desktop-linux) | <TierBadge tier={1} /> | <TierBadge tier={1} /> | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
+| [Embedded Linux](/docs/supported-platforms#embedded-linux) | | Paid add-on | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
+| [iOS](/docs/supported-platforms#ios-and-ipados) | | | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
+| [Android](/docs/supported-platforms#android) | | | <TierBadge tier={1} /> <TierBadge tier={2} /> <TierBadge tier={3} /> |
+| [WebAssembly](/docs/supported-platforms#webassembly) | | | <TierBadge tier={1} /> |
+
+Enterprise licenses include Tier 2 platform support out of the box, and can arrange support for Tier 3 platforms (non-standard distributions and versions) on a case-by-case basis. For details on which OS versions fall into each tier, see [Supported Platforms](/docs/supported-platforms).
+
+### License Terms
+All XPF licenses are perpetual, offering a permanent right to use Avalonia XPF. Licenses include:
 
 * Fully supported 30-day trial period
 * Permanent license to build with Avalonia XPF
 * 12 months of updates and engineering support
 
-Both Business and Enterprise licenses enable organizations to thoroughly evaluate XPF's capabilities through a supported trial period, ensuring compatibility with their existing applications across their target platforms.
+All applications built with Avalonia XPF will continue to work in perpetuity, regardless of license status.
 
 ### Trial Availability
-Trial periods are exclusively available for Business and Enterprise licenses. These trials are fully supported by our engineering team to ensure organizations can thoroughly evaluate XPF's capabilities with their specific applications and use cases.
+Free 30-day trials are available for Internal and Business licenses. Enterprise licenses are available by contacting sales. All trials are fully supported by our engineering team.
 
-
-### Pricing 
+### Pricing
 For the latest pricing, please see our [website](https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=welcome_link#pricing). 
 
 ## Hybrid XPF

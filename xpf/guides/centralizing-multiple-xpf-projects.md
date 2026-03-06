@@ -12,7 +12,7 @@ You can use a [`global.json`](https://learn.microsoft.com/en-us/dotnet/core/tool
 ```json title=global.json
 {
   "msbuild-sdks": {
-    "Xpf.Sdk": "1.1.0"
+    "Xpf.Sdk": "1.6.0"
   }
 }
 ```
