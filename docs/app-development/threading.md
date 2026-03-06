@@ -105,15 +105,18 @@ Dispatcher.UIThread.Post(
 
 Common priorities, from highest to lowest:
 
-| Priority | Use case |
+| Priority | Description |
 |---|---|
-| `Send` | Highest priority. Processes immediately if already on the UI thread. |
-| `Normal` | Default priority for user-initiated operations. |
-| `Input` | Input processing (pointer, keyboard). |
-| `Loaded` | Control loaded events. |
-| `Render` | Rendering operations. |
-| `Background` | Low-priority background work. Runs when the UI thread is idle. |
-| `ApplicationIdle` | Lowest priority. Runs only when no other work is pending. |
+| `Send` | Processed before other asynchronous operations. |
+| `Normal` | Processed with normal priority. |
+| `Default` | The lowest foreground dispatcher priority. |
+| `Render` | Processed with the same priority as rendering. |
+| `Loaded` | Processed after layout and render but before input. |
+| `Input` | Processed with the same priority as input. |
+| `Background` | Processed after other non-idle operations have completed. |
+| `ContextIdle` | Processed after background operations have completed. |
+| `ApplicationIdle` | Processed when the application is idle. |
+| `SystemIdle` | Processed when the system is idle. |
 
 ## Async Patterns
 
@@ -221,6 +224,54 @@ For non-static usage or when working with a specific dispatcher instance, use `R
 await myControl.Dispatcher.Resume(DispatcherPriority.Background);
 ```
 
+## Full Example
+
+This example shows how to access the UI thread from a worker thread to update or get the text of a `TextBlock`:
+
+```xml title='MainView.axaml'
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:AvaloniaApplication1.ViewModels"
+             x:Class="AvaloniaApplication1.Views.MainView"
+             x:DataType="vm:MainViewModel">
+    <StackPanel Margin="20">
+        <TextBlock Name="TextBlock1" />
+    </StackPanel>
+</UserControl>
+```
+
+```csharp title='MainView.axaml.cs'
+using Avalonia.Controls;
+using Avalonia.Threading;
+using System.Threading.Tasks;
+
+namespace AvaloniaApplication1.Views;
+
+public partial class MainView : UserControl
+{
+    public MainView()
+    {
+        InitializeComponent();
+        _ = Task.Run(() => OnTextFromAnotherThread("test"));
+    }
+
+    private void SetText(string text) => TextBlock1.Text = text;
+    private string GetText() => TextBlock1.Text ?? "";
+
+    private async void OnTextFromAnotherThread(string text)
+    {
+        // Start the job on the UI thread and return immediately.
+        Dispatcher.UIThread.Post(() => SetText(text));
+
+        // Start the job on the UI thread and wait for the result.
+        var result = await Dispatcher.UIThread.InvokeAsync(GetText);
+
+        // This would throw because we are on a worker thread:
+        // SetText(text); // InvalidOperationException: 'Call from invalid thread'
+    }
+}
+```
+
 ## Common Mistakes
 
 ### Accessing controls from Task.Run
@@ -260,5 +311,5 @@ private void OnButtonClick(object? sender, RoutedEventArgs e)
 
 ## See Also
 
-- [Accessing the UI Thread](/docs/app-development/accessing-the-ui-thread): More examples of Dispatcher usage.
+- [`Dispatcher` API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Threading_Dispatcher)
 - [Application Lifetimes](/docs/fundamentals/application-lifetimes): How the application lifecycle interacts with threading.

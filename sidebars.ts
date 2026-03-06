@@ -298,17 +298,7 @@ const sidebars: SidebarsConfig = {
         },
         'app-development/xaml-preview-and-design-settings',
         'app-development/data-validation',
-        {
-          type: 'category',
-          label: 'Threading',
-          link: {
-            type: 'doc',
-            id: 'app-development/threading',
-          },
-          items: [
-            'app-development/accessing-the-ui-thread',
-          ],
-        },
+        'app-development/threading',
         'app-development/window-management',
         'app-development/performance',
         'app-development/accessibility',

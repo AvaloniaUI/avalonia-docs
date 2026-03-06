@@ -265,8 +265,9 @@ function createRedirects(existingPath: string): string[] | undefined {
     if (existingPath === '/docs/app-development/data-validation') {
       redirects.push('/docs/data/data-validation');
     }
-    if (existingPath === '/docs/app-development/accessing-the-ui-thread') {
+    if (existingPath === '/docs/app-development/threading') {
       redirects.push('/docs/development-optimization/accessing-the-ui-thread');
+      redirects.push('/docs/app-development/accessing-the-ui-thread');
     }
 
     // Media from reference
