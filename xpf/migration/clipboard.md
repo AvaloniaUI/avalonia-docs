@@ -48,7 +48,7 @@ Clipboard.SetDataObject(data);
 
 ## STA Threading (Windows)
 
-On Windows, clipboard operations use COM and require the main thread to be marked as STA. If you encounter `COMException: CoInitialize was not called`, ensure your entry point has the `[STAThread]` attribute or use [custom initialization](/xpf/guides/customizing-initialization), which handles this automatically.
+On Windows, clipboard operations use COM and require the main thread to be marked as STA. If you encounter `COMException: CoInitialize was not called`, ensure your entry point has the `[STAThread]` attribute or use [custom initialization](/xpf/configuration/customizing-initialization), which handles this automatically.
 
 ## Platform Differences
 

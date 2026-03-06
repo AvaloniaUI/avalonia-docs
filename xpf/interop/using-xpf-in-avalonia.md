@@ -11,7 +11,7 @@ Change the SDK in your Avalonia application to [use the XPF SDK](/xpf/getting-st
 <Project Sdk="Xpf.Sdk/1.6.0">
 ```
 
-And [disable automatic XPF initialization](/xpf/guides/customizing-initialization):
+And [disable automatic XPF initialization](/xpf/configuration/customizing-initialization):
 
 ```xml
 <PropertyGroup>

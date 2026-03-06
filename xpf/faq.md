@@ -39,7 +39,7 @@ If your application works on Windows but fails on Linux or macOS with errors lik
 AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable();
 ```
 
-See [Third-Party Compatibility](/xpf/third-party-libraries) for details, including how to exclude specific assemblies.
+See [Win32 API Shims](/xpf/third-party/win32-api-shims) for details, including how to exclude specific assemblies.
 
 **Do shims need to be enabled on Windows too?**
 
@@ -82,11 +82,15 @@ WebAssembly support is available with an Enterprise license.
 
 All XPF licenses support Tier 1 Linux distributions (the latest versions of Ubuntu, Fedora, and Debian). Enterprise licenses additionally cover Tier 2 and, by arrangement, Tier 3 distributions. See [Supported Platforms](/docs/supported-platforms#desktop-linux) for the full tier breakdown.
 
+**Does XPF support RHEL (Red Hat Enterprise Linux)?**
+
+Yes. RHEL 8 and later are supported. Some additional setup is required compared to Ubuntu. See [Linux: Other Dependencies](/xpf/platforms/linux#other-dependencies) for RHEL-specific package installation instructions.
+
 ## Common Issues
 
 **My application works on Windows but crashes on macOS/Linux. Where do I start?**
 
-1. Check if you need [Win32 API shims](/xpf/third-party-libraries) (look for `DllNotFoundException` errors)
+1. Check if you need [Win32 API shims](/xpf/third-party/win32-api-shims) (look for `DllNotFoundException` errors)
 2. Ensure all [Linux dependencies](/xpf/platforms/linux#other-dependencies) are installed
 3. Check the [Troubleshooting](/xpf/troubleshooting) page for your specific error
 4. Enable [XPF logging](/xpf/troubleshooting#listening-for-xpf-logs) for detailed diagnostics
@@ -98,3 +102,30 @@ This is a .NET 5+ behavior for single-file published applications, not specific 
 **Why do fonts render differently between Windows and Linux?**
 
 Windows and Linux use different text rendering backends, so some visual differences are expected. Ensure your custom fonts are embedded as resources in your `.csproj` and that font family names in XAML match the internal names in your font files. See [Getting Started: Fonts](/xpf/getting-started#fonts) for configuration details.
+
+**How do I get the render scaling (DPI) on macOS?**
+
+The WPF API `VisualTreeHelper.GetDpi()` may not return accurate values on macOS. Use the Avalonia interop API:
+
+```csharp
+using Atlantis;
+
+var topLevel = XpfWpfAbstraction.GetAvaloniaTopLevelForWindow(myWpfWindow);
+double scaling = topLevel.RenderScaling;
+```
+
+**Can I publish my XPF application from Visual Studio?**
+
+Publishing from the command line (`dotnet publish`) is strongly recommended. Visual Studio publishing can produce incomplete output missing native libraries (such as `libSkiaSharp`). See the platform-specific deployment guides for the correct publish commands.
+
+**How do I enable XPF logging for troubleshooting?**
+
+Set these environment variables before launching your application:
+- `XPF_LOG_OUTPUT`: `console`, `trace`, or `file=/path/to/log.txt` (combine with `;`)
+- `XPF_LOG_LEVEL`: `Verbose`, `Debug`, `Information`, `Warning`, `Error`, or `Fatal`
+
+See [Troubleshooting: Listening for XPF Logs](/xpf/troubleshooting#listening-for-xpf-logs) for details.
+
+**Which web browser control should I use with XPF?**
+
+It depends on your target platforms. See [Web Content Embedding](/xpf/interop/web-content) for a side-by-side comparison of CefSharp, NativeWebView, NativeWebDialog, and DotNetBrowser.

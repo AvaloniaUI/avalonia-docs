@@ -70,7 +70,7 @@ XPF is in active development and the CI build version changes frequently. The ve
 :::
 
 :::tip
-If you have multiple projects which will need to use the same XPF SDK vesion, you can [specify this version in `global.json`](/xpf/guides/centralizing-multiple-xpf-projects)
+If you have multiple projects which will need to use the same XPF SDK vesion, you can [specify this version in `global.json`](/xpf/configuration/centralizing-multiple-xpf-projects)
 :::
 
 ## Step 4: Add your Licence Key
@@ -185,7 +185,7 @@ This disables the WinForms shim layer and enables native WinForms integration. N
     </ItemGroup>
     ```
 18. Font matching works differently between WPF and XPF. Fonts with non-standard style names (e.g., "Condense" instead of "Condensed") may not match correctly. If a font is not rendering as expected, verify that the font family name in your XAML matches the internal name in the font file.
-19. To customize font fallback behavior (for example, to specify which fonts are used for missing characters), configure `FontManagerOptions` in your [custom initialization](/xpf/guides/customizing-initialization):
+19. To customize font fallback behavior (for example, to specify which fonts are used for missing characters), configure `FontManagerOptions` in your [custom initialization](/xpf/configuration/customizing-initialization):
     ```csharp
     .With(new FontManagerOptions
     {

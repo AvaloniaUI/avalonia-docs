@@ -15,7 +15,7 @@ Skia renders dashed strokes with line caps differently from WPF's milcore engine
 
 ### Blur Effects
 
-Blur effects (`BlurEffect`, `DropShadowEffect`) are computationally more expensive in Skia than in WPF's hardware-accelerated pipeline. Applications with heavy blur usage may see reduced framerates. See [Performance: Blur Effects](/xpf/guides/performance#blur-effects) for mitigation strategies.
+Blur effects (`BlurEffect`, `DropShadowEffect`) are computationally more expensive in Skia than in WPF's hardware-accelerated pipeline. Applications with heavy blur usage may see reduced framerates. See [Performance: Blur Effects](/xpf/configuration/performance#blur-effects) for mitigation strategies.
 
 ## Controls
 
@@ -68,7 +68,7 @@ See [Missing Features](/xpf/version-info/missing-features) for the full list.
 XPF uses `WS_EX_NOREDIRECTIONBITMAP` rather than `WS_EX_LAYERED` (which WPF uses). This means:
 
 - Per-pixel hit transparency is not supported. Mouse clicks on transparent regions of a window are not passed through to windows underneath.
-- For overlay scenarios, embed content in a single window rather than layering transparent windows. See [Performance: Embedding High-Performance Content](/xpf/guides/performance#embedding-high-performance-content) for OpenGL embedding.
+- For overlay scenarios, embed content in a single window rather than layering transparent windows. See [Performance: Embedding High-Performance Content](/xpf/configuration/performance#embedding-high-performance-content) for OpenGL embedding.
 
 ### Multiple UI Threads
 
@@ -81,6 +81,20 @@ The `ShowActivated` property is supported in XPF 1.6.0 and later.
 ### Window Closing Event
 
 The `Closing` event fires once when a window is closed programmatically or via the close button. In earlier XPF versions (before 1.6.0), `Closing` could fire twice when using `Window.Close()`.
+
+To override the close behavior, handle the `Closing` event and set `e.Cancel = true`:
+
+```csharp
+protected override void OnClosing(CancelEventArgs e)
+{
+    e.Cancel = true; // Prevent close
+    Hide();          // Hide instead
+}
+```
+
+### Win32 Window Messages
+
+XPF's Win32 API shim layer generates window messages (such as `WM_ACTIVATEAPP`, `WM_SETFOCUS`) to the extent needed by supported third-party controls. Not all Win32 messages are generated on all platforms. If your application relies on specific window messages for inter-window communication, use .NET IPC mechanisms (such as named pipes or memory-mapped files) instead.
 
 ## APIs
 
@@ -121,9 +135,21 @@ On older Linux distributions, `InitialDirectory` may be ignored if the GNOME ver
 
 Use `Microsoft.Win32.OpenFolderDialog` for cross-platform folder selection. Some third-party folder dialog implementations (such as DevExpress FolderDialog) may not work on macOS.
 
+### FolderBrowserDialog (System.Windows.Forms)
+
+`System.Windows.Forms.FolderBrowserDialog` is supported in XPF but maps to the platform's native folder picker. On Linux and macOS, the dialog appearance and behavior will differ from Windows. For consistent behavior, prefer `Microsoft.Win32.OpenFolderDialog`.
+
+### Dialog Migration Patterns
+
+When migrating WPF dialog code to XPF for cross-platform use:
+
+- Replace `System.Windows.Forms.OpenFileDialog` with `Microsoft.Win32.OpenFileDialog` where possible
+- Avoid setting Windows-specific dialog properties (such as `DereferenceLinks`) that have no cross-platform equivalent
+- On macOS, avoid showing modal dialogs during window activation. See [macOS: Startup and Modal Dialogs](/xpf/platforms/macos#startup-and-modal-dialogs)
+
 ## Clipboard
 
-See [Clipboard](/xpf/guides/clipboard) for a full breakdown of clipboard differences.
+See [Clipboard](/xpf/migration/clipboard) for a full breakdown of clipboard differences.
 
 ## Fonts
 

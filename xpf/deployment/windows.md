@@ -49,7 +49,7 @@ Enable ReadyToRun for faster startup times:
 </PropertyGroup>
 ```
 
-See [Performance Optimization](/xpf/guides/performance#reducing-startup-time-with-readytorun) for details.
+See [Performance Optimization](/xpf/configuration/performance#reducing-startup-time-with-readytorun) for details.
 
 ## WinForms Hosting
 
@@ -75,7 +75,7 @@ public static void Main(string[] args)
 }
 ```
 
-When using [custom initialization](/xpf/guides/customizing-initialization), the XPF SDK handles this automatically.
+When using [custom initialization](/xpf/configuration/customizing-initialization), the XPF SDK handles this automatically.
 
 ## Windows Installers
 

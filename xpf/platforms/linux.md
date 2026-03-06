@@ -92,15 +92,36 @@ A mixed installation (some packages from your distro, some from Microsoft) will 
 
 ## Other Dependencies
 
-The following dependencies are required to run XPF: `libice6 libsm6 libfontconfig1 libgdiplus`
+The following native libraries are required to run XPF: `libICE`, `libSM`, `fontconfig`, and `libgdiplus`.
 
-On a [Debian-based distribution](https://en.wikipedia.org/wiki/Category:Debian-based_distributions) run the following command to install these dependencies:
+### Debian / Ubuntu
 
 ```bash
 sudo apt install libice6 libsm6 libfontconfig1 libgdiplus
 ```
 
-For other distributions, use the distribution's package manager to install the required dependencies.
+### Fedora
+
+```bash
+sudo dnf install libICE libSM fontconfig libgdiplus
+```
+
+### RHEL / CentOS / Rocky Linux / AlmaLinux
+
+```bash
+sudo dnf install libICE libSM fontconfig
+```
+
+`libgdiplus` is not available in the default RHEL repositories. Install it from EPEL:
+
+```bash
+sudo dnf install epel-release
+sudo dnf install libgdiplus
+```
+
+### Other Distributions
+
+Use your distribution's package manager to install the equivalent packages. The library names may vary between distributions (for example, `libice6` on Debian corresponds to `libICE` on Fedora/RHEL).
 
 ## Publishing for Linux
 
@@ -166,7 +187,7 @@ XPF supports system tray icons on Linux through the StatusNotifierItem/AppIndica
 
 On older Linux distributions (such as RHEL 8), the GNOME version may be too old to support the DBus-based file dialog protocol. This can cause `OpenFolderDialog.InitialDirectory` and similar properties to be ignored.
 
-To work around this, disable the DBus file picker in your [custom initialization](/xpf/guides/customizing-initialization):
+To work around this, disable the DBus file picker in your [custom initialization](/xpf/configuration/customizing-initialization):
 
 ```csharp
 AppBuilder.Configure<AvaloniaUI.Xpf.Helpers.DefaultXpfAvaloniaApplication>()
@@ -215,19 +236,55 @@ ExecStart=/path/to/your/application
 
 XPF provides web content embedding on Linux through `NativeWebDialog` (from the `Avalonia.Xpf.Controls.WebView` NuGet package). The embeddable `NativeWebView` control is not supported on Linux.
 
-`NativeWebDialog` requires `libwebkit2gtk-4.1-dev`:
+`NativeWebDialog` requires webkit2gtk version 4.1:
+
+### Debian / Ubuntu
 
 ```bash
 sudo apt install libwebkit2gtk-4.1-dev
 ```
 
+### Fedora
+
+```bash
+sudo dnf install webkit2gtk4.1-devel
+```
+
+### RHEL / CentOS
+
+```bash
+sudo dnf install webkit2gtk4.1-devel
+```
+
+If `webkit2gtk4.1-devel` is not available on your RHEL version, check whether EPEL or a newer AppStream module provides it.
+
 :::note
-Version 4.1 of webkit2gtk is required. Older versions (4.0) do not support all features.
+Version 4.1 of webkit2gtk is required. Older versions (4.0) do not support all features needed by `NativeWebDialog`.
 :::
+
+For a comparison of all browser embedding options, see [Web Content Embedding](/xpf/interop/web-content).
+
+## Display Server Considerations
+
+### X11
+
+X11 is the default display server on most Linux distributions. XPF works well on X11, but be aware of the following:
+
+- **Window manager timing**: When launching XPF applications early in the desktop session (for example, from a systemd service), the window manager may not be fully initialized. This can cause `WindowStyle="None"` to be ignored. See [Launching from systemd](#launching-from-systemd) for a workaround.
+- **Window messages**: Win32 window messages (such as `WM_ACTIVATEAPP`) are emulated by the shim layer to the extent needed by supported third-party controls. Not all messages are generated. If your application relies on specific window messages for cross-window communication, consider using .NET IPC mechanisms instead.
+- **Multi-monitor quirks**: Window positioning and DPI behavior can vary between window managers. Test on your target window manager early.
+
+### Wayland
+
+Wayland is the newer display protocol used by default on recent versions of Fedora and Ubuntu. XPF supports Wayland through XWayland (the X11 compatibility layer).
+
+- **Keyboard isolation**: Only the focused window receives keyboard input. There is no mechanism to direct keyboard input to a non-focused window. If your application needs to isolate keyboard input between windows (for example, for kiosk setups with multiple input devices), this is a Wayland protocol limitation.
+- **Window positioning**: Wayland does not allow applications to set absolute window positions. `Window.Left` and `Window.Top` may be ignored by the compositor.
 
 ## Known Limitations
 
 - **UI test automation**: Avalonia does not currently support the AT-SPI2 accessibility protocol on Linux. Automated UI testing tools that rely on accessibility APIs (such as pywinauto or Appium) have limited functionality.
-- **Transparent window click-through**: As on macOS, XPF does not support clicking through transparent regions of a window on Linux.
+- **Transparent window click-through**: As on macOS, XPF does not support clicking through transparent regions of a window on Linux. Mouse clicks on transparent areas are captured by the window rather than passed through to windows underneath. For overlay scenarios, embed content in a single window rather than layering transparent windows.
 - **Wayland keyboard isolation**: On Wayland compositors, only the focused window receives keyboard input. There is no mechanism to direct keyboard input to a non-focused window.
-- **Remote desktop transparency**: Some remote desktop tools (such as MobaXterm) do not support alpha-channel transparency, which can cause transparent windows to appear with a white background.
+- **Remote desktop transparency**: Some remote desktop tools (such as MobaXterm) do not support alpha-channel transparency, which can cause transparent windows to appear with a white background. This is a limitation of the remote desktop tool, not XPF. Verify transparency behavior by testing with a native Linux application (such as Konsole with transparency enabled).
+- **NativeControlHost**: `NativeControlHost` (used for embedding native Linux controls) has limited support on Linux. If you need to embed native content, consider using Avalonia's composition APIs instead.

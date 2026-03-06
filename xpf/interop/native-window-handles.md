@@ -5,7 +5,7 @@ title: Getting native window handles
 
 ## Overview
 
-XPF uses a system where the handles returned from various WPF API calls are _virtual handles_. In this way, XPF can intercept API calls using these handles and automatically translate them into the appropriate cross-platform API. This has the effect that many WPF APIs such as `WindowInteropHelper.Handle` return these virtualized window handles, as well as [emulated Win32 APIs](/xpf/third-party-libraries).
+XPF uses a system where the handles returned from various WPF API calls are _virtual handles_. In this way, XPF can intercept API calls using these handles and automatically translate them into the appropriate cross-platform API. This has the effect that many WPF APIs such as `WindowInteropHelper.Handle` return these virtualized window handles, as well as [emulated Win32 APIs](/xpf/third-party/win32-api-shims).
 
 ## When You Need Native Handles
 
@@ -18,7 +18,7 @@ You may need to access the real native window handle when:
 
 ## Getting a Native Handle
 
-The native handle for a window can be retrieved from the [underlying Avalonia `Window`](/xpf/guides/embedding-avalonia-in-xpf#getting-the-avalonia-window):
+The native handle for a window can be retrieved from the [underlying Avalonia `Window`](/xpf/interop/embedding-avalonia-in-xpf#getting-the-avalonia-window):
 
 ```csharp
 using Atlantis;
@@ -97,5 +97,5 @@ private void SetupNativeRendering(System.Windows.Window wpfWindow)
 
 ## See Also
 
-- [Embedding Avalonia in XPF](/xpf/guides/embedding-avalonia-in-xpf) for accessing Avalonia features from XPF
-- [Performance: Embedding High-Performance Content](/xpf/guides/performance#embedding-high-performance-content) for OpenGL integration
+- [Embedding Avalonia in XPF](/xpf/interop/embedding-avalonia-in-xpf) for accessing Avalonia features from XPF
+- [Performance: Embedding High-Performance Content](/xpf/configuration/performance#embedding-high-performance-content) for OpenGL integration

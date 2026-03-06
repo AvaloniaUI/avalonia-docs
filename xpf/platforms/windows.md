@@ -42,7 +42,7 @@ Some Windows operations require the main thread to be marked as STA (Single-Thre
 - OLE drag and drop
 - Certain third-party COM components
 
-If you encounter `COMException: CoInitialize was not called`, add the `[STAThread]` attribute to your entry point. When using [custom initialization](/xpf/guides/customizing-initialization), XPF handles this automatically.
+If you encounter `COMException: CoInitialize was not called`, add the `[STAThread]` attribute to your entry point. When using [custom initialization](/xpf/configuration/customizing-initialization), XPF handles this automatically.
 
 ## CefSharp
 
@@ -66,7 +66,7 @@ protected override void OnCursorChange(object sender, CursorChangeEventArgs e)
 }
 ```
 
-For cross-platform browser embedding, see [Third-Party Compatibility: Cross-Platform Browser Alternatives](/xpf/third-party-libraries#cross-platform-browser-alternatives).
+For cross-platform browser embedding, see [Web Content Embedding](/xpf/interop/web-content).
 
 ## Window Handles
 
@@ -80,7 +80,7 @@ var handle = avaloniaWindow.TryGetPlatformHandle();
 // handle.Handle is the native HWND on Windows
 ```
 
-See [Native Window Handles](/xpf/guides/native-window-handles) for more details.
+See [Native Window Handles](/xpf/interop/native-window-handles) for more details.
 
 ## Deployment
 

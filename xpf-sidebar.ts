@@ -8,24 +8,40 @@ const sidebars: SidebarsConfig = {
     'faq',
     {
       'type': 'category',
-      'label': 'Guides',
+      'label': 'Migration',
       'items': [
-        'guides/known-differences',
-        'guides/embedding-avalonia-in-xpf',
-        'guides/using-xpf-in-avalonia',
-        'third-party-libraries',
-        'guides/clipboard',
-        'guides/customizing-initialization',
-        'guides/native-window-handles',
-        'guides/removing-the-titlebar',
-        'guides/key-mapping',
-        'guides/centralizing-multiple-xpf-projects',
-        'guides/performance',
-        {
-          type: 'link',
-          label: 'Embedding web content',
-          href: '/docs/app-development/embedding-web-content'
-        },
+        'migration/known-differences',
+        'migration/clipboard',
+        'migration/key-mapping',
+        'migration/removing-the-titlebar',
+      ]
+    },
+    {
+      'type': 'category',
+      'label': 'Third-Party Libraries',
+      'items': [
+        'third-party/win32-api-shims',
+        'third-party/compatibility',
+        'third-party/winapi-reference',
+      ]
+    },
+    {
+      'type': 'category',
+      'label': 'Interop',
+      'items': [
+        'interop/embedding-avalonia-in-xpf',
+        'interop/using-xpf-in-avalonia',
+        'interop/native-window-handles',
+        'interop/web-content',
+      ]
+    },
+    {
+      'type': 'category',
+      'label': 'Configuration',
+      'items': [
+        'configuration/customizing-initialization',
+        'configuration/centralizing-multiple-xpf-projects',
+        'configuration/performance',
       ]
     },
     {
@@ -41,7 +57,7 @@ const sidebars: SidebarsConfig = {
       'type': 'category',
       'label': 'Testing',
       'items': [
-        'guides/headless-testing',
+        'testing/headless-testing',
       ]
     },
     {

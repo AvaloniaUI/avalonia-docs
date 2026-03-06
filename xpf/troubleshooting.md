@@ -98,7 +98,7 @@ In some situations it might be useful to gather Avalonia logs, as XPF is built o
 
 ### .LogToTrace in a Custom Avalonia Initialization
 
-1. Follow [instructions](/xpf/guides/customizing-initialization) on how to setup custom Avalonia initialization.
+1. Follow [instructions](/xpf/configuration/customizing-initialization) on how to setup custom Avalonia initialization.
 2. Then you will be able to call `.LogToTrace()` with optional severity parameter in the AppBuilder chain, like this:
 ```diff
         AppBuilder.Configure<AvaloniaUI.Xpf.Helpers.DefaultXpfAvaloniaApplication>()
@@ -188,6 +188,22 @@ XPF works with .NET 6, 7, 8, 9, and 10. The `net8.0-windows` (or similar) target
 
 WPF features added in .NET versions newer than .NET 6 (such as the Fluent theme from .NET 9) may not be available in XPF, but features from .NET 8 (such as `OpenFolderDialog`) are supported.
 
+:::tip
+The `-windows` target framework suffix (e.g., `net8.0-windows`) works on Linux and macOS when using the XPF SDK. You do not need to change the TFM for cross-platform builds. Using the plain `net8.0` TFM without the `-windows` suffix may cause compilation errors with third-party libraries that expect Windows-specific APIs.
+:::
+
+## Xpf.Sdk Import Conflicts
+
+When mixing projects that use `Sdk="Xpf.Sdk"` with standard `Microsoft.NET.Sdk` projects, you may encounter MSBuild import conflicts or duplicate type warnings. Common symptoms include:
+
+- `ReachFramework` or `System.Windows.Input.Manipulations` version conflicts
+- `WindowsDesktop` SDK being imported twice
+
+**Solutions**:
+- Ensure only your executable project uses `Sdk="Xpf.Sdk"`. Library projects can use `Microsoft.NET.Sdk` with `<EnableWindowsTargeting>true</EnableWindowsTargeting>` instead.
+- Remove explicit `<UseWpf>true</UseWpf>` from projects that use the XPF SDK, as the SDK provides WPF support automatically.
+- If you encounter `Could not load file or assembly` errors after changing the SDK, clean your `bin`/`obj` directories.
+
 ## License Validation
 
 XPF validates your application against the license using two identifiers:
@@ -196,3 +212,24 @@ XPF validates your application against the license using two identifiers:
 2. **Process Executable Name**: The name of the running process
 
 Both must match the values configured in your license. If license validation fails, verify that your project's `AssemblyName` matches the name registered with your license.
+
+:::note
+If you rename your application executable or change the `AssemblyName` in your `.csproj`, you must update your license to match. Contact the Avalonia team to update your license configuration.
+:::
+
+## Creating NuGet Packages That Depend on XPF
+
+If you want to distribute a library as a public NuGet package that uses XPF internally:
+
+- Your NuGet package consumers must have their own XPF license
+- Do not embed or redistribute XPF assemblies in your NuGet package
+- Reference XPF packages as dependencies so they are resolved from the licensed NuGet feed
+- The consumer's entry assembly name must match their license, not your library's assembly name
+
+## Dispatcher Thread Errors
+
+If you encounter "The calling thread cannot access this object because a different thread owns it" exceptions:
+
+- Ensure UI operations happen on the main dispatcher thread: `Dispatcher.CurrentDispatcher.Invoke(() => { ... })`
+- XPF supports only a single UI thread on macOS. WPF patterns that create windows on separate threads must be refactored to use the main dispatcher.
+- Some third-party libraries (such as Caliburn.Micro) may access window properties from background threads during initialization. See [Library Compatibility: Caliburn.Micro](/xpf/third-party/compatibility#caliburnmicro) for library-specific guidance.

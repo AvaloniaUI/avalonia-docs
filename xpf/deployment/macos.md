@@ -142,4 +142,4 @@ Enable ReadyToRun for faster startup:
 </PropertyGroup>
 ```
 
-See [Performance Optimization](/xpf/guides/performance#reducing-startup-time-with-readytorun) for details.
+See [Performance Optimization](/xpf/configuration/performance#reducing-startup-time-with-readytorun) for details.

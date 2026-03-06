@@ -66,6 +66,22 @@ Configure your project to use the new `Main` method by adding the following to y
 Change the namespace in the above example to the namespace defined in `Program.cs`.
 :::
 
+## AssemblyLoadContext (ALC) Support
+
+If your application uses a custom .NET host or plugin architecture with separate `AssemblyLoadContext` instances, enable ALC support by adding the following to your `.csproj`:
+
+```xml
+<ItemGroup>
+    <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.EnableAlcSupport" Value="true" />
+</ItemGroup>
+```
+
+This prevents `VerificationException` errors caused by the same assembly being loaded into multiple ALCs. You need this setting when:
+
+- Your application uses a plugin system that loads assemblies into isolated ALCs
+- You host XPF within another application framework that uses custom assembly loading
+- You see errors about type argument constraints during XPF initialization
+
 ## Custom Assembly Loading
 
 If you have a custom mechanism for loading managed assemblies, you may find that using the `AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable` function causes lock-ups in your app. If that happens, we suggest that you try to use the deferred way of adding assemblies with `AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AddLibrary` like so:
@@ -89,6 +105,23 @@ internal class Program
     }
 }
 ```
+
+## Dispatcher Constraints
+
+XPF supports a single UI dispatcher on all platforms. On macOS, this is enforced by the operating system (only one UI thread is permitted). On Windows and Linux, limited multi-dispatcher support exists but is not recommended.
+
+If your WPF application creates windows on separate threads (for example, splash screens or progress dialogs), refactor those patterns to use the main dispatcher:
+
+```csharp
+// Instead of creating a new thread for a splash screen:
+Dispatcher.CurrentDispatcher.BeginInvoke(DispatcherPriority.Background, () =>
+{
+    var splash = new SplashWindow();
+    splash.Show();
+});
+```
+
+See [Missing Features: Multiple UI Threads](/xpf/version-info/missing-features) for more details.
 
 ## Optional: Define a custom Avalonia Application
 

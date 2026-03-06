@@ -31,7 +31,7 @@ On Linux, ReadyToRun may change how native `.so` libraries are resolved. See [Li
 
 ### Configuring Skia and Composition Options
 
-XPF uses Skia as its rendering engine. You can tune rendering performance through `SkiaOptions` and `CompositionOptions` in a [custom initialization](/xpf/guides/customizing-initialization):
+XPF uses Skia as its rendering engine. You can tune rendering performance through `SkiaOptions` and `CompositionOptions` in a [custom initialization](/xpf/configuration/customizing-initialization):
 
 ```csharp
 using Avalonia;
@@ -84,6 +84,6 @@ BAML (compiled XAML) provides the best loading performance, but there is no supp
 
 ## Embedding High-Performance Content
 
-For performance-critical rendering (such as real-time meters, audio visualizations, or 3D content), consider embedding Avalonia controls in your XPF application using [AvaloniaHost](/xpf/guides/embedding-avalonia-in-xpf). Avalonia's `CompositionCustomVisuals` API allows rendering directly on the composition thread, bypassing the WPF dispatcher entirely.
+For performance-critical rendering (such as real-time meters, audio visualizations, or 3D content), consider embedding Avalonia controls in your XPF application using [AvaloniaHost](/xpf/interop/embedding-avalonia-in-xpf). Avalonia's `CompositionCustomVisuals` API allows rendering directly on the composition thread, bypassing the WPF dispatcher entirely.
 
 For OpenGL content, see the [OpenGL sample](https://github.com/AvaloniaUI/Avalonia-XPF-Samples/tree/master/src/OpenGLSample) which demonstrates embedding OpenGL rendering within an XPF window using `ICompositionGpuInterop`.

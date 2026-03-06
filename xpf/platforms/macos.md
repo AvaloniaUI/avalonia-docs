@@ -9,7 +9,7 @@ By default, the macOS menu bar and system dialogs display "Avalonia Application"
 
 ### Using a Custom Avalonia Application
 
-Follow the steps in [Customizing Initialization](/xpf/guides/customizing-initialization#optional-define-a-custom-avalonia-application) to create a custom Avalonia Application class, then set the `Name` property in your AXAML:
+Follow the steps in [Customizing Initialization](/xpf/configuration/customizing-initialization#optional-define-a-custom-avalonia-application) to create a custom Avalonia Application class, then set the `Name` property in your AXAML:
 
 ```xml title="MyAvaloniaApp.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -82,11 +82,11 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 
 On platforms that do not support a global menu bar (Windows and most Linux desktop environments), you can use a `NativeMenuBar` control embedded in your XPF window via `AvaloniaHost`. This control renders a traditional menu bar only on platforms without native global menu support, and is hidden on macOS (where the global menu is used instead).
 
-See [Embedding Avalonia in XPF](/xpf/guides/embedding-avalonia-in-xpf) for details on hosting Avalonia controls.
+See [Embedding Avalonia in XPF](/xpf/interop/embedding-avalonia-in-xpf) for details on hosting Avalonia controls.
 
 ## Dock Visibility
 
-To control whether your application appears in the macOS Dock, use `MacOSPlatformOptions` in a [custom initialization](/xpf/guides/customizing-initialization):
+To control whether your application appears in the macOS Dock, use `MacOSPlatformOptions` in a [custom initialization](/xpf/configuration/customizing-initialization):
 
 ```csharp
 AppBuilder.Configure<MyAvaloniaApp>()
@@ -99,7 +99,19 @@ AppBuilder.Configure<MyAvaloniaApp>()
     });
 ```
 
-If you also set `LSUIElement` or `LSBackgroundOnly` in your `Info.plist`, ensure you are using XPF 1.6.0 or later to avoid a brief dock icon flicker on startup.
+### Info.plist Interaction
+
+The `ShowInDock` option interacts with macOS `Info.plist` settings:
+
+| Configuration | Behavior |
+|---|---|
+| `ShowInDock = false` | App does not appear in the Dock. Equivalent to `LSUIElement = true`. |
+| `LSUIElement = true` in Info.plist | App does not appear in the Dock or the Cmd+Tab switcher. The app has no menu bar. |
+| `LSBackgroundOnly = true` in Info.plist | App runs as a background process with no UI presence. Not suitable for XPF apps with windows. |
+
+If you set both `ShowInDock = false` in code and `LSUIElement` in `Info.plist`, use XPF 1.6.0 or later to avoid a brief dock icon flicker on startup.
+
+For tray-icon-only applications, use `ShowInDock = false` and provide a system tray icon for user interaction.
 
 ## Startup and Modal Dialogs
 
@@ -166,7 +178,7 @@ To distinguish between trackpad scroll and mouse wheel events, check the `Pointe
 
 If a third-party control provides a Skia-based rendering option, enable it for non-Windows builds. Contact your control vendor for guidance on non-GDI rendering backends.
 
-See [Third-Party Compatibility](/xpf/third-party-libraries) for more details.
+See [Library Compatibility](/xpf/third-party/compatibility) for more details.
 
 ## Packaging and Deployment
 
@@ -201,7 +213,7 @@ However there are problems with this mapping:
 
 ### Automatic macOS Key Mapping
 
-To fix many of these problems, one can call the `XpfKeyboard.MapMacOSKeys()` method on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](/xpf/third-party-libraries); that is, in the constructor of your `App` class or `Program.Main`:
+To fix many of these problems, one can call the `XpfKeyboard.MapMacOSKeys()` method on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](/xpf/third-party/win32-api-shims); that is, in the constructor of your `App` class or `Program.Main`:
 
 ```csharp
 using System.Windows;
@@ -229,11 +241,11 @@ Calling this method on macOS:
 
 ### macOS Custom Keyboard Mapping
 
-For more flexible key mapping you can [add custom key mappings](/xpf/guides/key-mapping).
+For more flexible key mapping you can [add custom key mappings](/xpf/migration/key-mapping).
 
 ## Context Menus
 
-On macOS, context menus can be opened by Ctrl+Clicking as well as by right clicking. You can enable this feature by setting `XpfMouse.ShowContextMenuOnMacOSCtrlClick` on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](/xpf/third-party-libraries); that is, in the constructor of your `App` class or `Program.Main`:
+On macOS, context menus can be opened by Ctrl+Clicking as well as by right clicking. You can enable this feature by setting `XpfMouse.ShowContextMenuOnMacOSCtrlClick` on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](/xpf/third-party/win32-api-shims); that is, in the constructor of your `App` class or `Program.Main`:
 
 ```csharp
 using System.Windows;
@@ -277,6 +289,7 @@ MAUI Essentials does not support macOS (only Mac Catalyst). It cannot be used wi
 
 ## Known Limitations
 
-- **Multiple UI threads**: macOS allows only one UI thread. WPF patterns that rely on multiple dispatchers (such as splash screens on a separate thread) will not work.
+- **Multiple UI threads**: macOS allows only one UI thread. WPF patterns that rely on multiple dispatchers (such as splash screens on a separate thread) will not work. Refactor these patterns to use the main dispatcher with `DispatcherPriority.Background` for deferred work.
 - **Transparent window click-through**: XPF does not support per-pixel hit transparency (clicking through transparent regions of a window). Consider embedding content in a single window instead of using transparent overlays.
-- **SystemSounds.Beep**: `System.Media.SystemSounds.Beep` is not supported on macOS and will throw `PlatformNotSupportedException`.
+- **SystemSounds.Beep**: `System.Media.SystemSounds.Beep` is not supported on macOS and will throw `PlatformNotSupportedException`. Guard calls with a platform check or remove them for cross-platform builds.
+- **Tooltip focus stealing**: On some macOS versions, showing a tooltip can cause the application to briefly steal focus from other applications. This is a known issue being tracked by the XPF team.

@@ -25,17 +25,28 @@ dotnet publish -r linux-arm64 -c Release --self-contained
 
 ## Runtime Dependencies
 
-Ensure the following packages are installed on the target system:
+Ensure the following packages are installed on the target system.
+
+### Debian / Ubuntu
 
 ```bash
 sudo apt install libice6 libsm6 libfontconfig1 libgdiplus
 ```
 
-For WebView support, also install:
+### Fedora
 
 ```bash
-sudo apt install libwebkit2gtk-4.1-dev
+sudo dnf install libICE libSM fontconfig libgdiplus
 ```
+
+### RHEL / CentOS / Rocky Linux
+
+```bash
+sudo dnf install epel-release
+sudo dnf install libICE libSM fontconfig libgdiplus
+```
+
+For WebView support, also install `libwebkit2gtk-4.1-dev` (Debian/Ubuntu) or `webkit2gtk4.1-devel` (Fedora/RHEL).
 
 See [Linux: Other Dependencies](/xpf/platforms/linux#other-dependencies) for details.
 
@@ -116,7 +127,7 @@ Example GitHub Actions step:
     XpfLicenseKey: ${{ secrets.XPF_LICENSE_KEY }}
 ```
 
-See [Centralizing Multiple XPF Projects](/xpf/guides/centralizing-multiple-xpf-projects#license-keys) for using environment variables with license keys.
+See [Centralizing Multiple XPF Projects](/xpf/configuration/centralizing-multiple-xpf-projects#license-keys) for using environment variables with license keys.
 
 ## Debugging Remote Linux Targets
 
