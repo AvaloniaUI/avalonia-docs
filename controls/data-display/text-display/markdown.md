@@ -5,12 +5,12 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 The Avalonia.Controls.Markdown control renders Markdown-formatted text in Avalonia applications, supporting common Markdown features and theming.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## Usage Examples
 

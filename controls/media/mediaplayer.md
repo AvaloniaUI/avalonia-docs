@@ -5,14 +5,14 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 The `MediaPlayer` class provides the core functionality for media playback in Avalonia applications. It handles media
 loading, playback control, and platform-specific backend management, serving as the engine behind
 the `MediaPlayerControl`.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## Properties
 
@@ -170,7 +170,6 @@ private void UpdatePlayerSize(Size size)
 }
 ```
 `MediaPlayerPresenter` is provided for convenience, but you can use any custom visual. Ensure that you update the visual with the size provided by the `MediaPlayer` instance.
-
 
 ### Event Handling
 

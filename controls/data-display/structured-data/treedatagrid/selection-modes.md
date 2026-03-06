@@ -5,17 +5,17 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 Two selection modes are supported:
 
 - **Row selection** allows the user to select whole rows
 - **Cell selection** allows the user to select individual cells
 
 Both selection types support either single or multiple selection. The default selection type is single row selection.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## Index paths
 
@@ -155,9 +155,6 @@ Source.Selection = new TreeDataGridCellSelectionModel<Person>(Source)
     SingleSelect = false
 };
 ```
-
-
-
 Cell selection is exposed via the `CellSelection` property on the source.
 
 The `CellIndex` struct identifies an individual cell by a combination of an integer column index and an `IndexPath` row index:

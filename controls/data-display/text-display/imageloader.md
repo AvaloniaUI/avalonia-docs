@@ -5,12 +5,12 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 The `Markdown` control supports custom image loading via the `ImageLoader` property. This allows you to handle image formats such as SVG, remote images, or any custom logic for image resolution.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## Example: Loading SVG Images
 

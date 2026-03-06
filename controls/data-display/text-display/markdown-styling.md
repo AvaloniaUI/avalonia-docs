@@ -5,12 +5,12 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 The `Markdown` control in Avalonia supports custom styling via named resources. You can override these resources in your application to customize the appearance of Markdown elements.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## Customizable Resources
 

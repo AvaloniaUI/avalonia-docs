@@ -5,12 +5,12 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 This document explains how to enable syntax highlighting for code blocks in the `Markdown` control by providing a `CodeHighlighter` implementation.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## Installation / Packages
 

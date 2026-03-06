@@ -5,12 +5,12 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 The `MediaSource` class hierarchy provides an abstraction for different types of media content sources in Avalonia Accelerate MediaControls. This allows the media playback system to handle various content sources (files, URLs, streams) through a unified interface.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## MediaSource (Abstract Base Class)
 

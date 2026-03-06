@@ -5,12 +5,12 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 The `MediaPlayerControl` is a fully-featured UI control for media playback that provides transport controls, progress display, volume control, and video rendering. It encapsulates a `MediaPlayer` instance and provides a rich user interface for media playback.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## Properties
 
@@ -96,7 +96,6 @@ mediaPlayerControl.ErrorOccurred += (sender, args) =>
 ```
 
 **Note**: This callback gives you the opportunity to reset the state of the `MediaPlayerControl` gracefully.
-
 
 ## Template parts and customization
 

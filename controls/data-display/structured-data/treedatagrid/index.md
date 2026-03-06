@@ -5,25 +5,21 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
 import FlatTreeDataGrid from '/img/accelerate/treedatagrid/quickstart-flat-1.png';
 import HierarchicalTreeDataGrid from '/img/accelerate/treedatagrid/quickstart-hierarchical-1.png';
 
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
+The `TreeDataGrid` combines tree view and data grid functionality in a single control, displaying hierarchical and tabular data together. It supports two modes:
 
-**`TreeDataGrid` is maintained as part of Avalonia Accelerate as of October 2025.**
+* _Flat_ displays data in a two-dimensional table, similar to a standard data grid.
+* _Hierarchical_ displays data in an expandable tree with optional columns.
 
-The `TreeDataGrid` displays hierarchical and tabular data together in a single view. It is a combination of a tree view and data grid.
-
-The control has two modes of operation:
-
-* _Hierarchical -_ data is displayed in a tree with optional columns
-* _Flat -_ data is displayed in a two dimensional table, similar to the data grid control
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+:::
 
 ## Installation
 
-See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-accelerate) for full instructions on installing Accelerate components.
 
 Add the `TreeDataGrid` package to your project:
 
@@ -31,9 +27,9 @@ Add the `TreeDataGrid` package to your project:
 dotnet add package Avalonia.Controls.TreeDataGrid
 ```
 
-### Add the license key
+### Add the licence key
 
-Include your Avalonia license key in the executable project file (`.csproj`):
+Include your Avalonia licence key in the executable project file (`.csproj`):
 
 ```xml
 <ItemGroup>
@@ -42,12 +38,12 @@ Include your Avalonia license key in the executable project file (`.csproj`):
 ```
 
 :::tip
-For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
 ### Install the theme
 
-The theme for `TreeDataGrid` must be installed into your `App.axaml` in order for anything to appear.
+The `TreeDataGrid` theme must be added to your `App.axaml`, otherwise the control won't render.
 
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
@@ -68,24 +64,19 @@ You will probably use these properties most often:
 
 | Property               | Description                                                                                   |
 | ---------------------- | --------------------------------------------------------------------------------------------- |
-| `Source`               | The bound collection that is used as the data source for the control.                         |
-| `CanUserResizeColumns` | Indicates whether the user can adjust column widths using the pointer. (Default is false.)    |
-| `CanUserSortColumns`   | Indicates whether the user can sort columns by clicking the column header. (Default is true.) |
+| `Source`               | The data source that drives the control's rows and columns.                                   |
+| `CanUserResizeColumns` | Whether the user can adjust column widths with the pointer. Default is `false`.               |
+| `CanUserSortColumns`   | Whether the user can sort columns by clicking the header. Default is `true`.                  |
 
 ### Source
 
-There are two parts to any `TreeDataGrid`:
-
-- The "Source" which is defined in code and describes how your data model will map to the rows and columns of the `TreeDataGrid`.
-- The `TreeDataGrid` control which can be instantiated in XAML or from code.
-
-If you're using the MVVM pattern, then the Source is usually defined at the view model layer, but it can also be defined in code-behind. This guide will assume that you're using the MVVM pattern.
+Every `TreeDataGrid` has two parts: a **Source** defined in code that maps your data model to rows and columns, and the **control** itself, instantiated in XAML or code. With the MVVM pattern, the source typically lives in the view model. The examples below follow this approach.
 
 ## Flat data
 
-#### Data model
+### Data model
 
-For this guide we will be using a very simple `Person` class as our data model.
+Start with a simple `Person` class:
 
 ```csharp
 public class Person
@@ -96,7 +87,7 @@ public class Person
 }
 ```
 
-First we create a `MainWindowViewModel` containing our simple dataset:
+Then create a `MainWindowViewModel` with some sample data stored in an [`ObservableCollection<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0), so the grid automatically reflects changes:
 
 ```csharp
 using System.Collections.ObjectModel;
@@ -115,15 +106,9 @@ public class MainWindowViewModel
 }
 ```
 
-We store the data in an [`ObservableCollection<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) which will allow the `TreeDataGrid` to listen for changes in the data and automatically update the UI.
+### Data source
 
-#### Data source
-
-Because we're displaying non-hierarchical data, we'll use a `FlatTreeDataGridSource<Person>`. `FlatTreeDataGridSource` is a generic class where the type parameter represents the data model type, in this case `Person`.
-
-The constructor to `FlatTreeDataGridSource` accepts a collection of type `IEnumerable<T>` to which we'll pass our data set. 
-
-We'll create the source in the `MainWindowViewModel` constructor, add three columns, and expose the source in a property:
+For non-hierarchical data, use `FlatTreeDataGridSource<Person>`. Pass it the collection and define the columns. Each `TextColumn` takes the data model type, the value type, a header string, and a lambda to select the value:
 
 ```csharp
 public class MainWindowViewModel
@@ -147,11 +132,9 @@ public class MainWindowViewModel
 }
 ```
 
-The columns above are defined as `TextColumn`s - again, `TextColumn` is a generic class that accepts the data model type and a value type. The first parameter is the header to display in the column and the second parameter is a lambda expression which selects the value to display from the data model.
+### Add the control
 
-#### Add the control
-
-It's now time to add the `TreeDataGrid` control to a window and bind it to the source.
+Bind the `TreeDataGrid` to the source in your window:
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -161,17 +144,15 @@ It's now time to add the `TreeDataGrid` control to a window and bind it to the s
 </Window>
 ```
 
-#### Run the application
-
-Run the application and you should see the data appear:
+### Run the application
 
 <Image light={FlatTreeDataGrid} maxWidth={400} alignment="center" />
 
 ## Hierarchical data
 
-#### Data model
+### Data model
 
-For this guide we will be using a very simple `Person` class as our data model.
+The hierarchical model is the same `Person` class with an added `Children` collection:
 
 ```csharp
 public class Person
@@ -183,7 +164,7 @@ public class Person
 }
 ```
 
-First we create a `MainWindowViewModel` containing our simple dataset:
+The view model now contains nested data:
 
 ```csharp
 using System.Collections.ObjectModel;
@@ -194,25 +175,25 @@ public class MainWindowViewModel
 {
     private ObservableCollection<Person> _people = new()
     {
-        new Person 
-        { 
-            FirstName = "Eleanor", 
-            LastName = "Pope", 
+        new Person
+        {
+            FirstName = "Eleanor",
+            LastName = "Pope",
             Age = 32,
             Children =
             {
                 new Person { FirstName = "Marcel", LastName = "Gutierrez", Age = 4 },
             }
         },
-        new Person 
-        { 
+        new Person
+        {
             FirstName = "Jeremy",
             LastName = "Navarro",
             Age = 74,
             Children =
             {
-                new Person 
-                { 
+                new Person
+                {
                     FirstName = "Jane",
                     LastName = "Navarro",
                     Age = 42 ,
@@ -228,15 +209,9 @@ public class MainWindowViewModel
 }
 ```
 
-We store the data in an [`ObservableCollection<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) which will allow the `TreeDataGrid` to listen for changes in the data and automatically update the UI.
+### Data source
 
-#### Data source
-
-Because we're displaying hierarchical data, we'll use a `HierarchicalTreeDataGridSource<Person>`. `HierarchicalTreeDataGridSource` is a generic class where the type parameter represents the data model type, in this case `Person`.
-
-The constructor to `HierarchicalTreeDataGridSource` accepts a collection of type `IEnumerable<T>` to which we'll pass our data set. 
-
-We'll create the source in the `MainWindowViewModel` constructor, add three columns, and expose the source in a property:
+For hierarchical data, use `HierarchicalTreeDataGridSource<Person>`. The key difference is `HierarchicalExpanderColumn`, which wraps an inner column and takes a second lambda that selects the children collection for each row:
 
 ```csharp
 public class MainWindowViewModel
@@ -262,13 +237,9 @@ public class MainWindowViewModel
 }
 ```
 
-The first column above is defined as a `HierarchicalExpanderColumn`. Its first constructor parameter defines how the data in the column will be displayed. For this we're using a `TextColumn` - see below for details of its constructor parameters. The second parameter to the `HierarchicalExpanderColumn` constructor is a lambda which selects the property which will contain the children of each row.
+### Add the control
 
-The remaining columns are also defined as `TextColumn`s - again, `TextColumn` is a generic class that accepts the data model type and a value type. The first parameter to `TextColumn` is the header to display in the column and the second parameter is a lambda expression which selects the value to display from the data model.
-
-#### Add the control
-
-It's now time to add the `TreeDataGrid` control to a window and bind it to the source.
+The XAML is identical to the flat example:
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -278,9 +249,7 @@ It's now time to add the `TreeDataGrid` control to a window and bind it to the s
 </Window>
 ```
 
-#### Run the application
-
-Run the application and you should see the data appear:
+### Run the application
 
 <Image light={HierarchicalTreeDataGrid} maxWidth={400} alignment="center" />
 

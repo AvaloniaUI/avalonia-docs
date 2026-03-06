@@ -5,12 +5,12 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tooling">Accelerate</Pill>
-<br/><br/>
-
 The `VirtualKeyboardScope` is a container control that manages [virtual keyboard](/controls/input/text-input/virtualkeyboard) visibility automatically based on the current input focus. It displays the keyboard when a text input control within it gains focus, and hides it when focus is lost or moved to a non-text control.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+:::
 
 ## Overview
 
@@ -21,7 +21,6 @@ The `VirtualKeyboardScope` is a container control that manages [virtual keyboard
 | Property | Type | Description |
 |----------|------|-------------|
 | InputMethods | IEnumerable\<VirtualKeyboardInputMethod> | Gets or sets the collection of input methods (keyboard layouts and IMEs) available to users. |
-
 
 ## Usage examples
 
@@ -137,7 +136,6 @@ You can have multiple `VirtualKeyboardScope` controls in your application, but b
 4. **Read-Only and Disabled Controls**:
    - The keyboard won't appear for read-only or disabled text input controls.
    - Use `IsReadOnly="True"` for text that should be selectable but not editable.
-
 
 ## See also
 

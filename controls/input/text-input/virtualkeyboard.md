@@ -5,13 +5,14 @@ tags:
   - accelerate
 ---
 
-import Pill from '/src/components/global/Pill';
 import VirtualKeyboardStyles from '/img/accelerate/virtual-keyboard/styles.png';
 
-<Pill variant="primary" href="/tooling">Accelerate</Pill>
-<br/><br/>
-
 The `VirtualKeyboard` is a standalone control that provides an on-screen keyboard that can be manually placed in your application's layout. Unlike `VirtualKeyboardScope`, which automatically manages keyboard visibility based on focus, `VirtualKeyboard` is explicitly directed at a specific target input element.
+
+
+:::info
+This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+:::
 
 ## Overview
 
@@ -141,7 +142,6 @@ Below is a list of key resources you can override in your theme or resource dict
 | `KeyboardPaneBackground` | Brush | `DarkGray` | 
 | `KeyboardPanePadding` | Thickness |  `4` |
 | `KeyboardPopupKeySelectedBackground` | Brush | `PaleTurquoise` | 
-
 
 ### How to override
 
