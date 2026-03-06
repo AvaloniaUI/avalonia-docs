@@ -3,7 +3,9 @@ id: scroll-gesture-recognizer
 title: Scroll
 ---
 
-A gesture recognizer that tracks a scrolling gesture. This can be attached to a control to detect when a pointer moves in a specific direction inside the control's bounds. This is especially useful when a control pans its contents horizontally, vertically, or both.
+A gesture recognizer that tracks a scrolling gesture for panning content. `ScrollGestureRecognizer` detects when a pointer drags inside a control's bounds and translates the movement into scroll deltas, with support for inertia (the content continues scrolling after the pointer is released and gradually decelerates). It supports horizontal scrolling, vertical scrolling, or both simultaneously.
+
+Use `ScrollGestureRecognizer` when a control needs to pan its content freely in one or more directions. For a deliberate, single-direction edge-to-edge drag (such as pull-to-refresh), use [`PullGestureRecognizer`](/docs/input-interaction/gestures/pull-gesture-recognizer) instead.
 
 <div style={{textAlign: 'center', margin: '24px 0'}}>
 <svg width="240" height="190" viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -3,7 +3,9 @@ id: pull-gesture-recognizer
 title: Pull
 ---
 
-A gesture recognizer that tracks a pull gesture. A pull gesture occurs when a pointer is dragged from the edge of a control in a specific direction. The direction is defined by the `PullDirection` property.
+A gesture recognizer that tracks a pull gesture. A pull gesture occurs when a pointer is dragged from the edge of a control in a single, specific direction defined by the `PullDirection` property. The typical use case is pull-to-refresh, where the user drags down from the top of a list to trigger a data reload.
+
+Unlike [`ScrollGestureRecognizer`](/docs/input-interaction/gestures/scroll-gesture-recognizer), `PullGestureRecognizer` is designed for deliberate, single-direction interactions rather than free-form panning. It requires a larger initial drag distance before activation, only recognizes movement in one configured direction, and does not apply inertia. These characteristics make it suitable for actions that need a clear user intent before triggering.
 
 <div style={{textAlign: 'center', margin: '24px 0'}}>
 <svg width="240" height="190" viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +132,9 @@ border.GestureRecognizers.Add(new PullGestureRecognizer()
             });
 ```
 
-The PullGestureRecognizer raises a `InputElement.PullGestureEvent` when it detects the start of a pull gesture. When the pull ends, from the pointer being released or another gesture start, it raises a `InputElement.PullGestureEndedEvent`.
+The `PullGestureRecognizer` raises `InputElement.PullGestureEvent` continuously as the pointer moves in the configured direction. When the pull ends (the pointer is released or another gesture starts), it raises `InputElement.PullGestureEndedEvent`.
+
+Controls listening for pull gestures should reset their visual state when `PullGestureEndedEvent` fires, unless the pull distance crossed a threshold that triggers the intended action. For example, a pull-to-refresh indicator should snap back if the user releases before pulling far enough.
 
 ### PullDirection
 This defines the direction of the pull. There are 4 available values;
