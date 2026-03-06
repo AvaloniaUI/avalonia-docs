@@ -69,7 +69,17 @@ const sidebars: SidebarsConfig = {
                 ],
               },
               'data-display/text-display/selectabletextblock',
-              'data-display/text-display/textblock',
+              {
+                type: 'category',
+                label: 'TextBlock',
+                link: {
+                  type: 'doc',
+                  id: 'data-display/text-display/textblock',
+                },
+                items: [
+                  'data-display/text-display/texttrimming',
+                ],
+              },
           ],
         },
         'data-display/transitioningcontentcontrol',
@@ -138,7 +148,6 @@ const sidebars: SidebarsConfig = {
               'input/text-input/autocompletebox',
               'input/text-input/maskedtextbox',
               'input/text-input/textbox',
-              'input/text-input/virtualkeyboard',
           ],
         },
       ],
@@ -161,7 +170,17 @@ const sidebars: SidebarsConfig = {
               'layout/containers/scrollviewer',
               'layout/containers/splitview',
               'layout/containers/viewbox',
-              'layout/containers/virtualkeyboardscope',
+              {
+                type: 'category',
+                label: 'VirtualKeyboardScope',
+                link: {
+                  type: 'doc',
+                  id: 'layout/containers/virtualkeyboardscope',
+                },
+                items: [
+                  'input/text-input/virtualkeyboard',
+                ],
+              },
           ],
         },
         'layout/decorator',
@@ -191,7 +210,19 @@ const sidebars: SidebarsConfig = {
       items:[
         'media/drawingimage',
         'media/image',
-        'media/mediaplayercontrol',
+        {
+          type: 'category',
+          label: 'MediaPlayerControl',
+          link: {
+            type: 'doc',
+            id: 'media/mediaplayercontrol',
+          },
+          items: [
+            'media/mediaplayer',
+            'media/mediasource',
+            'media/media-playback',
+          ],
+        },
         'media/pathicon',
       ],
     },

@@ -1,5 +1,5 @@
 ---
-index: texttrimming
+id: texttrimming
 title: TextTrimming
 description: About the TextTrimming property
 ---

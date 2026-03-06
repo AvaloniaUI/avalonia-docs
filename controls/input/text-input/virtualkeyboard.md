@@ -22,7 +22,7 @@ The `VirtualKeyboard` is a standalone control that provides an on-screen keyboar
 | Property | Type | Description |
 |----------|------|-------------|
 | Target | IInputElement | Gets or sets the input element that will receive keystrokes from the keyboard. |
-| InputMethods | IEnumerable\<VirtualKeyboardInputMethod> | Gets or sets the collection of input methods (keyboard layouts and IMEs) available to users. |
+| InputMethods | `IEnumerable<VirtualKeyboardInputMethod>` | Gets or sets the collection of input methods (keyboard layouts and IMEs) available to users. |
 
 ## Usage Examples
 
@@ -163,10 +163,6 @@ To customize, define these resources in your application theme or resource dicti
 
 ## Input methods
 
-<details>
-
-<summary>View supported input methods</summary>
-
 |Identifier|Description|
 |-|-|
 |`af:kbd:standard` | Afrikaans
@@ -245,8 +241,6 @@ To customize, define these resources in your application theme or resource dicti
 |`uz-UZ:kbd:standard` | Uzbek (Uzbekistan)
 |`vi:kbd:standard` | Vietnamese
 |`zu:kbd:standard` | Zulu
-
-</details>
 
 ## See also
 
