@@ -74,7 +74,7 @@ Fires before the WebView dialog is closed.
 public event EventHandler<WebViewAdapterEventArgs>? AdapterCreated;
 ```
 
-Fires after underlying webview adapter was initialized.
+Fires after the underlying WebView adapter has been initialized.
 
 ### AdapterDestroyed
 
@@ -82,7 +82,7 @@ Fires after underlying webview adapter was initialized.
 public event EventHandler<WebViewNavigationCompletedEventArgs>? AdapterDestroyed;
 ```
 
-Fires after underlying webview adapter was destroyed.
+Fires after the underlying WebView adapter has been destroyed.
 
 ### EnvironmentRequested
 
@@ -90,8 +90,8 @@ Fires after underlying webview adapter was destroyed.
 public event EventHandler<WebViewEnvironmentRequestedEventArgs>? EnvironmentRequested;
 ```
 
-Fired before the underlying webview adapter is created, allowing customization of the webview environment.
-Use this event to modify environment options (such as enabling private mode or dev tools) before the webview is initialized.
+Fired before the underlying WebView adapter is created, allowing customization of the WebView environment.
+Use this event to modify environment options (such as enabling private mode or dev tools) before the WebView is initialized.
 The event argument type depends on the platform.
 
 See the page on [environment options](/docs/webview/webview-environment) for details.
@@ -118,7 +118,7 @@ Fires before a new navigation starts for the top-level document.
 public event EventHandler<WebViewNewWindowRequestedEventArgs>? NewWindowRequested;
 ```
 
-Fires before a new navigate starts for the top level document.
+Fires when the WebView requests opening a new window (for example, from `window.open()` or a link with `target="_blank"`).
 
 ### WebMessageReceived
 
@@ -138,8 +138,8 @@ Fires when the WebView is performing a URL request to a matching URL.
 Arguments include request information, and headers dictionary.
 
 :::note
-Headers dictionary can be readonly depending on the request or platform.
-Always check result of the `TrySet` and `TryRemove` methods.
+The headers dictionary can be read-only depending on the request or platform.
+Always check the result of the `TrySet` and `TryRemove` methods.
 :::
 
 ## Methods
@@ -254,11 +254,11 @@ Opens the print dialog to print the current web page.
 Task<Stream> PrintToPdfStreamAsync();
 ```
 
-Provides the Pdf data of current web page asynchronously.
+Provides the PDF data of the current web page asynchronously.
 
 :::note
 
-This API doesn't accept extended print options, such as Margin or Orientation.
+This API does not accept extended print options such as margin or orientation.
 For wider platform support we recommend using custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
 
 :::
@@ -285,7 +285,7 @@ Returns an instance of `NativeWebViewCookieManager` for managing cookies if supp
 public IPlatformHandle? TryGetWebViewPlatformHandle()
 ```
 
-Gets platform handle of the webview hosted inside the dialog.
+Gets the platform handle of the WebView hosted inside the dialog.
 See the page on [embedding web content](/docs/app-development/embedding-web-content) for details.
 
 ### TryGetPlatformHandle
@@ -294,9 +294,9 @@ See the page on [embedding web content](/docs/app-development/embedding-web-cont
 public IPlatformHandle? TryGetPlatformHandle()
 ```
 
-Returns a platform handle of the dialog window itself.
-For Avalonia dialog, returned value is Avalonia window handle itself.
-For GTK native dialog returned value uses GtkWindow as a handle.
+Returns the platform handle of the dialog window itself.
+For an Avalonia dialog, the returned value is the Avalonia window handle.
+For a GTK native dialog, the returned value uses `GtkWindow` as the handle.
 
 ## Usage Example
 
@@ -330,7 +330,7 @@ await tcs.Task;
 
 \* Linux support may vary depending on the window manager
 
-\** MacOS doesn't allow extended PrintToPdfStreamAsync print options. We recommend using custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
+\** macOS does not support extended `PrintToPdfStreamAsync` print options. Use custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
 
 ## See also
 

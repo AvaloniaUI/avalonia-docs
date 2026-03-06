@@ -216,6 +216,7 @@ const sidebars: SidebarsConfig = {
         'graphics-animation/keyframe-animations',
         'graphics-animation/control-transitions',
         'graphics-animation/page-transitions',
+        'graphics-animation/composition-animations',
         'graphics-animation/effects',
         'graphics-animation/easing-functions',
         'graphics-animation/custom-rendering',

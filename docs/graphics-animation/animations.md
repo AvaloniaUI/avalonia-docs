@@ -7,12 +7,13 @@ import KeyframeDiagram from '/img/concepts/ui-concepts/animations/animation-keyf
 
 # Animations
 
-Avalonia provides two types of animations:
+Avalonia provides three types of animations:
 
 | Type | Description | Use case |
 |---|---|---|
 | [Keyframe Animations](keyframe-animations) | Change one or more properties over a timeline with multiple keyframes. | Complex, multi-step animations triggered by style selectors. |
 | [Control Transitions](control-transitions) | Animate a single property when its value changes. | Smooth visual feedback for property changes (opacity, color, size). |
+| [Composition Animations](composition-animations) | Code-driven animations that run on the render thread. | Performance-sensitive or programmatic animations controlled from C#. |
 
 Additionally, [Page Transitions](page-transitions) animate content switching in controls like `TransitioningContentControl` and `Carousel`.
 
@@ -66,6 +67,24 @@ Transitions animate a property whenever its value changes, providing smooth visu
 ```
 
 See [Control Transitions](control-transitions) for transition types and configuration.
+
+## Composition Animations
+
+Composition animations provide a lower-level, code-driven approach that runs on the render thread. Use them when you need programmatic control or render-thread performance:
+
+```csharp
+var visual = ElementComposition.GetElementVisual(myControl);
+var compositor = visual.Compositor;
+
+var animation = compositor.CreateVector3KeyFrameAnimation();
+animation.Duration = TimeSpan.FromMilliseconds(400);
+animation.InsertKeyFrame(0f, new Vector3D(-200, 0, 0));
+animation.InsertKeyFrame(1f, new Vector3D(0, 0, 0));
+
+visual.StartAnimation("Offset", animation);
+```
+
+See [Composition Animations](composition-animations) for the full API, implicit animations, and integration patterns.
 
 ## Triggering Animations
 

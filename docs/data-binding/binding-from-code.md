@@ -212,3 +212,17 @@ var binding = new ReflectionBinding
 
 textBlock.Bind(TextBlock.TextProperty, binding);
 ```
+
+## Inspecting Active Bindings
+
+Use `BindingOperations.GetBindingExpressionBase` to retrieve the active binding expression on a property:
+
+```csharp
+var expression = BindingOperations.GetBindingExpressionBase(myTextBlock, TextBlock.TextProperty);
+if (expression is not null)
+{
+    // A binding is active on TextBlock.TextProperty
+}
+```
+
+This is useful for diagnostics or for calling `UpdateSource()` when using `UpdateSourceTrigger.Explicit`.
