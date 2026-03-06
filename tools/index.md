@@ -1,6 +1,6 @@
 ---
 id: index
-title: Tools
+title: Avalonia Tools
 sidebar_label: Accelerate
 ---
 
@@ -8,10 +8,10 @@ import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
 <head>
-  <title>Avalonia documentation: Accelerate tools</title>
+  <title>Avalonia Tools</title>
   <meta
     name="description"
-    content="Avalonia Accelerate brings powerful enhancements and professional-grade features to supercharge your Avalonia development."
+    content="Professional developer tools for Avalonia. Debug visually, package effortlessly, and build faster with Avalonia Accelerate."
   />
   <style>{`
     :root {
@@ -20,61 +20,42 @@ import DocsCards from '@site/src/components/global/DocsCards';
   `}</style>
 </head>
 
-# Avalonia Accelerate
+# Avalonia Tools
 
-Avalonia Accelerate brings powerful enhancements and professional-grade features to supercharge your Avalonia development. Designed for developers who demand more from their cross-platform applications, Accelerate combines essential productivity tools, seamless integration capabilities, and rich multimedia support—empowering you to build faster, debug smarter, and deliver polished experiences across every platform.
+Avalonia is a free, open-source UI framework. You can build and ship cross-platform .NET applications without paying us a penny, and that will always be the case. The framework is MIT licensed, maintained by a growing team, and trusted by thousands of developers worldwide.
 
-## Tools
+But building great software is about more than the framework. It's about the experience of building with it: how quickly you can diagnose a layout issue, how painlessly you can package your app for three operating systems, how confidently you can hand a polished build to your users. That's where tooling makes the difference.
+
+## Accelerate
+
+Avalonia Accelerate is a suite of professional tools designed to remove friction from your development workflow. Every tool has been built from the ground up specifically for Avalonia, not adapted from something else, not bolted on as an afterthought. These are the tools we wished we had when we started building Avalonia apps ourselves.
 
 <DocsCards>
-<DocsCard header="Avalonia for Visual Studio" href="/tools/visual-studio-extension" img="/icons/feature-accelerate-vs-ext-icon.png">
-  <p>Developed from the ground up to eliminate friction, accelerate development, and make building cross-platform apps with Avalonia a joy.</p>
-</DocsCard>
-
 <DocsCard header="Dev Tools" href="/tools/developer-tools/installation" img="/icons/feature-accelerate-devtools-icon.png">
-  <p>Inspect and diagnose your Avalonia apps visually. Make edits and see your changes in real time.</p>
+  <p>Inspect and diagnose your Avalonia apps visually. Edit properties in real time, profile performance, and debug layouts without guesswork.</p>
 </DocsCard>
 
 <DocsCard header="Parcel" href="/tools/parcel/setup" img="/icons/feature-accelerate-parcel-icon.png">
-  <p>Package your apps for Windows, Mac and Linux in a single, easy-to-use tool.</p>
+  <p>Package your apps for Windows, macOS, and Linux in a single tool. Code signing, notarisation, and installers handled for you.</p>
 </DocsCard>
 
-
+<DocsCard header="Avalonia for Visual Studio" href="/tools/visual-studio-extension" img="/icons/feature-accelerate-vs-ext-icon.png">
+  <p>A purpose-built Visual Studio extension with XAML previewing, code completion, and a drag-and-drop designer.</p>
+</DocsCard>
 </DocsCards>
 
-## Controls
+Accelerate also includes advanced UI controls such as [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [NativeWebView](/controls/web/nativewebview), [VirtualKeyboard](/controls/input/text-input/virtualkeyboard), and more. These are production-ready components that solve real problems, from displaying hierarchical data to embedding native web content without bundling Chromium.
 
-<DocsCards>
+## Who gets access
 
-<DocsCard header="NativeWebView" href="/controls/web/nativewebview" icon="/icons/feature-accelerate-webview-icon.png">
-  <p>Without the need to ship a bundled runtime, your applications stay compact, efficient, and fast.</p>
-</DocsCard>
+If you work at a company with fewer than five developers and less than $1M USD in annual revenue, the [Community Edition](/tools/community-edition) gives you free access to all Accelerate tools and components. No trial period, no feature gates.
 
-<DocsCard header="MediaPlayer" href="/controls/media/mediaplayercontrol" icon="/icons/feature-accelerate-media-player-icon.png">
-  <p>Robust media controls, consistent performance and built-in cross-platform support.</p>
-</DocsCard>
+For larger teams and organisations, paid subscriptions are available in Business and Enterprise tiers. Business includes everything most teams need. Enterprise adds specialised components like VirtualKeyboard for kiosk and embedded scenarios.
 
-<DocsCard header="TreeDataGrid" href="/controls/data-display/structured-data/treedatagrid" icon="/icons/feature-accelerate-tdg-icon.png">
-  <p>In-depth display options and customizable templates let you present data exactly the way you want.</p>
-</DocsCard>
-
-<DocsCard header="Markdown" href="/controls/data-display/text-display/markdown" icon="/icons/feature-accelerate-md-icon.png">
-  <p>Let content in your apps shine with robust text formatting and styling.</p>
-</DocsCard>
-
-<DocsCard header="VirtualKeyboard" href="/controls/input/text-input/virtualkeyboard" icon="/icons/feature-accelerate-osk-icon.png">
-  <p>Effortless text input wherever a physical keyboard isn’t practical. Designed for kiosks, tablets, and embedded systems.</p>
-</DocsCard>
-
-</DocsCards>
-
-## Get Avalonia Accelerate
-
-You can purchase your licence through our [website](https://avaloniaui.net/accelerate).
-
-Or check if you are eligible for our free [Community edition](/tools/community-edition).
+Your subscription directly funds development of the open-source framework. Every licence sold means more engineers working on Avalonia's core, better documentation, and faster releases for everyone.
 
 <br />
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
   <Button label="Purchase Accelerate" link="https://avaloniaui.net/accelerate" variant="secondary" outline />
+  <Button label="Community Edition" link="/tools/community-edition" variant="secondary" outline />
 </div>

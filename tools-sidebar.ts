@@ -4,8 +4,6 @@ const sidebars: SidebarsConfig = {
 
   documentationSidebar: [
     'index',
-    'installing-accelerate',
-    'community-edition',
     {
       type: 'category',
       label: 'Dev Tools',
@@ -19,14 +17,21 @@ const sidebars: SidebarsConfig = {
         'developer-tools/shortcuts',
         'developer-tools/options',
         'developer-tools/mcp',
-        'developer-tools/assets-tool',
-        'developer-tools/breakpoints-tool',
-        'developer-tools/elements-tool',
-        'developer-tools/events-tool',
-        'developer-tools/logs-tool',
-        'developer-tools/metrics-tool',
-        'developer-tools/profiler-tool',
-        'developer-tools/resources-tool',
+        {
+          type: 'category',
+          label: 'Tool reference',
+          collapsed: true,
+          items: [
+            'developer-tools/assets-tool',
+            'developer-tools/breakpoints-tool',
+            'developer-tools/elements-tool',
+            'developer-tools/events-tool',
+            'developer-tools/logs-tool',
+            'developer-tools/metrics-tool',
+            'developer-tools/profiler-tool',
+            'developer-tools/resources-tool',
+          ],
+        },
       ],
     },
     {
@@ -51,49 +56,8 @@ const sidebars: SidebarsConfig = {
         'visual-studio-code/configure-vscode-debug-linux',
       ],
     },
-    {
-      type: 'category',
-      label: 'Accelerate Controls',
-      collapsed: true,
-      items: [
-        {
-          type: 'link',
-          label: 'Markdown',
-          href: '/controls/data-display/text-display/markdown',
-        },
-        {
-          type: 'link',
-          label: 'MediaPlayerControl',
-          href: '/controls/media/mediaplayercontrol',
-        },
-        {
-          type: 'link',
-          label: 'NativeWebDialog',
-          href: '/controls/web/nativewebdialog',
-        },
-        {
-          type: 'link',
-          label: 'NativeWebView',
-          href: '/controls/web/nativewebview',
-        },
-        {
-          type: 'link',
-          label: 'TreeDataGrid',
-          href: '/controls/data-display/structured-data/treedatagrid',
-        },
-        {
-          type: 'link',
-          label: 'VirtualKeyboard',
-          href: '/controls/input/text-input/virtualkeyboard',
-        },
-        {
-          type: 'link',
-          label: 'VirtualKeyboardScope',
-          href: '/controls/layout/containers/virtualkeyboardscope',
-        },
-      ],
-    },
-    'legacy-developer-tools',
+    'installing-accelerate',
+    'community-edition',
     'faq',
   ],
 };

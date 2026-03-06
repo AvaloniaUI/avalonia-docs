@@ -70,10 +70,32 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 ### Basic usage
 
 ```xml
-<MediaPlayerControl Name="mediaPlayerControl" Source="{Binding MediaSource}" 
+<MediaPlayerControl Name="mediaPlayerControl" Source="{Binding MediaSource}"
                     Volume="0.8"
                     LoadedBehavior="AutoPlay" />
 ```
+
+### Setting Source in code-behind
+
+When setting `Source` in code-behind rather than through a binding, you must wait until the control has loaded. Setting the source in a constructor will fail silently because the underlying player backend has not been initialized yet.
+
+```csharp
+// Do NOT set Source in the constructor:
+// public MainWindow()
+// {
+//     InitializeComponent();
+//     mediaPlayerControl.Source = new UriSource("file:///C:/video.mp4"); // Too early!
+// }
+
+// Instead, use OnLoaded:
+protected override void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
+    mediaPlayerControl.Source = new UriSource("file:///C:/Videos/sample.mp4");
+}
+```
+
+See [Initialization Timing](/controls/media/media-playback#initialization-timing) for more details.
 
 ### Binding to commands
 

@@ -68,22 +68,74 @@ The easiest way to add media playback to your Avalonia app is using the `MediaPl
 
 ### Using MediaPlayer Directly
 
-For more control, you can use the `MediaPlayer` class directly:
+For more control, you can use the `MediaPlayer` class directly. When using `MediaPlayer` without `MediaPlayerControl`, you must call `InitializeAsync()` first and ensure the source is set only after the control is loaded:
 
 ```csharp
-// Create and initialize a MediaPlayer
-var player = new MediaPlayer();
-await player.InitializeAsync();
+private MediaPlayer _player = new MediaPlayer();
 
-// Set properties
-player.Volume = 0.8;
-player.LoadedBehavior = MediaPlayerState.AutoPlay;
+protected override async void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
 
-// Load and play media
-player.Source = new UriSource("https://example.com/audio.mp3");
-await player.PrepareAsync();
-await player.PlayAsync();
+    await _player.InitializeAsync();
+
+    _player.Volume = 0.8;
+    _player.LoadedBehavior = MediaPlayerState.AutoPlay;
+
+    _player.Source = new UriSource("file:///C:/Videos/sample.mp4");
+    await _player.PrepareAsync();
+    await _player.PlayAsync();
+}
 ```
+
+## Initialization Timing
+
+:::warning
+`MediaPlayer` is not ready to accept a media source until the Avalonia UI has fully loaded. Setting the `Source` property too early (for example, in a Window or UserControl constructor) will fail silently because the underlying platform backend has not yet been initialized.
+:::
+
+Always set the `Source` property after the control's `Loaded` event has fired. You can do this in one of two ways:
+
+### Option 1: Use the OnLoaded override
+
+```csharp
+public partial class MainView : UserControl
+{
+    private Model _vm;
+
+    public MainView()
+    {
+        InitializeComponent();
+        _vm = new Model();
+        DataContext = _vm;
+    }
+
+    protected override void OnLoaded(RoutedEventArgs e)
+    {
+        base.OnLoaded(e);
+        _vm.SetSource(new UriSource("file:///C:/Videos/sample.mp4"));
+    }
+}
+```
+
+### Option 2: Use Dispatcher.UIThread.Post
+
+If you need to set the source from a context where you cannot override `OnLoaded`, use `Dispatcher.UIThread.Post` to defer the call until the UI thread is ready:
+
+```csharp
+protected override void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
+    Dispatcher.UIThread.Post(() =>
+    {
+        mediaPlayer.Source = new UriSource("file:///C:/Videos/sample.mp4");
+    });
+}
+```
+
+:::tip
+When using `MediaPlayerControl` with XAML bindings (for example, `Source="{Binding MediaSource}"`), the binding system handles the timing automatically because bindings are evaluated after the control is attached to the visual tree. You only need to manage timing explicitly when setting `Source` in code-behind.
+:::
 
 ## Loading Media Sources
 

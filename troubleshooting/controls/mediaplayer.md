@@ -11,6 +11,33 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
+## No playback when setting Source in the constructor
+
+`MediaPlayer` is not ready to accept a media source until the Avalonia UI has fully loaded. If you set `Source` in a Window or UserControl constructor, the underlying platform backend has not been initialized yet and the source will not load.
+
+**Fix**: Set the `Source` property in the `OnLoaded` override or use `Dispatcher.UIThread.Post`:
+
+```csharp
+// Option 1: OnLoaded override
+protected override void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
+    mediaPlayer.Source = new UriSource("file:///C:/Videos/sample.mp4");
+}
+
+// Option 2: Dispatcher.UIThread.Post
+protected override void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
+    Dispatcher.UIThread.Post(() =>
+    {
+        mediaPlayer.Source = new UriSource("file:///C:/Videos/sample.mp4");
+    });
+}
+```
+
+See [Initialization Timing](/controls/media/media-playback#initialization-timing) for more details.
+
 ## Black screen
     - Verify the source path/URL is correct.
     - Ensure the media format is supported by the target platform.

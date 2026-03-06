@@ -104,19 +104,26 @@ graph TD
 
 ### Basic Playback
 
+:::warning
+`MediaPlayer` is not ready to accept a media source until the Avalonia UI has fully loaded. Always set the `Source` property after the `Loaded` event has fired. See [Initialization Timing](/controls/media/media-playback#initialization-timing) for details.
+:::
+
 ```csharp
-// Create and initialize
-var player = new MediaPlayer();
-await player.InitializeAsync();
+private MediaPlayer _player = new MediaPlayer();
 
-// Configure
-player.Volume = 0.8;
-player.LoadedBehavior = MediaPlayerLoadedBehavior.Manual;
+protected override async void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
 
-// Load and play media
-player.Source = new UriSource("https://example.com/audio.mp3");
-await player.PrepareAsync();
-await player.PlayAsync();
+    await _player.InitializeAsync();
+
+    _player.Volume = 0.8;
+    _player.LoadedBehavior = MediaPlayerLoadedBehavior.Manual;
+
+    _player.Source = new UriSource("file:///C:/Videos/sample.mp4");
+    await _player.PrepareAsync();
+    await _player.PlayAsync();
+}
 ```
 
 ### Using a Custom Visual
@@ -231,19 +238,24 @@ catch (Exception ex) {
 
 ## Best Practices
 
-1. **Initialization and Cleanup**:
+1. **Initialization Timing**:
+    - Never set `Source` in a constructor. The player is not ready until the UI has loaded.
+    - Set `Source` in an `OnLoaded` override or use `Dispatcher.UIThread.Post` to defer the call.
+    - See [Initialization Timing](/controls/media/media-playback#initialization-timing) for full guidance.
+
+2. **Initialization and Cleanup**:
     - Always call `InitializeAsync()` before using `MediaPlayer`.
     - Call `ReleaseAsync()` between loading different media sources.
     - Call `UnInitialize()` when completely done with `MediaPlayer`.
 
-2. **Error Handling**:
+3. **Error Handling**:
     - Subscribe to the `ErrorOccurred` event to handle playback errors.
 
-3. **Resource Management**:
+4. **Resource Management**:
     - Properly clean up to avoid resource leaks.
     - Consider reusing a single `MediaPlayer` instance for multiple media items that are to be played sequentially.
 
-4. **Platform Considerations**:
+5. **Platform Considerations**:
     - Test media playback on all target platforms.
 
 ## See also
