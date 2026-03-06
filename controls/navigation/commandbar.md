@@ -22,7 +22,7 @@ Items placed in a `CommandBar` must implement the `ICommandBarElement` interface
 - **`AppBarToggleButton`**: A toggle button that maintains a checked/unchecked state. Useful for toggling options such as bold or italic formatting.
 - **`AppBarSeparator`**: A visual divider used to group related commands within the bar or the overflow menu.
 
-## CommandBar Properties
+## CommandBar properties
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ Items placed in a `CommandBar` must implement the `ICommandBarElement` interface
 | `VisiblePrimaryCommands` | `IReadOnlyList<ICommandBarElement>` | Read-only | The subset of primary commands that are currently visible in the bar (not overflowed). |
 | `OverflowItems` | `IReadOnlyList<ICommandBarElement>` | Read-only | The combined list of overflowed primary commands and secondary commands shown in the overflow menu. |
 
-## CommandBar Events
+## CommandBar events
 
 | Event | Description |
 | --- | --- |
@@ -48,7 +48,7 @@ Items placed in a `CommandBar` must implement the `ICommandBarElement` interface
 | `Opening` | Raised just before the overflow menu opens. |
 | `Closing` | Raised just before the overflow menu closes. Supports cancellation. |
 
-## DefaultLabelPosition Values
+## DefaultLabelPosition values
 
 | Value | Description |
 | --- | --- |
@@ -56,7 +56,7 @@ Items placed in a `CommandBar` must implement the `ICommandBarElement` interface
 | `Right` | Labels appear to the right of the icon. |
 | `Collapsed` | Labels are hidden; only icons are shown. |
 
-## OverflowButtonVisibility Values
+## OverflowButtonVisibility values
 
 | Value | Description |
 | --- | --- |
@@ -64,7 +64,7 @@ Items placed in a `CommandBar` must implement the `ICommandBarElement` interface
 | `Visible` | The overflow button is always shown. |
 | `Collapsed` | The overflow button is always hidden. |
 
-## AppBarButton Properties
+## AppBarButton properties
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ Items placed in a `CommandBar` must implement the `ICommandBarElement` interface
 | `IsInOverflow` | `bool` | Read-only | Indicates whether the button is currently displayed in the overflow menu. |
 | `DynamicOverflowOrder` | `int` | `0` | Controls the order in which primary commands move to overflow when space is limited. Lower values overflow first. |
 
-## AppBarToggleButton Properties
+## AppBarToggleButton properties
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -107,7 +107,7 @@ A simple command bar with icon buttons:
 </CommandBar>
 ```
 
-### Primary and Secondary Commands with Separators
+### Primary and secondary commands with separators
 
 Use `AppBarSeparator` to group commands, and place less common actions in `SecondaryCommands`:
 
@@ -132,7 +132,7 @@ Use `AppBarSeparator` to group commands, and place less common actions in `Secon
 
 <img src={CommandBarSecondaryCommandsScreenshot} alt="CommandBar with secondary commands in the overflow menu" />
 
-### Custom Content Area
+### Custom content area
 
 The `Content` property lets you place custom content between the primary commands and the overflow button:
 
@@ -150,7 +150,7 @@ The `Content` property lets you place custom content between the primary command
 
 <img src={CommandBarContentScreenshot} alt="CommandBar with custom content area" />
 
-### Label Positions
+### Label positions
 
 Control where labels appear relative to icons using the `DefaultLabelPosition` property.
 
@@ -193,7 +193,7 @@ Control where labels appear relative to icons using the `DefaultLabelPosition` p
 
 <img src={CommandBarLabelCollapsedScreenshot} alt="CommandBar with labels hidden" />
 
-### Dynamic Overflow
+### Dynamic overflow
 
 When `IsDynamicOverflowEnabled` is `true` (the default), primary commands that do not fit in the available space automatically move into the overflow menu. Use `DynamicOverflowOrder` to control which commands overflow first:
 
@@ -209,7 +209,7 @@ When `IsDynamicOverflowEnabled` is `true` (the default), primary commands that d
 
 In this example, "Less Important" overflows first (order 0), then "Moderate" (order 1), and "Important" overflows last (order 2).
 
-### Overflow Button Visibility
+### Overflow button visibility
 
 Control when the overflow button appears:
 
@@ -229,7 +229,7 @@ Control when the overflow button appears:
 </CommandBar>
 ```
 
-### Sticky Overflow
+### Sticky overflow
 
 When `IsSticky` is `true`, the overflow menu remains open until the user explicitly dismisses it. This is useful when multiple selections or interactions within the overflow menu are expected:
 
@@ -243,7 +243,7 @@ When `IsSticky` is `true`, the overflow menu remains open until the user explici
 </CommandBar>
 ```
 
-### Controlling Overflow Programmatically
+### Controlling overflow programmatically
 
 You can open or close the overflow menu from code by binding to the `IsOpen` property:
 
@@ -264,7 +264,7 @@ private bool _isOverflowOpen;
 private void ShowOverflow() => IsOverflowOpen = true;
 ```
 
-### Responding to Events
+### Responding to events
 
 Handle the `Opened` and `Closed` events to react when the overflow menu state changes:
 
@@ -311,7 +311,7 @@ Use the `TopCommandBar` or `BottomCommandBar` properties of `ContentPage` to att
 </ContentPage>
 ```
 
-### CommandBar via NavigationPage Attached Property
+### CommandBar via NavigationPage attached property
 
 You can set a `CommandBar` on a page using the `NavigationPage` attached property, which places the bar within the navigation chrome:
 
@@ -331,7 +331,7 @@ You can set a `CommandBar` on a page using the `NavigationPage` attached propert
 </ContentPage>
 ```
 
-### MVVM Command Binding
+### MVVM command binding
 
 Bind `AppBarButton` commands to your view model:
 
@@ -363,7 +363,7 @@ private async Task Delete(object item)
 }
 ```
 
-### Toggle Button State Handling
+### Toggle button state handling
 
 Use `AppBarToggleButton` to create togglable options. Bind the `IsChecked` property to track state:
 

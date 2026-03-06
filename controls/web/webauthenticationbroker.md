@@ -13,7 +13,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 `WebAuthenticationBroker` is a utility class that facilitates OAuth and other web-based authentication flows by providing a secure way to handle web authentication in desktop applications.
 
-## Static Methods
+## Static methods
 
 ### AuthenticateAsync
 
@@ -77,7 +77,7 @@ public Uri? CallbackUri { get; }
 
 The response URI containing authentication data.
 
-## Usage Example
+## Usage example
 
 Google OAuth is used in this example.
 
@@ -101,7 +101,7 @@ var result = await WebAuthenticationBroker.AuthenticateAsync(
 
 Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow), [Facebook Login](https://developers.facebook.com/docs/facebook-login/) or other OAuth2 standard compatible options.
 
-## Platform Support
+## Platform support
 
 | Feature                     | Windows | macOS (10.15+) | Linux | iOS (iOS 12.0+) | Android  | Browser  |
 |-----------------------------|---------|-------|-------|-----|-----------|-----------|

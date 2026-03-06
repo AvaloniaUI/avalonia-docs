@@ -89,7 +89,7 @@ Parcel supports custom Info.plist files for advanced bundle configuration.
 
 Parcel creates DMG installers with a drag-and-drop interface, custom backgrounds, and symbolic links.
 
-:::warning
+:::caution
 [WSL2](https://learn.microsoft.com/en-us/windows/wsl/) is required for DMG creation on Windows. ZIP packages can be created without WSL2.
 :::
 
@@ -108,7 +108,7 @@ Icons are positioned from the top left corner to the icon center.
 Design background images to accommodate these fixed positions and the drag-and-drop workflow.
 
 :::note
-DMG customization is currently limited to background images. A more flexible editor is planned—let us know if we need to prioritize it.
+DMG customization is currently limited to background images. A more flexible editor is planned. Let us know if we need to prioritize it.
 :::
 
 ### ZIP Creation
@@ -286,7 +286,7 @@ Store Apple Account credentials in macOS Keychain and reference them by profile 
 1. Select "Keychain Profile" as the notary credentials option
 2. Enter the profile name (e.g., "MyParcelProfile")
 
-:::warning
+:::caution
 Apple Keychain is only available on macOS. Use the App-Specific Password method on Windows or Linux.
 :::
 

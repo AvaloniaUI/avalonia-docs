@@ -58,7 +58,7 @@ with the value of `ProgressTextFormat` as the format string. The following forma
 
 Since `{0}` would appear at the start of the string in this example, it must be escaped.
 
-## Indeterminate Mode
+## Indeterminate mode
 
 When you cannot determine the progress percentage, use indeterminate mode to show an animated indicator:
 
@@ -68,7 +68,7 @@ When you cannot determine the progress percentage, use indeterminate mode to sho
 
 Indeterminate mode is useful for operations where the total work is unknown, such as connecting to a server or loading data of unknown size.
 
-## Vertical Orientation
+## Vertical orientation
 
 Display the progress bar vertically by setting the `Orientation` property:
 
@@ -78,7 +78,7 @@ Display the progress bar vertically by setting the `Orientation` property:
              ShowProgressText="True" />
 ```
 
-## Binding to a View Model
+## Binding to a view model
 
 Bind `Value` to track progress from an async operation:
 

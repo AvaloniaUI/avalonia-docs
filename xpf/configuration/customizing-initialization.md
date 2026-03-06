@@ -7,7 +7,7 @@ Avalonia provides the [`AppBuilder`](/docs/fundamentals/application-lifetimes) A
 
 Because XPF is based upon Avalonia, it can be useful to have access to this API in an XPF application.
 
-## Step 1: Disable Automatic XPF Initialization
+## Step 1: Disable automatic XPF initialization
 
 In your project file set the `DisableAutomaticXpfInit` property to `true`:
 
@@ -17,7 +17,7 @@ In your project file set the `DisableAutomaticXpfInit` property to `true`:
 </PropertyGroup>
 ```
 
-## Step 2: Add a Main Entry-Point
+## Step 2: Add a main entry point
 
 Add a `Program.cs` file containing a `Main` entry-point:
 
@@ -52,7 +52,7 @@ Change the namespace in the above example to match your application namespace.
 
 In the above example `App` is your XPF `Application` class defined in `App.xaml.cs`.
 
-## Step 3: Set the StartupObject
+## Step 3: Set the `StartupObject`
 
 Configure your project to use the new `Main` method by adding the following to your `.csproj`:
 
@@ -82,9 +82,9 @@ This prevents `VerificationException` errors caused by the same assembly being l
 - You host XPF within another application framework that uses custom assembly loading
 - You see errors about type argument constraints during XPF initialization
 
-## Custom Assembly Loading
+## Custom assembly loading
 
-If you have a custom mechanism for loading managed assemblies, you may find that using the `AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable` function causes lock-ups in your app. If that happens, we suggest that you try to use the deferred way of adding assemblies with `AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AddLibrary` like so:
+If you have a custom mechanism for loading managed assemblies, you may find that using the `AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable` function causes lock-ups in your app. If that happens, try using the deferred way of adding assemblies with `AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AddLibrary` like so:
 
 ```csharp
 using Avalonia;
@@ -106,7 +106,7 @@ internal class Program
 }
 ```
 
-## Dispatcher Constraints
+## Dispatcher constraints
 
 XPF supports a single UI dispatcher on all platforms. On macOS, this is enforced by the operating system (only one UI thread is permitted). On Windows and Linux, limited multi-dispatcher support exists but is not recommended.
 
@@ -123,7 +123,7 @@ Dispatcher.CurrentDispatcher.BeginInvoke(DispatcherPriority.Background, () =>
 
 See [Missing Features: Multiple UI Threads](/xpf/version-info/missing-features) for more details.
 
-## Optional: Define a custom Avalonia Application
+## Optional: Define a custom Avalonia application
 
 In certain cases you may want to use a custom Avalonia `Application` class; some use-cases for this scenario are:
 

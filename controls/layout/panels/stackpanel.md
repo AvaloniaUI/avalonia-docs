@@ -89,7 +89,7 @@ myStackPanel.Children.Add(myButton3);
 
 </Tabs>
 
-## Centering Items
+## Centering items
 
 Align all children to the center of the stack:
 
@@ -100,7 +100,7 @@ Align all children to the center of the stack:
 </StackPanel>
 ```
 
-## Horizontal Stack with Spacing
+## Horizontal stack with spacing
 
 ```xml
 <StackPanel Orientation="Horizontal" Spacing="12">

@@ -211,7 +211,7 @@ public partial class MainWindow : Window
 ```
 
 #### Customizing text using a value converter
-You can control the text displayed in the drop-down by using a value converter. This is helpful when you want to show a combination of fields—for example, a product’s name and price. Keep in mind that this also affects how filtering works: if you display both name and price, the control will allow filtering by either value.
+You can control the text displayed in the drop-down by using a value converter. This is helpful when you want to show a combination of fields, for example, a product’s name and price. Keep in mind that this also affects how filtering works: if you display both name and price, the control will allow filtering by either value.
 
 If you only want to change how the item appears visually (without affecting filtering), use the standard ItemTemplate property instead.
 

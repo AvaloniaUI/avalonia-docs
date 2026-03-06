@@ -5,7 +5,7 @@ title: Centralizing multiple XPF projects
 
 If you're managing multiple XPF projects then it can be useful to centralize the management of your SDK versions and license keys.
 
-## Centralize XPF SDK Version
+## Centralize XPF SDK version
 
 You can use a `global.json` file at the root of your repository to specify the XPF SDK version for all projects:
 
@@ -23,7 +23,7 @@ And in your `.csproj` specify `Xpf.Sdk` without a version:
 <Project Sdk="Xpf.Sdk">
 ```
 
-## License Keys
+## License keys
 
 Environment variables can be used in `NuGet.config` and `.csproj` files to store license keys. This avoids committing license keys to source control.
 

@@ -5,14 +5,14 @@ title: Label
 
 A text label control that does not receive the focus, but transfers it to a defined target control. This behavior occurs on pointer click or when an access key is pressed in combination with the Alt key.
 
-## Common Properties
+## Common properties
 
 | Property | Type | Description |
 |---|---|---|
 | `Content` | `object` | The content to display in the label. |
 | `Target` | `IInputElement` | The target control that receives focus when the label is clicked or its access key is pressed. |
 
-## Access Keys
+## Access keys
 
 Use an underscore (`_`) before a character to define an access key. Letters, numbers, and accented characters are all supported. When the user presses Alt plus that character, focus moves to the target control:
 
@@ -28,7 +28,7 @@ Use an underscore (`_`) before a character to define an access key. Letters, num
 
 Pressing Alt+N focuses the Name TextBox. Pressing Alt+E focuses the Email TextBox.
 
-## Binding Content
+## Binding content
 
 ```xml
 <Label Target="quantityBox" Content="{Binding QuantityLabel}" />

@@ -13,7 +13,7 @@ This tool also includes embedded assets from the dependencies, commonly third pa
 
 In the context menu of an asset, it's possible to copy absolute asset Uri which then can be referenced from XAML code or export asset to the file system.
 
-![alt text](/img/tools/dev-tools/assets-context-menu.png)
+![Asset context menu](/img/tools/dev-tools/assets-context-menu.png)
 
 ## Asset preview
 

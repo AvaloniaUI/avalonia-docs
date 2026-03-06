@@ -68,7 +68,7 @@ Include the `.ico` file in the `.csproj` file using an `AvaloniaResource` item:
 
 <img src={TrayIconScreenshot} alt="" />
 
-## Binding Menu Commands
+## Binding menu commands
 
 Bind tray menu item commands to a view model:
 
@@ -87,7 +87,7 @@ Bind tray menu item commands to a view model:
 </TrayIcon>
 ```
 
-## Showing and Hiding the Tray Icon
+## Showing and hiding the tray icon
 
 Toggle visibility at runtime:
 
@@ -97,7 +97,7 @@ Toggle visibility at runtime:
           ToolTipText="My Application" />
 ```
 
-## Platform Support
+## Platform support
 
 | Platform | Support |
 |---|---|

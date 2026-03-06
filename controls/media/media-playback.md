@@ -34,7 +34,7 @@ Add the default theme to your App.axaml:
 </Application.Styles>
 ```
 
-### Add the License Key
+### Add the license key
 
 Include your Avalonia UI license key in the executable project file (`.csproj`):
 
@@ -48,9 +48,9 @@ Include your Avalonia UI license key in the executable project file (`.csproj`):
 For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
-## Basic Usage
+## Basic usage
 
-### Using MediaPlayerControl (Recommended)
+### Using MediaPlayerControl (recommended)
 
 The easiest way to add media playback to your Avalonia app is using the `MediaPlayerControl`, which provides a full-featured UI by default:
 
@@ -66,7 +66,7 @@ The easiest way to add media playback to your Avalonia app is using the `MediaPl
 </Window>
 ```
 
-### Using MediaPlayer Directly
+### Using MediaPlayer directly
 
 For more control, you can use the `MediaPlayer` class directly. When using `MediaPlayer` without `MediaPlayerControl`, you must call `InitializeAsync()` first and ensure the source is set only after the control is loaded:
 
@@ -88,9 +88,9 @@ protected override async void OnLoaded(RoutedEventArgs e)
 }
 ```
 
-## Initialization Timing
+## Initialization timing
 
-:::warning
+:::caution
 `MediaPlayer` is not ready to accept a media source until the Avalonia UI has fully loaded. Setting the `Source` property too early (for example, in a Window or UserControl constructor) will fail silently because the underlying platform backend has not yet been initialized.
 :::
 
@@ -137,9 +137,9 @@ protected override void OnLoaded(RoutedEventArgs e)
 When using `MediaPlayerControl` with XAML bindings (for example, `Source="{Binding MediaSource}"`), the binding system handles the timing automatically because bindings are evaluated after the control is attached to the visual tree. You only need to manage timing explicitly when setting `Source` in code-behind.
 :::
 
-## Loading Media Sources
+## Loading media sources
 
-### From Files or URLs using UriSource
+### From files or URLs using UriSource
 
 ```csharp
 // Local file
@@ -154,7 +154,7 @@ mediaPlayer.Source = new UriSource("https://example.com/video.mp4");
 **Note**: If it's possible, always add the `file://` schema to your local file URI's. This makes sure that
 the player recognizes the file's path as local.
 
-### From Streams with StreamSource
+### From streams with StreamSource
 
 ```csharp
 // From file stream
@@ -169,7 +169,7 @@ mediaPlayer.Source = new StreamSource(memoryStream);
 **Note**: Make sure to not control the disposal of the stream you passed to the `StreamSource` as the player will take
 care of its lifetime.
 
-### Using File Picker with StorageFileSource
+### Using file picker with StorageFileSource
 
 ```csharp
 public async void OpenFile_Click(object sender, RoutedEventArgs e)
@@ -189,9 +189,9 @@ public async void OpenFile_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Common Operations
+## Common operations
 
-### Playback Control
+### Playback control
 
 ```csharp
 // Play/pause
@@ -211,7 +211,7 @@ mediaPlayer.Volume = 0.75;
 mediaPlayer.IsMuted = true;
 ```
 
-### Media Information
+### Media information
 
 ```csharp
 // Get duration
@@ -227,7 +227,7 @@ bool isSeekable = mediaPlayer.IsSeekable;
 TimeSpan position = mediaPlayer.Position;
 ```
 
-### Error Handling
+### Error handling
 
 ```csharp
 mediaPlayer.ErrorOccurred += (sender, args) =>
@@ -239,17 +239,17 @@ mediaPlayer.ErrorOccurred += (sender, args) =>
 
 **Note**: This callback gives you the opportunity to reset the state of the `MediaPlayer` gracefully.
 
-### Basic Example
+### Basic example
 
-```xaml
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         Width="800" Height="450">
-    
+
     <Grid RowDefinitions="*, Auto">
         <MediaPlayerControl Name="mediaPlayer" Grid.Row="0" />
         <Button Grid.Row="1" Content="Open File" Click="OpenFile_Click" />
     </Grid>
-    
+
 </Window>
 ```
 
@@ -279,7 +279,7 @@ public partial class MainWindow : Window
 }
 ```
 
-## Platform Prerequisites
+## Platform prerequisites
 
 The `MediaPlayer` component relies on native media playback frameworks on each supported platforms:
 
@@ -358,17 +358,17 @@ Fedora:
 dnf install libvlc
 ```
 
-### Embedded Linux (Direct Rendering Manager)
+### Embedded Linux (direct rendering manager)
 
 Similar to the requirements on regular Linux, `MediaPlayer` uses the system-installed LibVLC library to render multimedia content for embedded Linux devices.
 
-Please follow the guide in setting up Avalonia on Linux DRM Framebuffer [here](https://avaloniaui.net/blog/unleashing-net-on-embedded-linux).
+Follow the [guide to setting up Avalonia on Linux DRM Framebuffer](https://avaloniaui.net/blog/unleashing-net-on-embedded-linux).
 
 Afterwards, install the VLC dependencies as described above.
 
 No special requirements are needed for the Linux DRM setup and you can continue on using the `MediaPlayer` control like on regular Linux.
 
-## Codecs Support
+## Codecs support
 
 The media codecs that `MediaPlayer` supports will depend on the target platform's built-in codecs & additional plugins.
 
@@ -393,7 +393,7 @@ As for platform-specific resources on which codecs are supported, please check t
 
 ### macOS and iOS
 
-- Unfortunately, we haven't yet found a definitive primary source on which default codecs are supported in macOS/iOS.
+- A definitive primary source on default codecs supported in macOS/iOS has not yet been identified.
 
 ## See also
 

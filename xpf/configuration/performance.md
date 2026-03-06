@@ -3,7 +3,7 @@ id: performance
 title: Performance Optimization
 ---
 
-## Reducing Startup Time with ReadyToRun
+## Reducing startup time with ReadyToRun
 
 XPF applications can benefit significantly from ReadyToRun (R2R) compilation, which pre-compiles assemblies to native code. WPF libraries shipped by Microsoft are normally pre-compiled as R2R, but XPF libraries are not by default.
 
@@ -27,9 +27,9 @@ This can reduce application startup time substantially, particularly on Linux em
 On Linux, ReadyToRun may change how native `.so` libraries are resolved. See [Linux: Native Library Resolution](/xpf/platforms/linux#native-library-resolution-with-readytorun) for details.
 :::
 
-## Rendering Performance
+## Rendering performance
 
-### Configuring Skia and Composition Options
+### Configuring Skia and composition options
 
 XPF uses Skia as its rendering engine. You can tune rendering performance through `SkiaOptions` and `CompositionOptions` in a [custom initialization](/xpf/configuration/customizing-initialization):
 
@@ -60,7 +60,7 @@ AppBuilder.Configure<AvaloniaUI.Xpf.Helpers.DefaultXpfAvaloniaApplication>()
 - `MaxGpuResourceSizeBytes`: Increases the GPU texture cache, reducing re-uploads for applications with many visual elements.
 - `UseRegionDirtyRectClipping`: Limits rendering to only the regions of the screen that have changed, improving performance for partial updates.
 
-### Blur Effects
+### Blur effects
 
 Blur effects (`BlurEffect`, `DropShadowEffect` with blur) are computationally expensive in Skia. A complex UI with blur enabled can reduce the framerate from 60fps to 30fps or lower. If rendering performance is a concern:
 
@@ -68,7 +68,7 @@ Blur effects (`BlurEffect`, `DropShadowEffect` with blur) are computationally ex
 - Consider using solid color backgrounds instead of acrylic/blur effects
 - Test on your target hardware early
 
-## Dynamic XAML Loading
+## Dynamic XAML loading
 
 `XamlReader.Load` parses and instantiates XAML at runtime. For large XAML documents, this can block the UI thread for several seconds. This is a fundamental limitation shared with WPF.
 
@@ -82,7 +82,7 @@ Strategies for improving dynamic XAML performance:
 BAML (compiled XAML) provides the best loading performance, but there is no supported public API for creating loose BAML files. Compile XAML into assemblies instead.
 :::
 
-## Embedding High-Performance Content
+## Embedding high-performance content
 
 For performance-critical rendering (such as real-time meters, audio visualizations, or 3D content), consider embedding Avalonia controls in your XPF application using [AvaloniaHost](/xpf/interop/embedding-avalonia-in-xpf). Avalonia's `CompositionCustomVisuals` API allows rendering directly on the composition thread, bypassing the WPF dispatcher entirely.
 

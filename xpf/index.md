@@ -20,7 +20,7 @@ A full rewrite is not a few sprints. It is months at a minimum, often years. Eve
 
 Avalonia XPF is a different path. It replaces the rendering layer underneath WPF with Avalonia's cross-platform engine while keeping the API and binary compatibility your code depends on. Your XAML, your view models, your third-party controls from vendors like Telerik, DevExpress, Infragistics, Actipro, and Syncfusion all continue to work. You are not rewriting your application. You are running it somewhere new.
 
-## How It Works
+## How it works
 
 XPF swaps out WPF's low-level rendering component (MilCore) with Avalonia's rendering engine. Everything above that layer stays the same. Your application sees the same WPF APIs it always has, but those APIs now work on macOS, Linux, and beyond.
 
@@ -36,7 +36,7 @@ XPF is not an all-or-nothing commitment. With [Hybrid XPF](/xpf/interop/using-xp
 
 It works the other way too. If you are already building with Avalonia, Hybrid XPF gives you access to over 700 existing WPF controls from vendors like Telerik, DevExpress, Infragistics, Actipro, and Syncfusion without waiting for native Avalonia ports.
 
-## Platform Support
+## Platform support
 
 | Platform | Internal | Business | Enterprise |
 |---|---|---|---|
@@ -71,6 +71,6 @@ Every license includes:
 
 Enterprise trials are available by contacting sales. For pricing, see the [Avalonia website](https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=xpf-index#pricing).
 
-## Get Started
+## Get started
 
 The [getting started guide](getting-started) walks you through running your WPF application on a new platform. Most teams are up and running in minutes, not months.

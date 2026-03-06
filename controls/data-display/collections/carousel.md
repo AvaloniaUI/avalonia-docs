@@ -94,7 +94,7 @@ namespace AvaloniaControls.Views
 
 <img src={CarouselScreenshot} alt="" />
 
-## Binding to a Collection
+## Binding to a collection
 
 Use `ItemsSource` to bind the Carousel to a data collection with a custom template:
 
@@ -114,7 +114,7 @@ Use `ItemsSource` to bind the Carousel to a data collection with a custom templa
 </Carousel>
 ```
 
-## Available Transitions
+## Available transitions
 
 | Transition | Description |
 |---|---|
@@ -122,7 +122,7 @@ Use `ItemsSource` to bind the Carousel to a data collection with a custom templa
 | `CrossFade` | Fades between slides. |
 | `CompositePageTransition` | Combines multiple transitions. |
 
-## Navigation Methods
+## Navigation methods
 
 | Method | Description |
 |---|---|

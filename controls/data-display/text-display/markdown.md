@@ -12,9 +12,9 @@ The Avalonia.Controls.Markdown control renders Markdown-formatted text in Avalon
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
 :::
 
-## Usage Examples
+## Usage examples
 
-### XAML Usage
+### XAML usage
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -65,7 +65,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 ```
 > **Note:** The `xml:space="preserve"` attribute in the XAML example is important. It ensures that whitespace and line breaks inside the Markdown text are preserved and not normalized by the XAML compiler. Always include this attribute when embedding Markdown directly in XAML.
 
-### XAML Usage (with ViewModel Binding)
+### XAML usage (with view model binding)
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -82,7 +82,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 </Window>
 ```
 
-### ViewModel Example (Load from File)
+### View model example (load from file)
 
 ```csharp
 namespace MarkdownSample;
@@ -107,7 +107,7 @@ var markdown = new Markdown
 };
 ```
 
-## API Overview
+## API overview
 
 ### Properties
 
@@ -136,11 +136,11 @@ var markdown = new Markdown
 |----------------------|---------------------------------------------|
 | CopyingToClipboard   | Raised when selection is copied to clipboard.|
 
-## Custom Image Loader
+## Custom image loader
 
 See the [Image Loader](/docs/markdown/imageloader) page for a detailed example how to customize image loading.
 
-## Code Highlighter
+## Code highlighter
 
 See the [Code Highlighter](/docs/markdown/codehighlighter) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
 
@@ -166,3 +166,10 @@ Add the resources by referencing the shipped `Default.axaml` theme via a `StyleI
    <!-- other styles -->
 </Application.Styles>
 ```
+
+## See also
+
+- [Markdown styling](/controls/data-display/text-display/markdown-styling)
+- [Image loader](/controls/data-display/text-display/imageloader)
+- [Code highlighter](/controls/data-display/text-display/codehighlighter)
+- [Rendering markdown](/docs/app-development/rendering-markdown)

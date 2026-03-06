@@ -14,7 +14,7 @@ import ContentPageAsTabScreenshot from '/img/controls/contentpage/contentpage-as
 
 `ContentPage` is most commonly used as a child of [`NavigationPage`](navigationpage), [`TabbedPage`](tabbedpage), or [`DrawerPage`](drawerpage), but it can also be placed directly inside a `Window` for single-page apps.
 
-## How the Header Displays
+## How the header displays
 
 The `Header` property serves different purposes depending on which container hosts the page:
 
@@ -25,9 +25,9 @@ The `Header` property serves different purposes depending on which container hos
 | `DrawerPage` | Used as the drawer menu item label. |
 | Standalone (in a `Window`) | Not displayed automatically. You must render it yourself if needed. |
 
-## Useful Properties
+## Useful properties
 
-### ContentPage Properties
+### ContentPage properties
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ The `Header` property serves different purposes depending on which container hos
 | `BottomCommandBar` | `object?` | `null` | Content displayed in a command bar area below the page content. |
 | `SafeAreaPadding` | `Thickness` | `0` | The current safe area padding applied to the page (read-only at runtime). |
 
-### Page Base Properties
+### Page base properties
 
 These properties are inherited from `Page` and are available on all page types:
 
@@ -52,7 +52,7 @@ These properties are inherited from `Page` and are available on all page types:
 | `BackgroundImage` | `IImage?` | `null` | An image displayed behind the page content. |
 | `BackgroundImageStretch` | `Stretch` | `UniformToFill` | Controls how the background image is stretched to fill the page. |
 
-## Navigation Events
+## Navigation events
 
 Every `Page` (including `ContentPage`) supports lifecycle events that fire during navigation. The events fire in a specific order when a navigation occurs:
 
@@ -62,7 +62,7 @@ Every `Page` (including `ContentPage`) supports lifecycle events that fire durin
 | `NavigatedFrom` | Raised on the **old** page after the navigation has completed. | 2 |
 | `NavigatedTo` | Raised on the **new** page after the navigation has completed. | 3 |
 
-### Overriding Lifecycle Methods
+### Overriding lifecycle methods
 
 You can also override the corresponding `protected` methods instead of subscribing to events:
 
@@ -98,7 +98,7 @@ public class HomePage : ContentPage
 
 ## Examples
 
-### Minimal XAML Page
+### Minimal XAML page
 
 The simplest possible `ContentPage` with inline content:
 
@@ -109,7 +109,7 @@ The simplest possible `ContentPage` with inline content:
 </ContentPage>
 ```
 
-### Creating a ContentPage in Code
+### Creating a ContentPage in code
 
 ```csharp
 var page = new ContentPage
@@ -123,7 +123,7 @@ var page = new ContentPage
 };
 ```
 
-### ContentPage Inside a NavigationPage
+### ContentPage inside a NavigationPage
 
 When hosted in a `NavigationPage`, the `Header` is displayed in the navigation bar:
 
@@ -140,7 +140,7 @@ When hosted in a `NavigationPage`, the `Header` is displayed in the navigation b
 
 <img src={ContentPageInNavigationScreenshot} alt="ContentPage inside a NavigationPage" />
 
-### ContentPage as a Window Root
+### ContentPage as a window root
 
 For single-page applications, you can place a `ContentPage` directly inside a `Window`:
 
@@ -158,7 +158,7 @@ For single-page applications, you can place a `ContentPage` directly inside a `W
 
 <img src={ContentPageStandaloneScreenshot} alt="ContentPage standalone in a Window" />
 
-### Scrollable Layout
+### Scrollable layout
 
 `ContentPage` does not include a built-in scroll viewer. Wrap your content in a `ScrollViewer` if it may overflow:
 
@@ -176,7 +176,7 @@ For single-page applications, you can place a `ContentPage` directly inside a `W
 </ContentPage>
 ```
 
-### MVVM Binding
+### MVVM binding
 
 Bind the page content to a view model using `ContentTemplate`:
 
@@ -235,7 +235,7 @@ Display a toolbar below the page content:
 
 <img src={ContentPageBottomCommandBarScreenshot} alt="ContentPage with a bottom command bar" />
 
-### Cancelling Navigation
+### Cancelling navigation
 
 Use the `Navigating` event or override `OnNavigating` to prevent the user from leaving a page with unsaved changes:
 
@@ -257,7 +257,7 @@ public class EditPage : ContentPage
 }
 ```
 
-### Intercepting the System Back Button
+### Intercepting the system back button
 
 On platforms with a hardware or system back button (Android, browser), `Navigating` fires before the back action occurs. Cancelling it will also cancel the system back navigation:
 
@@ -273,7 +273,7 @@ protected override void OnNavigating(NavigatingEventArgs args)
 }
 ```
 
-### Refreshing Data When the Page Reappears
+### Refreshing data when the page reappears
 
 `NavigatedTo` fires every time the page becomes active, making it the ideal place to refresh data:
 
@@ -288,7 +288,7 @@ public class OrdersPage : ContentPage
 }
 ```
 
-### Full-Bleed Layout (Disabling Safe Area Padding)
+### Full-bleed layout (disabling safe area padding)
 
 Set `AutomaticallyApplySafeAreaPadding` to `false` to let your content extend behind the notch and status bar:
 
@@ -302,7 +302,7 @@ Set `AutomaticallyApplySafeAreaPadding` to `false` to let your content extend be
 
 <img src={ContentPageSafeAreaDisabledScreenshot} alt="ContentPage with safe area padding disabled" />
 
-### Tab with Icon
+### Tab with icon
 
 When used inside a `TabbedPage`, the `Header` and `Icon` properties control the tab appearance:
 

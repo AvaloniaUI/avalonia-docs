@@ -101,7 +101,7 @@ You should be able to run your project from your preferred IDE with Avalonia XPF
 If running on Linux see the [Linux](/xpf/platforms/linux) page for information on how to install .NET and required dependencies.
 :::
 
-## Additional Projects
+## Additional projects
 
 If you have non-executable projects that are using WPF APIs and need to build those on Linux or macOS, you can either change the SDK as described above, or if you're targeting `net7.0-windows` add:
 
@@ -123,7 +123,7 @@ Alternatively create a `Directory.Build.props` file at the root of your solution
 </Project>  
 ```
 
-## Target Framework
+## Target framework
 
 Ideally all projects which reference XPF should be using the `net6.0-windows` or `net7.0-windows` TFM. You can use the `net6.0` or `net7.0` TFM but in this case you cannot use `<EnableWindowsTargeting>` and instead must use the XPF SDK.
 
@@ -131,7 +131,7 @@ Ideally all projects which reference XPF should be using the `net6.0-windows` or
 The `-windows` target framework (e.g., `net8.0-windows`) works on all platforms when using the XPF SDK. You do not need to change the target framework to build or run on Linux or macOS. Some third-party libraries require the Windows-specific TFM, so keeping `net8.0-windows` is often the simplest approach.
 :::
 
-## WinForms Hosting (Windows Only)
+## WinForms hosting (Windows only)
 
 If your application needs to host WinForms controls inside XPF, add the following to a Windows-conditional `PropertyGroup` in your `.csproj`:
 
@@ -145,7 +145,7 @@ This disables the WinForms shim layer and enables native WinForms integration. N
 
 ## Porting tips
 
-### Project Files
+### Project files
 
 1. Convert all projects to .NET 8.0 and above. The old project file format (non-SDK-style `.csproj`) will not work outside of Windows.
 2. It is highly recommended to do (1) on Windows first to avoid having to wrangle with hard-to-debug Windows-specific dependency issues on other platforms. Replace or remove deprecated features from .NET 7.0 such as AppDomain, CodeDOM, WCF, `System.Web`, XmlSerializer, and hard Windows-only APIs like `System.Management.Instrumentation` and `System.Drawing.Common` on your app with cross-platform friendly alternatives.
@@ -165,14 +165,14 @@ This disables the WinForms shim layer and enables native WinForms integration. N
 
 11. Avoid custom chrome window controls (e.g. WPF’s WindowChrome, MahApps’s MetroWindow, DevExpress’s DXWindow) and anything that customizes window borders or behaviors because it is not guaranteed to fit into the target platform’s UI design (e.g., a custom MetroWindow on macOS). The best design for XPF target platforms is a single-view app (e.g., like a website or a mobile application).
 
-### Resources & Settings
+### Resources and settings
 
 12. Resource Files (`.resx`) don't get regenerated outside of Visual Studio. Consider alternatives to localization like JSON files or other solutions that work independently of Visual Studio.
 13. Visual Studio Text Templates (T4, *.template files) are also deprecated on .NET 7.0. Please use source generators as an alternative.
 14. Images or Bitmaps in Resource Files (`.resx`) are not compatible with the .NET 7.0: consider using WPF's resources scheme instead.
 15. Avoid using `App.Config` / `System.Configuration.ConfigurationManager` due to it not persisting correctly on platforms that don’t allow writes on the same location as the executing assembly (macOS, mobile, WASM, and similar) and use a 3rd party/in-house solution to write persistent configuration data for your apps.
 
-### Filesystem Access
+### Filesystem access
 
 16. Make sure that your file access code can handle case-sensitive filesystems and uses `Path.DirectorySeparatorChar` instead of hardcoding the directory separators. 
 
@@ -196,7 +196,7 @@ This disables the WinForms shim layer and enables native WinForms integration. N
     })
     ```
 
-### Unsupported Controls
+### Unsupported controls
 
 20. Avoid using WPF's Spell checking and XPS features since those are not supported by XPF.
-21. If you have any advanced and specialized WPF features that you want to work on your app like Shaders, 3D, and Media, please contact us so that we can help you figure out the best way forward.
+21. If you have any advanced and specialized WPF features that you want to work on your app like Shaders, 3D, and Media, contact the Avalonia team for guidance on the best way forward.

@@ -7,7 +7,7 @@ title: Window
 
 You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application.
 
-## Common Properties
+## Common properties
 
 | Property | Description |
 | :--- | :--- |
@@ -109,10 +109,7 @@ window.Closing += (s, e) =>
 };
 ```
 
-## Source code
+## See also
 
-[Window.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
-
-## Additional Resources
-
-- The [Main Window](/docs/fundamentals/main-window)
+- [Main Window](/docs/fundamentals/main-window)
+- [`Window.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)

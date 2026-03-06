@@ -17,7 +17,7 @@ The `NavigationPage` manages a stack-based navigation system, allowing you to pu
 
 `NavigationPage` implements the `INavigation` interface, providing a full set of async navigation methods for pushing, popping, and replacing pages.
 
-## Navigation Bar Layout
+## Navigation bar layout
 
 The navigation bar is divided into three zones:
 
@@ -27,7 +27,7 @@ The navigation bar is divided into three zones:
 | Center | The current page's `Header` |
 | Right | Reserved for future use or custom content via `TopCommandBar` |
 
-## Useful Properties
+## Useful properties
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ The navigation bar is divided into three zones:
 | `IsBackButtonEffectivelyVisible` | `bool` | Computed | Read-only. The resolved visibility of the back button, accounting for stack depth, `IsBackButtonVisible`, and per-page overrides. |
 | `NavigationStack` | `IReadOnlyList<Page>` | Empty | Read-only. The current stack of pages. |
 
-## Attached Properties
+## Attached properties
 
 These properties can be set on individual `Page` instances to customize their appearance within the `NavigationPage`:
 
@@ -58,14 +58,14 @@ These properties can be set on individual `Page` instances to customize their ap
 | `NavigationPage.BarLayoutBehavior` | `BarLayoutBehavior?` | `null` | Controls how the navigation bar interacts with page content. |
 | `NavigationPage.BarHeightOverride` | `double?` | `null` | Overrides the bar height for this page. |
 
-### BarLayoutBehavior Values
+### BarLayoutBehavior values
 
 | Value | Description |
 | --- | --- |
 | `Inset` | The navigation bar pushes page content down. This is the default behavior. |
 | `Overlay` | The navigation bar floats over the page content without affecting its layout. |
 
-## Navigation Methods
+## Navigation methods
 
 All navigation methods are asynchronous and return `Task`. Each method has an overload that accepts an `IPageTransition` parameter to override the default transition.
 
@@ -79,7 +79,7 @@ All navigation methods are asynchronous and return `Task`. Each method has an ov
 | `InsertPage(Page, Page)` | Inserts a page into the stack before the specified page. |
 | `RemovePage(Page)` | Removes a specific page from the stack. |
 
-### Modal Navigation
+### Modal navigation
 
 | Method | Description |
 | --- | --- |
@@ -87,7 +87,7 @@ All navigation methods are asynchronous and return `Task`. Each method has an ov
 | `PopModalAsync()` | Dismisses the current modal and returns it. |
 | `PopAllModalsAsync()` | Dismisses all modals. |
 
-### Stack Properties
+### Stack properties
 
 | Property | Description |
 | --- | --- |
@@ -127,7 +127,7 @@ Define a `NavigationPage` with an initial root page:
 
 <img src={NavigationPageRootScreenshot} alt="NavigationPage with root page" />
 
-### Basic NavigationPage in Code
+### Basic NavigationPage in code
 
 You can also create a `NavigationPage` and set its root page in code:
 
@@ -151,7 +151,7 @@ var navigationPage = new NavigationPage
 };
 ```
 
-### Pushing and Popping Pages
+### Pushing and popping pages
 
 Every `Page` exposes a `Navigation` property (of type `INavigation`) that references the nearest `NavigationPage` ancestor. Use this to navigate from within any page:
 
@@ -168,7 +168,7 @@ await Navigation.PopToRootAsync();
 
 <img src={NavigationPagePushedScreenshot} alt="NavigationPage after pushing a page" />
 
-### Tracking Stack Depth
+### Tracking stack depth
 
 Use the `StackDepth` property or the `CanGoBack` property to respond to navigation changes:
 
@@ -185,7 +185,7 @@ navigationPage.Popped += (sender, args) =>
 };
 ```
 
-### Hiding the Navigation Bar
+### Hiding the navigation bar
 
 Set the `NavigationPage.HasNavigationBar` attached property to `False` on a page to hide the navigation bar for that page:
 
@@ -200,7 +200,7 @@ Set the `NavigationPage.HasNavigationBar` attached property to `False` on a page
 
 <img src={NavigationPageNoNavbarScreenshot} alt="NavigationPage with hidden navigation bar" />
 
-### Hiding the Back Button
+### Hiding the back button
 
 Set the `NavigationPage.HasBackButton` attached property to `False` on a page to hide the back button while keeping the navigation bar visible:
 
@@ -212,7 +212,7 @@ Set the `NavigationPage.HasBackButton` attached property to `False` on a page to
 </ContentPage>
 ```
 
-### Custom Back Button Content
+### Custom back button content
 
 Provide custom content for the back button using the `NavigationPage.BackButtonContent` attached property:
 
@@ -232,7 +232,7 @@ Provide custom content for the back button using the `NavigationPage.BackButtonC
 
 <img src={NavigationPageCustomBackButtonScreenshot} alt="NavigationPage with custom back button content" />
 
-### Per-Page TopCommandBar
+### Per-page TopCommandBar
 
 Add a command bar below the navigation bar for a specific page using the `NavigationPage.TopCommandBar` attached property:
 
@@ -249,7 +249,7 @@ Add a command bar below the navigation bar for a specific page using the `Naviga
 
 <img src={NavigationPageTopCommandBarScreenshot} alt="NavigationPage with top command bar" />
 
-### Page Transitions
+### Page transitions
 
 Customize the transition animation used when pushing and popping pages:
 
@@ -274,7 +274,7 @@ await Navigation.PushAsync(new DetailsPage(), customTransition);
 
 <img src={NavigationPageAppearanceScreenshot} alt="NavigationPage appearance and transitions" />
 
-### Modal Pages
+### Modal pages
 
 Modal pages are presented on top of the current navigation stack. They have their own separate stack:
 
@@ -291,7 +291,7 @@ await Navigation.PopAllModalsAsync();
 
 <img src={NavigationPageModalScreenshot} alt="NavigationPage with modal page" />
 
-### Modal Transitions
+### Modal transitions
 
 Customize the transition animation for modal pages separately from regular page transitions:
 
@@ -307,7 +307,7 @@ Customize the transition animation for modal pages separately from regular page 
 </NavigationPage>
 ```
 
-### Customizing Bar Height
+### Customizing bar height
 
 Set a custom height for the navigation bar across all pages, or override it for a specific page:
 
@@ -330,7 +330,7 @@ Set a custom height for the navigation bar across all pages, or override it for 
 </ContentPage>
 ```
 
-### Navigation Bar Shadow
+### Navigation bar shadow
 
 Enable a shadow beneath the navigation bar for a subtle depth effect:
 
@@ -343,7 +343,7 @@ Enable a shadow beneath the navigation bar for a subtle depth effect:
 </NavigationPage>
 ```
 
-### Overlay Navigation Bar
+### Overlay navigation bar
 
 Use the `BarLayoutBehavior` attached property to make the navigation bar float over the page content instead of pushing it down:
 
@@ -358,7 +358,7 @@ Use the `BarLayoutBehavior` attached property to make the navigation bar float o
 
 <img src={NavigationPageOverlayBarScreenshot} alt="NavigationPage with overlay bar layout" />
 
-### Replacing a Login Screen
+### Replacing a login screen
 
 Use `ReplaceAsync` to swap the current page without adding to the back stack. This is useful for replacing a login screen with the main app screen after authentication:
 
@@ -369,7 +369,7 @@ await Navigation.ReplaceAsync(new MainPage());
 
 The user will not be able to navigate back to the replaced page.
 
-### DrawerPage Integration
+### DrawerPage integration
 
 When a `DrawerPage` is the root page of a `NavigationPage`, the drawer hamburger icon automatically switches to a back button when the navigation stack has more than one page:
 
@@ -393,7 +393,7 @@ When a `DrawerPage` is the root page of a `NavigationPage`, the drawer hamburger
 
 <img src={NavigationPageDrawerIntegrationScreenshot} alt="NavigationPage with DrawerPage integration" />
 
-### Disabling Back-Swipe Gesture
+### Disabling back-swipe gesture
 
 Disable the swipe-to-go-back gesture globally or check whether it is enabled:
 

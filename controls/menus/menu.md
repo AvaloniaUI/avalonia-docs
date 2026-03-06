@@ -50,7 +50,7 @@ You will probably use these properties most often:
     <tr>
       <td><code>MenuItem</code></td>
       <td><code>InputGesture</code></td>
-      <td>The displayed key shortcut for the menu item. Setting this property does not cause the input gesture to be handled by the menu item, it simply displays the gesture text in the menu.</td>
+      <td>The displayed key shortcut for the menu item. Setting this property does not cause the input gesture to be handled by the menu item, it displays the gesture text in the menu.</td>
     </tr>
     <tr>
       <td><code>MenuItem</code></td>

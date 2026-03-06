@@ -23,7 +23,7 @@ For ARM64 devices:
 dotnet publish -r linux-arm64 -c Release --self-contained
 ```
 
-## Runtime Dependencies
+## Runtime dependencies
 
 Ensure the following packages are installed on the target system.
 
@@ -68,7 +68,7 @@ dotnet publish -r linux-x64 -c Release --self-contained
 ReadyToRun may change how native `.so` libraries are resolved. See [Linux: Native Library Resolution](/xpf/platforms/linux#native-library-resolution-with-readytorun) for details.
 :::
 
-## Framework-Dependent vs Self-Contained
+## Framework-dependent vs self-contained
 
 **Framework-dependent** (default): Requires .NET to be installed on the target machine. Produces a smaller deployment package.
 
@@ -82,13 +82,13 @@ dotnet publish -r linux-x64 -c Release
 dotnet publish -r linux-x64 -c Release --self-contained
 ```
 
-## Packaging Formats
+## Packaging formats
 
 ### AppImage
 
 AppImage bundles your application into a single executable file. Use tools like [appimage-builder](https://appimage-builder.readthedocs.io/) or package the published output into an AppImage manually.
 
-### Debian Package (.deb)
+### Debian package (.deb)
 
 For Debian-based distributions, create a `.deb` package. Use `dpkg-deb` or a tool like [dotnet-packaging](https://github.com/quamotion/dotnet-packaging):
 
@@ -97,7 +97,7 @@ dotnet tool install --global dotnet-deb
 dotnet deb -r linux-x64 -c Release
 ```
 
-### RPM Package
+### RPM package
 
 For Fedora and RHEL-based distributions:
 
@@ -106,7 +106,7 @@ dotnet tool install --global dotnet-rpm
 dotnet rpm -r linux-x64 -c Release
 ```
 
-### Flatpak and Snap
+### Flatpak and snap
 
 XPF applications can be distributed as Flatpak or Snap packages. Refer to each packaging system's documentation for bundling .NET applications.
 
@@ -129,6 +129,6 @@ Example GitHub Actions step:
 
 See [Centralizing Multiple XPF Projects](/xpf/configuration/centralizing-multiple-xpf-projects#license-keys) for using environment variables with license keys.
 
-## Debugging Remote Linux Targets
+## Debugging remote Linux targets
 
 For debugging XPF applications running on Linux from a Windows development machine, see [Linux: Debugging](/xpf/platforms/linux#debugging-on-linux).

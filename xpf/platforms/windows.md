@@ -7,7 +7,7 @@ title: Windows
 
 Windows is the native platform for WPF, and XPF applications run on Windows with full compatibility. This page covers Windows-specific considerations when using XPF rather than standard WPF.
 
-## Win32 API Behavior
+## Win32 API behavior
 
 When Win32 API shims are enabled on Windows, calls are routed through the XPF shim layer rather than directly to the native Win32 APIs. This ensures consistent behavior with non-Windows platforms during development and testing.
 
@@ -22,7 +22,7 @@ AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable(asm =>
 });
 ```
 
-## WinForms Hosting
+## WinForms hosting
 
 XPF can host WinForms controls on Windows. Enable this by adding the following to a Windows-conditional property group:
 
@@ -34,7 +34,7 @@ XPF can host WinForms controls on Windows. Enable this by adding the following t
 
 This disables XPF's WinForms shim layer and enables native WinForms integration. WinForms hosting is only available on Windows; condition the property group to avoid build failures on other platforms.
 
-## STA Threading
+## STA threading
 
 Some Windows operations require the main thread to be marked as STA (Single-Threaded Apartment):
 
@@ -68,7 +68,7 @@ protected override void OnCursorChange(object sender, CursorChangeEventArgs e)
 
 For cross-platform browser embedding, see [Web Content Embedding](/xpf/interop/web-content).
 
-## Window Handles
+## Window handles
 
 XPF uses virtual window handles for WPF API calls such as `WindowInteropHelper.Handle`. On Windows, these are real HWNDs. To access the underlying handle directly, use the Avalonia interop API:
 

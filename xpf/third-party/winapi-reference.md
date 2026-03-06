@@ -13,7 +13,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 
 ## user32.dll
 
-### Window Creation and Lifecycle
+### Window creation and lifecycle
 
 | Function | Description |
 |---|---|
@@ -22,7 +22,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `RegisterClassExW` | Registers a window class (extended). |
 | `DestroyWindow` | Destroys a window created with `CreateWindowEx`. |
 
-### Window Properties and State
+### Window properties and state
 
 | Function | Description |
 |---|---|
@@ -36,7 +36,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `GetWindowLong` / `SetWindowLong` | Gets or sets a 32-bit value in the window data. |
 | `GetWindowLongPtr` (W) / `SetWindowLongPtr` | Gets or sets a pointer-sized value in the window data. Used for window styles and procedures. |
 
-### Window Position and Layout
+### Window position and layout
 
 | Function | Description |
 |---|---|
@@ -44,7 +44,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `AdjustWindowRectEx` | Calculates the required window size for a given client area size. |
 | `BeginDeferWindowPos` / `EndDeferWindowPos` | Batches multiple window position changes for performance. |
 
-### Window Hierarchy
+### Window hierarchy
 
 | Function | Description |
 |---|---|
@@ -57,7 +57,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `EnumChildWindows` | Enumerates child windows of a parent. |
 | `EnumThreadWindows` | Enumerates windows owned by a thread. |
 
-### Window Display
+### Window display
 
 | Function | Description |
 |---|---|
@@ -66,13 +66,13 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `InvalidateRect` | Marks a rectangle as needing repaint. |
 | `SetWindowDisplayAffinity` | Controls whether a window can be captured by screen capture tools. Stub implementation. |
 
-### System Menu
+### System menu
 
 | Function | Description |
 |---|---|
 | `GetSystemMenu` | Returns a handle to the window's system menu (the menu shown when clicking the window icon). |
 
-### Focus and Input
+### Focus and input
 
 | Function | Description |
 |---|---|
@@ -115,7 +115,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `TrackPopupMenuEx` | Displays a shortcut menu at a specified location. |
 | `EnableMenuItem` | Enables, disables, or grays a menu item. |
 
-### System Information
+### System information
 
 | Function | Description |
 |---|---|
@@ -133,7 +133,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 
 ## gdi32.dll
 
-### Device Contexts
+### Device contexts
 
 | Function | Description |
 |---|---|
@@ -141,7 +141,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `CreateCompatibleDC` / `DeleteDC` | Creates or deletes a memory device context. |
 | `GetDeviceCaps` | Returns device capabilities (DPI, color depth, etc.). |
 
-### Drawing Objects
+### Drawing objects
 
 | Function | Description |
 |---|---|
@@ -151,7 +151,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `DeleteObject` | Deletes a GDI object (region, brush, pen, etc.). |
 | `GetStockObject` | Returns a handle to a predefined stock object. |
 
-### Coordinate Mapping
+### Coordinate mapping
 
 | Function | Description |
 |---|---|
@@ -210,7 +210,7 @@ For setup and configuration, see [Win32 API Shims](/xpf/third-party/win32-api-sh
 | `CloseHandle` | Closes an object handle. |
 | `RtlGetVersion` | Returns the OS version. Returns emulated Windows version info on non-Windows. |
 
-### File and Memory Mapping
+### File and memory mapping
 
 | Function | Description |
 |---|---|

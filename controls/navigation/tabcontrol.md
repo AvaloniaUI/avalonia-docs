@@ -13,7 +13,7 @@ You can compose the UI in both the header and content zones to suit the UI requi
 If you only need the function of the tab headers part of this control, consider using the [tab strip](/controls/navigation/tabstrip) instead.
 :::
 
-## Common Properties
+## Common properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -45,7 +45,7 @@ This is simple tab example. The tab content is just some text:
 
 </XamlPreview>
 
-## Dynamic Tabs from a Collection
+## Dynamic tabs from a collection
 
 Bind tabs to a view model collection using `ItemsSource`:
 
@@ -65,7 +65,7 @@ Bind tabs to a view model collection using `ItemsSource`:
 </TabControl>
 ```
 
-## Tab Placement
+## Tab placement
 
 Position tabs at the top, bottom, left, or right:
 

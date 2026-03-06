@@ -12,7 +12,7 @@ tags:
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
 :::
 
-## Useful Properties
+## Useful properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -22,7 +22,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 | `CanGoBack` | `bool` | Read-only. `true` when the WebView can navigate back in history. |
 | `CanGoForward` | `bool` | Read-only. `true` when the WebView can navigate forward in history. |
 
-## Basic Example
+## Basic example
 
 Create a dialog, navigate to a URL, and wait for it to close:
 
@@ -50,7 +50,7 @@ dialog.Show();
 dialog.NavigateToString("<h1>Hello from Avalonia</h1>");
 ```
 
-## Showing the Dialog
+## Showing the dialog
 
 Call `Show()` to open the dialog as a standalone window, or `Show(IPlatformHandle)` to open it with an owner:
 
@@ -104,7 +104,7 @@ dialog.WebMessageReceived += (sender, e) =>
 `PrintToPdfStreamAsync` does not accept extended print options such as margin or orientation. For broader platform support, use CSS rules with [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
 :::
 
-## Intercepting Requests
+## Intercepting requests
 
 The `WebResourceRequested` event fires when the WebView makes a URL request, allowing you to inspect or modify headers:
 
@@ -119,7 +119,7 @@ dialog.WebResourceRequested += (sender, e) =>
 The headers dictionary can be read-only depending on the request or platform. Always check the result of the `TrySet` and `TryRemove` methods.
 :::
 
-## Environment Options
+## Environment options
 
 The `EnvironmentRequested` event fires before the WebView adapter is created, letting you customize options such as enabling private mode or developer tools:
 
@@ -132,7 +132,7 @@ dialog.EnvironmentRequested += (sender, e) =>
 
 See [WebView environment options](/docs/webview/webview-environment) for details. The event argument type depends on the platform.
 
-## Window Sizing and Position
+## Window sizing and position
 
 | Method | Description |
 |---|---|
@@ -162,7 +162,7 @@ See [WebView environment options](/docs/webview/webview-environment) for details
 | `WebMessageReceived` | Fires when web content calls `invokeCSharpAction(body)`. |
 | `WebResourceRequested` | Fires when the WebView makes a URL request. |
 
-## Platform Support
+## Platform support
 
 | Feature | Windows | macOS | Linux | iOS | Android | Browser |
 |---|---|---|---|---|---|---|

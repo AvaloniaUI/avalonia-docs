@@ -5,19 +5,17 @@ title: ScrollBar
 
 import ScrollBarScreenshot from '/img/controls/scrollbar/scrollbar.gif';
 
-# ScrollBar
-
 A `ScrollBar` control can be displayed in a horizontal or vertical orientation. The default value (double) range for the scroll bar is 0-100.
 
 You can configure the range and how the value changes (small and large steps). Small steps can be controlled by the keyboard arrow keys, and large steps by mouse clicks in the scroll bar track, or by the page-up and page-down keys.
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
 <table><thead><tr><th width="241">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Orientation</code></td><td>The orientation of the scroll bar.</td></tr><tr><td><code>VerticalAlignment</code></td><td>The vertical alignment of the scroll bar in its container. Choose from top, bottom, center and stretch.</td></tr><tr><td><code>HorizontalAlignment</code></td><td>The horizontal alignment of the scroll bar in its container. Choose from left, right, center and stretch.</td></tr></tbody></table>
 
-:::warning
+:::caution
 To create a meaningful layout, you will need to use corresponding orientation and alignment properties. For example, a vertical orientation matches a horizontal alignment.
 :::
 
@@ -59,12 +57,7 @@ With the example code-behind, the text block displays the value of the scrollbar
 
 <img src={ScrollBarScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ScrollBar).
-:::
-
-:::info
-View the source code on _GitHub_ [`ScrollBar.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ScrollBar.cs)
-:::
+- [ScrollBar API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ScrollBar)
+- [`ScrollBar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ScrollBar.cs)

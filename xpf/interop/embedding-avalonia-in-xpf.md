@@ -5,7 +5,7 @@ title: Embedding Avalonia in XPF
 
 ## Embedding Avalonia controls
 
-### Step 1: Add an Avalonia UserControl
+### Step 1: Add an Avalonia `UserControl`
 
 Add an Avalonia `UserControl` to your application which contains the Avalonia content that you wish to host. For example:
 
@@ -34,7 +34,7 @@ public partial class MyAvaloniaView : UserControl
 }
 ```
 
-### Step 2: Host the Avalonia UserControl
+### Step 2: Host the Avalonia `UserControl`
 
 Intiantiate an `AvaloniaHost` to host the Avalonia content in an XPF control:
 
@@ -61,7 +61,7 @@ Intiantiate an `AvaloniaHost` to host the Avalonia content in an XPF control:
 
 In XPF you can add Style to the Avalonia control only with the code-behind. Please consider the sample below.
 
-### XAML Code
+### XAML code
 
 Here is an example XAML code snippet demonstrating how to embed an Avalonia control, specifically a `Button`, into a XPF `Window`:
 
@@ -85,7 +85,7 @@ Here is an example XAML code snippet demonstrating how to embed an Avalonia cont
 </Window>
 ```
 
-### Code-Behind C# Code
+### Code-behind C# code
 
 In the code-behind file (`MainWindow.xaml.cs`), you can apply styles to the Avalonia control using the `Styles` property. The following C# code demonstrates how to create a style for the Avalonia `Button`:
 
@@ -130,7 +130,7 @@ namespace YourNamespace
 ```
 Ensure you replace "YourNamespace" with the actual namespace of your project. This example sets the background color to green and the foreground color to red for the Avalonia `Button` embedded in XPF. Adjust the setters and other properties according to your styling requirements. And if you will follow all the steps correctly your Avalonia control will change according to the style.
 
-## Adding global styles dynamically in code
+## Adding global styles dynamically
 
 Adding global styles for Avalonia controls dynamically in code-behind provides flexibility and allows you to apply styles at runtime.
 Use the following C# code to achieve this:
@@ -146,7 +146,7 @@ avaloniaApp.Styles.Add(new StyleInclude()
 ```
 Here, "CustomStyles.xaml" is the XAML file containing the Avalonia styles you want to apply globally.
 
-### With the redefinition of the Avalonia Application
+### With a custom Avalonia application
 In more advanced scenarios you may need to fully replace the styles applied by default with your custom styles and
 for that you will need to redefine the Avalonia Application. First step would be to disable the automatic XPF initialization.
 ```xml
@@ -198,7 +198,7 @@ And after that your styles would be applied for your whole Application.
 
 Sometimes WPF APIs may not provide the specific features you need. In these cases, there is often an Avalonia API that you can use to fill that gap.
 
-## Getting the Avalonia Window
+## Getting the Avalonia window
 
 Many Avalonia features are exposed via the top-level `Window` class. Because an XPF `Window` is also an Avalonia `Window`, you can use the following pattern to get a reference to the underlying Avalonia `Window`:
 

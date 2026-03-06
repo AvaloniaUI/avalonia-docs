@@ -3,7 +3,7 @@ id: faq
 title: Frequently Asked Questions
 ---
 
-## .NET Version Compatibility
+## .NET version compatibility
 
 **Which .NET versions does XPF support?**
 
@@ -13,7 +13,7 @@ XPF works with .NET 6, 7, 8, 9, and 10. There is no requirement to use a specifi
 
 XPF is a fork of WPF from .NET 6. Features added to WPF in later .NET versions (such as the Fluent theme from .NET 9) are not automatically available. However, the XPF team backports selected features. For example, `OpenFolderDialog` (introduced in .NET 8 WPF) is available in XPF.
 
-## Target Frameworks
+## Target frameworks
 
 **Should I use `net8.0` or `net8.0-windows`?**
 
@@ -25,7 +25,7 @@ You can use the plain `net8.0` TFM, but only if all projects in your solution us
 
 Yes. You can multi-target (e.g., `net8.0-windows;net8.0-macos`) if you need platform-specific APIs. However, for most XPF applications, a single `net8.0-windows` TFM with the XPF SDK is the simplest approach.
 
-## Win32 API Shims
+## Win32 API shims
 
 **Do I need to enable Win32 API shims?**
 
@@ -68,7 +68,7 @@ XPF licenses are perpetual. Your application will continue to work indefinitely.
 
 Free 30-day trials are available for Internal and Business licenses through the [Avalonia website](https://avaloniaui.net/xpf). You can start a new trial at any time from the portal. Enterprise licenses are available by contacting sales.
 
-## Platform Support
+## Platform support
 
 **Does XPF support Android and iOS?**
 
@@ -86,7 +86,7 @@ All XPF licenses support Tier 1 Linux distributions (the latest versions of Ubun
 
 Yes. RHEL 8 and later are supported. Some additional setup is required compared to Ubuntu. See [Linux: Other Dependencies](/xpf/platforms/linux#other-dependencies) for RHEL-specific package installation instructions.
 
-## Common Issues
+## Common issues
 
 **My application works on Windows but crashes on macOS/Linux. Where do I start?**
 

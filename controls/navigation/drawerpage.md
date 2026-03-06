@@ -24,7 +24,7 @@ When nested inside a `NavigationPage`, the drawer icon automatically switches to
 
 <img src={DrawerPageOpenScreenshot} alt="DrawerPage with the drawer open" />
 
-## Useful Properties
+## Useful properties
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ When nested inside a `NavigationPage`, the drawer icon automatically switches to
 | `HorizontalContentAlignment` | `HorizontalAlignment` | `Stretch` | Horizontal alignment of the main content. |
 | `VerticalContentAlignment` | `VerticalAlignment` | `Stretch` | Vertical alignment of the main content. |
 
-### DrawerBehavior Values
+### DrawerBehavior values
 
 | Value | Description |
 | --- | --- |
@@ -62,7 +62,7 @@ When nested inside a `NavigationPage`, the drawer icon automatically switches to
 | `Locked` | The drawer stays open and cannot be closed by the user. |
 | `Disabled` | The drawer is hidden and cannot be opened. |
 
-### DrawerLayoutBehavior Values
+### DrawerLayoutBehavior values
 
 | Value | Description |
 | --- | --- |
@@ -71,7 +71,7 @@ When nested inside a `NavigationPage`, the drawer icon automatically switches to
 | `CompactOverlay` | A narrow strip of the drawer is always visible (showing icons). When opened, the drawer overlays the content. |
 | `CompactInline` | A narrow strip of the drawer is always visible. When opened, the drawer pushes the content aside. |
 
-### DrawerPlacement Values
+### DrawerPlacement values
 
 | Value | Description |
 | --- | --- |
@@ -88,13 +88,13 @@ When nested inside a `NavigationPage`, the drawer icon automatically switches to
 | `Closing` | Raised when the drawer is about to close. Set `Cancel = true` on the event args to prevent closing. |
 | `Closed` | Raised when the drawer finishes closing. |
 
-## Gestures and Keyboard
+## Gestures and keyboard
 
 `DrawerPage` supports swipe gestures to open and close the drawer on touch-enabled devices. This can be toggled with the `IsGestureEnabled` property.
 
 On desktop, pressing the `Escape` key closes the drawer when it is open and focused.
 
-## NavigationPage Integration
+## NavigationPage integration
 
 When a `DrawerPage` is placed inside a `NavigationPage`, the hamburger menu icon in the header automatically becomes a back button when additional pages are pushed onto the navigation stack. This provides a seamless transition between drawer navigation and hierarchical page navigation without requiring additional code.
 
@@ -119,7 +119,7 @@ When a `DrawerPage` is placed inside a `NavigationPage`, the hamburger menu icon
 </DrawerPage>
 ```
 
-### Basic Code
+### Basic code
 
 ```csharp
 var drawerPage = new DrawerPage
@@ -146,7 +146,7 @@ var drawerPage = new DrawerPage
 };
 ```
 
-### Toggling the Drawer
+### Toggling the drawer
 
 ```csharp
 private void ToggleDrawer()
@@ -155,7 +155,7 @@ private void ToggleDrawer()
 }
 ```
 
-### Navigating from the Drawer
+### Navigating from the drawer
 
 ```csharp
 private void OnSettingsClicked(object sender, RoutedEventArgs e)
@@ -165,7 +165,7 @@ private void OnSettingsClicked(object sender, RoutedEventArgs e)
 }
 ```
 
-### Header and Footer
+### Header and footer
 
 ```xml
 <DrawerPage xmlns="https://github.com/avaloniaui"
@@ -192,7 +192,7 @@ private void OnSettingsClicked(object sender, RoutedEventArgs e)
 
 <img src={DrawerPageHeaderFooterScreenshot} alt="DrawerPage with header and footer" />
 
-### Persistent Sidebar (Split)
+### Persistent sidebar (Split)
 
 Use `DrawerLayoutBehavior="Split"` to keep the drawer always visible alongside the content.
 
@@ -214,7 +214,7 @@ Use `DrawerLayoutBehavior="Split"` to keep the drawer always visible alongside t
 
 <img src={DrawerPageSplitScreenshot} alt="DrawerPage in split mode" />
 
-### Compact Navigation Rail
+### Compact navigation rail
 
 Use `CompactOverlay` or `CompactInline` to show a narrow strip of the drawer (such as icon buttons) when closed, expanding to the full drawer on open.
 
@@ -239,7 +239,7 @@ Use `CompactOverlay` or `CompactInline` to show a narrow strip of the drawer (su
 
 <img src={DrawerPageCompactExpandedScreenshot} alt="DrawerPage compact mode expanded" />
 
-### Responsive Layout
+### Responsive layout
 
 Automatically switch the drawer between overlay and inline based on the container width.
 
@@ -259,7 +259,7 @@ Automatically switch the drawer between overlay and inline based on the containe
 </DrawerPage>
 ```
 
-### RTL Support
+### RTL support
 
 `DrawerPage` respects the `FlowDirection` property. When set to `RightToLeft`, the drawer placement is mirrored automatically.
 
@@ -280,7 +280,7 @@ Automatically switch the drawer between overlay and inline based on the containe
 
 <img src={DrawerPageRtlScreenshot} alt="DrawerPage with RTL layout" />
 
-### Right-Side Drawer
+### Right-side drawer
 
 ```xml
 <DrawerPage xmlns="https://github.com/avaloniaui"
@@ -300,7 +300,7 @@ Automatically switch the drawer between overlay and inline based on the containe
 
 <img src={DrawerPageRightScreenshot} alt="DrawerPage with right-side drawer" />
 
-### Backdrop Scrim
+### Backdrop scrim
 
 Use the `BackdropBrush` property to add a semi-transparent overlay behind the drawer when it is open in overlay mode.
 
@@ -318,7 +318,7 @@ Use the `BackdropBrush` property to add a semi-transparent overlay behind the dr
 </DrawerPage>
 ```
 
-### Cancelling Close
+### Cancelling close
 
 Handle the `Closing` event to prevent the drawer from closing under certain conditions.
 
@@ -332,7 +332,7 @@ private void OnDrawerClosing(object sender, CancelEventArgs e)
 }
 ```
 
-### Responding to Open/Close
+### Responding to open/close
 
 ```csharp
 private void OnDrawerOpened(object sender, EventArgs e)
@@ -346,7 +346,7 @@ private void OnDrawerClosed(object sender, EventArgs e)
 }
 ```
 
-### MVVM Binding
+### MVVM binding
 
 Bind the `IsOpen` property to a view model for full control over the drawer state.
 
@@ -365,7 +365,7 @@ Bind the `IsOpen` property to a view model for full control over the drawer stat
 </DrawerPage>
 ```
 
-### Custom Drawer Icon
+### Custom drawer icon
 
 Replace the default hamburger icon with a custom icon.
 
@@ -386,7 +386,7 @@ Replace the default hamburger icon with a custom icon.
 </DrawerPage>
 ```
 
-### Locked Drawer
+### Locked drawer
 
 Use `DrawerBehavior="Locked"` to keep the drawer permanently open.
 
@@ -407,7 +407,7 @@ Use `DrawerBehavior="Locked"` to keep the drawer permanently open.
 </DrawerPage>
 ```
 
-### Disabling the Drawer
+### Disabling the drawer
 
 Use `DrawerBehavior="Disabled"` to hide the drawer entirely.
 
@@ -419,7 +419,7 @@ Use `DrawerBehavior="Disabled"` to hide the drawer entirely.
 </DrawerPage>
 ```
 
-### CrossFade Transition
+### CrossFade transition
 
 Apply a transition when the drawer opens or closes.
 
@@ -440,7 +440,7 @@ Apply a transition when the drawer opens or closes.
 </DrawerPage>
 ```
 
-### Drawer Inside NavigationPage
+### Drawer inside NavigationPage
 
 When wrapped in a `NavigationPage`, the hamburger menu icon automatically becomes a back button when pages are pushed.
 

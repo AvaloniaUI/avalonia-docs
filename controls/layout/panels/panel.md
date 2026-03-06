@@ -23,14 +23,14 @@ This example uses some 50% opacities to demonstrate that child controls overlap.
 
 </XamlPreview>
 
-## Common Properties
+## Common properties
 
 | Property | Type | Description |
 |---|---|---|
 | `Background` | `IBrush` | The background brush for the panel. Must be set (even to `Transparent`) for the panel to receive pointer events. |
 | `Children` | `Controls` | The collection of child controls contained in the panel. |
 
-## ZIndex Layering
+## ZIndex layering
 
 When children overlap, control the draw order with the `ZIndex` attached property:
 

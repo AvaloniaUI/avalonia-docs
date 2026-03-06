@@ -5,7 +5,7 @@ title: Expander
 
 The `Expander` control has a header area (always visible) and a collapsible content section that can contain a single child control. Click the header to toggle the content visibility.
 
-## Useful Properties
+## Useful properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -14,7 +14,7 @@ The `Expander` control has a header area (always visible) and a collapsible cont
 | `ExpandDirection` | `ExpandDirection` | Direction the content expands: `Down` (default), `Up`, `Left`, or `Right`. |
 | `ContentTransition` | `IPageTransition` | Transition animation for expand/collapse. |
 
-## Basic Example
+## Basic example
 
 <XamlPreview>
 
@@ -40,7 +40,7 @@ The `Expander` control has a header area (always visible) and a collapsible cont
 
 </XamlPreview>
 
-## Initially Expanded
+## Initially expanded
 
 Set `IsExpanded` to `True` to show the content when the control first loads:
 
@@ -50,7 +50,7 @@ Set `IsExpanded` to `True` to show the content when the control first loads:
 </Expander>
 ```
 
-## Expand Direction
+## Expand direction
 
 Control the direction in which the content section appears:
 
@@ -60,7 +60,7 @@ Control the direction in which the content section appears:
 </Expander>
 ```
 
-## Custom Header Content
+## Custom header content
 
 The `Header` property accepts any content, not just strings:
 
@@ -89,7 +89,7 @@ Bind the expansion state to a view model property for programmatic control:
 </Expander>
 ```
 
-## Content Transition
+## Content transition
 
 Animate the expand/collapse with a page transition:
 

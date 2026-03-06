@@ -7,7 +7,7 @@ Avalonia XPF implements WPF's API surface, however a variety of third-party libr
 
 To deal with this problem, Avalonia XPF implements a Win32 API emulation layer that allows third-party libraries to work on non-Windows platforms. This emulation layer needs to be enabled explicitly in your XPF application.
 
-## When to Enable Win32 API Shims
+## When to enable Win32 API shims
 
 Enable the shim layer if any of the following apply to your application:
 
@@ -19,19 +19,19 @@ You can skip the shim layer if your application only uses standard WPF controls 
 
 When in doubt, enable shims. They can be safely enabled even if not strictly needed.
 
-## Enabling Win32 API Shims
+## Enabling Win32 API shims
 
 This feature must be enabled before any assembly attempts to call a Win32 API, so the constructor of your `App` class or `Program.Main` is a good place to enable it.
 
 To enable Win32 API emulation application-wide you can add the following call:
 
-```cs
+```csharp
   AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable();
 ```
 
 You can exclude libraries that are known to provide non-windows platform support like this:
 
-```cs
+```csharp
 AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.
   .AutoEnable(asm =>
   {
@@ -44,18 +44,18 @@ AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.
 
 Alternatively the layer can be enabled on per-library basis:
 
-```cs
+```csharp
 AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup
   .AddLibrary(typeof(Type.In.Third.Party.Library).Assembly);
 ```
 
-## Resolving DllImportResolver Conflicts
+## Resolving `DllImportResolver` conflicts
 
 Some third-party libraries (such as Aspose) set their own `DllImportResolver` on the entry assembly. Because .NET only allows one resolver per assembly, this conflicts with XPF's WinApiShim, causing an `InvalidOperationException: A resolver is already set for the assembly`.
 
 Use the `AutoEnable` filter callback to skip conflicting assemblies:
 
-```cs
+```csharp
 AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable(asm =>
 {
     var name = asm.GetName().Name;
@@ -65,11 +65,11 @@ AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable(asm =>
 });
 ```
 
-## Avoiding Deadlocks with Custom Assembly Loading
+## Avoiding deadlocks with custom assembly loading
 
 If your application uses a custom mechanism for loading managed assemblies (such as a plugin system), `AutoEnable` may cause deadlocks during startup. In this case, use `AddLibrary` to register assemblies individually after they are resolved:
 
-```cs
+```csharp
 // Instead of AutoEnable, add assemblies as they are loaded
 AppDomain.CurrentDomain.AssemblyLoad += (sender, args) =>
 {
@@ -79,7 +79,7 @@ AppDomain.CurrentDomain.AssemblyLoad += (sender, args) =>
 
 See [Customizing Initialization](/xpf/configuration/customizing-initialization#custom-assembly-loading) for more details.
 
-## Scope of Win32 API Shims
+## Scope of Win32 API shims
 
 The Win32 API shim layer exists to enable compatibility with third-party WPF controls that call Win32 APIs internally. It is **not** a general-purpose Win32 emulation layer.
 

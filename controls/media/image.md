@@ -23,7 +23,7 @@ The image displayed can be resized and scaled.  The default settings for scaling
 The scaling settings for an image are the same as for the [Viewbox](/controls/layout/containers/viewbox).
 :::
 
-## Common Properties
+## Common properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -32,7 +32,7 @@ The scaling settings for an image are the same as for the [Viewbox](/controls/la
 | `StretchDirection` | `StretchDirection` | Controls whether the image can scale up, down, or both. |
 | `BlendMode` | `BitmapBlendMode?` | The blend mode used when compositing the image. |
 
-### Stretch Modes
+### Stretch modes
 
 | Value | Behavior |
 |---|---|

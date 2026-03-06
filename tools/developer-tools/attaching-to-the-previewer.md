@@ -11,7 +11,7 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
-:::warning
+:::caution
 
 Experimental.
 

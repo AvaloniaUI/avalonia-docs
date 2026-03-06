@@ -427,3 +427,8 @@ public class Person
 It works in the preview pane because the `<Design.DataContext>` element creates a view model to bind to:
 
 <img src={DataGridColumnPreviewScreenshot} alt="" />
+
+## See also
+
+- [DataGrid API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataGrid)
+- [`DataGrid.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGrid.cs)

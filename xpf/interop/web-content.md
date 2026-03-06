@@ -5,7 +5,7 @@ title: Web Content Embedding
 
 XPF provides several options for embedding web content in your application. The right choice depends on your target platforms and embedding requirements.
 
-## Platform Comparison
+## Platform comparison
 
 | Feature | CefSharp | NativeWebView | NativeWebDialog | DotNetBrowser |
 |---|---|---|---|---|
@@ -26,7 +26,7 @@ The `Avalonia.Xpf.Controls.WebView` NuGet package provides two controls:
 
 See [Embedding Web Content](/docs/app-development/embedding-web-content) for the Avalonia documentation on these controls.
 
-### Linux Requirements
+### Linux requirements
 
 `NativeWebDialog` on Linux requires webkit2gtk version 4.1:
 
@@ -59,7 +59,7 @@ If CefSharp throws a `NotImplementedException` for `CursorInteropHelper.Create()
 
 DotNetBrowser from TeamDev is supported in XPF across all platforms. See the [XpfDotNetBrowserApp sample](https://github.com/AvaloniaUI/Avalonia-XPF-Samples/tree/master/src/XpfDotNetBrowserApp) for setup guidance.
 
-## Choosing a Web Control
+## Choosing a web control
 
 - **Windows-only deployment**: CefSharp offers the most complete Chromium integration with full keyboard, styling, and DevTools support.
 - **Windows + macOS**: Use `NativeWebView` for in-window embedding, or DotNetBrowser for a Chromium-based option.

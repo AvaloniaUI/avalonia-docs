@@ -21,7 +21,7 @@ dotnet publish -r osx-x64 -c Release --self-contained
 Always publish from the command line. Visual Studio publishing can produce incomplete output that is missing native libraries.
 :::
 
-## App Bundle Structure
+## App bundle structure
 
 macOS applications must be packaged as `.app` bundles for distribution. An `.app` bundle is a directory with the following structure:
 
@@ -65,7 +65,7 @@ Create an `Info.plist` with your application metadata:
 </plist>
 ```
 
-## Project Settings
+## Project settings
 
 The following `.csproj` settings are important for macOS deployment:
 
@@ -80,7 +80,7 @@ The following `.csproj` settings are important for macOS deployment:
 Do **not** set `IncludeNativeLibrariesForSelfExtract` to `true`. This is incompatible with macOS and will cause your application to fail at runtime with "Failed to create CoreCLR".
 :::
 
-## Code Signing
+## Code signing
 
 All macOS applications must be code signed for distribution. When signing XPF applications:
 
@@ -112,7 +112,7 @@ xcrun notarytool submit MyApp.zip --apple-id "you@example.com" \
 xcrun stapler staple MyApp.app
 ```
 
-## DMG Creation
+## DMG creation
 
 To distribute as a `.dmg` disk image:
 
@@ -124,11 +124,11 @@ hdiutil create -volname "MyApp" -srcfolder MyApp.app -ov MyApp.dmg
 
 The Avalonia **Parcel** tool can automate the entire macOS packaging workflow, including `.app` bundle creation, code signing, notarization, and `.dmg` generation for XPF applications. Contact the Avalonia team for access to the preview.
 
-## Dock Visibility
+## Dock visibility
 
 To control whether your application appears in the macOS Dock, see [macOS: Dock Visibility](/xpf/platforms/macos#dock-visibility).
 
-## Application Name
+## Application name
 
 To set the name shown in the macOS menu bar (instead of "Avalonia Application"), see [macOS: Application Name](/xpf/platforms/macos#application-name).
 

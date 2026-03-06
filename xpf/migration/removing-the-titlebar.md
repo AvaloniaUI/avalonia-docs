@@ -7,7 +7,7 @@ By default, XPF applications include a titlebar for window management. However, 
 This article covers two approaches to customize window appearance: using WPF APIs, and using Avalonia APIs.
 You can use WPF APIs to remove the titlebar, but Avalonia APIs provide a higher degree of flexibility and control over titlebar settings. The Avalonia approach is recommended.
 
-## How to do that using WPF API's?
+## Using WPF APIs
 In WPF, you can remove the title bar of a window by setting the `WindowStyle` property to `None`. Additionally, you might want to set the `AllowsTransparency` property to `True` to remove the resize border from the Window.
 ```xml
 <Window x:Class="YourNamespace.MainWindow"
@@ -66,7 +66,7 @@ And in XAML, you would attach the event handlers:
 
 This example shows a basic setup, and you may need to adjust it based on your specific requirements and the functionality you want to provide.
 
-## How to do that using Avalonia APIs?
+## Using Avalonia APIs
 
 First of all, you need to find `MainWindow.xaml.cs` file. And then everything you need is to paste the code below.
 

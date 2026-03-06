@@ -91,7 +91,7 @@ These values can be combined, for example:
 
 ## Example
 
-This simple example has the `ItemsSource` property set to an array in the C# code-behind.
+This example has the `ItemsSource` property set to an array in the C# code-behind.
 
 ```xml
 <StackPanel Margin="20">

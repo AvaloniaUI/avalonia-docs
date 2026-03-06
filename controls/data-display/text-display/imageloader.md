@@ -12,9 +12,9 @@ The `Markdown` control supports custom image loading via the `ImageLoader` prope
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
 :::
 
-## Example: Loading SVG Images
+## Example: loading SVG images
 
-### Required Packages
+### Required packages
 
 To use the custom image loader example above, you need to install the following NuGet packages:
 
@@ -128,7 +128,7 @@ var markdown = new Markdown
 };
 ```
 
-## When to Use
+## When to use
 - To support SVG images in Markdown
 - To implement custom caching or authentication for images
 

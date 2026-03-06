@@ -7,7 +7,7 @@ title: Getting native window handles
 
 XPF uses a system where the handles returned from various WPF API calls are _virtual handles_. In this way, XPF can intercept API calls using these handles and automatically translate them into the appropriate cross-platform API. This has the effect that many WPF APIs such as `WindowInteropHelper.Handle` return these virtualized window handles, as well as [emulated Win32 APIs](/xpf/third-party/win32-api-shims).
 
-## When You Need Native Handles
+## When you need native handles
 
 You may need to access the real native window handle when:
 
@@ -16,7 +16,7 @@ You may need to access the real native window handle when:
 - Using platform-specific features not available through WPF or Avalonia APIs
 - Integrating with native accessibility or automation frameworks
 
-## Getting a Native Handle
+## Getting a native handle
 
 The native handle for a window can be retrieved from the [underlying Avalonia `Window`](/xpf/interop/embedding-avalonia-in-xpf#getting-the-avalonia-window):
 
@@ -34,7 +34,7 @@ if (platformHandle != null)
 }
 ```
 
-## Handle Types by Platform
+## Handle types by platform
 
 The type of handle returned depends on the operating system:
 
@@ -48,7 +48,7 @@ The type of handle returned depends on the operating system:
 Native handles cannot be passed to the Win32 API emulation layer. The emulation layer works with XPF's virtual handles, not native platform handles. If you need to call shimmed Win32 APIs, use the virtual handle from `WindowInteropHelper.Handle` instead.
 :::
 
-## Getting the Avalonia TopLevel
+## Getting the Avalonia `TopLevel`
 
 For operations that don't require a window handle but need access to Avalonia-level properties (such as render scaling or input handling), use `GetAvaloniaTopLevelForWindow`:
 
@@ -61,7 +61,7 @@ var topLevel = XpfWpfAbstraction.GetAvaloniaTopLevelForWindow(myWpfWindow);
 double scaling = topLevel.RenderScaling;
 ```
 
-## Example: DPI-Aware Native Rendering
+## Example: DPI-aware native rendering
 
 ```csharp
 using Atlantis;
@@ -95,7 +95,7 @@ private void SetupNativeRendering(System.Windows.Window wpfWindow)
 }
 ```
 
-## See Also
+## See also
 
 - [Embedding Avalonia in XPF](/xpf/interop/embedding-avalonia-in-xpf) for accessing Avalonia features from XPF
 - [Performance: Embedding High-Performance Content](/xpf/configuration/performance#embedding-high-performance-content) for OpenGL integration

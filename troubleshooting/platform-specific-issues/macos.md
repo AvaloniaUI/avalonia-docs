@@ -42,7 +42,7 @@ See [Application name and identity](/docs/platform-specific-guides/macos#applica
 
 ## Code signing
 
-### Common Issues
+### Common issues
 
 #### "Developer ID Application" not available when creating a certificate
 
@@ -61,7 +61,7 @@ For issues not covered here:
 
 ## Notarization
 
-### Common Issues
+### Common issues
 
 #### Notarization takes too long
 

@@ -9,7 +9,7 @@ The `Popup` is a low-level control that displays content in a floating window ab
 For most scenarios, prefer `Flyout`, `ToolTip`, or `ContextMenu` instead of `Popup`. These higher-level controls handle accessibility, keyboard navigation, and light-dismiss behavior automatically.
 :::
 
-## Useful Properties
+## Useful properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -34,7 +34,7 @@ For most scenarios, prefer `Flyout`, `ToolTip`, or `ContextMenu` instead of `Pop
 | `Opened` | Raised after the popup opens. |
 | `Closed` | Raised after the popup closes. |
 
-## Basic Example
+## Basic example
 
 ```xml
 <Panel>
@@ -61,7 +61,7 @@ private void OnTogglePopup(object sender, RoutedEventArgs e)
 }
 ```
 
-## Placement Modes
+## Placement modes
 
 The `Placement` property controls where the popup appears:
 
@@ -75,7 +75,7 @@ The `Placement` property controls where the popup appears:
 | `Pointer` | At the current pointer position. |
 | `AnchorAndGravity` | Uses `PlacementAnchor` and `PlacementGravity` for precise positioning. |
 
-## Binding IsOpen
+## Binding `IsOpen`
 
 You can bind `IsOpen` to a view model property for MVVM control:
 
@@ -97,7 +97,7 @@ You can bind `IsOpen` to a view model property for MVVM control:
 </Popup>
 ```
 
-## Custom Placement
+## Custom placement
 
 For positioning logic beyond the built-in placement modes, use `CustomPopupPlacementCallback`. The callback receives a `CustomPopupPlacement` object pre-initialized with defaults, and you modify its properties to control positioning:
 
@@ -129,7 +129,7 @@ ToolTip.SetCustomPopupPlacementCallback(myControl, placement =>
 | Keyboard support | Manual | Automatic | N/A |
 | Best for | Custom overlay behavior | Menus, confirmations, pickers | Hover hints |
 
-## See Also
+## See also
 
 - [Flyout](/controls/layout/containers/flyout): A higher-level popup attached to a control.
 - [ToolTip](/controls/feedback/tooltip): Hover-activated popups for supplementary text.

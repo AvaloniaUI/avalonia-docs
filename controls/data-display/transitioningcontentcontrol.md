@@ -49,7 +49,7 @@ In this example, a different page transition has been specified to slide the ima
 
 <img src={TransitioningContentControlSlideScreenshot} alt="" />
 
-## Available Page Transitions
+## Available page transitions
 
 You can use any of these built-in transitions:
 
@@ -78,7 +78,7 @@ Set `PageTransition` to null to switch content instantly:
                              PageTransition="{x:Null}" />
 ```
 
-## Common Use: View Switching
+## Common use: view switching
 
 The `TransitioningContentControl` is commonly used with `DataTemplates` to animate between different views:
 

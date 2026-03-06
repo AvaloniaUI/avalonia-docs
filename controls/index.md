@@ -21,7 +21,7 @@ import DocsCards from '@site/src/components/global/DocsCards';
   `}</style>
 </head>
 
-Avalonia apps are made of high-level building blocks called controls, which allow you to quickly construct the UI for your app. Avalonia comes with lots of controls, including buttons, lists, tabs and more. These pages explain the essential functionalities of Avalonia controls—for detailed information, see the [API Reference](https://api-docs.avaloniaui.net/docs/category/avalonia).
+Avalonia apps are made of high-level building blocks called controls, which allow you to quickly construct the UI for your app. Avalonia comes with lots of controls, including buttons, lists, tabs and more. These pages explain the essential functionalities of Avalonia controls. For detailed information, see the [API Reference](https://api-docs.avaloniaui.net/docs/category/avalonia).
 
 
 <DocsCards>
@@ -118,7 +118,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
 </DocsCard>
 
 <DocsCard header="TextBox" href="/controls/input/text-input/textbox" icon="/icons/textbox-icon@2x.png">
-  <p>Text boxes create an area for text input—a staple of almost any type of app.</p>
+  <p>Text boxes create an area for text input, a staple of almost any type of app.</p>
 </DocsCard>
 
 <DocsCard header="Toggle Switch" href="/controls/input/buttons/togglebutton" icon="/icons/toggleswitch-icon@2x.png">

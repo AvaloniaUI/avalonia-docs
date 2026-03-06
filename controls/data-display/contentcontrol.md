@@ -37,7 +37,7 @@ If you assign a control to a `ContentControl` then it will display the control, 
 
 ### Display content with templates
 
-So far so uninteresting. Where `ContentControl` becomes useful is in tandem with data binding and data templates. By setting the `ContentTemplate` property one can specify how the data in the `Content` property is displayed. For example given the following view models:
+Where `ContentControl` becomes useful is in tandem with data binding and data templates. By setting the `ContentTemplate` property one can specify how the data in the `Content` property is displayed. For example given the following view models:
 
 ```csharp
 namespace Example
@@ -69,7 +69,7 @@ namespace Example
 
 > Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](/docs/data-binding/data-context) for more information.
 
-We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
+You can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui">

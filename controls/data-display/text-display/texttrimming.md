@@ -11,8 +11,6 @@ import PrefixCharacterEllipsis from '/img/reference/text/texttrimming/texttrimmi
 import WordEllipsis from '/img/reference/text/texttrimming/texttrimming-wordellipsis.png';
 import TextWrappingWithTextTrimming from '/img/reference/text/texttrimming/textwrapping-with-texttrimming.png';
 
-# TextTrimming
-
 ## Overview
 
 The `TextTrimming` property allows you to control how text is displayed when it exceeds the maximum available space in a control. This property is accessible by text-displaying controls, such as [`TextBlock`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBlock.cs), [`SelectableTextBlock`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SelectableTextBlock.cs) or [`ContentPresenter`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Presenters/ContentPresenter.cs).
@@ -23,7 +21,7 @@ Text trimming adds an ellipsis (…) to indicate truncated text, instead of abru
 Avalonia uses the Unicode ellipsis character `U+2026` by default, not three periods.
 :::
 
-## Trimming Modes
+## Trimming modes
 
 Avalonia provides six text trimming options:
 

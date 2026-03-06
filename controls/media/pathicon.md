@@ -35,7 +35,7 @@ It works in the preview pane as well:
 
 <img src={PathIconHouseScreenshot} alt="" />
 
-## Using in Buttons and Menus
+## Using in buttons and menus
 
 PathIcon is commonly used to add icons to interactive controls:
 
@@ -54,7 +54,7 @@ PathIcon is commonly used to add icons to interactive controls:
 </MenuItem>
 ```
 
-## Defining Icon Resources
+## Defining icon resources
 
 Store icon geometries in a resource dictionary for reuse:
 

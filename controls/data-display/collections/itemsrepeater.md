@@ -159,7 +159,7 @@ The `UniformGridLayout` automatically adjusts the number of columns based on ava
 | `MinRowSpacing` | Minimum vertical spacing between items. |
 | `MaximumRowsOrColumns` | Maximum number of rows or columns. |
 
-## Handling Click Events
+## Handling click events
 
 Since `ItemsRepeater` does not have built-in selection, handle clicks using Tapped or pointer events on each item:
 

@@ -15,7 +15,7 @@ The WebView environment options allow you to customize the underlying browser en
 
 The `EnvironmentRequested` event is fired before the WebView adapter is created, giving you the opportunity to modify these settings based on your application's requirements.
 
-## Basic Usage
+## Basic usage
 
 ```csharp
 var webView = new WebView();
@@ -40,7 +40,7 @@ webView.EnvironmentRequested += (sender, args) =>
 };
 ```
 
-## Base Class Properties
+## Base class properties
 
 ### WebViewEnvironmentRequestedEventArgs
 
@@ -48,7 +48,7 @@ webView.EnvironmentRequested += (sender, args) =>
 
 - `EnableDevTools` (bool): Controls whether users can open DevTools via context menu or keyboard shortcuts. Available on all platforms.
 
-## Platform-Specific Options
+## Platform-specific options
 
 ### Windows WebView2
 

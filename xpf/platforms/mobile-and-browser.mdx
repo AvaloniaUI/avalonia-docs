@@ -19,7 +19,7 @@ You also need to prepare your development machine for each target platform. Thes
 - [Setting up an iOS dev environment](/docs/platform-specific-guides/ios)
 - [Setting up a Browser dev environment](/docs/platform-specific-guides/webassembly)
 
-## Multi-Targeting
+## Multi-targeting
 
 Mobile and browser support in .NET is powered by platform-specific workloads and target frameworks. Desktop applications normally use `net8.0` or `net8.0-windows`, which also works on Linux and macOS through the XPF SDK compatibility layer.
 
@@ -48,7 +48,7 @@ Add `net8.0-android`, `net8.0-ios`, and `net8.0-browser` target frameworks **onl
 Library projects should target `net8.0`. You can use the XPF SDK on library projects if needed. If a library needs access to native mobile APIs, you can add `net8.0-android` or `net8.0-ios`, but not `net8.0-browser`.
 :::
 
-## Defining an Entry Point
+## Defining an entry point
 
 Desktop WPF applications start with a `Main` method, but mobile and browser platforms have different entry point mechanisms. Android requires a root `Activity`, iOS requires an `AppDelegate`, and browser applications are launched by the web page itself.
 
@@ -69,7 +69,7 @@ To handle this, define a shared entry point in your `Application` class that eac
     }
 ```
 
-## Platform-Specific Folders
+## Platform-specific folders
 
 The final step before building is to define platform-specific folders containing the entry point for each target. After this step, your project structure should look like this:
 
@@ -212,11 +212,11 @@ dotnet publish -f net8.0-ios
 dotnet publish -f net8.0-browser
 ```
 
-:::warning
+:::caution
 Publishing in Release configuration has known issues with Mobile and Browser projects due to trimming and AOT compilation. Test your published output thoroughly.
 :::
 
-## Known Limitations
+## Known limitations
 
 Browser and mobile platforms have inherent constraints compared to desktop. XPF provides compatibility layers for some of these, but others require changes in your application code.
 
@@ -247,7 +247,7 @@ public MainWindow()
 
 `DispatcherFrame` and related `Dispatcher` APIs are not supported on any mobile or browser platform.
 
-### Synchronous Dialog APIs
+### Synchronous dialog APIs
 
 WPF's synchronous dialog APIs (`Window.ShowDialog()`, `MessageBox.Show()`) work on desktop but cannot be supported on mobile and browser because the main thread cannot be blocked on these platforms.
 
@@ -273,7 +273,7 @@ These extension methods also work on desktop targets, so you can use them everyw
 Async extension methods for file dialogs are not yet available but are planned. Contact the support team if you need these or other APIs on mobile or browser.
 :::
 
-### File System Access
+### File system access
 
 Mobile and browser applications are sandboxed. Direct file system access by path is not available.
 
@@ -287,7 +287,7 @@ var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.Applicatio
 Browser applications have no file system access except through user-initiated file dialogs.
 :::
 
-### Threading in the Browser
+### Threading in the browser
 
 The browser environment has very limited threading support. Treat it as an environment where async is not optional but required, because the main thread of a web application cannot be blocked.
 
@@ -299,6 +299,6 @@ To enable minimal threading support (such as `Task.Run` or `new Thread()`), add 
 </PropertyGroup>
 ```
 
-### Platform-Specific Code
+### Platform-specific code
 
 If you need to access platform-specific APIs from your XPF project, the approach is the same as in an Avalonia application. See [Platform-specific .NET](/docs/platform-specific-guides/dotnet) for details.

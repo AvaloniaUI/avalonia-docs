@@ -24,7 +24,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 ## Usage examples
 
-### Basic Usage
+### Basic usage
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -40,7 +40,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 </Window>
 ```
 
-### Multiple Input Methods
+### Multiple input methods
 
 ```xml
 <VirtualKeyboardScope InputMethods="en-US:kbd:standard, de:kbd:standard, ja:ime:kana">
@@ -51,7 +51,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 </VirtualKeyboardScope>
 ```
 
-### Binding InputMethods Dynamically
+### Binding InputMethods dynamically
 
 ```xml
 <VirtualKeyboardScope InputMethods="{Binding SelectedInputMethods}">
@@ -64,7 +64,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 </VirtualKeyboardScope>
 ```
 
-### Code-Behind Configuration
+### Code-behind configuration
 
 ```csharp
 // Get input methods for specific languages using SelectMany + ToList
@@ -96,7 +96,7 @@ You can customize how input fields work with the virtual keyboard using `TextInp
 </VirtualKeyboardScope>
 ```
 
-## Multiple Scopes
+## Multiple scopes
 
 You can have multiple `VirtualKeyboardScope` controls in your application, but be aware that only one keyboard will be shown at a time:
 

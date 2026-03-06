@@ -5,14 +5,14 @@ title: WindowNotificationManager
 
 The `WindowNotificationManager` provides a built-in notification popup system. It displays toast-style messages at a configurable position within a window.
 
-## Useful Properties
+## Useful properties
 
 | Property | Type | Description |
 |---|---|---|
 | `Position` | `NotificationPosition` | Where notifications appear. Options: `TopLeft`, `TopCenter`, `TopRight`, `BottomLeft`, `BottomCenter`, `BottomRight`. Default: `TopRight`. |
 | `MaxItems` | `int` | Maximum number of notifications visible at one time. Default: `5`. |
 
-## Notification Properties
+## Notification properties
 
 The built-in `Notification` class exposes these properties:
 
@@ -23,7 +23,7 @@ The built-in `Notification` class exposes these properties:
 | `Type` | `NotificationType` | The severity level: `Information`, `Success`, `Warning`, or `Error`. |
 | `Expiration` | `TimeSpan` | Time before the notification auto-dismisses. Set to `TimeSpan.Zero` to require manual dismissal. |
 
-## Setting Up
+## Setting up
 
 Register a `WindowNotificationManager` in your window, typically in code-behind or via a view model reference:
 
@@ -45,7 +45,7 @@ public partial class MainWindow : Window
 }
 ```
 
-## Showing a Notification
+## Showing a notification
 
 Call `Show` with a `Notification` object:
 
@@ -57,7 +57,7 @@ _notificationManager.Show(new Notification(
     TimeSpan.FromSeconds(3)));
 ```
 
-## Notification Types
+## Notification types
 
 Use the `NotificationType` enum to convey severity. The built-in theme applies distinct colors to each type:
 
@@ -75,7 +75,7 @@ _notificationManager.Show(new Notification("Warning", "Disk space is low.", Noti
 _notificationManager.Show(new Notification("Error", "Connection failed.", NotificationType.Error));
 ```
 
-## Closing Notifications Programmatically
+## Closing notifications programmatically
 
 You can close a specific notification or clear all notifications from code:
 
@@ -90,7 +90,7 @@ _notificationManager.Close(notification);
 _notificationManager.ClearAll();
 ```
 
-## Custom Notification Content
+## Custom notification content
 
 Implement `INotification` to provide custom notification data:
 
@@ -128,7 +128,7 @@ _notificationManager.Position = NotificationPosition.TopRight;
 _notificationManager.Position = NotificationPosition.BottomCenter;
 ```
 
-## MVVM Pattern
+## MVVM pattern
 
 Expose a notification manager through a service so view models can show notifications without referencing UI types directly:
 
@@ -160,7 +160,7 @@ public class NotificationService : INotificationService
 }
 ```
 
-## See Also
+## See also
 
 - [How To: Show Notifications and Toasts](/docs/how-to/notifications-how-to): Custom notification patterns including overlays, status bars, and banners.
 - [ToolTip](/controls/feedback/tooltip): Hover-triggered popups for supplementary information.

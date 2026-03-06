@@ -18,13 +18,13 @@ The `TabbedPage` displays a collection of pages through a tab strip, allowing us
 If you need a simple tab strip without page-based navigation features (lifecycle events, safe area handling), consider using the standard [TabControl](/controls/navigation/tabcontrol) instead.
 :::
 
-## Useful Properties
+## Useful properties
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | `Pages` | `IEnumerable` | `null` | The collection of `Page` children displayed as tabs. |
 | `PageTemplate` | `IDataTemplate` | `null` | A data template used to render page content when binding to non-Page items. |
-| `TabPlacement` | `Dock` | `Auto` | Controls where tabs are positioned. See the TabPlacement Values table below. |
+| `TabPlacement` | `Dock` | `Auto` | Controls where tabs are positioned. See the TabPlacement values table below. |
 | `IsKeyboardNavigationEnabled` | `bool` | `true` | Allows tab switching with keyboard input. |
 | `IsGestureEnabled` | `bool` | `false` | Enables swipe gestures to switch tabs. |
 | `PageTransition` | `IPageTransition` | `null` | The transition animation used when switching between tabs. |
@@ -32,7 +32,7 @@ If you need a simple tab strip without page-based navigation features (lifecycle
 | `SelectedIndex` | `int` | `0` | The index of the currently selected tab. |
 | `SelectedPage` | `Page` | `null` | Read-only. The currently selected `Page`. |
 
-### TabPlacement Values
+### TabPlacement values
 
 | Value | Description |
 | --- | --- |
@@ -42,13 +42,13 @@ If you need a simple tab strip without page-based navigation features (lifecycle
 | `Left` | Tabs are placed along the left edge. |
 | `Right` | Tabs are placed along the right edge. |
 
-### Attached Properties
+### Attached properties
 
 | Attached Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | `TabbedPage.IsTabEnabled` | `bool` | `true` | Set on a child `Page` to enable or disable its tab. A disabled tab cannot be selected by the user. |
 
-### Tab Icons
+### Tab icons
 
 The `Icon` property on a child page accepts the following value types:
 
@@ -65,7 +65,7 @@ The `Icon` property on a child page accepts the following value types:
 | `CurrentPageChanged` | Raised when the current page changes. |
 | `PagesChanged` | Raised when the `Pages` collection is modified (tabs added or removed). |
 
-## Keyboard Navigation
+## Keyboard navigation
 
 When `IsKeyboardNavigationEnabled` is `true` (the default), users can switch tabs using the keyboard. The exact key bindings depend on the `TabPlacement` value:
 
@@ -74,7 +74,7 @@ When `IsKeyboardNavigationEnabled` is `true` (the default), users can switch tab
 
 ## Examples
 
-### Basic Tabbed Layout (XAML)
+### Basic tabbed layout (XAML)
 
 ```xml
 <TabbedPage xmlns="https://github.com/avaloniaui">
@@ -92,7 +92,7 @@ When `IsKeyboardNavigationEnabled` is `true` (the default), users can switch tab
 
 <img src={TabbedPageTopScreenshot} alt="TabbedPage with top tabs" />
 
-### Basic Tabbed Layout (Code)
+### Basic tabbed layout (code)
 
 ```csharp
 var tabbedPage = new TabbedPage();
@@ -118,7 +118,7 @@ var profilePage = new ContentPage
 tabbedPage.Pages = new[] { homePage, searchPage, profilePage };
 ```
 
-### Tab Icons
+### Tab icons
 
 You can assign icons to tabs using the `Icon` property on each child page. Icons appear alongside the tab header text.
 
@@ -173,7 +173,7 @@ Use the `TabPlacement` property to position tabs on different edges of the contr
 
 <img src={TabbedPageRightScreenshot} alt="TabbedPage with right tabs" />
 
-### Dynamic Tab Management
+### Dynamic tab management
 
 You can add and remove tabs at runtime by modifying the `Pages` collection.
 
@@ -192,7 +192,7 @@ pages.Remove(newPage);
 tabbedPage.Pages = pages;
 ```
 
-### Enabling Swipe Gestures
+### Enabling swipe gestures
 
 Set `IsGestureEnabled` to `True` to allow users to swipe between tabs on touch devices.
 
@@ -209,7 +209,7 @@ Set `IsGestureEnabled` to `True` to allow users to swipe between tabs on touch d
 </TabbedPage>
 ```
 
-### Disabling a Tab
+### Disabling a tab
 
 Use the `TabbedPage.IsTabEnabled` attached property to prevent a specific tab from being selected.
 
@@ -224,7 +224,7 @@ Use the `TabbedPage.IsTabEnabled` attached property to prevent a specific tab fr
 </TabbedPage>
 ```
 
-### Responding to Selection Changes
+### Responding to selection changes
 
 Handle the `SelectionChanged` event to react when the user switches tabs.
 
@@ -237,7 +237,7 @@ tabbedPage.SelectionChanged += (sender, args) =>
 };
 ```
 
-### Programmatic Tab Selection
+### Programmatic tab selection
 
 You can change the active tab in code by setting `SelectedIndex` or `SelectedPage`.
 
@@ -249,7 +249,7 @@ tabbedPage.SelectedIndex = 2;
 tabbedPage.SelectedPage = profilePage;
 ```
 
-### Independent Navigation Stack per Tab
+### Independent navigation stack per tab
 
 A common pattern is to place a `NavigationPage` inside each tab, giving each tab its own independent navigation stack.
 
@@ -269,7 +269,7 @@ A common pattern is to place a `NavigationPage` inside each tab, giving each tab
 </TabbedPage>
 ```
 
-### Data-Driven Tabs with PageTemplate
+### Data-driven tabs with PageTemplate
 
 Use `PageTemplate` to generate tabs from a bound data collection. Each item in the collection is rendered using the specified template.
 
@@ -304,7 +304,7 @@ public class TabItem
 }
 ```
 
-### TabbedPage Inside a DrawerPage
+### TabbedPage inside a DrawerPage
 
 You can nest a `TabbedPage` inside a `DrawerPage` to combine a side drawer with tabbed navigation.
 

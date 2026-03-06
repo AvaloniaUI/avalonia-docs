@@ -15,4 +15,4 @@ This is normal for new certificates and applications. Different certificate type
 #### Azure authentication failures
 
 1. Verify environment variables are set correctly: `AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`
-2. Consider installing [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and folowing [az login](https://learn.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest#az-login) flow.
+2. Consider installing [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and following [az login](https://learn.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest#az-login) flow.

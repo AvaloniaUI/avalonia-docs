@@ -67,7 +67,7 @@ You can use the MVVM pattern with the split view control and one of the compact 
 
 <img src={SplitViewCompactScreenshot} alt="" />
 
-## Navigation Sidebar Pattern
+## Navigation sidebar pattern
 
 A common use of `SplitView` is a collapsible navigation sidebar with icon buttons:
 
@@ -108,7 +108,7 @@ private bool _isPaneOpen = true;
 private void TogglePane() => IsPaneOpen = !IsPaneOpen;
 ```
 
-## Pane Placement
+## Pane placement
 
 Position the pane on any side of the content area:
 

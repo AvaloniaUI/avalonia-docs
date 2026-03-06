@@ -16,13 +16,13 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 ## Properties
 
-### Media Source Properties
+### Media source properties
 
 | Property | Type        | Description                                                                 |
 |----------|-------------|-----------------------------------------------------------------------------|
 | Source   | MediaSource | Gets or sets the media source to be played (`UriSource` or `StreamSource`). |
 
-### Playback Properties
+### Playback properties
 
 | Property       | Type                      | Description                                                        |
 |----------------|---------------------------|--------------------------------------------------------------------|
@@ -30,7 +30,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 | Duration       | TimeSpan?                 | Gets the total duration of the media. Null for non-seekable media. |
 | LoadedBehavior | MediaPlayerLoadedBehavior | Gets or sets playback behavior when media is loaded.               |
 
-### State Properties
+### State properties
 
 | Property         | Type    | Description                                            |
 |------------------|---------|--------------------------------------------------------|
@@ -40,14 +40,14 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 | HasVideo         | bool    | Gets whether the current media contains video content. |
 | LastErrorMessage | string  | Gets the most recent error message in error state.     |
 
-### Audio Properties
+### Audio properties
 
 | Property | Type   | Description                                 |
 |----------|--------|---------------------------------------------|
 | Volume   | double | Gets or sets the playback volume (0.0-1.0). |
 | IsMuted  | bool   | Gets or sets whether audio is muted.        |
 
-### Advanced Properties
+### Advanced properties
 
 | Property        | Type            | Description                                        |
 |-----------------|-----------------|----------------------------------------------------|
@@ -79,7 +79,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 | ReleaseAsync()    | Task        | Releases resources for the current media.     |
 | UnInitialize()    | Task        | Releases all resources used by the player.    |
 
-## Backend Architecture
+## Backend architecture
 
 The `MediaPlayer` uses a pluggable backend architecture to support different platforms:
 
@@ -100,11 +100,11 @@ graph TD
     VLCB:::impl
 ```
 
-## Usage Examples
+## Usage examples
 
-### Basic Playback
+### Basic playback
 
-:::warning
+:::caution
 `MediaPlayer` is not ready to accept a media source until the Avalonia UI has fully loaded. Always set the `Source` property after the `Loaded` event has fired. See [Initialization Timing](/controls/media/media-playback#initialization-timing) for details.
 :::
 
@@ -126,20 +126,20 @@ protected override async void OnLoaded(RoutedEventArgs e)
 }
 ```
 
-### Using a Custom Visual
+### Using a custom visual
 
 You can attach a custom visual target:
 
-```xaml
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         Width="800" Height="450">
-    
+
     <Grid RowDefinitions="*, Auto">
         <Viewbox VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <MediaPlayerPresenter Name="presenter" />
         </Viewbox>
     </Grid>
-    
+
 </Window>
 ```
 
@@ -178,7 +178,7 @@ private void UpdatePlayerSize(Size size)
 ```
 `MediaPlayerPresenter` is provided for convenience, but you can use any custom visual. Ensure that you update the visual with the size provided by the `MediaPlayer` instance.
 
-### Event Handling
+### Event handling
 
 ```csharp
 // Setup event handlers
@@ -192,7 +192,7 @@ player.ErrorOccurred += (s, e) => {
 };
 ```
 
-### Resource Cleanup
+### Resource cleanup
 
 ```csharp
 // Clean up when done
@@ -201,7 +201,7 @@ await player.ReleaseAsync();
 await player.UnInitialize();
 ```
 
-## Error Handling
+## Error handling
 
 The MediaPlayer uses an event-based approach to error handling:
 
@@ -235,7 +235,7 @@ catch (Exception ex) {
 }
 ```
 
-## Best Practices
+## Best practices
 
 1. **Initialization Timing**:
     - Never set `Source` in a constructor. The player is not ready until the UI has loaded.

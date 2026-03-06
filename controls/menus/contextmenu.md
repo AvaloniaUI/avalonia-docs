@@ -9,7 +9,7 @@ The `ContextMenu` can be applied to any host control to implement a right-click 
 To review the concept behind this use of an **attached property**, see [Attached properties](/docs/custom-controls/attached-properties).
 :::
 
-## Basic Example
+## Basic example
 
 In this example, a context menu is attached to a multi-line text box. Right-click your mouse in the preview area to see the context menu.
 
@@ -30,7 +30,7 @@ In this example, a context menu is attached to a multi-line text box. Right-clic
 
 </XamlPreview>
 
-## Commands and Icons
+## Commands and icons
 
 Bind menu items to commands and add icons for a complete context menu:
 
@@ -55,7 +55,7 @@ Bind menu items to commands and add icons for a complete context menu:
 </ListBox>
 ```
 
-## Passing Context to Commands
+## Passing context to commands
 
 Use `CommandParameter` to pass the relevant item:
 
@@ -69,7 +69,7 @@ Use `CommandParameter` to pass the relevant item:
 </ListBox.ContextMenu>
 ```
 
-## Handling Opening and Closing
+## Handling opening and closing
 
 Respond to the context menu lifecycle:
 
@@ -86,7 +86,7 @@ private void ContextMenu_Opening(object? sender, System.ComponentModel.CancelEve
 </ContextMenu>
 ```
 
-## Context Flyout
+## Context flyout
 
 You can use a context flyout as an alternative to a context menu. A context flyout can provide a richer UI experience with arbitrary content:
 
@@ -108,7 +108,7 @@ You can use a context flyout as an alternative to a context menu. A context flyo
 A control cannot have a context flyout and a context menu attached at the same time.
 :::
 
-## Useful Properties
+## Useful properties
 
 | Property | Type | Description |
 |---|---|---|

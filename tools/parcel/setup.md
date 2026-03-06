@@ -52,7 +52,7 @@ dotnet tool update --global AvaloniaUI.Parcel
 </TabItem>
 <TabItem value="net8" label=".NET 8/9">
 
-I've you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
+If you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
 
 **Windows:**
 

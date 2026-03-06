@@ -4,8 +4,6 @@ title: Configure Android debugging on Linux
 sidebar_label: Android debugging (Linux)
 ---
 
-# Configure Android debugging on Linux
-
 For debugging Avalonia-based Android projects on Linux (using Visual Studio Code), follow the steps:
 
 1. Make sure to install the "Mono Debug" extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug).

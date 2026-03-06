@@ -7,7 +7,7 @@ title: Clipboard
 
 XPF implements the WPF clipboard API (`System.Windows.Clipboard`) across all platforms. There are some differences from WPF's native Windows implementation that you should be aware of.
 
-## Basic Usage
+## Basic usage
 
 Standard WPF clipboard operations work in XPF:
 
@@ -22,7 +22,7 @@ data.SetData(DataFormats.Text, "Hello");
 Clipboard.SetDataObject(data);
 ```
 
-## Bitmap Support
+## Bitmap support
 
 Copying bitmaps to and from the clipboard is supported in XPF 1.6.0 and later:
 
@@ -36,7 +36,7 @@ BitmapSource image = Clipboard.GetImage();
 
 On macOS, screenshots captured with system shortcuts (Cmd+Shift+Ctrl+3) may use pixel formats that differ from WPF conventions. XPF 1.6.0+ automatically transcodes these to compatible formats.
 
-## Custom Data Formats
+## Custom data formats
 
 Custom clipboard data formats work within the same process. For cross-process clipboard operations with custom data, XPF serializes data as strings. Ensure your custom data types are serializable.
 
@@ -50,7 +50,7 @@ Clipboard.SetDataObject(data);
 
 On Windows, clipboard operations use COM and require the main thread to be marked as STA. If you encounter `COMException: CoInitialize was not called`, ensure your entry point has the `[STAThread]` attribute or use [custom initialization](/xpf/configuration/customizing-initialization), which handles this automatically.
 
-## Platform Differences
+## Platform differences
 
 | Feature | Windows | macOS | Linux |
 |---|---|---|---|

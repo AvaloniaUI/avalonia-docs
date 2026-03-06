@@ -12,7 +12,7 @@ The `Markdown` control in Avalonia supports custom styling via named resources. 
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
 :::
 
-## Customizable Resources
+## Customizable resources
 
 Below is a list of key resources you can override in your theme or resource dictionary:
 
@@ -140,7 +140,7 @@ Each header exposes `FontSize`, `BorderThickness`, `Padding`, `Margin`.
 | `MarkdownCopyButtonFill` | Brush | `#59636e` | Copy button fill color |
 | `MarkdownCopyButtonContentTemplate` | DataTemplate | - | Content template for copy button |
 
-## How to Override
+## How to override
 
 To customize, define these resources in your application theme or resource dictionary. For example:
 
@@ -148,7 +148,7 @@ To customize, define these resources in your application theme or resource dicti
 <SolidColorBrush x:Key="MarkdownHyperlinkForeground" Color="#FF0000" />
 ```
 
-## Example: Custom Theme
+## Example: custom theme
 
 ```xml
 <ResourceDictionary>

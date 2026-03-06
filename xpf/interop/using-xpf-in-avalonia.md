@@ -3,7 +3,7 @@ id: using-xpf-in-avalonia
 title: Using XPF in Avalonia
 ---
 
-## Step 1: Update the Project File
+## Step 1: Update the project file
 
 Change the SDK in your Avalonia application to [use the XPF SDK](/xpf/getting-started#step-3-use-the-xpf-sdk):
 
@@ -19,7 +19,7 @@ And [disable automatic XPF initialization](/xpf/configuration/customizing-initia
 </PropertyGroup>
 ```
 
-## Step 2: Add an XPF Application Class
+## Step 2: Add an XPF application class
 
 Add an `XpfApp` class to your project which inherits from `System.Windows.Application`:
 
@@ -36,7 +36,7 @@ public partial class XpfApp : Application
 }
 ```
 
-## Step 3: Initialize the XPF Application
+## Step 3: Initialize the XPF application
 
 In your Avalonia `App.xaml.cs` file, create an instance `XpfApp` in `OnFrameworkInitializationCompleted`:
 
@@ -51,7 +51,7 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-## Step 3: Add an XPF UserControl
+## Step 4: Add an XPF `UserControl`
 
 Add an XPF `UserControl` to your application which contains the XPF content that you wish to host. For example:
 
@@ -81,7 +81,7 @@ public partial class MyXpfView : UserControl
 }
 ```
 
-## Step 4: Host the XPF UserControl
+## Step 5: Host the XPF `UserControl`
 
 Intiantiate an `XpfContainer` to host the XPF content in an Avalonia control:
 

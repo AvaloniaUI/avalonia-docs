@@ -242,7 +242,7 @@ Known issues:
 * Fix crash on text box paste
 * Fix some docking issues
 
-### Known Issues
+### Known issues
 
 * Actipro docking: when tearing off a pane, preview is not shown on macOS
 * DevExpress docking: does not always show drop adorners on X11

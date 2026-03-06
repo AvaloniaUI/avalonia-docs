@@ -7,13 +7,13 @@ title: Installation
 
 First, ensure the .NET SDK is installed. Run this command:
 
-```
+```bash
 dotnet --list-sdks
 ```
 
 If a .NET SDK is correctly installed, this returns an output similar to the following:
 
-```
+```text
 8.0.202 [C:\Program Files\dotnet\sdk]
 ```
 
@@ -23,20 +23,20 @@ If the terminal continues to report that .NET is missing, try restarting the ter
 
 Ensure NuGet is correctly set up. Run this command:
 
-```
+```bash
 dotnet nuget list source
 ```
 
 Check that the output displays the following as a registered source:
 
-```
+```text
 nuget.org [Enabled]
 https://api.nuget.org/v3/index.json
 ```
 
 If this source is not listed, add it using this command:
 
-```
+```bash
 dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
 ```
 

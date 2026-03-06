@@ -31,19 +31,19 @@ Location is platform specific
 
 Windows:
 
-```
+```text
 %LocalAppData%\AvaloniaUI\com.AvaloniaUI.Net.DeveloperTools\Logs\
 ```
 
 Linux:
 
-```
+```text
 ~/.local/share/AvaloniaUI/com.AvaloniaUI.Net.DeveloperTools/Logs/
 ```
 
 MacOS:
 
-```
+```text
 ~/Library/Application Support/AvaloniaUI/com.AvaloniaUI.Net.DeveloperTools/Logs/
 ```
 

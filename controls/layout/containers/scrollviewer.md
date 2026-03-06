@@ -57,7 +57,7 @@ This example creates a stack panel that is bigger than the border it is inside. 
 
 </XamlPreview>
 
-## Scrollbar Visibility Options
+## Scrollbar visibility options
 
 | Value | Behavior |
 |---|---|
@@ -74,7 +74,7 @@ This example creates a stack panel that is bigger than the border it is inside. 
 </ScrollViewer>
 ```
 
-## Programmatic Scrolling
+## Programmatic scrolling
 
 ```csharp
 // Scroll to a specific position

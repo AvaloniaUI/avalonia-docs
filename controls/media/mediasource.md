@@ -12,7 +12,7 @@ The `MediaSource` class hierarchy provides an abstraction for different types of
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
 :::
 
-## MediaSource (Abstract Base Class)
+## MediaSource (abstract base class)
 
 `MediaSource` is an abstract base class that defines the common interface for all media sources.
 
@@ -22,7 +22,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 |-----------|-------------|----------------------------------------------|
 | Dispose() | void        | Releases resources used by the media source. |
 
-## UriSource Class
+## UriSource class
 
 The `UriSource` class represents media content referenced by a URI, which can point to local files or network resources.
 
@@ -48,7 +48,7 @@ The `UriSource` class represents media content referenced by a URI, which can po
 | GetHashCode()           | int         | Returns the hash code for this instance.    |
 | Dispose()               | void        | Releases resources (typically a no-op).     |
 
-### Usage Examples
+### Usage examples
 
 ```csharp
 // From a string URL
@@ -62,7 +62,7 @@ var uri = new Uri("rtsp://example.com/stream");
 var streamSource = new UriSource(uri);
 ```
 
-## StreamSource Class
+## StreamSource class
 
 The `StreamSource` class represents media content provided as a stream, allowing for dynamic or in-memory content to be
 played.
@@ -87,7 +87,7 @@ played.
 | Equals(StreamSource other) | bool        | Determines equality with another StreamSource.       |
 | Dispose()                  | void        | Releases resources, including the underlying stream. |
 
-### Usage Examples
+### Usage examples
 
 ```csharp
 // From a file stream
@@ -105,9 +105,9 @@ var responseStream = webRequest.GetResponse().GetResponseStream();
 var networkStreamSource = new StreamSource(responseStream);
 ```
 
-## Choosing Between `UriSource` and `StreamSource`
+## Choosing between `UriSource` and `StreamSource`
 
-### When to Use `UriSource`
+### When to use `UriSource`
 
 - Local media files.
 - Network streams with direct URLs.
@@ -120,7 +120,7 @@ var networkStreamSource = new StreamSource(responseStream);
 - Native handling by media backends.
 - No memory or lifetime management concerns.
 
-### When to Use `StreamSource`
+### When to use `StreamSource`
 
 - In-memory media content.
 - Dynamic content generated at runtime.
@@ -133,7 +133,7 @@ var networkStreamSource = new StreamSource(responseStream);
 - No need for temporary files.
 - Works with encrypted or protected content.
 
-## Resource Management
+## Resource management
 
 Both `UriSource` and `StreamSource` implement `IDisposable`:
 
@@ -145,7 +145,7 @@ The `MediaPlayer` manages the lifecycle automatically:
 - When setting a new Source, the previous Source is disposed.
 - When the player is released or uninitiated, the current Source is disposed.
 
-## Best Practices
+## Best practices
 
 1. **Resource Management**:
     - Don't dispose streams passed to a `StreamSource` as it takes ownership.

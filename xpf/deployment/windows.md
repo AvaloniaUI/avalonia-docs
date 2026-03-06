@@ -23,7 +23,7 @@ For ARM64 Windows devices:
 dotnet publish -r win-arm64 -c Release --self-contained
 ```
 
-## Single-File Publishing
+## Single-file publishing
 
 XPF supports single-file publishing on Windows:
 
@@ -35,7 +35,7 @@ XPF supports single-file publishing on Windows:
 </PropertyGroup>
 ```
 
-:::warning
+:::caution
 When using single-file publishing, `Assembly.GetEntryAssembly().Location` returns an empty string. Use `AppDomain.CurrentDomain.BaseDirectory` to get the application directory.
 :::
 
@@ -51,7 +51,7 @@ Enable ReadyToRun for faster startup times:
 
 See [Performance Optimization](/xpf/configuration/performance#reducing-startup-time-with-readytorun) for details.
 
-## WinForms Hosting
+## WinForms hosting
 
 If your application hosts WinForms controls, add the following to a Windows-conditional property group:
 
@@ -63,7 +63,7 @@ If your application hosts WinForms controls, add the following to a Windows-cond
 
 This disables the WinForms shim layer and enables native WinForms integration. WinForms hosting is only available on Windows.
 
-## STA Threading
+## STA threading
 
 Some Windows APIs (notably clipboard operations and COM interop) require the main thread to be marked as STA (Single-Threaded Apartment). If you encounter `COMException: CoInitialize was not called`, ensure your entry point uses the `[STAThread]` attribute:
 
@@ -77,7 +77,7 @@ public static void Main(string[] args)
 
 When using [custom initialization](/xpf/configuration/customizing-initialization), the XPF SDK handles this automatically.
 
-## Windows Installers
+## Windows installers
 
 XPF applications are standard .NET applications and can be packaged using any Windows installer technology:
 

@@ -15,7 +15,7 @@ When you need to display a large amount of data in a `DataGrid` or a `TreeView` 
 
 Avoid using the `DataGrid` control if you don't need editing features. It's generally regarded as a less optimal control for performance.
 
-:::warning
+:::caution
 [`TreeDataGrid`](/controls/data-display/structured-data/treedatagrid) is maintained as part of Avalonia Accelerate as of October 2025. It is presently still the recommended option for large datasets.
 :::
 
@@ -27,7 +27,7 @@ When working with large amounts of data, enabling virtualization can improve the
 
 `TreeDataGrid` supports virtualization and can handle thousands of rows with complex cells effectively.
 
-:::warning
+:::caution
 [`TreeDataGrid`](/controls/data-display/structured-data/treedatagrid) is maintained as part of Avalonia Accelerate as of October 2025. It is presently still the recommended option for large datasets.
 :::
 
@@ -35,7 +35,7 @@ When working with large amounts of data, enabling virtualization can improve the
 
 Performance can often be hindered by a deeply nested and complicated layout. Strive to maintain your XAML markup as uncomplicated and flat as possible. Rendering UI elements onscreen triggers a "layout pass" twice for every single element (a measure pass followed by an arrange pass).
 
-This layout pass process is computation-heavy—the more child elements an item has, the more calculations are needed. Therefore, minimizing the complexity of your visual tree in Avalonia UI can significantly enhance the application's performance.
+This layout pass process is computation-heavy: the more child elements an item has, the more calculations are needed. Therefore, minimizing the complexity of your visual tree in Avalonia can significantly enhance the application's performance.
 
 ## Minimize use of run for setting text properties
 
@@ -43,7 +43,7 @@ It's advisable to minimize the use of Run within a TextBlock as it can lead to m
 
 ## Use StreamGeometries over PathGeometries
 
-When dealing with geometries in Avalonia UI, `StreamGeometry` is a more efficient alternative to `PathGeometry`. `StreamGeometry` is specifically optimized to handle numerous `PathGeometry` objects, consuming less memory and offering superior performance. Hence, when a choice is available, it's recommended to use `StreamGeometry` over `PathGeometry` for improved application performance.
+When dealing with geometries in Avalonia, `StreamGeometry` is a more efficient alternative to `PathGeometry`. `StreamGeometry` is specifically optimized to handle numerous `PathGeometry` objects, consuming less memory and offering superior performance. Hence, when a choice is available, it's recommended to use `StreamGeometry` over `PathGeometry` for improved application performance.
 
 ## Use reduced image sizes
 
@@ -51,15 +51,13 @@ When your application necessitates the display of smaller images or thumbnails, 
 
 ## Resolve your binding errors 
 
-Binding errors are a prevalent source of performance issues in Avalonia UI applications. Each occurrence of a binding error causes a performance dip as the application attempts to resolve the binding and logs the error to the trace log. Naturally, the more binding errors present, the greater the impact on performance. 
+Binding errors are a prevalent source of performance issues in Avalonia applications. Each occurrence of a binding error causes a performance dip as the application attempts to resolve the binding and logs the error to the trace log. Naturally, the more binding errors present, the greater the impact on performance. 
 
 A significant contributor to binding errors is the use of `RelativeSource` bindings in `DataTemplates`, as the binding usually isn't resolved correctly until the `DataTemplate` has completed its initialization. It's recommended to avoid `RelativeSource.FindAncestor` entirely. A more efficient approach is to define an attached property and utilize property inheritance to push values down the visual tree, rather than performing a lookup of the visual tree.
 
-## Asynchronously load data 
+## Asynchronously load data
 
-Performance issues, UI freezes, and unresponsive applications often stem from the way data is loaded. To prevent overloading the UI thread, ensure that your data is loaded asynchronously. 
-
-
+Performance issues, UI freezes, and unresponsive applications often stem from the way data is loaded. To prevent overloading the UI thread, ensure that your data is loaded asynchronously.
 
 
 

@@ -18,7 +18,7 @@ A complete [CalculatorDemo sample](https://github.com/AvaloniaUIOU/CalculatorDem
 For more detailed documentation on the Headless platform and Avalonia extensions, see [Headless Testing with XUnit](/docs/testing/headless-xunit) and [Headless Testing with NUnit](/docs/testing/headless-nunit). Understanding how headless testing works with Avalonia also helps with XPF/WPF.
 :::
 
-## Configuring testing project
+## Configuring the testing project
 
 `XUnit`, `NUnit`, and `MSTest` are supported by XPF/Avalonia headless testing.
 It's necessary to include integration nuget package in the testing project:
@@ -41,7 +41,7 @@ It's necessary to include integration nuget package in the testing project:
 </ItemGroup>
 ```
 
-## (Optional) Configuring testing application
+## (Optional) Configuring the testing application
 
 Similarly to Avalonia headless, you can configure cross-platform `AppBuilder` to be used in the project.
 When not defined, headless platform is using default parameters, which might limit your XPF testing experience.
@@ -130,7 +130,7 @@ It can be useful, if you have shared controls library that and want to headless 
 
 All the usage steps are the same, but you also need to set testing project TargetFramework to `net8.0-windows` and set `EnableWindowsTargeting` to true (only if you need to run it on Linux/macOS machines).
 
-## MSTest Support
+## MSTest support
 
 For MSTest projects, the setup is similar but requires additional configuration:
 
@@ -158,7 +158,7 @@ For MSTest projects, the setup is similar but requires additional configuration:
    }
    ```
 
-## Test Isolation
+## Test isolation
 
 If you experience flaky tests (such as `TaskScheduler` errors or inconsistent state between tests), configure test isolation per assembly:
 
@@ -168,7 +168,7 @@ If you experience flaky tests (such as `TaskScheduler` errors or inconsistent st
 
 This ensures the Avalonia runtime is initialized once per test assembly rather than per test, preventing race conditions between test teardown and initialization.
 
-## Running Tests in CI
+## Running tests in CI
 
 When running XPF headless tests in CI environments on Linux:
 

@@ -3,7 +3,7 @@ id: styles
 title: Styles
 ---
 
-## Selector has no Targets
+## Selector has no targets
 
 An _Avalonia UI_ selector, like a CSS selector, does not raise an error or warning when there are no controls which can be matched. The style will silently fail to show.
 
@@ -15,7 +15,7 @@ Check whether you have used a name or class that does not exist.
 Check whether you have used a child selector where there are no children to match.
 :::
 
-## Include File Sequence
+## Include file sequence
 
 Styles are applied in order of declaration. If there are multiple style files included that target the same control property, the last style included will override the previous ones. For example:
 
@@ -39,7 +39,7 @@ Styles are applied in order of declaration. If there are multiple style files in
 
 Here styles from file **Styles1.axaml** were applied first, so setters in styles of file **Styles2.axaml** take priority. The resulting TextBlock will have FontSize="16" and Foreground="Blue". The same order prioritization happens within style files also.
 
-## Locally Set Properties Have Priority
+## Locally set properties have priority
 
 A local value defined directly on a control often has higher priority than any style value. So in this example the text block will have a red foreground:
 
@@ -62,7 +62,7 @@ You can see the full list of value priorities in the `BindingPriority` enum, whe
 | `Style`         | 3          |                                                      |
 | `Unset`         | 2147483647 |                                                      |
 
-:::warning
+:::caution
 The exception is that `Animation` values have the highest priority and can even override local values.
 :::
 
@@ -145,6 +145,6 @@ This is because if the user were to set a local value on the button, it would ov
 
 ### Previous value of specific properties is not restored when style is not applied anymore
 
-In Avalonia we have multiple types of properties, and one of them, Direct Property, doesn't support styling at all. These properties work in simplified way to achieve lower overhead and higher performance, and do not store multiple values depending on priority. Instead only latest value is saved and cannot be restored. You can find more details about properties [here](/docs/custom-controls/defining-properties).
+In Avalonia we have multiple types of properties, and one of them, Direct Property, doesn't support styling at all. These properties work in simplified way to achieve lower overhead and higher performance, and do not store multiple values depending on priority. Instead only latest value is saved and cannot be restored. You can find more details in the [defining properties](/docs/custom-controls/defining-properties) guide.
 
 Typical example is [CommandProperty](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Button_Command). It is defined as a DirectProperty, and it will never work properly. In the future attempt to style direct property will be resulted in compile time error, see [#6837](https://github.com/AvaloniaUI/Avalonia/issues/6837).

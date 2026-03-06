@@ -117,7 +117,7 @@ Headers dictionary can be readonly depending on the request or platform.
 Always check result of the `TrySet` and `TryRemove` methods.
 :::
 
-#### Usage Example
+#### Usage example
 
 Bi-directional JS&lt;-&gt;C# communication example:
 
@@ -160,7 +160,7 @@ public Task<string?> InvokeScript(string scriptName)
 
 Executes the provided JavaScript in the top-level document.
 
-#### Usage Example
+#### Usage example
 
 ```xml
 <NativeWebView Source="https://avaloniaui.net/" NavigationCompleted="WebView_NavigationCompleted" />
@@ -237,7 +237,7 @@ public NativeWebViewCommandManager? TryGetCommandManager()
 
 Returns an instance of `NativeWebViewCommandManager` for executing common keyboard commands if supported by the platform.
 
-#### Usage Example
+#### Usage example
 
 ```csharp
 var commandManager = webView.TryGetCommandManager();
@@ -256,7 +256,7 @@ public NativeWebViewCookieManager? TryGetCookieManager()
 
 Returns an instance of `NativeWebViewCookieManager` for managing cookies if supported by the platform.
 
-#### Usage Example
+#### Usage example
 
 ```csharp
 var cookieManager = webView.TryGetCookieManager();
@@ -292,7 +292,7 @@ public IAsyncDisposable BeginReparentingAsync()
 
 Asynchronously delays destruction of the native control during parent changes.
 
-## Platform Support
+## Platform support
 
 | Feature                | Windows WebView2-Edge | macOS/iOS WKWebView | Linux | Android | Browser |
 |------------------------|-----------------------|-------|---------------------|---------|---------|
@@ -302,9 +302,9 @@ Asynchronously delays destruction of the native control during parent changes.
 | `ShowPrintUI` | ✓                    | ✓                   | ✗      | ✗*     | ✗*       |
 | `PrintToPdfStreamAsync`  | ✓                    |  ✓**                   | ✗     | ✗*      | ✗*       |
 
-\* Not yet implemented while possible. Let us know if it's a blocker for you.
+\* Not yet implemented while possible. If this is a blocker for your project, please open an issue.
 
-\** MacOS doesn't allow extended PrintToPdfStreamAsync print options. We recommend using custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
+\** macOS does not allow extended PrintToPdfStreamAsync print options. Use custom CSS rules instead - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
 
 :::note
 

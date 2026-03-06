@@ -7,7 +7,7 @@ The `WrapPanel` uses a default arrangement of (multiple) child elements is in se
 
 When the orientation property is set to vertical, the arrangement is top to bottom with a new column started when there is no more height remaining.
 
-## Useful Properties
+## Useful properties
 
 | Property | Description |
 |---|---|

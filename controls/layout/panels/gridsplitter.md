@@ -38,7 +38,7 @@ This is a column splitter. Drag the border of the columns to resize.
 
 </XamlPreview>
 
-## Min/Max Constraints
+## Min/max constraints
 
 Set minimum and maximum sizes on the columns or rows to limit how far the splitter can move:
 

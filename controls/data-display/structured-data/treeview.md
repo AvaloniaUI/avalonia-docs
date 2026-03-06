@@ -200,7 +200,7 @@ The tree view adds a scroll bar when it is needed. The selection can be extended
 
 <img src={TreeViewEnhancedAnimalHierarchyScreenshot} alt="" />
 
-## Expansion Events
+## Expansion events
 
 `TreeViewItem` raises `Expanded` and `Collapsed` routed events when items are expanded or collapsed. These events bubble up, so you can handle them at the `TreeView` level:
 

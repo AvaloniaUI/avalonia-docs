@@ -3,7 +3,7 @@ id: linux
 title: Linux
 ---
 
-## Supported Distributions
+## Supported distributions
 
 The following Linux distributions are comprehensively tested and supported:
 
@@ -11,7 +11,7 @@ The following Linux distributions are comprehensively tested and supported:
 * **Ubuntu**: Version 16.04 and newer
 * **Fedora**: Version 30 and newer
 
-### Other Distributions
+### Other distributions
 
 Avalonia XPF can run on many other Linux distributions beyond those listed above. If you are using a distribution that is not officially supported:
 
@@ -60,11 +60,11 @@ sudo dnf install dotnet-sdk-8.0
 
 Fedora includes Microsoft's .NET packages in its default repositories, and these are compatible with XPF.
 
-### Other Distributions
+### Other distributions
 
 For other distributions, add the [Microsoft package feed](https://packages.microsoft.com/) to your package manager and install the .NET SDK from there.
 
-### Fixing a Broken .NET Installation
+### Fixing a broken .NET installation
 
 If you previously installed .NET from your distribution's package repository (rather than from Microsoft), you must uninstall it completely before installing from the Microsoft feed. Mixing package sources causes conflicts and missing SDK components.
 
@@ -90,7 +90,7 @@ sudo rm /etc/apt/preferences.d/*dotnet* 2>/dev/null
 A mixed installation (some packages from your distro, some from Microsoft) will cause hard-to-diagnose build failures. If `dotnet --list-sdks` does not show `Microsoft.NET.Sdk.WindowsDesktop`, your installation is incorrect.
 :::
 
-## Other Dependencies
+## Other dependencies
 
 The following native libraries are required to run XPF: `libICE`, `libSM`, `fontconfig`, and `libgdiplus`.
 
@@ -119,7 +119,7 @@ sudo dnf install epel-release
 sudo dnf install libgdiplus
 ```
 
-### Other Distributions
+### Other distributions
 
 Use your distribution's package manager to install the equivalent packages. The library names may vary between distributions (for example, `libice6` on Debian corresponds to `libICE` on Fedora/RHEL).
 
@@ -141,7 +141,7 @@ dotnet publish -r linux-x64 -c Release --self-contained
 Publishing via Visual Studio may omit critical native dependencies. If you encounter `DllNotFoundException` for `libSkiaSharp` or similar errors, switch to CLI publishing.
 :::
 
-### Native Library Resolution with ReadyToRun
+### Native library resolution with ReadyToRun
 
 When using `PublishReadyToRun`, the .NET runtime may alter how native libraries are resolved. If your application fails to locate `.so` files at runtime:
 
@@ -175,7 +175,7 @@ Rider supports remote debugging via SSH natively, and supports WSL2 through the 
 The `net8.0-windows` target framework works on non-Windows platforms when using the XPF SDK. You do not need to change the target framework to build for Linux.
 :::
 
-## Tray Icons
+## Tray icons
 
 XPF supports system tray icons on Linux through the StatusNotifierItem/AppIndicator protocol.
 
@@ -183,7 +183,7 @@ XPF supports system tray icons on Linux through the StatusNotifierItem/AppIndica
 
 **KDE Plasma** supports tray icons natively with no additional configuration.
 
-## File Dialogs on Older Distributions
+## File dialogs on older distributions
 
 On older Linux distributions (such as RHEL 8), the GNOME version may be too old to support the DBus-based file dialog protocol. This can cause `OpenFolderDialog.InitialDirectory` and similar properties to be ignored.
 
@@ -202,7 +202,7 @@ AppBuilder.Configure<AvaloniaUI.Xpf.Helpers.DefaultXpfAvaloniaApplication>()
 
 This falls back to the GTK file dialog, which supports `InitialDirectory` on older systems.
 
-## Win32 API Shim Conflicts with Native APIs
+## Win32 API shim conflicts with native APIs
 
 If your application calls native Linux APIs (such as X11 functions via `DllImport`) and also enables Win32 API shims, the shim layer may intercept those native calls and cause `EntryPointNotFoundException`.
 
@@ -220,7 +220,7 @@ AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable(asm =>
 
 Alternatively, use `WinApiShimSetup.AddLibrary` to enable shims only for specific assemblies rather than using `AutoEnable`.
 
-## Launching from systemd
+## Launching from `systemd`
 
 When launching XPF applications as systemd services on X11, a race condition can occur where the application starts before the window manager is fully initialized. This can cause `WindowStyle="None"` to be ignored, resulting in a visible titlebar.
 
@@ -264,7 +264,7 @@ Version 4.1 of webkit2gtk is required. Older versions (4.0) do not support all f
 
 For a comparison of all browser embedding options, see [Web Content Embedding](/xpf/interop/web-content).
 
-## Display Server Considerations
+## Display server considerations
 
 ### X11
 
@@ -281,7 +281,7 @@ Wayland is the newer display protocol used by default on recent versions of Fedo
 - **Keyboard isolation**: Only the focused window receives keyboard input. There is no mechanism to direct keyboard input to a non-focused window. If your application needs to isolate keyboard input between windows (for example, for kiosk setups with multiple input devices), this is a Wayland protocol limitation.
 - **Window positioning**: Wayland does not allow applications to set absolute window positions. `Window.Left` and `Window.Top` may be ignored by the compositor.
 
-## Known Limitations
+## Known limitations
 
 - **UI test automation**: Avalonia does not currently support the AT-SPI2 accessibility protocol on Linux. Automated UI testing tools that rely on accessibility APIs (such as pywinauto or Appium) have limited functionality.
 - **Transparent window click-through**: As on macOS, XPF does not support clicking through transparent regions of a window on Linux. Mouse clicks on transparent areas are captured by the window rather than passed through to windows underneath. For overlay scenarios, embed content in a single window rather than layering transparent windows.
