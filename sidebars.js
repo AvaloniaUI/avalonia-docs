@@ -7,6 +7,7 @@ const sidebars = {
     'welcome',
     'overview/what-is-avalonia',
     'overview/supported-platforms',
+    'avalonia12-breaking-changes',
     {
       'type': 'category',
       'label': 'Getting started',
