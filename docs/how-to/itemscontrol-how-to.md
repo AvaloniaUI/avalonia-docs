@@ -209,6 +209,22 @@ Show a placeholder when the collection is empty:
 </Panel>
 ```
 
+## Customizing Containers with PreparingContainer
+
+The `PreparingContainer` event fires each time an `ItemsControl` creates or recycles a container for a data item. Use it to apply per-item customizations that cannot be expressed through a `DataTemplate` alone, such as conditional styling based on item data:
+
+```csharp
+myItemsControl.PreparingContainer += (sender, e) =>
+{
+    if (e.Item is TodoItem todo && todo.IsOverdue)
+    {
+        e.Container.Classes.Add("overdue");
+    }
+};
+```
+
+The companion `ClearingContainer` event fires when a container is being recycled or removed, allowing you to clean up any customizations.
+
 ## Performance Tips
 
 - Use `ItemsRepeater` with `StackLayout` or `UniformGridLayout` for automatic virtualization.

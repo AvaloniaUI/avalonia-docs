@@ -226,6 +226,55 @@ For more details on the `ElementRole` values, see the [custom title bar how-to](
 | `PositionChanged` | The window was moved. |
 | `Resized` | The window was resized. |
 
+## Working with Screens
+
+The `Screens` API provides information about connected monitors. Access it from any `TopLevel`:
+
+```csharp
+var screens = TopLevel.GetTopLevel(this)?.Screens;
+```
+
+### Querying screens
+
+```csharp
+// All connected screens
+var allScreens = screens.All;
+
+// Primary monitor
+var primary = screens.Primary;
+
+// Screen containing a specific window
+var currentScreen = screens.ScreenFromWindow(this);
+
+// Screen at a point
+var screenAtPoint = screens.ScreenFromPoint(new PixelPoint(500, 300));
+```
+
+### Screen properties
+
+Each `Screen` object exposes:
+
+| Property | Type | Description |
+|---|---|---|
+| `Bounds` | `PixelRect` | Full screen bounds in pixels. |
+| `WorkingArea` | `PixelRect` | Usable area excluding taskbars and docks. |
+| `Scaling` | `double` | DPI scaling factor (e.g., 1.0 for 96 DPI, 1.5 for 144 DPI). |
+| `IsPrimary` | `bool` | Whether this is the primary display. |
+| `DisplayName` | `string?` | The OS-reported display name. |
+| `CurrentOrientation` | `ScreenOrientation` | The screen orientation (Landscape, Portrait, etc.). |
+
+### Responding to screen changes
+
+Subscribe to the `Changed` event to detect when monitors are added, removed, or reconfigured:
+
+```csharp
+screens.Changed += (sender, args) =>
+{
+    // Re-evaluate window placement or layout
+    var count = screens.All.Count;
+};
+```
+
 ## Platform Differences
 
 | Feature | Windows | macOS | Linux |

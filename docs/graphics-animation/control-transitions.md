@@ -74,6 +74,7 @@ The correct transition type must be used for the type of the property being anim
 
 | Transition | Property type |
 |---|---|
+| `BoolTransition` | `bool` |
 | `BoxShadowsTransition` | `BoxShadows` |
 | `BrushTransition` | `IBrush` |
 | `ColorTransition` | `Color` |

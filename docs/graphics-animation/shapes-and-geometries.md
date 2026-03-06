@@ -177,6 +177,7 @@ The most flexible geometry, composed of figures and segments:
 | `BezierSegment` | Draws a cubic Bezier curve (two control points). |
 | `QuadraticBezierSegment` | Draws a quadratic Bezier curve (one control point). |
 | `PolyLineSegment` | Draws a series of connected lines. |
+| `PolyBezierSegment` | Draws a series of connected cubic Bezier curves. Each set of three points defines a control point, a second control point, and an endpoint. |
 
 ### CombinedGeometry
 

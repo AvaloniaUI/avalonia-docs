@@ -93,7 +93,7 @@ The available binding modes are:
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | `OneWay`         | Changes in the data source propagate to the binding target.                                                               |
 | `TwoWay`         | Changes in the data source propagate to the binding target and vice-versa.                                                |
-| `OneTime`        | The value from the data source is propagated at initialization to the binding target, but subsequent changes are ignored. |
+| `OneTime`        | The value from the data source is propagated once to the binding target. The binding re-evaluates if the `DataContext` changes, but subsequent property changes on the same source are ignored. |
 | `OneWayToSource` | Changes in the binding target propagate to the data source, but not the other way.                                        |
 | `Default`        | The binding mode is based on a default mode defined in the code for the property. See below.                              |
 

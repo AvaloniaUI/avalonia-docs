@@ -75,6 +75,21 @@ _notificationManager.Show(new Notification("Warning", "Disk space is low.", Noti
 _notificationManager.Show(new Notification("Error", "Connection failed.", NotificationType.Error));
 ```
 
+## Closing Notifications Programmatically
+
+You can close a specific notification or clear all notifications from code:
+
+```csharp
+var notification = new Notification("Processing", "Working...", NotificationType.Information, TimeSpan.Zero);
+_notificationManager.Show(notification);
+
+// Close a specific notification
+_notificationManager.Close(notification);
+
+// Clear all active notifications
+_notificationManager.ClearAll();
+```
+
 ## Custom Notification Content
 
 Implement `INotification` to provide custom notification data:

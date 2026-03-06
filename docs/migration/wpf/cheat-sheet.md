@@ -121,7 +121,7 @@ Or with a binding converter:
 | `WrapPanel` | `WrapPanel` | Same |
 | `Canvas` | `Canvas` | Same |
 | `UniformGrid` | `UniformGrid` | Same |
-| `GroupBox` | `HeaderedContentControl` or custom | No built-in GroupBox |
+| `GroupBox` | [`GroupBox`](/controls/layout/containers/groupbox) | Same |
 | `RichTextBox` | No built-in equivalent | Use a third-party editor |
 
 ## Layout

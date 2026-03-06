@@ -24,6 +24,8 @@ For most scenarios, prefer `Flyout`, `ToolTip`, or `ContextMenu` instead of `Pop
 | `IsLightDismissEnabled` | `bool` | When `true`, the popup closes when the user clicks outside it. Default: `false`. |
 | `Topmost` | `bool` | Whether the popup appears above all other windows. Default: `false`. |
 | `WindowManagerAddShadowHint` | `bool` | Whether a drop shadow is applied (platform-dependent). Default: `true`. |
+| `OverlayDismissEventPassThrough` | `bool` | When `true`, pointer events that dismiss the popup also pass through to the underlying control. Default: `false`. |
+| `CustomPopupPlacementCallback` | `Action<CustomPopupPlacement>` | A callback for fully custom popup positioning. When set, overrides the `Placement` property. |
 
 ## Events
 
@@ -93,6 +95,28 @@ You can bind `IsOpen` to a view model property for MVVM control:
         </StackPanel>
     </Border>
 </Popup>
+```
+
+## Custom Placement
+
+For positioning logic beyond the built-in placement modes, use `CustomPopupPlacementCallback`. The callback receives a `CustomPopupPlacement` object pre-initialized with defaults, and you modify its properties to control positioning:
+
+```csharp
+myPopup.CustomPopupPlacementCallback = placement =>
+{
+    placement.Anchor = PopupAnchor.TopRight;
+    placement.Gravity = PopupGravity.BottomRight;
+    placement.Offset = new Point(8, 0);
+};
+```
+
+This callback is also available on `PopupFlyoutBase`, `ContextMenu`, and as an attached property on `ToolTip`:
+
+```csharp
+ToolTip.SetCustomPopupPlacementCallback(myControl, placement =>
+{
+    placement.Offset = new Point(0, -10);
+});
 ```
 
 ## Popup vs Flyout vs ToolTip

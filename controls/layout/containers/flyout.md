@@ -64,10 +64,12 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 
 You will probably use these properties most often:
 
-| Property    | Description                                                                          |
-| ----------- | ------------------------------------------------------------------------------------ |
-| `Placement` | The position where the flyout opens relative to the control to which it is attached. |
-| `ShowMode`  | This describes how the flyout shows and hides. See the options below.                |
+| Property          | Description                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| `Content`         | The content displayed inside the flyout.                                             |
+| `ContentTemplate` | A `DataTemplate` applied to the `Content`. Useful when `Content` is bound to a view model object. |
+| `Placement`       | The position where the flyout opens relative to the control to which it is attached. |
+| `ShowMode`        | This describes how the flyout shows and hides. See the options below.                |
 
 ## Show mode
 

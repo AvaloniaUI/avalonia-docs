@@ -58,6 +58,32 @@ You will probably use these properties most often:
     </tbody>
 </table>
 
+## Events
+
+| Event | Type | Description |
+|---|---|---|
+| `ToolTip.ToolTipOpening` | `CancelRoutedEventArgs` | Raised when a tooltip is about to open. Set `Cancel = true` to prevent the tooltip from showing. |
+| `ToolTip.ToolTipClosing` | `RoutedEventArgs` | Raised when a tooltip is about to close. |
+
+These are attached routed events. Subscribe in XAML or code:
+
+```xml
+<Button Content="Hover me"
+        ToolTip.Tip="Dynamic tooltip"
+        ToolTip.ToolTipOpening="OnToolTipOpening" />
+```
+
+```csharp
+private void OnToolTipOpening(object? sender, CancelRoutedEventArgs e)
+{
+    // Optionally prevent the tooltip from showing
+    if (ShouldSuppressTooltip)
+    {
+        e.Cancel = true;
+    }
+}
+```
+
 ## Examples
 
 This is a simple text-based tooltip, using default values for the placement and delay properties. Hover over the rectangle in the preview to see the tooltip.

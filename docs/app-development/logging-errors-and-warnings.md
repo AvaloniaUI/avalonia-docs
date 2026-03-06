@@ -64,6 +64,33 @@ public static AppBuilder BuildAvaloniaApp()
         .LogToTrace(LogEventLevel.Debug, LogArea.Property, LogArea.Layout);
 ```
 
+## Alternative log targets
+
+### LogToDelegate
+
+Route log messages to a custom callback function:
+
+```csharp
+public static AppBuilder BuildAvaloniaApp()
+    => AppBuilder.Configure<App>()
+        .UsePlatformDetect()
+        .LogToDelegate((level, area, source, messageTemplate, propertyValues) =>
+        {
+            Console.WriteLine($"[{area}] {messageTemplate}");
+        });
+```
+
+### LogToTextWriter
+
+Write log messages to any `TextWriter`, such as a file or `Console.Out`:
+
+```csharp
+public static AppBuilder BuildAvaloniaApp()
+    => AppBuilder.Configure<App>()
+        .UsePlatformDetect()
+        .LogToTextWriter(File.CreateText("avalonia.log"));
+```
+
 ## Log sinks
 
 The `LogToTrace` extension method uses `StringLogSink`. Avalonia supports custom sinks by implementing `ILogSink`. Assigning your custom sink to `Avalonia.Logging.Logger.Sink` will allow Avalonia to use it.

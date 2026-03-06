@@ -170,17 +170,25 @@ Adjust spacing and padding for different platforms:
 
 ## Adaptive Font Sizes
 
-Scale text based on the container or window:
+Use [container queries](/docs/styling/container-queries) to scale text based on the size of an ancestor. Declare a container on the parent element, then use `ContainerQuery` to apply different font sizes at different widths:
 
 ```xml
-<Style Selector="TextBlock.title">
-    <Setter Property="FontSize" Value="24" />
-</Style>
+<Panel Container.Name="content" Container.Sizing="Width">
+    <Panel.Styles>
+        <Style Selector="TextBlock.title">
+            <Setter Property="FontSize" Value="24" />
+        </Style>
 
-<!-- Smaller title on narrow containers -->
-<Style Selector="Panel[Width<500] TextBlock.title">
-    <Setter Property="FontSize" Value="18" />
-</Style>
+        <!-- Smaller title when the container is narrow -->
+        <ContainerQuery Name="content" Query="max-width:500">
+            <Style Selector="TextBlock.title">
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+        </ContainerQuery>
+    </Panel.Styles>
+
+    <TextBlock Classes="title" Text="Responsive heading" />
+</Panel>
 ```
 
 ## See Also

@@ -155,9 +155,9 @@ Calling the `ClearAsync()` method clears the clipboard of all contents.
 #### FlushAsync()
 
 On Windows, macOS, and X11, the data is retrieved lazily on demand from the `IAsyncDataTransfer` placed on the clipboard.
-If the Avalonia application terminates, the data becomes unavailable.
+If the Avalonia application terminates without flushing, the data becomes unavailable.
 
-On Windows, calling `FlushAsync()` allows the system to query all the data present on the clipboard and persist it. On other platforms, this method does nothing.
+Calling `FlushAsync()` forces the system to query all the data and persist it so it remains available after the application closes. This is supported on Windows and X11 (Linux). On platforms where flushing is not supported, this method does nothing.
 
 ## IAsyncDataTransfer & IAsyncDataTransferItem
 

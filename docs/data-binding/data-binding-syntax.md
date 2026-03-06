@@ -34,6 +34,7 @@ source and other options as shown by the following example:
 | `FallbackValue`       | Sets a value when the binding cannot be created or cannot produce a value.        |
 | `TargetNullValue`     | Sets a value when the source property contains a null value.                      |
 | `UpdateSourceTrigger` | Triggers a source property update when a predefined condition happens.            |
+| `Delay`               | Sets a delay before the binding target is updated after the source value changes. |
 
 These parameters must be known and set at the time of binding creation. They are CLR properties that cannot 
 be set and updated by additional bindings.
@@ -64,6 +65,16 @@ If the data source can be indexed (such as an array or list), then you can add t
 <TextBlock Text="{Binding Students[0].Name}"/>
 ```
 
+### Null conditional operator
+
+Use the `?.` operator in a binding path to safely navigate through properties that may be null. If any segment in the path is null, the binding produces a null value instead of throwing an exception:
+
+```xml
+<TextBlock Text="{Binding SelectedStudent?.Address?.City}"/>
+```
+
+This is equivalent to C#'s null conditional operator. Without `?.`, a null `SelectedStudent` would produce a binding error.
+
 ## Empty Binding Path
 
 You can specify data bindings without a `Path`. This binds to the `DataContext` of the `Control` itself (where the binding 
@@ -93,7 +104,7 @@ The available binding modes are:
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | `OneWay`         | Changes in the data source propagate to the binding target.                                                               |
 | `TwoWay`         | Changes in the data source propagate to the binding target and vice-versa.                                                |
-| `OneTime`        | The value from the data source is propagated at initialization to the binding target, but subsequent changes are ignored. |
+| `OneTime`        | The value from the data source is propagated once to the binding target. The binding re-evaluates if the `DataContext` changes, but subsequent property changes on the same source are ignored. |
 | `OneWayToSource` | Changes in the binding target propagate to the data source, but not the other way.                                        |
 | `Default`        | The binding mode is based on a default mode defined in the code for the property. See below.                              |
 
@@ -281,3 +292,76 @@ to specify when synchronization should happen.
 | `PropertyChanged`   | Updates the binding source immediately whenever the binding target property changes.             |
 | `LostFocus`         | Updates the binding source whenever the binding target element loses focus.                      |
 | `Explicit`          | Updates the binding source only when you call the `BindingExpressionBase.UpdateSource()` method. |
+
+## Delay
+
+_Available since Avalonia 11.3_
+
+The `Delay` parameter specifies a time (in milliseconds) to wait before the binding target is updated after the source value changes. Each time the source value changes, the delay timer resets. The target is only updated once the specified time has elapsed since the last change. This is commonly known as "debouncing."
+
+This is particularly useful for search-as-you-type scenarios, where you want to avoid triggering expensive operations (such as filtering or querying a service) on every keystroke.
+
+### XAML Usage
+
+```xml
+<TextBox Text="{Binding SearchText, Delay=300}" />
+```
+
+In this example, the `SearchText` property on the view model will only be updated 300 milliseconds after the user stops typing.
+
+### Code Usage
+
+When creating bindings in code, set the `Delay` property to a `TimeSpan`:
+
+```csharp
+var binding = new Binding("SearchText")
+{
+    Delay = TimeSpan.FromMilliseconds(300)
+};
+myTextBox.Bind(TextBox.TextProperty, binding);
+```
+
+### Practical Example
+
+The following example shows a search TextBox that waits 300ms after the user stops typing before updating the bound property. This prevents a search operation from running on every keystroke.
+
+```xml
+<StackPanel Spacing="8">
+    <TextBox Watermark="Search..."
+             Text="{Binding SearchText, Delay=300}" />
+    <TextBlock Text="{Binding SearchResults}" />
+</StackPanel>
+```
+
+```csharp
+public class SearchViewModel : ObservableObject
+{
+    private string _searchText = string.Empty;
+    private string _searchResults = string.Empty;
+
+    public string SearchText
+    {
+        get => _searchText;
+        set
+        {
+            if (SetProperty(ref _searchText, value))
+            {
+                // This will only be called 300ms after the user stops typing
+                PerformSearch(value);
+            }
+        }
+    }
+
+    public string SearchResults
+    {
+        get => _searchResults;
+        set => SetProperty(ref _searchResults, value);
+    }
+
+    private void PerformSearch(string query)
+    {
+        SearchResults = string.IsNullOrEmpty(query)
+            ? string.Empty
+            : $"Searching for: {query}";
+    }
+}

@@ -84,6 +84,22 @@ Creates a file with specified name as a child of the current storage folder
 
 Creates a folder with specified name as a child of the current storage folder
 
+### TryGetSingleFileAsync
+
+Retrieves a single file by name from the current storage folder. Returns the matching `IStorageFile` if found, or null if no file with the specified name exists. This is an extension method that simplifies the common pattern of getting one specific file from a folder.
+
+```csharp
+IStorageFile? file = await folder.TryGetSingleFileAsync("config.json");
+```
+
+### TryGetSingleFolderAsync
+
+Retrieves a single subfolder by name from the current storage folder. Returns the matching `IStorageFolder` if found, or null if no folder with the specified name exists. This is an extension method that simplifies the common pattern of getting one specific subfolder from a folder.
+
+```csharp
+IStorageFolder? subFolder = await folder.TryGetSingleFolderAsync("images");
+```
+
 ## Extension methods
 
 ### TryGetLocalPath

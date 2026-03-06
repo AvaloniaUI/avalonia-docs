@@ -318,6 +318,16 @@ A `DataGrid` can contain multiple data grid columns and _Avalonia_ has two built
 | `DataGridCheckBoxColumn` | Presents a check box for display and editing of the column data, when it is Boolean. This column type also supports the three-state check box when the value is nullable. |
 | `DataGridTemplateColumn` | Can be used to customise the presentation of column data, for both display and editing.                                                                                   |
 
+### Displaying row numbers
+
+Bind to `DataGridRow.Index` to show row numbers in a column:
+
+```xml
+<DataGridTextColumn Header="#"
+    Binding="{Binding $parent[DataGridRow].Index}"
+    Width="60" IsReadOnly="True" />
+```
+
 ### Useful properties
 
 Most of these properties are common to all three column types:

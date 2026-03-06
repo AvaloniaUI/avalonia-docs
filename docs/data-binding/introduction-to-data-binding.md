@@ -51,7 +51,7 @@ Bindings can operate in different modes that control how data flows:
 |---|---|
 | `OneWay` | Source changes update the target. Target changes are not sent back. |
 | `TwoWay` | Changes in either source or target update the other. |
-| `OneTime` | The source value is read once when the binding is created. |
+| `OneTime` | The source value is read once and does not track subsequent property changes. The binding re-evaluates if the `DataContext` changes. |
 | `OneWayToSource` | Target changes update the source, but not vice versa. |
 | `Default` | The mode is determined by the target property. Most display properties default to `OneWay`; editable properties like `TextBox.Text` default to `TwoWay`. |
 

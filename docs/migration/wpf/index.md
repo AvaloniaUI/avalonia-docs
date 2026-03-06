@@ -127,7 +127,7 @@ This section describes the differences in controls in vanilla WPF and UWP (with 
 |          Grid          |           Grid           |          Grid          |                                                                                                                               |
 |      GridSplitter      |       GridSplitter       |            ✗           | Available for UWP in the Windows Community Toolkit                                                                            |
 |            ✗           |         GridView         |        GridView        |                                                                                                                               |
-|            ✗           |         GroupBox         |            ✗           |                                                                                                                               |
+|       GroupBox          |         GroupBox         |            ✗           |                                                                                                                               |
 |            ✗           |             ✗            |           Hub          |                                                                                                                               |
 |            ✗           |             ✗            |       HubSection       |                                                                                                                               |
 |      HyperlinkButton   |             ✗            |     HyperlinkButton    |                                                                                                                               |

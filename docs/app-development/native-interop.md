@@ -13,24 +13,35 @@ For more complex native integration, Avalonia provides direct access to the unde
 
 ## Accessing Native Window Handles
 
-You can retrieve the native window handle for interop with Win32, Cocoa, or X11 APIs:
+You can retrieve the native window handle for interop with platform APIs:
 
 ```csharp
 if (TopLevel.GetTopLevel(this)?.TryGetPlatformHandle() is { } handle)
 {
-    // handle.Handle is the native window handle (HWND, NSWindow*, X11 Window)
+    // handle.Handle is the native handle
     IntPtr nativeHandle = handle.Handle;
 
-    // handle.HandleDescriptor tells you the type:
-    // "HWND" on Windows, "NSWindow" on macOS, etc.
+    // handle.HandleDescriptor tells you the type
     string kind = handle.HandleDescriptor;
 }
 ```
+
+The returned handle type depends on the platform:
+
+| Platform | HandleDescriptor | Native Type |
+|---|---|---|
+| Windows | `HWND` | Win32 window handle |
+| macOS | `NSWindow` | AppKit window pointer |
+| Linux (X11) | `X11` | X11 Window ID |
+| iOS | `UIViewControlHandle` | UIKit view reference |
+| Android | `AndroidViewControlHandle` | Android view reference |
+| Browser | `JSObjectControlHandle` | Container `<div>` element reference |
 
 This is useful for scenarios like:
 - Registering global hotkeys through the OS API
 - Calling native windowing functions (e.g., Win32 `SetWindowPos`)
 - Passing the window handle to native libraries that need a parent window
+- Integrating with platform-specific mobile SDKs
 
 ## Embedding Native Views
 
@@ -253,7 +264,7 @@ public class SkiaCanvas : Control
 Add the SkiaSharp NuGet package:
 
 ```xml
-<PackageReference Include="Avalonia.Skia" Version="11.2.*" />
+<PackageReference Include="Avalonia.Skia" Version="12.0.*" />
 <PackageReference Include="SkiaSharp" Version="2.88.*" />
 ```
 

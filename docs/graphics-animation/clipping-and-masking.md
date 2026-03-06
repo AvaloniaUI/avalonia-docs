@@ -141,6 +141,25 @@ This fades the bottom of the image to transparent, creating a common "fade out" 
 
 This creates a vignette effect where the edges fade out.
 
+### VisualBrush mask
+
+You can use a `VisualBrush` as an opacity mask to clip content to the shape of another control:
+
+```xml
+<Image Source="/assets/photo.jpg" Width="300" Height="300">
+    <Image.OpacityMask>
+        <VisualBrush>
+            <VisualBrush.Visual>
+                <TextBlock Text="HELLO" FontSize="120" FontWeight="Bold"
+                           Foreground="Black" />
+            </VisualBrush.Visual>
+        </VisualBrush>
+    </Image.OpacityMask>
+</Image>
+```
+
+The image is visible only where the `TextBlock` renders opaque pixels, creating a text-shaped cutout effect.
+
 ## Clipping in Custom Controls
 
 When rendering custom controls, you can apply clipping programmatically:

@@ -33,6 +33,8 @@ If the names do not match, verify that the values for `CFBundleName`, `CFBundleD
 
 Note that `CFBundleName` is limited to 15 characters, if your application name is longer you _must_ set `CFBundleDisplayName`.
 
+See [Application name and identity](/docs/platform-specific-guides/macos#application-name-and-identity) for full details on where macOS reads the app name from.
+
 ## Packaging
 
 1. Review Parcel's build logs for error information

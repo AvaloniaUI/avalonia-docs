@@ -171,6 +171,25 @@ These are equivalent to:
 <TextBox IsReadOnly="False" />
 ```
 
+## x:Shared
+
+Controls whether a resource is instantiated once and reused, or created fresh each time it is referenced. By default, resources are shared (a single instance is returned every time). Set `x:Shared="False"` to create a new instance on each reference:
+
+```xml
+<Application.Resources>
+    <ColumnDefinitions x:Key="TwoColumnLayout" x:Shared="False">
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+    </ColumnDefinitions>
+</Application.Resources>
+```
+
+Without `x:Shared="False"`, assigning the same `ColumnDefinitions` resource to multiple `Grid` controls would fail because a single instance cannot have multiple parents.
+
+:::info
+`x:Shared` only applies to resources in a `ResourceDictionary`. It has no effect outside of resource definitions.
+:::
+
 ## Primitive Type Elements
 
 The XAML language namespace provides elements for common .NET primitive types:

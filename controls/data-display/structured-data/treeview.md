@@ -200,6 +200,24 @@ The tree view adds a scroll bar when it is needed. The selection can be extended
 
 <img src={TreeViewEnhancedAnimalHierarchyScreenshot} alt="" />
 
+## Expansion Events
+
+`TreeViewItem` raises `Expanded` and `Collapsed` routed events when items are expanded or collapsed. These events bubble up, so you can handle them at the `TreeView` level:
+
+```csharp
+treeView.AddHandler(TreeViewItem.ExpandedEvent, (sender, args) =>
+{
+    var item = (TreeViewItem)args.Source!;
+    // React to expansion, e.g., load child data on demand
+});
+
+treeView.AddHandler(TreeViewItem.CollapsedEvent, (sender, args) =>
+{
+    var item = (TreeViewItem)args.Source!;
+    // React to collapse
+});
+```
+
 ## See also
 
 - [TreeView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TreeView)

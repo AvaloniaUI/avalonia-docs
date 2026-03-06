@@ -16,6 +16,8 @@ When the orientation property is set to vertical, the arrangement is top to bott
 | `LineSpacing` | Vertical gap between rows (or horizontal gap between columns in vertical mode). |
 | `ItemWidth` | Fixed width for all items. If not set, items use their natural width. |
 | `ItemHeight` | Fixed height for all items. If not set, items use their natural height. |
+| `HorizontalItemAlignment` | Controls how items are aligned horizontally within their allocated cell. Values: `Left`, `Center`, `Right`, `Stretch`. |
+| `VerticalItemAlignment` | Controls how items are aligned vertically within their allocated cell. Values: `Top`, `Center`, `Bottom`, `Stretch`. |
 
 ## Examples
 

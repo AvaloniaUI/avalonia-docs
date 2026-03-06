@@ -23,6 +23,44 @@ If your app needs macOS APIs beyond what Avalonia exposes, change your target fr
 
 This gives you access to the complete set of APIs provided by the .NET macOS workload, but it comes with a constraint: **builds targeting a macOS TFM must be performed on macOS**. You lose the ability to cross-compile from Windows or Linux.
 
+## Application name and identity
+
+macOS shows your application's name in several places: the menu bar, the "About" dialog, the "Quit" menu item, the Dock tooltip, and the window title bar. Getting these right requires setting the name in the correct locations.
+
+### Where the name comes from
+
+| Location | Source | Notes |
+|---|---|---|
+| Menu bar (bold app name) | `CFBundleName` in `Info.plist` (bundled), or `Application.Name` (unbundled) | `CFBundleName` is limited to 15 characters. |
+| Dock tooltip | `CFBundleDisplayName` in `Info.plist`, falling back to `CFBundleName` | Use `CFBundleDisplayName` for names longer than 15 characters. |
+| "About" menu item | Header text of your `NativeMenuItem` | You control this text entirely. |
+| "Quit" menu item | `CFBundleName` or `Application.Name` | Avalonia generates "Quit {name}" automatically. |
+| Window title bar | `Window.Title` property | Independent of the app name. |
+
+### Setting the application name
+
+**Step 1: Set `Application.Name` in `App.axaml`**
+
+This controls the name during development (before you have an `.app` bundle):
+
+```xml
+<Application Name="My Application" ...>
+```
+
+**Step 2: Set `CFBundleName` and `CFBundleDisplayName` in `Info.plist`**
+
+When your app runs as a bundled `.app`, macOS reads the name from `Info.plist` instead of `Application.Name`. Keep these values consistent:
+
+```xml
+<key>CFBundleName</key>
+<string>My App</string>
+
+<key>CFBundleDisplayName</key>
+<string>My Application</string>
+```
+
+`CFBundleName` is limited to 15 characters and is used for the menu bar and "Quit" item. `CFBundleDisplayName` has no length limit and is used by Finder and the Dock. If your app name fits in 15 characters, you only need `CFBundleName`.
+
 ## Native menu bar
 
 macOS applications have a menu bar at the top of the screen, separate from the application window. Avalonia supports this through `NativeMenu`, which renders as a native macOS menu bar.
@@ -47,11 +85,23 @@ The leftmost menu in the menu bar carries your application's name and typically 
 </Application>
 ```
 
-The `Name` property on `Application` controls the bold app name shown in the menu bar. If you do not define a `NativeMenu`, Avalonia creates a default application menu that includes an "About Avalonia" item.
+If you do not define a `NativeMenu`, Avalonia creates a default application menu that includes an "About Avalonia" item. Define your own menu to replace it.
 
-:::tip
-When running as an `.app` bundle, the menu bar name is taken from `CFBundleName` in your `Info.plist`, not from the `Name` property. Make sure these values match to avoid confusion. Note that `CFBundleName` is limited to 15 characters. If your app name is longer, set `CFBundleDisplayName` as well.
-:::
+Avalonia automatically appends standard items after your custom menu items, including a separator and the "Quit App Name" item with <kbd>⌘</kbd><kbd>Q</kbd>. You do not need to add a Quit item yourself.
+
+### Replacing the About dialog
+
+The "About" item in the application menu is a `NativeMenuItem` you define yourself. It has no special built-in behavior. Wire its `Click` event to show whatever UI you want:
+
+```csharp
+private void About_OnClick(object? sender, EventArgs e)
+{
+    var aboutWindow = new AboutWindow();
+    aboutWindow.ShowDialog(this.GetMainWindow());
+}
+```
+
+macOS users expect the About item to be the first entry in the application menu, with the header text "About My Application..." followed by an ellipsis. This is a convention, not a requirement enforced by the framework.
 
 ### Window menus
 

@@ -7,8 +7,6 @@ tags:
 ---
 
 import Pill from '/src/components/global/Pill';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <Pill variant="primary" href="/xpf">XPF</Pill>
@@ -24,43 +22,17 @@ The WebView component includes three main APIs:
 - [`NativeWebDialog`](/controls/web/nativewebdialog) - A separate dialog window that hosts web content
 - [`WebAuthenticationBroker`](/docs/webview/webauthenticationbroker) - A utility for handling OAuth and web-based authentication flows
 
-The WebView component is available with both [Avalonia Accelerate](/tools) and [Avalonia XPF](/xpf). All functionalities and configuration options are shared by both.
-
+The WebView component is available with both [Avalonia Accelerate](/tools) and [Avalonia XPF](/xpf). For XPF-specific installation and usage, see the [XPF section](#xpf) below.
 
 ## Installation
 
-<Tabs>
+See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
 
-  <TabItem value="Accelerate">
+Add the WebView package to your project:
 
-    See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
-
-    Add the WebView package to your project:
-
-    ```bash
-    dotnet add package Avalonia.Controls.WebView
-    ```
-  </TabItem>
-
-  <TabItem value="XPF">
-
-    First of all, make sure you have installed XPF nuget feed as per [instruction](/xpf/version-info/versioning).
-
-    With nuget feed working, install `Avalonia.Xpf.Controls.WebView` package:
-
-    ```xml
-    <PackageReference Include="Avalonia.Xpf.Controls.WebView" Version="11.3.9" />
-    ```
-
-    :::note
-    Please use latest version if available. You can check newer versions in the IDE NuGet Packages window.
-
-    On Windows, when WebView2 is not available, legacy Internet Explorer is embedded. It's useful when targeting older Windows versions.
-    :::
-
-  </TabItem>
-
-</Tabs>
+```bash
+dotnet add package Avalonia.Controls.WebView
+```
 
 ## Basic Usage
 
@@ -70,48 +42,24 @@ The WebView component is available with both [Avalonia Accelerate](/tools) and [
 Embeddable `NativeWebView` is not supported on Linux. Please use `NativeWebDialog` instead.
 :::
 
-<Tabs>
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-  <TabItem value="Accelerate">
+    <NativeWebView Source="https://avaloniaui.net/"
+                   NavigationCompleted="WebView_NavigationCompleted" />
+</Window>
+```
 
-    ```xml
-    <Window xmlns="https://github.com/avaloniaui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
-        <NativeWebView Source="https://avaloniaui.net/"
-                       NavigationCompleted="WebView_NavigationCompleted" />
-    </Window>
-    ```
-
-    ```csharp
-    private void WebView_NavigationCompleted(object? sender, WebViewNavigationCompletedEventArgs args)
+```csharp
+private void WebView_NavigationCompleted(object? sender, WebViewNavigationCompletedEventArgs args)
+{
+    if (args.IsSuccess)
     {
-        if (args.IsSuccess)
-        {
-            // Navigation completed successfully
-        }
+        // Navigation completed successfully
     }
-    ```
-
-  </TabItem>
-
-  <TabItem value="XPF">
-
-    Add `xmlns:wpf="clr-namespace:Avalonia.Xpf.Controls;assembly=Avalonia.Xpf.Controls.WebView"` xmlns to your XAML file.
-
-    Typical usage of the NativeWebView looks like this:
-
-    ```xml
-    <wpf:NativeWebView Source="https://avaloniaui.net/" />
-    ```
-
-    Where `Source` is a bindable property.
-
-    To streamline code migration, it's also possible to use `NativeWebView` control with native WPF on Windows. Without XPF involving. In this scenario, all the API members and underlying browsers are the same. As well as steps to install, the same package can be used.
-
-  </TabItem>
-
-</Tabs>
+}
+```
 
 #### Bidirectional JavaScript execution
 
@@ -122,9 +70,9 @@ In some situations it's necessary to execute arbitrary JavaScript code from the 
 webView.InvokeScript("console.log('Hello World')");
 ```
 
-When it's required to receive a data from the JavaScript (web page) and process it on the C# side, you can use `NativeWebView.WebMessageReceived` event combined with `invokeCSharpAction` helper JS method.
+When it's required to receive data from the JavaScript (web page) and process it on the C# side, you can use the `NativeWebView.WebMessageReceived` event combined with the `invokeCSharpAction` helper JS method.
 
-Complete bi-directional example looks like this:
+Complete bi-directional example:
 ```csharp
 private async void NativeWebView_OnNavigationCompleted(object? sender, WebViewNavigationCompletedEventArgs e)
 {
@@ -150,7 +98,7 @@ var dialog = new NativeWebDialog
     Source = new Uri("https://docs.avaloniaui.net/")
 };
 
-dialog.NavigationCompleted += (s, e) => 
+dialog.NavigationCompleted += (s, e) =>
 {
     if (e.IsSuccess)
     {
@@ -192,9 +140,9 @@ The WebView component relies on native web rendering implementations that must b
 | NativeWebDialog | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | WebAuthenticationBroker | ✓** | ✓ | ✓** | ✓ | ✓*** | ✓**** |
 
-\* For Linux, use NativeWebDialog instead of NativeWebView  
-\** Uses NativeWebDialog implementation  
-\*** Android support is experimental  
+\* For Linux, use NativeWebDialog instead of NativeWebView
+\** Uses NativeWebDialog implementation
+\*** Android support is experimental
 \**** Requires CORS configuration for the redirect page. .NET 10 is also necessary to run this library in browser.
 
 #### Windows
@@ -364,6 +312,39 @@ public interface IAndroidWebViewPlatformHandle : IPlatformHandle
     IntPtr WebKitWebView { get; }
 }
 ```
+
+## XPF
+
+The WebView component is also available for [Avalonia XPF](/xpf) applications. All WebView functionality, APIs, and platform prerequisites described above apply to XPF as well, with the differences noted below.
+
+### Installation
+
+First, make sure you have installed the XPF NuGet feed as per the [instructions](/xpf/version-info/versioning).
+
+With the NuGet feed configured, install the `Avalonia.Xpf.Controls.WebView` package:
+
+```xml
+<PackageReference Include="Avalonia.Xpf.Controls.WebView" Version="11.3.9" />
+```
+
+:::note
+Use the latest version if available. You can check for newer versions in the IDE NuGet Packages window.
+
+On Windows, when WebView2 is not available, legacy Internet Explorer is embedded. This is useful when targeting older Windows versions.
+:::
+
+### Usage
+
+Add the XPF namespace to your XAML file and use `NativeWebView`:
+
+```xml
+<wpf:NativeWebView xmlns:wpf="clr-namespace:Avalonia.Xpf.Controls;assembly=Avalonia.Xpf.Controls.WebView"
+                   Source="https://avaloniaui.net/" />
+```
+
+The `Source` property is bindable. All other APIs (`NativeWebDialog`, `WebAuthenticationBroker`, JavaScript interop) work the same as described in the sections above.
+
+To streamline code migration, you can also use the `NativeWebView` control with native WPF on Windows without XPF. In this scenario, all API members and underlying browsers are the same, and the same package can be used.
 
 ## See also
 
