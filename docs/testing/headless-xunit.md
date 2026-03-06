@@ -111,3 +111,7 @@ Instead of the typical `[Fact]` attribute, we need to use `[AvaloniaFact]` as it
 ## Sample app
 
 See also: [Our testable sample app for XUnit](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing/TestableApp.Headless.XUnit).
+
+:::tip
+Headless tests are ideal for fast, in-process unit and component testing. For end-to-end tests that launch your compiled application and interact with it through the platform accessibility layer, see [UI Testing with Appium](ui-testing-with-appium).
+:::

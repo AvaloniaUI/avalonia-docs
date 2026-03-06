@@ -310,6 +310,25 @@ using (var ctx = geometry.Open())
 }
 ```
 
+## Geometry Methods
+
+All `Geometry` objects expose methods for hit testing and transformation:
+
+| Method | Description |
+|---|---|
+| `FillContains(Point)` | Returns `true` if the point is inside the filled area of the geometry. |
+| `StrokeContains(Pen, Point)` | Returns `true` if the point lies on the stroke of the geometry using the specified pen. |
+| `GetWidenedGeometry(Pen)` | Returns a new geometry representing the area that would be covered by stroking this geometry with the specified pen. Useful for creating outlined shapes. |
+| `GetFlattenedPathGeometry()` | Returns a simplified `PathGeometry` with curves approximated by line segments. |
+
+```csharp
+var ellipse = new EllipseGeometry { Center = new Point(50, 50), RadiusX = 40, RadiusY = 40 };
+var pen = new Pen(Brushes.Black, 10);
+
+// Get the outline of the stroked ellipse as a geometry
+var outlined = ellipse.GetWidenedGeometry(pen);
+```
+
 ## Using Geometries as Resources
 
 Define geometries as resources for reuse across your application:

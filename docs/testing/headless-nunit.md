@@ -112,3 +112,7 @@ Instead of the typical `[Test]` attribute, we need to use `[AvaloniaTest]` as it
 ## Sample app
 
 See also: [Our testable sample app for NUnit](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing/TestableApp.Headless.NUnit).
+
+:::tip
+Headless tests are ideal for fast, in-process unit and component testing. For end-to-end tests that launch your compiled application and interact with it through the platform accessibility layer, see [UI Testing with Appium](ui-testing-with-appium).
+:::

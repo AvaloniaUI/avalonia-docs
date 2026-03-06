@@ -22,6 +22,7 @@ The user-selection action should be invoked immediately when pressing either the
 | `Content` | The content to display in the primary part                     |
 | `Flyout`  | The `Flyout` which shows up when the secondary part is clicked |
 | `Command` | A command to be invoked when the primary button is clicked     |
+| `HotKey`  | A keyboard shortcut that activates the primary button action   |
 
 ## Pseudoclasses
 

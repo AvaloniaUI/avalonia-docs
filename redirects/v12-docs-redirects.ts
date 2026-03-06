@@ -109,7 +109,7 @@ const redirects: Redirect[] = [
             "/docs/guides/data/how-to-bind-to-a-command-with-reactiveui",
             "/docs/guides/data-binding/how-to-bind-to-a-command-without-reactiveui"
         ],
-        "to": "/docs/app-development/reactiveui/binding-commands"
+        "to": "/docs/data-binding/binding-to-commands"
     },
     {
         "from": [
@@ -1029,7 +1029,7 @@ const redirects: Redirect[] = [
             "/docs/concepts/reactiveui/index",
             "/docs/app-development/reactiveui/index"
         ],
-        "to": "/docs/app-development/reactiveui/setting-up-reactiveui"
+        "to": "/docs/fundamentals/the-mvvm-pattern"
     },
     {
         "from": [
@@ -1076,7 +1076,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/reference/properties/texttrimming",
-        "to": "/docs/text/texttrimming"
+        "to": "/controls/data-display/text-display/texttrimming"
     },
     {
         "from": "/docs/reference/styles/pseudo-classes",
@@ -1100,7 +1100,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/media-player/quickstart",
-        "to": "/docs/media/media-playback"
+        "to": "/controls/media/media-playback"
     },
     {
         "from": "/accelerate/components/media-player/mediaplayercontrol",
@@ -1108,15 +1108,15 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/media-player/mediaplayer",
-        "to": "/docs/media/mediaplayer"
+        "to": "/controls/media/mediaplayer"
     },
     {
         "from": "/accelerate/components/media-player/mediasource",
-        "to": "/docs/media/mediasource"
+        "to": "/controls/media/mediasource"
     },
     {
         "from": "/accelerate/components/markdown/quickstart",
-        "to": "/docs/app-development/rendering-markdown"
+        "to": "/controls/data-display/text-display/markdown"
     },
     {
         "from": "/accelerate/components/markdown/markdown",
@@ -1124,15 +1124,15 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/markdown/custom-image-loader",
-        "to": "/docs/markdown/imageloader"
+        "to": "/controls/data-display/text-display/imageloader"
     },
     {
         "from": "/accelerate/components/markdown/code-highlighter",
-        "to": "/docs/markdown/codehighlighter"
+        "to": "/controls/data-display/text-display/codehighlighter"
     },
     {
         "from": "/accelerate/components/markdown/styling",
-        "to": "/docs/markdown/markdown-styling"
+        "to": "/controls/data-display/text-display/markdown-styling"
     },
     {
         "from": "/accelerate/components/virtual-keyboard/getting-started",
@@ -1176,11 +1176,11 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/webview/webauthenticationbroker",
-        "to": "/docs/webview/webauthenticationbroker"
+        "to": "/controls/web/webauthenticationbroker"
     },
     {
         "from": "/accelerate/components/webview/interop/environment-options",
-        "to": "/docs/webview/webview-environment"
+        "to": "/controls/web/webview-environment"
     },
     {
         "from": [

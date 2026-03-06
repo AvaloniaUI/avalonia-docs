@@ -19,6 +19,8 @@ You will probably use these properties most often:
 | `ButtonSpinnerLocation` | The location of the spinner buttons. Choose from left and right (default).                                                  |
 | `AllowSpin`             | Determines if incrementing and decrementing using the spinner buttons, keyboard and mouse wheel is active. Default is true. |
 | `ShowButtonSpinner`     | Determines whether the spinner buttons are shown. Default is true.                                                          |
+| `InnerLeftContent`      | Content displayed inside the input area on the left side (e.g., a currency symbol).                                         |
+| `InnerRightContent`     | Content displayed inside the input area on the right side (e.g., a unit label).                                             |
 
 ## Examples
 

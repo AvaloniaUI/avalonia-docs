@@ -70,8 +70,12 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Layout',
       collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'layout/layout',
+      },
       items: [
-        'layout/layout',
+        'layout/choosing-a-layout-panel',
         'layout/positioning-controls',
       ],
     },
@@ -345,10 +349,19 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Testing',
       collapsed: true,
+      link: { type: 'doc', id: 'testing/index' },
       items: [
-        'testing/setting-up-the-headless-platform',
-        'testing/headless-xunit',
-        'testing/headless-nunit',
+        {
+          type: 'category',
+          label: 'Headless Testing',
+          collapsed: true,
+          link: { type: 'doc', id: 'testing/setting-up-the-headless-platform' },
+          items: [
+            'testing/headless-xunit',
+            'testing/headless-nunit',
+          ],
+        },
+        'testing/ui-testing-with-appium',
       ],
     },
     {

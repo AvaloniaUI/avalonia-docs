@@ -136,6 +136,47 @@ Then reference the font in XAML:
            Text="Hello in Inter" />
 ```
 
+## OpenType font features
+
+The `FontFeatures` property controls OpenType features such as ligatures, tabular numbers, and alternate glyphs. Features are specified as comma-separated tags using [HarfBuzz syntax](https://harfbuzz.github.io/harfbuzz-hb-common.html#hb-feature-from-string):
+
+```xml
+<!-- Disable contextual alternates and enable tabular numbers -->
+<TextBlock Text="111111 x64 ->" FontFeatures="-calt,+tnum" />
+```
+
+You can apply font features on individual `Run` elements within a `TextBlock`:
+
+```xml
+<TextBlock>
+    <Run Text="Regular: 12345" />
+    <Run Text="Tabular: 12345" FontFeatures="+tnum" />
+</TextBlock>
+```
+
+Or set them on a container using the attached property:
+
+```xml
+<StackPanel TextElement.FontFeatures="+tnum">
+    <TextBlock Text="12345" />
+    <TextBlock Text="67890" />
+</StackPanel>
+```
+
+Common OpenType feature tags:
+
+| Tag | Feature |
+|---|---|
+| `+tnum` / `-tnum` | Enable/disable tabular (fixed-width) numbers. |
+| `+liga` / `-liga` | Enable/disable standard ligatures. |
+| `+calt` / `-calt` | Enable/disable contextual alternates. |
+| `+smcp` | Enable small capitals. |
+| `+onum` | Enable old-style (proportional) numbers. |
+
+:::info
+Available features depend on the font. Not all fonts support all OpenType features.
+:::
+
 ## Customizing font matching
 
 For advanced font handling, you can override methods on your font collection to control how Avalonia selects fallback fonts and creates synthetic typefaces.

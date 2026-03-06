@@ -9,7 +9,7 @@ The border control decorates a (single) child with a border and background. It c
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Background</code></td><td>Background color.</td></tr><tr><td><code>BorderBrush</code></td><td>Border color.</td></tr><tr><td><code>BorderThickness</code></td><td>Border line thickness (integer).</td></tr><tr><td><code>CornerRadius</code></td><td>Radius for all four corners (one value), or specified as list - see below.</td></tr><tr><td><code>BoxShadow</code></td><td>Defines a shadow (see below).</td></tr></tbody></table>
+<table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Background</code></td><td>Background color.</td></tr><tr><td><code>BorderBrush</code></td><td>Border color.</td></tr><tr><td><code>BorderThickness</code></td><td>Border line thickness (integer).</td></tr><tr><td><code>CornerRadius</code></td><td>Radius for all four corners (one value), or specified as list - see below.</td></tr><tr><td><code>BoxShadow</code></td><td>Defines a shadow (see below).</td></tr><tr><td><code>BackgroundSizing</code></td><td>Controls how the background is rendered relative to the border. Options: <code>CenterBorder</code> (default, centered on border thickness), <code>InnerBorderEdge</code> (fills inside the border), <code>OuterBorderEdge</code> (extends to the outer edge).</td></tr></tbody></table>
 
 ## Corner radius property
 

@@ -10,295 +10,21 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
-## Overview
+`NativeWebDialog` is a dialog window that hosts a native web browser. It is useful on platforms like Linux where an embedded `NativeWebView` control is not available, or when you want to show web content in a separate window without embedding it in your layout.
 
-`NativeWebDialog` is a dialog window that hosts a native web browser implementation. It provides a way to display web content in a separate window, particularly useful for platforms like Linux where embedded WebView controls might not be available.
+## Useful Properties
 
-## Properties
+| Property | Type | Description |
+|---|---|---|
+| `Title` | `string?` | The dialog window title. |
+| `CanUserResize` | `bool` | Whether the user can resize the dialog. |
+| `Source` | `Uri` | The URI of the page displayed in the WebView. Setting this property is equivalent to calling `Navigate()`. Default: `about:blank`. |
+| `CanGoBack` | `bool` | Read-only. `true` when the WebView can navigate back in history. |
+| `CanGoForward` | `bool` | Read-only. `true` when the WebView can navigate forward in history. |
 
-### Title
+## Basic Example
 
-```csharp
-public string? Title { get; set; }
-```
-
-Gets or sets the dialog window title.
-
-### CanUserResize
-
-```csharp
-public bool CanUserResize { get; set; }
-```
-
-Gets or sets whether the dialog can be resized by the user.
-
-### Source
-
-```csharp
-public Uri Source { get; set; }
-```
-
-The URI of the top-level document displayed in the WebView. Setting this property is equivalent to calling `Navigate()`.
-
-Default value: `about:blank`
-
-### CanGoBack
-
-```csharp
-public bool CanGoBack { get; }
-```
-
-Indicates whether the WebView can navigate to a previous page in the navigation history.
-
-### CanGoForward
-
-```csharp
-public bool CanGoForward { get; }
-```
-
-Indicates whether the WebView can navigate to a next page in the navigation history.
-
-## Events
-
-### Closing
-
-```csharp
-public event EventHandler Closing;
-```
-
-Fires before the WebView dialog is closed.
-
-### AdapterCreated
-
-```csharp
-public event EventHandler<WebViewAdapterEventArgs>? AdapterCreated;
-```
-
-Fires after the underlying WebView adapter has been initialized.
-
-### AdapterDestroyed
-
-```csharp
-public event EventHandler<WebViewNavigationCompletedEventArgs>? AdapterDestroyed;
-```
-
-Fires after the underlying WebView adapter has been destroyed.
-
-### EnvironmentRequested
-
-```csharp
-public event EventHandler<WebViewEnvironmentRequestedEventArgs>? EnvironmentRequested;
-```
-
-Fired before the underlying WebView adapter is created, allowing customization of the WebView environment.
-Use this event to modify environment options (such as enabling private mode or dev tools) before the WebView is initialized.
-The event argument type depends on the platform.
-
-See the page on [environment options](/docs/webview/webview-environment) for details.
-
-### NavigationCompleted
-
-```csharp
-public event EventHandler<WebViewNavigationCompletedEventArgs>? NavigationCompleted;
-```
-
-Fires after navigation of the top-level document completes rendering, either successfully or unsuccessfully.
-
-### NavigationStarted
-
-```csharp
-public event EventHandler<WebViewNavigationStartingEventArgs>? NavigationStarted;
-```
-
-Fires before a new navigation starts for the top-level document.
-
-### NewWindowRequested
-
-```csharp
-public event EventHandler<WebViewNewWindowRequestedEventArgs>? NewWindowRequested;
-```
-
-Fires when the WebView requests opening a new window (for example, from `window.open()` or a link with `target="_blank"`).
-
-### WebMessageReceived
-
-```csharp
-public event EventHandler<WebMessageReceivedEventArgs>? WebMessageReceived;
-```
-
-Fires after web content sends a message to the app host via `invokeCSharpAction(body)`.
-
-### WebResourceRequested
-
-```csharp
-public event EventHandler<WebResourceRequestedEventArgs>? WebResourceRequested;
-```
-
-Fires when the WebView is performing a URL request to a matching URL.
-Arguments include request information, and headers dictionary.
-
-:::note
-The headers dictionary can be read-only depending on the request or platform.
-Always check the result of the `TrySet` and `TryRemove` methods.
-:::
-
-## Methods
-
-### Show
-
-```csharp
-public void Show()
-```
-
-Opens the WebView dialog.
-
-### Show (with owner)
-
-```csharp
-public bool Show(IPlatformHandle owner)
-```
-
-Opens the WebView dialog with a specified owner window.
-
-### Close
-
-```csharp
-public void Close()
-```
-
-Closes the WebView dialog.
-
-### Resize
-
-```csharp
-public bool Resize(int width, int height)
-```
-
-Resizes the dialog window to the specified dimensions.
-
-### Move
-
-```csharp
-public bool Move(int x, int y)
-```
-
-Moves the dialog window to the specified screen coordinates.
-
-### Navigate
-
-```csharp
-public void Navigate(Uri url)
-```
-
-Navigates the WebView to the specified URI.
-
-### NavigateToString
-
-```csharp
-public void NavigateToString(string text)
-```
-
-Renders the provided HTML string as the top-level document.
-
-### InvokeScript
-
-```csharp
-public Task<string?> InvokeScript(string scriptName)
-```
-
-Executes the provided JavaScript in the top-level document.
-
-### GoBack
-
-```csharp
-public bool GoBack()
-```
-
-Navigates to the previous page in navigation history. Returns `false` if navigation is not possible.
-
-### GoForward
-
-```csharp
-public bool GoForward()
-```
-
-Navigates to the next page in navigation history. Returns `false` if navigation is not possible.
-
-### Refresh
-
-```csharp
-public bool Refresh()
-```
-
-Reloads the current page.
-
-### Stop
-
-```csharp
-public bool Stop()
-```
-
-Stops any ongoing navigation.
-
-### ShowPrintUI
-
-```csharp
-void ShowPrintUI();
-```
-
-Opens the print dialog to print the current web page.
-
-### PrintToPdfStreamAsync
-
-```csharp
-Task<Stream> PrintToPdfStreamAsync();
-```
-
-Provides the PDF data of the current web page asynchronously.
-
-:::note
-
-This API does not accept extended print options such as margin or orientation.
-For wider platform support we recommend using custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
-
-:::
-
-### TryGetCommandManager
-
-```csharp
-public NativeWebViewCommandManager? TryGetCommandManager()
-```
-
-Returns an instance of `NativeWebViewCommandManager` for executing common keyboard commands if supported by the platform.
-
-### TryGetCookieManager
-
-```csharp
-public NativeWebViewCookieManager? TryGetCookieManager()
-```
-
-Returns an instance of `NativeWebViewCookieManager` for managing cookies if supported by the platform.
-
-### TryGetWebViewPlatformHandle
-
-```csharp
-public IPlatformHandle? TryGetWebViewPlatformHandle()
-```
-
-Gets the platform handle of the WebView hosted inside the dialog.
-See the page on [embedding web content](/docs/app-development/embedding-web-content) for details.
-
-### TryGetPlatformHandle
-
-```csharp
-public IPlatformHandle? TryGetPlatformHandle()
-```
-
-Returns the platform handle of the dialog window itself.
-For an Avalonia dialog, the returned value is the Avalonia window handle.
-For a GTK native dialog, the returned value uses `GtkWindow` as the handle.
-
-## Usage Example
+Create a dialog, navigate to a URL, and wait for it to close:
 
 ```csharp
 var dialog = new NativeWebDialog
@@ -308,34 +34,152 @@ var dialog = new NativeWebDialog
     Source = new Uri("https://docs.avaloniaui.net/")
 };
 
-// Create TaskCompletionSource so we can wait until window is closed.
 var tcs = new TaskCompletionSource();
 dialog.Closing += (s, e) => tcs.SetResult();
 
-// Show the dialog
 dialog.Show(mainWindow);
 
 await tcs.Task;
 ```
 
+You can also load HTML directly:
+
+```csharp
+var dialog = new NativeWebDialog { Title = "Preview" };
+dialog.Show();
+dialog.NavigateToString("<h1>Hello from Avalonia</h1>");
+```
+
+## Showing the Dialog
+
+Call `Show()` to open the dialog as a standalone window, or `Show(IPlatformHandle)` to open it with an owner:
+
+```csharp
+// Standalone
+dialog.Show();
+
+// With an owner window
+dialog.Show(mainWindow);
+```
+
+Use `Close()` to dismiss it programmatically. The `Closing` event fires before the dialog closes, allowing you to perform cleanup.
+
+## Navigation
+
+| Method | Description |
+|---|---|
+| `Navigate(Uri)` | Navigates to the specified URI. |
+| `NavigateToString(string)` | Renders an HTML string as the page content. |
+| `GoBack()` | Navigates back. Returns `false` if there is no history. |
+| `GoForward()` | Navigates forward. Returns `false` if there is no history. |
+| `Refresh()` | Reloads the current page. |
+| `Stop()` | Stops any in-progress navigation. |
+
+## Running JavaScript
+
+Execute JavaScript in the loaded page and receive the result:
+
+```csharp
+var result = await dialog.InvokeScript("document.title");
+```
+
+To receive messages from JavaScript, subscribe to `WebMessageReceived`. Web content sends messages by calling `invokeCSharpAction(body)`:
+
+```csharp
+dialog.WebMessageReceived += (sender, e) =>
+{
+    var message = e.Body;
+    // Process the message from JavaScript
+};
+```
+
+## Printing
+
+| Method | Description |
+|---|---|
+| `ShowPrintUI()` | Opens the platform print dialog. |
+| `PrintToPdfStreamAsync()` | Returns the current page as a PDF stream. |
+
+:::note
+`PrintToPdfStreamAsync` does not accept extended print options such as margin or orientation. For broader platform support, use CSS rules with [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
+:::
+
+## Intercepting Requests
+
+The `WebResourceRequested` event fires when the WebView makes a URL request, allowing you to inspect or modify headers:
+
+```csharp
+dialog.WebResourceRequested += (sender, e) =>
+{
+    // Inspect e.Request and e.Headers
+};
+```
+
+:::note
+The headers dictionary can be read-only depending on the request or platform. Always check the result of the `TrySet` and `TryRemove` methods.
+:::
+
+## Environment Options
+
+The `EnvironmentRequested` event fires before the WebView adapter is created, letting you customize options such as enabling private mode or developer tools:
+
+```csharp
+dialog.EnvironmentRequested += (sender, e) =>
+{
+    // Configure WebView environment before initialization
+};
+```
+
+See [WebView environment options](/docs/webview/webview-environment) for details. The event argument type depends on the platform.
+
+## Window Sizing and Position
+
+| Method | Description |
+|---|---|
+| `Resize(int, int)` | Resizes the dialog to the specified width and height. |
+| `Move(int, int)` | Moves the dialog to the specified screen coordinates. |
+
+## Advanced
+
+| Method | Description |
+|---|---|
+| `TryGetCommandManager()` | Returns a `NativeWebViewCommandManager` for keyboard commands (copy, paste, etc.) if supported. |
+| `TryGetCookieManager()` | Returns a `NativeWebViewCookieManager` for managing cookies if supported. |
+| `TryGetWebViewPlatformHandle()` | Returns the platform handle of the hosted WebView. See [embedding web content](/docs/app-development/embedding-web-content). |
+| `TryGetPlatformHandle()` | Returns the platform handle of the dialog window itself. |
+
+## Events
+
+| Event | Description |
+|---|---|
+| `Closing` | Fires before the dialog closes. |
+| `AdapterCreated` | Fires after the WebView adapter has been initialized. |
+| `AdapterDestroyed` | Fires after the WebView adapter has been destroyed. |
+| `EnvironmentRequested` | Fires before the WebView adapter is created. Used to configure environment options. |
+| `NavigationStarted` | Fires before a new navigation begins. |
+| `NavigationCompleted` | Fires after navigation completes (successfully or not). |
+| `NewWindowRequested` | Fires when the WebView requests opening a new window (for example, from `window.open()`). |
+| `WebMessageReceived` | Fires when web content calls `invokeCSharpAction(body)`. |
+| `WebResourceRequested` | Fires when the WebView makes a URL request. |
+
 ## Platform Support
 
-| Feature            | Windows | macOS | Linux | iOS   | Android | Browser |
-|--------------------|---------|-------|-------|-------|---------|---------|
-| `Show`               | ✓       | ✓     | ✓     | ✗     | ✗       | ✗       |
-| `Show(Window)`       | ✓       | ✓     | ✓*    | ✗     | ✗       | ✗       |
-| `WebMessageReceived` | ✓       | ✓     | ✗     | ✗     | ✗       | ✗       |
-| `ShowPrintUI` | ✓                    | ✓     | ✓        | ✗     | ✗      | ✗       |
-| `PrintToPdfStreamAsync`  | ✓                    | ✓**     | ✓        | ✗     | ✗      | ✗       |
+| Feature | Windows | macOS | Linux | iOS | Android | Browser |
+|---|---|---|---|---|---|---|
+| `Show` | Yes | Yes | Yes | No | No | No |
+| `Show(Window)` | Yes | Yes | Yes* | No | No | No |
+| `WebMessageReceived` | Yes | Yes | No | No | No | No |
+| `ShowPrintUI` | Yes | Yes | Yes | No | No | No |
+| `PrintToPdfStreamAsync` | Yes | Yes** | Yes | No | No | No |
 
-\* Linux support may vary depending on the window manager
+\* Linux support may vary depending on the window manager.
 
-\** macOS does not support extended `PrintToPdfStreamAsync` print options. Use custom CSS rules - [@media print](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media#print) and [@page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@page).
+\** macOS does not support extended `PrintToPdfStreamAsync` print options. Use CSS `@media print` and `@page` rules instead.
 
 ## See also
 
-- [NativeWebView](/controls/web/nativewebview)
-- [WebAuthenticationBroker](/docs/webview/webauthenticationbroker)
-- [WebView environment options](/docs/webview/webview-environment)
-- [Embedding web content](/docs/app-development/embedding-web-content)
-- [FAQ](/tools/faq#webview)
+- [NativeWebView](/controls/web/nativewebview): Embeddable WebView control for use inside your layout.
+- [WebAuthenticationBroker](/docs/webview/webauthenticationbroker): OAuth and web-based authentication flows.
+- [WebView environment options](/docs/webview/webview-environment): Configuring the WebView environment.
+- [Embedding web content](/docs/app-development/embedding-web-content): Hosting web content inside Avalonia apps.
+- [FAQ](/tools/faq#webview): Common WebView questions.

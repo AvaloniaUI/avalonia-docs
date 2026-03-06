@@ -108,6 +108,7 @@ const sidebars: SidebarsConfig = {
           items:[
               'input/buttons/button',
               'input/buttons/buttonspinner',
+              'input/buttons/hyperlinkbutton',
               'input/buttons/radiobutton',
               'input/buttons/repeatbutton',
               'input/buttons/splitbutton',

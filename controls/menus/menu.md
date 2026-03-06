@@ -137,6 +137,28 @@ To initiate an action, the command property of a menu item can be bound to an `I
 For guidance on how to bind to commands, see [Adding interactivity](/docs/input-interaction/adding-interactivity).
 :::
 
+## Toggle and radio menu items
+
+Set the `ToggleType` property on a `MenuItem` to create checkable or radio-style menu items:
+
+```xml
+<MenuItem Header="_View">
+    <MenuItem Header="Show Toolbar" ToggleType="CheckBox" IsChecked="{Binding ShowToolbar}" />
+    <MenuItem Header="Show Status Bar" ToggleType="CheckBox" IsChecked="{Binding ShowStatusBar}" />
+    <Separator />
+    <MenuItem Header="Light" ToggleType="Radio" GroupName="Theme"
+              IsChecked="{Binding IsLightTheme}" />
+    <MenuItem Header="Dark" ToggleType="Radio" GroupName="Theme"
+              IsChecked="{Binding IsDarkTheme}" />
+</MenuItem>
+```
+
+| ToggleType | Behavior |
+|---|---|
+| `None` | Standard menu item (default). |
+| `CheckBox` | Toggles `IsChecked` independently. |
+| `Radio` | Only one item in the same `GroupName` can be checked at a time. |
+
 ## Menu icons
 
 A menu icon can be displayed by placing an image or a path icon in the `<MenuItem.Icon>` attached property.

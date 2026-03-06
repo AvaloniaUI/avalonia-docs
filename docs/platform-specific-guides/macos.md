@@ -34,7 +34,7 @@ macOS shows your application's name in several places: the menu bar, the "About"
 | Menu bar (bold app name) | `CFBundleName` in `Info.plist` (bundled), or `Application.Name` (unbundled) | `CFBundleName` is limited to 15 characters. |
 | Dock tooltip | `CFBundleDisplayName` in `Info.plist`, falling back to `CFBundleName` | Use `CFBundleDisplayName` for names longer than 15 characters. |
 | "About" menu item | Header text of your `NativeMenuItem` | You control this text entirely. |
-| "Quit" menu item | `CFBundleName` or `Application.Name` | Avalonia generates "Quit {name}" automatically. |
+| "Quit" menu item | `CFBundleName` or `Application.Name` | Avalonia generates "Quit App Name" automatically. |
 | Window title bar | `Window.Title` property | Independent of the app name. |
 
 ### Setting the application name
