@@ -25,7 +25,7 @@ Android allows an app to register as a file or protocol handler. This guide show
     DataSchemes = ["file", "content"],
     DataMimeType = "text/plain",
     DataPathPattern = ".*\\.txt")]
-public class MainActivity : AvaloniaMainActivity<App>
+public class MainActivity : AvaloniaMainActivity
 {
     public MainActivity()
     {

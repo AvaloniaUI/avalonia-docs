@@ -198,6 +198,13 @@ public class MainActivity :
 
 PR: [#18756](https://github.com/AvaloniaUI/Avalonia/pull/18756)
 
+## [Android] Removed CreateAppBuilder and CustomizeAppBuilder from AvaloniaMainActivity
+
+The `CreateAppBuilder()` and `CustomizeAppBuilder(AppBuilder)` virtual methods have been removed from `AvaloniaMainActivity`. These methods were previously marked as obsolete and are no longer called by the framework. App initialization is now handled entirely through `AvaloniaAndroidApplication<TApp>`, as described in the section above.
+
+If you were overriding these methods, move that logic into your `AvaloniaAndroidApplication<TApp>` subclass or your `App` class instead.
+
+PR: [#20715](https://github.com/AvaloniaUI/Avalonia/pull/20715)
 
 ## [iOS] App initialization changed
 
