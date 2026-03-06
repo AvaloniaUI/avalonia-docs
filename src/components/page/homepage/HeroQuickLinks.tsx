@@ -44,11 +44,11 @@ function QuickLinkCard({
         {title}
       </h3>
       <span
-        className="text-[#686770]"
         style={{
           fontSize: '15px',
           lineHeight: '24px',
           letterSpacing: '0.32px',
+          color: '#686770',
         }}
       >
         {description}
@@ -81,55 +81,58 @@ export default function HeroQuickLinks(): JSX.Element {
     {
       description: 'Set up your development environment.',
       title: 'Installation',
-      href: '/docs/get-started/',
+      href: '/docs/get-started/install-avalonia',
       icon: Download,
     },
     {
       description: 'Step-by-step walkthrough for new developers.',
       title: 'Build your first app',
-      href: '/docs/get-started/starter-tutorial',
+      href: '/docs/get-started/starter-tutorial/',
       icon: BookOpen,
-    },
-    {
-      description: 'Watch guided video walkthroughs.',
-      title: 'Video tutorials',
-      href: 'https://www.youtube.com/playlist?list=PLrW43fNmjaQWwIdZxjZrx5FSXcNzaucOO',
-      icon: PlayCircle,
-    },
-    {
-      description: 'Clone and explore real-world examples.',
-      title: 'Get sample code',
-      href: '/docs/samples-tutorials',
-      icon: Code2,
-    },
-    {
-      description: 'See the latest features and improvements.',
-      title: "What's new?",
-      href: 'https://github.com/AvaloniaUI/Avalonia/releases',
-      icon: Megaphone,
-    },
-    {
-      description: 'Connect with the Avalonia community.',
-      title: 'Join the community',
-      href: '/docs/community',
-      icon: Users,
-    },
+    }
   ];
 
   return (
-    <section className="py-12">
-      <div className="container">
+    <section className="py-24 px-6" style={{ backgroundColor: 'var(--homepage-bg, #F3F1F0)' }}>
+      <div className="max-w-[1200px] mx-auto">
+        {/* Section label */}
+        <p
+          className="uppercase mb-4"
+          style={{
+            fontSize: '12px',
+            letterSpacing: '2.4px',
+            fontWeight: 380,
+            color: '#696460',
+          }}
+        >
+          Documentation
+        </p>
+
+        {/* Heading */}
+        <h2
+          className="text-[#21253B] dark:text-white mb-16 max-w-3xl"
+          style={{
+            fontWeight: 380,
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            lineHeight: '1.2',
+            letterSpacing: '-0.96px',
+          }}
+        >
+          Everything you need to build with Avalonia.
+        </h2>
+
+        {/* 4x2 grid with dividers (matching marketing pattern) */}
         <div
           className="grid md:grid-cols-4"
-          style={{ borderTop: '1px solid rgba(0,0,0,0.08)' }}
+          style={{ borderTop: '1px solid #E3DFDC' }}
         >
           {quickLinks.map((link, index) => (
             <div
               key={index}
               className={index % 4 !== 3 ? 'md:border-r' : ''}
               style={{
-                borderBottom: '1px solid rgba(0,0,0,0.08)',
-                borderColor: 'rgba(0,0,0,0.08)',
+                borderBottom: '1px solid #E3DFDC',
+                borderColor: '#E3DFDC',
               }}
             >
               <QuickLinkCard

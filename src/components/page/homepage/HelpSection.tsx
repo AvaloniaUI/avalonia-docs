@@ -1,6 +1,27 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import clsx from 'clsx';
+import { PrimaryButton } from '@site/src/components/ui/PrimaryButton';
+
+const helpCards = [
+  {
+    title: 'Enhanced Support',
+    description: 'Partner with the creators of Avalonia to ensure you have full support, every step of the way.',
+    link: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
+    linkText: 'Explore Subscriptions',
+  },
+  {
+    title: 'Development Services',
+    description: "Whether it's app modernization, custom controls or additional features, we're here to help.",
+    link: 'https://avaloniaui.net/services?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
+    linkText: 'Learn More',
+  },
+  {
+    title: 'FAQs',
+    description: 'Browse our FAQs to find answers to commonly asked questions.',
+    link: 'https://avaloniaui.net/faq?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
+    linkText: 'View FAQs',
+  },
+];
 
 interface HelpSectionProps {
   className?: string;
@@ -8,63 +29,67 @@ interface HelpSectionProps {
 
 export default function HelpSection({ className = '' }: HelpSectionProps): JSX.Element {
   return (
-    <section className="px-4 py-10" style={{ backgroundColor: 'var(--help-section-bg, #FFFFFF)' }}>
-      <div
-        className={clsx(
-          'mx-auto max-w-7xl p-4 py-10 lg:p-24 lg:py-20',
-          className
-        )}
-      >
-        <h2 className="mb-12 text-center text-[#21253B] dark:text-white lg:text-5xl" style={{ fontWeight: 500 }}>
+    <section className={`px-6 py-24 ${className}`} style={{ backgroundColor: 'var(--homepage-bg, #F3F1F0)' }}>
+      <div className="mx-auto max-w-[1200px]">
+        {/* Section label */}
+        <p
+          className="uppercase mb-4"
+          style={{
+            fontSize: '12px',
+            letterSpacing: '2.4px',
+            fontWeight: 380,
+            color: '#696460',
+          }}
+        >
+          Support
+        </p>
+
+        {/* Heading */}
+        <h2
+          className="text-[#21253B] dark:text-white mb-16 max-w-3xl"
+          style={{
+            fontWeight: 380,
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            lineHeight: '1.2',
+            letterSpacing: '-0.96px',
+          }}
+        >
           How can we help?
         </h2>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <div className="rounded-2xl bg-[#F3F1F0] dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
 
-            <h3 className="my-3 text-[#21253B] dark:text-white font-medium">Premium Support</h3>
-            <p className="text-[#686770] dark:text-[#C1BBB8]">
-            Partner with the creators of Avalonia to ensure you have full support, every step of the way.
-            </p>
-            <Link
-              href="https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=homepage_link"
-              className="text-primary-00 dark:text-primary-100"
+        {/* Cards grid with dividers (matching marketing FeaturesSection pattern) */}
+        <div className="grid md:grid-cols-3" style={{ borderTop: '1px solid #E3DFDC' }}>
+          {helpCards.map((card, i) => (
+            <div
+              key={card.title}
+              className={`border-b ${i % 3 !== 2 ? 'md:border-r' : ''}`}
+              style={{ borderColor: '#E3DFDC' }}
             >
-              Explore Subscriptions &rarr;
-            </Link>
-          </div>
-
-          <div className="rounded-2xl bg-[#F3F1F0] dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-
-            <h3 className="my-3 text-[#21253B] dark:text-white font-medium">Development Services</h3>
-            <p className="text-[#686770] dark:text-[#C1BBB8]">
-              Whether it's app modernization, custom controls or additional features, we're here to help.
-            </p>
-            <Link
-              href="https://avaloniaui.net/services?utm_source=docs&utm_medium=referral&utm_content=homepage_link"
-              className="text-primary-500 dark:text-primary-100"
-            >
-              Learn More &rarr;
-            </Link>
-          </div>
-
-          <div className="rounded-2xl bg-[#F3F1F0] dark:bg-[#05051E] p-6" style={{ border: '1px solid rgba(0,0,0,0.06)' }}>
-            <h3 className="my-3 text-[#21253B] dark:text-white font-medium">FAQs</h3>
-            <p className="text-[#686770] dark:text-[#C1BBB8]">
-              Browse our FAQs to find answers to commonly asked
-              questions.
-            </p>
-            <Link href="https://avaloniaui.net/faq?utm_source=docs&utm_medium=referral&utm_content=homepage_link" className="text-primary-500 dark:text-primary-100">
-              View FAQs &rarr;
-            </Link>
-          </div>
+              <div className="flex flex-col p-8">
+                <h3
+                  className="text-[#21253B] dark:text-white mb-2"
+                  style={{ fontSize: '20px', lineHeight: '28px', letterSpacing: '-0.02em', fontWeight: 500 }}
+                >
+                  {card.title}
+                </h3>
+                <p
+                  className="mb-6"
+                  style={{ fontSize: '15px', lineHeight: '24px', letterSpacing: '0.32px', color: '#686770' }}
+                >
+                  {card.description}
+                </p>
+                <Link
+                  href={card.link}
+                  className="text-[#007DF9] no-underline hover:underline"
+                  style={{ fontSize: '15px', fontWeight: 500 }}
+                >
+                  {card.linkText} &rarr;
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
-      <style>{`
-        [data-theme='dark'] {
-          --help-section-bg: #0B2A54;
-        }
-      `}</style>
     </section>
   );
 }

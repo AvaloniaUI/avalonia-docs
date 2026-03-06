@@ -1,62 +1,144 @@
-import React from 'react';
-import Link from '@docusaurus/Link';
-import { BlueSkyIcon, LinkedIn2Icon, TelegramIcon } from '@site/src/icons';
+import React, { useEffect, useRef, useState } from 'react';
+import { PrimaryButton } from '@site/src/components/ui/PrimaryButton';
 
-const githubUsernames: string[] = [
-  'grokys',
-  'kekekeks',
-  'maxkatz6',
-  'Gillibald',
-  'jmacato',
-  'jkoritzinsky',
-  'wieslawsoltes',
-  'MrJul',
-  'timunie',
-  'Mikolaytis',
-  'ncarrillo-zz',
-  'Deadpikle',
+const stats: { value: string; numericValue?: number; label: string }[] = [
+  { value: 'Most-starred', label: '.NET UI on GitHub' },
+  { value: '534', numericValue: 534, label: 'Contributors' },
+  { value: '124,340,248', numericValue: 124340248, label: 'Installs' },
+  { value: '30,043', numericValue: 30043, label: 'Stargazers' },
 ];
 
-export default function CommunitySection(): JSX.Element {
+
+function formatNumber(n: number): string {
+  return n.toLocaleString('en-US');
+}
+
+function useCountUp(target: number, duration: number, trigger: boolean) {
+  const [value, setValue] = useState(0);
+  const frameRef = useRef<number>(0);
+
+  useEffect(() => {
+    if (!trigger) return;
+
+    const start = performance.now();
+    const ease = (t: number) => 1 - Math.pow(1 - t, 3);
+
+    function tick(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = ease(progress);
+      setValue(Math.round(eased * target));
+
+      if (progress < 1) {
+        frameRef.current = requestAnimationFrame(tick);
+      }
+    }
+
+    frameRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frameRef.current);
+  }, [target, duration, trigger]);
+
+  return value;
+}
+
+function AnimatedStat({ stat, visible }: { stat: (typeof stats)[number]; visible: boolean }) {
+  const animatedValue = useCountUp(stat.numericValue ?? 0, 2000, visible);
+
+  const displayValue = stat.numericValue != null
+    ? formatNumber(animatedValue)
+    : stat.value;
+
   return (
-    <section className="no-underline-links">
-      <div className="mx-auto flex w-full flex-col items-center justify-center px-4 py-16 pt-64 text-white dark:from-zinc-200/90 dark:to-white dark:text-zinc-700">
-        <h2 className="text-3xl text-[#21253B] dark:text-[#F3F1F0] font-medium">
-          Join the <span className="text-primary">community</span>
-        </h2>
-        <p className="mb-10 text-[#21253B] dark:text-[#F3F1F0]">
-          Join us and be welcomed into our supportive and vibrant community.
-        </p>
-        <div className="mx-auto mb-16 flex flex-wrap -space-x-1.5">
-          {githubUsernames.map((username) => (
-            <img
-              key={username}
-              src={`https://github.com/${username}.png?size=60`}
-              alt={`User ${username}`}
-              loading="lazy"
-              className="h-6 w-6 rounded-full border-2 border-solid border-[#F3F1F0] transition hover:-translate-y-2 hover:scale-150 lg:h-12 lg:w-12"
-            />
-          ))}
-        </div>
-        <div className="flex w-full flex-col items-center justify-center gap-2 text-sm font-semibold lg:flex-row lg:gap-8">
-          <Link
-            className="flex w-full items-center justify-center gap-2 rounded-xl border border-solid border-primary bg-primary/10 px-2 py-2 text-primary lg:w-auto"
-            href="https://t.me/Avalonia"
-          >
-            <TelegramIcon className="h-6 w-6" /> Telegram &rarr;
-          </Link>
-          <Link
-            className="flex w-full items-center justify-center gap-2 rounded-xl border border-solid border-primary bg-primary/10 px-2 py-2 text-primary lg:w-auto"
-            href="https://bsky.app/profile/avaloniaui.net"
-          >
-            <BlueSkyIcon className="h-5 w-5" /> Bluesky &rarr;
-          </Link>
-          <Link
-            className="flex w-full items-center justify-center gap-2 rounded-xl border border-solid border-primary bg-primary/10 px-2 py-2 text-primary lg:w-auto"
-            href="https://www.linkedin.com/company/avaloniaui"
-          >
-            <LinkedIn2Icon className="h-5 w-5" /> LinkedIn &rarr;
-          </Link>
+    <div>
+      <p
+        className="text-white font-medium whitespace-nowrap m-0"
+        style={{ fontSize: '20px', lineHeight: '28px', letterSpacing: '-0.4px' }}
+      >
+        {displayValue}
+      </p>
+      <p
+        className="whitespace-nowrap m-0"
+        style={{ fontSize: '12px', lineHeight: '18px', letterSpacing: '0.24px', color: '#9ED0F6', opacity: 0.8 }}
+      >
+        {stat.label}
+      </p>
+    </div>
+  );
+}
+
+export default function CommunitySection(): JSX.Element {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section className="relative overflow-hidden py-24">
+      {/* Blue gradient background */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(135deg, #0B2A54 0%, #007DF9 50%, #0F4278 100%)',
+        }}
+      />
+      {/* Noise overlay for texture */}
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 50%)',
+        }}
+      />
+
+      <div ref={sectionRef} className="relative z-10 max-w-[1200px] mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left: content */}
+          <div>
+            <h2
+              className="text-white mb-8"
+              style={{
+                fontWeight: 380,
+                fontSize: 'clamp(36px, 5vw, 56px)',
+                lineHeight: '1.15',
+                letterSpacing: '-1.12px',
+              }}
+            >
+              Loved by developers.{'\n'}Trusted by enterprise.
+            </h2>
+
+            {/* Stats grid */}
+            <div className="grid grid-cols-2 sm:flex sm:flex-nowrap gap-y-6 mb-10">
+              {stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className={`pr-5 sm:flex-shrink-0 ${i > 0 ? 'sm:pl-5 sm:border-l sm:border-white/20' : ''}`}
+                >
+                  <AnimatedStat stat={stat} visible={visible} />
+                </div>
+              ))}
+            </div>
+
+            <PrimaryButton to="/docs/welcome" variant="white" size="md">
+              Get Started
+            </PrimaryButton>
+          </div>
+
+      
         </div>
       </div>
     </section>

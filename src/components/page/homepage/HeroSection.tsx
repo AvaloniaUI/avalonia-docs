@@ -24,7 +24,7 @@ export default function HeroSection() {
       {/* Animated blue gradient background (matches marketing site) */}
       <AnimatedBlueLazy />
 
-      {/* Bottom fade overlay — smooths the transition into the page background */}
+      {/* Bottom fade overlay */}
       <div
         className="absolute inset-x-0 bottom-0 z-[1] pointer-events-none"
         style={{
@@ -33,43 +33,43 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Hero content */}
+      {/* Hero content — left-aligned like marketing site */}
       <div
-        className="relative z-10 flex flex-col justify-center items-center"
+        className="relative z-10 mx-auto px-6 sm:px-10 md:px-16 lg:px-20"
         style={{
-          padding: 'clamp(100px, 14vw, 156px) clamp(24px, 6vw, 80px) clamp(40px, 6vw, 80px)',
-          textAlign: 'center',
+          maxWidth: '1600px',
+          paddingTop: 'clamp(140px, 16vw, 200px)',
+          paddingBottom: 'clamp(40px, 8vw, 100px)',
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <h1
             className="text-white"
             style={{
               fontWeight: 380,
-              fontSize: 'clamp(48px, 6vw, 96px)',
+              fontSize: 'clamp(40px, 10vw, 96px)',
               lineHeight: '1.125em',
-              letterSpacing: '-1.92px',
+              letterSpacing: '-0.02em',
             }}
           >
-            The future of .NET UI
+            Avalonia Documentation
           </h1>
 
           <p
-            className="text-white max-w-xl"
+            className="text-white/80"
             style={{
               fontSize: '20px',
-              fontWeight: 300,
-              lineHeight: '32px',
+              fontWeight: 380,
+              lineHeight: '1.6em',
               letterSpacing: '0.4px',
-              opacity: 0.8,
             }}
           >
-            Avalonia Developer Documentation
+            Everything you need to build cross-platform apps with Avalonia, trusted by JetBrains, Unity, and thousands of developers.
           </p>
         </div>
 
-        <div className="flex items-center gap-6" style={{ marginTop: '56px' }}>
-          <PrimaryButton to="/docs/welcome" variant="dark" size="lg">
+        <div className="flex items-center gap-4" style={{ marginTop: '48px' }}>
+          <PrimaryButton to="/docs/get-started/" variant="white" size="lg">
             Get started
           </PrimaryButton>
         </div>

@@ -1,18 +1,12 @@
 import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HeroSection from '../components/page/homepage/HeroSection';
-import HomepageFeatures from '@site/src/components/page/homepage/HomepageFeatures';
 import CommunitySection from '../components/page/homepage/CommunitySection';
-import GuidesAndSamplesSection from '../components/page/homepage/GuidesAndSamples';
 import HelpSection from '../components/page/homepage/HelpSection';
 import HomeFooter from '../components/page/homepage/HomeFooter';
-import ResourcesSection from '../components/page/homepage/ResourcesSection';
-import CTASection from '../components/page/homepage/CallToActionSection';
-import HelloBar from '../components/page/homepage/HelloBar';
 import HeroQuickLinks from '../components/page/homepage/HeroQuickLinks';
+import QuickStartSection from '../components/page/homepage/QuickStartSection';
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
@@ -23,15 +17,9 @@ export default function Home(): JSX.Element {
       noFooter>
       <div style={{ backgroundColor: 'var(--homepage-bg)' }}>
         <HeroSection/>
-
         <HeroQuickLinks />
-
-        <GuidesAndSamplesSection/>
-
-        <div className="z-0">
-          <HelpSection className="-mb-48" />
-        </div>
-
+        <QuickStartSection />
+        <HelpSection />
         <CommunitySection />
         <HomeFooter/>
       </div>
