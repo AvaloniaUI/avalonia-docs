@@ -11,7 +11,9 @@ When your application starts, Avalonia creates a dispatcher that manages work it
 
 If you attempt to access a control from a background thread, Avalonia throws an `InvalidOperationException` with the message "Call from invalid thread."
 
-## Dispatcher.UIThread
+## Accessing a Dispatcher
+
+### Dispatcher.UIThread
 
 The `Dispatcher.UIThread` property provides access to the UI thread's dispatcher from anywhere in your code. Use it to marshal work from background threads to the UI thread.
 
@@ -58,6 +60,37 @@ else
 
 ```csharp
 Dispatcher.UIThread.VerifyAccess(); // Throws if not on UI thread
+```
+
+### AvaloniaObject.Dispatcher
+
+Every `AvaloniaObject` captures the dispatcher for the thread it was created on. Use this property when writing controls or libraries that should work correctly regardless of which dispatcher is active:
+
+```csharp
+// Uses the object's own dispatcher rather than assuming UIThread
+myControl.Dispatcher.Post(() => myControl.IsVisible = false);
+```
+
+For most applications, `AvaloniaObject.Dispatcher` and `Dispatcher.UIThread` return the same instance. The distinction matters for library authors who want to support multiple dispatchers.
+
+### Dispatcher.CurrentDispatcher
+
+Returns the dispatcher for the calling thread, creating one if it does not already exist:
+
+```csharp
+var dispatcher = Dispatcher.CurrentDispatcher;
+```
+
+### Dispatcher.FromThread
+
+Returns the dispatcher associated with a specific thread, or `null` if none exists. Unlike `CurrentDispatcher`, this does not create a new dispatcher:
+
+```csharp
+Dispatcher? dispatcher = Dispatcher.FromThread(Thread.CurrentThread);
+if (dispatcher is not null)
+{
+    dispatcher.Post(() => { /* work */ });
+}
 ```
 
 ## Dispatcher Priority
@@ -156,6 +189,36 @@ timer.Tick += (sender, e) =>
 };
 
 timer.Start();
+```
+
+### Yielding to the dispatcher
+
+`Dispatcher.Yield()` pauses the current async method and queues its continuation on the dispatcher, allowing pending input, layout, and rendering work to process before resuming:
+
+```csharp
+private async Task ProcessItemsAsync(IList<Item> items)
+{
+    foreach (var item in items)
+    {
+        ProcessItem(item);
+
+        // Let the UI thread handle pending events before continuing
+        await Dispatcher.Yield();
+    }
+}
+```
+
+`Yield` is a static method that operates on `Dispatcher.UIThread`. You can specify a priority to control when execution resumes:
+
+```csharp
+// Resume only when the dispatcher is idle
+await Dispatcher.Yield(DispatcherPriority.ApplicationIdle);
+```
+
+For non-static usage or when working with a specific dispatcher instance, use `Resume`:
+
+```csharp
+await myControl.Dispatcher.Resume(DispatcherPriority.Background);
 ```
 
 ## Common Mistakes

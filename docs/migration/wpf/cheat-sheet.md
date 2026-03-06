@@ -185,7 +185,11 @@ Or with a binding converter:
 |---|---|---|
 | `Dispatcher.Invoke()` | `Dispatcher.UIThread.InvokeAsync()` | Async by default |
 | `Dispatcher.BeginInvoke()` | `Dispatcher.UIThread.Post()` | Fire-and-forget |
+| `Dispatcher.CurrentDispatcher` | `Dispatcher.CurrentDispatcher` | Same API |
+| `Dispatcher.FromThread()` | `Dispatcher.FromThread()` | Same API |
+| `DependencyObject.Dispatcher` | `AvaloniaObject.Dispatcher` | Per-object dispatcher |
 | `Dispatcher.CheckAccess()` | `Dispatcher.UIThread.CheckAccess()` | Same |
+| `Dispatcher.Yield()` | `Dispatcher.Yield()` | Same API |
 | `DispatcherPriority` | `DispatcherPriority` | Same enum |
 
 ## Animations
