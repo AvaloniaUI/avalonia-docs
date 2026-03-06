@@ -114,24 +114,24 @@ private void Maximize()
 
 ## Hiding the Title Bar (Chromeless Window)
 
-Create a borderless window for custom chrome:
+Create a borderless window by disabling system decorations:
 
 ```xml
 <Window SystemDecorations="None"
         ExtendClientAreaToDecorationsHint="True"
-        ExtendClientAreaChromeHints="NoChrome"
         Background="Transparent"
         TransparencyLevelHint="AcrylicBlur">
 ```
 
 ### Custom title bar with drag region
 
+Mark an element as a title bar drag region using the `WindowDecorations.ElementRole` attached property. The operating system handles drag and double-click-to-maximize behavior automatically:
+
 ```xml
 <Grid RowDefinitions="32,*">
     <!-- Custom title bar -->
     <Border Grid.Row="0" Background="#1E1E2E"
-            IsHitTestVisible="True"
-            PointerPressed="TitleBar_PointerPressed">
+            WindowDecorations.ElementRole="TitleBar">
         <DockPanel Margin="8,0">
             <TextBlock Text="My App" VerticalAlignment="Center" Foreground="White" />
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal"
@@ -148,13 +148,16 @@ Create a borderless window for custom chrome:
 </Grid>
 ```
 
-```csharp
-private void TitleBar_PointerPressed(object sender, PointerPressedEventArgs e)
-{
-    if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
-        BeginMoveDrag(e);
-}
-```
+The `ElementRole` property supports these values:
+
+| Value | Behavior |
+|---|---|
+| `None` | No special window chrome behavior (default). |
+| `TitleBar` | Acts as a draggable title bar region. |
+| `ResizeN`, `ResizeS`, `ResizeE`, `ResizeW` | Resize grip for the specified edge. |
+| `ResizeNE`, `ResizeNW`, `ResizeSE`, `ResizeSW` | Resize grip for the specified corner. |
+
+Interactive controls inside a `TitleBar` region (such as buttons) continue to receive input normally and do not trigger window dragging.
 
 ## Multi-Window Application
 

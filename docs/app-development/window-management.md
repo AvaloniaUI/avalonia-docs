@@ -72,7 +72,7 @@ The value is returned from the `ShowDialog<T>` call in the parent.
 | `Topmost` | Whether the window stays on top of other windows. |
 | `WindowState` | Current state: `Normal`, `Minimized`, `Maximized`, `FullScreen`. |
 | `SystemDecorations` | Title bar and border style: `Full`, `BorderOnly`, `None`. |
-| `ExtendClientAreaToDecorationsHint` | Extends the client area into the title bar area for custom chrome. |
+| `ExtendClientAreaToDecorationsHint` | Extends the client area into the title bar area for custom chrome. Uses `WindowDrawnDecorations` for application-drawn decorations. |
 | `Icon` | The window icon displayed in the title bar and taskbar. |
 | `TransparencyLevelHint` | Enables window transparency: `None`, `Transparent`, `AcrylicBlur`, `Mica`. |
 
@@ -187,15 +187,15 @@ protected override void OnClosing(WindowClosingEventArgs e)
 
 ## Custom Title Bar
 
-To create a custom title bar, extend the client area into the decorations:
+To create a custom title bar, extend the client area into the decorations and use `WindowDecorations.ElementRole` to mark a region as the title bar:
 
 ```xml
 <Window ExtendClientAreaToDecorationsHint="True"
-        ExtendClientAreaChromeHints="NoChrome"
-        ExtendClientAreaTitleBarHeightHint="-1">
+        SystemDecorations="None">
     <Grid RowDefinitions="32,*">
         <!-- Custom title bar -->
-        <Border Grid.Row="0" Background="#2D2D2D" IsHitTestVisible="True">
+        <Border Grid.Row="0" Background="#2D2D2D"
+                WindowDecorations.ElementRole="TitleBar">
             <TextBlock Text="My App" Foreground="White"
                        VerticalAlignment="Center" Margin="12,0" />
         </Border>
@@ -207,7 +207,9 @@ To create a custom title bar, extend the client area into the decorations:
 </Window>
 ```
 
-Enable window dragging on the custom title bar by handling pointer events or using the platform's native drag support.
+Elements marked with `WindowDecorations.ElementRole="TitleBar"` support native window dragging and double-click-to-maximize. Interactive controls placed inside a title bar region (buttons, text boxes) receive input normally without triggering drag behavior.
+
+For more details on the `ElementRole` values, see the [custom title bar how-to](/docs/how-to/window-how-to#custom-title-bar-with-drag-region).
 
 ## Window Events
 
