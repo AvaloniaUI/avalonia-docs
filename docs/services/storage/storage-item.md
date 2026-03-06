@@ -3,8 +3,6 @@ id: storage-item
 title: Storage Items
 ---
 
-# Storage Items
-
 ## Common members for StorageFile and StorageFolder
 
 ### Name
@@ -20,7 +18,7 @@ Android backend might return file path with "content:" scheme.
 Browser and iOS backends might return relative uris.
 :::
 
-:::warning
+:::caution
 DO NOT use Path property to preserve access to the file or folder. Instead see [Bookmarks](/docs/services/storage/bookmarks) page on how to keep access to the storage items.
 
 DO NOT use Path property to directly read file by its path, as it won't work on most of mobile and browser platforms. Instead use [OpenReadAsync](#openreadasync) and [OpenWriteAsync](#openwriteasync).

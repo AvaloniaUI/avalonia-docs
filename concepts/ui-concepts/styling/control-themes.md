@@ -85,7 +85,7 @@ Like standard styles, control themes support [nested styles](/docs/styling/style
 
 ## Example: Round Button Hover State
 
-Using nested styles we can make our button change color when the pointer is hovered over it:
+Using nested styles, the button can change color when the pointer is hovered over it:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -147,7 +147,7 @@ Notice that this means that only a single control theme can be applied to a cont
 
 ## Example: Make all the Buttons Round
 
-We can apply our new control theme to all of the buttons in the application by simply changing the `x:Key` of the control theme to match the `Button` type.
+To apply the new control theme to all buttons in the application, change the `x:Key` of the control theme to match the `Button` type.
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"

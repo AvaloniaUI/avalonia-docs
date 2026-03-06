@@ -185,7 +185,7 @@ If you created the `.app` on Windows, make sure to run `chmod +x MyApp.app/Conte
 
 ### Signing your app
 
-Once you have your `.app` file created, you'll probably want to sign your app so that it can be notarized and distributed to your users without Gatekeeper giving you a hassle. Notarization is required for apps distributed outside the app store starting in macOS 10.15 \(Catalina\), and you'll have to enable hardened runtime and run `codesign` on your `.app` in order to notarize it successfully.
+Once you have your `.app` file created, you'll probably want to sign your app so that it can be notarized and distributed to your users without Gatekeeper giving you a hassle. Notarization is required for apps distributed outside the app store starting in macOS 10.15 \(Catalina\), and you'll have to enable hardened runtime and run `codesign` on your `.app` to notarize it successfully.
 
 Hardened runtime is a macOS security policy that restricts what your app can do at runtime. It prevents things like code injection, unsigned library loading, and access to certain system resources unless you explicitly opt in via entitlements. Apple requires hardened runtime for all notarized apps.
 
@@ -193,7 +193,7 @@ You'll need a Mac computer for this step, unfortunately, as we have to run the `
 
 ### Running codesign and enabling hardened runtime
 
-Enabling hardened runtime is done in the same step as code signing. You have to codesign everything in the `.app` bundle under the `Contents/MacOS` folder, which is easiest to do with a script since there are a lot of files. In order to sign your files, you need an Apple developer account. In order to notarize your app, you'll need to do the following steps with a Developer ID certificate, which requires a paid Apple developer subscription.
+Enabling hardened runtime is done in the same step as code signing. You have to codesign everything in the `.app` bundle under the `Contents/MacOS` folder, which is easiest to do with a script since there are a lot of files. To sign your files, you need an Apple developer account. To notarize your app, you'll need to do the following steps with a Developer ID certificate, which requires a paid Apple developer subscription.
 
 You'll also need to have the Xcode command line tools installed. You can get those by installing Xcode and running it or by running `xcode-select --install` on the command line and following the prompts to install the tools
 
@@ -275,7 +275,7 @@ You need a lot of things:
 * Transporter app installed from App Store.
 * Latest Xcode installed with your Apple ID authorized into it.
 * Two certificates: `3rd Party Mac Developer Installer` for signing `.pkg` file and `3rd Party Mac Developer Application` for signing a bundle.
-* App Store Provision Profile - get it for your app [here](https://developer.apple.com/account/resources/profiles/list).
+* App Store Provision Profile - get it for your app from the [Apple Developer provisioning profiles page](https://developer.apple.com/account/resources/profiles/list).
 * Two entitlements: One for signing `.app` and other for signing app helpers.
 * Your app content is [bundled correctly](https://developer.apple.com/documentation/bundleresources/placing_content_in_a_bundle).
 * Your bundle is signed correctly.

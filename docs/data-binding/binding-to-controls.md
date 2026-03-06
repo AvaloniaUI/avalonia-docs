@@ -4,8 +4,6 @@ title: How To Bind to a Control
 ---
 
 
-# How To Bind to a Control
-
 With _Avalonia UI_, as well as binding to a data context you can also bind one control directly to another.
 
 :::info
@@ -96,6 +94,6 @@ To access a property of a parent's `DataContext` it will be necessary to cast it
 </local:MyControl>
 ```
 
-:::warning
+:::caution
 _Avalonia UI_ also supports WPF/UWP's `RelativeSource` syntax which does something similar, but is _not_ the same. `RelativeSource` works on the _visual_ tree whereas the syntax given here works on the _logical_ tree.
 :::

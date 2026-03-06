@@ -9,7 +9,7 @@ When a data binding does not produce the expected result, Avalonia provides seve
 
 Avalonia logs binding errors to the trace output. In a debug build, these messages appear in the IDE Output window or the console. A typical binding error looks like:
 
-```
+```text
 [Binding] Error in binding to 'Avalonia.Controls.TextBlock'.'Text': 'Could not find a matching property accessor for 'UserNam' on 'MyApp.ViewModels.MainViewModel'
 ```
 
@@ -101,7 +101,7 @@ Press **F12** in a debug build to open the Avalonia DevTools. The DevTools provi
 
 Select any control in the tree and examine its properties. For each property, DevTools shows:
 - The current value
-- The value source (Local, Style, Binding, etc.)
+- The value source (Local, Style, Binding, and similar)
 - Whether a binding is active
 
 Look for properties showing their default value when you expect a bound value. This indicates the binding failed.

@@ -33,7 +33,7 @@ Access the [Avalonia chat](https://t.me/Avalonia) using the [Telegram app](https
 * Real-time troubleshooting
 * Networking with other Avalonia developers
 
-You can access the Telegram chat [here](https://t.me/Avalonia).
+You can also access the [Avalonia Telegram chat](https://t.me/Avalonia) directly.
 
 ### C# Discord
 

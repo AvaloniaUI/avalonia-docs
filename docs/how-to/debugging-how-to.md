@@ -19,7 +19,7 @@ public static AppBuilder BuildAvaloniaApp()
 ```
 
 Binding errors appear as warnings like:
-```
+```text
 [Binding] Error in binding to 'MyProperty' on 'MyControl': Could not find a matching property accessor...
 ```
 

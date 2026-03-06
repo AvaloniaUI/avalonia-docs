@@ -322,7 +322,7 @@ PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
 
 ## Window decoration changes
 
-Avalonia v12 overhauls how the decorations (title bar, caption buttons, resize grips, etc.) of a window are drawn when the system chrome is not used:
+Avalonia v12 overhauls how the decorations (title bar, caption buttons, resize grips, and similar elements) of a window are drawn when the system chrome is not used:
 
 - A new `WindowDrawnDecorations` class is added. Its role is to provide all the window decorations through a single control.
 - Thanks to this new type, the `TitleBar`, `CaptionButtons` and `ChromeOverlayLayer` types are not necessary anymore and have been removed.
@@ -490,7 +490,7 @@ PR: [#19852](https://github.com/AvaloniaUI/Avalonia/pull/19852)
 
 The `Screen` class has several internal implementations, and the base class was constructible only for legacy reasons.
 
-In Avalonia v12, it is now abstract. Do not construct a `Screen` class. Instead, get an existing instance from its members (e.g., `Screens.All`, `Screens.Primary`, `Screens.ScreenFromWindow`, etc.).
+In Avalonia v12, it is now abstract. Do not construct a `Screen` class. Instead, get an existing instance from its members (for example, `Screens.All`, `Screens.Primary`, `Screens.ScreenFromWindow`).
 
 PR: [#20529](https://github.com/AvaloniaUI/Avalonia/pull/20529)
 
@@ -507,7 +507,7 @@ PR: [#20576](https://github.com/AvaloniaUI/Avalonia/pull/20576)
 
 ## Gesture events moved
 
-All the attached events previously declared in the `Gestures` class (such as `ScrollGesture`, `Pinch`, etc.) have been moved to `InputElement`, making them available to all elements by default. Remove the `Gestures.` prefix from your XAML files.
+All the attached events previously declared in the `Gestures` class (such as `ScrollGesture`, `Pinch`, and others) have been moved to `InputElement`, making them available to all elements by default. Remove the `Gestures.` prefix from your XAML files.
 
 The `Gestures` class is not public anymore.
 

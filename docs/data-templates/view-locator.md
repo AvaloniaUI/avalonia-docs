@@ -3,8 +3,6 @@ id: view-locator
 title: View locator
 ---
 
-# View Locator
-
 In MVVM applications, view models contain application logic but have no knowledge of the UI. A *view locator* bridges this gap by automatically resolving the correct view for a given view model. When Avalonia encounters a view model object in a content area, the view locator determines which view to create and display.
 
 :::info

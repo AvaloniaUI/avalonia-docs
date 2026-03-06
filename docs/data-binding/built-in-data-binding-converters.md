@@ -82,5 +82,5 @@ And this example demonstrates binding to multiple bound parameters. It will show
 
 
 :::info
-You can follow the Avalonia UI value converter sample, [here](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/ValueConversionSample).
+You can follow the [Avalonia UI value converter sample](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/ValueConversionSample).
 :::

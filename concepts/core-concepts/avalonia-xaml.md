@@ -3,15 +3,13 @@ id: avalonia-xaml
 title: Avalonia XAML
 ---
 
-# Avalonia XAML
-
 _Avalonia UI_ uses XAML to define a user interface. XAML is an XML-based mark-up language that is used by many UI frameworks.
 
 :::info
 These pages will introduce you to how XAML is used specifically in _Avalonia UI_. For background information about how XAML is used elsewhere in Microsoft technologies, you can use these references:
 
-* Microsoft XAML documentation for WPF, see [here](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/). 
-* Microsoft XAML documentation for UWP, see [here](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview).
+* [Microsoft XAML documentation for WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)
+* [Microsoft XAML documentation for UWP](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/xaml-overview)
 :::
 
 ## AXAML File Extension
@@ -38,7 +36,7 @@ The sample above uses three interesting attributes:
 * `x:Class="AvaloniaApplication1.MainWindow"` - this is an extension of the above declaration (for 'x') that tells the XAML compiler where to find the associated class for this file. The class is defined in a code-behind file, usually written in C#.
 
 :::info
-For information about the code-behind concept, see [here](/docs/fundamentals/code-behind).
+For information about the code-behind concept, see [Code-behind](/docs/fundamentals/code-behind).
 :::
 
 ## Control Elements
@@ -46,7 +44,7 @@ For information about the code-behind concept, see [here](/docs/fundamentals/cod
 You can compose a UI for your application by adding XML elements that represent one of the _Avalonia UI_ controls. The element tag uses the same name as the control class name.
 
 :::info
-A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [here](/docs/fundamentals/ui-composition).
+A UI can be composed of several different types of control. To learn more about the concept of UI composition, see [UI Composition](/docs/fundamentals/ui-composition).
 :::
 
 For example, this XAML adds a button to the content of a window:
@@ -59,7 +57,7 @@ For example, this XAML adds a button to the content of a window:
 ```
 
 :::info
-For a complete list of the _Avalonia UI_ built-in controls, see the reference [here](/controls).
+For a complete list of the _Avalonia UI_ built-in controls, see the [controls reference](/controls).
 :::
 
 ## Control Attributes
@@ -100,7 +98,7 @@ You will often use the _Avalonia UI_ binding system to link a control property t
 ```
 
 :::info
-For further information about the concept behind data binding, see [here](/docs/data-binding/introduction-to-data-binding).
+For further information about the concept behind data binding, see [Introduction to data binding](/docs/data-binding/introduction-to-data-binding).
 :::
 
 ## Code-behind Files
@@ -108,7 +106,7 @@ For further information about the concept behind data binding, see [here](/docs/
 Many Avalonia XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.axaml.cs`.
 
 :::info
-For guidance about programming using code-behind files, see [here](/docs/fundamentals/ui-composition).
+For guidance about programming using code-behind files, see [UI Composition](/docs/fundamentals/ui-composition).
 :::
 
 ## XML Namespaces
@@ -116,7 +114,7 @@ For guidance about programming using code-behind files, see [here](/docs/fundame
 In common with any XML format, in Avalonia XAML files you can declare namespaces. This allows the XML processor to find the definitions of the elements in the file.
 
 :::info
-For background information, see the Microsoft XML namespaces documentation [here](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).
+For background information, see the [Microsoft XML namespaces documentation](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).
 :::
 
 You can add a namespace using the `xmlns` attribute. The format of a namespace declaration is as follows:
@@ -132,7 +130,7 @@ Only one namespace in a file can be defined without using the alias part of the 
 The definition part of the namespace declaration can be either a URL or a code definition. Both of these are used to locate the definition of the elements in the file.
 
 :::info
-For detailed guidance on how namespace declarations work, see [here](/docs/custom-controls/custom-control-library).
+For detailed guidance on how namespace declarations work, see [Custom control library](/docs/custom-controls/custom-control-library).
 :::
 
 There are two valid syntax options for the definition part of a XAML namespace attribute that references code:

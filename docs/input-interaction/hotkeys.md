@@ -3,8 +3,6 @@ id: keyboard-and-hotkeys
 title: Keyboard and hotkeys
 ---
 
-# Keyboard and Hotkeys
-
 Various Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. Pressing the hotkey will execute the command [bound](/docs/input-interaction/adding-interactivity) to the Control.
 
 ```xml

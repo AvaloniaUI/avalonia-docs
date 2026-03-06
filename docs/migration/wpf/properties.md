@@ -3,8 +3,6 @@ id: properties
 title: Properties
 ---
 
-# Property System Migration Guide
-
 Avalonia's property system is conceptually similar to WPF's `DependencyProperty` system but uses a cleaner, strongly-typed generic API. If you are familiar with WPF dependency properties, you will find most of the same concepts in Avalonia: styling, data binding, animation, value inheritance, and default values all work through the property system. The main differences are in registration syntax and how you respond to property changes.
 
 ## Property Types Comparison

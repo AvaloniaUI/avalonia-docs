@@ -186,7 +186,7 @@ renderTarget.Save("screenshot.png");
 
 | Property | Type | Description |
 |---|---|---|
-| `Source` | `IImage` | The image to display (`Bitmap`, `DrawingImage`, etc.). |
+| `Source` | `IImage` | The image to display (`Bitmap`, `DrawingImage`, and similar). |
 | `Stretch` | `Stretch` | How the image fills its bounds. |
 | `StretchDirection` | `StretchDirection` | `Both`, `UpOnly`, `DownOnly`. |
 

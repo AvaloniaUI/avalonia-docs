@@ -222,7 +222,7 @@ With `OnPlatform`, you can, for instance, use the `Markdown` control on Linux an
 
 ### Creating custom options markup extensions
 
-Here is an example of a custom implementation with `RuntimeInformation.ProcessArchitecture`. As shown in this example, we recommend using compiler flags or .NET runtime APIs that are effectively constant.
+Here is an example of a custom implementation with `RuntimeInformation.ProcessArchitecture`. As shown in this example, consider using compiler flags or .NET runtime APIs that are effectively constant.
 
 ```csharp
 public class ArchitectureExtension : IAddChild<On<object>>

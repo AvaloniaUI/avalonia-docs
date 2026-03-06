@@ -68,7 +68,7 @@ protected override Size ArrangeOverride(Size finalSize)
 
 ### Scene graph and composition
 
-After layout, the render pass builds a scene graph: a lightweight tree of drawing instructions (fill rectangle, draw text, apply clip, etc.). The compositor walks this graph each frame and issues GPU draw calls through the active rendering backend.
+After layout, the render pass builds a scene graph: a lightweight tree of drawing instructions (fill rectangle, draw text, apply clip, and similar operations). The compositor walks this graph each frame and issues GPU draw calls through the active rendering backend.
 
 Avalonia supports two composition modes:
 

@@ -5,8 +5,6 @@ title: Animations
 
 import KeyframeDiagram from '/img/concepts/ui-concepts/animations/animation-keyframe.png';
 
-# Animations
-
 There are two types of animations in _Avalonia UI_:
 
 * Keyframe Animation -  can change one or more property values using a timeline. Keyframes are defined along the timeline at cue points. The properties being changed are adjusted between keyframes using an easing function (which is a straight-line interpolation by default). Keyframe animations are a very versatile type of animation.
@@ -21,7 +19,7 @@ The simplest keyframe animation will change one property value over a a specifie
 The property value is then changed over time between the keyframes using the profile defined by an easing function. The default easing function is also the simplest - a straight-line interpolation between two keyframes.
 
 :::info
-You can see the full range of easing functions in the reference, [here](/docs/graphics-animation/animation-settings).
+For the full range of easing functions, see the [animation settings reference](/docs/graphics-animation/animation-settings).
 :::
 
 ## Triggering Animations

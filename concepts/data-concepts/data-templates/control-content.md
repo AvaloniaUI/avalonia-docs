@@ -7,12 +7,10 @@ import ControlContentButtonScreenshot from '/img/concepts/data-concepts/data-tem
 import ControlContentStringScreenshot from '/img/concepts/data-concepts/data-templates/control-content/content-string.png';
 import ControlContentTypeScreenshot from '/img/concepts/data-concepts/data-templates/control-content/content-type.png';
 
-# Control Content
-
 You have probably seen what happens if you put a button control into the content zone of an _Avalonia UI_ window.
 
 :::info
-The concept of the zones of an _Avalonia UI_ control is discussed [here](/docs/layout/).
+The concept of the zones of an _Avalonia UI_ control is discussed in [Layout](/docs/layout/).
 :::
 
 For example:

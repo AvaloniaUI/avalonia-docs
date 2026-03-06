@@ -26,7 +26,7 @@ There are currently three universal formats:
 
 Platform format is compatible **only with the current platform** that the application is running on (e.g., Windows, Linux, iOS, etc.). Its identifier should be a name understood by the underlying platform. Use this format only when you need direct interoperability with the target platform and have precise knowledge of its encoding or serialization.
 
-:::warning
+:::caution
 Do **not** assume that a given identifier works for all platforms!  
 For example, the HTML format is named `HTML format` on Windows, `text/html` on Linux and Android, and `public.html` on macOS and iOS. Always verify the intended operating system before using a platform-specific format.
 :::
@@ -74,7 +74,7 @@ The `TryGetDataAsync` method asynchronously retrieves an `IAsyncDataTransfer` ob
 using var data = await clipboard.TryGetDataAsync();
 ```
 
-:::warning
+:::caution
 Since the clipboard's contents may change at any time, it is recommended to use the returned `IAsyncDataTransfer` instance as soon as possible; do not store it for later use. After all the necessary operations are done on the object, it must be disposed of by the caller; a `using` statement is therefore recommended.
 :::
 
@@ -133,7 +133,7 @@ await clipboard.SetDataAsync(data);
 Placing a new object on the clipboard always clears any previous data.
 :::
 
-:::warning
+:::caution
 Do **not** call `Dispose()` on the `IAsyncDataTransfer` object passed to `SetDataAsync()`! The instance must stay valid while it's on the clipboard. Avalonia takes ownership and automatically disposes of it once it's no longer in use.
 :::
 
@@ -245,6 +245,6 @@ When writing the implementation, be certain that:
 - You are aware `IAsyncDataTransferItem.TryGetRawAsync()` can be called from any thread and does not use the dispatcher.
 - You have considered implementing `IDataTransfer` and `IDataTransferItem`, as some platforms can only access the clipboard synchronously.
 
-:::warning
+:::caution
 `IAsyncDataTransferItem.TryGetRawAsync()` may or may not be called on the UI thread depending on the underlying platform. Do **not** call anything on the UI thread, including via `Dispatcher.Invoke/InvokeAsync`. Doing so will result in deadlocks!
 :::

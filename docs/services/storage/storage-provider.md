@@ -3,8 +3,6 @@ id: storage-provider
 title: Storage Provider
 ---
 
-# Storage Provider
-
 The `StorageProvider` is central to file and folder management. It provides methods for file and folder selection, checking platform capabilities, and interacting with stored bookmarks.
 
 The `StorageProvider` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/fundamentals/top-level) page.
@@ -146,7 +144,7 @@ Only supported on the OS, with physical file paths, primarily only desktop.
 | `TryGetFolderFromPathAsync` | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | `TryGetWellKnownFolderAsync` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-\* Bookmarks are not properly supported on desktop platforms and instead return file path instead. macOS support is planned in order to get it work with Sandboxed Apple Store apps.
+\* Bookmarks are not properly supported on desktop platforms and instead return file path instead. macOS support is planned to get it work with Sandboxed Apple Store apps.
 
 ** Managed file picker works only on desktop platforms where it's possible to open a custom window.
 

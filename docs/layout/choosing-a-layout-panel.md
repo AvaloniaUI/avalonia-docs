@@ -3,8 +3,6 @@ id: choosing-a-layout-panel
 title: Choosing a Layout Panel
 ---
 
-# Choosing a Layout Panel
-
 Avalonia provides several panel controls, each designed for a different layout strategy. Choosing the right panel simplifies your XAML, improves performance, and makes your UI easier to maintain. This guide helps you pick the best panel for common scenarios.
 
 ## Decision Flowchart

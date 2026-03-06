@@ -5,8 +5,6 @@ title: Custom ItemsPanel
 
 import ItemsControlCanvasScreenshot from '/img/guides/ui-development/custom-controls/itemscontrol-with-canvas.png';
 
-# Custom ItemsPanel
-
 All `ItemsControl`s have an item container panel which is used to layout their items. It is possible to override the type of panel used by the control to achieve custom/alternative layouts of items in a control. This document provides some examples showcasing how and why you would do this.
  
 - [`ItemsControl`](/controls/data-display/collections/itemscontrol)

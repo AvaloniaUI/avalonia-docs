@@ -104,7 +104,7 @@ public class PreviewPanel : Control { }
 
 Using it in XAML produces a build warning:
 
-```
+```text
 warning MYLIB0001: 'PreviewPanel' is for evaluation purposes only and is subject to change or removal in future updates.
   --> Views/MainView.axaml(8,6)
 ```
@@ -125,7 +125,7 @@ You can suppress these diagnostics in your project file if needed:
 
 XAML compilation errors appear in the IDE Error List and build output with the file name and line number:
 
-```
+```text
 error AVLN2000: Unable to resolve property 'Naem' on type 'MyApp.ViewModels.PersonViewModel'
   --> Views/PersonView.axaml(12,34)
 ```

@@ -106,7 +106,7 @@ Check out the [community guide](community.md) to see how you can get involved wi
 
 ## What platforms are supported?
 
-:::warning
+:::caution
 You also must know which platforms are supported by your .NET version.
 Often .NET will drop support for older OS versions, while Avalonia still can work with them. So you might need to hold on updating the SDK.
 For example, [here is the list](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md) of supported OS versions by .NET 10.

@@ -85,13 +85,13 @@ The `IServiceProvider` passed to `ProvideValue` exposes XAML context services, e
 
 Common standard services include:
 
-- **`IProvideValueTarget`** — gives access to the target object and property.
-- **`IRootObjectProvider`** — provides the XAML document’s root object.
+- **`IProvideValueTarget`**: gives access to the target object and property.
+- **`IRootObjectProvider`**: provides the XAML document’s root object.
 
 Avalonia also provides additional, XAML-IL specific services:
 
-- **`IAvaloniaXamlIlParentStackProvider`** — exposes the parent object stack during XAML parsing.
-- **`IAvaloniaXamlIlXmlNamespaceInfoProvider`** — provides namespace metadata.
+- **`IAvaloniaXamlIlParentStackProvider`**: exposes the parent object stack during XAML parsing.
+- **`IAvaloniaXamlIlXmlNamespaceInfoProvider`**: provides namespace metadata.
 
 These services are optional, but essential for more advanced or context-aware extensions.
 
@@ -216,7 +216,7 @@ Constructors can also receive parameter types using the `object` approach, but c
 
 ### `OnPlatform` markup extension
 
-One example of an options markup extension is the built-in `OnPlatform` markup extension. This markup extension defines values per runtime platform (Windows, macOS, Linux, etc.) to optimize branches, selecting only those relevant to the platform being compiled for. 
+One example of an options markup extension is the built-in `OnPlatform` markup extension. This markup extension defines values per runtime platform (Windows, macOS, Linux, and others) to optimize branches, selecting only those relevant to the platform being compiled for. 
 
 With `OnPlatform`, you can, for instance, use the `Markdown` control on Linux and the `WebView` control on other platforms. The unused control would be excluded, thus reducing the binary size.
 

@@ -3,7 +3,7 @@ id: compiled-bindings
 title: Compiled bindings
 ---
 
-Bindings defined in the XAML are using reflection in order to find and access the requested property in your `ViewModel`. In Avalonia you can also use compiled bindings, which has some benefits:
+Bindings defined in the XAML are using reflection to find and access the requested property in your `ViewModel`. In Avalonia you can also use compiled bindings, which has some benefits:
 
 * If you use compiled bindings and the property you bind to is not found, you will get a compile-time error. Hence you get a much better debugging experience.
 * Reflection is known to be slow ([see this article on codeproject.com](https://www.codeproject.com/articles/Why-is-Reflection-Slow)). Using compiled bindings can therefore improve the performance of your application.
@@ -83,7 +83,7 @@ If you use [Rider](https://www.jetbrains.com/rider/) as your IDE, the syntax hig
 
 If you are using an earlier version of Avalonia, or if the compiler fails to infer the type, you can still use an explicit type cast in the binding expression to ensure the correct type is used.
 
-We do not generally recommend explicit type casting.
+Explicit type casting is not generally recommended.
 
 ```xml
 <Window x:Name="MyWindow"
@@ -139,7 +139,7 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
         <TextBlock Text="E-Mail:" />
         <TextBox Text="{Binding MailAddress}" />
 
-        <!-- We use ReflectionBinding instead -->
+        <!-- Use ReflectionBinding instead -->
         <Button Content="Send an E-Mail"
                 Command="{ReflectionBinding SendEmailCommand}" />
     </StackPanel>

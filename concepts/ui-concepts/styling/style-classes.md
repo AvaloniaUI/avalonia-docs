@@ -3,8 +3,6 @@ id: style-classes
 title: Style classes
 ---
 
-# Style Classes
-
 You can assign an _Avalonia UI_ control one or more style classes, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, then use a space-separated list.
 
 For example, this button has both the `h1` and `blue` style classes applied:
@@ -63,7 +61,7 @@ In this example, the pseudo class selector changes properties inside a control t
 Other pseudo classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
 
 :::info
-For more detail about pseudo classes, see the reference [here](/docs/styling/pseudoclasses).
+For more detail about pseudo classes, see the [pseudoclasses reference](/docs/styling/pseudoclasses).
 :::
 
 ## Conditional Classes

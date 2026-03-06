@@ -36,11 +36,11 @@ Bindings can be unidirectional: where changes in the properties of a bound appli
 Binding is used with the MVVM architectural pattern, and this is one of the principle ways of programming with Avalonia UI.
 
 :::info
-For more information about how to use the MVVM Pattern with Avalonia, see the concept page [here](/docs/fundamentals/the-mvvm-pattern).
+For more information about how to use the MVVM Pattern with Avalonia, see [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern).
 :::
 
 :::info
-For background information on the origins and development of the MVVM pattern at _Microsoft_, see the _Microsoft Patterns and Practices_ article [here](https://msdn.microsoft.com/en-us/library/hh848246.aspx).
+For background information on the origins and development of the MVVM pattern at _Microsoft_, see the [Microsoft Patterns and Practices article](https://msdn.microsoft.com/en-us/library/hh848246.aspx).
 :::
 
 On the next page, you will learn where the data binder gets the data object from.

@@ -65,6 +65,7 @@ You can now use the class `MyDataTemplate` in your view, like this:
 		<dataTemplates:MyDataTemplate />
 	</ContentControl.ContentTemplate>
 </ContentControl>
+```
 
 ## More examples
 

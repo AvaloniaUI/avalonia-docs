@@ -5,8 +5,6 @@ title: Routed events
 
 import InputEventRoutingDiagram from '/img/concepts/ui-concepts/user-input/pointer-pressed-routing.png';
 
-# Routed Events
-
 Most events in Avalonia are implemented as routed events. Routed events are events that are raised on the whole tree rather than just the control that raised the event.
 
 ## What is a Routed Event?

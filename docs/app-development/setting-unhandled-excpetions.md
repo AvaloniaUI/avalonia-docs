@@ -29,7 +29,7 @@ private void OnUnhandledException(object sender, DispatcherUnhandledExceptionEve
 }
 ```
 
-:::warning
+:::caution
 Setting `e.Handled = true` suppresses the exception and allows the application to continue running. Use this with caution. If the exception left the application in an inconsistent state (corrupted data, partially completed operations), continuing may cause further problems. Prefer catching and recovering from exceptions locally where possible.
 :::
 

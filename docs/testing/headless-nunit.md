@@ -79,7 +79,7 @@ By default, the Application and Dispatcher are recreated for each test (`PerTest
 | `PerTest` | Recreates Application and Dispatcher for each test (default). Tests are fully isolated. |
 | `PerAssembly` | Reuses a single Application and Dispatcher for all tests in the assembly. Faster, but tests share state. |
 
-:::warning
+:::caution
 With `PerAssembly` isolation, tests share Application state. Clean up any global state (styles, resources, static properties) between tests to avoid interference. Concurrent test execution is not supported.
 :::
 

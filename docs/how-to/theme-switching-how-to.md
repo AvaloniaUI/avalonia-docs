@@ -188,7 +188,7 @@ if (Application.Current is { } app)
     app.ActualThemeVariantChanged += (sender, args) =>
     {
         var isDark = app.ActualThemeVariant == ThemeVariant.Dark;
-        // Update chart colors, map tiles, etc.
+        // Update chart colors, map tiles, and similar resources
     };
 }
 ```

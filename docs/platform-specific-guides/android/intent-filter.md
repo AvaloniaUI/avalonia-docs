@@ -3,8 +3,6 @@ id: intent-filter
 title: Register your app to open files
 ---
 
-# Register your app to open files
-
 Android allows an app to register as a file or protocol handler. This guide shows how to register an Avalonia app to handle text files and how to receive them via Avalonia's storage framework.
 
 1. Add an `IntentFilter` attribute to your activity. This attribute automatically registers the intent filter in the Android manifest during build.

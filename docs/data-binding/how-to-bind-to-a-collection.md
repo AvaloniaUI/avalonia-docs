@@ -4,8 +4,6 @@ title: How to Bind to a Collection
 ---
 
 
-# How to Bind to a Collection
-
 Binding to a collection in Avalonia UI is an effective way to display dynamic data. This guide will demonstrate how to bind an `ObservableCollection` to a control, like a `ListBox` or `ItemsControl`, to show a list of items.
 
 ## Binding to a Simple ObservableCollection

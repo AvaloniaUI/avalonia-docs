@@ -3,8 +3,6 @@ id: data-validation
 title: Data Validation
 ---
 
-# Data Validation
-
 Avalonia offers different data validation options. In this section we will show you how you can validate the `Properties` of your `ViewModel` and how you can style the displayed error message.
 
 ## Validating a property
@@ -73,7 +71,7 @@ Exceptions inside the getter of your property are not allowed and will result in
 
 ## Customize the appearance of the validation message
 
-To display the validation messages, Avalonia has a control called [`DataValidationErrors`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataValidationErrors). This control is typically placed inside the `ControlTemplate` of all `Controls` that supports data validation, like `TextBox`, `Slider` and other. You can create your own `Style` of the `DataValidationErrors`-control in order to customize the representation of the error messages.
+To display the validation messages, Avalonia has a control called [`DataValidationErrors`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DataValidationErrors). This control is typically placed inside the `ControlTemplate` of all `Controls` that supports data validation, like `TextBox`, `Slider` and other. You can create your own `Style` of the `DataValidationErrors`-control to customize the representation of the error messages.
 
 **Example Style for DataValidationErrors**
 

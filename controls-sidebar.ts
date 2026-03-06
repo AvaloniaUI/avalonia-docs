@@ -244,6 +244,7 @@ const sidebars: SidebarsConfig = {
       label: 'Navigation',
       collapsed: true,
       items:[
+        'navigation/commandbar',
         'navigation/contentpage',
         'navigation/drawerpage',
         'navigation/navigationpage',

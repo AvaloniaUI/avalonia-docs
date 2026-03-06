@@ -5,11 +5,9 @@ title: Data binding syntax
 
 import DataBindingModeDiagram from '/img/concepts/data-concepts/data-binding-syntax/data-binding-mode.png';
 
-# Data Binding Syntax
-
-Avalonia supports creating data bindings in XAML and code. Data bindings in XAML are typically created with the 
-`Binding` `MarkupExtension` described by this document. To create data bindings in code, 
-see [here](/docs/data-binding/binding-from-code).
+Avalonia supports creating data bindings in XAML and code. Data bindings in XAML are typically created with the
+`Binding` `MarkupExtension` described by this document. To create data bindings in code,
+see [Binding from Code](/docs/data-binding/binding-from-code).
 
 ## Data Binding MarkupExtension
 
@@ -120,7 +118,7 @@ parameters or with their shorthand syntax as part of the `Path` (`#controlName` 
 ```
 
 :::info
-For more details on how to bind to controls, see [here](/docs/data-binding/binding-to-controls)
+For more details on how to bind to controls, see [Binding to Controls](/docs/data-binding/binding-to-controls)
 :::
 
 ## Converting Bound Values
@@ -205,7 +203,7 @@ Avalonia has a range of built-in data binding converters. These include:
 * Boolean operation converters
 
 :::info
-For a listing of Avalonia built-in data binding converters, see the reference [here](/docs/data-binding/built-in-data-binding-converters).
+For a listing of Avalonia built-in data binding converters, see [Built-in Data Binding Converters](/docs/data-binding/built-in-data-binding-converters).
 :::
 
 ### Custom Conversions
@@ -213,7 +211,7 @@ For a listing of Avalonia built-in data binding converters, see the reference [h
 If the built-in converters do not meet your requirements, then you can create a custom converter by implementing `IValueConverter`.
 
 :::info
-For guidance on how to create a custom converter, see [here](/docs/data-binding/how-to-create-a-custom-data-binding-converter).
+For guidance on how to create a custom converter, see [How to Create a Custom Data Binding Converter](/docs/data-binding/how-to-create-a-custom-data-binding-converter).
 :::
 
 ### FallbackValue

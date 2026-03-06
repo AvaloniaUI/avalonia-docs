@@ -5,9 +5,7 @@ title: Routed events
 
 import InputEventRoutingDiagram from '/img/concepts/ui-concepts/user-input/pointer-pressed-routing.png';
 
-# Routed Events
-
-Most events in Avalonia are implemented as routed events. Routed events are events that are raised on the whole tree rather than just the control that raised the event.
+Most events in Avalonia are implemented as routed events. Routed events are events that are raised on the whole tree rather than the control that raised the event.
 
 ## What is a Routed Event?
 
@@ -113,7 +111,7 @@ Each of the above considerations is discussed in a separate section of this topi
 
 ## Adding and Implementing an Event Handler for a Routed Event
 
-To add an event handler in XAML, you simply add the event name to an element as an attribute and set the attribute value as the name of the event handler that implements an appropriate delegate, as in the following example.
+To add an event handler in XAML, add the event name to an element as an attribute and set the attribute value as the name of the event handler that implements an appropriate delegate, as in the following example.
 
 ```xml
 <Button Click="b1SetColor">button</Button>
@@ -130,7 +128,7 @@ void b1SetColor(object sender, RoutedEventArgs args)
 
 `RoutedEventHandler<RoutedEventArgs>` is the basic routed event handler delegate. For routed events that are specialized for certain controls or scenarios, the delegates to use for the routed event handlers also might become more specialized, so that they can transmit specialized event data. For instance, in a common input scenario, you might handle a `PointerPressed` routed event. Your handler should implement the `RoutedEventHandler<PointerPressedEventArgs>` delegate. By using the most specific delegate, you can process the `PointerPressedEventArgs` in the handler and read the `PointerEventArgs.Pointer` property, which contains information about the pointer that caused the press.
 
-Adding a handler for a routed event in an application that is created in code is straightforward. Routed event handlers can always be added through a helper method `AddHandler` (which is the same method that the existing backing calls for `add`.) However, existing Avalonia routed events generally have backing implementations of `add` and `remove` logic that allow the handlers for routed events to be added by a language-specific event syntax, which is more intuitive syntax than the helper method. The following is an example usage of the helper method:
+Adding a handler for a routed event in an application that is created in code requires minimal effort. Routed event handlers can always be added through a helper method `AddHandler` (which is the same method that the existing backing calls for `add`.) However, existing Avalonia routed events generally have backing implementations of `add` and `remove` logic that allow the handlers for routed events to be added by a language-specific event syntax, which is more intuitive syntax than the helper method. The following is an example usage of the helper method:
 
 ```csharp
 void MakeButton()
@@ -180,7 +178,7 @@ In addition to the behavior that `Handled` state produces in routed events, the 
 
 This conceptual design is reinforced by the routing behavior mentioned earlier: it is more difficult (although still possible in code or styles) to attach handlers for routed events that are invoked even if a previous handler along the route has already set `Handled` to `true`.
 
-In applications, it is quite common to just handle a bubbling routed event on the object that raised it, and not be concerned with the event's routing characteristics at all. However, it is still a good practice to mark the routed event as handled in the event data, to prevent unanticipated side effects just in case an element that is further up the element tree also has a handler attached for that same routed event.
+In applications, it is quite common to handle a bubbling routed event on the object that raised it, and not be concerned with the event's routing characteristics at all. However, it is still a good practice to mark the routed event as handled in the event data, to prevent unanticipated side effects in case an element that is further up the element tree also has a handler attached for that same routed event.
 
 ## Class Handlers
 

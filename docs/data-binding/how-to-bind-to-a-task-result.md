@@ -3,8 +3,6 @@ id: how-to-bind-to-a-task-result
 title: How to Bind to a Task Result
 ---
 
-# How to Bind to a Task Result
-
 Avalonia can bind directly to `Task<T>` properties using the `^` (stream binding) operator. The binding displays the result once the task completes.
 
 ## Basic Task Binding

@@ -21,7 +21,7 @@ Events can combine strategies. For example, many input events use both `Tunnel |
 
 When a user clicks a `Button` inside a `StackPanel` inside a `Window`:
 
-```
+```text
 Window          ← event arrives here last (bubble)
   └─ StackPanel ← event arrives here second
        └─ Button ← event starts here (source)
@@ -31,7 +31,7 @@ Window          ← event arrives here last (bubble)
 
 A tunneling event for the same tree:
 
-```
+```text
 Window          ← event starts here first (tunnel)
   └─ StackPanel ← event arrives here second
        └─ Button ← event arrives here last (source)

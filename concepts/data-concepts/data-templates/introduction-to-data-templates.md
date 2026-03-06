@@ -28,7 +28,7 @@ For instance, if you have a `ListBox` that should display a collection of `Item`
 </ListBox>
 ```
 
-In this example, the Data Template defines a visual layout using a `StackPanel` container. Within the `StackPanel`, we have a `TextBlock` bound to the `Name` property of the item and an `Image` control bound to the `ImageSource` property.
+In this example, the Data Template defines a visual layout using a `StackPanel` container. Within the `StackPanel`, a `TextBlock` is bound to the `Name` property of the item, and an `Image` control is bound to the `ImageSource` property.
 
 ## Customizing Data Templates
 

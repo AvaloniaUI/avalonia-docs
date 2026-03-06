@@ -4,9 +4,6 @@ title: How To Bind Image Files
 ---
 
 
-# How To Bind Image Files
-
-
 <GitHubSampleLink title="Loading Images" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/LoadingImages"/>
 
 

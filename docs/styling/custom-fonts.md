@@ -17,7 +17,7 @@ There are three approaches to using custom fonts, each suited to different scena
 
 All three approaches use the same URI format to locate embedded font files:
 
-```
+```text
 avares://AssemblyName/Path/To/Fonts#Font Family Name
 ```
 

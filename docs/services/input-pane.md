@@ -3,8 +3,6 @@ id: input-pane
 title: Input Pane
 ---
 
-# Input Pane
-
 The `InputPane` allows developers to listen for the platform's input pane (e.g., software keyboard or on-screen keyboard) current state and boundaries.
 
 The `InputPane` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/fundamentals/top-level) page.

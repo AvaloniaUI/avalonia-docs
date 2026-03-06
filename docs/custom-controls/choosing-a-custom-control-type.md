@@ -3,8 +3,6 @@ id: choosing-a-custom-control-type
 title: Choosing a custom control type
 ---
 
-# Choosing A Custom Control Type
-
 Avalonia provides various approaches for creating custom controls to meet your application's specific needs. Understanding the different types of custom controls will help you choose the most appropriate approach for your requirements. In Avalonia, the three common types of custom controls are  UserControls`, lookless controls, and custom-drawn controls.
 
 ## UserControl

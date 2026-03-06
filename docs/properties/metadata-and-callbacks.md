@@ -50,7 +50,7 @@ static MySpecialButton()
 }
 ```
 
-:::warning
+:::caution
 Metadata overrides must be registered in the static constructor of the type. Overriding metadata after any instance of the type has been created results in undefined behavior.
 :::
 
@@ -78,7 +78,7 @@ public double Progress
 }
 ```
 
-The coercion callback receives the `AvaloniaObject` instance and the proposed value, and returns the adjusted value. Coercion runs every time the effective value changes, regardless of the value source (local, style, animation, etc.).
+The coercion callback receives the `AvaloniaObject` instance and the proposed value, and returns the adjusted value. Coercion runs every time the effective value changes, regardless of the value source (local, style, animation, and similar).
 
 ### Triggering Re-coercion
 

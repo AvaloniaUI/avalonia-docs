@@ -12,7 +12,7 @@ In scenarios where a target property must be assigned a result calculated from s
 through the use of an `IMultiValueConverter`. The `Convert` method is called each time any of the bound properties notify 
 of change. Similar to `Binding`, `MultiBinding` can be used to bind properties on ViewModels, `Control`s, or other sources.
 
-:::warning
+:::caution
 `MultiBinding` only supports `BindingMode.OneTime` and `BindingMode.OneWay`.
 :::
 

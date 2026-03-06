@@ -6,8 +6,6 @@ title: Assets
 import AssetFileDiagram from '/img/concepts/ui-concepts/assets/asset-file.png';
 import AssetLibraryDiagram from '/img/concepts/ui-concepts/assets/asset-library.png';
 
-# Assets
-
 Many applications need to include assets such as bitmaps, styles and resource dictionaries. Resource dictionaries contain graphical fundamentals that can be declared in XAML. Styles can also be written in XAML, but bitmap assets are binary files, for example PNG and JPEG formats.
 
 ## Including assets

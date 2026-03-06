@@ -20,7 +20,7 @@ The simplest use of `MultiBinding` is combining multiple values into a formatted
 </TextBlock>
 ```
 
-Each `Binding` inside the `MultiBinding` maps to a placeholder (`{0}`, `{1}`, etc.) in the `StringFormat` pattern. The format string follows standard .NET `string.Format` rules.
+Each `Binding` inside the `MultiBinding` maps to a placeholder (`{0}`, `{1}`, and so on) in the `StringFormat` pattern. The format string follows standard .NET `string.Format` rules.
 
 ### Formatting numbers
 

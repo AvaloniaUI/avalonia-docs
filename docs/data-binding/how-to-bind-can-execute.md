@@ -5,8 +5,6 @@ title: How to Bind Can Execute
 
 import BindCanExecuteScreenshot from '/img/guides/data/bind-canexecute.gif';
 
-# How to Bind Can Execute
-
 Whether a control, that can initiate an action in response to user interaction, is in its enabled state, is an important principle of the 'revealed functionality' part of user experience design (UX). User confidence is reinforced by disabling commands that cannot run. For example where a button or menu item cannot run due to the current state of an application, they should be presented as inactive.
 
 This example assumes that you are using the MVVM implementation pattern. This approach gives a clear separation between the view and the view model.

@@ -232,7 +232,7 @@ However the presence of styles and merged dictionaries defined at the various le
 
 For example, in the theoretical application below, the search for a resource used on the border control (at the bottom) will follow the order indicated in square `[]` brackets:
 
-```
+```text
 Application
  |- Resources [11]
      |- Merged dictionary [12]

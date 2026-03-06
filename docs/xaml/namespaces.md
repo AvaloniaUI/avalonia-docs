@@ -17,7 +17,7 @@ A typical Avalonia XAML file starts with two namespace declarations:
 
 | Declaration | Purpose |
 |---|---|
-| `xmlns="https://github.com/avaloniaui"` | The default Avalonia namespace. Maps to all core Avalonia CLR namespaces (`Avalonia`, `Avalonia.Controls`, `Avalonia.Media`, `Avalonia.Animation`, etc.). Required in every Avalonia XAML file. |
+| `xmlns="https://github.com/avaloniaui"` | The default Avalonia namespace. Maps to all core Avalonia CLR namespaces (`Avalonia`, `Avalonia.Controls`, `Avalonia.Media`, `Avalonia.Animation`, and others). Required in every Avalonia XAML file. |
 | `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` | The XAML language namespace. Provides access to [x: directives](directives) like `x:Name`, `x:Key`, and `x:Class`. |
 
 ## CLR Namespaces Mapped to the Default Avalonia Namespace

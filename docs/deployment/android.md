@@ -66,7 +66,7 @@ dotnet publish -f net9.0-android -c Release \
 
 This builds and signs the app, producing both AAB and APK files in the `bin/Release/net9.0-android/publish` folder. The signed variant has **-signed** in the file name.
 
-:::warning
+:::caution
 Avoid passing passwords directly on the command line in shared environments. Use `env:` or `file:` prefixes instead (see below).
 :::
 

@@ -20,7 +20,7 @@ MVVM might be overkill for a simple application; but as applications grow over t
 MVVM solves this by abstracting the application logic into code-only classes that do not depend on the target UI platform, and can therefore be unit tested independently.
 
 :::info
-To discover more about the background to the MVVM pattern, see the _Microsoft Patterns and Practices_ article [here](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/hh848246\(v=pandp.10\)).
+To discover more about the background to the MVVM pattern, see the [Microsoft Patterns and Practices article on MVVM](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/hh848246\(v=pandp.10\)).
 :::
 
 ## When to use MVVM?
@@ -30,7 +30,7 @@ MVVM is a more complex pattern of programming compared to the event-driven code-
 In fact, the code-behind pattern may well be easier for you to understand and maintain for a small simple application.
 
 :::info
-For details of how to program _Avalonia UI_ with the code-behind pattern, see [here](/docs/fundamentals/code-behind).
+For details of how to program _Avalonia UI_ with the code-behind pattern, see the [code-behind guide](/docs/fundamentals/code-behind).
 :::
 
 The advantages of using the MVVM pattern may only become apparent when an application grows and becomes more complex. You therefore have two development strategies to consider:
@@ -53,15 +53,15 @@ When you use the MVVM pattern with _Avalonia UI_, you implement a view with an A
 In _Avalonia UI_, a view is implemented as a composition of UI elements in a window or a user control (both AXAML files with code-behind). The UI elements in a composition can be a mixture of _Avalonia UI_ built-in controls, user controls and (more advanced) controls of your own design and implementation.
 
 :::info
-For a full list of the _Avalonia UI_ built-in controls, see the reference section [here](/controls).
+For a full list of the _Avalonia UI_ built-in controls, see the [controls reference](/controls).
 :::
 
 :::info
-To learn more about the concept of UI composition, see [here](/docs/fundamentals/ui-composition).
+To learn more about the concept of UI composition, see the [UI composition guide](/docs/fundamentals/ui-composition).
 :::
 
 :::info
-To learn how to design and implement your own controls, see [here](/docs/custom-controls).
+To learn how to design and implement your own controls, see the [custom controls guide](/docs/custom-controls).
 :::
 
 ### Data Binding

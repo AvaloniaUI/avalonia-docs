@@ -128,7 +128,7 @@ For Native AOT deployment, use `LibraryImport` instead of `DllImport` to ensure 
 
 Place native libraries in platform-specific `runtimes` folders:
 
-```
+```text
 MyApp/
 ├── runtimes/
 │   ├── win-x64/native/mylib.dll

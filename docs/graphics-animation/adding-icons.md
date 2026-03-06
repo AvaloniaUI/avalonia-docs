@@ -20,7 +20,7 @@ In this example, an `Image` control is used to display an image from the applica
 
 ### Using Icon Fonts
 
-Another way to use icons in Avalonia is by using icon fonts. Icon fonts allow you to use scalable vector icons that can be customized with CSS in terms of size, color, drop shadow, etc. Here's an example of how to use an icon font in Avalonia:
+Another way to use icons in Avalonia is by using icon fonts. Icon fonts allow you to use scalable vector icons that can be customized with CSS in terms of size, color, and drop shadow. Here's an example of how to use an icon font in Avalonia:
 
 ```xml
 <TextBlock FontFamily="avares://MyApp/Assets/#FontAwesome" Text="&#xf030;" />

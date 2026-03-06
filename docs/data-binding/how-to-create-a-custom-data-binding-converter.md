@@ -4,16 +4,14 @@ title: How to Create a Custom Data Binding Converter
 ---
 
 
-# How to Create a Custom Data Binding Converter
-
 When one of the built-in data binding converters does not meet your conversion requirements, you can write a custom converter based on the `IValueConverter` interface. This guide will show you how.
 
 :::info
-To review the _Microsoft_ documentation for the `IValueConverter` interface, see [here](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1).
+To review the _Microsoft_ documentation for the `IValueConverter` interface, see the [IValueConverter API reference](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1).
 :::
 
 :::info
-As the `IValueConverter` interface was not available in .NET standard 2.0, Avalonia UI  contains a copy in the `Avalonia.Data.Converters` namespace. You can see the API documentation about this interface, [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Data_Converters_IValueConverter).
+As the `IValueConverter` interface was not available in .NET standard 2.0, Avalonia UI contains a copy in the `Avalonia.Data.Converters` namespace. You can see the [Avalonia IValueConverter API documentation](https://api-docs.avaloniaui.net/docs/T_Avalonia_Data_Converters_IValueConverter).
 :::
 
 You must reference a custom converter in some resources before it can be used. This can be at any level in your application. In this example, the custom converter `myConverter` is referenced in the window resources:
@@ -118,7 +116,7 @@ public class AnimalConverter : IValueConverter
                     case Cat:
                       img = @"icons/cat.png";
                       break;
-                    // etc. etc.
+                    // other animal types
                 }
                 // see https://docs.avaloniaui.net/docs/guides/data-binding/how-to-create-a-custom-data-binding-converter
                 return BitmapAssetValueConverter.Instance
@@ -204,5 +202,5 @@ public static class MyConverters
 ## More Information
 
 :::info
-For further guidance about how to bind images, see [here](how-to-bind-image-files.md).
+For further guidance about how to bind images, see [How To Bind Image Files](how-to-bind-image-files.md).
 :::

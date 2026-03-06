@@ -8,14 +8,12 @@ import CompositionTreesDiagram from '/img/concepts/core-concepts/ui-composition/
 import CompositionUserControlsDiagram from '/img/concepts/core-concepts/ui-composition/composition-usercontrol.png';
 import CompositionCollectionControlsDiagram from '/img/concepts/core-concepts/ui-composition/composition-collection-controls.png';
 
-# UI Composition
-
 UI composition is the process you use to create the layouts that your apps require. It allows you to build a complex view from an arrangement of components. The advantages are:
 
 * _Encapsulation_ - reduce the complexity of each component by restricting its XAML and code to only what it needs, making your code more understandable and maintainable.
 * _Reuse_ - maintain consistent presentation and behaviour of repeated parts of your app.
 
-_Avalonia UI_ makes it easy for you to use UI composition to create the layouts and functions that your apps require.
+_Avalonia UI_ supports UI composition to create the layouts and functions that your apps require.
 
 When you build an app using _Avalonia UI_, there are several different types of component to choose from:
 
@@ -38,7 +36,7 @@ When you first meet _Avalonia UI_, you might place a single built-in control in 
 A slightly more complex app may require one of the built-in layout controls to arrange more than one other built-in control in the content zone of a window (above, right).
 
 :::info
-To see the full range of Avalonia UI built-in controls, see the reference section [here](/controls).
+To see the full range of Avalonia UI built-in controls, see the [controls reference](/controls).
 :::
 
 ## Logical and Visual Trees
@@ -50,7 +48,7 @@ Whatever arrangement of controls you use, _Avalonia UI_ represents their relatio
 This is the **logical control tree**, and it represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. There are many systems in _Avalonia UI_ that process the logical control tree and its companion the **visual control tree**.
 
 :::info
-For more information on the concept of control trees, see [here](/docs/custom-controls/control-trees).
+For more information on the concept of control trees, see [Control trees](/docs/custom-controls/control-trees).
 :::
 
 ## User Controls
@@ -86,7 +84,7 @@ For information about how to  TO DO
 In the unlikely scenario that you cannot find an _Avalonia UI_ built-in control to cover your app's UI requirements, then you can 'roll-your-own' custom control from scratch. This allows you to define your own custom properties, events and methods; but it will require you to implement the drawing of the control presentation from scratch as well.
 
 :::info
-To learn how to implement a custom control, see the guide [here](/docs/custom-controls).
+To learn how to implement a custom control, see the [Custom controls guide](/docs/custom-controls).
 :::
 
 ## Templated Controls
@@ -94,5 +92,5 @@ To learn how to implement a custom control, see the guide [here](/docs/custom-co
 A templated control uses the _Avalonia UI_ **styling** system to substitute a tag in the UI layout with a
 
 :::info
-For more information about the concepts behind the _Avalonia UI_ **styling** system, see [here](/docs/styling/styles).
+For more information about the concepts behind the _Avalonia UI_ **styling** system, see [Styles](/docs/styling/styles).
 :::

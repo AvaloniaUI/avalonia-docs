@@ -3,8 +3,6 @@ id: file-picker-options
 title: File Picker Options
 ---
 
-# File Picker Options
-
 ## Common PickerOptions
 
 ### Title

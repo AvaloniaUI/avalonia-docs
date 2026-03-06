@@ -3,8 +3,6 @@ id: how-to-bind-to-an-observable
 title: How To Bind to an Observable
 ---
 
-# How To Bind to an Observable
-
 Avalonia supports binding directly to `IObservable<T>` properties using the `^` (stream binding) operator. Each time the observable produces a new value, the binding updates automatically.
 
 ## Basic Observable Binding

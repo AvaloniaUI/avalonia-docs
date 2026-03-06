@@ -23,7 +23,7 @@ Avalonia provides two built-in themes:
 
 ## Community themes
 
-Several themes, in varying stages of development, have been brought to life by our dedicated community.
+Several themes, in varying stages of development, have been brought to life by the dedicated Avalonia community.
 
 ### Material.Avalonia 
 
@@ -39,7 +39,7 @@ Several themes, in varying stages of development, have been brought to life by o
 
 ## Fluent
 
-Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, which is a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with our styling system.
+Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, which is a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with the Avalonia styling system.
 
 <p><img className="medium-image-zoom" src={FluentThemeNormalScreenshot} alt="Fluent Theme" /></p>
 
@@ -125,7 +125,7 @@ FluentTheme supports only Dark and Light theme variants, and it's not possible t
 
 ### Creating custom color palettes with online editor
 
-Microsoft Fluent Theme Editor was ported to Avalonia and now available to be used with our FluentTheme as well.
+Microsoft Fluent Theme Editor was ported to Avalonia and now available to be used with the Avalonia FluentTheme as well.
 It is available on https://theme.xaml.live/ page and supports following features:
 
 1. Editing palette colors for both Light and Dark variants.

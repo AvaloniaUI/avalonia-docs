@@ -5,8 +5,6 @@ title: Layout
 
 import LayoutZonesDiagram from '/img/concepts/ui-concepts/layout/layout-zones.png';
 
-# Layout
-
 ## Panels
 
 Avalonia includes a group of elements that derive from `Panel`. These `Panel` elements enable many complex layouts. For example, stacking elements can easily be achieved by using the `StackPanel` element, while more complex and free flowing layouts are possible by using a `Canvas`.

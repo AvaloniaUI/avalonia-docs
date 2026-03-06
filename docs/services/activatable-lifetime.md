@@ -3,8 +3,6 @@ id: activatable-lifetime
 title: Activatable Lifetime
 ---
 
-# Activatable Lifetime
-
 The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an application. `IActivatableLifetime` is a global app-level service that can be accessed from the Application instance using the `TryGetService` method: `Application.Current.TryGetService<IActivatableLifetime>()`.
 
 ## Events
@@ -85,7 +83,7 @@ if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatable
 ```
 
 :::note
-In order to enable protocol handling for your app, you need to follow platform specific instructions on updating manifest.
+To enable protocol handling for your app, you need to follow platform specific instructions on updating manifest.
 On macOS and iOS, you need to add CFBundleURLTypes with CFBundleURLSchemes segment to your `Info.plist`. See https://rderik.com/blog/creating-app-custom-url-scheme/ (skip Swift part, as it's handled by `IActivatableLifetime`).
 On Android, you need to add `intent-filter` with specific `android:scheme` to your `AndroidManifest.xml`. See https://developer.android.com/training/app-links/deep-linking for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
 :::

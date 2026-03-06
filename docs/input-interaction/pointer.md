@@ -199,4 +199,4 @@ private void OnPointerReleased(object? sender, PointerReleasedEventArgs e)
 
 ## More Information
 
-For the complete API documentation about pointer and tap events, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_PointerEventArgs).
+For the complete API documentation about pointer and tap events, see the [PointerEventArgs API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_PointerEventArgs).

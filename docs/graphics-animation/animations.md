@@ -5,8 +5,6 @@ title: Animations
 
 import KeyframeDiagram from '/img/concepts/ui-concepts/animations/animation-keyframe.png';
 
-# Animations
-
 Avalonia provides three types of animations:
 
 | Type | Description | Use case |

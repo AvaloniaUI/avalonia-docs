@@ -23,7 +23,7 @@ For example, this XAML:
 
 Produces a logical tree:
 
-```
+```text
 Window
   └─ StackPanel
        ├─ TextBlock
@@ -62,7 +62,7 @@ The visual tree includes every visual element that participates in rendering, in
 
 The same `Button` from above might have this visual tree:
 
-```
+```text
 Button
   └─ ContentPresenter
        └─ Border

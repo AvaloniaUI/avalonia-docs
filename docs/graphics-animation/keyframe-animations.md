@@ -26,7 +26,7 @@ If you are familiar with keyframe animations keyframe work in CSS, you will reco
 You define a keyframe animation using styles.
 
 :::info
-To revise how _Avalonia UI_ uses styles, see the concept [here](/docs/styling/styles).
+To revise how _Avalonia UI_ uses styles, see the [styles concept](/docs/styling/styles).
 :::
 
 Follow this procedure to define a simple color fade animation using XAML:
@@ -179,7 +179,7 @@ The default easing function is linear (above left), but you use another pattern 
 ```
 
 :::info
-For a full list of the _Avalonia UI_ easing functions, see the reference [here](/docs/graphics-animation/animation-settings).
+For a full list of the _Avalonia UI_ easing functions, see the [animation settings reference](/docs/graphics-animation/animation-settings).
 :::
 
 You can also add your own custom easing function class like this:

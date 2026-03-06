@@ -8,8 +8,6 @@ import DataContextTreeSearchDiagram from '/img/concepts/data-concepts/data-conte
 import DataContextGreetingBindingScreenshot from '/img/concepts/data-concepts/data-context/data-context-greeting.png';
 import DataContextPreviewerScreenshot from '/img/concepts/data-concepts/data-context/data-context-previewer.png';
 
-# Data Context
-
 When Avalonia performs data binding, it has to locate an application object to bind to. This location is represented by a **Data Context**.
 
 <img src={DataContextOverviewDiagram} alt=''/>
@@ -23,7 +21,7 @@ When binding, Avalonia performs a hierarchical search of the logical control tre
 This means that a control defined in a window can use the data context of the window; or (as above) a control in a control in a window can use the window's data context.
 
 :::info
-For information about the control trees in Avalonia, and how to see them at run-time, see [here](/docs/custom-controls/control-trees).
+For information about the control trees in Avalonia, and how to see them at run-time, see [Control Trees](/docs/custom-controls/control-trees).
 :::
 
 ## Example
@@ -97,9 +95,9 @@ You can see the design-time data context being set in the XAML:
 ```
 
 :::tip
-For a more detailed guide about using the design-time data context, see [here](/docs/app-development/xaml-preview-and-design-settings).
+For a more detailed guide about using the design-time data context, see [XAML Preview and Design Settings](/docs/app-development/xaml-preview-and-design-settings).
 :::
 
 :::info
-Further discussion of data binding requires you to have a background in the MVVM pattern of programming. For an introduction to the concepts of the MVVM pattern, see [here](/docs/fundamentals/the-mvvm-pattern).
+Further discussion of data binding requires you to have a background in the MVVM pattern of programming. For an introduction to the concepts of the MVVM pattern, see [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern).
 :::

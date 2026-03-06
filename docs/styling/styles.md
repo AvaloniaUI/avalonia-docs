@@ -3,8 +3,6 @@ id: styles
 title: Styles
 ---
 
-# Styles
-
 The _Avalonia UI_ style system is a mechanism that can share property settings between controls.
 Avalonia provides three primary mechanisms for styling controls:
 
@@ -43,7 +41,7 @@ The XAML for a style has two parts: a selector attribute, and one or more setter
 ```
 
 :::info
-The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (cascading style sheets). For detailed reference information, see [here](/docs/styling/style-selector-syntax). 
+The _Avalonia UI_ **style selector syntax** is analogous to that used by CSS (cascading style sheets). For detailed reference information, see the [style selector syntax](/docs/styling/style-selector-syntax) reference.
 :::
 
 ## Example
@@ -89,7 +87,7 @@ The style selector defines what controls the style will act upon. The selector u
 This selector will match all controls with a style key of `TargetControlClass`, having a style class of `styleClassName`.
 
 :::info
-A full list of selectors can be found [here](/docs/styling/style-selector-syntax).
+A full list of selectors can be found in the [style selector syntax](/docs/styling/style-selector-syntax) reference.
 :::
 
 ## Setters
@@ -104,7 +102,7 @@ Setters describe what will happen when the selector matches a control. They are 
 Whenever a style is matched with a control, all of the setters within the style will be applied to the control.
 
 :::info
-For more information on setters see [here](/docs/styling/property-setters).
+For more information on setters, see [property setters](/docs/styling/property-setters).
 :::
 
 ## Nested Styles
@@ -157,11 +155,11 @@ Before Avalonia 11, the style key was overridden by implementing `IStyleable` an
 Resources are often used with styles to help maintain consistent presentation. Resources can help define standard colors and icons in an application; or across multiple applications when included from separate files.
 
 :::info
-For guidance on how to use resources in you application, see [here](/docs/app-development/resource-dictionary).
+For guidance on how to use resources in your application, see [resource dictionaries](/docs/app-development/resource-dictionary).
 :::
 
 ## Further Information
 
 :::info
-For guidance on how to share styles by including a styles file, see [here](/docs/styling/sharing-styles).
+For guidance on how to share styles by including a styles file, see [sharing styles](/docs/styling/sharing-styles).
 :::

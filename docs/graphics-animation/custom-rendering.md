@@ -111,7 +111,7 @@ var layout = new TextLayout(
 // Access line metrics
 foreach (var line in layout.TextLines)
 {
-    // line.Height, line.Width, line.Start, etc.
+    // line.Height, line.Width, line.Start, and other metrics
 }
 
 layout.Draw(context, new Point(10, 10));

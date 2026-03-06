@@ -4,8 +4,6 @@ title: How To Bind from Code
 ---
 
 
-# How To Bind from Code
-
 Binding from code in Avalonia works somewhat differently to WPF/UWP. At the low level, Avalonia's binding system is based on Reactive Extensions' `IObservable` which is then built upon by XAML bindings (which can also be instantiated in code).
 
 ## Subscribing to Changes to a Property
@@ -17,7 +15,7 @@ var textBlock = new TextBlock();
 var text = textBlock.GetObservable(TextBlock.TextProperty);
 ```
 
-Each property that can be subscribed to has a static readonly field called `[PropertyName]Property` which is passed to `GetObservable` in order to subscribe to the property's changes.
+Each property that can be subscribed to has a static readonly field called `[PropertyName]Property` which is passed to `GetObservable` to subscribe to the property's changes.
 
 `IObservable` (part of Reactive Extensions, or rx for short) is out of scope for this guide, but here's an example which uses the returned observable to print a message with the changing property values to the console:
 

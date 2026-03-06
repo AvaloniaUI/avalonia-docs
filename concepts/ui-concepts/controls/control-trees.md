@@ -7,8 +7,6 @@ import ControlTreesLogicalScreenshot from '/img/concepts/ui-concepts/controls/co
 import ControlTreesVisualScreenshot from '/img/concepts/ui-concepts/controls/control-trees-visual.png';
 import ControlTreesEventScreenshot from '/img/concepts/ui-concepts/controls/control-trees-events.png';
 
-# Control Trees
-
 _Avalonia UI_ creates control trees from the XAML files in an application so that it can render the UI presentation and manage the application functionality.  
 
 ## Logical Tree
@@ -21,7 +19,7 @@ While your application is running, you can show the _Avalonia Dev Tools_ window 
 
 ## Visual Tree
 
-The visual control tree contains everything that is actually being run by _Avalonia UI_. It shows all the properties set on the controls, and all the additional parts that have been added by _Avalonia UI_ in order to present the UI and manage the application functionality. 
+The visual control tree contains everything that is actually being run by _Avalonia UI_. It shows all the properties set on the controls, and all the additional parts that have been added by _Avalonia UI_ to present the UI and manage the application functionality. 
 
 <img src={ControlTreesVisualScreenshot} alt=""/>
 

@@ -3,8 +3,6 @@ id: composition-animations
 title: Composition Animations
 ---
 
-# Composition Animations
-
 Composition animations are a code-driven animation system that runs directly on the render thread. They provide fine-grained control over visual properties and deliver smooth, high-performance animations without blocking the UI thread.
 
 This API is similar to the UWP/WinUI Composition layer. Use it when you need programmatic control over animations, want render-thread performance, or need to animate properties that XAML keyframe animations do not support.

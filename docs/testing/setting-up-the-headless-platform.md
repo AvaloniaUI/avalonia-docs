@@ -263,7 +263,7 @@ public void ViewModel_Increments_Count()
 
 ## Manual Setup
 
-:::warning
+:::caution
 This is an advanced usage scenario. For most cases, use the [XUnit](headless-xunit) or [NUnit](headless-nunit) integration, which handles setup automatically.
 :::
 

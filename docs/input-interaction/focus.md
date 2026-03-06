@@ -5,8 +5,6 @@ title: Focus
 
 import DirectionalNavigationScreenshot from '/img/concepts/ui-concepts/user-input/directional-navigation.gif';
 
-# Focus
-
 Focus refers to the `InputElement` which is expected to receive keyboard input and are typically 
 distinguished with a visual indicator. The most familiar example is a `TextBox` with a blinking cursor inside, but 
 non-textual controls like `Button` and `Slider` also participate in focus.
@@ -110,7 +108,7 @@ When 2D directional navigation is enabled, a disambiguation strategy is used to 
 `XYFocus` allows each control to specify an explicit navigation target when a direction is pressed via `XYFocus.Up`, 
 `XYFocus.Down`, `XYFocus.Left`, and `XYFocus.Right`. This has priority over any navigation strategy.
 
-:::warning
+:::caution
 Focus engagement is not yet implemented, so combining Directional focus navigation with controls that also handle 
 directional input themselves may have some limitations, especially with visuals.
 :::

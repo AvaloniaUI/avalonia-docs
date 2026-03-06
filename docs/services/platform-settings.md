@@ -14,14 +14,14 @@ var platformSettings = myControl.GetPlatformSettings();
 ## Methods
 
 ### GetTapSize(PointerType type)
-Returns the size of the rectangle around the location of a pointer down that a pointer up must occur within in order to register a tap gesture, in device-independent pixels.
+Returns the size of the rectangle around the location of a pointer down that a pointer up must occur within to register a tap gesture, in device-independent pixels.
 
 ```cs 
 Size GetTapSize(PointerType type);
 ```
 
 ### GetDoubleTapSize(PointerType type)
-Returns the size of the rectangle around the location of a pointer down that a pointer up must occur within in order to register a double-tap gesture, in device-independent pixels.
+Returns the size of the rectangle around the location of a pointer down that a pointer up must occur within to register a double-tap gesture, in device-independent pixels.
 
 ```cs
 Size GetDoubleTapSize(PointerType type);

@@ -262,7 +262,7 @@ Each `Screen` object exposes:
 | `Scaling` | `double` | DPI scaling factor (e.g., 1.0 for 96 DPI, 1.5 for 144 DPI). |
 | `IsPrimary` | `bool` | Whether this is the primary display. |
 | `DisplayName` | `string?` | The OS-reported display name. |
-| `CurrentOrientation` | `ScreenOrientation` | The screen orientation (Landscape, Portrait, etc.). |
+| `CurrentOrientation` | `ScreenOrientation` | The screen orientation (Landscape, Portrait, and similar). |
 
 ### Responding to screen changes
 

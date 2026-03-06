@@ -236,7 +236,7 @@ public class RatingControlAutomationPeer : ControlAutomationPeer
 
 | Method | Purpose |
 |---|---|
-| `GetAutomationControlTypeCore()` | The type of control (Button, TextBox, Slider, etc.) |
+| `GetAutomationControlTypeCore()` | The type of control (Button, TextBox, Slider, and similar) |
 | `GetNameCore()` | The accessible name announced by screen readers |
 | `GetHelpTextCore()` | Additional descriptive text |
 | `GetAutomationIdCore()` | A stable identifier for testing |
