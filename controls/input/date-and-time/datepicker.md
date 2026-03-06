@@ -11,7 +11,17 @@ The `DatePicker` has three 'spinner' controls to allow the user to pick a date v
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="219">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>DayVisible</code></td><td>Sets if the day column is visible.</td></tr><tr><td><code>MonthVisible</code></td><td>Sets if the month column is visible.</td></tr><tr><td><code>YearVisible</code></td><td>Sets if the year column is visible.</td></tr><tr><td><code>DayFormat</code></td><td>Format string for the day part of the date.</td></tr><tr><td><code>MonthFormat</code></td><td>Format string for the month part of the date.</td></tr><tr><td><code>YearFormat</code></td><td>Format string for the year part of the date.</td></tr><tr><td><code>SelectedDate</code></td><td>The date selected (null when no selection).</td></tr></tbody></table>
+| Property | Description |
+|---|---|
+| `SelectedDate` | The date selected (null when no selection). |
+| `DayVisible` | Sets if the day column is visible. |
+| `MonthVisible` | Sets if the month column is visible. |
+| `YearVisible` | Sets if the year column is visible. |
+| `DayFormat` | Format string for the day part of the date. |
+| `MonthFormat` | Format string for the month part of the date. |
+| `YearFormat` | Format string for the year part of the date. |
+| `MinYear` | The minimum selectable year. |
+| `MaxYear` | The maximum selectable year. |
 
 ## Example
 

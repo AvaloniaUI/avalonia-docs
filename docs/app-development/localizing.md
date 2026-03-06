@@ -91,3 +91,79 @@ For the localized properties to be available from XAML, the code generated from 
 NB: also note that only the default resource file (`Resources.resx`) should generate code.
 
 :::
+
+## Runtime Language Switching
+
+You can change the culture at runtime to allow users to switch languages without restarting the application:
+
+```csharp
+public void SwitchLanguage(string cultureCode)
+{
+    Lang.Resources.Culture = new CultureInfo(cultureCode);
+    // Raise PropertyChanged for all localized properties
+    // or reload the view to pick up new strings
+}
+```
+
+Note that `x:Static` bindings do not automatically update when the culture changes. Because `x:Static` resolves its value once at load time, the UI will not reflect the new language until the view is refreshed. To work around this, consider one of the following approaches:
+
+- **Reload the view or window.** Close and re-create the window (or user control) so that all `x:Static` references are re-evaluated against the new culture.
+- **Use a localization service with `INotifyPropertyChanged`.** Create a service class that exposes localized strings as properties and raises `PropertyChanged` when the culture changes. Bind to these properties instead of using `x:Static`.
+
+## Right-to-Left (RTL) Support
+
+Avalonia supports right-to-left layouts through the `FlowDirection` property. Setting `FlowDirection` to `RightToLeft` mirrors the layout of child controls, which is essential for languages such as Arabic, Hebrew, and Persian.
+
+```xml
+<Window FlowDirection="RightToLeft">
+    <!-- All child controls mirror their layout -->
+</Window>
+```
+
+You can also set `FlowDirection` dynamically based on the current culture:
+
+```csharp
+var culture = new CultureInfo("ar-SA");
+if (culture.TextInfo.IsRightToLeft)
+{
+    mainWindow.FlowDirection = FlowDirection.RightToLeft;
+}
+```
+
+The following controls respect `FlowDirection` and will adjust their layout accordingly:
+
+- `StackPanel` (reverses the order of horizontal items)
+- `Grid` (mirrors column ordering)
+- `DockPanel` (swaps left and right docking)
+- `TextBlock` (adjusts text alignment)
+
+## Culture-Aware Formatting
+
+When using `StringFormat` in data bindings, the formatting follows the current thread culture. For example, currency formatting adapts to the active culture:
+
+```xml
+<TextBlock Text="{Binding Price, StringFormat='{}{0:C}'}" />
+```
+
+This will display the `Price` value using the currency symbol and format of the current culture. To control which culture is used for formatting, set `Thread.CurrentThread.CurrentCulture` early in your application startup:
+
+```csharp
+Thread.CurrentThread.CurrentCulture = new CultureInfo("de-DE");
+```
+
+With `de-DE`, a price of `1234.56` would display as `1.234,56 €` instead of `$1,234.56`.
+
+## Platform Considerations
+
+Avalonia's localization features work consistently across all supported platforms:
+
+| Feature | Windows | macOS | Linux | Mobile |
+|---|---|---|---|---|
+| ResX localization | Full | Full | Full | Full |
+| FlowDirection | Full | Full | Full | Full |
+| System locale detection | `CultureInfo.CurrentCulture` | Same | Same | Same |
+
+## See Also
+
+- [Resources](/docs/app-development/resources): Application resources.
+- [Custom Fonts](/docs/styling/custom-fonts): Loading fonts for different scripts.

@@ -3,12 +3,75 @@ id: templated-controls
 title: How To Create Templated Controls
 ---
 
+Templated controls are controls whose appearance is defined entirely by a `ControlTemplate`. This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls because the control class itself contains no rendering code.
 
-# How To Create Templated Controls
+Avalonia's built-in controls (such as `Button`, `TextBox`, and `ListBox`) are all templated controls. You can follow the same pattern to build your own.
 
-## Data Binding
+## Creating a Templated Control
 
-When you're creating a control template and you want to bind to the templated parent you can use:
+To create a templated control, define a class that inherits from `TemplatedControl` and register any custom properties using `StyledProperty`.
+
+```csharp
+public class ToggleLabel : TemplatedControl
+{
+    public static readonly StyledProperty<string> LabelTextProperty =
+        AvaloniaProperty.Register<ToggleLabel, string>(nameof(LabelText), "Default");
+
+    public string LabelText
+    {
+        get => GetValue(LabelTextProperty);
+        set => SetValue(LabelTextProperty, value);
+    }
+}
+```
+
+This gives you a control with a `LabelText` property but no visual representation yet. The visuals come from a control theme.
+
+## Defining the Control Theme
+
+Every templated control needs a default `ControlTheme` that contains its `ControlTemplate`. This is typically placed in a resource dictionary such as `Themes/Generic.axaml` and included in your application's resources.
+
+```xml
+<ControlTheme x:Key="{x:Type local:ToggleLabel}" TargetType="local:ToggleLabel">
+    <Setter Property="Template">
+        <ControlTemplate>
+            <Border Background="{TemplateBinding Background}" Padding="8">
+                <TextBlock Text="{TemplateBinding LabelText}" />
+            </Border>
+        </ControlTemplate>
+    </Setter>
+</ControlTheme>
+```
+
+Key points:
+
+- `x:Key="{x:Type local:ToggleLabel}"` ensures Avalonia automatically applies this theme to all instances of `ToggleLabel`.
+- `TargetType` scopes the theme so that property setters and template bindings resolve against the correct type.
+- Inside the `ControlTemplate`, use `TemplateBinding` to bind to properties on the templated control.
+
+## Template Parts
+
+Sometimes a templated control needs to interact with specific elements inside its template. By convention, these elements are named with a `PART_` prefix.
+
+Override `OnApplyTemplate` to locate named parts after the template has been applied:
+
+```csharp
+protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
+{
+    base.OnApplyTemplate(e);
+    var button = e.NameScope.Find<Button>("PART_Button");
+    if (button is not null)
+    {
+        button.Click += OnButtonClick;
+    }
+}
+```
+
+Because users can replace the control template, always check for `null` when looking up template parts. A custom template may omit parts that the default template provides.
+
+## TemplateBinding Details
+
+When you are creating a control template and you want to bind to the templated parent you can use:
 
 ```xml
 <TextBlock Name="tb" Text="{TemplateBinding Caption}"/>
@@ -43,3 +106,27 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
 <GeometryDrawing Brush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
 ```
 
+## Pseudo-Classes
+
+Templated controls can expose visual states through pseudo-classes. This lets theme authors style the control differently based on its state without needing code-behind access.
+
+Set a pseudo-class from your control logic:
+
+```csharp
+PseudoClasses.Set(":active", isActive);
+```
+
+Then target it in your control theme:
+
+```xml
+<Style Selector="^:active">
+    <Setter Property="Background" Value="Blue" />
+</Style>
+```
+
+## See Also
+
+- [Defining Properties](defining-properties)
+- [Defining Events](defining-events)
+- [Control Themes](/docs/styling/control-themes)
+- [Control Template Walkthrough](/docs/styling/control-template-walkthrough)

@@ -3,16 +3,60 @@ id: style-selectors
 title: Style Selectors
 ---
 
-# Style Selectors
+Avalonia uses style selectors to match controls using a custom XAML syntax that is similar to CSS (Cascading Style Sheets). Selectors determine which controls a style applies to.
 
-_Avalonia UI_ uses style selectors to match controls using a custom XAML syntax.
+## Selector Quick Reference
 
-:::info
-If you are familiar with the CSS (Cascading Style Sheets) technology, then you will recognise this syntax as being very similar.
-:::
+| Selector | Description |
+|---|---|
+| `Button` | Selects all `Button` controls. |
+| `Button.red` | Selects all `Button` controls with the `red` style class. |
+| `Button.red.large` | Selects all `Button` controls with both `red` and `large` style classes. |
+| `Button:focus` | Selects all `Button` controls with the `:focus` pseudo-class active. |
+| `Button.red:focus` | Selects all `Button` controls with the `red` class and `:focus` pseudo-class. |
+| `Button#myButton` | Selects the `Button` with `Name="myButton"`. |
+| `StackPanel Button.xl` | Selects `Button.xl` controls that are descendants (any depth) of a `StackPanel`. |
+| `StackPanel > Button.xl` | Selects `Button.xl` controls that are direct children of a `StackPanel`. |
+| `Button /template/ ContentPresenter` | Selects `ContentPresenter` controls inside a `Button` control template. |
+| `:is(Button)` | Selects controls that are `Button` or derive from `Button`. |
+| `:not(Button.red)` | Selects controls that do not match `Button.red`. |
+| `Button:nth-child(2n+1)` | Selects odd-numbered `Button` controls among their siblings. |
 
-Here is a list of some example style selectors:
+## How Selectors Work
 
-<table><thead><tr><th width="310">Style Selector</th><th>Description</th></tr></thead><tbody><tr><td><code>Button</code></td><td>Selects all <code>Button</code> (class) controls.</td></tr><tr><td><code>Button.red</code></td><td>Selects all <code>Button</code> controls with the <code>red</code> style class defined.</td></tr><tr><td><code>Button.red.large</code></td><td>Selects all <code>Button</code> controls with the <code>red</code> and <code>large</code> style classes defined.</td></tr><tr><td><code>Button:focus</code></td><td>Selects all <code>Button</code> controls with the <code>:focus</code> pseudo class active.</td></tr><tr><td><code>Button.red:focus</code></td><td>Selects all <code>Button</code> controls with the <code>red</code> style class and the <code>:focus</code> pseudo class active.</td></tr><tr><td><code>Button#myButton</code></td><td>Selects a <code>Button</code> control with the <code>Name</code> (attribute) defined as <code>"myButton"</code>.</td></tr><tr><td><code>StackPanel Button.xl</code></td><td>Selects all  <code>Button</code> (class) controls with the <code>xl</code>class defined; that are also descendants at any level of a <code>StackPanel</code> (class) control.</td></tr><tr><td><code>StackPanel > Button.xl</code></td><td>Selects all  <code>Button</code> (class) controls with the <code>xl</code>class defined; that are also a direct descendant of a <code>StackPanel</code> (class) control.</td></tr><tr><td><code>Button /template/ ContentPresenter</code></td><td>Selects all <code>ContentPresenter</code> (class) controls inside a template of a <code>Button</code> (class) control.</td></tr></tbody></table>
+A style selector is specified on the `Selector` attribute of a `Style`:
 
-For a full description of these style selector formats, and more, see the reference [here](/docs/styling/style-selector-syntax).
+```xml
+<Style Selector="Button.primary:pointerover">
+    <Setter Property="Background" Value="DarkBlue" />
+</Style>
+```
+
+This selector targets all `Button` controls with the `primary` style class when the pointer is hovering over them. Multiple parts compose left to right:
+
+1. `Button` matches the control type
+2. `.primary` matches a style class
+3. `:pointerover` matches a pseudo-class (state)
+
+## Selector Specificity
+
+When multiple styles match the same control, the more specific selector wins. Specificity is determined by (in order of priority):
+
+1. Name selectors (`#name`) are most specific
+2. Property and pseudo-class selectors (`:pointerover`, `[IsEnabled=True]`)
+3. Style class selectors (`.primary`)
+4. Type selectors (`Button`)
+5. Descendant/child combinators are resolved by position in the tree
+
+If two selectors have equal specificity, the one declared later wins.
+
+## Full Reference
+
+For a complete description of all selector formats, operators, and combinators, see the [Style Selector Syntax](/docs/styling/style-selector-syntax) reference.
+
+## See Also
+
+- [Style Selector Syntax](/docs/styling/style-selector-syntax): Complete syntax reference.
+- [Styles](/docs/styling/styles): How to define and apply styles.
+- [Style Classes](/docs/styling/style-classes): Working with style classes.
+- [Pseudo-Classes](/docs/styling/pseudoclasses): State-based pseudo-class selectors.

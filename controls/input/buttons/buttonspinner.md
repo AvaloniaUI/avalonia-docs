@@ -9,7 +9,11 @@ The `ButtonSpinner` presents a control that includes buttons for spin-up and spi
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="261">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>ButtonSpinnerLocation</code></td><td>Location of the spinner buttons: left or right.</td></tr><tr><td><code>ValidSpinDirection</code></td><td>Used to limit spin direction: increase, decrease or none. </td></tr></tbody></table>
+| Property | Description |
+|---|---|
+| `ButtonSpinnerLocation` | Location of the spinner buttons: `Left` or `Right` (default). |
+| `ValidSpinDirection` | Limits spin direction: `Increase`, `Decrease`, or `None`. |
+| `AllowSpin` | Whether spinning is enabled. Default is `true`. |
 
 ## Example
 

@@ -3,8 +3,6 @@ id: defining-events
 title: Defining events
 ---
 
-# Defining Events
-
 Events in Avalonia allow your custom controls to communicate and notify users of specific actions or occurrences. By defining events, you provide a way for users of your controls to respond and react to these events within their applications. This document will guide you through the process of defining events for your custom controls.
 
 ## Routed Event
@@ -46,6 +44,106 @@ public class MyCustomSlider : Control
 
 In this example, a custom routed event called `ValueChangedEvent` is defined for the `MyCustomSlider` control. The event is registered using the `RoutedEvent` system, allowing it to be subscribed by users of the control. A CLR event is also defined for convenience, allowing the event to be consumed in manner consistent with standard .NET APIs.
 
-## Further Reading
+## Custom Event Args
 
-For more information see [Routed Events](/docs/input-interaction/routed-events).
+When your event needs to carry additional data, create a custom class that inherits from `RoutedEventArgs`:
+
+```csharp
+public class ValueChangedEventArgs : RoutedEventArgs
+{
+    public ValueChangedEventArgs(RoutedEvent routedEvent, double oldValue, double newValue)
+        : base(routedEvent)
+    {
+        OldValue = oldValue;
+        NewValue = newValue;
+    }
+
+    public double OldValue { get; }
+    public double NewValue { get; }
+}
+```
+
+Then update the event registration to use the custom args type:
+
+```csharp
+public static readonly RoutedEvent<ValueChangedEventArgs> ValueChangedEvent =
+    RoutedEvent.Register<MyCustomSlider, ValueChangedEventArgs>(
+        nameof(ValueChanged), RoutingStrategies.Bubble);
+```
+
+The CLR event wrapper and raise method should also be updated to match:
+
+```csharp
+public event EventHandler<ValueChangedEventArgs> ValueChanged
+{
+    add => AddHandler(ValueChangedEvent, value);
+    remove => RemoveHandler(ValueChangedEvent, value);
+}
+
+protected virtual void OnValueChanged(double oldValue, double newValue)
+{
+    var args = new ValueChangedEventArgs(ValueChangedEvent, oldValue, newValue);
+    RaiseEvent(args);
+}
+```
+
+## Routing Strategies
+
+Avalonia supports several routing strategies that control how events propagate through the visual tree:
+
+| Strategy | Behavior |
+|----------|----------|
+| `Direct` | Event fires only on the source control |
+| `Bubble` | Event travels up from source to root |
+| `Tunnel` | Event travels down from root to source |
+| `Bubble \| Tunnel` | Event tunnels down, then bubbles up |
+
+You can combine strategies using the bitwise OR operator:
+
+```csharp
+RoutedEvent.Register<MyControl, RoutedEventArgs>(
+    nameof(MyEvent), RoutingStrategies.Bubble | RoutingStrategies.Tunnel);
+```
+
+Using `Bubble | Tunnel` together is useful when you want to give parent controls a chance to preview and intercept the event (during the tunnel phase) before the source control handles it (during the bubble phase).
+
+## Handling Events in XAML
+
+Users of your custom control can subscribe to the event directly in XAML:
+
+```xml
+<local:MyCustomSlider ValueChanged="OnSliderValueChanged" />
+```
+
+With the corresponding handler in code-behind:
+
+```csharp
+private void OnSliderValueChanged(object? sender, ValueChangedEventArgs e)
+{
+    Debug.WriteLine($"Value changed from {e.OldValue} to {e.NewValue}");
+}
+```
+
+## Class Handlers
+
+Class handlers let you register event handling logic at the class level rather than on individual instances. This is useful for default behavior that should apply to all instances of a control:
+
+```csharp
+static MyCustomSlider()
+{
+    ValueChangedEvent.AddClassHandler<MyCustomSlider>((s, e) => s.OnValueChanged(e));
+}
+
+private void OnValueChanged(ValueChangedEventArgs e)
+{
+    // Handle value change
+}
+```
+
+Class handlers are invoked before instance handlers and are registered in the static constructor so they apply automatically to every instance of the control.
+
+## See Also
+
+- [Routed Events](/docs/input-interaction/routed-events): Full routed events reference.
+- [Events System](/docs/events/index): Overview of the events system.
+- [Input Events](/docs/events/input-events): Built-in input events.

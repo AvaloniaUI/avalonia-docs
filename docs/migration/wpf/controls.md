@@ -41,4 +41,69 @@ Column and row definitions can be specified in Avalonia using strings, avoiding 
 
 A common use of `Grid` in WPF is to stack two controls on top of each other. For this purpose in Avalonia you can just use a `Panel` which is more lightweight than `Grid`.
 
-<XpfAd/>
+## ToolTip
+
+WPF uses `ToolTip` as a property or child element. Avalonia uses the `ToolTip.Tip` attached property:
+
+```xml title="WPF"
+<Button ToolTip="Save the document" Content="Save" />
+```
+
+```xml title="Avalonia"
+<Button ToolTip.Tip="Save the document" Content="Save" />
+```
+
+## ItemsControl and ItemsSource
+
+WPF's `ItemsControl.Items` can be set directly. In Avalonia, use `ItemsSource` for data binding or add children directly in XAML:
+
+```xml title="Avalonia"
+<ListBox ItemsSource="{Binding MyItems}">
+    <ListBox.ItemTemplate>
+        <DataTemplate>
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+    </ListBox.ItemTemplate>
+</ListBox>
+```
+
+Note: In Avalonia, `ItemsSource` replaces `ItemsSource` (same name) but `Items` is read-only. You cannot assign a new collection to `Items`.
+
+## DataGrid
+
+DataGrid is a separate NuGet package in Avalonia:
+
+```xml
+<PackageReference Include="Avalonia.Controls.DataGrid" Version="$(AvaloniaVersion)" />
+```
+
+You must also include the DataGrid theme in `App.axaml`:
+
+```xml
+<Application.Styles>
+    <FluentTheme />
+    <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml" />
+</Application.Styles>
+```
+
+## StatusBar
+
+Avalonia does not have a `StatusBar` control. Use a styled `DockPanel` or `StackPanel` at the bottom of your window:
+
+```xml
+<DockPanel>
+    <Border DockPanel.Dock="Bottom" Background="{DynamicResource SystemChromeLowColor}" Padding="8,4">
+        <TextBlock Text="Ready" />
+    </Border>
+    <!-- Main content -->
+</DockPanel>
+```
+
+## RichTextBox
+
+Avalonia does not include a built-in `RichTextBox`. For rich text editing, use a third-party control such as AvalonEdit.
+
+## See Also
+
+- [WPF to Avalonia Cheat Sheet](cheat-sheet): Quick reference for all control mappings.
+- [Controls Reference](/controls): Full Avalonia controls documentation.

@@ -74,6 +74,95 @@ If you need to add or remove a class using a bound condition, then you can use f
 <Button Classes.accent="{Binding IsSpecial}" />
 ```
 
+## Conditional Styling Patterns
+
+Avalonia does not have WPF-style triggers. Instead, use style classes, pseudo-classes, and binding converters to achieve conditional styling.
+
+### Toggle appearance based on a bound property
+
+Define styles for each state using style classes, then bind the class conditionally:
+
+```xml
+<StackPanel>
+    <StackPanel.Styles>
+        <Style Selector="Border.status-ok">
+            <Setter Property="Background" Value="Green" />
+        </Style>
+        <Style Selector="Border.status-error">
+            <Setter Property="Background" Value="Red" />
+        </Style>
+    </StackPanel.Styles>
+
+    <Border Classes.status-ok="{Binding IsOnline}"
+            Classes.status-error="{Binding !IsOnline}"
+            Padding="8">
+        <TextBlock Text="Service Status" />
+    </Border>
+</StackPanel>
+```
+
+### Using a converter for non-boolean conditions
+
+For conditions that are not simple booleans, use a value converter:
+
+```xml
+<Border Background="{Binding Priority, Converter={StaticResource PriorityToBrushConverter}}" />
+```
+
+### Combining pseudo-classes with style classes
+
+Target specific interactive states of styled controls:
+
+```xml
+<StackPanel.Styles>
+    <Style Selector="Button.primary">
+        <Setter Property="Background" Value="Blue" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style Selector="Button.primary:pointerover">
+        <Setter Property="Background" Value="DarkBlue" />
+    </Style>
+    <Style Selector="Button.primary:pressed">
+        <Setter Property="Background" Value="Navy" />
+    </Style>
+</StackPanel.Styles>
+```
+
+### Custom pseudo-classes in your controls
+
+Define custom pseudo-classes for states specific to your control:
+
+```csharp
+public class StatusIndicator : TemplatedControl
+{
+    public static readonly StyledProperty<bool> IsActiveProperty =
+        AvaloniaProperty.Register<StatusIndicator, bool>(nameof(IsActive));
+
+    public bool IsActive
+    {
+        get => GetValue(IsActiveProperty);
+        set => SetValue(IsActiveProperty, value);
+    }
+
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+    {
+        base.OnPropertyChanged(change);
+        if (change.Property == IsActiveProperty)
+        {
+            PseudoClasses.Set(":active", change.GetNewValue<bool>());
+        }
+    }
+}
+```
+
+Then style it with pseudo-class selectors:
+
+```xml
+<Style Selector="local|StatusIndicator:active">
+    <Setter Property="Background" Value="LimeGreen" />
+</Style>
+```
+
 ## Classes in Code
 
 You can manipulate style classes in code using the `Classes` collection:
@@ -81,4 +170,17 @@ You can manipulate style classes in code using the `Classes` collection:
 ```csharp
 control.Classes.Add("blue");
 control.Classes.Remove("red");
+control.Classes.Toggle("highlight");
+
+// Check if a class is present
+if (control.Classes.Contains("blue"))
+{
+    // ...
+}
 ```
+
+## See Also
+
+- [Styles](/docs/styling/styles): How to define and apply styles.
+- [Pseudo-Classes](/docs/styling/pseudoclasses): Built-in state pseudo-classes.
+- [Style Selectors](/docs/styling/style-selectors): Selector quick reference.
