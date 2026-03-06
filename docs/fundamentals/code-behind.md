@@ -127,5 +127,6 @@ For more information on the concepts of event routing, see [Routed events](/docs
 ## See also
 
 - [Avalonia XAML](/docs/fundamentals/avalonia-xaml)
+- [Code-Only UI](/docs/fundamentals/coded-ui)
 - [The MVVM pattern](/docs/fundamentals/the-mvvm-pattern)
 - [UI composition](/docs/fundamentals/ui-composition)

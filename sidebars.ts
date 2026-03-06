@@ -37,6 +37,7 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'fundamentals/avalonia-xaml',
+        'fundamentals/coded-ui',
         'fundamentals/code-behind',
         'fundamentals/main-window',
         'fundamentals/top-level',
@@ -406,6 +407,7 @@ const sidebars: SidebarsConfig = {
         'how-to/datagrid-how-to',
         'how-to/data-persistence-how-to',
         'how-to/responsive-layout-how-to',
+        'how-to/coded-ui-how-to',
       ],
     },
     {

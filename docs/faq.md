@@ -57,7 +57,9 @@ Whether you're developing a simple utility or a large-scale enterprise applicati
 
 ## Can I code my UI instead of using XAML?
 
-Yes. You can code your entire UI with your preferred .NET language.
+Yes. You can build entire Avalonia applications using only C#, F#, or any .NET language, with no XAML files at all. Every control, layout, style, and binding has an equivalent code API. For F# developers, [Avalonia.FuncUI](https://github.com/fsprojects/Avalonia.FuncUI) provides an Elm-inspired functional architecture.
+
+See [Code-Only UI](/docs/fundamentals/coded-ui) for a full guide and [How To: Build a Complete App Without XAML](/docs/how-to/coded-ui-how-to) for a step-by-step walkthrough.
 
 ---
 
