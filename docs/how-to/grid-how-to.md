@@ -1,6 +1,6 @@
 ---
 id: grid-how-to
-title: "How To: Work with Grid Layouts"
+title: "How to: Work with Grid Layouts"
 ---
 
 This guide covers common Grid layout scenarios: row and column definitions, sizing modes, spanning, shared sizing, and responsive patterns.

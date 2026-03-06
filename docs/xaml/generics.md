@@ -1,6 +1,6 @@
 ---
 id: generics
-title: Generic Types in XAML
+title: Generic types in XAML
 ---
 
 Avalonia supports using generic .NET types in XAML through the `x:TypeArguments` directive. This allows you to instantiate generic classes and use generic collections directly in markup.
@@ -23,7 +23,7 @@ Separate multiple type arguments with commas:
 <local:Pair x:TypeArguments="x:String, x:Int32" />
 ```
 
-## Using Generic Collections in Resources
+## Using generic collections in resources
 
 You can define generic collections as resources:
 
@@ -45,7 +45,7 @@ You can define generic collections as resources:
 </Window>
 ```
 
-## Generic Custom Controls
+## Generic custom controls
 
 When creating a generic custom control, define the type parameter in C#:
 
@@ -69,7 +69,7 @@ Use it in XAML with `x:TypeArguments`:
 <local:TypedList x:TypeArguments="vm:Person" ItemsSource="{Binding People}" />
 ```
 
-## Common Generic Types in XAML
+## Common generic types in XAML
 
 | Type | XAML Prefix | Example |
 |---|---|---|
@@ -85,7 +85,7 @@ Use it in XAML with `x:TypeArguments`:
 - Nested generic types (e.g., `List<List<string>>`) are not supported in XAML. Define them in code and reference via binding or `x:Static`.
 - Not all XAML contexts support `x:TypeArguments`. It works on object elements and resource definitions.
 
-## Workarounds for Unsupported Scenarios
+## Workarounds for unsupported scenarios
 
 When XAML generics are not practical, define a concrete subclass:
 
@@ -105,7 +105,7 @@ public class PersonCollection : ObservableCollection<Person> { }
 
 This pattern is common in .NET XAML frameworks and avoids any `x:TypeArguments` limitations.
 
-## See Also
+## See also
 
 - [XAML Namespaces](/docs/xaml/namespaces): How to reference CLR namespaces in XAML.
 - [x: Directives](/docs/xaml/directives): Full reference for `x:TypeArguments` and other directives.

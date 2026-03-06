@@ -41,7 +41,7 @@ This results in exactly the same display as on the previous page:
 
 <img src={DataTemplatesCollectionStudentScreenshot} alt=""/>
 
-## Multiple Data Templates by Type
+## Multiple data templates by type
 
 The real power of the `DataTemplates` collection is selecting different templates for different types. When Avalonia encounters an object, it searches the `DataTemplates` collection for a template whose `DataType` matches the object's type:
 
@@ -71,7 +71,7 @@ With these templates defined, a `ListBox` or `ContentControl` displaying `Studen
 <ListBox ItemsSource="{Binding People}" />
 ```
 
-## Template Search Order
+## Template search order
 
 When Avalonia needs a data template for an object, it searches in this order:
 
@@ -82,3 +82,8 @@ When Avalonia needs a data template for an object, it searches in this order:
 
 The first matching template is used. This lets you override application-wide templates at any level of the tree.
 
+## See also
+
+- [Introduction to Data Templates](introduction-to-data-templates): Overview of data templates in Avalonia.
+- [Content Templates](content-templates): Using `ContentTemplate` directly.
+- [Reusing Data Templates](reusing-data-templates): Sharing templates across your application.

@@ -5,7 +5,7 @@ title: Visual and Logical Trees
 
 Avalonia organizes controls into two parallel tree structures: the logical tree and the visual tree. Understanding these trees is important for resource lookup, event routing, styling, and custom control development.
 
-## Logical Tree
+## Logical tree
 
 The logical tree represents the structure of your UI as you define it in XAML. It contains the controls you explicitly declare, without the internal template structure.
 
@@ -56,7 +56,7 @@ var window = myControl.FindAncestorOfType<Window>();
 var allTextBlocks = myPanel.GetLogicalDescendants().OfType<TextBlock>();
 ```
 
-## Visual Tree
+## Visual tree
 
 The visual tree includes every visual element that participates in rendering, including the internal template parts of controls. A `Button` in the logical tree expands in the visual tree to include its `ContentPresenter`, `Border`, and other template elements.
 
@@ -103,7 +103,7 @@ var visibleTextBox = myPanel.FindDescendantOfType<TextBox>(
 var allVisuals = myControl.GetVisualDescendants();
 ```
 
-## Differences Between the Trees
+## Differences between the trees
 
 | Aspect | Logical tree | Visual tree |
 |---|---|---|
@@ -115,7 +115,7 @@ var allVisuals = myControl.GetVisualDescendants();
 | Hit testing | No | Yes |
 | Layout | Partially | Yes |
 
-## When to Use Which Tree
+## When to use which tree
 
 **Use the logical tree when:**
 - Looking up resources or data context
@@ -129,7 +129,7 @@ var allVisuals = myControl.GetVisualDescendants();
 - Implementing hit testing
 - Translating coordinates between elements (`TranslatePoint`)
 
-## Examining Trees at Runtime
+## Examining trees at runtime
 
 Use the Avalonia DevTools (press F12 in a debug build) to inspect both trees interactively. The DevTools Logical Tree and Visual Tree tabs show the full hierarchy with properties.
 
@@ -149,7 +149,7 @@ static void PrintLogicalTree(StyledElement element, int indent = 0)
 }
 ```
 
-## Template Parts and the Visual Tree
+## Template parts and the visual tree
 
 When you create a control template, the elements inside it become part of the visual tree but not the logical tree. To access template parts from a custom control, override `OnApplyTemplate`:
 
@@ -166,7 +166,7 @@ protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
 
 Template parts are conventionally named with a `PART_` prefix to distinguish them from logical children.
 
-## Overlay Layers
+## Overlay layers
 
 Avalonia manages several special layers above the normal control content within each window. These layers handle adorners, custom overlays, and popups:
 
@@ -206,9 +206,9 @@ if (overlay is not null)
 
 Overlay content appears above all normal controls in the window but beneath popups, menus, and tooltips.
 
-## See Also
+## See also
 
-- [UI Composition](/docs/fundamentals/ui-composition): How controls compose into a UI.
-- [Control Trees](/docs/custom-controls/control-trees): Visual and logical trees in custom control development.
-- [Events Overview](/docs/events): How events route through the visual tree.
-- [Templated Controls](/docs/custom-controls/templated-controls): Building controls with templates.
+- [UI composition](/docs/fundamentals/ui-composition): How controls compose into a UI.
+- [Control trees](/docs/custom-controls/control-trees): Visual and logical trees in custom control development.
+- [Events overview](/docs/events): How events route through the visual tree.
+- [Templated controls](/docs/custom-controls/templated-controls): Building controls with templates.

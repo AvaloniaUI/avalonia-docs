@@ -10,7 +10,7 @@ If not, please follow XUnit "Getting Started" and "Installation" here https://xu
 
 ## Install packages
 
-Aside from XUnit packages, we need to install two more packages:
+Aside from XUnit packages, you need to install two more packages:
 - [Avalonia.Headless.XUnit](https://www.nuget.org/packages/Avalonia.Headless.XUnit) which also includes Avalonia.
 - [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent) as even headless controls need a theme
 
@@ -18,7 +18,8 @@ Aside from XUnit packages, we need to install two more packages:
 Headless platform doesn't require any specific theme, and it is possible to swap FluentTheme with any other.
 :::
 
-## Setup Application 
+## Setup application
+
 As in any other Avalonia app, an `Application` instance needs to be created, and themes need to be applied. When using the Headless platform, the setup is not much different from a regular Avalonia app and can mostly be reused.
 
 ```xml title=App.axaml
@@ -50,7 +51,7 @@ public class App : Application
 Usually, the `BuildAvaloniaApp` method is defined in the Program.cs file, but NUnit/XUnit tests don't have it, so it is defined in the `App` file instead.
 :::
 
-## Initialize XUnit Tests
+## Initialize XUnit tests
 
 The `[AvaloniaTestApplication]` attribute wires the tests in the current project with the specific application. It needs to be defined once per project in any file.
 
@@ -64,7 +65,7 @@ public class TestAppBuilder
 }
 ```
 
-## Test Isolation Level
+## Test isolation level
 
 By default, the Application and Dispatcher are recreated for each test (`PerTest` isolation). For large test suites this can be slow. To reuse a single Application instance across all tests in the assembly, add the `[AvaloniaTestIsolation]` attribute:
 
@@ -106,12 +107,11 @@ public void Should_Type_Text_Into_TextBox()
 }
 ```
 
-Instead of the typical `[Fact]` attribute, we need to use `[AvaloniaFact]` as it sets up the UI thread. Similarly, instead of `[Theory]`, there is an `[AvaloniaTheory]` attribute.
+Instead of the typical `[Fact]` attribute, use `[AvaloniaFact]` as it sets up the UI thread. Similarly, instead of `[Theory]`, there is an `[AvaloniaTheory]` attribute.
 
-## Sample app
+## See also
 
-See also: [Our testable sample app for XUnit](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing/TestableApp.Headless.XUnit).
-
-:::tip
-Headless tests are ideal for fast, in-process unit and component testing. For end-to-end tests that launch your compiled application and interact with it through the platform accessibility layer, see [UI Testing with Appium](ui-testing-with-appium).
-:::
+- [Testable sample app for XUnit](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing/TestableApp.Headless.XUnit)
+- [Headless Testing Platform](setting-up-the-headless-platform)
+- [Headless Testing with NUnit](headless-nunit)
+- [UI Testing with Appium](ui-testing-with-appium)

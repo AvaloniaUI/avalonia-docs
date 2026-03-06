@@ -5,7 +5,7 @@ title: Accessibility
 
 Avalonia includes built-in accessibility support through automation peers, which expose your UI to assistive technologies like screen readers. This page covers how to make your Avalonia application accessible to all users.
 
-## How Accessibility Works in Avalonia
+## How accessibility works in Avalonia
 
 Avalonia's accessibility model uses **automation peers**, similar to WPF and UWP. Each control has an associated `AutomationPeer` that describes the control's role, state, and content to the platform's accessibility API (UI Automation on Windows, NSAccessibility on macOS, AT-SPI on Linux).
 
@@ -161,7 +161,7 @@ Controls whether a control appears in the automation tree:
 | `Control` | Included in the control view |
 | `Content` | Included in the content view |
 
-## Keyboard Accessibility
+## Keyboard accessibility
 
 Accessible applications must be fully operable with a keyboard alone:
 
@@ -198,7 +198,7 @@ Ensure focus is visible. Avalonia shows a `FocusAdorner` (a border around the fo
 </Style>
 ```
 
-## Creating Custom Automation Peers
+## Creating custom automation peers
 
 When you build a custom control, Avalonia may not have enough information to describe it to assistive technologies. Override `OnCreateAutomationPeer` to provide a custom peer:
 
@@ -243,13 +243,13 @@ public class RatingControlAutomationPeer : ControlAutomationPeer
 | `IsContentElementCore()` | Whether the control appears in the content view |
 | `IsControlElementCore()` | Whether the control appears in the control view |
 
-## Data Validation Errors
+## Data validation errors
 
 Validation errors are automatically exposed to assistive technologies. When a control such as a `TextBox` has validation errors (from data annotations, `INotifyDataErrorInfo`, or exceptions), the `DataValidationErrors` control reports them as help text through its automation peer. Screen readers announce these errors when the control receives focus, with validation error text taking priority over tooltip text.
 
 No additional configuration is required. As long as your controls use Avalonia's [data validation](/docs/data-binding/data-validation) system, the errors are accessible by default.
 
-## Accessibility Checklist
+## Accessibility checklist
 
 Use this checklist when reviewing your application:
 
@@ -263,7 +263,7 @@ Use this checklist when reviewing your application:
 - Custom controls have appropriate automation peers
 - Decorative elements are excluded from the automation tree
 
-## Platform Support
+## Platform support
 
 Avalonia's accessibility support varies by platform:
 
@@ -278,7 +278,7 @@ Avalonia's accessibility support varies by platform:
 
 On Linux, Avalonia automatically exposes the accessibility tree over D-Bus when AT-SPI2 is available. Screen readers such as Orca can discover and interact with all standard Avalonia controls. See the [Linux platform guide](/docs/platform-specific-guides/linux#accessibility) for setup and testing instructions.
 
-## See Also
+## See also
 
 - [Focus](/docs/input-interaction/focus): Keyboard focus navigation and tab ordering.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Keyboard shortcuts and access keys.

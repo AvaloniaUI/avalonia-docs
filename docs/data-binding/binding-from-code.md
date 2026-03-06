@@ -6,7 +6,7 @@ title: How To Bind from Code
 
 Binding from code in Avalonia works somewhat differently to WPF/UWP. At the low level, Avalonia's binding system is based on Reactive Extensions' `IObservable` which is then built upon by XAML bindings (which can also be instantiated in code).
 
-## Subscribing to Changes to a Property
+## Subscribing to changes to a property
 
 You can subscribe to changes on a property by calling the `GetObservable` method. This returns an `IObservable<T>` which can be used to listen for changes to the property:
 
@@ -171,7 +171,7 @@ var textBlock = new TextBlock
 
 This approach gives you the same performance and safety benefits as XAML compiled bindings, but from C# code. See [Compiled Bindings](/docs/data-binding/compiled-bindings) for the XAML equivalent.
 
-## Subscribing to a Property on Any Object
+## Subscribing to a property on any object
 
 The `GetObservable` method returns an observable that tracks changes to a property on a single instance. However, if you're writing a control you may want to implement an `OnPropertyChanged` method which isn't tied to an instance of an object.
 
@@ -211,7 +211,7 @@ var binding = new ReflectionBinding
 textBlock.Bind(TextBlock.TextProperty, binding);
 ```
 
-## Inspecting Active Bindings
+## Inspecting active bindings
 
 Use `BindingOperations.GetBindingExpressionBase` to retrieve the active binding expression on a property:
 
@@ -224,3 +224,9 @@ if (expression is not null)
 ```
 
 This is useful for diagnostics or for calling `UpdateSource()` when using `UpdateSourceTrigger.Explicit`.
+
+## See also
+
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): XAML binding syntax reference.
+- [Compiled Bindings](/docs/data-binding/compiled-bindings): Compile-time validated bindings.
+- [Binding Debugging](/docs/data-binding/binding-debugging): Diagnosing binding issues.

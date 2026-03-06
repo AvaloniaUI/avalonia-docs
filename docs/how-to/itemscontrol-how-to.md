@@ -1,6 +1,6 @@
 ---
 id: itemscontrol-how-to
-title: "How To: Work with ItemsControl and ItemsRepeater"
+title: "How to: Work with ItemsControl and ItemsRepeater"
 ---
 
 This guide covers using `ItemsControl` and `ItemsRepeater` for custom collection layouts that go beyond what `ListBox` offers.

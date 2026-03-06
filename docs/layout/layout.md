@@ -23,11 +23,11 @@ The following table summarizes the available `Panel` controls:
 
 In WPF, `Panel` is an abstract class and laying out multiple controls to fill the available space is usually done with a `Grid` with no rows/columns. In Avalonia `Panel` is a usable control that has the same layout behavior as a `Grid` with no rows/columns, but with a lighter runtime footprint.
 
-## Element Bounding Boxes
+## Element bounding boxes
 
 When thinking about layout in Avalonia, it is important to understand the bounding box that surrounds all elements. Each `Control` consumed by the layout system can be thought of as a rectangle that is slotted into the layout. The `Bounds` property returns the boundaries of an element's layout allocation. The size of the rectangle is determined by calculating the available screen space, the size of any constraints, layout-specific properties (such as margin and padding), and the individual behavior of the parent `Panel` element. Processing this data, the layout system is able to calculate the position of all the children of a particular `Panel`. It is important to remember that sizing characteristics defined on the parent element, such as a `Border`, affect its children.
 
-## The Layout System
+## The layout system
 
 At its simplest, layout is a recursive system that leads to an element being sized, positioned, and drawn. More specifically, layout describes the process of measuring and arranging the members of a `Panel` element's `Children` collection. Layout is an intensive process. The larger the `Children` collection, the greater the number of calculations that must be made. Complexity can also be introduced based on the layout behavior defined by the `Panel` element that owns the collection. A relatively simple `Panel`, such as `Canvas`, can have significantly better performance than a more complex `Panel`, such as `Grid`.
 
@@ -42,7 +42,7 @@ Each time that a child control changes its position, it has the potential to tri
 
 This process and how it is invoked are defined in more detail in the following sections.
 
-## Measuring and Arranging Children
+## Measuring and arranging children
 
 The layout system completes two passes for each member of the `Children` collection, a measure pass and an arrange pass. Each child `Panel` provides its own `MeasureOverride` and `ArrangeOverride` methods to achieve its own specific layout behavior.
 
@@ -72,7 +72,7 @@ Use `OverlayLayer.GetOverlayLayer(visual)` to access the overlay surface for a g
 
 For details and code examples, see [Overlay Layers](/docs/fundamentals/visual-and-logical-trees#overlay-layers).
 
-## See Also
+## See also
 
 - [Positioning Controls](/docs/layout/positioning-controls): Alignment, margins, and positioning.
 - [Overlay Layers](/docs/fundamentals/visual-and-logical-trees#overlay-layers): Adding custom overlay content above normal controls.

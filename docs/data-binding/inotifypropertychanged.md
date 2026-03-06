@@ -12,7 +12,7 @@ The `INotifyPropertyChanged` interface is a critical component in the Model-View
 
 The `INotifyPropertyChanged` interface has one event member, `PropertyChanged`. When a property's value is changed, the object raises a `PropertyChanged` event to notify any bound elements that the property has changed.
 
-## Why is INotifyPropertyChanged Important in MVVM?
+## Why is INotifyPropertyChanged important in MVVM?
 In the MVVM pattern, the ViewModel encapsulates the interaction logic for the View and encapsulates the data from the Model. The View binds to properties in the ViewModel, which in turn exposes data contained in Model objects.
 
 For the MVVM pattern to work as intended, the View needs to be updated whenever the underlying data changes. That's where `INotifyPropertyChanged` comes in. By implementing this interface in your ViewModel, you can notify the View about changes in the Model, which automatically updates the UI.
@@ -46,7 +46,7 @@ public class MyViewModel : INotifyPropertyChanged
 
 In this code, whenever the `Name` property is set to a new value, the `OnPropertyChanged` method is called, which raises the `PropertyChanged` event. Any UI elements bound to this property will then update to reflect the new value.
 
-## Using MVVM Toolkit to Simplify INotifyPropertyChanged
+## Using MVVM Toolkit to simplify INotifyPropertyChanged
 While implementing `INotifyPropertyChanged` isn't particularly complex, it can become tedious if you have many properties in your ViewModel. Luckily, the .NET Community Toolkit's MVVM library offers an even more efficient way to implement `INotifyPropertyChanged` using its `ObservableObject` class and the `[ObservableProperty]` attribute with the help of Source Generators.
 
 Here's how you can achieve the same result as before, but using `ObservableObject`:
@@ -65,6 +65,11 @@ In this code, the `ObservableObject` class implements `INotifyPropertyChanged`, 
 
 The MVVM Toolkit provides a range of tools to help simplify the implementation of the MVVM pattern in your .NET applications, including simplifying the use of `INotifyPropertyChanged`. The use of Source Generators makes your code more efficient and readable, while still maintaining the same functionality.
 
+## See also
+
+- [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern): Introduction to the MVVM architectural pattern.
+- [Data Validation](/docs/data-binding/data-validation): Validation in data binding with INotifyDataErrorInfo.
+- [Introduction to Data Binding](/docs/data-binding/introduction-to-data-binding): Data binding overview.
 
 
 

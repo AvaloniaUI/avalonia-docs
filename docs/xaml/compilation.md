@@ -1,11 +1,11 @@
 ---
 id: compilation
-title: XAML Compilation
+title: XAML compilation
 ---
 
 Avalonia uses the XamlX compiler to process `.axaml` files at build time. Unlike WPF (which interprets XAML at runtime by default), Avalonia compiles XAML into IL code during the build, providing faster startup, smaller binaries, and compile-time error detection.
 
-## How XAML Compilation Works
+## How XAML compilation works
 
 When you build an Avalonia project, the XamlX compiler:
 
@@ -16,7 +16,7 @@ When you build an Avalonia project, the XamlX compiler:
 
 This means many errors that would only appear at runtime in WPF are caught during compilation in Avalonia.
 
-## Compiled Bindings
+## Compiled bindings
 
 By default, data bindings use reflection to resolve property paths at runtime. Compiled bindings resolve paths at build time, providing:
 
@@ -71,7 +71,7 @@ You can change the data type within a template or nested scope:
 </ListBox>
 ```
 
-## Build-Time Error Examples
+## Build-time error examples
 
 With compiled XAML bindings, these common mistakes become build errors:
 
@@ -81,7 +81,7 @@ With compiled XAML bindings, these common mistakes become build errors:
 | Missing `x:DataType` | Cannot use compiled binding without a DataType |
 | Wrong property type | Cannot assign 'string' to property of type 'int' |
 
-## Native AOT Considerations
+## Native AOT considerations
 
 When targeting Native AOT, compiled bindings are required because reflection-based bindings may not work without the full runtime. Ensure:
 
@@ -91,7 +91,7 @@ When targeting Native AOT, compiled bindings are required because reflection-bas
 
 For more details on AOT deployment, see [Native AOT](/docs/deployment/native-aot).
 
-## Obsolete and Experimental Diagnostics
+## Obsolete and experimental diagnostics
 
 The XAML compiler recognizes `[Obsolete]` and `[Experimental]` attributes on types and members. When you use an obsolete or experimental type, property, or event in XAML, the compiler emits a warning (or error, for `[Obsolete]` with `error: true`) with the appropriate diagnostic code and message.
 
@@ -119,7 +119,7 @@ You can suppress these diagnostics in your project file if needed:
 </PropertyGroup>
 ```
 
-## Troubleshooting XAML Compilation
+## Troubleshooting XAML compilation
 
 ### Build errors in XAML files
 
@@ -149,7 +149,7 @@ For the XAML previewer and IntelliSense, ensure `x:DataType` is set. This also e
 </UserControl>
 ```
 
-## See Also
+## See also
 
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): Detailed compiled binding reference.
 - [Avalonia XAML](/docs/fundamentals/avalonia-xaml): XAML fundamentals.

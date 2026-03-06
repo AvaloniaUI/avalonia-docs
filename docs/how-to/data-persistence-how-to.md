@@ -1,6 +1,6 @@
 ---
 id: data-persistence-how-to
-title: "How To: Save and Load Application Settings"
+title: "How to: Save and Load Application Settings"
 ---
 
 This guide covers patterns for persisting user preferences and application state across sessions.

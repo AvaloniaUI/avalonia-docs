@@ -53,7 +53,7 @@ public partial class MainViewModel : ObservableObject
 public record Person(string Name, string Email, string Department);
 ```
 
-## Editable Detail View
+## Editable detail view
 
 For two-way binding in the detail panel, use `TwoWay` mode and ensure the model implements `INotifyPropertyChanged`:
 
@@ -89,7 +89,7 @@ public partial class Person : ObservableObject
 
 Changes in the text boxes update the item in the master list automatically because both panels share the same object reference.
 
-## Master-Detail with Separate Detail ViewModel
+## Master-detail with separate detail ViewModel
 
 For complex detail views, use a dedicated view model that updates when the selection changes:
 
@@ -146,7 +146,7 @@ public partial class PersonDetailViewModel : ObservableObject
 </ContentControl>
 ```
 
-## Master-Detail with Navigation
+## Master-detail with navigation
 
 In mobile or compact layouts, the detail replaces the master list instead of appearing side by side. Use a navigation pattern with `TransitioningContentControl`:
 
@@ -227,7 +227,7 @@ For hierarchical data (e.g., categories containing items), chain multiple master
 </Grid>
 ```
 
-## Placeholder for Empty Selection
+## Placeholder for empty selection
 
 Show a message or graphic when no item is selected:
 
@@ -250,7 +250,7 @@ Show a message or graphic when no item is selected:
 </Panel>
 ```
 
-## See Also
+## See also
 
 - [How to Bind to a Collection](/docs/data-binding/how-to-bind-to-a-collection): Binding ItemsSource and DataTemplates.
 - [Data Templates](/docs/data-templates/introduction-to-data-templates): Controlling how items are displayed.

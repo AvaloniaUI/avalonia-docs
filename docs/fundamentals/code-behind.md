@@ -45,7 +45,7 @@ If you make any changes to the class name in code, or its namespace, ensure that
 
 When the code-behind file is first added, it has only a constructor, which calls the  `InitializeComponent()` method. This method call is required to load the XAML at runtime.
 
-## Locating Controls
+## Locating controls
 
 When working with code-behind, you often need to access the controls defined in XAML.
 
@@ -81,7 +81,7 @@ namespace AvaloniaApplication1.Views
 }
 ```
 
-## Set Properties
+## Set properties
 
 With the control reference available in the code-behind, you can set properties. For example, you can change the background property like this:
 
@@ -89,7 +89,7 @@ With the control reference available in the code-behind, you can set properties.
 greetingButton.Background = Brushes.Blue;
 ```
 
-## Handling Events
+## Handling events
 
 Any useful application will require you to implement some action! When using the code-behind pattern, you write event handlers in the code-behind file.
 

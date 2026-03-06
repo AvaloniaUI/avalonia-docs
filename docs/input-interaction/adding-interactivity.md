@@ -5,7 +5,7 @@ title: Adding Interactivity
 
 One of the fundamental things that a user interface must do is interact with the user. In Avalonia, you can add interactivity to your applications by leveraging events and commands. This guide will introduce events and commands with simple examples.
 
-## Handling Events
+## Handling events
 
 Events in Avalonia provide a way to respond to user interactions and control-specific actions. You can handle events by following these steps:
 
@@ -28,7 +28,7 @@ public partial class MainWindow : Window
 }
 ```
 
-2. **Subscribe to the Event**: Identify the event you want to handle in your control. Most controls in Avalonia expose various events, such as `Click` or `SelectionChanged`. Subscribe to the event in XAML by locating the control and adding an attribute with the name of the event and a value indicating the name of the event handler method.
+2. **Subscribe to the Event**: Identify the event you want to handle in your control. Most controls in Avalonia expose various events, such as `Click` or `SelectionChanged`. Subscribe to the event in XAML by adding an attribute with the name of the event and setting its value to the name of the event handler method.
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
@@ -41,7 +41,7 @@ public partial class MainWindow : Window
 
 The above example adds a handler called `HandleButtonClick` to a `Button`'s `Click` event.
 
-## Using Commands
+## Using commands
 
 Commands in Avalonia provide a higher-level approach to handling user interactions, decoupling the user action from the implementation logic. Whereas events are defined in a control's code-behind, commands are usually bound to a property or method on the [data context](/docs/data-binding/data-context).
 
@@ -100,7 +100,7 @@ public partial class MainViewModel : ObservableObject
 <Button Content="Load" Command="{Binding LoadCommand}" />
 ```
 
-## Command with Parameter
+## Command with parameter
 
 Pass data to a command using `CommandParameter`:
 
@@ -118,7 +118,7 @@ private void Delete(Item item)
 }
 ```
 
-## Events vs Commands
+## Events vs commands
 
 | Feature | Events | Commands |
 |---|---|---|
@@ -129,7 +129,7 @@ private void Delete(Item item)
 
 Use events for UI-specific behavior (animations, visual feedback). Use commands for application logic that should be testable and decoupled from the view.
 
-## See Also
+## See also
 
 - [Binding to Commands](/docs/data-binding/binding-to-commands): Full command binding reference.
 - [Commanding](/docs/input-interaction/commanding): ICommand interface details.

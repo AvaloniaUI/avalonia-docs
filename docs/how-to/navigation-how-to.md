@@ -1,6 +1,6 @@
 ---
 id: navigation-how-to
-title: "How To: Navigate Between Views"
+title: "How to: Navigate Between Views"
 ---
 
 This guide covers common patterns for switching between views (pages) in Avalonia applications.

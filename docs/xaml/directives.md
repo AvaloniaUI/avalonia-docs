@@ -1,6 +1,6 @@
 ---
 id: directives
-title: "x: Directives"
+title: "x: directives"
 ---
 
 XAML directives are special attributes in the `x:` namespace that control how the XAML engine processes elements. They are part of the XAML language specification, not specific to any particular control.
@@ -190,7 +190,7 @@ Without `x:Shared="False"`, assigning the same `ColumnDefinitions` resource to m
 `x:Shared` only applies to resources in a `ResourceDictionary`. It has no effect outside of resource definitions.
 :::
 
-## Primitive Type Elements
+## Primitive type elements
 
 The XAML language namespace provides elements for common .NET primitive types:
 
@@ -210,7 +210,7 @@ These are useful for defining resources:
 </Application.Resources>
 ```
 
-## See Also
+## See also
 
 - [XAML Reference](index): Overview of XAML syntax.
 - [Namespaces](namespaces): How XAML namespaces work.

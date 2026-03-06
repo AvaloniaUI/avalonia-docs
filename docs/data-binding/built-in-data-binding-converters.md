@@ -15,7 +15,7 @@ _Avalonia UI_ includes a number of built-in data binding converters for common s
 | `BoolConverters.And`                | A multi-value converter that returns `true` if all inputs are true.                                                                 |
 | `BoolConverters.Or`                 | A multi-value converter that returns `true` if any input is true.                                                                   |
 
-## Negation Operator Examples
+## Negation operator examples
 
 This example shows the `TextBlock` when the bound value is false:
 
@@ -47,7 +47,7 @@ You can use this to hide a control when a collection is empty (count is zero), l
 </Panel>
 ```
 
-## Other Conversion Examples
+## Other conversion examples
 
 This example binding will hide the text block if its bound text is null or empty:
 
@@ -78,9 +78,15 @@ And this example demonstrates binding to multiple bound parameters. It will show
 </TextBlock>
 ```
 
-## More Information
+## More information
 
 
 :::info
 You can follow the [Avalonia UI value converter sample](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/ValueConversionSample).
 :::
+
+## See also
+
+- [How to Create a Custom Data Binding Converter](/docs/data-binding/how-to-create-a-custom-data-binding-converter): Writing custom value converters.
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding parameters and converter usage.
+- [MultiBinding](/docs/data-binding/multi-binding): Combining multiple bound values.

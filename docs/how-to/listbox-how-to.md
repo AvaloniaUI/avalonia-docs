@@ -1,6 +1,6 @@
 ---
 id: listbox-how-to
-title: "How To: Work with ListBox"
+title: "How to: Work with ListBox"
 ---
 
 This guide covers common ListBox scenarios: selection handling, item templates, virtualization, styling, and advanced patterns.

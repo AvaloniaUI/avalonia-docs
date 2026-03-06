@@ -5,7 +5,7 @@ title: How to Bind to a Task Result
 
 Avalonia can bind directly to `Task<T>` properties using the `^` (stream binding) operator. The binding displays the result once the task completes.
 
-## Basic Task Binding
+## Basic task binding
 
 If you need to do some heavy work to load the content of a property, you can bind to the result of an `async Task<TResult>`:
 
@@ -27,7 +27,7 @@ Bind to the result using the `^` operator:
 
 The `FallbackValue` is shown while the task is still running. Once the task completes, the result replaces it.
 
-## Loading Data from an API
+## Loading data from an API
 
 A common scenario is loading data when the view model is created:
 
@@ -50,7 +50,7 @@ public class UserProfileViewModel
 </StackPanel>
 ```
 
-## Showing a Loading Indicator
+## Showing a loading indicator
 
 Use the `FallbackValue` or bind visibility to show a spinner while loading:
 
@@ -63,14 +63,14 @@ Use the `FallbackValue` or bind visibility to show a spinner while loading:
 </Panel>
 ```
 
-## Important Notes
+## Important notes
 
 - The `^` operator subscribes to the task and updates the binding when it completes.
 - If the task throws an exception, the `FallbackValue` remains displayed.
 - Create a new `Task<T>` each time the data needs to refresh. Binding to a completed task shows the result immediately.
 - For tasks that can be cancelled or retried, consider using an `IObservable<T>` instead.
 
-## See Also
+## See also
 
 - [How to Bind to an Observable](how-to-bind-to-an-observable): Binding to `IObservable<T>` streams.
 - [Data Binding Syntax](data-binding-syntax): Full binding syntax reference.

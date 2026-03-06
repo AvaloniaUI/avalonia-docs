@@ -167,3 +167,9 @@ The available transitions are:
 :::info
 Avalonia also supports WPF-style render transforms such as `RotateTransform` and `ScaleTransform`. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
 :::
+
+## See also
+
+- [Keyframe Animations](keyframe-animations): Multi-step keyframe animations.
+- [Animation Settings](animation-settings): Duration, delay, iteration count, and playback direction.
+- [Easing Functions](easing-functions): All available easing functions.

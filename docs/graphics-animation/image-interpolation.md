@@ -1,15 +1,15 @@
 ---
 id: image-interpolation
-title: Image Interpolation
+title: Image interpolation
 ---
 
 When displaying images in Avalonia, particularly when scaling them to sizes different from their native resolution, the quality of the rendering depends on the interpolation mode being used. This guide explains how to control image interpolation in your Avalonia applications.
 
-## Default Behavior
+## Default behavior
 
 As of Avalonia 11, the default interpolation mode is set to `LowQuality`. This setting prioritizes performance but may result in less smooth image rendering when scaling images, particularly when displaying them at sizes significantly smaller than their original dimensions.
 
-## Interpolation Modes
+## Interpolation modes
 
 Avalonia supports the following bitmap interpolation modes:
 
@@ -20,9 +20,9 @@ Avalonia supports the following bitmap interpolation modes:
 | `MediumQuality` | Balanced interpolation between speed and quality |
 | `HighQuality` | Smooth interpolation. Best for downsizing images |
 
-## Setting the Interpolation Mode
+## Setting the interpolation mode
 
-### Per-Control Setting
+### Per-control setting
 
 You can set the interpolation mode on individual controls using the `RenderOptions.BitmapInterpolationMode` attached property:
 
@@ -39,7 +39,7 @@ This can also be applied to containers:
 </Border>
 ```
 
-### Common Use Cases
+### Common use cases
 
 1. **Icon Display**: When displaying icons that are being scaled down, using `HighQuality` interpolation can prevent jagged edges:
 ```xml
@@ -62,7 +62,7 @@ This can also be applied to containers:
 </ItemsControl>
 ```
 
-## Edge Mode (Antialiasing)
+## Edge mode (antialiasing)
 
 Avalonia applies antialiasing to images by default, producing smooth edges when an image is rotated, scaled, or positioned at sub-pixel offsets. This is controlled by the `RenderOptions.EdgeMode` attached property.
 
@@ -92,7 +92,7 @@ To force aliased (sharp, pixelated) edges on a specific control, set `EdgeMode` 
 </Border>
 ```
 
-## Performance Considerations
+## Performance considerations
 
 The interpolation mode is set per-control by design for performance reasons. Higher quality interpolation requires more computational resources, so consider these guidelines:
 
@@ -106,7 +106,7 @@ The interpolation mode is set per-control by design for performance reasons. Hig
   - Decorative elements where quality is less critical
   - Performance-sensitive applications
 
-## Creating a Global Setting
+## Creating a global setting
 
 While Avalonia doesn't provide a built-in way to set a global interpolation mode, you can create a custom attached property or behavior to manage this across your application. Here's an example approach:
 
@@ -135,14 +135,14 @@ Then in your XAML:
 </Style>
 ```
 
-## Tips for Best Results
+## Tips for best results
 
-1. **Asset Preparation**:
+1. **Asset preparation**:
    - Provide images at appropriate resolutions for their intended display size
    - Consider including multiple resolutions for important assets
    - Use vector formats (SVG) when possible for resolution-independent graphics
 
-2. **Layout Considerations**:
+2. **Layout considerations**:
    - Be mindful of the original image dimensions versus display size
    - Use appropriate containers and layout panels to manage image scaling
    - Consider using `UniformToFill` or `Uniform` stretch modes with high-quality interpolation

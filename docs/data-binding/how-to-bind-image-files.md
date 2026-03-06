@@ -1,17 +1,17 @@
 ---
 id: how-to-bind-image-files
-title: How To Bind Image Files
+title: How to bind image files
 ---
 
 
 <GitHubSampleLink title="Loading Images" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/LoadingImages"/>
 
 
-In Avalonia UI, binding to an image file opens up opportunities for displaying dynamic image content within your application. This guide provides an overview on how to bind image files from various sources.
+In Avalonia UI, binding to an image file opens up opportunities for displaying dynamic image content within your application. This guide provides an overview on how to bind image files from different sources.
 
-## Binding to Image Files from Various Sources
+## Binding to image files from different sources
 
-Assuming you have images from various sources (i.e., a local resource or a web URL) that you want to display in your view, here's how you can achieve this:
+Assuming you have images from different sources (i.e., a local resource or a web URL) that you want to display in your view, here's how you can achieve this:
 
 First, in your `ViewModel`, you need to define properties that represent these image sources. The properties can be of type `Bitmap` or `Task<Bitmap>` (if loading the image involves an asynchronous operation). The `ImageHelper` class is used to load these images.
 
@@ -78,6 +78,11 @@ Then, in your view, you can bind these image sources to `Image` controls:
 The `Source` property of the `Image` control can accept various types of image sources including a file path, a URL, or a resource. Please note that for asynchronous image sources, you must use the `^` character after the binding expression to tell Avalonia that this is an asynchronous binding.
 
 Ensure that local image file paths are accurate, the image file is accessible, and if it's part of your application resources, it's been correctly included in your project. If you're binding to a web image, ensure that the URL is reachable.
+
+## See also
+
+- [How to Bind to a Task Result](/docs/data-binding/how-to-bind-to-a-task-result): Async data loading with the `^` operator.
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding paths, modes, and converters.
 
 
 

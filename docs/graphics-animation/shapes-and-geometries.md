@@ -1,11 +1,11 @@
 ---
 id: shapes-and-geometries
-title: Shapes and Geometries
+title: Shapes and geometries
 ---
 
 Avalonia provides shape controls for drawing common 2D vector graphics and a geometry system for defining complex outlines used in paths, clipping, and hit testing.
 
-## Shape Controls
+## Shape controls
 
 Shape controls are visual elements you place directly in your XAML layout. They participate in layout and can receive pointer events.
 
@@ -91,7 +91,7 @@ The most versatile shape control. Uses a `Geometry` to define its outline:
 </Path>
 ```
 
-## Common Shape Properties
+## Common shape properties
 
 All shapes inherit from `Shape` and share these properties:
 
@@ -119,7 +119,7 @@ All shapes inherit from `Shape` and share these properties:
            StrokeDashArray="4,2,1,2" />
 ```
 
-## Geometry Types
+## Geometry types
 
 Geometries define mathematical descriptions of 2D shapes. They are lighter than shape controls and are used by `Path.Data`, `Clip`, and `OpacityMask`.
 
@@ -224,7 +224,7 @@ The `FillRule` determines how overlapping areas are filled:
 - `EvenOdd`: Alternates fill for overlapping regions (creates holes).
 - `NonZero`: Fills all enclosed regions.
 
-## Path Mini-Language
+## Path mini-language
 
 The `Data` property of `Path` accepts SVG-style path data as a string. This compact syntax is efficient for complex shapes.
 
@@ -264,7 +264,7 @@ Uppercase commands use absolute coordinates, lowercase use relative coordinates.
       Fill="Orange" />
 ```
 
-## Building Geometry from Code
+## Building geometry from code
 
 Use `StreamGeometryContext` to build geometry programmatically. Call `StreamGeometry.Open()` to get a context, then use its drawing methods to define figures:
 
@@ -310,7 +310,7 @@ using (var ctx = geometry.Open())
 }
 ```
 
-## Geometry Methods
+## Geometry methods
 
 All `Geometry` objects expose methods for hit testing and transformation:
 
@@ -329,7 +329,7 @@ var pen = new Pen(Brushes.Black, 10);
 var outlined = ellipse.GetWidenedGeometry(pen);
 ```
 
-## Using Geometries as Resources
+## Using geometries as resources
 
 Define geometries as resources for reuse across your application:
 
@@ -344,7 +344,7 @@ Define geometries as resources for reuse across your application:
 
 `StreamGeometry` is a lightweight, immutable geometry optimized for performance. Use it for icon paths and other static shapes.
 
-## See Also
+## See also
 
 - [Drawing Graphics](drawing-graphics): Overview of the Avalonia graphics system.
 - [Brushes](brushes): Fill and stroke brushes.

@@ -7,7 +7,7 @@ Appium is an open-source automation framework that drives your application throu
 
 This makes Appium tests well suited for end-to-end validation, accessibility verification, and testing platform-specific behaviors. Avalonia uses Appium internally to test the framework itself across Windows and macOS.
 
-## When to Use Appium vs Headless
+## When to use Appium vs headless
 
 | Consideration | Headless | Appium |
 |---|---|---|
@@ -36,7 +36,7 @@ appium driver install mac2
 
 You also need to grant accessibility permissions to the terminal or IDE you run tests from. Go to **System Settings > Privacy & Security > Accessibility** and add your terminal application.
 
-## Project Setup
+## Project setup
 
 Create a new xUnit test project and install the Appium client:
 
@@ -46,7 +46,7 @@ cd MyApp.UITests
 dotnet add package Appium.WebDriver
 ```
 
-## Creating a Test Fixture
+## Creating a test fixture
 
 The fixture manages the Appium driver session. It starts your application, connects to it, and tears it down after tests complete.
 
@@ -97,7 +97,7 @@ public class DefaultCollection : ICollectionFixture<AppFixture> { }
 On macOS, use `bundleId` to identify your application rather than a file path. Build your app as an `.app` bundle first.
 :::
 
-## Writing Tests
+## Writing tests
 
 Tests use `FindElementByAccessibilityId` to locate controls. This works because Avalonia exposes the `AutomationProperties.AutomationId` value (or the control's `Name`) through the platform accessibility API.
 
@@ -174,7 +174,7 @@ public void TextBox_Accepts_Input()
 }
 ```
 
-## Platform-Specific Tests
+## Platform-specific tests
 
 Some tests only make sense on certain platforms (for example, native menu tests on macOS). You can create a custom attribute to skip tests on unsupported platforms:
 
@@ -221,7 +221,7 @@ public void Native_Menu_Shows_App_Name()
 }
 ```
 
-## Cross-Platform Helpers
+## Cross-platform helpers
 
 Attribute names and element lookup can differ between WinAppDriver and the macOS driver. Utility methods help keep tests clean:
 
@@ -250,7 +250,7 @@ public static class ElementExtensions
 }
 ```
 
-## Running Tests
+## Running tests
 
 ### Windows
 
@@ -280,13 +280,13 @@ Then run your tests in another terminal:
 dotnet test
 ```
 
-## CI/CD Considerations
+## CI/CD considerations
 
 - **Windows**: WinAppDriver must be running before tests start. In CI, add a setup step to launch it.
 - **macOS**: Appium and the mac2 driver must be installed. Grant accessibility permissions to the CI agent.
 - **Linux**: Appium does not have a stable Linux desktop driver. For Linux CI, use [headless tests](setting-up-the-headless-platform) instead.
 
-## See Also
+## See also
 
 - [Headless Testing with XUnit](headless-xunit): Fast, in-process unit testing.
 - [Headless Testing with NUnit](headless-nunit): NUnit integration for headless tests.

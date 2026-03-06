@@ -6,9 +6,9 @@ sidebar_position: 1
 
 ## Custom controls
 
-A custom control draws itself using the _Avalonia UI_ graphics system, using basic methods for shapes, lines, fills, text, and many others. You can define your own properties, events and pseudo classes.
+A custom control draws itself using the Avalonia graphics system, using basic methods for shapes, lines, fills, text, and many others. You can define your own properties, events and pseudo classes.
 
-Some of the _Avalonia UI_ built-in controls are like this. For example, the text block control (`TextBlock` class) and the image control (`Image` class).
+Some of the Avalonia built-in controls are like this. For example, the text block control (`TextBlock` class) and the image control (`Image` class).
 
 ## Types of custom controls
 
@@ -40,8 +40,6 @@ In WPF/UWP you would inherit from the FrameworkElement class to create a new bas
 
 ## Creating advanced custom controls
 
-Stuff clipped from the custom control guide.
-
 Here's how the `Border` control defines its `Background` property:
 
 The `AvaloniaProperty.Register` method also accepts a number of other parameters:
@@ -51,15 +49,19 @@ The `AvaloniaProperty.Register` method also accepts a number of other parameters
 * `defaultBindingMode`: The default binding mode for the property. Can be set to `OneWay`, `TwoWay`, `OneTime` or `OneWayToSource`.
 * `validate`: A validation/coercion function of type `Func<TOwner, TValue, TValue>`. The function accepts the instance of the class on which the property is being set and the value and returns the coerced value or throws an exception for an invalid value.
 
-> A styled property is analogous to a `DependencyProperty` in other XAML frameworks.
+:::info
+A styled property is analogous to a `DependencyProperty` in other XAML frameworks.
+:::
 
-> The naming convention of the property and its backing AvaloniaProperty field is important. The name of the field is always the name of the property, with the suffix Property appended.
+:::info
+The naming convention of the property and its backing `AvaloniaProperty` field is important. The name of the field is always the name of the property, with the suffix `Property` appended.
+:::
 
 ### Using a `StyledProperty` on another class
 
 Sometimes the property you want to add to your control already exists on another control, `Background` being a good example. To register a property defined on another control, you call `StyledProperty.AddOwner`:
 
-```csharp
+```csharpharp
 public static readonly StyledProperty<IBrush> BackgroundProperty =
     Border.BackgroundProperty.AddOwner<Panel>();
 
@@ -70,13 +72,15 @@ public Brush Background
 }
 ```
 
-> Note: Unlike WPF/UWP, a property must be registered on a class otherwise it cannot be set on an object of that class. This may change in future, however.
+:::note
+Unlike WPF/UWP, a property must be registered on a class otherwise it cannot be set on an object of that class. This may change in future, however.
+:::
 
-### Readonly Properties
+### Readonly properties
 
 To create a readonly property you use the `AvaloniaProperty.RegisterDirect` method. Here is how `Visual` registers the readonly `Bounds` property:
 
-```csharp
+```csharpharp
 public static readonly DirectProperty<Visual, Rect> BoundsProperty =
     AvaloniaProperty.RegisterDirect<Visual, Rect>(
         nameof(Bounds),
@@ -99,7 +103,7 @@ As can be seen, readonly properties are stored as a field on the object. When re
 
 Here's how `Grid` defines its `Grid.Column` attached property:
 
-```csharp
+```csharpharp
 public static readonly AttachedProperty<int> ColumnProperty =
     AvaloniaProperty.RegisterAttached<Grid, Control, int>("Column");
 
@@ -114,15 +118,15 @@ public static void SetColumn(Control element, int value)
 }
 ```
 
-### Direct AvaloniaProperties
+### Direct `AvaloniaProperty` registrations
 
-As its name suggests, `RegisterDirect` isn't just used for registering readonly properties. You can also pass a _setter_ to `RegisterDirect` to expose a standard C# property as a Avalonia property.
+As its name suggests, `RegisterDirect` isn't just used for registering readonly properties. You can also pass a _setter_ to `RegisterDirect` to expose a standard C# property as an Avalonia property.
 
 A `StyledProperty` which is registered using `AvaloniaProperty.Register` maintains a prioritized list of values and bindings that allow styles to work. However, this is overkill for many properties, such as `ItemsControl.Items` - this will never be styled and the overhead involved with styled properties is unnecessary.
 
 Here is how `ItemsControl.Items` is registered:
 
-```csharp
+```csharpharp
 public static readonly DirectProperty<ItemsControl, IEnumerable> ItemsProperty =
     AvaloniaProperty.RegisterDirect<ItemsControl, IEnumerable>(
         nameof(Items),
@@ -154,11 +158,11 @@ They don't support the following:
 * Overriding default values.
 * Inherited values
 
-### Using a DirectProperty on another class
+### Using a `DirectProperty` on another class
 
 In the same way that you can call `AddOwner` on a styled property, you can also add an owner to a direct property. Because direct properties reference fields on the control, you must also add a field for the property:
 
-```csharp
+```csharpharp
 public static readonly DirectProperty<MyControl, IEnumerable> ItemsProperty =
     ItemsControl.ItemsProperty.AddOwner<MyControl>(
         o => o.Items,
@@ -201,7 +205,7 @@ To allow a property to show validation error messages, register it with `enableD
 
 **Example of a property with DataValidation enabled**
 
-```cs
+```csharp
 public static readonly DirectProperty<MyControl, int> ValueProperty =
     AvaloniaProperty.RegisterDirect<MyControl, int>(
         nameof(Value),
@@ -216,7 +220,7 @@ If you want to [re-use a direct property of another class](#using-a-directproper
 
 **Example: TextBox.TextProperty property re-uses TextBlock.TextProperty but adds validation support**
 
-```cs
+```csharp
 public static readonly DirectProperty<TextBox, string?> TextProperty =
     TextBlock.TextProperty.AddOwnerWithDataValidation<TextBox>(
         o => o.Text,
@@ -227,7 +231,7 @@ public static readonly DirectProperty<TextBox, string?> TextProperty =
 
 To suppress or customize validation handling for a specific property, override `UpdateDataValidation` and handle (or skip) that property without calling the base method:
 
-```cs
+```csharp
 protected override void UpdateDataValidation(
     AvaloniaProperty property, BindingValueType state, Exception? error)
 {
@@ -237,3 +241,11 @@ protected override void UpdateDataValidation(
     base.UpdateDataValidation(property, state, error);
 }
 ```
+
+## See also
+
+- [Choosing a Custom Control Type](choosing-a-custom-control-type)
+- [Defining Properties](defining-properties)
+- [Defining Events](defining-events)
+- [Templated Controls](templated-controls)
+- [Drawing Custom Controls](drawing-custom-controls)

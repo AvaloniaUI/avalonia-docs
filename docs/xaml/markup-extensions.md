@@ -1,6 +1,6 @@
 ---
 id: markup-extensions
-title: Markup Extensions
+title: Markup extensions
 ---
 
 Markup extensions are special expressions enclosed in curly braces `{}` that provide dynamic values in XAML. They extend what you can express beyond simple string literals.
@@ -13,7 +13,7 @@ Creates a data binding between a control property and a source property:
 <TextBlock Text="{Binding UserName}" />
 ```
 
-### Common Binding Parameters
+### Common binding parameters
 
 | Parameter | Description |
 |---|---|
@@ -67,7 +67,7 @@ Looks up a resource by key from the current element's resource chain, walking up
 
 If the resource is not found, an exception is thrown at runtime.
 
-### Resource Lookup Order
+### Resource lookup order
 
 1. The current element's `Resources` dictionary.
 2. Parent elements' `Resources` dictionaries, walking up the logical tree.
@@ -163,9 +163,9 @@ Specifies a binding source relative to the binding target's position in the visu
     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
 ```
 
-## Markup Extension Syntax Rules
+## Markup extension syntax rules
 
-### Basic Syntax
+### Basic syntax
 
 ```xml
 Property="{ExtensionName}"
@@ -189,7 +189,7 @@ To set a property to a literal string that starts with `{`, use an empty set of 
 <TextBlock Text="{}{This is literal text, not a markup extension}" />
 ```
 
-## See Also
+## See also
 
 - [XAML Reference](index): Overview of XAML syntax.
 - [x: Directives](directives): XAML language directives.

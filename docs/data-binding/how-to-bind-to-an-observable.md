@@ -1,11 +1,11 @@
 ---
 id: how-to-bind-to-an-observable
-title: How To Bind to an Observable
+title: How to bind to an observable
 ---
 
 Avalonia supports binding directly to `IObservable<T>` properties using the `^` (stream binding) operator. Each time the observable produces a new value, the binding updates automatically.
 
-## Basic Observable Binding
+## Basic observable binding
 
 If `DataContext.Name` is an `IObservable<string>`, you can bind to its current value:
 
@@ -15,7 +15,7 @@ If `DataContext.Name` is an `IObservable<string>`, you can bind to its current v
 
 The `^` operator subscribes to the observable and updates the control each time a new value is emitted.
 
-## Binding to a Property of the Emitted Value
+## Binding to a property of the emitted value
 
 You can chain property access after the `^` operator. For example, to bind to the `Length` of each string produced:
 
@@ -23,7 +23,7 @@ You can chain property access after the `^` operator. For example, to bind to th
 <TextBlock Text="{Binding Name^.Length}" />
 ```
 
-## Example: Clock Using an Observable
+## Example: clock using an observable
 
 ```csharp
 public class ClockViewModel
@@ -38,7 +38,7 @@ public class ClockViewModel
 <TextBlock Text="{Binding CurrentTime^}" FontSize="24" />
 ```
 
-## Example: Search Results Stream
+## Example: search results stream
 
 ```csharp
 public class SearchViewModel
@@ -69,7 +69,7 @@ public class SearchViewModel
 <ListBox ItemsSource="{Binding Results^}" />
 ```
 
-## FallbackValue for Initial State
+## FallbackValue for initial state
 
 Since observables may not have emitted a value yet, use `FallbackValue` to display a placeholder:
 
@@ -77,11 +77,11 @@ Since observables may not have emitted a value yet, use `FallbackValue` to displ
 <TextBlock Text="{Binding CurrentTime^, FallbackValue='Loading...'}" />
 ```
 
-## Combining with Task Binding
+## Combining with task binding
 
 The `^` operator also works with `Task<T>` properties. See [How to Bind to a Task Result](how-to-bind-to-a-task-result) for details.
 
-## See Also
+## See also
 
 - [How to Bind to a Task Result](how-to-bind-to-a-task-result): Async data loading with `^`.
 - [Data Binding Syntax](data-binding-syntax): Full binding syntax reference.

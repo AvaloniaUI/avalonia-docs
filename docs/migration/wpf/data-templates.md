@@ -5,7 +5,7 @@ title: Data templates
 
 Data templates in Avalonia work similarly to WPF, allowing you to define the visual representation of data objects. The core concepts are the same, but there are key differences in where templates are stored, how type matching works, and what additional features are available.
 
-## Template Storage
+## Template storage
 
 In WPF, data templates are typically stored in a `ResourceDictionary`, either on a control, a window, or in `App.xaml`:
 
@@ -33,7 +33,7 @@ In Avalonia, data templates are not stored in resources. Instead, they are place
 
 The template resolution walks up the visual tree, checking each control's `DataTemplates` collection, then falls back to `Application.DataTemplates`. This is analogous to WPF's resource lookup, but uses a dedicated collection rather than the general-purpose resource dictionary.
 
-## DataType Matching
+## DataType matching
 
 Both frameworks support matching templates by `DataType`. However, Avalonia offers additional capabilities that WPF does not:
 
@@ -59,7 +59,7 @@ Because of these broader matching rules, the order of templates in a collection 
 
 Note that in WPF the `DataType` uses the `{x:Type}` markup extension, while in Avalonia you specify the type directly as a string.
 
-## DataTemplateSelector Replacement
+## DataTemplateSelector replacement
 
 In WPF, you can create a `DataTemplateSelector` subclass to choose a template based on custom logic:
 
@@ -159,9 +159,9 @@ The `ItemTemplate` property on `ItemsControl`, `ListBox`, and similar controls w
 </ListBox>
 ```
 
-Similarly, `ContentTemplate` on `ContentControl` and `ContentPresenter` works as expected. If you do not set an explicit `ItemTemplate` or `ContentTemplate`, Avalonia will walk up the tree to find a matching template in a `DataTemplates` collection, just as WPF would search through resources.
+Similarly, `ContentTemplate` on `ContentControl` and `ContentPresenter` works as expected. If you do not set an explicit `ItemTemplate` or `ContentTemplate`, Avalonia will walk up the tree to find a matching template in a `DataTemplates` collection, as WPF would search through resources.
 
-## x:DataType for Compiled Bindings
+## x:DataType for compiled bindings
 
 Avalonia supports compiled bindings, which provide compile-time validation of binding paths and improved runtime performance. WPF has no equivalent feature.
 
@@ -182,7 +182,7 @@ When `x:DataType` is set, the compiler checks that `Name` and `Description` actu
 
 You can enable compiled bindings project-wide by adding `<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>` to your `.csproj` file, which makes `x:DataType` the default expectation for all bindings.
 
-## See Also
+## See also
 
 - [Introduction to Data Templates](/docs/data-templates/introduction-to-data-templates)
 - [Data Template Collection](/docs/data-templates/data-template-collection)

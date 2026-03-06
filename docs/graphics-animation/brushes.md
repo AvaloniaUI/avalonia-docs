@@ -220,7 +220,7 @@ Paints an area using the rendered output of another visual element.
 `VisualBrush` captures the visual appearance of any control. This is useful for creating reflection effects, watermarks, and preview thumbnails.
 :::
 
-## Common Brush Properties
+## Common brush properties
 
 All brush types share these properties:
 
@@ -247,7 +247,7 @@ Any control's `OpacityMask` property accepts a brush that controls per-pixel tra
 
 In this example, the image fades from fully visible at the top to transparent at the bottom. The color values in the mask do not matter; only the alpha channel is used.
 
-## Using Brushes as Resources
+## Using brushes as resources
 
 Define brushes as resources for reuse across your application:
 
@@ -266,7 +266,7 @@ Define brushes as resources for reuse across your application:
 <Border Background="{DynamicResource AccentGradient}" />
 ```
 
-## Brushes in Code
+## Brushes in code
 
 ```csharp
 // SolidColorBrush
@@ -297,7 +297,7 @@ var radial = new RadialGradientBrush
 myBorder.Background = linear;
 ```
 
-## See Also
+## See also
 
 - [Gradients](gradients): Focused guide on linear gradient usage.
 - [Drawing Graphics](drawing-graphics): Shapes and geometries.

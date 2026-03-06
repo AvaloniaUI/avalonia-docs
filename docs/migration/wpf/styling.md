@@ -5,7 +5,7 @@ title: Styling
 
 Avalonia's styling system is one of the biggest conceptual shifts when migrating from WPF. Instead of the resource-dictionary-based approach used in WPF, Avalonia adopts a CSS-like styling model with selectors, style classes, and pseudo-classes. This guide walks through the key differences and shows practical migration patterns for each area.
 
-## Style Declaration
+## Style declaration
 
 In WPF, styles are defined as resources and referenced by type or key. In Avalonia, styles live in a dedicated `Styles` collection and use CSS-like selectors to target controls.
 
@@ -90,7 +90,7 @@ Common selector patterns:
 
 For the full selector reference, see [Style Selectors](/docs/styling/style-selectors).
 
-## Style Classes vs x:Key
+## Style classes vs x:Key
 
 In WPF, you differentiate styles of the same control type by assigning an `x:Key` and then referencing it with `Style="{StaticResource MyStyle}"`. Avalonia uses **style classes** instead, which work like CSS classes.
 
@@ -135,11 +135,11 @@ myButton.Classes.Remove("active");
 
 This approach eliminates the need to manage resource keys and provides a more flexible composition model.
 
-## Triggers to Pseudo-Classes
+## Triggers to pseudo-classes
 
 WPF uses `Trigger`, `DataTrigger`, and `EventTrigger` elements inside a style. Avalonia replaces all of these with **pseudo-classes** and selector-based matching.
 
-### Property Triggers to Pseudo-Classes
+### Property triggers to pseudo-classes
 
 **WPF (property trigger):**
 
@@ -185,7 +185,7 @@ Common pseudo-class mappings from WPF:
 
 For the full list, see [Pseudo-Classes](/docs/styling/pseudoclasses).
 
-### DataTrigger Migration
+### DataTrigger migration
 
 WPF `DataTrigger` elements apply setters based on data binding values. In Avalonia, there is no direct equivalent. Instead, use one of these approaches:
 
@@ -207,7 +207,7 @@ If your ViewModel exposes a property that maps to a visual state, set a style cl
 </Style>
 ```
 
-### EventTrigger to Animations on Pseudo-Classes
+### EventTrigger to animations on pseudo-classes
 
 WPF `EventTrigger` elements start animations in response to routed events. In Avalonia, animations are defined within styles and activated by pseudo-classes or style classes.
 
@@ -246,7 +246,7 @@ WPF `EventTrigger` elements start animations in response to routed events. In Av
 
 Avalonia uses a `Transitions` system where you declare which properties should animate and their duration. The animation triggers automatically when the property value changes due to a style or pseudo-class change.
 
-## ControlTheme vs Implicit Styles
+## ControlTheme vs implicit styles
 
 In WPF, an implicit style (a `Style` with `TargetType` but no `x:Key`) defines the default look for a control, including its `ControlTemplate`. In Avalonia, this role is filled by `ControlTheme`.
 
@@ -327,7 +327,7 @@ with:
 <TextBox Text="{Binding SearchText, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
 ```
 
-## See Also
+## See also
 
 - [Styles](/docs/styling/styles)
 - [Control Themes](/docs/styling/control-themes)

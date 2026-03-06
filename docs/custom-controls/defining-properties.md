@@ -7,18 +7,18 @@ import DefiningPropertyPreviewScreenshot from '/img/guides/ui-development/custom
 
 ## Defining properties for custom controls
 
-If you are creating a custom control, you will usually want it to have properties that can be set by the _Avalonia UI_ styling system.
+If you are creating a custom control, you will usually want it to have properties that can be set by the Avalonia styling system.
 
 :::info
-For more information about how to use styles in _Avalonia UI_, see the [Styles guide](/docs/styling/styles).
+For more information about how to use styles in Avalonia, see the [Styles guide](/docs/styling/styles).
 :::
 
-On this page, you will see how to implement a property so that it can be changed by the _Avalonia UI_ styling system. This is a two step process:
+On this page, you will see how to implement a property so that it can be changed by the Avalonia styling system. This is a two step process:
 
 * Register a styled property.
 * Provide the getter/setter for the property.
 
-## Register a Styled Property
+## Register a styled property
 
 You register a styled property by defining a static read-only field and using the `AvaloniaProperty.Register` method.
 
@@ -28,7 +28,7 @@ There is a convention for the name of a property. It must follow the pattern:
 [AttributeName]Property
 ```
 
-This means that _Avalonia UI_ will look for an attribute in the XAML, like this:
+This means that Avalonia will look for an attribute in the XAML, like this:
 
 ```xml
 <MyCustomControl AttributeName="value" ... >
@@ -89,9 +89,15 @@ namespace AvaloniaCCExample.CustomControls
 ```
 
 :::info
-Note that the getter/setter of the property uses the special Avalonia UI `GetValue` and `SetValue` methods.
+Note that the getter/setter of the property uses the special Avalonia `GetValue` and `SetValue` methods.
 :::
 
 The styled property will work both at run-time and in the preview panel.
 
 <img src={DefiningPropertyPreviewScreenshot} alt=''/>
+
+## See also
+
+- [Defining Events](defining-events)
+- [Attached Properties](attached-properties)
+- [Custom Control Class](custom-control-class)

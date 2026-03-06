@@ -3,13 +3,13 @@ id: resource-dictionary
 title: Creating a resource dictionary
 ---
 
-You will often need to standardise graphical fundamentals such as (but not limited to) brushes and colors in your applications. You can define these as resources at various levels in your _Avalonia UI_ application, as well as in files that can be included as required.
+You will often need to standardise graphical fundamentals such as (but not limited to) brushes and colors in your applications. You can define these as resources at various levels in your Avalonia application, as well as in files that can be included as required.
 
 Resources are always defined inside a resource dictionary. This means that each resource has a key attribute.
 
 The level of a resource dictionary defines the scope of the resources in it: resources are available in the file where they are defined, and below. So you can tailor the scope of resources by choosing where to locate a resource dictionary.
 
-## Declaring Resources
+## Declaring resources
 
 For example, you may want brush colors to be standardized across the whole application. In this case you can declare a resource dictionary in the application XAML **App.axaml** file, like this
 
@@ -87,9 +87,9 @@ It is also possible to define resources for specific theme variants: Dark, Light
 </ResourceDictionary>
 ```
 
-## Resource Dictionary Files
+## Resource dictionary files
 
-You can improve the organisation of your _Avalonia UI_ application project by defining resource dictionaries in their own files. This makes resource definitions easy to locate and maintain.
+You can improve the organisation of your Avalonia application project by defining resource dictionaries in their own files. This makes resource definitions easy to locate and maintain.
 
 Resources located in a resource dictionary file are accessible to the entire application.
 
@@ -118,7 +118,7 @@ You can now add the resources you want to define in the position indicated. It l
 </ResourceDictionary>
 ```
 
-## Using Resources
+## Using resources
 
 You can use a resource from a resources dictionary that is in scope using the `{DynamicResource}` mark-up extension.
 
@@ -130,7 +130,7 @@ For example, to use a resource directly on the background attribute of a border 
 </Border>
 ```
 
-### Static Resource
+### Static resource
 
 Alternatively you can choose to use the `StaticResource` mark-up extension. For example:
 
@@ -144,9 +144,9 @@ A static resource is different in that it will not respond to changes in the res
 
 The benefit of using a static resource is that it has less work to do so it will be slightly faster to load, and it uses slightly less memory.
 
-## Resource Priority
+## Resource priority
 
-_Avalonia UI_ resolves what resource to use by searching upwards in the **logical control tree** from the level of a `DynamicResource` or `StaticResource` mark-up, looking for the resource key.
+Avalonia resolves what resource to use by searching upwards in the **logical control tree** from the level of a `DynamicResource` or `StaticResource` mark-up, looking for the resource key.
 
 This means that resources with the same key have priority based on their proximity to the resource mark-up being resolved. Resource definitions further up the logical control tree are therefore effectively 'overridden' by those that are closer. For example, consider this XAML:
 
@@ -168,9 +168,9 @@ This means that resources with the same key have priority based on their proximi
 </UserControl>
 ```
 
-Here the border control is using the resource with the key 'Warning'. This is defined twice - once at the level of the enclosing stack panel, and again at user control level. _Avalonia UI_ will determine that the border background should be be orange because its parent stack panel is first in a search upwards in the logical control tree from the border itself.
+Here the border control is using the resource with the key 'Warning'. This is defined twice - once at the level of the enclosing stack panel, and again at user control level. Avalonia will determine that the border background should be be orange because its parent stack panel is first in a search upwards in the logical control tree from the border itself.
 
-## Include and Merge Resources
+## Include and merge resources
 
 Resources can be included from a resource dictionary file, and merged with the resources defined in another file (even if there are not any).
 
@@ -220,7 +220,7 @@ Where the resource `InfoColor` is defined as a `SolidColorBrush` in the imported
 Note that the resource has been referenced using `StaticResource` because it must not change - the requirement here is to keep the styling consistent.
 :::
 
-## Merged Resources Priority 
+## Merged resources priority
 
 As you saw previously, resources are resolved by searching up the logical control tree from the point of mark-up until a resource with the requested key is found.
 
@@ -265,7 +265,7 @@ The search then moves on to search any styles defined in the parent (stack panel
 
 The search moves upwards in the logical control tree, behaving at each level in a similar manner. It finally reaches application-level resources and styles.
 
-## Consuming Resources from code
+## Consuming resources from code
 
 Avalonia provides different options to access Resources from code. 
 
@@ -284,7 +284,7 @@ Avalonia provides different options to access Resources from code.
 - **ResourceNode.GetResourceObservable**: <br/>
   This will return an [`IObservable`](https://learn.microsoft.com/en-us/dotnet/api/System.IObservable-1) which can be used to observe changes on the resource. For example you could bind to it.
 
-```cs
+```csharp
 // In this sample we have defined the resource in App.axaml and we want to look up the value in the MainWindow constructor.
 //
 //    <Application.Resources>
@@ -305,6 +305,11 @@ public MainWindow()
     myTextBlock.Bind(TextBlock.TextProperty, Resources.GetResourceObservable("TheKey"));
 
     // This will update myTextBlock.Text via the bound observable
-    this.Resources["TheKey"] = "Hello from code behind"; 
+    this.Resources["TheKey"] = "Hello from code behind";
 }
 ```
+
+## See also
+
+- [Resources Overview](/docs/app-development/resources): Understanding resource types and lookup behavior.
+- [Theme Variants](/docs/styling/theme-variants): Using theme-aware resources.

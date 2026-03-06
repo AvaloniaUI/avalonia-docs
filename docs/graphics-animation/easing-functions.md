@@ -1,11 +1,11 @@
 ---
 id: easing-functions
-title: Easing Functions
+title: Easing functions
 ---
 
 Easing functions control the rate of change during an animation, giving motion a natural feel. Instead of animating at a constant speed (linear), easing functions accelerate, decelerate, or bounce values to create more engaging transitions.
 
-## Using Easing Functions
+## Using easing functions
 
 Specify an easing function on a `KeyFrame` within a keyframe animation:
 
@@ -49,7 +49,7 @@ Easing functions are also used in `Transitions` for property change animations:
 </Border.Transitions>
 ```
 
-## Built-in Easing Functions
+## Built-in easing functions
 
 Avalonia includes a comprehensive set of easing functions. Each function comes in three variants:
 
@@ -163,7 +163,7 @@ Simulates a spring or rubber band effect with oscillation.
 | `ElasticEaseOut` | Oscillation at the end |
 | `ElasticEaseInOut` | Oscillation at both ends |
 
-## Choosing an Easing Function
+## Choosing an easing function
 
 Common use cases for each easing type:
 
@@ -243,7 +243,7 @@ The four values (`X1`, `Y1`, `X2`, `Y2`) define two control points of a cubic be
 
 Low damping produces more "bouncy" motion. High damping produces overdamped motion where the value approaches the target without oscillating.
 
-## Custom Easing Functions
+## Custom easing functions
 
 Create a custom easing function by subclassing `Easing` and overriding the `Ease` method:
 
@@ -274,7 +274,7 @@ Use the custom easing in XAML by referencing the namespace:
 
 The `Ease` method receives a `progress` value from 0.0 to 1.0 representing the linear time progress, and returns a modified value (also typically 0.0 to 1.0, though overshooting is allowed for effects like `BackEaseOut` and `ElasticEaseOut`).
 
-## See Also
+## See also
 
 - [Keyframe Animations](/docs/graphics-animation/keyframe-animations): Using keyframes and easing in animations.
 - [Control Transitions](/docs/graphics-animation/control-transitions): Automatic transitions on property changes.

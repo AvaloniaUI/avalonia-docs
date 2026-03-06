@@ -136,7 +136,7 @@ Use `DynamicResource` to reference theme-variant resources so they update when t
 
 ## Accessing Resources from Code
 
-Avalonia provides several methods for accessing resources programmatically:
+Avalonia provides four methods for accessing resources programmatically:
 
 ```csharp
 // Direct dictionary access (does not search merged dictionaries or parent elements)

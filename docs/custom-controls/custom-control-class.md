@@ -5,7 +5,7 @@ title: Add a Custom Control Class
 
 Custom controls in Avalonia are built by inheriting from an appropriate base class. If you need full control over rendering, inherit from `Control` and draw directly with a `DrawingContext`. If you want the control's appearance to be defined by a `ControlTemplate` (a lookless control), inherit from `TemplatedControl` instead.
 
-## Choosing a Base Class
+## Choosing a base class
 
 | Base Class | Use When |
 |---|---|
@@ -17,7 +17,7 @@ Custom controls in Avalonia are built by inheriting from an appropriate base cla
 
 All of these ultimately derive from `Control`, so properties like `Width`, `Height`, `Margin`, and `DataContext` are always available.
 
-## Creating a Custom Drawn Control
+## Creating a custom drawn control
 
 A custom drawn control inherits from `Control` and overrides the `Render` method to draw with a `DrawingContext`. You can also override `MeasureOverride` and `ArrangeOverride` to participate in layout and report your control's desired size.
 
@@ -83,7 +83,7 @@ The `cc` prefix is arbitrary. It simply maps `AvaloniaCCExample.CustomControls` 
 If your control lives in a separate class library, see [Custom Control Library](/docs/custom-controls/custom-control-library) for additional setup steps.
 :::
 
-## Invalidating Rendering
+## Invalidating rendering
 
 Avalonia provides several mechanisms for telling the layout and rendering system that a control needs to be updated.
 
@@ -104,7 +104,7 @@ static CircleControl()
 - **`AffectsMeasure`** triggers a new measure pass, which is appropriate when a property changes the control's desired size.
 - **`AffectsArrange`** triggers a new arrange pass, which is appropriate when a property changes how the control positions its content.
 
-### Manual Invalidation
+### Manual invalidation
 
 If you need to trigger a repaint in response to something other than a property change (for example, a timer tick), call `InvalidateVisual()` on the control instance. This queues a new render pass for that control.
 
@@ -115,7 +115,7 @@ InvalidateVisual();
 
 Use manual invalidation sparingly. Declaring property dependencies with `AffectsRender` is preferred because it keeps invalidation automatic and predictable.
 
-## See Also
+## See also
 
 - [Templated Controls](/docs/custom-controls/templated-controls)
 - [Drawing Custom Controls](/docs/custom-controls/drawing-custom-controls)

@@ -6,7 +6,7 @@ title: How to Bind to a Collection
 
 Binding to a collection in Avalonia UI is an effective way to display dynamic data. This guide will demonstrate how to bind an `ObservableCollection` to a control, like a `ListBox` or `ItemsControl`, to show a list of items.
 
-## Binding to a Simple ObservableCollection
+## Binding to a simple ObservableCollection
 
 For a start, consider you have an `ObservableCollection<string>` and you want to bind it to a `ListBox` to display a list of string items.
 
@@ -36,7 +36,7 @@ In your view, you can bind this `ObservableCollection` to a `ListBox` like so:
 <ListBox ItemsSource="{Binding Items}"/>
 ```
 
-## Binding to an ObservableCollection of Complex Objects
+## Binding to an ObservableCollection of complex objects
 
 But what if your `ObservableCollection` contains complex objects that themselves need to propagate changes? Let's modify our `ViewModel` to accommodate this scenario.
 
@@ -101,7 +101,13 @@ You can bind this `ObservableCollection` to a `ListBox` in your view, and use a 
 </ListBox>
 ```
 
-In this scenario, each `Person` in the list will be displayed with their `Name` and `Age` separated by a small margin. If any of items properties change, the `ListBox` item will automatically update. 
+In this scenario, each `Person` in the list will be displayed with their `Name` and `Age` separated by a small margin. If any of items properties change, the `ListBox` item will automatically update.
+
+## See also
+
+- [Collection Views](/docs/data-binding/collection-views): Sorting, filtering, and grouping bound collections.
+- [Data Templates](/docs/data-templates/introduction-to-data-templates): Controlling how items are displayed.
+- [INotifyPropertyChanged](/docs/data-binding/inotifypropertychanged): Change notification for view models.
 
 
 

@@ -28,9 +28,9 @@ Add the Virtual Keyboard package to your project:
 dotnet add package Avalonia.Controls.VirtualKeyboard
 ```
 
-### Add the License Key
+### Add the license key
 
-Include your Avalonia UI license key in the executable project file (`.csproj`):
+Include your Avalonia license key in the executable project file (`.csproj`):
 
 ```xml
 <ItemGroup>
@@ -42,7 +42,7 @@ Include your Avalonia UI license key in the executable project file (`.csproj`):
 For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
-### Include the Control Theme
+### Include the control theme
 
 To ensure the virtual keyboard is properly styled, add the keyboard theme to your application. Open your `App.axaml` file and include the following within the `Application.Styles` section:
 
@@ -62,7 +62,7 @@ To ensure the virtual keyboard is properly styled, add the keyboard theme to you
 
 - Avalonia 11.3.7 or newer
 
-## Basic Usage
+## Basic usage
 
 ### Using VirtualKeyboardScope (Recommended)
 
@@ -106,7 +106,7 @@ For more control, you can also use the `VirtualKeyboard` control directly and sp
 
 Note, that input will be directed to the specified `Target` element regardless of the current input focus.
 
-## Managing Input Methods
+## Managing input methods
 
 The virtual keyboard supports a wide range of input methods and keyboard layouts. You can specify which input methods to include:
 
@@ -133,7 +133,7 @@ var inputMethods = new List<VirtualKeyboardInputMethod>
 myKeyboardScope.InputMethods = inputMethods;
 ```
 
-### Retrieving Available Input Methods
+### Retrieving available input methods
 
 ```csharp
 // Get all supported languages
@@ -146,7 +146,7 @@ var englishInputMethods = VirtualKeyboardInputMethod.GetInputMethodsForLanguage(
 var japaneseKana = VirtualKeyboardInputMethod.GetInputMethodById("ja:ime:kana");
 ```
 
-## Input Method Identifiers
+## Input method identifiers
 
 The virtual keyboard component supports a wide range of input method identifiers for different languages. See the [virtual keyboard control](/controls/input/text-input/virtualkeyboard) page for a list of supported identifiers.
 
@@ -175,7 +175,7 @@ Available ReturnKeyType values:
 - Search
 - Send
 
-## API Reference
+## API reference
 
 For more detailed information about the Virtual Keyboard API, refer to the following classes:
 
@@ -183,7 +183,7 @@ For more detailed information about the Virtual Keyboard API, refer to the follo
 - `VirtualKeyboard`: The actual keyboard control for manual placement
 - `VirtualKeyboardInputMethod`: Represents a particular input method/keyboard layout
 
-## Platform Support
+## Platform support
 
 The Virtual Keyboard is a managed component and works on all platforms supported by Avalonia.
 

@@ -1,6 +1,6 @@
 ---
 id: clipping-and-masking
-title: Clipping and Masking
+title: Clipping and masking
 ---
 
 Clipping restricts the visible area of a control or drawing to a defined region. Masking uses an opacity gradient to partially hide content. Both techniques are useful for creating shaped controls, circular avatars, and visual effects.
@@ -19,7 +19,7 @@ The simplest form of clipping constrains child content to the parent's bounds. S
 
 By default, `ClipToBounds` is `false`, so content can overflow its parent.
 
-## Clip Property
+## Clip property
 
 The `Clip` property accepts any `Geometry` to define a non-rectangular clipping region.
 
@@ -91,7 +91,7 @@ The compact path mini-language can also define clip regions:
 
 This is often simpler than using an `EllipseGeometry` clip for circular images.
 
-## Opacity Masking
+## Opacity masking
 
 Use `OpacityMask` to fade or partially hide content using a brush. Areas where the mask brush is transparent become invisible, while opaque areas remain visible:
 
@@ -160,7 +160,7 @@ You can use a `VisualBrush` as an opacity mask to clip content to the shape of a
 
 The image is visible only where the `TextBlock` renders opaque pixels, creating a text-shaped cutout effect.
 
-## Clipping in Custom Controls
+## Clipping in custom controls
 
 When rendering custom controls, you can apply clipping programmatically:
 
@@ -186,7 +186,7 @@ using (context.PushGeometryClip(ellipse))
 }
 ```
 
-## See Also
+## See also
 
 - [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Geometry types for clip regions.
 - [Brushes](/docs/graphics-animation/brushes): Brush types for opacity masks.

@@ -5,7 +5,7 @@ title: MultiBinding
 
 `MultiBinding` combines values from multiple source properties into a single target property. It is useful when a display value depends on more than one data source, such as formatting a full name from separate first and last name properties, or computing a composite value.
 
-## Basic Usage with StringFormat
+## Basic usage with StringFormat
 
 The simplest use of `MultiBinding` is combining multiple values into a formatted string:
 
@@ -101,7 +101,7 @@ Because `MultiBinding` with child bindings requires property element syntax, the
 
 The button is enabled only when all three bound properties are `true`.
 
-## Binding to Controls
+## Binding to controls
 
 Child bindings within a `MultiBinding` support the same source options as regular bindings, including `ElementName`, `RelativeSource`, and Avalonia's `#elementName` shorthand:
 
@@ -124,7 +124,7 @@ Child bindings within a `MultiBinding` support the same source options as regula
 </StackPanel>
 ```
 
-## MultiBinding Properties
+## MultiBinding properties
 
 | Property | Description |
 |---|---|
@@ -172,7 +172,7 @@ public static class Converters
 </TextBlock>
 ```
 
-## Common Patterns
+## Common patterns
 
 ### Visibility from multiple conditions
 
@@ -226,7 +226,7 @@ public class RectangleAreaConverter : IMultiValueConverter
 }
 ```
 
-## See Also
+## See also
 
 - [Data Binding Syntax](data-binding-syntax): Binding parameters including StringFormat.
 - [How to Create a Custom Converter](how-to-create-a-custom-data-binding-converter): Single-value converters.

@@ -1,6 +1,6 @@
 ---
 id: how-to-bind-can-execute
-title: How to Bind Can Execute
+title: How to bind can execute
 ---
 
 import BindCanExecuteScreenshot from '/img/guides/data/bind-canexecute.gif';
@@ -120,3 +120,8 @@ In the constructor of the view model, the command is created with two parameters
 When the `Message` property changes, `RaiseCanExecuteChanged` notifies the binding system to re-evaluate whether the button should be enabled.
 
 <img src={BindCanExecuteScreenshot} alt=""/>
+
+## See also
+
+- [Binding to Commands](/docs/data-binding/binding-to-commands): Full command binding reference.
+- [Commanding](/docs/input-interaction/commanding): ICommand interface and CanExecute patterns.

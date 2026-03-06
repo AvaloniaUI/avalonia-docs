@@ -1,11 +1,11 @@
 ---
 id: choosing-a-layout-panel
-title: Choosing a Layout Panel
+title: Choosing a layout panel
 ---
 
 Avalonia provides several panel controls, each designed for a different layout strategy. Choosing the right panel simplifies your XAML, improves performance, and makes your UI easier to maintain. This guide helps you pick the best panel for common scenarios.
 
-## Decision Flowchart
+## Decision flowchart
 
 Ask yourself these questions in order:
 
@@ -16,9 +16,9 @@ Ask yourself these questions in order:
 5. **Do you need items in a uniform grid of equal-sized cells?** Use [UniformGrid](#uniformgrid).
 6. **Do you need to position items relative to each other?** Use [RelativePanel](#relativepanel).
 7. **Do you need pixel-precise absolute positioning?** Use [Canvas](#canvas).
-8. **Do you just need to layer children on top of each other?** Use [Panel](#panel).
+8. **Do you need to layer children on top of each other?** Use [Panel](#panel).
 
-## Quick Comparison
+## Quick comparison
 
 | Panel | Arrangement | Adapts to window size | Best for |
 |---|---|---|---|
@@ -31,7 +31,7 @@ Ask yourself these questions in order:
 | [Canvas](../controls/layout/panels/canvas) | Absolute coordinates | No | Drawing surfaces, diagrams, custom overlays |
 | [Panel](../controls/layout/panels/panel) | Layered on top of each other | Yes | Overlays, stacking visuals at the same position |
 
-## Panel Details
+## Panel details
 
 ### Grid
 
@@ -47,7 +47,7 @@ The most versatile panel. Define rows and columns with fixed, proportional (`*`)
 
 **Use when:** You need a structured layout with rows and columns of varying sizes, such as a form, a dashboard, or any layout that mixes fixed and flexible regions.
 
-**Avoid when:** All children are simply stacked in one direction (use StackPanel) or all cells are the same size (use UniformGrid). Grid is heavier than simpler panels, so prefer a lighter alternative when it fits.
+**Avoid when:** All children are stacked in one direction (use StackPanel) or all cells are the same size (use UniformGrid). Grid is heavier than simpler panels, so prefer a lighter alternative when it fits.
 
 ### DockPanel
 
@@ -182,7 +182,7 @@ The simplest container. All children are layered on top of each other, drawn in 
 
 **Avoid when:** You actually want children side by side or in a sequence. Panel stacks everything at the same position.
 
-## Nesting Panels
+## Nesting panels
 
 Complex layouts typically combine multiple panels. Use the simplest panel at each level:
 
@@ -205,13 +205,13 @@ Complex layouts typically combine multiple panels. Use the simplest panel at eac
 </DockPanel>
 ```
 
-### Performance Tips
+### Performance tips
 
 - Prefer simpler panels when possible. `StackPanel` and `Panel` are lighter than `Grid`.
 - Avoid deeply nested panels. If you find yourself nesting more than three levels deep, consider whether a single `Grid` with the right row and column definitions could replace the entire tree.
 - For large scrollable lists, use `ItemsRepeater` or `ListBox` with virtualization instead of putting hundreds of controls in a StackPanel inside a ScrollViewer.
 
-## See Also
+## See also
 
 - [Layout](layout) for how the measure and arrange system works.
 - [Positioning Controls](positioning-controls) for alignment, margin, and padding.

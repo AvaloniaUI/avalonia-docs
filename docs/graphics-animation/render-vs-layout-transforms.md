@@ -1,11 +1,11 @@
 ---
 id: render-vs-layout-transforms
-title: Render Transforms vs Layout Transforms
+title: Render transforms vs layout transforms
 ---
 
 Avalonia provides two ways to transform controls: render transforms and layout transforms. They produce different visual results because they apply at different stages of the rendering pipeline.
 
-## Render Transforms
+## Render transforms
 
 A **render transform** changes how a control is drawn without affecting layout. The control's position and size in the layout system remain unchanged. Other controls do not move to accommodate the transform.
 
@@ -66,7 +66,7 @@ The pivot point for render transforms. In Avalonia, the default is `50%,50%` (ce
 </Image>
 ```
 
-## Layout Transforms
+## Layout transforms
 
 A **layout transform** changes a control's size and orientation before layout occurs. The parent panel sees the transformed size and positions other controls accordingly. This prevents overlap.
 
@@ -123,7 +123,7 @@ The "Below" button is positioned below the rotated control's full bounds, with n
 | Default origin | Center (50%, 50%) | Center |
 | Overlap risk | Yes | No |
 
-## When to Use Which
+## When to use which
 
 **Use render transforms when:**
 - The transform is temporary or animated (hover effects, transitions)
@@ -137,7 +137,7 @@ The "Below" button is positioned below the rotated control's full bounds, with n
 - The transform is part of the permanent layout (not animated)
 - Overlap would be a visual bug
 
-## Animating Transforms
+## Animating transforms
 
 Render transforms are ideal for animation because they do not trigger layout:
 
@@ -160,7 +160,7 @@ Render transforms are ideal for animation because they do not trigger layout:
 
 Avoid animating layout transforms in performance-sensitive scenarios, as each frame triggers a full layout pass.
 
-## See Also
+## See also
 
 - [Transforms](/docs/graphics-animation/transforms): Full transform reference.
 - [Animations](/docs/graphics-animation/animations): Keyframe and transition animations.

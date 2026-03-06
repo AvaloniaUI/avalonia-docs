@@ -5,7 +5,7 @@ title: Headless Testing Platform
 
 The headless platform runs Avalonia without a visible window, making it ideal for automated testing in CI/CD environments and on machines without a display. It provides the full Avalonia control tree, layout, styling, and data binding, but replaces the real windowing and rendering backends with in-memory implementations.
 
-## Simulating User Input
+## Simulating user input
 
 The headless platform has no real input devices, so you simulate input using extension methods on `Window`. These methods raise the same events that real input would trigger.
 
@@ -34,7 +34,7 @@ The headless platform has no real input devices, so you simulate input using ext
 |---|---|
 | `Window.DragDrop(Point, RawDragEventType, DataObject, DragDropEffects, RawInputModifiers)` | Simulates an external drag-and-drop operation (for example, a user dragging files from the OS into your app). |
 
-## Common Test Patterns
+## Common test patterns
 
 ### Testing a button click
 
@@ -148,7 +148,7 @@ public void MainView_Shows_Welcome_Message()
 }
 ```
 
-## Flushing Async Operations
+## Flushing async operations
 
 Some operations in Avalonia are asynchronous (window resize, layout passes, deferred dispatcher jobs). If you set a property and immediately assert, the change may not have taken effect yet.
 
@@ -176,7 +176,7 @@ AvaloniaHeadlessPlatform.ForceRenderTimerTick();
 The input helper methods and `CaptureRenderedFrame` call these internally, so you do not need to flush manually when using them.
 :::
 
-## Visual Regression Testing
+## Visual regression testing
 
 By default, the headless platform uses a fake drawing backend that does not produce pixels. You can enable the Skia renderer to capture rendered frames and compare them against baseline images.
 
@@ -244,7 +244,7 @@ private static void AssertImagesMatch(Bitmap expected, WriteableBitmap actual,
 Avalonia uses this approach internally in its [render test suite](https://github.com/AvaloniaUI/Avalonia/tree/master/tests/Avalonia.RenderTests). Each test renders a control, saves the output as PNG, and compares it to a baseline image with a configurable error tolerance.
 :::
 
-## Testing View Models Without UI
+## Testing view models without UI
 
 View models that implement `INotifyPropertyChanged` or use `ReactiveUI` can be tested with plain unit tests without the headless platform. You only need the headless platform when your test involves Avalonia controls, layout, or input.
 
@@ -261,7 +261,7 @@ public void ViewModel_Increments_Count()
 }
 ```
 
-## Manual Setup
+## Manual setup
 
 :::caution
 This is an advanced usage scenario. For most cases, use the [XUnit](headless-xunit) or [NUnit](headless-nunit) integration, which handles setup automatically.
@@ -324,7 +324,7 @@ await session.Dispatch(() =>
 }, CancellationToken.None);
 ```
 
-## See Also
+## See also
 
 - [Headless Testing with XUnit](headless-xunit): XUnit integration with `[AvaloniaFact]`.
 - [Headless Testing with NUnit](headless-nunit): NUnit integration with `[AvaloniaTest]`.

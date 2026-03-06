@@ -11,7 +11,7 @@ The file dialog functionality is accessed through the [`StorageProvider`](/docs/
 
 This method opens a file picker dialog, allowing the user to select a file. `FilePickerOpenOptions` defines options that are passed to the OS dialog.
 
-```cs
+```csharp
 public class MyView : UserControl
 {
     private async void OpenFileButton_Clicked(object sender, RoutedEventArgs args)
@@ -46,7 +46,7 @@ This method opens a file save dialog, allowing the user to save a file. `FilePic
 
 ### Example
 
-```cs
+```csharp
 public class MyView : UserControl
 {
     private async void SaveFileButton_Clicked(object sender, RoutedEventArgs args)
@@ -121,9 +121,11 @@ For more information on StorageProvider service including on how to keep access 
 The provided examples directly access the [`StorageProvider`](/docs/services/storage/storage-provider) API inside the ViewModel for learning purposes. In a real-world application, it's recommended to adhere to MVVM principles by creating service classes and locating them with Dependency Injection / Inversion of Control (DI/IoC). Please refer to the [IoCFileOps](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/IoCFileOps) and DepInject projects for samples of how to achieve this.
 :::
 
+## See also
 
-
-
+- [`StorageProvider`](/docs/services/storage/storage-provider): Full storage provider API reference.
+- [File Picker Options](/docs/services/storage/file-picker-options): Configuring file type filters and dialog options.
+- [Bookmarks](/docs/services/storage/bookmarks): Persisting access to picked files and folders.
 
 
 

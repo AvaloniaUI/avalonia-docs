@@ -12,7 +12,7 @@ Our temperature converter app now looks reasonably functional, but doesn’t do 
 
 ## Creating an event handler with code-behind
 
-XAML files can be associated with a C# source file. This file is where we can code event handling for the button. We call this "code-behind".
+XAML files can be associated with a C# source file. This file is where you write event handling code for the button. This is called "code-behind".
 
 1. In your IDE, browse your project directory for **Views → MainWindow.axaml → MainWindow.axaml.cs**. This is the C# source file behind the main window XAML.
 
@@ -21,14 +21,14 @@ XAML files can be associated with a C# source file. This file is where we can co
 2. Open **MainWindow.axaml.cs**.
 3. Locate the `using` directives at the top of the file. At this point, there should only be the single line `using Avalonia.Controls;`. Add these two `using` directives:
 
-```cs
+```csharp
 using Avalonia.Interactivity;
 using System.Diagnostics;
 ```
 
 4. Locate the line `public partial class MainWindow : Window` further down the file. This class currently contains only the constructor for the main window, `public MainWindow()`. Below the constructor, add the following code:
 
-```cs
+```csharp
 private void Button_OnClick(object? sender, RoutedEventArgs e)
 {
     Debug.WriteLine("Click!");
@@ -37,7 +37,7 @@ private void Button_OnClick(object? sender, RoutedEventArgs e)
 
 5. Your C# file should now look like this:
 
-```cs
+```csharp
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using System.Diagnostics;

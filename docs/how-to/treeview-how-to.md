@@ -1,6 +1,6 @@
 ---
 id: treeview-how-to
-title: "How To: Work with TreeView"
+title: "How to: Work with TreeView"
 ---
 
 This guide covers common TreeView scenarios: hierarchical data binding, lazy loading, selection handling, and customization.

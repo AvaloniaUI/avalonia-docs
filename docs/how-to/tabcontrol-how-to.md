@@ -1,6 +1,6 @@
 ---
 id: tabcontrol-how-to
-title: "How To: Work with TabControl"
+title: "How to: Work with TabControl"
 ---
 
 This guide covers common TabControl scenarios: static tabs, dynamic tabs, closeable tabs, and tab styling.

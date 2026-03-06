@@ -49,7 +49,7 @@ Publishing an Avalonia app for iOS generates an `.ipa` file, which is an iOS app
 
 ### Distribution options
 
-Apple provides several approaches for distributing iOS apps:
+Apple provides three approaches for distributing iOS apps:
 
 - **App Store**: Submit through [App Store Connect](https://appstoreconnect.apple.com). Apps require Apple's approval. This is the most common approach for reaching end users.
 - **Ad-hoc**: Distribute to up to 100 registered devices for testing. Available to Apple Developer Program members.

@@ -7,7 +7,7 @@ The `PlatformSettings` class represents a contract for accessing platform-specif
 
 Access `PlatformSettings` through the `GetPlatformSettings` extension method on any `Visual`. For more details on accessing `TopLevel`, visit the [TopLevel](/docs/fundamentals/top-level) page.
 
-```cs
+```csharp
 var platformSettings = myControl.GetPlatformSettings();
 ```
 
@@ -16,28 +16,28 @@ var platformSettings = myControl.GetPlatformSettings();
 ### GetTapSize(PointerType type)
 Returns the size of the rectangle around the location of a pointer down that a pointer up must occur within to register a tap gesture, in device-independent pixels.
 
-```cs 
+```csharp
 Size GetTapSize(PointerType type);
 ```
 
 ### GetDoubleTapSize(PointerType type)
 Returns the size of the rectangle around the location of a pointer down that a pointer up must occur within to register a double-tap gesture, in device-independent pixels.
 
-```cs
+```csharp
 Size GetDoubleTapSize(PointerType type);
 ```
 
 ### GetDoubleTapTime(PointerType type)
 Returns the maximum time that may occur between the first and second click of a double-tap gesture.
 
-```cs
+```csharp
 TimeSpan GetDoubleTapTime(PointerType type);
 ```
 
 ### GetColorValues()
 Returns the current system color values, including dark mode and accent colors.
 
-```cs
+```csharp
 PlatformColorValues GetColorValues();
 ```
 
@@ -50,14 +50,14 @@ While build-in FluentTheme supports automatic switching between accent colors, t
 ### HoldWaitDuration
 The duration between pointer press and when the `Holding` event is fired.
 
-```cs
+```csharp
 TimeSpan HoldWaitDuration { get; }
 ```
 
 ### HotkeyConfiguration
 The configuration for platform-specific hotkeys in an Avalonia application.
 
-```cs
+```csharp
 PlatformHotkeyConfiguration HotkeyConfiguration { get; }
 ```
 
@@ -65,7 +65,7 @@ PlatformHotkeyConfiguration HotkeyConfiguration { get; }
 HotkeyConfiguration is especially useful when application needs to handle well known gestures like Copy, Paste or Cut.
 :::
 
-```cs
+```csharp
 protected override void OnKeyDown(KeyEventArgs e)
 {
     var hotkeys = this.GetPlatformSettings()?.HotkeyConfiguration;
@@ -82,11 +82,12 @@ protected override void OnKeyDown(KeyEventArgs e)
 ### ColorValuesChanged
 Raised when current system color values are changed. This includes changes to dark mode and accent colors.
 
-```cs
+```csharp
 event EventHandler<PlatformColorValues>? ColorValuesChanged;
 ```
 Use the `IPlatformSettings` interface to adapt your application's behavior to user-specific platform settings.
 
+## See also
 
-
+- [TopLevel](/docs/fundamentals/top-level): Accessing platform services from controls.
 

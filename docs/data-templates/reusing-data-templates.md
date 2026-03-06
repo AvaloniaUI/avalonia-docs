@@ -87,4 +87,8 @@ Although there is no data template for a teacher in the window; Avalonia UI will
 Remember to specify a `DataType` in every data template, wherever it is defined, because if _Avalonia UI_ fails to find a data template match for your data; then nothing will be displayed!
 :::
 
->
+## See also
+
+- [Introduction to Data Templates](introduction-to-data-templates): Overview of data templates in Avalonia.
+- [Data Template Collection](data-template-collection): Defining multiple templates by type.
+- [Creating Data Templates in Code](creating-data-templates-in-code): Implementing `IDataTemplate` and using `FuncDataTemplate<T>`.

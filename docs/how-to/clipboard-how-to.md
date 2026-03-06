@@ -1,6 +1,6 @@
 ---
 id: clipboard-how-to
-title: "How To: Use the Clipboard"
+title: "How to: Use the Clipboard"
 ---
 
 This guide covers clipboard operations: copying and pasting text, images, and custom data.

@@ -34,7 +34,7 @@ var topLevel = window;
 
 This method is typically used when you're already working within the context of a window, such as in a ViewModel or an event handler within the `Window` class.
 
-## Common Properties
+## Common properties
 
 ### ActualTransparencyLevel
 
@@ -140,7 +140,7 @@ Gets or sets the `WindowTransparencyLevel` that the TopLevel should use when pos
 IReadOnlyList<WindowTransparencyLevel> TransparencyLevelHint { get; set; }
 ```
 
-## Common Events
+## Common events
 
 ### BackRequested
 
@@ -174,7 +174,7 @@ Occurs when the TopLevel's scaling changes.
 event EventHandler ScalingChanged;
 ```
 
-## Common Methods
+## Common methods
 
 ### GetTopLevel
 

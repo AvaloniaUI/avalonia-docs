@@ -77,7 +77,7 @@ image.GestureRecognizers.Add(new PinchGestureRecognizer());
 The PinchGestureRecognizer raises a `InputElement.PinchEvent` when it detects the start of a pull gesture. When the pull ends, from the pointer being released or another gesture start, it raises a `InputElement.PinchEndedEvent`.
 The `Scale` property in the args passed to the `InputElement.PinchEvent` event handler contains the relative size of the pinch since it started.
 
-## Binding Events
+## Binding events
 After the PinchGestureRecognizer has been added to your control, you need to bind them in your code behind either through an inline handler or to an event function:
 ```csharp title='C#'
 image.AddHandler(InputElement.PinchEvent, (s, e) => { });
@@ -95,12 +95,18 @@ If your event handles the gesture completely, you can mark the event as handled 
 e.Handled = true;
 ```
 
-## More Information
+## More information
 
 :::info
-View the source code on _GitHub_ 
+View the source code on _GitHub_
 
 [`PinchGestureRecognizer.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/GestureRecognizers/PinchGestureRecognizer.cs)
 
 [`PinchEventArgs.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/PinchEventArgs.cs)
 :::
+
+## See also
+
+- [Gestures](/docs/input-interaction/gestures): Overview of gesture recognizers and built-in gesture events.
+- [Scroll Gesture Recognizer](/docs/input-interaction/gestures/scroll-gesture-recognizer): Scroll gesture for panning content.
+- [Pull Gesture Recognizer](/docs/input-interaction/gestures/pull-gesture-recognizer): Pull gesture for pull-to-refresh interactions.

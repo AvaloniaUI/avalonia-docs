@@ -78,3 +78,8 @@ To allow mouse pointers (not just touch) to trigger holding, set `InputElement.I
         InputElement.IsHoldWithMouseEnabled="True"
         Holding="OnHolding" />
 ```
+
+## See also
+
+- [Pointer Events](/docs/input-interaction/pointer): Lower-level pointer events that gestures are built on.
+- [Routed Events](/docs/input-interaction/routed-events): How events propagate through the element tree.

@@ -28,7 +28,7 @@ You can use this markup extension with any other type, not only strings:
 <Border Height="{OnPlatform 10, Windows=50.5}"/>
 ```
 
-### Specifying Type Arguments
+### Specifying type arguments
 
 You can use custom TypeArguments to explicitly specify the type for the values:
 
@@ -38,7 +38,7 @@ You can use custom TypeArguments to explicitly specify the type for the values:
 
 In this sample above, `Tag` property has type of `object`, so compiler doesn't have enough information to parse input strings. Without specifying TypeArguments, property will have value of `string` on all platforms. But since we have `TypeArguments` here, compiler will parse them as `Thickness` values.
 
-### Nested Markup Extensions
+### Nested markup extensions
 
 The OnPlatform extension supports nesting other markup extensions within it:
 
@@ -46,7 +46,7 @@ The OnPlatform extension supports nesting other markup extensions within it:
 <Border Background="{OnPlatform Default={StaticResource DefaultBrush}, Windows={StaticResource WindowsBrush}}"/>
 ```
 
-### XML Syntax
+### XML syntax
 
 OnPlatform can also be used in XML syntax for defining property values:
 
@@ -65,7 +65,7 @@ OnPlatform can also be used in XML syntax for defining property values:
 
 Note, in this sample, `OnPlatform` is a child of `StackPanel`. But in runtime only single actual control will be created (`ToggleButton` or `ToggleSwitch`) and added to the StackPanel.
 
-### Complex Property Setters
+### Complex property setters
 
 Similarly to the previous sample, OnPlatform can be part of complex property setters within a ResourceDictionary or other dictionaries or collections:
 
@@ -82,7 +82,7 @@ Similarly to the previous sample, OnPlatform can be part of complex property set
 </ResourceDictionary>
 ```
 
-### XML Combining Syntax
+### XML combining syntax
 
 To avoid branches duplication, it is possible to define multiple platforms in a single branch. Another useful example would be including platform-specific styles:
 
@@ -124,3 +124,7 @@ The `OnFormFactor` markup extension functions similarly to the `OnPlatform` and 
 ```
 
 `OnFormFactor` doesn't have any compile-time trimming optimizations, as form factor cannot be known in compile time. None of these markup extensions are dynamic; once a value is set, it will not be changed.
+
+## See also
+
+- [Platform-specific .NET](/docs/platform-specific-guides/dotnet)

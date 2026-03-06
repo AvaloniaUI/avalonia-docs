@@ -52,3 +52,8 @@ The code works correctly because the object in the window's content zone happens
 
 On the next page, you will see how to define multiple data templates, and choose the correct template from the class of the object in the window's content zone.
 
+## See also
+
+- [Control Content](control-content): How controls display non-control content.
+- [Data Template Collection](data-template-collection): Defining multiple templates by type.
+- [Creating Data Templates in Code](creating-data-templates-in-code): Implementing `IDataTemplate` and using `FuncDataTemplate<T>`.

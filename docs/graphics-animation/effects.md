@@ -5,7 +5,7 @@ title: Effects
 
 Avalonia supports visual effects that add depth and visual interest to controls. The primary effect types are box shadows, clipping, and opacity masks.
 
-## Box Shadows
+## Box shadows
 
 The `BoxShadow` property on `Border` and `ContentPresenter` adds drop shadows or inset shadows to elements. The syntax follows CSS box-shadow conventions.
 
@@ -241,7 +241,7 @@ Values range from `0.0` (fully transparent) to `1.0` (fully opaque). Unlike `Opa
 | `IsVisible="False"` | Element is removed from layout. | Cannot receive input. |
 | `Opacity="0"` | Element still occupies space. | Can still receive pointer and keyboard input. |
 
-## Animating Effects
+## Animating effects
 
 Box shadows and opacity can be animated with transitions:
 
@@ -263,7 +263,7 @@ Box shadows and opacity can be animated with transitions:
 </Border>
 ```
 
-## See Also
+## See also
 
 - [Brushes](brushes): All brush types including gradient and image brushes.
 - [Drawing Graphics](drawing-graphics): Shapes, geometries, and path data.

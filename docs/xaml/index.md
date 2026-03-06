@@ -1,6 +1,6 @@
 ---
 id: index
-title: XAML Reference
+title: XAML reference
 ---
 
 This section provides a reference for the XAML language features available in Avalonia. While the [Avalonia XAML fundamentals page](/docs/fundamentals/avalonia-xaml) covers basic concepts, this reference goes deeper into syntax, directives, markup extensions, and the XAML compilation pipeline.
@@ -11,9 +11,9 @@ XAML (eXtensible Application Markup Language) is an XML-based language for decla
 
 Avalonia uses the `.axaml` file extension (Avalonia XAML) to distinguish its XAML files from WPF or other XAML dialects. This avoids conflicts in Visual Studio and other tooling.
 
-## XAML Syntax
+## XAML syntax
 
-### Object Elements
+### Object elements
 
 An XML element creates an instance of the named type:
 
@@ -23,7 +23,7 @@ An XML element creates an instance of the named type:
 <StackPanel />
 ```
 
-### Property Attributes
+### Property attributes
 
 Set properties using XML attributes:
 
@@ -33,7 +33,7 @@ Set properties using XML attributes:
 
 The XAML engine uses [type converters](type-converters) to convert the string attribute values to the appropriate .NET types (e.g., `"Blue"` becomes a `SolidColorBrush`).
 
-### Property Element Syntax
+### Property element syntax
 
 For complex values that cannot be expressed as a string, use property element syntax:
 
@@ -54,7 +54,7 @@ For complex values that cannot be expressed as a string, use property element sy
 </Button>
 ```
 
-### Content Property
+### Content property
 
 Many controls designate a default content property. Child elements placed directly inside the control's tags are assigned to that property:
 
@@ -72,7 +72,7 @@ Many controls designate a default content property. Child elements placed direct
 </StackPanel>
 ```
 
-### Collection Syntax
+### Collection syntax
 
 Properties of collection types can be populated with multiple child elements:
 
@@ -90,7 +90,7 @@ Some collection properties support a compact string syntax:
 <Grid ColumnDefinitions="Auto,*,200" RowDefinitions="Auto,*" />
 ```
 
-### Attached Property Syntax
+### Attached property syntax
 
 Set attached properties using the `OwnerType.PropertyName` syntax:
 
@@ -106,3 +106,9 @@ Set attached properties using the `OwnerType.PropertyName` syntax:
 - [x: Directives](directives): Reference for `x:Name`, `x:Key`, `x:Class`, `x:DataType`, and other directives.
 - [Markup Extensions](markup-extensions): Reference for `{Binding}`, `{StaticResource}`, `{DynamicResource}`, `{TemplateBinding}`, and others.
 - [Type Converters](type-converters): How string values in XAML are converted to .NET types.
+
+## See also
+
+- [Avalonia XAML](/docs/fundamentals/avalonia-xaml): XAML basics and file structure.
+- [Data Binding](/docs/data-binding): Data binding reference.
+- [Styling](/docs/styling/styles): CSS-like styling in Avalonia.

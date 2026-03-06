@@ -15,7 +15,7 @@ Avalonia provides three types of animations:
 
 Additionally, [Page Transitions](page-transitions) animate content switching in controls like `TransitioningContentControl` and `Carousel`.
 
-## Keyframe Animations
+## Keyframe animations
 
 The simplest keyframe animation changes one property value over a specified duration by defining two keyframes: one at the start (0%) and one at the end (100%).
 
@@ -49,7 +49,7 @@ This creates a pulsing opacity animation that runs forever, alternating between 
 
 See [Keyframe Animations](keyframe-animations) for the full syntax and more examples.
 
-## Control Transitions
+## Control transitions
 
 Transitions animate a property whenever its value changes, providing smooth visual feedback without writing explicit keyframes:
 
@@ -66,7 +66,7 @@ Transitions animate a property whenever its value changes, providing smooth visu
 
 See [Control Transitions](control-transitions) for transition types and configuration.
 
-## Composition Animations
+## Composition animations
 
 Composition animations provide a lower-level, code-driven approach that runs on the render thread. Use them when you need programmatic control or render-thread performance:
 
@@ -84,7 +84,7 @@ visual.StartAnimation("Offset", animation);
 
 See [Composition Animations](composition-animations) for the full API, implicit animations, and integration patterns.
 
-## Triggering Animations
+## Triggering animations
 
 Keyframe animations defined in XAML rely on style selectors for their triggering behavior:
 
@@ -104,7 +104,7 @@ Keyframe animations defined in XAML rely on style selectors for their triggering
 </Style>
 ```
 
-## Animation Settings
+## Animation settings
 
 Keyframe animations support these configuration options:
 
@@ -118,3 +118,10 @@ Keyframe animations support these configuration options:
 | `Easing` | The interpolation curve between keyframes. | `CubicEaseInOut` |
 
 See [Animation Settings](animation-settings) for details on each option and [Easing Functions](easing-functions) for all available easing types.
+
+## See also
+
+- [Keyframe Animations](keyframe-animations): Full keyframe animation syntax and examples.
+- [Control Transitions](control-transitions): Animating property changes.
+- [Composition Animations](composition-animations): Code-driven render-thread animations.
+- [Page Transitions](page-transitions): Animating content switching.

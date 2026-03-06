@@ -1,11 +1,11 @@
 ---
 id: hit-testing
-title: Hit Testing
+title: Hit testing
 ---
 
 Hit testing determines which visual element is located at a given point on the screen. Avalonia uses hit testing internally for pointer events, but you can also perform hit testing programmatically for custom controls and advanced interaction scenarios.
 
-## How Hit Testing Works
+## How hit testing works
 
 When a pointer event occurs, Avalonia walks the visual tree from the topmost element downward. For each element, it checks whether the point falls within the element's bounds and its rendered content. The first element that passes the test becomes the event target.
 
@@ -35,7 +35,7 @@ Common uses:
 - Watermark or status text over interactive content
 - Animation layers
 
-## Background and Hit Testing
+## Background and hit testing
 
 A control without a `Background` (or with `Background` set to `null`) does not participate in hit testing for its empty area. Only the child content receives pointer events.
 
@@ -53,7 +53,7 @@ To make the entire area of a panel respond to pointer events, set `Background="T
 </StackPanel>
 ```
 
-## Programmatic Hit Testing
+## Programmatic hit testing
 
 ### InputHitTest
 
@@ -84,7 +84,7 @@ private void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 }
 ```
 
-## Hit Testing in Custom Controls
+## Hit testing in custom controls
 
 When building custom controls that render their own content with `DrawingContext`, you may need to override hit testing to match the rendered shapes.
 
@@ -115,7 +115,7 @@ public class CircleControl : Control
 
 With this override, pointer events only fire when the user clicks inside the circle, not in the corners of the bounding rectangle.
 
-## Hit Testing Order
+## Hit testing order
 
 When multiple controls overlap at the same point, the hit test returns the topmost control in the visual tree. The order is determined by:
 
@@ -130,7 +130,7 @@ When multiple controls overlap at the same point, the hit test returns the topmo
 </Panel>
 ```
 
-## Practical Patterns
+## Practical patterns
 
 ### Click-through overlay
 
@@ -170,7 +170,7 @@ private void OnCanvasPointerPressed(object? sender, PointerPressedEventArgs e)
 }
 ```
 
-## See Also
+## See also
 
 - [Pointer Input](/docs/input-interaction/pointer): Pointer events and position.
 - [Custom Rendering](/docs/graphics-animation/custom-rendering): Drawing with DrawingContext.

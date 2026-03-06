@@ -5,7 +5,7 @@ title: Validation in Data Binding
 
 Avalonia supports data validation through the standard .NET validation mechanisms. When a bound property fails validation, the control displays an error indicator and the validation message.
 
-## Validation with Data Annotations
+## Validation with data annotations
 
 The simplest approach uses `System.ComponentModel.DataAnnotations` attributes on your view model properties. This works with CommunityToolkit.Mvvm's `ObservableValidator` base class:
 
@@ -113,7 +113,7 @@ public class LoginViewModel : INotifyPropertyChanged, INotifyDataErrorInfo
 }
 ```
 
-## Custom Validation Attributes
+## Custom validation attributes
 
 Create custom validation attributes for reusable validation logic:
 
@@ -158,7 +158,7 @@ private string _password = "";
 private string _newPassword = "";
 ```
 
-## Validation Error Display
+## Validation error display
 
 ### Default behavior
 
@@ -227,7 +227,7 @@ A common pattern places error messages below the input field instead of in a too
 </Style>
 ```
 
-## Validating on Submit
+## Validating on submit
 
 To validate the entire form when the user clicks a submit button:
 
@@ -251,7 +251,7 @@ public partial class RegistrationViewModel : ObservableValidator
 
 `ValidateAllProperties()` runs all validation attributes on all properties at once, which is useful for catching errors on fields the user has not yet interacted with.
 
-## Exception-Based Validation
+## Exception-based validation
 
 Avalonia also catches exceptions thrown during binding updates and displays them as validation errors. This can be useful for simple type conversion validation:
 
@@ -272,7 +272,7 @@ public int Quantity
 
 While this works, `INotifyDataErrorInfo` is the preferred approach because it supports multiple errors per property and async validation.
 
-## See Also
+## See also
 
 - [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding modes and parameters.
 - [INotifyPropertyChanged](/docs/data-binding/inotifypropertychanged): Change notification for view models.

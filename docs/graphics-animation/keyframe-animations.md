@@ -69,7 +69,7 @@ The resulting animation looks like this:
 
 The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!
 
-## Animate Two Properties
+## Animate two properties
 
 This example shows you how to animate two properties on the same timeline.
 
@@ -128,7 +128,7 @@ To repeat an animation indefinitely, use the special  `"INFINITE"` value. For ex
 </Animation>
 ```
 
-### Playback Direction
+### Playback direction
 
 By default an animation plays forward. That is it follows the profile of the easing function from left to right. You can alter this behavior by setting the `PlaybackDirection` attribute on the animation element. For example:
 
@@ -142,7 +142,7 @@ The following table describes the options:
 
 <table><thead><tr><th width="245">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>Normal</code></td><td>(Default) The animation is played forwards.</td></tr><tr><td><code>Reverse</code></td><td>The animation is played in reverse direction.</td></tr><tr><td><code>Alternate</code></td><td>The animation is played forwards first, then backwards.</td></tr><tr><td><code>AlternateReverse</code></td><td>The animation is played backwards first, then forwards.</td></tr></tbody></table>
 
-### Fill Mode
+### Fill mode
 
 The fill mode attribute of an animation defines how the properties being set will persist after it runs, or during any gaps between runs. For example:
 
@@ -156,7 +156,7 @@ The following table describes the options:
 
 <table><thead><tr><th width="240">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>None</code></td><td>Value will not persist after animation nor the first value will be applied when the animation is delayed.</td></tr><tr><td><code>Forward</code></td><td>The last interpolated value will be persisted to the target property.</td></tr><tr><td><code>Backward</code></td><td>The first interpolated value will be displayed on animation delay.</td></tr><tr><td><code>Both</code></td><td>Both <code>Forward</code> and <code>Backward</code> behaviors will be applied.</td></tr></tbody></table>
 
-### Easing Function
+### Easing function
 
 An easing function defines how a property is varied over time during an animation.
 
@@ -232,3 +232,9 @@ await animation.RunAsync(Rect);
 :::info
 While it's easier to define animations in XAML, it's also possible to do completely in C# code. It's possible to create an instance of `Animation` type, and populate key frames collection.
 :::
+
+## See also
+
+- [Animation Settings](animation-settings): Duration, delay, iteration count, and playback direction.
+- [Easing Functions](easing-functions): All available easing functions.
+- [Control Transitions](control-transitions): Animating property changes with transitions.

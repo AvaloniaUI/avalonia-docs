@@ -7,7 +7,7 @@ The `FocusManager` service is responsible for managing the keyboard focus for th
 
 The `FocusManager` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/fundamentals/top-level) page.
 
-```cs
+```csharp
 var focusManager = window.FocusManager;
 ```
 
@@ -16,14 +16,14 @@ var focusManager = window.FocusManager;
 ### GetFocusedElement()
 Returns the currently focused element.
 
-```cs
+```csharp
 IInputElement? GetFocusedElement()
 ```
 
 ### ClearFocus()
 Clears the currently focused element.
 
-```cs
+```csharp
 void ClearFocus()
 ```
 
@@ -33,7 +33,7 @@ void ClearFocus()
 
 Developers usually don't need a `FocusManager` service to focus a control. 
 It can be achieved with a method call directly on the control:
-```cs
+```csharp
 var hasFocused = button.Focus();
 ```
 
@@ -76,7 +76,7 @@ protected override void OnLoaded(RoutedEventArgs e)
 }
 ```
 
-## See Also
+## See also
 
 - [Focus](/docs/input-interaction/focus): Focus system overview and focus events.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings and keyboard navigation.

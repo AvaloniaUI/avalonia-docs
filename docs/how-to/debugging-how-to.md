@@ -1,6 +1,6 @@
 ---
 id: debugging-how-to
-title: "How To: Debug Common Avalonia Issues"
+title: "How to: Debug Common Avalonia Issues"
 ---
 
 This guide covers techniques for debugging bindings, layout, styling, and rendering issues in Avalonia applications.

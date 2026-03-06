@@ -81,7 +81,7 @@ public class TextCaseConverter : IValueConverter
 }
 ```
 
-## Target Property Type
+## Target property type
 
 You may want to write a a custom converter that can switch the output type depending on what the target property requires. You can achieve this because the `Convert` method receives a `targetType` argument that you can test with the `IsAssignableTo` function.
 
@@ -199,7 +199,7 @@ public static class MyConverters
 </StackPanel>
 ```
 
-## More Information
+## More information
 
 :::info
 For further guidance about how to bind images, see [How To Bind Image Files](how-to-bind-image-files.md).

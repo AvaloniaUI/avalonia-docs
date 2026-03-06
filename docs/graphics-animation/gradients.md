@@ -165,3 +165,8 @@ A `LinearGradientBrush` is defined using the following basic structure:
 ```
 
 </XamlPreview>
+
+## See also
+
+- [Brushes](brushes): All brush types including radial and conic gradients.
+- [Effects](effects): Box shadows, clipping, and opacity masks.

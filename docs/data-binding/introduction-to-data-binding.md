@@ -43,7 +43,7 @@ For more information about how to use the MVVM Pattern with Avalonia, see [The M
 For background information on the origins and development of the MVVM pattern at _Microsoft_, see the [Microsoft Patterns and Practices article](https://msdn.microsoft.com/en-us/library/hh848246.aspx).
 :::
 
-## Binding Modes
+## Binding modes
 
 Bindings can operate in different modes that control how data flows:
 
@@ -72,6 +72,8 @@ Bindings can operate in different modes that control how data flows:
 <Image Source="{Binding AvatarUrl, FallbackValue={StaticResource DefaultAvatar}}" />
 ```
 
-## What's Next
+## See also
 
-On the next page, you will learn where the data binder gets the data object from.
+- [Data Context](/docs/data-binding/data-context): Where the data binder gets the data object from.
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding paths, modes, and converters.
+- [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern): Architectural pattern used with data binding.

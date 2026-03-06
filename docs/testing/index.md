@@ -5,7 +5,7 @@ title: Testing
 
 Avalonia supports several testing strategies, each suited to different goals. You can combine them to build a layered test suite that covers view model logic, control behavior, visual output, and end-to-end user flows.
 
-## Testing Strategies
+## Testing strategies
 
 | Strategy | What it tests | Speed | Requires UI |
 |---|---|---|---|
@@ -59,14 +59,14 @@ By enabling the Skia renderer in headless mode, you can capture rendered frames 
 
 Avalonia uses Appium internally to test the framework across Windows and macOS.
 
-## Choosing the Right Approach
+## Choosing the right approach
 
 - **Start with unit tests** for view models and services. These are fast, reliable, and need no special setup.
 - **Add headless tests** for control behavior that depends on Avalonia's property system, layout, or input handling.
 - **Add visual regression tests** if your application has custom controls or themes where pixel-level correctness matters.
 - **Add Appium tests** for critical user flows, platform-specific features, and accessibility validation.
 
-## See Also
+## See also
 
 - [Headless Testing Platform](setting-up-the-headless-platform): Input simulation, frame capture, and async handling.
 - [Headless Testing with XUnit](headless-xunit): XUnit integration setup.

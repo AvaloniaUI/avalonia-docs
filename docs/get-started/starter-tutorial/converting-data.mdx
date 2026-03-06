@@ -32,7 +32,7 @@ Next, we need the app to be able to access values entered into the `Celsius` tex
 1. In the code-behind file **MainWindow.axaml.cs**, locate the `Button_OnClick` event handler that you [created earlier](/docs/get-started/starter-tutorial/establishing-events-and-responses).
 2. Change the `Debug` statement to display the text entered into the `Celsius` text box, like so:
 
-```cs
+```csharp
 Debug.WriteLine($"Click! Celsius={Celsius.Text}");
 ```
 
@@ -49,34 +49,34 @@ In case you aren’t familiar with the Celsius-Fahrenheit conversion formula, it
 
 > Fahrenheit = Celsius * (9/5) + 32
 
-Here’s how we implement this logic in our C# code-behind.
+Here is how to implement this logic in the C# code-behind.
 
 1. In the code-behind file **MainWindow.axaml.cs**, locate the `Button_OnClick` event handler you [created earlier](/docs/get-started/starter-tutorial/establishing-events-and-responses).
 2. Delete the `Debug` statement.
 3. (Optional) You can also delete the statement `using System.Diagnostics;` from the top of the file. It is no longer needed.
 4. Within the `Button_OnClick` event handler, add this code to validate the Celsius input is a number:
 
-```cs
+```csharp
 if (double.TryParse(Celsius.Text, out double C))
 ```
 
 5. Within the `if` conditional clause, add this code to apply the conversion formula:
 
-```cs
+```csharp
 {
     var F = C * (9d / 5d) + 32;
 ```
 
 6. Add this code to print the output as text to the Fahrenheit text box, then close the conditional clause:
 
-```cs
+```csharp
     Fahrenheit.Text = F.ToString("0.0");
 }
 ```
 
 7. Add an `else` conditional clause to reset the text boxes to 0 in case of invalid input:
 
-```cs
+```csharp
 else
 {
     Celsius.Text = "0";
@@ -86,7 +86,7 @@ else
 
 8. Your completed event handler should look like this:
 
-```cs
+```csharp
 private void Button_OnClick(object? sender, RoutedEventArgs e)
 {
     if (double.TryParse(Celsius.Text, out double C))

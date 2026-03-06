@@ -1,17 +1,17 @@
 ---
 id: property-value-inheritance
-title: Property Value Inheritance
+title: Property value inheritance
 ---
 
 Property value inheritance allows a property value set on a parent element to propagate down to its descendants in the visual tree, without each descendant needing to set the value explicitly. This is commonly used for properties like `FontSize`, `FontFamily`, `Foreground`, and `FlowDirection`.
 
-## How It Works
+## How it works
 
 When an Avalonia property is registered with `inherits: true`, the property system checks ancestor elements in the visual tree if no local, styled, or animated value is set on the current element. The first ancestor that has a value for the property provides the inherited value.
 
 Inherited values have the lowest priority in the [value precedence](value-precedence) system (just above `Unset`). A local value, style, or animation on a child will always override an inherited value.
 
-## Built-in Inherited Properties
+## Built-in inherited properties
 
 Several common properties in Avalonia are registered as inherited:
 
@@ -44,7 +44,7 @@ Setting `FontSize` on a parent element applies that value to all descendant text
 </StackPanel>
 ```
 
-## Creating an Inherited Property
+## Creating an inherited property
 
 To create a custom property that inherits its value, set `inherits: true` when registering:
 
@@ -67,7 +67,7 @@ public class MyControl : Control
 
 Now any descendant of `MyControl` can read the `IsCompact` value. If the descendant is also a `MyControl` (or has added ownership of the property), it automatically receives the inherited value.
 
-### Making the Property Available to Descendants
+### Making the property available to descendants
 
 For descendants of different types to read the inherited property, they need to register ownership:
 
@@ -85,7 +85,7 @@ public class MyChildControl : Control
 }
 ```
 
-## Inheritance and DataContext
+## Inheritance and `DataContext`
 
 `DataContext` is one of the most important inherited properties. When you set a `DataContext` on a `Window`, all controls within that window inherit it:
 
@@ -113,7 +113,7 @@ public partial class MainWindow : Window
 </Window>
 ```
 
-## See Also
+## See also
 
 - [Property System Overview](index): Overview of property types and registration.
 - [Value Precedence](value-precedence): How inherited values fit into the priority order.

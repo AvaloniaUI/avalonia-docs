@@ -1,6 +1,6 @@
 ---
 id: notifications-how-to
-title: "How To: Show Notifications and Toasts"
+title: "How to: Show Notifications and Toasts"
 ---
 
 This guide covers patterns for showing notifications, toast messages, and status bars in Avalonia applications.

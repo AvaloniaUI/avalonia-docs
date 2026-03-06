@@ -68,3 +68,8 @@ public class MainViewModel
     }
 }
 ```
+
+## See also
+
+- [Android platform guide](/docs/platform-specific-guides/android)
+- [Deploying on Android](/docs/deployment/android)

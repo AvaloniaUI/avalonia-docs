@@ -67,3 +67,9 @@ public record Tile(int Size, int TopX, int TopY);
 ```
 
 <img src={ItemsControlCanvasScreenshot} alt="" />
+
+## See also
+
+- [Creating a Custom Panel](custom-panel)
+- [Attached Properties](attached-properties)
+- [`ItemsControl`](/controls/data-display/collections/itemscontrol)

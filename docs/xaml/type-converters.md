@@ -1,11 +1,11 @@
 ---
 id: type-converters
-title: Type Converters
+title: Type converters
 ---
 
 Type converters allow XAML attribute values (which are always strings) to be converted into the appropriate .NET types. When you write `Background="Red"` in XAML, a type converter turns the string `"Red"` into a `SolidColorBrush` object.
 
-## How Type Converters Work
+## How type converters work
 
 When the XAML engine encounters a property attribute, it:
 
@@ -15,11 +15,11 @@ When the XAML engine encounters a property attribute, it:
 
 This process is automatic and transparent. You do not need to specify which converter to use.
 
-## Built-in Type Converters
+## Built-in type converters
 
 Avalonia provides type converters for many common types. Here are the most frequently used:
 
-### Colors and Brushes
+### Colors and brushes
 
 | String Value | Converts To | Example |
 |---|---|---|
@@ -87,7 +87,7 @@ Avalonia provides type converters for many common types. Here are the most frequ
 <Image Source="avares://MyApp/Assets/logo.png" />
 ```
 
-### Enum Values
+### Enum values
 
 Enum properties are converted automatically from their string names:
 
@@ -121,7 +121,7 @@ For details on path data syntax, see the geometry reference in [Drawing Graphics
 
 Format: `hours:minutes:seconds.milliseconds`
 
-## Creating a Custom Type Converter
+## Creating a custom type converter
 
 To create a type converter for your own type, implement `TypeConverter` and apply it with the `[TypeConverter]` attribute:
 
@@ -168,7 +168,7 @@ Now you can use the type in XAML:
 <local:Thermostat CurrentTemperature="72F" />
 ```
 
-## See Also
+## See also
 
 - [XAML Reference](index): Overview of XAML syntax.
 - [Data Binding Converters](/docs/data-binding/how-to-create-a-custom-data-binding-converter): Value converters for data binding (different from type converters).

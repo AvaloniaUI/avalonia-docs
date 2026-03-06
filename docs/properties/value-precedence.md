@@ -1,11 +1,11 @@
 ---
 id: value-precedence
-title: Property Value Precedence
+title: Property value precedence
 ---
 
 When multiple sources provide a value for the same Avalonia property (a local value, a style setter, an animation, an inherited value), Avalonia must decide which value wins. The property system resolves this using a fixed priority order defined by the `BindingPriority` enum.
 
-## Priority Order
+## Priority order
 
 Values are resolved from highest priority (top) to lowest priority (bottom):
 
@@ -19,7 +19,7 @@ Values are resolved from highest priority (top) to lowest priority (bottom):
 | **6** | `Inherited` | Values inherited from an ancestor element in the visual tree. |
 | **7 (Lowest)** | `Unset` | No value has been set. The property's registered default value is used. |
 
-## How Precedence Works
+## How precedence works
 
 When you request a property value (via `GetValue` or a binding), the property system checks each priority level in order and returns the first value it finds.
 
@@ -52,7 +52,7 @@ If you remove the local `Foreground="Red"` attribute:
 - The button's `Foreground` is **Black** (from the `Style` setter) by default.
 - When the pointer hovers over the button, it changes to **Blue** (from the `StyleTrigger` for `:pointerover`).
 
-## Animations Override Everything
+## Animations override everything
 
 Animations have the highest priority. While an animation is active, its value overrides local values, style values, and all other sources. This ensures smooth visual transitions are never interrupted by style changes.
 
@@ -68,7 +68,7 @@ Animations have the highest priority. While an animation is active, its value ov
 </Style>
 ```
 
-## Clearing Values
+## Clearing values
 
 When you call `ClearValue`, you remove the value at the `LocalValue` priority level. The property system then falls through to the next available source:
 
@@ -80,7 +80,7 @@ myButton.SetValue(Button.ForegroundProperty, Brushes.Red);
 myButton.ClearValue(Button.ForegroundProperty);
 ```
 
-## Setting Values at Specific Priorities
+## Setting values at specific priorities
 
 In advanced scenarios, you can set a value at a specific priority using the `SetValue` overload:
 
@@ -90,7 +90,7 @@ myButton.SetValue(Button.ForegroundProperty, Brushes.Red, BindingPriority.Style)
 
 This is primarily used by the styling system internally. In most application code, you set local values (the default when calling `SetValue`).
 
-## SetCurrentValue
+## `SetCurrentValue`
 
 The `SetCurrentValue` method sets a value at the current highest-priority level rather than at `LocalValue`. This is useful in control implementations where you want to update a property without overriding styles:
 
@@ -99,7 +99,7 @@ The `SetCurrentValue` method sets a value at the current highest-priority level 
 myButton.SetCurrentValue(Button.ForegroundProperty, Brushes.Green);
 ```
 
-## Impact on Data Binding
+## Impact on data binding
 
 Bindings are applied at the priority level of their source. A binding created through a style is applied at the `Style` or `StyleTrigger` level. A binding set directly in XAML is applied at the `LocalValue` level:
 
@@ -114,7 +114,7 @@ Because `LocalValue` bindings outrank style values, a bound property value from 
 If you want styles to be able to override a property, avoid setting it directly in XAML. Instead, use a style at the appropriate level.
 :::
 
-## See Also
+## See also
 
 - [Property System Overview](index): Overview of Avalonia property types.
 - [Styles](/docs/styling/styles): How to define and apply styles.

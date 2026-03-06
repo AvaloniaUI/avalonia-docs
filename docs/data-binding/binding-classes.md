@@ -1,6 +1,6 @@
 ---
 id: binding-classes
-title: How To Bind Style Classes
+title: How to bind style classes
 ---
 
 import BindStyleClassSampleScreenshot from '/img/guides/data/bind-style-class.png';
@@ -78,3 +78,8 @@ public class ItemClass
 ```
 
 <img src={BindStyleClassSampleScreenshot} alt=""/>
+
+## See also
+
+- [Styles](/docs/styling/styles): Defining and applying styles in Avalonia.
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding paths, modes, and converters.

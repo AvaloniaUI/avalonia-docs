@@ -9,9 +9,9 @@ Localization is a crucial step in delivering a great user experience for a globa
 <GitHubSampleLink title="Localization" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/Localization/"/>
 
 
-## Add ResX Files to the Project
+## Add ResX files to the project
 
-Before localizing, you need to include ResX files for each language you want to support. For this guide, we'll consider three ResX files, one for each of the following cultures:
+Before localizing, you need to include ResX files for each language you want to support. This guide uses three ResX files, one for each of the following cultures:
 
 * `Resources.fil-PH.resx` (Filipino)
 * `Resources.ja-JP.resx` (Japanese)
@@ -25,7 +25,7 @@ In this example, we added new files to a new folder called `Lang`. Since .NET ge
 If you add the files into the `Assets` folder make sure to switch `Build Action` to `Embedded resource`, otherwise the code generation may fail.
 :::
 
-## Set the Culture
+## Set the culture
 
 To use a specific language in the application, you need to set the current culture. This can be done in the `App.axaml.cs` file. The following example sets the culture to Filipino (`fil-PH`):
 
@@ -56,7 +56,7 @@ public partial class App : Application
 ```
 Replace "fil-PH" with the appropriate culture code as required.
 
-## Use Localized Text in the View
+## Use localized text in the view
 
 To use the localized text in a view, you can refer to the resources statically in XAML:
 
@@ -92,7 +92,7 @@ NB: also note that only the default resource file (`Resources.resx`) should gene
 
 :::
 
-## Runtime Language Switching
+## Runtime language switching
 
 You can change the culture at runtime to allow users to switch languages without restarting the application:
 
@@ -110,7 +110,7 @@ Note that `x:Static` bindings do not automatically update when the culture chang
 - **Reload the view or window.** Close and re-create the window (or user control) so that all `x:Static` references are re-evaluated against the new culture.
 - **Use a localization service with `INotifyPropertyChanged`.** Create a service class that exposes localized strings as properties and raises `PropertyChanged` when the culture changes. Bind to these properties instead of using `x:Static`.
 
-## Right-to-Left (RTL) Support
+## Right-to-left (RTL) support
 
 Avalonia supports right-to-left layouts through the `FlowDirection` property. Setting `FlowDirection` to `RightToLeft` mirrors the layout of child controls, which is essential for languages such as Arabic, Hebrew, and Persian.
 
@@ -137,7 +137,7 @@ The following controls respect `FlowDirection` and will adjust their layout acco
 - `DockPanel` (swaps left and right docking)
 - `TextBlock` (adjusts text alignment)
 
-## Culture-Aware Formatting
+## Culture-aware formatting
 
 When using `StringFormat` in data bindings, the formatting follows the current thread culture. For example, currency formatting adapts to the active culture:
 
@@ -153,7 +153,7 @@ Thread.CurrentThread.CurrentCulture = new CultureInfo("de-DE");
 
 With `de-DE`, a price of `1234.56` would display as `1.234,56 €` instead of `$1,234.56`.
 
-## Platform Considerations
+## Platform considerations
 
 Avalonia's localization features work consistently across all supported platforms:
 
@@ -163,7 +163,7 @@ Avalonia's localization features work consistently across all supported platform
 | FlowDirection | Full | Full | Full | Full |
 | System locale detection | `CultureInfo.CurrentCulture` | Same | Same | Same |
 
-## See Also
+## See also
 
 - [Resources](/docs/app-development/resources): Application resources.
 - [Custom Fonts](/docs/styling/custom-fonts): Loading fonts for different scripts.

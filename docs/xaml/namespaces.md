@@ -1,11 +1,11 @@
 ---
 id: namespaces
-title: XAML Namespaces
+title: XAML namespaces
 ---
 
 XAML namespaces tell the XAML engine where to find the types referenced in your markup. Every Avalonia XAML file requires at least one namespace declaration to work.
 
-## Default Namespaces
+## Default namespaces
 
 A typical Avalonia XAML file starts with two namespace declarations:
 
@@ -20,7 +20,7 @@ A typical Avalonia XAML file starts with two namespace declarations:
 | `xmlns="https://github.com/avaloniaui"` | The default Avalonia namespace. Maps to all core Avalonia CLR namespaces (`Avalonia`, `Avalonia.Controls`, `Avalonia.Media`, `Avalonia.Animation`, and others). Required in every Avalonia XAML file. |
 | `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` | The XAML language namespace. Provides access to [x: directives](directives) like `x:Name`, `x:Key`, and `x:Class`. |
 
-## CLR Namespaces Mapped to the Default Avalonia Namespace
+## CLR namespaces mapped to the default Avalonia namespace
 
 The `https://github.com/avaloniaui` URI maps to many CLR namespaces across Avalonia assemblies. The most commonly used include:
 
@@ -42,11 +42,11 @@ The `https://github.com/avaloniaui` URI maps to many CLR namespaces across Avalo
 - `Avalonia.Markup.Xaml.Styling`
 - `Avalonia.Markup.Xaml.Templates`
 
-## Referencing Your Own Types
+## Referencing your own types
 
 To use your own classes in XAML, you need to declare a namespace prefix that maps to a CLR namespace.
 
-### Using the `using:` Prefix
+### Using the `using:` prefix
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -60,7 +60,7 @@ To use your own classes in XAML, you need to declare a namespace prefix that map
 
 The `using:` prefix works for namespaces in the current assembly or any referenced assembly. This is the recommended syntax.
 
-### Using the `clr-namespace:` Prefix
+### Using the `clr-namespace:` prefix
 
 The `clr-namespace:` prefix, familiar from WPF, is also supported:
 
@@ -78,7 +78,7 @@ xmlns:ext="clr-namespace:ThirdParty.Controls;assembly=ThirdParty.Controls"
 Prefer `using:` over `clr-namespace:`. The `using:` syntax is shorter and does not require the `;assembly=` suffix for referenced assemblies.
 :::
 
-## Defining Custom XML Namespace Mappings
+## Defining custom XML namespace mappings
 
 Library authors can map multiple CLR namespaces to a single XML namespace URI using the `XmlnsDefinition` assembly attribute:
 
@@ -97,7 +97,7 @@ Users of the library can then use a single namespace declaration:
 </Window>
 ```
 
-## Common Namespace Prefixes by Convention
+## Common namespace prefixes by convention
 
 These prefixes are commonly used across Avalonia projects:
 
@@ -110,7 +110,7 @@ These prefixes are commonly used across Avalonia projects:
 | `vm` | ViewModels namespace |
 | `conv` | Converters namespace |
 
-### Design-Time Namespaces
+### Design-time namespaces
 
 The `d:` and `mc:` namespaces enable design-time features:
 
@@ -128,7 +128,7 @@ The `d:` and `mc:` namespaces enable design-time features:
 - `d:DataContext` sets a design-time data context for binding previews.
 - `mc:Ignorable="d"` tells the runtime to ignore all `d:` attributes.
 
-## See Also
+## See also
 
 - [Avalonia XAML](/docs/fundamentals/avalonia-xaml): XAML basics and file structure.
 - [x: Directives](directives): XAML language directives.

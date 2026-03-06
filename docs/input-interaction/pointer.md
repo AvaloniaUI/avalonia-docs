@@ -55,7 +55,7 @@ private void PointerPressedHandler (object sender, PointerPressedEventArgs args)
 
 <img src={PointerPressedSampleScreenshot} alt=""/>
 
-## Pointer Types
+## Pointer types
 
 Avalonia distinguishes between different input device types through the `PointerPoint.Pointer.Type` property:
 
@@ -94,7 +94,7 @@ private void OnPointerMoved(object? sender, PointerEventArgs e)
 
 These properties are available on all platforms that support pen input (Windows, macOS, and Linux with X11).
 
-## Pointer Position
+## Pointer position
 
 In the example above, the pointer coordinates (`x` and `y`) have been calculated relative to the sender control origin (top, left), in this case the stack panel. If you want the coordinates relative to the containing window, then you can use the `GetCurrentPoint` method as follows:
 
@@ -102,7 +102,7 @@ In the example above, the pointer coordinates (`x` and `y`) have been calculated
 var point = args.GetCurrentPoint(this);
 ```
 
-## Tap Events
+## Tap events
 
 Controls also have special gesture events, these are: `Tapped`, `DoubleTapped` and `Holding`. The tapped event is raised after the pointer is pressed on the control and then released. Double tapped is raised after pointer is pressed twice in the same place. 
 
@@ -113,7 +113,7 @@ Note that the maximum distance between a first and second tap, and the time dela
 :::
 
 
-## Pointer Capture
+## Pointer capture
 
 Pointer capture directs all subsequent pointer events to a specific control, even if the pointer moves outside the control's bounds. This is essential for drag operations and slider-like interactions.
 
@@ -141,7 +141,7 @@ protected override void OnPointerCaptureLost(PointerCaptureLostEventArgs e)
 }
 ```
 
-## Cursor Management
+## Cursor management
 
 ### Setting the cursor on a control
 
@@ -197,6 +197,12 @@ private void OnPointerReleased(object? sender, PointerReleasedEventArgs e)
 }
 ```
 
-## More Information
+## More information
 
 For the complete API documentation about pointer and tap events, see the [PointerEventArgs API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_PointerEventArgs).
+
+## See also
+
+- [Gestures](/docs/input-interaction/gestures): Higher-level gesture events built on pointer events.
+- [Drag and Drop](/docs/input-interaction/drag-and-drop): Drag-and-drop operations using pointer events.
+- [Routed Events](/docs/input-interaction/routed-events): How events propagate through the element tree.

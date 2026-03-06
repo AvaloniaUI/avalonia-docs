@@ -23,7 +23,7 @@ When you build an app using Avalonia, there are several different types of compo
 * Custom Controls
 * Template Controls
 
-## Windows and Built-in Controls
+## Windows and built-in controls
 
 A window in Avalonia is a basic unit of layout (for a windowing platform).
 
@@ -39,7 +39,7 @@ A slightly more complex app may require one of the built-in layout controls to a
 To see the full range of Avalonia built-in controls, see the [Controls reference](/controls).
 :::
 
-## Logical and Visual Trees
+## Logical and visual trees
 
 Whatever arrangement of controls you use, Avalonia represents their relationships as a a tree structure, with the 'outermost' control as the root. So for example, the previous UI composition can be represented as the tree shown here:
 
@@ -51,7 +51,7 @@ This is the **logical control tree**, and it represents the application controls
 For more information on the concept of control trees, see [Control trees](/docs/custom-controls/control-trees).
 :::
 
-## User Controls
+## User controls
 
 User controls are the mainstay of UI composition in Avalonia.
 
@@ -67,7 +67,7 @@ Another use for a user control is as a component control (above, right). You mig
 For tutorials about `DataTemplates` see [Avalonia.Samples](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main?tab=readme-ov-file#%EF%B8%8F-datatemplate-samples).  
 :::
 
-## Collection Controls
+## Collection controls
 
 Another variation of UI composition is where you need to present a collection of items.
 
@@ -79,7 +79,7 @@ This scenario will use one of the built-in repeating controls, bound to a collec
 For information about data templates and collection controls, see the [DataTemplate samples](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main?tab=readme-ov-file#%EF%B8%8F-datatemplate-samples).
 :::
 
-## Custom Controls
+## Custom controls
 
 In the unlikely scenario that you cannot find an Avalonia built-in control to cover your app's UI requirements, then you can 'roll-your-own' custom control from scratch. This allows you to define your own custom properties, events and methods; but it will require you to implement the drawing of the control presentation from scratch as well.
 
@@ -87,7 +87,7 @@ In the unlikely scenario that you cannot find an Avalonia built-in control to co
 To learn how to implement a custom control, see [Custom controls](/docs/custom-controls).
 :::
 
-## Templated Controls
+## Templated controls
 
 A templated control uses the Avalonia **styling** system to create a reusable control whose appearance is defined by a control template. This allows you to change the visual structure of a control without altering its behavior.
 

@@ -7,7 +7,7 @@ Templated controls are controls whose appearance is defined entirely by a `Contr
 
 Avalonia's built-in controls (such as `Button`, `TextBox`, and `ListBox`) are all templated controls. You can follow the same pattern to build your own.
 
-## Creating a Templated Control
+## Creating a templated control
 
 To create a templated control, define a class that inherits from `TemplatedControl` and register any custom properties using `StyledProperty`.
 
@@ -27,7 +27,7 @@ public class ToggleLabel : TemplatedControl
 
 This gives you a control with a `LabelText` property but no visual representation yet. The visuals come from a control theme.
 
-## Defining the Control Theme
+## Defining the control theme
 
 Every templated control needs a default `ControlTheme` that contains its `ControlTemplate`. This is typically placed in a resource dictionary such as `Themes/Generic.axaml` and included in your application's resources.
 
@@ -49,7 +49,7 @@ Key points:
 - `TargetType` scopes the theme so that property setters and template bindings resolve against the correct type.
 - Inside the `ControlTemplate`, use `TemplateBinding` to bind to properties on the templated control.
 
-## Template Parts
+## Template parts
 
 Sometimes a templated control needs to interact with specific elements inside its template. By convention, these elements are named with a `PART_` prefix.
 
@@ -69,7 +69,7 @@ protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
 
 Because users can replace the control template, always check for `null` when looking up template parts. A custom template may omit parts that the default template provides.
 
-## TemplateBinding Details
+## TemplateBinding details
 
 When you are creating a control template and you want to bind to the templated parent you can use:
 
@@ -93,7 +93,7 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
     ```
 2.  A `TemplateBinding` only supports `OneWay` mode for performance reasons (this is the [same as WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks)). This means a `TemplateBinding` is actually equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. If `TwoWay` binding is required in a control template, the full syntax is needed as shown below. Note that `Binding` will also use the default binding mode unlike `TemplateBinding`.
 
-    ```markup
+    ```xml
     {Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}
     ```
 3. `TemplateBinding` can only be used on `IStyledElement`.
@@ -106,7 +106,7 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
 <GeometryDrawing Brush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
 ```
 
-## Pseudo-Classes
+## Pseudo-classes
 
 Templated controls can expose visual states through pseudo-classes. This lets theme authors style the control differently based on its state without needing code-behind access.
 
@@ -124,7 +124,7 @@ Then target it in your control theme:
 </Style>
 ```
 
-## See Also
+## See also
 
 - [Defining Properties](defining-properties)
 - [Defining Events](defining-events)

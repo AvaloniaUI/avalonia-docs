@@ -1,24 +1,28 @@
 ---
 id: attached-properties
-title: How To Create Attached Properties
+title: How to create attached properties
 ---
 
-When you need more or let's say foreign properties on avalonia elements, then attached properties are the right thing to use. They can also be used to create so called behaviors to generally modify the hosted gui components. This can be utilized to bind a command to an event for instance.
+When you need additional properties on Avalonia elements that are not part of the element's own class, attached properties are the right tool. You can also use them to create behaviors that modify hosted controls. For example, you can bind a command to an event using an attached property.
 
-Here we present an example of how to use a command in an MVVM compatible way and bind it to an event.
+The following example shows how to use a command in an MVVM-compatible way and bind it to an event. It is not the only approach (projects such as [Avalonia Behaviors](https://github.com/wieslawsoltes/AvaloniaBehaviors) offer a more complete solution), but it illustrates two key concepts:
 
-It may not be the ideal solution as there are projects such as [Avalonia Behaviors](https://github.com/wieslawsoltes/AvaloniaBehaviors) where this is properly done. But it illustrates the following two learnings:
+* How to create attached properties in Avalonia
+* How to use them with MVVM
 
-* How to create attached properties in _Avalonia UI_
-* How to use them in a MVVM way.
+## Register the attached property
 
-First we have to create our attached property. The method `AvaloniaProperty.RegisterAttached` is used for that purpose. Note that by convention the **public static** CLR-property for the attached property is named _XxxxProperty_. Also note that by convention the name (the parameter) of the attached property is _Xxxx_ without the _Property_. And finally note that by convention one must provide two **public static** methods called _SetXxxx(element,value)_ and _GetXxxx(element)_.
+Use the `AvaloniaProperty.RegisterAttached` method to register an attached property. By convention:
 
-This call ensures that the property has a type, an owner type and one where it may be used.
+* The **public static** CLR field for the attached property is named _XxxxProperty_.
+* The name parameter of the attached property is _Xxxx_ (without the _Property_ suffix).
+* You must provide two **public static** methods: _SetXxxx(element, value)_ and _GetXxxx(element)_.
 
-The verify method can be used to clean up a value that is being set. Either by returning the corrected value or discard the process by returning `AvaloniaProperty.UnsetValue`. Or one can perform special tasks with the element that the property is hosted by. The getter and setter methods should always just set the value and never do anything beyond. In fact they will usually never be called as the Binding system will recognize the convention and set the properties directly where they are stored.
+The registration call specifies the property type, owner type, and the type on which the property can be set.
 
-In this example file we create two attached properties that interact with each other: A _Command_ property and a _CommandParameter_ that is used by when invoking the command.
+The validation callback can clean up a value being set by returning a corrected value, or discard the change by returning `AvaloniaProperty.UnsetValue`. The getter and setter methods should only get and set the value. The binding system recognizes the naming convention and sets the properties directly.
+
+The following example creates two attached properties that interact with each other: a `Command` property and a `CommandParameter` that is passed when invoking the command.
 
 ```csharp
 /// <summary>
@@ -114,9 +118,11 @@ public class DoubleTappedBehav : AvaloniaObject
 
 ```
 
-In the verify method we utilize the routed event system to attach a new handler. Note that the handler should be detached, again. The value of the property is requested by the normal program mechanisms using `GetValue()` method.
+The class listens for changes to `CommandProperty` and uses the routed event system to attach or detach a handler. The handler reads the property values using `GetValue()`.
 
-This example UI shows how to use the attached property. After making the namespace known to the XAML compiler it can be used by qualifying it with a dot. Then bindings can be used.
+## Use the attached property in XAML
+
+After declaring the namespace in XAML, you can set the attached property using dot notation. Bindings work as expected.
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -137,7 +143,9 @@ This example UI shows how to use the attached property. After making the namespa
 </UserControl>
 ```
 
-Although the `CommandParameter` only uses a static value, it can be used with binding, too. When used with this view model, the `EditCommandExecuted` will run once a double click happens.
+## Handle the command in a view model
+
+Although the `CommandParameter` in this example uses a static value, it can also be data-bound. When used with the following view model, `EditCommandExecuted` runs when a double-tap occurs.
 
 ```csharp
 public class TestViewModel : ReactiveObject
@@ -159,3 +167,9 @@ public class TestViewModel : ReactiveObject
     }
 }
 ```
+
+## See also
+
+- [Defining Properties](defining-properties)
+- [Creating Custom Controls](index)
+- [Routed Events](/docs/input-interaction/routed-events)

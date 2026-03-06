@@ -5,7 +5,7 @@ title: Drag and Drop
 
 Avalonia supports drag-and-drop operations for transferring data between controls or between your application and the operating system. The drag-and-drop system uses the `DragDrop` static class and the `DataTransfer` type to manage data during operations.
 
-## Enabling Drop on a Target
+## Enabling drop on a target
 
 To receive dropped content, an element must have the `DragDrop.AllowDrop` attached property set to `True` and handlers for the drag-and-drop events:
 
@@ -20,7 +20,7 @@ To receive dropped content, an element must have the `DragDrop.AllowDrop` attach
 </Border>
 ```
 
-## Drag-and-Drop Events
+## Drag-and-drop events
 
 | Event | When it fires |
 |---|---|
@@ -38,7 +38,7 @@ All events provide a `DragEventArgs` with these properties:
 | `KeyModifiers` | The current keyboard modifiers (Ctrl, Shift, Alt). |
 | `GetPosition(Visual)` | Returns the pointer position relative to a given visual element. |
 
-## Handling Drop Events
+## Handling drop events
 
 ```csharp
 private void OnDragOver(object? sender, DragEventArgs e)
@@ -84,7 +84,7 @@ The `DragDropEffects` flags enum indicates what operations are permitted:
 
 Set `e.DragEffects` in `DragOver` to control the cursor feedback and in `Drop` to indicate the result of the operation.
 
-## Starting a Drag Operation
+## Starting a drag operation
 
 To initiate a drag-and-drop operation from your control, call `DragDrop.DoDragDropAsync` in response to a pointer event. Create a `DataTransfer` object containing the data to drag:
 
@@ -111,7 +111,7 @@ private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 `DoDragDropAsync` is asynchronous. The method returns when the user completes or cancels the drag operation. The return value indicates which effect the drop target applied.
 :::
 
-## DataTransfer and Data Formats
+## DataTransfer and data formats
 
 The `DataTransfer` class is a mutable container for drag-and-drop data. Use `DataFormat` static properties for standard formats:
 
@@ -149,7 +149,7 @@ if (e.DataTransfer.Formats.Contains(DataFormat.File))
 }
 ```
 
-## Visual Feedback During Drag
+## Visual feedback during drag
 
 Use the `DragEnter` and `DragLeave` events to provide visual feedback:
 
@@ -173,7 +173,7 @@ private void OnDragLeave(object? sender, DragEventArgs e)
 }
 ```
 
-## Complete Example
+## Complete example
 
 This example creates a drop zone that accepts text and files:
 
@@ -243,7 +243,7 @@ public partial class MainWindow : Window
 }
 ```
 
-## Handling Events in XAML vs Code
+## Handling events in XAML vs code
 
 Drag-and-drop events are attached events on the `DragDrop` class. You can handle them in XAML using event attribute syntax (as shown above) or register them explicitly in code:
 
@@ -257,7 +257,7 @@ DragDrop.RemoveDropHandler(myBorder, OnDrop);
 
 The `DragDrop` class provides `Add*Handler` and `Remove*Handler` static methods for each event: `DragEnter`, `DragLeave`, `DragOver`, and `Drop`.
 
-## See Also
+## See also
 
 - [Pointer Events](/docs/input-interaction/pointer): Detecting pointer movement for initiating drags.
 - [Clipboard](/docs/services/clipboard): Sharing data via the clipboard.

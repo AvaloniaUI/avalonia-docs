@@ -3,7 +3,7 @@ id: clipboard
 title: Clipboard
 ---
 
-## Data Formats
+## Data formats
 
 Before accessing the clipboard, it's important to understand the data format, represented by the `DataFormat<T>` class. It represents the format of a data item (e.g., text, HTML, PNG, etc.) and is used by various clipboard and drag-and-drop APIs.
 
@@ -11,7 +11,7 @@ A data format consists of a kind (`Universal`, `Platform`, or `Application`), an
 
 Data formats are considered equal if they have the same kind and identifier.
 
-### Universal Formats
+### Universal formats
 
 Universal formats are cross-platform formats that Avalonia directly understands.  
 There are currently three universal formats:
@@ -22,7 +22,7 @@ There are currently three universal formats:
 | `DataFormat.File`   | "File"     | `IStorageItem` | A file or directory |
 | `DataFormat.Bitmap` | "Bitmap"   | `Bitmap`       | A bitmap image      |
 
-### Platform Formats
+### Platform formats
 
 Platform format is compatible **only with the current platform** that the application is running on (e.g., Windows, Linux, iOS, etc.). Its identifier should be a name understood by the underlying platform. Use this format only when you need direct interoperability with the target platform and have precise knowledge of its encoding or serialization.
 
@@ -41,7 +41,7 @@ if (OperatingSystem.IsMacOS())
 }
 ```
 
-### Application Formats
+### Application formats
 
 An application format is specific to your application and works with all platforms that allow custom data formats. Its identifier is restricted to ASCII letters, digits, plus dot and dash symbols (`A`-`Z`, `a`-`z`, `0`-`9`, `.`, `-`). This identifier will not be exposed directly to the underlying platform; instead, it will be internally prefixed to avoid conflicts with platform formats.
 
@@ -78,7 +78,7 @@ using var data = await clipboard.TryGetDataAsync();
 Since the clipboard's contents may change at any time, it is recommended to use the returned `IAsyncDataTransfer` instance as soon as possible; do not store it for later use. After all the necessary operations are done on the object, it must be disposed of by the caller; a `using` statement is therefore recommended.
 :::
 
-#### Extension Methods
+#### Extension methods
 
 To retrieve data using a specific format, several extension methods are available. You can use the following for common formats, instead of `TryGetDataAsync()`:
 
@@ -137,7 +137,7 @@ Placing a new object on the clipboard always clears any previous data.
 Do **not** call `Dispose()` on the `IAsyncDataTransfer` object passed to `SetDataAsync()`! The instance must stay valid while it's on the clipboard. Avalonia takes ownership and automatically disposes of it once it's no longer in use.
 :::
 
-#### Extension Methods
+#### Extension methods
 
 To write a single specific format, several extension methods are available for convenience. You can use the following for common formats:
 
@@ -248,3 +248,8 @@ When writing the implementation, be certain that:
 :::caution
 `IAsyncDataTransferItem.TryGetRawAsync()` may or may not be called on the UI thread depending on the underlying platform. Do **not** call anything on the UI thread, including via `Dispatcher.Invoke/InvokeAsync`. Doing so will result in deadlocks!
 :::
+
+## See also
+
+- [Drag and Drop](/docs/input-interaction/drag-and-drop): Drag-and-drop data transfer using similar data format APIs.
+- [TopLevel](/docs/fundamentals/top-level): Accessing platform services from controls.

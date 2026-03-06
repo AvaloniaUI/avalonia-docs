@@ -5,7 +5,7 @@ title: Sorting, Filtering, and Grouping Collections
 
 Avalonia does not include a built-in `ICollectionView` equivalent like WPF. Instead, sorting, filtering, and grouping are typically handled in the view model before binding to controls. This approach keeps the UI layer simple and makes the logic easier to test.
 
-## Filtering a Collection
+## Filtering a collection
 
 The most common pattern uses a derived collection that reacts to filter changes. Use LINQ or a `CollectionViewSource`-like wrapper:
 
@@ -115,7 +115,7 @@ public class MainViewModel : ObservableObject
 
 DynamicData automatically updates `FilteredPeople` when items are added, removed, or the filter text changes.
 
-## Sorting a Collection
+## Sorting a collection
 
 ### Simple sorting
 
@@ -263,7 +263,7 @@ _source.Connect()
     .Subscribe();
 ```
 
-## Best Practices
+## Best practices
 
 - Keep filtering, sorting, and grouping logic in the view model, not in code-behind.
 - For large collections, use DynamicData for efficient reactive updates instead of rebuilding the collection on every change.
@@ -271,7 +271,7 @@ _source.Connect()
 - Use `ReadOnlyObservableCollection<T>` for the public property to prevent external modification.
 - Consider debouncing filter input (e.g., with `Throttle`) for search boxes that filter on every keystroke.
 
-## See Also
+## See also
 
 - [How to Bind to a Collection](/docs/data-binding/how-to-bind-to-a-collection): Basic collection binding patterns.
 - [Data Templates](/docs/data-templates/introduction-to-data-templates): Controlling how items are rendered.

@@ -1,11 +1,11 @@
 ---
 id: index
-title: Avalonia Property System
+title: Avalonia property system
 ---
 
 Avalonia has its own property system that extends the standard .NET property model. Avalonia properties provide support for styling, data binding, animation, property value inheritance, and change notification. Understanding the property system is essential for creating custom controls and working effectively with the framework.
 
-## Property Types
+## Property types
 
 Avalonia defines three kinds of properties, each suited to different scenarios:
 
@@ -15,11 +15,11 @@ Avalonia defines three kinds of properties, each suited to different scenarios:
 | **Direct Property** | `DirectProperty<TOwner, TValue>` | Properties backed by a conventional C# field, exposed to the Avalonia property system for binding support. Used for performance-sensitive or read-only properties. |
 | **Attached Property** | `AttachedProperty<T>` | Properties that can be set on any `AvaloniaObject`, typically used by layout panels (e.g., `Grid.Row`, `DockPanel.Dock`). |
 
-## Styled Properties
+## Styled properties
 
 A `StyledProperty` is the standard property type in Avalonia. Styled properties store their values in the Avalonia property system (not in a backing field), which enables them to participate in styling, animations, and value precedence.
 
-### Registering a Styled Property
+### Registering a styled property
 
 ```csharp
 public class MyControl : Control
@@ -46,7 +46,7 @@ The `Register` method accepts the following parameters:
 | `validate` | A function that returns `false` for values that are never valid. |
 | `coerce` | A function that adjusts the value before it is applied (see [Metadata and Callbacks](metadata-and-callbacks)). |
 
-### Reusing an Existing Property
+### Reusing an existing property
 
 If another control already defines a property you need, use `AddOwner` instead of registering a new one:
 
@@ -66,7 +66,7 @@ public class MyControl : Control
 
 This ensures a single property identity, so styles targeting `Background` work across all controls that share the property.
 
-## Direct Properties
+## Direct properties
 
 A `DirectProperty` is backed by a conventional C# field. The Avalonia property system reads and writes through getter and setter delegates you provide. Direct properties are useful when:
 
@@ -74,7 +74,7 @@ A `DirectProperty` is backed by a conventional C# field. The Avalonia property s
 - You need a read-only property.
 - You want to avoid the overhead of the styled property value store.
 
-### Registering a Direct Property
+### Registering a direct property
 
 ```csharp
 public class MyControl : Control
@@ -99,7 +99,7 @@ public class MyControl : Control
 Use `SetAndRaise` in the setter instead of assigning the field directly. This method updates the backing field and raises the property changed notification in a single call.
 :::
 
-### Read-Only Direct Properties
+### Read-only direct properties
 
 Omit the setter delegate to create a read-only property:
 
@@ -110,7 +110,7 @@ public static readonly DirectProperty<MyControl, bool> IsActiveProperty =
         o => o.IsActive);
 ```
 
-### Key Differences from Styled Properties
+### Key differences from styled properties
 
 | Behavior | Styled Property | Direct Property |
 |---|---|---|
@@ -122,11 +122,11 @@ public static readonly DirectProperty<MyControl, bool> IsActiveProperty =
 | Performance | Property store lookup | Direct field access |
 | Can be read-only | No | Yes |
 
-## Attached Properties
+## Attached properties
 
 An `AttachedProperty` is a styled property that can be set on any `AvaloniaObject`. Attached properties are typically defined by a parent layout panel and set on its children.
 
-### Registering an Attached Property
+### Registering an attached property
 
 ```csharp
 public class MyPanel : Panel
@@ -139,7 +139,7 @@ public class MyPanel : Panel
 }
 ```
 
-### Using an Attached Property in XAML
+### Using an attached property in XAML
 
 ```xml
 <local:MyPanel>
@@ -147,7 +147,7 @@ public class MyPanel : Panel
 </local:MyPanel>
 ```
 
-## Getting and Setting Values
+## Getting and setting values
 
 All Avalonia properties are read and written through the `AvaloniaObject` base class:
 
@@ -162,7 +162,7 @@ myControl.SetValue(MyControl.CornerRadiusProperty, 8.0);
 myControl.ClearValue(MyControl.CornerRadiusProperty);
 ```
 
-## Observing Property Changes
+## Observing property changes
 
 You can observe property changes on a specific object:
 
@@ -188,10 +188,10 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
 }
 ```
 
-## Next Steps
+## See also
 
-- [Value Precedence](value-precedence): Learn how Avalonia resolves competing property values from styles, animations, and local values.
-- [Metadata and Callbacks](metadata-and-callbacks): Learn about default values, coercion, and validation.
-- [Property Value Inheritance](property-value-inheritance): Learn how properties can inherit values from ancestor controls.
-- [Defining Properties](/docs/custom-controls/defining-properties): A practical guide to adding properties to custom controls.
-- [Attached Properties](/docs/custom-controls/attached-properties): A practical guide to creating attached properties.
+- [Value precedence](value-precedence): Learn how Avalonia resolves competing property values from styles, animations, and local values.
+- [Metadata and callbacks](metadata-and-callbacks): Learn about default values, coercion, and validation.
+- [Property value inheritance](property-value-inheritance): Learn how properties can inherit values from ancestor controls.
+- [Defining properties](/docs/custom-controls/defining-properties): A practical guide to adding properties to custom controls.
+- [Attached properties](/docs/custom-controls/attached-properties): A practical guide to creating attached properties.

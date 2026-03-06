@@ -9,7 +9,7 @@ Conditional compilation in .NET allows different parts of the code to be compile
 
 None of these solutions are specific to Avalonia, and they can be used with any type of projects.
 
-## Runtime Conditions
+## Runtime conditions
 
 .NET 6 and newer provide a set of APIs to get operating system in runtime - [OperatingSystem](https://learn.microsoft.com/en-us/dotnet/api/system.operatingsystem).
 
@@ -152,3 +152,9 @@ public class iOSDeviceOrientation : IDeviceOrientation
 ```
 
 Each implementation then can be registered using dependency injection library of choice, or using a static registry property.
+
+## See also
+
+- [Platform-specific XAML](/docs/platform-specific-guides/xaml)
+- [Deploying on Android](/docs/deployment/android)
+- [Deploying on iOS](/docs/deployment/ios)

@@ -3,7 +3,7 @@ id: file-picker-options
 title: File Picker Options
 ---
 
-## Common PickerOptions
+## Common picker options
 
 ### Title
 
@@ -37,7 +37,7 @@ Gets or sets the `FilePickerFileType` that the dialog should initially select in
 
 To create a list of file types for the file picker:
 
-```cs
+```csharp
 //This can also be applied for SaveFilePicker.
 var files = await _target.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
 {
@@ -75,7 +75,7 @@ Gets or sets a value indicating whether file open picker displays a warning if t
 
 Gets or sets an option indicating whether open picker allows users to select multiple folders.
 
-## Platform compatibility:
+## Platform compatibility
 
 | Feature        | Managed |  Windows | macOS | Linux | Browser | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|-------|
@@ -89,7 +89,7 @@ Gets or sets an option indicating whether open picker allows users to select mul
 | `FileTypeChoices` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 | `ShowOverwritePrompt` | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✗ |
 
-# Defining custom file types
+## Defining custom file types
 
 Avalonia has set of built-in file types:
 
@@ -105,7 +105,7 @@ However it is possible to define custom file types that can be used by the picke
 
 For instance, the built-in ImageAll type is defined as:
 
-```cs
+```csharp
 public static FilePickerFileType ImageAll { get; } = new("All Images")
 {
     Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.bmp", "*.webp" },
@@ -126,11 +126,11 @@ Defining all hints is recommended if the information is known.
 If specific hint is not known, don't set random values or "*.*" wildcard, instead keep this collection null. It will tell the platform to ignore this collection and instead try to use another one.
 :::
 
-## WebP Inclusion in Options
+## WebP inclusion in options
 
 Keep in mind that `FilePickerFileTypes.ImageWebP` and the addition of "*.webp" to the "All Images" patterns were introduced in version 11.1. You can still create custom file picker types in older versions to incorporate WebP images. For example, to allow only a WebP image to be picked, you can use this:
 
-```cs
+```csharp
 var customWebPFileType = new FilePickerFileType("Only WebP Images")
 {
     Patterns = new[] { "*.webp" },
@@ -140,3 +140,9 @@ var customWebPFileType = new FilePickerFileType("Only WebP Images")
 ```
 
 And if you want to include WebP as one of the file types you consider to be an image, you can use the "ImageAll" example shown above.
+
+## See also
+
+- [Storage Provider](storage-provider): Full storage provider API reference.
+- [File Dialogs](/docs/services/file-dialogs): Using file open, save, and folder picker dialogs.
+- [Bookmarks](bookmarks): Persisting access to picked files and folders.

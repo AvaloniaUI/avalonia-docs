@@ -1,6 +1,6 @@
 ---
 id: styling-controls-how-to
-title: "How To: Style and Theme Controls"
+title: "How to: Style and Theme Controls"
 ---
 
 This guide covers practical recipes for customizing control appearance: changing colors, creating variants, theming, and building reusable styles.

@@ -7,16 +7,16 @@ The `Launcher` allows you to open file or a URI link in the default app associat
 
 The `Launcher` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/fundamentals/top-level) page.
 
-```cs
+```csharp
 var launcher = TopLevel.GetTopLevel(control).Launcher;
 ```
 
-## Methods 
+## Methods
 
 ### LaunchUriAsync
 Starts the default app associated with the URI scheme name for the specified URI.
 
-```cs
+```csharp
 Task<bool> LaunchUriAsync(Uri uri)
 ```
 
@@ -27,7 +27,7 @@ Input URI can have any scheme including custom ones. But it's up to the Operatin
 ### LaunchFileAsync
 Starts the default app associated with the specified storage file or folder.
 
-```cs
+```csharp
 Task<bool> LaunchFileAsync(IStorageItem storageItem);
 ```
 
@@ -36,19 +36,19 @@ IStorageItem is a file or folder retrieved from sandboxed APIs such as IStorageP
 If you only target non-sandboxed desktop platforms, consider using extension methods accepting FileInfo or DirectoryInfo.
 :::
 
-## Extension Methods 
+## Extension methods
 
 ### LaunchFileInfoAsync
 Starts the default app associated with the specified storage file.
 
-```cs
+```csharp
 Task<bool> LaunchFileInfoAsync(FileInfo fileInfo)
 ```
 
 ### LaunchDirectoryInfoAsync
 Starts the default app associated with the specified storage directory (folder).
 
-```cs
+```csharp
 Task<bool> LaunchDirectoryInfoAsync(DirectoryInfo directoryInfo);
 ```
 
@@ -57,7 +57,7 @@ Each of these methods returns a boolean result indicating whether OS can handle 
 It does not guarantee, that there is an app than can handle launcher request.
 :::
 
-## Platform compatibility:
+## Platform compatibility
 
 | Feature        | Windows | macOS | Linux | Browser | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|
@@ -65,3 +65,8 @@ It does not guarantee, that there is an app than can handle launcher request.
 | `LaunchFileAsync` | ✓ | ✓ | ✓ | ✗ | ✓ | ✓ |
 | `LaunchFileInfoAsync` | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | `LaunchDirectoryInfoAsync` | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
+
+## See also
+
+- [Storage Provider](/docs/services/storage/storage-provider): File and folder management API.
+- [TopLevel](/docs/fundamentals/top-level): Accessing platform services from controls.

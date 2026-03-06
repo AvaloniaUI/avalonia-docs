@@ -1,6 +1,6 @@
 ---
 id: bitmap-blend-modes
-title: Bitmap Blend Modes
+title: Bitmap blend modes
 ---
 
 import BlendModeCat from '/img/reference/animations-and-graphics/bitmap-blend-modes/Cat.jpg';
@@ -53,7 +53,7 @@ See the [Wikipedia page](https://en.wikipedia.org/wiki/Blend_modes) on blend mod
 Currently Avalonia only supports Blend Modes when using the Skia renderer. Trying to use these modes with the D2D renderer will result in the same behavior as the default mode.
 :::
 
-## Default Behavior
+## Default behavior
 
 The default blend mode is `SourceOver`, meaning replacing all pixels values by the new values, dictated by the alpha channel. This is the standard way most applications overlay two images.
 
@@ -79,11 +79,11 @@ using (context.PushRenderOptions(RenderOptions with { BitmapBlendingMode = Bitma
 }
 ```
 
-## Bitmap Blend Mode Gallery
+## Bitmap blend mode gallery
 
-Avalonia supports several bitmap blend modes that can be applied to rendering:
+Avalonia supports the following bitmap blend modes that can be applied to rendering:
 
-### Pixel Blend Modes
+### Pixel blend modes
 
 Pixel blend modes affect only the color without taking into consideration the alpha channel.
 
@@ -115,7 +115,7 @@ Below are all the values currently supported by Avalonia
 | <img src={BlendModeColor} alt="" width="180"/> | `Color` | Creates a color with the hue and saturation of the source color and the luminosity of the destination color. |
 | <img src={BlendModeLuminosity} alt="" width="180"/> | `Luminosity` | Creates a color with the luminosity of the source color and the hue and saturation of the destination color. |
 
-### Composition Blend modes
+### Composition blend modes
 
 Composition blend modes affect only the alpha channel without messing with the colors.
 
@@ -140,3 +140,9 @@ Below are all the values currently supported by Avalonia. Please note that this 
 | <img src={BlendModeDestinationIn} alt="" width="180"/> | `DestinationIn` | Destination which overlaps the source, replaces the source. |
 | <img src={BlendModeDestinationOut} alt="" width="180"/> | `DestinationOut` | Destination is placed, where it falls outside of the source. |
 | <img src={BlendModeDestinationAtop} alt="" width="180"/> | `DestinationAtop` | Destination which overlaps the source replaces the source. |
+
+## See also
+
+- [Brushes](brushes): Brush types for fills and strokes.
+- [Drawing Graphics](drawing-graphics): Shapes, geometries, and the graphics system.
+- [Custom Rendering](custom-rendering): Drawing with `DrawingContext`.

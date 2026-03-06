@@ -10,7 +10,7 @@ With _Avalonia UI_, as well as binding to a data context you can also bind one c
 Note that this technique does not use a data context at all. When you do this, you are binding directly to another control itself.
 :::
 
-## Binding to a Named Control
+## Binding to a named control
 
 If you want to bind to a property on another named control, you can use the control name prefixed by a `#` character.
 
@@ -30,7 +30,7 @@ This is the equivalent to the long-form binding that will be familiar to WPF and
 
 _Avalonia UI_ supports both syntaxes.
 
-## Binding to an Ancestor
+## Binding to an ancestor
 
 You can bind to the (logical control tree) parent of the target using the `$parent` syntax:
 
@@ -97,3 +97,9 @@ To access a property of a parent's `DataContext` it will be necessary to cast it
 :::caution
 _Avalonia UI_ also supports WPF/UWP's `RelativeSource` syntax which does something similar, but is _not_ the same. `RelativeSource` works on the _visual_ tree whereas the syntax given here works on the _logical_ tree.
 :::
+
+## See also
+
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding paths, modes, and converters.
+- [Compiled Bindings](/docs/data-binding/compiled-bindings): Type-safe bindings with compile-time validation.
+- [Control Trees](/docs/custom-controls/control-trees): Logical and visual tree structure.

@@ -1,6 +1,6 @@
 ---
 id: expander-how-to
-title: "How To: Work with Expander"
+title: "How to: Work with Expander"
 ---
 
 This guide covers common Expander scenarios: basic usage, accordion patterns, animated expansion, binding state, and custom headers.

@@ -1,6 +1,6 @@
 ---
 id: datepicker-how-to
-title: "How To: Work with Date and Time Pickers"
+title: "How to: Work with Date and Time Pickers"
 ---
 
 This guide covers DatePicker, TimePicker, CalendarDatePicker, and Calendar patterns: binding dates, formatting, validation, and date ranges.

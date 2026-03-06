@@ -115,7 +115,7 @@ dtoverlay=dwc2,dr_mode=host
 
 #### Install missing libraries
 
-Some libraries required to run a Avalonia app via DRM on raspbian lite:
+Some libraries required to run an Avalonia app via DRM on raspbian lite:
 
 ```bash
 sudo apt update
@@ -136,7 +136,7 @@ sudo kmscube
 You should see the spinning cube on your Raspberry pi screen now:\
 <img src={RaspbianLiteDrmKmsCubeScreenshot} alt=""/>
 
-### Step 2 - Prepare Avalonia App
+### Step 2 - Prepare Avalonia app
 
 #### Create new Avalonia App (Core or MVVM App)
 We called it _AvaloniaRaspbianLiteDrm_ in this tutorial.
@@ -148,7 +148,7 @@ dotnet add package Avalonia.LinuxFramebuffer
 ```
 
 #### 2.3 Create MainView
-When we work via FrameBuffer there are no windows, so we need a separate view (UserControl) which will be our toplevel control. This view is the counterpart to the normal window.
+When running via FrameBuffer there are no windows, so you need a separate view (UserControl) which will be our toplevel control. This view is the counterpart to the normal window.
 
 `MainView` will be our app base in which we develop our UI:
 
@@ -206,10 +206,10 @@ Also change the `MainWindow.axaml` to host the `MainView` inside:
 </Window>
 ```
 
-_So as you see the MainView is hosted in booth `MainSingleView` and `MainWindow`. This makes it easier for development to run the app also on desktop and on the Raspberry_
+The `MainView` is hosted in both `MainSingleView` and `MainWindow`. This makes it easier during development to run the app on desktop and on the Raspberry Pi.
 
 #### Prepare Program.cs
-Next we need to prepare the `Program.cs` to enable the DRM usage.\
+Next, prepare the `Program.cs` to enable the DRM usage.\
 Change the Main void to the following:
 
 ```csharp
@@ -242,10 +242,10 @@ private static void SilenceConsole()
 }
 ```
 
-_`SilenceConsole()` captures the console input and hide it. Otherwise you will see the console cursor blinking on the screen._
+`SilenceConsole()` captures the console input and hides it. Otherwise the console cursor blinks on the screen.
 
 **2.4 Prepare App.axaml.cs**\
-Next we need to set the MainView for the `ISingleViewApplicationLifetime` for the DRM usage.
+Next, set the `MainView` for the `ISingleViewApplicationLifetime` for DRM usage.
 
 Change the `OnFrameworkInitializationCompleted()` in `App.axaml.cs`:
 
@@ -296,3 +296,8 @@ You should see the app running on your Raspberry Pi now:
 <img src={RaspbianLiteRaspberryScreenshot} alt=''/>
 
 If you have a touch display installed, try to slide the slider control.
+
+## See also
+
+- [Embedded Linux overview](/docs/platform-specific-guides/embedded-linux)
+- [Virtual keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard)

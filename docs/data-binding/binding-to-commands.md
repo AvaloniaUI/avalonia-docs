@@ -5,7 +5,7 @@ title: Binding to Commands
 
 Commands provide a clean way to connect user interactions (button clicks, menu selections, keyboard shortcuts) to logic in your view model. This page covers binding controls to commands using `ICommand`.
 
-## Basic Command Binding
+## Basic command binding
 
 Any control that implements `ICommandSource` (such as `Button`, `MenuItem`, and `ToggleButton`) has a `Command` property:
 
@@ -105,7 +105,7 @@ public class RelayCommand : ICommand
 }
 ```
 
-## Async Commands
+## Async commands
 
 Long-running operations should use async commands to avoid blocking the UI thread:
 
@@ -128,7 +128,7 @@ CommunityToolkit.Mvvm generates a `SaveCommand` of type `IAsyncRelayCommand`, wh
 <ProgressBar IsVisible="{Binding SaveCommand.IsRunning}" IsIndeterminate="True" />
 ```
 
-## Keyboard Shortcuts
+## Keyboard shortcuts
 
 Bind commands to keyboard shortcuts using `HotKey` or `KeyBinding`:
 
@@ -147,7 +147,7 @@ Bind commands to keyboard shortcuts using `HotKey` or `KeyBinding`:
 
 The underscore in `Content="_Save"` creates an access key (Alt+S on Windows/Linux).
 
-## Controls that Support Commands
+## Controls that support commands
 
 | Control | Command Property | When Invoked |
 |---|---|---|
@@ -158,7 +158,7 @@ The underscore in `Content="_Save"` creates an access key (Alt+S on Windows/Linu
 | `HyperlinkButton` | `Command` | Click |
 | `SplitButton` | `Command` | Primary click |
 
-## Binding Commands from a Different DataContext
+## Binding commands from a different DataContext
 
 When the command is on a parent view model but the binding occurs inside a template:
 
@@ -174,7 +174,7 @@ When the command is on a parent view model but the binding occurs inside a templ
 
 With compiled bindings, cast the DataContext explicitly using the `((Type)expression)` syntax.
 
-## See Also
+## See also
 
 - [Commanding](/docs/input-interaction/commanding): Full commanding reference including manual ICommand patterns.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Hotkey and keybinding setup.

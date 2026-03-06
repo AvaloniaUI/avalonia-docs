@@ -5,11 +5,11 @@ title: Introduction to data templates
 
 Data Templates in Avalonia provide a powerful way to define the visual representation of your data. They allow you to specify how your data should be presented and formatted, enabling you to create dynamic and customizable user interfaces. This document will introduce you to the concept of Data Templates in Avalonia and demonstrate how to use them effectively in your applications.
 
-## What is a Data Template?
+## What is a data template?
 
 At its core, a Data Template is a reusable definition that specifies how to present data of a particular type. It defines the visual structure and appearance of the data when displayed in the user interface. In Avalonia, a Data Template is often associated with a list control, such as a `ListBox` or `ItemsControl`, and is responsible for rendering individual items of data within that control.
 
-## Applying a Data Template to a ListBox
+## Applying a data template to a ListBox
 
 To apply a Data Template to a `ListBox`, you typically use the `ItemTemplate` property of the control. 
 
@@ -30,7 +30,7 @@ For instance, if you have a `ListBox` that should display a collection of `Item`
 
 In this example, the Data Template defines a visual layout using a `StackPanel` container. Within the `StackPanel`, we have a `TextBlock` bound to the `Name` property of the item and an `Image` control bound to the `ImageSource` property.
 
-## Type-Specific Data Templates
+## Type-specific data templates
 
 Use `DataType` to automatically select a template based on the type of the object being displayed:
 
@@ -54,7 +54,7 @@ Use `DataType` to automatically select a template based on the type of the objec
 
 When Avalonia encounters an object in a content area, it searches for a matching `DataTemplate` by type. The search starts at the control and walks up the tree until a match is found.
 
-## Where Data Templates Can Be Defined
+## Where data templates can be defined
 
 | Location | Scope |
 |---|---|
@@ -64,7 +64,7 @@ When Avalonia encounters an object in a content area, it searches for a matching
 | `ContentTemplate` property | Applied directly to a specific `ContentControl`. |
 | `ItemTemplate` property | Applied to each item in a list or collection control. |
 
-## Data Templates in Resources
+## Data templates in resources
 
 Define a reusable template as a resource:
 
@@ -83,7 +83,7 @@ Then reference it:
                 ContentTemplate="{StaticResource CustomerTemplate}" />
 ```
 
-## Next Steps
+## See also
 
 - [Control Content](control-content): How controls display non-control content.
 - [Content Templates](content-templates): Using `ContentTemplate` directly.

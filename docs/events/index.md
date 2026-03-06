@@ -5,7 +5,7 @@ title: Events Overview
 
 Avalonia uses a routed event system similar to WPF. Routed events can travel through the element tree, allowing parent elements to handle events raised by their children. This is fundamental to how input, interaction, and control behavior work in Avalonia.
 
-## Event Routing Strategies
+## Event routing strategies
 
 Every routed event has a routing strategy that determines how the event travels through the element tree:
 
@@ -17,7 +17,7 @@ Every routed event has a routing strategy that determines how the event travels 
 
 Events can combine strategies. For example, many input events use both `Tunnel | Bubble`, which means the event first tunnels down from the root, then bubbles back up from the source.
 
-### Bubble Example
+### Bubble example
 
 When a user clicks a `Button` inside a `StackPanel` inside a `Window`:
 
@@ -27,7 +27,7 @@ Window          ← event arrives here last (bubble)
        └─ Button ← event starts here (source)
 ```
 
-### Tunnel Example
+### Tunnel example
 
 A tunneling event for the same tree:
 
@@ -37,7 +37,7 @@ Window          ← event starts here first (tunnel)
        └─ Button ← event arrives here last (source)
 ```
 
-## Handling Routed Events
+## Handling routed events
 
 ### In XAML
 
@@ -55,7 +55,7 @@ private void OnButtonClick(object? sender, RoutedEventArgs e)
 }
 ```
 
-### In Code
+### In code
 
 Use `AddHandler` and `RemoveHandler`:
 
@@ -66,7 +66,7 @@ myButton.AddHandler(Button.ClickEvent, OnButtonClick);
 myButton.RemoveHandler(Button.ClickEvent, OnButtonClick);
 ```
 
-### Handling Bubbled Events on a Parent
+### Handling bubbled events on a parent
 
 Because events bubble up the tree, you can handle a child's event on a parent element:
 
@@ -90,7 +90,7 @@ private void OnStackPanelTapped(object? sender, TappedEventArgs e)
 }
 ```
 
-## Marking Events as Handled
+## Marking events as handled
 
 Set `e.Handled = true` to stop an event from continuing to route:
 
@@ -107,7 +107,7 @@ If you need to receive events that have already been marked as handled, use the 
 myPanel.AddHandler(Button.ClickEvent, OnButtonClick, RoutingStrategies.Bubble, handledEventsToo: true);
 ```
 
-## RoutedEventArgs Properties
+## `RoutedEventArgs` properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -116,7 +116,7 @@ myPanel.AddHandler(Button.ClickEvent, OnButtonClick, RoutingStrategies.Bubble, h
 | `Route` | `RoutingStrategies` | The current routing phase (`Tunnel`, `Bubble`, or `Direct`). |
 | `RoutedEvent` | `RoutedEvent` | The routed event being raised. |
 
-## Registering Custom Routed Events
+## Registering custom routed events
 
 Define a custom routed event in your control:
 
@@ -141,7 +141,7 @@ public class MyControl : Control
 }
 ```
 
-### Custom Event Args
+### Custom event args
 
 For events that carry additional data, create a custom `RoutedEventArgs` subclass:
 
@@ -160,7 +160,7 @@ public class ValueChangedEventArgs : RoutedEventArgs
 }
 ```
 
-## Class Handlers
+## Class handlers
 
 Class handlers let you respond to events for all instances of a type, typically registered in a static constructor. Class handlers run before instance handlers.
 
@@ -184,7 +184,7 @@ public class MyControl : Control
 
 Class handlers are useful for control implementations that need to intercept input events before any instance-level handler can mark them as handled.
 
-## Next Steps
+## Next steps
 
 - [Routed Events](/docs/input-interaction/routed-events): Detailed reference on the routed event system.
 - [Lifecycle Events](lifecycle-events): Events that fire during control creation, loading, and teardown.

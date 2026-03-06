@@ -30,7 +30,7 @@ The `RenderTransformOrigin` property defines the point around which transforms a
 </Image>
 ```
 
-## Transform Types
+## Transform types
 
 ### RotateTransform
 
@@ -150,7 +150,7 @@ Combines multiple transforms into a single transformation. Transforms are applie
 The order of transforms within a `TransformGroup` matters. Scaling then rotating produces a different result than rotating then scaling.
 :::
 
-## Shorthand Syntax
+## Shorthand syntax
 
 Avalonia supports a CSS-like shorthand for `RenderTransform`:
 
@@ -182,7 +182,7 @@ Multiple transforms can be chained:
 
 The `LayoutTransformControl` measures and arranges its child with the transform applied, so the parent panel allocates space for the transformed size.
 
-## Animating Transforms
+## Animating transforms
 
 Transforms are commonly animated using keyframe animations or transitions. Bind the transform property to animate smooth rotations, scaling effects, or movement.
 
@@ -208,7 +208,7 @@ Transforms are commonly animated using keyframe animations or transitions. Bind 
 
 For more information on animations, see [Keyframe Animations](keyframe-animations) and [Control Transitions](control-transitions).
 
-## Transforms in Code
+## Transforms in code
 
 ```csharp
 var rotateTransform = new RotateTransform(45);
@@ -225,7 +225,7 @@ myBorder.RenderTransform = group;
 rotateTransform.Angle = 90; // Immediate change
 ```
 
-## See Also
+## See also
 
 - [Keyframe Animations](keyframe-animations): Animate transforms over time.
 - [Control Transitions](control-transitions): Apply transitions when property values change.

@@ -37,7 +37,7 @@ import SineEaseOutScreenshot from '/img/reference/animations-and-graphics/animat
 
 This section describes how `Animation` playback can be customized.
 
-## Easing Functions
+## Easing functions
 
 `Easing` functions describe how quickly an animated property changes from its starting value into its ending value across the animation time. `Avalonia.Animation.Easings` contains the following easings:
 
@@ -92,3 +92,9 @@ The `IterationCount` on an `Animation` element sets how many times it is to be r
 |------------|--------------------------------------------------|
 | `N`        | (N is an integer) - play N times. N can be zero. |
 | `Infinite` | Repeats forever                                  |
+
+## See also
+
+- [Keyframe Animations](keyframe-animations): Defining keyframe animations in XAML.
+- [Control Transitions](control-transitions): Animating property changes with transitions.
+- [Easing Functions](easing-functions): All available easing functions.

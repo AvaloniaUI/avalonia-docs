@@ -3,7 +3,7 @@ id: data-validation
 title: Data Validation
 ---
 
-Avalonia offers different data validation options. In this section we will show you how you can validate the `Properties` of your `ViewModel` and how you can style the displayed error message.
+Avalonia offers different data validation options. This section explains how you can validate the `Properties` of your `ViewModel` and how you can style the displayed error message.
 
 ## Validating a property
 
@@ -19,7 +19,7 @@ You can decorate the `Properties` of your `ViewModel` with different [`Validatio
 
 **Sample: The property EMail is required and must be a valid e-mail-address**
 
-```cs
+```csharp
 [Required]
 [EmailAddress]
 public string? EMail
@@ -43,11 +43,11 @@ One more option to validate a property is to raise an [`Exception`](https://lear
 
 **Sample: Validate the property EMail using `Exceptions`**
 
-```cs
+```csharp
 public string? EMail
 {
     get { return _EMail; }
-    set 
+    set
     {
         if (string.IsNullOrEmpty(value))
         {
@@ -124,11 +124,11 @@ To display the validation messages, Avalonia has a control called [`DataValidati
 
 ## Manage ValidationPlugins
 
-if needed to, you can enable or disable a specific `ValidationPlugin` in your App. This can be useful if for example your MVVM-framework uses `DataAnnotations` to validate the property via `INotifyDataErrorInfo`. In that case you would see the message twice. Use the `BindingPlugins.DataValidators`-collection to add or remove a specific `ValidationPlugin`.
+If needed, you can enable or disable a specific `ValidationPlugin` in your app. This can be useful if for example your MVVM-framework uses `DataAnnotations` to validate the property via `INotifyDataErrorInfo`. In that case you would see the message twice. Use the `BindingPlugins.DataValidators`-collection to add or remove a specific `ValidationPlugin`.
 
 **Example: Remove the DataAnnotations validator**
 
-```cs
+```csharp
 public override void OnFrameworkInitializationCompleted()
 {
     // Get an array of plugins to remove
@@ -153,3 +153,8 @@ public override void OnFrameworkInitializationCompleted()
     base.OnFrameworkInitializationCompleted();
 }
 ```
+
+## See also
+
+- [Data Binding](/docs/data-binding/introduction-to-data-binding): Binding data to controls.
+- [Community Toolkit MVVM](https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/observablevalidator): Using `ObservableValidator` for validation.

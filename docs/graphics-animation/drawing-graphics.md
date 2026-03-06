@@ -12,7 +12,7 @@ Avalonia introduces an extensive, scalable, and flexible set of graphics feature
 * Advanced graphics and animation support. Avalonia simplifies graphics programming by managing animation scenes for you; there is no need to worry about scene processing, rendering loops, and bilinear interpolation. Additionally, Avalonia provides hit-testing support and full alpha-compositing support.
 * Skia. By default Avalonia uses the [Skia rendering engine](https://skia.org/), the same rendering engine that powers Google Chrome and Chrome OS, Android, Mozilla Firefox and Firefox OS, and many other products.
 
-## 2D Shapes and Geometries
+## 2D shapes and geometries
 
 Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, `Line`, `Path`, `Polygon` and `Rectangle`.
 
@@ -126,6 +126,12 @@ Hover over each shape to identify it:
 </svg>
 </div>
 
-## Add Animations
+## Add animations
 
 Avalonia UI has animation support lets you make controls grow, shake, spin, and fade, to create interesting page transitions, and more. Avalonia uses a CSS-like animation system which supports [transitions](/docs/graphics-animation/control-transitions) and [keyframe animations](/docs/graphics-animation/keyframe-animations).
+
+## See also
+
+- [Shapes and Geometries](shapes-and-geometries): Shape controls and geometry types.
+- [Brushes](brushes): Brush types for fills and strokes.
+- [Animations](animations): Overview of animation types.

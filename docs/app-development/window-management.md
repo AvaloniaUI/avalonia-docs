@@ -5,7 +5,7 @@ title: Window Management
 
 Avalonia provides a flexible windowing system for creating single-window and multi-window desktop applications. This page covers common window management patterns.
 
-## Creating Windows
+## Creating windows
 
 Windows are typically defined in XAML with a code-behind class:
 
@@ -57,7 +57,7 @@ Close("user clicked OK");
 
 The value is returned from the `ShowDialog<T>` call in the parent.
 
-## Window Properties
+## Window properties
 
 | Property | Description |
 |---|---|
@@ -80,7 +80,7 @@ The value is returned from the `ShowDialog<T>` call in the parent.
 | `TransparencyLevelHint` | Enables window transparency: `None`, `Transparent`, `AcrylicBlur`, `Mica`. |
 | `ClosingBehavior` | Controls how child windows behave when the owner closes: `OwnerAndChildWindows` (default, children close first and can cancel) or `OwnerWindowOnly` (only the owner's `Closing` event is checked). |
 
-## Window Sizing
+## Window sizing
 
 ### Sizing to content
 
@@ -130,7 +130,7 @@ protected override void OnClosing(WindowClosingEventArgs e)
 }
 ```
 
-## Multi-Window Patterns
+## Multi-window patterns
 
 ### Tracking open windows
 
@@ -171,7 +171,7 @@ Or using the extension method:
 var window = myControl.FindAncestorOfType<Window>();
 ```
 
-## Preventing Window Close
+## Preventing window close
 
 Handle the `Closing` event to intercept the close action. Set `e.Cancel = true` to prevent closing:
 
@@ -189,7 +189,7 @@ protected override void OnClosing(WindowClosingEventArgs e)
 }
 ```
 
-## Custom Title Bar
+## Custom title bar
 
 To create a custom title bar, extend the client area into the decorations and use `WindowDecorations.ElementRole` to mark a region as the title bar:
 
@@ -215,7 +215,7 @@ Elements marked with `WindowDecorations.ElementRole="TitleBar"` support native w
 
 For more details on the `ElementRole` values, see the [custom title bar how-to](/docs/how-to/window-how-to#custom-title-bar-with-drag-region).
 
-## Window Events
+## Window events
 
 | Event | When it fires |
 |---|---|
@@ -227,7 +227,7 @@ For more details on the `ElementRole` values, see the [custom title bar how-to](
 | `PositionChanged` | The window was moved. |
 | `Resized` | The window was resized. |
 
-## Working with Screens
+## Working with screens
 
 The `Screens` API provides information about connected monitors. Access it from any `TopLevel`:
 
@@ -276,7 +276,7 @@ screens.Changed += (sender, args) =>
 };
 ```
 
-## Platform Differences
+## Platform differences
 
 | Feature | Windows | macOS | Linux |
 |---|---|---|---|
@@ -286,7 +286,7 @@ screens.Changed += (sender, args) =>
 | `ExtendClientAreaToDecorationsHint` | Supported | Supported | Limited support |
 | Modal dialogs | Blocks parent window | Sheet-style on macOS | Blocks parent window |
 
-## See Also
+## See also
 
 - [Main Window](/docs/fundamentals/main-window): The primary application window.
 - [Application Lifetimes](/docs/fundamentals/application-lifetimes): How the application lifecycle manages windows.

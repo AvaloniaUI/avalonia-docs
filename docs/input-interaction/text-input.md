@@ -5,7 +5,7 @@ title: Text Input and IME
 
 Avalonia supports text input from keyboards, on-screen keyboards, and Input Method Editors (IMEs) for languages that require character composition, such as Chinese, Japanese, and Korean.
 
-## How Text Input Works
+## How text input works
 
 Text input in Avalonia flows through several stages:
 
@@ -15,7 +15,7 @@ Text input in Avalonia flows through several stages:
 
 For most applications, you do not need to handle text input directly. Controls like `TextBox` and `AutoCompleteBox` handle all text input automatically. This page covers scenarios where you need custom text input behavior.
 
-## TextInput Event
+## TextInput event
 
 The `TextInput` event delivers composed text after IME processing. Unlike `KeyDown`, which provides the physical key pressed, `TextInput` provides the actual character(s) the user intended to type:
 
@@ -45,7 +45,7 @@ private void OnTextInput(object? sender, TextInputEventArgs e)
 If you handle `KeyDown` to process typed text, you will miss IME-composed characters and may incorrectly handle dead keys (accent composition). Always use `TextInput` for character input.
 :::
 
-## Input Method Editors (IME)
+## Input method editors (IME)
 
 IMEs allow users to type complex scripts by composing characters from multiple key presses. For example, typing "ni hao" on a Chinese IME produces "你好".
 
@@ -107,7 +107,7 @@ public class MyTextInputClient : TextInputMethodClient
 }
 ```
 
-## On-Screen Keyboards
+## On-screen keyboards
 
 On touch devices and mobile platforms, Avalonia can show the platform's on-screen keyboard when a text input control receives focus.
 
@@ -147,7 +147,7 @@ On Android and iOS, the `InputScope` property on `TextBox` can hint which keyboa
 <TextBox InputScope="TelephoneNumber" />
 ```
 
-## Platform Considerations
+## Platform considerations
 
 | Feature | Windows | macOS | Linux | Android/iOS | WebAssembly |
 |---|---|---|---|---|---|
@@ -155,7 +155,7 @@ On Android and iOS, the `InputScope` property on `TextBox` can hint which keyboa
 | On-screen keyboard | Touch devices | Touch Bar | Virtual keyboard | Full | Browser-managed |
 | Dead keys | Supported | Supported | Supported | N/A | Browser-managed |
 
-## See Also
+## See also
 
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings and keyboard shortcuts.
 - [Input Pane](/docs/services/input-pane): On-screen keyboard service.

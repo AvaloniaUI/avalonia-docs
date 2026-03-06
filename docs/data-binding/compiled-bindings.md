@@ -94,7 +94,7 @@ We do not generally recommend explicit type casting.
 </Window>
 ```
 
-## CompiledBinding-Markup
+## CompiledBinding markup
 
 If you don't want to enable compiled bindings for all child nodes, you can also use the `CompiledBinding`-markup. You still need to define the `DataType`, but you can omit `x:CompileBindings="True"`.
 
@@ -120,7 +120,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
 </UserControl>
 ```
 
-## ReflectionBinding-Markup
+## ReflectionBinding markup
 
 If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use compiled binding at a certain position, you can use the `ReflectionBinding`-markup.
 

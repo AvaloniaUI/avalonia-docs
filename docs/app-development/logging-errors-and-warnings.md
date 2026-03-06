@@ -5,11 +5,11 @@ title: Logging errors and warnings
 
 import LogToTraceOutputScreenshot from '/img/guides/app-development/log-to-trace-output.png';
 
-This guide shows you how to can log warnings and errors in _Avalonia UI_ using the standard _(Microsoft)_`System.Diagnostics.Trace` component. 
+This guide shows you how to log warnings and errors in Avalonia using the standard `System.Diagnostics.Trace` component.
 
 ## Enabling logs
 
-The code to achieve logging is added to your project by the _Avalonia UI_ solution templates if you use them.
+The code to achieve logging is added to your project by the Avalonia solution templates if you use them.
 
 To enable, or to check that logging is enabled, follow this procedure:
 
@@ -46,7 +46,7 @@ If you want to re-route these messages to different location, you can use the me
 
 ## Log area
 
-Each message from _Avalonia UI_ is assigned an area that can be used to filter the log. These are described by the members of `Avalonia.Logging.LogArea` static class:
+Each message from Avalonia is assigned an area that can be used to filter the log. These are described by the members of `Avalonia.Logging.LogArea` static class:
 
 * `Property`
 * `Binding`
@@ -122,3 +122,8 @@ public static AppBuilder BuildAvaloniaApp()
 :::info
 View the source code on _GitHub_ [`StringLogSink.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Logging/StringLogSink.cs)
 :::
+
+## See also
+
+- [Setting Unhandled Exceptions](/docs/app-development/setting-unhandled-exceptions): Handling unhandled exceptions in your application.
+- [LogEventLevel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Logging_LogEventLevel): Available log severity levels.

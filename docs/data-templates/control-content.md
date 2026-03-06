@@ -79,4 +79,10 @@ But you will see only the fully-qualified class name for the student object:
 
 <img src={ControlContentTypeScreenshot} alt=""/>
 
-This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name. 
+This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name.
+
+## See also
+
+- [Content Templates](content-templates): Using `ContentTemplate` to define how data is displayed.
+- [Data Template Collection](data-template-collection): Defining multiple templates by type.
+- [Introduction to Data Templates](introduction-to-data-templates): Overview of data templates in Avalonia.

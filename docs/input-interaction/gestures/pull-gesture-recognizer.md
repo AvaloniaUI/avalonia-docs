@@ -143,7 +143,7 @@ This defines the direction of the pull. There are 4 available values;
 * `PullDirection.LeftToRight` : Pull starts from the left edge and moves towards the right
 * `PullDirection.RightToLeft` : Pull starts from the right edge and moves towards the left
 
-## Binding Events
+## Binding events
 After the PullGestureRecognizer has been added to your control, you need to bind them in your code behind either through an inline handler or to an event function:
 ```csharp title='C#'
 image.AddHandler(InputElement.PullGestureEvent, (s, e) => { });
@@ -161,7 +161,7 @@ If your event handles the gesture completely, you can mark the event as handled 
 e.Handled = true;
 ```
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -181,12 +181,18 @@ You will probably use these properties most often:
   </table>
 
 
-## More Information
+## More information
 
 :::info
-View the source code on _GitHub_ 
+View the source code on _GitHub_
 
 [`PullGestureRecognizer.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/GestureRecognizers/PullGestureRecognizer.cs)
 
 [`PullGestureEventArgs.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/PullGestureEventArgs.cs)
 :::
+
+## See also
+
+- [Gestures](/docs/input-interaction/gestures): Overview of gesture recognizers and built-in gesture events.
+- [Scroll Gesture Recognizer](/docs/input-interaction/gestures/scroll-gesture-recognizer): Scroll gesture for panning content.
+- [Pinch Gesture Recognizer](/docs/input-interaction/gestures/pinch-gesture-recognizer): Pinch gesture for zoom interactions.

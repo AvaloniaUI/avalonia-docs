@@ -1,6 +1,6 @@
 ---
 id: datagrid-how-to
-title: "How To: Work with DataGrid"
+title: "How to: Work with DataGrid"
 ---
 
 This guide covers common DataGrid scenarios: sorting, filtering, grouping, template columns, selection, validation, and editing.

@@ -5,7 +5,7 @@ title: Commanding
 
 Commanding connects user actions (button clicks, menu selections, keyboard shortcuts) to logic in your view model. Avalonia uses the standard .NET `ICommand` interface, which enables clean separation between UI and business logic.
 
-## How Commanding Works
+## How commanding works
 
 Controls that support commanding (such as `Button` and `MenuItem`) have a `Command` property. When the user activates the control, it calls `ICommand.Execute`. The control also monitors `ICommand.CanExecute` and automatically disables itself when the command cannot execute.
 
@@ -15,7 +15,7 @@ Controls that support commanding (such as `Button` and `MenuItem`) have a `Comma
 
 When `SaveCommand.CanExecute()` returns `false`, the button appears disabled and cannot be clicked.
 
-## ICommand Interface
+## ICommand interface
 
 The `System.Windows.Input.ICommand` interface defines:
 
@@ -145,7 +145,7 @@ private void Open(Item item)
         CommandParameter="{Binding SelectedItem}" />
 ```
 
-## Manual ICommand Implementation
+## Manual ICommand implementation
 
 For scenarios where source generators are not used, create commands manually:
 
@@ -186,7 +186,7 @@ public class MainViewModel
 }
 ```
 
-## Controls That Support Commanding
+## Controls that support commanding
 
 | Control | Command property | When it fires |
 |---|---|---|
@@ -197,7 +197,7 @@ public class MainViewModel
 | `ToggleButton` | `Command` | On toggle |
 | `SplitButton` | `Command` | On primary button click |
 
-## Keyboard Shortcuts and Commands
+## Keyboard shortcuts and commands
 
 Bind a command to a keyboard shortcut using `KeyBinding`:
 
@@ -211,7 +211,7 @@ Bind a command to a keyboard shortcut using `KeyBinding`:
 
 `KeyBinding` evaluates `CanExecute` and only triggers the command when the gesture is pressed and the command is enabled.
 
-## HotKey Attached Property
+## HotKey attached property
 
 For controls, the `HotKey` attached property provides a simpler syntax:
 
@@ -223,7 +223,7 @@ For controls, the `HotKey` attached property provides a simpler syntax:
 
 The `HotKey` triggers the button's command even when the button does not have focus.
 
-## See Also
+## See also
 
 - [How to Bind CanExecute](/docs/data-binding/how-to-bind-can-execute): Binding patterns for CanExecute.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings and keyboard input.

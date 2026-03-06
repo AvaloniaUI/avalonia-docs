@@ -1,6 +1,6 @@
 ---
 id: textbox-how-to
-title: "How To: Work with TextBox"
+title: "How to: Work with TextBox"
 ---
 
 This guide covers common TextBox scenarios: validation, formatting, input masking, selection, and customization.

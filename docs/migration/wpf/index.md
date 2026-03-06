@@ -9,7 +9,7 @@ Avalonia shares many concepts with WPF, so your existing knowledge transfers dir
 If your goal is to run an existing WPF application on macOS, Linux, or the web, a full rewrite may not be necessary. [XPF](/xpf) runs WPF applications cross-platform with minimal code changes, so you can ship to new platforms while keeping the codebase you already have.
 :::
 
-## Key Differences
+## Key differences
 
 **Styling** is the biggest conceptual shift. Avalonia replaces WPF's resource-dictionary styles and triggers with a CSS-like system using selectors, style classes, and pseudo-classes. See [Styling](styling) for a full walkthrough.
 
@@ -23,8 +23,15 @@ If your goal is to run an existing WPF application on macOS, Linux, or the web, 
 
 **Layout** panels (`Grid`, `StackPanel`, `DockPanel`, etc.) are the same, with small additions like `Spacing` on `StackPanel` and shorthand `ColumnDefinitions` syntax. See [Layout](layout).
 
-## Where to Start
+## Where to start
 
 If you want a quick side-by-side lookup, start with the **[Cheat Sheet](cheat-sheet)**. It covers XAML namespaces, property system, styling, data binding, controls, events, commands, templates, threading, animations, graphics, and file structure in compact tables.
 
 For deeper explanations of each topic, use the guides linked above.
+
+## See also
+
+- [WPF to Avalonia Cheat Sheet](cheat-sheet): Quick side-by-side reference.
+- [Styling](styling): CSS-like styling system migration guide.
+- [Controls](controls): Control name mappings.
+- [Properties](properties): Property system differences.

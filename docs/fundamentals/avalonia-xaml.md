@@ -15,11 +15,11 @@ For a complete guide to building applications without XAML, see [Code-Only UI](/
 XAML was originally developed by Microsoft for WPF and later adopted by Silverlight, UWP, and other frameworks. Avalonia uses the same core XAML concepts (declarative markup, object elements, property attributes, data binding, and markup extensions) but with its own namespace and control library. If you have experience with WPF or UWP XAML, most of your knowledge transfers directly to Avalonia.
 :::
 
-## AXAML File Extension
+## AXAML file extension
 
 The file extension for XAML files used elsewhere is `.xaml` but due to technical issues integrating with Visual Studio, Avalonia uses its own `.axaml` extension - 'Avalonia XAML'.
 
-## File Format
+## File format
 
 A typical Avalonia XAML file looks like this:
 
@@ -42,7 +42,7 @@ The sample above uses three interesting attributes:
 For information about the code-behind concept, see [Code-behind](/docs/fundamentals/code-behind).
 :::
 
-## Control Elements
+## Control elements
 
 You can compose a UI for your application by adding XML elements that represent one of the Avalonia controls. The element tag uses the same name as the control class name.
 
@@ -63,7 +63,7 @@ For example, this XAML adds a button to the content of a window:
 For a complete list of the Avalonia built-in controls, see the [Controls reference](/controls).
 :::
 
-## Control Attributes
+## Control attributes
 
 The XML elements that represent controls have attributes corresponding to control properties that can be set. You can set a control property by adding an attribute to an element.
 
@@ -76,7 +76,7 @@ For example, to specify a blue background for a button control, you add the `Bac
 </Window>
 ```
 
-## Control Content
+## Control content
 
 You might have noticed that the button in the above sample has its content (the 'Hello World' string) placed between its opening and closing tags. As an alternative, you can set the content attribute, as follows:
 
@@ -89,7 +89,7 @@ You might have noticed that the button in the above sample has its content (the 
 
 This behaviour is specific to the content of an Avalonia control.
 
-## Data Binding
+## Data binding
 
 You will often use the Avalonia binding system to link a control property to an underlying object. The link is declared using the `{Binding}` mark-up extension. For example:
 
@@ -104,7 +104,7 @@ You will often use the Avalonia binding system to link a control property to an 
 For further information about the concept behind data binding, see [Introduction to data binding](/docs/data-binding/introduction-to-data-binding).
 :::
 
-## Code-behind Files
+## Code-behind files
 
 Many Avalonia XAML files also have an associated code-behind file that is usually written in C#, and has the file extension `.axaml.cs`.
 
@@ -112,7 +112,7 @@ Many Avalonia XAML files also have an associated code-behind file that is usuall
 For guidance about programming using code-behind files, see [Code-behind](/docs/fundamentals/code-behind).
 :::
 
-## XML Namespaces
+## XML namespaces
 
 In common with any XML format, in Avalonia XAML files you can declare namespaces. XML namespaces associate element and attribute names with specific URIs, preventing name collisions and allowing the XAML processor to find the definitions of the elements in the file. You declare a namespace using the `xmlns` attribute, optionally with a prefix. Namespace declarations are inherited from parent elements to child elements, and are effective from their point of declaration until the end of the enclosing element.
 
@@ -134,14 +134,14 @@ For detailed guidance on how namespace declarations work, see [Custom control li
 
 There are two valid syntax options for the definition part of a XAML namespace attribute that references code:
 
-### **Using Prefix**
+### Using prefix
 
 The prefix `using:` can be used when providing an alias for a namespace in either the current assembly or a referenced assembly. The syntax is the same in both cases.  For example:
 
 ```xml
 xmlns:myAlias1="using:AppNameSpace.MyNamespace"
 ```
-### **CLR Namespace Prefix**
+### CLR namespace prefix
 
 The prefix `clr-namespace:`, the same as in WPF, is also supported. However, the syntax depends on whether the namespace for which an alias is required is in the current assembly or a referenced assembly.
 

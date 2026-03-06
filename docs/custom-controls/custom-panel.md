@@ -5,7 +5,7 @@ title: Creating a custom panel
 
 A custom panel lets you control exactly how child elements are measured and arranged. By subclassing `Panel` and overriding its layout methods, you can create layouts that go beyond what the built-in panels provide.
 
-## Layout Process
+## Layout process
 
 Avalonia uses a two-pass layout system. Every panel must participate in both passes:
 
@@ -13,7 +13,7 @@ Avalonia uses a two-pass layout system. Every panel must participate in both pas
 
 2. **Arrange pass (`ArrangeOverride`):** The panel receives its final allocated size and positions each child within that space. You must call `child.Arrange()` on every child, passing a `Rect` that defines the child's position and size.
 
-## Basic Example
+## Basic example
 
 This simple `PlotPanel` positions all child elements at a hard-coded offset of (50, 50).
 
@@ -51,7 +51,7 @@ public class PlotPanel : Panel
 }
 ```
 
-## Practical Example: Radial Panel
+## Practical example: radial panel
 
 A more useful custom panel arranges its children evenly around a circle. Each child is placed at an equal angular offset from the others.
 
@@ -97,7 +97,7 @@ You can then use it in XAML like any other panel:
 </local:RadialPanel>
 ```
 
-## Using Attached Properties
+## Using attached properties
 
 Panels often need per-child configuration. Attached properties let each child element carry data that the parent panel reads during layout. For example, you could add a `Slot` property to `RadialPanel` so that children can specify their position in the circle:
 
@@ -120,7 +120,7 @@ For a full guide on defining attached properties, see [Attached Properties](atta
 - Use `AffectsMeasure` or `AffectsArrange` when registering styled properties that influence layout. This ensures the panel re-layouts when those properties change.
 - Return the size your panel actually needs from `MeasureOverride`. Returning a size larger than necessary wastes space, while returning a size that is too small may clip children.
 
-## See Also
+## See also
 
 - [Custom ItemsPanel](custom-itemspanel)
 - [Attached Properties](attached-properties)

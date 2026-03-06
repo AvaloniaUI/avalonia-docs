@@ -10,7 +10,7 @@ Avalonia gives you a path forward. It is a cross-platform .NET UI framework with
 The Avalonia team has extensive experience porting Windows Forms applications to Avalonia. If you would rather have expert guidance than go it alone, this is a service we provide. See [Avalonia Services](https://avaloniaui.net/services) for more information.
 :::
 
-## What Changes
+## What changes
 
 Windows Forms and Avalonia are fundamentally different UI models. Unlike migrating between XAML frameworks (for example, WPF to Avalonia), there is no one-to-one mapping for most concepts. Expect to learn new patterns rather than translate old ones.
 
@@ -28,11 +28,11 @@ Windows Forms and Avalonia are fundamentally different UI models. Unlike migrati
 | GDI+ drawing (`OnPaint`) | `DrawingContext` or custom `Render` override | Different rendering API |
 | `Application.Run(new MainForm())` | `AppBuilder` pipeline | Avalonia uses a builder pattern for app startup |
 
-## Migration Strategy
+## Migration strategy
 
 A WinForms-to-Avalonia migration is not a find-and-replace exercise. The most successful approach is incremental: start new screens in Avalonia while keeping existing WinForms screens running, then migrate the rest over time.
 
-### Option 1: Start Fresh, Migrate Incrementally
+### Option 1: start fresh, migrate incrementally
 
 Create a new Avalonia project and rebuild screens one at a time, starting with the simplest. This is the cleanest approach and produces the best result, but it requires the most upfront effort.
 
@@ -41,7 +41,7 @@ Create a new Avalonia project and rebuild screens one at a time, starting with t
 3. Rebuild each screen as an Avalonia `Window` or `UserControl`.
 4. Once all screens are migrated, retire the WinForms project.
 
-### Option 2: Host Avalonia Controls Inside WinForms (Windows Only)
+### Option 2: host Avalonia controls inside WinForms (Windows only)
 
 If you need to keep your WinForms application running while gradually introducing Avalonia, you can embed Avalonia controls directly inside WinForms windows using `WinFormsAvaloniaControlHost`. This lets you build new features in Avalonia without touching existing WinForms code.
 
@@ -49,7 +49,7 @@ This approach only works on Windows since Windows Forms itself is Windows-only. 
 
 For setup instructions, see [Embedding Avalonia in Windows Forms](/docs/platform-specific-guides/windows#embedding-avalonia-in-windows-forms).
 
-## Key Concepts to Learn
+## Key concepts to learn
 
 If you are coming from WinForms with no XAML experience, these are the areas that will require the most adjustment:
 
@@ -59,7 +59,7 @@ If you are coming from WinForms with no XAML experience, these are the areas tha
 - **[Styling](/docs/styling/styles):** Avalonia uses a CSS-like styling system with selectors and style classes, rather than setting properties on individual controls.
 - **[Layout panels](/docs/layout/layout):** Instead of absolute positioning or dock/anchor, Avalonia uses panels like `Grid`, `StackPanel`, and `DockPanel` to arrange controls.
 
-## See Also
+## See also
 
 - [Get Started with Avalonia](/docs/get-started/first-app): Create your first Avalonia application.
 - [Embedding Avalonia in Windows Forms](/docs/platform-specific-guides/windows#embedding-avalonia-in-windows-forms): Host Avalonia controls inside an existing WinForms app.

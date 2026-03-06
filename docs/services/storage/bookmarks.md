@@ -8,7 +8,7 @@ Bookmarks are particularly important for maintaining access to files and folders
 In Avalonia's `StorageProvider`, these bookmarks are represented as `IStorageBookmarkFile` and `IStorageBookmarkFolder` interfaces.
 
 ## Avalonia.Platform.Storage
-### IStorageBookmarkItem Interface
+### `IStorageBookmarkItem` interface
 The `IStorageBookmarkItem` interface represents a bookmarked storage item. It inherits from IStorageItem and IDisposable. This interface is not client implementable, meaning you cannot create your own classes that implement it without special permissions.
 
 Here are the key properties and methods it provides:
@@ -24,7 +24,7 @@ Here are the key properties and methods it provides:
 #### Methods:
 `CreateFileAsync(String)`,`CreateFolderAsync(String)`,`DeleteAsync()`,`Dispose()`,`GetBasicPropertiesAsync()`,`GetFileAsync(String)`,`GetFolderAsync(String)`,`GetItemsAsync()`,`GetParentAsync()`,`MoveAsync(IStorageFolder)`,`ReleaseBookmarkAsync()`,`SaveBookmarkAsync()`.
 
-### IStorageBookmarkFolder Interface
+### `IStorageBookmarkFolder` interface
 
 #### Properties:
 same as IStorageBookmarkItem
@@ -34,10 +34,10 @@ same as IStorageBookmarkItem
 
 
 
-## How to Use Bookmark Methods
+## How to use bookmark methods
 This section provides a practical guide on using `bookmark`.
 
-### Saving and Loading Bookmarks
+### Saving and loading bookmarks
 To get a bookmark ID for a specific folder or file, use the `SaveBookmarkAsync()` asynchronous method on a storage item. Once you have a bookmark ID, you can save it to a local database for future use instead of requiring the user to select a folder every time.
 
 `SaveBookmarkAsync()`: This method is used to get a `bookmark ID` for a selected file or folder, which can be stored for future use.
@@ -109,7 +109,7 @@ private async Task ReleaseBookmarkAsync(Control control, string bookmarkId)
 ```
 
 
-### Reading and Writing File Content from a Bookmark
+### Reading and writing file content from a bookmark
 
 `OpenFileBookmarkAsync()`: This method is used to open a bookmarked file from a stored `bookmark ID`. It will return the bookmarked file or null if the operating system denies the request.
 
@@ -163,7 +163,7 @@ private async Task SaveFileByBookmarkAsync(Control control, string bookmarkId)
 ```
 
 
-### Managing Bookmarked Files and Folders
+### Managing bookmarked files and folders
 Once a bookmark is loaded, you can use the inherited methods from `IStorageItem` to manipulate the file or folder.
 
 `DeleteAsync()`: This method asynchronously deletes the current storage item and its contents.
@@ -214,7 +214,7 @@ IStorageFile bookmarkedFile = ...;
 string? localPath = bookmarkedFile.TryGetLocalPath();
 ```
 
-## Platform-Specific Bookmark Representation
+## Platform-specific bookmark representation
 The way a `bookmark ID` is represented can vary by platform:
 
 **Windows**: A bookmark is a simple absolute path string, so a bookmark might look like `C:\Documents\Avalonia\bookmarks.pdf`
@@ -228,3 +228,9 @@ The exact behavior and capabilities can depend on the specific operating system 
 :::note
 It's not recommended to store bookmark IDs in a remote database, as bookmarks might not be persistent and might contain sensitive file path information.
 :::
+
+## See also
+
+- [Storage Provider](storage-provider): Full storage provider API reference.
+- [Storage Items](storage-item): Working with files and folders.
+- [File Dialogs](/docs/services/file-dialogs): Using file open, save, and folder picker dialogs.

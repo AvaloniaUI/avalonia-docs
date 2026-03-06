@@ -5,7 +5,7 @@ title: Input Events
 
 Avalonia provides a comprehensive set of input events for handling pointer (mouse/touch/pen), keyboard, and gesture interactions. Most input events use a combined `Tunnel | Bubble` routing strategy, giving parent elements the opportunity to intercept input before it reaches the target.
 
-## Pointer Events
+## Pointer events
 
 Pointer events abstract mouse, touch, and pen input into a unified model. They bubble up the visual tree by default.
 
@@ -19,7 +19,7 @@ Pointer events abstract mouse, touch, and pen input into a unified model. They b
 | `PointerCaptureLost` | The control loses pointer capture. |
 | `PointerWheelChanged` | The mouse wheel or trackpad scrolls over the control. |
 
-### Handling Pointer Events
+### Handling pointer events
 
 ```csharp
 protected override void OnPointerPressed(PointerPressedEventArgs e)
@@ -36,7 +36,7 @@ protected override void OnPointerPressed(PointerPressedEventArgs e)
 }
 ```
 
-### Key Properties on PointerEventArgs
+### Key properties on `PointerEventArgs`
 
 | Property / Method | Description |
 |---|---|
@@ -45,7 +45,7 @@ protected override void OnPointerPressed(PointerPressedEventArgs e)
 | `Pointer` | The `Pointer` instance, useful for capture operations. |
 | `KeyModifiers` | Whether Shift, Control, Alt, or Meta keys are held. |
 
-### Pointer Capture
+### Pointer capture
 
 When you capture the pointer, all subsequent pointer events are directed to the capturing control until capture is released:
 
@@ -65,7 +65,7 @@ protected override void OnPointerReleased(PointerReleasedEventArgs e)
 
 Only one element can hold pointer capture at a time across the entire application. This matches operating system behavior where a single physical mouse device can only have one captured element. When a different control captures the pointer (for example, in a popup window), the previous capture is released and the original control receives a `PointerCaptureLost` event.
 
-## Keyboard Events
+## Keyboard events
 
 Keyboard events fire on the currently focused element and bubble up the tree.
 
@@ -75,7 +75,7 @@ Keyboard events fire on the currently focused element and bubble up the tree.
 | `KeyUp` | A key is released. |
 | `TextInput` | Character input is received (after IME processing). |
 
-### Handling Keyboard Events
+### Handling keyboard events
 
 ```csharp
 protected override void OnKeyDown(KeyEventArgs e)
@@ -96,7 +96,7 @@ protected override void OnKeyDown(KeyEventArgs e)
 }
 ```
 
-### Key Properties on KeyEventArgs
+### Key properties on `KeyEventArgs`
 
 | Property | Description |
 |---|---|
@@ -104,7 +104,7 @@ protected override void OnKeyDown(KeyEventArgs e)
 | `KeyModifiers` | Modifier keys held (Control, Shift, Alt, Meta). |
 | `KeySymbol` | The character produced by the key press, if any. |
 
-## Tunneling (Preview) Events
+## Tunneling (preview) events
 
 For input events that use `Tunnel | Bubble` routing, the tunneling phase fires first. You can intercept events during the tunnel phase by using the routing strategy parameter:
 
@@ -123,7 +123,7 @@ private void OnPreviewPointerPressed(object? sender, PointerPressedEventArgs e)
 
 This is useful for intercepting input at a parent level before child controls process it.
 
-## Gesture Events
+## Gesture events
 
 Avalonia provides high-level gesture events built on top of raw pointer events:
 
@@ -148,9 +148,9 @@ private void OnBorderTapped(object? sender, TappedEventArgs e)
 }
 ```
 
-## Common Input Patterns
+## Common input patterns
 
-### Drag Detection
+### Drag detection
 
 ```csharp
 private Point _pressPoint;
@@ -193,7 +193,7 @@ protected override void OnPointerReleased(PointerReleasedEventArgs e)
 }
 ```
 
-### Keyboard Shortcuts on a Window
+### Keyboard shortcuts on a window
 
 ```csharp
 public partial class MainWindow : Window
@@ -220,7 +220,7 @@ public partial class MainWindow : Window
 For declarative keyboard shortcuts, consider using [KeyBindings and HotKeys](/docs/input-interaction/keyboard-and-hotkeys) instead of handling `KeyDown` manually.
 :::
 
-## See Also
+## See also
 
 - [Events Overview](index): How routed events work in Avalonia.
 - [Pointer Input](/docs/input-interaction/pointer): Detailed pointer input reference.

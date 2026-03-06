@@ -7,19 +7,19 @@ import ControlTreesLogicalScreenshot from '/img/concepts/ui-concepts/controls/co
 import ControlTreesVisualScreenshot from '/img/concepts/ui-concepts/controls/control-trees-visual.png';
 import ControlTreesEventScreenshot from '/img/concepts/ui-concepts/controls/control-trees-events.png';
 
-_Avalonia UI_ creates control trees from the XAML files in an application so that it can render the UI presentation and manage the application functionality.
+Avalonia creates control trees from the XAML files in an application so that it can render the UI presentation and manage the application functionality.
 
-## Logical Tree
+## Logical tree
 
 The logical control tree represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. For example, a control (button) inside another control (stack panel) in a window will have the 3-layer logical tree shown here:
 
 <img src={ControlTreesLogicalScreenshot} alt=""/>
 
-While your application is running, you can show the _Avalonia Dev Tools_ window (hit F12). This displays the logical tree on its **Logical Tree** tab.
+While your application is running, you can show the _Avalonia Dev Tools_ window (press <kbd>F12</kbd>). This displays the logical tree on its **Logical Tree** tab.
 
-## Visual Tree
+## Visual tree
 
-The visual control tree contains everything that is actually being run by _Avalonia UI_. It shows all the properties set on the controls, and all the additional parts that have been added by _Avalonia UI_ to present the UI and manage the application functionality.
+The visual control tree contains everything that is actually being run by Avalonia. It shows all the properties set on the controls, and all the additional parts that have been added by Avalonia to present the UI and manage the application functionality.
 
 <img src={ControlTreesVisualScreenshot} alt=""/>
 
@@ -27,11 +27,11 @@ You can see the visual control tree on the **Visual Tree** tab of the _Avalonia 
 
 ## Events
 
-An essential part of application functionality management performed by _Avalonia UI_, is the generation and propagation of events. The **Events** tab logs the source and propagation of events as you move around, and otherwise interact with the running application.
+An essential part of application functionality management performed by Avalonia, is the generation and propagation of events. The **Events** tab logs the source and propagation of events as you move around, and otherwise interact with the running application.
 
 <img src={ControlTreesEventScreenshot} alt=""/>
 
-## Logical Tree vs Visual Tree
+## Logical tree vs visual tree
 
 The two trees serve different purposes and contain different levels of detail.
 
@@ -42,7 +42,7 @@ The two trees serve different purposes and contain different levels of detail.
 | Used for | Data context inheritance, resource lookup | Rendering, hit testing, layout |
 | Navigation API | `LogicalExtensions.GetLogicalParent()` | `VisualExtensions.GetVisualParent()` |
 
-## Navigating the Trees in Code
+## Navigating the trees in code
 
 Avalonia provides extension methods for walking both trees programmatically.
 
@@ -69,7 +69,7 @@ var visibleTextBox = myControl.FindDescendantOfType<TextBox>(
 var children = myControl.GetLogicalChildren();
 ```
 
-## Tree Traversal in Custom Controls
+## Tree traversal in custom controls
 
 When building custom controls, you often need to respond to a control being added to or removed from a tree. Override these methods to hook into tree lifecycle events:
 
@@ -90,7 +90,7 @@ protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e
 }
 ```
 
-## See Also
+## See also
 
 - [Visual and Logical Trees](/docs/fundamentals/visual-and-logical-trees): Fundamental concepts.
 - [Templated Controls](/docs/custom-controls/templated-controls): How templates expand into the visual tree.

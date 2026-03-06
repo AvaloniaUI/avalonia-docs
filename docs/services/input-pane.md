@@ -7,7 +7,7 @@ The `InputPane` allows developers to listen for the platform's input pane (e.g.,
 
 The `InputPane` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/fundamentals/top-level) page.
 
-```cs
+```csharp
 var inputPane = TopLevel.GetTopLevel(control).InputPane;
 ```
 
@@ -17,7 +17,7 @@ Currently, Avalonia does not automatically adjust root view and scrolling positi
 Automatic adjustment is planned for future 11.* releases.
 :::
 
-## Properties 
+## Properties
 
 ### State
 The current input pane state.
@@ -25,14 +25,14 @@ Possible values:
 - `InputPaneState.Closed`
 - `InputPaneState.Opened`
 
-```cs
+```csharp
 InputPaneState State { get; }
 ```
 
 ### OccludedRect
 The current input pane bounds.
 
-```cs
+```csharp
 Rect OccludedRect { get; }
 ```
 
@@ -46,7 +46,7 @@ Empty rectangle will be returned in case of floating/detached input pane, that i
 ### StateChanged
 Occurs when the input pane's state has changed.
 
-```cs
+```csharp
 event EventHandler<InputPaneStateEventArgs>? StateChanged;
 ```
 
@@ -59,7 +59,7 @@ Notably, event arguments include several useful parameters:
 
 Having `AnimationDuration` and `Easing` allows developer to create a transition between two states.
 
-## Platform compatibility:
+## Platform compatibility
 
 | Feature        | Windows | macOS | Linux | Browser | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|
@@ -71,3 +71,8 @@ Having `AnimationDuration` and `Easing` allows developer to create a transition 
 | `StateChanged.Easing` | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
 
 \* - only mobile Chromium browsers support IInputPane API.
+
+## See also
+
+- [Insets Manager](insets-manager): System bar visibility and safe area management.
+- [TopLevel](/docs/fundamentals/top-level): Accessing platform services from controls.

@@ -5,13 +5,13 @@ title: Native Platform Interop
 
 Avalonia provides several mechanisms for interacting with native platform APIs and embedding native content within your application.
 
-## Platform-Specific Code Patterns
+## Platform-specific code patterns
 
 For simple platform branching, use runtime detection or conditional compilation. See [Cross-Platform Architecture](/docs/fundamentals/cross-platform-architecture) for these patterns.
 
 For more complex native integration, Avalonia provides direct access to the underlying platform window handles and native APIs.
 
-## Accessing Native Window Handles
+## Accessing native window handles
 
 You can retrieve the native window handle for interop with platform APIs:
 
@@ -43,7 +43,7 @@ This is useful for scenarios like:
 - Passing the window handle to native libraries that need a parent window
 - Integrating with platform-specific mobile SDKs
 
-## Embedding Native Views
+## Embedding native views
 
 Avalonia supports embedding native UI controls within the Avalonia visual tree using `NativeControlHost`. This lets you use platform-specific controls (e.g., a native web browser, media player, or map view) inside an Avalonia layout.
 
@@ -103,7 +103,7 @@ Native views sit on top of the Avalonia rendering surface. This means:
 - **Z-order constraints**: Native views always render on top of Avalonia content. You cannot place Avalonia controls over a native view.
 - **Clipping**: The native view is clipped to its host bounds, but complex clip geometries are not supported.
 
-## P/Invoke and Native Libraries
+## P/Invoke and native libraries
 
 For calling native C libraries, use standard .NET P/Invoke:
 
@@ -148,7 +148,7 @@ Reference them in your `.csproj`:
 
 The .NET runtime automatically loads the correct library for the current platform.
 
-## Platform-Specific Services with Dependency Injection
+## Platform-specific services with dependency injection
 
 For complex native integration, define a service interface in your shared project and implement it per platform:
 
@@ -206,7 +206,7 @@ var platform = DeviceInfo.Platform;
 
 Note that Maui.Essentials supports Windows, macOS (via Catalyst), Android, and iOS. It does not support Linux, WebAssembly, or non-Catalyst macOS builds.
 
-## Custom Rendering with SkiaSharp
+## Custom rendering with SkiaSharp
 
 For direct GPU rendering within an Avalonia control, use `ICustomDrawOperation` with SkiaSharp:
 
@@ -268,7 +268,7 @@ Add the SkiaSharp NuGet package:
 <PackageReference Include="SkiaSharp" Version="2.88.*" />
 ```
 
-## See Also
+## See also
 
 - [Cross-Platform Architecture](/docs/fundamentals/cross-platform-architecture): Solution structure and platform branching patterns.
 - [Platform-Specific .NET](/docs/platform-specific-guides/dotnet): Runtime detection and conditional compilation.

@@ -47,11 +47,11 @@ Gets the parent folder of the current storage item.
 
 ### DeleteAsync
 
-Deletes the current storage item and it's contents
+Deletes the current storage item and its contents
 
 ### MoveAsync
 
-Moves the current storage item and it's contents to a IStorageFolder
+Moves the current storage item and its contents to an `IStorageFolder`
 
 ## StorageFile members
 
@@ -108,3 +108,9 @@ Android platform usually uses "content:" virtual file paths and Browser platform
 :::note
 If you want to save file path to reuse it later (in combination with TryGetFileFromPathAsync), please consider using [Bookmarks](/docs/services/storage/bookmarks) instead as they are designed to work in sandboxed environment, where user app might not have direct access to the physical file system.
 :::
+
+## See also
+
+- [Storage Provider](storage-provider): Full storage provider API reference.
+- [Bookmarks](bookmarks): Persisting access to picked files and folders.
+- [File Dialogs](/docs/services/file-dialogs): Using file open, save, and folder picker dialogs.

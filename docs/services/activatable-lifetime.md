@@ -88,7 +88,7 @@ On macOS and iOS, you need to add CFBundleURLTypes with CFBundleURLSchemes segme
 On Android, you need to add `intent-filter` with specific `android:scheme` to your `AndroidManifest.xml`. See https://developer.android.com/training/app-links/deep-linking for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
 :::
 
-## Platform compatibility:
+## Platform compatibility
 
 | Feature        |  Windows | macOS | Linux | Browser | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|
@@ -99,4 +99,8 @@ On Android, you need to add `intent-filter` with specific `android:scheme` to yo
 | `TryLeaveBackground`  | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
 | `TryEnterBackground` | ✗ | ✓ | ✗ | ✗ | ✓ | ✗ |
 
-See https://github.com/AvaloniaUI/Avalonia/issues/15316 for more information on currently supported and unsupported platforms. 
+See https://github.com/AvaloniaUI/Avalonia/issues/15316 for more information on currently supported and unsupported platforms.
+
+## See also
+
+- [TopLevel](/docs/fundamentals/top-level): Accessing platform services from controls.

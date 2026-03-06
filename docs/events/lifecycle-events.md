@@ -5,7 +5,7 @@ title: Lifecycle Events
 
 Avalonia controls raise several events during their creation, attachment to the visual tree, and removal. Understanding the order and purpose of these events is important for initializing controls, loading data, and cleaning up resources.
 
-## Lifecycle Event Order
+## Lifecycle event order
 
 When a control is created and added to the visual tree, events fire in the following order:
 
@@ -140,9 +140,9 @@ This event fires when:
 - The inherited `DataContext` changes because a parent's `DataContext` changed.
 - The control moves to a different part of the visual tree with a different inherited `DataContext`.
 
-## Typical Initialization Patterns
+## Typical initialization patterns
 
-### Loading Data in a View
+### Loading data in a view
 
 ```csharp
 public partial class CustomerView : UserControl
@@ -164,7 +164,7 @@ public partial class CustomerView : UserControl
 }
 ```
 
-### Managing Subscriptions
+### Managing subscriptions
 
 ```csharp
 public class StatusMonitor : Control
@@ -191,7 +191,7 @@ public class StatusMonitor : Control
 }
 ```
 
-## See Also
+## See also
 
 - [Events Overview](index): How the routed event system works.
 - [Application Lifetimes](/docs/fundamentals/application-lifetimes): Application-level lifecycle events.

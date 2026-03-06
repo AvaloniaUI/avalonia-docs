@@ -3,9 +3,9 @@ id: binding-debugging
 title: Binding Debugging
 ---
 
-When a data binding does not produce the expected result, Avalonia provides several tools and techniques to diagnose the problem.
+When a data binding does not produce the expected result, Avalonia provides tools and techniques to diagnose the problem.
 
-## Binding Error Logging
+## Binding error logging
 
 Avalonia logs binding errors to the trace output. In a debug build, these messages appear in the IDE Output window or the console. A typical binding error looks like:
 
@@ -33,7 +33,7 @@ public static AppBuilder BuildAvaloniaApp()
 
 This produces output for every binding resolution, value change, and fallback applied.
 
-## Common Binding Problems
+## Common binding problems
 
 ### Property not found
 
@@ -106,11 +106,11 @@ Select any control in the tree and examine its properties. For each property, De
 
 Look for properties showing their default value when you expect a bound value. This indicates the binding failed.
 
-### Logical Tree tab
+### Logical tree tab
 
 Navigate the logical tree to find controls and verify their DataContext. Select a control and check the `DataContext` property to confirm it is the expected view model instance.
 
-## Debugging Bindings in Code
+## Debugging bindings in code
 
 ### Observing binding values
 
@@ -141,7 +141,7 @@ Temporarily add a `FallbackValue` to identify whether the binding path is failin
 
 If you see "BINDING FAILED" in the UI, the binding path is wrong or the DataContext is null.
 
-## Compiled Bindings Diagnostics
+## Compiled bindings diagnostics
 
 Compiled bindings are validated at compile time when `x:CompileBindings="True"` is set. If a binding path is invalid, you get a build error instead of a silent runtime failure.
 
@@ -155,7 +155,7 @@ When compiled bindings encounter a property that cannot be resolved at compile t
 1. Fix the `x:DataType` declaration to match the actual data type
 2. Use `ReflectionBinding` for dynamic properties that cannot be statically resolved
 
-## Diagnostic Checklist
+## Diagnostic checklist
 
 When a binding does not work:
 
@@ -168,7 +168,7 @@ When a binding does not work:
 7. Add `FallbackValue` to confirm whether the path resolution is the problem
 8. For compiled bindings, verify `x:DataType` matches the actual runtime type
 
-## See Also
+## See also
 
 - [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding parameters including FallbackValue and TargetNullValue.
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): Compile-time binding validation.

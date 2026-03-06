@@ -5,7 +5,7 @@ title: Avalonia Architecture
 
 This page describes the internal architecture of Avalonia: how controls are measured, arranged, and rendered, how the compositor schedules frames, and how platform backends connect to the rendering pipeline.
 
-## High-Level Overview
+## High-level overview
 
 Avalonia is built in layers. Each layer depends only on the layers below it:
 
@@ -20,7 +20,7 @@ Avalonia is built in layers. Each layer depends only on the layers below it:
 
 Application code interacts primarily with the Controls and Layout layers. The rendering and platform layers operate behind the scenes.
 
-## The Rendering Pipeline
+## The rendering pipeline
 
 Avalonia uses a retained-mode rendering model. Controls do not draw themselves directly. Instead, they declare their visual structure through templates, and the framework builds a scene graph that is rendered each frame.
 
@@ -75,7 +75,7 @@ Avalonia supports two composition modes:
 - **Software composition**: The scene graph is rasterized on the CPU using Skia, then blitted to the platform window. This is the default on most platforms and works everywhere.
 - **GPU composition**: Where the platform supports it (e.g., Direct3D on Windows, Metal on macOS, OpenGL/Vulkan on Linux), Avalonia can issue draw calls directly to the GPU for better performance with complex scenes.
 
-## Platform Abstraction
+## Platform abstraction
 
 Avalonia isolates all platform-specific code behind interfaces. The key abstractions are:
 
@@ -100,7 +100,7 @@ AppBuilder.Configure<App>()
 
 `UsePlatformDetect()` chooses the correct backend automatically. You can also select a specific backend for testing or embedded scenarios.
 
-## The Property System
+## The property system
 
 Avalonia has its own property system that supports styling, animation, data binding, and value inheritance. There are three property types:
 
@@ -110,7 +110,7 @@ Avalonia has its own property system that supports styling, animation, data bind
 
 Property values are resolved through a precedence system. See [Property Value Precedence](/docs/properties/value-precedence) for the full priority order.
 
-## The Styling System
+## The styling system
 
 Avalonia uses a CSS-inspired styling system rather than WPF's resource-lookup-based triggers. Styles are declared with selectors that match controls by type, class, pseudo-class, and name:
 
@@ -124,7 +124,7 @@ The style system evaluates selectors in declaration order. When multiple styles 
 
 Control themes are special styles that provide the default template and property values for a control type. Themes are resolved through the `Theme` property, which allows per-control or per-subtree theme switching.
 
-## The Visual and Logical Trees
+## The visual and logical trees
 
 Every Avalonia UI is represented as two parallel tree structures:
 
@@ -133,7 +133,7 @@ Every Avalonia UI is represented as two parallel tree structures:
 
 See [Visual and Logical Trees](/docs/fundamentals/visual-and-logical-trees) for detailed coverage.
 
-## Threading Model
+## Threading model
 
 Avalonia is single-threaded for UI operations. All property changes, layout, and rendering happen on the UI thread. Background work must marshal results back to the UI thread through the `Dispatcher`:
 
@@ -145,10 +145,10 @@ Items = new ObservableCollection<Item>(data);
 
 See [Threading](/docs/app-development/threading) for the full threading model.
 
-## See Also
+## See also
 
-- [Cross-Platform Architecture](/docs/fundamentals/cross-platform-architecture): Solution structure and platform-specific code patterns.
-- [Visual and Logical Trees](/docs/fundamentals/visual-and-logical-trees): How the two trees work and when to use each.
-- [Property System](/docs/properties): StyledProperty, DirectProperty, and AttachedProperty.
+- [Cross-platform architecture](/docs/fundamentals/cross-platform-architecture): Solution structure and platform-specific code patterns.
+- [Visual and logical trees](/docs/fundamentals/visual-and-logical-trees): How the two trees work and when to use each.
+- [Property system](/docs/properties): StyledProperty, DirectProperty, and AttachedProperty.
 - [Threading](/docs/app-development/threading): Dispatcher and async patterns.
-- [Performance Optimization](/docs/app-development/performance): Layout, rendering, and binding performance tips.
+- [Performance optimization](/docs/app-development/performance): Layout, rendering, and binding performance tips.

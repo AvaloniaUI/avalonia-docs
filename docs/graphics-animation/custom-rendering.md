@@ -1,11 +1,11 @@
 ---
 id: custom-rendering
-title: Custom Rendering
+title: Custom rendering
 ---
 
 Avalonia provides a `DrawingContext` API for rendering custom graphics within controls. This is useful when the built-in shape and geometry controls are not flexible enough for your needs.
 
-## Overriding Render
+## Overriding render
 
 To draw custom content, override the `Render` method on any `Control`:
 
@@ -35,7 +35,7 @@ Use the control in XAML:
 
 The `Render` method is called whenever the control needs to be redrawn. Call `InvalidateVisual()` to request a redraw when your data changes.
 
-## DrawingContext Operations
+## DrawingContext operations
 
 The `DrawingContext` provides these drawing operations:
 
@@ -144,7 +144,7 @@ public override void Render(DrawingContext context)
 }
 ```
 
-## Invalidating the Visual
+## Invalidating the visual
 
 The framework caches the results of `Render`. When your control's data changes, you must explicitly request a redraw:
 
@@ -246,7 +246,7 @@ Add the required NuGet packages:
 <PackageReference Include="SkiaSharp" Version="2.88.*" />
 ```
 
-## GPU Interop with Composition Surfaces
+## GPU interop with composition surfaces
 
 For advanced scenarios such as video playback, 3D engine integration, or cross-process GPU texture sharing, Avalonia's composition API supports importing external GPU resources into a `CompositionDrawingSurface`.
 
@@ -290,7 +290,7 @@ GPU image and semaphore handle types vary by platform. Use `KnownPlatformGraphic
 
 Check `CompositionGpuImportedImageSynchronizationCapabilities` on an imported image to determine which synchronization methods are available (`KeyedMutex`, `Semaphores`, `TimelineSemaphores`).
 
-## Performance Considerations
+## Performance considerations
 
 - `Render` is called on the UI thread. Keep drawing operations fast and avoid allocations where possible.
 - Reuse `Pen`, `Brush`, and `FormattedText` objects when the parameters do not change. Store them as fields and recreate only when their inputs change.
@@ -298,7 +298,7 @@ Check `CompositionGpuImportedImageSynchronizationCapabilities` on an imported im
 - For complex scenes, consider breaking your control into smaller controls so that only the changed portion needs to redraw.
 - `ICustomDrawOperation` bypasses Avalonia's scene graph caching. Use it only when you need SkiaSharp-level control.
 
-## See Also
+## See also
 
 - [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Built-in shape controls and geometry types.
 - [Drawing Controls](/docs/custom-controls/drawing-custom-controls): Creating custom controls that draw themselves.

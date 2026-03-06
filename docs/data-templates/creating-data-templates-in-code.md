@@ -72,3 +72,9 @@ You can now use the class `MyDataTemplate` in your view, like this:
 [Advanced uses of the `FuncDataTemplate<T>`class](https://github.com/AvaloniaUI/Avalonia.Samples/blob/main/src/Avalonia.Samples/DataTemplates/FuncDataTemplateSample).
 
 [Advanced implementations of the `IDataTemplate` interface](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates/IDataTemplateSample).
+
+## See also
+
+- [Introduction to Data Templates](introduction-to-data-templates): Overview of data templates in Avalonia.
+- [Data Template Collection](data-template-collection): Defining multiple templates by type.
+- [View Locator](view-locator): Automatically resolving views for view models.

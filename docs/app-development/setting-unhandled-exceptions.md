@@ -5,7 +5,7 @@ title: Handling Unhandled Exceptions
 
 Production applications need a strategy for catching exceptions that escape normal error handling. Avalonia provides several mechanisms for intercepting unhandled exceptions on the UI thread and from background tasks.
 
-## UI Thread Exceptions
+## UI thread exceptions
 
 ### Dispatcher.UnhandledException
 
@@ -73,9 +73,9 @@ public static void Main(string[] args)
 
 This is your last line of defense. By the time an exception reaches this block, the Avalonia application has already shut down. Use it for logging and cleanup, not for recovery.
 
-## Background Thread Exceptions
+## Background thread exceptions
 
-### Unobserved Task exceptions
+### Unobserved task exceptions
 
 Exceptions thrown inside `Task.Run` or other async operations that are never awaited or observed become unobserved task exceptions. By default, these are silently swallowed in .NET. Subscribe to `TaskScheduler.UnobservedTaskException` to detect them:
 
@@ -108,7 +108,7 @@ AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
 
 This event is informational only. You cannot prevent the application from terminating when `IsTerminating` is `true`.
 
-## Recommended Strategy
+## Recommended strategy
 
 A robust exception handling setup combines multiple layers:
 
@@ -159,7 +159,7 @@ public override void OnFrameworkInitializationCompleted()
 
 Use a structured logging library such as [Serilog](https://serilog.net) or [NLog](https://nlog-project.org) to record exceptions to files, consoles, or external services. At minimum, log the exception type, message, and stack trace so you can diagnose issues from production reports.
 
-## See Also
+## See also
 
 - [Application Lifetimes](/docs/fundamentals/application-lifetimes): Desktop and mobile lifetime models.
 - [TaskScheduler.UnobservedTaskException](https://learn.microsoft.com/dotnet/api/system.threading.tasks.taskscheduler.unobservedtaskexception): .NET documentation.

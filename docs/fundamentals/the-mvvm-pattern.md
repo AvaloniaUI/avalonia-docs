@@ -24,7 +24,7 @@ MVVM addresses this by moving application logic into POCOs (Plain Old CLR Object
 
 - **Testability**: View models can be unit tested like any other class, without launching a UI.
 - **Separation of concerns**: UI layout and application logic evolve independently. You can redesign the view without touching the view model.
-- **Natural fit for XAML**: Avalonia's data binding system provides the connection between views and view models, making MVVM straightforward to implement.
+- **Natural fit for XAML**: Avalonia's data binding system provides the connection between views and view models, making MVVM a natural fit.
 
 ## When to use MVVM
 

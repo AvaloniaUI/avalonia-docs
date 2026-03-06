@@ -1,13 +1,13 @@
 ---
 id: composition-animations
-title: Composition Animations
+title: Composition animations
 ---
 
 Composition animations are a code-driven animation system that runs directly on the render thread. They provide fine-grained control over visual properties and deliver smooth, high-performance animations without blocking the UI thread.
 
 This API is similar to the UWP/WinUI Composition layer. Use it when you need programmatic control over animations, want render-thread performance, or need to animate properties that XAML keyframe animations do not support.
 
-## When to Use Composition Animations
+## When to use composition animations
 
 | | Keyframe Animations | Control Transitions | Composition Animations |
 |---|---|---|---|
@@ -24,7 +24,7 @@ Choose composition animations when you need to:
 
 For style-driven scenarios, [Keyframe Animations](keyframe-animations) and [Control Transitions](control-transitions) are simpler and more appropriate.
 
-## Core Concepts
+## Core concepts
 
 ### CompositionVisual and Compositor
 
@@ -52,11 +52,11 @@ The following properties on `CompositionVisual` can be animated:
 | `Opacity` | `float` | The opacity of the visual (0.0 to 1.0). |
 | `Size` | `Vector` | The width and height of the visual. |
 
-## Explicit Animations
+## Explicit animations
 
 Explicit animations run when you call `StartAnimation()` on a visual. You define keyframes, set a duration, and start the animation manually.
 
-### Slide-in Example
+### Slide-in example
 
 This example slides a control in from the left over 400 milliseconds:
 
@@ -74,7 +74,7 @@ visual.StartAnimation("Offset", animation);
 
 Keyframe progress values range from `0f` (start) to `1f` (end). You can insert intermediate keyframes at any value between 0 and 1 for multi-step animations.
 
-### Fade-in Example
+### Fade-in example
 
 ```csharp
 var visual = ElementComposition.GetElementVisual(myControl);
@@ -88,11 +88,11 @@ animation.InsertKeyFrame(1f, 1f);
 visual.StartAnimation("Opacity", animation);
 ```
 
-## Implicit Animations
+## Implicit animations
 
 Implicit animations trigger automatically whenever a mapped property changes. Instead of calling `StartAnimation()`, you assign an `ImplicitAnimationCollection` to the visual. Any time one of the mapped properties changes, the corresponding animation runs.
 
-### Smooth Repositioning Example
+### Smooth repositioning example
 
 This example smoothly animates a control's position whenever its `Offset` changes:
 
@@ -124,11 +124,11 @@ opacityAnimation.InsertExpressionKeyFrame(1f, "this.FinalValue");
 implicitAnimations["Opacity"] = opacityAnimation;
 ```
 
-## Integrating with XAML via Attached Properties
+## Integrating with XAML via attached properties
 
 To use composition animations declaratively, wrap the setup logic in an attached property. This lets you apply composition behavior from XAML styles.
 
-### Attached Property
+### Attached property
 
 ```csharp
 public class CompositionAnimationHelper : AvaloniaObject
@@ -170,7 +170,7 @@ public class CompositionAnimationHelper : AvaloniaObject
 }
 ```
 
-### XAML Usage
+### XAML usage
 
 ```xml
 <Style Selector="ListBoxItem">
@@ -180,7 +180,7 @@ public class CompositionAnimationHelper : AvaloniaObject
 
 Every `ListBoxItem` now smoothly animates to its new position whenever the list reorders or items are added and removed.
 
-## API Reference
+## API reference
 
 | Type / Member | Description |
 |---|---|
@@ -195,7 +195,7 @@ Every `ListBoxItem` now smoothly animates to its new position whenever the list 
 | `ImplicitAnimationCollection` | Maps property names to animations that run automatically on change. |
 | `CompositionVisual.ImplicitAnimations` | Gets or sets the implicit animation collection for a visual. |
 
-## See Also
+## See also
 
 - [Keyframe Animations](keyframe-animations)
 - [Control Transitions](control-transitions)

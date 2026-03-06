@@ -7,7 +7,7 @@ title: Developing with Avalonia for Android
 
 Follow these steps to install the tools you will need, using the CLI:
 
--  Check that you have installed a compatible version of the .NET SDK. The lowest version that works with _Avalonia UI_ is 6.0.2.00.
+-  Check that you have installed a compatible version of the .NET SDK. The lowest version that works with Avalonia is 6.0.2.00.
 
 :::info
 You can see the [available .NET SDK versions](https://dotnet.microsoft.com/en-us/download/dotnet).

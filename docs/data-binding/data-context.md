@@ -78,7 +78,7 @@ When the project runs, the data binder searches up the logical control tree from
 
 <img src={DataContextGreetingBindingScreenshot} alt=""/>
 
-## Design Data Context
+## Design data context
 
 You may have noticed, after you first compiled this project, that the preview pane also shows the greeting.
 
@@ -101,3 +101,9 @@ For a more detailed guide about using the design-time data context, see [XAML Pr
 :::info
 Further discussion of data binding requires you to have a background in the MVVM pattern of programming. For an introduction to the concepts of the MVVM pattern, see [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern).
 :::
+
+## See also
+
+- [Introduction to Data Binding](/docs/data-binding/introduction-to-data-binding): Data binding overview.
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding paths, modes, and converters.
+- [XAML Preview and Design Settings](/docs/app-development/xaml-preview-and-design-settings): Design-time data context configuration.

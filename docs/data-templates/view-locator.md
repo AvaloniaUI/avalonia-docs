@@ -198,7 +198,7 @@ For building your own source generator, see [Microsoft's Source Generators docum
 | DI + pattern matching | Yes | Yes | Yes | Add line per view model |
 | Source generator | Yes | Yes | Varies | None (auto-generated) |
 
-## See Also
+## See also
 
 - [Introduction to Data Templates](/docs/data-templates/introduction-to-data-templates): How Avalonia selects and applies data templates.
 - [Data Template Collection](/docs/data-templates/data-template-collection): Defining multiple templates by type.

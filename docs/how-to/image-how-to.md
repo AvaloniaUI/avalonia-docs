@@ -1,6 +1,6 @@
 ---
 id: image-how-to
-title: "How To: Display and Manipulate Images"
+title: "How to: Display and Manipulate Images"
 ---
 
 This guide covers Image control patterns: loading images from various sources, aspect ratio handling, dynamic images, and bitmap manipulation.

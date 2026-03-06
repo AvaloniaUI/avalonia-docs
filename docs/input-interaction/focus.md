@@ -17,7 +17,7 @@ The `Focusable` property enables or disables the ability to focus an `InputEleme
 can still be interacted with via pointer, so some care should be taken that a functional keyboard equivalent (such as 
 hotkeys) is available when possible.
 
-## Explicit Focusing
+## Explicit focusing
 
 To explicitly assign focus to any `InputElement`, call its `.Focus()` method from code. Optionally, you may specify the 
 `NavigationMethod` and `KeyModifiers` to simulate as if the focus were triggered by a specific focus navigation flow. Explicit 
@@ -31,12 +31,12 @@ to the next `InputControl` once the current input has been satisfied.
 | Directional      | 2D Directional (`XYFocus`) |
 | Unspecified      | Default                    |
 
-## Focus Events
+## Focus events
 
 `InputElement`s expose `GotFocus` and `LostFocus` events. The `GotFocusEventArgs` contains the `NavigationMethod` and 
 `KeyModifiers` used to trigger the focus navigation.
 
-## Focus Pseudoclasses
+## Focus pseudoclasses
 
 These pseudoclasses are helpful when styling `Control`s that are `Focusable`.
 
@@ -57,7 +57,7 @@ avoid showing a duplicate indicator.
 The `FocusManager` provides global access to focus functionality, such as retrieving the currently focused element or
 clearing focus. For additional information, see the [FocusManager docs](/docs/services/focus-manager).
 
-## Tab Focus Navigation
+## Tab focus navigation
 
 Focus navigation by tab occurs when the user presses tab on their keyboard. `InputElement`s with their `IsTabStop` property 
 set to `true` will be available for tab focus navigation. The `TabIndex` specifies the priority with lower numeric values being 
@@ -75,7 +75,7 @@ a container and modify its tab navigation characteristics.
 | None                   | Items will not be focused by tab navigation               |
 | Local                  | `TabIndex` is considered for items in local subtree only  |
 
-## Directional Focus Navigation
+## Directional focus navigation
 
 Focus navigation through `XYFocus` is a 2D directional scheme enabling spatial navigation from the focused control 
 towards another control in a cardinal direction: left, right, up, or down. By default, `XYFocus.NavigationModes` is set 
@@ -92,7 +92,7 @@ to allow `Gamepad` and `Remote` navigation.
 Gamepad inputs are supported on devices that can natively send these inputs, such as Android. However, 
 Avalonia currently lacks cross-platform Gamepad APIs required for broad out-of-the-box support.
 
-### Navigation Strategy
+### Navigation strategy
 
 When 2D directional navigation is enabled, a disambiguation strategy is used to select the navigation target.
 
@@ -103,7 +103,7 @@ When 2D directional navigation is enabled, a disambiguation strategy is used to 
 | NavigationDirectionDistance | Closest element to the axis of the navigation line.                           |
 | RectilinearDistance         | Closest element based on the shortest Manhattan distance.                     |
 
-### Explicit Navigation
+### Explicit navigation
 
 `XYFocus` allows each control to specify an explicit navigation target when a direction is pressed via `XYFocus.Up`, 
 `XYFocus.Down`, `XYFocus.Left`, and `XYFocus.Right`. This has priority over any navigation strategy.
@@ -149,3 +149,9 @@ navigation. Pressing Enter a second time will end the interaction and resume Dir
 ```
 
 <img src={DirectionalNavigationScreenshot} alt="Directional Navigation Example"/>
+
+## See also
+
+- [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings and keyboard shortcuts.
+- [FocusManager](/docs/services/focus-manager): Global focus management service.
+- [Pointer Events](/docs/input-interaction/pointer): Pointer device events.

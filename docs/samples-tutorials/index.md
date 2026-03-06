@@ -1,6 +1,6 @@
 ---
 id: index
-title: Samples & Tutorials
+title: Samples and tutorials
 hide_table_of_contents: true
 ---
 
@@ -8,7 +8,7 @@ import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
 <head>
-  <title>Avalonia documentation: Samples & Tutorials</title>
+  <title>Avalonia documentation: Samples and tutorials</title>
   <meta
     name="description"
     content="Explore Avalonia tutorials, sample apps, and quick guides to accelerate your learning."
@@ -40,7 +40,7 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 </DocsCards>
 
-## MVVM Samples
+## MVVM samples
 
 <DocsCards>
 
@@ -70,7 +70,7 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 </DocsCards>
 
-## Data Templates Samples
+## Data templates samples
 
 <DocsCards>
 
@@ -88,7 +88,7 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 </DocsCards>
 
-## Styles and Drawing Samples
+## Styles and drawing samples
 
 <DocsCards>
 
@@ -126,7 +126,7 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 </DocsCards>
 
-## Custom Controls Samples
+## Custom controls samples
 
 <DocsCards>
 
@@ -140,7 +140,7 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 </DocsCards>
 
-## Testing Samples
+## Testing samples
 
 <DocsCards>
 
@@ -158,7 +158,7 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 </DocsCards>
 
-## Other Samples
+## Other samples
 
 <DocsCards>
 
@@ -191,3 +191,8 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
   </DocsCard>
 
 </DocsCards>
+
+## See also
+
+- [Get Started](/docs/get-started/first-app): Create your first Avalonia application.
+- [Controls Reference](/controls): Full Avalonia controls documentation.

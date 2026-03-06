@@ -1,6 +1,6 @@
 ﻿---
 id: how-to-bind-multiple-properties
-title: How to Bind Multiple Properties
+title: How to bind multiple properties
 ---
 
 import MultiBindingRgbScreenshot from '/img/guides/data/multibinding-rgb.gif';
@@ -28,7 +28,7 @@ public interface IMultiValueConverter
 }
 ```
 
-## MultiBinding Example
+## MultiBinding example
 
 Consider the following scenario where you have inputs for red, green, and blue color channels. The aim is to bind 
 all 3 inputs and provide an `IBrush` for another control to draw with. Below, the color channel values are constrained 
@@ -91,3 +91,8 @@ public sealed class RgbToBrushMultiConverter : IMultiValueConverter
 * Consider creating a `MarkupExtension` to simplify the XAML syntax when a `MultiBinding` is frequently reused.
 * Consider using `FuncMultiValueConverter` to reduce the amount of code needed for simpler converters.
 :::
+
+## See also
+
+- [MultiBinding](/docs/data-binding/multi-binding): Full MultiBinding reference.
+- [Built-in Data Binding Converters](/docs/data-binding/built-in-data-binding-converters): Converters shipped with Avalonia.

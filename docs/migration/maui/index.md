@@ -8,7 +8,7 @@ If you are a .NET MAUI developer, you have two paths to Avalonia. You can keep y
 The Avalonia team has hands-on experience working with MAUI codebases. Whether you want to adopt the Avalonia MAUI Backend or migrate fully to Avalonia, this is a service we provide. See [Avalonia Services](https://avaloniaui.net/services) for more information.
 :::
 
-## Option 1: Avalonia MAUI Backend
+## Option 1: Avalonia MAUI backend
 
 The Avalonia MAUI Backend lets you keep your .NET MAUI codebase and replace the rendering layer with Avalonia. Your existing MAUI code, controls, handlers, and layouts continue to work, but they render through Avalonia's cross-platform engine instead of native platform controls.
 
@@ -47,7 +47,7 @@ The project will not fork .NET MAUI. Any changes needed to support the integrati
 The Avalonia MAUI Backend is in active development. Register your interest at [avaloniaui.net](https://avaloniaui.net) to get updates and early access.
 :::
 
-## Option 2: Migrate to Avalonia
+## Option 2: migrate to Avalonia
 
 If you want full control over the UI framework, or if your application needs capabilities beyond what MAUI offers (CSS-like styling, custom rendering, advanced desktop features), you can migrate your MAUI application to Avalonia directly.
 
@@ -224,7 +224,7 @@ In Avalonia, platform-specific code is rare. Because Avalonia controls its own r
 
 ### Migration steps
 
-There is no automated converter from MAUI to Avalonia. The migration is a manual process, but the similarities between the two frameworks make it straightforward. Work through your application one layer at a time.
+There is no automated converter from MAUI to Avalonia. The migration is a manual process, but the similarities between the two frameworks make the process manageable. Work through your application one layer at a time.
 
 #### 1. Create a new Avalonia project
 

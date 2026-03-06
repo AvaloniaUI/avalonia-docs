@@ -1,6 +1,6 @@
 ---
 id: theme-switching-how-to
-title: "How To: Switch Between Light and Dark Themes"
+title: "How to: Switch Between Light and Dark Themes"
 ---
 
 This guide covers implementing a light/dark theme toggle, persisting the user's choice, and creating theme-aware resources.

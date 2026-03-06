@@ -5,9 +5,9 @@ title: Native AOT
 
 Native AOT (Ahead-of-Time) compilation allows you to publish your Avalonia applications as self-contained executables with native performance characteristics. This guide covers Avalonia-specific considerations and setup for Native AOT deployment.
 
-## Benefits for Avalonia Applications
+## Benefits for Avalonia applications
 
-Native AOT compilation provides several advantages specifically relevant to Avalonia applications:
+Native AOT compilation provides the following advantages for Avalonia applications:
 
 - Faster application startup time, particularly beneficial for desktop applications
 - Reduced memory footprint for resource-constrained environments
@@ -15,9 +15,9 @@ Native AOT compilation provides several advantages specifically relevant to Aval
 - Improved security through reduced attack surface (no JIT compilation)
 - Smaller distribution size when combined with trimming
 
-## Setting Up Native AOT for Avalonia
+## Setting up Native AOT for Avalonia
 
-### Project Configuration
+### Project configuration
 
 Add the following to your csproj file:
 
@@ -29,25 +29,25 @@ Add the following to your csproj file:
 </PropertyGroup>
 ```
 
-## Avalonia-Specific Considerations
+## Avalonia-specific considerations
 
-### XAML Loading
+### XAML loading
 When using Native AOT, XAML is compiled into the application at build time. Ensure you:
 - Use `x:CompileBindings="True"` in your XAML files
 - Avoid dynamic XAML loading at runtime
 - Use static resource references instead of dynamic resources where possible
 
-### Assets and Resources
+### Assets and resources
 - Bundle all assets as embedded resources
 - Use `AvaloniaResource` build action for your assets
 - Avoid dynamic asset loading from external sources
 
-### ViewModels and Dependency Injection
-- Register your ViewModels at startup
+### View models and dependency injection
+- Register your view models at startup
 - Use compile-time DI configuration
 - Avoid reflection-based service location
 
-## Publishing Avalonia Native AOT Applications
+## Publishing Avalonia Native AOT applications
 
 ### Windows
 ```bash
@@ -74,11 +74,10 @@ dotnet publish -r osx-arm64 -c Release
 You can then use Apple's [lipo tool](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary) to combine both Intel and Apple Silicon binaries, enabling you to ship  Universal binaries.
 :::
 
-## Troubleshooting Common Issues
+## Troubleshooting common issues
 
-
-### 1. Reflection-Related Errors
-For ViewModels or services using reflection:
+### 1. Reflection-related errors
+For view models or services using reflection:
 ```xml
 <ItemGroup>
     <TrimmerRootDescriptor Include="TrimmerRoots.xml" />
@@ -94,7 +93,7 @@ Create a `TrimmerRoots.xml`:
 </linker>
 ```
 
-## Known Limitations
+## Known limitations
 
 When using Native AOT with Avalonia, be aware of these limitations:
 - Dynamic control creation must be configured in trimmer settings
@@ -102,11 +101,11 @@ When using Native AOT with Avalonia, be aware of these limitations:
 - Platform-specific features need explicit configuration
 - Live preview in design-time tools may be limited
 
-## Platform Support
+## Platform support
 
-For platform support, please refer to [Platform/architecture restrictions](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/#platformarchitecture-restrictions).
+For platform support, refer to [Platform/architecture restrictions](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/#platformarchitecture-restrictions).
 
-## Additional Resources
+## See also
 
-- [Native AOT deployment](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet9plus#platformarchitecture-restrictions)
-- [Avalonia Sample Applications with Native AOT](https://github.com/AvaloniaUI/Avalonia.Samples)
+- [Native AOT deployment](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet9plus#platformarchitecture-restrictions): Microsoft documentation on Native AOT.
+- [Avalonia sample applications with Native AOT](https://github.com/AvaloniaUI/Avalonia.Samples): Example projects.

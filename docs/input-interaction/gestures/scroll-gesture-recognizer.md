@@ -90,7 +90,7 @@ image.GestureRecognizers.Add(new ScrollGestureRecognizer()
 
 The ScrollGestureRecognizer raises a `InputElement.ScrollGestureEvent` when it detects the start of a scroll gesture. When the scroll ends, from the pointer being released or another gesture start, it raises a `InputElement.ScrollGestureEndedEvent`.
 
-## Binding Events
+## Binding events
 After the ScrollGestureRecognizer has been added to your control, you need to bind them in your code behind either through an inline handler or to an event function:
 ```csharp title='C#'
 image.AddHandler(InputElement.ScrollGestureEvent, (s, e) => { });
@@ -107,7 +107,7 @@ If your event handles the gesture completely, you can mark the event as handled 
 ```csharp title='C#'
 e.Handled = true;
 ```
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -131,7 +131,7 @@ You will probably use these properties most often:
   </table>
 
 
-## More Information
+## More information
 
 :::info
 For the complete API documentation about this gesture recognizer, see the [ScrollGestureRecognizer API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_GestureRecognizers_ScrollGestureRecognizer).
@@ -140,3 +140,9 @@ For the complete API documentation about this gesture recognizer, see the [Scrol
 :::info
 View the source code on _GitHub_ [`ScrollGestureRecognizer.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/GestureRecognizers/ScrollGestureRecognizer.cs)
 :::
+
+## See also
+
+- [Gestures](/docs/input-interaction/gestures): Overview of gesture recognizers and built-in gesture events.
+- [Pull Gesture Recognizer](/docs/input-interaction/gestures/pull-gesture-recognizer): Pull gesture for pull-to-refresh interactions.
+- [Pinch Gesture Recognizer](/docs/input-interaction/gestures/pinch-gesture-recognizer): Pinch gesture for zoom interactions.

@@ -5,7 +5,7 @@ title: Defining events
 
 Events in Avalonia allow your custom controls to communicate and notify users of specific actions or occurrences. By defining events, you provide a way for users of your controls to respond and react to these events within their applications. This document will guide you through the process of defining events for your custom controls.
 
-## Routed Event
+## Routed event
 
 Routed events in Avalonia offer a mechanism for handling events that can travel (or "route") through the control tree, allowing multiple controls to respond to the same event. Routed events provide the following key features:
 
@@ -44,7 +44,7 @@ public class MyCustomSlider : Control
 
 In this example, a custom routed event called `ValueChangedEvent` is defined for the `MyCustomSlider` control. The event is registered using the `RoutedEvent` system, allowing it to be subscribed by users of the control. A CLR event is also defined for convenience, allowing the event to be consumed in manner consistent with standard .NET APIs.
 
-## Custom Event Args
+## Custom event args
 
 When your event needs to carry additional data, create a custom class that inherits from `RoutedEventArgs`:
 
@@ -87,7 +87,7 @@ protected virtual void OnValueChanged(double oldValue, double newValue)
 }
 ```
 
-## Routing Strategies
+## Routing strategies
 
 Avalonia supports several routing strategies that control how events propagate through the visual tree:
 
@@ -107,7 +107,7 @@ RoutedEvent.Register<MyControl, RoutedEventArgs>(
 
 Using `Bubble | Tunnel` together is useful when you want to give parent controls a chance to preview and intercept the event (during the tunnel phase) before the source control handles it (during the bubble phase).
 
-## Handling Events in XAML
+## Handling events in XAML
 
 Users of your custom control can subscribe to the event directly in XAML:
 
@@ -124,7 +124,7 @@ private void OnSliderValueChanged(object? sender, ValueChangedEventArgs e)
 }
 ```
 
-## Class Handlers
+## Class handlers
 
 Class handlers let you register event handling logic at the class level rather than on individual instances. This is useful for default behavior that should apply to all instances of a control:
 
@@ -142,7 +142,7 @@ private void OnValueChanged(ValueChangedEventArgs e)
 
 Class handlers are invoked before instance handlers and are registered in the static constructor so they apply automatically to every instance of the control.
 
-## See Also
+## See also
 
 - [Routed Events](/docs/input-interaction/routed-events): Full routed events reference.
 - [Events System](/docs/events/index): Overview of the events system.

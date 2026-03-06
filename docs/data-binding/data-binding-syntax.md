@@ -9,7 +9,7 @@ Avalonia supports creating data bindings in XAML and code. Data bindings in XAML
 `Binding` `MarkupExtension` described by this document. To create data bindings in code,
 see [How To Bind from Code](/docs/data-binding/binding-from-code).
 
-## Data Binding MarkupExtension
+## Data binding MarkupExtension
 
 The `Binding` `MarkupExtension` uses the keyword `Binding` in combination with optional parameters to define the data 
 source and other options as shown by the following example:
@@ -37,7 +37,7 @@ source and other options as shown by the following example:
 These parameters must be known and set at the time of binding creation. They are CLR properties that cannot 
 be set and updated by additional bindings.
 
-## Data Binding Path
+## Data binding path
 
 The first parameter specified is usually the `Path`. This is the name of a property in the `Source` (`DataContext` by default) 
 that Avalonia locates when creating the binding.
@@ -73,7 +73,7 @@ Use the `?.` operator in a binding path to safely navigate through properties th
 
 This is equivalent to C#'s null conditional operator. Without `?.`, a null `SelectedStudent` would produce a binding error.
 
-## Empty Binding Path
+## Empty binding path
 
 You can specify data bindings without a `Path`. This binds to the `DataContext` of the `Control` itself (where the binding 
 is defined). These two syntaxes are equivalent:
@@ -83,7 +83,7 @@ is defined). These two syntaxes are equivalent:
 <TextBlock Text="{Binding .}" />
 ```
 
-## Data Binding Mode
+## Data binding mode
 
 You can change the direction(s) data is synchronized by specifying the `Mode`.
 
@@ -112,7 +112,7 @@ is usually `TwoWay`.
 
 For example, the default mode for a `TextBlock.Text` property is `OneWay`, and the default mode for a `TextBox.Text` property is `TwoWay`.
 
-## Data Binding Sources
+## Data binding sources
 
 The `Source` specifies the root object instance that the `Path` is relative to. By default, this is the `DataContext` of the 
 containing `Control`. The most common scenario involves binding to another control using `ElementName` or `RelativeSource` 
@@ -132,12 +132,12 @@ parameters or with their shorthand syntax as part of the `Path` (`#controlName` 
 For more details on how to bind to controls, see [How To Bind to a Control](/docs/data-binding/binding-to-controls)
 :::
 
-## Converting Bound Values
+## Converting bound values
 
 Bindings offer multiple approaches to convert or substitute the value supplied by a data binding into a type or value 
 that is more appropriate for the target property.
 
-### String Formatting
+### String formatting
 
 You can apply a pattern to a `OneWay` binding to format the bound source property as text via the `StringFormat` 
 parameter which uses `string.Format` internally.
@@ -171,7 +171,7 @@ escape. For example:
     StringFormat='{}{0} animals live in the farm.'}" />
 ```
 
-### String Formatting with Multiple Parameters
+### String formatting with multiple parameters
 
 `MultiBinding` can be used to format a string that requires multiple bound parameters. The example below formats multiple 
 numeric inputs as a single string to be displayed.
@@ -206,7 +206,7 @@ An alternative is to use an `InlineCollection` of `Run` elements each with their
 binding. This allows visual customization of each segment.
 :::
 
-### Built-in Conversions
+### Built-in conversions
 
 Avalonia has a range of built-in data binding converters. These include:
 
@@ -217,7 +217,7 @@ Avalonia has a range of built-in data binding converters. These include:
 For a listing of Avalonia built-in data binding converters, see the [built-in data binding converters reference](/docs/data-binding/built-in-data-binding-converters).
 :::
 
-### Custom Conversions
+### Custom conversions
 
 If the built-in converters do not meet your requirements, then you can create a custom converter by implementing `IValueConverter`.
 
@@ -299,7 +299,7 @@ The `Delay` parameter specifies a time (in milliseconds) to wait before the bind
 
 This is particularly useful for search-as-you-type scenarios, where you want to avoid triggering expensive operations (such as filtering or querying a service) on every keystroke.
 
-### XAML Usage
+### XAML usage
 
 ```xml
 <TextBox Text="{Binding SearchText, Delay=300}" />
@@ -307,7 +307,7 @@ This is particularly useful for search-as-you-type scenarios, where you want to 
 
 In this example, the `SearchText` property on the view model will only be updated 300 milliseconds after the user stops typing.
 
-### Code Usage
+### Code usage
 
 When creating bindings in code, set the `Delay` property to a `TimeSpan`:
 
@@ -319,7 +319,7 @@ var binding = new Binding("SearchText")
 myTextBox.Bind(TextBox.TextProperty, binding);
 ```
 
-### Practical Example
+### Practical example
 
 The following example shows a search TextBox that waits 300ms after the user stops typing before updating the bound property. This prevents a search operation from running on every keystroke.
 
@@ -363,3 +363,9 @@ public class SearchViewModel : ObservableObject
             : $"Searching for: {query}";
     }
 }
+
+## See also
+
+- [Data Context](/docs/data-binding/data-context): Where the data binder gets the data object from.
+- [Compiled Bindings](/docs/data-binding/compiled-bindings): Compile-time binding validation.
+- [How to Create a Custom Data Binding Converter](/docs/data-binding/how-to-create-a-custom-data-binding-converter): Custom value converters.

@@ -46,20 +46,20 @@ namespace AvaloniaCCExample.CustomControls
 
 This example defines a simple brush property on the custom control for the background color. It then overrides the `Render` method to draw the control.
 
-The drawing code uses the _Avalonia UI_ graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
+The drawing code uses the Avalonia graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
 
 <img src={DrawWithPropertyScreenshot} alt=""/>
 
 Notice how the control now shows both at runtime (above) and in the preview pane.
 
-On the next page, you will see how to implement the background property so that it can be changed by the _Avalonia UI_ styling system. 
+On the next page, you will see how to implement the background property so that it can be changed by the Avalonia styling system. 
 
 :::tip
 You can find a more advanced tutorial in [Avalonia.Samples](
 https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample)
 :::
 
-## DrawingContext Methods
+## DrawingContext methods
 
 The `DrawingContext` provides several methods for rendering content in your custom control:
 
@@ -73,7 +73,7 @@ The `DrawingContext` provides several methods for rendering content in your cust
 | `DrawImage` | Draws a bitmap image |
 | `FillRectangle` | Fills a rectangle (shorthand) |
 
-## Drawing Shapes
+## Drawing shapes
 
 The following example demonstrates drawing multiple shapes within a single `Render` override:
 
@@ -93,7 +93,7 @@ public override void Render(DrawingContext context)
 }
 ```
 
-## Drawing Text
+## Drawing text
 
 You can draw formatted text using `DrawText` with a `FormattedText` object:
 
@@ -112,7 +112,7 @@ public override void Render(DrawingContext context)
 }
 ```
 
-## Using Clipping and Transforms
+## Using clipping and transforms
 
 The `DrawingContext` supports clipping regions and transforms. Both `PushClip` and `PushTransform` return disposable objects, so wrapping them in `using` blocks ensures the state is restored automatically:
 
@@ -134,7 +134,7 @@ public override void Render(DrawingContext context)
 }
 ```
 
-## Invalidating the Visual
+## Invalidating the visual
 
 To trigger a re-render when a property changes, register the property with `AffectsRender` in the static constructor, or call `InvalidateVisual()` manually:
 
@@ -147,7 +147,7 @@ static MyCustomControl()
 
 Calling `InvalidateVisual()` on a control instance marks it as needing a redraw. Avalonia will then call `Render` again on the next layout pass.
 
-## See Also
+## See also
 
 - [Custom Rendering](/docs/graphics-animation/custom-rendering): Advanced rendering techniques.
 - [Brushes](/docs/graphics-animation/brushes): Available brush types.

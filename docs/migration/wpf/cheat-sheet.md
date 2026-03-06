@@ -1,11 +1,11 @@
 ---
 id: cheat-sheet
-title: WPF to Avalonia Cheat Sheet
+title: WPF to Avalonia cheat sheet
 ---
 
 A quick reference for WPF developers transitioning to Avalonia. Each entry shows the WPF concept and its Avalonia equivalent.
 
-## XAML Namespace
+## XAML namespace
 
 | WPF | Avalonia |
 |---|---|
@@ -13,7 +13,7 @@ A quick reference for WPF developers transitioning to Avalonia. Each entry shows
 | `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` | Same |
 | `xmlns:local="clr-namespace:MyApp"` | `xmlns:local="using:MyApp"` (preferred) or `clr-namespace:` |
 
-## Property System
+## Property system
 
 | WPF | Avalonia | Notes |
 |---|---|---|
@@ -65,7 +65,7 @@ Or with a binding converter:
 <Border Background="{Binding IsActive, Converter={StaticResource BoolToColorConverter}}" />
 ```
 
-## Data Binding
+## Data binding
 
 | WPF | Avalonia | Notes |
 |---|---|---|
@@ -220,7 +220,7 @@ Or with a binding converter:
 | `OpacityMask` | `OpacityMask` | Same |
 | `Path` | `Path` | Same; same mini-language |
 
-## File Structure
+## File structure
 
 | WPF | Avalonia |
 |---|---|
@@ -230,7 +230,7 @@ Or with a binding converter:
 | `.xaml.cs` code-behind | `.axaml.cs` code-behind |
 | `.csproj` WPF SDK | `.csproj` Avalonia SDK |
 
-## Common Gotchas
+## Common gotchas
 
 1. **No triggers**: Avalonia uses pseudo-classes and CSS-like selectors instead of WPF triggers. See [Pseudo-Classes](/docs/styling/pseudoclasses).
 
@@ -252,7 +252,7 @@ Or with a binding converter:
 
 10. **Default binding modes**: Some controls have different default binding modes than WPF. Check the control documentation if a binding does not update as expected.
 
-## See Also
+## See also
 
 - [Migrating from WPF](/docs/migration/wpf): Detailed migration guides.
 - [Avalonia Architecture](/docs/fundamentals/architecture): How Avalonia works internally.

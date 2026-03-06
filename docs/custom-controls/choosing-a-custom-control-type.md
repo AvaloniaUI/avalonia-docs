@@ -3,7 +3,7 @@ id: choosing-a-custom-control-type
 title: Choosing a custom control type
 ---
 
-Avalonia provides various approaches for creating custom controls to meet your application's specific needs. Understanding the different types of custom controls will help you choose the most appropriate approach for your requirements. In Avalonia, the three common types of custom controls are  UserControls`, lookless controls, and custom-drawn controls.
+Avalonia provides various approaches for creating custom controls to meet your application's specific needs. Understanding the different types of custom controls will help you choose the most appropriate approach for your requirements. In Avalonia, the three common types of custom controls are `UserControl`s, lookless controls, and custom-drawn controls.
 
 ## UserControl
 
@@ -25,7 +25,7 @@ Creating a `UserControl` involves the following steps:
 <GitHubSampleLink title="Custom Control" link="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl"/>
 
 
-## Templated (Lookless) Controls
+## Templated (lookless) controls
 
 Templated controls (also known as "Lookless controls") provide a more advanced and customizable approach for creating custom controls in Avalonia. A templated control separates the control's behavior and logic from its visual appearance, allowing the control to be styled and templated by the application developer.
 
@@ -45,7 +45,7 @@ Creating a templated control involves the following steps:
 
 Templated controls provide greater flexibility and reusability, making them ideal for scenarios where you want to provide a control that can be styled to match different visual themes or adapt to various user preferences.
 
-## Custom-drawn Controls
+## Custom-drawn controls
 
 Custom-drawn controls offer the highest level of customization in Avalonia. With custom-drawn controls, you have complete control over the rendering of the control's visual elements, allowing you to create unique and complex visual representations.
 
@@ -60,3 +60,10 @@ Creating a custom-drawn control involves the following steps:
 1. **Define the Control Class**: Create a new class that derives from `Control`. This class will define the behavior and rendering logic of the control.
 
 2. **Override the Render Method**: Override the `Render` method in the control class and use the `DrawingContext` to draw the control's content.
+
+## See also
+
+- [Custom Control Class](custom-control-class)
+- [Templated Controls](templated-controls)
+- [Drawing Custom Controls](drawing-custom-controls)
+- [Defining Properties](defining-properties)

@@ -148,3 +148,9 @@ public class CustomTransition : IPageTransition
 ```
 
 <img src={CustomPageTransitionScreenshot} alt=''/>
+
+## See also
+
+- [Animations](animations): Overview of animation types in Avalonia.
+- [Keyframe Animations](keyframe-animations): Multi-step keyframe animations.
+- [Control Transitions](control-transitions): Animating property changes.

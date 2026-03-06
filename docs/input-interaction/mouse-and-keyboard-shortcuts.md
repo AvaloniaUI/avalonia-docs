@@ -100,3 +100,9 @@ public class MainViewModel : ViewModelBase
 </Tabs>
 
 <img src={KeyMouseScreenshot} alt="" />
+
+## See also
+
+- [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings and hotkey configuration.
+- [Commanding](/docs/input-interaction/commanding): ICommand interface and command binding.
+- [Adding Interactivity](/docs/input-interaction/adding-interactivity): Events and commands overview.

@@ -1,6 +1,6 @@
 ---
 id: dialogs-how-to
-title: "How To: Work with Dialogs"
+title: "How to: Work with Dialogs"
 ---
 
 This guide covers creating and showing modal dialogs, returning results, and building custom dialog windows.

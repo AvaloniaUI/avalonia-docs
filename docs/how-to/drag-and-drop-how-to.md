@@ -1,6 +1,6 @@
 ---
 id: drag-and-drop-how-to
-title: "How To: Implement Drag and Drop"
+title: "How to: Implement Drag and Drop"
 ---
 
 This guide covers common drag-and-drop scenarios: initiating drags, handling drops, visual feedback, and file drops.

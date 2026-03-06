@@ -1,5 +1,5 @@
 ---
-title: Other Frameworks
+title: Other frameworks
 ---
 
 Avalonia is not only for developers coming from Microsoft's XAML ecosystem. If you are building desktop or cross-platform applications with Delphi, Qt, Electron, or ASP.NET MVC and looking for a modern .NET alternative, Avalonia may be a strong fit.
@@ -16,7 +16,7 @@ Delphi has been a mainstay of desktop development for decades. Many business-cri
 
 Avalonia gives you a path to .NET, which has a vastly larger developer pool, an active open-source ecosystem, and modern tooling. The transition requires learning XAML and MVVM, but the core concepts map surprisingly well.
 
-### Concept Mapping
+### Concept mapping
 
 | Delphi (VCL / FMX) | Avalonia | Notes |
 |---|---|---|
@@ -44,7 +44,7 @@ Avalonia gives you a path to .NET, which has a vastly larger developer pool, an 
 | DFM form files | `.axaml` XAML files | Declarative layout |
 | `Application.CreateForm()` | `AppBuilder` pipeline | |
 
-### Key Differences
+### Key differences
 
 - **No visual form designer (drag-and-drop):** Avalonia uses XAML to declare layout. There is a live previewer, but you write markup rather than drag components onto a canvas. Most developers find this faster once they are past the initial learning curve.
 - **MVVM replaces event-driven code:** In Delphi, you wire button clicks directly to methods. In Avalonia, you bind controls to properties and commands on a view model. This separation makes the code easier to test and maintain.
@@ -55,7 +55,7 @@ Avalonia gives you a path to .NET, which has a vastly larger developer pool, an 
 
 Qt is a proven cross-platform framework, but its C++ foundation, licensing complexity (LGPL vs commercial), and the split between Qt Widgets and QML can create friction. If your team is already using .NET or wants to, Avalonia offers a cross-platform UI framework without leaving the .NET ecosystem.
 
-### Concept Mapping
+### Concept mapping
 
 | Qt | Avalonia | Notes |
 |---|---|---|
@@ -82,7 +82,7 @@ Qt is a proven cross-platform framework, but its C++ foundation, licensing compl
 | `.ui` files (Qt Designer) | `.axaml` files | |
 | `qmake` / `CMake` | MSBuild / `dotnet` CLI | |
 
-### Key Differences
+### Key differences
 
 - **No C++ required:** Avalonia is pure .NET (C# or F#). No bridging layers, no P/Invoke for basic UI work.
 - **Simpler licensing:** Avalonia is MIT-licensed. No LGPL compliance concerns, no commercial license fees for the framework itself.
@@ -93,14 +93,14 @@ Qt is a proven cross-platform framework, but its C++ foundation, licensing compl
 
 Electron applications are web apps packaged with Chromium. They work, but they consume significant memory and CPU, start slowly, and feel disconnected from the operating system. If your team chose Electron because it was the fastest way to cross-platform, Avalonia offers the same reach with native performance.
 
-### Why Teams Move Away from Electron
+### Why teams move away from Electron
 
 - **Memory usage:** Each Electron app bundles a full Chromium instance. A simple app can consume hundreds of megabytes of RAM.
 - **Startup time:** Loading Chromium adds noticeable delay, especially on lower-end hardware.
 - **No native feel:** Electron apps look and behave like web pages, not desktop applications. Window management, keyboard shortcuts, and system integration all require extra work.
 - **Update and packaging complexity:** Shipping Chromium with your app makes builds larger and updates heavier.
 
-### What Avalonia Offers Instead
+### What Avalonia offers instead
 
 - **Native performance:** Avalonia renders directly without a browser engine. Memory usage and startup time are dramatically lower.
 - **Truly cross-platform:** Windows, macOS, Linux, iOS, Android, and WebAssembly from a single .NET codebase.
@@ -109,22 +109,22 @@ Electron applications are web apps packaged with Chromium. They work, but they c
 
 ## From ASP.NET MVC / Blazor (Web to Desktop)
 
-If you have a web application built with ASP.NET MVC or Blazor and want to offer a native desktop experience, Avalonia is a natural companion. Your backend, data layer, and business logic (all written in .NET) can be shared directly with an Avalonia desktop client. You are not rewriting your application logic, just building a native frontend for it.
+If you have a web application built with ASP.NET MVC or Blazor and want to offer a native desktop experience, Avalonia is a natural companion. Your backend, data layer, and business logic (all written in .NET) can be shared directly with an Avalonia desktop client. You are not rewriting your application logic, building a native frontend for it.
 
-### What Transfers Directly
+### What transfers directly
 
 - **Models and DTOs:** Your data classes work in Avalonia without changes.
 - **Services and business logic:** Anything that does not depend on ASP.NET's HTTP pipeline can be used directly.
 - **Dependency injection:** Avalonia works with `Microsoft.Extensions.DependencyInjection` and the same patterns you use in ASP.NET.
 - **Validation:** `INotifyDataErrorInfo` and data annotation validators work with Avalonia's binding system.
 
-### What Changes
+### What changes
 
 - **No HTML/CSS/Razor:** Avalonia uses XAML for layout and a CSS-like styling system for appearance. The concepts are different from HTML, but XAML is more concise for UI work.
 - **No HTTP request/response cycle:** Desktop apps are stateful. You bind UI controls to view model properties that update in real time, rather than rendering pages on each request.
 - **Navigation is application-managed:** There is no URL routing. Navigation is handled by swapping views based on application state, or by using [NavigationPage](/controls/navigation/navigationpage) for stack-based page navigation.
 
-## Getting Started
+## Getting started
 
 Regardless of which framework you are coming from, the best place to start is the same:
 
@@ -133,7 +133,7 @@ Regardless of which framework you are coming from, the best place to start is th
 3. **[Learn data binding](/docs/data-binding):** The foundation of how Avalonia connects UI to data.
 4. **[Explore the controls](/controls):** See what is available out of the box.
 
-## See Also
+## See also
 
 - [Styles](/docs/styling/styles): How Avalonia's CSS-like styling works.
 - [The MVVM Pattern](/docs/concepts/the-mvvm-pattern): Separating UI from logic.

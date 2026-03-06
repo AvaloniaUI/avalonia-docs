@@ -5,11 +5,11 @@ title: How To Create a Custom Flyout
 
 Custom flyouts let you display rich, self-contained UI that appears on demand and is attached to a target control. By deriving from `FlyoutBase`, you can build flyouts that host any content, from simple images to fully interactive forms.
 
-## Creating a Basic Custom Flyout
+## Creating a basic custom flyout
 
-To create a custom flyout type, derive from FlyoutBase. You'll have to override the abstract method `CreatePresenter()` to specify the presenter the `Flyout` should use to display its content. This can be any type of control, but note that this is the root content for the inner popup and should be styled with background, border, corner radius, and similar styling to match other popups. You can still use a normal `FlyoutPresenter` if you wish
+To create a custom flyout type, derive from FlyoutBase. You'll have to override the abstract method `CreatePresenter()` to specify the presenter the `Flyout` should use to display its content. This can be any type of control, but note that this is the root content for the inner popup and should be styled with background, border, corner radius, and similar styling to match other popups. You can still use a normal `FlyoutPresenter` if you wish.
 
-The following example creates a simple `Flyout` that hosts an image
+The following example creates a simple `Flyout` that hosts an image.
 
 ```csharp
 public class MyImageFlyout : FlyoutBase
@@ -34,7 +34,7 @@ public class MyImageFlyout : FlyoutBase
 }
 ```
 
-## Showing and Closing
+## Showing and closing
 
 You can show a flyout programmatically by calling `ShowAt` and passing the control it should be anchored to. To dismiss it, call `Hide`.
 
@@ -47,7 +47,7 @@ flyout.ShowAt(targetButton);
 flyout.Hide();
 ```
 
-## Handling Flyout Events
+## Handling flyout events
 
 `FlyoutBase` exposes `Opened` and `Closed` events you can subscribe to for reacting to visibility changes.
 
@@ -56,7 +56,7 @@ flyout.Opened += (s, e) => { /* flyout is now visible */ };
 flyout.Closed += (s, e) => { /* flyout was dismissed */ };
 ```
 
-## Custom Flyout with Interactive Content
+## Custom flyout with interactive content
 
 Flyouts are not limited to passive display. You can include buttons, text inputs, and other interactive controls inside the presenter. The following example creates a confirmation flyout that raises an event when the user clicks a button, then automatically closes itself.
 
@@ -92,7 +92,7 @@ public class ConfirmFlyout : FlyoutBase
 
 ## Using in XAML
 
-Custom flyouts can be assigned directly in XAML using the `Flyout` attached property on controls that support it, such as `Button`. Make sure the XML namespace for your flyout class is declared at the top of the file.
+You can assign custom flyouts directly in XAML using the `Flyout` attached property on controls that support it, such as `Button`. Make sure the XML namespace for your flyout class is declared at the top of the file.
 
 ```xml
 <Button Content="Show Image">
@@ -102,6 +102,6 @@ Custom flyouts can be assigned directly in XAML using the `Flyout` attached prop
 </Button>
 ```
 
-## See Also
+## See also
 
 - [Custom Controls](index.md)

@@ -5,7 +5,7 @@ title: Events
 
 Avalonia's event system is conceptually similar to WPF's routed event model. Events can bubble up or tunnel down the visual tree, and you can register class handlers or instance handlers. However, there are important differences in the API surface, event naming, and how tunnelling is handled. This guide covers the key differences you need to know when migrating from WPF to Avalonia.
 
-## Routed Events
+## Routed events
 
 Both WPF and Avalonia support routed events, but the registration API differs. In WPF, you use `EventManager.RegisterRoutedEvent`, while in Avalonia you use `RoutedEvent.Register`.
 
@@ -29,7 +29,7 @@ Key differences to note:
 - The registration call in Avalonia uses generic type parameters for both the owner type and the event args type, rather than passing `typeof()` arguments.
 - The delegate type is inferred from the generic type parameter in Avalonia, so you do not need to specify it explicitly.
 
-## Class Handlers
+## Class handlers
 
 In WPF, class handlers for events can be added by calling [EventManager.RegisterClassHandler](https://msdn.microsoft.com/en-us/library/ms597875.aspx). In Avalonia, you call `AddClassHandler` directly on the routed event instance.
 
@@ -57,7 +57,7 @@ private void HandleMyEvent(RoutedEventArgs e)
 
 Notice that in WPF you have to add the class handler as a static method, whereas in Avalonia the class handler is not static: the notification is automatically directed to the correct instance. The `sender` parameter typical of event handlers is not necessary in this case and everything remains strongly typed.
 
-## Tunnelling Events
+## Tunnelling events
 
 In WPF, tunnelling (preview) events are exposed as separate CLR events with a `Preview` prefix. For example, `PreviewKeyDown` is the tunnelling counterpart to `KeyDown`. These are two distinct CLR events that you can subscribe to independently.
 
@@ -92,9 +92,9 @@ myControl.AddHandler(
     RoutingStrategies.Tunnel | RoutingStrategies.Bubble);
 ```
 
-## Event Handler Attachment
+## Event handler attachment
 
-### XAML Event Handlers
+### XAML event handlers
 
 Attaching event handlers in XAML works the same way in both WPF and Avalonia:
 
@@ -102,7 +102,7 @@ Attaching event handlers in XAML works the same way in both WPF and Avalonia:
 <Button Click="OnButtonClick" />
 ```
 
-### Code-Behind with AddHandler
+### Code-behind with AddHandler
 
 In WPF, `AddHandler` takes the routed event and a delegate. Avalonia's `AddHandler` accepts additional parameters for routing strategy and handled-events behavior.
 
@@ -114,7 +114,7 @@ myButton.AddHandler(Button.ClickEvent, new RoutedEventHandler(OnButtonClick));
 myButton.AddHandler(Button.ClickEvent, OnButtonClick);
 ```
 
-### The handledEventsToo Parameter
+### The handledEventsToo parameter
 
 Both WPF and Avalonia support receiving events even after they have been marked as handled. The parameter works similarly in both frameworks.
 
@@ -135,7 +135,7 @@ myControl.AddHandler(
 
 Note that in Avalonia you must specify the `RoutingStrategies` parameter before `handledEventsToo`.
 
-## Common Event Name Differences
+## Common event name differences
 
 Many input events have different names in Avalonia compared to WPF. The following table lists the most common mappings:
 
@@ -153,9 +153,9 @@ Many input events have different names in Avalonia compared to WPF. The followin
 | `PreviewKeyUp` | Use `AddHandler` with `RoutingStrategies.Tunnel` on `KeyUpEvent` | No separate Preview event |
 | `PreviewMouseDown` | Use `AddHandler` with `RoutingStrategies.Tunnel` on `PointerPressedEvent` | No separate Preview event |
 
-Avalonia uses pointer-based event names because it supports pointer devices beyond just a mouse, including touch and pen input.
+Avalonia uses pointer-based event names because it supports pointer devices beyond a mouse, including touch and pen input.
 
-## Custom Routed Events
+## Custom routed events
 
 When defining custom routed events, the registration pattern differs between WPF and Avalonia. Below is a complete comparison showing how to define, register, and raise a custom routed event.
 
@@ -207,7 +207,7 @@ The main differences are:
 - The CLR event wrapper in Avalonia uses `EventHandler<RoutedEventArgs>` rather than `RoutedEventHandler`.
 - Registration uses generic type parameters instead of `typeof()` arguments.
 
-## See Also
+## See also
 
 - [Routed Events Overview](/docs/events/index)
 - [Input Events](/docs/events/input-events)

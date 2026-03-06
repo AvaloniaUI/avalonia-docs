@@ -128,7 +128,7 @@ public class MultiplyLiteral
 
 ### Receiving parameters from bindings
 
-A common scenario is to transform data coming in from a binding and updating the target property. When all parameters  come from bindings, this is straightforward by creating a `MultiBinding` with an `IMultiValueConverter`.
+A common scenario is to transform data coming in from a binding and updating the target property. When all parameters  come from bindings, this can be done by creating a `MultiBinding` with an `IMultiValueConverter`.
 
 In the  sample below, `MultiplyBinding` requires two bound parameters. If a mix of literal and bound parameters is necessary,  creating an `IMultiValueConverter` would allow for passing of literals as constructor or `init` parameters. `BindingBase` allows for both `CompiledBinding` and `ReflectionBinding` to be used, but does not allow literals.
 
@@ -204,7 +204,7 @@ public object ProvideValue(IServiceProvider provider)
 
 Constructors can also receive parameter types using the `object` approach, but compile-time errors similarly turn into runtime exceptions.
 
-### MarkupExtension Property Attributes
+### MarkupExtension property attributes
 
 * `[ConstructorArgument]` - Associated property may be initialized by a constructor parameter and should be ignored for 
     XAML serialization if the constructor is used.
@@ -277,3 +277,9 @@ Once optimized and trimmed for specific platform architecture, it is reduced to 
 ```csharp
 border.Background = Brushes.Red; // assuming app was compiled with dotnet publish -r win-arm64;
 ```
+
+## See also
+
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding MarkupExtension reference.
+- [Compiled Bindings](/docs/data-binding/compiled-bindings): CompiledBinding and ReflectionBinding markup.
+- [Platform-specific XAML](/docs/platform-specific-guides/xaml): OnPlatform and OnFormFactor markup extensions.

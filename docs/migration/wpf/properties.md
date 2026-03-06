@@ -5,7 +5,7 @@ title: Properties
 
 Avalonia's property system is conceptually similar to WPF's `DependencyProperty` system but uses a cleaner, strongly-typed generic API. If you are familiar with WPF dependency properties, you will find most of the same concepts in Avalonia: styling, data binding, animation, value inheritance, and default values all work through the property system. The main differences are in registration syntax and how you respond to property changes.
 
-## Property Types Comparison
+## Property types comparison
 
 WPF has a single `DependencyProperty` class used for all scenarios. Avalonia splits this into three distinct types, each optimized for a specific use case. All three share a common base class, `AvaloniaProperty`.
 
@@ -129,9 +129,9 @@ public class DockPanel : Panel
 }
 ```
 
-## Property Changed Callbacks
+## Property changed callbacks
 
-### WPF Approach
+### WPF approach
 
 In WPF, you pass a `PropertyChangedCallback` inside `PropertyMetadata` at registration time:
 
@@ -150,7 +150,7 @@ private static void OnIsActiveChanged(DependencyObject d, DependencyPropertyChan
 }
 ```
 
-### Avalonia Approaches
+### Avalonia approaches
 
 Avalonia offers two ways to respond to property changes.
 
@@ -187,7 +187,7 @@ static MyControl()
 
 Both approaches are equivalent in effect. Overriding `OnPropertyChanged` is often cleaner when you need to handle changes to multiple properties in one place.
 
-## Default Values
+## Default values
 
 In WPF, default values are supplied through a `PropertyMetadata` object:
 
@@ -212,7 +212,7 @@ static MyDerivedControl()
 }
 ```
 
-## Value Coercion
+## Value coercion
 
 In WPF, you supply a `CoerceValueCallback` in the `PropertyMetadata`:
 
@@ -237,7 +237,7 @@ private static double CoerceOpacity(AvaloniaObject sender, double value)
 
 The coercion function receives the `AvaloniaObject` instance and the proposed value, and returns the corrected value.
 
-## Value Precedence
+## Value precedence
 
 Both WPF and Avalonia use a value precedence system to determine the effective value of a property. The general order (highest to lowest) is:
 
@@ -250,13 +250,13 @@ Both WPF and Avalonia use a value precedence system to determine the effective v
 
 For a detailed breakdown of how Avalonia resolves property values, see the [Value Precedence](/docs/properties/value-precedence) page.
 
-## Common Gotchas
+## Common gotchas
 
-### No PropertyMetadata Constructor with Just a Default Value
+### No PropertyMetadata constructor with a default value
 
 In WPF, you often write `new PropertyMetadata(someDefault)`. In Avalonia, there is no `PropertyMetadata` class. Default values are passed directly to `Register` using the `defaultValue:` named parameter.
 
-### SetAndRaise Replaces SetValue for DirectProperty
+### SetAndRaise replaces SetValue for DirectProperty
 
 If you register a `DirectProperty`, you must use `SetAndRaise` in the CLR setter instead of `SetValue`. Calling `SetValue` on a `DirectProperty` will throw an exception.
 
@@ -269,11 +269,11 @@ public string Status
 }
 ```
 
-### StyledProperty Values Live in the Property System
+### StyledProperty values live in the property system
 
 Unlike `DirectProperty`, a `StyledProperty` does not use a backing field. Values are stored internally by the Avalonia property system. If you try to add a backing field and read from it, you will get stale data. Always use `GetValue` and `SetValue`.
 
-### Use AddOwner Instead of OverrideMetadata for Shared Properties
+### Use AddOwner instead of OverrideMetadata for shared properties
 
 In WPF, you might call `OverrideMetadata` to reuse an existing `DependencyProperty` in a subclass with different metadata. In Avalonia, the equivalent pattern for sharing a property across unrelated types is `AddOwner`:
 
@@ -290,7 +290,7 @@ public static readonly StyledProperty<IBrush> BackgroundProperty =
         new StyledPropertyMetadata<IBrush>(Brushes.Gray));
 ```
 
-## See Also
+## See also
 
 - [Avalonia Properties Overview](/docs/properties/index)
 - [Value Precedence](/docs/properties/value-precedence)

@@ -48,7 +48,7 @@ This method is called when the framework has initialized and the `ApplicationLif
 If you run the application in design mode (this uses the IDE previewer process), then `ApplicationLifetime` is null.
 :::
 
-## Lifetime Interfaces
+## Lifetime interfaces
 
 Avalonia provides a range of interfaces to allow you to choose a level of control that is suitable for your application. These are provided by the `BuildAvaloniaApp().Start[Something]` family of methods.
 
@@ -114,7 +114,7 @@ public override void OnFrameworkInitializationCompleted()
 
 The factory is called each time a new activity instance is created, producing a fresh view with its own state. This avoids the crashes that occurred when reusing a single view instance across multiple activity launches.
 
-## Manual Lifetime Management
+## Manual lifetime management
 
 If you need to, you can take full control of your application's lifetime management. For example on a desktop platform you can pass a delegate to `AppMain` to the `BuildAvaloniaApp.Start` method, and then manage things manually from there:
 

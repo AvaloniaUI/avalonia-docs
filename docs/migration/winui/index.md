@@ -10,7 +10,7 @@ If you already know WinUI or UWP, you are closer to Avalonia than you might thin
 The Avalonia team has hands-on experience migrating WinUI and UWP applications to Avalonia. If you would like expert guidance, this is a service we provide. See [Avalonia Services](https://avaloniaui.net/services) for more information.
 :::
 
-## Key Differences
+## Key differences
 
 ### Styling
 
@@ -40,7 +40,7 @@ WinUI uses `VisualStateManager` with visual states and storyboards to handle con
 
 Avalonia's approach is more concise and composable. For a full guide on how styling works, see [Styles](/docs/styling/styles).
 
-### XAML Namespace
+### XAML namespace
 
 | WinUI / UWP | Avalonia |
 |---|---|
@@ -48,7 +48,7 @@ Avalonia's approach is more concise and composable. For a full guide on how styl
 | `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"` | `xmlns:controls="using:Avalonia.Controls"` (usually not needed, default namespace covers most controls) |
 | `clr-namespace:` or `using:` for custom types | `using:` (preferred) or `clr-namespace:` |
 
-### Data Binding
+### Data binding
 
 The core binding syntax is the same. WinUI's `x:Bind` (compiled bindings) has an equivalent in Avalonia:
 
@@ -120,7 +120,7 @@ Avalonia resolves the correct view automatically if you register data templates 
 
 For full details on `NavigationPage`, see [NavigationPage](/controls/navigation/navigationpage).
 
-### Resources and Theming
+### Resources and theming
 
 | WinUI / UWP | Avalonia | Notes |
 |---|---|---|
@@ -130,7 +130,7 @@ For full details on `NavigationPage`, see [NavigationPage](/controls/navigation/
 | `ElementTheme.Light` / `.Dark` | `RequestedThemeVariant` | |
 | `AcrylicBrush` | `ExperimentalAcrylicBorder` | Different API |
 
-### File Structure
+### File structure
 
 | WinUI / UWP | Avalonia |
 |---|---|
@@ -148,16 +148,16 @@ For full details on `NavigationPage`, see [NavigationPage](/controls/navigation/
 | `DispatcherQueue.GetForCurrentThread()` | `Dispatcher.UIThread` |
 | `CoreDispatcher.RunAsync()` | `Dispatcher.UIThread.InvokeAsync()` |
 
-## What You Gain
+## What you gain
 
-Moving from WinUI to Avalonia is not just about cross-platform. There are a few areas where Avalonia offers more than WinUI does today:
+Moving from WinUI to Avalonia is not only about cross-platform. There are a few areas where Avalonia offers more than WinUI does today:
 
 - **CSS-like styling:** Selectors, style classes, and pseudo-classes give you more control over styling with less verbosity than `VisualStateManager`.
 - **Compiled bindings with better tooling:** `x:DataType` and `x:CompileBindings` provide compile-time validation of binding paths across the entire project.
 - **No MSIX/packaging requirement:** Avalonia applications are standard .NET executables. No app manifest, no packaging pipeline, no store requirement.
 - **Linux and macOS as first-class targets:** Not an afterthought or a compatibility layer.
 
-## See Also
+## See also
 
 - [Get Started with Avalonia](/docs/get-started/first-app): Create your first Avalonia application.
 - [Styles](/docs/styling/styles): How Avalonia's CSS-like styling works.

@@ -1,6 +1,6 @@
 ---
 id: scrollviewer-how-to
-title: "How To: Work with ScrollViewer"
+title: "How to: Work with ScrollViewer"
 ---
 
 This guide covers common ScrollViewer scenarios: controlling scroll behavior, programmatic scrolling, scroll events, and integration with virtualization.
