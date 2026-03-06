@@ -3,6 +3,188 @@ id: macos
 title: macOS
 ---
 
+## Application Name
+
+By default, the macOS menu bar and system dialogs display "Avalonia Application" as the app name. To set your own application name, you need to configure the Avalonia `Application` object.
+
+### Using a Custom Avalonia Application
+
+Follow the steps in [Customizing Initialization](/xpf/guides/customizing-initialization#optional-define-a-custom-avalonia-application) to create a custom Avalonia Application class, then set the `Name` property in your AXAML:
+
+```xml title="MyAvaloniaApp.axaml"
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MyXpfApp.MyAvaloniaApp"
+             Name="My App Name">
+  <Application.Styles>
+    <SimpleTheme/>
+  </Application.Styles>
+</Application>
+```
+
+### Using DefaultXpfAvaloniaApplication
+
+If you do not need a full custom Application class, you can extend `DefaultXpfAvaloniaApplication` and set the `Name` property:
+
+```csharp
+public class MyAvaloniaApp : AvaloniaUI.Xpf.Helpers.DefaultXpfAvaloniaApplication
+{
+    public MyAvaloniaApp()
+    {
+        Name = "My App Name";
+    }
+}
+```
+
+Then reference this class in your `AppBuilder` configuration:
+
+```csharp
+AppBuilder.Configure<MyAvaloniaApp>()
+    .UsePlatformDetect()
+    .WithAvaloniaXpf()
+    .SetupWithLifetime(new ClassicDesktopStyleApplicationLifetime
+    {
+        ShutdownMode = ShutdownMode.OnExplicitShutdown
+    });
+```
+
+## Native Menus
+
+macOS applications use a global menu bar at the top of the screen. XPF supports this through Avalonia's `NativeMenu` API.
+
+### Setting Up a Native Menu Programmatically
+
+In your WPF window's `Loaded` event, access the underlying Avalonia window and set the menu:
+
+```csharp
+using Atlantis;
+using Avalonia.Controls;
+
+private void Window_Loaded(object sender, RoutedEventArgs e)
+{
+    var avaloniaWindow = XpfWpfAbstraction.GetAvaloniaWindowForWindow(this);
+
+    var menu = new NativeMenu();
+
+    var fileMenu = new NativeMenuItem("File");
+    var fileSubMenu = new NativeMenu();
+    fileSubMenu.Add(new NativeMenuItem("Open") { Command = /* your command */ });
+    fileSubMenu.Add(new NativeMenuItemSeparator());
+    fileSubMenu.Add(new NativeMenuItem("Exit") { Command = /* your command */ });
+    fileMenu.Menu = fileSubMenu;
+
+    menu.Add(fileMenu);
+    NativeMenu.SetMenu(avaloniaWindow, menu);
+}
+```
+
+### Cross-Platform Menu Fallback
+
+On platforms that do not support a global menu bar (Windows and most Linux desktop environments), you can use a `NativeMenuBar` control embedded in your XPF window via `AvaloniaHost`. This control renders a traditional menu bar only on platforms without native global menu support, and is hidden on macOS (where the global menu is used instead).
+
+See [Embedding Avalonia in XPF](/xpf/guides/embedding-avalonia-in-xpf) for details on hosting Avalonia controls.
+
+## Dock Visibility
+
+To control whether your application appears in the macOS Dock, use `MacOSPlatformOptions` in a [custom initialization](/xpf/guides/customizing-initialization):
+
+```csharp
+AppBuilder.Configure<MyAvaloniaApp>()
+    .UsePlatformDetect()
+    .With(new MacOSPlatformOptions { ShowInDock = false })
+    .WithAvaloniaXpf()
+    .SetupWithLifetime(new ClassicDesktopStyleApplicationLifetime
+    {
+        ShutdownMode = ShutdownMode.OnExplicitShutdown
+    });
+```
+
+If you also set `LSUIElement` or `LSBackgroundOnly` in your `Info.plist`, ensure you are using XPF 1.6.0 or later to avoid a brief dock icon flicker on startup.
+
+## Startup and Modal Dialogs
+
+On macOS, showing a modal dialog (via `ShowDialog`) during the window activation phase can cause the application to freeze. This occurs because the first paint notification triggers startup code before the rendering pipeline is fully initialized. A `ShowDialog` call at this point starts a nested dispatcher loop that blocks the paint from completing.
+
+### Recommended Solutions
+
+Add the following to your `.csproj` to defer startup code to a safe dispatcher priority:
+
+```xml
+<ItemGroup>
+    <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.AllowBlockingCallsOnStartup" Value="true" />
+</ItemGroup>
+```
+
+Alternatively, avoid calling `ShowDialog` from window constructors or activation handlers. Instead, trigger dialogs from the `Application.Startup` event or use a dispatcher callback:
+
+```csharp
+Dispatcher.CurrentDispatcher.BeginInvoke(DispatcherPriority.Loaded, () =>
+{
+    var dialog = new MyDialog();
+    dialog.ShowDialog();
+});
+```
+
+:::warning
+On macOS, avoid using `DispatcherPriority.Normal` or `DispatcherPriority.Send` for operations that start nested message loops (such as `ShowDialog`). Use `DispatcherPriority.Loaded` or lower instead.
+:::
+
+## DPI and Render Scaling
+
+The WPF API `VisualTreeHelper.GetDpi()` may not return accurate values on macOS. To get the correct render scaling factor, access the underlying Avalonia window:
+
+```csharp
+using Atlantis;
+
+var avaloniaTopLevel = XpfWpfAbstraction.GetAvaloniaTopLevelForWindow(myWpfWindow);
+double scaling = avaloniaTopLevel.RenderScaling;
+```
+
+## Trackpad Gestures
+
+macOS trackpad gestures (pinch-to-zoom, rotation) are not available through the WPF manipulation API in XPF. To handle these gestures, use Avalonia's gesture events on the underlying Avalonia window:
+
+```csharp
+using Atlantis;
+using Avalonia.Input;
+
+var avaloniaWindow = XpfWpfAbstraction.GetAvaloniaWindowForWindow(this);
+
+// Pinch-to-zoom
+avaloniaWindow.AddHandler(Gestures.PointerTouchPadGestureMagnifyEvent, (sender, e) =>
+{
+    double scale = e.Scale;
+    // Handle zoom
+}, handledEventsToo: true);
+```
+
+To distinguish between trackpad scroll and mouse wheel events, check the `PointerDeltaEventArgs` properties when handling `PointerWheelChanged`.
+
+## GDI+ and System.Drawing.Common
+
+`System.Drawing.Common` (GDI+) is deprecated on non-Windows platforms and will throw exceptions in XPF on macOS. This commonly affects third-party controls that depend on GDI+ for rendering or printing (for example, certain DevExpress controls).
+
+If a third-party control provides a Skia-based rendering option, enable it for non-Windows builds. Contact your control vendor for guidance on non-GDI rendering backends.
+
+See [Third-Party Compatibility](/xpf/third-party-libraries) for more details.
+
+## Packaging and Deployment
+
+macOS applications must be packaged as `.app` bundles for distribution. Key considerations for XPF apps:
+
+- **Do not** set `IncludeNativeLibrariesForSelfExtract` to `true`. This is incompatible with macOS.
+- Use `SelfContained` publishing for distribution outside the development machine.
+- When code signing, sign individual files rather than using the `--deep` flag.
+- Publish from the command line rather than from Visual Studio for reliable output:
+
+```bash
+dotnet publish -r osx-arm64 -c Release --self-contained
+```
+
+:::tip
+The Avalonia **Parcel** tool can automate macOS packaging, code signing, and notarization for XPF applications. Contact the Avalonia team for access.
+:::
+
 ## Key Mapping
 
 macOS has different modifier keys to Windows and Linux. By default modifier keys are mapped as follows:
@@ -69,3 +251,21 @@ public partial class App : Application
 ```
 
 Once this feature is enabled, it can be disabled on a per-control basis by handling the [`ContextMenuOpening` event](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/how-to-handle-the-contextmenuopening-event#suppressing-any-existing-context-menu-and-displaying-no-context-menu) and checking the value of [`Keyboard.Modifiers`](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.keyboard.modifiers) and/or [`Mouse.LeftButton`](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.mouse.leftbutton) to determine how the context menu is being opened.
+
+## Native API Interop
+
+To access macOS-specific APIs (such as Keychain or native cookies) from an XPF application, you have several options:
+
+- Use the `MonoMac.NetStandard` NuGet package for common macOS APIs
+- Use C-style `DllImport` to call macOS frameworks directly
+- For WebView cookie access, use the `NativeWebViewCookieManager` API provided by XPF
+
+:::note
+MAUI Essentials does not support macOS (only Mac Catalyst). It cannot be used with XPF on macOS.
+:::
+
+## Known Limitations
+
+- **Multiple UI threads**: macOS allows only one UI thread. WPF patterns that rely on multiple dispatchers (such as splash screens on a separate thread) will not work.
+- **Transparent window click-through**: XPF does not support per-pixel hit transparency (clicking through transparent regions of a window). Consider embedding content in a single window instead of using transparent overlays.
+- **SystemSounds.Beep**: `System.Media.SystemSounds.Beep` is not supported on macOS and will throw `PlatformNotSupportedException`.

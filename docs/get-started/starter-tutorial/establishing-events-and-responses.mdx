@@ -14,7 +14,7 @@ Our temperature converter app now looks reasonably functional, but doesn’t do 
 
 ## Creating an event handler with code-behind
 
-XAML files can be associated with a C# source file. This file is where we can code event handling for the button. We call this “code-behind”.
+XAML files can be associated with a C# source file. This file is where we can code event handling for the button. We call this "code-behind".
 
 1. In your IDE, browse your project directory for **Views → MainWindow.axaml → MainWindow.axaml.cs**. This is the C# source file behind the main window XAML.
 
@@ -72,7 +72,16 @@ public partial class MainWindow : Window
 
 To verify we’ve created the event handler correctly, we can check the debug output to confirm "Click!" is being printed when we click the **Calculate** button.
 
-<Tabs groupId="ide">  
+<Tabs groupId="ide">
+  <TabItem value="vs" label="Visual Studio" default>
+    1. Go to the **Output** window, located by default under the split view. From the "Show output from:" dropdown menu, select **Debug**.
+    2. Run the app.
+    3. In the running app window, click the **Calculate** button a few times.
+    4. You should see "Click!" printed in the output window.
+
+    <Image light={VsDebugOutputClick} alt="A screenshot showing the output screen in Visual Studio, with the word 'Click!' printed inside." position="center" maxWidth={400} cornerRadius="true"/>
+
+  </TabItem>
   <TabItem value="rider" label="Rider">
 	1. Run GetStartedApp in debug mode.
 
@@ -80,16 +89,7 @@ To verify we’ve created the event handler correctly, we can check the debug ou
 
 	2. Open the **Debug Output** tab in the bottom panel.
     3. In the running app window, click the **Calculate** button a few times.
-    4. You should see “Click!” being printed in the debug output in Rider.
-  </TabItem>
-  <TabItem value="vs" label="Visual Studio">
-    1. Go to the **Output** window, located by default under the split view. From the “Show output from:” dropdown menu, select **Debug**.
-    2. Run the app.
-    3. In the running app window, click the **Calculate** button a few times.
-    4. You should see “Click!” printed in the output window.
-
-    <Image light={VsDebugOutputClick} alt="A screenshot showing the output screen in Visual Studio, with the word 'Click!' printed inside." position="center" maxWidth={400} cornerRadius="true"/>
-
+    4. You should see "Click!" being printed in the debug output in Rider.
   </TabItem>
 </Tabs>
 

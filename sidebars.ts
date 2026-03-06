@@ -13,6 +13,9 @@ const sidebars: SidebarsConfig = {
         id: 'get-started/index',
       },
       items: [
+        'get-started/install-avalonia',
+        'get-started/set-up-your-ide',
+        'get-started/create-your-first-project',
         {
           type: 'category',
           label: 'Starter Tutorial',

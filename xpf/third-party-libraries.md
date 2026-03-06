@@ -36,6 +36,80 @@ AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup
   .AddLibrary(typeof(Type.In.Third.Party.Library).Assembly);
 ```
 
+## Resolving DllImportResolver Conflicts
+
+Some third-party libraries (such as Aspose) set their own `DllImportResolver` on the entry assembly. Because .NET only allows one resolver per assembly, this conflicts with XPF's WinApiShim, causing an `InvalidOperationException: A resolver is already set for the assembly`.
+
+Use the `AutoEnable` filter callback to skip conflicting assemblies:
+
+```cs
+AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable(asm =>
+{
+    var name = asm.GetName().Name;
+    if (name != null && name.Contains("Aspose"))
+        return true; // true = skip this assembly
+    return false;
+});
+```
+
+## Avoiding Deadlocks with Custom Assembly Loading
+
+If your application uses a custom mechanism for loading managed assemblies (such as a plugin system), `AutoEnable` may cause deadlocks during startup. In this case, use `AddLibrary` to register assemblies individually after they are resolved:
+
+```cs
+// Instead of AutoEnable, add assemblies as they are loaded
+AppDomain.CurrentDomain.AssemblyLoad += (sender, args) =>
+{
+    AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AddLibrary(args.LoadedAssembly);
+};
+```
+
+See [Customizing Initialization](/xpf/guides/customizing-initialization#custom-assembly-loading) for more details.
+
+## Scope of Win32 API Shims
+
+The Win32 API shim layer exists to enable compatibility with third-party WPF controls that call Win32 APIs internally. It is **not** a general-purpose Win32 emulation layer.
+
+Key points:
+- Shims provide enough Win32 API surface to support common third-party WPF controls on non-Windows platforms
+- On Windows, enabling shims redirects calls to the shim implementations instead of native Win32
+- Not all Win32 APIs are available (see the [API reference](#winapi-shim-apis) below)
+- Windows messages (such as `WM_ACTIVATEAPP`) are only generated to the extent needed by supported controls
+- Where possible, use WPF or Avalonia APIs directly rather than relying on Win32 API shims
+
+## DevExpress
+
+DevExpress controls are widely used with XPF. To get started:
+
+1. Enable Win32 API shims (required for DevExpress controls):
+   ```cs
+   AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable();
+   ```
+
+2. Be aware of the following platform-specific limitations:
+
+   - **GDI+ dependency**: Some DevExpress controls (DocumentPreviewControl, PdfViewerControl, XtraReport) depend on `System.Drawing.Common` (GDI+), which is deprecated on non-Windows platforms. Enable DevExpress's Skia rendering engine where available. Contact DevExpress support for guidance on Skia support for specific controls.
+   - **LoadingDecorator**: The DevExpress `LoadingDecorator` with `UseSplashScreen=true` requires multiple UI threads, which is not supported on macOS. Use `WaitIndicator` as an alternative.
+
+DevExpress maintains a demo application showing which of their controls have been tested with XPF.
+
+## CefSharp
+
+`CefSharp.Wpf.NetCore` is designed for Windows and includes Windows-native Chromium binaries. It does not work on Linux or macOS.
+
+If CefSharp throws a `NotImplementedException` for `CursorInteropHelper.Create()`, upgrade to XPF 1.6.0 or later, which provides a fallback. As a workaround for older versions, derive from `ChromiumWebBrowser` and override `OnCursorChange` to map CefSharp cursor types to WPF `Cursors`.
+
+### Cross-Platform Browser Alternatives
+
+For cross-platform web content embedding, consider:
+
+- **XPF WebView**: The `Avalonia.Xpf.Controls.WebView` package provides `NativeWebView` (Windows, macOS) and `NativeWebDialog` (all platforms including Linux). See [Embedding Web Content](/docs/app-development/embedding-web-content).
+- **DotNetBrowser**: Supported in XPF. See the [XpfDotNetBrowserApp sample](https://github.com/AvaloniaUI/Avalonia-XPF-Samples/tree/master/src/XpfDotNetBrowserApp) for setup guidance.
+
+## Caliburn.Micro
+
+When using Caliburn.Micro with XPF, you may encounter threading exceptions (e.g., "The calling thread cannot access this object because a different thread owns it") during startup. This is typically caused by Caliburn.Micro's `WindowManager` accessing WPF window properties from a non-UI thread. Ensure all window operations occur on the dispatcher thread.
+
 ## Compatibility Database
 
 We maintain a comprehensive [compatibility database](https://avaloniaui.net/xpf/packages) for third-party controls. This database provides up-to-date status information for controls from major vendors.

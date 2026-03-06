@@ -20,6 +20,7 @@ const sidebars: SidebarsConfig = {
         'guides/customizing-initialization',
         'guides/removing-the-titlebar',
         'guides/headless-testing',
+        'guides/performance',
         'guides/key-mapping',
         'guides/native-window-handles',
       ]
@@ -42,11 +43,7 @@ const sidebars: SidebarsConfig = {
           'version-info/missing-features',
       ]
     },
-    {
-      type: 'link',
-      label: 'Troubleshooting',
-      href: '/troubleshooting/xpf'
-    },
+    'troubleshooting',
   ],
 };
 

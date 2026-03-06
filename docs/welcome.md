@@ -42,9 +42,10 @@ For exact version and architecture details, see [Supported platforms](supported-
 
 ### New to Avalonia?
 
-1. [Install Avalonia and create your first project](get-started/index.mdx)
-2. [Follow the starter tutorial](get-started/starter-tutorial/index.mdx) to build a temperature converter app
-3. [Learn the fundamentals](fundamentals/avalonia-xaml): XAML, controls, layout, and the visual tree
+1. [Install Avalonia](get-started/install-avalonia) and [set up your IDE](get-started/set-up-your-ide)
+2. [Create your first project](get-started/create-your-first-project)
+3. [Follow the starter tutorial](get-started/starter-tutorial/index.mdx) to build a temperature converter app
+4. [Learn the fundamentals](fundamentals/avalonia-xaml): XAML, controls, layout, and the visual tree
 
 ### Coming from WPF?
 

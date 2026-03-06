@@ -20,7 +20,7 @@ If you need more detailed documentation on Headless platform and Avalonia extens
 
 ## Configuring testing project
 
-`XUnit` and `NUnit` are currently supported by XPF/Avalonia headless testing.
+`XUnit`, `NUnit`, and `MSTest` are supported by XPF/Avalonia headless testing.
 It's necessary to include integration nuget package in the testing project:
 
 ```xml
@@ -130,6 +130,52 @@ Which also means that you can have normal "net8.0-windows" project with your con
 It can be useful, if you have shared controls library that and want to headless test it, or maybe if you have normal Windows WPF application and need headless testing without fully using XPF.
 
 All the usage steps are the same, but you also need to set testing project TargetFramework to `net8.0-windows` and set `EnableWindowsTargeting` to true (only if you need to run it on Linux/macOS machines).
+
+## MSTest Support
+
+For MSTest projects, the setup is similar but requires additional configuration:
+
+1. Set `DisableAutomaticXpfInit` to `true` in your test project's `.csproj`:
+   ```xml
+   <PropertyGroup>
+       <DisableAutomaticXpfInit>true</DisableAutomaticXpfInit>
+   </PropertyGroup>
+   ```
+
+2. Configure the headless AppBuilder and use `[AvaloniaTestMethod]` instead of `[TestMethod]`:
+   ```csharp
+   [assembly: AvaloniaTestApplication(typeof(TestAppBuilder))]
+
+   public class TestAppBuilder
+   {
+       public static AppBuilder BuildAvaloniaApp() => AppBuilder
+           .Configure<DefaultXpfAvaloniaApplication>()
+           .WithAvaloniaXpf()
+           .UseSkia()
+           .UseHeadless(new AvaloniaHeadlessPlatformOptions
+           {
+               UseHeadlessDrawing = false
+           });
+   }
+   ```
+
+## Test Isolation
+
+If you experience flaky tests (such as `TaskScheduler` errors or inconsistent state between tests), configure test isolation per assembly:
+
+```csharp
+[assembly: AvaloniaTestApplication(typeof(TestAppBuilder), AvaloniaTestIsolationLevel.PerAssembly)]
+```
+
+This ensures the Avalonia runtime is initialized once per test assembly rather than per test, preventing race conditions between test teardown and initialization.
+
+## Running Tests in CI
+
+When running XPF headless tests in CI environments on Linux:
+
+- Ensure the license key is configured in the test project (see [Getting Started](/xpf/getting-started#step-4-add-your-licence-key))
+- No display server is required when using headless mode
+- If `XOpenDisplay failed` errors occur, verify that `DisableAutomaticXpfInit` is set to `true` and the headless AppBuilder is configured correctly
 
 ## See also
 

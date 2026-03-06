@@ -15,7 +15,7 @@ The Avalonia for Visual Studio extension provides an enhanced way of working wit
 
 ## Installation
 
-See our [Getting Started guide](/docs/get-started#choosing-an-ide) for instructions to install the Avalonia for Visual Studio extension.
+See [Set Up Your IDE](/docs/get-started/set-up-your-ide) for installation instructions.
 
 ### Enhanced Editor
 

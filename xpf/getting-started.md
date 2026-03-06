@@ -123,6 +123,22 @@ Alternatively create a `Directory.Build.props` file at the root of your solution
 
 Ideally all projects which reference XPF should be using the `net6.0-windows` or `net7.0-windows` TFM. You can use the `net6.0` or `net7.0` TFM but in this case you cannot use `<EnableWindowsTargeting>` and instead must use the XPF SDK.
 
+:::tip
+The `-windows` target framework (e.g., `net8.0-windows`) works on all platforms when using the XPF SDK. You do not need to change the target framework to build or run on Linux or macOS. Some third-party libraries require the Windows-specific TFM, so keeping `net8.0-windows` is often the simplest approach.
+:::
+
+## WinForms Hosting (Windows Only)
+
+If your application needs to host WinForms controls inside XPF, add the following to a Windows-conditional `PropertyGroup` in your `.csproj`:
+
+```xml
+<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+    <XpfUseMicrosoftWindowsForms>true</XpfUseMicrosoftWindowsForms>
+</PropertyGroup>
+```
+
+This disables the WinForms shim layer and enables native WinForms integration. Note that WinForms hosting is only available on Windows and will cause build failures on other platforms if not conditioned appropriately.
+
 ## Porting tips
 
 ### Project Files
@@ -156,7 +172,27 @@ Ideally all projects which reference XPF should be using the `net6.0-windows` or
 
 16. Make sure that your file access code can handle case-sensitive filesystems and uses `Path.DirectorySeparatorChar` instead of hardcoding the directory separators. 
 
+### Fonts
+
+17. Custom fonts must be included as `<Resource>` items in your `.csproj`. If fonts are not embedded as resources, the application may crash or fall back to a default font on non-Windows platforms:
+    ```xml
+    <ItemGroup>
+        <Resource Include="Fonts\*.ttf" />
+    </ItemGroup>
+    ```
+18. Font matching works differently between WPF and XPF. Fonts with non-standard style names (e.g., "Condense" instead of "Condensed") may not match correctly. If a font is not rendering as expected, verify that the font family name in your XAML matches the internal name in the font file.
+19. To customize font fallback behavior (for example, to specify which fonts are used for missing characters), configure `FontManagerOptions` in your [custom initialization](/xpf/guides/customizing-initialization):
+    ```csharp
+    .With(new FontManagerOptions
+    {
+        FontFallbacks = new[]
+        {
+            new FontFallback { FontFamily = "My Fallback Font" }
+        }
+    })
+    ```
+
 ### Unsupported Controls
 
-17. Avoid using WPF's Spell checking and XPS features since those are not supported by XPF.
-18. If you have any advanced & specialized WPF features that you want to work on your app like Shaders, 3D, Media, etc., Please contact us so that we can help you figure out the best way forward.
+20. Avoid using WPF's Spell checking and XPS features since those are not supported by XPF.
+21. If you have any advanced & specialized WPF features that you want to work on your app like Shaders, 3D, Media, etc., Please contact us so that we can help you figure out the best way forward.
