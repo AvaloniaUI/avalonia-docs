@@ -5,45 +5,64 @@ const sidebars: SidebarsConfig = {
   documentationSidebar: [
     'index',
     'getting-started',
+    'faq',
     {
       'type': 'category',
-      'label': 'XPF Guides',
+      'label': 'Guides',
       'items': [
+        'guides/known-differences',
         'guides/embedding-avalonia-in-xpf',
         'guides/using-xpf-in-avalonia',
+        'third-party-libraries',
+        'guides/clipboard',
+        'guides/customizing-initialization',
+        'guides/native-window-handles',
+        'guides/removing-the-titlebar',
+        'guides/key-mapping',
+        'guides/centralizing-multiple-xpf-projects',
+        'guides/performance',
         {
           type: 'link',
           label: 'Embedding web content',
           href: '/docs/app-development/embedding-web-content'
         },
-        'guides/centralizing-multiple-xpf-projects',
-        'guides/customizing-initialization',
-        'guides/removing-the-titlebar',
-        'guides/headless-testing',
-        'guides/performance',
-        'guides/key-mapping',
-        'guides/native-window-handles',
       ]
     },
     {
       'type': 'category',
       'label': 'Platforms',
       'items': [
-        'platforms/linux',
+        'platforms/windows',
         'platforms/macos',
+        'platforms/linux',
       ]
     },
-    'third-party-libraries',
     {
       'type': 'category',
-      'label': 'Version info',
+      'label': 'Testing',
+      'items': [
+        'guides/headless-testing',
+      ]
+    },
+    {
+      'type': 'category',
+      'label': 'Deployment',
+      'items': [
+        'deployment/windows',
+        'deployment/macos',
+        'deployment/linux',
+      ]
+    },
+    'troubleshooting',
+    {
+      'type': 'category',
+      'label': 'Version Info',
       'items': [
           'version-info/versioning',
           'version-info/release-notes',
           'version-info/missing-features',
       ]
     },
-    'troubleshooting',
   ],
 };
 

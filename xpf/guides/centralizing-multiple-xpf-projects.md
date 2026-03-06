@@ -7,7 +7,7 @@ If you're managing multiple XPF projects then it can be useful to centralize the
 
 ## Centralize XPF SDK Version
 
-You can use a [`global.json`](https://learn.microsoft.com/en-us/dotnet/core/tools/global-json) file to specify the XPF SDK version to use:
+You can use a `global.json` file at the root of your repository to specify the XPF SDK version for all projects:
 
 ```json title=global.json
 {
@@ -17,7 +17,7 @@ You can use a [`global.json`](https://learn.microsoft.com/en-us/dotnet/core/tool
 }
 ```
 
-And in your `.csproj` simply specify `Xpf.Sdk` without a version:
+And in your `.csproj` specify `Xpf.Sdk` without a version:
 
 ```xml
 <Project Sdk="Xpf.Sdk">
@@ -25,7 +25,7 @@ And in your `.csproj` simply specify `Xpf.Sdk` without a version:
 
 ## License Keys
 
-Environment variables can be used in [`nuget.config`](https://learn.microsoft.com/en-us/nuget/consume-packages/consuming-packages-authenticated-feeds#credentials-in-nugetconfig-files) file and in `.csproj` files to store license keys. This can be useful to avoid committing license keys to source control.
+Environment variables can be used in `NuGet.config` and `.csproj` files to store license keys. This avoids committing license keys to source control.
 
 :::tip
 This environment variable can be named however you want, but this documentation will assume `XpfLicenseKey`.

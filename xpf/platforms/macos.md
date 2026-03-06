@@ -125,7 +125,7 @@ Dispatcher.CurrentDispatcher.BeginInvoke(DispatcherPriority.Loaded, () =>
 });
 ```
 
-:::warning
+:::caution
 On macOS, avoid using `DispatcherPriority.Normal` or `DispatcherPriority.Send` for operations that start nested message loops (such as `ShowDialog`). Use `DispatcherPriority.Loaded` or lower instead.
 :::
 
@@ -196,7 +196,7 @@ macOS has different modifier keys to Windows and Linux. By default modifier keys
 However there are problems with this mapping:
 
 1. macOS applications generally use the Command key where the Control key would usually be used on Windows and Linux. For example "Copy" is Command-C on macOS instead of Control+C
-2. `ModifierKeys.Windows` is actually [not set in `Keyboard.Modifiers` in WPF](https://github.com/dotnet/wpf/blob/6634719e22053aab8e5e0db37618170494aea334/src/Microsoft.DotNet.Wpf/src/PresentationCore/System/Windows/Input/KeyboardDevice.cs#L207-L219)
+2. `ModifierKeys.Windows` is not included in `Keyboard.Modifiers` in WPF by design, making it impossible to detect the Command key through standard WPF modifier checks
 3. Common controls such as text boxes are expected to have different keyboard shortcuts in macOS, such as "Move the insertion point to the beginning of the previous word" being Option+Left Arrow on macOS instead of Control+Left Arrow
 
 ### Automatic macOS Key Mapping
@@ -250,7 +250,18 @@ public partial class App : Application
 }
 ```
 
-Once this feature is enabled, it can be disabled on a per-control basis by handling the [`ContextMenuOpening` event](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/how-to-handle-the-contextmenuopening-event#suppressing-any-existing-context-menu-and-displaying-no-context-menu) and checking the value of [`Keyboard.Modifiers`](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.keyboard.modifiers) and/or [`Mouse.LeftButton`](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.mouse.leftbutton) to determine how the context menu is being opened.
+Once this feature is enabled, it can be disabled on a per-control basis by handling the `ContextMenuOpening` event and checking `Keyboard.Modifiers` and/or `Mouse.LeftButton` to determine how the context menu is being opened:
+
+```csharp
+private void OnContextMenuOpening(object sender, ContextMenuEventArgs e)
+{
+    // Suppress context menu on Ctrl+Click for this specific control
+    if (Keyboard.Modifiers.HasFlag(ModifierKeys.Control) && Mouse.LeftButton == MouseButtonState.Pressed)
+    {
+        e.Handled = true;
+    }
+}
+```
 
 ## Native API Interop
 

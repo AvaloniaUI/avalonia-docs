@@ -4,36 +4,90 @@ title: Linux
 ---
 
 ## Supported Distributions
-We maintain comprehensive testing and support for the following Linux distributions:
+
+The following Linux distributions are comprehensively tested and supported:
 
 * **Debian**: Version 9 and newer
 * **Ubuntu**: Version 16.04 and newer
 * **Fedora**: Version 30 and newer
 
 ### Other Distributions
-While we focus our testing efforts on the distributions listed above, Avalonia XPF can run on many other Linux distributions. If you're using a distribution that's not listed in our officially supported platforms:
 
-* We will work with you to ensure compatibility with your chosen distribution
-* Our support team can assist with distribution-specific issues
-* The distribution may require additional configuration or testing
+Avalonia XPF can run on many other Linux distributions beyond those listed above. If you are using a distribution that is not officially supported:
+
+* The Avalonia support team can help ensure compatibility with your chosen distribution
+* Distribution-specific issues are handled on a case-by-case basis
+* Additional configuration or testing may be required
 
 :::note
-Distribution-specific support is provided on a case-by-case basis. We recommend reaching out to our support team early in your development process if you plan to deploy on a non-listed distribution.
+Reach out to the support team early in your development process if you plan to deploy on a non-listed distribution.
 :::
 
 
 ## Installing .NET
 
-Many distributions provide a version of .NET in their package repositories, but these **should not** be used as they do not ship the required `Microsoft.NET.Sdk.WindowsDesktop` SDK.
+Many distributions provide a version of .NET in their package repositories, but these **should not** be used as they do not ship the required `Microsoft.NET.Sdk.WindowsDesktop` SDK. You must install .NET from the Microsoft package feed.
 
-The .NET documentation provides a guide to install the Microsoft packages for Ubuntu:
+### Ubuntu
 
-[Register the Microsoft package repository](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#register-the-microsoft-package-repository)
+```bash
+# Register the Microsoft package repository
+wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
 
-For other distributions, refer to your operating system documentation on how to add the [Microsoft package feed](https://packages.microsoft.com/).
+# Install the .NET SDK
+sudo apt update
+sudo apt install dotnet-sdk-8.0
+```
+
+### Debian
+
+```bash
+wget https://packages.microsoft.com/config/debian/$(cat /etc/debian_version | cut -d. -f1)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+sudo apt update
+sudo apt install dotnet-sdk-8.0
+```
+
+### Fedora
+
+```bash
+sudo dnf install dotnet-sdk-8.0
+```
+
+Fedora includes Microsoft's .NET packages in its default repositories, and these are compatible with XPF.
+
+### Other Distributions
+
+For other distributions, add the [Microsoft package feed](https://packages.microsoft.com/) to your package manager and install the .NET SDK from there.
+
+### Fixing a Broken .NET Installation
+
+If you previously installed .NET from your distribution's package repository (rather than from Microsoft), you must uninstall it completely before installing from the Microsoft feed. Mixing package sources causes conflicts and missing SDK components.
+
+```bash
+# 1. Remove the distribution's .NET packages
+sudo apt remove 'dotnet*' 'aspnet*' 'netstandard*'   # Debian/Ubuntu
+# or
+sudo dnf remove 'dotnet*' 'aspnet*' 'netstandard*'   # Fedora
+
+# 2. Remove any .NET install directories
+sudo rm -rf /usr/share/dotnet
+sudo rm -rf /usr/lib/dotnet
+
+# 3. Remove the distribution's .NET package source to prevent it from being reinstalled
+# On Ubuntu, check for and remove:
+sudo rm /etc/apt/sources.list.d/*dotnet* 2>/dev/null
+sudo rm /etc/apt/preferences.d/*dotnet* 2>/dev/null
+
+# 4. Install .NET from the Microsoft feed (see instructions above)
+```
 
 :::danger
-If you have installed .NET from your distribution's package repository, you must uninstall, clean and reinstall. See ["I need a version of .NET that isn't provided by my Linux distribution"](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup?pivots=os-linux-ubuntu#i-need-a-version-of-net-that-isnt-provided-by-my-linux-distribution) in the Microsoft documentation for details of how to do this.
+A mixed installation (some packages from your distro, some from Microsoft) will cause hard-to-diagnose build failures. If `dotnet --list-sdks` does not show `Microsoft.NET.Sdk.WindowsDesktop`, your installation is incorrect.
 :::
 
 ## Other Dependencies
@@ -62,7 +116,7 @@ For self-contained deployments:
 dotnet publish -r linux-x64 -c Release --self-contained
 ```
 
-:::warning
+:::caution
 Publishing via Visual Studio may omit critical native dependencies. If you encounter `DllNotFoundException` for `libSkiaSharp` or similar errors, switch to CLI publishing.
 :::
 

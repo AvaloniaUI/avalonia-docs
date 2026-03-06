@@ -4,13 +4,27 @@ title: Compatibility with third-party libraries
 sidebar_label: Third-party compatibility
 ---
 
-Avalonia XPF implements WPF's API surface, however a variety of third party libraries also depend on various win32 APIs which are obviously not available cross-platform.
+Avalonia XPF implements WPF's API surface, however a variety of third party libraries also depend on various Win32 APIs which are not available cross-platform.
 
-To deal with this problem, Avalonia XPF implements a win32 API emulation layer that allows 3rd party libraries to work on non-windows platforms. This emulation layer needs to be enabled explictly in your XPF application.
+To deal with this problem, Avalonia XPF implements a Win32 API emulation layer that allows third-party libraries to work on non-Windows platforms. This emulation layer needs to be enabled explicitly in your XPF application.
 
-This feature must be enabled before any assembly attempts to call a win32 API, so the constructor of your `App` class or `Program.Main` is a good place to enable it.
+## Do I Need Win32 API Shims?
 
-To enable win32 API emulation application-wide you can add the following call:
+Use this checklist to determine whether your application needs the Win32 API shim layer:
+
+- **Yes, enable shims** if your application uses third-party WPF controls from vendors like DevExpress, Actipro, Syncfusion, Telerik, or Infragistics
+- **Yes, enable shims** if your application crashes on macOS or Linux with `DllNotFoundException: Unable to load shared library 'user32.dll'` or similar Win32 DLL errors
+- **Yes, enable shims** if your application calls Win32 APIs (P/Invoke) for window management, display info, or theming
+- **No, skip shims** if your application only uses standard WPF controls and does not call any Win32 APIs
+- **No, skip shims** if your third-party libraries already provide cross-platform support without Win32 calls
+
+When in doubt, enable shims. They can be safely enabled even if not strictly needed.
+
+## Enabling Win32 API Shims
+
+This feature must be enabled before any assembly attempts to call a Win32 API, so the constructor of your `App` class or `Program.Main` is a good place to enable it.
+
+To enable Win32 API emulation application-wide you can add the following call:
 
 ```cs
   AvaloniaUI.Xpf.WinApiShim.WinApiShimSetup.AutoEnable();
@@ -112,10 +126,10 @@ When using Caliburn.Micro with XPF, you may encounter threading exceptions (e.g.
 
 ## Compatibility Database
 
-We maintain a comprehensive [compatibility database](https://avaloniaui.net/xpf/packages) for third-party controls. This database provides up-to-date status information for controls from major vendors.
+A [compatibility database](https://avaloniaui.net/xpf/packages) is available for third-party controls. This database provides up-to-date status information for controls from major vendors.
 
-:::info 
-If you find that a control marked as `Fix In Progress` or `Untested` is mission-critical for your application, please contact our support team. We're committed to working with you to ensure compatibility.
+:::info
+If you find that a control marked as `Fix In Progress` or `Untested` is mission-critical for your application, contact the support team. The Avalonia team is committed to working with you to ensure compatibility.
 :::
 
 ### Compatibility Notes
@@ -356,7 +370,7 @@ int TF_CreateThreadMgr(void* threadMgr);
 ### Notes
 - Functions with 'W' suffix are Unicode versions
 - Most functions return non-zero for success, zero for failure
-- IntPtr parameters typically represent handles (HWND, HDC, etc.)
+- IntPtr parameters typically represent handles (HWND, HDC, and similar)
 - void* parameters are typically for strings or structures in unmanaged code
 
 ### Usage Example

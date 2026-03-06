@@ -5,20 +5,97 @@ title: Getting native window handles
 
 ## Overview
 
-XPF uses a system where the handles returned from various WPF API calls are _virtual handles_. In this way, XPF can intercept API calls using these handles and automatically translate them into the appropriate cross-platform API. This has the effect that many WPF APIs such as `WindowInteropHelper.Handle` return these virtualized window handles, as well as [emulated win32 APIs](/xpf/third-party-libraries).
+XPF uses a system where the handles returned from various WPF API calls are _virtual handles_. In this way, XPF can intercept API calls using these handles and automatically translate them into the appropriate cross-platform API. This has the effect that many WPF APIs such as `WindowInteropHelper.Handle` return these virtualized window handles, as well as [emulated Win32 APIs](/xpf/third-party-libraries).
 
-## How to get a native window handle
+## When You Need Native Handles
 
-The native handle for a window can be retrieved from the [underlying Avalonia `Window`](/xpf/guides/embedding-avalonia-in-xpf#getting-the-avalonia-window) using the following code.
+You may need to access the real native window handle when:
+
+- Interacting with native platform APIs that require a window handle
+- Embedding native controls or rendering surfaces (OpenGL, DirectX, Metal)
+- Using platform-specific features not available through WPF or Avalonia APIs
+- Integrating with native accessibility or automation frameworks
+
+## Getting a Native Handle
+
+The native handle for a window can be retrieved from the [underlying Avalonia `Window`](/xpf/guides/embedding-avalonia-in-xpf#getting-the-avalonia-window):
 
 ```csharp
-if (XpfWpfAbstraction.GetAvaloniaWindowForWindow(xpfWindow) is { } avaloniaWindow &&
-    avaloniaWindow.TryGetPlatformHandle()?.Handle is { } nativeHandle)
+using Atlantis;
+
+var avaloniaWindow = XpfWpfAbstraction.GetAvaloniaWindowForWindow(myWpfWindow);
+var platformHandle = avaloniaWindow.TryGetPlatformHandle();
+
+if (platformHandle != null)
 {
-    // You now have the native handle for the XPF window as an IntPtr.
+    IntPtr nativeHandle = platformHandle.Handle;
+    string handleType = platformHandle.HandleDescriptor;
+    // Use the native handle
 }
 ```
 
-:::note
-The type of the handle retrieved in this manner will be different depending on the OS platform and cannot be passed to the win32 API emulation layer. For example, on Windows it will be a `HWND` but on macOS it will be an `NSWindow` pointer. The type of the handle can be retrieved by using the `IPlatformHandle.HandleDescriptor` property.
+## Handle Types by Platform
+
+The type of handle returned depends on the operating system:
+
+| Platform | Handle Type | HandleDescriptor | Notes |
+|---|---|---|---|
+| Windows | HWND | `"HWND"` | Standard Win32 window handle |
+| macOS | NSWindow* | `"NSWindow"` | Pointer to an NSWindow object |
+| Linux (X11) | X11 Window | `"XID"` | X11 window identifier |
+
+:::caution
+Native handles cannot be passed to the Win32 API emulation layer. The emulation layer works with XPF's virtual handles, not native platform handles. If you need to call shimmed Win32 APIs, use the virtual handle from `WindowInteropHelper.Handle` instead.
 :::
+
+## Getting the Avalonia TopLevel
+
+For operations that don't require a window handle but need access to Avalonia-level properties (such as render scaling or input handling), use `GetAvaloniaTopLevelForWindow`:
+
+```csharp
+using Atlantis;
+
+var topLevel = XpfWpfAbstraction.GetAvaloniaTopLevelForWindow(myWpfWindow);
+
+// Access render scaling (useful for DPI-aware rendering)
+double scaling = topLevel.RenderScaling;
+```
+
+## Example: DPI-Aware Native Rendering
+
+```csharp
+using Atlantis;
+
+private void SetupNativeRendering(System.Windows.Window wpfWindow)
+{
+    var avaloniaWindow = XpfWpfAbstraction.GetAvaloniaWindowForWindow(wpfWindow);
+    var platformHandle = avaloniaWindow.TryGetPlatformHandle();
+
+    if (platformHandle == null)
+        return;
+
+    double scaling = avaloniaWindow.RenderScaling;
+    IntPtr handle = platformHandle.Handle;
+
+    switch (platformHandle.HandleDescriptor)
+    {
+        case "HWND":
+            // Windows: use HWND for DirectX/OpenGL context creation
+            InitializeWindowsRenderer(handle, scaling);
+            break;
+        case "NSWindow":
+            // macOS: use NSWindow for Metal/OpenGL context creation
+            InitializeMacRenderer(handle, scaling);
+            break;
+        case "XID":
+            // Linux: use X11 Window for OpenGL context creation
+            InitializeLinuxRenderer(handle, scaling);
+            break;
+    }
+}
+```
+
+## See Also
+
+- [Embedding Avalonia in XPF](/xpf/guides/embedding-avalonia-in-xpf) for accessing Avalonia features from XPF
+- [Performance: Embedding High-Performance Content](/xpf/guides/performance#embedding-high-performance-content) for OpenGL integration

@@ -8,14 +8,18 @@ title: Getting started
 :::note
 This document uses .NET 7.0 as an example, but .NET 6.0 and above are supported by XPF. 
 
-We recommend using .NET 8 (current LTS) or .NET 9. 
+.NET 8 (current LTS) or .NET 9 is recommended.
 :::
 
-Make sure that your project has been updated/ported to at least `net6.0-windows` and uses the new [SDK](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview) csproj format. 
+Make sure that your project has been updated/ported to at least `net6.0-windows` and uses the SDK-style `.csproj` format. SDK-style projects start with `<Project Sdk="Microsoft.NET.Sdk">` rather than the older verbose format with `<Import>` elements.
 
-For more information see the Microsoft [How to upgrade a WPF desktop app to .NET 7](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/migration) guide.
+If your project still uses the legacy `.csproj` format, use the .NET Upgrade Assistant or manually convert it. The key changes are:
+- Replace the verbose XML with an SDK-style `<Project Sdk="Microsoft.NET.Sdk">` root element
+- Set `<TargetFramework>net8.0-windows</TargetFramework>`
+- Add `<UseWpf>true</UseWpf>`
+- Remove explicit file includes (SDK-style projects include files automatically)
 
-Confirm that your project runs acceptably on .NET 7 with WPF.
+Confirm that your project builds and runs correctly on .NET 8 (or later) with WPF before proceeding.
 
 :::danger
 This step is **vital**. XPF will not work with the old/legacy `.csproj` format or versions of .NET less than 6.0. You must first convert your project, and ensure that WPF works with modern .NET version before attempting to use XPF.
@@ -143,30 +147,30 @@ This disables the WinForms shim layer and enables native WinForms integration. N
 
 ### Project Files
 
-1. Convert all projects to .NET 7.0 and above. The old project file format that precedes the new [.NET SDK style csproj](https://web.archive.org/web/20230712075209/https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview) will not work outside of Windows.
-2. We highly recommend doing (1) on Windows first to avoid having to wrangle with hard to debug windows-specific dependency issues on other platforms. Please try to replace or remove deprecated features from .NET 7.0 such as AppDomain, CodeDOM, WCF, `System.Web`, XmlSerializer, and hard Windows-only API’s like `System.Management.Instrumentation`, `System.Drawing.Common` etc. on your app with cross-platform friendly alternatives.
+1. Convert all projects to .NET 8.0 and above. The old project file format (non-SDK-style `.csproj`) will not work outside of Windows.
+2. It is highly recommended to do (1) on Windows first to avoid having to wrangle with hard-to-debug Windows-specific dependency issues on other platforms. Replace or remove deprecated features from .NET 7.0 such as AppDomain, CodeDOM, WCF, `System.Web`, XmlSerializer, and hard Windows-only APIs like `System.Management.Instrumentation` and `System.Drawing.Common` on your app with cross-platform friendly alternatives.
 3. While doing (1), watch out for any custom MSBuild Tasks that your app may have. Make sure any said Tasks still work on .NET 7.0 by running `dotnet build`. Don’t test inside Visual Studio so that you can confirm it works outside.
 4. Convert all PCL (Portable Class Libraries) into `netstandard` libraries.
 5. Remove any `ApplicationDefinition` entries from the `.csproj`.
-6. Remove `PropertyGroup` elements that look like [this](https://github.com/microsoft/WPF-Samples/blob/main/Clipboard/ClipboardViewer/ClipboardViewer.csproj#L7-L18) and use the default configuration provided by the SDK where possible
+6. Remove verbose `PropertyGroup` elements that define `Configuration`, `Platform`, `ProjectGuid`, `OutputType`, `RootNamespace`, and similar properties individually. SDK-style projects provide sensible defaults for all of these.
 
 ### Dependencies
 
 7. If you had a .NET Framework-based nuget package, please try to find a newer version (`netstandard2.0`, `netcoreapp2.0`+, `net5.0`+) of said package. Most of the time even those .NET Framework packages work cross platform too but it’s not a guarantee. 
 8. If there are `Reference` items that are linked to a standalone `dll` on your app's project file, try to find an alternative for it on NuGet as described on (4). If it’s a managed assembly then often times it will work but again, no guarantee.
-9. If you have any native binaries, please try to find a managed equivalent or, if you have the sources for those native bins: try to recompile them to the target platforms you desire. Make sure to use [NativeLibrary APIs](https://web.archive.org/web/20230326113052/https://developers.redhat.com/blog/2019/09/06/interacting-with-native-libraries-in-net-core-3-0) to interop to those afterwards.
-10. We recommend updating your dependencies to the latest version; especially 3rd party components such as Actipro, DevExpress, Syncfusion, Telerik etc.
+9. If you have any native binaries, try to find a managed equivalent or recompile them for your target platforms. Use `System.Runtime.InteropServices.NativeLibrary` and `DllImport` for native interop on .NET 8+.
+10. Update your dependencies to the latest version, especially third-party components such as Actipro, DevExpress, Syncfusion, and Telerik.
 
 ### Windows
 
-11. We discourage any form of custom chrome window controls (e.g. WPF's WindowChrome, MahApps's MetroWindow, DevExpress's DXWindow) and anything that customizes window borders or behaviors because it’s not guaranteed to fit into the target platform’s UI design (e.g., a custom MetroWindow on a macOS). The best design for XPF target platforms is single view app (e.g., like a website or a mobile application).
+11. Avoid custom chrome window controls (e.g. WPF’s WindowChrome, MahApps’s MetroWindow, DevExpress’s DXWindow) and anything that customizes window borders or behaviors because it is not guaranteed to fit into the target platform’s UI design (e.g., a custom MetroWindow on macOS). The best design for XPF target platforms is a single-view app (e.g., like a website or a mobile application).
 
 ### Resources & Settings
 
-12. Resource Files (`.resx`) don't get regenerated outside of Visual Studio. We suggest making use of alternatives to localization like JSON files etc. or other solutions that works independently of Visual Studio. (Subject to review once .NET 8.0 is out)
+12. Resource Files (`.resx`) don't get regenerated outside of Visual Studio. Consider alternatives to localization like JSON files or other solutions that work independently of Visual Studio.
 13. Visual Studio Text Templates (T4, *.template files) are also deprecated on .NET 7.0. Please use source generators as an alternative.
 14. Images or Bitmaps in Resource Files (`.resx`) are not compatible with the .NET 7.0: consider using WPF's resources scheme instead.
-15. Avoid using `App.Config` / `System.Configuration.ConfigurationManager` due to it not persisting correctly on platforms that doesn’t allow writes on the same location as the executing assembly (macOS, mobile, WASM, etc.) and use a 3rd party/in-house solution to write persistent configuration data for your apps. 
+15. Avoid using `App.Config` / `System.Configuration.ConfigurationManager` due to it not persisting correctly on platforms that don’t allow writes on the same location as the executing assembly (macOS, mobile, WASM, and similar) and use a 3rd party/in-house solution to write persistent configuration data for your apps.
 
 ### Filesystem Access
 
@@ -195,4 +199,4 @@ This disables the WinForms shim layer and enables native WinForms integration. N
 ### Unsupported Controls
 
 20. Avoid using WPF's Spell checking and XPS features since those are not supported by XPF.
-21. If you have any advanced & specialized WPF features that you want to work on your app like Shaders, 3D, Media, etc., Please contact us so that we can help you figure out the best way forward.
+21. If you have any advanced and specialized WPF features that you want to work on your app like Shaders, 3D, and Media, please contact us so that we can help you figure out the best way forward.

@@ -3,7 +3,7 @@ id: customizing-initialization
 title: Customizing initialization
 ---
 
-Avalonia provides the [`AppBuilder`](https://docs.avaloniaui.net/docs/getting-started/application-lifetimes) API to customize various aspects of the framework. 
+Avalonia provides the [`AppBuilder`](/docs/fundamentals/application-lifetimes) API to customize various aspects of the framework. 
 
 Because XPF is based upon Avalonia, it can be useful to have access to this API in an XPF application.
 
@@ -97,7 +97,7 @@ In certain cases you may want to use a custom Avalonia `Application` class; some
 - Providing application-wide Avalonia styles and resources
 - Providing an application `NativeMenu`
 
-In order to do this, first add `.cs` and `.axaml` files for your application class:
+To do this, first add `.cs` and `.axaml` files for your application class:
 
 ```csharp title="MyAvaloniaApp.axaml.cs"
 using Avalonia;

@@ -7,15 +7,15 @@ title: Headless Testing
 
 Unit-testing was always a complicated scenario with WPF. The most common solution was to run heavy automation based e2e testing suits. Making it slower and locking it to Windows only testing.
 
-In Avalonia, instead of automation testing, we always recommend trying Headless testing first as it's fast and portable.
-Since XPF is based on the same core as Avalonia, we made headless testing possible on WPF apps too.
+Instead of automation testing, try Headless testing first as it's fast and portable.
+Since XPF is based on the same core as Avalonia, headless testing is available for WPF apps too.
 
 :::tip
-We have prepared a complete [CalculatorDemo sample](https://github.com/AvaloniaUIOU/CalculatorDemo/tree/headless-testing) with headless tests. Please ask our support team to give you access to this repository, if you need.
+A complete [CalculatorDemo sample](https://github.com/AvaloniaUIOU/CalculatorDemo/tree/headless-testing) with headless tests is available. Ask the support team for access to this repository if needed.
 :::
 
 :::note
-If you need more detailed documentation on Headless platform and Avalonia extensions, please visit [Avalonia documentation](https://docs.avaloniaui.net/docs/concepts/headless/) and [Avalonia samples](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing/TestableApp.Headless.XUnit). Understanding how it works with Avalonia also helps with XPF/WPF.
+For more detailed documentation on the Headless platform and Avalonia extensions, see [Headless Testing with XUnit](/docs/testing/headless-xunit) and [Headless Testing with NUnit](/docs/testing/headless-nunit). Understanding how headless testing works with Avalonia also helps with XPF/WPF.
 :::
 
 ## Configuring testing project
@@ -52,14 +52,13 @@ Note, if you already override AppBuilder for your XPF app (as per [Customizing I
 
 public class TestAppBuilder
 {
-    // See https://docs.avaloniaui.net/docs/concepts/headless/headless-nunit#initialize-nunit-tests
-    // XPF specific: we need to add .WithAvaloniaXpf and keep DefaultXpfAvaloniaApplication was already preconfigured default themes.
+    // XPF specific: add .WithAvaloniaXpf() and use DefaultXpfAvaloniaApplication which has preconfigured default themes.
     public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<DefaultXpfAvaloniaApplication>()
         .WithAvaloniaXpf()
         .UseSkia()
         .UseHeadless(new AvaloniaHeadlessPlatformOptions
         {
-            // Required for capturing rendered frame https://docs.avaloniaui.net/docs/concepts/headless/#capturing-the-last-rendered-frame
+            // Set to false to enable capturing rendered frames
             UseHeadlessDrawing = false
         });
 }
@@ -93,7 +92,7 @@ public void Should_Be_Able_To_Raise_Event()
 }
 ```
 
-Where Button logic is straightforward:
+Where Button logic is as follows:
 
 ```csharp
 private int _clickCount = 0;
@@ -104,12 +103,12 @@ private void ClickingButton_OnClick(object sender, RoutedEventArgs e)
 ```
 
 :::tip
-To access `ClickingButton` from the testing project, you either need to set [x:FieldModifier="public"](https://learn.microsoft.com/en-us/dotnet/desktop/xaml-services/xfieldmodifier-directive) on the control, or define `InternalsVisibleTo` attribute.
+To access `ClickingButton` from the testing project, you either need to set `x:FieldModifier="public"` on the control in XAML, or add an `[assembly: InternalsVisibleTo("YourTestProject")]` attribute to your main project.
 :::
 
 ## Accessing Avalonia headless extensions
 
-In [Avalonia documentation](https://docs.avaloniaui.net/docs/concepts/headless/) you might find some useful headless extensions for simulating clicks and keyboard input, avoiding raising fake WPF events.
+Avalonia provides headless extensions for simulating clicks and keyboard input, avoiding the need to raise fake WPF events.
 
 This extensions are only available on Avalonia Window, and can't be used on WPF Window.
 But lucky, it's possible to get Avalonia Window in headless tests:

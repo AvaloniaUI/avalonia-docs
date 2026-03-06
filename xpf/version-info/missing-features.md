@@ -22,6 +22,6 @@ The following features will be available later but require significant engineeri
 
 The following features are unlikely to be supported due to platform restrictions:
 
-- [Multiple UI threads](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/threading-model?view=netframeworkdesktop-4.8#multiple-windows-multiple-threads) (multiple `Dispatcher` instances)
+- Multiple UI threads (multiple `Dispatcher` instances). macOS allows only one UI thread; Windows and Linux have limited support. See [Known Differences](/xpf/guides/known-differences#multiple-ui-threads).
 - `HwndHost` / `HwndSource`
 - `XPS` - this relies on a Windows operating system component

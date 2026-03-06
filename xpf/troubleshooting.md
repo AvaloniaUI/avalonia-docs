@@ -43,7 +43,7 @@ dotnet restore
 
 If you see a `TypeLoadException` such as:
 
-```
+```text
 Method 'SetDataAsync' in type 'Avalonia.Win32.ClipboardImpl' does not have an implementation
 ```
 
@@ -88,7 +88,7 @@ XPF logs are controlled via environment variables.
 * `XPF_LOG_OUTPUT`: `console`, `trace`, `file=filePath`. Multiple values are supported separated by `;`.
 * `XPF_LOG_LEVEL`: `Verbose`, `Information`, `Debug`, `Warning`, `Error`, `Fatal`.
 
-:::warning
+:::caution
 Older documentation may reference `ATLANTIS_LOG_OUTPUTS` and `ATLANTIS_LOG_LEVEL`. The correct variable names are `XPF_LOG_OUTPUT` and `XPF_LOG_LEVEL`.
 :::
 
@@ -107,7 +107,13 @@ In some situations it might be useful to gather Avalonia logs, as XPF is built o
             .WithAvaloniaXpf()
 ```
 
-This will redirect all Avalonia logs to the .NET Trace listener. Which can be redirected as well - [Trace Listeners](https://learn.microsoft.com/en-us/dotnet/framework/debug-trace-profile/trace-listeners).
+This will redirect all Avalonia logs to the .NET `System.Diagnostics.Trace` listener. You can add custom trace listeners in your application to route these logs to a file, console, or your own logging framework:
+
+```csharp
+// Route trace output to a file
+Trace.Listeners.Add(new TextWriterTraceListener("avalonia.log"));
+Trace.AutoFlush = true;
+```
 
 ### Override Logger.Sink
 
@@ -130,7 +136,7 @@ public class MyLogger : ILogSink
 
 If you encounter the following exception:
 
-```
+```text
 System.IO.FileNotFoundException: Could not load file or assembly 'System.Resources.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. The system cannot find the file specified.
 ```
 
@@ -150,7 +156,7 @@ If you experience a `NullReferenceException` or `MissingMethodException` after u
 
 If you encounter:
 
-```
+```text
 System.DllNotFoundException: Unable to load shared library 'libSkiaSharp' or one of its dependencies
 ```
 
