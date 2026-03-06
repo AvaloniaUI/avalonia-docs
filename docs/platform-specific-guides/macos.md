@@ -91,6 +91,42 @@ A menu item named "Edit" is special on macOS. Avalonia automatically adds standa
 
 Each `NativeMenuItem` requires either a `Click` event handler or a `Command` binding to be enabled. Without one of these, the item appears greyed out.
 
+### Dock menu
+
+macOS displays a context menu when users right-click (or Control-click) your application's icon in the Dock. You can customize this menu by attaching a `NativeDock.Menu` to your `Application` in `App.axaml`:
+
+```xml
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MyApp.App"
+             Name="My Application">
+
+    <NativeDock.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="New Window" Click="NewWindow_OnClick" />
+            <NativeMenuItemSeparator />
+            <NativeMenuItem Header="Show Main Window" Click="ShowMainWindow_OnClick" />
+        </NativeMenu>
+    </NativeDock.Menu>
+</Application>
+```
+
+The dock menu items appear above the standard system items (such as "Options" and "Quit") that macOS adds automatically.
+
+You can also modify the dock menu at runtime:
+
+```csharp
+var dockMenu = NativeDock.GetMenu(this);
+if (dockMenu is not null)
+{
+    dockMenu.Items.Insert(0, new NativeMenuItem("Dynamic Item"));
+}
+```
+
+:::note
+`NativeDock.Menu` only has an effect on macOS. On other platforms, the property is ignored.
+:::
+
 ### Keyboard shortcuts
 
 The `Gesture` property assigns a keyboard shortcut to a menu item. Avalonia uses platform-neutral modifier names in gesture strings. On macOS, these map to the standard modifier keys:
