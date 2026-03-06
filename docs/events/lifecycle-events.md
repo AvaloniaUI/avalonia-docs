@@ -59,7 +59,7 @@ public class MyControl : Control
     protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
     {
         base.OnAttachedToVisualTree(e);
-        // e.Root is the root of the visual tree (typically a Window)
+        // e.RootVisual is the root of the visual tree
         // Start listening to external services, timers, etc.
     }
 
@@ -75,8 +75,9 @@ The `VisualTreeAttachmentEventArgs` provides:
 
 | Property | Type | Description |
 |---|---|---|
-| `Root` | `IRenderRoot` | The root of the visual tree (typically a `Window` or `TopLevel`). |
-| `Parent` | `Visual` | The visual parent that the control was attached to or detached from. |
+| `RootVisual` | `Visual` | The root visual of the tree the control was attached to. |
+| `AttachmentPoint` | `Visual` | The visual that the control was directly attached to or detached from. |
+| `PresentationSource` | `IPresentationSource` | The presentation source hosting the visual tree. |
 
 **When to use**: Subscribe to or unsubscribe from external services, platform APIs, or events that should only be active while the control is visible.
 

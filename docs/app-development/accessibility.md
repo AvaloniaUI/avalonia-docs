@@ -241,13 +241,16 @@ Avalonia's accessibility support varies by platform:
 |---|---|---|
 | Windows | UI Automation (UIA) | Full support |
 | macOS | NSAccessibility | Full support |
-| Linux | AT-SPI2 | Supported |
+| Linux | [AT-SPI2](/docs/platform-specific-guides/linux#accessibility) | Full support |
 | iOS | UIAccessibility | Supported |
 | Android | AccessibilityNodeInfo | Supported |
 | Browser (WASM) | ARIA attributes | Partial support |
+
+On Linux, Avalonia automatically exposes the accessibility tree over D-Bus when AT-SPI2 is available. Screen readers such as Orca can discover and interact with all standard Avalonia controls. See the [Linux platform guide](/docs/platform-specific-guides/linux#accessibility) for setup and testing instructions.
 
 ## See Also
 
 - [Focus](/docs/input-interaction/focus): Keyboard focus navigation and tab ordering.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Keyboard shortcuts and access keys.
 - [Custom Controls](/docs/custom-controls): Building custom controls with proper accessibility support.
+- [Desktop Linux](/docs/platform-specific-guides/linux#accessibility): Testing accessibility with Orca and Accerciser on Linux.

@@ -5,10 +5,10 @@ title: Platform Settings
 
 The `PlatformSettings` class represents a contract for accessing platform-specific settings and information. Some of these settings might be changed by the user globally in the OS in runtime. 
 
-The `PlatformSettings` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/fundamentals/top-level) page.
+Access `PlatformSettings` through the `GetPlatformSettings` extension method on any `Visual`. For more details on accessing `TopLevel`, visit the [TopLevel](/docs/fundamentals/top-level) page.
 
 ```cs
-var platformSettings = window.PlatformSettings;
+var platformSettings = myControl.GetPlatformSettings();
 ```
 
 ## Methods
@@ -68,7 +68,7 @@ HotkeyConfiguration is especially useful when application needs to handle well k
 ```cs
 protected override void OnKeyDown(KeyEventArgs e)
 {
-    var hotkeys = TopLevel.GetTopLevel(this).PlatformSettings.HotkeyConfiguration;
+    var hotkeys = this.GetPlatformSettings()?.HotkeyConfiguration;
     if (hotkeys.Copy.Any(g => g.Matches(e)))
     {
         // Handle Copy hotkey.

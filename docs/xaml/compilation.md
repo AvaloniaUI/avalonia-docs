@@ -91,6 +91,34 @@ When targeting Native AOT, compiled bindings are required because reflection-bas
 
 For more details on AOT deployment, see [Native AOT](/docs/deployment/native-aot).
 
+## Obsolete and Experimental Diagnostics
+
+The XAML compiler recognizes `[Obsolete]` and `[Experimental]` attributes on types and members. When you use an obsolete or experimental type, property, or event in XAML, the compiler emits a warning (or error, for `[Obsolete]` with `error: true`) with the appropriate diagnostic code and message.
+
+For example, if a control library marks a type as experimental:
+
+```csharp
+[Experimental("MYLIB0001")]
+public class PreviewPanel : Control { }
+```
+
+Using it in XAML produces a build warning:
+
+```
+warning MYLIB0001: 'PreviewPanel' is for evaluation purposes only and is subject to change or removal in future updates.
+  --> Views/MainView.axaml(8,6)
+```
+
+Similarly, using a member marked `[Obsolete("Use NewProperty instead")]` in XAML will emit an `AVLN2001` warning at build time instead of silently compiling.
+
+You can suppress these diagnostics in your project file if needed:
+
+```xml
+<PropertyGroup>
+    <NoWarn>$(NoWarn);MYLIB0001</NoWarn>
+</PropertyGroup>
+```
+
 ## Troubleshooting XAML Compilation
 
 ### Build errors in XAML files

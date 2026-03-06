@@ -173,7 +173,7 @@ Avalonia automatically adapts common hotkeys to the active platform. On macOS, c
 ```csharp
 protected override void OnKeyDown(KeyEventArgs e)
 {
-    var hotkeys = TopLevel.GetTopLevel(this)?.PlatformSettings?.HotkeyConfiguration;
+    var hotkeys = this.GetPlatformSettings()?.HotkeyConfiguration;
     if (hotkeys?.Copy.Any(g => g.Matches(e)) == true)
     {
         // Handle copy

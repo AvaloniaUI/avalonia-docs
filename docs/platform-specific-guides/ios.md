@@ -84,6 +84,63 @@ If successful, your device is now provisioned for development. To find your code
 
 The bold text at the top of the window on your selected development certificate is your signing key value (e.g., `Apple Development: dan@walms.co.uk (3L323F7VSS)`).
 
+## Deep linking and universal links
+
+iOS supports two mechanisms for opening your app from a URL:
+
+### Custom URL schemes
+
+Register a custom URL scheme (e.g., `myapp://`) by adding `CFBundleURLTypes` to your `Info.plist`:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLName</key>
+        <string>MyApp</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>myapp</string>
+        </array>
+    </dict>
+</array>
+```
+
+### Universal links
+
+Universal links associate your app with a web domain, allowing standard `https://` URLs to open your app directly. To configure them:
+
+1. Add the Associated Domains entitlement to your app. Create or update your `Entitlements.plist`:
+   ```xml
+   <key>com.apple.developer.associated-domains</key>
+   <array>
+       <string>applinks:example.com</string>
+   </array>
+   ```
+2. Host an `apple-app-site-association` file on your web server at `https://example.com/.well-known/apple-app-site-association`.
+
+### Handling activation
+
+Both custom URL schemes and universal links raise the `Activated` event on `IActivatableLifetime` with `ActivationKind.OpenUri`:
+
+```csharp
+if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+{
+    activatableLifetime.Activated += (s, a) =>
+    {
+        if (a is ProtocolActivatedEventArgs protocolArgs
+            && protocolArgs.Kind == ActivationKind.OpenUri)
+        {
+            // Handle the URI
+            var uri = protocolArgs.Uri;
+        }
+    };
+}
+```
+
+This works with the scene-based lifecycle used in Avalonia 12. See [Activatable Lifetime](/docs/services/activatable-lifetime) for the full API reference.
+
 ## See also
 
 - [Deploying on iOS](/docs/deployment/ios) (simulator, device, and publishing)
+- [Activatable Lifetime](/docs/services/activatable-lifetime) for handling URI, file, and background activation
