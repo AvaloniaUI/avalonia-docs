@@ -112,6 +112,20 @@ private void Maximize()
 }
 ```
 
+## Disabling Minimize and Maximize Buttons
+
+Use `CanMinimize` and `CanMaximize` to control whether the title bar buttons are enabled:
+
+```xml
+<Window CanMinimize="False" CanMaximize="False">
+```
+
+When `CanResize` is `false`, `CanMaximize` is automatically set to `false`.
+
+:::note
+Platform behavior varies. On Windows, disabled buttons are hidden. On macOS, they appear greyed out. On Linux, behavior depends on the window manager.
+:::
+
 ## Hiding the Title Bar (Chromeless Window)
 
 Create a borderless window by disabling system decorations:
@@ -248,6 +262,8 @@ Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://MyApp/Assets/app-icon.i
 | `WindowStartupLocation` | `WindowStartupLocation` | `Manual`, `CenterScreen`, `CenterOwner`. |
 | `SystemDecorations` | `SystemDecorations` | `Full`, `BorderOnly`, `None`. |
 | `CanResize` | `bool` | Whether the user can resize the window. |
+| `CanMinimize` | `bool` | Whether the minimize button is enabled. Defaults to `true`. |
+| `CanMaximize` | `bool` | Whether the maximize button is enabled. Defaults to `true`. Automatically `false` when `CanResize` is `false`. |
 | `Topmost` | `bool` | Keep the window above all others. |
 | `ShowInTaskbar` | `bool` | Show in the OS taskbar. |
 | `Icon` | `WindowIcon` | Window icon for title bar and taskbar. |

@@ -68,6 +68,9 @@ The value is returned from the `ShowDialog<T>` call in the parent.
 | `WindowStartupLocation` | Where the window appears: `Manual`, `CenterScreen`, `CenterOwner`. |
 | `Position` | The window position in screen coordinates (when `WindowStartupLocation` is `Manual`). |
 | `CanResize` | Whether the user can resize the window. |
+| `CanMinimize` | Whether the minimize button is enabled. Defaults to `true`. |
+| `CanMaximize` | Whether the maximize button is enabled. Defaults to `true`. Automatically `false` when `CanResize` is `false`. |
+| `IsDialog` | Read-only. `true` when the window was opened with `ShowDialog`, `false` when opened with `Show`. |
 | `ShowInTaskbar` | Whether the window appears in the OS taskbar. |
 | `Topmost` | Whether the window stays on top of other windows. |
 | `WindowState` | Current state: `Normal`, `Minimized`, `Maximized`, `FullScreen`. |

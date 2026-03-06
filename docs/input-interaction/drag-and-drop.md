@@ -44,7 +44,7 @@ All events provide a `DragEventArgs` with these properties:
 private void OnDragOver(object? sender, DragEventArgs e)
 {
     // Check if we can accept the data
-    if (e.DataTransfer.Formats.Contains(DataFormats.Files))
+    if (e.DataTransfer.Formats.Contains(DataFormat.File))
     {
         e.DragEffects = DragDropEffects.Copy;
     }
@@ -56,7 +56,7 @@ private void OnDragOver(object? sender, DragEventArgs e)
 
 private void OnDrop(object? sender, DragEventArgs e)
 {
-    if (e.DataTransfer.Formats.Contains(DataFormats.Files))
+    if (e.DataTransfer.Formats.Contains(DataFormat.File))
     {
         var files = e.DataTransfer.GetFiles();
         if (files != null)
@@ -92,7 +92,7 @@ To initiate a drag-and-drop operation from your control, call `DragDrop.DoDragDr
 private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 {
     var dragData = new DataTransfer();
-    dragData.Set(DataFormats.Text, "Hello from drag!");
+    dragData.Set(DataFormat.Text, "Hello from drag!");
 
     var result = await DragDrop.DoDragDropAsync(
         e,
@@ -199,10 +199,10 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        DropZone.AddHandler(DragDrop.DragOverEvent, OnDragOver);
-        DropZone.AddHandler(DragDrop.DropEvent, OnDrop);
-        DropZone.AddHandler(DragDrop.DragEnterEvent, OnDragEnter);
-        DropZone.AddHandler(DragDrop.DragLeaveEvent, OnDragLeave);
+        DragDrop.AddDragOverHandler(DropZone, OnDragOver);
+        DragDrop.AddDropHandler(DropZone, OnDrop);
+        DragDrop.AddDragEnterHandler(DropZone, OnDragEnter);
+        DragDrop.AddDragLeaveHandler(DropZone, OnDragLeave);
     }
 
     private void OnDragEnter(object? sender, DragEventArgs e)
@@ -217,8 +217,8 @@ public partial class MainWindow : Window
 
     private void OnDragOver(object? sender, DragEventArgs e)
     {
-        e.DragEffects = e.DataTransfer.Formats.Contains(DataFormats.Text)
-                     || e.DataTransfer.Formats.Contains(DataFormats.Files)
+        e.DragEffects = e.DataTransfer.Formats.Contains(DataFormat.Text)
+                     || e.DataTransfer.Formats.Contains(DataFormat.File)
             ? DragDropEffects.Copy
             : DragDropEffects.None;
     }
@@ -227,11 +227,11 @@ public partial class MainWindow : Window
     {
         DropZone.Background = new SolidColorBrush(Color.Parse("#F5F5F5"));
 
-        if (e.DataTransfer.Formats.Contains(DataFormats.Text))
+        if (e.DataTransfer.Formats.Contains(DataFormat.Text))
         {
-            StatusText.Text = $"Dropped text: {e.DataTransfer.GetText()}";
+            StatusText.Text = $"Dropped text: {e.DataTransfer.TryGetText()}";
         }
-        else if (e.DataTransfer.Formats.Contains(DataFormats.Files))
+        else if (e.DataTransfer.Formats.Contains(DataFormat.File))
         {
             var files = e.DataTransfer.GetFiles();
             if (files != null)
@@ -249,11 +249,13 @@ Drag-and-drop events are attached events on the `DragDrop` class. You can handle
 
 ```csharp
 // Register in code
-myBorder.AddHandler(DragDrop.DropEvent, OnDrop);
+DragDrop.AddDropHandler(myBorder, OnDrop);
 
 // Remove handler
-myBorder.RemoveHandler(DragDrop.DropEvent, OnDrop);
+DragDrop.RemoveDropHandler(myBorder, OnDrop);
 ```
+
+The `DragDrop` class provides `Add*Handler` and `Remove*Handler` static methods for each event: `DragEnter`, `DragLeave`, `DragOver`, and `Drop`.
 
 ## See Also
 

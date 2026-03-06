@@ -223,6 +223,7 @@ const sidebars: SidebarsConfig = {
         'graphics-animation/hit-testing',
         'graphics-animation/adding-icons',
         'graphics-animation/image-interpolation',
+        'graphics-animation/text-options',
         'graphics-animation/bitmap-blend-modes',
       ],
     },

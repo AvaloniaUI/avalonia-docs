@@ -54,6 +54,22 @@ Virtualization requires a constrained height. If the items control is inside a `
 </ScrollViewer>
 ```
 
+### Buffer factor for smooth scrolling
+
+`VirtualizingStackPanel` supports a `BufferFactor` property that keeps additional items realized beyond the visible viewport. This reduces recycling frequency during scrolling, which can eliminate stutter caused by garbage collection, particularly on mobile devices.
+
+```xml
+<ListBox ItemsSource="{Binding LargeCollection}">
+    <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+            <VirtualizingStackPanel BufferFactor="1" />
+        </ItemsPanelTemplate>
+    </ListBox.ItemsPanel>
+</ListBox>
+```
+
+A `BufferFactor` of `1` realizes items across one extra viewport height above and below the visible area. The default is `0` (no buffer). Higher values use more memory but produce smoother scrolling for complex item templates.
+
 ## Layout Performance
 
 ### Avoid deep nesting
@@ -130,7 +146,7 @@ Transparent elements still participate in hit testing and rendering. If a contro
 
 ### BitmapCache
 
-For visuals that are expensive to render but change infrequently, use `BitmapCache` to rasterize them to a bitmap surface:
+For visuals that are expensive to render but change infrequently, use `BitmapCache` to rasterize them to a bitmap surface. The control and its children are rendered once into an intermediate bitmap, and that bitmap is reused for subsequent frames until the content changes.
 
 ```xml
 <Border BoxShadow="0 4 8 0 #40000000" CornerRadius="8">
@@ -141,7 +157,24 @@ For visuals that are expensive to render but change infrequently, use `BitmapCac
 </Border>
 ```
 
-`RenderAtScale` controls the resolution of the cached bitmap. Values above 1 increase quality (useful for content that will be scaled up), while values below 1 reduce memory at the cost of quality. Set to 0 to disable caching.
+`BitmapCache` properties:
+
+| Property | Type | Default | Description |
+|---|---|---|---|
+| `RenderAtScale` | `double` | `1` | Resolution multiplier for the cached bitmap. Values above 1 increase quality (useful for content that will be scaled up), values below 1 reduce memory at the cost of quality. Set to 0 to disable caching. |
+| `SnapsToDevicePixels` | `bool` | `false` | Aligns the cached bitmap to device pixel boundaries for sharper text and line rendering. |
+| `EnableClearType` | `bool` | `false` | Enables ClearType subpixel text rendering within the cached surface. Without this, text in the cache uses grayscale antialiasing. |
+
+For best results with text-heavy cached content, enable both `SnapsToDevicePixels` and `EnableClearType`:
+
+```xml
+<Border>
+    <Border.CacheMode>
+        <BitmapCache SnapsToDevicePixels="True" EnableClearType="True" />
+    </Border.CacheMode>
+    <TextBlock Text="Cached text with ClearType rendering" />
+</Border>
+```
 
 ### BitmapInterpolationMode
 

@@ -26,7 +26,18 @@ The shadow parameters are, in order: `offsetX offsetY blur spread color`.
 | `offsetY` | Vertical offset. Positive values move the shadow down. |
 | `blur` | Blur radius. Larger values create softer shadows. Must be non-negative. |
 | `spread` | Spread radius. Positive values expand the shadow, negative values shrink it. |
-| `color` | The shadow color, including alpha for transparency. |
+| `color` | The shadow color. Accepts hex values (`#80000000`), named colors (`Gray`), and color functions (`rgba(0,0,0,0.5)`, `hsla(0,0%,0%,0.3)`). |
+
+### Color functions in shadows
+
+Color functions with commas (such as `rgba()` and `hsla()`) are fully supported, including in multiple shadow definitions:
+
+```xml
+<Border BoxShadow="0 4 8 0 rgba(0,0,0,0.3), 0 2 4 0 rgba(0,0,0,0.1)"
+        CornerRadius="8" Background="White" Padding="20">
+    <TextBlock Text="RGBA shadows" />
+</Border>
+```
 
 ### Inset shadows
 

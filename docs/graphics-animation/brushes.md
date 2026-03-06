@@ -24,18 +24,38 @@ Colors can be specified as:
 
 | Format | Example | Description |
 |---|---|---|
-| Named color | `Red`, `SteelBlue` | Any standard CSS/WPF color name |
-| `#RRGGBB` | `#4682B4` | Hex RGB |
-| `#AARRGGBB` | `#804682B4` | Hex ARGB (with alpha) |
-| `#RGB` | `#F00` | Short hex RGB |
+| Named color | `Red`, `SteelBlue` | Any standard CSS/WPF color name. |
+| `#RRGGBB` | `#4682B4` | Hex RGB. |
+| `#AARRGGBB` | `#804682B4` | Hex ARGB (with alpha). |
+| `#RGB` | `#F00` | Short hex RGB. |
+| `rgb()` | `rgb(70, 130, 180)` | CSS RGB function. Values 0-255. |
+| `rgba()` | `rgba(70, 130, 180, 0.8)` | CSS RGB with alpha (0.0-1.0). |
+| `hsl()` | `hsl(207, 44%, 49%)` | CSS HSL (hue, saturation, lightness). |
+| `hsla()` | `hsla(207, 44%, 49%, 0.8)` | CSS HSL with alpha. |
+| `hsv()` | `hsv(207, 61%, 71%)` | HSV (hue, saturation, value). |
+| `hsva()` | `hsva(207, 61%, 71%, 0.8)` | HSV with alpha. |
+
+These formats work anywhere a brush or color is expected, including XAML attributes, styles, and `Brush.Parse()` / `Color.Parse()` in code.
+
+```xml
+<!-- All of these are equivalent -->
+<Border Background="SteelBlue" />
+<Border Background="#4682B4" />
+<Border Background="rgb(70, 130, 180)" />
+<Border Background="hsl(207, 44%, 49%)" />
+```
 
 ### Creating in code
 
 ```csharp
 var brush = new SolidColorBrush(Colors.SteelBlue);
 var brush2 = new SolidColorBrush(Color.Parse("#4682B4"));
+var brush3 = Brush.Parse("rgb(70, 130, 180)");
+var brush4 = Brush.Parse("hsl(207, 44%, 49%)");
 myBorder.Background = brush;
 ```
+
+`Brush.Parse()` accepts all the same color formats listed above, including named colors, hex values, and CSS color functions.
 
 ## LinearGradientBrush
 

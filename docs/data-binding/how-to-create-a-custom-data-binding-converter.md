@@ -155,22 +155,31 @@ You can also implement a `FuncValueConverter`. The `FuncValueConverter` has two 
 * **TOut**: This parameter defines the expected output type.
 
 
-### Example:
+### One-way example
 
-```cs
-public static class MyConverters 
+```csharp
+public static class MyConverters
 {
-    /// <summary>
-    /// Gets a Converter that takes a number as input and converts it into a text representation
-    /// </summary>
-    public static FuncValueConverter<decimal?, string> MyConverter { get; } = 
+    public static FuncValueConverter<decimal?, string> MyConverter { get; } =
         new FuncValueConverter<decimal?, string>(num => $"Your number is: '{num}'");
-    
-    /// <summary>
-    /// Gets a Converter that takes several numbers as input and converts it into a text representation
-    /// </summary>
-    public static FuncMultiValueConverter<decimal?, string> MyMultiConverter { get; } = 
+
+    public static FuncMultiValueConverter<decimal?, string> MyMultiConverter { get; } =
         new FuncMultiValueConverter<decimal?, string>(num => $"Your numbers are: '{string.Join(", ", num)}'");
+}
+```
+
+### Two-way example
+
+Pass an optional `convertBack` function to support two-way bindings:
+
+```csharp
+public static class MyConverters
+{
+    public static FuncValueConverter<double, string> TemperatureConverter { get; } =
+        new(
+            celsius => $"{celsius:F1} °C",
+            text => double.TryParse(text?.Replace(" °C", ""), out var c) ? c : 0
+        );
 }
 ```
 

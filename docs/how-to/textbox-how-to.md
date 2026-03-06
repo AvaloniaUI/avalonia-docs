@@ -35,6 +35,14 @@ To customize the placeholder color, set `PlaceholderForeground`:
 <TextBox PlaceholderText="Search..." PlaceholderForeground="Gray" />
 ```
 
+By default, placeholder text is rendered at 50% opacity. Override the `TextControlPlaceholderOpacity` theme resource to change this globally, for example to improve contrast for accessibility:
+
+```xml
+<Application.Resources>
+    <x:Double x:Key="TextControlPlaceholderOpacity">0.7</x:Double>
+</Application.Resources>
+```
+
 ## Password Input
 
 Hide typed characters using `PasswordChar`:

@@ -22,6 +22,8 @@ You will probably use these properties most often:
 | `Items`                    | The list items collection.                                                                                               |
 | `SelectedIndex`            | The index (zero-based) of the selected item.                                                                             |
 | `SelectedItem`             | The selected item itself.                                                                                                |
+| `IsEditable`               | Enables text editing, allowing the user to type into the combo box to filter or enter custom values.                     |
+| `Text`                     | Gets or sets the text value when `IsEditable` is `true`.                                                                 |
 | `AutoScrollToSelectedItem` | Indicates whether to automatically scroll to newly selected items.                                                       |
 | `IsDropDownOpen`           | Indicates whether the dropdown is currently open.                                                                        |
 | `MaxDropDownHeight`        | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show. |
@@ -155,6 +157,35 @@ public partial class MainViewModel : ObservableObject
 <ComboBox ItemsSource="{Binding Categories}"
           SelectedItem="{Binding SelectedCategory}"
           PlaceholderText="Select a category" />
+```
+
+## Editable ComboBox
+
+Set `IsEditable` to `true` to allow the user to type text directly into the combo box. As the user types, the control searches the items for a match and updates `SelectedItem` accordingly. The `Text` property holds the current text value.
+
+```xml
+<ComboBox IsEditable="True"
+          Text="{Binding SearchText}"
+          ItemsSource="{Binding Countries}"
+          SelectedItem="{Binding SelectedCountry}"
+          PlaceholderText="Type a country..." />
+```
+
+### TextSearch.TextBinding
+
+When items are complex objects, use `TextSearch.TextBinding` to specify which property the editable text should match against:
+
+```xml
+<ComboBox IsEditable="True"
+          ItemsSource="{Binding People}"
+          SelectedItem="{Binding SelectedPerson}"
+          TextSearch.TextBinding="{Binding FullName}">
+    <ComboBox.ItemTemplate>
+        <DataTemplate>
+            <TextBlock Text="{Binding FullName}" />
+        </DataTemplate>
+    </ComboBox.ItemTemplate>
+</ComboBox>
 ```
 
 ## PlaceholderText

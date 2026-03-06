@@ -89,6 +89,16 @@ var firstChild = myControl.VisualChildren[0];
 // Find a visual ancestor
 var scrollViewer = myControl.FindAncestorOfType<ScrollViewer>(includeSelf: false);
 
+// Find a visual ancestor matching a predicate
+var enabledPanel = myControl.FindAncestorOfType<StackPanel>(
+    includeSelf: false,
+    predicate: panel => panel.IsEnabled);
+
+// Find a visual descendant matching a predicate
+var visibleTextBox = myPanel.FindDescendantOfType<TextBox>(
+    includeSelf: false,
+    predicate: tb => tb.IsVisible);
+
 // Get all visual descendants
 var allVisuals = myControl.GetVisualDescendants();
 ```

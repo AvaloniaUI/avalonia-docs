@@ -107,13 +107,13 @@ This example creates a menu docked at the top edge of a window.
 
 ## Accelerator keys
 
-An accelerator key is identified by a single letter in the header preceded by an underscore. For example:
+An accelerator key is identified by a character in the header preceded by an underscore. For example:
 
 ```xml
  <MenuItem Header="_File">
 ```
 
-It allows the user to access a menu item quickly. It is also sometimes called a hot key, access key or mnemonic.
+It allows the user to access a menu item quickly. It is also sometimes called a hot key, access key or mnemonic. Letters, numbers, and accented characters are all supported as access keys.
 
 The user can access this feature by first pressing the Alt key, and then the accelerator key (or they can be pressed together). This is demonstrated in the second of the menu sequences in the example above.
 

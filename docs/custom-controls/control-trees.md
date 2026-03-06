@@ -59,6 +59,12 @@ var window = myControl.FindLogicalAncestorOfType<Window>();
 // Find a specific ancestor in the visual tree
 var border = myControl.FindAncestorOfType<Border>();
 
+// Find an ancestor or descendant matching a predicate
+var enabledPanel = myControl.FindAncestorOfType<StackPanel>(
+    predicate: p => p.IsEnabled);
+var visibleTextBox = myControl.FindDescendantOfType<TextBox>(
+    predicate: tb => tb.IsVisible);
+
 // Get all logical children
 var children = myControl.GetLogicalChildren();
 ```

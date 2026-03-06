@@ -94,9 +94,15 @@ Identifies a region of the UI as a landmark for navigation. Screen readers allow
 </ScrollViewer>
 ```
 
+Available landmark types: `Banner`, `Complementary`, `ContentInfo`, `Region`, `Form`, `Main`, `Navigation`, and `Search`.
+
+:::note
+On Windows, `AccessibilityView` must be set to at least `Control` for Narrator to detect landmarks and enable landmark navigation shortcuts (Narrator+N).
+:::
+
 ### HeadingLevel
 
-Marks a control as a heading at a specific level (1 through 9). Screen readers use headings for document navigation:
+Marks a control as a heading at a specific level. Screen readers use headings for document navigation. Use values 1 through 6 for cross-platform compatibility (macOS supports levels 0-6, Windows supports 1-9):
 
 ```xml
 <TextBlock AutomationProperties.HeadingLevel="1"
@@ -118,6 +124,24 @@ Controls how dynamic content changes are announced by screen readers:
 <!-- Assertive: announced immediately, interrupting current speech -->
 <TextBlock AutomationProperties.LiveSetting="Assertive"
            Text="{Binding ErrorMessage}" />
+```
+
+### ItemStatus
+
+Describes the current status of an element. Screen readers announce this text to provide context about the element's state:
+
+```xml
+<ListBoxItem AutomationProperties.ItemStatus="Downloading (45%)"
+             Content="{Binding FileName}" />
+```
+
+### ItemType
+
+Describes the type of an element in terms meaningful to the user. This supplements the control type with application-specific context:
+
+```xml
+<ListBoxItem AutomationProperties.ItemType="PDF Document"
+             Content="{Binding FileName}" />
 ```
 
 ### AccessibilityView
@@ -218,6 +242,12 @@ public class RatingControlAutomationPeer : ControlAutomationPeer
 | `GetAutomationIdCore()` | A stable identifier for testing |
 | `IsContentElementCore()` | Whether the control appears in the content view |
 | `IsControlElementCore()` | Whether the control appears in the control view |
+
+## Data Validation Errors
+
+Validation errors are automatically exposed to assistive technologies. When a control such as a `TextBox` has validation errors (from data annotations, `INotifyDataErrorInfo`, or exceptions), the `DataValidationErrors` control reports them as help text through its automation peer. Screen readers announce these errors when the control receives focus, with validation error text taking priority over tooltip text.
+
+No additional configuration is required. As long as your controls use Avalonia's [data validation](/docs/data-binding/data-validation) system, the errors are accessible by default.
 
 ## Accessibility Checklist
 

@@ -246,6 +246,50 @@ Add the required NuGet packages:
 <PackageReference Include="SkiaSharp" Version="2.88.*" />
 ```
 
+## GPU Interop with Composition Surfaces
+
+For advanced scenarios such as video playback, 3D engine integration, or cross-process GPU texture sharing, Avalonia's composition API supports importing external GPU resources into a `CompositionDrawingSurface`.
+
+### Importing GPU images
+
+Use the compositor to import external GPU textures (for example, a Vulkan image or an IOSurface on macOS) and display them in a composition surface:
+
+```csharp
+var compositor = ElementComposition.GetElementVisual(this)!.Compositor;
+
+// Import an external GPU image handle
+var image = compositor.ImportGpuImage(
+    PlatformGraphicsExternalImageProperties.CreateForVulkan(
+        pixelSize, format),
+    new PlatformHandle(handle, handleType));
+
+// Import semaphores for GPU synchronization
+var waitSemaphore = compositor.ImportGpuSemaphore(
+    new PlatformHandle(semaphoreHandle, semaphoreType));
+var signalSemaphore = compositor.ImportGpuSemaphore(
+    new PlatformHandle(semaphoreHandle2, semaphoreType));
+
+// Update the surface with the imported image
+await surface.UpdateWithKeyedMutexAsync(image);
+// or with timeline semaphores (macOS Metal):
+await surface.UpdateWithTimelineSemaphoresAsync(
+    image,
+    waitSemaphore, waitValue,
+    signalSemaphore, signalValue);
+```
+
+### Supported handle types
+
+GPU image and semaphore handle types vary by platform. Use `KnownPlatformGraphicsExternalImageHandleTypes` and `KnownPlatformGraphicsExternalSemaphoreHandleTypes` to discover available types:
+
+| Platform | Image handle types | Semaphore handle types |
+|---|---|---|
+| Windows | `D3D11TextureNtHandle`, `VulkanOpaqueNtHandle` | `D3D11Fence`, `VulkanOpaqueNtHandle` |
+| macOS | `IOSurfaceRef` | `MetalSharedEvent` |
+| Linux | `DmaBuf`, `VulkanOpaqueFd` | `VulkanOpaqueFd` |
+
+Check `CompositionGpuImportedImageSynchronizationCapabilities` on an imported image to determine which synchronization methods are available (`KeyedMutex`, `Semaphores`, `TimelineSemaphores`).
+
 ## Performance Considerations
 
 - `Render` is called on the UI thread. Keep drawing operations fast and avoid allocations where possible.

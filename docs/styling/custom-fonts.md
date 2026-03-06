@@ -136,6 +136,45 @@ Then reference the font in XAML:
            Text="Hello in Inter" />
 ```
 
+## Customizing font matching
+
+For advanced font handling, you can override methods on your font collection to control how Avalonia selects fallback fonts and creates synthetic typefaces.
+
+### Custom character matching
+
+Override `TryMatchCharacter` to control which font is used when a character is not found in the requested font family. This is useful for providing application-specific fallback chains:
+
+```csharp
+public sealed class MyFontCollection : EmbeddedFontCollection
+{
+    public MyFontCollection() : base(
+        new Uri("fonts:MyFonts", UriKind.Absolute),
+        new Uri("avares://MyApp/Assets/Fonts", UriKind.Absolute))
+    {
+    }
+
+    public override bool TryMatchCharacter(
+        int codepoint,
+        FontStyle fontStyle,
+        FontWeight fontWeight,
+        FontStretch fontStretch,
+        CultureInfo? culture,
+        out Typeface typeface)
+    {
+        // Custom logic to match characters to specific fonts
+        // Return true if a match was found, false to fall through
+        // to the default matching behavior
+        return base.TryMatchCharacter(
+            codepoint, fontStyle, fontWeight, fontStretch,
+            culture, out typeface);
+    }
+}
+```
+
+### Controlling synthetic typefaces
+
+When Avalonia cannot find an exact match for a requested weight or style, it creates a synthetic (algorithmically styled) typeface. You can prevent this for specific font families by implementing `IFontCollection2` on your collection and overriding the synthetic typeface creation behavior.
+
 ## Supported font formats
 
 Most TrueType (`.ttf`) and OpenType (`.otf`, `.ttf`) fonts are supported. Variable fonts are not currently supported (see [Issue #11092](https://github.com/AvaloniaUI/Avalonia/issues/11092)).

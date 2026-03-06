@@ -120,7 +120,7 @@ Check in this order:
 
 ### Rendering artifacts
 
-- **Blurry text or icons**: Check `RenderOptions.BitmapInterpolationMode` and ensure `UseLayoutRounding="True"`.
+- **Blurry text or icons**: Check `RenderOptions.BitmapInterpolationMode` for images and `TextOptions.TextHintingMode` for text. Ensure `UseLayoutRounding="True"`.
 - **Flickering**: May indicate a layout loop. Check for bindings that trigger layout during layout.
 
 ## Debugging Performance

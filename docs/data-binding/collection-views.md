@@ -190,6 +190,10 @@ _source.Connect()
 
 Avalonia's `ItemsControl` does not have built-in grouping support like WPF's `CollectionViewSource`. To display grouped data, flatten groups into a single collection with group headers.
 
+:::tip
+The `DataGrid` control supports built-in grouping through `DataGridCollectionView`. See the [DataGrid grouping how-to](/docs/how-to/datagrid-how-to#grouping) for details.
+:::
+
 ### Using a flat list with headers
 
 Create a view model that represents both headers and items:

@@ -5,6 +5,8 @@ title: Sharing styles
 
 import VsStylesTemplateScreenshot from '/img/guides/ui-development/styling/vs-styles-template.png';
 
+You can define styles in separate files and include them at any level of your application. This lets you share a consistent set of styles across multiple windows, user controls, or even across projects.
+
 ## How to use included styles
 
 This guide shows you how to share styles from a separate styles file that is included in your application. This approach allows you to share styles across multiple applications.
@@ -28,7 +30,7 @@ The Avalonia solution templates provide a quick way of adding a styles file to y
 -  From the Avalonia Items, click **Styles (Avalonia)**
 -  Type a name for your styles file
 
-<img src={VsStylesTemplateScreenshot} alt=""/>
+<img src={VsStylesTemplateScreenshot} alt="Visual Studio Add New Item dialog showing the Styles (Avalonia) template"/>
 
 To use the styles defined in a separate file, you must reference it using a `StyleInclude` element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.
 

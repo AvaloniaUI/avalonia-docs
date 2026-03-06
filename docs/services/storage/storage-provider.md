@@ -54,6 +54,14 @@ Task<IStorageFile?> SaveFilePickerAsync(FilePickerSaveOptions options);
 ```
 The method returns a saved `IStorageFile` instance or null if the user cancels the dialog.
 
+### SaveFilePickerWithResultAsync
+Opens a save file picker dialog and returns the selected file type filter alongside the file.
+
+```cs
+Task<SaveFilePickerResult> SaveFilePickerWithResultAsync(FilePickerSaveOptions options);
+```
+The method returns a `SaveFilePickerResult` struct. Its `StorageFile` property contains the saved file (or `null` if cancelled), and `SelectedFileType` contains the `FilePickerFileType` the user selected in the dialog.
+
 ### OpenFolderPickerAsync
 Opens a folder picker dialog.
 
@@ -131,7 +139,8 @@ Only supported on the OS, with physical file paths, primarily only desktop.
 | `OpenFileBookmarkAsync` | ✓* | ✓* | ✓* | ✓* | ✓ | ✓ | ✓ |
 | `OpenFolderBookmarkAsync` | ✓* | ✓* | ✓* | ✓* | ✓ | ✓ | ✓ |
 | `OpenFilePickerAsync` | ✓** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| `SaveFilePickerAsync` | ✓** | ✓ | ✓ | ✓ | ✓*** | ✓ | ✗ |
+| `SaveFilePickerAsync` | ✓** | ✓ | ✓ | ✓ | ✓*** | ✓ | ✓ |
+| `SaveFilePickerWithResultAsync` | ✓** | ✓ | ✓ | ✓ | ✓*** | ✓ | ✓ |
 | `OpenFolderPickerAsync` | ✓** | ✓ | ✓ | ✓ | ✓*** | ✓ | ✓ |
 | `TryGetFileFromPathAsync` | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | `TryGetFolderFromPathAsync` | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |

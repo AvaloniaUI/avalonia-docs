@@ -126,6 +126,90 @@ public partial class MainViewModel : ObservableObject
 </StackPanel>
 ```
 
+## Grouping
+
+Group rows by wrapping your collection in a `DataGridCollectionView` and adding group descriptions. The DataGrid renders a collapsible `DataGridRowGroupHeader` for each group automatically.
+
+### Basic grouping
+
+```csharp
+using Avalonia.Collections;
+
+public partial class MainViewModel : ObservableObject
+{
+    public DataGridCollectionView GroupedProducts { get; }
+
+    public MainViewModel()
+    {
+        var products = new List<Product>
+        {
+            new("Widget", "Hardware", 9.99m),
+            new("Gadget", "Hardware", 24.99m),
+            new("App", "Software", 4.99m),
+            new("Plugin", "Software", 14.50m),
+        };
+
+        GroupedProducts = new DataGridCollectionView(products);
+        GroupedProducts.GroupDescriptions.Add(
+            new DataGridPathGroupDescription("Category"));
+    }
+}
+```
+
+```xml
+<DataGrid ItemsSource="{Binding GroupedProducts}" AutoGenerateColumns="False"
+          IsReadOnly="True">
+    <DataGrid.Columns>
+        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" />
+        <DataGridTextColumn Header="Price" Binding="{Binding Price, StringFormat='{}{0:C}'}" Width="*" />
+    </DataGrid.Columns>
+</DataGrid>
+```
+
+### Multiple group levels
+
+Add more than one `DataGridPathGroupDescription` for nested grouping:
+
+```csharp
+GroupedProducts.GroupDescriptions.Add(new DataGridPathGroupDescription("Category"));
+GroupedProducts.GroupDescriptions.Add(new DataGridPathGroupDescription("SubCategory"));
+```
+
+### Customizing the group header
+
+Handle the `LoadingRowGroup` event to change the header text or add summary information:
+
+```csharp
+private void OnLoadingRowGroup(object? sender, DataGridRowGroupHeaderEventArgs e)
+{
+    var group = e.RowGroupHeader.DataContext as DataGridCollectionViewGroup;
+    if (group is null)
+        return;
+
+    e.RowGroupHeader.PropertyName = "Category";
+    e.RowGroupHeader.PropertyValue = $"{group.Key} ({group.ItemCount} products)";
+}
+```
+
+```xml
+<DataGrid ItemsSource="{Binding GroupedProducts}"
+          LoadingRowGroup="OnLoadingRowGroup" />
+```
+
+### Expanding and collapsing groups programmatically
+
+Use `ExpandRowGroup` and `CollapseRowGroup` on the DataGrid:
+
+```csharp
+if (viewModel.GroupedProducts.Groups is { } groups)
+{
+    foreach (var group in groups.OfType<DataGridCollectionViewGroup>())
+    {
+        myDataGrid.CollapseRowGroup(group, collapseAllSubgroups: true);
+    }
+}
+```
+
 ## Column Types
 
 | Column Type | Use For |

@@ -106,7 +106,7 @@ namespace AvaloniaControls.Models
 }
 ```
 
-By default the root node (or nodes) is shown. The user can expand or contract each node by clicking on the adjacent arrow. Clicking on the node title selects the item.
+By default the root node (or nodes) is shown. The user can expand or contract each node by clicking on the adjacent arrow. Clicking on the node title selects the item. On touch and pen devices, selection occurs on pointer release rather than press, allowing scroll gestures to start on a node without changing the selection.
 
 <img src={TreeViewAnimalHierarchyScreenshot} alt="" />
 

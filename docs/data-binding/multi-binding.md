@@ -143,13 +143,20 @@ Child bindings within a `MultiBinding` support the same source options as regula
 
 ## FuncMultiValueConverter
 
-Avalonia provides `FuncMultiValueConverter<TIn, TOut>` for simple scenarios where you want to define the conversion logic inline without creating a full class:
+Avalonia provides `FuncMultiValueConverter<TIn, TOut>` for simple scenarios where you want to define the conversion logic inline without creating a full class.
+
+The converter function receives an `IReadOnlyList<TIn>`, so you can iterate over values or access them by index:
 
 ```csharp
 public static class Converters
 {
+    // Iterate over all values
     public static readonly FuncMultiValueConverter<string, string> FullName =
         new(parts => string.Join(" ", parts.Where(p => !string.IsNullOrEmpty(p))));
+
+    // Access values by index
+    public static readonly FuncMultiValueConverter<string, string> FormattedName =
+        new(parts => $"{parts[1]}, {parts[0]}");
 }
 ```
 

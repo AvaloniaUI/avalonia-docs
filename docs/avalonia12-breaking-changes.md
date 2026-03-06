@@ -5,8 +5,6 @@ sidebar_label: Breaking changes
 toc_max_heading_level: 2
 ---
 
-# Avalonia 12 breaking changes
-
 This page lists all the breaking changes between Avalonia 11 and 12 and provides migration guidance and alternatives.
 
 
@@ -52,7 +50,7 @@ The `Avalonia.Diagnostics` package has been removed.
 The Dev Tools included with [Avalonia Accelerate](https://avaloniaui.net/accelerate) should be used instead.
 
 Remove the `Avalonia.Diagnostics` package from your projects and replace it with `AvaloniaUI.DiagnosticsSupport`.  
-To install the Accelerate Dev Tools, please follow our [Dev Tools documentation](https://docs.avaloniaui.net/accelerate/tools/dev-tools/getting-started).
+To install the Accelerate Dev Tools, see the [Dev Tools documentation](https://docs.avaloniaui.net/accelerate/tools/dev-tools/getting-started).
 
 **Example:**
 
@@ -252,7 +250,7 @@ PR: [#19722](https://github.com/AvaloniaUI/Avalonia/pull/19722)
 
 The `Avalonia.Browser.Blazor` package served as a temporary migration step while we upgraded from Avalonia's old browser backend, based on Blazor. We have now fully moved to a new backend based on WASM (`Avalonia.Browser`). This package was no longer maintained and has been removed.
 
-Note that it is still possible to run Avalonia on top of Blazor by using the supported `Avalonia.Browser` package and its `AvaloniaView` class.
+It is still possible to run Avalonia on top of Blazor by using the supported `Avalonia.Browser` package and its `AvaloniaView` class.
 
 PR: [#20105](https://github.com/AvaloniaUI/Avalonia/pull/20105)
 
@@ -266,7 +264,7 @@ The underlying test frameworks supported by Avalonia's headless platform have be
 PR: [#20372](https://github.com/AvaloniaUI/Avalonia/pull/20372), [#20481](https://github.com/AvaloniaUI/Avalonia/pull/20481)
 
 
-### [Windows] `BinaryFormatter` removed
+## [Windows] `BinaryFormatter` removed
 
 In previous versions, Avalonia used .NET's `BinaryFormatter` on Windows to implicitly serialize and deserialize arbitrary objects placed on the clipboard.
 
@@ -277,11 +275,35 @@ Your project should explicitly serialize and deserialize objects using your pref
 PR: [#20455](https://github.com/AvaloniaUI/Avalonia/pull/20455)
 
 
-## Improved touch/pen focus and selection behavior 
+## Improved touch/pen focus and selection behavior
 
-- Selection events in `ItemsControl` and derived classes (e.g., `ListBox`), as well as `TreeViewItem`, may behave differently. For example, items will be selected on touch/pen release. A new `ShouldTriggerSelection` virtual method can be overridden to change the default selection behavior.
-- Container types (e.g., `ListBoxItem`) now always handle selection input, instead of letting the event bubble up to their `ItemsControl`.
-- Focus is now changed only when touch and pen devices are released.
+Selection handling in `SelectingItemsControl` (and derived controls such as `ListBox`, `ComboBox`, `TabControl`) and `TreeView` has been unified to provide consistent, platform-appropriate behavior across input devices:
+
+- **Touch and pen input** now triggers selection on pointer release (not press), matching native platform conventions. This allows swipe and scroll gestures to start on a selectable item without accidentally changing the selection.
+- **Container types** (e.g., `ListBoxItem`, `TreeViewItem`) now handle selection input directly instead of letting events bubble up to their parent `ItemsControl`. Custom logic that relied on intercepting selection events at the `ItemsControl` level must be moved to the container or to an override of `UpdateSelectionFromEvent`.
+- **Focus** is changed only on release for touch and pen devices.
+
+### Obsoleted APIs
+
+The following methods on `SelectingItemsControl` are obsoleted and will be removed in a future version:
+
+| Obsoleted method | Replacement |
+|---|---|
+| `UpdateSelection` | `UpdateSelectionFromEvent` |
+| `UpdateSelectionFromEventSource` | `UpdateSelectionFromEvent` |
+
+### Customizing selection behavior
+
+Override `ShouldTriggerSelection` on `SelectingItemsControl` or `TreeView` to control which pointer or key events initiate selection. Override `UpdateSelectionFromEvent` to customize how selection is applied.
+
+The static `ItemSelectionEventTriggers` class provides helper methods for checking modifiers:
+
+| Method | Description |
+|---|---|
+| `ShouldTriggerSelection(InputElement, PointerEventArgs)` | Determines whether a pointer event should trigger selection. |
+| `ShouldTriggerSelection(InputElement, KeyEventArgs)` | Determines whether a key event should trigger selection. |
+| `HasRangeSelectionModifier(InputElement, RoutedEventArgs)` | Checks for the Shift modifier (range select). |
+| `HasToggleSelectionModifier(InputElement, RoutedEventArgs)` | Checks for the Ctrl modifier (toggle select). |
 
 PR: [#19203](https://github.com/AvaloniaUI/Avalonia/pull/19203), [#19753](https://github.com/AvaloniaUI/Avalonia/pull/19753)
 
@@ -317,7 +339,7 @@ The `IDataObject` interface has been removed in Avalonia v12, along with all met
 
 The `IClipboard` interface has been simplified, with methods for reading specific formats implemented as extension methods (such as `TryGetTextAsync` and `TryGetFile`).
 
-Read the official [clipboard documentation](/docs/services/clipboard) to know how to use `IAsyncDataTransfer`.
+Read the official [clipboard documentation](services/clipboard) for details on using `IAsyncDataTransfer`.
 
 **Example:**
 ```diff
@@ -349,7 +371,7 @@ While not technically a breaking change, Avalonia v12 now supports multiple disp
 
 Using `Dispatcher.UIThread` is still perfectly acceptable for applications. However, we recommend that library and control authors start using the `AvaloniaObject.Dispatcher` and `Dispatcher.CurrentDispatcher` properties to support multiple dispatchers properly.
 
-Note that multiple UI threads are currently still unsupported.
+Multiple UI threads are currently still unsupported.
 
 PR: [#18686](https://github.com/AvaloniaUI/Avalonia/pull/18686)
 
@@ -363,8 +385,7 @@ PR: [#19163](https://github.com/AvaloniaUI/Avalonia/pull/19163)
 
 ## `FuncMultiValueConverter` accepts an `IReadOnlyList`
 
-This change allows you to index values directly.   
-Most existing usages should be unaffected.
+The converter function parameter changed from `IEnumerable<TIn>` to `IReadOnlyList<TIn>`, allowing you to access values by index (e.g., `values[0]`) without converting to an intermediate collection. Since `IReadOnlyList<T>` extends `IEnumerable<T>`, most existing usages that iterate or use LINQ are unaffected. Code that explicitly declares the lambda parameter type as `IEnumerable<TIn>` will need to be updated.
 
 PR: [#19936](https://github.com/AvaloniaUI/Avalonia/pull/19936)
 
@@ -415,9 +436,25 @@ Several internal rendering interfaces have been restructured:
 - Platform surfaces use the typed `IPlatformRenderSurface` interface instead of `IEnumerable<object>`.
 - `ISkiaGpu` is now internal.
 
+Several versioned and split interfaces have been merged into their base types:
+
+- `IRenderTarget2` and `IRenderTargetWithProperties` merged into `IRenderTarget`.
+- `IGlPlatformSurfaceRenderTarget2` and `IGlPlatformSurfaceRenderTargetWithCorruptionInfo` merged into `IGlPlatformSurfaceRenderTarget`.
+- `ISkiaGpuRenderTarget2` merged into `ISkiaGpuRenderTarget`.
+- `ISkiaGpuWithPlatformGraphicsContext` merged into `ISkiaGpu`.
+
+Additionally, alpha format handling has been consolidated:
+
+- `ILockedFramebuffer` now includes an `AlphaFormat` property.
+- `IReadableBitmapImpl` now includes an `AlphaFormat?` property, replacing the separate `IReadableBitmapWithAlphaImpl` interface.
+- `Bitmap.CopyPixels()` no longer accepts an `AlphaFormat` parameter. The alpha format is now read from the `ILockedFramebuffer` directly.
+- The `LockedFramebuffer` constructor requires an `AlphaFormat` parameter.
+
+The `IPlatformRenderInterfaceContext.CreateOffscreenRenderTarget` method signature changed from `(PixelSize, double)` to `(PixelSize, Vector, bool)`, where the `double` scaling factor is replaced by a `Vector` for per-axis scaling and a `bool` for text antialiasing control. A new `MaxOffscreenRenderTargetPixelSize` property was also added to the interface.
+
 These changes only affect code that implements custom rendering backends or directly consumes platform-level rendering interfaces. Application code using `RenderTargetBitmap` or standard drawing APIs is not affected.
 
-PR: [#20811](https://github.com/AvaloniaUI/Avalonia/pull/20811)
+PRs: [#20811](https://github.com/AvaloniaUI/Avalonia/pull/20811), [#20556](https://github.com/AvaloniaUI/Avalonia/pull/20556), [#20557](https://github.com/AvaloniaUI/Avalonia/pull/20557), [#20497](https://github.com/AvaloniaUI/Avalonia/pull/20497)
 
 ## Text formatting constructors modified
 
@@ -433,7 +470,9 @@ PR: [#20527](https://github.com/AvaloniaUI/Avalonia/pull/20527)
 
 Previously, the underlying virtual key triggered access keys, so accented characters or numbers could not be used as access keys.
 
-To align with other popular UI frameworks and user expectations, access keys are now triggered by the symbol printed on the key.
+To align with other popular UI frameworks and user expectations, access keys are now triggered by the symbol printed on the key. This means accented characters (e.g., `_é`) and numbers (e.g., `_2`) now work as access keys.
+
+The `AccessText.AccessKey` property type changed from `char` to `string?` to support multi-byte Unicode characters. Code that reads this property will need to be updated.
 
 PR: [#20662](https://github.com/AvaloniaUI/Avalonia/pull/20662)
 
@@ -853,7 +892,7 @@ Reason: see the [TopLevel changes](#toplevel-changes) section.
 Resolution: use `Avalonia.Controls.TopLevel` instead.  
 PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
 
-### `Avalonia.Layout.LayoutManager` ckass
+### `Avalonia.Layout.LayoutManager` class
 Reason: see the [TopLevel changes](#toplevel-changes) section.  
 Resolution: use `Avalonia.Layout.ILayoutManager` instead.  
 PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
@@ -894,8 +933,8 @@ Resolution: use `Application.Current.TryGetFeature<IActivatableLifetime>` instea
 PR: [#20617](https://github.com/AvaloniaUI/Avalonia/pull/20617)
 
 ### `Avalonia.Platform.IGeometryContext2` interface
-Reason: this interface was merged with `IGeometryContext`.  
-Resolution: use `Avalonia.Platform.IGeometryContext` instead.  
+Reason: `IGeometryContext2` was merged into `IGeometryContext`. The `isStroked` and `isFilled` parameters that were only available through `IGeometryContext2` are now optional parameters (with default value `true`) on the `IGeometryContext` methods `LineTo`, `ArcTo`, `CubicBezierTo`, `QuadraticBezierTo`, and `BeginFigure`.
+Resolution: replace references to `IGeometryContext2` with `IGeometryContext`. If you implemented `IGeometryContext2`, move those method implementations into your `IGeometryContext` implementation and add the optional parameters.
 PR: [#20528](https://github.com/AvaloniaUI/Avalonia/pull/20528)
 
 ### `Avalonia.Platform.Popup.PlacementMode` property
@@ -924,9 +963,14 @@ Resolution: use `Avalonia.Controls.TopLevel` instead.
 PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
 
 ### `Avalonia.Styling.IStyleable` interface
-Reason: this interface was obsolete since Avalonia 11.  
-Resolution: use `Avalonia.StyledElement` instead.  
+Reason: this interface was obsolete since Avalonia 11.
+Resolution: use `Avalonia.StyledElement` instead.
 PR: [#20613](https://github.com/AvaloniaUI/Avalonia/pull/20613)
+
+### `IWindowImpl.GetWindowsZOrder` method
+Reason: `GetWindowsZOrder` was moved from `IWindowImpl` to `IWindowingPlatform` so that the z-order of all windows can be queried without needing an individual window reference. The parameter type also changed from `Span<Window>` to `ReadOnlySpan<IWindowImpl>`.
+Resolution: call `GetWindowsZOrder` on the `IWindowingPlatform` instance instead. Adjust callers to pass `ReadOnlySpan<IWindowImpl>` rather than `Span<Window>`.
+PR: [#20633](https://github.com/AvaloniaUI/Avalonia/pull/20633)
 
 ### `Avalonia.Utilities.CharacterReader` struct
 Reason: this class is an implementation detail that was wrongly exposed publicly.  
@@ -971,11 +1015,15 @@ The old property is kept for now, but is obsolete; usages should be updated.
 PR: [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796)
 
 ### `Avalonia.Media.RenderOptions.TextRenderingMode` property
-Moved to `TextOptions.TextRenderingMode`.   
-`TextOptions` is new and includes several other knobs that affect text rendering.
+Moved to `TextOptions.TextRenderingMode`.
+`TextOptions` is new and also includes `TextHintingMode` and `BaselinePixelAlignment` for fine-grained text rendering control. See [Text options](graphics-animation/text-options) for usage.
 PR: [#20107](https://github.com/AvaloniaUI/Avalonia/pull/20107)
 
 ### `Avalonia.Controls.TextBlock.LetterSpacing` property
 Moved to `TextElement.LetterSpacing` as an inherited attached property. `LetterSpacing` is now available on all templated controls (such as `Button`, `CheckBox`, and `Label`), consistent with how `FontSize`, `FontFamily`, and other text properties work.
 XAML usage on `TextBlock` is source-compatible, but code referencing `TextBlock.LetterSpacingProperty` directly must be updated to `TextElement.LetterSpacingProperty`.
 PR: [#20141](https://github.com/AvaloniaUI/Avalonia/pull/20141)
+
+## See also
+
+- [Avalonia 12 release notes](https://github.com/AvaloniaUI/Avalonia/releases)

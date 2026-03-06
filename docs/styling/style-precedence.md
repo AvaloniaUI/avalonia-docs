@@ -1,11 +1,11 @@
 ---
 id: style-precedence
-title: Style Precedence
+title: Style precedence
 ---
 
 When multiple styles, local values, and animations target the same property on a control, Avalonia uses a fixed priority order to determine which value wins. Understanding this order is essential for diagnosing situations where a style does not appear to apply.
 
-## Value Sources (Highest to Lowest Priority)
+## Value sources (highest to lowest priority)
 
 | Priority | Source | Example |
 |---|---|---|
@@ -17,9 +17,9 @@ When multiple styles, local values, and animations target the same property on a
 | 6 | **Inherited** | A value inherited from an ancestor in the visual tree |
 | 7 | **Default** | The property's registered default value |
 
-The property system checks each level in order and returns the first value it finds. For the full API details, see [Property Value Precedence](/docs/properties/value-precedence).
+The property system checks each level in order and returns the first value it finds. For the full API details, see [Property value precedence](../properties/value-precedence).
 
-## Why Your Style Might Not Apply
+## Why your style might not apply
 
 The most common styling surprise is that a **local value blocks style values**. Because local values (priority 2) outrank both style triggers (priority 3) and styles (priority 5), a property set directly on a control in XAML will always win:
 
@@ -42,7 +42,7 @@ The most common styling surprise is that a **local value blocks style values**. 
 
 **Fix:** Remove the local value and let the style system control the property, or move the value into a style.
 
-## Style Declaration Order
+## Style declaration order
 
 When two styles at the **same priority level** target the same property, the style declared later wins:
 
@@ -61,7 +61,7 @@ When two styles at the **same priority level** target the same property, the sty
 
 Styles from different sources are evaluated in the order they appear in the logical tree, from the control upward to the application. A style declared on a `UserControl` overrides a matching style from `App.axaml` because the closer scope is evaluated later.
 
-## Pseudo-Class Triggers vs Base Styles
+## Pseudo-class triggers vs base styles
 
 Pseudo-class selectors (`:pointerover`, `:pressed`, `:focus`, `:disabled`) operate at the `StyleTrigger` priority level, which ranks above the `Style` level. This means a pseudo-class style overrides a base type style for the same property:
 
@@ -79,7 +79,7 @@ Pseudo-class selectors (`:pointerover`, `:pressed`, `:focus`, `:disabled`) opera
 
 When the pointer enters the button, the `StyleTrigger` value takes effect. When it leaves, the `Style` value returns.
 
-## Animations Override Everything
+## Animations override everything
 
 Animations run at the highest priority. While an animation is active, its values override all other sources, including local values:
 
@@ -100,7 +100,7 @@ Animations run at the highest priority. While an animation is active, its values
 
 Even `<Button Opacity="0.8" Classes="pulse" />` will pulse between 0.5 and 1.0 while the animation is active.
 
-## Inherited Values
+## Inherited values
 
 Some properties (like `FontSize`, `Foreground`, `FlowDirection`) inherit their value from ancestor controls. Inherited values have the second-lowest priority, so any style, template, or local value overrides them:
 
@@ -119,13 +119,13 @@ Some properties (like `FontSize`, `Foreground`, `FlowDirection`) inherit their v
 </Style>
 ```
 
-## Debugging Precedence Issues
+## Debugging precedence issues
 
-Use [DevTools](/tools/developer-tools/elements-tool) (press F12 at runtime) to inspect property values. The Properties panel shows the current value and its source, making it straightforward to identify which level is providing the active value.
+Use DevTools (press <kbd>F12</kbd> at runtime) to inspect property values. The **Properties** panel shows the current value and its source, so you can identify which level is providing the active value.
 
-## See Also
+## See also
 
-- [Property Value Precedence](/docs/properties/value-precedence): Full technical reference for the priority system.
-- [Styles](/docs/styling/styles): How to define and apply styles.
-- [Pseudo-Classes](/docs/styling/pseudoclasses): State-based styling with pseudo-class selectors.
-- [Styling Best Practices](/docs/styling/style-best-practices): Guidelines for writing maintainable styles.
+- [Property value precedence](../properties/value-precedence)
+- [Styles](styles)
+- [Pseudoclasses](pseudoclasses)
+- [Styling best practices](style-best-practices)

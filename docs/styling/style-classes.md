@@ -3,12 +3,9 @@ id: style-classes
 title: Style classes
 ---
 
-# Style Classes
-
-You can assign an _Avalonia UI_ control one or more style classes, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, then use a space-separated list.
+You can assign an Avalonia control one or more *style classes*, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, use a space-separated list.
 
 For example, this button has both the `h1` and `blue` style classes applied:
-
 
 ```xml
 <Button Classes="h1 blue"/>
@@ -18,9 +15,9 @@ For example, this button has both the `h1` and `blue` style classes applied:
 
 Like in CSS, controls can have pseudoclasses; these are classes that are defined in the control itself rather than by the user. The names of pseudo classes in a selector always start with a colon.
 
-For example `:pointerover` pseudo class indicates that the pointer input is currently over (inside the bounds of) a control. (This is pseudo class is the similar to `:hover` in CSS.)
+For example, the `:pointerover` pseudo class indicates that the pointer input is currently over (inside the bounds of) a control. This pseudo class is similar to `:hover` in CSS.
 
-This is an example of  a `:pointerover` pseudo class selector:
+This is an example of a `:pointerover` pseudo class selector:
 
 <XamlPreview>
 
@@ -63,10 +60,10 @@ In this example, the pseudo class selector changes properties inside a control t
 Other pseudo classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
 
 :::info
-For more detail about pseudo classes, see the reference [here](/docs/styling/pseudoclasses).
+For more detail about pseudo classes, see [Pseudoclasses](pseudoclasses).
 :::
 
-## Conditional Classes
+## Conditional classes
 
 If you need to add or remove a class using a bound condition, then you can use following special syntax:
 
@@ -74,7 +71,7 @@ If you need to add or remove a class using a bound condition, then you can use f
 <Button Classes.accent="{Binding IsSpecial}" />
 ```
 
-## Conditional Styling Patterns
+## Conditional styling patterns
 
 Avalonia does not have WPF-style triggers. Instead, use style classes, pseudo-classes, and binding converters to achieve conditional styling.
 
@@ -163,7 +160,7 @@ Then style it with pseudo-class selectors:
 </Style>
 ```
 
-## Classes in Code
+## Classes in code
 
 You can manipulate style classes in code using the `Classes` collection:
 
@@ -179,8 +176,8 @@ if (control.Classes.Contains("blue"))
 }
 ```
 
-## See Also
+## See also
 
-- [Styles](/docs/styling/styles): How to define and apply styles.
-- [Pseudo-Classes](/docs/styling/pseudoclasses): Built-in state pseudo-classes.
-- [Style Selectors](/docs/styling/style-selectors): Selector quick reference.
+- [Styles](styles)
+- [Pseudoclasses](pseudoclasses)
+- [Style selectors](style-selectors)

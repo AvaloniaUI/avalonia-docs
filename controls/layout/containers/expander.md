@@ -102,6 +102,10 @@ Animate the expand/collapse with a page transition:
 </Expander>
 ```
 
+## Accessibility
+
+The `Expander` provides built-in accessibility support through its `ExpanderAutomationPeer`. Screen readers report the control as expandable/collapsible and announce its current state. The expand/collapse action is exposed to assistive technologies through the `IExpandCollapseProvider` pattern, allowing users to toggle the content without using the pointer.
+
 ## See also
 
 - [Expander API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Expander)

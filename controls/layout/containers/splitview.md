@@ -13,11 +13,11 @@ You will probably use these properties most often:
 
 | Property            | Description                                                                      |
 | ------------------- | -------------------------------------------------------------------------------- |
-| `PanePlacement`     | Sets the position of the pane (left or right).                                   |
+| `PanePlacement`     | Sets the position of the pane: `Left`, `Right`, `Top`, or `Bottom`.              |
 | `IsPaneOpen`        | Boolean, default is true. Is the pane in its open state?                         |
 | `DisplayMode`       | Controls how the pane is drawn in its open and closed states. See below.         |
-| `OpenPaneLength`    | Defines the width of the pane when it is open.                                   |
-| `CompactPaneLength` | Defines the width of the pane when it is closed and the display mode is compact. |
+| `OpenPaneLength`    | Defines the width (or height for top/bottom) of the pane when it is open.        |
+| `CompactPaneLength` | Defines the width (or height for top/bottom) of the pane when it is closed and the display mode is compact. |
 
 The display mode property controls how the pane is drawn in its open and closed states. There are four options:
 
@@ -110,7 +110,7 @@ private void TogglePane() => IsPaneOpen = !IsPaneOpen;
 
 ## Pane Placement
 
-Position the pane on the left or right side:
+Position the pane on any side of the content area:
 
 ```xml
 <!-- Pane on the right -->
@@ -118,6 +118,21 @@ Position the pane on the left or right side:
            IsPaneOpen="True"
            DisplayMode="Inline"
            OpenPaneLength="250">
+```
+
+`Top` and `Bottom` placements create a vertical split where the pane appears above or below the content. `OpenPaneLength` and `CompactPaneLength` control the height of the pane in these orientations:
+
+```xml
+<!-- Pane on top -->
+<SplitView PanePlacement="Top"
+           IsPaneOpen="True"
+           DisplayMode="Inline"
+           OpenPaneLength="150">
+    <SplitView.Pane>
+        <TextBlock Text="Top pane" Margin="8" />
+    </SplitView.Pane>
+    <TextBlock Text="Main content" Margin="8" />
+</SplitView>
 ```
 
 ## See also

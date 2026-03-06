@@ -33,6 +33,10 @@ Gets or sets an option indicating whether open picker allows users to select mul
 
 Gets or sets the collection of file types that the file open picker displays.
 
+### SuggestedFileType
+
+Gets or sets the `FilePickerFileType` that the dialog should initially select in its file type filter dropdown. The value must be one of the items in `FileTypeFilter`.
+
 To create a list of file types for the file picker:
 
 ```cs
@@ -59,6 +63,10 @@ Gets or sets the default extension to be used to save the file.
 
 Gets or sets the collection of valid file types that the user can choose to assign to a file.
 
+### SuggestedFileType
+
+Gets or sets the `FilePickerFileType` that the dialog should initially select in its file type filter dropdown. The value must be one of the items in `FileTypeChoices`.
+
 ### ShowOverwritePrompt
 
 Gets or sets a value indicating whether file open picker displays a warning if the user specifies the name of a file that already exists.
@@ -77,6 +85,7 @@ Gets or sets an option indicating whether open picker allows users to select mul
 | `SuggestedStartLocation` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | `AllowMultiple` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | `FileTypeFilter` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `SuggestedFileType` | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | `SuggestedFileName` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 | `DefaultExtension` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 | `FileTypeChoices` | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |

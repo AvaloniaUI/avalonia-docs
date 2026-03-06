@@ -1,11 +1,11 @@
 ---
 id: style-best-practices
-title: Styling Best Practices
+title: Styling best practices
 ---
 
 This page collects practical guidelines for writing styles, themes, and templates in Avalonia. Following these patterns helps keep your styling code maintainable and performant.
 
-## Selector Specificity
+## Selector specificity
 
 Avalonia evaluates style selectors in declaration order. When two selectors match the same control and set the same property, the later declaration wins. Design your selectors from general to specific:
 
@@ -28,7 +28,7 @@ Avalonia evaluates style selectors in declaration order. When two selectors matc
 
 Avoid overly broad selectors like `*` or `:is(Control)` as they match every control in the tree and can cause unexpected side effects.
 
-## Use Style Classes Instead of Inline Properties
+## Use style classes instead of inline properties
 
 Prefer style classes over setting properties directly on controls:
 
@@ -53,7 +53,7 @@ Prefer style classes over setting properties directly on controls:
 
 This reduces duplication and makes it easy to update the appearance in one place.
 
-## Use DynamicResource for Theme-Aware Values
+## Use DynamicResource for theme-aware values
 
 When referencing theme colors, fonts, or dimensions, use `DynamicResource` instead of hard-coded values. This ensures your styles respond to theme changes (light/dark):
 
@@ -64,9 +64,9 @@ When referencing theme colors, fonts, or dimensions, use `DynamicResource` inste
 </Style>
 ```
 
-Use `StaticResource` only for values that never change at runtime (e.g., layout constants, custom converters).
+Use `StaticResource` only for values that never change at runtime, such as layout constants and custom converters.
 
-## Keep Templates Minimal
+## Keep templates minimal
 
 When creating custom templates, bind only the properties your template actually uses. Do not create complex templates for simple visual changes:
 
@@ -90,11 +90,11 @@ When creating custom templates, bind only the properties your template actually 
 </Style>
 ```
 
-## Organize Styles by Scope
+## Organize styles by scope
 
 Place styles at the appropriate level in the visual tree:
 
-| Scope | Where to Declare | When to Use |
+| Scope | Where to declare | When to use |
 |---|---|---|
 | Application-wide | `App.axaml` or a `Styles` file referenced from `App.axaml` | Brand colors, typography, default control themes |
 | Window/Page-level | `<Window.Styles>` or `<UserControl.Styles>` | Page-specific overrides |
@@ -118,7 +118,7 @@ Place styles at the appropriate level in the visual tree:
 </UserControl.Styles>
 ```
 
-## Avoid !important-Style Hacks
+## Avoid !important-style hacks
 
 Avalonia does not have a CSS-like `!important`. If your style is not applying, the issue is usually:
 
@@ -128,7 +128,7 @@ Avalonia does not have a CSS-like `!important`. If your style is not applying, t
 
 Use DevTools (F12) to inspect which value source is winning for a given property.
 
-## Naming Conventions
+## Naming conventions
 
 Use kebab-case for style classes, matching CSS conventions:
 
@@ -148,7 +148,7 @@ For template parts, use the `PART_` prefix:
 <ContentPresenter x:Name="PART_ContentPresenter" />
 ```
 
-## Transitions for State Changes
+## Transitions for state changes
 
 Add transitions to make pseudo-class state changes feel smooth:
 
@@ -165,7 +165,7 @@ Add transitions to make pseudo-class state changes feel smooth:
 
 Keep transition durations short (100ms to 300ms). Long animations feel sluggish and delay user feedback.
 
-## Test Across Themes
+## Test across themes
 
 If your application supports both light and dark themes, test your custom styles in both. Use `ThemeVariant` resources to provide different values per theme:
 
@@ -200,11 +200,11 @@ Or use theme-variant resources defined in your `App.axaml`:
 </Application.Resources>
 ```
 
-## See Also
+## See also
 
-- [Styles](/docs/styling/styles): How styles work in Avalonia.
-- [Style Classes](/docs/styling/style-classes): Using classes to target controls.
-- [Style Selectors](/docs/styling/style-selectors): Selector syntax reference.
-- [Control Themes](/docs/styling/control-themes): How themes provide default control templates.
-- [Theme Variants](/docs/styling/theme-variants): Light and dark theme support.
-- [Sharing Styles](/docs/styling/sharing-styles): Extracting styles into shared files.
+- [Styles](styles)
+- [Style classes](style-classes)
+- [Style selectors](style-selectors)
+- [Control themes](control-themes)
+- [Theme variants](theme-variants)
+- [Sharing styles](sharing-styles)

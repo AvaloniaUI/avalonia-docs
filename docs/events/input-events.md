@@ -63,6 +63,8 @@ protected override void OnPointerReleased(PointerReleasedEventArgs e)
 }
 ```
 
+Only one element can hold pointer capture at a time across the entire application. This matches operating system behavior where a single physical mouse device can only have one captured element. When a different control captures the pointer (for example, in a popup window), the previous capture is released and the original control receives a `PointerCaptureLost` event.
+
 ## Keyboard Events
 
 Keyboard events fire on the currently focused element and bubble up the tree.

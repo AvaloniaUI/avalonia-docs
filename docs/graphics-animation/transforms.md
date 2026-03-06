@@ -19,7 +19,7 @@ The `RenderTransform` property is available on every `Visual` element. It applie
 
 ### RenderTransformOrigin
 
-The `RenderTransformOrigin` property defines the point around which transforms are applied, using relative coordinates. The default is `0%,0%` (top-left corner). Setting it to `50%,50%` centers the transform on the element.
+The `RenderTransformOrigin` property defines the point around which transforms are applied, using relative coordinates. The default is `50%,50%` (center of the element).
 
 ```xml
 <Image Source="avares://MyApp/Assets/logo.png"
@@ -39,7 +39,7 @@ Rotates an element by a specified angle in degrees.
 | Property | Description |
 |---|---|
 | `Angle` | The rotation angle in degrees. Positive values rotate clockwise. |
-| `CenterX`, `CenterY` | The center point of rotation in absolute coordinates. |
+| `CenterX`, `CenterY` | An additional offset from `RenderTransformOrigin` for the center of rotation, in device-independent pixels. Defaults to 0. |
 
 ```xml
 <Border Width="100" Height="100" Background="SteelBlue"
@@ -58,7 +58,7 @@ Scales an element horizontally, vertically, or both.
 |---|---|
 | `ScaleX` | The horizontal scale factor. 1.0 is normal size, 2.0 is double, 0.5 is half. |
 | `ScaleY` | The vertical scale factor. |
-| `CenterX`, `CenterY` | The center point of scaling in absolute coordinates. |
+| `CenterX`, `CenterY` | An additional offset from `RenderTransformOrigin` for the center of scaling, in device-independent pixels. Defaults to 0. |
 
 ```xml
 <!-- Double the width, keep the height -->
@@ -84,7 +84,7 @@ Shears an element along the X or Y axis.
 |---|---|
 | `AngleX` | The horizontal skew angle in degrees. |
 | `AngleY` | The vertical skew angle in degrees. |
-| `CenterX`, `CenterY` | The center point of the skew. |
+| `CenterX`, `CenterY` | An additional offset from `RenderTransformOrigin` for the center of the skew, in device-independent pixels. Defaults to 0. |
 
 ```xml
 <Border Width="100" Height="60" Background="Orange"

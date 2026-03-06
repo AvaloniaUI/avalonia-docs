@@ -59,6 +59,16 @@ Like `Polyline` but the shape is automatically closed:
          Fill="Gold" Stroke="DarkGoldenRod" StrokeThickness="1" />
 ```
 
+Both `Polyline` and `Polygon` support a `FillRule` property that controls how self-intersecting shapes are filled:
+
+- `EvenOdd` (default): Alternates fill for overlapping regions, creating holes.
+- `NonZero`: Fills all enclosed regions regardless of overlap.
+
+```xml
+<Polygon Points="50,0 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35"
+         Fill="Orange" FillRule="EvenOdd" />
+```
+
 ### Path
 
 The most versatile shape control. Uses a `Geometry` to define its outline:
@@ -94,6 +104,7 @@ All shapes inherit from `Shape` and share these properties:
 | `StrokeDashOffset` | The offset into the dash pattern to start drawing. |
 | `StrokeLineCap` | The cap style for line endpoints: `Flat`, `Round`, or `Square`. |
 | `StrokeJoin` | The join style at corners: `Miter`, `Bevel`, or `Round`. |
+| `StrokeMiterLimit` | The ratio limit at which a miter join is beveled. When the miter length divided by stroke thickness exceeds this value, the join switches from a sharp miter to a bevel. Default is `10`. Only applies when `StrokeJoin` is `Miter`. |
 | `Stretch` | How the shape fills its allocated space: `None`, `Fill`, `Uniform`, `UniformToFill`. |
 
 ### Dashed lines
@@ -250,6 +261,52 @@ Uppercase commands use absolute coordinates, lowercase use relative coordinates.
 <!-- Star -->
 <Path Data="M 50,0 L 61,35 L 98,35 L 68,57 L 79,91 L 50,70 L 21,91 L 32,57 L 2,35 L 39,35 Z"
       Fill="Orange" />
+```
+
+## Building Geometry from Code
+
+Use `StreamGeometryContext` to build geometry programmatically. Call `StreamGeometry.Open()` to get a context, then use its drawing methods to define figures:
+
+```csharp
+var geometry = new StreamGeometry();
+
+using (var ctx = geometry.Open())
+{
+    ctx.BeginFigure(new Point(10, 50), isFilled: true);
+    ctx.LineTo(new Point(100, 50));
+    ctx.ArcTo(
+        new Point(100, 150),
+        new Size(50, 50),
+        rotationAngle: 0,
+        isLargeArc: false,
+        SweepDirection.Clockwise);
+    ctx.LineTo(new Point(10, 150));
+    ctx.EndFigure(isClosed: true);
+}
+```
+
+### StreamGeometryContext methods
+
+| Method | Description |
+|---|---|
+| `BeginFigure(Point, bool isFilled = true)` | Starts a new figure at the specified point. Set `isFilled` to `false` for an open, unfilled path. |
+| `LineTo(Point, bool isStroked = true)` | Draws a straight line to a point. |
+| `ArcTo(Point, Size, double, bool, SweepDirection, bool isStroked = true)` | Draws an elliptical arc to a point. |
+| `CubicBezierTo(Point, Point, Point, bool isStroked = true)` | Draws a cubic Bezier curve using two control points and an endpoint. |
+| `QuadraticBezierTo(Point, Point, bool isStroked = true)` | Draws a quadratic Bezier curve using one control point and an endpoint. |
+| `EndFigure(bool isClosed)` | Ends the current figure. Set `isClosed` to `true` to close the shape. |
+
+Set `isStroked` to `false` on any segment to skip drawing the outline for that segment while still including it in the geometry shape. This is useful for creating partially stroked paths.
+
+```csharp
+using (var ctx = geometry.Open())
+{
+    ctx.BeginFigure(new Point(0, 0), isFilled: false);
+    ctx.LineTo(new Point(50, 0));              // Stroked
+    ctx.LineTo(new Point(100, 0), isStroked: false); // Gap (not stroked)
+    ctx.LineTo(new Point(150, 0));             // Stroked
+    ctx.EndFigure(isClosed: false);
+}
 ```
 
 ## Using Geometries as Resources

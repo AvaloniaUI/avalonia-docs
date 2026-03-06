@@ -5,13 +5,12 @@ title: Style selector syntax
 
 This page lists the XAML syntax for style selectors with the C# code methods that perform the same selection.
 
-## By Control Class
+## By control class
 
 ```xml
 <Style Selector="Button">
 <Style Selector="local|Button">
 ```
-
 
 ```csharp title='C#'
 new Style(x => x.OfType<Button>());
@@ -22,15 +21,15 @@ Selects a control by its class name.
 
 The first example above selects the `Avalonia.Controls.Button` class. To include a XAML namespace in the type separate the namespace and the type with a `|` character.
 
-:::warning
-This selector does not match derived types. For that, use the `:is` selector, see below.
+:::caution
+This selector does not match derived types. For that, use the [`:is` selector](#include-derived-classes).
 :::
 
 :::info
-Note the type of an object is actually determined by looking at its `StyleKey` property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can override the `StyleKeyOverride` property on your class to return `typeof(Button)`.
+The type of an object is determined by looking at its `StyleKey` property. By default this returns the type of the current instance, but if you want your control which inherits from `Button` to be styled as a `Button`, you can override the `StyleKeyOverride` property on your class to return `typeof(Button)`.
 :::
 
-## By Name
+## By name
 
 ```xml
 <Style Selector="#myButton">
@@ -44,7 +43,7 @@ new Style(x => x.OfType<Button>().Name("myButton"));
 
 Selects a control by its `Name` attribute, with an added `#` (hash) character prefix.
 
-## By Style Class
+## By style class
 
 ```xml
 <Style Selector="Button.large">
@@ -58,7 +57,7 @@ new Style(x => x.OfType<Button>().Class("large").Class("red"));
 
 Selects a control with the specified style class or classes. Multiple classes are separated with a full stop. If multiple classes are specified in the selector, then the control must have all of the requested classes defined for a match.
 
-## By Pseudoclass
+## By pseudoclass
 
 ```xml
 <Style Selector="Button:focus">
@@ -75,10 +74,10 @@ new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. Multiple pseudo classes may be applied to the same Control.
 
 :::info
-For more detail about pseudo classes, see the reference [here](/docs/styling/pseudoclasses).
+For more detail about pseudo classes, see [Pseudoclasses](pseudoclasses).
 :::
 
-## Include Derived Classes
+## Include derived classes
 
 ```xml
 <Style Selector=":is(Button)">
@@ -93,11 +92,10 @@ new Style(x => x.Is(typeof(Button)));
 This is very similar to the style class selector except it also matches derived types.
 
 :::info
-Technical detail: during the matching process, _Avalonia UI_ determines the type of a control by examining its `StyleKey` property.
+During the matching process, Avalonia determines the type of a control by examining its `StyleKey` property.
 :::
 
-Interestingly, this allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
-
+This allows you to write very general class-based selectors. As controls are all derived from the class `Control`, a selector that only selects on the style class `margin2` can be written:
 
 ```xml
 <Style Selector=":is(Control).margin2">
@@ -109,7 +107,7 @@ new Style(x => x.Is<Control>().Class("margin2"));
 new Style(x => x.Is(typeof(Control)).Class("margin2"));
 ```
 
-## Child Operator
+## Child operator
 
 ```xml
 <Style Selector="StackPanel > Button">
@@ -122,7 +120,7 @@ new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 A child selector is defined by separating two selectors with a `>` character. This selector matches only direct children in the **logical controls tree**.
 
 :::info
-For the concept behind the logical controls tree, see [here](/docs/custom-controls/control-trees).
+For the concept behind the logical controls tree, see [Control trees](../custom-controls/control-trees).
 :::
 
 For example, applying the above selector to this XAML:
@@ -139,7 +137,7 @@ For example, applying the above selector to this XAML:
 
 The selector will match the first button, but not the second. This is because the second button is not a direct child of the stack panel (it is inside the dock panel as well).
 
-## Any Descendant Operator
+## Any descendant operator
 
 ```xml
 <Style Selector="StackPanel Button">
@@ -153,7 +151,7 @@ When two selectors are separated by a space, then the selector will match any de
 
 Therefore applying the above selector to the previous XAML sample, both buttons will be selected.
 
-## By Property Match
+## By property match
 
 ```xml
 <Style Selector="Button[IsDefault=true]">
@@ -183,10 +181,10 @@ Note: when you use an attached property as a property match, the property name m
 :::
 
 :::info
-Further note: when you use a property match, the property type must support the component model type converter, `TypeConverter` class. For more information see the _Microsoft_ documentation [here](https://learn.microsoft.com/dotnet/api/system.componentmodel.typeconverter).
+When you use a property match, the property type must support the component model type converter, `TypeConverter` class. For more information, see the [Microsoft TypeConverter documentation](https://learn.microsoft.com/dotnet/api/system.componentmodel.typeconverter).
 :::
 
-## By Template
+## By template
 
 ```xml
 <Style Selector="Button /template/ ContentPresenter">
@@ -200,7 +198,7 @@ You can match a control in a control template using the above syntax. All the ot
 
 In the example above, if a button has a template, then the selector matches selects content presenter controls (class `ContentPresenter`) inside the template.
 
-## Not Function
+## Not function
 
 ```xml
 <Style Selector="TextBlock:not(.h1)">
@@ -212,7 +210,7 @@ new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 
 This function negates the selection in the brackets. In the example above all the text block controls that **do not** have the `h1` class will be matched.
 
-## By List
+## By list
 
 ```xml
 <Style Selector="TextBlock, Button">
@@ -224,7 +222,7 @@ new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 
 You can select any element that matches a comma-separated list of selectors. Any setters in the style must change properties that are common to all the items. 
 
-## By Child Position Formula
+## By child position formula
 
 ```xml
 <Style Selector="TextBlock:nth-child(2n+3)">
@@ -268,7 +266,7 @@ new Style(x => x.OfType<TextBlock>().NthChild(0, 3));
 
 ### Keyword notation
 
-You can also use a keyword notation in place of the formula: `odd` or `even`. So these are selectors are equivalent:
+You can also use a keyword notation in place of the formula: `odd` or `even`. So these selectors are equivalent:
 
 ```xml
 <Style Selector="TextBlock:nth-child(2n)">
@@ -280,7 +278,7 @@ You can also use a keyword notation in place of the formula: `odd` or `even`. So
 <Style Selector="TextBlock:nth-child(odd)">
 ```
 
-### Other Formula Examples
+### Other formula examples
 
 This table lists some examples of selection by child position:
 
@@ -295,9 +293,9 @@ This table lists some examples of selection by child position:
 | `:nth-child(3n+4)` | Every 3rd element start from 4th: **4**_(3×0+4)_, **7**_(3×1+4)_, **10**_(3×2+4)_, **13**_(3×3+4)_, etc                                                                                                         |
 | `:nth-child(-n+3)` | First 3 elements: **3**_(-1×0+3)_, **2**_(-1×1+3)_, **1**_(-1×2+3)_. All subsequent indices are less than 1 so they are not matching any elements.                                                              |
 
-### Online Child Position Tester
+### Online child position tester
 
-Although this is a CSS site, it will work for _Avalonia UI_ child position selectors because the rules are the same.
+Although this is a CSS site, it works for Avalonia child position selectors because the rules are the same.
 
 :::info
 You can use this site to test your child position selector: \
@@ -330,3 +328,9 @@ new Style(x => x.OfType<TextBlock>())
     }
 };
 ```
+
+## See also
+
+- [Style selectors](style-selectors)
+- [Pseudoclasses](pseudoclasses)
+- [Styles](styles)

@@ -77,6 +77,8 @@ To optimize performance when the items collection is large, use of the `ISelecti
 
 ## Selection mode
 
+On touch and pen devices, selection occurs on pointer release rather than press. This allows swipe and scroll gestures to start on an item without changing the selection.
+
 The following selection modes are available for the list box:
 
 <table><thead><tr><th width="237">Selection Mode</th><th>Description</th></tr></thead><tbody><tr><td><code>Single</code></td><td>Only a single item can be selected (default).</td></tr><tr><td><code>Multiple</code></td><td>Multiple items can be selected.</td></tr><tr><td><code>Toggle</code></td><td>Item selection can be toggled by tapping/spacebar. When not enabled, shift or ctrl must be used to select multiple items.</td></tr><tr><td><code>AlwaysSelected</code></td><td>An item will always be selected as long as there are items to select.</td></tr></tbody></table>

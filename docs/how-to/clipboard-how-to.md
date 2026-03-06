@@ -50,7 +50,7 @@ private async Task PasteText()
     var clipboard = TopLevel.GetTopLevel(this)?.Clipboard;
     if (clipboard is not null)
     {
-        var text = await clipboard.GetTextAsync();
+        var text = await clipboard.TryGetTextAsync();
         if (text is not null)
         {
             Content = text;
@@ -67,34 +67,72 @@ Query what formats are available before pasting:
 var clipboard = TopLevel.GetTopLevel(this)?.Clipboard;
 if (clipboard is not null)
 {
-    var formats = await clipboard.GetFormatsAsync();
-
-    if (formats.Contains(DataFormats.Text))
+    using var data = await clipboard.TryGetDataAsync();
+    if (data is not null)
     {
-        var text = await clipboard.GetTextAsync();
+        if (data.Formats.Contains(DataFormat.Text))
+        {
+            var text = await data.TryGetTextAsync();
+        }
+    }
+}
+```
+
+## Copy an Image to Clipboard
+
+```csharp
+var clipboard = TopLevel.GetTopLevel(this)?.Clipboard;
+if (clipboard is not null)
+{
+    var bitmap = new Bitmap("assets/photo.png");
+    await clipboard.SetBitmapAsync(bitmap);
+}
+```
+
+## Paste an Image from Clipboard
+
+```csharp
+var clipboard = TopLevel.GetTopLevel(this)?.Clipboard;
+if (clipboard is not null)
+{
+    var bitmap = await clipboard.TryGetBitmapAsync();
+    if (bitmap is not null)
+    {
+        MyImage.Source = bitmap;
     }
 }
 ```
 
 ## Copy Custom Data
 
-Use `DataObject` to place structured data on the clipboard:
+Use `DataTransfer` and `DataTransferItem` to place structured data on the clipboard:
 
 ```csharp
-var data = new DataObject();
-data.Set(DataFormats.Text, "Plain text fallback");
-data.Set("application/x-my-data", mySerializedData);
+var myFormat = DataFormat.CreateBytesApplicationFormat("mycompany-myapp-mydata");
 
-await clipboard.SetDataObjectAsync(data);
+var item = new DataTransferItem();
+item.Set(DataFormat.Text, "Plain text fallback");
+item.Set(myFormat, mySerializedBytes);
+
+var data = new DataTransfer();
+data.Add(item);
+
+await clipboard.SetDataAsync(data);
 ```
 
 ## Paste Custom Data
 
 ```csharp
-var data = await clipboard.GetDataAsync("application/x-my-data");
-if (data is byte[] bytes)
+var myFormat = DataFormat.CreateBytesApplicationFormat("mycompany-myapp-mydata");
+
+using var data = await clipboard.TryGetDataAsync();
+if (data is not null)
 {
-    // Deserialize
+    var bytes = await data.TryGetValueAsync(myFormat);
+    if (bytes is not null)
+    {
+        // Deserialize
+    }
 }
 ```
 
@@ -112,13 +150,14 @@ The standard clipboard shortcuts (Ctrl+C, Ctrl+V, Ctrl+X) work automatically in 
 
 ## Platform Notes
 
-| Platform | Text | Files | Custom Formats |
-|---|---|---|---|
-| Windows | Yes | Yes | Yes |
-| macOS | Yes | Yes | Yes |
-| Linux | Yes | Varies by DE | Yes |
-| Browser/WASM | Yes (requires permission) | No | Limited |
-| Android/iOS | Yes | No | Limited |
+| Platform | Text | Images | Files | Custom Formats |
+|---|---|---|---|---|
+| Windows | Yes | Yes | Yes | Yes |
+| macOS | Yes | Yes | Yes | Yes |
+| Linux | Yes | Yes | Varies by DE | Yes |
+| Browser/WASM | Yes (requires permission) | Yes | No | Limited |
+| iOS | Yes | Yes | No | Limited |
+| Android | Yes | Read only | No | Limited |
 
 ## See Also
 

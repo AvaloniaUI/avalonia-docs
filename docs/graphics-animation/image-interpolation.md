@@ -62,6 +62,36 @@ This can also be applied to containers:
 </ItemsControl>
 ```
 
+## Edge Mode (Antialiasing)
+
+Avalonia applies antialiasing to images by default, producing smooth edges when an image is rotated, scaled, or positioned at sub-pixel offsets. This is controlled by the `RenderOptions.EdgeMode` attached property.
+
+To force aliased (sharp, pixelated) edges on a specific control, set `EdgeMode` to `Aliased`:
+
+```xml
+<!-- Smooth edges (default) -->
+<Image Source="assets/photo.png"
+       RenderTransform="rotate(15)" />
+
+<!-- Aliased edges (no antialiasing) -->
+<Image Source="assets/sprite.png"
+       RenderOptions.EdgeMode="Aliased"
+       RenderTransform="rotate(15)" />
+```
+
+| Mode | Description |
+|---|---|
+| `Unspecified` | The renderer uses its default behavior (antialiased). |
+| `Aliased` | Disables antialiasing. Useful for pixel art or when you need crisp, non-smoothed edges. |
+
+`EdgeMode` also affects non-image rendering (shapes, borders). It can be set on a parent element to apply to all children:
+
+```xml
+<Border RenderOptions.EdgeMode="Aliased">
+    <!-- All content inside renders without antialiasing -->
+</Border>
+```
+
 ## Performance Considerations
 
 The interpolation mode is set per-control by design for performance reasons. Higher quality interpolation requires more computational resources, so consider these guidelines:
@@ -121,3 +151,7 @@ Then in your XAML:
    - Test image rendering on different screen densities
    - Verify performance impact when using high-quality interpolation on many images
    - Check memory usage with different interpolation settings
+
+## See also
+
+- [Text Options](/docs/graphics-animation/text-options): Text rendering quality options via `TextOptions`.

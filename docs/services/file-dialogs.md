@@ -72,6 +72,49 @@ public class MyView : UserControl
 }
 ```
 
+---
+
+## SaveFilePickerWithResultAsync
+
+This method works like `SaveFilePickerAsync` but also returns which file type filter the user selected. This is useful when the file extension depends on the user's choice (for example, exporting as PNG vs JPEG).
+
+### Example
+
+```csharp
+public class MyView : UserControl
+{
+    private async void ExportButton_Clicked(object sender, RoutedEventArgs args)
+    {
+        var topLevel = TopLevel.GetTopLevel(this);
+
+        var result = await topLevel.StorageProvider.SaveFilePickerWithResultAsync(new FilePickerSaveOptions
+        {
+            Title = "Export Image",
+            FileTypeChoices = new[]
+            {
+                new FilePickerFileType("PNG Image") { Patterns = new[] { "*.png" } },
+                new FilePickerFileType("JPEG Image") { Patterns = new[] { "*.jpg", "*.jpeg" } },
+            }
+        });
+
+        if (result.StorageFile is not null)
+        {
+            // result.SelectedFileType contains the filter the user chose
+            var format = result.SelectedFileType?.Name; // e.g., "PNG Image"
+            await using var stream = await result.StorageFile.OpenWriteAsync();
+            // Save in the chosen format...
+        }
+    }
+}
+```
+
+The returned `SaveFilePickerResult` struct contains:
+
+| Property | Type | Description |
+|---|---|---|
+| `StorageFile` | `IStorageFile?` | The saved file, or `null` if the user cancelled. |
+| `SelectedFileType` | `FilePickerFileType?` | The file type filter the user selected in the dialog. |
+
 For more information on StorageProvider service including on how to keep access to the picked files and what possible options are supported, please visit [`StorageProvider`](/docs/services/storage/storage-provider) documentation page and subpages.
 
 :::note

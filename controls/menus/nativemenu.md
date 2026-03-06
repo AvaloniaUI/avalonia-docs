@@ -29,7 +29,9 @@ You will probably use these properties most often:
   <tbody>
     <tr><td><code>Header</code></td><td>The menu caption.</td></tr>
     <tr><td><code>Command</code></td><td>A command to execute when the user clicks the menu item.</td></tr>
-    <tr><td><code>Gesture</code></td><td>The keyboard shortcut to associated with the menu item.</td></tr>
+    <tr><td><code>Gesture</code></td><td>The keyboard shortcut associated with the menu item.</td></tr>
+    <tr><td><code>ToggleType</code></td><td>The toggle behavior: <code>None</code> (default), <code>CheckBox</code>, or <code>Radio</code>. Uses the <code>MenuItemToggleType</code> enum.</td></tr>
+    <tr><td><code>IsChecked</code></td><td>Whether the menu item is checked. Only applies when <code>ToggleType</code> is <code>CheckBox</code> or <code>Radio</code>.</td></tr>
   </tbody>
 </table>
 

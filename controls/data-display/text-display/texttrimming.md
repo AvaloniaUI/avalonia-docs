@@ -25,13 +25,14 @@ Avalonia uses the Unicode ellipsis character `U+2026` by default, not three peri
 
 ## Trimming Modes
 
-Avalonia provides five text trimming options:
+Avalonia provides six text trimming options:
 
 1. None
 2. CharacterEllipsis
 3. WordEllipsis
 4. PrefixCharacterEllipsis
 5. LeadingCharacterEllipsis
+6. PathSegmentEllipsis
 
 ### None
 
@@ -112,6 +113,20 @@ Intended for file paths or any other text where only the end is important.
 <div className="center" style={{maxWidth:400}}>
 <img className="center" src={LeadingCharacterEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off at the start, with an ellipsis replacing the starting characters and the ending characters visible." />
 </div>
+
+### PathSegmentEllipsis
+
+Collapses interior path segments while preserving the start (drive letter, server name) and end (filename) of a file path or URL. The algorithm removes segments near the middle of the path and replaces them with an ellipsis.
+
+For example, `C:\Users\Alice\Documents\Projects\Avalonia\src\Button.cs` becomes `C:\Users\...\Button.cs` when space is limited.
+
+```xml
+<TextBlock Text="C:\Users\Alice\Documents\Projects\Avalonia\src\Controls\Button.cs"
+           TextTrimming="PathSegmentEllipsis"
+           Width="200" />
+```
+
+This mode recognizes both forward slashes and backslashes as path separators, so it works for file system paths and URLs.
 
 ## Example uses
 

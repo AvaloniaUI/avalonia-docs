@@ -55,6 +55,45 @@ private void PointerPressedHandler (object sender, PointerPressedEventArgs args)
 
 <img src={PointerPressedSampleScreenshot} alt=""/>
 
+## Pointer Types
+
+Avalonia distinguishes between different input device types through the `PointerPoint.Pointer.Type` property:
+
+| Type | Description |
+|---|---|
+| `Mouse` | Standard mouse or trackpad input. |
+| `Touch` | Touch screen input. |
+| `Pen` | Pen or stylus input (graphics tablets, active pens). |
+
+### Pen and stylus properties
+
+When the pointer type is `Pen`, additional properties are available on `PointerPointProperties`:
+
+| Property | Type | Description |
+|---|---|---|
+| `Pressure` | `float` | Pressure level from 0 (no pressure) to 1 (maximum pressure). |
+| `XTilt` | `float` | Tilt of the pen along the X axis. |
+| `YTilt` | `float` | Tilt of the pen along the Y axis. |
+| `Twist` | `float` | Clockwise rotation of the pen around its own axis. |
+| `IsEraser` | `bool` | `true` when the pen eraser tip is active. |
+| `IsBarrelButtonPressed` | `bool` | `true` when the pen barrel button is held. |
+
+```csharp
+private void OnPointerMoved(object? sender, PointerEventArgs e)
+{
+    var point = e.GetCurrentPoint(this);
+
+    if (point.Pointer.Type == PointerType.Pen)
+    {
+        var pressure = point.Properties.Pressure;
+        var isEraser = point.Properties.IsEraser;
+        // Adjust brush size or tool based on pressure and eraser state
+    }
+}
+```
+
+These properties are available on all platforms that support pen input (Windows, macOS, and Linux with X11).
+
 ## Pointer Position
 
 In the example above, the pointer coordinates (`x` and `y`) have been calculated relative to the sender control origin (top, left), in this case the stack panel. If you want the coordinates relative to the containing window, then you can use the `GetCurrentPoint` method as follows:
@@ -73,6 +112,34 @@ Holding is raised after the pointer is pressed for a set duration. The duration 
 Note that the maximum distance between a first and second tap, and the time delay between them, will depend on the target platform and usually is bigger for touch devices.
 :::
 
+
+## Pointer Capture
+
+Pointer capture directs all subsequent pointer events to a specific control, even if the pointer moves outside the control's bounds. This is essential for drag operations and slider-like interactions.
+
+```csharp
+protected override void OnPointerPressed(PointerPressedEventArgs e)
+{
+    base.OnPointerPressed(e);
+    e.Pointer.Capture(this);
+}
+
+protected override void OnPointerReleased(PointerReleasedEventArgs e)
+{
+    base.OnPointerReleased(e);
+    e.Pointer.Capture(null); // Release capture
+}
+```
+
+Only one element can hold pointer capture at a time across the entire application. If a different control captures the pointer, the previous control's capture is released and it receives a `PointerCaptureLost` event. Handle this event to clean up any in-progress interaction:
+
+```csharp
+protected override void OnPointerCaptureLost(PointerCaptureLostEventArgs e)
+{
+    base.OnPointerCaptureLost(e);
+    _isDragging = false;
+}
+```
 
 ## Cursor Management
 

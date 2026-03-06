@@ -14,7 +14,7 @@ A text label control that does not receive the focus, but transfers it to a defi
 
 ## Access Keys
 
-Use an underscore (`_`) before a character to define an access key. When the user presses Alt plus that character, focus moves to the target control:
+Use an underscore (`_`) before a character to define an access key. Letters, numbers, and accented characters are all supported. When the user presses Alt plus that character, focus moves to the target control:
 
 ```xml
 <StackPanel Spacing="4">

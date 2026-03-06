@@ -167,6 +167,8 @@ By default, Avalonia shows validation errors with:
 - A tooltip containing the error message when hovering
 - A red adorner in the control's corner
 
+Validation errors are also automatically exposed to screen readers and other assistive technologies through the `DataValidationErrors` automation peer. See [Accessibility](/docs/app-development/accessibility#data-validation-errors) for details.
+
 ### Customizing error display
 
 Use the `DataValidationErrors` control to customize how errors are shown. Restyle the `DataValidationErrors` template through a control theme:

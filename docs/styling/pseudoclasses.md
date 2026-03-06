@@ -7,16 +7,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CustomPseudoclassScreenshot from '/img/reference/styles/custom-pseudoclass.gif';
 
-## Overview
+*Pseudoclasses* in Avalonia, similar to those in CSS, are keywords exposed by a `Control` that indicate a distinct control state. These states are used in [style selectors](style-selectors) to conditionally style controls. For example, a `Button` could have a different appearance while it is being pressed, or a `TextBox` while it is disabled.
 
-Pseudoclasses in Avalonia, similar to those in CSS, are keywords exposed by a `Control` that indicate a distinct control 
-state in a convenient way for Style Selectors. These states are used to conditionally style controls. For example, a 
-`Button` could have a different appearance while it's being pressed or a TextBox while it is disabled.
+Pseudoclass state is tracked by the `Control`'s `PseudoClasses` property. By convention, pseudoclass names begin with a `:`, such as `:pointerover` or `:pressed`.
 
-Pseudoclass state is tracked by the `Control`'s `PseudoClasses` property. By convention, pseudoclass names begin with 
-a `:`, such as `:pointerover` or `:pressed`.
-
-## Selector Usage
+## Selector usage
 
 The following demonstrates how to apply Bold text to a `CheckBox` when it is checked:
 
@@ -30,7 +25,7 @@ The following demonstrates how to apply Bold text to a `CheckBox` when it is che
 <CheckBox Content="Pseudoselectors" />
 ```
 
-A `Control` can have multiple pseudoclasses active and you can target multiple pseudoclasses with a Selector. For example:
+A `Control` can have multiple pseudoclasses active and you can target multiple pseudoclasses with a selector. For example:
 
 ```xml
 <Style Selector="Button.red:focus:pointerover">
@@ -38,7 +33,7 @@ A `Control` can have multiple pseudoclasses active and you can target multiple p
 
 The selector above targets `Button` controls with the red style class, and that have the `:focus` and the `:pointerover` pseudoclass state.
 
-## General Pseudoclasses
+## General pseudoclasses
 
 These pseudoclasses are defined by `InputElement` and are accessible on every `Control`:
 
@@ -55,7 +50,7 @@ These pseudoclasses are defined by `InputElement` and are accessible on every `C
 The `PseudoClasses` collection is a `protected` property. This accessibility blocks the external setting of existing and custom 
 pseudoclasses via code-behind and attached behavior. As such, customizing must be implemented through inheritance.
 
-## Custom Pseudoclass Example
+## Custom pseudoclass example
 
 When creating a custom control, you can define custom pseudoclasses to expose control state. The `[PseudoClasses]` attribute 
 provides information about your pseudoclass to the IDE. This behavior is inherited, so the custom control automatically benefits from 
@@ -137,8 +132,12 @@ public class AreaButton : Button
 
 <img src={CustomPseudoclassScreenshot} alt="" />
 
-:::warning
-`StyleKeyOverride` is used when creating simple, derived controls with the `ControlTheme` defined by their parent. In this 
-case since `Button` is a `TemplatedControl`, creating a `ControlTheme` is necessary as the Selector must target `AreaButton` 
-for the new pseudoclasses.
+:::caution
+`StyleKeyOverride` is used when creating simple, derived controls with the `ControlTheme` defined by their parent. In this case, since `Button` is a `TemplatedControl`, creating a `ControlTheme` is necessary as the selector must target `AreaButton` for the new pseudoclasses.
 :::
+
+## See also
+
+- [Style selectors](style-selectors)
+- [Style selector syntax](style-selector-syntax)
+- [Control themes](control-themes)

@@ -92,6 +92,21 @@ public class MyTextControl : Control, ITextInputMethodClient
 }
 ```
 
+### Requesting the on-screen keyboard from a custom control
+
+Custom text input controls that extend `TextInputMethodClient` can request the on-screen keyboard by raising the `InputPaneActivationRequested` event. The platform handles showing the input pane in response:
+
+```csharp
+public class MyTextInputClient : TextInputMethodClient
+{
+    public void OnTapped()
+    {
+        // Request the platform to show the on-screen keyboard
+        RaiseInputPaneActivationRequested();
+    }
+}
+```
+
 ## On-Screen Keyboards
 
 On touch devices and mobile platforms, Avalonia can show the platform's on-screen keyboard when a text input control receives focus.

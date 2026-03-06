@@ -197,7 +197,7 @@ So use direct properties when you have the following requirements:
 
 ### DataValidation support
 
-If you want to allow a property to validate the data and show validation error messages, the property must be implemented as a `DirectProperty` and validation support must be enabled (`enableDataValidation: true`).
+To allow a property to show validation error messages, register it with `enableDataValidation: true`. The base `Control` class automatically handles reporting validation errors to `DataValidationErrors`, so no additional overrides are needed.
 
 **Example of a property with DataValidation enabled**
 
@@ -206,9 +206,11 @@ public static readonly DirectProperty<MyControl, int> ValueProperty =
     AvaloniaProperty.RegisterDirect<MyControl, int>(
         nameof(Value),
         o => o.Value,
-        (o, v) => o.Value = v, 
+        (o, v) => o.Value = v,
         enableDataValidation: true);
 ```
+
+This works with both `DirectProperty` and `StyledProperty` registrations. When a binding provides a validation error, the control displays it automatically.
 
 If you want to [re-use a direct property of another class](#using-a-directproperty-on-another-class) you can also enable data validation. In this case use `AddOwnerWithDataValidation`.
 
@@ -221,4 +223,17 @@ public static readonly DirectProperty<TextBox, string?> TextProperty =
         (o, v) => o.Text = v,
         defaultBindingMode: BindingMode.TwoWay,
         enableDataValidation: true);
+```
+
+To suppress or customize validation handling for a specific property, override `UpdateDataValidation` and handle (or skip) that property without calling the base method:
+
+```cs
+protected override void UpdateDataValidation(
+    AvaloniaProperty property, BindingValueType state, Exception? error)
+{
+    if (property == MySpecialProperty)
+        return; // Suppress validation for this property
+
+    base.UpdateDataValidation(property, state, error);
+}
 ```

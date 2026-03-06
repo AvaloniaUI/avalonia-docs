@@ -7,7 +7,7 @@ import FluentThemeNormalScreenshot from '/img/concepts/ui-concepts/styling/fluen
 import FluentThemeForestScreenshot from '/img/concepts/ui-concepts/styling/fluent-theme-forest.png';
 import SimpleThemeScreenshot from '/img/concepts/ui-concepts/styling/simple-theme.png';
 
-In Avalonia, themes are complete sets of [control themes](/docs/styling/control-themes) and [theme resources](/docs/styling/theme-variants) for built-in controls.
+In Avalonia, themes are complete sets of [control themes](control-themes) and [theme resources](theme-variants) for built-in controls.
 
 ## Official themes
 
@@ -19,11 +19,11 @@ Avalonia provides two built-in themes:
 
 ### Simple theme
 
-- [Simple Theme](#simple) is an minimal and lightweight theme with limited built-in styling.
+- [Simple Theme](#simple) is a minimal and lightweight theme with limited built-in styling.
 
 ## Community themes
 
-Several themes, in varying stages of development, have been brought to life by our dedicated community.
+Community-developed themes in varying stages of development are also available.
 
 ### Material.Avalonia 
 
@@ -39,19 +39,19 @@ Several themes, in varying stages of development, have been brought to life by o
 
 ## Fluent
 
-Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, which is a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with our styling system.
+The Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with the Avalonia styling system.
 
 <p><img className="medium-image-zoom" src={FluentThemeNormalScreenshot} alt="Fluent Theme" /></p>
 
 ### How to use
 
-As a first step, [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/) nuget package needs to be installed.
+First, install the [Avalonia.Themes.Fluent](https://www.nuget.org/packages/Avalonia.Themes.Fluent/) NuGet package.
 
 :::info
-On how to add a nuget package, you can follow steps from the NuGet page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
+For help adding a NuGet package, see the [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio) or [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
 :::
 
-After that theme needs to be included in the Application class:
+Then include the theme in the `Application` class:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -66,13 +66,13 @@ After that theme needs to be included in the Application class:
 ```
 
 :::note
-If you need to specify theme dark or light variant, please follow [Theme Variants](/docs/styling/theme-variants) documentation.
+If you need to specify a dark or light theme variant, see [Theme variants](theme-variants).
 :::
 
 ### Changing theme density
 
-Fluent theme has two sets of predefined density variants.
-To switch to more compact look, you can set it with DensityStyle property:
+The Fluent theme has two sets of predefined density variants.
+To switch to a more compact look, set the `DensityStyle` property:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -88,10 +88,10 @@ To switch to more compact look, you can set it with DensityStyle property:
 
 ### Creating custom color palettes
 
-While FluentTheme has build-in resources for dark and light variants, it's still possible to override base palette for these variants.
-It is useful, when developers want to use the same base theme, but with different colors.
+While `FluentTheme` has built-in resources for dark and light variants, you can override the base palette for these variants.
+This is useful when you want to use the same base theme but with different colors.
 
-To do so, you need to define
+To do so, define custom `ColorPaletteResources` for each variant:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -112,12 +112,12 @@ To do so, you need to define
 </Application>
 ```
 
-While `ColorPaletteResources` has many color properties that can be overridden independently for each variant, it is possible to redefine only minimal set of what's needed, and keep everything else as per defaults. As in examples above, only a couple of colors are overridden.
+`ColorPaletteResources` has many color properties that can be overridden independently for each variant. You only need to redefine the properties you want to change; everything else keeps its default value. In the example above, only a few colors are overridden.
 
-If Accent is not overridden, Avalonia uses platform OS accent color if available.
-Also, Accent supports bindings and can be changed in runtime. But not other properties, as they are read once after app started and are statically used for performance reasons.
+If `Accent` is not overridden, Avalonia uses the platform OS accent color when available.
+`Accent` supports bindings and can be changed at runtime. Other palette properties are read once at startup and used statically for performance reasons.
 
-It is possible to build palettes from the code behind, but same rules apply - only Accent can be updated dynamically, and palettes should be
+You can also build palettes from code-behind, but the same rules apply: only `Accent` can be updated dynamically.
 
 :::note
 FluentTheme supports only Dark and Light theme variants, and it's not possible to define palettes for custom variants.
@@ -125,15 +125,15 @@ FluentTheme supports only Dark and Light theme variants, and it's not possible t
 
 ### Creating custom color palettes with online editor
 
-Microsoft Fluent Theme Editor was ported to Avalonia and now available to be used with our FluentTheme as well.
-It is available on https://theme.xaml.live/ page and supports following features:
+The Microsoft Fluent Theme Editor has been ported to Avalonia and is available for use with `FluentTheme`.
+The [Avalonia Theme Editor](https://theme.xaml.live/) supports the following features:
 
 1. Editing palette colors for both Light and Dark variants.
 2. Previewing of the current palette.
-3. Exporting current palettes as XAML code that can be copy pasted into `App.axaml` file.
+3. Exporting current palettes as XAML code that can be copied into your `App.axaml` file.
 4. Saving current colors in a json file and loading it from the file system.
-5. Automatic hints, when palette has a low contrast between colors.
-6. Couple of quick start presets.
+5. Automatic hints when a palette has low contrast between colors.
+6. Quick-start presets.
 
 Example of FluentTheme with a Forest palette preset available on the web app:
 
@@ -141,19 +141,19 @@ Example of FluentTheme with a Forest palette preset available on the web app:
 
 ## Simple
 
-Avalonia Simple theme is specifically designed to be minimal and lightweight, with limited built-in styling. It provides a simple and clean foundation for building custom styles on top. Low visual and structural complexity makes it a perfect choice for applications running on embedded devices.
+The Avalonia Simple theme is designed to be minimal and lightweight, with limited built-in styling. It provides a clean foundation for building custom styles on top. Its low visual and structural complexity makes it a good choice for applications running on embedded devices.
 
 <Image light={SimpleThemeScreenshot} alt="A screenshot of a user interface, demonstrating the appearances of various UI controls using a simple design theme." position="center" maxWidth={400} cornerRadius="true"/>
 
 ### How to use
 
-As a first step, [Avalonia.Themes.Simple](https://www.nuget.org/packages/Avalonia.Themes.Simple/) nuget package needs to be installed. 
+First, install the [Avalonia.Themes.Simple](https://www.nuget.org/packages/Avalonia.Themes.Simple/) NuGet package.
 
 :::info
-On how to add a nuget package, you can follow steps from the NuGet page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
+For help adding a NuGet package, see the [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio) or [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
 :::
 
-After that theme needs to be included in the Application class:
+Then include the theme in the `Application` class:
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -169,5 +169,11 @@ After that theme needs to be included in the Application class:
 ```
 
 :::note
-If you need to specify theme dark or light variant, please follow [Theme Variants](/docs/styling/theme-variants) documentation.
+If you need to specify a dark or light theme variant, see [Theme variants](theme-variants).
 :::
+
+## See also
+
+- [Control themes](control-themes)
+- [Theme variants](theme-variants)
+- [Styles](styles)

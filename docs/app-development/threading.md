@@ -39,6 +39,8 @@ var text = await Dispatcher.UIThread.InvokeAsync(() =>
 });
 ```
 
+`InvokeAsync` captures the calling thread's `ExecutionContext` and restores it when the callback executes. This means `AsyncLocal<T>` values, impersonation identity, and culture settings flow from the caller into the dispatched callback, matching the behavior of `Task.Run` and WPF's dispatcher.
+
 ### CheckAccess and VerifyAccess
 
 Check whether you are already on the UI thread before dispatching:

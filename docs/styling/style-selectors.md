@@ -5,7 +5,7 @@ title: Style Selectors
 
 Avalonia uses style selectors to match controls using a custom XAML syntax that is similar to CSS (Cascading Style Sheets). Selectors determine which controls a style applies to.
 
-## Selector Quick Reference
+## Selector quick reference
 
 | Selector | Description |
 |---|---|
@@ -22,7 +22,7 @@ Avalonia uses style selectors to match controls using a custom XAML syntax that 
 | `:not(Button.red)` | Selects controls that do not match `Button.red`. |
 | `Button:nth-child(2n+1)` | Selects odd-numbered `Button` controls among their siblings. |
 
-## How Selectors Work
+## How selectors work
 
 A style selector is specified on the `Selector` attribute of a `Style`:
 
@@ -38,7 +38,7 @@ This selector targets all `Button` controls with the `primary` style class when 
 2. `.primary` matches a style class
 3. `:pointerover` matches a pseudo-class (state)
 
-## Selector Specificity
+## Selector specificity
 
 When multiple styles match the same control, the more specific selector wins. Specificity is determined by (in order of priority):
 
@@ -50,13 +50,13 @@ When multiple styles match the same control, the more specific selector wins. Sp
 
 If two selectors have equal specificity, the one declared later wins.
 
-## Full Reference
+## Full reference
 
-For a complete description of all selector formats, operators, and combinators, see the [Style Selector Syntax](/docs/styling/style-selector-syntax) reference.
+For a complete description of all selector formats, operators, and combinators, see the [style selector syntax](style-selector-syntax) reference.
 
-## See Also
+## See also
 
-- [Style Selector Syntax](/docs/styling/style-selector-syntax): Complete syntax reference.
-- [Styles](/docs/styling/styles): How to define and apply styles.
-- [Style Classes](/docs/styling/style-classes): Working with style classes.
-- [Pseudo-Classes](/docs/styling/pseudoclasses): State-based pseudo-class selectors.
+- [Style selector syntax](style-selector-syntax)
+- [Styles](styles)
+- [Style classes](style-classes)
+- [Pseudoclasses](pseudoclasses)

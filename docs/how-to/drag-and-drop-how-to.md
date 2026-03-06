@@ -28,21 +28,21 @@ public MainWindow()
 {
     InitializeComponent();
 
-    AddHandler(DragDrop.DropEvent, OnDrop);
-    AddHandler(DragDrop.DragOverEvent, OnDragOver);
+    DragDrop.AddDropHandler(this, OnDrop);
+    DragDrop.AddDragOverHandler(this, OnDragOver);
 }
 
 private void OnDragOver(object? sender, DragEventArgs e)
 {
     // Indicate we accept file drops
-    e.DragEffects = e.Data.Contains(DataFormats.Files)
+    e.DragEffects = e.DataTransfer.Formats.Contains(DataFormat.File)
         ? DragDropEffects.Copy
         : DragDropEffects.None;
 }
 
 private void OnDrop(object? sender, DragEventArgs e)
 {
-    if (e.Data.GetFiles() is { } files)
+    if (e.DataTransfer.GetFiles() is { } files)
     {
         foreach (var file in files)
         {
@@ -58,7 +58,7 @@ private void OnDrop(object? sender, DragEventArgs e)
 ```csharp
 private void OnDrop(object? sender, DragEventArgs e)
 {
-    if (e.Data.GetText() is { } text)
+    if (e.DataTransfer.TryGetText() is { } text)
     {
         // Use the dropped text
         ViewModel.Content = text;
@@ -75,10 +75,10 @@ private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 {
     if (sender is not Control control) return;
 
-    var dragData = new DataObject();
-    dragData.Set(DataFormats.Text, "Dragged item text");
+    var dragData = new DataTransfer();
+    dragData.Set(DataFormat.Text, "Dragged item text");
 
-    var result = await DragDrop.DoDragDrop(e, dragData, DragDropEffects.Copy | DragDropEffects.Move);
+    var result = await DragDrop.DoDragDropAsync(e, dragData, DragDropEffects.Copy | DragDropEffects.Move);
 
     if (result == DragDropEffects.Move)
     {
@@ -98,10 +98,10 @@ private async void SourceList_PointerPressed(object? sender, PointerPressedEvent
 {
     if (sender is ListBox listBox && listBox.SelectedItem is ItemViewModel item)
     {
-        var data = new DataObject();
+        var data = new DataTransfer();
         data.Set("application/x-my-item", item);
 
-        var result = await DragDrop.DoDragDrop(e, data, DragDropEffects.Move);
+        var result = await DragDrop.DoDragDropAsync(e, data, DragDropEffects.Move);
 
         if (result == DragDropEffects.Move)
             ViewModel.SourceItems.Remove(item);
@@ -114,7 +114,7 @@ private async void SourceList_PointerPressed(object? sender, PointerPressedEvent
 ```csharp
 private void TargetList_Drop(object? sender, DragEventArgs e)
 {
-    if (e.Data.Get("application/x-my-item") is ItemViewModel item)
+    if (e.DataTransfer.Get("application/x-my-item") is ItemViewModel item)
     {
         ViewModel.TargetItems.Add(item);
         e.DragEffects = DragDropEffects.Move;
@@ -133,19 +133,19 @@ public MainWindow()
 
     var dropZone = this.FindControl<Border>("DropZone");
 
-    AddHandler(DragDrop.DragEnterEvent, (s, e) =>
+    DragDrop.AddDragEnterHandler(this, (s, e) =>
     {
         dropZone.BorderBrush = Brushes.Blue;
         dropZone.BorderThickness = new Thickness(2);
     });
 
-    AddHandler(DragDrop.DragLeaveEvent, (s, e) =>
+    DragDrop.AddDragLeaveHandler(this, (s, e) =>
     {
         dropZone.BorderBrush = Brushes.Transparent;
         dropZone.BorderThickness = new Thickness(0);
     });
 
-    AddHandler(DragDrop.DropEvent, (s, e) =>
+    DragDrop.AddDropHandler(this, (s, e) =>
     {
         dropZone.BorderBrush = Brushes.Transparent;
         dropZone.BorderThickness = new Thickness(0);
@@ -161,7 +161,7 @@ Control the cursor shown during drag to communicate the allowed operation:
 ```csharp
 private void OnDragOver(object? sender, DragEventArgs e)
 {
-    if (e.Data.Contains(DataFormats.Files))
+    if (e.DataTransfer.Formats.Contains(DataFormat.File))
     {
         e.DragEffects = DragDropEffects.Copy;
     }
@@ -185,11 +185,11 @@ Transfer custom objects using a string key:
 
 ```csharp
 // Set
-var data = new DataObject();
+var data = new DataTransfer();
 data.Set("application/x-my-custom-type", myObject);
 
 // Get
-if (e.Data.Get("application/x-my-custom-type") is MyType obj)
+if (e.DataTransfer.Get("application/x-my-custom-type") is MyType obj)
 {
     // Use obj
 }
@@ -199,8 +199,9 @@ if (e.Data.Get("application/x-my-custom-type") is MyType obj)
 
 | Format | Constant | Description |
 |---|---|---|
-| Text | `DataFormats.Text` | Plain text string. |
-| Files | `DataFormats.Files` | List of `IStorageItem` (files and folders). |
+| Text | `DataFormat.Text` | Plain text string. |
+| Bitmap | `DataFormat.Bitmap` | Bitmap image data. |
+| File | `DataFormat.File` | File system items (`IStorageItem`). |
 | Custom | Any string key | Application-defined data. |
 
 ## Platform Notes
