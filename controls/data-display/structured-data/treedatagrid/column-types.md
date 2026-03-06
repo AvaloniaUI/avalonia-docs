@@ -179,7 +179,7 @@ new TemplateColumn<Person>(
     "Selected",
     new FuncDataTemplate<Person>((_, _) => new CheckBox
     {
-        [!CheckBox.IsCheckedProperty] = new Binding("IsSelected"),
+        [!CheckBox.IsCheckedProperty] = new ReflectionBinding("IsSelected"),
     }))
 ```
 

@@ -104,9 +104,9 @@ var textBlock = new TextBlock
 };
 ```
 
-## Using XAML bindings from code
+## Using reflection bindings from code
 
-Sometimes when you want the additional features that XAML bindings provide, it's easier to use XAML bindings from code. For example, using only observables you could bind to a property on `DataContext` like this:
+Sometimes when you want the additional features that XAML bindings provide, it's easier to use bindings from code. For example, using only observables you could bind to a property on `DataContext` like this:
 
 ```csharp
 var textBlock = new TextBlock();
@@ -116,12 +116,12 @@ var viewModelProperty = textBlock.GetObservable(TextBlock.DataContextProperty)
 textBlock.Bind(TextBlock.TextProperty, viewModelProperty);
 ```
 
-However, it might be preferable to use a XAML binding in this case:
+However, it might be preferable to use a `ReflectionBinding` in this case:
 
 ```csharp
 var textBlock = new TextBlock
 {
-    [!TextBlock.TextProperty] = new Binding("Name")
+    [!TextBlock.TextProperty] = new ReflectionBinding("Name")
 };
 ```
 
@@ -129,10 +129,12 @@ Or, if you need an `IDisposable` to terminate the binding:
 
 ```csharp
 var textBlock = new TextBlock();
-var subscription = textBlock.Bind(TextBlock.TextProperty, new Binding("Name"));
+var subscription = textBlock.Bind(TextBlock.TextProperty, new ReflectionBinding("Name"));
 
 subscription.Dispose();
 ```
+
+For type-safe bindings that are validated at compile time, prefer `CompiledBinding.Create` (see below).
 
 ## Compiled bindings from code
 
@@ -202,11 +204,11 @@ Binding to objects that implements `INotifyPropertyChanged` is also available.
 ```csharp
 var textBlock = new TextBlock();
 
-var binding = new Binding 
-{ 
-    Source = someObjectImplementingINotifyPropertyChanged, 
+var binding = new ReflectionBinding
+{
+    Source = someObjectImplementingINotifyPropertyChanged,
     Path = nameof(someObjectImplementingINotifyPropertyChanged.MyProperty)
-}; 
+};
 
 textBlock.Bind(TextBlock.TextProperty, binding);
 ```

@@ -399,7 +399,7 @@ This guide demonstrated that you can build a complete, well-structured Avalonia 
 | Layout | Add children to panels (`StackPanel`, `Grid`, `DockPanel`) |
 | Events | Wire handlers with `+=` or lambdas |
 | Styles | Create `Style` objects and add to `Styles` collection |
-| Binding | `control.Bind(property, new Binding(...))` or `CompiledBinding.Create(expression)` |
+| Binding | `control.Bind(property, new ReflectionBinding(...))` or `CompiledBinding.Create(expression)` |
 | Drawing | `Canvas` with `Line`, `Ellipse`, `Rectangle`, and other shapes |
 | Multi-window | `ClassicDesktopStyleApplicationLifetime` with `ShutdownMode` |
 

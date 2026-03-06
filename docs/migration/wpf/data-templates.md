@@ -88,7 +88,7 @@ public class MyDataTemplate : IDataTemplate
         if (data is SpecialItem)
             return new Border { Background = Brushes.Gold, Child = new TextBlock { Text = "Special" } };
 
-        return new TextBlock { [!TextBlock.TextProperty] = new Binding("Name") };
+        return new TextBlock { [!TextBlock.TextProperty] = new ReflectionBinding("Name") };
     }
 
     public bool Match(object? data)

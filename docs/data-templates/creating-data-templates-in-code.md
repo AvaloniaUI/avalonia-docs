@@ -13,7 +13,7 @@ At its simplest you can create a data template by passing a lambda function that
 var template = new FuncDataTemplate<Student>((value, namescope) =>
     new TextBlock
     {
-        [!TextBlock.TextProperty] = new Binding("FirstName"),
+        [!TextBlock.TextProperty] = new ReflectionBinding("FirstName"),
     });
 ```
 

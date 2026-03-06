@@ -245,7 +245,7 @@ var label = new TextBlock();
 
 // Bind the label text to the textbox text
 label.Bind(TextBlock.TextProperty,
-    new Binding("Text") { Source = textBox });
+    new ReflectionBinding("Text") { Source = textBox });
 ```
 
 ### Compiled bindings
