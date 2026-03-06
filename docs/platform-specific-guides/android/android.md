@@ -10,7 +10,7 @@ Follow these steps to install the tools you will need, using the CLI:
 -  Check that you have installed a compatible version of the .NET SDK. The lowest version that works with _Avalonia UI_ is 6.0.2.00.
 
 :::info
-You can see the versions of the .NET SDK [here](https://dotnet.microsoft.com/en-us/download/dotnet).
+You can see the [available .NET SDK versions](https://dotnet.microsoft.com/en-us/download/dotnet).
 :::
 
 -  You may need to uninstall an old version of the _Android Workload._ To do this, type the following command:
