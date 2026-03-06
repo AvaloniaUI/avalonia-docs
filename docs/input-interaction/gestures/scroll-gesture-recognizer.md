@@ -86,17 +86,17 @@ image.GestureRecognizers.Add(new ScrollGestureRecognizer()
 });
 ```
 
-The ScrollGestureRecognizer raises a `Gestures.ScrollGestureEvent` when it detects the start of a scroll gesture. When the scroll ends, from the pointer being released or another gesture start, it raises a `Gestures.ScrollGestureEndedEvent`.
+The ScrollGestureRecognizer raises a `InputElement.ScrollGestureEvent` when it detects the start of a scroll gesture. When the scroll ends, from the pointer being released or another gesture start, it raises a `InputElement.ScrollGestureEndedEvent`.
 
 ## Binding Events
 After the ScrollGestureRecognizer has been added to your control, you need to bind them in your code behind either through an inline handler or to an event function:
 ```csharp title='C#'
-image.AddHandler(Gestures.ScrollGestureEvent, (s, e) => { });
-image.AddHandler(Gestures.ScrollGestureEndedEvent, (s, e) => { });
+image.AddHandler(InputElement.ScrollGestureEvent, (s, e) => { });
+image.AddHandler(InputElement.ScrollGestureEndedEvent, (s, e) => { });
 ```
 ```csharp title='C#'
-image.AddHandler(Gestures.ScrollGestureEvent, Image_ScrollGesture);
-image.AddHandler(Gestures.ScrollGestureEndedEvent, Image_ScrollGestureEnded);
+image.AddHandler(InputElement.ScrollGestureEvent, Image_ScrollGesture);
+image.AddHandler(InputElement.ScrollGestureEndedEvent, Image_ScrollGestureEnded);
 ...
 private void Image_ScrollGesture(object? sender, ScrollGestureEventArgs e) { }
 private void Image_ScrollGestureEnded(object? sender, ScrollGestureEndedEventArgs e) { }

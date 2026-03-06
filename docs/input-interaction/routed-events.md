@@ -206,7 +206,7 @@ protected virtual void OnMyEvent(MyEventArgs e)
 
 The XAML language also defines a special type of event called an _attached event_. An attached event enables you to add a handler for a particular event to an arbitrary element. The element handling the event need not define or inherit the attached event, and neither the object potentially raising the event nor the destination handling instance must define or otherwise "own" that event as a class member.
 
-The Avalonia input system uses attached events extensively. However, nearly all of these attached events are forwarded through base elements. The input events then appear as equivalent non-attached routed events that are members of the base element class. For instance, the underlying attached event `Gestures.Tapped` can more easily be handled on any given `Control` by using `Tapped` on that control rather than dealing with attached event syntax either in XAML or code.
+The Avalonia input system uses attached events extensively. However, nearly all of these attached events are forwarded through base elements. The input events then appear as equivalent non-attached routed events that are members of the base element class. For instance, the underlying `Tapped` event can be handled directly on any `InputElement` rather than dealing with attached event syntax in XAML or code.
 
 ## Qualified Event Names in XAML
 
