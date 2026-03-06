@@ -55,7 +55,19 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items:[
               'data-display/text-display/label',
-              'data-display/text-display/markdown',
+              {
+                type: 'category',
+                label: 'Markdown',
+                link: {
+                  type: 'doc',
+                  id: 'data-display/text-display/markdown',
+                },
+                items: [
+                  'data-display/text-display/markdown-styling',
+                  'data-display/text-display/codehighlighter',
+                  'data-display/text-display/imageloader',
+                ],
+              },
               'data-display/text-display/selectabletextblock',
               'data-display/text-display/textblock',
           ],
@@ -68,6 +80,8 @@ const sidebars: SidebarsConfig = {
       label: 'Feedback',
       collapsed: true,
       items:[
+        'feedback/notification',
+        'feedback/popup',
         'feedback/progressbar',
         'feedback/tooltip',
       ],
@@ -212,6 +226,7 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items:[
         'primitives/scrollbar',
+        'primitives/themevariantscope',
         'primitives/usercontrol',
       ],
     },
@@ -230,7 +245,18 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items:[
         'web/nativewebdialog',
-        'web/nativewebview',
+        {
+          type: 'category',
+          label: 'NativeWebView',
+          link: {
+            type: 'doc',
+            id: 'web/nativewebview',
+          },
+          items: [
+            'web/webview-environment',
+            'web/webauthenticationbroker',
+          ],
+        },
       ],
     }
   ],
