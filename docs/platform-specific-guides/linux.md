@@ -7,9 +7,13 @@ title: Desktop Linux
 
 Avalonia uses the Win32 API on Windows, its own native Objective-C++ backend on macOS, and on Linux it targets X11 directly. Most Linux distributions that support the .NET SDK and have X11 or framebuffer capabilities will run Avalonia applications.
 
-Wayland support is currently in private preview and will be available in an upcoming release.
+:::note
+Wayland support is coming in Avalonia 12.0.
+:::
 
-## WSL 2
+## WSL 2 (Windows Subsystem for Linux)
+
+[WSL 2](https://learn.microsoft.com/en-us/windows/wsl/) is a feature of Windows that lets you run a full Linux environment directly on Windows without a traditional virtual machine or dual-boot setup. This is useful for developers who want to build and test Linux applications while staying in a Windows workflow.
 
 Avalonia runs under WSL 2 distributions, but some libraries that are typically pre-installed on full desktop distributions need to be installed manually:
 

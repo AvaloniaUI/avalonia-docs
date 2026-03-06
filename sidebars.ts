@@ -401,6 +401,10 @@ const sidebars: SidebarsConfig = {
             'migration/wpf/styling',
           ],
         },
+        'migration/winforms/index',
+        'migration/winui/index',
+        'migration/maui/index',
+        'migration/other/index',
       ],
     },
     {
