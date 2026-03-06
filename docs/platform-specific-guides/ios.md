@@ -84,6 +84,54 @@ If successful, your device is now provisioned for development. To find your code
 
 The bold text at the top of the window on your selected development certificate is your signing key value (e.g., `Apple Development: dan@walms.co.uk (3L323F7VSS)`).
 
+## Mac Catalyst
+
+Mac Catalyst allows you to run your Avalonia iOS app on macOS without writing a separate macOS project. This is useful when your app relies heavily on UIKit APIs or when you want to embed Avalonia inside a MAUI hybrid application (which uses Catalyst for desktop support on macOS).
+
+:::note
+For native macOS development, Avalonia's AppKit-based backend remains the recommended approach. It provides direct access to macOS windowing, Metal rendering, and native menus without the Catalyst translation layer. See the [macOS platform guide](/docs/platform-specific-guides/macos) for details.
+:::
+
+### Setting up Mac Catalyst
+
+1. Install the Mac Catalyst workload:
+
+```bash
+dotnet workload install maccatalyst
+```
+
+2. Add `net10.0-maccatalyst` to the target frameworks in your iOS project:
+
+```xml
+<PropertyGroup>
+    <TargetFrameworks>net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
+</PropertyGroup>
+```
+
+3. Build and run targeting Mac Catalyst:
+
+```bash
+dotnet build -f net10.0-maccatalyst
+dotnet run -f net10.0-maccatalyst
+```
+
+The app runs as a native macOS application using Apple's Catalyst translation layer. It appears in the Dock, supports macOS window management, and can be distributed through the Mac App Store.
+
+### When to use Mac Catalyst vs. the default macOS backend
+
+For most Avalonia apps, the default macOS backend (Avalonia Native) is the better choice. It uses a lightweight native library (`libAvaloniaNative.dylib`) that provides windowing, input, rendering, menus, and accessibility without depending on the .NET macOS or Catalyst workloads. This means you can build, package, and sign your macOS app from Windows or Linux with no Mac required during development. See [How Avalonia runs on macOS](/docs/platform-specific-guides/macos#how-avalonia-runs-on-macos) for details.
+
+Mac Catalyst is a narrower option for specific scenarios: apps that are deeply tied to UIKit APIs, or apps embedded within a MAUI hybrid project (which uses Catalyst for its macOS target). In those cases, Catalyst lets you reuse your iOS project directly rather than maintaining a separate macOS entry point.
+
+| Consideration | Default macOS backend | Mac Catalyst |
+|---|---|---|
+| Build from Windows or Linux | Yes | No (requires macOS) |
+| .NET workload required | None (`net10.0` is sufficient) | `maccatalyst` workload |
+| Native API surface | Minimal (UI essentials only) | UIKit subset via Catalyst translation |
+| Shares project with iOS | No (separate Desktop project) | Yes (same iOS project) |
+| MAUI hybrid embedding | No | Yes |
+| Recommended for new Avalonia apps | Yes | No |
+
 ## Deep linking and universal links
 
 iOS supports two mechanisms for opening your app from a URL:
@@ -143,4 +191,5 @@ This works with the scene-based lifecycle used in Avalonia 12. See [Activatable 
 ## See also
 
 - [Deploying on iOS](/docs/deployment/ios) (simulator, device, and publishing)
+- [macOS platform guide](/docs/platform-specific-guides/macos) (native AppKit backend)
 - [Activatable Lifetime](/docs/services/activatable-lifetime) for handling URI, file, and background activation

@@ -32,7 +32,7 @@ The standard Avalonia cross-platform template creates a set of projects designed
 | Core | Views, view models, business logic (shared by all platforms) |
 | Desktop | Entry point for Windows, macOS, and Linux |
 | Android | Entry point for Android |
-| iOS | Entry point for iOS and iPadOS |
+| iOS | Entry point for iOS, iPadOS, and Mac Catalyst |
 | Browser | Entry point for WebAssembly |
 
 The core project contains the vast majority of your code. Platform-specific projects are thin entry points that reference the core. See [Setting up a cross-platform solution](/docs/app-development/cross-platform-solution-setup) for a full walkthrough.

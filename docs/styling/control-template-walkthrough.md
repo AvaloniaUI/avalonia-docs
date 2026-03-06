@@ -1,15 +1,20 @@
 ---
 id: control-template-walkthrough
-title: Control Template Walkthrough
+title: Control template walkthrough
 ---
 
 This walkthrough builds a complete control template from scratch, explaining each component. By the end, you will understand how to re-template any Avalonia control.
 
-## What is a Control Template?
+## Prerequisites
+
+- An Avalonia project with a `Window` where you can add styles and controls.
+- Familiarity with [styles](styles) and [XAML](../fundamentals/avalonia-xaml.md) basics.
+
+## What is a control template?
 
 A control template defines the visual structure of a control. Every Avalonia control has a default template provided by the theme. You can replace this template entirely to change how a control looks while preserving its behavior.
 
-## Step 1: Create a Basic Button Template
+## Step 1: Create a basic button template
 
 Start with a minimal button template that just renders the content:
 
@@ -48,7 +53,7 @@ Start with a minimal button template that just renders the content:
 - **`TemplateBinding`** binds to properties of the templated parent (the Button). This is more efficient than `{Binding RelativeSource={RelativeSource TemplatedParent}}` but only supports `OneWay`.
 - **`ContentPresenter`** is responsible for displaying the button's `Content` property. Without it, the button's content would not appear.
 
-## Step 2: Add Visual States with Pseudo-Classes
+## Step 2: Add visual states with pseudo-classes
 
 Avalonia uses pseudo-classes (similar to CSS) instead of WPF's VisualStateManager. Add interactive states:
 
@@ -115,7 +120,7 @@ Avalonia uses pseudo-classes (similar to CSS) instead of WPF's VisualStateManage
 | `:unchecked` | ToggleButton/CheckBox/RadioButton is unchecked |
 | `:selected` | Item is selected (e.g., ListBoxItem) |
 
-## Step 3: Add Animations
+## Step 3: Add animations
 
 Smooth transitions between states using the `Transitions` property:
 
@@ -134,7 +139,7 @@ Smooth transitions between states using the `Transitions` property:
 
 Now the background color fades smoothly between hover, pressed, and normal states.
 
-## Step 4: Use Template Parts
+## Step 4: Use template parts
 
 For more complex templates, name internal elements with the `PART_` convention. The control's code-behind can locate and interact with these parts:
 
@@ -172,7 +177,7 @@ You can then target these parts in pseudo-class styles:
 
 The `/template/` selector navigates into the control's template visual tree. `#PART_Highlight` selects by name.
 
-## Step 5: Putting It All Together
+## Step 5: Putting it all together
 
 Here is the complete template for a polished custom button:
 
@@ -229,7 +234,11 @@ Here is the complete template for a polished custom button:
 </StackPanel>
 ```
 
-## Tips for Custom Templates
+## Verify the result
+
+Run your application. You should see a pill-shaped button with a purple background. Hover over the button to confirm the background color lightens, press it to see it darken and scale down slightly, and verify the disabled button appears greyed out. If the transitions are working, color changes animate smoothly rather than switching instantly.
+
+## Tips for custom templates
 
 - Always bind `Padding`, `Background`, `BorderBrush`, `BorderThickness`, and `CornerRadius` with `TemplateBinding` so the template respects property values set from outside.
 - Use `ContentPresenter` for content controls and `ItemsPresenter` for items controls.
@@ -238,9 +247,8 @@ Here is the complete template for a polished custom button:
 - Use `Transitions` for smooth state changes instead of discrete setters.
 - Test with both light and dark themes to ensure your template works across theme variants.
 
-## See Also
+## See also
 
-- [Control Themes](/docs/styling/control-themes): How themes use templates for all controls.
-- [Templated Controls](/docs/custom-controls/templated-controls): Creating custom templated controls.
-- [Style Selectors](/docs/styling/style-selectors): Selector syntax for targeting controls and states.
-- [Pseudo-Classes](/docs/styling/pseudoclasses): All available pseudo-classes.
+- [Control themes](control-themes): How themes use templates for all controls.
+- [Style selectors](style-selectors): Selector syntax for targeting controls and states.
+- [Pseudo-classes](pseudoclasses): All available pseudo-classes.

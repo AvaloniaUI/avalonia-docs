@@ -131,6 +131,18 @@ dotnet publish -f net9.0-ios -c Release
 - **Ad-hoc**: Distribute using [Apple Configurator](https://apps.apple.com/app/id1037126344).
 - **In-house**: Distribute via a secure website or Mobile Device Management (MDM). See [Distribute proprietary in-house apps](https://support.apple.com/guide/deployment/depce7cefc4d/web) for details.
 
+## Mac Catalyst deployment
+
+If your iOS project targets Mac Catalyst (`net10.0-maccatalyst`), you can build and publish for macOS using the same project. See [Mac Catalyst](/docs/platform-specific-guides/ios#mac-catalyst) in the iOS platform guide for setup instructions.
+
+To publish a Mac Catalyst app:
+
+```bash
+dotnet publish -f net10.0-maccatalyst -c Release
+```
+
+Mac Catalyst apps can be distributed through the Mac App Store or as signed `.app` bundles. The signing and distribution process follows the same pattern as iOS, using Apple Developer certificates and provisioning profiles.
+
 ## See also
 
 - [iOS platform setup](/docs/platform-specific-guides/ios)

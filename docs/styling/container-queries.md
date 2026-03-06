@@ -3,8 +3,6 @@ id: container-queries
 title: Container queries
 ---
 
-<MinVersion version="11.3" />
-
 Container queries allow styles to be activated for a control based on the size of an ancestor, which acts as a container.
 
 :::tip
@@ -167,5 +165,5 @@ This way, you can make queries for size ranges.
 
 ## See also
 
-- [Styles](styles)
+- [Styles](styles)     
 - [Control themes](control-themes)
