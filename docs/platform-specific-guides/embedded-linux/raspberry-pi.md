@@ -221,7 +221,10 @@ public static int Main(string[] args)
         SilenceConsole();
         // By default, Avalonia will try to detect output card automatically.
         // But you can specify one, for example "/dev/dri/card1".
-        return builder.StartLinuxDrm(args: args, card: null, scaling: 1.0);
+        return builder.StartLinuxDrm(args, card: null, options: new DrmOutputOptions
+        {
+            Scaling = 1.0,
+        });
     }
 
     return builder.StartWithClassicDesktopLifetime(args);

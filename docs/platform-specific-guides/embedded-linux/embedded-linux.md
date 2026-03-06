@@ -101,7 +101,10 @@ public static int Main(string[] args)
         SilenceConsole();
         // Avalonia auto-detects the output card.
         // To specify one explicitly: card: "/dev/dri/card1"
-        return builder.StartLinuxDrm(args: args, card: null, scaling: 1.0);
+        return builder.StartLinuxDrm(args, card: null, options: new DrmOutputOptions
+        {
+            Scaling = 1.0,
+        });
     }
 
     return builder.StartWithClassicDesktopLifetime(args);
@@ -120,6 +123,46 @@ private static void SilenceConsole()
 ```
 
 The `SilenceConsole` method captures console input and hides the cursor. Without it, the blinking text cursor appears over your application's output.
+
+## Display scaling
+
+The `Scaling` property on `DrmOutputOptions` controls the DPI scaling factor. Fractional values are supported. For example, on a 1920x1080 display, setting `Scaling = 1.5` makes controls appear larger, as if rendering to a 1280x720 logical surface.
+
+```csharp
+return builder.StartLinuxDrm(args, card: null, options: new DrmOutputOptions
+{
+    Scaling = 1.5,
+});
+```
+
+For the sharpest results, choose a scaling value that divides your display's physical resolution into whole numbers. For a 1920x1080 display, values like `1.25` (1536x864) and `1.5` (1280x720) work well. Non-integer results (e.g., `1.3`) still work, but edges may appear less crisp because `SnapToDevicePixels` cannot align precisely at all boundaries.
+
+## Screen orientation
+
+Many embedded displays are mounted in portrait or rotated positions. If your Linux display driver does not support hardware rotation, Avalonia can rotate the rendered output in software using the `Orientation` property on `DrmOutputOptions`.
+
+```csharp
+return builder.StartLinuxDrm(args, card: null, options: new DrmOutputOptions
+{
+    Scaling = 1.0,
+    Orientation = SurfaceOrientation.Rotation90,
+});
+```
+
+The available values are:
+
+| Value | Rotation |
+|---|---|
+| `SurfaceOrientation.Rotation0` | No rotation (default) |
+| `SurfaceOrientation.Rotation90` | 90 degrees clockwise |
+| `SurfaceOrientation.Rotation180` | 180 degrees |
+| `SurfaceOrientation.Rotation270` | 270 degrees clockwise |
+
+Touch input coordinates are automatically adjusted to match the configured orientation. The rotation is set at startup and cannot be changed while the application is running.
+
+:::note
+Rotation uses an offscreen framebuffer and an OpenGL shader to transform the image. There is no performance cost when `Rotation0` is used.
+:::
 
 ## Verifying your DRM setup
 
