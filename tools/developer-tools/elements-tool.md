@@ -11,9 +11,9 @@ The Elements Tree presents a unified view that combines both visual and logical 
 
 The Elements Tool offers ways to identify and select specific UI elements directly from your running application:
 
-- **Focus Tracking** - When enabled, this feature automatically selects the currently focused element in your application within the Elements tree. Toggle this mode with `Ctrl+Shift+K` (or `Cmd+Shift+K` on macOS) to seamlessly track focus changes as you interact with your app.
+- **Focus Tracking** - When enabled, this feature automatically selects the currently focused element in your application within the Elements tree. Toggle this mode with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> (or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>K</kbd> on macOS) to seamlessly track focus changes as you interact with your app.
 
-- **Inspect Element** - This mode transforms your cursor into an element selector. Once activated with `Ctrl+Shift+C` (or `Cmd+Shift+C` on macOS), simply click any element in your application to immediately locate and select it in the Elements tree. This provides a direct bridge between what you see in your application and its underlying structure.
+- **Inspect Element** - This mode transforms your cursor into an element selector. Once activated with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>C</kbd> on macOS), click any element in your application to immediately locate and select it in the Elements tree. This provides a direct bridge between what you see in your application and its underlying structure.
 
 These inspection modes eliminate the need for manual searching through complex element hierarchies, making debugging and UI analysis significantly more efficient.
 
@@ -146,7 +146,7 @@ Overlays automatically appear when hovering over elements in the Developer Tools
 #### 2. Via "Highlight Elements" Mode shortcut
 
 Enter inspect mode directly in your application:
-- Press `Ctrl+Shift+H` (Windows/Linux) or `Cmd+Shift+H` (macOS)
+- Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd> (Windows/Linux) or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>H</kbd> (macOS)
 - Hover over any element to see its overlay
 - If necessary, this mode can be disabled by pressing the same shortcut
 

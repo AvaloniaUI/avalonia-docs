@@ -1,12 +1,14 @@
 ---
 id: mcp
-title: Model context protocol (MCP) for Parcel
-sidebar_label: Model context protocol (MCP)
+title: Parcel MCP
+sidebar_label: Parcel MCP
 ---
 
-## What is MCP?
+## What is Parcel MCP?
 
-Model Context Protocol (MCP) is an open standard that allows AI models to use external tools and services through a unified interface. Parcel provides an MCP server that enables AI assistants like GitHub Copilot, Claude, and Cursor to directly interact with Parcel's packaging tools, making it easier to set up and manage your Avalonia application builds.
+The Parcel MCP server lets AI assistants interact directly with Parcel's packaging tools. Your assistant can create packaging configurations from your .NET projects, set up code signing and notarisation, and build installers for Windows, macOS, and Linux, all from a natural language conversation.
+
+For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 
 ## Prerequisites
 
@@ -19,7 +21,7 @@ Before setting up the MCP server, ensure you have:
 Parcel MCP is only available with a full Accelerate license.
 :::
 
-## Supported AI Assistants
+## Supported AI assistants
 
 Parcel's MCP server works with various AI coding assistants:
 
@@ -28,11 +30,11 @@ Parcel's MCP server works with various AI coding assistants:
 - **[Claude Code](https://claudelog.com/faqs/how-to-setup-claude-code-mcp-servers/)**
 - **[Cursor](https://docs.cursor.com/en/context/mcp)**
 
-## Setting Up the MCP Server
+## Setting up the MCP server
 
 Parcel provides an STDIO type MCP server, available by running the `parcel mcp` command.
 
-### Adding MCP Server in VSCode
+### Adding MCP server in VS Code
 
 1. Open the command palette and run **"MCP: Add Server"**
 2. Select **"stdio"** server type
@@ -62,11 +64,11 @@ VSCode will generate a `.vscode/mcp.json` file:
 }
 ```
 
-### Adding MCP Server in Claude Desktop
+### Adding MCP server in Claude Desktop
 
-1. Open Claude's Setting -> Developer page, you will find "Edit Config" button
-2. This button opens "claude_desktop_config.json" manifest file.
-3. Edit this file to include Parcel MCP server:
+1. Open Claude's **Settings** → **Developer** page and click the **Edit Config** button.
+2. This opens the `claude_desktop_config.json` manifest file.
+3. Edit this file to include the Parcel MCP server:
 
 ```json
 {
@@ -88,7 +90,7 @@ VSCode will generate a `.vscode/mcp.json` file:
 
 :::note
 
-Unlike VSCode, in our testing, Claude Desktop didn't pass system-wide env variable to the MCP servers. Which is why this config has `PARCEL_LICENSE_KEY` defined explicitly.
+Unlike VS Code, Claude Desktop may not pass system-wide environment variables to MCP servers. This is why the config above has `PARCEL_LICENSE_KEY` defined explicitly.
 
 :::
 
@@ -96,27 +98,27 @@ Unlike VSCode, in our testing, Claude Desktop didn't pass system-wide env variab
 
 Once the MCP server is configured, your AI assistant can help with:
 
-### Project Configuration
+### Project configuration
 
 - **Create parcel configurations** from existing .NET projects
 - **Configure application properties** like package name, display name, icons, and bundle identifiers
 - **Set up build targets** for multiple platforms and architectures
 
-### Code Signing Setup
+### Code signing setup
 
 - **Windows Azure Trusted Signing** - Configure certificates and signing parameters
 - **macOS Code Signing** - Set up P12 certificates and provisioning profiles
 - **macOS Notarization** - Configure Apple ID and app-specific passwords
 
-### Building and Packaging
+### Building and packaging
 
 - **Build and package** applications for multiple platforms (Windows, macOS, Linux)
 - **Generate installers** in various formats (DMG, DEB, NSIS, ZIP, etc.)
 - **Cross-platform packaging** with runtime-specific outputs
 
-## Usage Examples
+## Usage examples
 
-Simply describe what you want to accomplish in natural language. The AI assistant will use the MCP server to execute the appropriate Parcel commands:
+Describe what you want to accomplish in natural language. The AI assistant will use the MCP server to execute the appropriate Parcel commands:
 
 **Project Setup:**
 
@@ -141,3 +143,9 @@ The AI assistant will guide you through the process, execute commands, and help 
 <video controls width="90%">
   <source src="/video/parcel/parcel_mcp.mp4" />
 </video>
+
+## See also
+
+- [AI Tools overview](/tools/ai-tools/)
+- [Parcel setup](/tools/parcel/setup)
+- [DevTools MCP](/tools/developer-tools/mcp)

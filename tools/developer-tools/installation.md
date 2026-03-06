@@ -155,7 +155,7 @@ By default, **29414** is used and should be available. It is configurable via op
 
 ## Step 4: Run the tool
 
-When your target app is running, press F12 to initialize connection.
+When your target app is running, press <kbd>F12</kbd> to initialize connection.
 `Diagnostics Support` will automatically run `Developer Tools` executable and initiate connection between processes.
 Initial execution on `macOS` might take several seconds due to Gatekeeper validation. Subsequent launches will be faster.
 

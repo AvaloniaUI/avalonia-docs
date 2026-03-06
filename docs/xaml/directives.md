@@ -11,7 +11,7 @@ To use these directives, you need the XAML language namespace declaration:
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 ```
 
-## x:Class
+## `x:Class`
 
 Connects a XAML file to its code-behind class. This directive must be placed on the root element of the XAML file.
 
@@ -36,7 +36,7 @@ public partial class MainWindow : Window
 }
 ```
 
-## x:Name
+## `x:Name`
 
 Assigns a name to an element, generating a field in the code-behind class so you can reference the control from C#.
 
@@ -57,7 +57,7 @@ private void OnSearchClick(object? sender, RoutedEventArgs e)
 `x:Name` and `Name` are interchangeable for most Avalonia controls. The `Name` property exists on `StyledElement` and sets the same underlying value. Use `x:Name` when the element type does not have a `Name` property.
 :::
 
-## x:Key
+## `x:Key`
 
 Assigns a dictionary key to a resource, used within `ResourceDictionary`, `Styles`, or `Application.Resources`:
 
@@ -74,7 +74,7 @@ Resources are retrieved using `{StaticResource}` or `{DynamicResource}`:
 <Border Background="{StaticResource PrimaryBrush}" Padding="{StaticResource DefaultSpacing}" />
 ```
 
-## x:DataType
+## `x:DataType`
 
 Specifies the expected data type for data binding within a scope. This is required for [compiled bindings](/docs/data-binding/compiled-bindings) and enables IntelliSense for binding paths.
 
@@ -95,7 +95,7 @@ On `DataTemplate`:
 </DataTemplate>
 ```
 
-## x:CompileBindings
+## `x:CompileBindings`
 
 Enables or disables compiled bindings for all bindings within the scope. Compiled bindings are validated at compile time and offer better performance.
 
@@ -119,7 +119,7 @@ To opt out of compiled bindings for a specific binding, use `ReflectionBinding`:
 <TextBlock Text="{ReflectionBinding DynamicProperty}" />
 ```
 
-## x:Static
+## `x:Static`
 
 References a static field, property, constant, or enum value:
 
@@ -137,7 +137,7 @@ For enum values:
 <ComboBox SelectedItem="{x:Static local:Priority.High}" />
 ```
 
-## x:Type
+## `x:Type`
 
 References a `System.Type` object:
 
@@ -147,7 +147,7 @@ References a `System.Type` object:
 </Style>
 ```
 
-## x:Null
+## `x:Null`
 
 Sets a property to `null`:
 
@@ -155,7 +155,7 @@ Sets a property to `null`:
 <Button Background="{x:Null}" Content="No background" />
 ```
 
-## x:True and x:False
+## `x:True` and `x:False`
 
 Shorthand for boolean values. These are Avalonia-specific extensions:
 
@@ -171,7 +171,7 @@ These are equivalent to:
 <TextBox IsReadOnly="False" />
 ```
 
-## x:Shared
+## `x:Shared`
 
 Controls whether a resource is instantiated once and reused, or created fresh each time it is referenced. By default, resources are shared (a single instance is returned every time). Set `x:Shared="False"` to create a new instance on each reference:
 

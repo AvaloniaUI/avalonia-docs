@@ -306,14 +306,6 @@ const redirects: Redirect[] = [
         "to": "/docs/basics/user-interface/building-layouts/panels-overview"
     },
     {
-        "from": "/docs/misc/community",
-        "to": "/docs/community"
-    },
-    {
-        "from": "/docs/misc/community",
-        "to": "/docs/community"
-    },
-    {
         "from": "/docs/misc/faq",
         "to": "/docs/faq"
     },

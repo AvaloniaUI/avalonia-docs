@@ -17,7 +17,7 @@ In this example, a context menu is attached to a multi-line text box. Right-clic
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui">
-  <TextBox AcceptsReturn="True" TextWrapping="Wrap">
+  <TextBox AcceptsReturn="True" TextWrapping="Wrap" Text="Right-click here">
     <TextBox.ContextMenu>
       <ContextMenu>
         <MenuItem Header="Copy"/>

@@ -1,7 +1,7 @@
 ---
 id: index
 title: Avalonia Tools
-sidebar_label: Accelerate
+sidebar_label: Avalonia Tools
 ---
 
 import DocsCard from '@site/src/components/global/DocsCard';
@@ -20,15 +20,13 @@ import DocsCards from '@site/src/components/global/DocsCards';
   `}</style>
 </head>
 
-# Avalonia Tools
-
-Avalonia is a free, open-source UI framework. You can build and ship cross-platform .NET applications without paying us a penny, and that will always be the case. The framework is MIT licensed, maintained by a growing team, and trusted by thousands of developers worldwide.
+Avalonia is a free, open-source UI framework. You can build and ship cross-platform .NET applications without paying a penny, and that will always be the case. The framework is MIT licensed, maintained by a growing team, and trusted by thousands of developers worldwide.
 
 But building great software is about more than the framework. It's about the experience of building with it: how quickly you can diagnose a layout issue, how painlessly you can package your app for three operating systems, how confidently you can hand a polished build to your users. That's where tooling makes the difference.
 
 ## Accelerate
 
-Avalonia Accelerate is a suite of professional tools designed to remove friction from your development workflow. Every tool has been built from the ground up specifically for Avalonia, not adapted from something else, not bolted on as an afterthought. These are the tools we wished we had when we started building Avalonia apps ourselves.
+Avalonia Accelerate is a suite of professional tools designed to remove friction from your development workflow. Every tool has been built from the ground up specifically for Avalonia, not adapted from something else, not bolted on as an afterthought.
 
 <DocsCards>
 <DocsCard header="Dev Tools" href="/tools/developer-tools/installation" img="/icons/feature-accelerate-devtools-icon.png">
@@ -59,3 +57,9 @@ Your subscription directly funds development of the open-source framework. Every
   <Button label="Purchase Accelerate" link="https://avaloniaui.net/accelerate" variant="secondary" outline />
   <Button label="Community Edition" link="/tools/community-edition" variant="secondary" outline />
 </div>
+
+## See also
+
+- [AI Tools](/tools/ai-tools/)
+- [IDE Support](/tools/ide/)
+- [FAQ](/tools/faq)

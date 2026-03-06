@@ -31,7 +31,7 @@ For all platforms, `AvaloniaUI.DiagnosticsSupport` package can be installed in t
 
 :::note
 
-To avoid conflicts with Chrome Developer Tools, Avalonia tools shortcut can be redefined from `F12` to a custom one. See [DeveloperToolsOptions.Gesture](/tools/developer-tools/options) for details.
+To avoid conflicts with Chrome Developer Tools, Avalonia tools shortcut can be redefined from <kbd>F12</kbd> to a custom one. See [DeveloperToolsOptions.Gesture](/tools/developer-tools/options) for details.
 
 :::
 
@@ -41,7 +41,7 @@ To avoid conflicts with Chrome Developer Tools, Avalonia tools shortcut can be r
 1. Follow [Getting Started](/tools/developer-tools/installation) for the initial setup.
 2. Run `Developer Tools` application. `avdt` dotnet tool can be used from the command line.
 3. Run iOS application from your IDE. Please visit [Avalonia iOS documentation](/docs/platform-specific-guides/ios) for more details.
-4. Make sure browser app is focused, so shortcut can be intercepted. Press `F12`.
+4. Make sure browser app is focused, so shortcut can be intercepted. Press <kbd>F12</kbd>.
 
 ![iOS with Developer Tools](/img/tools/dev-tools//attaching-to-ios.png)
 
@@ -98,6 +98,6 @@ But for convenience of keeping single installation it is recommended to attach L
     ```
 
 3. Run `Developer Tools` instance on your Windows host machine. Typically via `avdt` dotnet tool command line.
-4. Run your Linux app and attach to `Developer Tools` via F12.
+4. Run your Linux app and attach to `Developer Tools` via <kbd>F12</kbd>.
 
 ![Attaching to WSL2](/img/tools/dev-tools/attaching-wsl.png)

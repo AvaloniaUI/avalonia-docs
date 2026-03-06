@@ -6,6 +6,26 @@ const sidebars: SidebarsConfig = {
     'index',
     {
       type: 'category',
+      label: 'IDE',
+      collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'ide/index',
+      },
+      items: [
+        'visual-studio-extension',
+        {
+          type: 'category',
+          label: 'Visual Studio Code',
+          collapsed: true,
+          items: [
+            'visual-studio-code/configure-vscode-debug-linux',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Dev Tools',
       collapsed: true,
       items: [
@@ -16,7 +36,6 @@ const sidebars: SidebarsConfig = {
         'developer-tools/settings',
         'developer-tools/shortcuts',
         'developer-tools/options',
-        'developer-tools/mcp',
         {
           type: 'category',
           label: 'Tool reference',
@@ -41,19 +60,19 @@ const sidebars: SidebarsConfig = {
       items: [
         'parcel/setup',
         'parcel/command-line-reference',
-        'parcel/mcp',
         'parcel/packaging-for-macos',
         'parcel/packaging-for-windows',
         'parcel/packaging-for-linux',
       ],
     },
-    'visual-studio-extension',
     {
       type: 'category',
-      label: 'Visual Studio Code',
+      label: 'AI Tools',
       collapsed: true,
       items: [
-        'visual-studio-code/configure-vscode-debug-linux',
+        'ai-tools/index',
+        'developer-tools/mcp',
+        'parcel/mcp',
       ],
     },
     'installing-accelerate',

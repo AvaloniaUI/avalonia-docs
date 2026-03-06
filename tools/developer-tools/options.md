@@ -7,7 +7,7 @@ sidebar_label: Options
 ## DeveloperToolsOptions.Gesture
 
 Defines the gesture to run and connect to the `Developer Tools` process.
-By default: `F12`.
+By default: <kbd>F12</kbd>.
 
 ## DeveloperToolsOptions.ApplicationName
 

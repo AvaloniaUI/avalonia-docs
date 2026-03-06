@@ -35,7 +35,7 @@ this.AttachDeveloperTools(o =>
 ```
 3. Start `Developer Tools` (via avdt command)
 4. In the settings, make sure that `Allow Any IP` is enabled (if not, you would need to restart the app)
-5. Launch your application on second machine press `F12` to connect.
+5. Launch your application on second machine press <kbd>F12</kbd> to connect.
 
 :::note
 
@@ -63,7 +63,7 @@ Available within your tailnet:
 https://machinename.tail.ts.net/
 |-- proxy http://127.0.0.1:29414
 
-Press Ctrl+C to exit.
+Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to exit.
 ```
 
 This `https://machinename.tail.ts.net/` is the most important part here which is going to be used in the next step.
@@ -78,7 +78,7 @@ this.AttachDeveloperTools(o =>
 ```
 
 4. Start `Developer Tools` (via avdt command)
-5. Launch your application on second machine press `F12` to connect.
+5. Launch your application on second machine press <kbd>F12</kbd> to connect.
 
 ![Connected via VPN](/img/tools/dev-tools/remote-connect-via-vpn.png)
 

@@ -5,7 +5,7 @@ title: Generic Types in XAML
 
 Avalonia supports using generic .NET types in XAML through the `x:TypeArguments` directive. This allows you to instantiate generic classes and use generic collections directly in markup.
 
-## x:TypeArguments
+## `x:TypeArguments`
 
 The `x:TypeArguments` directive specifies the type arguments for a generic type. It can only be used on the root element of a XAML file or on elements that also have `x:Class` or are inside a resource dictionary.
 

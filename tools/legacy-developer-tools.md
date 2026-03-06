@@ -50,7 +50,7 @@ partial class MainWindow
 }
 ```
 
-To open the DevTools, press F12, or pass a different `Gesture` to the `this.AttachDevTools()` method.
+To open the DevTools, press <kbd>F12</kbd>, or pass a different `Gesture` to the `this.AttachDevTools()` method.
 
 :::info
 To use DevTools, you must add `Avalonia.Diagnostics` nuget package.
@@ -64,7 +64,7 @@ But by default, it is already installed.
 
 <img className="center" src={DevToolsOverviewScreenshot} alt="" />
 
-There is a known issue when running under .NET core 2.1 that pressing F12 will cause the program to quit. In this case, either switch to .NET core 2.0 or 3.0+ or change the open gesture to something different, such as `Ctrl+F12`.
+There is a known issue when running under .NET core 2.1 that pressing <kbd>F12</kbd> will cause the program to quit. In this case, either switch to .NET core 2.0 or 3.0+ or change the open gesture to something different, such as <kbd>Ctrl</kbd>+<kbd>F12</kbd>.
 
 ## Logical and Visual Trees
 
@@ -100,7 +100,7 @@ While [properties](#properties) panel shows currently active values of propertie
 
 Additionally one can see all styles that could potentially match this control (by toggling `Show inactive` option).
 
-Current styles can be snap-shotted by either pressing the `Snapshot` button or pressing `Alt+S` while hovering over the target window. Snap-shotting means that styles panel won't update to reflect new state of the control. This is especially useful when troubleshooting problems with `:pointerover` or `:pressed` selectors.
+Current styles can be snap-shotted by either pressing the **Snapshot** button or pressing <kbd>Alt</kbd>+<kbd>S</kbd> while hovering over the target window. Snap-shotting means that styles panel won't update to reflect new state of the control. This is especially useful when troubleshooting problems with `:pointerover` or `:pressed` selectors.
 
 :::info
 If setter value is bound to a resource it will be indicated by a circle followed by the resource key.
@@ -137,11 +137,11 @@ Dotted underline under event name or control type indicates that quick navigatio
 
 | Keys Combination | Function                      |
 | ---------------- | ------------------------------|
-| Alt+S            | Enable Snapshot Styles        |
-| Alt+D            | Disable Snapshot Styles       |
-| CTRL+Shift       | Inspect Control over Pointer  |
-| CTRL+Alt+F       | Toggle Popup freeze           |
-| F8               | Make screenshot of selected item in Logical or Visual Tree|
+| <kbd>Alt</kbd>+<kbd>S</kbd> | Enable Snapshot Styles |
+| <kbd>Alt</kbd>+<kbd>D</kbd> | Disable Snapshot Styles |
+| <kbd>Ctrl</kbd>+<kbd>Shift</kbd> | Inspect Control over Pointer |
+| <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F</kbd> | Toggle Popup freeze |
+| <kbd>F8</kbd> | Make screenshot of selected item in Logical or Visual Tree |
 
 ## Examples
 
