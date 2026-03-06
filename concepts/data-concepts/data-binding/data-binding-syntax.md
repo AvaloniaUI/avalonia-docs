@@ -249,7 +249,7 @@ When a binding to a property is successfully created and the property value is `
 
 </XamlPreview>
 
-## UpdateSourceTrigger <MinVersion version="11.1" />
+## UpdateSourceTrigger
 
 Controls like `TextBox` will synchronize their `Text` binding to the source property on every keystroke by default. In 
 some use cases, this may trigger a long-running task or undesirable validation. `UpdateSourceTrigger` allows bindings 

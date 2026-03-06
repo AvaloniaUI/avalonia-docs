@@ -49,7 +49,7 @@ Calling this method on macOS:
 
 For more flexible key mapping you can [add custom key mappings](/xpf/guides/key-mapping).
 
-## Context Menus <MinVersion version="1.6" /> 
+## Context Menus
 
 On macOS, context menus can be opened by Ctrl+Clicking as well as by right clicking. You can enable this feature by setting `XpfMouse.ShowContextMenuOnMacOSCtrlClick` on startup. This would usually be done in the same place as [the XPF WinAPI shim setup](/xpf/third-party-libraries); that is, in the constructor of your `App` class or `Program.Main`:
 

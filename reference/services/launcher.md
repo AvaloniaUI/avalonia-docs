@@ -3,7 +3,7 @@ id: launcher
 title: Launcher
 ---
 
-# Launcher <MinVersion version="11.1" />
+# Launcher
 
 The `Launcher` allows you to open file or a URI link in the default app associated with the specified argument.
 

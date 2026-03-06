@@ -65,3 +65,16 @@ The `ArrangeCore` method evaluates the `DesiredSize` of the child and evaluates 
 ## Layout zones
 
 <Image light={LayoutZonesDiagram} maxWidth="400" alignment="center" alt="A diagram with four overlapping rectangles, representing the layout zones of a UI window." />
+
+## Overlay layers
+
+In addition to the normal layout system, Avalonia provides overlay layers that render above the regular control content within a window. These are useful when you need to display content on top of everything else, such as a loading indicator, floating toolbar, or notification panel.
+
+Use `OverlayLayer.GetOverlayLayer(visual)` to access the overlay surface for a given visual. Content added to the `OverlayLayer` appears above all normal controls but beneath popups, menus, and tooltips.
+
+For details and code examples, see [Overlay Layers](/docs/fundamentals/visual-and-logical-trees#overlay-layers).
+
+## See Also
+
+- [Positioning Controls](/docs/layout/positioning-controls): Alignment, margins, and positioning.
+- [Overlay Layers](/docs/fundamentals/visual-and-logical-trees#overlay-layers): Adding custom overlay content above normal controls.

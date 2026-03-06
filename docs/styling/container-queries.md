@@ -3,21 +3,21 @@ id: container-queries
 title: Container queries
 ---
 
-# Container Queries <MinVersion version="11.3" /> 
+<MinVersion version="11.3" />
 
-Container Queries allow styles to be activated for a control based on the size of an ancestor, which acts as a container. 
+Container queries allow styles to be activated for a control based on the size of an ancestor, which acts as a container.
 
 :::tip
-Avalonia's Container Queries are similar to CSS's Container Queries, with a more limited functionality to suit the platforms and form factors Avalonia supports. They can also behave like media queries if the Toplevel is set as a container.
+Avalonia's container queries are similar to CSS container queries, with more limited functionality to suit the platforms and form factors Avalonia supports. They can also behave like media queries if the `TopLevel` is set as a container.
 :::
 
-## How It Works
+## How it works
 
 Container queries rely on an ancestor control being set as a container. Changes to the size of the container activate styles based on queries. Those queries can check either the width or height of the container, or both. Any control can be a container, but a control set as a container can not be affected by styles hosted by a container query linked to it. When a query is activated, all styles hosted in the query will also be activated based on their selectors.
 
-## How To Use Queries
+## How to use queries
 
-### Declaring Container Queries
+### Declaring container queries
 Container queries can be defined in XAML as the direct child of a control's `Styles` property like this:
 
 ```xml
@@ -65,7 +65,7 @@ They can also be part of a `ControlTheme`'s styles:
 The `Name` property defines the name of the container it will attach to. This isn't a unique identifier, and multiple container queries can use the same name.
 The `Query` defines the rules to activate the containing size. See [Queries](#queries) below.
 
-This makes them quite easy to use in themes targeting different screen sizes, or themes that have different forms depending on the space available in its parent. This comes with a few restrictions. 
+This makes them suitable for themes targeting different screen sizes, or themes that have different forms depending on the space available in a parent. This comes with a few restrictions.
 
 1. Container Queries can't be hosted in a `Style` element.
    The following is invalid.
@@ -86,9 +86,9 @@ This makes them quite easy to use in themes targeting different screen sizes, or
 </StackPanel>
 ```
 
-2. Styles declared in Queries can not affect the container or its ancestors. This is different from normal `Styles` being able to affect their parent control. Because container queries rely on the actual size of the container, having the container be affected by styles activated by its queries can cause cyclic behaviors where the container's size is being updated continuously by two or more queries.
+2. Styles declared in a `ContainerQuery` cannot affect the container or its ancestors. This is different from normal `Styles` being able to affect their parent control. Because container queries rely on the actual size of the container, having the container be affected by styles activated by its queries can cause cyclic behaviors where the container's size is being updated continuously by two or more queries.
 
-### Declaring Containers
+### Declaring containers
 Container queries only work if a control that's a descendant of the `ContainerQuery`'s host is declared as container. Setting the `Container.Name` and `Container.Sizing` attached properties of any control will declare that control as a container, like this:
 
 ```xml
@@ -116,8 +116,8 @@ The following queries are available.
 * `min-height`: equivalent to `x >= height`
 * `max-width`: equivalent to `x <= width`
 * `max-height`: equivalent to `x <= height`
-* `height`: equivalent to `x == width`
-* `width`: equivalent to `x == height`
+* `height`: equivalent to `x == height`
+* `width`: equivalent to `x == width`
 
 The following is an example of using multiple container queries with different queries:
 
@@ -164,3 +164,8 @@ Multiple queries can be combined with `,` for OR combination, or `and` for AND c
 ```
 
 This way, you can make queries for size ranges.
+
+## See also
+
+- [Styles](styles)
+- [Control themes](control-themes)

@@ -119,7 +119,7 @@ Defining all hints is recommended if the information is known.
 If specific hint is not known, don't set random values or "*.*" wildcard, instead keep this collection null. It will tell the platform to ignore this collection and instead try to use another one.
 :::
 
-## WebP Inclusion in Options <MinVersion version="11.1" />
+## WebP Inclusion in Options
 
 Keep in mind that `FilePickerFileTypes.ImageWebP` and the addition of "*.webp" to the "All Images" patterns were introduced in version 11.1. You can still create custom file picker types in older versions to incorporate WebP images. For example, to allow only a WebP image to be picked, you can use this:
 

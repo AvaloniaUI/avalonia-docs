@@ -3,7 +3,7 @@ id: container-queries
 title: Container queries
 ---
 
-# Container Queries <MinVersion version="11.3" /> 
+# Container Queries
 
 Container Queries allow styles to be activated for a control based on the size of an ancestor, which acts as a container. 
 

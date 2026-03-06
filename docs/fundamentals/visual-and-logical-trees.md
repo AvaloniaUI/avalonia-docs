@@ -156,6 +156,46 @@ protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
 
 Template parts are conventionally named with a `PART_` prefix to distinguish them from logical children.
 
+## Overlay Layers
+
+Avalonia manages several special layers above the normal control content within each window. These layers handle adorners, custom overlays, and popups:
+
+| Layer | Purpose | Access method |
+|---|---|---|
+| `AdornerLayer` | Focus indicators, drag adorners, and visual decorations attached to controls. | `AdornerLayer.GetAdornerLayer(visual)` |
+| `OverlayLayer` | Custom overlay content you add on top of normal controls but beneath popups. | `OverlayLayer.GetOverlayLayer(visual)` |
+| `PopupOverlayLayer` | Internal layer for hosting popups (menus, tooltips, combo box dropdowns). Managed by the framework. | `PopupOverlayLayer.GetPopupOverlayLayer(visual)` |
+
+### Adding custom overlay content
+
+Use `OverlayLayer` to display content that floats above the normal visual tree, such as a loading indicator, floating toolbar, or custom notification panel:
+
+```csharp
+var overlay = OverlayLayer.GetOverlayLayer(myControl);
+if (overlay is not null)
+{
+    var panel = new Border
+    {
+        Background = Brushes.Black,
+        Opacity = 0.5,
+        Child = new TextBlock
+        {
+            Text = "Loading...",
+            Foreground = Brushes.White,
+            HorizontalAlignment = HorizontalAlignment.Center,
+            VerticalAlignment = VerticalAlignment.Center,
+        }
+    };
+
+    overlay.Children.Add(panel);
+
+    // Remove when done
+    overlay.Children.Remove(panel);
+}
+```
+
+Overlay content appears above all normal controls in the window but beneath popups, menus, and tooltips.
+
 ## See Also
 
 - [UI Composition](/docs/fundamentals/ui-composition): How controls compose into a UI.

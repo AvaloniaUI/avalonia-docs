@@ -77,7 +77,7 @@ a container and modify its tab navigation characteristics.
 | None                   | Items will not be focused by tab navigation               |
 | Local                  | `TabIndex` is considered for items in local subtree only  |
 
-## Directional Focus Navigation <MinVersion version="11.1" />
+## Directional Focus Navigation
 
 Focus navigation through `XYFocus` is a 2D directional scheme enabling spatial navigation from the focused control 
 towards another control in a cardinal direction: left, right, up, or down. By default, `XYFocus.NavigationModes` is set 

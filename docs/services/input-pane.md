@@ -3,7 +3,7 @@ id: input-pane
 title: Input Pane
 ---
 
-# Input Pane <MinVersion version="11.1" />
+# Input Pane
 
 The `InputPane` allows developers to listen for the platform's input pane (e.g., software keyboard or on-screen keyboard) current state and boundaries.
 
