@@ -38,7 +38,7 @@ private bool _showAdvanced;
 ```xml
 <Expander Header="Advanced" IsExpanded="{Binding ShowAdvanced}">
     <StackPanel Spacing="8">
-        <TextBox Watermark="Custom path" />
+        <TextBox PlaceholderText="Custom path" />
     </StackPanel>
 </Expander>
 ```

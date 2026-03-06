@@ -244,7 +244,7 @@ Use `ContextFlyout` for richer content than a simple menu:
         <Flyout>
             <StackPanel Spacing="8" Width="200">
                 <TextBlock Text="Custom flyout content" FontWeight="Bold" />
-                <TextBox Watermark="Enter value..." />
+                <TextBox PlaceholderText="Enter value..." />
                 <Button Content="Apply" />
             </StackPanel>
         </Flyout>

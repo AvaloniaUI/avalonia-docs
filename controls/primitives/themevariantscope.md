@@ -24,7 +24,7 @@ Force a section of the UI to use the light theme while the rest of the window us
         <ThemeVariantScope RequestedThemeVariant="Light">
             <StackPanel Spacing="8">
                 <Button Content="Light-themed button" />
-                <TextBox Watermark="Light-themed input" />
+                <TextBox PlaceholderText="Light-themed input" />
             </StackPanel>
         </ThemeVariantScope>
     </StackPanel>

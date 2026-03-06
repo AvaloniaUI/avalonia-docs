@@ -40,9 +40,9 @@ Bind the properties with `TwoWay` mode:
 
 ```xml
 <StackPanel Spacing="8">
-    <TextBox Text="{Binding Name}" Watermark="Name" />
-    <TextBox Text="{Binding Email}" Watermark="Email" />
-    <NumericUpDown Value="{Binding Age}" Watermark="Age" />
+    <TextBox Text="{Binding Name}" PlaceholderText="Name" />
+    <TextBox Text="{Binding Email}" PlaceholderText="Email" />
+    <NumericUpDown Value="{Binding Age}" PlaceholderText="Age" />
 </StackPanel>
 ```
 

@@ -16,7 +16,7 @@ In this example, the button can only be clicked when the message is not empty. A
 ```xml title='XAML'
 <StackPanel Margin="20">
   <TextBox Margin="0 5" Text="{Binding Message}"
-           Watermark="Add a message to enable the button"/>
+           PlaceholderText="Add a message to enable the button"/>
   <Button Command="{Binding ExampleCommand}">
     Run the example
   </Button>

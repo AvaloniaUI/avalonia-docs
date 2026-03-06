@@ -113,6 +113,13 @@ public class App : Application
                 DataContext = vm
             };
         }
+        else if (ApplicationLifetime is IActivityApplicationLifetime activityLifetime)
+        {
+            activityLifetime.MainViewFactory = () => new MainView
+            {
+                DataContext = services.GetRequiredService<MainViewModel>()
+            };
+        }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
             singleViewPlatform.MainView = new MainView

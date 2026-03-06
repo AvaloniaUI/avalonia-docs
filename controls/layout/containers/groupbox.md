@@ -24,9 +24,9 @@ This example creates two group boxes to organize a form:
             Spacing="16" Margin="16">
   <GroupBox Header="Personal Details">
     <StackPanel Spacing="8">
-      <TextBox Watermark="First name" />
-      <TextBox Watermark="Last name" />
-      <TextBox Watermark="Email" />
+      <TextBox PlaceholderText="First name" />
+      <TextBox PlaceholderText="Last name" />
+      <TextBox PlaceholderText="Email" />
     </StackPanel>
   </GroupBox>
   <GroupBox Header="Preferences">

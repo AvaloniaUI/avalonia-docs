@@ -43,7 +43,7 @@ The `VirtualKeyboard` is a standalone control that provides an on-screen keyboar
 
 ```xml
 <StackPanel>
-    <TextBox x:Name="EmailField" Watermark="Email address" />
+    <TextBox x:Name="EmailField" PlaceholderText="Email address" />
     <VirtualKeyboard Target="{Binding ElementName=EmailField}"
                      InputMethods="en-US:kbd:standard, de:kbd:standard, ja:ime:kana" />
 </StackPanel>

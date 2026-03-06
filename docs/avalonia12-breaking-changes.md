@@ -198,6 +198,29 @@ public class MainActivity :
 
 PR: [#18756](https://github.com/AvaloniaUI/Avalonia/pull/18756)
 
+## [Android] `IActivityApplicationLifetime` replaces `ISingleViewApplicationLifetime`
+
+Android now uses `IActivityApplicationLifetime` instead of `ISingleViewApplicationLifetime`. This new interface provides a `MainViewFactory` property (a `Func<Control>`) instead of a single `MainView` instance, because Android can create multiple activity instances during the app's lifetime.
+
+Update your `App.axaml.cs` to check for `IActivityApplicationLifetime` before `ISingleViewApplicationLifetime`:
+
+```diff
+ public override void OnFrameworkInitializationCompleted()
+ {
+     if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+         desktop.MainWindow = new MainWindow();
++    else if (ApplicationLifetime is IActivityApplicationLifetime activityLifetime)
++        activityLifetime.MainViewFactory = () => new MainView();
+     else if (ApplicationLifetime is ISingleViewApplicationLifetime singleView)
+         singleView.MainView = new MainView();
+     base.OnFrameworkInitializationCompleted();
+ }
+```
+
+The `ISingleViewApplicationLifetime` check is still needed for iOS, browser, and embedded Linux platforms.
+
+PR: [#18893](https://github.com/AvaloniaUI/Avalonia/pull/18893)
+
 ## [Android] Removed CreateAppBuilder and CustomizeAppBuilder from AvaloniaMainActivity
 
 The `CreateAppBuilder()` and `CustomizeAppBuilder(AppBuilder)` virtual methods have been removed from `AvaloniaMainActivity`. These methods were previously marked as obsolete and are no longer called by the framework. App initialization is now handled entirely through `AvaloniaAndroidApplication<TApp>`, as described in the section above.
@@ -381,6 +404,20 @@ On Windows, several issues with the `ExtendClientAreaToDecorationsHint` property
 
 PR: [#20217](https://github.com/AvaloniaUI/Avalonia/pull/20217)
 
+
+## Render target and platform surface interfaces reworked
+
+Several internal rendering interfaces have been restructured:
+
+- `IRenderTarget.CreateDrawingContext` now takes a `RenderTargetSceneInfo` parameter instead of multiple overloads.
+- `IRenderTargetBitmapImpl` no longer extends `IRenderTarget`. It now extends `IReadableBitmapImpl` with a simpler `CreateDrawingContext()` method.
+- `IDrawingContextLayerImpl` no longer extends `IRenderTargetBitmapImpl`. It now extends `IBitmapImpl` directly.
+- Platform surfaces use the typed `IPlatformRenderSurface` interface instead of `IEnumerable<object>`.
+- `ISkiaGpu` is now internal.
+
+These changes only affect code that implements custom rendering backends or directly consumes platform-level rendering interfaces. Application code using `RenderTargetBitmap` or standard drawing APIs is not affected.
+
+PR: [#20811](https://github.com/AvaloniaUI/Avalonia/pull/20811)
 
 ## Text formatting constructors modified
 
@@ -935,5 +972,10 @@ PR: [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796)
 
 ### `Avalonia.Media.RenderOptions.TextRenderingMode` property
 Moved to `TextOptions.TextRenderingMode`.   
-`TextOptions` is new and includes several other knobs that affect text rendering.   
+`TextOptions` is new and includes several other knobs that affect text rendering.
 PR: [#20107](https://github.com/AvaloniaUI/Avalonia/pull/20107)
+
+### `Avalonia.Controls.TextBlock.LetterSpacing` property
+Moved to `TextElement.LetterSpacing` as an inherited attached property. `LetterSpacing` is now available on all templated controls (such as `Button`, `CheckBox`, and `Label`), consistent with how `FontSize`, `FontFamily`, and other text properties work.
+XAML usage on `TextBlock` is source-compatible, but code referencing `TextBlock.LetterSpacingProperty` directly must be updated to `TextElement.LetterSpacingProperty`.
+PR: [#20141](https://github.com/AvaloniaUI/Avalonia/pull/20141)

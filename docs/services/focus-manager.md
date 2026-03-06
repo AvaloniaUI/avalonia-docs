@@ -50,9 +50,9 @@ Controls are navigated in the order they appear in the visual tree by default. T
 
 ```xml
 <StackPanel>
-    <TextBox TabIndex="2" Watermark="Second" />
-    <TextBox TabIndex="1" Watermark="First" />
-    <TextBox TabIndex="3" Watermark="Third" />
+    <TextBox TabIndex="2" PlaceholderText="Second" />
+    <TextBox TabIndex="1" PlaceholderText="First" />
+    <TextBox TabIndex="3" PlaceholderText="Third" />
 </StackPanel>
 ```
 

@@ -81,9 +81,9 @@ public partial class Person : ObservableObject
 ```xml
 <StackPanel Grid.Column="1" Margin="16"
             DataContext="{Binding SelectedPerson}">
-    <TextBox Text="{Binding Name}" Watermark="Name" />
-    <TextBox Text="{Binding Email}" Watermark="Email" Margin="0,8,0,0" />
-    <TextBox Text="{Binding Department}" Watermark="Department" Margin="0,8,0,0" />
+    <TextBox Text="{Binding Name}" PlaceholderText="Name" />
+    <TextBox Text="{Binding Email}" PlaceholderText="Email" Margin="0,8,0,0" />
+    <TextBox Text="{Binding Department}" PlaceholderText="Department" Margin="0,8,0,0" />
 </StackPanel>
 ```
 

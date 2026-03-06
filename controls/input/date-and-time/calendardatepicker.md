@@ -7,7 +7,7 @@ import CalendarDatePickerScreenshot from '/img/gitbook-import/assets/calendardat
 
 This is an extension of the calendar control that includes a text box and button. The calendar shows when the user clicks the button (and hides on a subsequent click). The selected date shows in the text box when a date on the calendar is clicked.
 
-The user can also enter a date by typing in the text box. The date picker is able to process multiple date formats into the format that is displayed as a watermark when there is no selected date.
+The user can also enter a date by typing in the text box. The date picker is able to process multiple date formats into the format that is displayed as placeholder text when there is no selected date.
 
 :::info
 For details on the calendar part of this control, see the [Calendar](/controls/input/date-and-time/calendar) control.
@@ -21,7 +21,8 @@ For details on the calendar part of this control, see the [Calendar](/controls/i
 | `DisplayDate` | `DateTime` | The month to display when the calendar opens. |
 | `DisplayDateStart` | `DateTime?` | The earliest date that can be selected. |
 | `DisplayDateEnd` | `DateTime?` | The latest date that can be selected. |
-| `Watermark` | `string` | Placeholder text shown when no date is selected. |
+| `PlaceholderText` | `string` | Placeholder text shown when no date is selected. |
+| `PlaceholderForeground` | `IBrush` | The brush used to render the placeholder text. |
 | `IsTodayHighlighted` | `bool` | Whether today's date is visually highlighted. Default is `true`. |
 | `SelectedDateFormat` | `CalendarDatePickerFormat` | Display format: `Short` or `Long`. |
 | `CustomDateFormatString` | `string` | Custom date format string when using a custom format. |
@@ -31,7 +32,7 @@ For details on the calendar part of this control, see the [Calendar](/controls/i
 
 ```xml
 <CalendarDatePicker SelectedDate="{Binding BirthDate}"
-                    Watermark="Select date of birth"
+                    PlaceholderText="Select date of birth"
                     DisplayDateEnd="{Binding Today}" />
 ```
 
@@ -50,7 +51,7 @@ Limit the selectable date range:
 <CalendarDatePicker SelectedDate="{Binding CheckInDate}"
                     DisplayDateStart="2024-01-01"
                     DisplayDateEnd="2025-12-31"
-                    Watermark="Check-in date" />
+                    PlaceholderText="Check-in date" />
 ```
 
 ## Example

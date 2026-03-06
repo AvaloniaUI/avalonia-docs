@@ -19,6 +19,7 @@ You will probably use these properties most often:
 | FontWeight      | The weight of the font. Default is normal, options include `Bold`.                                                                                                                                                    |
 | FontStyle       | A style to apply to the lettering. Default is normal, options include `Italic`.                                                                                                                                       |
 | TextDecorations | A line decoration to apply to the lettering. Default is none, options include `Underline`, `Strikethrough`, `Baseline` and `Overline`. To apply more than one at the same time, list the options with spaces between. |
+| LetterSpacing   | Extra spacing between characters in device-independent pixels. Default is `0`. This is an inherited attached property from `TextElement`, so it can also be set on parent controls. |
 | xml:space       | `xml:space="preserve"` directs the XML parser to preserve line breaks and whitespace for content assigned to `TextBlock` else it is stripped by default.                                                              |
 
 ## Example

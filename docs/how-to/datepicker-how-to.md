@@ -115,7 +115,7 @@ private TimeSpan? _alarmTime;
 The `CalendarDatePicker` shows a text field that opens a full calendar dropdown:
 
 ```xml
-<CalendarDatePicker Watermark="Select a date"
+<CalendarDatePicker PlaceholderText="Select a date"
                     SelectedDate="{Binding EventDate}" />
 ```
 

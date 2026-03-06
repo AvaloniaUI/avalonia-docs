@@ -14,7 +14,8 @@ You will probably use these properties most often:
 | Property | Type | Description |
 |---|---|---|
 | `Text` | `string` | The current text in the input. |
-| `Watermark` | `string` | Appears as a faded hint whenever the input is empty. |
+| `PlaceholderText` | `string` | Appears as a faded hint whenever the input is empty. |
+| `PlaceholderForeground` | `IBrush` | The brush used to render the placeholder text. |
 | `PasswordChar` | `char` | Hides any characters typed, replacing them with the given character instead. |
 | `RevealPassword` | `bool` | When `true`, shows the actual password text instead of mask characters. |
 | `AcceptsReturn` | `bool` | Makes the input multi-line by allowing the user to enter line returns. |
@@ -33,9 +34,9 @@ This example has a basic one line text box, a password box, and a text-wrapping 
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5" >Name:</TextBlock>
-  <TextBox  Watermark="Enter your name"/>
+  <TextBox  PlaceholderText="Enter your name"/>
   <TextBlock Margin="0 5" >Password:</TextBlock>
-  <TextBox PasswordChar="*" Watermark="Enter your password"/>
+  <TextBox PasswordChar="*" PlaceholderText="Enter your password"/>
   <TextBlock Margin="0 15 0 5">Notes:</TextBlock>
   <TextBox Height="100" AcceptsReturn="True" TextWrapping="Wrap"/>
 </StackPanel>
@@ -48,7 +49,7 @@ This example has a basic one line text box, a password box, and a text-wrapping 
 Bind `Text` with two-way mode (the default for `TextBox.Text`):
 
 ```xml
-<TextBox Text="{Binding Username}" Watermark="Enter username" />
+<TextBox Text="{Binding Username}" PlaceholderText="Enter username" />
 ```
 
 ```csharp
@@ -61,7 +62,7 @@ private string _username = "";
 Add icons or buttons inside the TextBox:
 
 ```xml
-<TextBox Watermark="Search...">
+<TextBox PlaceholderText="Search...">
     <TextBox.InnerRightContent>
         <Button Content="✕" Command="{Binding ClearSearchCommand}"
                 Background="Transparent" BorderThickness="0" Padding="4" />

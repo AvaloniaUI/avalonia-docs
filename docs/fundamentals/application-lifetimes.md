@@ -29,13 +29,16 @@ Then the main window is created in the `Application` class:
 ```csharp
 public override void OnFrameworkInitializationCompleted()
 {
-  if (ApplicationLifetime 
-                  is IClassicDesktopStyleApplicationLifetime desktop)
-    desktop.MainWindow = new MainWindow();
-  else if (ApplicationLifetime 
-                  is ISingleViewApplicationLifetime singleView)
-    singleView.MainView = new MainView();
-  base.OnFrameworkInitializationCompleted();
+    if (ApplicationLifetime
+            is IClassicDesktopStyleApplicationLifetime desktop)
+        desktop.MainWindow = new MainWindow();
+    else if (ApplicationLifetime
+            is IActivityApplicationLifetime activityLifetime)
+        activityLifetime.MainViewFactory = () => new MainView();
+    else if (ApplicationLifetime
+            is ISingleViewApplicationLifetime singleView)
+        singleView.MainView = new MainView();
+    base.OnFrameworkInitializationCompleted();
 }
 ```
 
@@ -77,14 +80,39 @@ Allows you to control your application lifetime in the manner of a Windows Forms
 Provided by:
 
 * `StartLinuxFramebuffer`
-* mobile platforms
-* web platform (WebAssembly/WASM) 
+* iOS
+* web platform (WebAssembly/WASM)
 
 Some platforms do not have a concept of a desktop main window and only allow one view on the device's screen at a time. For these platforms the lifetime allows you to set and change the main view class (`MainView`) instead.
 
 :::info
 To implement a navigation stack on platforms like this (with a single main view), you can use a routing control or navigation framework. A common approach is to manage a stack of view models, pushing and popping them as the user navigates, with a host control that automatically displays the corresponding view.
 :::
+
+### IActivityApplicationLifetime
+
+Provided by:
+
+* Android
+
+Android can create multiple instances of your main activity during the app's lifetime (for example, when the user taps a notification or returns from another app). A single `MainView` instance cannot be reused across these activity recreations, so Android uses a factory function instead.
+
+Set the `MainViewFactory` property to a function that creates a new view each time an activity is started:
+
+```csharp
+public override void OnFrameworkInitializationCompleted()
+{
+    if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+        desktop.MainWindow = new MainWindow();
+    else if (ApplicationLifetime is IActivityApplicationLifetime activityLifetime)
+        activityLifetime.MainViewFactory = () => new MainView();
+    else if (ApplicationLifetime is ISingleViewApplicationLifetime singleView)
+        singleView.MainView = new MainView();
+    base.OnFrameworkInitializationCompleted();
+}
+```
+
+The factory is called each time a new activity instance is created, producing a fresh view with its own state. This avoids the crashes that occurred when reusing a single view instance across multiple activity launches.
 
 ## Manual Lifetime Management
 

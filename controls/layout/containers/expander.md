@@ -29,7 +29,7 @@ The `Expander` control has a header area (always visible) and a collapsible cont
         <TextBlock Grid.Row="0" Grid.Column="0"
                    VerticalAlignment="Center">Search</TextBlock>
         <TextBox Grid.Row="0" Grid.Column="1"
-                 Watermark="Search text" Width="200" />
+                 PlaceholderText="Search text" Width="200" />
         <TextBlock Grid.Row="1" Grid.Column="0"
                    VerticalAlignment="Center">Case sensitive?</TextBlock>
         <CheckBox Grid.Row="1" Grid.Column="1" />
@@ -85,7 +85,7 @@ Bind the expansion state to a view model property for programmatic control:
 
 ```xml
 <Expander Header="Advanced" IsExpanded="{Binding ShowAdvanced}">
-    <TextBox Watermark="Custom path" />
+    <TextBox PlaceholderText="Custom path" />
 </Expander>
 ```
 

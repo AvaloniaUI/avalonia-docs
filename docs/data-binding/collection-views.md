@@ -54,7 +54,7 @@ public partial class MainViewModel : ObservableObject
 
 ```xml
 <StackPanel Spacing="8">
-    <TextBox Text="{Binding SearchText}" Watermark="Search..." />
+    <TextBox Text="{Binding SearchText}" PlaceholderText="Search..." />
     <ListBox ItemsSource="{Binding FilteredPeople}">
         <ListBox.ItemTemplate>
             <DataTemplate>

@@ -6,9 +6,11 @@ title: Property setters
 import SetterPrecedenceAnimationWrongScreenshot from '/img/reference/styles/setter-precedence-animation-wrong.gif';
 import SetterPrecedenceAnimationCorrectScreenshot from '/img/reference/styles/setter-precedence-animation-correct.gif';
 
+Property setters define what property values a style applies to a control after Avalonia has matched it using a selector.
+
 ## Basic usage
 
-The setters in a style define what properties will be changed after _Avalonia UI_ has matched the control in the logical control tree using the selector, and determined which style is to be used. Setters are simple property and value attribute pairs in the XAML, written in the format:
+Setters are property and value attribute pairs written in XAML in the format:
 
 ```xml
 <Setter Property="propertyName" Value="newValueString"/>
@@ -29,7 +31,7 @@ You can also use a long-form syntax to set a control property to an object with 
 </Setter>
 ```
 
-A style can also set properties using bindings. After the usual selection process, this causes _Avalonia UI_ to use a value from data context of the target control. For example, the setter can be defined like this:
+A style can also set properties using bindings. After the usual selection process, this causes Avalonia to use a value from the data context of the target control. For example:
 
 ```xml
 <Setter Property="FontSize" Value="{Binding SelectedFontSize}"/>
@@ -44,8 +46,8 @@ There are two rules that govern which property setter has precedence when a sele
 
 For example, firstly this means that styles defined at window level will override those defined at application level. Secondly, this means that where the selected style collections are at the same level, then the later definition (as written in the file) has priority.
 
-:::warning
-If you were comparing style classes to CSS you must note that: **unlike CSS**, the list sequence of class names in the `Classes` attribute has no effect on setter priority in _Avalonia UI_. That is, if both these style classes set the color, then either way of listing the classes has the same result:
+:::caution
+If you were comparing style classes to CSS you must note that: **unlike CSS**, the list sequence of class names in the `Classes` attribute has no effect on setter priority in Avalonia. That is, if both these style classes set the color, then either way of listing the classes has the same result:
 
 ```xml
 <Button Classes="h1 blue"/>
@@ -55,13 +57,13 @@ If you were comparing style classes to CSS you must note that: **unlike CSS**, t
 
 ## Value reversion
 
-Whenever a style is matched with a control, all of the setters will be applied to the control. If a style selector causes the style to no longer match a control, the property value will revert to the its next highest priority value.
+Whenever a style is matched with a control, all of the setters will be applied to the control. If a style selector causes the style to no longer match a control, the property value will revert to its next highest priority value.
 
 ## Mutable values
 
-Note that the `Setter` creates a single instance of `Value` which will be applied to all controls that the style matches: if the object is mutable then changes will be reflected on all controls.
+The `Setter` creates a single instance of `Value` which will be applied to all controls that the style matches. If the object is mutable, changes will be reflected on all controls.
 
-Also note that bindings on an object defined in a setter value will not have access to the target control's data context. This is because there may be multiple target controls. This scenario may arise with a style defined like this:
+Bindings on an object defined in a setter value will not have access to the target control's data context because there may be multiple target controls. This scenario may arise with a style defined like this:
 
 ```xml
 <Style Selector="local|MyControl">
@@ -71,9 +73,9 @@ Also note that bindings on an object defined in a setter value will not have acc
 </Style>
 ```
 
-This means that in the example above, the binding source for the setter will be `MyObject.DataContext`, and not `MyControl.DataContext`. Also if `MyObject` has no data context then the binding will unable to produce a value.
+This means that in the example above, the binding source for the setter will be `MyObject.DataContext`, and not `MyControl.DataContext`. If `MyObject` has no data context, the binding will be unable to produce a value.
 
-Note: if you are using compiled bindings, you need to explicitly set the data type of the binding source in the `<Style>` element:
+If you are using compiled bindings, you need to explicitly set the data type of the binding source in the `<Style>` element:
 
 ```xml
 <Style Selector="MyControl" x:DataType="MyViewModelClass">
@@ -101,9 +103,9 @@ Avalonia `Setters` are applied in order of `BindingPriority`, then visual tree l
 order. Precedence applies individually to each `StyledProperty` so that styling can benefit from composition. `DirectProperty` 
 and CLR properties cannot be styled and therefore do not participate in this precedence.
 
-## BindingPriority Values
+## BindingPriority values
 
-```cs
+```csharp
 Animation = -1, // Highest priority
 LocalValue = 0,
 StyleTrigger,
@@ -210,7 +212,7 @@ properties mentioned in the `Template` example above.
 When a property is not set, it may inherit the property value from its parent. This must be specified during 
 property registration or with `OverrideMetadata`.
 
-```cs
+```csharp
 public static readonly StyledProperty<bool> UseLayoutRoundingProperty =
     AvaloniaProperty.Register<Layoutable, bool>(
         nameof(UseLayoutRounding),
@@ -310,8 +312,8 @@ fetching the `Button`'s `Background` that our original `Animation` `Selector` ta
 | ~~`<ContentPresenter Background="{TemplateBinding Background}"/>`~~ | Template                          | ControlTemplate |
 | `^:pointerover /template/ ContentPresenter#PART_ContentPresenter`   | StyleTrigger (Overrides Template) | ControlTheme    |
 
-Instead, we should target the `ContentPresenter` with a `Setter` that has priority of at least `StyleTrigger`. `BindingPriority.Animation` 
-fits that. This is an observation that cannot be made without examining the original `ControlTemplate` and emphasizes that relying 
+Instead, target the `ContentPresenter` with a `Setter` that has priority of at least `StyleTrigger`. `BindingPriority.Animation`
+fits that requirement. This is an observation that cannot be made without examining the original `ControlTemplate`, and it emphasizes that relying
 on priority alone is insufficient to effectively style an application.
 
 ```xml title='Corrected to override :pointerover priority'
@@ -334,3 +336,9 @@ on priority alone is insufficient to effectively style an application.
 ```
 
 <img src={SetterPrecedenceAnimationCorrectScreenshot} alt="" />
+
+## See also
+
+- [Styles](styles)
+- [Style precedence](style-precedence)
+- [Control themes](control-themes)

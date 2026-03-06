@@ -120,7 +120,7 @@ public partial class MainViewModel : ObservableObject
 
 ```xml
 <StackPanel Spacing="8">
-    <TextBox Text="{Binding FilterText}" Watermark="Search products..." />
+    <TextBox Text="{Binding FilterText}" PlaceholderText="Search products..." />
     <DataGrid ItemsSource="{Binding FilteredProducts}" AutoGenerateColumns="True"
               IsReadOnly="True" />
 </StackPanel>

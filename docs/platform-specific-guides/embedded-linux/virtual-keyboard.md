@@ -80,7 +80,7 @@ The simplest way to add a virtual keyboard to your application is to use the `Vi
     <VirtualKeyboardScope InputMethods="en-US:kbd:standard, de:kbd:standard, ja:ime:kana">
         <StackPanel>
             <TextBlock>Hello world!</TextBlock>
-            <TextBox Watermark="Type here"/>
+            <TextBox PlaceholderText="Type here"/>
         </StackPanel>
     </VirtualKeyboardScope>
 </Window>

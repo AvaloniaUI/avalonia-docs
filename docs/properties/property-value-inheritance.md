@@ -22,6 +22,7 @@ Several common properties in Avalonia are registered as inherited:
 | `FontStyle` | `TextElement` | Text controls inherit the font style (italic, normal). |
 | `FontWeight` | `TextElement` | Text controls inherit the font weight (bold, normal). |
 | `Foreground` | `TextElement` | Text controls inherit the foreground brush. |
+| `LetterSpacing` | `TextElement` | Text controls inherit the spacing between characters. |
 | `FlowDirection` | `Visual` | Controls inherit left-to-right or right-to-left layout direction. |
 | `DataContext` | `StyledElement` | Controls inherit their data context from their parent. |
 | `RequestedThemeVariant` | `ThemeVariantScope` | Controls inherit the requested theme variant (light/dark). |

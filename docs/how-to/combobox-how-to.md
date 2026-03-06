@@ -141,7 +141,7 @@ Avalonia's `ComboBox` does not have a built-in editable mode like WPF. For type-
 ```xml
 <AutoCompleteBox ItemsSource="{Binding AllCities}"
                  Text="{Binding SearchText}"
-                 Watermark="Search for a city..."
+                 PlaceholderText="Search for a city..."
                  FilterMode="Contains"
                  MinimumPrefixLength="1" />
 ```
@@ -152,7 +152,7 @@ Avalonia's `ComboBox` does not have a built-in editable mode like WPF. For type-
 <AutoCompleteBox ItemsSource="{Binding Users}"
                  FilterMode="Custom"
                  TextFilter="{Binding UserFilter}"
-                 Watermark="Search users...">
+                 PlaceholderText="Search users...">
     <AutoCompleteBox.ItemTemplate>
         <DataTemplate>
             <TextBlock Text="{Binding Name}" />

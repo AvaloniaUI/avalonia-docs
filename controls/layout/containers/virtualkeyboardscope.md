@@ -46,7 +46,7 @@ The `VirtualKeyboardScope` is a container control that manages [virtual keyboard
 ```xml
 <VirtualKeyboardScope InputMethods="en-US:kbd:standard, de:kbd:standard, ja:ime:kana">
     <StackPanel>
-        <TextBox Watermark="Type here" />
+        <TextBox PlaceholderText="Type here" />
         <TextBlock>The keyboard will support English, German, and Japanese input</TextBlock>
     </StackPanel>
 </VirtualKeyboardScope>
@@ -85,14 +85,14 @@ You can customize how input fields work with the virtual keyboard using `TextInp
 <VirtualKeyboardScope InputMethods="en-US:kbd:standard">
     <StackPanel>
         <TextBox TextInputOptions.ContentType="Email" 
-                 Watermark="Enter email address" />
+                 PlaceholderText="Enter email address" />
                  
         <TextBox TextInputOptions.ContentType="Digits"
                  TextInputOptions.ReturnKeyType="Done"
-                 Watermark="Enter PIN code" />
+                 PlaceholderText="Enter PIN code" />
                  
         <TextBox TextInputOptions.ReturnKeyType="Search"
-                 Watermark="Search..." />
+                 PlaceholderText="Search..." />
     </StackPanel>
 </VirtualKeyboardScope>
 ```

@@ -161,7 +161,7 @@ var stack = new StackPanel
 };
 
 stack.Children.Add(new TextBlock { Text = "Name:", FontSize = 16 });
-stack.Children.Add(new TextBox { Watermark = "Enter your name" });
+stack.Children.Add(new TextBox { PlaceholderText = "Enter your name" });
 stack.Children.Add(new Button { Content = "Submit" });
 
 window.Content = stack;

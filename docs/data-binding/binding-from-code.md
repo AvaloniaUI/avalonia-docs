@@ -134,6 +134,43 @@ var subscription = textBlock.Bind(TextBlock.TextProperty, new Binding("Name"));
 subscription.Dispose();
 ```
 
+## Compiled bindings from code
+
+The `CompiledBinding.Create` factory method lets you create type-safe bindings using LINQ expressions instead of string-based property paths. The expression is validated at compile time, so typos in property names produce compiler errors rather than silent runtime failures.
+
+```csharp
+var textBlock = new TextBlock();
+var binding = CompiledBinding.Create<MyViewModel, string>(
+    expression: vm => vm.Name);
+textBlock.Bind(TextBlock.TextProperty, binding);
+```
+
+The expression supports nested properties, indexers, and casts:
+
+```csharp
+// Nested property
+CompiledBinding.Create<MyViewModel, string>(
+    expression: vm => vm.Address.City);
+
+// With a value converter
+CompiledBinding.Create<MyViewModel, bool>(
+    expression: vm => vm.IsActive,
+    converter: new BoolToOpacityConverter(),
+    mode: BindingMode.OneWay);
+```
+
+You can also use it in object initializers:
+
+```csharp
+var textBlock = new TextBlock
+{
+    [!TextBlock.TextProperty] = CompiledBinding.Create<MyViewModel, string>(
+        expression: vm => vm.Name),
+};
+```
+
+This approach gives you the same performance and safety benefits as XAML compiled bindings, but from C# code. See [Compiled Bindings](/docs/data-binding/compiled-bindings) for the XAML equivalent.
+
 ## Subscribing to a Property on Any Object
 
 The `GetObservable` method returns an observable that tracks changes to a property on a single instance. However, if you're writing a control you may want to implement an `OnPropertyChanged` method which isn't tied to an instance of an object.

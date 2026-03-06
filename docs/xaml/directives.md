@@ -41,7 +41,7 @@ public partial class MainWindow : Window
 Assigns a name to an element, generating a field in the code-behind class so you can reference the control from C#.
 
 ```xml
-<TextBox x:Name="SearchBox" Watermark="Search..." />
+<TextBox x:Name="SearchBox" PlaceholderText="Search..." />
 <Button Content="Search" Click="OnSearchClick" />
 ```
 

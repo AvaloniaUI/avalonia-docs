@@ -408,6 +408,7 @@ const sidebars: SidebarsConfig = {
         'how-to/data-persistence-how-to',
         'how-to/responsive-layout-how-to',
         'how-to/coded-ui-how-to',
+        'how-to/custom-font-how-to',
       ],
     },
     {

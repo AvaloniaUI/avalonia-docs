@@ -145,3 +145,12 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
     </StackPanel>
 </UserControl>
 ```
+
+## Compiled bindings from code
+
+You can also create compiled bindings in C# code using the `CompiledBinding.Create` factory method. This provides the same compile-time safety and performance benefits as XAML compiled bindings, using LINQ expressions instead of string property paths. See [Compiled bindings from code](/docs/data-binding/binding-from-code#compiled-bindings-from-code) for examples.
+
+## See also
+
+- [Compiled bindings from code](/docs/data-binding/binding-from-code#compiled-bindings-from-code)
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax)

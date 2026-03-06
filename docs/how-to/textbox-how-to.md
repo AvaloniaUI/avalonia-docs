@@ -10,7 +10,7 @@ This guide covers common TextBox scenarios: validation, formatting, input maskin
 Bind the `Text` property with `TwoWay` mode (the default for TextBox.Text):
 
 ```xml
-<TextBox Text="{Binding Username}" Watermark="Enter username" />
+<TextBox Text="{Binding Username}" PlaceholderText="Enter username" />
 ```
 
 ```csharp
@@ -18,24 +18,30 @@ Bind the `Text` property with `TwoWay` mode (the default for TextBox.Text):
 private string _username = "";
 ```
 
-## Watermark (Placeholder Text)
+## Placeholder Text
 
 Show hint text when the TextBox is empty:
 
 ```xml
-<TextBox Watermark="Search..." />
-<TextBox Watermark="Enter email address" />
+<TextBox PlaceholderText="Search..." />
+<TextBox PlaceholderText="Enter email address" />
 ```
 
-The watermark disappears when the user starts typing and reappears when the text is cleared.
+The placeholder disappears when the user starts typing and reappears when the text is cleared.
+
+To customize the placeholder color, set `PlaceholderForeground`:
+
+```xml
+<TextBox PlaceholderText="Search..." PlaceholderForeground="Gray" />
+```
 
 ## Password Input
 
 Hide typed characters using `PasswordChar`:
 
 ```xml
-<TextBox PasswordChar="*" Watermark="Password" />
-<TextBox PasswordChar="●" Watermark="Password" />
+<TextBox PasswordChar="*" PlaceholderText="Password" />
+<TextBox PasswordChar="●" PlaceholderText="Password" />
 ```
 
 For a reveal toggle, bind `RevealPassword`:
@@ -56,7 +62,7 @@ Enable multi-line text entry:
 <TextBox AcceptsReturn="True"
          TextWrapping="Wrap"
          Height="120"
-         Watermark="Enter your message..." />
+         PlaceholderText="Enter your message..." />
 ```
 
 | Property | Effect |
@@ -127,7 +133,7 @@ public partial class FormViewModel : ObservableValidator
 ```
 
 ```xml
-<TextBox Text="{Binding Email}" Watermark="Email" />
+<TextBox Text="{Binding Email}" PlaceholderText="Email" />
 ```
 
 When validation fails, the TextBox displays a red border and error message. See [Validation in Data Binding](/docs/data-binding/binding-validation) for details.
@@ -156,7 +162,7 @@ private void OnTextChanging(object? sender, TextChangingEventArgs e)
 Limit the number of characters:
 
 ```xml
-<TextBox MaxLength="50" Watermark="Max 50 characters" />
+<TextBox MaxLength="50" PlaceholderText="Max 50 characters" />
 ```
 
 ## Text Changed Event
@@ -184,7 +190,7 @@ For debounced search (avoiding filtering on every keystroke), see [Performance](
 Add icons or buttons inside the TextBox using `InnerLeftContent` and `InnerRightContent`:
 
 ```xml
-<TextBox Watermark="Search..." InnerLeftContent="🔍">
+<TextBox PlaceholderText="Search..." InnerLeftContent="🔍">
     <TextBox.InnerRightContent>
         <Button Content="✕" Command="{Binding ClearSearchCommand}"
                 Background="Transparent" BorderThickness="0"
