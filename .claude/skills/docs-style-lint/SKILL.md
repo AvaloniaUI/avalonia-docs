@@ -1,11 +1,15 @@
 ---
 name: docs-style-lint
-description: Reviews and lints Avalonia documentation pages against house style rules. Use when reviewing, editing, or writing documentation to ensure consistency with established patterns. Checks structure, voice, terminology, formatting, and linking.
+description: Reviews and lints Avalonia documentation pages against house style rules, content boundaries, and anti-marketing standards. Use when reviewing, editing, or writing documentation to ensure consistency with established patterns. Checks structure, voice, terminology, formatting, linking, tone, and Diataxis compliance.
 ---
 
 # Avalonia Docs Style Lint
 
 Review documentation pages against Avalonia's house style rules derived from corpus analysis of professional .NET framework documentation, adapted for Avalonia's Docusaurus-based site.
+
+## Diataxis as invisible discipline
+
+Diataxis is an editorial QA layer, not a navigation structure. The visible site structure follows product domains and user journeys (Getting Started, Controls, Styling, Layout, Binding, MVVM). Each page declares a `doc-type` in frontmatter, and that type constrains what content is allowed and forbidden. This prevents the "duplication swamp" where every page re-explains everything. If `doc-type` is present, use it. If absent, infer the type and flag BOUND-005.
 
 ## When to use
 
@@ -29,11 +33,13 @@ Read the target file and classify it as one of the page archetypes defined in [p
 | tutorial | Title contains "Tutorial:" or file is under `get-started/`, step-by-step build |
 | how-to | Title starts with "How to" or file focuses on a single bounded task |
 | overview | Introduces a topic area, orients and links |
-| conceptual | Explains model, behavior, or architecture in depth |
+| explanation | Explains model, behavior, or architecture in depth |
 | reference | Precise syntax/semantics definitions, API-like |
 | troubleshooting | Problem-first with remediation |
 | migration | Upgrade/breaking-change guidance |
 | release-notes | Version change summaries |
+
+If the page has a `doc-type` frontmatter field, use that value. If `doc-type` is absent, infer the type from the signals above and flag **BOUND-005**.
 
 ### Step 2: Run structural checks
 
@@ -50,30 +56,55 @@ Apply rules from [house-rules.yaml](references/house-rules.yaml) that match the 
 
 **Major-level checks (should pass; justify exceptions):**
 
-6. **STR-002**: Headings use sentence case (>= 80% for new/edited pages)
-7. **STR-005**: Page ends with `## See also` or `## Related content` or similar navigation handoff
-8. **VOI-001**: Task pages use direct `you`/`your` address
-9. **VOI-002**: Minimal `we`/`our`/`us` usage (< 1 per 1,000 words)
-10. **MIC-001**: UI labels and menu paths in **bold**
-11. **MIC-002**: Code identifiers and API literals in `backticks`
-12. **MIC-004**: Admonitions use approved Docusaurus types only: `:::note`, `:::tip`, `:::info`, `:::caution`, `:::danger`
-13. **TERM-002**: Use `control` not `widget` for UI components
+7. **STR-002**: Headings use sentence case (>= 80% for new/edited pages)
+8. **STR-005**: Page ends with `## See also` or `## Related content` or similar navigation handoff
+9. **VOI-001**: Task pages use direct `you`/`your` address
+10. **VOI-002**: Minimal `we`/`our`/`us` usage (< 1 per 1,000 words)
+11. **MIC-001**: UI labels and menu paths in **bold**
+12. **MIC-002**: Code identifiers and API literals in `backticks`
+13. **MIC-004**: Admonitions use approved Docusaurus types only: `:::note`, `:::tip`, `:::info`, `:::caution`, `:::danger`
+14. **TERM-002**: Use `control` not `widget` for UI components
 
 **Minor-level checks (style drift warnings):**
 
-14. **VOI-003**: Intensifiers (`simply`, `obviously`, `just`) are rare (< 1 per 1,000 words)
-15. **MIC-005**: Keyboard shortcuts use `<kbd>` tags with platform-native symbols (e.g., `<kbd>⌘</kbd> <kbd>S</kbd>` not plain text "Cmd+S")
-16. **STR-009**: Intro before first H2 is <= 150 words
+15. **VOI-003**: Intensifiers (`simply`, `obviously`, `just`) are rare (< 1 per 1,000 words)
+16. **MIC-005**: Keyboard shortcuts use `<kbd>` tags with platform-native symbols (e.g., `<kbd>⌘</kbd> <kbd>S</kbd>` not plain text "Cmd+S")
+17. **STR-009**: Intro before first H2 is <= 150 words
 
-### Step 3: Run terminology checks
+### Step 3: Run anti-marketing checks
+
+Apply tone rules from [house-rules.yaml](references/house-rules.yaml). Documentation must never read like marketing copy.
+
+**Blocker-level:**
+
+1. **TONE-001**: Scan for banned marketing buzzwords (powerful, seamless, elegant, best-in-class, world-class, cutting-edge, game-changing, leverage, unlock, empower, delightful, blazing fast, robust, state-of-the-art, next-generation, revolutionary, groundbreaking, innovative). Context-dependent terms (leverage, unlock, robust, innovative) are flagged as candidates for reviewer judgment. See [terminology-map.yaml](references/terminology-map.yaml) for replacements.
+2. **TONE-002**: Flag unsupported superlatives (the fastest, the most, the best, the only, unmatched, unparalleled). Pass only if measurable evidence appears in the same sentence or paragraph.
+
+**Major-level:**
+
+3. **TONE-003**: Flag promotional framing. Pages should describe what a feature does, not why the reader should be excited about it.
+4. **TONE-004**: Flag vague future promises. Any future-tense claim must include a version number, issue link, or timeline.
+
+### Step 4: Run terminology checks
 
 Cross-reference against [terminology-map.yaml](references/terminology-map.yaml):
 
 - Verify canonical terms are used (not forbidden synonyms)
 - Check first-use acronym expansion (TERM-001)
 - Verify `must` vs `should` usage matches intent (TERM-003)
+- Check for forbidden marketing terms and suggest replacements
 
-### Step 4: Run template compliance
+### Step 5: Run content boundary checks
+
+Apply content boundary rules using the page's declared (or inferred) doc-type and the `forbidden_content` and `content_boundaries` fields in [page-templates.yaml](references/page-templates.yaml).
+
+1. **BOUND-001**: Verify the page serves a single Diataxis responsibility. Flag if content substantially overlaps another doc-type.
+2. **BOUND-002**: Check the page does not contain content listed in its template's `forbidden_content`. Forbidden content should be linked to the appropriate page type, not duplicated.
+3. **BOUND-003**: If the page lists more than 3 properties or API members of a single type inline, flag it and recommend linking to the reference page instead.
+4. **BOUND-004**: For explanation pages, flag any numbered procedural sequence longer than 3 steps. Recommend linking to a how-to or tutorial instead.
+5. **BOUND-005**: Verify frontmatter includes a `doc-type` field with a valid value (`tutorial`, `how-to`, `explanation`, `overview`, `reference`, `troubleshooting`, `release-notes`, `migration`).
+
+### Step 6: Run template compliance
 
 Compare page structure against the expected archetype from [page-templates.yaml](references/page-templates.yaml):
 
@@ -81,7 +112,7 @@ Compare page structure against the expected archetype from [page-templates.yaml]
 - Flag missing optional sections that would improve the page
 - Verify ordering rules (e.g., prerequisites before procedure)
 
-### Step 5: Check banned phrases
+### Step 7: Check banned phrases
 
 Flag any use of:
 
@@ -98,8 +129,15 @@ Flag any use of:
 | "Refer to the documentation" | Link to specific page |
 | Em dash (—) | Comma, colon, parentheses, or separate sentence |
 | En dash (–) | Hyphen or "to" for ranges |
+| "Powerful" | State the specific capability |
+| "Seamless" | Describe the integration concretely |
+| "Cutting-edge" / "State-of-the-art" | Remove, or name the technology |
+| "Leverage" | "Use" or "apply" |
+| "Unlock" | "Enable" or "allow" |
+| "Robust" | Describe the specific reliability characteristic |
+| "Game-changing" / "Revolutionary" | Describe the concrete improvement |
 
-### Step 6: Generate report
+### Step 8: Generate report
 
 Output a structured lint report:
 
@@ -107,6 +145,7 @@ Output a structured lint report:
 ## Style Lint Report: [filename]
 
 **Page type**: [detected type]
+**doc-type frontmatter**: [present/absent]
 **Score**: [PASS / FAIL with score]
 
 ### Blockers (must fix)
@@ -117,6 +156,15 @@ Output a structured lint report:
 
 ### Minor issues (consider fixing)
 - [rule-id]: [description] (line X)
+
+### Anti-marketing compliance
+- [TONE rule findings or "Clean"]
+
+### Content boundary compliance
+- [BOUND rule findings or "Clean"]
+- Declared doc-type: [type]
+- Forbidden content detected: [none / list]
+- Single responsibility: [pass / concern]
 
 ### Template compliance
 - Required sections: [present/missing list]
@@ -137,11 +185,12 @@ Output a structured lint report:
 These override or extend the base rules for Avalonia's Docusaurus site:
 
 ### Frontmatter
-Avalonia docs use simple frontmatter:
+Avalonia docs use simple frontmatter with an optional `doc-type` field:
 ```yaml
 ---
 id: page-id
 title: Page Title
+doc-type: how-to
 ---
 ```
 

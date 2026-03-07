@@ -103,6 +103,66 @@ terms:
     forbidden_synonyms: []
     notes: "Two words in prose. PascalCase in code."
 
+forbidden_marketing_terms:
+  - term: powerful
+    replacement: "State the specific capability."
+    rule: TONE-001
+  - term: seamless
+    replacement: "Describe the integration or behavior concretely."
+    rule: TONE-001
+  - term: elegant
+    replacement: "Remove, or describe the design pattern specifically."
+    rule: TONE-001
+  - term: best-in-class
+    replacement: "Remove. Provide benchmarks or comparisons if relevant."
+    rule: TONE-001
+  - term: world-class
+    replacement: "Remove."
+    rule: TONE-001
+  - term: cutting-edge
+    replacement: "Remove, or name the specific technology."
+    rule: TONE-001
+  - term: game-changing
+    replacement: "Remove. Describe the concrete improvement."
+    rule: TONE-001
+  - term: leverage
+    replacement: "Use 'use' or 'apply'."
+    rule: TONE-001
+    context_dependent: true
+  - term: unlock
+    replacement: "Use 'enable' or 'allow'."
+    rule: TONE-001
+    context_dependent: true
+  - term: empower
+    replacement: "Use 'enable' or 'allow'."
+    rule: TONE-001
+  - term: delightful
+    replacement: "Remove."
+    rule: TONE-001
+  - term: blazing fast
+    replacement: "State measured performance or remove."
+    rule: TONE-001
+  - term: robust
+    replacement: "Describe the specific reliability characteristic."
+    rule: TONE-001
+    context_dependent: true
+  - term: state-of-the-art
+    replacement: "Remove, or name the specific technique."
+    rule: TONE-001
+  - term: next-generation
+    replacement: "Remove, or describe what changed."
+    rule: TONE-001
+  - term: revolutionary
+    replacement: "Remove. Describe the concrete change."
+    rule: TONE-001
+  - term: groundbreaking
+    replacement: "Remove. Describe the concrete change."
+    rule: TONE-001
+  - term: innovative
+    replacement: "Remove, or describe the specific approach."
+    rule: TONE-001
+    context_dependent: true
+
 strength_of_language:
   must:
     meaning: "hard requirement or correctness/security constraint"

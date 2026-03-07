@@ -1,5 +1,25 @@
-version: 1
+version: 2
 target: avalonia-docs
+
+diataxis_model:
+  philosophy: >
+    Diataxis is an invisible editorial discipline, not a navigation structure.
+    The visible site structure follows product domains and user journeys
+    (Getting Started, Controls, Styling, Layout, Binding, MVVM). Each page
+    declares a doc-type in frontmatter, and that type constrains what content
+    is allowed and forbidden. This prevents the "duplication swamp" where
+    every page re-explains everything. Authors pick the single Diataxis type
+    that best fits the page's purpose, then follow its content boundaries.
+  frontmatter_field: doc-type
+  allowed_values:
+    - tutorial
+    - how-to
+    - explanation
+    - overview
+    - reference
+    - troubleshooting
+    - release-notes
+    - migration
 
 templates:
   tutorial:
@@ -19,6 +39,13 @@ templates:
     ordering_rules:
       - prerequisites_before_procedure: true
       - verification_after_procedure: true
+    forbidden_content:
+      - exhaustive property or API tables (link to reference instead)
+      - architectural deep-dives (link to explanation instead)
+      - migration guidance (link to migration page instead)
+    content_boundaries:
+      single_responsibility: "Teach one complete skill through a guided build."
+      link_policy: "Link to reference for API details; link to explanation for theory."
 
   how_to:
     intent: focused_task
@@ -34,8 +61,16 @@ templates:
       - admonitions
     ordering_rules:
       - prerequisites_if_present_first: true
+    forbidden_content:
+      - lengthy conceptual background (>2-3 sentences; link to explanation instead)
+      - full property enumerations (link to reference instead)
+      - learning scaffolding (that belongs in tutorials)
+      - multiple unrelated tasks (one job per page)
+    content_boundaries:
+      single_responsibility: "Solve one bounded task. If a second task emerges, split the page."
+      link_policy: "Link to reference for property lists; link to explanation for background."
 
-  conceptual:
+  explanation:
     intent: explain_model_and_behavior
     orientation: concept_first
     required_sections:
@@ -47,6 +82,13 @@ templates:
       - examples
       - comparison_tables
       - diagrams
+    forbidden_content:
+      - numbered procedural steps (>3 steps; link to how-to or tutorial instead)
+      - property enumerations (link to reference instead)
+      - task instructions (link to how-to instead)
+    content_boundaries:
+      single_responsibility: "Explain one concept, model, or architectural decision."
+      link_policy: "Link to how-to for procedures; link to reference for API details."
 
   overview:
     intent: orient_and_link
@@ -59,6 +101,12 @@ templates:
     optional_sections:
       - prerequisites
       - in_this_section
+    forbidden_content:
+      - deep procedural content (link to how-to or tutorial instead)
+      - full reference tables (link to reference instead)
+    content_boundaries:
+      single_responsibility: "Orient the reader and link to detailed pages."
+      link_policy: "Link liberally to tutorials, how-tos, and reference pages."
 
   reference:
     intent: precise_definition
@@ -74,6 +122,13 @@ templates:
       - examples
     ordering_rules:
       - syntax_before_remarks: true
+    forbidden_content:
+      - narrative tutorials (link to tutorial instead)
+      - migration stories (link to migration page instead)
+      - persuasive rationale (that belongs in explanation)
+    content_boundaries:
+      single_responsibility: "Define one API surface, type, or property set."
+      link_policy: "Link to tutorials for usage examples; link to explanation for rationale."
 
   troubleshooting:
     intent: diagnose_and_fix
@@ -85,6 +140,13 @@ templates:
     optional_sections:
       - admonition_blocks
       - see_also
+    forbidden_content:
+      - general conceptual overviews (link to explanation instead)
+      - complete API tables (link to reference instead)
+      - tutorial content (link to tutorial instead)
+    content_boundaries:
+      single_responsibility: "Diagnose and fix one problem or error condition."
+      link_policy: "Link to reference for API details; link to how-to for procedural fixes."
 
   release_notes:
     intent: summarize_version_changes
@@ -96,6 +158,13 @@ templates:
       - release_announcements
       - api_diff
       - see_also
+    forbidden_content:
+      - tutorials (link to tutorial instead)
+      - full API tables (link to reference instead)
+      - marketing language (state facts only)
+    content_boundaries:
+      single_responsibility: "Summarize changes for one version."
+      link_policy: "Link to migration for upgrade steps; link to reference for new APIs."
 
   migration:
     intent: phased_upgrade
@@ -109,3 +178,10 @@ templates:
     optional_sections:
       - breaking_changes_list
       - post_upgrade_guidance
+    forbidden_content:
+      - general explanations (link to explanation instead)
+      - complete reference tables (link to reference instead)
+      - tutorial scaffolding (link to tutorial instead)
+    content_boundaries:
+      single_responsibility: "Guide one version-to-version upgrade path."
+      link_policy: "Link to reference for changed APIs; link to explanation for design rationale."

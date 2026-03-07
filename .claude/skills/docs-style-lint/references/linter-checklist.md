@@ -30,6 +30,15 @@ Severity levels:
 | `LINK-001` | blocker | all pages | No generic link labels (`click here`, `here`). | Generic link text. |
 | `QUAL-001` | blocker | tutorial | Includes outcome verification step. | Tutorial ends without verification. |
 | `QUAL-002` | major | troubleshooting, migration | Contains remediation and next-action pointer. | Only root cause, no action. |
+| `TONE-001` | blocker | all pages | No banned marketing buzzwords (powerful, seamless, elegant, cutting-edge, etc.). | Marketing language in documentation. |
+| `TONE-002` | blocker | all pages | Superlatives have measurable evidence in same sentence/paragraph. | Unsupported claims (the fastest, the best, unmatched). |
+| `TONE-003` | major | all pages | Page describes behavior, not why reader should be excited. | Promotional framing or feature-selling language. |
+| `TONE-004` | major | all pages | Future-tense claims include version, issue link, or timeline. | Vague future promises without concrete context. |
+| `BOUND-001` | major | all pages | Page content aligns with one declared doc-type. | Mixed-purpose page spanning multiple Diataxis types. |
+| `BOUND-002` | major | all pages | No content forbidden for the page's declared doc-type. | Contains content that belongs in a different page type. |
+| `BOUND-003` | major | non-reference pages | Inline property/API lists limited to 3 items; larger sets link to reference. | Duplicated property tables instead of linking to reference. |
+| `BOUND-004` | major | explanation | No numbered procedural sequences longer than 3 steps. | Extended procedure in an explanation page. |
+| `BOUND-005` | major | all pages | Frontmatter includes `doc-type` field with valid value. | Missing `doc-type` in frontmatter. |
 
 ## Automation notes
 
@@ -46,6 +55,9 @@ Fast automatable checks:
 - `<kbd>` presence for key names (`MIC-005`)
 - Navigation handoff section (`STR-005`)
 - Intro word count (`STR-009`)
+- Marketing buzzword scan (`TONE-001`)
+- Superlative detection (`TONE-002`, partial: detects terms but evidence check is manual)
+- `doc-type` frontmatter presence (`BOUND-005`)
 
 Manual/semantic checks:
 - UI label bolding (`MIC-001`)
@@ -54,3 +66,9 @@ Manual/semantic checks:
 - `must`/`should` intent correctness (`TERM-003`)
 - Remediation quality (`QUAL-002`)
 - Roadmap language context (`VOI-004`)
+- Promotional framing (`TONE-003`)
+- Vague future promises (`TONE-004`)
+- Single Diataxis responsibility (`BOUND-001`)
+- Forbidden content for doc-type (`BOUND-002`)
+- Property list duplication (`BOUND-003`)
+- Procedural steps in explanation pages (`BOUND-004`)

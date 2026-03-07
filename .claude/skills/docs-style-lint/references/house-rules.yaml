@@ -5,7 +5,7 @@ rules:
   - id: STR-001
     category: structure
     severity: blocker
-    scope: [tutorial, how-to, conceptual, overview, reference, troubleshooting, release-notes, migration]
+    scope: [tutorial, how-to, explanation, overview, reference, troubleshooting, release-notes, migration]
     pattern: "exactly one H1 per page"
     pass_criteria: "count(H1) + count(frontmatter title) == 1; frontmatter title counts as the H1 because Docusaurus renders it as the page H1"
     rationale: "Each page uses one title anchor. Docusaurus auto-generates the H1 from frontmatter title, so an explicit # heading in the body is not needed and would create a duplicate."
@@ -170,7 +170,7 @@ rules:
   - id: TERM-001
     category: terminology
     severity: major
-    scope: [tutorial, conceptual, overview, release-notes]
+    scope: [tutorial, explanation, overview, release-notes]
     pattern: "acronym first-use expansion"
     pass_criteria: "first use of acronym includes expanded term"
     rationale: "Introductory sections expand acronyms before short form."
@@ -243,3 +243,132 @@ rules:
     do_example: "Try upgrading the NuGet package..."
     dont_example: "Only root-cause explanation with no action"
     automated: false
+
+  # --- Anti-marketing rules (TONE) ---
+
+  - id: TONE-001
+    category: tone
+    severity: blocker
+    scope: [all]
+    pattern: "banned marketing buzzwords"
+    pass_criteria: "text contains none of the banned marketing terms"
+    rationale: "Documentation states facts. Marketing buzzwords erode trust and add no information."
+    banned_terms:
+      - powerful
+      - seamless
+      - elegant
+      - best-in-class
+      - world-class
+      - cutting-edge
+      - game-changing
+      - leverage (vague/promotional)
+      - unlock (vague/promotional)
+      - empower
+      - delightful
+      - blazing fast
+      - robust (vague/promotional)
+      - state-of-the-art
+      - next-generation
+      - revolutionary
+      - groundbreaking
+      - innovative (vague/promotional)
+    do_example: "Avalonia renders UI on all supported platforms using Skia."
+    dont_example: "Avalonia is a powerful, cutting-edge framework that delivers a seamless experience."
+    automated: true
+
+  - id: TONE-002
+    category: tone
+    severity: blocker
+    scope: [all]
+    pattern: "unsupported superlatives"
+    pass_criteria: "no superlatives without measurable evidence in the same sentence or paragraph"
+    rationale: "Superlatives require proof. Without evidence they are marketing claims."
+    flagged_terms:
+      - the fastest
+      - the most
+      - the best
+      - the only
+      - unmatched
+      - unparalleled
+    do_example: "Avalonia supports Windows, macOS, Linux, iOS, Android, and browser targets."
+    dont_example: "Avalonia is the best cross-platform framework available."
+    automated: partial
+
+  - id: TONE-003
+    category: tone
+    severity: major
+    scope: [all]
+    pattern: "promotional framing"
+    pass_criteria: "page describes what the feature does, not why the reader should be excited"
+    rationale: "Docs inform; they do not sell. Feature descriptions state behavior and usage."
+    do_example: "The `CompositionAnimator` runs animations on a dedicated render thread."
+    dont_example: "You'll love how smooth animations feel thanks to our dedicated render thread!"
+    automated: false
+
+  - id: TONE-004
+    category: tone
+    severity: major
+    scope: [all]
+    pattern: "vague future promises"
+    pass_criteria: "future-tense claims include a version number, issue link, or timeline"
+    rationale: "Undated promises become stale and mislead readers."
+    do_example: "Fluent theme v2 is tracked in issue #12345, targeting v12.0."
+    dont_example: "Exciting improvements are coming soon!"
+    automated: false
+
+  # --- Content boundary rules (BOUND) ---
+
+  - id: BOUND-001
+    category: content-boundary
+    severity: major
+    scope: [all]
+    pattern: "single Diataxis responsibility"
+    pass_criteria: "page content aligns with one declared doc-type; does not substantially overlap another type"
+    rationale: "Mixed-purpose pages cause duplication and confuse maintenance. Each page serves one Diataxis role."
+    do_example: "A how-to page that solves one task and links to reference for property details."
+    dont_example: "A how-to page that includes a full property table and a conceptual architecture section."
+    automated: false
+
+  - id: BOUND-002
+    category: content-boundary
+    severity: major
+    scope: [all]
+    pattern: "no forbidden content for declared type"
+    pass_criteria: "page does not contain content listed in its template's forbidden_content"
+    rationale: "Each doc-type has explicit content that belongs elsewhere. Forbidden content should be linked, not duplicated."
+    do_example: "Tutorial links to reference for full property list instead of embedding a table."
+    dont_example: "Tutorial includes a 30-row property table mid-procedure."
+    automated: false
+
+  - id: BOUND-003
+    category: content-boundary
+    severity: major
+    scope: [tutorial, how-to, explanation, overview, troubleshooting, migration]
+    pattern: "link to reference for property lists"
+    pass_criteria: "inline property/API listings limited to 3 items; larger sets link to reference page"
+    rationale: "Reference content belongs on reference pages. Duplicating property lists causes maintenance drift."
+    do_example: "Set `IsVisible`, `Opacity`, and `RenderTransform`. For all appearance properties, see [Control reference](...)."
+    dont_example: "A how-to page listing 15 properties with descriptions inline."
+    automated: false
+
+  - id: BOUND-004
+    category: content-boundary
+    severity: major
+    scope: [explanation]
+    pattern: "explanation pages limit procedural steps"
+    pass_criteria: "explanation pages contain no numbered procedural sequences longer than 3 steps"
+    rationale: "Extended procedures belong in how-to or tutorial pages. Explanation pages explain why, not how."
+    do_example: "Explanation mentions a brief 2-step illustration, then links to a how-to for full procedure."
+    dont_example: "Explanation page contains a 10-step numbered procedure."
+    automated: false
+
+  - id: BOUND-005
+    category: content-boundary
+    severity: major
+    scope: [all]
+    pattern: "doc-type frontmatter present"
+    pass_criteria: "frontmatter includes doc-type field with a valid value from the allowed list"
+    rationale: "Declaring doc-type enables content boundary enforcement. Major (not blocker) to allow incremental adoption."
+    do_example: "---\nid: custom-controls\ntitle: How to create a custom control\ndoc-type: how-to\n---"
+    dont_example: "---\ntitle: Custom controls\n--- (no doc-type field)"
+    automated: true
