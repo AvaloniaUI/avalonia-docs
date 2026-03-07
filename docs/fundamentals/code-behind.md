@@ -1,6 +1,8 @@
 ---
 id: code-behind
 title: Code-behind
+description: Use code-behind files to access controls, set properties, and handle events from XAML.
+doc-type: explanation
 ---
 
 import VsSolutionExplorerScreenshot from '/img/concepts/core-concepts/code-behind/vs-solution-explorer.png';
@@ -9,7 +11,7 @@ In addition to a XAML file, most Avalonia controls have a _code-behind_ file tha
 
 For instance, in the Visual Studio solution explorer, you can see a `MainWindow.axaml` file along with its code-behind file `MainWindow.axaml.cs`:
 
-<p><img src={VsSolutionExplorerScreenshot} className="medium-zoom-image" /></p>
+<p><img src={VsSolutionExplorerScreenshot} className="medium-zoom-image" alt="Visual Studio solution explorer showing a XAML file with its nested code-behind file" /></p>
 
 The code-behind file contains a class that shares the same name as the XAML file. For example:
 

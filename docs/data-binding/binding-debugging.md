@@ -1,6 +1,8 @@
 ---
 id: binding-debugging
-title: Binding Debugging
+title: Binding debugging
+description: Debug data binding errors in Avalonia using trace-level logging and diagnostic output.
+doc-type: how-to
 ---
 
 When a data binding does not produce the expected result, Avalonia provides tools and techniques to diagnose the problem.

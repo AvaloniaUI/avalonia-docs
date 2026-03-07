@@ -1,9 +1,11 @@
 ---
 id: introduction-to-data-templates
 title: Introduction to data templates
+description: Define how Avalonia displays data objects using data templates with type matching and reuse.
+doc-type: overview
 ---
 
-Data Templates in Avalonia provide a powerful way to define the visual representation of your data. They allow you to specify how your data should be presented and formatted, enabling you to create dynamic and customizable user interfaces. This document will introduce you to the concept of Data Templates in Avalonia and demonstrate how to use them effectively in your applications.
+Data templates in Avalonia define the visual representation of your data. They specify how data objects are presented and formatted in the UI. This page introduces data templates and shows how to use them in your applications.
 
 ## What is a data template?
 

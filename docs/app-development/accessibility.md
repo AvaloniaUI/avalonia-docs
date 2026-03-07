@@ -1,6 +1,8 @@
 ---
 id: accessibility
 title: Accessibility
+description: Implement accessible Avalonia apps with AutomationProperties, keyboard navigation, and custom peers.
+doc-type: overview
 ---
 
 Avalonia includes built-in accessibility support through automation peers, which expose your UI to assistive technologies like screen readers. This page covers how to make your Avalonia application accessible to all users.

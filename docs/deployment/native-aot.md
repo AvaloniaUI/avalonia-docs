@@ -1,6 +1,8 @@
 ---
 id: native-aot
 title: Native AOT
+description: Publish Avalonia applications as native executables using ahead-of-time compilation.
+doc-type: how-to
 ---
 
 Native AOT (Ahead-of-Time) compilation allows you to publish your Avalonia applications as self-contained executables with native performance characteristics. This guide covers Avalonia-specific considerations and setup for Native AOT deployment.

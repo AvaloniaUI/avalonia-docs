@@ -1,6 +1,8 @@
 ---
 id: embedding-web-content
 title: Embedding web content
+description: Embed web content in Avalonia apps using NativeWebView, NativeWebDialog, and WebAuthenticationBroker.
+doc-type: how-to
 tags:
   - accelerate
   - xpf
@@ -34,7 +36,7 @@ Add the WebView package to your project:
 dotnet add package Avalonia.Controls.WebView
 ```
 
-## Basic Usage
+## Basic usage
 
 ### NativeWebView
 
@@ -86,7 +88,7 @@ private void NativeWebView_OnWebMessageReceived(object? sender, WebMessageReceiv
 }
 ```
 
-![alt text](/img/webview.png)
+![NativeWebView control displaying web content in an Avalonia window](/img/webview.png)
 
 ### NativeWebDialog
 
@@ -128,7 +130,7 @@ if (result.CallbackUri != null)
 
 Replace `YOUR_CLIENT_ID` with the client ID for your application.
 
-## Platform Prerequisites
+## Platform prerequisites
 
 The WebView component relies on native web rendering implementations that must be available on the user's machine.
 
@@ -188,7 +190,7 @@ NativeWebDialog also supports libwebkit2gtk-4.0 and soup-2.4 for older Ubuntu di
 
 Requires Android API 21 or higher.
 
-## Native Browser interop
+## Native browser interop
 
 The Avalonia WebView component provides cross-platform web content rendering capabilities by utilizing native platform web view.
 However, sometimes you need to access platform-specific APIs that aren't exposed through the Avalonia WebView abstraction layer.
@@ -199,7 +201,7 @@ This document explains how to obtain native handles and perform interop with the
 
 To access native browser functionality, you first need to obtain the platform-specific handle from your WebView control.
 
-#### For WebView Controls
+#### For WebView controls
 
 Use the `TryGetPlatformHandle()` method on your WebView instance:
 
@@ -210,7 +212,7 @@ if (myWebView.TryGetPlatformHandle() is IWindowsWebView2PlatformHandle handle)
 }
 ```
 
-#### For WebView Dialogs
+#### For WebView dialogs
 
 Use the `TryGetWebViewPlatformHandle()` method on your WebView dialog instance:
 

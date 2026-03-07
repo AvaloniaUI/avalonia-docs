@@ -1,6 +1,8 @@
 ---
 id: how-to-bind-to-an-observable
 title: How to bind to an observable
+description: Bind control properties to IObservable streams for reactive data updates in the UI.
+doc-type: how-to
 ---
 
 Avalonia supports binding directly to `IObservable<T>` properties using the `^` (stream binding) operator. Each time the observable produces a new value, the binding updates automatically.

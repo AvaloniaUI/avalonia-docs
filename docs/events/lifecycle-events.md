@@ -1,6 +1,8 @@
 ---
 id: lifecycle-events
-title: Lifecycle Events
+title: Lifecycle events
+description: Control initialization, visual tree attachment, and teardown events in Avalonia.
+doc-type: reference
 ---
 
 Avalonia controls raise several events during their creation, attachment to the visual tree, and removal. Understanding the order and purpose of these events is important for initializing controls, loading data, and cleaning up resources.

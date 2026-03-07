@@ -1,6 +1,8 @@
 ---
 id: creating-data-templates-in-code
 title: Creating data templates in code
+description: Create data templates in C# using FuncDataTemplate or by implementing IDataTemplate.
+doc-type: how-to
 ---
 
 ## `FuncDataTemplate`

@@ -1,6 +1,8 @@
 ---
 id: resource-dictionary
 title: Creating a resource dictionary
+description: Create, include, and merge resource dictionary files to organize reusable XAML resources.
+doc-type: how-to
 ---
 
 You will often need to standardise graphical fundamentals such as (but not limited to) brushes and colors in your applications. You can define these as resources at various levels in your Avalonia application, as well as in files that can be included as required.
@@ -99,7 +101,7 @@ To add a resource dictionary file, follow this procedure:
 -  Click **Add**, then **New Item**.
 -  Click **Avalonia** in the list on the left:
 
-<img src="/img/gitbook-import/assets/image (8) (1) (2).png" alt=""/>
+<img src="/img/gitbook-import/assets/image (8) (1) (2).png" alt="Add New Item dialog showing Avalonia resource dictionary templates"/>
 
 -  Click **Resource Dictionary (Avalonia)**.
 -  Type the file name you want to use.
@@ -174,7 +176,7 @@ Here the border control is using the resource with the key 'Warning'. This is de
 
 Resources can be included from a resource dictionary file, and merged with the resources defined in another file (even if there are not any).
 
-<img src="/img/gitbook-import/assets/image (1) (4).png" alt=""/>
+<img src="/img/gitbook-import/assets/image (1) (4).png" alt="Solution Explorer showing resource dictionary file included in a project"/>
 
 In case, if you would like to merge resource dictionary on the whole application level, you have to declare a resource dictionary in the in the **Application.Resources** section of application XAML **App.axaml** file, like this
 
@@ -190,7 +192,7 @@ In case, if you would like to merge resource dictionary on the whole application
 
 You can also merge resource dictionary to declare merged resources to be specific to a style.
 
-<img src="/img/gitbook-import/assets/image (1) (3).png" alt=""/>
+<img src="/img/gitbook-import/assets/image (1) (3).png" alt="Merged resource dictionary structure in a styles file"/>
 
 This means that you can implement styles in one file, and use resources defined in another. This keeps your styling consistent, and your application solution well organised and easy to maintain.
 

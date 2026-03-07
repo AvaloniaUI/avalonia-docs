@@ -1,6 +1,8 @@
 ---
 id: defining-events
 title: Defining events
+description: Define and raise routed events on custom Avalonia controls with tunneling and bubbling strategies.
+doc-type: how-to
 ---
 
 Events in Avalonia allow your custom controls to communicate and notify users of specific actions or occurrences. By defining events, you provide a way for users of your controls to respond and react to these events within their applications. This document will guide you through the process of defining events for your custom controls.

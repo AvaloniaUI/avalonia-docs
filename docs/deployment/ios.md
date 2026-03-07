@@ -1,6 +1,8 @@
 ---
 id: ios
 title: iOS
+description: Build, sign, and distribute an Avalonia application for iPhone, iPad, and Mac Catalyst.
+doc-type: how-to
 ---
 
 ## Running on a simulator

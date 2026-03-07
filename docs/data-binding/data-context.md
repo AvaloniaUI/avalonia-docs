@@ -1,6 +1,8 @@
 ---
 id: data-context
 title: Data context
+description: Understand how DataContext provides the default data source for bindings and inherits through the control tree.
+doc-type: explanation
 ---
 
 import DataContextOverviewDiagram from '/img/concepts/data-concepts/data-context/data-context-overview.png';
@@ -10,13 +12,13 @@ import DataContextPreviewerScreenshot from '/img/concepts/data-concepts/data-con
 
 When Avalonia performs data binding, it has to locate an application object to bind to. This location is represented by a **Data Context**.
 
-<img src={DataContextOverviewDiagram} alt=''/>
+<img src={DataContextOverviewDiagram} alt="Diagram showing how data context connects controls to view model properties"/>
 
 Every control in Avalonia has a property called `DataContext`, and this includes built-in controls, user controls and windows.
 
 When binding, Avalonia performs a hierarchical search of the logical control tree, starting with the control where the binding is defined, until it finds a data context to use.
 
-<img src={DataContextTreeSearchDiagram} alt=''/>
+<img src={DataContextTreeSearchDiagram} alt="Diagram showing data context inheritance through the control tree"/>
 
 This means that a control defined in a window can use the data context of the window; or (as above) a control in a control in a window can use the window's data context.
 
@@ -76,13 +78,13 @@ In the main window file **MainWindow.axaml** you can see that the window content
 
 When the project runs, the data binder searches up the logical control tree from the text block and finds a data context set at the main window level. So the bound text appears as:
 
-<img src={DataContextGreetingBindingScreenshot} alt=""/>
+<img src={DataContextGreetingBindingScreenshot} alt="App window showing a greeting bound from the data context"/>
 
 ## Design data context
 
 You may have noticed, after you first compiled this project, that the preview pane also shows the greeting.
 
-<img src={DataContextPreviewerScreenshot} alt=""/>
+<img src={DataContextPreviewerScreenshot} alt="Design-time preview showing bound data context values"/>
 
 This is because Avalonia can also set a data context for a control for use at design-time. You will find this useful because it means that the preview pane can show some realistic data while you adjust layout and styles.
 

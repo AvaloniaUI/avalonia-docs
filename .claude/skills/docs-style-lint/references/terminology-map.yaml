@@ -163,6 +163,47 @@ forbidden_marketing_terms:
     rule: TONE-001
     context_dependent: true
 
+framework_jargon:
+  description: >
+    Avalonia-specific terms that newcomers may not know. On introductory pages
+    (tutorials, overviews), these must be explained inline or linked to an
+    explanation page on first use. On reference and explanation pages, they
+    may be used without introduction. Rule: TERM-004.
+  terms:
+    - term: visual tree
+      definition: "The rendered hierarchy of controls that Avalonia draws on screen."
+      link_target: concepts/the-visual-tree
+    - term: logical tree
+      definition: "The declared hierarchy of controls as written in XAML."
+      link_target: concepts/the-logical-tree
+    - term: data template
+      definition: "A reusable XAML fragment that defines how a data object is displayed."
+      link_target: concepts/data-templates
+    - term: control theme
+      definition: "A set of styles that define the default appearance and behavior of a control."
+      link_target: styling/control-themes
+    - term: style selector
+      definition: "A pattern that matches controls for applying styles, similar to CSS selectors."
+      link_target: styling/style-selectors
+    - term: binding expression
+      definition: "A XAML expression that connects a control property to a data source."
+      link_target: data-binding/bindings
+    - term: value converter
+      definition: "An object that transforms data between source and target during binding."
+      link_target: data-binding/value-converters
+    - term: content presenter
+      definition: "A control that displays the content of a templated parent."
+      link_target: controls/contentpresenter
+    - term: items presenter
+      definition: "A control that generates and displays items from a collection."
+      link_target: controls/itemspresenter
+    - term: template part
+      definition: "A named element inside a control template that the control logic references."
+      link_target: styling/control-themes
+    - term: pseudo-class
+      definition: "A state-based selector (like :pointerover or :pressed) used in styles."
+      link_target: styling/pseudo-classes
+
 strength_of_language:
   must:
     meaning: "hard requirement or correctness/security constraint"

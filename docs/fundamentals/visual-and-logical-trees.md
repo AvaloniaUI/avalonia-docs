@@ -1,6 +1,8 @@
 ---
 id: visual-and-logical-trees
-title: Visual and Logical Trees
+title: Visual and logical trees
+description: Understand the logical and visual tree structures used for layout, rendering, and events.
+doc-type: explanation
 ---
 
 Avalonia organizes controls into two parallel tree structures: the logical tree and the visual tree. Understanding these trees is important for resource lookup, event routing, styling, and custom control development.

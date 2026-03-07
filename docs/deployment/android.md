@@ -1,6 +1,8 @@
 ---
 id: android
 title: Android
+description: Build, sign, and publish an Avalonia application as an APK or AAB for Android devices.
+doc-type: how-to
 ---
 
 Publishing an Avalonia app for Android generates an Android Package (APK) or Android App Bundle (AAB) file. The APK is used for installing your app directly to an Android device, and the AAB is used to publish your app to Google Play.

@@ -1,6 +1,8 @@
 ---
 id: embedded-linux
 title: Embedded Linux
+description: Publish, transfer, and run an Avalonia application on an embedded Linux device using DRM/KMS.
+doc-type: how-to
 ---
 
 Deploying an Avalonia application to an embedded Linux device differs from desktop deployment in several ways. There is no package manager on the target (in most cases), no desktop environment to integrate with, and the application typically runs as the sole graphical process. This page covers publishing, transferring, and running your application on an embedded Linux target.

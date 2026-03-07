@@ -1,17 +1,19 @@
 ---
 id: threading
-title: Threading Model
+title: Threading model
+description: Learn how Avalonia's single-threaded UI model works with dispatchers, async patterns, and background tasks.
+doc-type: explanation
 ---
 
 Avalonia uses a single-threaded UI model. All interactions with the UI, including reading or writing control properties, must happen on the UI thread. This is the same threading model used by WPF, WinForms, and most desktop UI frameworks.
 
-## The UI Thread
+## The UI thread
 
 When your application starts, Avalonia creates a dispatcher that manages work items for the UI thread. All control creation, layout, rendering, and input processing happens on this thread.
 
 If you attempt to access a control from a background thread, Avalonia throws an `InvalidOperationException` with the message "Call from invalid thread."
 
-## Accessing a Dispatcher
+## Accessing a dispatcher
 
 ### Dispatcher.UIThread
 
@@ -95,7 +97,7 @@ if (dispatcher is not null)
 }
 ```
 
-## Dispatcher Priority
+## Dispatcher priority
 
 Both `Post` and `InvokeAsync` accept an optional `DispatcherPriority` parameter that controls when the work item runs relative to other queued items:
 
@@ -120,7 +122,7 @@ Common priorities, from highest to lowest:
 | `ApplicationIdle` | Processed when the application is idle. |
 | `SystemIdle` | Processed when the system is idle. |
 
-## Async Patterns
+## Async patterns
 
 ### Background work with UI updates
 
@@ -226,7 +228,7 @@ For non-static usage or when working with a specific dispatcher instance, use `R
 await myControl.Dispatcher.Resume(DispatcherPriority.Background);
 ```
 
-## Full Example
+## Full example
 
 This example shows how to access the UI thread from a worker thread to update or get the text of a `TextBlock`:
 
@@ -274,7 +276,7 @@ public partial class MainView : UserControl
 }
 ```
 
-## Common Mistakes
+## Common mistakes
 
 ### Accessing controls from Task.Run
 
@@ -311,7 +313,7 @@ private void OnButtonClick(object? sender, RoutedEventArgs e)
 }
 ```
 
-## See Also
+## See also
 
 - [`Dispatcher` API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Threading_Dispatcher)
 - [Application Lifetimes](/docs/fundamentals/application-lifetimes): How the application lifecycle interacts with threading.

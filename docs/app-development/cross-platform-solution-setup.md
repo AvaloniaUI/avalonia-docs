@@ -1,15 +1,17 @@
 ---
 index: cross-platform-solution-setup
 title: Setting up a cross-platform solution
+description: Structure an Avalonia solution with a shared core project and platform-specific project heads.
+doc-type: explanation
 ---
 
-Despite the platform diversity, Avalonia projects all leverage the same solution file format (the Visual Studio `.SLN` file format). Solutions can be shared across development environments, providing a unified approach to multi-platform app development.
+Despite the platform diversity, Avalonia projects all use the same solution file format (the Visual Studio `.SLN` file format). Solutions can be shared across development environments, providing a unified approach to multi-platform app development.
 
 The first step to creating a new cross platform application is to create a solution. This section will elaborate on what happens next: the process of setting up the projects for building cross-platform applications with Avalonia.
 
 ## Populating the solution
 
-The `Avalonia Cross Platform Application` template creates a solution structure that includes the following projects to allow seamless sharing and reusability of code across multiple platforms:
+The `Avalonia Cross Platform Application` template creates a solution structure that includes the following projects to allow sharing and reuse of code across multiple platforms:
 
 :::info
 [Ensure you've installed the Avalonia Templates.](/docs/get-started/#installing-avalonia-templates)

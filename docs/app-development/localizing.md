@@ -1,6 +1,8 @@
 ---
 id: localizing
 title: Localizing using ResX
+description: Localize Avalonia apps with ResX resource files, runtime language switching, and RTL support.
+doc-type: tutorial
 ---
 
 Localization is a crucial step in delivering a great user experience for a global audience. In .NET, the `ResXResourceReader` and `ResXResourceWriter` classes are used to read and write resources in an XML-based format (.resx). This guide will walk you through the process of localizing an Avalonia application using ResX files.

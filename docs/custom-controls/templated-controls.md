@@ -1,6 +1,8 @@
 ---
 id: templated-controls
-title: How To Create Templated Controls
+title: How to create templated controls
+description: Build lookless templated controls with control themes, template parts, and pseudo-classes.
+doc-type: how-to
 ---
 
 Templated controls are controls whose appearance is defined entirely by a `ControlTemplate`. This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls because the control class itself contains no rendering code.

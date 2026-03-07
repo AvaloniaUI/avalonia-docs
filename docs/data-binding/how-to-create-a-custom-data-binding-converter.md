@@ -1,6 +1,8 @@
 ---
 id: how-to-create-a-custom-data-binding-converter
-title: How to Create a Custom Data Binding Converter
+title: How to create a custom data binding converter
+description: Implement IValueConverter to transform data between source and target in Avalonia bindings.
+doc-type: how-to
 ---
 
 

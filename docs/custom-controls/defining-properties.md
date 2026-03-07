@@ -1,6 +1,8 @@
 ---
 id: defining-properties
 title: Defining properties
+description: Define styled, direct, and attached properties on custom Avalonia controls.
+doc-type: how-to
 ---
 
 import DefiningPropertyPreviewScreenshot from '/img/guides/ui-development/custom-controls/defining-property-preview.png';
@@ -94,7 +96,7 @@ Note that the getter/setter of the property uses the special Avalonia `GetValue`
 
 The styled property will work both at run-time and in the preview panel.
 
-<img src={DefiningPropertyPreviewScreenshot} alt=''/>
+<img src={DefiningPropertyPreviewScreenshot} alt="Preview of a custom control with a defined property"/>
 
 ## See also
 

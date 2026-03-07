@@ -1,6 +1,8 @@
 ---
 id: native-interop
-title: Native Platform Interop
+title: Native platform interop
+description: Access native platform APIs, embed native views, and use P/Invoke in Avalonia applications.
+doc-type: overview
 ---
 
 Avalonia provides several mechanisms for interacting with native platform APIs and embedding native content within your application.

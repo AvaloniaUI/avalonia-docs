@@ -1,6 +1,8 @@
 ---
 id: how-to-bind-to-a-collection
-title: How to Bind to a Collection
+title: How to bind to a collection
+description: Bind an ObservableCollection to list controls so the UI updates when items are added or removed.
+doc-type: how-to
 ---
 
 

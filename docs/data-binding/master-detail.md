@@ -1,6 +1,8 @@
 ---
 id: master-detail
-title: Master-Detail Binding
+title: Master-detail binding
+description: Implement master-detail patterns where selecting an item displays its details in a bound view.
+doc-type: how-to
 ---
 
 A master-detail pattern displays a list of items (the "master") alongside the details of the selected item. This is one of the most common UI patterns, used in email clients, settings screens, file managers, and many other applications.

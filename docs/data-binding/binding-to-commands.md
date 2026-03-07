@@ -1,6 +1,8 @@
 ---
 id: binding-to-commands
-title: Binding to Commands
+title: Binding to commands
+description: Bind UI controls to ICommand implementations for handling user actions in the MVVM pattern.
+doc-type: explanation
 ---
 
 Commands provide a clean way to connect user interactions (button clicks, menu selections, keyboard shortcuts) to logic in your view model. This page covers binding controls to commands using `ICommand`.

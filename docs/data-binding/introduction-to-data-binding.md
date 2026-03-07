@@ -1,6 +1,8 @@
 ---
 id: introduction-to-data-binding
 title: Introduction to data binding
+description: Learn how Avalonia data binding connects UI controls to data sources using XAML markup extensions.
+doc-type: overview
 ---
 
 import DataBindingDiagram from '@site/src/components/global/DataBindingDiagram/DataBindingDiagram';

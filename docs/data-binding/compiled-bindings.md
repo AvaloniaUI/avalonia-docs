@@ -1,6 +1,8 @@
 ---
 id: compiled-bindings
 title: Compiled bindings
+description: Use compiled bindings for compile-time validation and improved performance in Avalonia XAML.
+doc-type: how-to
 ---
 
 Bindings defined in the XAML are using reflection to find and access the requested property in your `ViewModel`. In Avalonia you can also use compiled bindings, which has some benefits:

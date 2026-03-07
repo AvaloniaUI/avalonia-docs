@@ -1,6 +1,8 @@
 ---
 id: how-to-bind-to-a-task-result
-title: How to Bind to a Task Result
+title: How to bind to a task result
+description: Bind control properties to the result of an async Task to display data when it completes.
+doc-type: how-to
 ---
 
 Avalonia can bind directly to `Task<T>` properties using the `^` (stream binding) operator. The binding displays the result once the task completes.

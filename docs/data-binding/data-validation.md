@@ -1,6 +1,8 @@
 ---
 id: binding-validation
-title: Validation in Data Binding
+title: Validation in data binding
+description: Validate bound data using DataAnnotations, INotifyDataErrorInfo, or exception-based approaches.
+doc-type: how-to
 ---
 
 Avalonia supports data validation through the standard .NET validation mechanisms. When a bound property fails validation, the control displays an error indicator and the validation message.

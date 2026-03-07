@@ -1,11 +1,13 @@
 ---
 id: performance
-title: Performance Optimization
+title: Performance optimization
+description: Optimize Avalonia app performance with virtualization, layout efficiency, compiled bindings, and profiling.
+doc-type: how-to
 ---
 
 This guide covers common performance considerations for Avalonia applications and techniques to keep your UI responsive.
 
-## UI Virtualization
+## UI virtualization
 
 When displaying large collections, virtualization ensures only visible items are created and rendered. Avalonia's `ListBox`, `TreeView`, `DataGrid`, and `ItemsRepeater` support virtualization by default.
 
@@ -70,7 +72,7 @@ Virtualization requires a constrained height. If the items control is inside a `
 
 A `BufferFactor` of `1` realizes items across one extra viewport height above and below the visible area. The default is `0` (no buffer). Higher values use more memory but produce smoother scrolling for complex item templates.
 
-## Layout Performance
+## Layout performance
 
 ### Avoid deep nesting
 
@@ -122,7 +124,7 @@ using (myPanel.BeginBatchUpdate())
 }
 ```
 
-## Rendering Performance
+## Rendering performance
 
 ### Use ClipToBounds judiciously
 
@@ -185,7 +187,7 @@ For images that do not need high-quality scaling, use a lower interpolation mode
        RenderOptions.BitmapInterpolationMode="LowQuality" />
 ```
 
-## Data Binding Performance
+## Data binding performance
 
 ### Use compiled bindings
 
@@ -224,7 +226,7 @@ If a value is set once and never changes, use `OneTime` mode to avoid ongoing ch
 <TextBlock Text="{Binding Version, Mode=OneTime}" />
 ```
 
-## Collection Performance
+## Collection performance
 
 ### Use ObservableCollection for small-to-medium lists
 
@@ -248,7 +250,7 @@ OnPropertyChanged(nameof(Items));
 
 For collections with frequent sorting, filtering, or complex transformations, [DynamicData](https://github.com/reactivemarbles/DynamicData) provides optimized reactive pipelines that minimize UI updates.
 
-## Async and Threading
+## Async and threading
 
 ### Keep the UI thread free
 
@@ -305,7 +307,7 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-## See Also
+## See also
 
 - [Threading Model](/docs/app-development/threading): UI thread and Dispatcher usage.
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): Compile-time binding validation and performance.

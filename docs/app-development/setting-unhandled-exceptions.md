@@ -1,6 +1,8 @@
 ---
 id: setting-unhandled-exceptions
-title: Handling Unhandled Exceptions
+title: Handling unhandled exceptions
+description: Handle unhandled exceptions in Avalonia apps from the UI thread, background threads, and tasks.
+doc-type: how-to
 ---
 
 Production applications need a strategy for catching exceptions that escape normal error handling. Avalonia provides several mechanisms for intercepting unhandled exceptions on the UI thread and from background tasks.
@@ -110,7 +112,7 @@ This event is informational only. You cannot prevent the application from termin
 
 ## Recommended strategy
 
-A robust exception handling setup combines multiple layers:
+A reliable exception handling setup combines multiple layers:
 
 ```csharp title="Program.cs"
 public static void Main(string[] args)

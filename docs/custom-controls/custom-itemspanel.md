@@ -1,6 +1,8 @@
 ---
 id: custom-itemspanel
 title: Custom ItemsPanel
+description: Replace the default items panel in an ItemsControl with a custom panel like Canvas.
+doc-type: how-to
 ---
 
 import ItemsControlCanvasScreenshot from '/img/guides/ui-development/custom-controls/itemscontrol-with-canvas.png';
@@ -15,7 +17,7 @@ All `ItemsControl`s have an item container panel which is used to layout their i
 - [`ListBox`](/controls/data-display/collections/listbox) 
 
 ## Example
-This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas` and we use a style to position the `Rectangle` within the `Canvas`.
+This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas`, and a style positions each `Rectangle` within the `Canvas`.
 
 ```xml
 <ItemsControl ItemsSource="{Binding TileList}">
@@ -66,7 +68,7 @@ namespace AvaloniaControls.ViewModels
 public record Tile(int Size, int TopX, int TopY);
 ```
 
-<img src={ItemsControlCanvasScreenshot} alt="" />
+<img src={ItemsControlCanvasScreenshot} alt="ItemsControl with a Canvas panel displaying positioned rectangles" />
 
 ## See also
 

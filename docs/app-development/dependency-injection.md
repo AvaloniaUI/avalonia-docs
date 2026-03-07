@@ -1,6 +1,8 @@
 ---
 id: dependency-injection
 title: Implementing dependency injection
+description: Set up dependency injection in an Avalonia app using Microsoft.Extensions.DependencyInjection.
+doc-type: tutorial
 ---
 
 [Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It accomplishes this by creating discrete services that are passed around/created as needed.

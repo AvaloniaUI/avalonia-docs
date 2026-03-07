@@ -1,6 +1,8 @@
 ---
 id: data-template-collection
 title: Data template collection
+description: Define multiple data templates in a control's DataTemplates collection to match by type.
+doc-type: explanation
 ---
 
 import DataTemplatesCollectionStudentScreenshot from '/img/concepts/data-concepts/data-templates/data-template-collection/datatemplates-collection-student.png';
@@ -39,11 +41,11 @@ So you can modify the previous sample to use the `DataTemplates` collection, as 
 
 This results in exactly the same display as on the previous page:
 
-<img src={DataTemplatesCollectionStudentScreenshot} alt=""/>
+<img src={DataTemplatesCollectionStudentScreenshot} alt="Window displaying student first and last name using a data template from the DataTemplates collection"/>
 
 ## Multiple data templates by type
 
-The real power of the `DataTemplates` collection is selecting different templates for different types. When Avalonia encounters an object, it searches the `DataTemplates` collection for a template whose `DataType` matches the object's type:
+The `DataTemplates` collection can select different templates for different types. When Avalonia encounters an object, it searches the `DataTemplates` collection for a template whose `DataType` matches the object's type:
 
 ```xml
 <Window.DataTemplates>

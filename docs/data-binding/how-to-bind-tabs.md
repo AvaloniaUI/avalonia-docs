@@ -1,6 +1,8 @@
 ---
 id: how-to-bind-tabs
 title: How to bind tabs
+description: Bind a TabControl to a collection of view models to create dynamic tabbed interfaces.
+doc-type: how-to
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 id: index
-title: Events Overview
+title: Events overview
+description: Understand how routed events travel through the element tree in Avalonia.
+doc-type: overview
 ---
 
 Avalonia uses a routed event system similar to WPF. Routed events can travel through the element tree, allowing parent elements to handle events raised by their children. This is fundamental to how input, interaction, and control behavior work in Avalonia.

@@ -1,6 +1,8 @@
 ---
 id: attached-properties
 title: How to create attached properties
+description: Define attached properties that can be set on other controls, like layout positioning properties.
+doc-type: how-to
 ---
 
 When you need additional properties on Avalonia elements that are not part of the element's own class, attached properties are the right tool. You can also use them to create behaviors that modify hosted controls. For example, you can bind a command to an event using an attached property.

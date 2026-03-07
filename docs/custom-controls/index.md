@@ -2,6 +2,8 @@
 id: index
 title: Creating custom controls
 sidebar_position: 1
+description: Overview of approaches for building custom controls in Avalonia, from user controls to templated controls.
+doc-type: overview
 ---
 
 ## Custom controls
@@ -61,7 +63,7 @@ The naming convention of the property and its backing `AvaloniaProperty` field i
 
 Sometimes the property you want to add to your control already exists on another control, `Background` being a good example. To register a property defined on another control, you call `StyledProperty.AddOwner`:
 
-```csharpharp
+```csharp
 public static readonly StyledProperty<IBrush> BackgroundProperty =
     Border.BackgroundProperty.AddOwner<Panel>();
 
@@ -80,7 +82,7 @@ Unlike WPF/UWP, a property must be registered on a class otherwise it cannot be 
 
 To create a readonly property you use the `AvaloniaProperty.RegisterDirect` method. Here is how `Visual` registers the readonly `Bounds` property:
 
-```csharpharp
+```csharp
 public static readonly DirectProperty<Visual, Rect> BoundsProperty =
     AvaloniaProperty.RegisterDirect<Visual, Rect>(
         nameof(Bounds),
@@ -103,7 +105,7 @@ As can be seen, readonly properties are stored as a field on the object. When re
 
 Here's how `Grid` defines its `Grid.Column` attached property:
 
-```csharpharp
+```csharp
 public static readonly AttachedProperty<int> ColumnProperty =
     AvaloniaProperty.RegisterAttached<Grid, Control, int>("Column");
 
@@ -126,7 +128,7 @@ A `StyledProperty` which is registered using `AvaloniaProperty.Register` maintai
 
 Here is how `ItemsControl.Items` is registered:
 
-```csharpharp
+```csharp
 public static readonly DirectProperty<ItemsControl, IEnumerable> ItemsProperty =
     AvaloniaProperty.RegisterDirect<ItemsControl, IEnumerable>(
         nameof(Items),
@@ -162,7 +164,7 @@ They don't support the following:
 
 In the same way that you can call `AddOwner` on a styled property, you can also add an owner to a direct property. Because direct properties reference fields on the control, you must also add a field for the property:
 
-```csharpharp
+```csharp
 public static readonly DirectProperty<MyControl, IEnumerable> ItemsProperty =
     ItemsControl.ItemsProperty.AddOwner<MyControl>(
         o => o.Items,

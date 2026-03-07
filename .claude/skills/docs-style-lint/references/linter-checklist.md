@@ -39,6 +39,11 @@ Severity levels:
 | `BOUND-003` | major | non-reference pages | Inline property/API lists limited to 3 items; larger sets link to reference. | Duplicated property tables instead of linking to reference. |
 | `BOUND-004` | major | explanation | No numbered procedural sequences longer than 3 steps. | Extended procedure in an explanation page. |
 | `BOUND-005` | major | all pages | Frontmatter includes `doc-type` field with valid value. | Missing `doc-type` in frontmatter. |
+| `ACC-001` | major | all pages | All images have non-empty alt text. | `![](path)` with empty alt text. |
+| `SEO-001` | major | all pages | Frontmatter `description` present, 50-160 characters, no marketing buzzwords. | Missing or malformed meta description. |
+| `SEO-002` | minor | all pages | Frontmatter `title` is <= 60 characters. | Title too long for search result display. |
+| `TERM-004` | major | tutorial, overview | Avalonia jargon explained inline or linked on first use. | Framework-specific terms used without introduction on introductory pages. |
+| `QUAL-003` | minor | task pages | Average sentence length <= 25 words; no sentences over 40 words. | Dense, complex sentences on action-oriented pages. |
 
 ## Automation notes
 
@@ -58,6 +63,10 @@ Fast automatable checks:
 - Marketing buzzword scan (`TONE-001`)
 - Superlative detection (`TONE-002`, partial: detects terms but evidence check is manual)
 - `doc-type` frontmatter presence (`BOUND-005`)
+- Image alt text presence (`ACC-001`)
+- Frontmatter `description` presence and length (`SEO-001`)
+- Frontmatter `title` length (`SEO-002`)
+- Sentence length statistics (`QUAL-003`, partial: word counts are automatable but flagged sentences need human review for splitting)
 
 Manual/semantic checks:
 - UI label bolding (`MIC-001`)
@@ -72,3 +81,4 @@ Manual/semantic checks:
 - Forbidden content for doc-type (`BOUND-002`)
 - Property list duplication (`BOUND-003`)
 - Procedural steps in explanation pages (`BOUND-004`)
+- Framework jargon explanation on introductory pages (`TERM-004`)

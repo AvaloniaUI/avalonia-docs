@@ -373,3 +373,82 @@ rules:
     do_example: "---\nid: custom-controls\ntitle: How to create a custom control\ndoc-type: how-to\n---"
     dont_example: "---\ntitle: Custom controls\n--- (no doc-type field)"
     automated: true
+
+  # --- Accessibility rules (ACC) ---
+
+  - id: ACC-001
+    category: accessibility
+    severity: major
+    scope: [all]
+    pattern: "image alt text required"
+    pass_criteria: "all Markdown images have non-empty alt text: ![description](path)"
+    rationale: "Empty alt text fails accessibility standards and reduces SEO value. Every image must describe its content for screen readers."
+    do_example: "![Dialog showing the property editor with IsVisible selected](images/property-editor.png)"
+    dont_example: "![](images/property-editor.png)"
+    automated: true
+
+  # --- SEO rules (SEO) ---
+
+  - id: SEO-001
+    category: seo
+    severity: major
+    scope: [all]
+    pattern: "frontmatter description present and well-formed"
+    pass_criteria: "frontmatter includes description field; length is 50-160 characters; no marketing buzzwords (TONE-001 terms)"
+    rationale: "Docusaurus uses frontmatter description for the meta description tag. Missing or poor descriptions hurt search discoverability."
+    do_example: "---\ntitle: How to create a custom control\ndescription: Create a reusable custom control with styled properties and a control theme.\n---"
+    dont_example: "---\ntitle: Custom controls\n--- (no description field)"
+    automated: true
+
+  - id: SEO-002
+    category: seo
+    severity: minor
+    scope: [all]
+    pattern: "title length for SEO"
+    pass_criteria: "frontmatter title is <= 60 characters"
+    rationale: "Search engines truncate titles longer than ~60 characters. Shorter titles display fully in search results."
+    do_example: "title: How to create a custom control"
+    dont_example: "title: How to create a custom control with styled properties and a control theme in Avalonia"
+    automated: true
+
+  # --- Extended terminology rules (TERM) ---
+
+  - id: TERM-004
+    category: terminology
+    severity: major
+    scope: [tutorial, overview]
+    pattern: "framework jargon explained on introductory pages"
+    pass_criteria: "Avalonia-specific jargon (visual tree, logical tree, data template, control theme, style selector, binding expression, attached property, styled property, direct property) on tutorial and overview pages is explained inline or linked to a glossary/explanation page on first use"
+    rationale: "Introductory pages serve newcomers. Framework-specific terms that are not standard .NET vocabulary need inline explanation or a link. Inspired by Twilio docs-ai-buddy jargon simplification approach."
+    flagged_terms:
+      - visual tree
+      - logical tree
+      - data template
+      - control theme
+      - style selector
+      - binding expression
+      - attached property
+      - styled property
+      - direct property
+      - value converter
+      - avalonia property
+      - content presenter
+      - items presenter
+      - template part
+      - pseudo-class
+    do_example: "The *visual tree* is the rendered hierarchy of controls that Avalonia draws on screen. For details, see [Visual tree explained](...)."
+    dont_example: "Walk the visual tree to find the parent ContentPresenter."
+    automated: false
+
+  # --- Extended quality rules (QUAL) ---
+
+  - id: QUAL-003
+    category: quality
+    severity: minor
+    scope: [tutorial, how-to, troubleshooting, migration]
+    pattern: "sentence complexity on task pages"
+    pass_criteria: "average sentence length <= 25 words; sentences over 40 words are flagged individually"
+    rationale: "Task-oriented pages (action side of Diataxis) target readers who are doing, not studying. Short, direct sentences reduce cognitive load. Explanation and reference pages are excluded because denser prose is acceptable for cognition-oriented content."
+    do_example: "Set the property to true. The control becomes visible."
+    dont_example: "In order to make the control visible, you need to set the IsVisible property to the boolean value true, which will cause the control to be rendered in the visual tree when the next layout pass occurs."
+    automated: partial

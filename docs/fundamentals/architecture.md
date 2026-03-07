@@ -1,6 +1,8 @@
 ---
 id: architecture
-title: Avalonia Architecture
+title: Avalonia architecture
+description: How controls are measured, arranged, rendered, and connected to platform backends.
+doc-type: explanation
 ---
 
 This page describes the internal architecture of Avalonia: how controls are measured, arranged, and rendered, how the compositor schedules frames, and how platform backends connect to the rendering pipeline.

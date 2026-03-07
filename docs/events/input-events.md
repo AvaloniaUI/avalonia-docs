@@ -1,6 +1,8 @@
 ---
 id: input-events
-title: Input Events
+title: Input events
+description: Handle pointer, keyboard, and gesture input events in Avalonia controls.
+doc-type: reference
 ---
 
 Avalonia provides a comprehensive set of input events for handling pointer (mouse/touch/pen), keyboard, and gesture interactions. Most input events use a combined `Tunnel | Bubble` routing strategy, giving parent elements the opportunity to intercept input before it reaches the target.

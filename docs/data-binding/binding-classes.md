@@ -1,6 +1,8 @@
 ---
 id: binding-classes
 title: How to bind style classes
+description: Bind style classes to boolean properties to conditionally apply styling to Avalonia controls.
+doc-type: how-to
 ---
 
 import BindStyleClassSampleScreenshot from '/img/guides/data/bind-style-class.png';
@@ -77,7 +79,7 @@ public class ItemClass
 }
 ```
 
-<img src={BindStyleClassSampleScreenshot} alt=""/>
+<img src={BindStyleClassSampleScreenshot} alt="Sample app showing style classes toggled by data binding"/>
 
 ## See also
 

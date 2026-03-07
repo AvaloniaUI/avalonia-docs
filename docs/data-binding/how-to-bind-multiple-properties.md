@@ -1,6 +1,8 @@
 ﻿---
 id: how-to-bind-multiple-properties
 title: How to bind multiple properties
+description: Bind multiple view model properties to controls and combine them with multi-value converters.
+doc-type: how-to
 ---
 
 import MultiBindingRgbScreenshot from '/img/guides/data/multibinding-rgb.gif';
@@ -85,7 +87,7 @@ public sealed class RgbToBrushMultiConverter : IMultiValueConverter
 }
 ```
 
-<img src={MultiBindingRgbScreenshot} alt=''/>
+<img src={MultiBindingRgbScreenshot} alt="App showing RGB sliders bound to multiple properties producing a combined color"/>
 
 :::tip
 * Consider creating a `MarkupExtension` to simplify the XAML syntax when a `MultiBinding` is frequently reused.

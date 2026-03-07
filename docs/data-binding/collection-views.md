@@ -1,6 +1,8 @@
 ---
 id: collection-views
-title: Sorting, Filtering, and Grouping Collections
+title: Sorting, filtering, and grouping collections
+description: Sort, filter, and group bound collections using DataGridCollectionView and DynamicData.
+doc-type: how-to
 ---
 
 Avalonia does not include a built-in `ICollectionView` equivalent like WPF. Instead, sorting, filtering, and grouping are typically handled in the view model before binding to controls. This approach keeps the UI layer simple and makes the logic easier to test.

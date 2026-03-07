@@ -1,6 +1,8 @@
 ---
 id: main-window
 title: Main window
+description: Set and access the main window or main view for desktop, mobile, and browser platforms.
+doc-type: explanation
 ---
 
 The main window is the window passed to `ApplicationLifetime.MainWindow` in the `OnFrameworkInitializationCompleted` method of your `App.axaml.cs` file:

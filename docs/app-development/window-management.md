@@ -1,6 +1,8 @@
 ---
 id: window-management
-title: Window Management
+title: Window management
+description: Create, configure, and manage windows and dialogs in Avalonia desktop applications.
+doc-type: overview
 ---
 
 Avalonia provides a flexible windowing system for creating single-window and multi-window desktop applications. This page covers common window management patterns.

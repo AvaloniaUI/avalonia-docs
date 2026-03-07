@@ -1,6 +1,8 @@
 ---
 id: the-mvvm-pattern
 title: The MVVM pattern
+description: Separate UI from logic using the Model-View-ViewModel pattern with data binding.
+doc-type: explanation
 ---
 
 import MvvmPatternDiagram from '/img/concepts/architecture/mvvm/mvvm-architecture.png';

@@ -1,6 +1,8 @@
 ---
 id: how-to-bind-can-execute
 title: How to bind can execute
+description: Enable and disable buttons automatically by binding to the CanExecute method of a command.
+doc-type: how-to
 ---
 
 import BindCanExecuteScreenshot from '/img/guides/data/bind-canexecute.gif';
@@ -119,7 +121,7 @@ In the constructor of the view model, the command is created with two parameters
 
 When the `Message` property changes, `RaiseCanExecuteChanged` notifies the binding system to re-evaluate whether the button should be enabled.
 
-<img src={BindCanExecuteScreenshot} alt=""/>
+<img src={BindCanExecuteScreenshot} alt="App showing a button enabled and disabled based on CanExecute binding"/>
 
 ## See also
 

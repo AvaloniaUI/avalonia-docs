@@ -1,6 +1,8 @@
 ---
 id: top-level
 title: Top level
+description: Access windowing, clipboard, storage, and other services through the TopLevel base class.
+doc-type: reference
 ---
 
 The `TopLevel` acts as the visual root, and is the base class for all top level controls, for example `Window`. It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the `TopLevel`.
@@ -24,7 +26,7 @@ This method can be helpful if you're working within a user control or a lower-le
 If `TopLevel.GetTopLevel` returns null, likely control is not yet attached to the root. To ensure control is attached, you should handle `Control.Loaded` and `Control.Unloaded` events and keep track of current top level from these events.
 :::
 
-### Using the Window Class
+### Using the Window class
 
 Since the `Window` class inherits from `TopLevel`, you can directly access services from an instance of `Window`:
 

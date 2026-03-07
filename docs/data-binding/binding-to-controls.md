@@ -1,6 +1,8 @@
 ---
 id: binding-to-controls
-title: How To Bind to a Control
+title: How to bind to a control
+description: Bind one control's property to another control's property using ElementName or source bindings.
+doc-type: how-to
 ---
 
 

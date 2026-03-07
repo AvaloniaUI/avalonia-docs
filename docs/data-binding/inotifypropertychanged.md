@@ -1,6 +1,8 @@
 ---
 id: inotifypropertychanged
 title: How to use INotifyPropertyChanged
+description: Implement INotifyPropertyChanged to notify the UI when view model properties change.
+doc-type: how-to
 ---
 
 ## Introduction

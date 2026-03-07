@@ -1,6 +1,8 @@
 ---
 id: how-to-bind-image-files
 title: How to bind image files
+description: Bind image sources from file paths, resources, or streams to display images in Avalonia controls.
+doc-type: how-to
 ---
 
 

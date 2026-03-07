@@ -1,6 +1,8 @@
 ---
 id: binding-from-code
-title: How To Bind from Code
+title: How to bind from code
+description: Create and apply data bindings programmatically in C# instead of XAML.
+doc-type: how-to
 ---
 
 

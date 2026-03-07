@@ -1,6 +1,6 @@
 ---
 name: docs-style-lint
-description: Reviews and lints Avalonia documentation pages against house style rules, content boundaries, and anti-marketing standards. Use when reviewing, editing, or writing documentation to ensure consistency with established patterns. Checks structure, voice, terminology, formatting, linking, tone, and Diataxis compliance.
+description: Reviews and lints Avalonia documentation pages against house style rules, content boundaries, anti-marketing standards, accessibility, and SEO. Use when reviewing, editing, or writing documentation to ensure consistency with established patterns. Checks structure, voice, terminology, formatting, linking, tone, Diataxis compliance, image accessibility, meta descriptions, and jargon simplification.
 ---
 
 # Avalonia Docs Style Lint
@@ -82,6 +82,10 @@ Apply rules from [house-rules.yaml](references/house-rules.yaml) that match the 
 15. **VOI-003**: Intensifiers (`simply`, `obviously`, `just`) are rare (< 1 per 1,000 words)
 16. **MIC-005**: Keyboard shortcuts use `<kbd>` tags with platform-native symbols (e.g., `<kbd>⌘</kbd> <kbd>S</kbd>` not plain text "Cmd+S")
 17. **STR-009**: Intro before first H2 is <= 150 words
+18. **ACC-001**: All images have non-empty alt text (`![description](path)`, not `![](path)`)
+19. **SEO-001**: Frontmatter `description` present, 50-160 characters, no marketing buzzwords
+20. **SEO-002**: Frontmatter `title` is <= 60 characters
+21. **QUAL-003**: On task pages (tutorial, how-to, troubleshooting, migration), average sentence length <= 25 words; flag individual sentences over 40 words
 
 ### Step 3: Run anti-marketing checks
 
@@ -105,6 +109,7 @@ Cross-reference against [terminology-map.yaml](references/terminology-map.yaml):
 - Check first-use acronym expansion (TERM-001)
 - Verify `must` vs `should` usage matches intent (TERM-003)
 - Check for forbidden marketing terms and suggest replacements
+- **TERM-004**: On introductory pages (tutorials, overviews), verify that Avalonia-specific jargon (visual tree, logical tree, data template, control theme, style selector, binding expression, value converter, content presenter, items presenter, template part, pseudo-class) is explained inline or linked on first use. See `framework_jargon` in [terminology-map.yaml](references/terminology-map.yaml) for definitions and link targets.
 
 ### Step 5: Run content boundary checks
 
@@ -178,9 +183,22 @@ Output a structured lint report:
 - Forbidden content detected: [none / list]
 - Single responsibility: [pass / concern]
 
+### Accessibility & SEO
+- ACC-001 (image alt text): [pass / N findings]
+- SEO-001 (meta description): [pass / missing / too short / too long / contains buzzwords]
+- SEO-002 (title length): [pass / X characters (over 60)]
+
 ### Template compliance
 - Required sections: [present/missing list]
 - Section order: [correct/issues]
+
+### Suggested fixes
+For each flagged issue, provide a structured fix suggestion:
+
+- **[rule-id]** (line X):
+  - Original: `[exact text from the page]`
+  - Suggested: `[corrected text]`
+  - Explanation: [why the change is needed]
 
 ### Summary
 [1-2 sentence overall assessment with priority fixes]
@@ -197,11 +215,12 @@ Output a structured lint report:
 These override or extend the base rules for Avalonia's Docusaurus site:
 
 ### Frontmatter
-Avalonia docs use simple frontmatter with an optional `doc-type` field:
+Avalonia docs use simple frontmatter with `doc-type` and `description` fields:
 ```yaml
 ---
 id: page-id
 title: Page Title
+description: A concise summary for search engines and social cards (50-160 characters).
 doc-type: how-to
 ---
 ```

@@ -1,6 +1,8 @@
 ---
 id: built-in-data-binding-converters
 title: Built-in data binding converters
+description: Reference of built-in value converters for common data binding transformations in Avalonia.
+doc-type: reference
 ---
 
 _Avalonia UI_ includes a number of built-in data binding converters for common scenarios:

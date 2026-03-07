@@ -1,6 +1,8 @@
 ---
 id: content-templates
 title: Content templates
+description: Use the ContentTemplate property to define how a control displays data objects.
+doc-type: explanation
 ---
 
 import ContentTemplateStudentScreenshot from '/img/concepts/data-concepts/data-templates/content-templates/contenttemplate-student.png';
@@ -44,7 +46,7 @@ You can define a data template (for no particular class) using the `DataTemplate
 
 In the above, the bindings refer to the properties of any class present in the content zone of the window. Here the window content is the same student object as you used before; but when you run this code, _Avalonia UI_ now displays:
 
-<img src={ContentTemplateStudentScreenshot} alt=""/>
+<img src={ContentTemplateStudentScreenshot} alt="Window displaying student first and last name using a content template"/>
 
 Using a data template in this way, you have both defined and chosen the data template for the content in the same place - by setting the `ContentTemplate` property of the window directly.
 

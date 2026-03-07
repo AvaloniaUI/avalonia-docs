@@ -1,6 +1,8 @@
 ---
 id: ui-composition
 title: UI composition
+description: Compose layouts from windows, built-in controls, user controls, and custom controls.
+doc-type: explanation
 ---
 
 import CompositionBasicLayoutDiagram from '/img/concepts/core-concepts/ui-composition/composition-basic-layout.png';
@@ -13,7 +15,7 @@ UI composition is the process you use to create the layouts that your apps requi
 * _Encapsulation_ - reduce the complexity of each component by restricting its XAML and code to only what it needs, making your code more understandable and maintainable.
 * _Reuse_ - maintain consistent presentation and behaviour of repeated parts of your app.
 
-Avalonia makes it easy for you to use UI composition to create the layouts and functions that your apps require.
+Avalonia supports UI composition so you can create the layouts and functions that your apps require.
 
 When you build an app using Avalonia, there are several different types of component to choose from:
 
@@ -29,7 +31,7 @@ A window in Avalonia is a basic unit of layout (for a windowing platform).
 
 Avalonia contains a large number of built-in controls that will cover most of your UI requirements.   
 
-<img src={CompositionBasicLayoutDiagram} alt=""/>
+<img src={CompositionBasicLayoutDiagram} alt="Diagram showing a single control and a multi-control layout inside a window"/>
 
 When you first meet Avalonia, you might place a single built-in control in the content zone of a window (above, left). This is the simplest form of UI composition: the window has the title of the app and usually some window state controls (depending on the target platform). The built-in control allows your app to receive some user input, or to present some output with layout and styling.
 
@@ -43,7 +45,7 @@ To see the full range of Avalonia built-in controls, see the [Controls reference
 
 Whatever arrangement of controls you use, Avalonia represents their relationships as a a tree structure, with the 'outermost' control as the root. So for example, the previous UI composition can be represented as the tree shown here:
 
-<img src={CompositionTreesDiagram} alt=""/>
+<img src={CompositionTreesDiagram} alt="Diagram showing the logical control tree for a window with nested controls"/>
 
 This is the **logical control tree**, and it represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. There are many systems in Avalonia that process the logical control tree and its companion the **visual control tree**.
 
@@ -55,7 +57,7 @@ For more information on the concept of control trees, see [Control trees](/docs/
 
 User controls are the mainstay of UI composition in Avalonia.
 
-<img src={CompositionUserControlsDiagram} alt=""/>
+<img src={CompositionUserControlsDiagram} alt="Diagram showing user controls used as page views and reusable components"/>
 
 You can add a user control to the content zone of a main window, to represent a 'page view' (above, left).  This allows you to implement a more complex app with multiple pages; where the layout and function of each page is in its own user control (XAML and code) files.   
 
@@ -71,7 +73,7 @@ For tutorials about `DataTemplates` see [Avalonia.Samples](https://github.com/Av
 
 Another variation of UI composition is where you need to present a collection of items.
 
-<img src={CompositionCollectionControlsDiagram} alt=""/>
+<img src={CompositionCollectionControlsDiagram} alt="Diagram showing a collection control with a data template rendering items"/>
 
 This scenario will use one of the built-in repeating controls, bound to a collection; together with a data template to represent the items in the collection.
 

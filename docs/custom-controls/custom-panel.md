@@ -1,6 +1,8 @@
 ---
 id: custom-panel
 title: Creating a custom panel
+description: Implement a custom layout panel by overriding MeasureOverride and ArrangeOverride.
+doc-type: how-to
 ---
 
 A custom panel lets you control exactly how child elements are measured and arranged. By subclassing `Panel` and overriding its layout methods, you can create layouts that go beyond what the built-in panels provide.

@@ -1,11 +1,13 @@
 ---
 id: resources
-title: Resources Overview
+title: Resources overview
+description: Define, reference, and manage reusable XAML resources, merged dictionaries, and theme variants.
+doc-type: overview
 ---
 
 Resources in Avalonia are reusable objects defined in XAML and shared across your application. Brushes, colors, thicknesses, strings, and styles are commonly defined as resources to ensure visual consistency and simplify maintenance.
 
-## Defining Resources
+## Defining resources
 
 Resources are stored in `ResourceDictionary` collections, which you declare on any element's `Resources` property. Each resource must have an `x:Key`:
 
@@ -28,7 +30,7 @@ Resources can be defined at any level of the tree:
 | Any control's `.Resources` | Available to that control and its descendants |
 | `Style.Resources` | Available within that style block only |
 
-## Using Resources
+## Using resources
 
 ### StaticResource
 
@@ -61,7 +63,7 @@ If the resource is not found, an exception is thrown at runtime.
 Use `DynamicResource` for colors, brushes, and sizes that should respond to theme changes. Use `StaticResource` for data templates, converters, and other structural resources that remain constant.
 :::
 
-## Resource Lookup Order
+## Resource lookup order
 
 When you reference a resource, Avalonia searches for it by walking up the logical tree from the element where the reference appears:
 
@@ -75,7 +77,7 @@ When you reference a resource, Avalonia searches for it by walking up the logica
 
 The first match wins. This means resources defined closer to the usage point override those defined higher up.
 
-## Merged Dictionaries
+## Merged dictionaries
 
 You can organize resources into separate files and merge them into any `ResourceDictionary`:
 
@@ -107,7 +109,7 @@ You can organize resources into separate files and merge them into any `Resource
 | `ResourceInclude` | Creates a separate resource dictionary scope. Standard resource file inclusion. |
 | `MergeResourceInclude` | Merges the resources directly into the parent dictionary, making them accessible as if they were defined inline. |
 
-## Theme-Variant Resources
+## Theme-variant resources
 
 Define different resource values for light and dark themes using `ThemeDictionaries`:
 
@@ -134,7 +136,7 @@ Use `DynamicResource` to reference theme-variant resources so they update when t
 </Border>
 ```
 
-## Accessing Resources from Code
+## Accessing resources from code
 
 Avalonia provides four methods for accessing resources programmatically:
 
@@ -166,7 +168,7 @@ myBorder.Bind(Border.BackgroundProperty,
 | `TryFindResource` | Yes | Yes |
 | `GetResourceObservable` | Yes | Yes (and monitors changes) |
 
-## Updating Resources at Runtime
+## Updating resources at runtime
 
 You can modify resources in code to change the appearance of your application dynamically:
 
@@ -178,7 +180,7 @@ Application.Current!.Resources["PrimaryBrush"] =
 
 Only `DynamicResource` references respond to runtime resource changes. `StaticResource` references retain their initial values.
 
-## See Also
+## See also
 
 - [Resource Dictionary](/docs/app-development/resource-dictionary): Step-by-step guide to creating and organizing resource dictionaries.
 - [Theme Variants](/docs/styling/theme-variants): How theme-aware resources work.

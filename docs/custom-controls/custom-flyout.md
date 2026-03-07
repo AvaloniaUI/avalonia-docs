@@ -1,6 +1,8 @@
 ---
 id: custom-flyout
-title: How To Create a Custom Flyout
+title: How to create a custom flyout
+description: Create a custom flyout control by extending PopupFlyoutBase in Avalonia.
+doc-type: how-to
 ---
 
 Custom flyouts let you display rich, self-contained UI that appears on demand and is attached to a target control. By deriving from `FlyoutBase`, you can build flyouts that host any content, from simple images to fully interactive forms.

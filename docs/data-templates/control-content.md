@@ -1,6 +1,8 @@
 ---
 id: control-content
 title: Control content
+description: Understand how controls display non-control content and why data templates are needed.
+doc-type: explanation
 ---
 
 import ControlContentButtonScreenshot from '/img/concepts/data-concepts/data-templates/control-content/content-button.png';
@@ -29,7 +31,7 @@ For example:
 
 The window displays the button - in this case centred both horizontally (specified) and vertically (by default). It looks like this:
 
-<img src={ControlContentButtonScreenshot} alt=""/>
+<img src={ControlContentButtonScreenshot} alt="Window displaying a centered Hello World button"/>
 
 And if you put a string into the window content zone, for example:
 
@@ -47,7 +49,7 @@ And if you put a string into the window content zone, for example:
 
 The window will display the string:
 
-<img src={ControlContentStringScreenshot} alt=""/>
+<img src={ControlContentStringScreenshot} alt="Window displaying a Hello World string"/>
 
 But what happens if you try to display an object from a class that you have defined in the window?
 
@@ -77,7 +79,7 @@ And the XML namespace `local` defined as the `MySample` namespace (from above), 
 
 But you will see only the fully-qualified class name for the student object:
 
-<img src={ControlContentTypeScreenshot} alt=""/>
+<img src={ControlContentTypeScreenshot} alt="Window displaying the fully-qualified class name of a Student object"/>
 
 This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name.
 

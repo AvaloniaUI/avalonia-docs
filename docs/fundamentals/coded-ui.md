@@ -1,6 +1,8 @@
 ---
 id: coded-ui
 title: Code-only UI
+description: Build Avalonia applications entirely in C# or F# without XAML files.
+doc-type: explanation
 ---
 
 Avalonia does not require XAML. You can build entire applications using only C#, F#, or any .NET language. Every control, layout, style, binding, and animation that you can express in XAML has an equivalent API in code.
@@ -17,7 +19,7 @@ That said, you should be aware of the practical trade-offs. Avalonia is inspired
 - The community of developers working without XAML is smaller, so finding help with code-specific patterns may take more effort.
 - Tools like the XAML previewer and design-time data are built around XAML workflows.
 
-Code-only development is entirely workable, but it is not the path of least resistance when it comes to leveraging the existing ecosystem of knowledge and resources.
+Code-only development is entirely workable, but it is not the path of least resistance when it comes to using the existing ecosystem of knowledge and resources.
 
 ## Bootstrapping a code-only application
 

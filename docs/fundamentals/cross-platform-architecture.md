@@ -1,6 +1,8 @@
 ---
 id: cross-platform-architecture
 title: Cross-platform architecture
+description: Understand how Avalonia shares code across platforms and handles platform differences.
+doc-type: explanation
 ---
 
 Avalonia renders controls using Skia rather than wrapping native platform controls. This means your AXAML views, view models, and business logic all produce identical results on every platform. This page covers what you can share, what needs platform-specific handling, and how to choose the right approach.

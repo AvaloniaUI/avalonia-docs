@@ -1,6 +1,8 @@
 ---
 id: data-validation
-title: Data Validation
+title: Data validation
+description: Validate user input in Avalonia using DataAnnotations, INotifyDataErrorInfo, and exception-based validation.
+doc-type: how-to
 ---
 
 Avalonia offers different data validation options. This section explains how you can validate the `Properties` of your `ViewModel` and how you can style the displayed error message.

@@ -1,6 +1,8 @@
 ---
 id: reusing-data-templates
 title: Reusing data templates
+description: Share data templates across windows by defining them in the Application.DataTemplates collection.
+doc-type: explanation
 ---
 
 import DataTemplatesScopeScreenshot from '/img/guides/data/data-templates/datatemplates-scope.png';
@@ -81,7 +83,7 @@ Use a local definition of a teacher in the window content zone:
 
 Although there is no data template for a teacher in the window; Avalonia UI will find the template you defined in the application, and the display works as planned:
 
-<img src={DataTemplatesScopeScreenshot} alt=""/>
+<img src={DataTemplatesScopeScreenshot} alt="Window displaying a teacher name and subject using an application-level data template"/>
 
 :::caution
 Remember to specify a `DataType` in every data template, wherever it is defined, because if _Avalonia UI_ fails to find a data template match for your data; then nothing will be displayed!

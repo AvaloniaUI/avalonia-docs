@@ -1,6 +1,8 @@
 ---
 id: drawing-custom-controls
 title: Drawing custom controls
+description: Render custom visuals by overriding the Render method and using DrawingContext operations.
+doc-type: how-to
 ---
 
 import DrawWithPropertyScreenshot from '/img/guides/ui-development/custom-controls/draw-property.png';
@@ -48,7 +50,7 @@ This example defines a simple brush property on the custom control for the backg
 
 The drawing code uses the Avalonia graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
 
-<img src={DrawWithPropertyScreenshot} alt=""/>
+<img src={DrawWithPropertyScreenshot} alt="Custom-drawn control rendered with a bound property value"/>
 
 Notice how the control now shows both at runtime (above) and in the preview pane.
 

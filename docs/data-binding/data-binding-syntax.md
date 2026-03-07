@@ -1,6 +1,8 @@
 ---
 id: data-binding-syntax
 title: Data binding syntax
+description: Reference for Avalonia data binding markup syntax including paths, modes, converters, and fallback values.
+doc-type: reference
 ---
 
 import DataBindingModeDiagram from '/img/concepts/data-concepts/data-binding-syntax/data-binding-mode.png';
@@ -87,7 +89,7 @@ is defined). These two syntaxes are equivalent:
 
 You can change the direction(s) data is synchronized by specifying the `Mode`.
 
-<img src={DataBindingModeDiagram} alt=''/>
+<img src={DataBindingModeDiagram} alt="Diagram showing data binding mode directions between source and target"/>
 <br/><br/>
 
 For example:
@@ -363,6 +365,7 @@ public class SearchViewModel : ObservableObject
             : $"Searching for: {query}";
     }
 }
+```
 
 ## See also
 
