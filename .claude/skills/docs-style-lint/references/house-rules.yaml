@@ -82,12 +82,13 @@ rules:
   - id: VOI-002
     category: voice
     severity: major
-    scope: [all]
+    scope: [how-to, explanation, overview, reference, troubleshooting, release-notes, migration]
     pattern: "minimal team-first narration"
     pass_criteria: "(we+our+us)/words <= 0.001"
-    rationale: "House voice avoids author-team centric narration."
+    rationale: "House voice avoids author-team centric narration. Exception: tutorials use first-person plural ('we') to establish the instructor-learner bond, per Diataxis guidance."
     do_example: "You can..."
     dont_example: "We will now..."
+    note: "Tutorials are excluded. Diataxis prescribes 'we' in tutorials to affirm the tutor-learner relationship: 'In this tutorial, we will create...'"
     automated: true
 
   - id: VOI-003

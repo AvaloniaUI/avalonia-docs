@@ -16,7 +16,7 @@ Severity levels:
 | `STR-005` | major | all pages | Ends with navigation handoff section. | No `See also`, `Related content`, or `Next steps`. |
 | `STR-009` | minor | all pages | Intro before first H2 is <=150 words. | Long preamble before first section. |
 | `VOI-001` | major | tutorial, how-to, troubleshooting, migration | Uses `you`/`your` in task instructions. | Passive/impersonal voice only. |
-| `VOI-002` | major | all pages | `we`/`our`/`us` is absent or very rare. | Frequent team-first narration. |
+| `VOI-002` | major | all except tutorial | `we`/`our`/`us` is absent or very rare. Tutorials excluded: Diataxis prescribes `we` for instructor-learner bond. | Frequent team-first narration (non-tutorial pages). |
 | `VOI-003` | minor | all pages | Intensifiers (`simply`, `obviously`, `just`) are rare. | Repeated intensifier usage. |
 | `VOI-004` | major | release notes, migration | Roadmap terms include concrete context. | Vague future promises. |
 | `MIC-001` | major | task pages | UI labels and click targets are **bolded**. | UI text unformatted in prose. |
@@ -51,7 +51,7 @@ Fast automatable checks:
 - Generic link label detection (`LINK-001`)
 - Token frequency for `widget` (`TERM-002`)
 - Intensifier frequency (`VOI-003`)
-- `we`/`our`/`us` frequency (`VOI-002`)
+- `we`/`our`/`us` frequency (`VOI-002`, skip for tutorials)
 - `<kbd>` presence for key names (`MIC-005`)
 - Navigation handoff section (`STR-005`)
 - Intro word count (`STR-009`)

@@ -10,6 +10,42 @@ diataxis_model:
     is allowed and forbidden. This prevents the "duplication swamp" where
     every page re-explains everything. Authors pick the single Diataxis type
     that best fits the page's purpose, then follow its content boundaries.
+  compass:
+    description: >
+      The Diataxis compass classifies pages by asking two questions.
+      Use this when surface signals (title, file path) are ambiguous.
+    questions:
+      - "Does this content inform ACTION (doing) or COGNITION (thinking)?"
+      - "Does it serve ACQUISITION (study/learning) or APPLICATION (work/goals)?"
+    quadrants:
+      action_acquisition: tutorial
+      action_application: how-to
+      cognition_application: reference
+      cognition_acquisition: explanation
+  canonical_types:
+    - tutorial
+    - how-to
+    - reference
+    - explanation
+  project_types:
+    description: >
+      Diataxis defines exactly four canonical types derived from two dimensions
+      of craft (action/cognition, acquisition/application). The following are
+      project-specific types used in Avalonia docs. Each is a specialization
+      or composition of the four canonical types, not a fifth Diataxis category.
+    types:
+      - name: overview
+        derives_from: explanation
+        rationale: "A lightweight explanation page that orients and links rather than explaining in depth."
+      - name: troubleshooting
+        derives_from: how-to
+        rationale: "A problem-scoped how-to that starts from a symptom rather than a goal."
+      - name: release-notes
+        derives_from: reference
+        rationale: "A version-scoped reference listing changes, not a narrative."
+      - name: migration
+        derives_from: how-to
+        rationale: "A version-upgrade how-to with prerequisite assessment and verification."
   frontmatter_field: doc-type
   allowed_values:
     - tutorial
@@ -25,6 +61,17 @@ templates:
   tutorial:
     intent: guided_end_to_end_task
     orientation: task_first
+    voice:
+      person: "first-person plural ('we')"
+      rationale: >
+        Diataxis prescribes 'we' in tutorials to establish the instructor-learner
+        bond. 'In this tutorial, we will create...' affirms togetherness. The
+        instructor is responsible for the learner's success.
+      patterns:
+        - "In this tutorial, we will..."
+        - "First, do x. Now, do y."
+        - "The output should look something like..."
+        - "Notice that... Remember that... Let's check..."
     required_sections:
       - title_with_action_outcome
       - intro_outcome_paragraph
@@ -39,10 +86,18 @@ templates:
     ordering_rules:
       - prerequisites_before_procedure: true
       - verification_after_procedure: true
+    key_principles:
+      - "Ruthlessly minimise explanation. Link to explanation pages for theory."
+      - "Deliver visible results early and often. Every step should produce a comprehensible result."
+      - "Ignore options and alternatives. Focus on what is required to reach the conclusion."
+      - "Focus on the concrete. Abstract patterns will emerge from concrete examples."
+      - "Aspire to perfect reliability. The tutorial must work for every user, every time."
     forbidden_content:
       - exhaustive property or API tables (link to reference instead)
       - architectural deep-dives (link to explanation instead)
       - migration guidance (link to migration page instead)
+      - extended explanations of why (provide minimal context, link to explanation)
+      - options and alternatives (focus on one path to completion)
     content_boundaries:
       single_responsibility: "Teach one complete skill through a guided build."
       link_policy: "Link to reference for API details; link to explanation for theory."
@@ -50,6 +105,13 @@ templates:
   how_to:
     intent: focused_task
     orientation: task_first_or_mixed
+    voice:
+      person: "second-person ('you')"
+      rationale: "How-to guides address an already-competent user at work."
+      patterns:
+        - "This guide shows you how to..."
+        - "If you want x, do y. To achieve w, do z."
+        - "Refer to the [x reference](link) for a full list of options."
     required_sections:
       - task_title
       - brief_intro
@@ -61,6 +123,11 @@ templates:
       - admonitions
     ordering_rules:
       - prerequisites_if_present_first: true
+    key_principles:
+      - "Written from the user's perspective, not the machinery's."
+      - "Practical usability over completeness. Omit the unnecessary."
+      - "Address real-world complexity. Use conditional steps ('if x, do y') when the task branches."
+      - "Assume the user knows what they want to achieve and can follow instructions."
     forbidden_content:
       - lengthy conceptual background (>2-3 sentences; link to explanation instead)
       - full property enumerations (link to reference instead)
@@ -73,6 +140,9 @@ templates:
   explanation:
     intent: explain_model_and_behavior
     orientation: concept_first
+    voice:
+      person: "second-person ('you') or neutral"
+      rationale: "Explanation serves the user's study, away from the machinery."
     required_sections:
       - concept_title
       - sectioned_explanation
@@ -82,6 +152,17 @@ templates:
       - examples
       - comparison_tables
       - diagrams
+    key_principles:
+      - "Make connections. Weave a web of understanding, linking to related concepts."
+      - "Provide context: why things are so, design decisions, historical reasons, trade-offs."
+      - "Admit opinion and perspective. Consider alternatives, counter-examples, and different approaches."
+      - "Keep explanation closely bounded. It tends to absorb other content types; resist this."
+      - "Talk about the subject. Titles should support an implicit 'About...' prefix."
+    allowed_content_note: >
+      Unlike other types, explanation pages may contain opinions, perspectives,
+      and comparative judgments. This is the only doc-type where editorial voice
+      and reasoned argument are appropriate. State reasoning clearly and consider
+      multiple viewpoints.
     forbidden_content:
       - numbered procedural steps (>3 steps; link to how-to or tutorial instead)
       - property enumerations (link to reference instead)
@@ -111,6 +192,9 @@ templates:
   reference:
     intent: precise_definition
     orientation: reference_first
+    voice:
+      person: "neutral, austere"
+      rationale: "Reference material is neutral. It describes the machinery without opinion or instruction."
     required_sections:
       - title
       - syntax
@@ -122,6 +206,11 @@ templates:
       - examples
     ordering_rules:
       - syntax_before_remarks: true
+    key_principles:
+      - "Describe and only describe. Neutral description is the key imperative."
+      - "Adopt standard patterns. Consistency enables scanning."
+      - "Mirror the structure of the machinery. Documentation structure should reflect code structure."
+      - "Provide examples as illustration, not as instruction."
     forbidden_content:
       - narrative tutorials (link to tutorial instead)
       - migration stories (link to migration page instead)

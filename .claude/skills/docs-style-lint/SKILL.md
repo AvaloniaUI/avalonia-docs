@@ -11,6 +11,8 @@ Review documentation pages against Avalonia's house style rules derived from cor
 
 Diataxis is an editorial QA layer, not a navigation structure. The visible site structure follows product domains and user journeys (Getting Started, Controls, Styling, Layout, Binding, MVVM). Each page declares a `doc-type` in frontmatter, and that type constrains what content is allowed and forbidden. This prevents the "duplication swamp" where every page re-explains everything. If `doc-type` is present, use it. If absent, infer the type and flag BOUND-005.
 
+Diataxis defines exactly four canonical types (tutorial, how-to, reference, explanation) derived from two dimensions: action/cognition and acquisition/application. The Avalonia docs also use four project-specific types (overview, troubleshooting, release-notes, migration) that are specializations of the canonical four, not additional Diataxis categories.
+
 ## When to use
 
 - Reviewing a documentation page before publishing
@@ -32,14 +34,24 @@ Read the target file and classify it as one of the page archetypes defined in [p
 |------|--------|
 | tutorial | Title contains "Tutorial:" or file is under `get-started/`, step-by-step build |
 | how-to | Title starts with "How to" or file focuses on a single bounded task |
-| overview | Introduces a topic area, orients and links |
-| explanation | Explains model, behavior, or architecture in depth |
-| reference | Precise syntax/semantics definitions, API-like |
-| troubleshooting | Problem-first with remediation |
-| migration | Upgrade/breaking-change guidance |
-| release-notes | Version change summaries |
+| overview | Introduces a topic area, orients and links (lightweight explanation) |
+| explanation | Explains model, behavior, or architecture in depth (answers "why?") |
+| reference | Precise syntax/semantics definitions, API-like (describes the machinery) |
+| troubleshooting | Problem-first with remediation (problem-scoped how-to) |
+| migration | Upgrade/breaking-change guidance (version-scoped how-to) |
+| release-notes | Version change summaries (version-scoped reference) |
 
 If the page has a `doc-type` frontmatter field, use that value. If `doc-type` is absent, infer the type from the signals above and flag **BOUND-005**.
+
+**Diataxis compass** (use when surface signals are ambiguous):
+
+1. Does this content inform **action** (doing) or **cognition** (thinking)?
+2. Does it serve **acquisition** (study/learning) or **application** (work/goals)?
+
+| | Acquisition (study) | Application (work) |
+|---|---|---|
+| **Action** (doing) | tutorial | how-to |
+| **Cognition** (thinking) | explanation | reference |
 
 ### Step 2: Run structural checks
 
@@ -59,7 +71,7 @@ Apply rules from [house-rules.yaml](references/house-rules.yaml) that match the 
 7. **STR-002**: Headings use sentence case (>= 80% for new/edited pages)
 8. **STR-005**: Page ends with `## See also` or `## Related content` or similar navigation handoff
 9. **VOI-001**: Task pages use direct `you`/`your` address
-10. **VOI-002**: Minimal `we`/`our`/`us` usage (< 1 per 1,000 words)
+10. **VOI-002**: Minimal `we`/`our`/`us` usage (< 1 per 1,000 words). **Exception**: tutorials use `we` to establish the instructor-learner bond (per Diataxis). VOI-002 does not apply to tutorials.
 11. **MIC-001**: UI labels and menu paths in **bold**
 12. **MIC-002**: Code identifiers and API literals in `backticks`
 13. **MIC-004**: Admonitions use approved Docusaurus types only: `:::note`, `:::tip`, `:::info`, `:::caution`, `:::danger`
