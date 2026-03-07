@@ -18,7 +18,7 @@ For example, event breakpoints without target are considered global, and are tri
 ![List of breakpoints with options panel](/img/tools/dev-tools/breakpoints-list.png)
 
 
-## Adding Breakpoints
+## Adding breakpoints
 
 ### Adding a property breakpoint
 
@@ -40,7 +40,7 @@ It's also possible to set a breakpoint bound to a specific routed chain element.
 
 ![Setting breakpoint on a chain element](/img/tools/dev-tools/breakpoint-set-on-chain-element.png)
 
-## Managing Breakpoints
+## Managing breakpoints
 
 By default, any breakpoint only increments Hit Count, when it's triggered.
 

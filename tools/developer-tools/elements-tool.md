@@ -8,7 +8,7 @@ The Elements Tree presents a unified view that combines both visual and logical 
 
 ![Elements Tool](/img/tools/dev-tools/elements-tool.png)
 
-## Inspect Mode
+## Inspect mode
 
 The Elements Tool offers ways to identify and select specific UI elements directly from your running application:
 
@@ -18,7 +18,7 @@ The Elements Tool offers ways to identify and select specific UI elements direct
 
 These inspection modes help you locate elements without manually searching through the element hierarchy.
 
-## Context Menu
+## Context menu
 
 The context menu provides essential actions for navigating and manipulating the element tree:
 
@@ -36,7 +36,7 @@ For each element, the tool displays pseudoclasses that were defined on it. This 
 
 When developing custom controls with pseudoclasses, adding the `[PseudoClassesAttribute]` improves integration with the Developer Tools and also enhances IDE auto-completion support.
 
-## Element Properties
+## Element properties
 
 The Properties panel shows detailed information about the selected element in the Elements tree, displaying all properties, styles, and values affecting the element.
 
@@ -49,7 +49,7 @@ The panel displays all Avalonia properties assigned to the element. Developers c
 - Edit values using specialized editors (ColorPicker, BrushPicker, Image/Geometry previews)
 - Properties with nested grids are clickable, allowing to preview `DataContext` or `Image.Source`-like properties.
 
-### Property Details
+### Property details
 
 When a developer selects a property, additional details become available through two specialized tabs.
 
@@ -63,7 +63,7 @@ Each property can have multiple setters with different priorities and conditions
 
 Inactive setters (those whose conditions aren't currently met) appear collapsed and grayed-out. This visual hierarchy helps developers understand which style is currently applied and why, making it easier to debug styling issues.
 
-#### Binding Expressions
+#### Binding expressions
 
 The Binding Expressions tab reveals how properties are connected to data sources:
 
@@ -80,7 +80,7 @@ Some properties use MultiBinding expressions that combine multiple sources:
 
 ![MultiBinding Expressions](/img/tools/dev-tools/properties-multi-bindings.png)
 
-## Element 3D Viewer
+## Element 3D viewer
 
 The 3D Viewer provides a three-dimensional visualization of your application's visual tree, allowing you to explore the layering and hierarchy of UI elements in a spatial context.
 
@@ -130,11 +130,11 @@ Customize how the 3D view renders elements:
 - **Optimizing Visual Tree**: Identify unnecessary nesting or redundant containers
 - **Explaining UI Architecture**: Use as a teaching tool to demonstrate visual tree concepts
 
-## In-App Overlay
+## In-app overlay
 
 Avalonia Developer Tools provides visual overlays that display directly on your running application, helping you visualize and debug UI components without code modifications.
 
-### Enabling Overlays
+### Enabling overlays
 
 You can activate overlays in two ways:
 
@@ -153,9 +153,9 @@ Enter inspect mode directly in your application:
 
 ![In-App Overlays inspect via Shortcut](/img/tools/dev-tools/overlay-shortcut-inspect.png)
 
-### Available Overlays
+### Available overlays
 
-#### Info Tooltip
+#### Info tooltip
 
 Displays detailed element information when hovering:
 
@@ -167,7 +167,7 @@ Displays detailed element information when hovering:
 
 ![Info Tooltip](/img/tools/dev-tools/overlay-info-tooltip.png)
 
-#### Layout Overlay
+#### Layout overlay
 
 Visualizes UI structure with color-coded highlights:
 
@@ -177,7 +177,7 @@ Visualizes UI structure with color-coded highlights:
 
 ![Margin Padding layout overlay](/img/tools/dev-tools/overlay-margin-padding.png)
 
-#### Ruler Overlay
+#### Ruler overlay
 
 Provides measurement references:
 

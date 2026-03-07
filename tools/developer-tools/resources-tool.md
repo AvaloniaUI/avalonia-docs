@@ -16,7 +16,7 @@ Control-specific resources (those defined on individual controls or within contr
 
 :::
 
-## Navigating Resource Providers tree
+## Navigating resource providers tree
 
 The left panel displays a tree of resource providers, which include:
 1. Application (root level)
@@ -29,7 +29,7 @@ Each node in the tree represents a resource scope. Selecting a node displays its
 
 ![Resources Tree](/img/tools/dev-tools/resources-providers-list.png)
 
-## Inspecting and Editing resources
+## Inspecting and editing resources
 
 The right panel shows resources available in the selected provider.
 
@@ -43,7 +43,7 @@ Adding new resources to the provider is not yet supported
 
 :::
 
-## Filtering and Sorting 
+## Filtering and sorting
 
 The Resources Tool offers several options to help you find specific resources:
 - Include Nested - When enabled, shows all resources available at the selected node and its children, simulating how resource lookup works at runtime. This helps identify which resources are accessible from a specific point in the hierarchy.

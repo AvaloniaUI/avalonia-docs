@@ -11,7 +11,7 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
-## Attaching Browser or Mobile applications
+## Attaching browser or mobile applications
 
 This page assumes both apps are deployed on the same local network or same machine. For the remote connection, please visit [Attaching to the remote tools](/tools/developer-tools/attaching-to-the-remote-tool).
 
@@ -21,7 +21,7 @@ For all platforms, `AvaloniaUI.DiagnosticsSupport` package can be installed in t
 
 :::
 
-## Attaching Browser application
+## Attaching browser application
 
 1. Follow [Getting Started](/tools/developer-tools/installation) for the initial setup.
 2. Run `Developer Tools` application. `avdt` dotnet tool can be used from the command line.

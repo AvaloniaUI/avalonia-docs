@@ -10,7 +10,7 @@ Visit [Routed Events](https://docs.avaloniaui.net/docs/concepts/input/routed-eve
 
 ![List of Raised Events](/img/tools/dev-tools/events-raised-events-list.png)
 
-## Enabling Event Listeners
+## Enabling event listeners
 
 By default, `Button.Click`, `KeyDown`, `KeyUp`, `TextInput`, `PointerReleased`, and `PointerPressed` events are enabled. These defaults can be controlled by the `Default Routed Events` setting; see [Developer Tools Settings](/tools/developer-tools/settings) page.
 
@@ -21,7 +21,7 @@ Use the **Event Listeners** flyout button to enable or disable any particular ro
 This list is gathered from statically registered routed events at the time when the tab is first opened.
 If an event isn't displayed in this list, it's likely because it was never referenced in the application.
 
-## Navigating List of Event Handlers
+## Navigating list of event handlers
 
 In Avalonia, routed events have three possible routing strategies:
 - `Tunnel` strategy routes from the root (typically a window) to the source element (typically clicked or focused element).
@@ -39,7 +39,7 @@ The element that has handled the event is visually distinct from the others, ind
 
 ![Raised Event Handlers Chain](/img/tools/dev-tools/events-chain-list.png)
 
-## Inspecting Event Handler Control
+## Inspecting event handler control
 
 Each element handler is clickable, redirecting the user to the corresponding node in the elements tree.
 

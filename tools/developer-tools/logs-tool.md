@@ -4,7 +4,7 @@ title: Logs tool
 doc-type: reference
 ---
 
-## Viewing Avalonia Logs in the tool
+## Viewing Avalonia logs in the tool
 
 By default `Avalonia` Warnings and Errors are automatically recorded by `Developer Tools`.
 

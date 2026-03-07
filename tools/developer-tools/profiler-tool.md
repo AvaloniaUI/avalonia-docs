@@ -7,7 +7,7 @@ doc-type: reference
 
 While [metrics](/tools/developer-tools/profiler-tool) primarily contain a single dimension of information, suitable for displaying as a chart, profilers capture richer data. After a recording is completed, `Developer Tools` aggregates the results and displays them as a table.
 
-## Recording a Profile
+## Recording a profile
 
 1. Click the **Record** button to start a profiling session.
 2. The application continues running normally while data is collected in the background.

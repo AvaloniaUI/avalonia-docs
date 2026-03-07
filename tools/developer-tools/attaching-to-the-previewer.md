@@ -18,17 +18,17 @@ Experimental.
 
 :::
 
-[AvaloniaVS](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS) and [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider) run previewing window in a full application process, but without real windowing subsystem.
+[AvaloniaVS](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS) and [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider) run the previewing window in a full application process, but without a real windowing subsystem.
 
-Yet, these extensions are limited in diagnostic features, making it harder to analyze visual trees and actual control placements.
+These extensions are limited in diagnostic features, making it harder for you to analyze visual trees and actual control placements.
 
-With `Developer Tools` running out-of-process, it is now possible to attach a previewing app to the tool.
+With `Developer Tools` running out-of-process, you can attach a previewing app to the tool.
 
 ![Example of DevTools app attached to the previewer process](/img/tools/dev-tools/attaching-to-previewer.png)
 
 ## Configuration
 
-Preview extensions don't support any form of keyboard input, making `AutoConnectFromDesignMode` the only option at the moment:
+Preview extensions don't support any form of keyboard input, making `AutoConnectFromDesignMode` your only option at the moment:
 
 ```csharp
 this.AttachDeveloperTools(o =>
@@ -39,14 +39,14 @@ this.AttachDeveloperTools(o =>
 
 By default, `DeveloperToolsOptions.Runner` is disabled in `IsDesignMode`. It was done to avoid unnecessary noise and processes opening each time any XAML file is opened.
 
-Instead, like on the browser or mobile, the `Developer Tools` app should be opened independently.
+Instead, like on browser or mobile, you should open the `Developer Tools` app independently.
 
 ## Troubleshooting
 
 ### Shortcuts are ignored
 
 As mentioned above, previewer extensions don't listen for keyboard input.
-Instead, it's possible to use corresponding action buttons or shortcuts in the `Developer Tools` process itself.
+Instead, you can use corresponding action buttons or shortcuts in the `Developer Tools` process itself.
 
 ### Developer Tools opens way too many windows
 

@@ -13,6 +13,8 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
+In this tutorial, you install the Avalonia Developer Tools, add the diagnostics support package to your project, and verify the connection between your app and the tool.
+
 ## Prerequisites
 
 ### Developer Tools requirements
@@ -170,7 +172,7 @@ Once the Developer Tools has opened, you will be asked to input `AvaloniaUI Port
 
 After activation, the connection with the app will be resumed, and a window with tools will be opened. 
 
-## Further Reading
+## See also
 
 - Documentation on [Elements tool](/tools/developer-tools/elements-tool)
 - Custom [DeveloperToolsOptions configuration](/tools/developer-tools/options) reference

@@ -46,13 +46,13 @@ Ensure firewalls on both machines allow port 29414
 
 ## Internet access via VPN
 
-While it's possible to avoid VPN, and just setup port forwarding on the public network, it's not recommended. Keeping ports opened is generally considered a bad practice.
+While it's possible to avoid VPN and set up port forwarding on the public network, it's not recommended. Keeping ports opened is generally considered a bad practice.
 
 Instead, this tutorial will use VPN to setup a limited access between machines, specifically `Tailscale` will be used as one of the simplest options.
 Also ensure that `Tailscale CLI` can be used on the machine with developer tools. See [Tailscale CLI](https://tailscale.com/kb/1080/cli) for reference.
 
 1. Please follow the `Tailscale` [Quick Start guide](https://tailscale.com/kb/1017/install) to install it on both machines, and set up access between them. This tutorial specifically focuses on the `MagicDNS` feature.
-2. Once `Tailscale` is installed and connected on both devices, it's necessary to serve our `29414` port from the machine with installed `Developer Tools`. Run
+2. Once `Tailscale` is installed and connected on both devices, it's necessary to serve the `29414` port from the machine with installed `Developer Tools`. Run
    `tailscale serve 29414`
    or
    `/Applications/Tailscale.app/Contents/MacOS/Tailscale serve 29414` on macOS
@@ -67,7 +67,7 @@ https://machinename.tail.ts.net/
 Press Ctrl+C to exit.
 ```
 
-This `https://machinename.tail.ts.net/` is the most important part here which is going to be used in the next step.
+Copy the `https://machinename.tail.ts.net/` URL from this output. You need it in the next step.
 
 3. Use URL from the previous step in your `AttachDeveloperTools` options:
 

@@ -16,7 +16,7 @@ There are four main types of metric instruments:
 
 ![Histogram](/img/tools/dev-tools/metrics-histogram.png)
 
-## Disabling/Enabling default sources
+## Disabling/enabling default sources
 
 By default, `Developer Tools` is configured to only accept `Avalonia` and `System.Runtime` meters providers.
 
