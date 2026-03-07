@@ -1,5 +1,7 @@
 ---
 title: WinUI / UWP
+description: Migrate WinUI and UWP applications to Avalonia with equivalent XAML, controls, and MVVM patterns.
+doc-type: migration
 ---
 
 WinUI 3 and UWP are Microsoft's modern XAML frameworks, but they only target Windows. If your application needs to reach macOS, Linux, mobile, or the web, that is a hard ceiling. Avalonia uses a similar XAML model, supports the same MVVM patterns, and runs everywhere .NET runs.

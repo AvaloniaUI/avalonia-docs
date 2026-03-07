@@ -1,6 +1,8 @@
 ---
 id: styling
 title: Styling
+description: Key differences between WPF and Avalonia styling, including selectors, style classes, and themes.
+doc-type: migration
 ---
 
 Avalonia's styling system is one of the biggest conceptual shifts when migrating from WPF. Instead of the resource-dictionary-based approach used in WPF, Avalonia adopts a CSS-like styling model with selectors, style classes, and pseudo-classes. This guide walks through the key differences and shows practical migration patterns for each area.
@@ -42,7 +44,7 @@ Key differences:
 
 ## Selectors vs TargetType
 
-WPF uses `TargetType` to match a style to a control type. Avalonia replaces this with a powerful selector syntax inspired by CSS. Selectors can target by type, class, name, property state, nesting, and more.
+WPF uses `TargetType` to match a style to a control type. Avalonia replaces this with a CSS-inspired selector syntax. Selectors can target by type, class, name, property state, nesting, and more.
 
 **WPF (target all TextBlocks):**
 

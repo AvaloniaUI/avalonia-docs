@@ -1,5 +1,7 @@
 ---
 title: .NET MAUI
+description: Migrate from .NET MAUI to Avalonia or extend MAUI apps with the Avalonia MAUI Backend.
+doc-type: migration
 ---
 
 If you are a .NET MAUI developer, you have two paths to Avalonia. You can keep your existing MAUI codebase and use the Avalonia MAUI Backend to extend it to new platforms, or you can migrate your application to Avalonia directly for full control over the UI framework. This page covers both options.
@@ -154,7 +156,7 @@ MAUI uses a resource-dictionary approach with `Style` elements that target types
 </Style>
 ```
 
-The syntax is similar on the surface, but Avalonia's selectors are far more powerful. You can target controls by class, name, state, nesting, and more:
+The syntax is similar on the surface, but Avalonia's selectors support additional capabilities. You can target controls by class, name, state, nesting, and more:
 
 ```xml
 <Style Selector="Button.primary:pointerover">

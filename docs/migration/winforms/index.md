@@ -1,5 +1,7 @@
 ---
 title: Windows Forms
+description: Migrate Windows Forms applications to Avalonia for cross-platform support and modern UI.
+doc-type: migration
 ---
 
 Windows Forms has been shipping production applications since 2002. If you have a WinForms app that works, there are good reasons to keep it running. But Windows Forms only runs on Windows, and the gap between what it offers and what users expect from a modern UI grows wider every year.

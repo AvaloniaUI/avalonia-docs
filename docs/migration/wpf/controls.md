@@ -1,10 +1,14 @@
 ---
 id: controls
 title: Controls
+description: Control hierarchy, naming, and behavioral differences between WPF and Avalonia controls.
+doc-type: migration
 ---
 
 import RenderTransformOriginWpfScreenshot from '/img/guides/migration/wpf/rendertransformorigin-wpf.png';
 import RenderTransformOriginAvaloniaScreenshot from '/img/guides/migration/wpf/rendertransformorigin-avalonia.png';
+
+This page covers the key control differences you will encounter when migrating from WPF to Avalonia, including base class changes, renamed controls, and behavioral differences.
 
 ## UIElement and FrameworkElement
 

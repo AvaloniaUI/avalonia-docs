@@ -1,6 +1,8 @@
 ---
 id: index
 title: Migrating from WPF
+description: Migrate WPF applications to Avalonia with equivalent controls, bindings, and MVVM patterns.
+doc-type: migration
 ---
 
 Avalonia shares many concepts with WPF, so your existing knowledge transfers directly. Most controls, layout panels, data binding, and MVVM patterns work the same way or have a clear equivalent. The main areas where the two frameworks diverge are styling, data templates, the property system, and event naming.

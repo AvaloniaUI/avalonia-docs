@@ -1,6 +1,8 @@
 ---
 id: data-templates
 title: Data templates
+description: Differences between WPF and Avalonia data templates, type matching, and template storage.
+doc-type: migration
 ---
 
 Data templates in Avalonia work similarly to WPF, allowing you to define the visual representation of data objects. The core concepts are the same, but there are key differences in where templates are stored, how type matching works, and what additional features are available.

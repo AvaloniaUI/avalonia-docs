@@ -1,5 +1,7 @@
 ---
 title: Other frameworks
+description: Migrate to Avalonia from Delphi, Qt, Electron, or ASP.NET MVC desktop applications.
+doc-type: migration
 ---
 
 Avalonia is not only for developers coming from Microsoft's XAML ecosystem. If you are building desktop or cross-platform applications with Delphi, Qt, Electron, or ASP.NET MVC and looking for a modern .NET alternative, Avalonia may be a strong fit.
@@ -86,7 +88,7 @@ Qt is a proven cross-platform framework, but its C++ foundation, licensing compl
 
 - **No C++ required:** Avalonia is pure .NET (C# or F#). No bridging layers, no P/Invoke for basic UI work.
 - **Simpler licensing:** Avalonia is MIT-licensed. No LGPL compliance concerns, no commercial license fees for the framework itself.
-- **Styling is familiar:** If you have used Qt Style Sheets, Avalonia's CSS-like selectors will feel natural. Avalonia's system is more powerful, supporting pseudo-classes, nested selectors, and style classes.
+- **Styling is familiar:** If you have used Qt Style Sheets, Avalonia's CSS-like selectors will feel natural. Avalonia's system supports pseudo-classes, nested selectors, and style classes.
 - **Single UI language:** Qt splits between Widgets (C++) and QML (JavaScript-like). Avalonia uses XAML consistently.
 
 ## From Electron

@@ -1,6 +1,8 @@
 ---
 id: cheat-sheet
 title: WPF to Avalonia cheat sheet
+description: Quick reference mapping WPF concepts, controls, and APIs to their Avalonia equivalents.
+doc-type: migration
 ---
 
 A quick reference for WPF developers transitioning to Avalonia. Each entry shows the WPF concept and its Avalonia equivalent.

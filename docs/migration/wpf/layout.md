@@ -1,6 +1,8 @@
 ---
 id: layout
 title: Layout
+description: Layout system differences between WPF and Avalonia panels, sizing, and positioning.
+doc-type: migration
 ---
 
 The layout system in Avalonia is very similar to WPF. If you are familiar with WPF panels and layout concepts, you will feel right at home. There are a few key differences and additions worth noting.

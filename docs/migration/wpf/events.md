@@ -1,6 +1,8 @@
 ---
 id: events
 title: Events
+description: Differences between WPF and Avalonia routed events, tunnelling, and event naming.
+doc-type: migration
 ---
 
 Avalonia's event system is conceptually similar to WPF's routed event model. Events can bubble up or tunnel down the visual tree, and you can register class handlers or instance handlers. However, there are important differences in the API surface, event naming, and how tunnelling is handled. This guide covers the key differences you need to know when migrating from WPF to Avalonia.
