@@ -1,6 +1,8 @@
 ---
 id: webauthenticationbroker
 title: WebAuthenticationBroker
+description: "API reference for WebAuthenticationBroker, a utility for handling OAuth and web-based authentication flows in Avalonia applications."
+doc-type: reference
 tags:
   - accelerate
 ---

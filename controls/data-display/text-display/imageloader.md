@@ -1,6 +1,8 @@
 ---
 id: imageloader
 title: ImageLoader
+description: Customize how the Markdown control loads and resolves images by implementing a custom MarkdownImageLoader.
+doc-type: reference
 tags:
   - accelerate
 ---
@@ -12,11 +14,15 @@ The `Markdown` control supports custom image loading via the `ImageLoader` prope
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
 :::
 
+## Default behavior
+
+When you do not set a custom `ImageLoader`, the `Markdown` control resolves image URIs using `avares://` URIs from your application's embedded resources. This means any image bundled as an Avalonia resource can be displayed without additional configuration. If you need to load images from other sources (such as the web or the local file system) or support formats like SVG, you must provide a custom `MarkdownImageLoader`.
+
 ## Example: loading SVG images
 
 ### Required packages
 
-To use the custom image loader example above, you need to install the following NuGet packages:
+To use the custom image loader example below, you need to install the following NuGet package:
 
 ```bash
  dotnet add package Avalonia.Svg.Skia
@@ -129,8 +135,8 @@ var markdown = new Markdown
 ```
 
 ## When to use
-- To support SVG images in Markdown
-- To implement custom caching or authentication for images
+
+You should implement a custom `MarkdownImageLoader` whenever the default image resolution does not meet your needs. For example, you might need to render SVG images, load images from a remote server that requires authentication, or apply a caching strategy to avoid repeated downloads. A custom loader gives you full control over how image URIs are resolved and what image types your `Markdown` control can display.
 
 ## See also
 - [Markdown control](/controls/data-display/text-display/markdown)

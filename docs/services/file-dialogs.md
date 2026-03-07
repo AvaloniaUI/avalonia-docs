@@ -1,6 +1,8 @@
 ---
 id: file-dialogs
 title: File Dialogs
+description: Using the StorageProvider API to open file picker, save file, and folder picker dialogs in Avalonia applications.
+doc-type: guide
 ---
 
 The file dialog functionality is accessed through the [`StorageProvider`](/docs/services/storage/storage-provider) service API, which is available from the `Window` or `TopLevel` classes. This page shows only basic usage and for more information about this API please visit StorageProvider page.

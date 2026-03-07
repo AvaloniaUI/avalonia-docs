@@ -1,6 +1,8 @@
 ---
 id: drawingimage
 title: DrawingImage
+description: A control that renders vector graphics as an IImage using Avalonia Drawing objects, enabling resolution-independent icons and shapes defined entirely in XAML.
+doc-type: reference
 ---
 
 `DrawingImage` renders vector graphics as an `IImage`, making it usable anywhere a bitmap image would be. Instead of loading pixels from a file, it draws shapes, paths, and other vector content defined through Avalonia's `Drawing` classes.
@@ -33,7 +35,7 @@ You will probably use these properties most often:
 
 This example creates a green circle with a dark green border using `GeometryDrawing`:
 
-```xml
+```xml title="XAML"
 <Image Width="64" Height="64">
   <Image.Source>
     <DrawingImage>
@@ -51,7 +53,7 @@ This example creates a green circle with a dark green border using `GeometryDraw
 
 Use a `DrawingGroup` to compose multiple shapes into a single image. This example draws a simple house icon:
 
-```xml
+```xml title="XAML"
 <Image Width="100" Height="100">
   <Image.Source>
     <DrawingImage>
@@ -74,9 +76,9 @@ Use a `DrawingGroup` to compose multiple shapes into a single image. This exampl
 
 ### Using as a resource
 
-Define a `DrawingImage` as a resource and reference it across your application:
+You can define a `DrawingImage` as a resource and reference it across your application. This approach keeps your icon definitions in one place and lets you reuse them in multiple controls:
 
-```xml
+```xml title="XAML"
 <UserControl.Resources>
   <DrawingImage x:Key="CheckIcon">
     <GeometryDrawing Brush="Green" Geometry="M 2,5 L 4,7 L 8,3" >
@@ -90,7 +92,7 @@ Define a `DrawingImage` as a resource and reference it across your application:
 <Image Source="{StaticResource CheckIcon}" Width="24" Height="24" />
 ```
 
-### DrawingImage vs. bitmap images
+### `DrawingImage` vs. bitmap images
 
 Use `DrawingImage` when you need:
 
@@ -100,9 +102,20 @@ Use `DrawingImage` when you need:
 
 Use bitmap images (`Image.Source` with an asset path) when you have photographic content or pre-rendered artwork.
 
+## Practical notes
+
+- **Viewbox cropping.** If you set the `Viewbox` property, only the specified rectangle of your drawing is rendered. This is handy when you pack several icons into a single `DrawingGroup` and want to display one region at a time.
+- **Performance.** Because `DrawingImage` re-renders its vector content each time it paints, very complex drawings with hundreds of geometries may be slower than an equivalent bitmap. For intricate artwork, consider pre-rendering to a `RenderTargetBitmap`.
+- **Data binding.** You can bind `Brush`, `Geometry`, or `Pen` properties inside your drawings to view-model values, giving you fully dynamic vector graphics that respond to your application state.
+- **Accessibility.** `DrawingImage` does not expose text content to assistive technology on its own. If the graphic conveys meaning, set an accessible name or description on the parent `Image` control.
+
 ## See also
 
 - [Image](/controls/media/image)
 - [PathIcon](/controls/media/pathicon)
+- [Geometry](/docs/guides/graphics-and-animation/geometries)
+- [Drawing and brushes](/docs/guides/graphics-and-animation/drawing-and-brushes)
 - [DrawingImage API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Media_DrawingImage)
+- [GeometryDrawing API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Media_GeometryDrawing)
+- [DrawingGroup API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Media_DrawingGroup)
 - [`DrawingImage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Media/DrawingImage.cs)

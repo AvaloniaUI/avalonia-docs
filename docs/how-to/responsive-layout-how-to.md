@@ -1,15 +1,15 @@
 ---
 id: responsive-layout-how-to
-title: "How to: Build Responsive Layouts"
+title: "How to: Build responsive layouts"
 description: Create Avalonia layouts that adapt to different window sizes and form factors.
 doc-type: how-to
 ---
 
-This guide covers techniques for creating Avalonia layouts that adapt to different window sizes and form factors.
+This guide covers techniques for creating layouts that adapt to different window sizes and form factors. You will learn how to use form-factor markup extensions, container queries, breakpoint-driven view models, and reflowing item layouts to build UIs that work across desktop and mobile.
 
-## Adaptive Grid Columns
+## Adaptive grid columns
 
-Use `OnFormFactor` to change layout based on device type:
+Use the `OnFormFactor` markup extension to change your layout structure based on the device type. In the following example, a two-column grid with a sidebar appears on desktop while mobile users see a single-column layout:
 
 ```xml
 <Grid ColumnDefinitions="{OnFormFactor Desktop='250,*', Mobile='*'}">
@@ -24,9 +24,13 @@ Use `OnFormFactor` to change layout based on device type:
 </Grid>
 ```
 
-## Container Queries
+`OnFormFactor` resolves at startup, so the value does not change if you resize the window at runtime. If you need your layout to respond to live size changes, use container queries or a breakpoint-based approach instead.
 
-Avalonia supports container queries, which adapt layout based on the control's own size rather than the window size:
+## Container queries
+
+Container queries adapt layout based on a control's own rendered size rather than the window size. This makes them ideal for reusable components that may appear in panels of varying width.
+
+The following example switches a `StackPanel` between vertical and horizontal orientation depending on the width of its parent `Border`:
 
 ```xml
 <Border>
@@ -48,11 +52,11 @@ Avalonia supports container queries, which adapt layout based on the control's o
 </Border>
 ```
 
-See [Container Queries](/docs/styling/container-queries) for the full syntax.
+See [Container queries](/docs/styling/container-queries) for the full syntax and named-container support.
 
-## Breakpoint-Based Layout
+## Breakpoint-based layout
 
-Implement breakpoints by observing the window width:
+When you need fine-grained control over layout transitions, you can implement breakpoints by observing the window width in your view model. Define boolean properties for each breakpoint tier, then bind your XAML to them:
 
 ```csharp
 public partial class MainViewModel : ObservableObject
@@ -71,6 +75,8 @@ public partial class MainViewModel : ObservableObject
 }
 ```
 
+Call `UpdateLayout` from the window's `OnSizeChanged` override so that your properties stay in sync as the user resizes:
+
 ```csharp
 // In MainWindow code-behind
 protected override void OnSizeChanged(SizeChangedEventArgs e)
@@ -80,6 +86,8 @@ protected override void OnSizeChanged(SizeChangedEventArgs e)
         vm.UpdateLayout(e.NewSize.Width);
 }
 ```
+
+In your AXAML, swap between compact and wide views by binding `IsVisible` to the breakpoint properties:
 
 ```xml
 <Grid>
@@ -97,9 +105,11 @@ protected override void OnSizeChanged(SizeChangedEventArgs e)
 </Grid>
 ```
 
-## SplitView for Collapsible Sidebar
+This approach gives you full programmatic control and works well when your layout logic involves more than simple width thresholds (for example, combining orientation and platform checks).
 
-`SplitView` provides a built-in collapsible pane pattern:
+## Use `SplitView` for a collapsible sidebar
+
+The `SplitView` control provides a built-in collapsible pane pattern. Set `DisplayMode` to `CompactInline` so the pane collapses to a narrow strip showing icons, then expands to reveal labels when you toggle `IsPaneOpen`:
 
 ```xml
 <SplitView IsPaneOpen="{Binding IsSidebarOpen}"
@@ -130,9 +140,11 @@ protected override void OnSizeChanged(SizeChangedEventArgs e)
 </SplitView>
 ```
 
-## Responsive Card Grid
+You can bind `IsPaneOpen` to your breakpoint properties so the sidebar opens automatically on wide screens and collapses on narrow ones.
 
-Use `WrapPanel` or `UniformGridLayout` for cards that reflow:
+## Responsive card grid
+
+Use `ItemsRepeater` with a `UniformGridLayout` to create a card grid that reflows as the available width changes. Set `MinItemWidth` and `MinItemHeight` to define the smallest card size, and `UniformGridLayout` calculates the column count for you:
 
 ```xml
 <ScrollViewer>
@@ -157,11 +169,11 @@ Use `WrapPanel` or `UniformGridLayout` for cards that reflow:
 </ScrollViewer>
 ```
 
-The `UniformGridLayout` automatically adjusts the number of columns based on available width.
+If you need a simpler reflowing container without virtualization, you can use `WrapPanel` instead.
 
-## Platform-Specific Spacing
+## Platform-specific spacing
 
-Adjust spacing and padding for different platforms:
+Use `OnFormFactor` to adjust spacing, margins, and font sizes per platform. Mobile interfaces typically benefit from larger touch targets and slightly larger text:
 
 ```xml
 <StackPanel Spacing="{OnFormFactor Desktop=8, Mobile=12}"
@@ -170,9 +182,9 @@ Adjust spacing and padding for different platforms:
 </StackPanel>
 ```
 
-## Adaptive Font Sizes
+## Adaptive font sizes
 
-Use [container queries](/docs/styling/container-queries) to scale text based on the size of an ancestor. Declare a container on the parent element, then use `ContainerQuery` to apply different font sizes at different widths:
+Use [container queries](/docs/styling/container-queries) to scale text based on the size of an ancestor. Declare a container on the parent element with `Container.Name` and `Container.Sizing`, then apply a `ContainerQuery` to set different font sizes at different widths:
 
 ```xml
 <Panel Container.Name="content" Container.Sizing="Width">
@@ -193,9 +205,11 @@ Use [container queries](/docs/styling/container-queries) to scale text based on 
 </Panel>
 ```
 
-## See Also
+This technique keeps your typography responsive without relying on window-level breakpoints, so the text adapts correctly even when your control is hosted inside a split pane or dialog.
 
-- [Container Queries](/docs/styling/container-queries): Responsive styling based on container size.
+## See also
+
+- [Container queries](/docs/styling/container-queries): Responsive styling based on container size.
 - [Layout](/docs/layout/layout): Avalonia layout system overview.
-- [Grid How-To](/docs/how-to/grid-how-to): Grid layout patterns.
-- [Cross-Platform Architecture](/docs/fundamentals/cross-platform-architecture): Platform detection and branching.
+- [Grid how-to](/docs/how-to/grid-how-to): Grid layout patterns.
+- [Cross-platform architecture](/docs/fundamentals/cross-platform-architecture): Platform detection and branching.

@@ -1,6 +1,8 @@
 ---
 id: splitview
 title: SplitView
+description: Learn how to use the SplitView control to create collapsible side panes and navigation sidebars in Avalonia UI.
+doc-type: reference
 ---
 
 import SplitViewCompactScreenshot from '/img/controls/splitview/splitview-expander.gif';
@@ -29,7 +31,7 @@ The display mode property controls how the pane is drawn in its open and closed 
     The pane is always visible, is a fixed width, and does not overlay the content area. The pane and content areas divide the available screen real estate, but if the container changes width, it is the content zone that resizes.
 *   **Compact Overlay**
 
-    A narrow portion of the pane is always visible in this mode, which is just wide enough to show icons. The default closed pane width is 48px, which can be modified with the `CompactPaneLength`property value. If the pane is opened, it will overlay the content area.
+    A narrow portion of the pane is always visible in this mode, which is just wide enough to show icons. The default closed pane width is 48px, which can be modified with the `CompactPaneLength` property value. If the pane is opened, it will overlay the content area.
 *   **Compact Inline**
 
     A narrow portion of the pane is always visible in this mode, which is just wide enough to show icons. The default closed pane width is 48px, which can be modified with `CompactPaneLength` property value. If the pane is opened, it will reduce the size of the content zone.

@@ -1,6 +1,7 @@
 ---
 id: logs-tool
 title: Logs tool
+description: View and filter Avalonia log messages in Developer Tools, integrate with Microsoft.Extensions.Logging, and create custom log sources such as Serilog sinks.
 doc-type: reference
 ---
 

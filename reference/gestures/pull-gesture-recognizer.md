@@ -1,6 +1,8 @@
 ---
 id: pull-gesture-recognizer
 title: Pull
+description: "Reference for the PullGestureRecognizer, which tracks pull gestures from the edge of a control in a specified direction."
+doc-type: reference
 ---
 
 A gesture recognizer that tracks a pull gesture. A pull gesture occurs when a pointer is dragged from the edge of a control. The direction of the pull is defined by the `PullDirection` property.

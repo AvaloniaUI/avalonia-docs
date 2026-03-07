@@ -1,6 +1,8 @@
 ---
 id: menuflyout
 title: MenuFlyout
+description: A flyout that displays a simple menu of commands, typically attached to a button or other control.
+doc-type: reference
 ---
 
 import MenuFlyoutScreenshot from '/img/reference/controls/menuflyout/menuflyout-button.gif';
@@ -78,7 +80,26 @@ This is an example for a `MenuFlyout` that is created dynamically during runtime
 </Button>
 ```
 
+## Placement
+
+You can control where the flyout appears relative to its target control by setting the `Placement` property. This property accepts a `FlyoutPlacementMode` value, which includes options such as `Top`, `Bottom`, `Left`, `Right`, `TopEdgeAlignedLeft`, `TopEdgeAlignedRight`, `BottomEdgeAlignedLeft`, `BottomEdgeAlignedRight`, and others.
+
+```xml
+<Button Content="Options">
+    <Button.Flyout>
+        <MenuFlyout Placement="BottomEdgeAlignedLeft">
+            <MenuItem Header="Settings"/>
+            <MenuItem Header="About"/>
+        </MenuFlyout>
+    </Button.Flyout>
+</Button>
+```
+
+If you do not set `Placement`, the flyout uses a default position determined by the control it is attached to.
+
 ## See also
 
 - [MenuFlyout API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_MenuFlyout)
 - [`MenuFlyout.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/MenuFlyout.cs)
+- [Separator](/controls/menus/separator)
+- [Menu](/controls/menus/menu)

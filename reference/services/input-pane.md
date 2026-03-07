@@ -1,70 +1,77 @@
 ---
 id: input-pane
 title: Input Pane
+description: Reference for Avalonia's IInputPane service, which provides information about the platform's on-screen keyboard state and bounds.
+doc-type: reference
 ---
 
-# Input Pane
+# Input pane
 
-The `InputPane` allows developers to listen for the platform's input pane (e.g., software keyboard or on-screen keyboard) current state and boundaries.
+The `IInputPane` service allows you to monitor the platform's input pane (for example, a software keyboard or on-screen keyboard) and react to changes in its state and bounds. This is useful when you need to adjust your layout so that the on-screen keyboard does not obscure important content.
 
-The `InputPane` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/fundamentals/top-level) page.
+You can access the `IInputPane` through an instance of `TopLevel` or `Window`. For more details on accessing `TopLevel`, visit the [TopLevel](/docs/fundamentals/top-level) page.
 
-```cs
+```csharp
 var inputPane = TopLevel.GetTopLevel(control).InputPane;
 ```
 
 :::note
-Currently, Avalonia does not automatically adjust root view and scrolling position depending on state of the input pane. Instead, it is recommended for developers to use IInputPane API and adjust their apps accordingly.
+Currently, Avalonia does not automatically adjust the root view or scrolling position based on the state of the input pane. You should use the `IInputPane` API and adjust your app layout accordingly.
 
-Automatic adjustment is planned for future 11.* releases.
+Automatic adjustment is planned for future 11.x releases.
 :::
 
-## Properties 
+## Properties
 
-### State
-The current input pane state.
-Possible values:
+### `State`
+
+Returns the current state of the input pane. Possible values are:
+
 - `InputPaneState.Closed`
 - `InputPaneState.Opened`
 
-```cs
+```csharp
 InputPaneState State { get; }
 ```
 
-### OccludedRect
-The current input pane bounds.
+### `OccludedRect`
 
-```cs
+Returns the current bounds of the input pane as a `Rect`. You can use this value to determine how much of your layout is covered by the keyboard.
+
+```csharp
 Rect OccludedRect { get; }
 ```
 
 :::note
-Return value is in client coordinates relative to the current top level.
-Empty rectangle will be returned in case of floating/detached input pane, that is positioned on top of the view.
+The return value is in client coordinates relative to the current `TopLevel`. An empty rectangle is returned when the input pane is floating or detached and positioned on top of the view.
 :::
 
 ## Events
 
-### StateChanged
-Occurs when the input pane's state has changed.
+### `StateChanged`
 
-```cs
+Occurs when the input pane's state changes (for example, when the on-screen keyboard opens or closes).
+
+```csharp
 event EventHandler<InputPaneStateEventArgs>? StateChanged;
 ```
 
-Notably, event arguments include several useful parameters:
-- `InputPaneStateEventArgs.NewState` - new state of the input pane.
-- `InputPaneStateEventArgs.StartRect` - initial bounds of the input pane.
-- `InputPaneStateEventArgs.EndRect` - final bounds of the input pane.
-- `InputPaneStateEventArgs.AnimationDuration` - duration of the input pane's state change animation.
-- `InputPaneStateEventArgs.Easing` - easing of the input pane's state changed animation.
+The `InputPaneStateEventArgs` includes the following properties:
 
-Having `AnimationDuration` and `Easing` allows developer to create a transition between two states.
+| Property | Description |
+|---|---|
+| `NewState` | The new `InputPaneState` of the input pane. |
+| `StartRect` | The initial bounds of the input pane before the transition. |
+| `EndRect` | The final bounds of the input pane after the transition. |
+| `AnimationDuration` | The duration of the input pane's state change animation. |
+| `Easing` | The easing function applied to the state change animation. |
 
-## Platform compatibility:
+You can use `AnimationDuration` and `Easing` to create a smooth transition in your layout that matches the keyboard animation.
+
+## Platform compatibility
 
 | Feature        | Windows | macOS | Linux | Browser | Android |  iOS |
-|---------------|-------|-------|-------|-------|-------|-------|
+|---|---|---|---|---|---|---|
 | `State` | ✓ | ✗ | ✗ | ✓* | ✓ | ✓ |
 | `OccludedRect` | ✓ | ✗ | ✗ | ✓*  | ✓ | ✓ |
 | `StateChanged` | ✓ | ✗ | ✗ | ✓* | ✓ | ✓ |
@@ -72,4 +79,10 @@ Having `AnimationDuration` and `Easing` allows developer to create a transition 
 | `StateChanged.AnimationDuration` | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
 | `StateChanged.Easing` | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
 
-\* - only mobile Chromium browsers support IInputPane API.
+\* Only mobile Chromium browsers support the `IInputPane` API.
+
+## See also
+
+- [TopLevel](/docs/fundamentals/top-level)
+- [TextBox](../controls/detailed-reference/textbox.md)
+- [AutoCompleteBox](../controls/detailed-reference/autocompletebox.md)

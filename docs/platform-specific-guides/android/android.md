@@ -1,6 +1,8 @@
 ---
 id: android
 title: Developing with Avalonia for Android
+description: Setting up the Android development environment for building Avalonia applications, including SDK and workload installation.
+doc-type: guide
 ---
 
 ## Setting up your developer environment

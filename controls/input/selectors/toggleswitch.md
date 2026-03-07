@@ -1,28 +1,42 @@
 ---
 id: toggleswitch
 title: ToggleSwitch
+description: A sliding on/off toggle control used for binary settings, with customizable on and off content.
+doc-type: reference
 ---
 
-The `ToggleSwitch` represents a switch that can be toggled between two states (on/off). It is similar to a `CheckBox` but uses a sliding toggle visual that is familiar on mobile platforms.
+The `ToggleSwitch` control presents a sliding toggle that you can flip between on and off states. It behaves like a `CheckBox` but uses a track-and-thumb visual that feels natural on mobile and touch-first interfaces.
 
-## Useful Properties
+Use `ToggleSwitch` when you need an immediate on/off setting, such as enabling dark mode or toggling notifications. For form fields where users select multiple options from a list, a `CheckBox` is usually a better fit.
 
-| Property | Type | Description |
-|---|---|---|
-| `IsChecked` | `bool?` | The current state of the toggle. `true` for on, `false` for off. |
-| `OnContent` | `object` | Content displayed when the toggle is on. Default: "On". |
-| `OffContent` | `object` | Content displayed when the toggle is off. Default: "Off". |
-| `IsCheckedChanged` | `event` | Raised when the toggle state changes. |
+## Common properties
 
-## Basic Example
+You will probably use these properties most often:
+
+| Property      | Type      | Description                                                        |
+| ------------- | --------- | ------------------------------------------------------------------ |
+| `IsChecked`   | `bool?`   | Gets or sets the current toggle state. `true` is on, `false` is off. |
+| `OnContent`   | `object`  | Content displayed when the toggle is on. Defaults to "On".         |
+| `OffContent`  | `object`  | Content displayed when the toggle is off. Defaults to "Off".       |
+| `KnobTransitions` | `Transitions` | The transitions applied to the knob during state changes.    |
+
+## Events
+
+| Event              | Description                              |
+| ------------------ | ---------------------------------------- |
+| `IsCheckedChanged` | Raised when the `IsChecked` value changes. |
+
+## Basic example
+
+Place a `ToggleSwitch` in your AXAML and bind `IsChecked` to a Boolean property on your view model:
 
 ```xml
 <ToggleSwitch IsChecked="{Binding IsEnabled}" />
 ```
 
-## Custom On/Off Labels
+## Custom on/off labels
 
-Replace the default "On" and "Off" text:
+You can replace the default "On" and "Off" text with your own strings:
 
 ```xml
 <ToggleSwitch IsChecked="{Binding IsDarkMode}"
@@ -30,9 +44,9 @@ Replace the default "On" and "Off" text:
               OffContent="Light" />
 ```
 
-## Without Labels
+## Hiding the labels
 
-Set both content properties to empty to show only the toggle:
+Set both content properties to empty strings to show only the sliding toggle:
 
 ```xml
 <ToggleSwitch IsChecked="{Binding IsActive}"
@@ -40,9 +54,11 @@ Set both content properties to empty to show only the toggle:
               OffContent="" />
 ```
 
-## Rich Content
+This is useful when the surrounding layout already provides a label for the setting.
 
-Use complex content for on/off states:
+## Rich content
+
+You can use any controls as the on and off content. The following example pairs a `PathIcon` with a `TextBlock`:
 
 ```xml
 <ToggleSwitch IsChecked="{Binding NotificationsEnabled}">
@@ -61,7 +77,9 @@ Use complex content for on/off states:
 </ToggleSwitch>
 ```
 
-## Binding Example
+## Binding to a view model
+
+Create Boolean properties in your view model and bind each `ToggleSwitch` to one of them:
 
 ```csharp
 public partial class SettingsViewModel : ObservableObject
@@ -88,16 +106,19 @@ public partial class SettingsViewModel : ObservableObject
 </StackPanel>
 ```
 
-## Settings Form Pattern
+Because `ToggleSwitch` uses two-way binding by default, flipping the toggle immediately updates the view model property.
 
-A common pattern is using `ToggleSwitch` in a settings list:
+## Settings form pattern
+
+A common layout pairs a description on the left with a label-free `ToggleSwitch` on the right:
 
 ```xml
 <StackPanel Spacing="16">
     <Grid ColumnDefinitions="*,Auto">
         <StackPanel>
             <TextBlock Text="Auto-save" FontWeight="SemiBold" />
-            <TextBlock Text="Save changes automatically" Foreground="Gray" FontSize="12" />
+            <TextBlock Text="Save changes automatically"
+                       Foreground="Gray" FontSize="12" />
         </StackPanel>
         <ToggleSwitch Grid.Column="1" IsChecked="{Binding AutoSave}"
                       OnContent="" OffContent="" />
@@ -106,7 +127,8 @@ A common pattern is using `ToggleSwitch` in a settings list:
     <Grid ColumnDefinitions="*,Auto">
         <StackPanel>
             <TextBlock Text="Spell check" FontWeight="SemiBold" />
-            <TextBlock Text="Check spelling as you type" Foreground="Gray" FontSize="12" />
+            <TextBlock Text="Check spelling as you type"
+                       Foreground="Gray" FontSize="12" />
         </StackPanel>
         <ToggleSwitch Grid.Column="1" IsChecked="{Binding SpellCheck}"
                       OnContent="" OffContent="" />
@@ -114,16 +136,21 @@ A common pattern is using `ToggleSwitch` in a settings list:
 </StackPanel>
 ```
 
-## ToggleSwitch vs CheckBox
+Setting `OnContent` and `OffContent` to empty strings removes the redundant labels because the `TextBlock` elements already describe each setting.
 
-| Feature | ToggleSwitch | CheckBox |
-|---|---|---|
-| Visual style | Sliding toggle | Check mark |
-| Best for | Settings, on/off states | Form fields, multi-select |
-| Three-state | No | Yes (`IsThreeState`) |
-| Platform feel | Mobile-friendly | Desktop-native |
+## Choosing between `ToggleSwitch` and `CheckBox`
+
+| Consideration | `ToggleSwitch` | `CheckBox` |
+| ------------- | -------------- | ---------- |
+| Visual style  | Sliding toggle | Check mark |
+| Best suited for | Settings, instant on/off states | Form fields, multi-select lists |
+| Three-state support | No | Yes (via `IsThreeState`) |
+| Platform feel | Mobile and touch friendly | Traditional desktop |
+
+Choose `ToggleSwitch` when the change takes effect immediately. Choose `CheckBox` when the user must confirm or submit a form before the change is applied.
 
 ## See also
 
-- [CheckBox](/controls/input/selectors/checkbox): Check mark toggle for forms.
-- [ToggleButton](/controls/input/buttons/togglebutton): Button that stays pressed.
+- [CheckBox](checkbox)
+- [ToggleButton](/controls/input/buttons/togglebutton)
+- [RadioButton](/controls/input/selectors/radiobutton)

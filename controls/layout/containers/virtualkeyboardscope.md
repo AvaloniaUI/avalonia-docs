@@ -1,11 +1,13 @@
 ---
 id: virtualkeyboardscope
 title: VirtualKeyboardScope
+description: A container control that automatically shows and hides the virtual keyboard based on input focus.
+doc-type: reference
 tags:
   - accelerate
 ---
 
-The `VirtualKeyboardScope` is a container control that manages [virtual keyboard](/controls/input/text-input/virtualkeyboard) visibility automatically based on the current input focus. It displays the keyboard when a text input control within it gains focus, and hides it when focus is lost or moved to a non-text control.
+The `VirtualKeyboardScope` control is a container that automatically manages [virtual keyboard](/controls/input/text-input/virtualkeyboard) visibility based on input focus. When a text input control inside the scope receives focus, the keyboard appears. When focus moves to a non-text control or is lost entirely, the keyboard hides.
 
 
 :::info
@@ -14,7 +16,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 ## Overview
 
-`VirtualKeyboardScope` is the recommended way to integrate the virtual keyboard into your application. It provides a seamless experience where the keyboard appears only when needed and properly handles input focus and positioning to prevent the keyboard from obscuring the active input control.
+`VirtualKeyboardScope` is the recommended way to integrate the virtual keyboard into your application. It provides a seamless experience where the keyboard appears only when needed and handles input focus and positioning so that the keyboard does not obscure the active input control.
 
 ## Properties
 
@@ -26,7 +28,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 ### Basic usage
 
-```xml
+```xml title="AXAML"
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <VirtualKeyboardScope InputMethods="en-US:kbd:standard">
@@ -42,7 +44,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 ### Multiple input methods
 
-```xml
+```xml title="AXAML"
 <VirtualKeyboardScope InputMethods="en-US:kbd:standard, de:kbd:standard, ja:ime:kana">
     <StackPanel>
         <TextBox PlaceholderText="Type here" />
@@ -53,7 +55,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 ### Binding InputMethods dynamically
 
-```xml
+```xml title="AXAML"
 <VirtualKeyboardScope InputMethods="{Binding SelectedInputMethods}">
     <StackPanel>
         <TextBox />
@@ -66,7 +68,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 ### Code-behind configuration
 
-```csharp
+```csharp title="C#"
 // Get input methods for specific languages using SelectMany + ToList
 var inputMethods = new[] { "en-US", "ja", "de" }
     .SelectMany(VirtualKeyboardInputMethod.GetInputMethodsForLanguage)
@@ -76,11 +78,11 @@ var inputMethods = new[] { "en-US", "ja", "de" }
 myKeyboardScope.InputMethods = inputMethods;
 ```
 
-## Working with TextInputOptions
+## Working with `TextInputOptions`
 
-You can customize how input fields work with the virtual keyboard using `TextInputOptions` attached properties:
+You can customize how input fields interact with the virtual keyboard using the `TextInputOptions` attached properties:
 
-```xml
+```xml title="AXAML"
 <VirtualKeyboardScope InputMethods="en-US:kbd:standard">
     <StackPanel>
         <TextBox TextInputOptions.ContentType="Email" 
@@ -98,9 +100,9 @@ You can customize how input fields work with the virtual keyboard using `TextInp
 
 ## Multiple scopes
 
-You can have multiple `VirtualKeyboardScope` controls in your application, but be aware that only one keyboard will be shown at a time:
+You can place multiple `VirtualKeyboardScope` controls in your application. Only one keyboard is shown at a time, corresponding to the scope that currently holds focus:
 
-```xml
+```xml title="AXAML"
 <Grid ColumnDefinitions="*, *">
     <!-- First scope with English and German -->
     <VirtualKeyboardScope Grid.Column="0" InputMethods="en-US:kbd:standard, de:kbd:standard">
@@ -122,22 +124,19 @@ You can have multiple `VirtualKeyboardScope` controls in your application, but b
 
 ## Best practices
 
-1. **Place at the Right Level**:
-   - Place the `VirtualKeyboardScope` at the root of your Window/UserControl or at a level that contains all text input controls that should use the keyboard.
+- **Place the scope at the right level.** Position `VirtualKeyboardScope` at the root of your `Window` or `UserControl`, or at a level that wraps all the text input controls that should trigger the keyboard.
+- **Choose relevant input methods.** Provide input methods that match your target audience. Consider offering at least one language layout for each region your application supports.
+- **Account for reduced screen space.** `VirtualKeyboardScope` automatically scrolls to keep the focused input visible when the keyboard appears. However, you may still need to adjust your layout so that content remains usable while the keyboard is on screen.
+- **Understand read-only and disabled behavior.** The keyboard does not appear for read-only or disabled text input controls. Use `IsReadOnly="True"` for text that should be selectable but not editable.
 
-2. **Input Methods Selection**:
-   - Provide input methods relevant to your target audience.
-   - Consider offering at least one language layout for each region your application targets.
+## Practical notes
 
-3. **Content Scrolling**:
-   - `VirtualKeyboardScope` automatically handles scrolling to keep the focused input element visible when the keyboard appears.
-   - Ensure that your layout can accommodate the reduced screen space when the keyboard is visible. While `VirtualKeyboardScope` automatically provides an scrolling container, you may still need to adjust your layout for optimal user experience.
-
-4. **Read-Only and Disabled Controls**:
-   - The keyboard won't appear for read-only or disabled text input controls.
-   - Use `IsReadOnly="True"` for text that should be selectable but not editable.
+- `VirtualKeyboardScope` is typically used in kiosk and embedded-Linux scenarios where no physical keyboard is available. On desktop platforms with a hardware keyboard, users will not see the on-screen keyboard.
+- If you need full control over where the keyboard appears in your layout, use the standalone `VirtualKeyboard` control instead.
+- The `InputMethods` property accepts either a comma-separated string (for example, `"en-US:kbd:standard, de:kbd:standard"`) or a bound collection of `VirtualKeyboardInputMethod` objects. Use the string form for quick prototyping and the binding form when your available languages are determined at runtime.
 
 ## See also
 
-- [VirtualKeyboard](/controls/input/text-input/virtualkeyboard) - The standalone keyboard control for manual placement
-- [Adding a virtual keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard)
+- [VirtualKeyboard](/controls/input/text-input/virtualkeyboard) for manual keyboard placement
+- [TextBox](/controls/input/text-input/textbox) for the standard text input control
+- [Adding a virtual keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard) for embedded-Linux setup guidance

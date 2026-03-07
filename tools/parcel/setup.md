@@ -1,6 +1,7 @@
 ---
 id: setup
 title: Setting up Avalonia Parcel
+description: Install, configure, and activate Avalonia Parcel, the packaging tool for building, signing, and packaging Avalonia applications on Windows, macOS, and Linux.
 sidebar_label: Setup
 sidebar_position: 1
 doc-type: tutorial

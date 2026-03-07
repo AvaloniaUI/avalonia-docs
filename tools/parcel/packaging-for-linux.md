@@ -1,6 +1,7 @@
 ---
 id: packaging-for-linux
 title: Packaging apps for Linux
+description: Package Avalonia applications for Linux using Parcel, with support for DEB, RPM, ZIP, and AppImage formats, including dependency management and desktop integration.
 sidebar_label: Linux
 doc-type: reference
 tags:

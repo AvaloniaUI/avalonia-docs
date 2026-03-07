@@ -1,6 +1,7 @@
 ---
 id: linux
 title: Linux Deployment
+description: How to publish and deploy XPF applications on Linux, including required native libraries and runtime dependencies.
 ---
 
 ## Publishing

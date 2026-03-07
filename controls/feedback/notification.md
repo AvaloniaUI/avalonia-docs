@@ -1,9 +1,11 @@
 ---
 id: notification
 title: WindowNotificationManager
+description: A toast-style notification popup system that displays temporary messages at a configurable position within a window.
+doc-type: reference
 ---
 
-The `WindowNotificationManager` provides a built-in notification popup system. It displays toast-style messages at a configurable position within a window.
+The `WindowNotificationManager` provides a built-in notification popup system. It displays toast-style messages at a configurable position within a window. You can use it to inform users about completed operations, warnings, errors, or other events without blocking interaction with the rest of the UI.
 
 ## Useful properties
 
@@ -25,7 +27,7 @@ The built-in `Notification` class exposes these properties:
 
 ## Setting up
 
-Register a `WindowNotificationManager` in your window, typically in code-behind or via a view model reference:
+Register a `WindowNotificationManager` in your window, typically in code-behind or through a view model reference:
 
 ```csharp
 public partial class MainWindow : Window
@@ -45,16 +47,54 @@ public partial class MainWindow : Window
 }
 ```
 
+You can also declare the `WindowNotificationManager` in XAML if you prefer a markup-based approach:
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MyApp.MainWindow">
+    <Panel>
+        <WindowNotificationManager x:Name="NotificationManager"
+                                   Position="TopRight"
+                                   MaxItems="5" />
+        <!-- Your other content here -->
+    </Panel>
+</Window>
+```
+
+You then access the manager from code-behind:
+
+```csharp
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+        var manager = this.FindControl<WindowNotificationManager>("NotificationManager");
+    }
+}
+```
+
 ## Showing a notification
 
 Call `Show` with a `Notification` object:
 
 ```csharp
 _notificationManager.Show(new Notification(
-    "File Saved",
+    "File saved",
     "Your document has been saved successfully.",
     NotificationType.Success,
     TimeSpan.FromSeconds(3)));
+```
+
+If you omit the `Expiration` parameter, the notification uses the default expiration time. To keep a notification visible until the user dismisses it manually, pass `TimeSpan.Zero`:
+
+```csharp
+_notificationManager.Show(new Notification(
+    "Action required",
+    "Please review the pending changes before continuing.",
+    NotificationType.Warning,
+    TimeSpan.Zero));
 ```
 
 ## Notification types
@@ -90,6 +130,26 @@ _notificationManager.Close(notification);
 _notificationManager.ClearAll();
 ```
 
+This is useful when a long-running operation completes and you want to replace a progress notification with a result notification:
+
+```csharp
+var progressNotification = new Notification(
+    "Uploading",
+    "Sending files to the server...",
+    NotificationType.Information,
+    TimeSpan.Zero);
+
+_notificationManager.Show(progressNotification);
+
+// Later, when the upload finishes:
+_notificationManager.Close(progressNotification);
+_notificationManager.Show(new Notification(
+    "Upload complete",
+    "All files have been sent successfully.",
+    NotificationType.Success,
+    TimeSpan.FromSeconds(3)));
+```
+
 ## Custom notification content
 
 Implement `INotification` to provide custom notification data:
@@ -116,6 +176,20 @@ public class CustomNotification : INotification
 }
 ```
 
+You can then show your custom notification the same way:
+
+```csharp
+_notificationManager.Show(new CustomNotification
+{
+    Title = "New message",
+    Message = "You have a new message from support.",
+    Type = NotificationType.Information,
+    Expiration = TimeSpan.FromSeconds(5),
+    ActionText = "View",
+    OnAction = () => NavigateToMessages()
+});
+```
+
 ## Positioning
 
 Control where notifications appear by setting `Position`:
@@ -128,15 +202,27 @@ _notificationManager.Position = NotificationPosition.TopRight;
 _notificationManager.Position = NotificationPosition.BottomCenter;
 ```
 
+The six available positions are:
+
+| Position | Description |
+|---|---|
+| `TopLeft` | Top-left corner of the window. |
+| `TopCenter` | Top edge, centered horizontally. |
+| `TopRight` | Top-right corner of the window (default). |
+| `BottomLeft` | Bottom-left corner of the window. |
+| `BottomCenter` | Bottom edge, centered horizontally. |
+| `BottomRight` | Bottom-right corner of the window. |
+
 ## MVVM pattern
 
-Expose a notification manager through a service so view models can show notifications without referencing UI types directly:
+Expose a notification manager through a service so your view models can show notifications without referencing UI types directly:
 
 ```csharp
 public interface INotificationService
 {
     void ShowInfo(string title, string message);
     void ShowSuccess(string title, string message);
+    void ShowWarning(string title, string message);
     void ShowError(string title, string message);
 }
 
@@ -155,12 +241,36 @@ public class NotificationService : INotificationService
     public void ShowSuccess(string title, string message) =>
         _manager.Show(new Notification(title, message, NotificationType.Success));
 
+    public void ShowWarning(string title, string message) =>
+        _manager.Show(new Notification(title, message, NotificationType.Warning));
+
     public void ShowError(string title, string message) =>
         _manager.Show(new Notification(title, message, NotificationType.Error));
 }
 ```
 
+Register the service in your application startup and inject it into view models that need to display notifications:
+
+```csharp
+public class MyViewModel
+{
+    private readonly INotificationService _notifications;
+
+    public MyViewModel(INotificationService notifications)
+    {
+        _notifications = notifications;
+    }
+
+    public void SaveDocument()
+    {
+        // Perform save logic...
+        _notifications.ShowSuccess("Saved", "Your document has been saved.");
+    }
+}
+```
+
 ## See also
 
-- [How To: Show Notifications and Toasts](/docs/how-to/notifications-how-to): Custom notification patterns including overlays, status bars, and banners.
-- [ToolTip](/controls/feedback/tooltip): Hover-triggered popups for supplementary information.
+- [How to show notifications and toasts](/docs/how-to/notifications-how-to)
+- [Popup](popup)
+- [ToolTip](tooltip)

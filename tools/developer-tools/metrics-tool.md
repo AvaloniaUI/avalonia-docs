@@ -1,6 +1,7 @@
 ---
 id: metrics-tool
 title: Metrics tool
+description: Monitor application health using counters, histograms, and other .NET metric instruments in Avalonia Developer Tools, and create custom metric sources.
 doc-type: reference
 ---
 

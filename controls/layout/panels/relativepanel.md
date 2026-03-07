@@ -1,6 +1,8 @@
 ---
 id: relativepanel
 title: RelativePanel
+description: Learn how to use the RelativePanel in Avalonia to position child controls relative to each other or the panel.
+doc-type: reference
 ---
 
 The `RelativePanel` control allows you to arrange its child controls by specifying their position relative to other (sibling) child controls, or in relation to the panel itself. Positions are calculated using the inside of the panel control (content zone) and the outer edge of the margin zone of the child controls.
@@ -78,3 +80,10 @@ Here are some notes about the above example:
 
 - [RelativePanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RelativePanel)
 - [`RelativePanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RelativePanel.cs)
+- [Canvas](canvas)
+- [DockPanel](dockpanel)
+- [Grid](grid)
+- [Panel](panel)
+- [StackPanel](stackpanel)
+- [UniformGrid](uniformgrid)
+- [WrapPanel](wrappanel)

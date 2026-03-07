@@ -1,11 +1,15 @@
 ---
 id: scrollviewer
 title: ScrollViewer
+description: A container control that provides scrollbars when its content exceeds the visible area.
+doc-type: reference
 ---
 
-The `ScrollViewer` control can have content that is bigger than its content zone, and will provide scroll bars to move hidden content into view.
+The `ScrollViewer` control can have content that is bigger than its content zone. It provides scroll bars so your users can move hidden content into view.
 
-A `ScrollViewer` cannot be contained in a control that has infinite height or width (depending on scrolling direction) such as a `StackPanel`. To avoid it, you can either set fixed Height/Width or MaxHeight/MaxWidth or choose another container panel.
+:::warning
+You cannot place a `ScrollViewer` inside a control that has infinite height or width (depending on the scrolling direction), such as a `StackPanel`. To avoid this problem, set a fixed `Height`/`Width` or `MaxHeight`/`MaxWidth` on the `ScrollViewer`, or choose a different container panel.
+:::
 
 ## Useful properties
 
@@ -19,25 +23,84 @@ You will probably use these properties most often:
 | `Offset` | `Vector` | The current scroll position (X, Y). |
 | `Extent` | `Size` | The total size of the scrollable content. |
 | `Viewport` | `Size` | The size of the visible area. |
-| `IsScrollChainingEnabled` | `bool` | Attached property. Default `true`. When set on an inner scrollable control, determines whether scroll events chain to the outer scroll viewer. |
+| `IsScrollChainingEnabled` | `bool` | Attached property. Default `true`. When set on an inner scrollable control, determines whether scroll events chain to the outer `ScrollViewer`. |
+| `IsDeferredScrollingEnabled` | `bool` | Default `false`. When `true`, the content does not scroll until the user releases the scrollbar thumb. Useful for performance with heavy content. |
+| `BringIntoViewOnFocusChange` | `bool` | Default `true`. When a child control receives focus, the `ScrollViewer` automatically scrolls to bring it into view. |
+
+## Scrollbar visibility options
+
+Each scrollbar direction accepts one of the following `ScrollBarVisibility` values:
+
+| Value | Behavior |
+|---|---|
+| `Auto` | Shows the scrollbar only when content overflows. This is the default for vertical scrolling. |
+| `Visible` | Always shows the scrollbar, even when content fits within the viewport. |
+| `Hidden` | Hides the scrollbar but still allows scrolling by touch, mouse wheel, or keyboard. |
+| `Disabled` | Disables scrolling in that direction entirely. This is the default for horizontal scrolling. |
+
+```xml
+<!-- Always show the vertical scrollbar, disable horizontal scrolling -->
+<ScrollViewer VerticalScrollBarVisibility="Visible"
+              HorizontalScrollBarVisibility="Disabled">
+    <TextBlock Text="{Binding LongText}" TextWrapping="Wrap" />
+</ScrollViewer>
+```
 
 ## Scroll chaining
 
-If you have a control that can itself scroll (see list below) nested inside a scroll viewer, and the user hits a limit on the control, this property sets whether the outer scroll viewer should continue scrolling or not. You enable or disable this behaviour with an attached property on the inner control, using the format:
+When you nest a scrollable control inside a `ScrollViewer`, and the user reaches the scroll limit on the inner control, scroll chaining determines whether the outer `ScrollViewer` continues scrolling. You can enable or disable this behavior with the `IsScrollChainingEnabled` attached property on the inner control:
 
-`ScrollViewer.IsScrollChainingEnabled=[true|false]`
+```xml
+<ScrollViewer>
+    <StackPanel>
+        <!-- This inner ListBox will NOT chain scrolling to the outer ScrollViewer -->
+        <ListBox ScrollViewer.IsScrollChainingEnabled="False"
+                 ItemsSource="{Binding Items}"
+                 MaxHeight="200" />
+        <TextBlock Text="Other content below" />
+    </StackPanel>
+</ScrollViewer>
+```
 
-This attached property is available on these controls:
+This attached property is available on the following controls:
 
-* Scroll Viewer
-* Data Grid
-* List Box
-* Text Box
-* Tree View
+* `ScrollViewer`
+* `DataGrid`
+* `ListBox`
+* `TextBox`
+* `TreeView`
+
+## Programmatic scrolling
+
+You can control the scroll position from code-behind or your view model:
+
+```csharp
+// Scroll to a specific position
+scrollViewer.Offset = new Vector(0, 500);
+
+// Scroll to the top
+scrollViewer.Offset = new Vector(scrollViewer.Offset.X, 0);
+
+// Scroll to the bottom
+scrollViewer.Offset = new Vector(scrollViewer.Offset.X, scrollViewer.Extent.Height);
+
+// Scroll a child element into view
+targetControl.BringIntoView();
+```
+
+You can also listen for scroll position changes by subscribing to property changes on `Offset`:
+
+```csharp
+scrollViewer.GetObservable(ScrollViewer.OffsetProperty).Subscribe(offset =>
+{
+    // React to scroll position changes
+    Debug.WriteLine($"Scrolled to: {offset.X}, {offset.Y}");
+});
+```
 
 ## Example
 
-This example creates a stack panel that is bigger than the border it is inside. The scroll viewer automatically creates a vertical scroll bar.
+This example creates a `StackPanel` that is taller than the `Border` that contains it. The `ScrollViewer` automatically displays a vertical scrollbar.
 
 <XamlPreview>
 
@@ -57,31 +120,21 @@ This example creates a stack panel that is bigger than the border it is inside. 
 
 </XamlPreview>
 
-## Scrollbar visibility options
+### Horizontal scrolling
 
-| Value | Behavior |
-|---|---|
-| `Auto` | Shows the scrollbar only when content overflows (default). |
-| `Visible` | Always shows the scrollbar. |
-| `Hidden` | Hides the scrollbar but still allows scrolling by touch, wheel, or keyboard. |
-| `Disabled` | Disables scrolling in that direction entirely. |
+To enable horizontal scrolling, set `HorizontalScrollBarVisibility` to `Auto` or `Visible`:
 
 ```xml
-<!-- Always show vertical scrollbar, disable horizontal scrolling -->
-<ScrollViewer VerticalScrollBarVisibility="Visible"
-              HorizontalScrollBarVisibility="Disabled">
-    <TextBlock Text="{Binding LongText}" TextWrapping="Wrap" />
+<ScrollViewer HorizontalScrollBarVisibility="Auto"
+              VerticalScrollBarVisibility="Disabled"
+              Height="100">
+    <StackPanel Orientation="Horizontal" Spacing="8">
+        <Border Width="200" Height="80" Background="CornflowerBlue" />
+        <Border Width="200" Height="80" Background="SeaGreen" />
+        <Border Width="200" Height="80" Background="Coral" />
+        <Border Width="200" Height="80" Background="MediumPurple" />
+    </StackPanel>
 </ScrollViewer>
-```
-
-## Programmatic scrolling
-
-```csharp
-// Scroll to a specific position
-scrollViewer.Offset = new Vector(0, 500);
-
-// Scroll a child element into view
-targetControl.BringIntoView();
 ```
 
 ## See also

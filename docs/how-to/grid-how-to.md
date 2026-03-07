@@ -1,15 +1,15 @@
 ---
 id: grid-how-to
-title: "How to: Work with Grid Layouts"
+title: "How to: Work with Grid layouts"
 description: Row and column definitions, sizing modes, spanning, shared sizing, and responsive Grid patterns.
 doc-type: how-to
 ---
 
-This guide covers common Grid layout scenarios: row and column definitions, sizing modes, spanning, shared sizing, and responsive patterns.
+This guide covers common `Grid` layout scenarios including row and column definitions, sizing modes, spanning, shared sizing, and responsive patterns.
 
-## Row and Column Definitions
+## Row and column definitions
 
-Define rows and columns using the shorthand syntax:
+You can define rows and columns using the shorthand syntax:
 
 ```xml
 <Grid ColumnDefinitions="200,*,Auto" RowDefinitions="Auto,*,Auto">
@@ -22,7 +22,7 @@ Define rows and columns using the shorthand syntax:
 </Grid>
 ```
 
-Or using the verbose syntax for more control:
+Or use the verbose syntax when you need more control over individual definitions (for example, setting `MinWidth` or `MaxWidth`):
 
 ```xml
 <Grid>
@@ -38,7 +38,11 @@ Or using the verbose syntax for more control:
 </Grid>
 ```
 
-## Sizing Modes
+:::tip
+The shorthand syntax is more concise, but the verbose syntax lets you set additional properties such as `MinWidth`, `MaxWidth`, `MinHeight`, `MaxHeight`, and `SharedSizeGroup` on each definition.
+:::
+
+## Sizing modes
 
 ### Pixel sizing
 
@@ -50,9 +54,11 @@ Fixed size in device-independent pixels:
 </Grid>
 ```
 
+Use pixel sizing when you need a column or row to remain a constant size regardless of its content. This is common for sidebars, toolbars, and icon columns.
+
 ### Auto sizing
 
-Sizes to fit the content:
+Sizes the row or column to fit its content:
 
 ```xml
 <Grid ColumnDefinitions="Auto,*">
@@ -63,21 +69,34 @@ Sizes to fit the content:
 </Grid>
 ```
 
+:::note
+An `Auto` column or row measures all of its children and expands to fit the largest one. If the content grows dynamically (for example, long text loaded at runtime), the column grows too, which can push other columns off-screen. If you need to cap the size, combine `Auto` with `MaxWidth` or `MaxHeight` using the verbose syntax.
+:::
+
 ### Star sizing
 
-Distributes remaining space proportionally:
+Distributes remaining space proportionally after `Auto` and pixel columns have been measured:
 
 ```xml
 <Grid ColumnDefinitions="*,2*,*">
-    <!-- Column 0: 25% of space (1/4) -->
-    <!-- Column 1: 50% of space (2/4) -->
-    <!-- Column 2: 25% of space (1/4) -->
+    <!-- Column 0: 25% of remaining space (1/4) -->
+    <!-- Column 1: 50% of remaining space (2/4) -->
+    <!-- Column 2: 25% of remaining space (1/4) -->
 </Grid>
 ```
 
-### MinWidth and MaxWidth
+You can mix star values with other sizing modes. The star proportions apply only to the space left over after fixed and `Auto` columns are allocated:
 
-Constrain column sizes:
+```xml
+<Grid ColumnDefinitions="100,*,2*">
+    <!-- Column 0: fixed 100px -->
+    <!-- Remaining space split 1:2 between columns 1 and 2 -->
+</Grid>
+```
+
+### MinWidth and MaxWidth constraints
+
+You can constrain column and row sizes using the verbose syntax:
 
 ```xml
 <Grid>
@@ -88,9 +107,11 @@ Constrain column sizes:
 </Grid>
 ```
 
-## Row and Column Spacing
+This is particularly useful for star-sized columns where you want flexible sizing but need to prevent the column from becoming too narrow or too wide. The same approach works for rows using `MinHeight` and `MaxHeight`.
 
-Add uniform spacing between rows and columns:
+## Row and column spacing
+
+Add uniform spacing between rows and columns with `RowSpacing` and `ColumnSpacing`:
 
 ```xml
 <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto"
@@ -99,9 +120,13 @@ Add uniform spacing between rows and columns:
 </Grid>
 ```
 
-## Spanning Rows and Columns
+:::note
+`RowSpacing` and `ColumnSpacing` add space between cells only, not around the outer edges of the grid. If you need outer padding, set `Margin` or `Padding` on the `Grid` itself.
+:::
 
-Make a control span multiple rows or columns:
+## Spanning rows and columns
+
+Use `Grid.RowSpan` and `Grid.ColumnSpan` to make a control span multiple rows or columns:
 
 ```xml
 <Grid ColumnDefinitions="200,*" RowDefinitions="Auto,*,Auto">
@@ -120,9 +145,26 @@ Make a control span multiple rows or columns:
 </Grid>
 ```
 
-## Form Layout
+:::tip
+The default value for both `Grid.RowSpan` and `Grid.ColumnSpan` is `1`. If you set a span value larger than the number of remaining rows or columns, the control spans to the edge of the grid without causing an error.
+:::
 
-A common pattern for label-value pairs:
+## Default row and column values
+
+When you omit `Grid.Row` or `Grid.Column` on a child control, both default to `0`. This means you can place a single child in a `Grid` without specifying any attached properties:
+
+```xml
+<Grid>
+    <!-- This control is placed at Row 0, Column 0 by default -->
+    <TextBlock Text="Hello" />
+</Grid>
+```
+
+If you define no `RowDefinitions` or `ColumnDefinitions` at all, the grid creates a single star-sized row and column that fills all available space.
+
+## Form layout
+
+A common pattern for label-value pairs uses an `Auto` column for labels and a star column for inputs:
 
 ```xml
 <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto"
@@ -148,30 +190,42 @@ A common pattern for label-value pairs:
 </Grid>
 ```
 
+Setting `VerticalAlignment="Center"` on the labels keeps them vertically aligned with their corresponding input controls, even when the inputs are taller than the labels.
+
 ## SharedSizeGroup
 
-Align column widths across multiple grids:
+Use `SharedSizeGroup` to align column widths (or row heights) across multiple `Grid` controls. Set the property on individual `ColumnDefinition` or `RowDefinition` elements:
 
 ```xml
 <StackPanel Grid.IsSharedSizeScope="True" Spacing="4">
-    <Grid ColumnDefinitions="Auto,*" ShowGridLines="False">
-        <TextBlock Grid.Column="0" Text="Name:"
-                   SharedSizeGroup="Labels" Margin="0,0,8,0" />
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="Labels" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Text="Name:" Margin="0,0,8,0" />
         <TextBox Grid.Column="1" Text="{Binding Name}" />
     </Grid>
-    <Grid ColumnDefinitions="Auto,*" ShowGridLines="False">
-        <TextBlock Grid.Column="0" Text="Email Address:"
-                   SharedSizeGroup="Labels" Margin="0,0,8,0" />
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="Labels" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Text="Email Address:" Margin="0,0,8,0" />
         <TextBox Grid.Column="1" Text="{Binding Email}" />
     </Grid>
 </StackPanel>
 ```
 
-Both "Labels" columns will have the same width (the width of the wider label), even though they are in separate `Grid` controls. The parent `StackPanel` sets `Grid.IsSharedSizeScope="True"` to scope the sharing.
+Both "Labels" columns share the same width (the width of the wider label), even though they belong to separate `Grid` controls. The parent `StackPanel` sets `Grid.IsSharedSizeScope="True"` to define the sharing boundary.
 
-## Nested Grids
+:::note
+`SharedSizeGroup` is a property on `ColumnDefinition` and `RowDefinition`, not on the child controls themselves. The group name is a string, and all definitions with the same group name within the same shared-size scope use the same measured size.
+:::
 
-For complex layouts, nest grids:
+## Nested grids
+
+For complex layouts, you can nest grids inside one another. Each inner `Grid` manages its own rows and columns independently:
 
 ```xml
 <Grid ColumnDefinitions="250,*">
@@ -190,20 +244,24 @@ For complex layouts, nest grids:
 </Grid>
 ```
 
-## Responsive Layout with Grid
+:::tip
+Nesting grids is straightforward but adds layout complexity. If your inner grid only needs a simple vertical or horizontal stack, consider using a `StackPanel` or `DockPanel` instead for better readability and performance.
+:::
 
-Combine Grid with `OnPlatform` or `OnFormFactor` for responsive designs:
+## Responsive layout with Grid
+
+You can combine `Grid` with `OnFormFactor` for responsive designs that adapt column definitions based on the device:
 
 ```xml
 <Grid ColumnDefinitions="{OnFormFactor Desktop='250,*', Mobile='*'}">
     <!-- On desktop: two-column layout -->
-    <!-- On mobile: single column (sidebar hidden or in a drawer) -->
+    <!-- On mobile: single column (sidebar hidden or placed in a drawer) -->
 </Grid>
 ```
 
-## Overlapping Content
+## Overlapping content
 
-Place multiple children in the same cell to overlay them:
+When you place multiple children in the same cell, they overlap visually. The last child in the markup appears on top:
 
 ```xml
 <Grid>
@@ -229,10 +287,31 @@ Place multiple children in the same cell to overlay them:
 </Grid>
 ```
 
-When no `Grid.Row` or `Grid.Column` is specified, children default to row 0, column 0 and stack visually (last child on top).
+When you omit `Grid.Row` and `Grid.Column`, children default to row 0, column 0. You can use `ZIndex` to control stacking order independently of markup order:
 
-## See Also
+```xml
+<Grid>
+    <Border ZIndex="1" Background="Red" Opacity="0.5" />
+    <Border ZIndex="2" Background="Blue" Opacity="0.5" />
+    <!-- Blue border appears on top despite any markup order changes -->
+</Grid>
+```
 
-- [Grid Control Reference](/controls/layout/panels/grid): Property tables and full examples.
-- [Layout](/docs/layout/layout): Overview of the Avalonia layout system.
-- [Positioning Controls](/docs/layout/positioning-controls): Alignment, margin, and padding.
+## Debugging grid layouts
+
+Set `ShowGridLines="True"` on your `Grid` to visualize row and column boundaries during development:
+
+```xml
+<Grid ColumnDefinitions="Auto,*,200" RowDefinitions="Auto,*"
+      ShowGridLines="True">
+    <!-- Grid lines appear as dashed lines so you can see each cell -->
+</Grid>
+```
+
+Remember to remove `ShowGridLines` before shipping your application, as it is intended only as a development aid.
+
+## See also
+
+- [Grid control reference](../../controls/layout/panels/grid)
+- [Layout overview](../layout/layout)
+- [Positioning controls](../layout/positioning-controls)

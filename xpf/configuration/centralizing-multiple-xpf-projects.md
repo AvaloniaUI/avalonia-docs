@@ -1,15 +1,19 @@
 ---
 id: centralizing-multiple-xpf-projects
 title: Centralizing multiple XPF projects
+description: Learn how to centralize XPF SDK version management and license key configuration across multiple projects in a single repository.
+doc-type: guide
 ---
 
-If you're managing multiple XPF projects then it can be useful to centralize the management of your SDK versions and license keys.
+When you manage multiple XPF projects in a single repository, keeping SDK versions and license keys synchronized across every `.csproj` file can become tedious and error-prone. By centralizing these settings, you ensure consistency and simplify future upgrades.
 
-## Centralize XPF SDK version
+## Centralize the XPF SDK version
 
-You can use a `global.json` file at the root of your repository to specify the XPF SDK version for all projects:
+You can use a `global.json` file at the root of your repository to pin the XPF SDK version for every project at once. When a `global.json` entry exists for `Xpf.Sdk`, MSBuild resolves that version automatically, so you only need to update the version number in one place.
 
-```json title=global.json
+Create (or update) a `global.json` file in your repository root:
+
+```json title="global.json"
 {
   "msbuild-sdks": {
     "Xpf.Sdk": "1.6.0"
@@ -17,31 +21,37 @@ You can use a `global.json` file at the root of your repository to specify the X
 }
 ```
 
-And in your `.csproj` specify `Xpf.Sdk` without a version:
+Then, in each `.csproj` file, reference `Xpf.Sdk` **without** a version number:
 
-```xml
+```xml title="MyApp.csproj"
 <Project Sdk="Xpf.Sdk">
 ```
 
+When you need to upgrade, change the version in `global.json` and every project in the repository picks up the new version on the next build.
+
 ## License keys
 
-Environment variables can be used in `NuGet.config` and `.csproj` files to store license keys. This avoids committing license keys to source control.
+Storing license keys directly in source-controlled files is a security risk. Instead, you can reference an environment variable in both your `NuGet.config` and `.csproj` files so the actual key value never appears in your repository.
 
 :::tip
-This environment variable can be named however you want, but this documentation will assume `XpfLicenseKey`.
+You can name the environment variable anything you like. The examples below use `XpfLicenseKey`.
 :::
 
-- To get started, add an environment variable named `XpfLicenseKey` with your license key as the value:
-  - On Windows, search the start menu for "Environment Variables" and add the variable using the GUI
-  - On macOS run `launchctl setenv XpfLicenseKey [LICENSE_KEY]`. Note that this will need to be re-run after each reboot.
-  - On Linux, environment variables are commonly set in the `.bash_profile`, `.bashrc` or `/etc/environment` files
-- Once you've edited your `nuget.config`/`.csproj` files, restart any command-line session/IDE that is currently open in order for the change to the environment variables to be picked up
+### Set the environment variable
 
-### nuget.config
+Add an environment variable called `XpfLicenseKey` whose value is your license key:
 
-Edit the credentials in your `nuget.config` file to use the environment variable:
+- **Windows**: search the Start menu for "Environment Variables" and add the variable through the system GUI.
+- **macOS**: run `launchctl setenv XpfLicenseKey [LICENSE_KEY]`. You will need to re-run this command after each reboot.
+- **Linux**: environment variables are commonly set in `.bash_profile`, `.bashrc`, or `/etc/environment`.
 
-```xml
+After you create or change the variable, restart any open terminal sessions and IDEs so they pick up the new value.
+
+### Update `nuget.config`
+
+Edit the credentials section of your `nuget.config` file to reference the environment variable:
+
+```xml title="nuget.config"
 <packageSourceCredentials>
   <xpf>
     <add key="Username" value="license" />
@@ -50,12 +60,20 @@ Edit the credentials in your `nuget.config` file to use the environment variable
 </packageSourceCredentials>
 ```
 
-### .csproj Files
+### Update `.csproj` files
 
-Edit the `RuntimeHostConfigurationOption` entry in your `.csproj` files to use the environment variable
+Edit the `RuntimeHostConfigurationOption` entry in each `.csproj` file to read the key from the environment variable:
 
-```xml
+```xml title="MyApp.csproj"
 <ItemGroup>
-  <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
-</ItemGroup>  
+  <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey"
+                                  Value="$(XpfLicenseKey)" />
+</ItemGroup>
 ```
+
+## See also
+
+- [Getting started with XPF](../getting-started.md)
+- [Customizing initialization](customizing-initialization.md)
+- [Performance configuration](performance.md)
+- [Versioning](../version-info/versioning.md)

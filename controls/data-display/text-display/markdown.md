@@ -1,6 +1,8 @@
 ---
 id: markdown
 title: Markdown
+description: Render Markdown-formatted text using the Avalonia.Controls.Markdown control with support for theming, selection, and custom image loading.
+doc-type: reference
 tags:
   - accelerate
 ---

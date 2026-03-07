@@ -1,6 +1,8 @@
 ---
 id: built-in-data-binding-converters
 title: Built-in data binding converters
+description: "Reference for Avalonia's built-in data binding converters including negation, string, object, and boolean converters."
+doc-type: reference
 ---
 
 _Avalonia UI_ includes a number of built-in data binding converters for common scenarios:

@@ -1,19 +1,28 @@
 ---
 id: contentcontrol
 title: ContentControl
+description: A base control that displays a single piece of content, which can be a string, a control, or a data-bound object rendered through a data template.
+doc-type: reference
 ---
 
 import ControlContentStudentScreenshot from '/img/controls/contentcontrol/contentcontrol-student.png';
 
+`ContentControl` is a control that displays a single piece of content. The content can be a string, a control, or a data-bound object rendered through a `DataTemplate`. Many common Avalonia controls, including `Button`, `Window`, and `UserControl`, inherit from `ContentControl`, so understanding how it works is fundamental to building Avalonia applications.
+
 ## Common properties
 
-| Property  | Description                           |
-| --------- | ------------------------------------- |
-| `Content` | The content to display in the control |
+You will probably use these properties most often:
 
-## Display content
+| Property | Description |
+|---|---|
+| `Content` | The content to display in the control. |
+| `ContentTemplate` | A `DataTemplate` used to render the `Content` object. |
+| `HorizontalContentAlignment` | Controls how the content is aligned horizontally within the control. |
+| `VerticalContentAlignment` | Controls how the content is aligned vertically within the control. |
 
-At its simplest, a `ContentControl` displays the data assigned to its [`Content`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_ContentControl_Content) property.
+## Displaying content
+
+At its simplest, a `ContentControl` displays the data you assign to its [`Content`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_ContentControl_Content) property.
 
 For example:
 
@@ -21,13 +30,15 @@ For example:
 <ContentControl Content="Hello World!"/>
 ```
 
-Will display the string "Hello World!". The `Content` property is the control's default property and so the above example can also be written as:
+This displays the string "Hello World!". Because `Content` is the control's default (content) property, you can also write:
 
 ```xml
 <ContentControl>Hello World!</ContentControl>
 ```
 
-If you assign a control to a `ContentControl` then it will display the control, for example:
+### Hosting a child control
+
+If you assign a control to a `ContentControl`, it renders that control directly:
 
 ```xml
 <ContentControl>
@@ -35,9 +46,20 @@ If you assign a control to a `ContentControl` then it will display the control, 
 </ContentControl>
 ```
 
-### Display content with templates
+A `ContentControl` can hold only one direct child. If you need to display multiple elements, wrap them in a layout panel such as a `StackPanel` or `Grid`:
 
-Where `ContentControl` becomes useful is in tandem with data binding and data templates. By setting the `ContentTemplate` property one can specify how the data in the `Content` property is displayed. For example given the following view models:
+```xml
+<ContentControl>
+  <StackPanel>
+    <TextBlock Text="Line one" />
+    <TextBlock Text="Line two" />
+  </StackPanel>
+</ContentControl>
+```
+
+### Displaying content with templates
+
+`ContentControl` becomes especially useful when you combine it with data binding and data templates. By setting the `ContentTemplate` property, you control how a bound data object is rendered visually. For example, given the following view models:
 
 ```csharp
 namespace Example
@@ -67,7 +89,7 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](/docs/data-binding/data-context) for more information.
+> Note: The following examples assume an instance of `MainWindowViewModel` is assigned to the window's `DataContext`. See [the section on `DataContext`](/docs/data-binding/data-context) for more information.
 
 You can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
@@ -90,9 +112,33 @@ You can display the student's first and last name in a `ContentControl` using th
 
 <img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
 
-For more information see the [data templates](/docs/data-templates/introduction-to-data-templates) page.
+For more information, see the [data templates](/docs/data-templates/introduction-to-data-templates) page.
+
+### Switching content dynamically
+
+Because `Content` is a bindable property, you can swap what a `ContentControl` displays at runtime. This pattern is commonly used for view-based navigation, where you bind a view model to `Content` and use data templates (or a `ViewLocator`) to resolve the appropriate view:
+
+```xml
+<ContentControl Content="{Binding CurrentPage}">
+  <ContentControl.DataTemplates>
+    <DataTemplate DataType="vm:HomeViewModel">
+      <views:HomeView />
+    </DataTemplate>
+    <DataTemplate DataType="vm:SettingsViewModel">
+      <views:SettingsView />
+    </DataTemplate>
+  </ContentControl.DataTemplates>
+</ContentControl>
+```
+
+When your view model changes `CurrentPage` from a `HomeViewModel` to a `SettingsViewModel`, the `ContentControl` automatically renders the matching view.
+
+If you want an animated transition when the content changes, consider using [`TransitioningContentControl`](transitioningcontentcontrol) instead.
 
 ## See also
 
 - [ContentControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContentControl)
 - [`ContentControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ContentControl.cs)
+- [Data templates](/docs/data-templates/introduction-to-data-templates)
+- [`TransitioningContentControl`](transitioningcontentcontrol)
+- [Data binding](/docs/data-binding/data-context)

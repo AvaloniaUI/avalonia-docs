@@ -7,19 +7,34 @@ doc-type: how-to
 
 import ItemsControlCanvasScreenshot from '/img/guides/ui-development/custom-controls/itemscontrol-with-canvas.png';
 
-All `ItemsControl`s have an item container panel which is used to layout their items. It is possible to override the type of panel used by the control to achieve custom/alternative layouts of items in a control. This document provides some examples showcasing how and why you would do this.
- 
+Every `ItemsControl` uses an items panel to arrange its child elements. By default, most controls use a `StackPanel` or `VirtualizingStackPanel` for simple vertical or horizontal lists. You can override this panel to achieve layouts that the built-in defaults do not support.
+
+The following controls all support a custom `ItemsPanel`:
+
 - [`ItemsControl`](/controls/data-display/collections/itemscontrol)
 - [`TreeView`](/controls/data-display/structured-data/treeview)
 - [`Carousel`](/controls/data-display/collections/carousel)
 - [`Menu`](/controls/menus/menu)
 - [`ComboBox`](/controls/input/selectors/combobox)
-- [`ListBox`](/controls/data-display/collections/listbox) 
+- [`ListBox`](/controls/data-display/collections/listbox)
+
+## Why replace the default panel
+
+The default panel works well for linear lists, but there are scenarios where you need a different arrangement:
+
+- **Absolute positioning**: Use a `Canvas` to place items at specific coordinates.
+- **Wrapping layouts**: Use a `WrapPanel` to flow items across rows or columns.
+- **Custom arrangements**: Use a [custom panel](custom-panel) with your own `ArrangeOverride` logic for radial layouts, dashboards, or other non-linear designs.
+
+:::warning[Performance consideration]
+When you replace the default panel with a non-virtualizing panel such as `Canvas` or `WrapPanel`, the control creates a UI element for every item in the collection. For large collections (hundreds or thousands of items), this can significantly increase memory usage and degrade rendering performance. If you need custom layout with large data sets, consider building a custom panel that implements `IVirtualizingPanel` to retain virtualization support.
+:::
 
 ## Example
-This example binds an observable collection of `Rectangle`s (based on the Tile VM data) to an `ItemsControl`. ItemsControl.ItemPanel is set to a `Canvas`, and a style positions each `Rectangle` within the `Canvas`.
 
-```xml
+This example binds an `ObservableCollection` of rectangles to an `ItemsControl`. The `ItemsControl.ItemsPanel` is set to a `Canvas`, and a style positions each rectangle within the canvas using attached properties.
+
+```xml title="AXAML"
 <ItemsControl ItemsSource="{Binding TileList}">
   <ItemsControl.ItemsPanel>
     <ItemsPanelTemplate>
@@ -72,6 +87,6 @@ public record Tile(int Size, int TopX, int TopY);
 
 ## See also
 
-- [Creating a Custom Panel](custom-panel)
-- [Attached Properties](attached-properties)
+- [Creating a custom panel](custom-panel)
+- [Attached properties](attached-properties)
 - [`ItemsControl`](/controls/data-display/collections/itemscontrol)

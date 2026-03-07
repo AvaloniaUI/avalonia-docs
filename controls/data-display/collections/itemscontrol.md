@@ -1,72 +1,81 @@
 ---
 id: itemscontrol
 title: ItemsControl
+description: A reference for the ItemsControl in Avalonia, a base control for displaying repeating data with full control over layout and item appearance.
+doc-type: reference
 ---
 
 import exampleScreenshot from '/img/controls/itemscontrol/itemscontrol-with-custom-layout-and-formatting.gif';
 
-The `ItemsControl` is the basis for controls that display repeating data (like the list box for example). It has no built-in formatting or interactions; but you can use it with data binding, styling and data templates to create a completely custom repeating data control.
+The `ItemsControl` is the base class for controls that display repeating data (for example, `ListBox` and `ComboBox`). It has no built-in formatting, selection, or scroll behavior. You can use it with data binding, styling, and data templates to create a completely custom repeating data control.
+
+:::tip
+If you need built-in selection support, use [`ListBox`](listbox) instead. If you need scrolling, wrap your `ItemsControl` in a `ScrollViewer`, or consider `ListBox` which includes one by default.
+:::
 
 ## Useful properties
 
 You will probably use these properties most often:
 
-<table>
-  <thead>
-    <tr>
-      <th width="316">Property</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ItemsSource</code></td>
-      <td>The bound collection that is used as the data source for the control.</td>
-    </tr>
-    <tr>
-      <td><code>ItemsControl.ItemTemplate</code></td>
-      <td>The item template, contains a DataTemplate which will be applied to individual items and can be used to change how items look.</td>
-    </tr>
-    <tr>
-      <td><code>ItemsControl.ItemsPanel</code></td>
-      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/custom-controls/custom-itemspanel) to customise the ItemsPanel.</td>
-    </tr>
-    <tr>
-      <td><code>ItemsControl.Styles</code></td>
-      <td>The style that is applied to any child element of the ItemControl.</td>
-    </tr>
-  </tbody>
-</table>
+| Property | Description |
+|---|---|
+| `ItemsSource` | The bound collection that is used as the data source for the control. |
+| `ItemTemplate` | A `DataTemplate` applied to each item. Use this to control how individual items look. |
+| `ItemsPanel` | The panel that hosts generated items. Defaults to a `StackPanel`. See [custom ItemsPanel](/docs/custom-controls/custom-itemspanel) for details on replacing it. |
+| `Styles` | Styles applied to child elements of the `ItemsControl`. |
+| `DisplayMemberBinding` | A binding that selects the property to display when you do not supply an `ItemTemplate`. |
+
+## Practical notes
+
+- **Use `ObservableCollection<T>`** for your `ItemsSource` so the UI updates automatically when you add or remove items at runtime. A plain `List<T>` will not notify the control of changes.
+- **`ItemsControl` does not virtualize** its children. If you are working with a large number of items, consider using [`ItemsRepeater`](itemsrepeater) with a virtualizing layout, or a `ListBox` which virtualizes by default.
+- To arrange items horizontally instead of vertically, replace the default `ItemsPanel`:
+
+```xml
+<ItemsControl.ItemsPanel>
+  <ItemsPanelTemplate>
+    <WrapPanel Orientation="Horizontal" />
+  </ItemsPanelTemplate>
+</ItemsControl.ItemsPanel>
+```
+
+- Because `ItemsControl` has no built-in scrollbar, content that overflows the available height is clipped. Wrap the control in a `ScrollViewer` if you need scrolling:
+
+```xml
+<ScrollViewer>
+  <ItemsControl ItemsSource="{Binding MyItems}" />
+</ScrollViewer>
+```
 
 ## Example
 
-This example binds an observable collection of crockery items to an items control, where some custom layout and formatting is provided by a data template:
+This example binds an observable collection of crockery items to an `ItemsControl`. A `DataTemplate` provides custom layout and formatting for each item:
 
-<img src={exampleScreenshot} alt="" />
+<img src={exampleScreenshot} alt="ItemsControl displaying a formatted list of crockery items" />
 
 ```xml title="XAML"
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">List of crockery:</TextBlock>
-  <ItemsControl ItemsSource="{Binding CrockeryList}" >
+  <ItemsControl ItemsSource="{Binding CrockeryList}">
     <ItemsControl.ItemTemplate>
-    <DataTemplate>
-      <Border Margin="0,10,0,0"
-          CornerRadius="5"
-          BorderBrush="Gray" BorderThickness="1"
-          Padding="5">
-        <StackPanel Orientation="Horizontal">
-          <TextBlock Text="{Binding Title}"/>
-          <TextBlock Margin="5 0" FontWeight="Bold" 
-                      Text="{Binding Number}"/>
-        </StackPanel>
-      </Border>
-    </DataTemplate>
+      <DataTemplate>
+        <Border Margin="0,10,0,0"
+                CornerRadius="5"
+                BorderBrush="Gray" BorderThickness="1"
+                Padding="5">
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Title}" />
+            <TextBlock Margin="5 0" FontWeight="Bold"
+                       Text="{Binding Number}" />
+          </StackPanel>
+        </Border>
+      </DataTemplate>
     </ItemsControl.ItemTemplate>
-    </ItemsControl>
+  </ItemsControl>
 </StackPanel>
 ```
 
-```csharp title='C# View Model'
+```csharp title="C# view model"
 using AvaloniaControls.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -76,7 +85,7 @@ namespace AvaloniaControls.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         public ObservableCollection<Crockery> CrockeryList { get; set; }
-        
+
         public MainWindowViewModel()
         {
             CrockeryList = new ObservableCollection<Crockery>(new List<Crockery>
@@ -88,17 +97,17 @@ namespace AvaloniaControls.ViewModels
                 new Crockery("saucer", 10),
                 new Crockery("mug", 6),
                 new Crockery("milk jug", 1)
-            });    
+            });
         }
     }
 }
 ```
 
-```csharp title='C# Item Class'
+```csharp title="C# item class"
 public class Crockery
 {
     public string Title { get; set; }
-    public int Number{ get; set; }
+    public int Number { get; set; }
 
     public Crockery(string title, int number)
     {
@@ -108,10 +117,14 @@ public class Crockery
 }
 ```
 
-The view resizes horizontally, but content is hidden when it is too high. This control does not have a built-in scrollbar (unlike `ListBox`).
-
 ## See also
 
+- [ListBox](listbox)
+- [ItemsRepeater](itemsrepeater)
+- [Carousel](carousel)
+- [DataGrid](/controls/data-display/structured-data/datagrid)
+- [Custom ItemsPanel](/docs/custom-controls/custom-itemspanel)
+- [Data templates](/docs/data-binding/data-templates)
 - [ItemsControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ItemsControl)
 - [`ItemsControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)
 

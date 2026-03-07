@@ -9,34 +9,87 @@ import DefiningPropertyPreviewScreenshot from '/img/guides/ui-development/custom
 
 ## Defining properties for custom controls
 
-If you are creating a custom control, you will usually want it to have properties that can be set by the Avalonia styling system.
+If you are creating a custom control, you will usually want it to have properties that can be set by the Avalonia styling system, bound to data, or configured in XAML. Avalonia provides three property types for this purpose: styled properties, direct properties, and attached properties.
+
+This page walks you through registering and using each type so you can choose the right one for your control.
 
 :::info
 For more information about how to use styles in Avalonia, see the [Styles guide](/docs/styling/styles).
 :::
 
-On this page, you will see how to implement a property so that it can be changed by the Avalonia styling system. This is a two step process:
+## Styled properties
 
-* Register a styled property.
-* Provide the getter/setter for the property.
+A styled property is the most common property type. It stores its value inside the Avalonia property system (not in a backing field), which means it participates in styling, animations, and value precedence. Use a styled property when you want users to be able to style or animate the property.
 
-## Register a styled property
+Registering a styled property is a two-step process:
 
-You register a styled property by defining a static read-only field and using the `AvaloniaProperty.Register` method.
+1. Register the property as a `static readonly` field using `AvaloniaProperty.Register`.
+2. Provide a CLR getter and setter that call `GetValue` and `SetValue`.
 
-There is a convention for the name of a property. It must follow the pattern:
+### Naming convention
+
+The static field must follow the pattern `PropertyNameProperty`. Avalonia uses this convention to map XAML attributes to properties automatically:
 
 ```csharp
-[AttributeName]Property
+public static readonly StyledProperty<double> CornerRadiusProperty = ...
 ```
 
-This means that Avalonia will look for an attribute in the XAML, like this:
+This lets you write the following in XAML:
 
 ```xml
-<MyCustomControl AttributeName="value" ... >
+<local:MyControl CornerRadius="8" />
 ```
 
-For example, with a styled property in place, you can control the background color of the custom control from the window styles collection:
+### Registering a new styled property
+
+The following example registers a `CornerRadius` styled property with a default value of `0.0`:
+
+```csharp
+public class MyControl : Control
+{
+    public static readonly StyledProperty<double> CornerRadiusProperty =
+        AvaloniaProperty.Register<MyControl, double>(nameof(CornerRadius), defaultValue: 0.0);
+
+    public double CornerRadius
+    {
+        get => GetValue(CornerRadiusProperty);
+        set => SetValue(CornerRadiusProperty, value);
+    }
+}
+```
+
+The `Register` method accepts several optional parameters:
+
+| Parameter | Description |
+|---|---|
+| `name` | The property name. Must match the CLR property name. |
+| `defaultValue` | The default value for the property. |
+| `inherits` | Whether the value inherits down the visual tree. |
+| `defaultBindingMode` | The default binding mode (`OneWay`, `TwoWay`, `OneTime`, `OneWayToSource`). |
+| `validate` | A function that returns `false` for values that should be rejected. |
+| `coerce` | A function that adjusts the value before it is applied. |
+
+### Reusing an existing styled property
+
+If another control already defines a property you need (for example, `Background` on `Border`), use `AddOwner` instead of registering a new one. This ensures a single property identity so that styles targeting the property work across all controls that share it:
+
+```csharp
+public class MyCustomControl : Control
+{
+    public static readonly StyledProperty<IBrush?> BackgroundProperty =
+        Border.BackgroundProperty.AddOwner<MyCustomControl>();
+
+    public IBrush? Background
+    {
+        get => GetValue(BackgroundProperty);
+        set => SetValue(BackgroundProperty, value);
+    }
+}
+```
+
+### Styling a custom property
+
+Once you register a styled property, users can target it in styles. The following example sets the `Background` of a custom control through a style:
 
 ```xml title='MainWindow.axaml'
 <Window xmlns="https://github.com/avaloniaui"
@@ -90,16 +143,110 @@ namespace AvaloniaCCExample.CustomControls
 }
 ```
 
-:::info
-Note that the getter/setter of the property uses the special Avalonia `GetValue` and `SetValue` methods.
-:::
-
-The styled property will work both at run-time and in the preview panel.
+The styled property works both at run-time and in the preview panel.
 
 <img src={DefiningPropertyPreviewScreenshot} alt="Preview of a custom control with a defined property"/>
 
+## Direct properties
+
+A `DirectProperty` is backed by a conventional C# field. It does not participate in styling or animation, but it supports data binding and change notification. Use a direct property when:
+
+- You need a **read-only** property (styled properties cannot be read-only).
+- You want **better performance** because the value is read directly from the field.
+- The property does **not need to be styled** (for example, `Items` on `ItemsControl`).
+
+### Registering a direct property
+
+Use `AvaloniaProperty.RegisterDirect` and provide getter and setter delegates that point to your backing field:
+
+```csharp
+public class MyControl : Control
+{
+    public static readonly DirectProperty<MyControl, string?> StatusProperty =
+        AvaloniaProperty.RegisterDirect<MyControl, string?>(
+            nameof(Status),
+            o => o.Status,
+            (o, v) => o.Status = v);
+
+    private string? _status;
+
+    public string? Status
+    {
+        get => _status;
+        set => SetAndRaise(StatusProperty, ref _status, value);
+    }
+}
+```
+
+:::warning
+Always use `SetAndRaise` in the CLR setter instead of assigning the backing field directly. `SetAndRaise` updates the field and raises the property-changed notification in a single call. Calling `SetValue` on a direct property will throw an exception.
+:::
+
+### Read-only direct properties
+
+To create a read-only property, omit the setter delegate from the registration call and keep the CLR setter `private`:
+
+```csharp
+public class MyControl : Control
+{
+    public static readonly DirectProperty<MyControl, bool> IsActiveProperty =
+        AvaloniaProperty.RegisterDirect<MyControl, bool>(
+            nameof(IsActive),
+            o => o.IsActive);
+
+    private bool _isActive;
+
+    public bool IsActive
+    {
+        get => _isActive;
+        private set => SetAndRaise(IsActiveProperty, ref _isActive, value);
+    }
+}
+```
+
+### Styled vs. direct properties
+
+| Behavior | Styled property | Direct property |
+|---|---|---|
+| Participates in styling | Yes | No |
+| Participates in animations | Yes | No |
+| Supports value precedence | Yes | No (single value) |
+| Can inherit values | Yes | No |
+| Supports coercion | Yes | No |
+| Performance | Property store lookup | Direct field access |
+| Can be read-only | No | Yes |
+
+## Responding to property changes
+
+You can react to property value changes by overriding `OnPropertyChanged` in your control:
+
+```csharp
+protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+{
+    base.OnPropertyChanged(change);
+
+    if (change.Property == BackgroundProperty)
+    {
+        // Invalidate the visual so the control repaints with the new background.
+        InvalidateVisual();
+    }
+}
+```
+
+This approach works for both styled and direct properties.
+
+## Common pitfalls
+
+- **Mismatched names.** The `name` argument you pass to `Register` must match the CLR property name exactly. A mismatch causes binding and XAML errors at run-time.
+- **Using `SetValue` with a direct property.** Direct properties require `SetAndRaise`. Calling `SetValue` throws an `InvalidOperationException`.
+- **Adding a backing field for a styled property.** Styled properties store values inside the Avalonia property system. If you read from a local field you will get stale data. Always use `GetValue` and `SetValue`.
+- **Forgetting to call `base.OnPropertyChanged`.** If you override `OnPropertyChanged`, always call the base implementation first so the framework can process the change.
+
 ## See also
 
-- [Defining Events](defining-events)
-- [Attached Properties](attached-properties)
-- [Custom Control Class](custom-control-class)
+- [Avalonia property system](/docs/properties): Full reference for styled, direct, and attached properties.
+- [Value precedence](/docs/properties/value-precedence): How Avalonia resolves competing property values.
+- [Metadata and callbacks](/docs/properties/metadata-and-callbacks): Default values, coercion, and validation.
+- [Defining events](defining-events): Add routed events to your custom controls.
+- [Attached properties](attached-properties): Create properties that can be set on other controls.
+- [Custom control class](custom-control-class): Base class overview for custom controls.

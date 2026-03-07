@@ -1,6 +1,7 @@
 ---
 id: native-window-handles
 title: Getting native window handles
+description: How to retrieve native platform window handles in XPF applications, including the difference between virtual and native handles.
 ---
 
 ## Overview

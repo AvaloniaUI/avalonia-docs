@@ -31,7 +31,7 @@ This section contains pages that will help you understand more abstract concepts
     <p>Learn about Avalonia XAML, the XML-based markup language used to define the user interface with Avalonia.</p>
   </DocsCard>
 
-  <DocsCard header="Main window" href="/concepts/core-concepts/main-window">
+  <DocsCard header="Main window" href="/docs/fundamentals/main-window">
     <p>The main window is where most of your UI is displayed to users.</p>
   </DocsCard>
 

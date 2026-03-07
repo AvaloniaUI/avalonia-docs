@@ -1,6 +1,8 @@
 ---
 id: imageloader
 title: ImageLoader
+description: Learn how to create a custom ImageLoader for the Avalonia Markdown control to handle SVG, remote, and authenticated image sources.
+doc-type: reference
 tags:
   - accelerate
 ---
@@ -10,21 +12,23 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
-The `Markdown` control supports custom image loading via the `ImageLoader` property. This allows you to handle image formats such as SVG, remote images, or any custom logic for image resolution.
+The `Markdown` control supports custom image loading through the `ImageLoader` property. By subclassing `MarkdownImageLoader` and overriding `LoadImageAsync`, you can handle image formats such as SVG, load images from remote servers, apply authentication headers, or add caching logic.
 
-## Example: Loading SVG Images
+The default image loader resolves standard bitmap formats from absolute URIs. When you need behavior beyond that, create your own loader and assign it to `ImageLoader`.
 
-### Required Packages
+## Example: loading SVG images
 
-To use the custom image loader example above, you need to install the following NuGet packages:
+### Required packages
+
+To render SVG content you need the `Avalonia.Svg.Skia` package:
 
 ```bash
- dotnet add package Avalonia.Svg.Skia
+dotnet add package Avalonia.Svg.Skia
 ```
 
 ### Implementation
 
-Below is an example of a custom image loader that supports SVG images:
+The following custom loader detects SVG content by inspecting the first bytes of the stream and delegates to `SvgSource` when appropriate. For all other formats it falls back to a standard `Bitmap`.
 
 ```csharp
 using Avalonia.Controls;
@@ -118,7 +122,7 @@ public class CustomImageLoader : MarkdownImageLoader
 
 ## Usage
 
-Assign your custom loader to the `ImageLoader` property:
+Assign your custom loader to the `ImageLoader` property in code-behind:
 
 ```csharp
 var markdown = new Markdown
@@ -128,10 +132,25 @@ var markdown = new Markdown
 };
 ```
 
-## When to Use
-- To support SVG images in Markdown
-- To implement custom caching or authentication for images
+You can also set `ImageLoader` in AXAML by declaring your loader as a static resource:
+
+```xml
+<Window.Resources>
+    <local:CustomImageLoader x:Key="SvgImageLoader" />
+</Window.Resources>
+
+<Markdown Text="![logo](https://example.com/logo.svg)"
+          ImageLoader="{StaticResource SvgImageLoader}" />
+```
+
+## When to use a custom image loader
+
+- You need to render SVG images inside Markdown content.
+- Your images require authentication headers or custom HTTP handling.
+- You want to cache downloaded images to avoid repeated network requests.
+- You need to resolve images from application resources or embedded assets rather than file or HTTP URIs.
 
 ## See also
+
 - [Markdown control](/controls/data-display/text-display/markdown)
 - [Rendering markdown](/docs/app-development/rendering-markdown)

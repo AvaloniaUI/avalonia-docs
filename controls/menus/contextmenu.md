@@ -1,17 +1,19 @@
 ---
 id: contextmenu
 title: ContextMenu
+description: A popup menu that appears when the user right-clicks a control, providing contextual actions.
+doc-type: reference
 ---
 
-The `ContextMenu` can be applied to any host control to implement a right-click "context sensitive" menu. This uses an **attached property** of the host control.
+A `ContextMenu` is a popup menu that appears when you right-click a control. It provides contextual actions relevant to the control or its content. You attach a `ContextMenu` to any host control using an attached property, so any visual element in your application can have its own right-click menu.
 
 :::info
-To review the concept behind this use of an **attached property**, see [Attached properties](/docs/custom-controls/attached-properties).
+To learn more about how attached properties work, see [Attached properties](/docs/custom-controls/attached-properties).
 :::
 
 ## Basic example
 
-In this example, a context menu is attached to a multi-line text box. Right-click your mouse in the preview area to see the context menu.
+In this example, a context menu is attached to a multi-line text box. Right-click in the preview area to see the context menu.
 
 <XamlPreview>
 
@@ -32,7 +34,7 @@ In this example, a context menu is attached to a multi-line text box. Right-clic
 
 ## Commands and icons
 
-Bind menu items to commands and add icons for a complete context menu:
+You can bind menu items to commands and add icons to create a full-featured context menu:
 
 ```xml
 <ListBox ItemsSource="{Binding Items}">
@@ -55,9 +57,11 @@ Bind menu items to commands and add icons for a complete context menu:
 </ListBox>
 ```
 
+Use `Separator` elements to group related menu items visually.
+
 ## Passing context to commands
 
-Use `CommandParameter` to pass the relevant item:
+Use `CommandParameter` to pass the relevant data item to your command. This is especially useful when the context menu is attached to a list or collection control and you need to know which item was right-clicked:
 
 ```xml
 <ListBox.ContextMenu>
@@ -69,26 +73,47 @@ Use `CommandParameter` to pass the relevant item:
 </ListBox.ContextMenu>
 ```
 
+The `$parent[ListBox].SelectedItem` binding walks up the visual tree to find the parent `ListBox` and reads its `SelectedItem` property.
+
+## Dynamically building menu items
+
+If your context menu items depend on runtime data, you can bind `ItemsSource` to a collection in your view model:
+
+```xml
+<TextBlock Text="Right-click me">
+    <TextBlock.ContextMenu>
+        <ContextMenu ItemsSource="{Binding ContextActions}" />
+    </TextBlock.ContextMenu>
+</TextBlock>
+```
+
+Each item in the bound collection becomes a `MenuItem`. You can use a `DataTemplate` or an `ItemContainerTheme` to control how items are displayed.
+
 ## Handling opening and closing
 
-Respond to the context menu lifecycle:
+You can respond to the context menu lifecycle by handling the `Opening` and `Closing` events. The `Opening` event provides a `CancelEventArgs` argument, so you can prevent the menu from appearing when certain conditions are not met:
 
 ```csharp
 private void ContextMenu_Opening(object? sender, System.ComponentModel.CancelEventArgs e)
 {
-    // Set e.Cancel = true to prevent the context menu from opening
+    if (!IsActionAllowed)
+    {
+        e.Cancel = true; // Prevents the context menu from opening
+    }
 }
 ```
 
 ```xml
-<ContextMenu Opening="ContextMenu_Opening">
+<ContextMenu Opening="ContextMenu_Opening" Closing="ContextMenu_Closing">
     <MenuItem Header="Copy" />
 </ContextMenu>
 ```
 
+This is useful when you need to conditionally show or hide the context menu, or when you want to update its items before it appears.
+
 ## Context flyout
 
-You can use a context flyout as an alternative to a context menu. A context flyout can provide a richer UI experience with arbitrary content:
+You can use a `ContextFlyout` as an alternative to a `ContextMenu`. A context flyout can contain arbitrary content, not just menu items, giving you a richer UI experience:
 
 ```xml
 <Border Background="LightGray" Padding="20">
@@ -105,18 +130,22 @@ You can use a context flyout as an alternative to a context menu. A context flyo
 ```
 
 :::caution
-A control cannot have a context flyout and a context menu attached at the same time.
+A control cannot have both a `ContextFlyout` and a `ContextMenu` attached at the same time. If you set both, only one will be used.
 :::
 
 ## Useful properties
 
 | Property | Type | Description |
 |---|---|---|
-| `ItemsSource` | `IEnumerable` | Bind menu items to a collection. |
-| `Opening` | `event` | Raised before the context menu opens. Can be cancelled. |
+| `ItemsSource` | `IEnumerable` | Binds menu items to a collection so you can generate them dynamically. |
+| `Opening` | `event` | Raised before the context menu opens. Set `Cancel` to `true` to prevent it. |
 | `Closing` | `event` | Raised when the context menu closes. |
+| `PlacementMode` | `PlacementMode` | Controls where the context menu appears relative to the pointer. |
 
 ## See also
 
+- [Menu](/controls/menus/menu)
+- [MenuFlyout](/controls/menus/menuflyout)
+- [Flyout](/controls/layout/containers/flyout)
 - [ContextMenu API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContextMenu)
 - [`ContextMenu.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ContextMenu.cs)

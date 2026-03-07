@@ -1,13 +1,15 @@
 ---
 id: expander-how-to
 title: "How to: Work with Expander"
-description: Basic usage, accordion patterns, animated expansion, state binding, and custom Expander headers.
+description: Learn how to use the Avalonia Expander control for collapsible content sections, accordion patterns, animated transitions, state binding, and custom headers.
 doc-type: how-to
 ---
 
-This guide covers common Expander scenarios: basic usage, accordion patterns, animated expansion, binding state, and custom headers.
+This guide covers common `Expander` scenarios including basic usage, accordion patterns, animated expansion, binding state, and custom headers.
 
-## Basic Expander
+## Basic expander
+
+The simplest `Expander` wraps content you want to show or hide behind a clickable header:
 
 ```xml
 <Expander Header="Advanced Options">
@@ -18,9 +20,11 @@ This guide covers common Expander scenarios: basic usage, accordion patterns, an
 </Expander>
 ```
 
-## Initially Expanded
+The `Expander` can host any single child element. If you need multiple controls, wrap them in a layout panel such as `StackPanel` or `Grid`.
 
-Set `IsExpanded` to `true` so the content is visible on load:
+## Initially expanded
+
+Set `IsExpanded` to `True` so the content is visible when the control first loads:
 
 ```xml
 <Expander Header="Details" IsExpanded="True">
@@ -28,9 +32,13 @@ Set `IsExpanded` to `true` so the content is visible on load:
 </Expander>
 ```
 
-## Binding IsExpanded
+:::tip
+Use an initially expanded `Expander` for content that most users need to see right away, while still allowing them to collapse it to save space.
+:::
 
-Track expansion state in the view model:
+## Binding `IsExpanded`
+
+You can track expansion state in your view model so other parts of your UI can react to it:
 
 ```csharp
 [ObservableProperty]
@@ -45,9 +53,11 @@ private bool _showAdvanced;
 </Expander>
 ```
 
-## Expand Direction
+This two-way binding keeps the view model property in sync whenever the user opens or closes the `Expander`.
 
-The `ExpandDirection` property controls which direction the content expands:
+## Expand direction
+
+The `ExpandDirection` property controls which direction the content expands relative to the header:
 
 ```xml
 <!-- Expands upward -->
@@ -68,9 +78,13 @@ The `ExpandDirection` property controls which direction the content expands:
 | `Left` | Content appears to the left of the header. |
 | `Right` | Content appears to the right of the header. |
 
-## Custom Header with Icon
+:::note
+When you use `Up`, place the `Expander` at the bottom of its parent (for example, with `VerticalAlignment="Bottom"`) so the expanded content has room to grow upward. The same principle applies to `Left` and `Right` with horizontal alignment.
+:::
 
-Use `Expander.Header` to add rich content to the header area:
+## Custom header with icon
+
+Use `Expander.Header` to place rich content in the header area:
 
 ```xml
 <Expander>
@@ -86,9 +100,11 @@ Use `Expander.Header` to add rich content to the header area:
 </Expander>
 ```
 
-## Accordion Pattern (Single Open)
+Because `Header` is of type `object`, you can assign any control tree. Common patterns include icons paired with text, badges, or status indicators.
 
-Allow only one expander to be open at a time by binding each to a shared property:
+## Accordion pattern (single open)
+
+To allow only one `Expander` to be open at a time, bind each `IsExpanded` property to a shared backing field in your view model:
 
 ```csharp
 public partial class AccordionViewModel : ObservableObject
@@ -137,9 +153,11 @@ public partial class AccordionViewModel : ObservableObject
 </StackPanel>
 ```
 
-## Animated Content Transition
+Setting `OpenSection` to `-1` means all sections are collapsed. When the user opens one section, the previously open section closes automatically.
 
-Add a content transition for smooth expand/collapse:
+## Animated content transition
+
+Add a `ContentTransition` for a smooth expand and collapse animation:
 
 ```xml
 <Expander Header="Animated Section">
@@ -152,9 +170,11 @@ Add a content transition for smooth expand/collapse:
 </Expander>
 ```
 
-## Responding to Expand/Collapse Events
+You can substitute `CrossFade` with other transition types such as `PageSlide` or `CompositePageTransition`. See [Page transitions](../graphics-animation/page-transitions.md) for a full list of built-in options.
 
-Handle expansion state changes in code-behind:
+## Responding to expand and collapse events
+
+Handle expansion state changes in code-behind by subscribing to the `IsExpandedChanged` event:
 
 ```csharp
 private void Expander_IsExpandedChanged(object sender, RoutedEventArgs e)
@@ -168,10 +188,10 @@ private void Expander_IsExpandedChanged(object sender, RoutedEventArgs e)
 
 ```xml
 <Expander Header="Lazy Content"
-          PropertyChanged="Expander_IsExpandedChanged">
+          PropertyChanged="Expander_IsExpandedChanged" />
 ```
 
-Or use a property changed callback in the view model:
+Alternatively, use a property-changed callback in your view model for the same effect without code-behind:
 
 ```csharp
 [ObservableProperty]
@@ -184,9 +204,15 @@ partial void OnIsDetailsOpenChanged(bool value)
 }
 ```
 
-## Styling the Expander
+:::tip
+Lazy loading is a useful pattern for expanders that contain expensive-to-render content. Defer the work until the user actually opens the section.
+:::
+
+## Styling the expander
 
 ### Remove the border
+
+You can strip the default border and background to create a more minimal look:
 
 ```xml
 <Expander.Styles>
@@ -199,6 +225,8 @@ partial void OnIsDetailsOpenChanged(bool value)
 
 ### Custom expand icon
 
+Override the template toggle button to change the expand/collapse indicator:
+
 ```xml
 <Expander.Styles>
     <Style Selector="Expander /template/ ToggleButton#PART_toggle">
@@ -207,16 +235,28 @@ partial void OnIsDetailsOpenChanged(bool value)
 </Expander.Styles>
 ```
 
-## Key Properties Reference
+### Disabled state
+
+When you set `IsEnabled="False"` on an `Expander`, the header is no longer interactive and the user cannot toggle the content. The expand/collapse state at the time of disabling is preserved.
+
+```xml
+<Expander Header="Read-only section" IsEnabled="False" IsExpanded="True">
+    <TextBlock Text="This section cannot be collapsed." Margin="8" />
+</Expander>
+```
+
+## Key properties reference
 
 | Property | Type | Description |
 |---|---|---|
 | `Header` | `object` | Content shown in the always-visible header area. |
-| `IsExpanded` | `bool` | Whether the content section is visible. |
-| `ExpandDirection` | `ExpandDirection` | Direction content expands: `Down`, `Up`, `Left`, `Right`. |
-| `ContentTransition` | `IPageTransition` | Animation for expand/collapse. |
+| `IsExpanded` | `bool` | Whether the content section is visible. Default is `False`. |
+| `ExpandDirection` | `ExpandDirection` | Direction content expands: `Down`, `Up`, `Left`, `Right`. Default is `Down`. |
+| `ContentTransition` | `IPageTransition` | Animation used for expand and collapse. |
+| `IsEnabled` | `bool` | Whether the user can interact with the header to toggle expansion. |
 
-## See Also
+## See also
 
-- [Expander Control Reference](/controls/layout/containers/expander): Property tables.
-- [Page Transitions](/docs/graphics-animation/page-transitions): Transition types for content animation.
+- [Expander control reference](../../controls/layout/containers/expander.md): Full property and event tables.
+- [Page transitions](../graphics-animation/page-transitions.md): Transition types you can use for content animation.
+- [Introduction to data binding](../data-binding/introduction-to-data-binding.md): Fundamentals of binding properties like `IsExpanded` to your view model.

@@ -1,13 +1,15 @@
 ---
 id: combobox
 title: ComboBox
+description: A drop-down selector that lets users pick a single item from a list, with optional editable text input and placeholder support.
+doc-type: reference
 ---
 
 import ComboBoxDataTemplateScreenshot from '/img/controls/combobox/combobox-data-template.gif';
 
-The `ComboBox` presents a selected item and a drop-down button that displays a list of options. The length and height of the combo box are determined by the selected item, unless otherwise defined.
+The `ComboBox` presents a selected item and a drop-down button that displays a list of options. The length and height of the combo box are determined by the selected item, unless you define them explicitly.
 
-The items in the list can be composed, bound and templated.
+You can compose, bind, and template the items in the list.
 
 :::info
 To review the concept behind **data templates**, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
@@ -17,22 +19,31 @@ To review the concept behind **data templates**, see [Introduction to data templ
 
 You will probably use these properties most often:
 
-| Property                   | Description                                                                                                              |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `Items`                    | The list items collection.                                                                                               |
-| `SelectedIndex`            | The index (zero-based) of the selected item.                                                                             |
-| `SelectedItem`             | The selected item itself.                                                                                                |
-| `IsEditable`               | Enables text editing, allowing the user to type into the combo box to filter or enter custom values.                     |
-| `Text`                     | Gets or sets the text value when `IsEditable` is `true`.                                                                 |
-| `AutoScrollToSelectedItem` | Indicates whether to automatically scroll to newly selected items.                                                       |
-| `IsDropDownOpen`           | Indicates whether the dropdown is currently open.                                                                        |
-| `MaxDropDownHeight`        | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show. |
-| `ItemPanel`                | The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/custom-controls/custom-itemspanel) to customise the ItemsPanel.|
-| `Styles`                   | The style that is applied to any child element of the ItemControl.                                                       |
+| Property                   | Type       | Description                                                                                                              |
+| -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `Items`                    | `IEnumerable` | The list items collection.                                                                                            |
+| `SelectedIndex`            | `int`      | The index (zero-based) of the selected item.                                                                             |
+| `SelectedItem`             | `object?`  | The selected item itself.                                                                                                |
+| `SelectedValue`            | `object?`  | The value of the selected item, determined by `SelectedValueBinding`.                                                    |
+| `IsEditable`               | `bool`     | Enables text editing, allowing you to type into the combo box to filter or enter custom values.                           |
+| `Text`                     | `string?`  | Gets or sets the text value when `IsEditable` is `true`.                                                                 |
+| `PlaceholderText`          | `string?`  | Text shown when no item is selected.                                                                                     |
+| `AutoScrollToSelectedItem` | `bool`     | Indicates whether to automatically scroll to newly selected items.                                                       |
+| `IsDropDownOpen`           | `bool`     | Indicates whether the dropdown is currently open.                                                                        |
+| `MaxDropDownHeight`        | `double`   | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show.  |
+| `ItemPanel`                | `ITemplate<Panel>` | The container panel to place items in. By default, this is a `StackPanel`. See [this page](/docs/custom-controls/custom-itemspanel) to customise the `ItemPanel`. |
+
+## Practical notes
+
+- Always set `SelectedIndex` or `SelectedItem` to an initial value when you want the control to display a selection on load. If neither is set and you have not provided `PlaceholderText`, the control appears blank.
+- When you bind `ItemsSource` to a collection of complex objects, provide an `ItemTemplate` so the control knows how to render each item. Without a template, the control calls `ToString()` on each object.
+- Use `PlaceholderText` to give your users a hint (for example, "Select a category...") when nothing is selected yet.
+- If you need to clear the selection programmatically, set `SelectedIndex` to `-1` or `SelectedItem` to `null`.
+- The `SelectionChanged` event fires whenever the selected item changes, which is useful for running side-effect logic outside the view model.
 
 ## Examples
 
-This is basic example with text items has a limit set on the drop-down list height.
+This basic example with text items has a limit set on the drop-down list height.
 
 <XamlPreview>
 
@@ -74,7 +85,7 @@ This example uses a composed view for each item:
       <ComboBoxItem>
           <Panel>
             <Ellipse Width="50" Height="50" Fill="Orange"/>
-            <TextBlock VerticalAlignment="Center" 
+            <TextBlock VerticalAlignment="Center"
                        HorizontalAlignment="Center">Amber</TextBlock>
           </Panel>
       </ComboBoxItem>
@@ -92,7 +103,7 @@ This example uses a composed view for each item:
 
 </XamlPreview>
 
-This example binds the items in a combo box using a data template. The C# code-behind loads the installed font family names and binds them to the items property.
+This example binds the items in a combo box using a data template. The C# code-behind loads the installed font family names and binds them to the `ItemsSource` property.
 
 ```xml
 <StackPanel Margin="20">
@@ -134,9 +145,9 @@ public partial class MainWindow : Window
 }
 ```
 
-<img src={ComboBoxDataTemplateScreenshot} alt="" />
+<img src={ComboBoxDataTemplateScreenshot} alt="ComboBox with data template showing font families" />
 
-## Binding to a View Model
+## Binding to a view model
 
 Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`:
 
@@ -161,7 +172,7 @@ public partial class MainViewModel : ObservableObject
 
 ## Editable ComboBox
 
-Set `IsEditable` to `true` to allow the user to type text directly into the combo box. As the user types, the control searches the items for a match and updates `SelectedItem` accordingly. The `Text` property holds the current text value.
+Set `IsEditable` to `true` to allow you to type text directly into the combo box. As you type, the control searches the items for a match and updates `SelectedItem` accordingly. The `Text` property holds the current text value.
 
 ```xml
 <ComboBox IsEditable="True"
@@ -171,7 +182,7 @@ Set `IsEditable` to `true` to allow the user to type text directly into the comb
           PlaceholderText="Type a country..." />
 ```
 
-### TextSearch.TextBinding
+### `TextSearch.TextBinding`
 
 When items are complex objects, use `TextSearch.TextBinding` to specify which property the editable text should match against:
 
@@ -188,7 +199,7 @@ When items are complex objects, use `TextSearch.TextBinding` to specify which pr
 </ComboBox>
 ```
 
-## PlaceholderText
+## Placeholder text
 
 Show placeholder text when no item is selected:
 
@@ -200,5 +211,9 @@ Show placeholder text when no item is selected:
 
 ## See also
 
+- [ListBox](../../data-display/collections/listbox)
+- [AutoCompleteBox](../text-input/autocompletebox)
+- [RadioButton](../buttons/radiobutton)
+- [Data templates](/docs/data-templates/introduction-to-data-templates)
 - [ComboBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ComboBox)
 - [`ComboBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ComboBox.cs)

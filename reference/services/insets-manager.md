@@ -1,6 +1,8 @@
 ---
 id: insets-manager
 title: Insets Manager
+description: "API reference for InsetsManager, which controls system bar visibility, safe area padding, and edge-to-edge display."
+doc-type: reference
 ---
 
 The `InsetsManager` allows you to interact with the platform's system bars and handle changes to the safe area of the mobile window. 

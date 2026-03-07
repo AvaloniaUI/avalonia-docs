@@ -1,6 +1,8 @@
 ---
 id: avalonia12-breaking-changes
 title: Breaking changes in Avalonia 12
+description: A complete list of breaking changes between Avalonia 11 and 12, with migration guidance and code examples for each change.
+doc-type: reference
 sidebar_label: Breaking changes
 toc_max_heading_level: 2
 ---

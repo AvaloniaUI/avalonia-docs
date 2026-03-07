@@ -9,12 +9,12 @@ import DataBindingModeDiagram from '/img/concepts/data-concepts/data-binding-syn
 
 Avalonia supports creating data bindings in XAML and code. Data bindings in XAML are typically created with the
 `Binding` `MarkupExtension` described by this document. To create data bindings in code,
-see [How To Bind from Code](/docs/data-binding/binding-from-code).
+see [How to bind from code](/docs/data-binding/binding-from-code).
 
-## Data binding MarkupExtension
+## Data binding `MarkupExtension`
 
-The `Binding` `MarkupExtension` uses the keyword `Binding` in combination with optional parameters to define the data 
-source and other options as shown by the following example:
+The `Binding` `MarkupExtension` uses the keyword `Binding` in combination with optional parameters to define the data
+source and other options, as shown in the following example:
 
 ```xml
 <SomeControl SomeProperty="{Binding Path, Mode=ModeValue, StringFormat=Pattern}" />
@@ -22,22 +22,22 @@ source and other options as shown by the following example:
 
 | Parameter             | Description                                                                       |
 |-----------------------|-----------------------------------------------------------------------------------|
-| `Path`                | The name of the source property to be bound.                                      |
+| `Path`                | The name of the source property to bind to.                                       |
 | `Mode`                | The synchronization direction of the binding.                                     |
 | `Priority`            | Priority of the property setter.                                                  |
 | `Source`              | The object that contains the `Path`-specified property.                           |
 | `ElementName`         | Uses a named `Control` as the `Source`.                                           |
-| `RelativeSource`      | Uses a relative `Control` within the Visual Tree hierarchy as the `Source`.       |
+| `RelativeSource`      | Uses a relative `Control` within the visual tree hierarchy as the `Source`.       |
 | `StringFormat`        | A pattern to format the property value as a string.                               |
 | `Converter`           | An `IValueConverter` that converts the source value to the target value and back. |
-| `ConverterParameter`  | A parameter to be supplied to the `Converter`.                                    |
+| `ConverterParameter`  | A parameter to supply to the `Converter`.                                         |
 | `FallbackValue`       | Sets a value when the binding cannot be created or cannot produce a value.        |
-| `TargetNullValue`     | Sets a value when the source property contains a null value.                      |
+| `TargetNullValue`     | Sets a value when the source property contains a `null` value.                    |
 | `UpdateSourceTrigger` | Triggers a source property update when a predefined condition happens.            |
 | `Delay`               | Sets a delay before the binding target is updated after the source value changes. |
 
-These parameters must be known and set at the time of binding creation. They are CLR properties that cannot 
-be set and updated by additional bindings.
+You must set these parameters at the time of binding creation. They are CLR properties that cannot
+be set or updated by additional bindings.
 
 ## Data binding path
 
@@ -67,18 +67,17 @@ If the data source can be indexed (such as an array or list), then you can add t
 
 ### Null conditional operator
 
-Use the `?.` operator in a binding path to safely navigate through properties that may be null. If any segment in the path is null, the binding produces a null value instead of throwing an exception:
+Use the `?.` operator in a binding path to safely navigate through properties that may be `null`. If any segment in the path is `null`, the binding produces a `null` value instead of throwing an exception:
 
 ```xml
 <TextBlock Text="{Binding SelectedStudent?.Address?.City}"/>
 ```
 
-This is equivalent to C#'s null conditional operator. Without `?.`, a null `SelectedStudent` would produce a binding error.
+This is equivalent to C#'s null conditional operator. Without `?.`, a `null` `SelectedStudent` would produce a binding error.
 
 ## Empty binding path
 
-You can specify data bindings without a `Path`. This binds to the `DataContext` of the `Control` itself (where the binding 
-is defined). These two syntaxes are equivalent:
+You can specify data bindings without a `Path`. This binds to the `DataContext` of the control itself (where you define the binding). These two syntaxes are equivalent:
 
 ```xml
 <TextBlock Text="{Binding}" />
@@ -175,8 +174,8 @@ escape. For example:
 
 ### String formatting with multiple parameters
 
-`MultiBinding` can be used to format a string that requires multiple bound parameters. The example below formats multiple 
-numeric inputs as a single string to be displayed.
+You can use `MultiBinding` to format a string that requires multiple bound parameters. The following example formats multiple
+numeric inputs as a single string to display.
 
 ```xml
 <StackPanel Spacing="8">
@@ -224,15 +223,14 @@ For a listing of Avalonia built-in data binding converters, see the [built-in da
 If the built-in converters do not meet your requirements, then you can create a custom converter by implementing `IValueConverter`.
 
 :::info
-For guidance on how to create a custom converter, see [How to Create a Custom Data Binding Converter](/docs/data-binding/how-to-create-a-custom-data-binding-converter).
+For guidance on how to create a custom converter, see [How to create a custom data binding converter](/docs/data-binding/how-to-create-a-custom-data-binding-converter).
 :::
 
 ### FallbackValue
 
 `FallbackValue` is used when the property binding cannot be made or when a converter returns `AvaloniaProperty.UnsetValue`.
 
-A common use case is when a parent property in a subproperty binding is `null`. If `Student` is `null` below, 
-the `FallbackValue` will be used:
+A common use case is when a parent property in a subproperty binding is `null`. If `Student` is `null` in the following example, the `FallbackValue` is used:
 
 ```xml
 <TextBlock Text="{Binding Student.Name, FallbackValue=Cannot find name}"/>
@@ -243,9 +241,9 @@ the `FallbackValue` will be used:
 `FallbackValue` may be useful to substitute a value.
 :::
 
-### TargetNullValue
+### `TargetNullValue`
 
-When a binding to a property is successfully created and the property value is `null`, `TargetNullValue` may be used to supply a specific value.
+When a binding to a property is successfully created and the property value is `null`, you can use `TargetNullValue` to supply a specific value.
 
 <XamlPreview>
 
@@ -260,11 +258,11 @@ When a binding to a property is successfully created and the property value is `
 
 </XamlPreview>
 
-## UpdateSourceTrigger
+## `UpdateSourceTrigger`
 
-Controls like `TextBox` will synchronize their `Text` binding to the source property on every keystroke by default. In 
-some use cases, this may trigger a long-running task or undesirable validation. `UpdateSourceTrigger` allows bindings 
-to specify when synchronization should happen.
+Controls like `TextBox` synchronize their `Text` binding to the source property on every keystroke by default. In
+some use cases, this may trigger a long-running task or undesirable validation. `UpdateSourceTrigger` lets you
+specify when synchronization should happen.
 
 <XamlPreview>
 
@@ -293,7 +291,7 @@ to specify when synchronization should happen.
 | `LostFocus`         | Updates the binding source whenever the binding target element loses focus.                      |
 | `Explicit`          | Updates the binding source only when you call the `BindingExpressionBase.UpdateSource()` method. |
 
-## Delay
+## `Delay`
 
 _Available since Avalonia 11.3_
 
@@ -307,7 +305,7 @@ This is particularly useful for search-as-you-type scenarios, where you want to 
 <TextBox Text="{Binding SearchText, Delay=300}" />
 ```
 
-In this example, the `SearchText` property on the view model will only be updated 300 milliseconds after the user stops typing.
+In this example, the `SearchText` property on your view model is only updated 300 milliseconds after the user stops typing.
 
 ### Code usage
 
@@ -369,6 +367,6 @@ public class SearchViewModel : ObservableObject
 
 ## See also
 
-- [Data Context](/docs/data-binding/data-context): Where the data binder gets the data object from.
-- [Compiled Bindings](/docs/data-binding/compiled-bindings): Compile-time binding validation.
-- [How to Create a Custom Data Binding Converter](/docs/data-binding/how-to-create-a-custom-data-binding-converter): Custom value converters.
+- [Data context](/docs/data-binding/data-context): Where the data binder gets the data object from.
+- [Compiled bindings](/docs/data-binding/compiled-bindings): Compile-time binding validation.
+- [How to create a custom data binding converter](/docs/data-binding/how-to-create-a-custom-data-binding-converter): Custom value converters.

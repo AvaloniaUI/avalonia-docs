@@ -1,15 +1,15 @@
 ---
 id: combobox-how-to
 title: "How to: Work with ComboBox"
-description: Bind collections, create custom templates, use editable combo boxes, and bind enums.
+description: Bind collections, create custom templates, use editable combo boxes, and bind enums with the Avalonia ComboBox control.
 doc-type: how-to
 ---
 
-This guide covers common ComboBox scenarios: binding to collections, custom templates, editable combo boxes, and enum binding.
+This guide covers common `ComboBox` scenarios including binding to collections, creating custom item templates, working with enums, and using `AutoCompleteBox` for type-to-search functionality.
 
-## Basic Binding
+## Basic binding
 
-Bind a ComboBox to a collection and track the selected item:
+To bind a `ComboBox` to a collection and track the selected item, set `ItemsSource` to your collection property and bind `SelectedItem` to a property on your view model. Use `PlaceholderText` to display a hint when nothing is selected:
 
 ```xml
 <ComboBox ItemsSource="{Binding Countries}"
@@ -30,9 +30,13 @@ public partial class MainViewModel : ObservableObject
 }
 ```
 
-## Custom Item Template
+:::tip
+Use `ObservableCollection<T>` instead of `List<T>` when you need the `ComboBox` to update automatically as items are added or removed at runtime.
+:::
 
-Display complex objects with a custom template:
+## Custom item template
+
+When your items are complex objects, use `ComboBox.ItemTemplate` to control how each item appears in the dropdown. This lets you display multiple properties, icons, or any custom layout:
 
 ```xml
 <ComboBox ItemsSource="{Binding Users}"
@@ -57,9 +61,11 @@ Display complex objects with a custom template:
 </ComboBox>
 ```
 
-## Binding to an Enum
+When you use a custom item template with complex objects, the `ComboBox` displays the selected item using the same template. If you want different layouts for the selected item and the dropdown items, you can use a `DataTemplateSelector` or apply styles that target items inside the popup.
 
-Display all values of an enum in a ComboBox:
+## Binding to an enum
+
+You can populate a `ComboBox` with all values of an enum by calling `Enum.GetValues<T>()` and exposing the result as an array:
 
 ```csharp
 public enum Priority { Low, Normal, High, Critical }
@@ -80,7 +86,7 @@ public partial class TaskViewModel : ObservableObject
 
 ### With display names
 
-If you want human-readable labels instead of enum names:
+By default, the `ComboBox` displays the raw enum member names (for example, `"High"` rather than `"High Priority"`). If you want human-readable labels, wrap each value in a record and provide an `ItemTemplate`:
 
 ```csharp
 public record PriorityOption(Priority Value, string Label);
@@ -108,9 +114,9 @@ private PriorityOption _selectedPriority;
 </ComboBox>
 ```
 
-## Binding to SelectedValue
+## Binding to `SelectedValue`
 
-When you need just a property of the selected item rather than the whole object:
+When you need just a single property of the selected item rather than the whole object, use `SelectedValueBinding` to specify which property to extract and `SelectedValue` to bind the result. This is useful when your items are complex objects but you only need to store an ID or code:
 
 ```xml
 <ComboBox ItemsSource="{Binding Countries}"
@@ -124,9 +130,9 @@ When you need just a property of the selected item rather than the whole object:
 </ComboBox>
 ```
 
-## Static Items in XAML
+## Static items in XAML
 
-For a small fixed set of options, define items directly:
+For a small fixed set of options that do not change at runtime, you can define items directly in XAML using `ComboBoxItem` elements. Set `SelectedIndex` to pre-select an item by position:
 
 ```xml
 <ComboBox SelectedIndex="0">
@@ -136,9 +142,13 @@ For a small fixed set of options, define items directly:
 </ComboBox>
 ```
 
-## Editable ComboBox (AutoCompleteBox)
+:::tip
+Static items work well for settings screens or forms where the options are known at design time. For dynamic or data-driven options, use `ItemsSource` binding instead.
+:::
 
-Avalonia's `ComboBox` does not have a built-in editable mode like WPF. For type-to-search functionality, use `AutoCompleteBox`:
+## Editable combo box (`AutoCompleteBox`)
+
+Avalonia's `ComboBox` does not have a built-in editable mode. If you need type-to-search functionality where the user can filter options by typing, use `AutoCompleteBox` instead:
 
 ```xml
 <AutoCompleteBox ItemsSource="{Binding AllCities}"
@@ -148,7 +158,7 @@ Avalonia's `ComboBox` does not have a built-in editable mode like WPF. For type-
                  MinimumPrefixLength="1" />
 ```
 
-`AutoCompleteBox` filters the list as the user types and supports custom filtering:
+`AutoCompleteBox` filters the list as the user types. You can choose from several built-in filter modes (`StartsWith`, `Contains`, `ContainsCaseSensitive`, and others), or provide a custom filter:
 
 ```xml
 <AutoCompleteBox ItemsSource="{Binding Users}"
@@ -167,6 +177,8 @@ Avalonia's `ComboBox` does not have a built-in editable mode like WPF. For type-
 
 ### Custom dropdown width
 
+If the dropdown panel is too narrow for your content, you can set a minimum width on the `Popup` inside the `ComboBox` template:
+
 ```xml
 <Style Selector="ComboBox /template/ Popup">
     <Setter Property="MinWidth" Value="300" />
@@ -175,14 +187,16 @@ Avalonia's `ComboBox` does not have a built-in editable mode like WPF. For type-
 
 ### Custom placeholder style
 
+You can change the appearance of the placeholder text that appears when no item is selected:
+
 ```xml
 <Style Selector="ComboBox:not(:selected) /template/ ContentControl#PlaceholderTextBlock">
     <Setter Property="Foreground" Value="Gray" />
 </Style>
 ```
 
-## See Also
+## See also
 
-- [ComboBox Control Reference](/controls/input/selectors/combobox): Property tables and examples.
-- [How to Bind to a Collection](/docs/data-binding/how-to-bind-to-a-collection): Collection binding basics.
-- [Data Templates](/docs/data-templates/introduction-to-data-templates): Customizing item display.
+- [How to bind to a collection](/docs/data-binding/how-to-bind-to-a-collection): Collection binding basics.
+- [Introduction to data templates](/docs/data-templates/introduction-to-data-templates): Customizing how items are displayed.
+- [Collection views](/docs/data-binding/collection-views): Sorting, filtering, and grouping bound collections.

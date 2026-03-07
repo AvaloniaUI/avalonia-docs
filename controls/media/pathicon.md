@@ -1,28 +1,34 @@
 ---
 id: pathicon
 title: PathIcon
+description: A control that renders a vector icon from SVG path (stream geometry) data, commonly used inside buttons, menus, and other interactive controls.
+doc-type: reference
 ---
 
 import PathIconHouseScreenshot from '/img/controls/pathicon/pathicon-house.png';
 
-The `PathIcon` control can draw an icon graphic from a stream geometry. For example, you can use the icon geometries from the Avalonia [Fluent icons resource](https://avaloniaui.github.io/icons.html).
+The `PathIcon` control renders a vector icon from stream geometry data. You can use it to display scalable, resolution-independent icons in your application. The [Avalonia Fluent icons library](https://avaloniaui.github.io/icons.html) provides a large collection of ready-to-use geometry strings.
 
-This control is most often used as part of a composition inside another control. For example, to create an icon in a menu or a button.
+Because `PathIcon` uses vector paths rather than raster images, your icons scale cleanly at any size and you can re-color them by changing the `Foreground` brush.
 
-## Useful properties
+`PathIcon` is most often used as part of a composition inside another control, for example to add an icon to a `Button`, `MenuItem`, or `NavigationViewItem`.
 
-You will probably use these properties most often:
+## Common properties
 
 | Property | Type | Description |
 |---|---|---|
-| `Data` | `Geometry` | The stream geometry for the icon. |
-| `Foreground` | `IBrush` | The brush used to fill the icon. Inherits from the parent if not set. |
+| `Data` | `Geometry` | The stream geometry that defines the icon shape. |
+| `Foreground` | `IBrush` | The brush used to fill the icon. If you do not set this property, the value is inherited from the parent control. |
+| `Width` | `double` | The rendered width of the icon. |
+| `Height` | `double` | The rendered height of the icon. |
 
-## Example
+## Basic example
+
+The following example displays a shop icon at 200 x 200 pixels with a blue fill. The geometry data is stored as a `StreamGeometry` resource and referenced with `StaticResource`.
 
 ```xml
-<PathIcon Height="200" Width="200" Foreground="Blue"             
-            Data="{StaticResource building_shop_regular}"/>
+<PathIcon Height="200" Width="200" Foreground="Blue"
+          Data="{StaticResource building_shop_regular}" />
 ```
 
 ```xml title='Resources'
@@ -31,13 +37,13 @@ You will probably use these properties most often:
 </Window.Resources>
 ```
 
-It works in the preview pane as well:
+The result in the preview pane:
 
-<img src={PathIconHouseScreenshot} alt="" />
+<img src={PathIconHouseScreenshot} alt="PathIcon showing a shop building icon" />
 
 ## Using in buttons and menus
 
-PathIcon is commonly used to add icons to interactive controls:
+`PathIcon` is commonly used to add icons to interactive controls. The following examples show typical usage inside a `Button` and a `MenuItem`.
 
 ```xml
 <Button>
@@ -56,7 +62,7 @@ PathIcon is commonly used to add icons to interactive controls:
 
 ## Defining icon resources
 
-Store icon geometries in a resource dictionary for reuse:
+To reuse the same icon in multiple places, store your `StreamGeometry` values in a resource dictionary at the application or window level.
 
 ```xml
 <Application.Resources>
@@ -65,9 +71,30 @@ Store icon geometries in a resource dictionary for reuse:
 </Application.Resources>
 ```
 
-Browse the [Avalonia Fluent icons](https://avaloniaui.github.io/icons.html) for ready-to-use geometry data.
+You can then reference any icon with `{StaticResource key_name}` throughout your application.
+
+Browse the [Avalonia Fluent icons](https://avaloniaui.github.io/icons.html) for a searchable gallery of ready-to-use geometry data.
+
+## Changing icon color dynamically
+
+Because `PathIcon` inherits `Foreground` from its parent, you can change the icon color through styles or bindings without setting the property on every instance.
+
+```xml
+<Button Foreground="Green">
+    <!-- The PathIcon inherits Green from the Button -->
+    <PathIcon Data="{StaticResource check_regular}" Width="16" Height="16" />
+</Button>
+```
+
+To override the inherited color on a specific icon, set `Foreground` directly.
+
+```xml
+<PathIcon Data="{StaticResource warning_regular}" Foreground="Red"
+          Width="16" Height="16" />
+```
 
 ## See also
 
-- [PathIcon API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_PathIcon)
-- [`PathIcon.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PathIcon.cs)
+- [PathIcon API reference](https://reference.avaloniaui.net/api/Avalonia.Controls/PathIcon/)
+- [Image](image)
+- [Fluent icons gallery](https://avaloniaui.github.io/icons.html)

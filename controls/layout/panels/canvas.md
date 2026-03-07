@@ -1,6 +1,8 @@
 ---
 id: canvas
 title: Canvas
+description: Learn how to use the Canvas panel in Avalonia to position child controls at absolute coordinates.
+doc-type: reference
 ---
 
 import Tabs from '@theme/Tabs';
@@ -131,3 +133,10 @@ myParentCanvas.Children.Add(myCanvas3);
 
 - [Canvas API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Canvas)
 - [`Canvas.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)
+- [DockPanel](dockpanel)
+- [Grid](grid)
+- [Panel](panel)
+- [RelativePanel](relativepanel)
+- [StackPanel](stackpanel)
+- [UniformGrid](uniformgrid)
+- [WrapPanel](wrappanel)

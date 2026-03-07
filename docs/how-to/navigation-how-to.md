@@ -1,15 +1,27 @@
 ---
 id: navigation-how-to
-title: "How to: Navigate Between Views"
+title: "How to: Navigate between views"
 description: Common patterns for switching between views and pages in Avalonia applications.
 doc-type: how-to
 ---
 
-This guide covers common patterns for switching between views (pages) in Avalonia applications.
+This guide covers common patterns for switching between views (pages) in your Avalonia applications. Each pattern suits a different scenario, from simple two-page apps to full desktop shells with history navigation.
 
-## View Switching with ContentControl
+## Choosing a navigation pattern
 
-The simplest navigation pattern uses a `ContentControl` that displays different view models, with data templates to resolve the corresponding view:
+Before you start, consider which pattern fits your requirements:
+
+| Pattern | Best for |
+|---|---|
+| `ContentControl` with data templates | Small apps with a few fixed pages |
+| `TransitioningContentControl` | Same as above, but with animated transitions |
+| `TabControl` | Settings screens, document editors |
+| Sidebar navigation | Desktop apps with a primary menu |
+| Back-stack navigation | Wizard flows, browser-style history |
+
+## View switching with ContentControl
+
+The simplest navigation pattern uses a `ContentControl` that displays different view models, with data templates to resolve the corresponding view.
 
 ```xml
 <Window x:Class="MyApp.Views.MainWindow"
@@ -56,11 +68,15 @@ public partial class MainViewModel : ObservableObject
 }
 ```
 
-When `CurrentPage` changes, the `ContentControl` looks up the matching `DataTemplate` and displays the corresponding view.
+When `CurrentPage` changes, the `ContentControl` looks up the matching `DataTemplate` and displays the corresponding view automatically. This works because Avalonia walks up the visual tree looking for a `DataTemplate` whose `DataType` matches the object assigned to `Content`.
 
-## View Switching with Transitions
+:::tip
+If you have many view models, listing every `DataTemplate` by hand becomes tedious. See the [View locator pattern](#view-locator-pattern) later in this guide for an automatic alternative.
+:::
 
-Add a page transition for animated view changes using `TransitioningContentControl`:
+## View switching with transitions
+
+You can add a page transition for animated view changes by replacing `ContentControl` with `TransitioningContentControl`:
 
 ```xml
 <TransitioningContentControl Content="{Binding CurrentPage}">
@@ -70,13 +86,13 @@ Add a page transition for animated view changes using `TransitioningContentContr
 </TransitioningContentControl>
 ```
 
-Available transitions:
+The following built-in transitions are available:
 
 | Transition | Effect |
 |---|---|
 | `CrossFade` | Fades between old and new content |
 | `PageSlide` | Slides content horizontally or vertically |
-| `CompositePageTransition` | Combines multiple transitions |
+| `CompositePageTransition` | Combines multiple transitions together |
 
 ```xml
 <!-- Slide transition -->
@@ -93,9 +109,9 @@ Available transitions:
 </TransitioningContentControl.PageTransition>
 ```
 
-## Tab-Based Navigation
+## Tab-based navigation
 
-Use `TabControl` for tabbed navigation:
+Use `TabControl` when you want your users to switch between a fixed set of panels, such as settings categories or document tabs.
 
 ```xml
 <TabControl>
@@ -112,6 +128,8 @@ Use `TabControl` for tabbed navigation:
 ```
 
 ### Dynamic tabs from a collection
+
+When you need tabs driven by data (for example, open documents), bind `ItemsSource` to a collection in your view model.
 
 ```xml
 <TabControl ItemsSource="{Binding OpenDocuments}"
@@ -134,9 +152,9 @@ Use `TabControl` for tabbed navigation:
 </TabControl>
 ```
 
-## Sidebar Navigation
+## Sidebar navigation
 
-A common desktop pattern with a sidebar menu:
+A common desktop pattern places a persistent menu in a sidebar while the main content area swaps views. This example uses a `ListBox` for the menu and a `TransitioningContentControl` for the content.
 
 ```xml
 <Grid ColumnDefinitions="220,*">
@@ -186,9 +204,9 @@ public partial class MainViewModel : ObservableObject
 public record MenuItem(string Title, string Icon, Func<ObservableObject> CreatePage);
 ```
 
-## Navigation with Back Stack
+## Navigation with back stack
 
-Maintain a history of visited pages:
+If your application needs browser-style back and forward buttons (for example, a wizard or a file browser), you can maintain a history of visited pages using two stacks.
 
 ```csharp
 public partial class NavigationViewModel : ObservableObject
@@ -255,9 +273,9 @@ public partial class NavigationViewModel : ObservableObject
 </Grid>
 ```
 
-## View Locator Pattern
+## View locator pattern
 
-Instead of explicit `DataTemplate` declarations, use a view locator to automatically find views for view models:
+Instead of declaring a `DataTemplate` for every view model, you can use a view locator to resolve views automatically by convention. The locator replaces `ViewModel` in the fully qualified type name with `View` and instantiates the result.
 
 ```csharp
 public class ViewLocator : IDataTemplate
@@ -284,7 +302,7 @@ public class ViewLocator : IDataTemplate
 }
 ```
 
-Register it in `App.axaml`:
+Register the locator in `App.axaml` so it applies globally:
 
 ```xml
 <Application.DataTemplates>
@@ -292,11 +310,15 @@ Register it in `App.axaml`:
 </Application.DataTemplates>
 ```
 
-Now any `ContentControl` bound to a view model will automatically resolve its view. `HomeViewModel` maps to `HomeView`, `SettingsViewModel` maps to `SettingsView`, and so on.
+Now any `ContentControl` bound to a view model will automatically resolve its view. For example, `HomeViewModel` maps to `HomeView`, and `SettingsViewModel` maps to `SettingsView`.
 
-## See Also
+:::note
+This convention requires that your view and view model classes live in parallel namespaces (for example, `MyApp.ViewModels.HomeViewModel` and `MyApp.Views.HomeView`). If your project uses a different folder structure, adjust the string replacement logic in the `Build` method accordingly.
+:::
 
-- [Page Transitions](/docs/graphics-animation/page-transitions): Transition animations between views.
-- [Data Templates](/docs/data-templates/introduction-to-data-templates): How data templates resolve views.
-- [View Locator](/docs/data-templates/view-locator): Automatic view-model to view mapping.
-- [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern): View model architecture.
+## See also
+
+- [Page transitions](/docs/graphics-animation/page-transitions): Transition animations between views.
+- [Data templates](/docs/data-templates/introduction-to-data-templates): How data templates resolve views.
+- [View locator](/docs/data-templates/view-locator): Automatic view-model to view mapping.
+- [The MVVM pattern](/docs/fundamentals/the-mvvm-pattern): View model architecture.

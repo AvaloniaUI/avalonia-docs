@@ -1,37 +1,138 @@
 ---
 id: animations
 title: Animations
+description: Understand the animation systems available in Avalonia, including keyframe animations, control transitions, and composition animations, and learn when to use each one.
+doc-type: explanation
 ---
 
 import KeyframeDiagram from '/img/concepts/ui-concepts/animations/animation-keyframe.png';
 
-There are two types of animations in _Avalonia UI_:
+Avalonia provides three animation systems, each suited to different scenarios. Understanding how they work and when to reach for each one helps you build responsive, polished user interfaces.
 
-* Keyframe Animation -  can change one or more property values using a timeline. Keyframes are defined along the timeline at cue points. The properties being changed are adjusted between keyframes using an easing function (which is a straight-line interpolation by default). Keyframe animations are a very versatile type of animation.
-* Transitions - can change a single property.
+## Animation types at a glance
 
-## Keyframe Animation
+| Type | Defined in | Triggered by | Best for |
+|---|---|---|---|
+| [Keyframe animations](/docs/graphics-animation/keyframe-animations) | XAML styles | Style selectors | Multi-step, timeline-based animations (fade, rotate, pulse) |
+| [Control transitions](/docs/graphics-animation/control-transitions) | XAML (inline or styles) | Property value changes | Smooth visual feedback when a property changes (opacity, color, size) |
+| [Composition animations](/docs/graphics-animation/composition-animations) | C# code | `StartAnimation()` or implicit property changes | Performance-sensitive or programmatic animations on the render thread |
 
-The simplest keyframe animation will change one property value over a a specified duration by defining two keyframes with cue points at the start (0% of the duration) and the end (100% of the duration).
+Additionally, [page transitions](/docs/graphics-animation/page-transitions) animate content switching in controls like `TransitioningContentControl` and `Carousel`.
 
-<img src={KeyframeDiagram} alt=''/>
+## Keyframe animations
 
-The property value is then changed over time between the keyframes using the profile defined by an easing function. The default easing function is also the simplest - a straight-line interpolation between two keyframes.
+Keyframe animations change one or more property values over a specified duration. You define keyframes at cue points along a timeline, and Avalonia interpolates between them using an easing function (linear by default).
 
-:::info
-For the full range of easing functions, see the [animation settings reference](/docs/graphics-animation/animation-settings).
-:::
+<img src={KeyframeDiagram} alt="Diagram showing a keyframe animation timeline with start and end cue points"/>
 
-## Triggering Animations
+The simplest keyframe animation uses two cue points: 0% (start) and 100% (end). You can add intermediate cue points to create more complex motion sequences.
 
-_Avalonia UI_ animations defined in XAML rely on selectors for their triggering behavior. Selectors can always apply to a control, or they can conditionally apply (for example if the control has a style class applied).
+Keyframe animations are defined inside `Style.Animations` elements and rely on style selectors for triggering. If the selector is unconditional (for example, `Border`), the animation starts as soon as a matching control enters the visual tree. If the selector is conditional (for example, `Border:pointerover`), the animation runs only while the selector matches and stops when it no longer applies.
 
-If the selector is not conditional then the animation will be triggered when a matching `Control` is spawned into the visual tree. Otherwise, the animations will run whenever its selector is activated. When the selector no longer matches, the currently running animation will be cancelled.
+```xml
+<Border Background="Blue" Width="100" Height="100">
+    <Border.Styles>
+        <Style Selector="Border">
+            <Style.Animations>
+                <Animation Duration="0:0:1" IterationCount="INFINITE"
+                           PlaybackDirection="Alternate">
+                    <KeyFrame Cue="0%">
+                        <Setter Property="Opacity" Value="1.0" />
+                    </KeyFrame>
+                    <KeyFrame Cue="100%">
+                        <Setter Property="Opacity" Value="0.3" />
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+    </Border.Styles>
+</Border>
+```
 
-## Other Animation Settings
+This creates a pulsing opacity effect that runs indefinitely, alternating between full and partial opacity.
 
-* Delay
-* Repeat
-* Playback Direction
-* Value Fill Mode
-* Easing Function
+### Choosing keyframe animations
+
+Use keyframe animations when you need to:
+
+- Animate multiple properties on the same timeline
+- Create multi-step motion with intermediate cue points
+- Trigger animations through style selectors and pseudo-classes (`:pointerover`, `:pressed`, and so on)
+- Define animations entirely in XAML
+
+## Control transitions
+
+Transitions animate a property whenever its value changes, giving you smooth visual feedback without explicit keyframes. You attach them to a control's `Transitions` property or define them in a style.
+
+```xml
+<Button Content="Hover me" Background="Blue">
+    <Button.Transitions>
+        <Transitions>
+            <BrushTransition Property="Background" Duration="0:0:0.3" />
+            <DoubleTransition Property="Opacity" Duration="0:0:0.2" />
+        </Transitions>
+    </Button.Transitions>
+</Button>
+```
+
+Each transition type corresponds to a property type. For example, use `DoubleTransition` for `double` properties like `Opacity`, `BrushTransition` for `IBrush` properties like `Background`, and `ThicknessTransition` for `Thickness` properties like `Margin`.
+
+### Choosing transitions
+
+Use transitions when you need to:
+
+- Smoothly animate a single property change (such as opacity on hover)
+- React automatically to property value changes without managing animation state
+- Keep your animation logic simple and declarative
+
+## Composition animations
+
+Composition animations are a code-driven system that runs on the render thread. They offer fine-grained programmatic control and high performance because they do not block the UI thread.
+
+```csharp
+var visual = ElementComposition.GetElementVisual(myControl);
+var compositor = visual.Compositor;
+
+var animation = compositor.CreateVector3KeyFrameAnimation();
+animation.Duration = TimeSpan.FromMilliseconds(400);
+animation.InsertKeyFrame(0f, new Vector3D(-200, 0, 0));
+animation.InsertKeyFrame(1f, new Vector3D(0, 0, 0));
+
+visual.StartAnimation("Offset", animation);
+```
+
+You can also set up implicit composition animations that fire automatically whenever a visual property changes, which is useful for smooth repositioning in list controls.
+
+### Choosing composition animations
+
+Use composition animations when you need to:
+
+- Drive animations from C# code (for example, in response to scroll position, gestures, or data changes)
+- Run animations on the render thread for maximum smoothness
+- Animate properties not reachable through XAML keyframe animations
+
+For style-driven scenarios, keyframe animations and control transitions are simpler.
+
+## Animation settings
+
+Keyframe animations support several configuration options that control timing and playback behavior:
+
+| Setting | Description | Example values |
+|---|---|---|
+| `Duration` | How long one cycle takes. | `0:0:1` (1 second) |
+| `Delay` | Time to wait before starting. | `0:0:0.5` |
+| `IterationCount` | Number of times to repeat. Use `INFINITE` for indefinite playback. | `3`, `INFINITE` |
+| `PlaybackDirection` | Direction of playback. | `Normal`, `Reverse`, `Alternate`, `AlternateReverse` |
+| `FillMode` | How the animated property behaves after the animation ends. | `Forward`, `Backward`, `Both`, `None` |
+| `Easing` | The interpolation curve between keyframes. | `LinearEasing`, `CubicEaseInOut`, `BounceEaseIn` |
+
+See [Animation Settings](/docs/graphics-animation/animation-settings) for details on each option and [Easing Functions](/docs/graphics-animation/easing-functions) for all available easing types.
+
+## See also
+
+- [Keyframe Animations](/docs/graphics-animation/keyframe-animations): Full keyframe animation syntax and examples.
+- [Control Transitions](/docs/graphics-animation/control-transitions): Animating property changes with transitions.
+- [Composition Animations](/docs/graphics-animation/composition-animations): Code-driven render-thread animations.
+- [Page Transitions](/docs/graphics-animation/page-transitions): Animating content switching.
+- [Animation Settings](/docs/graphics-animation/animation-settings): Duration, delay, iteration count, and playback direction.
+- [Easing Functions](/docs/graphics-animation/easing-functions): All available easing function curves.

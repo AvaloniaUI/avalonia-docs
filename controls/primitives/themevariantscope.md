@@ -1,9 +1,17 @@
 ---
 id: themevariantscope
 title: ThemeVariantScope
+description: A primitive control that overrides the active theme variant (light or dark) for a section of the visual tree.
+doc-type: reference
 ---
 
-The `ThemeVariantScope` control overrides the active theme variant (light or dark) for a section of the visual tree. All controls within a `ThemeVariantScope` use the specified variant regardless of the application or window setting.
+The `ThemeVariantScope` control overrides the active theme variant (light or dark) for a section of your visual tree. All controls placed inside a `ThemeVariantScope` use the specified variant, regardless of the application or window setting. This is useful when you need part of your UI to display in a different theme from the rest of the application.
+
+## Common use cases
+
+- Forcing a sidebar or panel to always render in dark mode while the rest of your app uses light mode.
+- Displaying a side-by-side preview of both theme variants on a settings page.
+- Creating contrasting regions in your layout for visual emphasis.
 
 ## Useful properties
 
@@ -14,7 +22,7 @@ The `ThemeVariantScope` control overrides the active theme variant (light or dar
 
 ## Basic example
 
-Force a section of the UI to use the light theme while the rest of the window uses the dark theme:
+You can force a section of the UI to use the light theme while the rest of the window uses the dark theme:
 
 ```xml
 <Window RequestedThemeVariant="Dark">
@@ -33,7 +41,7 @@ Force a section of the UI to use the light theme while the rest of the window us
 
 ## Side-by-side theme preview
 
-A common use case is displaying both theme variants at the same time, for example in a theme settings page:
+A common use case is displaying both theme variants at the same time, for example on a theme settings page:
 
 ```xml
 <Grid ColumnDefinitions="*,*" Margin="16">
@@ -63,7 +71,7 @@ A common use case is displaying both theme variants at the same time, for exampl
 </Grid>
 ```
 
-## Resetting to inherited variant
+## Resetting to the inherited variant
 
 Set `RequestedThemeVariant="Default"` to clear the override and inherit the variant from the parent scope:
 
@@ -81,9 +89,27 @@ Set `RequestedThemeVariant="Default"` to clear the override and inherit the vari
 </ThemeVariantScope>
 ```
 
+## Nesting scopes
+
+You can nest `ThemeVariantScope` controls to create multiple themed regions. Each scope resolves its variant independently, so a child scope overrides whatever its parent scope set:
+
+```xml
+<ThemeVariantScope RequestedThemeVariant="Dark">
+    <!-- Everything here uses the dark variant -->
+    <StackPanel Spacing="8">
+        <Button Content="Dark button" />
+
+        <ThemeVariantScope RequestedThemeVariant="Light">
+            <!-- This region switches to light -->
+            <Button Content="Light button inside dark scope" />
+        </ThemeVariantScope>
+    </StackPanel>
+</ThemeVariantScope>
+```
+
 ## Theme-aware resources
 
-Resources defined in `ThemeDictionaries` respond to `ThemeVariantScope`. Each scope resolves its own variant independently:
+Resources defined in `ThemeDictionaries` respond to `ThemeVariantScope`. Each scope resolves its own variant independently, so the same `DynamicResource` key can return different values depending on which scope it appears in:
 
 ```xml
 <Window.Resources>
@@ -112,15 +138,15 @@ Resources defined in `ThemeDictionaries` respond to `ThemeVariantScope`. Each sc
 </ThemeVariantScope>
 ```
 
-## Setting variant from code
+## Setting the variant from code
 
-You can change the variant at runtime:
+You can change the variant at runtime by setting `RequestedThemeVariant` in your code-behind:
 
 ```csharp
 myScope.RequestedThemeVariant = ThemeVariant.Dark;
 ```
 
-Or bind it to a view model:
+You can also bind the property to a view model so that your users can toggle themes dynamically:
 
 ```xml
 <ThemeVariantScope RequestedThemeVariant="{Binding SelectedTheme}">
@@ -128,8 +154,21 @@ Or bind it to a view model:
 </ThemeVariantScope>
 ```
 
+```csharp
+public class MainViewModel : ViewModelBase
+{
+    private ThemeVariant _selectedTheme = ThemeVariant.Default;
+
+    public ThemeVariant SelectedTheme
+    {
+        get => _selectedTheme;
+        set => this.RaiseAndSetIfChanged(ref _selectedTheme, value);
+    }
+}
+```
+
 ## See also
 
-- [Theme Variants](/docs/styling/theme-variants): Full guide to light/dark theme support and theme dictionaries.
-- [How To: Switch Themes](/docs/how-to/theme-switching-how-to): Implementing a theme toggle in your application.
+- [Theme variants](/docs/styling/theme-variants): Full guide to light/dark theme support and theme dictionaries.
+- [How to switch themes](/docs/how-to/theme-switching-how-to): Implementing a theme toggle in your application.
 - [Resources](/docs/app-development/resources): Overview of the resource system.

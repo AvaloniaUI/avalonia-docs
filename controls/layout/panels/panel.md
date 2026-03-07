@@ -1,11 +1,24 @@
 ---
 id: panel
 title: Panel
+description: A basic layout control that overlays multiple child controls on top of each other, positioning them with alignment properties.
+doc-type: reference
 ---
 
-The panel is the most basic control that can contain multiple child controls. Child controls are drawn according to their horizontal and vertical alignment properties, and in the sequence that they appear in the XAML. Child controls will overlap if they occupy the same space.
+# Panel
 
-## Example
+The `Panel` is the most basic layout control that can contain multiple child controls. It draws children in the order they appear in your XAML, layering them on top of each other. Each child is positioned according to its `HorizontalAlignment` and `VerticalAlignment` properties.
+
+Because `Panel` does not arrange children into rows, columns, or any other structure, it is best suited for scenarios where you need overlapping content, such as placing text over an image or stacking decorative elements.
+
+## Common properties
+
+| Property | Type | Description |
+|---|---|---|
+| `Background` | `IBrush` | The background brush for the panel. You must set this (even to `Transparent`) for the panel to receive pointer events. |
+| `Children` | `Controls` | The collection of child controls contained in the panel. |
+
+## Basic example
 
 This example uses some 50% opacities to demonstrate that child controls overlap.
 
@@ -23,16 +36,9 @@ This example uses some 50% opacities to demonstrate that child controls overlap.
 
 </XamlPreview>
 
-## Common properties
+## Controlling overlap with `ZIndex`
 
-| Property | Type | Description |
-|---|---|---|
-| `Background` | `IBrush` | The background brush for the panel. Must be set (even to `Transparent`) for the panel to receive pointer events. |
-| `Children` | `Controls` | The collection of child controls contained in the panel. |
-
-## ZIndex layering
-
-When children overlap, control the draw order with the `ZIndex` attached property:
+When children overlap, you can control the draw order with the `ZIndex` attached property. Higher values draw on top of lower values. By default, all children have a `ZIndex` of 0 and are drawn in the order they appear in markup.
 
 ```xml
 <Panel>
@@ -41,24 +47,65 @@ When children overlap, control the draw order with the `ZIndex` attached propert
 </Panel>
 ```
 
-Higher `ZIndex` values draw on top of lower values.
+In this example, the blue border renders on top of the red border because it has a higher `ZIndex`.
+
+## Setting a background for hit testing
+
+If you leave `Background` unset, the panel is transparent to pointer events. Clicks and other pointer interactions pass through to whatever is behind the panel. To make the panel respond to pointer events across its entire area, set `Background` to `Transparent`:
+
+```xml
+<Panel Background="Transparent">
+    <TextBlock Text="This panel captures pointer events everywhere." />
+</Panel>
+```
+
+## Using `Panel` as a base for custom panels
+
+`Panel` serves as the base class for all built-in panel controls. If none of the built-in panels meet your layout requirements, you can create a custom panel by deriving from `Panel` and overriding its `MeasureOverride` and `ArrangeOverride` methods.
+
+```csharp
+public class MyCustomPanel : Panel
+{
+    protected override Size MeasureOverride(Size availableSize)
+    {
+        foreach (var child in Children)
+        {
+            child.Measure(availableSize);
+        }
+
+        return availableSize;
+    }
+
+    protected override Size ArrangeOverride(Size finalSize)
+    {
+        foreach (var child in Children)
+        {
+            child.Arrange(new Rect(finalSize));
+        }
+
+        return finalSize;
+    }
+}
+```
+
+:::info
+For a complete walkthrough, see [Custom panel](/docs/custom-controls/custom-panel).
+:::
 
 ## Other panel controls
 
-There are other more useful panels, that offer better control over the positioning of their child controls:
+If you need more control over how child elements are positioned, consider one of these specialized panels:
 
-* Stack Panel
-* Dock Panel
-* Relative Panel
-* Wrap Panel
-
-If you have specific requirements for positioning the child controls in a panel, you can create your own custom control based on the panel.
-
-:::info
-For instructions about how to create a custom panel control, see [Custom panel](/docs/custom-controls/custom-panel).
-:::
+- [Stack panel](stackpanel): arranges children in a single horizontal or vertical line.
+- [Dock panel](dockpanel): docks children to the edges of the panel.
+- [Grid](grid): arranges children in rows and columns.
+- [Wrap panel](wrappanel): arranges children in a line that wraps when it reaches the panel edge.
+- [Canvas](canvas): positions children at explicit coordinates.
+- [Relative panel](relativepanel): positions children relative to each other or to the panel itself.
+- [Uniform grid](uniformgrid): arranges children in a grid with equally sized cells.
 
 ## See also
 
 - [Panel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Panel)
 - [`Panel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Panel.cs)
+- [Custom panel](/docs/custom-controls/custom-panel)

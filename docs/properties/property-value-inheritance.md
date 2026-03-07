@@ -1,6 +1,8 @@
 ---
 id: property-value-inheritance
 title: Property value inheritance
+description: How Avalonia properties propagate values from parent to descendant elements in the visual tree, including built-in inherited properties and creating custom ones.
+doc-type: concept
 ---
 
 Property value inheritance allows a property value set on a parent element to propagate down to its descendants in the visual tree, without each descendant needing to set the value explicitly. This is commonly used for properties like `FontSize`, `FontFamily`, `Foreground`, and `FlowDirection`.

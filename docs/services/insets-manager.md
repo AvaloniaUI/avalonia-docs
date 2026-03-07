@@ -1,6 +1,8 @@
 ---
 id: insets-manager
 title: Insets Manager
+description: "Manage system bar visibility, safe area padding, and edge-to-edge display on mobile and browser platforms in Avalonia."
+doc-type: guide
 ---
 
 The `InsetsManager` allows you to interact with the platform's system bars and handle changes to the safe area of the mobile window. 

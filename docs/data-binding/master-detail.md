@@ -5,11 +5,11 @@ description: Implement master-detail patterns where selecting an item displays i
 doc-type: how-to
 ---
 
-A master-detail pattern displays a list of items (the "master") alongside the details of the selected item. This is one of the most common UI patterns, used in email clients, settings screens, file managers, and many other applications.
+A master-detail pattern displays a list of items (the "master") alongside the details of the currently selected item. You will find this pattern in email clients, settings screens, file managers, and many other applications. Avalonia makes it straightforward to wire up through data binding and `DataContext` inheritance.
 
-## Basic Master-Detail
+## Basic master-detail
 
-Bind a `ListBox` to a collection and display the selected item's details in an adjacent panel:
+Bind a `ListBox` to a collection and display the selected item's properties in an adjacent panel. The detail panel sets its `DataContext` to the `SelectedPerson` property, so every binding inside it resolves against the selected object:
 
 ```xml
 <Grid ColumnDefinitions="250,*">
@@ -55,9 +55,17 @@ public partial class MainViewModel : ObservableObject
 public record Person(string Name, string Email, string Department);
 ```
 
+:::tip
+When you set `DataContext` on the detail panel, every binding inside it resolves relative to the selected item. This keeps your XAML concise because you do not need to repeat `SelectedPerson.` before each property path.
+:::
+
+:::note
+The `IsVisible` binding on the detail panel reaches back up through the visual tree to the parent `Grid` and casts its `DataContext` to your view model type. This is necessary because the detail panel's own `DataContext` is `null` when nothing is selected, so a local `IsVisible` binding would not evaluate correctly.
+:::
+
 ## Editable detail view
 
-For two-way binding in the detail panel, use `TwoWay` mode and ensure the model implements `INotifyPropertyChanged`:
+For two-way binding in the detail panel, use `TwoWay` mode and ensure your model implements `INotifyPropertyChanged`. When you use the MVVM Toolkit, the `[ObservableProperty]` attribute generates the required notification logic:
 
 ```csharp
 public partial class Person : ObservableObject
@@ -89,11 +97,15 @@ public partial class Person : ObservableObject
 </StackPanel>
 ```
 
-Changes in the text boxes update the item in the master list automatically because both panels share the same object reference.
+Changes in the text boxes update the item in the master list automatically because both panels share the same object reference. If you used a `record` type for your model (as in the basic example above), you would need to switch to a class that raises `PropertyChanged` notifications for editable scenarios.
 
-## Master-detail with separate detail ViewModel
+:::warning
+If your `ListBox.ItemTemplate` displays the same property you are editing (for example, `Name`), the list entry only updates in real time when the model raises `PropertyChanged`. A plain POCO or C# record will not trigger a UI refresh in the master list.
+:::
 
-For complex detail views, use a dedicated view model that updates when the selection changes:
+## Master-detail with a separate detail view model
+
+For complex detail views, create a dedicated view model that updates when the selection changes. This approach is useful when you need to load additional data, run validation, or manage detail-specific commands:
 
 ```csharp
 public partial class MainViewModel : ObservableObject
@@ -130,7 +142,7 @@ public partial class PersonDetailViewModel : ObservableObject
 
     private void LoadDetails()
     {
-        // Load additional data for the selected person
+        // Load additional data for the selected person.
     }
 }
 ```
@@ -148,9 +160,13 @@ public partial class PersonDetailViewModel : ObservableObject
 </ContentControl>
 ```
 
+:::tip
+If your detail data is loaded asynchronously, consider setting placeholder values (or showing a loading indicator) in the constructor, then updating the properties once the async operation completes. This prevents blank content from flashing briefly while data loads.
+:::
+
 ## Master-detail with navigation
 
-In mobile or compact layouts, the detail replaces the master list instead of appearing side by side. Use a navigation pattern with `TransitioningContentControl`:
+In mobile or compact layouts, the detail replaces the master list instead of appearing side by side. You can achieve this with a visibility toggle and `TransitioningContentControl` for animated transitions:
 
 ```csharp
 public partial class MainViewModel : ObservableObject
@@ -192,9 +208,13 @@ public partial class MainViewModel : ObservableObject
 </Panel>
 ```
 
-## Nested Master-Detail
+:::note
+If you want to preserve the user's scroll position in the master list when they navigate back, keep the `ListBox` in the visual tree (using `IsVisible`) rather than removing it with a `ContentControl` swap. Hidden controls retain their state.
+:::
 
-For hierarchical data (e.g., categories containing items), chain multiple master-detail levels:
+## Nested master-detail
+
+For hierarchical data such as categories containing items, you can chain multiple master-detail levels. Each column binds its `ItemsSource` to the selected item from the previous level:
 
 ```xml
 <Grid ColumnDefinitions="200,200,*">
@@ -229,9 +249,13 @@ For hierarchical data (e.g., categories containing items), chain multiple master
 </Grid>
 ```
 
+:::warning
+When the user selects a new category, the second-level `ListBox` receives a new `ItemsSource` and loses its selection. If you do not explicitly clear `SelectedItem` in your view model when `SelectedCategory` changes, you may display stale detail content from the previous category. Handle this by resetting `SelectedItem` to `null` inside `OnSelectedCategoryChanged`.
+:::
+
 ## Placeholder for empty selection
 
-Show a message or graphic when no item is selected:
+Show a message or graphic when no item is selected so that the detail area does not appear blank:
 
 ```xml
 <Panel Grid.Column="1">
@@ -252,9 +276,12 @@ Show a message or graphic when no item is selected:
 </Panel>
 ```
 
+You can replace the placeholder `TextBlock` with an image, an icon, or any custom layout that fits your application's design.
+
 ## See also
 
-- [How to Bind to a Collection](/docs/data-binding/how-to-bind-to-a-collection): Binding ItemsSource and DataTemplates.
-- [Data Templates](/docs/data-templates/introduction-to-data-templates): Controlling how items are displayed.
-- [Data Context](/docs/data-binding/data-context): How DataContext flows through the control tree.
-- [Collection Views](/docs/data-binding/collection-views): Sorting, filtering, and grouping bound collections.
+- [Bind to a collection](/docs/data-binding/how-to-bind-to-a-collection): Binding `ItemsSource` and `DataTemplate` usage.
+- [Data templates](/docs/data-templates/introduction-to-data-templates): Controlling how items are displayed.
+- [Data context](/docs/data-binding/data-context): How `DataContext` flows through the control tree.
+- [Collection views](/docs/data-binding/collection-views): Sorting, filtering, and grouping bound collections.
+- [Compiled bindings](/docs/data-binding/compiled-bindings): Improve binding performance and catch errors at compile time.

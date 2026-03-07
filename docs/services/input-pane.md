@@ -1,6 +1,8 @@
 ---
 id: input-pane
 title: Input Pane
+description: "Monitor the platform's input pane (software keyboard) state, boundaries, and animation in Avalonia applications."
+doc-type: guide
 ---
 
 The `InputPane` allows developers to listen for the platform's input pane (e.g., software keyboard or on-screen keyboard) current state and boundaries.

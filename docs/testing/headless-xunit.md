@@ -1,6 +1,8 @@
 ---
 id: headless-xunit
 title: Headless Testing with XUnit
+description: Set up and run headless UI tests for Avalonia applications using the XUnit test framework.
+doc-type: guide
 ---
 
 ## Preparation 

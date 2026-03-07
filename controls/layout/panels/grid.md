@@ -1,6 +1,8 @@
 ---
 id: grid
 title: Grid
+description: Learn how to use the Grid panel in Avalonia to arrange child controls in rows and columns.
+doc-type: reference
 ---
 
 import Tabs from '@theme/Tabs';
@@ -422,3 +424,11 @@ grid1.Children.Add(button3);
 
 - [Grid API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Grid)
 - [`Grid.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
+- [GridSplitter](gridsplitter)
+- [Canvas](canvas)
+- [DockPanel](dockpanel)
+- [Panel](panel)
+- [RelativePanel](relativepanel)
+- [StackPanel](stackpanel)
+- [UniformGrid](uniformgrid)
+- [WrapPanel](wrappanel)

@@ -1,15 +1,41 @@
 ---
 id: togglebutton
 title: ToggleButton
+description: A button that toggles between checked and unchecked states, with optional three-state support.
+doc-type: reference
 ---
 
 import ToggleButtonMuteScreenshot from '/img/controls/buttons/togglebutton/togglebutton-mute.gif';
 
-The `ToggleButton` can present a Boolean value by using styles and a pseudo class that is either present (true) or absent (false).
+The `ToggleButton` control presents a Boolean value by using styles and a pseudo class that is either present (true) or absent (false). This allows you to create a wide range of graphical presentations for the control in each of the pseudo class states.
 
-This allows a wide range of possible graphical presentations for the control in each of the pseudo class states.
+`ToggleButton` is found in the `Avalonia.Controls.Primitives` namespace and serves as the base class for `CheckBox` and other toggle-style controls.
 
-## Example
+## Useful properties
+
+You will probably use these properties most often:
+
+| Property        | Description                                                                 |
+| --------------- | --------------------------------------------------------------------------- |
+| `IsChecked`     | Gets or sets whether the `ToggleButton` is checked. The value is a nullable `bool`. |
+| `IsThreeState`  | Gets or sets a value indicating whether the control supports three states.  |
+| `ClickMode`     | Determines when the `Click` event fires (on release, press, or hover).     |
+
+## Three-state behavior
+
+By default, a `ToggleButton` cycles between two states: checked and unchecked. When you set `IsThreeState` to `true`, the control cycles through three states in order: checked, unchecked, and indeterminate.
+
+In three-state mode, the `IsChecked` property is a nullable `bool?`:
+
+- `true` corresponds to the checked state (`:checked` pseudo class).
+- `false` corresponds to the unchecked state.
+- `null` corresponds to the indeterminate state (`:indeterminate` pseudo class).
+
+You can style each state independently using pseudo classes in your AXAML styles.
+
+## Examples
+
+### Styling with pseudo classes
 
 This example shows a toggle button containing a speaker icon, or a muted speaker icon, depending on whether the button has the checked pseudo class or not.
 
@@ -29,7 +55,6 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 </StackPanel>
 ```
 
-
 ```xml title='Styles'
 <Window.Styles>
   <Style Selector="ToggleButton PathIcon.audio-on">
@@ -47,7 +72,6 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 </Window.Styles>
 ```
 
-
 ```xml title='Icons'
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -60,12 +84,11 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 </Styles>
 ```
 
-
 ```xml title='App'
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:AvaloniaControls"
-             x:Class="AvaloniaControls.App">    
+             x:Class="AvaloniaControls.App">
     <Application.Styles>
         <FluentTheme Mode="Light"/>
         <StyleInclude Source="avares://AvaloniaControls/Icons.axaml" />
@@ -73,13 +96,59 @@ This example shows a toggle button containing a speaker icon, or a muted speaker
 </Application>
 ```
 
-
-
 The content zone of the toggle button contains two path icon elements, only one of which is visible at a time. The path icons get their graphics from an assets file which is referenced as an included style set in the `App.xaml` file. The icon geometries are from the Avalonia [Fluent icons resource](https://avaloniaui.github.io/icons.html).
 
-The visibility of the path icons is set by the window styles, and these use the `:checked` pseudo class to determine when the toggle button is in its checked state. So, when the toggle button is checked, then the `audio-on` path icon is visible, and the `audio-mute` path icon is hidden. And conversely, when the toggle button is not checked, then the `audio-mute` path icon is visible, and the `audio-on` path icon is hidden.
+The visibility of the path icons is set by the window styles, and these use the `:checked` pseudo class to determine when the toggle button is in its checked state. When the toggle button is checked, the `audio-on` path icon is visible and the `audio-mute` path icon is hidden. Conversely, when the toggle button is not checked, the `audio-mute` path icon is visible and the `audio-on` path icon is hidden.
+
+### Binding to a view model
+
+You can bind the `IsChecked` property to a `bool` or `bool?` property on your view model. This is the most common way to use a `ToggleButton` in an MVVM application.
+
+```xml
+<ToggleButton IsChecked="{Binding IsMuted}" Content="Mute" />
+```
+
+```csharp
+public class MyViewModel : ViewModelBase
+{
+    private bool _isMuted;
+
+    public bool IsMuted
+    {
+        get => _isMuted;
+        set => this.RaiseAndSetIfChanged(ref _isMuted, value);
+    }
+}
+```
+
+### Three-state binding
+
+When you need to represent an indeterminate state, set `IsThreeState` to `true` and bind to a nullable `bool?` property.
+
+```xml
+<ToggleButton IsThreeState="True"
+              IsChecked="{Binding SelectAll}"
+              Content="Select all" />
+```
+
+```csharp
+public class MyViewModel : ViewModelBase
+{
+    private bool? _selectAll;
+
+    public bool? SelectAll
+    {
+        get => _selectAll;
+        set => this.RaiseAndSetIfChanged(ref _selectAll, value);
+    }
+}
+```
 
 ## See also
 
+- [Button](button)
+- [CheckBox](/controls/input/selectors/checkbox)
+- [ToggleSplitButton](togglesplitbutton)
+- [RadioButton](radiobutton)
 - [ToggleButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ToggleButton)
 - [`ToggleButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)

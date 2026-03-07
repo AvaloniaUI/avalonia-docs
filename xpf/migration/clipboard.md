@@ -1,6 +1,8 @@
 ---
 id: clipboard
 title: Clipboard
+description: Learn how the WPF Clipboard API works in XPF across Windows, macOS, and Linux, including text, bitmap, and custom data format support.
+doc-type: guide
 ---
 
 ## Overview
@@ -9,7 +11,7 @@ XPF implements the WPF clipboard API (`System.Windows.Clipboard`) across all pla
 
 ## Basic usage
 
-Standard WPF clipboard operations work in XPF:
+Standard WPF clipboard operations work in XPF. You can copy and retrieve text using `Clipboard.SetText` and `Clipboard.GetText`, or work with richer data through `DataObject`:
 
 ```csharp
 // Text
@@ -20,6 +22,15 @@ string text = Clipboard.GetText();
 var data = new DataObject();
 data.SetData(DataFormats.Text, "Hello");
 Clipboard.SetDataObject(data);
+```
+
+You can also check whether the clipboard contains a specific format before attempting to read it:
+
+```csharp
+if (Clipboard.ContainsText())
+{
+    string text = Clipboard.GetText();
+}
 ```
 
 ## Bitmap support
@@ -34,11 +45,11 @@ Clipboard.SetImage(myBitmapSource);
 BitmapSource image = Clipboard.GetImage();
 ```
 
-On macOS, screenshots captured with system shortcuts (Cmd+Shift+Ctrl+3) may use pixel formats that differ from WPF conventions. XPF 1.6.0+ automatically transcodes these to compatible formats.
+On macOS, screenshots captured with system shortcuts (Cmd+Shift+Ctrl+3) may use pixel formats that differ from WPF conventions. XPF 1.6.0 and later automatically transcodes these to compatible formats.
 
 ## Custom data formats
 
-Custom clipboard data formats work within the same process. For cross-process clipboard operations with custom data, XPF serializes data as strings. Ensure your custom data types are serializable.
+Custom clipboard data formats work within the same process. For cross-process clipboard operations with custom data, XPF serializes your data as strings. Make sure your custom data types are serializable:
 
 ```csharp
 var data = new DataObject();
@@ -46,11 +57,33 @@ data.SetData("MyCustomFormat", mySerializableObject);
 Clipboard.SetDataObject(data);
 ```
 
-## STA Threading (Windows)
+To retrieve your custom data, use `Clipboard.GetDataObject` and call `GetData` with the same format string:
 
-On Windows, clipboard operations use COM and require the main thread to be marked as STA. If you encounter `COMException: CoInitialize was not called`, ensure your entry point has the `[STAThread]` attribute or use [custom initialization](/xpf/configuration/customizing-initialization), which handles this automatically.
+```csharp
+IDataObject clipboardData = Clipboard.GetDataObject();
+if (clipboardData?.GetDataPresent("MyCustomFormat") == true)
+{
+    var result = clipboardData.GetData("MyCustomFormat");
+}
+```
+
+## STA threading (Windows)
+
+On Windows, clipboard operations use COM and require the main thread to be marked as STA. If you encounter a `COMException` with the message `CoInitialize was not called`, make sure your entry point has the `[STAThread]` attribute:
+
+```csharp
+[STAThread]
+static void Main(string[] args)
+{
+    // Your application startup
+}
+```
+
+Alternatively, you can use [custom initialization](/xpf/configuration/customizing-initialization), which handles STA threading automatically.
 
 ## Platform differences
+
+The following table summarizes clipboard feature support across platforms:
 
 | Feature | Windows | macOS | Linux |
 |---|---|---|---|
@@ -60,4 +93,10 @@ On Windows, clipboard operations use COM and require the main thread to be marke
 | Custom formats (cross-process) | Supported (1.6.0+) | Supported (1.6.0+) | Supported (1.6.0+) |
 | `Clipboard.Flush()` | Supported | No effect | Supported (X11) |
 
-`Clipboard.Flush()` persists clipboard data so it remains available after the application closes. On platforms where flushing is not supported, the method does nothing.
+`Clipboard.Flush()` persists clipboard data so it remains available after your application closes. On platforms where flushing is not supported, the method does nothing.
+
+## See also
+
+- [Known differences](/xpf/migration/known-differences)
+- [Customizing initialization](/xpf/configuration/customizing-initialization)
+- [Troubleshooting](/xpf/troubleshooting)

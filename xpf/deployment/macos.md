@@ -1,6 +1,7 @@
 ---
 id: macos
 title: macOS Deployment
+description: How to publish and deploy XPF applications on macOS, including app bundle structure and code signing.
 ---
 
 ## Publishing

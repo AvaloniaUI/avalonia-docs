@@ -5,17 +5,17 @@ description: Copy and paste text, images, and custom data using the Avalonia cli
 doc-type: how-to
 ---
 
-This guide covers clipboard operations: copying and pasting text, images, and custom data.
+This guide shows you how to copy and paste text, images, and custom data using the Avalonia clipboard API. You will learn how to obtain a clipboard reference, transfer common data types, register custom formats, and wire up keyboard shortcuts.
 
-## Getting the Clipboard
+## Getting the clipboard
 
-Access the clipboard through `TopLevel`:
+You access the clipboard through `TopLevel`. In a code-behind file you can call `GetTopLevel` on any visual that is part of the tree:
 
 ```csharp
 var clipboard = TopLevel.GetTopLevel(this)?.Clipboard;
 ```
 
-Or from a view model with a reference to the top-level:
+If you need clipboard access from a view model, inject `IClipboard` through the constructor so the view model stays testable:
 
 ```csharp
 public class MainViewModel
@@ -29,7 +29,13 @@ public class MainViewModel
 }
 ```
 
-## Copy Text to Clipboard
+:::tip
+All clipboard methods are asynchronous because the underlying platform APIs may require user permission or cross-process communication. Always `await` the calls and handle possible `null` return values.
+:::
+
+## Copy text to the clipboard
+
+Use `SetTextAsync` to place a plain-text string on the clipboard:
 
 ```csharp
 [RelayCommand]
@@ -43,7 +49,9 @@ private async Task CopyText()
 }
 ```
 
-## Paste Text from Clipboard
+## Paste text from the clipboard
+
+Use `TryGetTextAsync` to read plain text. The method returns `null` when no text is available:
 
 ```csharp
 [RelayCommand]
@@ -61,9 +69,9 @@ private async Task PasteText()
 }
 ```
 
-## Check Clipboard Content
+## Check clipboard content
 
-Query what formats are available before pasting:
+Before you paste, you can query which formats the clipboard currently holds. This is useful when your application supports multiple data types and you want to pick the best available format:
 
 ```csharp
 var clipboard = TopLevel.GetTopLevel(this)?.Clipboard;
@@ -75,12 +83,19 @@ if (clipboard is not null)
         if (data.Formats.Contains(DataFormat.Text))
         {
             var text = await data.TryGetTextAsync();
+            // Use the text value
         }
     }
 }
 ```
 
-## Copy an Image to Clipboard
+:::note
+The `DataTransfer` object returned by `TryGetDataAsync` is disposable. Wrap it in a `using` statement so platform resources are released promptly.
+:::
+
+## Copy an image to the clipboard
+
+Load a `Bitmap` and pass it to `SetBitmapAsync`:
 
 ```csharp
 var clipboard = TopLevel.GetTopLevel(this)?.Clipboard;
@@ -91,7 +106,9 @@ if (clipboard is not null)
 }
 ```
 
-## Paste an Image from Clipboard
+## Paste an image from the clipboard
+
+Use `TryGetBitmapAsync` to retrieve an image. The method returns `null` when no image data is available:
 
 ```csharp
 var clipboard = TopLevel.GetTopLevel(this)?.Clipboard;
@@ -105,9 +122,9 @@ if (clipboard is not null)
 }
 ```
 
-## Copy Custom Data
+## Copy custom data
 
-Use `DataTransfer` and `DataTransferItem` to place structured data on the clipboard:
+Use `DataTransfer` and `DataTransferItem` to place structured data on the clipboard. You first create an application-scoped format with a unique identifier, then populate a `DataTransferItem` with one or more representations. Including a `DataFormat.Text` entry gives other applications a plain-text fallback:
 
 ```csharp
 var myFormat = DataFormat.CreateBytesApplicationFormat("mycompany-myapp-mydata");
@@ -122,7 +139,9 @@ data.Add(item);
 await clipboard.SetDataAsync(data);
 ```
 
-## Paste Custom Data
+## Paste custom data
+
+To read your custom format back, create the same `DataFormat` and call `TryGetValueAsync`:
 
 ```csharp
 var myFormat = DataFormat.CreateBytesApplicationFormat("mycompany-myapp-mydata");
@@ -133,14 +152,18 @@ if (data is not null)
     var bytes = await data.TryGetValueAsync(myFormat);
     if (bytes is not null)
     {
-        // Deserialize
+        // Deserialize the byte array into your object
     }
 }
 ```
 
-## Keyboard Shortcuts
+:::tip
+Use the same format identifier string (`"mycompany-myapp-mydata"`) on both the copy and paste sides. The identifier is how the clipboard matches the data to your application format.
+:::
 
-The standard clipboard shortcuts (Ctrl+C, Ctrl+V, Ctrl+X) work automatically in text controls. For custom controls, bind key gestures to your commands:
+## Keyboard shortcuts
+
+The standard clipboard shortcuts (`Ctrl+C`, `Ctrl+V`, `Ctrl+X`) work automatically in built-in text controls such as `TextBox` and `TextPresenter`. For custom controls, bind key gestures to your commands explicitly:
 
 ```xml
 <UserControl.KeyBindings>
@@ -150,19 +173,27 @@ The standard clipboard shortcuts (Ctrl+C, Ctrl+V, Ctrl+X) work automatically in 
 </UserControl.KeyBindings>
 ```
 
-## Platform Notes
+On macOS, Avalonia automatically maps `Cmd+C`, `Cmd+V`, and `Cmd+X` when you specify the `Ctrl` modifier in XAML, so you do not need platform-specific bindings.
 
-| Platform | Text | Images | Files | Custom Formats |
+## Platform notes
+
+The clipboard API is available on all Avalonia targets, but not every platform supports every data type. The table below summarizes current support:
+
+| Platform | Text | Images | Files | Custom formats |
 |---|---|---|---|---|
 | Windows | Yes | Yes | Yes | Yes |
 | macOS | Yes | Yes | Yes | Yes |
-| Linux | Yes | Yes | Varies by DE | Yes |
-| Browser/WASM | Yes (requires permission) | Yes | No | Limited |
+| Linux | Yes | Yes | Varies by desktop environment | Yes |
+| Browser (WASM) | Yes (requires permission) | Yes | No | Limited |
 | iOS | Yes | Yes | No | Limited |
 | Android | Yes | Read only | No | Limited |
 
-## See Also
+On **Browser/WASM**, the browser may prompt the user for clipboard permission the first time your application calls a clipboard method. Your code should handle the case where permission is denied and the call returns `null`.
 
-- [Clipboard Service](/docs/services/clipboard): API reference.
-- [Drag and Drop How-To](/docs/how-to/drag-and-drop-how-to): Transfer data via drag operations.
-- [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings.
+On **Linux**, file clipboard support depends on the desktop environment and its clipboard manager. Text and image operations work reliably across GNOME, KDE, and other major environments.
+
+## See also
+
+- [Clipboard service](/docs/services/clipboard)
+- [Drag and drop how-to](/docs/how-to/drag-and-drop-how-to)
+- [Hotkeys](/docs/input-interaction/hotkeys)

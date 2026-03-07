@@ -1,6 +1,7 @@
 ---
 id: customizing-initialization
 title: Customizing initialization
+description: How to access and customize the Avalonia AppBuilder API in an XPF application by disabling automatic initialization.
 ---
 
 Avalonia provides the [`AppBuilder`](/docs/fundamentals/application-lifetimes) API to customize various aspects of the framework. 

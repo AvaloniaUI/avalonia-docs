@@ -1,20 +1,28 @@
 ---
 id: content-templates
 title: Content templates
+description: Learn how to define and apply a DataTemplate directly on a ContentControl using the ContentTemplate property in Avalonia UI.
+doc-type: explanation
 ---
 
 import ContentTemplateStudentScreenshot from '/img/concepts/data-concepts/data-templates/content-templates/contenttemplate-student.png';
 
-The purpose of a data template is that it defines how _Avalonia UI_ should display an object created from a class that you have defined, and that is not a control, or a simple string.
+## Overview
 
-Using a data template is a two-stage process:
+A data template defines how Avalonia UI displays an object that is not a control or a simple string. You typically create a class to represent your data, then use a data template to tell the framework which controls and bindings to use when rendering instances of that class.
 
-1. Define the data template
-2. Choose the data template for the content
+Applying a data template is a two-step process:
 
-One way to use a data template is to set the `ContentTemplate` property of a control directly. This works on a window (because like any control it inherits from `ContentControl`).
+1. Define the data template.
+2. Assign the data template to a control so it knows how to render the content.
 
-You can define a data template (for no particular class) using the `DataTemplate` tag, a composition of built-in controls, and some bindings. For example:
+One approach is to set the `ContentTemplate` property directly on any `ContentControl`. Because `Window` inherits from `ContentControl`, you can use this technique at the window level as well as on controls like `Button`, `UserControl`, and `HeaderedContentControl`.
+
+## Defining a content template in XAML
+
+You define a content template by placing a `DataTemplate` element inside the `ContentTemplate` property of a control. Inside the `DataTemplate`, you compose standard Avalonia controls and use `{Binding}` expressions to pull values from the data object.
+
+The following example sets `ContentTemplate` on a `Window` and binds to properties of a `Student` class:
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -37,18 +45,37 @@ You can define a data template (for no particular class) using the `DataTemplate
       </StackPanel>
     </DataTemplate>
   </Window.ContentTemplate>
-  
+
   <local:Student FirstName="Jane" LastName="Deer"/>
 </Window>
 ```
 
-In the above, the bindings refer to the properties of any class present in the content zone of the window. Here the window content is the same student object as you used before; but when you run this code, _Avalonia UI_ now displays:
+In this markup, the `DataType` attribute tells the template which type it is designed for. The `{Binding}` expressions resolve against whatever object occupies the control's content zone. Here the content is a `Student` instance, so `{Binding FirstName}` resolves to `Student.FirstName`.
 
-<img src={ContentTemplateStudentScreenshot} alt=""/>
+When you run this code, Avalonia UI displays the student data using your template layout:
 
-Using a data template in this way, you have both defined and chosen the data template for the content in the same place - by setting the `ContentTemplate` property of the window directly.
+<img src={ContentTemplateStudentScreenshot} alt="A window displaying a Student object rendered through a ContentTemplate with first and last name labels."/>
 
-The code works correctly because the object in the window's content zone happens to have the properties specified in the bindings. As an exercise: introduce a binding for a property that does not exist on the student class. (Your app will still work, but it ignores the property it cannot find.)
+## How the template and content relate
 
-On the next page, you will see how to define multiple data templates, and choose the correct template from the class of the object in the window's content zone.
+By setting `ContentTemplate`, you define and assign the template in the same place. The template's bindings resolve against the object in the control's content zone. If a binding references a property that does not exist on the content object, Avalonia silently ignores it and the bound control displays nothing. This means your application will not crash, but you should verify that your binding paths match the properties on your data class.
 
+As an exercise, try adding a `{Binding Age}` expression to the template above even though `Student` has no `Age` property. The application still runs, but that `TextBlock` remains empty.
+
+## When to use content templates
+
+Setting `ContentTemplate` directly is most useful when:
+
+- You have a single control that always displays the same type of data.
+- You want to keep the template definition close to where it is used.
+- You do not need to reuse the template elsewhere in your application.
+
+When you need to support multiple data types or share templates across controls, consider using the `DataTemplates` collection or defining templates as application-level resources instead.
+
+## See also
+
+- [Control content](control-content)
+- [Data template collection](data-template-collection)
+- [Introduction to data templates](introduction-to-data-templates)
+- [Reusing data templates](/docs/data-templates/reusing-data-templates)
+- [Creating data templates in code](/docs/data-templates/creating-data-templates-in-code)

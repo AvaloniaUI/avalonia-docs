@@ -1,46 +1,67 @@
 ---
 id: itemsrepeater
 title: ItemsRepeater
+description: A virtualized, layout-driven control for displaying repeating data from a bound collection.
+doc-type: reference
 ---
 
 import ItemsRepeaterVerticalScreenshot from '/img/controls/itemsrepeater/itemsrepeater-vertical.png';
 import ItemsRepeaterHorizontalScreenshot from '/img/controls/itemsrepeater/itemsrepeater-horizontal.gif';
 
-The `ItemsRepeater` can display repeating data from a bound data source. It has both a layout template and a data template.
+The `ItemsRepeater` displays repeating data from a bound collection. Unlike `ListBox`, it provides no built-in selection, scrolling, or chrome. Instead, it gives you full control over how items are laid out and rendered, while still supporting UI virtualization for large data sets.
 
-:::info
-The items repeater is a port of the UWP `ItemsRepeater` control. For further information see [UWP ItemsRepeater documentation](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater).
-:::
+You supply two things to an `ItemsRepeater`:
 
-:::info
-The `ItemsRepeater` was moved inside an additional _Avalonia_ package. To use the `ItemsRepeater` in your project, you must reference the [Avalonia.Controls.ItemsRepeater](https://www.nuget.org/packages/Avalonia.Controls.ItemsRepeater) _NuGet_ package. Check this [PR](https://github.com/AvaloniaUI/Avalonia/pull/10112) for additional information.
-:::
+- **A data source** via the `ItemsSource` property.
+- **A data template** via the `ItemTemplate` property that defines how each item looks.
 
-The default layout template is a vertical stack layout, so that items appear in a vertical list.
+By default, items are arranged in a vertical `StackLayout`. You can swap this for a horizontal `StackLayout` or a `UniformGridLayout` by setting the `Layout` property.
 
-## Example
+## When to use `ItemsRepeater`
 
-This example binds an observable collection of crockery items to an items repeater control, where some custom layout and formatting for each item is provided by the data template:
+Use `ItemsRepeater` when you need a lightweight, virtualized list or grid without built-in selection. The table below compares it with related controls:
+
+| Control | Selection | Virtualization | Best for |
+|---|---|---|---|
+| `ListBox` | Built-in | Yes | Selectable lists |
+| `ItemsControl` | None | No (by default) | Small collections, custom layouts |
+| `ItemsRepeater` | None | Yes | Large collections, custom layouts, performance |
+
+If you need selection behavior, consider wrapping items in a `Button` (see [Handling click events](#handling-click-events) below) or using `ListBox` instead.
+
+## Useful properties
+
+You will probably use these properties most often:
+
+| Property | Description |
+|---|---|
+| `ItemsSource` | The bound collection used as the data source. |
+| `ItemTemplate` | A `DataTemplate` that defines the visual structure for each item. |
+| `Layout` | The layout strategy for arranging items. Defaults to a vertical `StackLayout`. |
+
+## Vertical list example
+
+This example binds an observable collection of crockery items to an `ItemsRepeater`, with custom formatting provided by the data template:
 
 ```xml
 <StackPanel Margin="20">
   <TextBlock Margin="0 5">List of crockery:</TextBlock>
-  <ItemsRepeater  ItemsSource="{Binding CrockeryList}" >
+  <ItemsRepeater ItemsSource="{Binding CrockeryList}">
     <ItemsRepeater.ItemTemplate>
-    <DataTemplate>
-      <Border Margin="0,10,0,0"
-          CornerRadius="5"
-          BorderBrush="Blue" BorderThickness="1"
-          Padding="5">
-        <StackPanel Orientation="Horizontal">
-          <TextBlock Text="{Binding Title}"/>
-          <TextBlock Margin="5 0" FontWeight="Bold" 
-                      Text="{Binding Number}"/>
-        </StackPanel>
-      </Border>
-    </DataTemplate>
+      <DataTemplate>
+        <Border Margin="0,10,0,0"
+                CornerRadius="5"
+                BorderBrush="Blue" BorderThickness="1"
+                Padding="5">
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Title}" />
+            <TextBlock Margin="5 0" FontWeight="Bold"
+                       Text="{Binding Number}" />
+          </StackPanel>
+        </Border>
+      </DataTemplate>
     </ItemsRepeater.ItemTemplate>
-    </ItemsRepeater>
+  </ItemsRepeater>
 </StackPanel>
 ```
 
@@ -54,7 +75,7 @@ namespace AvaloniaControls.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         public ObservableCollection<Crockery> CrockeryList { get; set; }
-        
+
         public MainWindowViewModel()
         {
             CrockeryList = new ObservableCollection<Crockery>(new List<Crockery>
@@ -66,7 +87,7 @@ namespace AvaloniaControls.ViewModels
                 new Crockery("saucer", 10),
                 new Crockery("mug", 6),
                 new Crockery("milk jug", 1)
-            });    
+            });
         }
     }
 }
@@ -76,7 +97,7 @@ namespace AvaloniaControls.ViewModels
 public class Crockery
 {
     public string Title { get; set; }
-    public int Number{ get; set; }
+    public int Number { get; set; }
 
     public Crockery(string title, int number)
     {
@@ -86,9 +107,11 @@ public class Crockery
 }
 ```
 
-<img src={ItemsRepeaterVerticalScreenshot} alt="" />
+<img src={ItemsRepeaterVerticalScreenshot} alt="ItemsRepeater showing a vertical list of crockery items" />
 
-By default, an items repeater will render the items in a vertical stack layout. You can display the items horizontally by overriding this using a `<ItemsRepeater.Layout>` element, which must contain a stack layout. For example:
+## Horizontal list example
+
+You can display items horizontally by setting the `Layout` property to a horizontal `StackLayout`. Wrap the `ItemsRepeater` in a `ScrollViewer` so that items that overflow to the right remain accessible:
 
 ```xml
 <StackPanel Margin="20">
@@ -97,18 +120,18 @@ By default, an items repeater will render the items in a vertical stack layout. 
     <ItemsRepeater ItemsSource="{Binding CrockeryList}" Margin="0 20">
       <ItemsRepeater.Layout>
         <StackLayout Spacing="40"
-            Orientation="Horizontal" />
+                     Orientation="Horizontal" />
       </ItemsRepeater.Layout>
       <ItemsRepeater.ItemTemplate>
         <DataTemplate>
           <Border Margin="0,10,0,0"
-              CornerRadius="5"
-              BorderBrush="Blue" BorderThickness="1"
-              Padding="5">
+                  CornerRadius="5"
+                  BorderBrush="Blue" BorderThickness="1"
+                  Padding="5">
             <StackPanel Orientation="Horizontal">
-              <TextBlock Text="{Binding Title}"/>
-              <TextBlock Margin="5 0" FontWeight="Bold" 
-                          Text="{Binding Number}"/>
+              <TextBlock Text="{Binding Title}" />
+              <TextBlock Margin="5 0" FontWeight="Bold"
+                         Text="{Binding Number}" />
             </StackPanel>
           </Border>
         </DataTemplate>
@@ -118,13 +141,24 @@ By default, an items repeater will render the items in a vertical stack layout. 
 </StackPanel>
 ```
 
-The items display horizontally, and those too far to the right would be hidden if it were not for the scroll viewer element added around the items repeater.   
+<img src={ItemsRepeaterHorizontalScreenshot} alt="ItemsRepeater showing a horizontal list of crockery items with a scroll bar" />
 
-<img src={ItemsRepeaterHorizontalScreenshot} alt="" />
+## Layout options
 
-## UniformGridLayout
+The `Layout` property accepts any object that derives from `AttachedLayout`. Avalonia ships with two built-in options:
 
-For a responsive grid of equally-sized items (like a card layout), use `UniformGridLayout`:
+### `StackLayout`
+
+Arranges items in a single line, either vertically (default) or horizontally.
+
+| Property | Description |
+|---|---|
+| `Orientation` | `Vertical` (default) or `Horizontal`. |
+| `Spacing` | The distance in pixels between each item. |
+
+### `UniformGridLayout`
+
+Arranges items in a wrapping grid of equally-sized cells. The number of columns adjusts automatically based on the available width, making it ideal for responsive card layouts.
 
 ```xml
 <ScrollViewer>
@@ -149,34 +183,58 @@ For a responsive grid of equally-sized items (like a card layout), use `UniformG
 </ScrollViewer>
 ```
 
-The `UniformGridLayout` automatically adjusts the number of columns based on available width. Key properties:
-
 | Property | Description |
 |---|---|
 | `MinItemWidth` | Minimum width for each item. |
 | `MinItemHeight` | Minimum height for each item. |
 | `MinColumnSpacing` | Minimum horizontal spacing between items. |
 | `MinRowSpacing` | Minimum vertical spacing between items. |
-| `MaximumRowsOrColumns` | Maximum number of rows or columns. |
+| `MaximumRowsOrColumns` | Maximum number of rows or columns before wrapping. |
 
 ## Handling click events
 
-Since `ItemsRepeater` does not have built-in selection, handle clicks using Tapped or pointer events on each item:
+Because `ItemsRepeater` has no built-in selection, you can handle clicks by wrapping each item in a `Button` that invokes a command on your view model:
 
 ```xml
-<ItemsRepeater.ItemTemplate>
-    <DataTemplate>
-        <Button Command="{Binding $parent[ItemsRepeater].((vm:MainViewModel)DataContext).SelectCommand}"
-                CommandParameter="{Binding}"
-                Background="Transparent" Padding="0">
-            <Border Padding="12">
-                <TextBlock Text="{Binding Name}" />
-            </Border>
-        </Button>
-    </DataTemplate>
-</ItemsRepeater.ItemTemplate>
+<ItemsRepeater ItemsSource="{Binding Items}">
+    <ItemsRepeater.ItemTemplate>
+        <DataTemplate>
+            <Button Command="{Binding $parent[ItemsRepeater].((vm:MainViewModel)DataContext).SelectCommand}"
+                    CommandParameter="{Binding}"
+                    Background="Transparent" Padding="0">
+                <Border Padding="12">
+                    <TextBlock Text="{Binding Name}" />
+                </Border>
+            </Button>
+        </DataTemplate>
+    </ItemsRepeater.ItemTemplate>
+</ItemsRepeater>
 ```
+
+You can also handle `Tapped` or `PointerPressed` events on individual items if you prefer an event-based approach rather than commands.
+
+## Scrolling and virtualization
+
+`ItemsRepeater` does not include a built-in scroll viewer. To enable scrolling, wrap it in a `ScrollViewer`:
+
+```xml
+<ScrollViewer>
+    <ItemsRepeater ItemsSource="{Binding LargeCollection}">
+        <ItemsRepeater.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding}" Margin="4" />
+            </DataTemplate>
+        </ItemsRepeater.ItemTemplate>
+    </ItemsRepeater>
+</ScrollViewer>
+```
+
+When you place an `ItemsRepeater` inside a `ScrollViewer`, virtualization is enabled automatically. Only the items currently visible (plus a small buffer) are created, which keeps memory usage low and scrolling smooth even for collections with thousands of items.
 
 ## See also
 
-- [`ItemsRepeater.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia.Controls.ItemsRepeater/blob/main/src/Avalonia.Controls.ItemsRepeater/Controls/ItemsRepeater.cs)
+- [ItemsControl](itemscontrol)
+- [ListBox](listbox)
+- [How to: Work with ItemsControl and ItemsRepeater](/docs/how-to/itemscontrol-how-to)
+- [Choosing a layout panel](/docs/layout/choosing-a-layout-panel)
+- [Responsive layout](/docs/how-to/responsive-layout-how-to)

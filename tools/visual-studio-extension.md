@@ -1,6 +1,7 @@
 ---
 id: visual-studio-extension
 title: Avalonia for Visual Studio extension
+description: Use the Avalonia Visual Studio extension for enhanced XAML editing with IntelliSense, error highlighting, and a built-in UI previewer.
 sidebar_label: Visual Studio extension
 doc-type: reference
 ---

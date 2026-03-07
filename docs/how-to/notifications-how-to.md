@@ -1,15 +1,15 @@
 ---
 id: notifications-how-to
-title: "How to: Show Notifications and Toasts"
-description: Show notifications, toast messages, and status bars in Avalonia applications.
+title: "How to: Show notifications and toasts"
+description: Learn how to show overlay notifications, toast messages, status bars, and system tray notifications in your Avalonia application across desktop and mobile platforms.
 doc-type: how-to
 ---
 
-This guide covers patterns for showing notifications, toast messages, and status bars in Avalonia applications.
+This guide covers patterns for showing notifications, toast messages, and status bars in your Avalonia application. Because Avalonia does not include a built-in notification control, you build your own using standard layout controls such as `ItemsControl`, `Panel`, and `Border`.
 
-## Overlay Notification Panel
+## Overlay notification panel
 
-A common pattern is a notification panel that slides in from a corner of the window. Build one with an `ItemsControl` and transitions.
+A common pattern is a notification panel that slides in from a corner of the window. You can build one with an `ItemsControl` and transitions.
 
 ### Notification model
 
@@ -29,6 +29,8 @@ public partial class NotificationViewModel : ObservableObject
 
 ### Notification service
 
+The service below manages a collection of active notifications and handles auto-dismissal. Note that `Dispatcher.UIThread.Post` is required because `Task.Delay(...).ContinueWith(...)` resumes on a thread-pool thread, and you must marshal collection changes back to the UI thread.
+
 ```csharp
 public partial class NotificationService : ObservableObject
 {
@@ -39,7 +41,7 @@ public partial class NotificationService : ObservableObject
         var notification = new NotificationViewModel(message, type);
         Notifications.Add(notification);
 
-        // Auto-dismiss
+        // Auto-dismiss after the specified duration
         if (durationMs > 0)
         {
             _ = Task.Delay(durationMs).ContinueWith(_ =>
@@ -55,9 +57,13 @@ public partial class NotificationService : ObservableObject
 }
 ```
 
+:::tip
+If you set `durationMs` to `0`, the notification stays visible until the user explicitly dismisses it. This is useful for error messages that require acknowledgement.
+:::
+
 ### XAML overlay
 
-Place this at the root of your main window, as the last child in a `Panel` so it overlays all other content:
+Place this at the root of your main window as the last child in a `Panel` so it overlays all other content:
 
 ```xml
 <Panel>
@@ -88,6 +94,10 @@ Place this at the root of your main window, as the last child in a `Panel` so it
 </Panel>
 ```
 
+:::note
+On mobile platforms (Android and iOS), consider placing notifications at the top of the screen where they do not overlap soft navigation buttons. Adjust `VerticalAlignment` and `Margin` to account for safe area insets on devices with notches or rounded corners.
+:::
+
 ### Usage in a view model
 
 ```csharp
@@ -104,9 +114,9 @@ public partial class MainViewModel : ObservableObject
 }
 ```
 
-## Simple Status Bar
+## Simple status bar
 
-For less intrusive feedback, use a status bar at the bottom of the window:
+For less intrusive feedback, use a status bar at the bottom of your window:
 
 ```xml
 <DockPanel>
@@ -136,7 +146,11 @@ private async Task LoadDataAsync()
 }
 ```
 
-## Confirmation Banner
+:::warning
+If the user triggers `LoadDataAsync` multiple times in quick succession, the `Task.Delay` from an earlier call can reset the status message while a newer operation is still running. To avoid this, use a `CancellationTokenSource` that you cancel each time the method is re-entered.
+:::
+
+## Confirmation banner
 
 Show a banner at the top of the page for important messages:
 
@@ -159,9 +173,9 @@ Show a banner at the top of the page for important messages:
 </StackPanel>
 ```
 
-## Tray Icon Notifications (Desktop)
+## Tray icon notifications (desktop only)
 
-On desktop platforms, use the `TrayIcon` for system tray notifications:
+On desktop platforms (Windows, macOS, Linux), you can use the `TrayIcon` control for system tray integration:
 
 ```xml
 <TrayIcon.Icons>
@@ -180,9 +194,18 @@ On desktop platforms, use the `TrayIcon` for system tray notifications:
 </TrayIcon.Icons>
 ```
 
-## Color-Coded Notification Types
+### Platform considerations
 
-Style notifications based on their type:
+| Platform | Notes |
+|----------|-------|
+| **Windows** | Full tray icon and balloon notification support. Use `.ico` format for the icon. |
+| **macOS** | Appears in the menu bar. macOS guidelines recommend template images (monochrome PNGs) for menu bar icons. |
+| **Linux** | Support depends on the desktop environment. GNOME, KDE, and XFCE generally support tray icons through `libappindicator` or the `StatusNotifierItem` protocol. |
+| **Android / iOS / Browser** | `TrayIcon` is not supported on these platforms. Use in-app overlay notifications instead. |
+
+## Color-coded notification types
+
+You can style notifications based on their type using class-based selectors:
 
 ```xml
 <ItemsControl.ItemTemplate>
@@ -209,8 +232,15 @@ Style notifications based on their type:
 </ItemsControl.Styles>
 ```
 
-## See Also
+:::tip
+Consider adding a `warning` style (for example, `#F59E0B`) alongside `info`, `success`, and `error` to cover all four common notification levels.
+:::
 
-- [TrayIcon Control Reference](/controls/navigation/trayicon): System tray integration.
-- [Flyout Control Reference](/controls/layout/containers/flyout): Popup content attached to controls.
-- [ToolTip Control Reference](/controls/feedback/tooltip): Hover tooltips.
+## See also
+
+- [Threading](/docs/app-development/threading): Understand UI thread marshalling with `Dispatcher.UIThread`.
+- [TrayIcon](/docs/controls/navigation/trayicon): System tray integration for desktop platforms.
+- [Flyout](/docs/controls/layout/containers/flyout): Popup content attached to controls.
+- [ToolTip](/docs/controls/feedback/tooltip): Hover tooltips for controls.
+- [ItemsControl](/docs/how-to/itemscontrol-how-to): Working with `ItemsControl` for dynamic lists.
+- [Data templates](/docs/data-templates/introduction-to-data-templates): Customize how notification items render.

@@ -1,27 +1,31 @@
 ---
 id: checkbox
 title: CheckBox
+description: A control that lets users toggle a Boolean value with a check mark, including optional three-state support for indeterminate values.
+doc-type: reference
 ---
 
 import CheckBoxTwoStateScreenshot from '/img/reference/controls/checkbox/checkbox-two-state.gif';
 import CheckBoxThreeStateScreenshot from '/img/reference/controls/checkbox/checkbox-three-state.gif';
 
-The `CheckBox` control presents a Boolean value where the true value is represented using a check mark, and the false value is an empty box. The check box has an option to present a nullable Boolean, where the null value represents 'unknown' and is drawn as a shaded box.
+The `CheckBox` control presents a Boolean value where the true value is represented using a check mark, and the false value is an empty box. You can also enable three-state mode, where a null value represents "unknown" and is drawn as a shaded box.
 
-Click interaction toggles the value in the sequence: checked, unchecked, unknown (if three-state).
+Clicking the control toggles the value in the sequence: checked, unchecked, unknown (if three-state is enabled).
 
 ## Useful properties
 
 You will probably use these properties most often:
 
-| Property       | Description                          |
-| -------------- | ------------------------------------ |
-| `IsChecked`    | Sets the Boolean value.              |
-| `IsThreeState` | (Boolean) Sets the three state mode. |
+| Property       | Type    | Description                                                                 |
+| -------------- | ------- | --------------------------------------------------------------------------- |
+| `IsChecked`    | `bool?` | Gets or sets the checked state. `true` for checked, `false` for unchecked, `null` for indeterminate. |
+| `IsThreeState` | `bool`  | When `true`, the control cycles through three states: checked, unchecked, and indeterminate. |
+| `Content`      | `object`| The label content displayed beside the check mark.                          |
+| `Command`      | `ICommand` | A command invoked when the user toggles the check box.                   |
 
-## Examples
+## Two-state example
 
-This is an example of two-state check boxes:
+In the default two-state mode, `IsChecked` alternates between `true` and `false`:
 
 <XamlPreview>
 
@@ -36,7 +40,11 @@ This is an example of two-state check boxes:
 
 </XamlPreview>
 
-This is an example of a three-state checkbox:
+<img src={CheckBoxTwoStateScreenshot} alt="Two-state CheckBox" />
+
+## Three-state example
+
+When you set `IsThreeState` to `true`, the control adds an indeterminate state. You can set `IsChecked` to `{x:Null}` to start in the indeterminate state:
 
 <XamlPreview>
 
@@ -50,9 +58,16 @@ This is an example of a three-state checkbox:
     </StackPanel>
 </UserControl>
 ```
+
 </XamlPreview>
 
-## Binding to a View Model
+<img src={CheckBoxThreeStateScreenshot} alt="Three-state CheckBox" />
+
+When binding a three-state `CheckBox` to a view model, use a nullable `bool?` property so the indeterminate state can round-trip correctly.
+
+## Binding to a view model
+
+Bind `IsChecked` to a `bool` property on your view model. The following example uses the MVVM Toolkit's source generators:
 
 ```csharp
 public partial class SettingsViewModel : ObservableObject
@@ -72,9 +87,11 @@ public partial class SettingsViewModel : ObservableObject
 </StackPanel>
 ```
 
-## CheckBox List from a Collection
+If you need to react when the value changes, subscribe to the `PropertyChanged` event or use a partial method such as `OnAutoSaveChanged`.
 
-Create a list of checkable items by combining a `ListBox` with `CheckBox` items:
+## CheckBox list from a collection
+
+You can create a list of checkable items by combining an `ItemsControl` with a `CheckBox` inside the item template:
 
 ```xml
 <ItemsControl ItemsSource="{Binding Features}">
@@ -86,9 +103,9 @@ Create a list of checkable items by combining a `ListBox` with `CheckBox` items:
 </ItemsControl>
 ```
 
-## Select All Pattern
+## Select all pattern
 
-Use a three-state checkbox to represent the state of a group:
+A three-state `CheckBox` works well as a "select all" control. Set it to indeterminate when only some child items are selected, and update the children when the user clicks it:
 
 ```csharp
 [ObservableProperty]
@@ -104,7 +121,24 @@ partial void OnSelectAllChanged(bool? value)
 }
 ```
 
+```xml
+<StackPanel Spacing="4">
+    <CheckBox IsThreeState="True"
+              IsChecked="{Binding SelectAll}"
+              Content="Select all" />
+    <ItemsControl ItemsSource="{Binding Items}" Margin="24,0,0,0">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <CheckBox IsChecked="{Binding IsSelected}" Content="{Binding Name}" />
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</StackPanel>
+```
+
 ## See also
 
+- [ToggleSwitch](toggleswitch)
+- [RadioButton](../buttons/radiobutton)
 - [CheckBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CheckBox)
 - [`CheckBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)

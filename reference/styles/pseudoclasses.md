@@ -1,6 +1,8 @@
 ---
 id: pseudoclasses
 title: Pseudoclasses
+description: "Reference for Avalonia pseudoclasses, including built-in pseudoclasses for control state and how to define custom pseudoclasses."
+doc-type: reference
 ---
 
 import Tabs from '@theme/Tabs';

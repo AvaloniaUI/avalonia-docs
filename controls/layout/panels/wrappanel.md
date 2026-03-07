@@ -1,11 +1,15 @@
 ---
 id: wrappanel
 title: WrapPanel
+description: A panel that arranges child controls in a flowing, wrapping layout.
+doc-type: reference
 ---
 
-The `WrapPanel` uses a default arrangement of (multiple) child elements is in sequence from left to right, while they fit in the width. It starts a new line when there is no space left (including any margins and borders). 
+The `WrapPanel` arranges its child controls sequentially from left to right, wrapping to a new line when there is no remaining space (including any margins and borders).
 
-When the orientation property is set to vertical, the arrangement is top to bottom with a new column started when there is no more height remaining.
+When you set the `Orientation` property to `Vertical`, the arrangement flows from top to bottom, starting a new column when there is no more height available.
+
+`WrapPanel` is useful when you need a flexible, flowing layout where child elements automatically reflow as the available space changes. Common use cases include tag lists, thumbnail galleries, and button toolbars.
 
 ## Useful properties
 
@@ -19,9 +23,38 @@ When the orientation property is set to vertical, the arrangement is top to bott
 | `HorizontalItemAlignment` | Controls how items are aligned horizontally within their allocated cell. Values: `Left`, `Center`, `Right`, `Stretch`. |
 | `VerticalItemAlignment` | Controls how items are aligned vertically within their allocated cell. Values: `Top`, `Center`, `Bottom`, `Stretch`. |
 
+## Common usage
+
+### Uniform item sizing
+
+If you want every child to occupy the same amount of space, set `ItemWidth` and `ItemHeight`. This is particularly helpful for grid-like layouts where items have varying content but you want a consistent visual structure.
+
+```xml
+<WrapPanel ItemWidth="120" ItemHeight="120"
+           ItemSpacing="8" LineSpacing="8">
+    <Button Content="Short" />
+    <Button Content="Medium text" />
+    <Button Content="A longer button label" />
+</WrapPanel>
+```
+
+### Alignment within cells
+
+When you use `ItemWidth` or `ItemHeight`, child controls may be smaller than their allocated cell. Use `HorizontalItemAlignment` and `VerticalItemAlignment` to control positioning within each cell.
+
+```xml
+<WrapPanel ItemWidth="100" ItemHeight="100"
+           HorizontalItemAlignment="Center"
+           VerticalItemAlignment="Center">
+    <Button Content="A" />
+    <Button Content="B" />
+    <Button Content="C" />
+</WrapPanel>
+```
+
 ## Examples
 
-### Example 1: Default arrangement
+### Horizontal arrangement (default)
 
 <XamlPreview>
 
@@ -39,7 +72,7 @@ When the orientation property is set to vertical, the arrangement is top to bott
 
 </XamlPreview>
 
-### Example 2: Vertical arrangement
+### Vertical arrangement
 
 <XamlPreview>
 
@@ -60,5 +93,8 @@ When the orientation property is set to vertical, the arrangement is top to bott
 
 ## See also
 
+- [StackPanel](stackpanel)
+- [DockPanel](dockpanel)
+- [Panels overview](../panels-overview)
 - [WrapPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_WrapPanel)
 - [`WrapPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/WrapPanel.cs)

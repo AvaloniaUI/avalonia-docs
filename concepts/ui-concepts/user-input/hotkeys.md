@@ -1,6 +1,8 @@
 ---
 id: keyboard-and-hotkeys
 title: Keyboard and hotkeys
+description: Assign keyboard hotkeys to controls that implement ICommandSource using the HotKey property or HotKeyManager.
+doc-type: explanation
 ---
 
 Various Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. Pressing the hotkey will execute the command [bound](/docs/input-interaction/adding-interactivity) to the Control.

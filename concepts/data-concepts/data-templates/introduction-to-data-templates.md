@@ -1,6 +1,8 @@
 ---
 id: introduction-to-data-templates
 title: Introduction to data templates
+description: Learn how data templates define the visual representation of data items in controls like ListBox and ItemsControl.
+doc-type: explanation
 ---
 
 Data Templates in Avalonia provide a powerful way to define the visual representation of your data. They allow you to specify how your data should be presented and formatted, enabling you to create dynamic and customizable user interfaces. This document will introduce you to the concept of Data Templates in Avalonia and demonstrate how to use them effectively in your applications.

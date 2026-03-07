@@ -1,23 +1,25 @@
 ---
 id: mvvm-how-to
-title: "How to: Implement Common MVVM Patterns"
-description: Practical MVVM patterns for Avalonia using CommunityToolkit.Mvvm as the MVVM framework.
+title: "How to: Implement common MVVM patterns"
+description: Learn how to implement common MVVM patterns in Avalonia using CommunityToolkit.Mvvm, including observable properties, commands, messaging, dependency injection, and validation.
 doc-type: how-to
 ---
 
-This guide covers practical MVVM patterns for Avalonia using CommunityToolkit.Mvvm, the recommended MVVM framework.
+This guide covers practical MVVM patterns for Avalonia using `CommunityToolkit.Mvvm`, the recommended MVVM framework. Each section walks you through a specific pattern with code you can adapt to your own projects.
 
-## Setting Up CommunityToolkit.Mvvm
+## Setting up CommunityToolkit.Mvvm
 
-Add the NuGet package:
+Install the NuGet package in your project:
 
 ```bash
 dotnet add package CommunityToolkit.Mvvm
 ```
 
-## Observable Properties
+Once installed, you can use source generators and base classes from the toolkit to eliminate boilerplate code in your view models.
 
-Use `[ObservableProperty]` to generate property changed notifications:
+## Observable properties
+
+Use the `[ObservableProperty]` attribute to generate properties with `INotifyPropertyChanged` support automatically. You declare a private backing field, and the source generator creates a public property for you:
 
 ```csharp
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -34,9 +36,11 @@ public partial class PersonViewModel : ObservableObject
 }
 ```
 
+Your class must be marked `partial` so the source generator can add the generated members. The generated property names follow .NET conventions: `_firstName` becomes `FirstName`.
+
 ### Computed properties
 
-Notify dependent properties when a source property changes:
+When one property depends on another, use `[NotifyPropertyChangedFor]` to raise change notifications for the dependent property automatically:
 
 ```csharp
 [ObservableProperty]
@@ -50,9 +54,11 @@ private string _lastName = "";
 public string FullName => $"{FirstName} {LastName}";
 ```
 
+Whenever `FirstName` or `LastName` changes, the toolkit also raises `PropertyChanged` for `FullName`, keeping your UI in sync.
+
 ### Property changed callbacks
 
-Run code when a property changes:
+You can run code when a property changes by defining partial methods that the source generator calls automatically:
 
 ```csharp
 [ObservableProperty]
@@ -70,9 +76,15 @@ partial void OnSearchTextChanging(string value)
 }
 ```
 
+The `OnSearchTextChanging` callback fires before the value is assigned, giving you a chance to inspect the incoming value. The `OnSearchTextChanged` callback fires after the assignment, which is useful for triggering side effects like filtering a list.
+
 ## Commands
 
+Commands let you bind UI actions (such as button clicks) to methods in your view model.
+
 ### Basic command
+
+Apply `[RelayCommand]` to a method, and the toolkit generates an `IRelayCommand` property for you:
 
 ```csharp
 [RelayCommand]
@@ -82,9 +94,11 @@ private void Save()
 }
 ```
 
-Generates a `SaveCommand` property of type `IRelayCommand`.
+This generates a `SaveCommand` property. The naming convention appends "Command" to your method name.
 
-### Command with parameter
+### Command with a parameter
+
+You can pass data from the view to your command by adding a parameter to the method:
 
 ```csharp
 [RelayCommand]
@@ -94,6 +108,8 @@ private void Delete(Item item)
 }
 ```
 
+Bind the command and its parameter in AXAML:
+
 ```xml
 <Button Content="Delete"
         Command="{Binding DeleteCommand}"
@@ -101,6 +117,8 @@ private void Delete(Item item)
 ```
 
 ### Async command
+
+For long-running operations, use an `async Task` method. The toolkit handles disabling the command while it runs and provides built-in cancellation support:
 
 ```csharp
 [RelayCommand]
@@ -114,9 +132,10 @@ private async Task LoadDataAsync(CancellationToken token)
 ```
 
 The generated command automatically:
-- Disables the button while running
-- Passes a `CancellationToken` for cancellation
-- Exposes `IsRunning` for progress indication
+
+- Disables the associated button while the task is running
+- Passes a `CancellationToken` you can use to cancel the operation
+- Exposes an `IsRunning` property for progress indication
 
 ```xml
 <Button Content="Load" Command="{Binding LoadDataCommand}" />
@@ -124,6 +143,8 @@ The generated command automatically:
 ```
 
 ### CanExecute
+
+You can conditionally enable or disable a command based on your view model state. Use `[NotifyCanExecuteChangedFor]` on properties that affect the condition so the command re-evaluates automatically:
 
 ```csharp
 [ObservableProperty]
@@ -139,13 +160,13 @@ private void Save()
 private bool CanSave() => !string.IsNullOrWhiteSpace(Name);
 ```
 
-The button is automatically disabled when `CanSave()` returns `false`.
+The button bound to `SaveCommand` is automatically disabled when `CanSave()` returns `false`. When `Name` changes, the command re-evaluates whether it can execute.
 
-## View Model Communication
+## View model communication
 
 ### Using a messenger
 
-Send messages between view models without direct references:
+The `WeakReferenceMessenger` lets you send messages between view models without creating direct references between them. This keeps your view models decoupled:
 
 ```csharp
 using CommunityToolkit.Mvvm.Messaging;
@@ -171,7 +192,11 @@ public class DetailViewModel : ObservableRecipient, IRecipient<ItemSelectedMessa
 }
 ```
 
+Setting `IsActive = true` registers the view model to receive messages. When you set it to `false` (or when the object is garbage collected), the registration is removed automatically.
+
 ### Request/response pattern
+
+For scenarios where you need a response (such as a confirmation dialog), use a request message:
 
 ```csharp
 public record ConfirmDeleteRequest(Item Item);
@@ -188,9 +213,9 @@ WeakReferenceMessenger.Default.Register<ConfirmDeleteRequest>(this, async (r, m)
 });
 ```
 
-## Dependency Injection
+## Dependency injection
 
-Register view models with a DI container:
+Register your view models and services with a DI container to manage their lifetimes and dependencies cleanly:
 
 ```csharp
 public static class ServiceCollectionExtensions
@@ -205,7 +230,7 @@ public static class ServiceCollectionExtensions
 }
 ```
 
-Set up in `App.axaml.cs`:
+Wire up the container in `App.axaml.cs`:
 
 ```csharp
 public override void OnFrameworkInitializationCompleted()
@@ -226,7 +251,11 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-## View Model with Constructor Injection
+Use `AddTransient` for view models that should be created fresh each time, and `AddSingleton` for shared services that maintain state across the application.
+
+## View model with constructor injection
+
+When you register your view models in a DI container, you can inject services through the constructor. The container resolves all dependencies automatically:
 
 ```csharp
 public partial class MainViewModel : ObservableObject
@@ -249,11 +278,13 @@ public partial class MainViewModel : ObservableObject
 }
 ```
 
-## ObservableCollection Patterns
+This pattern makes your view models testable because you can substitute mock implementations of `IDataService` and `INavigationService` in your unit tests.
+
+## ObservableCollection patterns
 
 ### Replace vs. add
 
-For large updates, replace the collection instead of adding items one at a time:
+When updating a large number of items, replacing the entire collection is significantly faster than adding items individually. Each call to `Add` triggers a UI update, whereas assigning a new collection triggers only one:
 
 ```csharp
 // Slow: UI updates on each Add
@@ -265,6 +296,8 @@ Items = new ObservableCollection<Item>(newItems);
 ```
 
 ### Filtered collection
+
+You can implement filtering by replacing the displayed collection whenever the filter text changes:
 
 ```csharp
 [ObservableProperty]
@@ -280,9 +313,11 @@ partial void OnFilterChanged(string value)
 }
 ```
 
+Bind your `ItemsControl` or `ListBox` to `FilteredItems` rather than the underlying `_allItems` collection.
+
 ## Validation
 
-Use `ObservableValidator` for data annotations:
+Use `ObservableValidator` as your base class to enable data annotation validation on your view model properties:
 
 ```csharp
 public partial class RegisterViewModel : ObservableValidator
@@ -298,17 +333,20 @@ public partial class RegisterViewModel : ObservableValidator
         ValidateAllProperties();
         if (!HasErrors)
         {
-            // Proceed
+            // Proceed with submission
         }
     }
 }
 ```
 
-See [Validation in Data Binding](/docs/data-binding/binding-validation) for details.
+The `[NotifyDataErrorInfo]` attribute tells the source generator to trigger validation automatically when the property changes. Avalonia's data binding system picks up these validation errors and can display them in the UI using `DataValidationErrors`.
 
-## See Also
+For more information about displaying validation errors in your views, see [Data validation](../data-binding/data-validation.md).
 
-- [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern): Architecture overview.
-- [Binding to Commands](/docs/data-binding/binding-to-commands): Command binding details.
-- [INotifyPropertyChanged](/docs/data-binding/inotifypropertychanged): Property change notification.
-- [Dependency Injection](/docs/app-development/dependency-injection): DI setup for Avalonia.
+## See also
+
+- [The MVVM pattern](../fundamentals/the-mvvm-pattern.md)
+- [Binding to commands](../data-binding/binding-to-commands.md)
+- [INotifyPropertyChanged](../data-binding/inotifypropertychanged.md)
+- [Dependency injection](../app-development/dependency-injection.md)
+- [Data validation](../data-binding/data-validation.md)

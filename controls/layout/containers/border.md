@@ -1,6 +1,8 @@
 ---
 id: border
 title: Border
+description: Learn how to use the Border control to add borders, backgrounds, rounded corners, and box shadows to your Avalonia UI content.
+doc-type: reference
 ---
 
 The border control decorates a (single) child with a border and background. It can also be used to display rounded corners.
@@ -13,17 +15,17 @@ You will probably use these properties most often:
 
 ## Corner radius property
 
-You can give the value of the corner radius property as a single value. In this case, _Avalonia_ will use the same radius on all four corners of the child control.
+You can give the value of the corner radius property as a single value. In this case, Avalonia will use the same radius on all four corners of the child control.
 
 Alternatively you can specify a list of values; this must be in one of the following two formats.
 
-When only two values are in the list, _Avalonia_ will interpret them using the pattern:
+When only two values are in the list, Avalonia will interpret them using the pattern:
 
 `CornerRadius="Top Bottom"`
 
 The top-left and top-right radii are set from the first value, and the bottom-left and bottom-right radii are set from the second value.
 
-When all four values are in the list, _Avalonia_ will interpret them using the pattern:
+When all four values are in the list, Avalonia will interpret them using the pattern:
 
 `CornerRadius="TopLeft TopRight BottomRight BottomLeft"`
 
@@ -62,11 +64,11 @@ This example adds some border controls to create a 'pod' look in the layout:
 
 You can define a shadow to a border by setting its box shadow property. You specify a single box shadow using:
 
-* An optional `inset` keyword - this will draw the shadow inside the border - not often useful!
+* An optional `inset` keyword, which draws the shadow inside the border.
 * Two, three, or four length values - see below.
 * A color value.
 
-If only two length values are given,  will interpret them as the `offset-x` and `offset-y`. If a third value is given, it is interpreted as a `blur-radius`, and if a fourth value is given, it is interpreted as a `spread-radius`.
+If only two length values are given, Avalonia will interpret them as the `offset-x` and `offset-y`. If a third value is given, it is interpreted as a `blur-radius`, and if a fourth value is given, it is interpreted as a `spread-radius`.
 
 :::info
 You can specify multiple shadows by providing a comma-separated list of shadow definitions.
@@ -103,5 +105,5 @@ This is an example of a drop-shadow:
 
 ## See also
 
-- [Border API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Border)
+- [Border API reference](https://api-docs.avaloniaui.net/docs/TAvaloniaControls_Border)
 - [`Border.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Border.cs)

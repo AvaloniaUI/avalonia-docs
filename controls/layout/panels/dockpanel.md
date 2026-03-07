@@ -1,6 +1,8 @@
 ---
 id: dockpanel
 title: DockPanel
+description: Learn how to use the DockPanel in Avalonia to dock child controls to the edges of a container.
+doc-type: reference
 ---
 
 import Tabs from '@theme/Tabs';
@@ -19,7 +21,7 @@ You must define the child control dimension perpendicular to the docking edge, o
 
 You can optionally define the dimension that is parallel to the docking edge. In this case, the child will be drawn according to the alignment setting in the same direction. For example, a child with a defined width, docked to the top edge, will obey its horizontal alignment property (default center).
 
-Child controls are docked in the sequence that they are defined in the XAML. When _Avalonia_ is sizing a child control, the presence of any previously drawn controls is taken into account. That means there is never any overlap.
+Child controls are docked in the sequence that they are defined in the XAML. When Avalonia is sizing a child control, the presence of any previously drawn controls is taken into account. That means there is never any overlap.
 
 The last child control defined will fill any remaining space.
 
@@ -168,3 +170,10 @@ myDockPanel.Children.Add(myBorder5);
 
 - [DockPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DockPanel)
 - [`DockPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DockPanel.cs)
+- [Canvas](canvas)
+- [Grid](grid)
+- [Panel](panel)
+- [RelativePanel](relativepanel)
+- [StackPanel](stackpanel)
+- [UniformGrid](uniformgrid)
+- [WrapPanel](wrappanel)

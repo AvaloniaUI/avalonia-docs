@@ -1,70 +1,83 @@
 ---
 id: window
 title: Window
+description: A top-level content control that represents an operating-system window with title bar, icon, and close/minimize/maximize chrome.
+doc-type: reference
 ---
 
-`Window` is a top-level [`ContentControl`](/controls/data-display/contentcontrol).
+`Window` is a top-level [`ContentControl`](/controls/data-display/contentcontrol) that represents an operating-system window. It provides the title bar, icon, and system chrome (close, minimize, maximize buttons) that your users expect from a desktop application.
 
-You will not usually create instances of the `Window` class directly; instead the `Window` class is usually sub-classed for each type of window to be shown by an application.
+You do not usually create instances of `Window` directly. Instead, you subclass `Window` for each type of window your application needs.
+
+:::tip
+`Window` is only available on desktop platforms (Windows, macOS, Linux). If you are targeting mobile or browser, use [`UserControl`](/controls/primitives/usercontrol) with a navigation framework instead.
+:::
 
 ## Common properties
 
-| Property | Description |
-| :--- | :--- |
-| `Title` | The window title |
-| `Icon` | The window icon |
-| `SizeToContent` | Describes the window's auto-sizing behavior |
-| `WindowState` | The minimized/maximized state of the window |
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `Title` | `string` | The text displayed in the title bar. |
+| `Icon` | `WindowIcon` | The icon displayed in the title bar and taskbar. |
+| `SizeToContent` | `SizeToContent` | Controls whether the window auto-sizes to fit its content horizontally, vertically, or both. |
+| `WindowState` | `WindowState` | Gets or sets whether the window is `Normal`, `Minimized`, `Maximized`, or `FullScreen`. |
+| `CanResize` | `bool` | Gets or sets whether the user can resize the window. |
+| `ShowInTaskbar` | `bool` | Gets or sets whether the window appears in the operating-system taskbar. |
+| `Topmost` | `bool` | Gets or sets whether the window stays above all other windows. |
+| `SystemDecorations` | `SystemDecorations` | Controls the window chrome (title bar and borders). Set to `None` for a borderless window. |
+| `ExtendClientAreaToDecorationsHint` | `bool` | When `true`, your content extends into the title bar area, allowing custom chrome. |
 
-## Show, hide and close a window
+## Show, hide, and close a window
 
-You can show a window using the `Show` method:
+You can show a window by calling the `Show` method:
 
 ```csharp
 var window = new MyWindow();
 window.Show();
 ```
 
-Windows can be closed using the `Close` method. This has the same effect as when a user clicks the window's close button:
+You can close a window by calling `Close`. This has the same effect as when a user clicks the window's close button:
 
 ```csharp
 window.Close();
-
-// A closed window cannot be shown.
-window.Show();
 ```
 
-Note that once a window has been closed, it cannot be shown again. If you want to re-show the window then you should use the `Hide` method:
+:::warning
+Once a window has been closed, it cannot be shown again. Calling `Show` on a closed window will throw an exception. If you need to show the same window again later, call `Hide` instead of `Close`.
+:::
 
 ```csharp
 window.Hide();
 
-// Window can now be shown again later
+// You can show the window again later.
 window.Show();
 ```
 
-See also [Prevent a window from closing](#prevent-a-window-from-closing)
+See also [Prevent a window from closing](#prevent-a-window-from-closing).
 
 ## Show a window as a dialog
 
-You can show a window as a modal dialog by calling the `ShowDialog` method. `ShowDialog` requires an owner window to be passed:
+You can show a window as a modal dialog by calling `ShowDialog`. This method requires you to pass an owner window so the system knows which window the dialog belongs to:
 
 ```csharp
-// Here we assume this code is executed from our current Window class and "this" object is a Window.
-// Alternatively you can get global MainWindow from Application.ApplicationLifetime casted to IClassicDesktopStyleApplicationLifetime.
+// "this" is the current Window instance.
+// You can also obtain the main window from
+// Application.ApplicationLifetime cast to IClassicDesktopStyleApplicationLifetime.
 var ownerWindow = this;
-var window = new MyWindow();
-window.ShowDialog(ownerWindow);
+var dialog = new MyWindow();
+dialog.ShowDialog(ownerWindow);
 ```
 
-The `ShowDialog` method will return immediately. If you want to wait for the dialog to be closed, you can `await` the call:
+`ShowDialog` returns a `Task`, so you can `await` it to wait until the dialog is closed:
 
 ```csharp
-var window = new MyWindow();
-await window.ShowDialog(ownerWindow);
+var dialog = new MyWindow();
+await dialog.ShowDialog(ownerWindow);
 ```
 
-Dialogs can return a result by calling the `Close` method with an object. This result can then be read by the caller of `ShowDialog`. For example:
+### Return a result from a dialog
+
+Your dialog can return a result by passing a value to the `Close` method. The caller reads the result through the generic `ShowDialog<T>` overload:
 
 ```csharp
 public class MyDialog : Window
@@ -74,7 +87,7 @@ public class MyDialog : Window
         InitializeComponent();
     }
 
-    private void OkButton_Click(object sender, EventArgs e)
+    private void OkButton_Click(object? sender, EventArgs e)
     {
         Close("OK Clicked!");
     }
@@ -84,13 +97,13 @@ public class MyDialog : Window
 ```csharp
 var dialog = new MyDialog();
 
-// The result is a string so call `ShowDialog<string>`.
+// The result is a string, so use ShowDialog<string>.
 var result = await dialog.ShowDialog<string>(ownerWindow);
 ```
 
 ## Prevent a window from closing
 
-A window can be prevented from closing by handling the `Closing` event and setting `e.Cancel = true`:
+You can prevent a window from closing by handling the `Closing` event and setting `e.Cancel = true`:
 
 ```csharp
 window.Closing += (s, e) =>
@@ -99,17 +112,29 @@ window.Closing += (s, e) =>
 };
 ```
 
-You could also hide the window instead. This allows the window to be re-shown after the user clicks the close button:
+A common pattern is to hide the window instead of closing it so you can show it again later:
 
 ```csharp
 window.Closing += (s, e) =>
 {
-    ((Window)s).Hide();
+    ((Window)s!).Hide();
     e.Cancel = true;
 };
 ```
+
+## Practical notes
+
+- **Startup window.** Your application's main window is typically set in `App.axaml.cs` by assigning `MainWindow` on the `IClassicDesktopStyleApplicationLifetime`. See [Main window](/docs/fundamentals/main-window) for details.
+- **Multiple windows.** You can open as many windows as you need by creating new instances and calling `Show`. Each window runs independently within the same application.
+- **Positioning.** Use the `Position` property (of type `PixelPoint`) to set the window's screen coordinates, or set `WindowStartupLocation` to `CenterScreen` or `CenterOwner`.
+- **Closing behavior.** When the last window closes, your application exits by default. You can change this by setting `ShutdownMode` on the application lifetime.
 
 ## See also
 
-- [Main Window](/docs/fundamentals/main-window)
-- [`Window.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
+- [Main window](/docs/fundamentals/main-window)
+- [Window management](/docs/app-development/window-management)
+- [How to: Work with windows](/docs/how-to/window-how-to)
+- [`ContentControl`](/controls/data-display/contentcontrol)
+- [`UserControl`](/controls/primitives/usercontrol)
+- [`Window` source code (GitHub)](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
+- [`Window` API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Window)

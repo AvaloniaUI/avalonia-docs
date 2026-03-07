@@ -1,24 +1,48 @@
 ---
 id: style-classes
 title: Style classes
+description: Learn how to use style classes and pseudo-classes in Avalonia to apply conditional and reusable styles to your controls.
+doc-type: explanation
 ---
 
-You can assign an _Avalonia UI_ control one or more style classes, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, then use a space-separated list.
+# Style classes
+
+Style classes let you tag controls with one or more named labels, then write styles that target those labels. This works similarly to CSS classes in web development: you apply a class name to a control, and any matching style rule takes effect.
+
+## Assigning style classes
+
+You assign style classes to a control using the `Classes` attribute. To apply more than one class, separate the names with spaces.
 
 For example, this button has both the `h1` and `blue` style classes applied:
-
 
 ```xml
 <Button Classes="h1 blue"/>
 ```
 
-## Pseudoclasses
+You can then define styles that target one or both of those classes:
 
-Like in CSS, controls can have pseudoclasses; these are classes that are defined in the control itself rather than by the user. The names of pseudo classes in a selector always start with a colon.
+```xml
+<StackPanel.Styles>
+    <Style Selector="Button.h1">
+        <Setter Property="FontSize" Value="24"/>
+    </Style>
+    <Style Selector="Button.blue">
+        <Setter Property="Foreground" Value="Blue"/>
+    </Style>
+</StackPanel.Styles>
+```
 
-For example `:pointerover` pseudo class indicates that the pointer input is currently over (inside the bounds of) a control. (This is pseudo class is the similar to `:hover` in CSS.)
+:::tip
+Style class names are case-sensitive. Use lowercase, hyphen-separated names (for example, `status-ok`) for consistency.
+:::
 
-This is an example of  a `:pointerover` pseudo class selector:
+## Pseudo-classes
+
+Like in CSS, controls can have pseudo-classes. These are classes defined by the control itself rather than by you. Pseudo-class names in a selector always start with a colon.
+
+For example, the `:pointerover` pseudo-class indicates that the pointer is currently inside the bounds of a control. This is similar to `:hover` in CSS.
+
+The following example changes the background of a `Border` when you hover over it:
 
 <XamlPreview>
 
@@ -39,7 +63,7 @@ This is an example of  a `:pointerover` pseudo class selector:
 
 </XamlPreview>
 
-In this example, the pseudo class selector changes properties inside a control template:
+You can also use pseudo-class selectors to change properties inside a control template. In this example, pressing the button changes the text color:
 
 <XamlPreview>
 
@@ -58,25 +82,74 @@ In this example, the pseudo class selector changes properties inside a control t
 
 </XamlPreview>
 
-Other pseudo classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
+Other commonly used pseudo-classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
 
 :::info
-For more detail about pseudo classes, see the [pseudoclasses reference](/docs/styling/pseudoclasses).
+For a complete list of pseudo-classes, see the [pseudo-classes reference](/docs/styling/pseudoclasses).
 :::
 
-## Conditional Classes
+## Conditional classes
 
-If you need to add or remove a class using a bound condition, then you can use following special syntax:
+If you need to add or remove a class based on a bound condition, use the `Classes.` syntax with a binding:
 
 ```xml
 <Button Classes.accent="{Binding IsSpecial}" />
 ```
 
-## Classes in Code
+When `IsSpecial` is `true`, the `accent` class is added. When it becomes `false`, the class is removed automatically.
+
+You can combine multiple conditional classes on a single control:
+
+```xml
+<Border Classes.status-ok="{Binding IsOnline}"
+        Classes.status-error="{Binding !IsOnline}"
+        Padding="8">
+    <TextBlock Text="Service Status" />
+</Border>
+```
+
+### Combining style classes with pseudo-classes
+
+You can target specific interactive states on controls that already have a style class applied:
+
+```xml
+<StackPanel.Styles>
+    <Style Selector="Button.primary">
+        <Setter Property="Background" Value="Blue" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style Selector="Button.primary:pointerover">
+        <Setter Property="Background" Value="DarkBlue" />
+    </Style>
+    <Style Selector="Button.primary:pressed">
+        <Setter Property="Background" Value="Navy" />
+    </Style>
+</StackPanel.Styles>
+```
+
+## Classes in code
 
 You can manipulate style classes in code using the `Classes` collection:
 
 ```csharp
 control.Classes.Add("blue");
 control.Classes.Remove("red");
+control.Classes.Toggle("highlight");
+
+// Check whether a class is present
+if (control.Classes.Contains("blue"))
+{
+    // The control has the "blue" class
+}
 ```
+
+:::note
+Classes you add in code are not removed when a style sets the `Classes` attribute in AXAML. The two sources are merged at runtime.
+:::
+
+## See also
+
+- [Styles](styles)
+- [Pseudo-classes reference](/docs/styling/pseudoclasses)
+- [Style selectors](/docs/styling/style-selectors)
+- [Control themes](control-themes)

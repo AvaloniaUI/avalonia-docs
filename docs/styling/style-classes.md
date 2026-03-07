@@ -1,6 +1,8 @@
 ---
 id: style-classes
 title: Style classes
+description: Learn how to assign and use style classes in Avalonia to apply conditional styling to controls.
+doc-type: concept
 ---
 
 You can assign an Avalonia control one or more *style classes*, and use these to guide style selection. Style classes are assigned in a control element using the `Classes` attribute. If you want to assign more than one class, use a space-separated list.

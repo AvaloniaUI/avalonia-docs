@@ -1,6 +1,8 @@
 ---
 id: linux
 title: Desktop Linux
+description: How Avalonia runs on desktop Linux, including WSL 2 setup and accessibility support with AT-SPI2.
+doc-type: guide
 ---
 
 ## How Avalonia runs on Linux

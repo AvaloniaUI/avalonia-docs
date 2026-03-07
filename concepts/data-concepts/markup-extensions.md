@@ -85,13 +85,13 @@ The `IServiceProvider` passed to `ProvideValue` exposes XAML context services, e
 
 Common standard services include:
 
-- **`IProvideValueTarget`** — gives access to the target object and property.
-- **`IRootObjectProvider`** — provides the XAML document’s root object.
+- **`IProvideValueTarget`**: gives access to the target object and property.
+- **`IRootObjectProvider`**: provides the XAML document’s root object.
 
 Avalonia also provides additional, XAML-IL specific services:
 
-- **`IAvaloniaXamlIlParentStackProvider`** — exposes the parent object stack during XAML parsing.
-- **`IAvaloniaXamlIlXmlNamespaceInfoProvider`** — provides namespace metadata.
+- **`IAvaloniaXamlIlParentStackProvider`**: exposes the parent object stack during XAML parsing.
+- **`IAvaloniaXamlIlXmlNamespaceInfoProvider`**: provides namespace metadata.
 
 These services are optional, but essential for more advanced or context-aware extensions.
 

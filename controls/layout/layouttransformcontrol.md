@@ -1,13 +1,15 @@
 ---
 id: layouttransformcontrol
 title: LayoutTransformControl
+description: A decorator control that applies layout-aware transforms such as rotation, scale, and skew to a single child, causing parent panels to measure and arrange around the transformed bounds.
+doc-type: reference
 ---
 
-`LayoutTransformControl` applies a transform (rotation, scale, skew) to its child that participates in layout. Unlike `RenderTransform`, which only changes how a control is drawn without affecting surrounding layout, `LayoutTransformControl` causes parent panels to measure and arrange around the transformed bounds.
+The [`LayoutTransformControl`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_LayoutTransformControl) applies a transform (rotation, scale, skew) to its child that participates in layout. Unlike `RenderTransform`, which only changes how a control is drawn without affecting surrounding layout, `LayoutTransformControl` causes parent panels to measure and arrange around the transformed bounds.
 
 This means a rotated control will correctly push adjacent controls aside, and a scaled control will take up the appropriate amount of space in a `StackPanel` or `Grid`.
 
-## Useful properties
+## Common properties
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
@@ -16,7 +18,7 @@ This means a rotated control will correctly push adjacent controls aside, and a 
 | `Child` | `Control` | The child control to transform (inherited from `Decorator`) |
 | `Padding` | `Thickness` | Padding around the child (inherited from `Decorator`) |
 
-## LayoutTransform vs. RenderTransform
+## `LayoutTransform` vs. `RenderTransform`
 
 | | `LayoutTransformControl` | `RenderTransform` |
 | :--- | :--- | :--- |
@@ -32,7 +34,7 @@ This rotates a button 45 degrees. The parent `StackPanel` allocates space for th
 
 <XamlPreview>
 
-```xml
+```xml title="XAML"
 <StackPanel Spacing="8" HorizontalAlignment="Center" xmlns="https://github.com/avaloniaui">
   <LayoutTransformControl>
     <LayoutTransformControl.LayoutTransform>
@@ -48,9 +50,9 @@ This rotates a button 45 degrees. The parent `StackPanel` allocates space for th
 
 ### Scaling a control
 
-Scale a control to twice its size while keeping layout correct:
+You can scale a control to twice its size while keeping layout correct:
 
-```xml
+```xml title="XAML"
 <LayoutTransformControl>
   <LayoutTransformControl.LayoutTransform>
     <ScaleTransform ScaleX="2" ScaleY="2" />
@@ -63,7 +65,7 @@ Scale a control to twice its size while keeping layout correct:
 
 Use a `TransformGroup` to apply multiple transforms:
 
-```xml
+```xml title="XAML"
 <LayoutTransformControl>
   <LayoutTransformControl.LayoutTransform>
     <TransformGroup>
@@ -79,9 +81,9 @@ Use a `TransformGroup` to apply multiple transforms:
 
 ### Binding the angle
 
-Bind the rotation angle to a slider for interactive control:
+You can bind the rotation angle to a slider for interactive control:
 
-```xml
+```xml title="XAML"
 <StackPanel Spacing="12">
   <Slider x:Name="AngleSlider" Minimum="0" Maximum="360" Value="0" />
   <LayoutTransformControl HorizontalAlignment="Center">
@@ -95,8 +97,18 @@ Bind the rotation angle to a slider for interactive control:
 </StackPanel>
 ```
 
+## Practical notes
+
+- **Performance**: Because `LayoutTransformControl` triggers a full measure and arrange pass whenever the transform changes, avoid animating its `LayoutTransform` at high frequency. If you need smooth, frame-rate animations (such as a spinning icon), use `RenderTransform` instead.
+- **Nesting**: You can nest a `LayoutTransformControl` inside another `LayoutTransformControl`. Each one measures its child independently, so transforms compose outward through the layout tree.
+- **`UseRenderTransform`**: Setting this property to `true` applies the transform through `RenderTransform` rather than a separate layout pass. This can be useful when you want the convenience of declaring the transform in `LayoutTransform` syntax but do not need surrounding controls to reflow.
+- **Clipping**: Parent containers that clip their children (for example, a `Border` with `ClipToBounds="True"`) may clip the transformed bounds. Make sure the parent has enough space to display the full transformed area.
+
 ## See also
 
 - [Decorator](/controls/layout/decorator)
+- [Border](/controls/layout/border)
+- [Viewbox](/controls/layout/viewbox)
+- [Transforms](/concepts/transforms)
 - [LayoutTransformControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_LayoutTransformControl)
 - [`LayoutTransformControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/LayoutTransformControl.cs)

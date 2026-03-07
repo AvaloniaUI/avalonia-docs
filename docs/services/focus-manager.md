@@ -1,11 +1,13 @@
 ---
 id: focus-manager
 title: Focus Manager
+description: Manage keyboard focus in your Avalonia application using the FocusManager service to track, set, and clear the currently focused element.
+doc-type: reference
 ---
 
-The `FocusManager` service is responsible for managing the keyboard focus for the application. It keeps track of the currently focused element and the current focus scope. 
+The `FocusManager` service is responsible for managing keyboard focus in your application. It keeps track of the currently focused element and the current focus scope.
 
-The `FocusManager` can be access through an instance of `TopLevel` or `Window`, for more details on accessing `TopLevel` please visit [TopLevel](/docs/fundamentals/top-level) page.
+You can access `FocusManager` through an instance of `TopLevel` or `Window`. For more details on accessing `TopLevel`, visit the [TopLevel](/docs/fundamentals/top-level) page.
 
 ```csharp
 var focusManager = window.FocusManager;
@@ -13,15 +15,27 @@ var focusManager = window.FocusManager;
 
 ## Methods
 
-### GetFocusedElement()
-Returns the currently focused element.
+### `GetFocusedElement()`
+
+Returns the currently focused `IInputElement`, or `null` if no element has focus.
 
 ```csharp
 IInputElement? GetFocusedElement()
 ```
 
-### ClearFocus()
-Clears the currently focused element.
+You can use this method to inspect which control currently holds keyboard focus:
+
+```csharp
+var focused = focusManager.GetFocusedElement();
+if (focused is TextBox textBox)
+{
+    // The user is currently editing a text box
+}
+```
+
+### `ClearFocus()`
+
+Removes keyboard focus from the currently focused element. After calling this method, `GetFocusedElement()` returns `null` until another element receives focus.
 
 ```csharp
 void ClearFocus()
@@ -31,22 +45,29 @@ void ClearFocus()
 
 ### Focusing a control
 
-Developers usually don't need a `FocusManager` service to focus a control. 
-It can be achieved with a method call directly on the control:
+You typically do not need the `FocusManager` service to focus a control. Instead, call the `Focus` method directly on the control:
+
 ```csharp
-var hasFocused = button.Focus();
+bool hasFocused = button.Focus();
 ```
 
-`Focus` method might return `false` is control is not visible and has `Focusable` property set to false.
+The `Focus` method returns `false` if the control is not visible or its `Focusable` property is set to `false`.
 
 ### Listening for global focus changes
 
-While `FocusManager.GetFocusedElement` method allows to get currently focused control, it's not suitable as an event.
-Instead, please use `InputElement.GotFocusEvent.Raised.Subscribe(handler)` method. Note, it listens events globally across all top levels.
+The `FocusManager.GetFocusedElement` method returns the currently focused control at a single point in time, so it is not suitable for reacting to focus changes as they happen. To listen for focus changes globally across all top levels, subscribe to the routed event:
+
+```csharp
+InputElement.GotFocusEvent.Raised.Subscribe(args =>
+{
+    var (sender, e) = args;
+    // Handle focus change
+});
+```
 
 ### Tab navigation order
 
-Controls are navigated in the order they appear in the visual tree by default. To change the tab order, use the `TabIndex` property:
+Controls are navigated in the order they appear in the visual tree by default. To change the tab order, set the `TabIndex` property on your controls:
 
 ```xml
 <StackPanel>
@@ -58,7 +79,7 @@ Controls are navigated in the order they appear in the visual tree by default. T
 
 ### Preventing a control from receiving focus
 
-Set `Focusable="False"` to exclude a control from keyboard navigation:
+Set `Focusable` to `False` to exclude a control from keyboard navigation:
 
 ```xml
 <Button Content="Not focusable" Focusable="False" />
@@ -66,7 +87,7 @@ Set `Focusable="False"` to exclude a control from keyboard navigation:
 
 ### Focus on load
 
-To focus a specific control when a view loads:
+To focus a specific control when your view loads, override `OnLoaded` and call `Focus` on the target control:
 
 ```csharp
 protected override void OnLoaded(RoutedEventArgs e)
@@ -79,4 +100,4 @@ protected override void OnLoaded(RoutedEventArgs e)
 ## See also
 
 - [Focus](/docs/input-interaction/focus): Focus system overview and focus events.
-- [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings and keyboard navigation.
+- [TopLevel](/docs/fundamentals/top-level): Accessing platform services from `TopLevel`.

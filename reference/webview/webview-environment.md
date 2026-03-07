@@ -1,6 +1,8 @@
 ---
 id: webview-environment
 title: WebView environment
+description: Configure WebView browser engine settings in Avalonia, including developer tools, private browsing, user data directories, and platform-specific options for WebView2, WKWebView, and GTK WebKit.
+doc-type: reference
 tags:
   - accelerate
 ---

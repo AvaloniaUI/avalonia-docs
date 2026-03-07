@@ -1,6 +1,8 @@
 ---
 id: headless-nunit
 title: Headless Testing with NUnit
+description: Set up and run headless UI tests for Avalonia applications using the NUnit test framework.
+doc-type: guide
 ---
 
 ## Preparation 

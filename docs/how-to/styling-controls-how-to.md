@@ -1,17 +1,17 @@
 ---
 id: styling-controls-how-to
-title: "How to: Style and Theme Controls"
+title: "How to: Style and theme controls"
 description: Customize control appearance with colors, variants, themes, and reusable styles in Avalonia.
 doc-type: how-to
 ---
 
-This guide covers practical recipes for customizing control appearance: changing colors, creating variants, theming, and building reusable styles.
+This guide covers practical recipes for customizing control appearance in your Avalonia application, including changing colors, creating variants, theming for light and dark modes, and building reusable styles.
 
-## Change a Control's Colors
+## Change a control's colors
 
 ### Using style classes
 
-Define a style class and apply it:
+You can define a style class that targets a control by type and class name, then apply that class in your AXAML markup. The following example creates a `primary` class for `Button` controls that sets the `Background` and `Foreground` properties, along with hover and pressed states:
 
 ```xml
 <Window.Styles>
@@ -32,7 +32,7 @@ Define a style class and apply it:
 
 ### Multiple classes
 
-Combine classes for variations:
+You can combine multiple classes on a single control to layer independent style concerns. Each class contributes its own set of property setters, so you can mix and match them freely:
 
 ```xml
 <Style Selector="Button.rounded">
@@ -46,9 +46,11 @@ Combine classes for variations:
 <Button Classes="primary rounded large" Content="Submit" />
 ```
 
-## Create Button Variants
+In this example, the `Button` receives styles from the `primary`, `rounded`, and `large` classes simultaneously.
 
-Build a set of button styles for your application:
+## Create button variants
+
+You can build a consistent set of button variants for your application by defining a base style that applies to all `Button` controls and then adding class-based overrides for each variant. This approach keeps your visual language consistent while giving you flexibility per context:
 
 ```xml
 <Application.Styles>
@@ -98,7 +100,7 @@ Build a set of button styles for your application:
 </Application.Styles>
 ```
 
-Usage:
+You can then use your variants anywhere in the application:
 
 ```xml
 <StackPanel Orientation="Horizontal" Spacing="8">
@@ -108,9 +110,9 @@ Usage:
 </StackPanel>
 ```
 
-## Theme-Aware Colors
+## Theme-aware colors
 
-Use theme dictionaries so colors adapt to light and dark modes:
+To make your custom colors adapt automatically when the user switches between light and dark modes, define them inside `ThemeDictionaries`. Each dictionary is keyed to `Light` or `Dark`, and Avalonia selects the correct one at runtime:
 
 ```xml
 <Application.Resources>
@@ -133,7 +135,7 @@ Use theme dictionaries so colors adapt to light and dark modes:
 </Application.Resources>
 ```
 
-Reference them with `DynamicResource`:
+Reference these resources in your styles with `DynamicResource` so the values update when the active theme changes:
 
 ```xml
 <Style Selector="Border.card">
@@ -145,9 +147,13 @@ Reference them with `DynamicResource`:
 </Style>
 ```
 
-## Custom TextBox Appearance
+:::tip
+Use `DynamicResource` rather than `StaticResource` for theme-dictionary values. `StaticResource` resolves once at load time and will not update when the theme changes.
+:::
 
-Restyle TextBox to have an underline style instead of a box:
+## Custom `TextBox` appearance
+
+You can restyle `TextBox` to use an underline instead of a full border. The following example sets `BorderThickness` to show only the bottom edge, and changes the color on `:focus` and `:error` pseudo-classes:
 
 ```xml
 <Style Selector="TextBox.underline">
@@ -165,9 +171,9 @@ Restyle TextBox to have an underline style instead of a box:
 </Style>
 ```
 
-## Card Component
+## Card component
 
-Create a reusable card style:
+You can create reusable card styles by applying classes to a `Border` control. The `card` class provides a flat card with a visible border, while `card-elevated` uses `BoxShadow` for a raised appearance:
 
 ```xml
 <Style Selector="Border.card">
@@ -186,6 +192,8 @@ Create a reusable card style:
 </Style>
 ```
 
+Use your card styles like this:
+
 ```xml
 <Border Classes="card">
     <StackPanel Spacing="8">
@@ -195,9 +203,9 @@ Create a reusable card style:
 </Border>
 ```
 
-## Extract Styles to a Shared File
+## Extract styles to a shared file
 
-Move reusable styles into a separate `.axaml` file:
+When your styles grow beyond a few declarations, you can move them into a separate `.axaml` file. This keeps your `App.axaml` clean and makes the styles reusable across projects:
 
 ```xml title="Styles/ButtonStyles.axaml"
 <Styles xmlns="https://github.com/avaloniaui"
@@ -210,7 +218,7 @@ Move reusable styles into a separate `.axaml` file:
 </Styles>
 ```
 
-Reference it in `App.axaml`:
+Then reference the file in your `App.axaml` using `StyleInclude`. The `avares://` URI scheme points to an embedded resource in your assembly:
 
 ```xml
 <Application.Styles>
@@ -219,9 +227,9 @@ Reference it in `App.axaml`:
 </Application.Styles>
 ```
 
-## Override Theme Styles
+## Override theme styles
 
-Override built-in Fluent theme styles for specific controls:
+Your application styles are applied after the built-in theme, so you can override any default appearance. Place your overrides after `<FluentTheme />` in `Application.Styles` to ensure they take precedence:
 
 ```xml
 <Application.Styles>
@@ -239,9 +247,11 @@ Override built-in Fluent theme styles for specific controls:
 </Application.Styles>
 ```
 
-## Conditional Styling with Pseudo-Classes
+The `/template/` selector lets you reach into a control's template to target internal parts. In this case, it targets the `Popup` named `PART_Popup` inside the `ComboBox` template.
 
-Use pseudo-classes for state-based styling without code:
+## Conditional styling with pseudo-classes
+
+Pseudo-classes let you apply styles based on a control's current state without writing any code-behind. Avalonia evaluates pseudo-class selectors automatically as the control state changes:
 
 ```xml
 <!-- Disabled state -->
@@ -262,10 +272,15 @@ Use pseudo-classes for state-based styling without code:
 </Style>
 ```
 
-## See Also
+Common pseudo-classes include `:pointerover`, `:pressed`, `:disabled`, `:focus`, `:focus-visible`, `:checked`, and `:error`. For a complete list, see [Pseudo-classes](/docs/styling/pseudoclasses).
 
-- [Styles](/docs/styling/styles): How styles work.
-- [Style Selectors](/docs/styling/style-selectors): Selector syntax reference.
-- [Style Best Practices](/docs/styling/style-best-practices): Guidelines for maintainable styles.
-- [Control Template Walkthrough](/docs/styling/control-template-walkthrough): Building custom templates.
-- [Theme Variants](/docs/styling/theme-variants): Light and dark theme support.
+## See also
+
+- [Styles](/docs/styling/styles)
+- [Style Classes](/docs/styling/style-classes)
+- [Style Selectors](/docs/styling/style-selectors)
+- [Pseudo-classes](/docs/styling/pseudoclasses)
+- [Style Best Practices](/docs/styling/style-best-practices)
+- [Sharing Styles](/docs/styling/sharing-styles)
+- [Control Template Walkthrough](/docs/styling/control-template-walkthrough)
+- [Theme Variants](/docs/styling/theme-variants)

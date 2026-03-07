@@ -1,6 +1,7 @@
 ---
 id: key-mapping
 title: Mapping keys
+description: How to remap keyboard shortcuts in XPF applications so that platform-specific key combinations feel native on macOS and Linux.
 ---
 
 Sometimes inbuilt WPF controls may use keyboard shortcuts which are correct on Windows but feel alien on other operating systems. If you have the source, you could add logic to switch the keyboard shortcuts depending on the operating system, but this is not an option for third-party controls.

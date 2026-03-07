@@ -22,6 +22,12 @@ Verify your installation by running:
 dotnet --version
 ```
 
+The output should show version `8.0` or higher. If the command is not recognized, make sure the .NET SDK directory is on your system `PATH`.
+
+:::tip[Multiple .NET versions]
+You can have several .NET SDK versions installed side by side. Avalonia requires .NET 8.0 or later, but your project can still target earlier frameworks through multi-targeting if needed. Run `dotnet --list-sdks` to see every SDK version on your machine.
+:::
+
 ## Install the Avalonia templates
 
 Avalonia uses standard .NET templates to create new projects. Install them by running:
@@ -55,6 +61,30 @@ dotnet new list
 Look for entries with "Avalonia" in the name.
 :::
 
+### Update existing templates
+
+If you installed the templates previously, you can update them to the latest version:
+
+```bash
+dotnet new update
+```
+
+This updates all installed template packages, including `Avalonia.Templates`. To install a specific template version (for example, to match a particular Avalonia release), specify the version explicitly:
+
+```bash
+dotnet new install Avalonia.Templates::11.2.0
+```
+
+### Uninstall templates
+
+If you need to remove the Avalonia templates and start fresh, run:
+
+```bash
+dotnet new uninstall Avalonia.Templates
+```
+
+Then reinstall them with the `dotnet new install` command shown above.
+
 :::note
 If you install the Avalonia for Visual Studio extension, the templates are included automatically. You only need to run `dotnet new install` if you use a different IDE or want to use the command line.
 :::
@@ -69,12 +99,22 @@ cd TestApp
 dotnet build
 ```
 
-If the build succeeds, your installation is ready. You can delete the `TestApp` folder.
+If the build succeeds, your installation is ready. You can delete the `TestApp` folder when you are done.
 
-Having issues? Check the [installation troubleshooting page](/troubleshooting/installation).
+### Common issues
+
+- **`dotnet new` does not list the Avalonia templates.** Make sure you ran `dotnet new install Avalonia.Templates` and that the command completed without errors. Restart your terminal and try again.
+- **Build errors referencing missing SDKs.** Confirm that `dotnet --version` reports 8.0 or later. If you have an older SDK set as the default by a `global.json` file in a parent directory, either remove that file or update it to require a compatible SDK version.
+- **Permission errors on macOS or Linux.** If the install command fails with a permission error, make sure you are not running it with `sudo`. The .NET template engine installs templates into your user profile directory and does not require elevated privileges.
 
 ## Next steps
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
   <Button label="Set up your IDE →" link="/docs/get-started/set-up-your-ide" variant="primary" outline />
 </div>
+
+## See also
+
+- [Set up your IDE](/docs/get-started/set-up-your-ide)
+- [Create your first project](/docs/get-started/create-your-first-project)
+- [Supported platforms](/docs/supported-platforms)

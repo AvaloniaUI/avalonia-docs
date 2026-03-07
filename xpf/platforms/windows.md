@@ -1,6 +1,7 @@
 ---
 id: windows
 title: Windows
+description: Windows-specific considerations when running XPF applications, including Win32 API behavior and compatibility notes.
 ---
 
 ## Overview
