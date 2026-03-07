@@ -1,6 +1,8 @@
 ---
 id: choosing-a-layout-panel
 title: Choosing a layout panel
+description: Compare Avalonia panel controls and choose the right one for your layout scenario.
+doc-type: how-to
 ---
 
 Avalonia provides several panel controls, each designed for a different layout strategy. Choosing the right panel simplifies your XAML, improves performance, and makes your UI easier to maintain. This guide helps you pick the best panel for common scenarios.
@@ -146,7 +148,7 @@ Positions children relative to sibling controls or the panel edges using attache
 
 **Use when:** You need to describe layout relationships between controls (for example, "place this button below that text box and align it to the right edge"). This is especially useful for adaptive layouts where you change relationships based on available space.
 
-**Avoid when:** A simpler panel handles the job. RelativePanel is powerful but verbose. If your layout fits a Grid or StackPanel, use those instead.
+**Avoid when:** A simpler panel handles the job. RelativePanel is flexible but verbose. If your layout fits a Grid or StackPanel, use those instead.
 
 ### Canvas
 

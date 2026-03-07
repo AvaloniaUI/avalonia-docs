@@ -1,9 +1,13 @@
 ---
 id: layout
 title: Layout
+description: How the Avalonia layout system measures and arranges controls using panels and bounding boxes.
+doc-type: explanation
 ---
 
 import LayoutZonesDiagram from '/img/concepts/ui-concepts/layout/layout-zones.png';
+
+The Avalonia layout system positions and sizes controls through a two-pass process of measuring and arranging. This page describes how the system works, the available panel types, and the bounding box model.
 
 ## Panels
 
