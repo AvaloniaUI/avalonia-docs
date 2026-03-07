@@ -1,6 +1,7 @@
 ---
 id: assets-tool
 title: Assets tool
+doc-type: reference
 ---
 
 `Developer Tools` reads list of all Avalonia Resources embedded in the running process.
@@ -31,3 +32,8 @@ Any asset larger than 100mb cannot be previewed, and currently it's not configur
 ![Image Asset preview example](/img/tools/dev-tools/assets-image.png)
 
 ![Font Asset preview example](/img/tools/dev-tools/assets-font.png)
+
+## See also
+
+- [Resources tool](/tools/developer-tools/resources-tool)
+- [Elements tool](/tools/developer-tools/elements-tool)

@@ -2,11 +2,12 @@
 id: mcp
 title: DevTools MCP
 sidebar_label: DevTools MCP
+doc-type: how-to
 ---
 
 ## What is DevTools MCP?
 
-The DevTools MCP server lets AI assistants connect to a running Avalonia application and interact with it directly. Your assistant can inspect the visual tree, search for elements by type or name, read and modify properties, capture screenshots, and send input events. It can also attach to the XAML previewer, making it a powerful companion for iterating on layouts without leaving your editor.
+The DevTools MCP server lets AI assistants connect to a running Avalonia application and interact with it directly. Your assistant can inspect the visual tree, search for elements by type or name, read and modify properties, capture screenshots, and send input events. It can also attach to the XAML previewer, making it a useful companion for iterating on layouts without leaving your editor.
 
 For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 
@@ -77,25 +78,25 @@ Refer to your editor's documentation for the exact location to place or edit the
 
 ## Supported tools
 
-**attach-to-app**: Connects to a running Avalonia app. Lists apps if no `processId` is found and multiple apps are available.
-**attach-to-file**: Connects to the live previewer with the specified XAML file. This is recommended over attach-to-app for previewing XAML.
+`attach-to-app`: Connects to a running Avalonia app. Lists apps if no `processId` is found and multiple apps are available.
+`attach-to-file`: Connects to the live previewer with the specified XAML file. This is recommended over `attach-to-app` for previewing XAML.
 
-**tree**: Gets child elements. Null `nodeId` returns roots.
-**ancestors**: Gets parent chain from root.
-**search**: Finds elements by type or `x:Name`.
+`tree`: Gets child elements. Null `nodeId` returns roots.
+`ancestors`: Gets parent chain from root.
+`search`: Finds elements by type or `x:Name`.
 
-**props**: Gets property values for a node.
-**set-prop**: Sets a property value. Use `null` or `unset` for special values.
-**styles**: Gets applied styles and setters for a node.
-**pseudo-class**: Sets pseudo-class. Omit `pseudoClass` to list available options.
+`props`: Gets property values for a node.
+`set-prop`: Sets a property value. Use `null` or `unset` for special values.
+`styles`: Gets applied styles and setters for a node.
+`pseudo-class`: Sets pseudo-class. Omit `pseudoClass` to list available options.
 
-**resources**: Gets resources. Optionally scoped to a node.
-**assets**: Lists embedded assets (images, fonts). Returns URLs for open-asset.
-**open-asset**: Downloads asset by URL from assets tool.
+`resources`: Gets resources. Optionally scoped to a node.
+`assets`: Lists embedded assets (images, fonts). Returns URLs for `open-asset`.
+`open-asset`: Downloads asset by URL from assets tool.
 
-**screenshot**: Captures a PNG screenshot of a UI element.
-**input**: Sends an input event to a UI element.
-**action**: Performs an action on a UI element.
+`screenshot`: Captures a PNG screenshot of a UI element.
+`input`: Sends an input event to a UI element.
+`action`: Performs an action on a UI element.
 
 ## Usage examples
 

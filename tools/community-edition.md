@@ -2,6 +2,7 @@
 id: community-edition
 title: Community edition
 sidebar_label: Community edition
+doc-type: reference
 ---
 
 The Accelerate Community Edition provides free access to professional development tools for individual developers, small organizations, and educational institutions. The aim of this license is to allow the majority of Avalonia developers to benefit from significantly improved tooling at no cost while ensuring the sustainable development of the Avalonia ecosystem.
@@ -103,7 +104,7 @@ Community License registration is available at the [Avalonia portal](https://por
 
 ## Telemetry and Data Collection
 
-To improve Avalonia and ensure continued support for free community tools, Avalonia Accelerate collects usage telemetry and crash reports. This data helps us understand tool usage and identify issues.
+To improve Avalonia and ensure continued support for free community tools, Avalonia Accelerate collects usage telemetry and crash reports. This data helps the team understand tool usage and identify issues.
 
 #### Build Telemetry
 
@@ -136,7 +137,7 @@ The telemetry system looks for license keys in the `LicenseTickets` directory to
 
 #### Verifying Telemetry Data
 
-For complete transparency, we've made the telemetry collection code open source:
+For complete transparency, the telemetry collection code is open source:
 
 - **Source code**: [AvaloniaStatsTask.cs](https://github.com/AvaloniaUI/Avalonia.BuildServices/blob/main/BuildTask/AvaloniaStatsTask.cs) - Review exactly what data is collected and how.
 - **Telemetry Inspector**: A utility application for viewing the telemetry data being collected. Clone and build from [GitHub](https://github.com/AvaloniaUI/Avalonia.BuildServices/tree/main/TelemetryInspector) to verify the data yourself.
@@ -158,19 +159,19 @@ When a crash occurs in Parcel or Dev Tools, the following diagnostic information
 
 1. **Scope**: Crash reporting only applies to Dev Tools and Parcel, **not applications you build** with Avalonia, or the Visual Studio extension. 
 
-2. **Automatic Data Scrubbing**: We use Sentry's server-side Advanced Data Scrubbing to automatically remove common personally identifiable information (PII) patterns before or at ingestion, including:
+2. **Automatic Data Scrubbing**: Sentry's server-side Advanced Data Scrubbing is used to automatically remove common personally identifiable information (PII) patterns before or at ingestion, including:
    - Email addresses
    - IP addresses
    - Authentication tokens
    - Credit card numbers
 
-3. **Residual PII Disclosure**: Despite these safeguards, we acknowledge that incidental PII may remain embedded in crash data, for example, usernames or machine names appearing in file paths or custom error messages. Under GDPR, such residual data is treated as personal data and handled accordingly.
+3. **Residual PII Disclosure**: Despite these safeguards, incidental PII may remain embedded in crash data, for example, usernames or machine names appearing in file paths or custom error messages. Under GDPR, such residual data is treated as personal data and handled accordingly.
 
 4. **Data Location**: All crash data is processed in Europe, in compliance with GDPR requirements.
 
 ## Data Transparency Commitment
 
-While telemetry helps us improve Avalonia and justify the resources invested in free community tools, we respect your choice to opt out. See the "Uninstalling the Community Edition" section below for complete removal instructions.
+While telemetry helps improve Avalonia and justify the resources invested in free community tools, you can choose to opt out. See the "Uninstalling the Community Edition" section below for complete removal instructions.
 
 ## Uninstalling the Community Edition
 
@@ -201,7 +202,7 @@ Due to a general limitation of .NET tools, license data is not automatically rem
 **Windows:**
 
 Delete the following directory:
-```
+```text
 %LOCALAPPDATA%\AvaloniaUI\Licensing
 ```
 
@@ -258,3 +259,9 @@ By using the Avalonia Community License, you agree to:
 - Upgrade to a paid license if your circumstances change and you no longer qualify.
 
 For complete legal terms, refer to the [Accelerate Community License Agreement](https://avaloniaui.net/legal-center/accelerate-community-license).
+
+## See also
+
+- [FAQ](/tools/faq)
+- [Installing Avalonia Accelerate](/tools/installing-accelerate)
+- [Avalonia Tools overview](/tools/)

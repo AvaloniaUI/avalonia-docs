@@ -1,13 +1,14 @@
 ---
 id: faq
 title: FAQ
+doc-type: troubleshooting
 ---
 
 ## General
 
 #### Do I need a license to use Avalonia?
 
-No. **Avalonia UI itself remains entirely open-source under the MIT license.** You can build and ship commercial applications with Avalonia completely free, forever. The Community License only applies to the professional tooling (Visual Studio extension, Dev Tools, Parcel), not the framework itself.
+No. **Avalonia itself remains entirely open-source under the MIT license.** You can build and ship commercial applications with Avalonia completely free, forever. The Community License only applies to the professional tooling (Visual Studio extension, Dev Tools, Parcel), not the framework itself.
 
 #### What if I don't want any of this?
 
@@ -195,7 +196,7 @@ new TextColumn<Person, string>(
 
 #### Is offscreen rendering supported? To avoid airspace issue?
 
-No, offscreen rendering is not currently supported. However, we are considering it as an optional feature for future releases.
+No, offscreen rendering is not currently supported. Offscreen rendering is being tracked as a potential future feature.
 
 #### Why is NativeWebView control not supported on Linux?
 
@@ -223,3 +224,9 @@ While `Microsoft.Identity.Client` and `Google.Apis.Auth` include their own Web-U
 Yes, `getUserMedia()` API is supported across platforms. Users will receive permission prompts for camera, microphone, or screen sharing access, similar to desktop browsers. macOS support was added in version `11.2.4`.
 
 Some platforms also require developer to configure permissions on the application bundle. If any particular permission is necessary for a main application, it's likely to be necessary for a web view. For example, [NSCameraUsageDescription](https://developer.apple.com/documentation/bundleresources/information-property-list/nscamerausagedescription?language=objc) is necessary for macOS/iOS on bundled apps.
+
+## See also
+
+- [Community edition](/tools/community-edition)
+- [Developer tools installation](/tools/developer-tools/installation)
+- [Avalonia Tools overview](/tools/)

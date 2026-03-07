@@ -1,13 +1,14 @@
 ---
 id: metrics-tool
 title: Metrics tool
+doc-type: reference
 ---
 
 Metrics are numerical measurements reported over time. They are typically used to monitor the health of an app and generate alerts.
 
 Meter providers were introduced with .NET 6. More libraries and parts of .NET itself (such as HttpClient) are starting to support it, providing useful diagnostic measurements.
 
-There are several main types of metric instruments:
+There are four main types of metric instruments:
 - Counter - a measurement representing a single value that can only grow. Typically representing "total" values, like total raised exceptions count.
 - UpDownCounter - similar to Counter, but allowing negative increments. For example, Memory Working Set.  
 - Histogram - distribution of measurements. Frame render or HTTP request duration is an example. `Developer Tools` also displays useful P50 (median), P90 and P95 percentiles for histograms.
@@ -19,7 +20,7 @@ There are several main types of metric instruments:
 
 By default, `Developer Tools` is configured to only accept `Avalonia` and `System.Runtime` meters providers.
 
-It's possible to disable them or enable another by clicking "+" button.
+It's possible to disable them or enable another by clicking the **+** button.
 All instruments are grouped by their meter provider, typically a namespace defining name.
 
 Keep in mind, this list is dynamic. New instruments are added only when provider has pushed at least single measurement. For example, HttpClient (`System.Http` namespace) instruments will be displayed only after the first request.
@@ -51,4 +52,9 @@ private void OnTaskRemoved() => s_tasksCount.Add(-1);
 private void OnTaskResolved() => s_tasksResolved.Add(1);
 ```
 
-Once code has pushed at least one measurement, this `SimpleToDoList` will be visible in the "+" button flyout to be displayed in the tool.
+Once code has pushed at least one measurement, this `SimpleToDoList` will be visible in the **+** button flyout to be displayed in the tool.
+
+## See also
+
+- [Profiler tool](/tools/developer-tools/profiler-tool)
+- [Developer tools installation](/tools/developer-tools/installation)

@@ -1,15 +1,16 @@
 ---
 id: index
 title: IDE Support
+doc-type: overview
 ---
 
 Avalonia works with the .NET IDEs you already use. Whether you prefer Visual Studio, VS Code, or Rider, you can build Avalonia applications with full IntelliSense, debugging, and project support out of the box. Where things differ is the XAML editing experience, specifically previewing, code completion, and designer tooling.
 
 ## Visual Studio
 
-The [Avalonia for Visual Studio](/tools/visual-studio-extension) extension is part of Avalonia Accelerate and provides the richest XAML editing experience available. It includes a live previewer, intelligent code completion with automatic namespace imports, error highlighting with fix suggestions, a drag-and-drop designer, and full XAML colorisation.
+The [Avalonia for Visual Studio](/tools/visual-studio-extension) extension is part of Avalonia Accelerate and provides a full-featured XAML editing experience. It includes a live previewer, intelligent code completion with automatic namespace imports, error highlighting with fix suggestions, a drag-and-drop designer, and full XAML colorisation.
 
-If you're working on Windows and want the most productive XAML workflow, this is the extension to use.
+If you're working on Windows, this extension offers the fullest XAML editing and previewing support.
 
 ## Visual Studio Code
 

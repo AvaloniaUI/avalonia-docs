@@ -2,6 +2,7 @@
 id: mcp
 title: Parcel MCP
 sidebar_label: Parcel MCP
+doc-type: how-to
 ---
 
 ## What is Parcel MCP?
@@ -37,14 +38,14 @@ Parcel provides an STDIO type MCP server, available by running the `parcel mcp` 
 ### Adding MCP server in VS Code
 
 1. Open the command palette and run **"MCP: Add Server"**
-2. Select **"stdio"** server type
+2. Select `stdio` as the server type
 3. Set the command to run as:
 
    ```bash
    parcel mcp
    ```
 
-4. Set server name to **"parcel"**
+4. Set server name to `parcel`
 5. Choose to install the server locally or globally
 
 VSCode will generate a `.vscode/mcp.json` file:

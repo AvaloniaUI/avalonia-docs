@@ -2,6 +2,7 @@
 id: packaging-for-macos
 title: Packaging apps for macOS
 sidebar_label: macOS
+doc-type: reference
 tags:
   - accelerate
 ---
@@ -108,7 +109,7 @@ Icons are positioned from the top left corner to the icon center.
 Design background images to accommodate these fixed positions and the drag-and-drop workflow.
 
 :::note
-DMG customization is currently limited to background images. A more flexible editor is planned. Let us know if we need to prioritize it.
+DMG customization is currently limited to background images. A more flexible editor is planned for a future release.
 :::
 
 ### ZIP Creation
@@ -309,3 +310,8 @@ Code-sign applications with a Developer ID certificate when available, even with
 ### Troubleshooting notarization issues
 
 See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/macos#notarization).
+
+## See also
+
+- [Parcel setup](/tools/parcel/setup)
+- [Parcel command line reference](/tools/parcel/command-line-reference)

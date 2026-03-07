@@ -1,8 +1,9 @@
 ---
 id: setup
-title: Setting up AvaloniaUI Parcel
+title: Setting up Avalonia Parcel
 sidebar_label: Setup
 sidebar_position: 1
+doc-type: tutorial
 tags:
   - accelerate
 ---
@@ -12,7 +13,7 @@ import Pill from '/src/components/global/Pill';
 <Pill variant="primary" href="/tools">Accelerate</Pill>
 <br/><br/>
 
-AvaloniaUI Parcel is a packaging tool for Avalonia UI applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
+Avalonia Parcel is a packaging tool for Avalonia applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
 
 ## Prerequisites
 
@@ -23,9 +24,9 @@ AvaloniaUI Parcel is a packaging tool for Avalonia UI applications. It's designe
 | macOS | 13 or newer |
 | Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
 
-## Step 1: Installing AvaloniaUI Parcel
+## Step 1: Installing Avalonia Parcel
 
-`AvaloniaUI Parcel` is a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with an update mechanism provided by the SDK.
+`Avalonia Parcel` is a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with an update mechanism provided by the SDK.
 This guide demonstrates global installation of the tool. Local installation is also possible but be aware: the tool will only work in the project that it's installed into.
 
 <Tabs>

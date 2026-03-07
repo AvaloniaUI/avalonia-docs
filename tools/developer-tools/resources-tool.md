@@ -1,6 +1,7 @@
 ---
 id: resources-tool
 title: Resources tool
+doc-type: reference
 ---
 
 The Resources Tool provides a view of your application's resource hierarchy, allowing you to inspect, navigate, and modify resources at runtime. This tool is invaluable for understanding how resources are organized and resolved in your Avalonia application.
@@ -50,4 +51,9 @@ The Resources Tool offers several options to help you find specific resources:
 - Order - Sort in ascending or descending order
 - Search filter - Search for resources by key or type
 
-![Filter view](/img/tools/dev-tools//resources-filter.png)
+![Filter view](/img/tools/dev-tools/resources-filter.png)
+
+## See also
+
+- [Elements tool](/tools/developer-tools/elements-tool)
+- [Assets tool](/tools/developer-tools/assets-tool)

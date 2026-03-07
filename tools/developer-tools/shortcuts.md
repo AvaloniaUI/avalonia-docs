@@ -2,6 +2,7 @@
 id: shortcuts
 title: Developer tools shortcuts
 sidebar_label: Shortcuts
+doc-type: reference
 ---
 
 ## Inspection
@@ -51,3 +52,7 @@ sidebar_label: Shortcuts
 | Open Metrics | Opens the performance metrics viewer for monitoring application performance. | Unassigned | Unassigned |
 | Open Protocol | Opens the Developer Tools protocol monitoring tool. | Unassigned | Unassigned |
 | Open Documentation | Opens the Developer Tools documentation. | <kbd>Ctrl</kbd>+<kbd>F1</kbd> | <kbd>⌘</kbd> <kbd>?</kbd> |
+## See also
+
+- [Developer tools settings](/tools/developer-tools/settings)
+- [Elements tool](/tools/developer-tools/elements-tool)

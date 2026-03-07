@@ -2,6 +2,7 @@
 id: packaging-for-windows
 title: Packaging apps for Windows
 sidebar_label: Windows
+doc-type: reference
 tags:
   - accelerate
 ---
@@ -286,3 +287,8 @@ Cloud-based signing service from SSL.com with hardware security module (HSM) bac
 :::note
 Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
 :::
+
+## See also
+
+- [Parcel setup](/tools/parcel/setup)
+- [Parcel command line reference](/tools/parcel/command-line-reference)

@@ -2,6 +2,7 @@
 id: packaging-for-linux
 title: Packaging apps for Linux
 sidebar_label: Linux
+doc-type: reference
 tags:
   - accelerate
 ---
@@ -18,7 +19,7 @@ Parcel packages Linux applications into multiple distribution formats optimized 
 - **DEB**: Debian/Ubuntu packages (`.deb`) - installable via `apt`
 - **RPM**: Red Hat/Fedora packages (`.rpm`) - installable via `dnf`/`yum`
 - **ZIP**: Compressed archive for manual installation
-- **AppImage**: Portable single-file application *(planned for future release)*
+- **AppImage**: Portable single-file application *(not yet available)*
 
 Parcel automatically generates a `.desktop` file for proper application launcher integration.
 
@@ -117,3 +118,8 @@ unzip my-app.zip
 cd my-app
 ./my-awesome-app
 ```
+
+## See also
+
+- [Parcel setup](/tools/parcel/setup)
+- [Parcel command line reference](/tools/parcel/command-line-reference)

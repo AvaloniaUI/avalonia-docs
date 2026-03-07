@@ -1,9 +1,10 @@
 ---
 id: breakpoints-tool
 title: Breakpoints tool
+doc-type: reference
 ---
 
-The Application Breakpoints Tool allows developers to monitor and debug property changes and events in Avalonia applications without modifying code. Breakpoints can be set on properties, events to help diagnose issues and understand application behavior.
+The Application Breakpoints Tool allows you to monitor and debug property changes and events in Avalonia applications without modifying code. Breakpoints can be set on properties, events to help diagnose issues and understand application behavior.
 
 A breakpoint considered to be `Hit` (and correspondingly, increment `Hit Count` value, or suspend execution) when:
 1. Property is changed (for property breakpoints) or event is raised (for event breakpoints).
@@ -21,7 +22,7 @@ For example, event breakpoints without target are considered global, and are tri
 
 ### Adding a property breakpoint
 
-On the [Properties](/tools/developer-tools/elements-tool) list each dependency property has "Set Breakpoint" context menu item.
+On the [Properties](/tools/developer-tools/elements-tool) list each dependency property has a **Set Breakpoint** context menu item.
 
 Created breakpoint is bound to the element on which it was set. 
 
@@ -31,7 +32,7 @@ Created breakpoint is bound to the element on which it was set.
 
 On the [Events](/tools/developer-tools/events-tool) tool each raised event has an option to set a breakpoint.
 
-Setting "On a Source" will bind breakpoint to the source element this previously raised event had. Alternatively, "Globally" option will create an unbound breakpoint, which gets hit on any element with this event. 
+Setting **On a Source** will bind breakpoint to the source element this previously raised event had. Alternatively, the **Globally** option will create an unbound breakpoint, which gets hit on any element with this event. 
 
 ![Setting breakpoint on a raised event](/img/tools/dev-tools/breakpoint-set-on-raised-event.png)
 
@@ -65,3 +66,8 @@ When enabled, breakpoint will write a log message into [Logs](/tools/developer-t
 ### Remove once hit
 
 As the name suggests, breakpoint is removed once it is hit. Can be combined with other options.
+
+## See also
+
+- [Events tool](/tools/developer-tools/events-tool)
+- [Logs tool](/tools/developer-tools/logs-tool)

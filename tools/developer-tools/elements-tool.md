@@ -1,6 +1,7 @@
 ---
 id: elements-tool
 title: Elements tool
+doc-type: reference
 ---
 
 The Elements Tree presents a unified view that combines both visual and logical hierarchies. It loads only visible elements to optimize performance, while organizing the structure with the logical tree as the foundation. Template contents are collapsed away within `/template/` node contents.
@@ -11,11 +12,11 @@ The Elements Tree presents a unified view that combines both visual and logical 
 
 The Elements Tool offers ways to identify and select specific UI elements directly from your running application:
 
-- **Focus Tracking** - When enabled, this feature automatically selects the currently focused element in your application within the Elements tree. Toggle this mode with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> (or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>K</kbd> on macOS) to seamlessly track focus changes as you interact with your app.
+- **Focus Tracking** - When enabled, this feature automatically selects the currently focused element in your application within the Elements tree. Toggle this mode with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> (or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>K</kbd> on macOS) to automatically track focus changes as you interact with your app.
 
 - **Inspect Element** - This mode transforms your cursor into an element selector. Once activated with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>C</kbd> on macOS), click any element in your application to immediately locate and select it in the Elements tree. This provides a direct bridge between what you see in your application and its underlying structure.
 
-These inspection modes eliminate the need for manual searching through complex element hierarchies, making debugging and UI analysis significantly more efficient.
+These inspection modes help you locate elements without manually searching through the element hierarchy.
 
 ## Context Menu
 
@@ -184,3 +185,8 @@ Provides measurement references:
 - Guide-lines connecting content boundaries to rulers
 
 ![Ruler](/img/tools/dev-tools/overlay-ruler.png)
+
+## See also
+
+- [Events tool](/tools/developer-tools/events-tool)
+- [Developer tools shortcuts](/tools/developer-tools/shortcuts)

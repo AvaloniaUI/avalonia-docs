@@ -1,6 +1,7 @@
 ---
 id: logs-tool
 title: Logs tool
+doc-type: reference
 ---
 
 ## Viewing Avalonia Logs in the tool
@@ -187,3 +188,8 @@ public class DevToolsSerilogSink(string logArea = "Serilog", IFormatProvider? fo
 ```
 
 </details>
+
+## See also
+
+- [Developer tools options](/tools/developer-tools/options)
+- [Developer tools installation](/tools/developer-tools/installation)

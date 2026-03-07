@@ -1,6 +1,7 @@
 ---
 id: legacy-developer-tools
 title: Using the legacy developer tools
+doc-type: reference
 ---
 
 import DevToolsOverviewScreenshot from '/img/guides/development-optimization/devtools-overview.png';
@@ -152,3 +153,8 @@ Dotted underline under event name or control type indicates that quick navigatio
 ### Changing layout properties
 
 <img className="center" src={DevToolsChangeLayoutScreenshot} alt="" />
+
+## See also
+
+- [Developer tools installation](/tools/developer-tools/installation)
+- [Avalonia Tools overview](/tools/)

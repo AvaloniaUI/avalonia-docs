@@ -1,7 +1,8 @@
 ---
 id: attaching-to-the-previewer
 title: Attaching DevTools to the previewer
-sidebar_label: Attching to the previewer
+sidebar_label: Attaching to the previewer
+doc-type: how-to
 tags:
   - accelerate
 ---
@@ -23,7 +24,7 @@ Yet, these extensions are limited in diagnostic features, making it harder to an
 
 With `Developer Tools` running out-of-process, it is now possible to attach a previewing app to the tool.
 
-![Example of DevTools app attached to the previewer process](/img/tools/dev-tools//attaching-to-previewer.png)
+![Example of DevTools app attached to the previewer process](/img/tools/dev-tools/attaching-to-previewer.png)
 
 ## Configuration
 
@@ -51,3 +52,8 @@ Instead, it's possible to use corresponding action buttons or shortcuts in the `
 
 `Developer Tools` opens a tool window per connected process.
 If the user has multiple XAML previewer tabs, then multiple tool windows will be opened per each.
+
+## See also
+
+- [Attaching applications](/tools/developer-tools/attaching-applications)
+- [Developer tools options](/tools/developer-tools/options)

@@ -2,6 +2,7 @@
 id: profiler-tool
 title: Application profiler tool
 sidebar_label: Profiler tool
+doc-type: reference
 ---
 
 While [metrics](/tools/developer-tools/profiler-tool) primarily contain a single dimension of information, suitable for displaying as a chart, profilers capture richer data. After a recording is completed, `Developer Tools` aggregates the results and displays them as a table.
@@ -22,7 +23,7 @@ When a control is created or added to the visual tree, Avalonia evaluates all ac
 Columns:
 - **Selector**: the style selector being evaluated (e.g., `TextBlock.h1`, `Button:pointerover > ContentPresenter`)
 - **Elapsed**: total time spent evaluating this selector across all match attempts
-- **Fast Reject Count**: how many times the selector was quickly ruled out without full evaluation. A fast reject occurs when a control can be excluded by a simple static check, such as a mismatched type or control name. Importantly, a fast-rejected control will not be re-evaluated later when activators change — for example, a `TextBox` will never be re-evaluated for `Button:pointerover`, because it was already rejected on type
+- **Fast Reject Count**: how many times the selector was quickly ruled out without full evaluation. A fast reject occurs when a control can be excluded by a simple static check, such as a mismatched type or control name. Importantly, a fast-rejected control will not be re-evaluated later when activators change. For example, a `TextBox` will never be re-evaluated for `Button:pointerover`, because it was already rejected on type
 - **Match Attempts**: total number of times this selector was tested against a control
 - **Matches**: how many attempts resulted in a successful match
 
@@ -53,3 +54,7 @@ Columns:
 - **Theme Variant**: the theme variant (Light/Dark) active during the lookup
 
 A key with many total lookups but few successful ones likely indicates a missing or misspelled resource definition. You can use the [Resources Tool](/tools/developer-tools/resources-tool) to inspect available resources at each scope.
+## See also
+
+- [Metrics tool](/tools/developer-tools/metrics-tool)
+- [Resources tool](/tools/developer-tools/resources-tool)

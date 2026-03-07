@@ -2,11 +2,12 @@
 id: configure-vscode-debug-linux
 title: Configure Android debugging on Linux
 sidebar_label: Android debugging (Linux)
+doc-type: how-to
 ---
 
 For debugging Avalonia-based Android projects on Linux (using Visual Studio Code), follow the steps:
 
-1. Make sure to install the "Mono Debug" extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug).
+1. Make sure to install the "Mono Debug" extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug).
 
 2. Configure your `launch.json` file to include the following entries (for deploy + debug, and attach respectively):
 
@@ -70,3 +71,8 @@ Make sure that the value of `port` variable in `launch.json` matches the one of 
 :::
 
 After the setup, you can run the `Debug - Android` task via the Debug panel. Dotnet runtime will build and deploy the app, and Mono debugger will connect to the open port on the device, with all standard debugging functionality available.
+
+## See also
+
+- [IDE Support](/tools/ide/)
+- [Avalonia Tools overview](/tools/)

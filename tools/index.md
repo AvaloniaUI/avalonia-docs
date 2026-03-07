@@ -2,6 +2,7 @@
 id: index
 title: Avalonia Tools
 sidebar_label: Avalonia Tools
+doc-type: overview
 ---
 
 import DocsCard from '@site/src/components/global/DocsCard';
@@ -20,13 +21,13 @@ import DocsCards from '@site/src/components/global/DocsCards';
   `}</style>
 </head>
 
-Avalonia is a free, open-source UI framework. You can build and ship cross-platform .NET applications without paying a penny, and that will always be the case. The framework is MIT licensed, maintained by a growing team, and trusted by thousands of developers worldwide.
+Avalonia is a free, open-source UI framework. You can build and ship cross-platform .NET applications at no cost. The framework is MIT licensed and maintained by a growing team.
 
-But building great software is about more than the framework. It's about the experience of building with it: how quickly you can diagnose a layout issue, how painlessly you can package your app for three operating systems, how confidently you can hand a polished build to your users. That's where tooling makes the difference.
+Development tooling covers the tasks around the framework itself: diagnosing layout issues, packaging your app for multiple operating systems, and previewing XAML as you write it.
 
 ## Accelerate
 
-Avalonia Accelerate is a suite of professional tools designed to remove friction from your development workflow. Every tool has been built from the ground up specifically for Avalonia, not adapted from something else, not bolted on as an afterthought.
+Avalonia Accelerate is a suite of professional tools built specifically for Avalonia development.
 
 <DocsCards>
 <DocsCard header="Dev Tools" href="/tools/developer-tools/installation" img="/icons/feature-accelerate-devtools-icon.png">
@@ -42,7 +43,7 @@ Avalonia Accelerate is a suite of professional tools designed to remove friction
 </DocsCard>
 </DocsCards>
 
-Accelerate also includes advanced UI controls such as [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [NativeWebView](/controls/web/nativewebview), [VirtualKeyboard](/controls/input/text-input/virtualkeyboard), and more. These are production-ready components that solve real problems, from displaying hierarchical data to embedding native web content without bundling Chromium.
+Accelerate also includes UI controls such as [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [NativeWebView](/controls/web/nativewebview), [VirtualKeyboard](/controls/input/text-input/virtualkeyboard), and more. These components cover use cases from displaying hierarchical data to embedding native web content without bundling Chromium.
 
 ## Who gets access
 
@@ -50,7 +51,7 @@ If you work at a company with fewer than five developers and less than $1M USD i
 
 For larger teams and organisations, paid subscriptions are available in Business and Enterprise tiers. Business includes everything most teams need. Enterprise adds specialised components like VirtualKeyboard for kiosk and embedded scenarios.
 
-Your subscription directly funds development of the open-source framework. Every licence sold means more engineers working on Avalonia's core, better documentation, and faster releases for everyone.
+Subscriptions fund continued development of the open-source framework.
 
 <br />
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>

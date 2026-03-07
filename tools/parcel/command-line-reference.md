@@ -2,6 +2,7 @@
 id: command-line-reference
 title: Parcel command line reference
 sidebar_label: Command line reference
+doc-type: reference
 ---
 
 Parcel provides a command-line tool that packages Avalonia apps for Windows, macOS, and Linux. It includes app signing and packaging capabilities to simplify distribution of ready-to-install binaries.

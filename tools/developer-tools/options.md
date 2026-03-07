@@ -2,6 +2,7 @@
 id: options
 title: Developer tools options
 sidebar_label: Options
+doc-type: reference
 ---
 
 ## DeveloperToolsOptions.Gesture
@@ -91,3 +92,8 @@ This behavior can be redefined with options:
 2. `DeveloperToolsOptions.AddMicrosoftLoggerObservable(ILoggerFactory, LogLevel)` - allows to connect devtools as a logger provider to Microsoft `ILoggerFactory`.
 3. `DeveloperToolsOptions.AddLoggerObservable(ILoggerObservable)` - custom `ILoggerObservable` interface implementation. Use this option, if you want DevTools to display your third party logs provider like Serilog.
 4. `DeveloperToolsOptions.ClearLoggerObservables()` - clear all observables.
+
+## See also
+
+- [Developer tools settings](/tools/developer-tools/settings)
+- [Developer tools installation](/tools/developer-tools/installation)

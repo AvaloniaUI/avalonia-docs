@@ -1,6 +1,7 @@
 ---
 id: events-tool
 title: Events tool
+doc-type: reference
 ---
 
 The Events Tool provides real-time monitoring and debugging capabilities for Avalonia's routed event system. Routed events in Avalonia follow a sophisticated event handling mechanism where events can traverse up or down the visual tree. This tool helps developers track event propagation, identify event handlers, and debug event-related issues in their applications.
@@ -13,7 +14,7 @@ Visit [Routed Events](https://docs.avaloniaui.net/docs/concepts/input/routed-eve
 
 By default, `Button.Click`, `KeyDown`, `KeyUp`, `TextInput`, `PointerReleased`, and `PointerPressed` events are enabled. These defaults can be controlled by the `Default Routed Events` setting; see [Developer Tools Settings](/tools/developer-tools/settings) page.
 
-Use the "Event Listeners" flyout button to enable or disable any particular routed event or events group.
+Use the **Event Listeners** flyout button to enable or disable any particular routed event or events group.
 
 ![Listeners Filter Flyout](/img/tools/dev-tools/events-listeners-filter.png)
 
@@ -45,3 +46,8 @@ Each element handler is clickable, redirecting the user to the corresponding nod
 Note: If nothing happens when clicking on an element, it was likely already removed from the elements tree.
 
 ![Inspect Handler](/img/tools/dev-tools/events-inspect-handler.gif)
+
+## See also
+
+- [Elements tool](/tools/developer-tools/elements-tool)
+- [Breakpoints tool](/tools/developer-tools/breakpoints-tool)

@@ -2,10 +2,11 @@
 id: settings
 title: Developer tools settings
 sidebar_label: Settings
+doc-type: reference
 ---
 
-Settings page can be accessed from the Tray Icon menu (on Windows and Linux) or macOS global menu.
-Or, alternatively, when app is already connected, settings page is available on the left navigation bar.
+Settings page can be accessed from the **Tray Icon** menu (on Windows and Linux) or the **macOS global menu**.
+Alternatively, when an app is already connected, the settings page is available on the **left navigation bar**.
 
 | Category | Setting | Description | Default Value |
 |----------|---------|-------------|---------------|
@@ -33,3 +34,8 @@ Or, alternatively, when app is already connected, settings page is available on 
 | | Measurements history duration (s) | Defines how long in the past measurements are kept and displayed. | 60s |
 | **Protocol** |
 | | HTTP port | Defines HTTP port used to listen for app connections. Requires restart on change. Needs to be in-sync with `DeveloperToolsOptions.Protocol` set-up in the target app. | 29414 |
+
+## See also
+
+- [Developer tools options](/tools/developer-tools/options)
+- [Developer tools shortcuts](/tools/developer-tools/shortcuts)

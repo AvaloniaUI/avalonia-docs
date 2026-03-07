@@ -1,6 +1,7 @@
 ---
 id: attaching-applications
 title: Attaching applications
+doc-type: how-to
 tags:
   - accelerate
 ---
@@ -25,7 +26,7 @@ For all platforms, `AvaloniaUI.DiagnosticsSupport` package can be installed in t
 1. Follow [Getting Started](/tools/developer-tools/installation) for the initial setup.
 2. Run `Developer Tools` application. `avdt` dotnet tool can be used from the command line.
 3. Run browser application either via `dotnet run` or `dotnet serve` on a published project. Please visit [Avalonia WebAssembly documentation](/docs/platform-specific-guides/webassembly) for more details.
-4. By default, iOS projects configured to attach to `Developer Tools` on startup. See [DeveloperToolsOptions.ConnectOnStartup](/tools/developer-tools/options) for details.
+4. By default, browser projects are configured to attach to `Developer Tools` on startup. See [DeveloperToolsOptions.ConnectOnStartup](/tools/developer-tools/options) for details.
 
 ![Browser with Developer Tools](/img/tools/dev-tools/attaching-to-browser.png)
 
@@ -43,7 +44,7 @@ To avoid conflicts with Chrome Developer Tools, Avalonia tools shortcut can be r
 3. Run iOS application from your IDE. Please visit [Avalonia iOS documentation](/docs/platform-specific-guides/ios) for more details.
 4. Make sure browser app is focused, so shortcut can be intercepted. Press <kbd>F12</kbd>.
 
-![iOS with Developer Tools](/img/tools/dev-tools//attaching-to-ios.png)
+![iOS with Developer Tools](/img/tools/dev-tools/attaching-to-ios.png)
 
 ## Attaching Android application
 
@@ -78,7 +79,7 @@ To avoid conflicts with Chrome Developer Tools, Avalonia tools shortcut can be r
 
 ## Attaching WSL2 application
 
-WSL2 is an incredible tool allowing debugging and running of Linux applications from the Windows host.
+WSL2 allows debugging and running of Linux applications from the Windows host.
 It's possible to follow the same instructions and install full Developer Tools process in the WSL2 system, potentially duplicating installation with the Windows version.
 
 But for convenience of keeping single installation it is recommended to attach Linux running application to the Windows running Developer Tools instance.
@@ -101,3 +102,7 @@ But for convenience of keeping single installation it is recommended to attach L
 4. Run your Linux app and attach to `Developer Tools` via <kbd>F12</kbd>.
 
 ![Attaching to WSL2](/img/tools/dev-tools/attaching-wsl.png)
+## See also
+
+- [Attaching to the remote tool](/tools/developer-tools/attaching-to-the-remote-tool)
+- [Developer tools installation](/tools/developer-tools/installation)
