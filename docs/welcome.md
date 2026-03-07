@@ -1,6 +1,8 @@
 ---
 id: welcome
 title: Welcome
+description: Get started with the Avalonia cross-platform .NET UI framework. Find installation guides, tutorials, migration paths, and API references.
+doc-type: overview
 ---
 
 <head>
@@ -30,7 +32,7 @@ For exact version and architecture details, see [Supported platforms](supported-
 
 | Capability | Description |
 |---|---|
-| **Cross-platform rendering** | Avalonia's own rendering engine produces pixel-identical output on every platform. Skia is the default backend, with [Impeller](https://avaloniaui.net/blog/avalonia-partners-with-google-s-flutter-t-eam-to-bring-impeller-rendering-to-net) (from Google's Flutter team) coming soon. No native control wrappers, no platform-specific quirks. |
+| **Cross-platform rendering** | Avalonia's own rendering engine produces pixel-identical output on every platform. Skia is the default backend, and the team is collaborating with Google's Flutter team to bring the [Impeller](https://avaloniaui.net/blog/avalonia-partners-with-google-s-flutter-t-eam-to-bring-impeller-rendering-to-net) rendering engine to .NET. No native control wrappers, no platform-specific quirks. |
 | **XAML and code-behind** | Describe your UI declaratively with XAML or build it entirely in code. Avalonia XAML will feel familiar if you have worked with WPF or UWP. |
 | **Styling system** | A CSS-inspired styling system with selectors, style classes, pseudoclasses, and control themes. See [Styles](styling/styles). |
 | **Data binding** | Compiled bindings checked at build time, full MVVM support, and integration with CommunityToolkit.Mvvm. See [Data binding](data-binding/introduction-to-data-binding). |
@@ -68,8 +70,14 @@ Avalonia 12 includes compiled bindings by default, a new clipboard API, updated 
 
 ## Need help?
 
-If you get stuck, check the [Troubleshooting](/troubleshooting) pages or connect with the [Avalonia community](community).
+If you get stuck, check the [Troubleshooting](/troubleshooting) pages or connect with the community on [GitHub Discussions](https://github.com/AvaloniaUI/Avalonia/discussions).
 
 To report a bug, open an issue on [GitHub](https://github.com/AvaloniaUI/Avalonia).
+
+## See also
+
+- [Supported platforms](supported-platforms)
+- [Samples and tutorials](samples-tutorials/index.md)
+- [Avalonia GitHub repository](https://github.com/AvaloniaUI/Avalonia)
 
 <XpfAd/>

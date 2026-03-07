@@ -87,7 +87,7 @@ This section contains detailed technical reference material for Avalonia. Use it
   <DocsCard header="Property setters" href="/reference/styles/property-setters" />
   <DocsCard header="Pseudoclasses" href="/reference/styles/pseudoclasses" />
   <DocsCard header="Style selector syntax" href="/reference/styles/style-selector-syntax" />
-  <DocsCard header="Style Selectors" href="/reference/styles/style-selectors" />
+  <DocsCard header="Style Selectors" href="/docs/styling/style-selectors" />
 </DocsCards>
 
 ## Text
