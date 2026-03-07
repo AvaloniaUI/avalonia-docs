@@ -1,6 +1,8 @@
 ---
 id: custom-font-how-to
 title: How to add a custom font
+description: Add a custom font to an Avalonia application as a static resource or embedded font collection.
+doc-type: how-to
 ---
 
 This guide walks you through adding a custom font to an Avalonia application using two approaches: as a static resource and as an embedded font collection.

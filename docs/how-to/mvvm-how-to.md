@@ -1,6 +1,8 @@
 ---
 id: mvvm-how-to
 title: "How to: Implement Common MVVM Patterns"
+description: Practical MVVM patterns for Avalonia using CommunityToolkit.Mvvm as the MVVM framework.
+doc-type: how-to
 ---
 
 This guide covers practical MVVM patterns for Avalonia using CommunityToolkit.Mvvm, the recommended MVVM framework.

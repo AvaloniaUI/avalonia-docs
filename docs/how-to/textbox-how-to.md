@@ -1,6 +1,8 @@
 ---
 id: textbox-how-to
 title: "How to: Work with TextBox"
+description: Validation, formatting, input masking, selection, and TextBox customization in Avalonia.
+doc-type: how-to
 ---
 
 This guide covers common TextBox scenarios: validation, formatting, input masking, selection, and customization.

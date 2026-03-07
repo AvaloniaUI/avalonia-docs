@@ -1,6 +1,8 @@
 ---
 id: slider-how-to
 title: "How to: Work with Slider"
+description: Range configuration, value display, tick marks, vertical orientation, and Slider data binding.
+doc-type: how-to
 ---
 
 This guide covers common Slider scenarios: range configuration, value display, tick marks, vertical orientation, and two-way binding.

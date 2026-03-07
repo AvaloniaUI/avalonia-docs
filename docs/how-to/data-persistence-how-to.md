@@ -1,6 +1,8 @@
 ---
 id: data-persistence-how-to
 title: "How to: Save and Load Application Settings"
+description: Persist user preferences and application state across sessions using JSON files or databases.
+doc-type: how-to
 ---
 
 This guide covers patterns for persisting user preferences and application state across sessions.

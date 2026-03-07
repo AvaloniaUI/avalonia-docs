@@ -1,6 +1,8 @@
 ---
 id: tabcontrol-how-to
 title: "How to: Work with TabControl"
+description: Static tabs, dynamic tabs, closeable tabs, and tab styling with Avalonia TabControl.
+doc-type: how-to
 ---
 
 This guide covers common TabControl scenarios: static tabs, dynamic tabs, closeable tabs, and tab styling.

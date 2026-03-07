@@ -1,6 +1,8 @@
 ---
 id: clipboard-how-to
 title: "How to: Use the Clipboard"
+description: Copy and paste text, images, and custom data using the Avalonia clipboard API.
+doc-type: how-to
 ---
 
 This guide covers clipboard operations: copying and pasting text, images, and custom data.

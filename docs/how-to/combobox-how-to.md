@@ -1,6 +1,8 @@
 ---
 id: combobox-how-to
 title: "How to: Work with ComboBox"
+description: Bind collections, create custom templates, use editable combo boxes, and bind enums.
+doc-type: how-to
 ---
 
 This guide covers common ComboBox scenarios: binding to collections, custom templates, editable combo boxes, and enum binding.

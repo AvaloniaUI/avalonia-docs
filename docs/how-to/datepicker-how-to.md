@@ -1,6 +1,8 @@
 ---
 id: datepicker-how-to
 title: "How to: Work with Date and Time Pickers"
+description: Bind dates, format display, validate input, and configure date ranges with Avalonia pickers.
+doc-type: how-to
 ---
 
 This guide covers DatePicker, TimePicker, CalendarDatePicker, and Calendar patterns: binding dates, formatting, validation, and date ranges.

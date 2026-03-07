@@ -1,6 +1,8 @@
 ---
 id: drag-and-drop-how-to
 title: "How to: Implement Drag and Drop"
+description: Initiate drags, handle drops, provide visual feedback, and accept file drops in Avalonia.
+doc-type: how-to
 ---
 
 This guide covers common drag-and-drop scenarios: initiating drags, handling drops, visual feedback, and file drops.

@@ -1,6 +1,8 @@
 ---
 id: responsive-layout-how-to
 title: "How to: Build Responsive Layouts"
+description: Create Avalonia layouts that adapt to different window sizes and form factors.
+doc-type: how-to
 ---
 
 This guide covers techniques for creating Avalonia layouts that adapt to different window sizes and form factors.

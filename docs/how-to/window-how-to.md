@@ -1,6 +1,8 @@
 ---
 id: window-how-to
 title: "How to: Work with Windows"
+description: Sizing, positioning, dialogs, multi-window apps, startup behavior, and system chrome options.
+doc-type: how-to
 ---
 
 This guide covers common Window scenarios: sizing, positioning, dialogs, multi-window apps, startup behavior, and system chrome.

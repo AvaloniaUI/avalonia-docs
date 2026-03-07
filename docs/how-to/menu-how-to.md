@@ -1,6 +1,8 @@
 ---
 id: menu-how-to
 title: "How to: Work with Menus"
+description: Menu and ContextMenu patterns with commands, keyboard shortcuts, dynamic items, and submenus.
+doc-type: how-to
 ---
 
 This guide covers Menu and ContextMenu patterns: commands, keyboard shortcuts, dynamic menus, checked items, submenus, and right-click context menus.

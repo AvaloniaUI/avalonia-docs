@@ -1,6 +1,8 @@
 ---
 id: coded-ui-how-to
 title: "How to: Build a Complete App Without XAML"
+description: Build a fully functional Avalonia application using only C# with no XAML files.
+doc-type: how-to
 ---
 
 This guide walks through building a fully functional Avalonia application using only C#, with no XAML files at all. You will create a simple counter app with styled controls, layout, event handling, and data binding, all from code.

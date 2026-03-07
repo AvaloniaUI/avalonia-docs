@@ -1,6 +1,8 @@
 ---
 id: image-how-to
 title: "How to: Display and Manipulate Images"
+description: Load images from various sources, handle aspect ratios, and manipulate bitmaps in Avalonia.
+doc-type: how-to
 ---
 
 This guide covers Image control patterns: loading images from various sources, aspect ratio handling, dynamic images, and bitmap manipulation.

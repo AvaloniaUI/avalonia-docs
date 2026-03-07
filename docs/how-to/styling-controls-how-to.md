@@ -1,6 +1,8 @@
 ---
 id: styling-controls-how-to
 title: "How to: Style and Theme Controls"
+description: Customize control appearance with colors, variants, themes, and reusable styles in Avalonia.
+doc-type: how-to
 ---
 
 This guide covers practical recipes for customizing control appearance: changing colors, creating variants, theming, and building reusable styles.

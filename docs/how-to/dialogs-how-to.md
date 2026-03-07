@@ -1,6 +1,8 @@
 ---
 id: dialogs-how-to
 title: "How to: Work with Dialogs"
+description: Create and show modal dialogs, return results, and build custom dialog windows in Avalonia.
+doc-type: how-to
 ---
 
 This guide covers creating and showing modal dialogs, returning results, and building custom dialog windows.
