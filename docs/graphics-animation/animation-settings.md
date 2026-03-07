@@ -1,6 +1,8 @@
 ---
 id: animation-settings
 title: Animation settings
+description: Configuration options for keyframe animations including easing, fill mode, and playback.
+doc-type: reference
 ---
 
 import LinearEasingScreenshot from '/img/reference/animations-and-graphics/animation-settings/linear-easing.png';
@@ -43,20 +45,20 @@ This section describes how `Animation` playback can be customized.
 
 | Default                                                       |
 |---------------------------------------------------------------|
-| `LinearEasing`<br/><img src={LinearEasingScreenshot} alt=""/> |
+| `LinearEasing`<br/><img src={LinearEasingScreenshot} alt="Graph showing linear easing curve"/> |
 
 | Ease-In                                                                 | Ease-Out                                                                  | Ease-In-Out                                                                   |
 |-------------------------------------------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| `SineEaseIn`<br/><img src={SineEaseInScreenshot} alt=""/>               | `SineEaseOut`<br/><img src={SineEaseOutScreenshot} alt=""/>               | `SineEaseInOut`<br/><img src={SineEaseInOutScreenshot} alt=""/>               |
-| `QuadraticEaseIn`<br/><img src={QuadraticEaseInScreenshot} alt=""/>     | `QuadraticEaseOut`<br/><img src={QuadraticEaseOutScreenshot} alt=""/>     | `QuadraticEaseInOut`<br/><img src={QuadraticEaseInOutScreenshot} alt=""/>     |
-| `CubicEaseIn`<br/><img src={CubicEaseInScreenshot} alt=""/>             | `CubicEaseOut`<br/><img src={CubicEaseOutScreenshot} alt=""/>             | `CubicEaseInOut`<br/><img src={CubicEaseInOutScreenshot} alt=""/>             |
-| `QuarticEaseIn`<br/><img src={QuarticEaseInScreenshot} alt=""/>         | `QuarticEaseOut`<br/><img src={QuarticEaseOutScreenshot} alt=""/>         | `QuarticEaseInOut`<br/><img src={QuarticEaseInOutScreenshot} alt=""/>         |
-| `QuinticEaseIn`<br/><img src={QuinticEaseInScreenshot} alt=""/>         | `QuinticEaseOut`<br/><img src={QuinticEaseOutScreenshot} alt=""/>         | `QuinticEaseInOut`<br/><img src={QuinticEaseInOutScreenshot} alt=""/>         |
-| `ExponentialEaseIn`<br/><img src={ExponentialEaseInScreenshot} alt=""/> | `ExponentialEaseOut`<br/><img src={ExponentialEaseOutScreenshot} alt=""/> | `ExponentialEaseInOut`<br/><img src={ExponentialEaseInOutScreenshot} alt=""/> |
-| `CircularEaseIn`<br/><img src={CircularEaseInScreenshot} alt=""/>       | `CircularEaseOut`<br/><img src={CircularEaseOutScreenshot} alt=""/>       | `CircularEaseInOut`<br/><img src={CircularEaseInOutScreenshot} alt=""/>       |
-| `BackEaseIn`<br/><img src={BackEaseInScreenshot} alt=""/>               | `BackEaseOut`<br/><img src={BackEaseOutScreenshot} alt=""/>               | `BackEaseInOut`<br/><img src={BackEaseInOutScreenshot} alt=""/>             |
-| `ElasticEaseIn`<br/><img src={ElasticEaseInScreenshot} alt=""/>         | `ElasticEaseOut`<br/><img src={ElasticEaseOutScreenshot} alt=""/>         | `ElasticEaseInOut`<br/><img src={ElasticEaseInOutScreenshot} alt=""/>         |
-| `BounceEaseIn`<br/><img src={BounceEaseInScreenshot} alt=""/>           | `BounceEaseOut`<br/><img src={BounceEaseOutScreenshot} alt=""/>           | `BounceEaseInOut`<br/><img src={BounceEaseInOutScreenshot} alt=""/>           |
+| `SineEaseIn`<br/><img src={SineEaseInScreenshot} alt="Graph showing SineEaseIn curve"/>               | `SineEaseOut`<br/><img src={SineEaseOutScreenshot} alt="Graph showing SineEaseOut curve"/>               | `SineEaseInOut`<br/><img src={SineEaseInOutScreenshot} alt="Graph showing SineEaseInOut curve"/>               |
+| `QuadraticEaseIn`<br/><img src={QuadraticEaseInScreenshot} alt="Graph showing QuadraticEaseIn curve"/>     | `QuadraticEaseOut`<br/><img src={QuadraticEaseOutScreenshot} alt="Graph showing QuadraticEaseOut curve"/>     | `QuadraticEaseInOut`<br/><img src={QuadraticEaseInOutScreenshot} alt="Graph showing QuadraticEaseInOut curve"/>     |
+| `CubicEaseIn`<br/><img src={CubicEaseInScreenshot} alt="Graph showing CubicEaseIn curve"/>             | `CubicEaseOut`<br/><img src={CubicEaseOutScreenshot} alt="Graph showing CubicEaseOut curve"/>             | `CubicEaseInOut`<br/><img src={CubicEaseInOutScreenshot} alt="Graph showing CubicEaseInOut curve"/>             |
+| `QuarticEaseIn`<br/><img src={QuarticEaseInScreenshot} alt="Graph showing QuarticEaseIn curve"/>         | `QuarticEaseOut`<br/><img src={QuarticEaseOutScreenshot} alt="Graph showing QuarticEaseOut curve"/>         | `QuarticEaseInOut`<br/><img src={QuarticEaseInOutScreenshot} alt="Graph showing QuarticEaseInOut curve"/>         |
+| `QuinticEaseIn`<br/><img src={QuinticEaseInScreenshot} alt="Graph showing QuinticEaseIn curve"/>         | `QuinticEaseOut`<br/><img src={QuinticEaseOutScreenshot} alt="Graph showing QuinticEaseOut curve"/>         | `QuinticEaseInOut`<br/><img src={QuinticEaseInOutScreenshot} alt="Graph showing QuinticEaseInOut curve"/>         |
+| `ExponentialEaseIn`<br/><img src={ExponentialEaseInScreenshot} alt="Graph showing ExponentialEaseIn curve"/> | `ExponentialEaseOut`<br/><img src={ExponentialEaseOutScreenshot} alt="Graph showing ExponentialEaseOut curve"/> | `ExponentialEaseInOut`<br/><img src={ExponentialEaseInOutScreenshot} alt="Graph showing ExponentialEaseInOut curve"/> |
+| `CircularEaseIn`<br/><img src={CircularEaseInScreenshot} alt="Graph showing CircularEaseIn curve"/>       | `CircularEaseOut`<br/><img src={CircularEaseOutScreenshot} alt="Graph showing CircularEaseOut curve"/>       | `CircularEaseInOut`<br/><img src={CircularEaseInOutScreenshot} alt="Graph showing CircularEaseInOut curve"/>       |
+| `BackEaseIn`<br/><img src={BackEaseInScreenshot} alt="Graph showing BackEaseIn curve"/>               | `BackEaseOut`<br/><img src={BackEaseOutScreenshot} alt="Graph showing BackEaseOut curve"/>               | `BackEaseInOut`<br/><img src={BackEaseInOutScreenshot} alt="Graph showing BackEaseInOut curve"/>             |
+| `ElasticEaseIn`<br/><img src={ElasticEaseInScreenshot} alt="Graph showing ElasticEaseIn curve"/>         | `ElasticEaseOut`<br/><img src={ElasticEaseOutScreenshot} alt="Graph showing ElasticEaseOut curve"/>         | `ElasticEaseInOut`<br/><img src={ElasticEaseInOutScreenshot} alt="Graph showing ElasticEaseInOut curve"/>         |
+| `BounceEaseIn`<br/><img src={BounceEaseInScreenshot} alt="Graph showing BounceEaseIn curve"/>           | `BounceEaseOut`<br/><img src={BounceEaseOutScreenshot} alt="Graph showing BounceEaseOut curve"/>           | `BounceEaseInOut`<br/><img src={BounceEaseInOutScreenshot} alt="Graph showing BounceEaseInOut curve"/>           |
 
 Additionally, you can provide your own easing by deriving from `Easing` or by providing parameters to `SplineEasing` or `SpringEasing`.
 

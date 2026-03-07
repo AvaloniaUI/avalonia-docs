@@ -1,7 +1,11 @@
 ---
 id: drawing-graphics
 title: Drawing graphics
+description: Overview of the Avalonia 2D graphics system including shapes, geometries, and animations.
+doc-type: overview
 ---
+
+Avalonia provides a 2D graphics system with resolution-independent rendering, shape primitives, and animation support.
 
 ## Graphics
 

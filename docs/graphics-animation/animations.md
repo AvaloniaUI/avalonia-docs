@@ -1,6 +1,8 @@
 ---
 id: animations
 title: Animations
+description: Overview of animation types in Avalonia including keyframe, transitions, and composition.
+doc-type: overview
 ---
 
 import KeyframeDiagram from '/img/concepts/ui-concepts/animations/animation-keyframe.png';
@@ -19,7 +21,7 @@ Additionally, [Page Transitions](page-transitions) animate content switching in 
 
 The simplest keyframe animation changes one property value over a specified duration by defining two keyframes: one at the start (0%) and one at the end (100%).
 
-<img src={KeyframeDiagram} alt=''/>
+<img src={KeyframeDiagram} alt="Diagram showing a keyframe animation timeline with start and end cue points"/>
 
 The property value is interpolated between keyframes using an easing function. The default is linear interpolation.
 

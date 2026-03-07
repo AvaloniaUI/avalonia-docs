@@ -1,6 +1,8 @@
 ---
 id: shapes-and-geometries
 title: Shapes and geometries
+description: Shape controls and geometry types for drawing 2D vector graphics in Avalonia.
+doc-type: reference
 ---
 
 Avalonia provides shape controls for drawing common 2D vector graphics and a geometry system for defining complex outlines used in paths, clipping, and hit testing.

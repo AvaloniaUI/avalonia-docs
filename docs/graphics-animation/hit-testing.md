@@ -1,6 +1,8 @@
 ---
 id: hit-testing
 title: Hit testing
+description: How Avalonia determines which visual element is at a given screen coordinate.
+doc-type: explanation
 ---
 
 Hit testing determines which visual element is located at a given point on the screen. Avalonia uses hit testing internally for pointer events, but you can also perform hit testing programmatically for custom controls and advanced interaction scenarios.

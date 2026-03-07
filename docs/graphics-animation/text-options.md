@@ -1,6 +1,8 @@
 ---
 id: text-options
 title: Text options
+description: TextOptions attached properties for controlling text hinting, alignment, and rendering mode.
+doc-type: reference
 ---
 
 Avalonia provides fine-grained control over how text is rendered through the `TextOptions` attached properties. These settings affect hinting, pixel alignment, and rendering mode for text within a control and its descendants.

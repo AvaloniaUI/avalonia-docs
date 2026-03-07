@@ -1,6 +1,8 @@
 ---
 id: control-transitions
 title: Setting control transitions
+description: Configure transitions that animate property changes on Avalonia controls.
+doc-type: how-to
 ---
 
 Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via the `Transitions` property:

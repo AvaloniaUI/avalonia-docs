@@ -1,6 +1,8 @@
 ---
 id: transforms
 title: Transforms
+description: Render transforms and layout transforms for modifying position, size, rotation, and skew.
+doc-type: explanation
 ---
 
 Transforms modify the position, size, rotation, or skew of visual elements without changing their layout. Avalonia supports render transforms (applied after layout) and layout transforms (applied during layout via `LayoutTransformControl`).

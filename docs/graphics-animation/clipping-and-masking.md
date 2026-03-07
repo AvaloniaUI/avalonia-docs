@@ -1,6 +1,8 @@
 ---
 id: clipping-and-masking
 title: Clipping and masking
+description: Clipping and opacity masking techniques for restricting visible content in Avalonia.
+doc-type: explanation
 ---
 
 Clipping restricts the visible area of a control or drawing to a defined region. Masking uses an opacity gradient to partially hide content. Both techniques are useful for creating shaped controls, circular avatars, and visual effects.

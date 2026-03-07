@@ -1,6 +1,8 @@
 ---
 id: gradients
 title: Gradients
+description: LinearGradientBrush and RadialGradientBrush syntax and configuration in Avalonia.
+doc-type: reference
 ---
 
 `LinearGradientBrush` creates a gradient that transitions between two or more colors along a line. You can use it anywhere a brush is accepted: backgrounds, foregrounds, borders, and fills.

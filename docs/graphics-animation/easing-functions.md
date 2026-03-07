@@ -1,6 +1,8 @@
 ---
 id: easing-functions
 title: Easing functions
+description: Available easing functions for controlling animation timing curves in Avalonia.
+doc-type: reference
 ---
 
 Easing functions control the rate of change during an animation, giving motion a natural feel. Instead of animating at a constant speed (linear), easing functions accelerate, decelerate, or bounce values to create more engaging transitions.

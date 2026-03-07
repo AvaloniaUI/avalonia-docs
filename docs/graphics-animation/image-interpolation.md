@@ -1,6 +1,8 @@
 ---
 id: image-interpolation
 title: Image interpolation
+description: Control image interpolation quality when scaling images in Avalonia.
+doc-type: how-to
 ---
 
 When displaying images in Avalonia, particularly when scaling them to sizes different from their native resolution, the quality of the rendering depends on the interpolation mode being used. This guide explains how to control image interpolation in your Avalonia applications.

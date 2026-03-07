@@ -1,6 +1,8 @@
 ---
 id: composition-animations
 title: Composition animations
+description: Code-driven render-thread animations using the composition animation API in Avalonia.
+doc-type: explanation
 ---
 
 Composition animations are a code-driven animation system that runs directly on the render thread. They provide fine-grained control over visual properties and deliver smooth, high-performance animations without blocking the UI thread.

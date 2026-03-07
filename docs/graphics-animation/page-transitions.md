@@ -1,6 +1,8 @@
 ---
 id: page-transitions
 title: Setting page transitions
+description: Configure page transitions for animating between views in Avalonia controls.
+doc-type: how-to
 ---
 
 import CustomPageTransitionScreenshot from '/img/guides/ui-development/graphics/custom-page-transition.webp';
@@ -147,7 +149,7 @@ public class CustomTransition : IPageTransition
 }
 ```
 
-<img src={CustomPageTransitionScreenshot} alt=''/>
+<img src={CustomPageTransitionScreenshot} alt="Animation showing a custom page transition that shrinks and expands views vertically"/>
 
 ## See also
 

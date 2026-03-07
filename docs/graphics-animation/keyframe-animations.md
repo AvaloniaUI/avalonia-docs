@@ -1,6 +1,8 @@
 ---
 id: keyframe-animations
 title: Using keyframe animations
+description: Define keyframe animations in XAML to animate control properties over a timeline.
+doc-type: how-to
 ---
 
 import AnimationKeyframeDiagram from '/img/guides/ui-development/graphics/animation-keyframe.png';
@@ -11,7 +13,7 @@ import BounceEaseInScreenshot from '/img/guides/ui-development/graphics/bounce-e
 
 You can use a keyframe animation to change one or more control properties following a timeline. The keyframes are defined in _Avalonia UI_ styles with **cue** points along the **duration** of the animation, and set the intermediate values of the properties at a point in time.
 
-<img src={AnimationKeyframeDiagram} alt=""/>
+<img src={AnimationKeyframeDiagram} alt="Diagram showing keyframe animation timeline with cue points"/>
 
 The property values between keyframes are set following the profile of an **easing function**. The default easing function is a straight-line interpolation.
 
@@ -65,7 +67,7 @@ The finished code will look like this:
 
 The resulting animation looks like this:
 
-<img src={KeyframeFadeScreenshot} alt=""/>
+<img src={KeyframeFadeScreenshot} alt="Animation showing a red rectangle fading in"/>
 
 The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!
 
@@ -95,7 +97,7 @@ This example shows you how to animate two properties on the same timeline.
 
 The red rectangle is faded-in and rotated at the same time.
 
-<img src={KeyframeCompositeAnimationScreenshot} alt=""/>
+<img src={KeyframeCompositeAnimationScreenshot} alt="Animation showing a red rectangle fading in and rotating simultaneously"/>
 
 ## Configuring animation
 
@@ -112,7 +114,7 @@ You can add a delay to the start of an animation by setting the delay attribute 
 
 ### Repeat
 
-You can make an animation repeat for a set number of times, or indefinitely. To repeat for a finite number of iterations set the `IterationCount` attribute on the animation element like this:
+You can make an animation repeat for a set number of times, or indefinitely. To repeat for a finite number of iterations, set the `IterationCount` attribute on the animation element:
 
 ```xml
 <Animation IterationCount="5">
@@ -130,7 +132,7 @@ To repeat an animation indefinitely, use the special  `"INFINITE"` value. For ex
 
 ### Playback direction
 
-By default an animation plays forward. That is it follows the profile of the easing function from left to right. You can alter this behavior by setting the `PlaybackDirection` attribute on the animation element. For example:
+By default an animation plays forward, following the profile of the easing function from left to right. You can alter this behavior by setting the `PlaybackDirection` attribute on the animation element:
 
 ```xml
 <Animation IterationCount="9" PlaybackDirection="AlternateReverse">
@@ -162,9 +164,9 @@ An easing function defines how a property is varied over time during an animatio
 
 <div>
 
-<img src={LinearEasingScreenshot} alt=""/>
+<img src={LinearEasingScreenshot} alt="Graph showing linear easing function"/>
 
-<img src={BounceEaseInScreenshot} alt=""/>
+<img src={BounceEaseInScreenshot} alt="Graph showing bounce ease-in easing function"/>
 
 </div>
 

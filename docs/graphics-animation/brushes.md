@@ -1,6 +1,8 @@
 ---
 id: brushes
 title: Brushes
+description: Brush types for painting surfaces in Avalonia including solid colors, gradients, and tile brushes.
+doc-type: reference
 ---
 
 Brushes define how surfaces are painted in Avalonia. Every property that accepts a `Brush` (such as `Background`, `Foreground`, `BorderBrush`, `Fill`, and `Stroke`) can use any of the brush types described here.

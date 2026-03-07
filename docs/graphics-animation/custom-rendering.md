@@ -1,6 +1,8 @@
 ---
 id: custom-rendering
 title: Custom rendering
+description: Draw custom graphics by overriding the Render method with DrawingContext.
+doc-type: how-to
 ---
 
 Avalonia provides a `DrawingContext` API for rendering custom graphics within controls. This is useful when the built-in shape and geometry controls are not flexible enough for your needs.

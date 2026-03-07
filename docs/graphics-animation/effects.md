@@ -1,6 +1,8 @@
 ---
 id: effects
 title: Effects
+description: Visual effects including box shadows, clipping, and opacity masks for Avalonia controls.
+doc-type: explanation
 ---
 
 Avalonia supports visual effects that add depth and visual interest to controls. The primary effect types are box shadows, clipping, and opacity masks.

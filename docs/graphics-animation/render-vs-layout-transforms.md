@@ -1,6 +1,8 @@
 ---
 id: render-vs-layout-transforms
 title: Render transforms vs layout transforms
+description: Differences between render transforms and layout transforms in Avalonia.
+doc-type: explanation
 ---
 
 Avalonia provides two ways to transform controls: render transforms and layout transforms. They produce different visual results because they apply at different stages of the rendering pipeline.

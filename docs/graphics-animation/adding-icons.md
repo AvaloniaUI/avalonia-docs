@@ -1,7 +1,11 @@
 ---
-index: adding-icons
+id: adding-icons
 title: Adding icons
+description: Add icons to your Avalonia application using image files, icon fonts, or path icons.
+doc-type: how-to
 ---
+
+Icons provide visual representations of actions or content, making your application easier to navigate. Avalonia supports image files, icon fonts, and path icons.
 
 ## UI icons
 
