@@ -25,7 +25,7 @@ Visual elements in `WindowDrawnDecorations` are divided into **underlay**, **ove
 ```
 TopLevelHost              (visual root, rendered by PresentationSource)
 ├── Underlay layer        (from template: borders, background, shadow area content)
-├── TopLevel/Window       (client area — Window.Bounds matches this)
+├── TopLevel/Window       (client area: Window.Bounds matches this)
 ├── Overlay layer         (from template: titlebar, caption buttons)
 ├── FullscreenPopover     (from template: hover-triggered titlebar for fullscreen)
 └── Resize hit-test zones (automatic, invisible, based on FrameThickness)
@@ -35,20 +35,7 @@ See [`WindowDrawnDecorationsContent`](#windowdrawndecorationscontent) for how th
 
 ## WindowDrawnDecorationsTemplate
 
-Custom template type marked with `[ControlTemplateScope]`. Builds `WindowDrawnDecorationsContent`.
-
-```csharp
-[ControlTemplateScope]
-public class WindowDrawnDecorationsTemplate : ITemplate
-{
-    [Content]
-    [TemplateContent(TemplateResultType = typeof(WindowDrawnDecorationsContent))]
-    public object? Content { get; set; }
-
-    public TemplateResult<WindowDrawnDecorationsContent> Build() =>
-        TemplateContent.Load<WindowDrawnDecorationsContent>(Content);
-}
-```
+Custom template type that builds `WindowDrawnDecorationsContent`. (See [WindowDrawnDecorationsContent](#windowdrawndecorationscontent).)
 
 ## WindowDrawnDecorationsContent
 
@@ -122,7 +109,7 @@ internal enum DecorationParts
 }
 ```
 
-Usable decoration parts may vary depending on platform, e.g., maxOS handles its own resize grips.
+Usable decoration parts may vary depending on platform, e.g., macOS handles its own resize grips.
 
 ## ElementRole
 
