@@ -32,6 +32,7 @@ const sidebars = {
             'tools/dev-tools/tools/events',
             'tools/dev-tools/tools/breakpoints',
             'tools/dev-tools/tools/metrics',
+            'tools/dev-tools/tools/profiler',
           ]
         }, 
         'tools/dev-tools/mcp',
