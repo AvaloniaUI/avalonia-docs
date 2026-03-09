@@ -2,7 +2,7 @@
 id: windows
 title: Windows issues
 sidebar_label: Windows
-description: Troubleshoot common Windows-specific issues with Avalonia applications, including SmartScreen warnings, Azure signing failures, rendering problems, and high-DPI scaling.
+description: Troubleshoot Windows-specific Avalonia issues including signing, rendering, scaling, and dark theme title bar problems.
 doc-type: troubleshooting
 ---
 
@@ -78,10 +78,44 @@ Avalonia respects the per-monitor DPI setting on Windows. If your application re
 
 When images appear blurry on high-DPI screens, provide multiple resolution variants of your assets. Avalonia selects the best match for the current DPI. You can place scaled variants alongside your base asset:
 
-```
+```text
 /Assets/logo.png        (1x, base)
 /Assets/logo@2x.png     (2x, for 200% scaling)
 ```
+
+## Theme and appearance
+
+#### Title bar stays light when switching to dark theme on Windows 10
+
+On Windows 10, the native title bar does not automatically follow the application's `RequestedThemeVariant`. This is a platform limitation: Windows 10 does not provide an official API for darkening the title bar. On Windows 11, Avalonia handles this automatically.
+
+If you need a dark title bar on Windows 10, you have two options:
+
+- **Use a custom title bar.** Set `ExtendClientAreaToDecorationsHint="True"` and `SystemDecorations="None"` to draw your own title bar with full theme control. See [Custom title bars](/docs/platform-specific-guides/windows#custom-title-bars) for details.
+- **Use the undocumented DWM API.** Call `DwmSetWindowAttribute` with `DWMWA_USE_IMMERSIVE_DARK_MODE` (attribute 20) via P/Invoke. This works on Windows 10 build 18985 and later, but it is undocumented and may change in future Windows updates.
+
+```csharp
+using System.Runtime.InteropServices;
+using Avalonia;
+
+[DllImport("dwmapi.dll", PreserveSig = true)]
+private static extern int DwmSetWindowAttribute(
+    IntPtr hwnd, int attr, ref int value, int size);
+
+private void SetDarkTitleBar(Window window, bool isDark)
+{
+    if (!OperatingSystem.IsWindows()) return;
+
+    var handle = window.TryGetPlatformHandle()?.Handle;
+    if (handle is null) return;
+
+    int value = isDark ? 1 : 0;
+    // Attribute 20: DWMWA_USE_IMMERSIVE_DARK_MODE
+    DwmSetWindowAttribute(handle.Value, 20, ref value, sizeof(int));
+}
+```
+
+Call this method after the window opens and whenever the theme changes (subscribe to `ActualThemeVariantChanged`).
 
 ## Window behavior
 

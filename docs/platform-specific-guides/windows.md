@@ -1,6 +1,8 @@
 ---
 id: windows
 title: Windows
+description: Windows-specific Avalonia features including transparency, Mica, custom title bars, dark mode, DPI scaling, and Win32 interop.
+doc-type: overview
 ---
 
 ## How Avalonia runs on Windows
@@ -94,6 +96,10 @@ if (settings is not null)
 ```
 
 This is useful for custom theming logic beyond what `FluentTheme` handles automatically. For example, you could adjust chart colors or image overlays based on whether the system is in light or dark mode.
+
+:::note
+On Windows 11, Avalonia automatically updates the native title bar to match the application's `RequestedThemeVariant`. On Windows 10, the title bar does not darken because the platform does not provide an official API for this. If you need a dark title bar on Windows 10, use a [custom title bar](#custom-title-bars) or the undocumented `DwmSetWindowAttribute` workaround described in [Windows troubleshooting](/troubleshooting/platform-specific-issues/windows#title-bar-stays-light-when-switching-to-dark-theme-on-windows-10).
+:::
 
 For more details, see [Platform Settings](/docs/services/platform-settings).
 
