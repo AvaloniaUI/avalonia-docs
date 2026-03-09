@@ -136,6 +136,7 @@ Or with a binding converter:
 | `VerticalAlignment` | `VerticalAlignment` | Same |
 | `Margin="10,5"` | `Margin="10,5"` | Same |
 | `SharedSizeGroup` | `SharedSizeGroup` | Same |
+| `Visibility` (`Visible`/`Collapsed`/`Hidden`) | `IsVisible` (`bool`) | `IsVisible="False"` equals WPF `Collapsed` (removed from layout). For WPF `Hidden` (invisible but still occupies space), use `Opacity="0"` instead. |
 
 ## Resources
 
@@ -203,6 +204,7 @@ Or with a binding converter:
 | `BeginStoryboard` | Animations declared in `Style.Animations` | Triggered by pseudo-classes |
 | `EasingFunction` | `Easing` property | Same easing types available |
 | `Transitions` (UWP) | `Transitions` | Property change animations |
+| `CompositionTarget.Rendering` | `TopLevel.RequestAnimationFrame()` | Per-frame callback on UI thread; see also `CompositionCustomVisualHandler` for render-thread callbacks |
 
 ## Graphics
 

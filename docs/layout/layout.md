@@ -52,7 +52,7 @@ The layout system completes two passes for each member of the `Children` collect
 
 During the measure pass, each member of the `Children` collection is evaluated. The process begins with a call to the `Measure` method. This method is called within the implementation of the parent `Panel` element, and does not have to be called explicitly for layout to occur.
 
-First, native size properties of the `Visual` such as `Clip` and `IsVisible` are evaluated. This generates a constraint that is passed to `MeasureCore`.
+First, native size properties of the `Visual` such as `Clip` and `IsVisible` are evaluated. If `IsVisible` is `false`, the control is excluded from layout entirely: the layout system assigns it a `DesiredSize` of zero and skips its subtree. This also means the renderer does not draw the control. For a comparison of `IsVisible` and `Opacity` as hiding strategies, see [IsVisible vs Opacity](/docs/graphics-animation/effects#isvisible-vs-opacity). The evaluation of these native properties generates a constraint that is passed to `MeasureCore`.
 
 First, framework properties which affects the value of the constraint are processed. These properties generally describe the sizing characteristics of the underlying `Control`, such as its `Height`, `Width` and `Margin`. Each of these properties can change the space that is necessary to display the element. `MeasureOverride` is then called with the constraint as a parameter.
 

@@ -143,6 +143,10 @@ Child bindings within a `MultiBinding` support the same source options as regula
 `MultiBinding` is one-way by default. Two-way multi-bindings are not supported because there is no general way to reverse a multi-value conversion back to individual source properties.
 :::
 
+:::tip
+Unlike WPF, Avalonia supports nesting a `MultiBinding` inside another `MultiBinding`. Each nested `MultiBinding` resolves to a single value in the parent converter's input array.
+:::
+
 ## FuncMultiValueConverter
 
 Avalonia provides `FuncMultiValueConverter<TIn, TOut>` for simple scenarios where you want to define the conversion logic inline without creating a full class.

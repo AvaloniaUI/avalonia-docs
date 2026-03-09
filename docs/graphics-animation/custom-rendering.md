@@ -83,7 +83,7 @@ public override void Render(DrawingContext context)
 
 ### Drawing text
 
-Use `FormattedText` to measure and render text:
+Use `FormattedText` to measure and render a single run of text:
 
 ```csharp
 public override void Render(DrawingContext context)
@@ -100,14 +100,15 @@ public override void Render(DrawingContext context)
 }
 ```
 
-For more control over text rendering, use `TextLayout`:
+`FormattedText` is suitable for simple, single-line or short text. For multi-line text, text wrapping, justified alignment, or per-line metrics, use `TextLayout` instead. `TextLayout` supports features that `FormattedText` does not, including `TextAlignment.Justify`:
 
 ```csharp
 var layout = new TextLayout(
-    "Multi-line text with wrapping support.",
+    "Multi-line text with wrapping and justification support.",
     new Typeface("Segoe UI"),
     16,
     Brushes.Black,
+    textAlignment: TextAlignment.Justify,
     maxWidth: 200);
 
 // Access line metrics
@@ -292,6 +293,86 @@ GPU image and semaphore handle types vary by platform. Use `KnownPlatformGraphic
 
 Check `CompositionGpuImportedImageSynchronizationCapabilities` on an imported image to determine which synchronization methods are available (`KeyedMutex`, `Semaphores`, `TimelineSemaphores`).
 
+## CompositionCustomVisualHandler
+
+`CompositionCustomVisualHandler` provides per-frame callbacks that run directly on the render thread, without blocking the UI thread. This is useful for smooth, continuous animations or real-time visualizations where UI-thread overhead is a concern.
+
+For simpler scenarios where UI-thread callbacks are acceptable, use [`TopLevel.RequestAnimationFrame`](/docs/fundamentals/top-level#requestanimationframe) instead.
+
+### Setting up a custom visual handler
+
+Create a `CompositionCustomVisualHandler` and register it with a control's composition visual:
+
+```csharp
+public class RenderThreadAnimationControl : Control
+{
+    private CompositionCustomVisualHandler? _handler;
+
+    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnAttachedToVisualTree(e);
+
+        var visual = ElementComposition.GetElementVisual(this);
+        if (visual == null) return;
+
+        var compositor = visual.Compositor;
+
+        _handler = new CompositionCustomVisualHandler(
+            OnRender, OnMessage);
+
+        compositor.CreateCustomVisual(_handler);
+    }
+
+    private void OnRender(
+        CompositionCustomVisualHandler sender,
+        SkiaSharp.SKCanvas canvas,
+        RenderBounds bounds)
+    {
+        // This runs on the render thread.
+        // Draw directly with the SkiaSharp canvas.
+        using var paint = new SkiaSharp.SKPaint
+        {
+            IsAntialias = true,
+            Color = SkiaSharp.SKColors.CornflowerBlue
+        };
+        canvas.DrawCircle(
+            (float)bounds.Width / 2,
+            (float)bounds.Height / 2,
+            50f, paint);
+
+        // Request another frame for continuous rendering
+        sender.RequestNextFrameRendering();
+    }
+
+    private void OnMessage(
+        CompositionCustomVisualHandler sender,
+        object message)
+    {
+        // Handle messages sent from the UI thread
+        // via sender.SendHandlerMessage(data)
+    }
+}
+```
+
+### Communicating between threads
+
+Because `OnRender` runs on the render thread, you cannot directly access UI-thread state. Use `SendHandlerMessage` to pass data from the UI thread to the render callback:
+
+```csharp
+// On the UI thread: send updated data to the render thread
+_handler?.SendHandlerMessage(new AnimationData(progress: 0.5));
+```
+
+The message arrives in the `OnMessage` callback, where you can store it for use in the next render pass. This pattern keeps the UI thread responsive while the render thread handles drawing.
+
+### When to use CompositionCustomVisualHandler
+
+| Approach | Thread | Use case |
+|---|---|---|
+| `TopLevel.RequestAnimationFrame` | UI thread | Simple per-frame updates, property animation loops |
+| `CompositionCustomVisualHandler` | Render thread | Real-time visualizations, game loops, video rendering |
+| `Render()` override | UI thread | Standard custom control drawing |
+
 ## Performance considerations
 
 - `Render` is called on the UI thread. Keep drawing operations fast and avoid allocations where possible.
@@ -302,6 +383,8 @@ Check `CompositionGpuImportedImageSynchronizationCapabilities` on an imported im
 
 ## See also
 
+- [TopLevel.RequestAnimationFrame](/docs/fundamentals/top-level#requestanimationframe): Per-frame callbacks on the UI thread.
+- [Composition Animations](/docs/graphics-animation/composition-animations): Render-thread property animations using the composition API.
 - [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Built-in shape controls and geometry types.
 - [Drawing Controls](/docs/custom-controls/drawing-custom-controls): Creating custom controls that draw themselves.
 - [Brushes](/docs/graphics-animation/brushes): Available brush types for filling and stroking.

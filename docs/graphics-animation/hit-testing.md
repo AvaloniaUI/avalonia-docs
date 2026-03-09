@@ -172,8 +172,55 @@ private void OnCanvasPointerPressed(object? sender, PointerPressedEventArgs e)
 }
 ```
 
+## Performance with many elements
+
+Avalonia's hit-testing walks the visual tree and tests each element individually. There is no built-in spatial partitioning (such as a quadtree). For panels with a small number of children, this is fast. When you have hundreds or thousands of interactive elements on a `Canvas` or `Panel`, the linear walk becomes noticeable, especially for pointer press events where every candidate element must be tested.
+
+### Symptoms
+
+- A delay between clicking and the `PointerPressed` event firing, growing linearly with the number of children.
+- The delay is input-related, not a rendering or layout problem. Frame rates remain normal.
+
+### Strategies
+
+**Disable hit testing on individual elements and use an overlay.** Place a transparent overlay on top of all the child elements. Handle `PointerPressed` on the overlay and use your own logic to determine which element was clicked. Set `IsHitTestVisible="False"` on the children so Avalonia skips them during the tree walk:
+
+```xml
+<Panel>
+    <!-- All items have IsHitTestVisible="False" -->
+    <Canvas x:Name="ItemsCanvas" IsHitTestVisible="False">
+        <!-- Hundreds of child controls -->
+    </Canvas>
+
+    <!-- Transparent overlay catches all pointer events -->
+    <Border Background="Transparent" PointerPressed="OnOverlayPointerPressed" />
+</Panel>
+```
+
+```csharp
+private void OnOverlayPointerPressed(object? sender, PointerPressedEventArgs e)
+{
+    var pos = e.GetPosition(ItemsCanvas);
+
+    // Use your own spatial lookup to find the item at this position
+    var item = FindItemAt(pos);
+    if (item != null)
+    {
+        SelectItem(item);
+        e.Handled = true;
+    }
+}
+```
+
+Your `FindItemAt` method can use any lookup strategy that fits your data. For a grid-like arrangement, a simple coordinate calculation may suffice. For irregular shapes, consider a spatial index such as a quadtree or R-tree.
+
+**Switch to custom rendering.** Instead of creating a separate control for each element, render all elements in a single control's `Render` override. This eliminates per-element hit testing entirely, since only the single parent control participates in the hit test. You then handle pointer events on that control and determine which logical element was clicked based on the pointer position. See [Custom Rendering](/docs/graphics-animation/custom-rendering) for details.
+
+**Reduce the number of hit-testable elements.** If only some elements need to be interactive, set `IsHitTestVisible="False"` on the rest. For example, in a diagram editor, background grid lines and labels can be excluded from hit testing while only the draggable nodes remain interactive.
+
 ## See also
 
 - [Pointer Input](/docs/input-interaction/pointer): Pointer events and position.
 - [Custom Rendering](/docs/graphics-animation/custom-rendering): Drawing with DrawingContext.
 - [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Geometry types for hit regions.
+- [Performance Optimization](/docs/app-development/performance): General performance guidance.

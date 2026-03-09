@@ -297,6 +297,23 @@ When you omit `Grid.Row` and `Grid.Column`, children default to row 0, column 0.
 </Grid>
 ```
 
+### Partial overlap with negative margins
+
+To overlap two elements by a specific amount without placing them in the same cell, use a negative margin on the second element:
+
+```xml
+<StackPanel Orientation="Horizontal">
+    <Border Background="LightBlue" Padding="12">
+        <TextBlock Text="First" />
+    </Border>
+    <Border Background="LightCoral" Padding="12" Margin="-10,0,0,0">
+        <TextBlock Text="Second (overlaps by 10px)" />
+    </Border>
+</StackPanel>
+```
+
+The negative left margin pulls the second element 10 pixels to the left, overlapping the first. The second element appears on top because it comes later in the markup. This technique works in any panel, not just `Grid`.
+
 ## Debugging grid layouts
 
 Set `ShowGridLines="True"` on your `Grid` to visualize row and column boundaries during development:

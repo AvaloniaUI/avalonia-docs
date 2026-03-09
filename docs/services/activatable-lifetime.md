@@ -5,10 +5,10 @@ description: API reference for IActivatableLifetime, the service that exposes ap
 doc-type: reference
 ---
 
-The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an app. `IActivatableLifetime` is a global app-level service that is accessed from the application instance using the `TryGetService` method:
+The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an app. `IActivatableLifetime` is a global app-level service that is accessed from the application instance using the `TryGetFeature` method:
 
 ```csharp
-Application.Current.TryGetService<IActivatableLifetime>().
+Application.Current.TryGetFeature<IActivatableLifetime>();
 ```
 
 ## Events
@@ -38,6 +38,41 @@ Tells the application to attempt to enter background state.
 Returns `true` if it was possible on the given platform. Otherwise, returns `false`.
 
 **Example:** `[NSApp hide]` on macOS.
+
+## Subscribing early for startup events
+
+To receive activation events that occur at app startup (for example, when the user double-clicks an associated file to launch the app), subscribe to `Activated` inside `OnFrameworkInitializationCompleted` before any `await` calls. If the handler is attached too late, the startup activation event may have already fired and will be missed.
+
+```csharp
+public override void OnFrameworkInitializationCompleted()
+{
+    if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktopLifetime)
+    {
+        desktopLifetime.MainWindow = new MainWindow();
+
+        if (this.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+        {
+            activatableLifetime.Activated += (_, e) =>
+            {
+                if (e is ProtocolActivatedEventArgs protocolArgs)
+                {
+                    Console.WriteLine($"Protocol: {protocolArgs.Uri}");
+                }
+                else if (e is FileActivatedEventArgs fileArgs)
+                {
+                    Console.WriteLine($"File: {fileArgs.Files.FirstOrDefault()?.Path}");
+                }
+            };
+        }
+    }
+
+    base.OnFrameworkInitializationCompleted();
+}
+```
+
+:::caution
+Use the correct event args type for each activation kind. `ProtocolActivatedEventArgs` handles URI/deep link activation (`ActivationKind.OpenUri`). `FileActivatedEventArgs` handles file association activation (`ActivationKind.File`). Checking for `ProtocolActivatedEventArgs` when a file is opened will not match, and the event will appear to not fire.
+:::
 
 ## Examples
 
