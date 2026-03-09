@@ -292,6 +292,33 @@ var result = await Task.Run(() => ComputeResult());
 StatusText.Text = result; // Runs on UI thread after await
 ```
 
+### Modifying collections from a background thread
+
+Modifying a bound `ObservableCollection` from a background thread does not always throw an exception. Instead, items may be silently dropped or only partially added, making the problem difficult to diagnose:
+
+```csharp
+// WRONG: Collection changes may be silently lost
+await Task.Run(async () =>
+{
+    foreach (var item in loadedItems)
+    {
+        Items.Add(item); // May only add the first item
+    }
+});
+
+// CORRECT: Load data on background thread, update collection on UI thread
+var data = await Task.Run(() => LoadItems());
+Items = new ObservableCollection<Item>(data);
+
+// ALSO CORRECT: Dispatch each addition if you need incremental updates
+foreach (var item in loadedItems)
+{
+    await Dispatcher.UIThread.InvokeAsync(() => Items.Add(item));
+}
+```
+
+If your `async` method started on the UI thread, code after `await` resumes on the UI thread automatically (see [SynchronizationContext](#async-patterns)). Collection modifications in that continuation do not need explicit dispatching. The problem occurs when the method runs entirely on a background thread, or when `ConfigureAwait(false)` was used earlier in the call chain.
+
 ### Blocking the UI thread
 
 ```csharp
