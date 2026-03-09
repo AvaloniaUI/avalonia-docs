@@ -199,9 +199,11 @@ If you need to hide a control visually while keeping its layout space reserved, 
 
 `ClipToBounds="True"` creates a clip layer. Only use it when child content actually exceeds the control bounds.
 
-### Avoid transparent backgrounds on large areas
+### Reduce hit-testing cost
 
-Transparent elements still participate in hit testing and rendering. If a control does not need pointer interaction, set `IsHitTestVisible="False"`:
+When a pointer event occurs, Avalonia walks the visual tree and tests each element. With hundreds or thousands of children in a `Canvas` or `Panel`, this linear walk adds a noticeable delay between clicking and receiving the event. Set `IsHitTestVisible="False"` on elements that do not need pointer interaction, and consider an overlay-based hit-test strategy or custom rendering for scenes with many objects. See [Hit Testing: Performance with many elements](/docs/graphics-animation/hit-testing#performance-with-many-elements) for patterns and code examples.
+
+Transparent elements also participate in hit testing. If a control does not need pointer interaction, set `IsHitTestVisible="False"`:
 
 ```xml
 <Border Background="Transparent" IsHitTestVisible="False">
@@ -423,3 +425,4 @@ public override void OnFrameworkInitializationCompleted()
 - [Threading Model](/docs/app-development/threading): UI thread and Dispatcher usage.
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): Compile-time binding validation and performance.
 - [Collection Views](/docs/data-binding/collection-views): Efficient collection filtering and sorting.
+- [Hit Testing](/docs/graphics-animation/hit-testing): Hit-test mechanics and performance with many elements.
