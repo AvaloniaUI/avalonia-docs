@@ -408,8 +408,9 @@ private void OnLoadingRow(object? sender, DataGridRowEventArgs e)
 <DataGrid ItemsSource="{Binding Products}" LoadingRow="OnLoadingRow" />
 ```
 
-## See Also
+## See also
 
 - [DataGrid Control Reference](/controls/data-display/structured-data/datagrid): Setup and property tables.
 - [TreeDataGrid](/controls/data-display/structured-data/treedatagrid): For hierarchical data display.
 - [Binding to Collections](/docs/data-binding/how-to-bind-to-a-collection): ObservableCollection patterns.
+- [Performance Optimization](/docs/app-development/performance#collection-performance): Batch updates and virtualization for large collections.
