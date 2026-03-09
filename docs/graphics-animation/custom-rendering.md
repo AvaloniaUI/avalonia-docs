@@ -83,7 +83,7 @@ public override void Render(DrawingContext context)
 
 ### Drawing text
 
-Use `FormattedText` to measure and render text:
+Use `FormattedText` to measure and render a single run of text:
 
 ```csharp
 public override void Render(DrawingContext context)
@@ -100,14 +100,15 @@ public override void Render(DrawingContext context)
 }
 ```
 
-For more control over text rendering, use `TextLayout`:
+`FormattedText` is suitable for simple, single-line or short text. For multi-line text, text wrapping, justified alignment, or per-line metrics, use `TextLayout` instead. `TextLayout` supports features that `FormattedText` does not, including `TextAlignment.Justify`:
 
 ```csharp
 var layout = new TextLayout(
-    "Multi-line text with wrapping support.",
+    "Multi-line text with wrapping and justification support.",
     new Typeface("Segoe UI"),
     16,
     Brushes.Black,
+    textAlignment: TextAlignment.Justify,
     maxWidth: 200);
 
 // Access line metrics
