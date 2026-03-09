@@ -136,6 +136,7 @@ Or with a binding converter:
 | `VerticalAlignment` | `VerticalAlignment` | Same |
 | `Margin="10,5"` | `Margin="10,5"` | Same |
 | `SharedSizeGroup` | `SharedSizeGroup` | Same |
+| `Visibility` (`Visible`/`Collapsed`/`Hidden`) | `IsVisible` (`bool`) | `IsVisible="False"` equals WPF `Collapsed` (removed from layout). For WPF `Hidden` (invisible but still occupies space), use `Opacity="0"` instead. |
 
 ## Resources
 

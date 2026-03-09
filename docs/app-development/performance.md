@@ -181,6 +181,20 @@ using (myPanel.BeginBatchUpdate())
 
 ## Rendering performance
 
+### Hide unused controls with IsVisible
+
+Setting `IsVisible="False"` completely removes a control from both layout and rendering. The layout system skips the measure and arrange passes for that control and its entire subtree, and the renderer does not draw it. This makes `IsVisible` an effective way to reduce work for conditionally shown content:
+
+```xml
+<Panel>
+    <StackPanel IsVisible="{Binding ShowDetails}">
+        <!-- Complex content: only measured and rendered when visible -->
+    </StackPanel>
+</Panel>
+```
+
+If you need to hide a control visually while keeping its layout space reserved, use `Opacity="0"` instead. An element with `Opacity="0"` still participates in layout and can receive input.
+
 ### Use ClipToBounds judiciously
 
 `ClipToBounds="True"` creates a clip layer. Only use it when child content actually exceeds the control bounds.
