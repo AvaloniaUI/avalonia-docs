@@ -34,13 +34,13 @@ But it is possible to redefine this behavior by changing `DeveloperToolsOptions.
 ```csharp
 this.AttachDeveloperTools(o =>
 {
-    o.Runner = DeveloperToolsOptions.DotNetTool;
+    o.Runner = DeveloperToolsRunner.DotNetTool;
 });
 ```
 
 Possible options are:
 
-1. `DeveloperToolsOptions.DotNetTool` - global .NET tool.
+1. `DeveloperToolsRunner.DotNetTool` - global .NET tool.
 2. `DeveloperToolsOptions.AppleBundle` - runs macOS bundle by its ID. To make it work, you need to run `Developer Tools` process directly at least once.
 3. `DeveloperToolsOptions.NoOp` - do nothing. This option assumes the `Developer Tools` application was started by the user manually. 
 4. `DeveloperToolsRunner.CreateFromExecutable(string)` - run executable by full path. This option is not recommended, unless you prefer a custom installation of the tool.
