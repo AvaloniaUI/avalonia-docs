@@ -6,14 +6,14 @@ doc-type: how-to
 ---
 
 
-When one of the built-in data binding converters does not meet your conversion requirements, you can write a custom converter based on the `IValueConverter` interface. This guide will show you how.
+When one of the built-in data binding converters does not meet your conversion requirements, you can write a custom converter based on the [`IValueConverter`](/api/avalonia/data/converters/ivalueconverter) interface. This guide will show you how.
 
 :::info
 To review the _Microsoft_ documentation for the `IValueConverter` interface, see the [IValueConverter API reference](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1).
 :::
 
 :::info
-As the `IValueConverter` interface was not available in .NET standard 2.0, Avalonia UI contains a copy in the `Avalonia.Data.Converters` namespace. You can see the [Avalonia IValueConverter API documentation](https://api-docs.avaloniaui.net/docs/T_Avalonia_Data_Converters_IValueConverter).
+As the `IValueConverter` interface was not available in .NET standard 2.0, Avalonia UI contains a copy in the `Avalonia.Data.Converters` namespace. You can see the [Avalonia IValueConverter API documentation](/api/avalonia/data/converters/ivalueconverter).
 :::
 
 You must reference a custom converter in some resources before it can be used. This can be at any level in your application. In this example, the custom converter `myConverter` is referenced in the window resources:

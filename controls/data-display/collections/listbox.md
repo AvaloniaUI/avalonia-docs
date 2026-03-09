@@ -172,7 +172,7 @@ The list is the fill area of the dock panel here, so its height is set to the re
 
 ## Item styling
 
-Each item displayed in a list box is drawn inside a `ListBoxItem` element. You can see this using the _Avalonia Dev Tools_ (F12), using the **Visual Tools** tab. For example:
+Each item displayed in a list box is drawn inside a [`ListBoxItem`](/api/avalonia/controls/listboxitem) element. You can see this using the _Avalonia Dev Tools_ (F12), using the **Visual Tools** tab. For example:
 
 <img src={ListBoxDevToolsScreenshot} alt="" />
 
@@ -217,5 +217,5 @@ namespace AvaloniaControls.Views
 
 ## See also
 
-- [ListBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ListBox)
+- [ListBox API reference](/api/avalonia/controls/listbox)
 - [`ListBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ListBox.cs)

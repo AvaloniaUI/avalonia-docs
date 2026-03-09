@@ -106,6 +106,6 @@ If you need more control over how child elements are positioned, consider one of
 
 ## See also
 
-- [Panel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Panel)
+- [Panel API reference](/api/avalonia/controls/panel)
 - [`Panel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Panel.cs)
 - [Custom panel](/docs/custom-controls/custom-panel)

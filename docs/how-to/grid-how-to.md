@@ -5,7 +5,7 @@ description: Row and column definitions, sizing modes, spanning, shared sizing, 
 doc-type: how-to
 ---
 
-This guide covers common `Grid` layout scenarios including row and column definitions, sizing modes, spanning, shared sizing, and responsive patterns.
+This guide covers common [`Grid`](/api/avalonia/controls/grid) layout scenarios including row and column definitions, sizing modes, spanning, shared sizing, and responsive patterns.
 
 ## Row and column definitions
 

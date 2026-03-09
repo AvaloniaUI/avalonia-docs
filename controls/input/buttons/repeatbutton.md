@@ -66,5 +66,5 @@ The `RepeatButton` is useful in any scenario where you need continuous action wh
 
 - [Button](/controls/input/buttons/button)
 - [ButtonSpinner](/controls/input/buttons/buttonspinner)
-- [RepeatButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RepeatButton)
+- [RepeatButton API reference](/api/avalonia/controls/repeatbutton)
 - [`RepeatButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RepeatButton.cs)

@@ -83,7 +83,7 @@ public override void Render(DrawingContext context)
 
 ### Drawing text
 
-Use `FormattedText` to measure and render a single run of text:
+Use [`FormattedText`](/api/avalonia/media/formattedtext) to measure and render a single run of text:
 
 ```csharp
 public override void Render(DrawingContext context)
@@ -295,7 +295,7 @@ Check `CompositionGpuImportedImageSynchronizationCapabilities` on an imported im
 
 ## CompositionCustomVisualHandler
 
-`CompositionCustomVisualHandler` provides per-frame callbacks that run directly on the render thread, without blocking the UI thread. This is useful for smooth, continuous animations or real-time visualizations where UI-thread overhead is a concern.
+[`CompositionCustomVisualHandler`](/api/avalonia/rendering/composition/compositioncustomvisualhandler) provides per-frame callbacks that run directly on the render thread, without blocking the UI thread. This is useful for smooth, continuous animations or real-time visualizations where UI-thread overhead is a concern.
 
 For simpler scenarios where UI-thread callbacks are acceptable, use [`TopLevel.RequestAnimationFrame`](/docs/fundamentals/top-level#requestanimationframe) instead.
 

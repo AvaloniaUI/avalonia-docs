@@ -13,7 +13,7 @@ import NavigationPageAppearanceScreenshot from '/img/controls/navigationpage/nav
 import NavigationPageModalScreenshot from '/img/controls/navigationpage/navigationpage-modal.png';
 import NavigationPageDrawerIntegrationScreenshot from '/img/controls/navigationpage/navigationpage-drawer-integration.png';
 
-The `NavigationPage` manages a stack-based navigation system, allowing you to push and pop pages with animated transitions. It displays a navigation bar with a back button and the current page's header.
+The [`NavigationPage`](/api/avalonia/controls/navigationpage) manages a stack-based navigation system, allowing you to push and pop pages with animated transitions. It displays a navigation bar with a back button and the current page's header.
 
 `NavigationPage` implements the `INavigation` interface, providing a full set of async navigation methods for pushing, popping, and replacing pages.
 
@@ -31,8 +31,8 @@ The navigation bar is divided into three zones:
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| `Content` | `Page` | `null` | The initial root page displayed in the navigation stack. |
-| `PageTransition` | `IPageTransition` | Platform default | The transition animation used when navigating between pages. |
+| `Content` | [`Page`](/api/avalonia/controls/page) | `null` | The initial root page displayed in the navigation stack. |
+| `PageTransition` | [`IPageTransition`](/api/avalonia/animation/ipagetransition) | Platform default | The transition animation used when navigating between pages. |
 | `ModalTransition` | `IPageTransition` | Platform default | The transition animation used when presenting or dismissing modal pages. |
 | `HasShadow` | `bool` | `false` | Displays a shadow beneath the navigation bar. |
 | `BarHeight` | `double` | `48` | The height of the navigation bar. |
@@ -412,5 +412,5 @@ Disable the swipe-to-go-back gesture globally or check whether it is enabled:
 - [TabbedPage](tabbedpage)
 - [DrawerPage](drawerpage)
 - [Page Transitions](/docs/graphics-animation/page-transitions)
-- [NavigationPage API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NavigationPage)
+- [NavigationPage API reference](/api/avalonia/controls/navigationpage)
 - [`NavigationPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/NavigationPage.cs)

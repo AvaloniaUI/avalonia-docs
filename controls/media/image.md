@@ -87,5 +87,5 @@ This example is using two images, where the second image is using the `Multiply`
 
 ## See also
 
-- [Image API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Image)
+- [Image API reference](/api/avalonia/controls/image)
 - [`Image.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Image.cs)

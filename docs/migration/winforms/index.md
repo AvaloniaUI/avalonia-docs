@@ -25,7 +25,7 @@ Windows Forms and Avalonia are fundamentally different UI models. Unlike migrati
 | `DataGridView` | `DataGrid` (NuGet package) | Separate package: `Avalonia.Controls.DataGrid` |
 | `ToolStrip` / `MenuStrip` | `Menu` / `ToolTip` / `ContextMenu` | Different control names, same concepts |
 | `Form` | `Window` | |
-| `UserControl` | `UserControl` | Same name, different base class |
+| [`UserControl`](/api/avalonia/controls/usercontrol) | `UserControl` | Same name, different base class |
 | `MessageBox.Show()` | Dialog windows or custom overlays | No built-in message box |
 | GDI+ drawing (`OnPaint`) | `DrawingContext` or custom `Render` override | Different rendering API |
 | `Application.Run(new MainForm())` | `AppBuilder` pipeline | Avalonia uses a builder pattern for app startup |

@@ -342,5 +342,5 @@ private void OnButtonClick(object? sender, RoutedEventArgs e)
 
 ## See also
 
-- [`Dispatcher` API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Threading_Dispatcher)
+- [`Dispatcher` API reference](/api/avalonia/threading/dispatcher)
 - [Application Lifetimes](/docs/fundamentals/application-lifetimes): How the application lifecycle interacts with threading.

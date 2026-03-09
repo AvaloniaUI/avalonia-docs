@@ -5,7 +5,7 @@ description: Bind an ObservableCollection to list controls so the UI updates aut
 doc-type: how-to
 ---
 
-When your application needs to display a dynamic list of items, you bind a collection property to a list control such as `ListBox`, `ItemsControl`, or `ComboBox`. By using `ObservableCollection<T>`, the UI stays in sync whenever you add, remove, or reorder items. This guide walks you through the common scenarios for collection binding in Avalonia.
+When your application needs to display a dynamic list of items, you bind a collection property to a list control such as [`ListBox`](/api/avalonia/controls/listbox), [`ItemsControl`](/api/avalonia/controls/itemscontrol), or `ComboBox`. By using `ObservableCollection<T>`, the UI stays in sync whenever you add, remove, or reorder items. This guide walks you through the common scenarios for collection binding in Avalonia.
 
 ## Why use `ObservableCollection<T>`
 

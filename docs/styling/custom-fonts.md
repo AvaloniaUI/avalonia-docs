@@ -74,7 +74,7 @@ Alternatively, define your font resources in a separate AXAML file and include t
 
 ## Embedded font collections
 
-An `EmbeddedFontCollection` registers a directory of font files under a custom URI scheme. This lets you reference fonts by family name directly in XAML without declaring individual resource keys.
+An [`EmbeddedFontCollection`](/api/avalonia/media/fonts/embeddedfontcollection) registers a directory of font files under a custom URI scheme. This lets you reference fonts by family name directly in XAML without declaring individual resource keys.
 
 The collection maps a custom URI (for example, `fonts:MyFonts`) to an asset directory (for example, `avares://MyApp/Assets/Fonts`). You create the collection by subclassing `EmbeddedFontCollection`:
 

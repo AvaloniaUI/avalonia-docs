@@ -96,5 +96,5 @@ When you use `ItemWidth` or `ItemHeight`, child controls may be smaller than the
 - [StackPanel](stackpanel)
 - [DockPanel](dockpanel)
 - [Panels overview](../panels-overview)
-- [WrapPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_WrapPanel)
+- [WrapPanel API reference](/api/avalonia/controls/wrappanel)
 - [`WrapPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/WrapPanel.cs)

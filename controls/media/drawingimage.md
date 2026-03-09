@@ -5,7 +5,7 @@ description: A control that renders vector graphics as an IImage using Avalonia 
 doc-type: reference
 ---
 
-`DrawingImage` renders vector graphics as an `IImage`, making it usable anywhere a bitmap image would be. Instead of loading pixels from a file, it draws shapes, paths, and other vector content defined through Avalonia's `Drawing` classes.
+[`DrawingImage`](/api/avalonia/media/drawingimage) renders vector graphics as an `IImage`, making it usable anywhere a bitmap image would be. Instead of loading pixels from a file, it draws shapes, paths, and other vector content defined through Avalonia's [`Drawing`](/api/avalonia/media/drawing) classes.
 
 This is useful when you need resolution-independent icons or graphics that can scale without quality loss, or when you want to define images purely in XAML without external asset files.
 
@@ -18,7 +18,7 @@ A `DrawingImage` wraps a single `Drawing` object in its `Drawing` property. Aval
 | `GeometryDrawing` | Fills and/or strokes a `Geometry` shape |
 | `ImageDrawing` | Renders a bitmap image within a rectangular region |
 | `GlyphRunDrawing` | Renders a glyph run with a foreground brush |
-| `DrawingGroup` | Combines multiple drawings into one, with optional transform, clip, and opacity |
+| [`DrawingGroup`](/api/avalonia/media/drawinggroup) | Combines multiple drawings into one, with optional transform, clip, and opacity |
 
 ## Useful properties
 
@@ -115,7 +115,7 @@ Use bitmap images (`Image.Source` with an asset path) when you have photographic
 - [PathIcon](/controls/media/pathicon)
 - [Geometry](/docs/guides/graphics-and-animation/geometries)
 - [Drawing and brushes](/docs/guides/graphics-and-animation/drawing-and-brushes)
-- [DrawingImage API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Media_DrawingImage)
-- [GeometryDrawing API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Media_GeometryDrawing)
-- [DrawingGroup API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Media_DrawingGroup)
+- [DrawingImage API reference](/api/avalonia/media/drawingimage)
+- [GeometryDrawing API reference](/api/avalonia/media/geometrydrawing)
+- [DrawingGroup API reference](/api/avalonia/media/drawinggroup)
 - [`DrawingImage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Media/DrawingImage.cs)

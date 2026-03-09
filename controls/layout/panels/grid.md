@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 import GridSharedSizeGroupScreenshot from '/img/controls/grid/grid-sharedsizegroup.png';
 import GridSampleScreenshot from '/img/controls/grid/grid_example.png';
 
-The `Grid` control is useful for arranging child controls in columns and rows. You can define absolute, proportional, and 
+The [`Grid`](/api/avalonia/controls/grid) control is useful for arranging child controls in columns and rows. You can define absolute, proportional, and 
 autosized row and column geometries for the `Grid`.
 
 Each child control in the `Grid` can be positioned in a `Grid` cell using column and row coordinates. These are 
@@ -422,7 +422,7 @@ grid1.Children.Add(button3);
 
 ## See also
 
-- [Grid API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Grid)
+- [Grid API reference](/api/avalonia/controls/grid)
 - [`Grid.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
 - [GridSplitter](gridsplitter)
 - [Canvas](canvas)

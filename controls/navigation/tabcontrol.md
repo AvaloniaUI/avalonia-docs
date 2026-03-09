@@ -5,7 +5,7 @@ description: A guide to the Avalonia TabControl, which organizes content into sw
 doc-type: reference
 ---
 
-The `TabControl` allows you to sub-divide a view into tab items.
+The [`TabControl`](/api/avalonia/controls/tabcontrol) allows you to sub-divide a view into tab items.
 
 Each tab item has a header and a content zone. The headers are presented in a strip, in the sequence they occur in the XAML. When you click on a tab header, its content becomes visible and is placed below the tab strip in the content zone of the tab control.
 
@@ -157,5 +157,5 @@ public class SettingsViewModel : ViewModelBase
 
 - [TabStrip](/controls/navigation/tabstrip)
 - [Carousel](/controls/navigation/carousel)
-- [TabControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TabControl)
+- [TabControl API reference](/api/avalonia/controls/tabcontrol)
 - [`TabControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TabControl.cs)

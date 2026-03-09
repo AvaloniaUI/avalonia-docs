@@ -99,7 +99,7 @@ If you do not set `Placement`, the flyout uses a default position determined by 
 
 ## See also
 
-- [MenuFlyout API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_MenuFlyout)
+- [MenuFlyout API reference](/api/avalonia/controls/menuflyout)
 - [`MenuFlyout.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/MenuFlyout.cs)
 - [Separator](/controls/menus/separator)
 - [Menu](/controls/menus/menu)

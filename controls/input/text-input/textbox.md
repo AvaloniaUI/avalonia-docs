@@ -6,7 +6,7 @@ doc-type: reference
 
 import TextBoxEntryScreenshot from '/img/controls/textbox/textbox-entry.gif';
 
-The `TextBox` presents an area for typed (keyboard) input. You can use it for single-line fields such as a username, or enable multi-line editing for longer-form content like notes or comments.
+The [`TextBox`](/api/avalonia/controls/textbox) presents an area for typed (keyboard) input. You can use it for single-line fields such as a username, or enable multi-line editing for longer-form content like notes or comments.
 
 ## Useful properties
 
@@ -135,7 +135,7 @@ You can add icons or buttons inside the `TextBox` using `InnerLeftContent` and `
 
 ## See also
 
-- [TextBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBox)
+- [TextBox API reference](/api/avalonia/controls/textbox)
 - [`TextBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBox.cs)
 - [MaskedTextBox](maskedtextbox.md)
 - [AutoCompleteBox](autocompletebox.md)

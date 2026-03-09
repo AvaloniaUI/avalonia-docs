@@ -19,7 +19,7 @@ Several common properties in Avalonia are registered as inherited:
 
 | Property | Defined On | Effect |
 |---|---|---|
-| `FontFamily` | `TextElement` | Text controls inherit the font family from their parent. |
+| `FontFamily` | [`TextElement`](/api/avalonia/controls/documents/textelement) | Text controls inherit the font family from their parent. |
 | `FontSize` | `TextElement` | Text controls inherit the font size from their parent. |
 | `FontStyle` | `TextElement` | Text controls inherit the font style (italic, normal). |
 | `FontWeight` | `TextElement` | Text controls inherit the font weight (bold, normal). |

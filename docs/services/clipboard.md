@@ -19,8 +19,8 @@ There are currently three universal formats:
 | Format              | Identifier | Type           | Description         |
 | --------------------|------------|----------------|---------------------|
 | `DataFormat.Text`   | "Text"     | `string`       | Plain text data     |
-| `DataFormat.File`   | "File"     | `IStorageItem` | A file or directory |
-| `DataFormat.Bitmap` | "Bitmap"   | `Bitmap`       | A bitmap image      |
+| `DataFormat.File`   | "File"     | [`IStorageItem`](/api/avalonia/platform/storage/istorageitem) | A file or directory |
+| `DataFormat.Bitmap` | "Bitmap"   | [`Bitmap`](/api/avalonia/media/imaging/bitmap)       | A bitmap image      |
 
 ### Platform formats
 
@@ -66,7 +66,7 @@ var clipboard = window.Clipboard;
 
 #### TryGetDataAsync()
 
-The clipboard's content is read by retrieving an instance of `IAsyncDataTransfer`. This object is responsible for providing data items of various formats on demand (see the [`IAsyncDataTransfer`](#iasyncdatatransfer--iasyncdatatransferitem) section below).
+The clipboard's content is read by retrieving an instance of [`IAsyncDataTransfer`](/api/avalonia/input/iasyncdatatransfer). This object is responsible for providing data items of various formats on demand (see the [`IAsyncDataTransfer`](#iasyncdatatransfer--iasyncdatatransferitem) section below).
 
 The `TryGetDataAsync` method asynchronously retrieves an `IAsyncDataTransfer` object representing the clipboard's contents. If the clipboard is empty, `null` is returned.
 
@@ -163,7 +163,7 @@ Calling `FlushAsync()` forces the system to query all the data and persist it so
 
 The `IAsyncDataTransfer` interface represents the contents of the clipboard and exposes the following properties:
 - `Formats`, returning a list of `DataFormat` instances representing all formats present inside the object.
-- `Items`, returning a list of `IAsyncDataTransferItem` instances representing all items present inside the object.
+- `Items`, returning a list of [`IAsyncDataTransferItem`](/api/avalonia/input/iasyncdatatransferitem) instances representing all items present inside the object.
 
 The `IAsyncDataTransferItem` interface represents a single item inside an `IAsyncDataTransfer` and exposes the following members:
 - `Formats`, returning a list of `DataFormat` instances representing all formats present inside the object.
@@ -205,7 +205,7 @@ In addition, the following extension methods exist only for `IAsyncDataTransfer`
 
 To provide values to write to the clipboard, both `IAsyncDataTransfer` and `IAsyncDataTransferItem` must be implemented.
 
-Avalonia provides implementations of those interfaces with the `DataTransfer` and `DataTransferItem` types, respectively:
+Avalonia provides implementations of those interfaces with the `DataTransfer` and [`DataTransferItem`](/api/avalonia/input/datatransferitem) types, respectively:
 - The `DataTransfer` class is a list of items. It provides an `Add(DataTransferItem)` method used to add new items.
 - The `DataTransferItem` class can be considered a dictionary of format and value pairs. It provides a `Set<T>(DataFormat, T)` method used to set the value for a given format.
 

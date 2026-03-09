@@ -82,7 +82,7 @@ A `BufferFactor` of `1` realizes items across one extra viewport height above an
 
 ### Reduce control template complexity
 
-Complex controls like `TextBox` contain a deep visual tree (borders, scroll viewers, watermark layers). When you create thousands of them, template instantiation and measurement dominate startup time.
+Complex controls like [`TextBox`](/api/avalonia/controls/textbox) contain a deep visual tree (borders, scroll viewers, watermark layers). When you create thousands of them, template instantiation and measurement dominate startup time.
 
 **Use lightweight controls for display, swap on interaction.** Show values with `TextBlock` (which has a minimal visual tree) and replace with a `TextBox` only when the user clicks to edit:
 

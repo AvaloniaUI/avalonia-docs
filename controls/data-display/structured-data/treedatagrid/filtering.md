@@ -156,7 +156,7 @@ Source.Filter(x => matchingIds.Contains(x.Id));
 
 Filter operations run on the UI thread and re-evaluate every item in the source. For large datasets, keep these guidelines in mind:
 
-- **Throttle user input.** When filtering is driven by a `TextBox`, use `Observable.Throttle` or a delay timer so the predicate does not run on every keystroke.
+- **Throttle user input.** When filtering is driven by a [`TextBox`](/api/avalonia/controls/textbox), use `Observable.Throttle` or a delay timer so the predicate does not run on every keystroke.
 - **Keep predicates fast.** Avoid allocations, regular expressions, or database calls inside the predicate.
 - **Pre-compute expensive values.** Store searchable text in a dedicated property so the predicate only needs a simple string comparison.
 - **Filter upstream for very large collections.** If your dataset has tens of thousands of rows, consider filtering the underlying collection before binding it to the grid.

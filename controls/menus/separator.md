@@ -5,7 +5,7 @@ description: A visual divider used inside Menu, ContextMenu, and MenuFlyout cont
 doc-type: reference
 ---
 
-The `Separator` control draws a horizontal line between menu items, giving you a way to visually group related commands. You can use it inside `Menu`, `ContextMenu`, and `MenuFlyout`.
+The [`Separator`](/api/avalonia/controls/separator) control draws a horizontal line between menu items, giving you a way to visually group related commands. You can use it inside `Menu`, `ContextMenu`, and `MenuFlyout`.
 
 ## Basic usage
 
@@ -65,7 +65,7 @@ You can target `Separator` in your styles to customize its appearance. For examp
 
 ## See also
 
-- [Separator API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Separator)
+- [Separator API reference](/api/avalonia/controls/separator)
 - [`Separator.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Separator.cs)
 - [Menu](/controls/menus/menu)
 - [ContextMenu](/controls/menus/contextmenu)

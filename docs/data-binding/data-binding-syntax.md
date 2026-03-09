@@ -8,7 +8,7 @@ doc-type: reference
 import DataBindingModeDiagram from '/img/concepts/data-concepts/data-binding-syntax/data-binding-mode.png';
 
 Avalonia supports creating data bindings in XAML and code. Data bindings in XAML are typically created with the
-`Binding` `MarkupExtension` described by this document. To create data bindings in code,
+`Binding` [`MarkupExtension`](/api/avalonia/markup/xaml/markupextension) described by this document. To create data bindings in code,
 see [How to bind from code](/docs/data-binding/binding-from-code).
 
 ## Data binding `MarkupExtension`
@@ -33,7 +33,7 @@ source and other options, as shown in the following example:
 | `ConverterParameter`  | A parameter to supply to the `Converter`.                                         |
 | `FallbackValue`       | Sets a value when the binding cannot be created or cannot produce a value.        |
 | `TargetNullValue`     | Sets a value when the source property contains a `null` value.                    |
-| `UpdateSourceTrigger` | Triggers a source property update when a predefined condition happens.            |
+| [`UpdateSourceTrigger`](/api/avalonia/data/updatesourcetrigger) | Triggers a source property update when a predefined condition happens.            |
 | `Delay`               | Sets a delay before the binding target is updated after the source value changes. |
 
 You must set these parameters at the time of binding creation. They are CLR properties that cannot

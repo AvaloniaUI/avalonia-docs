@@ -5,7 +5,7 @@ description: Learn how to use Menu, ContextMenu, and NativeMenu controls in Aval
 doc-type: how-to
 ---
 
-This guide covers `Menu` and `ContextMenu` patterns in Avalonia, including commands, keyboard shortcuts, dynamic menus, checked items, submenus, and right-click context menus.
+This guide covers [`Menu`](/api/avalonia/controls/menu) and [`ContextMenu`](/api/avalonia/controls/contextmenu) patterns in Avalonia, including commands, keyboard shortcuts, dynamic menus, checked items, submenus, and right-click context menus.
 
 ## Basic menu bar
 
@@ -36,7 +36,7 @@ Place a `Menu` inside a `DockPanel` docked to the top of your window:
 The underscore before a letter defines the accelerator key (Alt+key). For example, `_File` lets users press Alt+F to open the File menu.
 
 :::tip
-Use a `Separator` element between `MenuItem` entries to create a visual divider that groups related actions.
+Use a `Separator` element between [`MenuItem`](/api/avalonia/controls/menuitem) entries to create a visual divider that groups related actions.
 :::
 
 ## Menu with keyboard shortcuts
@@ -333,7 +333,7 @@ Use `ContextFlyout` when you need richer content than a simple list of menu item
 A control cannot have both a `ContextMenu` and a `ContextFlyout` at the same time. If you set both, only one will work. Choose `ContextMenu` for standard menu item lists and `ContextFlyout` for custom layouts.
 :::
 
-## `NativeMenu` (macOS)
+## [`NativeMenu`](/api/avalonia/controls/nativemenu) (macOS)
 
 On macOS, use `NativeMenu` to integrate with the system menu bar that appears at the top of the screen. This provides a native look and feel that macOS users expect:
 

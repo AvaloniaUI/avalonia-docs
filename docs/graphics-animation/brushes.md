@@ -80,7 +80,7 @@ Fills an area with a gradient that transitions between colors along a line. For 
 |---|---|
 | `StartPoint` | The starting point of the gradient line. Uses relative (`50%,0%`) or absolute coordinates. |
 | `EndPoint` | The ending point of the gradient line. |
-| `GradientStops` | A collection of `GradientStop` objects defining colors and positions. |
+| [`GradientStops`](/api/avalonia/media/gradientstops) | A collection of `GradientStop` objects defining colors and positions. |
 | `SpreadMethod` | How the gradient fills space beyond its defined area: `Pad` (default), `Reflect`, or `Repeat`. |
 | `Opacity` | Overall opacity of the brush (0.0 to 1.0). |
 

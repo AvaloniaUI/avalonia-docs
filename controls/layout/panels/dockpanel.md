@@ -9,7 +9,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DockPanelTopScreenshot from '/img/controls/dockpanel/dockpanel-top.png';
 
-The `DockPanel` control arranges its child controls along specified 'docking edges' (top, bottom, left, and right) with the last child filling any remaining space. The dock panel can maintain the child control's dimension that is parallel to the docking edge, so that the child fills all the available space along the docking edge.
+The [`DockPanel`](/api/avalonia/controls/dockpanel) control arranges its child controls along specified 'docking edges' (top, bottom, left, and right) with the last child filling any remaining space. The dock panel can maintain the child control's dimension that is parallel to the docking edge, so that the child fills all the available space along the docking edge.
 
 For example, if the docking edge on a child control is defined as 'top' and it has a height defined, but no width, it will draw like this:
 
@@ -168,7 +168,7 @@ myDockPanel.Children.Add(myBorder5);
 
 ## See also
 
-- [DockPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DockPanel)
+- [DockPanel API reference](/api/avalonia/controls/dockpanel)
 - [`DockPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DockPanel.cs)
 - [Canvas](canvas)
 - [Grid](grid)

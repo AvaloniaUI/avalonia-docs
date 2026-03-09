@@ -47,7 +47,7 @@ This is useful for scenarios like:
 
 ## Embedding native views
 
-Avalonia supports embedding native UI controls within the Avalonia visual tree using `NativeControlHost`. This lets you use platform-specific controls (e.g., a native web browser, media player, or map view) inside an Avalonia layout.
+Avalonia supports embedding native UI controls within the Avalonia visual tree using [`NativeControlHost`](/api/avalonia/controls/nativecontrolhost). This lets you use platform-specific controls (e.g., a native web browser, media player, or map view) inside an Avalonia layout.
 
 ### NativeControlHost
 

@@ -10,7 +10,7 @@ import CommandBarSecondaryCommandsScreenshot from '/img/controls/commandbar/comm
 import CommandBarContentScreenshot from '/img/controls/commandbar/commandbar-content.png';
 import CommandBarToggleButtonScreenshot from '/img/controls/commandbar/commandbar-toggle-button.png';
 
-A `CommandBar` is a toolbar-style control that displays a row of primary commands and an overflow menu for secondary commands. It is commonly used to surface the most relevant actions for the current context, while keeping less frequently used commands accessible through the overflow ("more") button.
+A [`CommandBar`](/api/avalonia/controls/commandbar) is a toolbar-style control that displays a row of primary commands and an overflow menu for secondary commands. It is commonly used to surface the most relevant actions for the current context, while keeping less frequently used commands accessible through the overflow ("more") button.
 
 Primary commands appear directly in the bar. When space is limited, commands can automatically move into the overflow area. Secondary commands always appear in the overflow menu.
 
@@ -20,7 +20,7 @@ Items placed in a `CommandBar` must implement the `ICommandBarElement` interface
 
 - **`AppBarButton`**: A button with an icon, a label, or both. Supports commands via the `Command` property.
 - **`AppBarToggleButton`**: A toggle button that maintains a checked/unchecked state. Useful for toggling options such as bold or italic formatting.
-- **`AppBarSeparator`**: A visual divider used to group related commands within the bar or the overflow menu.
+- **[`AppBarSeparator`](/api/avalonia/controls/appbarseparator)**: A visual divider used to group related commands within the bar or the overflow menu.
 
 ## CommandBar properties
 
@@ -400,5 +400,5 @@ private bool _isUnderline;
 
 - [ContentPage](contentpage)
 - [NavigationPage](navigationpage)
-- [CommandBar API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CommandBar)
+- [CommandBar API reference](/api/avalonia/controls/commandbar)
 - [`CommandBar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CommandBar/CommandBar.cs)

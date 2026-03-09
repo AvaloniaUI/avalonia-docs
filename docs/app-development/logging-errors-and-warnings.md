@@ -37,7 +37,7 @@ public static AppBuilder BuildAvaloniaApp()
 ```
 
 :::info
-For the full API documentation, see the [`LogEventLevel` enum reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Logging_LogEventLevel).
+For the full API documentation, see the [`LogEventLevel` enum reference](/api/avalonia/logging/logeventlevel).
 :::
 
 Log messages are then shown in the **Debug** view of the **Output** window of your IDE. For example, with verbose logging enabled:
@@ -128,4 +128,4 @@ View the source code on _GitHub_ [`StringLogSink.cs`](https://github.com/Avaloni
 ## See also
 
 - [Setting Unhandled Exceptions](/docs/app-development/setting-unhandled-exceptions): Handling unhandled exceptions in your application.
-- [LogEventLevel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Logging_LogEventLevel): Available log severity levels.
+- [LogEventLevel API reference](/api/avalonia/logging/logeventlevel): Available log severity levels.

@@ -5,7 +5,7 @@ description: Combine multiple binding sources into a single value using MultiBin
 doc-type: how-to
 ---
 
-`MultiBinding` combines values from multiple source properties into a single target property. It is useful when a display value depends on more than one data source, such as formatting a full name from separate first and last name properties, or computing a composite value.
+[`MultiBinding`](/api/avalonia/data/multibinding) combines values from multiple source properties into a single target property. It is useful when a display value depends on more than one data source, such as formatting a full name from separate first and last name properties, or computing a composite value.
 
 ## Basic usage with StringFormat
 

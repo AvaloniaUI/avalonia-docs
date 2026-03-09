@@ -112,5 +112,5 @@ private decimal? _maxQuantity = 100;
 - [Slider](slider.md)
 - [TextBox](/controls/input/text/textbox)
 - [Binding to Controls](/docs/data-binding/binding-to-controls)
-- [NumericUpDown API Reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NumericUpDown)
+- [NumericUpDown API Reference](/api/avalonia/controls/numericupdown)
 - [`NumericUpDown.cs` Source on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NumericUpDown/NumericUpDown.cs)

@@ -92,7 +92,7 @@ Easing based on a cubed curve (t^3). More dramatic than quadratic.
 | Name | Variant |
 |---|---|
 | `CubicEaseIn` | Slow start |
-| `CubicEaseOut` | Fast start |
+| [`CubicEaseOut`](/api/avalonia/animation/easings/cubiceaseout) | Fast start |
 | `CubicEaseInOut` | Slow start and end |
 
 ### Quartic
@@ -142,7 +142,7 @@ Overshoots the target before settling. Creates a "pull back" effect.
 | Name | Variant |
 |---|---|
 | `BackEaseIn` | Pulls back before accelerating forward |
-| `BackEaseOut` | Overshoots target, then settles back |
+| [`BackEaseOut`](/api/avalonia/animation/easings/backeaseout) | Overshoots target, then settles back |
 | `BackEaseInOut` | Pull back, overshoot, then settle |
 
 ### Bounce
@@ -162,7 +162,7 @@ Simulates a spring or rubber band effect with oscillation.
 | Name | Variant |
 |---|---|
 | `ElasticEaseIn` | Oscillation at the start |
-| `ElasticEaseOut` | Oscillation at the end |
+| [`ElasticEaseOut`](/api/avalonia/animation/easings/elasticeaseout) | Oscillation at the end |
 | `ElasticEaseInOut` | Oscillation at both ends |
 
 ## Choosing an easing function

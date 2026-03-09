@@ -5,7 +5,7 @@ description: Render transforms and layout transforms for modifying position, siz
 doc-type: explanation
 ---
 
-Transforms modify the position, size, rotation, or skew of visual elements without changing their layout. Avalonia supports render transforms (applied after layout) and layout transforms (applied during layout via `LayoutTransformControl`).
+Transforms modify the position, size, rotation, or skew of visual elements without changing their layout. Avalonia supports render transforms (applied after layout) and layout transforms (applied during layout via [`LayoutTransformControl`](/api/avalonia/controls/layouttransformcontrol)).
 
 ## RenderTransform
 

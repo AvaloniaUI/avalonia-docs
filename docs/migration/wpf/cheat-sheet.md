@@ -98,7 +98,7 @@ Or with a binding converter:
 | `CheckBox` | `CheckBox` | Same |
 | `RadioButton` | `RadioButton` | Same |
 | `ComboBox` | `ComboBox` | Same |
-| `ListBox` | `ListBox` | Same |
+| [`ListBox`](/api/avalonia/controls/listbox) | `ListBox` | Same |
 | `ListView` | `ListBox` | Use ListBox with ItemTemplate |
 | `TreeView` | `TreeView` | Same |
 | `DataGrid` | `DataGrid` (NuGet package) | Separate package |
@@ -113,7 +113,7 @@ Or with a binding converter:
 | `Popup` | `Popup` | Same |
 | `ScrollViewer` | `ScrollViewer` | Same |
 | `Image` | `Image` | Same |
-| `Border` | `Border` | Same; supports `BoxShadow` |
+| [`Border`](/api/avalonia/controls/border) | `Border` | Same; supports `BoxShadow` |
 | `Viewbox` | `Viewbox` | Same |
 | `ContentControl` | `ContentControl` | Same |
 | `ItemsControl` | `ItemsControl` | Same |
@@ -152,7 +152,7 @@ Or with a binding converter:
 
 | WPF | Avalonia | Notes |
 |---|---|---|
-| `RoutedEvent` (Bubble) | `RoutedEvent` (Bubble) | Same |
+| [`RoutedEvent`](/api/avalonia/interactivity/routedevent) (Bubble) | `RoutedEvent` (Bubble) | Same |
 | `RoutedEvent` (Tunnel) | `RoutedEvent` (Tunnel) | Same |
 | `Preview*` events | Tunnel routing strategy | Use `AddHandler` with `RoutingStrategies.Tunnel` |
 | `EventManager.RegisterRoutedEvent` | `RoutedEvent.Register<T, TArgs>` | Generic registration |
@@ -174,7 +174,7 @@ Or with a binding converter:
 
 | WPF | Avalonia | Notes |
 |---|---|---|
-| `DataTemplate` | `DataTemplate` | Same |
+| [`DataTemplate`](/api/avalonia/markup/xaml/templates/datatemplate) | `DataTemplate` | Same |
 | `HierarchicalDataTemplate` | `TreeDataTemplate` | Different name |
 | `ControlTemplate` | `ControlTemplate` | Same |
 | `DataTemplateSelector` | `DataTemplate` with `DataType` | Use DataType matching |
@@ -214,7 +214,7 @@ Or with a binding converter:
 | `LinearGradientBrush` | `LinearGradientBrush` | Same |
 | `RadialGradientBrush` | `RadialGradientBrush` | Same |
 | `ImageBrush` | `ImageBrush` | Same |
-| `VisualBrush` | `VisualBrush` | Same |
+| [`VisualBrush`](/api/avalonia/media/visualbrush) | `VisualBrush` | Same |
 | `DrawingBrush` | Not available | Use `VisualBrush` |
 | `BitmapEffect` | `Effect` property | `BlurEffect`, `DropShadowEffect` |
 | `DropShadowEffect` | `BoxShadow` on `Border` | Different API, CSS-like |

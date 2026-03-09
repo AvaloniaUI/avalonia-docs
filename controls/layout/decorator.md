@@ -5,9 +5,9 @@ description: A base class for controls that wrap and decorate a single child ele
 doc-type: reference
 ---
 
-The [`Decorator`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Decorator) control is a base class for controls that wrap and decorate a single child element. It manages hosting one child in both the logical and visual tree, and applies optional padding around it.
+The [`Decorator`](/api/avalonia/controls/decorator) control is a base class for controls that wrap and decorate a single child element. It manages hosting one child in both the logical and visual tree, and applies optional padding around it.
 
-## When to use `Decorator`
+## When to use [`Decorator`](/api/avalonia/controls/decorator)
 
 You do not typically use `Decorator` directly in your XAML. Instead, you use one of the built-in controls that derive from it, such as `Border` or `Viewbox`. However, there are two scenarios where `Decorator` is useful:
 
@@ -91,5 +91,5 @@ This behaves like a `Border` with no border or background, adding only padding a
 - [Border](/controls/layout/containers/border)
 - [Viewbox](/controls/layout/containers/viewbox)
 - [LayoutTransformControl](/controls/layout/layouttransformcontrol)
-- [`Decorator` API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Decorator)
+- [`Decorator` API reference](/api/avalonia/controls/decorator)
 - [`Decorator.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Decorator.cs)

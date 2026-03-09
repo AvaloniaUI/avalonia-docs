@@ -20,7 +20,7 @@ One way to use icons in Avalonia is by using image files. You can use formats li
 <Image Width="16" Height="16" Source="avares://MyApp/Assets/icon.png" />
 ```
 
-In this example, an `Image` control is used to display an image from the application's resources as an icon. The `Source` property of the `Image` control is set to a resource URI that points to the image file.
+In this example, an [`Image`](/api/avalonia/controls/image) control is used to display an image from the application's resources as an icon. The `Source` property of the `Image` control is set to a resource URI that points to the image file.
 
 ### Using icon fonts
 

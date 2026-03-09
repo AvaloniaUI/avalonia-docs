@@ -5,7 +5,7 @@ description: A sliding on/off toggle control used for binary settings, with cust
 doc-type: reference
 ---
 
-The `ToggleSwitch` control presents a sliding toggle that you can flip between on and off states. It behaves like a `CheckBox` but uses a track-and-thumb visual that feels natural on mobile and touch-first interfaces.
+The [`ToggleSwitch`](/api/avalonia/controls/toggleswitch) control presents a sliding toggle that you can flip between on and off states. It behaves like a [`CheckBox`](/api/avalonia/controls/checkbox) but uses a track-and-thumb visual that feels natural on mobile and touch-first interfaces.
 
 Use `ToggleSwitch` when you need an immediate on/off setting, such as enabling dark mode or toggling notifications. For form fields where users select multiple options from a list, a `CheckBox` is usually a better fit.
 

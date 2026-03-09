@@ -5,7 +5,7 @@ description: Learn how to control scroll behavior, scroll programmatically, resp
 doc-type: how-to
 ---
 
-This guide covers common `ScrollViewer` scenarios including controlling scroll behavior, programmatic scrolling, responding to scroll events, and handling nested scroll regions.
+This guide covers common [`ScrollViewer`](/api/avalonia/controls/scrollviewer) scenarios including controlling scroll behavior, programmatic scrolling, responding to scroll events, and handling nested scroll regions.
 
 ## Basic usage
 

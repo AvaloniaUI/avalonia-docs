@@ -26,7 +26,7 @@ Avalonia gives you a path to .NET, which has a vastly larger developer pool, an 
 | `TFrame` | `UserControl` | Reusable UI component |
 | `TPanel` | `Border` or `Panel` | |
 | `TButton` | `Button` | |
-| `TEdit` | `TextBox` | |
+| `TEdit` | [`TextBox`](/api/avalonia/controls/textbox) | |
 | `TMemo` | `TextBox` with `AcceptsReturn="True"` | |
 | `TLabel` | `TextBlock` | |
 | `TCheckBox` | `CheckBox` | |

@@ -5,7 +5,7 @@ description: Learn how to show overlay notifications, toast messages, status bar
 doc-type: how-to
 ---
 
-This guide covers patterns for showing notifications, toast messages, and status bars in your Avalonia application. Because Avalonia does not include a built-in notification control, you build your own using standard layout controls such as `ItemsControl`, `Panel`, and `Border`.
+This guide covers patterns for showing notifications, toast messages, and status bars in your Avalonia application. Because Avalonia does not include a built-in notification control, you build your own using standard layout controls such as [`ItemsControl`](/api/avalonia/controls/itemscontrol), `Panel`, and `Border`.
 
 ## Overlay notification panel
 

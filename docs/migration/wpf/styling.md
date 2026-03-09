@@ -9,7 +9,7 @@ Avalonia's styling system is one of the biggest conceptual shifts when migrating
 
 ## Style declaration
 
-In WPF, styles are defined as resources and referenced by type or key. In Avalonia, styles live in a dedicated `Styles` collection and use CSS-like selectors to target controls.
+In WPF, styles are defined as resources and referenced by type or key. In Avalonia, styles live in a dedicated [`Styles`](/api/avalonia/styling/styles) collection and use CSS-like selectors to target controls.
 
 **WPF:**
 
@@ -250,7 +250,7 @@ Avalonia uses a `Transitions` system where you declare which properties should a
 
 ## ControlTheme vs implicit styles
 
-In WPF, an implicit style (a `Style` with `TargetType` but no `x:Key`) defines the default look for a control, including its `ControlTemplate`. In Avalonia, this role is filled by `ControlTheme`.
+In WPF, an implicit style (a `Style` with `TargetType` but no `x:Key`) defines the default look for a control, including its `ControlTemplate`. In Avalonia, this role is filled by [`ControlTheme`](/api/avalonia/styling/controltheme).
 
 A `ControlTheme` is the mechanism for creating "lookless" control templates. It is stored in the `Resources` dictionary (not in the `Styles` collection) and is looked up by type.
 

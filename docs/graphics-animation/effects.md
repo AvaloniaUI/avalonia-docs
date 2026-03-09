@@ -9,7 +9,7 @@ Avalonia supports visual effects that add depth and visual interest to controls.
 
 ## Box shadows
 
-The `BoxShadow` property on `Border` and `ContentPresenter` adds drop shadows or inset shadows to elements. The syntax follows CSS box-shadow conventions.
+The [`BoxShadow`](/api/avalonia/media/boxshadow) property on [`Border`](/api/avalonia/controls/border) and `ContentPresenter` adds drop shadows or inset shadows to elements. The syntax follows CSS box-shadow conventions.
 
 ### Basic syntax
 
@@ -90,7 +90,7 @@ myBorder.BoxShadow = BoxShadows.Parse("0 4 8 0 #40000000");
 
 ## BlurEffect
 
-The `Effect` property on any `Visual` accepts effect objects. `BlurEffect` applies a Gaussian blur to the entire element:
+The [`Effect`](/api/avalonia/media/effect) property on any `Visual` accepts effect objects. `BlurEffect` applies a Gaussian blur to the entire element:
 
 ```xml
 <Border Background="SteelBlue" Padding="20" CornerRadius="8">

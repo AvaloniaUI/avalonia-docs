@@ -5,7 +5,7 @@ description: Build lookless templated controls with control themes, template par
 doc-type: how-to
 ---
 
-Templated controls are controls whose appearance is defined entirely by a `ControlTemplate`. This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls because the control class itself contains no rendering code.
+Templated controls are controls whose appearance is defined entirely by a [`ControlTemplate`](/api/avalonia/markup/xaml/templates/controltemplate). This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls because the control class itself contains no rendering code.
 
 Avalonia's built-in controls (such as `Button`, `TextBox`, and `ListBox`) are all templated controls. You can follow the same pattern to build your own.
 
@@ -49,7 +49,7 @@ Key points:
 
 - `x:Key="{x:Type local:ToggleLabel}"` ensures Avalonia automatically applies this theme to all instances of `ToggleLabel`.
 - `TargetType` scopes the theme so that property setters and template bindings resolve against the correct type.
-- Inside the `ControlTemplate`, use `TemplateBinding` to bind to properties on the templated control.
+- Inside the `ControlTemplate`, use [`TemplateBinding`](/api/avalonia/data/templatebinding) to bind to properties on the templated control.
 
 ## Template parts
 

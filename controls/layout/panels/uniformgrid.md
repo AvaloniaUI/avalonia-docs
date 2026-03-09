@@ -8,7 +8,7 @@ doc-type: reference
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The `UniformGrid` divides available space into equally sized cells. You can specify how many rows and columns to create, and each child control is placed into the next available cell in the order it appears. Unlike `Grid`, you do not need to define row and column definitions or assign children to specific cells. This makes `UniformGrid` a good choice when you need a simple, evenly spaced layout such as a toolbar, color palette, or icon grid.
+The [`UniformGrid`](/api/avalonia/controls/primitives/uniformgrid) divides available space into equally sized cells. You can specify how many rows and columns to create, and each child control is placed into the next available cell in the order it appears. Unlike `Grid`, you do not need to define row and column definitions or assign children to specific cells. This makes `UniformGrid` a good choice when you need a simple, evenly spaced layout such as a toolbar, color palette, or icon grid.
 
 ## Common properties
 

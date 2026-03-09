@@ -5,7 +5,7 @@ description: Learn how to use the Avalonia Expander control for collapsible cont
 doc-type: how-to
 ---
 
-This guide covers common `Expander` scenarios including basic usage, accordion patterns, animated expansion, binding state, and custom headers.
+This guide covers common [`Expander`](/api/avalonia/controls/expander) scenarios including basic usage, accordion patterns, animated expansion, binding state, and custom headers.
 
 ## Basic expander
 
@@ -57,7 +57,7 @@ This two-way binding keeps the view model property in sync whenever the user ope
 
 ## Expand direction
 
-The `ExpandDirection` property controls which direction the content expands relative to the header:
+The [`ExpandDirection`](/api/avalonia/controls/expanddirection) property controls which direction the content expands relative to the header:
 
 ```xml
 <!-- Expands upward -->

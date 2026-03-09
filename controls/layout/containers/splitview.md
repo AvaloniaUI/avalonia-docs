@@ -139,5 +139,5 @@ Position the pane on any side of the content area:
 
 ## See also
 
-- [SplitView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SplitView)
+- [SplitView API reference](/api/avalonia/controls/splitview)
 - [`SplitView.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SplitView/SplitView.cs)

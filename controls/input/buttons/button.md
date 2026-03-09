@@ -7,7 +7,7 @@ doc-type: reference
 
 import ButtonClickScreenshot from '/img/controls/buttons/button/button-click.gif';
 
-The `Button` control reacts to pointer actions and provides visual feedback in the form of a depressed state when the pointer is down. A pointer-down to pointer-release sequence is interpreted as a click, and you can configure this behavior through the `ClickMode` property.
+The [`Button`](/api/avalonia/controls/button) control reacts to pointer actions and provides visual feedback in the form of a depressed state when the pointer is down. A pointer-down to pointer-release sequence is interpreted as a click, and you can configure this behavior through the [`ClickMode`](/api/avalonia/controls/clickmode) property.
 
 You can handle a click by subscribing to the `Click` event in code-behind, or by binding an `ICommand` instance to the `Command` property. For guidance on binding to a command, see [Adding interactivity](/docs/input-interaction/adding-interactivity).
 
@@ -19,7 +19,7 @@ You can handle a click by subscribing to the `Click` event in code-behind, or by
 | `Command`          | An instance of `ICommand` to be invoked when the button is clicked. |
 | `CommandParameter` | The parameter passed to the command when it is invoked.             |
 | `Content`          | The content to display inside the button. Can be text or any control. |
-| `Flyout`           | A `Flyout` that opens when the button is clicked.                   |
+| [`Flyout`](/api/avalonia/controls/flyout)           | A `Flyout` that opens when the button is clicked.                   |
 | `IsPressed`        | Whether the button is currently in a pressed state (read-only).     |
 | `IsDefault`        | When `true`, the button is activated when the user presses Enter.   |
 | `IsCancel`         | When `true`, the button is activated when the user presses Escape.  |
@@ -147,7 +147,7 @@ You can attach a `Flyout` to a button so that clicking the button opens a popup:
 
 Always use the `Click` event to determine whether a user has pressed a button, not `PointerPressed`. `Click` is the high-level event specific to `Button`, while `PointerPressed` is a low-level input event that `Button` handles internally (setting `IsHandled` to `true`). Because the event is marked as handled, your application will not receive `PointerPressed` from a `Button` the way it might from other controls.
 
-For a full list of button events, see the [Button events API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Button#events).
+For a full list of button events, see the [Button events API reference](/api/avalonia/controls/button).
 
 ## Keyboard and accessibility
 
@@ -179,7 +179,7 @@ For a full list of button events, see the [Button events API reference](https://
 
 ## See also
 
-- [Button API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Button)
+- [Button API reference](/api/avalonia/controls/button)
 - [`Button.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Button.cs)
 - [RepeatButton](repeatbutton)
 - [ToggleButton](togglebutton)

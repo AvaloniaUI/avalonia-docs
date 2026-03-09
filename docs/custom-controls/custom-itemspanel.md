@@ -22,7 +22,7 @@ The following controls all support a custom `ItemsPanel`:
 
 The default panel works well for linear lists, but there are scenarios where you need a different arrangement:
 
-- **Absolute positioning**: Use a `Canvas` to place items at specific coordinates.
+- **Absolute positioning**: Use a [`Canvas`](/api/avalonia/controls/canvas) to place items at specific coordinates.
 - **Wrapping layouts**: Use a `WrapPanel` to flow items across rows or columns.
 - **Custom arrangements**: Use a [custom panel](custom-panel) with your own `ArrangeOverride` logic for radial layouts, dashboards, or other non-linear designs.
 

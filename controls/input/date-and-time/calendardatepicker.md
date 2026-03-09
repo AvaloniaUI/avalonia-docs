@@ -87,5 +87,5 @@ This example shows a basic single-date-selection calendar when you click the but
 - [Calendar](/controls/input/date-and-time/calendar)
 - [DatePicker](/controls/input/date-and-time/datepicker)
 - [TimePicker](/controls/input/date-and-time/timepicker)
-- [CalendarDatePicker API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CalendarDatePicker)
+- [CalendarDatePicker API reference](/api/avalonia/controls/calendardatepicker)
 - [`CalendarDatePicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CalendarDatePicker/CalendarDatePicker.cs)

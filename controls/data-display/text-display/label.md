@@ -5,7 +5,7 @@ description: A control that displays text and transfers focus to a target input 
 doc-type: reference
 ---
 
-The `Label` control displays text and transfers focus to a designated target control. When you click the label or press its access key in combination with the Alt key, focus moves to the control specified by the `Target` property. This makes `Label` especially useful for building accessible forms where each input has a corresponding text label.
+The [`Label`](/api/avalonia/controls/label) control displays text and transfers focus to a designated target control. When you click the label or press its access key in combination with the Alt key, focus moves to the control specified by the `Target` property. This makes `Label` especially useful for building accessible forms where each input has a corresponding text label.
 
 ## Common properties
 
@@ -90,5 +90,5 @@ Use `Label` when you need accessibility and keyboard navigation in forms. Use `T
 
 - [TextBlock](textblock)
 - [SelectableTextBlock](selectabletextblock)
-- [Label API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Label)
+- [Label API reference](/api/avalonia/controls/label)
 - [`Label.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Label.cs)

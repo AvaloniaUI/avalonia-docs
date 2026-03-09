@@ -5,7 +5,7 @@ description: "Learn how to configure Slider ranges, display values, add tick mar
 doc-type: how-to
 ---
 
-This guide covers common `Slider` scenarios including range configuration, value display, tick marks, vertical orientation, and two-way data binding.
+This guide covers common [`Slider`](/api/avalonia/controls/slider) scenarios including range configuration, value display, tick marks, vertical orientation, and two-way data binding.
 
 ## Basic slider with value display
 
@@ -52,7 +52,7 @@ Use `TickFrequency` with `IsSnapToTickEnabled` to restrict values to discrete st
         TickPlacement="BottomRight" />
 ```
 
-`TickPlacement` options:
+[`TickPlacement`](/api/avalonia/controls/tickplacement) options:
 
 | Value | Description |
 |---|---|
@@ -84,7 +84,7 @@ For a slider with a small range (for example, 0 to 1), you should lower both val
 
 ## Vertical slider
 
-Set the `Orientation` property to `Vertical`. You should also set an explicit `Height` so the slider does not collapse:
+Set the [`Orientation`](/api/avalonia/layout/orientation) property to `Vertical`. You should also set an explicit `Height` so the slider does not collapse:
 
 ```xml
 <Slider Orientation="Vertical" Height="200"

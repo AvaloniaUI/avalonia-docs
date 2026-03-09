@@ -3,7 +3,7 @@ id: drag-and-drop
 title: Drag and Drop
 ---
 
-Avalonia supports drag-and-drop operations for transferring data between controls or between your application and the operating system. The drag-and-drop system uses the `DragDrop` static class and the `DataTransfer` type to manage data during operations.
+Avalonia supports drag-and-drop operations for transferring data between controls or between your application and the operating system. The drag-and-drop system uses the [`DragDrop`](/api/avalonia/input/dragdrop) static class and the [`DataTransfer`](/api/avalonia/input/datatransfer) type to manage data during operations.
 
 ## Enabling drop on a target
 

@@ -32,7 +32,7 @@ The Avalonia solution templates provide a quick way of adding a styles file to y
 
 <img src={VsStylesTemplateScreenshot} alt="Visual Studio Add New Item dialog showing the Styles (Avalonia) template"/>
 
-To use the styles defined in a separate file, you must reference it using a `StyleInclude` element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.
+To use the styles defined in a separate file, you must reference it using a [`StyleInclude`](/api/avalonia/markup/xaml/styling/styleinclude) element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.
 
 For example, to use styles defined in a file `AppStyles.axaml` (saved in the folder `/Styles`), you could write a `StyleInclude` element in the window like this:
 

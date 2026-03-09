@@ -11,7 +11,7 @@ The Avalonia layout system positions and sizes controls through a two-pass proce
 
 ## Panels
 
-Avalonia includes a group of elements that derive from `Panel`. These `Panel` elements enable many complex layouts. For example, stacking elements can easily be achieved by using the `StackPanel` element, while more complex and free flowing layouts are possible by using a `Canvas`.
+Avalonia includes a group of elements that derive from `Panel`. These `Panel` elements enable many complex layouts. For example, stacking elements can easily be achieved by using the `StackPanel` element, while more complex and free flowing layouts are possible by using a [`Canvas`](/api/avalonia/controls/canvas).
 
 The following table summarizes the available `Panel` controls:
 
@@ -20,7 +20,7 @@ The following table summarizes the available `Panel` controls:
 | `Panel`         | Lays out all children to fill the bounds of the `Panel`                                                                                                                                                                                                                   |
 | `Canvas`        | Defines an area within which you can explicitly position child elements by coordinates relative to the Canvas area.                                                                                                                                                       |
 | `DockPanel`     | Defines an area within which you can arrange child elements either horizontally or vertically, relative to each other.                                                                                                                                                    |
-| `Grid`          | Defines a flexible grid area that consists of columns and rows.                                                                                                                                                                                                           |
+| [`Grid`](/api/avalonia/controls/grid)          | Defines a flexible grid area that consists of columns and rows.                                                                                                                                                                                                           |
 | `RelativePanel` | Arranges child elements relative to other elements or the panel itself.                                                                                                                                                                                                   |
 | `StackPanel`    | Arranges child elements into a single line that can be oriented horizontally or vertically.                                                                                                                                                                               |
 | `WrapPanel`     | Positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. Subsequent ordering occurs sequentially from top to bottom or right to left, depending on the value of the Orientation property. |

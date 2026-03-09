@@ -5,7 +5,7 @@ description: A content control with increment and decrement spinner buttons for 
 doc-type: reference
 ---
 
-The `ButtonSpinner` presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
+The [`ButtonSpinner`](/api/avalonia/controls/buttonspinner) presents a control that includes buttons for spin-up and spin-down. The content of this button is flexible, but you will have to code quite a lot of the behavior.
 
 ## When to use `ButtonSpinner`
 
@@ -91,7 +91,7 @@ public partial class MyViewModel : ObservableObject
 
 ## See also
 
-- [ButtonSpinner API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ButtonSpinner)
+- [ButtonSpinner API reference](/api/avalonia/controls/buttonspinner)
 - [`ButtonSpinner.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ButtonSpinner.cs)
 - [`NumericUpDown`](/controls/input/selectors/numericupdown)
 - [`Button`](/controls/input/buttons/button)

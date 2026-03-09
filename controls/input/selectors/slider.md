@@ -22,7 +22,7 @@ You will probably use these properties most often:
 | `Value` | `double` | Gets or sets the current slider value. |
 | `SmallChange` | `double` | The amount the value changes per arrow-key press. Default is `1`. |
 | `LargeChange` | `double` | The amount the value changes per track click or Page key press. Default is `10`. |
-| `Orientation` | `Orientation` | `Horizontal` (default) or `Vertical`. |
+| [`Orientation`](/api/avalonia/layout/orientation) | `Orientation` | `Horizontal` (default) or `Vertical`. |
 
 ## Example
 
@@ -59,7 +59,7 @@ Use `TickFrequency` and `IsSnapToTickEnabled` to restrict the slider to discrete
         TickPlacement="BottomRight" />
 ```
 
-The `TickPlacement` property controls where tick marks appear relative to the track:
+The [`TickPlacement`](/api/avalonia/controls/tickplacement) property controls where tick marks appear relative to the track:
 
 | Value | Description |
 |---|---|
@@ -124,5 +124,5 @@ private double _maxDamage = 9999;
 - [NumericUpDown](numericupdown.md)
 - [ToggleSwitch](toggleswitch.md)
 - [Binding to Controls](/docs/data-binding/binding-to-controls)
-- [Slider API Reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Slider)
+- [Slider API Reference](/api/avalonia/controls/slider)
 - [`Slider.cs` Source on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Slider.cs)

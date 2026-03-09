@@ -12,7 +12,7 @@ doc-type: how-to
 A classic markup extension is any class that:
 
 - Implements `object? ProvideValue(IServiceProvider?)`
-- Optionally inherits from `MarkupExtension` (not required in Avalonia)
+- Optionally inherits from [`MarkupExtension`](/api/avalonia/markup/xaml/markupextension) (not required in Avalonia)
 - Is used from XAML via the `{ns:Extension ...}` syntax
 
 In Avalonia, `ProvideValue` is allowed to return **any** type. This means the result can be strongly typed, as the returned value is assigned directly to the target property.

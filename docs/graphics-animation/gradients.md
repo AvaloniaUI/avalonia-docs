@@ -9,9 +9,9 @@ Gradient brushes create smooth transitions between two or more colors. You can u
 
 | Brush | Description |
 |---|---|
-| `LinearGradientBrush` | Transitions colors along a straight line. |
-| `RadialGradientBrush` | Transitions colors outward from a center point in an ellipse. |
-| `ConicGradientBrush` | Transitions colors in a sweep around a center point. |
+| [`LinearGradientBrush`](/api/avalonia/media/lineargradientbrush) | Transitions colors along a straight line. |
+| [`RadialGradientBrush`](/api/avalonia/media/radialgradientbrush) | Transitions colors outward from a center point in an ellipse. |
+| [`ConicGradientBrush`](/api/avalonia/media/conicgradientbrush) | Transitions colors in a sweep around a center point. |
 
 All gradient brushes share the `GradientStops` collection and `SpreadMethod` property. The sections below cover each brush type, followed by shared concepts that apply to all of them.
 
@@ -60,7 +60,7 @@ Common direction patterns:
 
 ### Multi-color gradient
 
-Add more `GradientStop` elements to create transitions through multiple colors. Space the `Offset` values to control where each color appears:
+Add more [`GradientStop`](/api/avalonia/media/gradientstop) elements to create transitions through multiple colors. Space the `Offset` values to control where each color appears:
 
 ```xml
 <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">

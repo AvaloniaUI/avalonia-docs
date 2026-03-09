@@ -7,7 +7,7 @@ doc-type: reference
 
 import TrayIconScreenshot from '/img/controls/trayicon/trayicon.gif';
 
-The `TrayIcon` control lets your Avalonia application display an icon and a native menu in the system tray (notification area). It is supported on Windows, macOS, and some Linux distributions (confirmed to work on Ubuntu).
+The [`TrayIcon`](/api/avalonia/controls/trayicon) control lets your Avalonia application display an icon and a native menu in the system tray (notification area). It is supported on Windows, macOS, and some Linux distributions (confirmed to work on Ubuntu).
 
 You define tray icons in your `App.axaml` file using the `TrayIcon.Icons` attached property on the `Application` element.
 

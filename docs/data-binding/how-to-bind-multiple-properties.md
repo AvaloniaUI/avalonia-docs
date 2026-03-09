@@ -7,7 +7,7 @@ doc-type: how-to
 
 import MultiBindingRgbScreenshot from '/img/guides/data/multibinding-rgb.gif';
 
-When a single target property depends on values from several sources, you can use `MultiBinding` to aggregate multiple `Binding` objects and produce a combined result through an `IMultiValueConverter`. The converter's `Convert` method runs each time any of the bound properties raises a change notification, so the target property stays in sync automatically.
+When a single target property depends on values from several sources, you can use [`MultiBinding`](/api/avalonia/data/multibinding) to aggregate multiple `Binding` objects and produce a combined result through an [`IMultiValueConverter`](/api/avalonia/data/converters/imultivalueconverter). The converter's `Convert` method runs each time any of the bound properties raises a change notification, so the target property stays in sync automatically.
 
 `MultiBinding` works with view model properties, named controls, and other binding sources, just like a standard `Binding`.
 

@@ -13,8 +13,8 @@ Before you start, consider which pattern fits your requirements:
 
 | Pattern | Best for |
 |---|---|
-| `ContentControl` with data templates | Small apps with a few fixed pages |
-| `TransitioningContentControl` | Same as above, but with animated transitions |
+| [`ContentControl`](/api/avalonia/controls/contentcontrol) with data templates | Small apps with a few fixed pages |
+| [`TransitioningContentControl`](/api/avalonia/controls/transitioningcontentcontrol) | Same as above, but with animated transitions |
 | `TabControl` | Settings screens, document editors |
 | Sidebar navigation | Desktop apps with a primary menu |
 | Back-stack navigation | Wizard flows, browser-style history |
@@ -68,7 +68,7 @@ public partial class MainViewModel : ObservableObject
 }
 ```
 
-When `CurrentPage` changes, the `ContentControl` looks up the matching `DataTemplate` and displays the corresponding view automatically. This works because Avalonia walks up the visual tree looking for a `DataTemplate` whose `DataType` matches the object assigned to `Content`.
+When `CurrentPage` changes, the `ContentControl` looks up the matching [`DataTemplate`](/api/avalonia/markup/xaml/templates/datatemplate) and displays the corresponding view automatically. This works because Avalonia walks up the visual tree looking for a `DataTemplate` whose `DataType` matches the object assigned to `Content`.
 
 :::tip
 If you have many view models, listing every `DataTemplate` by hand becomes tedious. See the [View locator pattern](#view-locator-pattern) later in this guide for an automatic alternative.

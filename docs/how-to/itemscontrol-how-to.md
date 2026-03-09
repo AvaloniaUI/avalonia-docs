@@ -5,7 +5,7 @@ description: Custom collection layouts with ItemsControl and ItemsRepeater beyon
 doc-type: how-to
 ---
 
-This guide covers using `ItemsControl` and `ItemsRepeater` for custom collection layouts that go beyond what `ListBox` offers.
+This guide covers using [`ItemsControl`](/api/avalonia/controls/itemscontrol) and `ItemsRepeater` for custom collection layouts that go beyond what [`ListBox`](/api/avalonia/controls/listbox) offers.
 
 ## When to Use Each Control
 

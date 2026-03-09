@@ -17,7 +17,7 @@ The position of each child control is defined as two distances between the edge 
 
 If elements occupy the same coordinates, the order in which they appear in markup determines the order in which the elements are drawn.
 
-`Canvas` provides the most flexible layout support of any `Panel`. Height and Width properties are used to define the area of the canvas, and elements inside are assigned absolute coordinates relative to the area of the parent `Canvas`. Four attached properties, `Canvas.Left`, `Canvas.Top`, `Canvas.Right` and `Canvas.Bottom`, allow fine control of object placement within a `Canvas`, allowing the developer to position and arrange elements precisely on the screen.
+[`Canvas`](/api/avalonia/controls/canvas) provides the most flexible layout support of any `Panel`. Height and Width properties are used to define the area of the canvas, and elements inside are assigned absolute coordinates relative to the area of the parent `Canvas`. Four attached properties, `Canvas.Left`, `Canvas.Top`, `Canvas.Right` and `Canvas.Bottom`, allow fine control of object placement within a `Canvas`, allowing the developer to position and arrange elements precisely on the screen.
 
 :::info
 To review the concept of layout zones, see [Layout](/docs/layout/).
@@ -131,7 +131,7 @@ myParentCanvas.Children.Add(myCanvas3);
 
 ## See also
 
-- [Canvas API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Canvas)
+- [Canvas API reference](/api/avalonia/controls/canvas)
 - [`Canvas.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)
 - [DockPanel](dockpanel)
 - [Grid](grid)

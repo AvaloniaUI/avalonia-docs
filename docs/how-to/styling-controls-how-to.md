@@ -11,7 +11,7 @@ This guide covers practical recipes for customizing control appearance in your A
 
 ### Using style classes
 
-You can define a style class that targets a control by type and class name, then apply that class in your AXAML markup. The following example creates a `primary` class for `Button` controls that sets the `Background` and `Foreground` properties, along with hover and pressed states:
+You can define a style class that targets a control by type and class name, then apply that class in your AXAML markup. The following example creates a `primary` class for [`Button`](/api/avalonia/controls/button) controls that sets the `Background` and `Foreground` properties, along with hover and pressed states:
 
 ```xml
 <Window.Styles>

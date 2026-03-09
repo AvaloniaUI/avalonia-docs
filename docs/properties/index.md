@@ -13,7 +13,7 @@ Avalonia defines three kinds of properties, each suited to different scenarios:
 |---|---|---|
 | **Styled Property** | `StyledProperty<T>` | Properties that participate in the styling system. This is the most common type. |
 | **Direct Property** | `DirectProperty<TOwner, TValue>` | Properties backed by a conventional C# field, exposed to the Avalonia property system for binding support. Used for performance-sensitive or read-only properties. |
-| **Attached Property** | `AttachedProperty<T>` | Properties that can be set on any `AvaloniaObject`, typically used by layout panels (e.g., `Grid.Row`, `DockPanel.Dock`). |
+| **Attached Property** | `AttachedProperty<T>` | Properties that can be set on any [`AvaloniaObject`](/api/avalonia/avaloniaobject), typically used by layout panels (e.g., `Grid.Row`, `DockPanel.Dock`). |
 
 ## Styled properties
 

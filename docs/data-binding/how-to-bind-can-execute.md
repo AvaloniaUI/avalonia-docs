@@ -11,7 +11,7 @@ import BindCanExecuteScreenshot from '/img/guides/data/bind-canexecute.gif';
 
 Whether a control that can initiate an action is in its enabled state is a key part of "revealed functionality" in user experience design. Disabling commands that cannot run reinforces user confidence. For example, if a button or menu item cannot run because the application is in the wrong state, you should present it as inactive rather than showing an error when it is clicked.
 
-This guide shows you how to bind a `Button` to a command whose `CanExecute` logic automatically enables or disables the control. The approach uses the MVVM pattern so that the view and the view model remain clearly separated.
+This guide shows you how to bind a [`Button`](/api/avalonia/controls/button) to a command whose `CanExecute` logic automatically enables or disables the control. The approach uses the MVVM pattern so that the view and the view model remain clearly separated.
 
 ## Prerequisites
 

@@ -7,7 +7,7 @@ doc-type: concept
 
 import CustomPseudoclassScreenshot from '/img/reference/styles/custom-pseudoclass.gif';
 
-*Pseudoclasses* in Avalonia, similar to those in CSS, are keywords exposed by a `Control` that indicate a distinct control state. These states are used in [style selectors](style-selectors) to conditionally style controls. For example, a `Button` could have a different appearance while it is being pressed, or a `TextBox` while it is disabled.
+*Pseudoclasses* in Avalonia, similar to those in CSS, are keywords exposed by a `Control` that indicate a distinct control state. These states are used in [style selectors](style-selectors) to conditionally style controls. For example, a [`Button`](/api/avalonia/controls/button) could have a different appearance while it is being pressed, or a `TextBox` while it is disabled.
 
 Pseudoclass state is tracked by the `Control`'s `PseudoClasses` property. By convention, pseudoclass names begin with a `:`, such as `:pointerover` or `:pressed`.
 

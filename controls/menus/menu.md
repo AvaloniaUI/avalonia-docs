@@ -186,5 +186,5 @@ For more detailed guidance on how to add icons to your menus, see [Adding icons]
 
 ## See also
 
-- [Menu API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Menu)
+- [Menu API reference](/api/avalonia/controls/menu)
 - [`Menu.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)

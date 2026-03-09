@@ -7,7 +7,7 @@ doc-type: reference
 
 import ControlContentStudentScreenshot from '/img/controls/contentcontrol/contentcontrol-student.png';
 
-`ContentControl` is a control that displays a single piece of content. The content can be a string, a control, or a data-bound object rendered through a `DataTemplate`. Many common Avalonia controls, including `Button`, `Window`, and `UserControl`, inherit from `ContentControl`, so understanding how it works is fundamental to building Avalonia applications.
+[`ContentControl`](/api/avalonia/controls/contentcontrol) is a control that displays a single piece of content. The content can be a string, a control, or a data-bound object rendered through a `DataTemplate`. Many common Avalonia controls, including `Button`, `Window`, and `UserControl`, inherit from `ContentControl`, so understanding how it works is fundamental to building Avalonia applications.
 
 ## Common properties
 
@@ -22,7 +22,7 @@ You will probably use these properties most often:
 
 ## Displaying content
 
-At its simplest, a `ContentControl` displays the data you assign to its [`Content`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_ContentControl_Content) property.
+At its simplest, a `ContentControl` displays the data you assign to its [`Content`](/api/avalonia/controls/contentcontrol/content) property.
 
 For example:
 
@@ -137,7 +137,7 @@ If you want an animated transition when the content changes, consider using [`Tr
 
 ## See also
 
-- [ContentControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContentControl)
+- [ContentControl API reference](/api/avalonia/controls/contentcontrol)
 - [`ContentControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ContentControl.cs)
 - [Data templates](/docs/data-templates/introduction-to-data-templates)
 - [`TransitioningContentControl`](transitioningcontentcontrol)

@@ -3,7 +3,7 @@ id: popup
 title: Popup
 ---
 
-The `Popup` is a low-level control that displays content in a floating window above other content. It serves as the foundation for higher-level controls like `Flyout`, `ToolTip`, `ComboBox` dropdowns, and context menus. Use `Popup` directly when you need custom positioning or dismissal behavior that those controls do not provide.
+The [`Popup`](/api/avalonia/controls/primitives/popup) is a low-level control that displays content in a floating window above other content. It serves as the foundation for higher-level controls like `Flyout`, [`ToolTip`](/api/avalonia/controls/tooltip), `ComboBox` dropdowns, and context menus. Use `Popup` directly when you need custom positioning or dismissal behavior that those controls do not provide.
 
 :::info
 For most scenarios, prefer `Flyout`, `ToolTip`, or `ContextMenu` instead of `Popup`. These higher-level controls handle accessibility, keyboard navigation, and light-dismiss behavior automatically.

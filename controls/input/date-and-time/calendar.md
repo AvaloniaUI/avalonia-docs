@@ -75,5 +75,5 @@ public partial class MainWindow : Window
 
 ## See also
 
-- [Calendar API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Calendar)
+- [Calendar API reference](/api/avalonia/controls/calendar)
 - [`Calendar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Calendar/Calendar.cs)

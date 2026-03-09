@@ -105,5 +105,5 @@ This is an example of a drop-shadow:
 
 ## See also
 
-- [Border API reference](https://api-docs.avaloniaui.net/docs/TAvaloniaControls_Border)
+- [Border API reference](/api/avalonia/controls/border)
 - [`Border.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Border.cs)

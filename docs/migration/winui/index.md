@@ -68,7 +68,7 @@ Most WinUI controls have direct equivalents in Avalonia. The main differences ar
 
 | WinUI / UWP | Avalonia | Notes |
 |---|---|---|
-| `NavigationView` | No direct equivalent | Use `SplitView` with a `ListBox` or a third-party control |
+| `NavigationView` | No direct equivalent | Use [`SplitView`](/api/avalonia/controls/splitview) with a [`ListBox`](/api/avalonia/controls/listbox) or a third-party control |
 | `InfoBar` | No direct equivalent | Use a styled `Border` with content |
 | `TeachingTip` | No direct equivalent | Use `Popup` or `Flyout` |
 | `PersonPicture` | No direct equivalent | Compose with `Ellipse` and `Image` |
@@ -87,7 +87,7 @@ Most WinUI controls have direct equivalents in Avalonia. The main differences ar
 | `SplitView` | `SplitView` | Same |
 | `TreeView` | `TreeView` | Same |
 | `ListView` / `GridView` | `ListBox` | Use `ListBox` with `ItemTemplate` and `WrapPanel` for grid layout |
-| `Page` / `Frame` | `NavigationPage` / `ContentPage` | See [NavigationPage](/controls/navigation/navigationpage) |
+| `Page` / `Frame` | [`NavigationPage`](/api/avalonia/controls/navigationpage) / `ContentPage` | See [NavigationPage](/controls/navigation/navigationpage) |
 
 ### Navigation
 

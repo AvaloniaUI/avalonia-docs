@@ -9,7 +9,7 @@ A master-detail pattern displays a list of items (the "master") alongside the de
 
 ## Basic master-detail
 
-Bind a `ListBox` to a collection and display the selected item's properties in an adjacent panel. The detail panel sets its `DataContext` to the `SelectedPerson` property, so every binding inside it resolves against the selected object:
+Bind a [`ListBox`](/api/avalonia/controls/listbox) to a collection and display the selected item's properties in an adjacent panel. The detail panel sets its `DataContext` to the `SelectedPerson` property, so every binding inside it resolves against the selected object:
 
 ```xml
 <Grid ColumnDefinitions="250,*">

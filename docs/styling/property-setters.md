@@ -61,7 +61,7 @@ Whenever a style is matched with a control, all of the setters will be applied t
 
 ## Mutable values
 
-The `Setter` creates a single instance of `Value` which will be applied to all controls that the style matches. If the object is mutable, changes will be reflected on all controls.
+The [`Setter`](/api/avalonia/styling/setter) creates a single instance of `Value` which will be applied to all controls that the style matches. If the object is mutable, changes will be reflected on all controls.
 
 Bindings on an object defined in a setter value will not have access to the target control's data context because there may be multiple target controls. This scenario may arise with a style defined like this:
 
@@ -99,7 +99,7 @@ As previously described here, when you use a setter without a **data template**,
 
 ## Setter precedence
 
-Avalonia `Setters` are applied in order of `BindingPriority`, then visual tree locality, and finally the `Styles` collection 
+Avalonia `Setters` are applied in order of [`BindingPriority`](/api/avalonia/data/bindingpriority), then visual tree locality, and finally the `Styles` collection 
 order. Precedence applies individually to each `StyledProperty` so that styling can benefit from composition. `DirectProperty` 
 and CLR properties cannot be styled and therefore do not participate in this precedence.
 
@@ -146,7 +146,7 @@ Transitions system.
 
 ### LocalValue
 
-Assigned when a XAML property is directly set outside of a `ControlTemplate`. Both `Background` `Setter`s below will 
+Assigned when a XAML property is directly set outside of a [`ControlTemplate`](/api/avalonia/markup/xaml/templates/controltemplate). Both `Background` `Setter`s below will 
 have `LocalValue` priority.
 
 ```xml
@@ -297,7 +297,7 @@ despite `BindingPriority.Animation` having the highest priority. This is because
 </ControlTheme>
 ```
 
-The top `Setter` applies the `ButtonBackground` to the `Button` with `Style` priority. The `Background` rendering is 
+The top `Setter` applies the `ButtonBackground` to the [`Button`](/api/avalonia/controls/button) with `Style` priority. The `Background` rendering is 
 handled by the `ContentPresenter` which has a `Template` priority. It fetches the `ButtonBackground` which has been 
 applied to `Button`.
 

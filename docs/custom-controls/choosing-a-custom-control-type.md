@@ -5,7 +5,7 @@ description: Compare user controls, templated controls, and custom-drawn control
 doc-type: explanation
 ---
 
-Avalonia provides various approaches for creating custom controls to meet your application's specific needs. Understanding the different types of custom controls will help you choose the most appropriate approach for your requirements. In Avalonia, the three common types of custom controls are `UserControl`s, lookless controls, and custom-drawn controls.
+Avalonia provides various approaches for creating custom controls to meet your application's specific needs. Understanding the different types of custom controls will help you choose the most appropriate approach for your requirements. In Avalonia, the three common types of custom controls are [`UserControl`](/api/avalonia/controls/usercontrol)s, lookless controls, and custom-drawn controls.
 
 ## UserControl
 

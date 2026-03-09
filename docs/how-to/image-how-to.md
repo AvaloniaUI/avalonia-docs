@@ -74,7 +74,7 @@ private async Task LoadFromUrl(string url)
 
 ## Stretch Modes
 
-The `Stretch` property controls how the image fills its bounds:
+The [`Stretch`](/api/avalonia/media/stretch) property controls how the image fills its bounds:
 
 ```xml
 <!-- Preserves aspect ratio, fits within bounds -->

@@ -5,7 +5,7 @@ description: A control that lets users resize columns or rows in a Grid by dragg
 doc-type: reference
 ---
 
-The `GridSplitter` control allows a user to resize the columns or rows in a `Grid` at runtime. The splitter is drawn as a column or row (size can be specified), and has a grip that the user can manipulate at runtime.
+The [`GridSplitter`](/api/avalonia/controls/gridsplitter) control allows a user to resize the columns or rows in a `Grid` at runtime. The splitter is drawn as a column or row (size can be specified), and has a grip that the user can manipulate at runtime.
 
 ## Useful properties
 
@@ -103,5 +103,5 @@ This is a row splitter. Drag the border between the rows to resize them.
 ## See also
 
 - [Grid](grid.md)
-- [GridSplitter API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_GridSplitter)
+- [GridSplitter API reference](/api/avalonia/controls/gridsplitter)
 - [`GridSplitter.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GridSplitter.cs)

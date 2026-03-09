@@ -10,7 +10,7 @@ import TabbedPageLeftScreenshot from '/img/controls/tabbedpage/tabbedpage-left.p
 import TabbedPageRightScreenshot from '/img/controls/tabbedpage/tabbedpage-right.png';
 import TabbedPageInDrawerPageScreenshot from '/img/controls/tabbedpage/tabbedpage-in-drawerpage.png';
 
-The `TabbedPage` displays a collection of pages through a tab strip, allowing users to switch between pages by selecting tabs. Each child page becomes a tab, with the tab header and icon derived from the page's `Header` and `Icon` properties.
+The [`TabbedPage`](/api/avalonia/controls/tabbedpage) displays a collection of pages through a tab strip, allowing users to switch between pages by selecting tabs. Each child page becomes a tab, with the tab header and icon derived from the page's `Header` and `Icon` properties.
 
 `TabbedPage` inherits from `SelectingMultiPage`, which in turn inherits from `MultiPage`. This inheritance chain provides built-in selection tracking, page lifecycle management, and support for page transitions.
 
@@ -22,9 +22,9 @@ If you need a simple tab strip without page-based navigation features (lifecycle
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| `Pages` | `IEnumerable` | `null` | The collection of `Page` children displayed as tabs. |
+| `Pages` | `IEnumerable` | `null` | The collection of [`Page`](/api/avalonia/controls/page) children displayed as tabs. |
 | `PageTemplate` | `IDataTemplate` | `null` | A data template used to render page content when binding to non-Page items. |
-| `TabPlacement` | `Dock` | `Auto` | Controls where tabs are positioned. See the TabPlacement values table below. |
+| [`TabPlacement`](/api/avalonia/controls/tabplacement) | `Dock` | `Auto` | Controls where tabs are positioned. See the TabPlacement values table below. |
 | `IsKeyboardNavigationEnabled` | `bool` | `true` | Allows tab switching with keyboard input. |
 | `IsGestureEnabled` | `bool` | `false` | Enables swipe gestures to switch tabs. |
 | `PageTransition` | `IPageTransition` | `null` | The transition animation used when switching between tabs. |
@@ -335,5 +335,5 @@ You can nest a `TabbedPage` inside a `DrawerPage` to combine a side drawer with 
 - [ContentPage](contentpage)
 - [NavigationPage](navigationpage)
 - [TabControl](/controls/navigation/tabcontrol)
-- [TabbedPage API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TabbedPage)
+- [TabbedPage API reference](/api/avalonia/controls/tabbedpage)
 - [`TabbedPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/TabbedPage.cs)

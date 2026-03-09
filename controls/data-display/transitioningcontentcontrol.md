@@ -8,7 +8,7 @@ doc-type: reference
 import TransitioningContentControlFadeScreenshot from '/img/controls/transitioningcontentcontrol/transitioningcontentcontrol-fade.webp';
 import TransitioningContentControlSlideScreenshot from '/img/controls/transitioningcontentcontrol/transitioningcontentcontrol-slide.webp';
 
-The `TransitioningContentControl` displays a single piece of content at a time and plays an animated page transition whenever that content changes. It extends [`ContentControl`](contentcontrol), so you can use it anywhere you would use a regular content control.
+The [`TransitioningContentControl`](/api/avalonia/controls/transitioningcontentcontrol) displays a single piece of content at a time and plays an animated page transition whenever that content changes. It extends [`ContentControl`](contentcontrol), so you can use it anywhere you would use a regular content control.
 
 A common use case is building an image slideshow, but `TransitioningContentControl` is equally useful for switching between views in a navigation scenario.
 

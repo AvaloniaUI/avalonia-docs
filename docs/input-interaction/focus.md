@@ -7,7 +7,7 @@ doc-type: concept
 
 import DirectionalNavigationScreenshot from '/img/concepts/ui-concepts/user-input/directional-navigation.gif';
 
-Focus refers to the `InputElement` that is expected to receive keyboard input. Focused controls are typically distinguished with a visual indicator. The most familiar example is a `TextBox` with a blinking cursor inside, but non-textual controls like `Button` and `Slider` also participate in focus.
+Focus refers to the [`InputElement`](/api/avalonia/input/inputelement) that is expected to receive keyboard input. Focused controls are typically distinguished with a visual indicator. The most familiar example is a `TextBox` with a blinking cursor inside, but non-textual controls like `Button` and [`Slider`](/api/avalonia/controls/slider) also participate in focus.
 
 Understanding how focus works helps you build accessible, keyboard-friendly applications. This page covers the core focus properties, events, pseudoclasses, and the two built-in navigation schemes (tab and directional).
 
@@ -24,7 +24,7 @@ The `Focusable` property enables or disables the ability to focus an `InputEleme
 
 ## Explicit focusing
 
-To explicitly assign focus to any `InputElement`, call its `Focus()` method from code. You can optionally specify the `NavigationMethod` and `KeyModifiers` to simulate focus triggered by a specific navigation flow. Explicit focusing is often used to set focus on a specific `InputElement` in a data-entry form when it loads, or to programmatically move focus to the next control once the current input has been satisfied.
+To explicitly assign focus to any `InputElement`, call its `Focus()` method from code. You can optionally specify the [`NavigationMethod`](/api/avalonia/input/navigationmethod) and `KeyModifiers` to simulate focus triggered by a specific navigation flow. Explicit focusing is often used to set focus on a specific `InputElement` in a data-entry form when it loads, or to programmatically move focus to the next control once the current input has been satisfied.
 
 ```csharp
 // Focus a control when the view loads
@@ -35,7 +35,7 @@ myTextBox.Focus(NavigationMethod.Unspecified, KeyModifiers.None);
 |:--------------------|:---------------------------|
 | `Tab`               | Tab key press              |
 | `Pointer`           | Pointer interaction        |
-| `Directional`       | 2D directional (`XYFocus`) |
+| `Directional`       | 2D directional ([`XYFocus`](/api/avalonia/input/xyfocus)) |
 | `Unspecified`       | Default                    |
 
 ## Focus events

@@ -5,7 +5,7 @@ description: A container control that visually groups related content under a he
 doc-type: reference
 ---
 
-The `GroupBox` control visually groups related content under a header label, surrounded by a border. The header text overlaps the top edge of the border, creating the classic "group box" appearance familiar from desktop UI frameworks.
+The [`GroupBox`](/api/avalonia/controls/groupbox) control visually groups related content under a header label, surrounded by a border. The header text overlaps the top edge of the border, creating the classic "group box" appearance familiar from desktop UI frameworks.
 
 `GroupBox` extends `HeaderedContentControl`, so it supports a `Header` (displayed at the top of the border) and a single `Content` child.
 
@@ -134,5 +134,5 @@ You can customize the `GroupBox` appearance through theme resources:
 - [Border](border)
 - [Expander](../expander)
 - [HeaderedContentControl](../../../concepts/headered-content-control)
-- [GroupBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_GroupBox)
+- [GroupBox API reference](/api/avalonia/controls/groupbox)
 - [`GroupBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GroupBox.cs)

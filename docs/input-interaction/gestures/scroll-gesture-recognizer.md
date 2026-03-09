@@ -134,7 +134,7 @@ You will probably use these properties most often:
 ## More information
 
 :::info
-For the complete API documentation about this gesture recognizer, see the [ScrollGestureRecognizer API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_GestureRecognizers_ScrollGestureRecognizer).
+For the complete API documentation about this gesture recognizer, see the [ScrollGestureRecognizer API reference](/api/avalonia/input/gesturerecognizers/scrollgesturerecognizer).
 :::
 
 :::info

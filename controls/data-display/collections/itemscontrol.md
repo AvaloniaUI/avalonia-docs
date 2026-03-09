@@ -7,7 +7,7 @@ doc-type: reference
 
 import exampleScreenshot from '/img/controls/itemscontrol/itemscontrol-with-custom-layout-and-formatting.gif';
 
-The `ItemsControl` is the base class for controls that display repeating data (for example, `ListBox` and `ComboBox`). It has no built-in formatting, selection, or scroll behavior. You can use it with data binding, styling, and data templates to create a completely custom repeating data control.
+The [`ItemsControl`](/api/avalonia/controls/itemscontrol) is the base class for controls that display repeating data (for example, [`ListBox`](/api/avalonia/controls/listbox) and `ComboBox`). It has no built-in formatting, selection, or scroll behavior. You can use it with data binding, styling, and data templates to create a completely custom repeating data control.
 
 :::tip
 If you need built-in selection support, use [`ListBox`](listbox) instead. If you need scrolling, wrap your `ItemsControl` in a `ScrollViewer`, or consider `ListBox` which includes one by default.
@@ -125,6 +125,6 @@ public class Crockery
 - [DataGrid](/controls/data-display/structured-data/datagrid)
 - [Custom ItemsPanel](/docs/custom-controls/custom-itemspanel)
 - [Data templates](/docs/data-binding/data-templates)
-- [ItemsControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ItemsControl)
+- [ItemsControl API reference](/api/avalonia/controls/itemscontrol)
 - [`ItemsControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)
 

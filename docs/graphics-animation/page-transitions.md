@@ -16,7 +16,7 @@ To assign a transition, set the `PageTransition` property on the host control:
                               Content="{Binding CurrentPage}" />
 ```
 
-## `CrossFade`
+## [`CrossFade`](/api/avalonia/animation/crossfade)
 
 `CrossFade` fades out the current view and fades in the new view by animating opacity. This is a good default choice when you want a subtle, non-directional transition that works well for any content.
 
@@ -32,7 +32,7 @@ var transition = new CrossFade(TimeSpan.FromMilliseconds(500));
 `CrossFade` works well for tab-style navigation where there is no inherent forward/back direction. If your views have very different heights, a crossfade avoids the jarring jump that a slide can produce.
 :::
 
-## `PageSlide`
+## [`PageSlide`](/api/avalonia/animation/pageslide)
 
 `PageSlide` slides the old view out and the new view in. The `Orientation` property controls the slide axis (the default is horizontal). This transition conveys directional navigation, making it ideal for wizard-style flows or sequential pages.
 
@@ -49,7 +49,7 @@ var transition = new PageSlide(TimeSpan.FromMilliseconds(500),
 The `forward` parameter passed to the transition controls the slide direction. When you navigate backward (for example, pressing a "Back" button), set the parameter to `false` so the slide direction reverses automatically.
 :::
 
-## `CompositePageTransition`
+## [`CompositePageTransition`](/api/avalonia/animation/compositepagetransition)
 
 `CompositePageTransition` combines two or more transitions into a single effect. Every child transition runs in parallel. The following example slides views diagonally (horizontal and vertical slide combined) while also crossfading:
 
