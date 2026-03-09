@@ -1,19 +1,25 @@
 ---
 id: activatable-lifetime
 title: Activatable lifetime
+description: API reference for IActivatableLifetime, the service that exposes application activation and deactivation events and background state methods.
+doc-type: reference
 ---
 
-The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an app. `IActivatableLifetime` is a global app-level service that is accessed from the application instance using the `TryGetService` method: `Application.Current.TryGetService<IActivatableLifetime>()`.
+The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an app. `IActivatableLifetime` is a global app-level service that is accessed from the application instance using the `TryGetService` method:
+
+```csharp
+Application.Current.TryGetService<IActivatableLifetime>().
+```
 
 ## Events
 
 ### Activated
 
-An event that is raised when the application is **Activated** for various reasons as described by the `ActivationKind` enumeration.
+An event that is raised when the application is `Activated` for various reasons as described by the `ActivationKind` enumeration.
 
 ### Deactivated
 
-An event that is raised when the application is **Deactivated** for various reasons as described by the `ActivationKind` enumeration.
+An event that is raised when the application is `Deactivated` for various reasons as described by the `ActivationKind` enumeration.
 
 ## Methods
 
@@ -21,7 +27,7 @@ An event that is raised when the application is **Deactivated** for various reas
 
 Tells the application to attempt to leave background state.
 
-Returns **true** if it was possible on the given platform. Otherwise, returns **false**.
+Returns `true` if it was possible on the given platform. Otherwise, returns `false`.
 
 **Example:** `[NSApp unhide]` on macOS.
 
@@ -29,7 +35,7 @@ Returns **true** if it was possible on the given platform. Otherwise, returns **
 
 Tells the application to attempt to enter background state.
 
-Returns **true** if it was possible on the given platform. Otherwise, returns **false**.
+Returns `true` if it was possible on the given platform. Otherwise, returns `false`.
 
 **Example:** `[NSApp hide]` on macOS.
 
@@ -81,9 +87,9 @@ if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatabl
 :::note
 Some platforms have specific steps to update the manifest and enable protocol handling.
 
-**macOS and iOS:** Add CFBundleURLTypes with CFBundleURLSchemes segment to your `Info.plist`. See https://rderik.com/blog/creating-app-custom-url-scheme/ (skip Swift part, as it's handled by `IActivatableLifetime`).
+**macOS and iOS:** Add `CFBundleURLTypes` with `CFBundleURLSchemes` segment to your `Info.plist`. See [Creating an app custom URL scheme](https://rderik.com/blog/creating-app-custom-url-scheme/) (skip the Swift part, which is handled by `IActivatableLifetime`).
 
-**Android:** Add `intent-filter` with specific `android:scheme` to your `AndroidManifest.xml`. See https://developer.android.com/training/app-links/deep-linking for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
+**Android:** Add `intent-filter` with specific `android:scheme` to your `AndroidManifest.xml`. See [Deep linking on Android](https://developer.android.com/training/app-links/deep-linking) for details (skip Kotlin/Java parts, which are handled by `IActivatableLifetime`).
 :::
 
 ### Handling file activation
@@ -127,6 +133,6 @@ Some platforms have specific steps to update the manifest and enable file type a
 | `TryLeaveBackground`  | ✖ | ✔ | ✖ | ✖ | ✖ | ✖ |
 | `TryEnterBackground` | ✖ | ✔ | ✖ | ✖ | ✔ | ✖ |
 
-## More information
+## See also
 
-See https://github.com/AvaloniaUI/Avalonia/issues/15316
+- [IActivatableLifetime issue and discussion (#15316)](https://github.com/AvaloniaUI/Avalonia/issues/15316)
