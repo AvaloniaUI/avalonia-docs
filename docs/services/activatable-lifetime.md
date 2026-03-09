@@ -1,50 +1,46 @@
 ---
 id: activatable-lifetime
-title: Activatable Lifetime
+title: Activatable lifetime
 ---
 
-The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an application. `IActivatableLifetime` is a global app-level service that can be accessed from the Application instance using the `TryGetService` method: `Application.Current.TryGetService<IActivatableLifetime>()`.
+The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an app. `IActivatableLifetime` is a global app-level service that is accessed from the application instance using the `TryGetService` method: `Application.Current.TryGetService<IActivatableLifetime>()`.
 
 ## Events
 
 ### Activated
 
-An event that is raised when the application is Activated for various reasons as described by the ActivationKind enumeration.
+An event that is raised when the application is **Activated** for various reasons as described by the `ActivationKind` enumeration.
 
 ### Deactivated
 
-An event that is raised when the application is Deactivated for various reasons as described by the ActivationKind enumeration.
+An event that is raised when the application is **Deactivated** for various reasons as described by the `ActivationKind` enumeration.
 
 ## Methods
 
 ### TryLeaveBackground
 
-Tells the application that it should attempt to leave its background state.
-Returns true if it was possible and the platform supports this. False otherwise.
+Tells the application to attempt to leave background state.
 
-:::note
-For example on macOS this would be [NSApp unhide].
-:::
+Returns **true** if it was possible on the given platform. Otherwise, returns **false**.
+
+**Example:** `[NSApp unhide]` on macOS.
 
 ### TryEnterBackground
 
-Tells the application that it should attempt to enter its background state.
+Tells the application to attempt to enter background state.
 
-Returns true if it was possible and the platform supports this. False otherwise.
+Returns **true** if it was possible on the given platform. Otherwise, returns **false**.
 
-:::note
-For example on macOS this would be [NSApp hide].
-:::
+**Example:** `[NSApp hide]` on macOS.
 
 ## Examples
 
-### Handling app entering and exiting background state
+### Entering and exiting background state
 
-In some applications, you might want to pause or stop some code processing, while application is in background.
-It might be pausing multimedia playback, or disabling recurrent HTTP requests.
+You may want an app to pause or stop some code processing when it is in the background, e.g., pausing multimedia playback, or disabling recurrent HTTP requests.
 
 ```csharp
-if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
 {
     activatableLifetime.Activated += (sender, args) =>
     {
@@ -65,12 +61,12 @@ if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatable
 
 ### Handling URI activation
 
-Some apps might need to supports Protocol Activation, or as it's often called - deep linking. Link schemas (protocols) that are registered in the system and associated with the app. Once registered, OS will always redirect these links to the app.
+Your app may need to support protocol activation, more commonly called deep linking. Link schemas must be registered in the system and associated with the app. Once registered, the OS can redirect the links to the app.
 
-App can handle these links in different ways. But typical use cases would be either enabling navigation to the specific page, or using it as a [redirect URL in OAuth operations](https://www.oauth.com/oauth2-servers/oauth-native-apps/redirect-urls-for-native-apps/).
+Typical use cases are navigating to a specific page, or creating a [redirect URL in OAuth operations](https://www.oauth.com/oauth2-servers/oauth-native-apps/redirect-urls-for-native-apps/).
 
 ```csharp
-if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
 {
     activatableLifetime.Activated += (s, a) =>
    {
@@ -83,24 +79,54 @@ if (Application.Current.TryGetFeature<IActivatableLifetime>() is { } activatable
 ```
 
 :::note
-To enable protocol handling for your app, you need to follow platform specific instructions on updating manifest.
-On macOS and iOS, you need to add CFBundleURLTypes with CFBundleURLSchemes segment to your `Info.plist`. See https://rderik.com/blog/creating-app-custom-url-scheme/ (skip Swift part, as it's handled by `IActivatableLifetime`).
-On Android, you need to add `intent-filter` with specific `android:scheme` to your `AndroidManifest.xml`. See https://developer.android.com/training/app-links/deep-linking for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
+Some platforms have specific steps to update the manifest and enable protocol handling.
+
+**macOS and iOS:** Add CFBundleURLTypes with CFBundleURLSchemes segment to your `Info.plist`. See https://rderik.com/blog/creating-app-custom-url-scheme/ (skip Swift part, as it's handled by `IActivatableLifetime`).
+
+**Android:** Add `intent-filter` with specific `android:scheme` to your `AndroidManifest.xml`. See https://developer.android.com/training/app-links/deep-linking for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
+:::
+
+### Handling file activation
+
+Your app may need to handle file activation, which occurs when the OS launches or foregrounds your app (usually because the user opens a file associated with it). Like link schemas, file type associations must be registered in the system and linked to your app. Once registered, opening an associated file also opens your app via this event.
+
+Typical use cases are opening a document, importing a file, or processing files passed from the OS shell.
+
+```csharp
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+{
+    activatableLifetime.Activated += (s, a) =>
+    {
+        if (a is FileActivatedEventArgs fileArgs && fileArgs.Kind == ActivationKind.File)
+        {
+            foreach (var file in fileArgs.Files)
+            {
+                Console.WriteLine($"App activated via file: {file.Name}");
+            }
+        }
+    };
+}
+```
+
+:::note
+Some platforms have specific steps to update the manifest and enable file type associations.
+
+**macOS and iOS:** Add `CFBundleDocumentTypes` to your `Info.plist` to declare the file types your app handles. See the [Apple documentation](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledocumenttypes) for details.
+
+**Android:** Add an `intent-filter` with `action.VIEW` and the appropriate `data` MIME type or file extension to your `AndroidManifest.xml`. See the [Android documentation](https://developer.android.com/training/data-storage/shared/documents-files) for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
 :::
 
 ## Platform compatibility
 
 | Feature        |  Windows | macOS | Linux | Browser | Android |  iOS |
 |---------------|-------|-------|-------|-------|-------|-------|
-| `ActivationKind.Background` | ✗ | ✓ | ✗ | ✓ | ✓ | ✓ |
-| `ActivationKind.File` | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ |
-| `ActivationKind.OpenUri` | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ |
-| `ActivationKind.Reopen` | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
-| `TryLeaveBackground`  | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
-| `TryEnterBackground` | ✗ | ✓ | ✗ | ✗ | ✓ | ✗ |
+| `ActivationKind.Background` | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| `ActivationKind.File` | ✖ | ✔ | ✖ | ✖ | ✔ | ✔ |
+| `ActivationKind.OpenUri` | ✖ | ✔ | ✖ | ✖ | ✔ | ✔ |
+| `ActivationKind.Reopen` | ✖ | ✔ | ✖ | ✖ | ✖ | ✖ |
+| `TryLeaveBackground`  | ✖ | ✔ | ✖ | ✖ | ✖ | ✖ |
+| `TryEnterBackground` | ✖ | ✔ | ✖ | ✖ | ✔ | ✖ |
 
-See https://github.com/AvaloniaUI/Avalonia/issues/15316 for more information on currently supported and unsupported platforms.
+## More information
 
-## See also
-
-- [TopLevel](/docs/fundamentals/top-level): Accessing platform services from controls.
+See https://github.com/AvaloniaUI/Avalonia/issues/15316
