@@ -31,6 +31,14 @@ dotnet workload install android
 You may need to run the above commands with _sudo._
 :::
 
+:::caution[Linux users: use the official Microsoft .NET SDK]
+The `dotnet workload` command requires the official Microsoft .NET SDK. .NET packages from Linux distribution repositories (such as Arch Linux AUR, Ubuntu `dotnet-sdk` apt packages, or Fedora `dotnet` dnf packages) may not include workload support. If `dotnet workload install android` fails with error `NETSDK1139`, install the SDK from [Microsoft's .NET download page](https://dotnet.microsoft.com/download) or use the [install script](https://learn.microsoft.com/dotnet/core/tools/dotnet-install-script):
+
+```bash
+curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 10.0
+```
+:::
+
 ### Install the Android SDK
 
 There are several ways to install the Android SDK. Choose the one that matches your development environment.
