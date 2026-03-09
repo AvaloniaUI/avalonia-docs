@@ -9,11 +9,11 @@ The `TopLevel` acts as the visual root, and is the base class for all top level 
 
 ## Getting the TopLevel
 
-Here are two common ways to access TopLevel instance.
+Here are two common ways to access a `TopLevel` instance.
 
 ### Using TopLevel.GetTopLevel
 
-You can use the static `GetTopLevel` method of the TopLevel class to get the top-level control that contains the current control.
+You can use the static `GetTopLevel` method of the `TopLevel` class to get the top-level control that contains the current control.
 
 ```csharp
 var topLevel = TopLevel.GetTopLevel(control);
@@ -112,7 +112,7 @@ double RenderScaling { get; }
 
 ### RequestedThemeVariant
 
-Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with ThemeVariant can override the app-level ThemeVariant.
+Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with `ThemeVariant` can override the app-level `ThemeVariant`.
 
 ```csharp
 ThemeVariant? RequestedThemeVariant { get; set; }
@@ -193,11 +193,36 @@ static TopLevel? GetTopLevel(Visual? visual)
 
 ### RequestAnimationFrame
 
-Enqueues a callback to be called on the next animation tick
+Enqueues a callback to be called on the next animation tick. The callback runs on the UI thread, synchronized with Avalonia's rendering cycle. Each call schedules a single invocation. To create a continuous animation loop, call `RequestAnimationFrame` again from within the callback.
 
 ```csharp
 void RequestAnimationFrame(Action<TimeSpan> action)
 ```
+
+#### Parameters
+
+`action`
+A callback that receives a `TimeSpan` representing the elapsed time since the animation system started. Use this value to calculate frame-independent animation progress.
+
+#### Example: continuous animation loop
+
+```csharp
+var topLevel = TopLevel.GetTopLevel(this);
+
+topLevel.RequestAnimationFrame(OnAnimationFrame);
+
+private void OnAnimationFrame(TimeSpan elapsed)
+{
+    // Update your visual state based on elapsed time
+    _angle = elapsed.TotalSeconds * 90; // 90 degrees per second
+    InvalidateVisual();
+
+    // Schedule the next frame to keep the loop running
+    TopLevel.GetTopLevel(this)?.RequestAnimationFrame(OnAnimationFrame);
+}
+```
+
+This is the Avalonia equivalent of WPF's `CompositionTarget.Rendering`. For render-thread callbacks that do not block the UI thread, see [CompositionCustomVisualHandler](/docs/graphics-animation/custom-rendering#compositioncustomvisualhandler).
 
 ### RequestPlatformInhibition
 
@@ -219,4 +244,6 @@ IPlatformHandle? TryGetPlatformHandle()
 
 - [Main window](/docs/fundamentals/main-window)
 - [Application lifetimes](/docs/fundamentals/application-lifetimes)
+- [Custom rendering](/docs/graphics-animation/custom-rendering): Custom drawing and render-thread callbacks.
+- [Composition animations](/docs/graphics-animation/composition-animations): Render-thread property animations.
 - [`TopLevel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)

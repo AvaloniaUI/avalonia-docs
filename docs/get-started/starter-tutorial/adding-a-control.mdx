@@ -5,8 +5,8 @@ description: How to add a button to your temperature converter app. Part 2 of 7 
 doc-type: tutorial
 ---
 
-import CalculateButtonLeft from ‘/img/get-started/calculate-button-left.png’;
-import CalculateButtonCenter from ‘/img/get-started/calculate-button-center.png’;
+import CalculateButtonLeft from '/img/get-started/calculate-button-left.png';
+import CalculateButtonCenter from '/img/get-started/calculate-button-center.png';
 
 The first step for your temperature converter app is to add a **control**. In Avalonia, a control is any UI element that your users can see or interact with. Buttons, sliders, checkboxes, text boxes, and menus are all examples of controls. Each control is represented by an XML element in your AXAML markup, making it straightforward to add, remove, or rearrange the elements of your user interface.
 
@@ -20,7 +20,7 @@ Start by replacing the default text in the app with a `Button` control.
 2. In the file **MainWindow.axaml**, locate this line:
 
 ```xml
-<TextBlock Text=”{Binding Greeting}” HorizontalAlignment=”Center” VerticalAlignment=”Center”/>
+<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 ```
 
 3. Replace the entire line with the following `Button` element:
@@ -29,14 +29,14 @@ Start by replacing the default text in the app with a `Button` control.
 <Button>Calculate</Button>
 ```
 
-The text between the opening and closing `<Button>` tags becomes the button’s visible label. In this case, the button displays the word “Calculate.”
+The text between the opening and closing `<Button>` tags becomes the button's visible label. In this case, the button displays the word "Calculate."
 
 4. Run the app or check the previewer. You should now see a **Calculate** button in the app window.
-5. Try hovering over or clicking the button to see how its appearance changes. Avalonia’s default theme provides built-in visual states for hover, press, and focus, so your button responds to user interaction without any extra code.
+5. Try hovering over or clicking the button to see how its appearance changes. Avalonia's default theme provides built-in visual states for hover, press, and focus, so your button responds to user interaction without any extra code.
 
-<Image light={CalculateButtonLeft} alt=”A screenshot of an app running in a window, with the button aligned left.” position=”center” maxWidth={400} cornerRadius=”true”/>
+<Image light={CalculateButtonLeft} alt="A screenshot of an app running in a window, with the button aligned left." position="center" maxWidth={400} cornerRadius="true"/>
 
-## Set the button’s attributes
+## Set the button's attributes
 
 Controls in Avalonia use XML attributes to configure their presentation and behavior. You can think of attributes as settings that you apply directly in the AXAML markup to control things like size, position, color, and more.
 
@@ -51,15 +51,15 @@ Your **Calculate** button is currently aligned against the left edge of the wind
 2. Add the `HorizontalAlignment` attribute to the `<Button>` tag and set it to `Center`:
 
 ```xml
-<Button HorizontalAlignment=”Center”>Calculate</Button>
+<Button HorizontalAlignment="Center">Calculate</Button>
 ```
 
 3. Run the app or check the previewer. You should see the **Calculate** button move to the center of the window.
 
-<Image light={CalculateButtonCenter} alt=”A screenshot of an app running in a window, with the button aligned center.” maxWidth={400} cornerRadius=”true” margin=”0,0,30,0”/>
+<Image light={CalculateButtonCenter} alt="A screenshot of an app running in a window, with the button aligned center." maxWidth={400} cornerRadius="true" margin="0,0,30,0"/>
 
 :::tip
-You can also set `VerticalAlignment` to control where a control sits along the vertical axis. Try setting `VerticalAlignment=”Center”` on your button to see the effect.
+You can also set `VerticalAlignment` to control where a control sits along the vertical axis. Try setting `VerticalAlignment="Center"` on your button to see the effect.
 :::
 
 ## What you have learned
@@ -67,8 +67,8 @@ You can also set `VerticalAlignment` to control where a control sits along the v
 In this section, you:
 
 - Added a `Button` control to your window by writing AXAML markup.
-- Set the button’s content (its label text) between opening and closing tags.
-- Used the `HorizontalAlignment` attribute to change the button’s position.
+- Set the button's content (its label text) between opening and closing tags.
+- Used the `HorizontalAlignment` attribute to change the button's position.
 
 On the next page, you will learn how to add multiple elements to your app using layout controls.
 

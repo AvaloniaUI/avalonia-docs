@@ -203,6 +203,7 @@ Or with a binding converter:
 | `BeginStoryboard` | Animations declared in `Style.Animations` | Triggered by pseudo-classes |
 | `EasingFunction` | `Easing` property | Same easing types available |
 | `Transitions` (UWP) | `Transitions` | Property change animations |
+| `CompositionTarget.Rendering` | `TopLevel.RequestAnimationFrame()` | Per-frame callback on UI thread; see also `CompositionCustomVisualHandler` for render-thread callbacks |
 
 ## Graphics
 
