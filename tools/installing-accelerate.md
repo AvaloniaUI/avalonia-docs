@@ -58,8 +58,10 @@ Include your Avalonia license key in the executable project file (`.csproj`):
 
 Replace `YOUR_LICENSE_KEY` with the key from your [Avalonia portal](https://portal.avaloniaui.net) account.
 
-:::tip
-For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared `Directory.Build.props` file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplicating the key across multiple `.csproj` files.
+For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+
+:::warning
+Do not leave the license key value blank. If left blank, you may be unable to build or open your project.
 :::
 
 ## Verify the installation
