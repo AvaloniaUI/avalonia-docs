@@ -256,6 +256,23 @@ For images that do not need high-quality scaling, use a lower interpolation mode
        RenderOptions.BitmapInterpolationMode="LowQuality" />
 ```
 
+### GPU resource cache size
+
+Avalonia uses Skia with GPU acceleration by default. Skia maintains a GPU resource cache for textures and other GPU-backed surfaces. The default cache limit is approximately 28 MB. If your app works with large images, tilesets, or many cached visuals, images that exceed the cache limit are re-uploaded to the GPU each frame, causing stuttering.
+
+Increase the cache by configuring `SkiaOptions` at startup:
+
+```csharp
+AppBuilder.Configure<App>()
+    .UsePlatformDetect()
+    .With(new SkiaOptions
+    {
+        MaxGpuResourceSizeBytes = 256 * 1024 * 1024 // 256 MB
+    });
+```
+
+Choose a value appropriate for your target hardware. Most integrated GPUs have at least 2 GB of shared memory, so values of 256 MB or 512 MB are safe for desktop apps. Mobile devices may require lower values.
+
 ## Data binding performance
 
 ### Use compiled bindings
