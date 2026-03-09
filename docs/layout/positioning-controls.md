@@ -15,7 +15,7 @@ An Avalonia control exposes several properties that are used to precisely positi
 
 ## Introduction to element positioning
 
-There are numerous ways to position elements using Avalonia. However, achieving ideal layout goes beyond simply choosing the right `Panel` element. Fine control of positioning requires an understanding of the `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment` properties.
+There are numerous ways to position elements using Avalonia. However, achieving ideal layout goes beyond choosing the right `Panel` element. Fine control of positioning requires an understanding of the `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment` properties.
 
 The following illustration shows a layout scenario that utilizes several positioning properties.
 
@@ -129,7 +129,7 @@ The preceding code yields a layout similar to the following image. The positioni
 
 The `Margin` property describes the distance between an element and its child or peers. `Margin` values can be uniform, by using syntax like `Margin="20"`. With this syntax, a uniform `Margin` of 20 device independent pixels would be applied to the element. `Margin` values can also take the form of four distinct values, each value describing a distinct margin to apply to the left, top, right, and bottom \(in that order\), like `Margin="0,10,5,25"`. Proper use of the `Margin` property enables very fine control of an element's rendering position and the rendering position of its neighbor elements and children.
 
-A non-zero margin applies space outside the element's `Bounds`.
+A non-zero margin applies space outside the element's `Bounds`. Negative margin values are also valid and pull the element in the opposite direction, causing it to overlap adjacent elements or extend beyond its parent's bounds.
 
 The following example shows how to apply uniform margins around a group of `Button` elements. The `Button` elements are spaced evenly with a ten-pixel margin buffer in each direction.
 
