@@ -1,0 +1,135 @@
+---
+title: 'ControlAutomationPeer'
+hide_title: true
+slug: '/avalonia/automation/peers/controlautomationpeer'
+uid: 'Avalonia.Automation.Peers.ControlAutomationPeer'
+commentId: 'T:Avalonia.Automation.Peers.ControlAutomationPeer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Peers'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ControlAutomationPeer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Peers</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An automation peer which represents a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control) element.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ControlAutomationPeer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="automationpeer">AutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> ControlAutomationPeer
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ControlAutomationPeer](#uid-45b78be5e5) | No summary available. |
+
+<span id="uid-45b78be5e5"></span>
+
+### ControlAutomationPeer
+
+```csharp
+public ControlAutomationPeer(Avalonia.Controls.Control owner)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreatePeerForElement](#uid-01e76040e7) | Gets the Avalonia.Automation.Peers.AutomationPeer for a Avalonia.Controls.Control, creating it if necessary. |
+| [FromElement](#uid-f0c358c33d) | Gets an existing Avalonia.Automation.Peers.AutomationPeer for a Avalonia.Controls.Control. |
+| [GetOrCreate](#uid-d5fc666c05) | No summary available. |
+
+<span id="uid-01e76040e7"></span>
+
+### CreatePeerForElement
+
+Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control), creating it if
+necessary.
+
+```csharp
+public Avalonia.Automation.Peers.AutomationPeer CreatePeerForElement(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+
+Returns: The automation peer.
+
+<span id="uid-f0c358c33d"></span>
+
+### FromElement
+
+Gets an existing [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control).
+
+```csharp
+public Avalonia.Automation.Peers.AutomationPeer FromElement(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+
+Returns: The automation peer if already created; otherwise null.
+
+<span id="uid-d5fc666c05"></span>
+
+### GetOrCreate
+
+```csharp
+public Avalonia.Automation.Peers.AutomationPeer GetOrCreate(Avalonia.Controls.Control element)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Owner](#uid-9c72446c3c) | No summary available. |
+
+<span id="uid-9c72446c3c"></span>
+
+### Owner
+
+```csharp
+public Avalonia.Controls.Control Owner { get; set; }
+```
+
+</ApiRefPage>
+

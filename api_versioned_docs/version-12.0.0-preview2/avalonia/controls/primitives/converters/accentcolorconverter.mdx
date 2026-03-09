@@ -1,0 +1,159 @@
+---
+title: 'AccentColorConverter'
+hide_title: true
+slug: '/avalonia/controls/primitives/converters/accentcolorconverter'
+uid: 'Avalonia.Controls.Primitives.Converters.AccentColorConverter'
+commentId: 'T:Avalonia.Controls.Primitives.Converters.AccentColorConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AccentColorConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Creates an accent color for a given base color value and step parameter.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AccentColorConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AccentColorConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Remarks
+
+This is a highly-specialized converter for the color picker.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AccentColorConverter](#uid-1dbc1ed79e) | No summary available. |
+
+<span id="uid-1dbc1ed79e"></span>
+
+### AccentColorConverter
+
+```csharp
+public AccentColorConverter()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-ac1dd8c018) | Converts a value. |
+| [ConvertBack](#uid-ea9a04cc8e) | Converts a value. |
+| [GetAccent](#uid-a8ab38b141) | This does not account for perceptual differences and also does not match with system accent color calculation. |
+
+<span id="uid-ac1dd8c018"></span>
+
+### Convert
+
+Converts a value.
+
+```csharp
+public System.Object Convert(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+<span id="uid-ea9a04cc8e"></span>
+
+### ConvertBack
+
+Converts a value.
+
+```csharp
+public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+<span id="uid-a8ab38b141"></span>
+
+### GetAccent
+
+This does not account for perceptual differences and also does not match with
+system accent color calculation.
+
+```csharp
+public Avalonia.Media.HsvColor GetAccent(Avalonia.Media.HsvColor hsvColor, System.Int32 accentStep)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `accentStep` | The number of accent color steps to move. |
+| `hsvColor` | The base color to calculate the accent from. |
+
+Returns: The new accent color.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ValueDelta](#uid-15cfd736fa) | The amount to change the Value component for each accent color step. |
+
+<span id="uid-15cfd736fa"></span>
+
+### ValueDelta
+
+The amount to change the Value component for each accent color step.
+
+```csharp
+public System.Double ValueDelta
+```
+
+</ApiRefPage>
+

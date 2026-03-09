@@ -1,0 +1,453 @@
+---
+title: 'Layoutable'
+hide_title: true
+slug: '/avalonia/layout/layoutable'
+uid: 'Avalonia.Layout.Layoutable'
+commentId: 'T:Avalonia.Layout.Layoutable'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Layout'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Layoutable Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Layout</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Implements layout-related functionality for a control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Layoutable
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> Layoutable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Layoutable](#uid-caaf38294e) | No summary available. |
+
+<span id="uid-caaf38294e"></span>
+
+### Layoutable
+
+```csharp
+public Layoutable()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyTemplate](#uid-cc46768b1a) | Creates the visual children of the control, if necessary |
+| [Arrange](#uid-d7a19ca8f7) | Arranges the control and its children. |
+| [InvalidateArrange](#uid-3e9d4ebe35) | Invalidates the arrangement of the control and queues a new layout pass. |
+| [InvalidateMeasure](#uid-31c6107bb9) | Invalidates the measurement of the control and queues a new layout pass. |
+| [Measure](#uid-1da410eb81) | Carries out a measure of the control. |
+| [UpdateLayout](#uid-529d4a08ea) | Executes a layout pass. |
+
+<span id="uid-cc46768b1a"></span>
+
+### ApplyTemplate
+
+Creates the visual children of the control, if necessary
+
+```csharp
+public System.Void ApplyTemplate()
+```
+
+<span id="uid-d7a19ca8f7"></span>
+
+### Arrange
+
+Arranges the control and its children.
+
+```csharp
+public System.Void Arrange(Avalonia.Rect rect)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The control's new bounds. |
+
+<span id="uid-3e9d4ebe35"></span>
+
+### InvalidateArrange
+
+Invalidates the arrangement of the control and queues a new layout pass.
+
+```csharp
+public System.Void InvalidateArrange()
+```
+
+<span id="uid-31c6107bb9"></span>
+
+### InvalidateMeasure
+
+Invalidates the measurement of the control and queues a new layout pass.
+
+```csharp
+public System.Void InvalidateMeasure()
+```
+
+<span id="uid-1da410eb81"></span>
+
+### Measure
+
+Carries out a measure of the control.
+
+```csharp
+public System.Void Measure(Avalonia.Size availableSize)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `availableSize` | The available size for the control. |
+
+<span id="uid-529d4a08ea"></span>
+
+### UpdateLayout
+
+Executes a layout pass.
+
+```csharp
+public System.Void UpdateLayout()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DesiredSize](#uid-5eb61af32f) | Gets the size that this element computed during the measure pass of the layout process. |
+| [Height](#uid-4334ab83b4) | Gets or sets the height of the element. |
+| [HorizontalAlignment](#uid-c621d98d6c) | Gets or sets the element's preferred horizontal alignment in its parent. |
+| [IsArrangeValid](#uid-97d1d86c71) | Gets a value indicating whether the control's layouts arrange is valid. |
+| [IsMeasureValid](#uid-2b3ce6ad30) | Gets a value indicating whether the control's layout measure is valid. |
+| [Margin](#uid-3785e24bed) | Gets or sets the margin around the element. |
+| [MaxHeight](#uid-6ffe996277) | Gets or sets the maximum height of the element. |
+| [MaxWidth](#uid-ea6041bc57) | Gets or sets the maximum width of the element. |
+| [MinHeight](#uid-822cd64c83) | Gets or sets the minimum height of the element. |
+| [MinWidth](#uid-5bd3b5bb2c) | Gets or sets the minimum width of the element. |
+| [UseLayoutRounding](#uid-5998a3d47c) | Gets or sets a value that determines whether the element should be snapped to pixel boundaries at layout time. |
+| [VerticalAlignment](#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. |
+| [Width](#uid-491c41475f) | Gets or sets the width of the element. |
+
+<span id="uid-5eb61af32f"></span>
+
+### DesiredSize
+
+Gets the size that this element computed during the measure pass of the layout process.
+
+```csharp
+public Avalonia.Size DesiredSize { get; set; }
+```
+
+<span id="uid-4334ab83b4"></span>
+
+### Height
+
+Gets or sets the height of the element.
+
+```csharp
+public System.Double Height { get; set; }
+```
+
+<span id="uid-c621d98d6c"></span>
+
+### HorizontalAlignment
+
+Gets or sets the element's preferred horizontal alignment in its parent.
+
+```csharp
+public Avalonia.Layout.HorizontalAlignment HorizontalAlignment { get; set; }
+```
+
+<span id="uid-97d1d86c71"></span>
+
+### IsArrangeValid
+
+Gets a value indicating whether the control's layouts arrange is valid.
+
+```csharp
+public System.Boolean IsArrangeValid { get; set; }
+```
+
+<span id="uid-2b3ce6ad30"></span>
+
+### IsMeasureValid
+
+Gets a value indicating whether the control's layout measure is valid.
+
+```csharp
+public System.Boolean IsMeasureValid { get; set; }
+```
+
+<span id="uid-3785e24bed"></span>
+
+### Margin
+
+Gets or sets the margin around the element.
+
+```csharp
+public Avalonia.Thickness Margin { get; set; }
+```
+
+<span id="uid-6ffe996277"></span>
+
+### MaxHeight
+
+Gets or sets the maximum height of the element.
+
+```csharp
+public System.Double MaxHeight { get; set; }
+```
+
+<span id="uid-ea6041bc57"></span>
+
+### MaxWidth
+
+Gets or sets the maximum width of the element.
+
+```csharp
+public System.Double MaxWidth { get; set; }
+```
+
+<span id="uid-822cd64c83"></span>
+
+### MinHeight
+
+Gets or sets the minimum height of the element.
+
+```csharp
+public System.Double MinHeight { get; set; }
+```
+
+<span id="uid-5bd3b5bb2c"></span>
+
+### MinWidth
+
+Gets or sets the minimum width of the element.
+
+```csharp
+public System.Double MinWidth { get; set; }
+```
+
+<span id="uid-5998a3d47c"></span>
+
+### UseLayoutRounding
+
+Gets or sets a value that determines whether the element should be snapped to pixel
+boundaries at layout time.
+
+```csharp
+public System.Boolean UseLayoutRounding { get; set; }
+```
+
+<span id="uid-9652a1b295"></span>
+
+### VerticalAlignment
+
+Gets or sets the element's preferred vertical alignment in its parent.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalAlignment { get; set; }
+```
+
+<span id="uid-491c41475f"></span>
+
+### Width
+
+Gets or sets the width of the element.
+
+```csharp
+public System.Double Width { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DesiredSizeProperty](#uid-b46bed86fe) | Defines the Avalonia.Layout.Layoutable.DesiredSize property. |
+| [HeightProperty](#uid-78fa90222f) | Defines the Avalonia.Layout.Layoutable.Height property. |
+| [HorizontalAlignmentProperty](#uid-43606c2354) | Defines the Avalonia.Layout.Layoutable.HorizontalAlignment property. |
+| [MarginProperty](#uid-e730ad0d44) | Defines the Avalonia.Layout.Layoutable.Margin property. |
+| [MaxHeightProperty](#uid-0a0a1f20cb) | Defines the Avalonia.Layout.Layoutable.MaxHeight property. |
+| [MaxWidthProperty](#uid-febdea8f4d) | Defines the Avalonia.Layout.Layoutable.MaxWidth property. |
+| [MinHeightProperty](#uid-f78bf9b812) | Defines the Avalonia.Layout.Layoutable.MinHeight property. |
+| [MinWidthProperty](#uid-ec0935c392) | Defines the Avalonia.Layout.Layoutable.MinWidth property. |
+| [UseLayoutRoundingProperty](#uid-e6d86b68b5) | Defines the Avalonia.Layout.Layoutable.UseLayoutRounding property. |
+| [VerticalAlignmentProperty](#uid-b50722555e) | Defines the Avalonia.Layout.Layoutable.VerticalAlignment property. |
+| [WidthProperty](#uid-6f3212affd) | Defines the Avalonia.Layout.Layoutable.Width property. |
+
+<span id="uid-b46bed86fe"></span>
+
+### DesiredSizeProperty
+
+Defines the [Avalonia.Layout.Layoutable.DesiredSize](xref:Avalonia.Layout.Layoutable.DesiredSize) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Layout.Layoutable, Avalonia.Size> DesiredSizeProperty
+```
+
+<span id="uid-78fa90222f"></span>
+
+### HeightProperty
+
+Defines the [Avalonia.Layout.Layoutable.Height](xref:Avalonia.Layout.Layoutable.Height) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> HeightProperty
+```
+
+<span id="uid-43606c2354"></span>
+
+### HorizontalAlignmentProperty
+
+Defines the [Avalonia.Layout.Layoutable.HorizontalAlignment](xref:Avalonia.Layout.Layoutable.HorizontalAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Layout.HorizontalAlignment> HorizontalAlignmentProperty
+```
+
+<span id="uid-e730ad0d44"></span>
+
+### MarginProperty
+
+Defines the [Avalonia.Layout.Layoutable.Margin](xref:Avalonia.Layout.Layoutable.Margin) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Thickness> MarginProperty
+```
+
+<span id="uid-0a0a1f20cb"></span>
+
+### MaxHeightProperty
+
+Defines the [Avalonia.Layout.Layoutable.MaxHeight](xref:Avalonia.Layout.Layoutable.MaxHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> MaxHeightProperty
+```
+
+<span id="uid-febdea8f4d"></span>
+
+### MaxWidthProperty
+
+Defines the [Avalonia.Layout.Layoutable.MaxWidth](xref:Avalonia.Layout.Layoutable.MaxWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> MaxWidthProperty
+```
+
+<span id="uid-f78bf9b812"></span>
+
+### MinHeightProperty
+
+Defines the [Avalonia.Layout.Layoutable.MinHeight](xref:Avalonia.Layout.Layoutable.MinHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> MinHeightProperty
+```
+
+<span id="uid-ec0935c392"></span>
+
+### MinWidthProperty
+
+Defines the [Avalonia.Layout.Layoutable.MinWidth](xref:Avalonia.Layout.Layoutable.MinWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> MinWidthProperty
+```
+
+<span id="uid-e6d86b68b5"></span>
+
+### UseLayoutRoundingProperty
+
+Defines the [Avalonia.Layout.Layoutable.UseLayoutRounding](xref:Avalonia.Layout.Layoutable.UseLayoutRounding) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Boolean> UseLayoutRoundingProperty
+```
+
+<span id="uid-b50722555e"></span>
+
+### VerticalAlignmentProperty
+
+Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Layout.VerticalAlignment> VerticalAlignmentProperty
+```
+
+<span id="uid-6f3212affd"></span>
+
+### WidthProperty
+
+Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> WidthProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [EffectiveViewportChanged](#uid-1922b89fa5) | Occurs when the element's effective viewport changes. |
+| [LayoutUpdated](#uid-05ea32f689) | Occurs when a layout pass completes for the control. |
+
+<span id="uid-1922b89fa5"></span>
+
+### EffectiveViewportChanged
+
+Occurs when the element's effective viewport changes.
+
+```csharp
+public event System.EventHandler<Avalonia.Layout.EffectiveViewportChangedEventArgs> EffectiveViewportChanged
+```
+
+<span id="uid-05ea32f689"></span>
+
+### LayoutUpdated
+
+Occurs when a layout pass completes for the control.
+
+```csharp
+public event System.EventHandler LayoutUpdated
+```
+
+</ApiRefPage>
+

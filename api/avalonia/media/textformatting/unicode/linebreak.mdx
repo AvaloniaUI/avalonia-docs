@@ -1,0 +1,165 @@
+---
+title: 'LineBreak'
+hide_title: true
+slug: '/avalonia/media/textformatting/unicode/linebreak'
+uid: 'Avalonia.Media.TextFormatting.Unicode.LineBreak'
+commentId: 'T:Avalonia.Media.TextFormatting.Unicode.LineBreak'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting.Unicode'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LineBreak Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting.Unicode</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Information about a potential line break position
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct LineBreak
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> LineBreak
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;LineBreak&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [LineBreak](#uid-c1d8c8afa9) | Constructor |
+
+<span id="uid-c1d8c8afa9"></span>
+
+### LineBreak
+
+Constructor
+
+```csharp
+public LineBreak(System.Int32 positionMeasure, System.Int32 positionWrap, System.Boolean required)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `positionMeasure` | The code point index to measure to |
+| `positionWrap` | The code point index to actually break the line at |
+| `required` | True if this is a required line break; otherwise false |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-93cdbbc5ad) | No summary available. |
+| [GetHashCode](#uid-e115e081a1) | No summary available. |
+| [ToString](#uid-513e8a2098) | No summary available. |
+
+<span id="uid-93cdbbc5ad"></span>
+
+### Equals overloads
+
+<span id="uid-999f60a36e"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Media.TextFormatting.Unicode.LineBreak other)
+```
+
+<span id="uid-5b51df776b"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-e115e081a1"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-513e8a2098"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PositionMeasure](#uid-c9bdf7ff51) | The break position, before any trailing whitespace |
+| [PositionWrap](#uid-f93d951922) | The break position, after any trailing whitespace |
+| [Required](#uid-06b06a97e8) | True if there should be a forced line break here |
+
+<span id="uid-c9bdf7ff51"></span>
+
+### PositionMeasure
+
+The break position, before any trailing whitespace
+
+```csharp
+public System.Int32 PositionMeasure { get; set; }
+```
+
+<span id="uid-f93d951922"></span>
+
+### PositionWrap
+
+The break position, after any trailing whitespace
+
+```csharp
+public System.Int32 PositionWrap { get; set; }
+```
+
+<span id="uid-06b06a97e8"></span>
+
+### Required
+
+True if there should be a forced line break here
+
+```csharp
+public System.Boolean Required { get; set; }
+```
+
+</ApiRefPage>
+

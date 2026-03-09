@@ -1,0 +1,403 @@
+---
+title: 'ContextMenu'
+hide_title: true
+slug: '/avalonia/controls/contextmenu'
+uid: 'Avalonia.Controls.ContextMenu'
+commentId: 'T:Avalonia.Controls.ContextMenu'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ContextMenu Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control context menu.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ContextMenu
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemscontrol">ItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/selectingitemscontrol">SelectingItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="menubase">MenuBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ContextMenu
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IPopupHostProvider, <a href="../styling/isettervalue">ISetterValue</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ContextMenu (2 overloads)](#uid-9837d18c34) | Initializes a new instance of the Avalonia.Controls.ContextMenu class. |
+
+<span id="uid-9837d18c34"></span>
+
+### ContextMenu overloads
+
+<span id="uid-6ba2130c89"></span>
+
+#### ContextMenu
+
+Initializes a new instance of the [Avalonia.Controls.ContextMenu](xref:Avalonia.Controls.ContextMenu) class.
+
+```csharp
+public ContextMenu()
+```
+
+<span id="uid-11e75cf597"></span>
+
+#### ContextMenu
+
+Initializes a new instance of the [Avalonia.Controls.ContextMenu](xref:Avalonia.Controls.ContextMenu) class.
+
+```csharp
+public ContextMenu(Avalonia.Controls.Platform.IMenuInteractionHandler interactionHandler)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `interactionHandler` | The menu interaction handler. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Close](#uid-09371e0bf8) | Closes the menu. |
+| [Open (2 overloads)](#uid-3a359892c5) | Opens the menu. |
+
+<span id="uid-09371e0bf8"></span>
+
+### Close
+
+Closes the menu.
+
+```csharp
+public System.Void Close()
+```
+
+<span id="uid-3a359892c5"></span>
+
+### Open overloads
+
+<span id="uid-0e2d67ea56"></span>
+
+#### Open
+
+Opens the menu.
+
+```csharp
+public System.Void Open()
+```
+
+<span id="uid-e00a7ead4d"></span>
+
+#### Open
+
+Opens a context menu on the specified control.
+
+```csharp
+public System.Void Open(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CustomPopupPlacementCallback](#uid-48546db84a) | Gets or sets a delegate handler method that positions the Popup control, when Avalonia.Controls.Primitives.Popup.Placement is set to Avalonia.Controls.PlacementMode.Custom. |
+| [HorizontalOffset](#uid-1c006dbd60) | Gets or sets the Horizontal offset of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+| [Placement](#uid-4eb0156430) | Gets or sets the desired placement of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+| [PlacementAnchor](#uid-5672347453) | Gets or sets the anchor point on the Avalonia.Controls.Primitives.Popup.PlacementRect when Avalonia.Controls.Primitives.Popup.Placement is Avalonia.Controls.PlacementMode.AnchorAndGravity. |
+| [PlacementConstraintAdjustment](#uid-96ebd63394) | Gets or sets a value describing how the popup position will be adjusted if the unadjusted position would result in the popup being partly constrained. |
+| [PlacementGravity](#uid-c606ce9f72) | Gets or sets a value which defines in what direction the popup should open when Avalonia.Controls.Primitives.Popup.Placement is Avalonia.Controls.PlacementMode.AnchorAndGravity. |
+| [PlacementRect](#uid-ce97f7c7e5) | Gets or sets the anchor rectangle within the parent that the popup will be placed relative to when Avalonia.Controls.Primitives.Popup.Placement is Avalonia.Controls.PlacementMode.AnchorAndGravity. |
+| [PlacementTarget](#uid-2f2efa4a31) | Gets or sets the control that is used to determine the popup's position. |
+| [VerticalOffset](#uid-35bd819360) | Gets or sets the Vertical offset of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+| [WindowManagerAddShadowHint](#uid-e7bf746c20) | No summary available. |
+
+<span id="uid-48546db84a"></span>
+
+### CustomPopupPlacementCallback
+
+Gets or sets a delegate handler method that positions the Popup control, when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is set to [Avalonia.Controls.PlacementMode.Custom](xref:Avalonia.Controls.PlacementMode.Custom).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback CustomPopupPlacementCallback { get; set; }
+```
+
+<span id="uid-1c006dbd60"></span>
+
+### HorizontalOffset
+
+Gets or sets the Horizontal offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public System.Double HorizontalOffset { get; set; }
+```
+
+<span id="uid-4eb0156430"></span>
+
+### Placement
+
+Gets or sets the desired placement of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public Avalonia.Controls.PlacementMode Placement { get; set; }
+```
+
+<span id="uid-5672347453"></span>
+
+### PlacementAnchor
+
+Gets or sets the anchor point on the [Avalonia.Controls.Primitives.Popup.PlacementRect](xref:Avalonia.Controls.Primitives.Popup.PlacementRect) when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement)
+is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor PlacementAnchor { get; set; }
+```
+
+<span id="uid-96ebd63394"></span>
+
+### PlacementConstraintAdjustment
+
+Gets or sets a value describing how the popup position will be adjusted if the
+unadjusted position would result in the popup being partly constrained.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment PlacementConstraintAdjustment { get; set; }
+```
+
+<span id="uid-c606ce9f72"></span>
+
+### PlacementGravity
+
+Gets or sets a value which defines in what direction the popup should open
+when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupGravity PlacementGravity { get; set; }
+```
+
+<span id="uid-ce97f7c7e5"></span>
+
+### PlacementRect
+
+Gets or sets the anchor rectangle within the parent that the popup will be placed
+relative to when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity).
+
+```csharp
+public System.Nullable<Avalonia.Rect> PlacementRect { get; set; }
+```
+
+<span id="uid-2f2efa4a31"></span>
+
+### PlacementTarget
+
+Gets or sets the control that is used to determine the popup's position.
+
+```csharp
+public Avalonia.Controls.Control PlacementTarget { get; set; }
+```
+
+<span id="uid-35bd819360"></span>
+
+### VerticalOffset
+
+Gets or sets the Vertical offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public System.Double VerticalOffset { get; set; }
+```
+
+<span id="uid-e7bf746c20"></span>
+
+### WindowManagerAddShadowHint
+
+```csharp
+public System.Boolean WindowManagerAddShadowHint { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CustomPopupPlacementCallbackProperty](#uid-ea1b1ece06) | Defines the Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback property. |
+| [HorizontalOffsetProperty](#uid-b0ac8b3ddf) | Defines the Avalonia.Controls.ContextMenu.HorizontalOffset property. |
+| [PlacementAnchorProperty](#uid-ff73e24312) | Defines the Avalonia.Controls.ContextMenu.PlacementAnchor property. |
+| [PlacementConstraintAdjustmentProperty](#uid-694188c105) | Defines the Avalonia.Controls.ContextMenu.PlacementConstraintAdjustment property. |
+| [PlacementGravityProperty](#uid-a608a3fd9d) | Defines the Avalonia.Controls.ContextMenu.PlacementGravity property. |
+| [PlacementProperty](#uid-fb47742988) | Defines the Avalonia.Controls.ContextMenu.Placement property. |
+| [PlacementRectProperty](#uid-b82743e3f4) | Defines the Avalonia.Controls.ContextMenu.PlacementRect property. |
+| [PlacementTargetProperty](#uid-12ec56e6ef) | Defines the Avalonia.Controls.ContextMenu.PlacementTarget property. |
+| [VerticalOffsetProperty](#uid-9e79dad5e1) | Defines the Avalonia.Controls.ContextMenu.VerticalOffset property. |
+| [WindowManagerAddShadowHintProperty](#uid-dc1817dac4) | Defines the Avalonia.Controls.ContextMenu.WindowManagerAddShadowHint property. |
+
+<span id="uid-ea1b1ece06"></span>
+
+### CustomPopupPlacementCallbackProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback](xref:Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> CustomPopupPlacementCallbackProperty
+```
+
+<span id="uid-b0ac8b3ddf"></span>
+
+### HorizontalOffsetProperty
+
+Defines the [Avalonia.Controls.ContextMenu.HorizontalOffset](xref:Avalonia.Controls.ContextMenu.HorizontalOffset) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> HorizontalOffsetProperty
+```
+
+<span id="uid-ff73e24312"></span>
+
+### PlacementAnchorProperty
+
+Defines the [Avalonia.Controls.ContextMenu.PlacementAnchor](xref:Avalonia.Controls.ContextMenu.PlacementAnchor) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> PlacementAnchorProperty
+```
+
+<span id="uid-694188c105"></span>
+
+### PlacementConstraintAdjustmentProperty
+
+Defines the [Avalonia.Controls.ContextMenu.PlacementConstraintAdjustment](xref:Avalonia.Controls.ContextMenu.PlacementConstraintAdjustment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> PlacementConstraintAdjustmentProperty
+```
+
+<span id="uid-a608a3fd9d"></span>
+
+### PlacementGravityProperty
+
+Defines the [Avalonia.Controls.ContextMenu.PlacementGravity](xref:Avalonia.Controls.ContextMenu.PlacementGravity) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> PlacementGravityProperty
+```
+
+<span id="uid-fb47742988"></span>
+
+### PlacementProperty
+
+Defines the [Avalonia.Controls.ContextMenu.Placement](xref:Avalonia.Controls.ContextMenu.Placement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.PlacementMode> PlacementProperty
+```
+
+<span id="uid-b82743e3f4"></span>
+
+### PlacementRectProperty
+
+Defines the [Avalonia.Controls.ContextMenu.PlacementRect](xref:Avalonia.Controls.ContextMenu.PlacementRect) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Nullable<Avalonia.Rect>> PlacementRectProperty
+```
+
+<span id="uid-12ec56e6ef"></span>
+
+### PlacementTargetProperty
+
+Defines the [Avalonia.Controls.ContextMenu.PlacementTarget](xref:Avalonia.Controls.ContextMenu.PlacementTarget) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Control> PlacementTargetProperty
+```
+
+<span id="uid-9e79dad5e1"></span>
+
+### VerticalOffsetProperty
+
+Defines the [Avalonia.Controls.ContextMenu.VerticalOffset](xref:Avalonia.Controls.ContextMenu.VerticalOffset) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> VerticalOffsetProperty
+```
+
+<span id="uid-dc1817dac4"></span>
+
+### WindowManagerAddShadowHintProperty
+
+Defines the [Avalonia.Controls.ContextMenu.WindowManagerAddShadowHint](xref:Avalonia.Controls.ContextMenu.WindowManagerAddShadowHint) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> WindowManagerAddShadowHintProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Closing](#uid-0a31a6ab10) | Occurs when the value of the Avalonia.Controls.ContextMenu.IsOpen property is changing from true to false. |
+| [Opening](#uid-d8cb864a24) | Occurs when the value of the Avalonia.Controls.ContextMenu.IsOpen property is changing from false to true. |
+
+<span id="uid-0a31a6ab10"></span>
+
+### Closing
+
+Occurs when the value of the
+[Avalonia.Controls.ContextMenu.IsOpen](xref:Avalonia.Controls.ContextMenu.IsOpen)
+property is changing from true to false.
+
+```csharp
+public event System.ComponentModel.CancelEventHandler Closing
+```
+
+<span id="uid-d8cb864a24"></span>
+
+### Opening
+
+Occurs when the value of the
+[Avalonia.Controls.ContextMenu.IsOpen](xref:Avalonia.Controls.ContextMenu.IsOpen)
+property is changing from false to true.
+
+```csharp
+public event System.ComponentModel.CancelEventHandler Opening
+```
+
+</ApiRefPage>
+

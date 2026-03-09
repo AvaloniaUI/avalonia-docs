@@ -1,0 +1,749 @@
+---
+title: 'AutomationProperties'
+hide_title: true
+slug: '/avalonia/automation/automationproperties'
+uid: 'Avalonia.Automation.AutomationProperties'
+commentId: 'T:Avalonia.Automation.AutomationProperties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AutomationProperties Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AutomationProperties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AutomationProperties
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAcceleratorKey](#uid-6bb99765ed) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty on a StyledElement. |
+| [GetAccessKey](#uid-26c8569f8f) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.AccessKeyProperty on a StyledElement. |
+| [GetAccessibilityView](#uid-c28782b68d) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.AccessibilityViewProperty on a StyledElement. |
+| [GetAutomationId](#uid-06aa62279e) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.AutomationIdProperty on a StyledElement. |
+| [GetClassNameOverride](#uid-e65a4635fd) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty on a StyledElement. |
+| [GetControlTypeOverride](#uid-77471e006e) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty on a StyledElement. |
+| [GetHeadingLevel](#uid-6e019c9ce6) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.HeadingLevelProperty on a StyledElement. |
+| [GetHelpText](#uid-c79ebe5455) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.HelpTextProperty on a StyledElement. |
+| [GetIsColumnHeader](#uid-e6346b7780) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty on a StyledElement. |
+| [GetIsControlElementOverride](#uid-c6cab6b614) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.IsControlElementOverrideProperty on a StyledElement. |
+| [GetIsOffscreenBehavior](#uid-7d4051710c) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty on a StyledElement. |
+| [GetIsRequiredForForm](#uid-7c68680457) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty on a StyledElement. |
+| [GetIsRowHeader](#uid-162b33a6be) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.IsRowHeaderProperty on a StyledElement. |
+| [GetItemStatus](#uid-0cb690e233) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.ItemStatusProperty on a StyledElement. |
+| [GetItemType](#uid-ccde2866d3) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.ItemTypeProperty on a StyledElement. |
+| [GetLabeledBy](#uid-dad6cde2ec) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.LabeledByProperty on a StyledElement. |
+| [GetLandmarkType](#uid-dd73c85d2d) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.LandmarkTypeProperty on a StyledElement. |
+| [GetLiveSetting](#uid-c8e4875122) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.LiveSettingProperty on a StyledElement. |
+| [GetName](#uid-a701f092df) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.NameProperty on a StyledElement. |
+| [GetPositionInSet](#uid-602f7d2b8a) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.PositionInSetProperty on a StyledElement. |
+| [GetSizeOfSet](#uid-b36536a2ef) | Helper for reading the value of the Avalonia.Automation.AutomationProperties.SizeOfSetProperty on a StyledElement. |
+| [SetAcceleratorKey](#uid-a3e491a65f) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty on a StyledElement. |
+| [SetAccessKey](#uid-0faff21684) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.AccessKeyProperty on a StyledElement. |
+| [SetAccessibilityView](#uid-d5037ef409) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.AccessibilityViewProperty on a StyledElement. |
+| [SetAutomationId](#uid-3f5008ecd2) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.AutomationIdProperty on a StyledElement. |
+| [SetClassNameOverride](#uid-641ef61a40) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty on a StyledElement. |
+| [SetControlTypeOverride](#uid-1039b89a76) | No summary available. |
+| [SetHeadingLevel](#uid-60f556b5c8) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.HeadingLevelProperty on a StyledElement. |
+| [SetHelpText](#uid-fdd4ed3586) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.HelpTextProperty on a StyledElement. |
+| [SetIsColumnHeader](#uid-aa6adaff5b) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty on a StyledElement. |
+| [SetIsControlElementOverride](#uid-b991655eeb) | No summary available. |
+| [SetIsOffscreenBehavior](#uid-d8e2998804) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty on a StyledElement. |
+| [SetIsRequiredForForm](#uid-79587f39a3) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty on a StyledElement. |
+| [SetIsRowHeader](#uid-ad401036fd) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.IsRowHeaderProperty on a StyledElement. |
+| [SetItemStatus](#uid-526568661e) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.ItemStatusProperty on a StyledElement. |
+| [SetItemType](#uid-45fbb3a143) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.ItemTypeProperty on a StyledElement. |
+| [SetLabeledBy](#uid-f1bc01705f) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.LabeledByProperty on a StyledElement. |
+| [SetLandmarkType](#uid-bc8bfe26ec) | No summary available. |
+| [SetLiveSetting](#uid-72fb5c2b98) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.LiveSettingProperty on a StyledElement. |
+| [SetName](#uid-4f15c31f94) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.NameProperty on a StyledElement. |
+| [SetPositionInSet](#uid-03d657d27f) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.PositionInSetProperty on a StyledElement. |
+| [SetSizeOfSet](#uid-79dddbb656) | Helper for setting the value of the Avalonia.Automation.AutomationProperties.SizeOfSetProperty on a StyledElement. |
+
+<span id="uid-6bb99765ed"></span>
+
+### GetAcceleratorKey
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty](xref:Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty) on a StyledElement.
+
+```csharp
+public System.String GetAcceleratorKey(Avalonia.StyledElement element)
+```
+
+<span id="uid-26c8569f8f"></span>
+
+### GetAccessKey
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a StyledElement.
+
+```csharp
+public System.String GetAccessKey(Avalonia.StyledElement element)
+```
+
+<span id="uid-c28782b68d"></span>
+
+### GetAccessibilityView
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessibilityViewProperty](xref:Avalonia.Automation.AutomationProperties.AccessibilityViewProperty) on a StyledElement.
+
+```csharp
+public Avalonia.Automation.AccessibilityView GetAccessibilityView(Avalonia.StyledElement element)
+```
+
+<span id="uid-06aa62279e"></span>
+
+### GetAutomationId
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AutomationIdProperty](xref:Avalonia.Automation.AutomationProperties.AutomationIdProperty) on a StyledElement.
+
+```csharp
+public System.String GetAutomationId(Avalonia.StyledElement element)
+```
+
+<span id="uid-e65a4635fd"></span>
+
+### GetClassNameOverride
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty) on a StyledElement.
+
+```csharp
+public System.String GetClassNameOverride(Avalonia.StyledElement element)
+```
+
+<span id="uid-77471e006e"></span>
+
+### GetControlTypeOverride
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty) on a StyledElement.
+
+```csharp
+public System.Nullable<Avalonia.Automation.Peers.AutomationControlType> GetControlTypeOverride(Avalonia.StyledElement element)
+```
+
+<span id="uid-6e019c9ce6"></span>
+
+### GetHeadingLevel
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.HeadingLevelProperty](xref:Avalonia.Automation.AutomationProperties.HeadingLevelProperty) on a StyledElement.
+
+```csharp
+public System.Int32 GetHeadingLevel(Avalonia.StyledElement element)
+```
+
+<span id="uid-c79ebe5455"></span>
+
+### GetHelpText
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.HelpTextProperty](xref:Avalonia.Automation.AutomationProperties.HelpTextProperty) on a StyledElement.
+
+```csharp
+public System.String GetHelpText(Avalonia.StyledElement element)
+```
+
+<span id="uid-e6346b7780"></span>
+
+### GetIsColumnHeader
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty) on a StyledElement.
+
+```csharp
+public System.Boolean GetIsColumnHeader(Avalonia.StyledElement element)
+```
+
+<span id="uid-c6cab6b614"></span>
+
+### GetIsControlElementOverride
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsControlElementOverrideProperty](xref:Avalonia.Automation.AutomationProperties.IsControlElementOverrideProperty) on a StyledElement.
+
+```csharp
+public System.Nullable<System.Boolean> GetIsControlElementOverride(Avalonia.StyledElement element)
+```
+
+<span id="uid-7d4051710c"></span>
+
+### GetIsOffscreenBehavior
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty](xref:Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty) on a StyledElement.
+
+```csharp
+public Avalonia.Automation.IsOffscreenBehavior GetIsOffscreenBehavior(Avalonia.StyledElement element)
+```
+
+<span id="uid-7c68680457"></span>
+
+### GetIsRequiredForForm
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty](xref:Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty) on a StyledElement.
+
+```csharp
+public System.Boolean GetIsRequiredForForm(Avalonia.StyledElement element)
+```
+
+<span id="uid-162b33a6be"></span>
+
+### GetIsRowHeader
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsRowHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsRowHeaderProperty) on a StyledElement.
+
+```csharp
+public System.Boolean GetIsRowHeader(Avalonia.StyledElement element)
+```
+
+<span id="uid-0cb690e233"></span>
+
+### GetItemStatus
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ItemStatusProperty](xref:Avalonia.Automation.AutomationProperties.ItemStatusProperty) on a StyledElement.
+
+```csharp
+public System.String GetItemStatus(Avalonia.StyledElement element)
+```
+
+<span id="uid-ccde2866d3"></span>
+
+### GetItemType
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ItemTypeProperty](xref:Avalonia.Automation.AutomationProperties.ItemTypeProperty) on a StyledElement.
+
+```csharp
+public System.String GetItemType(Avalonia.StyledElement element)
+```
+
+<span id="uid-dad6cde2ec"></span>
+
+### GetLabeledBy
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LabeledByProperty](xref:Avalonia.Automation.AutomationProperties.LabeledByProperty) on a StyledElement.
+
+```csharp
+public Avalonia.Controls.Control GetLabeledBy(Avalonia.StyledElement element)
+```
+
+<span id="uid-dd73c85d2d"></span>
+
+### GetLandmarkType
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LandmarkTypeProperty](xref:Avalonia.Automation.AutomationProperties.LandmarkTypeProperty) on a StyledElement.
+
+```csharp
+public System.Nullable<Avalonia.Automation.Peers.AutomationLandmarkType> GetLandmarkType(Avalonia.StyledElement element)
+```
+
+<span id="uid-c8e4875122"></span>
+
+### GetLiveSetting
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LiveSettingProperty](xref:Avalonia.Automation.AutomationProperties.LiveSettingProperty) on a StyledElement.
+
+```csharp
+public Avalonia.Automation.AutomationLiveSetting GetLiveSetting(Avalonia.StyledElement element)
+```
+
+<span id="uid-a701f092df"></span>
+
+### GetName
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.NameProperty](xref:Avalonia.Automation.AutomationProperties.NameProperty) on a StyledElement.
+
+```csharp
+public System.String GetName(Avalonia.StyledElement element)
+```
+
+<span id="uid-602f7d2b8a"></span>
+
+### GetPositionInSet
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.PositionInSetProperty](xref:Avalonia.Automation.AutomationProperties.PositionInSetProperty) on a StyledElement.
+
+```csharp
+public System.Int32 GetPositionInSet(Avalonia.StyledElement element)
+```
+
+<span id="uid-b36536a2ef"></span>
+
+### GetSizeOfSet
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.SizeOfSetProperty](xref:Avalonia.Automation.AutomationProperties.SizeOfSetProperty) on a StyledElement.
+
+```csharp
+public System.Int32 GetSizeOfSet(Avalonia.StyledElement element)
+```
+
+<span id="uid-a3e491a65f"></span>
+
+### SetAcceleratorKey
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty](xref:Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty) on a StyledElement.
+
+```csharp
+public System.Void SetAcceleratorKey(Avalonia.StyledElement element, System.String value)
+```
+
+<span id="uid-0faff21684"></span>
+
+### SetAccessKey
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a StyledElement.
+
+```csharp
+public System.Void SetAccessKey(Avalonia.StyledElement element, System.String value)
+```
+
+<span id="uid-d5037ef409"></span>
+
+### SetAccessibilityView
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessibilityViewProperty](xref:Avalonia.Automation.AutomationProperties.AccessibilityViewProperty) on a StyledElement.
+
+```csharp
+public System.Void SetAccessibilityView(Avalonia.StyledElement element, Avalonia.Automation.AccessibilityView value)
+```
+
+<span id="uid-3f5008ecd2"></span>
+
+### SetAutomationId
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AutomationIdProperty](xref:Avalonia.Automation.AutomationProperties.AutomationIdProperty) on a StyledElement.
+
+```csharp
+public System.Void SetAutomationId(Avalonia.StyledElement element, System.String value)
+```
+
+<span id="uid-641ef61a40"></span>
+
+### SetClassNameOverride
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty) on a StyledElement.
+
+```csharp
+public System.Void SetClassNameOverride(Avalonia.StyledElement element, System.String value)
+```
+
+<span id="uid-1039b89a76"></span>
+
+### SetControlTypeOverride
+
+```csharp
+public System.Void SetControlTypeOverride(Avalonia.StyledElement element, System.Nullable<Avalonia.Automation.Peers.AutomationControlType> value)
+```
+
+<span id="uid-60f556b5c8"></span>
+
+### SetHeadingLevel
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.HeadingLevelProperty](xref:Avalonia.Automation.AutomationProperties.HeadingLevelProperty) on a StyledElement.
+
+```csharp
+public System.Void SetHeadingLevel(Avalonia.StyledElement element, System.Int32 value)
+```
+
+<span id="uid-fdd4ed3586"></span>
+
+### SetHelpText
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.HelpTextProperty](xref:Avalonia.Automation.AutomationProperties.HelpTextProperty) on a StyledElement.
+
+```csharp
+public System.Void SetHelpText(Avalonia.StyledElement element, System.String value)
+```
+
+<span id="uid-aa6adaff5b"></span>
+
+### SetIsColumnHeader
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty) on a StyledElement.
+
+```csharp
+public System.Void SetIsColumnHeader(Avalonia.StyledElement element, System.Boolean value)
+```
+
+<span id="uid-b991655eeb"></span>
+
+### SetIsControlElementOverride
+
+```csharp
+public System.Void SetIsControlElementOverride(Avalonia.StyledElement element, System.Nullable<System.Boolean> value)
+```
+
+<span id="uid-d8e2998804"></span>
+
+### SetIsOffscreenBehavior
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty](xref:Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty) on a StyledElement.
+
+```csharp
+public System.Void SetIsOffscreenBehavior(Avalonia.StyledElement element, Avalonia.Automation.IsOffscreenBehavior value)
+```
+
+<span id="uid-79587f39a3"></span>
+
+### SetIsRequiredForForm
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty](xref:Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty) on a StyledElement.
+
+```csharp
+public System.Void SetIsRequiredForForm(Avalonia.StyledElement element, System.Boolean value)
+```
+
+<span id="uid-ad401036fd"></span>
+
+### SetIsRowHeader
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsRowHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsRowHeaderProperty) on a StyledElement.
+
+```csharp
+public System.Void SetIsRowHeader(Avalonia.StyledElement element, System.Boolean value)
+```
+
+<span id="uid-526568661e"></span>
+
+### SetItemStatus
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ItemStatusProperty](xref:Avalonia.Automation.AutomationProperties.ItemStatusProperty) on a StyledElement.
+
+```csharp
+public System.Void SetItemStatus(Avalonia.StyledElement element, System.String value)
+```
+
+<span id="uid-45fbb3a143"></span>
+
+### SetItemType
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ItemTypeProperty](xref:Avalonia.Automation.AutomationProperties.ItemTypeProperty) on a StyledElement.
+
+```csharp
+public System.Void SetItemType(Avalonia.StyledElement element, System.String value)
+```
+
+<span id="uid-f1bc01705f"></span>
+
+### SetLabeledBy
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.LabeledByProperty](xref:Avalonia.Automation.AutomationProperties.LabeledByProperty) on a StyledElement.
+
+```csharp
+public System.Void SetLabeledBy(Avalonia.StyledElement element, Avalonia.Controls.Control value)
+```
+
+<span id="uid-bc8bfe26ec"></span>
+
+### SetLandmarkType
+
+```csharp
+public System.Void SetLandmarkType(Avalonia.StyledElement element, System.Nullable<Avalonia.Automation.Peers.AutomationLandmarkType> value)
+```
+
+<span id="uid-72fb5c2b98"></span>
+
+### SetLiveSetting
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.LiveSettingProperty](xref:Avalonia.Automation.AutomationProperties.LiveSettingProperty) on a StyledElement.
+
+```csharp
+public System.Void SetLiveSetting(Avalonia.StyledElement element, Avalonia.Automation.AutomationLiveSetting value)
+```
+
+<span id="uid-4f15c31f94"></span>
+
+### SetName
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.NameProperty](xref:Avalonia.Automation.AutomationProperties.NameProperty) on a StyledElement.
+
+```csharp
+public System.Void SetName(Avalonia.StyledElement element, System.String value)
+```
+
+<span id="uid-03d657d27f"></span>
+
+### SetPositionInSet
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.PositionInSetProperty](xref:Avalonia.Automation.AutomationProperties.PositionInSetProperty) on a StyledElement.
+
+```csharp
+public System.Void SetPositionInSet(Avalonia.StyledElement element, System.Int32 value)
+```
+
+<span id="uid-79dddbb656"></span>
+
+### SetSizeOfSet
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.SizeOfSetProperty](xref:Avalonia.Automation.AutomationProperties.SizeOfSetProperty) on a StyledElement.
+
+```csharp
+public System.Void SetSizeOfSet(Avalonia.StyledElement element, System.Int32 value)
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AcceleratorKeyProperty](#uid-5375e8be01) | Defines the AutomationProperties.AcceleratorKey attached property. |
+| [AccessKeyProperty](#uid-91f8afe39a) | Defines the AutomationProperties.AccessKey attached property |
+| [AccessibilityViewProperty](#uid-84ed7706af) | Defines the AutomationProperties.AccessibilityView attached property. |
+| [AutomationIdProperty](#uid-4618cbc31c) | Defines the AutomationProperties.AutomationId attached property. |
+| [ClassNameOverrideProperty](#uid-ec74a81553) | Defines the AutomationProperties.ClassNameOverride attached property. |
+| [ControlTypeOverrideProperty](#uid-3fabc9aa90) | Defines the AutomationProperties.ControlTypeOverride attached property. |
+| [HeadingLevelProperty](#uid-50ab2a82f4) | Defines the AutomationProperties.HeadingLevel attached property. |
+| [HelpTextProperty](#uid-9f8d7d3f32) | Defines the AutomationProperties.HelpText attached property. |
+| [IsColumnHeaderProperty](#uid-945f0d4f64) | Defines the AutomationProperties.IsColumnHeader attached property. |
+| [IsControlElementOverrideProperty](#uid-2afc58870b) | Defines the AutomationProperties.IsControlElementOverride attached property. |
+| [IsOffscreenBehaviorProperty](#uid-500676a5b9) | Defines the AutomationProperties.IsOffscreenBehavior attached property. |
+| [IsRequiredForFormProperty](#uid-8f8df6ab63) | Defines the AutomationProperties.IsRequiredForForm attached property. |
+| [IsRowHeaderProperty](#uid-80441430e6) | Defines the AutomationProperties.IsRowHeader attached property. |
+| [ItemStatusProperty](#uid-45744c1c81) | Defines the AutomationProperties.ItemStatus attached property. |
+| [ItemTypeProperty](#uid-f6d5bf018a) | Defines the AutomationProperties.ItemType attached property. |
+| [LabeledByProperty](#uid-6c84aac1de) | Defines the AutomationProperties.LabeledBy attached property. |
+| [LandmarkTypeProperty](#uid-ddb5d0359a) | Defines the AutomationProperties.LandmarkType attached property. |
+| [LiveSettingProperty](#uid-28465ba717) | Defines the AutomationProperties.LiveSetting attached property. |
+| [NameProperty](#uid-c5bab1d101) | Defines the AutomationProperties.Name attached attached property. |
+| [PositionInSetProperty](#uid-6b8b4bb625) | Defines the AutomationProperties.PositionInSet attached property. |
+| [SizeOfSetProperty](#uid-012ef89d2d) | Defines the AutomationProperties.SizeOfSet attached property. |
+
+<span id="uid-5375e8be01"></span>
+
+### AcceleratorKeyProperty
+
+Defines the AutomationProperties.AcceleratorKey attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.String> AcceleratorKeyProperty
+```
+
+<span id="uid-91f8afe39a"></span>
+
+### AccessKeyProperty
+
+Defines the AutomationProperties.AccessKey attached property
+
+```csharp
+public Avalonia.AttachedProperty<System.String> AccessKeyProperty
+```
+
+<span id="uid-84ed7706af"></span>
+
+### AccessibilityViewProperty
+
+Defines the AutomationProperties.AccessibilityView attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Automation.AccessibilityView> AccessibilityViewProperty
+```
+
+<span id="uid-4618cbc31c"></span>
+
+### AutomationIdProperty
+
+Defines the AutomationProperties.AutomationId attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.String> AutomationIdProperty
+```
+
+<span id="uid-ec74a81553"></span>
+
+### ClassNameOverrideProperty
+
+Defines the AutomationProperties.ClassNameOverride attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.String> ClassNameOverrideProperty
+```
+
+<span id="uid-3fabc9aa90"></span>
+
+### ControlTypeOverrideProperty
+
+Defines the AutomationProperties.ControlTypeOverride attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Nullable<Avalonia.Automation.Peers.AutomationControlType>> ControlTypeOverrideProperty
+```
+
+<span id="uid-50ab2a82f4"></span>
+
+### HeadingLevelProperty
+
+Defines the AutomationProperties.HeadingLevel attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Int32> HeadingLevelProperty
+```
+
+<span id="uid-9f8d7d3f32"></span>
+
+### HelpTextProperty
+
+Defines the AutomationProperties.HelpText attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.String> HelpTextProperty
+```
+
+<span id="uid-945f0d4f64"></span>
+
+### IsColumnHeaderProperty
+
+Defines the AutomationProperties.IsColumnHeader attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsColumnHeaderProperty
+```
+
+<span id="uid-2afc58870b"></span>
+
+### IsControlElementOverrideProperty
+
+Defines the AutomationProperties.IsControlElementOverride attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Nullable<System.Boolean>> IsControlElementOverrideProperty
+```
+
+<span id="uid-500676a5b9"></span>
+
+### IsOffscreenBehaviorProperty
+
+Defines the AutomationProperties.IsOffscreenBehavior attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Automation.IsOffscreenBehavior> IsOffscreenBehaviorProperty
+```
+
+<span id="uid-8f8df6ab63"></span>
+
+### IsRequiredForFormProperty
+
+Defines the AutomationProperties.IsRequiredForForm attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsRequiredForFormProperty
+```
+
+<span id="uid-80441430e6"></span>
+
+### IsRowHeaderProperty
+
+Defines the AutomationProperties.IsRowHeader attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsRowHeaderProperty
+```
+
+<span id="uid-45744c1c81"></span>
+
+### ItemStatusProperty
+
+Defines the AutomationProperties.ItemStatus attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.String> ItemStatusProperty
+```
+
+<span id="uid-f6d5bf018a"></span>
+
+### ItemTypeProperty
+
+Defines the AutomationProperties.ItemType attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.String> ItemTypeProperty
+```
+
+<span id="uid-6c84aac1de"></span>
+
+### LabeledByProperty
+
+Defines the AutomationProperties.LabeledBy attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Control> LabeledByProperty
+```
+
+<span id="uid-ddb5d0359a"></span>
+
+### LandmarkTypeProperty
+
+Defines the AutomationProperties.LandmarkType attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Nullable<Avalonia.Automation.Peers.AutomationLandmarkType>> LandmarkTypeProperty
+```
+
+<span id="uid-28465ba717"></span>
+
+### LiveSettingProperty
+
+Defines the AutomationProperties.LiveSetting attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Automation.AutomationLiveSetting> LiveSettingProperty
+```
+
+<span id="uid-c5bab1d101"></span>
+
+### NameProperty
+
+Defines the AutomationProperties.Name attached attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.String> NameProperty
+```
+
+<span id="uid-6b8b4bb625"></span>
+
+### PositionInSetProperty
+
+Defines the AutomationProperties.PositionInSet attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Int32> PositionInSetProperty
+```
+
+<span id="uid-012ef89d2d"></span>
+
+### SizeOfSetProperty
+
+Defines the AutomationProperties.SizeOfSet attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Int32> SizeOfSetProperty
+```
+
+</ApiRefPage>
+

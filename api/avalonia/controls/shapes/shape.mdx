@@ -1,0 +1,302 @@
+---
+title: 'Shape'
+hide_title: true
+slug: '/avalonia/controls/shapes/shape'
+uid: 'Avalonia.Controls.Shapes.Shape'
+commentId: 'T:Avalonia.Controls.Shapes.Shape'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Shapes'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Shape Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Shapes</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides a base class for shape elements, such as [Avalonia.Controls.Shapes.Ellipse](xref:Avalonia.Controls.Shapes.Ellipse), [Avalonia.Controls.Shapes.Polygon](xref:Avalonia.Controls.Shapes.Polygon) and [Avalonia.Controls.Shapes.Rectangle](xref:Avalonia.Controls.Shapes.Rectangle).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Shape
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> Shape
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Render](#uid-d1cdde6e5d) | No summary available. |
+
+<span id="uid-d1cdde6e5d"></span>
+
+### Render
+
+```csharp
+public System.Void Render(Avalonia.Media.DrawingContext context)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DefiningGeometry](#uid-d1e64b8618) | Gets a value that represents the Avalonia.Media.Geometry of the shape. |
+| [Fill](#uid-2d665bbf70) | Gets or sets the Avalonia.Media.IBrush that specifies how the shape's interior is painted. |
+| [RenderedGeometry](#uid-07834338d0) | Gets a value that represents the final rendered Avalonia.Media.Geometry of the shape. |
+| [Stretch](#uid-db920455b0) | Gets or sets a Avalonia.Controls.Shapes.Shape.Stretch enumeration value that describes how the shape fills its allocated space. |
+| [Stroke](#uid-14ca8f2a4d) | Gets or sets the Avalonia.Media.IBrush that specifies how the shape's outline is painted. |
+| [StrokeDashArray](#uid-ad26eedd35) | Gets or sets a collection of System.Double values that indicate the pattern of dashes and gaps that is used to outline shapes. |
+| [StrokeDashOffset](#uid-661d24b819) | Gets or sets a value that specifies the distance within the dash pattern where a dash begins. |
+| [StrokeJoin](#uid-ce435703c8) | Gets or sets a Avalonia.Media.PenLineJoin enumeration value that specifies the type of join that is used at the vertices of a Shape. |
+| [StrokeLineCap](#uid-9f349e1555) | Gets or sets a Avalonia.Media.PenLineCap enumeration value that describes the shape at the ends of a line. |
+| [StrokeMiterLimit](#uid-dc785a15a8) | Gets or sets the limit on the ratio of the miter length to half the Avalonia.Controls.Shapes.Shape.StrokeThickness of the pen. |
+| [StrokeThickness](#uid-3c3cdaa5cc) | Gets or sets the width of the shape outline. |
+
+<span id="uid-d1e64b8618"></span>
+
+### DefiningGeometry
+
+Gets a value that represents the [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) of the shape.
+
+```csharp
+public Avalonia.Media.Geometry DefiningGeometry { get; set; }
+```
+
+<span id="uid-2d665bbf70"></span>
+
+### Fill
+
+Gets or sets the [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) that specifies how the shape's interior is painted.
+
+```csharp
+public Avalonia.Media.IBrush Fill { get; set; }
+```
+
+<span id="uid-07834338d0"></span>
+
+### RenderedGeometry
+
+Gets a value that represents the final rendered [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) of the shape.
+
+```csharp
+public Avalonia.Media.Geometry RenderedGeometry { get; set; }
+```
+
+<span id="uid-db920455b0"></span>
+
+### Stretch
+
+Gets or sets a [Avalonia.Controls.Shapes.Shape.Stretch](xref:Avalonia.Controls.Shapes.Shape.Stretch) enumeration value that describes how the shape fills its allocated space.
+
+```csharp
+public Avalonia.Media.Stretch Stretch { get; set; }
+```
+
+<span id="uid-14ca8f2a4d"></span>
+
+### Stroke
+
+Gets or sets the [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) that specifies how the shape's outline is painted.
+
+```csharp
+public Avalonia.Media.IBrush Stroke { get; set; }
+```
+
+<span id="uid-ad26eedd35"></span>
+
+### StrokeDashArray
+
+Gets or sets a collection of [System.Double](xref:System.Double) values that indicate the pattern of dashes and gaps that is used to outline shapes.
+
+```csharp
+public Avalonia.Collections.AvaloniaList<System.Double> StrokeDashArray { get; set; }
+```
+
+<span id="uid-661d24b819"></span>
+
+### StrokeDashOffset
+
+Gets or sets a value that specifies the distance within the dash pattern where a dash begins.
+
+```csharp
+public System.Double StrokeDashOffset { get; set; }
+```
+
+<span id="uid-ce435703c8"></span>
+
+### StrokeJoin
+
+Gets or sets a [Avalonia.Media.PenLineJoin](xref:Avalonia.Media.PenLineJoin) enumeration value that specifies the type of join that is used at the vertices of a Shape.
+
+```csharp
+public Avalonia.Media.PenLineJoin StrokeJoin { get; set; }
+```
+
+<span id="uid-9f349e1555"></span>
+
+### StrokeLineCap
+
+Gets or sets a [Avalonia.Media.PenLineCap](xref:Avalonia.Media.PenLineCap) enumeration value that describes the shape at the ends of a line.
+
+```csharp
+public Avalonia.Media.PenLineCap StrokeLineCap { get; set; }
+```
+
+<span id="uid-dc785a15a8"></span>
+
+### StrokeMiterLimit
+
+Gets or sets the limit on the ratio of the miter length to half the [Avalonia.Controls.Shapes.Shape.StrokeThickness](xref:Avalonia.Controls.Shapes.Shape.StrokeThickness) of the pen.
+
+```csharp
+public System.Double StrokeMiterLimit { get; set; }
+```
+
+<span id="uid-3c3cdaa5cc"></span>
+
+### StrokeThickness
+
+Gets or sets the width of the shape outline.
+
+```csharp
+public System.Double StrokeThickness { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [FillProperty](#uid-8d9f08833e) | Defines the Avalonia.Controls.Shapes.Shape.Fill property. |
+| [StretchProperty](#uid-34d0d23ebd) | Defines the Avalonia.Controls.Shapes.Shape.Stretch property. |
+| [StrokeDashArrayProperty](#uid-add7ac2d13) | Defines the Avalonia.Controls.Shapes.Shape.StrokeDashArray property. |
+| [StrokeDashOffsetProperty](#uid-528fe49094) | Defines the Avalonia.Controls.Shapes.Shape.StrokeDashOffset property. |
+| [StrokeJoinProperty](#uid-03b196e01e) | Defines the Avalonia.Controls.Shapes.Shape.StrokeJoin property. |
+| [StrokeLineCapProperty](#uid-6f1a98441f) | Defines the Avalonia.Controls.Shapes.Shape.StrokeLineCap property. |
+| [StrokeMiterLimitProperty](#uid-8b60f7b4d4) | Defines the Avalonia.Controls.Shapes.Shape.StrokeMiterLimit property. |
+| [StrokeProperty](#uid-6c610c4424) | Defines the Avalonia.Controls.Shapes.Shape.Stroke property. |
+| [StrokeThicknessProperty](#uid-a6566d629a) | Defines the Avalonia.Controls.Shapes.Shape.StrokeThickness property. |
+
+<span id="uid-8d9f08833e"></span>
+
+### FillProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.Fill](xref:Avalonia.Controls.Shapes.Shape.Fill) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> FillProperty
+```
+
+<span id="uid-34d0d23ebd"></span>
+
+### StretchProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.Stretch](xref:Avalonia.Controls.Shapes.Shape.Stretch) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.Stretch> StretchProperty
+```
+
+<span id="uid-add7ac2d13"></span>
+
+### StrokeDashArrayProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.StrokeDashArray](xref:Avalonia.Controls.Shapes.Shape.StrokeDashArray) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Collections.AvaloniaList<System.Double>> StrokeDashArrayProperty
+```
+
+<span id="uid-528fe49094"></span>
+
+### StrokeDashOffsetProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.StrokeDashOffset](xref:Avalonia.Controls.Shapes.Shape.StrokeDashOffset) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> StrokeDashOffsetProperty
+```
+
+<span id="uid-03b196e01e"></span>
+
+### StrokeJoinProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.StrokeJoin](xref:Avalonia.Controls.Shapes.Shape.StrokeJoin) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.PenLineJoin> StrokeJoinProperty
+```
+
+<span id="uid-6f1a98441f"></span>
+
+### StrokeLineCapProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.StrokeLineCap](xref:Avalonia.Controls.Shapes.Shape.StrokeLineCap) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.PenLineCap> StrokeLineCapProperty
+```
+
+<span id="uid-8b60f7b4d4"></span>
+
+### StrokeMiterLimitProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.StrokeMiterLimit](xref:Avalonia.Controls.Shapes.Shape.StrokeMiterLimit) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> StrokeMiterLimitProperty
+```
+
+<span id="uid-6c610c4424"></span>
+
+### StrokeProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.Stroke](xref:Avalonia.Controls.Shapes.Shape.Stroke) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> StrokeProperty
+```
+
+<span id="uid-a6566d629a"></span>
+
+### StrokeThicknessProperty
+
+Defines the [Avalonia.Controls.Shapes.Shape.StrokeThickness](xref:Avalonia.Controls.Shapes.Shape.StrokeThickness) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> StrokeThicknessProperty
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,461 @@
+---
+title: 'Design'
+hide_title: true
+slug: '/avalonia/controls/design'
+uid: 'Avalonia.Controls.Design'
+commentId: 'T:Avalonia.Controls.Design'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Design Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides attached properties and helpers for design-time support.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Design
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Design
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetDataContext (2 overloads)](#uid-730975f9b1) | Gets the design-time data context for a control. |
+| [GetDesignStyle](#uid-aa9086667b) | Gets the design-time style for a control. |
+| [GetHeight](#uid-d7570e141d) | Gets the design-time height for a control. |
+| [GetPreviewWith (4 overloads)](#uid-3f2107265d) | Gets the preview control for the specified Avalonia.AvaloniaObject at design-time. |
+| [GetWidth](#uid-93a3ad0a96) | Gets the design-time width for a control. |
+| [SetDataContext (2 overloads)](#uid-e52d4759ea) | Sets the design-time data context for a control. |
+| [SetDesignStyle](#uid-ac3a719e27) | Sets the design-time style for a control. |
+| [SetHeight](#uid-44fd86c56e) | Sets the design-time height for a control. |
+| [SetPreviewWith (7 overloads)](#uid-d8dac897b3) | No summary available. |
+| [SetWidth](#uid-90374ec669) | Sets the design-time width for a control. |
+
+<span id="uid-730975f9b1"></span>
+
+### GetDataContext overloads
+
+<span id="uid-37e8be5cf6"></span>
+
+#### GetDataContext
+
+Gets the design-time data context for a control.
+
+```csharp
+public System.Object GetDataContext(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to get the data context from. |
+
+Returns: The data context value.
+
+<span id="uid-b27cb3cb6b"></span>
+
+#### GetDataContext
+
+Gets the design-time data context for a control.
+
+```csharp
+public System.Object GetDataContext(Avalonia.Controls.Templates.IDataTemplate control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to get the data context from. |
+
+Returns: The data context value.
+
+<span id="uid-aa9086667b"></span>
+
+### GetDesignStyle
+
+Gets the design-time style for a control.
+
+```csharp
+public Avalonia.Styling.IStyle GetDesignStyle(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to get the style from. |
+
+Returns: The style value.
+
+<span id="uid-d7570e141d"></span>
+
+### GetHeight
+
+Gets the design-time height for a control.
+
+```csharp
+public System.Double GetHeight(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to get the height from. |
+
+Returns: The height value.
+
+<span id="uid-3f2107265d"></span>
+
+### GetPreviewWith overloads
+
+<span id="uid-be0b252cb3"></span>
+
+#### GetPreviewWith
+
+Gets the preview control for the specified [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) at design-time.
+
+```csharp
+public Avalonia.Controls.Control GetPreviewWith(Avalonia.AvaloniaObject target)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `target` | The target object. |
+
+Returns: The preview control, or null.
+
+<span id="uid-a840a2f083"></span>
+
+#### GetPreviewWith
+
+Gets the preview control for the specified [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary) at design-time.
+
+```csharp
+public Avalonia.Controls.Control GetPreviewWith(Avalonia.Controls.ResourceDictionary target)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `target` | The resource dictionary. |
+
+Returns: The preview control, or null.
+
+<span id="uid-16607989b4"></span>
+
+#### GetPreviewWith
+
+Gets the preview control for the specified [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) at design-time.
+
+```csharp
+public Avalonia.Controls.Control GetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `target` | The data template. |
+
+Returns: The preview control, or null.
+
+<span id="uid-518bf28d0e"></span>
+
+#### GetPreviewWith
+
+Gets the preview control for the specified [Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle) at design-time.
+
+```csharp
+public Avalonia.Controls.Control GetPreviewWith(Avalonia.Styling.IStyle target)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `target` | The style. |
+
+Returns: The preview control, or null.
+
+<span id="uid-93a3ad0a96"></span>
+
+### GetWidth
+
+Gets the design-time width for a control.
+
+```csharp
+public System.Double GetWidth(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to get the width from. |
+
+Returns: The width value.
+
+<span id="uid-e52d4759ea"></span>
+
+### SetDataContext overloads
+
+<span id="uid-c1ecf57e6d"></span>
+
+#### SetDataContext
+
+Sets the design-time data context for a control.
+
+```csharp
+public System.Void SetDataContext(Avalonia.Controls.Control control, System.Object value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the data context for. |
+| `value` | The data context value. |
+
+<span id="uid-41951bd399"></span>
+
+#### SetDataContext
+
+Sets the design-time data context for a control.
+
+```csharp
+public System.Void SetDataContext(Avalonia.Controls.Templates.IDataTemplate control, System.Object value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the data context for. |
+| `value` | The data context value. |
+
+<span id="uid-ac3a719e27"></span>
+
+### SetDesignStyle
+
+Sets the design-time style for a control.
+
+```csharp
+public System.Void SetDesignStyle(Avalonia.Controls.Control control, Avalonia.Styling.IStyle value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the style for. |
+| `value` | The style value. |
+
+<span id="uid-44fd86c56e"></span>
+
+### SetHeight
+
+Sets the design-time height for a control.
+
+```csharp
+public System.Void SetHeight(Avalonia.Controls.Control control, System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the height for. |
+| `value` | The height value. |
+
+<span id="uid-d8dac897b3"></span>
+
+### SetPreviewWith overloads
+
+<span id="uid-ee64d0440c"></span>
+
+#### SetPreviewWith
+
+```csharp
+public System.Void SetPreviewWith(Avalonia.AvaloniaObject target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+```
+
+<span id="uid-ba0ae1afe0"></span>
+
+#### SetPreviewWith
+
+Sets a preview template for the specified [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary) at design-time.
+
+```csharp
+public System.Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The preview control. |
+| `target` | The resource dictionary. |
+
+<span id="uid-ec0f5256fc"></span>
+
+#### SetPreviewWith
+
+```csharp
+public System.Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+```
+
+<span id="uid-08c9783ea1"></span>
+
+#### SetPreviewWith
+
+Sets a preview template for the specified [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) at design-time.
+
+```csharp
+public System.Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The preview control. |
+| `target` | The data template. |
+
+<span id="uid-ff3f33201a"></span>
+
+#### SetPreviewWith
+
+```csharp
+public System.Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+```
+
+<span id="uid-8cca5b8ccd"></span>
+
+#### SetPreviewWith
+
+Sets a preview template for the specified [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) at design-time.
+
+```csharp
+public System.Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The preview control. |
+| `target` | The data template. |
+
+<span id="uid-9c64a05574"></span>
+
+#### SetPreviewWith
+
+```csharp
+public System.Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+```
+
+<span id="uid-90374ec669"></span>
+
+### SetWidth
+
+Sets the design-time width for a control.
+
+```csharp
+public System.Void SetWidth(Avalonia.Controls.Control control, System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the width for. |
+| `value` | The width value. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsDesignMode](#uid-d65d5f3b36) | Gets a value indicating whether the application is running in design mode. |
+
+<span id="uid-d65d5f3b36"></span>
+
+### IsDesignMode
+
+Gets a value indicating whether the application is running in design mode.
+
+```csharp
+public System.Boolean IsDesignMode { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DataContextProperty](#uid-ecbf08df66) | Defines the DataContext attached property. |
+| [DesignStyleProperty](#uid-d5ba4a1fb8) | Identifies the DesignStyle attached property for design-time use. |
+| [HeightProperty](#uid-da67a69258) | Defines the Height attached property. |
+| [PreviewWithProperty](#uid-5a7c962a11) | Defines the PreviewWith attached property. |
+| [WidthProperty](#uid-a44c6d14ef) | Defines the Width attached property. |
+
+<span id="uid-ecbf08df66"></span>
+
+### DataContextProperty
+
+Defines the DataContext attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Object> DataContextProperty
+```
+
+<span id="uid-d5ba4a1fb8"></span>
+
+### DesignStyleProperty
+
+Identifies the DesignStyle attached property for design-time use.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Styling.IStyle> DesignStyleProperty
+```
+
+<span id="uid-da67a69258"></span>
+
+### HeightProperty
+
+Defines the Height attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Double> HeightProperty
+```
+
+<span id="uid-5a7c962a11"></span>
+
+### PreviewWithProperty
+
+Defines the PreviewWith attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Control> PreviewWithProperty
+```
+
+<span id="uid-a44c6d14ef"></span>
+
+### WidthProperty
+
+Defines the Width attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Double> WidthProperty
+```
+
+</ApiRefPage>
+

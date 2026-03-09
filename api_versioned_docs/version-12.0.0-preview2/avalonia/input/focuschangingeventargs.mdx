@@ -1,0 +1,144 @@
+---
+title: 'FocusChangingEventArgs'
+hide_title: true
+slug: '/avalonia/input/focuschangingeventargs'
+uid: 'Avalonia.Input.FocusChangingEventArgs'
+commentId: 'T:Avalonia.Input.FocusChangingEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FocusChangingEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FocusChangingEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> FocusChangingEventArgs
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ikeymodifierseventargs">IKeyModifiersEventArgs</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryCancel](#uid-715aa46789) | Attempts to cancel the current focus change |
+| [TrySetNewFocusedElement](#uid-33c47afc04) | Attempts to redirect focus from the targeted element to the specified element. |
+
+<span id="uid-715aa46789"></span>
+
+### TryCancel
+
+Attempts to cancel the current focus change
+
+```csharp
+public System.Boolean TryCancel()
+```
+
+Returns: true if focus change was cancelled; otherwise, false
+
+<span id="uid-33c47afc04"></span>
+
+### TrySetNewFocusedElement
+
+Attempts to redirect focus from the targeted element to the specified element.
+
+```csharp
+public System.Boolean TrySetNewFocusedElement(Avalonia.Input.IInputElement inputElement)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Canceled](#uid-1dde0794b7) | Gets whether focus change is canceled. |
+| [KeyModifiers](#uid-a5e86a9b49) | Gets or sets any key modifiers active at the time of focus. |
+| [NavigationMethod](#uid-ff4aeddeda) | Gets or sets a value indicating how the change in focus occurred. |
+| [NewFocusedElement](#uid-b44a46322b) | Gets or sets the element that focus has moved to. |
+| [OldFocusedElement](#uid-fc5ed27a4b) | Gets or sets the element that previously had focus. |
+
+<span id="uid-1dde0794b7"></span>
+
+### Canceled
+
+Gets whether focus change is canceled.
+
+```csharp
+public System.Boolean Canceled { get; set; }
+```
+
+<span id="uid-a5e86a9b49"></span>
+
+### KeyModifiers
+
+Gets or sets any key modifiers active at the time of focus.
+
+```csharp
+public Avalonia.Input.KeyModifiers KeyModifiers { get; set; }
+```
+
+<span id="uid-ff4aeddeda"></span>
+
+### NavigationMethod
+
+Gets or sets a value indicating how the change in focus occurred.
+
+```csharp
+public Avalonia.Input.NavigationMethod NavigationMethod { get; set; }
+```
+
+<span id="uid-b44a46322b"></span>
+
+### NewFocusedElement
+
+Gets or sets the element that focus has moved to.
+
+```csharp
+public Avalonia.Input.IInputElement NewFocusedElement { get; set; }
+```
+
+<span id="uid-fc5ed27a4b"></span>
+
+### OldFocusedElement
+
+Gets or sets the element that previously had focus.
+
+```csharp
+public Avalonia.Input.IInputElement OldFocusedElement { get; set; }
+```
+
+</ApiRefPage>
+

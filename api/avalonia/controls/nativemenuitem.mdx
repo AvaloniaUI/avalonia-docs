@@ -1,0 +1,358 @@
+---
+title: 'NativeMenuItem'
+hide_title: true
+slug: '/avalonia/controls/nativemenuitem'
+uid: 'Avalonia.Controls.NativeMenuItem'
+commentId: 'T:Avalonia.Controls.NativeMenuItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NativeMenuItem Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NativeMenuItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="nativemenuitembase">NativeMenuItemBase</a> <span className="apiref-page__relation-separator">-&gt;</span> NativeMenuItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="inativemenuitemexportereventsimplbridge">INativeMenuItemExporterEventsImplBridge</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NativeMenuItem (2 overloads)](#uid-f4cf92b2a6) | No summary available. |
+
+<span id="uid-f4cf92b2a6"></span>
+
+### NativeMenuItem overloads
+
+<span id="uid-8172ae0654"></span>
+
+#### NativeMenuItem
+
+```csharp
+public NativeMenuItem()
+```
+
+<span id="uid-89ed1327d6"></span>
+
+#### NativeMenuItem
+
+```csharp
+public NativeMenuItem(System.String header)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Command](#uid-d5febd9351) | Gets or sets the command associated with the menu item. |
+| [CommandParameter](#uid-2e5c9ca95b) | Gets or sets the parameter to pass to the Avalonia.Controls.MenuItem.Command property of a Avalonia.Controls.MenuItem. |
+| [Gesture](#uid-66e4389381) | Gets or sets the input gesture that will be displayed in the menu item. |
+| [HasClickHandlers](#uid-f4cfb0ba94) | No summary available. |
+| [Header](#uid-b8d59f5357) | Gets or sets the content of the control's header. |
+| [Icon](#uid-1af2ab89b0) | Gets or sets the icon that appears in a Avalonia.Controls.MenuItem. |
+| [IsChecked](#uid-5907377935) | Gets or sets if menu item is checked when Avalonia.Controls.MenuItem.ToggleType is Avalonia.Controls.MenuItemToggleType.CheckBox or Avalonia.Controls.MenuItemToggleType.Radio. |
+| [IsEnabled](#uid-fd1fe51b79) | Gets or sets a value indicating whether the control is enabled for user interaction. |
+| [IsVisible](#uid-ea1cceaa8e) | Gets or sets a value indicating whether this menu item is visible. |
+| [Menu](#uid-4712a248f9) | No summary available. |
+| [ToggleType](#uid-3695da872d) | Gets toggle type of the menu item. |
+| [ToolTip](#uid-78abee77af) | Gets or sets the tooltip associated with the menu item. This may not be supported by the native menu provider, but will be passed on to the non-native fallback menu item if used. |
+
+<span id="uid-d5febd9351"></span>
+
+### Command
+
+Gets or sets the command associated with the menu item.
+
+```csharp
+public System.Windows.Input.ICommand Command { get; set; }
+```
+
+<span id="uid-2e5c9ca95b"></span>
+
+### CommandParameter
+
+Gets or sets the parameter to pass to the [Avalonia.Controls.MenuItem.Command](xref:Avalonia.Controls.MenuItem.Command) property of a
+[Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem).
+
+```csharp
+public System.Object CommandParameter { get; set; }
+```
+
+<span id="uid-66e4389381"></span>
+
+### Gesture
+
+Gets or sets the input gesture that will be displayed in the menu item.
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+<span id="uid-f4cfb0ba94"></span>
+
+### HasClickHandlers
+
+```csharp
+public System.Boolean HasClickHandlers { get; set; }
+```
+
+<span id="uid-b8d59f5357"></span>
+
+### Header
+
+Gets or sets the content of the control's header.
+
+```csharp
+public System.String Header { get; set; }
+```
+
+<span id="uid-1af2ab89b0"></span>
+
+### Icon
+
+Gets or sets the icon that appears in a [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem).
+
+```csharp
+public Avalonia.Media.Imaging.Bitmap Icon { get; set; }
+```
+
+<span id="uid-5907377935"></span>
+
+### IsChecked
+
+Gets or sets if menu item is checked when [Avalonia.Controls.MenuItem.ToggleType](xref:Avalonia.Controls.MenuItem.ToggleType) is
+[Avalonia.Controls.MenuItemToggleType.CheckBox](xref:Avalonia.Controls.MenuItemToggleType.CheckBox) or [Avalonia.Controls.MenuItemToggleType.Radio](xref:Avalonia.Controls.MenuItemToggleType.Radio).
+
+```csharp
+public System.Boolean IsChecked { get; set; }
+```
+
+<span id="uid-fd1fe51b79"></span>
+
+### IsEnabled
+
+Gets or sets a value indicating whether the control is enabled for user interaction.
+
+```csharp
+public System.Boolean IsEnabled { get; set; }
+```
+
+<span id="uid-ea1cceaa8e"></span>
+
+### IsVisible
+
+Gets or sets a value indicating whether this menu item is visible.
+
+```csharp
+public System.Boolean IsVisible { get; set; }
+```
+
+<span id="uid-4712a248f9"></span>
+
+### Menu
+
+```csharp
+public Avalonia.Controls.NativeMenu Menu { get; set; }
+```
+
+<span id="uid-3695da872d"></span>
+
+### ToggleType
+
+Gets toggle type of the menu item.
+
+```csharp
+public Avalonia.Controls.MenuItemToggleType ToggleType { get; set; }
+```
+
+<span id="uid-78abee77af"></span>
+
+### ToolTip
+
+Gets or sets the tooltip associated with the menu item.
+This may not be supported by the native menu provider, but
+will be passed on to the non-native fallback menu item if used.
+
+```csharp
+public System.String ToolTip { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CommandParameterProperty](#uid-0de36dee29) | Defines the Avalonia.Controls.MenuItem.CommandParameter property. |
+| [CommandProperty](#uid-0d269e574f) | Defines the Avalonia.Controls.MenuItem.Command property. |
+| [GestureProperty](#uid-fc05a69c69) | Defines the Avalonia.Controls.MenuItem.InputGesture property. |
+| [HeaderProperty](#uid-86a225538f) | Defines the Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.Header property. |
+| [IconProperty](#uid-8c453aabbb) | Defines the Avalonia.Controls.MenuItem.Icon property. |
+| [IsCheckedProperty](#uid-00c0be7111) | Defines the Avalonia.Controls.MenuItem.IsChecked property. |
+| [IsEnabledProperty](#uid-fab16ec133) | Defines the Avalonia.Input.InputElement.IsEnabled property. |
+| [IsVisibleProperty](#uid-2ad3210c7f) | Defines the Avalonia.Controls.NativeMenuItem.IsVisible property. |
+| [MenuProperty](#uid-6ba8062800) | No summary available. |
+| [ToggleTypeProperty](#uid-6c30bcf1b1) | Defines the Avalonia.Controls.MenuItem.ToggleType property. |
+| [ToolTipProperty](#uid-ba25e8a8f4) | Defines the Avalonia.Controls.NativeMenuItem.ToolTip property. |
+
+<span id="uid-0de36dee29"></span>
+
+### CommandParameterProperty
+
+Defines the [Avalonia.Controls.MenuItem.CommandParameter](xref:Avalonia.Controls.MenuItem.CommandParameter) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> CommandParameterProperty
+```
+
+<span id="uid-0d269e574f"></span>
+
+### CommandProperty
+
+Defines the [Avalonia.Controls.MenuItem.Command](xref:Avalonia.Controls.MenuItem.Command) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Windows.Input.ICommand> CommandProperty
+```
+
+<span id="uid-fc05a69c69"></span>
+
+### GestureProperty
+
+Defines the [Avalonia.Controls.MenuItem.InputGesture](xref:Avalonia.Controls.MenuItem.InputGesture) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Input.KeyGesture> GestureProperty
+```
+
+<span id="uid-86a225538f"></span>
+
+### HeaderProperty
+
+Defines the [Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.Header](xref:Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.Header) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> HeaderProperty
+```
+
+<span id="uid-8c453aabbb"></span>
+
+### IconProperty
+
+Defines the [Avalonia.Controls.MenuItem.Icon](xref:Avalonia.Controls.MenuItem.Icon) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.Imaging.Bitmap> IconProperty
+```
+
+<span id="uid-00c0be7111"></span>
+
+### IsCheckedProperty
+
+Defines the [Avalonia.Controls.MenuItem.IsChecked](xref:Avalonia.Controls.MenuItem.IsChecked) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsCheckedProperty
+```
+
+<span id="uid-fab16ec133"></span>
+
+### IsEnabledProperty
+
+Defines the [Avalonia.Input.InputElement.IsEnabled](xref:Avalonia.Input.InputElement.IsEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsEnabledProperty
+```
+
+<span id="uid-2ad3210c7f"></span>
+
+### IsVisibleProperty
+
+Defines the [Avalonia.Controls.NativeMenuItem.IsVisible](xref:Avalonia.Controls.NativeMenuItem.IsVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsVisibleProperty
+```
+
+<span id="uid-6ba8062800"></span>
+
+### MenuProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.NativeMenu> MenuProperty
+```
+
+<span id="uid-6c30bcf1b1"></span>
+
+### ToggleTypeProperty
+
+Defines the [Avalonia.Controls.MenuItem.ToggleType](xref:Avalonia.Controls.MenuItem.ToggleType) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.MenuItemToggleType> ToggleTypeProperty
+```
+
+<span id="uid-ba25e8a8f4"></span>
+
+### ToolTipProperty
+
+Defines the [Avalonia.Controls.NativeMenuItem.ToolTip](xref:Avalonia.Controls.NativeMenuItem.ToolTip) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> ToolTipProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Click](#uid-2872843590) | Occurs when a Avalonia.Controls.NativeMenuItem is clicked. |
+
+<span id="uid-2872843590"></span>
+
+### Click
+
+Occurs when a [Avalonia.Controls.NativeMenuItem](xref:Avalonia.Controls.NativeMenuItem) is clicked.
+
+```csharp
+public event System.EventHandler Click
+```
+
+</ApiRefPage>
+

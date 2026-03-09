@@ -1,0 +1,110 @@
+---
+title: 'FilePickerOpenOptions'
+hide_title: true
+slug: '/avalonia/platform/storage/filepickeropenoptions'
+uid: 'Avalonia.Platform.Storage.FilePickerOpenOptions'
+commentId: 'T:Avalonia.Platform.Storage.FilePickerOpenOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FilePickerOpenOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Options class for [Avalonia.Platform.Storage.IStorageProvider.OpenFilePickerAsync(Avalonia.Platform.Storage.FilePickerOpenOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.OpenFilePickerAsync%28Avalonia.Platform.Storage.FilePickerOpenOptions%29) method.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FilePickerOpenOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="pickeroptions">PickerOptions</a> <span className="apiref-page__relation-separator">-&gt;</span> FilePickerOpenOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FilePickerOpenOptions](#uid-c6a16b0720) | No summary available. |
+
+<span id="uid-c6a16b0720"></span>
+
+### FilePickerOpenOptions
+
+```csharp
+public FilePickerOpenOptions()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AllowMultiple](#uid-2a28bff5e1) | Gets or sets an option indicating whether open picker allows users to select multiple files. |
+| [FileTypeFilter](#uid-c21c750c4e) | Gets or sets the collection of file types that the file open picker displays. |
+| [SuggestedFileType](#uid-c00a06479e) | Gets or sets the file type that should be preselected when the dialog is opened. |
+
+<span id="uid-2a28bff5e1"></span>
+
+### AllowMultiple
+
+Gets or sets an option indicating whether open picker allows users to select multiple files.
+
+```csharp
+public System.Boolean AllowMultiple { get; set; }
+```
+
+<span id="uid-c21c750c4e"></span>
+
+### FileTypeFilter
+
+Gets or sets the collection of file types that the file open picker displays.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.Storage.FilePickerFileType> FileTypeFilter { get; set; }
+```
+
+<span id="uid-c00a06479e"></span>
+
+### SuggestedFileType
+
+Gets or sets the file type that should be preselected when the dialog is opened.
+
+```csharp
+public Avalonia.Platform.Storage.FilePickerFileType SuggestedFileType { get; set; }
+```
+
+</ApiRefPage>
+

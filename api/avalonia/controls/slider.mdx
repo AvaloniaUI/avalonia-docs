@@ -1,0 +1,220 @@
+---
+title: 'Slider'
+hide_title: true
+slug: '/avalonia/controls/slider'
+uid: 'Avalonia.Controls.Slider'
+commentId: 'T:Avalonia.Controls.Slider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Slider Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control that lets the user select from a range of values by moving a Thumb control along a Track.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Slider
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/rangebase">RangeBase</a> <span className="apiref-page__relation-separator">-&gt;</span> Slider
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Slider](#uid-a8d8d2e993) | Instantiates a new instance of the Avalonia.Controls.Slider class. |
+
+<span id="uid-a8d8d2e993"></span>
+
+### Slider
+
+Instantiates a new instance of the [Avalonia.Controls.Slider](xref:Avalonia.Controls.Slider) class.
+
+```csharp
+public Slider()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsDirectionReversed](#uid-bd128a785b) | Gets or sets the direction of increasing value. |
+| [IsSnapToTickEnabled](#uid-b9ee9b320c) | Gets or sets a value that indicates whether the Avalonia.Controls.Slider automatically moves the Avalonia.Controls.Primitives.Thumb to the closest tick mark. |
+| [Orientation](#uid-22802831f4) | Gets or sets the orientation of a Avalonia.Controls.Slider. |
+| [TickFrequency](#uid-c78d5873b8) | Gets or sets the interval between tick marks. |
+| [TickPlacement](#uid-1013875c64) | Gets or sets a value that indicates where to draw tick marks in relation to the track. |
+| [Ticks](#uid-532f0bb8a4) | Defines the ticks to be drawn on the tick bar. |
+
+<span id="uid-bd128a785b"></span>
+
+### IsDirectionReversed
+
+Gets or sets the direction of increasing value.
+
+```csharp
+public System.Boolean IsDirectionReversed { get; set; }
+```
+
+Value: true if the direction of increasing value is to the left for a horizontal slider or
+down for a vertical slider; otherwise, false. The default is false.
+
+<span id="uid-b9ee9b320c"></span>
+
+### IsSnapToTickEnabled
+
+Gets or sets a value that indicates whether the [Avalonia.Controls.Slider](xref:Avalonia.Controls.Slider) automatically moves the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) to the closest tick mark.
+
+```csharp
+public System.Boolean IsSnapToTickEnabled { get; set; }
+```
+
+<span id="uid-22802831f4"></span>
+
+### Orientation
+
+Gets or sets the orientation of a [Avalonia.Controls.Slider](xref:Avalonia.Controls.Slider).
+
+```csharp
+public Avalonia.Layout.Orientation Orientation { get; set; }
+```
+
+<span id="uid-c78d5873b8"></span>
+
+### TickFrequency
+
+Gets or sets the interval between tick marks.
+
+```csharp
+public System.Double TickFrequency { get; set; }
+```
+
+<span id="uid-1013875c64"></span>
+
+### TickPlacement
+
+Gets or sets a value that indicates where to draw
+tick marks in relation to the track.
+
+```csharp
+public Avalonia.Controls.TickPlacement TickPlacement { get; set; }
+```
+
+<span id="uid-532f0bb8a4"></span>
+
+### Ticks
+
+Defines the ticks to be drawn on the tick bar.
+
+```csharp
+public Avalonia.Collections.AvaloniaList<System.Double> Ticks { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsDirectionReversedProperty](#uid-8925dcbad0) | Defines the Avalonia.Controls.Slider.IsDirectionReversed property. |
+| [IsSnapToTickEnabledProperty](#uid-66f59aacfc) | Defines the Avalonia.Controls.Slider.IsSnapToTickEnabled property. |
+| [OrientationProperty](#uid-ee7a45a7e3) | Defines the Avalonia.Controls.Slider.Orientation property. |
+| [TickFrequencyProperty](#uid-464ab762ef) | Defines the Avalonia.Controls.Slider.TickFrequency property. |
+| [TickPlacementProperty](#uid-590610277e) | Defines the Avalonia.Controls.Slider.TickPlacement property. |
+| [TicksProperty](#uid-cc31f357eb) | Defines the Avalonia.Controls.Slider.Ticks property. |
+
+<span id="uid-8925dcbad0"></span>
+
+### IsDirectionReversedProperty
+
+Defines the [Avalonia.Controls.Slider.IsDirectionReversed](xref:Avalonia.Controls.Slider.IsDirectionReversed) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsDirectionReversedProperty
+```
+
+<span id="uid-66f59aacfc"></span>
+
+### IsSnapToTickEnabledProperty
+
+Defines the [Avalonia.Controls.Slider.IsSnapToTickEnabled](xref:Avalonia.Controls.Slider.IsSnapToTickEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsSnapToTickEnabledProperty
+```
+
+<span id="uid-ee7a45a7e3"></span>
+
+### OrientationProperty
+
+Defines the [Avalonia.Controls.Slider.Orientation](xref:Avalonia.Controls.Slider.Orientation) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.Orientation> OrientationProperty
+```
+
+<span id="uid-464ab762ef"></span>
+
+### TickFrequencyProperty
+
+Defines the [Avalonia.Controls.Slider.TickFrequency](xref:Avalonia.Controls.Slider.TickFrequency) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> TickFrequencyProperty
+```
+
+<span id="uid-590610277e"></span>
+
+### TickPlacementProperty
+
+Defines the [Avalonia.Controls.Slider.TickPlacement](xref:Avalonia.Controls.Slider.TickPlacement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.TickPlacement> TickPlacementProperty
+```
+
+<span id="uid-cc31f357eb"></span>
+
+### TicksProperty
+
+Defines the [Avalonia.Controls.Slider.Ticks](xref:Avalonia.Controls.Slider.Ticks) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Collections.AvaloniaList<System.Double>> TicksProperty
+```
+
+</ApiRefPage>
+

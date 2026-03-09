@@ -1,0 +1,202 @@
+---
+title: 'DockPanel'
+hide_title: true
+slug: '/avalonia/controls/dockpanel'
+uid: 'Avalonia.Controls.DockPanel'
+commentId: 'T:Avalonia.Controls.DockPanel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DockPanel Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A panel which arranges its children at the top, bottom, left, right or center.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DockPanel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="panel">Panel</a> <span className="apiref-page__relation-separator">-&gt;</span> DockPanel
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DockPanel](#uid-2cc132dd14) | No summary available. |
+
+<span id="uid-2cc132dd14"></span>
+
+### DockPanel
+
+```csharp
+public DockPanel()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetDock](#uid-e5158fc734) | Gets the value of the Dock attached property on the specified control. |
+| [SetDock](#uid-e1bbd73bc8) | Sets the value of the Dock attached property on the specified control. |
+
+<span id="uid-e5158fc734"></span>
+
+### GetDock
+
+Gets the value of the Dock attached property on the specified control.
+
+```csharp
+public Avalonia.Controls.Dock GetDock(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+Returns: The Dock attached property.
+
+<span id="uid-e1bbd73bc8"></span>
+
+### SetDock
+
+Sets the value of the Dock attached property on the specified control.
+
+```csharp
+public System.Void SetDock(Avalonia.Controls.Control control, Avalonia.Controls.Dock value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+| `value` | The value of the Dock property. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HorizontalSpacing](#uid-586a6873d3) | Gets or sets the horizontal distance between the child objects. |
+| [LastChildFill](#uid-a429d38071) | Gets or sets a value which indicates whether the last child of the Avalonia.Controls.DockPanel fills the remaining space in the panel. |
+| [VerticalSpacing](#uid-b913b1b639) | Gets or sets the vertical distance between the child objects. |
+
+<span id="uid-586a6873d3"></span>
+
+### HorizontalSpacing
+
+Gets or sets the horizontal distance between the child objects.
+
+```csharp
+public System.Double HorizontalSpacing { get; set; }
+```
+
+<span id="uid-a429d38071"></span>
+
+### LastChildFill
+
+Gets or sets a value which indicates whether the last child of the
+[Avalonia.Controls.DockPanel](xref:Avalonia.Controls.DockPanel) fills the remaining space in the panel.
+
+```csharp
+public System.Boolean LastChildFill { get; set; }
+```
+
+<span id="uid-b913b1b639"></span>
+
+### VerticalSpacing
+
+Gets or sets the vertical distance between the child objects.
+
+```csharp
+public System.Double VerticalSpacing { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DockProperty](#uid-66a5b281f6) | Defines the Dock attached property. |
+| [HorizontalSpacingProperty](#uid-7267cb292c) | Identifies the HorizontalSpacing dependency property. |
+| [LastChildFillProperty](#uid-c72c5c98d2) | Defines the Avalonia.Controls.DockPanel.LastChildFill property. |
+| [VerticalSpacingProperty](#uid-e225732775) | Identifies the VerticalSpacing dependency property. |
+
+<span id="uid-66a5b281f6"></span>
+
+### DockProperty
+
+Defines the Dock attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Dock> DockProperty
+```
+
+<span id="uid-7267cb292c"></span>
+
+### HorizontalSpacingProperty
+
+Identifies the HorizontalSpacing dependency property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> HorizontalSpacingProperty
+```
+
+Returns: The identifier for the [Avalonia.Controls.DockPanel.HorizontalSpacing](xref:Avalonia.Controls.DockPanel.HorizontalSpacing) dependency property.
+
+<span id="uid-c72c5c98d2"></span>
+
+### LastChildFillProperty
+
+Defines the [Avalonia.Controls.DockPanel.LastChildFill](xref:Avalonia.Controls.DockPanel.LastChildFill) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> LastChildFillProperty
+```
+
+<span id="uid-e225732775"></span>
+
+### VerticalSpacingProperty
+
+Identifies the VerticalSpacing dependency property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> VerticalSpacingProperty
+```
+
+Returns: The identifier for the [Avalonia.Controls.DockPanel.VerticalSpacing](xref:Avalonia.Controls.DockPanel.VerticalSpacing) dependency property.
+
+</ApiRefPage>
+

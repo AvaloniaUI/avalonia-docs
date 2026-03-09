@@ -1,0 +1,369 @@
+---
+title: 'ColorSpectrum'
+hide_title: true
+slug: '/avalonia/controls/primitives/colorspectrum'
+uid: 'Avalonia.Controls.Primitives.ColorSpectrum'
+commentId: 'T:Avalonia.Controls.Primitives.ColorSpectrum'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColorSpectrum Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A two dimensional spectrum for color selection.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColorSpectrum
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> ColorSpectrum
+</div>
+</div>
+
+## Remarks
+
+The control class extends [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement) and adds the following features:
+
+- A [Avalonia.Controls.Control.Tag](xref:Avalonia.Controls.Control.Tag) property to allow user-defined data to be attached to the control.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColorSpectrum](#uid-233e482bc0) | Initializes a new instance of the Avalonia.Controls.Primitives.ColorSpectrum class. |
+
+<span id="uid-233e482bc0"></span>
+
+### ColorSpectrum
+
+Initializes a new instance of the [Avalonia.Controls.Primitives.ColorSpectrum](xref:Avalonia.Controls.Primitives.ColorSpectrum) class.
+
+```csharp
+public ColorSpectrum()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [RaiseColorChanged](#uid-8b510bc277) | No summary available. |
+
+<span id="uid-8b510bc277"></span>
+
+### RaiseColorChanged
+
+```csharp
+public System.Void RaiseColorChanged()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Color](#uid-de143482cf) | Gets or sets the currently selected color in the RGB color model. |
+| [Components](#uid-2c1a41b8df) | Gets or sets the two HSV color components displayed by the spectrum. |
+| [HsvColor](#uid-012db86e36) | Gets or sets the currently selected color in the HSV color model. |
+| [MaxHue](#uid-8b0cded049) | Gets or sets the maximum value of the Hue component in the range from 0..359. This property must be greater than Avalonia.Controls.Primitives.ColorSpectrum.MinHue. |
+| [MaxSaturation](#uid-087d6c2ad1) | Gets or sets the maximum value of the Saturation component in the range from 0..100. This property must be greater than Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation. |
+| [MaxValue](#uid-90bf85a4c2) | Gets or sets the maximum value of the Value component in the range from 0..100. This property must be greater than Avalonia.Controls.Primitives.ColorSpectrum.MinValue. |
+| [MinHue](#uid-6f20c2caa4) | Gets or sets the minimum value of the Hue component in the range from 0..359. This property must be less than Avalonia.Controls.Primitives.ColorSpectrum.MaxHue. |
+| [MinSaturation](#uid-a552f1229b) | Gets or sets the minimum value of the Saturation component in the range from 0..100. This property must be less than Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation. |
+| [MinValue](#uid-39853f6d3c) | Gets or sets the minimum value of the Value component in the range from 0..100. This property must be less than Avalonia.Controls.Primitives.ColorSpectrum.MaxValue. |
+| [Shape](#uid-eb7b0add04) | Gets or sets the displayed shape of the spectrum. |
+| [ThirdComponent](#uid-6e15799afc) | Gets the third HSV color component that is NOT displayed by the spectrum. This is automatically calculated from the Avalonia.Controls.Primitives.ColorSpectrum.Components property. |
+
+<span id="uid-de143482cf"></span>
+
+### Color
+
+Gets or sets the currently selected color in the RGB color model.
+
+```csharp
+public Avalonia.Media.Color Color { get; set; }
+```
+
+<span id="uid-2c1a41b8df"></span>
+
+### Components
+
+Gets or sets the two HSV color components displayed by the spectrum.
+
+```csharp
+public Avalonia.Controls.ColorSpectrumComponents Components { get; set; }
+```
+
+<span id="uid-012db86e36"></span>
+
+### HsvColor
+
+Gets or sets the currently selected color in the HSV color model.
+
+```csharp
+public Avalonia.Media.HsvColor HsvColor { get; set; }
+```
+
+<span id="uid-8b0cded049"></span>
+
+### MaxHue
+
+Gets or sets the maximum value of the Hue component in the range from 0..359.
+This property must be greater than [Avalonia.Controls.Primitives.ColorSpectrum.MinHue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinHue).
+
+```csharp
+public System.Int32 MaxHue { get; set; }
+```
+
+<span id="uid-087d6c2ad1"></span>
+
+### MaxSaturation
+
+Gets or sets the maximum value of the Saturation component in the range from 0..100.
+This property must be greater than [Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation).
+
+```csharp
+public System.Int32 MaxSaturation { get; set; }
+```
+
+<span id="uid-90bf85a4c2"></span>
+
+### MaxValue
+
+Gets or sets the maximum value of the Value component in the range from 0..100.
+This property must be greater than [Avalonia.Controls.Primitives.ColorSpectrum.MinValue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinValue).
+
+```csharp
+public System.Int32 MaxValue { get; set; }
+```
+
+<span id="uid-6f20c2caa4"></span>
+
+### MinHue
+
+Gets or sets the minimum value of the Hue component in the range from 0..359.
+This property must be less than [Avalonia.Controls.Primitives.ColorSpectrum.MaxHue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxHue).
+
+```csharp
+public System.Int32 MinHue { get; set; }
+```
+
+<span id="uid-a552f1229b"></span>
+
+### MinSaturation
+
+Gets or sets the minimum value of the Saturation component in the range from 0..100.
+This property must be less than [Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation).
+
+```csharp
+public System.Int32 MinSaturation { get; set; }
+```
+
+<span id="uid-39853f6d3c"></span>
+
+### MinValue
+
+Gets or sets the minimum value of the Value component in the range from 0..100.
+This property must be less than [Avalonia.Controls.Primitives.ColorSpectrum.MaxValue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxValue).
+
+```csharp
+public System.Int32 MinValue { get; set; }
+```
+
+<span id="uid-eb7b0add04"></span>
+
+### Shape
+
+Gets or sets the displayed shape of the spectrum.
+
+```csharp
+public Avalonia.Controls.ColorSpectrumShape Shape { get; set; }
+```
+
+<span id="uid-6e15799afc"></span>
+
+### ThirdComponent
+
+Gets the third HSV color component that is NOT displayed by the spectrum.
+This is automatically calculated from the [Avalonia.Controls.Primitives.ColorSpectrum.Components](xref:Avalonia.Controls.Primitives.ColorSpectrum.Components) property.
+
+```csharp
+public Avalonia.Controls.ColorComponent ThirdComponent { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ColorProperty](#uid-764a19fd3a) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.Color property. |
+| [ComponentsProperty](#uid-951809f9e2) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.Components property. |
+| [HsvColorProperty](#uid-29ee3ea6e6) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.HsvColor property. |
+| [MaxHueProperty](#uid-edcdfb7ad2) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.MaxHue property. |
+| [MaxSaturationProperty](#uid-15442d31a1) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation property. |
+| [MaxValueProperty](#uid-1737590a0a) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.MaxValue property. |
+| [MinHueProperty](#uid-e87f85fa0f) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.MinHue property. |
+| [MinSaturationProperty](#uid-ff020d78ca) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation property. |
+| [MinValueProperty](#uid-e5f93a7e45) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.MinValue property. |
+| [ShapeProperty](#uid-83cb773a05) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.Shape property. |
+| [ThirdComponentProperty](#uid-f88f950c97) | Defines the Avalonia.Controls.Primitives.ColorSpectrum.ThirdComponent property. |
+
+<span id="uid-764a19fd3a"></span>
+
+### ColorProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.Color](xref:Avalonia.Controls.Primitives.ColorSpectrum.Color) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.Color> ColorProperty
+```
+
+<span id="uid-951809f9e2"></span>
+
+### ComponentsProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.Components](xref:Avalonia.Controls.Primitives.ColorSpectrum.Components) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ColorSpectrumComponents> ComponentsProperty
+```
+
+<span id="uid-29ee3ea6e6"></span>
+
+### HsvColorProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.HsvColor](xref:Avalonia.Controls.Primitives.ColorSpectrum.HsvColor) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.HsvColor> HsvColorProperty
+```
+
+<span id="uid-edcdfb7ad2"></span>
+
+### MaxHueProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.MaxHue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxHue) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxHueProperty
+```
+
+<span id="uid-15442d31a1"></span>
+
+### MaxSaturationProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxSaturationProperty
+```
+
+<span id="uid-1737590a0a"></span>
+
+### MaxValueProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.MaxValue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxValue) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxValueProperty
+```
+
+<span id="uid-e87f85fa0f"></span>
+
+### MinHueProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.MinHue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinHue) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MinHueProperty
+```
+
+<span id="uid-ff020d78ca"></span>
+
+### MinSaturationProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MinSaturationProperty
+```
+
+<span id="uid-e5f93a7e45"></span>
+
+### MinValueProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.MinValue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinValue) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MinValueProperty
+```
+
+<span id="uid-83cb773a05"></span>
+
+### ShapeProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.Shape](xref:Avalonia.Controls.Primitives.ColorSpectrum.Shape) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ColorSpectrumShape> ShapeProperty
+```
+
+<span id="uid-f88f950c97"></span>
+
+### ThirdComponentProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSpectrum.ThirdComponent](xref:Avalonia.Controls.Primitives.ColorSpectrum.ThirdComponent) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.ColorSpectrum, Avalonia.Controls.ColorComponent> ThirdComponentProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ColorChanged](#uid-c9bcb09ff5) | Event for when the selected color changes within the spectrum. |
+
+<span id="uid-c9bcb09ff5"></span>
+
+### ColorChanged
+
+Event for when the selected color changes within the spectrum.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ColorChangedEventArgs> ColorChanged
+```
+
+</ApiRefPage>
+

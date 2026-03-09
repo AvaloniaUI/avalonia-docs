@@ -1,0 +1,112 @@
+---
+title: 'PickerOptions'
+hide_title: true
+slug: '/avalonia/platform/storage/pickeroptions'
+uid: 'Avalonia.Platform.Storage.PickerOptions'
+commentId: 'T:Avalonia.Platform.Storage.PickerOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PickerOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Common options for [Avalonia.Platform.Storage.IStorageProvider.OpenFolderPickerAsync(Avalonia.Platform.Storage.FolderPickerOpenOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.OpenFolderPickerAsync%28Avalonia.Platform.Storage.FolderPickerOpenOptions%29), [Avalonia.Platform.Storage.IStorageProvider.OpenFilePickerAsync(Avalonia.Platform.Storage.FilePickerOpenOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.OpenFilePickerAsync%28Avalonia.Platform.Storage.FilePickerOpenOptions%29) and [Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerAsync(Avalonia.Platform.Storage.FilePickerSaveOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerAsync%28Avalonia.Platform.Storage.FilePickerSaveOptions%29) methods.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PickerOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> PickerOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PickerOptions](#uid-eba8a9bae6) | No summary available. |
+
+<span id="uid-eba8a9bae6"></span>
+
+### PickerOptions
+
+```csharp
+public PickerOptions()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SuggestedFileName](#uid-87696bd66c) | Gets or sets the file name that the file picker suggests to the user. |
+| [SuggestedStartLocation](#uid-792044079c) | Gets or sets the initial location where the file open picker looks for files to present to the user. Can be obtained from previously picked folder or using Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(System.Uri) or Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder). |
+| [Title](#uid-825079a1b0) | Gets or sets the text that appears in the title bar of a picker. |
+
+<span id="uid-87696bd66c"></span>
+
+### SuggestedFileName
+
+Gets or sets the file name that the file picker suggests to the user.
+
+```csharp
+public System.String SuggestedFileName { get; set; }
+```
+
+<span id="uid-792044079c"></span>
+
+### SuggestedStartLocation
+
+Gets or sets the initial location where the file open picker looks for files to present to the user.
+Can be obtained from previously picked folder or using [Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(System.Uri)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync%28System.Uri%29)
+or [Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync%28Avalonia.Platform.Storage.WellKnownFolder%29).
+
+```csharp
+public Avalonia.Platform.Storage.IStorageFolder SuggestedStartLocation { get; set; }
+```
+
+<span id="uid-825079a1b0"></span>
+
+### Title
+
+Gets or sets the text that appears in the title bar of a picker.
+
+```csharp
+public System.String Title { get; set; }
+```
+
+</ApiRefPage>
+

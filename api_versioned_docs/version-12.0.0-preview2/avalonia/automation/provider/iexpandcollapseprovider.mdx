@@ -1,0 +1,108 @@
+---
+title: 'IExpandCollapseProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/iexpandcollapseprovider'
+uid: 'Avalonia.Automation.Provider.IExpandCollapseProvider'
+commentId: 'T:Avalonia.Automation.Provider.IExpandCollapseProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IExpandCollapseProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support UI Automation client access to controls that
+visually expand to display content and collapse to hide content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IExpandCollapseProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Collapse](#uid-d18a9aedda) | Hides all nodes, controls, or content that are descendants of the control. |
+| [Expand](#uid-b9a46f2085) | Displays all child nodes, controls, or content of the control. |
+
+<span id="uid-d18a9aedda"></span>
+
+### Collapse
+
+Hides all nodes, controls, or content that are descendants of the control.
+
+```csharp
+public System.Void Collapse()
+```
+
+<span id="uid-b9a46f2085"></span>
+
+### Expand
+
+Displays all child nodes, controls, or content of the control.
+
+```csharp
+public System.Void Expand()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ExpandCollapseState](#uid-6a627a6024) | Gets the state, expanded or collapsed, of the control. |
+| [ShowsMenu](#uid-536dc46dde) | Gets a value indicating whether expanding the element shows a menu of items to the user, such as drop-down list. |
+
+<span id="uid-6a627a6024"></span>
+
+### ExpandCollapseState
+
+Gets the state, expanded or collapsed, of the control.
+
+```csharp
+public Avalonia.Automation.ExpandCollapseState ExpandCollapseState { get; set; }
+```
+
+<span id="uid-536dc46dde"></span>
+
+### ShowsMenu
+
+Gets a value indicating whether expanding the element shows a menu of items to the user,
+such as drop-down list.
+
+```csharp
+public System.Boolean ShowsMenu { get; set; }
+```
+
+</ApiRefPage>
+

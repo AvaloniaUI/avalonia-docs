@@ -1,0 +1,141 @@
+---
+title: 'Transform'
+hide_title: true
+slug: '/avalonia/media/transform'
+uid: 'Avalonia.Media.Transform'
+commentId: 'T:Avalonia.Media.Transform'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Transform Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a transform on an [Avalonia.Visual](xref:Avalonia.Visual).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Transform
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> Transform
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="imutabletransform">IMutableTransform</a>, <a href="itransform">ITransform</a>, ICompositionRenderResource, ICompositionRenderResource&lt;ITransform&gt;, ICompositorSerializable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Parse](#uid-1be8bdbe67) | Parses a Avalonia.Media.Transform string. |
+| [ToImmutable](#uid-1ae7a66239) | Converts a transform to an immutable transform. |
+| [ToString](#uid-582ae45701) | Returns a String representing this transform matrix instance. |
+
+<span id="uid-1be8bdbe67"></span>
+
+### Parse
+
+Parses a [Avalonia.Media.Transform](xref:Avalonia.Media.Transform) string.
+
+```csharp
+public Avalonia.Media.Transform Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | Six comma-delimited double values that describe the new [Avalonia.Media.Transform](xref:Avalonia.Media.Transform). For details check [Avalonia.Matrix.Parse(System.String)](xref:Avalonia.Matrix.Parse%28System.String%29) |
+
+Returns: The [Avalonia.Media.Transform](xref:Avalonia.Media.Transform).
+
+<span id="uid-1ae7a66239"></span>
+
+### ToImmutable
+
+Converts a transform to an immutable transform.
+
+```csharp
+public Avalonia.Media.Immutable.ImmutableTransform ToImmutable()
+```
+
+Returns: The immutable transform
+
+<span id="uid-582ae45701"></span>
+
+### ToString
+
+Returns a String representing this transform matrix instance.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Value](#uid-aacebcd90b) | Gets the transform's Avalonia.Matrix. |
+
+<span id="uid-aacebcd90b"></span>
+
+### Value
+
+Gets the transform's [Avalonia.Matrix](xref:Avalonia.Matrix).
+
+```csharp
+public Avalonia.Matrix Value { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-59de490f29) | Raised when the transform changes. |
+
+<span id="uid-59de490f29"></span>
+
+### Changed
+
+Raised when the transform changes.
+
+```csharp
+public event System.EventHandler Changed
+```
+
+</ApiRefPage>
+

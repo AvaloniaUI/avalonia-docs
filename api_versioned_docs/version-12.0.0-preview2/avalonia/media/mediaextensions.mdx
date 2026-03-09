@@ -1,0 +1,103 @@
+---
+title: 'MediaExtensions'
+hide_title: true
+slug: '/avalonia/media/mediaextensions'
+uid: 'Avalonia.Media.MediaExtensions'
+commentId: 'T:Avalonia.Media.MediaExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MediaExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides extension methods for Avalonia media.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MediaExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> MediaExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CalculateScaling](#uid-70d542506f) | Calculates scaling based on a Avalonia.Media.Stretch value. |
+| [CalculateSize](#uid-7f1b76a0e4) | Calculates a scaled size based on a Avalonia.Media.Stretch value. |
+
+<span id="uid-70d542506f"></span>
+
+### CalculateScaling
+
+Calculates scaling based on a [Avalonia.Media.Stretch](xref:Avalonia.Media.Stretch) value.
+
+```csharp
+public Avalonia.Vector CalculateScaling(Avalonia.Media.Stretch stretch, Avalonia.Size destinationSize, Avalonia.Size sourceSize, Avalonia.Media.StretchDirection stretchDirection)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `destinationSize` | The size of the destination viewport. |
+| `sourceSize` | The size of the source. |
+| `stretch` | The stretch mode. |
+| `stretchDirection` | The stretch direction. |
+
+Returns: A vector with the X and Y scaling factors.
+
+<span id="uid-7f1b76a0e4"></span>
+
+### CalculateSize
+
+Calculates a scaled size based on a [Avalonia.Media.Stretch](xref:Avalonia.Media.Stretch) value.
+
+```csharp
+public Avalonia.Size CalculateSize(Avalonia.Media.Stretch stretch, Avalonia.Size destinationSize, Avalonia.Size sourceSize, Avalonia.Media.StretchDirection stretchDirection)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `destinationSize` | The size of the destination viewport. |
+| `sourceSize` | The size of the source. |
+| `stretch` | The stretch mode. |
+| `stretchDirection` | The stretch direction. |
+
+Returns: The size of the stretched source.
+
+</ApiRefPage>
+

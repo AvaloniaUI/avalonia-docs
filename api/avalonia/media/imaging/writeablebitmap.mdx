@@ -1,0 +1,182 @@
+---
+title: 'WriteableBitmap'
+hide_title: true
+slug: '/avalonia/media/imaging/writeablebitmap'
+uid: 'Avalonia.Media.Imaging.WriteableBitmap'
+commentId: 'T:Avalonia.Media.Imaging.WriteableBitmap'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Imaging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WriteableBitmap Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Imaging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds a writeable bitmap image.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WriteableBitmap
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bitmap">Bitmap</a> <span className="apiref-page__relation-separator">-&gt;</span> WriteableBitmap
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WriteableBitmap (2 overloads)](#uid-a75b10f06b) | No summary available. |
+
+<span id="uid-a75b10f06b"></span>
+
+### WriteableBitmap overloads
+
+<span id="uid-e4b81d277f"></span>
+
+#### WriteableBitmap
+
+```csharp
+public WriteableBitmap(Avalonia.PixelSize size, Avalonia.Vector dpi, System.Nullable<Avalonia.Platform.PixelFormat> format, System.Nullable<Avalonia.Platform.AlphaFormat> alphaFormat)
+```
+
+<span id="uid-092fa891e4"></span>
+
+#### WriteableBitmap
+
+Initializes a new instance of the [Avalonia.Media.Imaging.WriteableBitmap](xref:Avalonia.Media.Imaging.WriteableBitmap) class with existing pixel data
+The data is copied to the bitmap
+
+```csharp
+public WriteableBitmap(Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, System.IntPtr data, Avalonia.PixelSize size, Avalonia.Vector dpi, System.Int32 stride)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `alphaFormat` | The alpha format. |
+| `data` | The pointer to the source bytes. |
+| `dpi` | The DPI of the bitmap. |
+| `format` | The pixel format. |
+| `size` | The size of the bitmap in device pixels. |
+| `stride` | The number of bytes per row. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CopyPixels](#uid-6720be6cb4) | No summary available. |
+| [Decode](#uid-338a5c9dca) | No summary available. |
+| [DecodeToHeight](#uid-99543906ff) | Loads a Bitmap from a stream and decodes at the desired height. Aspect ratio is maintained. This is more efficient than loading and then resizing. |
+| [DecodeToWidth](#uid-48e5ce4aae) | Loads a WriteableBitmap from a stream and decodes at the desired width. Aspect ratio is maintained. This is more efficient than loading and then resizing. |
+| [Lock](#uid-a4f1529309) | No summary available. |
+
+<span id="uid-6720be6cb4"></span>
+
+### CopyPixels
+
+```csharp
+public System.Void CopyPixels(Avalonia.PixelRect sourceRect, System.IntPtr buffer, System.Int32 bufferSize, System.Int32 stride)
+```
+
+<span id="uid-338a5c9dca"></span>
+
+### Decode
+
+```csharp
+public Avalonia.Media.Imaging.WriteableBitmap Decode(System.IO.Stream stream)
+```
+
+<span id="uid-99543906ff"></span>
+
+### DecodeToHeight
+
+Loads a Bitmap from a stream and decodes at the desired height. Aspect ratio is maintained.
+This is more efficient than loading and then resizing.
+
+```csharp
+public Avalonia.Media.Imaging.WriteableBitmap DecodeToHeight(System.IO.Stream stream, System.Int32 height, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `height` | The desired height of the resulting bitmap. |
+| `interpolationMode` | The [Avalonia.Media.Imaging.BitmapInterpolationMode](xref:Avalonia.Media.Imaging.BitmapInterpolationMode) to use should any scaling be required. |
+| `stream` | The stream to read the bitmap from. This can be any supported image format. |
+
+Returns: An instance of the [Avalonia.Media.Imaging.WriteableBitmap](xref:Avalonia.Media.Imaging.WriteableBitmap) class.
+
+<span id="uid-48e5ce4aae"></span>
+
+### DecodeToWidth
+
+Loads a WriteableBitmap from a stream and decodes at the desired width. Aspect ratio is maintained.
+This is more efficient than loading and then resizing.
+
+```csharp
+public Avalonia.Media.Imaging.WriteableBitmap DecodeToWidth(System.IO.Stream stream, System.Int32 width, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `interpolationMode` | The [Avalonia.Media.Imaging.BitmapInterpolationMode](xref:Avalonia.Media.Imaging.BitmapInterpolationMode) to use should any scaling be required. |
+| `stream` | The stream to read the bitmap from. This can be any supported image format. |
+| `width` | The desired width of the resulting bitmap. |
+
+Returns: An instance of the [Avalonia.Media.Imaging.WriteableBitmap](xref:Avalonia.Media.Imaging.WriteableBitmap) class.
+
+<span id="uid-a4f1529309"></span>
+
+### Lock
+
+```csharp
+public Avalonia.Platform.ILockedFramebuffer Lock()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Format](#uid-d1631d07c3) | No summary available. |
+
+<span id="uid-d1631d07c3"></span>
+
+### Format
+
+```csharp
+public System.Nullable<Avalonia.Platform.PixelFormat> Format { get; set; }
+```
+
+</ApiRefPage>
+

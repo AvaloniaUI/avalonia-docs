@@ -242,6 +242,18 @@ const config: Config = {
         },
       } satisfies LlmsTxtPluginOptions,
     ],
+  
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "api",
+        path: "api",
+        routeBasePath: "api",
+        disableVersioning: true,
+        sidebarPath: require.resolve("./api-sidebars.ts"),
+        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./.apiref/generated/xref-index.json" }]],
+      },
+    ]
   ],
   themeConfig: {
     image: 'img/social-card.png',
@@ -290,6 +302,11 @@ const config: Config = {
           label: 'Troubleshooting',
           to: '/troubleshooting',
           activeBasePath: '/troubleshooting'
+        },
+        {
+          label: 'API',
+          to: '/api',
+          activeBasePath: '/api'
         },
         {
           label: 'More',

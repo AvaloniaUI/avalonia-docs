@@ -1,0 +1,603 @@
+---
+title: 'Matrix'
+hide_title: true
+slug: '/avalonia/matrix'
+uid: 'Avalonia.Matrix'
+commentId: 'T:Avalonia.Matrix'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Matrix Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A 3x3 matrix.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Matrix
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Matrix
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Matrix&gt;
+</div>
+</div>
+
+## Remarks
+
+Matrix layout:
+| 1st col | 2nd col | 3r col |
+1st row | scaleX | skewY | perspX |
+2nd row | skewX | scaleY | perspY |
+3rd row | transX | transY | perspZ |
+
+Note: Skia.SkMatrix uses a transposed layout (where for example skewX/skewY and persp0/transX are swapped).
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Matrix (2 overloads)](#uid-bfafac0ec5) | Initializes a new instance of the Avalonia.Matrix struct (equivalent to a 2x3 Matrix without perspective). |
+
+<span id="uid-bfafac0ec5"></span>
+
+### Matrix overloads
+
+<span id="uid-ece67b2d52"></span>
+
+#### Matrix
+
+Initializes a new instance of the [Avalonia.Matrix](xref:Avalonia.Matrix) struct (equivalent to a 2x3 Matrix without perspective).
+
+```csharp
+public Matrix(System.Double scaleX, System.Double skewY, System.Double skewX, System.Double scaleY, System.Double offsetX, System.Double offsetY)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `offsetX` | The first element of the third row. |
+| `offsetY` | The second element of the third row. |
+| `scaleX` | The first element of the first row. |
+| `scaleY` | The second element of the second row. |
+| `skewX` | The first element of the second row. |
+| `skewY` | The second element of the first row. |
+
+<span id="uid-7cbc33524e"></span>
+
+#### Matrix
+
+Initializes a new instance of the [Avalonia.Matrix](xref:Avalonia.Matrix) struct.
+
+```csharp
+public Matrix(System.Double scaleX, System.Double skewY, System.Double perspX, System.Double skewX, System.Double scaleY, System.Double perspY, System.Double offsetX, System.Double offsetY, System.Double perspZ)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `offsetX` | The first element of the third row. |
+| `offsetY` | The second element of the third row. |
+| `perspX` | The third element of the first row. |
+| `perspY` | The third element of the second row. |
+| `perspZ` | The third element of the third row. |
+| `scaleX` | The first element of the first row. |
+| `scaleY` | The second element of the second row. |
+| `skewX` | The first element of the second row. |
+| `skewY` | The second element of the first row. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Append](#uid-49d3d1c0d9) | Appends another matrix as post-multiplication operation. Equivalent to this * value; |
+| [ContainsPerspective](#uid-6aa56c57fb) | Determines if the current matrix contains perspective (non-affine) transforms (true) or only (affine) transforms that could be mapped into an 2x3 matrix (false). |
+| [CreateRotation (2 overloads)](#uid-2a754b6147) | Creates a rotation matrix using the given rotation in radians. |
+| [CreateScale (2 overloads)](#uid-1aedc1baff) | Creates a scale matrix from the given vector scale. |
+| [CreateSkew](#uid-5c8d47eebd) | Creates a skew matrix from the given axis skew angles in radians. |
+| [CreateTranslation (2 overloads)](#uid-b210ad1303) | Creates a translation matrix from the given vector. |
+| [Equals (2 overloads)](#uid-2153aaeca3) | Returns a boolean indicating whether the matrix is equal to the other given matrix. |
+| [GetDeterminant](#uid-78ea0950ca) | Calculates the determinant for this matrix. |
+| [GetHashCode](#uid-3811a43856) | Returns the hash code for this instance. |
+| [Invert](#uid-4b9509b7bc) | Inverts the Matrix. |
+| [Parse](#uid-ea5c6d595d) | Parses a Avalonia.Matrix string. |
+| [Prepend](#uid-c73d3285dd) | Prepends another matrix as pre-multiplication operation. Equivalent to value * this; |
+| [ToRadians](#uid-a7bc401e4e) | Converts an angle in degrees to radians. |
+| [ToString](#uid-ea457313be) | Returns a String representing this matrix instance. |
+| [Transform](#uid-f230dedf09) | Transforms the point with the matrix |
+| [TryDecomposeTransform](#uid-14ea9cf6a3) | No summary available. |
+| [TryInvert](#uid-2cb77ea177) | No summary available. |
+
+<span id="uid-49d3d1c0d9"></span>
+
+### Append
+
+Appends another matrix as post-multiplication operation.
+Equivalent to this * value;
+
+```csharp
+public Avalonia.Matrix Append(Avalonia.Matrix value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | A matrix. |
+
+Returns: Post-multiplied matrix.
+
+<span id="uid-6aa56c57fb"></span>
+
+### ContainsPerspective
+
+Determines if the current matrix contains perspective (non-affine) transforms (true) or only (affine) transforms that could be mapped into an 2x3 matrix (false).
+
+```csharp
+public System.Boolean ContainsPerspective()
+```
+
+<span id="uid-2a754b6147"></span>
+
+### CreateRotation overloads
+
+<span id="uid-aed53c20e2"></span>
+
+#### CreateRotation
+
+Creates a rotation matrix using the given rotation in radians.
+
+```csharp
+public Avalonia.Matrix CreateRotation(System.Double radians)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `radians` | The amount of rotation, in radians. |
+
+Returns: A rotation matrix.
+
+<span id="uid-008e509755"></span>
+
+#### CreateRotation
+
+Creates a rotation matrix using the given rotation in radians around center point.
+
+```csharp
+public Avalonia.Matrix CreateRotation(System.Double radians, Avalonia.Point center)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `center` | The location of center point. |
+| `radians` | The amount of rotation, in radians. |
+
+<span id="uid-1aedc1baff"></span>
+
+### CreateScale overloads
+
+<span id="uid-e7263ccc1b"></span>
+
+#### CreateScale
+
+Creates a scale matrix from the given vector scale.
+
+```csharp
+public Avalonia.Matrix CreateScale(Avalonia.Vector scales)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `scales` | The scale to use. |
+
+Returns: A scaling matrix.
+
+<span id="uid-6140e734ba"></span>
+
+#### CreateScale
+
+Creates a scale matrix from the given X and Y components.
+
+```csharp
+public Avalonia.Matrix CreateScale(System.Double xScale, System.Double yScale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `xScale` | Value to scale by on the X-axis. |
+| `yScale` | Value to scale by on the Y-axis. |
+
+Returns: A scaling matrix.
+
+<span id="uid-5c8d47eebd"></span>
+
+### CreateSkew
+
+Creates a skew matrix from the given axis skew angles in radians.
+
+```csharp
+public Avalonia.Matrix CreateSkew(System.Double xAngle, System.Double yAngle)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `xAngle` | The amount of skew along the X-axis, in radians. |
+| `yAngle` | The amount of skew along the Y-axis, in radians. |
+
+Returns: A rotation matrix.
+
+<span id="uid-b210ad1303"></span>
+
+### CreateTranslation overloads
+
+<span id="uid-379d02a068"></span>
+
+#### CreateTranslation
+
+Creates a translation matrix from the given vector.
+
+```csharp
+public Avalonia.Matrix CreateTranslation(Avalonia.Vector position)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `position` | The translation position. |
+
+Returns: A translation matrix.
+
+<span id="uid-5c426b0a62"></span>
+
+#### CreateTranslation
+
+Creates a translation matrix from the given X and Y components.
+
+```csharp
+public Avalonia.Matrix CreateTranslation(System.Double xPosition, System.Double yPosition)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `xPosition` | The X position. |
+| `yPosition` | The Y position. |
+
+Returns: A translation matrix.
+
+<span id="uid-2153aaeca3"></span>
+
+### Equals overloads
+
+<span id="uid-2287ab416d"></span>
+
+#### Equals
+
+Returns a boolean indicating whether the matrix is equal to the other given matrix.
+
+```csharp
+public System.Boolean Equals(Avalonia.Matrix other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other matrix to test equality against. |
+
+Returns: True if this matrix is equal to other; False otherwise.
+
+<span id="uid-8ed5d8907a"></span>
+
+#### Equals
+
+Returns a boolean indicating whether the given Object is equal to this matrix instance.
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `obj` | The Object to compare against. |
+
+Returns: True if the Object is equal to this matrix; False otherwise.
+
+<span id="uid-78ea0950ca"></span>
+
+### GetDeterminant
+
+Calculates the determinant for this matrix.
+
+```csharp
+public System.Double GetDeterminant()
+```
+
+Returns: The determinant.
+
+<span id="uid-3811a43856"></span>
+
+### GetHashCode
+
+Returns the hash code for this instance.
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+Returns: The hash code.
+
+<span id="uid-4b9509b7bc"></span>
+
+### Invert
+
+Inverts the Matrix.
+
+```csharp
+public Avalonia.Matrix Invert()
+```
+
+Returns: The inverted matrix.
+
+#### Exceptions
+
+- [Matrix is not invertible.](xref:System.InvalidOperationException)
+
+<span id="uid-ea5c6d595d"></span>
+
+### Parse
+
+Parses a [Avalonia.Matrix](xref:Avalonia.Matrix) string.
+
+```csharp
+public Avalonia.Matrix Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | Six or nine comma-delimited double values (m11, m12, m21, m22, offsetX, offsetY[, perspX, perspY, perspZ]) that describe the new [Avalonia.Matrix](xref:Avalonia.Matrix) |
+
+Returns: The [Avalonia.Matrix](xref:Avalonia.Matrix).
+
+<span id="uid-c73d3285dd"></span>
+
+### Prepend
+
+Prepends another matrix as pre-multiplication operation.
+Equivalent to value * this;
+
+```csharp
+public Avalonia.Matrix Prepend(Avalonia.Matrix value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | A matrix. |
+
+Returns: Pre-multiplied matrix.
+
+<span id="uid-a7bc401e4e"></span>
+
+### ToRadians
+
+Converts an angle in degrees to radians.
+
+```csharp
+public System.Double ToRadians(System.Double angle)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `angle` | The angle in degrees. |
+
+Returns: The angle in radians.
+
+<span id="uid-ea457313be"></span>
+
+### ToString
+
+Returns a String representing this matrix instance.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation.
+
+<span id="uid-f230dedf09"></span>
+
+### Transform
+
+Transforms the point with the matrix
+
+```csharp
+public Avalonia.Point Transform(Avalonia.Point p)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `p` | The point to be transformed |
+
+Returns: The transformed point
+
+<span id="uid-14ea9cf6a3"></span>
+
+### TryDecomposeTransform
+
+```csharp
+public System.Boolean TryDecomposeTransform(Avalonia.Matrix matrix, Avalonia.Matrix.Decomposed& decomposed)
+```
+
+<span id="uid-2cb77ea177"></span>
+
+### TryInvert
+
+```csharp
+public System.Boolean TryInvert(Avalonia.Matrix& inverted)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HasInverse](#uid-027d6e1b71) | HasInverse Property - returns true if this matrix is invertible, false otherwise. |
+| [Identity](#uid-6752e668f2) | Returns the multiplicative identity matrix. |
+| [IsIdentity](#uid-7015e3959c) | Returns whether the matrix is the identity matrix. |
+| [M11](#uid-80e188c495) | The first element of the first row (scaleX). |
+| [M12](#uid-b244954c6f) | The second element of the first row (skewY). |
+| [M13](#uid-8aa929667d) | The third element of the first row (perspX: input x-axis perspective factor). |
+| [M21](#uid-c6ed7b250d) | The first element of the second row (skewX). |
+| [M22](#uid-69c8d4a46e) | The second element of the second row (scaleY). |
+| [M23](#uid-781bce7982) | The third element of the second row (perspY: input y-axis perspective factor). |
+| [M31](#uid-9a6bc33fcb) | The first element of the third row (offsetX/translateX). |
+| [M32](#uid-70a33609c3) | The second element of the third row (offsetY/translateY). |
+| [M33](#uid-6d68c03e90) | The third element of the third row (perspZ: perspective scale factor). |
+
+<span id="uid-027d6e1b71"></span>
+
+### HasInverse
+
+HasInverse Property - returns true if this matrix is invertible, false otherwise.
+
+```csharp
+public System.Boolean HasInverse { get; set; }
+```
+
+<span id="uid-6752e668f2"></span>
+
+### Identity
+
+Returns the multiplicative identity matrix.
+
+```csharp
+public Avalonia.Matrix Identity { get; set; }
+```
+
+<span id="uid-7015e3959c"></span>
+
+### IsIdentity
+
+Returns whether the matrix is the identity matrix.
+
+```csharp
+public System.Boolean IsIdentity { get; set; }
+```
+
+<span id="uid-80e188c495"></span>
+
+### M11
+
+The first element of the first row (scaleX).
+
+```csharp
+public System.Double M11 { get; set; }
+```
+
+<span id="uid-b244954c6f"></span>
+
+### M12
+
+The second element of the first row (skewY).
+
+```csharp
+public System.Double M12 { get; set; }
+```
+
+<span id="uid-8aa929667d"></span>
+
+### M13
+
+The third element of the first row (perspX: input x-axis perspective factor).
+
+```csharp
+public System.Double M13 { get; set; }
+```
+
+<span id="uid-c6ed7b250d"></span>
+
+### M21
+
+The first element of the second row (skewX).
+
+```csharp
+public System.Double M21 { get; set; }
+```
+
+<span id="uid-69c8d4a46e"></span>
+
+### M22
+
+The second element of the second row (scaleY).
+
+```csharp
+public System.Double M22 { get; set; }
+```
+
+<span id="uid-781bce7982"></span>
+
+### M23
+
+The third element of the second row (perspY: input y-axis perspective factor).
+
+```csharp
+public System.Double M23 { get; set; }
+```
+
+<span id="uid-9a6bc33fcb"></span>
+
+### M31
+
+The first element of the third row (offsetX/translateX).
+
+```csharp
+public System.Double M31 { get; set; }
+```
+
+<span id="uid-70a33609c3"></span>
+
+### M32
+
+The second element of the third row (offsetY/translateY).
+
+```csharp
+public System.Double M32 { get; set; }
+```
+
+<span id="uid-6d68c03e90"></span>
+
+### M33
+
+The third element of the third row (perspZ: perspective scale factor).
+
+```csharp
+public System.Double M33 { get; set; }
+```
+
+</ApiRefPage>
+

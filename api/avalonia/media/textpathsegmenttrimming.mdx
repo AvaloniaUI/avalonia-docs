@@ -1,0 +1,111 @@
+---
+title: 'TextPathSegmentTrimming'
+hide_title: true
+slug: '/avalonia/media/textpathsegmenttrimming'
+uid: 'Avalonia.Media.TextPathSegmentTrimming'
+commentId: 'T:Avalonia.Media.TextPathSegmentTrimming'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextPathSegmentTrimming Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides a text trimming strategy that collapses overflowing text by replacing path segments with an ellipsis
+string.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextPathSegmentTrimming
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="texttrimming">TextTrimming</a> <span className="apiref-page__relation-separator">-&gt;</span> TextPathSegmentTrimming
+</div>
+</div>
+
+## Remarks
+
+Use this class to trim text representing file or URI paths, replacing intermediate segments
+with a specified ellipsis when the text exceeds the available width. This approach helps preserve the most
+relevant parts of the path, such as the filename or endpoint, while indicating omitted segments. The ellipsis
+string can be customized to match application requirements.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextPathSegmentTrimming](#uid-fb38d0f8b1) | Initializes a new instance of the TextPathSegmentTrimming class with the specified ellipsis string to indicate trimmed text. |
+
+<span id="uid-fb38d0f8b1"></span>
+
+### TextPathSegmentTrimming
+
+Initializes a new instance of the TextPathSegmentTrimming class with the specified ellipsis string to
+indicate trimmed text.
+
+```csharp
+public TextPathSegmentTrimming(System.String ellipsis)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `ellipsis` | The string to use as an ellipsis when text is trimmed. This value is displayed at the end of truncated
+segments. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateCollapsingProperties](#uid-17fe1119e1) | No summary available. |
+| [ToString](#uid-0b8828d3dc) | No summary available. |
+
+<span id="uid-17fe1119e1"></span>
+
+### CreateCollapsingProperties
+
+```csharp
+public Avalonia.Media.TextFormatting.TextCollapsingProperties CreateCollapsingProperties(Avalonia.Media.TextCollapsingCreateInfo createInfo)
+```
+
+<span id="uid-0b8828d3dc"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+</ApiRefPage>
+

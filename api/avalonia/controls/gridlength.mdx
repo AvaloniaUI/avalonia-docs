@@ -1,0 +1,286 @@
+---
+title: 'GridLength'
+hide_title: true
+slug: '/avalonia/controls/gridlength'
+uid: 'Avalonia.Controls.GridLength'
+commentId: 'T:Avalonia.Controls.GridLength'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GridLength Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds the width or height of a [Avalonia.Controls.Grid](xref:Avalonia.Controls.Grid)'s column and row definitions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct GridLength
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> GridLength
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;GridLength&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GridLength (2 overloads)](#uid-bc3cad41aa) | Initializes a new instance of the Avalonia.Controls.GridLength struct. |
+
+<span id="uid-bc3cad41aa"></span>
+
+### GridLength overloads
+
+<span id="uid-a543732d30"></span>
+
+#### GridLength
+
+Initializes a new instance of the [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) struct.
+
+```csharp
+public GridLength(System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The size of the GridLength in device independent pixels. |
+
+<span id="uid-04aad80679"></span>
+
+#### GridLength
+
+Initializes a new instance of the [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) struct.
+
+```csharp
+public GridLength(System.Double value, Avalonia.Controls.GridUnitType type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The unit of the GridLength. |
+| `value` | The size of the GridLength. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-6c9e7405b7) | Compares two GridLength structures for equality. |
+| [GetHashCode](#uid-b058843ba9) | Gets a hash code for the GridLength. |
+| [Parse](#uid-eca659cdc4) | Parses a string to return a Avalonia.Controls.GridLength. |
+| [ParseLengths](#uid-394642a307) | Parses a string to return a collection of Avalonia.Controls.GridLengths. |
+| [ToString](#uid-88bc52adb2) | Gets a string representation of the Avalonia.Controls.GridLength. |
+
+<span id="uid-6c9e7405b7"></span>
+
+### Equals overloads
+
+<span id="uid-c462f57eb6"></span>
+
+#### Equals
+
+Compares two GridLength structures for equality.
+
+```csharp
+public System.Boolean Equals(Avalonia.Controls.GridLength gridLength)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `gridLength` | The structure with which to test equality. |
+
+Returns: True if the structures are equal, otherwise false.
+
+<span id="uid-a4bcb912e5"></span>
+
+#### Equals
+
+Determines whether the [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) is equal to the specified object.
+
+```csharp
+public System.Boolean Equals(System.Object o)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `o` | The object with which to test equality. |
+
+Returns: True if the objects are equal, otherwise false.
+
+<span id="uid-b058843ba9"></span>
+
+### GetHashCode
+
+Gets a hash code for the GridLength.
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+Returns: The hash code.
+
+<span id="uid-eca659cdc4"></span>
+
+### Parse
+
+Parses a string to return a [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength).
+
+```csharp
+public Avalonia.Controls.GridLength Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength).
+
+<span id="uid-394642a307"></span>
+
+### ParseLengths
+
+Parses a string to return a collection of [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)s.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.GridLength> ParseLengths(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength).
+
+<span id="uid-88bc52adb2"></span>
+
+### ToString
+
+Gets a string representation of the [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength).
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Auto](#uid-b411952615) | Gets an instance of Avalonia.Controls.GridLength that indicates that a row or column should auto-size to fit its content. |
+| [GridUnitType](#uid-55d6ed914d) | Gets the unit of the Avalonia.Controls.GridLength. |
+| [IsAbsolute](#uid-d8438cde40) | Gets a value that indicates whether the Avalonia.Controls.GridLength has a Avalonia.Controls.GridLength.GridUnitType of Pixel. |
+| [IsAuto](#uid-f422c09852) | Gets a value that indicates whether the Avalonia.Controls.GridLength has a Avalonia.Controls.GridLength.GridUnitType of Auto. |
+| [IsStar](#uid-bb8dcd0333) | Gets a value that indicates whether the Avalonia.Controls.GridLength has a Avalonia.Controls.GridLength.GridUnitType of Star. |
+| [Star](#uid-263d9ac492) | Gets an instance of Avalonia.Controls.GridLength that indicates that a row or column should fill its content. |
+| [Value](#uid-e851cc6423) | Gets the length. |
+
+<span id="uid-b411952615"></span>
+
+### Auto
+
+Gets an instance of [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) that indicates that a row or column should
+auto-size to fit its content.
+
+```csharp
+public Avalonia.Controls.GridLength Auto { get; set; }
+```
+
+<span id="uid-55d6ed914d"></span>
+
+### GridUnitType
+
+Gets the unit of the [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength).
+
+```csharp
+public Avalonia.Controls.GridUnitType GridUnitType { get; set; }
+```
+
+<span id="uid-d8438cde40"></span>
+
+### IsAbsolute
+
+Gets a value that indicates whether the [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) has a [Avalonia.Controls.GridLength.GridUnitType](xref:Avalonia.Controls.GridLength.GridUnitType) of Pixel.
+
+```csharp
+public System.Boolean IsAbsolute { get; set; }
+```
+
+<span id="uid-f422c09852"></span>
+
+### IsAuto
+
+Gets a value that indicates whether the [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) has a [Avalonia.Controls.GridLength.GridUnitType](xref:Avalonia.Controls.GridLength.GridUnitType) of Auto.
+
+```csharp
+public System.Boolean IsAuto { get; set; }
+```
+
+<span id="uid-bb8dcd0333"></span>
+
+### IsStar
+
+Gets a value that indicates whether the [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) has a [Avalonia.Controls.GridLength.GridUnitType](xref:Avalonia.Controls.GridLength.GridUnitType) of Star.
+
+```csharp
+public System.Boolean IsStar { get; set; }
+```
+
+<span id="uid-263d9ac492"></span>
+
+### Star
+
+Gets an instance of [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) that indicates that a row or column should
+fill its content.
+
+```csharp
+public Avalonia.Controls.GridLength Star { get; set; }
+```
+
+<span id="uid-e851cc6423"></span>
+
+### Value
+
+Gets the length.
+
+```csharp
+public System.Double Value { get; set; }
+```
+
+</ApiRefPage>
+

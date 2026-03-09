@@ -1,0 +1,197 @@
+---
+title: 'TextRange'
+hide_title: true
+slug: '/avalonia/media/textformatting/textrange'
+uid: 'Avalonia.Media.TextFormatting.TextRange'
+commentId: 'T:Avalonia.Media.TextFormatting.TextRange'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextRange Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+References a portion of a text buffer.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TextRange
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TextRange
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TextRange&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextRange](#uid-6b03ae3c2c) | No summary available. |
+
+<span id="uid-6b03ae3c2c"></span>
+
+### TextRange
+
+```csharp
+public TextRange(System.Int32 start, System.Int32 length)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-a536877856) | No summary available. |
+| [GetHashCode](#uid-83a24eb7fa) | No summary available. |
+| [Skip](#uid-c987973492) | Bypasses a specified number of elements in the slice and then returns the remaining elements. |
+| [Take](#uid-e0433f94d5) | Returns a specified number of contiguous elements from the start of the slice. |
+| [ToString](#uid-f20380ed17) | No summary available. |
+
+<span id="uid-a536877856"></span>
+
+### Equals overloads
+
+<span id="uid-5fc27dc976"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Media.TextFormatting.TextRange other)
+```
+
+<span id="uid-b2d071f942"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-83a24eb7fa"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-c987973492"></span>
+
+### Skip
+
+Bypasses a specified number of elements in the slice and then returns the remaining elements.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRange Skip(System.Int32 length)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `length` | The number of elements to skip before returning the remaining elements. |
+
+Returns: A [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange) that contains the elements that occur after the specified index in this slice.
+
+<span id="uid-e0433f94d5"></span>
+
+### Take
+
+Returns a specified number of contiguous elements from the start of the slice.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRange Take(System.Int32 length)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `length` | The number of elements to return. |
+
+Returns: A [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange) that contains the specified number of elements from the start of this slice.
+
+<span id="uid-f20380ed17"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [End](#uid-8da493c8bc) | Gets the end. |
+| [Length](#uid-1ff8a92388) | Gets the length. |
+| [Start](#uid-e1c705e7a6) | Gets the start. |
+
+<span id="uid-8da493c8bc"></span>
+
+### End
+
+Gets the end.
+
+```csharp
+public System.Int32 End { get; set; }
+```
+
+Value: The end.
+
+<span id="uid-1ff8a92388"></span>
+
+### Length
+
+Gets the length.
+
+```csharp
+public System.Int32 Length { get; set; }
+```
+
+Value: The length.
+
+<span id="uid-e1c705e7a6"></span>
+
+### Start
+
+Gets the start.
+
+```csharp
+public System.Int32 Start { get; set; }
+```
+
+Value: The start.
+
+</ApiRefPage>
+

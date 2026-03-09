@@ -1,0 +1,278 @@
+---
+title: 'ResourceDictionary'
+hide_title: true
+slug: '/avalonia/controls/resourcedictionary'
+uid: 'Avalonia.Controls.ResourceDictionary'
+commentId: 'T:Avalonia.Controls.ResourceDictionary'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ResourceDictionary Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An indexed dictionary of resources.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ResourceDictionary
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="resourceprovider">ResourceProvider</a> <span className="apiref-page__relation-separator">-&gt;</span> ResourceDictionary
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iresourcedictionary">IResourceDictionary</a>, <a href="iresourcenode">IResourceNode</a>, <a href="iresourceprovider">IResourceProvider</a>, <a href="ithemevariantprovider">IThemeVariantProvider</a>, ICollection&lt;KeyValuePair&lt;Object,Object&gt;&gt;, IDictionary&lt;Object,Object&gt;, IEnumerable&lt;KeyValuePair&lt;Object,Object&gt;&gt;, IEnumerable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ResourceDictionary (2 overloads)](#uid-972a5bbe67) | Initializes a new instance of the Avalonia.Controls.ResourceDictionary class. |
+
+<span id="uid-972a5bbe67"></span>
+
+### ResourceDictionary overloads
+
+<span id="uid-607bade452"></span>
+
+#### ResourceDictionary
+
+Initializes a new instance of the [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary) class.
+
+```csharp
+public ResourceDictionary()
+```
+
+<span id="uid-1a02eabba2"></span>
+
+#### ResourceDictionary
+
+Initializes a new instance of the [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary) class.
+
+```csharp
+public ResourceDictionary(Avalonia.Controls.IResourceHost owner)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-9eaadf6661) | No summary available. |
+| [AddDeferred (2 overloads)](#uid-a6747a18a4) | No summary available. |
+| [AddNotSharedDeferred](#uid-84bd5cae1e) | No summary available. |
+| [Clear](#uid-db09b69ee4) | No summary available. |
+| [ContainsKey](#uid-38072f4aed) | No summary available. |
+| [EnsureCapacity](#uid-faf10681ad) | Ensures that the resource dictionary can hold up to capacity entries without any further expansion of its backing storage. |
+| [GetEnumerator](#uid-fafef28202) | No summary available. |
+| [Remove](#uid-c815dc8c76) | No summary available. |
+| [SetItems](#uid-c90ab4d76f) | No summary available. |
+| [TryGetResource](#uid-86a108c945) | No summary available. |
+| [TryGetValue](#uid-5e7bc153e9) | No summary available. |
+
+<span id="uid-9eaadf6661"></span>
+
+### Add
+
+```csharp
+public System.Void Add(System.Object key, System.Object value)
+```
+
+<span id="uid-a6747a18a4"></span>
+
+### AddDeferred overloads
+
+<span id="uid-cf7b7fd145"></span>
+
+#### AddDeferred
+
+```csharp
+public System.Void AddDeferred(System.Object key, Avalonia.Controls.IDeferredContent deferredContent)
+```
+
+<span id="uid-9a6b9d5c4f"></span>
+
+#### AddDeferred
+
+```csharp
+public System.Void AddDeferred(System.Object key, System.Func<System.IServiceProvider, System.Object> factory)
+```
+
+<span id="uid-84bd5cae1e"></span>
+
+### AddNotSharedDeferred
+
+```csharp
+public System.Void AddNotSharedDeferred(System.Object key, Avalonia.Controls.IDeferredContent deferredContent)
+```
+
+<span id="uid-db09b69ee4"></span>
+
+### Clear
+
+```csharp
+public System.Void Clear()
+```
+
+<span id="uid-38072f4aed"></span>
+
+### ContainsKey
+
+```csharp
+public System.Boolean ContainsKey(System.Object key)
+```
+
+<span id="uid-faf10681ad"></span>
+
+### EnsureCapacity
+
+Ensures that the resource dictionary can hold up to `capacity` entries without
+any further expansion of its backing storage.
+
+```csharp
+public System.Void EnsureCapacity(System.Int32 capacity)
+```
+
+<span id="uid-fafef28202"></span>
+
+### GetEnumerator
+
+```csharp
+public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<System.Object,System.Object>> GetEnumerator()
+```
+
+<span id="uid-c815dc8c76"></span>
+
+### Remove
+
+```csharp
+public System.Boolean Remove(System.Object key)
+```
+
+<span id="uid-c90ab4d76f"></span>
+
+### SetItems
+
+```csharp
+public System.Void SetItems(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Object,System.Object>> values)
+```
+
+<span id="uid-86a108c945"></span>
+
+### TryGetResource
+
+```csharp
+public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+```
+
+<span id="uid-5e7bc153e9"></span>
+
+### TryGetValue
+
+```csharp
+public System.Boolean TryGetValue(System.Object key, System.Object& value)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-b85700e6bf) | No summary available. |
+| [HasResources](#uid-869f0539cf) | No summary available. |
+| [Item](#uid-9b56d6db8a) | No summary available. |
+| [Keys](#uid-a171f87ee5) | No summary available. |
+| [MergedDictionaries](#uid-c6bbe5bebd) | No summary available. |
+| [ThemeDictionaries](#uid-c40ccfafaa) | No summary available. |
+| [Values](#uid-a1e3598d3a) | No summary available. |
+
+<span id="uid-b85700e6bf"></span>
+
+### Count
+
+```csharp
+public System.Int32 Count { get; set; }
+```
+
+<span id="uid-869f0539cf"></span>
+
+### HasResources
+
+```csharp
+public System.Boolean HasResources { get; set; }
+```
+
+<span id="uid-9b56d6db8a"></span>
+
+### Item
+
+```csharp
+public System.Object Item { get; set; }
+```
+
+<span id="uid-a171f87ee5"></span>
+
+### Keys
+
+```csharp
+public System.Collections.Generic.ICollection<System.Object> Keys { get; set; }
+```
+
+<span id="uid-c6bbe5bebd"></span>
+
+### MergedDictionaries
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.IResourceProvider> MergedDictionaries { get; set; }
+```
+
+<span id="uid-c40ccfafaa"></span>
+
+### ThemeDictionaries
+
+```csharp
+public System.Collections.Generic.IDictionary<Avalonia.Styling.ThemeVariant, Avalonia.Controls.IThemeVariantProvider> ThemeDictionaries { get; set; }
+```
+
+<span id="uid-a1e3598d3a"></span>
+
+### Values
+
+```csharp
+public System.Collections.Generic.ICollection<System.Object> Values { get; set; }
+```
+
+</ApiRefPage>
+

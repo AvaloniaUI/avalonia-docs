@@ -1,0 +1,164 @@
+---
+title: 'IAvaloniaList<T>'
+hide_title: true
+slug: '/avalonia/collections/iavalonialist-1'
+uid: 'Avalonia.Collections.IAvaloniaList`1'
+commentId: 'T:Avalonia.Collections.IAvaloniaList`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Collections'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IAvaloniaList&lt;T&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Collections</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A notifying list.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IAvaloniaList<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaReadOnlyList&lt;&gt;, ICollection&lt;&gt;, IEnumerable&lt;&gt;, IList&lt;&gt;, IReadOnlyCollection&lt;&gt;, IReadOnlyList&lt;&gt;, IEnumerable, INotifyCollectionChanged, INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddRange](#uid-5f42616823) | No summary available. |
+| [InsertRange](#uid-465519fba2) | No summary available. |
+| [Move](#uid-62a0acd40c) | Moves an item to a new index. |
+| [MoveRange](#uid-0304d42c8f) | Moves multiple items to a new index. |
+| [RemoveAll](#uid-a3473fc21f) | No summary available. |
+| [RemoveRange](#uid-639f028025) | Removes a range of elements from the collection. |
+
+<span id="uid-5f42616823"></span>
+
+### AddRange
+
+```csharp
+public System.Void AddRange(System.Collections.Generic.IEnumerable<T> items)
+```
+
+<span id="uid-465519fba2"></span>
+
+### InsertRange
+
+```csharp
+public System.Void InsertRange(System.Int32 index, System.Collections.Generic.IEnumerable<T> items)
+```
+
+<span id="uid-62a0acd40c"></span>
+
+### Move
+
+Moves an item to a new index.
+
+```csharp
+public System.Void Move(System.Int32 oldIndex, System.Int32 newIndex)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `newIndex` | The index to move the item to. |
+| `oldIndex` | The index of the item to move. |
+
+<span id="uid-0304d42c8f"></span>
+
+### MoveRange
+
+Moves multiple items to a new index.
+
+```csharp
+public System.Void MoveRange(System.Int32 oldIndex, System.Int32 count, System.Int32 newIndex)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of items to move. |
+| `newIndex` | The index to move the items to. |
+| `oldIndex` | The first index of the items to move. |
+
+<span id="uid-a3473fc21f"></span>
+
+### RemoveAll
+
+```csharp
+public System.Void RemoveAll(System.Collections.Generic.IEnumerable<T> items)
+```
+
+<span id="uid-639f028025"></span>
+
+### RemoveRange
+
+Removes a range of elements from the collection.
+
+```csharp
+public System.Void RemoveRange(System.Int32 index, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of items to remove. |
+| `index` | The first index to remove. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-6c7153fe3d) | Gets the number of items in the list. |
+| [Item](#uid-3043493a92) | No summary available. |
+
+<span id="uid-6c7153fe3d"></span>
+
+### Count
+
+Gets the number of items in the list.
+
+```csharp
+public System.Int32 Count { get; set; }
+```
+
+<span id="uid-3043493a92"></span>
+
+### Item
+
+```csharp
+public T Item { get; set; }
+```
+
+</ApiRefPage>
+

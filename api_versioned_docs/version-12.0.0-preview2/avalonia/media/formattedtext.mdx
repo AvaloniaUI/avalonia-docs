@@ -1,0 +1,767 @@
+---
+title: 'FormattedText'
+hide_title: true
+slug: '/avalonia/media/formattedtext'
+uid: 'Avalonia.Media.FormattedText'
+commentId: 'T:Avalonia.Media.FormattedText'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FormattedText Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The FormattedText class is targeted at programmers needing to add some simple text to a MIL visual.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FormattedText
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FormattedText
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FormattedText](#uid-cb0867d1d6) | Construct a FormattedText object. |
+
+<span id="uid-cb0867d1d6"></span>
+
+### FormattedText
+
+Construct a FormattedText object.
+
+```csharp
+public FormattedText(System.String textToFormat, System.Globalization.CultureInfo culture, Avalonia.Media.FlowDirection flowDirection, Avalonia.Media.Typeface typeface, System.Double emSize, Avalonia.Media.IBrush foreground)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | Culture of text. |
+| `emSize` | Font em size in visual units (1/96 of an inch). |
+| `flowDirection` | Flow direction of text. |
+| `foreground` | Foreground brush used to render text. |
+| `textToFormat` | String of text to be displayed. |
+| `typeface` | Type face used to display text. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BuildGeometry](#uid-806608ebb6) | Obtains geometry for the text, including underlines and strikethroughs. |
+| [BuildHighlightGeometry (2 overloads)](#uid-24a303ae8d) | Builds a highlight geometry object. |
+| [GetMaxTextWidths](#uid-0c2b3daf80) | Obtains a copy of the array of lengths, which will be applied to each line of text in turn. If the text covers more lines than there are entries in the length array, the last entry is reused as many times as required. The maxTextWidths array overrides the MaxTextWidth property. |
+| [SetCulture (2 overloads)](#uid-74b990f385) | Sets or changes the culture for the text object. |
+| [SetFontFamily (4 overloads)](#uid-253942fbfc) | Sets or changes the font family for the text object |
+| [SetFontFeatures (2 overloads)](#uid-19d23fec95) | Sets or changes the font features for the text object |
+| [SetFontSize (2 overloads)](#uid-0548ca8790) | Sets or changes the font em size measured in MIL units |
+| [SetFontStyle (2 overloads)](#uid-0d603b2f82) | Sets or changes the font style |
+| [SetFontTypeface (2 overloads)](#uid-d39bb21641) | Sets or changes the type face |
+| [SetFontWeight (2 overloads)](#uid-c06d7ce529) | Sets or changes the font weight |
+| [SetForegroundBrush (2 overloads)](#uid-6301ed1522) | Sets foreground brush used for drawing text |
+| [SetMaxTextWidths](#uid-613faea176) | Sets the array of lengths, which will be applied to each line of text in turn. If the text covers more lines than there are entries in the length array, the last entry is reused as many times as required. The maxTextWidths array overrides the MaxTextWidth property. |
+| [SetTextDecorations (2 overloads)](#uid-837121285d) | Sets or changes the text decorations |
+
+<span id="uid-806608ebb6"></span>
+
+### BuildGeometry
+
+Obtains geometry for the text, including underlines and strikethroughs.
+
+```csharp
+public Avalonia.Media.Geometry BuildGeometry(Avalonia.Point origin)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `origin` | The left top origin of the resulting geometry. |
+
+Returns: The geometry returned contains the combined geometry
+of all of the glyphs, underlines and strikeThroughs that represent the formatted text.
+Overlapping contours are merged by performing a Boolean union operation.
+
+<span id="uid-24a303ae8d"></span>
+
+### BuildHighlightGeometry overloads
+
+<span id="uid-522d8b03f5"></span>
+
+#### BuildHighlightGeometry
+
+Builds a highlight geometry object.
+
+```csharp
+public Avalonia.Media.Geometry BuildHighlightGeometry(Avalonia.Point origin)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `origin` | The origin of the highlight region |
+
+Returns: Geometry that surrounds the text.
+
+<span id="uid-3ae4a96ed5"></span>
+
+#### BuildHighlightGeometry
+
+Builds a highlight geometry object for a given character range.
+
+```csharp
+public Avalonia.Media.Geometry BuildHighlightGeometry(Avalonia.Point origin, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the bounds should be obtained for. |
+| `origin` | The origin of the highlight region. |
+| `startIndex` | The start index of initial character the bounds should be obtained for. |
+
+Returns: Geometry that surrounds the specified character range.
+
+<span id="uid-0c2b3daf80"></span>
+
+### GetMaxTextWidths
+
+Obtains a copy of the array of lengths,
+which will be applied to each line of text in turn.
+If the text covers more lines than there are entries in the length array,
+the last entry is reused as many times as required.
+The maxTextWidths array overrides the MaxTextWidth property.
+
+```csharp
+public System.Double[] GetMaxTextWidths()
+```
+
+Returns: The copy of max text width array
+
+<span id="uid-74b990f385"></span>
+
+### SetCulture overloads
+
+<span id="uid-805de3b9b1"></span>
+
+#### SetCulture
+
+Sets or changes the culture for the text object.
+
+```csharp
+public System.Void SetCulture(System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The new culture for the text object. |
+
+<span id="uid-64f3f681bc"></span>
+
+#### SetCulture
+
+Sets or changes the culture for the text object.
+
+```csharp
+public System.Void SetCulture(System.Globalization.CultureInfo culture, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `culture` | The new culture for the text object. |
+| `startIndex` | The start index of initial character to apply the change to. |
+
+<span id="uid-253942fbfc"></span>
+
+### SetFontFamily overloads
+
+<span id="uid-a5c5392011"></span>
+
+#### SetFontFamily
+
+Sets or changes the font family for the text object
+
+```csharp
+public System.Void SetFontFamily(Avalonia.Media.FontFamily fontFamily)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `fontFamily` | Font family |
+
+<span id="uid-c718b478c1"></span>
+
+#### SetFontFamily
+
+Sets or changes the font family for the text object
+
+```csharp
+public System.Void SetFontFamily(Avalonia.Media.FontFamily fontFamily, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `fontFamily` | Font family |
+| `startIndex` | The start index of initial character to apply the change to. |
+
+<span id="uid-990bd41541"></span>
+
+#### SetFontFamily
+
+Sets or changes the font family for the text object
+
+```csharp
+public System.Void SetFontFamily(System.String fontFamily)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `fontFamily` | Font family name |
+
+<span id="uid-c02b4e6ce5"></span>
+
+#### SetFontFamily
+
+Sets or changes the font family for the text object
+
+```csharp
+public System.Void SetFontFamily(System.String fontFamily, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `fontFamily` | Font family name |
+| `startIndex` | The start index of initial character to apply the change to. |
+
+<span id="uid-19d23fec95"></span>
+
+### SetFontFeatures overloads
+
+<span id="uid-daae56a51d"></span>
+
+#### SetFontFeatures
+
+Sets or changes the font features for the text object
+
+```csharp
+public System.Void SetFontFeatures(Avalonia.Media.FontFeatureCollection fontFeatures)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `fontFeatures` | Feature collection |
+
+<span id="uid-a04a104c65"></span>
+
+#### SetFontFeatures
+
+Sets or changes the font features for the text object
+
+```csharp
+public System.Void SetFontFeatures(Avalonia.Media.FontFeatureCollection fontFeatures, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `fontFeatures` | Feature collection |
+| `startIndex` | The start index of initial character to apply the change to. |
+
+<span id="uid-0548ca8790"></span>
+
+### SetFontSize overloads
+
+<span id="uid-a403413b09"></span>
+
+#### SetFontSize
+
+Sets or changes the font em size measured in MIL units
+
+```csharp
+public System.Void SetFontSize(System.Double emSize)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `emSize` | Font em size |
+
+<span id="uid-8ff5889da8"></span>
+
+#### SetFontSize
+
+Sets or changes the font em size measured in MIL units
+
+```csharp
+public System.Void SetFontSize(System.Double emSize, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `emSize` | Font em size |
+| `startIndex` | The start index of initial character to apply the change to. |
+
+<span id="uid-0d603b2f82"></span>
+
+### SetFontStyle overloads
+
+<span id="uid-ce5ed6ec61"></span>
+
+#### SetFontStyle
+
+Sets or changes the font style
+
+```csharp
+public System.Void SetFontStyle(Avalonia.Media.FontStyle style)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `style` | Font style |
+
+<span id="uid-a7e178daff"></span>
+
+#### SetFontStyle
+
+Sets or changes the font style
+
+```csharp
+public System.Void SetFontStyle(Avalonia.Media.FontStyle style, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `startIndex` | The start index of initial character to apply the change to. |
+| `style` | Font style |
+
+<span id="uid-d39bb21641"></span>
+
+### SetFontTypeface overloads
+
+<span id="uid-1f893f4eaa"></span>
+
+#### SetFontTypeface
+
+Sets or changes the type face
+
+```csharp
+public System.Void SetFontTypeface(Avalonia.Media.Typeface typeface)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `typeface` | Typeface |
+
+<span id="uid-838fa35686"></span>
+
+#### SetFontTypeface
+
+Sets or changes the type face
+
+```csharp
+public System.Void SetFontTypeface(Avalonia.Media.Typeface typeface, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `startIndex` | The start index of initial character to apply the change to. |
+| `typeface` | Typeface |
+
+<span id="uid-c06d7ce529"></span>
+
+### SetFontWeight overloads
+
+<span id="uid-15e823cdb2"></span>
+
+#### SetFontWeight
+
+Sets or changes the font weight
+
+```csharp
+public System.Void SetFontWeight(Avalonia.Media.FontWeight weight)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `weight` | Font weight |
+
+<span id="uid-09c759810b"></span>
+
+#### SetFontWeight
+
+Sets or changes the font weight
+
+```csharp
+public System.Void SetFontWeight(Avalonia.Media.FontWeight weight, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `startIndex` | The start index of initial character to apply the change to. |
+| `weight` | Font weight |
+
+<span id="uid-6301ed1522"></span>
+
+### SetForegroundBrush overloads
+
+<span id="uid-f4bfbe78b5"></span>
+
+#### SetForegroundBrush
+
+Sets foreground brush used for drawing text
+
+```csharp
+public System.Void SetForegroundBrush(Avalonia.Media.IBrush foregroundBrush)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `foregroundBrush` | Foreground brush |
+
+<span id="uid-30ccca8e26"></span>
+
+#### SetForegroundBrush
+
+Sets foreground brush used for drawing text
+
+```csharp
+public System.Void SetForegroundBrush(Avalonia.Media.IBrush foregroundBrush, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `foregroundBrush` | Foreground brush |
+| `startIndex` | The start index of initial character to apply the change to. |
+
+<span id="uid-613faea176"></span>
+
+### SetMaxTextWidths
+
+Sets the array of lengths,
+which will be applied to each line of text in turn.
+If the text covers more lines than there are entries in the length array,
+the last entry is reused as many times as required.
+The maxTextWidths array overrides the MaxTextWidth property.
+
+```csharp
+public System.Void SetMaxTextWidths(System.Double[] maxTextWidths)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `maxTextWidths` | The max text width array |
+
+<span id="uid-837121285d"></span>
+
+### SetTextDecorations overloads
+
+<span id="uid-f55b432064"></span>
+
+#### SetTextDecorations
+
+Sets or changes the text decorations
+
+```csharp
+public System.Void SetTextDecorations(Avalonia.Media.TextDecorationCollection textDecorations)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `textDecorations` | Text decorations |
+
+<span id="uid-784dd87f8d"></span>
+
+#### SetTextDecorations
+
+Sets or changes the text decorations
+
+```csharp
+public System.Void SetTextDecorations(Avalonia.Media.TextDecorationCollection textDecorations, System.Int32 startIndex, System.Int32 count)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `count` | The number of characters the change should be applied to. |
+| `startIndex` | The start index of initial character to apply the change to. |
+| `textDecorations` | Text decorations |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Baseline](#uid-251fac2fdb) | The distance from the top of the first line to the baseline of the first line. |
+| [Extent](#uid-5bcfa580b8) | The distance from the topmost black pixel of the first line to the bottommost black pixel of the last line. |
+| [FlowDirection](#uid-33c99f7ffa) | Defines the flow direction |
+| [Height](#uid-a0a6d2e274) | The distance from the top of the first line to the bottom of the last line. |
+| [LineHeight](#uid-aef1a803a4) | Gets or sets the height of, or the spacing between, each line where zero represents the default line height. |
+| [MaxLineCount](#uid-01e3d26228) | Defines the maximum number of lines to display. The last line of text displayed is the lineCount-1'th line, or the last whole line that will fit within the count set by MaxTextHeight, whichever occurs first. Use the Trimming property to control how the omission of text is indicated |
+| [MaxTextHeight](#uid-f9eb5e6882) | Sets the maximum length of a column of text. The last line of text displayed is the last whole line that will fit within this limit, or the nth line as specified by MaxLineCount, whichever occurs first. Use the Trimming property to control how the omission of text is indicated. |
+| [MaxTextWidth](#uid-57f90e10fb) | The MaxTextWidth property defines the alignment edges for the FormattedText. For example, left aligned text is wrapped such that the leftmost glyph alignment point on each line falls exactly on the left edge of the rectangle. Note that for many fonts, especially in italic style, some glyph strokes may extend beyond the edges of the alignment rectangle. For this reason, it is recommended that clients draw text with at least 1/6 em (i.e of the font size) unused margin space either side. Zero value of MaxTextWidth is equivalent to the maximum possible paragraph width. |
+| [OverhangAfter](#uid-c1044dfc68) | The distance from the bottom of the last line to the extent bottom. |
+| [OverhangLeading](#uid-1b2c990646) | The maximum distance from the leading black pixel to the leading alignment point of a line. |
+| [OverhangTrailing](#uid-b1e41e0899) | The maximum distance from the trailing black pixel to the trailing alignment point of a line. |
+| [TextAlignment](#uid-28594ca2eb) | Defines the alignment of text within the column |
+| [Trimming](#uid-b553306ee9) | Defines how omission of text is indicated. CharacterEllipsis trimming allows partial words to be displayed, while WordEllipsis removes whole words to fit. Both guarantee to include an ellipsis ('...') at the end of the lines where text has been trimmed as a result of line and column limits. |
+| [Width](#uid-d96abbc72b) | The maximum advance width between the leading and trailing alignment points of a line, excluding the width of whitespace characters at the end of the line. |
+| [WidthIncludingTrailingWhitespace](#uid-44f437e115) | The maximum advance width between the leading and trailing alignment points of a line, including the width of whitespace characters at the end of the line. |
+
+<span id="uid-251fac2fdb"></span>
+
+### Baseline
+
+The distance from the top of the first line to the baseline of the first line.
+
+```csharp
+public System.Double Baseline { get; set; }
+```
+
+<span id="uid-5bcfa580b8"></span>
+
+### Extent
+
+The distance from the topmost black pixel of the first line
+to the bottommost black pixel of the last line.
+
+```csharp
+public System.Double Extent { get; set; }
+```
+
+<span id="uid-33c99f7ffa"></span>
+
+### FlowDirection
+
+Defines the flow direction
+
+```csharp
+public Avalonia.Media.FlowDirection FlowDirection { get; set; }
+```
+
+<span id="uid-a0a6d2e274"></span>
+
+### Height
+
+The distance from the top of the first line to the bottom of the last line.
+
+```csharp
+public System.Double Height { get; set; }
+```
+
+<span id="uid-aef1a803a4"></span>
+
+### LineHeight
+
+Gets or sets the height of, or the spacing between, each line where
+zero represents the default line height.
+
+```csharp
+public System.Double LineHeight { get; set; }
+```
+
+<span id="uid-01e3d26228"></span>
+
+### MaxLineCount
+
+Defines the maximum number of lines to display.
+The last line of text displayed is the lineCount-1'th line,
+or the last whole line that will fit within the count set by MaxTextHeight,
+whichever occurs first.
+Use the Trimming property to control how the omission of text is indicated
+
+```csharp
+public System.Int32 MaxLineCount { get; set; }
+```
+
+<span id="uid-f9eb5e6882"></span>
+
+### MaxTextHeight
+
+Sets the maximum length of a column of text.
+The last line of text displayed is the last whole line that will fit within this limit,
+or the nth line as specified by MaxLineCount, whichever occurs first.
+Use the Trimming property to control how the omission of text is indicated.
+
+```csharp
+public System.Double MaxTextHeight { get; set; }
+```
+
+<span id="uid-57f90e10fb"></span>
+
+### MaxTextWidth
+
+The MaxTextWidth property defines the alignment edges for the FormattedText.
+For example, left aligned text is wrapped such that the leftmost glyph alignment point
+on each line falls exactly on the left edge of the rectangle.
+Note that for many fonts, especially in italic style, some glyph strokes may extend beyond the edges of the alignment rectangle.
+For this reason, it is recommended that clients draw text with at least 1/6 em (i.e of the font size) unused margin space either side.
+Zero value of MaxTextWidth is equivalent to the maximum possible paragraph width.
+
+```csharp
+public System.Double MaxTextWidth { get; set; }
+```
+
+<span id="uid-c1044dfc68"></span>
+
+### OverhangAfter
+
+The distance from the bottom of the last line to the extent bottom.
+
+```csharp
+public System.Double OverhangAfter { get; set; }
+```
+
+<span id="uid-1b2c990646"></span>
+
+### OverhangLeading
+
+The maximum distance from the leading black pixel to the leading alignment point of a line.
+
+```csharp
+public System.Double OverhangLeading { get; set; }
+```
+
+<span id="uid-b1e41e0899"></span>
+
+### OverhangTrailing
+
+The maximum distance from the trailing black pixel to the trailing alignment point of a line.
+
+```csharp
+public System.Double OverhangTrailing { get; set; }
+```
+
+<span id="uid-28594ca2eb"></span>
+
+### TextAlignment
+
+Defines the alignment of text within the column
+
+```csharp
+public Avalonia.Media.TextAlignment TextAlignment { get; set; }
+```
+
+<span id="uid-b553306ee9"></span>
+
+### Trimming
+
+Defines how omission of text is indicated.
+CharacterEllipsis trimming allows partial words to be displayed,
+while WordEllipsis removes whole words to fit.
+Both guarantee to include an ellipsis ('...') at the end of the lines
+where text has been trimmed as a result of line and column limits.
+
+```csharp
+public Avalonia.Media.TextTrimming Trimming { get; set; }
+```
+
+<span id="uid-d96abbc72b"></span>
+
+### Width
+
+The maximum advance width between the leading and trailing alignment points of a line,
+excluding the width of whitespace characters at the end of the line.
+
+```csharp
+public System.Double Width { get; set; }
+```
+
+<span id="uid-44f437e115"></span>
+
+### WidthIncludingTrailingWhitespace
+
+The maximum advance width between the leading and trailing alignment points of a line,
+including the width of whitespace characters at the end of the line.
+
+```csharp
+public System.Double WidthIncludingTrailingWhitespace { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DefaultIdealToReal](#uid-4f79e2376e) | No summary available. |
+| [DefaultRealToIdeal](#uid-64dd2d2fbb) | No summary available. |
+| [GreatestMultiplierOfEm](#uid-8bc99b53f6) | No summary available. |
+| [IdealInfiniteWidth](#uid-19a24b8963) | No summary available. |
+| [RealInfiniteWidth](#uid-69ecab5cd3) | No summary available. |
+
+<span id="uid-4f79e2376e"></span>
+
+### DefaultIdealToReal
+
+```csharp
+public System.Double DefaultIdealToReal
+```
+
+<span id="uid-64dd2d2fbb"></span>
+
+### DefaultRealToIdeal
+
+```csharp
+public System.Double DefaultRealToIdeal
+```
+
+<span id="uid-8bc99b53f6"></span>
+
+### GreatestMultiplierOfEm
+
+```csharp
+public System.Double GreatestMultiplierOfEm
+```
+
+<span id="uid-19a24b8963"></span>
+
+### IdealInfiniteWidth
+
+```csharp
+public System.Int32 IdealInfiniteWidth
+```
+
+<span id="uid-69ecab5cd3"></span>
+
+### RealInfiniteWidth
+
+```csharp
+public System.Double RealInfiniteWidth
+```
+
+</ApiRefPage>
+

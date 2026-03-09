@@ -1,0 +1,707 @@
+---
+title: 'Window'
+hide_title: true
+slug: '/avalonia/controls/window'
+uid: 'Avalonia.Controls.Window'
+commentId: 'T:Avalonia.Controls.Window'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Window Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A top-level window.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Window
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="toplevel">TopLevel</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="windowbase">WindowBase</a> <span className="apiref-page__relation-separator">-&gt;</span> Window
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../input/ifocusscope">IFocusScope</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Window (2 overloads)](#uid-75f16b51a8) | Initializes a new instance of the Avalonia.Controls.Window class. |
+
+<span id="uid-75f16b51a8"></span>
+
+### Window overloads
+
+<span id="uid-ab4b4a5e37"></span>
+
+#### Window
+
+Initializes a new instance of the [Avalonia.Controls.Window](xref:Avalonia.Controls.Window) class.
+
+```csharp
+public Window()
+```
+
+<span id="uid-652d7333e0"></span>
+
+#### Window
+
+Initializes a new instance of the [Avalonia.Controls.Window](xref:Avalonia.Controls.Window) class.
+
+```csharp
+public Window(Avalonia.Platform.IWindowImpl impl)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `impl` | The window implementation. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginMoveDrag](#uid-942576b194) | Starts moving a window with left button being held. Should be called from left mouse button press event handler |
+| [BeginResizeDrag](#uid-eea843e5a8) | Starts resizing a window. This function is used if an application has window resizing controls. Should be called from left mouse button press event handler |
+| [Close (2 overloads)](#uid-c8fe30fd70) | Closes the window. |
+| [Hide](#uid-c7d38981a1) | Hides the window but does not close it. |
+| [Show (2 overloads)](#uid-cadc232152) | Shows the window. |
+| [ShowDialog](#uid-4355328b25) | Shows the window as a dialog. |
+| [SortWindowsByZOrder](#uid-a899c96091) | No summary available. |
+
+<span id="uid-942576b194"></span>
+
+### BeginMoveDrag
+
+Starts moving a window with left button being held. Should be called from left mouse button press event handler
+
+```csharp
+public System.Void BeginMoveDrag(Avalonia.Input.PointerPressedEventArgs e)
+```
+
+<span id="uid-eea843e5a8"></span>
+
+### BeginResizeDrag
+
+Starts resizing a window. This function is used if an application has window resizing controls.
+Should be called from left mouse button press event handler
+
+```csharp
+public System.Void BeginResizeDrag(Avalonia.Controls.WindowEdge edge, Avalonia.Input.PointerPressedEventArgs e)
+```
+
+<span id="uid-c8fe30fd70"></span>
+
+### Close overloads
+
+<span id="uid-e4e7411e84"></span>
+
+#### Close
+
+Closes the window.
+
+```csharp
+public System.Void Close()
+```
+
+<span id="uid-ac026a8c60"></span>
+
+#### Close
+
+Closes a dialog window with the specified result.
+
+```csharp
+public System.Void Close(System.Object dialogResult)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dialogResult` | The dialog result. |
+
+<span id="uid-c7d38981a1"></span>
+
+### Hide
+
+Hides the window but does not close it.
+
+```csharp
+public System.Void Hide()
+```
+
+<span id="uid-cadc232152"></span>
+
+### Show overloads
+
+<span id="uid-1b5062ecd2"></span>
+
+#### Show
+
+Shows the window.
+
+```csharp
+public System.Void Show()
+```
+
+##### Exceptions
+
+- [The window has already been closed.](xref:System.InvalidOperationException)
+
+<span id="uid-b6edd5afe4"></span>
+
+#### Show
+
+Shows the window as a child of `owner`.
+
+```csharp
+public System.Void Show(Avalonia.Controls.Window owner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `owner` | Window that will be the owner of the shown window. |
+
+##### Exceptions
+
+- [The window has already been closed.](xref:System.InvalidOperationException)
+
+<span id="uid-4355328b25"></span>
+
+### ShowDialog
+
+Shows the window as a dialog.
+
+```csharp
+public System.Threading.Tasks.Task<TResult> ShowDialog<TResult>(Avalonia.Controls.Window owner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `owner` | The dialog's owner window. |
+
+Returns: A task that can be used to track the lifetime of the dialog.
+
+#### Exceptions
+
+- [The window has already been closed.](xref:System.InvalidOperationException)
+
+<span id="uid-a899c96091"></span>
+
+### SortWindowsByZOrder
+
+```csharp
+public System.Void SortWindowsByZOrder(System.Span<Avalonia.Controls.Window> windows)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanMaximize](#uid-9b8deb8dec) | Enables or disables maximizing the window. |
+| [CanMinimize](#uid-8cd482c220) | Enables or disables minimizing the window. |
+| [CanResize](#uid-7cd6c97ea1) | Enables or disables resizing of the window. |
+| [ClosingBehavior](#uid-cfb9b33343) | Gets or sets a value indicating how the Avalonia.Controls.Window.Closing event behaves in the presence of child windows. |
+| [ExtendClientAreaTitleBarHeightHint](#uid-aac89ae6a7) | Gets or Sets the TitlebarHeightHint for when the client area is extended. A value of -1 will cause the titlebar to be auto sized to the OS default. Any other positive value will cause the titlebar to assume that height. |
+| [ExtendClientAreaToDecorationsHint](#uid-3cbee9d449) | Gets or sets if the ClientArea is Extended into the Window Decorations (chrome or border). |
+| [Icon](#uid-72f195a4e1) | Gets or sets the icon of the window. |
+| [IsDialog](#uid-97ce410cc2) | Gets whether this window was opened as a dialog |
+| [IsExtendedIntoWindowDecorations](#uid-6c18be9c20) | Gets if the ClientArea is Extended into the Window Decorations. |
+| [OffScreenMargin](#uid-e180286d06) | Gets the window margin that is hidden off the screen area. This is generally only the case on Windows when in Maximized where the window border is hidden off the screen. This Margin may be used to ensure user content doesnt overlap this space. |
+| [OwnedWindows](#uid-6061a593e5) | Gets a collection of child windows owned by this window. |
+| [PlatformImpl](#uid-08f3445ac3) | Gets the platform-specific window implementation. |
+| [Position](#uid-01fa412df8) | Gets or sets the window position in screen coordinates. |
+| [ShowActivated](#uid-bfbe541ddb) | Gets or sets a value that indicates whether a window is activated when first shown. |
+| [ShowInTaskbar](#uid-a52b3e71c8) | Enables or disables the taskbar icon |
+| [SizeToContent](#uid-687934dd2d) | Gets or sets a value indicating how the window will size itself to fit its content. |
+| [SystemDecorations](#uid-ceb87e12ff) | No summary available. |
+| [Title](#uid-b446f7fa3c) | Gets or sets the title of the window. |
+| [WindowDecorationMargin](#uid-2a816918aa) | Gets the WindowDecorationMargin. This tells you the thickness around the window that is used by borders and the titlebar. |
+| [WindowDecorations](#uid-c2c32357fd) | Gets or sets the window decorations (title bar, border, etc). |
+| [WindowStartupLocation](#uid-5addd63277) | Gets or sets the startup location of the window. |
+| [WindowState](#uid-3c4110ff75) | Gets or sets the minimized/maximized state of the window. |
+
+<span id="uid-9b8deb8dec"></span>
+
+### CanMaximize
+
+Enables or disables maximizing the window.
+
+```csharp
+public System.Boolean CanMaximize { get; set; }
+```
+
+<span id="uid-8cd482c220"></span>
+
+### CanMinimize
+
+Enables or disables minimizing the window.
+
+```csharp
+public System.Boolean CanMinimize { get; set; }
+```
+
+<span id="uid-7cd6c97ea1"></span>
+
+### CanResize
+
+Enables or disables resizing of the window.
+
+```csharp
+public System.Boolean CanResize { get; set; }
+```
+
+<span id="uid-cfb9b33343"></span>
+
+### ClosingBehavior
+
+Gets or sets a value indicating how the [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event behaves in the presence
+of child windows.
+
+```csharp
+public Avalonia.Controls.WindowClosingBehavior ClosingBehavior { get; set; }
+```
+
+<span id="uid-aac89ae6a7"></span>
+
+### ExtendClientAreaTitleBarHeightHint
+
+Gets or Sets the TitlebarHeightHint for when the client area is extended.
+A value of -1 will cause the titlebar to be auto sized to the OS default.
+Any other positive value will cause the titlebar to assume that height.
+
+```csharp
+public System.Double ExtendClientAreaTitleBarHeightHint { get; set; }
+```
+
+<span id="uid-3cbee9d449"></span>
+
+### ExtendClientAreaToDecorationsHint
+
+Gets or sets if the ClientArea is Extended into the Window Decorations (chrome or border).
+
+```csharp
+public System.Boolean ExtendClientAreaToDecorationsHint { get; set; }
+```
+
+<span id="uid-72f195a4e1"></span>
+
+### Icon
+
+Gets or sets the icon of the window.
+
+```csharp
+public Avalonia.Controls.WindowIcon Icon { get; set; }
+```
+
+<span id="uid-97ce410cc2"></span>
+
+### IsDialog
+
+Gets whether this window was opened as a dialog
+
+```csharp
+public System.Boolean IsDialog { get; set; }
+```
+
+<span id="uid-6c18be9c20"></span>
+
+### IsExtendedIntoWindowDecorations
+
+Gets if the ClientArea is Extended into the Window Decorations.
+
+```csharp
+public System.Boolean IsExtendedIntoWindowDecorations { get; set; }
+```
+
+<span id="uid-e180286d06"></span>
+
+### OffScreenMargin
+
+Gets the window margin that is hidden off the screen area.
+This is generally only the case on Windows when in Maximized where the window border
+is hidden off the screen. This Margin may be used to ensure user content doesnt overlap this space.
+
+```csharp
+public Avalonia.Thickness OffScreenMargin { get; set; }
+```
+
+<span id="uid-6061a593e5"></span>
+
+### OwnedWindows
+
+Gets a collection of child windows owned by this window.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Window> OwnedWindows { get; set; }
+```
+
+<span id="uid-08f3445ac3"></span>
+
+### PlatformImpl
+
+Gets the platform-specific window implementation.
+
+```csharp
+public Avalonia.Platform.IWindowImpl PlatformImpl { get; set; }
+```
+
+<span id="uid-01fa412df8"></span>
+
+### Position
+
+Gets or sets the window position in screen coordinates.
+
+```csharp
+public Avalonia.PixelPoint Position { get; set; }
+```
+
+<span id="uid-bfbe541ddb"></span>
+
+### ShowActivated
+
+Gets or sets a value that indicates whether a window is activated when first shown.
+
+```csharp
+public System.Boolean ShowActivated { get; set; }
+```
+
+<span id="uid-a52b3e71c8"></span>
+
+### ShowInTaskbar
+
+Enables or disables the taskbar icon
+
+```csharp
+public System.Boolean ShowInTaskbar { get; set; }
+```
+
+<span id="uid-687934dd2d"></span>
+
+### SizeToContent
+
+Gets or sets a value indicating how the window will size itself to fit its content.
+
+```csharp
+public Avalonia.Controls.SizeToContent SizeToContent { get; set; }
+```
+
+<span id="uid-ceb87e12ff"></span>
+
+### SystemDecorations
+
+```csharp
+public Avalonia.Controls.WindowDecorations SystemDecorations { get; set; }
+```
+
+<span id="uid-b446f7fa3c"></span>
+
+### Title
+
+Gets or sets the title of the window.
+
+```csharp
+public System.String Title { get; set; }
+```
+
+<span id="uid-2a816918aa"></span>
+
+### WindowDecorationMargin
+
+Gets the WindowDecorationMargin.
+This tells you the thickness around the window that is used by borders and the titlebar.
+
+```csharp
+public Avalonia.Thickness WindowDecorationMargin { get; set; }
+```
+
+<span id="uid-c2c32357fd"></span>
+
+### WindowDecorations
+
+Gets or sets the window decorations (title bar, border, etc).
+
+```csharp
+public Avalonia.Controls.WindowDecorations WindowDecorations { get; set; }
+```
+
+<span id="uid-5addd63277"></span>
+
+### WindowStartupLocation
+
+Gets or sets the startup location of the window.
+
+```csharp
+public Avalonia.Controls.WindowStartupLocation WindowStartupLocation { get; set; }
+```
+
+<span id="uid-3c4110ff75"></span>
+
+### WindowState
+
+Gets or sets the minimized/maximized state of the window.
+
+```csharp
+public Avalonia.Controls.WindowState WindowState { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CanMaximizeProperty](#uid-4e6f220e38) | Defines the Avalonia.Controls.Window.CanMaximize property. |
+| [CanMinimizeProperty](#uid-18b4aef450) | Defines the Avalonia.Controls.Window.CanMinimize property. |
+| [CanResizeProperty](#uid-faafd9d986) | Defines the Avalonia.Controls.Window.CanResize property. |
+| [ClosingBehaviorProperty](#uid-7ee8d5c4e3) | Defines the Avalonia.Controls.Window.ClosingBehavior property. |
+| [ExtendClientAreaTitleBarHeightHintProperty](#uid-9506fa3f0f) | No summary available. |
+| [ExtendClientAreaToDecorationsHintProperty](#uid-a0ee15dd99) | Defines the Avalonia.Controls.Window.ExtendClientAreaToDecorationsHint property. |
+| [IconProperty](#uid-129a9e2c39) | Defines the Avalonia.Controls.Window.Icon property. |
+| [IsExtendedIntoWindowDecorationsProperty](#uid-b57a157af7) | Defines the Avalonia.Controls.Window.IsExtendedIntoWindowDecorations property. |
+| [OffScreenMarginProperty](#uid-90b53c6a96) | No summary available. |
+| [ShowActivatedProperty](#uid-6cc3407049) | Defines the Avalonia.Controls.Window.ShowActivated property. |
+| [ShowInTaskbarProperty](#uid-2bb183f2d1) | Enables or disables the taskbar icon |
+| [SizeToContentProperty](#uid-f0970210ce) | Defines the Avalonia.Controls.Window.SizeToContent property. |
+| [TitleProperty](#uid-6fe2ba7c03) | Defines the Avalonia.Controls.Window.Title property. |
+| [WindowClosedEvent](#uid-d2f091af99) | Routed event that can be used for global tracking of window destruction |
+| [WindowDecorationMarginProperty](#uid-8d8d956bc6) | Defines the Avalonia.Controls.Window.WindowDecorationMargin property. |
+| [WindowDecorationsProperty](#uid-1acf56f0c7) | Defines the Avalonia.Controls.Window.WindowDecorations property. |
+| [WindowOpenedEvent](#uid-6824ff4204) | Routed event that can be used for global tracking of opening windows |
+| [WindowStartupLocationProperty](#uid-659f2ee4f0) | Defines the Avalonia.Controls.Window.WindowStartupLocation property. |
+| [WindowStateProperty](#uid-06b9a459a7) | Represents the current window state (normal, minimized, maximized) |
+
+<span id="uid-4e6f220e38"></span>
+
+### CanMaximizeProperty
+
+Defines the [Avalonia.Controls.Window.CanMaximize](xref:Avalonia.Controls.Window.CanMaximize) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> CanMaximizeProperty
+```
+
+<span id="uid-18b4aef450"></span>
+
+### CanMinimizeProperty
+
+Defines the [Avalonia.Controls.Window.CanMinimize](xref:Avalonia.Controls.Window.CanMinimize) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> CanMinimizeProperty
+```
+
+<span id="uid-faafd9d986"></span>
+
+### CanResizeProperty
+
+Defines the [Avalonia.Controls.Window.CanResize](xref:Avalonia.Controls.Window.CanResize) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> CanResizeProperty
+```
+
+<span id="uid-7ee8d5c4e3"></span>
+
+### ClosingBehaviorProperty
+
+Defines the [Avalonia.Controls.Window.ClosingBehavior](xref:Avalonia.Controls.Window.ClosingBehavior) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.WindowClosingBehavior> ClosingBehaviorProperty
+```
+
+<span id="uid-9506fa3f0f"></span>
+
+### ExtendClientAreaTitleBarHeightHintProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Double> ExtendClientAreaTitleBarHeightHintProperty
+```
+
+<span id="uid-a0ee15dd99"></span>
+
+### ExtendClientAreaToDecorationsHintProperty
+
+Defines the [Avalonia.Controls.Window.ExtendClientAreaToDecorationsHint](xref:Avalonia.Controls.Window.ExtendClientAreaToDecorationsHint) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ExtendClientAreaToDecorationsHintProperty
+```
+
+<span id="uid-129a9e2c39"></span>
+
+### IconProperty
+
+Defines the [Avalonia.Controls.Window.Icon](xref:Avalonia.Controls.Window.Icon) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.WindowIcon> IconProperty
+```
+
+<span id="uid-b57a157af7"></span>
+
+### IsExtendedIntoWindowDecorationsProperty
+
+Defines the [Avalonia.Controls.Window.IsExtendedIntoWindowDecorations](xref:Avalonia.Controls.Window.IsExtendedIntoWindowDecorations) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Window, System.Boolean> IsExtendedIntoWindowDecorationsProperty
+```
+
+<span id="uid-90b53c6a96"></span>
+
+### OffScreenMarginProperty
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Window, Avalonia.Thickness> OffScreenMarginProperty
+```
+
+<span id="uid-6cc3407049"></span>
+
+### ShowActivatedProperty
+
+Defines the [Avalonia.Controls.Window.ShowActivated](xref:Avalonia.Controls.Window.ShowActivated) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ShowActivatedProperty
+```
+
+<span id="uid-2bb183f2d1"></span>
+
+### ShowInTaskbarProperty
+
+Enables or disables the taskbar icon
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ShowInTaskbarProperty
+```
+
+<span id="uid-f0970210ce"></span>
+
+### SizeToContentProperty
+
+Defines the [Avalonia.Controls.Window.SizeToContent](xref:Avalonia.Controls.Window.SizeToContent) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.SizeToContent> SizeToContentProperty
+```
+
+<span id="uid-6fe2ba7c03"></span>
+
+### TitleProperty
+
+Defines the [Avalonia.Controls.Window.Title](xref:Avalonia.Controls.Window.Title) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> TitleProperty
+```
+
+<span id="uid-d2f091af99"></span>
+
+### WindowClosedEvent
+
+Routed event that can be used for global tracking of window destruction
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> WindowClosedEvent
+```
+
+<span id="uid-8d8d956bc6"></span>
+
+### WindowDecorationMarginProperty
+
+Defines the [Avalonia.Controls.Window.WindowDecorationMargin](xref:Avalonia.Controls.Window.WindowDecorationMargin) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Window, Avalonia.Thickness> WindowDecorationMarginProperty
+```
+
+<span id="uid-1acf56f0c7"></span>
+
+### WindowDecorationsProperty
+
+Defines the [Avalonia.Controls.Window.WindowDecorations](xref:Avalonia.Controls.Window.WindowDecorations) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.WindowDecorations> WindowDecorationsProperty
+```
+
+<span id="uid-6824ff4204"></span>
+
+### WindowOpenedEvent
+
+Routed event that can be used for global tracking of opening windows
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> WindowOpenedEvent
+```
+
+<span id="uid-659f2ee4f0"></span>
+
+### WindowStartupLocationProperty
+
+Defines the [Avalonia.Controls.Window.WindowStartupLocation](xref:Avalonia.Controls.Window.WindowStartupLocation) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.WindowStartupLocation> WindowStartupLocationProperty
+```
+
+<span id="uid-06b9a459a7"></span>
+
+### WindowStateProperty
+
+Represents the current window state (normal, minimized, maximized)
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.WindowState> WindowStateProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Closing](#uid-fa2686ce93) | Fired before a window is closed. |
+
+<span id="uid-fa2686ce93"></span>
+
+### Closing
+
+Fired before a window is closed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.WindowClosingEventArgs> Closing
+```
+
+</ApiRefPage>
+

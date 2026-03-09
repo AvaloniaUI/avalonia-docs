@@ -1,0 +1,244 @@
+---
+title: 'AvaloniaDictionary<TKey, TValue>'
+hide_title: true
+slug: '/avalonia/collections/avaloniadictionary-2'
+uid: 'Avalonia.Collections.AvaloniaDictionary`2'
+commentId: 'T:Avalonia.Collections.AvaloniaDictionary`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Collections'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaDictionary&lt;TKey, TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Collections</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A notifying dictionary.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaDictionary<TKey, TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaDictionary&lt;TKey, TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaDictionary&lt;,&lt;T&gt;&gt;, IAvaloniaReadOnlyDictionary&lt;,&lt;T&gt;&gt;, ICollection&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IDictionary&lt;,&lt;T&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IReadOnlyDictionary&lt;,&lt;T&gt;&gt;, ICollection, IDictionary, IEnumerable, INotifyCollectionChanged, INotifyPropertyChanged
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaDictionary&lt;TKey, TValue&gt; (3 overloads)](#uid-51b75506c1) | Initializes a new instance of the Avalonia.Collections.AvaloniaDictionary&amp;lt;T1, T2&amp;gt; class. |
+
+<span id="uid-51b75506c1"></span>
+
+### AvaloniaDictionary&lt;TKey, TValue&gt; overloads
+
+<span id="uid-1cc319448d"></span>
+
+#### AvaloniaDictionary&lt;TKey, TValue&gt;
+
+Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class.
+
+```csharp
+public AvaloniaDictionary<TKey, TValue>()
+```
+
+<span id="uid-367f97051d"></span>
+
+#### AvaloniaDictionary&lt;TKey, TValue&gt;
+
+```csharp
+public AvaloniaDictionary<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue> dictionary, System.Collections.Generic.IEqualityComparer<TKey> comparer)
+```
+
+<span id="uid-cd9463fc7c"></span>
+
+#### AvaloniaDictionary&lt;TKey, TValue&gt;
+
+Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class.
+
+```csharp
+public AvaloniaDictionary<TKey, TValue>(System.Int32 capacity)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-44bd517dbb) | No summary available. |
+| [Clear](#uid-0dd8c4fd5d) | No summary available. |
+| [ContainsKey](#uid-16ed1ff6e4) | No summary available. |
+| [CopyTo](#uid-d6c8a242ea) | No summary available. |
+| [GetEnumerator](#uid-2e7b7dae3f) | No summary available. |
+| [Remove](#uid-c71324d6a6) | No summary available. |
+| [TryGetValue](#uid-c92bdca6aa) | No summary available. |
+
+<span id="uid-44bd517dbb"></span>
+
+### Add
+
+```csharp
+public System.Void Add(TKey key, TValue value)
+```
+
+<span id="uid-0dd8c4fd5d"></span>
+
+### Clear
+
+```csharp
+public System.Void Clear()
+```
+
+<span id="uid-16ed1ff6e4"></span>
+
+### ContainsKey
+
+```csharp
+public System.Boolean ContainsKey(TKey key)
+```
+
+<span id="uid-d6c8a242ea"></span>
+
+### CopyTo
+
+```csharp
+public System.Void CopyTo(System.Collections.Generic.KeyValuePair<TKey, TValue>[] array, System.Int32 arrayIndex)
+```
+
+<span id="uid-2e7b7dae3f"></span>
+
+### GetEnumerator
+
+```csharp
+public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<TKey,TValue>> GetEnumerator()
+```
+
+<span id="uid-c71324d6a6"></span>
+
+### Remove
+
+```csharp
+public System.Boolean Remove(TKey key)
+```
+
+<span id="uid-c92bdca6aa"></span>
+
+### TryGetValue
+
+```csharp
+public System.Boolean TryGetValue(TKey key, TValue& value)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-7e63c20e1f) | No summary available. |
+| [IsReadOnly](#uid-847995fe8f) | No summary available. |
+| [Item](#uid-a05920a999) | No summary available. |
+| [Keys](#uid-00ab8285da) | No summary available. |
+| [Values](#uid-8511f15050) | No summary available. |
+
+<span id="uid-7e63c20e1f"></span>
+
+### Count
+
+```csharp
+public System.Int32 Count { get; set; }
+```
+
+<span id="uid-847995fe8f"></span>
+
+### IsReadOnly
+
+```csharp
+public System.Boolean IsReadOnly { get; set; }
+```
+
+<span id="uid-a05920a999"></span>
+
+### Item
+
+```csharp
+public TValue Item { get; set; }
+```
+
+<span id="uid-00ab8285da"></span>
+
+### Keys
+
+```csharp
+public System.Collections.Generic.ICollection<TKey> Keys { get; set; }
+```
+
+<span id="uid-8511f15050"></span>
+
+### Values
+
+```csharp
+public System.Collections.Generic.ICollection<TValue> Values { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-f3b443a858) | Occurs when the collection changes. |
+| [PropertyChanged](#uid-c1b3acf80c) | Raised when a property on the collection changes. |
+
+<span id="uid-f3b443a858"></span>
+
+### CollectionChanged
+
+Occurs when the collection changes.
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+<span id="uid-c1b3acf80c"></span>
+
+### PropertyChanged
+
+Raised when a property on the collection changes.
+
+```csharp
+public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
+```
+
+</ApiRefPage>
+

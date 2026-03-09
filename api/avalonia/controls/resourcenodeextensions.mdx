@@ -1,0 +1,156 @@
+---
+title: 'ResourceNodeExtensions'
+hide_title: true
+slug: '/avalonia/controls/resourcenodeextensions'
+uid: 'Avalonia.Controls.ResourceNodeExtensions'
+commentId: 'T:Avalonia.Controls.ResourceNodeExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ResourceNodeExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ResourceNodeExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ResourceNodeExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [FindResource (2 overloads)](#uid-285f576e62) | Finds the specified resource by searching up the logical tree and then global styles. |
+| [GetResourceObservable (3 overloads)](#uid-ed9785dc04) | No summary available. |
+| [TryFindResource (2 overloads)](#uid-9444696616) | No summary available. |
+| [TryGetResource](#uid-c358b1cce0) | No summary available. |
+
+<span id="uid-285f576e62"></span>
+
+### FindResource overloads
+
+<span id="uid-9c011dc637"></span>
+
+#### FindResource
+
+Finds the specified resource by searching up the logical tree and then global styles.
+
+```csharp
+public System.Object FindResource(Avalonia.Controls.IResourceHost control, Avalonia.Styling.ThemeVariant theme, System.Object key)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+| `key` | The resource key. |
+| `theme` | Theme used to select theme dictionary. |
+
+Returns: The resource, or [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue) if not found.
+
+<span id="uid-ccf49cf52b"></span>
+
+#### FindResource
+
+Finds the specified resource by searching up the logical tree and then global styles.
+
+```csharp
+public System.Object FindResource(Avalonia.Controls.IResourceHost control, System.Object key)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+| `key` | The resource key. |
+
+Returns: The resource, or [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue) if not found.
+
+<span id="uid-ed9785dc04"></span>
+
+### GetResourceObservable overloads
+
+<span id="uid-bf91918296"></span>
+
+#### GetResourceObservable
+
+```csharp
+public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls.IResourceHost control, System.Object key, System.Func<System.Object, System.Object> converter)
+```
+
+<span id="uid-e1898da5af"></span>
+
+#### GetResourceObservable
+
+```csharp
+public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, System.Object key, Avalonia.Styling.ThemeVariant defaultThemeVariant, System.Func<System.Object, System.Object> converter)
+```
+
+<span id="uid-bd8335806f"></span>
+
+#### GetResourceObservable
+
+```csharp
+public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, System.Object key, System.Func<System.Object, System.Object> converter)
+```
+
+<span id="uid-9444696616"></span>
+
+### TryFindResource overloads
+
+<span id="uid-e84f3e6595"></span>
+
+#### TryFindResource
+
+```csharp
+public System.Boolean TryFindResource(Avalonia.Controls.IResourceHost control, System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+```
+
+<span id="uid-9b16787778"></span>
+
+#### TryFindResource
+
+```csharp
+public System.Boolean TryFindResource(Avalonia.Controls.IResourceHost control, System.Object key, System.Object& value)
+```
+
+<span id="uid-c358b1cce0"></span>
+
+### TryGetResource
+
+```csharp
+public System.Boolean TryGetResource(Avalonia.Controls.IResourceHost control, System.Object key, System.Object& value)
+```
+
+</ApiRefPage>
+

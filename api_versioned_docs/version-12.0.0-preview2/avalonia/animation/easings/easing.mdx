@@ -1,0 +1,94 @@
+---
+title: 'Easing'
+hide_title: true
+slug: '/avalonia/animation/easings/easing'
+uid: 'Avalonia.Animation.Easings.Easing'
+commentId: 'T:Avalonia.Animation.Easings.Easing'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation.Easings'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Easing Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation.Easings</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for all Easing classes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Easing
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Easing
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ieasing">IEasing</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Ease](#uid-9726b60d1c) | Returns the value of the transition for the specified progress. |
+| [Parse](#uid-c851a9a9b7) | Parses a Easing type string. |
+
+<span id="uid-9726b60d1c"></span>
+
+### Ease
+
+Returns the value of the transition for the specified progress.
+
+```csharp
+public System.Double Ease(System.Double progress)
+```
+
+<span id="uid-c851a9a9b7"></span>
+
+### Parse
+
+Parses a Easing type string.
+
+```csharp
+public Avalonia.Animation.Easings.Easing Parse(System.String e)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `e` | The Easing type string. |
+
+Returns: Returns the instance of the parsed type.
+
+</ApiRefPage>
+

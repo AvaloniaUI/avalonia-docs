@@ -1,0 +1,479 @@
+---
+title: 'Calendar'
+hide_title: true
+slug: '/avalonia/controls/calendar'
+uid: 'Avalonia.Controls.Calendar'
+commentId: 'T:Avalonia.Controls.Calendar'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Calendar Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a control that enables a user to select a date by using a
+visual calendar display.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Calendar
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> Calendar
+</div>
+</div>
+
+## Remarks
+
+A Calendar control can be used on its own, or as a drop-down part of a
+DatePicker control. For more information, see DatePicker. A Calendar
+displays either the days of a month, the months of a year, or the years
+of a decade, depending on the value of the DisplayMode property. When
+displaying the days of a month, the user can select a date, a range of
+dates, or multiple ranges of dates. The kinds of selections that are
+allowed are controlled by the SelectionMode property.
+
+The range of dates displayed is governed by the DisplayDateStart and
+DisplayDateEnd properties. If DisplayMode is Year or Decade, only
+months or years that contain displayable dates will be displayed.
+Setting the displayable range to a range that does not include the
+current DisplayDate will throw an ArgumentOutOfRangeException.
+
+The BlackoutDates property can be used to specify dates that cannot be
+selected. These dates will be displayed as dimmed and disabled.
+
+By default, Today is highlighted. This can be disabled by setting
+IsTodayHighlighted to false.
+
+The Calendar control provides basic navigation using either the mouse or
+keyboard. The following table summarizes keyboard navigation.
+
+Key Combination DisplayMode Action
+ARROW Any Change focused date, unselect
+all selected dates, and select
+new focused date.
+
+SHIFT+ARROW Any If SelectionMode is not set to
+SingleDate or None begin
+selecting a range of dates.
+
+CTRL+UP ARROW Any Switch to the next larger
+DisplayMode. If DisplayMode is
+already Decade, no action.
+
+CTRL+DOWN ARROW Any Switch to the next smaller
+DisplayMode. If DisplayMode is
+already Month, no action.
+
+SPACEBAR Month Select focused date.
+
+SPACEBAR Year or Decade Switch DisplayMode to the Month
+or Year represented by focused
+item.
+
+XAML Usage for Classes Derived from Calendar
+If you define a class that derives from Calendar, the class can be used
+as an object element in XAML, and all of the inherited properties and
+events that show a XAML usage in the reference for the Calendar members
+can have the same XAML usage for the derived class. However, the object
+element itself must have a different prefix mapping than the controls:
+mapping shown in the usages, because the derived class comes from an
+assembly and namespace that you create and define. You must define your
+own prefix mapping to an XML namespace to use the class as an object
+element in XAML.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Calendar](#uid-90673b0226) | Initializes a new instance of the System.Windows.Controls.Calendar class. |
+
+<span id="uid-90673b0226"></span>
+
+### Calendar
+
+Initializes a new instance of the
+[System.Windows.Controls.Calendar](xref:System.Windows.Controls.Calendar) class.
+
+```csharp
+public Calendar()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToString](#uid-3106a7d661) | No summary available. |
+
+<span id="uid-3106a7d661"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AllowTapRangeSelection](#uid-3e1c7ceca7) | Gets or sets a value indicating whether tap-to-select range mode is enabled. When enabled, users can tap a start date and then tap an end date to select a range. |
+| [BlackoutDates](#uid-e77dc0c11a) | Gets a collection of dates that are marked as not selectable. |
+| [DisplayDate](#uid-10d7a53549) | Gets or sets the date to display. |
+| [DisplayDateEnd](#uid-6de867d1fb) | Gets or sets the last date to be displayed. |
+| [DisplayDateStart](#uid-023d58f046) | Gets or sets the first date to be displayed. |
+| [DisplayMode](#uid-7fa82eb107) | Gets or sets a value indicating whether the calendar is displayed in months, years, or decades. |
+| [FirstDayOfWeek](#uid-f12fffcc0c) | Gets or sets the day that is considered the beginning of the week. |
+| [HeaderBackground](#uid-6b2b425dc1) | No summary available. |
+| [IsTodayHighlighted](#uid-9acb33ca77) | Gets or sets a value indicating whether the current date is highlighted. |
+| [SelectedDate](#uid-71109a18cd) | Gets or sets the currently selected date. |
+| [SelectedDates](#uid-d658f14310) | Gets a collection of selected dates. |
+| [SelectionMode](#uid-c3ebddd2a5) | Gets or sets a value that indicates what kind of selections are allowed. |
+
+<span id="uid-3e1c7ceca7"></span>
+
+### AllowTapRangeSelection
+
+Gets or sets a value indicating whether tap-to-select range mode is enabled.
+When enabled, users can tap a start date and then tap an end date to select a range.
+
+```csharp
+public System.Boolean AllowTapRangeSelection { get; set; }
+```
+
+Value: True to enable tap range selection; otherwise, false. The default is false.
+
+<span id="uid-e77dc0c11a"></span>
+
+### BlackoutDates
+
+Gets a collection of dates that are marked as not selectable.
+
+```csharp
+public Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection BlackoutDates { get; set; }
+```
+
+Value: A collection of dates that cannot be selected. The default value is
+an empty collection.
+
+#### Exceptions
+
+- [Adding a date to this collection when it is already selected or
+adding a date outside the range specified by DisplayDateStart and
+DisplayDateEnd.](xref:System.ArgumentOutOfRangeException)
+
+<span id="uid-10d7a53549"></span>
+
+### DisplayDate
+
+Gets or sets the date to display.
+
+```csharp
+public System.DateTime DisplayDate { get; set; }
+```
+
+Value: The date to display.
+
+#### Exceptions
+
+- [The given date is not in the range specified by
+\[System.Windows.Controls.Calendar.DisplayDateStart\](xref:System.Windows.Controls.Calendar.DisplayDateStart)
+and
+\[System.Windows.Controls.Calendar.DisplayDateEnd\](xref:System.Windows.Controls.Calendar.DisplayDateEnd).](xref:System.ArgumentOutOfRangeException)
+
+<span id="uid-6de867d1fb"></span>
+
+### DisplayDateEnd
+
+Gets or sets the last date to be displayed.
+
+```csharp
+public System.Nullable<System.DateTime> DisplayDateEnd { get; set; }
+```
+
+Value: The last date to display.
+
+<span id="uid-023d58f046"></span>
+
+### DisplayDateStart
+
+Gets or sets the first date to be displayed.
+
+```csharp
+public System.Nullable<System.DateTime> DisplayDateStart { get; set; }
+```
+
+Value: The first date to display.
+
+<span id="uid-7fa82eb107"></span>
+
+### DisplayMode
+
+Gets or sets a value indicating whether the calendar is displayed in
+months, years, or decades.
+
+```csharp
+public Avalonia.Controls.CalendarMode DisplayMode { get; set; }
+```
+
+Value: A value indicating what length of time the
+[System.Windows.Controls.Calendar](xref:System.Windows.Controls.Calendar) should display.
+
+<span id="uid-f12fffcc0c"></span>
+
+### FirstDayOfWeek
+
+Gets or sets the day that is considered the beginning of the week.
+
+```csharp
+public System.DayOfWeek FirstDayOfWeek { get; set; }
+```
+
+Value: A [System.DayOfWeek](xref:System.DayOfWeek) representing the beginning of
+the week. The default is [System.DayOfWeek.Sunday](xref:System.DayOfWeek.Sunday).
+
+<span id="uid-6b2b425dc1"></span>
+
+### HeaderBackground
+
+```csharp
+public Avalonia.Media.IBrush HeaderBackground { get; set; }
+```
+
+<span id="uid-9acb33ca77"></span>
+
+### IsTodayHighlighted
+
+Gets or sets a value indicating whether the current date is
+highlighted.
+
+```csharp
+public System.Boolean IsTodayHighlighted { get; set; }
+```
+
+Value: True if the current date is highlighted; otherwise, false. The
+default is true.
+
+<span id="uid-71109a18cd"></span>
+
+### SelectedDate
+
+Gets or sets the currently selected date.
+
+```csharp
+public System.Nullable<System.DateTime> SelectedDate { get; set; }
+```
+
+Value: The date currently selected. The default is null.
+
+#### Exceptions
+
+- [The given date is outside the range specified by
+\[System.Windows.Controls.Calendar.DisplayDateStart\](xref:System.Windows.Controls.Calendar.DisplayDateStart)
+and \[System.Windows.Controls.Calendar.DisplayDateEnd\](xref:System.Windows.Controls.Calendar.DisplayDateEnd)
+-or-
+The given date is in the
+\[System.Windows.Controls.Calendar.BlackoutDates\](xref:System.Windows.Controls.Calendar.BlackoutDates)
+collection.](xref:System.ArgumentOutOfRangeException)
+- [If set to anything other than null when
+\[System.Windows.Controls.Calendar.SelectionMode\](xref:System.Windows.Controls.Calendar.SelectionMode) is
+set to
+\[System.Windows.Controls.CalendarSelectionMode.None\](xref:System.Windows.Controls.CalendarSelectionMode.None).](xref:System.InvalidOperationException)
+
+<span id="uid-d658f14310"></span>
+
+### SelectedDates
+
+Gets a collection of selected dates.
+
+```csharp
+public Avalonia.Controls.Primitives.SelectedDatesCollection SelectedDates { get; set; }
+```
+
+Value: A [System.Windows.Controls.SelectedDatesCollection](xref:System.Windows.Controls.SelectedDatesCollection)
+object that contains the currently selected dates. The default is an
+empty collection.
+
+<span id="uid-c3ebddd2a5"></span>
+
+### SelectionMode
+
+Gets or sets a value that indicates what kind of selections are
+allowed.
+
+```csharp
+public Avalonia.Controls.CalendarSelectionMode SelectionMode { get; set; }
+```
+
+Value: A value that indicates the current selection mode. The default is
+[System.Windows.Controls.CalendarSelectionMode.SingleDate](xref:System.Windows.Controls.CalendarSelectionMode.SingleDate).
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AllowTapRangeSelectionProperty](#uid-5694a9cb28) | No summary available. |
+| [DisplayDateEndProperty](#uid-1e58d4e74c) | No summary available. |
+| [DisplayDateProperty](#uid-65b61910c6) | No summary available. |
+| [DisplayDateStartProperty](#uid-7468dd0f05) | No summary available. |
+| [DisplayModeProperty](#uid-d8952b7eb1) | No summary available. |
+| [FirstDayOfWeekProperty](#uid-537247cf0c) | No summary available. |
+| [HeaderBackgroundProperty](#uid-78037ffe87) | No summary available. |
+| [IsTodayHighlightedProperty](#uid-801d780280) | No summary available. |
+| [SelectedDateProperty](#uid-3a928b978c) | No summary available. |
+| [SelectionModeProperty](#uid-e9d2c70301) | No summary available. |
+
+<span id="uid-5694a9cb28"></span>
+
+### AllowTapRangeSelectionProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AllowTapRangeSelectionProperty
+```
+
+<span id="uid-1e58d4e74c"></span>
+
+### DisplayDateEndProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Nullable<System.DateTime>> DisplayDateEndProperty
+```
+
+<span id="uid-65b61910c6"></span>
+
+### DisplayDateProperty
+
+```csharp
+public Avalonia.StyledProperty<System.DateTime> DisplayDateProperty
+```
+
+<span id="uid-7468dd0f05"></span>
+
+### DisplayDateStartProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Nullable<System.DateTime>> DisplayDateStartProperty
+```
+
+<span id="uid-d8952b7eb1"></span>
+
+### DisplayModeProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.CalendarMode> DisplayModeProperty
+```
+
+<span id="uid-537247cf0c"></span>
+
+### FirstDayOfWeekProperty
+
+```csharp
+public Avalonia.StyledProperty<System.DayOfWeek> FirstDayOfWeekProperty
+```
+
+<span id="uid-78037ffe87"></span>
+
+### HeaderBackgroundProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> HeaderBackgroundProperty
+```
+
+<span id="uid-801d780280"></span>
+
+### IsTodayHighlightedProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsTodayHighlightedProperty
+```
+
+<span id="uid-3a928b978c"></span>
+
+### SelectedDateProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Nullable<System.DateTime>> SelectedDateProperty
+```
+
+<span id="uid-e9d2c70301"></span>
+
+### SelectionModeProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.CalendarSelectionMode> SelectionModeProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [DisplayDateChanged](#uid-ba93b82678) | Occurs when the System.Windows.Controls.Calendar.DisplayDate property is changed. |
+| [DisplayModeChanged](#uid-9f911ccd3b) | Occurs when the System.Windows.Controls.Calendar.DisplayMode property is changed. |
+| [SelectedDatesChanged](#uid-893ff72632) | No summary available. |
+
+<span id="uid-ba93b82678"></span>
+
+### DisplayDateChanged
+
+Occurs when the
+[System.Windows.Controls.Calendar.DisplayDate](xref:System.Windows.Controls.Calendar.DisplayDate)
+property is changed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.CalendarDateChangedEventArgs> DisplayDateChanged
+```
+
+<span id="uid-9f911ccd3b"></span>
+
+### DisplayModeChanged
+
+Occurs when the
+[System.Windows.Controls.Calendar.DisplayMode](xref:System.Windows.Controls.Calendar.DisplayMode)
+property is changed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.CalendarModeChangedEventArgs> DisplayModeChanged
+```
+
+<span id="uid-893ff72632"></span>
+
+### SelectedDatesChanged
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs> SelectedDatesChanged
+```
+
+</ApiRefPage>
+

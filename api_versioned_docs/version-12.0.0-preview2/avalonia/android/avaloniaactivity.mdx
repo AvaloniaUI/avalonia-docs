@@ -1,0 +1,154 @@
+---
+title: 'AvaloniaActivity'
+hide_title: true
+slug: '/avalonia/android/avaloniaactivity'
+uid: 'Avalonia.Android.AvaloniaActivity'
+commentId: 'T:Avalonia.Android.AvaloniaActivity'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Android'
+assembly: 'Avalonia.Android'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Android'
+tfms:
+  - 'net10.0-android36.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaActivity Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Android</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Android</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Android</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Common implementation of android activity that is integrated with Avalonia views.
+If you need a base class for main activity of Avalonia app, see [Avalonia.Android.AvaloniaMainActivity](xref:Avalonia.Android.AvaloniaMainActivity).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaActivity
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> AppCompatActivity <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaActivity
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iactivitynavigationservice">IActivityNavigationService</a>, <a href="iactivityresulthandler">IActivityResultHandler</a>, <a href="iavaloniaactivity">IAvaloniaActivity</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaActivity](#uid-09ab71c209) | No summary available. |
+
+<span id="uid-09ab71c209"></span>
+
+### AvaloniaActivity
+
+```csharp
+public AvaloniaActivity()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [OnBackInvoked](#uid-c51d7c4a6d) | No summary available. |
+| [OnBackPressed](#uid-d0ca4342e1) | No summary available. |
+| [OnRequestPermissionsResult](#uid-62bc448b46) | No summary available. |
+
+<span id="uid-c51d7c4a6d"></span>
+
+### OnBackInvoked
+
+```csharp
+public System.Void OnBackInvoked()
+```
+
+<span id="uid-d0ca4342e1"></span>
+
+### OnBackPressed
+
+```csharp
+public System.Void OnBackPressed()
+```
+
+<span id="uid-62bc448b46"></span>
+
+### OnRequestPermissionsResult
+
+```csharp
+public System.Void OnRequestPermissionsResult(System.Int32 requestCode, System.String[] permissions, Android.Content.PM.Permission[] grantResults)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActivityResult](#uid-ca6929bbbc) | No summary available. |
+| [Content](#uid-76a727f8cb) | No summary available. |
+| [RequestPermissionsResult](#uid-a18d9b0980) | No summary available. |
+
+<span id="uid-ca6929bbbc"></span>
+
+### ActivityResult
+
+```csharp
+public System.Action<System.Int32, Android.App.Result, Android.Content.Intent> ActivityResult { get; set; }
+```
+
+<span id="uid-76a727f8cb"></span>
+
+### Content
+
+```csharp
+public System.Object Content { get; set; }
+```
+
+<span id="uid-a18d9b0980"></span>
+
+### RequestPermissionsResult
+
+```csharp
+public System.Action<System.Int32, System.String[], Android.Content.PM.Permission[]> RequestPermissionsResult { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [BackRequested](#uid-2415efb7c4) | No summary available. |
+
+<span id="uid-2415efb7c4"></span>
+
+### BackRequested
+
+```csharp
+public event System.EventHandler<Avalonia.Android.AndroidBackRequestedEventArgs> BackRequested
+```
+
+</ApiRefPage>
+

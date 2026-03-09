@@ -1,0 +1,340 @@
+---
+title: 'AvaloniaProperty'
+hide_title: true
+slug: '/avalonia/avaloniaproperty'
+uid: 'Avalonia.AvaloniaProperty'
+commentId: 'T:Avalonia.AvaloniaProperty'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaProperty Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for avalonia properties.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaProperty
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaProperty
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="data/core/ipropertyinfo">IPropertyInfo</a>, IEquatable&lt;AvaloniaProperty&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind](#uid-c40d1b5dcb) | Returns a binding accessor that can be passed to Avalonia.AvaloniaObject's [] operator to initiate a binding. |
+| [Equals (2 overloads)](#uid-3837f11261) | No summary available. |
+| [GetHashCode](#uid-7d1eae41db) | No summary available. |
+| [GetMetadata (3 overloads)](#uid-5f3ddcc8fd) | No summary available. |
+| [IsValidValue](#uid-636d332b13) | Checks whether the value is valid for the property. |
+| [Register](#uid-2e25cc2d00) | No summary available. |
+| [RegisterAttached (2 overloads)](#uid-769b8defa4) | No summary available. |
+| [RegisterDirect](#uid-2e19e6c29e) | No summary available. |
+| [ToString](#uid-4c7006dd35) | Gets the string representation of the property. |
+| [Unregister](#uid-919cfa2853) | No summary available. |
+
+<span id="uid-c40d1b5dcb"></span>
+
+### Bind
+
+Returns a binding accessor that can be passed to [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)'s []
+operator to initiate a binding.
+
+```csharp
+public Avalonia.Data.IndexerDescriptor Bind()
+```
+
+Returns: A [Avalonia.Data.IndexerDescriptor](xref:Avalonia.Data.IndexerDescriptor).
+
+<span id="uid-3837f11261"></span>
+
+### Equals overloads
+
+<span id="uid-d30f98c66c"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.AvaloniaProperty other)
+```
+
+<span id="uid-bb0e528aa8"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-7d1eae41db"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-5f3ddcc8fd"></span>
+
+### GetMetadata overloads
+
+<span id="uid-e74154aebe"></span>
+
+#### GetMetadata
+
+```csharp
+public Avalonia.AvaloniaPropertyMetadata GetMetadata<T>()
+```
+
+<span id="uid-72e5f3b9f5"></span>
+
+#### GetMetadata
+
+Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata) which applies to this property when it is used with the specified object.
+
+```csharp
+public Avalonia.AvaloniaPropertyMetadata GetMetadata(Avalonia.AvaloniaObject owner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `owner` | The object for which to retrieve metadata. |
+
+<span id="uid-ae1a38fb68"></span>
+
+#### GetMetadata
+
+```csharp
+public Avalonia.AvaloniaPropertyMetadata GetMetadata(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type for which to retrieve metadata. |
+
+<span id="uid-636d332b13"></span>
+
+### IsValidValue
+
+Checks whether the `value` is valid for the property.
+
+```csharp
+public System.Boolean IsValidValue(System.Object value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value. |
+
+Returns: True if the value is valid, otherwise false.
+
+<span id="uid-2e25cc2d00"></span>
+
+### Register
+
+```csharp
+public Avalonia.StyledProperty<TValue><TValue> Register<TOwner, TValue>(System.String name, TValue defaultValue, System.Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, System.Func<TValue, System.Boolean> validate, System.Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, System.Boolean enableDataValidation)
+```
+
+<span id="uid-769b8defa4"></span>
+
+### RegisterAttached overloads
+
+<span id="uid-343394276c"></span>
+
+#### RegisterAttached
+
+```csharp
+public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<THost, TValue>(System.String name, System.Type ownerType, TValue defaultValue, System.Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, System.Func<TValue, System.Boolean> validate, System.Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
+```
+
+<span id="uid-420e6c58d9"></span>
+
+#### RegisterAttached
+
+```csharp
+public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<TOwner, THost, TValue>(System.String name, TValue defaultValue, System.Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, System.Func<TValue, System.Boolean> validate, System.Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
+```
+
+<span id="uid-2e19e6c29e"></span>
+
+### RegisterDirect
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><TOwner, TValue> RegisterDirect<TOwner, TValue>(System.String name, System.Func<TOwner, TValue> getter, System.Action<TOwner, TValue> setter, TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, System.Boolean enableDataValidation)
+```
+
+<span id="uid-4c7006dd35"></span>
+
+### ToString
+
+Gets the string representation of the property.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The property's string representation.
+
+<span id="uid-919cfa2853"></span>
+
+### Unregister
+
+```csharp
+public System.Void Unregister(System.Type type)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-91ae21dc93) | Gets an observable that is fired when this property changes on any Avalonia.AvaloniaObject instance. |
+| [Inherits](#uid-cedb5e4e38) | Gets a value indicating whether the property inherits its value. |
+| [IsAttached](#uid-33c0761938) | Gets a value indicating whether this is an attached property. |
+| [IsDirect](#uid-af873b4d3c) | Gets a value indicating whether this is a direct property. |
+| [IsReadOnly](#uid-2b867c83ad) | Gets a value indicating whether this is a readonly property. |
+| [Name](#uid-228b4a9a70) | Gets the name of the property. |
+| [OwnerType](#uid-efffba9cb8) | Gets the type of the class that registered the property. |
+| [PropertyType](#uid-c1e5099c6c) | Gets the type of the property's value. |
+
+<span id="uid-91ae21dc93"></span>
+
+### Changed
+
+Gets an observable that is fired when this property changes on any
+[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance.
+
+```csharp
+public System.IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> Changed { get; set; }
+```
+
+Value: An observable that is fired when this property changes on any
+[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance.
+
+<span id="uid-cedb5e4e38"></span>
+
+### Inherits
+
+Gets a value indicating whether the property inherits its value.
+
+```csharp
+public System.Boolean Inherits { get; set; }
+```
+
+<span id="uid-33c0761938"></span>
+
+### IsAttached
+
+Gets a value indicating whether this is an attached property.
+
+```csharp
+public System.Boolean IsAttached { get; set; }
+```
+
+<span id="uid-af873b4d3c"></span>
+
+### IsDirect
+
+Gets a value indicating whether this is a direct property.
+
+```csharp
+public System.Boolean IsDirect { get; set; }
+```
+
+<span id="uid-2b867c83ad"></span>
+
+### IsReadOnly
+
+Gets a value indicating whether this is a readonly property.
+
+```csharp
+public System.Boolean IsReadOnly { get; set; }
+```
+
+<span id="uid-228b4a9a70"></span>
+
+### Name
+
+Gets the name of the property.
+
+```csharp
+public System.String Name { get; set; }
+```
+
+<span id="uid-efffba9cb8"></span>
+
+### OwnerType
+
+Gets the type of the class that registered the property.
+
+```csharp
+public System.Type OwnerType { get; set; }
+```
+
+<span id="uid-c1e5099c6c"></span>
+
+### PropertyType
+
+Gets the type of the property's value.
+
+```csharp
+public System.Type PropertyType { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [UnsetValue](#uid-d3a3dfda6d) | Represents an unset property value. |
+
+<span id="uid-d3a3dfda6d"></span>
+
+### UnsetValue
+
+Represents an unset property value.
+
+```csharp
+public System.Object UnsetValue
+```
+
+</ApiRefPage>
+

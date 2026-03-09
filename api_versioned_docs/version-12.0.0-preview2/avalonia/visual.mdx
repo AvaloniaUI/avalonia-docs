@@ -1,0 +1,493 @@
+---
+title: 'Visual'
+hide_title: true
+slug: '/avalonia/visual'
+uid: 'Avalonia.Visual'
+commentId: 'T:Avalonia.Visual'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Visual Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for controls that provides rendering and related visual properties.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Visual
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> Visual
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaListItemValidator&lt;Visual&gt;
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Visual](xref:Avalonia.Visual) class represents elements that have a visual on-screen
+representation and stores all the information needed for an
+[Avalonia.Rendering.IRenderer](xref:Avalonia.Rendering.IRenderer) to render the control. To traverse the visual tree, use the
+extension methods defined in [Avalonia.VisualExtensions](xref:Avalonia.VisualExtensions).
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Visual](#uid-94584ffd3d) | Initializes a new instance of the Avalonia.Visual class. |
+
+<span id="uid-94584ffd3d"></span>
+
+### Visual
+
+Initializes a new instance of the [Avalonia.Visual](xref:Avalonia.Visual) class.
+
+```csharp
+public Visual()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetFlowDirection](#uid-12716acd38) | Gets the value of the attached Avalonia.Visual.FlowDirectionProperty on a control. |
+| [InvalidateVisual](#uid-1cd22a7496) | Invalidates the visual and queues a repaint. |
+| [Render](#uid-615917604b) | Renders the visual to a Avalonia.Media.DrawingContext. |
+| [SetFlowDirection](#uid-a670b680eb) | Sets the value of the attached Avalonia.Visual.FlowDirectionProperty on a control. |
+
+<span id="uid-12716acd38"></span>
+
+### GetFlowDirection
+
+Gets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control.
+
+```csharp
+public Avalonia.Media.FlowDirection GetFlowDirection(Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `visual` | The control. |
+
+Returns: The flow direction.
+
+<span id="uid-1cd22a7496"></span>
+
+### InvalidateVisual
+
+Invalidates the visual and queues a repaint.
+
+```csharp
+public System.Void InvalidateVisual()
+```
+
+<span id="uid-615917604b"></span>
+
+### Render
+
+Renders the visual to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext).
+
+```csharp
+public System.Void Render(Avalonia.Media.DrawingContext context)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `context` | The drawing context. |
+
+<span id="uid-a670b680eb"></span>
+
+### SetFlowDirection
+
+Sets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control.
+
+```csharp
+public System.Void SetFlowDirection(Avalonia.Visual visual, Avalonia.Media.FlowDirection value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The property value to set. |
+| `visual` | The control. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bounds](#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. |
+| [CacheMode](#uid-c565afad32) | Gets or sets the cache mode of the visual. |
+| [Clip](#uid-7623faaeaf) | Gets or sets the geometry clip for this visual. |
+| [ClipToBounds](#uid-63c348aebd) | Gets or sets a value indicating whether the control should be clipped to its bounds. |
+| [Effect](#uid-65e2be6b7c) | Gets or sets the effect of the control. |
+| [FlowDirection](#uid-c7929bde53) | Gets or sets the text flow direction. |
+| [HasMirrorTransform](#uid-70dc13a730) | Gets or sets a value indicating whether to apply mirror transform on this control. |
+| [IsEffectivelyVisible](#uid-03d6c15a63) | Gets a value indicating whether this control and all its parents are visible. |
+| [IsVisible](#uid-da2b0ca167) | Gets or sets a value indicating whether this control is visible. |
+| [Opacity](#uid-9eaf1e3d57) | Gets or sets the opacity of the control. |
+| [OpacityMask](#uid-b6579b9244) | Gets or sets the opacity mask of the control. |
+| [RenderTransform](#uid-7ee76ff32a) | Gets or sets the render transform of the control. |
+| [RenderTransformOrigin](#uid-3501120c25) | Gets or sets the transform origin of the control. |
+| [ZIndex](#uid-a3275ade9d) | Gets or sets the Z index of the control. |
+
+<span id="uid-a01c3022f7"></span>
+
+### Bounds
+
+Gets the bounds of the control relative to its parent.
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+<span id="uid-c565afad32"></span>
+
+### CacheMode
+
+Gets or sets the cache mode of the visual.
+
+```csharp
+public Avalonia.Media.CacheMode CacheMode { get; set; }
+```
+
+<span id="uid-7623faaeaf"></span>
+
+### Clip
+
+Gets or sets the geometry clip for this visual.
+
+```csharp
+public Avalonia.Media.Geometry Clip { get; set; }
+```
+
+<span id="uid-63c348aebd"></span>
+
+### ClipToBounds
+
+Gets or sets a value indicating whether the control should be clipped to its bounds.
+
+```csharp
+public System.Boolean ClipToBounds { get; set; }
+```
+
+<span id="uid-65e2be6b7c"></span>
+
+### Effect
+
+Gets or sets the effect of the control.
+
+```csharp
+public Avalonia.Media.IEffect Effect { get; set; }
+```
+
+<span id="uid-c7929bde53"></span>
+
+### FlowDirection
+
+Gets or sets the text flow direction.
+
+```csharp
+public Avalonia.Media.FlowDirection FlowDirection { get; set; }
+```
+
+<span id="uid-70dc13a730"></span>
+
+### HasMirrorTransform
+
+Gets or sets a value indicating whether to apply mirror transform on this control.
+
+```csharp
+public System.Boolean HasMirrorTransform { get; set; }
+```
+
+<span id="uid-03d6c15a63"></span>
+
+### IsEffectivelyVisible
+
+Gets a value indicating whether this control and all its parents are visible.
+
+```csharp
+public System.Boolean IsEffectivelyVisible { get; set; }
+```
+
+<span id="uid-da2b0ca167"></span>
+
+### IsVisible
+
+Gets or sets a value indicating whether this control is visible.
+
+```csharp
+public System.Boolean IsVisible { get; set; }
+```
+
+<span id="uid-9eaf1e3d57"></span>
+
+### Opacity
+
+Gets or sets the opacity of the control.
+
+```csharp
+public System.Double Opacity { get; set; }
+```
+
+<span id="uid-b6579b9244"></span>
+
+### OpacityMask
+
+Gets or sets the opacity mask of the control.
+
+```csharp
+public Avalonia.Media.IBrush OpacityMask { get; set; }
+```
+
+<span id="uid-7ee76ff32a"></span>
+
+### RenderTransform
+
+Gets or sets the render transform of the control.
+
+```csharp
+public Avalonia.Media.ITransform RenderTransform { get; set; }
+```
+
+<span id="uid-3501120c25"></span>
+
+### RenderTransformOrigin
+
+Gets or sets the transform origin of the control.
+
+```csharp
+public Avalonia.RelativePoint RenderTransformOrigin { get; set; }
+```
+
+<span id="uid-a3275ade9d"></span>
+
+### ZIndex
+
+Gets or sets the Z index of the control.
+
+```csharp
+public System.Int32 ZIndex { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BoundsProperty](#uid-f22a27348f) | Defines the Avalonia.Visual.Bounds property. |
+| [CacheModeProperty](#uid-5c89b0f2fc) | Defines the Avalonia.Visual.CacheMode property. |
+| [ClipProperty](#uid-06ffce3308) | Defines the Avalonia.Visual.Clip property. |
+| [ClipToBoundsProperty](#uid-4bc41df166) | Defines the Avalonia.Visual.ClipToBounds property. |
+| [EffectProperty](#uid-9374086bff) | Defines the Avalonia.Visual.Effect property. |
+| [FlowDirectionProperty](#uid-79d00f257f) | Defines the Avalonia.Visual.FlowDirection property. |
+| [HasMirrorTransformProperty](#uid-1f37ec4745) | Defines the Avalonia.Visual.HasMirrorTransform property. |
+| [IsVisibleProperty](#uid-8e0edf21ac) | Defines the Avalonia.Visual.IsVisible property. |
+| [OpacityMaskProperty](#uid-aad2c3f7c2) | Defines the Avalonia.Visual.OpacityMask property. |
+| [OpacityProperty](#uid-2a53e27b1f) | Defines the Avalonia.Visual.Opacity property. |
+| [RenderTransformOriginProperty](#uid-963d266cdd) | Defines the Avalonia.Visual.RenderTransformOrigin property. |
+| [RenderTransformProperty](#uid-31d20942c2) | Defines the Avalonia.Visual.RenderTransform property. |
+| [VisualParentProperty](#uid-12214f81b9) | Defines the Avalonia.Visual.VisualParent property. |
+| [ZIndexProperty](#uid-1dc9376c1e) | Defines the Avalonia.Visual.ZIndex property. |
+
+<span id="uid-f22a27348f"></span>
+
+### BoundsProperty
+
+Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Visual, Avalonia.Rect> BoundsProperty
+```
+
+<span id="uid-5c89b0f2fc"></span>
+
+### CacheModeProperty
+
+Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.CacheMode> CacheModeProperty
+```
+
+<span id="uid-06ffce3308"></span>
+
+### ClipProperty
+
+Defines the [Avalonia.Visual.Clip](xref:Avalonia.Visual.Clip) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.Geometry> ClipProperty
+```
+
+<span id="uid-4bc41df166"></span>
+
+### ClipToBoundsProperty
+
+Defines the [Avalonia.Visual.ClipToBounds](xref:Avalonia.Visual.ClipToBounds) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Boolean> ClipToBoundsProperty
+```
+
+<span id="uid-9374086bff"></span>
+
+### EffectProperty
+
+Defines the [Avalonia.Visual.Effect](xref:Avalonia.Visual.Effect) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.IEffect> EffectProperty
+```
+
+<span id="uid-79d00f257f"></span>
+
+### FlowDirectionProperty
+
+Defines the [Avalonia.Visual.FlowDirection](xref:Avalonia.Visual.FlowDirection) property.
+
+```csharp
+public Avalonia.AttachedProperty<TValue><Avalonia.Media.FlowDirection> FlowDirectionProperty
+```
+
+<span id="uid-1f37ec4745"></span>
+
+### HasMirrorTransformProperty
+
+Defines the [Avalonia.Visual.HasMirrorTransform](xref:Avalonia.Visual.HasMirrorTransform) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Visual, System.Boolean> HasMirrorTransformProperty
+```
+
+<span id="uid-8e0edf21ac"></span>
+
+### IsVisibleProperty
+
+Defines the [Avalonia.Visual.IsVisible](xref:Avalonia.Visual.IsVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Boolean> IsVisibleProperty
+```
+
+<span id="uid-aad2c3f7c2"></span>
+
+### OpacityMaskProperty
+
+Defines the [Avalonia.Visual.OpacityMask](xref:Avalonia.Visual.OpacityMask) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.IBrush> OpacityMaskProperty
+```
+
+<span id="uid-2a53e27b1f"></span>
+
+### OpacityProperty
+
+Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> OpacityProperty
+```
+
+<span id="uid-963d266cdd"></span>
+
+### RenderTransformOriginProperty
+
+Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.RelativePoint> RenderTransformOriginProperty
+```
+
+<span id="uid-31d20942c2"></span>
+
+### RenderTransformProperty
+
+Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.ITransform> RenderTransformProperty
+```
+
+<span id="uid-12214f81b9"></span>
+
+### VisualParentProperty
+
+Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Visual, Avalonia.Visual> VisualParentProperty
+```
+
+<span id="uid-1dc9376c1e"></span>
+
+### ZIndexProperty
+
+Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Int32> ZIndexProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [AttachedToVisualTree](#uid-df40bddf6b) | Raised when the control is attached to a rooted visual tree. |
+| [DetachedFromVisualTree](#uid-3f64dafb1c) | Raised when the control is detached from a rooted visual tree. |
+
+<span id="uid-df40bddf6b"></span>
+
+### AttachedToVisualTree
+
+Raised when the control is attached to a rooted visual tree.
+
+```csharp
+public event System.EventHandler<Avalonia.VisualTreeAttachmentEventArgs> AttachedToVisualTree
+```
+
+<span id="uid-3f64dafb1c"></span>
+
+### DetachedFromVisualTree
+
+Raised when the control is detached from a rooted visual tree.
+
+```csharp
+public event System.EventHandler<Avalonia.VisualTreeAttachmentEventArgs> DetachedFromVisualTree
+```
+
+</ApiRefPage>
+

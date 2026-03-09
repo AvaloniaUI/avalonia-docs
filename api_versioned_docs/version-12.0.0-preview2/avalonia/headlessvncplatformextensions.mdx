@@ -1,0 +1,103 @@
+---
+title: 'HeadlessVncPlatformExtensions'
+hide_title: true
+slug: '/avalonia/headlessvncplatformextensions'
+uid: 'Avalonia.HeadlessVncPlatformExtensions'
+commentId: 'T:Avalonia.HeadlessVncPlatformExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Headless.Vnc'
+assembly: 'Avalonia.Headless.Vnc'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HeadlessVncPlatformExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Headless.Vnc</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Headless.Vnc</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HeadlessVncPlatformExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> HeadlessVncPlatformExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [StartWithHeadlessVncPlatform (2 overloads)](#uid-406e7f5e5b) | Start Avalonia application with Headless VNC platform with password. |
+
+<span id="uid-406e7f5e5b"></span>
+
+### StartWithHeadlessVncPlatform overloads
+
+<span id="uid-3969e7cb8f"></span>
+
+#### StartWithHeadlessVncPlatform
+
+Start Avalonia application with Headless VNC platform with password.
+
+```csharp
+public System.Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, System.String host, System.Int32 port, System.String password, System.String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `args` | Avalonia application start args |
+| `builder` | Application Builder |
+| `host` | VNC Server IP will be bind, if null or empty IPAddress.LoopBack will be used. |
+| `password` | VNC connection auth password |
+| `port` | VNC Server port will be bind |
+| `shutdownMode` | shut down mode [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode) |
+
+##### Exceptions
+
+- [System.InvalidOperationException](xref:System.InvalidOperationException)
+
+<span id="uid-d1d8da1ef5"></span>
+
+#### StartWithHeadlessVncPlatform
+
+Start Avalonia application with Headless VNC platform without password.
+
+```csharp
+public System.Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, System.String host, System.Int32 port, System.String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `args` | Avalonia application start args |
+| `builder` | Application Builder |
+| `host` | VNC Server IP will be bind, if null or empty IPAddress.LoopBack will be used. |
+| `port` | VNC Server port will be bind |
+| `shutdownMode` | shut down mode [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode) |
+
+</ApiRefPage>
+

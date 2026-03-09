@@ -1,0 +1,185 @@
+---
+title: 'ColorToHexConverter'
+hide_title: true
+slug: '/avalonia/controls/converters/colortohexconverter'
+uid: 'Avalonia.Controls.Converters.ColorToHexConverter'
+commentId: 'T:Avalonia.Controls.Converters.ColorToHexConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColorToHexConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Converts a color to a hex string and vice versa.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColorToHexConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ColorToHexConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColorToHexConverter](#uid-d34c223a45) | No summary available. |
+
+<span id="uid-d34c223a45"></span>
+
+### ColorToHexConverter
+
+```csharp
+public ColorToHexConverter()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-d2b3f16945) | Converts a value. |
+| [ConvertBack](#uid-fa184892e4) | Converts a value. |
+| [ParseHexString](#uid-2858de8c4f) | Parses a hex color value string into a new Avalonia.Media.Color. |
+| [ToHexString](#uid-09980d8423) | Converts the given color to its hex color value string representation. |
+
+<span id="uid-d2b3f16945"></span>
+
+### Convert
+
+Converts a value.
+
+```csharp
+public System.Object Convert(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+<span id="uid-fa184892e4"></span>
+
+### ConvertBack
+
+Converts a value.
+
+```csharp
+public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+<span id="uid-2858de8c4f"></span>
+
+### ParseHexString
+
+Parses a hex color value string into a new [Avalonia.Media.Color](xref:Avalonia.Media.Color).
+
+```csharp
+public System.Nullable<Avalonia.Media.Color> ParseHexString(System.String hexColor, Avalonia.Controls.AlphaComponentPosition alphaPosition)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `alphaPosition` | The input position of the alpha component. |
+| `hexColor` | The hex color string to parse. |
+
+Returns: The parsed [Avalonia.Media.Color](xref:Avalonia.Media.Color); otherwise, null.
+
+<span id="uid-09980d8423"></span>
+
+### ToHexString
+
+Converts the given color to its hex color value string representation.
+
+```csharp
+public System.String ToHexString(Avalonia.Media.Color color, Avalonia.Controls.AlphaComponentPosition alphaPosition, System.Boolean includeAlpha, System.Boolean includeSymbol)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `alphaPosition` | The output position of the alpha component. |
+| `color` | The color to represent as a hex value string. |
+| `includeAlpha` | Whether the alpha component will be included in the hex string. |
+| `includeSymbol` | Whether the hex symbol '#' will be added. |
+
+Returns: The input color converted to its hex value string.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AlphaPosition](#uid-7e36f29bf3) | Gets or sets the position of a color's alpha component relative to all other components. |
+| [IsAlphaVisible](#uid-3ab36802e9) | Gets or sets a value indicating whether the alpha component is visible in the Hex formatted text. |
+
+<span id="uid-7e36f29bf3"></span>
+
+### AlphaPosition
+
+Gets or sets the position of a color's alpha component relative to all other components.
+
+```csharp
+public Avalonia.Controls.AlphaComponentPosition AlphaPosition { get; set; }
+```
+
+<span id="uid-3ab36802e9"></span>
+
+### IsAlphaVisible
+
+Gets or sets a value indicating whether the alpha component is visible in the Hex formatted text.
+
+```csharp
+public System.Boolean IsAlphaVisible { get; set; }
+```
+
+</ApiRefPage>
+

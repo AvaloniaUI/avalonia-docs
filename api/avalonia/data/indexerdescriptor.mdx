@@ -1,0 +1,194 @@
+---
+title: 'IndexerDescriptor'
+hide_title: true
+slug: '/avalonia/data/indexerdescriptor'
+uid: 'Avalonia.Data.IndexerDescriptor'
+commentId: 'T:Avalonia.Data.IndexerDescriptor'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IndexerDescriptor Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds a description of a binding for [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)'s [] operator.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class IndexerDescriptor
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> IndexerDescriptor
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../idescription">IDescription</a>, IObservable&lt;Object&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [IndexerDescriptor](#uid-62dee295f5) | No summary available. |
+
+<span id="uid-62dee295f5"></span>
+
+### IndexerDescriptor
+
+```csharp
+public IndexerDescriptor()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Subscribe](#uid-a2c1be1956) | No summary available. |
+| [WithMode](#uid-0c7743cabf) | Modifies the binding mode. |
+| [WithPriority](#uid-3672faafb0) | Modifies the binding priority. |
+
+<span id="uid-a2c1be1956"></span>
+
+### Subscribe
+
+```csharp
+public System.IDisposable Subscribe(System.IObserver<System.Object> observer)
+```
+
+<span id="uid-0c7743cabf"></span>
+
+### WithMode
+
+Modifies the binding mode.
+
+```csharp
+public Avalonia.Data.IndexerDescriptor WithMode(Avalonia.Data.BindingMode mode)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `mode` | The binding mode. |
+
+Returns: The object that the method was called on.
+
+<span id="uid-3672faafb0"></span>
+
+### WithPriority
+
+Modifies the binding priority.
+
+```csharp
+public Avalonia.Data.IndexerDescriptor WithPriority(Avalonia.Data.BindingPriority priority)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `priority` | The binding priority. |
+
+Returns: The object that the method was called on.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Description](#uid-5dd9a3a0c9) | Gets a description of the binding. |
+| [Mode](#uid-da9feefd4a) | Gets or sets the binding mode. |
+| [Priority](#uid-fa83bcc170) | Gets or sets the binding priority. |
+| [Property](#uid-1c15fa993e) | Gets or sets the source property. |
+| [Source](#uid-a7b19ad229) | Gets or sets the source object. |
+| [SourceObservable](#uid-5d20c8b4df) | Gets or sets the source observable. |
+
+<span id="uid-5dd9a3a0c9"></span>
+
+### Description
+
+Gets a description of the binding.
+
+```csharp
+public System.String Description { get; set; }
+```
+
+<span id="uid-da9feefd4a"></span>
+
+### Mode
+
+Gets or sets the binding mode.
+
+```csharp
+public Avalonia.Data.BindingMode Mode { get; set; }
+```
+
+<span id="uid-fa83bcc170"></span>
+
+### Priority
+
+Gets or sets the binding priority.
+
+```csharp
+public Avalonia.Data.BindingPriority Priority { get; set; }
+```
+
+<span id="uid-1c15fa993e"></span>
+
+### Property
+
+Gets or sets the source property.
+
+```csharp
+public Avalonia.AvaloniaProperty Property { get; set; }
+```
+
+<span id="uid-a7b19ad229"></span>
+
+### Source
+
+Gets or sets the source object.
+
+```csharp
+public Avalonia.AvaloniaObject Source { get; set; }
+```
+
+<span id="uid-5d20c8b4df"></span>
+
+### SourceObservable
+
+Gets or sets the source observable.
+
+```csharp
+public System.IObservable<System.Object> SourceObservable { get; set; }
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,168 @@
+---
+title: 'ResourcesChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/resourceschangedeventargs'
+uid: 'Avalonia.Controls.ResourcesChangedEventArgs'
+commentId: 'T:Avalonia.Controls.ResourcesChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ResourcesChangedEventArgs Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the event arguments of [Avalonia.Controls.IResourceHost.ResourcesChanged](xref:Avalonia.Controls.IResourceHost.ResourcesChanged).
+The [Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber](xref:Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber) identifies the changes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct ResourcesChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> ResourcesChangedEventArgs
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;ResourcesChangedEventArgs&gt;
+</div>
+</div>
+
+## Remarks
+
+For performance reasons, this type is a struct.
+Avoid using a default instance of this type or its default constructor, call [Avalonia.Controls.ResourcesChangedEventArgs.Create](xref:Avalonia.Controls.ResourcesChangedEventArgs.Create) instead.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ResourcesChangedEventArgs](#uid-bd63302dcf) | Represents the event arguments of Avalonia.Controls.IResourceHost.ResourcesChanged. The Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber identifies the changes. |
+
+<span id="uid-bd63302dcf"></span>
+
+### ResourcesChangedEventArgs
+
+Represents the event arguments of [Avalonia.Controls.IResourceHost.ResourcesChanged](xref:Avalonia.Controls.IResourceHost.ResourcesChanged).
+The [Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber](xref:Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber) identifies the changes.
+
+```csharp
+public ResourcesChangedEventArgs(System.Int32 SequenceNumber)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `SequenceNumber` | The sequence number used to identify the changes. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Create](#uid-954a97e788) | Creates a new instance of Avalonia.Controls.ResourcesChangedEventArgs with an auto-incremented sequence number. |
+| [Deconstruct](#uid-04c79d7563) | No summary available. |
+| [Equals (2 overloads)](#uid-793488e1d0) | No summary available. |
+| [GetHashCode](#uid-e227c8332a) | No summary available. |
+| [ToString](#uid-50186fed84) | No summary available. |
+
+<span id="uid-954a97e788"></span>
+
+### Create
+
+Creates a new instance of [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs) with an auto-incremented sequence number.
+
+```csharp
+public Avalonia.Controls.ResourcesChangedEventArgs Create()
+```
+
+<span id="uid-04c79d7563"></span>
+
+### Deconstruct
+
+```csharp
+public System.Void Deconstruct(System.Int32& SequenceNumber)
+```
+
+<span id="uid-793488e1d0"></span>
+
+### Equals overloads
+
+<span id="uid-0ddf7648a3"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Controls.ResourcesChangedEventArgs other)
+```
+
+<span id="uid-36e7f0b2af"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-e227c8332a"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-50186fed84"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SequenceNumber](#uid-1cbd8e9ac4) | The sequence number used to identify the changes. |
+
+<span id="uid-1cbd8e9ac4"></span>
+
+### SequenceNumber
+
+The sequence number used to identify the changes.
+
+```csharp
+public System.Int32 SequenceNumber { get; set; }
+```
+
+</ApiRefPage>
+

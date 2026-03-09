@@ -1,0 +1,230 @@
+---
+title: 'StyledProperty<TValue>'
+hide_title: true
+slug: '/avalonia/styledproperty-1'
+uid: 'Avalonia.StyledProperty`1'
+commentId: 'T:Avalonia.StyledProperty`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StyledProperty&lt;TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A styled avalonia property.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StyledProperty<TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> AvaloniaProperty&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> StyledProperty&lt;TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IStyledPropertyAccessor
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddOwner](#uid-c924301c33) | No summary available. |
+| [CoerceValue](#uid-061dd4a28b) | No summary available. |
+| [GetDefaultValue (2 overloads)](#uid-3f68630f83) | Gets the default value for the property on the specified object. |
+| [GetMetadata (2 overloads)](#uid-93b7eff4df) | Gets the Avalonia.AvaloniaPropertyMetadata which applies to this property when it is used with the specified object. |
+| [OverrideDefaultValue (2 overloads)](#uid-2e51c5f73c) | Overrides the default value for the property on the specified type. |
+| [OverrideMetadata (2 overloads)](#uid-2a40013894) | No summary available. |
+| [ToString](#uid-c313ea99bf) | Gets the string representation of the property. |
+
+<span id="uid-c924301c33"></span>
+
+### AddOwner
+
+```csharp
+public Avalonia.StyledProperty<TValue><TValue> AddOwner<TOwner>(Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
+```
+
+<span id="uid-061dd4a28b"></span>
+
+### CoerceValue
+
+```csharp
+public TValue CoerceValue(Avalonia.AvaloniaObject instance, TValue baseValue)
+```
+
+<span id="uid-3f68630f83"></span>
+
+### GetDefaultValue overloads
+
+<span id="uid-8cf772e2c9"></span>
+
+#### GetDefaultValue
+
+Gets the default value for the property on the specified object.
+
+```csharp
+public TValue GetDefaultValue(Avalonia.AvaloniaObject owner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `owner` | The object. |
+
+Returns: The default value.
+
+<span id="uid-e8ed2726a4"></span>
+
+#### GetDefaultValue
+
+Gets the default value for the property on the specified type.
+
+```csharp
+public TValue GetDefaultValue(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type. |
+
+Returns: The default value.
+
+<span id="uid-93b7eff4df"></span>
+
+### GetMetadata overloads
+
+<span id="uid-6b85e2327d"></span>
+
+#### GetMetadata
+
+Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata) which applies to this property when it is used with the specified object.
+
+```csharp
+public Avalonia.StyledPropertyMetadata<TValue><TValue> GetMetadata(Avalonia.AvaloniaObject owner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `owner` | The object for which to retrieve metadata. |
+
+<span id="uid-5fb9c310f0"></span>
+
+#### GetMetadata
+
+```csharp
+public Avalonia.StyledPropertyMetadata<TValue><TValue> GetMetadata(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type for which to retrieve metadata. |
+
+<span id="uid-2e51c5f73c"></span>
+
+### OverrideDefaultValue overloads
+
+<span id="uid-9a841ead06"></span>
+
+#### OverrideDefaultValue
+
+Overrides the default value for the property on the specified type.
+
+```csharp
+public System.Void OverrideDefaultValue(System.Type type, TValue defaultValue)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `defaultValue` | The default value. |
+| `type` | The type. |
+
+<span id="uid-b55489bf4b"></span>
+
+#### OverrideDefaultValue
+
+```csharp
+public System.Void OverrideDefaultValue<T>(TValue defaultValue)
+```
+
+<span id="uid-2a40013894"></span>
+
+### OverrideMetadata overloads
+
+<span id="uid-f16e35d0c6"></span>
+
+#### OverrideMetadata
+
+```csharp
+public System.Void OverrideMetadata<T>(Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
+```
+
+<span id="uid-cfc9ee19c1"></span>
+
+#### OverrideMetadata
+
+```csharp
+public System.Void OverrideMetadata(System.Type type, Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
+```
+
+<span id="uid-c313ea99bf"></span>
+
+### ToString
+
+Gets the string representation of the property.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The property's string representation.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ValidateValue](#uid-4f98099b69) | A method which returns "false" for values that are never valid for this property. |
+
+<span id="uid-4f98099b69"></span>
+
+### ValidateValue
+
+A method which returns "false" for values that are never valid for this property.
+
+```csharp
+public System.Func<TValue, System.Boolean> ValidateValue { get; set; }
+```
+
+</ApiRefPage>
+

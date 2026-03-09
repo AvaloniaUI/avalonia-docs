@@ -1,0 +1,147 @@
+---
+title: 'SpringEasing'
+hide_title: true
+slug: '/avalonia/animation/easings/springeasing'
+uid: 'Avalonia.Animation.Easings.SpringEasing'
+commentId: 'T:Avalonia.Animation.Easings.SpringEasing'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation.Easings'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SpringEasing Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation.Easings</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Eases a [System.Double](xref:System.Double) value using a user-defined spring formula.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SpringEasing
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="easing">Easing</a> <span className="apiref-page__relation-separator">-&gt;</span> SpringEasing
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SpringEasing (2 overloads)](#uid-60d79819c1) | No summary available. |
+
+<span id="uid-60d79819c1"></span>
+
+### SpringEasing overloads
+
+<span id="uid-c9ed2c9eac"></span>
+
+#### SpringEasing
+
+```csharp
+public SpringEasing()
+```
+
+<span id="uid-6c9fb4345e"></span>
+
+#### SpringEasing
+
+```csharp
+public SpringEasing(System.Double mass, System.Double stiffness, System.Double damping, System.Double initialVelocity)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Ease](#uid-1ec880eb48) | No summary available. |
+
+<span id="uid-1ec880eb48"></span>
+
+### Ease
+
+```csharp
+public System.Double Ease(System.Double progress)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Damping](#uid-6ac3346781) | The spring damping. |
+| [InitialVelocity](#uid-2c0f3fe2e1) | The spring initial velocity. |
+| [Mass](#uid-509bc724be) | The spring mass. |
+| [Stiffness](#uid-6f52a6025e) | The spring stiffness. |
+
+<span id="uid-6ac3346781"></span>
+
+### Damping
+
+The spring damping.
+
+```csharp
+public System.Double Damping { get; set; }
+```
+
+<span id="uid-2c0f3fe2e1"></span>
+
+### InitialVelocity
+
+The spring initial velocity.
+
+```csharp
+public System.Double InitialVelocity { get; set; }
+```
+
+<span id="uid-509bc724be"></span>
+
+### Mass
+
+The spring mass.
+
+```csharp
+public System.Double Mass { get; set; }
+```
+
+<span id="uid-6f52a6025e"></span>
+
+### Stiffness
+
+The spring stiffness.
+
+```csharp
+public System.Double Stiffness { get; set; }
+```
+
+</ApiRefPage>
+

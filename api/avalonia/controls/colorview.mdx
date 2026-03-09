@@ -1,0 +1,737 @@
+---
+title: 'ColorView'
+hide_title: true
+slug: '/avalonia/controls/colorview'
+uid: 'Avalonia.Controls.ColorView'
+commentId: 'T:Avalonia.Controls.ColorView'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColorView Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Presents a color for user editing using a spectrum, palette and component sliders.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColorView
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> ColorView
+</div>
+</div>
+
+## Remarks
+
+The control class extends [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement) and adds the following features:
+
+- A [Avalonia.Controls.Control.Tag](xref:Avalonia.Controls.Control.Tag) property to allow user-defined data to be attached to the control.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColorView](#uid-0ca7e32c95) | Initializes a new instance of the Avalonia.Controls.ColorView class. |
+
+<span id="uid-0ca7e32c95"></span>
+
+### ColorView
+
+Initializes a new instance of the [Avalonia.Controls.ColorView](xref:Avalonia.Controls.ColorView) class.
+
+```csharp
+public ColorView()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Color](#uid-565abe5a2d) | Gets or sets the currently selected color in the RGB color model. |
+| [ColorModel](#uid-4e392ee7fc) | Gets or sets the active color model used by the slider. |
+| [ColorSpectrumComponents](#uid-dc82908013) | Gets or sets the two HSV color components displayed by the spectrum. |
+| [ColorSpectrumShape](#uid-5dcb631483) | Gets or sets the displayed shape of the spectrum. |
+| [HexInputAlphaPosition](#uid-0bae0eeca6) | Gets or sets the position of the alpha component in the hexadecimal input box relative to all other color components. |
+| [HsvColor](#uid-5beafe132c) | Gets or sets the currently selected color in the HSV color model. |
+| [IsAccentColorsVisible](#uid-669d40d055) | Gets or sets a value indicating whether accent colors are visible along with the preview color. |
+| [IsAlphaEnabled](#uid-9309a51957) | Gets or sets a value indicating whether the alpha component is enabled. When disabled (set to false) the alpha component will be fixed to maximum and editing controls disabled. |
+| [IsAlphaVisible](#uid-7606769d23) | Gets or sets a value indicating whether the alpha component editing controls (Slider(s) and TextBox) are visible. When hidden, the existing alpha component value is maintained. |
+| [IsColorComponentsVisible](#uid-8dfad0bfaf) | Gets or sets a value indicating whether the color components tab/panel/page (subview) is visible. |
+| [IsColorModelVisible](#uid-9b353794cb) | Gets or sets a value indicating whether the active color model indicator/selector is visible. |
+| [IsColorPaletteVisible](#uid-e68cd68580) | Gets or sets a value indicating whether the color palette tab/panel/page (subview) is visible. |
+| [IsColorPreviewVisible](#uid-f4d00375cb) | Gets or sets a value indicating whether the color preview is visible. |
+| [IsColorSpectrumSliderVisible](#uid-a4fbbb7e9b) | Gets or sets a value indicating whether the color spectrum's third component slider is visible. |
+| [IsColorSpectrumVisible](#uid-e47a831b41) | Gets or sets a value indicating whether the color spectrum tab/panel/page (subview) is visible. |
+| [IsComponentSliderVisible](#uid-d1ba5ecac9) | Gets or sets a value indicating whether color component sliders are visible. |
+| [IsComponentTextInputVisible](#uid-9ffd26fafa) | Gets or sets a value indicating whether color component text inputs are visible. |
+| [IsHexInputVisible](#uid-ab7b818e57) | Gets or sets a value indicating whether the hexadecimal color value text input is visible. |
+| [MaxHue](#uid-70f4a2e249) | Gets or sets the maximum value of the Hue component in the range from 0..359. This property must be greater than Avalonia.Controls.Primitives.ColorSpectrum.MinHue. |
+| [MaxSaturation](#uid-c3f1771623) | Gets or sets the maximum value of the Saturation component in the range from 0..100. This property must be greater than Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation. |
+| [MaxValue](#uid-72db3474a7) | Gets or sets the maximum value of the Value component in the range from 0..100. This property must be greater than Avalonia.Controls.Primitives.ColorSpectrum.MinValue. |
+| [MinHue](#uid-73db6f2e6c) | Gets or sets the minimum value of the Hue component in the range from 0..359. This property must be less than Avalonia.Controls.Primitives.ColorSpectrum.MaxHue. |
+| [MinSaturation](#uid-e73e5aaf21) | Gets or sets the minimum value of the Saturation component in the range from 0..100. This property must be less than Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation. |
+| [MinValue](#uid-c72eb74199) | Gets or sets the minimum value of the Value component in the range from 0..100. This property must be less than Avalonia.Controls.Primitives.ColorSpectrum.MaxValue. |
+| [Palette](#uid-948a926833) | Gets or sets the color palette. |
+| [PaletteColors](#uid-d1e584647f) | Gets or sets the collection of individual colors in the palette. |
+| [PaletteColumnCount](#uid-f20467ec76) | Gets or sets the number of colors in each row (section) of the color palette. Within a standard palette, rows are shades and columns are colors. |
+| [SelectedIndex](#uid-c077834dee) | Gets or sets the index of the selected tab/panel/page (subview). |
+
+<span id="uid-565abe5a2d"></span>
+
+### Color
+
+Gets or sets the currently selected color in the RGB color model.
+
+```csharp
+public Avalonia.Media.Color Color { get; set; }
+```
+
+<span id="uid-4e392ee7fc"></span>
+
+### ColorModel
+
+Gets or sets the active color model used by the slider.
+
+```csharp
+public Avalonia.Controls.ColorModel ColorModel { get; set; }
+```
+
+<span id="uid-dc82908013"></span>
+
+### ColorSpectrumComponents
+
+Gets or sets the two HSV color components displayed by the spectrum.
+
+```csharp
+public Avalonia.Controls.ColorSpectrumComponents ColorSpectrumComponents { get; set; }
+```
+
+<span id="uid-5dcb631483"></span>
+
+### ColorSpectrumShape
+
+Gets or sets the displayed shape of the spectrum.
+
+```csharp
+public Avalonia.Controls.ColorSpectrumShape ColorSpectrumShape { get; set; }
+```
+
+<span id="uid-0bae0eeca6"></span>
+
+### HexInputAlphaPosition
+
+Gets or sets the position of the alpha component in the hexadecimal input box relative to
+all other color components.
+
+```csharp
+public Avalonia.Controls.AlphaComponentPosition HexInputAlphaPosition { get; set; }
+```
+
+<span id="uid-5beafe132c"></span>
+
+### HsvColor
+
+Gets or sets the currently selected color in the HSV color model.
+
+```csharp
+public Avalonia.Media.HsvColor HsvColor { get; set; }
+```
+
+<span id="uid-669d40d055"></span>
+
+### IsAccentColorsVisible
+
+Gets or sets a value indicating whether accent colors are visible along
+with the preview color.
+
+```csharp
+public System.Boolean IsAccentColorsVisible { get; set; }
+```
+
+<span id="uid-9309a51957"></span>
+
+### IsAlphaEnabled
+
+Gets or sets a value indicating whether the alpha component is enabled.
+When disabled (set to false) the alpha component will be fixed to maximum and
+editing controls disabled.
+
+```csharp
+public System.Boolean IsAlphaEnabled { get; set; }
+```
+
+<span id="uid-7606769d23"></span>
+
+### IsAlphaVisible
+
+Gets or sets a value indicating whether the alpha component editing controls
+(Slider(s) and TextBox) are visible. When hidden, the existing alpha component
+value is maintained.
+
+```csharp
+public System.Boolean IsAlphaVisible { get; set; }
+```
+
+<span id="uid-8dfad0bfaf"></span>
+
+### IsColorComponentsVisible
+
+Gets or sets a value indicating whether the color components tab/panel/page (subview) is visible.
+
+```csharp
+public System.Boolean IsColorComponentsVisible { get; set; }
+```
+
+<span id="uid-9b353794cb"></span>
+
+### IsColorModelVisible
+
+Gets or sets a value indicating whether the active color model indicator/selector is visible.
+
+```csharp
+public System.Boolean IsColorModelVisible { get; set; }
+```
+
+<span id="uid-e68cd68580"></span>
+
+### IsColorPaletteVisible
+
+Gets or sets a value indicating whether the color palette tab/panel/page (subview) is visible.
+
+```csharp
+public System.Boolean IsColorPaletteVisible { get; set; }
+```
+
+<span id="uid-f4d00375cb"></span>
+
+### IsColorPreviewVisible
+
+Gets or sets a value indicating whether the color preview is visible.
+
+```csharp
+public System.Boolean IsColorPreviewVisible { get; set; }
+```
+
+<span id="uid-a4fbbb7e9b"></span>
+
+### IsColorSpectrumSliderVisible
+
+Gets or sets a value indicating whether the color spectrum's third component slider
+is visible.
+
+```csharp
+public System.Boolean IsColorSpectrumSliderVisible { get; set; }
+```
+
+<span id="uid-e47a831b41"></span>
+
+### IsColorSpectrumVisible
+
+Gets or sets a value indicating whether the color spectrum tab/panel/page (subview) is visible.
+
+```csharp
+public System.Boolean IsColorSpectrumVisible { get; set; }
+```
+
+<span id="uid-d1ba5ecac9"></span>
+
+### IsComponentSliderVisible
+
+Gets or sets a value indicating whether color component sliders are visible.
+
+```csharp
+public System.Boolean IsComponentSliderVisible { get; set; }
+```
+
+<span id="uid-9ffd26fafa"></span>
+
+### IsComponentTextInputVisible
+
+Gets or sets a value indicating whether color component text inputs are visible.
+
+```csharp
+public System.Boolean IsComponentTextInputVisible { get; set; }
+```
+
+<span id="uid-ab7b818e57"></span>
+
+### IsHexInputVisible
+
+Gets or sets a value indicating whether the hexadecimal color value text input
+is visible.
+
+```csharp
+public System.Boolean IsHexInputVisible { get; set; }
+```
+
+<span id="uid-70f4a2e249"></span>
+
+### MaxHue
+
+Gets or sets the maximum value of the Hue component in the range from 0..359.
+This property must be greater than [Avalonia.Controls.Primitives.ColorSpectrum.MinHue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinHue).
+
+```csharp
+public System.Int32 MaxHue { get; set; }
+```
+
+<span id="uid-c3f1771623"></span>
+
+### MaxSaturation
+
+Gets or sets the maximum value of the Saturation component in the range from 0..100.
+This property must be greater than [Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation).
+
+```csharp
+public System.Int32 MaxSaturation { get; set; }
+```
+
+<span id="uid-72db3474a7"></span>
+
+### MaxValue
+
+Gets or sets the maximum value of the Value component in the range from 0..100.
+This property must be greater than [Avalonia.Controls.Primitives.ColorSpectrum.MinValue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MinValue).
+
+```csharp
+public System.Int32 MaxValue { get; set; }
+```
+
+<span id="uid-73db6f2e6c"></span>
+
+### MinHue
+
+Gets or sets the minimum value of the Hue component in the range from 0..359.
+This property must be less than [Avalonia.Controls.Primitives.ColorSpectrum.MaxHue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxHue).
+
+```csharp
+public System.Int32 MinHue { get; set; }
+```
+
+<span id="uid-e73e5aaf21"></span>
+
+### MinSaturation
+
+Gets or sets the minimum value of the Saturation component in the range from 0..100.
+This property must be less than [Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation).
+
+```csharp
+public System.Int32 MinSaturation { get; set; }
+```
+
+<span id="uid-c72eb74199"></span>
+
+### MinValue
+
+Gets or sets the minimum value of the Value component in the range from 0..100.
+This property must be less than [Avalonia.Controls.Primitives.ColorSpectrum.MaxValue](xref:Avalonia.Controls.Primitives.ColorSpectrum.MaxValue).
+
+```csharp
+public System.Int32 MinValue { get; set; }
+```
+
+<span id="uid-948a926833"></span>
+
+### Palette
+
+Gets or sets the color palette.
+
+```csharp
+public Avalonia.Controls.IColorPalette Palette { get; set; }
+```
+
+<span id="uid-d1e584647f"></span>
+
+### PaletteColors
+
+Gets or sets the collection of individual colors in the palette.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Media.Color> PaletteColors { get; set; }
+```
+
+<span id="uid-f20467ec76"></span>
+
+### PaletteColumnCount
+
+Gets or sets the number of colors in each row (section) of the color palette.
+Within a standard palette, rows are shades and columns are colors.
+
+```csharp
+public System.Int32 PaletteColumnCount { get; set; }
+```
+
+<span id="uid-c077834dee"></span>
+
+### SelectedIndex
+
+Gets or sets the index of the selected tab/panel/page (subview).
+
+```csharp
+public System.Int32 SelectedIndex { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ColorModelProperty](#uid-637b7a8bfe) | Defines the Avalonia.Controls.ColorView.ColorModel property. |
+| [ColorProperty](#uid-9ae46c71bf) | Defines the Avalonia.Controls.ColorView.Color property. |
+| [ColorSpectrumComponentsProperty](#uid-f64254d80d) | Defines the Avalonia.Controls.ColorView.ColorSpectrumComponents property. |
+| [ColorSpectrumShapeProperty](#uid-de4cc60068) | Defines the Avalonia.Controls.ColorView.ColorSpectrumShape property. |
+| [HexInputAlphaPositionProperty](#uid-bfbd59364e) | Defines the Avalonia.Controls.ColorView.HexInputAlphaPosition property. |
+| [HsvColorProperty](#uid-55ed9728db) | Defines the Avalonia.Controls.ColorView.HsvColor property. |
+| [IsAccentColorsVisibleProperty](#uid-5536001f7e) | Defines the Avalonia.Controls.ColorView.IsAccentColorsVisible property. |
+| [IsAlphaEnabledProperty](#uid-150320b533) | Defines the Avalonia.Controls.ColorView.IsAlphaEnabled property. |
+| [IsAlphaVisibleProperty](#uid-1c5fd907b8) | Defines the Avalonia.Controls.ColorView.IsAlphaVisible property. |
+| [IsColorComponentsVisibleProperty](#uid-20a4bdf593) | Defines the Avalonia.Controls.ColorView.IsColorComponentsVisible property. |
+| [IsColorModelVisibleProperty](#uid-66b6e6a06d) | Defines the Avalonia.Controls.ColorView.IsColorModelVisible property. |
+| [IsColorPaletteVisibleProperty](#uid-1d12ba7649) | Defines the Avalonia.Controls.ColorView.IsColorPaletteVisible property. |
+| [IsColorPreviewVisibleProperty](#uid-7369bd565c) | Defines the Avalonia.Controls.ColorView.IsColorPreviewVisible property. |
+| [IsColorSpectrumSliderVisibleProperty](#uid-0febcd0663) | Defines the Avalonia.Controls.ColorView.IsColorSpectrumSliderVisible property. |
+| [IsColorSpectrumVisibleProperty](#uid-7d349b1cd7) | Defines the Avalonia.Controls.ColorView.IsColorSpectrumVisible property. |
+| [IsComponentSliderVisibleProperty](#uid-5ae7456a83) | Defines the Avalonia.Controls.ColorView.IsComponentSliderVisible property. |
+| [IsComponentTextInputVisibleProperty](#uid-18237f6388) | Defines the Avalonia.Controls.ColorView.IsComponentTextInputVisible property. |
+| [IsHexInputVisibleProperty](#uid-7e810ca3d3) | Defines the Avalonia.Controls.ColorView.IsHexInputVisible property. |
+| [MaxHueProperty](#uid-f67d2b40cf) | Defines the Avalonia.Controls.ColorView.MaxHue property. |
+| [MaxSaturationProperty](#uid-bd797ff094) | Defines the Avalonia.Controls.ColorView.MaxSaturation property. |
+| [MaxValueProperty](#uid-ba2b062c33) | Defines the Avalonia.Controls.ColorView.MaxValue property. |
+| [MinHueProperty](#uid-271e4d9d58) | Defines the Avalonia.Controls.ColorView.MinHue property. |
+| [MinSaturationProperty](#uid-e2282bffc1) | Defines the Avalonia.Controls.ColorView.MinSaturation property. |
+| [MinValueProperty](#uid-0adc0ad5e7) | Defines the Avalonia.Controls.ColorView.MinValue property. |
+| [PaletteColorsProperty](#uid-fd0d5bb775) | Defines the Avalonia.Controls.ColorView.PaletteColors property. |
+| [PaletteColumnCountProperty](#uid-1c4e560ec5) | Defines the Avalonia.Controls.ColorView.PaletteColumnCount property. |
+| [PaletteProperty](#uid-37c6ddb832) | Defines the Avalonia.Controls.ColorView.Palette property. |
+| [SelectedIndexProperty](#uid-fd926fa81b) | Defines the Avalonia.Controls.ColorView.SelectedIndex property. |
+
+<span id="uid-637b7a8bfe"></span>
+
+### ColorModelProperty
+
+Defines the [Avalonia.Controls.ColorView.ColorModel](xref:Avalonia.Controls.ColorView.ColorModel) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ColorModel> ColorModelProperty
+```
+
+<span id="uid-9ae46c71bf"></span>
+
+### ColorProperty
+
+Defines the [Avalonia.Controls.ColorView.Color](xref:Avalonia.Controls.ColorView.Color) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.Color> ColorProperty
+```
+
+<span id="uid-f64254d80d"></span>
+
+### ColorSpectrumComponentsProperty
+
+Defines the [Avalonia.Controls.ColorView.ColorSpectrumComponents](xref:Avalonia.Controls.ColorView.ColorSpectrumComponents) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ColorSpectrumComponents> ColorSpectrumComponentsProperty
+```
+
+<span id="uid-de4cc60068"></span>
+
+### ColorSpectrumShapeProperty
+
+Defines the [Avalonia.Controls.ColorView.ColorSpectrumShape](xref:Avalonia.Controls.ColorView.ColorSpectrumShape) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ColorSpectrumShape> ColorSpectrumShapeProperty
+```
+
+<span id="uid-bfbd59364e"></span>
+
+### HexInputAlphaPositionProperty
+
+Defines the [Avalonia.Controls.ColorView.HexInputAlphaPosition](xref:Avalonia.Controls.ColorView.HexInputAlphaPosition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.AlphaComponentPosition> HexInputAlphaPositionProperty
+```
+
+<span id="uid-55ed9728db"></span>
+
+### HsvColorProperty
+
+Defines the [Avalonia.Controls.ColorView.HsvColor](xref:Avalonia.Controls.ColorView.HsvColor) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.HsvColor> HsvColorProperty
+```
+
+<span id="uid-5536001f7e"></span>
+
+### IsAccentColorsVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsAccentColorsVisible](xref:Avalonia.Controls.ColorView.IsAccentColorsVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsAccentColorsVisibleProperty
+```
+
+<span id="uid-150320b533"></span>
+
+### IsAlphaEnabledProperty
+
+Defines the [Avalonia.Controls.ColorView.IsAlphaEnabled](xref:Avalonia.Controls.ColorView.IsAlphaEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsAlphaEnabledProperty
+```
+
+<span id="uid-1c5fd907b8"></span>
+
+### IsAlphaVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsAlphaVisible](xref:Avalonia.Controls.ColorView.IsAlphaVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsAlphaVisibleProperty
+```
+
+<span id="uid-20a4bdf593"></span>
+
+### IsColorComponentsVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsColorComponentsVisible](xref:Avalonia.Controls.ColorView.IsColorComponentsVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsColorComponentsVisibleProperty
+```
+
+<span id="uid-66b6e6a06d"></span>
+
+### IsColorModelVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsColorModelVisible](xref:Avalonia.Controls.ColorView.IsColorModelVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsColorModelVisibleProperty
+```
+
+<span id="uid-1d12ba7649"></span>
+
+### IsColorPaletteVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsColorPaletteVisible](xref:Avalonia.Controls.ColorView.IsColorPaletteVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsColorPaletteVisibleProperty
+```
+
+<span id="uid-7369bd565c"></span>
+
+### IsColorPreviewVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsColorPreviewVisible](xref:Avalonia.Controls.ColorView.IsColorPreviewVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsColorPreviewVisibleProperty
+```
+
+<span id="uid-0febcd0663"></span>
+
+### IsColorSpectrumSliderVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsColorSpectrumSliderVisible](xref:Avalonia.Controls.ColorView.IsColorSpectrumSliderVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsColorSpectrumSliderVisibleProperty
+```
+
+<span id="uid-7d349b1cd7"></span>
+
+### IsColorSpectrumVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsColorSpectrumVisible](xref:Avalonia.Controls.ColorView.IsColorSpectrumVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsColorSpectrumVisibleProperty
+```
+
+<span id="uid-5ae7456a83"></span>
+
+### IsComponentSliderVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsComponentSliderVisible](xref:Avalonia.Controls.ColorView.IsComponentSliderVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsComponentSliderVisibleProperty
+```
+
+<span id="uid-18237f6388"></span>
+
+### IsComponentTextInputVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsComponentTextInputVisible](xref:Avalonia.Controls.ColorView.IsComponentTextInputVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsComponentTextInputVisibleProperty
+```
+
+<span id="uid-7e810ca3d3"></span>
+
+### IsHexInputVisibleProperty
+
+Defines the [Avalonia.Controls.ColorView.IsHexInputVisible](xref:Avalonia.Controls.ColorView.IsHexInputVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsHexInputVisibleProperty
+```
+
+<span id="uid-f67d2b40cf"></span>
+
+### MaxHueProperty
+
+Defines the [Avalonia.Controls.ColorView.MaxHue](xref:Avalonia.Controls.ColorView.MaxHue) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxHueProperty
+```
+
+<span id="uid-bd797ff094"></span>
+
+### MaxSaturationProperty
+
+Defines the [Avalonia.Controls.ColorView.MaxSaturation](xref:Avalonia.Controls.ColorView.MaxSaturation) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxSaturationProperty
+```
+
+<span id="uid-ba2b062c33"></span>
+
+### MaxValueProperty
+
+Defines the [Avalonia.Controls.ColorView.MaxValue](xref:Avalonia.Controls.ColorView.MaxValue) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxValueProperty
+```
+
+<span id="uid-271e4d9d58"></span>
+
+### MinHueProperty
+
+Defines the [Avalonia.Controls.ColorView.MinHue](xref:Avalonia.Controls.ColorView.MinHue) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MinHueProperty
+```
+
+<span id="uid-e2282bffc1"></span>
+
+### MinSaturationProperty
+
+Defines the [Avalonia.Controls.ColorView.MinSaturation](xref:Avalonia.Controls.ColorView.MinSaturation) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MinSaturationProperty
+```
+
+<span id="uid-0adc0ad5e7"></span>
+
+### MinValueProperty
+
+Defines the [Avalonia.Controls.ColorView.MinValue](xref:Avalonia.Controls.ColorView.MinValue) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MinValueProperty
+```
+
+<span id="uid-fd0d5bb775"></span>
+
+### PaletteColorsProperty
+
+Defines the [Avalonia.Controls.ColorView.PaletteColors](xref:Avalonia.Controls.ColorView.PaletteColors) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IEnumerable<Avalonia.Media.Color>> PaletteColorsProperty
+```
+
+<span id="uid-1c4e560ec5"></span>
+
+### PaletteColumnCountProperty
+
+Defines the [Avalonia.Controls.ColorView.PaletteColumnCount](xref:Avalonia.Controls.ColorView.PaletteColumnCount) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> PaletteColumnCountProperty
+```
+
+<span id="uid-37c6ddb832"></span>
+
+### PaletteProperty
+
+Defines the [Avalonia.Controls.ColorView.Palette](xref:Avalonia.Controls.ColorView.Palette) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.IColorPalette> PaletteProperty
+```
+
+<span id="uid-fd926fa81b"></span>
+
+### SelectedIndexProperty
+
+Defines the [Avalonia.Controls.ColorView.SelectedIndex](xref:Avalonia.Controls.ColorView.SelectedIndex) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> SelectedIndexProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ColorChanged](#uid-b366faafe7) | Event for when the selected color changes within the slider. |
+
+<span id="uid-b366faafe7"></span>
+
+### ColorChanged
+
+Event for when the selected color changes within the slider.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ColorChangedEventArgs> ColorChanged
+```
+
+</ApiRefPage>
+

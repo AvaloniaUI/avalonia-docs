@@ -1,0 +1,197 @@
+---
+title: 'TypeUtilities'
+hide_title: true
+slug: '/avalonia/utilities/typeutilities'
+uid: 'Avalonia.Utilities.TypeUtilities'
+commentId: 'T:Avalonia.Utilities.TypeUtilities'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TypeUtilities Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides utilities for working with types at runtime.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TypeUtilities
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TypeUtilities
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AcceptsNull (2 overloads)](#uid-4f32229275) | No summary available. |
+| [CanCast](#uid-1bc57e47b6) | No summary available. |
+| [ConvertImplicit](#uid-a5ec827ebc) | No summary available. |
+| [ConvertImplicitOrDefault](#uid-e02ea85d39) | Convert a value to a type using the implicit conversions allowed by the C# language or return the default for the type if the value could not be converted. |
+| [ConvertOrDefault](#uid-021554d856) | Convert a value to a type by any means possible, returning the default for that type if the value could not be converted. |
+| [Default](#uid-55f12a8f0d) | Gets the default value for the specified type. |
+| [IsNumeric](#uid-6adf09cecc) | Determines if a type is numeric. Nullable numeric types are considered numeric. |
+| [TryConvert](#uid-19e28b3b5f) | No summary available. |
+| [TryConvertImplicit](#uid-d9e79f4461) | No summary available. |
+
+<span id="uid-4f32229275"></span>
+
+### AcceptsNull overloads
+
+<span id="uid-86f1c83d4a"></span>
+
+#### AcceptsNull
+
+```csharp
+public System.Boolean AcceptsNull<T>()
+```
+
+<span id="uid-870e76f538"></span>
+
+#### AcceptsNull
+
+Returns a value indicating whether null can be assigned to the specified type.
+
+```csharp
+public System.Boolean AcceptsNull(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type. |
+
+Returns: True if the type accepts null values; otherwise false.
+
+<span id="uid-1bc57e47b6"></span>
+
+### CanCast
+
+```csharp
+public System.Boolean CanCast<T>(System.Object value)
+```
+
+<span id="uid-a5ec827ebc"></span>
+
+### ConvertImplicit
+
+```csharp
+public T ConvertImplicit<T>(System.Object value)
+```
+
+<span id="uid-e02ea85d39"></span>
+
+### ConvertImplicitOrDefault
+
+Convert a value to a type using the implicit conversions allowed by the C# language or
+return the default for the type if the value could not be converted.
+
+```csharp
+public System.Object ConvertImplicitOrDefault(System.Object value, System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type to convert to. |
+| `value` | The value to convert. |
+
+Returns: A value of `type`.
+
+<span id="uid-021554d856"></span>
+
+### ConvertOrDefault
+
+Convert a value to a type by any means possible, returning the default for that type
+if the value could not be converted.
+
+```csharp
+public System.Object ConvertOrDefault(System.Object value, System.Type type, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `type` | The type to convert to. |
+| `value` | The value to convert. |
+
+Returns: A value of `type`.
+
+<span id="uid-55f12a8f0d"></span>
+
+### Default
+
+Gets the default value for the specified type.
+
+```csharp
+public System.Object Default(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type. |
+
+Returns: The default value.
+
+<span id="uid-6adf09cecc"></span>
+
+### IsNumeric
+
+Determines if a type is numeric. Nullable numeric types are considered numeric.
+
+```csharp
+public System.Boolean IsNumeric(System.Type type)
+```
+
+Returns: True if the type is numeric; otherwise false.
+
+<span id="uid-19e28b3b5f"></span>
+
+### TryConvert
+
+```csharp
+public System.Boolean TryConvert(System.Type to, System.Object value, System.Globalization.CultureInfo culture, System.Object& result)
+```
+
+<span id="uid-d9e79f4461"></span>
+
+### TryConvertImplicit
+
+```csharp
+public System.Boolean TryConvertImplicit(System.Type to, System.Object value, System.Object& result)
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,146 @@
+---
+title: 'BindingChainException'
+hide_title: true
+slug: '/avalonia/data/bindingchainexception'
+uid: 'Avalonia.Data.BindingChainException'
+commentId: 'T:Avalonia.Data.BindingChainException'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BindingChainException Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An exception returned through [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) signaling that a
+requested binding expression could not be evaluated because of an error in one of
+the links of the binding chain.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BindingChainException
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Exception <span className="apiref-page__relation-separator">-&gt;</span> BindingChainException
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BindingChainException (3 overloads)](#uid-82707489f1) | Initializes a new instance of the Avalonia.Data.BindingChainException class. |
+
+<span id="uid-82707489f1"></span>
+
+### BindingChainException overloads
+
+<span id="uid-8c17dda5ac"></span>
+
+#### BindingChainException
+
+Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class.
+
+```csharp
+public BindingChainException()
+```
+
+<span id="uid-f7de989ef7"></span>
+
+#### BindingChainException
+
+Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class.
+
+```csharp
+public BindingChainException(System.String message)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `message` | The error message. |
+
+<span id="uid-a3a91a6a41"></span>
+
+#### BindingChainException
+
+Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class.
+
+```csharp
+public BindingChainException(System.String message, System.String expression, System.String errorPoint)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `errorPoint` | The point in the expression at which the error was encountered. |
+| `expression` | The expression. |
+| `message` | The error message. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Expression](#uid-593abf2abb) | Gets the expression that could not be evaluated. |
+| [ExpressionErrorPoint](#uid-d29964fc36) | Gets the point in the expression at which the error occurred. |
+| [Message](#uid-d0466cb300) | No summary available. |
+
+<span id="uid-593abf2abb"></span>
+
+### Expression
+
+Gets the expression that could not be evaluated.
+
+```csharp
+public System.String Expression { get; set; }
+```
+
+<span id="uid-d29964fc36"></span>
+
+### ExpressionErrorPoint
+
+Gets the point in the expression at which the error occurred.
+
+```csharp
+public System.String ExpressionErrorPoint { get; set; }
+```
+
+<span id="uid-d0466cb300"></span>
+
+### Message
+
+```csharp
+public System.String Message { get; set; }
+```
+
+</ApiRefPage>
+

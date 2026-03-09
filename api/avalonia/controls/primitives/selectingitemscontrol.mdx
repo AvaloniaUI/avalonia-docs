@@ -1,0 +1,397 @@
+---
+title: 'SelectingItemsControl'
+hide_title: true
+slug: '/avalonia/controls/primitives/selectingitemscontrol'
+uid: 'Avalonia.Controls.Primitives.SelectingItemsControl'
+commentId: 'T:Avalonia.Controls.Primitives.SelectingItemsControl'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SelectingItemsControl Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl) that maintains a selection.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SelectingItemsControl
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../itemscontrol">ItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> SelectingItemsControl
+</div>
+</div>
+
+## Remarks
+
+[Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) provides a base class for [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl)s
+that maintain a selection (single or multiple). By default only its
+[Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndex](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndex) and [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItem](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItem) properties are visible; the
+current multiple [Avalonia.Controls.Primitives.SelectingItemsControl.Selection](xref:Avalonia.Controls.Primitives.SelectingItemsControl.Selection) and [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItems](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItems) together with the
+[Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode) properties are protected, however a derived class can expose
+these if it wishes to support multiple selection.
+
+[Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) maintains a selection respecting the current
+[Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode) but it does not react to user input; this must be handled in a
+derived class. It does, however, respond to [Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedChangedEvent](xref:Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedChangedEvent) events
+from items and updates the selection accordingly.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SelectingItemsControl](#uid-00a353fa80) | No summary available. |
+
+<span id="uid-00a353fa80"></span>
+
+### SelectingItemsControl
+
+```csharp
+public SelectingItemsControl()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInit](#uid-70cc7c2bc9) | No summary available. |
+| [EndInit](#uid-e0234c42d1) | No summary available. |
+| [GetIsSelected](#uid-3b2f7157b2) | Gets the value of the Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedProperty on the specified control. |
+| [ItemsControlFromItemContainer](#uid-ddd62a2c96) | Returns the Avalonia.Controls.ItemsControl that owns the specified container control. |
+| [SetIsSelected](#uid-73a70ac4f6) | Gets the value of the Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedProperty on the specified control. |
+| [UpdateSelectionFromEvent](#uid-321273e542) | Updates the selection based on an event that may have originated in a container that belongs to the control. |
+
+<span id="uid-70cc7c2bc9"></span>
+
+### BeginInit
+
+```csharp
+public System.Void BeginInit()
+```
+
+<span id="uid-e0234c42d1"></span>
+
+### EndInit
+
+```csharp
+public System.Void EndInit()
+```
+
+<span id="uid-3b2f7157b2"></span>
+
+### GetIsSelected
+
+Gets the value of the [Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedProperty](xref:Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedProperty) on the specified control.
+
+```csharp
+public System.Boolean GetIsSelected(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+Returns: The value of the attached property.
+
+<span id="uid-ddd62a2c96"></span>
+
+### ItemsControlFromItemContainer
+
+Returns the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl) that owns the specified container control.
+
+```csharp
+public Avalonia.Controls.Primitives.SelectingItemsControl ItemsControlFromItemContainer(Avalonia.Controls.Control container)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `container` | The container. |
+
+Returns: The owning [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl) or null if the control is not an items container.
+
+<span id="uid-73a70ac4f6"></span>
+
+### SetIsSelected
+
+Gets the value of the [Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedProperty](xref:Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedProperty) on the specified control.
+
+```csharp
+public System.Void SetIsSelected(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+| `value` | The value of the property. |
+
+Returns: The value of the attached property.
+
+<span id="uid-321273e542"></span>
+
+### UpdateSelectionFromEvent
+
+Updates the selection based on an event that may have originated in a container that
+belongs to the control.
+
+```csharp
+public System.Boolean UpdateSelectionFromEvent(Avalonia.Controls.Control container, Avalonia.Interactivity.RoutedEventArgs eventArgs)
+```
+
+Returns: True if the event was accepted and handled, otherwise false.
+
+#### See also
+
+- [Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection(Avalonia.Visual,Avalonia.Input.PointerEventArgs)](xref:Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection%28Avalonia.Visual%2CAvalonia.Input.PointerEventArgs%29)
+- [Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection(Avalonia.Visual,Avalonia.Input.KeyEventArgs)](xref:Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection%28Avalonia.Visual%2CAvalonia.Input.KeyEventArgs%29)
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AutoScrollToSelectedItem](#uid-c9ea4750c8) | Gets or sets a value indicating whether to automatically scroll to newly selected items. |
+| [IsTextSearchEnabled](#uid-1e61c4aca1) | Gets or sets a value that specifies whether a user can jump to a value by typing. |
+| [SelectedIndex](#uid-59c4436ce0) | Gets or sets the index of the selected item. |
+| [SelectedItem](#uid-1b8394c9e5) | Gets or sets the selected item. |
+| [SelectedValue](#uid-300ff5996b) | Gets or sets the value of the selected item, obtained using Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBinding |
+| [SelectedValueBinding](#uid-e9fccf83ea) | Gets the Avalonia.Data.BindingBase instance used to obtain the Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValue property |
+| [WrapSelection](#uid-204903c923) | Gets or sets a value which indicates whether to wrap around when the first or last item is reached. |
+
+<span id="uid-c9ea4750c8"></span>
+
+### AutoScrollToSelectedItem
+
+Gets or sets a value indicating whether to automatically scroll to newly selected items.
+
+```csharp
+public System.Boolean AutoScrollToSelectedItem { get; set; }
+```
+
+<span id="uid-1e61c4aca1"></span>
+
+### IsTextSearchEnabled
+
+Gets or sets a value that specifies whether a user can jump to a value by typing.
+
+```csharp
+public System.Boolean IsTextSearchEnabled { get; set; }
+```
+
+<span id="uid-59c4436ce0"></span>
+
+### SelectedIndex
+
+Gets or sets the index of the selected item.
+
+```csharp
+public System.Int32 SelectedIndex { get; set; }
+```
+
+<span id="uid-1b8394c9e5"></span>
+
+### SelectedItem
+
+Gets or sets the selected item.
+
+```csharp
+public System.Object SelectedItem { get; set; }
+```
+
+<span id="uid-300ff5996b"></span>
+
+### SelectedValue
+
+Gets or sets the value of the selected item, obtained using
+[Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBinding](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBinding)
+
+```csharp
+public System.Object SelectedValue { get; set; }
+```
+
+<span id="uid-e9fccf83ea"></span>
+
+### SelectedValueBinding
+
+Gets the [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase) instance used to obtain the
+[Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValue](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValue) property
+
+```csharp
+public Avalonia.Data.BindingBase SelectedValueBinding { get; set; }
+```
+
+<span id="uid-204903c923"></span>
+
+### WrapSelection
+
+Gets or sets a value which indicates whether to wrap around when the first
+or last item is reached.
+
+```csharp
+public System.Boolean WrapSelection { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AutoScrollToSelectedItemProperty](#uid-471e277d7d) | Defines the Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItem property. |
+| [IsSelectedChangedEvent](#uid-17ba978e7b) | Event that should be raised by containers when their selection state changes to notify the parent Avalonia.Controls.Primitives.SelectingItemsControl that their selection state has changed. |
+| [IsSelectedProperty](#uid-104e831b83) | Defines the IsSelected attached property. |
+| [IsTextSearchEnabledProperty](#uid-f32cd32acb) | Defines the Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabled property. |
+| [SelectedIndexProperty](#uid-6770abbfa6) | Defines the Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndex property. |
+| [SelectedItemProperty](#uid-fad3d278a9) | Defines the Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItem property. |
+| [SelectedValueBindingProperty](#uid-ba2eea4b27) | Defines the Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBinding property |
+| [SelectedValueProperty](#uid-4112553e6e) | Defines the Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValue property |
+| [SelectionChangedEvent](#uid-dc49886a72) | Defines the Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged event. |
+| [WrapSelectionProperty](#uid-4434334f78) | Defines the Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection property. |
+
+<span id="uid-471e277d7d"></span>
+
+### AutoScrollToSelectedItemProperty
+
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItem](xref:Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItem) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AutoScrollToSelectedItemProperty
+```
+
+<span id="uid-17ba978e7b"></span>
+
+### IsSelectedChangedEvent
+
+Event that should be raised by containers when their selection state changes to notify
+the parent [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) that their selection state has changed.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> IsSelectedChangedEvent
+```
+
+<span id="uid-104e831b83"></span>
+
+### IsSelectedProperty
+
+Defines the IsSelected attached property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsSelectedProperty
+```
+
+<span id="uid-f32cd32acb"></span>
+
+### IsTextSearchEnabledProperty
+
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabled](xref:Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsTextSearchEnabledProperty
+```
+
+<span id="uid-6770abbfa6"></span>
+
+### SelectedIndexProperty
+
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndex](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndex) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.SelectingItemsControl, System.Int32> SelectedIndexProperty
+```
+
+<span id="uid-fad3d278a9"></span>
+
+### SelectedItemProperty
+
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItem](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItem) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.SelectingItemsControl, System.Object> SelectedItemProperty
+```
+
+<span id="uid-ba2eea4b27"></span>
+
+### SelectedValueBindingProperty
+
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBinding](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBinding) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Data.BindingBase> SelectedValueBindingProperty
+```
+
+<span id="uid-4112553e6e"></span>
+
+### SelectedValueProperty
+
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValue](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValue) property
+
+```csharp
+public Avalonia.StyledProperty<System.Object> SelectedValueProperty
+```
+
+<span id="uid-dc49886a72"></span>
+
+### SelectionChangedEvent
+
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.SelectionChangedEventArgs> SelectionChangedEvent
+```
+
+<span id="uid-4434334f78"></span>
+
+### WrapSelectionProperty
+
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection](xref:Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> WrapSelectionProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SelectionChanged](#uid-18e6d19796) | Occurs when the control's selection changes. |
+
+<span id="uid-18e6d19796"></span>
+
+### SelectionChanged
+
+Occurs when the control's selection changes.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs> SelectionChanged
+```
+
+</ApiRefPage>
+

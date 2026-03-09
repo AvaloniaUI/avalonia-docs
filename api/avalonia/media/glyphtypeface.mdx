@@ -1,0 +1,305 @@
+---
+title: 'GlyphTypeface'
+hide_title: true
+slug: '/avalonia/media/glyphtypeface'
+uid: 'Avalonia.Media.GlyphTypeface'
+commentId: 'T:Avalonia.Media.GlyphTypeface'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GlyphTypeface Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a glyph typeface, providing access to font metrics, glyph mappings, and other font-related
+properties.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GlyphTypeface
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> GlyphTypeface
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) class is used to encapsulate font data, including metrics,
+character-to-glyph mappings, and supported OpenType features. It supports platform-specific typefaces and
+applies optional font simulations such as bold or oblique. This class is typically used in text rendering and
+shaping scenarios.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GlyphTypeface](#uid-0ace250ea7) | Initializes a new instance of the Avalonia.Media.GlyphTypeface class with the specified platform typeface and font simulations. |
+
+<span id="uid-0ace250ea7"></span>
+
+### GlyphTypeface
+
+Initializes a new instance of the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) class with the specified platform typeface and
+font simulations.
+
+```csharp
+public GlyphTypeface(Avalonia.Media.IPlatformTypeface typeface, Avalonia.Media.FontSimulations fontSimulations)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `fontSimulations` | The font simulations to apply, such as bold or oblique. The default is [Avalonia.Media.FontSimulations.None](xref:Avalonia.Media.FontSimulations.None). |
+| `typeface` | The platform-specific typeface to be used for this [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) instance. This parameter
+cannot be `null`. |
+
+#### Exceptions
+
+- [Thrown if required font tables (e.g., 'maxp') cannot be loaded.](xref:System.InvalidOperationException)
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-611d5d5c3c) | No summary available. |
+| [TryGetGlyphMetrics (2 overloads)](#uid-224187e3e5) | No summary available. |
+| [TryGetHorizontalGlyphAdvance](#uid-327caa7a57) | No summary available. |
+| [TryGetHorizontalGlyphAdvances](#uid-fff209abba) | No summary available. |
+
+<span id="uid-611d5d5c3c"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-224187e3e5"></span>
+
+### TryGetGlyphMetrics overloads
+
+<span id="uid-2a0770d4e8"></span>
+
+#### TryGetGlyphMetrics
+
+```csharp
+public System.Boolean TryGetGlyphMetrics(System.ReadOnlySpan<System.UInt16> glyphIds, System.Span<Avalonia.Media.GlyphMetrics> metrics)
+```
+
+<span id="uid-18152dfbd1"></span>
+
+#### TryGetGlyphMetrics
+
+```csharp
+public System.Boolean TryGetGlyphMetrics(System.UInt16 glyph, Avalonia.Media.GlyphMetrics& metrics)
+```
+
+<span id="uid-327caa7a57"></span>
+
+### TryGetHorizontalGlyphAdvance
+
+```csharp
+public System.Boolean TryGetHorizontalGlyphAdvance(System.UInt16 glyphId, System.UInt16& advance)
+```
+
+<span id="uid-fff209abba"></span>
+
+### TryGetHorizontalGlyphAdvances
+
+```csharp
+public System.Boolean TryGetHorizontalGlyphAdvances(System.ReadOnlySpan<System.UInt16> glyphIds, System.Span<System.UInt16> advances)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CharacterToGlyphMap](#uid-820bb58c1b) | Gets a read-only mapping of Unicode character codes to glyph indices for the font. |
+| [FaceNames](#uid-d5bea81105) | Gets a read-only mapping of culture-specific face names. |
+| [FamilyName](#uid-7117edd23d) | Gets the family name of the font. |
+| [FamilyNames](#uid-c2fc7a9ce5) | Gets a read-only mapping of localized culture-specific family names. |
+| [FontSimulations](#uid-d4b3d5b8f6) | Gets the font simulation settings applied to the Avalonia.Media.GlyphTypeface. |
+| [GlyphCount](#uid-f8b29671db) | Gets the number of glyphs held by this font. |
+| [Metrics](#uid-49ad964e00) | Gets the font metrics associated with this font. |
+| [PlatformTypeface](#uid-239ceb6ee3) | Gets the platform-specific typeface associated with this font. |
+| [Stretch](#uid-bef0dfc38f) | Gets the font stretch. |
+| [Style](#uid-d762ed5152) | Gets the font style. |
+| [SupportedFeatures](#uid-61839489bf) | Gets the list of OpenType feature tags supported by the font. |
+| [TextShaperTypeface](#uid-df45934655) | Gets the typeface information used by the text shaper for this font. |
+| [TypographicFamilyName](#uid-5249100e36) | Gets the typographic family name of the font. |
+| [Weight](#uid-076de7204b) | Gets the font weight. |
+
+<span id="uid-820bb58c1b"></span>
+
+### CharacterToGlyphMap
+
+Gets a read-only mapping of Unicode character codes to glyph indices for the font.
+
+```csharp
+public Avalonia.Media.Fonts.Tables.Cmap.CharacterToGlyphMap CharacterToGlyphMap { get; set; }
+```
+
+<span id="uid-d5bea81105"></span>
+
+### FaceNames
+
+Gets a read-only mapping of culture-specific face names.
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, System.String> FaceNames { get; set; }
+```
+
+<span id="uid-7117edd23d"></span>
+
+### FamilyName
+
+Gets the family name of the font.
+
+```csharp
+public System.String FamilyName { get; set; }
+```
+
+<span id="uid-c2fc7a9ce5"></span>
+
+### FamilyNames
+
+Gets a read-only mapping of localized culture-specific family names.
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, System.String> FamilyNames { get; set; }
+```
+
+<span id="uid-d4b3d5b8f6"></span>
+
+### FontSimulations
+
+Gets the font simulation settings applied to the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface).
+
+```csharp
+public Avalonia.Media.FontSimulations FontSimulations { get; set; }
+```
+
+<span id="uid-f8b29671db"></span>
+
+### GlyphCount
+
+Gets the number of glyphs held by this font.
+
+```csharp
+public System.Int32 GlyphCount { get; set; }
+```
+
+<span id="uid-49ad964e00"></span>
+
+### Metrics
+
+Gets the font metrics associated with this font.
+
+```csharp
+public Avalonia.Media.FontMetrics Metrics { get; set; }
+```
+
+<span id="uid-239ceb6ee3"></span>
+
+### PlatformTypeface
+
+Gets the platform-specific typeface associated with this font.
+
+```csharp
+public Avalonia.Media.IPlatformTypeface PlatformTypeface { get; set; }
+```
+
+<span id="uid-bef0dfc38f"></span>
+
+### Stretch
+
+Gets the font stretch.
+
+```csharp
+public Avalonia.Media.FontStretch Stretch { get; set; }
+```
+
+<span id="uid-d762ed5152"></span>
+
+### Style
+
+Gets the font style.
+
+```csharp
+public Avalonia.Media.FontStyle Style { get; set; }
+```
+
+<span id="uid-61839489bf"></span>
+
+### SupportedFeatures
+
+Gets the list of OpenType feature tags supported by the font.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.Fonts.OpenTypeTag> SupportedFeatures { get; set; }
+```
+
+<span id="uid-df45934655"></span>
+
+### TextShaperTypeface
+
+Gets the typeface information used by the text shaper for this font.
+
+```csharp
+public Avalonia.Media.ITextShaperTypeface TextShaperTypeface { get; set; }
+```
+
+<span id="uid-5249100e36"></span>
+
+### TypographicFamilyName
+
+Gets the typographic family name of the font.
+
+```csharp
+public System.String TypographicFamilyName { get; set; }
+```
+
+<span id="uid-076de7204b"></span>
+
+### Weight
+
+Gets the font weight.
+
+```csharp
+public Avalonia.Media.FontWeight Weight { get; set; }
+```
+
+</ApiRefPage>
+

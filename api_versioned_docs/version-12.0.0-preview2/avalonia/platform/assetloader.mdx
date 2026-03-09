@@ -1,0 +1,209 @@
+---
+title: 'AssetLoader'
+hide_title: true
+slug: '/avalonia/platform/assetloader'
+uid: 'Avalonia.Platform.AssetLoader'
+commentId: 'T:Avalonia.Platform.AssetLoader'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AssetLoader Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Loads assets compiled into the application binary.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AssetLoader
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AssetLoader
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Exists](#uid-a2d936751b) | Checks if an asset with the specified URI exists. |
+| [GetAssembly](#uid-b6ea2136e2) | Extracts assembly information from URI |
+| [GetAssets](#uid-6ff7ed26c8) | Gets all assets of a folder and subfolders that match specified uri. |
+| [InvalidateAssemblyCache (2 overloads)](#uid-21c212713d) | Removes the assembly from the cache. |
+| [Open](#uid-7f4ecce179) | Opens the asset with the requested URI. |
+| [OpenAndGetAssembly](#uid-6979d66c9f) | Opens the asset with the requested URI and returns the asset stream and the assembly containing the asset. |
+| [SetDefaultAssembly](#uid-646a20e9ab) | We need a way to override the default assembly selected by the host platform because right now it is selecting the wrong one for PCL based Apps. The AssetLoader needs a refactor cause right now it lives in 3+ platforms which can all be loaded on Windows. |
+
+<span id="uid-a2d936751b"></span>
+
+### Exists
+
+Checks if an asset with the specified URI exists.
+
+```csharp
+public System.Boolean Exists(System.Uri uri, System.Uri baseUri)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `baseUri` | A base URI to use if `uri` is relative. |
+| `uri` | The URI. |
+
+Returns: True if the asset could be found; otherwise false.
+
+<span id="uid-b6ea2136e2"></span>
+
+### GetAssembly
+
+Extracts assembly information from URI
+
+```csharp
+public System.Reflection.Assembly GetAssembly(System.Uri uri, System.Uri baseUri)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `baseUri` | A base URI to use if `uri` is relative. |
+| `uri` | The URI. |
+
+Returns: Assembly associated with the Uri
+
+<span id="uid-6ff7ed26c8"></span>
+
+### GetAssets
+
+Gets all assets of a folder and subfolders that match specified uri.
+
+```csharp
+public System.Collections.Generic.IEnumerable<System.Uri> GetAssets(System.Uri uri, System.Uri baseUri)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `baseUri` | The base URI. |
+| `uri` | The URI. |
+
+Returns: All matching assets as a tuple of the absolute path to the asset and the assembly containing the asset
+
+<span id="uid-21c212713d"></span>
+
+### InvalidateAssemblyCache overloads
+
+<span id="uid-1d9a9acaca"></span>
+
+#### InvalidateAssemblyCache
+
+Removes the assembly from the cache.
+
+```csharp
+public System.Void InvalidateAssemblyCache()
+```
+
+| Parameter | Description |
+| --- | --- |
+| `name` | The Assemblies.First().GetName().Name |
+
+<span id="uid-69bab483c0"></span>
+
+#### InvalidateAssemblyCache
+
+Removes all assemblies from the cache.
+
+```csharp
+public System.Void InvalidateAssemblyCache(System.String name)
+```
+
+<span id="uid-7f4ecce179"></span>
+
+### Open
+
+Opens the asset with the requested URI.
+
+```csharp
+public System.IO.Stream Open(System.Uri uri, System.Uri baseUri)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `baseUri` | A base URI to use if `uri` is relative. |
+| `uri` | The URI. |
+
+Returns: A stream containing the asset contents.
+
+#### Exceptions
+
+- [The asset could not be found.](xref:System.IO.FileNotFoundException)
+
+<span id="uid-6979d66c9f"></span>
+
+### OpenAndGetAssembly
+
+Opens the asset with the requested URI and returns the asset stream and the
+assembly containing the asset.
+
+```csharp
+public System.ValueTuple<System.IO.Stream, System.Reflection.Assembly> OpenAndGetAssembly(System.Uri uri, System.Uri baseUri)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `baseUri` | A base URI to use if `uri` is relative. |
+| `uri` | The URI. |
+
+Returns: The stream containing the asset contents together with the assembly.
+
+#### Exceptions
+
+- [The asset could not be found.](xref:System.IO.FileNotFoundException)
+
+<span id="uid-646a20e9ab"></span>
+
+### SetDefaultAssembly
+
+We need a way to override the default assembly selected by the host platform
+because right now it is selecting the wrong one for PCL based Apps. The
+AssetLoader needs a refactor cause right now it lives in 3+ platforms which
+can all be loaded on Windows.
+
+```csharp
+public System.Void SetDefaultAssembly(System.Reflection.Assembly assembly)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `assembly` |  |
+
+</ApiRefPage>
+

@@ -1,0 +1,98 @@
+---
+title: 'PhysicalKeyExtensions'
+hide_title: true
+slug: '/avalonia/input/physicalkeyextensions'
+uid: 'Avalonia.Input.PhysicalKeyExtensions'
+commentId: 'T:Avalonia.Input.PhysicalKeyExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PhysicalKeyExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Contains extension methods related to [Avalonia.Input.PhysicalKey](xref:Avalonia.Input.PhysicalKey).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PhysicalKeyExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> PhysicalKeyExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToQwertyKey](#uid-cf13f45187) | Maps a physical key to a corresponding key, if possible, on a QWERTY keyboard. |
+| [ToQwertyKeySymbol](#uid-11860c6eb9) | Maps a physical key to a corresponding key symbol, if possible, on a QWERTY keyboard. |
+
+<span id="uid-cf13f45187"></span>
+
+### ToQwertyKey
+
+Maps a physical key to a corresponding key, if possible, on a QWERTY keyboard.
+
+```csharp
+public Avalonia.Input.Key ToQwertyKey(Avalonia.Input.PhysicalKey physicalKey)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `physicalKey` | the physical key to map. |
+
+Returns: The key corresponding to `physicalKey`, or [Avalonia.Input.Key.None](xref:Avalonia.Input.Key.None).
+
+<span id="uid-11860c6eb9"></span>
+
+### ToQwertyKeySymbol
+
+Maps a physical key to a corresponding key symbol, if possible, on a QWERTY keyboard.
+
+```csharp
+public System.String ToQwertyKeySymbol(Avalonia.Input.PhysicalKey physicalKey, System.Boolean useShiftModifier)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `physicalKey` | the physical key to map. |
+| `useShiftModifier` | Indicates whether the Shift key is considered pressed. |
+
+Returns: The key corresponding to `physicalKey`, or [Avalonia.Input.Key.None](xref:Avalonia.Input.Key.None).
+
+</ApiRefPage>
+

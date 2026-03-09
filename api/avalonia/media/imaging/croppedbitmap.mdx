@@ -1,0 +1,187 @@
+---
+title: 'CroppedBitmap'
+hide_title: true
+slug: '/avalonia/media/imaging/croppedbitmap'
+uid: 'Avalonia.Media.Imaging.CroppedBitmap'
+commentId: 'T:Avalonia.Media.Imaging.CroppedBitmap'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Imaging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CroppedBitmap Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Imaging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Crops a Bitmap.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CroppedBitmap
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CroppedBitmap
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAffectsRender, <a href="../iimage">IImage</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CroppedBitmap (2 overloads)](#uid-07bc1827fd) | No summary available. |
+
+<span id="uid-07bc1827fd"></span>
+
+### CroppedBitmap overloads
+
+<span id="uid-625a31f50a"></span>
+
+#### CroppedBitmap
+
+```csharp
+public CroppedBitmap()
+```
+
+<span id="uid-ef53fca6d3"></span>
+
+#### CroppedBitmap
+
+```csharp
+public CroppedBitmap(Avalonia.Media.IImage source, Avalonia.PixelRect sourceRect)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-b8a08071f2) | No summary available. |
+| [Draw](#uid-d21d5529d8) | No summary available. |
+
+<span id="uid-b8a08071f2"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-d21d5529d8"></span>
+
+### Draw
+
+```csharp
+public System.Void Draw(Avalonia.Media.DrawingContext context, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Size](#uid-52da9f2af7) | No summary available. |
+| [Source](#uid-c698957894) | Gets or sets the source for the bitmap. |
+| [SourceRect](#uid-a87cd54c34) | Gets or sets the rectangular area that the bitmap is cropped to. |
+
+<span id="uid-52da9f2af7"></span>
+
+### Size
+
+```csharp
+public Avalonia.Size Size { get; set; }
+```
+
+<span id="uid-c698957894"></span>
+
+### Source
+
+Gets or sets the source for the bitmap.
+
+```csharp
+public Avalonia.Media.IImage Source { get; set; }
+```
+
+<span id="uid-a87cd54c34"></span>
+
+### SourceRect
+
+Gets or sets the rectangular area that the bitmap is cropped to.
+
+```csharp
+public Avalonia.PixelRect SourceRect { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [SourceProperty](#uid-563c15d370) | Defines the Avalonia.Media.Imaging.CroppedBitmap.Source property. |
+| [SourceRectProperty](#uid-b427c7fde0) | Defines the Avalonia.Media.Imaging.CroppedBitmap.SourceRect property. |
+
+<span id="uid-563c15d370"></span>
+
+### SourceProperty
+
+Defines the [Avalonia.Media.Imaging.CroppedBitmap.Source](xref:Avalonia.Media.Imaging.CroppedBitmap.Source) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.IImage> SourceProperty
+```
+
+<span id="uid-b427c7fde0"></span>
+
+### SourceRectProperty
+
+Defines the [Avalonia.Media.Imaging.CroppedBitmap.SourceRect](xref:Avalonia.Media.Imaging.CroppedBitmap.SourceRect) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.PixelRect> SourceRectProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Invalidated](#uid-8c7568134c) | No summary available. |
+
+<span id="uid-8c7568134c"></span>
+
+### Invalidated
+
+```csharp
+public event System.EventHandler Invalidated
+```
+
+</ApiRefPage>
+

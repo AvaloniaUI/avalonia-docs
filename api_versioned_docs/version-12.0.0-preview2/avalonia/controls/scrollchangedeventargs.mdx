@@ -1,0 +1,122 @@
+---
+title: 'ScrollChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/scrollchangedeventargs'
+uid: 'Avalonia.Controls.ScrollChangedEventArgs'
+commentId: 'T:Avalonia.Controls.ScrollChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ScrollChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes a change in scrolling state.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ScrollChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> ScrollChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ScrollChangedEventArgs (2 overloads)](#uid-157aaf646d) | No summary available. |
+
+<span id="uid-157aaf646d"></span>
+
+### ScrollChangedEventArgs overloads
+
+<span id="uid-417476b4ae"></span>
+
+#### ScrollChangedEventArgs
+
+```csharp
+public ScrollChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Vector extentDelta, Avalonia.Vector offsetDelta, Avalonia.Vector viewportDelta)
+```
+
+<span id="uid-380f070490"></span>
+
+#### ScrollChangedEventArgs
+
+```csharp
+public ScrollChangedEventArgs(Avalonia.Vector extentDelta, Avalonia.Vector offsetDelta, Avalonia.Vector viewportDelta)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ExtentDelta](#uid-76998bb747) | Gets the change to the value of Avalonia.Controls.ScrollViewer.Extent. |
+| [OffsetDelta](#uid-60cd1fb273) | Gets the change to the value of Avalonia.Controls.ScrollViewer.Offset. |
+| [ViewportDelta](#uid-d930a66ca7) | Gets the change to the value of Avalonia.Controls.ScrollViewer.Viewport. |
+
+<span id="uid-76998bb747"></span>
+
+### ExtentDelta
+
+Gets the change to the value of [Avalonia.Controls.ScrollViewer.Extent](xref:Avalonia.Controls.ScrollViewer.Extent).
+
+```csharp
+public Avalonia.Vector ExtentDelta { get; set; }
+```
+
+<span id="uid-60cd1fb273"></span>
+
+### OffsetDelta
+
+Gets the change to the value of [Avalonia.Controls.ScrollViewer.Offset](xref:Avalonia.Controls.ScrollViewer.Offset).
+
+```csharp
+public Avalonia.Vector OffsetDelta { get; set; }
+```
+
+<span id="uid-d930a66ca7"></span>
+
+### ViewportDelta
+
+Gets the change to the value of [Avalonia.Controls.ScrollViewer.Viewport](xref:Avalonia.Controls.ScrollViewer.Viewport).
+
+```csharp
+public Avalonia.Vector ViewportDelta { get; set; }
+```
+
+</ApiRefPage>
+

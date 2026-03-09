@@ -1,0 +1,112 @@
+---
+title: 'AvaloniaPropertyChangedEventArgs<T>'
+hide_title: true
+slug: '/avalonia/avaloniapropertychangedeventargs-1'
+uid: 'Avalonia.AvaloniaPropertyChangedEventArgs`1'
+commentId: 'T:Avalonia.AvaloniaPropertyChangedEventArgs`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaPropertyChangedEventArgs&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides information for an Avalonia property change.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaPropertyChangedEventArgs<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniapropertychangedeventargs">AvaloniaPropertyChangedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaPropertyChangedEventArgs&lt;T&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaPropertyChangedEventArgs&lt;T&gt;](#uid-37afe2b6bc) | No summary available. |
+
+<span id="uid-37afe2b6bc"></span>
+
+### AvaloniaPropertyChangedEventArgs&lt;T&gt;
+
+```csharp
+public AvaloniaPropertyChangedEventArgs<T>(Avalonia.AvaloniaObject sender, Avalonia.AvaloniaProperty<TValue><T> property, Avalonia.Data.Optional<T><T> oldValue, Avalonia.Data.BindingValue<T><T> newValue, Avalonia.Data.BindingPriority priority)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [NewValue](#uid-1391504d1b) | Gets the new value of the property. |
+| [OldValue](#uid-209d24f117) | Gets the old value of the property. |
+| [Property](#uid-da8e3e8213) | Gets the property that changed. |
+
+<span id="uid-1391504d1b"></span>
+
+### NewValue
+
+Gets the new value of the property.
+
+```csharp
+public Avalonia.Data.BindingValue<T><T> NewValue { get; set; }
+```
+
+<span id="uid-209d24f117"></span>
+
+### OldValue
+
+Gets the old value of the property.
+
+```csharp
+public Avalonia.Data.Optional<T><T> OldValue { get; set; }
+```
+
+<span id="uid-da8e3e8213"></span>
+
+### Property
+
+Gets the property that changed.
+
+```csharp
+public Avalonia.AvaloniaProperty<TValue><T> Property { get; set; }
+```
+
+Value: The property that changed.
+
+</ApiRefPage>
+

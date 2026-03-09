@@ -1,0 +1,112 @@
+---
+title: 'OpenGlControlBase'
+hide_title: true
+slug: '/avalonia/opengl/controls/openglcontrolbase'
+uid: 'Avalonia.OpenGL.Controls.OpenGlControlBase'
+commentId: 'T:Avalonia.OpenGL.Controls.OpenGlControlBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">OpenGlControlBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for controls that render using OpenGL.
+Provides infrastructure for OpenGL context management, surface creation, and rendering lifecycle.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class OpenGlControlBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../controls/control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> OpenGlControlBase
+</div>
+</div>
+
+## Remarks
+
+The control automatically manages OpenGL context creation, surface setup, and cleanup.
+
+Important: Any interaction with [Avalonia.OpenGL.GlInterface](xref:Avalonia.OpenGL.GlInterface) should only happen within the
+[Avalonia.OpenGL.Controls.OpenGlControlBase.OnOpenGlInit(Avalonia.OpenGL.GlInterface)](xref:Avalonia.OpenGL.Controls.OpenGlControlBase.OnOpenGlInit%28Avalonia.OpenGL.GlInterface%29), [Avalonia.OpenGL.Controls.OpenGlControlBase.OnOpenGlDeinit(Avalonia.OpenGL.GlInterface)](xref:Avalonia.OpenGL.Controls.OpenGlControlBase.OnOpenGlDeinit%28Avalonia.OpenGL.GlInterface%29), or [Avalonia.OpenGL.Controls.OpenGlControlBase.OnOpenGlRender(Avalonia.OpenGL.GlInterface,System.Int32)](xref:Avalonia.OpenGL.Controls.OpenGlControlBase.OnOpenGlRender%28Avalonia.OpenGL.GlInterface%2CSystem.Int32%29) method overrides.
+
+Avalonia ensures proper OpenGL context synchronization and makes the context current only during these method calls.
+Accessing OpenGL functions outside of these methods may result in undefined behavior, crashes, or rendering corruption.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [OpenGlControlBase](#uid-f42ee4987b) | Initializes a new instance of the Avalonia.OpenGL.Controls.OpenGlControlBase class. |
+
+<span id="uid-f42ee4987b"></span>
+
+### OpenGlControlBase
+
+Initializes a new instance of the [Avalonia.OpenGL.Controls.OpenGlControlBase](xref:Avalonia.OpenGL.Controls.OpenGlControlBase) class.
+
+```csharp
+public OpenGlControlBase()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [InvalidateVisual](#uid-193682e496) | Invalidates the visual and queues a repaint. |
+| [RequestNextFrameRendering](#uid-ed018f672f) | Requests that the control be rendered on the next frame. |
+
+<span id="uid-193682e496"></span>
+
+### InvalidateVisual
+
+Invalidates the visual and queues a repaint.
+
+```csharp
+public System.Void InvalidateVisual()
+```
+
+<span id="uid-ed018f672f"></span>
+
+### RequestNextFrameRendering
+
+Requests that the control be rendered on the next frame.
+
+```csharp
+public System.Void RequestNextFrameRendering()
+```
+
+</ApiRefPage>
+

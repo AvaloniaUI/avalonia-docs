@@ -9,6 +9,7 @@
 .docusaurus
 .cache-loader
 .idea
+.apiref
 
 # Misc
 .DS_Store

@@ -1,0 +1,266 @@
+---
+title: 'AvaloniaObjectExtensions'
+hide_title: true
+slug: '/avalonia/avaloniaobjectextensions'
+uid: 'Avalonia.AvaloniaObjectExtensions'
+commentId: 'T:Avalonia.AvaloniaObjectExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaObjectExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides extension methods for [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) and related classes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaObjectExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaObjectExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddClassHandler (2 overloads)](#uid-12da34fda2) | No summary available. |
+| [Bind (2 overloads)](#uid-d8548d79f1) | No summary available. |
+| [GetBaseValue (2 overloads)](#uid-a44baab4f1) | Gets an Avalonia.AvaloniaProperty base value. |
+| [GetBindingObservable (4 overloads)](#uid-5976ecb078) | Gets an observable for an Avalonia.AvaloniaProperty. |
+| [GetObservable (4 overloads)](#uid-0707411a55) | Gets an observable for an Avalonia.AvaloniaProperty. |
+| [GetPropertyChangedObservable](#uid-ef3b80a9cc) | Gets an observable that listens for property changed events for an Avalonia.AvaloniaProperty. |
+| [GetValue](#uid-7a26ab89ee) | No summary available. |
+| [ToBinding](#uid-c28a43eaea) | No summary available. |
+
+<span id="uid-12da34fda2"></span>
+
+### AddClassHandler overloads
+
+<span id="uid-8ddecd9a9f"></span>
+
+#### AddClassHandler
+
+```csharp
+public System.IDisposable AddClassHandler<TTarget>(System.IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> observable, System.Action<TTarget, Avalonia.AvaloniaPropertyChangedEventArgs> action)
+```
+
+<span id="uid-2787e01711"></span>
+
+#### AddClassHandler
+
+```csharp
+public System.IDisposable AddClassHandler<TTarget, TValue>(System.IObservable<Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> observable, System.Action<TTarget, Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> action)
+```
+
+<span id="uid-d8548d79f1"></span>
+
+### Bind overloads
+
+<span id="uid-1635771dd0"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property, System.IObservable<Avalonia.Data.BindingValue<T><T>> source, Avalonia.Data.BindingPriority priority)
+```
+
+<span id="uid-7c6693d3d9"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property, System.IObservable<T> source, Avalonia.Data.BindingPriority priority)
+```
+
+<span id="uid-a44baab4f1"></span>
+
+### GetBaseValue overloads
+
+<span id="uid-edf0442b44"></span>
+
+#### GetBaseValue
+
+Gets an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) base value.
+
+```csharp
+public System.Object GetBaseValue(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+| `target` | The object. |
+
+<span id="uid-67aa6a4785"></span>
+
+#### GetBaseValue
+
+```csharp
+public Avalonia.Data.Optional<T><T> GetBaseValue<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+<span id="uid-5976ecb078"></span>
+
+### GetBindingObservable overloads
+
+<span id="uid-c1363b78b3"></span>
+
+#### GetBindingObservable
+
+Gets an observable for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
+
+```csharp
+public System.IObservable<Avalonia.Data.BindingValue<T><System.Object>> GetBindingObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `o` | The object. |
+| `property` | The property. |
+
+Returns: An observable which fires immediately with the current value of the property on the
+object and subsequently each time the property value changes.
+
+<span id="uid-4b75a6b2ce"></span>
+
+#### GetBindingObservable
+
+```csharp
+public System.IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObservable<TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property, System.Func<System.Object, TResult> converter)
+```
+
+<span id="uid-ef38bab6bc"></span>
+
+#### GetBindingObservable
+
+```csharp
+public System.IObservable<Avalonia.Data.BindingValue<T><T>> GetBindingObservable<T>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+<span id="uid-1e158c64cf"></span>
+
+#### GetBindingObservable
+
+```csharp
+public System.IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObservable<TSource, TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><TSource> property, System.Func<TSource, TResult> converter)
+```
+
+<span id="uid-0707411a55"></span>
+
+### GetObservable overloads
+
+<span id="uid-351ba03a1c"></span>
+
+#### GetObservable
+
+Gets an observable for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
+
+```csharp
+public System.IObservable<System.Object> GetObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `o` | The object. |
+| `property` | The property. |
+
+Returns: An observable which fires immediately with the current value of the property on the
+object and subsequently each time the property value changes.
+
+<span id="uid-43c8f81402"></span>
+
+#### GetObservable
+
+```csharp
+public System.IObservable<TResult> GetObservable<TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property, System.Func<System.Object, TResult> converter)
+```
+
+<span id="uid-a2f315dbd4"></span>
+
+#### GetObservable
+
+```csharp
+public System.IObservable<T> GetObservable<T>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+<span id="uid-163790c8aa"></span>
+
+#### GetObservable
+
+```csharp
+public System.IObservable<TResult> GetObservable<TSource, TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><TSource> property, System.Func<TSource, TResult> converter)
+```
+
+<span id="uid-ef3b80a9cc"></span>
+
+### GetPropertyChangedObservable
+
+Gets an observable that listens for property changed events for an
+[Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
+
+```csharp
+public System.IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> GetPropertyChangedObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `o` | The object. |
+| `property` | The property. |
+
+Returns: An observable which when subscribed pushes the property changed event args
+each time a [Avalonia.AvaloniaObject.PropertyChanged](xref:Avalonia.AvaloniaObject.PropertyChanged) event is raised
+for the specified property.
+
+<span id="uid-7a26ab89ee"></span>
+
+### GetValue
+
+```csharp
+public T GetValue<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+<span id="uid-c28a43eaea"></span>
+
+### ToBinding
+
+```csharp
+public Avalonia.Data.BindingBase ToBinding<T>(System.IObservable<T> source)
+```
+
+</ApiRefPage>
+

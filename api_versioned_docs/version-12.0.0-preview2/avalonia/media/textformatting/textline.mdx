@@ -1,0 +1,452 @@
+---
+title: 'TextLine'
+hide_title: true
+slug: '/avalonia/media/textformatting/textline'
+uid: 'Avalonia.Media.TextFormatting.TextLine'
+commentId: 'T:Avalonia.Media.TextFormatting.TextLine'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextLine Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a line of text that is used for text rendering.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextLine
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextLine
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Collapse](#uid-0cb83eac03) | Create a collapsed line based on collapsed text properties. |
+| [Dispose](#uid-1dc4bf4e00) | No summary available. |
+| [Draw](#uid-8e27abbe79) | Draws the Avalonia.Media.TextFormatting.TextLine at the given origin. |
+| [GetBackspaceCaretCharacterHit](#uid-cf081ec739) | Gets the previous character hit after backspacing. |
+| [GetCharacterHitFromDistance](#uid-583907e3e8) | Gets the character hit corresponding to the specified distance from the beginning of the line. |
+| [GetDistanceFromCharacterHit](#uid-4f78360a0a) | Gets the distance from the beginning of the line to the specified character hit. Avalonia.Media.CharacterHit. |
+| [GetNextCaretCharacterHit](#uid-d4197efb87) | Gets the next character hit for caret navigation. |
+| [GetPreviousCaretCharacterHit](#uid-f76bc01352) | Gets the previous character hit for caret navigation. |
+| [GetTextBounds](#uid-565d358094) | Get an array of bounding rectangles of a range of characters within a text line. |
+| [Justify](#uid-37ed0b452e) | Create a justified line based on justification text properties. |
+
+<span id="uid-0cb83eac03"></span>
+
+### Collapse
+
+Create a collapsed line based on collapsed text properties.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextLine Collapse(Avalonia.Media.TextFormatting.TextCollapsingProperties[] collapsingPropertiesList)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `collapsingPropertiesList` | A list of [Avalonia.Media.TextFormatting.TextCollapsingProperties](xref:Avalonia.Media.TextFormatting.TextCollapsingProperties)
+objects that represent the collapsed text properties. |
+
+Returns: A [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine) value that represents a collapsed line that can be displayed.
+
+<span id="uid-1dc4bf4e00"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-8e27abbe79"></span>
+
+### Draw
+
+Draws the [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine) at the given origin.
+
+```csharp
+public System.Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point lineOrigin)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `drawingContext` | The drawing context. |
+| `lineOrigin` |  |
+
+<span id="uid-cf081ec739"></span>
+
+### GetBackspaceCaretCharacterHit
+
+Gets the previous character hit after backspacing.
+
+```csharp
+public Avalonia.Media.CharacterHit GetBackspaceCaretCharacterHit(Avalonia.Media.CharacterHit characterHit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `characterHit` | The current [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit). |
+
+Returns: The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) after backspacing.
+
+<span id="uid-583907e3e8"></span>
+
+### GetCharacterHitFromDistance
+
+Gets the character hit corresponding to the specified distance from the beginning of the line.
+
+```csharp
+public Avalonia.Media.CharacterHit GetCharacterHitFromDistance(System.Double distance)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `distance` | A [System.Double](xref:System.Double) value that represents the distance from the beginning of the line. |
+
+Returns: The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) object at the specified distance from the beginning of the line.
+
+<span id="uid-4f78360a0a"></span>
+
+### GetDistanceFromCharacterHit
+
+Gets the distance from the beginning of the line to the specified character hit.
+[Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit).
+
+```csharp
+public System.Double GetDistanceFromCharacterHit(Avalonia.Media.CharacterHit characterHit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `characterHit` | The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) object whose distance you want to query. |
+
+Returns: A [System.Double](xref:System.Double) that represents the distance from the beginning of the line.
+
+<span id="uid-d4197efb87"></span>
+
+### GetNextCaretCharacterHit
+
+Gets the next character hit for caret navigation.
+
+```csharp
+public Avalonia.Media.CharacterHit GetNextCaretCharacterHit(Avalonia.Media.CharacterHit characterHit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `characterHit` | The current [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit). |
+
+Returns: The next [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit).
+
+<span id="uid-f76bc01352"></span>
+
+### GetPreviousCaretCharacterHit
+
+Gets the previous character hit for caret navigation.
+
+```csharp
+public Avalonia.Media.CharacterHit GetPreviousCaretCharacterHit(Avalonia.Media.CharacterHit characterHit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `characterHit` | The current [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit). |
+
+Returns: The previous [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit).
+
+<span id="uid-565d358094"></span>
+
+### GetTextBounds
+
+Get an array of bounding rectangles of a range of characters within a text line.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.TextBounds> GetTextBounds(System.Int32 firstTextSourceCharacterIndex, System.Int32 textLength)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `firstTextSourceCharacterIndex` | index of first character of specified range |
+| `textLength` | number of characters of the specified range |
+
+Returns: an array of bounding rectangles.
+
+<span id="uid-37ed0b452e"></span>
+
+### Justify
+
+Create a justified line based on justification text properties.
+
+```csharp
+public System.Void Justify(Avalonia.Media.TextFormatting.JustificationProperties justificationProperties)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `justificationProperties` | An object that represent the justification text properties. |
+
+Returns: A [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine) value that represents a justified line that can be displayed.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Baseline](#uid-3e2e7add61) | Gets the distance from the top to the baseline of the current TextLine object. |
+| [Extent](#uid-2e81cac616) | Gets the distance from the top-most to bottom-most black pixel in a line. |
+| [FirstTextSourceIndex](#uid-cc4f06cc4e) | Gets the first TextSource position of the current line. |
+| [HasCollapsed](#uid-946498f189) | Gets a value that indicates whether the line is collapsed. |
+| [HasOverflowed](#uid-e491880656) | Gets a value that indicates whether content of the line overflows the specified paragraph width. |
+| [Height](#uid-681e96dc6b) | Gets the height of a line of text. |
+| [Length](#uid-24a2f5d871) | Gets the total number of TextSource positions of the current line. |
+| [NewLineLength](#uid-1153d44e15) | Gets the number of newline characters at the end of a line. |
+| [OverhangAfter](#uid-acfa66abd7) | Gets the distance that black pixels extend beyond the bottom alignment edge of a line. |
+| [OverhangLeading](#uid-1547e77441) | Gets the distance that black pixels extend prior to the left leading alignment edge of the line. |
+| [OverhangTrailing](#uid-d8979e0c8b) | Gets the distance that black pixels extend following the right trailing alignment edge of the line. |
+| [Start](#uid-75744b1a92) | Gets the distance from the start of a paragraph to the starting point of a line. |
+| [TextLineBreak](#uid-bb9d1dbfd1) | Gets the state of the line when broken by line breaking process. |
+| [TextRuns](#uid-6aa3d176f8) | Gets the text runs that are contained within a line. |
+| [TrailingWhitespaceLength](#uid-9d60de0372) | Gets the number of whitespace code points beyond the last non-blank character in a line. |
+| [Width](#uid-def8e65d69) | Gets the width of a line of text, excluding trailing whitespace characters. |
+| [WidthIncludingTrailingWhitespace](#uid-e241207a08) | Gets the width of a line of text, including trailing whitespace characters. |
+
+<span id="uid-3e2e7add61"></span>
+
+### Baseline
+
+Gets the distance from the top to the baseline of the current TextLine object.
+
+```csharp
+public System.Double Baseline { get; set; }
+```
+
+Returns: A [System.Double](xref:System.Double) that represents the baseline distance.
+
+<span id="uid-2e81cac616"></span>
+
+### Extent
+
+Gets the distance from the top-most to bottom-most black pixel in a line.
+
+```csharp
+public System.Double Extent { get; set; }
+```
+
+Returns: A value that represents the extent distance.
+
+<span id="uid-cc4f06cc4e"></span>
+
+### FirstTextSourceIndex
+
+Gets the first TextSource position of the current line.
+
+```csharp
+public System.Int32 FirstTextSourceIndex { get; set; }
+```
+
+<span id="uid-946498f189"></span>
+
+### HasCollapsed
+
+Gets a value that indicates whether the line is collapsed.
+
+```csharp
+public System.Boolean HasCollapsed { get; set; }
+```
+
+Returns: `true`, if the line is collapsed; otherwise, `false`.
+
+<span id="uid-e491880656"></span>
+
+### HasOverflowed
+
+Gets a value that indicates whether content of the line overflows the specified paragraph width.
+
+```csharp
+public System.Boolean HasOverflowed { get; set; }
+```
+
+Returns: `true`, the line overflows the specified paragraph width; otherwise, `false`.
+
+<span id="uid-681e96dc6b"></span>
+
+### Height
+
+Gets the height of a line of text.
+
+```csharp
+public System.Double Height { get; set; }
+```
+
+Returns: The text line height.
+
+<span id="uid-24a2f5d871"></span>
+
+### Length
+
+Gets the total number of TextSource positions of the current line.
+
+```csharp
+public System.Int32 Length { get; set; }
+```
+
+<span id="uid-1153d44e15"></span>
+
+### NewLineLength
+
+Gets the number of newline characters at the end of a line.
+
+```csharp
+public System.Int32 NewLineLength { get; set; }
+```
+
+Returns: The number of newline characters.
+
+<span id="uid-acfa66abd7"></span>
+
+### OverhangAfter
+
+Gets the distance that black pixels extend beyond the bottom alignment edge of a line.
+
+```csharp
+public System.Double OverhangAfter { get; set; }
+```
+
+Returns: The overhang after distance.
+
+<span id="uid-1547e77441"></span>
+
+### OverhangLeading
+
+Gets the distance that black pixels extend prior to the left leading alignment edge of the line.
+
+```csharp
+public System.Double OverhangLeading { get; set; }
+```
+
+Returns: The overhang leading distance.
+
+<span id="uid-d8979e0c8b"></span>
+
+### OverhangTrailing
+
+Gets the distance that black pixels extend following the right trailing alignment edge of the line.
+
+```csharp
+public System.Double OverhangTrailing { get; set; }
+```
+
+Returns: The overhang trailing distance.
+
+<span id="uid-75744b1a92"></span>
+
+### Start
+
+Gets the distance from the start of a paragraph to the starting point of a line.
+
+```csharp
+public System.Double Start { get; set; }
+```
+
+Returns: The distance from the start of a paragraph to the starting point of a line.
+
+<span id="uid-bb9d1dbfd1"></span>
+
+### TextLineBreak
+
+Gets the state of the line when broken by line breaking process.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextLineBreak TextLineBreak { get; set; }
+```
+
+Returns: A [Avalonia.Media.TextFormatting.TextLine.TextLineBreak](xref:Avalonia.Media.TextFormatting.TextLine.TextLineBreak) value that represents the line break.
+
+<span id="uid-6aa3d176f8"></span>
+
+### TextRuns
+
+Gets the text runs that are contained within a line.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.TextRun> TextRuns { get; set; }
+```
+
+Value: The contained text runs.
+
+<span id="uid-9d60de0372"></span>
+
+### TrailingWhitespaceLength
+
+Gets the number of whitespace code points beyond the last non-blank character in a line.
+
+```csharp
+public System.Int32 TrailingWhitespaceLength { get; set; }
+```
+
+Returns: The number of whitespace code points beyond the last non-blank character in a line.
+
+<span id="uid-def8e65d69"></span>
+
+### Width
+
+Gets the width of a line of text, excluding trailing whitespace characters.
+
+```csharp
+public System.Double Width { get; set; }
+```
+
+Returns: The text line width, excluding trailing whitespace characters.
+
+<span id="uid-e241207a08"></span>
+
+### WidthIncludingTrailingWhitespace
+
+Gets the width of a line of text, including trailing whitespace characters.
+
+```csharp
+public System.Double WidthIncludingTrailingWhitespace { get; set; }
+```
+
+Returns: The text line width, including trailing whitespace characters.
+
+</ApiRefPage>
+

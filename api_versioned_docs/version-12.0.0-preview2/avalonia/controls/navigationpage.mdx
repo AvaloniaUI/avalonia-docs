@@ -1,0 +1,928 @@
+---
+title: 'NavigationPage'
+hide_title: true
+slug: '/avalonia/controls/navigationpage'
+uid: 'Avalonia.Controls.NavigationPage'
+commentId: 'T:Avalonia.Controls.NavigationPage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NavigationPage Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A navigation page that supports simple stack-based navigation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NavigationPage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="page">Page</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="multipage">MultiPage</a> <span className="apiref-page__relation-separator">-&gt;</span> NavigationPage
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="inavigation">INavigation</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NavigationPage](#uid-397e474193) | Initializes a new instance of Avalonia.Controls.NavigationPage. |
+
+<span id="uid-397e474193"></span>
+
+### NavigationPage
+
+Initializes a new instance of [Avalonia.Controls.NavigationPage](xref:Avalonia.Controls.NavigationPage).
+
+```csharp
+public NavigationPage()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetBackButtonContent](#uid-8f67586f4e) | Gets the custom back-button content for the specified page. |
+| [GetBarHeightOverride](#uid-e740d03e84) | Gets the per-page navigation bar height override for the specified page. |
+| [GetBarLayoutBehavior](#uid-d544a9a1af) | Gets the bar layout behavior for the specified page. |
+| [GetBottomCommandBar](#uid-e0b070ea1e) | Gets the bottom command bar assigned to the specified page. |
+| [GetHasBackButton](#uid-b2bb280ef8) | Gets whether the back button is visible for the specified page. |
+| [GetHasNavigationBar](#uid-bf3e8f9963) | Gets whether the navigation bar is visible for the specified page. |
+| [GetHeader](#uid-785565bca2) | No summary available. |
+| [GetIsBackButtonEnabled](#uid-918f91ea56) | Gets whether the back button is enabled for the specified page. |
+| [GetTopCommandBar](#uid-96292aa83f) | Gets the top command bar assigned to the specified page. |
+| [InsertPage](#uid-0f88a630db) | Inserts a page into the stack before the specified page. |
+| [PopAllModalsAsync (2 overloads)](#uid-97b710ba48) | Pops all modal pages using Avalonia.Controls.NavigationPage.ModalTransition. |
+| [PopAsync (2 overloads)](#uid-1232dddbb7) | Pops the top page from the navigation stack asynchronously using Avalonia.Controls.NavigationPage.PageTransition. |
+| [PopModalAsync (2 overloads)](#uid-25a0bccba6) | Pops the top modal page using Avalonia.Controls.NavigationPage.ModalTransition. |
+| [PopToPageAsync (2 overloads)](#uid-537b1d248e) | Pops to a specific page in the stack using Avalonia.Controls.NavigationPage.PageTransition. |
+| [PopToRootAsync (2 overloads)](#uid-5c3c54243e) | Pops all pages to the root page using Avalonia.Controls.NavigationPage.PageTransition. |
+| [PushAsync (2 overloads)](#uid-3c25ff75d5) | Pushes page onto the navigation stack asynchronously using Avalonia.Controls.NavigationPage.PageTransition. |
+| [PushModalAsync (2 overloads)](#uid-487601da6e) | Pushes a modal page using Avalonia.Controls.NavigationPage.ModalTransition. |
+| [RemovePage](#uid-e3354b754f) | Removes a page from the navigation stack without animation. |
+| [ReplaceAsync (2 overloads)](#uid-694bcda035) | Replaces the top page with page using Avalonia.Controls.NavigationPage.PageTransition. |
+| [SetBackButtonContent](#uid-d29059d019) | Sets custom content for the back button on the specified page. |
+| [SetBarHeightOverride](#uid-0dda3948bc) | No summary available. |
+| [SetBarLayoutBehavior](#uid-04b7a9f2d9) | No summary available. |
+| [SetBottomCommandBar](#uid-7d41ec5fef) | Sets a bottom command bar for the specified page. |
+| [SetHasBackButton](#uid-f56d3103cc) | Sets whether the back button is visible for the specified page. |
+| [SetHasNavigationBar](#uid-5c4192f3a7) | Sets whether the navigation bar is visible for the specified page. |
+| [SetHeader](#uid-052e0c6d99) | No summary available. |
+| [SetIsBackButtonEnabled](#uid-00ef6ab339) | Sets whether the back button is enabled for the specified page. |
+| [SetTopCommandBar](#uid-e294ea701b) | Sets a top command bar for the specified page. |
+
+<span id="uid-8f67586f4e"></span>
+
+### GetBackButtonContent
+
+Gets the custom back-button content for the specified page.
+
+```csharp
+public System.Object GetBackButtonContent(Avalonia.Controls.Page page)
+```
+
+<span id="uid-e740d03e84"></span>
+
+### GetBarHeightOverride
+
+Gets the per-page navigation bar height override for the specified page.
+
+```csharp
+public System.Nullable<System.Double> GetBarHeightOverride(Avalonia.Controls.Page page)
+```
+
+<span id="uid-d544a9a1af"></span>
+
+### GetBarLayoutBehavior
+
+Gets the bar layout behavior for the specified page.
+
+```csharp
+public System.Nullable<Avalonia.Controls.BarLayoutBehavior> GetBarLayoutBehavior(Avalonia.Controls.Page page)
+```
+
+<span id="uid-e0b070ea1e"></span>
+
+### GetBottomCommandBar
+
+Gets the bottom command bar assigned to the specified page.
+
+```csharp
+public Avalonia.Controls.Control GetBottomCommandBar(Avalonia.Controls.Page page)
+```
+
+<span id="uid-b2bb280ef8"></span>
+
+### GetHasBackButton
+
+Gets whether the back button is visible for the specified page.
+
+```csharp
+public System.Boolean GetHasBackButton(Avalonia.Controls.Page page)
+```
+
+<span id="uid-bf3e8f9963"></span>
+
+### GetHasNavigationBar
+
+Gets whether the navigation bar is visible for the specified page.
+
+```csharp
+public System.Boolean GetHasNavigationBar(Avalonia.Controls.Page page)
+```
+
+<span id="uid-785565bca2"></span>
+
+### GetHeader
+
+```csharp
+public System.Object GetHeader(Avalonia.Controls.Page page)
+```
+
+<span id="uid-918f91ea56"></span>
+
+### GetIsBackButtonEnabled
+
+Gets whether the back button is enabled for the specified page.
+
+```csharp
+public System.Boolean GetIsBackButtonEnabled(Avalonia.Controls.Page page)
+```
+
+<span id="uid-96292aa83f"></span>
+
+### GetTopCommandBar
+
+Gets the top command bar assigned to the specified page.
+
+```csharp
+public Avalonia.Controls.Control GetTopCommandBar(Avalonia.Controls.Page page)
+```
+
+<span id="uid-0f88a630db"></span>
+
+### InsertPage
+
+Inserts a page into the stack before the specified page.
+
+```csharp
+public System.Void InsertPage(Avalonia.Controls.Page page, Avalonia.Controls.Page before)
+```
+
+<span id="uid-97b710ba48"></span>
+
+### PopAllModalsAsync overloads
+
+<span id="uid-7e46350623"></span>
+
+#### PopAllModalsAsync
+
+Pops all modal pages using [Avalonia.Controls.NavigationPage.ModalTransition](xref:Avalonia.Controls.NavigationPage.ModalTransition).
+
+```csharp
+public System.Threading.Tasks.Task PopAllModalsAsync()
+```
+
+<span id="uid-11a4f4369d"></span>
+
+#### PopAllModalsAsync
+
+Pops all modal pages using `transition`.
+
+```csharp
+public System.Threading.Tasks.Task PopAllModalsAsync(Avalonia.Animation.IPageTransition transition)
+```
+
+<span id="uid-1232dddbb7"></span>
+
+### PopAsync overloads
+
+<span id="uid-6971e830a6"></span>
+
+#### PopAsync
+
+Pops the top page from the navigation stack asynchronously using [Avalonia.Controls.NavigationPage.PageTransition](xref:Avalonia.Controls.NavigationPage.PageTransition).
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Page> PopAsync()
+```
+
+<span id="uid-97598c4827"></span>
+
+#### PopAsync
+
+Pops the top page from the navigation stack asynchronously using `transition`.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Page> PopAsync(Avalonia.Animation.IPageTransition transition)
+```
+
+<span id="uid-25a0bccba6"></span>
+
+### PopModalAsync overloads
+
+<span id="uid-e6520ad13f"></span>
+
+#### PopModalAsync
+
+Pops the top modal page using [Avalonia.Controls.NavigationPage.ModalTransition](xref:Avalonia.Controls.NavigationPage.ModalTransition).
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Page> PopModalAsync()
+```
+
+<span id="uid-9d0bbcdc00"></span>
+
+#### PopModalAsync
+
+Pops the top modal page using `transition`.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Page> PopModalAsync(Avalonia.Animation.IPageTransition transition)
+```
+
+<span id="uid-537b1d248e"></span>
+
+### PopToPageAsync overloads
+
+<span id="uid-a084f2ed73"></span>
+
+#### PopToPageAsync
+
+Pops to a specific page in the stack using [Avalonia.Controls.NavigationPage.PageTransition](xref:Avalonia.Controls.NavigationPage.PageTransition).
+
+```csharp
+public System.Threading.Tasks.Task PopToPageAsync(Avalonia.Controls.Page page)
+```
+
+<span id="uid-91d4ca809d"></span>
+
+#### PopToPageAsync
+
+Pops all pages above `page` using `transition`.
+
+```csharp
+public System.Threading.Tasks.Task PopToPageAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition)
+```
+
+<span id="uid-5c3c54243e"></span>
+
+### PopToRootAsync overloads
+
+<span id="uid-97f431c75b"></span>
+
+#### PopToRootAsync
+
+Pops all pages to the root page using [Avalonia.Controls.NavigationPage.PageTransition](xref:Avalonia.Controls.NavigationPage.PageTransition).
+
+```csharp
+public System.Threading.Tasks.Task PopToRootAsync()
+```
+
+<span id="uid-0e56495611"></span>
+
+#### PopToRootAsync
+
+Pops all pages to the root page using `transition`.
+
+```csharp
+public System.Threading.Tasks.Task PopToRootAsync(Avalonia.Animation.IPageTransition transition)
+```
+
+<span id="uid-3c25ff75d5"></span>
+
+### PushAsync overloads
+
+<span id="uid-f9245b3a80"></span>
+
+#### PushAsync
+
+Pushes `page` onto the navigation stack asynchronously using [Avalonia.Controls.NavigationPage.PageTransition](xref:Avalonia.Controls.NavigationPage.PageTransition).
+
+```csharp
+public System.Threading.Tasks.Task PushAsync(Avalonia.Controls.Page page)
+```
+
+<span id="uid-2dccca1d4a"></span>
+
+#### PushAsync
+
+Pushes `page` onto the navigation stack asynchronously using `transition`.
+
+```csharp
+public System.Threading.Tasks.Task PushAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition)
+```
+
+<span id="uid-487601da6e"></span>
+
+### PushModalAsync overloads
+
+<span id="uid-ff74da655c"></span>
+
+#### PushModalAsync
+
+Pushes a modal page using [Avalonia.Controls.NavigationPage.ModalTransition](xref:Avalonia.Controls.NavigationPage.ModalTransition).
+
+```csharp
+public System.Threading.Tasks.Task PushModalAsync(Avalonia.Controls.Page page)
+```
+
+<span id="uid-7e555801ea"></span>
+
+#### PushModalAsync
+
+Pushes `page` as a modal page using `transition`.
+
+```csharp
+public System.Threading.Tasks.Task PushModalAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition)
+```
+
+<span id="uid-e3354b754f"></span>
+
+### RemovePage
+
+Removes a page from the navigation stack without animation.
+
+```csharp
+public System.Void RemovePage(Avalonia.Controls.Page page)
+```
+
+<span id="uid-694bcda035"></span>
+
+### ReplaceAsync overloads
+
+<span id="uid-5c4e2321f6"></span>
+
+#### ReplaceAsync
+
+Replaces the top page with `page` using [Avalonia.Controls.NavigationPage.PageTransition](xref:Avalonia.Controls.NavigationPage.PageTransition).
+
+```csharp
+public System.Threading.Tasks.Task ReplaceAsync(Avalonia.Controls.Page page)
+```
+
+<span id="uid-722498a9dd"></span>
+
+#### ReplaceAsync
+
+Replaces the top page with `page` using `transition`.
+
+```csharp
+public System.Threading.Tasks.Task ReplaceAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition)
+```
+
+<span id="uid-d29059d019"></span>
+
+### SetBackButtonContent
+
+Sets custom content for the back button on the specified page.
+
+```csharp
+public System.Void SetBackButtonContent(Avalonia.Controls.Page page, System.Object content)
+```
+
+<span id="uid-0dda3948bc"></span>
+
+### SetBarHeightOverride
+
+```csharp
+public System.Void SetBarHeightOverride(Avalonia.Controls.Page page, System.Nullable<System.Double> value)
+```
+
+<span id="uid-04b7a9f2d9"></span>
+
+### SetBarLayoutBehavior
+
+```csharp
+public System.Void SetBarLayoutBehavior(Avalonia.Controls.Page page, System.Nullable<Avalonia.Controls.BarLayoutBehavior> value)
+```
+
+<span id="uid-7d41ec5fef"></span>
+
+### SetBottomCommandBar
+
+Sets a bottom command bar for the specified page.
+
+```csharp
+public System.Void SetBottomCommandBar(Avalonia.Controls.Page page, Avalonia.Controls.Control commandBar)
+```
+
+<span id="uid-f56d3103cc"></span>
+
+### SetHasBackButton
+
+Sets whether the back button is visible for the specified page.
+
+```csharp
+public System.Void SetHasBackButton(Avalonia.Controls.Page page, System.Boolean value)
+```
+
+<span id="uid-5c4192f3a7"></span>
+
+### SetHasNavigationBar
+
+Sets whether the navigation bar is visible for the specified page.
+
+```csharp
+public System.Void SetHasNavigationBar(Avalonia.Controls.Page page, System.Boolean value)
+```
+
+<span id="uid-052e0c6d99"></span>
+
+### SetHeader
+
+```csharp
+public System.Void SetHeader(Avalonia.Controls.Page page, System.Object header)
+```
+
+<span id="uid-00ef6ab339"></span>
+
+### SetIsBackButtonEnabled
+
+Sets whether the back button is enabled for the specified page.
+
+```csharp
+public System.Void SetIsBackButtonEnabled(Avalonia.Controls.Page page, System.Boolean value)
+```
+
+<span id="uid-e294ea701b"></span>
+
+### SetTopCommandBar
+
+Sets a top command bar for the specified page.
+
+```csharp
+public System.Void SetTopCommandBar(Avalonia.Controls.Page page, Avalonia.Controls.Control commandBar)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BarHeight](#uid-67d380e4b1) | Gets or sets the height of the navigation bar. |
+| [CanGoBack](#uid-ed0e03148f) | Gets whether the navigation stack has more than one entry. |
+| [Content](#uid-84e3d6be84) | Gets or sets the root page of the navigation stack. |
+| [EffectiveBarHeight](#uid-60b4791de5) | Gets the effective navigation bar height. |
+| [HasShadow](#uid-74747bd15a) | Gets or sets whether the navigation bar has a shadow. |
+| [IsBackButtonEffectivelyVisible](#uid-273a16ce3e) | Gets the effective back-button visibility. |
+| [IsBackButtonVisible](#uid-ce3200e60e) | Gets or sets whether the back button is globally visible for this NavigationPage. |
+| [IsGestureEnabled](#uid-6ae0fea383) | Gets or sets whether edge-swipe gestures can be used to navigate back. |
+| [ModalStack](#uid-67ab90027f) | Gets the current modal stack. Index 0 is the oldest (bottom-most) modal; the last index is the most recently pushed (topmost) modal. |
+| [ModalTransition](#uid-4c441f4d59) | Gets or sets the transition used when presenting or dismissing modal pages. |
+| [NavigationStack](#uid-3479c7abbe) | Gets the current navigation stack as a read-only list. |
+| [PageTransition](#uid-d73e435578) | Gets or sets the transition used when pushing or popping pages. |
+| [StackDepth](#uid-9961ede731) | Gets the number of pages in the navigation stack. |
+
+<span id="uid-67d380e4b1"></span>
+
+### BarHeight
+
+Gets or sets the height of the navigation bar.
+
+```csharp
+public System.Double BarHeight { get; set; }
+```
+
+<span id="uid-ed0e03148f"></span>
+
+### CanGoBack
+
+Gets whether the navigation stack has more than one entry.
+
+```csharp
+public System.Boolean CanGoBack { get; set; }
+```
+
+<span id="uid-84e3d6be84"></span>
+
+### Content
+
+Gets or sets the root page of the navigation stack.
+
+```csharp
+public System.Object Content { get; set; }
+```
+
+<span id="uid-60b4791de5"></span>
+
+### EffectiveBarHeight
+
+Gets the effective navigation bar height.
+
+```csharp
+public System.Double EffectiveBarHeight { get; set; }
+```
+
+<span id="uid-74747bd15a"></span>
+
+### HasShadow
+
+Gets or sets whether the navigation bar has a shadow.
+
+```csharp
+public System.Boolean HasShadow { get; set; }
+```
+
+<span id="uid-273a16ce3e"></span>
+
+### IsBackButtonEffectivelyVisible
+
+Gets the effective back-button visibility.
+
+```csharp
+public System.Nullable<System.Boolean> IsBackButtonEffectivelyVisible { get; set; }
+```
+
+<span id="uid-ce3200e60e"></span>
+
+### IsBackButtonVisible
+
+Gets or sets whether the back button is globally visible for this NavigationPage.
+
+```csharp
+public System.Boolean IsBackButtonVisible { get; set; }
+```
+
+<span id="uid-6ae0fea383"></span>
+
+### IsGestureEnabled
+
+Gets or sets whether edge-swipe gestures can be used to navigate back.
+
+```csharp
+public System.Boolean IsGestureEnabled { get; set; }
+```
+
+<span id="uid-67ab90027f"></span>
+
+### ModalStack
+
+Gets the current modal stack. Index 0 is the oldest (bottom-most) modal;
+the last index is the most recently pushed (topmost) modal.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Page> ModalStack { get; set; }
+```
+
+<span id="uid-4c441f4d59"></span>
+
+### ModalTransition
+
+Gets or sets the transition used when presenting or dismissing modal pages.
+
+```csharp
+public Avalonia.Animation.IPageTransition ModalTransition { get; set; }
+```
+
+<span id="uid-3479c7abbe"></span>
+
+### NavigationStack
+
+Gets the current navigation stack as a read-only list.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Page> NavigationStack { get; set; }
+```
+
+<span id="uid-d73e435578"></span>
+
+### PageTransition
+
+Gets or sets the transition used when pushing or popping pages.
+
+```csharp
+public Avalonia.Animation.IPageTransition PageTransition { get; set; }
+```
+
+<span id="uid-9961ede731"></span>
+
+### StackDepth
+
+Gets the number of pages in the navigation stack.
+
+```csharp
+public System.Int32 StackDepth { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackButtonContentProperty](#uid-13eb9369ad) | Defines the Avalonia.Controls.NavigationPage.BackButtonContentProperty attached property. |
+| [BarHeightOverrideProperty](#uid-cf77bac843) | Defines the Avalonia.Controls.NavigationPage.BarHeightOverrideProperty attached property. |
+| [BarHeightProperty](#uid-bedb3c2c14) | Defines the Avalonia.Controls.NavigationPage.BarHeight property. |
+| [BarLayoutBehaviorProperty](#uid-559c9846e1) | Defines the Avalonia.Controls.NavigationPage.BarLayoutBehaviorProperty attached property. |
+| [BottomCommandBarProperty](#uid-a8f84f88d1) | Defines the Avalonia.Controls.NavigationPage.BottomCommandBarProperty attached property. |
+| [CanGoBackProperty](#uid-3636d17b74) | Defines the Avalonia.Controls.NavigationPage.CanGoBack property. |
+| [ContentProperty](#uid-7e068f5466) | Defines the Avalonia.Controls.NavigationPage.Content property. |
+| [EffectiveBarHeightProperty](#uid-735e5ab309) | Defines the Avalonia.Controls.NavigationPage.EffectiveBarHeight property. |
+| [HasBackButtonProperty](#uid-fe50b64bc8) | Defines the Avalonia.Controls.NavigationPage.HasBackButtonProperty attached property. |
+| [HasNavigationBarProperty](#uid-2170d0ad56) | Defines the Avalonia.Controls.NavigationPage.HasNavigationBarProperty attached property. |
+| [HasShadowProperty](#uid-c26ac2be9b) | Defines the Avalonia.Controls.NavigationPage.HasShadow property. |
+| [IsBackButtonEffectivelyVisibleProperty](#uid-436b6e9b44) | Defines the Avalonia.Controls.NavigationPage.IsBackButtonEffectivelyVisible property. |
+| [IsBackButtonEnabledProperty](#uid-6a8dd260ed) | Defines the Avalonia.Controls.NavigationPage.IsBackButtonEnabledProperty attached property. |
+| [IsBackButtonVisibleProperty](#uid-c07302390e) | Defines the Avalonia.Controls.NavigationPage.IsBackButtonVisible property. |
+| [IsGestureEnabledProperty](#uid-2d0f896b3c) | Defines the Avalonia.Controls.NavigationPage.IsGestureEnabled property. |
+| [ModalTransitionProperty](#uid-b64470c575) | Defines the Avalonia.Controls.NavigationPage.ModalTransition property. |
+| [PageTransitionProperty](#uid-4fadf43c06) | Defines the Avalonia.Controls.NavigationPage.PageTransition property. |
+| [TopCommandBarProperty](#uid-00395ec177) | Defines the Avalonia.Controls.NavigationPage.TopCommandBarProperty attached property. |
+
+<span id="uid-13eb9369ad"></span>
+
+### BackButtonContentProperty
+
+Defines the [Avalonia.Controls.NavigationPage.BackButtonContentProperty](xref:Avalonia.Controls.NavigationPage.BackButtonContentProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Object> BackButtonContentProperty
+```
+
+<span id="uid-cf77bac843"></span>
+
+### BarHeightOverrideProperty
+
+Defines the [Avalonia.Controls.NavigationPage.BarHeightOverrideProperty](xref:Avalonia.Controls.NavigationPage.BarHeightOverrideProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Nullable<System.Double>> BarHeightOverrideProperty
+```
+
+<span id="uid-bedb3c2c14"></span>
+
+### BarHeightProperty
+
+Defines the [Avalonia.Controls.NavigationPage.BarHeight](xref:Avalonia.Controls.NavigationPage.BarHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> BarHeightProperty
+```
+
+<span id="uid-559c9846e1"></span>
+
+### BarLayoutBehaviorProperty
+
+Defines the [Avalonia.Controls.NavigationPage.BarLayoutBehaviorProperty](xref:Avalonia.Controls.NavigationPage.BarLayoutBehaviorProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Nullable<Avalonia.Controls.BarLayoutBehavior>> BarLayoutBehaviorProperty
+```
+
+<span id="uid-a8f84f88d1"></span>
+
+### BottomCommandBarProperty
+
+Defines the [Avalonia.Controls.NavigationPage.BottomCommandBarProperty](xref:Avalonia.Controls.NavigationPage.BottomCommandBarProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Control> BottomCommandBarProperty
+```
+
+<span id="uid-3636d17b74"></span>
+
+### CanGoBackProperty
+
+Defines the [Avalonia.Controls.NavigationPage.CanGoBack](xref:Avalonia.Controls.NavigationPage.CanGoBack) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.NavigationPage, System.Boolean> CanGoBackProperty
+```
+
+<span id="uid-7e068f5466"></span>
+
+### ContentProperty
+
+Defines the [Avalonia.Controls.NavigationPage.Content](xref:Avalonia.Controls.NavigationPage.Content) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> ContentProperty
+```
+
+<span id="uid-735e5ab309"></span>
+
+### EffectiveBarHeightProperty
+
+Defines the [Avalonia.Controls.NavigationPage.EffectiveBarHeight](xref:Avalonia.Controls.NavigationPage.EffectiveBarHeight) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.NavigationPage, System.Double> EffectiveBarHeightProperty
+```
+
+<span id="uid-fe50b64bc8"></span>
+
+### HasBackButtonProperty
+
+Defines the [Avalonia.Controls.NavigationPage.HasBackButtonProperty](xref:Avalonia.Controls.NavigationPage.HasBackButtonProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> HasBackButtonProperty
+```
+
+<span id="uid-2170d0ad56"></span>
+
+### HasNavigationBarProperty
+
+Defines the [Avalonia.Controls.NavigationPage.HasNavigationBarProperty](xref:Avalonia.Controls.NavigationPage.HasNavigationBarProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> HasNavigationBarProperty
+```
+
+<span id="uid-c26ac2be9b"></span>
+
+### HasShadowProperty
+
+Defines the [Avalonia.Controls.NavigationPage.HasShadow](xref:Avalonia.Controls.NavigationPage.HasShadow) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> HasShadowProperty
+```
+
+<span id="uid-436b6e9b44"></span>
+
+### IsBackButtonEffectivelyVisibleProperty
+
+Defines the [Avalonia.Controls.NavigationPage.IsBackButtonEffectivelyVisible](xref:Avalonia.Controls.NavigationPage.IsBackButtonEffectivelyVisible) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.NavigationPage, System.Nullable<System.Boolean>> IsBackButtonEffectivelyVisibleProperty
+```
+
+<span id="uid-6a8dd260ed"></span>
+
+### IsBackButtonEnabledProperty
+
+Defines the [Avalonia.Controls.NavigationPage.IsBackButtonEnabledProperty](xref:Avalonia.Controls.NavigationPage.IsBackButtonEnabledProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsBackButtonEnabledProperty
+```
+
+<span id="uid-c07302390e"></span>
+
+### IsBackButtonVisibleProperty
+
+Defines the [Avalonia.Controls.NavigationPage.IsBackButtonVisible](xref:Avalonia.Controls.NavigationPage.IsBackButtonVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsBackButtonVisibleProperty
+```
+
+<span id="uid-2d0f896b3c"></span>
+
+### IsGestureEnabledProperty
+
+Defines the [Avalonia.Controls.NavigationPage.IsGestureEnabled](xref:Avalonia.Controls.NavigationPage.IsGestureEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsGestureEnabledProperty
+```
+
+<span id="uid-b64470c575"></span>
+
+### ModalTransitionProperty
+
+Defines the [Avalonia.Controls.NavigationPage.ModalTransition](xref:Avalonia.Controls.NavigationPage.ModalTransition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Animation.IPageTransition> ModalTransitionProperty
+```
+
+<span id="uid-4fadf43c06"></span>
+
+### PageTransitionProperty
+
+Defines the [Avalonia.Controls.NavigationPage.PageTransition](xref:Avalonia.Controls.NavigationPage.PageTransition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Animation.IPageTransition> PageTransitionProperty
+```
+
+<span id="uid-00395ec177"></span>
+
+### TopCommandBarProperty
+
+Defines the [Avalonia.Controls.NavigationPage.TopCommandBarProperty](xref:Avalonia.Controls.NavigationPage.TopCommandBarProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Control> TopCommandBarProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ModalPopped](#uid-8bd31c4095) | Occurs when a modal page is popped. |
+| [ModalPushed](#uid-4200bc41f4) | Occurs when a modal page is pushed. |
+| [PageInserted](#uid-e35d6ffee3) | Occurs when a page has been inserted into the navigation stack. |
+| [PageRemoved](#uid-21ae7923a4) | Occurs when a page has been removed from the navigation stack. |
+| [Popped](#uid-9ef47ac5a0) | Occurs when a page is popped from the navigation stack. |
+| [PoppedToRoot](#uid-382f8e8e9c) | Occurs when the stack is popped to root. |
+| [Pushed](#uid-93f5d5ef96) | Occurs when a page is pushed onto the navigation stack. |
+
+<span id="uid-8bd31c4095"></span>
+
+### ModalPopped
+
+Occurs when a modal page is popped.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ModalPoppedEventArgs> ModalPopped
+```
+
+<span id="uid-4200bc41f4"></span>
+
+### ModalPushed
+
+Occurs when a modal page is pushed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ModalPushedEventArgs> ModalPushed
+```
+
+<span id="uid-e35d6ffee3"></span>
+
+### PageInserted
+
+Occurs when a page has been inserted into the navigation stack.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.PageInsertedEventArgs> PageInserted
+```
+
+<span id="uid-21ae7923a4"></span>
+
+### PageRemoved
+
+Occurs when a page has been removed from the navigation stack.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.PageRemovedEventArgs> PageRemoved
+```
+
+<span id="uid-9ef47ac5a0"></span>
+
+### Popped
+
+Occurs when a page is popped from the navigation stack.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.NavigationEventArgs> Popped
+```
+
+<span id="uid-382f8e8e9c"></span>
+
+### PoppedToRoot
+
+Occurs when the stack is popped to root.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.NavigationEventArgs> PoppedToRoot
+```
+
+<span id="uid-93f5d5ef96"></span>
+
+### Pushed
+
+Occurs when a page is pushed onto the navigation stack.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.NavigationEventArgs> Pushed
+```
+
+</ApiRefPage>
+

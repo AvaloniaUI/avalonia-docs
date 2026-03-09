@@ -1,0 +1,925 @@
+---
+title: 'AutoCompleteBox'
+hide_title: true
+slug: '/avalonia/controls/autocompletebox'
+uid: 'Avalonia.Controls.AutoCompleteBox'
+commentId: 'T:Avalonia.Controls.AutoCompleteBox'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AutoCompleteBox Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a control that provides a text box for user input and a
+drop-down that contains possible matches based on the input in the text
+box.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AutoCompleteBox
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> AutoCompleteBox
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AutoCompleteBox](#uid-8092545c60) | Initializes a new instance of the Avalonia.Controls.AutoCompleteBox class. |
+
+<span id="uid-8092545c60"></span>
+
+### AutoCompleteBox
+
+Initializes a new instance of the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) class.
+
+```csharp
+public AutoCompleteBox()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [PopulateComplete](#uid-26f2d2c8e0) | Notifies the Avalonia.Controls.AutoCompleteBox that the Avalonia.Controls.AutoCompleteBox.Items property has been set and the data can be filtered to provide possible matches in the drop-down. |
+
+<span id="uid-26f2d2c8e0"></span>
+
+### PopulateComplete
+
+Notifies the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) that the
+[Avalonia.Controls.AutoCompleteBox.Items](xref:Avalonia.Controls.AutoCompleteBox.Items)
+property has been set and the data can be filtered to provide
+possible matches in the drop-down.
+
+```csharp
+public System.Void PopulateComplete()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AsyncPopulator](#uid-c224112d75) | No summary available. |
+| [CaretIndex](#uid-092a7155d2) | Gets or sets the caret index |
+| [ClearSelectionOnLostFocus](#uid-c9e8131c75) | Gets or sets a value that determines whether the Avalonia.Controls.AutoCompleteBox clears its selection after it loses focus. |
+| [FilterMode](#uid-6813846edb) | Gets or sets how the text in the text box is used to filter items specified by the Avalonia.Controls.AutoCompleteBox.ItemsSource property for display in the drop-down. |
+| [InnerLeftContent](#uid-c0fb6cc618) | Gets or sets custom content that is positioned on the left side of the text layout box |
+| [InnerRightContent](#uid-3be8e494b1) | Gets or sets custom content that is positioned on the right side of the text layout box |
+| [IsDropDownOpen](#uid-c3ca805886) | Gets or sets a value indicating whether the drop-down portion of the control is open. |
+| [IsTextCompletionEnabled](#uid-0061228bd2) | Gets or sets a value indicating whether the first possible match found during the filtering process will be displayed automatically in the text box. |
+| [ItemFilter](#uid-e56150b50a) | Gets or sets the custom method that uses user-entered text to filter the items specified by the Avalonia.Controls.AutoCompleteBox.ItemsSource property for display in the drop-down. |
+| [ItemSelector](#uid-fae1716297) | Gets or sets the custom method that combines the user-entered text and one of the items specified by the Avalonia.Controls.AutoCompleteBox.ItemsSource. |
+| [ItemTemplate](#uid-4e7e4b5331) | Gets or sets the Avalonia.DataTemplate used to display each item in the drop-down portion of the control. |
+| [ItemsSource](#uid-e913179fef) | Gets or sets a collection that is used to generate the items for the drop-down portion of the Avalonia.Controls.AutoCompleteBox control. |
+| [MaxDropDownHeight](#uid-99b704dad6) | Gets or sets the maximum height of the drop-down portion of the Avalonia.Controls.AutoCompleteBox control. |
+| [MaxLength](#uid-0fa621de60) | Gets or sets the maximum number of characters that the Avalonia.Controls.AutoCompleteBox can accept. This constraint only applies for manually entered (user-inputted) text. |
+| [MinimumPopulateDelay](#uid-aa23acf296) | Gets or sets the minimum delay, after text is typed in the text box before the Avalonia.Controls.AutoCompleteBox control populates the list of possible matches in the drop-down. |
+| [MinimumPrefixLength](#uid-3a42738a0f) | Gets or sets the minimum number of characters required to be entered in the text box before the Avalonia.Controls.AutoCompleteBox displays possible matches. |
+| [PlaceholderForeground](#uid-3733bb7934) | Gets or sets the brush used for the foreground color of the placeholder text. |
+| [PlaceholderText](#uid-7610fee8be) | Gets or sets the placeholder or descriptive text that is displayed even if the text is not yet set. |
+| [SearchText](#uid-ff06ebb22f) | Gets the text that is used to filter items in the Avalonia.Controls.AutoCompleteBox.ItemsSource item collection. |
+| [SelectedItem](#uid-d9881a05df) | Gets or sets the selected item in the drop-down. |
+| [Text](#uid-a69fbf5659) | Gets or sets the text in the text box portion of the Avalonia.Controls.AutoCompleteBox control. |
+| [TextFilter](#uid-8fcf90c709) | Gets or sets the custom method that uses the user-entered text to filter items specified by the Avalonia.Controls.AutoCompleteBox.ItemsSource property in a text-based way for display in the drop-down. |
+| [TextSelector](#uid-b8bf034680) | Gets or sets the custom method that combines the user-entered text and one of the items specified by the Avalonia.Controls.AutoCompleteBox.ItemsSource in a text-based way. |
+| [ValueMemberBinding](#uid-ffa31bf8a5) | Gets or sets the Avalonia.Data.BindingBase that is used to get the values for display in the text portion of the Avalonia.Controls.AutoCompleteBox control. |
+| [Watermark](#uid-f35c587d99) | Gets or sets the placeholder or descriptive text that is displayed even if the text is not yet set. |
+| [WatermarkForeground](#uid-cd5456c1a6) | Gets or sets the brush used for the foreground color of the placeholder text. |
+
+<span id="uid-c224112d75"></span>
+
+### AsyncPopulator
+
+```csharp
+public System.Func<System.String, System.Threading.CancellationToken, System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>> AsyncPopulator { get; set; }
+```
+
+<span id="uid-092a7155d2"></span>
+
+### CaretIndex
+
+Gets or sets the caret index
+
+```csharp
+public System.Int32 CaretIndex { get; set; }
+```
+
+<span id="uid-c9e8131c75"></span>
+
+### ClearSelectionOnLostFocus
+
+Gets or sets a value that determines whether the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) clears its selection after it loses focus.
+
+```csharp
+public System.Boolean ClearSelectionOnLostFocus { get; set; }
+```
+
+<span id="uid-6813846edb"></span>
+
+### FilterMode
+
+Gets or sets how the text in the text box is used to filter items
+specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
+property for display in the drop-down.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode FilterMode { get; set; }
+```
+
+Value: One of the [Avalonia.Controls.AutoCompleteFilterMode](xref:Avalonia.Controls.AutoCompleteFilterMode)
+values The default is [Avalonia.Controls.AutoCompleteFilterMode.StartsWith](xref:Avalonia.Controls.AutoCompleteFilterMode.StartsWith).
+
+#### Exceptions
+
+- [The specified value is not a valid
+\[Avalonia.Controls.AutoCompleteFilterMode\](xref:Avalonia.Controls.AutoCompleteFilterMode).](xref:System.ArgumentException)
+
+<span id="uid-c0fb6cc618"></span>
+
+### InnerLeftContent
+
+Gets or sets custom content that is positioned on the left side of the text layout box
+
+```csharp
+public System.Object InnerLeftContent { get; set; }
+```
+
+<span id="uid-3be8e494b1"></span>
+
+### InnerRightContent
+
+Gets or sets custom content that is positioned on the right side of the text layout box
+
+```csharp
+public System.Object InnerRightContent { get; set; }
+```
+
+<span id="uid-c3ca805886"></span>
+
+### IsDropDownOpen
+
+Gets or sets a value indicating whether the drop-down portion of
+the control is open.
+
+```csharp
+public System.Boolean IsDropDownOpen { get; set; }
+```
+
+Value: True if the drop-down is open; otherwise, false. The default is
+false.
+
+<span id="uid-0061228bd2"></span>
+
+### IsTextCompletionEnabled
+
+Gets or sets a value indicating whether the first possible match
+found during the filtering process will be displayed automatically
+in the text box.
+
+```csharp
+public System.Boolean IsTextCompletionEnabled { get; set; }
+```
+
+Value: True if the first possible match found will be displayed
+automatically in the text box; otherwise, false. The default is
+false.
+
+<span id="uid-e56150b50a"></span>
+
+### ItemFilter
+
+Gets or sets the custom method that uses user-entered text to filter
+the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
+property for display in the drop-down.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterPredicate<T><System.Object> ItemFilter { get; set; }
+```
+
+Value: The custom method that uses the user-entered text to filter
+the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
+property. The default is null.
+
+<span id="uid-fae1716297"></span>
+
+### ItemSelector
+
+Gets or sets the custom method that combines the user-entered
+text and one of the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource).
+
+```csharp
+public Avalonia.Controls.AutoCompleteSelector<T><System.Object> ItemSelector { get; set; }
+```
+
+Value: The custom method that combines the user-entered
+text and one of the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource).
+
+<span id="uid-4e7e4b5331"></span>
+
+### ItemTemplate
+
+Gets or sets the [Avalonia.DataTemplate](xref:Avalonia.DataTemplate) used
+to display each item in the drop-down portion of the control.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate ItemTemplate { get; set; }
+```
+
+Value: The [Avalonia.DataTemplate](xref:Avalonia.DataTemplate) used to
+display each item in the drop-down. The default is null.
+
+<span id="uid-e913179fef"></span>
+
+### ItemsSource
+
+Gets or sets a collection that is used to generate the items for the
+drop-down portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control.
+
+```csharp
+public System.Collections.IEnumerable ItemsSource { get; set; }
+```
+
+Value: The collection that is used to generate the items of the
+drop-down portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control.
+
+<span id="uid-99b704dad6"></span>
+
+### MaxDropDownHeight
+
+Gets or sets the maximum height of the drop-down portion of the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control.
+
+```csharp
+public System.Double MaxDropDownHeight { get; set; }
+```
+
+Value: The maximum height of the drop-down portion of the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control.
+The default is [System.Double.PositiveInfinity](xref:System.Double.PositiveInfinity).
+
+#### Exceptions
+
+- [The specified value is less than 0.](xref:System.ArgumentException)
+
+<span id="uid-0fa621de60"></span>
+
+### MaxLength
+
+Gets or sets the maximum number of characters that the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) can accept.
+This constraint only applies for manually entered (user-inputted) text.
+
+```csharp
+public System.Int32 MaxLength { get; set; }
+```
+
+<span id="uid-aa23acf296"></span>
+
+### MinimumPopulateDelay
+
+Gets or sets the minimum delay, after text is typed
+in the text box before the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control
+populates the list of possible matches in the drop-down.
+
+```csharp
+public System.TimeSpan MinimumPopulateDelay { get; set; }
+```
+
+Value: The minimum delay, after text is typed in
+the text box, but before the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) populates
+the list of possible matches in the drop-down. The default is 0.
+
+<span id="uid-3a42738a0f"></span>
+
+### MinimumPrefixLength
+
+Gets or sets the minimum number of characters required to be entered
+in the text box before the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) displays possible matches.
+
+```csharp
+public System.Int32 MinimumPrefixLength { get; set; }
+```
+
+Value: The minimum number of characters to be entered in the text box
+before the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox)
+displays possible matches. The default is 1.
+
+<span id="uid-3733bb7934"></span>
+
+### PlaceholderForeground
+
+Gets or sets the brush used for the foreground color of the placeholder text.
+
+```csharp
+public Avalonia.Media.IBrush PlaceholderForeground { get; set; }
+```
+
+<span id="uid-7610fee8be"></span>
+
+### PlaceholderText
+
+Gets or sets the placeholder or descriptive text that is displayed even if the text is not yet set.
+
+```csharp
+public System.String PlaceholderText { get; set; }
+```
+
+<span id="uid-ff06ebb22f"></span>
+
+### SearchText
+
+Gets the text that is used to filter items in the
+[Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) item collection.
+
+```csharp
+public System.String SearchText { get; set; }
+```
+
+Value: The text that is used to filter items in the
+[Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) item collection.
+
+<span id="uid-d9881a05df"></span>
+
+### SelectedItem
+
+Gets or sets the selected item in the drop-down.
+
+```csharp
+public System.Object SelectedItem { get; set; }
+```
+
+Value: The selected item in the drop-down.
+
+<span id="uid-a69fbf5659"></span>
+
+### Text
+
+Gets or sets the text in the text box portion of the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control.
+
+```csharp
+public System.String Text { get; set; }
+```
+
+Value: The text in the text box portion of the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control.
+
+<span id="uid-8fcf90c709"></span>
+
+### TextFilter
+
+Gets or sets the custom method that uses the user-entered text to
+filter items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
+property in a text-based way for display in the drop-down.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterPredicate<T><System.String> TextFilter { get; set; }
+```
+
+Value: The custom method that uses the user-entered text to filter
+items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
+property in a text-based way for display in the drop-down.
+
+<span id="uid-b8bf034680"></span>
+
+### TextSelector
+
+Gets or sets the custom method that combines the user-entered
+text and one of the items specified by the
+[Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) in a text-based way.
+
+```csharp
+public Avalonia.Controls.AutoCompleteSelector<T><System.String> TextSelector { get; set; }
+```
+
+Value: The custom method that combines the user-entered
+text and one of the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
+in a text-based way.
+
+<span id="uid-ffa31bf8a5"></span>
+
+### ValueMemberBinding
+
+Gets or sets the [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase) that is used to get the values for display in the text portion
+of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control.
+
+```csharp
+public Avalonia.Data.BindingBase ValueMemberBinding { get; set; }
+```
+
+Value: The [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase) object used when binding to a collection property.
+
+<span id="uid-f35c587d99"></span>
+
+### Watermark
+
+Gets or sets the placeholder or descriptive text that is displayed even if the text is not yet set.
+
+```csharp
+public System.String Watermark { get; set; }
+```
+
+<span id="uid-cd5456c1a6"></span>
+
+### WatermarkForeground
+
+Gets or sets the brush used for the foreground color of the placeholder text.
+
+```csharp
+public Avalonia.Media.IBrush WatermarkForeground { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AsyncPopulatorProperty](#uid-dc69c16c99) | Identifies the Avalonia.Controls.AutoCompleteBox.AsyncPopulator property. |
+| [CaretIndexProperty](#uid-077da949fb) | Defines see Avalonia.Controls.TextBox.CaretIndex property. |
+| [ClearSelectionOnLostFocusProperty](#uid-4c05d97482) | Defines the Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocus property |
+| [FilterModeProperty](#uid-1cd3204fa1) | Gets the identifier for the Avalonia.Controls.AutoCompleteBox.FilterMode property. |
+| [InnerLeftContentProperty](#uid-d4063e7fcc) | Defines the Avalonia.Controls.AutoCompleteBox.InnerLeftContent property |
+| [InnerRightContentProperty](#uid-8817692c0f) | Defines the Avalonia.Controls.AutoCompleteBox.InnerRightContent property |
+| [IsDropDownOpenProperty](#uid-c54a0da55a) | Identifies the Avalonia.Controls.AutoCompleteBox.IsDropDownOpen property. |
+| [IsTextCompletionEnabledProperty](#uid-cf3819a169) | Identifies the Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabled property. |
+| [ItemFilterProperty](#uid-2c709e24e8) | Identifies the Avalonia.Controls.AutoCompleteBox.ItemFilter property. |
+| [ItemSelectorProperty](#uid-939fafd961) | Identifies the Avalonia.Controls.AutoCompleteBox.ItemSelector property. |
+| [ItemTemplateProperty](#uid-a90b409626) | Identifies the Avalonia.Controls.AutoCompleteBox.ItemTemplate property. |
+| [ItemsSourceProperty](#uid-1a974b5e96) | Identifies the Avalonia.Controls.AutoCompleteBox.ItemsSource property. |
+| [MaxDropDownHeightProperty](#uid-5a22730b72) | Identifies the Avalonia.Controls.AutoCompleteBox.MaxDropDownHeight property. |
+| [MaxLengthProperty](#uid-3378154d0d) | Defines the Avalonia.Controls.AutoCompleteBox.MaxLength property |
+| [MinimumPopulateDelayProperty](#uid-50ed6b0f75) | Identifies the Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelay property. |
+| [MinimumPrefixLengthProperty](#uid-c98e5551d5) | Identifies the Avalonia.Controls.AutoCompleteBox.MinimumPrefixLength property. |
+| [PlaceholderForegroundProperty](#uid-f20d84c4c3) | Defines the Avalonia.Controls.AutoCompleteBox.PlaceholderForeground property. |
+| [PlaceholderTextProperty](#uid-e1420003ac) | Defines the Avalonia.Controls.AutoCompleteBox.PlaceholderText property. |
+| [SearchTextProperty](#uid-1134c61ef1) | Identifies the Avalonia.Controls.AutoCompleteBox.SearchText property. |
+| [SelectedItemProperty](#uid-de0077d428) | Identifies the Avalonia.Controls.AutoCompleteBox.SelectedItem property. |
+| [SelectionChangedEvent](#uid-4a144fb9a6) | No summary available. |
+| [TextChangedEvent](#uid-4515dc0d93) | Defines the Avalonia.Controls.AutoCompleteBox.TextChanged event. |
+| [TextFilterProperty](#uid-8dc700e8d3) | Identifies the Avalonia.Controls.AutoCompleteBox.TextFilter property. |
+| [TextProperty](#uid-0c176e9919) | Identifies the Avalonia.Controls.AutoCompleteBox.Text property. |
+| [TextSelectorProperty](#uid-334c9edcfc) | Identifies the Avalonia.Controls.AutoCompleteBox.TextSelector property. |
+| [ValueMemberBindingProperty](#uid-36f7246fbf) | Defines the Avalonia.Controls.AutoCompleteBox.ValueMemberBinding property. |
+| [WatermarkForegroundProperty](#uid-3f207e0580) | Defines the Avalonia.Controls.AutoCompleteBox.WatermarkForeground property. |
+| [WatermarkProperty](#uid-706b3f373d) | Defines the Avalonia.Controls.AutoCompleteBox.Watermark property. |
+
+<span id="uid-dc69c16c99"></span>
+
+### AsyncPopulatorProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.AsyncPopulator](xref:Avalonia.Controls.AutoCompleteBox.AsyncPopulator) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>> AsyncPopulatorProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.AsyncPopulator](xref:Avalonia.Controls.AutoCompleteBox.AsyncPopulator) property.
+
+<span id="uid-077da949fb"></span>
+
+### CaretIndexProperty
+
+Defines see [Avalonia.Controls.TextBox.CaretIndex](xref:Avalonia.Controls.TextBox.CaretIndex) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> CaretIndexProperty
+```
+
+<span id="uid-4c05d97482"></span>
+
+### ClearSelectionOnLostFocusProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocus](xref:Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocus) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ClearSelectionOnLostFocusProperty
+```
+
+<span id="uid-1cd3204fa1"></span>
+
+### FilterModeProperty
+
+Gets the identifier for the [Avalonia.Controls.AutoCompleteBox.FilterMode](xref:Avalonia.Controls.AutoCompleteBox.FilterMode) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.AutoCompleteFilterMode> FilterModeProperty
+```
+
+<span id="uid-d4063e7fcc"></span>
+
+### InnerLeftContentProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.InnerLeftContent](xref:Avalonia.Controls.AutoCompleteBox.InnerLeftContent) property
+
+```csharp
+public Avalonia.StyledProperty<System.Object> InnerLeftContentProperty
+```
+
+<span id="uid-8817692c0f"></span>
+
+### InnerRightContentProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.InnerRightContent](xref:Avalonia.Controls.AutoCompleteBox.InnerRightContent) property
+
+```csharp
+public Avalonia.StyledProperty<System.Object> InnerRightContentProperty
+```
+
+<span id="uid-c54a0da55a"></span>
+
+### IsDropDownOpenProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.IsDropDownOpen](xref:Avalonia.Controls.AutoCompleteBox.IsDropDownOpen) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsDropDownOpenProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.IsDropDownOpen](xref:Avalonia.Controls.AutoCompleteBox.IsDropDownOpen) property.
+
+<span id="uid-cf3819a169"></span>
+
+### IsTextCompletionEnabledProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabled](xref:Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsTextCompletionEnabledProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabled](xref:Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabled) property.
+
+<span id="uid-2c709e24e8"></span>
+
+### ItemFilterProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.ItemFilter](xref:Avalonia.Controls.AutoCompleteBox.ItemFilter) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.AutoCompleteFilterPredicate<T><System.Object>> ItemFilterProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.ItemFilter](xref:Avalonia.Controls.AutoCompleteBox.ItemFilter) property.
+
+<span id="uid-939fafd961"></span>
+
+### ItemSelectorProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.ItemSelector](xref:Avalonia.Controls.AutoCompleteBox.ItemSelector) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.AutoCompleteSelector<T><System.Object>> ItemSelectorProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.ItemSelector](xref:Avalonia.Controls.AutoCompleteBox.ItemSelector) property.
+
+<span id="uid-a90b409626"></span>
+
+### ItemTemplateProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.ItemTemplate](xref:Avalonia.Controls.AutoCompleteBox.ItemTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> ItemTemplateProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.ItemTemplate](xref:Avalonia.Controls.AutoCompleteBox.ItemTemplate) property.
+
+<span id="uid-1a974b5e96"></span>
+
+### ItemsSourceProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.IEnumerable> ItemsSourceProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) property.
+
+<span id="uid-5a22730b72"></span>
+
+### MaxDropDownHeightProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.MaxDropDownHeight](xref:Avalonia.Controls.AutoCompleteBox.MaxDropDownHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> MaxDropDownHeightProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.MaxDropDownHeight](xref:Avalonia.Controls.AutoCompleteBox.MaxDropDownHeight) property.
+
+<span id="uid-3378154d0d"></span>
+
+### MaxLengthProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.MaxLength](xref:Avalonia.Controls.AutoCompleteBox.MaxLength) property
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxLengthProperty
+```
+
+<span id="uid-50ed6b0f75"></span>
+
+### MinimumPopulateDelayProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelay](xref:Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelay) property.
+
+```csharp
+public Avalonia.StyledProperty<System.TimeSpan> MinimumPopulateDelayProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelay](xref:Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelay) property.
+
+<span id="uid-c98e5551d5"></span>
+
+### MinimumPrefixLengthProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.MinimumPrefixLength](xref:Avalonia.Controls.AutoCompleteBox.MinimumPrefixLength) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MinimumPrefixLengthProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.MinimumPrefixLength](xref:Avalonia.Controls.AutoCompleteBox.MinimumPrefixLength) property.
+
+<span id="uid-f20d84c4c3"></span>
+
+### PlaceholderForegroundProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.PlaceholderForeground](xref:Avalonia.Controls.AutoCompleteBox.PlaceholderForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> PlaceholderForegroundProperty
+```
+
+<span id="uid-e1420003ac"></span>
+
+### PlaceholderTextProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.PlaceholderText](xref:Avalonia.Controls.AutoCompleteBox.PlaceholderText) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> PlaceholderTextProperty
+```
+
+<span id="uid-1134c61ef1"></span>
+
+### SearchTextProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.SearchText](xref:Avalonia.Controls.AutoCompleteBox.SearchText) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.AutoCompleteBox, System.String> SearchTextProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.SearchText](xref:Avalonia.Controls.AutoCompleteBox.SearchText) property.
+
+<span id="uid-de0077d428"></span>
+
+### SelectedItemProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.SelectedItem](xref:Avalonia.Controls.AutoCompleteBox.SelectedItem) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> SelectedItemProperty
+```
+
+Value: The identifier the [Avalonia.Controls.AutoCompleteBox.SelectedItem](xref:Avalonia.Controls.AutoCompleteBox.SelectedItem) property.
+
+<span id="uid-4a144fb9a6"></span>
+
+### SelectionChangedEvent
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.SelectionChangedEventArgs> SelectionChangedEvent
+```
+
+<span id="uid-4515dc0d93"></span>
+
+### TextChangedEvent
+
+Defines the [Avalonia.Controls.AutoCompleteBox.TextChanged](xref:Avalonia.Controls.AutoCompleteBox.TextChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.TextChangedEventArgs> TextChangedEvent
+```
+
+<span id="uid-8dc700e8d3"></span>
+
+### TextFilterProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.TextFilter](xref:Avalonia.Controls.AutoCompleteBox.TextFilter) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.AutoCompleteFilterPredicate<T><System.String>> TextFilterProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.TextFilter](xref:Avalonia.Controls.AutoCompleteBox.TextFilter) property.
+
+<span id="uid-0c176e9919"></span>
+
+### TextProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.Text](xref:Avalonia.Controls.AutoCompleteBox.Text) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> TextProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.Text](xref:Avalonia.Controls.AutoCompleteBox.Text) property.
+
+<span id="uid-334c9edcfc"></span>
+
+### TextSelectorProperty
+
+Identifies the [Avalonia.Controls.AutoCompleteBox.TextSelector](xref:Avalonia.Controls.AutoCompleteBox.TextSelector) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.AutoCompleteSelector<T><System.String>> TextSelectorProperty
+```
+
+Value: The identifier for the [Avalonia.Controls.AutoCompleteBox.TextSelector](xref:Avalonia.Controls.AutoCompleteBox.TextSelector) property.
+
+<span id="uid-36f7246fbf"></span>
+
+### ValueMemberBindingProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.ValueMemberBinding](xref:Avalonia.Controls.AutoCompleteBox.ValueMemberBinding) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Data.BindingBase> ValueMemberBindingProperty
+```
+
+<span id="uid-3f207e0580"></span>
+
+### WatermarkForegroundProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.WatermarkForeground](xref:Avalonia.Controls.AutoCompleteBox.WatermarkForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> WatermarkForegroundProperty
+```
+
+<span id="uid-706b3f373d"></span>
+
+### WatermarkProperty
+
+Defines the [Avalonia.Controls.AutoCompleteBox.Watermark](xref:Avalonia.Controls.AutoCompleteBox.Watermark) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> WatermarkProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [DropDownClosed](#uid-5f113371e0) | Occurs when the Avalonia.Controls.AutoCompleteBox.IsDropDownOpen property was changed from true to false and the drop-down is open. |
+| [DropDownClosing](#uid-d4190fae49) | Occurs when the Avalonia.Controls.AutoCompleteBox.IsDropDownOpen property is changing from true to false. |
+| [DropDownOpened](#uid-28720486cc) | Occurs when the value of the Avalonia.Controls.AutoCompleteBox.IsDropDownOpen property has changed from false to true and the drop-down is open. |
+| [DropDownOpening](#uid-e6f7482659) | Occurs when the value of the Avalonia.Controls.AutoCompleteBox.IsDropDownOpen property is changing from false to true. |
+| [Populated](#uid-90a3658f3c) | Occurs when the Avalonia.Controls.AutoCompleteBox has populated the drop-down with possible matches based on the Avalonia.Controls.AutoCompleteBox.Text property. |
+| [Populating](#uid-139a98dfd3) | Occurs when the Avalonia.Controls.AutoCompleteBox is populating the drop-down with possible matches based on the Avalonia.Controls.AutoCompleteBox.Text property. |
+| [SelectionChanged](#uid-518baeb376) | Occurs when the selected item in the drop-down portion of the Avalonia.Controls.AutoCompleteBox has changed. |
+| [TextChanged](#uid-52f7699eb8) | Occurs asynchronously when the text in the Avalonia.Controls.AutoCompleteBox.TextBox portion of the Avalonia.Controls.AutoCompleteBox changes. |
+
+<span id="uid-5f113371e0"></span>
+
+### DropDownClosed
+
+Occurs when the
+[Avalonia.Controls.AutoCompleteBox.IsDropDownOpen](xref:Avalonia.Controls.AutoCompleteBox.IsDropDownOpen)
+property was changed from true to false and the drop-down is open.
+
+```csharp
+public event System.EventHandler DropDownClosed
+```
+
+<span id="uid-d4190fae49"></span>
+
+### DropDownClosing
+
+Occurs when the
+[Avalonia.Controls.AutoCompleteBox.IsDropDownOpen](xref:Avalonia.Controls.AutoCompleteBox.IsDropDownOpen)
+property is changing from true to false.
+
+```csharp
+public event System.EventHandler<System.ComponentModel.CancelEventArgs> DropDownClosing
+```
+
+<span id="uid-28720486cc"></span>
+
+### DropDownOpened
+
+Occurs when the value of the
+[Avalonia.Controls.AutoCompleteBox.IsDropDownOpen](xref:Avalonia.Controls.AutoCompleteBox.IsDropDownOpen)
+property has changed from false to true and the drop-down is open.
+
+```csharp
+public event System.EventHandler DropDownOpened
+```
+
+<span id="uid-e6f7482659"></span>
+
+### DropDownOpening
+
+Occurs when the value of the
+[Avalonia.Controls.AutoCompleteBox.IsDropDownOpen](xref:Avalonia.Controls.AutoCompleteBox.IsDropDownOpen)
+property is changing from false to true.
+
+```csharp
+public event System.EventHandler<System.ComponentModel.CancelEventArgs> DropDownOpening
+```
+
+<span id="uid-90a3658f3c"></span>
+
+### Populated
+
+Occurs when the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) has
+populated the drop-down with possible matches based on the
+[Avalonia.Controls.AutoCompleteBox.Text](xref:Avalonia.Controls.AutoCompleteBox.Text)
+property.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.PopulatedEventArgs> Populated
+```
+
+<span id="uid-139a98dfd3"></span>
+
+### Populating
+
+Occurs when the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) is
+populating the drop-down with possible matches based on the
+[Avalonia.Controls.AutoCompleteBox.Text](xref:Avalonia.Controls.AutoCompleteBox.Text)
+property.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.PopulatingEventArgs> Populating
+```
+
+<span id="uid-518baeb376"></span>
+
+### SelectionChanged
+
+Occurs when the selected item in the drop-down portion of the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) has
+changed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs> SelectionChanged
+```
+
+<span id="uid-52f7699eb8"></span>
+
+### TextChanged
+
+Occurs asynchronously when the text in the [Avalonia.Controls.AutoCompleteBox.TextBox](xref:Avalonia.Controls.AutoCompleteBox.TextBox) portion of the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) changes.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.TextChangedEventArgs> TextChanged
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,284 @@
+---
+title: 'Canvas'
+hide_title: true
+slug: '/avalonia/controls/canvas'
+uid: 'Avalonia.Controls.Canvas'
+commentId: 'T:Avalonia.Controls.Canvas'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Canvas Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A panel that displays child controls at arbitrary locations.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Canvas
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="panel">Panel</a> <span className="apiref-page__relation-separator">-&gt;</span> Canvas
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../input/inavigablecontainer">INavigableContainer</a>
+</div>
+</div>
+
+## Remarks
+
+Unlike other [Avalonia.Controls.Panel](xref:Avalonia.Controls.Panel) implementations, the [Avalonia.Controls.Canvas](xref:Avalonia.Controls.Canvas) doesn't lay out
+its children in any particular layout. Instead, the positioning of each child control is
+defined by the
+```csharp
+Canvas.Left
+```
+,
+```csharp
+Canvas.Top
+```
+,
+```csharp
+Canvas.Right
+```
+
+and
+```csharp
+Canvas.Bottom
+```
+attached properties.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Canvas](#uid-62a9065ce2) | No summary available. |
+
+<span id="uid-62a9065ce2"></span>
+
+### Canvas
+
+```csharp
+public Canvas()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetBottom](#uid-edda18000e) | Gets the value of the Bottom attached property for a control. |
+| [GetLeft](#uid-498e62dd98) | Gets the value of the Left attached property for a control. |
+| [GetRight](#uid-3b10cbf7ba) | Gets the value of the Right attached property for a control. |
+| [GetTop](#uid-74288f17bc) | Gets the value of the Top attached property for a control. |
+| [SetBottom](#uid-2c31c85811) | Sets the value of the Bottom attached property for a control. |
+| [SetLeft](#uid-3c86f47994) | Sets the value of the Left attached property for a control. |
+| [SetRight](#uid-e347f7cd4b) | Sets the value of the Right attached property for a control. |
+| [SetTop](#uid-7ae6dae547) | Sets the value of the Top attached property for a control. |
+
+<span id="uid-edda18000e"></span>
+
+### GetBottom
+
+Gets the value of the Bottom attached property for a control.
+
+```csharp
+public System.Double GetBottom(Avalonia.AvaloniaObject element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+
+Returns: The control's bottom coordinate.
+
+<span id="uid-498e62dd98"></span>
+
+### GetLeft
+
+Gets the value of the Left attached property for a control.
+
+```csharp
+public System.Double GetLeft(Avalonia.AvaloniaObject element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+
+Returns: The control's left coordinate.
+
+<span id="uid-3b10cbf7ba"></span>
+
+### GetRight
+
+Gets the value of the Right attached property for a control.
+
+```csharp
+public System.Double GetRight(Avalonia.AvaloniaObject element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+
+Returns: The control's right coordinate.
+
+<span id="uid-74288f17bc"></span>
+
+### GetTop
+
+Gets the value of the Top attached property for a control.
+
+```csharp
+public System.Double GetTop(Avalonia.AvaloniaObject element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+
+Returns: The control's top coordinate.
+
+<span id="uid-2c31c85811"></span>
+
+### SetBottom
+
+Sets the value of the Bottom attached property for a control.
+
+```csharp
+public System.Void SetBottom(Avalonia.AvaloniaObject element, System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+| `value` | The bottom value. |
+
+<span id="uid-3c86f47994"></span>
+
+### SetLeft
+
+Sets the value of the Left attached property for a control.
+
+```csharp
+public System.Void SetLeft(Avalonia.AvaloniaObject element, System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+| `value` | The left value. |
+
+<span id="uid-e347f7cd4b"></span>
+
+### SetRight
+
+Sets the value of the Right attached property for a control.
+
+```csharp
+public System.Void SetRight(Avalonia.AvaloniaObject element, System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+| `value` | The right value. |
+
+<span id="uid-7ae6dae547"></span>
+
+### SetTop
+
+Sets the value of the Top attached property for a control.
+
+```csharp
+public System.Void SetTop(Avalonia.AvaloniaObject element, System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control. |
+| `value` | The top value. |
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BottomProperty](#uid-c1f2e6b9cb) | Defines the Bottom attached property. |
+| [LeftProperty](#uid-433527c20d) | Defines the Left attached property. |
+| [RightProperty](#uid-ead6f40263) | Defines the Right attached property. |
+| [TopProperty](#uid-60574df398) | Defines the Top attached property. |
+
+<span id="uid-c1f2e6b9cb"></span>
+
+### BottomProperty
+
+Defines the Bottom attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Double> BottomProperty
+```
+
+<span id="uid-433527c20d"></span>
+
+### LeftProperty
+
+Defines the Left attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Double> LeftProperty
+```
+
+<span id="uid-ead6f40263"></span>
+
+### RightProperty
+
+Defines the Right attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Double> RightProperty
+```
+
+<span id="uid-60574df398"></span>
+
+### TopProperty
+
+Defines the Top attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Double> TopProperty
+```
+
+</ApiRefPage>
+

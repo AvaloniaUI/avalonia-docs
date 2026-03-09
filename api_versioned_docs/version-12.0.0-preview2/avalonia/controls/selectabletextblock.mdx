@@ -1,0 +1,266 @@
+---
+title: 'SelectableTextBlock'
+hide_title: true
+slug: '/avalonia/controls/selectabletextblock'
+uid: 'Avalonia.Controls.SelectableTextBlock'
+commentId: 'T:Avalonia.Controls.SelectableTextBlock'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SelectableTextBlock Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control that displays a block of formatted text.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SelectableTextBlock
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="textblock">TextBlock</a> <span className="apiref-page__relation-separator">-&gt;</span> SelectableTextBlock
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IInlineHost, <a href="../logicaltree/ilogical">ILogical</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SelectableTextBlock](#uid-6eaae6ecca) | No summary available. |
+
+<span id="uid-6eaae6ecca"></span>
+
+### SelectableTextBlock
+
+```csharp
+public SelectableTextBlock()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearSelection](#uid-b3bbaf9e79) | Clears the current selection |
+| [Copy](#uid-6d4f6acf33) | Copies the current selection to the Clipboard. |
+| [SelectAll](#uid-4251df0206) | Select all text in the TextBox |
+
+<span id="uid-b3bbaf9e79"></span>
+
+### ClearSelection
+
+Clears the current selection
+
+```csharp
+public System.Void ClearSelection()
+```
+
+<span id="uid-6d4f6acf33"></span>
+
+### Copy
+
+Copies the current selection to the Clipboard.
+
+```csharp
+public System.Void Copy()
+```
+
+<span id="uid-4251df0206"></span>
+
+### SelectAll
+
+Select all text in the TextBox
+
+```csharp
+public System.Void SelectAll()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanCopy](#uid-af87df8534) | Property for determining if the Copy command can be executed. |
+| [SelectedText](#uid-730cec1f92) | Gets the content of the current selection. |
+| [SelectionBrush](#uid-816b9be94d) | Gets or sets the brush that highlights selected text. |
+| [SelectionEnd](#uid-d6e38da820) | Gets or sets a character index for the end of the current selection. |
+| [SelectionForegroundBrush](#uid-876f9a95b2) | Gets or sets a brush that is used for the foreground of selected text |
+| [SelectionStart](#uid-86ca2ab392) | Gets or sets a character index for the beginning of the current selection. |
+
+<span id="uid-af87df8534"></span>
+
+### CanCopy
+
+Property for determining if the Copy command can be executed.
+
+```csharp
+public System.Boolean CanCopy { get; set; }
+```
+
+<span id="uid-730cec1f92"></span>
+
+### SelectedText
+
+Gets the content of the current selection.
+
+```csharp
+public System.String SelectedText { get; set; }
+```
+
+<span id="uid-816b9be94d"></span>
+
+### SelectionBrush
+
+Gets or sets the brush that highlights selected text.
+
+```csharp
+public Avalonia.Media.IBrush SelectionBrush { get; set; }
+```
+
+<span id="uid-d6e38da820"></span>
+
+### SelectionEnd
+
+Gets or sets a character index for the end of the current selection.
+
+```csharp
+public System.Int32 SelectionEnd { get; set; }
+```
+
+<span id="uid-876f9a95b2"></span>
+
+### SelectionForegroundBrush
+
+Gets or sets a brush that is used for the foreground of selected text
+
+```csharp
+public Avalonia.Media.IBrush SelectionForegroundBrush { get; set; }
+```
+
+<span id="uid-86ca2ab392"></span>
+
+### SelectionStart
+
+Gets or sets a character index for the beginning of the current selection.
+
+```csharp
+public System.Int32 SelectionStart { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CanCopyProperty](#uid-3f7c76863b) | No summary available. |
+| [CopyingToClipboardEvent](#uid-380a6c84aa) | No summary available. |
+| [SelectedTextProperty](#uid-7726ef19e5) | No summary available. |
+| [SelectionBrushProperty](#uid-abbe253c83) | No summary available. |
+| [SelectionEndProperty](#uid-d0b25614fe) | No summary available. |
+| [SelectionForegroundBrushProperty](#uid-dc48f9a2a8) | No summary available. |
+| [SelectionStartProperty](#uid-e3b771521d) | No summary available. |
+
+<span id="uid-3f7c76863b"></span>
+
+### CanCopyProperty
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.SelectableTextBlock, System.Boolean> CanCopyProperty
+```
+
+<span id="uid-380a6c84aa"></span>
+
+### CopyingToClipboardEvent
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> CopyingToClipboardEvent
+```
+
+<span id="uid-7726ef19e5"></span>
+
+### SelectedTextProperty
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.SelectableTextBlock, System.String> SelectedTextProperty
+```
+
+<span id="uid-abbe253c83"></span>
+
+### SelectionBrushProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> SelectionBrushProperty
+```
+
+<span id="uid-d0b25614fe"></span>
+
+### SelectionEndProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> SelectionEndProperty
+```
+
+<span id="uid-dc48f9a2a8"></span>
+
+### SelectionForegroundBrushProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> SelectionForegroundBrushProperty
+```
+
+<span id="uid-e3b771521d"></span>
+
+### SelectionStartProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> SelectionStartProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CopyingToClipboard](#uid-2ae087c973) | No summary available. |
+
+<span id="uid-2ae087c973"></span>
+
+### CopyingToClipboard
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> CopyingToClipboard
+```
+
+</ApiRefPage>
+

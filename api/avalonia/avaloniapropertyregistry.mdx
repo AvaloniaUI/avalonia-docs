@@ -1,0 +1,329 @@
+---
+title: 'AvaloniaPropertyRegistry'
+hide_title: true
+slug: '/avalonia/avaloniapropertyregistry'
+uid: 'Avalonia.AvaloniaPropertyRegistry'
+commentId: 'T:Avalonia.AvaloniaPropertyRegistry'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaPropertyRegistry Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Tracks registered [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) instances.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaPropertyRegistry
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaPropertyRegistry
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaPropertyRegistry](#uid-0f2ac83e17) | No summary available. |
+
+<span id="uid-0f2ac83e17"></span>
+
+### AvaloniaPropertyRegistry
+
+```csharp
+public AvaloniaPropertyRegistry()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [FindRegistered (2 overloads)](#uid-64b201f2b3) | Finds a registered property on an object by name. |
+| [FindRegisteredDirect](#uid-2b0d9feded) | No summary available. |
+| [GetRegistered (2 overloads)](#uid-8976733651) | Gets all Avalonia.AvaloniaPropertys registered on a object. |
+| [GetRegisteredAttached](#uid-ae78b652e6) | Gets all attached Avalonia.AvaloniaPropertys registered on a type. |
+| [GetRegisteredDirect (2 overloads)](#uid-aa57862c5b) | No summary available. |
+| [GetRegisteredInherited](#uid-19893acf68) | Gets all inherited Avalonia.AvaloniaPropertys registered on a type. |
+| [IsRegistered (2 overloads)](#uid-f5dfaca7be) | Checks whether a Avalonia.AvaloniaProperty is registered on a object. |
+| [Register](#uid-6f7e93830a) | Registers a Avalonia.AvaloniaProperty on a type. |
+| [RegisterAttached](#uid-524ce404c3) | Registers an attached Avalonia.AvaloniaProperty on a type. |
+| [UnregisterByModule](#uid-b44e115ad1) | No summary available. |
+
+<span id="uid-64b201f2b3"></span>
+
+### FindRegistered overloads
+
+<span id="uid-d2d25bd2bd"></span>
+
+#### FindRegistered
+
+Finds a registered property on an object by name.
+
+```csharp
+public Avalonia.AvaloniaProperty FindRegistered(Avalonia.AvaloniaObject o, System.String name)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `name` | The property name. |
+| `o` | The object. |
+
+Returns: The registered property or null if no matching property found.
+
+##### Exceptions
+
+- [The property name contains a '.'.](xref:System.InvalidOperationException)
+
+<span id="uid-dcc1729794"></span>
+
+#### FindRegistered
+
+Finds a registered property on a type by name.
+
+```csharp
+public Avalonia.AvaloniaProperty FindRegistered(System.Type type, System.String name)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `name` | The property name. |
+| `type` | The type. |
+
+Returns: The registered property or null if no matching property found.
+
+##### Exceptions
+
+- [The property name contains a '.'.](xref:System.InvalidOperationException)
+
+<span id="uid-2b0d9feded"></span>
+
+### FindRegisteredDirect
+
+```csharp
+public Avalonia.DirectPropertyBase<TValue><T> FindRegisteredDirect<T>(Avalonia.AvaloniaObject o, Avalonia.DirectPropertyBase<TValue><T> property)
+```
+
+<span id="uid-8976733651"></span>
+
+### GetRegistered overloads
+
+<span id="uid-01ab9d09c8"></span>
+
+#### GetRegistered
+
+Gets all [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a object.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegistered(Avalonia.AvaloniaObject o)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `o` | The object. |
+
+Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) definitions.
+
+<span id="uid-845952cb71"></span>
+
+#### GetRegistered
+
+Gets all non-attached [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a type.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegistered(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type. |
+
+Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) definitions.
+
+<span id="uid-ae78b652e6"></span>
+
+### GetRegisteredAttached
+
+Gets all attached [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a type.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredAttached(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type. |
+
+Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) definitions.
+
+<span id="uid-aa57862c5b"></span>
+
+### GetRegisteredDirect overloads
+
+<span id="uid-52ec2c43a4"></span>
+
+#### GetRegisteredDirect
+
+```csharp
+public Avalonia.DirectPropertyBase<TValue><T> GetRegisteredDirect<T>(Avalonia.AvaloniaObject o, Avalonia.DirectPropertyBase<TValue><T> property)
+```
+
+<span id="uid-ce2b1ab0d3"></span>
+
+#### GetRegisteredDirect
+
+Gets all direct [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a type.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredDirect(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type. |
+
+Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) definitions.
+
+<span id="uid-19893acf68"></span>
+
+### GetRegisteredInherited
+
+Gets all inherited [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a type.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredInherited(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type. |
+
+Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) definitions.
+
+<span id="uid-f5dfaca7be"></span>
+
+### IsRegistered overloads
+
+<span id="uid-b49799a141"></span>
+
+#### IsRegistered
+
+Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is registered on a object.
+
+```csharp
+public System.Boolean IsRegistered(System.Object o, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `o` | The object. |
+| `property` | The property. |
+
+Returns: True if the property is registered, otherwise false.
+
+<span id="uid-6aaaa03a92"></span>
+
+#### IsRegistered
+
+Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is registered on a type.
+
+```csharp
+public System.Boolean IsRegistered(System.Type type, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+| `type` | The type. |
+
+Returns: True if the property is registered, otherwise false.
+
+<span id="uid-6f7e93830a"></span>
+
+### Register
+
+Registers a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) on a type.
+
+```csharp
+public System.Void Register(System.Type type, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+| `type` | The type. |
+
+<span id="uid-524ce404c3"></span>
+
+### RegisterAttached
+
+Registers an attached [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) on a type.
+
+```csharp
+public System.Void RegisterAttached(System.Type type, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+| `type` | The type. |
+
+<span id="uid-b44e115ad1"></span>
+
+### UnregisterByModule
+
+```csharp
+public System.Boolean UnregisterByModule(System.Collections.Generic.IEnumerable<System.Type> types)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Instance](#uid-5c6252da24) | Gets the Avalonia.AvaloniaPropertyRegistry instance |
+
+<span id="uid-5c6252da24"></span>
+
+### Instance
+
+Gets the [Avalonia.AvaloniaPropertyRegistry](xref:Avalonia.AvaloniaPropertyRegistry) instance
+
+```csharp
+public Avalonia.AvaloniaPropertyRegistry Instance { get; set; }
+```
+
+</ApiRefPage>
+

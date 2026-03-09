@@ -1,0 +1,177 @@
+---
+title: 'PolylineGeometry'
+hide_title: true
+slug: '/avalonia/media/polylinegeometry'
+uid: 'Avalonia.Media.PolylineGeometry'
+commentId: 'T:Avalonia.Media.PolylineGeometry'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PolylineGeometry Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the geometry of an polyline or polygon.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PolylineGeometry
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="geometry">Geometry</a> <span className="apiref-page__relation-separator">-&gt;</span> PolylineGeometry
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PolylineGeometry (3 overloads)](#uid-5360df31ad) | Initializes a new instance of the Avalonia.Media.PolylineGeometry class. |
+
+<span id="uid-5360df31ad"></span>
+
+### PolylineGeometry overloads
+
+<span id="uid-412e086366"></span>
+
+#### PolylineGeometry
+
+Initializes a new instance of the [Avalonia.Media.PolylineGeometry](xref:Avalonia.Media.PolylineGeometry) class.
+
+```csharp
+public PolylineGeometry()
+```
+
+<span id="uid-b2d2dea6f2"></span>
+
+#### PolylineGeometry
+
+```csharp
+public PolylineGeometry(System.Collections.Generic.IEnumerable<Avalonia.Point> points, System.Boolean isFilled)
+```
+
+<span id="uid-650e351a47"></span>
+
+#### PolylineGeometry
+
+```csharp
+public PolylineGeometry(System.Collections.Generic.IEnumerable<Avalonia.Point> points, System.Boolean isFilled, Avalonia.Media.FillRule fillRule)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Clone](#uid-ba4589b920) | Clones the geometry. |
+
+<span id="uid-ba4589b920"></span>
+
+### Clone
+
+Clones the geometry.
+
+```csharp
+public Avalonia.Media.Geometry Clone()
+```
+
+Returns: A cloned geometry.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FillRule](#uid-6ea3a568e7) | Gets how the intersecting areas of the polyline are combined. |
+| [IsFilled](#uid-9b0de06ab4) | No summary available. |
+| [Points](#uid-fc16b859de) | Gets or sets the figures. |
+
+<span id="uid-6ea3a568e7"></span>
+
+### FillRule
+
+Gets how the intersecting areas of the polyline are combined.
+
+```csharp
+public Avalonia.Media.FillRule FillRule { get; set; }
+```
+
+<span id="uid-9b0de06ab4"></span>
+
+### IsFilled
+
+```csharp
+public System.Boolean IsFilled { get; set; }
+```
+
+<span id="uid-fc16b859de"></span>
+
+### Points
+
+Gets or sets the figures.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Point> Points { get; set; }
+```
+
+Value: The points.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsFilledProperty](#uid-e27959ae52) | Defines the Avalonia.Media.PolylineGeometry.IsFilled property. |
+| [PointsProperty](#uid-09a47c5ecc) | Defines the Avalonia.Media.PolylineGeometry.Points property. |
+
+<span id="uid-e27959ae52"></span>
+
+### IsFilledProperty
+
+Defines the [Avalonia.Media.PolylineGeometry.IsFilled](xref:Avalonia.Media.PolylineGeometry.IsFilled) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Boolean> IsFilledProperty
+```
+
+<span id="uid-09a47c5ecc"></span>
+
+### PointsProperty
+
+Defines the [Avalonia.Media.PolylineGeometry.Points](xref:Avalonia.Media.PolylineGeometry.Points) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Media.PolylineGeometry, System.Collections.Generic.IList<Avalonia.Point>> PointsProperty
+```
+
+</ApiRefPage>
+

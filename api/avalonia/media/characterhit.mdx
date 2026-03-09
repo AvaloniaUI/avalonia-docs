@@ -1,0 +1,150 @@
+---
+title: 'CharacterHit'
+hide_title: true
+slug: '/avalonia/media/characterhit'
+uid: 'Avalonia.Media.CharacterHit'
+commentId: 'T:Avalonia.Media.CharacterHit'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CharacterHit Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents information about a character hit within a glyph run.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct CharacterHit
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> CharacterHit
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;CharacterHit&gt;
+</div>
+</div>
+
+## Remarks
+
+The CharacterHit structure provides information about the index of the first
+character that got hit as well as information about leading or trailing edge.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CharacterHit](#uid-9b9049bfde) | Initializes a new instance of the Avalonia.Media.CharacterHit structure. |
+
+<span id="uid-9b9049bfde"></span>
+
+### CharacterHit
+
+Initializes a new instance of the [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) structure.
+
+```csharp
+public CharacterHit(System.Int32 firstCharacterIndex, System.Int32 trailingLength)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `firstCharacterIndex` | Index of the first character that got hit. |
+| `trailingLength` | In the case of a leading edge, this value is 0. In the case of a trailing edge,
+this value is the number of code points until the next valid caret position. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-4c09f62603) | No summary available. |
+| [GetHashCode](#uid-9792b1e13c) | No summary available. |
+
+<span id="uid-4c09f62603"></span>
+
+### Equals overloads
+
+<span id="uid-a3c77a4b67"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Media.CharacterHit other)
+```
+
+<span id="uid-22799906da"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-9792b1e13c"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FirstCharacterIndex](#uid-b3656761f7) | Gets the index of the first character that got hit. |
+| [TrailingLength](#uid-afe539c36c) | Gets the trailing length value for the character that got hit. |
+
+<span id="uid-b3656761f7"></span>
+
+### FirstCharacterIndex
+
+Gets the index of the first character that got hit.
+
+```csharp
+public System.Int32 FirstCharacterIndex { get; set; }
+```
+
+<span id="uid-afe539c36c"></span>
+
+### TrailingLength
+
+Gets the trailing length value for the character that got hit.
+
+```csharp
+public System.Int32 TrailingLength { get; set; }
+```
+
+</ApiRefPage>
+

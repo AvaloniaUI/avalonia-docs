@@ -1,0 +1,200 @@
+---
+title: 'ShapedBuffer'
+hide_title: true
+slug: '/avalonia/media/textformatting/shapedbuffer'
+uid: 'Avalonia.Media.TextFormatting.ShapedBuffer'
+commentId: 'T:Avalonia.Media.TextFormatting.ShapedBuffer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ShapedBuffer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ShapedBuffer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ShapedBuffer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;GlyphInfo&gt;, IReadOnlyCollection&lt;GlyphInfo&gt;, IReadOnlyList&lt;GlyphInfo&gt;, IEnumerable, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ShapedBuffer](#uid-1d47581713) | No summary available. |
+
+<span id="uid-1d47581713"></span>
+
+### ShapedBuffer
+
+```csharp
+public ShapedBuffer(System.ReadOnlyMemory<System.Char> text, System.Int32 bufferLength, Avalonia.Media.GlyphTypeface glyphTypeface, System.Double fontRenderingEmSize, System.SByte bidiLevel)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-0bf95ef9df) | No summary available. |
+| [GetEnumerator](#uid-21e93d6c02) | No summary available. |
+| [Reverse](#uid-1245172420) | Reverses the buffer. |
+| [Split](#uid-6413e6994f) | Splits the Avalonia.Media.TextFormatting.TextRun at specified length. |
+
+<span id="uid-0bf95ef9df"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-21e93d6c02"></span>
+
+### GetEnumerator
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Media.TextFormatting.GlyphInfo> GetEnumerator()
+```
+
+<span id="uid-1245172420"></span>
+
+### Reverse
+
+Reverses the buffer.
+
+```csharp
+public System.Void Reverse()
+```
+
+<span id="uid-6413e6994f"></span>
+
+### Split
+
+Splits the [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) at specified length.
+
+```csharp
+public Avalonia.Media.TextFormatting.SplitResult<T><Avalonia.Media.TextFormatting.ShapedBuffer> Split(System.Int32 textLength)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `textLength` | The text length. |
+
+Returns: The split result.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BidiLevel](#uid-5ded254761) | The buffer's bidi level. |
+| [FontRenderingEmSize](#uid-5c7c9ef6ae) | The buffers font rendering em size. |
+| [GlyphTypeface](#uid-9c4431840f) | The buffer's glyph typeface. |
+| [IsLeftToRight](#uid-980dd70041) | The buffer's reading direction. |
+| [Item](#uid-f74462311e) | No summary available. |
+| [Length](#uid-3427eb612b) | The buffer's length. |
+| [Text](#uid-197f3ad165) | The text that is represended by this buffer. |
+
+<span id="uid-5ded254761"></span>
+
+### BidiLevel
+
+The buffer's bidi level.
+
+```csharp
+public System.SByte BidiLevel { get; set; }
+```
+
+<span id="uid-5c7c9ef6ae"></span>
+
+### FontRenderingEmSize
+
+The buffers font rendering em size.
+
+```csharp
+public System.Double FontRenderingEmSize { get; set; }
+```
+
+<span id="uid-9c4431840f"></span>
+
+### GlyphTypeface
+
+The buffer's glyph typeface.
+
+```csharp
+public Avalonia.Media.GlyphTypeface GlyphTypeface { get; set; }
+```
+
+<span id="uid-980dd70041"></span>
+
+### IsLeftToRight
+
+The buffer's reading direction.
+
+```csharp
+public System.Boolean IsLeftToRight { get; set; }
+```
+
+<span id="uid-f74462311e"></span>
+
+### Item
+
+```csharp
+public Avalonia.Media.TextFormatting.GlyphInfo Item { get; set; }
+```
+
+<span id="uid-3427eb612b"></span>
+
+### Length
+
+The buffer's length.
+
+```csharp
+public System.Int32 Length { get; set; }
+```
+
+<span id="uid-197f3ad165"></span>
+
+### Text
+
+The text that is represended by this buffer.
+
+```csharp
+public System.ReadOnlyMemory<System.Char> Text { get; set; }
+```
+
+</ApiRefPage>
+

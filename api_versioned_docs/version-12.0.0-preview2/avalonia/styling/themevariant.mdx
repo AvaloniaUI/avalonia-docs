@@ -1,0 +1,201 @@
+---
+title: 'ThemeVariant'
+hide_title: true
+slug: '/avalonia/styling/themevariant'
+uid: 'Avalonia.Styling.ThemeVariant'
+commentId: 'T:Avalonia.Styling.ThemeVariant'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Styling'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ThemeVariant Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Styling</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Specifies a UI theme variant that should be used for the Control and Application types.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ThemeVariant
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ThemeVariant
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;ThemeVariant&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ThemeVariant](#uid-0fb584387a) | Creates a new instance of the Avalonia.Styling.ThemeVariant |
+
+<span id="uid-0fb584387a"></span>
+
+### ThemeVariant
+
+Creates a new instance of the [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant)
+
+```csharp
+public ThemeVariant(System.Object key, Avalonia.Styling.ThemeVariant inheritVariant)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `inheritVariant` | Reference to a theme variant which should be used, if resource wasn't found for the requested variant. |
+| `key` | Key of the theme variant by which variants are compared. |
+
+#### Exceptions
+
+- [Thrown if inheritVariant is a reference to the \[Avalonia.Styling.ThemeVariant.Default\](xref:Avalonia.Styling.ThemeVariant.Default) which is ambiguous value to inherit.](xref:System.ArgumentException)
+- [Thrown if key is null.](xref:System.ArgumentNullException)
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-c65f6742ed) | No summary available. |
+| [Equals (2 overloads)](#uid-8337205626) | No summary available. |
+| [GetHashCode](#uid-ed17c7e0ae) | No summary available. |
+| [ToString](#uid-37b6125d36) | No summary available. |
+
+<span id="uid-c65f6742ed"></span>
+
+### &lt;Clone&gt;$
+
+```csharp
+public Avalonia.Styling.ThemeVariant <Clone>$()
+```
+
+<span id="uid-8337205626"></span>
+
+### Equals overloads
+
+<span id="uid-df9ac4c8fe"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Styling.ThemeVariant other)
+```
+
+<span id="uid-1c45b69fd4"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-ed17c7e0ae"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-37b6125d36"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Dark](#uid-46a433b308) | Use the Dark theme variant. |
+| [Default](#uid-512c40a7a6) | Inherit theme variant from the parent. If set on Application, system theme is inherited. Using Default as the ResourceDictionary.Key marks this dictionary as a fallback in case the theme variant or resource key is not found in other theme dictionaries. |
+| [InheritVariant](#uid-abdb39dbb3) | Reference to a theme variant which should be used, if resource wasn't found for the requested variant. |
+| [Key](#uid-e88e858545) | Key of the theme variant by which variants are compared. |
+| [Light](#uid-0c2c1e660f) | Use the Light theme variant. |
+
+<span id="uid-46a433b308"></span>
+
+### Dark
+
+Use the Dark theme variant.
+
+```csharp
+public Avalonia.Styling.ThemeVariant Dark { get; set; }
+```
+
+<span id="uid-512c40a7a6"></span>
+
+### Default
+
+Inherit theme variant from the parent. If set on Application, system theme is inherited.
+Using Default as the ResourceDictionary.Key marks this dictionary as a fallback in case the theme variant or resource key is not found in other theme dictionaries.
+
+```csharp
+public Avalonia.Styling.ThemeVariant Default { get; set; }
+```
+
+<span id="uid-abdb39dbb3"></span>
+
+### InheritVariant
+
+Reference to a theme variant which should be used, if resource wasn't found for the requested variant.
+
+```csharp
+public Avalonia.Styling.ThemeVariant InheritVariant { get; set; }
+```
+
+<span id="uid-e88e858545"></span>
+
+### Key
+
+Key of the theme variant by which variants are compared.
+
+```csharp
+public System.Object Key { get; set; }
+```
+
+<span id="uid-0c2c1e660f"></span>
+
+### Light
+
+Use the Light theme variant.
+
+```csharp
+public Avalonia.Styling.ThemeVariant Light { get; set; }
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,168 @@
+---
+title: 'ResourceInclude'
+hide_title: true
+slug: '/avalonia/markup/xaml/styling/resourceinclude'
+uid: 'Avalonia.Markup.Xaml.Styling.ResourceInclude'
+commentId: 'T:Avalonia.Markup.Xaml.Styling.ResourceInclude'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.Styling'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ResourceInclude Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.Styling</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Loads a resource dictionary from a specified URL.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ResourceInclude
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ResourceInclude
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../controls/iresourcenode">IResourceNode</a>, <a href="../../../controls/iresourceprovider">IResourceProvider</a>, <a href="../../../controls/ithemevariantprovider">IThemeVariantProvider</a>
+</div>
+</div>
+
+## Remarks
+
+If used from the XAML code, it is replaced with direct resource dictionary reference.
+When used in runtime, this type might be unsafe with trimming and AOT.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ResourceInclude (2 overloads)](#uid-417f6b06cc) | Initializes a new instance of the Avalonia.Markup.Xaml.Styling.ResourceInclude class. |
+
+<span id="uid-417f6b06cc"></span>
+
+### ResourceInclude overloads
+
+<span id="uid-3dd66f5307"></span>
+
+#### ResourceInclude
+
+Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude](xref:Avalonia.Markup.Xaml.Styling.ResourceInclude) class.
+
+```csharp
+public ResourceInclude(System.IServiceProvider serviceProvider)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `serviceProvider` | The XAML service provider. |
+
+<span id="uid-57e0723059"></span>
+
+#### ResourceInclude
+
+Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude](xref:Avalonia.Markup.Xaml.Styling.ResourceInclude) class.
+
+```csharp
+public ResourceInclude(System.Uri baseUri)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `baseUri` | The base URL for the XAML context. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetResource](#uid-f4b44da17a) | No summary available. |
+
+<span id="uid-f4b44da17a"></span>
+
+### TryGetResource
+
+```csharp
+public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Loaded](#uid-71a0e79d4a) | Gets the loaded resource dictionary. |
+| [Owner](#uid-b55252134b) | No summary available. |
+| [Source](#uid-a4fa9114c1) | Gets or sets the source URL. |
+
+<span id="uid-71a0e79d4a"></span>
+
+### Loaded
+
+Gets the loaded resource dictionary.
+
+```csharp
+public Avalonia.Controls.IResourceDictionary Loaded { get; set; }
+```
+
+<span id="uid-b55252134b"></span>
+
+### Owner
+
+```csharp
+public Avalonia.Controls.IResourceHost Owner { get; set; }
+```
+
+<span id="uid-a4fa9114c1"></span>
+
+### Source
+
+Gets or sets the source URL.
+
+```csharp
+public System.Uri Source { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [OwnerChanged](#uid-61ff0cac80) | No summary available. |
+
+<span id="uid-61ff0cac80"></span>
+
+### OwnerChanged
+
+```csharp
+public event System.EventHandler OwnerChanged
+```
+
+</ApiRefPage>
+

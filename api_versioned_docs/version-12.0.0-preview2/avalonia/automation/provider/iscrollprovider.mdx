@@ -1,0 +1,166 @@
+---
+title: 'IScrollProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/iscrollprovider'
+uid: 'Avalonia.Automation.Provider.IScrollProvider'
+commentId: 'T:Avalonia.Automation.Provider.IScrollProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IScrollProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support access by a UI Automation client to a control
+that acts as a scrollable container for a collection of child objects.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IScrollProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Scroll](#uid-2c98c2b745) | Scrolls the visible region of the content area horizontally and vertically. |
+| [SetScrollPercent](#uid-3735cebfd9) | Sets the horizontal and vertical scroll position as a percentage of the total content area within the control. |
+
+<span id="uid-2c98c2b745"></span>
+
+### Scroll
+
+Scrolls the visible region of the content area horizontally and vertically.
+
+```csharp
+public System.Void Scroll(Avalonia.Automation.Provider.ScrollAmount horizontalAmount, Avalonia.Automation.Provider.ScrollAmount verticalAmount)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `horizontalAmount` | The horizontal increment specific to the control. |
+| `verticalAmount` | The vertical increment specific to the control. |
+
+<span id="uid-3735cebfd9"></span>
+
+### SetScrollPercent
+
+Sets the horizontal and vertical scroll position as a percentage of the total content
+area within the control.
+
+```csharp
+public System.Void SetScrollPercent(System.Double horizontalPercent, System.Double verticalPercent)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `horizontalPercent` | The horizontal position as a percentage of the content area's total range.
+[Avalonia.Automation.ScrollPatternIdentifiers.NoScroll](xref:Avalonia.Automation.ScrollPatternIdentifiers.NoScroll) should be passed in if the control
+cannot be scrolled in this direction. |
+| `verticalPercent` | The vertical position as a percentage of the content area's total range.
+[Avalonia.Automation.ScrollPatternIdentifiers.NoScroll](xref:Avalonia.Automation.ScrollPatternIdentifiers.NoScroll) should be passed in if the control
+cannot be scrolled in this direction. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HorizontalScrollPercent](#uid-b1248aa738) | Gets the current horizontal scroll position. |
+| [HorizontalViewSize](#uid-e0b06e8d92) | Gets the current horizontal view size. |
+| [HorizontallyScrollable](#uid-b71163329b) | Gets a value that indicates whether the control can scroll horizontally. |
+| [VerticalScrollPercent](#uid-29deba5aa9) | Gets the current vertical scroll position. |
+| [VerticalViewSize](#uid-d04ac6b142) | Gets the vertical view size. |
+| [VerticallyScrollable](#uid-f6a3279088) | Gets a value that indicates whether the control can scroll vertically. |
+
+<span id="uid-b1248aa738"></span>
+
+### HorizontalScrollPercent
+
+Gets the current horizontal scroll position.
+
+```csharp
+public System.Double HorizontalScrollPercent { get; set; }
+```
+
+<span id="uid-e0b06e8d92"></span>
+
+### HorizontalViewSize
+
+Gets the current horizontal view size.
+
+```csharp
+public System.Double HorizontalViewSize { get; set; }
+```
+
+<span id="uid-b71163329b"></span>
+
+### HorizontallyScrollable
+
+Gets a value that indicates whether the control can scroll horizontally.
+
+```csharp
+public System.Boolean HorizontallyScrollable { get; set; }
+```
+
+<span id="uid-29deba5aa9"></span>
+
+### VerticalScrollPercent
+
+Gets the current vertical scroll position.
+
+```csharp
+public System.Double VerticalScrollPercent { get; set; }
+```
+
+<span id="uid-d04ac6b142"></span>
+
+### VerticalViewSize
+
+Gets the vertical view size.
+
+```csharp
+public System.Double VerticalViewSize { get; set; }
+```
+
+<span id="uid-f6a3279088"></span>
+
+### VerticallyScrollable
+
+Gets a value that indicates whether the control can scroll vertically.
+
+```csharp
+public System.Boolean VerticallyScrollable { get; set; }
+```
+
+</ApiRefPage>
+

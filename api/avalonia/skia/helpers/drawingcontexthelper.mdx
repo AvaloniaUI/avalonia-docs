@@ -1,0 +1,109 @@
+---
+title: 'DrawingContextHelper'
+hide_title: true
+slug: '/avalonia/skia/helpers/drawingcontexthelper'
+uid: 'Avalonia.Skia.Helpers.DrawingContextHelper'
+commentId: 'T:Avalonia.Skia.Helpers.DrawingContextHelper'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Skia'
+assembly: 'Avalonia.Skia'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Skia.Helpers'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DrawingContextHelper Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Skia.Helpers</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Skia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DrawingContextHelper
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DrawingContextHelper
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [RenderAsync (2 overloads)](#uid-72c183036e) | Renders Avalonia visual into a SKCanvas instance. This is useful in scenarios where canvas is not controlled by application, but received from another non avalonia api like: SKCanvas canvas = SKDocument.BeginPage(...); |
+| [TryCreateDashEffect](#uid-f6558ea199) | No summary available. |
+
+<span id="uid-72c183036e"></span>
+
+### RenderAsync overloads
+
+<span id="uid-e8c4c5d2bb"></span>
+
+#### RenderAsync
+
+Renders Avalonia visual into a SKCanvas instance.
+This is useful in scenarios where canvas is not controlled by application, but received from another non avalonia api
+like: SKCanvas canvas = SKDocument.BeginPage(...);
+
+```csharp
+public System.Threading.Tasks.Task RenderAsync(SkiaSharp.SKCanvas canvas, Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `canvas` | Skia canvas to render into. |
+| `clipRect` | Clipping rectangle. |
+| `dpi` | Dpi of drawings. |
+| `visual` | Avalonia visual. |
+
+<span id="uid-25faa69cb9"></span>
+
+#### RenderAsync
+
+Renders Avalonia visual into a SKCanvas instance.
+This is useful in scenarios where canvas is not controlled by application, but received from another non avalonia api
+like: SKCanvas canvas = SKDocument.BeginPage(...);
+
+```csharp
+public System.Threading.Tasks.Task RenderAsync(SkiaSharp.SKCanvas canvas, Avalonia.Visual visual, Avalonia.Rect clipRect, Avalonia.Vector dpi)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `canvas` | Skia canvas to render into. |
+| `clipRect` | Clipping rectangle. |
+| `dpi` | Dpi of drawings. |
+| `visual` | Avalonia visual. |
+
+<span id="uid-f6558ea199"></span>
+
+### TryCreateDashEffect
+
+```csharp
+public System.Boolean TryCreateDashEffect(Avalonia.Media.IPen pen, SkiaSharp.SKPathEffect& effect)
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,128 @@
+---
+title: 'SelectingMultiPage'
+hide_title: true
+slug: '/avalonia/controls/selectingmultipage'
+uid: 'Avalonia.Controls.SelectingMultiPage'
+commentId: 'T:Avalonia.Controls.SelectingMultiPage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SelectingMultiPage Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for multi-page controls with index-based selection.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SelectingMultiPage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="page">Page</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="multipage">MultiPage</a> <span className="apiref-page__relation-separator">-&gt;</span> SelectingMultiPage
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SelectedIndex](#uid-10b60652af) | Gets or sets the zero-based index of the selected page. |
+| [SelectedPage](#uid-1cf2a1f4de) | Gets the currently selected page, or if no page is selected. |
+
+<span id="uid-10b60652af"></span>
+
+### SelectedIndex
+
+Gets or sets the zero-based index of the selected page.
+
+```csharp
+public System.Int32 SelectedIndex { get; set; }
+```
+
+<span id="uid-1cf2a1f4de"></span>
+
+### SelectedPage
+
+Gets the currently selected page, or if no page is selected.
+
+```csharp
+public Avalonia.Controls.Page SelectedPage { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [SelectedIndexProperty](#uid-039a3658a3) | Defines the Avalonia.Controls.SelectingMultiPage.SelectedIndex property. |
+| [SelectedPageProperty](#uid-bb89ea6454) | Defines the Avalonia.Controls.SelectingMultiPage.SelectedPage property. |
+
+<span id="uid-039a3658a3"></span>
+
+### SelectedIndexProperty
+
+Defines the [Avalonia.Controls.SelectingMultiPage.SelectedIndex](xref:Avalonia.Controls.SelectingMultiPage.SelectedIndex) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.SelectingMultiPage, System.Int32> SelectedIndexProperty
+```
+
+<span id="uid-bb89ea6454"></span>
+
+### SelectedPageProperty
+
+Defines the [Avalonia.Controls.SelectingMultiPage.SelectedPage](xref:Avalonia.Controls.SelectingMultiPage.SelectedPage) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.SelectingMultiPage, Avalonia.Controls.Page> SelectedPageProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SelectionChanged](#uid-6231927978) | Raised when the selected page changes. |
+
+<span id="uid-6231927978"></span>
+
+### SelectionChanged
+
+Raised when the selected page changes.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.PageSelectionChangedEventArgs> SelectionChanged
+```
+
+</ApiRefPage>
+

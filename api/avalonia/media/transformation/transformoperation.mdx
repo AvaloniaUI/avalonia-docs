@@ -1,0 +1,184 @@
+---
+title: 'TransformOperation'
+hide_title: true
+slug: '/avalonia/media/transformation/transformoperation'
+uid: 'Avalonia.Media.Transformation.TransformOperation'
+commentId: 'T:Avalonia.Media.Transformation.TransformOperation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Transformation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TransformOperation Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Transformation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a single primitive transform (like translation, rotation, scale, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TransformOperation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TransformOperation
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TransformOperation&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bake](#uid-daf459e051) | Bakes this operation to a transform matrix. |
+| [Equals (2 overloads)](#uid-a647d0a2bf) | No summary available. |
+| [GetHashCode](#uid-b4ac176f2d) | No summary available. |
+| [ToString](#uid-71ce85e9c4) | No summary available. |
+| [TryInterpolate](#uid-1d9e2eb9d9) | No summary available. |
+
+<span id="uid-daf459e051"></span>
+
+### Bake
+
+Bakes this operation to a transform matrix.
+
+```csharp
+public System.Void Bake()
+```
+
+<span id="uid-a647d0a2bf"></span>
+
+### Equals overloads
+
+<span id="uid-868af7f776"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Media.Transformation.TransformOperation other)
+```
+
+<span id="uid-5869677216"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-b4ac176f2d"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-71ce85e9c4"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+<span id="uid-1d9e2eb9d9"></span>
+
+### TryInterpolate
+
+```csharp
+public System.Boolean TryInterpolate(System.Nullable<Avalonia.Media.Transformation.TransformOperation> from, System.Nullable<Avalonia.Media.Transformation.TransformOperation> to, System.Double progress, Avalonia.Media.Transformation.TransformOperation& result)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Identity](#uid-5835267b69) | Returns new identity transform operation. |
+| [IsIdentity](#uid-23f7b7bc17) | Returns whether operation produces the identity matrix. |
+
+<span id="uid-5835267b69"></span>
+
+### Identity
+
+Returns new identity transform operation.
+
+```csharp
+public Avalonia.Media.Transformation.TransformOperation Identity { get; set; }
+```
+
+<span id="uid-23f7b7bc17"></span>
+
+### IsIdentity
+
+Returns whether operation produces the identity matrix.
+
+```csharp
+public System.Boolean IsIdentity { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Data](#uid-416b125d23) | No summary available. |
+| [Matrix](#uid-639fd0e80b) | No summary available. |
+| [Type](#uid-2bebb4896e) | No summary available. |
+
+<span id="uid-416b125d23"></span>
+
+### Data
+
+```csharp
+public Avalonia.Media.Transformation.TransformOperation.DataLayout Data
+```
+
+<span id="uid-639fd0e80b"></span>
+
+### Matrix
+
+```csharp
+public Avalonia.Matrix Matrix
+```
+
+<span id="uid-2bebb4896e"></span>
+
+### Type
+
+```csharp
+public Avalonia.Media.Transformation.TransformOperation.OperationType Type
+```
+
+</ApiRefPage>
+

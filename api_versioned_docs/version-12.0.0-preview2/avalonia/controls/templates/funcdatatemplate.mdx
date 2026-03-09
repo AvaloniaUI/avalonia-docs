@@ -1,0 +1,156 @@
+---
+title: 'FuncDataTemplate'
+hide_title: true
+slug: '/avalonia/controls/templates/funcdatatemplate'
+uid: 'Avalonia.Controls.Templates.FuncDataTemplate'
+commentId: 'T:Avalonia.Controls.Templates.FuncDataTemplate'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Templates'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FuncDataTemplate Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Templates</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Builds a control for a piece of data.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FuncDataTemplate
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;Object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> FuncDataTemplate
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, <a href="irecyclingdatatemplate">IRecyclingDataTemplate</a>, ITemplate&lt;Object,Control&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FuncDataTemplate (2 overloads)](#uid-7a7a8b4ff2) | No summary available. |
+
+<span id="uid-7a7a8b4ff2"></span>
+
+### FuncDataTemplate overloads
+
+<span id="uid-081cc2ea9b"></span>
+
+#### FuncDataTemplate
+
+```csharp
+public FuncDataTemplate(System.Func<System.Object, System.Boolean> match, System.Func<System.Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, System.Boolean supportsRecycling)
+```
+
+<span id="uid-c27f2ab1db"></span>
+
+#### FuncDataTemplate
+
+```csharp
+public FuncDataTemplate(System.Type type, System.Func<System.Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, System.Boolean supportsRecycling)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Build](#uid-910f460c06) | Creates or recycles a control to display the specified data. |
+| [Match](#uid-50eee6cfed) | Checks to see if this data template matches the specified data. |
+
+<span id="uid-910f460c06"></span>
+
+### Build
+
+Creates or recycles a control to display the specified data.
+
+```csharp
+public Avalonia.Controls.Control Build(System.Object data, Avalonia.Controls.Control existing)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `data` | The data to display. |
+| `existing` | An optional control to recycle. |
+
+Returns: The `existing` control if supplied and applicable to
+`data`, otherwise a new control or null.
+
+<span id="uid-50eee6cfed"></span>
+
+### Match
+
+Checks to see if this data template matches the specified data.
+
+```csharp
+public System.Boolean Match(System.Object data)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `data` | The data. |
+
+Returns: True if the data template can build a control for the data, otherwise false.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Access](#uid-c964539ce7) | The default data template used in the case where no matching data template is found but Avalonia.Controls.Primitives.AccessText should be used. |
+| [Default](#uid-70c1c9b32b) | The default data template used in the case where no matching data template is found. |
+
+<span id="uid-c964539ce7"></span>
+
+### Access
+
+The default data template used in the case where no matching data template is found
+but [Avalonia.Controls.Primitives.AccessText](xref:Avalonia.Controls.Primitives.AccessText) should be used.
+
+```csharp
+public Avalonia.Controls.Templates.FuncDataTemplate Access
+```
+
+<span id="uid-70c1c9b32b"></span>
+
+### Default
+
+The default data template used in the case where no matching data template is found.
+
+```csharp
+public Avalonia.Controls.Templates.FuncDataTemplate Default
+```
+
+</ApiRefPage>
+

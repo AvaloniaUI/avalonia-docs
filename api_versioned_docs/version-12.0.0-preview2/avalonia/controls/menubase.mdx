@@ -1,0 +1,169 @@
+---
+title: 'MenuBase'
+hide_title: true
+slug: '/avalonia/controls/menubase'
+uid: 'Avalonia.Controls.MenuBase'
+commentId: 'T:Avalonia.Controls.MenuBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MenuBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for menu controls.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MenuBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemscontrol">ItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/selectingitemscontrol">SelectingItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> MenuBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IMenu, IMenuElement, <a href="../input/ifocusscope">IFocusScope</a>, <a href="../input/iinputelement">IInputElement</a>, <a href="../logicaltree/ilogical">ILogical</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Close](#uid-3601ce670c) | Closes the menu. |
+| [Open](#uid-3fc2f4f0b4) | Opens the menu. |
+
+<span id="uid-3601ce670c"></span>
+
+### Close
+
+Closes the menu.
+
+```csharp
+public System.Void Close()
+```
+
+<span id="uid-3fc2f4f0b4"></span>
+
+### Open
+
+Opens the menu.
+
+```csharp
+public System.Void Open()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsOpen](#uid-44b8dbd909) | Gets a value indicating whether the menu is open. |
+
+<span id="uid-44b8dbd909"></span>
+
+### IsOpen
+
+Gets a value indicating whether the menu is open.
+
+```csharp
+public System.Boolean IsOpen { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ClosedEvent](#uid-11a1c8525d) | Defines the Avalonia.Controls.MenuBase.Closed event. |
+| [IsOpenProperty](#uid-ce97abd192) | Defines the Avalonia.Controls.MenuBase.IsOpen property. |
+| [OpenedEvent](#uid-052bdc6c4c) | Defines the Avalonia.Controls.MenuBase.Opened event. |
+
+<span id="uid-11a1c8525d"></span>
+
+### ClosedEvent
+
+Defines the [Avalonia.Controls.MenuBase.Closed](xref:Avalonia.Controls.MenuBase.Closed) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> ClosedEvent
+```
+
+<span id="uid-ce97abd192"></span>
+
+### IsOpenProperty
+
+Defines the [Avalonia.Controls.MenuBase.IsOpen](xref:Avalonia.Controls.MenuBase.IsOpen) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.MenuBase, System.Boolean> IsOpenProperty
+```
+
+<span id="uid-052bdc6c4c"></span>
+
+### OpenedEvent
+
+Defines the [Avalonia.Controls.MenuBase.Opened](xref:Avalonia.Controls.MenuBase.Opened) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> OpenedEvent
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Closed](#uid-681bd27501) | Occurs when a Avalonia.Controls.Menu is closed. |
+| [Opened](#uid-3786ebb278) | Occurs when a Avalonia.Controls.Menu is opened. |
+
+<span id="uid-681bd27501"></span>
+
+### Closed
+
+Occurs when a [Avalonia.Controls.Menu](xref:Avalonia.Controls.Menu) is closed.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Closed
+```
+
+<span id="uid-3786ebb278"></span>
+
+### Opened
+
+Occurs when a [Avalonia.Controls.Menu](xref:Avalonia.Controls.Menu) is opened.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Opened
+```
+
+</ApiRefPage>
+

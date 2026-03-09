@@ -1,0 +1,177 @@
+---
+title: 'DispatcherOperation'
+hide_title: true
+slug: '/avalonia/threading/dispatcheroperation'
+uid: 'Avalonia.Threading.DispatcherOperation'
+commentId: 'T:Avalonia.Threading.DispatcherOperation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DispatcherOperation Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DispatcherOperation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherOperation
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Abort](#uid-cb67a1e87d) | No summary available. |
+| [GetAwaiter](#uid-312c00ca75) | Returns an awaiter for awaiting the completion of the operation. |
+| [GetTask](#uid-b1d207633b) | No summary available. |
+| [Wait (2 overloads)](#uid-178e059bd4) | Waits for this operation to complete. |
+
+<span id="uid-cb67a1e87d"></span>
+
+### Abort
+
+```csharp
+public System.Boolean Abort()
+```
+
+<span id="uid-312c00ca75"></span>
+
+### GetAwaiter
+
+Returns an awaiter for awaiting the completion of the operation.
+
+```csharp
+public System.Runtime.CompilerServices.TaskAwaiter GetAwaiter()
+```
+
+<span id="uid-b1d207633b"></span>
+
+### GetTask
+
+```csharp
+public System.Threading.Tasks.Task GetTask()
+```
+
+<span id="uid-178e059bd4"></span>
+
+### Wait overloads
+
+<span id="uid-6f3a3a4b4e"></span>
+
+#### Wait
+
+Waits for this operation to complete.
+
+```csharp
+public System.Void Wait()
+```
+
+Returns: The status of the operation. To obtain the return value
+of the invoked delegate, use the Result property.
+
+<span id="uid-33eec8bde0"></span>
+
+#### Wait
+
+Waits for this operation to complete.
+
+```csharp
+public System.Void Wait(System.TimeSpan timeout)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `timeout` | The maximum amount of time to wait. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Dispatcher](#uid-1b2bdaa79a) | No summary available. |
+| [Priority](#uid-e98b1e57bd) | No summary available. |
+| [Status](#uid-8bbc21bb30) | No summary available. |
+
+<span id="uid-1b2bdaa79a"></span>
+
+### Dispatcher
+
+```csharp
+public Avalonia.Threading.Dispatcher Dispatcher { get; set; }
+```
+
+<span id="uid-e98b1e57bd"></span>
+
+### Priority
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Priority { get; set; }
+```
+
+<span id="uid-8bbc21bb30"></span>
+
+### Status
+
+```csharp
+public Avalonia.Threading.DispatcherOperationStatus Status { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Aborted](#uid-2a2288d0ad) | An event that is raised when the operation is aborted or canceled. |
+| [Completed](#uid-b9f2587a42) | An event that is raised when the operation completes. |
+
+<span id="uid-2a2288d0ad"></span>
+
+### Aborted
+
+An event that is raised when the operation is aborted or canceled.
+
+```csharp
+public event System.EventHandler Aborted
+```
+
+<span id="uid-b9f2587a42"></span>
+
+### Completed
+
+An event that is raised when the operation completes.
+
+```csharp
+public event System.EventHandler Completed
+```
+
+</ApiRefPage>
+

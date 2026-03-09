@@ -1,0 +1,141 @@
+---
+title: 'ImageBrush'
+hide_title: true
+slug: '/avalonia/media/imagebrush'
+uid: 'Avalonia.Media.ImageBrush'
+commentId: 'T:Avalonia.Media.ImageBrush'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImageBrush Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Paints an area with an [Avalonia.Media.Imaging.IBitmap](xref:Avalonia.Media.Imaging.IBitmap).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ImageBrush
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="brush">Brush</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="tilebrush">TileBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> ImageBrush
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ibrush">IBrush</a>, <a href="iimagebrush">IImageBrush</a>, IMutableBrush, <a href="itilebrush">ITileBrush</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ImageBrush (2 overloads)](#uid-c5260f4748) | Initializes a new instance of the Avalonia.Media.ImageBrush class. |
+
+<span id="uid-c5260f4748"></span>
+
+### ImageBrush overloads
+
+<span id="uid-b1f4435ed7"></span>
+
+#### ImageBrush
+
+Initializes a new instance of the [Avalonia.Media.ImageBrush](xref:Avalonia.Media.ImageBrush) class.
+
+```csharp
+public ImageBrush()
+```
+
+<span id="uid-01632d42ec"></span>
+
+#### ImageBrush
+
+Initializes a new instance of the [Avalonia.Media.ImageBrush](xref:Avalonia.Media.ImageBrush) class.
+
+```csharp
+public ImageBrush(Avalonia.Media.IImageBrushSource source)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `source` | The image to draw. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToImmutable](#uid-24958378a7) | No summary available. |
+
+<span id="uid-24958378a7"></span>
+
+### ToImmutable
+
+```csharp
+public Avalonia.Media.IImmutableBrush ToImmutable()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Source](#uid-6f6a884cbf) | Gets or sets the image to draw. |
+
+<span id="uid-6f6a884cbf"></span>
+
+### Source
+
+Gets or sets the image to draw.
+
+```csharp
+public Avalonia.Media.IImageBrushSource Source { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [SourceProperty](#uid-64341da976) | Defines the Avalonia.Visual property. |
+
+<span id="uid-64341da976"></span>
+
+### SourceProperty
+
+Defines the [Avalonia.Visual](xref:Avalonia.Visual) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.IImageBrushSource> SourceProperty
+```
+
+</ApiRefPage>
+

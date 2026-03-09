@@ -1,0 +1,460 @@
+---
+title: 'ItemsControl'
+hide_title: true
+slug: '/avalonia/controls/itemscontrol'
+uid: 'Avalonia.Controls.ItemsControl'
+commentId: 'T:Avalonia.Controls.ItemsControl'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ItemsControl Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Displays a collection of items.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ItemsControl
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> ItemsControl
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../logicaltree/ichildindexprovider">IChildIndexProvider</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ItemsControl](#uid-15484bf7a3) | Initializes a new instance of the Avalonia.Controls.ItemsControl class. |
+
+<span id="uid-15484bf7a3"></span>
+
+### ItemsControl
+
+Initializes a new instance of the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl) class.
+
+```csharp
+public ItemsControl()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ContainerFromIndex](#uid-a9d6b46c7c) | Returns the container for the item at the specified index. |
+| [ContainerFromItem](#uid-e45c312fa6) | Returns the container corresponding to the specified item. |
+| [GetRealizedContainers](#uid-e1e047dde1) | Gets the currently realized containers. |
+| [IndexFromContainer](#uid-42512815bf) | Returns the index to the item that has the specified, generated container. |
+| [ItemFromContainer](#uid-3c71c5d6a2) | Returns the item that corresponds to the specified, generated container. |
+| [ItemsControlFromItemContainer](#uid-5c0ca71f4b) | Returns the Avalonia.Controls.ItemsControl that owns the specified container control. |
+| [ScrollIntoView (2 overloads)](#uid-bf3e50e7bb) | Scrolls the specified item into view. |
+
+<span id="uid-a9d6b46c7c"></span>
+
+### ContainerFromIndex
+
+Returns the container for the item at the specified index.
+
+```csharp
+public Avalonia.Controls.Control ContainerFromIndex(System.Int32 index)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `index` | The index of the item to retrieve. |
+
+Returns: The container for the item at the specified index within the item collection, if the
+item has a container; otherwise, null.
+
+<span id="uid-e45c312fa6"></span>
+
+### ContainerFromItem
+
+Returns the container corresponding to the specified item.
+
+```csharp
+public Avalonia.Controls.Control ContainerFromItem(System.Object item)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `item` | The item to retrieve the container for. |
+
+Returns: A container that corresponds to the specified item, if the item has a container and
+exists in the collection; otherwise, null.
+
+<span id="uid-e1e047dde1"></span>
+
+### GetRealizedContainers
+
+Gets the currently realized containers.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Control> GetRealizedContainers()
+```
+
+<span id="uid-42512815bf"></span>
+
+### IndexFromContainer
+
+Returns the index to the item that has the specified, generated container.
+
+```csharp
+public System.Int32 IndexFromContainer(Avalonia.Controls.Control container)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `container` | The generated container to retrieve the item index for. |
+
+Returns: The index to the item that corresponds to the specified generated container, or -1 if
+`container` is not found.
+
+<span id="uid-3c71c5d6a2"></span>
+
+### ItemFromContainer
+
+Returns the item that corresponds to the specified, generated container.
+
+```csharp
+public System.Object ItemFromContainer(Avalonia.Controls.Control container)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `container` | The control that corresponds to the item to be returned. |
+
+Returns: The contained item, or the container if it does not contain an item.
+
+<span id="uid-5c0ca71f4b"></span>
+
+### ItemsControlFromItemContainer
+
+Returns the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl) that owns the specified container control.
+
+```csharp
+public Avalonia.Controls.ItemsControl ItemsControlFromItemContainer(Avalonia.Controls.Control container)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `container` | The container. |
+
+Returns: The owning [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl) or null if the control is not an items container.
+
+<span id="uid-bf3e50e7bb"></span>
+
+### ScrollIntoView overloads
+
+<span id="uid-aaa0ff1494"></span>
+
+#### ScrollIntoView
+
+Scrolls the specified item into view.
+
+```csharp
+public System.Void ScrollIntoView(System.Int32 index)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `index` | The index of the item. |
+
+<span id="uid-7164b285ab"></span>
+
+#### ScrollIntoView
+
+Scrolls the specified item into view.
+
+```csharp
+public System.Void ScrollIntoView(System.Object item)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `item` | The item. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayMemberBinding](#uid-8e4b57fd51) | Gets or sets the Avalonia.Data.BindingBase to use for binding to the display member of each item. |
+| [ItemContainerGenerator](#uid-bc6131b111) | Gets the Avalonia.Controls.ItemsControl.ItemContainerGenerator for the control. |
+| [ItemContainerTheme](#uid-9696ea83d4) | Gets or sets the Avalonia.Styling.ControlTheme that is applied to the container element generated for each item. |
+| [ItemCount](#uid-6e8a2994da) | Gets the number of items being displayed by the Avalonia.Controls.ItemsControl. |
+| [ItemTemplate](#uid-f5ea79f743) | Gets or sets the data template used to display the items in the control. |
+| [Items](#uid-2da718757e) | Gets the items to display. |
+| [ItemsPanel](#uid-994e8ba6a4) | Gets or sets the panel used to display the items. |
+| [ItemsPanelRoot](#uid-a949c9e367) | Gets the Avalonia.Controls.Panel specified by Avalonia.Controls.ItemsControl.ItemsPanel. |
+| [ItemsSource](#uid-85104a3be6) | Gets or sets a collection used to generate the content of the Avalonia.Controls.ItemsControl. |
+| [ItemsView](#uid-099b377aca) | Gets a read-only view of the items in the Avalonia.Controls.ItemsControl. |
+| [Presenter](#uid-b58ddca64e) | Gets the items presenter control. |
+
+<span id="uid-8e4b57fd51"></span>
+
+### DisplayMemberBinding
+
+Gets or sets the [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase) to use for binding to the display member of each item.
+
+```csharp
+public Avalonia.Data.BindingBase DisplayMemberBinding { get; set; }
+```
+
+<span id="uid-bc6131b111"></span>
+
+### ItemContainerGenerator
+
+Gets the [Avalonia.Controls.ItemsControl.ItemContainerGenerator](xref:Avalonia.Controls.ItemsControl.ItemContainerGenerator) for the control.
+
+```csharp
+public Avalonia.Controls.Generators.ItemContainerGenerator ItemContainerGenerator { get; set; }
+```
+
+<span id="uid-9696ea83d4"></span>
+
+### ItemContainerTheme
+
+Gets or sets the [Avalonia.Styling.ControlTheme](xref:Avalonia.Styling.ControlTheme) that is applied to the container element generated for each item.
+
+```csharp
+public Avalonia.Styling.ControlTheme ItemContainerTheme { get; set; }
+```
+
+<span id="uid-6e8a2994da"></span>
+
+### ItemCount
+
+Gets the number of items being displayed by the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl).
+
+```csharp
+public System.Int32 ItemCount { get; set; }
+```
+
+<span id="uid-f5ea79f743"></span>
+
+### ItemTemplate
+
+Gets or sets the data template used to display the items in the control.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate ItemTemplate { get; set; }
+```
+
+<span id="uid-2da718757e"></span>
+
+### Items
+
+Gets the items to display.
+
+```csharp
+public Avalonia.Controls.ItemCollection Items { get; set; }
+```
+
+<span id="uid-994e8ba6a4"></span>
+
+### ItemsPanel
+
+Gets or sets the panel used to display the items.
+
+```csharp
+public Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Panel> ItemsPanel { get; set; }
+```
+
+<span id="uid-a949c9e367"></span>
+
+### ItemsPanelRoot
+
+Gets the [Avalonia.Controls.Panel](xref:Avalonia.Controls.Panel) specified by [Avalonia.Controls.ItemsControl.ItemsPanel](xref:Avalonia.Controls.ItemsControl.ItemsPanel).
+
+```csharp
+public Avalonia.Controls.Panel ItemsPanelRoot { get; set; }
+```
+
+<span id="uid-85104a3be6"></span>
+
+### ItemsSource
+
+Gets or sets a collection used to generate the content of the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl).
+
+```csharp
+public System.Collections.IEnumerable ItemsSource { get; set; }
+```
+
+<span id="uid-099b377aca"></span>
+
+### ItemsView
+
+Gets a read-only view of the items in the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl).
+
+```csharp
+public Avalonia.Controls.ItemsSourceView ItemsView { get; set; }
+```
+
+<span id="uid-b58ddca64e"></span>
+
+### Presenter
+
+Gets the items presenter control.
+
+```csharp
+public Avalonia.Controls.Presenters.ItemsPresenter Presenter { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DisplayMemberBindingProperty](#uid-3d89afc85e) | Defines the Avalonia.Controls.ItemsControl.DisplayMemberBinding property |
+| [ItemContainerThemeProperty](#uid-8d58e07e7e) | Defines the Avalonia.Controls.ItemsControl.ItemContainerTheme property. |
+| [ItemCountProperty](#uid-1a60490484) | Defines the Avalonia.Controls.ItemsControl.ItemCount property. |
+| [ItemTemplateProperty](#uid-a7ac520384) | Defines the Avalonia.Controls.ItemsControl.ItemTemplate property. |
+| [ItemsPanelProperty](#uid-6bb52e4eed) | Defines the Avalonia.Controls.ItemsControl.ItemsPanel property. |
+| [ItemsSourceProperty](#uid-4a62215ead) | Defines the Avalonia.Controls.ItemsControl.ItemsSource property. |
+
+<span id="uid-3d89afc85e"></span>
+
+### DisplayMemberBindingProperty
+
+Defines the [Avalonia.Controls.ItemsControl.DisplayMemberBinding](xref:Avalonia.Controls.ItemsControl.DisplayMemberBinding) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Data.BindingBase> DisplayMemberBindingProperty
+```
+
+<span id="uid-8d58e07e7e"></span>
+
+### ItemContainerThemeProperty
+
+Defines the [Avalonia.Controls.ItemsControl.ItemContainerTheme](xref:Avalonia.Controls.ItemsControl.ItemContainerTheme) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Styling.ControlTheme> ItemContainerThemeProperty
+```
+
+<span id="uid-1a60490484"></span>
+
+### ItemCountProperty
+
+Defines the [Avalonia.Controls.ItemsControl.ItemCount](xref:Avalonia.Controls.ItemsControl.ItemCount) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.ItemsControl, System.Int32> ItemCountProperty
+```
+
+<span id="uid-a7ac520384"></span>
+
+### ItemTemplateProperty
+
+Defines the [Avalonia.Controls.ItemsControl.ItemTemplate](xref:Avalonia.Controls.ItemsControl.ItemTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> ItemTemplateProperty
+```
+
+<span id="uid-6bb52e4eed"></span>
+
+### ItemsPanelProperty
+
+Defines the [Avalonia.Controls.ItemsControl.ItemsPanel](xref:Avalonia.Controls.ItemsControl.ItemsPanel) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Panel>> ItemsPanelProperty
+```
+
+<span id="uid-4a62215ead"></span>
+
+### ItemsSourceProperty
+
+Defines the [Avalonia.Controls.ItemsControl.ItemsSource](xref:Avalonia.Controls.ItemsControl.ItemsSource) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.IEnumerable> ItemsSourceProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ContainerClearing](#uid-1787ccc417) | Occurs each time a container is cleared. |
+| [ContainerIndexChanged](#uid-18f18a0c7f) | Occurs for each realized container when the index for the item it represents has changed. |
+| [ContainerPrepared](#uid-c04fd3df67) | Occurs each time a container is prepared for use. |
+| [PreparingContainer](#uid-46927e7eec) | Occurs immediately before a container is prepared for use. |
+
+<span id="uid-1787ccc417"></span>
+
+### ContainerClearing
+
+Occurs each time a container is cleared.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ContainerClearingEventArgs> ContainerClearing
+```
+
+<span id="uid-18f18a0c7f"></span>
+
+### ContainerIndexChanged
+
+Occurs for each realized container when the index for the item it represents has changed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ContainerIndexChangedEventArgs> ContainerIndexChanged
+```
+
+<span id="uid-c04fd3df67"></span>
+
+### ContainerPrepared
+
+Occurs each time a container is prepared for use.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ContainerPreparedEventArgs> ContainerPrepared
+```
+
+<span id="uid-46927e7eec"></span>
+
+### PreparingContainer
+
+Occurs immediately before a container is prepared for use.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ContainerPreparedEventArgs> PreparingContainer
+```
+
+</ApiRefPage>
+

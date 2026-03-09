@@ -1,0 +1,440 @@
+---
+title: 'PreciseEllipticArcHelper.EllipticalArc'
+hide_title: true
+slug: '/avalonia/media/preciseellipticarchelper-ellipticalarc'
+uid: 'Avalonia.Media.PreciseEllipticArcHelper.EllipticalArc'
+commentId: 'T:Avalonia.Media.PreciseEllipticArcHelper.EllipticalArc'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PreciseEllipticArcHelper.EllipticalArc Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+This class represents an elliptical arc on a 2D plane.
+
+This class is adapted for use with WPF StreamGeometryContext, and needs to be created explicitly
+for each particular arc.
+
+Some helpers
+
+It can handle ellipses which are not aligned with the x and y reference axes of the plane,
+as well as their parts.
+
+Another improvement is that this class can handle degenerated cases like for example very
+flat ellipses(semi-minor axis much smaller than semi-major axis) and drawing of very small
+parts of such ellipses at very high magnification scales.This imply monitoring the drawing
+approximation error for extremely small values.Such cases occur for example while drawing
+orbits of comets near the perihelion.
+
+When the arc does not cover the complete ellipse, the lines joining the center of the
+ellipse to the endpoints can optionally be included or not in the outline, hence allowing
+to use it for pie-charts rendering. If these lines are not included, the curve is not
+naturally closed.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PreciseEllipticArcHelper.EllipticalArc
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> PreciseEllipticArcHelper.EllipticalArc
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PreciseEllipticArcHelper.EllipticalArc (5 overloads)](#uid-2b7cb4f51d) | Builds an elliptical arc composed of the full unit circle around (0,0) |
+
+<span id="uid-2b7cb4f51d"></span>
+
+### PreciseEllipticArcHelper.EllipticalArc overloads
+
+<span id="uid-7ca2ceddbe"></span>
+
+#### PreciseEllipticArcHelper.EllipticalArc
+
+Builds an elliptical arc composed of the full unit circle around (0,0)
+
+```csharp
+public PreciseEllipticArcHelper.EllipticalArc()
+```
+
+<span id="uid-766aca1765"></span>
+
+#### PreciseEllipticArcHelper.EllipticalArc
+
+Build a full ellipse from its canonical geometrical elements
+
+```csharp
+public PreciseEllipticArcHelper.EllipticalArc(Avalonia.Point center, System.Double a, System.Double b, System.Double theta)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | Semi-major axis |
+| `b` | Semi-minor axis |
+| `center` | Center of the ellipse |
+| `theta` | Orientation of the major axis with respect to the x axis |
+
+<span id="uid-021aae7a6d"></span>
+
+#### PreciseEllipticArcHelper.EllipticalArc
+
+Builds an elliptical arc from its canonical geometrical elements
+
+```csharp
+public PreciseEllipticArcHelper.EllipticalArc(Avalonia.Point center, System.Double a, System.Double b, System.Double theta, System.Double lambda1, System.Double lambda2, System.Boolean isPieSlice)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | Semi-major axis |
+| `b` | Semi-minor axis |
+| `center` | Center of the ellipse |
+| `isPieSlice` | If true, the lines between the center of the ellipse
+and the endpoints are part of the shape (it is pie slice like) |
+| `lambda1` | Start angle of the arc |
+| `lambda2` | End angle of the arc |
+| `theta` | Orientation of the major axis with respect to the x axis |
+
+<span id="uid-c26189ed08"></span>
+
+#### PreciseEllipticArcHelper.EllipticalArc
+
+Build a full ellipse from its canonical geometrical elements
+
+```csharp
+public PreciseEllipticArcHelper.EllipticalArc(System.Double cx, System.Double cy, System.Double a, System.Double b, System.Double theta)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | Semi-major axis |
+| `b` | Semi-minor axis |
+| `cx` | Abscissa of the center of the ellipse |
+| `cy` | Ordinate of the center of the ellipse |
+| `theta` | Orientation of the major axis with respect to the x axis |
+
+<span id="uid-3d68a49e43"></span>
+
+#### PreciseEllipticArcHelper.EllipticalArc
+
+Builds an elliptical arc from its canonical geometrical elements
+
+```csharp
+public PreciseEllipticArcHelper.EllipticalArc(System.Double cx, System.Double cy, System.Double a, System.Double b, System.Double theta, System.Double lambda1, System.Double lambda2, System.Boolean isPieSlice)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | Semi-major axis |
+| `b` | Semi-minor axis |
+| `cx` | Abscissa of the center of the ellipse |
+| `cy` | Ordinate of the center of the ellipse |
+| `isPieSlice` | If true, the lines between the center of the ellipse
+and the endpoints are part of the shape (it is pie slice like) |
+| `lambda1` | Start angle of the arc |
+| `lambda2` | End angle of the arc |
+| `theta` | Orientation of the major axis with respect to the x axis |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BuildArc (3 overloads)](#uid-23090d999a) | Builds the arc outline using given StreamGeometryContext and default (max) Bezier curve degree and acceptable error of half a pixel (0.5) |
+| [Contains (4 overloads)](#uid-2197568c00) | Tests if a specified Point2D is inside the boundary of a closed path derived from this arc. The closed path is derived with respect to the IsPieSlice value. |
+| [EstimateError](#uid-a58d65ad0e) | Estimate the approximation error for a sub-arc of the instance |
+| [GetBounds](#uid-87882cce5e) | Returns an integer Rectangle that completely encloses the closed path derived from this arc. The closed path is derived with respect to the IsPieSlice value. |
+| [Intersects (2 overloads)](#uid-368e21f49a) | Tests if the interior of the closed path derived from this arc intersects the interior of a specified rectangular area. The closed path is derived with respect to the IsPieSlice value. |
+| [PointAt](#uid-25762eed73) | Get the elliptical arc point for a given angular parameter |
+| [SetDefaultFlatness](#uid-6968a05ff5) | Sets the default flatness for Bezier curve approximation |
+| [SetMaxDegree](#uid-917f8c09ee) | Sets the maximal degree allowed for Bezier curve approximation. |
+
+<span id="uid-23090d999a"></span>
+
+### BuildArc overloads
+
+<span id="uid-e4af24f0a7"></span>
+
+#### BuildArc
+
+Builds the arc outline using given StreamGeometryContext and default (max) Bezier curve degree and acceptable error of half a pixel (0.5)
+
+```csharp
+public System.Void BuildArc(Avalonia.Media.StreamGeometryContext path)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `path` | A StreamGeometryContext to output the path commands to |
+
+<span id="uid-9c592a528b"></span>
+
+#### BuildArc
+
+ArcTo Helper for StreamGeometryContext
+
+```csharp
+public System.Void BuildArc(Avalonia.Media.StreamGeometryContext path, Avalonia.Point p1, Avalonia.Point p2, Avalonia.Size size, System.Double theta, System.Boolean isLargeArc, System.Boolean clockwise)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `clockwise` | Clockwise direction flag |
+| `isLargeArc` | Large Arc Indicator |
+| `p1` | Start point |
+| `p2` | End point |
+| `path` | Target path |
+| `size` | Ellipse radii |
+| `theta` | Ellipse theta (angle measured from the abscissa) |
+
+<span id="uid-1a2302de36"></span>
+
+#### BuildArc
+
+Builds the arc outline using given StreamGeometryContext
+
+```csharp
+public System.Void BuildArc(Avalonia.Media.StreamGeometryContext path, System.Int32 degree, System.Double threshold, System.Boolean openNewFigure)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `degree` | degree of the Bezier curve to use |
+| `openNewFigure` | if true, a new figure will be started in the specified StreamGeometryContext |
+| `path` | A StreamGeometryContext to output the path commands to |
+| `threshold` | acceptable error |
+
+<span id="uid-2197568c00"></span>
+
+### Contains overloads
+
+<span id="uid-5e625b5a65"></span>
+
+#### Contains
+
+Tests if a specified Point2D is inside the boundary of a closed path derived from this arc.
+The closed path is derived with respect to the IsPieSlice value.
+
+```csharp
+public System.Boolean Contains(Avalonia.Point p)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `p` | Test point |
+
+Returns: true if the specified point is inside a closed path derived from this arc
+
+<span id="uid-11a4eba5ca"></span>
+
+#### Contains
+
+Tests if the interior of a closed path derived from this arc entirely contains the specified Rectangle2D.
+The closed path is derived with respect to the IsPieSlice value.
+
+```csharp
+public System.Boolean Contains(Avalonia.Rect r)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `r` | Test rectangle |
+
+Returns: True if the interior of a closed path derived from this arc entirely contains the specified Rectangle2D; false otherwise
+
+<span id="uid-6463ca1d36"></span>
+
+#### Contains
+
+Tests if the specified coordinates are inside the closed shape formed by this arc.
+If this is not a pie, then a shape derived by adding a closing chord is considered.
+
+```csharp
+public System.Boolean Contains(System.Double x, System.Double y)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `x` | Abscissa of the test point |
+| `y` | Ordinate of the test point |
+
+Returns: True if the specified coordinates are inside the closed shape of this arc
+
+<span id="uid-569c2eddb1"></span>
+
+#### Contains
+
+Tests if the interior of a closed path derived from this arc entirely contains the specified rectangular area.
+The closed path is derived with respect to the IsPieSlice value.
+
+```csharp
+public System.Boolean Contains(System.Double x, System.Double y, System.Double w, System.Double h)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `h` | Height of the test rectangle |
+| `w` | Width of the test rectangle |
+| `x` | Abscissa of the upper-left corner of the test rectangle |
+| `y` | Ordinate of the upper-left corner of the test rectangle |
+
+Returns: true if the interior of a closed path derived from this arc entirely contains the specified rectangular area; false otherwise
+
+<span id="uid-a58d65ad0e"></span>
+
+### EstimateError
+
+Estimate the approximation error for a sub-arc of the instance
+
+```csharp
+public System.Double EstimateError(System.Int32 degree, System.Double etaA, System.Double etaB)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `degree` | Degree of the Bezier curve to use (1, 2 or 3) |
+| `etaA` | Start angle of the sub-arc |
+| `etaB` | End angle of the sub-arc |
+
+Returns: Upper bound of the approximation error between the Bezier curve and the real ellipse
+
+<span id="uid-87882cce5e"></span>
+
+### GetBounds
+
+Returns an integer Rectangle that completely encloses the closed path derived from this arc.
+The closed path is derived with respect to the IsPieSlice value.
+
+```csharp
+public Avalonia.Rect GetBounds()
+```
+
+<span id="uid-368e21f49a"></span>
+
+### Intersects overloads
+
+<span id="uid-4ade8d4a35"></span>
+
+#### Intersects
+
+Tests if the interior of the closed path derived from this arc intersects the interior of a specified rectangular area.
+The closed path is derived with respect to the IsPieSlice value.
+
+```csharp
+public System.Boolean Intersects(Avalonia.Rect r)
+```
+
+<span id="uid-d59780bfcd"></span>
+
+#### Intersects
+
+Tests if the interior of the closed path derived from this arc intersects the interior of a specified rectangular area.
+The closed path is derived with respect to the IsPieSlice value.
+
+```csharp
+public System.Boolean Intersects(System.Double x, System.Double y, System.Double w, System.Double h)
+```
+
+<span id="uid-25762eed73"></span>
+
+### PointAt
+
+Get the elliptical arc point for a given angular parameter
+
+```csharp
+public Avalonia.Point PointAt(System.Double lambda)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `lambda` | Angular parameter for which point is desired |
+
+Returns: The desired elliptical arc point location
+
+<span id="uid-6968a05ff5"></span>
+
+### SetDefaultFlatness
+
+Sets the default flatness for Bezier curve approximation
+
+```csharp
+public System.Void SetDefaultFlatness(System.Double defaultFlatness)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `defaultFlatness` | default flatness (must be greater than 1e-10) |
+
+#### Exceptions
+
+- [Thrown if defaultFlatness is lower than 1e-10](xref:System.ArgumentException)
+
+<span id="uid-917f8c09ee"></span>
+
+### SetMaxDegree
+
+Sets the maximal degree allowed for Bezier curve approximation.
+
+```csharp
+public System.Void SetMaxDegree(System.Int32 maxDegree)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `maxDegree` | Maximal allowed degree (must be between 1 and 3) |
+
+#### Exceptions
+
+- [Thrown if maxDegree is not between 1 and 3](xref:System.ArgumentException)
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DrawInOppositeDirection](#uid-3d516436dc) | No summary available. |
+
+<span id="uid-3d516436dc"></span>
+
+### DrawInOppositeDirection
+
+```csharp
+public System.Boolean DrawInOppositeDirection { get; set; }
+```
+
+</ApiRefPage>
+

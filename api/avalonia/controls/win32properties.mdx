@@ -1,0 +1,159 @@
+---
+title: 'Win32Properties'
+hide_title: true
+slug: '/avalonia/controls/win32properties'
+uid: 'Avalonia.Controls.Win32Properties'
+commentId: 'T:Avalonia.Controls.Win32Properties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Win32Properties Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Set of Win32 specific properties and events that allow deeper customization of the application per platform.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Win32Properties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Win32Properties
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddWindowStylesCallback](#uid-b51911f72e) | Adds a callback to set the window's style. |
+| [AddWndProcHookCallback](#uid-ffbfdca626) | Adds a custom callback for the window's WndProc |
+| [GetNonClientHitTestResult](#uid-fb40e72aa0) | No summary available. |
+| [RemoveWindowStylesCallback](#uid-1fa69055d6) | Removes a callback to set the window's style. |
+| [RemoveWndProcHookCallback](#uid-e28e9d382c) | Removes a custom callback for the window's WndProc |
+| [SetNonClientHitTestResult](#uid-880349e197) | No summary available. |
+
+<span id="uid-b51911f72e"></span>
+
+### AddWindowStylesCallback
+
+Adds a callback to set the window's style.
+
+```csharp
+public System.Void AddWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `callback` | The callback |
+| `topLevel` | The window implementation |
+
+<span id="uid-ffbfdca626"></span>
+
+### AddWndProcHookCallback
+
+Adds a custom callback for the window's WndProc
+
+```csharp
+public System.Void AddWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `callback` | The callback |
+| `topLevel` | The window |
+
+<span id="uid-fb40e72aa0"></span>
+
+### GetNonClientHitTestResult
+
+```csharp
+public Avalonia.Controls.Win32Properties.Win32HitTestValue GetNonClientHitTestResult(Avalonia.Visual obj)
+```
+
+<span id="uid-1fa69055d6"></span>
+
+### RemoveWindowStylesCallback
+
+Removes a callback to set the window's style.
+
+```csharp
+public System.Void RemoveWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `callback` | The callback |
+| `topLevel` | The window implementation |
+
+<span id="uid-e28e9d382c"></span>
+
+### RemoveWndProcHookCallback
+
+Removes a custom callback for the window's WndProc
+
+```csharp
+public System.Void RemoveWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `callback` | The callback |
+| `topLevel` | The window |
+
+<span id="uid-880349e197"></span>
+
+### SetNonClientHitTestResult
+
+```csharp
+public System.Void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win32Properties.Win32HitTestValue value)
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [NonClientHitTestResultProperty](#uid-5912f2bb07) | No summary available. |
+
+<span id="uid-5912f2bb07"></span>
+
+### NonClientHitTestResultProperty
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Win32Properties.Win32HitTestValue> NonClientHitTestResultProperty
+```
+
+</ApiRefPage>
+

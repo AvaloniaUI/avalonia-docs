@@ -1,0 +1,145 @@
+---
+title: 'ResourceProvider'
+hide_title: true
+slug: '/avalonia/controls/resourceprovider'
+uid: 'Avalonia.Controls.ResourceProvider'
+commentId: 'T:Avalonia.Controls.ResourceProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ResourceProvider Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base implementation for IResourceProvider interface.
+Includes Owner property management.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ResourceProvider
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> ResourceProvider
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iresourcenode">IResourceNode</a>, <a href="iresourceprovider">IResourceProvider</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ResourceProvider (2 overloads)](#uid-3c9cb6575e) | No summary available. |
+
+<span id="uid-3c9cb6575e"></span>
+
+### ResourceProvider overloads
+
+<span id="uid-b75c8b3b44"></span>
+
+#### ResourceProvider
+
+```csharp
+public ResourceProvider()
+```
+
+<span id="uid-7a7d0b2b74"></span>
+
+#### ResourceProvider
+
+```csharp
+public ResourceProvider(Avalonia.Controls.IResourceHost owner)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetResource](#uid-5fcbabb2e6) | No summary available. |
+
+<span id="uid-5fcbabb2e6"></span>
+
+### TryGetResource
+
+```csharp
+public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HasResources](#uid-0eeae37601) | Gets a value indicating whether the object has resources. |
+| [Owner](#uid-ce90abd25b) | Gets the owner of the resource provider. |
+
+<span id="uid-0eeae37601"></span>
+
+### HasResources
+
+Gets a value indicating whether the object has resources.
+
+```csharp
+public System.Boolean HasResources { get; set; }
+```
+
+<span id="uid-ce90abd25b"></span>
+
+### Owner
+
+Gets the owner of the resource provider.
+
+```csharp
+public Avalonia.Controls.IResourceHost Owner { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [OwnerChanged](#uid-efe79b23bb) | Raised when the Avalonia.Controls.IResourceProvider.Owner of the resource provider changes. |
+
+<span id="uid-efe79b23bb"></span>
+
+### OwnerChanged
+
+Raised when the [Avalonia.Controls.IResourceProvider.Owner](xref:Avalonia.Controls.IResourceProvider.Owner) of the resource provider changes.
+
+```csharp
+public event System.EventHandler OwnerChanged
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,132 @@
+---
+title: 'RuntimeXamlLoaderConfiguration'
+hide_title: true
+slug: '/avalonia/markup/xaml/runtimexamlloaderconfiguration'
+uid: 'Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration'
+commentId: 'T:Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RuntimeXamlLoaderConfiguration Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RuntimeXamlLoaderConfiguration
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> RuntimeXamlLoaderConfiguration
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RuntimeXamlLoaderConfiguration](#uid-1cd435eae8) | No summary available. |
+
+<span id="uid-1cd435eae8"></span>
+
+### RuntimeXamlLoaderConfiguration
+
+```csharp
+public RuntimeXamlLoaderConfiguration()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CreateSourceInfo](#uid-d4d9a1c382) | When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and column) into generated code. Default is 'false'. |
+| [DesignMode](#uid-e3929fafda) | Indicates whether the XAML is being loaded in design mode. Default is 'false'. |
+| [DiagnosticHandler](#uid-5bfabbf87e) | XAML diagnostics handler. |
+| [LocalAssembly](#uid-aa3a33f9ca) | Default assembly for clr-namespace:. |
+| [UseCompiledBindingsByDefault](#uid-0f0a7eda8b) | Defines is CompiledBinding should be used by default. Default is 'false'. |
+
+<span id="uid-d4d9a1c382"></span>
+
+### CreateSourceInfo
+
+When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and column) into generated code.
+Default is 'false'.
+
+```csharp
+public System.Boolean CreateSourceInfo { get; set; }
+```
+
+<span id="uid-e3929fafda"></span>
+
+### DesignMode
+
+Indicates whether the XAML is being loaded in design mode.
+Default is 'false'.
+
+```csharp
+public System.Boolean DesignMode { get; set; }
+```
+
+<span id="uid-5bfabbf87e"></span>
+
+### DiagnosticHandler
+
+XAML diagnostics handler.
+
+```csharp
+public Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc DiagnosticHandler { get; set; }
+```
+
+Returns: Defines if any diagnostic severity should be overriden.
+Note, severity cannot be set lower than minimal for specific diagnostic.
+
+<span id="uid-aa3a33f9ca"></span>
+
+### LocalAssembly
+
+Default assembly for clr-namespace:.
+
+```csharp
+public System.Reflection.Assembly LocalAssembly { get; set; }
+```
+
+<span id="uid-0f0a7eda8b"></span>
+
+### UseCompiledBindingsByDefault
+
+Defines is CompiledBinding should be used by default.
+Default is 'false'.
+
+```csharp
+public System.Boolean UseCompiledBindingsByDefault { get; set; }
+```
+
+</ApiRefPage>
+

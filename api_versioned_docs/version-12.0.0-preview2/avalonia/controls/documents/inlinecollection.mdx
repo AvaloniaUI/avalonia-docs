@@ -1,0 +1,157 @@
+---
+title: 'InlineCollection'
+hide_title: true
+slug: '/avalonia/controls/documents/inlinecollection'
+uid: 'Avalonia.Controls.Documents.InlineCollection'
+commentId: 'T:Avalonia.Controls.Documents.InlineCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InlineCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A collection of [Avalonia.Controls.Documents.Inline](xref:Avalonia.Controls.Documents.Inline)s.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InlineCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> AvaloniaList&lt;Inline&gt; <span className="apiref-page__relation-separator">-&gt;</span> InlineCollection
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [InlineCollection](#uid-28f7263117) | Initializes a new instance of the Avalonia.Controls.Documents.InlineCollection class. |
+
+<span id="uid-28f7263117"></span>
+
+### InlineCollection
+
+Initializes a new instance of the [Avalonia.Controls.Documents.InlineCollection](xref:Avalonia.Controls.Documents.InlineCollection) class.
+
+```csharp
+public InlineCollection()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add (3 overloads)](#uid-5555047b5c) | Adds a control wrapped inside a Avalonia.Controls.Documents.InlineUIContainer to the collection. |
+
+<span id="uid-5555047b5c"></span>
+
+### Add overloads
+
+<span id="uid-2d7f1c193e"></span>
+
+#### Add
+
+Adds a control wrapped inside a [Avalonia.Controls.Documents.InlineUIContainer](xref:Avalonia.Controls.Documents.InlineUIContainer) to the collection.
+
+```csharp
+public System.Void Add(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The to be added control. |
+
+<span id="uid-9ddd1e6c26"></span>
+
+#### Add
+
+```csharp
+public System.Void Add(Avalonia.Controls.Documents.Inline inline)
+```
+
+<span id="uid-a0ede4b50a"></span>
+
+#### Add
+
+Adds a text segment to the collection.
+
+For non-complex content this appends the text to the end of currently held text.
+For complex content this adds a [Avalonia.Controls.Documents.Run](xref:Avalonia.Controls.Documents.Run) to the collection.
+
+```csharp
+public System.Void Add(System.String text)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `text` | The to be added text. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Text](#uid-eda1793e30) | Gets or adds the text held by the inlines collection. |
+
+<span id="uid-eda1793e30"></span>
+
+### Text
+
+Gets or adds the text held by the inlines collection.
+
+Can be null for complex content.
+
+```csharp
+public System.String Text { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Invalidated](#uid-36e29e452c) | Raised when an inline in the collection changes. |
+
+<span id="uid-36e29e452c"></span>
+
+### Invalidated
+
+Raised when an inline in the collection changes.
+
+```csharp
+public event System.EventHandler Invalidated
+```
+
+</ApiRefPage>
+

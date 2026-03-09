@@ -1,0 +1,74 @@
+{
+  "docsetVersion": "12.0.0-preview2",
+  "docsetId": "avalonia",
+  "packages": [
+    {
+      "id": "Avalonia",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.Controls.ColorPicker",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.Desktop",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.Themes.Fluent",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.Fonts.Inter",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.Skia",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.Native",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.X11",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.FreeDesktop",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.Markup.Xaml.Loader",
+      "version": "12.0.0-preview2"
+    },
+     {
+      "id": "Avalonia.Browser",
+      "version": "12.0.0-preview2"
+    },
+     {
+      "id": "Avalonia.Android",
+      "version": "12.0.0-preview2"
+    },
+     {
+      "id": "Avalonia.Headless.XUnit",
+      "version": "12.0.0-preview2"
+    },
+    {
+      "id": "Avalonia.LinuxFramebuffer",
+      "version": "12.0.0-preview2"
+    },
+     {
+      "id": "Avalonia.Headless.NUnit",
+      "version": "12.0.0-preview2"
+    },
+     {
+      "id": "Avalonia.Win32.Interoperability",
+      "version": "12.0.0-preview2"
+    },
+     {
+      "id": "Avalonia.Headless.Vnc",
+      "version": "12.0.0-preview2"
+    }
+  ]
+}

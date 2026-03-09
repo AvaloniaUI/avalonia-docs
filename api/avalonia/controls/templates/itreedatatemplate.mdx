@@ -1,0 +1,82 @@
+---
+title: 'ITreeDataTemplate'
+hide_title: true
+slug: '/avalonia/controls/templates/itreedatatemplate'
+uid: 'Avalonia.Controls.Templates.ITreeDataTemplate'
+commentId: 'T:Avalonia.Controls.Templates.ITreeDataTemplate'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Templates'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITreeDataTemplate Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Templates</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Interface representing a template used to build hierarchical data.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITreeDataTemplate
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;Object,Control&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BindChildren](#uid-02882febdc) | Binds the children of the specified item to a property on a target object. |
+
+<span id="uid-02882febdc"></span>
+
+### BindChildren
+
+Binds the children of the specified item to a property on a target object.
+
+```csharp
+public System.IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, System.Object item)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `item` | The item whose children should be bound. |
+| `target` | The target object. |
+| `targetProperty` | The target property. |
+
+Returns: An [System.IDisposable](xref:System.IDisposable) that can be used to remove the binding.
+
+</ApiRefPage>
+

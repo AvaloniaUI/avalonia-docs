@@ -1,0 +1,134 @@
+---
+title: 'MacOSPlatformOptions'
+hide_title: true
+slug: '/avalonia/macosplatformoptions'
+uid: 'Avalonia.MacOSPlatformOptions'
+commentId: 'T:Avalonia.MacOSPlatformOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Native'
+assembly: 'Avalonia.Native'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MacOSPlatformOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Native</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Native</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+OSX front-end options.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MacOSPlatformOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> MacOSPlatformOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MacOSPlatformOptions](#uid-2e628e958b) | No summary available. |
+
+<span id="uid-2e628e958b"></span>
+
+### MacOSPlatformOptions
+
+```csharp
+public MacOSPlatformOptions()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisableAvaloniaAppDelegate](#uid-f0aa492df0) | Gets or sets a value indicating whether Avalonia can install its own AppDelegate. Disabling this can be useful in some scenarios like when running as a plugin inside an existing macOS application. |
+| [DisableDefaultApplicationMenuItems](#uid-120c301a65) | By default, Avalonia adds items like Quit, Hide to the OSX Application Menu. You can prevent Avalonia from adding those items to the OSX Application Menu with this property. The default value is false. |
+| [DisableNativeMenus](#uid-28745c9046) | Gets or sets a value indicating whether the native macOS menu bar will be enabled for the application. |
+| [DisableSetProcessName](#uid-f25e807435) | Gets or sets a value indicating whether the native macOS should set [NSProcessInfo setProcessName] in runtime. |
+| [ShowInDock](#uid-1843848742) | Determines whether to show your application in the dock when it runs. The default value is true. |
+
+<span id="uid-f0aa492df0"></span>
+
+### DisableAvaloniaAppDelegate
+
+Gets or sets a value indicating whether Avalonia can install its own AppDelegate.
+Disabling this can be useful in some scenarios like when running as a plugin inside an existing macOS application.
+
+```csharp
+public System.Boolean DisableAvaloniaAppDelegate { get; set; }
+```
+
+<span id="uid-120c301a65"></span>
+
+### DisableDefaultApplicationMenuItems
+
+By default, Avalonia adds items like Quit, Hide to the OSX Application Menu.
+You can prevent Avalonia from adding those items to the OSX Application Menu with this property. The default value is false.
+
+```csharp
+public System.Boolean DisableDefaultApplicationMenuItems { get; set; }
+```
+
+<span id="uid-28745c9046"></span>
+
+### DisableNativeMenus
+
+Gets or sets a value indicating whether the native macOS menu bar will be enabled for the application.
+
+```csharp
+public System.Boolean DisableNativeMenus { get; set; }
+```
+
+<span id="uid-f25e807435"></span>
+
+### DisableSetProcessName
+
+Gets or sets a value indicating whether the native macOS should set [NSProcessInfo setProcessName] in runtime.
+
+```csharp
+public System.Boolean DisableSetProcessName { get; set; }
+```
+
+<span id="uid-1843848742"></span>
+
+### ShowInDock
+
+Determines whether to show your application in the dock when it runs. The default value is true.
+
+```csharp
+public System.Boolean ShowInDock { get; set; }
+```
+
+</ApiRefPage>
+

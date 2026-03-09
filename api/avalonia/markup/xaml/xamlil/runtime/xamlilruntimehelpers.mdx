@@ -1,0 +1,132 @@
+---
+title: 'XamlIlRuntimeHelpers'
+hide_title: true
+slug: '/avalonia/markup/xaml/xamlil/runtime/xamlilruntimehelpers'
+uid: 'Avalonia.Markup.Xaml.XamlIl.Runtime.XamlIlRuntimeHelpers'
+commentId: 'T:Avalonia.Markup.Xaml.XamlIl.Runtime.XamlIlRuntimeHelpers'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.XamlIl.Runtime'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">XamlIlRuntimeHelpers Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.XamlIl.Runtime</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class XamlIlRuntimeHelpers
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> XamlIlRuntimeHelpers
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyNonMatchingMarkupExtensionV1](#uid-70ad20a9d3) | No summary available. |
+| [AsEagerParentStackProvider](#uid-c543aa31f9) | Converts a Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider into a Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider. |
+| [CreateInnerServiceProviderV1](#uid-b878ea7170) | No summary available. |
+| [CreateRootServiceProviderV2](#uid-fd4ec5b6cd) | No summary available. |
+| [CreateRootServiceProviderV3](#uid-778a9653ce) | No summary available. |
+| [DeferredTransformationFactoryV1](#uid-37f819a2e0) | No summary available. |
+| [DeferredTransformationFactoryV2](#uid-3a715139d1) | No summary available. |
+| [DeferredTransformationFactoryV3](#uid-220107fbfa) | No summary available. |
+
+<span id="uid-70ad20a9d3"></span>
+
+### ApplyNonMatchingMarkupExtensionV1
+
+```csharp
+public System.Void ApplyNonMatchingMarkupExtensionV1(System.Object target, System.Object property, System.IServiceProvider prov, System.Object value)
+```
+
+<span id="uid-c543aa31f9"></span>
+
+### AsEagerParentStackProvider
+
+Converts a [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider) into a
+[Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider).
+
+```csharp
+public Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider AsEagerParentStackProvider(Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider provider)
+```
+
+<span id="uid-b878ea7170"></span>
+
+### CreateInnerServiceProviderV1
+
+```csharp
+public System.IServiceProvider CreateInnerServiceProviderV1(System.IServiceProvider compiled)
+```
+
+<span id="uid-fd4ec5b6cd"></span>
+
+### CreateRootServiceProviderV2
+
+```csharp
+public System.IServiceProvider CreateRootServiceProviderV2()
+```
+
+<span id="uid-778a9653ce"></span>
+
+### CreateRootServiceProviderV3
+
+```csharp
+public System.IServiceProvider CreateRootServiceProviderV3(System.IServiceProvider parentServiceProvider)
+```
+
+<span id="uid-37f819a2e0"></span>
+
+### DeferredTransformationFactoryV1
+
+```csharp
+public System.Func<System.IServiceProvider, System.Object> DeferredTransformationFactoryV1(System.Func<System.IServiceProvider, System.Object> builder, System.IServiceProvider provider)
+```
+
+<span id="uid-3a715139d1"></span>
+
+### DeferredTransformationFactoryV2
+
+```csharp
+public System.Func<System.IServiceProvider, System.Object> DeferredTransformationFactoryV2<T>(System.Func<System.IServiceProvider, System.Object> builder, System.IServiceProvider provider)
+```
+
+<span id="uid-220107fbfa"></span>
+
+### DeferredTransformationFactoryV3
+
+```csharp
+public Avalonia.Controls.IDeferredContent DeferredTransformationFactoryV3<T>(System.IntPtr builder, System.IServiceProvider provider)
+```
+
+</ApiRefPage>
+

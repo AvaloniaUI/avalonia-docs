@@ -1,0 +1,355 @@
+---
+title: 'ComboBox'
+hide_title: true
+slug: '/avalonia/controls/combobox'
+uid: 'Avalonia.Controls.ComboBox'
+commentId: 'T:Avalonia.Controls.ComboBox'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ComboBox Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A drop-down list control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ComboBox
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemscontrol">ItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/selectingitemscontrol">SelectingItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> ComboBox
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ComboBox](#uid-1dba3a531d) | No summary available. |
+
+<span id="uid-1dba3a531d"></span>
+
+### ComboBox
+
+```csharp
+public ComboBox()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Clear](#uid-d4ee03f832) | Clears the selection |
+| [UpdateSelectionFromEvent](#uid-00d88d1fa3) | No summary available. |
+
+<span id="uid-d4ee03f832"></span>
+
+### Clear
+
+Clears the selection
+
+```csharp
+public System.Void Clear()
+```
+
+<span id="uid-00d88d1fa3"></span>
+
+### UpdateSelectionFromEvent
+
+```csharp
+public System.Boolean UpdateSelectionFromEvent(Avalonia.Controls.Control container, Avalonia.Interactivity.RoutedEventArgs eventArgs)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HorizontalContentAlignment](#uid-e5aa137a54) | Gets or sets the horizontal alignment of the content within the control. |
+| [IsDropDownOpen](#uid-3965544550) | Gets or sets a value indicating whether the dropdown is currently open. |
+| [IsEditable](#uid-7f49e35793) | Gets or sets a value indicating whether the control is editable |
+| [MaxDropDownHeight](#uid-9cf6e4bc84) | Gets or sets the maximum height for the dropdown list. |
+| [PlaceholderForeground](#uid-f0a9a99d7e) | Gets or sets the Brush that renders the placeholder text. |
+| [PlaceholderText](#uid-346f03acce) | Gets or sets the PlaceHolder text. |
+| [SelectionBoxItem](#uid-e2dd03d2e7) | Gets or sets the item to display as the control's content. |
+| [SelectionBoxItemTemplate](#uid-ad80188f71) | Gets or sets the DataTemplate used to display the selected item. This has a higher priority than Avalonia.Controls.ItemsControl.ItemTemplate if set. |
+| [Text](#uid-a82af16c56) | Gets or sets the text used when Avalonia.Controls.ComboBox.IsEditable is true. Does nothing if not Avalonia.Controls.ComboBox.IsEditable. |
+| [VerticalContentAlignment](#uid-55e0b743ec) | Gets or sets the vertical alignment of the content within the control. |
+
+<span id="uid-e5aa137a54"></span>
+
+### HorizontalContentAlignment
+
+Gets or sets the horizontal alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.HorizontalAlignment HorizontalContentAlignment { get; set; }
+```
+
+<span id="uid-3965544550"></span>
+
+### IsDropDownOpen
+
+Gets or sets a value indicating whether the dropdown is currently open.
+
+```csharp
+public System.Boolean IsDropDownOpen { get; set; }
+```
+
+<span id="uid-7f49e35793"></span>
+
+### IsEditable
+
+Gets or sets a value indicating whether the control is editable
+
+```csharp
+public System.Boolean IsEditable { get; set; }
+```
+
+<span id="uid-9cf6e4bc84"></span>
+
+### MaxDropDownHeight
+
+Gets or sets the maximum height for the dropdown list.
+
+```csharp
+public System.Double MaxDropDownHeight { get; set; }
+```
+
+<span id="uid-f0a9a99d7e"></span>
+
+### PlaceholderForeground
+
+Gets or sets the Brush that renders the placeholder text.
+
+```csharp
+public Avalonia.Media.IBrush PlaceholderForeground { get; set; }
+```
+
+<span id="uid-346f03acce"></span>
+
+### PlaceholderText
+
+Gets or sets the PlaceHolder text.
+
+```csharp
+public System.String PlaceholderText { get; set; }
+```
+
+<span id="uid-e2dd03d2e7"></span>
+
+### SelectionBoxItem
+
+Gets or sets the item to display as the control's content.
+
+```csharp
+public System.Object SelectionBoxItem { get; set; }
+```
+
+<span id="uid-ad80188f71"></span>
+
+### SelectionBoxItemTemplate
+
+Gets or sets the DataTemplate used to display the selected item. This has a higher priority than [Avalonia.Controls.ItemsControl.ItemTemplate](xref:Avalonia.Controls.ItemsControl.ItemTemplate) if set.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate SelectionBoxItemTemplate { get; set; }
+```
+
+<span id="uid-a82af16c56"></span>
+
+### Text
+
+Gets or sets the text used when [Avalonia.Controls.ComboBox.IsEditable](xref:Avalonia.Controls.ComboBox.IsEditable) is true.
+Does nothing if not [Avalonia.Controls.ComboBox.IsEditable](xref:Avalonia.Controls.ComboBox.IsEditable).
+
+```csharp
+public System.String Text { get; set; }
+```
+
+<span id="uid-55e0b743ec"></span>
+
+### VerticalContentAlignment
+
+Gets or sets the vertical alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [HorizontalContentAlignmentProperty](#uid-0978d3285d) | Defines the Avalonia.Controls.ComboBox.HorizontalContentAlignment property. |
+| [IsDropDownOpenProperty](#uid-a063c490ff) | Defines the Avalonia.Controls.ComboBox.IsDropDownOpen property. |
+| [IsEditableProperty](#uid-f9ac09a2f1) | Defines the Avalonia.Controls.ComboBox.IsEditable property. |
+| [MaxDropDownHeightProperty](#uid-8d9fda1112) | Defines the Avalonia.Controls.ComboBox.MaxDropDownHeight property. |
+| [PlaceholderForegroundProperty](#uid-47ff7ab44b) | Defines the Avalonia.Controls.ComboBox.PlaceholderForeground property. |
+| [PlaceholderTextProperty](#uid-b4692e238a) | Defines the Avalonia.Controls.ComboBox.PlaceholderText property. |
+| [SelectionBoxItemProperty](#uid-dfe6a12d87) | Defines the Avalonia.Controls.ComboBox.SelectionBoxItem property. |
+| [SelectionBoxItemTemplateProperty](#uid-b9cfd5b212) | Defines the Avalonia.Controls.ComboBox.SelectionBoxItemTemplate property. |
+| [TextProperty](#uid-85296ddff8) | Defines the Avalonia.Controls.ComboBox.Text property |
+| [VerticalContentAlignmentProperty](#uid-7183c49e87) | Defines the Avalonia.Controls.ComboBox.VerticalContentAlignment property. |
+
+<span id="uid-0978d3285d"></span>
+
+### HorizontalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.ComboBox.HorizontalContentAlignment](xref:Avalonia.Controls.ComboBox.HorizontalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.HorizontalAlignment> HorizontalContentAlignmentProperty
+```
+
+<span id="uid-a063c490ff"></span>
+
+### IsDropDownOpenProperty
+
+Defines the [Avalonia.Controls.ComboBox.IsDropDownOpen](xref:Avalonia.Controls.ComboBox.IsDropDownOpen) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsDropDownOpenProperty
+```
+
+<span id="uid-f9ac09a2f1"></span>
+
+### IsEditableProperty
+
+Defines the [Avalonia.Controls.ComboBox.IsEditable](xref:Avalonia.Controls.ComboBox.IsEditable) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsEditableProperty
+```
+
+<span id="uid-8d9fda1112"></span>
+
+### MaxDropDownHeightProperty
+
+Defines the [Avalonia.Controls.ComboBox.MaxDropDownHeight](xref:Avalonia.Controls.ComboBox.MaxDropDownHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> MaxDropDownHeightProperty
+```
+
+<span id="uid-47ff7ab44b"></span>
+
+### PlaceholderForegroundProperty
+
+Defines the [Avalonia.Controls.ComboBox.PlaceholderForeground](xref:Avalonia.Controls.ComboBox.PlaceholderForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> PlaceholderForegroundProperty
+```
+
+<span id="uid-b4692e238a"></span>
+
+### PlaceholderTextProperty
+
+Defines the [Avalonia.Controls.ComboBox.PlaceholderText](xref:Avalonia.Controls.ComboBox.PlaceholderText) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> PlaceholderTextProperty
+```
+
+<span id="uid-dfe6a12d87"></span>
+
+### SelectionBoxItemProperty
+
+Defines the [Avalonia.Controls.ComboBox.SelectionBoxItem](xref:Avalonia.Controls.ComboBox.SelectionBoxItem) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.ComboBox, System.Object> SelectionBoxItemProperty
+```
+
+<span id="uid-b9cfd5b212"></span>
+
+### SelectionBoxItemTemplateProperty
+
+Defines the [Avalonia.Controls.ComboBox.SelectionBoxItemTemplate](xref:Avalonia.Controls.ComboBox.SelectionBoxItemTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> SelectionBoxItemTemplateProperty
+```
+
+<span id="uid-85296ddff8"></span>
+
+### TextProperty
+
+Defines the [Avalonia.Controls.ComboBox.Text](xref:Avalonia.Controls.ComboBox.Text) property
+
+```csharp
+public Avalonia.StyledProperty<System.String> TextProperty
+```
+
+<span id="uid-7183c49e87"></span>
+
+### VerticalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.ComboBox.VerticalContentAlignment](xref:Avalonia.Controls.ComboBox.VerticalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.VerticalAlignment> VerticalContentAlignmentProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [DropDownClosed](#uid-5cb653693c) | Occurs after the drop-down (popup) list of the Avalonia.Controls.ComboBox closes. |
+| [DropDownOpened](#uid-5fb326c8da) | Occurs after the drop-down (popup) list of the Avalonia.Controls.ComboBox opens. |
+
+<span id="uid-5cb653693c"></span>
+
+### DropDownClosed
+
+Occurs after the drop-down (popup) list of the [Avalonia.Controls.ComboBox](xref:Avalonia.Controls.ComboBox) closes.
+
+```csharp
+public event System.EventHandler DropDownClosed
+```
+
+<span id="uid-5fb326c8da"></span>
+
+### DropDownOpened
+
+Occurs after the drop-down (popup) list of the [Avalonia.Controls.ComboBox](xref:Avalonia.Controls.ComboBox) opens.
+
+```csharp
+public event System.EventHandler DropDownOpened
+```
+
+</ApiRefPage>
+

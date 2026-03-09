@@ -1,0 +1,161 @@
+---
+title: 'ILayoutManager'
+hide_title: true
+slug: '/avalonia/layout/ilayoutmanager'
+uid: 'Avalonia.Layout.ILayoutManager'
+commentId: 'T:Avalonia.Layout.ILayoutManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Layout'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ILayoutManager Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Layout</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages measuring and arranging of controls.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ILayoutManager
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ExecuteInitialLayoutPass](#uid-f980d703b2) | Executes the initial layout pass on a layout root. |
+| [ExecuteLayoutPass](#uid-3abd2b22b3) | Executes a layout pass. |
+| [InvalidateArrange](#uid-b1c288b84d) | Notifies the layout manager that a control requires an arrange. |
+| [InvalidateMeasure](#uid-b22d2da0fa) | Notifies the layout manager that a control requires a measure. |
+| [RegisterEffectiveViewportListener](#uid-175297968a) | Registers a control as wanting to receive effective viewport notifications. |
+| [UnregisterEffectiveViewportListener](#uid-0020d34f5d) | Registers a control as no longer wanting to receive effective viewport notifications. |
+
+<span id="uid-f980d703b2"></span>
+
+### ExecuteInitialLayoutPass
+
+Executes the initial layout pass on a layout root.
+
+```csharp
+public System.Void ExecuteInitialLayoutPass()
+```
+
+<span id="uid-3abd2b22b3"></span>
+
+### ExecuteLayoutPass
+
+Executes a layout pass.
+
+```csharp
+public System.Void ExecuteLayoutPass()
+```
+
+<span id="uid-b1c288b84d"></span>
+
+### InvalidateArrange
+
+Notifies the layout manager that a control requires an arrange.
+
+```csharp
+public System.Void InvalidateArrange(Avalonia.Layout.Layoutable control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+<span id="uid-b22d2da0fa"></span>
+
+### InvalidateMeasure
+
+Notifies the layout manager that a control requires a measure.
+
+```csharp
+public System.Void InvalidateMeasure(Avalonia.Layout.Layoutable control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+<span id="uid-175297968a"></span>
+
+### RegisterEffectiveViewportListener
+
+Registers a control as wanting to receive effective viewport notifications.
+
+```csharp
+public System.Void RegisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+<span id="uid-0020d34f5d"></span>
+
+### UnregisterEffectiveViewportListener
+
+Registers a control as no longer wanting to receive effective viewport notifications.
+
+```csharp
+public System.Void UnregisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [LayoutUpdated](#uid-2457a3dca4) | Raised when the layout manager completes a layout pass. |
+
+<span id="uid-2457a3dca4"></span>
+
+### LayoutUpdated
+
+Raised when the layout manager completes a layout pass.
+
+```csharp
+public event System.EventHandler LayoutUpdated
+```
+
+</ApiRefPage>
+

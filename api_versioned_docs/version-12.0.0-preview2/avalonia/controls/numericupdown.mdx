@@ -1,0 +1,630 @@
+---
+title: 'NumericUpDown'
+hide_title: true
+slug: '/avalonia/controls/numericupdown'
+uid: 'Avalonia.Controls.NumericUpDown'
+commentId: 'T:Avalonia.Controls.NumericUpDown'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NumericUpDown Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Control that represents a TextBox with button spinners that allow incrementing and decrementing numeric values.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NumericUpDown
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> NumericUpDown
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NumericUpDown](#uid-89f675455a) | Initializes new instance of Avalonia.Controls.NumericUpDown class. |
+
+<span id="uid-89f675455a"></span>
+
+### NumericUpDown
+
+Initializes new instance of [Avalonia.Controls.NumericUpDown](xref:Avalonia.Controls.NumericUpDown) class.
+
+```csharp
+public NumericUpDown()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AllowSpin](#uid-0f4fffaf1e) | Gets or sets the ability to perform increment/decrement operations via the keyboard, button spinners, or mouse wheel. |
+| [ButtonSpinnerLocation](#uid-c971cc9833) | Gets or sets current location of the Avalonia.Controls.ButtonSpinner. |
+| [ClipValueToMinMax](#uid-e96b944fa3) | Gets or sets if the value should be clipped when minimum/maximum is reached. |
+| [FormatString](#uid-2faa0c0eb4) | Gets or sets the display format of the Avalonia.Controls.NumericUpDown.Value. |
+| [HorizontalContentAlignment](#uid-77de6af623) | Gets or sets the horizontal alignment of the content within the control. |
+| [Increment](#uid-e2bba89058) | Gets or sets the amount in which to increment the Avalonia.Controls.NumericUpDown.Value. |
+| [InnerLeftContent](#uid-0ed3e00ebf) | Gets or sets custom content that is positioned on the left side of the text layout box |
+| [InnerRightContent](#uid-6ac12ed0c4) | Gets or sets custom content that is positioned on the right side of the text layout box |
+| [IsReadOnly](#uid-484749b193) | Gets or sets if the control is read only. |
+| [Maximum](#uid-e708d275c2) | Gets or sets the maximum allowed value. |
+| [Minimum](#uid-5e459949bc) | Gets or sets the minimum allowed value. |
+| [NumberFormat](#uid-3eea2fc663) | Gets or sets the current NumberFormatInfo |
+| [ParsingNumberStyle](#uid-1e38717840) | Gets or sets the parsing style (AllowLeadingWhite, Float, AllowHexSpecifier, ...). By default, Any. Note that Hex style does not work with decimal. For hexadecimal display, use Avalonia.Controls.NumericUpDown.TextConverter. |
+| [PlaceholderForeground](#uid-96c752c781) | Gets or sets the brush used for the foreground color of the placeholder text. |
+| [PlaceholderText](#uid-0afb5abc73) | Gets or sets the object to use as a placeholder if the Avalonia.Controls.NumericUpDown.Value is null. |
+| [ShowButtonSpinner](#uid-b6a8780a52) | Gets or sets a value indicating whether the spin buttons should be shown. |
+| [Text](#uid-ad5b8cc361) | Gets or sets the formatted string representation of the value. |
+| [TextAlignment](#uid-7f28d035a7) | Gets or sets the Avalonia.Media.TextAlignment of the Avalonia.Controls.NumericUpDown |
+| [TextConverter](#uid-7f87184668) | Gets or sets the custom bidirectional Text-Value converter. Non-null converter overrides Avalonia.Controls.NumericUpDown.ParsingNumberStyle, providing finer control over string representation of the underlying value. |
+| [Value](#uid-ba4a60a466) | Gets or sets the value. |
+| [VerticalContentAlignment](#uid-a2ba0c5181) | Gets or sets the vertical alignment of the content within the control. |
+| [Watermark](#uid-501e63203b) | Gets or sets the object to use as a placeholder if the Avalonia.Controls.NumericUpDown.Value is null. |
+| [WatermarkForeground](#uid-73c9d1da65) | Gets or sets the brush used for the foreground color of the placeholder text. |
+
+<span id="uid-0f4fffaf1e"></span>
+
+### AllowSpin
+
+Gets or sets the ability to perform increment/decrement operations via the keyboard, button spinners, or mouse wheel.
+
+```csharp
+public System.Boolean AllowSpin { get; set; }
+```
+
+<span id="uid-c971cc9833"></span>
+
+### ButtonSpinnerLocation
+
+Gets or sets current location of the [Avalonia.Controls.ButtonSpinner](xref:Avalonia.Controls.ButtonSpinner).
+
+```csharp
+public Avalonia.Controls.Location ButtonSpinnerLocation { get; set; }
+```
+
+<span id="uid-e96b944fa3"></span>
+
+### ClipValueToMinMax
+
+Gets or sets if the value should be clipped when minimum/maximum is reached.
+
+```csharp
+public System.Boolean ClipValueToMinMax { get; set; }
+```
+
+<span id="uid-2faa0c0eb4"></span>
+
+### FormatString
+
+Gets or sets the display format of the [Avalonia.Controls.NumericUpDown.Value](xref:Avalonia.Controls.NumericUpDown.Value).
+
+```csharp
+public System.String FormatString { get; set; }
+```
+
+<span id="uid-77de6af623"></span>
+
+### HorizontalContentAlignment
+
+Gets or sets the horizontal alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.HorizontalAlignment HorizontalContentAlignment { get; set; }
+```
+
+<span id="uid-e2bba89058"></span>
+
+### Increment
+
+Gets or sets the amount in which to increment the [Avalonia.Controls.NumericUpDown.Value](xref:Avalonia.Controls.NumericUpDown.Value).
+
+```csharp
+public System.Decimal Increment { get; set; }
+```
+
+<span id="uid-0ed3e00ebf"></span>
+
+### InnerLeftContent
+
+Gets or sets custom content that is positioned on the left side of the text layout box
+
+```csharp
+public System.Object InnerLeftContent { get; set; }
+```
+
+<span id="uid-6ac12ed0c4"></span>
+
+### InnerRightContent
+
+Gets or sets custom content that is positioned on the right side of the text layout box
+
+```csharp
+public System.Object InnerRightContent { get; set; }
+```
+
+<span id="uid-484749b193"></span>
+
+### IsReadOnly
+
+Gets or sets if the control is read only.
+
+```csharp
+public System.Boolean IsReadOnly { get; set; }
+```
+
+<span id="uid-e708d275c2"></span>
+
+### Maximum
+
+Gets or sets the maximum allowed value.
+
+```csharp
+public System.Decimal Maximum { get; set; }
+```
+
+<span id="uid-5e459949bc"></span>
+
+### Minimum
+
+Gets or sets the minimum allowed value.
+
+```csharp
+public System.Decimal Minimum { get; set; }
+```
+
+<span id="uid-3eea2fc663"></span>
+
+### NumberFormat
+
+Gets or sets the current NumberFormatInfo
+
+```csharp
+public System.Globalization.NumberFormatInfo NumberFormat { get; set; }
+```
+
+<span id="uid-1e38717840"></span>
+
+### ParsingNumberStyle
+
+Gets or sets the parsing style (AllowLeadingWhite, Float, AllowHexSpecifier, ...). By default, Any.
+Note that Hex style does not work with decimal.
+For hexadecimal display, use [Avalonia.Controls.NumericUpDown.TextConverter](xref:Avalonia.Controls.NumericUpDown.TextConverter).
+
+```csharp
+public System.Globalization.NumberStyles ParsingNumberStyle { get; set; }
+```
+
+<span id="uid-96c752c781"></span>
+
+### PlaceholderForeground
+
+Gets or sets the brush used for the foreground color of the placeholder text.
+
+```csharp
+public Avalonia.Media.IBrush PlaceholderForeground { get; set; }
+```
+
+<span id="uid-0afb5abc73"></span>
+
+### PlaceholderText
+
+Gets or sets the object to use as a placeholder if the [Avalonia.Controls.NumericUpDown.Value](xref:Avalonia.Controls.NumericUpDown.Value) is null.
+
+```csharp
+public System.String PlaceholderText { get; set; }
+```
+
+<span id="uid-b6a8780a52"></span>
+
+### ShowButtonSpinner
+
+Gets or sets a value indicating whether the spin buttons should be shown.
+
+```csharp
+public System.Boolean ShowButtonSpinner { get; set; }
+```
+
+<span id="uid-ad5b8cc361"></span>
+
+### Text
+
+Gets or sets the formatted string representation of the value.
+
+```csharp
+public System.String Text { get; set; }
+```
+
+<span id="uid-7f28d035a7"></span>
+
+### TextAlignment
+
+Gets or sets the [Avalonia.Media.TextAlignment](xref:Avalonia.Media.TextAlignment) of the [Avalonia.Controls.NumericUpDown](xref:Avalonia.Controls.NumericUpDown)
+
+```csharp
+public Avalonia.Media.TextAlignment TextAlignment { get; set; }
+```
+
+<span id="uid-7f87184668"></span>
+
+### TextConverter
+
+Gets or sets the custom bidirectional Text-Value converter.
+Non-null converter overrides [Avalonia.Controls.NumericUpDown.ParsingNumberStyle](xref:Avalonia.Controls.NumericUpDown.ParsingNumberStyle), providing finer control over
+string representation of the underlying value.
+
+```csharp
+public Avalonia.Data.Converters.IValueConverter TextConverter { get; set; }
+```
+
+<span id="uid-ba4a60a466"></span>
+
+### Value
+
+Gets or sets the value.
+
+```csharp
+public System.Nullable<System.Decimal> Value { get; set; }
+```
+
+<span id="uid-a2ba0c5181"></span>
+
+### VerticalContentAlignment
+
+Gets or sets the vertical alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
+```
+
+<span id="uid-501e63203b"></span>
+
+### Watermark
+
+Gets or sets the object to use as a placeholder if the [Avalonia.Controls.NumericUpDown.Value](xref:Avalonia.Controls.NumericUpDown.Value) is null.
+
+```csharp
+public System.String Watermark { get; set; }
+```
+
+<span id="uid-73c9d1da65"></span>
+
+### WatermarkForeground
+
+Gets or sets the brush used for the foreground color of the placeholder text.
+
+```csharp
+public Avalonia.Media.IBrush WatermarkForeground { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AllowSpinProperty](#uid-b82290468c) | Defines the Avalonia.Controls.NumericUpDown.AllowSpin property. |
+| [ButtonSpinnerLocationProperty](#uid-61586a33ec) | Defines the Avalonia.Controls.NumericUpDown.ButtonSpinnerLocation property. |
+| [ClipValueToMinMaxProperty](#uid-2ebbe71cb3) | Defines the Avalonia.Controls.NumericUpDown.ClipValueToMinMax property. |
+| [FormatStringProperty](#uid-28866582e2) | Defines the Avalonia.Controls.NumericUpDown.FormatString property. |
+| [HorizontalContentAlignmentProperty](#uid-41d28c7f14) | Defines the Avalonia.Controls.NumericUpDown.HorizontalContentAlignment property. |
+| [IncrementProperty](#uid-145fdefbf1) | Defines the Avalonia.Controls.NumericUpDown.Increment property. |
+| [InnerLeftContentProperty](#uid-84e2f08592) | Defines the Avalonia.Controls.NumericUpDown.InnerLeftContent property |
+| [InnerRightContentProperty](#uid-427a22a25b) | Defines the Avalonia.Controls.NumericUpDown.InnerRightContent property |
+| [IsReadOnlyProperty](#uid-50043d1adb) | Defines the Avalonia.Controls.NumericUpDown.IsReadOnly property. |
+| [MaximumProperty](#uid-3825b7666b) | Defines the Avalonia.Controls.NumericUpDown.Maximum property. |
+| [MinimumProperty](#uid-0f999f738a) | Defines the Avalonia.Controls.NumericUpDown.Minimum property. |
+| [NumberFormatProperty](#uid-56076a9b95) | Defines the Avalonia.Controls.NumericUpDown.NumberFormat property. |
+| [ParsingNumberStyleProperty](#uid-b5d5bb28e4) | Defines the Avalonia.Controls.NumericUpDown.ParsingNumberStyle property. |
+| [PlaceholderForegroundProperty](#uid-b32e81f513) | Defines the Avalonia.Controls.NumericUpDown.PlaceholderForeground property. |
+| [PlaceholderTextProperty](#uid-e23ea56139) | Defines the Avalonia.Controls.NumericUpDown.PlaceholderText property. |
+| [ShowButtonSpinnerProperty](#uid-51f9b65987) | Defines the Avalonia.Controls.NumericUpDown.ShowButtonSpinner property. |
+| [TextAlignmentProperty](#uid-b75e6044f1) | Defines the Avalonia.Controls.NumericUpDown.TextAlignment property |
+| [TextConverterProperty](#uid-51bafa4947) | Defines the Avalonia.Controls.NumericUpDown.TextConverter property. |
+| [TextProperty](#uid-7eb0da1da2) | Defines the Avalonia.Controls.NumericUpDown.Text property. |
+| [ValueChangedEvent](#uid-902a093873) | Defines the Avalonia.Controls.NumericUpDown.ValueChanged event. |
+| [ValueProperty](#uid-b1eb6870b4) | Defines the Avalonia.Controls.NumericUpDown.Value property. |
+| [VerticalContentAlignmentProperty](#uid-97ebc02f0c) | Defines the Avalonia.Controls.NumericUpDown.VerticalContentAlignment property. |
+| [WatermarkForegroundProperty](#uid-e80e5b055c) | Defines the Avalonia.Controls.NumericUpDown.WatermarkForeground property. |
+| [WatermarkProperty](#uid-8e69dbecad) | Defines the Avalonia.Controls.NumericUpDown.Watermark property. |
+
+<span id="uid-b82290468c"></span>
+
+### AllowSpinProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.AllowSpin](xref:Avalonia.Controls.NumericUpDown.AllowSpin) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AllowSpinProperty
+```
+
+<span id="uid-61586a33ec"></span>
+
+### ButtonSpinnerLocationProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.ButtonSpinnerLocation](xref:Avalonia.Controls.NumericUpDown.ButtonSpinnerLocation) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Location> ButtonSpinnerLocationProperty
+```
+
+<span id="uid-2ebbe71cb3"></span>
+
+### ClipValueToMinMaxProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.ClipValueToMinMax](xref:Avalonia.Controls.NumericUpDown.ClipValueToMinMax) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ClipValueToMinMaxProperty
+```
+
+<span id="uid-28866582e2"></span>
+
+### FormatStringProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.FormatString](xref:Avalonia.Controls.NumericUpDown.FormatString) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> FormatStringProperty
+```
+
+<span id="uid-41d28c7f14"></span>
+
+### HorizontalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.HorizontalContentAlignment](xref:Avalonia.Controls.NumericUpDown.HorizontalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.HorizontalAlignment> HorizontalContentAlignmentProperty
+```
+
+<span id="uid-145fdefbf1"></span>
+
+### IncrementProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.Increment](xref:Avalonia.Controls.NumericUpDown.Increment) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Decimal> IncrementProperty
+```
+
+<span id="uid-84e2f08592"></span>
+
+### InnerLeftContentProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.InnerLeftContent](xref:Avalonia.Controls.NumericUpDown.InnerLeftContent) property
+
+```csharp
+public Avalonia.StyledProperty<System.Object> InnerLeftContentProperty
+```
+
+<span id="uid-427a22a25b"></span>
+
+### InnerRightContentProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.InnerRightContent](xref:Avalonia.Controls.NumericUpDown.InnerRightContent) property
+
+```csharp
+public Avalonia.StyledProperty<System.Object> InnerRightContentProperty
+```
+
+<span id="uid-50043d1adb"></span>
+
+### IsReadOnlyProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.IsReadOnly](xref:Avalonia.Controls.NumericUpDown.IsReadOnly) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsReadOnlyProperty
+```
+
+<span id="uid-3825b7666b"></span>
+
+### MaximumProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.Maximum](xref:Avalonia.Controls.NumericUpDown.Maximum) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Decimal> MaximumProperty
+```
+
+<span id="uid-0f999f738a"></span>
+
+### MinimumProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.Minimum](xref:Avalonia.Controls.NumericUpDown.Minimum) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Decimal> MinimumProperty
+```
+
+<span id="uid-56076a9b95"></span>
+
+### NumberFormatProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.NumberFormat](xref:Avalonia.Controls.NumericUpDown.NumberFormat) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Globalization.NumberFormatInfo> NumberFormatProperty
+```
+
+<span id="uid-b5d5bb28e4"></span>
+
+### ParsingNumberStyleProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.ParsingNumberStyle](xref:Avalonia.Controls.NumericUpDown.ParsingNumberStyle) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Globalization.NumberStyles> ParsingNumberStyleProperty
+```
+
+<span id="uid-b32e81f513"></span>
+
+### PlaceholderForegroundProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.PlaceholderForeground](xref:Avalonia.Controls.NumericUpDown.PlaceholderForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> PlaceholderForegroundProperty
+```
+
+<span id="uid-e23ea56139"></span>
+
+### PlaceholderTextProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.PlaceholderText](xref:Avalonia.Controls.NumericUpDown.PlaceholderText) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> PlaceholderTextProperty
+```
+
+<span id="uid-51f9b65987"></span>
+
+### ShowButtonSpinnerProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.ShowButtonSpinner](xref:Avalonia.Controls.NumericUpDown.ShowButtonSpinner) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ShowButtonSpinnerProperty
+```
+
+<span id="uid-b75e6044f1"></span>
+
+### TextAlignmentProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.TextAlignment](xref:Avalonia.Controls.NumericUpDown.TextAlignment) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.TextAlignment> TextAlignmentProperty
+```
+
+<span id="uid-51bafa4947"></span>
+
+### TextConverterProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.TextConverter](xref:Avalonia.Controls.NumericUpDown.TextConverter) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Data.Converters.IValueConverter> TextConverterProperty
+```
+
+<span id="uid-7eb0da1da2"></span>
+
+### TextProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.Text](xref:Avalonia.Controls.NumericUpDown.Text) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> TextProperty
+```
+
+<span id="uid-902a093873"></span>
+
+### ValueChangedEvent
+
+Defines the [Avalonia.Controls.NumericUpDown.ValueChanged](xref:Avalonia.Controls.NumericUpDown.ValueChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.NumericUpDownValueChangedEventArgs> ValueChangedEvent
+```
+
+<span id="uid-b1eb6870b4"></span>
+
+### ValueProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.Value](xref:Avalonia.Controls.NumericUpDown.Value) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Nullable<System.Decimal>> ValueProperty
+```
+
+<span id="uid-97ebc02f0c"></span>
+
+### VerticalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.VerticalContentAlignment](xref:Avalonia.Controls.NumericUpDown.VerticalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.VerticalAlignment> VerticalContentAlignmentProperty
+```
+
+<span id="uid-e80e5b055c"></span>
+
+### WatermarkForegroundProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.WatermarkForeground](xref:Avalonia.Controls.NumericUpDown.WatermarkForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> WatermarkForegroundProperty
+```
+
+<span id="uid-8e69dbecad"></span>
+
+### WatermarkProperty
+
+Defines the [Avalonia.Controls.NumericUpDown.Watermark](xref:Avalonia.Controls.NumericUpDown.Watermark) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> WatermarkProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Spinned](#uid-e32871b7cb) | No summary available. |
+| [ValueChanged](#uid-6cd69a8b1f) | Raised when the Avalonia.Controls.NumericUpDown.Value changes. |
+
+<span id="uid-e32871b7cb"></span>
+
+### Spinned
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.SpinEventArgs> Spinned
+```
+
+<span id="uid-6cd69a8b1f"></span>
+
+### ValueChanged
+
+Raised when the [Avalonia.Controls.NumericUpDown.Value](xref:Avalonia.Controls.NumericUpDown.Value) changes.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.NumericUpDownValueChangedEventArgs> ValueChanged
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,131 @@
+---
+title: 'FbDevOutputOptions'
+hide_title: true
+slug: '/avalonia/linuxframebuffer/output/fbdevoutputoptions'
+uid: 'Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions'
+commentId: 'T:Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.LinuxFramebuffer'
+assembly: 'Avalonia.LinuxFramebuffer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LinuxFramebuffer.Output'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FbDevOutputOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LinuxFramebuffer.Output</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FbDevOutputOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FbDevOutputOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FbDevOutputOptions](#uid-c4b4b2f383) | No summary available. |
+
+<span id="uid-c4b4b2f383"></span>
+
+### FbDevOutputOptions
+
+```csharp
+public FbDevOutputOptions()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FileName](#uid-ab4343b5d5) | The frame buffer device name. Defaults to the value in environment variable FRAMEBUFFER or /dev/fb0 when FRAMEBUFFER is not set |
+| [PixelFormat](#uid-72686a3c01) | The required pixel format for the frame buffer. A null value will leave the frame buffer in the current pixel format. Otherwise sets the frame buffer to the required format |
+| [RenderDirectlyToMappedMemory](#uid-57bbe53816) | If set to true, double-buffering will be disabled and scene will be composed directly into mmap-ed memory region While this mode saves a blit, you need to check if it won't cause rendering artifacts your particular device. |
+| [Scaling](#uid-164d54cd8c) | The initial scale factor to use |
+| [UseAsyncFrontBufferBlit](#uid-ed5d0e22ed) | If set to true, FBIO_WAITFORVSYNC ioctl and following memcpy call will run on a dedicated thread saving current one from doing nothing in a blocking call |
+
+<span id="uid-ab4343b5d5"></span>
+
+### FileName
+
+The frame buffer device name.
+Defaults to the value in environment variable FRAMEBUFFER or /dev/fb0 when FRAMEBUFFER is not set
+
+```csharp
+public System.String FileName { get; set; }
+```
+
+<span id="uid-72686a3c01"></span>
+
+### PixelFormat
+
+The required pixel format for the frame buffer.
+A null value will leave the frame buffer in the current pixel format.
+Otherwise sets the frame buffer to the required format
+
+```csharp
+public System.Nullable<Avalonia.Platform.PixelFormat> PixelFormat { get; set; }
+```
+
+<span id="uid-57bbe53816"></span>
+
+### RenderDirectlyToMappedMemory
+
+If set to true, double-buffering will be disabled and scene will be composed directly into mmap-ed memory region
+While this mode saves a blit, you need to check if it won't cause rendering artifacts your particular device.
+
+```csharp
+public System.Boolean RenderDirectlyToMappedMemory { get; set; }
+```
+
+<span id="uid-164d54cd8c"></span>
+
+### Scaling
+
+The initial scale factor to use
+
+```csharp
+public System.Double Scaling { get; set; }
+```
+
+<span id="uid-ed5d0e22ed"></span>
+
+### UseAsyncFrontBufferBlit
+
+If set to true, FBIO_WAITFORVSYNC ioctl and following memcpy call will run on a dedicated thread
+saving current one from doing nothing in a blocking call
+
+```csharp
+public System.Nullable<System.Boolean> UseAsyncFrontBufferBlit { get; set; }
+```
+
+</ApiRefPage>
+

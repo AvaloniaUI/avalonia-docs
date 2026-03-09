@@ -1,0 +1,342 @@
+---
+title: 'Vector3D'
+hide_title: true
+slug: '/avalonia/vector3d'
+uid: 'Avalonia.Vector3D'
+commentId: 'T:Avalonia.Vector3D'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Vector3D Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Vector3D
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Vector3D
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Vector3D&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Vector3D](#uid-391c9e118c) | No summary available. |
+
+<span id="uid-391c9e118c"></span>
+
+### Vector3D
+
+```csharp
+public Vector3D(System.Double X, System.Double Y, System.Double Z)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Abs](#uid-fc1af86743) | Returns a vector whose elements are the absolute values of each of the specified vector's elements. |
+| [Add](#uid-ed5e0e177b) | Adds the second to the first vector |
+| [Clamp](#uid-0467b800d3) | Restricts a vector between a minimum and a maximum value. |
+| [Deconstruct](#uid-803792bb97) | No summary available. |
+| [Distance](#uid-ccc54c032e) | Computes the Euclidean distance between the two given points. |
+| [DistanceSquared](#uid-4c80d659ae) | Computes the squared Euclidean distance between the two given points. |
+| [Divide (2 overloads)](#uid-a2d8f86330) | Divides the first vector by the second. |
+| [Dot](#uid-7cbc06f210) | Calculates the dot product of two vectors. |
+| [Equals (2 overloads)](#uid-be9039705b) | No summary available. |
+| [GetHashCode](#uid-05d10e9f04) | No summary available. |
+| [Max](#uid-9f08821f68) | Returns a vector whose elements are the maximum of each of the pairs of elements in two specified vectors |
+| [Min](#uid-3b5021a75f) | Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors |
+| [Multiply (2 overloads)](#uid-ca8b2dd3f3) | Multiplies the first vector by the second. |
+| [Normalize](#uid-561aeb3cee) | Returns a normalized version of this vector. |
+| [Parse](#uid-7c201400f8) | Parses a Avalonia.Vector string. |
+| [Substract](#uid-55e0a513e7) | Subtracts the second from the first vector |
+| [ToString](#uid-3a9153b9b1) | No summary available. |
+
+<span id="uid-fc1af86743"></span>
+
+### Abs
+
+Returns a vector whose elements are the absolute values of each of the specified vector's elements.
+
+```csharp
+public Avalonia.Vector3D Abs()
+```
+
+<span id="uid-ed5e0e177b"></span>
+
+### Add
+
+Adds the second to the first vector
+
+```csharp
+public Avalonia.Vector3D Add(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+<span id="uid-0467b800d3"></span>
+
+### Clamp
+
+Restricts a vector between a minimum and a maximum value.
+
+```csharp
+public Avalonia.Vector3D Clamp(Avalonia.Vector3D value, Avalonia.Vector3D min, Avalonia.Vector3D max)
+```
+
+<span id="uid-803792bb97"></span>
+
+### Deconstruct
+
+```csharp
+public System.Void Deconstruct(System.Double& X, System.Double& Y, System.Double& Z)
+```
+
+<span id="uid-ccc54c032e"></span>
+
+### Distance
+
+Computes the Euclidean distance between the two given points.
+
+```csharp
+public System.Double Distance(Avalonia.Vector3D value1, Avalonia.Vector3D value2)
+```
+
+<span id="uid-4c80d659ae"></span>
+
+### DistanceSquared
+
+Computes the squared Euclidean distance between the two given points.
+
+```csharp
+public System.Double DistanceSquared(Avalonia.Vector3D value1, Avalonia.Vector3D value2)
+```
+
+<span id="uid-a2d8f86330"></span>
+
+### Divide overloads
+
+<span id="uid-62cd0afe98"></span>
+
+#### Divide
+
+Divides the first vector by the second.
+
+```csharp
+public Avalonia.Vector3D Divide(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+<span id="uid-8ed6aadbaf"></span>
+
+#### Divide
+
+Divides the vector by the given scalar.
+
+```csharp
+public Avalonia.Vector3D Divide(Avalonia.Vector3D left, System.Double right)
+```
+
+<span id="uid-7cbc06f210"></span>
+
+### Dot
+
+Calculates the dot product of two vectors.
+
+```csharp
+public System.Double Dot(Avalonia.Vector3D vector1, Avalonia.Vector3D vector2)
+```
+
+<span id="uid-be9039705b"></span>
+
+### Equals overloads
+
+<span id="uid-b6752c1ec3"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Vector3D other)
+```
+
+<span id="uid-673731acb2"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-05d10e9f04"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-9f08821f68"></span>
+
+### Max
+
+Returns a vector whose elements are the maximum of each of the pairs of elements in two specified vectors
+
+```csharp
+public Avalonia.Vector3D Max(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+<span id="uid-3b5021a75f"></span>
+
+### Min
+
+Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors
+
+```csharp
+public Avalonia.Vector3D Min(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+<span id="uid-ca8b2dd3f3"></span>
+
+### Multiply overloads
+
+<span id="uid-25ad67fd55"></span>
+
+#### Multiply
+
+Multiplies the first vector by the second.
+
+```csharp
+public Avalonia.Vector3D Multiply(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+<span id="uid-8a32b2f652"></span>
+
+#### Multiply
+
+Multiplies the vector by the given scalar.
+
+```csharp
+public Avalonia.Vector3D Multiply(Avalonia.Vector3D left, System.Double right)
+```
+
+<span id="uid-561aeb3cee"></span>
+
+### Normalize
+
+Returns a normalized version of this vector.
+
+```csharp
+public Avalonia.Vector3D Normalize(Avalonia.Vector3D value)
+```
+
+<span id="uid-7c201400f8"></span>
+
+### Parse
+
+Parses a [Avalonia.Vector](xref:Avalonia.Vector) string.
+
+```csharp
+public Avalonia.Vector3D Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The [Avalonia.Vector3D](xref:Avalonia.Vector3D).
+
+<span id="uid-55e0a513e7"></span>
+
+### Substract
+
+Subtracts the second from the first vector
+
+```csharp
+public Avalonia.Vector3D Substract(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+<span id="uid-3a9153b9b1"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Length](#uid-5bf4055ddf) | Length of the vector. |
+| [X](#uid-2bd9bad449) | No summary available. |
+| [Y](#uid-f879f25929) | No summary available. |
+| [Z](#uid-903f83f3d9) | No summary available. |
+
+<span id="uid-5bf4055ddf"></span>
+
+### Length
+
+Length of the vector.
+
+```csharp
+public System.Double Length { get; set; }
+```
+
+<span id="uid-2bd9bad449"></span>
+
+### X
+
+```csharp
+public System.Double X { get; set; }
+```
+
+<span id="uid-f879f25929"></span>
+
+### Y
+
+```csharp
+public System.Double Y { get; set; }
+```
+
+<span id="uid-903f83f3d9"></span>
+
+### Z
+
+```csharp
+public System.Double Z { get; set; }
+```
+
+</ApiRefPage>
+

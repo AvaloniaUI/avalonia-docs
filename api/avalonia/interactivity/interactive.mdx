@@ -1,0 +1,150 @@
+---
+title: 'Interactive'
+hide_title: true
+slug: '/avalonia/interactivity/interactive'
+uid: 'Avalonia.Interactivity.Interactive'
+commentId: 'T:Avalonia.Interactivity.Interactive'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Interactivity'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Interactive Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Interactivity</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for objects that raise routed events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Interactive
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> Interactive
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Interactive](#uid-e2500fada5) | No summary available. |
+
+<span id="uid-e2500fada5"></span>
+
+### Interactive
+
+```csharp
+public Interactive()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddHandler (2 overloads)](#uid-02518f5b3a) | Adds a handler for the specified routed event. |
+| [RaiseEvent](#uid-d6aba452e6) | Raises a routed event. |
+| [RemoveHandler (2 overloads)](#uid-456e485be9) | Removes a handler for the specified routed event. |
+
+<span id="uid-02518f5b3a"></span>
+
+### AddHandler overloads
+
+<span id="uid-59487d9a1d"></span>
+
+#### AddHandler
+
+Adds a handler for the specified routed event.
+
+```csharp
+public System.Void AddHandler(Avalonia.Interactivity.RoutedEvent routedEvent, System.Delegate handler, Avalonia.Interactivity.RoutingStrategies routes, System.Boolean handledEventsToo)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `handledEventsToo` | Whether handled events should also be listened for. |
+| `handler` | The handler. |
+| `routedEvent` | The routed event. |
+| `routes` | The routing strategies to listen to. |
+
+<span id="uid-903c759274"></span>
+
+#### AddHandler
+
+```csharp
+public System.Void AddHandler<TEventArgs>(Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> routedEvent, System.EventHandler<TEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, System.Boolean handledEventsToo)
+```
+
+<span id="uid-d6aba452e6"></span>
+
+### RaiseEvent
+
+Raises a routed event.
+
+```csharp
+public System.Void RaiseEvent(Avalonia.Interactivity.RoutedEventArgs e)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `e` | The event args. |
+
+<span id="uid-456e485be9"></span>
+
+### RemoveHandler overloads
+
+<span id="uid-70c2e6764c"></span>
+
+#### RemoveHandler
+
+Removes a handler for the specified routed event.
+
+```csharp
+public System.Void RemoveHandler(Avalonia.Interactivity.RoutedEvent routedEvent, System.Delegate handler)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `handler` | The handler. |
+| `routedEvent` | The routed event. |
+
+<span id="uid-6cfd1561b2"></span>
+
+#### RemoveHandler
+
+```csharp
+public System.Void RemoveHandler<TEventArgs>(Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> routedEvent, System.EventHandler<TEventArgs> handler)
+```
+
+</ApiRefPage>
+

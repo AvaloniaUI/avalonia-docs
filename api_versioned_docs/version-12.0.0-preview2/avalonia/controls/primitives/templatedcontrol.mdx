@@ -1,0 +1,499 @@
+---
+title: 'TemplatedControl'
+hide_title: true
+slug: '/avalonia/controls/primitives/templatedcontrol'
+uid: 'Avalonia.Controls.Primitives.TemplatedControl'
+commentId: 'T:Avalonia.Controls.Primitives.TemplatedControl'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TemplatedControl Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A lookless control whose visual appearance is defined by its [Avalonia.Controls.Primitives.TemplatedControl.Template](xref:Avalonia.Controls.Primitives.TemplatedControl.Template).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TemplatedControl
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> TemplatedControl
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TemplatedControl](#uid-fe511fbe5a) | No summary available. |
+
+<span id="uid-fe511fbe5a"></span>
+
+### TemplatedControl
+
+```csharp
+public TemplatedControl()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyTemplate](#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary |
+| [GetIsTemplateFocusTarget](#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. |
+| [SetIsTemplateFocusTarget](#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. |
+
+<span id="uid-cc70dd4d2f"></span>
+
+### ApplyTemplate
+
+Creates the visual children of the control, if necessary
+
+```csharp
+public System.Void ApplyTemplate()
+```
+
+<span id="uid-75a788f38f"></span>
+
+### GetIsTemplateFocusTarget
+
+Gets the value of the IsTemplateFocusTargetProperty attached property on a control.
+
+```csharp
+public System.Boolean GetIsTemplateFocusTarget(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+Returns: The property value.
+
+<span id="uid-281801c25f"></span>
+
+### SetIsTemplateFocusTarget
+
+Sets the value of the IsTemplateFocusTargetProperty attached property on a control.
+
+```csharp
+public System.Void SetIsTemplateFocusTarget(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+| `value` | The property value. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Background](#uid-50dbd38ef5) | Gets or sets the brush used to draw the control's background. |
+| [BackgroundSizing](#uid-07ef33f604) | Gets or sets how the control's background is drawn relative to the control's border. |
+| [BorderBrush](#uid-cf666d3678) | Gets or sets the brush used to draw the control's border. |
+| [BorderThickness](#uid-4e2cc431b4) | Gets or sets the thickness of the control's border. |
+| [CornerRadius](#uid-91a447dd4a) | Gets or sets the radius of the border rounded corners. |
+| [FontFamily](#uid-fc37661323) | Gets or sets the font family used to draw the control's text. |
+| [FontFeatures](#uid-1a7abb9411) | Gets or sets the font features turned on/off. |
+| [FontSize](#uid-0a8445793b) | Gets or sets the size of the control's text in points. |
+| [FontStretch](#uid-f23e3b5938) | Gets or sets the font stretch used to draw the control's text. |
+| [FontStyle](#uid-0d0ccbde51) | Gets or sets the font style used to draw the control's text. |
+| [FontWeight](#uid-967cc71125) | Gets or sets the font weight used to draw the control's text. |
+| [Foreground](#uid-dff6480679) | Gets or sets the brush used to draw the control's text and other foreground elements. |
+| [LetterSpacing](#uid-2d96a527e6) | Gets or sets the letter spacing for the control's text content. |
+| [Padding](#uid-f5271cd58d) | Gets or sets the padding placed between the border of the control and its content. |
+| [Template](#uid-7a289f7bd4) | Gets or sets the template that defines the control's appearance. |
+
+<span id="uid-50dbd38ef5"></span>
+
+### Background
+
+Gets or sets the brush used to draw the control's background.
+
+```csharp
+public Avalonia.Media.IBrush Background { get; set; }
+```
+
+<span id="uid-07ef33f604"></span>
+
+### BackgroundSizing
+
+Gets or sets how the control's background is drawn relative to the control's border.
+
+```csharp
+public Avalonia.Media.BackgroundSizing BackgroundSizing { get; set; }
+```
+
+<span id="uid-cf666d3678"></span>
+
+### BorderBrush
+
+Gets or sets the brush used to draw the control's border.
+
+```csharp
+public Avalonia.Media.IBrush BorderBrush { get; set; }
+```
+
+<span id="uid-4e2cc431b4"></span>
+
+### BorderThickness
+
+Gets or sets the thickness of the control's border.
+
+```csharp
+public Avalonia.Thickness BorderThickness { get; set; }
+```
+
+<span id="uid-91a447dd4a"></span>
+
+### CornerRadius
+
+Gets or sets the radius of the border rounded corners.
+
+```csharp
+public Avalonia.CornerRadius CornerRadius { get; set; }
+```
+
+<span id="uid-fc37661323"></span>
+
+### FontFamily
+
+Gets or sets the font family used to draw the control's text.
+
+```csharp
+public Avalonia.Media.FontFamily FontFamily { get; set; }
+```
+
+<span id="uid-1a7abb9411"></span>
+
+### FontFeatures
+
+Gets or sets the font features turned on/off.
+
+```csharp
+public Avalonia.Media.FontFeatureCollection FontFeatures { get; set; }
+```
+
+<span id="uid-0a8445793b"></span>
+
+### FontSize
+
+Gets or sets the size of the control's text in points.
+
+```csharp
+public System.Double FontSize { get; set; }
+```
+
+<span id="uid-f23e3b5938"></span>
+
+### FontStretch
+
+Gets or sets the font stretch used to draw the control's text.
+
+```csharp
+public Avalonia.Media.FontStretch FontStretch { get; set; }
+```
+
+<span id="uid-0d0ccbde51"></span>
+
+### FontStyle
+
+Gets or sets the font style used to draw the control's text.
+
+```csharp
+public Avalonia.Media.FontStyle FontStyle { get; set; }
+```
+
+<span id="uid-967cc71125"></span>
+
+### FontWeight
+
+Gets or sets the font weight used to draw the control's text.
+
+```csharp
+public Avalonia.Media.FontWeight FontWeight { get; set; }
+```
+
+<span id="uid-dff6480679"></span>
+
+### Foreground
+
+Gets or sets the brush used to draw the control's text and other foreground elements.
+
+```csharp
+public Avalonia.Media.IBrush Foreground { get; set; }
+```
+
+<span id="uid-2d96a527e6"></span>
+
+### LetterSpacing
+
+Gets or sets the letter spacing for the control's text content.
+
+```csharp
+public System.Double LetterSpacing { get; set; }
+```
+
+<span id="uid-f5271cd58d"></span>
+
+### Padding
+
+Gets or sets the padding placed between the border of the control and its content.
+
+```csharp
+public Avalonia.Thickness Padding { get; set; }
+```
+
+<span id="uid-7a289f7bd4"></span>
+
+### Template
+
+Gets or sets the template that defines the control's appearance.
+
+```csharp
+public Avalonia.Controls.Templates.IControlTemplate Template { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackgroundProperty](#uid-dbbd1ffb9b) | Defines the Avalonia.Controls.Primitives.TemplatedControl.Background property. |
+| [BackgroundSizingProperty](#uid-316d7708c4) | Defines the Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing property. |
+| [BorderBrushProperty](#uid-a4e6335f37) | Defines the Avalonia.Controls.Primitives.TemplatedControl.BorderBrush property. |
+| [BorderThicknessProperty](#uid-c41e10c675) | Defines the Avalonia.Controls.Primitives.TemplatedControl.BorderThickness property. |
+| [CornerRadiusProperty](#uid-c7cdbfc75d) | Defines the Avalonia.Controls.Primitives.TemplatedControl.CornerRadius property. |
+| [FontFamilyProperty](#uid-fefa977c48) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontFamily property. |
+| [FontFeaturesProperty](#uid-54c52748f8) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty property. |
+| [FontSizeProperty](#uid-c06c71299f) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontSize property. |
+| [FontStretchProperty](#uid-d4a988cc8c) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontWeight property. |
+| [FontStyleProperty](#uid-14162a470d) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontStyle property. |
+| [FontWeightProperty](#uid-b911f20b9f) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontWeight property. |
+| [ForegroundProperty](#uid-65cd93050b) | Defines the Avalonia.Controls.Primitives.TemplatedControl.Foreground property. |
+| [IsTemplateFocusTargetProperty](#uid-e50dcff99d) | Defines the IsTemplateFocusTarget attached property. |
+| [LetterSpacingProperty](#uid-cd0904df0e) | Defines the Avalonia.Controls.Primitives.TemplatedControl.LetterSpacing property. |
+| [PaddingProperty](#uid-8836c61358) | Defines the Avalonia.Controls.Primitives.TemplatedControl.Padding property. |
+| [TemplateAppliedEvent](#uid-8ed6368102) | Defines the Avalonia.Controls.Primitives.TemplatedControl.TemplateApplied routed event. |
+| [TemplateProperty](#uid-888470a301) | Defines the Avalonia.Controls.Primitives.TemplatedControl.Template property. |
+
+<span id="uid-dbbd1ffb9b"></span>
+
+### BackgroundProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.Background](xref:Avalonia.Controls.Primitives.TemplatedControl.Background) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BackgroundProperty
+```
+
+<span id="uid-316d7708c4"></span>
+
+### BackgroundSizingProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing](xref:Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.BackgroundSizing> BackgroundSizingProperty
+```
+
+<span id="uid-a4e6335f37"></span>
+
+### BorderBrushProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.BorderBrush](xref:Avalonia.Controls.Primitives.TemplatedControl.BorderBrush) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BorderBrushProperty
+```
+
+<span id="uid-c41e10c675"></span>
+
+### BorderThicknessProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.BorderThickness](xref:Avalonia.Controls.Primitives.TemplatedControl.BorderThickness) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Thickness> BorderThicknessProperty
+```
+
+<span id="uid-c7cdbfc75d"></span>
+
+### CornerRadiusProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.CornerRadius](xref:Avalonia.Controls.Primitives.TemplatedControl.CornerRadius) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.CornerRadius> CornerRadiusProperty
+```
+
+<span id="uid-fefa977c48"></span>
+
+### FontFamilyProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontFamily](xref:Avalonia.Controls.Primitives.TemplatedControl.FontFamily) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.FontFamily> FontFamilyProperty
+```
+
+<span id="uid-54c52748f8"></span>
+
+### FontFeaturesProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty](xref:Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.FontFeatureCollection> FontFeaturesProperty
+```
+
+<span id="uid-c06c71299f"></span>
+
+### FontSizeProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontSize](xref:Avalonia.Controls.Primitives.TemplatedControl.FontSize) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> FontSizeProperty
+```
+
+<span id="uid-d4a988cc8c"></span>
+
+### FontStretchProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontWeight](xref:Avalonia.Controls.Primitives.TemplatedControl.FontWeight) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.FontStretch> FontStretchProperty
+```
+
+<span id="uid-14162a470d"></span>
+
+### FontStyleProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontStyle](xref:Avalonia.Controls.Primitives.TemplatedControl.FontStyle) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.FontStyle> FontStyleProperty
+```
+
+<span id="uid-b911f20b9f"></span>
+
+### FontWeightProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontWeight](xref:Avalonia.Controls.Primitives.TemplatedControl.FontWeight) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.FontWeight> FontWeightProperty
+```
+
+<span id="uid-65cd93050b"></span>
+
+### ForegroundProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.Foreground](xref:Avalonia.Controls.Primitives.TemplatedControl.Foreground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> ForegroundProperty
+```
+
+<span id="uid-e50dcff99d"></span>
+
+### IsTemplateFocusTargetProperty
+
+Defines the IsTemplateFocusTarget attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsTemplateFocusTargetProperty
+```
+
+<span id="uid-cd0904df0e"></span>
+
+### LetterSpacingProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.LetterSpacing](xref:Avalonia.Controls.Primitives.TemplatedControl.LetterSpacing) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> LetterSpacingProperty
+```
+
+<span id="uid-8836c61358"></span>
+
+### PaddingProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.Padding](xref:Avalonia.Controls.Primitives.TemplatedControl.Padding) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Thickness> PaddingProperty
+```
+
+<span id="uid-8ed6368102"></span>
+
+### TemplateAppliedEvent
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.TemplateApplied](xref:Avalonia.Controls.Primitives.TemplatedControl.TemplateApplied) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.Primitives.TemplateAppliedEventArgs> TemplateAppliedEvent
+```
+
+<span id="uid-888470a301"></span>
+
+### TemplateProperty
+
+Defines the [Avalonia.Controls.Primitives.TemplatedControl.Template](xref:Avalonia.Controls.Primitives.TemplatedControl.Template) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IControlTemplate> TemplateProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [TemplateApplied](#uid-d353f79b7c) | Raised when the control's template is applied. |
+
+<span id="uid-d353f79b7c"></span>
+
+### TemplateApplied
+
+Raised when the control's template is applied.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.Primitives.TemplateAppliedEventArgs> TemplateApplied
+```
+
+</ApiRefPage>
+

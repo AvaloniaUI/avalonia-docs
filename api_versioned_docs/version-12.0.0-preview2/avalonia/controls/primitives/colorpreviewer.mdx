@@ -1,0 +1,152 @@
+---
+title: 'ColorPreviewer'
+hide_title: true
+slug: '/avalonia/controls/primitives/colorpreviewer'
+uid: 'Avalonia.Controls.Primitives.ColorPreviewer'
+commentId: 'T:Avalonia.Controls.Primitives.ColorPreviewer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColorPreviewer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Presents a preview color with optional accent colors.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColorPreviewer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> ColorPreviewer
+</div>
+</div>
+
+## Remarks
+
+The control class extends [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement) and adds the following features:
+
+- A [Avalonia.Controls.Control.Tag](xref:Avalonia.Controls.Control.Tag) property to allow user-defined data to be attached to the control.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColorPreviewer](#uid-cf8e9645e6) | Initializes a new instance of the Avalonia.Controls.Primitives.ColorPreviewer class. |
+
+<span id="uid-cf8e9645e6"></span>
+
+### ColorPreviewer
+
+Initializes a new instance of the [Avalonia.Controls.Primitives.ColorPreviewer](xref:Avalonia.Controls.Primitives.ColorPreviewer) class.
+
+```csharp
+public ColorPreviewer()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HsvColor](#uid-2f46f1cb4a) | Gets or sets the currently previewed color in the HSV color model. |
+| [IsAccentColorsVisible](#uid-7858fd9990) | Gets or sets a value indicating whether accent colors are visible along with the preview color. |
+
+<span id="uid-2f46f1cb4a"></span>
+
+### HsvColor
+
+Gets or sets the currently previewed color in the HSV color model.
+
+```csharp
+public Avalonia.Media.HsvColor HsvColor { get; set; }
+```
+
+<span id="uid-7858fd9990"></span>
+
+### IsAccentColorsVisible
+
+Gets or sets a value indicating whether accent colors are visible along
+with the preview color.
+
+```csharp
+public System.Boolean IsAccentColorsVisible { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [HsvColorProperty](#uid-9372a6d762) | Defines the Avalonia.Controls.Primitives.ColorPreviewer.HsvColor property. |
+| [IsAccentColorsVisibleProperty](#uid-07974ee848) | Defines the Avalonia.Controls.Primitives.ColorPreviewer.IsAccentColorsVisible property. |
+
+<span id="uid-9372a6d762"></span>
+
+### HsvColorProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorPreviewer.HsvColor](xref:Avalonia.Controls.Primitives.ColorPreviewer.HsvColor) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.HsvColor> HsvColorProperty
+```
+
+<span id="uid-07974ee848"></span>
+
+### IsAccentColorsVisibleProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorPreviewer.IsAccentColorsVisible](xref:Avalonia.Controls.Primitives.ColorPreviewer.IsAccentColorsVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsAccentColorsVisibleProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ColorChanged](#uid-8d3e0e2d25) | Event for when the selected color changes within the previewer. This occurs when an accent color is pressed. |
+
+<span id="uid-8d3e0e2d25"></span>
+
+### ColorChanged
+
+Event for when the selected color changes within the previewer.
+This occurs when an accent color is pressed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ColorChangedEventArgs> ColorChanged
+```
+
+</ApiRefPage>
+

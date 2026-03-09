@@ -1,0 +1,154 @@
+---
+title: 'StringFormatValueConverter'
+hide_title: true
+slug: '/avalonia/data/converters/stringformatvalueconverter'
+uid: 'Avalonia.Data.Converters.StringFormatValueConverter'
+commentId: 'T:Avalonia.Data.Converters.StringFormatValueConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StringFormatValueConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A value converter which calls [System.String.Format(System.String,System.Object)](xref:System.String.Format%28System.String%2CSystem.Object%29)
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StringFormatValueConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> StringFormatValueConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [StringFormatValueConverter](#uid-7509c312cf) | Initializes a new instance of the Avalonia.Data.Converters.StringFormatValueConverter class. |
+
+<span id="uid-7509c312cf"></span>
+
+### StringFormatValueConverter
+
+Initializes a new instance of the [Avalonia.Data.Converters.StringFormatValueConverter](xref:Avalonia.Data.Converters.StringFormatValueConverter) class.
+
+```csharp
+public StringFormatValueConverter(System.String format, Avalonia.Data.Converters.IValueConverter inner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `format` | The format string. |
+| `inner` | An optional inner converter to be called before the format takes place. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-ee53bbdff4) | Converts a value. |
+| [ConvertBack](#uid-7e5ff4c666) | Converts a value. |
+
+<span id="uid-ee53bbdff4"></span>
+
+### Convert
+
+Converts a value.
+
+```csharp
+public System.Object Convert(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+<span id="uid-7e5ff4c666"></span>
+
+### ConvertBack
+
+Converts a value.
+
+```csharp
+public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Format](#uid-98c09a5573) | Gets the format string. |
+| [Inner](#uid-13d44a98ac) | Gets an inner value converter which will be called before the string format takes place. |
+
+<span id="uid-98c09a5573"></span>
+
+### Format
+
+Gets the format string.
+
+```csharp
+public System.String Format { get; set; }
+```
+
+<span id="uid-13d44a98ac"></span>
+
+### Inner
+
+Gets an inner value converter which will be called before the string format takes place.
+
+```csharp
+public Avalonia.Data.Converters.IValueConverter Inner { get; set; }
+```
+
+</ApiRefPage>
+

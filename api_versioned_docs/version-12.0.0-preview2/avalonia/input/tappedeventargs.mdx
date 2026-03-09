@@ -1,0 +1,115 @@
+---
+title: 'TappedEventArgs'
+hide_title: true
+slug: '/avalonia/input/tappedeventargs'
+uid: 'Avalonia.Input.TappedEventArgs'
+commentId: 'T:Avalonia.Input.TappedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TappedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TappedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> TappedEventArgs
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ikeymodifierseventargs">IKeyModifiersEventArgs</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TappedEventArgs](#uid-cd4fb0c474) | No summary available. |
+
+<span id="uid-cd4fb0c474"></span>
+
+### TappedEventArgs
+
+```csharp
+public TappedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Input.PointerEventArgs lastPointerEventArgs)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetPosition](#uid-b808686a19) | No summary available. |
+
+<span id="uid-b808686a19"></span>
+
+### GetPosition
+
+```csharp
+public Avalonia.Point GetPosition(Avalonia.Visual relativeTo)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [KeyModifiers](#uid-10e276f2ba) | No summary available. |
+| [Pointer](#uid-59ba47e153) | No summary available. |
+| [Timestamp](#uid-d178fb1873) | No summary available. |
+
+<span id="uid-10e276f2ba"></span>
+
+### KeyModifiers
+
+```csharp
+public Avalonia.Input.KeyModifiers KeyModifiers { get; set; }
+```
+
+<span id="uid-59ba47e153"></span>
+
+### Pointer
+
+```csharp
+public Avalonia.Input.IPointer Pointer { get; set; }
+```
+
+<span id="uid-d178fb1873"></span>
+
+### Timestamp
+
+```csharp
+public System.UInt64 Timestamp { get; set; }
+```
+
+</ApiRefPage>
+

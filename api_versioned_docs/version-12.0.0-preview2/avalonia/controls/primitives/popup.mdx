@@ -1,0 +1,649 @@
+---
+title: 'Popup'
+hide_title: true
+slug: '/avalonia/controls/primitives/popup'
+uid: 'Avalonia.Controls.Primitives.Popup'
+commentId: 'T:Avalonia.Controls.Primitives.Popup'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Popup Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Displays a popup window.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Popup
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> Popup
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IPopupHostProvider
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Popup](#uid-ec21e64338) | No summary available. |
+
+<span id="uid-ec21e64338"></span>
+
+### Popup
+
+```csharp
+public Popup()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Close](#uid-0ee3e7a416) | Closes the popup. |
+| [GetTakesFocusFromNativeControl](#uid-0950cb404f) | Gets the value of the Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl attached property on the specified control. |
+| [IsInsidePopup](#uid-c74c85e650) | No summary available. |
+| [Open](#uid-9e9d1e6e5e) | Opens the popup. |
+| [SetTakesFocusFromNativeControl](#uid-294d222768) | Sets the value of the Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl attached property on the specified control. |
+
+<span id="uid-0ee3e7a416"></span>
+
+### Close
+
+Closes the popup.
+
+```csharp
+public System.Void Close()
+```
+
+<span id="uid-0950cb404f"></span>
+
+### GetTakesFocusFromNativeControl
+
+Gets the value of the [Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl](xref:Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl) attached property on the
+specified control.
+
+```csharp
+public System.Boolean GetTakesFocusFromNativeControl(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+<span id="uid-c74c85e650"></span>
+
+### IsInsidePopup
+
+```csharp
+public System.Boolean IsInsidePopup(Avalonia.Visual visual)
+```
+
+<span id="uid-9e9d1e6e5e"></span>
+
+### Open
+
+Opens the popup.
+
+```csharp
+public System.Void Open()
+```
+
+<span id="uid-294d222768"></span>
+
+### SetTakesFocusFromNativeControl
+
+Sets the value of the [Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl](xref:Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl) attached property on the
+specified control.
+
+```csharp
+public System.Void SetTakesFocusFromNativeControl(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+| `value` | The value of the TakesFocusFromNativeControl property. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Child](#uid-bc4b7dad93) | Gets or sets the control to display in the popup. |
+| [CustomPopupPlacementCallback](#uid-96b593f2af) | Gets or sets a delegate handler method that positions the Popup control, when Avalonia.Controls.Primitives.Popup.Placement is set to Avalonia.Controls.PlacementMode.Custom. |
+| [DependencyResolver](#uid-dd3e4e99a0) | Gets or sets a dependency resolver for the Avalonia.Controls.Primitives.PopupRoot. |
+| [HorizontalOffset](#uid-942f3a080f) | Gets or sets the Horizontal offset of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+| [InheritsTransform](#uid-557d062252) | Gets or sets a value that determines whether the popup inherits the render transform from its Avalonia.Controls.Primitives.Popup.PlacementTarget. Defaults to false. |
+| [IsLightDismissEnabled](#uid-95a2368d33) | Gets or sets a value that determines how the Avalonia.Controls.Primitives.Popup can be dismissed. |
+| [IsOpen](#uid-e7f08110ec) | Gets or sets a value indicating whether the popup is currently open. |
+| [IsPointerOverPopup](#uid-154cae340d) | No summary available. |
+| [IsUsingOverlayLayer](#uid-1e35d5b6d9) | Gets a value that indicates whether the popup is shown in the overlay layer of the parent window. |
+| [OverlayDismissEventPassThrough](#uid-b518423c37) | Gets or sets a value indicating whether the event that closes the popup is passed through to the parent window. |
+| [OverlayInputPassThroughElement](#uid-9ee6aef18c) | Gets or sets an element that should receive pointer input events even when underneath the popup's overlay. |
+| [Placement](#uid-5c84689f26) | Gets or sets the desired placement of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+| [PlacementAnchor](#uid-3c617720ca) | Gets or sets the anchor point on the Avalonia.Controls.Primitives.Popup.PlacementRect when Avalonia.Controls.Primitives.Popup.Placement is Avalonia.Controls.PlacementMode.AnchorAndGravity. |
+| [PlacementConstraintAdjustment](#uid-a7809e5438) | Gets or sets a value describing how the popup position will be adjusted if the unadjusted position would result in the popup being partly constrained. |
+| [PlacementGravity](#uid-c35f37b666) | Gets or sets a value which defines in what direction the popup should open when Avalonia.Controls.Primitives.Popup.Placement is Avalonia.Controls.PlacementMode.AnchorAndGravity. |
+| [PlacementRect](#uid-cb9f219f4d) | Gets or sets the anchor rectangle within the parent that the popup will be placed relative to when Avalonia.Controls.Primitives.Popup.Placement is Avalonia.Controls.PlacementMode.AnchorAndGravity. |
+| [PlacementTarget](#uid-cd21345353) | Gets or sets the control that is used to determine the popup's position. |
+| [ShouldUseOverlayLayer](#uid-5b77880527) | Gets or sets a value that indicates whether the popup should be shown in the overlay layer of the parent window. |
+| [TakesFocusFromNativeControl](#uid-2d6ed8bd42) | Gets or sets a value indicating whether the popup, on show, transfers focus from any focused native control to Avalonia. The default is true. |
+| [Topmost](#uid-7c8e438337) | Gets or sets whether this popup appears on top of all other windows |
+| [VerticalOffset](#uid-23c453f8f5) | Gets or sets the Vertical offset of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+| [WindowManagerAddShadowHint](#uid-d76b89b058) | Gets or sets a hint to the window manager that a shadow should be added to the popup. |
+
+<span id="uid-bc4b7dad93"></span>
+
+### Child
+
+Gets or sets the control to display in the popup.
+
+```csharp
+public Avalonia.Controls.Control Child { get; set; }
+```
+
+<span id="uid-96b593f2af"></span>
+
+### CustomPopupPlacementCallback
+
+Gets or sets a delegate handler method that positions the Popup control, when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is set to [Avalonia.Controls.PlacementMode.Custom](xref:Avalonia.Controls.PlacementMode.Custom).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback CustomPopupPlacementCallback { get; set; }
+```
+
+<span id="uid-dd3e4e99a0"></span>
+
+### DependencyResolver
+
+Gets or sets a dependency resolver for the [Avalonia.Controls.Primitives.PopupRoot](xref:Avalonia.Controls.Primitives.PopupRoot).
+
+```csharp
+public Avalonia.IAvaloniaDependencyResolver DependencyResolver { get; set; }
+```
+
+<span id="uid-942f3a080f"></span>
+
+### HorizontalOffset
+
+Gets or sets the Horizontal offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public System.Double HorizontalOffset { get; set; }
+```
+
+<span id="uid-557d062252"></span>
+
+### InheritsTransform
+
+Gets or sets a value that determines whether the popup inherits the render transform
+from its [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget). Defaults to false.
+
+```csharp
+public System.Boolean InheritsTransform { get; set; }
+```
+
+<span id="uid-95a2368d33"></span>
+
+### IsLightDismissEnabled
+
+Gets or sets a value that determines how the [Avalonia.Controls.Primitives.Popup](xref:Avalonia.Controls.Primitives.Popup) can be dismissed.
+
+```csharp
+public System.Boolean IsLightDismissEnabled { get; set; }
+```
+
+<span id="uid-e7f08110ec"></span>
+
+### IsOpen
+
+Gets or sets a value indicating whether the popup is currently open.
+
+```csharp
+public System.Boolean IsOpen { get; set; }
+```
+
+<span id="uid-154cae340d"></span>
+
+### IsPointerOverPopup
+
+```csharp
+public System.Boolean IsPointerOverPopup { get; set; }
+```
+
+<span id="uid-1e35d5b6d9"></span>
+
+### IsUsingOverlayLayer
+
+Gets a value that indicates whether the popup is shown in the overlay layer of the parent window.
+
+```csharp
+public System.Boolean IsUsingOverlayLayer { get; set; }
+```
+
+<span id="uid-b518423c37"></span>
+
+### OverlayDismissEventPassThrough
+
+Gets or sets a value indicating whether the event that closes the popup is passed
+through to the parent window.
+
+```csharp
+public System.Boolean OverlayDismissEventPassThrough { get; set; }
+```
+
+<span id="uid-9ee6aef18c"></span>
+
+### OverlayInputPassThroughElement
+
+Gets or sets an element that should receive pointer input events even when underneath
+the popup's overlay.
+
+```csharp
+public Avalonia.Input.IInputElement OverlayInputPassThroughElement { get; set; }
+```
+
+<span id="uid-5c84689f26"></span>
+
+### Placement
+
+Gets or sets the desired placement of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public Avalonia.Controls.PlacementMode Placement { get; set; }
+```
+
+<span id="uid-3c617720ca"></span>
+
+### PlacementAnchor
+
+Gets or sets the anchor point on the [Avalonia.Controls.Primitives.Popup.PlacementRect](xref:Avalonia.Controls.Primitives.Popup.PlacementRect) when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement)
+is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor PlacementAnchor { get; set; }
+```
+
+<span id="uid-a7809e5438"></span>
+
+### PlacementConstraintAdjustment
+
+Gets or sets a value describing how the popup position will be adjusted if the
+unadjusted position would result in the popup being partly constrained.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment PlacementConstraintAdjustment { get; set; }
+```
+
+<span id="uid-c35f37b666"></span>
+
+### PlacementGravity
+
+Gets or sets a value which defines in what direction the popup should open
+when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupGravity PlacementGravity { get; set; }
+```
+
+<span id="uid-cb9f219f4d"></span>
+
+### PlacementRect
+
+Gets or sets the anchor rectangle within the parent that the popup will be placed
+relative to when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity).
+
+```csharp
+public System.Nullable<Avalonia.Rect> PlacementRect { get; set; }
+```
+
+<span id="uid-cd21345353"></span>
+
+### PlacementTarget
+
+Gets or sets the control that is used to determine the popup's position.
+
+```csharp
+public Avalonia.Controls.Control PlacementTarget { get; set; }
+```
+
+<span id="uid-5b77880527"></span>
+
+### ShouldUseOverlayLayer
+
+Gets or sets a value that indicates whether the popup should be shown in the overlay layer of the parent window.
+
+```csharp
+public System.Boolean ShouldUseOverlayLayer { get; set; }
+```
+
+<span id="uid-2d6ed8bd42"></span>
+
+### TakesFocusFromNativeControl
+
+Gets or sets a value indicating whether the popup, on show, transfers focus from any
+focused native control to Avalonia. The default is `true`.
+
+```csharp
+public System.Boolean TakesFocusFromNativeControl { get; set; }
+```
+
+<span id="uid-7c8e438337"></span>
+
+### Topmost
+
+Gets or sets whether this popup appears on top of all other windows
+
+```csharp
+public System.Boolean Topmost { get; set; }
+```
+
+<span id="uid-23c453f8f5"></span>
+
+### VerticalOffset
+
+Gets or sets the Vertical offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public System.Double VerticalOffset { get; set; }
+```
+
+<span id="uid-d76b89b058"></span>
+
+### WindowManagerAddShadowHint
+
+Gets or sets a hint to the window manager that a shadow should be added to the popup.
+
+```csharp
+public System.Boolean WindowManagerAddShadowHint { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ChildProperty](#uid-31268f0300) | Defines the Avalonia.Controls.Primitives.Popup.Child property. |
+| [CustomPopupPlacementCallbackProperty](#uid-fc08983a88) | Defines the Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback property. |
+| [HorizontalOffsetProperty](#uid-e001c333dc) | Defines the Avalonia.Controls.Primitives.Popup.HorizontalOffset property. |
+| [InheritsTransformProperty](#uid-d072e00ebf) | Defines the Avalonia.Controls.Primitives.Popup.InheritsTransform property. |
+| [IsLightDismissEnabledProperty](#uid-8c7c7177bd) | Defines the Avalonia.Controls.Primitives.Popup.IsLightDismissEnabled property. |
+| [IsOpenProperty](#uid-923f09467e) | Defines the Avalonia.Controls.Primitives.Popup.IsOpen property. |
+| [IsUsingOverlayLayerProperty](#uid-706440104d) | Defines the Avalonia.Controls.Primitives.Popup.IsUsingOverlayLayer property. |
+| [OverlayDismissEventPassThroughProperty](#uid-88f1d451cf) | Defines the Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThrough property. |
+| [OverlayInputPassThroughElementProperty](#uid-f5d20ccf1e) | Defines the Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElement property. |
+| [PlacementAnchorProperty](#uid-44debad98e) | Defines the Avalonia.Controls.Primitives.Popup.PlacementAnchor property. |
+| [PlacementConstraintAdjustmentProperty](#uid-3493ebe032) | Defines the Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustment property. |
+| [PlacementGravityProperty](#uid-36a82888c0) | Defines the Avalonia.Controls.Primitives.Popup.PlacementGravity property. |
+| [PlacementProperty](#uid-0df2013dbd) | Defines the Avalonia.Controls.Primitives.Popup.Placement property. |
+| [PlacementRectProperty](#uid-8b532780b3) | Defines the Avalonia.Controls.Primitives.Popup.PlacementRect property. |
+| [PlacementTargetProperty](#uid-a5edf7255b) | Defines the Avalonia.Controls.Primitives.Popup.PlacementTarget property. |
+| [ShouldUseOverlayLayerProperty](#uid-02fa58d673) | Defines the Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer property. |
+| [TakesFocusFromNativeControlProperty](#uid-eaded528db) | Defines the Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl property. |
+| [TopmostProperty](#uid-1a31f2bc84) | Defines the Avalonia.Controls.Primitives.Popup.Topmost property. |
+| [VerticalOffsetProperty](#uid-e99f8bb7b5) | Defines the Avalonia.Controls.Primitives.Popup.VerticalOffset property. |
+| [WindowManagerAddShadowHintProperty](#uid-ccd73bd282) | Defines the Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHint property. |
+
+<span id="uid-31268f0300"></span>
+
+### ChildProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.Child](xref:Avalonia.Controls.Primitives.Popup.Child) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Control> ChildProperty
+```
+
+<span id="uid-fc08983a88"></span>
+
+### CustomPopupPlacementCallbackProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback](xref:Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> CustomPopupPlacementCallbackProperty
+```
+
+<span id="uid-e001c333dc"></span>
+
+### HorizontalOffsetProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.HorizontalOffset](xref:Avalonia.Controls.Primitives.Popup.HorizontalOffset) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> HorizontalOffsetProperty
+```
+
+<span id="uid-d072e00ebf"></span>
+
+### InheritsTransformProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.InheritsTransform](xref:Avalonia.Controls.Primitives.Popup.InheritsTransform) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> InheritsTransformProperty
+```
+
+<span id="uid-8c7c7177bd"></span>
+
+### IsLightDismissEnabledProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.IsLightDismissEnabled](xref:Avalonia.Controls.Primitives.Popup.IsLightDismissEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsLightDismissEnabledProperty
+```
+
+<span id="uid-923f09467e"></span>
+
+### IsOpenProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.IsOpen](xref:Avalonia.Controls.Primitives.Popup.IsOpen) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsOpenProperty
+```
+
+<span id="uid-706440104d"></span>
+
+### IsUsingOverlayLayerProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.IsUsingOverlayLayer](xref:Avalonia.Controls.Primitives.Popup.IsUsingOverlayLayer) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.Popup, System.Boolean> IsUsingOverlayLayerProperty
+```
+
+<span id="uid-88f1d451cf"></span>
+
+### OverlayDismissEventPassThroughProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThrough](xref:Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThrough) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> OverlayDismissEventPassThroughProperty
+```
+
+<span id="uid-f5d20ccf1e"></span>
+
+### OverlayInputPassThroughElementProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElement](xref:Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Input.IInputElement> OverlayInputPassThroughElementProperty
+```
+
+<span id="uid-44debad98e"></span>
+
+### PlacementAnchorProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.PlacementAnchor](xref:Avalonia.Controls.Primitives.Popup.PlacementAnchor) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> PlacementAnchorProperty
+```
+
+<span id="uid-3493ebe032"></span>
+
+### PlacementConstraintAdjustmentProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustment](xref:Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> PlacementConstraintAdjustmentProperty
+```
+
+<span id="uid-36a82888c0"></span>
+
+### PlacementGravityProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.PlacementGravity](xref:Avalonia.Controls.Primitives.Popup.PlacementGravity) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> PlacementGravityProperty
+```
+
+<span id="uid-0df2013dbd"></span>
+
+### PlacementProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.PlacementMode> PlacementProperty
+```
+
+<span id="uid-8b532780b3"></span>
+
+### PlacementRectProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.PlacementRect](xref:Avalonia.Controls.Primitives.Popup.PlacementRect) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Nullable<Avalonia.Rect>> PlacementRectProperty
+```
+
+<span id="uid-a5edf7255b"></span>
+
+### PlacementTargetProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Control> PlacementTargetProperty
+```
+
+<span id="uid-02fa58d673"></span>
+
+### ShouldUseOverlayLayerProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer](xref:Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ShouldUseOverlayLayerProperty
+```
+
+<span id="uid-eaded528db"></span>
+
+### TakesFocusFromNativeControlProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl](xref:Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControl) property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> TakesFocusFromNativeControlProperty
+```
+
+<span id="uid-1a31f2bc84"></span>
+
+### TopmostProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.Topmost](xref:Avalonia.Controls.Primitives.Popup.Topmost) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> TopmostProperty
+```
+
+<span id="uid-e99f8bb7b5"></span>
+
+### VerticalOffsetProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.VerticalOffset](xref:Avalonia.Controls.Primitives.Popup.VerticalOffset) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> VerticalOffsetProperty
+```
+
+<span id="uid-ccd73bd282"></span>
+
+### WindowManagerAddShadowHintProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHint](xref:Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHint) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> WindowManagerAddShadowHintProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Closed](#uid-9439ef0115) | Raised when the popup closes. |
+| [Opened](#uid-30c40cf17f) | Raised when the popup opens. |
+
+<span id="uid-9439ef0115"></span>
+
+### Closed
+
+Raised when the popup closes.
+
+```csharp
+public event System.EventHandler<System.EventArgs> Closed
+```
+
+<span id="uid-30c40cf17f"></span>
+
+### Opened
+
+Raised when the popup opens.
+
+```csharp
+public event System.EventHandler Opened
+```
+
+</ApiRefPage>
+

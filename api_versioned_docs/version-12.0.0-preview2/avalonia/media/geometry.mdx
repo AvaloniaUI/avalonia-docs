@@ -1,0 +1,279 @@
+---
+title: 'Geometry'
+hide_title: true
+slug: '/avalonia/media/geometry'
+uid: 'Avalonia.Media.Geometry'
+commentId: 'T:Avalonia.Media.Geometry'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Geometry Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a geometric shape.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Geometry
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> Geometry
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Clone](#uid-6982587ff0) | Clones the geometry. |
+| [Combine](#uid-03ba6ba14f) | Combines the two geometries using the specified Avalonia.Media.GeometryCombineMode and applies the specified transform to the resulting geometry. |
+| [FillContains](#uid-1ecc042e3b) | Indicates whether the geometry's fill contains the specified point. |
+| [GetRenderBounds](#uid-4f903c64e7) | Gets the geometry's bounding rectangle with the specified pen. |
+| [GetWidenedGeometry](#uid-9265c7d05d) | Gets a Avalonia.Media.Geometry that is the shape defined by the stroke on the Geometry produced by the specified Pen. |
+| [Parse](#uid-f0f323635b) | Creates a Avalonia.Media.Geometry from a string. |
+| [StrokeContains](#uid-9137804922) | Indicates whether the geometry's stroke contains the specified point. |
+| [TryGetPointAndTangentAtDistance](#uid-0cb785d427) | No summary available. |
+| [TryGetPointAtDistance](#uid-8e9f7dcc61) | No summary available. |
+| [TryGetSegment](#uid-50b46fd171) | No summary available. |
+
+<span id="uid-6982587ff0"></span>
+
+### Clone
+
+Clones the geometry.
+
+```csharp
+public Avalonia.Media.Geometry Clone()
+```
+
+Returns: A cloned geometry.
+
+<span id="uid-03ba6ba14f"></span>
+
+### Combine
+
+Combines the two geometries using the specified [Avalonia.Media.GeometryCombineMode](xref:Avalonia.Media.GeometryCombineMode) and applies the specified transform to the resulting geometry.
+
+```csharp
+public Avalonia.Media.Geometry Combine(Avalonia.Media.Geometry geometry1, Avalonia.Media.RectangleGeometry geometry2, Avalonia.Media.GeometryCombineMode combineMode, Avalonia.Media.Transform transform)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `combineMode` | One of the enumeration values that specifies how the geometries are combined. |
+| `geometry1` | The first geometry to combine. |
+| `geometry2` | The second geometry to combine. |
+| `transform` | A transformation to apply to the combined geometry, or `null`. |
+
+<span id="uid-1ecc042e3b"></span>
+
+### FillContains
+
+Indicates whether the geometry's fill contains the specified point.
+
+```csharp
+public System.Boolean FillContains(Avalonia.Point point)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `point` | The point. |
+
+Returns: `true` if the geometry contains the point; otherwise, `false`.
+
+<span id="uid-4f903c64e7"></span>
+
+### GetRenderBounds
+
+Gets the geometry's bounding rectangle with the specified pen.
+
+```csharp
+public Avalonia.Rect GetRenderBounds(Avalonia.Media.IPen pen)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `pen` | The stroke thickness. |
+
+Returns: The bounding rectangle.
+
+<span id="uid-9265c7d05d"></span>
+
+### GetWidenedGeometry
+
+Gets a [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) that is the shape defined by the stroke on the Geometry
+produced by the specified Pen.
+
+```csharp
+public Avalonia.Media.Geometry GetWidenedGeometry(Avalonia.Media.IPen pen)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `pen` | The pen to use. |
+
+Returns: The outlined geometry.
+
+<span id="uid-f0f323635b"></span>
+
+### Parse
+
+Creates a [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) from a string.
+
+```csharp
+public Avalonia.Media.Geometry Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: A [Avalonia.Media.StreamGeometry](xref:Avalonia.Media.StreamGeometry).
+
+<span id="uid-9137804922"></span>
+
+### StrokeContains
+
+Indicates whether the geometry's stroke contains the specified point.
+
+```csharp
+public System.Boolean StrokeContains(Avalonia.Media.IPen pen, Avalonia.Point point)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `pen` | The pen to use. |
+| `point` | The point. |
+
+Returns: `true` if the geometry contains the point; otherwise, `false`.
+
+<span id="uid-0cb785d427"></span>
+
+### TryGetPointAndTangentAtDistance
+
+```csharp
+public System.Boolean TryGetPointAndTangentAtDistance(System.Double distance, Avalonia.Point& point, Avalonia.Point& tangent)
+```
+
+<span id="uid-8e9f7dcc61"></span>
+
+### TryGetPointAtDistance
+
+```csharp
+public System.Boolean TryGetPointAtDistance(System.Double distance, Avalonia.Point& point)
+```
+
+<span id="uid-50b46fd171"></span>
+
+### TryGetSegment
+
+```csharp
+public System.Boolean TryGetSegment(System.Double startDistance, System.Double stopDistance, System.Boolean startOnBeginFigure, Avalonia.Media.Geometry& segmentGeometry)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bounds](#uid-404ee0d0a8) | Gets the geometry's bounding rectangle. |
+| [ContourLength](#uid-5dc65c547e) | Gets the geometry's total length as if all its contours are placed in a straight line. |
+| [Transform](#uid-ca73562bb3) | Gets or sets a transform to apply to the geometry. |
+
+<span id="uid-404ee0d0a8"></span>
+
+### Bounds
+
+Gets the geometry's bounding rectangle.
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+<span id="uid-5dc65c547e"></span>
+
+### ContourLength
+
+Gets the geometry's total length as if all its contours are placed
+in a straight line.
+
+```csharp
+public System.Double ContourLength { get; set; }
+```
+
+<span id="uid-ca73562bb3"></span>
+
+### Transform
+
+Gets or sets a transform to apply to the geometry.
+
+```csharp
+public Avalonia.Media.Transform Transform { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [TransformProperty](#uid-deccb386d8) | Defines the Avalonia.Media.Geometry.Transform property. |
+
+<span id="uid-deccb386d8"></span>
+
+### TransformProperty
+
+Defines the [Avalonia.Media.Geometry.Transform](xref:Avalonia.Media.Geometry.Transform) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.Transform> TransformProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-9001f59bae) | Raised when the geometry changes. |
+
+<span id="uid-9001f59bae"></span>
+
+### Changed
+
+Raised when the geometry changes.
+
+```csharp
+public event System.EventHandler Changed
+```
+
+</ApiRefPage>
+

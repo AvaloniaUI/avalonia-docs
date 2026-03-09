@@ -1,0 +1,343 @@
+---
+title: 'WindowDrawnDecorations'
+hide_title: true
+slug: '/avalonia/controls/chrome/windowdrawndecorations'
+uid: 'Avalonia.Controls.Chrome.WindowDrawnDecorations'
+commentId: 'T:Avalonia.Controls.Chrome.WindowDrawnDecorations'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Chrome'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WindowDrawnDecorations Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Chrome</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages client-side window decorations (app-drawn window frame).
+This is a logical element that holds the decorations template and properties.
+TopLevelHost extracts overlay/underlay/popover visuals from the template content
+and inserts them into its own visual tree.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WindowDrawnDecorations
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> WindowDrawnDecorations
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WindowDrawnDecorations](#uid-4814723996) | No summary available. |
+
+<span id="uid-4814723996"></span>
+
+### WindowDrawnDecorations
+
+```csharp
+public WindowDrawnDecorations()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Content](#uid-f39817d54e) | Gets the built template content. |
+| [DefaultFrameThickness](#uid-2ebd00de79) | Gets or sets the theme-set default frame thickness. |
+| [DefaultShadowThickness](#uid-aef872efe0) | Gets or sets the theme-set default shadow thickness. |
+| [DefaultTitleBarHeight](#uid-614a60a96d) | Gets or sets the theme-set default titlebar height. |
+| [FrameThickness](#uid-58ead70bb9) | Gets the effective frame thickness. Uses FrameThicknessOverride if explicitly set, otherwise DefaultFrameThickness. Returns zero if border part is disabled. |
+| [HasBorder](#uid-0b3fa1de7b) | Gets a value indicating whether the border decoration part is enabled. |
+| [HasShadow](#uid-2e8d93f068) | Gets a value indicating whether the shadow decoration part is enabled. |
+| [HasTitleBar](#uid-7642b8a4c0) | Gets a value indicating whether the title bar decoration part is enabled. |
+| [ShadowThickness](#uid-304a20af60) | Gets the effective shadow thickness. Uses ShadowThicknessOverride if explicitly set, otherwise DefaultShadowThickness. Returns zero if shadow part is disabled. |
+| [Template](#uid-9c89c1746e) | Gets or sets the decorations template. |
+| [Title](#uid-58e998080f) | Gets or sets the window title displayed in the decorations. |
+| [TitleBarHeight](#uid-482cbfdfaf) | Gets the effective titlebar height, resolving -1 override to the default. Returns 0 if titlebar part is disabled. |
+
+<span id="uid-f39817d54e"></span>
+
+### Content
+
+Gets the built template content.
+
+```csharp
+public Avalonia.Controls.Chrome.WindowDrawnDecorationsContent Content { get; set; }
+```
+
+<span id="uid-2ebd00de79"></span>
+
+### DefaultFrameThickness
+
+Gets or sets the theme-set default frame thickness.
+
+```csharp
+public Avalonia.Thickness DefaultFrameThickness { get; set; }
+```
+
+<span id="uid-aef872efe0"></span>
+
+### DefaultShadowThickness
+
+Gets or sets the theme-set default shadow thickness.
+
+```csharp
+public Avalonia.Thickness DefaultShadowThickness { get; set; }
+```
+
+<span id="uid-614a60a96d"></span>
+
+### DefaultTitleBarHeight
+
+Gets or sets the theme-set default titlebar height.
+
+```csharp
+public System.Double DefaultTitleBarHeight { get; set; }
+```
+
+<span id="uid-58ead70bb9"></span>
+
+### FrameThickness
+
+Gets the effective frame thickness.
+Uses FrameThicknessOverride if explicitly set, otherwise DefaultFrameThickness.
+Returns zero if border part is disabled.
+
+```csharp
+public Avalonia.Thickness FrameThickness { get; set; }
+```
+
+<span id="uid-0b3fa1de7b"></span>
+
+### HasBorder
+
+Gets a value indicating whether the border decoration part is enabled.
+
+```csharp
+public System.Boolean HasBorder { get; set; }
+```
+
+<span id="uid-2e8d93f068"></span>
+
+### HasShadow
+
+Gets a value indicating whether the shadow decoration part is enabled.
+
+```csharp
+public System.Boolean HasShadow { get; set; }
+```
+
+<span id="uid-7642b8a4c0"></span>
+
+### HasTitleBar
+
+Gets a value indicating whether the title bar decoration part is enabled.
+
+```csharp
+public System.Boolean HasTitleBar { get; set; }
+```
+
+<span id="uid-304a20af60"></span>
+
+### ShadowThickness
+
+Gets the effective shadow thickness.
+Uses ShadowThicknessOverride if explicitly set, otherwise DefaultShadowThickness.
+Returns zero if shadow part is disabled.
+
+```csharp
+public Avalonia.Thickness ShadowThickness { get; set; }
+```
+
+<span id="uid-9c89c1746e"></span>
+
+### Template
+
+Gets or sets the decorations template.
+
+```csharp
+public Avalonia.Controls.Chrome.IWindowDrawnDecorationsTemplate Template { get; set; }
+```
+
+<span id="uid-58e998080f"></span>
+
+### Title
+
+Gets or sets the window title displayed in the decorations.
+
+```csharp
+public System.String Title { get; set; }
+```
+
+<span id="uid-482cbfdfaf"></span>
+
+### TitleBarHeight
+
+Gets the effective titlebar height, resolving -1 override to the default.
+Returns 0 if titlebar part is disabled.
+
+```csharp
+public System.Double TitleBarHeight { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DefaultFrameThicknessProperty](#uid-666753cf86) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultFrameThickness property. |
+| [DefaultShadowThicknessProperty](#uid-268f6ba144) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultShadowThickness property. |
+| [DefaultTitleBarHeightProperty](#uid-602c8a2bf4) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultTitleBarHeight property. |
+| [FrameThicknessProperty](#uid-80ea0b5225) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.FrameThickness property. |
+| [HasBorderProperty](#uid-07c3f7c34f) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.HasBorder property. |
+| [HasShadowProperty](#uid-83d41b8e07) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.HasShadow property. |
+| [HasTitleBarProperty](#uid-72fe275192) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.HasTitleBar property. |
+| [ShadowThicknessProperty](#uid-e62d90d2a5) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.ShadowThickness property. |
+| [TemplateProperty](#uid-984eb5cc00) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.Template property. |
+| [TitleBarHeightProperty](#uid-95eaf2819c) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.TitleBarHeight property. |
+| [TitleProperty](#uid-c88eea86db) | Defines the Avalonia.Controls.Chrome.WindowDrawnDecorations.Title property. |
+
+<span id="uid-666753cf86"></span>
+
+### DefaultFrameThicknessProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultFrameThickness](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultFrameThickness) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Thickness> DefaultFrameThicknessProperty
+```
+
+<span id="uid-268f6ba144"></span>
+
+### DefaultShadowThicknessProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultShadowThickness](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultShadowThickness) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Thickness> DefaultShadowThicknessProperty
+```
+
+<span id="uid-602c8a2bf4"></span>
+
+### DefaultTitleBarHeightProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultTitleBarHeight](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.DefaultTitleBarHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> DefaultTitleBarHeightProperty
+```
+
+<span id="uid-80ea0b5225"></span>
+
+### FrameThicknessProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.FrameThickness](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.FrameThickness) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Chrome.WindowDrawnDecorations, Avalonia.Thickness> FrameThicknessProperty
+```
+
+<span id="uid-07c3f7c34f"></span>
+
+### HasBorderProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.HasBorder](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.HasBorder) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Chrome.WindowDrawnDecorations, System.Boolean> HasBorderProperty
+```
+
+<span id="uid-83d41b8e07"></span>
+
+### HasShadowProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.HasShadow](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.HasShadow) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Chrome.WindowDrawnDecorations, System.Boolean> HasShadowProperty
+```
+
+<span id="uid-72fe275192"></span>
+
+### HasTitleBarProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.HasTitleBar](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.HasTitleBar) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Chrome.WindowDrawnDecorations, System.Boolean> HasTitleBarProperty
+```
+
+<span id="uid-e62d90d2a5"></span>
+
+### ShadowThicknessProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.ShadowThickness](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.ShadowThickness) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Chrome.WindowDrawnDecorations, Avalonia.Thickness> ShadowThicknessProperty
+```
+
+<span id="uid-984eb5cc00"></span>
+
+### TemplateProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.Template](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.Template) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Chrome.IWindowDrawnDecorationsTemplate> TemplateProperty
+```
+
+<span id="uid-95eaf2819c"></span>
+
+### TitleBarHeightProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.TitleBarHeight](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.TitleBarHeight) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Chrome.WindowDrawnDecorations, System.Double> TitleBarHeightProperty
+```
+
+<span id="uid-c88eea86db"></span>
+
+### TitleProperty
+
+Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.Title](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.Title) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> TitleProperty
+```
+
+</ApiRefPage>
+

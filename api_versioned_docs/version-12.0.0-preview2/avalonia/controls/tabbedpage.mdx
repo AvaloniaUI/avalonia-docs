@@ -1,0 +1,244 @@
+---
+title: 'TabbedPage'
+hide_title: true
+slug: '/avalonia/controls/tabbedpage'
+uid: 'Avalonia.Controls.TabbedPage'
+commentId: 'T:Avalonia.Controls.TabbedPage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TabbedPage Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A page that displays its child pages through a tab strip.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TabbedPage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="page">Page</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="multipage">MultiPage</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="selectingmultipage">SelectingMultiPage</a> <span className="apiref-page__relation-separator">-&gt;</span> TabbedPage
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TabbedPage](#uid-c2c79b3666) | Initializes a new instance of the Avalonia.Controls.TabbedPage class. |
+
+<span id="uid-c2c79b3666"></span>
+
+### TabbedPage
+
+Initializes a new instance of the [Avalonia.Controls.TabbedPage](xref:Avalonia.Controls.TabbedPage) class.
+
+```csharp
+public TabbedPage()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetIsTabEnabled](#uid-09561012ed) | Gets the value of the Avalonia.Controls.TabbedPage.IsTabEnabledProperty attached property for a page. |
+| [SetIsTabEnabled](#uid-f630e61c27) | Sets the value of the Avalonia.Controls.TabbedPage.IsTabEnabledProperty attached property for a page. Disabled tabs are skipped during keyboard and swipe navigation. |
+
+<span id="uid-09561012ed"></span>
+
+### GetIsTabEnabled
+
+Gets the value of the [Avalonia.Controls.TabbedPage.IsTabEnabledProperty](xref:Avalonia.Controls.TabbedPage.IsTabEnabledProperty) attached property for a page.
+
+```csharp
+public System.Boolean GetIsTabEnabled(Avalonia.Controls.Page page)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `page` | The page to query. |
+
+Returns: if the tab is enabled; otherwise .
+
+<span id="uid-f630e61c27"></span>
+
+### SetIsTabEnabled
+
+Sets the value of the [Avalonia.Controls.TabbedPage.IsTabEnabledProperty](xref:Avalonia.Controls.TabbedPage.IsTabEnabledProperty) attached property for a page.
+Disabled tabs are skipped during keyboard and swipe navigation.
+
+```csharp
+public System.Void SetIsTabEnabled(Avalonia.Controls.Page page, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `page` | The page whose tab state to update. |
+| `value` | to enable the tab; to disable it. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IndicatorTemplate](#uid-062468e8cf) | Gets or sets the data template used to render the selection indicator on each tab. |
+| [IsGestureEnabled](#uid-691118ded8) | Gets or sets whether swipe gestures can be used to navigate between tabs. |
+| [IsKeyboardNavigationEnabled](#uid-b7f5a46f3e) | Gets or sets whether keyboard navigation can switch tabs. |
+| [PageTransition](#uid-3dc7536770) | Gets or sets the page transition to use when switching tabs. |
+| [TabPlacement](#uid-a7c882550e) | Gets or sets the tab bar placement. |
+
+<span id="uid-062468e8cf"></span>
+
+### IndicatorTemplate
+
+Gets or sets the data template used to render the selection indicator on each tab.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate IndicatorTemplate { get; set; }
+```
+
+<span id="uid-691118ded8"></span>
+
+### IsGestureEnabled
+
+Gets or sets whether swipe gestures can be used to navigate between tabs.
+
+```csharp
+public System.Boolean IsGestureEnabled { get; set; }
+```
+
+<span id="uid-b7f5a46f3e"></span>
+
+### IsKeyboardNavigationEnabled
+
+Gets or sets whether keyboard navigation can switch tabs.
+
+```csharp
+public System.Boolean IsKeyboardNavigationEnabled { get; set; }
+```
+
+<span id="uid-3dc7536770"></span>
+
+### PageTransition
+
+Gets or sets the page transition to use when switching tabs.
+
+```csharp
+public Avalonia.Animation.IPageTransition PageTransition { get; set; }
+```
+
+<span id="uid-a7c882550e"></span>
+
+### TabPlacement
+
+Gets or sets the tab bar placement.
+
+```csharp
+public Avalonia.Controls.TabPlacement TabPlacement { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IndicatorTemplateProperty](#uid-5cdd1b220f) | Defines the Avalonia.Controls.TabbedPage.IndicatorTemplate property. |
+| [IsGestureEnabledProperty](#uid-9fc1b9d298) | Defines the Avalonia.Controls.TabbedPage.IsGestureEnabled property. |
+| [IsKeyboardNavigationEnabledProperty](#uid-b3c9574ce5) | Defines the Avalonia.Controls.TabbedPage.IsKeyboardNavigationEnabled property. |
+| [IsTabEnabledProperty](#uid-da8271ffcf) | Defines the Avalonia.Controls.TabbedPage.IsTabEnabledProperty attached property. |
+| [PageTransitionProperty](#uid-72f8033113) | Defines the Avalonia.Controls.TabbedPage.PageTransition property. |
+| [TabPlacementProperty](#uid-eaa81892d0) | Defines the Avalonia.Controls.TabbedPage.TabPlacement property. |
+
+<span id="uid-5cdd1b220f"></span>
+
+### IndicatorTemplateProperty
+
+Defines the [Avalonia.Controls.TabbedPage.IndicatorTemplate](xref:Avalonia.Controls.TabbedPage.IndicatorTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> IndicatorTemplateProperty
+```
+
+<span id="uid-9fc1b9d298"></span>
+
+### IsGestureEnabledProperty
+
+Defines the [Avalonia.Controls.TabbedPage.IsGestureEnabled](xref:Avalonia.Controls.TabbedPage.IsGestureEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsGestureEnabledProperty
+```
+
+<span id="uid-b3c9574ce5"></span>
+
+### IsKeyboardNavigationEnabledProperty
+
+Defines the [Avalonia.Controls.TabbedPage.IsKeyboardNavigationEnabled](xref:Avalonia.Controls.TabbedPage.IsKeyboardNavigationEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsKeyboardNavigationEnabledProperty
+```
+
+<span id="uid-da8271ffcf"></span>
+
+### IsTabEnabledProperty
+
+Defines the [Avalonia.Controls.TabbedPage.IsTabEnabledProperty](xref:Avalonia.Controls.TabbedPage.IsTabEnabledProperty) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsTabEnabledProperty
+```
+
+<span id="uid-72f8033113"></span>
+
+### PageTransitionProperty
+
+Defines the [Avalonia.Controls.TabbedPage.PageTransition](xref:Avalonia.Controls.TabbedPage.PageTransition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Animation.IPageTransition> PageTransitionProperty
+```
+
+<span id="uid-eaa81892d0"></span>
+
+### TabPlacementProperty
+
+Defines the [Avalonia.Controls.TabbedPage.TabPlacement](xref:Avalonia.Controls.TabbedPage.TabPlacement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.TabPlacement> TabPlacementProperty
+```
+
+</ApiRefPage>
+

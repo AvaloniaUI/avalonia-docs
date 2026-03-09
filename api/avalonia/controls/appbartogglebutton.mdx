@@ -1,0 +1,219 @@
+---
+title: 'AppBarToggleButton'
+hide_title: true
+slug: '/avalonia/controls/appbartogglebutton'
+uid: 'Avalonia.Controls.AppBarToggleButton'
+commentId: 'T:Avalonia.Controls.AppBarToggleButton'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AppBarToggleButton Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A toggle button for use in a [Avalonia.Controls.CommandBar](xref:Avalonia.Controls.CommandBar).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AppBarToggleButton
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="button">Button</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/togglebutton">ToggleButton</a> <span className="apiref-page__relation-separator">-&gt;</span> AppBarToggleButton
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icommandbarelement">ICommandBarElement</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AppBarToggleButton](#uid-98462869c6) | No summary available. |
+
+<span id="uid-98462869c6"></span>
+
+### AppBarToggleButton
+
+```csharp
+public AppBarToggleButton()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DynamicOverflowOrder](#uid-ad2ebfdad5) | Gets or sets the order in which this button moves to the overflow menu when space is limited. Lower values have higher priority (stay visible longer). |
+| [Icon](#uid-663166fac7) | Gets or sets the icon content for the button. |
+| [IsCompact](#uid-c4ffae4a95) | Gets or sets whether the button is in compact mode (icon only, label hidden). |
+| [IsInOverflow](#uid-397733c529) | Gets or sets whether this button is displayed inside the overflow popup. Set automatically by Avalonia.Controls.CommandBar when moving items between primary and overflow. |
+| [Label](#uid-0920d1d3a1) | Gets or sets the text label for the button. |
+| [LabelPosition](#uid-15e84b8460) | Gets or sets the label position. This is set automatically by the parent Avalonia.Controls.CommandBar. |
+
+<span id="uid-ad2ebfdad5"></span>
+
+### DynamicOverflowOrder
+
+Gets or sets the order in which this button moves to the overflow menu when space is limited.
+Lower values have higher priority (stay visible longer).
+
+```csharp
+public System.Int32 DynamicOverflowOrder { get; set; }
+```
+
+<span id="uid-663166fac7"></span>
+
+### Icon
+
+Gets or sets the icon content for the button.
+
+```csharp
+public System.Object Icon { get; set; }
+```
+
+<span id="uid-c4ffae4a95"></span>
+
+### IsCompact
+
+Gets or sets whether the button is in compact mode (icon only, label hidden).
+
+```csharp
+public System.Boolean IsCompact { get; set; }
+```
+
+<span id="uid-397733c529"></span>
+
+### IsInOverflow
+
+Gets or sets whether this button is displayed inside the overflow popup.
+Set automatically by [Avalonia.Controls.CommandBar](xref:Avalonia.Controls.CommandBar) when moving items between primary and overflow.
+
+```csharp
+public System.Boolean IsInOverflow { get; set; }
+```
+
+<span id="uid-0920d1d3a1"></span>
+
+### Label
+
+Gets or sets the text label for the button.
+
+```csharp
+public System.String Label { get; set; }
+```
+
+<span id="uid-15e84b8460"></span>
+
+### LabelPosition
+
+Gets or sets the label position. This is set automatically by the parent [Avalonia.Controls.CommandBar](xref:Avalonia.Controls.CommandBar).
+
+```csharp
+public Avalonia.Controls.CommandBarDefaultLabelPosition LabelPosition { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DynamicOverflowOrderProperty](#uid-cf0507fea7) | Defines the Avalonia.Controls.AppBarToggleButton.DynamicOverflowOrder property. |
+| [IconProperty](#uid-f9eb587966) | Defines the Avalonia.Controls.AppBarToggleButton.Icon property. |
+| [IsCompactProperty](#uid-83f69b6b38) | Defines the Avalonia.Controls.AppBarToggleButton.IsCompact property. |
+| [IsInOverflowProperty](#uid-aa81cd28d9) | Defines the Avalonia.Controls.AppBarToggleButton.IsInOverflow property. |
+| [LabelPositionProperty](#uid-3fc5801295) | Defines the Avalonia.Controls.AppBarToggleButton.LabelPosition property. |
+| [LabelProperty](#uid-d9adc4c515) | Defines the Avalonia.Controls.AppBarToggleButton.Label property. |
+
+<span id="uid-cf0507fea7"></span>
+
+### DynamicOverflowOrderProperty
+
+Defines the [Avalonia.Controls.AppBarToggleButton.DynamicOverflowOrder](xref:Avalonia.Controls.AppBarToggleButton.DynamicOverflowOrder) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> DynamicOverflowOrderProperty
+```
+
+<span id="uid-f9eb587966"></span>
+
+### IconProperty
+
+Defines the [Avalonia.Controls.AppBarToggleButton.Icon](xref:Avalonia.Controls.AppBarToggleButton.Icon) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> IconProperty
+```
+
+<span id="uid-83f69b6b38"></span>
+
+### IsCompactProperty
+
+Defines the [Avalonia.Controls.AppBarToggleButton.IsCompact](xref:Avalonia.Controls.AppBarToggleButton.IsCompact) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsCompactProperty
+```
+
+<span id="uid-aa81cd28d9"></span>
+
+### IsInOverflowProperty
+
+Defines the [Avalonia.Controls.AppBarToggleButton.IsInOverflow](xref:Avalonia.Controls.AppBarToggleButton.IsInOverflow) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsInOverflowProperty
+```
+
+<span id="uid-3fc5801295"></span>
+
+### LabelPositionProperty
+
+Defines the [Avalonia.Controls.AppBarToggleButton.LabelPosition](xref:Avalonia.Controls.AppBarToggleButton.LabelPosition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.CommandBarDefaultLabelPosition> LabelPositionProperty
+```
+
+<span id="uid-d9adc4c515"></span>
+
+### LabelProperty
+
+Defines the [Avalonia.Controls.AppBarToggleButton.Label](xref:Avalonia.Controls.AppBarToggleButton.Label) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> LabelProperty
+```
+
+</ApiRefPage>
+

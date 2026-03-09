@@ -1,0 +1,314 @@
+---
+title: 'Track'
+hide_title: true
+slug: '/avalonia/controls/primitives/track'
+uid: 'Avalonia.Controls.Primitives.Track'
+commentId: 'T:Avalonia.Controls.Primitives.Track'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Track Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Track
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> Track
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Track](#uid-eedc345b8b) | No summary available. |
+
+<span id="uid-eedc345b8b"></span>
+
+### Track
+
+```csharp
+public Track()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ValueFromDistance](#uid-f8255fe598) | Calculates the change in the Avalonia.Controls.Primitives.Track.Value of the Avalonia.Controls.Primitives.Track when the Avalonia.Controls.Primitives.Track.Thumb moves. |
+| [ValueFromPoint](#uid-6c5bbcf266) | Calculates the distance along the Avalonia.Controls.Primitives.Track.Thumb of a specified point along the track. |
+
+<span id="uid-f8255fe598"></span>
+
+### ValueFromDistance
+
+Calculates the change in the [Avalonia.Controls.Primitives.Track.Value](xref:Avalonia.Controls.Primitives.Track.Value) of the [Avalonia.Controls.Primitives.Track](xref:Avalonia.Controls.Primitives.Track) when the
+[Avalonia.Controls.Primitives.Track.Thumb](xref:Avalonia.Controls.Primitives.Track.Thumb) moves.
+
+```csharp
+public System.Double ValueFromDistance(System.Double horizontal, System.Double vertical)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `horizontal` | The horizontal displacement of the thumb. |
+| `vertical` | The vertical displacement of the thumb. |
+
+<span id="uid-6c5bbcf266"></span>
+
+### ValueFromPoint
+
+Calculates the distance along the [Avalonia.Controls.Primitives.Track.Thumb](xref:Avalonia.Controls.Primitives.Track.Thumb) of a specified point along the
+track.
+
+```csharp
+public System.Double ValueFromPoint(Avalonia.Point point)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `point` | The specified point. |
+
+Returns: The distance between the Thumb and the specified pt value.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DecreaseButton](#uid-922e8a501a) | No summary available. |
+| [DeferThumbDrag](#uid-9cd4b9895e) | No summary available. |
+| [IgnoreThumbDrag](#uid-cce43fad5d) | No summary available. |
+| [IncreaseButton](#uid-d234d0b32e) | No summary available. |
+| [IsDirectionReversed](#uid-613fd90c81) | No summary available. |
+| [Maximum](#uid-8efda747c4) | No summary available. |
+| [Minimum](#uid-56cbea8fed) | No summary available. |
+| [Orientation](#uid-f64e486c57) | No summary available. |
+| [Thumb](#uid-e5909fbab9) | No summary available. |
+| [Value](#uid-3c461392c9) | No summary available. |
+| [ViewportSize](#uid-52c2e48853) | No summary available. |
+
+<span id="uid-922e8a501a"></span>
+
+### DecreaseButton
+
+```csharp
+public Avalonia.Controls.Button DecreaseButton { get; set; }
+```
+
+<span id="uid-9cd4b9895e"></span>
+
+### DeferThumbDrag
+
+```csharp
+public System.Boolean DeferThumbDrag { get; set; }
+```
+
+<span id="uid-cce43fad5d"></span>
+
+### IgnoreThumbDrag
+
+```csharp
+public System.Boolean IgnoreThumbDrag { get; set; }
+```
+
+<span id="uid-d234d0b32e"></span>
+
+### IncreaseButton
+
+```csharp
+public Avalonia.Controls.Button IncreaseButton { get; set; }
+```
+
+<span id="uid-613fd90c81"></span>
+
+### IsDirectionReversed
+
+```csharp
+public System.Boolean IsDirectionReversed { get; set; }
+```
+
+<span id="uid-8efda747c4"></span>
+
+### Maximum
+
+```csharp
+public System.Double Maximum { get; set; }
+```
+
+<span id="uid-56cbea8fed"></span>
+
+### Minimum
+
+```csharp
+public System.Double Minimum { get; set; }
+```
+
+<span id="uid-f64e486c57"></span>
+
+### Orientation
+
+```csharp
+public Avalonia.Layout.Orientation Orientation { get; set; }
+```
+
+<span id="uid-e5909fbab9"></span>
+
+### Thumb
+
+```csharp
+public Avalonia.Controls.Primitives.Thumb Thumb { get; set; }
+```
+
+<span id="uid-3c461392c9"></span>
+
+### Value
+
+```csharp
+public System.Double Value { get; set; }
+```
+
+<span id="uid-52c2e48853"></span>
+
+### ViewportSize
+
+```csharp
+public System.Double ViewportSize { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DecreaseButtonProperty](#uid-56301509bb) | No summary available. |
+| [DeferThumbDragProperty](#uid-6b0565c76c) | No summary available. |
+| [IgnoreThumbDragProperty](#uid-77a0c5e842) | No summary available. |
+| [IncreaseButtonProperty](#uid-734b439582) | No summary available. |
+| [IsDirectionReversedProperty](#uid-5e2832957b) | No summary available. |
+| [MaximumProperty](#uid-bbd1ba4816) | No summary available. |
+| [MinimumProperty](#uid-f6549c0b1f) | No summary available. |
+| [OrientationProperty](#uid-6d8b9e6853) | No summary available. |
+| [ThumbProperty](#uid-3e11523150) | No summary available. |
+| [ValueProperty](#uid-ae8adbf504) | No summary available. |
+| [ViewportSizeProperty](#uid-60cb35e87d) | No summary available. |
+
+<span id="uid-56301509bb"></span>
+
+### DecreaseButtonProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Button> DecreaseButtonProperty
+```
+
+<span id="uid-6b0565c76c"></span>
+
+### DeferThumbDragProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> DeferThumbDragProperty
+```
+
+<span id="uid-77a0c5e842"></span>
+
+### IgnoreThumbDragProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IgnoreThumbDragProperty
+```
+
+<span id="uid-734b439582"></span>
+
+### IncreaseButtonProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Button> IncreaseButtonProperty
+```
+
+<span id="uid-5e2832957b"></span>
+
+### IsDirectionReversedProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsDirectionReversedProperty
+```
+
+<span id="uid-bbd1ba4816"></span>
+
+### MaximumProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Double> MaximumProperty
+```
+
+<span id="uid-f6549c0b1f"></span>
+
+### MinimumProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Double> MinimumProperty
+```
+
+<span id="uid-6d8b9e6853"></span>
+
+### OrientationProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.Orientation> OrientationProperty
+```
+
+<span id="uid-3e11523150"></span>
+
+### ThumbProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.Thumb> ThumbProperty
+```
+
+<span id="uid-ae8adbf504"></span>
+
+### ValueProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Double> ValueProperty
+```
+
+<span id="uid-60cb35e87d"></span>
+
+### ViewportSizeProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Double> ViewportSizeProperty
+```
+
+</ApiRefPage>
+

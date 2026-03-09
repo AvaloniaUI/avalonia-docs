@@ -1,0 +1,106 @@
+---
+title: 'NavigatedFromEventArgs'
+hide_title: true
+slug: '/avalonia/controls/navigatedfromeventargs'
+uid: 'Avalonia.Controls.NavigatedFromEventArgs'
+commentId: 'T:Avalonia.Controls.NavigatedFromEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NavigatedFromEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.Page.NavigatedFrom](xref:Avalonia.Controls.Page.NavigatedFrom) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NavigatedFromEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> NavigatedFromEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NavigatedFromEventArgs](#uid-769c60e97a) | Initializes a new instance of the Avalonia.Controls.NavigatedFromEventArgs class. |
+
+<span id="uid-769c60e97a"></span>
+
+### NavigatedFromEventArgs
+
+Initializes a new instance of the [Avalonia.Controls.NavigatedFromEventArgs](xref:Avalonia.Controls.NavigatedFromEventArgs) class.
+
+```csharp
+public NavigatedFromEventArgs(Avalonia.Controls.Page destinationPage, Avalonia.Controls.NavigationType navigationType)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `destinationPage` | The page that became active after this navigation, or when popping to root. |
+| `navigationType` | The type of navigation that triggered this event. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DestinationPage](#uid-2d6393ab78) | Gets the page that became active after this navigation. |
+| [NavigationType](#uid-0074806c5f) | Gets the type of navigation that triggered this event. |
+
+<span id="uid-2d6393ab78"></span>
+
+### DestinationPage
+
+Gets the page that became active after this navigation.
+
+```csharp
+public Avalonia.Controls.Page DestinationPage { get; set; }
+```
+
+<span id="uid-0074806c5f"></span>
+
+### NavigationType
+
+Gets the type of navigation that triggered this event.
+
+```csharp
+public Avalonia.Controls.NavigationType NavigationType { get; set; }
+```
+
+</ApiRefPage>
+

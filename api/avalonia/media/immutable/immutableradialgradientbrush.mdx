@@ -1,0 +1,151 @@
+---
+title: 'ImmutableRadialGradientBrush'
+hide_title: true
+slug: '/avalonia/media/immutable/immutableradialgradientbrush'
+uid: 'Avalonia.Media.Immutable.ImmutableRadialGradientBrush'
+commentId: 'T:Avalonia.Media.Immutable.ImmutableRadialGradientBrush'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Immutable'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImmutableRadialGradientBrush Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Immutable</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A brush that draws with a radial gradient.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ImmutableRadialGradientBrush
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="immutablegradientbrush">ImmutableGradientBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> ImmutableRadialGradientBrush
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../ibrush">IBrush</a>, <a href="../igradientbrush">IGradientBrush</a>, <a href="../iradialgradientbrush">IRadialGradientBrush</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ImmutableRadialGradientBrush (3 overloads)](#uid-fd395255a5) | Initializes a new instance of the Avalonia.Media.Immutable.ImmutableRadialGradientBrush class. |
+
+<span id="uid-fd395255a5"></span>
+
+### ImmutableRadialGradientBrush overloads
+
+<span id="uid-cc5f45ec08"></span>
+
+#### ImmutableRadialGradientBrush
+
+Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableRadialGradientBrush](xref:Avalonia.Media.Immutable.ImmutableRadialGradientBrush) class.
+
+```csharp
+public ImmutableRadialGradientBrush(Avalonia.Media.RadialGradientBrush source)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `source` | The brush from which this brush's properties should be copied. |
+
+<span id="uid-bfa859a7a4"></span>
+
+#### ImmutableRadialGradientBrush
+
+```csharp
+public ImmutableRadialGradientBrush(System.Collections.Generic.IReadOnlyList<Avalonia.Media.Immutable.ImmutableGradientStop> gradientStops, System.Double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, System.Nullable<Avalonia.RelativePoint> transformOrigin, Avalonia.Media.GradientSpreadMethod spreadMethod, System.Nullable<Avalonia.RelativePoint> center, System.Nullable<Avalonia.RelativePoint> gradientOrigin, System.Double radius)
+```
+
+<span id="uid-53be3982d1"></span>
+
+#### ImmutableRadialGradientBrush
+
+```csharp
+public ImmutableRadialGradientBrush(System.Collections.Generic.IReadOnlyList<Avalonia.Media.Immutable.ImmutableGradientStop> gradientStops, System.Double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, System.Nullable<Avalonia.RelativePoint> transformOrigin, Avalonia.Media.GradientSpreadMethod spreadMethod, System.Nullable<Avalonia.RelativePoint> center, System.Nullable<Avalonia.RelativePoint> gradientOrigin, System.Nullable<Avalonia.RelativeScalar> radiusX, System.Nullable<Avalonia.RelativeScalar> radiusY)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Center](#uid-d37bb2ef63) | Gets the start point for the gradient. |
+| [GradientOrigin](#uid-105f1e136c) | Gets the location of the two-dimensional focal point that defines the beginning of the gradient. |
+| [RadiusX](#uid-671077e5fe) | Gets the horizontal radius of the outermost circle of the radial gradient. |
+| [RadiusY](#uid-eeeecb9b88) | Gets the vertical radius of the outermost circle of the radial gradient. |
+
+<span id="uid-d37bb2ef63"></span>
+
+### Center
+
+Gets the start point for the gradient.
+
+```csharp
+public Avalonia.RelativePoint Center { get; set; }
+```
+
+<span id="uid-105f1e136c"></span>
+
+### GradientOrigin
+
+Gets the location of the two-dimensional focal point that defines the beginning of the
+gradient.
+
+```csharp
+public Avalonia.RelativePoint GradientOrigin { get; set; }
+```
+
+<span id="uid-671077e5fe"></span>
+
+### RadiusX
+
+Gets the horizontal radius of the outermost circle of the radial gradient.
+
+```csharp
+public Avalonia.RelativeScalar RadiusX { get; set; }
+```
+
+<span id="uid-eeeecb9b88"></span>
+
+### RadiusY
+
+Gets the vertical radius of the outermost circle of the radial gradient.
+
+```csharp
+public Avalonia.RelativeScalar RadiusY { get; set; }
+```
+
+</ApiRefPage>
+

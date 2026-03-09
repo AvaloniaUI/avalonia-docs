@@ -1,0 +1,167 @@
+---
+title: 'ILogical'
+hide_title: true
+slug: '/avalonia/logicaltree/ilogical'
+uid: 'Avalonia.LogicalTree.ILogical'
+commentId: 'T:Avalonia.LogicalTree.ILogical'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LogicalTree'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ILogical Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LogicalTree</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a node in the logical tree.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ILogical
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [NotifyAttachedToLogicalTree](#uid-b24afde4d7) | Notifies the control that it is being attached to a rooted logical tree. |
+| [NotifyDetachedFromLogicalTree](#uid-45be203798) | Notifies the control that it is being detached from a rooted logical tree. |
+| [NotifyResourcesChanged](#uid-2e041f2f08) | Notifies the control that a change has been made to resources that apply to it. |
+
+<span id="uid-b24afde4d7"></span>
+
+### NotifyAttachedToLogicalTree
+
+Notifies the control that it is being attached to a rooted logical tree.
+
+```csharp
+public System.Void NotifyAttachedToLogicalTree(Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs e)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `e` | The event args. |
+
+<span id="uid-45be203798"></span>
+
+### NotifyDetachedFromLogicalTree
+
+Notifies the control that it is being detached from a rooted logical tree.
+
+```csharp
+public System.Void NotifyDetachedFromLogicalTree(Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs e)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `e` | The event args. |
+
+<span id="uid-2e041f2f08"></span>
+
+### NotifyResourcesChanged
+
+Notifies the control that a change has been made to resources that apply to it.
+
+```csharp
+public System.Void NotifyResourcesChanged(Avalonia.Controls.ResourcesChangedEventArgs e)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `e` | The event args. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsAttachedToLogicalTree](#uid-755d809324) | Gets a value indicating whether the element is attached to a rooted logical tree. |
+| [LogicalChildren](#uid-2b5e6f88d7) | Gets the logical children. |
+| [LogicalParent](#uid-0261e2a5c6) | Gets the logical parent. |
+
+<span id="uid-755d809324"></span>
+
+### IsAttachedToLogicalTree
+
+Gets a value indicating whether the element is attached to a rooted logical tree.
+
+```csharp
+public System.Boolean IsAttachedToLogicalTree { get; set; }
+```
+
+<span id="uid-2b5e6f88d7"></span>
+
+### LogicalChildren
+
+Gets the logical children.
+
+```csharp
+public Avalonia.Collections.IAvaloniaReadOnlyList<T><Avalonia.LogicalTree.ILogical> LogicalChildren { get; set; }
+```
+
+<span id="uid-0261e2a5c6"></span>
+
+### LogicalParent
+
+Gets the logical parent.
+
+```csharp
+public Avalonia.LogicalTree.ILogical LogicalParent { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [AttachedToLogicalTree](#uid-7a354cf341) | Raised when the control is attached to a rooted logical tree. |
+| [DetachedFromLogicalTree](#uid-8368318817) | Raised when the control is detached from a rooted logical tree. |
+
+<span id="uid-7a354cf341"></span>
+
+### AttachedToLogicalTree
+
+Raised when the control is attached to a rooted logical tree.
+
+```csharp
+public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> AttachedToLogicalTree
+```
+
+<span id="uid-8368318817"></span>
+
+### DetachedFromLogicalTree
+
+Raised when the control is detached from a rooted logical tree.
+
+```csharp
+public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> DetachedFromLogicalTree
+```
+
+</ApiRefPage>
+

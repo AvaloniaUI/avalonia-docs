@@ -104,7 +104,7 @@ html[data-theme='dark'] {
     flex-direction: column;
     // Customer Portal uses gap-1 (4px) between menu items
     gap: 0.25rem;
-    transition: height 0.35s cubic-bezier(0.36, 0.66, 0.04, 1) 25ms !important;
+    transition: none !important;
     will-change: initial !important;
 
     margin-top: 0;

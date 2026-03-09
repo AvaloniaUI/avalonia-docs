@@ -1,0 +1,156 @@
+---
+title: 'Panel'
+hide_title: true
+slug: '/avalonia/controls/panel'
+uid: 'Avalonia.Controls.Panel'
+commentId: 'T:Avalonia.Controls.Panel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Panel Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for controls that can contain multiple children.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Panel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> Panel
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../logicaltree/ichildindexprovider">IChildIndexProvider</a>
+</div>
+</div>
+
+## Remarks
+
+Controls can be added to a [Avalonia.Controls.Panel](xref:Avalonia.Controls.Panel) by adding them to its [Avalonia.Controls.Panel.Children](xref:Avalonia.Controls.Panel.Children)
+collection. All children are layed out to fill the panel.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Panel](#uid-fe8598eab6) | Initializes a new instance of the Avalonia.Controls.Panel class. |
+
+<span id="uid-fe8598eab6"></span>
+
+### Panel
+
+Initializes a new instance of the [Avalonia.Controls.Panel](xref:Avalonia.Controls.Panel) class.
+
+```csharp
+public Panel()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Render](#uid-0d4ae522de) | Renders the visual to a Avalonia.Media.DrawingContext. |
+
+<span id="uid-0d4ae522de"></span>
+
+### Render
+
+Renders the visual to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext).
+
+```csharp
+public System.Void Render(Avalonia.Media.DrawingContext context)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `context` | The drawing context. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Background](#uid-a03d98ed2a) | Gets or Sets Panel background brush. |
+| [Children](#uid-c99b9ec790) | Gets the children of the Avalonia.Controls.Panel. |
+| [IsItemsHost](#uid-a94e678571) | Gets whether the Avalonia.Controls.Panel hosts the items created by an Avalonia.Controls.Presenters.ItemsPresenter. |
+
+<span id="uid-a03d98ed2a"></span>
+
+### Background
+
+Gets or Sets Panel background brush.
+
+```csharp
+public Avalonia.Media.IBrush Background { get; set; }
+```
+
+<span id="uid-c99b9ec790"></span>
+
+### Children
+
+Gets the children of the [Avalonia.Controls.Panel](xref:Avalonia.Controls.Panel).
+
+```csharp
+public Avalonia.Controls.Controls Children { get; set; }
+```
+
+<span id="uid-a94e678571"></span>
+
+### IsItemsHost
+
+Gets whether the [Avalonia.Controls.Panel](xref:Avalonia.Controls.Panel) hosts the items created by an [Avalonia.Controls.Presenters.ItemsPresenter](xref:Avalonia.Controls.Presenters.ItemsPresenter).
+
+```csharp
+public System.Boolean IsItemsHost { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackgroundProperty](#uid-97e0707683) | Defines the Avalonia.Controls.Panel.Background property. |
+
+<span id="uid-97e0707683"></span>
+
+### BackgroundProperty
+
+Defines the [Avalonia.Controls.Panel.Background](xref:Avalonia.Controls.Panel.Background) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BackgroundProperty
+```
+
+</ApiRefPage>
+

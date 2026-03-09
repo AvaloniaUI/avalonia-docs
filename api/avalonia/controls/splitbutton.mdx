@@ -1,0 +1,203 @@
+---
+title: 'SplitButton'
+hide_title: true
+slug: '/avalonia/controls/splitbutton'
+uid: 'Avalonia.Controls.SplitButton'
+commentId: 'T:Avalonia.Controls.SplitButton'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SplitButton Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A button with primary and secondary parts that can each be pressed separately.
+The primary part behaves like a [Avalonia.Controls.Button](xref:Avalonia.Controls.Button) and the secondary part opens a flyout.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SplitButton
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> SplitButton
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IClickableControl, <a href="../input/icommandsource">ICommandSource</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SplitButton](#uid-0e84c166f5) | Initializes a new instance of the Avalonia.Controls.SplitButton class. |
+
+<span id="uid-0e84c166f5"></span>
+
+### SplitButton
+
+Initializes a new instance of the [Avalonia.Controls.SplitButton](xref:Avalonia.Controls.SplitButton) class.
+
+```csharp
+public SplitButton()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Command](#uid-112a780b36) | Gets or sets the System.Windows.Input.ICommand invoked when the primary part is pressed. |
+| [CommandParameter](#uid-f867dca343) | Gets or sets a parameter to be passed to the Avalonia.Controls.SplitButton.Command. |
+| [Flyout](#uid-63a6dd6f36) | Gets or sets the Avalonia.Controls.Primitives.FlyoutBase that is shown when the secondary part is pressed. |
+| [HotKey](#uid-f70e07d011) | Gets or sets an Avalonia.Input.KeyGesture associated with this control |
+
+<span id="uid-112a780b36"></span>
+
+### Command
+
+Gets or sets the [System.Windows.Input.ICommand](xref:System.Windows.Input.ICommand) invoked when the primary part is pressed.
+
+```csharp
+public System.Windows.Input.ICommand Command { get; set; }
+```
+
+<span id="uid-f867dca343"></span>
+
+### CommandParameter
+
+Gets or sets a parameter to be passed to the [Avalonia.Controls.SplitButton.Command](xref:Avalonia.Controls.SplitButton.Command).
+
+```csharp
+public System.Object CommandParameter { get; set; }
+```
+
+<span id="uid-63a6dd6f36"></span>
+
+### Flyout
+
+Gets or sets the [Avalonia.Controls.Primitives.FlyoutBase](xref:Avalonia.Controls.Primitives.FlyoutBase) that is shown when the secondary part is pressed.
+
+```csharp
+public Avalonia.Controls.Primitives.FlyoutBase Flyout { get; set; }
+```
+
+<span id="uid-f70e07d011"></span>
+
+### HotKey
+
+Gets or sets an [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) associated with this control
+
+```csharp
+public Avalonia.Input.KeyGesture HotKey { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ClickEvent](#uid-93616fb273) | Defines the Avalonia.Controls.SplitButton.Click event. |
+| [CommandParameterProperty](#uid-9cd228749d) | Defines the Avalonia.Controls.SplitButton.CommandParameter property. |
+| [CommandProperty](#uid-bd7dd06aad) | Defines the Avalonia.Controls.SplitButton.Command property. |
+| [FlyoutProperty](#uid-a97587957f) | Defines the Avalonia.Controls.SplitButton.Flyout property |
+| [HotKeyProperty](#uid-f666123e7a) | Defines the Avalonia.Controls.SplitButton.HotKey property. |
+
+<span id="uid-93616fb273"></span>
+
+### ClickEvent
+
+Defines the [Avalonia.Controls.SplitButton.Click](xref:Avalonia.Controls.SplitButton.Click) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> ClickEvent
+```
+
+<span id="uid-9cd228749d"></span>
+
+### CommandParameterProperty
+
+Defines the [Avalonia.Controls.SplitButton.CommandParameter](xref:Avalonia.Controls.SplitButton.CommandParameter) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> CommandParameterProperty
+```
+
+<span id="uid-bd7dd06aad"></span>
+
+### CommandProperty
+
+Defines the [Avalonia.Controls.SplitButton.Command](xref:Avalonia.Controls.SplitButton.Command) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Windows.Input.ICommand> CommandProperty
+```
+
+<span id="uid-a97587957f"></span>
+
+### FlyoutProperty
+
+Defines the [Avalonia.Controls.SplitButton.Flyout](xref:Avalonia.Controls.SplitButton.Flyout) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.FlyoutBase> FlyoutProperty
+```
+
+<span id="uid-f666123e7a"></span>
+
+### HotKeyProperty
+
+Defines the [Avalonia.Controls.SplitButton.HotKey](xref:Avalonia.Controls.SplitButton.HotKey) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Input.KeyGesture> HotKeyProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Click](#uid-12886d29e8) | Raised when the user presses the primary part of the Avalonia.Controls.SplitButton. |
+
+<span id="uid-12886d29e8"></span>
+
+### Click
+
+Raised when the user presses the primary part of the [Avalonia.Controls.SplitButton](xref:Avalonia.Controls.SplitButton).
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Click
+```
+
+</ApiRefPage>
+

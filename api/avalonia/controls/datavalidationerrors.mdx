@@ -1,0 +1,226 @@
+---
+title: 'DataValidationErrors'
+hide_title: true
+slug: '/avalonia/controls/datavalidationerrors'
+uid: 'Avalonia.Controls.DataValidationErrors'
+commentId: 'T:Avalonia.Controls.DataValidationErrors'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataValidationErrors Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control which displays an error notifier when there is a DataValidationError.
+Provides attached properties to track errors on a control
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DataValidationErrors
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> DataValidationErrors
+</div>
+</div>
+
+## Remarks
+
+You will probably only want to create instances inside of control templates.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DataValidationErrors](#uid-a990e51d06) | No summary available. |
+
+<span id="uid-a990e51d06"></span>
+
+### DataValidationErrors
+
+```csharp
+public DataValidationErrors()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearErrors](#uid-2cc5bfb41b) | No summary available. |
+| [GetErrorConverter](#uid-93870437c4) | No summary available. |
+| [GetErrors](#uid-4504d3b3bf) | No summary available. |
+| [GetHasErrors](#uid-da4582ee0a) | No summary available. |
+| [SetError](#uid-0b2eabffee) | No summary available. |
+| [SetErrorConverter](#uid-dbf8e319a2) | No summary available. |
+| [SetErrors](#uid-ca7209be78) | No summary available. |
+
+<span id="uid-2cc5bfb41b"></span>
+
+### ClearErrors
+
+```csharp
+public System.Void ClearErrors(Avalonia.Controls.Control control)
+```
+
+<span id="uid-93870437c4"></span>
+
+### GetErrorConverter
+
+```csharp
+public System.Func<System.Object, System.Object> GetErrorConverter(Avalonia.Controls.Control control)
+```
+
+<span id="uid-4504d3b3bf"></span>
+
+### GetErrors
+
+```csharp
+public System.Collections.Generic.IEnumerable<System.Object> GetErrors(Avalonia.Controls.Control control)
+```
+
+<span id="uid-da4582ee0a"></span>
+
+### GetHasErrors
+
+```csharp
+public System.Boolean GetHasErrors(Avalonia.Controls.Control control)
+```
+
+<span id="uid-0b2eabffee"></span>
+
+### SetError
+
+```csharp
+public System.Void SetError(Avalonia.Controls.Control control, System.Exception error)
+```
+
+<span id="uid-dbf8e319a2"></span>
+
+### SetErrorConverter
+
+```csharp
+public System.Void SetErrorConverter(Avalonia.Controls.Control control, System.Func<System.Object, System.Object> converter)
+```
+
+<span id="uid-ca7209be78"></span>
+
+### SetErrors
+
+```csharp
+public System.Void SetErrors(Avalonia.Controls.Control control, System.Collections.Generic.IEnumerable<System.Object> errors)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ErrorTemplate](#uid-ce53f7f1cd) | No summary available. |
+| [Owner](#uid-8aa2023bc9) | No summary available. |
+
+<span id="uid-ce53f7f1cd"></span>
+
+### ErrorTemplate
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate ErrorTemplate { get; set; }
+```
+
+<span id="uid-8aa2023bc9"></span>
+
+### Owner
+
+```csharp
+public Avalonia.Controls.Control Owner { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ErrorConverterProperty](#uid-9daaf4bf3d) | Defines the DataValidationErrors.ErrorConverter attached property. |
+| [ErrorTemplateProperty](#uid-6f7b53b0bf) | Defines the DataValidationErrors.ErrorTemplate property. |
+| [ErrorsProperty](#uid-f4f3b311ae) | Defines the DataValidationErrors.Errors attached property. |
+| [HasErrorsProperty](#uid-19269b18c9) | Defines the DataValidationErrors.HasErrors attached property. |
+| [OwnerProperty](#uid-722bc707a3) | No summary available. |
+
+<span id="uid-9daaf4bf3d"></span>
+
+### ErrorConverterProperty
+
+Defines the DataValidationErrors.ErrorConverter attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Func<System.Object,System.Object>> ErrorConverterProperty
+```
+
+<span id="uid-6f7b53b0bf"></span>
+
+### ErrorTemplateProperty
+
+Defines the DataValidationErrors.ErrorTemplate property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> ErrorTemplateProperty
+```
+
+<span id="uid-f4f3b311ae"></span>
+
+### ErrorsProperty
+
+Defines the DataValidationErrors.Errors attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Collections.Generic.IEnumerable<System.Object>> ErrorsProperty
+```
+
+<span id="uid-19269b18c9"></span>
+
+### HasErrorsProperty
+
+Defines the DataValidationErrors.HasErrors attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> HasErrorsProperty
+```
+
+<span id="uid-722bc707a3"></span>
+
+### OwnerProperty
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.DataValidationErrors, Avalonia.Controls.Control> OwnerProperty
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,178 @@
+---
+title: 'UnicodeRangeSegment'
+hide_title: true
+slug: '/avalonia/media/unicoderangesegment'
+uid: 'Avalonia.Media.UnicodeRangeSegment'
+commentId: 'T:Avalonia.Media.UnicodeRangeSegment'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">UnicodeRangeSegment Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct UnicodeRangeSegment
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> UnicodeRangeSegment
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;UnicodeRangeSegment&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [UnicodeRangeSegment](#uid-d4ba62342f) | No summary available. |
+
+<span id="uid-d4ba62342f"></span>
+
+### UnicodeRangeSegment
+
+```csharp
+public UnicodeRangeSegment(System.Int32 start, System.Int32 end)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-e86e5b4b12) | No summary available. |
+| [GetHashCode](#uid-47fa57755e) | No summary available. |
+| [IsInRange](#uid-7df3189b09) | Determines if given value is inside the range segment. |
+| [Parse](#uid-6cf8f55d9d) | Parses a Avalonia.Media.UnicodeRangeSegment. |
+| [ToString](#uid-55a4667104) | No summary available. |
+
+<span id="uid-e86e5b4b12"></span>
+
+### Equals overloads
+
+<span id="uid-2050f361a8"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Media.UnicodeRangeSegment other)
+```
+
+<span id="uid-67cc188d7d"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-47fa57755e"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-7df3189b09"></span>
+
+### IsInRange
+
+Determines if given value is inside the range segment.
+
+```csharp
+public System.Boolean IsInRange(System.Int32 value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value to verify. |
+
+Returns: `true` If given value is inside the range segment, `false` otherwise.
+
+<span id="uid-6cf8f55d9d"></span>
+
+### Parse
+
+Parses a [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment).
+
+```csharp
+public Avalonia.Media.UnicodeRangeSegment Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string to parse. |
+
+Returns: The parsed [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment).
+
+#### Exceptions
+
+- [System.FormatException](xref:System.FormatException)
+
+<span id="uid-55a4667104"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [End](#uid-cd32882a7d) | Get the end of the segment. |
+| [Start](#uid-a14df5f3dc) | Get the start of the segment. |
+
+<span id="uid-cd32882a7d"></span>
+
+### End
+
+Get the end of the segment.
+
+```csharp
+public System.Int32 End { get; set; }
+```
+
+<span id="uid-a14df5f3dc"></span>
+
+### Start
+
+Get the start of the segment.
+
+```csharp
+public System.Int32 Start { get; set; }
+```
+
+</ApiRefPage>
+

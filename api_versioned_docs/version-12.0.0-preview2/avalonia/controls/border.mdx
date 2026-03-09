@@ -1,0 +1,246 @@
+---
+title: 'Border'
+hide_title: true
+slug: '/avalonia/controls/border'
+uid: 'Avalonia.Controls.Border'
+commentId: 'T:Avalonia.Controls.Border'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Border Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control which decorates a child with a border and background.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Border
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="decorator">Decorator</a> <span className="apiref-page__relation-separator">-&gt;</span> Border
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IVisualWithRoundRectClip
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Border](#uid-cb2a129575) | No summary available. |
+
+<span id="uid-cb2a129575"></span>
+
+### Border
+
+```csharp
+public Border()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Render](#uid-7e1fcbb756) | Renders the control. |
+
+<span id="uid-7e1fcbb756"></span>
+
+### Render
+
+Renders the control.
+
+```csharp
+public System.Void Render(Avalonia.Media.DrawingContext context)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `context` | The drawing context. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Background](#uid-6b4827590b) | Gets or sets a brush with which to paint the background. |
+| [BackgroundSizing](#uid-26099e05f6) | Gets or sets how the background is drawn relative to the border. |
+| [BorderBrush](#uid-03bdd0353a) | Gets or sets a brush with which to paint the border. |
+| [BorderThickness](#uid-f0b61ed93a) | Gets or sets the thickness of the border. |
+| [BoxShadow](#uid-9f358ecff6) | Gets or sets the box shadow effect parameters |
+| [ClipToBoundsRadius](#uid-a7f060953a) | No summary available. |
+| [CornerRadius](#uid-54903c66f8) | Gets or sets the radius of the border rounded corners. |
+
+<span id="uid-6b4827590b"></span>
+
+### Background
+
+Gets or sets a brush with which to paint the background.
+
+```csharp
+public Avalonia.Media.IBrush Background { get; set; }
+```
+
+<span id="uid-26099e05f6"></span>
+
+### BackgroundSizing
+
+Gets or sets how the background is drawn relative to the border.
+
+```csharp
+public Avalonia.Media.BackgroundSizing BackgroundSizing { get; set; }
+```
+
+<span id="uid-03bdd0353a"></span>
+
+### BorderBrush
+
+Gets or sets a brush with which to paint the border.
+
+```csharp
+public Avalonia.Media.IBrush BorderBrush { get; set; }
+```
+
+<span id="uid-f0b61ed93a"></span>
+
+### BorderThickness
+
+Gets or sets the thickness of the border.
+
+```csharp
+public Avalonia.Thickness BorderThickness { get; set; }
+```
+
+<span id="uid-9f358ecff6"></span>
+
+### BoxShadow
+
+Gets or sets the box shadow effect parameters
+
+```csharp
+public Avalonia.Media.BoxShadows BoxShadow { get; set; }
+```
+
+<span id="uid-a7f060953a"></span>
+
+### ClipToBoundsRadius
+
+```csharp
+public Avalonia.CornerRadius ClipToBoundsRadius { get; set; }
+```
+
+<span id="uid-54903c66f8"></span>
+
+### CornerRadius
+
+Gets or sets the radius of the border rounded corners.
+
+```csharp
+public Avalonia.CornerRadius CornerRadius { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackgroundProperty](#uid-ba9af43579) | Defines the Avalonia.Controls.Border.Background property. |
+| [BackgroundSizingProperty](#uid-c28240b4f6) | Defines the Avalonia.Controls.Border.BackgroundSizing property. |
+| [BorderBrushProperty](#uid-aac0a252fe) | Defines the Avalonia.Controls.Border.BorderBrush property. |
+| [BorderThicknessProperty](#uid-92ac5e9368) | Defines the Avalonia.Controls.Border.BorderThickness property. |
+| [BoxShadowProperty](#uid-9301bffa87) | Defines the Avalonia.Controls.Border.BoxShadow property. |
+| [CornerRadiusProperty](#uid-6e9a55fad1) | Defines the Avalonia.Controls.Border.CornerRadius property. |
+
+<span id="uid-ba9af43579"></span>
+
+### BackgroundProperty
+
+Defines the [Avalonia.Controls.Border.Background](xref:Avalonia.Controls.Border.Background) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BackgroundProperty
+```
+
+<span id="uid-c28240b4f6"></span>
+
+### BackgroundSizingProperty
+
+Defines the [Avalonia.Controls.Border.BackgroundSizing](xref:Avalonia.Controls.Border.BackgroundSizing) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.BackgroundSizing> BackgroundSizingProperty
+```
+
+<span id="uid-aac0a252fe"></span>
+
+### BorderBrushProperty
+
+Defines the [Avalonia.Controls.Border.BorderBrush](xref:Avalonia.Controls.Border.BorderBrush) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BorderBrushProperty
+```
+
+<span id="uid-92ac5e9368"></span>
+
+### BorderThicknessProperty
+
+Defines the [Avalonia.Controls.Border.BorderThickness](xref:Avalonia.Controls.Border.BorderThickness) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Thickness> BorderThicknessProperty
+```
+
+<span id="uid-9301bffa87"></span>
+
+### BoxShadowProperty
+
+Defines the [Avalonia.Controls.Border.BoxShadow](xref:Avalonia.Controls.Border.BoxShadow) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.BoxShadows> BoxShadowProperty
+```
+
+<span id="uid-6e9a55fad1"></span>
+
+### CornerRadiusProperty
+
+Defines the [Avalonia.Controls.Border.CornerRadius](xref:Avalonia.Controls.Border.CornerRadius) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.CornerRadius> CornerRadiusProperty
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,203 @@
+---
+title: 'FontManager'
+hide_title: true
+slug: '/avalonia/media/fontmanager'
+uid: 'Avalonia.Media.FontManager'
+commentId: 'T:Avalonia.Media.FontManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontManager Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The font manager is used to query the system's installed fonts and is responsible for caching loaded fonts.
+It is also responsible for the font fallback.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FontManager
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FontManager
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FontManager](#uid-e2e3e84207) | No summary available. |
+
+<span id="uid-e2e3e84207"></span>
+
+### FontManager
+
+```csharp
+public FontManager(Avalonia.Platform.IFontManagerImpl platformImpl)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddFontCollection](#uid-4616d08cf2) | Add a font collection to the manager. |
+| [RemoveFontCollection](#uid-306932b411) | Removes the font collection that corresponds to specified key. |
+| [TryGetGlyphTypeface](#uid-a951668ae8) | No summary available. |
+| [TryMatchCharacter](#uid-f9bc67a2d1) | No summary available. |
+
+<span id="uid-4616d08cf2"></span>
+
+### AddFontCollection
+
+Add a font collection to the manager.
+
+```csharp
+public System.Void AddFontCollection(Avalonia.Media.Fonts.IFontCollection fontCollection)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `fontCollection` | The font collection. |
+
+#### Exceptions
+
+- [System.ArgumentException](xref:System.ArgumentException)
+
+<span id="uid-306932b411"></span>
+
+### RemoveFontCollection
+
+Removes the font collection that corresponds to specified key.
+
+```csharp
+public System.Void RemoveFontCollection(System.Uri key)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `key` | The font collection's key. |
+
+<span id="uid-a951668ae8"></span>
+
+### TryGetGlyphTypeface
+
+```csharp
+public System.Boolean TryGetGlyphTypeface(Avalonia.Media.Typeface typeface, Avalonia.Media.GlyphTypeface& glyphTypeface)
+```
+
+<span id="uid-f9bc67a2d1"></span>
+
+### TryMatchCharacter
+
+```csharp
+public System.Boolean TryMatchCharacter(System.Int32 codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, Avalonia.Media.FontFamily fontFamily, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Current](#uid-cdda802632) | Get the current font manager instance. |
+| [DefaultFontFamily](#uid-dcbdf53864) | Gets the system's default font family. |
+| [SystemFonts](#uid-e48c6d2eea) | Get all system fonts. |
+
+<span id="uid-cdda802632"></span>
+
+### Current
+
+Get the current font manager instance.
+
+```csharp
+public Avalonia.Media.FontManager Current { get; set; }
+```
+
+<span id="uid-dcbdf53864"></span>
+
+### DefaultFontFamily
+
+Gets the system's default font family.
+
+```csharp
+public Avalonia.Media.FontFamily DefaultFontFamily { get; set; }
+```
+
+<span id="uid-e48c6d2eea"></span>
+
+### SystemFonts
+
+Get all system fonts.
+
+```csharp
+public Avalonia.Media.Fonts.IFontCollection SystemFonts { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CompositeFontScheme](#uid-65bd8dd64a) | No summary available. |
+| [FontCollectionScheme](#uid-59fec01f97) | No summary available. |
+| [SystemFontScheme](#uid-290667f4a6) | No summary available. |
+
+<span id="uid-65bd8dd64a"></span>
+
+### CompositeFontScheme
+
+```csharp
+public System.String CompositeFontScheme
+```
+
+<span id="uid-59fec01f97"></span>
+
+### FontCollectionScheme
+
+```csharp
+public System.String FontCollectionScheme
+```
+
+<span id="uid-290667f4a6"></span>
+
+### SystemFontScheme
+
+```csharp
+public System.String SystemFontScheme
+```
+
+</ApiRefPage>
+

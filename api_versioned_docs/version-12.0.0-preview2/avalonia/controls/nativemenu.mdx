@@ -1,0 +1,212 @@
+---
+title: 'NativeMenu'
+hide_title: true
+slug: '/avalonia/controls/nativemenu'
+uid: 'Avalonia.Controls.NativeMenu'
+commentId: 'T:Avalonia.Controls.NativeMenu'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NativeMenu Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NativeMenu
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> NativeMenu
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaListItemValidator&lt;NativeMenuItemBase&gt;, <a href="inativemenuexportereventsimplbridge">INativeMenuExporterEventsImplBridge</a>, IEnumerable&lt;NativeMenuItemBase&gt;, IEnumerable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NativeMenu](#uid-e5fe081744) | No summary available. |
+
+<span id="uid-e5fe081744"></span>
+
+### NativeMenu
+
+```csharp
+public NativeMenu()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-04268917cd) | No summary available. |
+| [GetEnumerator](#uid-d8f591aa51) | No summary available. |
+| [GetIsNativeMenuExported](#uid-fe46450e15) | No summary available. |
+| [GetMenu](#uid-69d5879685) | No summary available. |
+| [SetMenu](#uid-2c34d388db) | No summary available. |
+
+<span id="uid-04268917cd"></span>
+
+### Add
+
+```csharp
+public System.Void Add(Avalonia.Controls.NativeMenuItemBase item)
+```
+
+<span id="uid-d8f591aa51"></span>
+
+### GetEnumerator
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Controls.NativeMenuItemBase> GetEnumerator()
+```
+
+<span id="uid-fe46450e15"></span>
+
+### GetIsNativeMenuExported
+
+```csharp
+public System.Boolean GetIsNativeMenuExported(Avalonia.Controls.TopLevel tl)
+```
+
+<span id="uid-69d5879685"></span>
+
+### GetMenu
+
+```csharp
+public Avalonia.Controls.NativeMenu GetMenu(Avalonia.AvaloniaObject o)
+```
+
+<span id="uid-2c34d388db"></span>
+
+### SetMenu
+
+```csharp
+public System.Void SetMenu(Avalonia.AvaloniaObject o, Avalonia.Controls.NativeMenu menu)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Items](#uid-6fae790def) | No summary available. |
+| [Parent](#uid-51ee08898c) | No summary available. |
+
+<span id="uid-6fae790def"></span>
+
+### Items
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.NativeMenuItemBase> Items { get; set; }
+```
+
+<span id="uid-51ee08898c"></span>
+
+### Parent
+
+```csharp
+public Avalonia.Controls.NativeMenuItem Parent { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsNativeMenuExportedProperty](#uid-7a7faca7e8) | No summary available. |
+| [MenuProperty](#uid-635777f777) | No summary available. |
+| [ParentProperty](#uid-6e06d969fe) | No summary available. |
+
+<span id="uid-7a7faca7e8"></span>
+
+### IsNativeMenuExportedProperty
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsNativeMenuExportedProperty
+```
+
+<span id="uid-635777f777"></span>
+
+### MenuProperty
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.NativeMenu> MenuProperty
+```
+
+<span id="uid-6e06d969fe"></span>
+
+### ParentProperty
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.NativeMenu, Avalonia.Controls.NativeMenuItem> ParentProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Closed](#uid-c08d3fc77e) | Raised after the menu is closed. |
+| [NeedsUpdate](#uid-6ecb304a88) | Raised when the menu requests an update. |
+| [Opening](#uid-28cdaa6b9b) | Raised before the menu is opened. |
+
+<span id="uid-c08d3fc77e"></span>
+
+### Closed
+
+Raised after the menu is closed.
+
+```csharp
+public event System.EventHandler<System.EventArgs> Closed
+```
+
+<span id="uid-6ecb304a88"></span>
+
+### NeedsUpdate
+
+Raised when the menu requests an update.
+
+```csharp
+public event System.EventHandler<System.EventArgs> NeedsUpdate
+```
+
+<span id="uid-28cdaa6b9b"></span>
+
+### Opening
+
+Raised before the menu is opened.
+
+```csharp
+public event System.EventHandler<System.EventArgs> Opening
+```
+
+</ApiRefPage>
+

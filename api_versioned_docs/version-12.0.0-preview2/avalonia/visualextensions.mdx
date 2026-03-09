@@ -1,0 +1,139 @@
+---
+title: 'VisualExtensions'
+hide_title: true
+slug: '/avalonia/visualextensions'
+uid: 'Avalonia.VisualExtensions'
+commentId: 'T:Avalonia.VisualExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">VisualExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Extension methods for [Avalonia.Visual](xref:Avalonia.Visual).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class VisualExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> VisualExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [PointToClient](#uid-10509f3e2e) | Converts a point from screen to client coordinates. |
+| [PointToScreen](#uid-678ad8e33d) | Converts a point from client to screen coordinates. |
+| [TransformToVisual](#uid-51afb751e0) | Returns a transform that transforms the visual's coordinates into the coordinates of the specified to. |
+| [TranslatePoint](#uid-646d04f291) | Translates a point relative to this visual to coordinates that are relative to the specified visual. |
+
+<span id="uid-10509f3e2e"></span>
+
+### PointToClient
+
+Converts a point from screen to client coordinates.
+
+```csharp
+public Avalonia.Point PointToClient(Avalonia.Visual visual, Avalonia.PixelPoint point)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `point` | The point in screen coordinates. |
+| `visual` | The visual. |
+
+Returns: The point in client coordinates.
+
+<span id="uid-678ad8e33d"></span>
+
+### PointToScreen
+
+Converts a point from client to screen coordinates.
+
+```csharp
+public Avalonia.PixelPoint PointToScreen(Avalonia.Visual visual, Avalonia.Point point)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `point` | The point in client coordinates. |
+| `visual` | The visual. |
+
+Returns: The point in screen coordinates.
+
+<span id="uid-51afb751e0"></span>
+
+### TransformToVisual
+
+Returns a transform that transforms the visual's coordinates into the coordinates
+of the specified `to`.
+
+```csharp
+public System.Nullable<Avalonia.Matrix> TransformToVisual(Avalonia.Visual from, Avalonia.Visual to)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `from` | The visual whose coordinates are to be transformed. |
+| `to` | The visual to translate the coordinates to. |
+
+Returns: A [Avalonia.Matrix](xref:Avalonia.Matrix) containing the transform or null if the visuals don't share a
+common ancestor.
+
+<span id="uid-646d04f291"></span>
+
+### TranslatePoint
+
+Translates a point relative to this visual to coordinates that are relative to the specified visual.
+
+```csharp
+public System.Nullable<Avalonia.Point> TranslatePoint(Avalonia.Visual visual, Avalonia.Point point, Avalonia.Visual relativeTo)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `point` | The point value, as relative to this visual. |
+| `relativeTo` | The visual to translate the given point into. |
+| `visual` | The visual. |
+
+Returns: A point value, now relative to the target visual rather than this source element, or null if the
+two elements have no common ancestor.
+
+</ApiRefPage>
+

@@ -1,0 +1,124 @@
+---
+title: 'FuncFramebufferRenderTarget'
+hide_title: true
+slug: '/avalonia/platform/surfaces/funcframebufferrendertarget'
+uid: 'Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget'
+commentId: 'T:Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Surfaces'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FuncFramebufferRenderTarget Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Surfaces</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+For simple cases when framebuffer is always available
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FuncFramebufferRenderTarget
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FuncFramebufferRenderTarget
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iframebufferrendertarget">IFramebufferRenderTarget</a>, <a href="iplatformrendersurfacerendertarget">IPlatformRenderSurfaceRenderTarget</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FuncFramebufferRenderTarget (2 overloads)](#uid-abcc7e6ce7) | No summary available. |
+
+<span id="uid-abcc7e6ce7"></span>
+
+### FuncFramebufferRenderTarget overloads
+
+<span id="uid-050fd6dc6d"></span>
+
+#### FuncFramebufferRenderTarget
+
+```csharp
+public FuncFramebufferRenderTarget(Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget.LockFramebufferDelegate lockFramebuffer, System.Boolean retainsFrameContents)
+```
+
+<span id="uid-f44f251528"></span>
+
+#### FuncFramebufferRenderTarget
+
+```csharp
+public FuncFramebufferRenderTarget(System.Func<Avalonia.Platform.ILockedFramebuffer> lockFramebuffer)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-89572d25f5) | No summary available. |
+| [Lock](#uid-3003e62d0b) | No summary available. |
+
+<span id="uid-89572d25f5"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-3003e62d0b"></span>
+
+### Lock
+
+```csharp
+public Avalonia.Platform.ILockedFramebuffer Lock(Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo sceneInfo, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [RetainsFrameContents](#uid-56c99da755) | No summary available. |
+
+<span id="uid-56c99da755"></span>
+
+### RetainsFrameContents
+
+```csharp
+public System.Boolean RetainsFrameContents { get; set; }
+```
+
+</ApiRefPage>
+

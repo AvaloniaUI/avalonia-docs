@@ -1,0 +1,133 @@
+---
+title: 'CompositePageTransition'
+hide_title: true
+slug: '/avalonia/animation/compositepagetransition'
+uid: 'Avalonia.Animation.CompositePageTransition'
+commentId: 'T:Avalonia.Animation.CompositePageTransition'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositePageTransition Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a composite page transition that can be used to combine multiple transitions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompositePageTransition
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> CompositePageTransition
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipagetransition">IPageTransition</a>
+</div>
+</div>
+
+## Remarks
+
+Instantiate the [Avalonia.Animation.CompositePageTransition](xref:Avalonia.Animation.CompositePageTransition) in XAML and initialize the
+[Avalonia.Animation.Transitions](xref:Avalonia.Animation.Transitions) property in order to have many animations triggered at once.
+For example, you can combine [Avalonia.Animation.CrossFade](xref:Avalonia.Animation.CrossFade) and [Avalonia.Animation.PageSlide](xref:Avalonia.Animation.PageSlide).
+
+```csharp
+<reactiveUi:RoutedViewHost Router="{Binding Router}">
+<reactiveUi:RoutedViewHost.PageTransition>
+<CompositePageTransition>
+<PageSlide Duration="0.5" />
+<CrossFade Duration="0.5" />
+</CompositePageTransition>
+</reactiveUi:RoutedViewHost.PageTransition>
+</reactiveUi:RoutedViewHost>
+```
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CompositePageTransition](#uid-391c4aef35) | No summary available. |
+
+<span id="uid-391c4aef35"></span>
+
+### CompositePageTransition
+
+```csharp
+public CompositePageTransition()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Start](#uid-00a1b4bc97) | Starts the animation. |
+
+<span id="uid-00a1b4bc97"></span>
+
+### Start
+
+Starts the animation.
+
+```csharp
+public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, System.Boolean forward, System.Threading.CancellationToken cancellationToken)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `cancellationToken` | Animation cancellation. |
+| `forward` | If the animation is bidirectional, controls the direction of the animation. |
+| `from` | The control that is being transitioned away from. May be null. |
+| `to` | The control that is being transitioned to. May be null. |
+
+Returns: A [System.Threading.Tasks.Task](xref:System.Threading.Tasks.Task) that tracks the progress of the animation.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PageTransitions](#uid-a1aa58a748) | Gets or sets the transitions to be executed. Can be defined from XAML. |
+
+<span id="uid-a1aa58a748"></span>
+
+### PageTransitions
+
+Gets or sets the transitions to be executed. Can be defined from XAML.
+
+```csharp
+public System.Collections.Generic.List<Avalonia.Animation.IPageTransition> PageTransitions { get; set; }
+```
+
+</ApiRefPage>
+

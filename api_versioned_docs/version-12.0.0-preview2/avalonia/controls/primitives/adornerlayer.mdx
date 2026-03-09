@@ -1,0 +1,192 @@
+---
+title: 'AdornerLayer'
+hide_title: true
+slug: '/avalonia/controls/primitives/adornerlayer'
+uid: 'Avalonia.Controls.Primitives.AdornerLayer'
+commentId: 'T:Avalonia.Controls.Primitives.AdornerLayer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AdornerLayer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a surface for showing adorners.
+Adorners are always on top of the adorned element and are positioned to stay relative to the adorned element.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AdornerLayer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../panel">Panel</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../canvas">Canvas</a> <span className="apiref-page__relation-separator">-&gt;</span> AdornerLayer
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAdornedElement](#uid-483c0b30f6) | No summary available. |
+| [GetAdorner](#uid-4a9741d3ea) | No summary available. |
+| [GetAdornerLayer](#uid-4796b01f3b) | No summary available. |
+| [GetIsClipEnabled](#uid-ee45ab97e8) | No summary available. |
+| [SetAdornedElement](#uid-e81f93ddd5) | No summary available. |
+| [SetAdorner](#uid-6e73acd2bf) | No summary available. |
+| [SetIsClipEnabled](#uid-98d4f0bad7) | No summary available. |
+
+<span id="uid-483c0b30f6"></span>
+
+### GetAdornedElement
+
+```csharp
+public Avalonia.Visual GetAdornedElement(Avalonia.Visual adorner)
+```
+
+<span id="uid-4a9741d3ea"></span>
+
+### GetAdorner
+
+```csharp
+public Avalonia.Controls.Control GetAdorner(Avalonia.Visual visual)
+```
+
+<span id="uid-4796b01f3b"></span>
+
+### GetAdornerLayer
+
+```csharp
+public Avalonia.Controls.Primitives.AdornerLayer GetAdornerLayer(Avalonia.Visual visual)
+```
+
+<span id="uid-ee45ab97e8"></span>
+
+### GetIsClipEnabled
+
+```csharp
+public System.Boolean GetIsClipEnabled(Avalonia.Visual adorner)
+```
+
+<span id="uid-e81f93ddd5"></span>
+
+### SetAdornedElement
+
+```csharp
+public System.Void SetAdornedElement(Avalonia.Visual adorner, Avalonia.Visual adorned)
+```
+
+<span id="uid-6e73acd2bf"></span>
+
+### SetAdorner
+
+```csharp
+public System.Void SetAdorner(Avalonia.Visual visual, Avalonia.Controls.Control adorner)
+```
+
+<span id="uid-98d4f0bad7"></span>
+
+### SetIsClipEnabled
+
+```csharp
+public System.Void SetIsClipEnabled(Avalonia.Visual adorner, System.Boolean isClipEnabled)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DefaultFocusAdorner](#uid-2ceac7feba) | Gets or sets the default control's focus adorner. |
+
+<span id="uid-2ceac7feba"></span>
+
+### DefaultFocusAdorner
+
+Gets or sets the default control's focus adorner.
+
+```csharp
+public Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> DefaultFocusAdorner { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AdornedElementProperty](#uid-b32f837a12) | Allows for getting and setting of the adorned element. |
+| [AdornerProperty](#uid-9f6d236358) | Allows for getting and setting of the adorner for control. |
+| [DefaultFocusAdornerProperty](#uid-a0f320d81e) | Defines the Avalonia.Controls.Primitives.AdornerLayer.DefaultFocusAdorner property. |
+| [IsClipEnabledProperty](#uid-96282c337e) | Allows for controlling clipping of the adorner. |
+
+<span id="uid-b32f837a12"></span>
+
+### AdornedElementProperty
+
+Allows for getting and setting of the adorned element.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Visual> AdornedElementProperty
+```
+
+<span id="uid-9f6d236358"></span>
+
+### AdornerProperty
+
+Allows for getting and setting of the adorner for control.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Control> AdornerProperty
+```
+
+<span id="uid-a0f320d81e"></span>
+
+### DefaultFocusAdornerProperty
+
+Defines the [Avalonia.Controls.Primitives.AdornerLayer.DefaultFocusAdorner](xref:Avalonia.Controls.Primitives.AdornerLayer.DefaultFocusAdorner) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control>> DefaultFocusAdornerProperty
+```
+
+<span id="uid-96282c337e"></span>
+
+### IsClipEnabledProperty
+
+Allows for controlling clipping of the adorner.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsClipEnabledProperty
+```
+
+</ApiRefPage>
+

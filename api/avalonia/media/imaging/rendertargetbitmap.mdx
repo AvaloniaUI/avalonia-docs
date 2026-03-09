@@ -1,0 +1,160 @@
+---
+title: 'RenderTargetBitmap'
+hide_title: true
+slug: '/avalonia/media/imaging/rendertargetbitmap'
+uid: 'Avalonia.Media.Imaging.RenderTargetBitmap'
+commentId: 'T:Avalonia.Media.Imaging.RenderTargetBitmap'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Imaging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RenderTargetBitmap Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Imaging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A bitmap that holds the rendering of a [Avalonia.Visual](xref:Avalonia.Visual).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RenderTargetBitmap
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bitmap">Bitmap</a> <span className="apiref-page__relation-separator">-&gt;</span> RenderTargetBitmap
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RenderTargetBitmap (2 overloads)](#uid-e59aa6faef) | Initializes a new instance of the Avalonia.Media.Imaging.RenderTargetBitmap class. |
+
+<span id="uid-e59aa6faef"></span>
+
+### RenderTargetBitmap overloads
+
+<span id="uid-5fa6034f51"></span>
+
+#### RenderTargetBitmap
+
+Initializes a new instance of the [Avalonia.Media.Imaging.RenderTargetBitmap](xref:Avalonia.Media.Imaging.RenderTargetBitmap) class.
+
+```csharp
+public RenderTargetBitmap(Avalonia.PixelSize pixelSize)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `pixelSize` | The size of the bitmap. |
+
+<span id="uid-e98dffc97d"></span>
+
+#### RenderTargetBitmap
+
+Initializes a new instance of the [Avalonia.Media.Imaging.RenderTargetBitmap](xref:Avalonia.Media.Imaging.RenderTargetBitmap) class.
+
+```csharp
+public RenderTargetBitmap(Avalonia.PixelSize pixelSize, Avalonia.Vector dpi)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpi` | The DPI of the bitmap. |
+| `pixelSize` | The size of the bitmap in device pixels. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateDrawingContext (2 overloads)](#uid-ac29f03669) | Creates a Avalonia.Media.DrawingContext for drawing to the Avalonia.Media.Imaging.RenderTargetBitmap. Clears the current image data to transparent. |
+| [Dispose](#uid-17a6cce2e1) | No summary available. |
+| [Render](#uid-f7507918c5) | Renders a visual to the Avalonia.Media.Imaging.RenderTargetBitmap. |
+
+<span id="uid-ac29f03669"></span>
+
+### CreateDrawingContext overloads
+
+<span id="uid-3dfdd4d26b"></span>
+
+#### CreateDrawingContext
+
+Creates a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext) for drawing to the [Avalonia.Media.Imaging.RenderTargetBitmap](xref:Avalonia.Media.Imaging.RenderTargetBitmap).
+Clears the current image data to transparent.
+
+```csharp
+public Avalonia.Media.DrawingContext CreateDrawingContext()
+```
+
+Returns: The drawing context.
+
+<span id="uid-7a74f241a7"></span>
+
+#### CreateDrawingContext
+
+Creates a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext) for drawing to the [Avalonia.Media.Imaging.RenderTargetBitmap](xref:Avalonia.Media.Imaging.RenderTargetBitmap).
+
+```csharp
+public Avalonia.Media.DrawingContext CreateDrawingContext(System.Boolean clear)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `clear` | If true, clears the current image data to transparent, if false, leaves the image data unchanged. |
+
+Returns: The drawing context.
+
+<span id="uid-17a6cce2e1"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-f7507918c5"></span>
+
+### Render
+
+Renders a visual to the [Avalonia.Media.Imaging.RenderTargetBitmap](xref:Avalonia.Media.Imaging.RenderTargetBitmap).
+
+```csharp
+public System.Void Render(Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `visual` | The visual to render. |
+
+</ApiRefPage>
+

@@ -1,0 +1,682 @@
+---
+title: 'DrawerPage'
+hide_title: true
+slug: '/avalonia/controls/drawerpage'
+uid: 'Avalonia.Controls.DrawerPage'
+commentId: 'T:Avalonia.Controls.DrawerPage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DrawerPage Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A page that provides a drawer pattern.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DrawerPage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="page">Page</a> <span className="apiref-page__relation-separator">-&gt;</span> DrawerPage
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DrawerPage](#uid-e403d81017) | No summary available. |
+
+<span id="uid-e403d81017"></span>
+
+### DrawerPage
+
+```csharp
+public DrawerPage()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BackdropBrush](#uid-0a2af16479) | Gets or sets the backdrop brush for overlay mode. |
+| [CompactDrawerLength](#uid-c91c8e4e79) | Gets or sets the compact drawer width. |
+| [Content](#uid-8f353dd851) | Gets or sets the main content. |
+| [ContentTemplate](#uid-39c8f29932) | Gets or sets the data template used to display Avalonia.Controls.DrawerPage.Content. |
+| [DisplayMode](#uid-9d8c225570) | Gets or sets the Avalonia.Controls.SplitViewDisplayMode. |
+| [Drawer](#uid-673790d205) | Gets or sets the drawer pane content. |
+| [DrawerBackground](#uid-7fd954a973) | Gets or sets the background brush of the drawer pane. |
+| [DrawerBehavior](#uid-e4c6f48441) | Gets or sets the open/close behavior of the drawer pane. |
+| [DrawerBreakpointWidth](#uid-d50d03238f) | Gets or sets the width threshold for switching to overlay mode. |
+| [DrawerFooter](#uid-e811f16c91) | Gets or sets the footer content displayed at the bottom of the drawer pane. |
+| [DrawerFooterBackground](#uid-cd964bcf89) | Gets or sets the background brush of the drawer footer area. |
+| [DrawerFooterForeground](#uid-da74ccaf3c) | Gets or sets the foreground brush of the drawer footer area. |
+| [DrawerHeader](#uid-40b9b8f811) | Gets or sets the header content displayed at the top of the drawer pane. |
+| [DrawerHeaderBackground](#uid-c59610b81d) | Gets or sets the background brush of the drawer header area. |
+| [DrawerHeaderForeground](#uid-e1f569d8f9) | Gets or sets the foreground brush of the drawer header area. |
+| [DrawerIcon](#uid-3282d70fe4) | Gets or sets the icon displayed in the drawer toggle button. |
+| [DrawerLayoutBehavior](#uid-8c73400135) | Gets or sets the layout behavior of the drawer. |
+| [DrawerLength](#uid-96c71703bf) | Gets or sets the width of the drawer pane. |
+| [DrawerPlacement](#uid-7c01ffe419) | Gets or sets which edge of the control the drawer appears from. |
+| [DrawerTemplate](#uid-59220bff47) | Gets or sets the data template used to display Avalonia.Controls.DrawerPage.Drawer content. |
+| [HorizontalContentAlignment](#uid-a51bd56dde) | Gets or sets the horizontal alignment of the detail content. |
+| [IsGestureEnabled](#uid-c25d097c8c) | Gets or sets whether swipe gestures can open or close the drawer. |
+| [IsOpen](#uid-c9b5efc8b5) | Gets or sets whether the drawer pane is currently open. |
+| [VerticalContentAlignment](#uid-987010b7ec) | Gets or sets the vertical alignment of the detail content. |
+
+<span id="uid-0a2af16479"></span>
+
+### BackdropBrush
+
+Gets or sets the backdrop brush for overlay mode.
+
+```csharp
+public Avalonia.Media.IBrush BackdropBrush { get; set; }
+```
+
+<span id="uid-c91c8e4e79"></span>
+
+### CompactDrawerLength
+
+Gets or sets the compact drawer width.
+
+```csharp
+public System.Double CompactDrawerLength { get; set; }
+```
+
+<span id="uid-8f353dd851"></span>
+
+### Content
+
+Gets or sets the main content.
+
+```csharp
+public System.Object Content { get; set; }
+```
+
+<span id="uid-39c8f29932"></span>
+
+### ContentTemplate
+
+Gets or sets the data template used to display [Avalonia.Controls.DrawerPage.Content](xref:Avalonia.Controls.DrawerPage.Content).
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate ContentTemplate { get; set; }
+```
+
+<span id="uid-9d8c225570"></span>
+
+### DisplayMode
+
+Gets or sets the [Avalonia.Controls.SplitViewDisplayMode](xref:Avalonia.Controls.SplitViewDisplayMode).
+
+```csharp
+public Avalonia.Controls.SplitViewDisplayMode DisplayMode { get; set; }
+```
+
+<span id="uid-673790d205"></span>
+
+### Drawer
+
+Gets or sets the drawer pane content.
+
+```csharp
+public System.Object Drawer { get; set; }
+```
+
+<span id="uid-7fd954a973"></span>
+
+### DrawerBackground
+
+Gets or sets the background brush of the drawer pane.
+
+```csharp
+public Avalonia.Media.IBrush DrawerBackground { get; set; }
+```
+
+<span id="uid-e4c6f48441"></span>
+
+### DrawerBehavior
+
+Gets or sets the open/close behavior of the drawer pane.
+
+```csharp
+public Avalonia.Controls.DrawerBehavior DrawerBehavior { get; set; }
+```
+
+<span id="uid-d50d03238f"></span>
+
+### DrawerBreakpointWidth
+
+Gets or sets the width threshold for switching to overlay mode.
+
+```csharp
+public System.Double DrawerBreakpointWidth { get; set; }
+```
+
+<span id="uid-e811f16c91"></span>
+
+### DrawerFooter
+
+Gets or sets the footer content displayed at the bottom of the drawer pane.
+
+```csharp
+public System.Object DrawerFooter { get; set; }
+```
+
+<span id="uid-cd964bcf89"></span>
+
+### DrawerFooterBackground
+
+Gets or sets the background brush of the drawer footer area.
+
+```csharp
+public Avalonia.Media.IBrush DrawerFooterBackground { get; set; }
+```
+
+<span id="uid-da74ccaf3c"></span>
+
+### DrawerFooterForeground
+
+Gets or sets the foreground brush of the drawer footer area.
+
+```csharp
+public Avalonia.Media.IBrush DrawerFooterForeground { get; set; }
+```
+
+<span id="uid-40b9b8f811"></span>
+
+### DrawerHeader
+
+Gets or sets the header content displayed at the top of the drawer pane.
+
+```csharp
+public System.Object DrawerHeader { get; set; }
+```
+
+<span id="uid-c59610b81d"></span>
+
+### DrawerHeaderBackground
+
+Gets or sets the background brush of the drawer header area.
+
+```csharp
+public Avalonia.Media.IBrush DrawerHeaderBackground { get; set; }
+```
+
+<span id="uid-e1f569d8f9"></span>
+
+### DrawerHeaderForeground
+
+Gets or sets the foreground brush of the drawer header area.
+
+```csharp
+public Avalonia.Media.IBrush DrawerHeaderForeground { get; set; }
+```
+
+<span id="uid-3282d70fe4"></span>
+
+### DrawerIcon
+
+Gets or sets the icon displayed in the drawer toggle button.
+
+```csharp
+public System.Object DrawerIcon { get; set; }
+```
+
+<span id="uid-8c73400135"></span>
+
+### DrawerLayoutBehavior
+
+Gets or sets the layout behavior of the drawer.
+
+```csharp
+public Avalonia.Controls.DrawerLayoutBehavior DrawerLayoutBehavior { get; set; }
+```
+
+<span id="uid-96c71703bf"></span>
+
+### DrawerLength
+
+Gets or sets the width of the drawer pane.
+
+```csharp
+public System.Double DrawerLength { get; set; }
+```
+
+<span id="uid-7c01ffe419"></span>
+
+### DrawerPlacement
+
+Gets or sets which edge of the control the drawer appears from.
+
+```csharp
+public Avalonia.Controls.DrawerPlacement DrawerPlacement { get; set; }
+```
+
+<span id="uid-59220bff47"></span>
+
+### DrawerTemplate
+
+Gets or sets the data template used to display [Avalonia.Controls.DrawerPage.Drawer](xref:Avalonia.Controls.DrawerPage.Drawer) content.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate DrawerTemplate { get; set; }
+```
+
+<span id="uid-a51bd56dde"></span>
+
+### HorizontalContentAlignment
+
+Gets or sets the horizontal alignment of the detail content.
+
+```csharp
+public Avalonia.Layout.HorizontalAlignment HorizontalContentAlignment { get; set; }
+```
+
+<span id="uid-c25d097c8c"></span>
+
+### IsGestureEnabled
+
+Gets or sets whether swipe gestures can open or close the drawer.
+
+```csharp
+public System.Boolean IsGestureEnabled { get; set; }
+```
+
+<span id="uid-c9b5efc8b5"></span>
+
+### IsOpen
+
+Gets or sets whether the drawer pane is currently open.
+
+```csharp
+public System.Boolean IsOpen { get; set; }
+```
+
+<span id="uid-987010b7ec"></span>
+
+### VerticalContentAlignment
+
+Gets or sets the vertical alignment of the detail content.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackdropBrushProperty](#uid-3666ec71be) | Defines the Avalonia.Controls.DrawerPage.BackdropBrush property. |
+| [ClosedEvent](#uid-9272fe95c4) | Defines the Avalonia.Controls.DrawerPage.Closed routed event. |
+| [ClosingEvent](#uid-b6ac9d4dad) | Defines the Avalonia.Controls.DrawerPage.Closing routed event. |
+| [CompactDrawerLengthProperty](#uid-4046a0dd3f) | Defines the Avalonia.Controls.DrawerPage.CompactDrawerLength property. |
+| [ContentProperty](#uid-fbaf383e62) | Defines the Avalonia.Controls.DrawerPage.Content property. |
+| [ContentTemplateProperty](#uid-969d4a498b) | Defines the Avalonia.Controls.DrawerPage.ContentTemplate property. |
+| [DisplayModeProperty](#uid-be4aa05eba) | Defines the Avalonia.Controls.DrawerPage.DisplayMode property. |
+| [DrawerBackgroundProperty](#uid-fd52ab7b54) | Defines the Avalonia.Controls.DrawerPage.DrawerBackground property. |
+| [DrawerBehaviorProperty](#uid-4f667fbca9) | Defines the Avalonia.Controls.DrawerPage.DrawerBehavior property. |
+| [DrawerBreakpointWidthProperty](#uid-793190f87f) | Defines the Avalonia.Controls.DrawerPage.DrawerBreakpointWidth property. |
+| [DrawerFooterBackgroundProperty](#uid-94331c8f9e) | Defines the Avalonia.Controls.DrawerPage.DrawerFooterBackground property. |
+| [DrawerFooterForegroundProperty](#uid-451e677ec0) | Defines the Avalonia.Controls.DrawerPage.DrawerFooterForeground property. |
+| [DrawerFooterProperty](#uid-a074d78eb9) | Defines the Avalonia.Controls.DrawerPage.DrawerFooter property. |
+| [DrawerHeaderBackgroundProperty](#uid-ae29ee9c4c) | Defines the Avalonia.Controls.DrawerPage.DrawerHeaderBackground property. |
+| [DrawerHeaderForegroundProperty](#uid-392b52eb72) | Defines the Avalonia.Controls.DrawerPage.DrawerHeaderForeground property. |
+| [DrawerHeaderProperty](#uid-c3f5abbeb9) | Defines the Avalonia.Controls.DrawerPage.DrawerHeader property. |
+| [DrawerIconProperty](#uid-959ac800a4) | Defines the Avalonia.Controls.DrawerPage.DrawerIcon property. |
+| [DrawerLayoutBehaviorProperty](#uid-7c27a9b467) | Defines the Avalonia.Controls.DrawerPage.DrawerLayoutBehavior property. |
+| [DrawerLengthProperty](#uid-ea81d4b58b) | Defines the Avalonia.Controls.DrawerPage.DrawerLength property. |
+| [DrawerPlacementProperty](#uid-799f2d9451) | Defines the Avalonia.Controls.DrawerPage.DrawerPlacement property. |
+| [DrawerProperty](#uid-64398e8599) | Defines the Avalonia.Controls.DrawerPage.Drawer property. |
+| [DrawerTemplateProperty](#uid-4f45e0e843) | Defines the Avalonia.Controls.DrawerPage.DrawerTemplate property. |
+| [HorizontalContentAlignmentProperty](#uid-7c3e946e8a) | Defines the Avalonia.Controls.DrawerPage.HorizontalContentAlignment property. |
+| [IsGestureEnabledProperty](#uid-8fb68aed75) | Defines the Avalonia.Controls.DrawerPage.IsGestureEnabled property. |
+| [IsOpenProperty](#uid-c5da52a5ad) | Defines the Avalonia.Controls.DrawerPage.IsOpen property. |
+| [OpenedEvent](#uid-9565797f62) | Defines the Avalonia.Controls.DrawerPage.Opened routed event. |
+| [VerticalContentAlignmentProperty](#uid-4c2a0e933d) | Defines the Avalonia.Controls.DrawerPage.VerticalContentAlignment property. |
+
+<span id="uid-3666ec71be"></span>
+
+### BackdropBrushProperty
+
+Defines the [Avalonia.Controls.DrawerPage.BackdropBrush](xref:Avalonia.Controls.DrawerPage.BackdropBrush) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BackdropBrushProperty
+```
+
+<span id="uid-9272fe95c4"></span>
+
+### ClosedEvent
+
+Defines the [Avalonia.Controls.DrawerPage.Closed](xref:Avalonia.Controls.DrawerPage.Closed) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> ClosedEvent
+```
+
+<span id="uid-b6ac9d4dad"></span>
+
+### ClosingEvent
+
+Defines the [Avalonia.Controls.DrawerPage.Closing](xref:Avalonia.Controls.DrawerPage.Closing) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.DrawerClosingEventArgs> ClosingEvent
+```
+
+<span id="uid-4046a0dd3f"></span>
+
+### CompactDrawerLengthProperty
+
+Defines the [Avalonia.Controls.DrawerPage.CompactDrawerLength](xref:Avalonia.Controls.DrawerPage.CompactDrawerLength) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> CompactDrawerLengthProperty
+```
+
+<span id="uid-fbaf383e62"></span>
+
+### ContentProperty
+
+Defines the [Avalonia.Controls.DrawerPage.Content](xref:Avalonia.Controls.DrawerPage.Content) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> ContentProperty
+```
+
+<span id="uid-969d4a498b"></span>
+
+### ContentTemplateProperty
+
+Defines the [Avalonia.Controls.DrawerPage.ContentTemplate](xref:Avalonia.Controls.DrawerPage.ContentTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> ContentTemplateProperty
+```
+
+<span id="uid-be4aa05eba"></span>
+
+### DisplayModeProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DisplayMode](xref:Avalonia.Controls.DrawerPage.DisplayMode) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.SplitViewDisplayMode> DisplayModeProperty
+```
+
+<span id="uid-fd52ab7b54"></span>
+
+### DrawerBackgroundProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerBackground](xref:Avalonia.Controls.DrawerPage.DrawerBackground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> DrawerBackgroundProperty
+```
+
+<span id="uid-4f667fbca9"></span>
+
+### DrawerBehaviorProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerBehavior](xref:Avalonia.Controls.DrawerPage.DrawerBehavior) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.DrawerBehavior> DrawerBehaviorProperty
+```
+
+<span id="uid-793190f87f"></span>
+
+### DrawerBreakpointWidthProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerBreakpointWidth](xref:Avalonia.Controls.DrawerPage.DrawerBreakpointWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> DrawerBreakpointWidthProperty
+```
+
+<span id="uid-94331c8f9e"></span>
+
+### DrawerFooterBackgroundProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerFooterBackground](xref:Avalonia.Controls.DrawerPage.DrawerFooterBackground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> DrawerFooterBackgroundProperty
+```
+
+<span id="uid-451e677ec0"></span>
+
+### DrawerFooterForegroundProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerFooterForeground](xref:Avalonia.Controls.DrawerPage.DrawerFooterForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> DrawerFooterForegroundProperty
+```
+
+<span id="uid-a074d78eb9"></span>
+
+### DrawerFooterProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerFooter](xref:Avalonia.Controls.DrawerPage.DrawerFooter) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> DrawerFooterProperty
+```
+
+<span id="uid-ae29ee9c4c"></span>
+
+### DrawerHeaderBackgroundProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerHeaderBackground](xref:Avalonia.Controls.DrawerPage.DrawerHeaderBackground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> DrawerHeaderBackgroundProperty
+```
+
+<span id="uid-392b52eb72"></span>
+
+### DrawerHeaderForegroundProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerHeaderForeground](xref:Avalonia.Controls.DrawerPage.DrawerHeaderForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> DrawerHeaderForegroundProperty
+```
+
+<span id="uid-c3f5abbeb9"></span>
+
+### DrawerHeaderProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerHeader](xref:Avalonia.Controls.DrawerPage.DrawerHeader) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> DrawerHeaderProperty
+```
+
+<span id="uid-959ac800a4"></span>
+
+### DrawerIconProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerIcon](xref:Avalonia.Controls.DrawerPage.DrawerIcon) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> DrawerIconProperty
+```
+
+<span id="uid-7c27a9b467"></span>
+
+### DrawerLayoutBehaviorProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerLayoutBehavior](xref:Avalonia.Controls.DrawerPage.DrawerLayoutBehavior) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.DrawerLayoutBehavior> DrawerLayoutBehaviorProperty
+```
+
+<span id="uid-ea81d4b58b"></span>
+
+### DrawerLengthProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerLength](xref:Avalonia.Controls.DrawerPage.DrawerLength) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> DrawerLengthProperty
+```
+
+<span id="uid-799f2d9451"></span>
+
+### DrawerPlacementProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerPlacement](xref:Avalonia.Controls.DrawerPage.DrawerPlacement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.DrawerPlacement> DrawerPlacementProperty
+```
+
+<span id="uid-64398e8599"></span>
+
+### DrawerProperty
+
+Defines the [Avalonia.Controls.DrawerPage.Drawer](xref:Avalonia.Controls.DrawerPage.Drawer) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> DrawerProperty
+```
+
+<span id="uid-4f45e0e843"></span>
+
+### DrawerTemplateProperty
+
+Defines the [Avalonia.Controls.DrawerPage.DrawerTemplate](xref:Avalonia.Controls.DrawerPage.DrawerTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> DrawerTemplateProperty
+```
+
+<span id="uid-7c3e946e8a"></span>
+
+### HorizontalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.DrawerPage.HorizontalContentAlignment](xref:Avalonia.Controls.DrawerPage.HorizontalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.HorizontalAlignment> HorizontalContentAlignmentProperty
+```
+
+<span id="uid-8fb68aed75"></span>
+
+### IsGestureEnabledProperty
+
+Defines the [Avalonia.Controls.DrawerPage.IsGestureEnabled](xref:Avalonia.Controls.DrawerPage.IsGestureEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsGestureEnabledProperty
+```
+
+<span id="uid-c5da52a5ad"></span>
+
+### IsOpenProperty
+
+Defines the [Avalonia.Controls.DrawerPage.IsOpen](xref:Avalonia.Controls.DrawerPage.IsOpen) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsOpenProperty
+```
+
+<span id="uid-9565797f62"></span>
+
+### OpenedEvent
+
+Defines the [Avalonia.Controls.DrawerPage.Opened](xref:Avalonia.Controls.DrawerPage.Opened) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> OpenedEvent
+```
+
+<span id="uid-4c2a0e933d"></span>
+
+### VerticalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.DrawerPage.VerticalContentAlignment](xref:Avalonia.Controls.DrawerPage.VerticalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.VerticalAlignment> VerticalContentAlignmentProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Closed](#uid-91c68016c4) | Occurs when Avalonia.Controls.DrawerPage.IsOpen changes to and closing is not cancelled. |
+| [Closing](#uid-0a1cec6ca6) | Occurs when the drawer is about to close. |
+| [Opened](#uid-5a70248daf) | Occurs when Avalonia.Controls.DrawerPage.IsOpen changes to . |
+
+<span id="uid-91c68016c4"></span>
+
+### Closed
+
+Occurs when [Avalonia.Controls.DrawerPage.IsOpen](xref:Avalonia.Controls.DrawerPage.IsOpen) changes to
+and closing is not cancelled.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Closed
+```
+
+<span id="uid-0a1cec6ca6"></span>
+
+### Closing
+
+Occurs when the drawer is about to close.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.DrawerClosingEventArgs> Closing
+```
+
+<span id="uid-5a70248daf"></span>
+
+### Opened
+
+Occurs when [Avalonia.Controls.DrawerPage.IsOpen](xref:Avalonia.Controls.DrawerPage.IsOpen) changes to .
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Opened
+```
+
+</ApiRefPage>
+

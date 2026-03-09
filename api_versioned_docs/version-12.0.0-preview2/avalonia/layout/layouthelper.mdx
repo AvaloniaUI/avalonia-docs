@@ -1,0 +1,258 @@
+---
+title: 'LayoutHelper'
+hide_title: true
+slug: '/avalonia/layout/layouthelper'
+uid: 'Avalonia.Layout.LayoutHelper'
+commentId: 'T:Avalonia.Layout.LayoutHelper'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Layout'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LayoutHelper Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Layout</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides helper methods needed for layout.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LayoutHelper
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> LayoutHelper
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyLayoutConstraints](#uid-e929f70b79) | Calculates a control's size based on its Avalonia.Layout.Layoutable.Width, Avalonia.Layout.Layoutable.Height, Avalonia.Layout.Layoutable.MinWidth, Avalonia.Layout.Layoutable.MaxWidth, Avalonia.Layout.Layoutable.MinHeight and Avalonia.Layout.Layoutable.MaxHeight. |
+| [ArrangeChild (2 overloads)](#uid-bf39afb699) | No summary available. |
+| [GetLayoutScale](#uid-da58c04ba6) | Obtains layout scale of the given control. |
+| [InvalidateSelfAndChildrenMeasure](#uid-3d6a70cf0c) | Invalidates measure for given control and all visual children recursively. |
+| [MeasureChild (2 overloads)](#uid-b5a20f13d6) | No summary available. |
+| [RoundLayoutPoint](#uid-0c5ce632a8) | No summary available. |
+| [RoundLayoutSizeUp](#uid-87bf309333) | Rounds a size to integer values for layout purposes, compensating for high DPI screen coordinates by rounding the size up to the nearest pixel. |
+| [RoundLayoutThickness](#uid-6400b6f2d3) | Rounds a thickness to integer values for layout purposes, compensating for high DPI screen coordinates. |
+| [RoundLayoutValue](#uid-de14940545) | Calculates the value to be used for layout rounding at high DPI by rounding the value up or down to the nearest pixel. |
+| [RoundLayoutValueUp](#uid-0ba4643a8f) | Calculates the value to be used for layout rounding at high DPI by rounding the value up to the nearest pixel. |
+
+<span id="uid-e929f70b79"></span>
+
+### ApplyLayoutConstraints
+
+Calculates a control's size based on its [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width),
+[Avalonia.Layout.Layoutable.Height](xref:Avalonia.Layout.Layoutable.Height), [Avalonia.Layout.Layoutable.MinWidth](xref:Avalonia.Layout.Layoutable.MinWidth),
+[Avalonia.Layout.Layoutable.MaxWidth](xref:Avalonia.Layout.Layoutable.MaxWidth), [Avalonia.Layout.Layoutable.MinHeight](xref:Avalonia.Layout.Layoutable.MinHeight) and
+[Avalonia.Layout.Layoutable.MaxHeight](xref:Avalonia.Layout.Layoutable.MaxHeight).
+
+```csharp
+public Avalonia.Size ApplyLayoutConstraints(Avalonia.Layout.Layoutable control, Avalonia.Size constraints)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `constraints` | The space available for the control. |
+| `control` | The control. |
+
+Returns: The control's size.
+
+<span id="uid-bf39afb699"></span>
+
+### ArrangeChild overloads
+
+<span id="uid-960d44b4df"></span>
+
+#### ArrangeChild
+
+```csharp
+public Avalonia.Size ArrangeChild(Avalonia.Layout.Layoutable child, Avalonia.Size availableSize, Avalonia.Thickness padding)
+```
+
+<span id="uid-c4cc20929f"></span>
+
+#### ArrangeChild
+
+```csharp
+public Avalonia.Size ArrangeChild(Avalonia.Layout.Layoutable child, Avalonia.Size availableSize, Avalonia.Thickness padding, Avalonia.Thickness borderThickness)
+```
+
+<span id="uid-da58c04ba6"></span>
+
+### GetLayoutScale
+
+Obtains layout scale of the given control.
+
+```csharp
+public System.Double GetLayoutScale(Avalonia.Layout.Layoutable control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+#### Exceptions
+
+- [Thrown when control has no root or returned layout scaling is invalid.](xref:System.Exception)
+
+<span id="uid-3d6a70cf0c"></span>
+
+### InvalidateSelfAndChildrenMeasure
+
+Invalidates measure for given control and all visual children recursively.
+
+```csharp
+public System.Void InvalidateSelfAndChildrenMeasure(Avalonia.Layout.Layoutable control)
+```
+
+<span id="uid-b5a20f13d6"></span>
+
+### MeasureChild overloads
+
+<span id="uid-cb2b9a0d79"></span>
+
+#### MeasureChild
+
+```csharp
+public Avalonia.Size MeasureChild(Avalonia.Layout.Layoutable control, Avalonia.Size availableSize, Avalonia.Thickness padding)
+```
+
+<span id="uid-b60e5f9298"></span>
+
+#### MeasureChild
+
+```csharp
+public Avalonia.Size MeasureChild(Avalonia.Layout.Layoutable control, Avalonia.Size availableSize, Avalonia.Thickness padding, Avalonia.Thickness borderThickness)
+```
+
+<span id="uid-0c5ce632a8"></span>
+
+### RoundLayoutPoint
+
+```csharp
+public Avalonia.Point RoundLayoutPoint(Avalonia.Point point, System.Double dpiScale)
+```
+
+<span id="uid-87bf309333"></span>
+
+### RoundLayoutSizeUp
+
+Rounds a size to integer values for layout purposes, compensating for high DPI screen
+coordinates by rounding the size up to the nearest pixel.
+
+```csharp
+public Avalonia.Size RoundLayoutSizeUp(Avalonia.Size size, System.Double dpiScale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpiScale` | The DPI scale. |
+| `size` | Input size. |
+
+Returns: Value of size that will be rounded under screen DPI.
+
+<span id="uid-6400b6f2d3"></span>
+
+### RoundLayoutThickness
+
+Rounds a thickness to integer values for layout purposes, compensating for high DPI screen
+coordinates.
+
+```csharp
+public Avalonia.Thickness RoundLayoutThickness(Avalonia.Thickness thickness, System.Double dpiScale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpiScale` | The DPI scale. |
+| `thickness` | Input thickness. |
+
+Returns: Value of thickness that will be rounded under screen DPI.
+
+<span id="uid-de14940545"></span>
+
+### RoundLayoutValue
+
+Calculates the value to be used for layout rounding at high DPI by rounding the value
+up or down to the nearest pixel.
+
+```csharp
+public System.Double RoundLayoutValue(System.Double value, System.Double dpiScale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpiScale` | Ratio of screen's DPI to layout DPI |
+| `value` | Input value to be rounded. |
+
+Returns: Adjusted value that will produce layout rounding on screen at high dpi.
+
+<span id="uid-0ba4643a8f"></span>
+
+### RoundLayoutValueUp
+
+Calculates the value to be used for layout rounding at high DPI by rounding the value up
+to the nearest pixel.
+
+```csharp
+public System.Double RoundLayoutValueUp(System.Double value, System.Double dpiScale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpiScale` | Ratio of screen's DPI to layout DPI |
+| `value` | Input value to be rounded. |
+
+Returns: Adjusted value that will produce layout rounding on screen at high dpi.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [LayoutEpsilon](#uid-5098935b55) | Epsilon value used for certain layout calculations. Based on the value in WPF LayoutDoubleUtil. |
+
+<span id="uid-5098935b55"></span>
+
+### LayoutEpsilon
+
+Epsilon value used for certain layout calculations.
+Based on the value in WPF LayoutDoubleUtil.
+
+```csharp
+public System.Double LayoutEpsilon { get; set; }
+```
+
+</ApiRefPage>
+

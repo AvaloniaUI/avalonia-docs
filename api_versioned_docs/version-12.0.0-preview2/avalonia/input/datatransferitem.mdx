@@ -1,0 +1,250 @@
+---
+title: 'DataTransferItem'
+hide_title: true
+slug: '/avalonia/input/datatransferitem'
+uid: 'Avalonia.Input.DataTransferItem'
+commentId: 'T:Avalonia.Input.DataTransferItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataTransferItem Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A mutable implementation of [Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem) and [Avalonia.Input.IAsyncDataTransferItem](xref:Avalonia.Input.IAsyncDataTransferItem).
+This class also provides several static methods to easily create a [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) for common usages.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DataTransferItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DataTransferItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iasyncdatatransferitem">IAsyncDataTransferItem</a>, <a href="idatatransferitem">IDataTransferItem</a>
+</div>
+</div>
+
+## Remarks
+
+While it also implements [Avalonia.Input.IAsyncDataTransferItem](xref:Avalonia.Input.IAsyncDataTransferItem), this class always returns data synchronously.
+For advanced usages, consider implementing [Avalonia.Input.IAsyncDataTransferItem](xref:Avalonia.Input.IAsyncDataTransferItem) directly.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DataTransferItem](#uid-09994fd251) | No summary available. |
+
+<span id="uid-09994fd251"></span>
+
+### DataTransferItem
+
+```csharp
+public DataTransferItem()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Create (2 overloads)](#uid-2ae0ae2ff5) | No summary available. |
+| [CreateFile](#uid-a6832f3a22) | Creates a new Avalonia.Input.DataTransferItem with Avalonia.Input.DataFormat.File as a single format. |
+| [CreateText](#uid-169cc3837f) | Creates a new Avalonia.Input.DataTransferItem with Avalonia.Input.DataFormat.Text as a single format. |
+| [Set (2 overloads)](#uid-4740848ae2) | No summary available. |
+| [SetBitmap](#uid-91535d5cb2) | Sets the value for the Avalonia.Input.DataFormat.Bitmap format. |
+| [SetFile](#uid-47c5aa5eca) | Sets the value for the Avalonia.Input.DataFormat.File format. |
+| [SetText](#uid-d84a6ddf2d) | Sets the value for the Avalonia.Input.DataFormat.Text format. |
+| [TryGetRaw](#uid-271583d348) | Tries to get a value for a given format. |
+
+<span id="uid-2ae0ae2ff5"></span>
+
+### Create overloads
+
+<span id="uid-2f994638a8"></span>
+
+#### Create
+
+```csharp
+public Avalonia.Input.DataTransferItem Create<T>(Avalonia.Input.DataFormat<T><T> format, System.Func<T> getValue)
+```
+
+<span id="uid-62a49660b7"></span>
+
+#### Create
+
+```csharp
+public Avalonia.Input.DataTransferItem Create<T>(Avalonia.Input.DataFormat<T><T> format, T value)
+```
+
+<span id="uid-a6832f3a22"></span>
+
+### CreateFile
+
+Creates a new [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) with [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File) as a single format.
+
+```csharp
+public Avalonia.Input.DataTransferItem CreateFile(Avalonia.Platform.Storage.IStorageItem value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value corresponding to the [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File) format.
+If null, the format won't be part of the [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem). |
+
+Returns: A [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) instance.
+
+<span id="uid-169cc3837f"></span>
+
+### CreateText
+
+Creates a new [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) with [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) as a single format.
+
+```csharp
+public Avalonia.Input.DataTransferItem CreateText(System.String value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value corresponding to the [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) format.
+If null, the format won't be part of the [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem). |
+
+Returns: A [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) instance.
+
+<span id="uid-4740848ae2"></span>
+
+### Set overloads
+
+<span id="uid-099f43f2a5"></span>
+
+#### Set
+
+```csharp
+public System.Void Set<T>(Avalonia.Input.DataFormat<T><T> format, System.Func<T> getValue)
+```
+
+<span id="uid-8e25077ea1"></span>
+
+#### Set
+
+```csharp
+public System.Void Set<T>(Avalonia.Input.DataFormat<T><T> format, T value)
+```
+
+<span id="uid-91535d5cb2"></span>
+
+### SetBitmap
+
+Sets the value for the [Avalonia.Input.DataFormat.Bitmap](xref:Avalonia.Input.DataFormat.Bitmap) format.
+
+```csharp
+public System.Void SetBitmap(Avalonia.Media.Imaging.Bitmap value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value corresponding to the [Avalonia.Input.DataFormat.Bitmap](xref:Avalonia.Input.DataFormat.Bitmap) format.
+If null, the format won't be part of the [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem). |
+
+<span id="uid-47c5aa5eca"></span>
+
+### SetFile
+
+Sets the value for the [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File) format.
+
+```csharp
+public System.Void SetFile(Avalonia.Platform.Storage.IStorageItem value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value corresponding to the [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File) format.
+If null, the format won't be part of the [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem). |
+
+<span id="uid-d84a6ddf2d"></span>
+
+### SetText
+
+Sets the value for the [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) format.
+
+```csharp
+public System.Void SetText(System.String value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value corresponding to the [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) format.
+If null, the format won't be part of the [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem). |
+
+<span id="uid-271583d348"></span>
+
+### TryGetRaw
+
+Tries to get a value for a given format.
+
+```csharp
+public System.Object TryGetRaw(Avalonia.Input.DataFormat format)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `format` | The format to retrieve. |
+
+Returns: A value for `format`, or null if the format is not supported.
+
+#### See also
+
+- [Avalonia.Input.DataTransferItemExtensions.TryGetValue&lt;T&gt;(Avalonia.Input.IDataTransferItem,Avalonia.Input.DataFormat&#123;&lt;&gt;&#125;)](xref:Avalonia.Input.DataTransferItemExtensions.TryGetValue%60%601%28Avalonia.Input.IDataTransferItem%2CAvalonia.Input.DataFormat%7B%60%600%7D%29)
+- [Avalonia.Input.DataTransferExtensions.TryGetValue&lt;T&gt;(Avalonia.Input.IDataTransfer,Avalonia.Input.DataFormat&#123;&lt;&gt;&#125;)](xref:Avalonia.Input.DataTransferExtensions.TryGetValue%60%601%28Avalonia.Input.IDataTransfer%2CAvalonia.Input.DataFormat%7B%60%600%7D%29)
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Formats](#uid-0b4edcd38b) | Gets the formats supported by this item. |
+
+<span id="uid-0b4edcd38b"></span>
+
+### Formats
+
+Gets the formats supported by this item.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat> Formats { get; set; }
+```
+
+</ApiRefPage>
+

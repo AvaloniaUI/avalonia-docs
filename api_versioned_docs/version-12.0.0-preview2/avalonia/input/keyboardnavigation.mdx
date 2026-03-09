@@ -1,0 +1,244 @@
+---
+title: 'KeyboardNavigation'
+hide_title: true
+slug: '/avalonia/input/keyboardnavigation'
+uid: 'Avalonia.Input.KeyboardNavigation'
+commentId: 'T:Avalonia.Input.KeyboardNavigation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">KeyboardNavigation Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines attached properties that control keyboard navigation behaviour for a container.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class KeyboardNavigation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> KeyboardNavigation
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetIsTabStop](#uid-dad4fa2840) | Gets the Avalonia.Input.KeyboardNavigation.IsTabStopProperty for an element. |
+| [GetTabIndex](#uid-acd7e2454c) | Gets the Avalonia.Input.KeyboardNavigation.TabIndexProperty for an element. |
+| [GetTabNavigation](#uid-fc6e7533bb) | Gets the Avalonia.Input.KeyboardNavigation.TabNavigationProperty for a container. |
+| [GetTabOnceActiveElement](#uid-0fb8cb8071) | Gets the Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty for a container. |
+| [SetIsTabStop](#uid-bdaf318a5d) | Sets the Avalonia.Input.KeyboardNavigation.IsTabStopProperty for an element. |
+| [SetTabIndex](#uid-0687754683) | Sets the Avalonia.Input.KeyboardNavigation.TabIndexProperty for an element. |
+| [SetTabNavigation](#uid-157054459d) | Sets the Avalonia.Input.KeyboardNavigation.TabNavigationProperty for a container. |
+| [SetTabOnceActiveElement](#uid-f4d67f3a3f) | Sets the Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty for a container. |
+
+<span id="uid-dad4fa2840"></span>
+
+### GetIsTabStop
+
+Gets the [Avalonia.Input.KeyboardNavigation.IsTabStopProperty](xref:Avalonia.Input.KeyboardNavigation.IsTabStopProperty) for an element.
+
+```csharp
+public System.Boolean GetIsTabStop(Avalonia.Input.InputElement element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The container. |
+
+Returns: Whether the container is a tab stop.
+
+<span id="uid-acd7e2454c"></span>
+
+### GetTabIndex
+
+Gets the [Avalonia.Input.KeyboardNavigation.TabIndexProperty](xref:Avalonia.Input.KeyboardNavigation.TabIndexProperty) for an element.
+
+```csharp
+public System.Int32 GetTabIndex(Avalonia.Input.IInputElement element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The container. |
+
+Returns: The [Avalonia.Input.KeyboardNavigationMode](xref:Avalonia.Input.KeyboardNavigationMode) for the container.
+
+<span id="uid-fc6e7533bb"></span>
+
+### GetTabNavigation
+
+Gets the [Avalonia.Input.KeyboardNavigation.TabNavigationProperty](xref:Avalonia.Input.KeyboardNavigation.TabNavigationProperty) for a container.
+
+```csharp
+public Avalonia.Input.KeyboardNavigationMode GetTabNavigation(Avalonia.Input.InputElement element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The container. |
+
+Returns: The [Avalonia.Input.KeyboardNavigationMode](xref:Avalonia.Input.KeyboardNavigationMode) for the container.
+
+<span id="uid-0fb8cb8071"></span>
+
+### GetTabOnceActiveElement
+
+Gets the [Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty](xref:Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty) for a container.
+
+```csharp
+public Avalonia.Input.IInputElement GetTabOnceActiveElement(Avalonia.Input.InputElement element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The container. |
+
+Returns: The active element for the container.
+
+<span id="uid-bdaf318a5d"></span>
+
+### SetIsTabStop
+
+Sets the [Avalonia.Input.KeyboardNavigation.IsTabStopProperty](xref:Avalonia.Input.KeyboardNavigation.IsTabStopProperty) for an element.
+
+```csharp
+public System.Void SetIsTabStop(Avalonia.Input.InputElement element, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The container. |
+| `value` | Value indicating whether the container is a tab stop. |
+
+<span id="uid-0687754683"></span>
+
+### SetTabIndex
+
+Sets the [Avalonia.Input.KeyboardNavigation.TabIndexProperty](xref:Avalonia.Input.KeyboardNavigation.TabIndexProperty) for an element.
+
+```csharp
+public System.Void SetTabIndex(Avalonia.Input.IInputElement element, System.Int32 value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The element. |
+| `value` | The tab index. |
+
+<span id="uid-157054459d"></span>
+
+### SetTabNavigation
+
+Sets the [Avalonia.Input.KeyboardNavigation.TabNavigationProperty](xref:Avalonia.Input.KeyboardNavigation.TabNavigationProperty) for a container.
+
+```csharp
+public System.Void SetTabNavigation(Avalonia.Input.InputElement element, Avalonia.Input.KeyboardNavigationMode value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The container. |
+| `value` | The [Avalonia.Input.KeyboardNavigationMode](xref:Avalonia.Input.KeyboardNavigationMode) for the container. |
+
+<span id="uid-f4d67f3a3f"></span>
+
+### SetTabOnceActiveElement
+
+Sets the [Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty](xref:Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty) for a container.
+
+```csharp
+public System.Void SetTabOnceActiveElement(Avalonia.Input.InputElement element, Avalonia.Input.IInputElement value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The container. |
+| `value` | The active element for the container. |
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsTabStopProperty](#uid-68f25bedb6) | Defines the IsTabStop attached property. |
+| [TabIndexProperty](#uid-a7cad1aebb) | Defines the TabIndex attached property. |
+| [TabNavigationProperty](#uid-9f28dcaeb4) | Defines the TabNavigation attached property. |
+| [TabOnceActiveElementProperty](#uid-beab58ba13) | Defines the TabOnceActiveElement attached property. |
+
+<span id="uid-68f25bedb6"></span>
+
+### IsTabStopProperty
+
+Defines the IsTabStop attached property.
+
+```csharp
+public Avalonia.AttachedProperty<TValue><System.Boolean> IsTabStopProperty
+```
+
+<span id="uid-a7cad1aebb"></span>
+
+### TabIndexProperty
+
+Defines the TabIndex attached property.
+
+```csharp
+public Avalonia.AttachedProperty<TValue><System.Int32> TabIndexProperty
+```
+
+<span id="uid-9f28dcaeb4"></span>
+
+### TabNavigationProperty
+
+Defines the TabNavigation attached property.
+
+```csharp
+public Avalonia.AttachedProperty<TValue><Avalonia.Input.KeyboardNavigationMode> TabNavigationProperty
+```
+
+<span id="uid-beab58ba13"></span>
+
+### TabOnceActiveElementProperty
+
+Defines the TabOnceActiveElement attached property.
+
+```csharp
+public Avalonia.AttachedProperty<TValue><Avalonia.Input.IInputElement> TabOnceActiveElementProperty
+```
+
+</ApiRefPage>
+

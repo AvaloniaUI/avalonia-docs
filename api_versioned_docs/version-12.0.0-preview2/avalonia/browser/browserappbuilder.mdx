@@ -1,0 +1,99 @@
+---
+title: 'BrowserAppBuilder'
+hide_title: true
+slug: '/avalonia/browser/browserappbuilder'
+uid: 'Avalonia.Browser.BrowserAppBuilder'
+commentId: 'T:Avalonia.Browser.BrowserAppBuilder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Browser'
+assembly: 'Avalonia.Browser'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Browser'
+tfms:
+  - 'net10.0-browser1.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BrowserAppBuilder Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Browser</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Browser</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Browser</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BrowserAppBuilder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> BrowserAppBuilder
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [SetupBrowserAppAsync](#uid-c08431a003) | Loads avalonia javascript modules and configures browser backend. |
+| [StartBrowserAppAsync](#uid-74a424b928) | Configures browser backend, loads avalonia javascript modules and creates a single view lifetime from the passed parameter. |
+| [UseBrowser](#uid-9393c37a35) | No summary available. |
+
+<span id="uid-c08431a003"></span>
+
+### SetupBrowserAppAsync
+
+Loads avalonia javascript modules and configures browser backend.
+
+```csharp
+public System.Threading.Tasks.Task SetupBrowserAppAsync(Avalonia.AppBuilder builder, Avalonia.Browser.BrowserPlatformOptions options)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `builder` | Application builder. |
+| `options` | Browser backend specific options. |
+
+<span id="uid-74a424b928"></span>
+
+### StartBrowserAppAsync
+
+Configures browser backend, loads avalonia javascript modules and creates a single view lifetime from the passed parameter.
+
+```csharp
+public System.Threading.Tasks.Task StartBrowserAppAsync(Avalonia.AppBuilder builder, System.String mainDivId, Avalonia.Browser.BrowserPlatformOptions options)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `builder` | Application builder. |
+| `mainDivId` | ID of the html element where avalonia content should be rendered. |
+| `options` | Browser backend specific options. |
+
+<span id="uid-9393c37a35"></span>
+
+### UseBrowser
+
+```csharp
+public Avalonia.AppBuilder UseBrowser(Avalonia.AppBuilder builder)
+```
+
+</ApiRefPage>
+

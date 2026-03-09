@@ -1,0 +1,186 @@
+---
+title: 'RuntimeXamlLoaderDocument'
+hide_title: true
+slug: '/avalonia/markup/xaml/runtimexamlloaderdocument'
+uid: 'Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument'
+commentId: 'T:Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RuntimeXamlLoaderDocument Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RuntimeXamlLoaderDocument
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> RuntimeXamlLoaderDocument
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RuntimeXamlLoaderDocument (8 overloads)](#uid-56bebfe1a0) | No summary available. |
+
+<span id="uid-56bebfe1a0"></span>
+
+### RuntimeXamlLoaderDocument overloads
+
+<span id="uid-5a6e237328"></span>
+
+#### RuntimeXamlLoaderDocument
+
+```csharp
+public RuntimeXamlLoaderDocument(System.IO.Stream stream)
+```
+
+<span id="uid-2bec6c7460"></span>
+
+#### RuntimeXamlLoaderDocument
+
+```csharp
+public RuntimeXamlLoaderDocument(System.Object rootInstance, System.IO.Stream stream)
+```
+
+<span id="uid-b2cc9d6629"></span>
+
+#### RuntimeXamlLoaderDocument
+
+```csharp
+public RuntimeXamlLoaderDocument(System.Object rootInstance, System.String xaml)
+```
+
+<span id="uid-4c9c10b610"></span>
+
+#### RuntimeXamlLoaderDocument
+
+```csharp
+public RuntimeXamlLoaderDocument(System.String xaml)
+```
+
+<span id="uid-54bafb4cbc"></span>
+
+#### RuntimeXamlLoaderDocument
+
+```csharp
+public RuntimeXamlLoaderDocument(System.Uri baseUri, System.IO.Stream stream)
+```
+
+<span id="uid-38e3c7ef70"></span>
+
+#### RuntimeXamlLoaderDocument
+
+```csharp
+public RuntimeXamlLoaderDocument(System.Uri baseUri, System.Object rootInstance, System.IO.Stream stream)
+```
+
+<span id="uid-7bf66a7ca7"></span>
+
+#### RuntimeXamlLoaderDocument
+
+```csharp
+public RuntimeXamlLoaderDocument(System.Uri baseUri, System.Object rootInstance, System.String xaml)
+```
+
+<span id="uid-d2479c6916"></span>
+
+#### RuntimeXamlLoaderDocument
+
+```csharp
+public RuntimeXamlLoaderDocument(System.Uri baseUri, System.String xaml)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BaseUri](#uid-b5de20e5af) | The URI of the XAML being loaded. |
+| [Document](#uid-ddceede5e2) | Path to the XAML document being loaded. |
+| [RootInstance](#uid-086cd0f9b2) | The optional instance into which the XAML should be loaded. |
+| [ServiceProvider](#uid-29c6758014) | Parent's service provider to pass to the Build method or type ctor, if available. |
+| [XamlStream](#uid-d73bbd126f) | The stream containing the XAML. |
+
+<span id="uid-b5de20e5af"></span>
+
+### BaseUri
+
+The URI of the XAML being loaded.
+
+```csharp
+public System.Uri BaseUri { get; set; }
+```
+
+<span id="uid-ddceede5e2"></span>
+
+### Document
+
+Path to the XAML document being loaded.
+
+```csharp
+public System.String Document { get; set; }
+```
+
+<span id="uid-086cd0f9b2"></span>
+
+### RootInstance
+
+The optional instance into which the XAML should be loaded.
+
+```csharp
+public System.Object RootInstance { get; set; }
+```
+
+<span id="uid-29c6758014"></span>
+
+### ServiceProvider
+
+Parent's service provider to pass to the Build method or type ctor, if available.
+
+```csharp
+public System.IServiceProvider ServiceProvider { get; set; }
+```
+
+<span id="uid-d73bbd126f"></span>
+
+### XamlStream
+
+The stream containing the XAML.
+
+```csharp
+public System.IO.Stream XamlStream { get; set; }
+```
+
+</ApiRefPage>
+

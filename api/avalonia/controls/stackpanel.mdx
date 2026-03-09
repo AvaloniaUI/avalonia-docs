@@ -1,0 +1,254 @@
+---
+title: 'StackPanel'
+hide_title: true
+slug: '/avalonia/controls/stackpanel'
+uid: 'Avalonia.Controls.StackPanel'
+commentId: 'T:Avalonia.Controls.StackPanel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StackPanel Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A panel which lays out its children horizontally or vertically.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StackPanel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="panel">Panel</a> <span className="apiref-page__relation-separator">-&gt;</span> StackPanel
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="primitives/iscrollsnappointsinfo">IScrollSnapPointsInfo</a>, <a href="../input/inavigablecontainer">INavigableContainer</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [StackPanel](#uid-55ee318827) | No summary available. |
+
+<span id="uid-55ee318827"></span>
+
+### StackPanel
+
+```csharp
+public StackPanel()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetIrregularSnapPoints](#uid-bbb912f8e3) | Returns the set of distances between irregular snap points for a specified orientation and alignment. |
+| [GetRegularSnapPoints](#uid-d381c278cf) | No summary available. |
+
+<span id="uid-bbb912f8e3"></span>
+
+### GetIrregularSnapPoints
+
+Returns the set of distances between irregular snap points for a specified orientation and alignment.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<System.Double> GetIrregularSnapPoints(Avalonia.Layout.Orientation orientation, Avalonia.Controls.Primitives.SnapPointsAlignment snapPointsAlignment)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `orientation` | The orientation for the desired snap point set. |
+| `snapPointsAlignment` | The alignment to use when applying the snap points. |
+
+Returns: The read-only collection of snap point distances. Returns an empty collection when no snap points are present.
+
+<span id="uid-d381c278cf"></span>
+
+### GetRegularSnapPoints
+
+```csharp
+public System.Double GetRegularSnapPoints(Avalonia.Layout.Orientation orientation, Avalonia.Controls.Primitives.SnapPointsAlignment snapPointsAlignment, System.Double& offset)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AreHorizontalSnapPointsRegular](#uid-c7b43bb76c) | Gets or sets whether the horizontal snap points for the Avalonia.Controls.StackPanel are equidistant from each other. |
+| [AreVerticalSnapPointsRegular](#uid-20ad0fa0bd) | Gets or sets whether the vertical snap points for the Avalonia.Controls.StackPanel are equidistant from each other. |
+| [Orientation](#uid-b0d53acd67) | Gets or sets the orientation in which child controls will be layed out. |
+| [Spacing](#uid-29adc53fa3) | Gets or sets the size of the spacing to place between child controls. |
+
+<span id="uid-c7b43bb76c"></span>
+
+### AreHorizontalSnapPointsRegular
+
+Gets or sets whether the horizontal snap points for the [Avalonia.Controls.StackPanel](xref:Avalonia.Controls.StackPanel) are equidistant from each other.
+
+```csharp
+public System.Boolean AreHorizontalSnapPointsRegular { get; set; }
+```
+
+<span id="uid-20ad0fa0bd"></span>
+
+### AreVerticalSnapPointsRegular
+
+Gets or sets whether the vertical snap points for the [Avalonia.Controls.StackPanel](xref:Avalonia.Controls.StackPanel) are equidistant from each other.
+
+```csharp
+public System.Boolean AreVerticalSnapPointsRegular { get; set; }
+```
+
+<span id="uid-b0d53acd67"></span>
+
+### Orientation
+
+Gets or sets the orientation in which child controls will be layed out.
+
+```csharp
+public Avalonia.Layout.Orientation Orientation { get; set; }
+```
+
+<span id="uid-29adc53fa3"></span>
+
+### Spacing
+
+Gets or sets the size of the spacing to place between child controls.
+
+```csharp
+public System.Double Spacing { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AreHorizontalSnapPointsRegularProperty](#uid-c767296776) | Defines the Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegular property. |
+| [AreVerticalSnapPointsRegularProperty](#uid-cb63ea69f8) | Defines the Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegular property. |
+| [HorizontalSnapPointsChangedEvent](#uid-92a0314e2e) | Defines the Avalonia.Controls.StackPanel.HorizontalSnapPointsChanged event. |
+| [OrientationProperty](#uid-c106ec48bb) | Defines the Avalonia.Controls.StackPanel.Orientation property. |
+| [SpacingProperty](#uid-56f04f53fe) | Defines the Avalonia.Controls.StackPanel.Spacing property. |
+| [VerticalSnapPointsChangedEvent](#uid-77b880c188) | Defines the Avalonia.Controls.StackPanel.VerticalSnapPointsChanged event. |
+
+<span id="uid-c767296776"></span>
+
+### AreHorizontalSnapPointsRegularProperty
+
+Defines the [Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegular](xref:Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegular) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AreHorizontalSnapPointsRegularProperty
+```
+
+<span id="uid-cb63ea69f8"></span>
+
+### AreVerticalSnapPointsRegularProperty
+
+Defines the [Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegular](xref:Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegular) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AreVerticalSnapPointsRegularProperty
+```
+
+<span id="uid-92a0314e2e"></span>
+
+### HorizontalSnapPointsChangedEvent
+
+Defines the [Avalonia.Controls.StackPanel.HorizontalSnapPointsChanged](xref:Avalonia.Controls.StackPanel.HorizontalSnapPointsChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> HorizontalSnapPointsChangedEvent
+```
+
+<span id="uid-c106ec48bb"></span>
+
+### OrientationProperty
+
+Defines the [Avalonia.Controls.StackPanel.Orientation](xref:Avalonia.Controls.StackPanel.Orientation) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.Orientation> OrientationProperty
+```
+
+<span id="uid-56f04f53fe"></span>
+
+### SpacingProperty
+
+Defines the [Avalonia.Controls.StackPanel.Spacing](xref:Avalonia.Controls.StackPanel.Spacing) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> SpacingProperty
+```
+
+<span id="uid-77b880c188"></span>
+
+### VerticalSnapPointsChangedEvent
+
+Defines the [Avalonia.Controls.StackPanel.VerticalSnapPointsChanged](xref:Avalonia.Controls.StackPanel.VerticalSnapPointsChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> VerticalSnapPointsChangedEvent
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [HorizontalSnapPointsChanged](#uid-b55f71a6af) | Occurs when the measurements for horizontal snap points change. |
+| [VerticalSnapPointsChanged](#uid-85a79a0edf) | Occurs when the measurements for vertical snap points change. |
+
+<span id="uid-b55f71a6af"></span>
+
+### HorizontalSnapPointsChanged
+
+Occurs when the measurements for horizontal snap points change.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> HorizontalSnapPointsChanged
+```
+
+<span id="uid-85a79a0edf"></span>
+
+### VerticalSnapPointsChanged
+
+Occurs when the measurements for vertical snap points change.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> VerticalSnapPointsChanged
+```
+
+</ApiRefPage>
+

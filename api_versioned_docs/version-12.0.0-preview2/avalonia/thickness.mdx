@@ -1,0 +1,271 @@
+---
+title: 'Thickness'
+hide_title: true
+slug: '/avalonia/thickness'
+uid: 'Avalonia.Thickness'
+commentId: 'T:Avalonia.Thickness'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Thickness Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the thickness of a frame around a rectangle.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Thickness
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Thickness
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Thickness&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Thickness (3 overloads)](#uid-7d8cc44302) | Initializes a new instance of the Avalonia.Thickness structure. |
+
+<span id="uid-7d8cc44302"></span>
+
+### Thickness overloads
+
+<span id="uid-d7c803fcd2"></span>
+
+#### Thickness
+
+Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
+
+```csharp
+public Thickness(System.Double uniformLength)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `uniformLength` | The length that should be applied to all sides. |
+
+<span id="uid-704e74d3bb"></span>
+
+#### Thickness
+
+Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
+
+```csharp
+public Thickness(System.Double horizontal, System.Double vertical)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `horizontal` | The thickness on the left and right. |
+| `vertical` | The thickness on the top and bottom. |
+
+<span id="uid-a4b04a1941"></span>
+
+#### Thickness
+
+Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
+
+```csharp
+public Thickness(System.Double left, System.Double top, System.Double right, System.Double bottom)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `bottom` | The thickness on the bottom. |
+| `left` | The thickness on the left. |
+| `right` | The thickness on the right. |
+| `top` | The thickness on the top. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-8d9a696bd7) | No summary available. |
+| [Equals (2 overloads)](#uid-cf2a0a36a3) | Returns a boolean indicating whether the thickness is equal to the other given point. |
+| [GetHashCode](#uid-6044788e05) | Returns a hash code for a Avalonia.Thickness. |
+| [Parse](#uid-b13e988d90) | Parses a Avalonia.Thickness string. |
+| [ToString](#uid-5ee779e23a) | Returns the string representation of the thickness. |
+
+<span id="uid-8d9a696bd7"></span>
+
+### Deconstruct
+
+```csharp
+public System.Void Deconstruct(System.Double& left, System.Double& top, System.Double& right, System.Double& bottom)
+```
+
+<span id="uid-cf2a0a36a3"></span>
+
+### Equals overloads
+
+<span id="uid-870cc60f4c"></span>
+
+#### Equals
+
+Returns a boolean indicating whether the thickness is equal to the other given point.
+
+```csharp
+public System.Boolean Equals(Avalonia.Thickness other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other thickness to test equality against. |
+
+Returns: True if this thickness is equal to other; False otherwise.
+
+<span id="uid-95212ab394"></span>
+
+#### Equals
+
+Checks for equality between a thickness and an object.
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `obj` | The object. |
+
+Returns: True if `obj` is a size that equals the current size.
+
+<span id="uid-6044788e05"></span>
+
+### GetHashCode
+
+Returns a hash code for a [Avalonia.Thickness](xref:Avalonia.Thickness).
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+Returns: The hash code.
+
+<span id="uid-b13e988d90"></span>
+
+### Parse
+
+Parses a [Avalonia.Thickness](xref:Avalonia.Thickness) string.
+
+```csharp
+public Avalonia.Thickness Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The [Avalonia.Thickness](xref:Avalonia.Thickness).
+
+<span id="uid-5ee779e23a"></span>
+
+### ToString
+
+Returns the string representation of the thickness.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation of the thickness.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bottom](#uid-6f10ae43e3) | Gets the thickness on the bottom. |
+| [IsUniform](#uid-9fde083e1c) | Gets a value indicating whether all sides are equal. |
+| [Left](#uid-a06dc39d97) | Gets the thickness on the left. |
+| [Right](#uid-81b7fd7491) | Gets the thickness on the right. |
+| [Top](#uid-7588d575b0) | Gets the thickness on the top. |
+
+<span id="uid-6f10ae43e3"></span>
+
+### Bottom
+
+Gets the thickness on the bottom.
+
+```csharp
+public System.Double Bottom { get; set; }
+```
+
+<span id="uid-9fde083e1c"></span>
+
+### IsUniform
+
+Gets a value indicating whether all sides are equal.
+
+```csharp
+public System.Boolean IsUniform { get; set; }
+```
+
+<span id="uid-a06dc39d97"></span>
+
+### Left
+
+Gets the thickness on the left.
+
+```csharp
+public System.Double Left { get; set; }
+```
+
+<span id="uid-81b7fd7491"></span>
+
+### Right
+
+Gets the thickness on the right.
+
+```csharp
+public System.Double Right { get; set; }
+```
+
+<span id="uid-7588d575b0"></span>
+
+### Top
+
+Gets the thickness on the top.
+
+```csharp
+public System.Double Top { get; set; }
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,149 @@
+---
+title: 'CornerRadiusFilterConverter'
+hide_title: true
+slug: '/avalonia/controls/converters/cornerradiusfilterconverter'
+uid: 'Avalonia.Controls.Converters.CornerRadiusFilterConverter'
+commentId: 'T:Avalonia.Controls.Converters.CornerRadiusFilterConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CornerRadiusFilterConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Converts an existing CornerRadius struct to a new CornerRadius struct,
+with filters applied to extract only the specified corners, leaving the others set to 0.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CornerRadiusFilterConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> CornerRadiusFilterConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CornerRadiusFilterConverter](#uid-54cf2f9cc9) | No summary available. |
+
+<span id="uid-54cf2f9cc9"></span>
+
+### CornerRadiusFilterConverter
+
+```csharp
+public CornerRadiusFilterConverter()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-5ab3b58cba) | Converts a value. |
+| [ConvertBack](#uid-77de62215f) | Converts a value. |
+
+<span id="uid-5ab3b58cba"></span>
+
+### Convert
+
+Converts a value.
+
+```csharp
+public System.Object Convert(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+<span id="uid-77de62215f"></span>
+
+### ConvertBack
+
+Converts a value.
+
+```csharp
+public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Filter](#uid-b7ba1819d4) | Gets or sets the corners to filter by. Only the specified corners will be included in the converted Avalonia.CornerRadius. |
+| [Scale](#uid-1a112bbedc) | Gets or sets the scale multiplier applied uniformly to each corner. |
+
+<span id="uid-b7ba1819d4"></span>
+
+### Filter
+
+Gets or sets the corners to filter by.
+Only the specified corners will be included in the converted [Avalonia.CornerRadius](xref:Avalonia.CornerRadius).
+
+```csharp
+public Avalonia.Controls.Converters.Corners Filter { get; set; }
+```
+
+<span id="uid-1a112bbedc"></span>
+
+### Scale
+
+Gets or sets the scale multiplier applied uniformly to each corner.
+
+```csharp
+public System.Double Scale { get; set; }
+```
+
+</ApiRefPage>
+

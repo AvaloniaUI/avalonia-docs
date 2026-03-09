@@ -1,0 +1,334 @@
+---
+title: 'TextLayout'
+hide_title: true
+slug: '/avalonia/media/textformatting/textlayout'
+uid: 'Avalonia.Media.TextFormatting.TextLayout'
+commentId: 'T:Avalonia.Media.TextFormatting.TextLayout'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextLayout Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a multi line text layout.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextLayout
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextLayout
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextLayout (2 overloads)](#uid-878bd1e583) | Initializes a new instance of the Avalonia.Media.TextFormatting.TextLayout class. |
+
+<span id="uid-878bd1e583"></span>
+
+### TextLayout overloads
+
+<span id="uid-04d8fd2652"></span>
+
+#### TextLayout
+
+Initializes a new instance of the [Avalonia.Media.TextFormatting.TextLayout](xref:Avalonia.Media.TextFormatting.TextLayout) class.
+
+```csharp
+public TextLayout(Avalonia.Media.TextFormatting.ITextSource textSource, Avalonia.Media.TextFormatting.TextParagraphProperties paragraphProperties, Avalonia.Media.TextTrimming textTrimming, System.Double maxWidth, System.Double maxHeight, System.Int32 maxLines)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `maxHeight` | The maximum height. |
+| `maxLines` | The maximum number of text lines. |
+| `maxWidth` | The maximum width. |
+| `paragraphProperties` | The default text paragraph properties. |
+| `textSource` | The text source. |
+| `textTrimming` | The text trimming. |
+
+<span id="uid-404e97d1e8"></span>
+
+#### TextLayout
+
+```csharp
+public TextLayout(System.String text, Avalonia.Media.Typeface typeface, System.Double fontSize, Avalonia.Media.IBrush foreground, Avalonia.Media.TextAlignment textAlignment, Avalonia.Media.TextWrapping textWrapping, Avalonia.Media.TextTrimming textTrimming, Avalonia.Media.TextDecorationCollection textDecorations, Avalonia.Media.FlowDirection flowDirection, System.Double maxWidth, System.Double maxHeight, System.Double lineHeight, System.Double letterSpacing, System.Int32 maxLines, Avalonia.Media.FontFeatureCollection fontFeatures, System.Collections.Generic.IReadOnlyList<Avalonia.Utilities.ValueSpan<T><Avalonia.Media.TextFormatting.TextRunProperties>> textStyleOverrides)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-85f45b4ca9) | No summary available. |
+| [Draw](#uid-c06aeac108) | Draws the text layout. |
+| [GetLineIndexFromCharacterIndex](#uid-7772f5e88c) | No summary available. |
+| [HitTestPoint](#uid-403b1ef700) | No summary available. |
+| [HitTestTextPosition](#uid-625e22810e) | Get the pixel location relative to the top-left of the layout box given the text position. |
+| [HitTestTextRange](#uid-44317486da) | No summary available. |
+
+<span id="uid-85f45b4ca9"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-c06aeac108"></span>
+
+### Draw
+
+Draws the text layout.
+
+```csharp
+public System.Void Draw(Avalonia.Media.DrawingContext context, Avalonia.Point origin)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `context` | The drawing context. |
+| `origin` | The origin. |
+
+<span id="uid-7772f5e88c"></span>
+
+### GetLineIndexFromCharacterIndex
+
+```csharp
+public System.Int32 GetLineIndexFromCharacterIndex(System.Int32 charIndex, System.Boolean trailingEdge)
+```
+
+<span id="uid-403b1ef700"></span>
+
+### HitTestPoint
+
+```csharp
+public Avalonia.Media.TextHitTestResult HitTestPoint(Avalonia.Point& point)
+```
+
+<span id="uid-625e22810e"></span>
+
+### HitTestTextPosition
+
+Get the pixel location relative to the top-left of the layout box given the text position.
+
+```csharp
+public Avalonia.Rect HitTestTextPosition(System.Int32 textPosition)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `textPosition` | The text position. |
+
+<span id="uid-44317486da"></span>
+
+### HitTestTextRange
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Rect> HitTestTextRange(System.Int32 start, System.Int32 length)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Baseline](#uid-a399cc33c8) | The distance from the top of the first line to the baseline of the first line. |
+| [Extent](#uid-cdba7eec5d) | The distance from the topmost black pixel of the first line to the bottommost black pixel of the last line. |
+| [Height](#uid-b0af910e96) | The distance from the top of the first line to the bottom of the last line. |
+| [LetterSpacing](#uid-34ca790fe9) | Gets the text spacing. |
+| [LineHeight](#uid-d84fb6d803) | Gets or sets the height of each line of text. |
+| [MaxHeight](#uid-ece983d1ce) | Gets the maximum height. |
+| [MaxLines](#uid-79084a6d26) | Gets the maximum number of text lines. |
+| [MaxWidth](#uid-5ed97ef0f1) | Gets the maximum width. |
+| [OverhangAfter](#uid-33e5208f4d) | The distance from the bottom of the last line to the extent bottom. |
+| [OverhangLeading](#uid-b2077de5b8) | The maximum distance from the leading black pixel to the leading alignment point of a line. |
+| [OverhangTrailing](#uid-71d80b63be) | The maximum distance from the trailing black pixel to the trailing alignment point of a line. |
+| [TextLines](#uid-50b954b8ca) | Gets the text lines. |
+| [Width](#uid-0da390cad0) | The maximum advance width between the leading and trailing alignment points of a line, excluding the width of whitespace characters at the end of the line. |
+| [WidthIncludingTrailingWhitespace](#uid-98963e3c9f) | The maximum advance width between the leading and trailing alignment points of a line, including the width of whitespace characters at the end of the line. |
+
+<span id="uid-a399cc33c8"></span>
+
+### Baseline
+
+The distance from the top of the first line to the baseline of the first line.
+
+```csharp
+public System.Double Baseline { get; set; }
+```
+
+<span id="uid-cdba7eec5d"></span>
+
+### Extent
+
+The distance from the topmost black pixel of the first line
+to the bottommost black pixel of the last line.
+
+```csharp
+public System.Double Extent { get; set; }
+```
+
+<span id="uid-b0af910e96"></span>
+
+### Height
+
+The distance from the top of the first line to the bottom of the last line.
+
+```csharp
+public System.Double Height { get; set; }
+```
+
+<span id="uid-34ca790fe9"></span>
+
+### LetterSpacing
+
+Gets the text spacing.
+
+```csharp
+public System.Double LetterSpacing { get; set; }
+```
+
+<span id="uid-d84fb6d803"></span>
+
+### LineHeight
+
+Gets or sets the height of each line of text.
+
+```csharp
+public System.Double LineHeight { get; set; }
+```
+
+<span id="uid-ece983d1ce"></span>
+
+### MaxHeight
+
+Gets the maximum height.
+
+```csharp
+public System.Double MaxHeight { get; set; }
+```
+
+<span id="uid-79084a6d26"></span>
+
+### MaxLines
+
+Gets the maximum number of text lines.
+
+```csharp
+public System.Int32 MaxLines { get; set; }
+```
+
+<span id="uid-5ed97ef0f1"></span>
+
+### MaxWidth
+
+Gets the maximum width.
+
+```csharp
+public System.Double MaxWidth { get; set; }
+```
+
+<span id="uid-33e5208f4d"></span>
+
+### OverhangAfter
+
+The distance from the bottom of the last line to the extent bottom.
+
+```csharp
+public System.Double OverhangAfter { get; set; }
+```
+
+<span id="uid-b2077de5b8"></span>
+
+### OverhangLeading
+
+The maximum distance from the leading black pixel to the leading alignment point of a line.
+
+```csharp
+public System.Double OverhangLeading { get; set; }
+```
+
+<span id="uid-71d80b63be"></span>
+
+### OverhangTrailing
+
+The maximum distance from the trailing black pixel to the trailing alignment point of a line.
+
+```csharp
+public System.Double OverhangTrailing { get; set; }
+```
+
+<span id="uid-50b954b8ca"></span>
+
+### TextLines
+
+Gets the text lines.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.TextLine> TextLines { get; set; }
+```
+
+Value: The text lines.
+
+<span id="uid-0da390cad0"></span>
+
+### Width
+
+The maximum advance width between the leading and trailing alignment points of a line,
+excluding the width of whitespace characters at the end of the line.
+
+```csharp
+public System.Double Width { get; set; }
+```
+
+<span id="uid-98963e3c9f"></span>
+
+### WidthIncludingTrailingWhitespace
+
+The maximum advance width between the leading and trailing alignment points of a line,
+including the width of whitespace characters at the end of the line.
+
+```csharp
+public System.Double WidthIncludingTrailingWhitespace { get; set; }
+```
+
+</ApiRefPage>
+

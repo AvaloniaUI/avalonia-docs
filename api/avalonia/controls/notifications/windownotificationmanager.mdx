@@ -1,0 +1,243 @@
+---
+title: 'WindowNotificationManager'
+hide_title: true
+slug: '/avalonia/controls/notifications/windownotificationmanager'
+uid: 'Avalonia.Controls.Notifications.WindowNotificationManager'
+commentId: 'T:Avalonia.Controls.Notifications.WindowNotificationManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Notifications'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WindowNotificationManager Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Notifications</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An [Avalonia.Controls.Notifications.INotificationManager](xref:Avalonia.Controls.Notifications.INotificationManager) that displays notifications in a [Avalonia.Controls.Window](xref:Avalonia.Controls.Window).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WindowNotificationManager
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> WindowNotificationManager
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="imanagednotificationmanager">IManagedNotificationManager</a>, <a href="inotificationmanager">INotificationManager</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WindowNotificationManager (2 overloads)](#uid-13569fcae3) | Initializes a new instance of the Avalonia.Controls.Notifications.WindowNotificationManager class. |
+
+<span id="uid-13569fcae3"></span>
+
+### WindowNotificationManager overloads
+
+<span id="uid-3c5dcc0c25"></span>
+
+#### WindowNotificationManager
+
+Initializes a new instance of the [Avalonia.Controls.Notifications.WindowNotificationManager](xref:Avalonia.Controls.Notifications.WindowNotificationManager) class.
+
+```csharp
+public WindowNotificationManager()
+```
+
+<span id="uid-7b7d1cfaba"></span>
+
+#### WindowNotificationManager
+
+Initializes a new instance of the [Avalonia.Controls.Notifications.WindowNotificationManager](xref:Avalonia.Controls.Notifications.WindowNotificationManager) class.
+
+```csharp
+public WindowNotificationManager(Avalonia.Controls.TopLevel host)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `host` | The TopLevel that will host the control. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Close (2 overloads)](#uid-c8e4cffc24) | Closes a notification. |
+| [CloseAll](#uid-53a9d455d3) | Closes all notifications. |
+| [Show (3 overloads)](#uid-a56e1346a7) | Show a notification. |
+
+<span id="uid-c8e4cffc24"></span>
+
+### Close overloads
+
+<span id="uid-9b07603b7c"></span>
+
+#### Close
+
+Closes a notification.
+
+```csharp
+public System.Void Close(Avalonia.Controls.Notifications.INotification notification)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `notification` | The notification to be closed. |
+
+<span id="uid-88604744d9"></span>
+
+#### Close
+
+Closes a notification.
+
+```csharp
+public System.Void Close(System.Object content)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `content` | The content to be closed. |
+
+<span id="uid-53a9d455d3"></span>
+
+### CloseAll
+
+Closes all notifications.
+
+```csharp
+public System.Void CloseAll()
+```
+
+<span id="uid-a56e1346a7"></span>
+
+### Show overloads
+
+<span id="uid-706262da7d"></span>
+
+#### Show
+
+Show a notification.
+
+```csharp
+public System.Void Show(Avalonia.Controls.Notifications.INotification content)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `notification` | The notification to be displayed. |
+
+<span id="uid-9355882176"></span>
+
+#### Show
+
+Shows a notification.
+
+```csharp
+public System.Void Show(System.Object content)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `content` | The content to be displayed. |
+
+<span id="uid-d636e4626f"></span>
+
+#### Show
+
+```csharp
+public System.Void Show(System.Object content, Avalonia.Controls.Notifications.NotificationType type, System.Nullable<System.TimeSpan> expiration, System.Action onClick, System.Action onClose, System.String[] classes)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MaxItems](#uid-018deaba21) | Defines the maximum number of notifications visible at once. |
+| [Position](#uid-3fc54e1e77) | Defines which corner of the screen notifications can be displayed in. |
+
+<span id="uid-018deaba21"></span>
+
+### MaxItems
+
+Defines the maximum number of notifications visible at once.
+
+```csharp
+public System.Int32 MaxItems { get; set; }
+```
+
+<span id="uid-3fc54e1e77"></span>
+
+### Position
+
+Defines which corner of the screen notifications can be displayed in.
+
+```csharp
+public Avalonia.Controls.Notifications.NotificationPosition Position { get; set; }
+```
+
+#### See also
+
+- [Avalonia.Controls.Notifications.NotificationPosition](xref:Avalonia.Controls.Notifications.NotificationPosition)
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [MaxItemsProperty](#uid-94421c4795) | Defines the Avalonia.Controls.Notifications.WindowNotificationManager.MaxItems property. |
+| [PositionProperty](#uid-ddc7f31e25) | Defines the Avalonia.Controls.Notifications.WindowNotificationManager.Position property. |
+
+<span id="uid-94421c4795"></span>
+
+### MaxItemsProperty
+
+Defines the [Avalonia.Controls.Notifications.WindowNotificationManager.MaxItems](xref:Avalonia.Controls.Notifications.WindowNotificationManager.MaxItems) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxItemsProperty
+```
+
+<span id="uid-ddc7f31e25"></span>
+
+### PositionProperty
+
+Defines the [Avalonia.Controls.Notifications.WindowNotificationManager.Position](xref:Avalonia.Controls.Notifications.WindowNotificationManager.Position) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Notifications.NotificationPosition> PositionProperty
+```
+
+</ApiRefPage>
+

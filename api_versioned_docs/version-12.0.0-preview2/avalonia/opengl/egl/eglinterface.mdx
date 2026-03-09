@@ -1,0 +1,384 @@
+---
+title: 'EglInterface'
+hide_title: true
+slug: '/avalonia/opengl/egl/eglinterface'
+uid: 'Avalonia.OpenGL.Egl.EglInterface'
+commentId: 'T:Avalonia.OpenGL.Egl.EglInterface'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglInterface Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglInterface
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EglInterface
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EglInterface (3 overloads)](#uid-0ae5a0b9b9) | No summary available. |
+
+<span id="uid-0ae5a0b9b9"></span>
+
+### EglInterface overloads
+
+<span id="uid-52453e51cf"></span>
+
+#### EglInterface
+
+```csharp
+public EglInterface()
+```
+
+<span id="uid-60ac5be1fe"></span>
+
+#### EglInterface
+
+```csharp
+public EglInterface(System.Func<System.String, System.IntPtr> getProcAddress)
+```
+
+<span id="uid-f7ef09c096"></span>
+
+#### EglInterface
+
+```csharp
+public EglInterface(System.String library)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BindApi](#uid-805d0cb9e5) | No summary available. |
+| [BindTexImage](#uid-789bee844a) | No summary available. |
+| [ChooseConfig](#uid-54e6877cc1) | No summary available. |
+| [CreateContext](#uid-19f85aec8e) | No summary available. |
+| [CreatePBufferSurface](#uid-adb9f241be) | No summary available. |
+| [CreatePbufferFromClientBuffer](#uid-63f941ac31) | No summary available. |
+| [CreatePbufferFromClientBufferPtr](#uid-12de878bed) | No summary available. |
+| [CreateWindowSurface](#uid-3a05611877) | No summary available. |
+| [DestroyContext](#uid-898aaba5f2) | No summary available. |
+| [DestroySurface](#uid-2741d3836d) | No summary available. |
+| [GetConfigAttrib](#uid-77b209828a) | No summary available. |
+| [GetCurrentContext](#uid-b3b4666407) | No summary available. |
+| [GetCurrentDisplay](#uid-fadf00b154) | No summary available. |
+| [GetCurrentSurface](#uid-e640bcd072) | No summary available. |
+| [GetDisplay](#uid-329adf345c) | No summary available. |
+| [GetError](#uid-c0e76ca207) | No summary available. |
+| [GetPlatformDisplayExt](#uid-a988a3980e) | No summary available. |
+| [GetProcAddress](#uid-3fa890b826) | No summary available. |
+| [Initialize](#uid-4345d1d2e4) | No summary available. |
+| [MakeCurrent](#uid-d252dc33e3) | No summary available. |
+| [QueryDeviceAttribExt](#uid-9911ebf310) | No summary available. |
+| [QueryDisplayAttribExt](#uid-a90a4cd3e7) | No summary available. |
+| [QueryString](#uid-a12928cbb0) | No summary available. |
+| [QueryStringNative](#uid-534df08fa9) | No summary available. |
+| [SwapBuffers](#uid-d6d3bd7210) | No summary available. |
+| [Terminate](#uid-ca4e4435c3) | No summary available. |
+| [WaitClient](#uid-f34c449522) | No summary available. |
+| [WaitGL](#uid-071917b6ea) | No summary available. |
+| [WaitNative](#uid-9189e829e5) | No summary available. |
+
+<span id="uid-805d0cb9e5"></span>
+
+### BindApi
+
+```csharp
+public System.Boolean BindApi(System.Int32 api)
+```
+
+<span id="uid-789bee844a"></span>
+
+### BindTexImage
+
+```csharp
+public System.Int32 BindTexImage(System.IntPtr display, System.IntPtr surface, System.Int32 buffer)
+```
+
+<span id="uid-54e6877cc1"></span>
+
+### ChooseConfig
+
+```csharp
+public System.Boolean ChooseConfig(System.IntPtr display, System.Int32[] attribs, System.IntPtr& surfaceConfig, System.Int32 numConfigs, System.Int32& choosenConfig)
+```
+
+<span id="uid-19f85aec8e"></span>
+
+### CreateContext
+
+```csharp
+public System.IntPtr CreateContext(System.IntPtr display, System.IntPtr config, System.IntPtr share, System.Int32[] attrs)
+```
+
+<span id="uid-adb9f241be"></span>
+
+### CreatePBufferSurface
+
+```csharp
+public System.IntPtr CreatePBufferSurface(System.IntPtr display, System.IntPtr config, System.Int32[] attrs)
+```
+
+<span id="uid-63f941ac31"></span>
+
+### CreatePbufferFromClientBuffer
+
+```csharp
+public System.IntPtr CreatePbufferFromClientBuffer(System.IntPtr display, System.Int32 buftype, System.IntPtr buffer, System.IntPtr config, System.Int32[] attrib_list)
+```
+
+<span id="uid-12de878bed"></span>
+
+### CreatePbufferFromClientBufferPtr
+
+```csharp
+public System.IntPtr CreatePbufferFromClientBufferPtr(System.IntPtr display, System.Int32 buftype, System.IntPtr buffer, System.IntPtr config, System.Int32* attrib_list)
+```
+
+<span id="uid-3a05611877"></span>
+
+### CreateWindowSurface
+
+```csharp
+public System.IntPtr CreateWindowSurface(System.IntPtr display, System.IntPtr config, System.IntPtr window, System.Int32[] attrs)
+```
+
+<span id="uid-898aaba5f2"></span>
+
+### DestroyContext
+
+```csharp
+public System.Boolean DestroyContext(System.IntPtr display, System.IntPtr context)
+```
+
+<span id="uid-2741d3836d"></span>
+
+### DestroySurface
+
+```csharp
+public System.Void DestroySurface(System.IntPtr display, System.IntPtr surface)
+```
+
+<span id="uid-77b209828a"></span>
+
+### GetConfigAttrib
+
+```csharp
+public System.Boolean GetConfigAttrib(System.IntPtr display, System.IntPtr config, System.Int32 attr, System.Int32& rv)
+```
+
+<span id="uid-b3b4666407"></span>
+
+### GetCurrentContext
+
+```csharp
+public System.IntPtr GetCurrentContext()
+```
+
+<span id="uid-fadf00b154"></span>
+
+### GetCurrentDisplay
+
+```csharp
+public System.IntPtr GetCurrentDisplay()
+```
+
+<span id="uid-e640bcd072"></span>
+
+### GetCurrentSurface
+
+```csharp
+public System.IntPtr GetCurrentSurface(System.Int32 readDraw)
+```
+
+<span id="uid-329adf345c"></span>
+
+### GetDisplay
+
+```csharp
+public System.IntPtr GetDisplay(System.IntPtr nativeDisplay)
+```
+
+<span id="uid-c0e76ca207"></span>
+
+### GetError
+
+```csharp
+public System.Int32 GetError()
+```
+
+<span id="uid-a988a3980e"></span>
+
+### GetPlatformDisplayExt
+
+```csharp
+public System.IntPtr GetPlatformDisplayExt(System.Int32 platform, System.IntPtr nativeDisplay, System.Int32[] attrs)
+```
+
+<span id="uid-3fa890b826"></span>
+
+### GetProcAddress
+
+```csharp
+public System.IntPtr GetProcAddress(System.IntPtr proc)
+```
+
+<span id="uid-4345d1d2e4"></span>
+
+### Initialize
+
+```csharp
+public System.Boolean Initialize(System.IntPtr display, System.Int32& major, System.Int32& minor)
+```
+
+<span id="uid-d252dc33e3"></span>
+
+### MakeCurrent
+
+```csharp
+public System.Boolean MakeCurrent(System.IntPtr display, System.IntPtr draw, System.IntPtr read, System.IntPtr context)
+```
+
+<span id="uid-9911ebf310"></span>
+
+### QueryDeviceAttribExt
+
+```csharp
+public System.Boolean QueryDeviceAttribExt(System.IntPtr display, System.Int32 attr, System.IntPtr& res)
+```
+
+<span id="uid-a90a4cd3e7"></span>
+
+### QueryDisplayAttribExt
+
+```csharp
+public System.Boolean QueryDisplayAttribExt(System.IntPtr display, System.Int32 attr, System.IntPtr& res)
+```
+
+<span id="uid-a12928cbb0"></span>
+
+### QueryString
+
+```csharp
+public System.String QueryString(System.IntPtr display, System.Int32 i)
+```
+
+<span id="uid-534df08fa9"></span>
+
+### QueryStringNative
+
+```csharp
+public System.IntPtr QueryStringNative(System.IntPtr display, System.Int32 i)
+```
+
+<span id="uid-d6d3bd7210"></span>
+
+### SwapBuffers
+
+```csharp
+public System.Void SwapBuffers(System.IntPtr display, System.IntPtr surface)
+```
+
+<span id="uid-ca4e4435c3"></span>
+
+### Terminate
+
+```csharp
+public System.Void Terminate(System.IntPtr display)
+```
+
+<span id="uid-f34c449522"></span>
+
+### WaitClient
+
+```csharp
+public System.Boolean WaitClient()
+```
+
+<span id="uid-071917b6ea"></span>
+
+### WaitGL
+
+```csharp
+public System.Boolean WaitGL()
+```
+
+<span id="uid-9189e829e5"></span>
+
+### WaitNative
+
+```csharp
+public System.Boolean WaitNative(System.Int32 engine)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsGetPlatformDisplayExtAvailable](#uid-fb9d19de69) | No summary available. |
+| [IsQueryDeviceAttribExtAvailable](#uid-5f95b932cb) | No summary available. |
+| [IsQueryDisplayAttribExtAvailable](#uid-bfabc405c6) | No summary available. |
+
+<span id="uid-fb9d19de69"></span>
+
+### IsGetPlatformDisplayExtAvailable
+
+```csharp
+public System.Boolean IsGetPlatformDisplayExtAvailable { get; set; }
+```
+
+<span id="uid-5f95b932cb"></span>
+
+### IsQueryDeviceAttribExtAvailable
+
+```csharp
+public System.Boolean IsQueryDeviceAttribExtAvailable { get; set; }
+```
+
+<span id="uid-bfabc405c6"></span>
+
+### IsQueryDisplayAttribExtAvailable
+
+```csharp
+public System.Boolean IsQueryDisplayAttribExtAvailable { get; set; }
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,173 @@
+---
+title: 'TabItem'
+hide_title: true
+slug: '/avalonia/controls/tabitem'
+uid: 'Avalonia.Controls.TabItem'
+commentId: 'T:Avalonia.Controls.TabItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TabItem Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An item in a [Avalonia.Controls.TabControl](xref:Avalonia.Controls.TabControl).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TabItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/headeredcontentcontrol">HeaderedContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> TabItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iselectable">ISelectable</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TabItem](#uid-7b2b74dec4) | No summary available. |
+
+<span id="uid-7b2b74dec4"></span>
+
+### TabItem
+
+```csharp
+public TabItem()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Icon](#uid-fc74857116) | Gets or sets the icon displayed alongside the tab header. |
+| [IndicatorTemplate](#uid-d7fb3e29eb) | Gets or sets the data template used to render the selection indicator. |
+| [IsSelected](#uid-6078bd9461) | Gets or sets the selection state of the item. |
+| [TabStripPlacement](#uid-682d7e64fc) | Gets the placement of this tab relative to the outer Avalonia.Controls.TabControl, if there is one. |
+
+<span id="uid-fc74857116"></span>
+
+### Icon
+
+Gets or sets the icon displayed alongside the tab header.
+
+```csharp
+public Avalonia.Controls.Control Icon { get; set; }
+```
+
+<span id="uid-d7fb3e29eb"></span>
+
+### IndicatorTemplate
+
+Gets or sets the data template used to render the selection indicator.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate IndicatorTemplate { get; set; }
+```
+
+<span id="uid-6078bd9461"></span>
+
+### IsSelected
+
+Gets or sets the selection state of the item.
+
+```csharp
+public System.Boolean IsSelected { get; set; }
+```
+
+<span id="uid-682d7e64fc"></span>
+
+### TabStripPlacement
+
+Gets the placement of this tab relative to the outer [Avalonia.Controls.TabControl](xref:Avalonia.Controls.TabControl), if there is one.
+
+```csharp
+public System.Nullable<Avalonia.Controls.Dock> TabStripPlacement { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IconProperty](#uid-403ad5c516) | Defines the Avalonia.Controls.TabItem.Icon property. |
+| [IndicatorTemplateProperty](#uid-bb64d8dcaf) | Defines the Avalonia.Controls.TabItem.IndicatorTemplate property. |
+| [IsSelectedProperty](#uid-3eda3a6655) | Defines the Avalonia.Controls.TabItem.IsSelected property. |
+| [TabStripPlacementProperty](#uid-acae192436) | Defines the Avalonia.Controls.TabItem.TabStripPlacement property. |
+
+<span id="uid-403ad5c516"></span>
+
+### IconProperty
+
+Defines the [Avalonia.Controls.TabItem.Icon](xref:Avalonia.Controls.TabItem.Icon) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Control> IconProperty
+```
+
+<span id="uid-bb64d8dcaf"></span>
+
+### IndicatorTemplateProperty
+
+Defines the [Avalonia.Controls.TabItem.IndicatorTemplate](xref:Avalonia.Controls.TabItem.IndicatorTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> IndicatorTemplateProperty
+```
+
+<span id="uid-3eda3a6655"></span>
+
+### IsSelectedProperty
+
+Defines the [Avalonia.Controls.TabItem.IsSelected](xref:Avalonia.Controls.TabItem.IsSelected) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsSelectedProperty
+```
+
+<span id="uid-acae192436"></span>
+
+### TabStripPlacementProperty
+
+Defines the [Avalonia.Controls.TabItem.TabStripPlacement](xref:Avalonia.Controls.TabItem.TabStripPlacement) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TabItem, System.Nullable<Avalonia.Controls.Dock>> TabStripPlacementProperty
+```
+
+</ApiRefPage>
+

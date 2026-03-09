@@ -1,0 +1,154 @@
+---
+title: 'TransitioningContentControl'
+hide_title: true
+slug: '/avalonia/controls/transitioningcontentcontrol'
+uid: 'Avalonia.Controls.TransitioningContentControl'
+commentId: 'T:Avalonia.Controls.TransitioningContentControl'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TransitioningContentControl Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Displays [Avalonia.Controls.ContentControl.Content](xref:Avalonia.Controls.ContentControl.Content) according to an [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate),
+using a [Avalonia.Controls.TransitioningContentControl.PageTransition](xref:Avalonia.Controls.TransitioningContentControl.PageTransition) to move between the old and new content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TransitioningContentControl
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> TransitioningContentControl
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TransitioningContentControl](#uid-e1e7fba1ba) | No summary available. |
+
+<span id="uid-e1e7fba1ba"></span>
+
+### TransitioningContentControl
+
+```csharp
+public TransitioningContentControl()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsTransitionReversed](#uid-44f7efa9b5) | Gets or sets a value indicating whether the control will be animated in the reverse direction. |
+| [PageTransition](#uid-0aac64bc76) | Gets or sets the animation played when content appears and disappears. |
+
+<span id="uid-44f7efa9b5"></span>
+
+### IsTransitionReversed
+
+Gets or sets a value indicating whether the control will be animated in the reverse direction.
+
+```csharp
+public System.Boolean IsTransitionReversed { get; set; }
+```
+
+<span id="uid-0aac64bc76"></span>
+
+### PageTransition
+
+Gets or sets the animation played when content appears and disappears.
+
+```csharp
+public Avalonia.Animation.IPageTransition PageTransition { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsTransitionReversedProperty](#uid-343a8d53b4) | Defines the Avalonia.Controls.TransitioningContentControl.IsTransitionReversed property. |
+| [PageTransitionProperty](#uid-7fb8122438) | Defines the Avalonia.Controls.TransitioningContentControl.PageTransition property. |
+| [TransitionCompletedEvent](#uid-53d675ca76) | Defines the Avalonia.Controls.TransitioningContentControl.TransitionCompleted routed event. |
+
+<span id="uid-343a8d53b4"></span>
+
+### IsTransitionReversedProperty
+
+Defines the [Avalonia.Controls.TransitioningContentControl.IsTransitionReversed](xref:Avalonia.Controls.TransitioningContentControl.IsTransitionReversed) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsTransitionReversedProperty
+```
+
+<span id="uid-7fb8122438"></span>
+
+### PageTransitionProperty
+
+Defines the [Avalonia.Controls.TransitioningContentControl.PageTransition](xref:Avalonia.Controls.TransitioningContentControl.PageTransition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Animation.IPageTransition> PageTransitionProperty
+```
+
+<span id="uid-53d675ca76"></span>
+
+### TransitionCompletedEvent
+
+Defines the [Avalonia.Controls.TransitioningContentControl.TransitionCompleted](xref:Avalonia.Controls.TransitioningContentControl.TransitionCompleted) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.TransitionCompletedEventArgs> TransitionCompletedEvent
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [TransitionCompleted](#uid-073ca8b9f5) | Raised when the old content isn't needed anymore by the control, because the transition has completed. |
+
+<span id="uid-073ca8b9f5"></span>
+
+### TransitionCompleted
+
+Raised when the old content isn't needed anymore by the control, because the transition has completed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.TransitionCompletedEventArgs> TransitionCompleted
+```
+
+</ApiRefPage>
+

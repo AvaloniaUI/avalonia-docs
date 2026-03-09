@@ -1,0 +1,107 @@
+---
+title: 'SelectionChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/selectionchangedeventargs'
+uid: 'Avalonia.Controls.SelectionChangedEventArgs'
+commentId: 'T:Avalonia.Controls.SelectionChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SelectionChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SelectionChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> SelectionChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SelectionChangedEventArgs](#uid-c5affbb34e) | Initializes a new instance of the Avalonia.Controls.SelectionChangedEventArgs class. |
+
+<span id="uid-c5affbb34e"></span>
+
+### SelectionChangedEventArgs
+
+Initializes a new instance of the [Avalonia.Controls.SelectionChangedEventArgs](xref:Avalonia.Controls.SelectionChangedEventArgs) class.
+
+```csharp
+public SelectionChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, System.Collections.IList removedItems, System.Collections.IList addedItems)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `addedItems` | The items added to the selection. |
+| `removedItems` | The items removed from the selection. |
+| `routedEvent` | The event being raised. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AddedItems](#uid-f5e9758270) | Gets the items that were added to the selection. |
+| [RemovedItems](#uid-d2fc02a6cf) | Gets the items that were removed from the selection. |
+
+<span id="uid-f5e9758270"></span>
+
+### AddedItems
+
+Gets the items that were added to the selection.
+
+```csharp
+public System.Collections.IList AddedItems { get; set; }
+```
+
+<span id="uid-d2fc02a6cf"></span>
+
+### RemovedItems
+
+Gets the items that were removed from the selection.
+
+```csharp
+public System.Collections.IList RemovedItems { get; set; }
+```
+
+</ApiRefPage>
+

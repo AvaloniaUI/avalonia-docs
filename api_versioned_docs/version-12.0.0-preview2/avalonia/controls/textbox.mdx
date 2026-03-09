@@ -1,0 +1,1230 @@
+---
+title: 'TextBox'
+hide_title: true
+slug: '/avalonia/controls/textbox'
+uid: 'Avalonia.Controls.TextBox'
+commentId: 'T:Avalonia.Controls.TextBox'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextBox Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a control that can be used to display or edit unformatted text.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextBox
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> TextBox
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IUndoRedoHost&lt;UndoRedoState&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextBox](#uid-829458aa4f) | No summary available. |
+
+<span id="uid-829458aa4f"></span>
+
+### TextBox
+
+```csharp
+public TextBox()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Clear](#uid-a6ced19ae7) | Clears the text in the TextBox |
+| [ClearSelection](#uid-05e80ad0ae) | Clears the current selection, maintaining the Avalonia.Controls.TextBox.CaretIndex |
+| [Copy](#uid-f24fd0e9d0) | Copies the current text onto the clipboard |
+| [Cut](#uid-e70a0c093f) | Cuts the current text onto the clipboard |
+| [GetLineCount](#uid-dea31d46d9) | Get the number of lines in the TextBox. |
+| [Paste](#uid-613969b070) | Pastes the current clipboard text content into the TextBox |
+| [Redo](#uid-849e74c3d4) | Reapplies the first item on the redo stack |
+| [ScrollToLine](#uid-ed750281ba) | Scroll the Avalonia.Controls.TextBox to the specified line index. |
+| [SelectAll](#uid-b750f49e3a) | Select all text in the TextBox |
+| [Undo](#uid-2973d6309c) | Undoes the first action in the undo stack |
+
+<span id="uid-a6ced19ae7"></span>
+
+### Clear
+
+Clears the text in the TextBox
+
+```csharp
+public System.Void Clear()
+```
+
+<span id="uid-05e80ad0ae"></span>
+
+### ClearSelection
+
+Clears the current selection, maintaining the [Avalonia.Controls.TextBox.CaretIndex](xref:Avalonia.Controls.TextBox.CaretIndex)
+
+```csharp
+public System.Void ClearSelection()
+```
+
+<span id="uid-f24fd0e9d0"></span>
+
+### Copy
+
+Copies the current text onto the clipboard
+
+```csharp
+public System.Void Copy()
+```
+
+<span id="uid-e70a0c093f"></span>
+
+### Cut
+
+Cuts the current text onto the clipboard
+
+```csharp
+public System.Void Cut()
+```
+
+<span id="uid-dea31d46d9"></span>
+
+### GetLineCount
+
+Get the number of lines in the TextBox.
+
+```csharp
+public System.Int32 GetLineCount()
+```
+
+Value: number of lines in the TextBox, or -1 if no layout information is available
+
+<span id="uid-613969b070"></span>
+
+### Paste
+
+Pastes the current clipboard text content into the TextBox
+
+```csharp
+public System.Void Paste()
+```
+
+<span id="uid-849e74c3d4"></span>
+
+### Redo
+
+Reapplies the first item on the redo stack
+
+```csharp
+public System.Void Redo()
+```
+
+<span id="uid-ed750281ba"></span>
+
+### ScrollToLine
+
+Scroll the [Avalonia.Controls.TextBox](xref:Avalonia.Controls.TextBox) to the specified line index.
+
+```csharp
+public System.Void ScrollToLine(System.Int32 lineIndex)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `lineIndex` | The line index to scroll to. |
+
+#### Exceptions
+
+- [\`lineIndex\` is less than zero. -or - \`lineIndex\` is larger than or equal to the line count.](xref:System.ArgumentOutOfRangeException)
+
+<span id="uid-b750f49e3a"></span>
+
+### SelectAll
+
+Select all text in the TextBox
+
+```csharp
+public System.Void SelectAll()
+```
+
+<span id="uid-2973d6309c"></span>
+
+### Undo
+
+Undoes the first action in the undo stack
+
+```csharp
+public System.Void Undo()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AcceptsReturn](#uid-c922927d8b) | Gets or sets a value that determines whether the TextBox allows and displays newline or return characters |
+| [AcceptsTab](#uid-8002b9db42) | Gets or sets a value that determines whether the TextBox allows and displays tabs |
+| [CanCopy](#uid-9e68708071) | Property for determining if the Copy command can be executed. |
+| [CanCut](#uid-1b23e9b283) | Property for determining if the Cut command can be executed. |
+| [CanPaste](#uid-72eb7d88eb) | Property for determining if the Paste command can be executed. |
+| [CanRedo](#uid-3941dd5f1e) | Gets a value that indicates whether the redo stack has an action that can be redone |
+| [CanUndo](#uid-17dd5fba71) | Gets a value that indicates whether the undo stack has an action that can be undone |
+| [CaretBlinkInterval](#uid-34b0d666cf) | Gets or sets the caret blink rate |
+| [CaretBrush](#uid-86d52c1f69) | Gets or sets a brush that is used for the text caret |
+| [CaretIndex](#uid-14d749d5ea) | Gets or sets the index of the text caret |
+| [ClearSelectionOnLostFocus](#uid-796bf39f23) | Gets or sets a value that determines whether the TextBox clears its selection after it loses focus. |
+| [CopyGesture](#uid-84da5076a4) | Gets a platform-specific Avalonia.Input.KeyGesture for the Copy action |
+| [CutGesture](#uid-4962ce7965) | Gets a platform-specific Avalonia.Input.KeyGesture for the Cut action |
+| [HorizontalContentAlignment](#uid-aac511c2a6) | Gets or sets the horizontal alignment of the content within the control. |
+| [InnerLeftContent](#uid-0d69af4ca0) | Gets or sets custom content that is positioned on the left side of the text layout box |
+| [InnerRightContent](#uid-07f1e039b6) | Gets or sets custom content that is positioned on the right side of the text layout box |
+| [IsInactiveSelectionHighlightEnabled](#uid-adaf01e94d) | Gets or sets a value that determines whether the TextBox shows a selection highlight when it is not focused. |
+| [IsReadOnly](#uid-d6c2423794) | Gets or sets a value whether this TextBox is read-only |
+| [IsUndoEnabled](#uid-975626d967) | Property for determining whether undo/redo is enabled |
+| [LineHeight](#uid-857a9a130c) | Gets or sets the line height. |
+| [MaxLength](#uid-a7b41c7965) | Gets or sets the maximum number of characters that the Avalonia.Controls.TextBox can accept. This constraint only applies for manually entered (user-inputted) text. |
+| [MaxLines](#uid-d3db63fd1a) | Gets or sets the maximum number of visible lines to size to. |
+| [MinLines](#uid-1835bfc3c5) | Gets or sets the minimum number of visible lines to size to. |
+| [NewLine](#uid-3f341b57ff) | Gets or sets which characters are inserted when Enter is pressed. Default: System.Environment.NewLine |
+| [PasswordChar](#uid-6027a307f8) | Gets or sets the System.Char that should be used for password masking |
+| [PasteGesture](#uid-f5612c2bee) | Gets a platform-specific Avalonia.Input.KeyGesture for the Paste action |
+| [PlaceholderForeground](#uid-5071296137) | Gets or sets the brush used for the foreground color of the placeholder text. |
+| [PlaceholderText](#uid-1f5fcadea9) | Gets or sets the placeholder or descriptive text that is displayed even if the Avalonia.Controls.TextBox.Text property is not yet set. |
+| [RevealPassword](#uid-c3387d2176) | Gets or sets whether text masked by Avalonia.Controls.TextBox.PasswordChar should be revealed |
+| [SelectedText](#uid-c1c818ffcb) | Gets or sets the text selected in the TextBox |
+| [SelectionBrush](#uid-bdf2553554) | Gets or sets a brush that is used to highlight selected text |
+| [SelectionEnd](#uid-ef3095ec07) | Gets or sets the end position of the text selected in the TextBox |
+| [SelectionForegroundBrush](#uid-c581c54c50) | Gets or sets a brush that is used for the foreground of selected text |
+| [SelectionStart](#uid-eae7703f87) | Gets or sets the starting position of the text selected in the TextBox |
+| [Text](#uid-3360a21b7f) | Gets or sets the Text content of the TextBox |
+| [TextAlignment](#uid-d93b059c73) | Gets or sets the Avalonia.Media.TextAlignment of the TextBox |
+| [TextWrapping](#uid-72c9995873) | Gets or sets the Avalonia.Media.TextWrapping of the TextBox |
+| [UndoLimit](#uid-9878e5a1a0) | Gets or sets the maximum number of items that can reside in the Undo stack |
+| [UseFloatingPlaceholder](#uid-99e7d25d8b) | Gets or sets a value indicating whether the Avalonia.Controls.TextBox.PlaceholderText will still be shown above the Avalonia.Controls.TextBox.Text even after a text value is set. |
+| [UseFloatingWatermark](#uid-08905d7ad0) | Gets or sets a value indicating whether the Avalonia.Controls.TextBox.PlaceholderText will still be shown above the Avalonia.Controls.TextBox.Text even after a text value is set. |
+| [VerticalContentAlignment](#uid-fd925c0f55) | Gets or sets the vertical alignment of the content within the control. |
+| [Watermark](#uid-f510bda508) | Gets or sets the placeholder or descriptive text that is displayed even if the Avalonia.Controls.TextBox.Text property is not yet set. |
+| [WatermarkForeground](#uid-a7ed10d0d3) | Gets or sets the brush used for the foreground color of the placeholder text. |
+
+<span id="uid-c922927d8b"></span>
+
+### AcceptsReturn
+
+Gets or sets a value that determines whether the TextBox allows and displays newline or return characters
+
+```csharp
+public System.Boolean AcceptsReturn { get; set; }
+```
+
+<span id="uid-8002b9db42"></span>
+
+### AcceptsTab
+
+Gets or sets a value that determines whether the TextBox allows and displays tabs
+
+```csharp
+public System.Boolean AcceptsTab { get; set; }
+```
+
+<span id="uid-9e68708071"></span>
+
+### CanCopy
+
+Property for determining if the Copy command can be executed.
+
+```csharp
+public System.Boolean CanCopy { get; set; }
+```
+
+<span id="uid-1b23e9b283"></span>
+
+### CanCut
+
+Property for determining if the Cut command can be executed.
+
+```csharp
+public System.Boolean CanCut { get; set; }
+```
+
+<span id="uid-72eb7d88eb"></span>
+
+### CanPaste
+
+Property for determining if the Paste command can be executed.
+
+```csharp
+public System.Boolean CanPaste { get; set; }
+```
+
+<span id="uid-3941dd5f1e"></span>
+
+### CanRedo
+
+Gets a value that indicates whether the redo stack has an action that can be redone
+
+```csharp
+public System.Boolean CanRedo { get; set; }
+```
+
+<span id="uid-17dd5fba71"></span>
+
+### CanUndo
+
+Gets a value that indicates whether the undo stack has an action that can be undone
+
+```csharp
+public System.Boolean CanUndo { get; set; }
+```
+
+<span id="uid-34b0d666cf"></span>
+
+### CaretBlinkInterval
+
+Gets or sets the caret blink rate
+
+```csharp
+public System.TimeSpan CaretBlinkInterval { get; set; }
+```
+
+<span id="uid-86d52c1f69"></span>
+
+### CaretBrush
+
+Gets or sets a brush that is used for the text caret
+
+```csharp
+public Avalonia.Media.IBrush CaretBrush { get; set; }
+```
+
+<span id="uid-14d749d5ea"></span>
+
+### CaretIndex
+
+Gets or sets the index of the text caret
+
+```csharp
+public System.Int32 CaretIndex { get; set; }
+```
+
+<span id="uid-796bf39f23"></span>
+
+### ClearSelectionOnLostFocus
+
+Gets or sets a value that determines whether the TextBox clears its selection after it loses focus.
+
+```csharp
+public System.Boolean ClearSelectionOnLostFocus { get; set; }
+```
+
+<span id="uid-84da5076a4"></span>
+
+### CopyGesture
+
+Gets a platform-specific [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) for the Copy action
+
+```csharp
+public Avalonia.Input.KeyGesture CopyGesture { get; set; }
+```
+
+<span id="uid-4962ce7965"></span>
+
+### CutGesture
+
+Gets a platform-specific [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) for the Cut action
+
+```csharp
+public Avalonia.Input.KeyGesture CutGesture { get; set; }
+```
+
+<span id="uid-aac511c2a6"></span>
+
+### HorizontalContentAlignment
+
+Gets or sets the horizontal alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.HorizontalAlignment HorizontalContentAlignment { get; set; }
+```
+
+<span id="uid-0d69af4ca0"></span>
+
+### InnerLeftContent
+
+Gets or sets custom content that is positioned on the left side of the text layout box
+
+```csharp
+public System.Object InnerLeftContent { get; set; }
+```
+
+<span id="uid-07f1e039b6"></span>
+
+### InnerRightContent
+
+Gets or sets custom content that is positioned on the right side of the text layout box
+
+```csharp
+public System.Object InnerRightContent { get; set; }
+```
+
+<span id="uid-adaf01e94d"></span>
+
+### IsInactiveSelectionHighlightEnabled
+
+Gets or sets a value that determines whether the TextBox shows a selection highlight when it is not focused.
+
+```csharp
+public System.Boolean IsInactiveSelectionHighlightEnabled { get; set; }
+```
+
+<span id="uid-d6c2423794"></span>
+
+### IsReadOnly
+
+Gets or sets a value whether this TextBox is read-only
+
+```csharp
+public System.Boolean IsReadOnly { get; set; }
+```
+
+<span id="uid-975626d967"></span>
+
+### IsUndoEnabled
+
+Property for determining whether undo/redo is enabled
+
+```csharp
+public System.Boolean IsUndoEnabled { get; set; }
+```
+
+<span id="uid-857a9a130c"></span>
+
+### LineHeight
+
+Gets or sets the line height.
+
+```csharp
+public System.Double LineHeight { get; set; }
+```
+
+<span id="uid-a7b41c7965"></span>
+
+### MaxLength
+
+Gets or sets the maximum number of characters that the [Avalonia.Controls.TextBox](xref:Avalonia.Controls.TextBox) can accept.
+This constraint only applies for manually entered (user-inputted) text.
+
+```csharp
+public System.Int32 MaxLength { get; set; }
+```
+
+<span id="uid-d3db63fd1a"></span>
+
+### MaxLines
+
+Gets or sets the maximum number of visible lines to size to.
+
+```csharp
+public System.Int32 MaxLines { get; set; }
+```
+
+<span id="uid-1835bfc3c5"></span>
+
+### MinLines
+
+Gets or sets the minimum number of visible lines to size to.
+
+```csharp
+public System.Int32 MinLines { get; set; }
+```
+
+<span id="uid-3f341b57ff"></span>
+
+### NewLine
+
+Gets or sets which characters are inserted when Enter is pressed. Default: [System.Environment.NewLine](xref:System.Environment.NewLine)
+
+```csharp
+public System.String NewLine { get; set; }
+```
+
+<span id="uid-6027a307f8"></span>
+
+### PasswordChar
+
+Gets or sets the [System.Char](xref:System.Char) that should be used for password masking
+
+```csharp
+public System.Char PasswordChar { get; set; }
+```
+
+<span id="uid-f5612c2bee"></span>
+
+### PasteGesture
+
+Gets a platform-specific [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) for the Paste action
+
+```csharp
+public Avalonia.Input.KeyGesture PasteGesture { get; set; }
+```
+
+<span id="uid-5071296137"></span>
+
+### PlaceholderForeground
+
+Gets or sets the brush used for the foreground color of the placeholder text.
+
+```csharp
+public Avalonia.Media.IBrush PlaceholderForeground { get; set; }
+```
+
+<span id="uid-1f5fcadea9"></span>
+
+### PlaceholderText
+
+Gets or sets the placeholder or descriptive text that is displayed even if the [Avalonia.Controls.TextBox.Text](xref:Avalonia.Controls.TextBox.Text)
+property is not yet set.
+
+```csharp
+public System.String PlaceholderText { get; set; }
+```
+
+<span id="uid-c3387d2176"></span>
+
+### RevealPassword
+
+Gets or sets whether text masked by [Avalonia.Controls.TextBox.PasswordChar](xref:Avalonia.Controls.TextBox.PasswordChar) should be revealed
+
+```csharp
+public System.Boolean RevealPassword { get; set; }
+```
+
+<span id="uid-c1c818ffcb"></span>
+
+### SelectedText
+
+Gets or sets the text selected in the TextBox
+
+```csharp
+public System.String SelectedText { get; set; }
+```
+
+<span id="uid-bdf2553554"></span>
+
+### SelectionBrush
+
+Gets or sets a brush that is used to highlight selected text
+
+```csharp
+public Avalonia.Media.IBrush SelectionBrush { get; set; }
+```
+
+<span id="uid-ef3095ec07"></span>
+
+### SelectionEnd
+
+Gets or sets the end position of the text selected in the TextBox
+
+```csharp
+public System.Int32 SelectionEnd { get; set; }
+```
+
+<span id="uid-c581c54c50"></span>
+
+### SelectionForegroundBrush
+
+Gets or sets a brush that is used for the foreground of selected text
+
+```csharp
+public Avalonia.Media.IBrush SelectionForegroundBrush { get; set; }
+```
+
+<span id="uid-eae7703f87"></span>
+
+### SelectionStart
+
+Gets or sets the starting position of the text selected in the TextBox
+
+```csharp
+public System.Int32 SelectionStart { get; set; }
+```
+
+<span id="uid-3360a21b7f"></span>
+
+### Text
+
+Gets or sets the Text content of the TextBox
+
+```csharp
+public System.String Text { get; set; }
+```
+
+<span id="uid-d93b059c73"></span>
+
+### TextAlignment
+
+Gets or sets the [Avalonia.Media.TextAlignment](xref:Avalonia.Media.TextAlignment) of the TextBox
+
+```csharp
+public Avalonia.Media.TextAlignment TextAlignment { get; set; }
+```
+
+<span id="uid-72c9995873"></span>
+
+### TextWrapping
+
+Gets or sets the [Avalonia.Media.TextWrapping](xref:Avalonia.Media.TextWrapping) of the TextBox
+
+```csharp
+public Avalonia.Media.TextWrapping TextWrapping { get; set; }
+```
+
+<span id="uid-9878e5a1a0"></span>
+
+### UndoLimit
+
+Gets or sets the maximum number of items that can reside in the Undo stack
+
+```csharp
+public System.Int32 UndoLimit { get; set; }
+```
+
+<span id="uid-99e7d25d8b"></span>
+
+### UseFloatingPlaceholder
+
+Gets or sets a value indicating whether the [Avalonia.Controls.TextBox.PlaceholderText](xref:Avalonia.Controls.TextBox.PlaceholderText) will still be shown above the
+[Avalonia.Controls.TextBox.Text](xref:Avalonia.Controls.TextBox.Text) even after a text value is set.
+
+```csharp
+public System.Boolean UseFloatingPlaceholder { get; set; }
+```
+
+<span id="uid-08905d7ad0"></span>
+
+### UseFloatingWatermark
+
+Gets or sets a value indicating whether the [Avalonia.Controls.TextBox.PlaceholderText](xref:Avalonia.Controls.TextBox.PlaceholderText) will still be shown above the
+[Avalonia.Controls.TextBox.Text](xref:Avalonia.Controls.TextBox.Text) even after a text value is set.
+
+```csharp
+public System.Boolean UseFloatingWatermark { get; set; }
+```
+
+<span id="uid-fd925c0f55"></span>
+
+### VerticalContentAlignment
+
+Gets or sets the vertical alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
+```
+
+<span id="uid-f510bda508"></span>
+
+### Watermark
+
+Gets or sets the placeholder or descriptive text that is displayed even if the [Avalonia.Controls.TextBox.Text](xref:Avalonia.Controls.TextBox.Text)
+property is not yet set.
+
+```csharp
+public System.String Watermark { get; set; }
+```
+
+<span id="uid-a7ed10d0d3"></span>
+
+### WatermarkForeground
+
+Gets or sets the brush used for the foreground color of the placeholder text.
+
+```csharp
+public Avalonia.Media.IBrush WatermarkForeground { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AcceptsReturnProperty](#uid-308557db1e) | Defines the Avalonia.Controls.TextBox.AcceptsReturn property |
+| [AcceptsTabProperty](#uid-47d5c09b42) | Defines the Avalonia.Controls.TextBox.AcceptsTab property |
+| [CanCopyProperty](#uid-e3548231c3) | Defines the Avalonia.Controls.TextBox.CanCopy property |
+| [CanCutProperty](#uid-18a55304fe) | Defines the Avalonia.Controls.TextBox.CanCut property |
+| [CanPasteProperty](#uid-b8a70e72ee) | Defines the Avalonia.Controls.TextBox.CanPaste property |
+| [CanRedoProperty](#uid-d6f7bdb320) | Defines the Avalonia.Controls.TextBox.CanRedo property |
+| [CanUndoProperty](#uid-a7a2126779) | Defines the Avalonia.Controls.TextBox.CanUndo property |
+| [CaretBlinkIntervalProperty](#uid-b3b5988654) | Defines the Avalonia.Controls.TextBox.CaretBlinkInterval property |
+| [CaretBrushProperty](#uid-533dfdc760) | Defines the Avalonia.Controls.TextBox.CaretBrush property |
+| [CaretIndexProperty](#uid-44095c2b74) | Defines the Avalonia.Controls.TextBox.CaretIndex property |
+| [ClearSelectionOnLostFocusProperty](#uid-7ef667a6af) | Defines the Avalonia.Controls.TextBox.ClearSelectionOnLostFocus property |
+| [CopyingToClipboardEvent](#uid-a113a4cf69) | Defines the Avalonia.Controls.TextBox.CopyingToClipboard event. |
+| [CuttingToClipboardEvent](#uid-ceded98152) | Defines the Avalonia.Controls.TextBox.CuttingToClipboard event. |
+| [HorizontalContentAlignmentProperty](#uid-87cbf0147b) | Defines the Avalonia.Layout.HorizontalAlignment property. |
+| [InnerLeftContentProperty](#uid-d97e3e4d1e) | Defines the Avalonia.Controls.TextBox.InnerLeftContent property |
+| [InnerRightContentProperty](#uid-95530e67b0) | Defines the Avalonia.Controls.TextBox.InnerRightContent property |
+| [IsInactiveSelectionHighlightEnabledProperty](#uid-04a2f338a3) | Defines the Avalonia.Controls.TextBox.IsInactiveSelectionHighlightEnabled property |
+| [IsReadOnlyProperty](#uid-0c987deec5) | Defines the Avalonia.Controls.TextBox.IsReadOnly property |
+| [IsUndoEnabledProperty](#uid-70993d8f34) | Defines the Avalonia.Controls.TextBox.IsUndoEnabled property |
+| [LineHeightProperty](#uid-cd2f3a2686) | Defines see Avalonia.Controls.Presenters.TextPresenter.LineHeight property. |
+| [MaxLengthProperty](#uid-cf9c371c7a) | Defines the Avalonia.Controls.TextBox.MaxLength property |
+| [MaxLinesProperty](#uid-99b8174349) | Defines the Avalonia.Controls.TextBox.MaxLines property |
+| [MinLinesProperty](#uid-d77c17f34e) | Defines the Avalonia.Controls.TextBox.MinLines property |
+| [NewLineProperty](#uid-e164e59a5b) | Defines the Avalonia.Controls.TextBox.NewLine property |
+| [PasswordCharProperty](#uid-173cb9d822) | Defines the Avalonia.Controls.TextBox.PasswordChar property |
+| [PastingFromClipboardEvent](#uid-19f0b94396) | Defines the Avalonia.Controls.TextBox.PastingFromClipboard event. |
+| [PlaceholderForegroundProperty](#uid-2aa6896eb9) | Defines the Avalonia.Controls.TextBox.PlaceholderForeground property. |
+| [PlaceholderTextProperty](#uid-3175866932) | Defines the Avalonia.Controls.TextBox.PlaceholderText property. |
+| [RevealPasswordProperty](#uid-b57704f328) | Defines the Avalonia.Controls.TextBox.RevealPassword property |
+| [SelectionBrushProperty](#uid-546a25adf4) | Defines the Avalonia.Controls.TextBox.SelectionBrush property |
+| [SelectionEndProperty](#uid-95124783b2) | Defines the Avalonia.Controls.TextBox.SelectionEnd property |
+| [SelectionForegroundBrushProperty](#uid-152b0d3098) | Defines the Avalonia.Controls.TextBox.SelectionForegroundBrush property |
+| [SelectionStartProperty](#uid-277c8682af) | Defines the Avalonia.Controls.TextBox.SelectionStart property |
+| [TextAlignmentProperty](#uid-441ccd3acb) | Defines the Avalonia.Controls.TextBox.TextAlignment property |
+| [TextChangedEvent](#uid-6717651430) | Defines the Avalonia.Controls.TextBox.TextChanged event. |
+| [TextChangingEvent](#uid-76b1cce0dd) | Defines the Avalonia.Controls.TextBox.TextChanging event. |
+| [TextProperty](#uid-7a0e0802cc) | Defines the Avalonia.Controls.TextBox.Text property |
+| [TextWrappingProperty](#uid-a4dedc21bc) | No summary available. |
+| [UndoLimitProperty](#uid-fa0ac110ac) | Defines the Avalonia.Controls.TextBox.UndoLimit property |
+| [UseFloatingPlaceholderProperty](#uid-c729085480) | Defines the Avalonia.Controls.TextBox.UseFloatingPlaceholder property. |
+| [UseFloatingWatermarkProperty](#uid-a5f5f860e5) | Defines the Avalonia.Controls.TextBox.UseFloatingWatermark property. |
+| [VerticalContentAlignmentProperty](#uid-235bffe1e7) | Defines the Avalonia.Layout.VerticalAlignment property. |
+| [WatermarkForegroundProperty](#uid-74b3fbf34a) | Defines the Avalonia.Controls.TextBox.WatermarkForeground property. |
+| [WatermarkProperty](#uid-7303acc7d1) | Defines the Avalonia.Controls.TextBox.Watermark property. |
+
+<span id="uid-308557db1e"></span>
+
+### AcceptsReturnProperty
+
+Defines the [Avalonia.Controls.TextBox.AcceptsReturn](xref:Avalonia.Controls.TextBox.AcceptsReturn) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AcceptsReturnProperty
+```
+
+<span id="uid-47d5c09b42"></span>
+
+### AcceptsTabProperty
+
+Defines the [Avalonia.Controls.TextBox.AcceptsTab](xref:Avalonia.Controls.TextBox.AcceptsTab) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AcceptsTabProperty
+```
+
+<span id="uid-e3548231c3"></span>
+
+### CanCopyProperty
+
+Defines the [Avalonia.Controls.TextBox.CanCopy](xref:Avalonia.Controls.TextBox.CanCopy) property
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TextBox, System.Boolean> CanCopyProperty
+```
+
+<span id="uid-18a55304fe"></span>
+
+### CanCutProperty
+
+Defines the [Avalonia.Controls.TextBox.CanCut](xref:Avalonia.Controls.TextBox.CanCut) property
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TextBox, System.Boolean> CanCutProperty
+```
+
+<span id="uid-b8a70e72ee"></span>
+
+### CanPasteProperty
+
+Defines the [Avalonia.Controls.TextBox.CanPaste](xref:Avalonia.Controls.TextBox.CanPaste) property
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TextBox, System.Boolean> CanPasteProperty
+```
+
+<span id="uid-d6f7bdb320"></span>
+
+### CanRedoProperty
+
+Defines the [Avalonia.Controls.TextBox.CanRedo](xref:Avalonia.Controls.TextBox.CanRedo) property
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TextBox, System.Boolean> CanRedoProperty
+```
+
+<span id="uid-a7a2126779"></span>
+
+### CanUndoProperty
+
+Defines the [Avalonia.Controls.TextBox.CanUndo](xref:Avalonia.Controls.TextBox.CanUndo) property
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TextBox, System.Boolean> CanUndoProperty
+```
+
+<span id="uid-b3b5988654"></span>
+
+### CaretBlinkIntervalProperty
+
+Defines the [Avalonia.Controls.TextBox.CaretBlinkInterval](xref:Avalonia.Controls.TextBox.CaretBlinkInterval) property
+
+```csharp
+public Avalonia.StyledProperty<System.TimeSpan> CaretBlinkIntervalProperty
+```
+
+<span id="uid-533dfdc760"></span>
+
+### CaretBrushProperty
+
+Defines the [Avalonia.Controls.TextBox.CaretBrush](xref:Avalonia.Controls.TextBox.CaretBrush) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> CaretBrushProperty
+```
+
+<span id="uid-44095c2b74"></span>
+
+### CaretIndexProperty
+
+Defines the [Avalonia.Controls.TextBox.CaretIndex](xref:Avalonia.Controls.TextBox.CaretIndex) property
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> CaretIndexProperty
+```
+
+<span id="uid-7ef667a6af"></span>
+
+### ClearSelectionOnLostFocusProperty
+
+Defines the [Avalonia.Controls.TextBox.ClearSelectionOnLostFocus](xref:Avalonia.Controls.TextBox.ClearSelectionOnLostFocus) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ClearSelectionOnLostFocusProperty
+```
+
+<span id="uid-a113a4cf69"></span>
+
+### CopyingToClipboardEvent
+
+Defines the [Avalonia.Controls.TextBox.CopyingToClipboard](xref:Avalonia.Controls.TextBox.CopyingToClipboard) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> CopyingToClipboardEvent
+```
+
+<span id="uid-ceded98152"></span>
+
+### CuttingToClipboardEvent
+
+Defines the [Avalonia.Controls.TextBox.CuttingToClipboard](xref:Avalonia.Controls.TextBox.CuttingToClipboard) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> CuttingToClipboardEvent
+```
+
+<span id="uid-87cbf0147b"></span>
+
+### HorizontalContentAlignmentProperty
+
+Defines the [Avalonia.Layout.HorizontalAlignment](xref:Avalonia.Layout.HorizontalAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.HorizontalAlignment> HorizontalContentAlignmentProperty
+```
+
+<span id="uid-d97e3e4d1e"></span>
+
+### InnerLeftContentProperty
+
+Defines the [Avalonia.Controls.TextBox.InnerLeftContent](xref:Avalonia.Controls.TextBox.InnerLeftContent) property
+
+```csharp
+public Avalonia.StyledProperty<System.Object> InnerLeftContentProperty
+```
+
+<span id="uid-95530e67b0"></span>
+
+### InnerRightContentProperty
+
+Defines the [Avalonia.Controls.TextBox.InnerRightContent](xref:Avalonia.Controls.TextBox.InnerRightContent) property
+
+```csharp
+public Avalonia.StyledProperty<System.Object> InnerRightContentProperty
+```
+
+<span id="uid-04a2f338a3"></span>
+
+### IsInactiveSelectionHighlightEnabledProperty
+
+Defines the [Avalonia.Controls.TextBox.IsInactiveSelectionHighlightEnabled](xref:Avalonia.Controls.TextBox.IsInactiveSelectionHighlightEnabled) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsInactiveSelectionHighlightEnabledProperty
+```
+
+<span id="uid-0c987deec5"></span>
+
+### IsReadOnlyProperty
+
+Defines the [Avalonia.Controls.TextBox.IsReadOnly](xref:Avalonia.Controls.TextBox.IsReadOnly) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsReadOnlyProperty
+```
+
+<span id="uid-70993d8f34"></span>
+
+### IsUndoEnabledProperty
+
+Defines the [Avalonia.Controls.TextBox.IsUndoEnabled](xref:Avalonia.Controls.TextBox.IsUndoEnabled) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsUndoEnabledProperty
+```
+
+<span id="uid-cd2f3a2686"></span>
+
+### LineHeightProperty
+
+Defines see [Avalonia.Controls.Presenters.TextPresenter.LineHeight](xref:Avalonia.Controls.Presenters.TextPresenter.LineHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> LineHeightProperty
+```
+
+<span id="uid-cf9c371c7a"></span>
+
+### MaxLengthProperty
+
+Defines the [Avalonia.Controls.TextBox.MaxLength](xref:Avalonia.Controls.TextBox.MaxLength) property
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxLengthProperty
+```
+
+<span id="uid-99b8174349"></span>
+
+### MaxLinesProperty
+
+Defines the [Avalonia.Controls.TextBox.MaxLines](xref:Avalonia.Controls.TextBox.MaxLines) property
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MaxLinesProperty
+```
+
+<span id="uid-d77c17f34e"></span>
+
+### MinLinesProperty
+
+Defines the [Avalonia.Controls.TextBox.MinLines](xref:Avalonia.Controls.TextBox.MinLines) property
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> MinLinesProperty
+```
+
+<span id="uid-e164e59a5b"></span>
+
+### NewLineProperty
+
+Defines the [Avalonia.Controls.TextBox.NewLine](xref:Avalonia.Controls.TextBox.NewLine) property
+
+```csharp
+public Avalonia.StyledProperty<System.String> NewLineProperty
+```
+
+<span id="uid-173cb9d822"></span>
+
+### PasswordCharProperty
+
+Defines the [Avalonia.Controls.TextBox.PasswordChar](xref:Avalonia.Controls.TextBox.PasswordChar) property
+
+```csharp
+public Avalonia.StyledProperty<System.Char> PasswordCharProperty
+```
+
+<span id="uid-19f0b94396"></span>
+
+### PastingFromClipboardEvent
+
+Defines the [Avalonia.Controls.TextBox.PastingFromClipboard](xref:Avalonia.Controls.TextBox.PastingFromClipboard) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> PastingFromClipboardEvent
+```
+
+<span id="uid-2aa6896eb9"></span>
+
+### PlaceholderForegroundProperty
+
+Defines the [Avalonia.Controls.TextBox.PlaceholderForeground](xref:Avalonia.Controls.TextBox.PlaceholderForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> PlaceholderForegroundProperty
+```
+
+<span id="uid-3175866932"></span>
+
+### PlaceholderTextProperty
+
+Defines the [Avalonia.Controls.TextBox.PlaceholderText](xref:Avalonia.Controls.TextBox.PlaceholderText) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> PlaceholderTextProperty
+```
+
+<span id="uid-b57704f328"></span>
+
+### RevealPasswordProperty
+
+Defines the [Avalonia.Controls.TextBox.RevealPassword](xref:Avalonia.Controls.TextBox.RevealPassword) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> RevealPasswordProperty
+```
+
+<span id="uid-546a25adf4"></span>
+
+### SelectionBrushProperty
+
+Defines the [Avalonia.Controls.TextBox.SelectionBrush](xref:Avalonia.Controls.TextBox.SelectionBrush) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> SelectionBrushProperty
+```
+
+<span id="uid-95124783b2"></span>
+
+### SelectionEndProperty
+
+Defines the [Avalonia.Controls.TextBox.SelectionEnd](xref:Avalonia.Controls.TextBox.SelectionEnd) property
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> SelectionEndProperty
+```
+
+<span id="uid-152b0d3098"></span>
+
+### SelectionForegroundBrushProperty
+
+Defines the [Avalonia.Controls.TextBox.SelectionForegroundBrush](xref:Avalonia.Controls.TextBox.SelectionForegroundBrush) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> SelectionForegroundBrushProperty
+```
+
+<span id="uid-277c8682af"></span>
+
+### SelectionStartProperty
+
+Defines the [Avalonia.Controls.TextBox.SelectionStart](xref:Avalonia.Controls.TextBox.SelectionStart) property
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> SelectionStartProperty
+```
+
+<span id="uid-441ccd3acb"></span>
+
+### TextAlignmentProperty
+
+Defines the [Avalonia.Controls.TextBox.TextAlignment](xref:Avalonia.Controls.TextBox.TextAlignment) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.TextAlignment> TextAlignmentProperty
+```
+
+<span id="uid-6717651430"></span>
+
+### TextChangedEvent
+
+Defines the [Avalonia.Controls.TextBox.TextChanged](xref:Avalonia.Controls.TextBox.TextChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.TextChangedEventArgs> TextChangedEvent
+```
+
+<span id="uid-76b1cce0dd"></span>
+
+### TextChangingEvent
+
+Defines the [Avalonia.Controls.TextBox.TextChanging](xref:Avalonia.Controls.TextBox.TextChanging) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.TextChangingEventArgs> TextChangingEvent
+```
+
+<span id="uid-7a0e0802cc"></span>
+
+### TextProperty
+
+Defines the [Avalonia.Controls.TextBox.Text](xref:Avalonia.Controls.TextBox.Text) property
+
+```csharp
+public Avalonia.StyledProperty<System.String> TextProperty
+```
+
+<span id="uid-a4dedc21bc"></span>
+
+### TextWrappingProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.TextWrapping> TextWrappingProperty
+```
+
+<span id="uid-fa0ac110ac"></span>
+
+### UndoLimitProperty
+
+Defines the [Avalonia.Controls.TextBox.UndoLimit](xref:Avalonia.Controls.TextBox.UndoLimit) property
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> UndoLimitProperty
+```
+
+<span id="uid-c729085480"></span>
+
+### UseFloatingPlaceholderProperty
+
+Defines the [Avalonia.Controls.TextBox.UseFloatingPlaceholder](xref:Avalonia.Controls.TextBox.UseFloatingPlaceholder) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> UseFloatingPlaceholderProperty
+```
+
+<span id="uid-a5f5f860e5"></span>
+
+### UseFloatingWatermarkProperty
+
+Defines the [Avalonia.Controls.TextBox.UseFloatingWatermark](xref:Avalonia.Controls.TextBox.UseFloatingWatermark) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> UseFloatingWatermarkProperty
+```
+
+<span id="uid-235bffe1e7"></span>
+
+### VerticalContentAlignmentProperty
+
+Defines the [Avalonia.Layout.VerticalAlignment](xref:Avalonia.Layout.VerticalAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.VerticalAlignment> VerticalContentAlignmentProperty
+```
+
+<span id="uid-74b3fbf34a"></span>
+
+### WatermarkForegroundProperty
+
+Defines the [Avalonia.Controls.TextBox.WatermarkForeground](xref:Avalonia.Controls.TextBox.WatermarkForeground) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> WatermarkForegroundProperty
+```
+
+<span id="uid-7303acc7d1"></span>
+
+### WatermarkProperty
+
+Defines the [Avalonia.Controls.TextBox.Watermark](xref:Avalonia.Controls.TextBox.Watermark) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> WatermarkProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CopyingToClipboard](#uid-0a5b1d596a) | Raised when content is being copied to the clipboard |
+| [CuttingToClipboard](#uid-f41075fbae) | Raised when content is being cut to the clipboard |
+| [PastingFromClipboard](#uid-2300bc4428) | Raised when content is being pasted from the clipboard |
+| [TextChanged](#uid-3a2f71b91e) | Occurs asynchronously after text changes and the new text is rendered. |
+| [TextChanging](#uid-4836c56d6e) | Occurs synchronously when text starts to change but before it is rendered. |
+
+<span id="uid-0a5b1d596a"></span>
+
+### CopyingToClipboard
+
+Raised when content is being copied to the clipboard
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> CopyingToClipboard
+```
+
+<span id="uid-f41075fbae"></span>
+
+### CuttingToClipboard
+
+Raised when content is being cut to the clipboard
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> CuttingToClipboard
+```
+
+<span id="uid-2300bc4428"></span>
+
+### PastingFromClipboard
+
+Raised when content is being pasted from the clipboard
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> PastingFromClipboard
+```
+
+<span id="uid-3a2f71b91e"></span>
+
+### TextChanged
+
+Occurs asynchronously after text changes and the new text is rendered.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.TextChangedEventArgs> TextChanged
+```
+
+<span id="uid-4836c56d6e"></span>
+
+### TextChanging
+
+Occurs synchronously when text starts to change but before it is rendered.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.TextChangingEventArgs> TextChanging
+```
+
+</ApiRefPage>
+

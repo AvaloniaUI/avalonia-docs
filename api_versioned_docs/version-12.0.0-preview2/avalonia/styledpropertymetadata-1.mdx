@@ -1,0 +1,134 @@
+---
+title: 'StyledPropertyMetadata<TValue>'
+hide_title: true
+slug: '/avalonia/styledpropertymetadata-1'
+uid: 'Avalonia.StyledPropertyMetadata`1'
+commentId: 'T:Avalonia.StyledPropertyMetadata`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StyledPropertyMetadata&lt;TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Metadata for styled avalonia properties.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StyledPropertyMetadata<TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniapropertymetadata">AvaloniaPropertyMetadata</a> <span className="apiref-page__relation-separator">-&gt;</span> StyledPropertyMetadata&lt;TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="istyledpropertymetadata">IStyledPropertyMetadata</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [StyledPropertyMetadata&lt;TValue&gt;](#uid-e775a56c4c) | No summary available. |
+
+<span id="uid-e775a56c4c"></span>
+
+### StyledPropertyMetadata&lt;TValue&gt;
+
+```csharp
+public StyledPropertyMetadata<TValue>(Avalonia.Data.Optional<T><TValue> defaultValue, Avalonia.Data.BindingMode defaultBindingMode, System.Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, System.Boolean enableDataValidation)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GenerateTypeSafeMetadata](#uid-eebbc90d76) | Gets a copy of this object configured for use with any owner type. |
+| [Merge](#uid-c3f1feadb7) | Merges the metadata with the base metadata. |
+
+<span id="uid-eebbc90d76"></span>
+
+### GenerateTypeSafeMetadata
+
+Gets a copy of this object configured for use with any owner type.
+
+```csharp
+public Avalonia.AvaloniaPropertyMetadata GenerateTypeSafeMetadata()
+```
+
+<span id="uid-c3f1feadb7"></span>
+
+### Merge
+
+Merges the metadata with the base metadata.
+
+```csharp
+public System.Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `baseMetadata` | The base metadata to merge. |
+| `property` | The property to which the metadata is being applied. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CoerceValue](#uid-a439fc7f25) | Gets the value coercion callback, if any. |
+| [DefaultValue](#uid-2232ffa60f) | Gets the default value for the property. |
+
+<span id="uid-a439fc7f25"></span>
+
+### CoerceValue
+
+Gets the value coercion callback, if any.
+
+```csharp
+public System.Func<Avalonia.AvaloniaObject, TValue, TValue> CoerceValue { get; set; }
+```
+
+<span id="uid-2232ffa60f"></span>
+
+### DefaultValue
+
+Gets the default value for the property.
+
+```csharp
+public TValue DefaultValue { get; set; }
+```
+
+</ApiRefPage>
+

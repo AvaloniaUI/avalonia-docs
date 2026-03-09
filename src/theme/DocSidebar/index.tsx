@@ -6,24 +6,26 @@
  * - Scroll to the active item in the sidebar
  */
 
-import React, { useEffect } from 'react';
-import { useLocation } from '@docusaurus/router';
+import React, { useEffect, useRef } from 'react';
 import DocSidebar from '@theme-original/DocSidebar';
 import type { Props } from '@theme/DocSidebar';
 
 import Logo from '@theme-original/Logo';
 
 export default function DocSidebarWrapper(props: Props): JSX.Element {
-  const location = useLocation();
+  const hasScrolled = useRef(false);
 
+  // Scroll to active item only on initial mount (deep links, page refresh)
   useEffect(() => {
+    if (hasScrolled.current) return;
+    hasScrolled.current = true;
+
     setTimeout(() => {
       const activeItem = document.querySelector('.menu__link--active');
-      if (activeItem && activeItem.scrollIntoView) {
-        activeItem.scrollIntoView({ block: 'center', behavior: 'auto' });
-      }
+      if (!activeItem) return;
+      activeItem.scrollIntoView({ block: 'center', behavior: 'auto' });
     }, 100);
-  }, [location.pathname]);
+  }, []);
 
   return (
     <>

@@ -1,0 +1,462 @@
+---
+title: 'MenuItem'
+hide_title: true
+slug: '/avalonia/controls/menuitem'
+uid: 'Avalonia.Controls.MenuItem'
+commentId: 'T:Avalonia.Controls.MenuItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MenuItem Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A menu item control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MenuItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemscontrol">ItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/selectingitemscontrol">SelectingItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/headeredselectingitemscontrol">HeaderedSelectingItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> MenuItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IMenuElement, IMenuItem, IRadioButton, <a href="iselectable">ISelectable</a>, IClickableControl, <a href="../input/icommandsource">ICommandSource</a>, <a href="../input/iinputelement">IInputElement</a>, <a href="../logicaltree/ilogical">ILogical</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MenuItem](#uid-09d828dc24) | No summary available. |
+
+<span id="uid-09d828dc24"></span>
+
+### MenuItem
+
+```csharp
+public MenuItem()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Close](#uid-7ab35a9ba8) | Closes the submenu. |
+| [Open](#uid-4a35aac653) | Opens the submenu. |
+
+<span id="uid-7ab35a9ba8"></span>
+
+### Close
+
+Closes the submenu.
+
+```csharp
+public System.Void Close()
+```
+
+<span id="uid-4a35aac653"></span>
+
+### Open
+
+Opens the submenu.
+
+```csharp
+public System.Void Open()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Command](#uid-faee92df92) | Gets or sets the command associated with the menu item. |
+| [CommandParameter](#uid-b584889752) | Gets or sets the parameter to pass to the Avalonia.Controls.MenuItem.Command property of a Avalonia.Controls.MenuItem. |
+| [GroupName](#uid-7abbcce49c) | Gets menu item group name when Avalonia.Controls.MenuItem.ToggleType is Avalonia.Controls.MenuItemToggleType.Radio. |
+| [HasSubMenu](#uid-9611d2921f) | Gets or sets a value that indicates whether the Avalonia.Controls.MenuItem has a submenu. |
+| [HotKey](#uid-48f2683b64) | Gets or sets an Avalonia.Input.KeyGesture associated with this control |
+| [Icon](#uid-71239bf81a) | Gets or sets the icon that appears in a Avalonia.Controls.MenuItem. |
+| [InputGesture](#uid-de29814335) | Gets or sets the input gesture that will be displayed in the menu item. |
+| [IsChecked](#uid-7a19c132e3) | Gets or sets if menu item is checked when Avalonia.Controls.MenuItem.ToggleType is Avalonia.Controls.MenuItemToggleType.CheckBox or Avalonia.Controls.MenuItemToggleType.Radio. |
+| [IsSelected](#uid-8a0f7a3e13) | Gets or sets a value indicating whether the Avalonia.Controls.MenuItem is currently selected. |
+| [IsSubMenuOpen](#uid-ccd5541c3d) | Gets or sets a value that indicates whether the submenu of the Avalonia.Controls.MenuItem is open. |
+| [IsTopLevel](#uid-08da71d19a) | Gets a value that indicates whether the Avalonia.Controls.MenuItem is a top-level main menu item. |
+| [StaysOpenOnClick](#uid-0c737a3422) | Gets or sets a value that indicates the submenu that this Avalonia.Controls.MenuItem is within should not close when this item is clicked. |
+| [ToggleType](#uid-e429d34fa9) | Gets toggle type of the menu item. |
+
+<span id="uid-faee92df92"></span>
+
+### Command
+
+Gets or sets the command associated with the menu item.
+
+```csharp
+public System.Windows.Input.ICommand Command { get; set; }
+```
+
+<span id="uid-b584889752"></span>
+
+### CommandParameter
+
+Gets or sets the parameter to pass to the [Avalonia.Controls.MenuItem.Command](xref:Avalonia.Controls.MenuItem.Command) property of a
+[Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem).
+
+```csharp
+public System.Object CommandParameter { get; set; }
+```
+
+<span id="uid-7abbcce49c"></span>
+
+### GroupName
+
+Gets menu item group name when [Avalonia.Controls.MenuItem.ToggleType](xref:Avalonia.Controls.MenuItem.ToggleType) is [Avalonia.Controls.MenuItemToggleType.Radio](xref:Avalonia.Controls.MenuItemToggleType.Radio).
+
+```csharp
+public System.String GroupName { get; set; }
+```
+
+<span id="uid-9611d2921f"></span>
+
+### HasSubMenu
+
+Gets or sets a value that indicates whether the [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem) has a submenu.
+
+```csharp
+public System.Boolean HasSubMenu { get; set; }
+```
+
+<span id="uid-48f2683b64"></span>
+
+### HotKey
+
+Gets or sets an [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) associated with this control
+
+```csharp
+public Avalonia.Input.KeyGesture HotKey { get; set; }
+```
+
+<span id="uid-71239bf81a"></span>
+
+### Icon
+
+Gets or sets the icon that appears in a [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem).
+
+```csharp
+public System.Object Icon { get; set; }
+```
+
+<span id="uid-de29814335"></span>
+
+### InputGesture
+
+Gets or sets the input gesture that will be displayed in the menu item.
+
+```csharp
+public Avalonia.Input.KeyGesture InputGesture { get; set; }
+```
+
+<span id="uid-7a19c132e3"></span>
+
+### IsChecked
+
+Gets or sets if menu item is checked when [Avalonia.Controls.MenuItem.ToggleType](xref:Avalonia.Controls.MenuItem.ToggleType) is
+[Avalonia.Controls.MenuItemToggleType.CheckBox](xref:Avalonia.Controls.MenuItemToggleType.CheckBox) or [Avalonia.Controls.MenuItemToggleType.Radio](xref:Avalonia.Controls.MenuItemToggleType.Radio).
+
+```csharp
+public System.Boolean IsChecked { get; set; }
+```
+
+<span id="uid-8a0f7a3e13"></span>
+
+### IsSelected
+
+Gets or sets a value indicating whether the [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem) is currently selected.
+
+```csharp
+public System.Boolean IsSelected { get; set; }
+```
+
+<span id="uid-ccd5541c3d"></span>
+
+### IsSubMenuOpen
+
+Gets or sets a value that indicates whether the submenu of the [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem) is
+open.
+
+```csharp
+public System.Boolean IsSubMenuOpen { get; set; }
+```
+
+<span id="uid-08da71d19a"></span>
+
+### IsTopLevel
+
+Gets a value that indicates whether the [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem) is a top-level main menu item.
+
+```csharp
+public System.Boolean IsTopLevel { get; set; }
+```
+
+<span id="uid-0c737a3422"></span>
+
+### StaysOpenOnClick
+
+Gets or sets a value that indicates the submenu that this [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem) is
+within should not close when this item is clicked.
+
+```csharp
+public System.Boolean StaysOpenOnClick { get; set; }
+```
+
+<span id="uid-e429d34fa9"></span>
+
+### ToggleType
+
+Gets toggle type of the menu item.
+
+```csharp
+public Avalonia.Controls.MenuItemToggleType ToggleType { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ClickEvent](#uid-3450153f32) | Defines the Avalonia.Controls.MenuItem.Click event. |
+| [CommandParameterProperty](#uid-9fcbedc49a) | Defines the Avalonia.Controls.MenuItem.CommandParameter property. |
+| [CommandProperty](#uid-f5be97fcd5) | Defines the Avalonia.Controls.MenuItem.Command property. |
+| [GroupNameProperty](#uid-2cf0d5a91a) | Defines the Avalonia.Controls.MenuItem.GroupName property. |
+| [HotKeyProperty](#uid-014e788eb6) | Defines the Avalonia.Controls.MenuItem.HotKey property. |
+| [IconProperty](#uid-20b5f3ee4c) | Defines the Avalonia.Controls.MenuItem.Icon property. |
+| [InputGestureProperty](#uid-2be50a0a5e) | Defines the Avalonia.Controls.MenuItem.InputGesture property. |
+| [IsCheckedProperty](#uid-b0be32d3f2) | Defines the Avalonia.Controls.MenuItem.IsChecked property. |
+| [IsSubMenuOpenProperty](#uid-70b9d8a91b) | Defines the Avalonia.Controls.MenuItem.IsSubMenuOpen property. |
+| [PointerEnteredItemEvent](#uid-5dad6643a9) | Defines the Avalonia.Controls.MenuItem.PointerEnteredItem event. |
+| [PointerExitedItemEvent](#uid-54b2c24b69) | Defines the Avalonia.Controls.MenuItem.PointerExitedItem event. |
+| [StaysOpenOnClickProperty](#uid-f542b01a44) | Defines the Avalonia.Controls.MenuItem.StaysOpenOnClick property. |
+| [SubmenuOpenedEvent](#uid-991f365ae4) | Defines the Avalonia.Controls.MenuItem.SubmenuOpened event. |
+| [ToggleTypeProperty](#uid-187c452992) | Defines the Avalonia.Controls.MenuItem.ToggleType property. |
+
+<span id="uid-3450153f32"></span>
+
+### ClickEvent
+
+Defines the [Avalonia.Controls.MenuItem.Click](xref:Avalonia.Controls.MenuItem.Click) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> ClickEvent
+```
+
+<span id="uid-9fcbedc49a"></span>
+
+### CommandParameterProperty
+
+Defines the [Avalonia.Controls.MenuItem.CommandParameter](xref:Avalonia.Controls.MenuItem.CommandParameter) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> CommandParameterProperty
+```
+
+<span id="uid-f5be97fcd5"></span>
+
+### CommandProperty
+
+Defines the [Avalonia.Controls.MenuItem.Command](xref:Avalonia.Controls.MenuItem.Command) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Windows.Input.ICommand> CommandProperty
+```
+
+<span id="uid-2cf0d5a91a"></span>
+
+### GroupNameProperty
+
+Defines the [Avalonia.Controls.MenuItem.GroupName](xref:Avalonia.Controls.MenuItem.GroupName) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> GroupNameProperty
+```
+
+<span id="uid-014e788eb6"></span>
+
+### HotKeyProperty
+
+Defines the [Avalonia.Controls.MenuItem.HotKey](xref:Avalonia.Controls.MenuItem.HotKey) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Input.KeyGesture> HotKeyProperty
+```
+
+<span id="uid-20b5f3ee4c"></span>
+
+### IconProperty
+
+Defines the [Avalonia.Controls.MenuItem.Icon](xref:Avalonia.Controls.MenuItem.Icon) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> IconProperty
+```
+
+<span id="uid-2be50a0a5e"></span>
+
+### InputGestureProperty
+
+Defines the [Avalonia.Controls.MenuItem.InputGesture](xref:Avalonia.Controls.MenuItem.InputGesture) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Input.KeyGesture> InputGestureProperty
+```
+
+<span id="uid-b0be32d3f2"></span>
+
+### IsCheckedProperty
+
+Defines the [Avalonia.Controls.MenuItem.IsChecked](xref:Avalonia.Controls.MenuItem.IsChecked) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsCheckedProperty
+```
+
+<span id="uid-70b9d8a91b"></span>
+
+### IsSubMenuOpenProperty
+
+Defines the [Avalonia.Controls.MenuItem.IsSubMenuOpen](xref:Avalonia.Controls.MenuItem.IsSubMenuOpen) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsSubMenuOpenProperty
+```
+
+<span id="uid-5dad6643a9"></span>
+
+### PointerEnteredItemEvent
+
+Defines the [Avalonia.Controls.MenuItem.PointerEnteredItem](xref:Avalonia.Controls.MenuItem.PointerEnteredItem) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> PointerEnteredItemEvent
+```
+
+<span id="uid-54b2c24b69"></span>
+
+### PointerExitedItemEvent
+
+Defines the [Avalonia.Controls.MenuItem.PointerExitedItem](xref:Avalonia.Controls.MenuItem.PointerExitedItem) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> PointerExitedItemEvent
+```
+
+<span id="uid-f542b01a44"></span>
+
+### StaysOpenOnClickProperty
+
+Defines the [Avalonia.Controls.MenuItem.StaysOpenOnClick](xref:Avalonia.Controls.MenuItem.StaysOpenOnClick) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> StaysOpenOnClickProperty
+```
+
+<span id="uid-991f365ae4"></span>
+
+### SubmenuOpenedEvent
+
+Defines the [Avalonia.Controls.MenuItem.SubmenuOpened](xref:Avalonia.Controls.MenuItem.SubmenuOpened) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> SubmenuOpenedEvent
+```
+
+<span id="uid-187c452992"></span>
+
+### ToggleTypeProperty
+
+Defines the [Avalonia.Controls.MenuItem.ToggleType](xref:Avalonia.Controls.MenuItem.ToggleType) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.MenuItemToggleType> ToggleTypeProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Click](#uid-ac6d3dd20c) | Occurs when a Avalonia.Controls.MenuItem without a submenu is clicked. |
+| [PointerEnteredItem](#uid-55f208fa93) | Occurs when the pointer enters a menu item. |
+| [PointerExitedItem](#uid-77668cca8c) | Raised when the pointer leaves a menu item. |
+| [SubmenuOpened](#uid-8ad19f0a90) | Occurs when a Avalonia.Controls.MenuItem's submenu is opened. |
+
+<span id="uid-ac6d3dd20c"></span>
+
+### Click
+
+Occurs when a [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem) without a submenu is clicked.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Click
+```
+
+<span id="uid-55f208fa93"></span>
+
+### PointerEnteredItem
+
+Occurs when the pointer enters a menu item.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> PointerEnteredItem
+```
+
+<span id="uid-77668cca8c"></span>
+
+### PointerExitedItem
+
+Raised when the pointer leaves a menu item.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> PointerExitedItem
+```
+
+<span id="uid-8ad19f0a90"></span>
+
+### SubmenuOpened
+
+Occurs when a [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem)'s submenu is opened.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> SubmenuOpened
+```
+
+</ApiRefPage>
+

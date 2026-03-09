@@ -1,0 +1,106 @@
+---
+title: 'AutoCompleteSelector<T>'
+hide_title: true
+slug: '/avalonia/controls/autocompleteselector-1'
+uid: 'Avalonia.Controls.AutoCompleteSelector`1'
+commentId: 'T:Avalonia.Controls.AutoCompleteSelector`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Delegate'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AutoCompleteSelector&lt;T&gt; Delegate</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the selector used by the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control to
+determine how the specified text should be modified with an item.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public delegate AutoCompleteSelector<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> MulticastDelegate <span className="apiref-page__relation-separator">-&gt;</span> AutoCompleteSelector&lt;T&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AutoCompleteSelector&lt;T&gt;](#uid-be4dfc18e2) | No summary available. |
+
+<span id="uid-be4dfc18e2"></span>
+
+### AutoCompleteSelector&lt;T&gt;
+
+```csharp
+public AutoCompleteSelector<T>(System.Object object, System.IntPtr method)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInvoke](#uid-a17d5a5cff) | No summary available. |
+| [EndInvoke](#uid-c30f4ffc30) | No summary available. |
+| [Invoke](#uid-ff76cdad75) | No summary available. |
+
+<span id="uid-a17d5a5cff"></span>
+
+### BeginInvoke
+
+```csharp
+public System.IAsyncResult BeginInvoke(System.String search, T item, System.AsyncCallback callback, System.Object object)
+```
+
+<span id="uid-c30f4ffc30"></span>
+
+### EndInvoke
+
+```csharp
+public System.String EndInvoke(System.IAsyncResult result)
+```
+
+<span id="uid-ff76cdad75"></span>
+
+### Invoke
+
+```csharp
+public System.String Invoke(System.String search, T item)
+```
+
+</ApiRefPage>
+

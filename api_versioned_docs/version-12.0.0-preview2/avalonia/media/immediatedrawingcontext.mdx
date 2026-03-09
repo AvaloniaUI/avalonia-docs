@@ -1,0 +1,381 @@
+---
+title: 'ImmediateDrawingContext'
+hide_title: true
+slug: '/avalonia/media/immediatedrawingcontext'
+uid: 'Avalonia.Media.ImmediateDrawingContext'
+commentId: 'T:Avalonia.Media.ImmediateDrawingContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImmediateDrawingContext Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ImmediateDrawingContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ImmediateDrawingContext
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../ioptionalfeatureprovider">IOptionalFeatureProvider</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-2d411e2b08) | Disposes of any resources held by the Avalonia.Media.DrawingContext. |
+| [DrawBitmap (2 overloads)](#uid-78ded9e840) | Draws an bitmap. |
+| [DrawEllipse](#uid-6a8d2f378f) | Draws an ellipse with the specified Brush and Pen. |
+| [DrawGlyphRun](#uid-8e52f9db3c) | Draws a glyph run. |
+| [DrawLine](#uid-8fe6821f2c) | Draws a line. |
+| [DrawRectangle (2 overloads)](#uid-22a0fbf526) | Draws a rectangle with the specified Brush and Pen. |
+| [FillRectangle](#uid-441055ae7b) | Draws a filled rectangle. |
+| [PushClip (2 overloads)](#uid-8a904d15d1) | Pushes a clip rectangle. |
+| [PushOpacity](#uid-303ee6ec70) | Pushes an opacity value. |
+| [PushOpacityMask](#uid-54458b5ed2) | Pushes an opacity mask. |
+| [PushPostTransform](#uid-4c5d73998c) | Pushes a matrix post-transformation. |
+| [PushPreTransform](#uid-8f56fb7622) | Pushes a matrix pre-transformation. |
+| [PushSetTransform](#uid-b2cf50e9d7) | Sets the current matrix transformation. |
+| [PushTransformContainer](#uid-0615f1cb5b) | Pushes a new transform context. |
+| [TryGetFeature](#uid-130ead2774) | No summary available. |
+
+<span id="uid-2d411e2b08"></span>
+
+### Dispose
+
+Disposes of any resources held by the [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext).
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-78ded9e840"></span>
+
+### DrawBitmap overloads
+
+<span id="uid-3d3799369b"></span>
+
+#### DrawBitmap
+
+Draws an bitmap.
+
+```csharp
+public System.Void DrawBitmap(Avalonia.Media.Imaging.Bitmap source, Avalonia.Rect rect)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The rect in the output to draw to. |
+| `source` | The bitmap. |
+
+<span id="uid-1439393c76"></span>
+
+#### DrawBitmap
+
+Draws an image.
+
+```csharp
+public System.Void DrawBitmap(Avalonia.Media.Imaging.Bitmap source, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `destRect` | The rect in the output to draw to. |
+| `source` | The bitmap. |
+| `sourceRect` | The rect in the image to draw. |
+
+<span id="uid-6a8d2f378f"></span>
+
+### DrawEllipse
+
+Draws an ellipse with the specified Brush and Pen.
+
+```csharp
+public System.Void DrawEllipse(Avalonia.Media.IImmutableBrush brush, Avalonia.Media.Immutable.ImmutablePen pen, Avalonia.Point center, System.Double radiusX, System.Double radiusY)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `brush` | The brush used to fill the ellipse, or `null` for no fill. |
+| `center` | The location of the center of the ellipse. |
+| `pen` | The pen used to stroke the ellipse, or `null` for no stroke. |
+| `radiusX` | The horizontal radius of the ellipse. |
+| `radiusY` | The vertical radius of the ellipse. |
+
+<span id="uid-8e52f9db3c"></span>
+
+### DrawGlyphRun
+
+Draws a glyph run.
+
+```csharp
+public System.Void DrawGlyphRun(Avalonia.Media.IImmutableBrush foreground, Avalonia.Media.IImmutableGlyphRunReference glyphRun)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `foreground` | The foreground brush. |
+| `glyphRun` | The glyph run. |
+
+<span id="uid-8fe6821f2c"></span>
+
+### DrawLine
+
+Draws a line.
+
+```csharp
+public System.Void DrawLine(Avalonia.Media.Immutable.ImmutablePen pen, Avalonia.Point p1, Avalonia.Point p2)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `p1` | The first point of the line. |
+| `p2` | The second point of the line. |
+| `pen` | The stroke pen. |
+
+<span id="uid-22a0fbf526"></span>
+
+### DrawRectangle overloads
+
+<span id="uid-21c7802734"></span>
+
+#### DrawRectangle
+
+Draws a rectangle with the specified Brush and Pen.
+
+```csharp
+public System.Void DrawRectangle(Avalonia.Media.IImmutableBrush brush, Avalonia.Media.Immutable.ImmutablePen pen, Avalonia.Rect rect, System.Double radiusX, System.Double radiusY, Avalonia.Media.BoxShadows boxShadows)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `boxShadows` | Box shadow effect parameters |
+| `brush` | The brush used to fill the rectangle, or `null` for no fill. |
+| `pen` | The pen used to stroke the rectangle, or `null` for no stroke. |
+| `radiusX` | The radius in the X dimension of the rounded corners.
+This value will be clamped to the range of 0 to Width/2 |
+| `radiusY` | The radius in the Y dimension of the rounded corners.
+This value will be clamped to the range of 0 to Height/2 |
+| `rect` | The rectangle bounds. |
+
+<span id="uid-4e09fb0989"></span>
+
+#### DrawRectangle
+
+Draws the outline of a rectangle.
+
+```csharp
+public System.Void DrawRectangle(Avalonia.Media.Immutable.ImmutablePen pen, Avalonia.Rect rect, System.Single cornerRadius)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `cornerRadius` | The corner radius. |
+| `pen` | The pen. |
+| `rect` | The rectangle bounds. |
+
+<span id="uid-441055ae7b"></span>
+
+### FillRectangle
+
+Draws a filled rectangle.
+
+```csharp
+public System.Void FillRectangle(Avalonia.Media.IImmutableBrush brush, Avalonia.Rect rect, System.Single cornerRadius)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `brush` | The brush. |
+| `cornerRadius` | The corner radius. |
+| `rect` | The rectangle bounds. |
+
+<span id="uid-8a904d15d1"></span>
+
+### PushClip overloads
+
+<span id="uid-8e732c87ea"></span>
+
+#### PushClip
+
+Pushes a clip rectangle.
+
+```csharp
+public Avalonia.Media.ImmediateDrawingContext.PushedState PushClip(Avalonia.Rect clip)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `clip` | The clip rectangle. |
+
+Returns: A disposable used to undo the clip rectangle.
+
+<span id="uid-7498111f4c"></span>
+
+#### PushClip
+
+```csharp
+public Avalonia.Media.ImmediateDrawingContext.PushedState PushClip(Avalonia.RoundedRect clip)
+```
+
+<span id="uid-303ee6ec70"></span>
+
+### PushOpacity
+
+Pushes an opacity value.
+
+```csharp
+public Avalonia.Media.ImmediateDrawingContext.PushedState PushOpacity(System.Double opacity, Avalonia.Rect bounds)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `bounds` | The bounds. |
+| `opacity` | The opacity. |
+
+Returns: A disposable used to undo the opacity.
+
+<span id="uid-54458b5ed2"></span>
+
+### PushOpacityMask
+
+Pushes an opacity mask.
+
+```csharp
+public Avalonia.Media.ImmediateDrawingContext.PushedState PushOpacityMask(Avalonia.Media.IImmutableBrush mask, Avalonia.Rect bounds)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `bounds` | The size of the brush's target area. TODO: Are we sure this is needed? |
+| `mask` | The opacity mask. |
+
+Returns: A disposable to undo the opacity mask.
+
+<span id="uid-4c5d73998c"></span>
+
+### PushPostTransform
+
+Pushes a matrix post-transformation.
+
+```csharp
+public Avalonia.Media.ImmediateDrawingContext.PushedState PushPostTransform(Avalonia.Matrix matrix)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `matrix` | The matrix |
+
+Returns: A disposable used to undo the transformation.
+
+<span id="uid-8f56fb7622"></span>
+
+### PushPreTransform
+
+Pushes a matrix pre-transformation.
+
+```csharp
+public Avalonia.Media.ImmediateDrawingContext.PushedState PushPreTransform(Avalonia.Matrix matrix)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `matrix` | The matrix |
+
+Returns: A disposable used to undo the transformation.
+
+<span id="uid-b2cf50e9d7"></span>
+
+### PushSetTransform
+
+Sets the current matrix transformation.
+
+```csharp
+public Avalonia.Media.ImmediateDrawingContext.PushedState PushSetTransform(Avalonia.Matrix matrix)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `matrix` | The matrix |
+
+Returns: A disposable used to undo the transformation.
+
+<span id="uid-0615f1cb5b"></span>
+
+### PushTransformContainer
+
+Pushes a new transform context.
+
+```csharp
+public Avalonia.Media.ImmediateDrawingContext.PushedState PushTransformContainer()
+```
+
+Returns: A disposable used to undo the transformation.
+
+<span id="uid-130ead2774"></span>
+
+### TryGetFeature
+
+```csharp
+public System.Object TryGetFeature(System.Type type)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CurrentTransform](#uid-88abad79ed) | Gets the current transform of the drawing context. |
+| [PlatformImpl](#uid-b8d4c97fe8) | No summary available. |
+
+<span id="uid-88abad79ed"></span>
+
+### CurrentTransform
+
+Gets the current transform of the drawing context.
+
+```csharp
+public Avalonia.Matrix CurrentTransform { get; set; }
+```
+
+<span id="uid-b8d4c97fe8"></span>
+
+### PlatformImpl
+
+```csharp
+public Avalonia.Platform.IDrawingContextImpl PlatformImpl { get; set; }
+```
+
+</ApiRefPage>
+

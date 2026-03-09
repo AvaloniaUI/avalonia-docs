@@ -1,0 +1,146 @@
+---
+title: 'AvaloniaRuntimeXamlLoader'
+hide_title: true
+slug: '/avalonia/markup/xaml/avaloniaruntimexamlloader'
+uid: 'Avalonia.Markup.Xaml.AvaloniaRuntimeXamlLoader'
+commentId: 'T:Avalonia.Markup.Xaml.AvaloniaRuntimeXamlLoader'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Markup.Xaml.Loader'
+assembly: 'Avalonia.Markup.Xaml.Loader'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaRuntimeXamlLoader Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml.Loader</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Markup.Xaml.Loader</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaRuntimeXamlLoader
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaRuntimeXamlLoader
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Load (3 overloads)](#uid-dd1980b716) | Loads XAML from a stream. |
+| [LoadGroup](#uid-596d84fb43) | No summary available. |
+| [Parse](#uid-bdbb362a91) | Parse XAML from a string. |
+
+<span id="uid-dd1980b716"></span>
+
+### Load overloads
+
+<span id="uid-5c3aa114a8"></span>
+
+#### Load
+
+Loads XAML from a stream.
+
+```csharp
+public System.Object Load(Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument document, Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration configuration)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `configuration` | Xaml loader configuration. |
+| `document` | The stream containing the XAML. |
+
+Returns: The loaded object.
+
+<span id="uid-be4a5cbb27"></span>
+
+#### Load
+
+Loads XAML from a stream.
+
+```csharp
+public System.Object Load(System.IO.Stream stream, System.Reflection.Assembly localAssembly, System.Object rootInstance, System.Uri uri, System.Boolean designMode)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `designMode` | Indicates whether the XAML is being loaded in design mode. |
+| `localAssembly` | Default assembly for clr-namespace: |
+| `rootInstance` | The optional instance into which the XAML should be loaded. |
+| `stream` | The stream containing the XAML. |
+| `uri` | The URI of the XAML being loaded. |
+
+Returns: The loaded object.
+
+<span id="uid-c87fe483d8"></span>
+
+#### Load
+
+Loads XAML from a string.
+
+```csharp
+public System.Object Load(System.String xaml, System.Reflection.Assembly localAssembly, System.Object rootInstance, System.Uri uri, System.Boolean designMode)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `designMode` | Indicates whether the XAML is being loaded in design mode. |
+| `localAssembly` | Default assembly for clr-namespace:. |
+| `rootInstance` | The optional instance into which the XAML should be loaded. |
+| `uri` | The URI of the XAML being loaded. |
+| `xaml` | The string containing the XAML. |
+
+Returns: The loaded object.
+
+<span id="uid-596d84fb43"></span>
+
+### LoadGroup
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<System.Object> LoadGroup(System.Collections.Generic.IReadOnlyCollection<Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument> documents, Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration configuration)
+```
+
+<span id="uid-bdbb362a91"></span>
+
+### Parse
+
+Parse XAML from a string.
+
+```csharp
+public T Parse<T>(System.String xaml, System.Reflection.Assembly localAssembly)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `localAssembly` | Default assembly for clr-namespace:. |
+| `xaml` | The string containing the XAML. |
+
+Returns: The loaded object.
+
+</ApiRefPage>
+

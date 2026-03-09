@@ -1,0 +1,283 @@
+---
+title: 'MaskedTextBox'
+hide_title: true
+slug: '/avalonia/controls/maskedtextbox'
+uid: 'Avalonia.Controls.MaskedTextBox'
+commentId: 'T:Avalonia.Controls.MaskedTextBox'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MaskedTextBox Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MaskedTextBox
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="textbox">TextBox</a> <span className="apiref-page__relation-separator">-&gt;</span> MaskedTextBox
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MaskedTextBox (2 overloads)](#uid-30d16214b6) | No summary available. |
+
+<span id="uid-30d16214b6"></span>
+
+### MaskedTextBox overloads
+
+<span id="uid-92734ec866"></span>
+
+#### MaskedTextBox
+
+```csharp
+public MaskedTextBox()
+```
+
+<span id="uid-f41cdf55b7"></span>
+
+#### MaskedTextBox
+
+Constructs the MaskedTextBox with the specified MaskedTextProvider object.
+
+```csharp
+public MaskedTextBox(System.ComponentModel.MaskedTextProvider maskedTextProvider)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AsciiOnly](#uid-c2a9ef0112) | Gets or sets a value indicating if the masked text box is restricted to accept only ASCII characters. Default value is false. |
+| [Culture](#uid-02e2b91eff) | Gets or sets the culture information associated with the masked text box. |
+| [HidePromptOnLeave](#uid-f9fa8e85e8) | Gets or sets a value indicating if the prompt character is hidden when the masked text box loses focus. |
+| [Mask](#uid-128896993e) | Gets or sets the mask to apply to the TextBox. |
+| [MaskCompleted](#uid-3141f85be1) | Specifies whether the test string required input positions, as specified by the mask, have all been assigned. |
+| [MaskFull](#uid-42e1a30a6e) | Specifies whether all inputs (required and optional) have been provided into the mask successfully. |
+| [MaskProvider](#uid-1a430548e4) | Gets the MaskTextProvider for the specified Mask. |
+| [PromptChar](#uid-1723cc5a96) | Gets or sets the character used to represent the absence of user input in MaskedTextBox. |
+| [ResetOnPrompt](#uid-d6e760a39e) | Gets or sets a value indicating if selected characters should be reset when the prompt character is pressed. |
+| [ResetOnSpace](#uid-a04284b222) | Gets or sets a value indicating if selected characters should be reset when the space character is pressed. |
+
+<span id="uid-c2a9ef0112"></span>
+
+### AsciiOnly
+
+Gets or sets a value indicating if the masked text box is restricted to accept only ASCII characters.
+Default value is false.
+
+```csharp
+public System.Boolean AsciiOnly { get; set; }
+```
+
+<span id="uid-02e2b91eff"></span>
+
+### Culture
+
+Gets or sets the culture information associated with the masked text box.
+
+```csharp
+public System.Globalization.CultureInfo Culture { get; set; }
+```
+
+<span id="uid-f9fa8e85e8"></span>
+
+### HidePromptOnLeave
+
+Gets or sets a value indicating if the prompt character is hidden when the masked text box loses focus.
+
+```csharp
+public System.Boolean HidePromptOnLeave { get; set; }
+```
+
+<span id="uid-128896993e"></span>
+
+### Mask
+
+Gets or sets the mask to apply to the TextBox.
+
+```csharp
+public System.String Mask { get; set; }
+```
+
+<span id="uid-3141f85be1"></span>
+
+### MaskCompleted
+
+Specifies whether the test string required input positions, as specified by the mask, have
+all been assigned.
+
+```csharp
+public System.Nullable<System.Boolean> MaskCompleted { get; set; }
+```
+
+<span id="uid-42e1a30a6e"></span>
+
+### MaskFull
+
+Specifies whether all inputs (required and optional) have been provided into the mask successfully.
+
+```csharp
+public System.Nullable<System.Boolean> MaskFull { get; set; }
+```
+
+<span id="uid-1a430548e4"></span>
+
+### MaskProvider
+
+Gets the MaskTextProvider for the specified Mask.
+
+```csharp
+public System.ComponentModel.MaskedTextProvider MaskProvider { get; set; }
+```
+
+<span id="uid-1723cc5a96"></span>
+
+### PromptChar
+
+Gets or sets the character used to represent the absence of user input in MaskedTextBox.
+
+```csharp
+public System.Char PromptChar { get; set; }
+```
+
+<span id="uid-d6e760a39e"></span>
+
+### ResetOnPrompt
+
+Gets or sets a value indicating if selected characters should be reset when the prompt character is pressed.
+
+```csharp
+public System.Boolean ResetOnPrompt { get; set; }
+```
+
+<span id="uid-a04284b222"></span>
+
+### ResetOnSpace
+
+Gets or sets a value indicating if selected characters should be reset when the space character is pressed.
+
+```csharp
+public System.Boolean ResetOnSpace { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AsciiOnlyProperty](#uid-6b3a046459) | No summary available. |
+| [CultureProperty](#uid-520e35e456) | No summary available. |
+| [HidePromptOnLeaveProperty](#uid-302b60e707) | No summary available. |
+| [MaskCompletedProperty](#uid-dc199dcbf7) | No summary available. |
+| [MaskFullProperty](#uid-1a9cd2f870) | No summary available. |
+| [MaskProperty](#uid-867553fabf) | No summary available. |
+| [PromptCharProperty](#uid-449e4b41e0) | No summary available. |
+| [ResetOnPromptProperty](#uid-9e40162583) | No summary available. |
+| [ResetOnSpaceProperty](#uid-2fca8ac806) | No summary available. |
+
+<span id="uid-6b3a046459"></span>
+
+### AsciiOnlyProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AsciiOnlyProperty
+```
+
+<span id="uid-520e35e456"></span>
+
+### CultureProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Globalization.CultureInfo> CultureProperty
+```
+
+<span id="uid-302b60e707"></span>
+
+### HidePromptOnLeaveProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> HidePromptOnLeaveProperty
+```
+
+<span id="uid-dc199dcbf7"></span>
+
+### MaskCompletedProperty
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.MaskedTextBox, System.Nullable<System.Boolean>> MaskCompletedProperty
+```
+
+<span id="uid-1a9cd2f870"></span>
+
+### MaskFullProperty
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.MaskedTextBox, System.Nullable<System.Boolean>> MaskFullProperty
+```
+
+<span id="uid-867553fabf"></span>
+
+### MaskProperty
+
+```csharp
+public Avalonia.StyledProperty<System.String> MaskProperty
+```
+
+<span id="uid-449e4b41e0"></span>
+
+### PromptCharProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Char> PromptCharProperty
+```
+
+<span id="uid-9e40162583"></span>
+
+### ResetOnPromptProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ResetOnPromptProperty
+```
+
+<span id="uid-2fca8ac806"></span>
+
+### ResetOnSpaceProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ResetOnSpaceProperty
+```
+
+</ApiRefPage>
+

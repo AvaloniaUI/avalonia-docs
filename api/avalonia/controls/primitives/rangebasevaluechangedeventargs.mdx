@@ -1,0 +1,128 @@
+---
+title: 'RangeBaseValueChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/primitives/rangebasevaluechangedeventargs'
+uid: 'Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs'
+commentId: 'T:Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RangeBaseValueChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data specific to a [Avalonia.Controls.Primitives.RangeBase.ValueChanged](xref:Avalonia.Controls.Primitives.RangeBase.ValueChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RangeBaseValueChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> RangeBaseValueChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RangeBaseValueChangedEventArgs (2 overloads)](#uid-e6b4fccc9d) | Initializes a new instance of the Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs class. |
+
+<span id="uid-e6b4fccc9d"></span>
+
+### RangeBaseValueChangedEventArgs overloads
+
+<span id="uid-f67c6f84cd"></span>
+
+#### RangeBaseValueChangedEventArgs
+
+Initializes a new instance of the [Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs](xref:Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs) class.
+
+```csharp
+public RangeBaseValueChangedEventArgs(System.Double oldValue, System.Double newValue, Avalonia.Interactivity.RoutedEvent routedEvent)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `newValue` | The new value of the range value property. |
+| `oldValue` | The old value of the range value property. |
+| `routedEvent` | The routed event associated with these event args. |
+
+<span id="uid-8f09711cb1"></span>
+
+#### RangeBaseValueChangedEventArgs
+
+Initializes a new instance of the [Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs](xref:Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs) class.
+
+```csharp
+public RangeBaseValueChangedEventArgs(System.Double oldValue, System.Double newValue, Avalonia.Interactivity.RoutedEvent routedEvent, System.Object source)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `newValue` | The new value of the range value property. |
+| `oldValue` | The old value of the range value property. |
+| `routedEvent` | The routed event associated with these event args. |
+| `source` | The source object that raised the routed event. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [NewValue](#uid-42760e43d5) | Gets the new value of the range value property. |
+| [OldValue](#uid-4da996b045) | Gets the old value of the range value property. |
+
+<span id="uid-42760e43d5"></span>
+
+### NewValue
+
+Gets the new value of the range value property.
+
+```csharp
+public System.Double NewValue { get; set; }
+```
+
+<span id="uid-4da996b045"></span>
+
+### OldValue
+
+Gets the old value of the range value property.
+
+```csharp
+public System.Double OldValue { get; set; }
+```
+
+</ApiRefPage>
+

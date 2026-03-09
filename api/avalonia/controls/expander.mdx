@@ -1,0 +1,244 @@
+---
+title: 'Expander'
+hide_title: true
+slug: '/avalonia/controls/expander'
+uid: 'Avalonia.Controls.Expander'
+commentId: 'T:Avalonia.Controls.Expander'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Expander Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control with a header that has a collapsible content section.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Expander
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/headeredcontentcontrol">HeaderedContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> Expander
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Expander](#uid-7f929919cc) | Initializes a new instance of the Avalonia.Controls.Expander class. |
+
+<span id="uid-7f929919cc"></span>
+
+### Expander
+
+Initializes a new instance of the [Avalonia.Controls.Expander](xref:Avalonia.Controls.Expander) class.
+
+```csharp
+public Expander()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ContentTransition](#uid-6b3d12cfed) | Gets or sets the transition used when expanding or collapsing the content. |
+| [ExpandDirection](#uid-6b91472f92) | Gets or sets the direction in which the Avalonia.Controls.Expander opens. |
+| [IsExpanded](#uid-ae35411e4d) | Gets or sets a value indicating whether the Avalonia.Controls.Expander content area is open and visible. |
+
+<span id="uid-6b3d12cfed"></span>
+
+### ContentTransition
+
+Gets or sets the transition used when expanding or collapsing the content.
+
+```csharp
+public Avalonia.Animation.IPageTransition ContentTransition { get; set; }
+```
+
+<span id="uid-6b91472f92"></span>
+
+### ExpandDirection
+
+Gets or sets the direction in which the [Avalonia.Controls.Expander](xref:Avalonia.Controls.Expander) opens.
+
+```csharp
+public Avalonia.Controls.ExpandDirection ExpandDirection { get; set; }
+```
+
+<span id="uid-ae35411e4d"></span>
+
+### IsExpanded
+
+Gets or sets a value indicating whether the [Avalonia.Controls.Expander](xref:Avalonia.Controls.Expander)
+content area is open and visible.
+
+```csharp
+public System.Boolean IsExpanded { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CollapsedEvent](#uid-ead3eddc1a) | Defines the Avalonia.Controls.Expander.Collapsed event. |
+| [CollapsingEvent](#uid-729caf5a09) | Defines the Avalonia.Controls.Expander.Collapsing event. |
+| [ContentTransitionProperty](#uid-299f22b911) | Defines the Avalonia.Controls.Expander.ContentTransition property. |
+| [ExpandDirectionProperty](#uid-cdcbda415c) | Defines the Avalonia.Controls.Expander.ExpandDirection property. |
+| [ExpandedEvent](#uid-785e04d0c4) | Defines the Avalonia.Controls.Expander.Expanded event. |
+| [ExpandingEvent](#uid-910927dc7f) | Defines the Avalonia.Controls.Expander.Expanding event. |
+| [IsExpandedProperty](#uid-8dcbd8bd7c) | Defines the Avalonia.Controls.Expander.IsExpanded property. |
+
+<span id="uid-ead3eddc1a"></span>
+
+### CollapsedEvent
+
+Defines the [Avalonia.Controls.Expander.Collapsed](xref:Avalonia.Controls.Expander.Collapsed) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> CollapsedEvent
+```
+
+<span id="uid-729caf5a09"></span>
+
+### CollapsingEvent
+
+Defines the [Avalonia.Controls.Expander.Collapsing](xref:Avalonia.Controls.Expander.Collapsing) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.CancelRoutedEventArgs> CollapsingEvent
+```
+
+<span id="uid-299f22b911"></span>
+
+### ContentTransitionProperty
+
+Defines the [Avalonia.Controls.Expander.ContentTransition](xref:Avalonia.Controls.Expander.ContentTransition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Animation.IPageTransition> ContentTransitionProperty
+```
+
+<span id="uid-cdcbda415c"></span>
+
+### ExpandDirectionProperty
+
+Defines the [Avalonia.Controls.Expander.ExpandDirection](xref:Avalonia.Controls.Expander.ExpandDirection) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ExpandDirection> ExpandDirectionProperty
+```
+
+<span id="uid-785e04d0c4"></span>
+
+### ExpandedEvent
+
+Defines the [Avalonia.Controls.Expander.Expanded](xref:Avalonia.Controls.Expander.Expanded) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> ExpandedEvent
+```
+
+<span id="uid-910927dc7f"></span>
+
+### ExpandingEvent
+
+Defines the [Avalonia.Controls.Expander.Expanding](xref:Avalonia.Controls.Expander.Expanding) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.CancelRoutedEventArgs> ExpandingEvent
+```
+
+<span id="uid-8dcbd8bd7c"></span>
+
+### IsExpandedProperty
+
+Defines the [Avalonia.Controls.Expander.IsExpanded](xref:Avalonia.Controls.Expander.IsExpanded) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsExpandedProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Collapsed](#uid-5ace79a727) | Occurs after the content area has closed and only the header is visible. |
+| [Collapsing](#uid-97ca336169) | Occurs as the content area is closing. |
+| [Expanded](#uid-71871c0c7c) | Occurs after the Avalonia.Controls.Expander has opened to display both its header and content. |
+| [Expanding](#uid-0f22bff77c) | Occurs as the content area is opening. |
+
+<span id="uid-5ace79a727"></span>
+
+### Collapsed
+
+Occurs after the content area has closed and only the header is visible.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Collapsed
+```
+
+<span id="uid-97ca336169"></span>
+
+### Collapsing
+
+Occurs as the content area is closing.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.CancelRoutedEventArgs> Collapsing
+```
+
+<span id="uid-71871c0c7c"></span>
+
+### Expanded
+
+Occurs after the [Avalonia.Controls.Expander](xref:Avalonia.Controls.Expander) has opened to display both its header and content.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Expanded
+```
+
+<span id="uid-0f22bff77c"></span>
+
+### Expanding
+
+Occurs as the content area is opening.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.CancelRoutedEventArgs> Expanding
+```
+
+</ApiRefPage>
+

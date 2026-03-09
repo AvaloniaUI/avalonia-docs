@@ -1,0 +1,173 @@
+---
+title: 'DirectPropertyBase<TValue>'
+hide_title: true
+slug: '/avalonia/directpropertybase-1'
+uid: 'Avalonia.DirectPropertyBase`1'
+commentId: 'T:Avalonia.DirectPropertyBase`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DirectPropertyBase&lt;TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for direct properties.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DirectPropertyBase<TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> AvaloniaProperty&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> DirectPropertyBase&lt;TValue&gt;
+</div>
+</div>
+
+## Remarks
+
+Whereas [Avalonia.DirectProperty&lt;T1, T2&gt;](xref:Avalonia.DirectProperty%602) is typed on the owner type, this base
+class provides a non-owner-typed interface to a direct property.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetMetadata (2 overloads)](#uid-b6c6ae1a42) | Gets the Avalonia.AvaloniaPropertyMetadata which applies to this property when it is used with the specified object. |
+| [GetUnsetValue (2 overloads)](#uid-fe50eae041) | Gets the unset value for the property on the specified object. |
+| [OverrideMetadata (2 overloads)](#uid-1ce4e62b9a) | No summary available. |
+
+<span id="uid-b6c6ae1a42"></span>
+
+### GetMetadata overloads
+
+<span id="uid-c1179f17b1"></span>
+
+#### GetMetadata
+
+Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata) which applies to this property when it is used with the specified object.
+
+```csharp
+public Avalonia.DirectPropertyMetadata<TValue><TValue> GetMetadata(Avalonia.AvaloniaObject owner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `owner` | The object for which to retrieve metadata. |
+
+<span id="uid-9cf4d7da4e"></span>
+
+#### GetMetadata
+
+```csharp
+public Avalonia.DirectPropertyMetadata<TValue><TValue> GetMetadata(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type for which to retrieve metadata. |
+
+<span id="uid-fe50eae041"></span>
+
+### GetUnsetValue overloads
+
+<span id="uid-1746ef5106"></span>
+
+#### GetUnsetValue
+
+Gets the unset value for the property on the specified object.
+
+```csharp
+public TValue GetUnsetValue(Avalonia.AvaloniaObject owner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `owner` | The object. |
+
+Returns: The unset value.
+
+<span id="uid-e2534a53cd"></span>
+
+#### GetUnsetValue
+
+Gets the unset value for the property on the specified type.
+
+```csharp
+public TValue GetUnsetValue(System.Type type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The type. |
+
+Returns: The unset value.
+
+<span id="uid-1ce4e62b9a"></span>
+
+### OverrideMetadata overloads
+
+<span id="uid-76fb8d47ae"></span>
+
+#### OverrideMetadata
+
+```csharp
+public System.Void OverrideMetadata<T>(Avalonia.DirectPropertyMetadata<TValue><TValue> metadata)
+```
+
+<span id="uid-5fcd8c28ed"></span>
+
+#### OverrideMetadata
+
+```csharp
+public System.Void OverrideMetadata(System.Type type, Avalonia.DirectPropertyMetadata<TValue><TValue> metadata)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Owner](#uid-9a89944347) | Gets the type that registered the property. |
+
+<span id="uid-9a89944347"></span>
+
+### Owner
+
+Gets the type that registered the property.
+
+```csharp
+public System.Type Owner { get; set; }
+```
+
+</ApiRefPage>
+

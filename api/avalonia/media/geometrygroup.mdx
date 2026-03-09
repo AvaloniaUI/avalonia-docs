@@ -1,0 +1,137 @@
+---
+title: 'GeometryGroup'
+hide_title: true
+slug: '/avalonia/media/geometrygroup'
+uid: 'Avalonia.Media.GeometryGroup'
+commentId: 'T:Avalonia.Media.GeometryGroup'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GeometryGroup Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a composite geometry, composed of other [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) objects.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GeometryGroup
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="geometry">Geometry</a> <span className="apiref-page__relation-separator">-&gt;</span> GeometryGroup
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GeometryGroup](#uid-3e82f10c75) | No summary available. |
+
+<span id="uid-3e82f10c75"></span>
+
+### GeometryGroup
+
+```csharp
+public GeometryGroup()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Clone](#uid-e7a21ea804) | No summary available. |
+
+<span id="uid-e7a21ea804"></span>
+
+### Clone
+
+```csharp
+public Avalonia.Media.Geometry Clone()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Children](#uid-4a99134db1) | Gets or sets the collection that contains the child geometries. |
+| [FillRule](#uid-72a95e02db) | Gets or sets how the intersecting areas of the objects contained in this Avalonia.Media.GeometryGroup are combined. The default is Avalonia.Media.FillRule.EvenOdd. |
+
+<span id="uid-4a99134db1"></span>
+
+### Children
+
+Gets or sets the collection that contains the child geometries.
+
+```csharp
+public Avalonia.Media.GeometryCollection Children { get; set; }
+```
+
+<span id="uid-72a95e02db"></span>
+
+### FillRule
+
+Gets or sets how the intersecting areas of the objects contained in this
+[Avalonia.Media.GeometryGroup](xref:Avalonia.Media.GeometryGroup) are combined. The default is [Avalonia.Media.FillRule.EvenOdd](xref:Avalonia.Media.FillRule.EvenOdd).
+
+```csharp
+public Avalonia.Media.FillRule FillRule { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ChildrenProperty](#uid-9c5cb4e13a) | No summary available. |
+| [FillRuleProperty](#uid-881dd60b3a) | No summary available. |
+
+<span id="uid-9c5cb4e13a"></span>
+
+### ChildrenProperty
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Media.GeometryGroup, Avalonia.Media.GeometryCollection> ChildrenProperty
+```
+
+<span id="uid-881dd60b3a"></span>
+
+### FillRuleProperty
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.FillRule> FillRuleProperty
+```
+
+</ApiRefPage>
+

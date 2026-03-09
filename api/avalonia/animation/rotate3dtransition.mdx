@@ -1,0 +1,111 @@
+---
+title: 'Rotate3DTransition'
+hide_title: true
+slug: '/avalonia/animation/rotate3dtransition'
+uid: 'Avalonia.Animation.Rotate3DTransition'
+commentId: 'T:Avalonia.Animation.Rotate3DTransition'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Rotate3DTransition Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Rotate3DTransition
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="pageslide">PageSlide</a> <span className="apiref-page__relation-separator">-&gt;</span> Rotate3DTransition
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Rotate3DTransition (2 overloads)](#uid-48c684395a) | Creates a new instance of the Avalonia.Animation.Rotate3DTransition |
+
+<span id="uid-48c684395a"></span>
+
+### Rotate3DTransition overloads
+
+<span id="uid-506fec3110"></span>
+
+#### Rotate3DTransition
+
+Creates a new instance of the [Avalonia.Animation.Rotate3DTransition](xref:Avalonia.Animation.Rotate3DTransition)
+
+```csharp
+public Rotate3DTransition()
+```
+
+<span id="uid-62f5cc8e7b"></span>
+
+#### Rotate3DTransition
+
+```csharp
+public Rotate3DTransition(System.TimeSpan duration, Avalonia.Animation.PageSlide.SlideAxis orientation, System.Nullable<System.Double> depth)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Start](#uid-4c710e1054) | No summary available. |
+
+<span id="uid-4c710e1054"></span>
+
+### Start
+
+```csharp
+public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, System.Boolean forward, System.Threading.CancellationToken cancellationToken)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Depth](#uid-66669734a6) | Defines the depth of the 3D Effect. If null, depth will be calculated automatically from the width or height of the common parent of the visual being rotated. |
+
+<span id="uid-66669734a6"></span>
+
+### Depth
+
+Defines the depth of the 3D Effect. If null, depth will be calculated automatically from the width or height
+of the common parent of the visual being rotated.
+
+```csharp
+public System.Nullable<System.Double> Depth { get; set; }
+```
+
+</ApiRefPage>
+

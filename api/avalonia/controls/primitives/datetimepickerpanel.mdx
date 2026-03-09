@@ -1,0 +1,372 @@
+---
+title: 'DateTimePickerPanel'
+hide_title: true
+slug: '/avalonia/controls/primitives/datetimepickerpanel'
+uid: 'Avalonia.Controls.Primitives.DateTimePickerPanel'
+commentId: 'T:Avalonia.Controls.Primitives.DateTimePickerPanel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DateTimePickerPanel Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DateTimePickerPanel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../panel">Panel</a> <span className="apiref-page__relation-separator">-&gt;</span> DateTimePickerPanel
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ilogicalscrollable">ILogicalScrollable</a>, <a href="iscrollable">IScrollable</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DateTimePickerPanel](#uid-33a2d17903) | No summary available. |
+
+<span id="uid-33a2d17903"></span>
+
+### DateTimePickerPanel
+
+```csharp
+public DateTimePickerPanel()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BringIntoView](#uid-a1e2c0d45a) | No summary available. |
+| [GetControlInDirection](#uid-ee2c730c86) | No summary available. |
+| [RaiseScrollInvalidated](#uid-d50542f4cb) | No summary available. |
+| [RefreshItems](#uid-ec367611ee) | Refreshes the content of the visible items |
+| [ScrollDown](#uid-a0b26089ee) | Scrolls down the specified number of items |
+| [ScrollUp](#uid-ae38eb2327) | Scrolls up the specified number of items |
+
+<span id="uid-a1e2c0d45a"></span>
+
+### BringIntoView
+
+```csharp
+public System.Boolean BringIntoView(Avalonia.Controls.Control target, Avalonia.Rect targetRect)
+```
+
+<span id="uid-ee2c730c86"></span>
+
+### GetControlInDirection
+
+```csharp
+public Avalonia.Controls.Control GetControlInDirection(Avalonia.Input.NavigationDirection direction, Avalonia.Controls.Control from)
+```
+
+<span id="uid-d50542f4cb"></span>
+
+### RaiseScrollInvalidated
+
+```csharp
+public System.Void RaiseScrollInvalidated(System.EventArgs e)
+```
+
+<span id="uid-ec367611ee"></span>
+
+### RefreshItems
+
+Refreshes the content of the visible items
+
+```csharp
+public System.Void RefreshItems()
+```
+
+<span id="uid-a0b26089ee"></span>
+
+### ScrollDown
+
+Scrolls down the specified number of items
+
+```csharp
+public System.Void ScrollDown(System.Int32 numItems)
+```
+
+<span id="uid-ae38eb2327"></span>
+
+### ScrollUp
+
+Scrolls up the specified number of items
+
+```csharp
+public System.Void ScrollUp(System.Int32 numItems)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanHorizontallyScroll](#uid-d37f99b93f) | No summary available. |
+| [CanVerticallyScroll](#uid-3cf3c7148a) | No summary available. |
+| [Extent](#uid-917873f485) | No summary available. |
+| [Increment](#uid-59c680fe81) | Gets or sets the increment |
+| [IsLogicalScrollEnabled](#uid-84c6a8d7b3) | No summary available. |
+| [ItemFormat](#uid-47be96ad56) | Gets or sets the string format for the items, using standard .net DateTime or TimeSpan formatting. Format must match panel type |
+| [ItemHeight](#uid-d280938910) | Gets or sets the height of each item |
+| [MaximumValue](#uid-d9862017da) | Gets or sets the maximum value |
+| [MinimumValue](#uid-000d609c5e) | Gets or sets the minimum value |
+| [Offset](#uid-526c212086) | No summary available. |
+| [PageScrollSize](#uid-d9d4c50401) | No summary available. |
+| [PanelType](#uid-49cb4ea6b9) | Gets or sets what this panel displays in date or time units |
+| [ScrollSize](#uid-c2df102400) | No summary available. |
+| [SelectedValue](#uid-97a2405ac6) | Gets or sets the selected value |
+| [ShouldLoop](#uid-5f8499a572) | Gets or sets whether the panel should loop |
+| [Viewport](#uid-23f72e93cd) | No summary available. |
+
+<span id="uid-d37f99b93f"></span>
+
+### CanHorizontallyScroll
+
+```csharp
+public System.Boolean CanHorizontallyScroll { get; set; }
+```
+
+<span id="uid-3cf3c7148a"></span>
+
+### CanVerticallyScroll
+
+```csharp
+public System.Boolean CanVerticallyScroll { get; set; }
+```
+
+<span id="uid-917873f485"></span>
+
+### Extent
+
+```csharp
+public Avalonia.Size Extent { get; set; }
+```
+
+<span id="uid-59c680fe81"></span>
+
+### Increment
+
+Gets or sets the increment
+
+```csharp
+public System.Int32 Increment { get; set; }
+```
+
+<span id="uid-84c6a8d7b3"></span>
+
+### IsLogicalScrollEnabled
+
+```csharp
+public System.Boolean IsLogicalScrollEnabled { get; set; }
+```
+
+<span id="uid-47be96ad56"></span>
+
+### ItemFormat
+
+Gets or sets the string format for the items, using standard
+.net DateTime or TimeSpan formatting. Format must match panel type
+
+```csharp
+public System.String ItemFormat { get; set; }
+```
+
+<span id="uid-d280938910"></span>
+
+### ItemHeight
+
+Gets or sets the height of each item
+
+```csharp
+public System.Double ItemHeight { get; set; }
+```
+
+<span id="uid-d9862017da"></span>
+
+### MaximumValue
+
+Gets or sets the maximum value
+
+```csharp
+public System.Int32 MaximumValue { get; set; }
+```
+
+<span id="uid-000d609c5e"></span>
+
+### MinimumValue
+
+Gets or sets the minimum value
+
+```csharp
+public System.Int32 MinimumValue { get; set; }
+```
+
+<span id="uid-526c212086"></span>
+
+### Offset
+
+```csharp
+public Avalonia.Vector Offset { get; set; }
+```
+
+<span id="uid-d9d4c50401"></span>
+
+### PageScrollSize
+
+```csharp
+public Avalonia.Size PageScrollSize { get; set; }
+```
+
+<span id="uid-49cb4ea6b9"></span>
+
+### PanelType
+
+Gets or sets what this panel displays in date or time units
+
+```csharp
+public Avalonia.Controls.Primitives.DateTimePickerPanelType PanelType { get; set; }
+```
+
+<span id="uid-c2df102400"></span>
+
+### ScrollSize
+
+```csharp
+public Avalonia.Size ScrollSize { get; set; }
+```
+
+<span id="uid-97a2405ac6"></span>
+
+### SelectedValue
+
+Gets or sets the selected value
+
+```csharp
+public System.Int32 SelectedValue { get; set; }
+```
+
+<span id="uid-5f8499a572"></span>
+
+### ShouldLoop
+
+Gets or sets whether the panel should loop
+
+```csharp
+public System.Boolean ShouldLoop { get; set; }
+```
+
+<span id="uid-23f72e93cd"></span>
+
+### Viewport
+
+```csharp
+public Avalonia.Size Viewport { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ItemFormatProperty](#uid-680507e224) | Defines the Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormat property |
+| [ItemHeightProperty](#uid-8bc5900357) | Defines the Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeight property |
+| [PanelTypeProperty](#uid-ed094270f3) | Defines the Avalonia.Controls.Primitives.DateTimePickerPanel.PanelType property |
+| [ShouldLoopProperty](#uid-51a958596f) | Defines the Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoop property |
+
+<span id="uid-680507e224"></span>
+
+### ItemFormatProperty
+
+Defines the [Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormat](xref:Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormat) property
+
+```csharp
+public Avalonia.StyledProperty<System.String> ItemFormatProperty
+```
+
+<span id="uid-8bc5900357"></span>
+
+### ItemHeightProperty
+
+Defines the [Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeight](xref:Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeight) property
+
+```csharp
+public Avalonia.StyledProperty<System.Double> ItemHeightProperty
+```
+
+<span id="uid-ed094270f3"></span>
+
+### PanelTypeProperty
+
+Defines the [Avalonia.Controls.Primitives.DateTimePickerPanel.PanelType](xref:Avalonia.Controls.Primitives.DateTimePickerPanel.PanelType) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.DateTimePickerPanelType> PanelTypeProperty
+```
+
+<span id="uid-51a958596f"></span>
+
+### ShouldLoopProperty
+
+Defines the [Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoop](xref:Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoop) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ShouldLoopProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ScrollInvalidated](#uid-f865c823f7) | No summary available. |
+| [SelectionChanged](#uid-b5e2b8fc0a) | No summary available. |
+
+<span id="uid-f865c823f7"></span>
+
+### ScrollInvalidated
+
+```csharp
+public event System.EventHandler ScrollInvalidated
+```
+
+<span id="uid-b5e2b8fc0a"></span>
+
+### SelectionChanged
+
+```csharp
+public event System.EventHandler SelectionChanged
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,172 @@
+---
+title: 'AvaloniaSynchronizationContext'
+hide_title: true
+slug: '/avalonia/threading/avaloniasynchronizationcontext'
+uid: 'Avalonia.Threading.AvaloniaSynchronizationContext'
+commentId: 'T:Avalonia.Threading.AvaloniaSynchronizationContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaSynchronizationContext Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+SynchronizationContext to be used on main thread
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaSynchronizationContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> SynchronizationContext <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaSynchronizationContext
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaSynchronizationContext (3 overloads)](#uid-9eb820849c) | No summary available. |
+
+<span id="uid-9eb820849c"></span>
+
+### AvaloniaSynchronizationContext overloads
+
+<span id="uid-da8ac8ab0c"></span>
+
+#### AvaloniaSynchronizationContext
+
+```csharp
+public AvaloniaSynchronizationContext()
+```
+
+<span id="uid-6054aafd69"></span>
+
+#### AvaloniaSynchronizationContext
+
+```csharp
+public AvaloniaSynchronizationContext(Avalonia.Threading.Dispatcher dispatcher, Avalonia.Threading.DispatcherPriority priority)
+```
+
+<span id="uid-93a854fe46"></span>
+
+#### AvaloniaSynchronizationContext
+
+```csharp
+public AvaloniaSynchronizationContext(Avalonia.Threading.DispatcherPriority priority)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Ensure (2 overloads)](#uid-1ca5c5965e) | No summary available. |
+| [InstallIfNeeded](#uid-43d33fdad2) | Installs synchronization context in current thread |
+| [Post](#uid-f456ade104) | No summary available. |
+| [Send](#uid-955eff3bfe) | No summary available. |
+| [Wait](#uid-cb4f22cead) | No summary available. |
+
+<span id="uid-1ca5c5965e"></span>
+
+### Ensure overloads
+
+<span id="uid-eb1fb66038"></span>
+
+#### Ensure
+
+```csharp
+public Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext Ensure(Avalonia.Threading.Dispatcher dispatcher, Avalonia.Threading.DispatcherPriority priority)
+```
+
+<span id="uid-3e9e9f65f8"></span>
+
+#### Ensure
+
+```csharp
+public Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext Ensure(Avalonia.Threading.DispatcherPriority priority)
+```
+
+<span id="uid-43d33fdad2"></span>
+
+### InstallIfNeeded
+
+Installs synchronization context in current thread
+
+```csharp
+public System.Void InstallIfNeeded()
+```
+
+<span id="uid-f456ade104"></span>
+
+### Post
+
+```csharp
+public System.Void Post(System.Threading.SendOrPostCallback d, System.Object state)
+```
+
+<span id="uid-955eff3bfe"></span>
+
+### Send
+
+```csharp
+public System.Void Send(System.Threading.SendOrPostCallback d, System.Object state)
+```
+
+<span id="uid-cb4f22cead"></span>
+
+### Wait
+
+```csharp
+public System.Int32 Wait(System.IntPtr[] waitHandles, System.Boolean waitAll, System.Int32 millisecondsTimeout)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AutoInstall](#uid-8a51cd6630) | Controls if SynchronizationContext should be installed in InstallIfNeeded. Used by Designer. |
+
+<span id="uid-8a51cd6630"></span>
+
+### AutoInstall
+
+Controls if SynchronizationContext should be installed in InstallIfNeeded. Used by Designer.
+
+```csharp
+public System.Boolean AutoInstall { get; set; }
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,285 @@
+---
+title: 'Control'
+hide_title: true
+slug: '/avalonia/controls/control'
+uid: 'Avalonia.Controls.Control'
+commentId: 'T:Avalonia.Controls.Control'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Control Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for Avalonia controls.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Control
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> Control
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="templates/idatatemplatehost">IDataTemplateHost</a>, IVisualBrushInitialize, <a href="../styling/isettervalue">ISetterValue</a>
+</div>
+</div>
+
+## Remarks
+
+The control class extends [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement) and adds the following features:
+
+- A [Avalonia.Controls.Control.Tag](xref:Avalonia.Controls.Control.Tag) property to allow user-defined data to be attached to the control.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Control](#uid-243acfda99) | No summary available. |
+
+<span id="uid-243acfda99"></span>
+
+### Control
+
+```csharp
+public Control()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ContextFlyout](#uid-3821ce41c2) | Gets or sets a context flyout to the control |
+| [ContextMenu](#uid-95e5e3ccc3) | Gets or sets a context menu to the control. |
+| [DataTemplates](#uid-78ff251b26) | Gets or sets the data templates for the control. |
+| [FocusAdorner](#uid-96de66ccc5) | Gets or sets the control's focus adorner. |
+| [IsLoaded](#uid-7b8aa52b02) | Gets a value indicating whether the control is fully constructed in the visual tree and both layout and render are complete. |
+| [Tag](#uid-2790b0c958) | Gets or sets a user-defined object attached to the control. |
+
+<span id="uid-3821ce41c2"></span>
+
+### ContextFlyout
+
+Gets or sets a context flyout to the control
+
+```csharp
+public Avalonia.Controls.Primitives.FlyoutBase ContextFlyout { get; set; }
+```
+
+<span id="uid-95e5e3ccc3"></span>
+
+### ContextMenu
+
+Gets or sets a context menu to the control.
+
+```csharp
+public Avalonia.Controls.ContextMenu ContextMenu { get; set; }
+```
+
+<span id="uid-78ff251b26"></span>
+
+### DataTemplates
+
+Gets or sets the data templates for the control.
+
+```csharp
+public Avalonia.Controls.Templates.DataTemplates DataTemplates { get; set; }
+```
+
+<span id="uid-96de66ccc5"></span>
+
+### FocusAdorner
+
+Gets or sets the control's focus adorner.
+
+```csharp
+public Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> FocusAdorner { get; set; }
+```
+
+<span id="uid-7b8aa52b02"></span>
+
+### IsLoaded
+
+Gets a value indicating whether the control is fully constructed in the visual tree
+and both layout and render are complete.
+
+```csharp
+public System.Boolean IsLoaded { get; set; }
+```
+
+<span id="uid-2790b0c958"></span>
+
+### Tag
+
+Gets or sets a user-defined object attached to the control.
+
+```csharp
+public System.Object Tag { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ContextFlyoutProperty](#uid-7adf3cc0e6) | Defines the Avalonia.Controls.Control.ContextFlyout property |
+| [ContextMenuProperty](#uid-0fd2af59c9) | Defines the Avalonia.Controls.Control.ContextMenu property. |
+| [FocusAdornerProperty](#uid-701a7e7e23) | Defines the Avalonia.Controls.Control.FocusAdorner property. |
+| [LoadedEvent](#uid-f76afcf3e6) | Defines the Avalonia.Controls.Control.Loaded event. |
+| [RequestBringIntoViewEvent](#uid-e52a870608) | Event raised when an element wishes to be scrolled into view. |
+| [SizeChangedEvent](#uid-7d071894f4) | Defines the Avalonia.Controls.Control.SizeChanged event. |
+| [TagProperty](#uid-291b4a3b79) | Defines the Avalonia.Controls.Control.Tag property. |
+| [UnloadedEvent](#uid-382a8f6733) | Defines the Avalonia.Controls.Control.Unloaded event. |
+
+<span id="uid-7adf3cc0e6"></span>
+
+### ContextFlyoutProperty
+
+Defines the [Avalonia.Controls.Control.ContextFlyout](xref:Avalonia.Controls.Control.ContextFlyout) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.FlyoutBase> ContextFlyoutProperty
+```
+
+<span id="uid-0fd2af59c9"></span>
+
+### ContextMenuProperty
+
+Defines the [Avalonia.Controls.Control.ContextMenu](xref:Avalonia.Controls.Control.ContextMenu) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ContextMenu> ContextMenuProperty
+```
+
+<span id="uid-701a7e7e23"></span>
+
+### FocusAdornerProperty
+
+Defines the [Avalonia.Controls.Control.FocusAdorner](xref:Avalonia.Controls.Control.FocusAdorner) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control>> FocusAdornerProperty
+```
+
+<span id="uid-f76afcf3e6"></span>
+
+### LoadedEvent
+
+Defines the [Avalonia.Controls.Control.Loaded](xref:Avalonia.Controls.Control.Loaded) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> LoadedEvent
+```
+
+<span id="uid-e52a870608"></span>
+
+### RequestBringIntoViewEvent
+
+Event raised when an element wishes to be scrolled into view.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.RequestBringIntoViewEventArgs> RequestBringIntoViewEvent
+```
+
+<span id="uid-7d071894f4"></span>
+
+### SizeChangedEvent
+
+Defines the [Avalonia.Controls.Control.SizeChanged](xref:Avalonia.Controls.Control.SizeChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.SizeChangedEventArgs> SizeChangedEvent
+```
+
+<span id="uid-291b4a3b79"></span>
+
+### TagProperty
+
+Defines the [Avalonia.Controls.Control.Tag](xref:Avalonia.Controls.Control.Tag) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> TagProperty
+```
+
+<span id="uid-382a8f6733"></span>
+
+### UnloadedEvent
+
+Defines the [Avalonia.Controls.Control.Unloaded](xref:Avalonia.Controls.Control.Unloaded) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> UnloadedEvent
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Loaded](#uid-c0a1ac2bc3) | Occurs when the control has been fully constructed in the visual tree and both layout and render are complete. |
+| [SizeChanged](#uid-6cfea6b6c5) | Occurs when the bounds (actual size) of the control have changed. |
+| [Unloaded](#uid-fdfd878e56) | Occurs when the control is removed from the visual tree. |
+
+<span id="uid-c0a1ac2bc3"></span>
+
+### Loaded
+
+Occurs when the control has been fully constructed in the visual tree and both
+layout and render are complete.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Loaded
+```
+
+<span id="uid-6cfea6b6c5"></span>
+
+### SizeChanged
+
+Occurs when the bounds (actual size) of the control have changed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.SizeChangedEventArgs> SizeChanged
+```
+
+<span id="uid-fdfd878e56"></span>
+
+### Unloaded
+
+Occurs when the control is removed from the visual tree.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Unloaded
+```
+
+</ApiRefPage>
+

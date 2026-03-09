@@ -1,0 +1,317 @@
+---
+title: 'TickBar'
+hide_title: true
+slug: '/avalonia/controls/tickbar'
+uid: 'Avalonia.Controls.TickBar'
+commentId: 'T:Avalonia.Controls.TickBar'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TickBar Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An element that is used for drawing [Avalonia.Controls.Slider](xref:Avalonia.Controls.Slider)'s Ticks.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TickBar
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> TickBar
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TickBar](#uid-5b40fe66a6) | No summary available. |
+
+<span id="uid-5b40fe66a6"></span>
+
+### TickBar
+
+```csharp
+public TickBar()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Render](#uid-5f224e07ed) | Draw ticks. Ticks can be draw in 8 different ways depends on Placement property and IsDirectionReversed property. |
+
+<span id="uid-5f224e07ed"></span>
+
+### Render
+
+Draw ticks.
+Ticks can be draw in 8 different ways depends on Placement property and IsDirectionReversed property.
+
+This function also draw selection-tick(s) if IsSelectionRangeEnabled is 'true' and
+SelectionStart and SelectionEnd are valid.
+
+The primary ticks (for Minimum and Maximum value) height will be 100% of TickBar's render size (use Width or Height
+depends on Placement property).
+
+The secondary ticks (all other ticks, including selection-tics) height will be 75% of TickBar's render size.
+
+Brush that use to fill ticks is specified by Fill property.
+
+```csharp
+public System.Void Render(Avalonia.Media.DrawingContext dc)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Fill](#uid-cc6fdcebfc) | Brush used to fill the TickBar's Ticks. |
+| [IsDirectionReversed](#uid-8df14df1b5) | The IsDirectionReversed property defines the direction of value incrementation. By default, if Tick's orientation is Horizontal, ticks will be drawn from left to right. (And, bottom to top for Vertical orientation). If IsDirectionReversed is 'true' the direction of the drawing will be in opposite direction. |
+| [Maximum](#uid-90a9ac795e) | Logical position where the Maximum Tick will be drawn |
+| [Minimum](#uid-633d9a0ad3) | Logical position where the Minimum Tick will be drawn |
+| [Orientation](#uid-1249633639) | TickBar parent's orientation. |
+| [Placement](#uid-4abb32d2a5) | Placement property specified how the Tick will be placed. This property affects the way ticks are drawn. This property has type of Avalonia.Controls.TickBarPlacement. |
+| [ReservedSpace](#uid-4b9c45b91a) | TickBar will use ReservedSpaceProperty for left and right spacing (for horizontal orientation) or top and bottom spacing (for vertical orientation). The space on both sides of TickBar is half of specified ReservedSpace. This property has type of Avalonia.Rect. |
+| [TickFrequency](#uid-9e7d206c06) | TickFrequency property defines how the tick will be drawn. |
+| [Ticks](#uid-91d804fe3f) | The Ticks property contains collection of value of type Double which are the logical positions use to draw the ticks. The property value is a Avalonia.Collections.AvaloniaList&amp;lt;T&amp;gt;. |
+
+<span id="uid-cc6fdcebfc"></span>
+
+### Fill
+
+Brush used to fill the TickBar's Ticks.
+
+```csharp
+public Avalonia.Media.IBrush Fill { get; set; }
+```
+
+<span id="uid-8df14df1b5"></span>
+
+### IsDirectionReversed
+
+The IsDirectionReversed property defines the direction of value incrementation.
+By default, if Tick's orientation is Horizontal, ticks will be drawn from left to right.
+(And, bottom to top for Vertical orientation).
+If IsDirectionReversed is 'true' the direction of the drawing will be in opposite direction.
+
+```csharp
+public System.Boolean IsDirectionReversed { get; set; }
+```
+
+<span id="uid-90a9ac795e"></span>
+
+### Maximum
+
+Logical position where the Maximum Tick will be drawn
+
+```csharp
+public System.Double Maximum { get; set; }
+```
+
+<span id="uid-633d9a0ad3"></span>
+
+### Minimum
+
+Logical position where the Minimum Tick will be drawn
+
+```csharp
+public System.Double Minimum { get; set; }
+```
+
+<span id="uid-1249633639"></span>
+
+### Orientation
+
+TickBar parent's orientation.
+
+```csharp
+public Avalonia.Layout.Orientation Orientation { get; set; }
+```
+
+<span id="uid-4abb32d2a5"></span>
+
+### Placement
+
+Placement property specified how the Tick will be placed.
+This property affects the way ticks are drawn.
+This property has type of [Avalonia.Controls.TickBarPlacement](xref:Avalonia.Controls.TickBarPlacement).
+
+```csharp
+public Avalonia.Controls.TickBarPlacement Placement { get; set; }
+```
+
+<span id="uid-4b9c45b91a"></span>
+
+### ReservedSpace
+
+TickBar will use ReservedSpaceProperty for left and right spacing (for horizontal orientation) or
+top and bottom spacing (for vertical orientation).
+The space on both sides of TickBar is half of specified ReservedSpace.
+This property has type of [Avalonia.Rect](xref:Avalonia.Rect).
+
+```csharp
+public Avalonia.Rect ReservedSpace { get; set; }
+```
+
+<span id="uid-9e7d206c06"></span>
+
+### TickFrequency
+
+TickFrequency property defines how the tick will be drawn.
+
+```csharp
+public System.Double TickFrequency { get; set; }
+```
+
+<span id="uid-91d804fe3f"></span>
+
+### Ticks
+
+The Ticks property contains collection of value of type Double which
+are the logical positions use to draw the ticks.
+The property value is a [Avalonia.Collections.AvaloniaList&lt;T&gt;](xref:Avalonia.Collections.AvaloniaList%601).
+
+```csharp
+public Avalonia.Collections.AvaloniaList<System.Double> Ticks { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [FillProperty](#uid-1c9a7c285c) | Defines the Avalonia.Controls.TickBar.Fill property. |
+| [IsDirectionReversedProperty](#uid-567f74fe90) | Defines the Avalonia.Controls.TickBar.IsDirectionReversed property. |
+| [MaximumProperty](#uid-58572fd177) | Defines the Avalonia.Controls.TickBar.Maximum property. |
+| [MinimumProperty](#uid-93e18c8409) | Defines the Avalonia.Controls.TickBar.Minimum property. |
+| [OrientationProperty](#uid-0c6069d7b7) | Defines the Avalonia.Controls.TickBar.Orientation property. |
+| [PlacementProperty](#uid-2b30d1ae72) | Defines the Avalonia.Controls.TickBar.Placement property. |
+| [ReservedSpaceProperty](#uid-f6488a5946) | Defines the Avalonia.Controls.TickBar.ReservedSpace property. |
+| [TickFrequencyProperty](#uid-5829d7c37e) | Defines the Avalonia.Controls.TickBar.TickFrequency property. |
+| [TicksProperty](#uid-6b189c62f0) | Defines the Avalonia.Controls.TickBar.Ticks property. |
+
+<span id="uid-1c9a7c285c"></span>
+
+### FillProperty
+
+Defines the [Avalonia.Controls.TickBar.Fill](xref:Avalonia.Controls.TickBar.Fill) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> FillProperty
+```
+
+<span id="uid-567f74fe90"></span>
+
+### IsDirectionReversedProperty
+
+Defines the [Avalonia.Controls.TickBar.IsDirectionReversed](xref:Avalonia.Controls.TickBar.IsDirectionReversed) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsDirectionReversedProperty
+```
+
+<span id="uid-58572fd177"></span>
+
+### MaximumProperty
+
+Defines the [Avalonia.Controls.TickBar.Maximum](xref:Avalonia.Controls.TickBar.Maximum) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> MaximumProperty
+```
+
+<span id="uid-93e18c8409"></span>
+
+### MinimumProperty
+
+Defines the [Avalonia.Controls.TickBar.Minimum](xref:Avalonia.Controls.TickBar.Minimum) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> MinimumProperty
+```
+
+<span id="uid-0c6069d7b7"></span>
+
+### OrientationProperty
+
+Defines the [Avalonia.Controls.TickBar.Orientation](xref:Avalonia.Controls.TickBar.Orientation) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.Orientation> OrientationProperty
+```
+
+<span id="uid-2b30d1ae72"></span>
+
+### PlacementProperty
+
+Defines the [Avalonia.Controls.TickBar.Placement](xref:Avalonia.Controls.TickBar.Placement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.TickBarPlacement> PlacementProperty
+```
+
+<span id="uid-f6488a5946"></span>
+
+### ReservedSpaceProperty
+
+Defines the [Avalonia.Controls.TickBar.ReservedSpace](xref:Avalonia.Controls.TickBar.ReservedSpace) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Rect> ReservedSpaceProperty
+```
+
+<span id="uid-5829d7c37e"></span>
+
+### TickFrequencyProperty
+
+Defines the [Avalonia.Controls.TickBar.TickFrequency](xref:Avalonia.Controls.TickBar.TickFrequency) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> TickFrequencyProperty
+```
+
+<span id="uid-6b189c62f0"></span>
+
+### TicksProperty
+
+Defines the [Avalonia.Controls.TickBar.Ticks](xref:Avalonia.Controls.TickBar.Ticks) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Collections.AvaloniaList<System.Double>> TicksProperty
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,153 @@
+---
+title: 'EventRoute'
+hide_title: true
+slug: '/avalonia/interactivity/eventroute'
+uid: 'Avalonia.Interactivity.EventRoute'
+commentId: 'T:Avalonia.Interactivity.EventRoute'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Interactivity'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EventRoute Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Interactivity</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds the route for a routed event and supports raising an event on that route.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EventRoute
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EventRoute
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EventRoute](#uid-41664681f3) | Initializes a new instance of the Avalonia.Interactivity.RoutedEvent class. |
+
+<span id="uid-41664681f3"></span>
+
+### EventRoute
+
+Initializes a new instance of the [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent) class.
+
+```csharp
+public EventRoute(Avalonia.Interactivity.RoutedEvent e)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `e` | The routed event to be raised. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-0f7dc04cf2) | No summary available. |
+| [AddClassHandler](#uid-b69b3099ee) | Adds a class handler to the route. |
+| [Dispose](#uid-483febc3dd) | Disposes of the event route. |
+| [RaiseEvent](#uid-904a4d5620) | Raises an event along the route. |
+
+<span id="uid-0f7dc04cf2"></span>
+
+### Add
+
+```csharp
+public System.Void Add(Avalonia.Interactivity.Interactive target, System.Delegate handler, Avalonia.Interactivity.RoutingStrategies routes, System.Boolean handledEventsToo, System.Action<System.Delegate, System.Object, Avalonia.Interactivity.RoutedEventArgs> adapter)
+```
+
+<span id="uid-b69b3099ee"></span>
+
+### AddClassHandler
+
+Adds a class handler to the route.
+
+```csharp
+public System.Void AddClassHandler(Avalonia.Interactivity.Interactive target)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `target` | The target on which the event should be raised. |
+
+<span id="uid-483febc3dd"></span>
+
+### Dispose
+
+Disposes of the event route.
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-904a4d5620"></span>
+
+### RaiseEvent
+
+Raises an event along the route.
+
+```csharp
+public System.Void RaiseEvent(Avalonia.Interactivity.Interactive source, Avalonia.Interactivity.RoutedEventArgs e)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `e` | The event args. |
+| `source` | The event source. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HasHandlers](#uid-a037c44ddb) | Gets a value indicating whether the route has any handlers. |
+
+<span id="uid-a037c44ddb"></span>
+
+### HasHandlers
+
+Gets a value indicating whether the route has any handlers.
+
+```csharp
+public System.Boolean HasHandlers { get; set; }
+```
+
+</ApiRefPage>
+

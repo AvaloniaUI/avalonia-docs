@@ -1,0 +1,100 @@
+---
+title: 'WeakEvent'
+hide_title: true
+slug: '/avalonia/utilities/weakevent'
+uid: 'Avalonia.Utilities.WeakEvent'
+commentId: 'T:Avalonia.Utilities.WeakEvent'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WeakEvent Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WeakEvent
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> WeakEvent
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WeakEvent](#uid-4cf60bfbdc) | No summary available. |
+
+<span id="uid-4cf60bfbdc"></span>
+
+### WeakEvent
+
+```csharp
+public WeakEvent()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Register (3 overloads)](#uid-88a4223e32) | No summary available. |
+
+<span id="uid-88a4223e32"></span>
+
+### Register overloads
+
+<span id="uid-20daa98eb3"></span>
+
+#### Register
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><TSender, System.EventArgs> Register<TSender>(System.Action<TSender, System.EventHandler> subscribe, System.Action<TSender, System.EventHandler> unsubscribe)
+```
+
+<span id="uid-e14383efe2"></span>
+
+#### Register
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><TSender, TEventArgs> Register<TSender, TEventArgs>(System.Action<TSender, System.EventHandler<TEventArgs>> subscribe, System.Action<TSender, System.EventHandler<TEventArgs>> unsubscribe)
+```
+
+<span id="uid-9086b937b9"></span>
+
+#### Register
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><TSender, TEventArgs> Register<TSender, TEventArgs>(System.Func<TSender, System.EventHandler<TEventArgs>, System.Action> subscribe)
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,459 @@
+---
+title: 'AvaloniaObject'
+hide_title: true
+slug: '/avalonia/avaloniaobject'
+uid: 'Avalonia.AvaloniaObject'
+commentId: 'T:Avalonia.AvaloniaObject'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaObject Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An object with [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) support.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaObject
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaObject
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaObjectDebug, INotifyPropertyChanged
+</div>
+</div>
+
+## Remarks
+
+This class is analogous to DependencyObject in WPF.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaObject](#uid-fc2c2e3573) | Initializes a new instance of the Avalonia.AvaloniaObject class. |
+
+<span id="uid-fc2c2e3573"></span>
+
+### AvaloniaObject
+
+Initializes a new instance of the [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) class.
+
+```csharp
+public AvaloniaObject()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (8 overloads)](#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess](#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads)](#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue](#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals](#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue](#uid-9c615efbba) | No summary available. |
+| [GetHashCode](#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads)](#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating](#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet](#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads)](#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads)](#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess](#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+
+<span id="uid-1c60c7bda3"></span>
+
+### Bind overloads
+
+<span id="uid-5a7868c126"></span>
+
+#### Bind
+
+Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase).
+
+```csharp
+public Avalonia.Data.BindingExpressionBase Bind(Avalonia.AvaloniaProperty property, Avalonia.Data.BindingBase binding)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `binding` | The binding. |
+| `property` | The property. |
+
+Returns: The binding expression which represents the binding instance on this object.
+
+<span id="uid-3ebb35a95c"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind(Avalonia.AvaloniaProperty property, System.IObservable<System.Object> source, Avalonia.Data.BindingPriority priority)
+```
+
+<span id="uid-35b4d18a3f"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind<T>(Avalonia.DirectPropertyBase<TValue><T> property, System.IObservable<Avalonia.Data.BindingValue<T><T>> source)
+```
+
+<span id="uid-6494c8de82"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind<T>(Avalonia.DirectPropertyBase<TValue><T> property, System.IObservable<System.Object> source)
+```
+
+<span id="uid-eb1a9c4b50"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind<T>(Avalonia.DirectPropertyBase<TValue><T> property, System.IObservable<T> source)
+```
+
+<span id="uid-f66c5a88bd"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind<T>(Avalonia.StyledProperty<TValue><T> property, System.IObservable<Avalonia.Data.BindingValue<T><T>> source, Avalonia.Data.BindingPriority priority)
+```
+
+<span id="uid-fb59823d2f"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind<T>(Avalonia.StyledProperty<TValue><T> property, System.IObservable<System.Object> source, Avalonia.Data.BindingPriority priority)
+```
+
+<span id="uid-55e5696054"></span>
+
+#### Bind
+
+```csharp
+public System.IDisposable Bind<T>(Avalonia.StyledProperty<TValue><T> property, System.IObservable<T> source, Avalonia.Data.BindingPriority priority)
+```
+
+<span id="uid-260ff7a68d"></span>
+
+### CheckAccess
+
+Returns a value indicating whether the current thread is the UI thread.
+
+```csharp
+public System.Boolean CheckAccess()
+```
+
+Returns: true if the current thread is the UI thread; otherwise false.
+
+<span id="uid-41de208fbe"></span>
+
+### ClearValue overloads
+
+<span id="uid-25f38dfbf3"></span>
+
+#### ClearValue
+
+Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value.
+
+```csharp
+public System.Void ClearValue(Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+
+<span id="uid-0ca9c3e409"></span>
+
+#### ClearValue
+
+```csharp
+public System.Void ClearValue<T>(Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+<span id="uid-6b86f664a3"></span>
+
+#### ClearValue
+
+```csharp
+public System.Void ClearValue<T>(Avalonia.DirectPropertyBase<TValue><T> property)
+```
+
+<span id="uid-37f4828667"></span>
+
+#### ClearValue
+
+```csharp
+public System.Void ClearValue<T>(Avalonia.StyledProperty<TValue><T> property)
+```
+
+<span id="uid-3bec32f39e"></span>
+
+### CoerceValue
+
+Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
+
+```csharp
+public System.Void CoerceValue(Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+
+<span id="uid-a8a8e94305"></span>
+
+### Equals
+
+Compares two objects using reference equality.
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `obj` | The object to compare. |
+
+<span id="uid-9c615efbba"></span>
+
+### GetBaseValue
+
+```csharp
+public Avalonia.Data.Optional<T><T> GetBaseValue<T>(Avalonia.StyledProperty<TValue><T> property)
+```
+
+<span id="uid-7f7db1e7a2"></span>
+
+### GetHashCode
+
+Gets the hash code for the object.
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-5142cd4792"></span>
+
+### GetValue overloads
+
+<span id="uid-e0a153b6e7"></span>
+
+#### GetValue
+
+Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value.
+
+```csharp
+public System.Object GetValue(Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+
+Returns: The value.
+
+<span id="uid-8c162a89e0"></span>
+
+#### GetValue
+
+```csharp
+public T GetValue<T>(Avalonia.DirectPropertyBase<TValue><T> property)
+```
+
+<span id="uid-be330a67d1"></span>
+
+#### GetValue
+
+```csharp
+public T GetValue<T>(Avalonia.StyledProperty<TValue><T> property)
+```
+
+<span id="uid-8cbfc7521a"></span>
+
+### IsAnimating
+
+Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating.
+
+```csharp
+public System.Boolean IsAnimating(Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+
+Returns: True if the property is animating, otherwise false.
+
+<span id="uid-f8bf0bbdcc"></span>
+
+### IsSet
+
+Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object.
+
+```csharp
+public System.Boolean IsSet(Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+
+Returns: True if the property is set, otherwise false.
+
+<span id="uid-38759fd088"></span>
+
+### SetCurrentValue overloads
+
+<span id="uid-703f017fe7"></span>
+
+#### SetCurrentValue
+
+Sets the value of a dependency property without changing its value source.
+
+```csharp
+public System.Void SetCurrentValue(Avalonia.AvaloniaProperty property, System.Object value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `property` | The property. |
+| `value` | The value. |
+
+<span id="uid-c1d6fc4e67"></span>
+
+#### SetCurrentValue
+
+```csharp
+public System.Void SetCurrentValue<T>(Avalonia.StyledProperty<TValue><T> property, T value)
+```
+
+<span id="uid-47d14e19d7"></span>
+
+### SetValue overloads
+
+<span id="uid-917caebbc9"></span>
+
+#### SetValue
+
+Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value.
+
+```csharp
+public System.IDisposable SetValue(Avalonia.AvaloniaProperty property, System.Object value, Avalonia.Data.BindingPriority priority)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `priority` | The priority of the value. |
+| `property` | The property. |
+| `value` | The value. |
+
+<span id="uid-c0b4ec727b"></span>
+
+#### SetValue
+
+```csharp
+public System.Void SetValue<T>(Avalonia.DirectPropertyBase<TValue><T> property, T value)
+```
+
+<span id="uid-17a1a7502a"></span>
+
+#### SetValue
+
+```csharp
+public System.IDisposable SetValue<T>(Avalonia.StyledProperty<TValue><T> property, T value, Avalonia.Data.BindingPriority priority)
+```
+
+<span id="uid-3b9d3c9793"></span>
+
+### VerifyAccess
+
+Checks that the current thread is the UI thread and throws if not.
+
+```csharp
+public System.Void VerifyAccess()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Dispatcher](#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item](#uid-c1d1f1bc0f) | No summary available. |
+
+<span id="uid-b25fa51632"></span>
+
+### Dispatcher
+
+Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this
+[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with.
+
+```csharp
+public Avalonia.Threading.Dispatcher Dispatcher { get; set; }
+```
+
+<span id="uid-c1d1f1bc0f"></span>
+
+### Item
+
+```csharp
+public Avalonia.Data.BindingBase Item { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
+
+<span id="uid-d758e26fae"></span>
+
+### PropertyChanged
+
+Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object.
+
+```csharp
+public event System.EventHandler<Avalonia.AvaloniaPropertyChangedEventArgs> PropertyChanged
+```
+
+</ApiRefPage>
+

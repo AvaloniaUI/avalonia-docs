@@ -1,0 +1,121 @@
+---
+title: 'ImmutableConicGradientBrush'
+hide_title: true
+slug: '/avalonia/media/immutable/immutableconicgradientbrush'
+uid: 'Avalonia.Media.Immutable.ImmutableConicGradientBrush'
+commentId: 'T:Avalonia.Media.Immutable.ImmutableConicGradientBrush'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Immutable'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImmutableConicGradientBrush Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Immutable</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A brush that draws with a sweep gradient.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ImmutableConicGradientBrush
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="immutablegradientbrush">ImmutableGradientBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> ImmutableConicGradientBrush
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../ibrush">IBrush</a>, <a href="../iconicgradientbrush">IConicGradientBrush</a>, <a href="../igradientbrush">IGradientBrush</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ImmutableConicGradientBrush (2 overloads)](#uid-bfaaea92d6) | Initializes a new instance of the Avalonia.Media.Immutable.ImmutableConicGradientBrush class. |
+
+<span id="uid-bfaaea92d6"></span>
+
+### ImmutableConicGradientBrush overloads
+
+<span id="uid-ccae0037e7"></span>
+
+#### ImmutableConicGradientBrush
+
+Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableConicGradientBrush](xref:Avalonia.Media.Immutable.ImmutableConicGradientBrush) class.
+
+```csharp
+public ImmutableConicGradientBrush(Avalonia.Media.ConicGradientBrush source)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `source` | The brush from which this brush's properties should be copied. |
+
+<span id="uid-080391aa71"></span>
+
+#### ImmutableConicGradientBrush
+
+```csharp
+public ImmutableConicGradientBrush(System.Collections.Generic.IReadOnlyList<Avalonia.Media.Immutable.ImmutableGradientStop> gradientStops, System.Double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, System.Nullable<Avalonia.RelativePoint> transformOrigin, Avalonia.Media.GradientSpreadMethod spreadMethod, System.Nullable<Avalonia.RelativePoint> center, System.Double angle)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Angle](#uid-a6b7e07417) | Gets the starting angle for the gradient in degrees, measured from the point above the center point. |
+| [Center](#uid-ce94873060) | Gets the center point for the gradient. |
+
+<span id="uid-a6b7e07417"></span>
+
+### Angle
+
+Gets the starting angle for the gradient in degrees, measured from
+the point above the center point.
+
+```csharp
+public System.Double Angle { get; set; }
+```
+
+<span id="uid-ce94873060"></span>
+
+### Center
+
+Gets the center point for the gradient.
+
+```csharp
+public Avalonia.RelativePoint Center { get; set; }
+```
+
+</ApiRefPage>
+

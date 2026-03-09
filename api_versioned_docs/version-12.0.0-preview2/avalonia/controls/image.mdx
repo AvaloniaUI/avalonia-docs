@@ -1,0 +1,190 @@
+---
+title: 'Image'
+hide_title: true
+slug: '/avalonia/controls/image'
+uid: 'Avalonia.Controls.Image'
+commentId: 'T:Avalonia.Controls.Image'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Image Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Displays a [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap) image.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Image
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> Image
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Image](#uid-b9bfb84970) | No summary available. |
+
+<span id="uid-b9bfb84970"></span>
+
+### Image
+
+```csharp
+public Image()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Render](#uid-9811dbd8b6) | Renders the control. |
+
+<span id="uid-9811dbd8b6"></span>
+
+### Render
+
+Renders the control.
+
+```csharp
+public System.Void Render(Avalonia.Media.DrawingContext context)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `context` | The drawing context. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BlendMode](#uid-2ce37ab41c) | Gets or sets the blend mode for the image. |
+| [Source](#uid-fbef9c487c) | Gets or sets the image that will be displayed. |
+| [Stretch](#uid-f349917eb1) | Gets or sets a value controlling how the image will be stretched. |
+| [StretchDirection](#uid-4bbb9ad432) | Gets or sets a value controlling in what direction the image will be stretched. |
+
+<span id="uid-2ce37ab41c"></span>
+
+### BlendMode
+
+Gets or sets the blend mode for the image.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode BlendMode { get; set; }
+```
+
+<span id="uid-fbef9c487c"></span>
+
+### Source
+
+Gets or sets the image that will be displayed.
+
+```csharp
+public Avalonia.Media.IImage Source { get; set; }
+```
+
+<span id="uid-f349917eb1"></span>
+
+### Stretch
+
+Gets or sets a value controlling how the image will be stretched.
+
+```csharp
+public Avalonia.Media.Stretch Stretch { get; set; }
+```
+
+<span id="uid-4bbb9ad432"></span>
+
+### StretchDirection
+
+Gets or sets a value controlling in what direction the image will be stretched.
+
+```csharp
+public Avalonia.Media.StretchDirection StretchDirection { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BlendModeProperty](#uid-497c84a4c3) | Defines the Avalonia.Controls.Image.BlendMode property. |
+| [SourceProperty](#uid-46223f42cc) | Defines the Avalonia.Controls.Image.Source property. |
+| [StretchDirectionProperty](#uid-c17361d94e) | Defines the Avalonia.Controls.Image.StretchDirection property. |
+| [StretchProperty](#uid-094d43c46b) | Defines the Avalonia.Controls.Image.Stretch property. |
+
+<span id="uid-497c84a4c3"></span>
+
+### BlendModeProperty
+
+Defines the [Avalonia.Controls.Image.BlendMode](xref:Avalonia.Controls.Image.BlendMode) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.Imaging.BitmapBlendingMode> BlendModeProperty
+```
+
+<span id="uid-46223f42cc"></span>
+
+### SourceProperty
+
+Defines the [Avalonia.Controls.Image.Source](xref:Avalonia.Controls.Image.Source) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IImage> SourceProperty
+```
+
+<span id="uid-c17361d94e"></span>
+
+### StretchDirectionProperty
+
+Defines the [Avalonia.Controls.Image.StretchDirection](xref:Avalonia.Controls.Image.StretchDirection) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.StretchDirection> StretchDirectionProperty
+```
+
+<span id="uid-094d43c46b"></span>
+
+### StretchProperty
+
+Defines the [Avalonia.Controls.Image.Stretch](xref:Avalonia.Controls.Image.Stretch) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.Stretch> StretchProperty
+```
+
+</ApiRefPage>
+

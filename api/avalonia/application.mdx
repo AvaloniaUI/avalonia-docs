@@ -1,0 +1,351 @@
+---
+title: 'Application'
+hide_title: true
+slug: '/avalonia/application'
+uid: 'Avalonia.Application'
+commentId: 'T:Avalonia.Application'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Application Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Encapsulates a Avalonia application.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Application
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> Application
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="controls/iglobaldatatemplates">IGlobalDataTemplates</a>, <a href="controls/iresourcehost">IResourceHost</a>, <a href="controls/iresourcenode">IResourceNode</a>, <a href="controls/templates/idatatemplatehost">IDataTemplateHost</a>, <a href="idatacontextprovider">IDataContextProvider</a>, <a href="ioptionalfeatureprovider">IOptionalFeatureProvider</a>, <a href="styling/iglobalstyles">IGlobalStyles</a>, <a href="styling/istylehost">IStyleHost</a>, <a href="styling/ithemevarianthost">IThemeVariantHost</a>
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Application](xref:Avalonia.Application) class encapsulates Avalonia application-specific
+functionality, including:
+- A global set of [Avalonia.Application.DataTemplates](xref:Avalonia.Application.DataTemplates).
+- A global set of [Avalonia.Application.Styles](xref:Avalonia.Application.Styles).
+- A [Avalonia.Input.FocusManager](xref:Avalonia.Input.FocusManager).
+- An [Avalonia.Application.InputManager](xref:Avalonia.Application.InputManager).
+- Registers services needed by the rest of Avalonia in the [Avalonia.Application.RegisterServices](xref:Avalonia.Application.RegisterServices)
+method.
+- Tracks the lifetime of the application.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Application](#uid-15ab86e14c) | Creates an instance of the Avalonia.Application class. |
+
+<span id="uid-15ab86e14c"></span>
+
+### Application
+
+Creates an instance of the [Avalonia.Application](xref:Avalonia.Application) class.
+
+```csharp
+public Application()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Initialize](#uid-52be68244b) | Initializes the application by loading XAML etc. |
+| [OnFrameworkInitializationCompleted](#uid-89a60ec540) | No summary available. |
+| [RegisterServices](#uid-141237462b) | Register's the services needed by Avalonia. |
+| [TryGetFeature](#uid-167f3f3976) | Queries for an optional feature. |
+| [TryGetResource](#uid-0edcd40f5c) | No summary available. |
+
+<span id="uid-52be68244b"></span>
+
+### Initialize
+
+Initializes the application by loading XAML etc.
+
+```csharp
+public System.Void Initialize()
+```
+
+<span id="uid-89a60ec540"></span>
+
+### OnFrameworkInitializationCompleted
+
+```csharp
+public System.Void OnFrameworkInitializationCompleted()
+```
+
+<span id="uid-141237462b"></span>
+
+### RegisterServices
+
+Register's the services needed by Avalonia.
+
+```csharp
+public System.Void RegisterServices()
+```
+
+<span id="uid-167f3f3976"></span>
+
+### TryGetFeature
+
+Queries for an optional feature.
+
+```csharp
+public System.Object TryGetFeature(System.Type featureType)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `featureType` | Feature type. |
+
+<span id="uid-0edcd40f5c"></span>
+
+### TryGetResource
+
+```csharp
+public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariant](#uid-64e2c748c4) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. |
+| [ApplicationLifetime](#uid-a0da2fa113) | Application lifetime, use it for things like setting the main window and exiting the app from code Currently supported lifetimes are: - Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime - Avalonia.Controls.ApplicationLifetimes.ISingleViewApplicationLifetime - Avalonia.Controls.ApplicationLifetimes.ISingleTopLevelApplicationLifetime - Avalonia.Controls.ApplicationLifetimes.IControlledApplicationLifetime |
+| [Current](#uid-6f6086e220) | Gets the current instance of the Avalonia.Application class. |
+| [DataContext](#uid-3090ece934) | Gets or sets the Applications's data context. |
+| [DataTemplates](#uid-6a03e04fc3) | Gets or sets the application's global data templates. |
+| [Name](#uid-9e435be47d) | Application name to be used for various platform-specific purposes |
+| [PlatformSettings](#uid-37be27508e) | Represents a contract for accessing global platform-specific settings. |
+| [RequestedThemeVariant](#uid-5c366c1387) | Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with ThemeVariant can override the app-level ThemeVariant. |
+| [Resources](#uid-ad05e868f8) | Gets the application's global resource dictionary. |
+| [Styles](#uid-56724faecc) | Gets the application's global styles. |
+
+<span id="uid-64e2c748c4"></span>
+
+### ActualThemeVariant
+
+Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty.
+
+```csharp
+public Avalonia.Styling.ThemeVariant ActualThemeVariant { get; set; }
+```
+
+Returns: If current control is contained in the ThemeVariantScope, TopLevel or Application with non-default RequestedThemeVariant, that value will be returned.
+Otherwise, current OS theme variant is returned.
+
+<span id="uid-a0da2fa113"></span>
+
+### ApplicationLifetime
+
+Application lifetime, use it for things like setting the main window and exiting the app from code
+Currently supported lifetimes are:
+- [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime)
+- [Avalonia.Controls.ApplicationLifetimes.ISingleViewApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.ISingleViewApplicationLifetime)
+- [Avalonia.Controls.ApplicationLifetimes.ISingleTopLevelApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.ISingleTopLevelApplicationLifetime)
+- [Avalonia.Controls.ApplicationLifetimes.IControlledApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.IControlledApplicationLifetime)
+
+```csharp
+public Avalonia.Controls.ApplicationLifetimes.IApplicationLifetime ApplicationLifetime { get; set; }
+```
+
+<span id="uid-6f6086e220"></span>
+
+### Current
+
+Gets the current instance of the [Avalonia.Application](xref:Avalonia.Application) class.
+
+```csharp
+public Avalonia.Application Current { get; set; }
+```
+
+Value: The current instance of the [Avalonia.Application](xref:Avalonia.Application) class.
+
+<span id="uid-3090ece934"></span>
+
+### DataContext
+
+Gets or sets the Applications's data context.
+
+```csharp
+public System.Object DataContext { get; set; }
+```
+
+<span id="uid-6a03e04fc3"></span>
+
+### DataTemplates
+
+Gets or sets the application's global data templates.
+
+```csharp
+public Avalonia.Controls.Templates.DataTemplates DataTemplates { get; set; }
+```
+
+Value: The application's global data templates.
+
+<span id="uid-9e435be47d"></span>
+
+### Name
+
+Application name to be used for various platform-specific purposes
+
+```csharp
+public System.String Name { get; set; }
+```
+
+<span id="uid-37be27508e"></span>
+
+### PlatformSettings
+
+Represents a contract for accessing global platform-specific settings.
+
+```csharp
+public Avalonia.Platform.IPlatformSettings PlatformSettings { get; set; }
+```
+
+<span id="uid-5c366c1387"></span>
+
+### RequestedThemeVariant
+
+Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination.
+The UI theme you specify with ThemeVariant can override the app-level ThemeVariant.
+
+```csharp
+public Avalonia.Styling.ThemeVariant RequestedThemeVariant { get; set; }
+```
+
+<span id="uid-ad05e868f8"></span>
+
+### Resources
+
+Gets the application's global resource dictionary.
+
+```csharp
+public Avalonia.Controls.IResourceDictionary Resources { get; set; }
+```
+
+<span id="uid-56724faecc"></span>
+
+### Styles
+
+Gets the application's global styles.
+
+```csharp
+public Avalonia.Styling.Styles Styles { get; set; }
+```
+
+Value: The application's global styles.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantProperty](#uid-5045ef9190) | No summary available. |
+| [DataContextProperty](#uid-a7e3346414) | Defines the Avalonia.Application.DataContext property. |
+| [NameProperty](#uid-de67b6e8cc) | Defines Name property |
+| [RequestedThemeVariantProperty](#uid-021bb71b9e) | No summary available. |
+
+<span id="uid-5045ef9190"></span>
+
+### ActualThemeVariantProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Styling.ThemeVariant> ActualThemeVariantProperty
+```
+
+<span id="uid-a7e3346414"></span>
+
+### DataContextProperty
+
+Defines the [Avalonia.Application.DataContext](xref:Avalonia.Application.DataContext) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> DataContextProperty
+```
+
+<span id="uid-de67b6e8cc"></span>
+
+### NameProperty
+
+Defines Name property
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Application, System.String> NameProperty
+```
+
+<span id="uid-021bb71b9e"></span>
+
+### RequestedThemeVariantProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Styling.ThemeVariant> RequestedThemeVariantProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantChanged](#uid-cfaf9aa916) | Raised when the theme variant is changed on the element or an ancestor of the element. |
+| [ResourcesChanged](#uid-deb388f7cf) | Raised when the resources change on the element or an ancestor of the element. |
+
+<span id="uid-cfaf9aa916"></span>
+
+### ActualThemeVariantChanged
+
+Raised when the theme variant is changed on the element or an ancestor of the element.
+
+```csharp
+public event System.EventHandler ActualThemeVariantChanged
+```
+
+<span id="uid-deb388f7cf"></span>
+
+### ResourcesChanged
+
+Raised when the resources change on the element or an ancestor of the element.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
+```
+
+</ApiRefPage>
+

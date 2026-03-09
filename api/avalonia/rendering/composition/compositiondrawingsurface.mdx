@@ -1,0 +1,146 @@
+---
+title: 'CompositionDrawingSurface'
+hide_title: true
+slug: '/avalonia/rendering/composition/compositiondrawingsurface'
+uid: 'Avalonia.Rendering.Composition.CompositionDrawingSurface'
+commentId: 'T:Avalonia.Rendering.Composition.CompositionDrawingSurface'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionDrawingSurface Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompositionDrawingSurface
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionsurface">CompositionSurface</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionDrawingSurface
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-ff4f87a0e1) | No summary available. |
+| [UpdateAsync](#uid-d9381b09c8) | Updates the surface contents using an unspecified automatic means of synchronization provided by the underlying platform |
+| [UpdateWithKeyedMutexAsync](#uid-8c0468851c) | Updates the surface contents using an imported memory image using a keyed mutex as the means of synchronization |
+| [UpdateWithSemaphoresAsync](#uid-1f3f69b88a) | Updates the surface contents using an imported memory image using a semaphore pair as the means of synchronization |
+| [UpdateWithTimelineSemaphoresAsync](#uid-6b68142bde) | Updates the surface contents using an imported memory image using a semaphore pair as the means of synchronization |
+
+<span id="uid-ff4f87a0e1"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-d9381b09c8"></span>
+
+### UpdateAsync
+
+Updates the surface contents using an unspecified automatic means of synchronization
+provided by the underlying platform
+
+```csharp
+public System.Threading.Tasks.Task UpdateAsync(Avalonia.Rendering.Composition.ICompositionImportedGpuImage image)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `image` | GPU image with new surface contents |
+
+Returns: A task that completes when update operation is completed and user code is free to destroy or dispose the image
+
+<span id="uid-8c0468851c"></span>
+
+### UpdateWithKeyedMutexAsync
+
+Updates the surface contents using an imported memory image using a keyed mutex as the means of synchronization
+
+```csharp
+public System.Threading.Tasks.Task UpdateWithKeyedMutexAsync(Avalonia.Rendering.Composition.ICompositionImportedGpuImage image, System.UInt32 acquireIndex, System.UInt32 releaseIndex)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `acquireIndex` | The mutex key to wait for before accessing the image |
+| `image` | GPU image with new surface contents |
+| `releaseIndex` | The mutex key to release for after accessing the image |
+
+Returns: A task that completes when update operation is completed and user code is free to destroy or dispose the image
+
+<span id="uid-1f3f69b88a"></span>
+
+### UpdateWithSemaphoresAsync
+
+Updates the surface contents using an imported memory image using a semaphore pair as the means of synchronization
+
+```csharp
+public System.Threading.Tasks.Task UpdateWithSemaphoresAsync(Avalonia.Rendering.Composition.ICompositionImportedGpuImage image, Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore waitForSemaphore, Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore signalSemaphore)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `image` | GPU image with new surface contents |
+| `signalSemaphore` | The semaphore to signal after accessing the image |
+| `waitForSemaphore` | The semaphore to wait for before accessing the image |
+
+Returns: A task that completes when update operation is completed and user code is free to destroy or dispose the image
+
+<span id="uid-6b68142bde"></span>
+
+### UpdateWithTimelineSemaphoresAsync
+
+Updates the surface contents using an imported memory image using a semaphore pair as the means of synchronization
+
+```csharp
+public System.Threading.Tasks.Task UpdateWithTimelineSemaphoresAsync(Avalonia.Rendering.Composition.ICompositionImportedGpuImage image, Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore waitForSemaphore, System.UInt64 waitForValue, Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore signalSemaphore, System.UInt64 signalValue)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `image` | GPU image with new surface contents |
+| `signalSemaphore` | The semaphore to signal after accessing the image |
+| `signalValue` | The value to signal after accessing the image |
+| `waitForSemaphore` | The semaphore to wait for before accessing the image |
+| `waitForValue` | The value to wait for before accessing the image |
+
+Returns: A task that completes when update operation is completed and user code is free to destroy or dispose the image
+
+</ApiRefPage>
+

@@ -1,0 +1,284 @@
+---
+title: 'TrayIcon'
+hide_title: true
+slug: '/avalonia/controls/trayicon'
+uid: 'Avalonia.Controls.TrayIcon'
+commentId: 'T:Avalonia.Controls.TrayIcon'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TrayIcon Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TrayIcon
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> TrayIcon
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="platform/inativemenuexporterprovider">INativeMenuExporterProvider</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TrayIcon](#uid-02b6a57fe1) | No summary available. |
+
+<span id="uid-02b6a57fe1"></span>
+
+### TrayIcon
+
+```csharp
+public TrayIcon()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-2c315aaa4a) | Disposes the tray icon (removing it from the tray area). |
+| [GetIcons](#uid-8e2efeffa2) | No summary available. |
+| [SetIcons](#uid-ec83647b02) | No summary available. |
+
+<span id="uid-2c315aaa4a"></span>
+
+### Dispose
+
+Disposes the tray icon (removing it from the tray area).
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-8e2efeffa2"></span>
+
+### GetIcons
+
+```csharp
+public Avalonia.Controls.TrayIcons GetIcons(Avalonia.Application o)
+```
+
+<span id="uid-ec83647b02"></span>
+
+### SetIcons
+
+```csharp
+public System.Void SetIcons(Avalonia.Application o, Avalonia.Controls.TrayIcons trayIcons)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Command](#uid-dede75dc69) | Gets or sets the Avalonia.Controls.TrayIcon.Command property of a TrayIcon. |
+| [CommandParameter](#uid-0b676076f7) | Gets or sets the parameter to pass to the Avalonia.Controls.TrayIcon.Command property of a Avalonia.Controls.TrayIcon. |
+| [Icon](#uid-73835dbb5e) | Gets or sets the icon of the TrayIcon. |
+| [IsVisible](#uid-39db3fe660) | Gets or sets the visibility of the TrayIcon. |
+| [Menu](#uid-3dae453589) | Gets or sets the Menu of the TrayIcon. |
+| [NativeMenuExporter](#uid-8508013d80) | No summary available. |
+| [ToolTipText](#uid-7db5f444b1) | Gets or sets the tooltip text of the TrayIcon. |
+
+<span id="uid-dede75dc69"></span>
+
+### Command
+
+Gets or sets the [Avalonia.Controls.TrayIcon.Command](xref:Avalonia.Controls.TrayIcon.Command) property of a TrayIcon.
+
+```csharp
+public System.Windows.Input.ICommand Command { get; set; }
+```
+
+<span id="uid-0b676076f7"></span>
+
+### CommandParameter
+
+Gets or sets the parameter to pass to the [Avalonia.Controls.TrayIcon.Command](xref:Avalonia.Controls.TrayIcon.Command) property of a
+[Avalonia.Controls.TrayIcon](xref:Avalonia.Controls.TrayIcon).
+
+```csharp
+public System.Object CommandParameter { get; set; }
+```
+
+<span id="uid-73835dbb5e"></span>
+
+### Icon
+
+Gets or sets the icon of the TrayIcon.
+
+```csharp
+public Avalonia.Controls.WindowIcon Icon { get; set; }
+```
+
+<span id="uid-39db3fe660"></span>
+
+### IsVisible
+
+Gets or sets the visibility of the TrayIcon.
+
+```csharp
+public System.Boolean IsVisible { get; set; }
+```
+
+<span id="uid-3dae453589"></span>
+
+### Menu
+
+Gets or sets the Menu of the TrayIcon.
+
+```csharp
+public Avalonia.Controls.NativeMenu Menu { get; set; }
+```
+
+<span id="uid-8508013d80"></span>
+
+### NativeMenuExporter
+
+```csharp
+public Avalonia.Controls.Platform.INativeMenuExporter NativeMenuExporter { get; set; }
+```
+
+<span id="uid-7db5f444b1"></span>
+
+### ToolTipText
+
+Gets or sets the tooltip text of the TrayIcon.
+
+```csharp
+public System.String ToolTipText { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CommandParameterProperty](#uid-ef5fcffc3c) | Defines the Avalonia.Controls.TrayIcon.CommandParameter property. |
+| [CommandProperty](#uid-5134cbd179) | Defines the Avalonia.Controls.TrayIcon.Command property. |
+| [IconProperty](#uid-5d0e1fafc7) | Defines the Avalonia.Controls.TrayIcon.Icon property. |
+| [IconsProperty](#uid-968815ae7c) | Defines the Avalonia.Controls.TrayIcons attached property. |
+| [IsVisibleProperty](#uid-b5e3e5245a) | Defines the Avalonia.Controls.TrayIcon.IsVisible property. |
+| [MenuProperty](#uid-8635d543ba) | Defines the Avalonia.Controls.TrayIcon.Menu property. |
+| [ToolTipTextProperty](#uid-45e38bb19e) | Defines the Avalonia.Controls.TrayIcon.ToolTipText property. |
+
+<span id="uid-ef5fcffc3c"></span>
+
+### CommandParameterProperty
+
+Defines the [Avalonia.Controls.TrayIcon.CommandParameter](xref:Avalonia.Controls.TrayIcon.CommandParameter) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> CommandParameterProperty
+```
+
+<span id="uid-5134cbd179"></span>
+
+### CommandProperty
+
+Defines the [Avalonia.Controls.TrayIcon.Command](xref:Avalonia.Controls.TrayIcon.Command) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Windows.Input.ICommand> CommandProperty
+```
+
+<span id="uid-5d0e1fafc7"></span>
+
+### IconProperty
+
+Defines the [Avalonia.Controls.TrayIcon.Icon](xref:Avalonia.Controls.TrayIcon.Icon) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.WindowIcon> IconProperty
+```
+
+<span id="uid-968815ae7c"></span>
+
+### IconsProperty
+
+Defines the [Avalonia.Controls.TrayIcons](xref:Avalonia.Controls.TrayIcons) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.TrayIcons> IconsProperty
+```
+
+<span id="uid-b5e3e5245a"></span>
+
+### IsVisibleProperty
+
+Defines the [Avalonia.Controls.TrayIcon.IsVisible](xref:Avalonia.Controls.TrayIcon.IsVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsVisibleProperty
+```
+
+<span id="uid-8635d543ba"></span>
+
+### MenuProperty
+
+Defines the [Avalonia.Controls.TrayIcon.Menu](xref:Avalonia.Controls.TrayIcon.Menu) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.NativeMenu> MenuProperty
+```
+
+<span id="uid-45e38bb19e"></span>
+
+### ToolTipTextProperty
+
+Defines the [Avalonia.Controls.TrayIcon.ToolTipText](xref:Avalonia.Controls.TrayIcon.ToolTipText) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> ToolTipTextProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Clicked](#uid-32e27586a8) | Raised when the TrayIcon is clicked. Note, this is only supported on Win32 and some Linux DEs, on OSX this event is not raised. |
+
+<span id="uid-32e27586a8"></span>
+
+### Clicked
+
+Raised when the TrayIcon is clicked.
+Note, this is only supported on Win32 and some Linux DEs,
+on OSX this event is not raised.
+
+```csharp
+public event System.EventHandler Clicked
+```
+
+</ApiRefPage>
+

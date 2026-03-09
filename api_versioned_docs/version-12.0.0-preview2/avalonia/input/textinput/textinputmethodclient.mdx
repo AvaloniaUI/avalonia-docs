@@ -1,0 +1,237 @@
+---
+title: 'TextInputMethodClient'
+hide_title: true
+slug: '/avalonia/input/textinput/textinputmethodclient'
+uid: 'Avalonia.Input.TextInput.TextInputMethodClient'
+commentId: 'T:Avalonia.Input.TextInput.TextInputMethodClient'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input.TextInput'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextInputMethodClient Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input.TextInput</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextInputMethodClient
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextInputMethodClient
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ExecuteContextMenuAction](#uid-09a71bff40) | Execute specific context menu actions |
+| [SetPreeditText (2 overloads)](#uid-07ee636bcb) | Sets the non-committed input string |
+
+<span id="uid-09a71bff40"></span>
+
+### ExecuteContextMenuAction
+
+Execute specific context menu actions
+
+```csharp
+public System.Void ExecuteContextMenuAction(Avalonia.Input.TextInput.ContextMenuAction action)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `action` | The [Avalonia.Input.TextInput.ContextMenuAction](xref:Avalonia.Input.TextInput.ContextMenuAction) to perform |
+
+<span id="uid-07ee636bcb"></span>
+
+### SetPreeditText overloads
+
+<span id="uid-7191b38837"></span>
+
+#### SetPreeditText
+
+Sets the non-committed input string
+
+```csharp
+public System.Void SetPreeditText(System.String preeditText)
+```
+
+<span id="uid-e77dcd6575"></span>
+
+#### SetPreeditText
+
+```csharp
+public System.Void SetPreeditText(System.String preeditText, System.Nullable<System.Int32> cursorPos)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CursorRectangle](#uid-1df1a50378) | Gets the cursor rectangle relative to the TextViewVisual |
+| [Selection](#uid-18676137da) | Gets or sets the curent selection range within current surrounding text. |
+| [SupportsPreedit](#uid-98d5f46c95) | Indicates if TextViewVisual is capable of displaying non-committed input on the cursor position |
+| [SupportsSurroundingText](#uid-b000dfcc62) | Indicates if text input client is capable of providing the text around the cursor |
+| [SurroundingText](#uid-31223fd910) | Returns the text around the cursor, usually the current paragraph |
+| [TextViewVisual](#uid-0cd0343efd) | The visual that's showing the text |
+
+<span id="uid-1df1a50378"></span>
+
+### CursorRectangle
+
+Gets the cursor rectangle relative to the TextViewVisual
+
+```csharp
+public Avalonia.Rect CursorRectangle { get; set; }
+```
+
+<span id="uid-18676137da"></span>
+
+### Selection
+
+Gets or sets the curent selection range within current surrounding text.
+
+```csharp
+public Avalonia.Input.TextInput.TextSelection Selection { get; set; }
+```
+
+<span id="uid-98d5f46c95"></span>
+
+### SupportsPreedit
+
+Indicates if TextViewVisual is capable of displaying non-committed input on the cursor position
+
+```csharp
+public System.Boolean SupportsPreedit { get; set; }
+```
+
+<span id="uid-b000dfcc62"></span>
+
+### SupportsSurroundingText
+
+Indicates if text input client is capable of providing the text around the cursor
+
+```csharp
+public System.Boolean SupportsSurroundingText { get; set; }
+```
+
+<span id="uid-31223fd910"></span>
+
+### SurroundingText
+
+Returns the text around the cursor, usually the current paragraph
+
+```csharp
+public System.String SurroundingText { get; set; }
+```
+
+<span id="uid-0cd0343efd"></span>
+
+### TextViewVisual
+
+The visual that's showing the text
+
+```csharp
+public Avalonia.Visual TextViewVisual { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CursorRectangleChanged](#uid-82e53c08fd) | Fires when the cursor rectangle has changed |
+| [InputPaneActivationRequested](#uid-8ea89f8553) | Fires when client requests the input panel be opened. |
+| [ResetRequested](#uid-57ea1c6a90) | Fires when client wants to reset IME state |
+| [SelectionChanged](#uid-25cfcfdf97) | Fires when the selection has changed |
+| [SurroundingTextChanged](#uid-898a8095ac) | Fires when the surrounding text has changed |
+| [TextViewVisualChanged](#uid-a856fcd295) | Fires when the text view visual has changed |
+
+<span id="uid-82e53c08fd"></span>
+
+### CursorRectangleChanged
+
+Fires when the cursor rectangle has changed
+
+```csharp
+public event System.EventHandler CursorRectangleChanged
+```
+
+<span id="uid-8ea89f8553"></span>
+
+### InputPaneActivationRequested
+
+Fires when client requests the input panel be opened.
+
+```csharp
+public event System.EventHandler InputPaneActivationRequested
+```
+
+<span id="uid-57ea1c6a90"></span>
+
+### ResetRequested
+
+Fires when client wants to reset IME state
+
+```csharp
+public event System.EventHandler ResetRequested
+```
+
+<span id="uid-25cfcfdf97"></span>
+
+### SelectionChanged
+
+Fires when the selection has changed
+
+```csharp
+public event System.EventHandler SelectionChanged
+```
+
+<span id="uid-898a8095ac"></span>
+
+### SurroundingTextChanged
+
+Fires when the surrounding text has changed
+
+```csharp
+public event System.EventHandler SurroundingTextChanged
+```
+
+<span id="uid-a856fcd295"></span>
+
+### TextViewVisualChanged
+
+Fires when the text view visual has changed
+
+```csharp
+public event System.EventHandler TextViewVisualChanged
+```
+
+</ApiRefPage>
+

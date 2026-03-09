@@ -1,0 +1,85 @@
+---
+title: 'IResourceDictionary'
+hide_title: true
+slug: '/avalonia/controls/iresourcedictionary'
+uid: 'Avalonia.Controls.IResourceDictionary'
+commentId: 'T:Avalonia.Controls.IResourceDictionary'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IResourceDictionary Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An indexed dictionary of resources.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IResourceDictionary
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iresourcenode">IResourceNode</a>, <a href="iresourceprovider">IResourceProvider</a>, ICollection&lt;KeyValuePair&lt;Object,Object&gt;&gt;, IDictionary&lt;Object,Object&gt;, IEnumerable&lt;KeyValuePair&lt;Object,Object&gt;&gt;, IEnumerable
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MergedDictionaries](#uid-c93dfb2260) | Gets a collection of child resource dictionaries. |
+| [ThemeDictionaries](#uid-1861259eac) | Gets a collection of merged resource dictionaries that are specifically keyed and composed to address theme scenarios. |
+
+<span id="uid-c93dfb2260"></span>
+
+### MergedDictionaries
+
+Gets a collection of child resource dictionaries.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.IResourceProvider> MergedDictionaries { get; set; }
+```
+
+<span id="uid-1861259eac"></span>
+
+### ThemeDictionaries
+
+Gets a collection of merged resource dictionaries that are specifically keyed and composed to address theme scenarios.
+
+```csharp
+public System.Collections.Generic.IDictionary<Avalonia.Styling.ThemeVariant, Avalonia.Controls.IThemeVariantProvider> ThemeDictionaries { get; set; }
+```
+
+</ApiRefPage>
+

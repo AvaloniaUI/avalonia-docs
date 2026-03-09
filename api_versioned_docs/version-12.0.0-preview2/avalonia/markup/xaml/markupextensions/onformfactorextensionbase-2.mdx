@@ -1,0 +1,126 @@
+---
+title: 'OnFormFactorExtensionBase<TReturn, TOn>'
+hide_title: true
+slug: '/avalonia/markup/xaml/markupextensions/onformfactorextensionbase-2'
+uid: 'Avalonia.Markup.Xaml.MarkupExtensions.OnFormFactorExtensionBase`2'
+commentId: 'T:Avalonia.Markup.Xaml.MarkupExtensions.OnFormFactorExtensionBase`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.MarkupExtensions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">OnFormFactorExtensionBase&lt;TReturn, TOn&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.MarkupExtensions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides form factor-specific value for T for the current target device.
+This extension defines "form-factor" as a "device type" rather than "screen type".
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class OnFormFactorExtensionBase<TReturn, TOn>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> OnFormFactorExtensionBase&lt;TReturn, TOn&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAddChild&lt;&lt;T&gt;&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ProvideValue](#uid-702369cdb8) | No summary available. |
+
+<span id="uid-702369cdb8"></span>
+
+### ProvideValue
+
+```csharp
+public System.Object ProvideValue()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-c12b39c63c) | Gets or sets the value applied by default. If not set, default(TReturn) is assigned to the value. |
+| [Desktop](#uid-d702b3c7e1) | Gets or sets the value applied on desktop systems. |
+| [Mobile](#uid-b757442a3d) | Gets or sets the value applied on mobile systems. |
+| [TV](#uid-a3ee9c3e58) | Gets or sets the value applied on TV systems. |
+
+<span id="uid-c12b39c63c"></span>
+
+### Default
+
+Gets or sets the value applied by default.
+If not set, default(TReturn) is assigned to the value.
+
+```csharp
+public TReturn Default { get; set; }
+```
+
+<span id="uid-d702b3c7e1"></span>
+
+### Desktop
+
+Gets or sets the value applied on desktop systems.
+
+```csharp
+public TReturn Desktop { get; set; }
+```
+
+<span id="uid-b757442a3d"></span>
+
+### Mobile
+
+Gets or sets the value applied on mobile systems.
+
+```csharp
+public TReturn Mobile { get; set; }
+```
+
+<span id="uid-a3ee9c3e58"></span>
+
+### TV
+
+Gets or sets the value applied on TV systems.
+
+```csharp
+public TReturn TV { get; set; }
+```
+
+</ApiRefPage>
+

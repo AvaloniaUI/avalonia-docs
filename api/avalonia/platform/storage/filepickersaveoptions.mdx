@@ -1,0 +1,121 @@
+---
+title: 'FilePickerSaveOptions'
+hide_title: true
+slug: '/avalonia/platform/storage/filepickersaveoptions'
+uid: 'Avalonia.Platform.Storage.FilePickerSaveOptions'
+commentId: 'T:Avalonia.Platform.Storage.FilePickerSaveOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FilePickerSaveOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Options class for [Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerAsync(Avalonia.Platform.Storage.FilePickerSaveOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerAsync%28Avalonia.Platform.Storage.FilePickerSaveOptions%29) method.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FilePickerSaveOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="pickeroptions">PickerOptions</a> <span className="apiref-page__relation-separator">-&gt;</span> FilePickerSaveOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FilePickerSaveOptions](#uid-9b9bea102b) | No summary available. |
+
+<span id="uid-9b9bea102b"></span>
+
+### FilePickerSaveOptions
+
+```csharp
+public FilePickerSaveOptions()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DefaultExtension](#uid-2da5de5240) | Gets or sets the default extension to be used to save the file. |
+| [FileTypeChoices](#uid-34ebeed348) | Gets or sets the collection of valid file types that the user can choose to assign to a file. |
+| [ShowOverwritePrompt](#uid-a80f1bf533) | Gets or sets a value indicating whether file open picker displays a warning if the user specifies the name of a file that already exists. |
+| [SuggestedFileType](#uid-00b8dc37d9) | Gets or sets the file type that should be preselected when the dialog is opened. |
+
+<span id="uid-2da5de5240"></span>
+
+### DefaultExtension
+
+Gets or sets the default extension to be used to save the file.
+
+```csharp
+public System.String DefaultExtension { get; set; }
+```
+
+<span id="uid-34ebeed348"></span>
+
+### FileTypeChoices
+
+Gets or sets the collection of valid file types that the user can choose to assign to a file.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.Storage.FilePickerFileType> FileTypeChoices { get; set; }
+```
+
+<span id="uid-a80f1bf533"></span>
+
+### ShowOverwritePrompt
+
+Gets or sets a value indicating whether file open picker displays a warning if the user specifies the name of a file that already exists.
+
+```csharp
+public System.Nullable<System.Boolean> ShowOverwritePrompt { get; set; }
+```
+
+<span id="uid-00b8dc37d9"></span>
+
+### SuggestedFileType
+
+Gets or sets the file type that should be preselected when the dialog is opened.
+
+```csharp
+public Avalonia.Platform.Storage.FilePickerFileType SuggestedFileType { get; set; }
+```
+
+</ApiRefPage>
+

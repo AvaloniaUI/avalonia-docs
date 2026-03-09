@@ -1,0 +1,548 @@
+---
+title: 'TopLevel'
+hide_title: true
+slug: '/avalonia/controls/toplevel'
+uid: 'Avalonia.Controls.TopLevel'
+commentId: 'T:Avalonia.Controls.TopLevel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TopLevel Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for top-level widgets.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TopLevel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> TopLevel
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../input/icloseable">ICloseable</a>, <a href="../logicaltree/ilogical">ILogical</a>, <a href="../logicaltree/ilogicalroot">ILogicalRoot</a>, <a href="../styling/istylehost">IStyleHost</a>
+</div>
+</div>
+
+## Remarks
+
+This class acts as a base for top level widget.
+It handles scheduling layout, styling and rendering as well as
+tracking the widget's [Avalonia.Controls.TopLevel.ClientSize](xref:Avalonia.Controls.TopLevel.ClientSize).
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TopLevel](#uid-6ed2bf26c9) | Initializes a new instance of the Avalonia.Controls.TopLevel class. |
+
+<span id="uid-6ed2bf26c9"></span>
+
+### TopLevel
+
+Initializes a new instance of the [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel) class.
+
+```csharp
+public TopLevel(Avalonia.Platform.ITopLevelImpl impl)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `impl` | The platform-specific window implementation. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAutoSafeAreaPadding](#uid-0956557a63) | Gets if auto safe area padding is enabled. |
+| [GetSystemBarColor](#uid-14ab05782d) | Helper for getting the color of the platform's system bars. |
+| [GetTopLevel](#uid-0cc8f3b51f) | Gets the Avalonia.Controls.TopLevel for which the given Avalonia.Visual is hosted in. |
+| [RequestAnimationFrame](#uid-a57963b43d) | No summary available. |
+| [RequestPlatformInhibition](#uid-34bc9e0df3) | Requests a Avalonia.Controls.PlatformInhibitionType to be inhibited. The behavior remains inhibited until the return value is disposed. The available set of Avalonia.Controls.PlatformInhibitionTypes depends on the platform. If a behavior is inhibited on a platform where this type is not supported the request will have no effect. |
+| [SetAutoSafeAreaPadding](#uid-2691a51e01) | Enabled or disables whenever TopLevel should automatically adjust paddings depending on the safe area. |
+| [SetSystemBarColor](#uid-1359f0a6ef) | Gets or sets the keyboard navigation handler for the window. |
+| [TryGetPlatformHandle](#uid-f886eb2cf2) | Trys to get the platform handle for the TopLevel-derived control. |
+
+<span id="uid-0956557a63"></span>
+
+### GetAutoSafeAreaPadding
+
+Gets if auto safe area padding is enabled.
+
+```csharp
+public System.Boolean GetAutoSafeAreaPadding(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The main view attached to the toplevel, or the toplevel. |
+
+<span id="uid-14ab05782d"></span>
+
+### GetSystemBarColor
+
+Helper for getting the color of the platform's system bars.
+
+```csharp
+public Avalonia.Media.SolidColorBrush GetSystemBarColor(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The main view attached to the toplevel, or the toplevel. |
+
+Returns: The current color of the platform's system bars.
+
+<span id="uid-0cc8f3b51f"></span>
+
+### GetTopLevel
+
+Gets the [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel) for which the given [Avalonia.Visual](xref:Avalonia.Visual) is hosted in.
+
+```csharp
+public Avalonia.Controls.TopLevel GetTopLevel(Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `visual` | The visual to query its TopLevel |
+
+Returns: The TopLevel
+
+<span id="uid-a57963b43d"></span>
+
+### RequestAnimationFrame
+
+```csharp
+public System.Void RequestAnimationFrame(System.Action<System.TimeSpan> action)
+```
+
+<span id="uid-34bc9e0df3"></span>
+
+### RequestPlatformInhibition
+
+Requests a [Avalonia.Controls.PlatformInhibitionType](xref:Avalonia.Controls.PlatformInhibitionType) to be inhibited.
+The behavior remains inhibited until the return value is disposed.
+The available set of [Avalonia.Controls.PlatformInhibitionType](xref:Avalonia.Controls.PlatformInhibitionType)s depends on the platform.
+If a behavior is inhibited on a platform where this type is not supported the request will have no effect.
+
+```csharp
+public System.Threading.Tasks.Task<System.IDisposable> RequestPlatformInhibition(Avalonia.Controls.PlatformInhibitionType type, System.String reason)
+```
+
+<span id="uid-2691a51e01"></span>
+
+### SetAutoSafeAreaPadding
+
+Enabled or disables whenever TopLevel should automatically adjust paddings depending on the safe area.
+
+```csharp
+public System.Void SetAutoSafeAreaPadding(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The main view attached to the toplevel, or the toplevel. |
+| `value` | Value to be set. |
+
+<span id="uid-1359f0a6ef"></span>
+
+### SetSystemBarColor
+
+Gets or sets the keyboard navigation handler for the window.
+
+```csharp
+public System.Void SetSystemBarColor(Avalonia.Controls.Control control, Avalonia.Media.SolidColorBrush color)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `color` | The color to set. |
+| `control` | The main view attached to the toplevel, or the toplevel. |
+
+<span id="uid-f886eb2cf2"></span>
+
+### TryGetPlatformHandle
+
+Trys to get the platform handle for the TopLevel-derived control.
+
+```csharp
+public Avalonia.Platform.IPlatformHandle TryGetPlatformHandle()
+```
+
+Returns: An [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle) describing the window handle, or null if the handle
+could not be retrieved.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualTransparencyLevel](#uid-b06b4e75d1) | Gets the achieved Avalonia.Controls.WindowTransparencyLevel that the platform was able to provide. |
+| [ClientSize](#uid-8f098564dd) | Gets or sets the client size of the window. |
+| [Clipboard](#uid-483d6e6028) | Gets the platform's clipboard implementation |
+| [FocusManager](#uid-f485cb461f) | Gets focus manager of the root. |
+| [FrameSize](#uid-f8415332cb) | Gets or sets the total size of the window. |
+| [InputPane](#uid-a71bd123e4) | No summary available. |
+| [InsetsManager](#uid-a83543123e) | No summary available. |
+| [Launcher](#uid-6209ecb628) | No summary available. |
+| [PlatformImpl](#uid-3ca4f39e8d) | Gets the platform-specific window implementation. |
+| [RenderScaling](#uid-713cad322e) | No summary available. |
+| [RendererDiagnostics](#uid-562a1b9c83) | Gets a value indicating whether the renderer should draw specific diagnostics. |
+| [RequestedThemeVariant](#uid-8116f29014) | Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with ThemeVariant can override the app-level ThemeVariant. |
+| [Screens](#uid-05dbf070ac) | Gets platform screens implementation. |
+| [StorageProvider](#uid-e2ce35d5c2) | File System storage service used for file pickers and bookmarks. |
+| [TransparencyBackgroundFallback](#uid-2e4e3f8e4e) | Gets or sets the Avalonia.Media.IBrush that transparency will blend with when transparency is not supported. By default this is a solid white brush. |
+| [TransparencyLevelHint](#uid-0593983597) | Gets or sets the Avalonia.Controls.WindowTransparencyLevel that the TopLevel should use when possible. Accepts multiple values which are applied in a fallback order. For instance, with "Mica, Blur" Mica will be applied only on platforms where it is possible, and Blur will be used on the rest of them. Default value is an empty array or "None". |
+
+<span id="uid-b06b4e75d1"></span>
+
+### ActualTransparencyLevel
+
+Gets the achieved [Avalonia.Controls.WindowTransparencyLevel](xref:Avalonia.Controls.WindowTransparencyLevel) that the platform was able to provide.
+
+```csharp
+public Avalonia.Controls.WindowTransparencyLevel ActualTransparencyLevel { get; set; }
+```
+
+<span id="uid-8f098564dd"></span>
+
+### ClientSize
+
+Gets or sets the client size of the window.
+
+```csharp
+public Avalonia.Size ClientSize { get; set; }
+```
+
+<span id="uid-483d6e6028"></span>
+
+### Clipboard
+
+Gets the platform's clipboard implementation
+
+```csharp
+public Avalonia.Input.Platform.IClipboard Clipboard { get; set; }
+```
+
+<span id="uid-f485cb461f"></span>
+
+### FocusManager
+
+Gets focus manager of the root.
+
+```csharp
+public Avalonia.Input.IFocusManager FocusManager { get; set; }
+```
+
+<span id="uid-f8415332cb"></span>
+
+### FrameSize
+
+Gets or sets the total size of the window.
+
+```csharp
+public System.Nullable<Avalonia.Size> FrameSize { get; set; }
+```
+
+<span id="uid-a71bd123e4"></span>
+
+### InputPane
+
+```csharp
+public Avalonia.Controls.Platform.IInputPane InputPane { get; set; }
+```
+
+<span id="uid-a83543123e"></span>
+
+### InsetsManager
+
+```csharp
+public Avalonia.Controls.Platform.IInsetsManager InsetsManager { get; set; }
+```
+
+<span id="uid-6209ecb628"></span>
+
+### Launcher
+
+```csharp
+public Avalonia.Platform.Storage.ILauncher Launcher { get; set; }
+```
+
+<span id="uid-3ca4f39e8d"></span>
+
+### PlatformImpl
+
+Gets the platform-specific window implementation.
+
+```csharp
+public Avalonia.Platform.ITopLevelImpl PlatformImpl { get; set; }
+```
+
+<span id="uid-713cad322e"></span>
+
+### RenderScaling
+
+```csharp
+public System.Double RenderScaling { get; set; }
+```
+
+<span id="uid-562a1b9c83"></span>
+
+### RendererDiagnostics
+
+Gets a value indicating whether the renderer should draw specific diagnostics.
+
+```csharp
+public Avalonia.Rendering.RendererDiagnostics RendererDiagnostics { get; set; }
+```
+
+<span id="uid-8116f29014"></span>
+
+### RequestedThemeVariant
+
+Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination.
+The UI theme you specify with ThemeVariant can override the app-level ThemeVariant.
+
+```csharp
+public Avalonia.Styling.ThemeVariant RequestedThemeVariant { get; set; }
+```
+
+<span id="uid-05dbf070ac"></span>
+
+### Screens
+
+Gets platform screens implementation.
+
+```csharp
+public Avalonia.Controls.Screens Screens { get; set; }
+```
+
+<span id="uid-e2ce35d5c2"></span>
+
+### StorageProvider
+
+File System storage service used for file pickers and bookmarks.
+
+```csharp
+public Avalonia.Platform.Storage.IStorageProvider StorageProvider { get; set; }
+```
+
+<span id="uid-2e4e3f8e4e"></span>
+
+### TransparencyBackgroundFallback
+
+Gets or sets the [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) that transparency will blend with when transparency is not supported.
+By default this is a solid white brush.
+
+```csharp
+public Avalonia.Media.IBrush TransparencyBackgroundFallback { get; set; }
+```
+
+<span id="uid-0593983597"></span>
+
+### TransparencyLevelHint
+
+Gets or sets the [Avalonia.Controls.WindowTransparencyLevel](xref:Avalonia.Controls.WindowTransparencyLevel) that the TopLevel should use when possible.
+Accepts multiple values which are applied in a fallback order.
+For instance, with "Mica, Blur" Mica will be applied only on platforms where it is possible,
+and Blur will be used on the rest of them. Default value is an empty array or "None".
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.WindowTransparencyLevel> TransparencyLevelHint { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantProperty](#uid-3449282ab9) | No summary available. |
+| [ActualTransparencyLevelProperty](#uid-bc59cb5fcd) | Defines the Avalonia.Controls.TopLevel.ActualTransparencyLevel property. |
+| [AutoSafeAreaPaddingProperty](#uid-89a01534af) | Defines the AutoSafeAreaPadding attached property. |
+| [BackRequestedEvent](#uid-781fe51795) | Defines the Avalonia.Controls.TopLevel.BackRequested event. |
+| [ClientSizeProperty](#uid-bf9c603fe2) | Defines the Avalonia.Controls.TopLevel.ClientSize property. |
+| [FrameSizeProperty](#uid-eea3e5caa1) | Defines the Avalonia.Controls.TopLevel.FrameSize property. |
+| [RequestedThemeVariantProperty](#uid-28f95db217) | No summary available. |
+| [SystemBarColorProperty](#uid-03d364afae) | Defines the SystemBarColor attached property. |
+| [TransparencyBackgroundFallbackProperty](#uid-ac3a27d16b) | Defines the Avalonia.Controls.TopLevel.TransparencyBackgroundFallback property. |
+| [TransparencyLevelHintProperty](#uid-d088bd6f58) | Defines the Avalonia.Controls.TopLevel.TransparencyLevelHint property. |
+
+<span id="uid-3449282ab9"></span>
+
+### ActualThemeVariantProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Styling.ThemeVariant> ActualThemeVariantProperty
+```
+
+<span id="uid-bc59cb5fcd"></span>
+
+### ActualTransparencyLevelProperty
+
+Defines the [Avalonia.Controls.TopLevel.ActualTransparencyLevel](xref:Avalonia.Controls.TopLevel.ActualTransparencyLevel) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TopLevel, Avalonia.Controls.WindowTransparencyLevel> ActualTransparencyLevelProperty
+```
+
+<span id="uid-89a01534af"></span>
+
+### AutoSafeAreaPaddingProperty
+
+Defines the AutoSafeAreaPadding attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> AutoSafeAreaPaddingProperty
+```
+
+<span id="uid-781fe51795"></span>
+
+### BackRequestedEvent
+
+Defines the [Avalonia.Controls.TopLevel.BackRequested](xref:Avalonia.Controls.TopLevel.BackRequested) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> BackRequestedEvent
+```
+
+<span id="uid-bf9c603fe2"></span>
+
+### ClientSizeProperty
+
+Defines the [Avalonia.Controls.TopLevel.ClientSize](xref:Avalonia.Controls.TopLevel.ClientSize) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TopLevel, Avalonia.Size> ClientSizeProperty
+```
+
+<span id="uid-eea3e5caa1"></span>
+
+### FrameSizeProperty
+
+Defines the [Avalonia.Controls.TopLevel.FrameSize](xref:Avalonia.Controls.TopLevel.FrameSize) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TopLevel, System.Nullable<Avalonia.Size>> FrameSizeProperty
+```
+
+<span id="uid-28f95db217"></span>
+
+### RequestedThemeVariantProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Styling.ThemeVariant> RequestedThemeVariantProperty
+```
+
+<span id="uid-03d364afae"></span>
+
+### SystemBarColorProperty
+
+Defines the SystemBarColor attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.SolidColorBrush> SystemBarColorProperty
+```
+
+<span id="uid-ac3a27d16b"></span>
+
+### TransparencyBackgroundFallbackProperty
+
+Defines the [Avalonia.Controls.TopLevel.TransparencyBackgroundFallback](xref:Avalonia.Controls.TopLevel.TransparencyBackgroundFallback) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> TransparencyBackgroundFallbackProperty
+```
+
+<span id="uid-d088bd6f58"></span>
+
+### TransparencyLevelHintProperty
+
+Defines the [Avalonia.Controls.TopLevel.TransparencyLevelHint](xref:Avalonia.Controls.TopLevel.TransparencyLevelHint) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IReadOnlyList<Avalonia.Controls.WindowTransparencyLevel>> TransparencyLevelHintProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [BackRequested](#uid-3ef3790149) | Occurs when physical Back Button is pressed or a back navigation has been requested. |
+| [Closed](#uid-feb963478f) | Fired when the window is closed. |
+| [Opened](#uid-eec89b4de0) | Fired when the window is opened. |
+| [ScalingChanged](#uid-de8f4f22e5) | Gets or sets a method called when the TopLevel's scaling changes. |
+
+<span id="uid-3ef3790149"></span>
+
+### BackRequested
+
+Occurs when physical Back Button is pressed or a back navigation has been requested.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> BackRequested
+```
+
+<span id="uid-feb963478f"></span>
+
+### Closed
+
+Fired when the window is closed.
+
+```csharp
+public event System.EventHandler Closed
+```
+
+<span id="uid-eec89b4de0"></span>
+
+### Opened
+
+Fired when the window is opened.
+
+```csharp
+public event System.EventHandler Opened
+```
+
+<span id="uid-de8f4f22e5"></span>
+
+### ScalingChanged
+
+Gets or sets a method called when the TopLevel's scaling changes.
+
+```csharp
+public event System.EventHandler ScalingChanged
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,273 @@
+---
+title: 'Rotate3DTransform'
+hide_title: true
+slug: '/avalonia/media/rotate3dtransform'
+uid: 'Avalonia.Media.Rotate3DTransform'
+commentId: 'T:Avalonia.Media.Rotate3DTransform'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Rotate3DTransform Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Non-Affine 3D transformation for rotating a visual around a definable axis
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Rotate3DTransform
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="transform">Transform</a> <span className="apiref-page__relation-separator">-&gt;</span> Rotate3DTransform
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Rotate3DTransform (2 overloads)](#uid-8d16159108) | Initializes a new instance of the Avalonia.Media.Rotate3DTransform class. |
+
+<span id="uid-8d16159108"></span>
+
+### Rotate3DTransform overloads
+
+<span id="uid-ee16e7c112"></span>
+
+#### Rotate3DTransform
+
+Initializes a new instance of the [Avalonia.Media.Rotate3DTransform](xref:Avalonia.Media.Rotate3DTransform) class.
+
+```csharp
+public Rotate3DTransform()
+```
+
+<span id="uid-0b6529971a"></span>
+
+#### Rotate3DTransform
+
+Initializes a new instance of the [Avalonia.Media.Rotate3DTransform](xref:Avalonia.Media.Rotate3DTransform) class.
+
+```csharp
+public Rotate3DTransform(System.Double angleX, System.Double angleY, System.Double angleZ, System.Double centerX, System.Double centerY, System.Double centerZ, System.Double depth)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `angleX` | The rotation around the X-Axis |
+| `angleY` | The rotation around the Y-Axis |
+| `angleZ` | The rotation around the Z-Axis |
+| `centerX` | The origin of the X-Axis |
+| `centerY` | The origin of the Y-Axis |
+| `centerZ` | The origin of the Z-Axis |
+| `depth` | The depth of the 3D effect |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AngleX](#uid-de99bee189) | Sets the rotation around the X-Axis |
+| [AngleY](#uid-20b1bd1bdc) | Sets the rotation around the Y-Axis |
+| [AngleZ](#uid-dc73947d31) | Sets the rotation around the Z-Axis |
+| [CenterX](#uid-5103a7daeb) | Moves the origin the X-Axis rotates around |
+| [CenterY](#uid-a527380c05) | Moves the origin the Y-Axis rotates around |
+| [CenterZ](#uid-c2ee15e117) | Moves the origin the Z-Axis rotates around |
+| [Depth](#uid-45858fd84b) | Affects the depth of the rotation effect |
+| [Value](#uid-188d2ffe69) | Gets the transform's Avalonia.Matrix. |
+
+<span id="uid-de99bee189"></span>
+
+### AngleX
+
+Sets the rotation around the X-Axis
+
+```csharp
+public System.Double AngleX { get; set; }
+```
+
+<span id="uid-20b1bd1bdc"></span>
+
+### AngleY
+
+Sets the rotation around the Y-Axis
+
+```csharp
+public System.Double AngleY { get; set; }
+```
+
+<span id="uid-dc73947d31"></span>
+
+### AngleZ
+
+Sets the rotation around the Z-Axis
+
+```csharp
+public System.Double AngleZ { get; set; }
+```
+
+<span id="uid-5103a7daeb"></span>
+
+### CenterX
+
+Moves the origin the X-Axis rotates around
+
+```csharp
+public System.Double CenterX { get; set; }
+```
+
+<span id="uid-a527380c05"></span>
+
+### CenterY
+
+Moves the origin the Y-Axis rotates around
+
+```csharp
+public System.Double CenterY { get; set; }
+```
+
+<span id="uid-c2ee15e117"></span>
+
+### CenterZ
+
+Moves the origin the Z-Axis rotates around
+
+```csharp
+public System.Double CenterZ { get; set; }
+```
+
+<span id="uid-45858fd84b"></span>
+
+### Depth
+
+Affects the depth of the rotation effect
+
+```csharp
+public System.Double Depth { get; set; }
+```
+
+<span id="uid-188d2ffe69"></span>
+
+### Value
+
+Gets the transform's [Avalonia.Matrix](xref:Avalonia.Matrix).
+
+```csharp
+public Avalonia.Matrix Value { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AngleXProperty](#uid-d47a6e76f0) | Defines the Avalonia.Media.Rotate3DTransform.AngleX property. |
+| [AngleYProperty](#uid-bea6320cf7) | Defines the Avalonia.Media.Rotate3DTransform.AngleY property. |
+| [AngleZProperty](#uid-324be1aafa) | Defines the Avalonia.Media.Rotate3DTransform.AngleZ property. |
+| [CenterXProperty](#uid-a0cddb7c2e) | Defines the Avalonia.Media.Rotate3DTransform.CenterX property. |
+| [CenterYProperty](#uid-4761f0f778) | Defines the Avalonia.Media.Rotate3DTransform.CenterY property. |
+| [CenterZProperty](#uid-2a889ebb4c) | Defines the Avalonia.Media.Rotate3DTransform.CenterZ property. |
+| [DepthProperty](#uid-8f388f3412) | Defines the Avalonia.Media.Rotate3DTransform.Depth property. |
+
+<span id="uid-d47a6e76f0"></span>
+
+### AngleXProperty
+
+Defines the [Avalonia.Media.Rotate3DTransform.AngleX](xref:Avalonia.Media.Rotate3DTransform.AngleX) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> AngleXProperty
+```
+
+<span id="uid-bea6320cf7"></span>
+
+### AngleYProperty
+
+Defines the [Avalonia.Media.Rotate3DTransform.AngleY](xref:Avalonia.Media.Rotate3DTransform.AngleY) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> AngleYProperty
+```
+
+<span id="uid-324be1aafa"></span>
+
+### AngleZProperty
+
+Defines the [Avalonia.Media.Rotate3DTransform.AngleZ](xref:Avalonia.Media.Rotate3DTransform.AngleZ) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> AngleZProperty
+```
+
+<span id="uid-a0cddb7c2e"></span>
+
+### CenterXProperty
+
+Defines the [Avalonia.Media.Rotate3DTransform.CenterX](xref:Avalonia.Media.Rotate3DTransform.CenterX) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> CenterXProperty
+```
+
+<span id="uid-4761f0f778"></span>
+
+### CenterYProperty
+
+Defines the [Avalonia.Media.Rotate3DTransform.CenterY](xref:Avalonia.Media.Rotate3DTransform.CenterY) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> CenterYProperty
+```
+
+<span id="uid-2a889ebb4c"></span>
+
+### CenterZProperty
+
+Defines the [Avalonia.Media.Rotate3DTransform.CenterZ](xref:Avalonia.Media.Rotate3DTransform.CenterZ) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> CenterZProperty
+```
+
+<span id="uid-8f388f3412"></span>
+
+### DepthProperty
+
+Defines the [Avalonia.Media.Rotate3DTransform.Depth](xref:Avalonia.Media.Rotate3DTransform.Depth) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> DepthProperty
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,263 @@
+---
+title: 'Page'
+hide_title: true
+slug: '/avalonia/controls/page'
+uid: 'Avalonia.Controls.Page'
+commentId: 'T:Avalonia.Controls.Page'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Page Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Abstract base class for all page types.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Page
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> Page
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IHeadered
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CurrentPage](#uid-a1cf91acfb) | Gets or sets the currently active child page. |
+| [Header](#uid-8d1963e46b) | Gets or sets the header content displayed in the navigation bar or tab strip. |
+| [Icon](#uid-2a2f0ef380) | Gets or sets the icon displayed alongside the page header. |
+| [IsInNavigationPage](#uid-5e19cb1a48) | Gets or sets whether this page is currently hosted inside a NavigationPage. |
+| [Navigation](#uid-83542776f7) | Gets or sets the Avalonia.Controls.INavigation service provided by the parent NavigationPage. |
+| [SafeAreaPadding](#uid-2d4d4cd858) | Gets or sets the safe-area padding applied to this page's content. |
+
+<span id="uid-a1cf91acfb"></span>
+
+### CurrentPage
+
+Gets or sets the currently active child page.
+
+```csharp
+public Avalonia.Controls.Page CurrentPage { get; set; }
+```
+
+<span id="uid-8d1963e46b"></span>
+
+### Header
+
+Gets or sets the header content displayed in the navigation bar or tab strip.
+
+```csharp
+public System.Object Header { get; set; }
+```
+
+<span id="uid-2a2f0ef380"></span>
+
+### Icon
+
+Gets or sets the icon displayed alongside the page header.
+
+```csharp
+public System.Object Icon { get; set; }
+```
+
+<span id="uid-5e19cb1a48"></span>
+
+### IsInNavigationPage
+
+Gets or sets whether this page is currently hosted inside a NavigationPage.
+
+```csharp
+public System.Boolean IsInNavigationPage { get; set; }
+```
+
+<span id="uid-83542776f7"></span>
+
+### Navigation
+
+Gets or sets the [Avalonia.Controls.INavigation](xref:Avalonia.Controls.INavigation) service provided by the parent NavigationPage.
+
+```csharp
+public Avalonia.Controls.INavigation Navigation { get; set; }
+```
+
+<span id="uid-2d4d4cd858"></span>
+
+### SafeAreaPadding
+
+Gets or sets the safe-area padding applied to this page's content.
+
+```csharp
+public Avalonia.Thickness SafeAreaPadding { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CurrentPageProperty](#uid-9ede794511) | Defines the Avalonia.Controls.Page.CurrentPage property. |
+| [HeaderProperty](#uid-1ad8f90205) | Defines the Avalonia.Controls.Page.Header property. |
+| [IconProperty](#uid-ed7c63442e) | Defines the Avalonia.Controls.Page.Icon property. |
+| [IsInNavigationPageProperty](#uid-9762a09858) | Defines the Avalonia.Controls.Page.IsInNavigationPage property. |
+| [NavigationProperty](#uid-c9271e88f5) | Defines the Avalonia.Controls.Page.Navigation property. |
+| [PageNavigationSystemBackButtonPressedEvent](#uid-f23117d5c3) | Defines the routed event raised when the system back button is pressed. |
+| [SafeAreaPaddingProperty](#uid-01e2cb5167) | Defines the Avalonia.Controls.Page.SafeAreaPadding property. |
+
+<span id="uid-9ede794511"></span>
+
+### CurrentPageProperty
+
+Defines the [Avalonia.Controls.Page.CurrentPage](xref:Avalonia.Controls.Page.CurrentPage) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Page> CurrentPageProperty
+```
+
+<span id="uid-1ad8f90205"></span>
+
+### HeaderProperty
+
+Defines the [Avalonia.Controls.Page.Header](xref:Avalonia.Controls.Page.Header) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> HeaderProperty
+```
+
+<span id="uid-ed7c63442e"></span>
+
+### IconProperty
+
+Defines the [Avalonia.Controls.Page.Icon](xref:Avalonia.Controls.Page.Icon) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> IconProperty
+```
+
+<span id="uid-9762a09858"></span>
+
+### IsInNavigationPageProperty
+
+Defines the [Avalonia.Controls.Page.IsInNavigationPage](xref:Avalonia.Controls.Page.IsInNavigationPage) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsInNavigationPageProperty
+```
+
+<span id="uid-c9271e88f5"></span>
+
+### NavigationProperty
+
+Defines the [Avalonia.Controls.Page.Navigation](xref:Avalonia.Controls.Page.Navigation) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Page, Avalonia.Controls.INavigation> NavigationProperty
+```
+
+<span id="uid-f23117d5c3"></span>
+
+### PageNavigationSystemBackButtonPressedEvent
+
+Defines the routed event raised when the system back button is pressed.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> PageNavigationSystemBackButtonPressedEvent
+```
+
+<span id="uid-01e2cb5167"></span>
+
+### SafeAreaPaddingProperty
+
+Defines the [Avalonia.Controls.Page.SafeAreaPadding](xref:Avalonia.Controls.Page.SafeAreaPadding) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Thickness> SafeAreaPaddingProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [NavigatedFrom](#uid-bb5a37c50e) | Occurs when the page has been navigated from. |
+| [NavigatedTo](#uid-541db4cbf9) | Occurs when the page has been navigated to. |
+| [Navigating](#uid-a4a941b798) | Occurs when the page is about to be navigated from. |
+| [PageNavigationSystemBackButtonPressed](#uid-1485267207) | Raised when the system back button is pressed while this page is active. |
+
+<span id="uid-bb5a37c50e"></span>
+
+### NavigatedFrom
+
+Occurs when the page has been navigated from.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.NavigatedFromEventArgs> NavigatedFrom
+```
+
+<span id="uid-541db4cbf9"></span>
+
+### NavigatedTo
+
+Occurs when the page has been navigated to.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.NavigatedToEventArgs> NavigatedTo
+```
+
+<span id="uid-a4a941b798"></span>
+
+### Navigating
+
+Occurs when the page is about to be navigated from.
+
+```csharp
+public event System.Func<Avalonia.Controls.NavigatingFromEventArgs, System.Threading.Tasks.Task> Navigating
+```
+
+<span id="uid-1485267207"></span>
+
+### PageNavigationSystemBackButtonPressed
+
+Raised when the system back button is pressed while this page is active.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> PageNavigationSystemBackButtonPressed
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,153 @@
+---
+title: 'CalendarBlackoutDatesCollection'
+hide_title: true
+slug: '/avalonia/controls/primitives/calendarblackoutdatescollection'
+uid: 'Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection'
+commentId: 'T:Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CalendarBlackoutDatesCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CalendarBlackoutDatesCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ObservableCollection&lt;CalendarDateRange&gt; <span className="apiref-page__relation-separator">-&gt;</span> CalendarBlackoutDatesCollection
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CalendarBlackoutDatesCollection](#uid-25bcabacac) | Initializes a new instance of the Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection class. |
+
+<span id="uid-25bcabacac"></span>
+
+### CalendarBlackoutDatesCollection
+
+Initializes a new instance of the
+[Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection](xref:Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection)
+class.
+
+```csharp
+public CalendarBlackoutDatesCollection(Avalonia.Controls.Calendar owner)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `owner` | The [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) whose dates
+this object represents. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddDatesInPast](#uid-a58eae0d59) | Adds all dates before System.DateTime.Today to the collection. |
+| [Contains (2 overloads)](#uid-f878b60e2a) | Returns a value that represents whether this collection contains the specified date. |
+| [ContainsAny](#uid-2a83d70b6e) | Returns a value that represents whether this collection contains any date in the specified range. |
+
+<span id="uid-a58eae0d59"></span>
+
+### AddDatesInPast
+
+Adds all dates before [System.DateTime.Today](xref:System.DateTime.Today) to the
+collection.
+
+```csharp
+public System.Void AddDatesInPast()
+```
+
+<span id="uid-f878b60e2a"></span>
+
+### Contains overloads
+
+<span id="uid-875f31b2bf"></span>
+
+#### Contains
+
+Returns a value that represents whether this collection contains the
+specified date.
+
+```csharp
+public System.Boolean Contains(System.DateTime date)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `date` | The date to search for. |
+
+Returns: True if the collection contains the specified date; otherwise,
+false.
+
+<span id="uid-668eeb6661"></span>
+
+#### Contains
+
+Returns a value that represents whether this collection contains the
+specified range of dates.
+
+```csharp
+public System.Boolean Contains(System.DateTime start, System.DateTime end)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `end` | The end of the date range. |
+| `start` | The start of the date range. |
+
+Returns: True if all dates in the range are contained in the collection;
+otherwise, false.
+
+<span id="uid-2a83d70b6e"></span>
+
+### ContainsAny
+
+Returns a value that represents whether this collection contains any
+date in the specified range.
+
+```csharp
+public System.Boolean ContainsAny(Avalonia.Controls.CalendarDateRange range)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `range` | The range of dates to search for. |
+
+Returns: True if any date in the range is contained in the collection;
+otherwise, false.
+
+</ApiRefPage>
+

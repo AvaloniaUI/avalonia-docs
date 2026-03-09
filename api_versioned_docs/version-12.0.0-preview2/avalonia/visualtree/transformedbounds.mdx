@@ -1,0 +1,174 @@
+---
+title: 'TransformedBounds'
+hide_title: true
+slug: '/avalonia/visualtree/transformedbounds'
+uid: 'Avalonia.VisualTree.TransformedBounds'
+commentId: 'T:Avalonia.VisualTree.TransformedBounds'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.VisualTree'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TransformedBounds Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.VisualTree</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds information about the bounds of a control, together with a transform and a clip.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TransformedBounds
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TransformedBounds
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TransformedBounds&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TransformedBounds](#uid-0664aefdf0) | Initializes a new instance of the Avalonia.VisualTree.TransformedBounds struct. |
+
+<span id="uid-0664aefdf0"></span>
+
+### TransformedBounds
+
+Initializes a new instance of the [Avalonia.VisualTree.TransformedBounds](xref:Avalonia.VisualTree.TransformedBounds) struct.
+
+```csharp
+public TransformedBounds(Avalonia.Rect bounds, Avalonia.Rect clip, Avalonia.Matrix transform)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `bounds` | The control's bounds. |
+| `clip` | The control's clip rectangle. |
+| `transform` | The control's transform. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Contains](#uid-eae00ef883) | No summary available. |
+| [Equals (2 overloads)](#uid-f407462ac4) | No summary available. |
+| [GetHashCode](#uid-a285329880) | No summary available. |
+| [ToString](#uid-5ba6e447d4) | No summary available. |
+
+<span id="uid-eae00ef883"></span>
+
+### Contains
+
+```csharp
+public System.Boolean Contains(Avalonia.Point point)
+```
+
+<span id="uid-f407462ac4"></span>
+
+### Equals overloads
+
+<span id="uid-21ca133daf"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.VisualTree.TransformedBounds other)
+```
+
+<span id="uid-bc7802cd4e"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-a285329880"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-5ba6e447d4"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bounds](#uid-1c11ad2494) | Gets the control's bounds in its local coordinate space. |
+| [Clip](#uid-1e725d2e86) | Gets the control's clip rectangle in global coordinate space. |
+| [Transform](#uid-6b36965c2f) | Gets the transform from local to global coordinate space. |
+
+<span id="uid-1c11ad2494"></span>
+
+### Bounds
+
+Gets the control's bounds in its local coordinate space.
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+<span id="uid-1e725d2e86"></span>
+
+### Clip
+
+Gets the control's clip rectangle in global coordinate space.
+
+```csharp
+public Avalonia.Rect Clip { get; set; }
+```
+
+<span id="uid-6b36965c2f"></span>
+
+### Transform
+
+Gets the transform from local to global coordinate space.
+
+```csharp
+public Avalonia.Matrix Transform { get; set; }
+```
+
+</ApiRefPage>
+

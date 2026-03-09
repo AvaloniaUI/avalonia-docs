@@ -1,0 +1,307 @@
+---
+title: 'DispatcherPriority'
+hide_title: true
+slug: '/avalonia/threading/dispatcherpriority'
+uid: 'Avalonia.Threading.DispatcherPriority'
+commentId: 'T:Avalonia.Threading.DispatcherPriority'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DispatcherPriority Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines the priorities with which jobs can be invoked on a [Avalonia.Threading.Dispatcher](xref:Avalonia.Threading.Dispatcher).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct DispatcherPriority
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> DispatcherPriority
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IComparable&lt;DispatcherPriority&gt;, IEquatable&lt;DispatcherPriority&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CompareTo](#uid-1dd3518257) | No summary available. |
+| [Equals (2 overloads)](#uid-20ccadf777) | No summary available. |
+| [FromValue](#uid-3feda63af6) | No summary available. |
+| [GetHashCode](#uid-2c7555695b) | No summary available. |
+| [ToString](#uid-f0f18dbb2a) | No summary available. |
+| [Validate](#uid-343f293063) | No summary available. |
+
+<span id="uid-1dd3518257"></span>
+
+### CompareTo
+
+```csharp
+public System.Int32 CompareTo(Avalonia.Threading.DispatcherPriority other)
+```
+
+<span id="uid-20ccadf777"></span>
+
+### Equals overloads
+
+<span id="uid-6aaa855d3b"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Threading.DispatcherPriority other)
+```
+
+<span id="uid-0b9666eabc"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-3feda63af6"></span>
+
+### FromValue
+
+```csharp
+public Avalonia.Threading.DispatcherPriority FromValue(System.Int32 value)
+```
+
+<span id="uid-2c7555695b"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-f0f18dbb2a"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+<span id="uid-343f293063"></span>
+
+### Validate
+
+```csharp
+public System.Void Validate(Avalonia.Threading.DispatcherPriority priority, System.String parameterName)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Value](#uid-dc387cece8) | The integer value of the priority |
+
+<span id="uid-dc387cece8"></span>
+
+### Value
+
+The integer value of the priority
+
+```csharp
+public System.Int32 Value { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ApplicationIdle](#uid-523211f594) | The job will be processed when the application is idle. |
+| [Background](#uid-3bb9b4756e) | The job will be processed after other non-idle operations have completed. |
+| [ContextIdle](#uid-9301e8c271) | The job will be processed after background operations have completed. |
+| [DataBind](#uid-b54d0fc666) | The job will be processed with the same priority as data binding. |
+| [Default](#uid-11c7f8fe22) | The lowest foreground dispatcher priority |
+| [Inactive](#uid-9d6d87ac15) | A dispatcher priority for jobs that shouldn't be executed yet |
+| [Input](#uid-37e6f3144c) | The job will be processed with the same priority as input. |
+| [Invalid](#uid-e8a15fcd01) | Used internally in dispatcher code |
+| [Loaded](#uid-ea1f3e0469) | The job will be processed after layout and render but before input. |
+| [MaxValue](#uid-dfb5638419) | Maximum possible priority |
+| [Normal](#uid-10614c3949) | The job will be processed with normal priority. |
+| [Render](#uid-b42303fdd5) | The job will be processed with the same priority as render. |
+| [Send](#uid-3d524495d2) | The job will be processed before other asynchronous operations. |
+| [SystemIdle](#uid-032b2826f5) | The job will be processed when the system is idle. |
+
+<span id="uid-523211f594"></span>
+
+### ApplicationIdle
+
+The job will be processed when the application is idle.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority ApplicationIdle
+```
+
+<span id="uid-3bb9b4756e"></span>
+
+### Background
+
+The job will be processed after other non-idle operations have completed.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Background
+```
+
+<span id="uid-9301e8c271"></span>
+
+### ContextIdle
+
+The job will be processed after background operations have completed.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority ContextIdle
+```
+
+<span id="uid-b54d0fc666"></span>
+
+### DataBind
+
+The job will be processed with the same priority as data binding.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority DataBind
+```
+
+<span id="uid-11c7f8fe22"></span>
+
+### Default
+
+The lowest foreground dispatcher priority
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Default
+```
+
+<span id="uid-9d6d87ac15"></span>
+
+### Inactive
+
+A dispatcher priority for jobs that shouldn't be executed yet
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Inactive
+```
+
+<span id="uid-37e6f3144c"></span>
+
+### Input
+
+The job will be processed with the same priority as input.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Input
+```
+
+<span id="uid-e8a15fcd01"></span>
+
+### Invalid
+
+Used internally in dispatcher code
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Invalid
+```
+
+<span id="uid-ea1f3e0469"></span>
+
+### Loaded
+
+The job will be processed after layout and render but before input.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Loaded
+```
+
+<span id="uid-dfb5638419"></span>
+
+### MaxValue
+
+Maximum possible priority
+
+```csharp
+public Avalonia.Threading.DispatcherPriority MaxValue
+```
+
+<span id="uid-10614c3949"></span>
+
+### Normal
+
+The job will be processed with normal priority.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Normal
+```
+
+<span id="uid-b42303fdd5"></span>
+
+### Render
+
+The job will be processed with the same priority as render.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Render
+```
+
+<span id="uid-3d524495d2"></span>
+
+### Send
+
+The job will be processed before other asynchronous operations.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority Send
+```
+
+<span id="uid-032b2826f5"></span>
+
+### SystemIdle
+
+The job will be processed when the system is idle.
+
+```csharp
+public Avalonia.Threading.DispatcherPriority SystemIdle
+```
+
+</ApiRefPage>
+

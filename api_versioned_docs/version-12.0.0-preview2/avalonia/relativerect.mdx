@@ -1,0 +1,303 @@
+---
+title: 'RelativeRect'
+hide_title: true
+slug: '/avalonia/relativerect'
+uid: 'Avalonia.RelativeRect'
+commentId: 'T:Avalonia.RelativeRect'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RelativeRect Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a rectangle that may be defined relative to a containing element.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct RelativeRect
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> RelativeRect
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;RelativeRect&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RelativeRect (5 overloads)](#uid-f5eb3b1b84) | Initializes a new instance of the Avalonia.RelativeRect structure. |
+
+<span id="uid-f5eb3b1b84"></span>
+
+### RelativeRect overloads
+
+<span id="uid-d97a9eb2b1"></span>
+
+#### RelativeRect
+
+Initializes a new instance of the [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) structure.
+
+```csharp
+public RelativeRect(Avalonia.Point topLeft, Avalonia.Point bottomRight, Avalonia.RelativeUnit unit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `bottomRight` | The bottom right position of the rectangle. |
+| `topLeft` | The top left position of the rectangle. |
+| `unit` | The unit of the rect. |
+
+<span id="uid-e5d91abd4c"></span>
+
+#### RelativeRect
+
+Initializes a new instance of the [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) structure.
+
+```csharp
+public RelativeRect(Avalonia.Point position, Avalonia.Size size, Avalonia.RelativeUnit unit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `position` | The position of the rectangle. |
+| `size` | The size of the rectangle. |
+| `unit` | The unit of the rect. |
+
+<span id="uid-dc4fd18f4e"></span>
+
+#### RelativeRect
+
+Initializes a new instance of the [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) structure.
+
+```csharp
+public RelativeRect(Avalonia.Rect rect, Avalonia.RelativeUnit unit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The rectangle. |
+| `unit` | The unit of the rect. |
+
+<span id="uid-f5b7f4a8c6"></span>
+
+#### RelativeRect
+
+Initializes a new instance of the [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) structure.
+
+```csharp
+public RelativeRect(Avalonia.Size size, Avalonia.RelativeUnit unit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `size` | The size of the rectangle. |
+| `unit` | The unit of the rect. |
+
+<span id="uid-238ceea4d1"></span>
+
+#### RelativeRect
+
+Initializes a new instance of the [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) structure.
+
+```csharp
+public RelativeRect(System.Double x, System.Double y, System.Double width, System.Double height, Avalonia.RelativeUnit unit)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `height` | The height. |
+| `unit` | The unit of the rect. |
+| `width` | The width. |
+| `x` | The X position. |
+| `y` | The Y position. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-1d312dbd6a) | Checks if the Avalonia.RelativeRect equals another rectangle. |
+| [GetHashCode](#uid-1e60780fc6) | Gets a hashcode for a Avalonia.RelativeRect. |
+| [Parse](#uid-d4e9f3070b) | Parses a Avalonia.RelativeRect string. |
+| [ToPixels (2 overloads)](#uid-4d48b16422) | Converts a Avalonia.RelativeRect into pixels. |
+
+<span id="uid-1d312dbd6a"></span>
+
+### Equals overloads
+
+<span id="uid-fcf67eff6b"></span>
+
+#### Equals
+
+Checks if the [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) equals another rectangle.
+
+```csharp
+public System.Boolean Equals(Avalonia.RelativeRect p)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `p` | The other rectangle. |
+
+Returns: True if the objects are equal, otherwise false.
+
+<span id="uid-962fc504ad"></span>
+
+#### Equals
+
+Checks if the [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) equals another object.
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `obj` | The other object. |
+
+Returns: True if the objects are equal, otherwise false.
+
+<span id="uid-1e60780fc6"></span>
+
+### GetHashCode
+
+Gets a hashcode for a [Avalonia.RelativeRect](xref:Avalonia.RelativeRect).
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+Returns: A hash code.
+
+<span id="uid-d4e9f3070b"></span>
+
+### Parse
+
+Parses a [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) string.
+
+```csharp
+public Avalonia.RelativeRect Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The parsed [Avalonia.RelativeRect](xref:Avalonia.RelativeRect).
+
+<span id="uid-4d48b16422"></span>
+
+### ToPixels overloads
+
+<span id="uid-7cb70111a2"></span>
+
+#### ToPixels
+
+Converts a [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) into pixels.
+
+```csharp
+public Avalonia.Rect ToPixels(Avalonia.Rect boundingBox)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `boundingBox` | The bounding box of the visual. |
+
+Returns: The origin point in pixels.
+
+<span id="uid-8826ec9d69"></span>
+
+#### ToPixels
+
+Converts a [Avalonia.RelativeRect](xref:Avalonia.RelativeRect) into pixels.
+
+```csharp
+public Avalonia.Rect ToPixels(Avalonia.Size size)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `size` | The size of the visual. |
+
+Returns: The origin point in pixels.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Rect](#uid-086133531a) | Gets the rectangle. |
+| [Unit](#uid-c0f9961492) | Gets the unit of the rectangle. |
+
+<span id="uid-086133531a"></span>
+
+### Rect
+
+Gets the rectangle.
+
+```csharp
+public Avalonia.Rect Rect { get; set; }
+```
+
+<span id="uid-c0f9961492"></span>
+
+### Unit
+
+Gets the unit of the rectangle.
+
+```csharp
+public Avalonia.RelativeUnit Unit { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Fill](#uid-5ce0529aa1) | A rectangle that represents 100% of an area. |
+
+<span id="uid-5ce0529aa1"></span>
+
+### Fill
+
+A rectangle that represents 100% of an area.
+
+```csharp
+public Avalonia.RelativeRect Fill
+```
+
+</ApiRefPage>
+

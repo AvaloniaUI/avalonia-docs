@@ -1,0 +1,350 @@
+---
+title: 'Size'
+hide_title: true
+slug: '/avalonia/size'
+uid: 'Avalonia.Size'
+commentId: 'T:Avalonia.Size'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Size Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a size.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Size
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Size
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Size&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Size (2 overloads)](#uid-454ccbb95a) | Initializes a new instance of the Avalonia.Size structure. |
+
+<span id="uid-454ccbb95a"></span>
+
+### Size overloads
+
+<span id="uid-34605aafdc"></span>
+
+#### Size
+
+Initializes a new instance of the [Avalonia.Size](xref:Avalonia.Size) structure.
+
+```csharp
+public Size(System.Double width, System.Double height)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `height` | The height. |
+| `width` | The width. |
+
+<span id="uid-17dc211301"></span>
+
+#### Size
+
+Initializes a new instance of the [Avalonia.Size](xref:Avalonia.Size) structure.
+
+```csharp
+public Size(System.Numerics.Vector2 vector2)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `vector2` | The vector to take values from. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Constrain](#uid-2d29cf854e) | Constrains the size. |
+| [Deconstruct](#uid-f874a31ae4) | No summary available. |
+| [Deflate](#uid-eeadea36f8) | Deflates the size by a Avalonia.Thickness. |
+| [Equals (2 overloads)](#uid-b9cb8dbbef) | Returns a boolean indicating whether the size is equal to the other given size (bitwise). |
+| [GetHashCode](#uid-0468d68394) | Returns a hash code for a Avalonia.Size. |
+| [Inflate](#uid-6053fa86c5) | Inflates the size by a Avalonia.Thickness. |
+| [NearlyEquals](#uid-9d4346ca02) | Returns a boolean indicating whether the size is equal to the other given size (numerically). |
+| [Parse](#uid-b50eddb408) | Parses a Avalonia.Size string. |
+| [ToString](#uid-0123cae676) | Returns the string representation of the size. |
+| [WithHeight](#uid-4878b9be3d) | Returns a new Avalonia.Size with the same width and the specified height. |
+| [WithWidth](#uid-db13f0fbd4) | Returns a new Avalonia.Size with the same height and the specified width. |
+
+<span id="uid-2d29cf854e"></span>
+
+### Constrain
+
+Constrains the size.
+
+```csharp
+public Avalonia.Size Constrain(Avalonia.Size constraint)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `constraint` | The size to constrain to. |
+
+Returns: The constrained size.
+
+<span id="uid-f874a31ae4"></span>
+
+### Deconstruct
+
+```csharp
+public System.Void Deconstruct(System.Double& width, System.Double& height)
+```
+
+<span id="uid-eeadea36f8"></span>
+
+### Deflate
+
+Deflates the size by a [Avalonia.Thickness](xref:Avalonia.Thickness).
+
+```csharp
+public Avalonia.Size Deflate(Avalonia.Thickness thickness)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `thickness` | The thickness. |
+
+Returns: The deflated size.
+
+<span id="uid-b9cb8dbbef"></span>
+
+### Equals overloads
+
+<span id="uid-8c4fee60a0"></span>
+
+#### Equals
+
+Returns a boolean indicating whether the size is equal to the other given size (bitwise).
+
+```csharp
+public System.Boolean Equals(Avalonia.Size other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other size to test equality against. |
+
+Returns: True if this size is equal to other; False otherwise.
+
+<span id="uid-fe511f4364"></span>
+
+#### Equals
+
+Checks for equality between a size and an object.
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `obj` | The object. |
+
+Returns: True if `obj` is a size that equals the current size.
+
+<span id="uid-0468d68394"></span>
+
+### GetHashCode
+
+Returns a hash code for a [Avalonia.Size](xref:Avalonia.Size).
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+Returns: The hash code.
+
+<span id="uid-6053fa86c5"></span>
+
+### Inflate
+
+Inflates the size by a [Avalonia.Thickness](xref:Avalonia.Thickness).
+
+```csharp
+public Avalonia.Size Inflate(Avalonia.Thickness thickness)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `thickness` | The thickness. |
+
+Returns: The inflated size.
+
+<span id="uid-9d4346ca02"></span>
+
+### NearlyEquals
+
+Returns a boolean indicating whether the size is equal to the other given size (numerically).
+
+```csharp
+public System.Boolean NearlyEquals(Avalonia.Size other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other size to test equality against. |
+
+Returns: True if this size is equal to other; False otherwise.
+
+<span id="uid-b50eddb408"></span>
+
+### Parse
+
+Parses a [Avalonia.Size](xref:Avalonia.Size) string.
+
+```csharp
+public Avalonia.Size Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The [Avalonia.Size](xref:Avalonia.Size).
+
+<span id="uid-0123cae676"></span>
+
+### ToString
+
+Returns the string representation of the size.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation of the size.
+
+<span id="uid-4878b9be3d"></span>
+
+### WithHeight
+
+Returns a new [Avalonia.Size](xref:Avalonia.Size) with the same width and the specified height.
+
+```csharp
+public Avalonia.Size WithHeight(System.Double height)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `height` | The height. |
+
+Returns: The new [Avalonia.Size](xref:Avalonia.Size).
+
+<span id="uid-db13f0fbd4"></span>
+
+### WithWidth
+
+Returns a new [Avalonia.Size](xref:Avalonia.Size) with the same height and the specified width.
+
+```csharp
+public Avalonia.Size WithWidth(System.Double width)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `width` | The width. |
+
+Returns: The new [Avalonia.Size](xref:Avalonia.Size).
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AspectRatio](#uid-84b8e2fcfa) | Gets the aspect ratio of the size. |
+| [Height](#uid-38d775d8b5) | Gets the height. |
+| [Width](#uid-646cb67085) | Gets the width. |
+
+<span id="uid-84b8e2fcfa"></span>
+
+### AspectRatio
+
+Gets the aspect ratio of the size.
+
+```csharp
+public System.Double AspectRatio { get; set; }
+```
+
+<span id="uid-38d775d8b5"></span>
+
+### Height
+
+Gets the height.
+
+```csharp
+public System.Double Height { get; set; }
+```
+
+<span id="uid-646cb67085"></span>
+
+### Width
+
+Gets the width.
+
+```csharp
+public System.Double Width { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Infinity](#uid-0a821f9fc4) | A size representing infinity. |
+
+<span id="uid-0a821f9fc4"></span>
+
+### Infinity
+
+A size representing infinity.
+
+```csharp
+public Avalonia.Size Infinity
+```
+
+</ApiRefPage>
+

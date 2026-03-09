@@ -1,0 +1,85 @@
+---
+title: 'DispatcherUnhandledExceptionFilterEventArgs'
+hide_title: true
+slug: '/avalonia/threading/dispatcherunhandledexceptionfiltereventargs'
+uid: 'Avalonia.Threading.DispatcherUnhandledExceptionFilterEventArgs'
+commentId: 'T:Avalonia.Threading.DispatcherUnhandledExceptionFilterEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DispatcherUnhandledExceptionFilterEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the method that will handle the [Avalonia.Threading.Dispatcher.UnhandledExceptionFilter](xref:Avalonia.Threading.Dispatcher.UnhandledExceptionFilter) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DispatcherUnhandledExceptionFilterEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="dispatchereventargs">DispatcherEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> DispatcherUnhandledExceptionFilterEventArgs
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Exception](#uid-264028a020) | Gets the exception that was raised when executing code by way of the dispatcher. |
+| [RequestCatch](#uid-cb676c75f2) | Gets or sets whether the exception should be caught and the event handlers called.. |
+
+<span id="uid-264028a020"></span>
+
+### Exception
+
+Gets the exception that was raised when executing code by way of the dispatcher.
+
+```csharp
+public System.Exception Exception { get; set; }
+```
+
+<span id="uid-cb676c75f2"></span>
+
+### RequestCatch
+
+Gets or sets whether the exception should be caught and the event handlers called..
+
+```csharp
+public System.Boolean RequestCatch { get; set; }
+```
+
+</ApiRefPage>
+

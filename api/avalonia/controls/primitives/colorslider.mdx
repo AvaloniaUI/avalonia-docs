@@ -1,0 +1,263 @@
+---
+title: 'ColorSlider'
+hide_title: true
+slug: '/avalonia/controls/primitives/colorslider'
+uid: 'Avalonia.Controls.Primitives.ColorSlider'
+commentId: 'T:Avalonia.Controls.Primitives.ColorSlider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColorSlider Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A slider with a background that represents a single color component.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColorSlider
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="rangebase">RangeBase</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../slider">Slider</a> <span className="apiref-page__relation-separator">-&gt;</span> ColorSlider
+</div>
+</div>
+
+## Remarks
+
+The control class extends [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement) and adds the following features:
+
+- A [Avalonia.Controls.Control.Tag](xref:Avalonia.Controls.Control.Tag) property to allow user-defined data to be attached to the control.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColorSlider](#uid-e2b1acbb30) | Initializes a new instance of the Avalonia.Controls.Primitives.ColorSlider class. |
+
+<span id="uid-e2b1acbb30"></span>
+
+### ColorSlider
+
+Initializes a new instance of the [Avalonia.Controls.Primitives.ColorSlider](xref:Avalonia.Controls.Primitives.ColorSlider) class.
+
+```csharp
+public ColorSlider()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Color](#uid-1db1e49a10) | Gets or sets the currently selected color in the RGB color model. |
+| [ColorComponent](#uid-aff42a56ec) | Gets or sets the color component represented by the slider. |
+| [ColorModel](#uid-19602ccd29) | Gets or sets the active color model used by the slider. |
+| [HsvColor](#uid-998f623768) | Gets or sets the currently selected color in the HSV color model. |
+| [IsAlphaVisible](#uid-f05e6af42a) | Gets or sets a value indicating whether the alpha component is visible and rendered. When false, this ensures that the gradient is always visible and never transparent regardless of the actual color. This property is ignored when the alpha component itself is being displayed. |
+| [IsPerceptive](#uid-cc39aa0a99) | Gets or sets a value indicating whether the slider adapts rendering to improve user-perception over exactness. |
+| [IsRoundingEnabled](#uid-218abdc811) | Gets or sets a value indicating whether rounding of color component values is enabled. |
+
+<span id="uid-1db1e49a10"></span>
+
+### Color
+
+Gets or sets the currently selected color in the RGB color model.
+
+```csharp
+public Avalonia.Media.Color Color { get; set; }
+```
+
+<span id="uid-aff42a56ec"></span>
+
+### ColorComponent
+
+Gets or sets the color component represented by the slider.
+
+```csharp
+public Avalonia.Controls.ColorComponent ColorComponent { get; set; }
+```
+
+<span id="uid-19602ccd29"></span>
+
+### ColorModel
+
+Gets or sets the active color model used by the slider.
+
+```csharp
+public Avalonia.Controls.ColorModel ColorModel { get; set; }
+```
+
+<span id="uid-998f623768"></span>
+
+### HsvColor
+
+Gets or sets the currently selected color in the HSV color model.
+
+```csharp
+public Avalonia.Media.HsvColor HsvColor { get; set; }
+```
+
+<span id="uid-f05e6af42a"></span>
+
+### IsAlphaVisible
+
+Gets or sets a value indicating whether the alpha component is visible and rendered.
+When false, this ensures that the gradient is always visible and never transparent regardless of
+the actual color. This property is ignored when the alpha component itself is being displayed.
+
+```csharp
+public System.Boolean IsAlphaVisible { get; set; }
+```
+
+<span id="uid-cc39aa0a99"></span>
+
+### IsPerceptive
+
+Gets or sets a value indicating whether the slider adapts rendering to improve user-perception
+over exactness.
+
+```csharp
+public System.Boolean IsPerceptive { get; set; }
+```
+
+<span id="uid-218abdc811"></span>
+
+### IsRoundingEnabled
+
+Gets or sets a value indicating whether rounding of color component values is enabled.
+
+```csharp
+public System.Boolean IsRoundingEnabled { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ColorComponentProperty](#uid-5f97f1010a) | Defines the Avalonia.Controls.Primitives.ColorSlider.ColorComponent property. |
+| [ColorModelProperty](#uid-109763bd0d) | Defines the Avalonia.Controls.Primitives.ColorSlider.ColorModel property. |
+| [ColorProperty](#uid-0e879d183b) | Defines the Avalonia.Controls.Primitives.ColorSlider.Color property. |
+| [HsvColorProperty](#uid-26f8e37676) | Defines the Avalonia.Controls.Primitives.ColorSlider.HsvColor property. |
+| [IsAlphaVisibleProperty](#uid-6978dc2801) | Defines the Avalonia.Controls.Primitives.ColorSlider.IsAlphaVisible property. |
+| [IsPerceptiveProperty](#uid-e916830259) | Defines the Avalonia.Controls.Primitives.ColorSlider.IsPerceptive property. |
+| [IsRoundingEnabledProperty](#uid-a4a638c8c2) | Defines the Avalonia.Controls.Primitives.ColorSlider.IsRoundingEnabled property. |
+
+<span id="uid-5f97f1010a"></span>
+
+### ColorComponentProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSlider.ColorComponent](xref:Avalonia.Controls.Primitives.ColorSlider.ColorComponent) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ColorComponent> ColorComponentProperty
+```
+
+<span id="uid-109763bd0d"></span>
+
+### ColorModelProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSlider.ColorModel](xref:Avalonia.Controls.Primitives.ColorSlider.ColorModel) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ColorModel> ColorModelProperty
+```
+
+<span id="uid-0e879d183b"></span>
+
+### ColorProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSlider.Color](xref:Avalonia.Controls.Primitives.ColorSlider.Color) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.Color> ColorProperty
+```
+
+<span id="uid-26f8e37676"></span>
+
+### HsvColorProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSlider.HsvColor](xref:Avalonia.Controls.Primitives.ColorSlider.HsvColor) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.HsvColor> HsvColorProperty
+```
+
+<span id="uid-6978dc2801"></span>
+
+### IsAlphaVisibleProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSlider.IsAlphaVisible](xref:Avalonia.Controls.Primitives.ColorSlider.IsAlphaVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsAlphaVisibleProperty
+```
+
+<span id="uid-e916830259"></span>
+
+### IsPerceptiveProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSlider.IsPerceptive](xref:Avalonia.Controls.Primitives.ColorSlider.IsPerceptive) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsPerceptiveProperty
+```
+
+<span id="uid-a4a638c8c2"></span>
+
+### IsRoundingEnabledProperty
+
+Defines the [Avalonia.Controls.Primitives.ColorSlider.IsRoundingEnabled](xref:Avalonia.Controls.Primitives.ColorSlider.IsRoundingEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsRoundingEnabledProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ColorChanged](#uid-69816aa8de) | Event for when the selected color changes within the slider. |
+
+<span id="uid-69816aa8de"></span>
+
+### ColorChanged
+
+Event for when the selected color changes within the slider.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ColorChangedEventArgs> ColorChanged
+```
+
+</ApiRefPage>
+

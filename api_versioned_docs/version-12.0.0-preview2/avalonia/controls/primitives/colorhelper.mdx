@@ -1,0 +1,114 @@
+---
+title: 'ColorHelper'
+hide_title: true
+slug: '/avalonia/controls/primitives/colorhelper'
+uid: 'Avalonia.Controls.Primitives.ColorHelper'
+commentId: 'T:Avalonia.Controls.Primitives.ColorHelper'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColorHelper Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Contains helpers useful when working with colors.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColorHelper
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ColorHelper
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetRelativeLuminance](#uid-4396eaa68e) | Gets the relative (perceptual) luminance/brightness of the given color. 1 is closer to white while 0 is closer to black. |
+| [ToDisplayName](#uid-9f6d2ba493) | Determines an approximate display name for the given color. |
+
+<span id="uid-4396eaa68e"></span>
+
+### GetRelativeLuminance
+
+Gets the relative (perceptual) luminance/brightness of the given color.
+1 is closer to white while 0 is closer to black.
+
+```csharp
+public System.Double GetRelativeLuminance(Avalonia.Media.Color color)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `color` | The color to calculate relative luminance for. |
+
+Returns: The relative (perceptual) luminance/brightness of the given color.
+
+<span id="uid-9f6d2ba493"></span>
+
+### ToDisplayName
+
+Determines an approximate display name for the given color.
+
+```csharp
+public System.String ToDisplayName(Avalonia.Media.Color color)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `color` | The color to get the display name for. |
+
+Returns: The approximate color display name.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ToDisplayNameExists](#uid-586d82c131) | Determines if color display names are supported based on the current thread culture. |
+
+<span id="uid-586d82c131"></span>
+
+### ToDisplayNameExists
+
+Determines if color display names are supported based on the current thread culture.
+
+```csharp
+public System.Boolean ToDisplayNameExists { get; set; }
+```
+
+</ApiRefPage>
+

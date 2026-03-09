@@ -1,0 +1,256 @@
+---
+title: 'ISelectionModel'
+hide_title: true
+slug: '/avalonia/controls/selection/iselectionmodel'
+uid: 'Avalonia.Controls.Selection.ISelectionModel'
+commentId: 'T:Avalonia.Controls.Selection.ISelectionModel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ISelectionModel Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ISelectionModel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginBatchUpdate](#uid-45193f97c7) | No summary available. |
+| [Clear](#uid-5cd2a7770f) | No summary available. |
+| [Deselect](#uid-56862e8f36) | No summary available. |
+| [DeselectRange](#uid-85801ed530) | No summary available. |
+| [EndBatchUpdate](#uid-71a3845693) | No summary available. |
+| [IsSelected](#uid-9b7cd12904) | No summary available. |
+| [Select](#uid-ac832fbc5c) | No summary available. |
+| [SelectAll](#uid-7966ff20f4) | No summary available. |
+| [SelectRange](#uid-0ead09ec4e) | No summary available. |
+
+<span id="uid-45193f97c7"></span>
+
+### BeginBatchUpdate
+
+```csharp
+public System.Void BeginBatchUpdate()
+```
+
+<span id="uid-5cd2a7770f"></span>
+
+### Clear
+
+```csharp
+public System.Void Clear()
+```
+
+<span id="uid-56862e8f36"></span>
+
+### Deselect
+
+```csharp
+public System.Void Deselect(System.Int32 index)
+```
+
+<span id="uid-85801ed530"></span>
+
+### DeselectRange
+
+```csharp
+public System.Void DeselectRange(System.Int32 start, System.Int32 end)
+```
+
+<span id="uid-71a3845693"></span>
+
+### EndBatchUpdate
+
+```csharp
+public System.Void EndBatchUpdate()
+```
+
+<span id="uid-9b7cd12904"></span>
+
+### IsSelected
+
+```csharp
+public System.Boolean IsSelected(System.Int32 index)
+```
+
+<span id="uid-ac832fbc5c"></span>
+
+### Select
+
+```csharp
+public System.Void Select(System.Int32 index)
+```
+
+<span id="uid-7966ff20f4"></span>
+
+### SelectAll
+
+```csharp
+public System.Void SelectAll()
+```
+
+<span id="uid-0ead09ec4e"></span>
+
+### SelectRange
+
+```csharp
+public System.Void SelectRange(System.Int32 start, System.Int32 end)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AnchorIndex](#uid-8ff8de8454) | No summary available. |
+| [Count](#uid-7a3dd7c3f6) | No summary available. |
+| [SelectedIndex](#uid-df5390923d) | No summary available. |
+| [SelectedIndexes](#uid-820b26c1c2) | No summary available. |
+| [SelectedItem](#uid-4eba651bcf) | No summary available. |
+| [SelectedItems](#uid-4dda2e92e7) | No summary available. |
+| [SingleSelect](#uid-d583816d65) | No summary available. |
+| [Source](#uid-6cfaaa5ce3) | No summary available. |
+
+<span id="uid-8ff8de8454"></span>
+
+### AnchorIndex
+
+```csharp
+public System.Int32 AnchorIndex { get; set; }
+```
+
+<span id="uid-7a3dd7c3f6"></span>
+
+### Count
+
+```csharp
+public System.Int32 Count { get; set; }
+```
+
+<span id="uid-df5390923d"></span>
+
+### SelectedIndex
+
+```csharp
+public System.Int32 SelectedIndex { get; set; }
+```
+
+<span id="uid-820b26c1c2"></span>
+
+### SelectedIndexes
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<System.Int32> SelectedIndexes { get; set; }
+```
+
+<span id="uid-4eba651bcf"></span>
+
+### SelectedItem
+
+```csharp
+public System.Object SelectedItem { get; set; }
+```
+
+<span id="uid-4dda2e92e7"></span>
+
+### SelectedItems
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<System.Object> SelectedItems { get; set; }
+```
+
+<span id="uid-d583816d65"></span>
+
+### SingleSelect
+
+```csharp
+public System.Boolean SingleSelect { get; set; }
+```
+
+<span id="uid-6cfaaa5ce3"></span>
+
+### Source
+
+```csharp
+public System.Collections.IEnumerable Source { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [IndexesChanged](#uid-565d8e0070) | No summary available. |
+| [LostSelection](#uid-cd037151c3) | No summary available. |
+| [SelectionChanged](#uid-006e2aeebf) | No summary available. |
+| [SourceReset](#uid-9717935e88) | No summary available. |
+
+<span id="uid-565d8e0070"></span>
+
+### IndexesChanged
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.Selection.SelectionModelIndexesChangedEventArgs> IndexesChanged
+```
+
+<span id="uid-cd037151c3"></span>
+
+### LostSelection
+
+```csharp
+public event System.EventHandler LostSelection
+```
+
+<span id="uid-006e2aeebf"></span>
+
+### SelectionChanged
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.Selection.SelectionModelSelectionChangedEventArgs> SelectionChanged
+```
+
+<span id="uid-9717935e88"></span>
+
+### SourceReset
+
+```csharp
+public event System.EventHandler SourceReset
+```
+
+</ApiRefPage>
+

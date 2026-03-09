@@ -1,0 +1,107 @@
+---
+title: 'DesktopApplicationExtensions'
+hide_title: true
+slug: '/avalonia/controls/desktopapplicationextensions'
+uid: 'Avalonia.Controls.DesktopApplicationExtensions'
+commentId: 'T:Avalonia.Controls.DesktopApplicationExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DesktopApplicationExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DesktopApplicationExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DesktopApplicationExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Run (3 overloads)](#uid-3bc7934b45) | On desktop-style platforms runs the application's main loop until main window is closed |
+| [RunWithMainWindow](#uid-42908e930f) | No summary available. |
+
+<span id="uid-3bc7934b45"></span>
+
+### Run overloads
+
+<span id="uid-9c92fcd0cc"></span>
+
+#### Run
+
+On desktop-style platforms runs the application's main loop until main window is closed
+
+```csharp
+public System.Void Run(Avalonia.Application app, Avalonia.Controls.Window mainWindow)
+```
+
+<span id="uid-0fe9ee9782"></span>
+
+#### Run
+
+On desktop-style platforms runs the application's main loop until closable is closed
+
+```csharp
+public System.Void Run(Avalonia.Application app, Avalonia.Input.ICloseable closable)
+```
+
+<span id="uid-3698ed72b2"></span>
+
+#### Run
+
+On desktop-style platforms runs the application's main loop with custom CancellationToken
+without setting a lifetime.
+
+```csharp
+public System.Void Run(Avalonia.Application app, System.Threading.CancellationToken token)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `app` | The application. |
+| `token` | The token to track. |
+
+<span id="uid-42908e930f"></span>
+
+### RunWithMainWindow
+
+```csharp
+public System.Void RunWithMainWindow<TWindow>(Avalonia.Application app)
+```
+
+</ApiRefPage>
+

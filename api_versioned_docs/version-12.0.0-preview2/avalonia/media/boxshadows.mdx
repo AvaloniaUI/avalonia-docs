@@ -1,0 +1,221 @@
+---
+title: 'BoxShadows'
+hide_title: true
+slug: '/avalonia/media/boxshadows'
+uid: 'Avalonia.Media.BoxShadows'
+commentId: 'T:Avalonia.Media.BoxShadows'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BoxShadows Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a collection of [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow)s.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct BoxShadows
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> BoxShadows
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BoxShadows (2 overloads)](#uid-4c8421e4f5) | Initializes a new instance of the Avalonia.Media.BoxShadows struct. |
+
+<span id="uid-4c8421e4f5"></span>
+
+### BoxShadows overloads
+
+<span id="uid-7c3766b8d7"></span>
+
+#### BoxShadows
+
+Initializes a new instance of the [Avalonia.Media.BoxShadows](xref:Avalonia.Media.BoxShadows) struct.
+
+```csharp
+public BoxShadows(Avalonia.Media.BoxShadow shadow)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `shadow` | The first [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow) to add to the collection. |
+
+<span id="uid-02c63baf76"></span>
+
+#### BoxShadows
+
+Initializes a new instance of the [Avalonia.Media.BoxShadows](xref:Avalonia.Media.BoxShadows) struct.
+
+```csharp
+public BoxShadows(Avalonia.Media.BoxShadow first, Avalonia.Media.BoxShadow[] rest)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `first` | The first [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow) to add to the collection. |
+| `rest` | All remaining [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow)s to add to the collection. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-146d853d13) | Indicates whether the current object is equal to another object of the same type. |
+| [GetEnumerator](#uid-3753a1ea14) | No summary available. |
+| [GetHashCode](#uid-d5fe0d2255) | No summary available. |
+| [Parse](#uid-a8010f494e) | Parses a Avalonia.Media.BoxShadows string representing one or more Avalonia.Media.BoxShadows. |
+| [ToString](#uid-faf8b5389a) | No summary available. |
+| [TransformBounds](#uid-ec8f646bb5) | No summary available. |
+
+<span id="uid-146d853d13"></span>
+
+### Equals overloads
+
+<span id="uid-e6283aef0d"></span>
+
+#### Equals
+
+Indicates whether the current object is equal to another object of the same type.
+
+```csharp
+public System.Boolean Equals(Avalonia.Media.BoxShadows other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | An object to compare with this object. |
+
+Returns: `true` if the current object is equal to the other parameter; otherwise, `false`.
+
+<span id="uid-872c255d2a"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-3753a1ea14"></span>
+
+### GetEnumerator
+
+```csharp
+public Avalonia.Media.BoxShadows.BoxShadowsEnumerator GetEnumerator()
+```
+
+<span id="uid-d5fe0d2255"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-a8010f494e"></span>
+
+### Parse
+
+Parses a [Avalonia.Media.BoxShadows](xref:Avalonia.Media.BoxShadows) string representing one or more [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow)s.
+
+```csharp
+public Avalonia.Media.BoxShadows Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The input string to parse. |
+
+Returns: A new [Avalonia.Media.BoxShadows](xref:Avalonia.Media.BoxShadows) collection.
+
+<span id="uid-faf8b5389a"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+<span id="uid-ec8f646bb5"></span>
+
+### TransformBounds
+
+```csharp
+public Avalonia.Rect TransformBounds(Avalonia.Rect& rect)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-7ecc90231a) | Gets the number of Avalonia.Media.BoxShadows in the collection. |
+| [HasInsetShadows](#uid-1dd39d3636) | Gets a value indicating whether any Avalonia.Media.BoxShadow in the collection has Avalonia.Media.BoxShadow.IsInset set to true. |
+| [Item](#uid-7dd4922d45) | No summary available. |
+
+<span id="uid-7ecc90231a"></span>
+
+### Count
+
+Gets the number of [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow)s in the collection.
+
+```csharp
+public System.Int32 Count { get; set; }
+```
+
+<span id="uid-1dd39d3636"></span>
+
+### HasInsetShadows
+
+Gets a value indicating whether any [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow) in the collection has
+[Avalonia.Media.BoxShadow.IsInset](xref:Avalonia.Media.BoxShadow.IsInset) set to `true`.
+
+```csharp
+public System.Boolean HasInsetShadows { get; set; }
+```
+
+<span id="uid-7dd4922d45"></span>
+
+### Item
+
+```csharp
+public Avalonia.Media.BoxShadow Item { get; set; }
+```
+
+</ApiRefPage>
+

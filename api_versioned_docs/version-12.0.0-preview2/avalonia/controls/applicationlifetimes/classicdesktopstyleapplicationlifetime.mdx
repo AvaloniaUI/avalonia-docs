@@ -1,0 +1,219 @@
+---
+title: 'ClassicDesktopStyleApplicationLifetime'
+hide_title: true
+slug: '/avalonia/controls/applicationlifetimes/classicdesktopstyleapplicationlifetime'
+uid: 'Avalonia.Controls.ApplicationLifetimes.ClassicDesktopStyleApplicationLifetime'
+commentId: 'T:Avalonia.Controls.ApplicationLifetimes.ClassicDesktopStyleApplicationLifetime'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.ApplicationLifetimes'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ClassicDesktopStyleApplicationLifetime Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.ApplicationLifetimes</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ClassicDesktopStyleApplicationLifetime
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ClassicDesktopStyleApplicationLifetime
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iapplicationlifetime">IApplicationLifetime</a>, <a href="iclassicdesktopstyleapplicationlifetime">IClassicDesktopStyleApplicationLifetime</a>, <a href="icontrolledapplicationlifetime">IControlledApplicationLifetime</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ClassicDesktopStyleApplicationLifetime](#uid-2cbb7e6f91) | No summary available. |
+
+<span id="uid-2cbb7e6f91"></span>
+
+### ClassicDesktopStyleApplicationLifetime
+
+```csharp
+public ClassicDesktopStyleApplicationLifetime()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-b64e65dfa0) | No summary available. |
+| [Shutdown](#uid-c9c69c42d0) | No summary available. |
+| [Start (2 overloads)](#uid-81bc091a88) | Since the lifetime must be set up/prepared with 'args' before executing Start(), an overload with no parameters seems more suitable for integrating with some lifetime manager providers, such as MS HostApplicationBuilder. |
+| [TryShutdown](#uid-8637c9a187) | No summary available. |
+
+<span id="uid-b64e65dfa0"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-c9c69c42d0"></span>
+
+### Shutdown
+
+```csharp
+public System.Void Shutdown(System.Int32 exitCode)
+```
+
+<span id="uid-81bc091a88"></span>
+
+### Start overloads
+
+<span id="uid-97193af66d"></span>
+
+#### Start
+
+Since the lifetime must be set up/prepared with 'args' before executing Start(), an overload with no parameters seems more suitable for integrating with some lifetime manager providers, such as MS HostApplicationBuilder.
+
+```csharp
+public System.Int32 Start()
+```
+
+Returns: exit code
+
+<span id="uid-2b79825799"></span>
+
+#### Start
+
+```csharp
+public System.Int32 Start(System.String[] args)
+```
+
+<span id="uid-8637c9a187"></span>
+
+### TryShutdown
+
+```csharp
+public System.Boolean TryShutdown(System.Int32 exitCode)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Args](#uid-e3f5f959b2) | Gets the arguments passed to the AppBuilder Start method. |
+| [MainWindow](#uid-8cea79d178) | Gets or sets the main window of the application. |
+| [ShutdownMode](#uid-586c25896d) | Gets or sets the Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode. This property indicates whether the application is shutdown explicitly or implicitly. If Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode is set to OnExplicitShutdown the application is only closes if Shutdown is called. The default is OnLastWindowClose |
+| [Windows](#uid-2f784e087d) | Gets the list of all open windows in the application. |
+
+<span id="uid-e3f5f959b2"></span>
+
+### Args
+
+Gets the arguments passed to the AppBuilder Start method.
+
+```csharp
+public System.String[] Args { get; set; }
+```
+
+<span id="uid-8cea79d178"></span>
+
+### MainWindow
+
+Gets or sets the main window of the application.
+
+```csharp
+public Avalonia.Controls.Window MainWindow { get; set; }
+```
+
+Value: The main window.
+
+<span id="uid-586c25896d"></span>
+
+### ShutdownMode
+
+Gets or sets the [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode). This property indicates whether the application is shutdown explicitly or implicitly.
+If [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode) is set to OnExplicitShutdown the application is only closes if Shutdown is called.
+The default is OnLastWindowClose
+
+```csharp
+public Avalonia.Controls.ShutdownMode ShutdownMode { get; set; }
+```
+
+Value: The shutdown mode.
+
+<span id="uid-2f784e087d"></span>
+
+### Windows
+
+Gets the list of all open windows in the application.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Window> Windows { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Exit](#uid-5eb5262df0) | Sent when the application is exiting. |
+| [ShutdownRequested](#uid-f33cbb7442) | Raised by the platform when an application shutdown is requested. |
+| [Startup](#uid-7bbb774223) | Sent when the application is starting up. |
+
+<span id="uid-5eb5262df0"></span>
+
+### Exit
+
+Sent when the application is exiting.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeExitEventArgs> Exit
+```
+
+<span id="uid-f33cbb7442"></span>
+
+### ShutdownRequested
+
+Raised by the platform when an application shutdown is requested.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ShutdownRequestedEventArgs> ShutdownRequested
+```
+
+<span id="uid-7bbb774223"></span>
+
+### Startup
+
+Sent when the application is starting up.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeStartupEventArgs> Startup
+```
+
+</ApiRefPage>
+

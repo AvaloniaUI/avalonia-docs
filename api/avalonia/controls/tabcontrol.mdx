@@ -1,0 +1,275 @@
+---
+title: 'TabControl'
+hide_title: true
+slug: '/avalonia/controls/tabcontrol'
+uid: 'Avalonia.Controls.TabControl'
+commentId: 'T:Avalonia.Controls.TabControl'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TabControl Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A tab control that displays a tab strip along with the content of the selected tab.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TabControl
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemscontrol">ItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/selectingitemscontrol">SelectingItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> TabControl
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IContentPresenterHost
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TabControl](#uid-c44751fbdc) | No summary available. |
+
+<span id="uid-c44751fbdc"></span>
+
+### TabControl
+
+```csharp
+public TabControl()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [UpdateSelectionFromEvent](#uid-8d8006ffbb) | No summary available. |
+
+<span id="uid-8d8006ffbb"></span>
+
+### UpdateSelectionFromEvent
+
+```csharp
+public System.Boolean UpdateSelectionFromEvent(Avalonia.Controls.Control container, Avalonia.Interactivity.RoutedEventArgs eventArgs)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ContentTemplate](#uid-685dfd9dc9) | Gets or sets the default data template used to display the content of the selected tab. |
+| [HorizontalContentAlignment](#uid-a303ef64e7) | Gets or sets the horizontal alignment of the content within the control. |
+| [IndicatorTemplate](#uid-f51d7e675c) | Gets or sets the data template used to render the selection indicator on each tab item. |
+| [PageTransition](#uid-d1d2eb57fb) | Gets or sets the page transition to use when switching tabs. |
+| [SelectedContent](#uid-216c3f835c) | Gets or sets the content of the selected tab. |
+| [SelectedContentTemplate](#uid-6a0f06381f) | Gets or sets the content template for the selected tab. |
+| [TabStripPlacement](#uid-66b6300eaa) | Gets or sets the tabstrip placement of the TabControl. |
+| [VerticalContentAlignment](#uid-8b15d581a1) | Gets or sets the vertical alignment of the content within the control. |
+
+<span id="uid-685dfd9dc9"></span>
+
+### ContentTemplate
+
+Gets or sets the default data template used to display the content of the selected tab.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate ContentTemplate { get; set; }
+```
+
+<span id="uid-a303ef64e7"></span>
+
+### HorizontalContentAlignment
+
+Gets or sets the horizontal alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.HorizontalAlignment HorizontalContentAlignment { get; set; }
+```
+
+<span id="uid-f51d7e675c"></span>
+
+### IndicatorTemplate
+
+Gets or sets the data template used to render the selection indicator on each tab item.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate IndicatorTemplate { get; set; }
+```
+
+<span id="uid-d1d2eb57fb"></span>
+
+### PageTransition
+
+Gets or sets the page transition to use when switching tabs.
+
+```csharp
+public Avalonia.Animation.IPageTransition PageTransition { get; set; }
+```
+
+<span id="uid-216c3f835c"></span>
+
+### SelectedContent
+
+Gets or sets the content of the selected tab.
+
+```csharp
+public System.Object SelectedContent { get; set; }
+```
+
+<span id="uid-6a0f06381f"></span>
+
+### SelectedContentTemplate
+
+Gets or sets the content template for the selected tab.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate SelectedContentTemplate { get; set; }
+```
+
+<span id="uid-66b6300eaa"></span>
+
+### TabStripPlacement
+
+Gets or sets the tabstrip placement of the TabControl.
+
+```csharp
+public Avalonia.Controls.Dock TabStripPlacement { get; set; }
+```
+
+<span id="uid-8b15d581a1"></span>
+
+### VerticalContentAlignment
+
+Gets or sets the vertical alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ContentTemplateProperty](#uid-3ddb209b54) | Defines the Avalonia.Controls.TabControl.ContentTemplate property. |
+| [HorizontalContentAlignmentProperty](#uid-613be0f05f) | Defines the Avalonia.Controls.TabControl.HorizontalContentAlignment property. |
+| [IndicatorTemplateProperty](#uid-201f707255) | Defines the Avalonia.Controls.TabControl.IndicatorTemplate property. |
+| [PageTransitionProperty](#uid-9a0d6ee363) | Defines the Avalonia.Controls.TabControl.PageTransition property. |
+| [SelectedContentProperty](#uid-609e72c7c7) | Defines the Avalonia.Controls.TabControl.SelectedContent property. |
+| [SelectedContentTemplateProperty](#uid-9fad8e86e6) | Defines the Avalonia.Controls.TabControl.SelectedContentTemplate property. |
+| [TabStripPlacementProperty](#uid-95f9ed961c) | Defines the Avalonia.Controls.TabControl.TabStripPlacement property. |
+| [VerticalContentAlignmentProperty](#uid-f945531185) | Defines the Avalonia.Controls.TabControl.VerticalContentAlignment property. |
+
+<span id="uid-3ddb209b54"></span>
+
+### ContentTemplateProperty
+
+Defines the [Avalonia.Controls.TabControl.ContentTemplate](xref:Avalonia.Controls.TabControl.ContentTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> ContentTemplateProperty
+```
+
+<span id="uid-613be0f05f"></span>
+
+### HorizontalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.TabControl.HorizontalContentAlignment](xref:Avalonia.Controls.TabControl.HorizontalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.HorizontalAlignment> HorizontalContentAlignmentProperty
+```
+
+<span id="uid-201f707255"></span>
+
+### IndicatorTemplateProperty
+
+Defines the [Avalonia.Controls.TabControl.IndicatorTemplate](xref:Avalonia.Controls.TabControl.IndicatorTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> IndicatorTemplateProperty
+```
+
+<span id="uid-9a0d6ee363"></span>
+
+### PageTransitionProperty
+
+Defines the [Avalonia.Controls.TabControl.PageTransition](xref:Avalonia.Controls.TabControl.PageTransition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Animation.IPageTransition> PageTransitionProperty
+```
+
+<span id="uid-609e72c7c7"></span>
+
+### SelectedContentProperty
+
+Defines the [Avalonia.Controls.TabControl.SelectedContent](xref:Avalonia.Controls.TabControl.SelectedContent) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TabControl, System.Object> SelectedContentProperty
+```
+
+<span id="uid-9fad8e86e6"></span>
+
+### SelectedContentTemplateProperty
+
+Defines the [Avalonia.Controls.TabControl.SelectedContentTemplate](xref:Avalonia.Controls.TabControl.SelectedContentTemplate) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TabControl, Avalonia.Controls.Templates.IDataTemplate> SelectedContentTemplateProperty
+```
+
+<span id="uid-95f9ed961c"></span>
+
+### TabStripPlacementProperty
+
+Defines the [Avalonia.Controls.TabControl.TabStripPlacement](xref:Avalonia.Controls.TabControl.TabStripPlacement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Dock> TabStripPlacementProperty
+```
+
+<span id="uid-f945531185"></span>
+
+### VerticalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.TabControl.VerticalContentAlignment](xref:Avalonia.Controls.TabControl.VerticalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.VerticalAlignment> VerticalContentAlignmentProperty
+```
+
+</ApiRefPage>
+

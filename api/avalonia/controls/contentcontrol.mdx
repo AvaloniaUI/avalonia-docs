@@ -1,0 +1,184 @@
+---
+title: 'ContentControl'
+hide_title: true
+slug: '/avalonia/controls/contentcontrol'
+uid: 'Avalonia.Controls.ContentControl'
+commentId: 'T:Avalonia.Controls.ContentControl'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ContentControl Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Displays [Avalonia.Controls.ContentControl.Content](xref:Avalonia.Controls.ContentControl.Content) according to an [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ContentControl
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> ContentControl
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IContentControl, IContentPresenterHost
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ContentControl](#uid-f4d1f87ef4) | No summary available. |
+
+<span id="uid-f4d1f87ef4"></span>
+
+### ContentControl
+
+```csharp
+public ContentControl()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Content](#uid-eab6df2df3) | Gets or sets the content to display. |
+| [ContentTemplate](#uid-d3b1dd21f9) | Gets or sets the data template used to display the content of the control. |
+| [HorizontalContentAlignment](#uid-91c4dbcd1a) | Gets or sets the horizontal alignment of the content within the control. |
+| [Presenter](#uid-9eb95d7b29) | Gets the presenter from the control's template. |
+| [VerticalContentAlignment](#uid-7225e4abe8) | Gets or sets the vertical alignment of the content within the control. |
+
+<span id="uid-eab6df2df3"></span>
+
+### Content
+
+Gets or sets the content to display.
+
+```csharp
+public System.Object Content { get; set; }
+```
+
+<span id="uid-d3b1dd21f9"></span>
+
+### ContentTemplate
+
+Gets or sets the data template used to display the content of the control.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate ContentTemplate { get; set; }
+```
+
+<span id="uid-91c4dbcd1a"></span>
+
+### HorizontalContentAlignment
+
+Gets or sets the horizontal alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.HorizontalAlignment HorizontalContentAlignment { get; set; }
+```
+
+<span id="uid-9eb95d7b29"></span>
+
+### Presenter
+
+Gets the presenter from the control's template.
+
+```csharp
+public Avalonia.Controls.Presenters.ContentPresenter Presenter { get; set; }
+```
+
+<span id="uid-7225e4abe8"></span>
+
+### VerticalContentAlignment
+
+Gets or sets the vertical alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ContentProperty](#uid-0e2122d666) | Defines the Avalonia.Controls.ContentControl.Content property. |
+| [ContentTemplateProperty](#uid-8ca28f1907) | Defines the Avalonia.Controls.ContentControl.ContentTemplate property. |
+| [HorizontalContentAlignmentProperty](#uid-a0ed10f05c) | Defines the Avalonia.Controls.ContentControl.HorizontalContentAlignment property. |
+| [VerticalContentAlignmentProperty](#uid-5ed917028d) | Defines the Avalonia.Controls.ContentControl.VerticalContentAlignment property. |
+
+<span id="uid-0e2122d666"></span>
+
+### ContentProperty
+
+Defines the [Avalonia.Controls.ContentControl.Content](xref:Avalonia.Controls.ContentControl.Content) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> ContentProperty
+```
+
+<span id="uid-8ca28f1907"></span>
+
+### ContentTemplateProperty
+
+Defines the [Avalonia.Controls.ContentControl.ContentTemplate](xref:Avalonia.Controls.ContentControl.ContentTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> ContentTemplateProperty
+```
+
+<span id="uid-a0ed10f05c"></span>
+
+### HorizontalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.ContentControl.HorizontalContentAlignment](xref:Avalonia.Controls.ContentControl.HorizontalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.HorizontalAlignment> HorizontalContentAlignmentProperty
+```
+
+<span id="uid-5ed917028d"></span>
+
+### VerticalContentAlignmentProperty
+
+Defines the [Avalonia.Controls.ContentControl.VerticalContentAlignment](xref:Avalonia.Controls.ContentControl.VerticalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.VerticalAlignment> VerticalContentAlignmentProperty
+```
+
+</ApiRefPage>
+

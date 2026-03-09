@@ -1,0 +1,169 @@
+---
+title: 'RefreshContainer'
+hide_title: true
+slug: '/avalonia/controls/refreshcontainer'
+uid: 'Avalonia.Controls.RefreshContainer'
+commentId: 'T:Avalonia.Controls.RefreshContainer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RefreshContainer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a container control that provides a [Avalonia.Controls.RefreshVisualizer](xref:Avalonia.Controls.RefreshVisualizer) and pull-to-refresh functionality for scrollable content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RefreshContainer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> RefreshContainer
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RefreshContainer](#uid-e07249f325) | No summary available. |
+
+<span id="uid-e07249f325"></span>
+
+### RefreshContainer
+
+```csharp
+public RefreshContainer()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [RequestRefresh](#uid-082890aeb2) | Initiates an update of the content. |
+
+<span id="uid-082890aeb2"></span>
+
+### RequestRefresh
+
+Initiates an update of the content.
+
+```csharp
+public System.Void RequestRefresh()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PullDirection](#uid-efbfd1f02b) | Gets or sets a value that specifies the direction to pull to initiate a refresh. |
+| [Visualizer](#uid-0a67052627) | Gets or sets the Avalonia.Controls.RefreshVisualizer for this container. |
+
+<span id="uid-efbfd1f02b"></span>
+
+### PullDirection
+
+Gets or sets a value that specifies the direction to pull to initiate a refresh.
+
+```csharp
+public Avalonia.Input.PullDirection PullDirection { get; set; }
+```
+
+<span id="uid-0a67052627"></span>
+
+### Visualizer
+
+Gets or sets the [Avalonia.Controls.RefreshVisualizer](xref:Avalonia.Controls.RefreshVisualizer) for this container.
+
+```csharp
+public Avalonia.Controls.RefreshVisualizer Visualizer { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [PullDirectionProperty](#uid-a496e79b4e) | Defines the Avalonia.Controls.RefreshContainer.PullDirection event. |
+| [RefreshRequestedEvent](#uid-737482b215) | Defines the Avalonia.Controls.RefreshContainer.RefreshRequested event. |
+| [VisualizerProperty](#uid-e10a418a4c) | Defines the Avalonia.Controls.RefreshContainer.Visualizer event. |
+
+<span id="uid-a496e79b4e"></span>
+
+### PullDirectionProperty
+
+Defines the [Avalonia.Controls.RefreshContainer.PullDirection](xref:Avalonia.Controls.RefreshContainer.PullDirection) event.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Input.PullDirection> PullDirectionProperty
+```
+
+<span id="uid-737482b215"></span>
+
+### RefreshRequestedEvent
+
+Defines the [Avalonia.Controls.RefreshContainer.RefreshRequested](xref:Avalonia.Controls.RefreshContainer.RefreshRequested) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.RefreshRequestedEventArgs> RefreshRequestedEvent
+```
+
+<span id="uid-e10a418a4c"></span>
+
+### VisualizerProperty
+
+Defines the [Avalonia.Controls.RefreshContainer.Visualizer](xref:Avalonia.Controls.RefreshContainer.Visualizer) event.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.RefreshContainer, Avalonia.Controls.RefreshVisualizer> VisualizerProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [RefreshRequested](#uid-579fc75907) | Occurs when an update of the content has been initiated. |
+
+<span id="uid-579fc75907"></span>
+
+### RefreshRequested
+
+Occurs when an update of the content has been initiated.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.RefreshRequestedEventArgs> RefreshRequested
+```
+
+</ApiRefPage>
+

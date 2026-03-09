@@ -1,0 +1,387 @@
+---
+title: 'StyledElement'
+hide_title: true
+slug: '/avalonia/styledelement'
+uid: 'Avalonia.StyledElement'
+commentId: 'T:Avalonia.StyledElement'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StyledElement Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Extends an [Avalonia.Animation.Animatable](xref:Avalonia.Animation.Animatable) with the following features:
+
+- An inherited [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext).
+- Implements [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) to form part of a logical tree.
+- A collection of class strings for custom styling.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StyledElement
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> StyledElement
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaListItemValidator&lt;ILogical&gt;, <a href="controls/iresourcehost">IResourceHost</a>, <a href="controls/iresourcenode">IResourceNode</a>, <a href="controls/isetinheritanceparent">ISetInheritanceParent</a>, <a href="controls/isetlogicalparent">ISetLogicalParent</a>, <a href="idatacontextprovider">IDataContextProvider</a>, <a href="inamed">INamed</a>, <a href="logicaltree/ilogical">ILogical</a>, <a href="styling/istylehost">IStyleHost</a>, <a href="styling/ithemevarianthost">IThemeVariantHost</a>, ISupportInitialize
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [StyledElement](#uid-69b374c1bd) | Initializes a new instance of the Avalonia.StyledElement class. |
+
+<span id="uid-69b374c1bd"></span>
+
+### StyledElement
+
+Initializes a new instance of the [Avalonia.StyledElement](xref:Avalonia.StyledElement) class.
+
+```csharp
+public StyledElement()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyStyling](#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. |
+| [BeginInit](#uid-91c6ccadce) | No summary available. |
+| [EndInit](#uid-17b450469d) | No summary available. |
+| [TryGetResource](#uid-2046a6b284) | No summary available. |
+
+<span id="uid-b0f81a6f8f"></span>
+
+### ApplyStyling
+
+Applies styling to the control if the control is initialized and styling is not
+already applied.
+
+```csharp
+public System.Boolean ApplyStyling()
+```
+
+Returns: A value indicating whether styling is now applied to the control.
+
+<span id="uid-91c6ccadce"></span>
+
+### BeginInit
+
+```csharp
+public System.Void BeginInit()
+```
+
+<span id="uid-17b450469d"></span>
+
+### EndInit
+
+```csharp
+public System.Void EndInit()
+```
+
+<span id="uid-2046a6b284"></span>
+
+### TryGetResource
+
+```csharp
+public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariant](#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. |
+| [Classes](#uid-b7b7edea05) | Gets or sets the styled element's classes. |
+| [DataContext](#uid-647f924a56) | Gets or sets the control's data context. |
+| [IsInitialized](#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. |
+| [Name](#uid-245f4ccff5) | Gets or sets the name of the styled element. |
+| [Parent](#uid-aad2c5c78d) | Gets the styled element's logical parent. |
+| [Resources](#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. |
+| [StyleKey](#uid-081584075e) | Gets the type by which the element is styled. |
+| [Styles](#uid-ae663139cc) | Gets the styles for the styled element. |
+| [TemplatedParent](#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. |
+| [Theme](#uid-1aebed283d) | Gets or sets the theme to be applied to the element. |
+
+<span id="uid-776bcbe4bf"></span>
+
+### ActualThemeVariant
+
+Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty.
+
+```csharp
+public Avalonia.Styling.ThemeVariant ActualThemeVariant { get; set; }
+```
+
+Returns: If current control is contained in the ThemeVariantScope, TopLevel or Application with non-default RequestedThemeVariant, that value will be returned.
+Otherwise, current OS theme variant is returned.
+
+<span id="uid-b7b7edea05"></span>
+
+### Classes
+
+Gets or sets the styled element's classes.
+
+```csharp
+public Avalonia.Controls.Classes Classes { get; set; }
+```
+
+<span id="uid-647f924a56"></span>
+
+### DataContext
+
+Gets or sets the control's data context.
+
+```csharp
+public System.Object DataContext { get; set; }
+```
+
+<span id="uid-59a7cddacb"></span>
+
+### IsInitialized
+
+Gets a value that indicates whether the element has finished initialization.
+
+```csharp
+public System.Boolean IsInitialized { get; set; }
+```
+
+<span id="uid-245f4ccff5"></span>
+
+### Name
+
+Gets or sets the name of the styled element.
+
+```csharp
+public System.String Name { get; set; }
+```
+
+<span id="uid-aad2c5c78d"></span>
+
+### Parent
+
+Gets the styled element's logical parent.
+
+```csharp
+public Avalonia.StyledElement Parent { get; set; }
+```
+
+<span id="uid-f6488ca4b7"></span>
+
+### Resources
+
+Gets or sets the styled element's resource dictionary.
+
+```csharp
+public Avalonia.Controls.IResourceDictionary Resources { get; set; }
+```
+
+<span id="uid-081584075e"></span>
+
+### StyleKey
+
+Gets the type by which the element is styled.
+
+```csharp
+public System.Type StyleKey { get; set; }
+```
+
+<span id="uid-ae663139cc"></span>
+
+### Styles
+
+Gets the styles for the styled element.
+
+```csharp
+public Avalonia.Styling.Styles Styles { get; set; }
+```
+
+<span id="uid-dbf6ddacc3"></span>
+
+### TemplatedParent
+
+Gets the styled element whose lookless template this styled element is part of.
+
+```csharp
+public Avalonia.AvaloniaObject TemplatedParent { get; set; }
+```
+
+<span id="uid-1aebed283d"></span>
+
+### Theme
+
+Gets or sets the theme to be applied to the element.
+
+```csharp
+public Avalonia.Styling.ControlTheme Theme { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DataContextProperty](#uid-7eefabb929) | Defines the Avalonia.StyledElement.DataContext property. |
+| [NameProperty](#uid-bcdbb9de56) | Defines the Avalonia.StyledElement.Name property. |
+| [ParentProperty](#uid-dc6481a488) | Defines the Avalonia.StyledElement.Parent property. |
+| [TemplatedParentProperty](#uid-a2c7149a6b) | Defines the Avalonia.StyledElement.TemplatedParent property. |
+| [ThemeProperty](#uid-05852d7b9a) | Defines the Avalonia.StyledElement.Theme property. |
+
+<span id="uid-7eefabb929"></span>
+
+### DataContextProperty
+
+Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Object> DataContextProperty
+```
+
+<span id="uid-bcdbb9de56"></span>
+
+### NameProperty
+
+Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.StyledElement, System.String> NameProperty
+```
+
+<span id="uid-dc6481a488"></span>
+
+### ParentProperty
+
+Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.StyledElement, Avalonia.StyledElement> ParentProperty
+```
+
+<span id="uid-a2c7149a6b"></span>
+
+### TemplatedParentProperty
+
+Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.StyledElement, Avalonia.AvaloniaObject> TemplatedParentProperty
+```
+
+<span id="uid-05852d7b9a"></span>
+
+### ThemeProperty
+
+Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Styling.ControlTheme> ThemeProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantChanged](#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. |
+| [AttachedToLogicalTree](#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. |
+| [DataContextChanged](#uid-4b1cc873f8) | Occurs when the Avalonia.StyledElement.DataContext property changes. |
+| [DetachedFromLogicalTree](#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. |
+| [Initialized](#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. |
+| [ResourcesChanged](#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. |
+
+<span id="uid-e69ef27e71"></span>
+
+### ActualThemeVariantChanged
+
+Raised when the theme variant is changed on the element or an ancestor of the element.
+
+```csharp
+public event System.EventHandler ActualThemeVariantChanged
+```
+
+<span id="uid-717aa68e85"></span>
+
+### AttachedToLogicalTree
+
+Raised when the styled element is attached to a rooted logical tree.
+
+```csharp
+public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> AttachedToLogicalTree
+```
+
+<span id="uid-4b1cc873f8"></span>
+
+### DataContextChanged
+
+Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes.
+
+```csharp
+public event System.EventHandler DataContextChanged
+```
+
+<span id="uid-d9f5afa535"></span>
+
+### DetachedFromLogicalTree
+
+Raised when the styled element is detached from a rooted logical tree.
+
+```csharp
+public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> DetachedFromLogicalTree
+```
+
+<span id="uid-bd6a5e5c0e"></span>
+
+### Initialized
+
+Occurs when the styled element has finished initialization.
+
+```csharp
+public event System.EventHandler Initialized
+```
+
+<span id="uid-99a7f47c56"></span>
+
+### ResourcesChanged
+
+Occurs when a resource in this styled element or a parent styled element has changed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
+```
+
+</ApiRefPage>
+

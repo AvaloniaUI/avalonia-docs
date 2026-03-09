@@ -1,0 +1,291 @@
+---
+title: 'TreeView'
+hide_title: true
+slug: '/avalonia/controls/treeview'
+uid: 'Avalonia.Controls.TreeView'
+commentId: 'T:Avalonia.Controls.TreeView'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeView Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Displays a hierarchical tree of data.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeView
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemscontrol">ItemsControl</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeView
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../input/icustomkeyboardnavigation">ICustomKeyboardNavigation</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeView](#uid-e9e5d1740b) | No summary available. |
+
+<span id="uid-e9e5d1740b"></span>
+
+### TreeView
+
+```csharp
+public TreeView()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CollapseSubTree](#uid-acf0574410) | Collapse the specified Avalonia.Controls.TreeViewItem all descendent Avalonia.Controls.TreeViewItem s. |
+| [ExpandSubTree](#uid-4394703748) | Expands the specified Avalonia.Controls.TreeViewItem all descendent Avalonia.Controls.TreeViewItems. |
+| [GetRealizedTreeContainers](#uid-6bd0537fbd) | No summary available. |
+| [SelectAll](#uid-07fa2f5d78) | Selects all items in the Avalonia.Controls.TreeView. |
+| [TreeContainerFromItem](#uid-065d96ca3a) | No summary available. |
+| [TreeItemFromContainer](#uid-7d55b4ee8f) | No summary available. |
+| [UnselectAll](#uid-92831b2ff9) | Deselects all items in the Avalonia.Controls.TreeView. |
+| [UpdateSelectionFromEvent](#uid-862c559cad) | Updates the selection based on an event that may have originated in a container that belongs to the control. |
+
+<span id="uid-acf0574410"></span>
+
+### CollapseSubTree
+
+Collapse the specified [Avalonia.Controls.TreeViewItem](xref:Avalonia.Controls.TreeViewItem) all descendent [Avalonia.Controls.TreeViewItem](xref:Avalonia.Controls.TreeViewItem) s.
+
+```csharp
+public System.Void CollapseSubTree(Avalonia.Controls.TreeViewItem item)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `item` | The item to collapse. |
+
+<span id="uid-4394703748"></span>
+
+### ExpandSubTree
+
+Expands the specified [Avalonia.Controls.TreeViewItem](xref:Avalonia.Controls.TreeViewItem) all descendent [Avalonia.Controls.TreeViewItem](xref:Avalonia.Controls.TreeViewItem)s.
+
+```csharp
+public System.Void ExpandSubTree(Avalonia.Controls.TreeViewItem item)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `item` | The item to expand. |
+
+<span id="uid-6bd0537fbd"></span>
+
+### GetRealizedTreeContainers
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Control> GetRealizedTreeContainers()
+```
+
+<span id="uid-07fa2f5d78"></span>
+
+### SelectAll
+
+Selects all items in the [Avalonia.Controls.TreeView](xref:Avalonia.Controls.TreeView).
+
+```csharp
+public System.Void SelectAll()
+```
+
+<span id="uid-065d96ca3a"></span>
+
+### TreeContainerFromItem
+
+```csharp
+public Avalonia.Controls.Control TreeContainerFromItem(System.Object item)
+```
+
+<span id="uid-7d55b4ee8f"></span>
+
+### TreeItemFromContainer
+
+```csharp
+public System.Object TreeItemFromContainer(Avalonia.Controls.Control container)
+```
+
+<span id="uid-92831b2ff9"></span>
+
+### UnselectAll
+
+Deselects all items in the [Avalonia.Controls.TreeView](xref:Avalonia.Controls.TreeView).
+
+```csharp
+public System.Void UnselectAll()
+```
+
+<span id="uid-862c559cad"></span>
+
+### UpdateSelectionFromEvent
+
+Updates the selection based on an event that may have originated in a container that
+belongs to the control.
+
+```csharp
+public System.Boolean UpdateSelectionFromEvent(Avalonia.Controls.Control container, Avalonia.Interactivity.RoutedEventArgs eventArgs)
+```
+
+Returns: True if the event was accepted and handled, otherwise false.
+
+#### See also
+
+- [Avalonia.Controls.Primitives.SelectingItemsControl.UpdateSelectionFromEvent(Avalonia.Controls.Control,Avalonia.Interactivity.RoutedEventArgs)](xref:Avalonia.Controls.Primitives.SelectingItemsControl.UpdateSelectionFromEvent%28Avalonia.Controls.Control%2CAvalonia.Interactivity.RoutedEventArgs%29)
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AutoScrollToSelectedItem](#uid-f8b0070dbd) | Gets or sets a value indicating whether to automatically scroll to newly selected items. |
+| [SelectedItem](#uid-f4717c8afb) | Gets or sets the selected item. |
+| [SelectedItems](#uid-c57f27b249) | Gets or sets the selected items. |
+| [SelectionMode](#uid-cb6878b5c5) | Gets or sets the selection mode. |
+
+<span id="uid-f8b0070dbd"></span>
+
+### AutoScrollToSelectedItem
+
+Gets or sets a value indicating whether to automatically scroll to newly selected items.
+
+```csharp
+public System.Boolean AutoScrollToSelectedItem { get; set; }
+```
+
+<span id="uid-f4717c8afb"></span>
+
+### SelectedItem
+
+Gets or sets the selected item.
+
+```csharp
+public System.Object SelectedItem { get; set; }
+```
+
+<span id="uid-c57f27b249"></span>
+
+### SelectedItems
+
+Gets or sets the selected items.
+
+```csharp
+public System.Collections.IList SelectedItems { get; set; }
+```
+
+<span id="uid-cb6878b5c5"></span>
+
+### SelectionMode
+
+Gets or sets the selection mode.
+
+```csharp
+public Avalonia.Controls.SelectionMode SelectionMode { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AutoScrollToSelectedItemProperty](#uid-5026af64ed) | Defines the Avalonia.Controls.TreeView.AutoScrollToSelectedItem property. |
+| [SelectedItemProperty](#uid-364a13c42f) | Defines the Avalonia.Controls.TreeView.SelectedItem property. |
+| [SelectedItemsProperty](#uid-702c0074c3) | Defines the Avalonia.Controls.TreeView.SelectedItems property. |
+| [SelectionModeProperty](#uid-8a3b263607) | Defines the Avalonia.Controls.TreeView.SelectionMode property. |
+
+<span id="uid-5026af64ed"></span>
+
+### AutoScrollToSelectedItemProperty
+
+Defines the [Avalonia.Controls.TreeView.AutoScrollToSelectedItem](xref:Avalonia.Controls.TreeView.AutoScrollToSelectedItem) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> AutoScrollToSelectedItemProperty
+```
+
+<span id="uid-364a13c42f"></span>
+
+### SelectedItemProperty
+
+Defines the [Avalonia.Controls.TreeView.SelectedItem](xref:Avalonia.Controls.TreeView.SelectedItem) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TreeView, System.Object> SelectedItemProperty
+```
+
+<span id="uid-702c0074c3"></span>
+
+### SelectedItemsProperty
+
+Defines the [Avalonia.Controls.TreeView.SelectedItems](xref:Avalonia.Controls.TreeView.SelectedItems) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TreeView, System.Collections.IList> SelectedItemsProperty
+```
+
+<span id="uid-8a3b263607"></span>
+
+### SelectionModeProperty
+
+Defines the [Avalonia.Controls.TreeView.SelectionMode](xref:Avalonia.Controls.TreeView.SelectionMode) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.SelectionMode> SelectionModeProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SelectionChanged](#uid-8c4488ae73) | Occurs when the control's selection changes. |
+
+<span id="uid-8c4488ae73"></span>
+
+### SelectionChanged
+
+Occurs when the control's selection changes.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs> SelectionChanged
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,203 @@
+---
+title: 'PopupRoot'
+hide_title: true
+slug: '/avalonia/controls/primitives/popuproot'
+uid: 'Avalonia.Controls.Primitives.PopupRoot'
+commentId: 'T:Avalonia.Controls.Primitives.PopupRoot'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PopupRoot Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The root window of a [Avalonia.Controls.Primitives.Popup](xref:Avalonia.Controls.Primitives.Popup).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PopupRoot
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../toplevel">TopLevel</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../windowbase">WindowBase</a> <span className="apiref-page__relation-separator">-&gt;</span> PopupRoot
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IPopupHost, <a href="../../input/ifocusscope">IFocusScope</a>, <a href="../../styling/istylehost">IStyleHost</a>, IHostedVisualTreeRoot, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PopupRoot (2 overloads)](#uid-38308ea119) | Initializes a new instance of the Avalonia.Controls.Primitives.PopupRoot class. |
+
+<span id="uid-38308ea119"></span>
+
+### PopupRoot overloads
+
+<span id="uid-f20be88057"></span>
+
+#### PopupRoot
+
+Initializes a new instance of the [Avalonia.Controls.Primitives.PopupRoot](xref:Avalonia.Controls.Primitives.PopupRoot) class.
+
+```csharp
+public PopupRoot(Avalonia.Controls.TopLevel parent, Avalonia.Platform.IPopupImpl impl)
+```
+
+<span id="uid-1faf06ee13"></span>
+
+#### PopupRoot
+
+Initializes a new instance of the [Avalonia.Controls.Primitives.PopupRoot](xref:Avalonia.Controls.Primitives.PopupRoot) class.
+
+```csharp
+public PopupRoot(Avalonia.Controls.TopLevel parent, Avalonia.Platform.IPopupImpl impl, Avalonia.IAvaloniaDependencyResolver dependencyResolver)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dependencyResolver` | The dependency resolver to use. If null the default dependency resolver will be used. |
+| `impl` | The popup implementation. |
+| `parent` | The popup parent. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-065e2cb0b8) | No summary available. |
+| [SetChild](#uid-b971636ae1) | No summary available. |
+| [TakeFocus](#uid-da79476ed4) | No summary available. |
+
+<span id="uid-065e2cb0b8"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-b971636ae1"></span>
+
+### SetChild
+
+```csharp
+public System.Void SetChild(Avalonia.Controls.Control control)
+```
+
+<span id="uid-da79476ed4"></span>
+
+### TakeFocus
+
+```csharp
+public System.Void TakeFocus()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ParentTopLevel](#uid-4a451c86af) | No summary available. |
+| [PlatformImpl](#uid-ca9a0e1ca2) | Gets the platform-specific window implementation. |
+| [Transform](#uid-a621e5afbb) | Gets or sets a transform that will be applied to the popup. |
+| [WindowManagerAddShadowHint](#uid-ddc6165334) | Gets or sets a hint to the window manager that a shadow should be added to the popup. |
+
+<span id="uid-4a451c86af"></span>
+
+### ParentTopLevel
+
+```csharp
+public Avalonia.Controls.TopLevel ParentTopLevel { get; set; }
+```
+
+<span id="uid-ca9a0e1ca2"></span>
+
+### PlatformImpl
+
+Gets the platform-specific window implementation.
+
+```csharp
+public Avalonia.Platform.IPopupImpl PlatformImpl { get; set; }
+```
+
+<span id="uid-a621e5afbb"></span>
+
+### Transform
+
+Gets or sets a transform that will be applied to the popup.
+
+```csharp
+public Avalonia.Media.Transform Transform { get; set; }
+```
+
+<span id="uid-ddc6165334"></span>
+
+### WindowManagerAddShadowHint
+
+Gets or sets a hint to the window manager that a shadow should be added to the popup.
+
+```csharp
+public System.Boolean WindowManagerAddShadowHint { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [TransformProperty](#uid-cab945602c) | Defines the Avalonia.Controls.Primitives.PopupRoot.Transform property. |
+| [WindowManagerAddShadowHintProperty](#uid-2e64f963dd) | Defines the Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHint property. |
+
+<span id="uid-cab945602c"></span>
+
+### TransformProperty
+
+Defines the [Avalonia.Controls.Primitives.PopupRoot.Transform](xref:Avalonia.Controls.Primitives.PopupRoot.Transform) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.Transform> TransformProperty
+```
+
+<span id="uid-2e64f963dd"></span>
+
+### WindowManagerAddShadowHintProperty
+
+Defines the [Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHint](xref:Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHint) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> WindowManagerAddShadowHintProperty
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,130 @@
+---
+title: 'GradientBrush'
+hide_title: true
+slug: '/avalonia/media/gradientbrush'
+uid: 'Avalonia.Media.GradientBrush'
+commentId: 'T:Avalonia.Media.GradientBrush'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GradientBrush Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for brushes that draw with a gradient.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GradientBrush
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="brush">Brush</a> <span className="apiref-page__relation-separator">-&gt;</span> GradientBrush
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ibrush">IBrush</a>, <a href="igradientbrush">IGradientBrush</a>, IMutableBrush
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToImmutable](#uid-23f0b3710a) | No summary available. |
+
+<span id="uid-23f0b3710a"></span>
+
+### ToImmutable
+
+```csharp
+public Avalonia.Media.IImmutableBrush ToImmutable()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [GradientStops](#uid-383377499c) | Gets the brush's gradient stops. |
+| [SpreadMethod](#uid-e79c8aab1c) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. |
+
+<span id="uid-383377499c"></span>
+
+### GradientStops
+
+Gets the brush's gradient stops.
+
+```csharp
+public Avalonia.Media.GradientStops GradientStops { get; set; }
+```
+
+<span id="uid-e79c8aab1c"></span>
+
+### SpreadMethod
+
+Gets the brush's spread method that defines how to draw a gradient that doesn't fill
+the bounds of the destination control.
+
+```csharp
+public Avalonia.Media.GradientSpreadMethod SpreadMethod { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [GradientStopsProperty](#uid-dafe8f75b0) | Defines the Avalonia.Media.GradientBrush.GradientStops property. |
+| [SpreadMethodProperty](#uid-b6bed14182) | Defines the Avalonia.Media.GradientBrush.SpreadMethod property. |
+
+<span id="uid-dafe8f75b0"></span>
+
+### GradientStopsProperty
+
+Defines the [Avalonia.Media.GradientBrush.GradientStops](xref:Avalonia.Media.GradientBrush.GradientStops) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.GradientStops> GradientStopsProperty
+```
+
+<span id="uid-b6bed14182"></span>
+
+### SpreadMethodProperty
+
+Defines the [Avalonia.Media.GradientBrush.SpreadMethod](xref:Avalonia.Media.GradientBrush.SpreadMethod) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.GradientSpreadMethod> SpreadMethodProperty
+```
+
+</ApiRefPage>
+

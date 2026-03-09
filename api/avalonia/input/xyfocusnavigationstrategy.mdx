@@ -1,0 +1,109 @@
+---
+title: 'XYFocusNavigationStrategy'
+hide_title: true
+slug: '/avalonia/input/xyfocusnavigationstrategy'
+uid: 'Avalonia.Input.XYFocusNavigationStrategy'
+commentId: 'T:Avalonia.Input.XYFocusNavigationStrategy'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">XYFocusNavigationStrategy Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Specifies the disambiguation strategy used for navigating between multiple candidate targets using
+[Avalonia.Input.XYFocus.DownNavigationStrategyProperty](xref:Avalonia.Input.XYFocus.DownNavigationStrategyProperty), [Avalonia.Input.XYFocus.LeftNavigationStrategyProperty](xref:Avalonia.Input.XYFocus.LeftNavigationStrategyProperty),
+[Avalonia.Input.XYFocus.RightNavigationStrategyProperty](xref:Avalonia.Input.XYFocus.RightNavigationStrategyProperty), and [Avalonia.Input.XYFocus.UpNavigationStrategyProperty](xref:Avalonia.Input.XYFocus.UpNavigationStrategyProperty).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum XYFocusNavigationStrategy
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> XYFocusNavigationStrategy
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Auto](#uid-87e3455876) | Indicates that navigation strategy is inherited from the element's ancestors. If all ancestors have a value of Auto, the fallback strategy is Projection. |
+| [NavigationDirectionDistance](#uid-2a78a8f6d4) | Indicates that focus moves to the element closest to the axis of the navigation direction. |
+| [Projection](#uid-27b62bc91b) | Indicates that focus moves to the first element encountered when projecting the edge of the currently focused element in the direction of navigation. |
+| [RectilinearDistance](#uid-efb2d7c182) | Indicates that focus moves to the closest element based on the shortest 2D distance (Manhattan metric). |
+
+<span id="uid-87e3455876"></span>
+
+### Auto
+
+Indicates that navigation strategy is inherited from the element's ancestors. If all ancestors have a value of Auto, the fallback strategy is Projection.
+
+```csharp
+public Avalonia.Input.XYFocusNavigationStrategy Auto
+```
+
+<span id="uid-2a78a8f6d4"></span>
+
+### NavigationDirectionDistance
+
+Indicates that focus moves to the element closest to the axis of the navigation direction.
+
+```csharp
+public Avalonia.Input.XYFocusNavigationStrategy NavigationDirectionDistance
+```
+
+<span id="uid-27b62bc91b"></span>
+
+### Projection
+
+Indicates that focus moves to the first element encountered when projecting the edge of the currently focused element in the direction of navigation.
+
+```csharp
+public Avalonia.Input.XYFocusNavigationStrategy Projection
+```
+
+<span id="uid-efb2d7c182"></span>
+
+### RectilinearDistance
+
+Indicates that focus moves to the closest element based on the shortest 2D distance (Manhattan metric).
+
+```csharp
+public Avalonia.Input.XYFocusNavigationStrategy RectilinearDistance
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,611 @@
+---
+title: 'TextPresenter'
+hide_title: true
+slug: '/avalonia/controls/presenters/textpresenter'
+uid: 'Avalonia.Controls.Presenters.TextPresenter'
+commentId: 'T:Avalonia.Controls.Presenters.TextPresenter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Presenters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextPresenter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Presenters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextPresenter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> TextPresenter
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextPresenter](#uid-eb0d2ea667) | No summary available. |
+
+<span id="uid-eb0d2ea667"></span>
+
+### TextPresenter
+
+```csharp
+public TextPresenter()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetNextCharacterHit](#uid-1d08c0759e) | No summary available. |
+| [HideCaret](#uid-703d6c0a49) | No summary available. |
+| [MoveCaretHorizontal](#uid-f69884c04d) | No summary available. |
+| [MoveCaretToPoint](#uid-1ec7092933) | No summary available. |
+| [MoveCaretToTextPosition](#uid-9b80089acc) | No summary available. |
+| [MoveCaretVertical](#uid-26e3ffe5a9) | No summary available. |
+| [Render](#uid-c2e34ed36f) | No summary available. |
+| [ShowCaret](#uid-fdd2fffb73) | No summary available. |
+
+<span id="uid-1d08c0759e"></span>
+
+### GetNextCharacterHit
+
+```csharp
+public Avalonia.Media.CharacterHit GetNextCharacterHit(Avalonia.Media.TextFormatting.LogicalDirection direction)
+```
+
+<span id="uid-703d6c0a49"></span>
+
+### HideCaret
+
+```csharp
+public System.Void HideCaret()
+```
+
+<span id="uid-f69884c04d"></span>
+
+### MoveCaretHorizontal
+
+```csharp
+public System.Void MoveCaretHorizontal(Avalonia.Media.TextFormatting.LogicalDirection direction)
+```
+
+<span id="uid-1ec7092933"></span>
+
+### MoveCaretToPoint
+
+```csharp
+public System.Void MoveCaretToPoint(Avalonia.Point point)
+```
+
+<span id="uid-9b80089acc"></span>
+
+### MoveCaretToTextPosition
+
+```csharp
+public System.Void MoveCaretToTextPosition(System.Int32 textPosition, System.Boolean trailingEdge)
+```
+
+<span id="uid-26e3ffe5a9"></span>
+
+### MoveCaretVertical
+
+```csharp
+public System.Void MoveCaretVertical(Avalonia.Media.TextFormatting.LogicalDirection direction)
+```
+
+<span id="uid-c2e34ed36f"></span>
+
+### Render
+
+```csharp
+public System.Void Render(Avalonia.Media.DrawingContext context)
+```
+
+<span id="uid-fdd2fffb73"></span>
+
+### ShowCaret
+
+```csharp
+public System.Void ShowCaret()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Background](#uid-474bdfcf3c) | Gets or sets a brush used to paint the control's background. |
+| [CaretBlinkInterval](#uid-f2a9a2b6ac) | Gets or sets the caret blink rate |
+| [CaretBrush](#uid-f98cb7126c) | No summary available. |
+| [CaretIndex](#uid-61668152bd) | No summary available. |
+| [FontFamily](#uid-d412f3a0e6) | Gets or sets the font family. |
+| [FontFeatures](#uid-f4f2c5d229) | Gets or sets the font family. |
+| [FontSize](#uid-dc8be5dd77) | Gets or sets the font size. |
+| [FontStretch](#uid-1509d67b12) | Gets or sets the font stretch. |
+| [FontStyle](#uid-58cf308c8a) | Gets or sets the font style. |
+| [FontWeight](#uid-4fe368c480) | Gets or sets the font weight. |
+| [Foreground](#uid-f24d44650b) | Gets or sets a brush used to paint the text. |
+| [LetterSpacing](#uid-3957a0922e) | Gets or sets the letter spacing. |
+| [LineHeight](#uid-59b9e2a280) | Gets or sets the line height. By default, this is set to System.Double.NaN, which determines the appropriate height automatically. |
+| [PasswordChar](#uid-643fc5a4bf) | No summary available. |
+| [PreeditText](#uid-8466ee44e6) | No summary available. |
+| [PreeditTextCursorPosition](#uid-14cd8ae83e) | No summary available. |
+| [RevealPassword](#uid-00ed90355f) | No summary available. |
+| [SelectionBrush](#uid-fd4d80f66f) | No summary available. |
+| [SelectionEnd](#uid-f9d4535b44) | No summary available. |
+| [SelectionForegroundBrush](#uid-bd20df334c) | No summary available. |
+| [SelectionStart](#uid-ff5a3489d5) | No summary available. |
+| [ShowSelectionHighlight](#uid-7336083fb0) | Gets or sets a value that determines whether the TextPresenter shows a selection highlight. |
+| [Text](#uid-b4eb5ec575) | Gets or sets the text. |
+| [TextAlignment](#uid-e948b8ddc3) | Gets or sets the text alignment. |
+| [TextLayout](#uid-2e9a67b531) | Gets the Avalonia.Controls.Presenters.TextPresenter.TextLayout used to render the text. |
+| [TextWrapping](#uid-9df343bb03) | Gets or sets the control's text wrapping mode. |
+
+<span id="uid-474bdfcf3c"></span>
+
+### Background
+
+Gets or sets a brush used to paint the control's background.
+
+```csharp
+public Avalonia.Media.IBrush Background { get; set; }
+```
+
+<span id="uid-f2a9a2b6ac"></span>
+
+### CaretBlinkInterval
+
+Gets or sets the caret blink rate
+
+```csharp
+public System.TimeSpan CaretBlinkInterval { get; set; }
+```
+
+<span id="uid-f98cb7126c"></span>
+
+### CaretBrush
+
+```csharp
+public Avalonia.Media.IBrush CaretBrush { get; set; }
+```
+
+<span id="uid-61668152bd"></span>
+
+### CaretIndex
+
+```csharp
+public System.Int32 CaretIndex { get; set; }
+```
+
+<span id="uid-d412f3a0e6"></span>
+
+### FontFamily
+
+Gets or sets the font family.
+
+```csharp
+public Avalonia.Media.FontFamily FontFamily { get; set; }
+```
+
+<span id="uid-f4f2c5d229"></span>
+
+### FontFeatures
+
+Gets or sets the font family.
+
+```csharp
+public Avalonia.Media.FontFeatureCollection FontFeatures { get; set; }
+```
+
+<span id="uid-dc8be5dd77"></span>
+
+### FontSize
+
+Gets or sets the font size.
+
+```csharp
+public System.Double FontSize { get; set; }
+```
+
+<span id="uid-1509d67b12"></span>
+
+### FontStretch
+
+Gets or sets the font stretch.
+
+```csharp
+public Avalonia.Media.FontStretch FontStretch { get; set; }
+```
+
+<span id="uid-58cf308c8a"></span>
+
+### FontStyle
+
+Gets or sets the font style.
+
+```csharp
+public Avalonia.Media.FontStyle FontStyle { get; set; }
+```
+
+<span id="uid-4fe368c480"></span>
+
+### FontWeight
+
+Gets or sets the font weight.
+
+```csharp
+public Avalonia.Media.FontWeight FontWeight { get; set; }
+```
+
+<span id="uid-f24d44650b"></span>
+
+### Foreground
+
+Gets or sets a brush used to paint the text.
+
+```csharp
+public Avalonia.Media.IBrush Foreground { get; set; }
+```
+
+<span id="uid-3957a0922e"></span>
+
+### LetterSpacing
+
+Gets or sets the letter spacing.
+
+```csharp
+public System.Double LetterSpacing { get; set; }
+```
+
+<span id="uid-59b9e2a280"></span>
+
+### LineHeight
+
+Gets or sets the line height. By default, this is set to [System.Double.NaN](xref:System.Double.NaN), which determines the appropriate height automatically.
+
+```csharp
+public System.Double LineHeight { get; set; }
+```
+
+<span id="uid-643fc5a4bf"></span>
+
+### PasswordChar
+
+```csharp
+public System.Char PasswordChar { get; set; }
+```
+
+<span id="uid-8466ee44e6"></span>
+
+### PreeditText
+
+```csharp
+public System.String PreeditText { get; set; }
+```
+
+<span id="uid-14cd8ae83e"></span>
+
+### PreeditTextCursorPosition
+
+```csharp
+public System.Nullable<System.Int32> PreeditTextCursorPosition { get; set; }
+```
+
+<span id="uid-00ed90355f"></span>
+
+### RevealPassword
+
+```csharp
+public System.Boolean RevealPassword { get; set; }
+```
+
+<span id="uid-fd4d80f66f"></span>
+
+### SelectionBrush
+
+```csharp
+public Avalonia.Media.IBrush SelectionBrush { get; set; }
+```
+
+<span id="uid-f9d4535b44"></span>
+
+### SelectionEnd
+
+```csharp
+public System.Int32 SelectionEnd { get; set; }
+```
+
+<span id="uid-bd20df334c"></span>
+
+### SelectionForegroundBrush
+
+```csharp
+public Avalonia.Media.IBrush SelectionForegroundBrush { get; set; }
+```
+
+<span id="uid-ff5a3489d5"></span>
+
+### SelectionStart
+
+```csharp
+public System.Int32 SelectionStart { get; set; }
+```
+
+<span id="uid-7336083fb0"></span>
+
+### ShowSelectionHighlight
+
+Gets or sets a value that determines whether the TextPresenter shows a selection highlight.
+
+```csharp
+public System.Boolean ShowSelectionHighlight { get; set; }
+```
+
+<span id="uid-b4eb5ec575"></span>
+
+### Text
+
+Gets or sets the text.
+
+```csharp
+public System.String Text { get; set; }
+```
+
+<span id="uid-e948b8ddc3"></span>
+
+### TextAlignment
+
+Gets or sets the text alignment.
+
+```csharp
+public Avalonia.Media.TextAlignment TextAlignment { get; set; }
+```
+
+<span id="uid-2e9a67b531"></span>
+
+### TextLayout
+
+Gets the [Avalonia.Controls.Presenters.TextPresenter.TextLayout](xref:Avalonia.Controls.Presenters.TextPresenter.TextLayout) used to render the text.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextLayout TextLayout { get; set; }
+```
+
+<span id="uid-9df343bb03"></span>
+
+### TextWrapping
+
+Gets or sets the control's text wrapping mode.
+
+```csharp
+public Avalonia.Media.TextWrapping TextWrapping { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackgroundProperty](#uid-d8ec66a31e) | Defines the Avalonia.Controls.Presenters.TextPresenter.Background property. |
+| [CaretBlinkIntervalProperty](#uid-e5d5ae529b) | No summary available. |
+| [CaretBrushProperty](#uid-a5d7c8e24a) | No summary available. |
+| [CaretIndexProperty](#uid-c27702376f) | No summary available. |
+| [LetterSpacingProperty](#uid-6d1c25d5ac) | Defines the Avalonia.Controls.Presenters.TextPresenter.LetterSpacing property. |
+| [LineHeightProperty](#uid-7459ece9ec) | Defines the Avalonia.Controls.Presenters.TextPresenter.LineHeight property. |
+| [PasswordCharProperty](#uid-00f5cc1dc3) | No summary available. |
+| [PreeditTextCursorPositionProperty](#uid-9c7a0f9769) | Defines the Avalonia.Controls.Presenters.TextPresenter.PreeditText property. |
+| [PreeditTextProperty](#uid-6244022bfd) | Defines the Avalonia.Controls.Presenters.TextPresenter.PreeditText property. |
+| [RevealPasswordProperty](#uid-255f289d62) | No summary available. |
+| [SelectionBrushProperty](#uid-3452c950af) | No summary available. |
+| [SelectionEndProperty](#uid-d2c2a5d2f5) | No summary available. |
+| [SelectionForegroundBrushProperty](#uid-da6ecaf967) | No summary available. |
+| [SelectionStartProperty](#uid-e8a9d18dbd) | No summary available. |
+| [ShowSelectionHighlightProperty](#uid-3524b52e12) | No summary available. |
+| [TextAlignmentProperty](#uid-0c3faffc83) | Defines the Avalonia.Controls.Presenters.TextPresenter.TextAlignment property. |
+| [TextProperty](#uid-e475c6d544) | Defines the Avalonia.Controls.Presenters.TextPresenter.Text property. |
+| [TextWrappingProperty](#uid-c961960034) | Defines the Avalonia.Controls.Presenters.TextPresenter.TextWrapping property. |
+
+<span id="uid-d8ec66a31e"></span>
+
+### BackgroundProperty
+
+Defines the [Avalonia.Controls.Presenters.TextPresenter.Background](xref:Avalonia.Controls.Presenters.TextPresenter.Background) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BackgroundProperty
+```
+
+<span id="uid-e5d5ae529b"></span>
+
+### CaretBlinkIntervalProperty
+
+```csharp
+public Avalonia.StyledProperty<System.TimeSpan> CaretBlinkIntervalProperty
+```
+
+<span id="uid-a5d7c8e24a"></span>
+
+### CaretBrushProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> CaretBrushProperty
+```
+
+<span id="uid-c27702376f"></span>
+
+### CaretIndexProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> CaretIndexProperty
+```
+
+<span id="uid-6d1c25d5ac"></span>
+
+### LetterSpacingProperty
+
+Defines the [Avalonia.Controls.Presenters.TextPresenter.LetterSpacing](xref:Avalonia.Controls.Presenters.TextPresenter.LetterSpacing) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> LetterSpacingProperty
+```
+
+<span id="uid-7459ece9ec"></span>
+
+### LineHeightProperty
+
+Defines the [Avalonia.Controls.Presenters.TextPresenter.LineHeight](xref:Avalonia.Controls.Presenters.TextPresenter.LineHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> LineHeightProperty
+```
+
+<span id="uid-00f5cc1dc3"></span>
+
+### PasswordCharProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Char> PasswordCharProperty
+```
+
+<span id="uid-9c7a0f9769"></span>
+
+### PreeditTextCursorPositionProperty
+
+Defines the [Avalonia.Controls.Presenters.TextPresenter.PreeditText](xref:Avalonia.Controls.Presenters.TextPresenter.PreeditText) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Nullable<System.Int32>> PreeditTextCursorPositionProperty
+```
+
+<span id="uid-6244022bfd"></span>
+
+### PreeditTextProperty
+
+Defines the [Avalonia.Controls.Presenters.TextPresenter.PreeditText](xref:Avalonia.Controls.Presenters.TextPresenter.PreeditText) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> PreeditTextProperty
+```
+
+<span id="uid-255f289d62"></span>
+
+### RevealPasswordProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> RevealPasswordProperty
+```
+
+<span id="uid-3452c950af"></span>
+
+### SelectionBrushProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> SelectionBrushProperty
+```
+
+<span id="uid-d2c2a5d2f5"></span>
+
+### SelectionEndProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> SelectionEndProperty
+```
+
+<span id="uid-da6ecaf967"></span>
+
+### SelectionForegroundBrushProperty
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> SelectionForegroundBrushProperty
+```
+
+<span id="uid-e8a9d18dbd"></span>
+
+### SelectionStartProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Int32> SelectionStartProperty
+```
+
+<span id="uid-3524b52e12"></span>
+
+### ShowSelectionHighlightProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ShowSelectionHighlightProperty
+```
+
+<span id="uid-0c3faffc83"></span>
+
+### TextAlignmentProperty
+
+Defines the [Avalonia.Controls.Presenters.TextPresenter.TextAlignment](xref:Avalonia.Controls.Presenters.TextPresenter.TextAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.TextAlignment> TextAlignmentProperty
+```
+
+<span id="uid-e475c6d544"></span>
+
+### TextProperty
+
+Defines the [Avalonia.Controls.Presenters.TextPresenter.Text](xref:Avalonia.Controls.Presenters.TextPresenter.Text) property.
+
+```csharp
+public Avalonia.StyledProperty<System.String> TextProperty
+```
+
+<span id="uid-c961960034"></span>
+
+### TextWrappingProperty
+
+Defines the [Avalonia.Controls.Presenters.TextPresenter.TextWrapping](xref:Avalonia.Controls.Presenters.TextPresenter.TextWrapping) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.TextWrapping> TextWrappingProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CaretBoundsChanged](#uid-a1bfac5967) | No summary available. |
+
+<span id="uid-a1bfac5967"></span>
+
+### CaretBoundsChanged
+
+```csharp
+public event System.EventHandler CaretBoundsChanged
+```
+
+</ApiRefPage>
+

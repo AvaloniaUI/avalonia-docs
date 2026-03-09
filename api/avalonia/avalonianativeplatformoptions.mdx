@@ -1,0 +1,130 @@
+---
+title: 'AvaloniaNativePlatformOptions'
+hide_title: true
+slug: '/avalonia/avalonianativeplatformoptions'
+uid: 'Avalonia.AvaloniaNativePlatformOptions'
+commentId: 'T:Avalonia.AvaloniaNativePlatformOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Native'
+assembly: 'Avalonia.Native'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaNativePlatformOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Native</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Native</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+OSX backend options.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaNativePlatformOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaNativePlatformOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaNativePlatformOptions](#uid-97a0d3f6fd) | No summary available. |
+
+<span id="uid-97a0d3f6fd"></span>
+
+### AvaloniaNativePlatformOptions
+
+```csharp
+public AvaloniaNativePlatformOptions()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AppSandboxEnabled](#uid-6d7dbd8e7b) | If you distribute your app in App Store - it should be with sandbox enabled. This parameter enables Avalonia.Platform.Storage.IStorageItem.SaveBookmarkAsync and related APIs, as well as wrapping all storage related calls in secure context. The default value is true. |
+| [AvaloniaNativeLibraryPath](#uid-b803078be8) | This property should be used in case you want to build Avalonia OSX native part by yourself and make your Avalonia app run with it. The default value is null. |
+| [OverlayPopups](#uid-8d93333eba) | Embeds popups to the window when set to true. The default value is false. |
+| [RenderingMode](#uid-f081327cee) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. The default value is: Avalonia.AvaloniaNativeRenderingMode.OpenGl, Avalonia.AvaloniaNativeRenderingMode.Software. |
+
+<span id="uid-6d7dbd8e7b"></span>
+
+### AppSandboxEnabled
+
+If you distribute your app in App Store - it should be with sandbox enabled.
+This parameter enables [Avalonia.Platform.Storage.IStorageItem.SaveBookmarkAsync](xref:Avalonia.Platform.Storage.IStorageItem.SaveBookmarkAsync) and related APIs,
+as well as wrapping all storage related calls in secure context. The default value is true.
+
+```csharp
+public System.Boolean AppSandboxEnabled { get; set; }
+```
+
+<span id="uid-b803078be8"></span>
+
+### AvaloniaNativeLibraryPath
+
+This property should be used in case you want to build Avalonia OSX native part by yourself
+and make your Avalonia app run with it. The default value is null.
+
+```csharp
+public System.String AvaloniaNativeLibraryPath { get; set; }
+```
+
+<span id="uid-8d93333eba"></span>
+
+### OverlayPopups
+
+Embeds popups to the window when set to true. The default value is false.
+
+```csharp
+public System.Boolean OverlayPopups { get; set; }
+```
+
+<span id="uid-f081327cee"></span>
+
+### RenderingMode
+
+Gets or sets Avalonia rendering modes with fallbacks.
+The first element in the array has the highest priority.
+The default value is: [Avalonia.AvaloniaNativeRenderingMode.OpenGl](xref:Avalonia.AvaloniaNativeRenderingMode.OpenGl), [Avalonia.AvaloniaNativeRenderingMode.Software](xref:Avalonia.AvaloniaNativeRenderingMode.Software).
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaNativeRenderingMode> RenderingMode { get; set; }
+```
+
+#### Exceptions
+
+- [Thrown if no values were matched.](xref:System.InvalidOperationException)
+
+</ApiRefPage>
+

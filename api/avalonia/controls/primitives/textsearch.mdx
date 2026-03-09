@@ -1,0 +1,159 @@
+---
+title: 'TextSearch'
+hide_title: true
+slug: '/avalonia/controls/primitives/textsearch'
+uid: 'Avalonia.Controls.Primitives.TextSearch'
+commentId: 'T:Avalonia.Controls.Primitives.TextSearch'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextSearch Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Allows to customize text searching in [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextSearch
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextSearch
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetText](#uid-afcb354f98) | Gets the value of the Avalonia.Controls.Primitives.TextSearch.TextProperty attached property from a given Avalonia.Controls.Control. |
+| [GetTextBinding](#uid-5ffd8b4a45) | Gets the value of the Avalonia.Controls.Primitives.TextSearch.TextBindingProperty attached property from a given Avalonia.Interactivity.Interactive. |
+| [SetText](#uid-f018a77546) | Sets the value of the Avalonia.Controls.Primitives.TextSearch.TextProperty attached property to a given Avalonia.Controls.Control. |
+| [SetTextBinding](#uid-a4597dd4a8) | Sets the value of the Avalonia.Controls.Primitives.TextSearch.TextBindingProperty attached property to a given Avalonia.Interactivity.Interactive. |
+
+<span id="uid-afcb354f98"></span>
+
+### GetText
+
+Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextProperty) attached property from a given [Avalonia.Controls.Control](xref:Avalonia.Controls.Control).
+
+```csharp
+public System.String GetText(Avalonia.Interactivity.Interactive control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+
+Returns: The search text.
+
+<span id="uid-5ffd8b4a45"></span>
+
+### GetTextBinding
+
+Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property from a given [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive).
+
+```csharp
+public Avalonia.Data.BindingBase GetTextBinding(Avalonia.Interactivity.Interactive interactive)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `interactive` | The interactive element. |
+
+Returns: The search text binding.
+
+<span id="uid-f018a77546"></span>
+
+### SetText
+
+Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextProperty) attached property to a given [Avalonia.Controls.Control](xref:Avalonia.Controls.Control).
+
+```csharp
+public System.Void SetText(Avalonia.Interactivity.Interactive control, System.String text)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control. |
+| `text` | The search text to set. |
+
+<span id="uid-a4597dd4a8"></span>
+
+### SetTextBinding
+
+Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property to a given [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive).
+
+```csharp
+public System.Void SetTextBinding(Avalonia.Interactivity.Interactive interactive, Avalonia.Data.BindingBase value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `interactive` | The interactive element. |
+| `value` | The search text binding to set. |
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [TextBindingProperty](#uid-95c670e5a0) | Defines the TextBinding attached property. The binding will be applied to each item during text search in Avalonia.Controls.Primitives.SelectingItemsControl (such as Avalonia.Controls.ComboBox). |
+| [TextProperty](#uid-23ea4761f4) | Defines the Text attached property. This text will be considered during text search in Avalonia.Controls.Primitives.SelectingItemsControl (such as Avalonia.Controls.ComboBox). This property is usually applied to an item container directly. |
+
+<span id="uid-95c670e5a0"></span>
+
+### TextBindingProperty
+
+Defines the TextBinding attached property.
+The binding will be applied to each item during text search in [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) (such as [Avalonia.Controls.ComboBox](xref:Avalonia.Controls.ComboBox)).
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Data.BindingBase> TextBindingProperty
+```
+
+<span id="uid-23ea4761f4"></span>
+
+### TextProperty
+
+Defines the Text attached property.
+This text will be considered during text search in [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) (such as [Avalonia.Controls.ComboBox](xref:Avalonia.Controls.ComboBox)).
+This property is usually applied to an item container directly.
+
+```csharp
+public Avalonia.AttachedProperty<System.String> TextProperty
+```
+
+</ApiRefPage>
+

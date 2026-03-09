@@ -1,0 +1,203 @@
+---
+title: 'ParametrizedLogger'
+hide_title: true
+slug: '/avalonia/logging/parametrizedlogger'
+uid: 'Avalonia.Logging.ParametrizedLogger'
+commentId: 'T:Avalonia.Logging.ParametrizedLogger'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Logging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ParametrizedLogger Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Logging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Logger sink parametrized for given logging level.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct ParametrizedLogger
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> ParametrizedLogger
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;ParametrizedLogger&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ParametrizedLogger](#uid-a26a202933) | No summary available. |
+
+<span id="uid-a26a202933"></span>
+
+### ParametrizedLogger
+
+```csharp
+public ParametrizedLogger(Avalonia.Logging.ILogSink sink, Avalonia.Logging.LogEventLevel level, System.String area)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-6565ea6575) | No summary available. |
+| [GetHashCode](#uid-153db5a06f) | No summary available. |
+| [Log (7 overloads)](#uid-5a75e52709) | Logs an event. |
+| [ToString](#uid-bd3cbae93e) | No summary available. |
+
+<span id="uid-6565ea6575"></span>
+
+### Equals overloads
+
+<span id="uid-803d4ff408"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Logging.ParametrizedLogger other)
+```
+
+<span id="uid-f0a4b65169"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-153db5a06f"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-5a75e52709"></span>
+
+### Log overloads
+
+<span id="uid-140da5cbd3"></span>
+
+#### Log
+
+Logs an event.
+
+```csharp
+public System.Void Log(System.Object source, System.String messageTemplate)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `messageTemplate` | The message template. |
+| `source` | The object from which the event originates. |
+
+<span id="uid-7bf1a0e635"></span>
+
+#### Log
+
+```csharp
+public System.Void Log<T0>(System.Object source, System.String messageTemplate, T0 propertyValue0)
+```
+
+<span id="uid-63b50afd42"></span>
+
+#### Log
+
+```csharp
+public System.Void Log<T0, T1>(System.Object source, System.String messageTemplate, T0 propertyValue0, T1 propertyValue1)
+```
+
+<span id="uid-85df853b51"></span>
+
+#### Log
+
+```csharp
+public System.Void Log<T0, T1, T2>(System.Object source, System.String messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2)
+```
+
+<span id="uid-39ee9e3091"></span>
+
+#### Log
+
+```csharp
+public System.Void Log<T0, T1, T2, T3>(System.Object source, System.String messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3)
+```
+
+<span id="uid-d9b2a9730e"></span>
+
+#### Log
+
+```csharp
+public System.Void Log<T0, T1, T2, T3, T4>(System.Object source, System.String messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3, T4 propertyValue4)
+```
+
+<span id="uid-fd0f8b719f"></span>
+
+#### Log
+
+```csharp
+public System.Void Log<T0, T1, T2, T3, T4, T5>(System.Object source, System.String messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3, T4 propertyValue4, T5 propertyValue5)
+```
+
+<span id="uid-bd3cbae93e"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsValid](#uid-f8e695a035) | Checks if this logger can be used. |
+
+<span id="uid-f8e695a035"></span>
+
+### IsValid
+
+Checks if this logger can be used.
+
+```csharp
+public System.Boolean IsValid { get; set; }
+```
+
+</ApiRefPage>
+

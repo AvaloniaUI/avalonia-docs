@@ -1,0 +1,87 @@
+---
+title: 'VirtualizingPanel'
+hide_title: true
+slug: '/avalonia/controls/virtualizingpanel'
+uid: 'Avalonia.Controls.VirtualizingPanel'
+commentId: 'T:Avalonia.Controls.VirtualizingPanel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">VirtualizingPanel Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for panels that can be used to virtualize items for an [Avalonia.Controls.VirtualizingPanel.ItemsControl](xref:Avalonia.Controls.VirtualizingPanel.ItemsControl).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class VirtualizingPanel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="panel">Panel</a> <span className="apiref-page__relation-separator">-&gt;</span> VirtualizingPanel
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../input/inavigablecontainer">INavigableContainer</a>
+</div>
+</div>
+
+## Remarks
+
+Panels should implement the abstract members of this class to provide virtualization of
+items in a [Avalonia.Controls.VirtualizingPanel.ItemsControl](xref:Avalonia.Controls.VirtualizingPanel.ItemsControl). Derived panels can manage scrolling by implementing
+[Avalonia.Controls.Primitives.ILogicalScrollable](xref:Avalonia.Controls.Primitives.ILogicalScrollable) or by listening to the
+[Avalonia.Layout.Layoutable.EffectiveViewportChanged](xref:Avalonia.Layout.Layoutable.EffectiveViewportChanged) event.
+
+The methods on the [Avalonia.Controls.VirtualizingPanel.ItemContainerGenerator](xref:Avalonia.Controls.VirtualizingPanel.ItemContainerGenerator) should be used to create, prepare and
+clear containers for items.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ItemContainerGenerator](#uid-ca0cc2e7fa) | Gets the Avalonia.Controls.VirtualizingPanel.ItemContainerGenerator for this Avalonia.Controls.VirtualizingPanel. |
+
+<span id="uid-ca0cc2e7fa"></span>
+
+### ItemContainerGenerator
+
+Gets the [Avalonia.Controls.VirtualizingPanel.ItemContainerGenerator](xref:Avalonia.Controls.VirtualizingPanel.ItemContainerGenerator) for this [Avalonia.Controls.VirtualizingPanel](xref:Avalonia.Controls.VirtualizingPanel).
+
+```csharp
+public Avalonia.Controls.Generators.ItemContainerGenerator ItemContainerGenerator { get; set; }
+```
+
+</ApiRefPage>
+

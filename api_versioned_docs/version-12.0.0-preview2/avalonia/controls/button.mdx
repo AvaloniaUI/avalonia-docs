@@ -1,0 +1,292 @@
+---
+title: 'Button'
+hide_title: true
+slug: '/avalonia/controls/button'
+uid: 'Avalonia.Controls.Button'
+commentId: 'T:Avalonia.Controls.Button'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Button Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A standard button control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Button
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> Button
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IClickableControl, <a href="../input/icommandsource">ICommandSource</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Button](#uid-e3aa6457e0) | Initializes a new instance of the Avalonia.Controls.Button class. |
+
+<span id="uid-e3aa6457e0"></span>
+
+### Button
+
+Initializes a new instance of the [Avalonia.Controls.Button](xref:Avalonia.Controls.Button) class.
+
+```csharp
+public Button()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ClickMode](#uid-68a2f9fef6) | Gets or sets a value indicating how the Avalonia.Controls.Button should react to clicks. |
+| [Command](#uid-58db8e901c) | Gets or sets an System.Windows.Input.ICommand to be invoked when the button is clicked. |
+| [CommandParameter](#uid-3da10f3f03) | Gets or sets a parameter to be passed to the Avalonia.Controls.Button.Command. |
+| [Flyout](#uid-9c8cfdbb2d) | Gets or sets the Flyout that should be shown with this button. |
+| [HotKey](#uid-8e541ff0cf) | Gets or sets an Avalonia.Input.KeyGesture associated with this control |
+| [IsCancel](#uid-25bc6e8f75) | Gets or sets a value indicating whether the button is the Cancel button for the window. |
+| [IsDefault](#uid-3a0ae38686) | Gets or sets a value indicating whether the button is the default button for the window. |
+| [IsPressed](#uid-af9d5346ef) | Gets or sets a value indicating whether the button is currently pressed. |
+
+<span id="uid-68a2f9fef6"></span>
+
+### ClickMode
+
+Gets or sets a value indicating how the [Avalonia.Controls.Button](xref:Avalonia.Controls.Button) should react to clicks.
+
+```csharp
+public Avalonia.Controls.ClickMode ClickMode { get; set; }
+```
+
+<span id="uid-58db8e901c"></span>
+
+### Command
+
+Gets or sets an [System.Windows.Input.ICommand](xref:System.Windows.Input.ICommand) to be invoked when the button is clicked.
+
+```csharp
+public System.Windows.Input.ICommand Command { get; set; }
+```
+
+<span id="uid-3da10f3f03"></span>
+
+### CommandParameter
+
+Gets or sets a parameter to be passed to the [Avalonia.Controls.Button.Command](xref:Avalonia.Controls.Button.Command).
+
+```csharp
+public System.Object CommandParameter { get; set; }
+```
+
+<span id="uid-9c8cfdbb2d"></span>
+
+### Flyout
+
+Gets or sets the Flyout that should be shown with this button.
+
+```csharp
+public Avalonia.Controls.Primitives.FlyoutBase Flyout { get; set; }
+```
+
+<span id="uid-8e541ff0cf"></span>
+
+### HotKey
+
+Gets or sets an [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) associated with this control
+
+```csharp
+public Avalonia.Input.KeyGesture HotKey { get; set; }
+```
+
+<span id="uid-25bc6e8f75"></span>
+
+### IsCancel
+
+Gets or sets a value indicating whether the button is the Cancel button for the
+window.
+
+```csharp
+public System.Boolean IsCancel { get; set; }
+```
+
+<span id="uid-3a0ae38686"></span>
+
+### IsDefault
+
+Gets or sets a value indicating whether the button is the default button for the
+window.
+
+```csharp
+public System.Boolean IsDefault { get; set; }
+```
+
+<span id="uid-af9d5346ef"></span>
+
+### IsPressed
+
+Gets or sets a value indicating whether the button is currently pressed.
+
+```csharp
+public System.Boolean IsPressed { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ClickEvent](#uid-58925d5e5f) | Defines the Avalonia.Controls.Button.Click event. |
+| [ClickModeProperty](#uid-33514eb79f) | Defines the Avalonia.Controls.Button.ClickMode property. |
+| [CommandParameterProperty](#uid-3ed751307d) | Defines the Avalonia.Controls.Button.CommandParameter property. |
+| [CommandProperty](#uid-13ff8a580a) | Defines the Avalonia.Controls.Button.Command property. |
+| [FlyoutProperty](#uid-001db6bf05) | Defines the Avalonia.Controls.Button.Flyout property |
+| [HotKeyProperty](#uid-20b7d28b19) | Defines the Avalonia.Controls.Button.HotKey property. |
+| [IsCancelProperty](#uid-d8ca2df998) | Defines the Avalonia.Controls.Button.IsCancel property. |
+| [IsDefaultProperty](#uid-adccad7b9f) | Defines the Avalonia.Controls.Button.IsDefault property. |
+| [IsPressedProperty](#uid-f18fa280d1) | Defines the Avalonia.Controls.Button.IsPressed property. |
+
+<span id="uid-58925d5e5f"></span>
+
+### ClickEvent
+
+Defines the [Avalonia.Controls.Button.Click](xref:Avalonia.Controls.Button.Click) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> ClickEvent
+```
+
+<span id="uid-33514eb79f"></span>
+
+### ClickModeProperty
+
+Defines the [Avalonia.Controls.Button.ClickMode](xref:Avalonia.Controls.Button.ClickMode) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ClickMode> ClickModeProperty
+```
+
+<span id="uid-3ed751307d"></span>
+
+### CommandParameterProperty
+
+Defines the [Avalonia.Controls.Button.CommandParameter](xref:Avalonia.Controls.Button.CommandParameter) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> CommandParameterProperty
+```
+
+<span id="uid-13ff8a580a"></span>
+
+### CommandProperty
+
+Defines the [Avalonia.Controls.Button.Command](xref:Avalonia.Controls.Button.Command) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Windows.Input.ICommand> CommandProperty
+```
+
+<span id="uid-001db6bf05"></span>
+
+### FlyoutProperty
+
+Defines the [Avalonia.Controls.Button.Flyout](xref:Avalonia.Controls.Button.Flyout) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.FlyoutBase> FlyoutProperty
+```
+
+<span id="uid-20b7d28b19"></span>
+
+### HotKeyProperty
+
+Defines the [Avalonia.Controls.Button.HotKey](xref:Avalonia.Controls.Button.HotKey) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Input.KeyGesture> HotKeyProperty
+```
+
+<span id="uid-d8ca2df998"></span>
+
+### IsCancelProperty
+
+Defines the [Avalonia.Controls.Button.IsCancel](xref:Avalonia.Controls.Button.IsCancel) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsCancelProperty
+```
+
+<span id="uid-adccad7b9f"></span>
+
+### IsDefaultProperty
+
+Defines the [Avalonia.Controls.Button.IsDefault](xref:Avalonia.Controls.Button.IsDefault) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsDefaultProperty
+```
+
+<span id="uid-f18fa280d1"></span>
+
+### IsPressedProperty
+
+Defines the [Avalonia.Controls.Button.IsPressed](xref:Avalonia.Controls.Button.IsPressed) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Button, System.Boolean> IsPressedProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Click](#uid-2dcd26a39e) | Raised when the user clicks the button. |
+
+<span id="uid-2dcd26a39e"></span>
+
+### Click
+
+Raised when the user clicks the button.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Click
+```
+
+</ApiRefPage>
+

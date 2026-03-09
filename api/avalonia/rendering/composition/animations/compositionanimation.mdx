@@ -1,0 +1,192 @@
+---
+title: 'CompositionAnimation'
+hide_title: true
+slug: '/avalonia/rendering/composition/animations/compositionanimation'
+uid: 'Avalonia.Rendering.Composition.Animations.CompositionAnimation'
+commentId: 'T:Avalonia.Rendering.Composition.Animations.CompositionAnimation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition.Animations'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionAnimation Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition.Animations</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+This is the base class for ExpressionAnimation and KeyFrameAnimation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompositionAnimation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionAnimation
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icompositionanimationbase">ICompositionAnimationBase</a>
+</div>
+</div>
+
+## Remarks
+
+Use the [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(System.String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) method to start the animation.
+Value parameters (as opposed to reference parameters which are set using [Avalonia.Rendering.Composition.Animations.CompositionAnimation.SetReferenceParameter(System.String,Avalonia.Rendering.Composition.CompositionObject)](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimation.SetReferenceParameter%28System.String%2CAvalonia.Rendering.Composition.CompositionObject%29))
+are copied and "embedded" into an expression at the time CompositionObject.StartAnimation is called.
+Changing the value of the variable after [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(System.String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) is called will not affect
+the value of the ExpressionAnimation.
+See the remarks section of ExpressionAnimation for additional information.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearAllParameters](#uid-fabe099f1e) | Clears all of the parameters of the animation. |
+| [ClearParameter](#uid-a8d50b919b) | Clears a parameter from the animation. |
+| [SetColorParameter](#uid-08114cabfc) | No summary available. |
+| [SetMatrix3x2Parameter](#uid-54d5e6b170) | No summary available. |
+| [SetMatrix4x4Parameter](#uid-eca8ffd8b7) | No summary available. |
+| [SetQuaternionParameter](#uid-12d8ac27fb) | No summary available. |
+| [SetReferenceParameter](#uid-e9b8944c6b) | No summary available. |
+| [SetScalarParameter](#uid-9ca4077133) | No summary available. |
+| [SetVector2Parameter](#uid-23a56bbf8b) | No summary available. |
+| [SetVector3Parameter](#uid-36e4f14775) | No summary available. |
+| [SetVector4Parameter](#uid-18adc85c82) | No summary available. |
+
+<span id="uid-fabe099f1e"></span>
+
+### ClearAllParameters
+
+Clears all of the parameters of the animation.
+
+```csharp
+public System.Void ClearAllParameters()
+```
+
+<span id="uid-a8d50b919b"></span>
+
+### ClearParameter
+
+Clears a parameter from the animation.
+
+```csharp
+public System.Void ClearParameter(System.String key)
+```
+
+<span id="uid-08114cabfc"></span>
+
+### SetColorParameter
+
+```csharp
+public System.Void SetColorParameter(System.String key, Avalonia.Media.Color value)
+```
+
+<span id="uid-54d5e6b170"></span>
+
+### SetMatrix3x2Parameter
+
+```csharp
+public System.Void SetMatrix3x2Parameter(System.String key, System.Numerics.Matrix3x2 value)
+```
+
+<span id="uid-eca8ffd8b7"></span>
+
+### SetMatrix4x4Parameter
+
+```csharp
+public System.Void SetMatrix4x4Parameter(System.String key, System.Numerics.Matrix4x4 value)
+```
+
+<span id="uid-12d8ac27fb"></span>
+
+### SetQuaternionParameter
+
+```csharp
+public System.Void SetQuaternionParameter(System.String key, System.Numerics.Quaternion value)
+```
+
+<span id="uid-e9b8944c6b"></span>
+
+### SetReferenceParameter
+
+```csharp
+public System.Void SetReferenceParameter(System.String key, Avalonia.Rendering.Composition.CompositionObject compositionObject)
+```
+
+<span id="uid-9ca4077133"></span>
+
+### SetScalarParameter
+
+```csharp
+public System.Void SetScalarParameter(System.String key, System.Single value)
+```
+
+<span id="uid-23a56bbf8b"></span>
+
+### SetVector2Parameter
+
+```csharp
+public System.Void SetVector2Parameter(System.String key, System.Numerics.Vector2 value)
+```
+
+<span id="uid-36e4f14775"></span>
+
+### SetVector3Parameter
+
+```csharp
+public System.Void SetVector3Parameter(System.String key, System.Numerics.Vector3 value)
+```
+
+<span id="uid-18adc85c82"></span>
+
+### SetVector4Parameter
+
+```csharp
+public System.Void SetVector4Parameter(System.String key, System.Numerics.Vector4 value)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Target](#uid-c4cb7997f1) | No summary available. |
+
+<span id="uid-c4cb7997f1"></span>
+
+### Target
+
+```csharp
+public System.String Target { get; set; }
+```
+
+</ApiRefPage>
+

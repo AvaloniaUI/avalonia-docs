@@ -1,0 +1,386 @@
+---
+title: 'PopupFlyoutBase'
+hide_title: true
+slug: '/avalonia/controls/primitives/popupflyoutbase'
+uid: 'Avalonia.Controls.Primitives.PopupFlyoutBase'
+commentId: 'T:Avalonia.Controls.Primitives.PopupFlyoutBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PopupFlyoutBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PopupFlyoutBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="flyoutbase">FlyoutBase</a> <span className="apiref-page__relation-separator">-&gt;</span> PopupFlyoutBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IPopupHostProvider
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PopupFlyoutBase](#uid-3705a25c45) | No summary available. |
+
+<span id="uid-3705a25c45"></span>
+
+### PopupFlyoutBase
+
+```csharp
+public PopupFlyoutBase()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Hide](#uid-5a05c678d3) | Hides the Flyout |
+| [ShowAt (2 overloads)](#uid-26d1f07208) | Shows the Flyout at the given Control |
+
+<span id="uid-5a05c678d3"></span>
+
+### Hide
+
+Hides the Flyout
+
+```csharp
+public System.Void Hide()
+```
+
+<span id="uid-26d1f07208"></span>
+
+### ShowAt overloads
+
+<span id="uid-2c1e12091c"></span>
+
+#### ShowAt
+
+Shows the Flyout at the given Control
+
+```csharp
+public System.Void ShowAt(Avalonia.Controls.Control placementTarget)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `placementTarget` | The control to show the Flyout at |
+
+<span id="uid-461153b6fe"></span>
+
+#### ShowAt
+
+Shows the Flyout for the given control at the current pointer location, as in a ContextFlyout
+
+```csharp
+public System.Void ShowAt(Avalonia.Controls.Control placementTarget, System.Boolean showAtPointer)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `placementTarget` | The target control |
+| `showAtPointer` | True to show at pointer |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CustomPopupPlacementCallback](#uid-5e55132438) | Gets or sets a delegate handler method that positions the Popup control, when Avalonia.Controls.Primitives.Popup.Placement is set to Avalonia.Controls.PlacementMode.Custom. |
+| [HorizontalOffset](#uid-ceb07b8d2b) | Gets or sets the Horizontal offset of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+| [OverlayDismissEventPassThrough](#uid-9750f2448e) | Gets or sets a value indicating whether the event that closes the flyout is passed through to the parent window. |
+| [OverlayInputPassThroughElement](#uid-158b3b043a) | Gets or sets an element that should receive pointer input events even when underneath the flyout's overlay. |
+| [Placement](#uid-6cc5d900ca) | Gets or sets the desired placement of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+| [PlacementAnchor](#uid-2821742058) | Gets or sets the anchor point on the Avalonia.Controls.Primitives.Popup.PlacementRect when Avalonia.Controls.Primitives.Popup.Placement is Avalonia.Controls.PlacementMode.AnchorAndGravity. |
+| [PlacementConstraintAdjustment](#uid-88ee296e55) | Gets or sets a value describing how the popup position will be adjusted if the unadjusted position would result in the popup being partly constrained. |
+| [PlacementGravity](#uid-3e06cc8143) | Gets or sets a value which defines in what direction the popup should open when Avalonia.Controls.Primitives.Popup.Placement is Avalonia.Controls.PlacementMode.AnchorAndGravity. |
+| [Popup](#uid-7deeda2b3c) | No summary available. |
+| [ShowMode](#uid-ac3c5d7690) | Gets or sets the desired ShowMode |
+| [VerticalOffset](#uid-031c4efd37) | Gets or sets the Vertical offset of the popup in relation to the Avalonia.Controls.Primitives.Popup.PlacementTarget. |
+
+<span id="uid-5e55132438"></span>
+
+### CustomPopupPlacementCallback
+
+Gets or sets a delegate handler method that positions the Popup control, when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is set to [Avalonia.Controls.PlacementMode.Custom](xref:Avalonia.Controls.PlacementMode.Custom).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback CustomPopupPlacementCallback { get; set; }
+```
+
+<span id="uid-ceb07b8d2b"></span>
+
+### HorizontalOffset
+
+Gets or sets the Horizontal offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public System.Double HorizontalOffset { get; set; }
+```
+
+<span id="uid-9750f2448e"></span>
+
+### OverlayDismissEventPassThrough
+
+Gets or sets a value indicating whether the event that closes the flyout is passed
+through to the parent window.
+
+```csharp
+public System.Boolean OverlayDismissEventPassThrough { get; set; }
+```
+
+<span id="uid-158b3b043a"></span>
+
+### OverlayInputPassThroughElement
+
+Gets or sets an element that should receive pointer input events even when underneath
+the flyout's overlay.
+
+```csharp
+public Avalonia.Input.IInputElement OverlayInputPassThroughElement { get; set; }
+```
+
+<span id="uid-6cc5d900ca"></span>
+
+### Placement
+
+Gets or sets the desired placement of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public Avalonia.Controls.PlacementMode Placement { get; set; }
+```
+
+<span id="uid-2821742058"></span>
+
+### PlacementAnchor
+
+Gets or sets the anchor point on the [Avalonia.Controls.Primitives.Popup.PlacementRect](xref:Avalonia.Controls.Primitives.Popup.PlacementRect) when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement)
+is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor PlacementAnchor { get; set; }
+```
+
+<span id="uid-88ee296e55"></span>
+
+### PlacementConstraintAdjustment
+
+Gets or sets a value describing how the popup position will be adjusted if the
+unadjusted position would result in the popup being partly constrained.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment PlacementConstraintAdjustment { get; set; }
+```
+
+<span id="uid-3e06cc8143"></span>
+
+### PlacementGravity
+
+Gets or sets a value which defines in what direction the popup should open
+when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity).
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupGravity PlacementGravity { get; set; }
+```
+
+<span id="uid-7deeda2b3c"></span>
+
+### Popup
+
+```csharp
+public Avalonia.Controls.Primitives.Popup Popup { get; set; }
+```
+
+<span id="uid-ac3c5d7690"></span>
+
+### ShowMode
+
+Gets or sets the desired ShowMode
+
+```csharp
+public Avalonia.Controls.FlyoutShowMode ShowMode { get; set; }
+```
+
+<span id="uid-031c4efd37"></span>
+
+### VerticalOffset
+
+Gets or sets the Vertical offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget).
+
+```csharp
+public System.Double VerticalOffset { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CustomPopupPlacementCallbackProperty](#uid-5c4d305049) | Defines the Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback property. |
+| [HorizontalOffsetProperty](#uid-5e9228ae03) | Defines the Avalonia.Controls.Primitives.Popup.HorizontalOffset property. |
+| [OverlayDismissEventPassThroughProperty](#uid-06a0ccefca) | Defines the Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayDismissEventPassThrough property |
+| [OverlayInputPassThroughElementProperty](#uid-fdce19a1bd) | Defines the Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayInputPassThroughElement property |
+| [PlacementAnchorProperty](#uid-08643c8aef) | Defines the Avalonia.Controls.Primitives.Popup.PlacementAnchor property. |
+| [PlacementConstraintAdjustmentProperty](#uid-2621d5c291) | Defines the Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementConstraintAdjustment property |
+| [PlacementGravityProperty](#uid-0da608d8a7) | Defines the Avalonia.Controls.Primitives.Popup.PlacementAnchor property. |
+| [PlacementProperty](#uid-9e138bf69c) | Defines the Avalonia.Controls.Primitives.Popup.Placement property. |
+| [ShowModeProperty](#uid-55b113088e) | Defines the Avalonia.Controls.Primitives.PopupFlyoutBase.ShowMode property |
+| [VerticalOffsetProperty](#uid-25c4c8b25f) | Defines the Avalonia.Controls.Primitives.Popup.VerticalOffset property. |
+
+<span id="uid-5c4d305049"></span>
+
+### CustomPopupPlacementCallbackProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback](xref:Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> CustomPopupPlacementCallbackProperty
+```
+
+<span id="uid-5e9228ae03"></span>
+
+### HorizontalOffsetProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.HorizontalOffset](xref:Avalonia.Controls.Primitives.Popup.HorizontalOffset) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> HorizontalOffsetProperty
+```
+
+<span id="uid-06a0ccefca"></span>
+
+### OverlayDismissEventPassThroughProperty
+
+Defines the [Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayDismissEventPassThrough](xref:Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayDismissEventPassThrough) property
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> OverlayDismissEventPassThroughProperty
+```
+
+<span id="uid-fdce19a1bd"></span>
+
+### OverlayInputPassThroughElementProperty
+
+Defines the [Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayInputPassThroughElement](xref:Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayInputPassThroughElement) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Input.IInputElement> OverlayInputPassThroughElementProperty
+```
+
+<span id="uid-08643c8aef"></span>
+
+### PlacementAnchorProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.PlacementAnchor](xref:Avalonia.Controls.Primitives.Popup.PlacementAnchor) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> PlacementAnchorProperty
+```
+
+<span id="uid-2621d5c291"></span>
+
+### PlacementConstraintAdjustmentProperty
+
+Defines the [Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementConstraintAdjustment](xref:Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementConstraintAdjustment) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> PlacementConstraintAdjustmentProperty
+```
+
+<span id="uid-0da608d8a7"></span>
+
+### PlacementGravityProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.PlacementAnchor](xref:Avalonia.Controls.Primitives.Popup.PlacementAnchor) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> PlacementGravityProperty
+```
+
+<span id="uid-9e138bf69c"></span>
+
+### PlacementProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.PlacementMode> PlacementProperty
+```
+
+<span id="uid-55b113088e"></span>
+
+### ShowModeProperty
+
+Defines the [Avalonia.Controls.Primitives.PopupFlyoutBase.ShowMode](xref:Avalonia.Controls.Primitives.PopupFlyoutBase.ShowMode) property
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.FlyoutShowMode> ShowModeProperty
+```
+
+<span id="uid-25c4c8b25f"></span>
+
+### VerticalOffsetProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.VerticalOffset](xref:Avalonia.Controls.Primitives.Popup.VerticalOffset) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> VerticalOffsetProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Closing](#uid-f69c2f1ebb) | No summary available. |
+| [Opening](#uid-132cd892df) | No summary available. |
+
+<span id="uid-f69c2f1ebb"></span>
+
+### Closing
+
+```csharp
+public event System.EventHandler<System.ComponentModel.CancelEventArgs> Closing
+```
+
+<span id="uid-132cd892df"></span>
+
+### Opening
+
+```csharp
+public event System.EventHandler Opening
+```
+
+</ApiRefPage>
+

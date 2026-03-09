@@ -1,0 +1,133 @@
+---
+title: 'FuncValueConverter<TIn, TOut>'
+hide_title: true
+slug: '/avalonia/data/converters/funcvalueconverter-2'
+uid: 'Avalonia.Data.Converters.FuncValueConverter`2'
+commentId: 'T:Avalonia.Data.Converters.FuncValueConverter`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FuncValueConverter&lt;TIn, TOut&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A general purpose [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) that uses a [System.Func&lt;T1, T2&gt;](xref:System.Func%602)
+to provide the converter logic.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FuncValueConverter<TIn, TOut>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FuncValueConverter&lt;TIn, TOut&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FuncValueConverter&lt;TIn, TOut&gt; (2 overloads)](#uid-13d43d6541) | No summary available. |
+
+<span id="uid-13d43d6541"></span>
+
+### FuncValueConverter&lt;TIn, TOut&gt; overloads
+
+<span id="uid-36c23f2f2b"></span>
+
+#### FuncValueConverter&lt;TIn, TOut&gt;
+
+```csharp
+public FuncValueConverter<TIn, TOut>(System.Func<TIn, TOut> convert)
+```
+
+<span id="uid-cfeb788d43"></span>
+
+#### FuncValueConverter&lt;TIn, TOut&gt;
+
+```csharp
+public FuncValueConverter<TIn, TOut>(System.Func<TIn, TOut> convert, System.Func<TOut, TIn> convertBack)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-95a218e537) | Converts a value. |
+| [ConvertBack](#uid-de2355f1bd) | Converts a value. |
+
+<span id="uid-95a218e537"></span>
+
+### Convert
+
+Converts a value.
+
+```csharp
+public System.Object Convert(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+<span id="uid-de2355f1bd"></span>
+
+### ConvertBack
+
+Converts a value.
+
+```csharp
+public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `culture` | The culture to use. |
+| `parameter` | A user-defined parameter. |
+| `targetType` | The type of the target. |
+| `value` | The value to convert. |
+
+Returns: The converted value.
+
+</ApiRefPage>
+

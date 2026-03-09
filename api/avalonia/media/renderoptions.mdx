@@ -1,0 +1,340 @@
+---
+title: 'RenderOptions'
+hide_title: true
+slug: '/avalonia/media/renderoptions'
+uid: 'Avalonia.Media.RenderOptions'
+commentId: 'T:Avalonia.Media.RenderOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RenderOptions Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides a set of options that control rendering behavior for visuals, including text rendering, bitmap
+interpolation, edge rendering, blending, and opacity handling.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct RenderOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> RenderOptions
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;RenderOptions&gt;
+</div>
+</div>
+
+## Remarks
+
+Use this structure to specify rendering preferences for visual elements. Each property
+corresponds to a specific aspect of rendering, allowing fine-grained control over how content is displayed.
+These options can be applied to visuals to influence quality, performance, and visual effects. When merging two
+instances, unspecified values are inherited from the other instance, enabling layered configuration.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-fb77245f08) | No summary available. |
+| [GetBitmapBlendingMode](#uid-7ebd8f3d79) | Gets the value of the BitmapBlendingMode attached property for a visual. |
+| [GetBitmapInterpolationMode](#uid-fb6155eee7) | Gets the value of the BitmapInterpolationMode attached property for a visual. |
+| [GetEdgeMode](#uid-38a4d20eb2) | Gets the value of the EdgeMode attached property for a visual. |
+| [GetHashCode](#uid-7e1b03f438) | No summary available. |
+| [GetRequiresFullOpacityHandling](#uid-648470435c) | Gets the value of the RequiresFullOpacityHandling attached property for a visual. |
+| [GetTextRenderingMode](#uid-d979d48b37) | Gets the value of the TextRenderingMode attached property for a visual. |
+| [MergeWith](#uid-255e029bd6) | No summary available. |
+| [SetBitmapBlendingMode](#uid-a415a9710f) | Sets the value of the BitmapBlendingMode attached property for a visual. |
+| [SetBitmapInterpolationMode](#uid-dfa77b48da) | Sets the value of the BitmapInterpolationMode attached property for a visual. |
+| [SetEdgeMode](#uid-6f36b59b82) | Sets the value of the EdgeMode attached property for a visual. |
+| [SetRequiresFullOpacityHandling](#uid-8ffc4c1b1a) | No summary available. |
+| [SetTextRenderingMode](#uid-f17747d70e) | Sets the value of the TextRenderingMode attached property for a visual. |
+| [ToString](#uid-541d8fb26c) | No summary available. |
+
+<span id="uid-fb77245f08"></span>
+
+### Equals overloads
+
+<span id="uid-53ebe70d6d"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Media.RenderOptions other)
+```
+
+<span id="uid-b4a1a86724"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-7ebd8f3d79"></span>
+
+### GetBitmapBlendingMode
+
+Gets the value of the BitmapBlendingMode attached property for a visual.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode GetBitmapBlendingMode(Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `visual` | The control. |
+
+Returns: The value.
+
+<span id="uid-fb6155eee7"></span>
+
+### GetBitmapInterpolationMode
+
+Gets the value of the BitmapInterpolationMode attached property for a visual.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapInterpolationMode GetBitmapInterpolationMode(Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `visual` | The control. |
+
+Returns: The value.
+
+<span id="uid-38a4d20eb2"></span>
+
+### GetEdgeMode
+
+Gets the value of the EdgeMode attached property for a visual.
+
+```csharp
+public Avalonia.Media.EdgeMode GetEdgeMode(Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `visual` | The control. |
+
+Returns: The value.
+
+<span id="uid-7e1b03f438"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-648470435c"></span>
+
+### GetRequiresFullOpacityHandling
+
+Gets the value of the RequiresFullOpacityHandling attached property for a visual.
+
+```csharp
+public System.Nullable<System.Boolean> GetRequiresFullOpacityHandling(Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `visual` | The control. |
+
+Returns: The value.
+
+<span id="uid-d979d48b37"></span>
+
+### GetTextRenderingMode
+
+Gets the value of the TextRenderingMode attached property for a visual.
+
+```csharp
+public Avalonia.Media.TextRenderingMode GetTextRenderingMode(Avalonia.Visual visual)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `visual` | The control. |
+
+Returns: The value.
+
+<span id="uid-255e029bd6"></span>
+
+### MergeWith
+
+```csharp
+public Avalonia.Media.RenderOptions MergeWith(Avalonia.Media.RenderOptions other)
+```
+
+<span id="uid-a415a9710f"></span>
+
+### SetBitmapBlendingMode
+
+Sets the value of the BitmapBlendingMode attached property for a visual.
+
+```csharp
+public System.Void SetBitmapBlendingMode(Avalonia.Visual visual, Avalonia.Media.Imaging.BitmapBlendingMode value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The left value. |
+| `visual` | The control. |
+
+<span id="uid-dfa77b48da"></span>
+
+### SetBitmapInterpolationMode
+
+Sets the value of the BitmapInterpolationMode attached property for a visual.
+
+```csharp
+public System.Void SetBitmapInterpolationMode(Avalonia.Visual visual, Avalonia.Media.Imaging.BitmapInterpolationMode value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value. |
+| `visual` | The control. |
+
+<span id="uid-6f36b59b82"></span>
+
+### SetEdgeMode
+
+Sets the value of the EdgeMode attached property for a visual.
+
+```csharp
+public System.Void SetEdgeMode(Avalonia.Visual visual, Avalonia.Media.EdgeMode value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value. |
+| `visual` | The control. |
+
+<span id="uid-8ffc4c1b1a"></span>
+
+### SetRequiresFullOpacityHandling
+
+```csharp
+public System.Void SetRequiresFullOpacityHandling(Avalonia.Visual visual, System.Nullable<System.Boolean> value)
+```
+
+<span id="uid-f17747d70e"></span>
+
+### SetTextRenderingMode
+
+Sets the value of the TextRenderingMode attached property for a visual.
+
+```csharp
+public System.Void SetTextRenderingMode(Avalonia.Visual visual, Avalonia.Media.TextRenderingMode value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The value. |
+| `visual` | The control. |
+
+<span id="uid-541d8fb26c"></span>
+
+### ToString
+
+```csharp
+public System.String ToString()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BitmapBlendingMode](#uid-6a71f985bb) | Gets the blending mode used when rendering bitmap images. |
+| [BitmapInterpolationMode](#uid-d39e384f63) | Gets the interpolation mode used when rendering bitmap images. |
+| [EdgeMode](#uid-a3c8cd6a95) | Gets the edge rendering mode used for drawing operations. |
+| [RequiresFullOpacityHandling](#uid-739d9ae81a) | Gets a value indicating whether full opacity handling is required for the associated content. |
+| [TextRenderingMode](#uid-841e467403) | Gets the text rendering mode used to control how text glyphs are rendered. |
+
+<span id="uid-6a71f985bb"></span>
+
+### BitmapBlendingMode
+
+Gets the blending mode used when rendering bitmap images.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode BitmapBlendingMode { get; set; }
+```
+
+<span id="uid-d39e384f63"></span>
+
+### BitmapInterpolationMode
+
+Gets the interpolation mode used when rendering bitmap images.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapInterpolationMode BitmapInterpolationMode { get; set; }
+```
+
+<span id="uid-a3c8cd6a95"></span>
+
+### EdgeMode
+
+Gets the edge rendering mode used for drawing operations.
+
+```csharp
+public Avalonia.Media.EdgeMode EdgeMode { get; set; }
+```
+
+<span id="uid-739d9ae81a"></span>
+
+### RequiresFullOpacityHandling
+
+Gets a value indicating whether full opacity handling is required for the associated content.
+
+```csharp
+public System.Nullable<System.Boolean> RequiresFullOpacityHandling { get; set; }
+```
+
+<span id="uid-841e467403"></span>
+
+### TextRenderingMode
+
+Gets the text rendering mode used to control how text glyphs are rendered.
+
+```csharp
+public Avalonia.Media.TextRenderingMode TextRenderingMode { get; set; }
+```
+
+</ApiRefPage>
+

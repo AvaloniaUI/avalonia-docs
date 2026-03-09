@@ -1,0 +1,124 @@
+---
+title: 'HtmlWebSocketTransport'
+hide_title: true
+slug: '/avalonia/designersupport/remote/htmltransport/htmlwebsockettransport'
+uid: 'Avalonia.DesignerSupport.Remote.HtmlTransport.HtmlWebSocketTransport'
+commentId: 'T:Avalonia.DesignerSupport.Remote.HtmlTransport.HtmlWebSocketTransport'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.DesignerSupport'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.DesignerSupport.Remote.HtmlTransport'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HtmlWebSocketTransport Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.DesignerSupport.Remote.HtmlTransport</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.DesignerSupport</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HtmlWebSocketTransport
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> HtmlWebSocketTransport
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaRemoteTransportConnection, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HtmlWebSocketTransport](#uid-80d44de251) | No summary available. |
+
+<span id="uid-80d44de251"></span>
+
+### HtmlWebSocketTransport
+
+```csharp
+public HtmlWebSocketTransport(Avalonia.Remote.Protocol.IAvaloniaRemoteTransportConnection signalTransport, System.Uri listenUri)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-b229be76ac) | No summary available. |
+| [Send](#uid-8b5ac90655) | No summary available. |
+| [Start](#uid-d8cef7222b) | No summary available. |
+
+<span id="uid-b229be76ac"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-8b5ac90655"></span>
+
+### Send
+
+```csharp
+public System.Threading.Tasks.Task Send(System.Object data)
+```
+
+<span id="uid-d8cef7222b"></span>
+
+### Start
+
+```csharp
+public System.Void Start()
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [OnException](#uid-4224a3aa7f) | No summary available. |
+| [OnMessage](#uid-cb552896d5) | No summary available. |
+
+<span id="uid-4224a3aa7f"></span>
+
+### OnException
+
+```csharp
+public event System.Action<Avalonia.Remote.Protocol.IAvaloniaRemoteTransportConnection, System.Exception> OnException
+```
+
+<span id="uid-cb552896d5"></span>
+
+### OnMessage
+
+```csharp
+public event System.Action<Avalonia.Remote.Protocol.IAvaloniaRemoteTransportConnection, System.Object> OnMessage
+```
+
+</ApiRefPage>
+

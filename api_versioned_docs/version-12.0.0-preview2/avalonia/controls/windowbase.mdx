@@ -1,0 +1,282 @@
+---
+title: 'WindowBase'
+hide_title: true
+slug: '/avalonia/controls/windowbase'
+uid: 'Avalonia.Controls.WindowBase'
+commentId: 'T:Avalonia.Controls.WindowBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WindowBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for top-level windows.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WindowBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="toplevel">TopLevel</a> <span className="apiref-page__relation-separator">-&gt;</span> WindowBase
+</div>
+</div>
+
+## Remarks
+
+This class acts as a base for top level windows such as [Avalonia.Controls.Window](xref:Avalonia.Controls.Window) and
+[Avalonia.Controls.Primitives.PopupRoot](xref:Avalonia.Controls.Primitives.PopupRoot). It handles scheduling layout, styling and rendering as well as
+tracking the window [Avalonia.Controls.TopLevel.ClientSize](xref:Avalonia.Controls.TopLevel.ClientSize) and [Avalonia.Controls.WindowBase.IsActive](xref:Avalonia.Controls.WindowBase.IsActive) state.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WindowBase (2 overloads)](#uid-326b7d8e76) | No summary available. |
+
+<span id="uid-326b7d8e76"></span>
+
+### WindowBase overloads
+
+<span id="uid-fd5a891d39"></span>
+
+#### WindowBase
+
+```csharp
+public WindowBase(Avalonia.Platform.IWindowBaseImpl impl)
+```
+
+<span id="uid-d7438bc923"></span>
+
+#### WindowBase
+
+```csharp
+public WindowBase(Avalonia.Platform.IWindowBaseImpl impl, Avalonia.IAvaloniaDependencyResolver dependencyResolver)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Activate](#uid-25b4243aec) | Activates the window. |
+| [Hide](#uid-8bc1ec46d4) | Hides the popup. |
+| [Show](#uid-b82835c647) | Shows the window. |
+
+<span id="uid-25b4243aec"></span>
+
+### Activate
+
+Activates the window.
+
+```csharp
+public System.Void Activate()
+```
+
+<span id="uid-8bc1ec46d4"></span>
+
+### Hide
+
+Hides the popup.
+
+```csharp
+public System.Void Hide()
+```
+
+<span id="uid-b82835c647"></span>
+
+### Show
+
+Shows the window.
+
+```csharp
+public System.Void Show()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DesktopScaling](#uid-435aa2d387) | Gets the scaling factor for Window positioning and sizing. |
+| [IsActive](#uid-8d625b6fef) | Gets a value that indicates whether the window is active. |
+| [Owner](#uid-90855d7b88) | Gets or sets the owner of the window. |
+| [PlatformImpl](#uid-763833759d) | No summary available. |
+| [Screens](#uid-a958441fa2) | Gets platform screens implementation. |
+| [Topmost](#uid-34194331b7) | Gets or sets whether this window appears on top of all other windows |
+
+<span id="uid-435aa2d387"></span>
+
+### DesktopScaling
+
+Gets the scaling factor for Window positioning and sizing.
+
+```csharp
+public System.Double DesktopScaling { get; set; }
+```
+
+<span id="uid-8d625b6fef"></span>
+
+### IsActive
+
+Gets a value that indicates whether the window is active.
+
+```csharp
+public System.Boolean IsActive { get; set; }
+```
+
+<span id="uid-90855d7b88"></span>
+
+### Owner
+
+Gets or sets the owner of the window.
+
+```csharp
+public Avalonia.Controls.WindowBase Owner { get; set; }
+```
+
+<span id="uid-763833759d"></span>
+
+### PlatformImpl
+
+```csharp
+public Avalonia.Platform.IWindowBaseImpl PlatformImpl { get; set; }
+```
+
+<span id="uid-a958441fa2"></span>
+
+### Screens
+
+Gets platform screens implementation.
+
+```csharp
+public Avalonia.Controls.Screens Screens { get; set; }
+```
+
+<span id="uid-34194331b7"></span>
+
+### Topmost
+
+Gets or sets whether this window appears on top of all other windows
+
+```csharp
+public System.Boolean Topmost { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsActiveProperty](#uid-c09d312241) | Defines the Avalonia.Controls.WindowBase.IsActive property. |
+| [OwnerProperty](#uid-6b795228f9) | Defines the Avalonia.Controls.WindowBase.Owner property. |
+| [TopmostProperty](#uid-8d65fc0331) | No summary available. |
+
+<span id="uid-c09d312241"></span>
+
+### IsActiveProperty
+
+Defines the [Avalonia.Controls.WindowBase.IsActive](xref:Avalonia.Controls.WindowBase.IsActive) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.WindowBase, System.Boolean> IsActiveProperty
+```
+
+<span id="uid-6b795228f9"></span>
+
+### OwnerProperty
+
+Defines the [Avalonia.Controls.WindowBase.Owner](xref:Avalonia.Controls.WindowBase.Owner) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.WindowBase, Avalonia.Controls.WindowBase> OwnerProperty
+```
+
+<span id="uid-8d65fc0331"></span>
+
+### TopmostProperty
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> TopmostProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Activated](#uid-b61aa01b09) | Fired when the window is activated. |
+| [Deactivated](#uid-6f5718d6fe) | Fired when the window is deactivated. |
+| [PositionChanged](#uid-035504a290) | Fired when the window position is changed. |
+| [Resized](#uid-25bc80543b) | Occurs when the window is resized. |
+
+<span id="uid-b61aa01b09"></span>
+
+### Activated
+
+Fired when the window is activated.
+
+```csharp
+public event System.EventHandler Activated
+```
+
+<span id="uid-6f5718d6fe"></span>
+
+### Deactivated
+
+Fired when the window is deactivated.
+
+```csharp
+public event System.EventHandler Deactivated
+```
+
+<span id="uid-035504a290"></span>
+
+### PositionChanged
+
+Fired when the window position is changed.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.PixelPointEventArgs> PositionChanged
+```
+
+<span id="uid-25bc80543b"></span>
+
+### Resized
+
+Occurs when the window is resized.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.WindowResizedEventArgs> Resized
+```
+
+</ApiRefPage>
+

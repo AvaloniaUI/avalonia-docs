@@ -1,0 +1,139 @@
+---
+title: 'MultiPage'
+hide_title: true
+slug: '/avalonia/controls/multipage'
+uid: 'Avalonia.Controls.MultiPage'
+commentId: 'T:Avalonia.Controls.MultiPage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MultiPage Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Abstract base class for pages that host a collection of child pages.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MultiPage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="page">Page</a> <span className="apiref-page__relation-separator">-&gt;</span> MultiPage
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PageTemplate](#uid-b678afa08d) | Gets or sets the data template used to create pages from view-model items. |
+| [Pages](#uid-6389361174) | Gets or sets the collection of child pages. |
+
+<span id="uid-b678afa08d"></span>
+
+### PageTemplate
+
+Gets or sets the data template used to create pages from view-model items.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate PageTemplate { get; set; }
+```
+
+<span id="uid-6389361174"></span>
+
+### Pages
+
+Gets or sets the collection of child pages.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Page> Pages { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [PageTemplateProperty](#uid-05176020d1) | Defines the Avalonia.Controls.MultiPage.PageTemplate property. |
+| [PagesProperty](#uid-1768c32a75) | Defines the Avalonia.Controls.MultiPage.Pages property. |
+
+<span id="uid-05176020d1"></span>
+
+### PageTemplateProperty
+
+Defines the [Avalonia.Controls.MultiPage.PageTemplate](xref:Avalonia.Controls.MultiPage.PageTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> PageTemplateProperty
+```
+
+<span id="uid-1768c32a75"></span>
+
+### PagesProperty
+
+Defines the [Avalonia.Controls.MultiPage.Pages](xref:Avalonia.Controls.MultiPage.Pages) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IEnumerable<Avalonia.Controls.Page>> PagesProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CurrentPageChanged](#uid-4747772888) | Occurs when the Avalonia.Controls.Page.CurrentPage property changes. |
+| [PagesChanged](#uid-bf6bbf74f9) | Occurs when the Avalonia.Controls.MultiPage.Pages collection changes. |
+
+<span id="uid-4747772888"></span>
+
+### CurrentPageChanged
+
+Occurs when the [Avalonia.Controls.Page.CurrentPage](xref:Avalonia.Controls.Page.CurrentPage) property changes.
+
+```csharp
+public event System.EventHandler CurrentPageChanged
+```
+
+<span id="uid-bf6bbf74f9"></span>
+
+### PagesChanged
+
+Occurs when the [Avalonia.Controls.MultiPage.Pages](xref:Avalonia.Controls.MultiPage.Pages) collection changes.
+
+```csharp
+public event System.EventHandler<System.Collections.Specialized.NotifyCollectionChangedEventArgs> PagesChanged
+```
+
+</ApiRefPage>
+

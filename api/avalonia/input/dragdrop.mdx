@@ -1,0 +1,221 @@
+---
+title: 'DragDrop'
+hide_title: true
+slug: '/avalonia/input/dragdrop'
+uid: 'Avalonia.Input.DragDrop'
+commentId: 'T:Avalonia.Input.DragDrop'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DragDrop Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DragDrop
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DragDrop
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddDragEnterHandler](#uid-6d86de31fd) | No summary available. |
+| [AddDragLeaveHandler](#uid-a0a3f8c3e2) | No summary available. |
+| [AddDragOverHandler](#uid-7690aee272) | No summary available. |
+| [AddDropHandler](#uid-3700834e57) | No summary available. |
+| [DoDragDropAsync](#uid-97006f7321) | Starts a dragging operation with the given Avalonia.Input.IDataTransfer and returns the applied drop effect from the target. Avalonia.Input.DataTransfer |
+| [GetAllowDrop](#uid-a54076451a) | Gets a value indicating whether the given element can be used as the target of a drag-and-drop operation. |
+| [RemoveDragEnterHandler](#uid-ce3b55d748) | No summary available. |
+| [RemoveDragLeaveHandler](#uid-14410b9408) | No summary available. |
+| [RemoveDragOverHandler](#uid-0eb4d36a1b) | No summary available. |
+| [RemoveDropHandler](#uid-7bc287f28d) | No summary available. |
+| [SetAllowDrop](#uid-54ef899caf) | Sets a value indicating whether the given interactive can be used as the target of a drag-and-drop operation. |
+
+<span id="uid-6d86de31fd"></span>
+
+### AddDragEnterHandler
+
+```csharp
+public System.Void AddDragEnterHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Input.DragEventArgs> handler)
+```
+
+<span id="uid-a0a3f8c3e2"></span>
+
+### AddDragLeaveHandler
+
+```csharp
+public System.Void AddDragLeaveHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Input.DragEventArgs> handler)
+```
+
+<span id="uid-7690aee272"></span>
+
+### AddDragOverHandler
+
+```csharp
+public System.Void AddDragOverHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Input.DragEventArgs> handler)
+```
+
+<span id="uid-3700834e57"></span>
+
+### AddDropHandler
+
+```csharp
+public System.Void AddDropHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Input.DragEventArgs> handler)
+```
+
+<span id="uid-97006f7321"></span>
+
+### DoDragDropAsync
+
+Starts a dragging operation with the given [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) and returns the applied drop effect from the target.
+[Avalonia.Input.DataTransfer](xref:Avalonia.Input.DataTransfer)
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Input.DragDropEffects> DoDragDropAsync(Avalonia.Input.PointerEventArgs triggerEvent, Avalonia.Input.IDataTransfer dataTransfer, Avalonia.Input.DragDropEffects allowedEffects)
+```
+
+<span id="uid-a54076451a"></span>
+
+### GetAllowDrop
+
+Gets a value indicating whether the given element can be used as the target of a drag-and-drop operation.
+
+```csharp
+public System.Boolean GetAllowDrop(Avalonia.Interactivity.Interactive interactive)
+```
+
+<span id="uid-ce3b55d748"></span>
+
+### RemoveDragEnterHandler
+
+```csharp
+public System.Void RemoveDragEnterHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Input.DragEventArgs> handler)
+```
+
+<span id="uid-14410b9408"></span>
+
+### RemoveDragLeaveHandler
+
+```csharp
+public System.Void RemoveDragLeaveHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Input.DragEventArgs> handler)
+```
+
+<span id="uid-0eb4d36a1b"></span>
+
+### RemoveDragOverHandler
+
+```csharp
+public System.Void RemoveDragOverHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Input.DragEventArgs> handler)
+```
+
+<span id="uid-7bc287f28d"></span>
+
+### RemoveDropHandler
+
+```csharp
+public System.Void RemoveDropHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Input.DragEventArgs> handler)
+```
+
+<span id="uid-54ef899caf"></span>
+
+### SetAllowDrop
+
+Sets a value indicating whether the given interactive can be used as the target of a drag-and-drop operation.
+
+```csharp
+public System.Void SetAllowDrop(Avalonia.Interactivity.Interactive interactive, System.Boolean value)
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AllowDropProperty](#uid-4bb1b80186) | No summary available. |
+| [DragEnterEvent](#uid-db660141bb) | Event which is raised, when a drag-and-drop operation enters the element. |
+| [DragLeaveEvent](#uid-8f0f8c6c1e) | Event which is raised, when a drag-and-drop operation leaves the element. |
+| [DragOverEvent](#uid-885eaa43ef) | Event which is raised, when a drag-and-drop operation is updated while over the element. |
+| [DropEvent](#uid-5556a2e22d) | Event which is raised, when a drag-and-drop operation should complete over the element. |
+
+<span id="uid-4bb1b80186"></span>
+
+### AllowDropProperty
+
+```csharp
+public Avalonia.AttachedProperty<TValue><System.Boolean> AllowDropProperty
+```
+
+<span id="uid-db660141bb"></span>
+
+### DragEnterEvent
+
+Event which is raised, when a drag-and-drop operation enters the element.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.DragEventArgs> DragEnterEvent
+```
+
+<span id="uid-8f0f8c6c1e"></span>
+
+### DragLeaveEvent
+
+Event which is raised, when a drag-and-drop operation leaves the element.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.DragEventArgs> DragLeaveEvent
+```
+
+<span id="uid-885eaa43ef"></span>
+
+### DragOverEvent
+
+Event which is raised, when a drag-and-drop operation is updated while over the element.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.DragEventArgs> DragOverEvent
+```
+
+<span id="uid-5556a2e22d"></span>
+
+### DropEvent
+
+Event which is raised, when a drag-and-drop operation should complete over the element.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.DragEventArgs> DropEvent
+```
+
+</ApiRefPage>
+

@@ -1,0 +1,1011 @@
+---
+title: 'ScrollViewer'
+hide_title: true
+slug: '/avalonia/controls/scrollviewer'
+uid: 'Avalonia.Controls.ScrollViewer'
+commentId: 'T:Avalonia.Controls.ScrollViewer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ScrollViewer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control which scrolls its content if the content is bigger than the space available.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ScrollViewer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> ScrollViewer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iscrollanchorprovider">IScrollAnchorProvider</a>, <a href="primitives/iscrollable">IScrollable</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ScrollViewer](#uid-ae1bdc3849) | Initializes a new instance of the Avalonia.Controls.ScrollViewer class. |
+
+<span id="uid-ae1bdc3849"></span>
+
+### ScrollViewer
+
+Initializes a new instance of the [Avalonia.Controls.ScrollViewer](xref:Avalonia.Controls.ScrollViewer) class.
+
+```csharp
+public ScrollViewer()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAllowAutoHide](#uid-c0c4b2dc9e) | Gets the value of the AllowAutoHideProperty attached property. |
+| [GetBringIntoViewOnFocusChange](#uid-3939efd7d1) | Gets the value of the Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange attached property. |
+| [GetHorizontalScrollBarVisibility](#uid-c99cc5cf28) | Gets the value of the HorizontalScrollBarVisibility attached property. |
+| [GetHorizontalSnapPointsAlignment](#uid-c382efc096) | Gets the value of the HorizontalSnapPointsAlignment attached property. |
+| [GetHorizontalSnapPointsType](#uid-a1cc6a7b21) | Gets the value of the HorizontalSnapPointsType attached property. |
+| [GetIsDeferredScrollingEnabled](#uid-e7b44c22cb) | Gets whether dragging of Avalonia.Controls.Primitives.Thumb elements should update the Avalonia.Controls.ScrollViewer only when the user releases the mouse. |
+| [GetIsScrollChainingEnabled](#uid-e96a64dc0a) | Gets the value of the IsScrollChainingEnabled attached property. |
+| [GetIsScrollInertiaEnabled](#uid-d4bbf72ebc) | Gets whether scroll gestures should include inertia in their behavior and value. |
+| [GetVerticalScrollBarVisibility](#uid-850081dd72) | Gets the value of the VerticalScrollBarVisibility attached property. |
+| [GetVerticalSnapPointsAlignment](#uid-5ba0c06cfc) | Gets the value of the VerticalSnapPointsAlignment attached property. |
+| [GetVerticalSnapPointsType](#uid-e94d50f7a0) | Gets the value of the VerticalSnapPointsType attached property. |
+| [LineDown](#uid-4383858413) | Scrolls the content down one line. |
+| [LineLeft](#uid-492ac1c7e0) | Scrolls the content left one line. |
+| [LineRight](#uid-57ed867de4) | Scrolls the content right one line. |
+| [LineUp](#uid-ec431a4548) | Scrolls the content up one line. |
+| [PageDown](#uid-5831079664) | Scrolls the content downward by one page. |
+| [PageLeft](#uid-b9aae14af9) | Scrolls the content left by one page. |
+| [PageRight](#uid-bb8adb4070) | Scrolls the content tight by one page. |
+| [PageUp](#uid-202e856ccb) | Scrolls the content upward by one page. |
+| [RegisterAnchorCandidate](#uid-286e00079d) | Registers a control as a potential scroll anchor candidate. |
+| [ScrollToEnd](#uid-5f4aa665f9) | Scrolls to the bottom-left corner of the content. |
+| [ScrollToHome](#uid-1a8d0607f1) | Scrolls to the top-left corner of the content. |
+| [SetAllowAutoHide](#uid-4a77d4b354) | Gets the value of the AllowAutoHideProperty attached property. |
+| [SetBringIntoViewOnFocusChange](#uid-ffe1d7f67c) | Gets the value of the Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange attached property. |
+| [SetHorizontalScrollBarVisibility](#uid-a4cebb72b8) | Gets the value of the HorizontalScrollBarVisibility attached property. |
+| [SetHorizontalSnapPointsAlignment](#uid-096f0c60b4) | Gets the value of the HorizontalSnapPointsAlignment attached property. |
+| [SetHorizontalSnapPointsType](#uid-eff04a77f0) | Gets the value of the HorizontalSnapPointsType attached property. |
+| [SetIsDeferredScrollingEnabled](#uid-77173e432b) | Sets whether dragging of Avalonia.Controls.Primitives.Thumb elements should update the Avalonia.Controls.ScrollViewer only when the user releases the mouse. |
+| [SetIsScrollChainingEnabled](#uid-995581f7f7) | Sets the value of the IsScrollChainingEnabled attached property. |
+| [SetIsScrollInertiaEnabled](#uid-c5f7523562) | Sets whether scroll gestures should include inertia in their behavior and value. |
+| [SetVerticalScrollBarVisibility](#uid-be7d4b5083) | Gets the value of the VerticalScrollBarVisibility attached property. |
+| [SetVerticalSnapPointsAlignment](#uid-d142edf4f3) | Gets the value of the VerticalSnapPointsAlignment attached property. |
+| [SetVerticalSnapPointsType](#uid-69be03683b) | Gets the value of the VerticalSnapPointsType attached property. |
+| [UnregisterAnchorCandidate](#uid-b8bb14b33f) | Unregisters a control as a potential scroll anchor candidate. |
+
+<span id="uid-c0c4b2dc9e"></span>
+
+### GetAllowAutoHide
+
+Gets the value of the AllowAutoHideProperty attached property.
+
+```csharp
+public System.Boolean GetAllowAutoHide(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-3939efd7d1"></span>
+
+### GetBringIntoViewOnFocusChange
+
+Gets the value of the [Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange](xref:Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange) attached property.
+
+```csharp
+public System.Boolean GetBringIntoViewOnFocusChange(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-c99cc5cf28"></span>
+
+### GetHorizontalScrollBarVisibility
+
+Gets the value of the HorizontalScrollBarVisibility attached property.
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollBarVisibility GetHorizontalScrollBarVisibility(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-c382efc096"></span>
+
+### GetHorizontalSnapPointsAlignment
+
+Gets the value of the HorizontalSnapPointsAlignment attached property.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsAlignment GetHorizontalSnapPointsAlignment(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-a1cc6a7b21"></span>
+
+### GetHorizontalSnapPointsType
+
+Gets the value of the HorizontalSnapPointsType attached property.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsType GetHorizontalSnapPointsType(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-e7b44c22cb"></span>
+
+### GetIsDeferredScrollingEnabled
+
+Gets whether dragging of [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) elements should update the [Avalonia.Controls.ScrollViewer](xref:Avalonia.Controls.ScrollViewer) only when the user releases the mouse.
+
+```csharp
+public System.Boolean GetIsDeferredScrollingEnabled(Avalonia.Controls.Control control)
+```
+
+<span id="uid-e96a64dc0a"></span>
+
+### GetIsScrollChainingEnabled
+
+Gets the value of the IsScrollChainingEnabled attached property.
+
+```csharp
+public System.Boolean GetIsScrollChainingEnabled(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-d4bbf72ebc"></span>
+
+### GetIsScrollInertiaEnabled
+
+Gets whether scroll gestures should include inertia in their behavior and value.
+
+```csharp
+public System.Boolean GetIsScrollInertiaEnabled(Avalonia.Controls.Control control)
+```
+
+<span id="uid-850081dd72"></span>
+
+### GetVerticalScrollBarVisibility
+
+Gets the value of the VerticalScrollBarVisibility attached property.
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollBarVisibility GetVerticalScrollBarVisibility(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-5ba0c06cfc"></span>
+
+### GetVerticalSnapPointsAlignment
+
+Gets the value of the VerticalSnapPointsAlignment attached property.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsAlignment GetVerticalSnapPointsAlignment(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-e94d50f7a0"></span>
+
+### GetVerticalSnapPointsType
+
+Gets the value of the VerticalSnapPointsType attached property.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsType GetVerticalSnapPointsType(Avalonia.Controls.Control control)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to read the value from. |
+
+Returns: The value of the property.
+
+<span id="uid-4383858413"></span>
+
+### LineDown
+
+Scrolls the content down one line.
+
+```csharp
+public System.Void LineDown()
+```
+
+<span id="uid-492ac1c7e0"></span>
+
+### LineLeft
+
+Scrolls the content left one line.
+
+```csharp
+public System.Void LineLeft()
+```
+
+<span id="uid-57ed867de4"></span>
+
+### LineRight
+
+Scrolls the content right one line.
+
+```csharp
+public System.Void LineRight()
+```
+
+<span id="uid-ec431a4548"></span>
+
+### LineUp
+
+Scrolls the content up one line.
+
+```csharp
+public System.Void LineUp()
+```
+
+<span id="uid-5831079664"></span>
+
+### PageDown
+
+Scrolls the content downward by one page.
+
+```csharp
+public System.Void PageDown()
+```
+
+<span id="uid-b9aae14af9"></span>
+
+### PageLeft
+
+Scrolls the content left by one page.
+
+```csharp
+public System.Void PageLeft()
+```
+
+<span id="uid-bb8adb4070"></span>
+
+### PageRight
+
+Scrolls the content tight by one page.
+
+```csharp
+public System.Void PageRight()
+```
+
+<span id="uid-202e856ccb"></span>
+
+### PageUp
+
+Scrolls the content upward by one page.
+
+```csharp
+public System.Void PageUp()
+```
+
+<span id="uid-286e00079d"></span>
+
+### RegisterAnchorCandidate
+
+Registers a control as a potential scroll anchor candidate.
+
+```csharp
+public System.Void RegisterAnchorCandidate(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | A control within the subtree of the [Avalonia.Controls.IScrollAnchorProvider](xref:Avalonia.Controls.IScrollAnchorProvider). |
+
+<span id="uid-5f4aa665f9"></span>
+
+### ScrollToEnd
+
+Scrolls to the bottom-left corner of the content.
+
+```csharp
+public System.Void ScrollToEnd()
+```
+
+<span id="uid-1a8d0607f1"></span>
+
+### ScrollToHome
+
+Scrolls to the top-left corner of the content.
+
+```csharp
+public System.Void ScrollToHome()
+```
+
+<span id="uid-4a77d4b354"></span>
+
+### SetAllowAutoHide
+
+Gets the value of the AllowAutoHideProperty attached property.
+
+```csharp
+public System.Void SetAllowAutoHide(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-ffe1d7f67c"></span>
+
+### SetBringIntoViewOnFocusChange
+
+Gets the value of the [Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange](xref:Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange) attached property.
+
+```csharp
+public System.Void SetBringIntoViewOnFocusChange(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-a4cebb72b8"></span>
+
+### SetHorizontalScrollBarVisibility
+
+Gets the value of the HorizontalScrollBarVisibility attached property.
+
+```csharp
+public System.Void SetHorizontalScrollBarVisibility(Avalonia.Controls.Control control, Avalonia.Controls.Primitives.ScrollBarVisibility value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-096f0c60b4"></span>
+
+### SetHorizontalSnapPointsAlignment
+
+Gets the value of the HorizontalSnapPointsAlignment attached property.
+
+```csharp
+public System.Void SetHorizontalSnapPointsAlignment(Avalonia.Controls.Control control, Avalonia.Controls.Primitives.SnapPointsAlignment value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-eff04a77f0"></span>
+
+### SetHorizontalSnapPointsType
+
+Gets the value of the HorizontalSnapPointsType attached property.
+
+```csharp
+public System.Void SetHorizontalSnapPointsType(Avalonia.Controls.Control control, Avalonia.Controls.Primitives.SnapPointsType value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-77173e432b"></span>
+
+### SetIsDeferredScrollingEnabled
+
+Sets whether dragging of [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) elements should update the [Avalonia.Controls.ScrollViewer](xref:Avalonia.Controls.ScrollViewer) only when the user releases the mouse.
+
+```csharp
+public System.Void SetIsDeferredScrollingEnabled(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+<span id="uid-995581f7f7"></span>
+
+### SetIsScrollChainingEnabled
+
+Sets the value of the IsScrollChainingEnabled attached property.
+
+```csharp
+public System.Void SetIsScrollChainingEnabled(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-c5f7523562"></span>
+
+### SetIsScrollInertiaEnabled
+
+Sets whether scroll gestures should include inertia in their behavior and value.
+
+```csharp
+public System.Void SetIsScrollInertiaEnabled(Avalonia.Controls.Control control, System.Boolean value)
+```
+
+<span id="uid-be7d4b5083"></span>
+
+### SetVerticalScrollBarVisibility
+
+Gets the value of the VerticalScrollBarVisibility attached property.
+
+```csharp
+public System.Void SetVerticalScrollBarVisibility(Avalonia.Controls.Control control, Avalonia.Controls.Primitives.ScrollBarVisibility value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-d142edf4f3"></span>
+
+### SetVerticalSnapPointsAlignment
+
+Gets the value of the VerticalSnapPointsAlignment attached property.
+
+```csharp
+public System.Void SetVerticalSnapPointsAlignment(Avalonia.Controls.Control control, Avalonia.Controls.Primitives.SnapPointsAlignment value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-69be03683b"></span>
+
+### SetVerticalSnapPointsType
+
+Gets the value of the VerticalSnapPointsType attached property.
+
+```csharp
+public System.Void SetVerticalSnapPointsType(Avalonia.Controls.Control control, Avalonia.Controls.Primitives.SnapPointsType value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `control` | The control to set the value on. |
+| `value` | The value of the property. |
+
+<span id="uid-b8bb14b33f"></span>
+
+### UnregisterAnchorCandidate
+
+Unregisters a control as a potential scroll anchor candidate.
+
+```csharp
+public System.Void UnregisterAnchorCandidate(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | A control within the subtree of the [Avalonia.Controls.IScrollAnchorProvider](xref:Avalonia.Controls.IScrollAnchorProvider). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AllowAutoHide](#uid-6829d69273) | Gets a value that indicates whether scrollbars can hide itself when user is not interacting with it. |
+| [BringIntoViewOnFocusChange](#uid-bd35e03f19) | Gets or sets a value that determines whether the Avalonia.Controls.ScrollViewer uses a bring-into-view scroll behavior when an item in the view gets focus. |
+| [CurrentAnchor](#uid-d6c64f92f0) | The currently chosen anchor element to use for scroll anchoring. |
+| [Extent](#uid-4b0319bcc9) | Gets the extent of the scrollable content. |
+| [HorizontalScrollBarVisibility](#uid-b14c97a62a) | Gets or sets the horizontal scrollbar visibility. |
+| [HorizontalSnapPointsAlignment](#uid-e7764eb99f) | Gets or sets how the existing snap points are horizontally aligned versus the initial viewport. |
+| [HorizontalSnapPointsType](#uid-d5806cc2d3) | Gets or sets how scroll gesture reacts to the snap points along the horizontal axis. |
+| [IsDeferredScrollingEnabled](#uid-158c470cf5) | Gets or sets whether dragging of Avalonia.Controls.Primitives.Thumb elements should update the Avalonia.Controls.ScrollViewer only when the user releases the mouse. |
+| [IsExpanded](#uid-4ba4ff6d51) | Gets a value that indicates whether any scrollbar is expanded. |
+| [IsScrollChainingEnabled](#uid-562a0c9377) | Gets or sets if scroll chaining is enabled. The default value is true. |
+| [IsScrollInertiaEnabled](#uid-597c5a72b3) | Gets or sets whether scroll gestures should include inertia in their behavior and value. |
+| [LargeChange](#uid-8e4406e0c5) | Gets the large (page) change value for the scroll viewer. |
+| [Offset](#uid-36133359b5) | Gets or sets the current scroll offset. |
+| [ScrollBarMaximum](#uid-f0d4ad6353) | Gets the maximum scrolling distance (which is Avalonia.Controls.ScrollViewer.Extent - Avalonia.Controls.ScrollViewer.Viewport). |
+| [SmallChange](#uid-7a6b0c4ffd) | Gets the small (line) change value for the scroll viewer. |
+| [VerticalScrollBarVisibility](#uid-5e2b3e5586) | Gets or sets the vertical scrollbar visibility. |
+| [VerticalSnapPointsAlignment](#uid-83bf1b78d8) | Gets or sets how the existing snap points are vertically aligned versus the initial viewport. |
+| [VerticalSnapPointsType](#uid-1f0934bed3) | Gets or sets how scroll gesture reacts to the snap points along the vertical axis. |
+| [Viewport](#uid-67c07147e2) | Gets the size of the viewport on the scrollable content. |
+
+<span id="uid-6829d69273"></span>
+
+### AllowAutoHide
+
+Gets a value that indicates whether scrollbars can hide itself when user is not interacting with it.
+
+```csharp
+public System.Boolean AllowAutoHide { get; set; }
+```
+
+<span id="uid-bd35e03f19"></span>
+
+### BringIntoViewOnFocusChange
+
+Gets or sets a value that determines whether the [Avalonia.Controls.ScrollViewer](xref:Avalonia.Controls.ScrollViewer) uses a
+bring-into-view scroll behavior when an item in the view gets focus.
+
+```csharp
+public System.Boolean BringIntoViewOnFocusChange { get; set; }
+```
+
+Value: true to use a behavior that brings focused items into view. false to use a behavior
+that focused items do not automatically scroll into view. The default is true.
+
+<span id="uid-d6c64f92f0"></span>
+
+### CurrentAnchor
+
+The currently chosen anchor element to use for scroll anchoring.
+
+```csharp
+public Avalonia.Controls.Control CurrentAnchor { get; set; }
+```
+
+<span id="uid-4b0319bcc9"></span>
+
+### Extent
+
+Gets the extent of the scrollable content.
+
+```csharp
+public Avalonia.Size Extent { get; set; }
+```
+
+<span id="uid-b14c97a62a"></span>
+
+### HorizontalScrollBarVisibility
+
+Gets or sets the horizontal scrollbar visibility.
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollBarVisibility HorizontalScrollBarVisibility { get; set; }
+```
+
+<span id="uid-e7764eb99f"></span>
+
+### HorizontalSnapPointsAlignment
+
+Gets or sets how the existing snap points are horizontally aligned versus the initial viewport.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsAlignment HorizontalSnapPointsAlignment { get; set; }
+```
+
+<span id="uid-d5806cc2d3"></span>
+
+### HorizontalSnapPointsType
+
+Gets or sets how scroll gesture reacts to the snap points along the horizontal axis.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsType HorizontalSnapPointsType { get; set; }
+```
+
+<span id="uid-158c470cf5"></span>
+
+### IsDeferredScrollingEnabled
+
+Gets or sets whether dragging of [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) elements should update the [Avalonia.Controls.ScrollViewer](xref:Avalonia.Controls.ScrollViewer) only when the user releases the mouse.
+
+```csharp
+public System.Boolean IsDeferredScrollingEnabled { get; set; }
+```
+
+<span id="uid-4ba4ff6d51"></span>
+
+### IsExpanded
+
+Gets a value that indicates whether any scrollbar is expanded.
+
+```csharp
+public System.Boolean IsExpanded { get; set; }
+```
+
+<span id="uid-562a0c9377"></span>
+
+### IsScrollChainingEnabled
+
+Gets or sets if scroll chaining is enabled. The default value is true.
+
+```csharp
+public System.Boolean IsScrollChainingEnabled { get; set; }
+```
+
+<span id="uid-597c5a72b3"></span>
+
+### IsScrollInertiaEnabled
+
+Gets or sets whether scroll gestures should include inertia in their behavior and value.
+
+```csharp
+public System.Boolean IsScrollInertiaEnabled { get; set; }
+```
+
+<span id="uid-8e4406e0c5"></span>
+
+### LargeChange
+
+Gets the large (page) change value for the scroll viewer.
+
+```csharp
+public Avalonia.Size LargeChange { get; set; }
+```
+
+<span id="uid-36133359b5"></span>
+
+### Offset
+
+Gets or sets the current scroll offset.
+
+```csharp
+public Avalonia.Vector Offset { get; set; }
+```
+
+<span id="uid-f0d4ad6353"></span>
+
+### ScrollBarMaximum
+
+Gets the maximum scrolling distance (which is [Avalonia.Controls.ScrollViewer.Extent](xref:Avalonia.Controls.ScrollViewer.Extent) - [Avalonia.Controls.ScrollViewer.Viewport](xref:Avalonia.Controls.ScrollViewer.Viewport)).
+
+```csharp
+public Avalonia.Vector ScrollBarMaximum { get; set; }
+```
+
+<span id="uid-7a6b0c4ffd"></span>
+
+### SmallChange
+
+Gets the small (line) change value for the scroll viewer.
+
+```csharp
+public Avalonia.Size SmallChange { get; set; }
+```
+
+<span id="uid-5e2b3e5586"></span>
+
+### VerticalScrollBarVisibility
+
+Gets or sets the vertical scrollbar visibility.
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollBarVisibility VerticalScrollBarVisibility { get; set; }
+```
+
+<span id="uid-83bf1b78d8"></span>
+
+### VerticalSnapPointsAlignment
+
+Gets or sets how the existing snap points are vertically aligned versus the initial viewport.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsAlignment VerticalSnapPointsAlignment { get; set; }
+```
+
+<span id="uid-1f0934bed3"></span>
+
+### VerticalSnapPointsType
+
+Gets or sets how scroll gesture reacts to the snap points along the vertical axis.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsType VerticalSnapPointsType { get; set; }
+```
+
+<span id="uid-67c07147e2"></span>
+
+### Viewport
+
+Gets the size of the viewport on the scrollable content.
+
+```csharp
+public Avalonia.Size Viewport { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AllowAutoHideProperty](#uid-28f57a0427) | Defines the Avalonia.Controls.ScrollViewer.AllowAutoHide property. |
+| [BringIntoViewOnFocusChangeProperty](#uid-3bb2671d2f) | Defines the Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange property. |
+| [ExtentProperty](#uid-1b5db848a2) | Defines the Avalonia.Controls.ScrollViewer.Extent property. |
+| [HorizontalScrollBarVisibilityProperty](#uid-3ab88f82fb) | Defines the Avalonia.Controls.ScrollViewer.HorizontalScrollBarVisibility property. |
+| [HorizontalSnapPointsAlignmentProperty](#uid-c2b4b6a4b1) | Defines the Avalonia.Controls.ScrollViewer.HorizontalSnapPointsAlignment property. |
+| [HorizontalSnapPointsTypeProperty](#uid-bb87850c42) | Defines the Avalonia.Controls.ScrollViewer.HorizontalSnapPointsType property. |
+| [IsDeferredScrollingEnabledProperty](#uid-e18c07c143) | Defines the Avalonia.Controls.ScrollViewer.IsDeferredScrollingEnabled property. |
+| [IsExpandedProperty](#uid-8f5fc3be6e) | Defines the Avalonia.Controls.ScrollViewer.IsExpanded property. |
+| [IsScrollChainingEnabledProperty](#uid-694830540c) | Defines the Avalonia.Controls.ScrollViewer.IsScrollChainingEnabled property. |
+| [IsScrollInertiaEnabledProperty](#uid-e2650d8659) | Defines the Avalonia.Controls.ScrollViewer.IsScrollInertiaEnabled property. |
+| [LargeChangeProperty](#uid-6e67107b05) | Defines the Avalonia.Controls.ScrollViewer.LargeChange property. |
+| [OffsetProperty](#uid-a9c0805cb3) | Defines the Avalonia.Controls.ScrollViewer.Offset property. |
+| [ScrollBarMaximumProperty](#uid-569d3fa131) | Defines the Avalonia.Controls.ScrollViewer.ScrollBarMaximum property. |
+| [ScrollChangedEvent](#uid-de04fb3e87) | Defines the Avalonia.Controls.ScrollViewer.ScrollChanged event. |
+| [SmallChangeProperty](#uid-1c52e8ca20) | Defines the Avalonia.Controls.ScrollViewer.SmallChange property. |
+| [VerticalScrollBarVisibilityProperty](#uid-c18ad61c09) | Defines the Avalonia.Controls.ScrollViewer.VerticalScrollBarVisibility property. |
+| [VerticalSnapPointsAlignmentProperty](#uid-a603332e44) | Defines the Avalonia.Controls.ScrollViewer.VerticalSnapPointsAlignment property. |
+| [VerticalSnapPointsTypeProperty](#uid-90e7942b5f) | Defines the Avalonia.Controls.ScrollViewer.VerticalSnapPointsType property. |
+| [ViewportProperty](#uid-9c729fbb99) | Defines the Avalonia.Controls.ScrollViewer.Viewport property. |
+
+<span id="uid-28f57a0427"></span>
+
+### AllowAutoHideProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.AllowAutoHide](xref:Avalonia.Controls.ScrollViewer.AllowAutoHide) property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> AllowAutoHideProperty
+```
+
+<span id="uid-3bb2671d2f"></span>
+
+### BringIntoViewOnFocusChangeProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange](xref:Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChange) property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> BringIntoViewOnFocusChangeProperty
+```
+
+<span id="uid-1b5db848a2"></span>
+
+### ExtentProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.Extent](xref:Avalonia.Controls.ScrollViewer.Extent) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.ScrollViewer, Avalonia.Size> ExtentProperty
+```
+
+<span id="uid-3ab88f82fb"></span>
+
+### HorizontalScrollBarVisibilityProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.HorizontalScrollBarVisibility](xref:Avalonia.Controls.ScrollViewer.HorizontalScrollBarVisibility) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Primitives.ScrollBarVisibility> HorizontalScrollBarVisibilityProperty
+```
+
+<span id="uid-c2b4b6a4b1"></span>
+
+### HorizontalSnapPointsAlignmentProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.HorizontalSnapPointsAlignment](xref:Avalonia.Controls.ScrollViewer.HorizontalSnapPointsAlignment) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Primitives.SnapPointsAlignment> HorizontalSnapPointsAlignmentProperty
+```
+
+<span id="uid-bb87850c42"></span>
+
+### HorizontalSnapPointsTypeProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.HorizontalSnapPointsType](xref:Avalonia.Controls.ScrollViewer.HorizontalSnapPointsType) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Primitives.SnapPointsType> HorizontalSnapPointsTypeProperty
+```
+
+<span id="uid-e18c07c143"></span>
+
+### IsDeferredScrollingEnabledProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.IsDeferredScrollingEnabled](xref:Avalonia.Controls.ScrollViewer.IsDeferredScrollingEnabled) property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsDeferredScrollingEnabledProperty
+```
+
+<span id="uid-8f5fc3be6e"></span>
+
+### IsExpandedProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.IsExpanded](xref:Avalonia.Controls.ScrollViewer.IsExpanded) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.ScrollViewer, System.Boolean> IsExpandedProperty
+```
+
+<span id="uid-694830540c"></span>
+
+### IsScrollChainingEnabledProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.IsScrollChainingEnabled](xref:Avalonia.Controls.ScrollViewer.IsScrollChainingEnabled) property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsScrollChainingEnabledProperty
+```
+
+<span id="uid-e2650d8659"></span>
+
+### IsScrollInertiaEnabledProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.IsScrollInertiaEnabled](xref:Avalonia.Controls.ScrollViewer.IsScrollInertiaEnabled) property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsScrollInertiaEnabledProperty
+```
+
+<span id="uid-6e67107b05"></span>
+
+### LargeChangeProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.LargeChange](xref:Avalonia.Controls.ScrollViewer.LargeChange) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.ScrollViewer, Avalonia.Size> LargeChangeProperty
+```
+
+<span id="uid-a9c0805cb3"></span>
+
+### OffsetProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.Offset](xref:Avalonia.Controls.ScrollViewer.Offset) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Vector> OffsetProperty
+```
+
+<span id="uid-569d3fa131"></span>
+
+### ScrollBarMaximumProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.ScrollBarMaximum](xref:Avalonia.Controls.ScrollViewer.ScrollBarMaximum) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.ScrollViewer, Avalonia.Vector> ScrollBarMaximumProperty
+```
+
+<span id="uid-de04fb3e87"></span>
+
+### ScrollChangedEvent
+
+Defines the [Avalonia.Controls.ScrollViewer.ScrollChanged](xref:Avalonia.Controls.ScrollViewer.ScrollChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.ScrollChangedEventArgs> ScrollChangedEvent
+```
+
+<span id="uid-1c52e8ca20"></span>
+
+### SmallChangeProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.SmallChange](xref:Avalonia.Controls.ScrollViewer.SmallChange) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.ScrollViewer, Avalonia.Size> SmallChangeProperty
+```
+
+<span id="uid-c18ad61c09"></span>
+
+### VerticalScrollBarVisibilityProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.VerticalScrollBarVisibility](xref:Avalonia.Controls.ScrollViewer.VerticalScrollBarVisibility) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Primitives.ScrollBarVisibility> VerticalScrollBarVisibilityProperty
+```
+
+<span id="uid-a603332e44"></span>
+
+### VerticalSnapPointsAlignmentProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.VerticalSnapPointsAlignment](xref:Avalonia.Controls.ScrollViewer.VerticalSnapPointsAlignment) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Primitives.SnapPointsAlignment> VerticalSnapPointsAlignmentProperty
+```
+
+<span id="uid-90e7942b5f"></span>
+
+### VerticalSnapPointsTypeProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.VerticalSnapPointsType](xref:Avalonia.Controls.ScrollViewer.VerticalSnapPointsType) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Primitives.SnapPointsType> VerticalSnapPointsTypeProperty
+```
+
+<span id="uid-9c729fbb99"></span>
+
+### ViewportProperty
+
+Defines the [Avalonia.Controls.ScrollViewer.Viewport](xref:Avalonia.Controls.ScrollViewer.Viewport) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.ScrollViewer, Avalonia.Size> ViewportProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ScrollChanged](#uid-bc9358e0e9) | Occurs when changes are detected to the scroll position, extent, or viewport size. |
+
+<span id="uid-bc9358e0e9"></span>
+
+### ScrollChanged
+
+Occurs when changes are detected to the scroll position, extent, or viewport size.
+
+```csharp
+public event System.EventHandler<Avalonia.Controls.ScrollChangedEventArgs> ScrollChanged
+```
+
+</ApiRefPage>
+

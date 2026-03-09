@@ -1,0 +1,201 @@
+---
+title: 'EglDisplay'
+hide_title: true
+slug: '/avalonia/opengl/egl/egldisplay'
+uid: 'Avalonia.OpenGL.Egl.EglDisplay'
+commentId: 'T:Avalonia.OpenGL.Egl.EglDisplay'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglDisplay Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglDisplay
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EglDisplay
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EglDisplay (3 overloads)](#uid-630c05b7cf) | No summary available. |
+
+<span id="uid-630c05b7cf"></span>
+
+### EglDisplay overloads
+
+<span id="uid-06498d0963"></span>
+
+#### EglDisplay
+
+```csharp
+public EglDisplay()
+```
+
+<span id="uid-894931b7a6"></span>
+
+#### EglDisplay
+
+```csharp
+public EglDisplay(Avalonia.OpenGL.Egl.EglDisplayCreationOptions options)
+```
+
+<span id="uid-c92572a63c"></span>
+
+#### EglDisplay
+
+```csharp
+public EglDisplay(System.IntPtr display, Avalonia.OpenGL.Egl.EglDisplayOptions options)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateContext](#uid-ff2676fb67) | No summary available. |
+| [CreatePBufferFromClientBuffer (2 overloads)](#uid-b4f682f9fd) | No summary available. |
+| [CreateWindowSurface](#uid-d17e49b64c) | No summary available. |
+| [Dispose](#uid-ffd72285f0) | No summary available. |
+| [Lock](#uid-0290538407) | No summary available. |
+
+<span id="uid-ff2676fb67"></span>
+
+### CreateContext
+
+```csharp
+public Avalonia.OpenGL.Egl.EglContext CreateContext(Avalonia.OpenGL.Egl.EglContextOptions options)
+```
+
+<span id="uid-b4f682f9fd"></span>
+
+### CreatePBufferFromClientBuffer overloads
+
+<span id="uid-b86ceb15ef"></span>
+
+#### CreatePBufferFromClientBuffer
+
+```csharp
+public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(System.Int32 bufferType, System.IntPtr handle, System.Int32* attribs)
+```
+
+<span id="uid-a3a7f045fa"></span>
+
+#### CreatePBufferFromClientBuffer
+
+```csharp
+public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(System.Int32 bufferType, System.IntPtr handle, System.Int32[] attribs)
+```
+
+<span id="uid-d17e49b64c"></span>
+
+### CreateWindowSurface
+
+```csharp
+public Avalonia.OpenGL.Egl.EglSurface CreateWindowSurface(System.IntPtr window)
+```
+
+<span id="uid-ffd72285f0"></span>
+
+### Dispose
+
+```csharp
+public System.Void Dispose()
+```
+
+<span id="uid-0290538407"></span>
+
+### Lock
+
+```csharp
+public System.IDisposable Lock()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Config](#uid-be58409da1) | No summary available. |
+| [EglInterface](#uid-7aadc326b5) | No summary available. |
+| [Handle](#uid-1bcd7ea746) | No summary available. |
+| [IsLost](#uid-5427b41b1c) | No summary available. |
+| [SupportsSharing](#uid-b6941d47e3) | No summary available. |
+
+<span id="uid-be58409da1"></span>
+
+### Config
+
+```csharp
+public System.IntPtr Config { get; set; }
+```
+
+<span id="uid-7aadc326b5"></span>
+
+### EglInterface
+
+```csharp
+public Avalonia.OpenGL.Egl.EglInterface EglInterface { get; set; }
+```
+
+<span id="uid-1bcd7ea746"></span>
+
+### Handle
+
+```csharp
+public System.IntPtr Handle { get; set; }
+```
+
+<span id="uid-5427b41b1c"></span>
+
+### IsLost
+
+```csharp
+public System.Boolean IsLost { get; set; }
+```
+
+<span id="uid-b6941d47e3"></span>
+
+### SupportsSharing
+
+```csharp
+public System.Boolean SupportsSharing { get; set; }
+```
+
+</ApiRefPage>
+

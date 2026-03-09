@@ -1,0 +1,123 @@
+---
+title: 'PinchEventArgs'
+hide_title: true
+slug: '/avalonia/input/pincheventargs'
+uid: 'Avalonia.Input.PinchEventArgs'
+commentId: 'T:Avalonia.Input.PinchEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PinchEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PinchEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> PinchEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PinchEventArgs (2 overloads)](#uid-1797b1f210) | No summary available. |
+
+<span id="uid-1797b1f210"></span>
+
+### PinchEventArgs overloads
+
+<span id="uid-2532f08bf4"></span>
+
+#### PinchEventArgs
+
+```csharp
+public PinchEventArgs(System.Double scale, Avalonia.Point scaleOrigin)
+```
+
+<span id="uid-7e380c914f"></span>
+
+#### PinchEventArgs
+
+```csharp
+public PinchEventArgs(System.Double scale, Avalonia.Point scaleOrigin, System.Double angle, System.Double angleDelta)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Angle](#uid-022fc25557) | Gets the angle of the pinch gesture, in degrees. |
+| [AngleDelta](#uid-a3ce085430) | Gets the difference from the previous and current pinch angle. |
+| [Scale](#uid-ef5f4fa05d) | No summary available. |
+| [ScaleOrigin](#uid-368fecfb88) | No summary available. |
+
+<span id="uid-022fc25557"></span>
+
+### Angle
+
+Gets the angle of the pinch gesture, in degrees.
+
+```csharp
+public System.Double Angle { get; set; }
+```
+
+<span id="uid-a3ce085430"></span>
+
+### AngleDelta
+
+Gets the difference from the previous and current pinch angle.
+
+```csharp
+public System.Double AngleDelta { get; set; }
+```
+
+<span id="uid-ef5f4fa05d"></span>
+
+### Scale
+
+```csharp
+public System.Double Scale { get; set; }
+```
+
+<span id="uid-368fecfb88"></span>
+
+### ScaleOrigin
+
+```csharp
+public Avalonia.Point ScaleOrigin { get; set; }
+```
+
+</ApiRefPage>
+

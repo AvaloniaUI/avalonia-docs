@@ -1,0 +1,290 @@
+---
+title: 'Point'
+hide_title: true
+slug: '/avalonia/point'
+uid: 'Avalonia.Point'
+commentId: 'T:Avalonia.Point'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Point Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a point.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Point
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Point
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Point&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Point](#uid-bcb8fb5a5c) | Initializes a new instance of the Avalonia.Point structure. |
+
+<span id="uid-bcb8fb5a5c"></span>
+
+### Point
+
+Initializes a new instance of the [Avalonia.Point](xref:Avalonia.Point) structure.
+
+```csharp
+public Point(System.Double x, System.Double y)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `x` | The X position. |
+| `y` | The Y position. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-899de7602b) | No summary available. |
+| [Distance](#uid-47d4ccdee2) | Computes the Euclidean distance between the two given points. |
+| [Equals (2 overloads)](#uid-70e0d96d54) | Returns a boolean indicating whether the point is equal to the other given point (bitwise). |
+| [GetHashCode](#uid-7302b75982) | Returns a hash code for a Avalonia.Point. |
+| [NearlyEquals](#uid-3565881de4) | Returns a boolean indicating whether the point is equal to the other given point (numerically). |
+| [Parse](#uid-4405139e80) | Parses a Avalonia.Point string. |
+| [ToString](#uid-51f21be4ab) | Returns the string representation of the point. |
+| [Transform](#uid-bd1f666664) | Transforms the point by a matrix. |
+| [WithX](#uid-266e13a995) | Returns a new point with the specified X coordinate. |
+| [WithY](#uid-9d555f725a) | Returns a new point with the specified Y coordinate. |
+
+<span id="uid-899de7602b"></span>
+
+### Deconstruct
+
+```csharp
+public System.Void Deconstruct(System.Double& x, System.Double& y)
+```
+
+<span id="uid-47d4ccdee2"></span>
+
+### Distance
+
+Computes the Euclidean distance between the two given points.
+
+```csharp
+public System.Double Distance(Avalonia.Point value1, Avalonia.Point value2)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value1` | The first point. |
+| `value2` | The second point. |
+
+Returns: The Euclidean distance.
+
+<span id="uid-70e0d96d54"></span>
+
+### Equals overloads
+
+<span id="uid-085b52e5b8"></span>
+
+#### Equals
+
+Returns a boolean indicating whether the point is equal to the other given point (bitwise).
+
+```csharp
+public System.Boolean Equals(Avalonia.Point other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other point to test equality against. |
+
+Returns: True if this point is equal to other; False otherwise.
+
+<span id="uid-b52bc8253a"></span>
+
+#### Equals
+
+Checks for equality between a point and an object.
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `obj` | The object. |
+
+Returns: True if `obj` is a point that equals the current point.
+
+<span id="uid-7302b75982"></span>
+
+### GetHashCode
+
+Returns a hash code for a [Avalonia.Point](xref:Avalonia.Point).
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+Returns: The hash code.
+
+<span id="uid-3565881de4"></span>
+
+### NearlyEquals
+
+Returns a boolean indicating whether the point is equal to the other given point
+(numerically).
+
+```csharp
+public System.Boolean NearlyEquals(Avalonia.Point other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other point to test equality against. |
+
+Returns: True if this point is equal to other; False otherwise.
+
+<span id="uid-4405139e80"></span>
+
+### Parse
+
+Parses a [Avalonia.Point](xref:Avalonia.Point) string.
+
+```csharp
+public Avalonia.Point Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The [Avalonia.Point](xref:Avalonia.Point).
+
+<span id="uid-51f21be4ab"></span>
+
+### ToString
+
+Returns the string representation of the point.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation of the point.
+
+<span id="uid-bd1f666664"></span>
+
+### Transform
+
+Transforms the point by a matrix.
+
+```csharp
+public Avalonia.Point Transform(Avalonia.Matrix transform)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `transform` | The transform. |
+
+Returns: The transformed point.
+
+<span id="uid-266e13a995"></span>
+
+### WithX
+
+Returns a new point with the specified X coordinate.
+
+```csharp
+public Avalonia.Point WithX(System.Double x)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `x` | The X coordinate. |
+
+Returns: The new point.
+
+<span id="uid-9d555f725a"></span>
+
+### WithY
+
+Returns a new point with the specified Y coordinate.
+
+```csharp
+public Avalonia.Point WithY(System.Double y)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `y` | The Y coordinate. |
+
+Returns: The new point.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [X](#uid-757991c7da) | Gets the X position. |
+| [Y](#uid-f7ccabda4f) | Gets the Y position. |
+
+<span id="uid-757991c7da"></span>
+
+### X
+
+Gets the X position.
+
+```csharp
+public System.Double X { get; set; }
+```
+
+<span id="uid-f7ccabda4f"></span>
+
+### Y
+
+Gets the Y position.
+
+```csharp
+public System.Double Y { get; set; }
+```
+
+</ApiRefPage>
+

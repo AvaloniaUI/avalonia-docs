@@ -1,0 +1,159 @@
+---
+title: 'Brush'
+hide_title: true
+slug: '/avalonia/media/brush'
+uid: 'Avalonia.Media.Brush'
+commentId: 'T:Avalonia.Media.Brush'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Brush Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes how an area is painted.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Brush
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> Brush
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ibrush">IBrush</a>, ICompositionRenderResource, ICompositionRenderResource&lt;IBrush&gt;, ICompositorSerializable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Parse](#uid-c74b0204df) | Parses a brush string. |
+
+<span id="uid-c74b0204df"></span>
+
+### Parse
+
+Parses a brush string.
+
+```csharp
+public Avalonia.Media.IBrush Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The brush string. |
+
+Returns: The [Avalonia.Media.Color](xref:Avalonia.Media.Color).
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Opacity](#uid-56a58be17e) | Gets or sets the opacity of the brush. |
+| [Transform](#uid-8d25869723) | Gets or sets the transform of the brush. |
+| [TransformOrigin](#uid-406d6c9e88) | Gets or sets the origin of the brush Avalonia.Media.Brush.Transform |
+
+<span id="uid-56a58be17e"></span>
+
+### Opacity
+
+Gets or sets the opacity of the brush.
+
+```csharp
+public System.Double Opacity { get; set; }
+```
+
+<span id="uid-8d25869723"></span>
+
+### Transform
+
+Gets or sets the transform of the brush.
+
+```csharp
+public Avalonia.Media.ITransform Transform { get; set; }
+```
+
+<span id="uid-406d6c9e88"></span>
+
+### TransformOrigin
+
+Gets or sets the origin of the brush [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform)
+
+```csharp
+public Avalonia.RelativePoint TransformOrigin { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [OpacityProperty](#uid-d84302c650) | Defines the Avalonia.Media.Brush.Opacity property. |
+| [TransformOriginProperty](#uid-3a3c0bc732) | Defines the Avalonia.Media.Brush.TransformOrigin property |
+| [TransformProperty](#uid-933d2c0564) | Defines the Avalonia.Media.Brush.Transform property. |
+
+<span id="uid-d84302c650"></span>
+
+### OpacityProperty
+
+Defines the [Avalonia.Media.Brush.Opacity](xref:Avalonia.Media.Brush.Opacity) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> OpacityProperty
+```
+
+<span id="uid-3a3c0bc732"></span>
+
+### TransformOriginProperty
+
+Defines the [Avalonia.Media.Brush.TransformOrigin](xref:Avalonia.Media.Brush.TransformOrigin) property
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.RelativePoint> TransformOriginProperty
+```
+
+<span id="uid-933d2c0564"></span>
+
+### TransformProperty
+
+Defines the [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.ITransform> TransformProperty
+```
+
+</ApiRefPage>
+

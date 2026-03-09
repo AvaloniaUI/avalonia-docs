@@ -1,0 +1,729 @@
+---
+title: 'PixelRect'
+hide_title: true
+slug: '/avalonia/pixelrect'
+uid: 'Avalonia.PixelRect'
+commentId: 'T:Avalonia.PixelRect'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PixelRect Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a rectangle in device pixels.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PixelRect
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PixelRect
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PixelRect&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PixelRect (4 overloads)](#uid-6112b14998) | Initializes a new instance of the Avalonia.PixelRect structure. |
+
+<span id="uid-6112b14998"></span>
+
+### PixelRect overloads
+
+<span id="uid-a996d76e64"></span>
+
+#### PixelRect
+
+Initializes a new instance of the [Avalonia.PixelRect](xref:Avalonia.PixelRect) structure.
+
+```csharp
+public PixelRect(Avalonia.PixelPoint topLeft, Avalonia.PixelPoint bottomRight)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `bottomRight` | The bottom right position of the rectangle. |
+| `topLeft` | The top left position of the rectangle. |
+
+<span id="uid-50b4a5b593"></span>
+
+#### PixelRect
+
+Initializes a new instance of the [Avalonia.PixelRect](xref:Avalonia.PixelRect) structure.
+
+```csharp
+public PixelRect(Avalonia.PixelPoint position, Avalonia.PixelSize size)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `position` | The position of the rectangle. |
+| `size` | The size of the rectangle. |
+
+<span id="uid-64478e9c22"></span>
+
+#### PixelRect
+
+Initializes a new instance of the [Avalonia.PixelRect](xref:Avalonia.PixelRect) structure.
+
+```csharp
+public PixelRect(Avalonia.PixelSize size)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `size` | The size of the rectangle. |
+
+<span id="uid-52c3c349a8"></span>
+
+#### PixelRect
+
+Initializes a new instance of the [Avalonia.PixelRect](xref:Avalonia.PixelRect) structure.
+
+```csharp
+public PixelRect(System.Int32 x, System.Int32 y, System.Int32 width, System.Int32 height)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `height` | The height. |
+| `width` | The width. |
+| `x` | The X position. |
+| `y` | The Y position. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CenterRect](#uid-26d920a1da) | Centers another rectangle in this rectangle. |
+| [Contains (2 overloads)](#uid-a458e3c264) | Determines whether a point in the bounds of the rectangle. |
+| [ContainsExclusive](#uid-3a64b5f0e8) | Determines whether a point is in the bounds of the rectangle, exclusive of the rectangle's bottom/right edge. |
+| [Equals (2 overloads)](#uid-dab286ffc1) | Returns a boolean indicating whether the rect is equal to the other given rect. |
+| [FromRect (2 overloads)](#uid-83a2288e85) | Converts a Avalonia.Rect to device pixels using the specified scaling factor. |
+| [FromRectWithDpi (2 overloads)](#uid-07364607c9) | Converts a Avalonia.Rect to device pixels using the specified dots per inch (DPI). |
+| [GetHashCode](#uid-9c96c5b3a7) | Returns the hash code for this instance. |
+| [Intersect](#uid-19f3ba3fa5) | Gets the intersection of two rectangles. |
+| [Intersects](#uid-1917bf56e7) | Determines whether a rectangle intersects with this rectangle. |
+| [Parse](#uid-4a1cfac60a) | Parses a Avalonia.PixelRect string. |
+| [ToRect (2 overloads)](#uid-7369b38e30) | Converts the Avalonia.PixelRect to a device-independent Avalonia.Rect using the specified scaling factor. |
+| [ToRectWithDpi (2 overloads)](#uid-4535c004c4) | Converts the Avalonia.PixelRect to a device-independent Avalonia.Rect using the specified dots per inch (DPI). |
+| [ToString](#uid-abe42ff357) | Returns the string representation of the rectangle. |
+| [Translate](#uid-edd250bd5d) | Translates the rectangle by an offset. |
+| [Union](#uid-a1e9518241) | Gets the union of two rectangles. |
+| [WithHeight](#uid-910a5ae14b) | Returns a new Avalonia.PixelRect with the specified height. |
+| [WithWidth](#uid-24f0d2659f) | Returns a new Avalonia.PixelRect with the specified width. |
+| [WithX](#uid-773a9cfcf4) | Returns a new Avalonia.PixelRect with the specified X position. |
+| [WithY](#uid-ae85da88f4) | Returns a new Avalonia.PixelRect with the specified Y position. |
+
+<span id="uid-26d920a1da"></span>
+
+### CenterRect
+
+Centers another rectangle in this rectangle.
+
+```csharp
+public Avalonia.PixelRect CenterRect(Avalonia.PixelRect rect)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The rectangle to center. |
+
+Returns: The centered rectangle.
+
+<span id="uid-a458e3c264"></span>
+
+### Contains overloads
+
+<span id="uid-7fa0a893f4"></span>
+
+#### Contains
+
+Determines whether a point in the bounds of the rectangle.
+
+```csharp
+public System.Boolean Contains(Avalonia.PixelPoint p)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `p` | The point. |
+
+Returns: true if the point is in the bounds of the rectangle; otherwise false.
+
+<span id="uid-4e3997ab42"></span>
+
+#### Contains
+
+Determines whether the rectangle fully contains another rectangle.
+
+```csharp
+public System.Boolean Contains(Avalonia.PixelRect r)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `r` | The rectangle. |
+
+Returns: true if the rectangle is fully contained; otherwise false.
+
+<span id="uid-3a64b5f0e8"></span>
+
+### ContainsExclusive
+
+Determines whether a point is in the bounds of the rectangle, exclusive of the
+rectangle's bottom/right edge.
+
+```csharp
+public System.Boolean ContainsExclusive(Avalonia.PixelPoint p)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `p` | The point. |
+
+Returns: true if the point is in the bounds of the rectangle; otherwise false.
+
+<span id="uid-dab286ffc1"></span>
+
+### Equals overloads
+
+<span id="uid-2d995bb915"></span>
+
+#### Equals
+
+Returns a boolean indicating whether the rect is equal to the other given rect.
+
+```csharp
+public System.Boolean Equals(Avalonia.PixelRect other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other rect to test equality against. |
+
+Returns: True if this rect is equal to other; False otherwise.
+
+<span id="uid-f6d73ecb3d"></span>
+
+#### Equals
+
+Returns a boolean indicating whether the given object is equal to this rectangle.
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `obj` | The object to compare against. |
+
+Returns: True if the object is equal to this rectangle; false otherwise.
+
+<span id="uid-83a2288e85"></span>
+
+### FromRect overloads
+
+<span id="uid-d8dd03ec7e"></span>
+
+#### FromRect
+
+Converts a [Avalonia.Rect](xref:Avalonia.Rect) to device pixels using the specified scaling factor.
+
+```csharp
+public Avalonia.PixelRect FromRect(Avalonia.Rect rect, Avalonia.Vector scale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The rect. |
+| `scale` | The scaling factor. |
+
+Returns: The device-independent point.
+
+<span id="uid-0597954fd7"></span>
+
+#### FromRect
+
+Converts a [Avalonia.Rect](xref:Avalonia.Rect) to device pixels using the specified scaling factor.
+
+```csharp
+public Avalonia.PixelRect FromRect(Avalonia.Rect rect, System.Double scale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The rect. |
+| `scale` | The scaling factor. |
+
+Returns: The device-independent rect.
+
+<span id="uid-07364607c9"></span>
+
+### FromRectWithDpi overloads
+
+<span id="uid-689224fe86"></span>
+
+#### FromRectWithDpi
+
+Converts a [Avalonia.Rect](xref:Avalonia.Rect) to device pixels using the specified dots per inch (DPI).
+
+```csharp
+public Avalonia.PixelRect FromRectWithDpi(Avalonia.Rect rect, Avalonia.Vector dpi)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpi` | The dots per inch of the device. |
+| `rect` | The rect. |
+
+Returns: The device-independent point.
+
+<span id="uid-c146db3f00"></span>
+
+#### FromRectWithDpi
+
+Converts a [Avalonia.Rect](xref:Avalonia.Rect) to device pixels using the specified dots per inch (DPI).
+
+```csharp
+public Avalonia.PixelRect FromRectWithDpi(Avalonia.Rect rect, System.Double dpi)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpi` | The dots per inch of the device. |
+| `rect` | The rect. |
+
+Returns: The device-independent point.
+
+<span id="uid-9c96c5b3a7"></span>
+
+### GetHashCode
+
+Returns the hash code for this instance.
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+Returns: The hash code.
+
+<span id="uid-19f3ba3fa5"></span>
+
+### Intersect
+
+Gets the intersection of two rectangles.
+
+```csharp
+public Avalonia.PixelRect Intersect(Avalonia.PixelRect rect)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The other rectangle. |
+
+Returns: The intersection.
+
+<span id="uid-1917bf56e7"></span>
+
+### Intersects
+
+Determines whether a rectangle intersects with this rectangle.
+
+```csharp
+public System.Boolean Intersects(Avalonia.PixelRect rect)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The other rectangle. |
+
+Returns: True if the specified rectangle intersects with this one; otherwise false.
+
+<span id="uid-4a1cfac60a"></span>
+
+### Parse
+
+Parses a [Avalonia.PixelRect](xref:Avalonia.PixelRect) string.
+
+```csharp
+public Avalonia.PixelRect Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The parsed [Avalonia.PixelRect](xref:Avalonia.PixelRect).
+
+<span id="uid-7369b38e30"></span>
+
+### ToRect overloads
+
+<span id="uid-f37d963cea"></span>
+
+#### ToRect
+
+Converts the [Avalonia.PixelRect](xref:Avalonia.PixelRect) to a device-independent [Avalonia.Rect](xref:Avalonia.Rect) using the
+specified scaling factor.
+
+```csharp
+public Avalonia.Rect ToRect(Avalonia.Vector scale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `scale` | The scaling factor. |
+
+Returns: The device-independent rect.
+
+<span id="uid-4ea45fd586"></span>
+
+#### ToRect
+
+Converts the [Avalonia.PixelRect](xref:Avalonia.PixelRect) to a device-independent [Avalonia.Rect](xref:Avalonia.Rect) using the
+specified scaling factor.
+
+```csharp
+public Avalonia.Rect ToRect(System.Double scale)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `scale` | The scaling factor. |
+
+Returns: The device-independent rect.
+
+<span id="uid-4535c004c4"></span>
+
+### ToRectWithDpi overloads
+
+<span id="uid-afd0eeb3f7"></span>
+
+#### ToRectWithDpi
+
+Converts the [Avalonia.PixelRect](xref:Avalonia.PixelRect) to a device-independent [Avalonia.Rect](xref:Avalonia.Rect) using the
+specified dots per inch (DPI).
+
+```csharp
+public Avalonia.Rect ToRectWithDpi(Avalonia.Vector dpi)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpi` | The dots per inch of the device. |
+
+Returns: The device-independent rect.
+
+<span id="uid-64b55c2732"></span>
+
+#### ToRectWithDpi
+
+Converts the [Avalonia.PixelRect](xref:Avalonia.PixelRect) to a device-independent [Avalonia.Rect](xref:Avalonia.Rect) using the
+specified dots per inch (DPI).
+
+```csharp
+public Avalonia.Rect ToRectWithDpi(System.Double dpi)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `dpi` | The dots per inch of the device. |
+
+Returns: The device-independent rect.
+
+<span id="uid-abe42ff357"></span>
+
+### ToString
+
+Returns the string representation of the rectangle.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation of the rectangle.
+
+<span id="uid-edd250bd5d"></span>
+
+### Translate
+
+Translates the rectangle by an offset.
+
+```csharp
+public Avalonia.PixelRect Translate(Avalonia.PixelVector offset)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `offset` | The offset. |
+
+Returns: The translated rectangle.
+
+<span id="uid-a1e9518241"></span>
+
+### Union
+
+Gets the union of two rectangles.
+
+```csharp
+public Avalonia.PixelRect Union(Avalonia.PixelRect rect)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `rect` | The other rectangle. |
+
+Returns: The union.
+
+<span id="uid-910a5ae14b"></span>
+
+### WithHeight
+
+Returns a new [Avalonia.PixelRect](xref:Avalonia.PixelRect) with the specified height.
+
+```csharp
+public Avalonia.PixelRect WithHeight(System.Int32 height)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `height` | The height. |
+
+Returns: The new [Avalonia.PixelRect](xref:Avalonia.PixelRect).
+
+<span id="uid-24f0d2659f"></span>
+
+### WithWidth
+
+Returns a new [Avalonia.PixelRect](xref:Avalonia.PixelRect) with the specified width.
+
+```csharp
+public Avalonia.PixelRect WithWidth(System.Int32 width)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `width` | The width. |
+
+Returns: The new [Avalonia.PixelRect](xref:Avalonia.PixelRect).
+
+<span id="uid-773a9cfcf4"></span>
+
+### WithX
+
+Returns a new [Avalonia.PixelRect](xref:Avalonia.PixelRect) with the specified X position.
+
+```csharp
+public Avalonia.PixelRect WithX(System.Int32 x)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `x` | The x position. |
+
+Returns: The new [Avalonia.PixelRect](xref:Avalonia.PixelRect).
+
+<span id="uid-ae85da88f4"></span>
+
+### WithY
+
+Returns a new [Avalonia.PixelRect](xref:Avalonia.PixelRect) with the specified Y position.
+
+```csharp
+public Avalonia.PixelRect WithY(System.Int32 y)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `y` | The y position. |
+
+Returns: The new [Avalonia.PixelRect](xref:Avalonia.PixelRect).
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bottom](#uid-ffd8bc65d1) | Gets the bottom position of the rectangle. |
+| [BottomLeft](#uid-a17dcd1536) | Gets the bottom left point of the rectangle. |
+| [BottomRight](#uid-be536e5c16) | Gets the bottom right point of the rectangle. |
+| [Center](#uid-ae34e432d9) | Gets the center point of the rectangle. |
+| [Height](#uid-51d9d79874) | Gets the height. |
+| [Position](#uid-502dd64523) | Gets the position of the rectangle. |
+| [Right](#uid-bd7518528b) | Gets the right position of the rectangle. |
+| [Size](#uid-a0445e84ef) | Gets the size of the rectangle. |
+| [TopLeft](#uid-9d12b8370b) | Gets the top left point of the rectangle. |
+| [TopRight](#uid-40bad8b70f) | Gets the top right point of the rectangle. |
+| [Width](#uid-6d6da23ec9) | Gets the width. |
+| [X](#uid-8596bffbd8) | Gets the X position. |
+| [Y](#uid-1eb4bdafa1) | Gets the Y position. |
+
+<span id="uid-ffd8bc65d1"></span>
+
+### Bottom
+
+Gets the bottom position of the rectangle.
+
+```csharp
+public System.Int32 Bottom { get; set; }
+```
+
+<span id="uid-a17dcd1536"></span>
+
+### BottomLeft
+
+Gets the bottom left point of the rectangle.
+
+```csharp
+public Avalonia.PixelPoint BottomLeft { get; set; }
+```
+
+<span id="uid-be536e5c16"></span>
+
+### BottomRight
+
+Gets the bottom right point of the rectangle.
+
+```csharp
+public Avalonia.PixelPoint BottomRight { get; set; }
+```
+
+<span id="uid-ae34e432d9"></span>
+
+### Center
+
+Gets the center point of the rectangle.
+
+```csharp
+public Avalonia.PixelPoint Center { get; set; }
+```
+
+<span id="uid-51d9d79874"></span>
+
+### Height
+
+Gets the height.
+
+```csharp
+public System.Int32 Height { get; set; }
+```
+
+<span id="uid-502dd64523"></span>
+
+### Position
+
+Gets the position of the rectangle.
+
+```csharp
+public Avalonia.PixelPoint Position { get; set; }
+```
+
+<span id="uid-bd7518528b"></span>
+
+### Right
+
+Gets the right position of the rectangle.
+
+```csharp
+public System.Int32 Right { get; set; }
+```
+
+<span id="uid-a0445e84ef"></span>
+
+### Size
+
+Gets the size of the rectangle.
+
+```csharp
+public Avalonia.PixelSize Size { get; set; }
+```
+
+<span id="uid-9d12b8370b"></span>
+
+### TopLeft
+
+Gets the top left point of the rectangle.
+
+```csharp
+public Avalonia.PixelPoint TopLeft { get; set; }
+```
+
+<span id="uid-40bad8b70f"></span>
+
+### TopRight
+
+Gets the top right point of the rectangle.
+
+```csharp
+public Avalonia.PixelPoint TopRight { get; set; }
+```
+
+<span id="uid-6d6da23ec9"></span>
+
+### Width
+
+Gets the width.
+
+```csharp
+public System.Int32 Width { get; set; }
+```
+
+<span id="uid-8596bffbd8"></span>
+
+### X
+
+Gets the X position.
+
+```csharp
+public System.Int32 X { get; set; }
+```
+
+<span id="uid-1eb4bdafa1"></span>
+
+### Y
+
+Gets the Y position.
+
+```csharp
+public System.Int32 Y { get; set; }
+```
+
+</ApiRefPage>
+

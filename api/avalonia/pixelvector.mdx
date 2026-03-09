@@ -1,0 +1,222 @@
+---
+title: 'PixelVector'
+hide_title: true
+slug: '/avalonia/pixelvector'
+uid: 'Avalonia.PixelVector'
+commentId: 'T:Avalonia.PixelVector'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PixelVector Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a vector.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PixelVector
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PixelVector
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PixelVector](#uid-7d806d3845) | Initializes a new instance of the Avalonia.PixelVector structure. |
+
+<span id="uid-7d806d3845"></span>
+
+### PixelVector
+
+Initializes a new instance of the [Avalonia.PixelVector](xref:Avalonia.PixelVector) structure.
+
+```csharp
+public PixelVector(System.Int32 x, System.Int32 y)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `x` | The X vector. |
+| `y` | The Y vector. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-49d4c3886f) | Check if two vectors are equal (bitwise). |
+| [GetHashCode](#uid-68ca1c05f6) | No summary available. |
+| [NearlyEquals](#uid-e34f35193c) | Check if two vectors are nearly equal (numerically). |
+| [ToString](#uid-69224b05ba) | Returns the string representation of the point. |
+| [WithX](#uid-90f8cc3018) | Returns a new vector with the specified X coordinate. |
+| [WithY](#uid-6e89ab708f) | Returns a new vector with the specified Y coordinate. |
+
+<span id="uid-49d4c3886f"></span>
+
+### Equals overloads
+
+<span id="uid-51010e0a1e"></span>
+
+#### Equals
+
+Check if two vectors are equal (bitwise).
+
+```csharp
+public System.Boolean Equals(Avalonia.PixelVector other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` |  |
+
+<span id="uid-7f441e8438"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-68ca1c05f6"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-e34f35193c"></span>
+
+### NearlyEquals
+
+Check if two vectors are nearly equal (numerically).
+
+```csharp
+public System.Boolean NearlyEquals(Avalonia.PixelVector other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other vector. |
+
+Returns: True if vectors are nearly equal.
+
+<span id="uid-69224b05ba"></span>
+
+### ToString
+
+Returns the string representation of the point.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation of the point.
+
+<span id="uid-90f8cc3018"></span>
+
+### WithX
+
+Returns a new vector with the specified X coordinate.
+
+```csharp
+public Avalonia.PixelVector WithX(System.Int32 x)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `x` | The X coordinate. |
+
+Returns: The new vector.
+
+<span id="uid-6e89ab708f"></span>
+
+### WithY
+
+Returns a new vector with the specified Y coordinate.
+
+```csharp
+public Avalonia.PixelVector WithY(System.Int32 y)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `y` | The Y coordinate. |
+
+Returns: The new vector.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Length](#uid-5fcf70c3eb) | Length of the vector |
+| [X](#uid-38a48f6dda) | Gets the X vector. |
+| [Y](#uid-fd0c6a2a0a) | Gets the Y vector. |
+
+<span id="uid-5fcf70c3eb"></span>
+
+### Length
+
+Length of the vector
+
+```csharp
+public System.Double Length { get; set; }
+```
+
+<span id="uid-38a48f6dda"></span>
+
+### X
+
+Gets the X vector.
+
+```csharp
+public System.Int32 X { get; set; }
+```
+
+<span id="uid-fd0c6a2a0a"></span>
+
+### Y
+
+Gets the Y vector.
+
+```csharp
+public System.Int32 Y { get; set; }
+```
+
+</ApiRefPage>
+

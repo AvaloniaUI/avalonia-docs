@@ -1,0 +1,372 @@
+---
+title: 'Color'
+hide_title: true
+slug: '/avalonia/media/color'
+uid: 'Avalonia.Media.Color'
+commentId: 'T:Avalonia.Media.Color'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Color Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An ARGB color.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Color
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Color
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Color&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Color](#uid-148662991e) | Initializes a new instance of the Avalonia.Media.Color struct. |
+
+<span id="uid-148662991e"></span>
+
+### Color
+
+Initializes a new instance of the [Avalonia.Media.Color](xref:Avalonia.Media.Color) struct.
+
+```csharp
+public Color(System.Byte a, System.Byte r, System.Byte g, System.Byte b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | The alpha component. |
+| `b` | The blue component. |
+| `g` | The green component. |
+| `r` | The red component. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-af0ab43f63) | No summary available. |
+| [FromArgb](#uid-011961335d) | Creates a Avalonia.Media.Color from alpha, red, green and blue components. |
+| [FromRgb](#uid-3361ba4fa9) | Creates a Avalonia.Media.Color from red, green and blue components. |
+| [FromUInt32](#uid-a5dd186c16) | Creates a Avalonia.Media.Color from an integer. |
+| [GetHashCode](#uid-7850f2509e) | No summary available. |
+| [Parse (2 overloads)](#uid-5ca4765242) | No summary available. |
+| [ToHsl (2 overloads)](#uid-d769ee9358) | Returns the HSL color model equivalent of this RGB color. |
+| [ToHsv (2 overloads)](#uid-27b49b139b) | Returns the HSV color model equivalent of this RGB color. |
+| [ToString](#uid-0fad8fd540) | Returns the string representation of the color. |
+| [ToUInt32](#uid-7a7df0058c) | Returns the integer representation of the color. |
+| [TryParse (2 overloads)](#uid-7415fd8e5e) | No summary available. |
+
+<span id="uid-af0ab43f63"></span>
+
+### Equals overloads
+
+<span id="uid-9526ca4ec0"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(Avalonia.Media.Color other)
+```
+
+<span id="uid-ef7cecc8d8"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-011961335d"></span>
+
+### FromArgb
+
+Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from alpha, red, green and blue components.
+
+```csharp
+public Avalonia.Media.Color FromArgb(System.Byte a, System.Byte r, System.Byte g, System.Byte b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | The alpha component. |
+| `b` | The blue component. |
+| `g` | The green component. |
+| `r` | The red component. |
+
+Returns: The color.
+
+<span id="uid-3361ba4fa9"></span>
+
+### FromRgb
+
+Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from red, green and blue components.
+
+```csharp
+public Avalonia.Media.Color FromRgb(System.Byte r, System.Byte g, System.Byte b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `b` | The blue component. |
+| `g` | The green component. |
+| `r` | The red component. |
+
+Returns: The color.
+
+<span id="uid-a5dd186c16"></span>
+
+### FromUInt32
+
+Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from an integer.
+
+```csharp
+public Avalonia.Media.Color FromUInt32(System.UInt32 value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value` | The integer value. |
+
+Returns: The color.
+
+<span id="uid-7850f2509e"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-5ca4765242"></span>
+
+### Parse overloads
+
+<span id="uid-cdf88ee54a"></span>
+
+#### Parse
+
+```csharp
+public Avalonia.Media.Color Parse(System.ReadOnlySpan<System.Char> s)
+```
+
+<span id="uid-cea9944afe"></span>
+
+#### Parse
+
+Parses a color string.
+
+```csharp
+public Avalonia.Media.Color Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The color string. |
+
+Returns: The [Avalonia.Media.Color](xref:Avalonia.Media.Color).
+
+<span id="uid-d769ee9358"></span>
+
+### ToHsl overloads
+
+<span id="uid-3028eddebc"></span>
+
+#### ToHsl
+
+Returns the HSL color model equivalent of this RGB color.
+
+```csharp
+public Avalonia.Media.HslColor ToHsl()
+```
+
+Returns: The HSL equivalent color.
+
+<span id="uid-8461400a9a"></span>
+
+#### ToHsl
+
+Converts the given RGBA color component values to their HSL color equivalent.
+
+```csharp
+public Avalonia.Media.HslColor ToHsl(System.Byte red, System.Byte green, System.Byte blue, System.Byte alpha)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `alpha` | The Alpha component. |
+| `blue` | The Blue component in the RGB color model. |
+| `green` | The Green component in the RGB color model. |
+| `red` | The Red component in the RGB color model. |
+
+Returns: A new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) equivalent to the given RGBA values.
+
+<span id="uid-27b49b139b"></span>
+
+### ToHsv overloads
+
+<span id="uid-223f479835"></span>
+
+#### ToHsv
+
+Returns the HSV color model equivalent of this RGB color.
+
+```csharp
+public Avalonia.Media.HsvColor ToHsv()
+```
+
+Returns: The HSV equivalent color.
+
+<span id="uid-ed10916f8f"></span>
+
+#### ToHsv
+
+Converts the given RGBA color component values to their HSV color equivalent.
+
+```csharp
+public Avalonia.Media.HsvColor ToHsv(System.Byte red, System.Byte green, System.Byte blue, System.Byte alpha)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `alpha` | The Alpha component. |
+| `blue` | The Blue component in the RGB color model. |
+| `green` | The Green component in the RGB color model. |
+| `red` | The Red component in the RGB color model. |
+
+Returns: A new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) equivalent to the given RGBA values.
+
+<span id="uid-0fad8fd540"></span>
+
+### ToString
+
+Returns the string representation of the color.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation of the color.
+
+<span id="uid-7a7df0058c"></span>
+
+### ToUInt32
+
+Returns the integer representation of the color.
+
+```csharp
+public System.UInt32 ToUInt32()
+```
+
+Returns: The integer representation of the color.
+
+<span id="uid-7415fd8e5e"></span>
+
+### TryParse overloads
+
+<span id="uid-2d7ac767df"></span>
+
+#### TryParse
+
+```csharp
+public System.Boolean TryParse(System.ReadOnlySpan<System.Char> s, Avalonia.Media.Color& color)
+```
+
+<span id="uid-22bdeeaa59"></span>
+
+#### TryParse
+
+```csharp
+public System.Boolean TryParse(System.String s, Avalonia.Media.Color& color)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [A](#uid-e63a4d10ba) | Gets the Alpha component of the color. |
+| [B](#uid-b8aea3d327) | Gets the Blue component of the color. |
+| [G](#uid-3c4c0a5d6c) | Gets the Green component of the color. |
+| [R](#uid-06a553c114) | Gets the Red component of the color. |
+
+<span id="uid-e63a4d10ba"></span>
+
+### A
+
+Gets the Alpha component of the color.
+
+```csharp
+public System.Byte A { get; set; }
+```
+
+<span id="uid-b8aea3d327"></span>
+
+### B
+
+Gets the Blue component of the color.
+
+```csharp
+public System.Byte B { get; set; }
+```
+
+<span id="uid-3c4c0a5d6c"></span>
+
+### G
+
+Gets the Green component of the color.
+
+```csharp
+public System.Byte G { get; set; }
+```
+
+<span id="uid-06a553c114"></span>
+
+### R
+
+Gets the Red component of the color.
+
+```csharp
+public System.Byte R { get; set; }
+```
+
+</ApiRefPage>
+

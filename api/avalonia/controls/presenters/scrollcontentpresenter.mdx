@@ -1,0 +1,330 @@
+---
+title: 'ScrollContentPresenter'
+hide_title: true
+slug: '/avalonia/controls/presenters/scrollcontentpresenter'
+uid: 'Avalonia.Controls.Presenters.ScrollContentPresenter'
+commentId: 'T:Avalonia.Controls.Presenters.ScrollContentPresenter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Presenters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ScrollContentPresenter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Presenters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Presents a scrolling view of content inside a [Avalonia.Controls.ScrollViewer](xref:Avalonia.Controls.ScrollViewer).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ScrollContentPresenter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentpresenter">ContentPresenter</a> <span className="apiref-page__relation-separator">-&gt;</span> ScrollContentPresenter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../iscrollanchorprovider">IScrollAnchorProvider</a>, <a href="../primitives/iscrollable">IScrollable</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ScrollContentPresenter](#uid-00663aed6c) | Initializes a new instance of the Avalonia.Controls.Presenters.ScrollContentPresenter class. |
+
+<span id="uid-00663aed6c"></span>
+
+### ScrollContentPresenter
+
+Initializes a new instance of the [Avalonia.Controls.Presenters.ScrollContentPresenter](xref:Avalonia.Controls.Presenters.ScrollContentPresenter) class.
+
+```csharp
+public ScrollContentPresenter()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BringDescendantIntoView](#uid-b43645b520) | Attempts to bring a portion of the target visual into view by scrolling the content. |
+
+<span id="uid-b43645b520"></span>
+
+### BringDescendantIntoView
+
+Attempts to bring a portion of the target visual into view by scrolling the content.
+
+```csharp
+public System.Boolean BringDescendantIntoView(Avalonia.Visual target, Avalonia.Rect targetRect)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `target` | The target visual. |
+| `targetRect` | The portion of the target visual to bring into view. |
+
+Returns: True if the scroll offset was changed; otherwise false.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanHorizontallyScroll](#uid-f8e5e1a3a5) | Gets or sets a value indicating whether the content can be scrolled horizontally. |
+| [CanVerticallyScroll](#uid-54951e3e6b) | Gets or sets a value indicating whether the content can be scrolled horizontally. |
+| [Extent](#uid-3c158adc6d) | Gets the extent of the scrollable content. |
+| [HorizontalSnapPointsAlignment](#uid-be24e2d24d) | Gets or sets how the existing snap points are horizontally aligned versus the initial viewport. |
+| [HorizontalSnapPointsType](#uid-ec4bdf4821) | Gets or sets how scroll gesture reacts to the snap points along the horizontal axis. |
+| [IsScrollChainingEnabled](#uid-565a8d6f9f) | Gets or sets if scroll chaining is enabled. The default value is true. |
+| [Offset](#uid-805830a41a) | Gets or sets the current scroll offset. |
+| [VerticalSnapPointsAlignment](#uid-5b0aaeb4e5) | Gets or sets how the existing snap points are vertically aligned versus the initial viewport. |
+| [VerticalSnapPointsType](#uid-47a3fd666b) | Gets or sets how scroll gesture reacts to the snap points along the vertical axis. |
+| [Viewport](#uid-b556ccb1a4) | Gets the size of the viewport on the scrollable content. |
+
+<span id="uid-f8e5e1a3a5"></span>
+
+### CanHorizontallyScroll
+
+Gets or sets a value indicating whether the content can be scrolled horizontally.
+
+```csharp
+public System.Boolean CanHorizontallyScroll { get; set; }
+```
+
+<span id="uid-54951e3e6b"></span>
+
+### CanVerticallyScroll
+
+Gets or sets a value indicating whether the content can be scrolled horizontally.
+
+```csharp
+public System.Boolean CanVerticallyScroll { get; set; }
+```
+
+<span id="uid-3c158adc6d"></span>
+
+### Extent
+
+Gets the extent of the scrollable content.
+
+```csharp
+public Avalonia.Size Extent { get; set; }
+```
+
+<span id="uid-be24e2d24d"></span>
+
+### HorizontalSnapPointsAlignment
+
+Gets or sets how the existing snap points are horizontally aligned versus the initial viewport.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsAlignment HorizontalSnapPointsAlignment { get; set; }
+```
+
+<span id="uid-ec4bdf4821"></span>
+
+### HorizontalSnapPointsType
+
+Gets or sets how scroll gesture reacts to the snap points along the horizontal axis.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsType HorizontalSnapPointsType { get; set; }
+```
+
+<span id="uid-565a8d6f9f"></span>
+
+### IsScrollChainingEnabled
+
+Gets or sets if scroll chaining is enabled. The default value is true.
+
+```csharp
+public System.Boolean IsScrollChainingEnabled { get; set; }
+```
+
+<span id="uid-805830a41a"></span>
+
+### Offset
+
+Gets or sets the current scroll offset.
+
+```csharp
+public Avalonia.Vector Offset { get; set; }
+```
+
+<span id="uid-5b0aaeb4e5"></span>
+
+### VerticalSnapPointsAlignment
+
+Gets or sets how the existing snap points are vertically aligned versus the initial viewport.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsAlignment VerticalSnapPointsAlignment { get; set; }
+```
+
+<span id="uid-47a3fd666b"></span>
+
+### VerticalSnapPointsType
+
+Gets or sets how scroll gesture reacts to the snap points along the vertical axis.
+
+```csharp
+public Avalonia.Controls.Primitives.SnapPointsType VerticalSnapPointsType { get; set; }
+```
+
+<span id="uid-b556ccb1a4"></span>
+
+### Viewport
+
+Gets the size of the viewport on the scrollable content.
+
+```csharp
+public Avalonia.Size Viewport { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CanHorizontallyScrollProperty](#uid-41c75b6a0e) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.CanHorizontallyScroll property. |
+| [CanVerticallyScrollProperty](#uid-04d7aa8b1c) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.CanVerticallyScroll property. |
+| [ExtentProperty](#uid-6237df98e6) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.Extent property. |
+| [HorizontalSnapPointsAlignmentProperty](#uid-b547f5a261) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsAlignment property. |
+| [HorizontalSnapPointsTypeProperty](#uid-e77a26ea88) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsType property. |
+| [IsScrollChainingEnabledProperty](#uid-7bf01422fc) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.IsScrollChainingEnabled property. |
+| [OffsetProperty](#uid-2453b0b303) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.Offset property. |
+| [VerticalSnapPointsAlignmentProperty](#uid-10aa1f5cdf) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsAlignment property. |
+| [VerticalSnapPointsTypeProperty](#uid-a734cee34f) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsType property. |
+| [ViewportProperty](#uid-fa12bccb0c) | Defines the Avalonia.Controls.Presenters.ScrollContentPresenter.Viewport property. |
+
+<span id="uid-41c75b6a0e"></span>
+
+### CanHorizontallyScrollProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.CanHorizontallyScroll](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.CanHorizontallyScroll) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> CanHorizontallyScrollProperty
+```
+
+<span id="uid-04d7aa8b1c"></span>
+
+### CanVerticallyScrollProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.CanVerticallyScroll](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.CanVerticallyScroll) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> CanVerticallyScrollProperty
+```
+
+<span id="uid-6237df98e6"></span>
+
+### ExtentProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.Extent](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.Extent) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Presenters.ScrollContentPresenter, Avalonia.Size> ExtentProperty
+```
+
+<span id="uid-b547f5a261"></span>
+
+### HorizontalSnapPointsAlignmentProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsAlignment](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.SnapPointsAlignment> HorizontalSnapPointsAlignmentProperty
+```
+
+<span id="uid-e77a26ea88"></span>
+
+### HorizontalSnapPointsTypeProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsType](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsType) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.SnapPointsType> HorizontalSnapPointsTypeProperty
+```
+
+<span id="uid-7bf01422fc"></span>
+
+### IsScrollChainingEnabledProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.IsScrollChainingEnabled](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.IsScrollChainingEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsScrollChainingEnabledProperty
+```
+
+<span id="uid-2453b0b303"></span>
+
+### OffsetProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.Offset](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.Offset) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Vector> OffsetProperty
+```
+
+<span id="uid-10aa1f5cdf"></span>
+
+### VerticalSnapPointsAlignmentProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsAlignment](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.SnapPointsAlignment> VerticalSnapPointsAlignmentProperty
+```
+
+<span id="uid-a734cee34f"></span>
+
+### VerticalSnapPointsTypeProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsType](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsType) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Primitives.SnapPointsType> VerticalSnapPointsTypeProperty
+```
+
+<span id="uid-fa12bccb0c"></span>
+
+### ViewportProperty
+
+Defines the [Avalonia.Controls.Presenters.ScrollContentPresenter.Viewport](xref:Avalonia.Controls.Presenters.ScrollContentPresenter.Viewport) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Presenters.ScrollContentPresenter, Avalonia.Size> ViewportProperty
+```
+
+</ApiRefPage>
+

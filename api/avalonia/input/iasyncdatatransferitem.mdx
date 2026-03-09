@@ -1,0 +1,100 @@
+---
+title: 'IAsyncDataTransferItem'
+hide_title: true
+slug: '/avalonia/input/iasyncdatatransferitem'
+uid: 'Avalonia.Input.IAsyncDataTransferItem'
+commentId: 'T:Avalonia.Input.IAsyncDataTransferItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IAsyncDataTransferItem Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represent an item inside a [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer).
+An item may support several formats and can return the value of a given format on demand.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IAsyncDataTransferItem
+```
+
+</div>
+
+## See also
+
+- [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem)
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetRawAsync](#uid-3a84652fde) | Tries to get a value for a given format. |
+
+<span id="uid-3a84652fde"></span>
+
+### TryGetRawAsync
+
+Tries to get a value for a given format.
+
+```csharp
+public System.Threading.Tasks.Task<System.Object> TryGetRawAsync(Avalonia.Input.DataFormat format)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `format` | The format to retrieve. |
+
+Returns: A value for `format`, or null if the format is not supported.
+
+#### See also
+
+- [Avalonia.Input.AsyncDataTransferItemExtensions.TryGetValueAsync&lt;T&gt;(Avalonia.Input.IAsyncDataTransferItem,Avalonia.Input.DataFormat&#123;&lt;&gt;&#125;)](xref:Avalonia.Input.AsyncDataTransferItemExtensions.TryGetValueAsync%60%601%28Avalonia.Input.IAsyncDataTransferItem%2CAvalonia.Input.DataFormat%7B%60%600%7D%29)
+- [Avalonia.Input.AsyncDataTransferExtensions.TryGetValueAsync&lt;T&gt;(Avalonia.Input.IAsyncDataTransfer,Avalonia.Input.DataFormat&#123;&lt;&gt;&#125;)](xref:Avalonia.Input.AsyncDataTransferExtensions.TryGetValueAsync%60%601%28Avalonia.Input.IAsyncDataTransfer%2CAvalonia.Input.DataFormat%7B%60%600%7D%29)
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Formats](#uid-2ce63ac718) | Gets the formats supported by this item. |
+
+<span id="uid-2ce63ac718"></span>
+
+### Formats
+
+Gets the formats supported by this item.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat> Formats { get; set; }
+```
+
+</ApiRefPage>
+

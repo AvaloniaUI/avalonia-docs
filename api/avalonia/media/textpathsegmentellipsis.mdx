@@ -1,0 +1,135 @@
+---
+title: 'TextPathSegmentEllipsis'
+hide_title: true
+slug: '/avalonia/media/textpathsegmentellipsis'
+uid: 'Avalonia.Media.TextPathSegmentEllipsis'
+commentId: 'T:Avalonia.Media.TextPathSegmentEllipsis'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextPathSegmentEllipsis Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides text collapsing properties that replace the middle segments of a file path with an ellipsis symbol when
+the rendered width exceeds a specified limit.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextPathSegmentEllipsis
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textformatting/textcollapsingproperties">TextCollapsingProperties</a> <span className="apiref-page__relation-separator">-&gt;</span> TextPathSegmentEllipsis
+</div>
+</div>
+
+## Remarks
+
+This class is typically used to display file paths in a compact form by collapsing segments
+near the center and inserting an ellipsis, ensuring that the most significant parts of the path remain visible.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextPathSegmentEllipsis](#uid-4306a931ad) | Initializes a new instance of the TextPathSegmentEllipsis class that represents an ellipsis segment in a text path with the specified symbol, width, text formatting properties, and flow direction. |
+
+<span id="uid-4306a931ad"></span>
+
+### TextPathSegmentEllipsis
+
+Initializes a new instance of the TextPathSegmentEllipsis class that represents an ellipsis segment in a
+text path with the specified symbol, width, text formatting properties, and flow direction.
+
+```csharp
+public TextPathSegmentEllipsis(System.String ellipsis, System.Double width, Avalonia.Media.TextFormatting.TextRunProperties textRunProperties, Avalonia.Media.FlowDirection flowDirection)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `ellipsis` | The string to use as the ellipsis symbol in the text path segment. Cannot be null. |
+| `flowDirection` | The flow direction for rendering the ellipsis segment. Specifies whether text flows left-to-right or
+right-to-left. |
+| `textRunProperties` | The text formatting properties to apply to the ellipsis symbol. Cannot be null. |
+| `width` | The width. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Collapse](#uid-fd97f03203) | No summary available. |
+
+<span id="uid-fd97f03203"></span>
+
+### Collapse
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRun[] Collapse(Avalonia.Media.TextFormatting.TextLine textLine)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FlowDirection](#uid-b7593e407d) | No summary available. |
+| [Symbol](#uid-9f7d040b91) | No summary available. |
+| [Width](#uid-e6ca536da3) | No summary available. |
+
+<span id="uid-b7593e407d"></span>
+
+### FlowDirection
+
+```csharp
+public Avalonia.Media.FlowDirection FlowDirection { get; set; }
+```
+
+<span id="uid-9f7d040b91"></span>
+
+### Symbol
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRun Symbol { get; set; }
+```
+
+<span id="uid-e6ca536da3"></span>
+
+### Width
+
+```csharp
+public System.Double Width { get; set; }
+```
+
+</ApiRefPage>
+

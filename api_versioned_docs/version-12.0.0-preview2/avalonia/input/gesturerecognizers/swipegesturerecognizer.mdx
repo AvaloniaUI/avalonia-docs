@@ -1,0 +1,184 @@
+---
+title: 'SwipeGestureRecognizer'
+hide_title: true
+slug: '/avalonia/input/gesturerecognizers/swipegesturerecognizer'
+uid: 'Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer'
+commentId: 'T:Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input.GestureRecognizers'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SwipeGestureRecognizer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input.GestureRecognizers</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A gesture recognizer that detects swipe gestures and raises
+[Avalonia.Input.InputElement.SwipeGestureEvent](xref:Avalonia.Input.InputElement.SwipeGestureEvent) on the target element when a swipe is confirmed.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SwipeGestureRecognizer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="gesturerecognizer">GestureRecognizer</a> <span className="apiref-page__relation-separator">-&gt;</span> SwipeGestureRecognizer
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SwipeGestureRecognizer](#uid-8ac29dc9c9) | No summary available. |
+
+<span id="uid-8ac29dc9c9"></span>
+
+### SwipeGestureRecognizer
+
+```csharp
+public SwipeGestureRecognizer()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CrossAxisCancelThreshold](#uid-d6370ec3ce) | Gets or sets the maximum cross-axis drift in pixels allowed before the gesture is cancelled. Default is 8px. |
+| [EdgeSize](#uid-83a37a0e8c) | Gets or sets the leading-edge start zone in pixels. When greater than zero, tracking only begins if the pointer is within this distance of the leading edge. Default is 0 (full area). |
+| [IsEnabled](#uid-0cb38baa23) | Gets or sets a value indicating whether the recognizer responds to pointer events. Setting this to false is a lightweight alternative to removing the recognizer from the collection. Default is true. |
+| [Threshold](#uid-f9dc7a6e84) | Gets or sets the minimum distance in pixels the pointer must travel before a swipe is recognized. Default is 30px. |
+
+<span id="uid-d6370ec3ce"></span>
+
+### CrossAxisCancelThreshold
+
+Gets or sets the maximum cross-axis drift in pixels allowed before the gesture is
+cancelled. Default is 8px.
+
+```csharp
+public System.Double CrossAxisCancelThreshold { get; set; }
+```
+
+<span id="uid-83a37a0e8c"></span>
+
+### EdgeSize
+
+Gets or sets the leading-edge start zone in pixels. When greater than zero, tracking
+only begins if the pointer is within this distance of the leading edge. Default is 0
+(full area).
+
+```csharp
+public System.Double EdgeSize { get; set; }
+```
+
+<span id="uid-0cb38baa23"></span>
+
+### IsEnabled
+
+Gets or sets a value indicating whether the recognizer responds to pointer events.
+Setting this to false is a lightweight alternative to removing the recognizer from
+the collection. Default is true.
+
+```csharp
+public System.Boolean IsEnabled { get; set; }
+```
+
+<span id="uid-f9dc7a6e84"></span>
+
+### Threshold
+
+Gets or sets the minimum distance in pixels the pointer must travel before a swipe
+is recognized. Default is 30px.
+
+```csharp
+public System.Double Threshold { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CrossAxisCancelThresholdProperty](#uid-d0826fdc98) | Defines the Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.CrossAxisCancelThreshold property. |
+| [EdgeSizeProperty](#uid-42156634ae) | Defines the Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.EdgeSize property. Leading-edge start zone in px. 0 (default) = full area. When &amp;gt; 0, only starts tracking if the pointer is within this many px of the leading edge (LTR: left; RTL: right). |
+| [IsEnabledProperty](#uid-3b841bb718) | Defines the Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.IsEnabled property. When false, the recognizer ignores all pointer events. Lets callers toggle the recognizer at runtime without needing to remove it from the collection (GestureRecognizerCollection has Add but no Remove). Default: true. |
+| [ThresholdProperty](#uid-9b994e5634) | Defines the Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.Threshold property. |
+
+<span id="uid-d0826fdc98"></span>
+
+### CrossAxisCancelThresholdProperty
+
+Defines the [Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.CrossAxisCancelThreshold](xref:Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.CrossAxisCancelThreshold) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> CrossAxisCancelThresholdProperty
+```
+
+<span id="uid-42156634ae"></span>
+
+### EdgeSizeProperty
+
+Defines the [Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.EdgeSize](xref:Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.EdgeSize) property.
+Leading-edge start zone in px. 0 (default) = full area.
+When &gt; 0, only starts tracking if the pointer is within this many px
+of the leading edge (LTR: left; RTL: right).
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> EdgeSizeProperty
+```
+
+<span id="uid-3b841bb718"></span>
+
+### IsEnabledProperty
+
+Defines the [Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.IsEnabled](xref:Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.IsEnabled) property.
+When false, the recognizer ignores all pointer events.
+Lets callers toggle the recognizer at runtime without needing to remove it from the
+collection (GestureRecognizerCollection has Add but no Remove).
+Default: true.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Boolean> IsEnabledProperty
+```
+
+<span id="uid-9b994e5634"></span>
+
+### ThresholdProperty
+
+Defines the [Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.Threshold](xref:Avalonia.Input.GestureRecognizers.SwipeGestureRecognizer.Threshold) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><System.Double> ThresholdProperty
+```
+
+</ApiRefPage>
+

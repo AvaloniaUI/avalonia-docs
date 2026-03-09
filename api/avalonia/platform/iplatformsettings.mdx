@@ -1,0 +1,157 @@
+---
+title: 'IPlatformSettings'
+hide_title: true
+slug: '/avalonia/platform/iplatformsettings'
+uid: 'Avalonia.Platform.IPlatformSettings'
+commentId: 'T:Avalonia.Platform.IPlatformSettings'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPlatformSettings Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The [Avalonia.Platform.IPlatformSettings](xref:Avalonia.Platform.IPlatformSettings) interface represents a contract for accessing platform-specific settings and information.
+Some of these settings might be changed by used globally in the OS in runtime.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPlatformSettings
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetColorValues](#uid-3c69d4c9c5) | Gets current system color values including dark mode and accent colors. |
+| [GetDoubleTapSize](#uid-c978d38b41) | The size of the rectangle around the location of a pointer down that a pointer up must occur within in order to register a double-tap gesture, in device-independent pixels. |
+| [GetDoubleTapTime](#uid-c0e02e9437) | Gets the maximum time that may occur between the first and second click of a double- tap gesture. |
+| [GetTapSize](#uid-34908b33f3) | The size of the rectangle around the location of a pointer down that a pointer up must occur within in order to register a tap gesture, in device-independent pixels. |
+
+<span id="uid-3c69d4c9c5"></span>
+
+### GetColorValues
+
+Gets current system color values including dark mode and accent colors.
+
+```csharp
+public Avalonia.Platform.PlatformColorValues GetColorValues()
+```
+
+<span id="uid-c978d38b41"></span>
+
+### GetDoubleTapSize
+
+The size of the rectangle around the location of a pointer down that a pointer up
+must occur within in order to register a double-tap gesture, in device-independent
+pixels.
+
+```csharp
+public Avalonia.Size GetDoubleTapSize(Avalonia.Input.PointerType type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The pointer type. |
+
+<span id="uid-c0e02e9437"></span>
+
+### GetDoubleTapTime
+
+Gets the maximum time that may occur between the first and second click of a double-
+tap gesture.
+
+```csharp
+public System.TimeSpan GetDoubleTapTime(Avalonia.Input.PointerType type)
+```
+
+<span id="uid-34908b33f3"></span>
+
+### GetTapSize
+
+The size of the rectangle around the location of a pointer down that a pointer up
+must occur within in order to register a tap gesture, in device-independent pixels.
+
+```csharp
+public Avalonia.Size GetTapSize(Avalonia.Input.PointerType type)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `type` | The pointer type. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HoldWaitDuration](#uid-18e487bd24) | Holding duration between pointer press and when event is fired. |
+| [HotkeyConfiguration](#uid-167fcac31c) | Get a configuration for platform-specific hotkeys in an Avalonia application. |
+
+<span id="uid-18e487bd24"></span>
+
+### HoldWaitDuration
+
+Holding duration between pointer press and when event is fired.
+
+```csharp
+public System.TimeSpan HoldWaitDuration { get; set; }
+```
+
+<span id="uid-167fcac31c"></span>
+
+### HotkeyConfiguration
+
+Get a configuration for platform-specific hotkeys in an Avalonia application.
+
+```csharp
+public Avalonia.Input.Platform.PlatformHotkeyConfiguration HotkeyConfiguration { get; set; }
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ColorValuesChanged](#uid-9a11a40b95) | Raises when current system color values are changed. Including changing of a dark mode and accent colors. |
+
+<span id="uid-9a11a40b95"></span>
+
+### ColorValuesChanged
+
+Raises when current system color values are changed. Including changing of a dark mode and accent colors.
+
+```csharp
+public event System.EventHandler<Avalonia.Platform.PlatformColorValues> ColorValuesChanged
+```
+
+</ApiRefPage>
+

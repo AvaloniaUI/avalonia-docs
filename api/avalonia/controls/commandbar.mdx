@@ -1,0 +1,491 @@
+---
+title: 'CommandBar'
+hide_title: true
+slug: '/avalonia/controls/commandbar'
+uid: 'Avalonia.Controls.CommandBar'
+commentId: 'T:Avalonia.Controls.CommandBar'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CommandBar Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A command bar that provides primary commands displayed inline and secondary commands
+accessible via an overflow menu.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CommandBar
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> CommandBar
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CommandBar](#uid-8dfb808042) | No summary available. |
+
+<span id="uid-8dfb808042"></span>
+
+### CommandBar
+
+```csharp
+public CommandBar()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Content](#uid-5801459cdd) | Gets or sets custom content displayed at the start (left) of the bar. |
+| [DefaultLabelPosition](#uid-2a63d84078) | Gets or sets how labels are positioned on command buttons. |
+| [HasSecondaryCommands](#uid-2af6260a4b) | Gets whether there are any commands (secondary or overflowed primary) in the overflow menu. |
+| [IsDynamicOverflowEnabled](#uid-3e6b5e28e0) | Gets or sets whether primary commands are automatically moved to the overflow menu when there is not enough space to display them. |
+| [IsOpen](#uid-06202c5d9f) | Gets or sets whether the overflow menu is open. |
+| [IsOverflowButtonVisible](#uid-752841982c) | Gets whether the overflow button is currently visible. |
+| [IsSticky](#uid-f153c8de37) | Gets or sets whether the overflow menu stays open after a command is invoked (disables light-dismiss behavior). |
+| [ItemWidthBottom](#uid-d1109eaed9) | Gets or sets the estimated item width used in dynamic-overflow calculations when Avalonia.Controls.CommandBar.DefaultLabelPosition is Avalonia.Controls.CommandBarDefaultLabelPosition.Bottom. |
+| [ItemWidthCollapsed](#uid-66ce5190ab) | Gets or sets the estimated item width used in dynamic-overflow calculations when Avalonia.Controls.CommandBar.DefaultLabelPosition is Avalonia.Controls.CommandBarDefaultLabelPosition.Collapsed. |
+| [ItemWidthRight](#uid-120ee29a73) | Gets or sets the estimated item width used in dynamic-overflow calculations when Avalonia.Controls.CommandBar.DefaultLabelPosition is Avalonia.Controls.CommandBarDefaultLabelPosition.Right. |
+| [OverflowButtonVisibility](#uid-04738d6c79) | Gets or sets the visibility of the overflow button. |
+| [OverflowItems](#uid-6a9d81ea43) | Gets the read-only collection of items shown in the overflow popup (secondary commands plus any primary commands moved to overflow by dynamic overflow). |
+| [PrimaryCommands](#uid-3640b74db1) | Gets or sets the collection of primary commands displayed in the bar. |
+| [SecondaryCommands](#uid-fdcef38231) | Gets or sets the collection of secondary commands shown in the overflow menu. |
+| [VisiblePrimaryCommands](#uid-dd7b372d38) | Gets the read-only collection of primary commands currently visible in the bar (may be a subset when dynamic overflow is active). |
+
+<span id="uid-5801459cdd"></span>
+
+### Content
+
+Gets or sets custom content displayed at the start (left) of the bar.
+
+```csharp
+public System.Object Content { get; set; }
+```
+
+<span id="uid-2a63d84078"></span>
+
+### DefaultLabelPosition
+
+Gets or sets how labels are positioned on command buttons.
+
+```csharp
+public Avalonia.Controls.CommandBarDefaultLabelPosition DefaultLabelPosition { get; set; }
+```
+
+<span id="uid-2af6260a4b"></span>
+
+### HasSecondaryCommands
+
+Gets whether there are any commands (secondary or overflowed primary) in the overflow menu.
+
+```csharp
+public System.Boolean HasSecondaryCommands { get; set; }
+```
+
+<span id="uid-3e6b5e28e0"></span>
+
+### IsDynamicOverflowEnabled
+
+Gets or sets whether primary commands are automatically moved to the overflow menu
+when there is not enough space to display them.
+
+```csharp
+public System.Boolean IsDynamicOverflowEnabled { get; set; }
+```
+
+<span id="uid-06202c5d9f"></span>
+
+### IsOpen
+
+Gets or sets whether the overflow menu is open.
+
+```csharp
+public System.Boolean IsOpen { get; set; }
+```
+
+<span id="uid-752841982c"></span>
+
+### IsOverflowButtonVisible
+
+Gets whether the overflow button is currently visible.
+
+```csharp
+public System.Boolean IsOverflowButtonVisible { get; set; }
+```
+
+<span id="uid-f153c8de37"></span>
+
+### IsSticky
+
+Gets or sets whether the overflow menu stays open after a command is invoked
+(disables light-dismiss behavior).
+
+```csharp
+public System.Boolean IsSticky { get; set; }
+```
+
+<span id="uid-d1109eaed9"></span>
+
+### ItemWidthBottom
+
+Gets or sets the estimated item width used in dynamic-overflow calculations
+when [Avalonia.Controls.CommandBar.DefaultLabelPosition](xref:Avalonia.Controls.CommandBar.DefaultLabelPosition) is [Avalonia.Controls.CommandBarDefaultLabelPosition.Bottom](xref:Avalonia.Controls.CommandBarDefaultLabelPosition.Bottom).
+
+```csharp
+public System.Double ItemWidthBottom { get; set; }
+```
+
+<span id="uid-66ce5190ab"></span>
+
+### ItemWidthCollapsed
+
+Gets or sets the estimated item width used in dynamic-overflow calculations
+when [Avalonia.Controls.CommandBar.DefaultLabelPosition](xref:Avalonia.Controls.CommandBar.DefaultLabelPosition) is [Avalonia.Controls.CommandBarDefaultLabelPosition.Collapsed](xref:Avalonia.Controls.CommandBarDefaultLabelPosition.Collapsed).
+
+```csharp
+public System.Double ItemWidthCollapsed { get; set; }
+```
+
+<span id="uid-120ee29a73"></span>
+
+### ItemWidthRight
+
+Gets or sets the estimated item width used in dynamic-overflow calculations
+when [Avalonia.Controls.CommandBar.DefaultLabelPosition](xref:Avalonia.Controls.CommandBar.DefaultLabelPosition) is [Avalonia.Controls.CommandBarDefaultLabelPosition.Right](xref:Avalonia.Controls.CommandBarDefaultLabelPosition.Right).
+
+```csharp
+public System.Double ItemWidthRight { get; set; }
+```
+
+<span id="uid-04738d6c79"></span>
+
+### OverflowButtonVisibility
+
+Gets or sets the visibility of the overflow button.
+
+```csharp
+public Avalonia.Controls.CommandBarOverflowButtonVisibility OverflowButtonVisibility { get; set; }
+```
+
+<span id="uid-6a9d81ea43"></span>
+
+### OverflowItems
+
+Gets the read-only collection of items shown in the overflow popup (secondary commands
+plus any primary commands moved to overflow by dynamic overflow).
+
+```csharp
+public System.Collections.ObjectModel.ReadOnlyObservableCollection<Avalonia.Controls.ICommandBarElement> OverflowItems { get; set; }
+```
+
+<span id="uid-3640b74db1"></span>
+
+### PrimaryCommands
+
+Gets or sets the collection of primary commands displayed in the bar.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.ICommandBarElement> PrimaryCommands { get; set; }
+```
+
+<span id="uid-fdcef38231"></span>
+
+### SecondaryCommands
+
+Gets or sets the collection of secondary commands shown in the overflow menu.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.ICommandBarElement> SecondaryCommands { get; set; }
+```
+
+<span id="uid-dd7b372d38"></span>
+
+### VisiblePrimaryCommands
+
+Gets the read-only collection of primary commands currently visible in the bar
+(may be a subset when dynamic overflow is active).
+
+```csharp
+public System.Collections.ObjectModel.ReadOnlyObservableCollection<Avalonia.Controls.ICommandBarElement> VisiblePrimaryCommands { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ClosedEvent](#uid-873cc2131f) | Defines the Avalonia.Controls.CommandBar.Closed routed event. |
+| [ClosingEvent](#uid-f5181d9e1b) | Defines the Avalonia.Controls.CommandBar.Closing routed event. |
+| [ContentProperty](#uid-e40ad21f15) | Defines the Avalonia.Controls.CommandBar.Content property. |
+| [DefaultLabelPositionProperty](#uid-b23f48ae5e) | Defines the Avalonia.Controls.CommandBar.DefaultLabelPosition property. |
+| [HasSecondaryCommandsProperty](#uid-20b37b5e3c) | Defines the Avalonia.Controls.CommandBar.HasSecondaryCommands property. |
+| [IsDynamicOverflowEnabledProperty](#uid-a7c2fa5aef) | Defines the Avalonia.Controls.CommandBar.IsDynamicOverflowEnabled property. |
+| [IsOpenProperty](#uid-6dba3bb579) | Defines the Avalonia.Controls.CommandBar.IsOpen property. |
+| [IsOverflowButtonVisibleProperty](#uid-6817fd8b98) | Defines the Avalonia.Controls.CommandBar.IsOverflowButtonVisible property. |
+| [IsStickyProperty](#uid-24f38a5345) | Defines the Avalonia.Controls.CommandBar.IsSticky property. |
+| [ItemWidthBottomProperty](#uid-8bf59012ce) | Defines the Avalonia.Controls.CommandBar.ItemWidthBottom property. |
+| [ItemWidthCollapsedProperty](#uid-50ef68c64c) | Defines the Avalonia.Controls.CommandBar.ItemWidthCollapsed property. |
+| [ItemWidthRightProperty](#uid-6134eb8e5b) | Defines the Avalonia.Controls.CommandBar.ItemWidthRight property. |
+| [OpenedEvent](#uid-e2725b5a4f) | Defines the Avalonia.Controls.CommandBar.Opened routed event. |
+| [OpeningEvent](#uid-e6fe723dd6) | Defines the Avalonia.Controls.CommandBar.Opening routed event. |
+| [OverflowButtonVisibilityProperty](#uid-f7aaf71694) | Defines the Avalonia.Controls.CommandBar.OverflowButtonVisibility property. |
+| [PrimaryCommandsProperty](#uid-076997d33c) | Defines the Avalonia.Controls.CommandBar.PrimaryCommands property. |
+| [SecondaryCommandsProperty](#uid-9eb510b656) | Defines the Avalonia.Controls.CommandBar.SecondaryCommands property. |
+
+<span id="uid-873cc2131f"></span>
+
+### ClosedEvent
+
+Defines the [Avalonia.Controls.CommandBar.Closed](xref:Avalonia.Controls.CommandBar.Closed) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> ClosedEvent
+```
+
+<span id="uid-f5181d9e1b"></span>
+
+### ClosingEvent
+
+Defines the [Avalonia.Controls.CommandBar.Closing](xref:Avalonia.Controls.CommandBar.Closing) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> ClosingEvent
+```
+
+<span id="uid-e40ad21f15"></span>
+
+### ContentProperty
+
+Defines the [Avalonia.Controls.CommandBar.Content](xref:Avalonia.Controls.CommandBar.Content) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Object> ContentProperty
+```
+
+<span id="uid-b23f48ae5e"></span>
+
+### DefaultLabelPositionProperty
+
+Defines the [Avalonia.Controls.CommandBar.DefaultLabelPosition](xref:Avalonia.Controls.CommandBar.DefaultLabelPosition) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.CommandBarDefaultLabelPosition> DefaultLabelPositionProperty
+```
+
+<span id="uid-20b37b5e3c"></span>
+
+### HasSecondaryCommandsProperty
+
+Defines the [Avalonia.Controls.CommandBar.HasSecondaryCommands](xref:Avalonia.Controls.CommandBar.HasSecondaryCommands) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.CommandBar, System.Boolean> HasSecondaryCommandsProperty
+```
+
+<span id="uid-a7c2fa5aef"></span>
+
+### IsDynamicOverflowEnabledProperty
+
+Defines the [Avalonia.Controls.CommandBar.IsDynamicOverflowEnabled](xref:Avalonia.Controls.CommandBar.IsDynamicOverflowEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsDynamicOverflowEnabledProperty
+```
+
+<span id="uid-6dba3bb579"></span>
+
+### IsOpenProperty
+
+Defines the [Avalonia.Controls.CommandBar.IsOpen](xref:Avalonia.Controls.CommandBar.IsOpen) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsOpenProperty
+```
+
+<span id="uid-6817fd8b98"></span>
+
+### IsOverflowButtonVisibleProperty
+
+Defines the [Avalonia.Controls.CommandBar.IsOverflowButtonVisible](xref:Avalonia.Controls.CommandBar.IsOverflowButtonVisible) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.CommandBar, System.Boolean> IsOverflowButtonVisibleProperty
+```
+
+<span id="uid-24f38a5345"></span>
+
+### IsStickyProperty
+
+Defines the [Avalonia.Controls.CommandBar.IsSticky](xref:Avalonia.Controls.CommandBar.IsSticky) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> IsStickyProperty
+```
+
+<span id="uid-8bf59012ce"></span>
+
+### ItemWidthBottomProperty
+
+Defines the [Avalonia.Controls.CommandBar.ItemWidthBottom](xref:Avalonia.Controls.CommandBar.ItemWidthBottom) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> ItemWidthBottomProperty
+```
+
+<span id="uid-50ef68c64c"></span>
+
+### ItemWidthCollapsedProperty
+
+Defines the [Avalonia.Controls.CommandBar.ItemWidthCollapsed](xref:Avalonia.Controls.CommandBar.ItemWidthCollapsed) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> ItemWidthCollapsedProperty
+```
+
+<span id="uid-6134eb8e5b"></span>
+
+### ItemWidthRightProperty
+
+Defines the [Avalonia.Controls.CommandBar.ItemWidthRight](xref:Avalonia.Controls.CommandBar.ItemWidthRight) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> ItemWidthRightProperty
+```
+
+<span id="uid-e2725b5a4f"></span>
+
+### OpenedEvent
+
+Defines the [Avalonia.Controls.CommandBar.Opened](xref:Avalonia.Controls.CommandBar.Opened) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> OpenedEvent
+```
+
+<span id="uid-e6fe723dd6"></span>
+
+### OpeningEvent
+
+Defines the [Avalonia.Controls.CommandBar.Opening](xref:Avalonia.Controls.CommandBar.Opening) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.RoutedEventArgs> OpeningEvent
+```
+
+<span id="uid-f7aaf71694"></span>
+
+### OverflowButtonVisibilityProperty
+
+Defines the [Avalonia.Controls.CommandBar.OverflowButtonVisibility](xref:Avalonia.Controls.CommandBar.OverflowButtonVisibility) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.CommandBarOverflowButtonVisibility> OverflowButtonVisibilityProperty
+```
+
+<span id="uid-076997d33c"></span>
+
+### PrimaryCommandsProperty
+
+Defines the [Avalonia.Controls.CommandBar.PrimaryCommands](xref:Avalonia.Controls.CommandBar.PrimaryCommands) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.ICommandBarElement>> PrimaryCommandsProperty
+```
+
+<span id="uid-9eb510b656"></span>
+
+### SecondaryCommandsProperty
+
+Defines the [Avalonia.Controls.CommandBar.SecondaryCommands](xref:Avalonia.Controls.CommandBar.SecondaryCommands) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.ICommandBarElement>> SecondaryCommandsProperty
+```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Closed](#uid-2f5f7183b2) | Occurs when the overflow menu has closed. |
+| [Closing](#uid-bbffb594eb) | Occurs when the overflow menu is about to close. |
+| [Opened](#uid-f11c9d6e38) | Occurs when the overflow menu has opened. |
+| [Opening](#uid-712f911f76) | Occurs when the overflow menu is about to open. |
+
+<span id="uid-2f5f7183b2"></span>
+
+### Closed
+
+Occurs when the overflow menu has closed.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Closed
+```
+
+<span id="uid-bbffb594eb"></span>
+
+### Closing
+
+Occurs when the overflow menu is about to close.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Closing
+```
+
+<span id="uid-f11c9d6e38"></span>
+
+### Opened
+
+Occurs when the overflow menu has opened.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Opened
+```
+
+<span id="uid-712f911f76"></span>
+
+### Opening
+
+Occurs when the overflow menu is about to open.
+
+```csharp
+public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Opening
+```
+
+</ApiRefPage>
+

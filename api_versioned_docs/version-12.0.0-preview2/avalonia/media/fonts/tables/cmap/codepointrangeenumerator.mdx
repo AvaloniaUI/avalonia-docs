@@ -1,0 +1,99 @@
+---
+title: 'CodepointRangeEnumerator'
+hide_title: true
+slug: '/avalonia/media/fonts/tables/cmap/codepointrangeenumerator'
+uid: 'Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator'
+commentId: 'T:Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Fonts.Tables.Cmap'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CodepointRangeEnumerator Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Fonts.Tables.Cmap</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Enumerates contiguous ranges of Unicode code points present in a character map (cmap) table.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct CodepointRangeEnumerator
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> CodepointRangeEnumerator
+</div>
+</div>
+
+## Remarks
+
+This enumerator is typically used to iterate over all code point ranges defined by a cmap
+table in an OpenType or TrueType font. It supports Format 4, Format 12, and Format 13 cmap subtables.
+The enumerator is a ref struct and must be used within the stack context; it cannot be stored on the
+heap or used across await or yield boundaries.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [MoveNext](#uid-463d976a5f) | Advances the enumerator to the next character mapping range in the collection. |
+
+<span id="uid-463d976a5f"></span>
+
+### MoveNext
+
+Advances the enumerator to the next character mapping range in the collection.
+
+```csharp
+public System.Boolean MoveNext()
+```
+
+Returns: true if the enumerator was successfully advanced to the next range; otherwise, false.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Current](#uid-e63b2cc2d0) | Gets the current code point range in the enumeration sequence. |
+
+<span id="uid-e63b2cc2d0"></span>
+
+### Current
+
+Gets the current code point range in the enumeration sequence.
+
+```csharp
+public Avalonia.Media.Fonts.Tables.Cmap.CodepointRange Current { get; set; }
+```
+
+</ApiRefPage>
+

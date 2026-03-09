@@ -1,0 +1,574 @@
+---
+title: 'ToolTip'
+hide_title: true
+slug: '/avalonia/controls/tooltip'
+uid: 'Avalonia.Controls.ToolTip'
+commentId: 'T:Avalonia.Controls.ToolTip'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ToolTip Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control which pops up a hint when a control is hovered.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ToolTip
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="contentcontrol">ContentControl</a> <span className="apiref-page__relation-separator">-&gt;</span> ToolTip
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IPopupHostProvider
+</div>
+</div>
+
+## Remarks
+
+You will probably not want to create a [Avalonia.Controls.ToolTip](xref:Avalonia.Controls.ToolTip) control directly: if added to
+the tree it will act as a simple [Avalonia.Controls.ContentControl](xref:Avalonia.Controls.ContentControl) styled to look like a tooltip.
+To add a tooltip to a control, use the [Avalonia.Controls.ToolTip.TipProperty](xref:Avalonia.Controls.ToolTip.TipProperty) attached property,
+assigning the content that you want displayed.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ToolTip](#uid-3e8f21b478) | No summary available. |
+
+<span id="uid-3e8f21b478"></span>
+
+### ToolTip
+
+```csharp
+public ToolTip()
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddToolTipClosingHandler](#uid-1fed2f0f7f) | No summary available. |
+| [AddToolTipOpeningHandler](#uid-987260c80d) | No summary available. |
+| [GetBetweenShowDelay](#uid-9abead11e3) | Gets the number of milliseconds since the last tooltip closed during which the tooltip of element will open immediately, or a negative value indicating that the tooltip will always wait for Avalonia.Controls.ToolTip.ShowDelayProperty before opening. |
+| [GetCustomPopupPlacementCallback](#uid-cb868eee00) | Gets the value of the ToolTip.CustomPopupPlacementCallback attached property. |
+| [GetHorizontalOffset](#uid-5220cd3b22) | Gets the value of the ToolTip.HorizontalOffset attached property. |
+| [GetIsOpen](#uid-6dbc7fec58) | Gets the value of the ToolTip.IsOpen attached property. |
+| [GetPlacement](#uid-15ef943c61) | Gets the value of the ToolTip.Placement attached property. |
+| [GetServiceEnabled](#uid-ff62ca3fc4) | Gets whether showing and hiding of a control's tooltip will be automatically controlled by Avalonia. |
+| [GetShowDelay](#uid-5de4d71fb3) | Gets the value of the ToolTip.ShowDelay attached property. |
+| [GetShowOnDisabled](#uid-07977d17f4) | Gets whether a control will display a tooltip even if it disabled. |
+| [GetTip](#uid-951824cf1f) | Gets the value of the ToolTip.Tip attached property. |
+| [GetVerticalOffset](#uid-c7557fa6ad) | Gets the value of the ToolTip.VerticalOffset attached property. |
+| [RemoveToolTipClosingHandler](#uid-80ec71dfe2) | No summary available. |
+| [RemoveToolTipOpeningHandler](#uid-9a7505f86f) | No summary available. |
+| [SetBetweenShowDelay](#uid-6d4a7663ce) | Sets the number of milliseconds since the last tooltip closed during which the tooltip of element will open immediately. |
+| [SetCustomPopupPlacementCallback](#uid-775a741679) | Sets the value of the ToolTip.CustomPopupPlacementCallback attached property. |
+| [SetHorizontalOffset](#uid-a20640ccad) | Sets the value of the ToolTip.HorizontalOffset attached property. |
+| [SetIsOpen](#uid-62d3b8a436) | Sets the value of the ToolTip.IsOpen attached property. |
+| [SetPlacement](#uid-677306b137) | Sets the value of the ToolTip.Placement attached property. |
+| [SetServiceEnabled](#uid-9434bf0634) | Sets whether showing and hiding of a control's tooltip will be automatically controlled by Avalonia. |
+| [SetShowDelay](#uid-808db44e18) | Sets the value of the ToolTip.ShowDelay attached property. |
+| [SetShowOnDisabled](#uid-06108f491a) | Sets whether a control will display a tooltip even if it disabled. |
+| [SetTip](#uid-e8c7f2c758) | Sets the value of the ToolTip.Tip attached property. |
+| [SetVerticalOffset](#uid-340691ff6b) | Sets the value of the ToolTip.VerticalOffset attached property. |
+
+<span id="uid-1fed2f0f7f"></span>
+
+### AddToolTipClosingHandler
+
+```csharp
+public System.Void AddToolTipClosingHandler(Avalonia.Controls.Control element, System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> handler)
+```
+
+<span id="uid-987260c80d"></span>
+
+### AddToolTipOpeningHandler
+
+```csharp
+public System.Void AddToolTipOpeningHandler(Avalonia.Controls.Control element, System.EventHandler<Avalonia.Interactivity.CancelRoutedEventArgs> handler)
+```
+
+<span id="uid-9abead11e3"></span>
+
+### GetBetweenShowDelay
+
+Gets the number of milliseconds since the last tooltip closed during which the tooltip of `element` will open immediately,
+or a negative value indicating that the tooltip will always wait for [Avalonia.Controls.ToolTip.ShowDelayProperty](xref:Avalonia.Controls.ToolTip.ShowDelayProperty) before opening.
+
+```csharp
+public System.Int32 GetBetweenShowDelay(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+<span id="uid-cb868eee00"></span>
+
+### GetCustomPopupPlacementCallback
+
+Gets the value of the ToolTip.CustomPopupPlacementCallback attached property.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback GetCustomPopupPlacementCallback(Avalonia.Controls.Control element)
+```
+
+<span id="uid-5220cd3b22"></span>
+
+### GetHorizontalOffset
+
+Gets the value of the ToolTip.HorizontalOffset attached property.
+
+```csharp
+public System.Double GetHorizontalOffset(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+Returns: A value indicating how the tool tip is positioned.
+
+<span id="uid-6dbc7fec58"></span>
+
+### GetIsOpen
+
+Gets the value of the ToolTip.IsOpen attached property.
+
+```csharp
+public System.Boolean GetIsOpen(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+Returns: A value indicating whether the tool tip is visible.
+
+<span id="uid-15ef943c61"></span>
+
+### GetPlacement
+
+Gets the value of the ToolTip.Placement attached property.
+
+```csharp
+public Avalonia.Controls.PlacementMode GetPlacement(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+Returns: A value indicating how the tool tip is positioned.
+
+<span id="uid-ff62ca3fc4"></span>
+
+### GetServiceEnabled
+
+Gets whether showing and hiding of a control's tooltip will be automatically controlled by Avalonia.
+
+```csharp
+public System.Boolean GetServiceEnabled(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+<span id="uid-5de4d71fb3"></span>
+
+### GetShowDelay
+
+Gets the value of the ToolTip.ShowDelay attached property.
+
+```csharp
+public System.Int32 GetShowDelay(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+Returns: A value indicating the time, in milliseconds, before a tool tip opens.
+
+<span id="uid-07977d17f4"></span>
+
+### GetShowOnDisabled
+
+Gets whether a control will display a tooltip even if it disabled.
+
+```csharp
+public System.Boolean GetShowOnDisabled(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+<span id="uid-951824cf1f"></span>
+
+### GetTip
+
+Gets the value of the ToolTip.Tip attached property.
+
+```csharp
+public System.Object GetTip(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+Returns: The content to be displayed in the control's tooltip.
+
+<span id="uid-c7557fa6ad"></span>
+
+### GetVerticalOffset
+
+Gets the value of the ToolTip.VerticalOffset attached property.
+
+```csharp
+public System.Double GetVerticalOffset(Avalonia.Controls.Control element)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+
+Returns: A value indicating how the tool tip is positioned.
+
+<span id="uid-80ec71dfe2"></span>
+
+### RemoveToolTipClosingHandler
+
+```csharp
+public System.Void RemoveToolTipClosingHandler(Avalonia.Controls.Control element, System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> handler)
+```
+
+<span id="uid-9a7505f86f"></span>
+
+### RemoveToolTipOpeningHandler
+
+```csharp
+public System.Void RemoveToolTipOpeningHandler(Avalonia.Controls.Control element, System.EventHandler<Avalonia.Interactivity.CancelRoutedEventArgs> handler)
+```
+
+<span id="uid-6d4a7663ce"></span>
+
+### SetBetweenShowDelay
+
+Sets the number of milliseconds since the last tooltip closed during which the tooltip of `element` will open immediately.
+
+```csharp
+public System.Void SetBetweenShowDelay(Avalonia.Controls.Control element, System.Int32 value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | The number of milliseconds to set, or a negative value to disable the behaviour. |
+
+<span id="uid-775a741679"></span>
+
+### SetCustomPopupPlacementCallback
+
+Sets the value of the ToolTip.CustomPopupPlacementCallback attached property.
+
+```csharp
+public System.Void SetCustomPopupPlacementCallback(Avalonia.Controls.Control element, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback value)
+```
+
+<span id="uid-a20640ccad"></span>
+
+### SetHorizontalOffset
+
+Sets the value of the ToolTip.HorizontalOffset attached property.
+
+```csharp
+public System.Void SetHorizontalOffset(Avalonia.Controls.Control element, System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | A value indicating how the tool tip is positioned. |
+
+<span id="uid-62d3b8a436"></span>
+
+### SetIsOpen
+
+Sets the value of the ToolTip.IsOpen attached property.
+
+```csharp
+public System.Void SetIsOpen(Avalonia.Controls.Control element, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | A value indicating whether the tool tip is visible. |
+
+<span id="uid-677306b137"></span>
+
+### SetPlacement
+
+Sets the value of the ToolTip.Placement attached property.
+
+```csharp
+public System.Void SetPlacement(Avalonia.Controls.Control element, Avalonia.Controls.PlacementMode value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | A value indicating how the tool tip is positioned. |
+
+<span id="uid-9434bf0634"></span>
+
+### SetServiceEnabled
+
+Sets whether showing and hiding of a control's tooltip will be automatically controlled by Avalonia.
+
+```csharp
+public System.Void SetServiceEnabled(Avalonia.Controls.Control element, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | Whether the control is to display a tooltip even if it disabled. |
+
+<span id="uid-808db44e18"></span>
+
+### SetShowDelay
+
+Sets the value of the ToolTip.ShowDelay attached property.
+
+```csharp
+public System.Void SetShowDelay(Avalonia.Controls.Control element, System.Int32 value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | A value indicating the time, in milliseconds, before a tool tip opens. |
+
+<span id="uid-06108f491a"></span>
+
+### SetShowOnDisabled
+
+Sets whether a control will display a tooltip even if it disabled.
+
+```csharp
+public System.Void SetShowOnDisabled(Avalonia.Controls.Control element, System.Boolean value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | Whether the control is to display a tooltip even if it disabled. |
+
+<span id="uid-e8c7f2c758"></span>
+
+### SetTip
+
+Sets the value of the ToolTip.Tip attached property.
+
+```csharp
+public System.Void SetTip(Avalonia.Controls.Control element, System.Object value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | The content to be displayed in the control's tooltip. |
+
+<span id="uid-340691ff6b"></span>
+
+### SetVerticalOffset
+
+Sets the value of the ToolTip.VerticalOffset attached property.
+
+```csharp
+public System.Void SetVerticalOffset(Avalonia.Controls.Control element, System.Double value)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `element` | The control to get the property from. |
+| `value` | A value indicating how the tool tip is positioned. |
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BetweenShowDelayProperty](#uid-8d21ac39eb) | Defines the ToolTip.BetweenShowDelay property. |
+| [CustomPopupPlacementCallbackProperty](#uid-b8c309c16a) | Defines the Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback property. |
+| [HorizontalOffsetProperty](#uid-e010edf531) | Defines the ToolTip.HorizontalOffset property. |
+| [IsOpenProperty](#uid-1bde912f36) | Defines the ToolTip.IsOpen attached property. |
+| [PlacementProperty](#uid-579133effd) | Defines the ToolTip.Placement property. |
+| [ServiceEnabledProperty](#uid-61f5e729d5) | Defines the ToolTip.ServiceEnabled property. |
+| [ShowDelayProperty](#uid-6eb4a09aef) | Defines the ToolTip.ShowDelay property. |
+| [ShowOnDisabledProperty](#uid-6060d80a54) | Defines the ToolTip.ShowOnDisabled property. |
+| [TipProperty](#uid-3be9a35a20) | Defines the ToolTip.Tip attached property. |
+| [ToolTipClosingEvent](#uid-9f6e146249) | The event raised when a ToolTip on an element that was shown should now be hidden. |
+| [ToolTipOpeningEvent](#uid-06f7daf869) | The event raised when a ToolTip is going to be shown on an element. |
+| [VerticalOffsetProperty](#uid-d293a5a63a) | Defines the ToolTip.VerticalOffset property. |
+
+<span id="uid-8d21ac39eb"></span>
+
+### BetweenShowDelayProperty
+
+Defines the ToolTip.BetweenShowDelay property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Int32> BetweenShowDelayProperty
+```
+
+<span id="uid-b8c309c16a"></span>
+
+### CustomPopupPlacementCallbackProperty
+
+Defines the [Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback](xref:Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> CustomPopupPlacementCallbackProperty
+```
+
+<span id="uid-e010edf531"></span>
+
+### HorizontalOffsetProperty
+
+Defines the ToolTip.HorizontalOffset property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Double> HorizontalOffsetProperty
+```
+
+<span id="uid-1bde912f36"></span>
+
+### IsOpenProperty
+
+Defines the ToolTip.IsOpen attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> IsOpenProperty
+```
+
+<span id="uid-579133effd"></span>
+
+### PlacementProperty
+
+Defines the ToolTip.Placement property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.PlacementMode> PlacementProperty
+```
+
+<span id="uid-61f5e729d5"></span>
+
+### ServiceEnabledProperty
+
+Defines the ToolTip.ServiceEnabled property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> ServiceEnabledProperty
+```
+
+<span id="uid-6eb4a09aef"></span>
+
+### ShowDelayProperty
+
+Defines the ToolTip.ShowDelay property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Int32> ShowDelayProperty
+```
+
+<span id="uid-6060d80a54"></span>
+
+### ShowOnDisabledProperty
+
+Defines the ToolTip.ShowOnDisabled property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Boolean> ShowOnDisabledProperty
+```
+
+<span id="uid-3be9a35a20"></span>
+
+### TipProperty
+
+Defines the ToolTip.Tip attached property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Object> TipProperty
+```
+
+<span id="uid-9f6e146249"></span>
+
+### ToolTipClosingEvent
+
+The event raised when a ToolTip on an element that was shown should now be hidden.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent ToolTipClosingEvent
+```
+
+<span id="uid-06f7daf869"></span>
+
+### ToolTipOpeningEvent
+
+The event raised when a ToolTip is going to be shown on an element.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<Avalonia.Interactivity.CancelRoutedEventArgs> ToolTipOpeningEvent
+```
+
+<span id="uid-d293a5a63a"></span>
+
+### VerticalOffsetProperty
+
+Defines the ToolTip.VerticalOffset property.
+
+```csharp
+public Avalonia.AttachedProperty<System.Double> VerticalOffsetProperty
+```
+
+</ApiRefPage>
+

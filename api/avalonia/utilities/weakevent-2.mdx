@@ -1,0 +1,81 @@
+---
+title: 'WeakEvent<TSender, TEventArgs>'
+hide_title: true
+slug: '/avalonia/utilities/weakevent-2'
+uid: 'Avalonia.Utilities.WeakEvent`2'
+commentId: 'T:Avalonia.Utilities.WeakEvent`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WeakEvent&lt;TSender, TEventArgs&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages subscriptions to events using weak listeners.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WeakEvent<TSender, TEventArgs>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="weakevent">WeakEvent</a> <span className="apiref-page__relation-separator">-&gt;</span> WeakEvent&lt;TSender, TEventArgs&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Subscribe](#uid-ca7be98fae) | No summary available. |
+| [Unsubscribe](#uid-9ededeed37) | No summary available. |
+
+<span id="uid-ca7be98fae"></span>
+
+### Subscribe
+
+```csharp
+public System.Void Subscribe(TSender target, Avalonia.Utilities.IWeakEventSubscriber<TEventArgs><TEventArgs> subscriber)
+```
+
+<span id="uid-9ededeed37"></span>
+
+### Unsubscribe
+
+```csharp
+public System.Void Unsubscribe(TSender target, Avalonia.Utilities.IWeakEventSubscriber<TEventArgs><TEventArgs> subscriber)
+```
+
+</ApiRefPage>
+

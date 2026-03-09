@@ -1,0 +1,602 @@
+---
+title: 'Vector'
+hide_title: true
+slug: '/avalonia/vector'
+uid: 'Avalonia.Vector'
+commentId: 'T:Avalonia.Vector'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Vector Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a vector.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Vector
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Vector
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Vector&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Vector](#uid-90b2ee44cc) | Initializes a new instance of the Avalonia.Vector structure. |
+
+<span id="uid-90b2ee44cc"></span>
+
+### Vector
+
+Initializes a new instance of the [Avalonia.Vector](xref:Avalonia.Vector) structure.
+
+```csharp
+public Vector(System.Double x, System.Double y)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `x` | The X component. |
+| `y` | The Y component. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Abs](#uid-46c877565a) | Returns a vector whose elements are the absolute values of each of the specified vector's elements. |
+| [Add](#uid-5223085307) | Adds the second to the first vector |
+| [Clamp](#uid-a7f3ebdb43) | Restricts a vector between a minimum and a maximum value. |
+| [Cross](#uid-fe0327d565) | Returns the cross product of two vectors. |
+| [Deconstruct](#uid-2a859cf516) | No summary available. |
+| [Distance](#uid-f1e68aa94c) | Computes the Euclidean distance between the two given points. |
+| [DistanceSquared](#uid-8f960f5cea) | Returns the Euclidean distance squared between two specified points |
+| [Divide (2 overloads)](#uid-4e3b9274dd) | Divides the first vector by the second. |
+| [Dot](#uid-4148913918) | Returns the dot product of two vectors. |
+| [Equals (2 overloads)](#uid-ce2cfe6ee3) | Check if two vectors are equal (bitwise). |
+| [GetHashCode](#uid-c00d23029d) | No summary available. |
+| [Max](#uid-2be81d4b1f) | Returns a vector whose elements are the maximum of each of the pairs of elements in two specified vectors |
+| [Min](#uid-e5a3e14aec) | Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors |
+| [Multiply (2 overloads)](#uid-3669f7bd63) | Multiplies the first vector by the second. |
+| [NearlyEquals](#uid-2fc575cc4e) | Check if two vectors are nearly equal (numerically). |
+| [Negate (2 overloads)](#uid-318cdc1482) | Returns a negated version of this vector. |
+| [Normalize (2 overloads)](#uid-f0c0c4d580) | Returns a normalized version of this vector. |
+| [Parse](#uid-1bf83f4e65) | Parses a Avalonia.Vector string. |
+| [Subtract](#uid-a968b81add) | Subtracts the second from the first vector |
+| [ToString](#uid-668c8eb0f9) | Returns the string representation of the vector. |
+| [WithX](#uid-8154f8665f) | Returns a new vector with the specified X component. |
+| [WithY](#uid-57fd81b139) | Returns a new vector with the specified Y component. |
+
+<span id="uid-46c877565a"></span>
+
+### Abs
+
+Returns a vector whose elements are the absolute values of each of the specified vector's elements.
+
+```csharp
+public Avalonia.Vector Abs()
+```
+
+<span id="uid-5223085307"></span>
+
+### Add
+
+Adds the second to the first vector
+
+```csharp
+public Avalonia.Vector Add(Avalonia.Vector a, Avalonia.Vector b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | The first vector. |
+| `b` | The second vector. |
+
+Returns: The summed vector.
+
+<span id="uid-a7f3ebdb43"></span>
+
+### Clamp
+
+Restricts a vector between a minimum and a maximum value.
+
+```csharp
+public Avalonia.Vector Clamp(Avalonia.Vector value, Avalonia.Vector min, Avalonia.Vector max)
+```
+
+<span id="uid-fe0327d565"></span>
+
+### Cross
+
+Returns the cross product of two vectors.
+
+```csharp
+public System.Double Cross(Avalonia.Vector a, Avalonia.Vector b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | The first vector. |
+| `b` | The second vector. |
+
+Returns: The cross product.
+
+<span id="uid-2a859cf516"></span>
+
+### Deconstruct
+
+```csharp
+public System.Void Deconstruct(System.Double& x, System.Double& y)
+```
+
+<span id="uid-f1e68aa94c"></span>
+
+### Distance
+
+Computes the Euclidean distance between the two given points.
+
+```csharp
+public System.Double Distance(Avalonia.Vector value1, Avalonia.Vector value2)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value1` | The first point. |
+| `value2` | The second point. |
+
+Returns: The Euclidean distance.
+
+<span id="uid-8f960f5cea"></span>
+
+### DistanceSquared
+
+Returns the Euclidean distance squared between two specified points
+
+```csharp
+public System.Double DistanceSquared(Avalonia.Vector value1, Avalonia.Vector value2)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `value1` | The first point. |
+| `value2` | The second point. |
+
+Returns: The Euclidean distance squared.
+
+<span id="uid-4e3b9274dd"></span>
+
+### Divide overloads
+
+<span id="uid-da1aa4470a"></span>
+
+#### Divide
+
+Divides the first vector by the second.
+
+```csharp
+public Avalonia.Vector Divide(Avalonia.Vector a, Avalonia.Vector b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | The first vector. |
+| `b` | The second vector. |
+
+Returns: The scaled vector.
+
+<span id="uid-a9c5d076b3"></span>
+
+#### Divide
+
+Divides the vector by the given scalar.
+
+```csharp
+public Avalonia.Vector Divide(Avalonia.Vector vector, System.Double scalar)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `scalar` | The scalar value |
+| `vector` | The vector |
+
+Returns: The scaled vector.
+
+<span id="uid-4148913918"></span>
+
+### Dot
+
+Returns the dot product of two vectors.
+
+```csharp
+public System.Double Dot(Avalonia.Vector a, Avalonia.Vector b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | The first vector. |
+| `b` | The second vector. |
+
+Returns: The dot product.
+
+<span id="uid-ce2cfe6ee3"></span>
+
+### Equals overloads
+
+<span id="uid-22a91123f3"></span>
+
+#### Equals
+
+Check if two vectors are equal (bitwise).
+
+```csharp
+public System.Boolean Equals(Avalonia.Vector other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` |  |
+
+<span id="uid-a8dcc78606"></span>
+
+#### Equals
+
+```csharp
+public System.Boolean Equals(System.Object obj)
+```
+
+<span id="uid-c00d23029d"></span>
+
+### GetHashCode
+
+```csharp
+public System.Int32 GetHashCode()
+```
+
+<span id="uid-2be81d4b1f"></span>
+
+### Max
+
+Returns a vector whose elements are the maximum of each of the pairs of elements in two specified vectors
+
+```csharp
+public Avalonia.Vector Max(Avalonia.Vector left, Avalonia.Vector right)
+```
+
+<span id="uid-e5a3e14aec"></span>
+
+### Min
+
+Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors
+
+```csharp
+public Avalonia.Vector Min(Avalonia.Vector left, Avalonia.Vector right)
+```
+
+<span id="uid-3669f7bd63"></span>
+
+### Multiply overloads
+
+<span id="uid-99976aa58d"></span>
+
+#### Multiply
+
+Multiplies the first vector by the second.
+
+```csharp
+public Avalonia.Vector Multiply(Avalonia.Vector a, Avalonia.Vector b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | The first vector. |
+| `b` | The second vector. |
+
+Returns: The scaled vector.
+
+<span id="uid-e4bbf973e3"></span>
+
+#### Multiply
+
+Multiplies the vector by the given scalar.
+
+```csharp
+public Avalonia.Vector Multiply(Avalonia.Vector vector, System.Double scalar)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `scalar` | The scalar value |
+| `vector` | The vector |
+
+Returns: The scaled vector.
+
+<span id="uid-2fc575cc4e"></span>
+
+### NearlyEquals
+
+Check if two vectors are nearly equal (numerically).
+
+```csharp
+public System.Boolean NearlyEquals(Avalonia.Vector other)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `other` | The other vector. |
+
+Returns: True if vectors are nearly equal.
+
+<span id="uid-318cdc1482"></span>
+
+### Negate overloads
+
+<span id="uid-fbcb857f06"></span>
+
+#### Negate
+
+Returns a negated version of this vector.
+
+```csharp
+public Avalonia.Vector Negate()
+```
+
+Returns: The negated vector.
+
+<span id="uid-f0680a96eb"></span>
+
+#### Negate
+
+Negates the vector
+
+```csharp
+public Avalonia.Vector Negate(Avalonia.Vector vector)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `vector` | The vector to negate. |
+
+Returns: The scaled vector.
+
+<span id="uid-f0c0c4d580"></span>
+
+### Normalize overloads
+
+<span id="uid-b5ccc4e6e3"></span>
+
+#### Normalize
+
+Returns a normalized version of this vector.
+
+```csharp
+public Avalonia.Vector Normalize()
+```
+
+Returns: The normalized vector.
+
+<span id="uid-dcf2f0693d"></span>
+
+#### Normalize
+
+Normalizes the given vector.
+
+```csharp
+public Avalonia.Vector Normalize(Avalonia.Vector vector)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `vector` | The vector |
+
+Returns: The normalized vector.
+
+<span id="uid-1bf83f4e65"></span>
+
+### Parse
+
+Parses a [Avalonia.Vector](xref:Avalonia.Vector) string.
+
+```csharp
+public Avalonia.Vector Parse(System.String s)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `s` | The string. |
+
+Returns: The [Avalonia.Vector](xref:Avalonia.Vector).
+
+<span id="uid-a968b81add"></span>
+
+### Subtract
+
+Subtracts the second from the first vector
+
+```csharp
+public Avalonia.Vector Subtract(Avalonia.Vector a, Avalonia.Vector b)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `a` | The first vector. |
+| `b` | The second vector. |
+
+Returns: The difference vector.
+
+<span id="uid-668c8eb0f9"></span>
+
+### ToString
+
+Returns the string representation of the vector.
+
+```csharp
+public System.String ToString()
+```
+
+Returns: The string representation of the vector.
+
+<span id="uid-8154f8665f"></span>
+
+### WithX
+
+Returns a new vector with the specified X component.
+
+```csharp
+public Avalonia.Vector WithX(System.Double x)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `x` | The X component. |
+
+Returns: The new vector.
+
+<span id="uid-57fd81b139"></span>
+
+### WithY
+
+Returns a new vector with the specified Y component.
+
+```csharp
+public Avalonia.Vector WithY(System.Double y)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `y` | The Y component. |
+
+Returns: The new vector.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Length](#uid-a06f8dab3b) | Length of the vector. |
+| [One](#uid-01d5e8302a) | Returns the vector (1.0, 1.0). |
+| [SquaredLength](#uid-5f97b69ad8) | Squared Length of the vector. |
+| [UnitX](#uid-5b46c08276) | Returns the vector (1.0, 0.0). |
+| [UnitY](#uid-9d76c17fb1) | Returns the vector (0.0, 1.0). |
+| [X](#uid-99a4e6db09) | Gets the X component. |
+| [Y](#uid-38ae948a77) | Gets the Y component. |
+| [Zero](#uid-8dc4bebed3) | Returns the vector (0.0, 0.0). |
+
+<span id="uid-a06f8dab3b"></span>
+
+### Length
+
+Length of the vector.
+
+```csharp
+public System.Double Length { get; set; }
+```
+
+<span id="uid-01d5e8302a"></span>
+
+### One
+
+Returns the vector (1.0, 1.0).
+
+```csharp
+public Avalonia.Vector One { get; set; }
+```
+
+<span id="uid-5f97b69ad8"></span>
+
+### SquaredLength
+
+Squared Length of the vector.
+
+```csharp
+public System.Double SquaredLength { get; set; }
+```
+
+<span id="uid-5b46c08276"></span>
+
+### UnitX
+
+Returns the vector (1.0, 0.0).
+
+```csharp
+public Avalonia.Vector UnitX { get; set; }
+```
+
+<span id="uid-9d76c17fb1"></span>
+
+### UnitY
+
+Returns the vector (0.0, 1.0).
+
+```csharp
+public Avalonia.Vector UnitY { get; set; }
+```
+
+<span id="uid-99a4e6db09"></span>
+
+### X
+
+Gets the X component.
+
+```csharp
+public System.Double X { get; set; }
+```
+
+<span id="uid-38ae948a77"></span>
+
+### Y
+
+Gets the Y component.
+
+```csharp
+public System.Double Y { get; set; }
+```
+
+<span id="uid-8dc4bebed3"></span>
+
+### Zero
+
+Returns the vector (0.0, 0.0).
+
+```csharp
+public Avalonia.Vector Zero { get; set; }
+```
+
+</ApiRefPage>
+

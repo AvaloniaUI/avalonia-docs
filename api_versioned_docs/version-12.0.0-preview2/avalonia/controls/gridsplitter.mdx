@@ -1,0 +1,214 @@
+---
+title: 'GridSplitter'
+hide_title: true
+slug: '/avalonia/controls/gridsplitter'
+uid: 'Avalonia.Controls.GridSplitter'
+commentId: 'T:Avalonia.Controls.GridSplitter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GridSplitter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the control that redistributes space between columns or rows of a [Avalonia.Controls.Grid](xref:Avalonia.Controls.Grid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GridSplitter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../input/inputelement">InputElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="control">Control</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/templatedcontrol">TemplatedControl</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="primitives/thumb">Thumb</a> <span className="apiref-page__relation-separator">-&gt;</span> GridSplitter
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GridSplitter](#uid-09e40a4d98) | No summary available. |
+
+<span id="uid-09e40a4d98"></span>
+
+### GridSplitter
+
+```csharp
+public GridSplitter()
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DragIncrement](#uid-9c3b4dd757) | Restricts splitter to move a multiple of the specified units. |
+| [KeyboardIncrement](#uid-d69e19f5c6) | The Distance to move the splitter when pressing the keyboard arrow keys. |
+| [PreviewContent](#uid-7e099a46e3) | Gets or sets content that will be shown when Avalonia.Controls.GridSplitter.ShowsPreview is enabled and user starts resize operation. |
+| [ResizeBehavior](#uid-94a2a21f68) | Indicates which Columns or Rows the Splitter resizes. |
+| [ResizeDirection](#uid-408eb6bd69) | Indicates whether the Splitter resizes the Columns, Rows, or Both. |
+| [ShowsPreview](#uid-14b21d414d) | Indicates whether to Preview the column resizing without updating layout. |
+
+<span id="uid-9c3b4dd757"></span>
+
+### DragIncrement
+
+Restricts splitter to move a multiple of the specified units.
+
+```csharp
+public System.Double DragIncrement { get; set; }
+```
+
+<span id="uid-d69e19f5c6"></span>
+
+### KeyboardIncrement
+
+The Distance to move the splitter when pressing the keyboard arrow keys.
+
+```csharp
+public System.Double KeyboardIncrement { get; set; }
+```
+
+<span id="uid-7e099a46e3"></span>
+
+### PreviewContent
+
+Gets or sets content that will be shown when [Avalonia.Controls.GridSplitter.ShowsPreview](xref:Avalonia.Controls.GridSplitter.ShowsPreview) is enabled and user starts resize operation.
+
+```csharp
+public Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> PreviewContent { get; set; }
+```
+
+<span id="uid-94a2a21f68"></span>
+
+### ResizeBehavior
+
+Indicates which Columns or Rows the Splitter resizes.
+
+```csharp
+public Avalonia.Controls.GridResizeBehavior ResizeBehavior { get; set; }
+```
+
+<span id="uid-408eb6bd69"></span>
+
+### ResizeDirection
+
+Indicates whether the Splitter resizes the Columns, Rows, or Both.
+
+```csharp
+public Avalonia.Controls.GridResizeDirection ResizeDirection { get; set; }
+```
+
+<span id="uid-14b21d414d"></span>
+
+### ShowsPreview
+
+Indicates whether to Preview the column resizing without updating layout.
+
+```csharp
+public System.Boolean ShowsPreview { get; set; }
+```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DragIncrementProperty](#uid-fe5791cdc8) | Defines the Avalonia.Controls.GridSplitter.DragIncrement property. |
+| [KeyboardIncrementProperty](#uid-74c3498353) | Defines the Avalonia.Controls.GridSplitter.KeyboardIncrement property. |
+| [PreviewContentProperty](#uid-84dc46ebcd) | Defines the Avalonia.Controls.GridSplitter.PreviewContent property. |
+| [ResizeBehaviorProperty](#uid-faab666912) | Defines the Avalonia.Controls.GridSplitter.ResizeBehavior property. |
+| [ResizeDirectionProperty](#uid-a07e374638) | Defines the Avalonia.Controls.GridSplitter.ResizeDirection property. |
+| [ShowsPreviewProperty](#uid-9004e2d3df) | Defines the Avalonia.Controls.GridSplitter.ShowsPreview property. |
+
+<span id="uid-fe5791cdc8"></span>
+
+### DragIncrementProperty
+
+Defines the [Avalonia.Controls.GridSplitter.DragIncrement](xref:Avalonia.Controls.GridSplitter.DragIncrement) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> DragIncrementProperty
+```
+
+<span id="uid-74c3498353"></span>
+
+### KeyboardIncrementProperty
+
+Defines the [Avalonia.Controls.GridSplitter.KeyboardIncrement](xref:Avalonia.Controls.GridSplitter.KeyboardIncrement) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Double> KeyboardIncrementProperty
+```
+
+<span id="uid-84dc46ebcd"></span>
+
+### PreviewContentProperty
+
+Defines the [Avalonia.Controls.GridSplitter.PreviewContent](xref:Avalonia.Controls.GridSplitter.PreviewContent) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control>> PreviewContentProperty
+```
+
+<span id="uid-faab666912"></span>
+
+### ResizeBehaviorProperty
+
+Defines the [Avalonia.Controls.GridSplitter.ResizeBehavior](xref:Avalonia.Controls.GridSplitter.ResizeBehavior) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.GridResizeBehavior> ResizeBehaviorProperty
+```
+
+<span id="uid-a07e374638"></span>
+
+### ResizeDirectionProperty
+
+Defines the [Avalonia.Controls.GridSplitter.ResizeDirection](xref:Avalonia.Controls.GridSplitter.ResizeDirection) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.GridResizeDirection> ResizeDirectionProperty
+```
+
+<span id="uid-9004e2d3df"></span>
+
+### ShowsPreviewProperty
+
+Defines the [Avalonia.Controls.GridSplitter.ShowsPreview](xref:Avalonia.Controls.GridSplitter.ShowsPreview) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Boolean> ShowsPreviewProperty
+```
+
+</ApiRefPage>
+

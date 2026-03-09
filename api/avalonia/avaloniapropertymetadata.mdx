@@ -1,0 +1,154 @@
+---
+title: 'AvaloniaPropertyMetadata'
+hide_title: true
+slug: '/avalonia/avaloniapropertymetadata'
+uid: 'Avalonia.AvaloniaPropertyMetadata'
+commentId: 'T:Avalonia.AvaloniaPropertyMetadata'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaPropertyMetadata Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for avalonia property metadata.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaPropertyMetadata
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaPropertyMetadata
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaPropertyMetadata](#uid-a98bf6b1d8) | No summary available. |
+
+<span id="uid-a98bf6b1d8"></span>
+
+### AvaloniaPropertyMetadata
+
+```csharp
+public AvaloniaPropertyMetadata(Avalonia.Data.BindingMode defaultBindingMode, System.Nullable<System.Boolean> enableDataValidation)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Freeze](#uid-db1cdb0cff) | Makes this instance read-only. No further modifications are allowed after this call. |
+| [GenerateTypeSafeMetadata](#uid-2221ececec) | Gets a copy of this object configured for use with any owner type. |
+| [Merge](#uid-92919180d4) | Merges the metadata with the base metadata. |
+
+<span id="uid-db1cdb0cff"></span>
+
+### Freeze
+
+Makes this instance read-only.
+No further modifications are allowed after this call.
+
+```csharp
+public System.Void Freeze()
+```
+
+<span id="uid-2221ececec"></span>
+
+### GenerateTypeSafeMetadata
+
+Gets a copy of this object configured for use with any owner type.
+
+```csharp
+public Avalonia.AvaloniaPropertyMetadata GenerateTypeSafeMetadata()
+```
+
+<span id="uid-92919180d4"></span>
+
+### Merge
+
+Merges the metadata with the base metadata.
+
+```csharp
+public System.Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `baseMetadata` | The base metadata to merge. |
+| `property` | The property to which the metadata is being applied. |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DefaultBindingMode](#uid-b6d03b8752) | Gets the default binding mode for the property. |
+| [EnableDataValidation](#uid-aa782b0da1) | Gets a value indicating whether the property is interested in data validation. |
+| [IsReadOnly](#uid-8222a9d293) | Gets whether this instance is read-only and can't be modified. |
+
+<span id="uid-b6d03b8752"></span>
+
+### DefaultBindingMode
+
+Gets the default binding mode for the property.
+
+```csharp
+public Avalonia.Data.BindingMode DefaultBindingMode { get; set; }
+```
+
+<span id="uid-aa782b0da1"></span>
+
+### EnableDataValidation
+
+Gets a value indicating whether the property is interested in data validation.
+
+```csharp
+public System.Nullable<System.Boolean> EnableDataValidation { get; set; }
+```
+
+<span id="uid-8222a9d293"></span>
+
+### IsReadOnly
+
+Gets whether this instance is read-only and can't be modified.
+
+```csharp
+public System.Boolean IsReadOnly { get; set; }
+```
+
+</ApiRefPage>
+

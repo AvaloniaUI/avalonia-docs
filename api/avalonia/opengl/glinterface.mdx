@@ -1,0 +1,869 @@
+---
+title: 'GlInterface'
+hide_title: true
+slug: '/avalonia/opengl/glinterface'
+uid: 'Avalonia.OpenGL.GlInterface'
+commentId: 'T:Avalonia.OpenGL.GlInterface'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GlInterface Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+GlInterface only includes essential members and members necessary for Avalonia itself.
+It is not a general-purpose interface for OpenGL API.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GlInterface
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="glbasicinfointerface">GlBasicInfoInterface</a> <span className="apiref-page__relation-separator">-&gt;</span> GlInterface
+</div>
+</div>
+
+## Remarks
+
+Use [Avalonia.OpenGL.GlInterface.GetProcAddress(System.String)](xref:Avalonia.OpenGL.GlInterface.GetProcAddress%28System.String%29) to get GL procedures you need, or integrate it with third-party GL wrappers.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GlInterface](#uid-4ad6089ffd) | No summary available. |
+
+<span id="uid-4ad6089ffd"></span>
+
+### GlInterface
+
+```csharp
+public GlInterface(Avalonia.OpenGL.GlVersion version, System.Func<System.String, System.IntPtr> getProcAddress)
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ActiveTexture](#uid-5bf3b91701) | No summary available. |
+| [AttachShader](#uid-418a32f834) | No summary available. |
+| [BindAttribLocation](#uid-3e0fecf1f5) | No summary available. |
+| [BindAttribLocationString](#uid-8e562023fa) | No summary available. |
+| [BindBuffer](#uid-ab35a3b66d) | No summary available. |
+| [BindFramebuffer](#uid-839838940c) | No summary available. |
+| [BindRenderbuffer](#uid-d08ffd18fa) | No summary available. |
+| [BindTexture](#uid-8aa86a2cf7) | No summary available. |
+| [BindVertexArray](#uid-e4270e9f8e) | No summary available. |
+| [BlitFramebuffer](#uid-763ffad6f1) | No summary available. |
+| [BufferData](#uid-aaa36e6681) | No summary available. |
+| [CheckFramebufferStatus](#uid-a8c4b494a0) | No summary available. |
+| [Clear](#uid-56b61bd229) | No summary available. |
+| [ClearColor](#uid-9ba4562ba8) | No summary available. |
+| [ClearDepth](#uid-08c809bba8) | No summary available. |
+| [ClearStencil](#uid-ce6adec6f9) | No summary available. |
+| [CompileShader](#uid-5a7bf70632) | No summary available. |
+| [CompileShaderAndGetError](#uid-61d47c2296) | No summary available. |
+| [CopyTexSubImage2D](#uid-34571c355d) | No summary available. |
+| [CreateProgram](#uid-b0d0d32c1e) | No summary available. |
+| [CreateShader](#uid-ac04ccd26c) | No summary available. |
+| [DeleteBuffer](#uid-547febd8f0) | No summary available. |
+| [DeleteBuffers](#uid-65d7c79ff5) | No summary available. |
+| [DeleteFramebuffer](#uid-a298001b6b) | No summary available. |
+| [DeleteFramebuffers](#uid-4d5f78a054) | No summary available. |
+| [DeleteProgram](#uid-c2e8aef2ae) | No summary available. |
+| [DeleteRenderbuffer](#uid-c353f22da5) | No summary available. |
+| [DeleteRenderbuffers](#uid-fe0ed42dd4) | No summary available. |
+| [DeleteShader](#uid-9060aced7b) | No summary available. |
+| [DeleteTexture](#uid-357b3f7750) | No summary available. |
+| [DeleteTextures](#uid-63ea48a851) | No summary available. |
+| [DeleteVertexArray](#uid-9e48b9cfd0) | No summary available. |
+| [DeleteVertexArrays](#uid-6ea5cc9959) | No summary available. |
+| [DepthFunc](#uid-2c34c2bced) | No summary available. |
+| [DepthMask](#uid-41d40e4c0b) | No summary available. |
+| [Disable](#uid-6b2cc85dd0) | No summary available. |
+| [DrawArrays](#uid-d3a884f043) | No summary available. |
+| [DrawElements](#uid-ea6a2579e2) | No summary available. |
+| [Enable](#uid-f10cec6e90) | No summary available. |
+| [EnableVertexAttribArray](#uid-0eb6735fad) | No summary available. |
+| [Finish](#uid-1838ef846d) | No summary available. |
+| [Flush](#uid-3a05fe0ae1) | No summary available. |
+| [FramebufferRenderbuffer](#uid-bb8978d295) | No summary available. |
+| [FramebufferTexture2D](#uid-49a3cadc24) | No summary available. |
+| [FromNativeUtf8GetProcAddress](#uid-27803329bb) | No summary available. |
+| [GenBuffer](#uid-319b006ae4) | No summary available. |
+| [GenBuffers](#uid-6b22ed580e) | No summary available. |
+| [GenFramebuffer](#uid-3881e99fc6) | No summary available. |
+| [GenFramebuffers](#uid-cd33a433e4) | No summary available. |
+| [GenRenderbuffer](#uid-f2f0d9a6d9) | No summary available. |
+| [GenRenderbuffers](#uid-cca04c199d) | No summary available. |
+| [GenTexture](#uid-320d2ad493) | No summary available. |
+| [GenTextures](#uid-4a81918c26) | No summary available. |
+| [GenVertexArray](#uid-d447ca3613) | No summary available. |
+| [GenVertexArrays](#uid-463e1d8909) | No summary available. |
+| [GetAttribLocation](#uid-d3dcf31f83) | No summary available. |
+| [GetAttribLocationString](#uid-113562fe1e) | No summary available. |
+| [GetProcAddress](#uid-235411e7d9) | Returns an OpenGL function by name. |
+| [GetProgramInfoLog](#uid-a2222cb704) | No summary available. |
+| [GetProgramiv](#uid-6694e2ab22) | No summary available. |
+| [GetRenderbufferParameteriv](#uid-0d0bc985b6) | No summary available. |
+| [GetShaderInfoLog](#uid-c02f6a1f7f) | No summary available. |
+| [GetShaderiv](#uid-c62e662122) | No summary available. |
+| [GetUniformLocation](#uid-013f2ae8ae) | No summary available. |
+| [GetUniformLocationString](#uid-269c0cbc80) | No summary available. |
+| [LinkProgram](#uid-a8294a5f2b) | No summary available. |
+| [LinkProgramAndGetError](#uid-5ac3785672) | No summary available. |
+| [RenderbufferStorage](#uid-a543469bca) | No summary available. |
+| [ShaderSource](#uid-357d1c6697) | No summary available. |
+| [ShaderSourceString](#uid-2e04d5997d) | No summary available. |
+| [TexImage2D](#uid-ad49471c4b) | No summary available. |
+| [TexParameteri](#uid-9bc8a961f8) | No summary available. |
+| [Uniform1f](#uid-43d103169e) | No summary available. |
+| [Uniform1i](#uid-78e1540108) | No summary available. |
+| [UniformMatrix4fv](#uid-6e94672d0b) | No summary available. |
+| [UseProgram](#uid-c8518c48ae) | No summary available. |
+| [VertexAttribPointer](#uid-0674e7c6d3) | No summary available. |
+| [Viewport](#uid-ca1437e6df) | No summary available. |
+
+<span id="uid-5bf3b91701"></span>
+
+### ActiveTexture
+
+```csharp
+public System.Void ActiveTexture(System.Int32 texture)
+```
+
+<span id="uid-418a32f834"></span>
+
+### AttachShader
+
+```csharp
+public System.Void AttachShader(System.Int32 program, System.Int32 shader)
+```
+
+<span id="uid-3e0fecf1f5"></span>
+
+### BindAttribLocation
+
+```csharp
+public System.Void BindAttribLocation(System.Int32 program, System.Int32 index, System.IntPtr name)
+```
+
+<span id="uid-8e562023fa"></span>
+
+### BindAttribLocationString
+
+```csharp
+public System.Void BindAttribLocationString(System.Int32 program, System.Int32 index, System.String name)
+```
+
+<span id="uid-ab35a3b66d"></span>
+
+### BindBuffer
+
+```csharp
+public System.Void BindBuffer(System.Int32 target, System.Int32 buffer)
+```
+
+<span id="uid-839838940c"></span>
+
+### BindFramebuffer
+
+```csharp
+public System.Void BindFramebuffer(System.Int32 target, System.Int32 fb)
+```
+
+<span id="uid-d08ffd18fa"></span>
+
+### BindRenderbuffer
+
+```csharp
+public System.Void BindRenderbuffer(System.Int32 target, System.Int32 fb)
+```
+
+<span id="uid-8aa86a2cf7"></span>
+
+### BindTexture
+
+```csharp
+public System.Void BindTexture(System.Int32 target, System.Int32 fb)
+```
+
+<span id="uid-e4270e9f8e"></span>
+
+### BindVertexArray
+
+```csharp
+public System.Void BindVertexArray(System.Int32 array)
+```
+
+<span id="uid-763ffad6f1"></span>
+
+### BlitFramebuffer
+
+```csharp
+public System.Void BlitFramebuffer(System.Int32 srcX0, System.Int32 srcY0, System.Int32 srcX1, System.Int32 srcY1, System.Int32 dstX0, System.Int32 dstY0, System.Int32 dstX1, System.Int32 dstY1, System.Int32 mask, System.Int32 filter)
+```
+
+<span id="uid-aaa36e6681"></span>
+
+### BufferData
+
+```csharp
+public System.Void BufferData(System.Int32 target, System.IntPtr size, System.IntPtr data, System.Int32 usage)
+```
+
+<span id="uid-a8c4b494a0"></span>
+
+### CheckFramebufferStatus
+
+```csharp
+public System.Int32 CheckFramebufferStatus(System.Int32 target)
+```
+
+<span id="uid-56b61bd229"></span>
+
+### Clear
+
+```csharp
+public System.Void Clear(System.Int32 bits)
+```
+
+<span id="uid-9ba4562ba8"></span>
+
+### ClearColor
+
+```csharp
+public System.Void ClearColor(System.Single r, System.Single g, System.Single b, System.Single a)
+```
+
+<span id="uid-08c809bba8"></span>
+
+### ClearDepth
+
+```csharp
+public System.Void ClearDepth(System.Single value)
+```
+
+<span id="uid-ce6adec6f9"></span>
+
+### ClearStencil
+
+```csharp
+public System.Void ClearStencil(System.Int32 s)
+```
+
+<span id="uid-5a7bf70632"></span>
+
+### CompileShader
+
+```csharp
+public System.Void CompileShader(System.Int32 shader)
+```
+
+<span id="uid-61d47c2296"></span>
+
+### CompileShaderAndGetError
+
+```csharp
+public System.String CompileShaderAndGetError(System.Int32 shader, System.String source)
+```
+
+<span id="uid-34571c355d"></span>
+
+### CopyTexSubImage2D
+
+```csharp
+public System.Void CopyTexSubImage2D(System.Int32 target, System.Int32 level, System.Int32 xoffset, System.Int32 yoffset, System.Int32 x, System.Int32 y, System.Int32 width, System.Int32 height)
+```
+
+<span id="uid-b0d0d32c1e"></span>
+
+### CreateProgram
+
+```csharp
+public System.Int32 CreateProgram()
+```
+
+<span id="uid-ac04ccd26c"></span>
+
+### CreateShader
+
+```csharp
+public System.Int32 CreateShader(System.Int32 shaderType)
+```
+
+<span id="uid-547febd8f0"></span>
+
+### DeleteBuffer
+
+```csharp
+public System.Void DeleteBuffer(System.Int32 buffer)
+```
+
+<span id="uid-65d7c79ff5"></span>
+
+### DeleteBuffers
+
+```csharp
+public System.Void DeleteBuffers(System.Int32 count, System.Int32* buffers)
+```
+
+<span id="uid-a298001b6b"></span>
+
+### DeleteFramebuffer
+
+```csharp
+public System.Void DeleteFramebuffer(System.Int32 fb)
+```
+
+<span id="uid-4d5f78a054"></span>
+
+### DeleteFramebuffers
+
+```csharp
+public System.Void DeleteFramebuffers(System.Int32 count, System.Int32* framebuffers)
+```
+
+<span id="uid-c2e8aef2ae"></span>
+
+### DeleteProgram
+
+```csharp
+public System.Void DeleteProgram(System.Int32 program)
+```
+
+<span id="uid-c353f22da5"></span>
+
+### DeleteRenderbuffer
+
+```csharp
+public System.Void DeleteRenderbuffer(System.Int32 renderbuffer)
+```
+
+<span id="uid-fe0ed42dd4"></span>
+
+### DeleteRenderbuffers
+
+```csharp
+public System.Void DeleteRenderbuffers(System.Int32 count, System.Int32* renderbuffers)
+```
+
+<span id="uid-9060aced7b"></span>
+
+### DeleteShader
+
+```csharp
+public System.Void DeleteShader(System.Int32 shader)
+```
+
+<span id="uid-357b3f7750"></span>
+
+### DeleteTexture
+
+```csharp
+public System.Void DeleteTexture(System.Int32 texture)
+```
+
+<span id="uid-63ea48a851"></span>
+
+### DeleteTextures
+
+```csharp
+public System.Void DeleteTextures(System.Int32 count, System.Int32* textures)
+```
+
+<span id="uid-9e48b9cfd0"></span>
+
+### DeleteVertexArray
+
+```csharp
+public System.Void DeleteVertexArray(System.Int32 array)
+```
+
+<span id="uid-6ea5cc9959"></span>
+
+### DeleteVertexArrays
+
+```csharp
+public System.Void DeleteVertexArrays(System.Int32 count, System.Int32* arrays)
+```
+
+<span id="uid-2c34c2bced"></span>
+
+### DepthFunc
+
+```csharp
+public System.Void DepthFunc(System.Int32 value)
+```
+
+<span id="uid-41d40e4c0b"></span>
+
+### DepthMask
+
+```csharp
+public System.Void DepthMask(System.Int32 value)
+```
+
+<span id="uid-6b2cc85dd0"></span>
+
+### Disable
+
+```csharp
+public System.Void Disable(System.Int32 what)
+```
+
+<span id="uid-d3a884f043"></span>
+
+### DrawArrays
+
+```csharp
+public System.Void DrawArrays(System.Int32 mode, System.Int32 first, System.IntPtr count)
+```
+
+<span id="uid-ea6a2579e2"></span>
+
+### DrawElements
+
+```csharp
+public System.Void DrawElements(System.Int32 mode, System.Int32 count, System.Int32 type, System.IntPtr indices)
+```
+
+<span id="uid-f10cec6e90"></span>
+
+### Enable
+
+```csharp
+public System.Void Enable(System.Int32 what)
+```
+
+<span id="uid-0eb6735fad"></span>
+
+### EnableVertexAttribArray
+
+```csharp
+public System.Void EnableVertexAttribArray(System.Int32 index)
+```
+
+<span id="uid-1838ef846d"></span>
+
+### Finish
+
+```csharp
+public System.Void Finish()
+```
+
+<span id="uid-3a05fe0ae1"></span>
+
+### Flush
+
+```csharp
+public System.Void Flush()
+```
+
+<span id="uid-bb8978d295"></span>
+
+### FramebufferRenderbuffer
+
+```csharp
+public System.Void FramebufferRenderbuffer(System.Int32 target, System.Int32 attachment, System.Int32 renderbufferTarget, System.Int32 renderbuffer)
+```
+
+<span id="uid-49a3cadc24"></span>
+
+### FramebufferTexture2D
+
+```csharp
+public System.Void FramebufferTexture2D(System.Int32 target, System.Int32 attachment, System.Int32 texTarget, System.Int32 texture, System.Int32 level)
+```
+
+<span id="uid-27803329bb"></span>
+
+### FromNativeUtf8GetProcAddress
+
+```csharp
+public Avalonia.OpenGL.GlInterface FromNativeUtf8GetProcAddress(Avalonia.OpenGL.GlVersion version, System.Func<System.IntPtr, System.IntPtr> getProcAddress)
+```
+
+<span id="uid-319b006ae4"></span>
+
+### GenBuffer
+
+```csharp
+public System.Int32 GenBuffer()
+```
+
+<span id="uid-6b22ed580e"></span>
+
+### GenBuffers
+
+```csharp
+public System.Void GenBuffers(System.Int32 len, System.Int32* rv)
+```
+
+<span id="uid-3881e99fc6"></span>
+
+### GenFramebuffer
+
+```csharp
+public System.Int32 GenFramebuffer()
+```
+
+<span id="uid-cd33a433e4"></span>
+
+### GenFramebuffers
+
+```csharp
+public System.Void GenFramebuffers(System.Int32 count, System.Int32* res)
+```
+
+<span id="uid-f2f0d9a6d9"></span>
+
+### GenRenderbuffer
+
+```csharp
+public System.Int32 GenRenderbuffer()
+```
+
+<span id="uid-cca04c199d"></span>
+
+### GenRenderbuffers
+
+```csharp
+public System.Void GenRenderbuffers(System.Int32 count, System.Int32* res)
+```
+
+<span id="uid-320d2ad493"></span>
+
+### GenTexture
+
+```csharp
+public System.Int32 GenTexture()
+```
+
+<span id="uid-4a81918c26"></span>
+
+### GenTextures
+
+```csharp
+public System.Void GenTextures(System.Int32 count, System.Int32* res)
+```
+
+<span id="uid-d447ca3613"></span>
+
+### GenVertexArray
+
+```csharp
+public System.Int32 GenVertexArray()
+```
+
+<span id="uid-463e1d8909"></span>
+
+### GenVertexArrays
+
+```csharp
+public System.Void GenVertexArrays(System.Int32 n, System.Int32* rv)
+```
+
+<span id="uid-d3dcf31f83"></span>
+
+### GetAttribLocation
+
+```csharp
+public System.Int32 GetAttribLocation(System.Int32 program, System.IntPtr name)
+```
+
+<span id="uid-113562fe1e"></span>
+
+### GetAttribLocationString
+
+```csharp
+public System.Int32 GetAttribLocationString(System.Int32 program, System.String name)
+```
+
+<span id="uid-235411e7d9"></span>
+
+### GetProcAddress
+
+Returns an OpenGL function by name.
+
+```csharp
+public System.IntPtr GetProcAddress(System.String proc)
+```
+
+| Parameter | Description |
+| --- | --- |
+| `proc` | Function name. |
+
+Returns: Handle of function, which can be casted to unmanaged function pointer.
+
+<span id="uid-a2222cb704"></span>
+
+### GetProgramInfoLog
+
+```csharp
+public System.Void GetProgramInfoLog(System.Int32 program, System.Int32 maxLength, System.Int32& len, System.Void* infoLog)
+```
+
+<span id="uid-6694e2ab22"></span>
+
+### GetProgramiv
+
+```csharp
+public System.Void GetProgramiv(System.Int32 program, System.Int32 name, System.Int32* parameters)
+```
+
+<span id="uid-0d0bc985b6"></span>
+
+### GetRenderbufferParameteriv
+
+```csharp
+public System.Void GetRenderbufferParameteriv(System.Int32 target, System.Int32 name, System.Int32& value)
+```
+
+<span id="uid-c02f6a1f7f"></span>
+
+### GetShaderInfoLog
+
+```csharp
+public System.Void GetShaderInfoLog(System.Int32 shader, System.Int32 maxLength, System.Int32& length, System.Void* infoLog)
+```
+
+<span id="uid-c62e662122"></span>
+
+### GetShaderiv
+
+```csharp
+public System.Void GetShaderiv(System.Int32 shader, System.Int32 name, System.Int32* parameters)
+```
+
+<span id="uid-013f2ae8ae"></span>
+
+### GetUniformLocation
+
+```csharp
+public System.Int32 GetUniformLocation(System.Int32 program, System.IntPtr name)
+```
+
+<span id="uid-269c0cbc80"></span>
+
+### GetUniformLocationString
+
+```csharp
+public System.Int32 GetUniformLocationString(System.Int32 program, System.String name)
+```
+
+<span id="uid-a8294a5f2b"></span>
+
+### LinkProgram
+
+```csharp
+public System.Void LinkProgram(System.Int32 program)
+```
+
+<span id="uid-5ac3785672"></span>
+
+### LinkProgramAndGetError
+
+```csharp
+public System.String LinkProgramAndGetError(System.Int32 program)
+```
+
+<span id="uid-a543469bca"></span>
+
+### RenderbufferStorage
+
+```csharp
+public System.Void RenderbufferStorage(System.Int32 target, System.Int32 internalFormat, System.Int32 width, System.Int32 height)
+```
+
+<span id="uid-357d1c6697"></span>
+
+### ShaderSource
+
+```csharp
+public System.Void ShaderSource(System.Int32 shader, System.Int32 count, System.IntPtr strings, System.IntPtr lengths)
+```
+
+<span id="uid-2e04d5997d"></span>
+
+### ShaderSourceString
+
+```csharp
+public System.Void ShaderSourceString(System.Int32 shader, System.String source)
+```
+
+<span id="uid-ad49471c4b"></span>
+
+### TexImage2D
+
+```csharp
+public System.Void TexImage2D(System.Int32 target, System.Int32 level, System.Int32 internalFormat, System.Int32 width, System.Int32 height, System.Int32 border, System.Int32 format, System.Int32 type, System.IntPtr data)
+```
+
+<span id="uid-9bc8a961f8"></span>
+
+### TexParameteri
+
+```csharp
+public System.Void TexParameteri(System.Int32 target, System.Int32 name, System.Int32 value)
+```
+
+<span id="uid-43d103169e"></span>
+
+### Uniform1f
+
+```csharp
+public System.Void Uniform1f(System.Int32 location, System.Single falue)
+```
+
+<span id="uid-78e1540108"></span>
+
+### Uniform1i
+
+```csharp
+public System.Void Uniform1i(System.Int32 location, System.Int32 value)
+```
+
+<span id="uid-6e94672d0b"></span>
+
+### UniformMatrix4fv
+
+```csharp
+public System.Void UniformMatrix4fv(System.Int32 location, System.Int32 count, System.Boolean transpose, System.Void* value)
+```
+
+<span id="uid-c8518c48ae"></span>
+
+### UseProgram
+
+```csharp
+public System.Void UseProgram(System.Int32 program)
+```
+
+<span id="uid-0674e7c6d3"></span>
+
+### VertexAttribPointer
+
+```csharp
+public System.Void VertexAttribPointer(System.Int32 index, System.Int32 size, System.Int32 type, System.Int32 normalized, System.Int32 stride, System.IntPtr pointer)
+```
+
+<span id="uid-ca1437e6df"></span>
+
+### Viewport
+
+```csharp
+public System.Void Viewport(System.Int32 x, System.Int32 y, System.Int32 width, System.Int32 height)
+```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ContextInfo](#uid-e5d711ad1c) | No summary available. |
+| [IsBindVertexArrayAvailable](#uid-35d5d10cba) | No summary available. |
+| [IsBlitFramebufferAvailable](#uid-819722db71) | No summary available. |
+| [IsDeleteVertexArraysAvailable](#uid-26a96e8953) | No summary available. |
+| [IsGenVertexArraysAvailable](#uid-31ec4cb68b) | No summary available. |
+| [Renderer](#uid-a4cbddaeb4) | No summary available. |
+| [Vendor](#uid-a0d1f59df7) | No summary available. |
+| [Version](#uid-499f67454c) | No summary available. |
+
+<span id="uid-e5d711ad1c"></span>
+
+### ContextInfo
+
+```csharp
+public Avalonia.OpenGL.GlInterface.GlContextInfo ContextInfo { get; set; }
+```
+
+<span id="uid-35d5d10cba"></span>
+
+### IsBindVertexArrayAvailable
+
+```csharp
+public System.Boolean IsBindVertexArrayAvailable { get; set; }
+```
+
+<span id="uid-819722db71"></span>
+
+### IsBlitFramebufferAvailable
+
+```csharp
+public System.Boolean IsBlitFramebufferAvailable { get; set; }
+```
+
+<span id="uid-26a96e8953"></span>
+
+### IsDeleteVertexArraysAvailable
+
+```csharp
+public System.Boolean IsDeleteVertexArraysAvailable { get; set; }
+```
+
+<span id="uid-31ec4cb68b"></span>
+
+### IsGenVertexArraysAvailable
+
+```csharp
+public System.Boolean IsGenVertexArraysAvailable { get; set; }
+```
+
+<span id="uid-a4cbddaeb4"></span>
+
+### Renderer
+
+```csharp
+public System.String Renderer { get; set; }
+```
+
+<span id="uid-a0d1f59df7"></span>
+
+### Vendor
+
+```csharp
+public System.String Vendor { get; set; }
+```
+
+<span id="uid-499f67454c"></span>
+
+### Version
+
+```csharp
+public System.String Version { get; set; }
+```
+
+</ApiRefPage>
+
