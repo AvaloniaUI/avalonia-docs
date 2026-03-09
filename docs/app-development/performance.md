@@ -72,6 +72,61 @@ Virtualization requires a constrained height. If the items control is inside a `
 
 A `BufferFactor` of `1` realizes items across one extra viewport height above and below the visible area. The default is `0` (no buffer). Higher values use more memory but produce smoother scrolling for complex item templates.
 
+### Variable-height items
+
+`VirtualizingStackPanel` works best when all items have the same height. When items have variable heights, the panel must estimate total scroll extent based on measured items, which can cause scroll bar jumps and layout recalculations. If your items vary significantly in height, consider these strategies:
+
+- **Use a uniform estimated height.** Give all items a fixed `Height` or `MinHeight` so the virtualizing panel can calculate scroll extent accurately. Allow content to clip or scroll internally if it exceeds the estimated size.
+- **Flatten hierarchical data.** Instead of nesting expanders inside a virtualizing list, flatten the tree into a single list with indent levels. This lets the virtualizing panel manage all rows directly. `TreeView` uses this approach internally.
+- **Limit realized items.** If virtualization is not feasible (for example, a complex property grid with expanders), limit how many controls exist at once. Load only the visible section and create additional items on demand as the user expands or scrolls.
+
+### Reduce control template complexity
+
+Complex controls like `TextBox` contain a deep visual tree (borders, scroll viewers, watermark layers). When you create thousands of them, template instantiation and measurement dominate startup time.
+
+**Use lightweight controls for display, swap on interaction.** Show values with `TextBlock` (which has a minimal visual tree) and replace with a `TextBox` only when the user clicks to edit:
+
+```csharp
+// In your DataTemplate code-behind or custom control
+var display = new TextBlock { Text = field.Value };
+display.PointerPressed += (s, e) =>
+{
+    var editor = new TextBox { Text = field.Value };
+    editor.LostFocus += (s2, e2) =>
+    {
+        field.Value = editor.Text;
+        parent.Children.Remove(editor);
+        parent.Children.Add(display);
+    };
+    parent.Children.Remove(display);
+    parent.Children.Add(editor);
+};
+```
+
+**Re-template heavy controls.** If you must use `TextBox` everywhere, create a simplified control theme that removes unnecessary visual elements (watermark, clear button, scroll viewer) to reduce the visual tree depth:
+
+```xml
+<ControlTheme x:Key="LightTextBox" TargetType="TextBox">
+    <Setter Property="Template">
+        <ControlTemplate>
+            <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                <TextPresenter Name="PART_TextPresenter"
+                               Text="{TemplateBinding Text}"
+                               CaretBrush="{TemplateBinding CaretBrush}" />
+            </Border>
+        </ControlTemplate>
+    </Setter>
+</ControlTheme>
+```
+
+Apply it to controls that do not need the full feature set:
+
+```xml
+<TextBox Theme="{StaticResource LightTextBox}" Text="{Binding Value}" />
+```
+
 ## Layout performance
 
 ### Avoid deep nesting
@@ -245,6 +300,31 @@ foreach (var item in newItems)
 Items = new ObservableCollection<Item>(newItems);
 OnPropertyChanged(nameof(Items));
 ```
+
+### Incremental loading
+
+When you must create many controls without virtualization (for example, a property grid or inspector panel), adding them all at once blocks the UI thread during measurement. Instead, add items in batches and yield to the dispatcher between each batch so the UI remains responsive:
+
+```csharp
+private async Task LoadItemsIncrementally(IList<ItemViewModel> items, Panel container)
+{
+    const int batchSize = 50;
+
+    for (int i = 0; i < items.Count; i += batchSize)
+    {
+        var batch = items.Skip(i).Take(batchSize);
+        foreach (var item in batch)
+        {
+            container.Children.Add(CreateControl(item));
+        }
+
+        // Yield to the UI thread so the frame can render
+        await Dispatcher.UIThread.Yield(DispatcherPriority.Background);
+    }
+}
+```
+
+Choose a batch size large enough to fill the visible area on the first pass. This lets the user see content immediately while remaining items load progressively.
 
 ### Use DynamicData for large reactive collections
 
