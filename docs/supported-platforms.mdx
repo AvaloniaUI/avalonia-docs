@@ -57,7 +57,7 @@ For native menus, platform conventions, and embedding native views, see the [mac
 | iOS 18.x | ARM64 | <TierBadge tier={2} /> |
 | iOS 17.x and earlier | ARM64 | <TierBadge tier={3} /> |
 
-**Minimum .NET SDK:** .NET 6.0.200 (for tooling support).
+**Minimum .NET version:** .NET 10.0. Mobile .NET versions follow the [MAUI support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui). Microsoft removed .NET 8 mobile workloads from the .NET 10 SDK, so .NET 8 iOS builds are not available when using the .NET 10 SDK.
 
 For setup instructions, see the [iOS platform guide](/docs/platform-specific-guides/ios).
 
@@ -71,7 +71,7 @@ For setup instructions, see the [iOS platform guide](/docs/platform-specific-gui
 | Android 12 to 15 | API 31 to 35 | ARM64, ARM32, x64 | <TierBadge tier={2} /> |
 | Android 11 and earlier | API 30 and below | | <TierBadge tier={3} /> |
 
-**Minimum .NET SDK:** .NET 6.0.200 (for tooling support).
+**Minimum .NET version:** .NET 10.0. Mobile .NET versions follow the [MAUI support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui). Microsoft removed .NET 8 mobile workloads from the .NET 10 SDK, so .NET 8 Android builds are not available when using the .NET 10 SDK.
 
 For setup instructions, see the [Android platform guide](/docs/platform-specific-guides/android).
 
@@ -126,11 +126,11 @@ For setup and deployment, see the [WebAssembly platform guide](/docs/platform-sp
 
 ## .NET version requirements
 
-| Target | Minimum .NET version |
-|---|---|
-| Desktop (Windows, macOS, Linux) | .NET 8.0 |
-| iOS / Android | .NET 8.0 (SDK 6.0.200+ for tooling) |
-| WebAssembly | .NET 8.0 |
+| Target | Minimum .NET version | Notes |
+|---|---|---|
+| Desktop (Windows, macOS, Linux) | .NET 8.0 | Follows standard .NET LTS support. |
+| iOS / Android | .NET 10.0 | Mobile .NET versions follow the [MAUI support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui). .NET 8 mobile workloads are not available in the .NET 10 SDK. |
+| WebAssembly | .NET 8.0 | |
 
 ## Contributing platform-specific fixes
 
