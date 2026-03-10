@@ -2,6 +2,7 @@
 id: windowdrawndecorations
 title: WindowDrawnDecorations
 description: A logical element that manages the client-side presentation of window decorations, such as the titlebar and frame. It also defines interactions with caption buttons.
+doc-type: reference
 ---
 
 `WindowDrawnDecorations` is not a visual control, but a logical element that holds the template and properties of window decorations, such as the titlebar and frame, in order to manage their client-side presentation.
@@ -12,7 +13,7 @@ This control replaces the `TitleBar`, `CaptionButtons` and `ChromeOverlayLayer` 
 
 ## When to use
 
-Use `WindowDrawnDecorations` to customize your window decorations—titlebar, caption buttons, resize grips, etc.—when you wish them to look different from the system default.
+Use `WindowDrawnDecorations` to create customized window decorations—titlebar, frame, caption buttons, resize grips, etc.
 
 ## Namespace
 
@@ -20,15 +21,15 @@ Located in `Avalonia.Controls.Chrome`.
 
 ## Visual tree structure
 
-Visual elements in `WindowDrawnDecorations` are divided into **underlay**, **overlay** and **popover** layers.  `TopLevelHost` builds the visual tree according to this structure:
+Visual elements in `WindowDrawnDecorations` are divided into **underlay**, **overlay** and **popover** layers. They are built into a visual tree according to this structure:
 
 ```
-TopLevelHost              (visual root, rendered by PresentationSource)
+Visual root
 ├── Underlay layer        (from template: borders, background, shadow area content)
 ├── TopLevel/Window       (client area: Window.Bounds matches this)
 ├── Overlay layer         (from template: titlebar, caption buttons)
-├── FullscreenPopover     (from template: hover-triggered titlebar for fullscreen)
-└── Resize hit-test zones (automatic, invisible, based on FrameThickness)
+├── FullscreenPopover     (from template: hover-triggered titlebar for full-screen)
+└── Resize hit-test zones (automatic)
 ```
 
 See [`WindowDrawnDecorationsContent`](#windowdrawndecorationscontent) for how these layers are implemented in code.
@@ -54,17 +55,29 @@ public class WindowDrawnDecorationsContent : StyledElement
 
 | Property | Type | Visibility | Description |
 | --- | --- | --- | --- |
-| `Template` | `WindowDrawnDecorationsTemplate` | Public, Styled | Decorations template. |
-| `DefaultTitleBarHeight` | `double` | Public, Styled | Default titlebar height. Decided by theme if unset. |
-| `DefaultFrameThickness` | `Thickness` | Public, Styled | Default frame thickness. Decided by theme if unset. |
-| `DefaultShadowThickness` | `Thickness` | Public, Styled | Default shadow thickness. Decided by theme if unset. |
-| `TitleBarHeight` | `double` | Public, Styled | Effective titlebar height. Local value set by `Window` overrides this. |
-| `FrameThickness` | `Thickness` | Public, Styled | Effective frame thickness. Local value set by `Window` overrides this. |
-| `ShadowThickness` | `Thickness` | Public, Styled | Effective shadow thickness. Local value set by `Window` overrides this. |
-| `EnabledParts` | `DecorationParts` | Internal | Flags controlling which template parts are active. See below section on [template parts](#template-parts). |
-| `Content` | `WindowDrawnDecorationsContent?` | Public, Read-only | Built template content. |
+| `Template` | `WindowDrawnDecorationsTemplate` | Styled | Decorations template. |
+| `DefaultTitleBarHeight` | `double` | Styled | Default titlebar height. Decided by theme if unset. |
+| `DefaultFrameThickness` | `Thickness` | Styled | Default frame thickness. Decided by theme if unset. |
+| `DefaultShadowThickness` | `Thickness` | Styled | Default shadow thickness. Decided by theme if unset. |
+| `TitleBarHeight` | `double` | Styled | Effective titlebar height. Local value set by `Window` overrides this. |
+| `FrameThickness` | `Thickness` | Styled | Effective frame thickness. Local value set by `Window` overrides this. |
+| `ShadowThickness` | `Thickness` | Styled | Effective shadow thickness. Local value set by `Window` overrides this. |
+| `Content` | `WindowDrawnDecorationsContent?` | Read-only | Built template content. |
+
+## Decoration parts
+
+The following decoration parts are available:
+
+- Shadow
+- Border
+- Titlebar
+- Resize grips
+
+Usable decoration parts may vary depending on platform, e.g., macOS handles its own resize grips.
 
 ## Pseudoclasses
+
+Pseudoclasses are applied whenever window state changes, e.g., when `Window` goes from normal to full-screen. They are also applied when [decoration parts](#decoration-parts) are enabled or disabled, e.g., when going to full-screen would cause `Shadow` to be disabled.
 
 - `:normal`
 - `:maximized`
@@ -82,64 +95,37 @@ This functionality replaces the `CaptionButtons` class in earlier versions of Av
 
 | Part | Type | Description |
 | --- | --- | --- |
-| `PART_CloseButton` | `Button?` | Close button. Calls `Window.Close()`. |
-| `PART_MinimizeButton` | `Button?` | Minimize button. Sets `WindowState.Minimized`. |
+| `PART_CloseButton` | `Button?` | Close button. |
+| `PART_MinimizeButton` | `Button?` | Minimize button. |
 | `PART_MaximizeButton` | `Button?` | Maximize toggle button. |
 | `PART_FullScreenButton` | `Button?` | Fullscreen toggle button. |
 
-### Button state management
+## Element roles
 
-- Subscribes to the attached `Window`'s `CanMaximize`, `CanMinimize`, `CanResize` and `WindowState` properties.
-- Updates [pseudoclasses](#pseudoclasses) on itself.
-- Enables or disables template part buttons based on window capabilities.
-- Associates click handlers directly, e.g., `PART_CloseButton` → `Window.Close()`.
+`ElementRole` is an [attached property](/docs/properties#attached-properties) that marks each visual element with a specific role for cross-platform, non-client hit testing. It can be applied to any element in the visual tree, not only decoration children elements.
 
-## DecorationParts
+The following element roles are available:
 
-```csharp
-[Flags]
-internal enum DecorationParts
-{
-    None = 0,
-    Shadow = 1,
-    Border = 2,
-    TitleBar = 4,
-    ResizeGrips = 8,
-    All = Shadow | Border | TitleBar | ResizeGrips
-}
-```
+| Role | Description |
+| --- | --- |
+| `None` | No role. Element is invisible to hit testing. |
+| `DecorationsElement` | Interactive element set on decoration template elements. Input is passed through to the element. |
+| `User` | Interactive element set by user code. Input is passed through to the element. |
+| `TitleBar` | Titlebar drag area. Clicking and dragging this element moves the window. |
+| `ResizeN` | Resize grip for the top edge (north). |
+| `ResizeS` | Resize grip for the bottom edge (south). |
+| `ResizeE` | Resize grip for the right edge (east). |
+| `ResizeW` | Resize grip for the left edge (west). |
+| `ResizeNE` | Resize grip for the top right corner (northeast). |
+| `ResizeSE` | Resize grip for the bottom right corner (southeast). |
+| `ResizeNW` | Resize grip for the top left corner (northwest). |
+| `ResizeSW` | Resize grip for the bottom left corner (southwest). |
+| `CloseButton` | Element performs window close behavior. |
+| `MaximizeButton` | Element performs window maximize behavior. |
+| `MinimizeButton` | Element performs window minimize behavior. |
+| `FullScreenButton` | Element performs window full-screen toggle behavior. |
 
-Usable decoration parts may vary depending on platform, e.g., macOS handles its own resize grips.
-
-## ElementRole
-
-This is a cross-platform, non-client hit-test role. It complements, but does not replace, `Win32Properties.NonClientHitTestResult`.
-
-```csharp
-public enum ElementRole
-{
-    None,
-    TitleBar,
-    ResizeN,
-    ResizeS,
-    ResizeE,
-    ResizeW,
-    ResizeNE,
-    ResizeNW,
-    ResizeSE,
-    ResizeSW
-}
-```
-
-`ElementRole` can be used as an attached property on a static class. This works on any element in the visual tree, not only decoration children elements. In the [example below](#example), a `ElementRole="TitleBar"` is marked, which can allow custom titlebar interactions.
-
-```csharp
-public static class WindowDecorations
-{
-    public static readonly AttachedProperty<ElementRole> ElementRoleProperty =
-        AvaloniaProperty.RegisterAttached<WindowDecorations, Visual, ElementRole>("ElementRole");
-}
-```
+In the [example below](#example), an element role is marked for a `TextBlock` acting as a titlebar: `ElementRole="TitleBar"`.
 
 ## Example
 
