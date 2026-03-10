@@ -1,6 +1,9 @@
 {
   "docsetVersion": "12.0.0-preview2",
   "docsetId": "avalonia",
+  "feeds": [
+    "https://api.nuget.org/v3/index.json"
+  ],
   "packages": [
     {
       "id": "Avalonia",
@@ -70,5 +73,7 @@
       "id": "Avalonia.Headless.Vnc",
       "version": "12.0.0-preview2"
     }
-  ]
+  ],
+  "resolveSourceLinks": true,
+  "materialize": true
 }

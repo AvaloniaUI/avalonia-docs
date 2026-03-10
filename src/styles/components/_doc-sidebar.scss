@@ -100,14 +100,17 @@ html[data-theme='dark'] {
   }
 
     .menu__list {
-    display: flex !important;
-    flex-direction: column;
-    // Customer Portal uses gap-1 (4px) between menu items
-    gap: 0.25rem;
-    transition: none !important;
-    will-change: initial !important;
-
+    // DO NOT override display or transition here. Docusaurus' Collapsible component
+    // toggles inline display (none/block) and uses transitionend events on height.
+    // Using `display: flex !important` or `transition: none !important` breaks
+    // expand/collapse for sidebar categories at depth 3+.
     margin-top: 0;
+
+    // Customer Portal uses gap-1 (4px) between menu items.
+    // Cannot use CSS gap without flex, so use child margins instead.
+    > .menu__list-item + .menu__list-item {
+      margin-top: 0.25rem;
+    }
 
     // Nested menu lists - Customer Portal style (NO left border, just indentation)
     .menu__list {
